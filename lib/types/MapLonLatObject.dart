@@ -23,8 +23,32 @@ import 'OptionFragment.dart';
  */
 class MapLonLatObject extends OptionFragment {
   MapLonLatObject() : super();
-  double? lat;
-  double? lon;
+  double? m_lat;  
+
+  double get lat { 
+    if (this.m_lat == null) {
+      this.m_lat = 0;
+    }
+    return this.m_lat!;
+  }
+
+  void set lat (double v) {
+    this.m_lat = v;
+  }
+    
+  double? m_lon;  
+
+  double get lon { 
+    if (this.m_lon == null) {
+      this.m_lon = 0;
+    }
+    return this.m_lon!;
+  }
+
+  void set lon (double v) {
+    this.m_lon = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,12 +57,12 @@ class MapLonLatObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.lat != null) {  
-      buffer.writeAll(["\"lat\":", this.lat, ","], "");
+    if (this.m_lat != null) {  
+      buffer.writeAll(["\"lat\":", this.m_lat, ","], "");
     }
 
-    if (this.lon != null) {  
-      buffer.writeAll(["\"lon\":", this.lon, ","], "");
+    if (this.m_lon != null) {  
+      buffer.writeAll(["\"lon\":", this.m_lon, ","], "");
     }
   }
 

@@ -24,8 +24,32 @@ import 'OptionFragment.dart';
  */
 class TranslationAttributes extends SVGAttributes {
   TranslationAttributes() : super();
-  double? translateX;
-  double? translateY;
+  double? m_translateX;  
+
+  double get translateX { 
+    if (this.m_translateX == null) {
+      this.m_translateX = 0;
+    }
+    return this.m_translateX!;
+  }
+
+  void set translateX (double v) {
+    this.m_translateX = v;
+  }
+    
+  double? m_translateY;  
+
+  double get translateY { 
+    if (this.m_translateY == null) {
+      this.m_translateY = 0;
+    }
+    return this.m_translateY!;
+  }
+
+  void set translateY (double v) {
+    this.m_translateY = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -34,12 +58,12 @@ class TranslationAttributes extends SVGAttributes {
     super.toJSONInner(buffer);
 
     
-    if (this.translateX != null) {  
-      buffer.writeAll(["\"translateX\":", this.translateX, ","], "");
+    if (this.m_translateX != null) {  
+      buffer.writeAll(["\"translateX\":", this.m_translateX, ","], "");
     }
 
-    if (this.translateY != null) {  
-      buffer.writeAll(["\"translateY\":", this.translateY, ","], "");
+    if (this.m_translateY != null) {  
+      buffer.writeAll(["\"translateY\":", this.m_translateY, ","], "");
     }
   }
 

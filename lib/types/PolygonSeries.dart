@@ -23,7 +23,19 @@ import 'OptionFragment.dart';
  */
 class PolygonSeries extends OptionFragment {
   PolygonSeries() : super();
-  String? type;
+  String? m_type;  
+
+  String get type { 
+    if (this.m_type == null) {
+      this.m_type = "";
+    }
+    return this.m_type!;
+  }
+
+  void set type (String v) {
+    this.m_type = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -34,8 +46,8 @@ class PolygonSeries extends OptionFragment {
     
     // NOTE: skip serialization of pointClass (type typeof PolygonPoint is ignored)} 
 
-    if (this.type != null) {  
-      buffer.writeAll(["\"type\":", this.type, ","], "");
+    if (this.m_type != null) {  
+      buffer.writeAll(["\"type\":", this.m_type, ","], "");
     }
   }
 

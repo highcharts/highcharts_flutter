@@ -23,7 +23,19 @@ import 'OptionFragment.dart';
  */
 class WGLNode extends OptionFragment {
   WGLNode() : super();
-  double? levelDynamic;
+  double? m_levelDynamic;  
+
+  double get levelDynamic { 
+    if (this.m_levelDynamic == null) {
+      this.m_levelDynamic = 0;
+    }
+    return this.m_levelDynamic!;
+  }
+
+  void set levelDynamic (double v) {
+    this.m_levelDynamic = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -32,8 +44,8 @@ class WGLNode extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.levelDynamic != null) {  
-      buffer.writeAll(["\"levelDynamic\":", this.levelDynamic, ","], "");
+    if (this.m_levelDynamic != null) {  
+      buffer.writeAll(["\"levelDynamic\":", this.m_levelDynamic, ","], "");
     }
   }
 

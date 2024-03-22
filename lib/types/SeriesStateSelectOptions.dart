@@ -24,7 +24,19 @@ import 'OptionFragment.dart';
  */
 class SeriesStateSelectOptions extends StateSelectOptions {
   SeriesStateSelectOptions() : super();
-  double? brightness;
+  double? m_brightness;  
+
+  double get brightness { 
+    if (this.m_brightness == null) {
+      this.m_brightness = 0;
+    }
+    return this.m_brightness!;
+  }
+
+  void set brightness (double v) {
+    this.m_brightness = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,8 +45,8 @@ class SeriesStateSelectOptions extends StateSelectOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.brightness != null) {  
-      buffer.writeAll(["\"brightness\":", this.brightness, ","], "");
+    if (this.m_brightness != null) {  
+      buffer.writeAll(["\"brightness\":", this.m_brightness, ","], "");
     }
   }
 

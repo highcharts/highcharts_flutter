@@ -24,7 +24,19 @@ import 'OptionFragment.dart';
  */
 class MACDLineStyleOptions extends CSSObject {
   MACDLineStyleOptions() : super();
-  String? lineColor;
+  String? m_lineColor;  
+
+  String get lineColor { 
+    if (this.m_lineColor == null) {
+      this.m_lineColor = "";
+    }
+    return this.m_lineColor!;
+  }
+
+  void set lineColor (String v) {
+    this.m_lineColor = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,8 +45,8 @@ class MACDLineStyleOptions extends CSSObject {
     super.toJSONInner(buffer);
 
     
-    if (this.lineColor != null) {  
-      buffer.writeAll(["\"lineColor\":", this.lineColor, ","], "");
+    if (this.m_lineColor != null) {  
+      buffer.writeAll(["\"lineColor\":", this.m_lineColor, ","], "");
     }
   }
 

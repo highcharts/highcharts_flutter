@@ -23,8 +23,32 @@ import 'OptionFragment.dart';
  */
 class PaddingObject extends OptionFragment {
   PaddingObject() : super();
-  double? xPad;
-  double? yPad;
+  double? m_xPad;  
+
+  double get xPad { 
+    if (this.m_xPad == null) {
+      this.m_xPad = 0;
+    }
+    return this.m_xPad!;
+  }
+
+  void set xPad (double v) {
+    this.m_xPad = v;
+  }
+    
+  double? m_yPad;  
+
+  double get yPad { 
+    if (this.m_yPad == null) {
+      this.m_yPad = 0;
+    }
+    return this.m_yPad!;
+  }
+
+  void set yPad (double v) {
+    this.m_yPad = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,12 +57,12 @@ class PaddingObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.xPad != null) {  
-      buffer.writeAll(["\"xPad\":", this.xPad, ","], "");
+    if (this.m_xPad != null) {  
+      buffer.writeAll(["\"xPad\":", this.m_xPad, ","], "");
     }
 
-    if (this.yPad != null) {  
-      buffer.writeAll(["\"yPad\":", this.yPad, ","], "");
+    if (this.m_yPad != null) {  
+      buffer.writeAll(["\"yPad\":", this.m_yPad, ","], "");
     }
   }
 

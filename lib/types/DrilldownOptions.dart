@@ -27,8 +27,32 @@ import 'OptionFragment.dart';
  */
 class DrilldownOptions extends OptionFragment {
   DrilldownOptions() : super();
-  bool? allowPointDrilldown;
-  bool? mapZooming;
+  bool? m_allowPointDrilldown;  
+
+  bool get allowPointDrilldown { 
+    if (this.m_allowPointDrilldown == null) {
+      this.m_allowPointDrilldown = false;
+    }
+    return this.m_allowPointDrilldown!;
+  }
+
+  void set allowPointDrilldown (bool v) {
+    this.m_allowPointDrilldown = v;
+  }
+    
+  bool? m_mapZooming;  
+
+  bool get mapZooming { 
+    if (this.m_mapZooming == null) {
+      this.m_mapZooming = false;
+    }
+    return this.m_mapZooming!;
+  }
+
+  void set mapZooming (bool v) {
+    this.m_mapZooming = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -43,8 +67,8 @@ class DrilldownOptions extends OptionFragment {
 
     // NOTE: skip serialization of activeDataLabelStyle (type DrilldownActiveDataLabelStyleOptions is ignored)} 
 
-    if (this.allowPointDrilldown != null) {  
-      buffer.writeAll(["\"allowPointDrilldown\":", this.allowPointDrilldown, ","], "");
+    if (this.m_allowPointDrilldown != null) {  
+      buffer.writeAll(["\"allowPointDrilldown\":", this.m_allowPointDrilldown, ","], "");
     }
 
     // NOTE: skip serialization of animation (type Generic is ignored)} 
@@ -55,8 +79,8 @@ class DrilldownOptions extends OptionFragment {
 
     // NOTE: skip serialization of series (type SeriesOptions[] is ignored)} 
 
-    if (this.mapZooming != null) {  
-      buffer.writeAll(["\"mapZooming\":", this.mapZooming, ","], "");
+    if (this.m_mapZooming != null) {  
+      buffer.writeAll(["\"mapZooming\":", this.m_mapZooming, ","], "");
     }
   }
 

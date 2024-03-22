@@ -32,14 +32,38 @@ class CandlestickSeriesOptions extends OHLCSeriesOptions {
    * 
    * Defaults to '#000000'. 
       */
-  String? lineColor;
+  String? m_lineColor;  
+
+  String get lineColor { 
+    if (this.m_lineColor == null) {
+      this.m_lineColor = "";
+    }
+    return this.m_lineColor!;
+  }
+
+  void set lineColor (String v) {
+    this.m_lineColor = v;
+  }
+    
   // NOTE: states skipped - type Generic is ignored in gen
 
   /**
    * The specific line color for up candle sticks. The default is to
    * inherit the general `lineColor` setting.  
       */
-  String? upLineColor;
+  String? m_upLineColor;  
+
+  String get upLineColor { 
+    if (this.m_upLineColor == null) {
+      this.m_upLineColor = "";
+    }
+    return this.m_upLineColor!;
+  }
+
+  void set upLineColor (String v) {
+    this.m_upLineColor = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -48,14 +72,14 @@ class CandlestickSeriesOptions extends OHLCSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.lineColor != null) {  
-      buffer.writeAll(["\"lineColor\":", this.lineColor, ","], "");
+    if (this.m_lineColor != null) {  
+      buffer.writeAll(["\"lineColor\":", this.m_lineColor, ","], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 
 
-    if (this.upLineColor != null) {  
-      buffer.writeAll(["\"upLineColor\":", this.upLineColor, ","], "");
+    if (this.m_upLineColor != null) {  
+      buffer.writeAll(["\"upLineColor\":", this.m_upLineColor, ","], "");
     }
   }
 

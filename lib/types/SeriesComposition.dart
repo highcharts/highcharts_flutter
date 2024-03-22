@@ -26,7 +26,19 @@ import 'OptionFragment.dart';
  */
 class SeriesComposition extends Series {
   SeriesComposition() : super();
-  String? optionalAxis;
+  String? m_optionalAxis;  
+
+  String get optionalAxis { 
+    if (this.m_optionalAxis == null) {
+      this.m_optionalAxis = "";
+    }
+    return this.m_optionalAxis!;
+  }
+
+  void set optionalAxis (String v) {
+    this.m_optionalAxis = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -43,8 +55,8 @@ class SeriesComposition extends Series {
 
     // NOTE: skip serialization of options (type SeriesCompositionOptions is ignored)} 
 
-    if (this.optionalAxis != null) {  
-      buffer.writeAll(["\"optionalAxis\":", this.optionalAxis, ","], "");
+    if (this.m_optionalAxis != null) {  
+      buffer.writeAll(["\"optionalAxis\":", this.m_optionalAxis, ","], "");
     }
   }
 

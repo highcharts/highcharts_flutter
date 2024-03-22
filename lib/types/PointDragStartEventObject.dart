@@ -24,7 +24,19 @@ import 'OptionFragment.dart';
  */
 class PointDragStartEventObject extends MouseEvent {
   PointDragStartEventObject() : super();
-  String? updateProp;
+  String? m_updateProp;  
+
+  String get updateProp { 
+    if (this.m_updateProp == null) {
+      this.m_updateProp = "";
+    }
+    return this.m_updateProp!;
+  }
+
+  void set updateProp (String v) {
+    this.m_updateProp = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,8 +45,8 @@ class PointDragStartEventObject extends MouseEvent {
     super.toJSONInner(buffer);
 
     
-    if (this.updateProp != null) {  
-      buffer.writeAll(["\"updateProp\":", this.updateProp, ","], "");
+    if (this.m_updateProp != null) {  
+      buffer.writeAll(["\"updateProp\":", this.m_updateProp, ","], "");
     }
   }
 

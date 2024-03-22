@@ -25,8 +25,32 @@ import 'OptionFragment.dart';
  */
 class ProjectionDefinition extends Projector {
   ProjectionDefinition() : super();
-  bool? antimeridianCutting;
-  double? maxLatitude;
+  bool? m_antimeridianCutting;  
+
+  bool get antimeridianCutting { 
+    if (this.m_antimeridianCutting == null) {
+      this.m_antimeridianCutting = false;
+    }
+    return this.m_antimeridianCutting!;
+  }
+
+  void set antimeridianCutting (bool v) {
+    this.m_antimeridianCutting = v;
+  }
+    
+  double? m_maxLatitude;  
+
+  double get maxLatitude { 
+    if (this.m_maxLatitude == null) {
+      this.m_maxLatitude = 0;
+    }
+    return this.m_maxLatitude!;
+  }
+
+  void set maxLatitude (double v) {
+    this.m_maxLatitude = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -35,14 +59,14 @@ class ProjectionDefinition extends Projector {
     super.toJSONInner(buffer);
 
     
-    if (this.antimeridianCutting != null) {  
-      buffer.writeAll(["\"antimeridianCutting\":", this.antimeridianCutting, ","], "");
+    if (this.m_antimeridianCutting != null) {  
+      buffer.writeAll(["\"antimeridianCutting\":", this.m_antimeridianCutting, ","], "");
     }
 
     // NOTE: skip serialization of bounds (type MapBounds is ignored)} 
 
-    if (this.maxLatitude != null) {  
-      buffer.writeAll(["\"maxLatitude\":", this.maxLatitude, ","], "");
+    if (this.m_maxLatitude != null) {  
+      buffer.writeAll(["\"maxLatitude\":", this.m_maxLatitude, ","], "");
     }
   }
 

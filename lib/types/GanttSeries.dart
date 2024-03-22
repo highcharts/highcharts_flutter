@@ -23,7 +23,19 @@ import 'OptionFragment.dart';
  */
 class GanttSeries extends OptionFragment {
   GanttSeries() : super();
-  bool? keyboardMoveVertical;
+  bool? m_keyboardMoveVertical;  
+
+  bool get keyboardMoveVertical { 
+    if (this.m_keyboardMoveVertical == null) {
+      this.m_keyboardMoveVertical = false;
+    }
+    return this.m_keyboardMoveVertical!;
+  }
+
+  void set keyboardMoveVertical (bool v) {
+    this.m_keyboardMoveVertical = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -32,8 +44,8 @@ class GanttSeries extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.keyboardMoveVertical != null) {  
-      buffer.writeAll(["\"keyboardMoveVertical\":", this.keyboardMoveVertical, ","], "");
+    if (this.m_keyboardMoveVertical != null) {  
+      buffer.writeAll(["\"keyboardMoveVertical\":", this.m_keyboardMoveVertical, ","], "");
     }
 
     // NOTE: skip serialization of pointClass (type typeof GanttPoint is ignored)} 

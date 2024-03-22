@@ -23,7 +23,19 @@ import 'OptionFragment.dart';
  */
 class MACDIndicator extends OptionFragment {
   MACDIndicator() : super();
-  String? pointValKey;
+  String? m_pointValKey;  
+
+  String get pointValKey { 
+    if (this.m_pointValKey == null) {
+      this.m_pointValKey = "";
+    }
+    return this.m_pointValKey!;
+  }
+
+  void set pointValKey (String v) {
+    this.m_pointValKey = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -40,8 +52,8 @@ class MACDIndicator extends OptionFragment {
 
     // NOTE: skip serialization of pointClass (type typeof MACDPoint is ignored)} 
 
-    if (this.pointValKey != null) {  
-      buffer.writeAll(["\"pointValKey\":", this.pointValKey, ","], "");
+    if (this.m_pointValKey != null) {  
+      buffer.writeAll(["\"pointValKey\":", this.m_pointValKey, ","], "");
     }
   }
 

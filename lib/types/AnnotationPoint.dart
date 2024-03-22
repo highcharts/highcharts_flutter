@@ -24,7 +24,19 @@ import 'OptionFragment.dart';
  */
 class AnnotationPoint extends OptionFragment {
   AnnotationPoint() : super();
-  String? command;
+  String? m_command;  
+
+  String get command { 
+    if (this.m_command == null) {
+      this.m_command = "";
+    }
+    return this.m_command!;
+  }
+
+  void set command (String v) {
+    this.m_command = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,8 +45,8 @@ class AnnotationPoint extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.command != null) {  
-      buffer.writeAll(["\"command\":", this.command, ","], "");
+    if (this.m_command != null) {  
+      buffer.writeAll(["\"command\":", this.m_command, ","], "");
     }
 
     // NOTE: skip serialization of mock (type undefined is ignored)} 

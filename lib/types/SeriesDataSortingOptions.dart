@@ -23,9 +23,45 @@ import 'OptionFragment.dart';
  */
 class SeriesDataSortingOptions extends OptionFragment {
   SeriesDataSortingOptions() : super();
-  bool? enabled;
-  bool? matchByName;
-  String? sortKey;
+  bool? m_enabled;  
+
+  bool get enabled { 
+    if (this.m_enabled == null) {
+      this.m_enabled = false;
+    }
+    return this.m_enabled!;
+  }
+
+  void set enabled (bool v) {
+    this.m_enabled = v;
+  }
+    
+  bool? m_matchByName;  
+
+  bool get matchByName { 
+    if (this.m_matchByName == null) {
+      this.m_matchByName = false;
+    }
+    return this.m_matchByName!;
+  }
+
+  void set matchByName (bool v) {
+    this.m_matchByName = v;
+  }
+    
+  String? m_sortKey;  
+
+  String get sortKey { 
+    if (this.m_sortKey == null) {
+      this.m_sortKey = "";
+    }
+    return this.m_sortKey!;
+  }
+
+  void set sortKey (String v) {
+    this.m_sortKey = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -34,16 +70,16 @@ class SeriesDataSortingOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
+    if (this.m_enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this.m_enabled, ","], "");
     }
 
-    if (this.matchByName != null) {  
-      buffer.writeAll(["\"matchByName\":", this.matchByName, ","], "");
+    if (this.m_matchByName != null) {  
+      buffer.writeAll(["\"matchByName\":", this.m_matchByName, ","], "");
     }
 
-    if (this.sortKey != null) {  
-      buffer.writeAll(["\"sortKey\":", this.sortKey, ","], "");
+    if (this.m_sortKey != null) {  
+      buffer.writeAll(["\"sortKey\":", this.m_sortKey, ","], "");
     }
   }
 

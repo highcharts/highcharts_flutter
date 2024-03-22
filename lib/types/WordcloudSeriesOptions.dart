@@ -26,7 +26,19 @@ import 'OptionFragment.dart';
  */
 class WordcloudSeriesOptions extends ColumnSeriesOptions {
   WordcloudSeriesOptions() : super();
-  bool? allowExtendPlayingField;
+  bool? m_allowExtendPlayingField;  
+
+  bool get allowExtendPlayingField { 
+    if (this.m_allowExtendPlayingField == null) {
+      this.m_allowExtendPlayingField = false;
+    }
+    return this.m_allowExtendPlayingField!;
+  }
+
+  void set allowExtendPlayingField (bool v) {
+    this.m_allowExtendPlayingField = v;
+  }
+    
   /**
    * The word with the largest weight will have a font size equal to this
    * value. The font size of a word is the ratio between its weight and
@@ -35,14 +47,38 @@ class WordcloudSeriesOptions extends ColumnSeriesOptions {
    * 
    * Defaults to '25'. 
       */
-  double? maxFontSize;
+  double? m_maxFontSize;  
+
+  double get maxFontSize { 
+    if (this.m_maxFontSize == null) {
+      this.m_maxFontSize = 0;
+    }
+    return this.m_maxFontSize!;
+  }
+
+  void set maxFontSize (double v) {
+    this.m_maxFontSize = v;
+  }
+    
   /**
    * A threshold determining the minimum font size that can be applied to
    * a word. 
    * 
    * Defaults to '1'. 
       */
-  double? minFontSize;
+  double? m_minFontSize;  
+
+  double get minFontSize { 
+    if (this.m_minFontSize == null) {
+      this.m_minFontSize = 0;
+    }
+    return this.m_minFontSize!;
+  }
+
+  void set minFontSize (double v) {
+    this.m_minFontSize = v;
+  }
+    
   /**
    * This option decides which algorithm is used for placement, and
    * rotation of a word. The choice of algorith is therefore a crucial
@@ -53,11 +89,35 @@ class WordcloudSeriesOptions extends ColumnSeriesOptions {
    * 
    * Defaults to 'center'. 
       */
-  String? placementStrategy;
+  String? m_placementStrategy;  
+
+  String get placementStrategy { 
+    if (this.m_placementStrategy == null) {
+      this.m_placementStrategy = "";
+    }
+    return this.m_placementStrategy!;
+  }
+
+  void set placementStrategy (String v) {
+    this.m_placementStrategy = v;
+  }
+    
   /**
    * Rotation options for the words in the wordcloud.  
       */
-  WordcloudSeriesRotationOptions? rotation;
+  WordcloudSeriesRotationOptions? m_rotation;  
+
+  WordcloudSeriesRotationOptions get rotation { 
+    if (this.m_rotation == null) {
+      this.m_rotation = WordcloudSeriesRotationOptions();
+    }
+    return this.m_rotation!;
+  }
+
+  void set rotation (WordcloudSeriesRotationOptions v) {
+    this.m_rotation = v;
+  }
+    
   /**
    * Spiral used for placing a word after the initial position
    * experienced a collision with either another word or the borders.
@@ -67,7 +127,19 @@ class WordcloudSeriesOptions extends ColumnSeriesOptions {
    * 
    * Defaults to 'rectangular'. 
       */
-  String? spiral;
+  String? m_spiral;  
+
+  String get spiral { 
+    if (this.m_spiral == null) {
+      this.m_spiral = "";
+    }
+    return this.m_spiral!;
+  }
+
+  void set spiral (String v) {
+    this.m_spiral = v;
+  }
+    
   // NOTE: states skipped - type Generic is ignored in gen
 
   /**
@@ -75,7 +147,19 @@ class WordcloudSeriesOptions extends ColumnSeriesOptions {
    * 
    * Defaults to '{"fontFamily":"sans-serif", "fontWeight": "900"}'. 
       */
-  CSSObject? style;
+  CSSObject? m_style;  
+
+  CSSObject get style { 
+    if (this.m_style == null) {
+      this.m_style = CSSObject();
+    }
+    return this.m_style!;
+  }
+
+  void set style (CSSObject v) {
+    this.m_style = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -84,36 +168,36 @@ class WordcloudSeriesOptions extends ColumnSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.allowExtendPlayingField != null) {  
-      buffer.writeAll(["\"allowExtendPlayingField\":", this.allowExtendPlayingField, ","], "");
+    if (this.m_allowExtendPlayingField != null) {  
+      buffer.writeAll(["\"allowExtendPlayingField\":", this.m_allowExtendPlayingField, ","], "");
     }
 
     // NOTE: skip serialization of data (type WordcloudPointOptions)[] is ignored)} 
 
-    if (this.maxFontSize != null) {  
-      buffer.writeAll(["\"maxFontSize\":", this.maxFontSize, ","], "");
+    if (this.m_maxFontSize != null) {  
+      buffer.writeAll(["\"maxFontSize\":", this.m_maxFontSize, ","], "");
     }
 
-    if (this.minFontSize != null) {  
-      buffer.writeAll(["\"minFontSize\":", this.minFontSize, ","], "");
+    if (this.m_minFontSize != null) {  
+      buffer.writeAll(["\"minFontSize\":", this.m_minFontSize, ","], "");
     }
 
-    if (this.placementStrategy != null) {  
-      buffer.writeAll(["\"placementStrategy\":", this.placementStrategy, ","], "");
+    if (this.m_placementStrategy != null) {  
+      buffer.writeAll(["\"placementStrategy\":", this.m_placementStrategy, ","], "");
     }
 
-    if (this.rotation != null) {  
-      buffer.writeAll(["\"rotation\":", this.rotation?.toJSON(), ","], "");
+    if (this.m_rotation != null) {  
+      buffer.writeAll(["\"rotation\":", this.m_rotation?.toJSON(), ","], "");
     }
 
-    if (this.spiral != null) {  
-      buffer.writeAll(["\"spiral\":", this.spiral, ","], "");
+    if (this.m_spiral != null) {  
+      buffer.writeAll(["\"spiral\":", this.m_spiral, ","], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 
 
-    if (this.style != null) {  
-      buffer.writeAll(["\"style\":", this.style?.toJSON(), ","], "");
+    if (this.m_style != null) {  
+      buffer.writeAll(["\"style\":", this.m_style?.toJSON(), ","], "");
     }
   }
 

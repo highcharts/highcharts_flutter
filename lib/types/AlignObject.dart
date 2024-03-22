@@ -23,13 +23,97 @@ import 'OptionFragment.dart';
  */
 class AlignObject extends OptionFragment {
   AlignObject() : super();
-  String? align;
-  bool? alignByTranslate;
-  String? verticalAlign;
-  double? x;
-  double? y;
-  double? width;
-  double? height;
+  String? m_align;  
+
+  String get align { 
+    if (this.m_align == null) {
+      this.m_align = "";
+    }
+    return this.m_align!;
+  }
+
+  void set align (String v) {
+    this.m_align = v;
+  }
+    
+  bool? m_alignByTranslate;  
+
+  bool get alignByTranslate { 
+    if (this.m_alignByTranslate == null) {
+      this.m_alignByTranslate = false;
+    }
+    return this.m_alignByTranslate!;
+  }
+
+  void set alignByTranslate (bool v) {
+    this.m_alignByTranslate = v;
+  }
+    
+  String? m_verticalAlign;  
+
+  String get verticalAlign { 
+    if (this.m_verticalAlign == null) {
+      this.m_verticalAlign = "";
+    }
+    return this.m_verticalAlign!;
+  }
+
+  void set verticalAlign (String v) {
+    this.m_verticalAlign = v;
+  }
+    
+  double? m_x;  
+
+  double get x { 
+    if (this.m_x == null) {
+      this.m_x = 0;
+    }
+    return this.m_x!;
+  }
+
+  void set x (double v) {
+    this.m_x = v;
+  }
+    
+  double? m_y;  
+
+  double get y { 
+    if (this.m_y == null) {
+      this.m_y = 0;
+    }
+    return this.m_y!;
+  }
+
+  void set y (double v) {
+    this.m_y = v;
+  }
+    
+  double? m_width;  
+
+  double get width { 
+    if (this.m_width == null) {
+      this.m_width = 0;
+    }
+    return this.m_width!;
+  }
+
+  void set width (double v) {
+    this.m_width = v;
+  }
+    
+  double? m_height;  
+
+  double get height { 
+    if (this.m_height == null) {
+      this.m_height = 0;
+    }
+    return this.m_height!;
+  }
+
+  void set height (double v) {
+    this.m_height = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -38,32 +122,32 @@ class AlignObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.align != null) {  
-      buffer.writeAll(["\"align\":", this.align, ","], "");
+    if (this.m_align != null) {  
+      buffer.writeAll(["\"align\":", this.m_align, ","], "");
     }
 
-    if (this.alignByTranslate != null) {  
-      buffer.writeAll(["\"alignByTranslate\":", this.alignByTranslate, ","], "");
+    if (this.m_alignByTranslate != null) {  
+      buffer.writeAll(["\"alignByTranslate\":", this.m_alignByTranslate, ","], "");
     }
 
-    if (this.verticalAlign != null) {  
-      buffer.writeAll(["\"verticalAlign\":", this.verticalAlign, ","], "");
+    if (this.m_verticalAlign != null) {  
+      buffer.writeAll(["\"verticalAlign\":", this.m_verticalAlign, ","], "");
     }
 
-    if (this.x != null) {  
-      buffer.writeAll(["\"x\":", this.x, ","], "");
+    if (this.m_x != null) {  
+      buffer.writeAll(["\"x\":", this.m_x, ","], "");
     }
 
-    if (this.y != null) {  
-      buffer.writeAll(["\"y\":", this.y, ","], "");
+    if (this.m_y != null) {  
+      buffer.writeAll(["\"y\":", this.m_y, ","], "");
     }
 
-    if (this.width != null) {  
-      buffer.writeAll(["\"width\":", this.width, ","], "");
+    if (this.m_width != null) {  
+      buffer.writeAll(["\"width\":", this.m_width, ","], "");
     }
 
-    if (this.height != null) {  
-      buffer.writeAll(["\"height\":", this.height, ","], "");
+    if (this.m_height != null) {  
+      buffer.writeAll(["\"height\":", this.m_height, ","], "");
     }
   }
 

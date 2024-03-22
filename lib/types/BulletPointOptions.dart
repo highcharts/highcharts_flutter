@@ -25,8 +25,32 @@ import 'OptionFragment.dart';
  */
 class BulletPointOptions extends ColumnPointOptions {
   BulletPointOptions() : super();
-  String? borderColor;
-  double? target;
+  String? m_borderColor;  
+
+  String get borderColor { 
+    if (this.m_borderColor == null) {
+      this.m_borderColor = "";
+    }
+    return this.m_borderColor!;
+  }
+
+  void set borderColor (String v) {
+    this.m_borderColor = v;
+  }
+    
+  double? m_target;  
+
+  double get target { 
+    if (this.m_target == null) {
+      this.m_target = 0;
+    }
+    return this.m_target!;
+  }
+
+  void set target (double v) {
+    this.m_target = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -35,12 +59,12 @@ class BulletPointOptions extends ColumnPointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.borderColor != null) {  
-      buffer.writeAll(["\"borderColor\":", this.borderColor, ","], "");
+    if (this.m_borderColor != null) {  
+      buffer.writeAll(["\"borderColor\":", this.m_borderColor, ","], "");
     }
 
-    if (this.target != null) {  
-      buffer.writeAll(["\"target\":", this.target, ","], "");
+    if (this.m_target != null) {  
+      buffer.writeAll(["\"target\":", this.m_target, ","], "");
     }
 
     // NOTE: skip serialization of targetOptions (type BulletTargetOptions is ignored)} 

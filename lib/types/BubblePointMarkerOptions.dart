@@ -24,7 +24,19 @@ import 'OptionFragment.dart';
  */
 class BubblePointMarkerOptions extends PointMarkerOptions {
   BubblePointMarkerOptions() : super();
-  double? fillOpacity;
+  double? m_fillOpacity;  
+
+  double get fillOpacity { 
+    if (this.m_fillOpacity == null) {
+      this.m_fillOpacity = 0;
+    }
+    return this.m_fillOpacity!;
+  }
+
+  void set fillOpacity (double v) {
+    this.m_fillOpacity = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,8 +45,8 @@ class BubblePointMarkerOptions extends PointMarkerOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.fillOpacity != null) {  
-      buffer.writeAll(["\"fillOpacity\":", this.fillOpacity, ","], "");
+    if (this.m_fillOpacity != null) {  
+      buffer.writeAll(["\"fillOpacity\":", this.m_fillOpacity, ","], "");
     }
   }
 

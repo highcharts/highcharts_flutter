@@ -24,11 +24,71 @@ import 'OptionFragment.dart';
  */
 class SVGArc3D extends OptionFragment {
   SVGArc3D() : super();
-  double? zInn;
-  double? zOut;
-  double? zSide1;
-  double? zSide2;
-  double? zTop;
+  double? m_zInn;  
+
+  double get zInn { 
+    if (this.m_zInn == null) {
+      this.m_zInn = 0;
+    }
+    return this.m_zInn!;
+  }
+
+  void set zInn (double v) {
+    this.m_zInn = v;
+  }
+    
+  double? m_zOut;  
+
+  double get zOut { 
+    if (this.m_zOut == null) {
+      this.m_zOut = 0;
+    }
+    return this.m_zOut!;
+  }
+
+  void set zOut (double v) {
+    this.m_zOut = v;
+  }
+    
+  double? m_zSide1;  
+
+  double get zSide1 { 
+    if (this.m_zSide1 == null) {
+      this.m_zSide1 = 0;
+    }
+    return this.m_zSide1!;
+  }
+
+  void set zSide1 (double v) {
+    this.m_zSide1 = v;
+  }
+    
+  double? m_zSide2;  
+
+  double get zSide2 { 
+    if (this.m_zSide2 == null) {
+      this.m_zSide2 = 0;
+    }
+    return this.m_zSide2!;
+  }
+
+  void set zSide2 (double v) {
+    this.m_zSide2 = v;
+  }
+    
+  double? m_zTop;  
+
+  double get zTop { 
+    if (this.m_zTop == null) {
+      this.m_zTop = 0;
+    }
+    return this.m_zTop!;
+  }
+
+  void set zTop (double v) {
+    this.m_zTop = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -47,24 +107,24 @@ class SVGArc3D extends OptionFragment {
 
     // NOTE: skip serialization of top (type SVGPath is ignored)} 
 
-    if (this.zInn != null) {  
-      buffer.writeAll(["\"zInn\":", this.zInn, ","], "");
+    if (this.m_zInn != null) {  
+      buffer.writeAll(["\"zInn\":", this.m_zInn, ","], "");
     }
 
-    if (this.zOut != null) {  
-      buffer.writeAll(["\"zOut\":", this.zOut, ","], "");
+    if (this.m_zOut != null) {  
+      buffer.writeAll(["\"zOut\":", this.m_zOut, ","], "");
     }
 
-    if (this.zSide1 != null) {  
-      buffer.writeAll(["\"zSide1\":", this.zSide1, ","], "");
+    if (this.m_zSide1 != null) {  
+      buffer.writeAll(["\"zSide1\":", this.m_zSide1, ","], "");
     }
 
-    if (this.zSide2 != null) {  
-      buffer.writeAll(["\"zSide2\":", this.zSide2, ","], "");
+    if (this.m_zSide2 != null) {  
+      buffer.writeAll(["\"zSide2\":", this.m_zSide2, ","], "");
     }
 
-    if (this.zTop != null) {  
-      buffer.writeAll(["\"zTop\":", this.zTop, ","], "");
+    if (this.m_zTop != null) {  
+      buffer.writeAll(["\"zTop\":", this.m_zTop, ","], "");
     }
   }
 

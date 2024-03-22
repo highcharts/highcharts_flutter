@@ -24,7 +24,19 @@ import 'OptionFragment.dart';
  */
 class FunnelDataLabelOptions extends PieDataLabelOptions {
   FunnelDataLabelOptions() : super();
-  String? position;
+  String? m_position;  
+
+  String get position { 
+    if (this.m_position == null) {
+      this.m_position = "";
+    }
+    return this.m_position!;
+  }
+
+  void set position (String v) {
+    this.m_position = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,8 +45,8 @@ class FunnelDataLabelOptions extends PieDataLabelOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.position != null) {  
-      buffer.writeAll(["\"position\":", this.position, ","], "");
+    if (this.m_position != null) {  
+      buffer.writeAll(["\"position\":", this.m_position, ","], "");
     }
   }
 

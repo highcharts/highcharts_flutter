@@ -23,8 +23,32 @@ import 'OptionFragment.dart';
  */
 class XRangePointLabelObject extends OptionFragment {
   XRangePointLabelObject() : super();
-  double? x2;
-  String? yCategory;
+  double? m_x2;  
+
+  double get x2 { 
+    if (this.m_x2 == null) {
+      this.m_x2 = 0;
+    }
+    return this.m_x2!;
+  }
+
+  void set x2 (double v) {
+    this.m_x2 = v;
+  }
+    
+  String? m_yCategory;  
+
+  String get yCategory { 
+    if (this.m_yCategory == null) {
+      this.m_yCategory = "";
+    }
+    return this.m_yCategory!;
+  }
+
+  void set yCategory (String v) {
+    this.m_yCategory = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,12 +57,12 @@ class XRangePointLabelObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.x2 != null) {  
-      buffer.writeAll(["\"x2\":", this.x2, ","], "");
+    if (this.m_x2 != null) {  
+      buffer.writeAll(["\"x2\":", this.m_x2, ","], "");
     }
 
-    if (this.yCategory != null) {  
-      buffer.writeAll(["\"yCategory\":", this.yCategory, ","], "");
+    if (this.m_yCategory != null) {  
+      buffer.writeAll(["\"yCategory\":", this.m_yCategory, ","], "");
     }
   }
 

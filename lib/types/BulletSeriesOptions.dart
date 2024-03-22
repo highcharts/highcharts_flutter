@@ -28,7 +28,19 @@ class BulletSeriesOptions extends ColumnSeriesOptions {
   /**
    * All options related with look and positiong of targets.  
       */
-  BulletTargetOptions? targetOptions;
+  BulletTargetOptions? m_targetOptions;  
+
+  BulletTargetOptions get targetOptions { 
+    if (this.m_targetOptions == null) {
+      this.m_targetOptions = BulletTargetOptions();
+    }
+    return this.m_targetOptions!;
+  }
+
+  void set targetOptions (BulletTargetOptions v) {
+    this.m_targetOptions = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -37,8 +49,8 @@ class BulletSeriesOptions extends ColumnSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.targetOptions != null) {  
-      buffer.writeAll(["\"targetOptions\":", this.targetOptions?.toJSON(), ","], "");
+    if (this.m_targetOptions != null) {  
+      buffer.writeAll(["\"targetOptions\":", this.m_targetOptions?.toJSON(), ","], "");
     }
   }
 

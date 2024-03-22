@@ -44,20 +44,68 @@ class TreegraphSeriesOptions extends TreemapSeriesOptions {
    * Options applied to collapse Button. The collape button is the
    * small button which indicates, that the node is collapsable.  
       */
-  CollapseButtonOptions? collapseButton;
+  CollapseButtonOptions? m_collapseButton;  
+
+  CollapseButtonOptions get collapseButton { 
+    if (this.m_collapseButton == null) {
+      this.m_collapseButton = CollapseButtonOptions();
+    }
+    return this.m_collapseButton!;
+  }
+
+  void set collapseButton (CollapseButtonOptions v) {
+    this.m_collapseButton = v;
+  }
+    
   /**
    * Whether the treegraph series should fill the entire plot area in the X
    * axis direction, even when there are collapsed points.  
       */
-  bool? fillSpace;
-  TreegraphLinkOptions? link;
+  bool? m_fillSpace;  
+
+  bool get fillSpace { 
+    if (this.m_fillSpace == null) {
+      this.m_fillSpace = false;
+    }
+    return this.m_fillSpace!;
+  }
+
+  void set fillSpace (bool v) {
+    this.m_fillSpace = v;
+  }
+    
+  TreegraphLinkOptions? m_link;  
+
+  TreegraphLinkOptions get link { 
+    if (this.m_link == null) {
+      this.m_link = TreegraphLinkOptions();
+    }
+    return this.m_link!;
+  }
+
+  void set link (TreegraphLinkOptions v) {
+    this.m_link = v;
+  }
+    
   /**
    * Flips the positions of the nodes of a treegraph along the
    * horizontal axis (vertical if chart is inverted). 
    * 
    * Defaults to 'false'. 
       */
-  bool? reversed;
+  bool? m_reversed;  
+
+  bool get reversed { 
+    if (this.m_reversed == null) {
+      this.m_reversed = false;
+    }
+    return this.m_reversed!;
+  }
+
+  void set reversed (bool v) {
+    this.m_reversed = v;
+  }
+    
   /**
    * Options for the point markers of line and scatter-like series. Properties
    * like `fillColor`, `lineColor` and `lineWidth` define the visual
@@ -68,7 +116,19 @@ class TreegraphSeriesOptions extends TreemapSeriesOptions {
    * In styled mode, the markers can be styled with the `.highcharts-point`,
    * `.highcharts-point-hover` and `.highcharts-point-select` class names.  
       */
-  PointMarkerOptions? marker;
+  PointMarkerOptions? m_marker;  
+
+  PointMarkerOptions get marker { 
+    if (this.m_marker == null) {
+      this.m_marker = PointMarkerOptions();
+    }
+    return this.m_marker!;
+  }
+
+  void set marker (PointMarkerOptions v) {
+    this.m_marker = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -77,28 +137,26 @@ class TreegraphSeriesOptions extends TreemapSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.dataLabels != null) {  
-    // Skipped array dataLabels
+    // NOTE: skip serialization of dataLabels (type TreegraphDataLabelOptions[] is ignored)} 
+
+    if (this.m_collapseButton != null) {  
+      buffer.writeAll(["\"collapseButton\":", this.m_collapseButton?.toJSON(), ","], "");
     }
 
-    if (this.collapseButton != null) {  
-      buffer.writeAll(["\"collapseButton\":", this.collapseButton?.toJSON(), ","], "");
+    if (this.m_fillSpace != null) {  
+      buffer.writeAll(["\"fillSpace\":", this.m_fillSpace, ","], "");
     }
 
-    if (this.fillSpace != null) {  
-      buffer.writeAll(["\"fillSpace\":", this.fillSpace, ","], "");
+    if (this.m_link != null) {  
+      buffer.writeAll(["\"link\":", this.m_link?.toJSON(), ","], "");
     }
 
-    if (this.link != null) {  
-      buffer.writeAll(["\"link\":", this.link?.toJSON(), ","], "");
+    if (this.m_reversed != null) {  
+      buffer.writeAll(["\"reversed\":", this.m_reversed, ","], "");
     }
 
-    if (this.reversed != null) {  
-      buffer.writeAll(["\"reversed\":", this.reversed, ","], "");
-    }
-
-    if (this.marker != null) {  
-      buffer.writeAll(["\"marker\":", this.marker?.toJSON(), ","], "");
+    if (this.m_marker != null) {  
+      buffer.writeAll(["\"marker\":", this.m_marker?.toJSON(), ","], "");
     }
   }
 

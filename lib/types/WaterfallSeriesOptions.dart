@@ -32,7 +32,19 @@ class WaterfallSeriesOptions extends ColumnSeriesOptions {
    * `.highcharts-point-negative`, `.highcharts-sum` and
    * `.highcharts-intermediate-sum` classes.  
       */
-  String? upColor;
+  String? m_upColor;  
+
+  String get upColor { 
+    if (this.m_upColor == null) {
+      this.m_upColor = "";
+    }
+    return this.m_upColor!;
+  }
+
+  void set upColor (String v) {
+    this.m_upColor = v;
+  }
+    
   // NOTE: states skipped - type Generic is ignored in gen
 
 
@@ -43,8 +55,8 @@ class WaterfallSeriesOptions extends ColumnSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.upColor != null) {  
-      buffer.writeAll(["\"upColor\":", this.upColor, ","], "");
+    if (this.m_upColor != null) {  
+      buffer.writeAll(["\"upColor\":", this.m_upColor, ","], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 

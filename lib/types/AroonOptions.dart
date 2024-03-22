@@ -29,7 +29,19 @@ class AroonOptions extends SMAOptions {
   /**
    * aroonDown line options.  
       */
-  Map<String, String>? aroonDown;
+  Map<String, String>? m_aroonDown;  
+
+  Map<String, String> get aroonDown { 
+    if (this.m_aroonDown == null) {
+      this.m_aroonDown = Map<String, String>();
+    }
+    return this.m_aroonDown!;
+  }
+
+  void set aroonDown (Map<String, String> v) {
+    this.m_aroonDown = v;
+  }
+    
   /**
    * Options for the point markers of line and scatter-like series. Properties
    * like `fillColor`, `lineColor` and `lineWidth` define the visual
@@ -40,7 +52,19 @@ class AroonOptions extends SMAOptions {
    * In styled mode, the markers can be styled with the `.highcharts-point`,
    * `.highcharts-point-hover` and `.highcharts-point-select` class names.  
       */
-  PointMarkerOptions? marker;
+  PointMarkerOptions? m_marker;  
+
+  PointMarkerOptions get marker { 
+    if (this.m_marker == null) {
+      this.m_marker = PointMarkerOptions();
+    }
+    return this.m_marker!;
+  }
+
+  void set marker (PointMarkerOptions v) {
+    this.m_marker = v;
+  }
+    
   /**
    * Paramters used in calculation of regression series' points.  
       */
@@ -54,16 +78,16 @@ class AroonOptions extends SMAOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.aroonDown != null) {  
-      buffer.writeAll(["\"aroonDown\":", this.aroonDown, ","], "");
+    if (this.m_aroonDown != null) {  
+      buffer.writeAll(["\"aroonDown\":", this.m_aroonDown, ","], "");
     }
 
-    if (this.marker != null) {  
-      buffer.writeAll(["\"marker\":", this.marker?.toJSON(), ","], "");
+    if (this.m_marker != null) {  
+      buffer.writeAll(["\"marker\":", this.m_marker?.toJSON(), ","], "");
     }
 
-    if (this.params != null) {  
-      buffer.writeAll(["\"params\":", this.params?.toJSON(), ","], "");
+    if (this.m_params != null) {  
+      buffer.writeAll(["\"params\":", this.m_params?.toJSON(), ","], "");
     }
   }
 

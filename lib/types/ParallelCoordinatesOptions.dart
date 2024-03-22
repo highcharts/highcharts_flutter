@@ -24,7 +24,19 @@ import 'OptionFragment.dart';
  */
 class ParallelCoordinatesOptions extends OptionFragment {
   ParallelCoordinatesOptions() : super();
-  bool? parallelCoordinates;
+  bool? m_parallelCoordinates;  
+
+  bool get parallelCoordinates { 
+    if (this.m_parallelCoordinates == null) {
+      this.m_parallelCoordinates = false;
+    }
+    return this.m_parallelCoordinates!;
+  }
+
+  void set parallelCoordinates (bool v) {
+    this.m_parallelCoordinates = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -35,8 +47,8 @@ class ParallelCoordinatesOptions extends OptionFragment {
     
     // NOTE: skip serialization of parallelAxes (type Generic is ignored)} 
 
-    if (this.parallelCoordinates != null) {  
-      buffer.writeAll(["\"parallelCoordinates\":", this.parallelCoordinates, ","], "");
+    if (this.m_parallelCoordinates != null) {  
+      buffer.writeAll(["\"parallelCoordinates\":", this.m_parallelCoordinates, ","], "");
     }
   }
 

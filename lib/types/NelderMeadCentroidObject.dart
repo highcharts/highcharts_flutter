@@ -23,8 +23,32 @@ import 'OptionFragment.dart';
  */
 class NelderMeadCentroidObject extends OptionFragment {
   NelderMeadCentroidObject() : super();
-  double? i;
-  double? sum;
+  double? m_i;  
+
+  double get i { 
+    if (this.m_i == null) {
+      this.m_i = 0;
+    }
+    return this.m_i!;
+  }
+
+  void set i (double v) {
+    this.m_i = v;
+  }
+    
+  double? m_sum;  
+
+  double get sum { 
+    if (this.m_sum == null) {
+      this.m_sum = 0;
+    }
+    return this.m_sum!;
+  }
+
+  void set sum (double v) {
+    this.m_sum = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,12 +57,12 @@ class NelderMeadCentroidObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.i != null) {  
-      buffer.writeAll(["\"i\":", this.i, ","], "");
+    if (this.m_i != null) {  
+      buffer.writeAll(["\"i\":", this.m_i, ","], "");
     }
 
-    if (this.sum != null) {  
-      buffer.writeAll(["\"sum\":", this.sum, ","], "");
+    if (this.m_sum != null) {  
+      buffer.writeAll(["\"sum\":", this.m_sum, ","], "");
     }
   }
 

@@ -24,7 +24,19 @@ import 'OptionFragment.dart';
  */
 class AxisSetExtremesEventObject extends OptionFragment {
   AxisSetExtremesEventObject() : super();
-  String? trigger;
+  String? m_trigger;  
+
+  String get trigger { 
+    if (this.m_trigger == null) {
+      this.m_trigger = "";
+    }
+    return this.m_trigger!;
+  }
+
+  void set trigger (String v) {
+    this.m_trigger = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -37,8 +49,8 @@ class AxisSetExtremesEventObject extends OptionFragment {
 
     // NOTE: skip serialization of target (type SVGElement is ignored)} 
 
-    if (this.trigger != null) {  
-      buffer.writeAll(["\"trigger\":", this.trigger, ","], "");
+    if (this.m_trigger != null) {  
+      buffer.writeAll(["\"trigger\":", this.m_trigger, ","], "");
     }
 
     // NOTE: skip serialization of type (type "setExtremes" is ignored)} 

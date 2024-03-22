@@ -24,7 +24,19 @@ import 'OptionFragment.dart';
  */
 class PackedBubblePointOptions extends BubblePointOptions {
   PackedBubblePointOptions() : super();
-  double? mass;
+  double? m_mass;  
+
+  double get mass { 
+    if (this.m_mass == null) {
+      this.m_mass = 0;
+    }
+    return this.m_mass!;
+  }
+
+  void set mass (double v) {
+    this.m_mass = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,8 +45,8 @@ class PackedBubblePointOptions extends BubblePointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.mass != null) {  
-      buffer.writeAll(["\"mass\":", this.mass, ","], "");
+    if (this.m_mass != null) {  
+      buffer.writeAll(["\"mass\":", this.m_mass, ","], "");
     }
   }
 

@@ -24,8 +24,32 @@ import 'OptionFragment.dart';
  */
 class SolidGaugePointOptions extends GaugePointOptions {
   SolidGaugePointOptions() : super();
-  String? innerRadius;
-  String? radius;
+  String? m_innerRadius;  
+
+  String get innerRadius { 
+    if (this.m_innerRadius == null) {
+      this.m_innerRadius = "";
+    }
+    return this.m_innerRadius!;
+  }
+
+  void set innerRadius (String v) {
+    this.m_innerRadius = v;
+  }
+    
+  String? m_radius;  
+
+  String get radius { 
+    if (this.m_radius == null) {
+      this.m_radius = "";
+    }
+    return this.m_radius!;
+  }
+
+  void set radius (String v) {
+    this.m_radius = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -34,12 +58,12 @@ class SolidGaugePointOptions extends GaugePointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.innerRadius != null) {  
-      buffer.writeAll(["\"innerRadius\":", this.innerRadius, ","], "");
+    if (this.m_innerRadius != null) {  
+      buffer.writeAll(["\"innerRadius\":", this.m_innerRadius, ","], "");
     }
 
-    if (this.radius != null) {  
-      buffer.writeAll(["\"radius\":", this.radius, ","], "");
+    if (this.m_radius != null) {  
+      buffer.writeAll(["\"radius\":", this.m_radius, ","], "");
     }
   }
 

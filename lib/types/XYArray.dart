@@ -24,7 +24,19 @@ import 'OptionFragment.dart';
  */
 class XYArray extends XYPair {
   XYArray() : super();
-  bool? isIntersection;
+  bool? m_isIntersection;  
+
+  bool get isIntersection { 
+    if (this.m_isIntersection == null) {
+      this.m_isIntersection = false;
+    }
+    return this.m_isIntersection!;
+  }
+
+  void set isIntersection (bool v) {
+    this.m_isIntersection = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,8 +45,8 @@ class XYArray extends XYPair {
     super.toJSONInner(buffer);
 
     
-    if (this.isIntersection != null) {  
-      buffer.writeAll(["\"isIntersection\":", this.isIntersection, ","], "");
+    if (this.m_isIntersection != null) {  
+      buffer.writeAll(["\"isIntersection\":", this.m_isIntersection, ","], "");
     }
   }
 

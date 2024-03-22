@@ -23,10 +23,58 @@ import 'OptionFragment.dart';
  */
 class EMALevelsObject extends OptionFragment {
   EMALevelsObject() : super();
-  double? level1;
-  double? level2;
-  double? level3;
-  double? prevLevel3;
+  double? m_level1;  
+
+  double get level1 { 
+    if (this.m_level1 == null) {
+      this.m_level1 = 0;
+    }
+    return this.m_level1!;
+  }
+
+  void set level1 (double v) {
+    this.m_level1 = v;
+  }
+    
+  double? m_level2;  
+
+  double get level2 { 
+    if (this.m_level2 == null) {
+      this.m_level2 = 0;
+    }
+    return this.m_level2!;
+  }
+
+  void set level2 (double v) {
+    this.m_level2 = v;
+  }
+    
+  double? m_level3;  
+
+  double get level3 { 
+    if (this.m_level3 == null) {
+      this.m_level3 = 0;
+    }
+    return this.m_level3!;
+  }
+
+  void set level3 (double v) {
+    this.m_level3 = v;
+  }
+    
+  double? m_prevLevel3;  
+
+  double get prevLevel3 { 
+    if (this.m_prevLevel3 == null) {
+      this.m_prevLevel3 = 0;
+    }
+    return this.m_prevLevel3!;
+  }
+
+  void set prevLevel3 (double v) {
+    this.m_prevLevel3 = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -35,20 +83,20 @@ class EMALevelsObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.level1 != null) {  
-      buffer.writeAll(["\"level1\":", this.level1, ","], "");
+    if (this.m_level1 != null) {  
+      buffer.writeAll(["\"level1\":", this.m_level1, ","], "");
     }
 
-    if (this.level2 != null) {  
-      buffer.writeAll(["\"level2\":", this.level2, ","], "");
+    if (this.m_level2 != null) {  
+      buffer.writeAll(["\"level2\":", this.m_level2, ","], "");
     }
 
-    if (this.level3 != null) {  
-      buffer.writeAll(["\"level3\":", this.level3, ","], "");
+    if (this.m_level3 != null) {  
+      buffer.writeAll(["\"level3\":", this.m_level3, ","], "");
     }
 
-    if (this.prevLevel3 != null) {  
-      buffer.writeAll(["\"prevLevel3\":", this.prevLevel3, ","], "");
+    if (this.m_prevLevel3 != null) {  
+      buffer.writeAll(["\"prevLevel3\":", this.m_prevLevel3, ","], "");
     }
   }
 

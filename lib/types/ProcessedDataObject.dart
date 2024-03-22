@@ -23,9 +23,45 @@ import 'OptionFragment.dart';
  */
 class ProcessedDataObject extends OptionFragment {
   ProcessedDataObject() : super();
-  bool? cropped;
-  double? cropStart;
-  double? closestPointRange;
+  bool? m_cropped;  
+
+  bool get cropped { 
+    if (this.m_cropped == null) {
+      this.m_cropped = false;
+    }
+    return this.m_cropped!;
+  }
+
+  void set cropped (bool v) {
+    this.m_cropped = v;
+  }
+    
+  double? m_cropStart;  
+
+  double get cropStart { 
+    if (this.m_cropStart == null) {
+      this.m_cropStart = 0;
+    }
+    return this.m_cropStart!;
+  }
+
+  void set cropStart (double v) {
+    this.m_cropStart = v;
+  }
+    
+  double? m_closestPointRange;  
+
+  double get closestPointRange { 
+    if (this.m_closestPointRange == null) {
+      this.m_closestPointRange = 0;
+    }
+    return this.m_closestPointRange!;
+  }
+
+  void set closestPointRange (double v) {
+    this.m_closestPointRange = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -38,16 +74,16 @@ class ProcessedDataObject extends OptionFragment {
 
     // NOTE: skip serialization of yData (type number[][] is ignored)} 
 
-    if (this.cropped != null) {  
-      buffer.writeAll(["\"cropped\":", this.cropped, ","], "");
+    if (this.m_cropped != null) {  
+      buffer.writeAll(["\"cropped\":", this.m_cropped, ","], "");
     }
 
-    if (this.cropStart != null) {  
-      buffer.writeAll(["\"cropStart\":", this.cropStart, ","], "");
+    if (this.m_cropStart != null) {  
+      buffer.writeAll(["\"cropStart\":", this.m_cropStart, ","], "");
     }
 
-    if (this.closestPointRange != null) {  
-      buffer.writeAll(["\"closestPointRange\":", this.closestPointRange, ","], "");
+    if (this.m_closestPointRange != null) {  
+      buffer.writeAll(["\"closestPointRange\":", this.m_closestPointRange, ","], "");
     }
   }
 

@@ -29,19 +29,55 @@ class LoadingOptions extends OptionFragment {
    * 
    * Defaults to '100'. 
       */
-  double? hideDuration;
+  double? m_hideDuration;  
+
+  double get hideDuration { 
+    if (this.m_hideDuration == null) {
+      this.m_hideDuration = 0;
+    }
+    return this.m_hideDuration!;
+  }
+
+  void set hideDuration (double v) {
+    this.m_hideDuration = v;
+  }
+    
   /**
    * CSS styles for the loading label `span`. 
    * 
    * Defaults to '{"fontWeight": "bold", "position": "relative", "top": "45%"}'. 
       */
-  CSSObject? labelStyle;
+  CSSObject? m_labelStyle;  
+
+  CSSObject get labelStyle { 
+    if (this.m_labelStyle == null) {
+      this.m_labelStyle = CSSObject();
+    }
+    return this.m_labelStyle!;
+  }
+
+  void set labelStyle (CSSObject v) {
+    this.m_labelStyle = v;
+  }
+    
   /**
    * The duration in milliseconds of the fade in effect. 
    * 
    * Defaults to '100'. 
       */
-  double? showDuration;
+  double? m_showDuration;  
+
+  double get showDuration { 
+    if (this.m_showDuration == null) {
+      this.m_showDuration = 0;
+    }
+    return this.m_showDuration!;
+  }
+
+  void set showDuration (double v) {
+    this.m_showDuration = v;
+  }
+    
   /**
    * CSS styles for the loading screen that covers the plot area.
    * 
@@ -50,7 +86,19 @@ class LoadingOptions extends OptionFragment {
    * 
    * Defaults to '{"position": "absolute", "backgroundColor": "#ffffff", "opacity": 0.5, "textAlign": "center"}'. 
       */
-  CSSObject? style;
+  CSSObject? m_style;  
+
+  CSSObject get style { 
+    if (this.m_style == null) {
+      this.m_style = CSSObject();
+    }
+    return this.m_style!;
+  }
+
+  void set style (CSSObject v) {
+    this.m_style = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -59,20 +107,20 @@ class LoadingOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.hideDuration != null) {  
-      buffer.writeAll(["\"hideDuration\":", this.hideDuration, ","], "");
+    if (this.m_hideDuration != null) {  
+      buffer.writeAll(["\"hideDuration\":", this.m_hideDuration, ","], "");
     }
 
-    if (this.labelStyle != null) {  
-      buffer.writeAll(["\"labelStyle\":", this.labelStyle?.toJSON(), ","], "");
+    if (this.m_labelStyle != null) {  
+      buffer.writeAll(["\"labelStyle\":", this.m_labelStyle?.toJSON(), ","], "");
     }
 
-    if (this.showDuration != null) {  
-      buffer.writeAll(["\"showDuration\":", this.showDuration, ","], "");
+    if (this.m_showDuration != null) {  
+      buffer.writeAll(["\"showDuration\":", this.m_showDuration, ","], "");
     }
 
-    if (this.style != null) {  
-      buffer.writeAll(["\"style\":", this.style?.toJSON(), ","], "");
+    if (this.m_style != null) {  
+      buffer.writeAll(["\"style\":", this.m_style?.toJSON(), ","], "");
     }
   }
 

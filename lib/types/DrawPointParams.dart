@@ -27,9 +27,45 @@ import 'OptionFragment.dart';
  */
 class DrawPointParams extends OptionFragment {
   DrawPointParams() : super();
-  String? imageUrl;
-  bool? isNew;
-  String? shapeType;
+  String? m_imageUrl;  
+
+  String get imageUrl { 
+    if (this.m_imageUrl == null) {
+      this.m_imageUrl = "";
+    }
+    return this.m_imageUrl!;
+  }
+
+  void set imageUrl (String v) {
+    this.m_imageUrl = v;
+  }
+    
+  bool? m_isNew;  
+
+  bool get isNew { 
+    if (this.m_isNew == null) {
+      this.m_isNew = false;
+    }
+    return this.m_isNew!;
+  }
+
+  void set isNew (bool v) {
+    this.m_isNew = v;
+  }
+    
+  String? m_shapeType;  
+
+  String get shapeType { 
+    if (this.m_shapeType == null) {
+      this.m_shapeType = "";
+    }
+    return this.m_shapeType!;
+  }
+
+  void set shapeType (String v) {
+    this.m_shapeType = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -48,12 +84,12 @@ class DrawPointParams extends OptionFragment {
 
     // NOTE: skip serialization of onComplete (type Function is ignored)} 
 
-    if (this.imageUrl != null) {  
-      buffer.writeAll(["\"imageUrl\":", this.imageUrl, ","], "");
+    if (this.m_imageUrl != null) {  
+      buffer.writeAll(["\"imageUrl\":", this.m_imageUrl, ","], "");
     }
 
-    if (this.isNew != null) {  
-      buffer.writeAll(["\"isNew\":", this.isNew, ","], "");
+    if (this.m_isNew != null) {  
+      buffer.writeAll(["\"isNew\":", this.m_isNew, ","], "");
     }
 
     // NOTE: skip serialization of renderer (type SVGRenderer is ignored)} 
@@ -62,8 +98,8 @@ class DrawPointParams extends OptionFragment {
 
     // NOTE: skip serialization of shapeArgs (type SVGAttributes is ignored)} 
 
-    if (this.shapeType != null) {  
-      buffer.writeAll(["\"shapeType\":", this.shapeType, ","], "");
+    if (this.m_shapeType != null) {  
+      buffer.writeAll(["\"shapeType\":", this.m_shapeType, ","], "");
     }
   }
 

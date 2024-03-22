@@ -25,7 +25,19 @@ import 'OptionFragment.dart';
  */
 class SankeyDataLabelOptions extends DataLabelOptions {
   SankeyDataLabelOptions() : super();
-  String? nodeFormat;
+  String? m_nodeFormat;  
+
+  String get nodeFormat { 
+    if (this.m_nodeFormat == null) {
+      this.m_nodeFormat = "";
+    }
+    return this.m_nodeFormat!;
+  }
+
+  void set nodeFormat (String v) {
+    this.m_nodeFormat = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -34,8 +46,8 @@ class SankeyDataLabelOptions extends DataLabelOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.nodeFormat != null) {  
-      buffer.writeAll(["\"nodeFormat\":", this.nodeFormat, ","], "");
+    if (this.m_nodeFormat != null) {  
+      buffer.writeAll(["\"nodeFormat\":", this.m_nodeFormat, ","], "");
     }
 
     // NOTE: skip serialization of linkTextPath (type DataLabelTextPathOptions is ignored)} 

@@ -25,8 +25,32 @@ import 'OptionFragment.dart';
  */
 class NetworkgraphDataLabelsOptionsObject extends DataLabelOptions {
   NetworkgraphDataLabelsOptionsObject() : super();
-  String? format;
-  String? linkFormat;
+  String? m_format;  
+
+  String get format { 
+    if (this.m_format == null) {
+      this.m_format = "";
+    }
+    return this.m_format!;
+  }
+
+  void set format (String v) {
+    this.m_format = v;
+  }
+    
+  String? m_linkFormat;  
+
+  String get linkFormat { 
+    if (this.m_linkFormat == null) {
+      this.m_linkFormat = "";
+    }
+    return this.m_linkFormat!;
+  }
+
+  void set linkFormat (String v) {
+    this.m_linkFormat = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -35,12 +59,12 @@ class NetworkgraphDataLabelsOptionsObject extends DataLabelOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.format != null) {  
-      buffer.writeAll(["\"format\":", this.format, ","], "");
+    if (this.m_format != null) {  
+      buffer.writeAll(["\"format\":", this.m_format, ","], "");
     }
 
-    if (this.linkFormat != null) {  
-      buffer.writeAll(["\"linkFormat\":", this.linkFormat, ","], "");
+    if (this.m_linkFormat != null) {  
+      buffer.writeAll(["\"linkFormat\":", this.m_linkFormat, ","], "");
     }
 
     // NOTE: skip serialization of linkTextPath (type DataLabelTextPathOptions is ignored)} 

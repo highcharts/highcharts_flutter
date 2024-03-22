@@ -23,8 +23,32 @@ import 'OptionFragment.dart';
  */
 class LangAccessibilityTableOptions extends OptionFragment {
   LangAccessibilityTableOptions() : super();
-  String? tableSummary;
-  String? viewAsDataTableButtonText;
+  String? m_tableSummary;  
+
+  String get tableSummary { 
+    if (this.m_tableSummary == null) {
+      this.m_tableSummary = "";
+    }
+    return this.m_tableSummary!;
+  }
+
+  void set tableSummary (String v) {
+    this.m_tableSummary = v;
+  }
+    
+  String? m_viewAsDataTableButtonText;  
+
+  String get viewAsDataTableButtonText { 
+    if (this.m_viewAsDataTableButtonText == null) {
+      this.m_viewAsDataTableButtonText = "";
+    }
+    return this.m_viewAsDataTableButtonText!;
+  }
+
+  void set viewAsDataTableButtonText (String v) {
+    this.m_viewAsDataTableButtonText = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,12 +57,12 @@ class LangAccessibilityTableOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.tableSummary != null) {  
-      buffer.writeAll(["\"tableSummary\":", this.tableSummary, ","], "");
+    if (this.m_tableSummary != null) {  
+      buffer.writeAll(["\"tableSummary\":", this.m_tableSummary, ","], "");
     }
 
-    if (this.viewAsDataTableButtonText != null) {  
-      buffer.writeAll(["\"viewAsDataTableButtonText\":", this.viewAsDataTableButtonText, ","], "");
+    if (this.m_viewAsDataTableButtonText != null) {  
+      buffer.writeAll(["\"viewAsDataTableButtonText\":", this.m_viewAsDataTableButtonText, ","], "");
     }
   }
 

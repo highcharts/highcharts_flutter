@@ -25,32 +25,92 @@ import 'OptionFragment.dart';
  */
 class FlowMapSeriesOptions extends MapLineSeriesOptions {
   FlowMapSeriesOptions() : super();
-  bool? growTowards;
+  bool? m_growTowards;  
+
+  bool get growTowards { 
+    if (this.m_growTowards == null) {
+      this.m_growTowards = false;
+    }
+    return this.m_growTowards!;
+  }
+
+  void set growTowards (bool v) {
+    this.m_growTowards = v;
+  }
+    
   /**
    * A `markerEnd` creates an arrow symbol indicating the direction of
    * flow at the destination. Specifying a `markerEnd` here will create
    * one for each link.  
       */
-  MarkerEndOptions? markerEnd;
+  MarkerEndOptions? m_markerEnd;  
+
+  MarkerEndOptions get markerEnd { 
+    if (this.m_markerEnd == null) {
+      this.m_markerEnd = MarkerEndOptions();
+    }
+    return this.m_markerEnd!;
+  }
+
+  void set markerEnd (MarkerEndOptions v) {
+    this.m_markerEnd = v;
+  }
+    
   /**
    * Maximum width of a link expressed in pixels. The weight of a link is
    * mapped between `maxWidth` and `minWidth`. 
    * 
    * Defaults to '25'. 
       */
-  double? maxWidth;
+  double? m_maxWidth;  
+
+  double get maxWidth { 
+    if (this.m_maxWidth == null) {
+      this.m_maxWidth = 0;
+    }
+    return this.m_maxWidth!;
+  }
+
+  void set maxWidth (double v) {
+    this.m_maxWidth = v;
+  }
+    
   /**
    * Minimum width of a link expressed in pixels. The weight of a link is
    * mapped between `maxWidth` and `minWidth`. 
    * 
    * Defaults to '5'. 
       */
-  double? minWidth;
+  double? m_minWidth;  
+
+  double get minWidth { 
+    if (this.m_minWidth == null) {
+      this.m_minWidth = 0;
+    }
+    return this.m_minWidth!;
+  }
+
+  void set minWidth (double v) {
+    this.m_minWidth = v;
+  }
+    
   /**
    * The weight for all links with unspecified weights. The weight of a
    * link determines its thickness compared to other links.  
       */
-  double? weight;
+  double? m_weight;  
+
+  double get weight { 
+    if (this.m_weight == null) {
+      this.m_weight = 0;
+    }
+    return this.m_weight!;
+  }
+
+  void set weight (double v) {
+    this.m_weight = v;
+  }
+    
   /**
    * The `curveFactor` option for all links. Value higher than 0 will
    * curve the link clockwise. A negative value will curve it counter
@@ -59,7 +119,19 @@ class FlowMapSeriesOptions extends MapLineSeriesOptions {
    * 
    * Defaults to 'undefined'. 
       */
-  double? curveFactor;
+  double? m_curveFactor;  
+
+  double get curveFactor { 
+    if (this.m_curveFactor == null) {
+      this.m_curveFactor = 0;
+    }
+    return this.m_curveFactor!;
+  }
+
+  void set curveFactor (double v) {
+    this.m_curveFactor = v;
+  }
+    
   /**
    * If no weight has previously been specified, this will set the width
    * of all the links without being compared to and scaled according to
@@ -67,13 +139,37 @@ class FlowMapSeriesOptions extends MapLineSeriesOptions {
    * 
    * Defaults to '1'. 
       */
-  double? width;
+  double? m_width;  
+
+  double get width { 
+    if (this.m_width == null) {
+      this.m_width = 0;
+    }
+    return this.m_width!;
+  }
+
+  void set width (double v) {
+    this.m_width = v;
+  }
+    
   /**
    * Pixel width of the graph line. 
    * 
    * Defaults to '1'. 
       */
-  double? lineWidth;
+  double? m_lineWidth;  
+
+  double get lineWidth { 
+    if (this.m_lineWidth == null) {
+      this.m_lineWidth = 0;
+    }
+    return this.m_lineWidth!;
+  }
+
+  void set lineWidth (double v) {
+    this.m_lineWidth = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -82,36 +178,36 @@ class FlowMapSeriesOptions extends MapLineSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.growTowards != null) {  
-      buffer.writeAll(["\"growTowards\":", this.growTowards, ","], "");
+    if (this.m_growTowards != null) {  
+      buffer.writeAll(["\"growTowards\":", this.m_growTowards, ","], "");
     }
 
-    if (this.markerEnd != null) {  
-      buffer.writeAll(["\"markerEnd\":", this.markerEnd?.toJSON(), ","], "");
+    if (this.m_markerEnd != null) {  
+      buffer.writeAll(["\"markerEnd\":", this.m_markerEnd?.toJSON(), ","], "");
     }
 
-    if (this.maxWidth != null) {  
-      buffer.writeAll(["\"maxWidth\":", this.maxWidth, ","], "");
+    if (this.m_maxWidth != null) {  
+      buffer.writeAll(["\"maxWidth\":", this.m_maxWidth, ","], "");
     }
 
-    if (this.minWidth != null) {  
-      buffer.writeAll(["\"minWidth\":", this.minWidth, ","], "");
+    if (this.m_minWidth != null) {  
+      buffer.writeAll(["\"minWidth\":", this.m_minWidth, ","], "");
     }
 
-    if (this.weight != null) {  
-      buffer.writeAll(["\"weight\":", this.weight, ","], "");
+    if (this.m_weight != null) {  
+      buffer.writeAll(["\"weight\":", this.m_weight, ","], "");
     }
 
-    if (this.curveFactor != null) {  
-      buffer.writeAll(["\"curveFactor\":", this.curveFactor, ","], "");
+    if (this.m_curveFactor != null) {  
+      buffer.writeAll(["\"curveFactor\":", this.m_curveFactor, ","], "");
     }
 
-    if (this.width != null) {  
-      buffer.writeAll(["\"width\":", this.width, ","], "");
+    if (this.m_width != null) {  
+      buffer.writeAll(["\"width\":", this.m_width, ","], "");
     }
 
-    if (this.lineWidth != null) {  
-      buffer.writeAll(["\"lineWidth\":", this.lineWidth, ","], "");
+    if (this.m_lineWidth != null) {  
+      buffer.writeAll(["\"lineWidth\":", this.m_lineWidth, ","], "");
     }
   }
 

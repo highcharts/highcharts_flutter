@@ -23,9 +23,45 @@ import 'OptionFragment.dart';
  */
 class BorderRadiusOptionsObject extends OptionFragment {
   BorderRadiusOptionsObject() : super();
-  String? radius;
-  String? scope;
-  String? where;
+  String? m_radius;  
+
+  String get radius { 
+    if (this.m_radius == null) {
+      this.m_radius = "";
+    }
+    return this.m_radius!;
+  }
+
+  void set radius (String v) {
+    this.m_radius = v;
+  }
+    
+  String? m_scope;  
+
+  String get scope { 
+    if (this.m_scope == null) {
+      this.m_scope = "";
+    }
+    return this.m_scope!;
+  }
+
+  void set scope (String v) {
+    this.m_scope = v;
+  }
+    
+  String? m_where;  
+
+  String get where { 
+    if (this.m_where == null) {
+      this.m_where = "";
+    }
+    return this.m_where!;
+  }
+
+  void set where (String v) {
+    this.m_where = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -34,16 +70,16 @@ class BorderRadiusOptionsObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.radius != null) {  
-      buffer.writeAll(["\"radius\":", this.radius, ","], "");
+    if (this.m_radius != null) {  
+      buffer.writeAll(["\"radius\":", this.m_radius, ","], "");
     }
 
-    if (this.scope != null) {  
-      buffer.writeAll(["\"scope\":", this.scope, ","], "");
+    if (this.m_scope != null) {  
+      buffer.writeAll(["\"scope\":", this.m_scope, ","], "");
     }
 
-    if (this.where != null) {  
-      buffer.writeAll(["\"where\":", this.where, ","], "");
+    if (this.m_where != null) {  
+      buffer.writeAll(["\"where\":", this.m_where, ","], "");
     }
   }
 

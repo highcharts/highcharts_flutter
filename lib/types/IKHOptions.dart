@@ -30,7 +30,19 @@ class IKHOptions extends SMAOptions {
   /**
    * The styles for Chikou line  
       */
-  Map<String, String>? chikouLine;
+  Map<String, String>? m_chikouLine;  
+
+  Map<String, String> get chikouLine { 
+    if (this.m_chikouLine == null) {
+      this.m_chikouLine = Map<String, String>();
+    }
+    return this.m_chikouLine!;
+  }
+
+  void set chikouLine (Map<String, String> v) {
+    this.m_chikouLine = v;
+  }
+    
   /**
    * Defines when to display a gap in the graph, together with the
    * [gapUnit](plotOptions.series.gapUnit) option.
@@ -50,11 +62,35 @@ class IKHOptions extends SMAOptions {
    * 
    * Defaults to '0'. 
       */
-  double? gapSize;
+  double? m_gapSize;  
+
+  double get gapSize { 
+    if (this.m_gapSize == null) {
+      this.m_gapSize = 0;
+    }
+    return this.m_gapSize!;
+  }
+
+  void set gapSize (double v) {
+    this.m_gapSize = v;
+  }
+    
   /**
    * The styles for Kijun line  
       */
-  Map<String, String>? kijunLine;
+  Map<String, String>? m_kijunLine;  
+
+  Map<String, String> get kijunLine { 
+    if (this.m_kijunLine == null) {
+      this.m_kijunLine = Map<String, String>();
+    }
+    return this.m_kijunLine!;
+  }
+
+  void set kijunLine (Map<String, String> v) {
+    this.m_kijunLine = v;
+  }
+    
   /**
    * Options for the point markers of line and scatter-like series. Properties
    * like `fillColor`, `lineColor` and `lineWidth` define the visual
@@ -65,7 +101,19 @@ class IKHOptions extends SMAOptions {
    * In styled mode, the markers can be styled with the `.highcharts-point`,
    * `.highcharts-point-hover` and `.highcharts-point-select` class names.  
       */
-  PointMarkerOptions? marker;
+  PointMarkerOptions? m_marker;  
+
+  PointMarkerOptions get marker { 
+    if (this.m_marker == null) {
+      this.m_marker = PointMarkerOptions();
+    }
+    return this.m_marker!;
+  }
+
+  void set marker (PointMarkerOptions v) {
+    this.m_marker = v;
+  }
+    
   /**
    * Paramters used in calculation of regression series' points.  
       */
@@ -74,19 +122,67 @@ class IKHOptions extends SMAOptions {
   /**
    * The styles for area between Senkou Span A and B.  
       */
-  IKHSenkouSpanOptions? senkouSpan;
+  IKHSenkouSpanOptions? m_senkouSpan;  
+
+  IKHSenkouSpanOptions get senkouSpan { 
+    if (this.m_senkouSpan == null) {
+      this.m_senkouSpan = IKHSenkouSpanOptions();
+    }
+    return this.m_senkouSpan!;
+  }
+
+  void set senkouSpan (IKHSenkouSpanOptions v) {
+    this.m_senkouSpan = v;
+  }
+    
   /**
    * The styles for Senkou Span A line  
       */
-  Map<String, String>? senkouSpanA;
+  Map<String, String>? m_senkouSpanA;  
+
+  Map<String, String> get senkouSpanA { 
+    if (this.m_senkouSpanA == null) {
+      this.m_senkouSpanA = Map<String, String>();
+    }
+    return this.m_senkouSpanA!;
+  }
+
+  void set senkouSpanA (Map<String, String> v) {
+    this.m_senkouSpanA = v;
+  }
+    
   /**
    * The styles for Senkou Span B line  
       */
-  Map<String, String>? senkouSpanB;
+  Map<String, String>? m_senkouSpanB;  
+
+  Map<String, String> get senkouSpanB { 
+    if (this.m_senkouSpanB == null) {
+      this.m_senkouSpanB = Map<String, String>();
+    }
+    return this.m_senkouSpanB!;
+  }
+
+  void set senkouSpanB (Map<String, String> v) {
+    this.m_senkouSpanB = v;
+  }
+    
   /**
    * The styles for Tenkan line  
       */
-  Map<String, String>? tenkanLine;
+  Map<String, String>? m_tenkanLine;  
+
+  Map<String, String> get tenkanLine { 
+    if (this.m_tenkanLine == null) {
+      this.m_tenkanLine = Map<String, String>();
+    }
+    return this.m_tenkanLine!;
+  }
+
+  void set tenkanLine (Map<String, String> v) {
+    this.m_tenkanLine = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -95,40 +191,40 @@ class IKHOptions extends SMAOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.chikouLine != null) {  
-      buffer.writeAll(["\"chikouLine\":", this.chikouLine, ","], "");
+    if (this.m_chikouLine != null) {  
+      buffer.writeAll(["\"chikouLine\":", this.m_chikouLine, ","], "");
     }
 
-    if (this.gapSize != null) {  
-      buffer.writeAll(["\"gapSize\":", this.gapSize, ","], "");
+    if (this.m_gapSize != null) {  
+      buffer.writeAll(["\"gapSize\":", this.m_gapSize, ","], "");
     }
 
-    if (this.kijunLine != null) {  
-      buffer.writeAll(["\"kijunLine\":", this.kijunLine, ","], "");
+    if (this.m_kijunLine != null) {  
+      buffer.writeAll(["\"kijunLine\":", this.m_kijunLine, ","], "");
     }
 
-    if (this.marker != null) {  
-      buffer.writeAll(["\"marker\":", this.marker?.toJSON(), ","], "");
+    if (this.m_marker != null) {  
+      buffer.writeAll(["\"marker\":", this.m_marker?.toJSON(), ","], "");
     }
 
-    if (this.params != null) {  
-      buffer.writeAll(["\"params\":", this.params?.toJSON(), ","], "");
+    if (this.m_params != null) {  
+      buffer.writeAll(["\"params\":", this.m_params?.toJSON(), ","], "");
     }
 
-    if (this.senkouSpan != null) {  
-      buffer.writeAll(["\"senkouSpan\":", this.senkouSpan?.toJSON(), ","], "");
+    if (this.m_senkouSpan != null) {  
+      buffer.writeAll(["\"senkouSpan\":", this.m_senkouSpan?.toJSON(), ","], "");
     }
 
-    if (this.senkouSpanA != null) {  
-      buffer.writeAll(["\"senkouSpanA\":", this.senkouSpanA, ","], "");
+    if (this.m_senkouSpanA != null) {  
+      buffer.writeAll(["\"senkouSpanA\":", this.m_senkouSpanA, ","], "");
     }
 
-    if (this.senkouSpanB != null) {  
-      buffer.writeAll(["\"senkouSpanB\":", this.senkouSpanB, ","], "");
+    if (this.m_senkouSpanB != null) {  
+      buffer.writeAll(["\"senkouSpanB\":", this.m_senkouSpanB, ","], "");
     }
 
-    if (this.tenkanLine != null) {  
-      buffer.writeAll(["\"tenkanLine\":", this.tenkanLine, ","], "");
+    if (this.m_tenkanLine != null) {  
+      buffer.writeAll(["\"tenkanLine\":", this.m_tenkanLine, ","], "");
     }
   }
 

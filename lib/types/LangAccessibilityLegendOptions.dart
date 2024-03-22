@@ -23,9 +23,45 @@ import 'OptionFragment.dart';
  */
 class LangAccessibilityLegendOptions extends OptionFragment {
   LangAccessibilityLegendOptions() : super();
-  String? legendItem;
-  String? legendLabel;
-  String? legendLabelNoTitle;
+  String? m_legendItem;  
+
+  String get legendItem { 
+    if (this.m_legendItem == null) {
+      this.m_legendItem = "";
+    }
+    return this.m_legendItem!;
+  }
+
+  void set legendItem (String v) {
+    this.m_legendItem = v;
+  }
+    
+  String? m_legendLabel;  
+
+  String get legendLabel { 
+    if (this.m_legendLabel == null) {
+      this.m_legendLabel = "";
+    }
+    return this.m_legendLabel!;
+  }
+
+  void set legendLabel (String v) {
+    this.m_legendLabel = v;
+  }
+    
+  String? m_legendLabelNoTitle;  
+
+  String get legendLabelNoTitle { 
+    if (this.m_legendLabelNoTitle == null) {
+      this.m_legendLabelNoTitle = "";
+    }
+    return this.m_legendLabelNoTitle!;
+  }
+
+  void set legendLabelNoTitle (String v) {
+    this.m_legendLabelNoTitle = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -34,16 +70,16 @@ class LangAccessibilityLegendOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.legendItem != null) {  
-      buffer.writeAll(["\"legendItem\":", this.legendItem, ","], "");
+    if (this.m_legendItem != null) {  
+      buffer.writeAll(["\"legendItem\":", this.m_legendItem, ","], "");
     }
 
-    if (this.legendLabel != null) {  
-      buffer.writeAll(["\"legendLabel\":", this.legendLabel, ","], "");
+    if (this.m_legendLabel != null) {  
+      buffer.writeAll(["\"legendLabel\":", this.m_legendLabel, ","], "");
     }
 
-    if (this.legendLabelNoTitle != null) {  
-      buffer.writeAll(["\"legendLabelNoTitle\":", this.legendLabelNoTitle, ","], "");
+    if (this.m_legendLabelNoTitle != null) {  
+      buffer.writeAll(["\"legendLabelNoTitle\":", this.m_legendLabelNoTitle, ","], "");
     }
   }
 

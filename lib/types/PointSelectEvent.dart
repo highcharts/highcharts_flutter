@@ -24,7 +24,19 @@ import 'OptionFragment.dart';
  */
 class PointSelectEvent extends Event {
   PointSelectEvent() : super();
-  bool? accumulate;
+  bool? m_accumulate;  
+
+  bool get accumulate { 
+    if (this.m_accumulate == null) {
+      this.m_accumulate = false;
+    }
+    return this.m_accumulate!;
+  }
+
+  void set accumulate (bool v) {
+    this.m_accumulate = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,8 +45,8 @@ class PointSelectEvent extends Event {
     super.toJSONInner(buffer);
 
     
-    if (this.accumulate != null) {  
-      buffer.writeAll(["\"accumulate\":", this.accumulate, ","], "");
+    if (this.m_accumulate != null) {  
+      buffer.writeAll(["\"accumulate\":", this.m_accumulate, ","], "");
     }
   }
 

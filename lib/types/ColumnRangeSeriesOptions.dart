@@ -31,7 +31,19 @@ class ColumnRangeSeriesOptions extends AreaRangeSeriesOptions {
    * column charts, minPointLength might not be respected for tightly
    * packed values.  
       */
-  double? minPointLength;
+  double? m_minPointLength;  
+
+  double get minPointLength { 
+    if (this.m_minPointLength == null) {
+      this.m_minPointLength = 0;
+    }
+    return this.m_minPointLength!;
+  }
+
+  void set minPointLength (double v) {
+    this.m_minPointLength = v;
+  }
+    
   // NOTE: states skipped - type Generic is ignored in gen
 
 
@@ -42,8 +54,8 @@ class ColumnRangeSeriesOptions extends AreaRangeSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.minPointLength != null) {  
-      buffer.writeAll(["\"minPointLength\":", this.minPointLength, ","], "");
+    if (this.m_minPointLength != null) {  
+      buffer.writeAll(["\"minPointLength\":", this.m_minPointLength, ","], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 

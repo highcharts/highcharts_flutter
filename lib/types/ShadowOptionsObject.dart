@@ -23,12 +23,84 @@ import 'OptionFragment.dart';
  */
 class ShadowOptionsObject extends OptionFragment {
   ShadowOptionsObject() : super();
-  String? color;
-  String? filterUnits;
-  double? offsetX;
-  double? offsetY;
-  double? opacity;
-  double? width;
+  String? m_color;  
+
+  String get color { 
+    if (this.m_color == null) {
+      this.m_color = "";
+    }
+    return this.m_color!;
+  }
+
+  void set color (String v) {
+    this.m_color = v;
+  }
+    
+  String? m_filterUnits;  
+
+  String get filterUnits { 
+    if (this.m_filterUnits == null) {
+      this.m_filterUnits = "";
+    }
+    return this.m_filterUnits!;
+  }
+
+  void set filterUnits (String v) {
+    this.m_filterUnits = v;
+  }
+    
+  double? m_offsetX;  
+
+  double get offsetX { 
+    if (this.m_offsetX == null) {
+      this.m_offsetX = 0;
+    }
+    return this.m_offsetX!;
+  }
+
+  void set offsetX (double v) {
+    this.m_offsetX = v;
+  }
+    
+  double? m_offsetY;  
+
+  double get offsetY { 
+    if (this.m_offsetY == null) {
+      this.m_offsetY = 0;
+    }
+    return this.m_offsetY!;
+  }
+
+  void set offsetY (double v) {
+    this.m_offsetY = v;
+  }
+    
+  double? m_opacity;  
+
+  double get opacity { 
+    if (this.m_opacity == null) {
+      this.m_opacity = 0;
+    }
+    return this.m_opacity!;
+  }
+
+  void set opacity (double v) {
+    this.m_opacity = v;
+  }
+    
+  double? m_width;  
+
+  double get width { 
+    if (this.m_width == null) {
+      this.m_width = 0;
+    }
+    return this.m_width!;
+  }
+
+  void set width (double v) {
+    this.m_width = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -37,28 +109,28 @@ class ShadowOptionsObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.color != null) {  
-      buffer.writeAll(["\"color\":", this.color, ","], "");
+    if (this.m_color != null) {  
+      buffer.writeAll(["\"color\":", this.m_color, ","], "");
     }
 
-    if (this.filterUnits != null) {  
-      buffer.writeAll(["\"filterUnits\":", this.filterUnits, ","], "");
+    if (this.m_filterUnits != null) {  
+      buffer.writeAll(["\"filterUnits\":", this.m_filterUnits, ","], "");
     }
 
-    if (this.offsetX != null) {  
-      buffer.writeAll(["\"offsetX\":", this.offsetX, ","], "");
+    if (this.m_offsetX != null) {  
+      buffer.writeAll(["\"offsetX\":", this.m_offsetX, ","], "");
     }
 
-    if (this.offsetY != null) {  
-      buffer.writeAll(["\"offsetY\":", this.offsetY, ","], "");
+    if (this.m_offsetY != null) {  
+      buffer.writeAll(["\"offsetY\":", this.m_offsetY, ","], "");
     }
 
-    if (this.opacity != null) {  
-      buffer.writeAll(["\"opacity\":", this.opacity, ","], "");
+    if (this.m_opacity != null) {  
+      buffer.writeAll(["\"opacity\":", this.m_opacity, ","], "");
     }
 
-    if (this.width != null) {  
-      buffer.writeAll(["\"width\":", this.width, ","], "");
+    if (this.m_width != null) {  
+      buffer.writeAll(["\"width\":", this.m_width, ","], "");
     }
   }
 

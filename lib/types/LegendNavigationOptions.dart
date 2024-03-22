@@ -24,10 +24,58 @@ import 'OptionFragment.dart';
  */
 class LegendNavigationOptions extends OptionFragment {
   LegendNavigationOptions() : super();
-  String? activeColor;
-  double? arrowSize;
-  bool? enabled;
-  String? inactiveColor;
+  String? m_activeColor;  
+
+  String get activeColor { 
+    if (this.m_activeColor == null) {
+      this.m_activeColor = "";
+    }
+    return this.m_activeColor!;
+  }
+
+  void set activeColor (String v) {
+    this.m_activeColor = v;
+  }
+    
+  double? m_arrowSize;  
+
+  double get arrowSize { 
+    if (this.m_arrowSize == null) {
+      this.m_arrowSize = 0;
+    }
+    return this.m_arrowSize!;
+  }
+
+  void set arrowSize (double v) {
+    this.m_arrowSize = v;
+  }
+    
+  bool? m_enabled;  
+
+  bool get enabled { 
+    if (this.m_enabled == null) {
+      this.m_enabled = false;
+    }
+    return this.m_enabled!;
+  }
+
+  void set enabled (bool v) {
+    this.m_enabled = v;
+  }
+    
+  String? m_inactiveColor;  
+
+  String get inactiveColor { 
+    if (this.m_inactiveColor == null) {
+      this.m_inactiveColor = "";
+    }
+    return this.m_inactiveColor!;
+  }
+
+  void set inactiveColor (String v) {
+    this.m_inactiveColor = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -36,22 +84,22 @@ class LegendNavigationOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.activeColor != null) {  
-      buffer.writeAll(["\"activeColor\":", this.activeColor, ","], "");
+    if (this.m_activeColor != null) {  
+      buffer.writeAll(["\"activeColor\":", this.m_activeColor, ","], "");
     }
 
     // NOTE: skip serialization of animation (type Generic is ignored)} 
 
-    if (this.arrowSize != null) {  
-      buffer.writeAll(["\"arrowSize\":", this.arrowSize, ","], "");
+    if (this.m_arrowSize != null) {  
+      buffer.writeAll(["\"arrowSize\":", this.m_arrowSize, ","], "");
     }
 
-    if (this.enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
+    if (this.m_enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this.m_enabled, ","], "");
     }
 
-    if (this.inactiveColor != null) {  
-      buffer.writeAll(["\"inactiveColor\":", this.inactiveColor, ","], "");
+    if (this.m_inactiveColor != null) {  
+      buffer.writeAll(["\"inactiveColor\":", this.m_inactiveColor, ","], "");
     }
 
     // NOTE: skip serialization of style (type CSSObject is ignored)} 

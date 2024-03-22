@@ -24,8 +24,32 @@ import 'OptionFragment.dart';
  */
 class VectorPointOptions extends ScatterPointOptions {
   VectorPointOptions() : super();
-  double? direction;
-  double? length;
+  double? m_direction;  
+
+  double get direction { 
+    if (this.m_direction == null) {
+      this.m_direction = 0;
+    }
+    return this.m_direction!;
+  }
+
+  void set direction (double v) {
+    this.m_direction = v;
+  }
+    
+  double? m_length;  
+
+  double get length { 
+    if (this.m_length == null) {
+      this.m_length = 0;
+    }
+    return this.m_length!;
+  }
+
+  void set length (double v) {
+    this.m_length = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -34,12 +58,12 @@ class VectorPointOptions extends ScatterPointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.direction != null) {  
-      buffer.writeAll(["\"direction\":", this.direction, ","], "");
+    if (this.m_direction != null) {  
+      buffer.writeAll(["\"direction\":", this.m_direction, ","], "");
     }
 
-    if (this.length != null) {  
-      buffer.writeAll(["\"length\":", this.length, ","], "");
+    if (this.m_length != null) {  
+      buffer.writeAll(["\"length\":", this.m_length, ","], "");
     }
   }
 

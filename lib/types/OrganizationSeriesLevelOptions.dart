@@ -25,9 +25,45 @@ import 'OptionFragment.dart';
  */
 class OrganizationSeriesLevelOptions extends SankeySeriesLevelOptions {
   OrganizationSeriesLevelOptions() : super();
-  double? borderRadius;
-  String? linkColor;
-  double? linkLineWidth;
+  double? m_borderRadius;  
+
+  double get borderRadius { 
+    if (this.m_borderRadius == null) {
+      this.m_borderRadius = 0;
+    }
+    return this.m_borderRadius!;
+  }
+
+  void set borderRadius (double v) {
+    this.m_borderRadius = v;
+  }
+    
+  String? m_linkColor;  
+
+  String get linkColor { 
+    if (this.m_linkColor == null) {
+      this.m_linkColor = "";
+    }
+    return this.m_linkColor!;
+  }
+
+  void set linkColor (String v) {
+    this.m_linkColor = v;
+  }
+    
+  double? m_linkLineWidth;  
+
+  double get linkLineWidth { 
+    if (this.m_linkLineWidth == null) {
+      this.m_linkLineWidth = 0;
+    }
+    return this.m_linkLineWidth!;
+  }
+
+  void set linkLineWidth (double v) {
+    this.m_linkLineWidth = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -36,16 +72,16 @@ class OrganizationSeriesLevelOptions extends SankeySeriesLevelOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.borderRadius != null) {  
-      buffer.writeAll(["\"borderRadius\":", this.borderRadius, ","], "");
+    if (this.m_borderRadius != null) {  
+      buffer.writeAll(["\"borderRadius\":", this.m_borderRadius, ","], "");
     }
 
-    if (this.linkColor != null) {  
-      buffer.writeAll(["\"linkColor\":", this.linkColor, ","], "");
+    if (this.m_linkColor != null) {  
+      buffer.writeAll(["\"linkColor\":", this.m_linkColor, ","], "");
     }
 
-    if (this.linkLineWidth != null) {  
-      buffer.writeAll(["\"linkLineWidth\":", this.linkLineWidth, ","], "");
+    if (this.m_linkLineWidth != null) {  
+      buffer.writeAll(["\"linkLineWidth\":", this.m_linkLineWidth, ","], "");
     }
 
     // NOTE: skip serialization of link (type OrganizationLinkOptions is ignored)} 

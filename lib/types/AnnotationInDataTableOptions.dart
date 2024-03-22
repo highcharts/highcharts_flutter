@@ -23,8 +23,32 @@ import 'OptionFragment.dart';
  */
 class AnnotationInDataTableOptions extends OptionFragment {
   AnnotationInDataTableOptions() : super();
-  String? itemDelimiter;
-  bool? join;
+  String? m_itemDelimiter;  
+
+  String get itemDelimiter { 
+    if (this.m_itemDelimiter == null) {
+      this.m_itemDelimiter = "";
+    }
+    return this.m_itemDelimiter!;
+  }
+
+  void set itemDelimiter (String v) {
+    this.m_itemDelimiter = v;
+  }
+    
+  bool? m_join;  
+
+  bool get join { 
+    if (this.m_join == null) {
+      this.m_join = false;
+    }
+    return this.m_join!;
+  }
+
+  void set join (bool v) {
+    this.m_join = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,12 +57,12 @@ class AnnotationInDataTableOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.itemDelimiter != null) {  
-      buffer.writeAll(["\"itemDelimiter\":", this.itemDelimiter, ","], "");
+    if (this.m_itemDelimiter != null) {  
+      buffer.writeAll(["\"itemDelimiter\":", this.m_itemDelimiter, ","], "");
     }
 
-    if (this.join != null) {  
-      buffer.writeAll(["\"join\":", this.join, ","], "");
+    if (this.m_join != null) {  
+      buffer.writeAll(["\"join\":", this.m_join, ","], "");
     }
   }
 

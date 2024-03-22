@@ -24,7 +24,19 @@ import 'OptionFragment.dart';
  */
 class PivotPointsParamsOptions extends SMAParamsOptions {
   PivotPointsParamsOptions() : super();
-  String? algorithm;
+  String? m_algorithm;  
+
+  String get algorithm { 
+    if (this.m_algorithm == null) {
+      this.m_algorithm = "";
+    }
+    return this.m_algorithm!;
+  }
+
+  void set algorithm (String v) {
+    this.m_algorithm = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,8 +45,8 @@ class PivotPointsParamsOptions extends SMAParamsOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.algorithm != null) {  
-      buffer.writeAll(["\"algorithm\":", this.algorithm, ","], "");
+    if (this.m_algorithm != null) {  
+      buffer.writeAll(["\"algorithm\":", this.m_algorithm, ","], "");
     }
   }
 

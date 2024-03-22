@@ -23,10 +23,58 @@ import 'OptionFragment.dart';
  */
 class MetaColumn extends OptionFragment {
   MetaColumn() : super();
-  String? dataType;
-  String? defaultValue;
-  double? index;
-  String? title;
+  String? m_dataType;  
+
+  String get dataType { 
+    if (this.m_dataType == null) {
+      this.m_dataType = "";
+    }
+    return this.m_dataType!;
+  }
+
+  void set dataType (String v) {
+    this.m_dataType = v;
+  }
+    
+  String? m_defaultValue;  
+
+  String get defaultValue { 
+    if (this.m_defaultValue == null) {
+      this.m_defaultValue = "";
+    }
+    return this.m_defaultValue!;
+  }
+
+  void set defaultValue (String v) {
+    this.m_defaultValue = v;
+  }
+    
+  double? m_index;  
+
+  double get index { 
+    if (this.m_index == null) {
+      this.m_index = 0;
+    }
+    return this.m_index!;
+  }
+
+  void set index (double v) {
+    this.m_index = v;
+  }
+    
+  String? m_title;  
+
+  String get title { 
+    if (this.m_title == null) {
+      this.m_title = "";
+    }
+    return this.m_title!;
+  }
+
+  void set title (String v) {
+    this.m_title = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -35,20 +83,20 @@ class MetaColumn extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.dataType != null) {  
-      buffer.writeAll(["\"dataType\":", this.dataType, ","], "");
+    if (this.m_dataType != null) {  
+      buffer.writeAll(["\"dataType\":", this.m_dataType, ","], "");
     }
 
-    if (this.defaultValue != null) {  
-      buffer.writeAll(["\"defaultValue\":", this.defaultValue, ","], "");
+    if (this.m_defaultValue != null) {  
+      buffer.writeAll(["\"defaultValue\":", this.m_defaultValue, ","], "");
     }
 
-    if (this.index != null) {  
-      buffer.writeAll(["\"index\":", this.index, ","], "");
+    if (this.m_index != null) {  
+      buffer.writeAll(["\"index\":", this.m_index, ","], "");
     }
 
-    if (this.title != null) {  
-      buffer.writeAll(["\"title\":", this.title, ","], "");
+    if (this.m_title != null) {  
+      buffer.writeAll(["\"title\":", this.m_title, ","], "");
     }
   }
 

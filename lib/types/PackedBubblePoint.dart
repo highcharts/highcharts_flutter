@@ -24,7 +24,19 @@ import 'OptionFragment.dart';
  */
 class PackedBubblePoint extends NetworkgraphPoint {
   PackedBubblePoint() : super();
-  String? className;
+  String? m_className;  
+
+  String get className { 
+    if (this.m_className == null) {
+      this.m_className = "";
+    }
+    return this.m_className!;
+  }
+
+  void set className (String v) {
+    this.m_className = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,8 +45,8 @@ class PackedBubblePoint extends NetworkgraphPoint {
     super.toJSONInner(buffer);
 
     
-    if (this.className != null) {  
-      buffer.writeAll(["\"className\":", this.className, ","], "");
+    if (this.m_className != null) {  
+      buffer.writeAll(["\"className\":", this.m_className, ","], "");
     }
 
     // NOTE: skip serialization of fromNode (type NetworkgraphPoint is ignored)} 

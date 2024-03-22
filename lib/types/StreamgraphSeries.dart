@@ -23,7 +23,19 @@ import 'OptionFragment.dart';
  */
 class StreamgraphSeries extends OptionFragment {
   StreamgraphSeries() : super();
-  bool? negStacks;
+  bool? m_negStacks;  
+
+  bool get negStacks { 
+    if (this.m_negStacks == null) {
+      this.m_negStacks = false;
+    }
+    return this.m_negStacks!;
+  }
+
+  void set negStacks (bool v) {
+    this.m_negStacks = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -32,8 +44,8 @@ class StreamgraphSeries extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.negStacks != null) {  
-      buffer.writeAll(["\"negStacks\":", this.negStacks, ","], "");
+    if (this.m_negStacks != null) {  
+      buffer.writeAll(["\"negStacks\":", this.m_negStacks, ","], "");
     }
 
     // NOTE: skip serialization of pointClass (type typeof StreamgraphPoint is ignored)} 

@@ -23,8 +23,32 @@ import 'OptionFragment.dart';
  */
 class RegressionLineParametersObject extends OptionFragment {
   RegressionLineParametersObject() : super();
-  double? slope;
-  double? intercept;
+  double? m_slope;  
+
+  double get slope { 
+    if (this.m_slope == null) {
+      this.m_slope = 0;
+    }
+    return this.m_slope!;
+  }
+
+  void set slope (double v) {
+    this.m_slope = v;
+  }
+    
+  double? m_intercept;  
+
+  double get intercept { 
+    if (this.m_intercept == null) {
+      this.m_intercept = 0;
+    }
+    return this.m_intercept!;
+  }
+
+  void set intercept (double v) {
+    this.m_intercept = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,12 +57,12 @@ class RegressionLineParametersObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.slope != null) {  
-      buffer.writeAll(["\"slope\":", this.slope, ","], "");
+    if (this.m_slope != null) {  
+      buffer.writeAll(["\"slope\":", this.m_slope, ","], "");
     }
 
-    if (this.intercept != null) {  
-      buffer.writeAll(["\"intercept\":", this.intercept, ","], "");
+    if (this.m_intercept != null) {  
+      buffer.writeAll(["\"intercept\":", this.m_intercept, ","], "");
     }
   }
 

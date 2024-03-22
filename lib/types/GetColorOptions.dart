@@ -24,11 +24,71 @@ import 'OptionFragment.dart';
  */
 class GetColorOptions extends OptionFragment {
   GetColorOptions() : super();
-  double? colorIndex;
-  double? index;
-  String? parentColor;
-  double? parentColorIndex;
-  double? siblings;
+  double? m_colorIndex;  
+
+  double get colorIndex { 
+    if (this.m_colorIndex == null) {
+      this.m_colorIndex = 0;
+    }
+    return this.m_colorIndex!;
+  }
+
+  void set colorIndex (double v) {
+    this.m_colorIndex = v;
+  }
+    
+  double? m_index;  
+
+  double get index { 
+    if (this.m_index == null) {
+      this.m_index = 0;
+    }
+    return this.m_index!;
+  }
+
+  void set index (double v) {
+    this.m_index = v;
+  }
+    
+  String? m_parentColor;  
+
+  String get parentColor { 
+    if (this.m_parentColor == null) {
+      this.m_parentColor = "";
+    }
+    return this.m_parentColor!;
+  }
+
+  void set parentColor (String v) {
+    this.m_parentColor = v;
+  }
+    
+  double? m_parentColorIndex;  
+
+  double get parentColorIndex { 
+    if (this.m_parentColorIndex == null) {
+      this.m_parentColorIndex = 0;
+    }
+    return this.m_parentColorIndex!;
+  }
+
+  void set parentColorIndex (double v) {
+    this.m_parentColorIndex = v;
+  }
+    
+  double? m_siblings;  
+
+  double get siblings { 
+    if (this.m_siblings == null) {
+      this.m_siblings = 0;
+    }
+    return this.m_siblings!;
+  }
+
+  void set siblings (double v) {
+    this.m_siblings = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -37,30 +97,30 @@ class GetColorOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.colorIndex != null) {  
-      buffer.writeAll(["\"colorIndex\":", this.colorIndex, ","], "");
+    if (this.m_colorIndex != null) {  
+      buffer.writeAll(["\"colorIndex\":", this.m_colorIndex, ","], "");
     }
 
     // NOTE: skip serialization of colors (type ColorType[] is ignored)} 
 
-    if (this.index != null) {  
-      buffer.writeAll(["\"index\":", this.index, ","], "");
+    if (this.m_index != null) {  
+      buffer.writeAll(["\"index\":", this.m_index, ","], "");
     }
 
     // NOTE: skip serialization of mapOptionsToLevel (type any is ignored)} 
 
-    if (this.parentColor != null) {  
-      buffer.writeAll(["\"parentColor\":", this.parentColor, ","], "");
+    if (this.m_parentColor != null) {  
+      buffer.writeAll(["\"parentColor\":", this.m_parentColor, ","], "");
     }
 
-    if (this.parentColorIndex != null) {  
-      buffer.writeAll(["\"parentColorIndex\":", this.parentColorIndex, ","], "");
+    if (this.m_parentColorIndex != null) {  
+      buffer.writeAll(["\"parentColorIndex\":", this.m_parentColorIndex, ","], "");
     }
 
     // NOTE: skip serialization of series (type Series is ignored)} 
 
-    if (this.siblings != null) {  
-      buffer.writeAll(["\"siblings\":", this.siblings, ","], "");
+    if (this.m_siblings != null) {  
+      buffer.writeAll(["\"siblings\":", this.m_siblings, ","], "");
     }
   }
 

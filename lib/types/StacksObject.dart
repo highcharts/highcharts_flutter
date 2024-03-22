@@ -23,7 +23,19 @@ import 'OptionFragment.dart';
  */
 class StacksObject extends OptionFragment {
   StacksObject() : super();
-  bool? changed;
+  bool? m_changed;  
+
+  bool get changed { 
+    if (this.m_changed == null) {
+      this.m_changed = false;
+    }
+    return this.m_changed!;
+  }
+
+  void set changed (bool v) {
+    this.m_changed = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -32,8 +44,8 @@ class StacksObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.changed != null) {  
-      buffer.writeAll(["\"changed\":", this.changed, ","], "");
+    if (this.m_changed != null) {  
+      buffer.writeAll(["\"changed\":", this.m_changed, ","], "");
     }
 
     // NOTE: skip serialization of alreadyChanged (type string[] is ignored)} 

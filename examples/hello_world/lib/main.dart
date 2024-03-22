@@ -38,6 +38,7 @@ class _MyHomePageState extends State<MyHomePage> {
     final VoidCallback? onPressed =  () {};
 
     HighchartsOptions options = HighchartsOptions();
+    options.title.text = "Hello world!";
 
     return Scaffold(
       appBar: AppBar(

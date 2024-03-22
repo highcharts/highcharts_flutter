@@ -24,7 +24,19 @@ import 'OptionFragment.dart';
  */
 class BBoxObjectWithCenter extends BBoxObject {
   BBoxObjectWithCenter() : super();
-  double? centerX;
+  double? m_centerX;  
+
+  double get centerX { 
+    if (this.m_centerX == null) {
+      this.m_centerX = 0;
+    }
+    return this.m_centerX!;
+  }
+
+  void set centerX (double v) {
+    this.m_centerX = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,8 +45,8 @@ class BBoxObjectWithCenter extends BBoxObject {
     super.toJSONInner(buffer);
 
     
-    if (this.centerX != null) {  
-      buffer.writeAll(["\"centerX\":", this.centerX, ","], "");
+    if (this.m_centerX != null) {  
+      buffer.writeAll(["\"centerX\":", this.m_centerX, ","], "");
     }
   }
 

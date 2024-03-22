@@ -23,7 +23,19 @@ import 'OptionFragment.dart';
  */
 class LinearRegressionSlopesIndicator extends OptionFragment {
   LinearRegressionSlopesIndicator() : super();
-  String? nameBase;
+  String? m_nameBase;  
+
+  String get nameBase { 
+    if (this.m_nameBase == null) {
+      this.m_nameBase = "";
+    }
+    return this.m_nameBase!;
+  }
+
+  void set nameBase (String v) {
+    this.m_nameBase = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -34,8 +46,8 @@ class LinearRegressionSlopesIndicator extends OptionFragment {
     
     // NOTE: skip serialization of pointClass (type typeof LinearRegressionSlopesPoint is ignored)} 
 
-    if (this.nameBase != null) {  
-      buffer.writeAll(["\"nameBase\":", this.nameBase, ","], "");
+    if (this.m_nameBase != null) {  
+      buffer.writeAll(["\"nameBase\":", this.m_nameBase, ","], "");
     }
   }
 

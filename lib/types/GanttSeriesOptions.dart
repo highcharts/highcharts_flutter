@@ -41,8 +41,8 @@ class GanttSeriesOptions extends XRangeSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.connectors != null) {  
-      buffer.writeAll(["\"connectors\":", this.connectors?.toJSON(), ","], "");
+    if (this.m_connectors != null) {  
+      buffer.writeAll(["\"connectors\":", this.m_connectors?.toJSON(), ","], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 

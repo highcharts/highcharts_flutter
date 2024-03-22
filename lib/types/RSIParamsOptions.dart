@@ -24,7 +24,19 @@ import 'OptionFragment.dart';
  */
 class RSIParamsOptions extends SMAParamsOptions {
   RSIParamsOptions() : super();
-  double? decimals;
+  double? m_decimals;  
+
+  double get decimals { 
+    if (this.m_decimals == null) {
+      this.m_decimals = 0;
+    }
+    return this.m_decimals!;
+  }
+
+  void set decimals (double v) {
+    this.m_decimals = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,8 +45,8 @@ class RSIParamsOptions extends SMAParamsOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.decimals != null) {  
-      buffer.writeAll(["\"decimals\":", this.decimals, ","], "");
+    if (this.m_decimals != null) {  
+      buffer.writeAll(["\"decimals\":", this.m_decimals, ","], "");
     }
   }
 

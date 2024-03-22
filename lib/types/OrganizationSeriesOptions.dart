@@ -46,7 +46,19 @@ class OrganizationSeriesOptions extends SankeySeriesOptions {
    * 
    * Defaults to '20'. 
       */
-  double? hangingIndent;
+  double? m_hangingIndent;  
+
+  double get hangingIndent { 
+    if (this.m_hangingIndent == null) {
+      this.m_hangingIndent = 0;
+    }
+    return this.m_hangingIndent!;
+  }
+
+  void set hangingIndent (double v) {
+    this.m_hangingIndent = v;
+  }
+    
   /**
    * Defines the indentation of a `hanging` layout parent's children.
    * Possible options:
@@ -63,7 +75,19 @@ class OrganizationSeriesOptions extends SankeySeriesOptions {
    * 
    * Defaults to 'inherit'. 
       */
-  String? hangingIndentTranslation;
+  String? m_hangingIndentTranslation;  
+
+  String get hangingIndentTranslation { 
+    if (this.m_hangingIndentTranslation == null) {
+      this.m_hangingIndentTranslation = "";
+    }
+    return this.m_hangingIndentTranslation!;
+  }
+
+  void set hangingIndentTranslation (String v) {
+    this.m_hangingIndentTranslation = v;
+  }
+    
   /**
    * Set options on specific levels. Takes precedence over series options,
    * but not node and link options.  
@@ -73,10 +97,58 @@ class OrganizationSeriesOptions extends SankeySeriesOptions {
   /**
    * Link Styling options  
       */
-  OrganizationLinkOptions? link;
-  String? linkColor;
-  double? linkLineWidth;
-  double? linkRadius;
+  OrganizationLinkOptions? m_link;  
+
+  OrganizationLinkOptions get link { 
+    if (this.m_link == null) {
+      this.m_link = OrganizationLinkOptions();
+    }
+    return this.m_link!;
+  }
+
+  void set link (OrganizationLinkOptions v) {
+    this.m_link = v;
+  }
+    
+  String? m_linkColor;  
+
+  String get linkColor { 
+    if (this.m_linkColor == null) {
+      this.m_linkColor = "";
+    }
+    return this.m_linkColor!;
+  }
+
+  void set linkColor (String v) {
+    this.m_linkColor = v;
+  }
+    
+  double? m_linkLineWidth;  
+
+  double get linkLineWidth { 
+    if (this.m_linkLineWidth == null) {
+      this.m_linkLineWidth = 0;
+    }
+    return this.m_linkLineWidth!;
+  }
+
+  void set linkLineWidth (double v) {
+    this.m_linkLineWidth = v;
+  }
+    
+  double? m_linkRadius;  
+
+  double get linkRadius { 
+    if (this.m_linkRadius == null) {
+      this.m_linkRadius = 0;
+    }
+    return this.m_linkRadius!;
+  }
+
+  void set linkRadius (double v) {
+    this.m_linkRadius = v;
+  }
+    
   /**
    * In a horizontal chart, the minimum width of the **hanging** nodes
    * only, in pixels. In a vertical chart, the minimum height of the
@@ -88,7 +160,19 @@ class OrganizationSeriesOptions extends SankeySeriesOptions {
    * 
    * Defaults to '10'. 
       */
-  double? minNodeLength;
+  double? m_minNodeLength;  
+
+  double get minNodeLength { 
+    if (this.m_minNodeLength == null) {
+      this.m_minNodeLength = 0;
+    }
+    return this.m_minNodeLength!;
+  }
+
+  void set minNodeLength (double v) {
+    this.m_minNodeLength = v;
+  }
+    
   // NOTE: states skipped - type Generic is ignored in gen
 
 
@@ -99,40 +183,36 @@ class OrganizationSeriesOptions extends SankeySeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.dataLabels != null) {  
-    // Skipped array dataLabels
+    // NOTE: skip serialization of dataLabels (type OrganizationDataLabelOptions is ignored)} 
+
+    if (this.m_hangingIndent != null) {  
+      buffer.writeAll(["\"hangingIndent\":", this.m_hangingIndent, ","], "");
     }
 
-    if (this.hangingIndent != null) {  
-      buffer.writeAll(["\"hangingIndent\":", this.hangingIndent, ","], "");
+    if (this.m_hangingIndentTranslation != null) {  
+      buffer.writeAll(["\"hangingIndentTranslation\":", this.m_hangingIndentTranslation, ","], "");
     }
 
-    if (this.hangingIndentTranslation != null) {  
-      buffer.writeAll(["\"hangingIndentTranslation\":", this.hangingIndentTranslation, ","], "");
+    // NOTE: skip serialization of levels (type OrganizationSeriesLevelOptions[] is ignored)} 
+
+    if (this.m_link != null) {  
+      buffer.writeAll(["\"link\":", this.m_link?.toJSON(), ","], "");
     }
 
-    if (this.levels != null) {  
-    // Skipped array levels
+    if (this.m_linkColor != null) {  
+      buffer.writeAll(["\"linkColor\":", this.m_linkColor, ","], "");
     }
 
-    if (this.link != null) {  
-      buffer.writeAll(["\"link\":", this.link?.toJSON(), ","], "");
+    if (this.m_linkLineWidth != null) {  
+      buffer.writeAll(["\"linkLineWidth\":", this.m_linkLineWidth, ","], "");
     }
 
-    if (this.linkColor != null) {  
-      buffer.writeAll(["\"linkColor\":", this.linkColor, ","], "");
+    if (this.m_linkRadius != null) {  
+      buffer.writeAll(["\"linkRadius\":", this.m_linkRadius, ","], "");
     }
 
-    if (this.linkLineWidth != null) {  
-      buffer.writeAll(["\"linkLineWidth\":", this.linkLineWidth, ","], "");
-    }
-
-    if (this.linkRadius != null) {  
-      buffer.writeAll(["\"linkRadius\":", this.linkRadius, ","], "");
-    }
-
-    if (this.minNodeLength != null) {  
-      buffer.writeAll(["\"minNodeLength\":", this.minNodeLength, ","], "");
+    if (this.m_minNodeLength != null) {  
+      buffer.writeAll(["\"minNodeLength\":", this.m_minNodeLength, ","], "");
     }
 
     // NOTE: skip serialization of nodes (type OrganizationSeriesNodeOptions[] is ignored)} 

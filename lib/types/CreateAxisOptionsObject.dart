@@ -23,7 +23,19 @@ import 'OptionFragment.dart';
  */
 class CreateAxisOptionsObject extends OptionFragment {
   CreateAxisOptionsObject() : super();
-  bool? redraw;
+  bool? m_redraw;  
+
+  bool get redraw { 
+    if (this.m_redraw == null) {
+      this.m_redraw = false;
+    }
+    return this.m_redraw!;
+  }
+
+  void set redraw (bool v) {
+    this.m_redraw = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -36,8 +48,8 @@ class CreateAxisOptionsObject extends OptionFragment {
 
     // NOTE: skip serialization of axis (type Generic is ignored)} 
 
-    if (this.redraw != null) {  
-      buffer.writeAll(["\"redraw\":", this.redraw, ","], "");
+    if (this.m_redraw != null) {  
+      buffer.writeAll(["\"redraw\":", this.m_redraw, ","], "");
     }
   }
 

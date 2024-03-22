@@ -31,7 +31,19 @@ class KlingerOptions extends SMAOptions {
       */
   /** NOTE: extparams is skipped here for now, as it overrides the base type. */
 
-  KlingerSignalOptions? signalLine;
+  KlingerSignalOptions? m_signalLine;  
+
+  KlingerSignalOptions get signalLine { 
+    if (this.m_signalLine == null) {
+      this.m_signalLine = KlingerSignalOptions();
+    }
+    return this.m_signalLine!;
+  }
+
+  void set signalLine (KlingerSignalOptions v) {
+    this.m_signalLine = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -40,12 +52,12 @@ class KlingerOptions extends SMAOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.params != null) {  
-      buffer.writeAll(["\"params\":", this.params?.toJSON(), ","], "");
+    if (this.m_params != null) {  
+      buffer.writeAll(["\"params\":", this.m_params?.toJSON(), ","], "");
     }
 
-    if (this.signalLine != null) {  
-      buffer.writeAll(["\"signalLine\":", this.signalLine?.toJSON(), ","], "");
+    if (this.m_signalLine != null) {  
+      buffer.writeAll(["\"signalLine\":", this.m_signalLine?.toJSON(), ","], "");
     }
   }
 

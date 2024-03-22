@@ -23,7 +23,19 @@ import 'OptionFragment.dart';
  */
 class EventWrapperObject extends OptionFragment {
   EventWrapperObject() : super();
-  double? order;
+  double? m_order;  
+
+  double get order { 
+    if (this.m_order == null) {
+      this.m_order = 0;
+    }
+    return this.m_order!;
+  }
+
+  void set order (double v) {
+    this.m_order = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -32,8 +44,8 @@ class EventWrapperObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.order != null) {  
-      buffer.writeAll(["\"order\":", this.order, ","], "");
+    if (this.m_order != null) {  
+      buffer.writeAll(["\"order\":", this.m_order, ","], "");
     }
   }
 

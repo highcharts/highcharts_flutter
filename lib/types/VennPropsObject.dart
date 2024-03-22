@@ -23,7 +23,19 @@ import 'OptionFragment.dart';
  */
 class VennPropsObject extends OptionFragment {
   VennPropsObject() : super();
-  double? totalOverlap;
+  double? m_totalOverlap;  
+
+  double get totalOverlap { 
+    if (this.m_totalOverlap == null) {
+      this.m_totalOverlap = 0;
+    }
+    return this.m_totalOverlap!;
+  }
+
+  void set totalOverlap (double v) {
+    this.m_totalOverlap = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -34,8 +46,8 @@ class VennPropsObject extends OptionFragment {
     
     // NOTE: skip serialization of overlapping (type Generic is ignored)} 
 
-    if (this.totalOverlap != null) {  
-      buffer.writeAll(["\"totalOverlap\":", this.totalOverlap, ","], "");
+    if (this.m_totalOverlap != null) {  
+      buffer.writeAll(["\"totalOverlap\":", this.m_totalOverlap, ","], "");
     }
   }
 

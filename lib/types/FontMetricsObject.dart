@@ -23,9 +23,45 @@ import 'OptionFragment.dart';
  */
 class FontMetricsObject extends OptionFragment {
   FontMetricsObject() : super();
-  double? b;
-  double? f;
-  double? h;
+  double? m_b;  
+
+  double get b { 
+    if (this.m_b == null) {
+      this.m_b = 0;
+    }
+    return this.m_b!;
+  }
+
+  void set b (double v) {
+    this.m_b = v;
+  }
+    
+  double? m_f;  
+
+  double get f { 
+    if (this.m_f == null) {
+      this.m_f = 0;
+    }
+    return this.m_f!;
+  }
+
+  void set f (double v) {
+    this.m_f = v;
+  }
+    
+  double? m_h;  
+
+  double get h { 
+    if (this.m_h == null) {
+      this.m_h = 0;
+    }
+    return this.m_h!;
+  }
+
+  void set h (double v) {
+    this.m_h = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -34,16 +70,16 @@ class FontMetricsObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.b != null) {  
-      buffer.writeAll(["\"b\":", this.b, ","], "");
+    if (this.m_b != null) {  
+      buffer.writeAll(["\"b\":", this.m_b, ","], "");
     }
 
-    if (this.f != null) {  
-      buffer.writeAll(["\"f\":", this.f, ","], "");
+    if (this.m_f != null) {  
+      buffer.writeAll(["\"f\":", this.m_f, ","], "");
     }
 
-    if (this.h != null) {  
-      buffer.writeAll(["\"h\":", this.h, ","], "");
+    if (this.m_h != null) {  
+      buffer.writeAll(["\"h\":", this.m_h, ","], "");
     }
   }
 

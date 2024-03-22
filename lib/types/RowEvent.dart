@@ -24,9 +24,45 @@ import 'OptionFragment.dart';
  */
 class RowEvent extends DataEvent {
   RowEvent() : super();
-  String? type;
-  double? rowCount;
-  double? rowIndex;
+  String? m_type;  
+
+  String get type { 
+    if (this.m_type == null) {
+      this.m_type = "";
+    }
+    return this.m_type!;
+  }
+
+  void set type (String v) {
+    this.m_type = v;
+  }
+    
+  double? m_rowCount;  
+
+  double get rowCount { 
+    if (this.m_rowCount == null) {
+      this.m_rowCount = 0;
+    }
+    return this.m_rowCount!;
+  }
+
+  void set rowCount (double v) {
+    this.m_rowCount = v;
+  }
+    
+  double? m_rowIndex;  
+
+  double get rowIndex { 
+    if (this.m_rowIndex == null) {
+      this.m_rowIndex = 0;
+    }
+    return this.m_rowIndex!;
+  }
+
+  void set rowIndex (double v) {
+    this.m_rowIndex = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -35,16 +71,16 @@ class RowEvent extends DataEvent {
     super.toJSONInner(buffer);
 
     
-    if (this.type != null) {  
-      buffer.writeAll(["\"type\":", this.type, ","], "");
+    if (this.m_type != null) {  
+      buffer.writeAll(["\"type\":", this.m_type, ","], "");
     }
 
-    if (this.rowCount != null) {  
-      buffer.writeAll(["\"rowCount\":", this.rowCount, ","], "");
+    if (this.m_rowCount != null) {  
+      buffer.writeAll(["\"rowCount\":", this.m_rowCount, ","], "");
     }
 
-    if (this.rowIndex != null) {  
-      buffer.writeAll(["\"rowIndex\":", this.rowIndex, ","], "");
+    if (this.m_rowIndex != null) {  
+      buffer.writeAll(["\"rowIndex\":", this.m_rowIndex, ","], "");
     }
 
     // NOTE: skip serialization of rows (type RowObject)[] is ignored)} 

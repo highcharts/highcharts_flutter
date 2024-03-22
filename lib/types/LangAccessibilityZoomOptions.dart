@@ -23,9 +23,45 @@ import 'OptionFragment.dart';
  */
 class LangAccessibilityZoomOptions extends OptionFragment {
   LangAccessibilityZoomOptions() : super();
-  String? mapZoomIn;
-  String? mapZoomOut;
-  String? resetZoomButton;
+  String? m_mapZoomIn;  
+
+  String get mapZoomIn { 
+    if (this.m_mapZoomIn == null) {
+      this.m_mapZoomIn = "";
+    }
+    return this.m_mapZoomIn!;
+  }
+
+  void set mapZoomIn (String v) {
+    this.m_mapZoomIn = v;
+  }
+    
+  String? m_mapZoomOut;  
+
+  String get mapZoomOut { 
+    if (this.m_mapZoomOut == null) {
+      this.m_mapZoomOut = "";
+    }
+    return this.m_mapZoomOut!;
+  }
+
+  void set mapZoomOut (String v) {
+    this.m_mapZoomOut = v;
+  }
+    
+  String? m_resetZoomButton;  
+
+  String get resetZoomButton { 
+    if (this.m_resetZoomButton == null) {
+      this.m_resetZoomButton = "";
+    }
+    return this.m_resetZoomButton!;
+  }
+
+  void set resetZoomButton (String v) {
+    this.m_resetZoomButton = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -34,16 +70,16 @@ class LangAccessibilityZoomOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.mapZoomIn != null) {  
-      buffer.writeAll(["\"mapZoomIn\":", this.mapZoomIn, ","], "");
+    if (this.m_mapZoomIn != null) {  
+      buffer.writeAll(["\"mapZoomIn\":", this.m_mapZoomIn, ","], "");
     }
 
-    if (this.mapZoomOut != null) {  
-      buffer.writeAll(["\"mapZoomOut\":", this.mapZoomOut, ","], "");
+    if (this.m_mapZoomOut != null) {  
+      buffer.writeAll(["\"mapZoomOut\":", this.m_mapZoomOut, ","], "");
     }
 
-    if (this.resetZoomButton != null) {  
-      buffer.writeAll(["\"resetZoomButton\":", this.resetZoomButton, ","], "");
+    if (this.m_resetZoomButton != null) {  
+      buffer.writeAll(["\"resetZoomButton\":", this.m_resetZoomButton, ","], "");
     }
   }
 

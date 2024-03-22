@@ -23,9 +23,45 @@ import 'OptionFragment.dart';
  */
 class LangAccessibilityNavigatorOptions extends OptionFragment {
   LangAccessibilityNavigatorOptions() : super();
-  String? handleLabel;
-  String? groupLabel;
-  String? changeAnnouncement;
+  String? m_handleLabel;  
+
+  String get handleLabel { 
+    if (this.m_handleLabel == null) {
+      this.m_handleLabel = "";
+    }
+    return this.m_handleLabel!;
+  }
+
+  void set handleLabel (String v) {
+    this.m_handleLabel = v;
+  }
+    
+  String? m_groupLabel;  
+
+  String get groupLabel { 
+    if (this.m_groupLabel == null) {
+      this.m_groupLabel = "";
+    }
+    return this.m_groupLabel!;
+  }
+
+  void set groupLabel (String v) {
+    this.m_groupLabel = v;
+  }
+    
+  String? m_changeAnnouncement;  
+
+  String get changeAnnouncement { 
+    if (this.m_changeAnnouncement == null) {
+      this.m_changeAnnouncement = "";
+    }
+    return this.m_changeAnnouncement!;
+  }
+
+  void set changeAnnouncement (String v) {
+    this.m_changeAnnouncement = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -34,16 +70,16 @@ class LangAccessibilityNavigatorOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.handleLabel != null) {  
-      buffer.writeAll(["\"handleLabel\":", this.handleLabel, ","], "");
+    if (this.m_handleLabel != null) {  
+      buffer.writeAll(["\"handleLabel\":", this.m_handleLabel, ","], "");
     }
 
-    if (this.groupLabel != null) {  
-      buffer.writeAll(["\"groupLabel\":", this.groupLabel, ","], "");
+    if (this.m_groupLabel != null) {  
+      buffer.writeAll(["\"groupLabel\":", this.m_groupLabel, ","], "");
     }
 
-    if (this.changeAnnouncement != null) {  
-      buffer.writeAll(["\"changeAnnouncement\":", this.changeAnnouncement, ","], "");
+    if (this.m_changeAnnouncement != null) {  
+      buffer.writeAll(["\"changeAnnouncement\":", this.m_changeAnnouncement, ","], "");
     }
   }
 

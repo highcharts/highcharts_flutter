@@ -23,12 +23,84 @@ import 'OptionFragment.dart';
  */
 class MapBounds extends OptionFragment {
   MapBounds() : super();
-  double? midX;
-  double? midY;
-  double? x1;
-  double? y1;
-  double? x2;
-  double? y2;
+  double? m_midX;  
+
+  double get midX { 
+    if (this.m_midX == null) {
+      this.m_midX = 0;
+    }
+    return this.m_midX!;
+  }
+
+  void set midX (double v) {
+    this.m_midX = v;
+  }
+    
+  double? m_midY;  
+
+  double get midY { 
+    if (this.m_midY == null) {
+      this.m_midY = 0;
+    }
+    return this.m_midY!;
+  }
+
+  void set midY (double v) {
+    this.m_midY = v;
+  }
+    
+  double? m_x1;  
+
+  double get x1 { 
+    if (this.m_x1 == null) {
+      this.m_x1 = 0;
+    }
+    return this.m_x1!;
+  }
+
+  void set x1 (double v) {
+    this.m_x1 = v;
+  }
+    
+  double? m_y1;  
+
+  double get y1 { 
+    if (this.m_y1 == null) {
+      this.m_y1 = 0;
+    }
+    return this.m_y1!;
+  }
+
+  void set y1 (double v) {
+    this.m_y1 = v;
+  }
+    
+  double? m_x2;  
+
+  double get x2 { 
+    if (this.m_x2 == null) {
+      this.m_x2 = 0;
+    }
+    return this.m_x2!;
+  }
+
+  void set x2 (double v) {
+    this.m_x2 = v;
+  }
+    
+  double? m_y2;  
+
+  double get y2 { 
+    if (this.m_y2 == null) {
+      this.m_y2 = 0;
+    }
+    return this.m_y2!;
+  }
+
+  void set y2 (double v) {
+    this.m_y2 = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -37,28 +109,28 @@ class MapBounds extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.midX != null) {  
-      buffer.writeAll(["\"midX\":", this.midX, ","], "");
+    if (this.m_midX != null) {  
+      buffer.writeAll(["\"midX\":", this.m_midX, ","], "");
     }
 
-    if (this.midY != null) {  
-      buffer.writeAll(["\"midY\":", this.midY, ","], "");
+    if (this.m_midY != null) {  
+      buffer.writeAll(["\"midY\":", this.m_midY, ","], "");
     }
 
-    if (this.x1 != null) {  
-      buffer.writeAll(["\"x1\":", this.x1, ","], "");
+    if (this.m_x1 != null) {  
+      buffer.writeAll(["\"x1\":", this.m_x1, ","], "");
     }
 
-    if (this.y1 != null) {  
-      buffer.writeAll(["\"y1\":", this.y1, ","], "");
+    if (this.m_y1 != null) {  
+      buffer.writeAll(["\"y1\":", this.m_y1, ","], "");
     }
 
-    if (this.x2 != null) {  
-      buffer.writeAll(["\"x2\":", this.x2, ","], "");
+    if (this.m_x2 != null) {  
+      buffer.writeAll(["\"x2\":", this.m_x2, ","], "");
     }
 
-    if (this.y2 != null) {  
-      buffer.writeAll(["\"y2\":", this.y2, ","], "");
+    if (this.m_y2 != null) {  
+      buffer.writeAll(["\"y2\":", this.m_y2, ","], "");
     }
   }
 

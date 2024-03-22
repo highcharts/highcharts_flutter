@@ -24,10 +24,58 @@ import 'OptionFragment.dart';
  */
 class RangesOptions extends OptionFragment {
   RangesOptions() : super();
-  bool? autoRanges;
-  String? borderColor;
-  String? color;
-  String? connectorColor;
+  bool? m_autoRanges;  
+
+  bool get autoRanges { 
+    if (this.m_autoRanges == null) {
+      this.m_autoRanges = false;
+    }
+    return this.m_autoRanges!;
+  }
+
+  void set autoRanges (bool v) {
+    this.m_autoRanges = v;
+  }
+    
+  String? m_borderColor;  
+
+  String get borderColor { 
+    if (this.m_borderColor == null) {
+      this.m_borderColor = "";
+    }
+    return this.m_borderColor!;
+  }
+
+  void set borderColor (String v) {
+    this.m_borderColor = v;
+  }
+    
+  String? m_color;  
+
+  String get color { 
+    if (this.m_color == null) {
+      this.m_color = "";
+    }
+    return this.m_color!;
+  }
+
+  void set color (String v) {
+    this.m_color = v;
+  }
+    
+  String? m_connectorColor;  
+
+  String get connectorColor { 
+    if (this.m_connectorColor == null) {
+      this.m_connectorColor = "";
+    }
+    return this.m_connectorColor!;
+  }
+
+  void set connectorColor (String v) {
+    this.m_connectorColor = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -36,20 +84,20 @@ class RangesOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.autoRanges != null) {  
-      buffer.writeAll(["\"autoRanges\":", this.autoRanges, ","], "");
+    if (this.m_autoRanges != null) {  
+      buffer.writeAll(["\"autoRanges\":", this.m_autoRanges, ","], "");
     }
 
-    if (this.borderColor != null) {  
-      buffer.writeAll(["\"borderColor\":", this.borderColor, ","], "");
+    if (this.m_borderColor != null) {  
+      buffer.writeAll(["\"borderColor\":", this.m_borderColor, ","], "");
     }
 
-    if (this.color != null) {  
-      buffer.writeAll(["\"color\":", this.color, ","], "");
+    if (this.m_color != null) {  
+      buffer.writeAll(["\"color\":", this.m_color, ","], "");
     }
 
-    if (this.connectorColor != null) {  
-      buffer.writeAll(["\"connectorColor\":", this.connectorColor, ","], "");
+    if (this.m_connectorColor != null) {  
+      buffer.writeAll(["\"connectorColor\":", this.m_connectorColor, ","], "");
     }
 
     // NOTE: skip serialization of bubbleAttribs (type SVGAttributes is ignored)} 

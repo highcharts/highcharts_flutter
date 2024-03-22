@@ -26,7 +26,19 @@ import 'OptionFragment.dart';
  */
 class WordcloudTestOptionsObject extends OptionFragment {
   WordcloudTestOptionsObject() : super();
-  double? rotation;
+  double? m_rotation;  
+
+  double get rotation { 
+    if (this.m_rotation == null) {
+      this.m_rotation = 0;
+    }
+    return this.m_rotation!;
+  }
+
+  void set rotation (double v) {
+    this.m_rotation = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -43,8 +55,8 @@ class WordcloudTestOptionsObject extends OptionFragment {
 
     // NOTE: skip serialization of rectangle (type PolygonBoxObject is ignored)} 
 
-    if (this.rotation != null) {  
-      buffer.writeAll(["\"rotation\":", this.rotation, ","], "");
+    if (this.m_rotation != null) {  
+      buffer.writeAll(["\"rotation\":", this.m_rotation, ","], "");
     }
   }
 

@@ -23,7 +23,19 @@ import 'OptionFragment.dart';
  */
 class PPOIndicator extends OptionFragment {
   PPOIndicator() : super();
-  String? nameBase;
+  String? m_nameBase;  
+
+  String get nameBase { 
+    if (this.m_nameBase == null) {
+      this.m_nameBase = "";
+    }
+    return this.m_nameBase!;
+  }
+
+  void set nameBase (String v) {
+    this.m_nameBase = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -32,8 +44,8 @@ class PPOIndicator extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.nameBase != null) {  
-      buffer.writeAll(["\"nameBase\":", this.nameBase, ","], "");
+    if (this.m_nameBase != null) {  
+      buffer.writeAll(["\"nameBase\":", this.m_nameBase, ","], "");
     }
 
     // NOTE: skip serialization of nameComponents (type string[] is ignored)} 

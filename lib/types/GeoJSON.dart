@@ -24,11 +24,71 @@ import 'OptionFragment.dart';
  */
 class GeoJSON extends OptionFragment {
   GeoJSON() : super();
-  String? copyright;
-  String? copyrightShort;
-  String? copyrightUrl;
-  String? title;
-  String? version;
+  String? m_copyright;  
+
+  String get copyright { 
+    if (this.m_copyright == null) {
+      this.m_copyright = "";
+    }
+    return this.m_copyright!;
+  }
+
+  void set copyright (String v) {
+    this.m_copyright = v;
+  }
+    
+  String? m_copyrightShort;  
+
+  String get copyrightShort { 
+    if (this.m_copyrightShort == null) {
+      this.m_copyrightShort = "";
+    }
+    return this.m_copyrightShort!;
+  }
+
+  void set copyrightShort (String v) {
+    this.m_copyrightShort = v;
+  }
+    
+  String? m_copyrightUrl;  
+
+  String get copyrightUrl { 
+    if (this.m_copyrightUrl == null) {
+      this.m_copyrightUrl = "";
+    }
+    return this.m_copyrightUrl!;
+  }
+
+  void set copyrightUrl (String v) {
+    this.m_copyrightUrl = v;
+  }
+    
+  String? m_title;  
+
+  String get title { 
+    if (this.m_title == null) {
+      this.m_title = "";
+    }
+    return this.m_title!;
+  }
+
+  void set title (String v) {
+    this.m_title = v;
+  }
+    
+  String? m_version;  
+
+  String get version { 
+    if (this.m_version == null) {
+      this.m_version = "";
+    }
+    return this.m_version!;
+  }
+
+  void set version (String v) {
+    this.m_version = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -37,16 +97,16 @@ class GeoJSON extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.copyright != null) {  
-      buffer.writeAll(["\"copyright\":", this.copyright, ","], "");
+    if (this.m_copyright != null) {  
+      buffer.writeAll(["\"copyright\":", this.m_copyright, ","], "");
     }
 
-    if (this.copyrightShort != null) {  
-      buffer.writeAll(["\"copyrightShort\":", this.copyrightShort, ","], "");
+    if (this.m_copyrightShort != null) {  
+      buffer.writeAll(["\"copyrightShort\":", this.m_copyrightShort, ","], "");
     }
 
-    if (this.copyrightUrl != null) {  
-      buffer.writeAll(["\"copyrightUrl\":", this.copyrightUrl, ","], "");
+    if (this.m_copyrightUrl != null) {  
+      buffer.writeAll(["\"copyrightUrl\":", this.m_copyrightUrl, ","], "");
     }
 
     // NOTE: skip serialization of crs (type AnyRecord is ignored)} 
@@ -57,14 +117,14 @@ class GeoJSON extends OptionFragment {
 
     // NOTE: skip serialization of hc_recommended_mapview (type Generic is ignored)} 
 
-    if (this.title != null) {  
-      buffer.writeAll(["\"title\":", this.title, ","], "");
+    if (this.m_title != null) {  
+      buffer.writeAll(["\"title\":", this.m_title, ","], "");
     }
 
     // NOTE: skip serialization of type (type "FeatureCollection" is ignored)} 
 
-    if (this.version != null) {  
-      buffer.writeAll(["\"version\":", this.version, ","], "");
+    if (this.m_version != null) {  
+      buffer.writeAll(["\"version\":", this.m_version, ","], "");
     }
   }
 

@@ -23,8 +23,32 @@ import 'OptionFragment.dart';
  */
 class PointAccessibilityOptionsObject extends OptionFragment {
   PointAccessibilityOptionsObject() : super();
-  String? description;
-  bool? enabled;
+  String? m_description;  
+
+  String get description { 
+    if (this.m_description == null) {
+      this.m_description = "";
+    }
+    return this.m_description!;
+  }
+
+  void set description (String v) {
+    this.m_description = v;
+  }
+    
+  bool? m_enabled;  
+
+  bool get enabled { 
+    if (this.m_enabled == null) {
+      this.m_enabled = false;
+    }
+    return this.m_enabled!;
+  }
+
+  void set enabled (bool v) {
+    this.m_enabled = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,12 +57,12 @@ class PointAccessibilityOptionsObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.description != null) {  
-      buffer.writeAll(["\"description\":", this.description, ","], "");
+    if (this.m_description != null) {  
+      buffer.writeAll(["\"description\":", this.m_description, ","], "");
     }
 
-    if (this.enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
+    if (this.m_enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this.m_enabled, ","], "");
     }
   }
 

@@ -23,7 +23,19 @@ import 'OptionFragment.dart';
  */
 class BenchmarkOptions extends OptionFragment {
   BenchmarkOptions() : super();
-  double? iterations;
+  double? m_iterations;  
+
+  double get iterations { 
+    if (this.m_iterations == null) {
+      this.m_iterations = 0;
+    }
+    return this.m_iterations!;
+  }
+
+  void set iterations (double v) {
+    this.m_iterations = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -32,8 +44,8 @@ class BenchmarkOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.iterations != null) {  
-      buffer.writeAll(["\"iterations\":", this.iterations, ","], "");
+    if (this.m_iterations != null) {  
+      buffer.writeAll(["\"iterations\":", this.m_iterations, ","], "");
     }
   }
 

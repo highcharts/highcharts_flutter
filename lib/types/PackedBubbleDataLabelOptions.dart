@@ -25,8 +25,32 @@ import 'OptionFragment.dart';
  */
 class PackedBubbleDataLabelOptions extends DataLabelOptions {
   PackedBubbleDataLabelOptions() : super();
-  String? format;
-  String? parentNodeFormat;
+  String? m_format;  
+
+  String get format { 
+    if (this.m_format == null) {
+      this.m_format = "";
+    }
+    return this.m_format!;
+  }
+
+  void set format (String v) {
+    this.m_format = v;
+  }
+    
+  String? m_parentNodeFormat;  
+
+  String get parentNodeFormat { 
+    if (this.m_parentNodeFormat == null) {
+      this.m_parentNodeFormat = "";
+    }
+    return this.m_parentNodeFormat!;
+  }
+
+  void set parentNodeFormat (String v) {
+    this.m_parentNodeFormat = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -35,12 +59,12 @@ class PackedBubbleDataLabelOptions extends DataLabelOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.format != null) {  
-      buffer.writeAll(["\"format\":", this.format, ","], "");
+    if (this.m_format != null) {  
+      buffer.writeAll(["\"format\":", this.m_format, ","], "");
     }
 
-    if (this.parentNodeFormat != null) {  
-      buffer.writeAll(["\"parentNodeFormat\":", this.parentNodeFormat, ","], "");
+    if (this.m_parentNodeFormat != null) {  
+      buffer.writeAll(["\"parentNodeFormat\":", this.m_parentNodeFormat, ","], "");
     }
 
     // NOTE: skip serialization of parentNodeTextPath (type DataLabelTextPathOptions is ignored)} 

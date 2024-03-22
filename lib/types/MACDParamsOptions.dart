@@ -24,10 +24,58 @@ import 'OptionFragment.dart';
  */
 class MACDParamsOptions extends SMAParamsOptions {
   MACDParamsOptions() : super();
-  double? period;
-  double? shortPeriod;
-  double? longPeriod;
-  double? signalPeriod;
+  double? m_period;  
+
+  double get period { 
+    if (this.m_period == null) {
+      this.m_period = 0;
+    }
+    return this.m_period!;
+  }
+
+  void set period (double v) {
+    this.m_period = v;
+  }
+    
+  double? m_shortPeriod;  
+
+  double get shortPeriod { 
+    if (this.m_shortPeriod == null) {
+      this.m_shortPeriod = 0;
+    }
+    return this.m_shortPeriod!;
+  }
+
+  void set shortPeriod (double v) {
+    this.m_shortPeriod = v;
+  }
+    
+  double? m_longPeriod;  
+
+  double get longPeriod { 
+    if (this.m_longPeriod == null) {
+      this.m_longPeriod = 0;
+    }
+    return this.m_longPeriod!;
+  }
+
+  void set longPeriod (double v) {
+    this.m_longPeriod = v;
+  }
+    
+  double? m_signalPeriod;  
+
+  double get signalPeriod { 
+    if (this.m_signalPeriod == null) {
+      this.m_signalPeriod = 0;
+    }
+    return this.m_signalPeriod!;
+  }
+
+  void set signalPeriod (double v) {
+    this.m_signalPeriod = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -36,20 +84,20 @@ class MACDParamsOptions extends SMAParamsOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.period != null) {  
-      buffer.writeAll(["\"period\":", this.period, ","], "");
+    if (this.m_period != null) {  
+      buffer.writeAll(["\"period\":", this.m_period, ","], "");
     }
 
-    if (this.shortPeriod != null) {  
-      buffer.writeAll(["\"shortPeriod\":", this.shortPeriod, ","], "");
+    if (this.m_shortPeriod != null) {  
+      buffer.writeAll(["\"shortPeriod\":", this.m_shortPeriod, ","], "");
     }
 
-    if (this.longPeriod != null) {  
-      buffer.writeAll(["\"longPeriod\":", this.longPeriod, ","], "");
+    if (this.m_longPeriod != null) {  
+      buffer.writeAll(["\"longPeriod\":", this.m_longPeriod, ","], "");
     }
 
-    if (this.signalPeriod != null) {  
-      buffer.writeAll(["\"signalPeriod\":", this.signalPeriod, ","], "");
+    if (this.m_signalPeriod != null) {  
+      buffer.writeAll(["\"signalPeriod\":", this.m_signalPeriod, ","], "");
     }
   }
 

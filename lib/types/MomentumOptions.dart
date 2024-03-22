@@ -30,7 +30,19 @@ class MomentumOptions extends SMAOptions {
       */
   /** NOTE: extparams is skipped here for now, as it overrides the base type. */
 
-  double? period;
+  double? m_period;  
+
+  double get period { 
+    if (this.m_period == null) {
+      this.m_period = 0;
+    }
+    return this.m_period!;
+  }
+
+  void set period (double v) {
+    this.m_period = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -39,12 +51,12 @@ class MomentumOptions extends SMAOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.params != null) {  
-      buffer.writeAll(["\"params\":", this.params?.toJSON(), ","], "");
+    if (this.m_params != null) {  
+      buffer.writeAll(["\"params\":", this.m_params?.toJSON(), ","], "");
     }
 
-    if (this.period != null) {  
-      buffer.writeAll(["\"period\":", this.period, ","], "");
+    if (this.m_period != null) {  
+      buffer.writeAll(["\"period\":", this.m_period, ","], "");
     }
   }
 

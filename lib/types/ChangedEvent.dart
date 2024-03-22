@@ -23,9 +23,45 @@ import 'OptionFragment.dart';
  */
 class ChangedEvent extends OptionFragment {
   ChangedEvent() : super();
-  double? from;
-  double? to;
-  String? DOMType;
+  double? m_from;  
+
+  double get from { 
+    if (this.m_from == null) {
+      this.m_from = 0;
+    }
+    return this.m_from!;
+  }
+
+  void set from (double v) {
+    this.m_from = v;
+  }
+    
+  double? m_to;  
+
+  double get to { 
+    if (this.m_to == null) {
+      this.m_to = 0;
+    }
+    return this.m_to!;
+  }
+
+  void set to (double v) {
+    this.m_to = v;
+  }
+    
+  String? m_DOMType;  
+
+  String get DOMType { 
+    if (this.m_DOMType == null) {
+      this.m_DOMType = "";
+    }
+    return this.m_DOMType!;
+  }
+
+  void set DOMType (String v) {
+    this.m_DOMType = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -34,18 +70,18 @@ class ChangedEvent extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.from != null) {  
-      buffer.writeAll(["\"from\":", this.from, ","], "");
+    if (this.m_from != null) {  
+      buffer.writeAll(["\"from\":", this.m_from, ","], "");
     }
 
-    if (this.to != null) {  
-      buffer.writeAll(["\"to\":", this.to, ","], "");
+    if (this.m_to != null) {  
+      buffer.writeAll(["\"to\":", this.m_to, ","], "");
     }
 
     // NOTE: skip serialization of trigger (type "scrollbar" is ignored)} 
 
-    if (this.DOMType != null) {  
-      buffer.writeAll(["\"DOMType\":", this.DOMType, ","], "");
+    if (this.m_DOMType != null) {  
+      buffer.writeAll(["\"DOMType\":", this.m_DOMType, ","], "");
     }
 
     // NOTE: skip serialization of DOMEvent (type Event is ignored)} 

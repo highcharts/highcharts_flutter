@@ -23,8 +23,32 @@ import 'OptionFragment.dart';
  */
 class RadianAngles extends OptionFragment {
   RadianAngles() : super();
-  double? end;
-  double? start;
+  double? m_end;  
+
+  double get end { 
+    if (this.m_end == null) {
+      this.m_end = 0;
+    }
+    return this.m_end!;
+  }
+
+  void set end (double v) {
+    this.m_end = v;
+  }
+    
+  double? m_start;  
+
+  double get start { 
+    if (this.m_start == null) {
+      this.m_start = 0;
+    }
+    return this.m_start!;
+  }
+
+  void set start (double v) {
+    this.m_start = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,12 +57,12 @@ class RadianAngles extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.end != null) {  
-      buffer.writeAll(["\"end\":", this.end, ","], "");
+    if (this.m_end != null) {  
+      buffer.writeAll(["\"end\":", this.m_end, ","], "");
     }
 
-    if (this.start != null) {  
-      buffer.writeAll(["\"start\":", this.start, ","], "");
+    if (this.m_start != null) {  
+      buffer.writeAll(["\"start\":", this.m_start, ","], "");
     }
   }
 

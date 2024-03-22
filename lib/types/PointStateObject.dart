@@ -23,7 +23,19 @@ import 'OptionFragment.dart';
  */
 class PointStateObject extends OptionFragment {
   PointStateObject() : super();
-  String? valueDescription;
+  String? m_valueDescription;  
+
+  String get valueDescription { 
+    if (this.m_valueDescription == null) {
+      this.m_valueDescription = "";
+    }
+    return this.m_valueDescription!;
+  }
+
+  void set valueDescription (String v) {
+    this.m_valueDescription = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -32,8 +44,8 @@ class PointStateObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.valueDescription != null) {  
-      buffer.writeAll(["\"valueDescription\":", this.valueDescription, ","], "");
+    if (this.m_valueDescription != null) {  
+      buffer.writeAll(["\"valueDescription\":", this.m_valueDescription, ","], "");
     }
   }
 

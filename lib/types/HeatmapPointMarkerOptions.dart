@@ -24,7 +24,19 @@ import 'OptionFragment.dart';
  */
 class HeatmapPointMarkerOptions extends PointMarkerOptions {
   HeatmapPointMarkerOptions() : super();
-  double? r;
+  double? m_r;  
+
+  double get r { 
+    if (this.m_r == null) {
+      this.m_r = 0;
+    }
+    return this.m_r!;
+  }
+
+  void set r (double v) {
+    this.m_r = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,8 +45,8 @@ class HeatmapPointMarkerOptions extends PointMarkerOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.r != null) {  
-      buffer.writeAll(["\"r\":", this.r, ","], "");
+    if (this.m_r != null) {  
+      buffer.writeAll(["\"r\":", this.m_r, ","], "");
     }
   }
 

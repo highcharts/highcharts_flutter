@@ -24,7 +24,19 @@ import 'OptionFragment.dart';
  */
 class DivElement extends HTMLDOMElement {
   DivElement() : super();
-  double? hideTimer;
+  double? m_hideTimer;  
+
+  double get hideTimer { 
+    if (this.m_hideTimer == null) {
+      this.m_hideTimer = 0;
+    }
+    return this.m_hideTimer!;
+  }
+
+  void set hideTimer (double v) {
+    this.m_hideTimer = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,8 +45,8 @@ class DivElement extends HTMLDOMElement {
     super.toJSONInner(buffer);
 
     
-    if (this.hideTimer != null) {  
-      buffer.writeAll(["\"hideTimer\":", this.hideTimer, ","], "");
+    if (this.m_hideTimer != null) {  
+      buffer.writeAll(["\"hideTimer\":", this.m_hideTimer, ","], "");
     }
   }
 

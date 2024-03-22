@@ -24,8 +24,32 @@ import 'OptionFragment.dart';
  */
 class CSSJSONObject extends CSSObject {
   CSSJSONObject() : super();
-  String? fill;
-  String? stroke;
+  String? m_fill;  
+
+  String get fill { 
+    if (this.m_fill == null) {
+      this.m_fill = "";
+    }
+    return this.m_fill!;
+  }
+
+  void set fill (String v) {
+    this.m_fill = v;
+  }
+    
+  String? m_stroke;  
+
+  String get stroke { 
+    if (this.m_stroke == null) {
+      this.m_stroke = "";
+    }
+    return this.m_stroke!;
+  }
+
+  void set stroke (String v) {
+    this.m_stroke = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -34,12 +58,12 @@ class CSSJSONObject extends CSSObject {
     super.toJSONInner(buffer);
 
     
-    if (this.fill != null) {  
-      buffer.writeAll(["\"fill\":", this.fill, ","], "");
+    if (this.m_fill != null) {  
+      buffer.writeAll(["\"fill\":", this.m_fill, ","], "");
     }
 
-    if (this.stroke != null) {  
-      buffer.writeAll(["\"stroke\":", this.stroke, ","], "");
+    if (this.m_stroke != null) {  
+      buffer.writeAll(["\"stroke\":", this.m_stroke, ","], "");
     }
   }
 

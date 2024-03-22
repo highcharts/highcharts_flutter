@@ -23,7 +23,19 @@ import 'OptionFragment.dart';
  */
 class DependencyWheelSeries extends OptionFragment {
   DependencyWheelSeries() : super();
-  bool? orderNodes;
+  bool? m_orderNodes;  
+
+  bool get orderNodes { 
+    if (this.m_orderNodes == null) {
+      this.m_orderNodes = false;
+    }
+    return this.m_orderNodes!;
+  }
+
+  void set orderNodes (bool v) {
+    this.m_orderNodes = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -32,8 +44,8 @@ class DependencyWheelSeries extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.orderNodes != null) {  
-      buffer.writeAll(["\"orderNodes\":", this.orderNodes, ","], "");
+    if (this.m_orderNodes != null) {  
+      buffer.writeAll(["\"orderNodes\":", this.m_orderNodes, ","], "");
     }
 
     // NOTE: skip serialization of pointClass (type typeof DependencyWheelPoint is ignored)} 

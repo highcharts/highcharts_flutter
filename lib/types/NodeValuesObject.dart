@@ -24,15 +24,123 @@ import 'OptionFragment.dart';
  */
 class NodeValuesObject extends BBoxObject {
   NodeValuesObject() : super();
-  double? direction;
-  double? val;
-  String? color;
-  String? borderRadius;
-  double? index;
-  double? innerR;
-  double? r;
-  double? radius;
-  double? siblings;
+  double? m_direction;  
+
+  double get direction { 
+    if (this.m_direction == null) {
+      this.m_direction = 0;
+    }
+    return this.m_direction!;
+  }
+
+  void set direction (double v) {
+    this.m_direction = v;
+  }
+    
+  double? m_val;  
+
+  double get val { 
+    if (this.m_val == null) {
+      this.m_val = 0;
+    }
+    return this.m_val!;
+  }
+
+  void set val (double v) {
+    this.m_val = v;
+  }
+    
+  String? m_color;  
+
+  String get color { 
+    if (this.m_color == null) {
+      this.m_color = "";
+    }
+    return this.m_color!;
+  }
+
+  void set color (String v) {
+    this.m_color = v;
+  }
+    
+  String? m_borderRadius;  
+
+  String get borderRadius { 
+    if (this.m_borderRadius == null) {
+      this.m_borderRadius = "";
+    }
+    return this.m_borderRadius!;
+  }
+
+  void set borderRadius (String v) {
+    this.m_borderRadius = v;
+  }
+    
+  double? m_index;  
+
+  double get index { 
+    if (this.m_index == null) {
+      this.m_index = 0;
+    }
+    return this.m_index!;
+  }
+
+  void set index (double v) {
+    this.m_index = v;
+  }
+    
+  double? m_innerR;  
+
+  double get innerR { 
+    if (this.m_innerR == null) {
+      this.m_innerR = 0;
+    }
+    return this.m_innerR!;
+  }
+
+  void set innerR (double v) {
+    this.m_innerR = v;
+  }
+    
+  double? m_r;  
+
+  double get r { 
+    if (this.m_r == null) {
+      this.m_r = 0;
+    }
+    return this.m_r!;
+  }
+
+  void set r (double v) {
+    this.m_r = v;
+  }
+    
+  double? m_radius;  
+
+  double get radius { 
+    if (this.m_radius == null) {
+      this.m_radius = 0;
+    }
+    return this.m_radius!;
+  }
+
+  void set radius (double v) {
+    this.m_radius = v;
+  }
+    
+  double? m_siblings;  
+
+  double get siblings { 
+    if (this.m_siblings == null) {
+      this.m_siblings = 0;
+    }
+    return this.m_siblings!;
+  }
+
+  void set siblings (double v) {
+    this.m_siblings = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -41,42 +149,42 @@ class NodeValuesObject extends BBoxObject {
     super.toJSONInner(buffer);
 
     
-    if (this.direction != null) {  
-      buffer.writeAll(["\"direction\":", this.direction, ","], "");
+    if (this.m_direction != null) {  
+      buffer.writeAll(["\"direction\":", this.m_direction, ","], "");
     }
 
-    if (this.val != null) {  
-      buffer.writeAll(["\"val\":", this.val, ","], "");
+    if (this.m_val != null) {  
+      buffer.writeAll(["\"val\":", this.m_val, ","], "");
     }
 
-    if (this.color != null) {  
-      buffer.writeAll(["\"color\":", this.color, ","], "");
+    if (this.m_color != null) {  
+      buffer.writeAll(["\"color\":", this.m_color, ","], "");
     }
 
     // NOTE: skip serialization of mapOptionsToLevel (type SunburstSeriesLevelOptions[] is ignored)} 
 
-    if (this.borderRadius != null) {  
-      buffer.writeAll(["\"borderRadius\":", this.borderRadius, ","], "");
+    if (this.m_borderRadius != null) {  
+      buffer.writeAll(["\"borderRadius\":", this.m_borderRadius, ","], "");
     }
 
-    if (this.index != null) {  
-      buffer.writeAll(["\"index\":", this.index, ","], "");
+    if (this.m_index != null) {  
+      buffer.writeAll(["\"index\":", this.m_index, ","], "");
     }
 
-    if (this.innerR != null) {  
-      buffer.writeAll(["\"innerR\":", this.innerR, ","], "");
+    if (this.m_innerR != null) {  
+      buffer.writeAll(["\"innerR\":", this.m_innerR, ","], "");
     }
 
-    if (this.r != null) {  
-      buffer.writeAll(["\"r\":", this.r, ","], "");
+    if (this.m_r != null) {  
+      buffer.writeAll(["\"r\":", this.m_r, ","], "");
     }
 
-    if (this.radius != null) {  
-      buffer.writeAll(["\"radius\":", this.radius, ","], "");
+    if (this.m_radius != null) {  
+      buffer.writeAll(["\"radius\":", this.m_radius, ","], "");
     }
 
-    if (this.siblings != null) {  
-      buffer.writeAll(["\"siblings\":", this.siblings, ","], "");
+    if (this.m_siblings != null) {  
+      buffer.writeAll(["\"siblings\":", this.m_siblings, ","], "");
     }
   }
 

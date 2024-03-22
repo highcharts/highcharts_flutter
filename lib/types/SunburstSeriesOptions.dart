@@ -54,7 +54,19 @@ class SunburstSeriesOptions extends TreemapSeriesOptions {
    * The end angle of the pie in degrees where 0 is top and 90 is right.
    * Defaults to `startAngle` plus 360.  
       */
-  double? endAngle;
+  double? m_endAngle;  
+
+  double get endAngle { 
+    if (this.m_endAngle == null) {
+      this.m_endAngle = 0;
+    }
+    return this.m_endAngle!;
+  }
+
+  void set endAngle (double v) {
+    this.m_endAngle = v;
+  }
+    
   /**
    * Set options on specific levels. Takes precedence over series options,
    * but not point options.  
@@ -64,27 +76,75 @@ class SunburstSeriesOptions extends TreemapSeriesOptions {
   /**
    * Determines the width of the ring per level.  
       */
-  SunburstSeriesLevelSizeOptions? levelSize;
+  SunburstSeriesLevelSizeOptions? m_levelSize;  
+
+  SunburstSeriesLevelSizeOptions get levelSize { 
+    if (this.m_levelSize == null) {
+      this.m_levelSize = SunburstSeriesLevelSizeOptions();
+    }
+    return this.m_levelSize!;
+  }
+
+  void set levelSize (SunburstSeriesLevelSizeOptions v) {
+    this.m_levelSize = v;
+  }
+    
   /**
    * Which point to use as a root in the visualization. 
    * 
    * Defaults to 'undefined'. 
       */
-  String? rootId;
+  String? m_rootId;  
+
+  String get rootId { 
+    if (this.m_rootId == null) {
+      this.m_rootId = "";
+    }
+    return this.m_rootId!;
+  }
+
+  void set rootId (String v) {
+    this.m_rootId = v;
+  }
+    
   /**
    * If a point is sliced, moved out from the center, how many pixels
    * should it be moved?. 
    * 
    * Defaults to '10'. 
       */
-  double? slicedOffset;
+  double? m_slicedOffset;  
+
+  double get slicedOffset { 
+    if (this.m_slicedOffset == null) {
+      this.m_slicedOffset = 0;
+    }
+    return this.m_slicedOffset!;
+  }
+
+  void set slicedOffset (double v) {
+    this.m_slicedOffset = v;
+  }
+    
   /**
    * The start angle of the pie slices in degrees where 0 is top and 90
    * right. 
    * 
    * Defaults to '0'. 
       */
-  double? startAngle;
+  double? m_startAngle;  
+
+  double get startAngle { 
+    if (this.m_startAngle == null) {
+      this.m_startAngle = 0;
+    }
+    return this.m_startAngle!;
+  }
+
+  void set startAngle (double v) {
+    this.m_startAngle = v;
+  }
+    
   // NOTE: states skipped - type Generic is ignored in gen
 
 
@@ -95,38 +155,32 @@ class SunburstSeriesOptions extends TreemapSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.center != null) {  
-    // Skipped array center
+    // NOTE: skip serialization of center (type number)[] is ignored)} 
+
+    // NOTE: skip serialization of dataLabels (type SunburstDataLabelOptions[] is ignored)} 
+
+    if (this.m_endAngle != null) {  
+      buffer.writeAll(["\"endAngle\":", this.m_endAngle, ","], "");
     }
 
-    if (this.dataLabels != null) {  
-    // Skipped array dataLabels
-    }
+    // NOTE: skip serialization of levels (type SunburstSeriesLevelOptions[] is ignored)} 
 
-    if (this.endAngle != null) {  
-      buffer.writeAll(["\"endAngle\":", this.endAngle, ","], "");
-    }
-
-    if (this.levels != null) {  
-    // Skipped array levels
-    }
-
-    if (this.levelSize != null) {  
-      buffer.writeAll(["\"levelSize\":", this.levelSize?.toJSON(), ","], "");
+    if (this.m_levelSize != null) {  
+      buffer.writeAll(["\"levelSize\":", this.m_levelSize?.toJSON(), ","], "");
     }
 
     // NOTE: skip serialization of mapIdToNode (type Generic is ignored)} 
 
-    if (this.rootId != null) {  
-      buffer.writeAll(["\"rootId\":", this.rootId, ","], "");
+    if (this.m_rootId != null) {  
+      buffer.writeAll(["\"rootId\":", this.m_rootId, ","], "");
     }
 
-    if (this.slicedOffset != null) {  
-      buffer.writeAll(["\"slicedOffset\":", this.slicedOffset, ","], "");
+    if (this.m_slicedOffset != null) {  
+      buffer.writeAll(["\"slicedOffset\":", this.m_slicedOffset, ","], "");
     }
 
-    if (this.startAngle != null) {  
-      buffer.writeAll(["\"startAngle\":", this.startAngle, ","], "");
+    if (this.m_startAngle != null) {  
+      buffer.writeAll(["\"startAngle\":", this.m_startAngle, ","], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 

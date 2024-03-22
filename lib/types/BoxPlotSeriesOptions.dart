@@ -30,7 +30,19 @@ class BoxPlotSeriesOptions extends ColumnSeriesOptions {
    * 
    * Defaults to 'Solid'. 
       */
-  String? boxDashStyle;
+  String? m_boxDashStyle;  
+
+  String get boxDashStyle { 
+    if (this.m_boxDashStyle == null) {
+      this.m_boxDashStyle = "";
+    }
+    return this.m_boxDashStyle!;
+  }
+
+  void set boxDashStyle (String v) {
+    this.m_boxDashStyle = v;
+  }
+    
   /**
    * The fill color of the box.
    * 
@@ -39,7 +51,19 @@ class BoxPlotSeriesOptions extends ColumnSeriesOptions {
    * 
    * Defaults to '#ffffff'. 
       */
-  String? fillColor;
+  String? m_fillColor;  
+
+  String get fillColor { 
+    if (this.m_fillColor == null) {
+      this.m_fillColor = "";
+    }
+    return this.m_fillColor!;
+  }
+
+  void set fillColor (String v) {
+    this.m_fillColor = v;
+  }
+    
   /**
    * The color of the median line. If `undefined`, the general series
    * color applies.
@@ -47,13 +71,37 @@ class BoxPlotSeriesOptions extends ColumnSeriesOptions {
    * In styled mode, the median stroke width can be set with the
    * `.highcharts-boxplot-median` class.  
       */
-  GradientColor? medianColor;
+  GradientColor? m_medianColor;  
+
+  GradientColor get medianColor { 
+    if (this.m_medianColor == null) {
+      this.m_medianColor = GradientColor();
+    }
+    return this.m_medianColor!;
+  }
+
+  void set medianColor (GradientColor v) {
+    this.m_medianColor = v;
+  }
+    
   /**
    * The dash style of the median. 
    * 
    * Defaults to 'Solid'. 
       */
-  String? medianDashStyle;
+  String? m_medianDashStyle;  
+
+  String get medianDashStyle { 
+    if (this.m_medianDashStyle == null) {
+      this.m_medianDashStyle = "";
+    }
+    return this.m_medianDashStyle!;
+  }
+
+  void set medianDashStyle (String v) {
+    this.m_medianDashStyle = v;
+  }
+    
   /**
    * The pixel width of the median line. If `null`, the
    * [lineWidth](#plotOptions.boxplot.lineWidth) is used.
@@ -63,7 +111,19 @@ class BoxPlotSeriesOptions extends ColumnSeriesOptions {
    * 
    * Defaults to '2'. 
       */
-  double? medianWidth;
+  double? m_medianWidth;  
+
+  double get medianWidth { 
+    if (this.m_medianWidth == null) {
+      this.m_medianWidth = 0;
+    }
+    return this.m_medianWidth!;
+  }
+
+  void set medianWidth (double v) {
+    this.m_medianWidth = v;
+  }
+    
   // NOTE: states skipped - type Generic is ignored in gen
 
   /**
@@ -73,14 +133,38 @@ class BoxPlotSeriesOptions extends ColumnSeriesOptions {
    * In styled mode, the stem stroke can be set with the
    * `.highcharts-boxplot-stem` class.  
       */
-  String? stemColor;
+  String? m_stemColor;  
+
+  String get stemColor { 
+    if (this.m_stemColor == null) {
+      this.m_stemColor = "";
+    }
+    return this.m_stemColor!;
+  }
+
+  void set stemColor (String v) {
+    this.m_stemColor = v;
+  }
+    
   /**
    * The dash style of the stem, the vertical line extending from the
    * box to the whiskers. 
    * 
    * Defaults to 'Solid'. 
       */
-  String? stemDashStyle;
+  String? m_stemDashStyle;  
+
+  String get stemDashStyle { 
+    if (this.m_stemDashStyle == null) {
+      this.m_stemDashStyle = "";
+    }
+    return this.m_stemDashStyle!;
+  }
+
+  void set stemDashStyle (String v) {
+    this.m_stemDashStyle = v;
+  }
+    
   /**
    * The width of the stem, the vertical line extending from the box to
    * the whiskers. If `undefined`, the width is inherited from the
@@ -89,7 +173,19 @@ class BoxPlotSeriesOptions extends ColumnSeriesOptions {
    * In styled mode, the stem stroke width can be set with the
    * `.highcharts-boxplot-stem` class.  
       */
-  double? stemWidth;
+  double? m_stemWidth;  
+
+  double get stemWidth { 
+    if (this.m_stemWidth == null) {
+      this.m_stemWidth = 0;
+    }
+    return this.m_stemWidth!;
+  }
+
+  void set stemWidth (double v) {
+    this.m_stemWidth = v;
+  }
+    
   /**
    * The color of the whiskers, the horizontal lines marking low and high
    * values. When `undefined`, the general series color is used.
@@ -97,13 +193,37 @@ class BoxPlotSeriesOptions extends ColumnSeriesOptions {
    * In styled mode, the whisker stroke can be set with the
    * `.highcharts-boxplot-whisker` class .  
       */
-  String? whiskerColor;
+  String? m_whiskerColor;  
+
+  String get whiskerColor { 
+    if (this.m_whiskerColor == null) {
+      this.m_whiskerColor = "";
+    }
+    return this.m_whiskerColor!;
+  }
+
+  void set whiskerColor (String v) {
+    this.m_whiskerColor = v;
+  }
+    
   /**
    * The dash style of the whiskers. 
    * 
    * Defaults to 'Solid'. 
       */
-  String? whiskerDashStyle;
+  String? m_whiskerDashStyle;  
+
+  String get whiskerDashStyle { 
+    if (this.m_whiskerDashStyle == null) {
+      this.m_whiskerDashStyle = "";
+    }
+    return this.m_whiskerDashStyle!;
+  }
+
+  void set whiskerDashStyle (String v) {
+    this.m_whiskerDashStyle = v;
+  }
+    
   /**
    * The length of the whiskers, the horizontal lines marking low and
    * high values. It can be a numerical pixel value, or a percentage
@@ -111,7 +231,19 @@ class BoxPlotSeriesOptions extends ColumnSeriesOptions {
    * 
    * Defaults to '50%'. 
       */
-  String? whiskerLength;
+  String? m_whiskerLength;  
+
+  String get whiskerLength { 
+    if (this.m_whiskerLength == null) {
+      this.m_whiskerLength = "";
+    }
+    return this.m_whiskerLength!;
+  }
+
+  void set whiskerLength (String v) {
+    this.m_whiskerLength = v;
+  }
+    
   /**
    * The line width of the whiskers, the horizontal lines marking low and
    * high values. When `undefined`, the general
@@ -122,7 +254,19 @@ class BoxPlotSeriesOptions extends ColumnSeriesOptions {
    * 
    * Defaults to '2'. 
       */
-  double? whiskerWidth;
+  double? m_whiskerWidth;  
+
+  double get whiskerWidth { 
+    if (this.m_whiskerWidth == null) {
+      this.m_whiskerWidth = 0;
+    }
+    return this.m_whiskerWidth!;
+  }
+
+  void set whiskerWidth (double v) {
+    this.m_whiskerWidth = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -131,54 +275,54 @@ class BoxPlotSeriesOptions extends ColumnSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.boxDashStyle != null) {  
-      buffer.writeAll(["\"boxDashStyle\":", this.boxDashStyle, ","], "");
+    if (this.m_boxDashStyle != null) {  
+      buffer.writeAll(["\"boxDashStyle\":", this.m_boxDashStyle, ","], "");
     }
 
-    if (this.fillColor != null) {  
-      buffer.writeAll(["\"fillColor\":", this.fillColor, ","], "");
+    if (this.m_fillColor != null) {  
+      buffer.writeAll(["\"fillColor\":", this.m_fillColor, ","], "");
     }
 
-    if (this.medianColor != null) {  
-      buffer.writeAll(["\"medianColor\":", this.medianColor?.toJSON(), ","], "");
+    if (this.m_medianColor != null) {  
+      buffer.writeAll(["\"medianColor\":", this.m_medianColor?.toJSON(), ","], "");
     }
 
-    if (this.medianDashStyle != null) {  
-      buffer.writeAll(["\"medianDashStyle\":", this.medianDashStyle, ","], "");
+    if (this.m_medianDashStyle != null) {  
+      buffer.writeAll(["\"medianDashStyle\":", this.m_medianDashStyle, ","], "");
     }
 
-    if (this.medianWidth != null) {  
-      buffer.writeAll(["\"medianWidth\":", this.medianWidth, ","], "");
+    if (this.m_medianWidth != null) {  
+      buffer.writeAll(["\"medianWidth\":", this.m_medianWidth, ","], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 
 
-    if (this.stemColor != null) {  
-      buffer.writeAll(["\"stemColor\":", this.stemColor, ","], "");
+    if (this.m_stemColor != null) {  
+      buffer.writeAll(["\"stemColor\":", this.m_stemColor, ","], "");
     }
 
-    if (this.stemDashStyle != null) {  
-      buffer.writeAll(["\"stemDashStyle\":", this.stemDashStyle, ","], "");
+    if (this.m_stemDashStyle != null) {  
+      buffer.writeAll(["\"stemDashStyle\":", this.m_stemDashStyle, ","], "");
     }
 
-    if (this.stemWidth != null) {  
-      buffer.writeAll(["\"stemWidth\":", this.stemWidth, ","], "");
+    if (this.m_stemWidth != null) {  
+      buffer.writeAll(["\"stemWidth\":", this.m_stemWidth, ","], "");
     }
 
-    if (this.whiskerColor != null) {  
-      buffer.writeAll(["\"whiskerColor\":", this.whiskerColor, ","], "");
+    if (this.m_whiskerColor != null) {  
+      buffer.writeAll(["\"whiskerColor\":", this.m_whiskerColor, ","], "");
     }
 
-    if (this.whiskerDashStyle != null) {  
-      buffer.writeAll(["\"whiskerDashStyle\":", this.whiskerDashStyle, ","], "");
+    if (this.m_whiskerDashStyle != null) {  
+      buffer.writeAll(["\"whiskerDashStyle\":", this.m_whiskerDashStyle, ","], "");
     }
 
-    if (this.whiskerLength != null) {  
-      buffer.writeAll(["\"whiskerLength\":", this.whiskerLength, ","], "");
+    if (this.m_whiskerLength != null) {  
+      buffer.writeAll(["\"whiskerLength\":", this.m_whiskerLength, ","], "");
     }
 
-    if (this.whiskerWidth != null) {  
-      buffer.writeAll(["\"whiskerWidth\":", this.whiskerWidth, ","], "");
+    if (this.m_whiskerWidth != null) {  
+      buffer.writeAll(["\"whiskerWidth\":", this.m_whiskerWidth, ","], "");
     }
   }
 

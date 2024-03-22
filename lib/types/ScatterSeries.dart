@@ -23,7 +23,19 @@ import 'OptionFragment.dart';
  */
 class ScatterSeries extends OptionFragment {
   ScatterSeries() : super();
-  bool? takeOrdinalPosition;
+  bool? m_takeOrdinalPosition;  
+
+  bool get takeOrdinalPosition { 
+    if (this.m_takeOrdinalPosition == null) {
+      this.m_takeOrdinalPosition = false;
+    }
+    return this.m_takeOrdinalPosition!;
+  }
+
+  void set takeOrdinalPosition (bool v) {
+    this.m_takeOrdinalPosition = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -34,8 +46,8 @@ class ScatterSeries extends OptionFragment {
     
     // NOTE: skip serialization of pointClass (type typeof ScatterPoint is ignored)} 
 
-    if (this.takeOrdinalPosition != null) {  
-      buffer.writeAll(["\"takeOrdinalPosition\":", this.takeOrdinalPosition, ","], "");
+    if (this.m_takeOrdinalPosition != null) {  
+      buffer.writeAll(["\"takeOrdinalPosition\":", this.m_takeOrdinalPosition, ","], "");
     }
   }
 

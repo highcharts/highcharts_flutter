@@ -25,8 +25,32 @@ import 'OptionFragment.dart';
  */
 class TreeGridNode extends TreeNode {
   TreeGridNode() : super();
-  double? pos;
-  double? seriesIndex;
+  double? m_pos;  
+
+  double get pos { 
+    if (this.m_pos == null) {
+      this.m_pos = 0;
+    }
+    return this.m_pos!;
+  }
+
+  void set pos (double v) {
+    this.m_pos = v;
+  }
+    
+  double? m_seriesIndex;  
+
+  double get seriesIndex { 
+    if (this.m_seriesIndex == null) {
+      this.m_seriesIndex = 0;
+    }
+    return this.m_seriesIndex!;
+  }
+
+  void set seriesIndex (double v) {
+    this.m_seriesIndex = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -37,12 +61,12 @@ class TreeGridNode extends TreeNode {
     
     // NOTE: skip serialization of data (type PointOptions is ignored)} 
 
-    if (this.pos != null) {  
-      buffer.writeAll(["\"pos\":", this.pos, ","], "");
+    if (this.m_pos != null) {  
+      buffer.writeAll(["\"pos\":", this.m_pos, ","], "");
     }
 
-    if (this.seriesIndex != null) {  
-      buffer.writeAll(["\"seriesIndex\":", this.seriesIndex, ","], "");
+    if (this.m_seriesIndex != null) {  
+      buffer.writeAll(["\"seriesIndex\":", this.m_seriesIndex, ","], "");
     }
   }
 

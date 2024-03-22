@@ -24,8 +24,32 @@ import 'OptionFragment.dart';
  */
 class LegendTitleOptions extends OptionFragment {
   LegendTitleOptions() : super();
-  String? text;
-  double? width;
+  String? m_text;  
+
+  String get text { 
+    if (this.m_text == null) {
+      this.m_text = "";
+    }
+    return this.m_text!;
+  }
+
+  void set text (String v) {
+    this.m_text = v;
+  }
+    
+  double? m_width;  
+
+  double get width { 
+    if (this.m_width == null) {
+      this.m_width = 0;
+    }
+    return this.m_width!;
+  }
+
+  void set width (double v) {
+    this.m_width = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -36,12 +60,12 @@ class LegendTitleOptions extends OptionFragment {
     
     // NOTE: skip serialization of style (type CSSObject is ignored)} 
 
-    if (this.text != null) {  
-      buffer.writeAll(["\"text\":", this.text, ","], "");
+    if (this.m_text != null) {  
+      buffer.writeAll(["\"text\":", this.m_text, ","], "");
     }
 
-    if (this.width != null) {  
-      buffer.writeAll(["\"width\":", this.width, ","], "");
+    if (this.m_width != null) {  
+      buffer.writeAll(["\"width\":", this.m_width, ","], "");
     }
   }
 

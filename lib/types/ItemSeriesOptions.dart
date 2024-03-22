@@ -31,14 +31,38 @@ class ItemSeriesOptions extends PieSeriesOptions {
    * 
    * Defaults to '0.1'. 
       */
-  double? itemPadding;
+  double? m_itemPadding;  
+
+  double get itemPadding { 
+    if (this.m_itemPadding == null) {
+      this.m_itemPadding = 0;
+    }
+    return this.m_itemPadding!;
+  }
+
+  void set itemPadding (double v) {
+    this.m_itemPadding = v;
+  }
+    
   /**
    * The layout of the items in rectangular view. Can be either
    * `horizontal` or `vertical`. 
    * 
    * Defaults to 'vertical'. 
       */
-  String? layout;
+  String? m_layout;  
+
+  String get layout { 
+    if (this.m_layout == null) {
+      this.m_layout = "";
+    }
+    return this.m_layout!;
+  }
+
+  void set layout (String v) {
+    this.m_layout = v;
+  }
+    
   /**
    * Options for the point markers of line and scatter-like series. Properties
    * like `fillColor`, `lineColor` and `lineWidth` define the visual
@@ -55,7 +79,19 @@ class ItemSeriesOptions extends PieSeriesOptions {
    * The number of rows to display in the rectangular or circular view. If
    * the `innerSize` is set, it will be overridden by the `rows` setting.  
       */
-  double? rows;
+  double? m_rows;  
+
+  double get rows { 
+    if (this.m_rows == null) {
+      this.m_rows = 0;
+    }
+    return this.m_rows!;
+  }
+
+  void set rows (double v) {
+    this.m_rows = v;
+  }
+    
   // NOTE: states skipped - type Generic is ignored in gen
 
 
@@ -66,20 +102,20 @@ class ItemSeriesOptions extends PieSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.itemPadding != null) {  
-      buffer.writeAll(["\"itemPadding\":", this.itemPadding, ","], "");
+    if (this.m_itemPadding != null) {  
+      buffer.writeAll(["\"itemPadding\":", this.m_itemPadding, ","], "");
     }
 
-    if (this.layout != null) {  
-      buffer.writeAll(["\"layout\":", this.layout, ","], "");
+    if (this.m_layout != null) {  
+      buffer.writeAll(["\"layout\":", this.m_layout, ","], "");
     }
 
-    if (this.marker != null) {  
-      buffer.writeAll(["\"marker\":", this.marker?.toJSON(), ","], "");
+    if (this.m_marker != null) {  
+      buffer.writeAll(["\"marker\":", this.m_marker?.toJSON(), ","], "");
     }
 
-    if (this.rows != null) {  
-      buffer.writeAll(["\"rows\":", this.rows, ","], "");
+    if (this.m_rows != null) {  
+      buffer.writeAll(["\"rows\":", this.m_rows, ","], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 

@@ -30,18 +30,54 @@ class BoostOptions extends OptionFragment {
    * 
    * Defaults to 'true'. 
       */
-  bool? allowForce;
+  bool? m_allowForce;  
+
+  bool get allowForce { 
+    if (this.m_allowForce == null) {
+      this.m_allowForce = false;
+    }
+    return this.m_allowForce!;
+  }
+
+  void set allowForce (bool v) {
+    this.m_allowForce = v;
+  }
+    
   /**
    * Debugging options for boost.
    * Useful for benchmarking, and general timing.  
       */
-  BoostDebugOptions? debug;
+  BoostDebugOptions? m_debug;  
+
+  BoostDebugOptions get debug { 
+    if (this.m_debug == null) {
+      this.m_debug = BoostDebugOptions();
+    }
+    return this.m_debug!;
+  }
+
+  void set debug (BoostDebugOptions v) {
+    this.m_debug = v;
+  }
+    
   /**
    * Enable or disable boost on a chart. 
    * 
    * Defaults to 'true'. 
       */
-  bool? enabled;
+  bool? m_enabled;  
+
+  bool get enabled { 
+    if (this.m_enabled == null) {
+      this.m_enabled = false;
+    }
+    return this.m_enabled!;
+  }
+
+  void set enabled (bool v) {
+    this.m_enabled = v;
+  }
+    
   /**
    * Set the series threshold for when the boost should kick in globally.
    * 
@@ -53,7 +89,19 @@ class BoostOptions extends OptionFragment {
    * 
    * Defaults to '50'. 
       */
-  double? seriesThreshold;
+  double? m_seriesThreshold;  
+
+  double get seriesThreshold { 
+    if (this.m_seriesThreshold == null) {
+      this.m_seriesThreshold = 0;
+    }
+    return this.m_seriesThreshold!;
+  }
+
+  void set seriesThreshold (double v) {
+    this.m_seriesThreshold = v;
+  }
+    
   /**
    * The pixel ratio for the WebGL content. If 0, the `window.devicePixelRatio` is
    * used. This ensures sharp graphics on high DPI displays like Apple's Retina,
@@ -72,7 +120,19 @@ class BoostOptions extends OptionFragment {
    * 
    * Defaults to '1'. 
       */
-  double? pixelRatio;
+  double? m_pixelRatio;  
+
+  double get pixelRatio { 
+    if (this.m_pixelRatio == null) {
+      this.m_pixelRatio = 0;
+    }
+    return this.m_pixelRatio!;
+  }
+
+  void set pixelRatio (double v) {
+    this.m_pixelRatio = v;
+  }
+    
   /**
    * Enable or disable GPU translations. GPU translations are faster than doing
    * the translation in JavaScript.
@@ -84,7 +144,19 @@ class BoostOptions extends OptionFragment {
    * 
    * Defaults to 'false'. 
       */
-  bool? useGPUTranslations;
+  bool? m_useGPUTranslations;  
+
+  bool get useGPUTranslations { 
+    if (this.m_useGPUTranslations == null) {
+      this.m_useGPUTranslations = false;
+    }
+    return this.m_useGPUTranslations!;
+  }
+
+  void set useGPUTranslations (bool v) {
+    this.m_useGPUTranslations = v;
+  }
+    
   /**
    * Enable or disable pre-allocation of vertex buffers.
    * 
@@ -101,7 +173,19 @@ class BoostOptions extends OptionFragment {
    * 
    * Defaults to 'false'. 
       */
-  bool? usePreallocated;
+  bool? m_usePreallocated;  
+
+  bool get usePreallocated { 
+    if (this.m_usePreallocated == null) {
+      this.m_usePreallocated = false;
+    }
+    return this.m_usePreallocated!;
+  }
+
+  void set usePreallocated (bool v) {
+    this.m_usePreallocated = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -110,32 +194,32 @@ class BoostOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.allowForce != null) {  
-      buffer.writeAll(["\"allowForce\":", this.allowForce, ","], "");
+    if (this.m_allowForce != null) {  
+      buffer.writeAll(["\"allowForce\":", this.m_allowForce, ","], "");
     }
 
-    if (this.debug != null) {  
-      buffer.writeAll(["\"debug\":", this.debug?.toJSON(), ","], "");
+    if (this.m_debug != null) {  
+      buffer.writeAll(["\"debug\":", this.m_debug?.toJSON(), ","], "");
     }
 
-    if (this.enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
+    if (this.m_enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this.m_enabled, ","], "");
     }
 
-    if (this.seriesThreshold != null) {  
-      buffer.writeAll(["\"seriesThreshold\":", this.seriesThreshold, ","], "");
+    if (this.m_seriesThreshold != null) {  
+      buffer.writeAll(["\"seriesThreshold\":", this.m_seriesThreshold, ","], "");
     }
 
-    if (this.pixelRatio != null) {  
-      buffer.writeAll(["\"pixelRatio\":", this.pixelRatio, ","], "");
+    if (this.m_pixelRatio != null) {  
+      buffer.writeAll(["\"pixelRatio\":", this.m_pixelRatio, ","], "");
     }
 
-    if (this.useGPUTranslations != null) {  
-      buffer.writeAll(["\"useGPUTranslations\":", this.useGPUTranslations, ","], "");
+    if (this.m_useGPUTranslations != null) {  
+      buffer.writeAll(["\"useGPUTranslations\":", this.m_useGPUTranslations, ","], "");
     }
 
-    if (this.usePreallocated != null) {  
-      buffer.writeAll(["\"usePreallocated\":", this.usePreallocated, ","], "");
+    if (this.m_usePreallocated != null) {  
+      buffer.writeAll(["\"usePreallocated\":", this.m_usePreallocated, ","], "");
     }
   }
 

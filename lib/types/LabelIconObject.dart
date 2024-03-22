@@ -27,9 +27,45 @@ import 'OptionFragment.dart';
  */
 class LabelIconObject extends OptionFragment {
   LabelIconObject() : super();
-  bool? collapsed;
-  String? color;
-  bool? show;
+  bool? m_collapsed;  
+
+  bool get collapsed { 
+    if (this.m_collapsed == null) {
+      this.m_collapsed = false;
+    }
+    return this.m_collapsed!;
+  }
+
+  void set collapsed (bool v) {
+    this.m_collapsed = v;
+  }
+    
+  String? m_color;  
+
+  String get color { 
+    if (this.m_color == null) {
+      this.m_color = "";
+    }
+    return this.m_color!;
+  }
+
+  void set color (String v) {
+    this.m_color = v;
+  }
+    
+  bool? m_show;  
+
+  bool get show { 
+    if (this.m_show == null) {
+      this.m_show = false;
+    }
+    return this.m_show!;
+  }
+
+  void set show (bool v) {
+    this.m_show = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -38,12 +74,12 @@ class LabelIconObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.collapsed != null) {  
-      buffer.writeAll(["\"collapsed\":", this.collapsed, ","], "");
+    if (this.m_collapsed != null) {  
+      buffer.writeAll(["\"collapsed\":", this.m_collapsed, ","], "");
     }
 
-    if (this.color != null) {  
-      buffer.writeAll(["\"color\":", this.color, ","], "");
+    if (this.m_color != null) {  
+      buffer.writeAll(["\"color\":", this.m_color, ","], "");
     }
 
     // NOTE: skip serialization of group (type SVGElement is ignored)} 
@@ -52,8 +88,8 @@ class LabelIconObject extends OptionFragment {
 
     // NOTE: skip serialization of renderer (type SVGRenderer is ignored)} 
 
-    if (this.show != null) {  
-      buffer.writeAll(["\"show\":", this.show, ","], "");
+    if (this.m_show != null) {  
+      buffer.writeAll(["\"show\":", this.m_show, ","], "");
     }
 
     // NOTE: skip serialization of xy (type PositionObject is ignored)} 

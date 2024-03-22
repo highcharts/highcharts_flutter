@@ -23,10 +23,58 @@ import 'OptionFragment.dart';
  */
 class ColumnOptions extends OptionFragment {
   ColumnOptions() : super();
-  String? cellFormat;
-  bool? editable;
-  String? headerFormat;
-  bool? show;
+  String? m_cellFormat;  
+
+  String get cellFormat { 
+    if (this.m_cellFormat == null) {
+      this.m_cellFormat = "";
+    }
+    return this.m_cellFormat!;
+  }
+
+  void set cellFormat (String v) {
+    this.m_cellFormat = v;
+  }
+    
+  bool? m_editable;  
+
+  bool get editable { 
+    if (this.m_editable == null) {
+      this.m_editable = false;
+    }
+    return this.m_editable!;
+  }
+
+  void set editable (bool v) {
+    this.m_editable = v;
+  }
+    
+  String? m_headerFormat;  
+
+  String get headerFormat { 
+    if (this.m_headerFormat == null) {
+      this.m_headerFormat = "";
+    }
+    return this.m_headerFormat!;
+  }
+
+  void set headerFormat (String v) {
+    this.m_headerFormat = v;
+  }
+    
+  bool? m_show;  
+
+  bool get show { 
+    if (this.m_show == null) {
+      this.m_show = false;
+    }
+    return this.m_show!;
+  }
+
+  void set show (bool v) {
+    this.m_show = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -35,20 +83,20 @@ class ColumnOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.cellFormat != null) {  
-      buffer.writeAll(["\"cellFormat\":", this.cellFormat, ","], "");
+    if (this.m_cellFormat != null) {  
+      buffer.writeAll(["\"cellFormat\":", this.m_cellFormat, ","], "");
     }
 
-    if (this.editable != null) {  
-      buffer.writeAll(["\"editable\":", this.editable, ","], "");
+    if (this.m_editable != null) {  
+      buffer.writeAll(["\"editable\":", this.m_editable, ","], "");
     }
 
-    if (this.headerFormat != null) {  
-      buffer.writeAll(["\"headerFormat\":", this.headerFormat, ","], "");
+    if (this.m_headerFormat != null) {  
+      buffer.writeAll(["\"headerFormat\":", this.m_headerFormat, ","], "");
     }
 
-    if (this.show != null) {  
-      buffer.writeAll(["\"show\":", this.show, ","], "");
+    if (this.m_show != null) {  
+      buffer.writeAll(["\"show\":", this.m_show, ","], "");
     }
   }
 

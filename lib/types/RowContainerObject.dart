@@ -24,7 +24,19 @@ import 'OptionFragment.dart';
  */
 class RowContainerObject extends OptionFragment {
   RowContainerObject() : super();
-  double? angle;
+  double? m_angle;  
+
+  double get angle { 
+    if (this.m_angle == null) {
+      this.m_angle = 0;
+    }
+    return this.m_angle!;
+  }
+
+  void set angle (double v) {
+    this.m_angle = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,8 +45,8 @@ class RowContainerObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.angle != null) {  
-      buffer.writeAll(["\"angle\":", this.angle, ","], "");
+    if (this.m_angle != null) {  
+      buffer.writeAll(["\"angle\":", this.m_angle, ","], "");
     }
 
     // NOTE: skip serialization of row (type RowObject is ignored)} 

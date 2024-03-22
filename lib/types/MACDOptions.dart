@@ -40,18 +40,90 @@ class MACDOptions extends SMAOptions {
    * 
    * Defaults to '0'. 
       */
-  double? threshold;
-  double? groupPadding;
-  double? pointPadding;
-  double? minPointLength;
+  double? m_threshold;  
+
+  double get threshold { 
+    if (this.m_threshold == null) {
+      this.m_threshold = 0;
+    }
+    return this.m_threshold!;
+  }
+
+  void set threshold (double v) {
+    this.m_threshold = v;
+  }
+    
+  double? m_groupPadding;  
+
+  double get groupPadding { 
+    if (this.m_groupPadding == null) {
+      this.m_groupPadding = 0;
+    }
+    return this.m_groupPadding!;
+  }
+
+  void set groupPadding (double v) {
+    this.m_groupPadding = v;
+  }
+    
+  double? m_pointPadding;  
+
+  double get pointPadding { 
+    if (this.m_pointPadding == null) {
+      this.m_pointPadding = 0;
+    }
+    return this.m_pointPadding!;
+  }
+
+  void set pointPadding (double v) {
+    this.m_pointPadding = v;
+  }
+    
+  double? m_minPointLength;  
+
+  double get minPointLength { 
+    if (this.m_minPointLength == null) {
+      this.m_minPointLength = 0;
+    }
+    return this.m_minPointLength!;
+  }
+
+  void set minPointLength (double v) {
+    this.m_minPointLength = v;
+  }
+    
   /**
    * The styles for signal line  
       */
-  MACDLineOptions? signalLine;
+  MACDLineOptions? m_signalLine;  
+
+  MACDLineOptions get signalLine { 
+    if (this.m_signalLine == null) {
+      this.m_signalLine = MACDLineOptions();
+    }
+    return this.m_signalLine!;
+  }
+
+  void set signalLine (MACDLineOptions v) {
+    this.m_signalLine = v;
+  }
+    
   /**
    * The styles for macd line  
       */
-  MACDLineOptions? macdLine;
+  MACDLineOptions? m_macdLine;  
+
+  MACDLineOptions get macdLine { 
+    if (this.m_macdLine == null) {
+      this.m_macdLine = MACDLineOptions();
+    }
+    return this.m_macdLine!;
+  }
+
+  void set macdLine (MACDLineOptions v) {
+    this.m_macdLine = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -60,34 +132,34 @@ class MACDOptions extends SMAOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.params != null) {  
-      buffer.writeAll(["\"params\":", this.params?.toJSON(), ","], "");
+    if (this.m_params != null) {  
+      buffer.writeAll(["\"params\":", this.m_params?.toJSON(), ","], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 
 
-    if (this.threshold != null) {  
-      buffer.writeAll(["\"threshold\":", this.threshold, ","], "");
+    if (this.m_threshold != null) {  
+      buffer.writeAll(["\"threshold\":", this.m_threshold, ","], "");
     }
 
-    if (this.groupPadding != null) {  
-      buffer.writeAll(["\"groupPadding\":", this.groupPadding, ","], "");
+    if (this.m_groupPadding != null) {  
+      buffer.writeAll(["\"groupPadding\":", this.m_groupPadding, ","], "");
     }
 
-    if (this.pointPadding != null) {  
-      buffer.writeAll(["\"pointPadding\":", this.pointPadding, ","], "");
+    if (this.m_pointPadding != null) {  
+      buffer.writeAll(["\"pointPadding\":", this.m_pointPadding, ","], "");
     }
 
-    if (this.minPointLength != null) {  
-      buffer.writeAll(["\"minPointLength\":", this.minPointLength, ","], "");
+    if (this.m_minPointLength != null) {  
+      buffer.writeAll(["\"minPointLength\":", this.m_minPointLength, ","], "");
     }
 
-    if (this.signalLine != null) {  
-      buffer.writeAll(["\"signalLine\":", this.signalLine?.toJSON(), ","], "");
+    if (this.m_signalLine != null) {  
+      buffer.writeAll(["\"signalLine\":", this.m_signalLine?.toJSON(), ","], "");
     }
 
-    if (this.macdLine != null) {  
-      buffer.writeAll(["\"macdLine\":", this.macdLine?.toJSON(), ","], "");
+    if (this.m_macdLine != null) {  
+      buffer.writeAll(["\"macdLine\":", this.m_macdLine?.toJSON(), ","], "");
     }
   }
 

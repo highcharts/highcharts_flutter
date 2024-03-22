@@ -24,7 +24,19 @@ import 'OptionFragment.dart';
  */
 class ColorTypeRegistry extends OptionFragment {
   ColorTypeRegistry() : super();
-  String? ColorString;
+  String? m_ColorString;  
+
+  String get ColorString { 
+    if (this.m_ColorString == null) {
+      this.m_ColorString = "";
+    }
+    return this.m_ColorString!;
+  }
+
+  void set ColorString (String v) {
+    this.m_ColorString = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,8 +45,8 @@ class ColorTypeRegistry extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.ColorString != null) {  
-      buffer.writeAll(["\"ColorString\":", this.ColorString, ","], "");
+    if (this.m_ColorString != null) {  
+      buffer.writeAll(["\"ColorString\":", this.m_ColorString, ","], "");
     }
 
     // NOTE: skip serialization of mGradientColor (type GradientColor is ignored)} 

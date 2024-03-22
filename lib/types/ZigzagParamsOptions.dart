@@ -24,9 +24,45 @@ import 'OptionFragment.dart';
  */
 class ZigzagParamsOptions extends SMAParamsOptions {
   ZigzagParamsOptions() : super();
-  double? lowIndex;
-  double? highIndex;
-  double? deviation;
+  double? m_lowIndex;  
+
+  double get lowIndex { 
+    if (this.m_lowIndex == null) {
+      this.m_lowIndex = 0;
+    }
+    return this.m_lowIndex!;
+  }
+
+  void set lowIndex (double v) {
+    this.m_lowIndex = v;
+  }
+    
+  double? m_highIndex;  
+
+  double get highIndex { 
+    if (this.m_highIndex == null) {
+      this.m_highIndex = 0;
+    }
+    return this.m_highIndex!;
+  }
+
+  void set highIndex (double v) {
+    this.m_highIndex = v;
+  }
+    
+  double? m_deviation;  
+
+  double get deviation { 
+    if (this.m_deviation == null) {
+      this.m_deviation = 0;
+    }
+    return this.m_deviation!;
+  }
+
+  void set deviation (double v) {
+    this.m_deviation = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -35,16 +71,16 @@ class ZigzagParamsOptions extends SMAParamsOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.lowIndex != null) {  
-      buffer.writeAll(["\"lowIndex\":", this.lowIndex, ","], "");
+    if (this.m_lowIndex != null) {  
+      buffer.writeAll(["\"lowIndex\":", this.m_lowIndex, ","], "");
     }
 
-    if (this.highIndex != null) {  
-      buffer.writeAll(["\"highIndex\":", this.highIndex, ","], "");
+    if (this.m_highIndex != null) {  
+      buffer.writeAll(["\"highIndex\":", this.m_highIndex, ","], "");
     }
 
-    if (this.deviation != null) {  
-      buffer.writeAll(["\"deviation\":", this.deviation, ","], "");
+    if (this.m_deviation != null) {  
+      buffer.writeAll(["\"deviation\":", this.m_deviation, ","], "");
     }
   }
 

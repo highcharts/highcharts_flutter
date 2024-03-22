@@ -24,8 +24,32 @@ import 'OptionFragment.dart';
  */
 class SunburstSeriesLevelsColorVariationOptions extends TreemapSeriesLevelsColorVariationOptions {
   SunburstSeriesLevelsColorVariationOptions() : super();
-  String? key;
-  double? to;
+  String? m_key;  
+
+  String get key { 
+    if (this.m_key == null) {
+      this.m_key = "";
+    }
+    return this.m_key!;
+  }
+
+  void set key (String v) {
+    this.m_key = v;
+  }
+    
+  double? m_to;  
+
+  double get to { 
+    if (this.m_to == null) {
+      this.m_to = 0;
+    }
+    return this.m_to!;
+  }
+
+  void set to (double v) {
+    this.m_to = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -34,12 +58,12 @@ class SunburstSeriesLevelsColorVariationOptions extends TreemapSeriesLevelsColor
     super.toJSONInner(buffer);
 
     
-    if (this.key != null) {  
-      buffer.writeAll(["\"key\":", this.key, ","], "");
+    if (this.m_key != null) {  
+      buffer.writeAll(["\"key\":", this.m_key, ","], "");
     }
 
-    if (this.to != null) {  
-      buffer.writeAll(["\"to\":", this.to, ","], "");
+    if (this.m_to != null) {  
+      buffer.writeAll(["\"to\":", this.m_to, ","], "");
     }
   }
 

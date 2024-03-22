@@ -23,8 +23,32 @@ import 'OptionFragment.dart';
  */
 class InterpolationObject extends OptionFragment {
   InterpolationObject() : super();
-  bool? enabled;
-  double? blur;
+  bool? m_enabled;  
+
+  bool get enabled { 
+    if (this.m_enabled == null) {
+      this.m_enabled = false;
+    }
+    return this.m_enabled!;
+  }
+
+  void set enabled (bool v) {
+    this.m_enabled = v;
+  }
+    
+  double? m_blur;  
+
+  double get blur { 
+    if (this.m_blur == null) {
+      this.m_blur = 0;
+    }
+    return this.m_blur!;
+  }
+
+  void set blur (double v) {
+    this.m_blur = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,12 +57,12 @@ class InterpolationObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
+    if (this.m_enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this.m_enabled, ","], "");
     }
 
-    if (this.blur != null) {  
-      buffer.writeAll(["\"blur\":", this.blur, ","], "");
+    if (this.m_blur != null) {  
+      buffer.writeAll(["\"blur\":", this.m_blur, ","], "");
     }
   }
 

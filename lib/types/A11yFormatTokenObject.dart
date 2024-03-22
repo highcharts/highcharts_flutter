@@ -23,8 +23,32 @@ import 'OptionFragment.dart';
  */
 class A11yFormatTokenObject extends OptionFragment {
   A11yFormatTokenObject() : super();
-  String? type;
-  String? value;
+  String? m_type;  
+
+  String get type { 
+    if (this.m_type == null) {
+      this.m_type = "";
+    }
+    return this.m_type!;
+  }
+
+  void set type (String v) {
+    this.m_type = v;
+  }
+    
+  String? m_value;  
+
+  String get value { 
+    if (this.m_value == null) {
+      this.m_value = "";
+    }
+    return this.m_value!;
+  }
+
+  void set value (String v) {
+    this.m_value = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,12 +57,12 @@ class A11yFormatTokenObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.type != null) {  
-      buffer.writeAll(["\"type\":", this.type, ","], "");
+    if (this.m_type != null) {  
+      buffer.writeAll(["\"type\":", this.m_type, ","], "");
     }
 
-    if (this.value != null) {  
-      buffer.writeAll(["\"value\":", this.value, ","], "");
+    if (this.m_value != null) {  
+      buffer.writeAll(["\"value\":", this.m_value, ","], "");
     }
   }
 

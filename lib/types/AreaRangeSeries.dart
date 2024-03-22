@@ -23,8 +23,32 @@ import 'OptionFragment.dart';
  */
 class AreaRangeSeries extends OptionFragment {
   AreaRangeSeries() : super();
-  bool? deferTranslatePolar;
-  String? pointValKey;
+  bool? m_deferTranslatePolar;  
+
+  bool get deferTranslatePolar { 
+    if (this.m_deferTranslatePolar == null) {
+      this.m_deferTranslatePolar = false;
+    }
+    return this.m_deferTranslatePolar!;
+  }
+
+  void set deferTranslatePolar (bool v) {
+    this.m_deferTranslatePolar = v;
+  }
+    
+  String? m_pointValKey;  
+
+  String get pointValKey { 
+    if (this.m_pointValKey == null) {
+      this.m_pointValKey = "";
+    }
+    return this.m_pointValKey!;
+  }
+
+  void set pointValKey (String v) {
+    this.m_pointValKey = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,16 +57,16 @@ class AreaRangeSeries extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.deferTranslatePolar != null) {  
-      buffer.writeAll(["\"deferTranslatePolar\":", this.deferTranslatePolar, ","], "");
+    if (this.m_deferTranslatePolar != null) {  
+      buffer.writeAll(["\"deferTranslatePolar\":", this.m_deferTranslatePolar, ","], "");
     }
 
     // NOTE: skip serialization of pointArrayMap (type string[] is ignored)} 
 
     // NOTE: skip serialization of pointClass (type typeof AreaRangePoint is ignored)} 
 
-    if (this.pointValKey != null) {  
-      buffer.writeAll(["\"pointValKey\":", this.pointValKey, ","], "");
+    if (this.m_pointValKey != null) {  
+      buffer.writeAll(["\"pointValKey\":", this.m_pointValKey, ","], "");
     }
   }
 

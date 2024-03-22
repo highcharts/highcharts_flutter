@@ -24,7 +24,19 @@ import 'OptionFragment.dart';
  */
 class AroonParamsOptions extends SMAParamsOptions {
   AroonParamsOptions() : super();
-  double? period;
+  double? m_period;  
+
+  double get period { 
+    if (this.m_period == null) {
+      this.m_period = 0;
+    }
+    return this.m_period!;
+  }
+
+  void set period (double v) {
+    this.m_period = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,8 +45,8 @@ class AroonParamsOptions extends SMAParamsOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.period != null) {  
-      buffer.writeAll(["\"period\":", this.period, ","], "");
+    if (this.m_period != null) {  
+      buffer.writeAll(["\"period\":", this.m_period, ","], "");
     }
   }
 

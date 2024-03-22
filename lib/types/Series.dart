@@ -25,11 +25,71 @@ import 'OptionFragment.dart';
  */
 class Series extends CoreSeries {
   Series() : super();
-  double? colorCounter;
-  bool? directTouch;
-  bool? isCartesian;
-  bool? requireSorting;
-  bool? sorted;
+  double? m_colorCounter;  
+
+  double get colorCounter { 
+    if (this.m_colorCounter == null) {
+      this.m_colorCounter = 0;
+    }
+    return this.m_colorCounter!;
+  }
+
+  void set colorCounter (double v) {
+    this.m_colorCounter = v;
+  }
+    
+  bool? m_directTouch;  
+
+  bool get directTouch { 
+    if (this.m_directTouch == null) {
+      this.m_directTouch = false;
+    }
+    return this.m_directTouch!;
+  }
+
+  void set directTouch (bool v) {
+    this.m_directTouch = v;
+  }
+    
+  bool? m_isCartesian;  
+
+  bool get isCartesian { 
+    if (this.m_isCartesian == null) {
+      this.m_isCartesian = false;
+    }
+    return this.m_isCartesian!;
+  }
+
+  void set isCartesian (bool v) {
+    this.m_isCartesian = v;
+  }
+    
+  bool? m_requireSorting;  
+
+  bool get requireSorting { 
+    if (this.m_requireSorting == null) {
+      this.m_requireSorting = false;
+    }
+    return this.m_requireSorting!;
+  }
+
+  void set requireSorting (bool v) {
+    this.m_requireSorting = v;
+  }
+    
+  bool? m_sorted;  
+
+  bool get sorted { 
+    if (this.m_sorted == null) {
+      this.m_sorted = false;
+    }
+    return this.m_sorted!;
+  }
+
+  void set sorted (bool v) {
+    this.m_sorted = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -48,18 +108,18 @@ class Series extends CoreSeries {
 
     // NOTE: skip serialization of coll (type "series" is ignored)} 
 
-    if (this.colorCounter != null) {  
-      buffer.writeAll(["\"colorCounter\":", this.colorCounter, ","], "");
+    if (this.m_colorCounter != null) {  
+      buffer.writeAll(["\"colorCounter\":", this.m_colorCounter, ","], "");
     }
 
-    if (this.directTouch != null) {  
-      buffer.writeAll(["\"directTouch\":", this.directTouch, ","], "");
+    if (this.m_directTouch != null) {  
+      buffer.writeAll(["\"directTouch\":", this.m_directTouch, ","], "");
     }
 
     // NOTE: skip serialization of hcEvents (type Generic is ignored)} 
 
-    if (this.isCartesian != null) {  
-      buffer.writeAll(["\"isCartesian\":", this.isCartesian, ","], "");
+    if (this.m_isCartesian != null) {  
+      buffer.writeAll(["\"isCartesian\":", this.m_isCartesian, ","], "");
     }
 
     // NOTE: skip serialization of kdAxisArray (type (keyof KDPointSearchObject)[] is ignored)} 
@@ -68,12 +128,12 @@ class Series extends CoreSeries {
 
     // NOTE: skip serialization of pointClass (type typeof Point is ignored)} 
 
-    if (this.requireSorting != null) {  
-      buffer.writeAll(["\"requireSorting\":", this.requireSorting, ","], "");
+    if (this.m_requireSorting != null) {  
+      buffer.writeAll(["\"requireSorting\":", this.m_requireSorting, ","], "");
     }
 
-    if (this.sorted != null) {  
-      buffer.writeAll(["\"sorted\":", this.sorted, ","], "");
+    if (this.m_sorted != null) {  
+      buffer.writeAll(["\"sorted\":", this.m_sorted, ","], "");
     }
   }
 

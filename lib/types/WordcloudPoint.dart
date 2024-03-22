@@ -23,7 +23,19 @@ import 'OptionFragment.dart';
  */
 class WordcloudPoint extends OptionFragment {
   WordcloudPoint() : super();
-  double? weight;
+  double? m_weight;  
+
+  double get weight { 
+    if (this.m_weight == null) {
+      this.m_weight = 0;
+    }
+    return this.m_weight!;
+  }
+
+  void set weight (double v) {
+    this.m_weight = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -32,8 +44,8 @@ class WordcloudPoint extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.weight != null) {  
-      buffer.writeAll(["\"weight\":", this.weight, ","], "");
+    if (this.m_weight != null) {  
+      buffer.writeAll(["\"weight\":", this.m_weight, ","], "");
     }
   }
 

@@ -24,8 +24,32 @@ import 'OptionFragment.dart';
  */
 class CandlestickPointOptions extends OHLCPointOptions {
   CandlestickPointOptions() : super();
-  String? lineColor;
-  String? upLineColor;
+  String? m_lineColor;  
+
+  String get lineColor { 
+    if (this.m_lineColor == null) {
+      this.m_lineColor = "";
+    }
+    return this.m_lineColor!;
+  }
+
+  void set lineColor (String v) {
+    this.m_lineColor = v;
+  }
+    
+  String? m_upLineColor;  
+
+  String get upLineColor { 
+    if (this.m_upLineColor == null) {
+      this.m_upLineColor = "";
+    }
+    return this.m_upLineColor!;
+  }
+
+  void set upLineColor (String v) {
+    this.m_upLineColor = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -34,12 +58,12 @@ class CandlestickPointOptions extends OHLCPointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.lineColor != null) {  
-      buffer.writeAll(["\"lineColor\":", this.lineColor, ","], "");
+    if (this.m_lineColor != null) {  
+      buffer.writeAll(["\"lineColor\":", this.m_lineColor, ","], "");
     }
 
-    if (this.upLineColor != null) {  
-      buffer.writeAll(["\"upLineColor\":", this.upLineColor, ","], "");
+    if (this.m_upLineColor != null) {  
+      buffer.writeAll(["\"upLineColor\":", this.m_upLineColor, ","], "");
     }
   }
 

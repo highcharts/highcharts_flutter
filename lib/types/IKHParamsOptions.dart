@@ -24,8 +24,32 @@ import 'OptionFragment.dart';
  */
 class IKHParamsOptions extends SMAParamsOptions {
   IKHParamsOptions() : super();
-  double? periodTenkan;
-  double? periodSenkouSpanB;
+  double? m_periodTenkan;  
+
+  double get periodTenkan { 
+    if (this.m_periodTenkan == null) {
+      this.m_periodTenkan = 0;
+    }
+    return this.m_periodTenkan!;
+  }
+
+  void set periodTenkan (double v) {
+    this.m_periodTenkan = v;
+  }
+    
+  double? m_periodSenkouSpanB;  
+
+  double get periodSenkouSpanB { 
+    if (this.m_periodSenkouSpanB == null) {
+      this.m_periodSenkouSpanB = 0;
+    }
+    return this.m_periodSenkouSpanB!;
+  }
+
+  void set periodSenkouSpanB (double v) {
+    this.m_periodSenkouSpanB = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -34,12 +58,12 @@ class IKHParamsOptions extends SMAParamsOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.periodTenkan != null) {  
-      buffer.writeAll(["\"periodTenkan\":", this.periodTenkan, ","], "");
+    if (this.m_periodTenkan != null) {  
+      buffer.writeAll(["\"periodTenkan\":", this.m_periodTenkan, ","], "");
     }
 
-    if (this.periodSenkouSpanB != null) {  
-      buffer.writeAll(["\"periodSenkouSpanB\":", this.periodSenkouSpanB, ","], "");
+    if (this.m_periodSenkouSpanB != null) {  
+      buffer.writeAll(["\"periodSenkouSpanB\":", this.m_periodSenkouSpanB, ","], "");
     }
   }
 

@@ -24,7 +24,19 @@ import 'OptionFragment.dart';
  */
 class MockSeries extends OptionFragment {
   MockSeries() : super();
-  bool? visible;
+  bool? m_visible;  
+
+  bool get visible { 
+    if (this.m_visible == null) {
+      this.m_visible = false;
+    }
+    return this.m_visible!;
+  }
+
+  void set visible (bool v) {
+    this.m_visible = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -39,8 +51,8 @@ class MockSeries extends OptionFragment {
 
     // NOTE: skip serialization of yAxis (type Axis is ignored)} 
 
-    if (this.visible != null) {  
-      buffer.writeAll(["\"visible\":", this.visible, ","], "");
+    if (this.m_visible != null) {  
+      buffer.writeAll(["\"visible\":", this.m_visible, ","], "");
     }
   }
 

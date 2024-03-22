@@ -23,24 +23,10 @@ import 'OptionFragment.dart';
  */
 class TimeOptions extends OptionFragment {
   TimeOptions() : super();
-  /**
-   * A custom `Date` class for advanced date handling. For example,
-   * [JDate](https://github.com/tahajahangir/jdate) can be hooked in to
-   * handle Jalali dates. 
-   * 
-   * Defaults to 'undefined'. 
-      */
-  var Date;
-  /**
-   * A callback to return the time zone offset for a given datetime. It
-   * takes the timestamp in terms of milliseconds since January 1 1970,
-   * and returns the timezone offset in minutes. This provides a hook
-   * for drawing time based charts in specific time zones using their
-   * local DST crossover dates, with the help of external libraries. 
-   * 
-   * Defaults to 'undefined'. 
-      */
-  Function? getTimezoneOffset;
+  // NOTE: Date skipped - type any is ignored in gen
+
+  // NOTE: getTimezoneOffset skipped - type Function is ignored in gen
+
   /**
    * Requires [moment.js](https://momentjs.com/). If the timezone option
    * is specified, it creates a default
@@ -51,14 +37,38 @@ class TimeOptions extends OptionFragment {
    * 
    * Defaults to 'undefined'. 
       */
-  String? timezone;
+  String? m_timezone;  
+
+  String get timezone { 
+    if (this.m_timezone == null) {
+      this.m_timezone = "";
+    }
+    return this.m_timezone!;
+  }
+
+  void set timezone (String v) {
+    this.m_timezone = v;
+  }
+    
   /**
    * The timezone offset in minutes. Positive values are west, negative
    * values are east of UTC, as in the ECMAScript
    * [getTimezoneOffset](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset)
    * method. Use this to display UTC based data in a predefined time zone.  
       */
-  double? timezoneOffset;
+  double? m_timezoneOffset;  
+
+  double get timezoneOffset { 
+    if (this.m_timezoneOffset == null) {
+      this.m_timezoneOffset = 0;
+    }
+    return this.m_timezoneOffset!;
+  }
+
+  void set timezoneOffset (double v) {
+    this.m_timezoneOffset = v;
+  }
+    
   /**
    * Whether to use UTC time for axis scaling, tickmark placement and
    * time display in `Highcharts.dateFormat`. Advantages of using UTC
@@ -69,14 +79,21 @@ class TimeOptions extends OptionFragment {
    * 
    * Defaults to 'true'. 
       */
-  bool? useUTC;
-  /**
-   * Allows to manually load the `moment.js` library from Highcharts options
-   * instead of the `window`.
-   * In case of loading the library from a `script` tag,
-   * this option is not needed, it will be loaded from there by default.  
-      */
-  var moment;
+  bool? m_useUTC;  
+
+  bool get useUTC { 
+    if (this.m_useUTC == null) {
+      this.m_useUTC = false;
+    }
+    return this.m_useUTC!;
+  }
+
+  void set useUTC (bool v) {
+    this.m_useUTC = v;
+  }
+    
+  // NOTE: moment skipped - type any is ignored in gen
+
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -87,20 +104,18 @@ class TimeOptions extends OptionFragment {
     
     // NOTE: skip serialization of Date (type any is ignored)} 
 
-    if (this.getTimezoneOffset != null) {  
-      buffer.writeAll(["\"getTimezoneOffset\":", this.getTimezoneOffset, ","], "");
+    // NOTE: skip serialization of getTimezoneOffset (type Function is ignored)} 
+
+    if (this.m_timezone != null) {  
+      buffer.writeAll(["\"timezone\":", this.m_timezone, ","], "");
     }
 
-    if (this.timezone != null) {  
-      buffer.writeAll(["\"timezone\":", this.timezone, ","], "");
+    if (this.m_timezoneOffset != null) {  
+      buffer.writeAll(["\"timezoneOffset\":", this.m_timezoneOffset, ","], "");
     }
 
-    if (this.timezoneOffset != null) {  
-      buffer.writeAll(["\"timezoneOffset\":", this.timezoneOffset, ","], "");
-    }
-
-    if (this.useUTC != null) {  
-      buffer.writeAll(["\"useUTC\":", this.useUTC, ","], "");
+    if (this.m_useUTC != null) {  
+      buffer.writeAll(["\"useUTC\":", this.m_useUTC, ","], "");
     }
 
     // NOTE: skip serialization of moment (type any is ignored)} 

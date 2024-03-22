@@ -25,7 +25,19 @@ import 'OptionFragment.dart';
  */
 class SVGElement extends SVGElementLike {
   SVGElement() : super();
-  double? cutHeight;
+  double? m_cutHeight;  
+
+  double get cutHeight { 
+    if (this.m_cutHeight == null) {
+      this.m_cutHeight = 0;
+    }
+    return this.m_cutHeight!;
+  }
+
+  void set cutHeight (double v) {
+    this.m_cutHeight = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -34,8 +46,8 @@ class SVGElement extends SVGElementLike {
     super.toJSONInner(buffer);
 
     
-    if (this.cutHeight != null) {  
-      buffer.writeAll(["\"cutHeight\":", this.cutHeight, ","], "");
+    if (this.m_cutHeight != null) {  
+      buffer.writeAll(["\"cutHeight\":", this.m_cutHeight, ","], "");
     }
 
     // NOTE: skip serialization of parentNode (type SVGElement is ignored)} 

@@ -23,8 +23,32 @@ import 'OptionFragment.dart';
  */
 class QueuedAnnouncementObject extends OptionFragment {
   QueuedAnnouncementObject() : super();
-  String? message;
-  double? time;
+  String? m_message;  
+
+  String get message { 
+    if (this.m_message == null) {
+      this.m_message = "";
+    }
+    return this.m_message!;
+  }
+
+  void set message (String v) {
+    this.m_message = v;
+  }
+    
+  double? m_time;  
+
+  double get time { 
+    if (this.m_time == null) {
+      this.m_time = 0;
+    }
+    return this.m_time!;
+  }
+
+  void set time (double v) {
+    this.m_time = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,14 +57,14 @@ class QueuedAnnouncementObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.message != null) {  
-      buffer.writeAll(["\"message\":", this.message, ","], "");
+    if (this.m_message != null) {  
+      buffer.writeAll(["\"message\":", this.m_message, ","], "");
     }
 
     // NOTE: skip serialization of series (type SeriesComposition[] is ignored)} 
 
-    if (this.time != null) {  
-      buffer.writeAll(["\"time\":", this.time, ","], "");
+    if (this.m_time != null) {  
+      buffer.writeAll(["\"time\":", this.m_time, ","], "");
     }
   }
 

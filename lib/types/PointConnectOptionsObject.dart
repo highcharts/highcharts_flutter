@@ -23,7 +23,19 @@ import 'OptionFragment.dart';
  */
 class PointConnectOptionsObject extends OptionFragment {
   PointConnectOptionsObject() : super();
-  String? to;
+  String? m_to;  
+
+  String get to { 
+    if (this.m_to == null) {
+      this.m_to = "";
+    }
+    return this.m_to!;
+  }
+
+  void set to (String v) {
+    this.m_to = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -32,8 +44,8 @@ class PointConnectOptionsObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.to != null) {  
-      buffer.writeAll(["\"to\":", this.to, ","], "");
+    if (this.m_to != null) {  
+      buffer.writeAll(["\"to\":", this.m_to, ","], "");
     }
   }
 

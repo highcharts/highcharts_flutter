@@ -38,8 +38,8 @@ class PPOOptions extends EMAOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.params != null) {  
-      buffer.writeAll(["\"params\":", this.params?.toJSON(), ","], "");
+    if (this.m_params != null) {  
+      buffer.writeAll(["\"params\":", this.m_params?.toJSON(), ","], "");
     }
   }
 

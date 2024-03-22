@@ -23,7 +23,19 @@ import 'OptionFragment.dart';
  */
 class Funnel3DMethodsObject extends OptionFragment {
   Funnel3DMethodsObject() : super();
-  String? pathType;
+  String? m_pathType;  
+
+  String get pathType { 
+    if (this.m_pathType == null) {
+      this.m_pathType = "";
+    }
+    return this.m_pathType!;
+  }
+
+  void set pathType (String v) {
+    this.m_pathType = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -40,8 +52,8 @@ class Funnel3DMethodsObject extends OptionFragment {
 
     // NOTE: skip serialization of sideParts (type Generic is ignored)} 
 
-    if (this.pathType != null) {  
-      buffer.writeAll(["\"pathType\":", this.pathType, ","], "");
+    if (this.m_pathType != null) {  
+      buffer.writeAll(["\"pathType\":", this.m_pathType, ","], "");
     }
   }
 

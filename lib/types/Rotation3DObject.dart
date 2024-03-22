@@ -23,10 +23,58 @@ import 'OptionFragment.dart';
  */
 class Rotation3DObject extends OptionFragment {
   Rotation3DObject() : super();
-  double? cosA;
-  double? cosB;
-  double? sinA;
-  double? sinB;
+  double? m_cosA;  
+
+  double get cosA { 
+    if (this.m_cosA == null) {
+      this.m_cosA = 0;
+    }
+    return this.m_cosA!;
+  }
+
+  void set cosA (double v) {
+    this.m_cosA = v;
+  }
+    
+  double? m_cosB;  
+
+  double get cosB { 
+    if (this.m_cosB == null) {
+      this.m_cosB = 0;
+    }
+    return this.m_cosB!;
+  }
+
+  void set cosB (double v) {
+    this.m_cosB = v;
+  }
+    
+  double? m_sinA;  
+
+  double get sinA { 
+    if (this.m_sinA == null) {
+      this.m_sinA = 0;
+    }
+    return this.m_sinA!;
+  }
+
+  void set sinA (double v) {
+    this.m_sinA = v;
+  }
+    
+  double? m_sinB;  
+
+  double get sinB { 
+    if (this.m_sinB == null) {
+      this.m_sinB = 0;
+    }
+    return this.m_sinB!;
+  }
+
+  void set sinB (double v) {
+    this.m_sinB = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -35,20 +83,20 @@ class Rotation3DObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.cosA != null) {  
-      buffer.writeAll(["\"cosA\":", this.cosA, ","], "");
+    if (this.m_cosA != null) {  
+      buffer.writeAll(["\"cosA\":", this.m_cosA, ","], "");
     }
 
-    if (this.cosB != null) {  
-      buffer.writeAll(["\"cosB\":", this.cosB, ","], "");
+    if (this.m_cosB != null) {  
+      buffer.writeAll(["\"cosB\":", this.m_cosB, ","], "");
     }
 
-    if (this.sinA != null) {  
-      buffer.writeAll(["\"sinA\":", this.sinA, ","], "");
+    if (this.m_sinA != null) {  
+      buffer.writeAll(["\"sinA\":", this.m_sinA, ","], "");
     }
 
-    if (this.sinB != null) {  
-      buffer.writeAll(["\"sinB\":", this.sinB, ","], "");
+    if (this.m_sinB != null) {  
+      buffer.writeAll(["\"sinB\":", this.m_sinB, ","], "");
     }
   }
 

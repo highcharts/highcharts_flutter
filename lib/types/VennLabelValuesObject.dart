@@ -24,7 +24,19 @@ import 'OptionFragment.dart';
  */
 class VennLabelValuesObject extends OptionFragment {
   VennLabelValuesObject() : super();
-  double? width;
+  double? m_width;  
+
+  double get width { 
+    if (this.m_width == null) {
+      this.m_width = 0;
+    }
+    return this.m_width!;
+  }
+
+  void set width (double v) {
+    this.m_width = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -35,8 +47,8 @@ class VennLabelValuesObject extends OptionFragment {
     
     // NOTE: skip serialization of position (type PositionObject is ignored)} 
 
-    if (this.width != null) {  
-      buffer.writeAll(["\"width\":", this.width, ","], "");
+    if (this.m_width != null) {  
+      buffer.writeAll(["\"width\":", this.m_width, ","], "");
     }
   }
 

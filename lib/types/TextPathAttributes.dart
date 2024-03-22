@@ -24,9 +24,45 @@ import 'OptionFragment.dart';
  */
 class TextPathAttributes extends SVGAttributes {
   TextPathAttributes() : super();
-  String? startOffset;
-  String? textAnchor;
-  double? dy;
+  String? m_startOffset;  
+
+  String get startOffset { 
+    if (this.m_startOffset == null) {
+      this.m_startOffset = "";
+    }
+    return this.m_startOffset!;
+  }
+
+  void set startOffset (String v) {
+    this.m_startOffset = v;
+  }
+    
+  String? m_textAnchor;  
+
+  String get textAnchor { 
+    if (this.m_textAnchor == null) {
+      this.m_textAnchor = "";
+    }
+    return this.m_textAnchor!;
+  }
+
+  void set textAnchor (String v) {
+    this.m_textAnchor = v;
+  }
+    
+  double? m_dy;  
+
+  double get dy { 
+    if (this.m_dy == null) {
+      this.m_dy = 0;
+    }
+    return this.m_dy!;
+  }
+
+  void set dy (double v) {
+    this.m_dy = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -35,16 +71,16 @@ class TextPathAttributes extends SVGAttributes {
     super.toJSONInner(buffer);
 
     
-    if (this.startOffset != null) {  
-      buffer.writeAll(["\"startOffset\":", this.startOffset, ","], "");
+    if (this.m_startOffset != null) {  
+      buffer.writeAll(["\"startOffset\":", this.m_startOffset, ","], "");
     }
 
-    if (this.textAnchor != null) {  
-      buffer.writeAll(["\"textAnchor\":", this.textAnchor, ","], "");
+    if (this.m_textAnchor != null) {  
+      buffer.writeAll(["\"textAnchor\":", this.m_textAnchor, ","], "");
     }
 
-    if (this.dy != null) {  
-      buffer.writeAll(["\"dy\":", this.dy, ","], "");
+    if (this.m_dy != null) {  
+      buffer.writeAll(["\"dy\":", this.m_dy, ","], "");
     }
   }
 

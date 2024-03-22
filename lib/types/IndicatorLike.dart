@@ -24,7 +24,19 @@ import 'OptionFragment.dart';
  */
 class IndicatorLike extends Series {
   IndicatorLike() : super();
-  bool? useCommonDataGrouping;
+  bool? m_useCommonDataGrouping;  
+
+  bool get useCommonDataGrouping { 
+    if (this.m_useCommonDataGrouping == null) {
+      this.m_useCommonDataGrouping = false;
+    }
+    return this.m_useCommonDataGrouping!;
+  }
+
+  void set useCommonDataGrouping (bool v) {
+    this.m_useCommonDataGrouping = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,8 +45,8 @@ class IndicatorLike extends Series {
     super.toJSONInner(buffer);
 
     
-    if (this.useCommonDataGrouping != null) {  
-      buffer.writeAll(["\"useCommonDataGrouping\":", this.useCommonDataGrouping, ","], "");
+    if (this.m_useCommonDataGrouping != null) {  
+      buffer.writeAll(["\"useCommonDataGrouping\":", this.m_useCommonDataGrouping, ","], "");
     }
   }
 

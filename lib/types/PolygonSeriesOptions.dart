@@ -24,10 +24,34 @@ import 'OptionFragment.dart';
  */
 class PolygonSeriesOptions extends ScatterSeriesOptions {
   PolygonSeriesOptions() : super();
-  String? fillColor;
+  String? m_fillColor;  
+
+  String get fillColor { 
+    if (this.m_fillColor == null) {
+      this.m_fillColor = "";
+    }
+    return this.m_fillColor!;
+  }
+
+  void set fillColor (String v) {
+    this.m_fillColor = v;
+  }
+    
   // NOTE: states skipped - type Generic is ignored in gen
 
-  bool? trackByArea;
+  bool? m_trackByArea;  
+
+  bool get trackByArea { 
+    if (this.m_trackByArea == null) {
+      this.m_trackByArea = false;
+    }
+    return this.m_trackByArea!;
+  }
+
+  void set trackByArea (bool v) {
+    this.m_trackByArea = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -36,14 +60,14 @@ class PolygonSeriesOptions extends ScatterSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.fillColor != null) {  
-      buffer.writeAll(["\"fillColor\":", this.fillColor, ","], "");
+    if (this.m_fillColor != null) {  
+      buffer.writeAll(["\"fillColor\":", this.m_fillColor, ","], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 
 
-    if (this.trackByArea != null) {  
-      buffer.writeAll(["\"trackByArea\":", this.trackByArea, ","], "");
+    if (this.m_trackByArea != null) {  
+      buffer.writeAll(["\"trackByArea\":", this.m_trackByArea, ","], "");
     }
   }
 

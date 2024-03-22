@@ -24,7 +24,19 @@ import 'OptionFragment.dart';
  */
 class ApproximationArray extends Array {
   ApproximationArray() : super();
-  bool? hasNulls;
+  bool? m_hasNulls;  
+
+  bool get hasNulls { 
+    if (this.m_hasNulls == null) {
+      this.m_hasNulls = false;
+    }
+    return this.m_hasNulls!;
+  }
+
+  void set hasNulls (bool v) {
+    this.m_hasNulls = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,8 +45,8 @@ class ApproximationArray extends Array {
     super.toJSONInner(buffer);
 
     
-    if (this.hasNulls != null) {  
-      buffer.writeAll(["\"hasNulls\":", this.hasNulls, ","], "");
+    if (this.m_hasNulls != null) {  
+      buffer.writeAll(["\"hasNulls\":", this.m_hasNulls, ","], "");
     }
   }
 

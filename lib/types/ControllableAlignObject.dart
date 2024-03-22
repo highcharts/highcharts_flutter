@@ -24,8 +24,32 @@ import 'OptionFragment.dart';
  */
 class ControllableAlignObject extends AlignObject {
   ControllableAlignObject() : super();
-  double? height;
-  double? width;
+  double? m_height;  
+
+  double get height { 
+    if (this.m_height == null) {
+      this.m_height = 0;
+    }
+    return this.m_height!;
+  }
+
+  void set height (double v) {
+    this.m_height = v;
+  }
+    
+  double? m_width;  
+
+  double get width { 
+    if (this.m_width == null) {
+      this.m_width = 0;
+    }
+    return this.m_width!;
+  }
+
+  void set width (double v) {
+    this.m_width = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -34,12 +58,12 @@ class ControllableAlignObject extends AlignObject {
     super.toJSONInner(buffer);
 
     
-    if (this.height != null) {  
-      buffer.writeAll(["\"height\":", this.height, ","], "");
+    if (this.m_height != null) {  
+      buffer.writeAll(["\"height\":", this.m_height, ","], "");
     }
 
-    if (this.width != null) {  
-      buffer.writeAll(["\"width\":", this.width, ","], "");
+    if (this.m_width != null) {  
+      buffer.writeAll(["\"width\":", this.m_width, ","], "");
     }
   }
 

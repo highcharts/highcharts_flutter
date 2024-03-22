@@ -23,9 +23,45 @@ import 'OptionFragment.dart';
  */
 class RangeSelectorPositionOptions extends OptionFragment {
   RangeSelectorPositionOptions() : super();
-  String? align;
-  double? x;
-  double? y;
+  String? m_align;  
+
+  String get align { 
+    if (this.m_align == null) {
+      this.m_align = "";
+    }
+    return this.m_align!;
+  }
+
+  void set align (String v) {
+    this.m_align = v;
+  }
+    
+  double? m_x;  
+
+  double get x { 
+    if (this.m_x == null) {
+      this.m_x = 0;
+    }
+    return this.m_x!;
+  }
+
+  void set x (double v) {
+    this.m_x = v;
+  }
+    
+  double? m_y;  
+
+  double get y { 
+    if (this.m_y == null) {
+      this.m_y = 0;
+    }
+    return this.m_y!;
+  }
+
+  void set y (double v) {
+    this.m_y = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -34,16 +70,16 @@ class RangeSelectorPositionOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.align != null) {  
-      buffer.writeAll(["\"align\":", this.align, ","], "");
+    if (this.m_align != null) {  
+      buffer.writeAll(["\"align\":", this.m_align, ","], "");
     }
 
-    if (this.x != null) {  
-      buffer.writeAll(["\"x\":", this.x, ","], "");
+    if (this.m_x != null) {  
+      buffer.writeAll(["\"x\":", this.m_x, ","], "");
     }
 
-    if (this.y != null) {  
-      buffer.writeAll(["\"y\":", this.y, ","], "");
+    if (this.m_y != null) {  
+      buffer.writeAll(["\"y\":", this.m_y, ","], "");
     }
   }
 

@@ -36,7 +36,19 @@ class OBVOptions extends SMAOptions {
    * In styled mode, the markers can be styled with the `.highcharts-point`,
    * `.highcharts-point-hover` and `.highcharts-point-select` class names.  
       */
-  PointMarkerOptions? marker;
+  PointMarkerOptions? m_marker;  
+
+  PointMarkerOptions get marker { 
+    if (this.m_marker == null) {
+      this.m_marker = PointMarkerOptions();
+    }
+    return this.m_marker!;
+  }
+
+  void set marker (PointMarkerOptions v) {
+    this.m_marker = v;
+  }
+    
   /**
    * Paramters used in calculation of regression series' points.  
       */
@@ -50,12 +62,12 @@ class OBVOptions extends SMAOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.marker != null) {  
-      buffer.writeAll(["\"marker\":", this.marker?.toJSON(), ","], "");
+    if (this.m_marker != null) {  
+      buffer.writeAll(["\"marker\":", this.m_marker?.toJSON(), ","], "");
     }
 
-    if (this.params != null) {  
-      buffer.writeAll(["\"params\":", this.params?.toJSON(), ","], "");
+    if (this.m_params != null) {  
+      buffer.writeAll(["\"params\":", this.m_params?.toJSON(), ","], "");
     }
   }
 

@@ -23,10 +23,58 @@ import 'OptionFragment.dart';
  */
 class LayoutModifiers extends OptionFragment {
   LayoutModifiers() : super();
-  double? ax;
-  double? bx;
-  double? ay;
-  double? by;
+  double? m_ax;  
+
+  double get ax { 
+    if (this.m_ax == null) {
+      this.m_ax = 0;
+    }
+    return this.m_ax!;
+  }
+
+  void set ax (double v) {
+    this.m_ax = v;
+  }
+    
+  double? m_bx;  
+
+  double get bx { 
+    if (this.m_bx == null) {
+      this.m_bx = 0;
+    }
+    return this.m_bx!;
+  }
+
+  void set bx (double v) {
+    this.m_bx = v;
+  }
+    
+  double? m_ay;  
+
+  double get ay { 
+    if (this.m_ay == null) {
+      this.m_ay = 0;
+    }
+    return this.m_ay!;
+  }
+
+  void set ay (double v) {
+    this.m_ay = v;
+  }
+    
+  double? m_by;  
+
+  double get by { 
+    if (this.m_by == null) {
+      this.m_by = 0;
+    }
+    return this.m_by!;
+  }
+
+  void set by (double v) {
+    this.m_by = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -35,20 +83,20 @@ class LayoutModifiers extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.ax != null) {  
-      buffer.writeAll(["\"ax\":", this.ax, ","], "");
+    if (this.m_ax != null) {  
+      buffer.writeAll(["\"ax\":", this.m_ax, ","], "");
     }
 
-    if (this.bx != null) {  
-      buffer.writeAll(["\"bx\":", this.bx, ","], "");
+    if (this.m_bx != null) {  
+      buffer.writeAll(["\"bx\":", this.m_bx, ","], "");
     }
 
-    if (this.ay != null) {  
-      buffer.writeAll(["\"ay\":", this.ay, ","], "");
+    if (this.m_ay != null) {  
+      buffer.writeAll(["\"ay\":", this.m_ay, ","], "");
     }
 
-    if (this.by != null) {  
-      buffer.writeAll(["\"by\":", this.by, ","], "");
+    if (this.m_by != null) {  
+      buffer.writeAll(["\"by\":", this.m_by, ","], "");
     }
   }
 

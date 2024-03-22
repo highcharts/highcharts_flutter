@@ -24,7 +24,19 @@ import 'OptionFragment.dart';
  */
 class MACDZonesObject extends OptionFragment {
   MACDZonesObject() : super();
-  double? startIndex;
+  double? m_startIndex;  
+
+  double get startIndex { 
+    if (this.m_startIndex == null) {
+      this.m_startIndex = 0;
+    }
+    return this.m_startIndex!;
+  }
+
+  void set startIndex (double v) {
+    this.m_startIndex = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,8 +45,8 @@ class MACDZonesObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.startIndex != null) {  
-      buffer.writeAll(["\"startIndex\":", this.startIndex, ","], "");
+    if (this.m_startIndex != null) {  
+      buffer.writeAll(["\"startIndex\":", this.m_startIndex, ","], "");
     }
 
     // NOTE: skip serialization of zones (type ZoneObject is ignored)} 

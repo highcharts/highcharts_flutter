@@ -23,9 +23,45 @@ import 'OptionFragment.dart';
  */
 class ExportDataLangOptions extends OptionFragment {
   ExportDataLangOptions() : super();
-  String? annotationHeader;
-  String? categoryHeader;
-  String? categoryDatetimeHeader;
+  String? m_annotationHeader;  
+
+  String get annotationHeader { 
+    if (this.m_annotationHeader == null) {
+      this.m_annotationHeader = "";
+    }
+    return this.m_annotationHeader!;
+  }
+
+  void set annotationHeader (String v) {
+    this.m_annotationHeader = v;
+  }
+    
+  String? m_categoryHeader;  
+
+  String get categoryHeader { 
+    if (this.m_categoryHeader == null) {
+      this.m_categoryHeader = "";
+    }
+    return this.m_categoryHeader!;
+  }
+
+  void set categoryHeader (String v) {
+    this.m_categoryHeader = v;
+  }
+    
+  String? m_categoryDatetimeHeader;  
+
+  String get categoryDatetimeHeader { 
+    if (this.m_categoryDatetimeHeader == null) {
+      this.m_categoryDatetimeHeader = "";
+    }
+    return this.m_categoryDatetimeHeader!;
+  }
+
+  void set categoryDatetimeHeader (String v) {
+    this.m_categoryDatetimeHeader = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -34,16 +70,16 @@ class ExportDataLangOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.annotationHeader != null) {  
-      buffer.writeAll(["\"annotationHeader\":", this.annotationHeader, ","], "");
+    if (this.m_annotationHeader != null) {  
+      buffer.writeAll(["\"annotationHeader\":", this.m_annotationHeader, ","], "");
     }
 
-    if (this.categoryHeader != null) {  
-      buffer.writeAll(["\"categoryHeader\":", this.categoryHeader, ","], "");
+    if (this.m_categoryHeader != null) {  
+      buffer.writeAll(["\"categoryHeader\":", this.m_categoryHeader, ","], "");
     }
 
-    if (this.categoryDatetimeHeader != null) {  
-      buffer.writeAll(["\"categoryDatetimeHeader\":", this.categoryDatetimeHeader, ","], "");
+    if (this.m_categoryDatetimeHeader != null) {  
+      buffer.writeAll(["\"categoryDatetimeHeader\":", this.m_categoryDatetimeHeader, ","], "");
     }
   }
 

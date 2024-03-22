@@ -23,10 +23,58 @@ import 'OptionFragment.dart';
  */
 class ColumnMetricsObject extends OptionFragment {
   ColumnMetricsObject() : super();
-  double? offset;
-  double? width;
-  double? paddedWidth;
-  double? columnCount;
+  double? m_offset;  
+
+  double get offset { 
+    if (this.m_offset == null) {
+      this.m_offset = 0;
+    }
+    return this.m_offset!;
+  }
+
+  void set offset (double v) {
+    this.m_offset = v;
+  }
+    
+  double? m_width;  
+
+  double get width { 
+    if (this.m_width == null) {
+      this.m_width = 0;
+    }
+    return this.m_width!;
+  }
+
+  void set width (double v) {
+    this.m_width = v;
+  }
+    
+  double? m_paddedWidth;  
+
+  double get paddedWidth { 
+    if (this.m_paddedWidth == null) {
+      this.m_paddedWidth = 0;
+    }
+    return this.m_paddedWidth!;
+  }
+
+  void set paddedWidth (double v) {
+    this.m_paddedWidth = v;
+  }
+    
+  double? m_columnCount;  
+
+  double get columnCount { 
+    if (this.m_columnCount == null) {
+      this.m_columnCount = 0;
+    }
+    return this.m_columnCount!;
+  }
+
+  void set columnCount (double v) {
+    this.m_columnCount = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -35,20 +83,20 @@ class ColumnMetricsObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.offset != null) {  
-      buffer.writeAll(["\"offset\":", this.offset, ","], "");
+    if (this.m_offset != null) {  
+      buffer.writeAll(["\"offset\":", this.m_offset, ","], "");
     }
 
-    if (this.width != null) {  
-      buffer.writeAll(["\"width\":", this.width, ","], "");
+    if (this.m_width != null) {  
+      buffer.writeAll(["\"width\":", this.m_width, ","], "");
     }
 
-    if (this.paddedWidth != null) {  
-      buffer.writeAll(["\"paddedWidth\":", this.paddedWidth, ","], "");
+    if (this.m_paddedWidth != null) {  
+      buffer.writeAll(["\"paddedWidth\":", this.m_paddedWidth, ","], "");
     }
 
-    if (this.columnCount != null) {  
-      buffer.writeAll(["\"columnCount\":", this.columnCount, ","], "");
+    if (this.m_columnCount != null) {  
+      buffer.writeAll(["\"columnCount\":", this.m_columnCount, ","], "");
     }
   }
 

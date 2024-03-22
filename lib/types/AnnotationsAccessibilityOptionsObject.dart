@@ -23,7 +23,19 @@ import 'OptionFragment.dart';
  */
 class AnnotationsAccessibilityOptionsObject extends OptionFragment {
   AnnotationsAccessibilityOptionsObject() : super();
-  String? description;
+  String? m_description;  
+
+  String get description { 
+    if (this.m_description == null) {
+      this.m_description = "";
+    }
+    return this.m_description!;
+  }
+
+  void set description (String v) {
+    this.m_description = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -32,8 +44,8 @@ class AnnotationsAccessibilityOptionsObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.description != null) {  
-      buffer.writeAll(["\"description\":", this.description, ","], "");
+    if (this.m_description != null) {  
+      buffer.writeAll(["\"description\":", this.m_description, ","], "");
     }
   }
 

@@ -23,8 +23,32 @@ import 'OptionFragment.dart';
  */
 class MarkerOptions extends OptionFragment {
   MarkerOptions() : super();
-  String? color;
-  double? width;
+  String? m_color;  
+
+  String get color { 
+    if (this.m_color == null) {
+      this.m_color = "";
+    }
+    return this.m_color!;
+  }
+
+  void set color (String v) {
+    this.m_color = v;
+  }
+    
+  double? m_width;  
+
+  double get width { 
+    if (this.m_width == null) {
+      this.m_width = 0;
+    }
+    return this.m_width!;
+  }
+
+  void set width (double v) {
+    this.m_width = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -35,12 +59,12 @@ class MarkerOptions extends OptionFragment {
     
     // NOTE: skip serialization of animation (type Generic is ignored)} 
 
-    if (this.color != null) {  
-      buffer.writeAll(["\"color\":", this.color, ","], "");
+    if (this.m_color != null) {  
+      buffer.writeAll(["\"color\":", this.m_color, ","], "");
     }
 
-    if (this.width != null) {  
-      buffer.writeAll(["\"width\":", this.width, ","], "");
+    if (this.m_width != null) {  
+      buffer.writeAll(["\"width\":", this.m_width, ","], "");
     }
   }
 

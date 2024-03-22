@@ -24,7 +24,19 @@ import 'OptionFragment.dart';
  */
 class GanttConnectorStartMarkerOptions extends ConnectorsStartMarkerOptions {
   GanttConnectorStartMarkerOptions() : super();
-  String? fill;
+  String? m_fill;  
+
+  String get fill { 
+    if (this.m_fill == null) {
+      this.m_fill = "";
+    }
+    return this.m_fill!;
+  }
+
+  void set fill (String v) {
+    this.m_fill = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,8 +45,8 @@ class GanttConnectorStartMarkerOptions extends ConnectorsStartMarkerOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.fill != null) {  
-      buffer.writeAll(["\"fill\":", this.fill, ","], "");
+    if (this.m_fill != null) {  
+      buffer.writeAll(["\"fill\":", this.m_fill, ","], "");
     }
   }
 

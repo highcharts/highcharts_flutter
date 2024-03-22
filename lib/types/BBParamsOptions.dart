@@ -24,7 +24,19 @@ import 'OptionFragment.dart';
  */
 class BBParamsOptions extends SMAParamsOptions {
   BBParamsOptions() : super();
-  double? standardDeviation;
+  double? m_standardDeviation;  
+
+  double get standardDeviation { 
+    if (this.m_standardDeviation == null) {
+      this.m_standardDeviation = 0;
+    }
+    return this.m_standardDeviation!;
+  }
+
+  void set standardDeviation (double v) {
+    this.m_standardDeviation = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,8 +45,8 @@ class BBParamsOptions extends SMAParamsOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.standardDeviation != null) {  
-      buffer.writeAll(["\"standardDeviation\":", this.standardDeviation, ","], "");
+    if (this.m_standardDeviation != null) {  
+      buffer.writeAll(["\"standardDeviation\":", this.m_standardDeviation, ","], "");
     }
   }
 

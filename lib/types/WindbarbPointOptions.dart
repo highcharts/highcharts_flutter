@@ -24,8 +24,32 @@ import 'OptionFragment.dart';
  */
 class WindbarbPointOptions extends ColumnPointOptions {
   WindbarbPointOptions() : super();
-  double? direction;
-  double? value;
+  double? m_direction;  
+
+  double get direction { 
+    if (this.m_direction == null) {
+      this.m_direction = 0;
+    }
+    return this.m_direction!;
+  }
+
+  void set direction (double v) {
+    this.m_direction = v;
+  }
+    
+  double? m_value;  
+
+  double get value { 
+    if (this.m_value == null) {
+      this.m_value = 0;
+    }
+    return this.m_value!;
+  }
+
+  void set value (double v) {
+    this.m_value = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -34,12 +58,12 @@ class WindbarbPointOptions extends ColumnPointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.direction != null) {  
-      buffer.writeAll(["\"direction\":", this.direction, ","], "");
+    if (this.m_direction != null) {  
+      buffer.writeAll(["\"direction\":", this.m_direction, ","], "");
     }
 
-    if (this.value != null) {  
-      buffer.writeAll(["\"value\":", this.value, ","], "");
+    if (this.m_value != null) {  
+      buffer.writeAll(["\"value\":", this.m_value, ","], "");
     }
   }
 

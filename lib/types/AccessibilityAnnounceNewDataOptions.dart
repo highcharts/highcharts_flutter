@@ -23,9 +23,45 @@ import 'OptionFragment.dart';
  */
 class AccessibilityAnnounceNewDataOptions extends OptionFragment {
   AccessibilityAnnounceNewDataOptions() : super();
-  bool? enabled;
-  bool? interruptUser;
-  double? minAnnounceInterval;
+  bool? m_enabled;  
+
+  bool get enabled { 
+    if (this.m_enabled == null) {
+      this.m_enabled = false;
+    }
+    return this.m_enabled!;
+  }
+
+  void set enabled (bool v) {
+    this.m_enabled = v;
+  }
+    
+  bool? m_interruptUser;  
+
+  bool get interruptUser { 
+    if (this.m_interruptUser == null) {
+      this.m_interruptUser = false;
+    }
+    return this.m_interruptUser!;
+  }
+
+  void set interruptUser (bool v) {
+    this.m_interruptUser = v;
+  }
+    
+  double? m_minAnnounceInterval;  
+
+  double get minAnnounceInterval { 
+    if (this.m_minAnnounceInterval == null) {
+      this.m_minAnnounceInterval = 0;
+    }
+    return this.m_minAnnounceInterval!;
+  }
+
+  void set minAnnounceInterval (double v) {
+    this.m_minAnnounceInterval = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -34,16 +70,16 @@ class AccessibilityAnnounceNewDataOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
+    if (this.m_enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this.m_enabled, ","], "");
     }
 
-    if (this.interruptUser != null) {  
-      buffer.writeAll(["\"interruptUser\":", this.interruptUser, ","], "");
+    if (this.m_interruptUser != null) {  
+      buffer.writeAll(["\"interruptUser\":", this.m_interruptUser, ","], "");
     }
 
-    if (this.minAnnounceInterval != null) {  
-      buffer.writeAll(["\"minAnnounceInterval\":", this.minAnnounceInterval, ","], "");
+    if (this.m_minAnnounceInterval != null) {  
+      buffer.writeAll(["\"minAnnounceInterval\":", this.m_minAnnounceInterval, ","], "");
     }
   }
 

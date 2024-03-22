@@ -36,7 +36,19 @@ class ErrorBarSeriesOptions extends BoxPlotSeriesOptions {
    * 
    * Defaults to '2'. 
       */
-  double? whiskerWidth;
+  double? m_whiskerWidth;  
+
+  double get whiskerWidth { 
+    if (this.m_whiskerWidth == null) {
+      this.m_whiskerWidth = 0;
+    }
+    return this.m_whiskerWidth!;
+  }
+
+  void set whiskerWidth (double v) {
+    this.m_whiskerWidth = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -47,8 +59,8 @@ class ErrorBarSeriesOptions extends BoxPlotSeriesOptions {
     
     // NOTE: skip serialization of states (type Generic is ignored)} 
 
-    if (this.whiskerWidth != null) {  
-      buffer.writeAll(["\"whiskerWidth\":", this.whiskerWidth, ","], "");
+    if (this.m_whiskerWidth != null) {  
+      buffer.writeAll(["\"whiskerWidth\":", this.m_whiskerWidth, ","], "");
     }
   }
 

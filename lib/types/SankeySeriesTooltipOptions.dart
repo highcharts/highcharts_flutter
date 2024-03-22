@@ -23,7 +23,19 @@ import 'OptionFragment.dart';
  */
 class SankeySeriesTooltipOptions extends OptionFragment {
   SankeySeriesTooltipOptions() : super();
-  String? nodeFormat;
+  String? m_nodeFormat;  
+
+  String get nodeFormat { 
+    if (this.m_nodeFormat == null) {
+      this.m_nodeFormat = "";
+    }
+    return this.m_nodeFormat!;
+  }
+
+  void set nodeFormat (String v) {
+    this.m_nodeFormat = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -32,8 +44,8 @@ class SankeySeriesTooltipOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.nodeFormat != null) {  
-      buffer.writeAll(["\"nodeFormat\":", this.nodeFormat, ","], "");
+    if (this.m_nodeFormat != null) {  
+      buffer.writeAll(["\"nodeFormat\":", this.m_nodeFormat, ","], "");
     }
   }
 

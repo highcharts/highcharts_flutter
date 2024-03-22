@@ -23,11 +23,59 @@ import 'OptionFragment.dart';
  */
 class DateTimeLabelFormatObject extends OptionFragment {
   DateTimeLabelFormatObject() : super();
-  String? from;
+  String? m_from;  
+
+  String get from { 
+    if (this.m_from == null) {
+      this.m_from = "";
+    }
+    return this.m_from!;
+  }
+
+  void set from (String v) {
+    this.m_from = v;
+  }
+    
   List<String>? list;
-  String? main;
-  bool? range;
-  String? to;
+  String? m_main;  
+
+  String get main { 
+    if (this.m_main == null) {
+      this.m_main = "";
+    }
+    return this.m_main!;
+  }
+
+  void set main (String v) {
+    this.m_main = v;
+  }
+    
+  bool? m_range;  
+
+  bool get range { 
+    if (this.m_range == null) {
+      this.m_range = false;
+    }
+    return this.m_range!;
+  }
+
+  void set range (bool v) {
+    this.m_range = v;
+  }
+    
+  String? m_to;  
+
+  String get to { 
+    if (this.m_to == null) {
+      this.m_to = "";
+    }
+    return this.m_to!;
+  }
+
+  void set to (String v) {
+    this.m_to = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -36,24 +84,22 @@ class DateTimeLabelFormatObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.from != null) {  
-      buffer.writeAll(["\"from\":", this.from, ","], "");
+    if (this.m_from != null) {  
+      buffer.writeAll(["\"from\":", this.m_from, ","], "");
     }
 
-    if (this.list != null) {  
-    // Skipped array list
+    // NOTE: skip serialization of list (type string is ignored)} 
+
+    if (this.m_main != null) {  
+      buffer.writeAll(["\"main\":", this.m_main, ","], "");
     }
 
-    if (this.main != null) {  
-      buffer.writeAll(["\"main\":", this.main, ","], "");
+    if (this.m_range != null) {  
+      buffer.writeAll(["\"range\":", this.m_range, ","], "");
     }
 
-    if (this.range != null) {  
-      buffer.writeAll(["\"range\":", this.range, ","], "");
-    }
-
-    if (this.to != null) {  
-      buffer.writeAll(["\"to\":", this.to, ","], "");
+    if (this.m_to != null) {  
+      buffer.writeAll(["\"to\":", this.m_to, ","], "");
     }
   }
 

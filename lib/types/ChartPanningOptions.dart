@@ -23,8 +23,32 @@ import 'OptionFragment.dart';
  */
 class ChartPanningOptions extends OptionFragment {
   ChartPanningOptions() : super();
-  String? type;
-  bool? enabled;
+  String? m_type;  
+
+  String get type { 
+    if (this.m_type == null) {
+      this.m_type = "";
+    }
+    return this.m_type!;
+  }
+
+  void set type (String v) {
+    this.m_type = v;
+  }
+    
+  bool? m_enabled;  
+
+  bool get enabled { 
+    if (this.m_enabled == null) {
+      this.m_enabled = false;
+    }
+    return this.m_enabled!;
+  }
+
+  void set enabled (bool v) {
+    this.m_enabled = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,12 +57,12 @@ class ChartPanningOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.type != null) {  
-      buffer.writeAll(["\"type\":", this.type, ","], "");
+    if (this.m_type != null) {  
+      buffer.writeAll(["\"type\":", this.m_type, ","], "");
     }
 
-    if (this.enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
+    if (this.m_enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this.m_enabled, ","], "");
     }
   }
 

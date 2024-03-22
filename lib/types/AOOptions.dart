@@ -31,8 +31,32 @@ class AOOptions extends SMAOptions {
    * 
    * Defaults to '#06b535'. 
       */
-  String? greaterBarColor;
-  double? groupPadding;
+  String? m_greaterBarColor;  
+
+  String get greaterBarColor { 
+    if (this.m_greaterBarColor == null) {
+      this.m_greaterBarColor = "";
+    }
+    return this.m_greaterBarColor!;
+  }
+
+  void set greaterBarColor (String v) {
+    this.m_greaterBarColor = v;
+  }
+    
+  double? m_groupPadding;  
+
+  double get groupPadding { 
+    if (this.m_groupPadding == null) {
+      this.m_groupPadding = 0;
+    }
+    return this.m_groupPadding!;
+  }
+
+  void set groupPadding (double v) {
+    this.m_groupPadding = v;
+  }
+    
   /**
    * Color of the Awesome oscillator series bar that is lower than the
    * previous one. Note that if a `color` is defined, the `color`
@@ -40,8 +64,32 @@ class AOOptions extends SMAOptions {
    * 
    * Defaults to '#f21313'. 
       */
-  String? lowerBarColor;
-  double? pointPadding;
+  String? m_lowerBarColor;  
+
+  String get lowerBarColor { 
+    if (this.m_lowerBarColor == null) {
+      this.m_lowerBarColor = "";
+    }
+    return this.m_lowerBarColor!;
+  }
+
+  void set lowerBarColor (String v) {
+    this.m_lowerBarColor = v;
+  }
+    
+  double? m_pointPadding;  
+
+  double get pointPadding { 
+    if (this.m_pointPadding == null) {
+      this.m_pointPadding = 0;
+    }
+    return this.m_pointPadding!;
+  }
+
+  void set pointPadding (double v) {
+    this.m_pointPadding = v;
+  }
+    
   // NOTE: states skipped - type Generic is ignored in gen
 
   /**
@@ -51,7 +99,19 @@ class AOOptions extends SMAOptions {
    * 
    * Defaults to '0'. 
       */
-  double? threshold;
+  double? m_threshold;  
+
+  double get threshold { 
+    if (this.m_threshold == null) {
+      this.m_threshold = 0;
+    }
+    return this.m_threshold!;
+  }
+
+  void set threshold (double v) {
+    this.m_threshold = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -60,26 +120,26 @@ class AOOptions extends SMAOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.greaterBarColor != null) {  
-      buffer.writeAll(["\"greaterBarColor\":", this.greaterBarColor, ","], "");
+    if (this.m_greaterBarColor != null) {  
+      buffer.writeAll(["\"greaterBarColor\":", this.m_greaterBarColor, ","], "");
     }
 
-    if (this.groupPadding != null) {  
-      buffer.writeAll(["\"groupPadding\":", this.groupPadding, ","], "");
+    if (this.m_groupPadding != null) {  
+      buffer.writeAll(["\"groupPadding\":", this.m_groupPadding, ","], "");
     }
 
-    if (this.lowerBarColor != null) {  
-      buffer.writeAll(["\"lowerBarColor\":", this.lowerBarColor, ","], "");
+    if (this.m_lowerBarColor != null) {  
+      buffer.writeAll(["\"lowerBarColor\":", this.m_lowerBarColor, ","], "");
     }
 
-    if (this.pointPadding != null) {  
-      buffer.writeAll(["\"pointPadding\":", this.pointPadding, ","], "");
+    if (this.m_pointPadding != null) {  
+      buffer.writeAll(["\"pointPadding\":", this.m_pointPadding, ","], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 
 
-    if (this.threshold != null) {  
-      buffer.writeAll(["\"threshold\":", this.threshold, ","], "");
+    if (this.m_threshold != null) {  
+      buffer.writeAll(["\"threshold\":", this.m_threshold, ","], "");
     }
   }
 

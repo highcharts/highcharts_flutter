@@ -24,8 +24,32 @@ import 'OptionFragment.dart';
  */
 class GeometryObject extends PositionObject {
   GeometryObject() : super();
-  double? angle;
-  double? r;
+  double? m_angle;  
+
+  double get angle { 
+    if (this.m_angle == null) {
+      this.m_angle = 0;
+    }
+    return this.m_angle!;
+  }
+
+  void set angle (double v) {
+    this.m_angle = v;
+  }
+    
+  double? m_r;  
+
+  double get r { 
+    if (this.m_r == null) {
+      this.m_r = 0;
+    }
+    return this.m_r!;
+  }
+
+  void set r (double v) {
+    this.m_r = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -34,16 +58,16 @@ class GeometryObject extends PositionObject {
     super.toJSONInner(buffer);
 
     
-    if (this.angle != null) {  
-      buffer.writeAll(["\"angle\":", this.angle, ","], "");
+    if (this.m_angle != null) {  
+      buffer.writeAll(["\"angle\":", this.m_angle, ","], "");
     }
 
-    if (this.r != null) {  
-      buffer.writeAll(["\"r\":", this.r, ","], "");
+    if (this.m_r != null) {  
+      buffer.writeAll(["\"r\":", this.m_r, ","], "");
     }
 
-    if (this.angle != null) {  
-      buffer.writeAll(["\"angle\":", this.angle, ","], "");
+    if (this.m_angle != null) {  
+      buffer.writeAll(["\"angle\":", this.m_angle, ","], "");
     }
   }
 

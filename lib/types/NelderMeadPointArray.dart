@@ -24,7 +24,19 @@ import 'OptionFragment.dart';
  */
 class NelderMeadPointArray extends Array {
   NelderMeadPointArray() : super();
-  double? fx;
+  double? m_fx;  
+
+  double get fx { 
+    if (this.m_fx == null) {
+      this.m_fx = 0;
+    }
+    return this.m_fx!;
+  }
+
+  void set fx (double v) {
+    this.m_fx = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,8 +45,8 @@ class NelderMeadPointArray extends Array {
     super.toJSONInner(buffer);
 
     
-    if (this.fx != null) {  
-      buffer.writeAll(["\"fx\":", this.fx, ","], "");
+    if (this.m_fx != null) {  
+      buffer.writeAll(["\"fx\":", this.m_fx, ","], "");
     }
   }
 

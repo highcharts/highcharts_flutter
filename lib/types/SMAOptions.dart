@@ -29,11 +29,35 @@ class SMAOptions extends LineSeriesOptions {
    * Whether to compare indicator to the main series values
    * or indicator values.  
       */
-  bool? compareToMain;
+  bool? m_compareToMain;  
+
+  bool get compareToMain { 
+    if (this.m_compareToMain == null) {
+      this.m_compareToMain = false;
+    }
+    return this.m_compareToMain!;
+  }
+
+  void set compareToMain (bool v) {
+    this.m_compareToMain = v;
+  }
+    
   /**
    * Paramters used in calculation of regression series' points.  
       */
-  SMAParamsOptions? params;
+  SMAParamsOptions? m_params;  
+
+  SMAParamsOptions get params { 
+    if (this.m_params == null) {
+      this.m_params = SMAParamsOptions();
+    }
+    return this.m_params!;
+  }
+
+  void set params (SMAParamsOptions v) {
+    this.m_params = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -42,14 +66,14 @@ class SMAOptions extends LineSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.compareToMain != null) {  
-      buffer.writeAll(["\"compareToMain\":", this.compareToMain, ","], "");
+    if (this.m_compareToMain != null) {  
+      buffer.writeAll(["\"compareToMain\":", this.m_compareToMain, ","], "");
     }
 
     // NOTE: skip serialization of data (type number[][] is ignored)} 
 
-    if (this.params != null) {  
-      buffer.writeAll(["\"params\":", this.params?.toJSON(), ","], "");
+    if (this.m_params != null) {  
+      buffer.writeAll(["\"params\":", this.m_params?.toJSON(), ","], "");
     }
   }
 

@@ -23,10 +23,58 @@ import 'OptionFragment.dart';
  */
 class GridAxisOptions extends OptionFragment {
   GridAxisOptions() : super();
-  String? borderColor;
-  double? borderWidth;
-  double? cellHeight;
-  bool? enabled;
+  String? m_borderColor;  
+
+  String get borderColor { 
+    if (this.m_borderColor == null) {
+      this.m_borderColor = "";
+    }
+    return this.m_borderColor!;
+  }
+
+  void set borderColor (String v) {
+    this.m_borderColor = v;
+  }
+    
+  double? m_borderWidth;  
+
+  double get borderWidth { 
+    if (this.m_borderWidth == null) {
+      this.m_borderWidth = 0;
+    }
+    return this.m_borderWidth!;
+  }
+
+  void set borderWidth (double v) {
+    this.m_borderWidth = v;
+  }
+    
+  double? m_cellHeight;  
+
+  double get cellHeight { 
+    if (this.m_cellHeight == null) {
+      this.m_cellHeight = 0;
+    }
+    return this.m_cellHeight!;
+  }
+
+  void set cellHeight (double v) {
+    this.m_cellHeight = v;
+  }
+    
+  bool? m_enabled;  
+
+  bool get enabled { 
+    if (this.m_enabled == null) {
+      this.m_enabled = false;
+    }
+    return this.m_enabled!;
+  }
+
+  void set enabled (bool v) {
+    this.m_enabled = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -35,22 +83,22 @@ class GridAxisOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.borderColor != null) {  
-      buffer.writeAll(["\"borderColor\":", this.borderColor, ","], "");
+    if (this.m_borderColor != null) {  
+      buffer.writeAll(["\"borderColor\":", this.m_borderColor, ","], "");
     }
 
-    if (this.borderWidth != null) {  
-      buffer.writeAll(["\"borderWidth\":", this.borderWidth, ","], "");
+    if (this.m_borderWidth != null) {  
+      buffer.writeAll(["\"borderWidth\":", this.m_borderWidth, ","], "");
     }
 
-    if (this.cellHeight != null) {  
-      buffer.writeAll(["\"cellHeight\":", this.cellHeight, ","], "");
+    if (this.m_cellHeight != null) {  
+      buffer.writeAll(["\"cellHeight\":", this.m_cellHeight, ","], "");
     }
 
     // NOTE: skip serialization of columns (type AxisOptions[] is ignored)} 
 
-    if (this.enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
+    if (this.m_enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this.m_enabled, ","], "");
     }
   }
 

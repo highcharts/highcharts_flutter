@@ -24,9 +24,45 @@ import 'OptionFragment.dart';
  */
 class SolidGaugeAxis extends ColorAxisLike {
   SolidGaugeAxis() : super();
-  String? coll;
-  double? max;
-  double? min;
+  String? m_coll;  
+
+  String get coll { 
+    if (this.m_coll == null) {
+      this.m_coll = "";
+    }
+    return this.m_coll!;
+  }
+
+  void set coll (String v) {
+    this.m_coll = v;
+  }
+    
+  double? m_max;  
+
+  double get max { 
+    if (this.m_max == null) {
+      this.m_max = 0;
+    }
+    return this.m_max!;
+  }
+
+  void set max (double v) {
+    this.m_max = v;
+  }
+    
+  double? m_min;  
+
+  double get min { 
+    if (this.m_min == null) {
+      this.m_min = 0;
+    }
+    return this.m_min!;
+  }
+
+  void set min (double v) {
+    this.m_min = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -37,16 +73,16 @@ class SolidGaugeAxis extends ColorAxisLike {
     
     // NOTE: skip serialization of center (type number[] is ignored)} 
 
-    if (this.coll != null) {  
-      buffer.writeAll(["\"coll\":", this.coll, ","], "");
+    if (this.m_coll != null) {  
+      buffer.writeAll(["\"coll\":", this.m_coll, ","], "");
     }
 
-    if (this.max != null) {  
-      buffer.writeAll(["\"max\":", this.max, ","], "");
+    if (this.m_max != null) {  
+      buffer.writeAll(["\"max\":", this.m_max, ","], "");
     }
 
-    if (this.min != null) {  
-      buffer.writeAll(["\"min\":", this.min, ","], "");
+    if (this.m_min != null) {  
+      buffer.writeAll(["\"min\":", this.m_min, ","], "");
     }
 
     // NOTE: skip serialization of options (type ColorAxisLike.Options & RadialAxis.Options is ignored)} 

@@ -23,8 +23,32 @@ import 'OptionFragment.dart';
  */
 class ParametersObject extends OptionFragment {
   ParametersObject() : super();
-  String? category;
-  double? tickmarkOffset;
+  String? m_category;  
+
+  String get category { 
+    if (this.m_category == null) {
+      this.m_category = "";
+    }
+    return this.m_category!;
+  }
+
+  void set category (String v) {
+    this.m_category = v;
+  }
+    
+  double? m_tickmarkOffset;  
+
+  double get tickmarkOffset { 
+    if (this.m_tickmarkOffset == null) {
+      this.m_tickmarkOffset = 0;
+    }
+    return this.m_tickmarkOffset!;
+  }
+
+  void set tickmarkOffset (double v) {
+    this.m_tickmarkOffset = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,14 +57,14 @@ class ParametersObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.category != null) {  
-      buffer.writeAll(["\"category\":", this.category, ","], "");
+    if (this.m_category != null) {  
+      buffer.writeAll(["\"category\":", this.m_category, ","], "");
     }
 
     // NOTE: skip serialization of options (type AnyRecord is ignored)} 
 
-    if (this.tickmarkOffset != null) {  
-      buffer.writeAll(["\"tickmarkOffset\":", this.tickmarkOffset, ","], "");
+    if (this.m_tickmarkOffset != null) {  
+      buffer.writeAll(["\"tickmarkOffset\":", this.m_tickmarkOffset, ","], "");
     }
   }
 

@@ -25,7 +25,19 @@ import 'OptionFragment.dart';
  */
 class SVGRenderer extends SVGRendererLike {
   SVGRenderer() : super();
-  String? SVG_NS;
+  String? m_SVG_NS;  
+
+  String get SVG_NS { 
+    if (this.m_SVG_NS == null) {
+      this.m_SVG_NS = "";
+    }
+    return this.m_SVG_NS!;
+  }
+
+  void set SVG_NS (String v) {
+    this.m_SVG_NS = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -36,8 +48,8 @@ class SVGRenderer extends SVGRendererLike {
     
     // NOTE: skip serialization of Element (type typeof SVGElement is ignored)} 
 
-    if (this.SVG_NS != null) {  
-      buffer.writeAll(["\"SVG_NS\":", this.SVG_NS, ","], "");
+    if (this.m_SVG_NS != null) {  
+      buffer.writeAll(["\"SVG_NS\":", this.m_SVG_NS, ","], "");
     }
 
     // NOTE: skip serialization of escapes (type Generic is ignored)} 

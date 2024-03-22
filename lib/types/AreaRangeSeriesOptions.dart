@@ -47,7 +47,19 @@ class AreaRangeSeriesOptions extends AreaSeriesOptions {
    * 
    * Defaults to 'false'. 
       */
-  bool? trackByArea;
+  bool? m_trackByArea;  
+
+  bool get trackByArea { 
+    if (this.m_trackByArea == null) {
+      this.m_trackByArea = false;
+    }
+    return this.m_trackByArea!;
+  }
+
+  void set trackByArea (bool v) {
+    this.m_trackByArea = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -56,14 +68,12 @@ class AreaRangeSeriesOptions extends AreaSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.dataLabels != null) {  
-    // Skipped array dataLabels
-    }
+    // NOTE: skip serialization of dataLabels (type AreaRangeDataLabelOptions[] is ignored)} 
 
     // NOTE: skip serialization of states (type Generic is ignored)} 
 
-    if (this.trackByArea != null) {  
-      buffer.writeAll(["\"trackByArea\":", this.trackByArea, ","], "");
+    if (this.m_trackByArea != null) {  
+      buffer.writeAll(["\"trackByArea\":", this.m_trackByArea, ","], "");
     }
 
     // NOTE: skip serialization of lowMarker (type PointMarkerOptions is ignored)} 

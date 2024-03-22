@@ -24,7 +24,19 @@ import 'OptionFragment.dart';
  */
 class LinearRegressionParamsOptions extends SMAParamsOptions {
   LinearRegressionParamsOptions() : super();
-  double? xAxisUnit;
+  double? m_xAxisUnit;  
+
+  double get xAxisUnit { 
+    if (this.m_xAxisUnit == null) {
+      this.m_xAxisUnit = 0;
+    }
+    return this.m_xAxisUnit!;
+  }
+
+  void set xAxisUnit (double v) {
+    this.m_xAxisUnit = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,8 +45,8 @@ class LinearRegressionParamsOptions extends SMAParamsOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.xAxisUnit != null) {  
-      buffer.writeAll(["\"xAxisUnit\":", this.xAxisUnit, ","], "");
+    if (this.m_xAxisUnit != null) {  
+      buffer.writeAll(["\"xAxisUnit\":", this.m_xAxisUnit, ","], "");
     }
   }
 

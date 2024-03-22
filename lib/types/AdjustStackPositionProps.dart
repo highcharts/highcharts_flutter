@@ -24,8 +24,32 @@ import 'OptionFragment.dart';
  */
 class AdjustStackPositionProps extends OptionFragment {
   AdjustStackPositionProps() : super();
-  String? verticalAlign;
-  String? textAlign;
+  String? m_verticalAlign;  
+
+  String get verticalAlign { 
+    if (this.m_verticalAlign == null) {
+      this.m_verticalAlign = "";
+    }
+    return this.m_verticalAlign!;
+  }
+
+  void set verticalAlign (String v) {
+    this.m_verticalAlign = v;
+  }
+    
+  String? m_textAlign;  
+
+  String get textAlign { 
+    if (this.m_textAlign == null) {
+      this.m_textAlign = "";
+    }
+    return this.m_textAlign!;
+  }
+
+  void set textAlign (String v) {
+    this.m_textAlign = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -36,12 +60,12 @@ class AdjustStackPositionProps extends OptionFragment {
     
     // NOTE: skip serialization of labelBox (type BBoxObject is ignored)} 
 
-    if (this.verticalAlign != null) {  
-      buffer.writeAll(["\"verticalAlign\":", this.verticalAlign, ","], "");
+    if (this.m_verticalAlign != null) {  
+      buffer.writeAll(["\"verticalAlign\":", this.m_verticalAlign, ","], "");
     }
 
-    if (this.textAlign != null) {  
-      buffer.writeAll(["\"textAlign\":", this.textAlign, ","], "");
+    if (this.m_textAlign != null) {  
+      buffer.writeAll(["\"textAlign\":", this.m_textAlign, ","], "");
     }
   }
 

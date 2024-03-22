@@ -23,7 +23,19 @@ import 'OptionFragment.dart';
  */
 class MACDGappedExtensionOptions extends OptionFragment {
   MACDGappedExtensionOptions() : super();
-  double? gapSize;
+  double? m_gapSize;  
+
+  double get gapSize { 
+    if (this.m_gapSize == null) {
+      this.m_gapSize = 0;
+    }
+    return this.m_gapSize!;
+  }
+
+  void set gapSize (double v) {
+    this.m_gapSize = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -32,8 +44,8 @@ class MACDGappedExtensionOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.gapSize != null) {  
-      buffer.writeAll(["\"gapSize\":", this.gapSize, ","], "");
+    if (this.m_gapSize != null) {  
+      buffer.writeAll(["\"gapSize\":", this.m_gapSize, ","], "");
     }
   }
 

@@ -23,7 +23,19 @@ import 'OptionFragment.dart';
  */
 class TimeTicksInfoObject extends OptionFragment {
   TimeTicksInfoObject() : super();
-  double? totalRange;
+  double? m_totalRange;  
+
+  double get totalRange { 
+    if (this.m_totalRange == null) {
+      this.m_totalRange = 0;
+    }
+    return this.m_totalRange!;
+  }
+
+  void set totalRange (double v) {
+    this.m_totalRange = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -34,8 +46,8 @@ class TimeTicksInfoObject extends OptionFragment {
     
     // NOTE: skip serialization of higherRanks (type Generic is ignored)} 
 
-    if (this.totalRange != null) {  
-      buffer.writeAll(["\"totalRange\":", this.totalRange, ","], "");
+    if (this.m_totalRange != null) {  
+      buffer.writeAll(["\"totalRange\":", this.m_totalRange, ","], "");
     }
   }
 

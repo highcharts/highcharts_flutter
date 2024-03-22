@@ -24,7 +24,19 @@ import 'OptionFragment.dart';
  */
 class GetSelectionMarkerAttrsEvent extends OptionFragment {
   GetSelectionMarkerAttrsEvent() : super();
-  String? shapeType;
+  String? m_shapeType;  
+
+  String get shapeType { 
+    if (this.m_shapeType == null) {
+      this.m_shapeType = "";
+    }
+    return this.m_shapeType!;
+  }
+
+  void set shapeType (String v) {
+    this.m_shapeType = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -37,8 +49,8 @@ class GetSelectionMarkerAttrsEvent extends OptionFragment {
 
     // NOTE: skip serialization of attrs (type SVGAttributes is ignored)} 
 
-    if (this.shapeType != null) {  
-      buffer.writeAll(["\"shapeType\":", this.shapeType, ","], "");
+    if (this.m_shapeType != null) {  
+      buffer.writeAll(["\"shapeType\":", this.m_shapeType, ","], "");
     }
   }
 

@@ -27,9 +27,45 @@ import 'OptionFragment.dart';
  */
 class PackedBubbleSeriesOptions extends BubbleSeriesOptions {
   PackedBubbleSeriesOptions() : super();
-  bool? draggable;
-  String? minSize;
-  bool? useSimulation;
+  bool? m_draggable;  
+
+  bool get draggable { 
+    if (this.m_draggable == null) {
+      this.m_draggable = false;
+    }
+    return this.m_draggable!;
+  }
+
+  void set draggable (bool v) {
+    this.m_draggable = v;
+  }
+    
+  String? m_minSize;  
+
+  String get minSize { 
+    if (this.m_minSize == null) {
+      this.m_minSize = "";
+    }
+    return this.m_minSize!;
+  }
+
+  void set minSize (String v) {
+    this.m_minSize = v;
+  }
+    
+  bool? m_useSimulation;  
+
+  bool get useSimulation { 
+    if (this.m_useSimulation == null) {
+      this.m_useSimulation = false;
+    }
+    return this.m_useSimulation!;
+  }
+
+  void set useSimulation (bool v) {
+    this.m_useSimulation = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -42,20 +78,20 @@ class PackedBubbleSeriesOptions extends BubbleSeriesOptions {
 
     // NOTE: skip serialization of dataLabels (type PackedBubbleDataLabelOptions is ignored)} 
 
-    if (this.draggable != null) {  
-      buffer.writeAll(["\"draggable\":", this.draggable, ","], "");
+    if (this.m_draggable != null) {  
+      buffer.writeAll(["\"draggable\":", this.m_draggable, ","], "");
     }
 
     // NOTE: skip serialization of layoutAlgorithm (type Options is ignored)} 
 
-    if (this.minSize != null) {  
-      buffer.writeAll(["\"minSize\":", this.minSize, ","], "");
+    if (this.m_minSize != null) {  
+      buffer.writeAll(["\"minSize\":", this.m_minSize, ","], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 
 
-    if (this.useSimulation != null) {  
-      buffer.writeAll(["\"useSimulation\":", this.useSimulation, ","], "");
+    if (this.m_useSimulation != null) {  
+      buffer.writeAll(["\"useSimulation\":", this.m_useSimulation, ","], "");
     }
   }
 

@@ -24,9 +24,45 @@ import 'OptionFragment.dart';
  */
 class SeriesStateInactiveOptions extends StateInactiveOptions {
   SeriesStateInactiveOptions() : super();
-  bool? enabled;
-  double? brightness;
-  double? linkOpacity;
+  bool? m_enabled;  
+
+  bool get enabled { 
+    if (this.m_enabled == null) {
+      this.m_enabled = false;
+    }
+    return this.m_enabled!;
+  }
+
+  void set enabled (bool v) {
+    this.m_enabled = v;
+  }
+    
+  double? m_brightness;  
+
+  double get brightness { 
+    if (this.m_brightness == null) {
+      this.m_brightness = 0;
+    }
+    return this.m_brightness!;
+  }
+
+  void set brightness (double v) {
+    this.m_brightness = v;
+  }
+    
+  double? m_linkOpacity;  
+
+  double get linkOpacity { 
+    if (this.m_linkOpacity == null) {
+      this.m_linkOpacity = 0;
+    }
+    return this.m_linkOpacity!;
+  }
+
+  void set linkOpacity (double v) {
+    this.m_linkOpacity = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -35,18 +71,18 @@ class SeriesStateInactiveOptions extends StateInactiveOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
+    if (this.m_enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this.m_enabled, ","], "");
     }
 
-    if (this.brightness != null) {  
-      buffer.writeAll(["\"brightness\":", this.brightness, ","], "");
+    if (this.m_brightness != null) {  
+      buffer.writeAll(["\"brightness\":", this.m_brightness, ","], "");
     }
 
     // NOTE: skip serialization of animation (type Generic is ignored)} 
 
-    if (this.linkOpacity != null) {  
-      buffer.writeAll(["\"linkOpacity\":", this.linkOpacity, ","], "");
+    if (this.m_linkOpacity != null) {  
+      buffer.writeAll(["\"linkOpacity\":", this.m_linkOpacity, ","], "");
     }
   }
 

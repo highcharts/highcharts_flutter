@@ -25,10 +25,58 @@ import 'OptionFragment.dart';
  */
 class ChartZoomingOptions extends OptionFragment {
   ChartZoomingOptions() : super();
-  String? key;
-  String? pinchType;
-  bool? singleTouch;
-  String? type;
+  String? m_key;  
+
+  String get key { 
+    if (this.m_key == null) {
+      this.m_key = "";
+    }
+    return this.m_key!;
+  }
+
+  void set key (String v) {
+    this.m_key = v;
+  }
+    
+  String? m_pinchType;  
+
+  String get pinchType { 
+    if (this.m_pinchType == null) {
+      this.m_pinchType = "";
+    }
+    return this.m_pinchType!;
+  }
+
+  void set pinchType (String v) {
+    this.m_pinchType = v;
+  }
+    
+  bool? m_singleTouch;  
+
+  bool get singleTouch { 
+    if (this.m_singleTouch == null) {
+      this.m_singleTouch = false;
+    }
+    return this.m_singleTouch!;
+  }
+
+  void set singleTouch (bool v) {
+    this.m_singleTouch = v;
+  }
+    
+  String? m_type;  
+
+  String get type { 
+    if (this.m_type == null) {
+      this.m_type = "";
+    }
+    return this.m_type!;
+  }
+
+  void set type (String v) {
+    this.m_type = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -37,22 +85,22 @@ class ChartZoomingOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.key != null) {  
-      buffer.writeAll(["\"key\":", this.key, ","], "");
+    if (this.m_key != null) {  
+      buffer.writeAll(["\"key\":", this.m_key, ","], "");
     }
 
-    if (this.pinchType != null) {  
-      buffer.writeAll(["\"pinchType\":", this.pinchType, ","], "");
+    if (this.m_pinchType != null) {  
+      buffer.writeAll(["\"pinchType\":", this.m_pinchType, ","], "");
     }
 
     // NOTE: skip serialization of resetButton (type ChartResetZoomButtonOptions is ignored)} 
 
-    if (this.singleTouch != null) {  
-      buffer.writeAll(["\"singleTouch\":", this.singleTouch, ","], "");
+    if (this.m_singleTouch != null) {  
+      buffer.writeAll(["\"singleTouch\":", this.m_singleTouch, ","], "");
     }
 
-    if (this.type != null) {  
-      buffer.writeAll(["\"type\":", this.type, ","], "");
+    if (this.m_type != null) {  
+      buffer.writeAll(["\"type\":", this.m_type, ","], "");
     }
 
     // NOTE: skip serialization of mouseWheel (type MouseWheelZoomOptions is ignored)} 

@@ -24,7 +24,19 @@ import 'OptionFragment.dart';
  */
 class DotPlotSeriesOptions extends ColumnSeriesOptions {
   DotPlotSeriesOptions() : super();
-  double? itemPadding;
+  double? m_itemPadding;  
+
+  double get itemPadding { 
+    if (this.m_itemPadding == null) {
+      this.m_itemPadding = 0;
+    }
+    return this.m_itemPadding!;
+  }
+
+  void set itemPadding (double v) {
+    this.m_itemPadding = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,8 +45,8 @@ class DotPlotSeriesOptions extends ColumnSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.itemPadding != null) {  
-      buffer.writeAll(["\"itemPadding\":", this.itemPadding, ","], "");
+    if (this.m_itemPadding != null) {  
+      buffer.writeAll(["\"itemPadding\":", this.m_itemPadding, ","], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 

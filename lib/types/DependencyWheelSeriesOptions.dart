@@ -35,7 +35,19 @@ class DependencyWheelSeriesOptions extends SankeySeriesOptions {
   /**
    * The start angle of the dependency wheel, in degrees where 0 is up.  
       */
-  double? startAngle;
+  double? m_startAngle;  
+
+  double get startAngle { 
+    if (this.m_startAngle == null) {
+      this.m_startAngle = 0;
+    }
+    return this.m_startAngle!;
+  }
+
+  void set startAngle (double v) {
+    this.m_startAngle = v;
+  }
+    
   // NOTE: states skipped - type Generic is ignored in gen
 
 
@@ -46,12 +58,10 @@ class DependencyWheelSeriesOptions extends SankeySeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.center != null) {  
-    // Skipped array center
-    }
+    // NOTE: skip serialization of center (type number)[] is ignored)} 
 
-    if (this.startAngle != null) {  
-      buffer.writeAll(["\"startAngle\":", this.startAngle, ","], "");
+    if (this.m_startAngle != null) {  
+      buffer.writeAll(["\"startAngle\":", this.m_startAngle, ","], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 

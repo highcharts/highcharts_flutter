@@ -23,8 +23,32 @@ import 'OptionFragment.dart';
  */
 class DataExtremesObject extends OptionFragment {
   DataExtremesObject() : super();
-  double? dataMin;
-  double? dataMax;
+  double? m_dataMin;  
+
+  double get dataMin { 
+    if (this.m_dataMin == null) {
+      this.m_dataMin = 0;
+    }
+    return this.m_dataMin!;
+  }
+
+  void set dataMin (double v) {
+    this.m_dataMin = v;
+  }
+    
+  double? m_dataMax;  
+
+  double get dataMax { 
+    if (this.m_dataMax == null) {
+      this.m_dataMax = 0;
+    }
+    return this.m_dataMax!;
+  }
+
+  void set dataMax (double v) {
+    this.m_dataMax = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -35,12 +59,12 @@ class DataExtremesObject extends OptionFragment {
     
     // NOTE: skip serialization of activeYData (type number[] is ignored)} 
 
-    if (this.dataMin != null) {  
-      buffer.writeAll(["\"dataMin\":", this.dataMin, ","], "");
+    if (this.m_dataMin != null) {  
+      buffer.writeAll(["\"dataMin\":", this.m_dataMin, ","], "");
     }
 
-    if (this.dataMax != null) {  
-      buffer.writeAll(["\"dataMax\":", this.dataMax, ","], "");
+    if (this.m_dataMax != null) {  
+      buffer.writeAll(["\"dataMax\":", this.m_dataMax, ","], "");
     }
   }
 

@@ -24,9 +24,45 @@ import 'OptionFragment.dart';
  */
 class VennSeriesOptions extends ScatterSeriesOptions {
   VennSeriesOptions() : super();
-  String? borderDashStyle;
-  double? brighten;
-  double? brightness;
+  String? m_borderDashStyle;  
+
+  String get borderDashStyle { 
+    if (this.m_borderDashStyle == null) {
+      this.m_borderDashStyle = "";
+    }
+    return this.m_borderDashStyle!;
+  }
+
+  void set borderDashStyle (String v) {
+    this.m_borderDashStyle = v;
+  }
+    
+  double? m_brighten;  
+
+  double get brighten { 
+    if (this.m_brighten == null) {
+      this.m_brighten = 0;
+    }
+    return this.m_brighten!;
+  }
+
+  void set brighten (double v) {
+    this.m_brighten = v;
+  }
+    
+  double? m_brightness;  
+
+  double get brightness { 
+    if (this.m_brightness == null) {
+      this.m_brightness = 0;
+    }
+    return this.m_brightness!;
+  }
+
+  void set brightness (double v) {
+    this.m_brightness = v;
+  }
+    
   // NOTE: states skipped - type Generic is ignored in gen
 
 
@@ -37,16 +73,16 @@ class VennSeriesOptions extends ScatterSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.borderDashStyle != null) {  
-      buffer.writeAll(["\"borderDashStyle\":", this.borderDashStyle, ","], "");
+    if (this.m_borderDashStyle != null) {  
+      buffer.writeAll(["\"borderDashStyle\":", this.m_borderDashStyle, ","], "");
     }
 
-    if (this.brighten != null) {  
-      buffer.writeAll(["\"brighten\":", this.brighten, ","], "");
+    if (this.m_brighten != null) {  
+      buffer.writeAll(["\"brighten\":", this.m_brighten, ","], "");
     }
 
-    if (this.brightness != null) {  
-      buffer.writeAll(["\"brightness\":", this.brightness, ","], "");
+    if (this.m_brightness != null) {  
+      buffer.writeAll(["\"brightness\":", this.m_brightness, ","], "");
     }
 
     // NOTE: skip serialization of data (type VennPointOptions[] is ignored)} 

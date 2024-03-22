@@ -66,7 +66,19 @@ class MapsProductSeries extends OptionFragment {
    * ```
    *               
       */
-  ? geoheatmap;
+  ? m_geoheatmap;  
+
+   get geoheatmap { 
+    if (this.m_geoheatmap == null) {
+      this.m_geoheatmap = ();
+    }
+    return this.m_geoheatmap!;
+  }
+
+  void set geoheatmap ( v) {
+    this.m_geoheatmap = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -77,8 +89,8 @@ class MapsProductSeries extends OptionFragment {
     
     // NOTE: skip serialization of flowmap (type FlowMapSeriesOptions is ignored)} 
 
-    if (this.geoheatmap != null) {  
-      buffer.writeAll(["\"geoheatmap\":", this.geoheatmap?.toJSON(), ","], "");
+    if (this.m_geoheatmap != null) {  
+      buffer.writeAll(["\"geoheatmap\":", this.m_geoheatmap?.toJSON(), ","], "");
     }
 
     // NOTE: skip serialization of heatmap (type HeatmapSeriesOptions is ignored)} 

@@ -23,9 +23,45 @@ import 'OptionFragment.dart';
  */
 class AxisBreakBorderObject extends OptionFragment {
   AxisBreakBorderObject() : super();
-  String? move;
-  double? size;
-  double? value;
+  String? m_move;  
+
+  String get move { 
+    if (this.m_move == null) {
+      this.m_move = "";
+    }
+    return this.m_move!;
+  }
+
+  void set move (String v) {
+    this.m_move = v;
+  }
+    
+  double? m_size;  
+
+  double get size { 
+    if (this.m_size == null) {
+      this.m_size = 0;
+    }
+    return this.m_size!;
+  }
+
+  void set size (double v) {
+    this.m_size = v;
+  }
+    
+  double? m_value;  
+
+  double get value { 
+    if (this.m_value == null) {
+      this.m_value = 0;
+    }
+    return this.m_value!;
+  }
+
+  void set value (double v) {
+    this.m_value = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -34,16 +70,16 @@ class AxisBreakBorderObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.move != null) {  
-      buffer.writeAll(["\"move\":", this.move, ","], "");
+    if (this.m_move != null) {  
+      buffer.writeAll(["\"move\":", this.m_move, ","], "");
     }
 
-    if (this.size != null) {  
-      buffer.writeAll(["\"size\":", this.size, ","], "");
+    if (this.m_size != null) {  
+      buffer.writeAll(["\"size\":", this.m_size, ","], "");
     }
 
-    if (this.value != null) {  
-      buffer.writeAll(["\"value\":", this.value, ","], "");
+    if (this.m_value != null) {  
+      buffer.writeAll(["\"value\":", this.m_value, ","], "");
     }
   }
 

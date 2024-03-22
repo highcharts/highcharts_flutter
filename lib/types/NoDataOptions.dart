@@ -26,7 +26,19 @@ import 'OptionFragment.dart';
  */
 class NoDataOptions extends OptionFragment {
   NoDataOptions() : super();
-  bool? useHTML;
+  bool? m_useHTML;  
+
+  bool get useHTML { 
+    if (this.m_useHTML == null) {
+      this.m_useHTML = false;
+    }
+    return this.m_useHTML!;
+  }
+
+  void set useHTML (bool v) {
+    this.m_useHTML = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -37,8 +49,8 @@ class NoDataOptions extends OptionFragment {
     
     // NOTE: skip serialization of attr (type SVGAttributes is ignored)} 
 
-    if (this.useHTML != null) {  
-      buffer.writeAll(["\"useHTML\":", this.useHTML, ","], "");
+    if (this.m_useHTML != null) {  
+      buffer.writeAll(["\"useHTML\":", this.m_useHTML, ","], "");
     }
 
     // NOTE: skip serialization of position (type AlignObject is ignored)} 

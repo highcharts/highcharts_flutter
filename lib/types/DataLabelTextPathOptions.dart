@@ -24,7 +24,19 @@ import 'OptionFragment.dart';
  */
 class DataLabelTextPathOptions extends OptionFragment {
   DataLabelTextPathOptions() : super();
-  bool? enabled;
+  bool? m_enabled;  
+
+  bool get enabled { 
+    if (this.m_enabled == null) {
+      this.m_enabled = false;
+    }
+    return this.m_enabled!;
+  }
+
+  void set enabled (bool v) {
+    this.m_enabled = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -35,8 +47,8 @@ class DataLabelTextPathOptions extends OptionFragment {
     
     // NOTE: skip serialization of attributes (type TextPathAttributes is ignored)} 
 
-    if (this.enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
+    if (this.m_enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this.m_enabled, ","], "");
     }
   }
 

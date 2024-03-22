@@ -34,11 +34,35 @@ class DMIOptions extends SMAOptions {
   /**
    * +DI line options.  
       */
-  DMILineOptions? plusDILine;
+  DMILineOptions? m_plusDILine;  
+
+  DMILineOptions get plusDILine { 
+    if (this.m_plusDILine == null) {
+      this.m_plusDILine = DMILineOptions();
+    }
+    return this.m_plusDILine!;
+  }
+
+  void set plusDILine (DMILineOptions v) {
+    this.m_plusDILine = v;
+  }
+    
   /**
    * -DI line options.  
       */
-  DMILineOptions? minusDILine;
+  DMILineOptions? m_minusDILine;  
+
+  DMILineOptions get minusDILine { 
+    if (this.m_minusDILine == null) {
+      this.m_minusDILine = DMILineOptions();
+    }
+    return this.m_minusDILine!;
+  }
+
+  void set minusDILine (DMILineOptions v) {
+    this.m_minusDILine = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -47,16 +71,16 @@ class DMIOptions extends SMAOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.params != null) {  
-      buffer.writeAll(["\"params\":", this.params?.toJSON(), ","], "");
+    if (this.m_params != null) {  
+      buffer.writeAll(["\"params\":", this.m_params?.toJSON(), ","], "");
     }
 
-    if (this.plusDILine != null) {  
-      buffer.writeAll(["\"plusDILine\":", this.plusDILine?.toJSON(), ","], "");
+    if (this.m_plusDILine != null) {  
+      buffer.writeAll(["\"plusDILine\":", this.m_plusDILine?.toJSON(), ","], "");
     }
 
-    if (this.minusDILine != null) {  
-      buffer.writeAll(["\"minusDILine\":", this.minusDILine?.toJSON(), ","], "");
+    if (this.m_minusDILine != null) {  
+      buffer.writeAll(["\"minusDILine\":", this.m_minusDILine?.toJSON(), ","], "");
     }
   }
 

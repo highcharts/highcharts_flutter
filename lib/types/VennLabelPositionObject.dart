@@ -24,7 +24,19 @@ import 'OptionFragment.dart';
  */
 class VennLabelPositionObject extends OptionFragment {
   VennLabelPositionObject() : super();
-  double? margin;
+  double? m_margin;  
+
+  double get margin { 
+    if (this.m_margin == null) {
+      this.m_margin = 0;
+    }
+    return this.m_margin!;
+  }
+
+  void set margin (double v) {
+    this.m_margin = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -35,8 +47,8 @@ class VennLabelPositionObject extends OptionFragment {
     
     // NOTE: skip serialization of point (type PositionObject is ignored)} 
 
-    if (this.margin != null) {  
-      buffer.writeAll(["\"margin\":", this.margin, ","], "");
+    if (this.m_margin != null) {  
+      buffer.writeAll(["\"margin\":", this.m_margin, ","], "");
     }
   }
 

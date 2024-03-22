@@ -24,11 +24,71 @@ import 'OptionFragment.dart';
  */
 class LangAccessibilitySeriesOptions extends OptionFragment {
   LangAccessibilitySeriesOptions() : super();
-  String? description;
-  String? nullPointValue;
-  String? pointAnnotationsDescription;
-  String? xAxisDescription;
-  String? yAxisDescription;
+  String? m_description;  
+
+  String get description { 
+    if (this.m_description == null) {
+      this.m_description = "";
+    }
+    return this.m_description!;
+  }
+
+  void set description (String v) {
+    this.m_description = v;
+  }
+    
+  String? m_nullPointValue;  
+
+  String get nullPointValue { 
+    if (this.m_nullPointValue == null) {
+      this.m_nullPointValue = "";
+    }
+    return this.m_nullPointValue!;
+  }
+
+  void set nullPointValue (String v) {
+    this.m_nullPointValue = v;
+  }
+    
+  String? m_pointAnnotationsDescription;  
+
+  String get pointAnnotationsDescription { 
+    if (this.m_pointAnnotationsDescription == null) {
+      this.m_pointAnnotationsDescription = "";
+    }
+    return this.m_pointAnnotationsDescription!;
+  }
+
+  void set pointAnnotationsDescription (String v) {
+    this.m_pointAnnotationsDescription = v;
+  }
+    
+  String? m_xAxisDescription;  
+
+  String get xAxisDescription { 
+    if (this.m_xAxisDescription == null) {
+      this.m_xAxisDescription = "";
+    }
+    return this.m_xAxisDescription!;
+  }
+
+  void set xAxisDescription (String v) {
+    this.m_xAxisDescription = v;
+  }
+    
+  String? m_yAxisDescription;  
+
+  String get yAxisDescription { 
+    if (this.m_yAxisDescription == null) {
+      this.m_yAxisDescription = "";
+    }
+    return this.m_yAxisDescription!;
+  }
+
+  void set yAxisDescription (String v) {
+    this.m_yAxisDescription = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -37,26 +97,26 @@ class LangAccessibilitySeriesOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.description != null) {  
-      buffer.writeAll(["\"description\":", this.description, ","], "");
+    if (this.m_description != null) {  
+      buffer.writeAll(["\"description\":", this.m_description, ","], "");
     }
 
-    if (this.nullPointValue != null) {  
-      buffer.writeAll(["\"nullPointValue\":", this.nullPointValue, ","], "");
+    if (this.m_nullPointValue != null) {  
+      buffer.writeAll(["\"nullPointValue\":", this.m_nullPointValue, ","], "");
     }
 
-    if (this.pointAnnotationsDescription != null) {  
-      buffer.writeAll(["\"pointAnnotationsDescription\":", this.pointAnnotationsDescription, ","], "");
+    if (this.m_pointAnnotationsDescription != null) {  
+      buffer.writeAll(["\"pointAnnotationsDescription\":", this.m_pointAnnotationsDescription, ","], "");
     }
 
     // NOTE: skip serialization of summary (type LangAccessibilitySeriesSummaryOptions is ignored)} 
 
-    if (this.xAxisDescription != null) {  
-      buffer.writeAll(["\"xAxisDescription\":", this.xAxisDescription, ","], "");
+    if (this.m_xAxisDescription != null) {  
+      buffer.writeAll(["\"xAxisDescription\":", this.m_xAxisDescription, ","], "");
     }
 
-    if (this.yAxisDescription != null) {  
-      buffer.writeAll(["\"yAxisDescription\":", this.yAxisDescription, ","], "");
+    if (this.m_yAxisDescription != null) {  
+      buffer.writeAll(["\"yAxisDescription\":", this.m_yAxisDescription, ","], "");
     }
   }
 

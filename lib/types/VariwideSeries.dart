@@ -23,7 +23,19 @@ import 'OptionFragment.dart';
  */
 class VariwideSeries extends OptionFragment {
   VariwideSeries() : super();
-  bool? irregularWidths;
+  bool? m_irregularWidths;  
+
+  bool get irregularWidths { 
+    if (this.m_irregularWidths == null) {
+      this.m_irregularWidths = false;
+    }
+    return this.m_irregularWidths!;
+  }
+
+  void set irregularWidths (bool v) {
+    this.m_irregularWidths = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -32,8 +44,8 @@ class VariwideSeries extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.irregularWidths != null) {  
-      buffer.writeAll(["\"irregularWidths\":", this.irregularWidths, ","], "");
+    if (this.m_irregularWidths != null) {  
+      buffer.writeAll(["\"irregularWidths\":", this.m_irregularWidths, ","], "");
     }
 
     // NOTE: skip serialization of parallelArrays (type string[] is ignored)} 

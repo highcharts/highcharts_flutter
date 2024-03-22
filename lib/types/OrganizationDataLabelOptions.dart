@@ -24,7 +24,19 @@ import 'OptionFragment.dart';
  */
 class OrganizationDataLabelOptions extends SankeyDataLabelOptions {
   OrganizationDataLabelOptions() : super();
-  String? linkFormat;
+  String? m_linkFormat;  
+
+  String get linkFormat { 
+    if (this.m_linkFormat == null) {
+      this.m_linkFormat = "";
+    }
+    return this.m_linkFormat!;
+  }
+
+  void set linkFormat (String v) {
+    this.m_linkFormat = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,8 +45,8 @@ class OrganizationDataLabelOptions extends SankeyDataLabelOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.linkFormat != null) {  
-      buffer.writeAll(["\"linkFormat\":", this.linkFormat, ","], "");
+    if (this.m_linkFormat != null) {  
+      buffer.writeAll(["\"linkFormat\":", this.m_linkFormat, ","], "");
     }
   }
 

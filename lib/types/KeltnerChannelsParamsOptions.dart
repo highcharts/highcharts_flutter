@@ -24,8 +24,32 @@ import 'OptionFragment.dart';
  */
 class KeltnerChannelsParamsOptions extends SMAParamsOptions {
   KeltnerChannelsParamsOptions() : super();
-  double? periodATR;
-  double? multiplierATR;
+  double? m_periodATR;  
+
+  double get periodATR { 
+    if (this.m_periodATR == null) {
+      this.m_periodATR = 0;
+    }
+    return this.m_periodATR!;
+  }
+
+  void set periodATR (double v) {
+    this.m_periodATR = v;
+  }
+    
+  double? m_multiplierATR;  
+
+  double get multiplierATR { 
+    if (this.m_multiplierATR == null) {
+      this.m_multiplierATR = 0;
+    }
+    return this.m_multiplierATR!;
+  }
+
+  void set multiplierATR (double v) {
+    this.m_multiplierATR = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -34,12 +58,12 @@ class KeltnerChannelsParamsOptions extends SMAParamsOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.periodATR != null) {  
-      buffer.writeAll(["\"periodATR\":", this.periodATR, ","], "");
+    if (this.m_periodATR != null) {  
+      buffer.writeAll(["\"periodATR\":", this.m_periodATR, ","], "");
     }
 
-    if (this.multiplierATR != null) {  
-      buffer.writeAll(["\"multiplierATR\":", this.multiplierATR, ","], "");
+    if (this.m_multiplierATR != null) {  
+      buffer.writeAll(["\"multiplierATR\":", this.m_multiplierATR, ","], "");
     }
   }
 

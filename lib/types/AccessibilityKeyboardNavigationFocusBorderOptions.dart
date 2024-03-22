@@ -24,9 +24,45 @@ import 'OptionFragment.dart';
  */
 class AccessibilityKeyboardNavigationFocusBorderOptions extends OptionFragment {
   AccessibilityKeyboardNavigationFocusBorderOptions() : super();
-  bool? enabled;
-  bool? hideBrowserFocusOutline;
-  double? margin;
+  bool? m_enabled;  
+
+  bool get enabled { 
+    if (this.m_enabled == null) {
+      this.m_enabled = false;
+    }
+    return this.m_enabled!;
+  }
+
+  void set enabled (bool v) {
+    this.m_enabled = v;
+  }
+    
+  bool? m_hideBrowserFocusOutline;  
+
+  bool get hideBrowserFocusOutline { 
+    if (this.m_hideBrowserFocusOutline == null) {
+      this.m_hideBrowserFocusOutline = false;
+    }
+    return this.m_hideBrowserFocusOutline!;
+  }
+
+  void set hideBrowserFocusOutline (bool v) {
+    this.m_hideBrowserFocusOutline = v;
+  }
+    
+  double? m_margin;  
+
+  double get margin { 
+    if (this.m_margin == null) {
+      this.m_margin = 0;
+    }
+    return this.m_margin!;
+  }
+
+  void set margin (double v) {
+    this.m_margin = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -35,16 +71,16 @@ class AccessibilityKeyboardNavigationFocusBorderOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
+    if (this.m_enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this.m_enabled, ","], "");
     }
 
-    if (this.hideBrowserFocusOutline != null) {  
-      buffer.writeAll(["\"hideBrowserFocusOutline\":", this.hideBrowserFocusOutline, ","], "");
+    if (this.m_hideBrowserFocusOutline != null) {  
+      buffer.writeAll(["\"hideBrowserFocusOutline\":", this.m_hideBrowserFocusOutline, ","], "");
     }
 
-    if (this.margin != null) {  
-      buffer.writeAll(["\"margin\":", this.margin, ","], "");
+    if (this.m_margin != null) {  
+      buffer.writeAll(["\"margin\":", this.m_margin, ","], "");
     }
 
     // NOTE: skip serialization of style (type FocusBorderStyleObject is ignored)} 

@@ -23,11 +23,71 @@ import 'OptionFragment.dart';
  */
 class ProviderOptions extends OptionFragment {
   ProviderOptions() : super();
-  String? apiKey;
-  String? subdomain;
-  String? theme;
-  String? type;
-  String? url;
+  String? m_apiKey;  
+
+  String get apiKey { 
+    if (this.m_apiKey == null) {
+      this.m_apiKey = "";
+    }
+    return this.m_apiKey!;
+  }
+
+  void set apiKey (String v) {
+    this.m_apiKey = v;
+  }
+    
+  String? m_subdomain;  
+
+  String get subdomain { 
+    if (this.m_subdomain == null) {
+      this.m_subdomain = "";
+    }
+    return this.m_subdomain!;
+  }
+
+  void set subdomain (String v) {
+    this.m_subdomain = v;
+  }
+    
+  String? m_theme;  
+
+  String get theme { 
+    if (this.m_theme == null) {
+      this.m_theme = "";
+    }
+    return this.m_theme!;
+  }
+
+  void set theme (String v) {
+    this.m_theme = v;
+  }
+    
+  String? m_type;  
+
+  String get type { 
+    if (this.m_type == null) {
+      this.m_type = "";
+    }
+    return this.m_type!;
+  }
+
+  void set type (String v) {
+    this.m_type = v;
+  }
+    
+  String? m_url;  
+
+  String get url { 
+    if (this.m_url == null) {
+      this.m_url = "";
+    }
+    return this.m_url!;
+  }
+
+  void set url (String v) {
+    this.m_url = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -36,26 +96,26 @@ class ProviderOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.apiKey != null) {  
-      buffer.writeAll(["\"apiKey\":", this.apiKey, ","], "");
+    if (this.m_apiKey != null) {  
+      buffer.writeAll(["\"apiKey\":", this.m_apiKey, ","], "");
     }
 
     // NOTE: skip serialization of onload (type Function is ignored)} 
 
-    if (this.subdomain != null) {  
-      buffer.writeAll(["\"subdomain\":", this.subdomain, ","], "");
+    if (this.m_subdomain != null) {  
+      buffer.writeAll(["\"subdomain\":", this.m_subdomain, ","], "");
     }
 
-    if (this.theme != null) {  
-      buffer.writeAll(["\"theme\":", this.theme, ","], "");
+    if (this.m_theme != null) {  
+      buffer.writeAll(["\"theme\":", this.m_theme, ","], "");
     }
 
-    if (this.type != null) {  
-      buffer.writeAll(["\"type\":", this.type, ","], "");
+    if (this.m_type != null) {  
+      buffer.writeAll(["\"type\":", this.m_type, ","], "");
     }
 
-    if (this.url != null) {  
-      buffer.writeAll(["\"url\":", this.url, ","], "");
+    if (this.m_url != null) {  
+      buffer.writeAll(["\"url\":", this.m_url, ","], "");
     }
   }
 

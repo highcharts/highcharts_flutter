@@ -23,7 +23,19 @@ import 'OptionFragment.dart';
  */
 class SelectEventObject extends OptionFragment {
   SelectEventObject() : super();
-  bool? resetSelection;
+  bool? m_resetSelection;  
+
+  bool get resetSelection { 
+    if (this.m_resetSelection == null) {
+      this.m_resetSelection = false;
+    }
+    return this.m_resetSelection!;
+  }
+
+  void set resetSelection (bool v) {
+    this.m_resetSelection = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -34,8 +46,8 @@ class SelectEventObject extends OptionFragment {
     
     // NOTE: skip serialization of originalEvent (type Event is ignored)} 
 
-    if (this.resetSelection != null) {  
-      buffer.writeAll(["\"resetSelection\":", this.resetSelection, ","], "");
+    if (this.m_resetSelection != null) {  
+      buffer.writeAll(["\"resetSelection\":", this.m_resetSelection, ","], "");
     }
 
     // NOTE: skip serialization of xAxis (type SelectDataObject[] is ignored)} 

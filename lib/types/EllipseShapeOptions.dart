@@ -24,9 +24,45 @@ import 'OptionFragment.dart';
  */
 class EllipseShapeOptions extends ControllableShapeOptions {
   EllipseShapeOptions() : super();
-  double? yAxis;
-  double? xAxis;
-  double? ry;
+  double? m_yAxis;  
+
+  double get yAxis { 
+    if (this.m_yAxis == null) {
+      this.m_yAxis = 0;
+    }
+    return this.m_yAxis!;
+  }
+
+  void set yAxis (double v) {
+    this.m_yAxis = v;
+  }
+    
+  double? m_xAxis;  
+
+  double get xAxis { 
+    if (this.m_xAxis == null) {
+      this.m_xAxis = 0;
+    }
+    return this.m_xAxis!;
+  }
+
+  void set xAxis (double v) {
+    this.m_xAxis = v;
+  }
+    
+  double? m_ry;  
+
+  double get ry { 
+    if (this.m_ry == null) {
+      this.m_ry = 0;
+    }
+    return this.m_ry!;
+  }
+
+  void set ry (double v) {
+    this.m_ry = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -35,16 +71,16 @@ class EllipseShapeOptions extends ControllableShapeOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.yAxis != null) {  
-      buffer.writeAll(["\"yAxis\":", this.yAxis, ","], "");
+    if (this.m_yAxis != null) {  
+      buffer.writeAll(["\"yAxis\":", this.m_yAxis, ","], "");
     }
 
-    if (this.xAxis != null) {  
-      buffer.writeAll(["\"xAxis\":", this.xAxis, ","], "");
+    if (this.m_xAxis != null) {  
+      buffer.writeAll(["\"xAxis\":", this.m_xAxis, ","], "");
     }
 
-    if (this.ry != null) {  
-      buffer.writeAll(["\"ry\":", this.ry, ","], "");
+    if (this.m_ry != null) {  
+      buffer.writeAll(["\"ry\":", this.m_ry, ","], "");
     }
   }
 

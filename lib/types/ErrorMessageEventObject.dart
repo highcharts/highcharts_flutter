@@ -24,8 +24,32 @@ import 'OptionFragment.dart';
  */
 class ErrorMessageEventObject extends OptionFragment {
   ErrorMessageEventObject() : super();
-  double? code;
-  String? message;
+  double? m_code;  
+
+  double get code { 
+    if (this.m_code == null) {
+      this.m_code = 0;
+    }
+    return this.m_code!;
+  }
+
+  void set code (double v) {
+    this.m_code = v;
+  }
+    
+  String? m_message;  
+
+  String get message { 
+    if (this.m_message == null) {
+      this.m_message = "";
+    }
+    return this.m_message!;
+  }
+
+  void set message (String v) {
+    this.m_message = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -36,12 +60,12 @@ class ErrorMessageEventObject extends OptionFragment {
     
     // NOTE: skip serialization of chart (type Chart is ignored)} 
 
-    if (this.code != null) {  
-      buffer.writeAll(["\"code\":", this.code, ","], "");
+    if (this.m_code != null) {  
+      buffer.writeAll(["\"code\":", this.m_code, ","], "");
     }
 
-    if (this.message != null) {  
-      buffer.writeAll(["\"message\":", this.message, ","], "");
+    if (this.m_message != null) {  
+      buffer.writeAll(["\"message\":", this.m_message, ","], "");
     }
 
     // NOTE: skip serialization of params (type Generic is ignored)} 

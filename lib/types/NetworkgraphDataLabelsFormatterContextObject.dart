@@ -24,8 +24,32 @@ import 'OptionFragment.dart';
  */
 class NetworkgraphDataLabelsFormatterContextObject extends OptionFragment {
   NetworkgraphDataLabelsFormatterContextObject() : super();
-  String? color;
-  String? key;
+  String? m_color;  
+
+  String get color { 
+    if (this.m_color == null) {
+      this.m_color = "";
+    }
+    return this.m_color!;
+  }
+
+  void set color (String v) {
+    this.m_color = v;
+  }
+    
+  String? m_key;  
+
+  String get key { 
+    if (this.m_key == null) {
+      this.m_key = "";
+    }
+    return this.m_key!;
+  }
+
+  void set key (String v) {
+    this.m_key = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -34,12 +58,12 @@ class NetworkgraphDataLabelsFormatterContextObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.color != null) {  
-      buffer.writeAll(["\"color\":", this.color, ","], "");
+    if (this.m_color != null) {  
+      buffer.writeAll(["\"color\":", this.m_color, ","], "");
     }
 
-    if (this.key != null) {  
-      buffer.writeAll(["\"key\":", this.key, ","], "");
+    if (this.m_key != null) {  
+      buffer.writeAll(["\"key\":", this.m_key, ","], "");
     }
 
     // NOTE: skip serialization of point (type NetworkgraphPoint is ignored)} 

@@ -29,7 +29,19 @@ class MapLineSeriesOptions extends MapSeriesOptions {
    * 
    * Defaults to 'none'. 
       */
-  String? fillColor;
+  String? m_fillColor;  
+
+  String get fillColor { 
+    if (this.m_fillColor == null) {
+      this.m_fillColor = "";
+    }
+    return this.m_fillColor!;
+  }
+
+  void set fillColor (String v) {
+    this.m_fillColor = v;
+  }
+    
   // NOTE: states skipped - type Generic is ignored in gen
 
 
@@ -40,8 +52,8 @@ class MapLineSeriesOptions extends MapSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.fillColor != null) {  
-      buffer.writeAll(["\"fillColor\":", this.fillColor, ","], "");
+    if (this.m_fillColor != null) {  
+      buffer.writeAll(["\"fillColor\":", this.m_fillColor, ","], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 

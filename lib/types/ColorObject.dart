@@ -23,8 +23,32 @@ import 'OptionFragment.dart';
  */
 class ColorObject extends OptionFragment {
   ColorObject() : super();
-  String? color;
-  double? colorIndex;
+  String? m_color;  
+
+  String get color { 
+    if (this.m_color == null) {
+      this.m_color = "";
+    }
+    return this.m_color!;
+  }
+
+  void set color (String v) {
+    this.m_color = v;
+  }
+    
+  double? m_colorIndex;  
+
+  double get colorIndex { 
+    if (this.m_colorIndex == null) {
+      this.m_colorIndex = 0;
+    }
+    return this.m_colorIndex!;
+  }
+
+  void set colorIndex (double v) {
+    this.m_colorIndex = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,12 +57,12 @@ class ColorObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.color != null) {  
-      buffer.writeAll(["\"color\":", this.color, ","], "");
+    if (this.m_color != null) {  
+      buffer.writeAll(["\"color\":", this.m_color, ","], "");
     }
 
-    if (this.colorIndex != null) {  
-      buffer.writeAll(["\"colorIndex\":", this.colorIndex, ","], "");
+    if (this.m_colorIndex != null) {  
+      buffer.writeAll(["\"colorIndex\":", this.m_colorIndex, ","], "");
     }
   }
 

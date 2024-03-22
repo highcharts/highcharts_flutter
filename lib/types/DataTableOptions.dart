@@ -23,7 +23,19 @@ import 'OptionFragment.dart';
  */
 class DataTableOptions extends OptionFragment {
   DataTableOptions() : super();
-  String? id;
+  String? m_id;  
+
+  String get id { 
+    if (this.m_id == null) {
+      this.m_id = "";
+    }
+    return this.m_id!;
+  }
+
+  void set id (String v) {
+    this.m_id = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -36,8 +48,8 @@ class DataTableOptions extends OptionFragment {
 
     // NOTE: skip serialization of columns (type Generic is ignored)} 
 
-    if (this.id != null) {  
-      buffer.writeAll(["\"id\":", this.id, ","], "");
+    if (this.m_id != null) {  
+      buffer.writeAll(["\"id\":", this.m_id, ","], "");
     }
   }
 

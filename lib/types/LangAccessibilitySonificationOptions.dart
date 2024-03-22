@@ -23,8 +23,32 @@ import 'OptionFragment.dart';
  */
 class LangAccessibilitySonificationOptions extends OptionFragment {
   LangAccessibilitySonificationOptions() : super();
-  String? playAsSoundButtonText;
-  String? playAsSoundClickAnnouncement;
+  String? m_playAsSoundButtonText;  
+
+  String get playAsSoundButtonText { 
+    if (this.m_playAsSoundButtonText == null) {
+      this.m_playAsSoundButtonText = "";
+    }
+    return this.m_playAsSoundButtonText!;
+  }
+
+  void set playAsSoundButtonText (String v) {
+    this.m_playAsSoundButtonText = v;
+  }
+    
+  String? m_playAsSoundClickAnnouncement;  
+
+  String get playAsSoundClickAnnouncement { 
+    if (this.m_playAsSoundClickAnnouncement == null) {
+      this.m_playAsSoundClickAnnouncement = "";
+    }
+    return this.m_playAsSoundClickAnnouncement!;
+  }
+
+  void set playAsSoundClickAnnouncement (String v) {
+    this.m_playAsSoundClickAnnouncement = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,12 +57,12 @@ class LangAccessibilitySonificationOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.playAsSoundButtonText != null) {  
-      buffer.writeAll(["\"playAsSoundButtonText\":", this.playAsSoundButtonText, ","], "");
+    if (this.m_playAsSoundButtonText != null) {  
+      buffer.writeAll(["\"playAsSoundButtonText\":", this.m_playAsSoundButtonText, ","], "");
     }
 
-    if (this.playAsSoundClickAnnouncement != null) {  
-      buffer.writeAll(["\"playAsSoundClickAnnouncement\":", this.playAsSoundClickAnnouncement, ","], "");
+    if (this.m_playAsSoundClickAnnouncement != null) {  
+      buffer.writeAll(["\"playAsSoundClickAnnouncement\":", this.m_playAsSoundClickAnnouncement, ","], "");
     }
   }
 

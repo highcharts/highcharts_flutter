@@ -24,9 +24,45 @@ import 'OptionFragment.dart';
  */
 class TypeDescFormatContextObject extends OptionFragment {
   TypeDescFormatContextObject() : super();
-  String? mapTitle;
-  double? numSeries;
-  double? numPoints;
+  String? m_mapTitle;  
+
+  String get mapTitle { 
+    if (this.m_mapTitle == null) {
+      this.m_mapTitle = "";
+    }
+    return this.m_mapTitle!;
+  }
+
+  void set mapTitle (String v) {
+    this.m_mapTitle = v;
+  }
+    
+  double? m_numSeries;  
+
+  double get numSeries { 
+    if (this.m_numSeries == null) {
+      this.m_numSeries = 0;
+    }
+    return this.m_numSeries!;
+  }
+
+  void set numSeries (double v) {
+    this.m_numSeries = v;
+  }
+    
+  double? m_numPoints;  
+
+  double get numPoints { 
+    if (this.m_numPoints == null) {
+      this.m_numPoints = 0;
+    }
+    return this.m_numPoints!;
+  }
+
+  void set numPoints (double v) {
+    this.m_numPoints = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -37,16 +73,16 @@ class TypeDescFormatContextObject extends OptionFragment {
     
     // NOTE: skip serialization of chart (type Chart is ignored)} 
 
-    if (this.mapTitle != null) {  
-      buffer.writeAll(["\"mapTitle\":", this.mapTitle, ","], "");
+    if (this.m_mapTitle != null) {  
+      buffer.writeAll(["\"mapTitle\":", this.m_mapTitle, ","], "");
     }
 
-    if (this.numSeries != null) {  
-      buffer.writeAll(["\"numSeries\":", this.numSeries, ","], "");
+    if (this.m_numSeries != null) {  
+      buffer.writeAll(["\"numSeries\":", this.m_numSeries, ","], "");
     }
 
-    if (this.numPoints != null) {  
-      buffer.writeAll(["\"numPoints\":", this.numPoints, ","], "");
+    if (this.m_numPoints != null) {  
+      buffer.writeAll(["\"numPoints\":", this.m_numPoints, ","], "");
     }
   }
 

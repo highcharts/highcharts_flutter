@@ -23,9 +23,45 @@ import 'OptionFragment.dart';
  */
 class AccessibilityScreenReaderSectionOptions extends OptionFragment {
   AccessibilityScreenReaderSectionOptions() : super();
-  String? afterChartFormat;
-  String? axisRangeDateFormat;
-  String? beforeChartFormat;
+  String? m_afterChartFormat;  
+
+  String get afterChartFormat { 
+    if (this.m_afterChartFormat == null) {
+      this.m_afterChartFormat = "";
+    }
+    return this.m_afterChartFormat!;
+  }
+
+  void set afterChartFormat (String v) {
+    this.m_afterChartFormat = v;
+  }
+    
+  String? m_axisRangeDateFormat;  
+
+  String get axisRangeDateFormat { 
+    if (this.m_axisRangeDateFormat == null) {
+      this.m_axisRangeDateFormat = "";
+    }
+    return this.m_axisRangeDateFormat!;
+  }
+
+  void set axisRangeDateFormat (String v) {
+    this.m_axisRangeDateFormat = v;
+  }
+    
+  String? m_beforeChartFormat;  
+
+  String get beforeChartFormat { 
+    if (this.m_beforeChartFormat == null) {
+      this.m_beforeChartFormat = "";
+    }
+    return this.m_beforeChartFormat!;
+  }
+
+  void set beforeChartFormat (String v) {
+    this.m_beforeChartFormat = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -34,16 +70,16 @@ class AccessibilityScreenReaderSectionOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.afterChartFormat != null) {  
-      buffer.writeAll(["\"afterChartFormat\":", this.afterChartFormat, ","], "");
+    if (this.m_afterChartFormat != null) {  
+      buffer.writeAll(["\"afterChartFormat\":", this.m_afterChartFormat, ","], "");
     }
 
-    if (this.axisRangeDateFormat != null) {  
-      buffer.writeAll(["\"axisRangeDateFormat\":", this.axisRangeDateFormat, ","], "");
+    if (this.m_axisRangeDateFormat != null) {  
+      buffer.writeAll(["\"axisRangeDateFormat\":", this.m_axisRangeDateFormat, ","], "");
     }
 
-    if (this.beforeChartFormat != null) {  
-      buffer.writeAll(["\"beforeChartFormat\":", this.beforeChartFormat, ","], "");
+    if (this.m_beforeChartFormat != null) {  
+      buffer.writeAll(["\"beforeChartFormat\":", this.m_beforeChartFormat, ","], "");
     }
   }
 

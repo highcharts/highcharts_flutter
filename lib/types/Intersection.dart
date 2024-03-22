@@ -23,8 +23,32 @@ import 'OptionFragment.dart';
  */
 class Intersection extends OptionFragment {
   Intersection() : super();
-  double? i;
-  double? lat;
+  double? m_i;  
+
+  double get i { 
+    if (this.m_i == null) {
+      this.m_i = 0;
+    }
+    return this.m_i!;
+  }
+
+  void set i (double v) {
+    this.m_i = v;
+  }
+    
+  double? m_lat;  
+
+  double get lat { 
+    if (this.m_lat == null) {
+      this.m_lat = 0;
+    }
+    return this.m_lat!;
+  }
+
+  void set lat (double v) {
+    this.m_lat = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,12 +57,12 @@ class Intersection extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.i != null) {  
-      buffer.writeAll(["\"i\":", this.i, ","], "");
+    if (this.m_i != null) {  
+      buffer.writeAll(["\"i\":", this.m_i, ","], "");
     }
 
-    if (this.lat != null) {  
-      buffer.writeAll(["\"lat\":", this.lat, ","], "");
+    if (this.m_lat != null) {  
+      buffer.writeAll(["\"lat\":", this.m_lat, ","], "");
     }
 
     // NOTE: skip serialization of direction (type -1 is ignored)} 

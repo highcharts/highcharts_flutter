@@ -23,7 +23,19 @@ import 'OptionFragment.dart';
  */
 class StockToolsGuiDefinitionsButtonOptions extends OptionFragment {
   StockToolsGuiDefinitionsButtonOptions() : super();
-  String? symbol;
+  String? m_symbol;  
+
+  String get symbol { 
+    if (this.m_symbol == null) {
+      this.m_symbol = "";
+    }
+    return this.m_symbol!;
+  }
+
+  void set symbol (String v) {
+    this.m_symbol = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -32,8 +44,8 @@ class StockToolsGuiDefinitionsButtonOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.symbol != null) {  
-      buffer.writeAll(["\"symbol\":", this.symbol, ","], "");
+    if (this.m_symbol != null) {  
+      buffer.writeAll(["\"symbol\":", this.m_symbol, ","], "");
     }
   }
 

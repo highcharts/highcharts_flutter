@@ -24,8 +24,32 @@ import 'OptionFragment.dart';
  */
 class TextOptions extends OptionFragment {
   TextOptions() : super();
-  String? className;
-  String? text;
+  String? m_className;  
+
+  String get className { 
+    if (this.m_className == null) {
+      this.m_className = "";
+    }
+    return this.m_className!;
+  }
+
+  void set className (String v) {
+    this.m_className = v;
+  }
+    
+  String? m_text;  
+
+  String get text { 
+    if (this.m_text == null) {
+      this.m_text = "";
+    }
+    return this.m_text!;
+  }
+
+  void set text (String v) {
+    this.m_text = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -34,14 +58,14 @@ class TextOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.className != null) {  
-      buffer.writeAll(["\"className\":", this.className, ","], "");
+    if (this.m_className != null) {  
+      buffer.writeAll(["\"className\":", this.m_className, ","], "");
     }
 
     // NOTE: skip serialization of style (type CSSObject is ignored)} 
 
-    if (this.text != null) {  
-      buffer.writeAll(["\"text\":", this.text, ","], "");
+    if (this.m_text != null) {  
+      buffer.writeAll(["\"text\":", this.m_text, ","], "");
     }
   }
 

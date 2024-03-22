@@ -23,8 +23,32 @@ import 'OptionFragment.dart';
  */
 class MapBubbleSeries extends OptionFragment {
   MapBubbleSeries() : super();
-  String? type;
-  bool? xyFromShape;
+  String? m_type;  
+
+  String get type { 
+    if (this.m_type == null) {
+      this.m_type = "";
+    }
+    return this.m_type!;
+  }
+
+  void set type (String v) {
+    this.m_type = v;
+  }
+    
+  bool? m_xyFromShape;  
+
+  bool get xyFromShape { 
+    if (this.m_xyFromShape == null) {
+      this.m_xyFromShape = false;
+    }
+    return this.m_xyFromShape!;
+  }
+
+  void set xyFromShape (bool v) {
+    this.m_xyFromShape = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,16 +57,16 @@ class MapBubbleSeries extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.type != null) {  
-      buffer.writeAll(["\"type\":", this.type, ","], "");
+    if (this.m_type != null) {  
+      buffer.writeAll(["\"type\":", this.m_type, ","], "");
     }
 
     // NOTE: skip serialization of pointArrayMap (type string[] is ignored)} 
 
     // NOTE: skip serialization of pointClass (type typeof MapBubblePoint is ignored)} 
 
-    if (this.xyFromShape != null) {  
-      buffer.writeAll(["\"xyFromShape\":", this.xyFromShape, ","], "");
+    if (this.m_xyFromShape != null) {  
+      buffer.writeAll(["\"xyFromShape\":", this.m_xyFromShape, ","], "");
     }
   }
 

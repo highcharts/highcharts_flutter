@@ -24,8 +24,32 @@ import 'OptionFragment.dart';
  */
 class FlagsSeries extends OptionFragment {
   FlagsSeries() : super();
-  bool? allowDG;
-  bool? takeOrdinalPosition;
+  bool? m_allowDG;  
+
+  bool get allowDG { 
+    if (this.m_allowDG == null) {
+      this.m_allowDG = false;
+    }
+    return this.m_allowDG!;
+  }
+
+  void set allowDG (bool v) {
+    this.m_allowDG = v;
+  }
+    
+  bool? m_takeOrdinalPosition;  
+
+  bool get takeOrdinalPosition { 
+    if (this.m_takeOrdinalPosition == null) {
+      this.m_takeOrdinalPosition = false;
+    }
+    return this.m_takeOrdinalPosition!;
+  }
+
+  void set takeOrdinalPosition (bool v) {
+    this.m_takeOrdinalPosition = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -34,16 +58,16 @@ class FlagsSeries extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.allowDG != null) {  
-      buffer.writeAll(["\"allowDG\":", this.allowDG, ","], "");
+    if (this.m_allowDG != null) {  
+      buffer.writeAll(["\"allowDG\":", this.m_allowDG, ","], "");
     }
 
     // NOTE: skip serialization of group (type SVGElement is ignored)} 
 
     // NOTE: skip serialization of pointClass (type typeof FlagsPoint is ignored)} 
 
-    if (this.takeOrdinalPosition != null) {  
-      buffer.writeAll(["\"takeOrdinalPosition\":", this.takeOrdinalPosition, ","], "");
+    if (this.m_takeOrdinalPosition != null) {  
+      buffer.writeAll(["\"takeOrdinalPosition\":", this.m_takeOrdinalPosition, ","], "");
     }
   }
 

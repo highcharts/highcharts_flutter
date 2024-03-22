@@ -24,7 +24,19 @@ import 'OptionFragment.dart';
  */
 class HTMLTableConnectorOptions extends DataConnectorOptions {
   HTMLTableConnectorOptions() : super();
-  String? table;
+  String? m_table;  
+
+  String get table { 
+    if (this.m_table == null) {
+      this.m_table = "";
+    }
+    return this.m_table!;
+  }
+
+  void set table (String v) {
+    this.m_table = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,8 +45,8 @@ class HTMLTableConnectorOptions extends DataConnectorOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.table != null) {  
-      buffer.writeAll(["\"table\":", this.table, ","], "");
+    if (this.m_table != null) {  
+      buffer.writeAll(["\"table\":", this.m_table, ","], "");
     }
   }
 

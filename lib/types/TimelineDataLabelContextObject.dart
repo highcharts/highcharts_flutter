@@ -24,7 +24,19 @@ import 'OptionFragment.dart';
  */
 class TimelineDataLabelContextObject extends OptionFragment {
   TimelineDataLabelContextObject() : super();
-  String? key;
+  String? m_key;  
+
+  String get key { 
+    if (this.m_key == null) {
+      this.m_key = "";
+    }
+    return this.m_key!;
+  }
+
+  void set key (String v) {
+    this.m_key = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,8 +45,8 @@ class TimelineDataLabelContextObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.key != null) {  
-      buffer.writeAll(["\"key\":", this.key, ","], "");
+    if (this.m_key != null) {  
+      buffer.writeAll(["\"key\":", this.m_key, ","], "");
     }
 
     // NOTE: skip serialization of point (type TimelinePoint is ignored)} 

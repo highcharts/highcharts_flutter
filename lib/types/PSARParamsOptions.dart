@@ -24,10 +24,58 @@ import 'OptionFragment.dart';
  */
 class PSARParamsOptions extends SMAParamsOptions {
   PSARParamsOptions() : super();
-  double? initialAccelerationFactor;
-  double? maxAccelerationFactor;
-  double? increment;
-  double? decimals;
+  double? m_initialAccelerationFactor;  
+
+  double get initialAccelerationFactor { 
+    if (this.m_initialAccelerationFactor == null) {
+      this.m_initialAccelerationFactor = 0;
+    }
+    return this.m_initialAccelerationFactor!;
+  }
+
+  void set initialAccelerationFactor (double v) {
+    this.m_initialAccelerationFactor = v;
+  }
+    
+  double? m_maxAccelerationFactor;  
+
+  double get maxAccelerationFactor { 
+    if (this.m_maxAccelerationFactor == null) {
+      this.m_maxAccelerationFactor = 0;
+    }
+    return this.m_maxAccelerationFactor!;
+  }
+
+  void set maxAccelerationFactor (double v) {
+    this.m_maxAccelerationFactor = v;
+  }
+    
+  double? m_increment;  
+
+  double get increment { 
+    if (this.m_increment == null) {
+      this.m_increment = 0;
+    }
+    return this.m_increment!;
+  }
+
+  void set increment (double v) {
+    this.m_increment = v;
+  }
+    
+  double? m_decimals;  
+
+  double get decimals { 
+    if (this.m_decimals == null) {
+      this.m_decimals = 0;
+    }
+    return this.m_decimals!;
+  }
+
+  void set decimals (double v) {
+    this.m_decimals = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -36,20 +84,20 @@ class PSARParamsOptions extends SMAParamsOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.initialAccelerationFactor != null) {  
-      buffer.writeAll(["\"initialAccelerationFactor\":", this.initialAccelerationFactor, ","], "");
+    if (this.m_initialAccelerationFactor != null) {  
+      buffer.writeAll(["\"initialAccelerationFactor\":", this.m_initialAccelerationFactor, ","], "");
     }
 
-    if (this.maxAccelerationFactor != null) {  
-      buffer.writeAll(["\"maxAccelerationFactor\":", this.maxAccelerationFactor, ","], "");
+    if (this.m_maxAccelerationFactor != null) {  
+      buffer.writeAll(["\"maxAccelerationFactor\":", this.m_maxAccelerationFactor, ","], "");
     }
 
-    if (this.increment != null) {  
-      buffer.writeAll(["\"increment\":", this.increment, ","], "");
+    if (this.m_increment != null) {  
+      buffer.writeAll(["\"increment\":", this.m_increment, ","], "");
     }
 
-    if (this.decimals != null) {  
-      buffer.writeAll(["\"decimals\":", this.decimals, ","], "");
+    if (this.m_decimals != null) {  
+      buffer.writeAll(["\"decimals\":", this.m_decimals, ","], "");
     }
   }
 

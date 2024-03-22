@@ -23,8 +23,32 @@ import 'OptionFragment.dart';
  */
 class EventOptions extends OptionFragment {
   EventOptions() : super();
-  double? order;
-  bool? passive;
+  double? m_order;  
+
+  double get order { 
+    if (this.m_order == null) {
+      this.m_order = 0;
+    }
+    return this.m_order!;
+  }
+
+  void set order (double v) {
+    this.m_order = v;
+  }
+    
+  bool? m_passive;  
+
+  bool get passive { 
+    if (this.m_passive == null) {
+      this.m_passive = false;
+    }
+    return this.m_passive!;
+  }
+
+  void set passive (bool v) {
+    this.m_passive = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,12 +57,12 @@ class EventOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.order != null) {  
-      buffer.writeAll(["\"order\":", this.order, ","], "");
+    if (this.m_order != null) {  
+      buffer.writeAll(["\"order\":", this.m_order, ","], "");
     }
 
-    if (this.passive != null) {  
-      buffer.writeAll(["\"passive\":", this.passive, ","], "");
+    if (this.m_passive != null) {  
+      buffer.writeAll(["\"passive\":", this.m_passive, ","], "");
     }
   }
 

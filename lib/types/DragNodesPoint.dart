@@ -25,8 +25,32 @@ import 'OptionFragment.dart';
  */
 class DragNodesPoint extends Point {
   DragNodesPoint() : super();
-  bool? hasDragged;
-  bool? inDragMode;
+  bool? m_hasDragged;  
+
+  bool get hasDragged { 
+    if (this.m_hasDragged == null) {
+      this.m_hasDragged = false;
+    }
+    return this.m_hasDragged!;
+  }
+
+  void set hasDragged (bool v) {
+    this.m_hasDragged = v;
+  }
+    
+  bool? m_inDragMode;  
+
+  bool get inDragMode { 
+    if (this.m_inDragMode == null) {
+      this.m_inDragMode = false;
+    }
+    return this.m_inDragMode!;
+  }
+
+  void set inDragMode (bool v) {
+    this.m_inDragMode = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -37,12 +61,12 @@ class DragNodesPoint extends Point {
     
     // NOTE: skip serialization of fixedPosition (type Generic is ignored)} 
 
-    if (this.hasDragged != null) {  
-      buffer.writeAll(["\"hasDragged\":", this.hasDragged, ","], "");
+    if (this.m_hasDragged != null) {  
+      buffer.writeAll(["\"hasDragged\":", this.m_hasDragged, ","], "");
     }
 
-    if (this.inDragMode != null) {  
-      buffer.writeAll(["\"inDragMode\":", this.inDragMode, ","], "");
+    if (this.m_inDragMode != null) {  
+      buffer.writeAll(["\"inDragMode\":", this.m_inDragMode, ","], "");
     }
 
     // NOTE: skip serialization of series (type DragNodesSeries is ignored)} 

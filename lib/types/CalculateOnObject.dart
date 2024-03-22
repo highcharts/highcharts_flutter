@@ -23,8 +23,32 @@ import 'OptionFragment.dart';
  */
 class CalculateOnObject extends OptionFragment {
   CalculateOnObject() : super();
-  String? chart;
-  String? xAxis;
+  String? m_chart;  
+
+  String get chart { 
+    if (this.m_chart == null) {
+      this.m_chart = "";
+    }
+    return this.m_chart!;
+  }
+
+  void set chart (String v) {
+    this.m_chart = v;
+  }
+    
+  String? m_xAxis;  
+
+  String get xAxis { 
+    if (this.m_xAxis == null) {
+      this.m_xAxis = "";
+    }
+    return this.m_xAxis!;
+  }
+
+  void set xAxis (String v) {
+    this.m_xAxis = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,12 +57,12 @@ class CalculateOnObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.chart != null) {  
-      buffer.writeAll(["\"chart\":", this.chart, ","], "");
+    if (this.m_chart != null) {  
+      buffer.writeAll(["\"chart\":", this.m_chart, ","], "");
     }
 
-    if (this.xAxis != null) {  
-      buffer.writeAll(["\"xAxis\":", this.xAxis, ","], "");
+    if (this.m_xAxis != null) {  
+      buffer.writeAll(["\"xAxis\":", this.m_xAxis, ","], "");
     }
   }
 

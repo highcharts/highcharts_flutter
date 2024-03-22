@@ -29,7 +29,19 @@ class WindbarbSeriesOptions extends ColumnSeriesOptions {
    * projected on. When `null`, the wind symbols are drawn on the X axis,
    * but offset up or down by the `yOffset` setting.  
       */
-  String? onSeries;
+  String? m_onSeries;  
+
+  String get onSeries { 
+    if (this.m_onSeries == null) {
+      this.m_onSeries = "";
+    }
+    return this.m_onSeries!;
+  }
+
+  void set onSeries (String v) {
+    this.m_onSeries = v;
+  }
+    
   // NOTE: states skipped - type Generic is ignored in gen
 
   /**
@@ -37,13 +49,37 @@ class WindbarbSeriesOptions extends ColumnSeriesOptions {
    * 
    * Defaults to '20'. 
       */
-  double? vectorLength;
+  double? m_vectorLength;  
+
+  double get vectorLength { 
+    if (this.m_vectorLength == null) {
+      this.m_vectorLength = 0;
+    }
+    return this.m_vectorLength!;
+  }
+
+  void set vectorLength (double v) {
+    this.m_vectorLength = v;
+  }
+    
   /**
    * Horizontal offset from the cartesian position, in pixels. When the
    * chart is inverted, this option allows translation like
    * [yOffset](#plotOptions.windbarb.yOffset) in non inverted charts.  
       */
-  double? xOffset;
+  double? m_xOffset;  
+
+  double get xOffset { 
+    if (this.m_xOffset == null) {
+      this.m_xOffset = 0;
+    }
+    return this.m_xOffset!;
+  }
+
+  void set xOffset (double v) {
+    this.m_xOffset = v;
+  }
+    
   /**
    * Vertical offset from the cartesian position, in pixels. The default
    * value makes sure the symbols don't overlap the X axis when `onSeries`
@@ -52,7 +88,19 @@ class WindbarbSeriesOptions extends ColumnSeriesOptions {
    * 
    * Defaults to '-20'. 
       */
-  double? yOffset;
+  double? m_yOffset;  
+
+  double get yOffset { 
+    if (this.m_yOffset == null) {
+      this.m_yOffset = 0;
+    }
+    return this.m_yOffset!;
+  }
+
+  void set yOffset (double v) {
+    this.m_yOffset = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -61,22 +109,22 @@ class WindbarbSeriesOptions extends ColumnSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.onSeries != null) {  
-      buffer.writeAll(["\"onSeries\":", this.onSeries, ","], "");
+    if (this.m_onSeries != null) {  
+      buffer.writeAll(["\"onSeries\":", this.m_onSeries, ","], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 
 
-    if (this.vectorLength != null) {  
-      buffer.writeAll(["\"vectorLength\":", this.vectorLength, ","], "");
+    if (this.m_vectorLength != null) {  
+      buffer.writeAll(["\"vectorLength\":", this.m_vectorLength, ","], "");
     }
 
-    if (this.xOffset != null) {  
-      buffer.writeAll(["\"xOffset\":", this.xOffset, ","], "");
+    if (this.m_xOffset != null) {  
+      buffer.writeAll(["\"xOffset\":", this.m_xOffset, ","], "");
     }
 
-    if (this.yOffset != null) {  
-      buffer.writeAll(["\"yOffset\":", this.yOffset, ","], "");
+    if (this.m_yOffset != null) {  
+      buffer.writeAll(["\"yOffset\":", this.m_yOffset, ","], "");
     }
   }
 

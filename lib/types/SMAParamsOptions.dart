@@ -23,8 +23,32 @@ import 'OptionFragment.dart';
  */
 class SMAParamsOptions extends OptionFragment {
   SMAParamsOptions() : super();
-  double? index;
-  double? period;
+  double? m_index;  
+
+  double get index { 
+    if (this.m_index == null) {
+      this.m_index = 0;
+    }
+    return this.m_index!;
+  }
+
+  void set index (double v) {
+    this.m_index = v;
+  }
+    
+  double? m_period;  
+
+  double get period { 
+    if (this.m_period == null) {
+      this.m_period = 0;
+    }
+    return this.m_period!;
+  }
+
+  void set period (double v) {
+    this.m_period = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,12 +57,12 @@ class SMAParamsOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.index != null) {  
-      buffer.writeAll(["\"index\":", this.index, ","], "");
+    if (this.m_index != null) {  
+      buffer.writeAll(["\"index\":", this.m_index, ","], "");
     }
 
-    if (this.period != null) {  
-      buffer.writeAll(["\"period\":", this.period, ","], "");
+    if (this.m_period != null) {  
+      buffer.writeAll(["\"period\":", this.m_period, ","], "");
     }
   }
 

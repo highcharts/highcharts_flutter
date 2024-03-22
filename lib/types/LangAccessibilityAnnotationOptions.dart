@@ -23,10 +23,58 @@ import 'OptionFragment.dart';
  */
 class LangAccessibilityAnnotationOptions extends OptionFragment {
   LangAccessibilityAnnotationOptions() : super();
-  String? heading;
-  String? descriptionSinglePoint;
-  String? descriptionMultiplePoints;
-  String? descriptionNoPoints;
+  String? m_heading;  
+
+  String get heading { 
+    if (this.m_heading == null) {
+      this.m_heading = "";
+    }
+    return this.m_heading!;
+  }
+
+  void set heading (String v) {
+    this.m_heading = v;
+  }
+    
+  String? m_descriptionSinglePoint;  
+
+  String get descriptionSinglePoint { 
+    if (this.m_descriptionSinglePoint == null) {
+      this.m_descriptionSinglePoint = "";
+    }
+    return this.m_descriptionSinglePoint!;
+  }
+
+  void set descriptionSinglePoint (String v) {
+    this.m_descriptionSinglePoint = v;
+  }
+    
+  String? m_descriptionMultiplePoints;  
+
+  String get descriptionMultiplePoints { 
+    if (this.m_descriptionMultiplePoints == null) {
+      this.m_descriptionMultiplePoints = "";
+    }
+    return this.m_descriptionMultiplePoints!;
+  }
+
+  void set descriptionMultiplePoints (String v) {
+    this.m_descriptionMultiplePoints = v;
+  }
+    
+  String? m_descriptionNoPoints;  
+
+  String get descriptionNoPoints { 
+    if (this.m_descriptionNoPoints == null) {
+      this.m_descriptionNoPoints = "";
+    }
+    return this.m_descriptionNoPoints!;
+  }
+
+  void set descriptionNoPoints (String v) {
+    this.m_descriptionNoPoints = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -35,20 +83,20 @@ class LangAccessibilityAnnotationOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.heading != null) {  
-      buffer.writeAll(["\"heading\":", this.heading, ","], "");
+    if (this.m_heading != null) {  
+      buffer.writeAll(["\"heading\":", this.m_heading, ","], "");
     }
 
-    if (this.descriptionSinglePoint != null) {  
-      buffer.writeAll(["\"descriptionSinglePoint\":", this.descriptionSinglePoint, ","], "");
+    if (this.m_descriptionSinglePoint != null) {  
+      buffer.writeAll(["\"descriptionSinglePoint\":", this.m_descriptionSinglePoint, ","], "");
     }
 
-    if (this.descriptionMultiplePoints != null) {  
-      buffer.writeAll(["\"descriptionMultiplePoints\":", this.descriptionMultiplePoints, ","], "");
+    if (this.m_descriptionMultiplePoints != null) {  
+      buffer.writeAll(["\"descriptionMultiplePoints\":", this.m_descriptionMultiplePoints, ","], "");
     }
 
-    if (this.descriptionNoPoints != null) {  
-      buffer.writeAll(["\"descriptionNoPoints\":", this.descriptionNoPoints, ","], "");
+    if (this.m_descriptionNoPoints != null) {  
+      buffer.writeAll(["\"descriptionNoPoints\":", this.m_descriptionNoPoints, ","], "");
     }
   }
 

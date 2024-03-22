@@ -24,7 +24,19 @@ import 'OptionFragment.dart';
  */
 class HistogramPointOptions extends ColumnPointOptions {
   HistogramPointOptions() : super();
-  double? x2;
+  double? m_x2;  
+
+  double get x2 { 
+    if (this.m_x2 == null) {
+      this.m_x2 = 0;
+    }
+    return this.m_x2!;
+  }
+
+  void set x2 (double v) {
+    this.m_x2 = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,8 +45,8 @@ class HistogramPointOptions extends ColumnPointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.x2 != null) {  
-      buffer.writeAll(["\"x2\":", this.x2, ","], "");
+    if (this.m_x2 != null) {  
+      buffer.writeAll(["\"x2\":", this.m_x2, ","], "");
     }
   }
 

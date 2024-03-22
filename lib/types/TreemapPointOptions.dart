@@ -24,10 +24,58 @@ import 'OptionFragment.dart';
  */
 class TreemapPointOptions extends ScatterPointOptions {
   TreemapPointOptions() : super();
-  String? name;
-  String? parent;
-  double? value;
-  double? width;
+  String? m_name;  
+
+  String get name { 
+    if (this.m_name == null) {
+      this.m_name = "";
+    }
+    return this.m_name!;
+  }
+
+  void set name (String v) {
+    this.m_name = v;
+  }
+    
+  String? m_parent;  
+
+  String get parent { 
+    if (this.m_parent == null) {
+      this.m_parent = "";
+    }
+    return this.m_parent!;
+  }
+
+  void set parent (String v) {
+    this.m_parent = v;
+  }
+    
+  double? m_value;  
+
+  double get value { 
+    if (this.m_value == null) {
+      this.m_value = 0;
+    }
+    return this.m_value!;
+  }
+
+  void set value (double v) {
+    this.m_value = v;
+  }
+    
+  double? m_width;  
+
+  double get width { 
+    if (this.m_width == null) {
+      this.m_width = 0;
+    }
+    return this.m_width!;
+  }
+
+  void set width (double v) {
+    this.m_width = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -36,20 +84,20 @@ class TreemapPointOptions extends ScatterPointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.name != null) {  
-      buffer.writeAll(["\"name\":", this.name, ","], "");
+    if (this.m_name != null) {  
+      buffer.writeAll(["\"name\":", this.m_name, ","], "");
     }
 
-    if (this.parent != null) {  
-      buffer.writeAll(["\"parent\":", this.parent, ","], "");
+    if (this.m_parent != null) {  
+      buffer.writeAll(["\"parent\":", this.m_parent, ","], "");
     }
 
-    if (this.value != null) {  
-      buffer.writeAll(["\"value\":", this.value, ","], "");
+    if (this.m_value != null) {  
+      buffer.writeAll(["\"value\":", this.m_value, ","], "");
     }
 
-    if (this.width != null) {  
-      buffer.writeAll(["\"width\":", this.width, ","], "");
+    if (this.m_width != null) {  
+      buffer.writeAll(["\"width\":", this.m_width, ","], "");
     }
   }
 

@@ -24,7 +24,19 @@ import 'OptionFragment.dart';
  */
 class OBVParamsOptions extends SMAParamsOptions {
   OBVParamsOptions() : super();
-  String? volumeSeriesID;
+  String? m_volumeSeriesID;  
+
+  String get volumeSeriesID { 
+    if (this.m_volumeSeriesID == null) {
+      this.m_volumeSeriesID = "";
+    }
+    return this.m_volumeSeriesID!;
+  }
+
+  void set volumeSeriesID (String v) {
+    this.m_volumeSeriesID = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,8 +45,8 @@ class OBVParamsOptions extends SMAParamsOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.volumeSeriesID != null) {  
-      buffer.writeAll(["\"volumeSeriesID\":", this.volumeSeriesID, ","], "");
+    if (this.m_volumeSeriesID != null) {  
+      buffer.writeAll(["\"volumeSeriesID\":", this.m_volumeSeriesID, ","], "");
     }
   }
 

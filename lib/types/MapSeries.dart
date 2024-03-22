@@ -23,7 +23,19 @@ import 'OptionFragment.dart';
  */
 class MapSeries extends OptionFragment {
   MapSeries() : super();
-  bool? preserveAspectRatio;
+  bool? m_preserveAspectRatio;  
+
+  bool get preserveAspectRatio { 
+    if (this.m_preserveAspectRatio == null) {
+      this.m_preserveAspectRatio = false;
+    }
+    return this.m_preserveAspectRatio!;
+  }
+
+  void set preserveAspectRatio (bool v) {
+    this.m_preserveAspectRatio = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -36,8 +48,8 @@ class MapSeries extends OptionFragment {
 
     // NOTE: skip serialization of pointClass (type typeof MapPoint is ignored)} 
 
-    if (this.preserveAspectRatio != null) {  
-      buffer.writeAll(["\"preserveAspectRatio\":", this.preserveAspectRatio, ","], "");
+    if (this.m_preserveAspectRatio != null) {  
+      buffer.writeAll(["\"preserveAspectRatio\":", this.m_preserveAspectRatio, ","], "");
     }
 
     // NOTE: skip serialization of trackerGroups (type string[] is ignored)} 

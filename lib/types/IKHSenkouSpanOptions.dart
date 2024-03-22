@@ -23,8 +23,32 @@ import 'OptionFragment.dart';
  */
 class IKHSenkouSpanOptions extends OptionFragment {
   IKHSenkouSpanOptions() : super();
-  String? color;
-  String? negativeColor;
+  String? m_color;  
+
+  String get color { 
+    if (this.m_color == null) {
+      this.m_color = "";
+    }
+    return this.m_color!;
+  }
+
+  void set color (String v) {
+    this.m_color = v;
+  }
+    
+  String? m_negativeColor;  
+
+  String get negativeColor { 
+    if (this.m_negativeColor == null) {
+      this.m_negativeColor = "";
+    }
+    return this.m_negativeColor!;
+  }
+
+  void set negativeColor (String v) {
+    this.m_negativeColor = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,12 +57,12 @@ class IKHSenkouSpanOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.color != null) {  
-      buffer.writeAll(["\"color\":", this.color, ","], "");
+    if (this.m_color != null) {  
+      buffer.writeAll(["\"color\":", this.m_color, ","], "");
     }
 
-    if (this.negativeColor != null) {  
-      buffer.writeAll(["\"negativeColor\":", this.negativeColor, ","], "");
+    if (this.m_negativeColor != null) {  
+      buffer.writeAll(["\"negativeColor\":", this.m_negativeColor, ","], "");
     }
 
     // NOTE: skip serialization of styles (type CSSObject & { fill: ColorType; } is ignored)} 

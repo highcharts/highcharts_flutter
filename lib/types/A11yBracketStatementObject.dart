@@ -23,9 +23,45 @@ import 'OptionFragment.dart';
  */
 class A11yBracketStatementObject extends OptionFragment {
   A11yBracketStatementObject() : super();
-  double? begin;
-  double? end;
-  String? statement;
+  double? m_begin;  
+
+  double get begin { 
+    if (this.m_begin == null) {
+      this.m_begin = 0;
+    }
+    return this.m_begin!;
+  }
+
+  void set begin (double v) {
+    this.m_begin = v;
+  }
+    
+  double? m_end;  
+
+  double get end { 
+    if (this.m_end == null) {
+      this.m_end = 0;
+    }
+    return this.m_end!;
+  }
+
+  void set end (double v) {
+    this.m_end = v;
+  }
+    
+  String? m_statement;  
+
+  String get statement { 
+    if (this.m_statement == null) {
+      this.m_statement = "";
+    }
+    return this.m_statement!;
+  }
+
+  void set statement (String v) {
+    this.m_statement = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -34,16 +70,16 @@ class A11yBracketStatementObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.begin != null) {  
-      buffer.writeAll(["\"begin\":", this.begin, ","], "");
+    if (this.m_begin != null) {  
+      buffer.writeAll(["\"begin\":", this.m_begin, ","], "");
     }
 
-    if (this.end != null) {  
-      buffer.writeAll(["\"end\":", this.end, ","], "");
+    if (this.m_end != null) {  
+      buffer.writeAll(["\"end\":", this.m_end, ","], "");
     }
 
-    if (this.statement != null) {  
-      buffer.writeAll(["\"statement\":", this.statement, ","], "");
+    if (this.m_statement != null) {  
+      buffer.writeAll(["\"statement\":", this.m_statement, ","], "");
     }
   }
 

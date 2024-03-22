@@ -23,7 +23,19 @@ import 'OptionFragment.dart';
  */
 class WGLTextureObject extends OptionFragment {
   WGLTextureObject() : super();
-  bool? isReady;
+  bool? m_isReady;  
+
+  bool get isReady { 
+    if (this.m_isReady == null) {
+      this.m_isReady = false;
+    }
+    return this.m_isReady!;
+  }
+
+  void set isReady (bool v) {
+    this.m_isReady = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -32,8 +44,8 @@ class WGLTextureObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.isReady != null) {  
-      buffer.writeAll(["\"isReady\":", this.isReady, ","], "");
+    if (this.m_isReady != null) {  
+      buffer.writeAll(["\"isReady\":", this.m_isReady, ","], "");
     }
 
     // NOTE: skip serialization of texture (type HTMLCanvasElement is ignored)} 

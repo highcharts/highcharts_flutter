@@ -24,8 +24,32 @@ import 'OptionFragment.dart';
  */
 class VBPParamsOptions extends SMAParamsOptions {
   VBPParamsOptions() : super();
-  double? ranges;
-  String? volumeSeriesID;
+  double? m_ranges;  
+
+  double get ranges { 
+    if (this.m_ranges == null) {
+      this.m_ranges = 0;
+    }
+    return this.m_ranges!;
+  }
+
+  void set ranges (double v) {
+    this.m_ranges = v;
+  }
+    
+  String? m_volumeSeriesID;  
+
+  String get volumeSeriesID { 
+    if (this.m_volumeSeriesID == null) {
+      this.m_volumeSeriesID = "";
+    }
+    return this.m_volumeSeriesID!;
+  }
+
+  void set volumeSeriesID (String v) {
+    this.m_volumeSeriesID = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -34,12 +58,12 @@ class VBPParamsOptions extends SMAParamsOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.ranges != null) {  
-      buffer.writeAll(["\"ranges\":", this.ranges, ","], "");
+    if (this.m_ranges != null) {  
+      buffer.writeAll(["\"ranges\":", this.m_ranges, ","], "");
     }
 
-    if (this.volumeSeriesID != null) {  
-      buffer.writeAll(["\"volumeSeriesID\":", this.volumeSeriesID, ","], "");
+    if (this.m_volumeSeriesID != null) {  
+      buffer.writeAll(["\"volumeSeriesID\":", this.m_volumeSeriesID, ","], "");
     }
   }
 

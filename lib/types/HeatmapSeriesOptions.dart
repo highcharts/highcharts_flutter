@@ -31,11 +31,35 @@ class HeatmapSeriesOptions extends ScatterSeriesOptions {
    * 
    * Defaults to '1'. 
       */
-  double? colsize;
+  double? m_colsize;  
+
+  double get colsize { 
+    if (this.m_colsize == null) {
+      this.m_colsize = 0;
+    }
+    return this.m_colsize!;
+  }
+
+  void set colsize (double v) {
+    this.m_colsize = v;
+  }
+    
   /**
    * Make the heatmap render its data points as an interpolated image.  
       */
-  bool? interpolation;
+  bool? m_interpolation;  
+
+  bool get interpolation { 
+    if (this.m_interpolation == null) {
+      this.m_interpolation = false;
+    }
+    return this.m_interpolation!;
+  }
+
+  void set interpolation (bool v) {
+    this.m_interpolation = v;
+  }
+    
   /**
    * Options for the point markers of line and scatter-like series. Properties
    * like `fillColor`, `lineColor` and `lineWidth` define the visual
@@ -54,19 +78,55 @@ class HeatmapSeriesOptions extends ScatterSeriesOptions {
    * 
    * Defaults to '#f7f7f7'. 
       */
-  String? nullColor;
+  String? m_nullColor;  
+
+  String get nullColor { 
+    if (this.m_nullColor == null) {
+      this.m_nullColor = "";
+    }
+    return this.m_nullColor!;
+  }
+
+  void set nullColor (String v) {
+    this.m_nullColor = v;
+  }
+    
   /**
    * Padding between the points in the heatmap. 
    * 
    * Defaults to '0'. 
       */
-  double? pointPadding;
+  double? m_pointPadding;  
+
+  double get pointPadding { 
+    if (this.m_pointPadding == null) {
+      this.m_pointPadding = 0;
+    }
+    return this.m_pointPadding!;
+  }
+
+  void set pointPadding (double v) {
+    this.m_pointPadding = v;
+  }
+    
   /**
    * The row size - how many Y axis units each heatmap row should span. 
    * 
    * Defaults to '1'. 
       */
-  double? rowsize;
+  double? m_rowsize;  
+
+  double get rowsize { 
+    if (this.m_rowsize == null) {
+      this.m_rowsize = 0;
+    }
+    return this.m_rowsize!;
+  }
+
+  void set rowsize (double v) {
+    this.m_rowsize = v;
+  }
+    
   // NOTE: states skipped - type Generic is ignored in gen
 
 
@@ -77,28 +137,28 @@ class HeatmapSeriesOptions extends ScatterSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.colsize != null) {  
-      buffer.writeAll(["\"colsize\":", this.colsize, ","], "");
+    if (this.m_colsize != null) {  
+      buffer.writeAll(["\"colsize\":", this.m_colsize, ","], "");
     }
 
-    if (this.interpolation != null) {  
-      buffer.writeAll(["\"interpolation\":", this.interpolation, ","], "");
+    if (this.m_interpolation != null) {  
+      buffer.writeAll(["\"interpolation\":", this.m_interpolation, ","], "");
     }
 
-    if (this.marker != null) {  
-      buffer.writeAll(["\"marker\":", this.marker?.toJSON(), ","], "");
+    if (this.m_marker != null) {  
+      buffer.writeAll(["\"marker\":", this.m_marker?.toJSON(), ","], "");
     }
 
-    if (this.nullColor != null) {  
-      buffer.writeAll(["\"nullColor\":", this.nullColor, ","], "");
+    if (this.m_nullColor != null) {  
+      buffer.writeAll(["\"nullColor\":", this.m_nullColor, ","], "");
     }
 
-    if (this.pointPadding != null) {  
-      buffer.writeAll(["\"pointPadding\":", this.pointPadding, ","], "");
+    if (this.m_pointPadding != null) {  
+      buffer.writeAll(["\"pointPadding\":", this.m_pointPadding, ","], "");
     }
 
-    if (this.rowsize != null) {  
-      buffer.writeAll(["\"rowsize\":", this.rowsize, ","], "");
+    if (this.m_rowsize != null) {  
+      buffer.writeAll(["\"rowsize\":", this.m_rowsize, ","], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 

@@ -24,9 +24,45 @@ import 'OptionFragment.dart';
  */
 class AnnotationTypeOptions extends OptionFragment {
   AnnotationTypeOptions() : super();
-  double? height;
-  double? xAxis;
-  double? yAxis;
+  double? m_height;  
+
+  double get height { 
+    if (this.m_height == null) {
+      this.m_height = 0;
+    }
+    return this.m_height!;
+  }
+
+  void set height (double v) {
+    this.m_height = v;
+  }
+    
+  double? m_xAxis;  
+
+  double get xAxis { 
+    if (this.m_xAxis == null) {
+      this.m_xAxis = 0;
+    }
+    return this.m_xAxis!;
+  }
+
+  void set xAxis (double v) {
+    this.m_xAxis = v;
+  }
+    
+  double? m_yAxis;  
+
+  double get yAxis { 
+    if (this.m_yAxis == null) {
+      this.m_yAxis = 0;
+    }
+    return this.m_yAxis!;
+  }
+
+  void set yAxis (double v) {
+    this.m_yAxis = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -37,8 +73,8 @@ class AnnotationTypeOptions extends OptionFragment {
     
     // NOTE: skip serialization of background (type Generic is ignored)} 
 
-    if (this.height != null) {  
-      buffer.writeAll(["\"height\":", this.height, ","], "");
+    if (this.m_height != null) {  
+      buffer.writeAll(["\"height\":", this.m_height, ","], "");
     }
 
     // NOTE: skip serialization of line (type Generic is ignored)} 
@@ -47,12 +83,12 @@ class AnnotationTypeOptions extends OptionFragment {
 
     // NOTE: skip serialization of points (type AnnotationTypePointsOptions[] is ignored)} 
 
-    if (this.xAxis != null) {  
-      buffer.writeAll(["\"xAxis\":", this.xAxis, ","], "");
+    if (this.m_xAxis != null) {  
+      buffer.writeAll(["\"xAxis\":", this.m_xAxis, ","], "");
     }
 
-    if (this.yAxis != null) {  
-      buffer.writeAll(["\"yAxis\":", this.yAxis, ","], "");
+    if (this.m_yAxis != null) {  
+      buffer.writeAll(["\"yAxis\":", this.m_yAxis, ","], "");
     }
   }
 

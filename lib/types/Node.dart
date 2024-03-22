@@ -24,8 +24,32 @@ import 'OptionFragment.dart';
  */
 class Node extends OptionFragment {
   Node() : super();
-  String? tagName;
-  String? textContent;
+  String? m_tagName;  
+
+  String get tagName { 
+    if (this.m_tagName == null) {
+      this.m_tagName = "";
+    }
+    return this.m_tagName!;
+  }
+
+  void set tagName (String v) {
+    this.m_tagName = v;
+  }
+    
+  String? m_textContent;  
+
+  String get textContent { 
+    if (this.m_textContent == null) {
+      this.m_textContent = "";
+    }
+    return this.m_textContent!;
+  }
+
+  void set textContent (String v) {
+    this.m_textContent = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -40,12 +64,12 @@ class Node extends OptionFragment {
 
     // NOTE: skip serialization of style (type CSSObject is ignored)} 
 
-    if (this.tagName != null) {  
-      buffer.writeAll(["\"tagName\":", this.tagName, ","], "");
+    if (this.m_tagName != null) {  
+      buffer.writeAll(["\"tagName\":", this.m_tagName, ","], "");
     }
 
-    if (this.textContent != null) {  
-      buffer.writeAll(["\"textContent\":", this.textContent, ","], "");
+    if (this.m_textContent != null) {  
+      buffer.writeAll(["\"textContent\":", this.m_textContent, ","], "");
     }
   }
 

@@ -24,8 +24,32 @@ import 'OptionFragment.dart';
  */
 class AreaRangePointOptions extends AreaPointOptions {
   AreaRangePointOptions() : super();
-  double? high;
-  double? low;
+  double? m_high;  
+
+  double get high { 
+    if (this.m_high == null) {
+      this.m_high = 0;
+    }
+    return this.m_high!;
+  }
+
+  void set high (double v) {
+    this.m_high = v;
+  }
+    
+  double? m_low;  
+
+  double get low { 
+    if (this.m_low == null) {
+      this.m_low = 0;
+    }
+    return this.m_low!;
+  }
+
+  void set low (double v) {
+    this.m_low = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -34,12 +58,12 @@ class AreaRangePointOptions extends AreaPointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.high != null) {  
-      buffer.writeAll(["\"high\":", this.high, ","], "");
+    if (this.m_high != null) {  
+      buffer.writeAll(["\"high\":", this.m_high, ","], "");
     }
 
-    if (this.low != null) {  
-      buffer.writeAll(["\"low\":", this.low, ","], "");
+    if (this.m_low != null) {  
+      buffer.writeAll(["\"low\":", this.m_low, ","], "");
     }
   }
 

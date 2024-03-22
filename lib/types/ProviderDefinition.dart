@@ -24,9 +24,45 @@ import 'OptionFragment.dart';
  */
 class ProviderDefinition extends OptionFragment {
   ProviderDefinition() : super();
-  String? defaultCredits;
-  String? initialProjectionName;
-  bool? requiresApiKey;
+  String? m_defaultCredits;  
+
+  String get defaultCredits { 
+    if (this.m_defaultCredits == null) {
+      this.m_defaultCredits = "";
+    }
+    return this.m_defaultCredits!;
+  }
+
+  void set defaultCredits (String v) {
+    this.m_defaultCredits = v;
+  }
+    
+  String? m_initialProjectionName;  
+
+  String get initialProjectionName { 
+    if (this.m_initialProjectionName == null) {
+      this.m_initialProjectionName = "";
+    }
+    return this.m_initialProjectionName!;
+  }
+
+  void set initialProjectionName (String v) {
+    this.m_initialProjectionName = v;
+  }
+    
+  bool? m_requiresApiKey;  
+
+  bool get requiresApiKey { 
+    if (this.m_requiresApiKey == null) {
+      this.m_requiresApiKey = false;
+    }
+    return this.m_requiresApiKey!;
+  }
+
+  void set requiresApiKey (bool v) {
+    this.m_requiresApiKey = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -35,16 +71,16 @@ class ProviderDefinition extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.defaultCredits != null) {  
-      buffer.writeAll(["\"defaultCredits\":", this.defaultCredits, ","], "");
+    if (this.m_defaultCredits != null) {  
+      buffer.writeAll(["\"defaultCredits\":", this.m_defaultCredits, ","], "");
     }
 
-    if (this.initialProjectionName != null) {  
-      buffer.writeAll(["\"initialProjectionName\":", this.initialProjectionName, ","], "");
+    if (this.m_initialProjectionName != null) {  
+      buffer.writeAll(["\"initialProjectionName\":", this.m_initialProjectionName, ","], "");
     }
 
-    if (this.requiresApiKey != null) {  
-      buffer.writeAll(["\"requiresApiKey\":", this.requiresApiKey, ","], "");
+    if (this.m_requiresApiKey != null) {  
+      buffer.writeAll(["\"requiresApiKey\":", this.m_requiresApiKey, ","], "");
     }
 
     // NOTE: skip serialization of subdomains (type string[] is ignored)} 

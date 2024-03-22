@@ -24,7 +24,19 @@ import 'OptionFragment.dart';
  */
 class DistributedBoxArray extends Array {
   DistributedBoxArray() : super();
-  double? reducedLen;
+  double? m_reducedLen;  
+
+  double get reducedLen { 
+    if (this.m_reducedLen == null) {
+      this.m_reducedLen = 0;
+    }
+    return this.m_reducedLen!;
+  }
+
+  void set reducedLen (double v) {
+    this.m_reducedLen = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,8 +45,8 @@ class DistributedBoxArray extends Array {
     super.toJSONInner(buffer);
 
     
-    if (this.reducedLen != null) {  
-      buffer.writeAll(["\"reducedLen\":", this.reducedLen, ","], "");
+    if (this.m_reducedLen != null) {  
+      buffer.writeAll(["\"reducedLen\":", this.m_reducedLen, ","], "");
     }
   }
 

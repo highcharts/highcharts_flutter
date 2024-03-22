@@ -24,10 +24,58 @@ import 'OptionFragment.dart';
  */
 class OrganizationSeriesNodeOptions extends SankeySeriesNodeOptions {
   OrganizationSeriesNodeOptions() : super();
-  String? description;
-  String? image;
-  String? layout;
-  String? title;
+  String? m_description;  
+
+  String get description { 
+    if (this.m_description == null) {
+      this.m_description = "";
+    }
+    return this.m_description!;
+  }
+
+  void set description (String v) {
+    this.m_description = v;
+  }
+    
+  String? m_image;  
+
+  String get image { 
+    if (this.m_image == null) {
+      this.m_image = "";
+    }
+    return this.m_image!;
+  }
+
+  void set image (String v) {
+    this.m_image = v;
+  }
+    
+  String? m_layout;  
+
+  String get layout { 
+    if (this.m_layout == null) {
+      this.m_layout = "";
+    }
+    return this.m_layout!;
+  }
+
+  void set layout (String v) {
+    this.m_layout = v;
+  }
+    
+  String? m_title;  
+
+  String get title { 
+    if (this.m_title == null) {
+      this.m_title = "";
+    }
+    return this.m_title!;
+  }
+
+  void set title (String v) {
+    this.m_title = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -36,20 +84,20 @@ class OrganizationSeriesNodeOptions extends SankeySeriesNodeOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.description != null) {  
-      buffer.writeAll(["\"description\":", this.description, ","], "");
+    if (this.m_description != null) {  
+      buffer.writeAll(["\"description\":", this.m_description, ","], "");
     }
 
-    if (this.image != null) {  
-      buffer.writeAll(["\"image\":", this.image, ","], "");
+    if (this.m_image != null) {  
+      buffer.writeAll(["\"image\":", this.m_image, ","], "");
     }
 
-    if (this.layout != null) {  
-      buffer.writeAll(["\"layout\":", this.layout, ","], "");
+    if (this.m_layout != null) {  
+      buffer.writeAll(["\"layout\":", this.m_layout, ","], "");
     }
 
-    if (this.title != null) {  
-      buffer.writeAll(["\"title\":", this.title, ","], "");
+    if (this.m_title != null) {  
+      buffer.writeAll(["\"title\":", this.m_title, ","], "");
     }
   }
 

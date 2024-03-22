@@ -23,8 +23,32 @@ import 'OptionFragment.dart';
  */
 class VennSeries extends OptionFragment {
   VennSeries() : super();
-  bool? directTouch;
-  bool? isCartesian;
+  bool? m_directTouch;  
+
+  bool get directTouch { 
+    if (this.m_directTouch == null) {
+      this.m_directTouch = false;
+    }
+    return this.m_directTouch!;
+  }
+
+  void set directTouch (bool v) {
+    this.m_directTouch = v;
+  }
+    
+  bool? m_isCartesian;  
+
+  bool get isCartesian { 
+    if (this.m_isCartesian == null) {
+      this.m_isCartesian = false;
+    }
+    return this.m_isCartesian!;
+  }
+
+  void set isCartesian (bool v) {
+    this.m_isCartesian = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -35,12 +59,12 @@ class VennSeries extends OptionFragment {
     
     // NOTE: skip serialization of axisTypes (type string[] is ignored)} 
 
-    if (this.directTouch != null) {  
-      buffer.writeAll(["\"directTouch\":", this.directTouch, ","], "");
+    if (this.m_directTouch != null) {  
+      buffer.writeAll(["\"directTouch\":", this.m_directTouch, ","], "");
     }
 
-    if (this.isCartesian != null) {  
-      buffer.writeAll(["\"isCartesian\":", this.isCartesian, ","], "");
+    if (this.m_isCartesian != null) {  
+      buffer.writeAll(["\"isCartesian\":", this.m_isCartesian, ","], "");
     }
 
     // NOTE: skip serialization of pointArrayMap (type string[] is ignored)} 

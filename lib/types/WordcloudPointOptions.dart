@@ -24,8 +24,32 @@ import 'OptionFragment.dart';
  */
 class WordcloudPointOptions extends ColumnPointOptions {
   WordcloudPointOptions() : super();
-  String? name;
-  double? weight;
+  String? m_name;  
+
+  String get name { 
+    if (this.m_name == null) {
+      this.m_name = "";
+    }
+    return this.m_name!;
+  }
+
+  void set name (String v) {
+    this.m_name = v;
+  }
+    
+  double? m_weight;  
+
+  double get weight { 
+    if (this.m_weight == null) {
+      this.m_weight = 0;
+    }
+    return this.m_weight!;
+  }
+
+  void set weight (double v) {
+    this.m_weight = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -34,12 +58,12 @@ class WordcloudPointOptions extends ColumnPointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.name != null) {  
-      buffer.writeAll(["\"name\":", this.name, ","], "");
+    if (this.m_name != null) {  
+      buffer.writeAll(["\"name\":", this.m_name, ","], "");
     }
 
-    if (this.weight != null) {  
-      buffer.writeAll(["\"weight\":", this.weight, ","], "");
+    if (this.m_weight != null) {  
+      buffer.writeAll(["\"weight\":", this.m_weight, ","], "");
     }
   }
 

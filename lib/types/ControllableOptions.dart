@@ -24,14 +24,110 @@ import 'OptionFragment.dart';
  */
 class ControllableOptions extends ControlTargetOptions {
   ControllableOptions() : super();
-  String? className;
-  String? id;
-  String? markerEnd;
-  String? markerStart;
-  double? r;
-  double? rx;
-  double? ry;
-  String? type;
+  String? m_className;  
+
+  String get className { 
+    if (this.m_className == null) {
+      this.m_className = "";
+    }
+    return this.m_className!;
+  }
+
+  void set className (String v) {
+    this.m_className = v;
+  }
+    
+  String? m_id;  
+
+  String get id { 
+    if (this.m_id == null) {
+      this.m_id = "";
+    }
+    return this.m_id!;
+  }
+
+  void set id (String v) {
+    this.m_id = v;
+  }
+    
+  String? m_markerEnd;  
+
+  String get markerEnd { 
+    if (this.m_markerEnd == null) {
+      this.m_markerEnd = "";
+    }
+    return this.m_markerEnd!;
+  }
+
+  void set markerEnd (String v) {
+    this.m_markerEnd = v;
+  }
+    
+  String? m_markerStart;  
+
+  String get markerStart { 
+    if (this.m_markerStart == null) {
+      this.m_markerStart = "";
+    }
+    return this.m_markerStart!;
+  }
+
+  void set markerStart (String v) {
+    this.m_markerStart = v;
+  }
+    
+  double? m_r;  
+
+  double get r { 
+    if (this.m_r == null) {
+      this.m_r = 0;
+    }
+    return this.m_r!;
+  }
+
+  void set r (double v) {
+    this.m_r = v;
+  }
+    
+  double? m_rx;  
+
+  double get rx { 
+    if (this.m_rx == null) {
+      this.m_rx = 0;
+    }
+    return this.m_rx!;
+  }
+
+  void set rx (double v) {
+    this.m_rx = v;
+  }
+    
+  double? m_ry;  
+
+  double get ry { 
+    if (this.m_ry == null) {
+      this.m_ry = 0;
+    }
+    return this.m_ry!;
+  }
+
+  void set ry (double v) {
+    this.m_ry = v;
+  }
+    
+  String? m_type;  
+
+  String get type { 
+    if (this.m_type == null) {
+      this.m_type = "";
+    }
+    return this.m_type!;
+  }
+
+  void set type (String v) {
+    this.m_type = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -40,36 +136,36 @@ class ControllableOptions extends ControlTargetOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.className != null) {  
-      buffer.writeAll(["\"className\":", this.className, ","], "");
+    if (this.m_className != null) {  
+      buffer.writeAll(["\"className\":", this.m_className, ","], "");
     }
 
-    if (this.id != null) {  
-      buffer.writeAll(["\"id\":", this.id, ","], "");
+    if (this.m_id != null) {  
+      buffer.writeAll(["\"id\":", this.m_id, ","], "");
     }
 
-    if (this.markerEnd != null) {  
-      buffer.writeAll(["\"markerEnd\":", this.markerEnd, ","], "");
+    if (this.m_markerEnd != null) {  
+      buffer.writeAll(["\"markerEnd\":", this.m_markerEnd, ","], "");
     }
 
-    if (this.markerStart != null) {  
-      buffer.writeAll(["\"markerStart\":", this.markerStart, ","], "");
+    if (this.m_markerStart != null) {  
+      buffer.writeAll(["\"markerStart\":", this.m_markerStart, ","], "");
     }
 
-    if (this.r != null) {  
-      buffer.writeAll(["\"r\":", this.r, ","], "");
+    if (this.m_r != null) {  
+      buffer.writeAll(["\"r\":", this.m_r, ","], "");
     }
 
-    if (this.rx != null) {  
-      buffer.writeAll(["\"rx\":", this.rx, ","], "");
+    if (this.m_rx != null) {  
+      buffer.writeAll(["\"rx\":", this.m_rx, ","], "");
     }
 
-    if (this.ry != null) {  
-      buffer.writeAll(["\"ry\":", this.ry, ","], "");
+    if (this.m_ry != null) {  
+      buffer.writeAll(["\"ry\":", this.m_ry, ","], "");
     }
 
-    if (this.type != null) {  
-      buffer.writeAll(["\"type\":", this.type, ","], "");
+    if (this.m_type != null) {  
+      buffer.writeAll(["\"type\":", this.m_type, ","], "");
     }
   }
 

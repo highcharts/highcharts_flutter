@@ -23,9 +23,45 @@ import 'OptionFragment.dart';
  */
 class ColumnRangePoint extends OptionFragment {
   ColumnRangePoint() : super();
-  double? barX;
-  double? pointWidth;
-  String? shapeType;
+  double? m_barX;  
+
+  double get barX { 
+    if (this.m_barX == null) {
+      this.m_barX = 0;
+    }
+    return this.m_barX!;
+  }
+
+  void set barX (double v) {
+    this.m_barX = v;
+  }
+    
+  double? m_pointWidth;  
+
+  double get pointWidth { 
+    if (this.m_pointWidth == null) {
+      this.m_pointWidth = 0;
+    }
+    return this.m_pointWidth!;
+  }
+
+  void set pointWidth (double v) {
+    this.m_pointWidth = v;
+  }
+    
+  String? m_shapeType;  
+
+  String get shapeType { 
+    if (this.m_shapeType == null) {
+      this.m_shapeType = "";
+    }
+    return this.m_shapeType!;
+  }
+
+  void set shapeType (String v) {
+    this.m_shapeType = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -34,16 +70,16 @@ class ColumnRangePoint extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.barX != null) {  
-      buffer.writeAll(["\"barX\":", this.barX, ","], "");
+    if (this.m_barX != null) {  
+      buffer.writeAll(["\"barX\":", this.m_barX, ","], "");
     }
 
-    if (this.pointWidth != null) {  
-      buffer.writeAll(["\"pointWidth\":", this.pointWidth, ","], "");
+    if (this.m_pointWidth != null) {  
+      buffer.writeAll(["\"pointWidth\":", this.m_pointWidth, ","], "");
     }
 
-    if (this.shapeType != null) {  
-      buffer.writeAll(["\"shapeType\":", this.shapeType, ","], "");
+    if (this.m_shapeType != null) {  
+      buffer.writeAll(["\"shapeType\":", this.m_shapeType, ","], "");
     }
   }
 

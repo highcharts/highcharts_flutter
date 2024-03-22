@@ -28,13 +28,37 @@ class SupertrendOptions extends SMAOptions {
   /**
    * The styles for the Supertrend line that intersect main series.  
       */
-  Map<String, String>? changeTrendLine;
+  Map<String, String>? m_changeTrendLine;  
+
+  Map<String, String> get changeTrendLine { 
+    if (this.m_changeTrendLine == null) {
+      this.m_changeTrendLine = Map<String, String>();
+    }
+    return this.m_changeTrendLine!;
+  }
+
+  void set changeTrendLine (Map<String, String> v) {
+    this.m_changeTrendLine = v;
+  }
+    
   /**
    * Color of the Supertrend series line that is above the main series. 
    * 
    * Defaults to '#f21313'. 
       */
-  String? fallingTrendColor;
+  String? m_fallingTrendColor;  
+
+  String get fallingTrendColor { 
+    if (this.m_fallingTrendColor == null) {
+      this.m_fallingTrendColor = "";
+    }
+    return this.m_fallingTrendColor!;
+  }
+
+  void set fallingTrendColor (String v) {
+    this.m_fallingTrendColor = v;
+  }
+    
   /**
    * Paramters used in calculation of regression series' points.  
       */
@@ -45,7 +69,19 @@ class SupertrendOptions extends SMAOptions {
    * 
    * Defaults to '#06b535'. 
       */
-  String? risingTrendColor;
+  String? m_risingTrendColor;  
+
+  String get risingTrendColor { 
+    if (this.m_risingTrendColor == null) {
+      this.m_risingTrendColor = "";
+    }
+    return this.m_risingTrendColor!;
+  }
+
+  void set risingTrendColor (String v) {
+    this.m_risingTrendColor = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -54,20 +90,20 @@ class SupertrendOptions extends SMAOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.changeTrendLine != null) {  
-      buffer.writeAll(["\"changeTrendLine\":", this.changeTrendLine, ","], "");
+    if (this.m_changeTrendLine != null) {  
+      buffer.writeAll(["\"changeTrendLine\":", this.m_changeTrendLine, ","], "");
     }
 
-    if (this.fallingTrendColor != null) {  
-      buffer.writeAll(["\"fallingTrendColor\":", this.fallingTrendColor, ","], "");
+    if (this.m_fallingTrendColor != null) {  
+      buffer.writeAll(["\"fallingTrendColor\":", this.m_fallingTrendColor, ","], "");
     }
 
-    if (this.params != null) {  
-      buffer.writeAll(["\"params\":", this.params?.toJSON(), ","], "");
+    if (this.m_params != null) {  
+      buffer.writeAll(["\"params\":", this.m_params?.toJSON(), ","], "");
     }
 
-    if (this.risingTrendColor != null) {  
-      buffer.writeAll(["\"risingTrendColor\":", this.risingTrendColor, ","], "");
+    if (this.m_risingTrendColor != null) {  
+      buffer.writeAll(["\"risingTrendColor\":", this.m_risingTrendColor, ","], "");
     }
   }
 

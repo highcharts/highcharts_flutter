@@ -24,7 +24,19 @@ import 'OptionFragment.dart';
  */
 class BubblePointOptions extends ScatterPointOptions {
   BubblePointOptions() : super();
-  double? z;
+  double? m_z;  
+
+  double get z { 
+    if (this.m_z == null) {
+      this.m_z = 0;
+    }
+    return this.m_z!;
+  }
+
+  void set z (double v) {
+    this.m_z = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,8 +45,8 @@ class BubblePointOptions extends ScatterPointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.z != null) {  
-      buffer.writeAll(["\"z\":", this.z, ","], "");
+    if (this.m_z != null) {  
+      buffer.writeAll(["\"z\":", this.m_z, ","], "");
     }
   }
 

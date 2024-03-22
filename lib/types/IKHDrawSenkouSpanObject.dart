@@ -27,7 +27,19 @@ import 'OptionFragment.dart';
  */
 class IKHDrawSenkouSpanObject extends OptionFragment {
   IKHDrawSenkouSpanObject() : super();
-  String? color;
+  String? m_color;  
+
+  String get color { 
+    if (this.m_color == null) {
+      this.m_color = "";
+    }
+    return this.m_color!;
+  }
+
+  void set color (String v) {
+    this.m_color = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -42,8 +54,8 @@ class IKHDrawSenkouSpanObject extends OptionFragment {
 
     // NOTE: skip serialization of nextPoints (type IKHPoint[] is ignored)} 
 
-    if (this.color != null) {  
-      buffer.writeAll(["\"color\":", this.color, ","], "");
+    if (this.m_color != null) {  
+      buffer.writeAll(["\"color\":", this.m_color, ","], "");
     }
 
     // NOTE: skip serialization of options (type IKHOptions is ignored)} 

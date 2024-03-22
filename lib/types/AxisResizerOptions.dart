@@ -24,8 +24,32 @@ import 'OptionFragment.dart';
  */
 class AxisResizerOptions extends OptionFragment {
   AxisResizerOptions() : super();
-  String? maxLength;
-  String? minLength;
+  String? m_maxLength;  
+
+  String get maxLength { 
+    if (this.m_maxLength == null) {
+      this.m_maxLength = "";
+    }
+    return this.m_maxLength!;
+  }
+
+  void set maxLength (String v) {
+    this.m_maxLength = v;
+  }
+    
+  String? m_minLength;  
+
+  String get minLength { 
+    if (this.m_minLength == null) {
+      this.m_minLength = "";
+    }
+    return this.m_minLength!;
+  }
+
+  void set minLength (String v) {
+    this.m_minLength = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -34,12 +58,12 @@ class AxisResizerOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.maxLength != null) {  
-      buffer.writeAll(["\"maxLength\":", this.maxLength, ","], "");
+    if (this.m_maxLength != null) {  
+      buffer.writeAll(["\"maxLength\":", this.m_maxLength, ","], "");
     }
 
-    if (this.minLength != null) {  
-      buffer.writeAll(["\"minLength\":", this.minLength, ","], "");
+    if (this.m_minLength != null) {  
+      buffer.writeAll(["\"minLength\":", this.m_minLength, ","], "");
     }
 
     // NOTE: skip serialization of resize (type AxisResizeOptions is ignored)} 

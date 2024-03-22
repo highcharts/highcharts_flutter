@@ -24,8 +24,32 @@ import 'OptionFragment.dart';
  */
 class VennPointOptions extends ScatterPointOptions {
   VennPointOptions() : super();
-  String? name;
-  double? value;
+  String? m_name;  
+
+  String get name { 
+    if (this.m_name == null) {
+      this.m_name = "";
+    }
+    return this.m_name!;
+  }
+
+  void set name (String v) {
+    this.m_name = v;
+  }
+    
+  double? m_value;  
+
+  double get value { 
+    if (this.m_value == null) {
+      this.m_value = 0;
+    }
+    return this.m_value!;
+  }
+
+  void set value (double v) {
+    this.m_value = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -34,14 +58,14 @@ class VennPointOptions extends ScatterPointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.name != null) {  
-      buffer.writeAll(["\"name\":", this.name, ","], "");
+    if (this.m_name != null) {  
+      buffer.writeAll(["\"name\":", this.m_name, ","], "");
     }
 
     // NOTE: skip serialization of sets (type string[] is ignored)} 
 
-    if (this.value != null) {  
-      buffer.writeAll(["\"value\":", this.value, ","], "");
+    if (this.m_value != null) {  
+      buffer.writeAll(["\"value\":", this.m_value, ","], "");
     }
   }
 

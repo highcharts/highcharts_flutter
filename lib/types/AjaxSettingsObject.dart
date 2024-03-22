@@ -23,10 +23,58 @@ import 'OptionFragment.dart';
  */
 class AjaxSettingsObject extends OptionFragment {
   AjaxSettingsObject() : super();
-  String? dataType;
-  String? responseType;
-  String? type;
-  String? url;
+  String? m_dataType;  
+
+  String get dataType { 
+    if (this.m_dataType == null) {
+      this.m_dataType = "";
+    }
+    return this.m_dataType!;
+  }
+
+  void set dataType (String v) {
+    this.m_dataType = v;
+  }
+    
+  String? m_responseType;  
+
+  String get responseType { 
+    if (this.m_responseType == null) {
+      this.m_responseType = "";
+    }
+    return this.m_responseType!;
+  }
+
+  void set responseType (String v) {
+    this.m_responseType = v;
+  }
+    
+  String? m_type;  
+
+  String get type { 
+    if (this.m_type == null) {
+      this.m_type = "";
+    }
+    return this.m_type!;
+  }
+
+  void set type (String v) {
+    this.m_type = v;
+  }
+    
+  String? m_url;  
+
+  String get url { 
+    if (this.m_url == null) {
+      this.m_url = "";
+    }
+    return this.m_url!;
+  }
+
+  void set url (String v) {
+    this.m_url = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -37,22 +85,22 @@ class AjaxSettingsObject extends OptionFragment {
     
     // NOTE: skip serialization of data (type JSON is ignored)} 
 
-    if (this.dataType != null) {  
-      buffer.writeAll(["\"dataType\":", this.dataType, ","], "");
+    if (this.m_dataType != null) {  
+      buffer.writeAll(["\"dataType\":", this.m_dataType, ","], "");
     }
 
     // NOTE: skip serialization of headers (type Generic is ignored)} 
 
-    if (this.responseType != null) {  
-      buffer.writeAll(["\"responseType\":", this.responseType, ","], "");
+    if (this.m_responseType != null) {  
+      buffer.writeAll(["\"responseType\":", this.m_responseType, ","], "");
     }
 
-    if (this.type != null) {  
-      buffer.writeAll(["\"type\":", this.type, ","], "");
+    if (this.m_type != null) {  
+      buffer.writeAll(["\"type\":", this.m_type, ","], "");
     }
 
-    if (this.url != null) {  
-      buffer.writeAll(["\"url\":", this.url, ","], "");
+    if (this.m_url != null) {  
+      buffer.writeAll(["\"url\":", this.m_url, ","], "");
     }
   }
 

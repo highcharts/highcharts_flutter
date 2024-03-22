@@ -23,10 +23,58 @@ import 'OptionFragment.dart';
  */
 class SetRootNodeObject extends OptionFragment {
   SetRootNodeObject() : super();
-  String? newRootId;
-  String? previousRootId;
-  bool? redraw;
-  String? trigger;
+  String? m_newRootId;  
+
+  String get newRootId { 
+    if (this.m_newRootId == null) {
+      this.m_newRootId = "";
+    }
+    return this.m_newRootId!;
+  }
+
+  void set newRootId (String v) {
+    this.m_newRootId = v;
+  }
+    
+  String? m_previousRootId;  
+
+  String get previousRootId { 
+    if (this.m_previousRootId == null) {
+      this.m_previousRootId = "";
+    }
+    return this.m_previousRootId!;
+  }
+
+  void set previousRootId (String v) {
+    this.m_previousRootId = v;
+  }
+    
+  bool? m_redraw;  
+
+  bool get redraw { 
+    if (this.m_redraw == null) {
+      this.m_redraw = false;
+    }
+    return this.m_redraw!;
+  }
+
+  void set redraw (bool v) {
+    this.m_redraw = v;
+  }
+    
+  String? m_trigger;  
+
+  String get trigger { 
+    if (this.m_trigger == null) {
+      this.m_trigger = "";
+    }
+    return this.m_trigger!;
+  }
+
+  void set trigger (String v) {
+    this.m_trigger = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -35,40 +83,40 @@ class SetRootNodeObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.newRootId != null) {  
-      buffer.writeAll(["\"newRootId\":", this.newRootId, ","], "");
+    if (this.m_newRootId != null) {  
+      buffer.writeAll(["\"newRootId\":", this.m_newRootId, ","], "");
     }
 
-    if (this.previousRootId != null) {  
-      buffer.writeAll(["\"previousRootId\":", this.previousRootId, ","], "");
+    if (this.m_previousRootId != null) {  
+      buffer.writeAll(["\"previousRootId\":", this.m_previousRootId, ","], "");
     }
 
-    if (this.redraw != null) {  
-      buffer.writeAll(["\"redraw\":", this.redraw, ","], "");
-    }
-
-    // NOTE: skip serialization of series (type object is ignored)} 
-
-    if (this.trigger != null) {  
-      buffer.writeAll(["\"trigger\":", this.trigger, ","], "");
-    }
-
-    if (this.newRootId != null) {  
-      buffer.writeAll(["\"newRootId\":", this.newRootId, ","], "");
-    }
-
-    if (this.previousRootId != null) {  
-      buffer.writeAll(["\"previousRootId\":", this.previousRootId, ","], "");
-    }
-
-    if (this.redraw != null) {  
-      buffer.writeAll(["\"redraw\":", this.redraw, ","], "");
+    if (this.m_redraw != null) {  
+      buffer.writeAll(["\"redraw\":", this.m_redraw, ","], "");
     }
 
     // NOTE: skip serialization of series (type object is ignored)} 
 
-    if (this.trigger != null) {  
-      buffer.writeAll(["\"trigger\":", this.trigger, ","], "");
+    if (this.m_trigger != null) {  
+      buffer.writeAll(["\"trigger\":", this.m_trigger, ","], "");
+    }
+
+    if (this.m_newRootId != null) {  
+      buffer.writeAll(["\"newRootId\":", this.m_newRootId, ","], "");
+    }
+
+    if (this.m_previousRootId != null) {  
+      buffer.writeAll(["\"previousRootId\":", this.m_previousRootId, ","], "");
+    }
+
+    if (this.m_redraw != null) {  
+      buffer.writeAll(["\"redraw\":", this.m_redraw, ","], "");
+    }
+
+    // NOTE: skip serialization of series (type object is ignored)} 
+
+    if (this.m_trigger != null) {  
+      buffer.writeAll(["\"trigger\":", this.m_trigger, ","], "");
     }
   }
 

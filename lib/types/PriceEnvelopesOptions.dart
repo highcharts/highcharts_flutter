@@ -28,11 +28,35 @@ class PriceEnvelopesOptions extends SMAOptions {
   /**
    * Bottom line options.  
       */
-  Map<String, String>? bottomLine;
+  Map<String, String>? m_bottomLine;  
+
+  Map<String, String> get bottomLine { 
+    if (this.m_bottomLine == null) {
+      this.m_bottomLine = Map<String, String>();
+    }
+    return this.m_bottomLine!;
+  }
+
+  void set bottomLine (Map<String, String> v) {
+    this.m_bottomLine = v;
+  }
+    
   /**
    * Top line options.  
       */
-  Map<String, String>? topLine;
+  Map<String, String>? m_topLine;  
+
+  Map<String, String> get topLine { 
+    if (this.m_topLine == null) {
+      this.m_topLine = Map<String, String>();
+    }
+    return this.m_topLine!;
+  }
+
+  void set topLine (Map<String, String> v) {
+    this.m_topLine = v;
+  }
+    
   /**
    * Paramters used in calculation of regression series' points.  
       */
@@ -46,16 +70,16 @@ class PriceEnvelopesOptions extends SMAOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.bottomLine != null) {  
-      buffer.writeAll(["\"bottomLine\":", this.bottomLine, ","], "");
+    if (this.m_bottomLine != null) {  
+      buffer.writeAll(["\"bottomLine\":", this.m_bottomLine, ","], "");
     }
 
-    if (this.topLine != null) {  
-      buffer.writeAll(["\"topLine\":", this.topLine, ","], "");
+    if (this.m_topLine != null) {  
+      buffer.writeAll(["\"topLine\":", this.m_topLine, ","], "");
     }
 
-    if (this.params != null) {  
-      buffer.writeAll(["\"params\":", this.params?.toJSON(), ","], "");
+    if (this.m_params != null) {  
+      buffer.writeAll(["\"params\":", this.m_params?.toJSON(), ","], "");
     }
   }
 

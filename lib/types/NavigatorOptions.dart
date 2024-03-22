@@ -38,7 +38,19 @@ class NavigatorOptions extends OptionFragment {
    * 
    * Defaults to 'true'. 
       */
-  bool? adaptToUpdatedData;
+  bool? m_adaptToUpdatedData;  
+
+  bool get adaptToUpdatedData { 
+    if (this.m_adaptToUpdatedData == null) {
+      this.m_adaptToUpdatedData = false;
+    }
+    return this.m_adaptToUpdatedData!;
+  }
+
+  void set adaptToUpdatedData (bool v) {
+    this.m_adaptToUpdatedData = v;
+  }
+    
   /**
    * An integer identifying the index to use for the base series, or a
    * string representing the id of the series.
@@ -48,30 +60,102 @@ class NavigatorOptions extends OptionFragment {
    * 
    * Defaults to '0'. 
       */
-  String? baseSeries;
+  String? m_baseSeries;  
+
+  String get baseSeries { 
+    if (this.m_baseSeries == null) {
+      this.m_baseSeries = "";
+    }
+    return this.m_baseSeries!;
+  }
+
+  void set baseSeries (String v) {
+    this.m_baseSeries = v;
+  }
+    
   /**
    * Enable or disable the navigator. 
    * 
    * Defaults to 'true'. 
       */
-  bool? enabled;
+  bool? m_enabled;  
+
+  bool get enabled { 
+    if (this.m_enabled == null) {
+      this.m_enabled = false;
+    }
+    return this.m_enabled!;
+  }
+
+  void set enabled (bool v) {
+    this.m_enabled = v;
+  }
+    
   /**
    * Options for the handles for dragging the zoomed area.  
       */
-  NavigatorHandlesOptions? handles;
+  NavigatorHandlesOptions? m_handles;  
+
+  NavigatorHandlesOptions get handles { 
+    if (this.m_handles == null) {
+      this.m_handles = NavigatorHandlesOptions();
+    }
+    return this.m_handles!;
+  }
+
+  void set handles (NavigatorHandlesOptions v) {
+    this.m_handles = v;
+  }
+    
   /**
    * The height of the navigator. 
    * 
    * Defaults to '40'. 
       */
-  double? height;
-  bool? isInternal;
+  double? m_height;  
+
+  double get height { 
+    if (this.m_height == null) {
+      this.m_height = 0;
+    }
+    return this.m_height!;
+  }
+
+  void set height (double v) {
+    this.m_height = v;
+  }
+    
+  bool? m_isInternal;  
+
+  bool get isInternal { 
+    if (this.m_isInternal == null) {
+      this.m_isInternal = false;
+    }
+    return this.m_isInternal!;
+  }
+
+  void set isInternal (bool v) {
+    this.m_isInternal = v;
+  }
+    
   /**
    * The distance from the nearest element, the X axis or X axis labels. 
    * 
    * Defaults to '25'. 
       */
-  double? margin;
+  double? m_margin;  
+
+  double get margin { 
+    if (this.m_margin == null) {
+      this.m_margin = 0;
+    }
+    return this.m_margin!;
+  }
+
+  void set margin (double v) {
+    this.m_margin = v;
+  }
+    
   /**
    * The color of the mask covering the areas of the navigator series
    * that are currently not visible in the main series. The default
@@ -79,35 +163,95 @@ class NavigatorOptions extends OptionFragment {
    * 
    * Defaults to 'rgba(102,133,194,0.3)'. 
       */
-  String? maskFill;
+  String? m_maskFill;  
+
+  String get maskFill { 
+    if (this.m_maskFill == null) {
+      this.m_maskFill = "";
+    }
+    return this.m_maskFill!;
+  }
+
+  void set maskFill (String v) {
+    this.m_maskFill = v;
+  }
+    
   /**
    * Whether the mask should be inside the range marking the zoomed
    * range, or outside. In Highcharts Stock 1.x it was always `false`. 
    * 
    * Defaults to 'true'. 
       */
-  bool? maskInside;
+  bool? m_maskInside;  
+
+  bool get maskInside { 
+    if (this.m_maskInside == null) {
+      this.m_maskInside = false;
+    }
+    return this.m_maskInside!;
+  }
+
+  void set maskInside (bool v) {
+    this.m_maskInside = v;
+  }
+    
   /**
    * When the chart is inverted, whether to draw the navigator on the
    * opposite side. 
    * 
    * Defaults to 'false'. 
       */
-  bool? opposite;
+  bool? m_opposite;  
+
+  bool get opposite { 
+    if (this.m_opposite == null) {
+      this.m_opposite = false;
+    }
+    return this.m_opposite!;
+  }
+
+  void set opposite (bool v) {
+    this.m_opposite = v;
+  }
+    
   /**
    * The color of the line marking the currently zoomed area in the
    * navigator. 
    * 
    * Defaults to '#cccccc'. 
       */
-  String? outlineColor;
+  String? m_outlineColor;  
+
+  String get outlineColor { 
+    if (this.m_outlineColor == null) {
+      this.m_outlineColor = "";
+    }
+    return this.m_outlineColor!;
+  }
+
+  void set outlineColor (String v) {
+    this.m_outlineColor = v;
+  }
+    
   /**
    * The width of the line marking the currently zoomed area in the
    * navigator. 
    * 
    * Defaults to '1'. 
       */
-  double? outlineWidth;
+  double? m_outlineWidth;  
+
+  double get outlineWidth { 
+    if (this.m_outlineWidth == null) {
+      this.m_outlineWidth = 0;
+    }
+    return this.m_outlineWidth!;
+  }
+
+  void set outlineWidth (double v) {
+    this.m_outlineWidth = v;
+  }
+    
   /**
    * Options for the navigator series. Available options are the same
    * as any series, documented at [plotOptions](#plotOptions.series)
@@ -139,8 +283,32 @@ class NavigatorOptions extends OptionFragment {
    * 
    * Defaults to 'undefined'. 
       */
-  bool? stickToMax;
-  double? top;
+  bool? m_stickToMax;  
+
+  bool get stickToMax { 
+    if (this.m_stickToMax == null) {
+      this.m_stickToMax = false;
+    }
+    return this.m_stickToMax!;
+  }
+
+  void set stickToMax (bool v) {
+    this.m_stickToMax = v;
+  }
+    
+  double? m_top;  
+
+  double get top { 
+    if (this.m_top == null) {
+      this.m_top = 0;
+    }
+    return this.m_top!;
+  }
+
+  void set top (double v) {
+    this.m_top = v;
+  }
+    
   /**
    * Options for the navigator X axis. Default series options for the
    * navigator xAxis are:
@@ -161,7 +329,19 @@ class NavigatorOptions extends OptionFragment {
    * }
    * ```  
       */
-  AxisOptions? xAxis;
+  AxisOptions? m_xAxis;  
+
+  AxisOptions get xAxis { 
+    if (this.m_xAxis == null) {
+      this.m_xAxis = AxisOptions();
+    }
+    return this.m_xAxis!;
+  }
+
+  void set xAxis (AxisOptions v) {
+    this.m_xAxis = v;
+  }
+    
   /**
    * Options for the navigator Y axis. Default series options for the
    * navigator yAxis are:
@@ -182,7 +362,19 @@ class NavigatorOptions extends OptionFragment {
    * }
    * ```  
       */
-  YAxisOptions? yAxis;
+  YAxisOptions? m_yAxis;  
+
+  YAxisOptions get yAxis { 
+    if (this.m_yAxis == null) {
+      this.m_yAxis = YAxisOptions();
+    }
+    return this.m_yAxis!;
+  }
+
+  void set yAxis (YAxisOptions v) {
+    this.m_yAxis = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -191,64 +383,62 @@ class NavigatorOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.adaptToUpdatedData != null) {  
-      buffer.writeAll(["\"adaptToUpdatedData\":", this.adaptToUpdatedData, ","], "");
+    if (this.m_adaptToUpdatedData != null) {  
+      buffer.writeAll(["\"adaptToUpdatedData\":", this.m_adaptToUpdatedData, ","], "");
     }
 
-    if (this.baseSeries != null) {  
-      buffer.writeAll(["\"baseSeries\":", this.baseSeries, ","], "");
+    if (this.m_baseSeries != null) {  
+      buffer.writeAll(["\"baseSeries\":", this.m_baseSeries, ","], "");
     }
 
-    if (this.enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
+    if (this.m_enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this.m_enabled, ","], "");
     }
 
-    if (this.handles != null) {  
-      buffer.writeAll(["\"handles\":", this.handles?.toJSON(), ","], "");
+    if (this.m_handles != null) {  
+      buffer.writeAll(["\"handles\":", this.m_handles?.toJSON(), ","], "");
     }
 
-    if (this.height != null) {  
-      buffer.writeAll(["\"height\":", this.height, ","], "");
+    if (this.m_height != null) {  
+      buffer.writeAll(["\"height\":", this.m_height, ","], "");
     }
 
-    if (this.isInternal != null) {  
-      buffer.writeAll(["\"isInternal\":", this.isInternal, ","], "");
+    if (this.m_isInternal != null) {  
+      buffer.writeAll(["\"isInternal\":", this.m_isInternal, ","], "");
     }
 
-    if (this.margin != null) {  
-      buffer.writeAll(["\"margin\":", this.margin, ","], "");
+    if (this.m_margin != null) {  
+      buffer.writeAll(["\"margin\":", this.m_margin, ","], "");
     }
 
-    if (this.maskFill != null) {  
-      buffer.writeAll(["\"maskFill\":", this.maskFill, ","], "");
+    if (this.m_maskFill != null) {  
+      buffer.writeAll(["\"maskFill\":", this.m_maskFill, ","], "");
     }
 
-    if (this.maskInside != null) {  
-      buffer.writeAll(["\"maskInside\":", this.maskInside, ","], "");
+    if (this.m_maskInside != null) {  
+      buffer.writeAll(["\"maskInside\":", this.m_maskInside, ","], "");
     }
 
-    if (this.opposite != null) {  
-      buffer.writeAll(["\"opposite\":", this.opposite, ","], "");
+    if (this.m_opposite != null) {  
+      buffer.writeAll(["\"opposite\":", this.m_opposite, ","], "");
     }
 
-    if (this.outlineColor != null) {  
-      buffer.writeAll(["\"outlineColor\":", this.outlineColor, ","], "");
+    if (this.m_outlineColor != null) {  
+      buffer.writeAll(["\"outlineColor\":", this.m_outlineColor, ","], "");
     }
 
-    if (this.outlineWidth != null) {  
-      buffer.writeAll(["\"outlineWidth\":", this.outlineWidth, ","], "");
+    if (this.m_outlineWidth != null) {  
+      buffer.writeAll(["\"outlineWidth\":", this.m_outlineWidth, ","], "");
     }
 
-    if (this.series != null) {  
-    // Skipped array series
+    // NOTE: skip serialization of series (type SeriesOptions is ignored)} 
+
+    if (this.m_stickToMax != null) {  
+      buffer.writeAll(["\"stickToMax\":", this.m_stickToMax, ","], "");
     }
 
-    if (this.stickToMax != null) {  
-      buffer.writeAll(["\"stickToMax\":", this.stickToMax, ","], "");
-    }
-
-    if (this.top != null) {  
-      buffer.writeAll(["\"top\":", this.top, ","], "");
+    if (this.m_top != null) {  
+      buffer.writeAll(["\"top\":", this.m_top, ","], "");
     }
 
     // NOTE: skip serialization of xAxis (type Generic is ignored)} 

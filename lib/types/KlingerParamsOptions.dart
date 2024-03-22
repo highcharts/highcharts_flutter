@@ -24,9 +24,45 @@ import 'OptionFragment.dart';
  */
 class KlingerParamsOptions extends SMAParamsOptions {
   KlingerParamsOptions() : super();
-  double? fastAvgPeriod;
-  double? slowAvgPeriod;
-  double? signalPeriod;
+  double? m_fastAvgPeriod;  
+
+  double get fastAvgPeriod { 
+    if (this.m_fastAvgPeriod == null) {
+      this.m_fastAvgPeriod = 0;
+    }
+    return this.m_fastAvgPeriod!;
+  }
+
+  void set fastAvgPeriod (double v) {
+    this.m_fastAvgPeriod = v;
+  }
+    
+  double? m_slowAvgPeriod;  
+
+  double get slowAvgPeriod { 
+    if (this.m_slowAvgPeriod == null) {
+      this.m_slowAvgPeriod = 0;
+    }
+    return this.m_slowAvgPeriod!;
+  }
+
+  void set slowAvgPeriod (double v) {
+    this.m_slowAvgPeriod = v;
+  }
+    
+  double? m_signalPeriod;  
+
+  double get signalPeriod { 
+    if (this.m_signalPeriod == null) {
+      this.m_signalPeriod = 0;
+    }
+    return this.m_signalPeriod!;
+  }
+
+  void set signalPeriod (double v) {
+    this.m_signalPeriod = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -35,16 +71,16 @@ class KlingerParamsOptions extends SMAParamsOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.fastAvgPeriod != null) {  
-      buffer.writeAll(["\"fastAvgPeriod\":", this.fastAvgPeriod, ","], "");
+    if (this.m_fastAvgPeriod != null) {  
+      buffer.writeAll(["\"fastAvgPeriod\":", this.m_fastAvgPeriod, ","], "");
     }
 
-    if (this.slowAvgPeriod != null) {  
-      buffer.writeAll(["\"slowAvgPeriod\":", this.slowAvgPeriod, ","], "");
+    if (this.m_slowAvgPeriod != null) {  
+      buffer.writeAll(["\"slowAvgPeriod\":", this.m_slowAvgPeriod, ","], "");
     }
 
-    if (this.signalPeriod != null) {  
-      buffer.writeAll(["\"signalPeriod\":", this.signalPeriod, ","], "");
+    if (this.m_signalPeriod != null) {  
+      buffer.writeAll(["\"signalPeriod\":", this.m_signalPeriod, ","], "");
     }
   }
 

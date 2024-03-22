@@ -25,7 +25,19 @@ import 'OptionFragment.dart';
  */
 class PointComposition extends Point {
   PointComposition() : super();
-  double? value;
+  double? m_value;  
+
+  double get value { 
+    if (this.m_value == null) {
+      this.m_value = 0;
+    }
+    return this.m_value!;
+  }
+
+  void set value (double v) {
+    this.m_value = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -36,8 +48,8 @@ class PointComposition extends Point {
     
     // NOTE: skip serialization of series (type SeriesComposition is ignored)} 
 
-    if (this.value != null) {  
-      buffer.writeAll(["\"value\":", this.value, ","], "");
+    if (this.m_value != null) {  
+      buffer.writeAll(["\"value\":", this.m_value, ","], "");
     }
   }
 

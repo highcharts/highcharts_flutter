@@ -46,7 +46,19 @@ class NetworkgraphSeriesOptions extends SeriesOptions {
    * 
    * Defaults to 'true'. 
       */
-  bool? draggable;
+  bool? m_draggable;  
+
+  bool get draggable { 
+    if (this.m_draggable == null) {
+      this.m_draggable = false;
+    }
+    return this.m_draggable!;
+  }
+
+  void set draggable (bool v) {
+    this.m_draggable = v;
+  }
+    
   /**
    * General event handlers for the series items. These event hooks can
    * also be attached to the series at run time using the
@@ -54,12 +66,48 @@ class NetworkgraphSeriesOptions extends SeriesOptions {
       */
   /** NOTE: extevents is skipped here for now, as it overrides the base type. */
 
-  bool? inactiveOtherPoints;
-  Options? layoutAlgorithm;
+  bool? m_inactiveOtherPoints;  
+
+  bool get inactiveOtherPoints { 
+    if (this.m_inactiveOtherPoints == null) {
+      this.m_inactiveOtherPoints = false;
+    }
+    return this.m_inactiveOtherPoints!;
+  }
+
+  void set inactiveOtherPoints (bool v) {
+    this.m_inactiveOtherPoints = v;
+  }
+    
+  Options? m_layoutAlgorithm;  
+
+  Options get layoutAlgorithm { 
+    if (this.m_layoutAlgorithm == null) {
+      this.m_layoutAlgorithm = Options();
+    }
+    return this.m_layoutAlgorithm!;
+  }
+
+  void set layoutAlgorithm (Options v) {
+    this.m_layoutAlgorithm = v;
+  }
+    
   /**
    * Link style options  
       */
-  NetworkgraphLinkOptions? link;
+  NetworkgraphLinkOptions? m_link;  
+
+  NetworkgraphLinkOptions get link { 
+    if (this.m_link == null) {
+      this.m_link = NetworkgraphLinkOptions();
+    }
+    return this.m_link!;
+  }
+
+  void set link (NetworkgraphLinkOptions v) {
+    this.m_link = v;
+  }
+    
   // NOTE: states skipped - type Generic is ignored in gen
 
 
@@ -70,28 +118,26 @@ class NetworkgraphSeriesOptions extends SeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.dataLabels != null) {  
-    // Skipped array dataLabels
+    // NOTE: skip serialization of dataLabels (type NetworkgraphDataLabelsOptionsObject is ignored)} 
+
+    if (this.m_draggable != null) {  
+      buffer.writeAll(["\"draggable\":", this.m_draggable, ","], "");
     }
 
-    if (this.draggable != null) {  
-      buffer.writeAll(["\"draggable\":", this.draggable, ","], "");
+    if (this.m_events != null) {  
+      buffer.writeAll(["\"events\":", this.m_events?.toJSON(), ","], "");
     }
 
-    if (this.events != null) {  
-      buffer.writeAll(["\"events\":", this.events?.toJSON(), ","], "");
+    if (this.m_inactiveOtherPoints != null) {  
+      buffer.writeAll(["\"inactiveOtherPoints\":", this.m_inactiveOtherPoints, ","], "");
     }
 
-    if (this.inactiveOtherPoints != null) {  
-      buffer.writeAll(["\"inactiveOtherPoints\":", this.inactiveOtherPoints, ","], "");
+    if (this.m_layoutAlgorithm != null) {  
+      buffer.writeAll(["\"layoutAlgorithm\":", this.m_layoutAlgorithm?.toJSON(), ","], "");
     }
 
-    if (this.layoutAlgorithm != null) {  
-      buffer.writeAll(["\"layoutAlgorithm\":", this.layoutAlgorithm?.toJSON(), ","], "");
-    }
-
-    if (this.link != null) {  
-      buffer.writeAll(["\"link\":", this.link?.toJSON(), ","], "");
+    if (this.m_link != null) {  
+      buffer.writeAll(["\"link\":", this.m_link?.toJSON(), ","], "");
     }
 
     // NOTE: skip serialization of nodes (type NetworkgraphPointOptions[] is ignored)} 

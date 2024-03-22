@@ -24,8 +24,32 @@ import 'OptionFragment.dart';
  */
 class SeriesCompositionOptions extends SeriesOptions {
   SeriesCompositionOptions() : super();
-  String? nullColor;
-  double? mass;
+  String? m_nullColor;  
+
+  String get nullColor { 
+    if (this.m_nullColor == null) {
+      this.m_nullColor = "";
+    }
+    return this.m_nullColor!;
+  }
+
+  void set nullColor (String v) {
+    this.m_nullColor = v;
+  }
+    
+  double? m_mass;  
+
+  double get mass { 
+    if (this.m_mass == null) {
+      this.m_mass = 0;
+    }
+    return this.m_mass!;
+  }
+
+  void set mass (double v) {
+    this.m_mass = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -34,12 +58,12 @@ class SeriesCompositionOptions extends SeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.nullColor != null) {  
-      buffer.writeAll(["\"nullColor\":", this.nullColor, ","], "");
+    if (this.m_nullColor != null) {  
+      buffer.writeAll(["\"nullColor\":", this.m_nullColor, ","], "");
     }
 
-    if (this.mass != null) {  
-      buffer.writeAll(["\"mass\":", this.mass, ","], "");
+    if (this.m_mass != null) {  
+      buffer.writeAll(["\"mass\":", this.m_mass, ","], "");
     }
 
     // NOTE: skip serialization of nodes (type PointCompositionOptions[] is ignored)} 

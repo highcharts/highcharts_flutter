@@ -26,8 +26,32 @@ import 'OptionFragment.dart';
  */
 class PointDropEventObject extends OptionFragment {
   PointDropEventObject() : super();
-  String? newPointId;
-  double? numNewPoints;
+  String? m_newPointId;  
+
+  String get newPointId { 
+    if (this.m_newPointId == null) {
+      this.m_newPointId = "";
+    }
+    return this.m_newPointId!;
+  }
+
+  void set newPointId (String v) {
+    this.m_newPointId = v;
+  }
+    
+  double? m_numNewPoints;  
+
+  double get numNewPoints { 
+    if (this.m_numNewPoints == null) {
+      this.m_numNewPoints = 0;
+    }
+    return this.m_numNewPoints!;
+  }
+
+  void set numNewPoints (double v) {
+    this.m_numNewPoints = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -38,14 +62,14 @@ class PointDropEventObject extends OptionFragment {
     
     // NOTE: skip serialization of newPoint (type PointDragDropObject is ignored)} 
 
-    if (this.newPointId != null) {  
-      buffer.writeAll(["\"newPointId\":", this.newPointId, ","], "");
+    if (this.m_newPointId != null) {  
+      buffer.writeAll(["\"newPointId\":", this.m_newPointId, ","], "");
     }
 
     // NOTE: skip serialization of newPoints (type Generic is ignored)} 
 
-    if (this.numNewPoints != null) {  
-      buffer.writeAll(["\"numNewPoints\":", this.numNewPoints, ","], "");
+    if (this.m_numNewPoints != null) {  
+      buffer.writeAll(["\"numNewPoints\":", this.m_numNewPoints, ","], "");
     }
 
     // NOTE: skip serialization of origin (type DragDropPositionObject is ignored)} 

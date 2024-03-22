@@ -25,19 +25,55 @@ import 'OptionFragment.dart';
  */
 class ABandsOptions extends SMAOptions {
   ABandsOptions() : super();
-  Map<String, String>? bottomLine;
+  Map<String, String>? m_bottomLine;  
+
+  Map<String, String> get bottomLine { 
+    if (this.m_bottomLine == null) {
+      this.m_bottomLine = Map<String, String>();
+    }
+    return this.m_bottomLine!;
+  }
+
+  void set bottomLine (Map<String, String> v) {
+    this.m_bottomLine = v;
+  }
+    
   /**
    * Pixel width of the graph line. 
    * 
    * Defaults to '1'. 
       */
-  double? lineWidth;
+  double? m_lineWidth;  
+
+  double get lineWidth { 
+    if (this.m_lineWidth == null) {
+      this.m_lineWidth = 0;
+    }
+    return this.m_lineWidth!;
+  }
+
+  void set lineWidth (double v) {
+    this.m_lineWidth = v;
+  }
+    
   /**
    * Paramters used in calculation of regression series' points.  
       */
   /** NOTE: extparams is skipped here for now, as it overrides the base type. */
 
-  Map<String, String>? topLine;
+  Map<String, String>? m_topLine;  
+
+  Map<String, String> get topLine { 
+    if (this.m_topLine == null) {
+      this.m_topLine = Map<String, String>();
+    }
+    return this.m_topLine!;
+  }
+
+  void set topLine (Map<String, String> v) {
+    this.m_topLine = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -46,20 +82,20 @@ class ABandsOptions extends SMAOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.bottomLine != null) {  
-      buffer.writeAll(["\"bottomLine\":", this.bottomLine, ","], "");
+    if (this.m_bottomLine != null) {  
+      buffer.writeAll(["\"bottomLine\":", this.m_bottomLine, ","], "");
     }
 
-    if (this.lineWidth != null) {  
-      buffer.writeAll(["\"lineWidth\":", this.lineWidth, ","], "");
+    if (this.m_lineWidth != null) {  
+      buffer.writeAll(["\"lineWidth\":", this.m_lineWidth, ","], "");
     }
 
-    if (this.params != null) {  
-      buffer.writeAll(["\"params\":", this.params?.toJSON(), ","], "");
+    if (this.m_params != null) {  
+      buffer.writeAll(["\"params\":", this.m_params?.toJSON(), ","], "");
     }
 
-    if (this.topLine != null) {  
-      buffer.writeAll(["\"topLine\":", this.topLine, ","], "");
+    if (this.m_topLine != null) {  
+      buffer.writeAll(["\"topLine\":", this.m_topLine, ","], "");
     }
   }
 

@@ -23,7 +23,19 @@ import 'OptionFragment.dart';
  */
 class PathfinderAlgorithmFunction extends OptionFragment {
   PathfinderAlgorithmFunction() : super();
-  bool? requiresObstacles;
+  bool? m_requiresObstacles;  
+
+  bool get requiresObstacles { 
+    if (this.m_requiresObstacles == null) {
+      this.m_requiresObstacles = false;
+    }
+    return this.m_requiresObstacles!;
+  }
+
+  void set requiresObstacles (bool v) {
+    this.m_requiresObstacles = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -32,8 +44,8 @@ class PathfinderAlgorithmFunction extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.requiresObstacles != null) {  
-      buffer.writeAll(["\"requiresObstacles\":", this.requiresObstacles, ","], "");
+    if (this.m_requiresObstacles != null) {  
+      buffer.writeAll(["\"requiresObstacles\":", this.m_requiresObstacles, ","], "");
     }
   }
 

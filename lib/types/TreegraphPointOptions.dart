@@ -26,7 +26,19 @@ import 'OptionFragment.dart';
  */
 class TreegraphPointOptions extends TreemapPointOptions {
   TreegraphPointOptions() : super();
-  double? borderRadius;
+  double? m_borderRadius;  
+
+  double get borderRadius { 
+    if (this.m_borderRadius == null) {
+      this.m_borderRadius = 0;
+    }
+    return this.m_borderRadius!;
+  }
+
+  void set borderRadius (double v) {
+    this.m_borderRadius = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -37,8 +49,8 @@ class TreegraphPointOptions extends TreemapPointOptions {
     
     // NOTE: skip serialization of collapseButton (type CollapseButtonOptions is ignored)} 
 
-    if (this.borderRadius != null) {  
-      buffer.writeAll(["\"borderRadius\":", this.borderRadius, ","], "");
+    if (this.m_borderRadius != null) {  
+      buffer.writeAll(["\"borderRadius\":", this.m_borderRadius, ","], "");
     }
 
     // NOTE: skip serialization of link (type TreegraphLinkOptions is ignored)} 

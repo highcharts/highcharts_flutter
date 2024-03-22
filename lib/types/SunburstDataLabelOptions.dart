@@ -24,8 +24,32 @@ import 'OptionFragment.dart';
  */
 class SunburstDataLabelOptions extends DataLabelOptions {
   SunburstDataLabelOptions() : super();
-  bool? allowOverlap;
-  String? rotationMode;
+  bool? m_allowOverlap;  
+
+  bool get allowOverlap { 
+    if (this.m_allowOverlap == null) {
+      this.m_allowOverlap = false;
+    }
+    return this.m_allowOverlap!;
+  }
+
+  void set allowOverlap (bool v) {
+    this.m_allowOverlap = v;
+  }
+    
+  String? m_rotationMode;  
+
+  String get rotationMode { 
+    if (this.m_rotationMode == null) {
+      this.m_rotationMode = "";
+    }
+    return this.m_rotationMode!;
+  }
+
+  void set rotationMode (String v) {
+    this.m_rotationMode = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -34,12 +58,12 @@ class SunburstDataLabelOptions extends DataLabelOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.allowOverlap != null) {  
-      buffer.writeAll(["\"allowOverlap\":", this.allowOverlap, ","], "");
+    if (this.m_allowOverlap != null) {  
+      buffer.writeAll(["\"allowOverlap\":", this.m_allowOverlap, ","], "");
     }
 
-    if (this.rotationMode != null) {  
-      buffer.writeAll(["\"rotationMode\":", this.rotationMode, ","], "");
+    if (this.m_rotationMode != null) {  
+      buffer.writeAll(["\"rotationMode\":", this.m_rotationMode, ","], "");
     }
   }
 

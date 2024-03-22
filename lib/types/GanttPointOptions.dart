@@ -25,10 +25,58 @@ import 'OptionFragment.dart';
  */
 class GanttPointOptions extends XRangePointOptions {
   GanttPointOptions() : super();
-  double? end;
-  bool? milestone;
-  String? parent;
-  double? start;
+  double? m_end;  
+
+  double get end { 
+    if (this.m_end == null) {
+      this.m_end = 0;
+    }
+    return this.m_end!;
+  }
+
+  void set end (double v) {
+    this.m_end = v;
+  }
+    
+  bool? m_milestone;  
+
+  bool get milestone { 
+    if (this.m_milestone == null) {
+      this.m_milestone = false;
+    }
+    return this.m_milestone!;
+  }
+
+  void set milestone (bool v) {
+    this.m_milestone = v;
+  }
+    
+  String? m_parent;  
+
+  String get parent { 
+    if (this.m_parent == null) {
+      this.m_parent = "";
+    }
+    return this.m_parent!;
+  }
+
+  void set parent (String v) {
+    this.m_parent = v;
+  }
+    
+  double? m_start;  
+
+  double get start { 
+    if (this.m_start == null) {
+      this.m_start = 0;
+    }
+    return this.m_start!;
+  }
+
+  void set start (double v) {
+    this.m_start = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -41,20 +89,20 @@ class GanttPointOptions extends XRangePointOptions {
 
     // NOTE: skip serialization of dependency (type GanttDependencyOptions is ignored)} 
 
-    if (this.end != null) {  
-      buffer.writeAll(["\"end\":", this.end, ","], "");
+    if (this.m_end != null) {  
+      buffer.writeAll(["\"end\":", this.m_end, ","], "");
     }
 
-    if (this.milestone != null) {  
-      buffer.writeAll(["\"milestone\":", this.milestone, ","], "");
+    if (this.m_milestone != null) {  
+      buffer.writeAll(["\"milestone\":", this.m_milestone, ","], "");
     }
 
-    if (this.parent != null) {  
-      buffer.writeAll(["\"parent\":", this.parent, ","], "");
+    if (this.m_parent != null) {  
+      buffer.writeAll(["\"parent\":", this.m_parent, ","], "");
     }
 
-    if (this.start != null) {  
-      buffer.writeAll(["\"start\":", this.start, ","], "");
+    if (this.m_start != null) {  
+      buffer.writeAll(["\"start\":", this.m_start, ","], "");
     }
   }
 

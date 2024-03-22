@@ -24,7 +24,19 @@ import 'OptionFragment.dart';
  */
 class DrilldownDrillUpButtonOptions extends OptionFragment {
   DrilldownDrillUpButtonOptions() : super();
-  String? relativeTo;
+  String? m_relativeTo;  
+
+  String get relativeTo { 
+    if (this.m_relativeTo == null) {
+      this.m_relativeTo = "";
+    }
+    return this.m_relativeTo!;
+  }
+
+  void set relativeTo (String v) {
+    this.m_relativeTo = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -35,8 +47,8 @@ class DrilldownDrillUpButtonOptions extends OptionFragment {
     
     // NOTE: skip serialization of position (type DrilldownDrillUpButtonPositionOptions is ignored)} 
 
-    if (this.relativeTo != null) {  
-      buffer.writeAll(["\"relativeTo\":", this.relativeTo, ","], "");
+    if (this.m_relativeTo != null) {  
+      buffer.writeAll(["\"relativeTo\":", this.m_relativeTo, ","], "");
     }
 
     // NOTE: skip serialization of theme (type object is ignored)} 

@@ -23,8 +23,32 @@ import 'OptionFragment.dart';
  */
 class NavigationBindingsOptions extends OptionFragment {
   NavigationBindingsOptions() : super();
-  String? noDataState;
-  String? className;
+  String? m_noDataState;  
+
+  String get noDataState { 
+    if (this.m_noDataState == null) {
+      this.m_noDataState = "";
+    }
+    return this.m_noDataState!;
+  }
+
+  void set noDataState (String v) {
+    this.m_noDataState = v;
+  }
+    
+  String? m_className;  
+
+  String get className { 
+    if (this.m_className == null) {
+      this.m_className = "";
+    }
+    return this.m_className!;
+  }
+
+  void set className (String v) {
+    this.m_className = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,12 +57,12 @@ class NavigationBindingsOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.noDataState != null) {  
-      buffer.writeAll(["\"noDataState\":", this.noDataState, ","], "");
+    if (this.m_noDataState != null) {  
+      buffer.writeAll(["\"noDataState\":", this.m_noDataState, ","], "");
     }
 
-    if (this.className != null) {  
-      buffer.writeAll(["\"className\":", this.className, ","], "");
+    if (this.m_className != null) {  
+      buffer.writeAll(["\"className\":", this.m_className, ","], "");
     }
 
     // NOTE: skip serialization of end (type Function is ignored)} 

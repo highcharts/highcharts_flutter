@@ -24,8 +24,32 @@ import 'OptionFragment.dart';
  */
 class Axis3DTitleOptions extends AxisTitleOptions {
   Axis3DTitleOptions() : super();
-  String? position3d;
-  bool? skew3d;
+  String? m_position3d;  
+
+  String get position3d { 
+    if (this.m_position3d == null) {
+      this.m_position3d = "";
+    }
+    return this.m_position3d!;
+  }
+
+  void set position3d (String v) {
+    this.m_position3d = v;
+  }
+    
+  bool? m_skew3d;  
+
+  bool get skew3d { 
+    if (this.m_skew3d == null) {
+      this.m_skew3d = false;
+    }
+    return this.m_skew3d!;
+  }
+
+  void set skew3d (bool v) {
+    this.m_skew3d = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -34,12 +58,12 @@ class Axis3DTitleOptions extends AxisTitleOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.position3d != null) {  
-      buffer.writeAll(["\"position3d\":", this.position3d, ","], "");
+    if (this.m_position3d != null) {  
+      buffer.writeAll(["\"position3d\":", this.m_position3d, ","], "");
     }
 
-    if (this.skew3d != null) {  
-      buffer.writeAll(["\"skew3d\":", this.skew3d, ","], "");
+    if (this.m_skew3d != null) {  
+      buffer.writeAll(["\"skew3d\":", this.m_skew3d, ","], "");
     }
   }
 

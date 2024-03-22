@@ -23,9 +23,45 @@ import 'OptionFragment.dart';
  */
 class LangAccessibilityExportingOptions extends OptionFragment {
   LangAccessibilityExportingOptions() : super();
-  String? chartMenuLabel;
-  String? exportRegionLabel;
-  String? menuButtonLabel;
+  String? m_chartMenuLabel;  
+
+  String get chartMenuLabel { 
+    if (this.m_chartMenuLabel == null) {
+      this.m_chartMenuLabel = "";
+    }
+    return this.m_chartMenuLabel!;
+  }
+
+  void set chartMenuLabel (String v) {
+    this.m_chartMenuLabel = v;
+  }
+    
+  String? m_exportRegionLabel;  
+
+  String get exportRegionLabel { 
+    if (this.m_exportRegionLabel == null) {
+      this.m_exportRegionLabel = "";
+    }
+    return this.m_exportRegionLabel!;
+  }
+
+  void set exportRegionLabel (String v) {
+    this.m_exportRegionLabel = v;
+  }
+    
+  String? m_menuButtonLabel;  
+
+  String get menuButtonLabel { 
+    if (this.m_menuButtonLabel == null) {
+      this.m_menuButtonLabel = "";
+    }
+    return this.m_menuButtonLabel!;
+  }
+
+  void set menuButtonLabel (String v) {
+    this.m_menuButtonLabel = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -34,16 +70,16 @@ class LangAccessibilityExportingOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.chartMenuLabel != null) {  
-      buffer.writeAll(["\"chartMenuLabel\":", this.chartMenuLabel, ","], "");
+    if (this.m_chartMenuLabel != null) {  
+      buffer.writeAll(["\"chartMenuLabel\":", this.m_chartMenuLabel, ","], "");
     }
 
-    if (this.exportRegionLabel != null) {  
-      buffer.writeAll(["\"exportRegionLabel\":", this.exportRegionLabel, ","], "");
+    if (this.m_exportRegionLabel != null) {  
+      buffer.writeAll(["\"exportRegionLabel\":", this.m_exportRegionLabel, ","], "");
     }
 
-    if (this.menuButtonLabel != null) {  
-      buffer.writeAll(["\"menuButtonLabel\":", this.menuButtonLabel, ","], "");
+    if (this.m_menuButtonLabel != null) {  
+      buffer.writeAll(["\"menuButtonLabel\":", this.m_menuButtonLabel, ","], "");
     }
   }
 

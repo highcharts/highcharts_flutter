@@ -23,10 +23,58 @@ import 'OptionFragment.dart';
  */
 class LangAccessibilityRangeSelectorOptions extends OptionFragment {
   LangAccessibilityRangeSelectorOptions() : super();
-  String? dropdownLabel;
-  String? maxInputLabel;
-  String? minInputLabel;
-  String? clickButtonAnnouncement;
+  String? m_dropdownLabel;  
+
+  String get dropdownLabel { 
+    if (this.m_dropdownLabel == null) {
+      this.m_dropdownLabel = "";
+    }
+    return this.m_dropdownLabel!;
+  }
+
+  void set dropdownLabel (String v) {
+    this.m_dropdownLabel = v;
+  }
+    
+  String? m_maxInputLabel;  
+
+  String get maxInputLabel { 
+    if (this.m_maxInputLabel == null) {
+      this.m_maxInputLabel = "";
+    }
+    return this.m_maxInputLabel!;
+  }
+
+  void set maxInputLabel (String v) {
+    this.m_maxInputLabel = v;
+  }
+    
+  String? m_minInputLabel;  
+
+  String get minInputLabel { 
+    if (this.m_minInputLabel == null) {
+      this.m_minInputLabel = "";
+    }
+    return this.m_minInputLabel!;
+  }
+
+  void set minInputLabel (String v) {
+    this.m_minInputLabel = v;
+  }
+    
+  String? m_clickButtonAnnouncement;  
+
+  String get clickButtonAnnouncement { 
+    if (this.m_clickButtonAnnouncement == null) {
+      this.m_clickButtonAnnouncement = "";
+    }
+    return this.m_clickButtonAnnouncement!;
+  }
+
+  void set clickButtonAnnouncement (String v) {
+    this.m_clickButtonAnnouncement = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -35,20 +83,20 @@ class LangAccessibilityRangeSelectorOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.dropdownLabel != null) {  
-      buffer.writeAll(["\"dropdownLabel\":", this.dropdownLabel, ","], "");
+    if (this.m_dropdownLabel != null) {  
+      buffer.writeAll(["\"dropdownLabel\":", this.m_dropdownLabel, ","], "");
     }
 
-    if (this.maxInputLabel != null) {  
-      buffer.writeAll(["\"maxInputLabel\":", this.maxInputLabel, ","], "");
+    if (this.m_maxInputLabel != null) {  
+      buffer.writeAll(["\"maxInputLabel\":", this.m_maxInputLabel, ","], "");
     }
 
-    if (this.minInputLabel != null) {  
-      buffer.writeAll(["\"minInputLabel\":", this.minInputLabel, ","], "");
+    if (this.m_minInputLabel != null) {  
+      buffer.writeAll(["\"minInputLabel\":", this.m_minInputLabel, ","], "");
     }
 
-    if (this.clickButtonAnnouncement != null) {  
-      buffer.writeAll(["\"clickButtonAnnouncement\":", this.clickButtonAnnouncement, ","], "");
+    if (this.m_clickButtonAnnouncement != null) {  
+      buffer.writeAll(["\"clickButtonAnnouncement\":", this.m_clickButtonAnnouncement, ","], "");
     }
   }
 

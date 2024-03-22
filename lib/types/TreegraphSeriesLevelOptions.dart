@@ -24,7 +24,19 @@ import 'OptionFragment.dart';
  */
 class TreegraphSeriesLevelOptions extends TreegraphSeriesOptions {
   TreegraphSeriesLevelOptions() : super();
-  bool? collapsed;
+  bool? m_collapsed;  
+
+  bool get collapsed { 
+    if (this.m_collapsed == null) {
+      this.m_collapsed = false;
+    }
+    return this.m_collapsed!;
+  }
+
+  void set collapsed (bool v) {
+    this.m_collapsed = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,8 +45,8 @@ class TreegraphSeriesLevelOptions extends TreegraphSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.collapsed != null) {  
-      buffer.writeAll(["\"collapsed\":", this.collapsed, ","], "");
+    if (this.m_collapsed != null) {  
+      buffer.writeAll(["\"collapsed\":", this.m_collapsed, ","], "");
     }
   }
 

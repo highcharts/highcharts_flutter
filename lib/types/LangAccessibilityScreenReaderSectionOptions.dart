@@ -24,9 +24,45 @@ import 'OptionFragment.dart';
  */
 class LangAccessibilityScreenReaderSectionOptions extends OptionFragment {
   LangAccessibilityScreenReaderSectionOptions() : super();
-  String? afterRegionLabel;
-  String? beforeRegionLabel;
-  String? endOfChartMarker;
+  String? m_afterRegionLabel;  
+
+  String get afterRegionLabel { 
+    if (this.m_afterRegionLabel == null) {
+      this.m_afterRegionLabel = "";
+    }
+    return this.m_afterRegionLabel!;
+  }
+
+  void set afterRegionLabel (String v) {
+    this.m_afterRegionLabel = v;
+  }
+    
+  String? m_beforeRegionLabel;  
+
+  String get beforeRegionLabel { 
+    if (this.m_beforeRegionLabel == null) {
+      this.m_beforeRegionLabel = "";
+    }
+    return this.m_beforeRegionLabel!;
+  }
+
+  void set beforeRegionLabel (String v) {
+    this.m_beforeRegionLabel = v;
+  }
+    
+  String? m_endOfChartMarker;  
+
+  String get endOfChartMarker { 
+    if (this.m_endOfChartMarker == null) {
+      this.m_endOfChartMarker = "";
+    }
+    return this.m_endOfChartMarker!;
+  }
+
+  void set endOfChartMarker (String v) {
+    this.m_endOfChartMarker = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -35,18 +71,18 @@ class LangAccessibilityScreenReaderSectionOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.afterRegionLabel != null) {  
-      buffer.writeAll(["\"afterRegionLabel\":", this.afterRegionLabel, ","], "");
+    if (this.m_afterRegionLabel != null) {  
+      buffer.writeAll(["\"afterRegionLabel\":", this.m_afterRegionLabel, ","], "");
     }
 
     // NOTE: skip serialization of annotations (type LangAccessibilityAnnotationOptions is ignored)} 
 
-    if (this.beforeRegionLabel != null) {  
-      buffer.writeAll(["\"beforeRegionLabel\":", this.beforeRegionLabel, ","], "");
+    if (this.m_beforeRegionLabel != null) {  
+      buffer.writeAll(["\"beforeRegionLabel\":", this.m_beforeRegionLabel, ","], "");
     }
 
-    if (this.endOfChartMarker != null) {  
-      buffer.writeAll(["\"endOfChartMarker\":", this.endOfChartMarker, ","], "");
+    if (this.m_endOfChartMarker != null) {  
+      buffer.writeAll(["\"endOfChartMarker\":", this.m_endOfChartMarker, ","], "");
     }
   }
 

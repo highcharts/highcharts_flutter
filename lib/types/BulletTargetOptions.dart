@@ -23,12 +23,84 @@ import 'OptionFragment.dart';
  */
 class BulletTargetOptions extends OptionFragment {
   BulletTargetOptions() : super();
-  String? borderColor;
-  double? borderRadius;
-  double? borderWidth;
-  String? color;
-  double? height;
-  String? width;
+  String? m_borderColor;  
+
+  String get borderColor { 
+    if (this.m_borderColor == null) {
+      this.m_borderColor = "";
+    }
+    return this.m_borderColor!;
+  }
+
+  void set borderColor (String v) {
+    this.m_borderColor = v;
+  }
+    
+  double? m_borderRadius;  
+
+  double get borderRadius { 
+    if (this.m_borderRadius == null) {
+      this.m_borderRadius = 0;
+    }
+    return this.m_borderRadius!;
+  }
+
+  void set borderRadius (double v) {
+    this.m_borderRadius = v;
+  }
+    
+  double? m_borderWidth;  
+
+  double get borderWidth { 
+    if (this.m_borderWidth == null) {
+      this.m_borderWidth = 0;
+    }
+    return this.m_borderWidth!;
+  }
+
+  void set borderWidth (double v) {
+    this.m_borderWidth = v;
+  }
+    
+  String? m_color;  
+
+  String get color { 
+    if (this.m_color == null) {
+      this.m_color = "";
+    }
+    return this.m_color!;
+  }
+
+  void set color (String v) {
+    this.m_color = v;
+  }
+    
+  double? m_height;  
+
+  double get height { 
+    if (this.m_height == null) {
+      this.m_height = 0;
+    }
+    return this.m_height!;
+  }
+
+  void set height (double v) {
+    this.m_height = v;
+  }
+    
+  String? m_width;  
+
+  String get width { 
+    if (this.m_width == null) {
+      this.m_width = "";
+    }
+    return this.m_width!;
+  }
+
+  void set width (String v) {
+    this.m_width = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -37,28 +109,28 @@ class BulletTargetOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.borderColor != null) {  
-      buffer.writeAll(["\"borderColor\":", this.borderColor, ","], "");
+    if (this.m_borderColor != null) {  
+      buffer.writeAll(["\"borderColor\":", this.m_borderColor, ","], "");
     }
 
-    if (this.borderRadius != null) {  
-      buffer.writeAll(["\"borderRadius\":", this.borderRadius, ","], "");
+    if (this.m_borderRadius != null) {  
+      buffer.writeAll(["\"borderRadius\":", this.m_borderRadius, ","], "");
     }
 
-    if (this.borderWidth != null) {  
-      buffer.writeAll(["\"borderWidth\":", this.borderWidth, ","], "");
+    if (this.m_borderWidth != null) {  
+      buffer.writeAll(["\"borderWidth\":", this.m_borderWidth, ","], "");
     }
 
-    if (this.color != null) {  
-      buffer.writeAll(["\"color\":", this.color, ","], "");
+    if (this.m_color != null) {  
+      buffer.writeAll(["\"color\":", this.m_color, ","], "");
     }
 
-    if (this.height != null) {  
-      buffer.writeAll(["\"height\":", this.height, ","], "");
+    if (this.m_height != null) {  
+      buffer.writeAll(["\"height\":", this.m_height, ","], "");
     }
 
-    if (this.width != null) {  
-      buffer.writeAll(["\"width\":", this.width, ","], "");
+    if (this.m_width != null) {  
+      buffer.writeAll(["\"width\":", this.m_width, ","], "");
     }
   }
 

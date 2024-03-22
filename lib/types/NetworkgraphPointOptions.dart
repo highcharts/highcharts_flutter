@@ -24,13 +24,97 @@ import 'OptionFragment.dart';
  */
 class NetworkgraphPointOptions extends PointOptions {
   NetworkgraphPointOptions() : super();
-  String? color;
-  double? colorIndex;
-  String? dashStyle;
-  double? mass;
-  String? name;
-  double? opacity;
-  double? width;
+  String? m_color;  
+
+  String get color { 
+    if (this.m_color == null) {
+      this.m_color = "";
+    }
+    return this.m_color!;
+  }
+
+  void set color (String v) {
+    this.m_color = v;
+  }
+    
+  double? m_colorIndex;  
+
+  double get colorIndex { 
+    if (this.m_colorIndex == null) {
+      this.m_colorIndex = 0;
+    }
+    return this.m_colorIndex!;
+  }
+
+  void set colorIndex (double v) {
+    this.m_colorIndex = v;
+  }
+    
+  String? m_dashStyle;  
+
+  String get dashStyle { 
+    if (this.m_dashStyle == null) {
+      this.m_dashStyle = "";
+    }
+    return this.m_dashStyle!;
+  }
+
+  void set dashStyle (String v) {
+    this.m_dashStyle = v;
+  }
+    
+  double? m_mass;  
+
+  double get mass { 
+    if (this.m_mass == null) {
+      this.m_mass = 0;
+    }
+    return this.m_mass!;
+  }
+
+  void set mass (double v) {
+    this.m_mass = v;
+  }
+    
+  String? m_name;  
+
+  String get name { 
+    if (this.m_name == null) {
+      this.m_name = "";
+    }
+    return this.m_name!;
+  }
+
+  void set name (String v) {
+    this.m_name = v;
+  }
+    
+  double? m_opacity;  
+
+  double get opacity { 
+    if (this.m_opacity == null) {
+      this.m_opacity = 0;
+    }
+    return this.m_opacity!;
+  }
+
+  void set opacity (double v) {
+    this.m_opacity = v;
+  }
+    
+  double? m_width;  
+
+  double get width { 
+    if (this.m_width == null) {
+      this.m_width = 0;
+    }
+    return this.m_width!;
+  }
+
+  void set width (double v) {
+    this.m_width = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -39,32 +123,32 @@ class NetworkgraphPointOptions extends PointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.color != null) {  
-      buffer.writeAll(["\"color\":", this.color, ","], "");
+    if (this.m_color != null) {  
+      buffer.writeAll(["\"color\":", this.m_color, ","], "");
     }
 
-    if (this.colorIndex != null) {  
-      buffer.writeAll(["\"colorIndex\":", this.colorIndex, ","], "");
+    if (this.m_colorIndex != null) {  
+      buffer.writeAll(["\"colorIndex\":", this.m_colorIndex, ","], "");
     }
 
-    if (this.dashStyle != null) {  
-      buffer.writeAll(["\"dashStyle\":", this.dashStyle, ","], "");
+    if (this.m_dashStyle != null) {  
+      buffer.writeAll(["\"dashStyle\":", this.m_dashStyle, ","], "");
     }
 
-    if (this.mass != null) {  
-      buffer.writeAll(["\"mass\":", this.mass, ","], "");
+    if (this.m_mass != null) {  
+      buffer.writeAll(["\"mass\":", this.m_mass, ","], "");
     }
 
-    if (this.name != null) {  
-      buffer.writeAll(["\"name\":", this.name, ","], "");
+    if (this.m_name != null) {  
+      buffer.writeAll(["\"name\":", this.m_name, ","], "");
     }
 
-    if (this.opacity != null) {  
-      buffer.writeAll(["\"opacity\":", this.opacity, ","], "");
+    if (this.m_opacity != null) {  
+      buffer.writeAll(["\"opacity\":", this.m_opacity, ","], "");
     }
 
-    if (this.width != null) {  
-      buffer.writeAll(["\"width\":", this.width, ","], "");
+    if (this.m_width != null) {  
+      buffer.writeAll(["\"width\":", this.m_width, ","], "");
     }
   }
 

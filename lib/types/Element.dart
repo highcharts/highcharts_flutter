@@ -23,7 +23,19 @@ import 'OptionFragment.dart';
  */
 class Element extends OptionFragment {
   Element() : super();
-  String? gradient;
+  String? m_gradient;  
+
+  String get gradient { 
+    if (this.m_gradient == null) {
+      this.m_gradient = "";
+    }
+    return this.m_gradient!;
+  }
+
+  void set gradient (String v) {
+    this.m_gradient = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -32,8 +44,8 @@ class Element extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.gradient != null) {  
-      buffer.writeAll(["\"gradient\":", this.gradient, ","], "");
+    if (this.m_gradient != null) {  
+      buffer.writeAll(["\"gradient\":", this.m_gradient, ","], "");
     }
 
     // NOTE: skip serialization of radialReference (type number[] is ignored)} 

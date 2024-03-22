@@ -33,11 +33,35 @@ class RangeSelectorOptions extends OptionFragment {
    * but enabling all buttons allows for dynamically loading different
    * time ranges.  
       */
-  bool? allButtonsEnabled;
+  bool? m_allButtonsEnabled;  
+
+  bool get allButtonsEnabled { 
+    if (this.m_allButtonsEnabled == null) {
+      this.m_allButtonsEnabled = false;
+    }
+    return this.m_allButtonsEnabled!;
+  }
+
+  void set allButtonsEnabled (bool v) {
+    this.m_allButtonsEnabled = v;
+  }
+    
   /**
    * Positioning for the button row.  
       */
-  RangeSelectorPositionOptions? buttonPosition;
+  RangeSelectorPositionOptions? m_buttonPosition;  
+
+  RangeSelectorPositionOptions get buttonPosition { 
+    if (this.m_buttonPosition == null) {
+      this.m_buttonPosition = RangeSelectorPositionOptions();
+    }
+    return this.m_buttonPosition!;
+  }
+
+  void set buttonPosition (RangeSelectorPositionOptions v) {
+    this.m_buttonPosition = v;
+  }
+    
   /**
    * An array of configuration objects for the buttons.
    * 
@@ -82,7 +106,19 @@ class RangeSelectorOptions extends OptionFragment {
    * 
    * Defaults to '5'. 
       */
-  double? buttonSpacing;
+  double? m_buttonSpacing;  
+
+  double get buttonSpacing { 
+    if (this.m_buttonSpacing == null) {
+      this.m_buttonSpacing = 0;
+    }
+    return this.m_buttonSpacing!;
+  }
+
+  void set buttonSpacing (double v) {
+    this.m_buttonSpacing = v;
+  }
+    
   /**
    * A collection of attributes for the buttons. The object takes SVG
    * attributes like `fill`, `stroke`, `stroke-width`, as well as `style`,
@@ -98,7 +134,19 @@ class RangeSelectorOptions extends OptionFragment {
    * `.highcharts-range-selector-buttons .highcharts-button` rule with its
    * different states.  
       */
-  ButtonThemeObject? buttonTheme;
+  ButtonThemeObject? m_buttonTheme;  
+
+  ButtonThemeObject get buttonTheme { 
+    if (this.m_buttonTheme == null) {
+      this.m_buttonTheme = ButtonThemeObject();
+    }
+    return this.m_buttonTheme!;
+  }
+
+  void set buttonTheme (ButtonThemeObject v) {
+    this.m_buttonTheme = v;
+  }
+    
   /**
    * Whether to collapse the range selector buttons into a dropdown when
    * there is not enough room to show everything in a single row, instead
@@ -110,41 +158,125 @@ class RangeSelectorOptions extends OptionFragment {
    * 
    * Defaults to 'responsive'. 
       */
-  String? dropdown;
+  String? m_dropdown;  
+
+  String get dropdown { 
+    if (this.m_dropdown == null) {
+      this.m_dropdown = "";
+    }
+    return this.m_dropdown!;
+  }
+
+  void set dropdown (String v) {
+    this.m_dropdown = v;
+  }
+    
   /**
    * Enable or disable the range selector. Default to `true` for stock
    * charts, using the `stockChart` factory. 
    * 
    * Defaults to 'undefined'. 
       */
-  bool? enabled;
+  bool? m_enabled;  
+
+  bool get enabled { 
+    if (this.m_enabled == null) {
+      this.m_enabled = false;
+    }
+    return this.m_enabled!;
+  }
+
+  void set enabled (bool v) {
+    this.m_enabled = v;
+  }
+    
   /**
    * When the rangeselector is floating, the plot area does not reserve
    * space for it. This opens for positioning anywhere on the chart.  
       */
-  bool? floating;
+  bool? m_floating;  
+
+  bool get floating { 
+    if (this.m_floating == null) {
+      this.m_floating = false;
+    }
+    return this.m_floating!;
+  }
+
+  void set floating (bool v) {
+    this.m_floating = v;
+  }
+    
   /**
    * Deprecated. The height of the range selector. Currently it is
    * calculated dynamically.  
       */
-  double? height;
+  double? m_height;  
+
+  double get height { 
+    if (this.m_height == null) {
+      this.m_height = 0;
+    }
+    return this.m_height!;
+  }
+
+  void set height (double v) {
+    this.m_height = v;
+  }
+    
   /**
    * The border color of the date input boxes. 
    * 
    * Defaults to 'none'. 
       */
-  String? inputBoxBorderColor;
+  String? m_inputBoxBorderColor;  
+
+  String get inputBoxBorderColor { 
+    if (this.m_inputBoxBorderColor == null) {
+      this.m_inputBoxBorderColor = "";
+    }
+    return this.m_inputBoxBorderColor!;
+  }
+
+  void set inputBoxBorderColor (String v) {
+    this.m_inputBoxBorderColor = v;
+  }
+    
   /**
    * The pixel height of the date input boxes. 
    * 
    * Defaults to '17'. 
       */
-  double? inputBoxHeight;
+  double? m_inputBoxHeight;  
+
+  double get inputBoxHeight { 
+    if (this.m_inputBoxHeight == null) {
+      this.m_inputBoxHeight = 0;
+    }
+    return this.m_inputBoxHeight!;
+  }
+
+  void set inputBoxHeight (double v) {
+    this.m_inputBoxHeight = v;
+  }
+    
   /**
    * The pixel width of the date input boxes. When `undefined`, the width
    * is fitted to the rendered content.  
       */
-  double? inputBoxWidth;
+  double? m_inputBoxWidth;  
+
+  double get inputBoxWidth { 
+    if (this.m_inputBoxWidth == null) {
+      this.m_inputBoxWidth = 0;
+    }
+    return this.m_inputBoxWidth!;
+  }
+
+  void set inputBoxWidth (double v) {
+    this.m_inputBoxWidth = v;
+  }
+    
   /**
    * The date format in the input boxes when not selected for editing.
    * Defaults to `%e %b %Y`.
@@ -156,7 +288,19 @@ class RangeSelectorOptions extends OptionFragment {
    * 
    * Defaults to '%e %b %Y'. 
       */
-  String? inputDateFormat;
+  String? m_inputDateFormat;  
+
+  String get inputDateFormat { 
+    if (this.m_inputDateFormat == null) {
+      this.m_inputDateFormat = "";
+    }
+    return this.m_inputDateFormat!;
+  }
+
+  void set inputDateFormat (String v) {
+    this.m_inputDateFormat = v;
+  }
+    
   /**
    * The date format in the input boxes when they are selected for
    * editing. This must be a format that is recognized by JavaScript
@@ -168,25 +312,73 @@ class RangeSelectorOptions extends OptionFragment {
    * 
    * Defaults to '%Y-%m-%d'. 
       */
-  String? inputEditDateFormat;
+  String? m_inputEditDateFormat;  
+
+  String get inputEditDateFormat { 
+    if (this.m_inputEditDateFormat == null) {
+      this.m_inputEditDateFormat = "";
+    }
+    return this.m_inputEditDateFormat!;
+  }
+
+  void set inputEditDateFormat (String v) {
+    this.m_inputEditDateFormat = v;
+  }
+    
   /**
    * Enable or disable the date input boxes. 
    * 
    * Defaults to 'true'. 
       */
-  bool? inputEnabled;
+  bool? m_inputEnabled;  
+
+  bool get inputEnabled { 
+    if (this.m_inputEnabled == null) {
+      this.m_inputEnabled = false;
+    }
+    return this.m_inputEnabled!;
+  }
+
+  void set inputEnabled (bool v) {
+    this.m_inputEnabled = v;
+  }
+    
   /**
    * Positioning for the input boxes. Allowed properties are `align`,
    *  `x` and `y`.  
       */
-  RangeSelectorPositionOptions? inputPosition;
+  RangeSelectorPositionOptions? m_inputPosition;  
+
+  RangeSelectorPositionOptions get inputPosition { 
+    if (this.m_inputPosition == null) {
+      this.m_inputPosition = RangeSelectorPositionOptions();
+    }
+    return this.m_inputPosition!;
+  }
+
+  void set inputPosition (RangeSelectorPositionOptions v) {
+    this.m_inputPosition = v;
+  }
+    
   /**
    * The space in pixels between the labels and the date input boxes in
    * the range selector. 
    * 
    * Defaults to '5'. 
       */
-  double? inputSpacing;
+  double? m_inputSpacing;  
+
+  double get inputSpacing { 
+    if (this.m_inputSpacing == null) {
+      this.m_inputSpacing = 0;
+    }
+    return this.m_inputSpacing!;
+  }
+
+  void set inputSpacing (double v) {
+    this.m_inputSpacing = v;
+  }
+    
   /**
    * CSS for the HTML inputs in the range selector.
    * 
@@ -194,35 +386,107 @@ class RangeSelectorOptions extends OptionFragment {
    * `.highcharts-range-input text` rule in SVG mode, and
    * `input.highcharts-range-selector` when active.  
       */
-  CSSObject? inputStyle;
+  CSSObject? m_inputStyle;  
+
+  CSSObject get inputStyle { 
+    if (this.m_inputStyle == null) {
+      this.m_inputStyle = CSSObject();
+    }
+    return this.m_inputStyle!;
+  }
+
+  void set inputStyle (CSSObject v) {
+    this.m_inputStyle = v;
+  }
+    
   /**
    * CSS styles for the labels - the Zoom, From and To texts.
    * 
    * In styled mode, the labels are styled by the
    * `.highcharts-range-label` class.  
       */
-  CSSObject? labelStyle;
+  CSSObject? m_labelStyle;  
+
+  CSSObject get labelStyle { 
+    if (this.m_labelStyle == null) {
+      this.m_labelStyle = CSSObject();
+    }
+    return this.m_labelStyle!;
+  }
+
+  void set labelStyle (CSSObject v) {
+    this.m_labelStyle = v;
+  }
+    
   /**
    * The index of the button to appear pre-selected.  
       */
-  double? selected;
+  double? m_selected;  
+
+  double get selected { 
+    if (this.m_selected == null) {
+      this.m_selected = 0;
+    }
+    return this.m_selected!;
+  }
+
+  void set selected (double v) {
+    this.m_selected = v;
+  }
+    
   /**
    * The vertical alignment of the rangeselector box. Allowed properties
    * are `top`, `middle`, `bottom`. 
    * 
    * Defaults to 'top'. 
       */
-  String? verticalAlign;
+  String? m_verticalAlign;  
+
+  String get verticalAlign { 
+    if (this.m_verticalAlign == null) {
+      this.m_verticalAlign = "";
+    }
+    return this.m_verticalAlign!;
+  }
+
+  void set verticalAlign (String v) {
+    this.m_verticalAlign = v;
+  }
+    
   /**
    * The x offset of the range selector relative to its horizontal
    * alignment within `chart.spacingLeft` and `chart.spacingRight`.  
       */
-  double? x;
+  double? m_x;  
+
+  double get x { 
+    if (this.m_x == null) {
+      this.m_x = 0;
+    }
+    return this.m_x!;
+  }
+
+  void set x (double v) {
+    this.m_x = v;
+  }
+    
   /**
    * The y offset of the range selector relative to its horizontal
    * alignment within `chart.spacingLeft` and `chart.spacingRight`.  
       */
-  double? y;
+  double? m_y;  
+
+  double get y { 
+    if (this.m_y == null) {
+      this.m_y = 0;
+    }
+    return this.m_y!;
+  }
+
+  void set y (double v) {
+    this.m_y = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -231,96 +495,94 @@ class RangeSelectorOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.allButtonsEnabled != null) {  
-      buffer.writeAll(["\"allButtonsEnabled\":", this.allButtonsEnabled, ","], "");
+    if (this.m_allButtonsEnabled != null) {  
+      buffer.writeAll(["\"allButtonsEnabled\":", this.m_allButtonsEnabled, ","], "");
     }
 
-    if (this.buttonPosition != null) {  
-      buffer.writeAll(["\"buttonPosition\":", this.buttonPosition?.toJSON(), ","], "");
+    if (this.m_buttonPosition != null) {  
+      buffer.writeAll(["\"buttonPosition\":", this.m_buttonPosition?.toJSON(), ","], "");
     }
 
-    if (this.buttons != null) {  
-    // Skipped array buttons
+    // NOTE: skip serialization of buttons (type RangeSelectorButtonOptions[] is ignored)} 
+
+    if (this.m_buttonSpacing != null) {  
+      buffer.writeAll(["\"buttonSpacing\":", this.m_buttonSpacing, ","], "");
     }
 
-    if (this.buttonSpacing != null) {  
-      buffer.writeAll(["\"buttonSpacing\":", this.buttonSpacing, ","], "");
+    if (this.m_buttonTheme != null) {  
+      buffer.writeAll(["\"buttonTheme\":", this.m_buttonTheme?.toJSON(), ","], "");
     }
 
-    if (this.buttonTheme != null) {  
-      buffer.writeAll(["\"buttonTheme\":", this.buttonTheme?.toJSON(), ","], "");
+    if (this.m_dropdown != null) {  
+      buffer.writeAll(["\"dropdown\":", this.m_dropdown, ","], "");
     }
 
-    if (this.dropdown != null) {  
-      buffer.writeAll(["\"dropdown\":", this.dropdown, ","], "");
+    if (this.m_enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this.m_enabled, ","], "");
     }
 
-    if (this.enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
+    if (this.m_floating != null) {  
+      buffer.writeAll(["\"floating\":", this.m_floating, ","], "");
     }
 
-    if (this.floating != null) {  
-      buffer.writeAll(["\"floating\":", this.floating, ","], "");
+    if (this.m_height != null) {  
+      buffer.writeAll(["\"height\":", this.m_height, ","], "");
     }
 
-    if (this.height != null) {  
-      buffer.writeAll(["\"height\":", this.height, ","], "");
+    if (this.m_inputBoxBorderColor != null) {  
+      buffer.writeAll(["\"inputBoxBorderColor\":", this.m_inputBoxBorderColor, ","], "");
     }
 
-    if (this.inputBoxBorderColor != null) {  
-      buffer.writeAll(["\"inputBoxBorderColor\":", this.inputBoxBorderColor, ","], "");
+    if (this.m_inputBoxHeight != null) {  
+      buffer.writeAll(["\"inputBoxHeight\":", this.m_inputBoxHeight, ","], "");
     }
 
-    if (this.inputBoxHeight != null) {  
-      buffer.writeAll(["\"inputBoxHeight\":", this.inputBoxHeight, ","], "");
+    if (this.m_inputBoxWidth != null) {  
+      buffer.writeAll(["\"inputBoxWidth\":", this.m_inputBoxWidth, ","], "");
     }
 
-    if (this.inputBoxWidth != null) {  
-      buffer.writeAll(["\"inputBoxWidth\":", this.inputBoxWidth, ","], "");
+    if (this.m_inputDateFormat != null) {  
+      buffer.writeAll(["\"inputDateFormat\":", this.m_inputDateFormat, ","], "");
     }
 
-    if (this.inputDateFormat != null) {  
-      buffer.writeAll(["\"inputDateFormat\":", this.inputDateFormat, ","], "");
+    if (this.m_inputEditDateFormat != null) {  
+      buffer.writeAll(["\"inputEditDateFormat\":", this.m_inputEditDateFormat, ","], "");
     }
 
-    if (this.inputEditDateFormat != null) {  
-      buffer.writeAll(["\"inputEditDateFormat\":", this.inputEditDateFormat, ","], "");
+    if (this.m_inputEnabled != null) {  
+      buffer.writeAll(["\"inputEnabled\":", this.m_inputEnabled, ","], "");
     }
 
-    if (this.inputEnabled != null) {  
-      buffer.writeAll(["\"inputEnabled\":", this.inputEnabled, ","], "");
+    if (this.m_inputPosition != null) {  
+      buffer.writeAll(["\"inputPosition\":", this.m_inputPosition?.toJSON(), ","], "");
     }
 
-    if (this.inputPosition != null) {  
-      buffer.writeAll(["\"inputPosition\":", this.inputPosition?.toJSON(), ","], "");
+    if (this.m_inputSpacing != null) {  
+      buffer.writeAll(["\"inputSpacing\":", this.m_inputSpacing, ","], "");
     }
 
-    if (this.inputSpacing != null) {  
-      buffer.writeAll(["\"inputSpacing\":", this.inputSpacing, ","], "");
+    if (this.m_inputStyle != null) {  
+      buffer.writeAll(["\"inputStyle\":", this.m_inputStyle?.toJSON(), ","], "");
     }
 
-    if (this.inputStyle != null) {  
-      buffer.writeAll(["\"inputStyle\":", this.inputStyle?.toJSON(), ","], "");
+    if (this.m_labelStyle != null) {  
+      buffer.writeAll(["\"labelStyle\":", this.m_labelStyle?.toJSON(), ","], "");
     }
 
-    if (this.labelStyle != null) {  
-      buffer.writeAll(["\"labelStyle\":", this.labelStyle?.toJSON(), ","], "");
+    if (this.m_selected != null) {  
+      buffer.writeAll(["\"selected\":", this.m_selected, ","], "");
     }
 
-    if (this.selected != null) {  
-      buffer.writeAll(["\"selected\":", this.selected, ","], "");
+    if (this.m_verticalAlign != null) {  
+      buffer.writeAll(["\"verticalAlign\":", this.m_verticalAlign, ","], "");
     }
 
-    if (this.verticalAlign != null) {  
-      buffer.writeAll(["\"verticalAlign\":", this.verticalAlign, ","], "");
+    if (this.m_x != null) {  
+      buffer.writeAll(["\"x\":", this.m_x, ","], "");
     }
 
-    if (this.x != null) {  
-      buffer.writeAll(["\"x\":", this.x, ","], "");
-    }
-
-    if (this.y != null) {  
-      buffer.writeAll(["\"y\":", this.y, ","], "");
+    if (this.m_y != null) {  
+      buffer.writeAll(["\"y\":", this.m_y, ","], "");
     }
   }
 

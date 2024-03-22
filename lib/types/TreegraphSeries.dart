@@ -23,7 +23,19 @@ import 'OptionFragment.dart';
  */
 class TreegraphSeries extends OptionFragment {
   TreegraphSeries() : super();
-  bool? inverted;
+  bool? m_inverted;  
+
+  bool get inverted { 
+    if (this.m_inverted == null) {
+      this.m_inverted = false;
+    }
+    return this.m_inverted!;
+  }
+
+  void set inverted (bool v) {
+    this.m_inverted = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -32,8 +44,8 @@ class TreegraphSeries extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.inverted != null) {  
-      buffer.writeAll(["\"inverted\":", this.inverted, ","], "");
+    if (this.m_inverted != null) {  
+      buffer.writeAll(["\"inverted\":", this.m_inverted, ","], "");
     }
 
     // NOTE: skip serialization of pointClass (type typeof TreegraphPoint is ignored)} 

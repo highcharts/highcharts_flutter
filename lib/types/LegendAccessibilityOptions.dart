@@ -24,7 +24,19 @@ import 'OptionFragment.dart';
  */
 class LegendAccessibilityOptions extends OptionFragment {
   LegendAccessibilityOptions() : super();
-  bool? enabled;
+  bool? m_enabled;  
+
+  bool get enabled { 
+    if (this.m_enabled == null) {
+      this.m_enabled = false;
+    }
+    return this.m_enabled!;
+  }
+
+  void set enabled (bool v) {
+    this.m_enabled = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,8 +45,8 @@ class LegendAccessibilityOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
+    if (this.m_enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this.m_enabled, ","], "");
     }
 
     // NOTE: skip serialization of keyboardNavigation (type LegendAccessibilityKeyboardNavigationOptions is ignored)} 

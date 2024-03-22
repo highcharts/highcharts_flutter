@@ -25,9 +25,45 @@ import 'OptionFragment.dart';
  */
 class HeatmapPointOptions extends ScatterPointOptions {
   HeatmapPointOptions() : super();
-  double? borderWidth;
-  double? pointPadding;
-  double? value;
+  double? m_borderWidth;  
+
+  double get borderWidth { 
+    if (this.m_borderWidth == null) {
+      this.m_borderWidth = 0;
+    }
+    return this.m_borderWidth!;
+  }
+
+  void set borderWidth (double v) {
+    this.m_borderWidth = v;
+  }
+    
+  double? m_pointPadding;  
+
+  double get pointPadding { 
+    if (this.m_pointPadding == null) {
+      this.m_pointPadding = 0;
+    }
+    return this.m_pointPadding!;
+  }
+
+  void set pointPadding (double v) {
+    this.m_pointPadding = v;
+  }
+    
+  double? m_value;  
+
+  double get value { 
+    if (this.m_value == null) {
+      this.m_value = 0;
+    }
+    return this.m_value!;
+  }
+
+  void set value (double v) {
+    this.m_value = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -36,18 +72,18 @@ class HeatmapPointOptions extends ScatterPointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.borderWidth != null) {  
-      buffer.writeAll(["\"borderWidth\":", this.borderWidth, ","], "");
+    if (this.m_borderWidth != null) {  
+      buffer.writeAll(["\"borderWidth\":", this.m_borderWidth, ","], "");
     }
 
     // NOTE: skip serialization of marker (type HeatmapPointMarkerOptions is ignored)} 
 
-    if (this.pointPadding != null) {  
-      buffer.writeAll(["\"pointPadding\":", this.pointPadding, ","], "");
+    if (this.m_pointPadding != null) {  
+      buffer.writeAll(["\"pointPadding\":", this.m_pointPadding, ","], "");
     }
 
-    if (this.value != null) {  
-      buffer.writeAll(["\"value\":", this.value, ","], "");
+    if (this.m_value != null) {  
+      buffer.writeAll(["\"value\":", this.m_value, ","], "");
     }
   }
 

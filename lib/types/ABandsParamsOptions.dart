@@ -24,7 +24,19 @@ import 'OptionFragment.dart';
  */
 class ABandsParamsOptions extends SMAParamsOptions {
   ABandsParamsOptions() : super();
-  double? factor;
+  double? m_factor;  
+
+  double get factor { 
+    if (this.m_factor == null) {
+      this.m_factor = 0;
+    }
+    return this.m_factor!;
+  }
+
+  void set factor (double v) {
+    this.m_factor = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,8 +45,8 @@ class ABandsParamsOptions extends SMAParamsOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.factor != null) {  
-      buffer.writeAll(["\"factor\":", this.factor, ","], "");
+    if (this.m_factor != null) {  
+      buffer.writeAll(["\"factor\":", this.m_factor, ","], "");
     }
   }
 

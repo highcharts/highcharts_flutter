@@ -24,7 +24,19 @@ import 'OptionFragment.dart';
  */
 class LabelsItemsOptions extends OptionFragment {
   LabelsItemsOptions() : super();
-  String? html;
+  String? m_html;  
+
+  String get html { 
+    if (this.m_html == null) {
+      this.m_html = "";
+    }
+    return this.m_html!;
+  }
+
+  void set html (String v) {
+    this.m_html = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,8 +45,8 @@ class LabelsItemsOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.html != null) {  
-      buffer.writeAll(["\"html\":", this.html, ","], "");
+    if (this.m_html != null) {  
+      buffer.writeAll(["\"html\":", this.m_html, ","], "");
     }
 
     // NOTE: skip serialization of style (type CSSObject is ignored)} 

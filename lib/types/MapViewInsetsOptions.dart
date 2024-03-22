@@ -27,7 +27,19 @@ import 'OptionFragment.dart';
  */
 class MapViewInsetsOptions extends MapViewInsetOptions {
   MapViewInsetsOptions() : super();
-  String? id;
+  String? m_id;  
+
+  String get id { 
+    if (this.m_id == null) {
+      this.m_id = "";
+    }
+    return this.m_id!;
+  }
+
+  void set id (String v) {
+    this.m_id = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -44,8 +56,8 @@ class MapViewInsetsOptions extends MapViewInsetOptions {
 
     // NOTE: skip serialization of geoBounds (type Polygon is ignored)} 
 
-    if (this.id != null) {  
-      buffer.writeAll(["\"id\":", this.id, ","], "");
+    if (this.m_id != null) {  
+      buffer.writeAll(["\"id\":", this.m_id, ","], "");
     }
 
     // NOTE: skip serialization of projection (type ProjectionOptions is ignored)} 

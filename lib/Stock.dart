@@ -134,95 +134,394 @@ class StockOptions extends OptionFragment {
   /** 
   * @see: https://api.highcharts.com/stock/accessibility
   */
-  AccessibilityOptions? accessibility;
+  AccessibilityOptions? m_accessibility;
+
+  AccessibilityOptions get accessibility { 
+    if (this.m_accessibility == null) {
+      this.m_accessibility = AccessibilityOptions();
+    }
+    return this.m_accessibility!;
+  }
+
+  void set accessibility (AccessibilityOptions v) {
+    this.m_accessibility = v;
+  }
+
+  
   /** 
   * @see: https://api.highcharts.com/stock/annotations
   */
-  AnnotationOptions? annotations;
+  AnnotationOptions? m_annotations;
+
+  AnnotationOptions get annotations { 
+    if (this.m_annotations == null) {
+      this.m_annotations = AnnotationOptions();
+    }
+    return this.m_annotations!;
+  }
+
+  void set annotations (AnnotationOptions v) {
+    this.m_annotations = v;
+  }
+
+  
   /** 
   * @see: https://api.highcharts.com/stock/boost
   */
-  BoostOptions? boost;
+  BoostOptions? m_boost;
+
+  BoostOptions get boost { 
+    if (this.m_boost == null) {
+      this.m_boost = BoostOptions();
+    }
+    return this.m_boost!;
+  }
+
+  void set boost (BoostOptions v) {
+    this.m_boost = v;
+  }
+
+  
   /** 
   * @see: https://api.highcharts.com/stock/caption
   */
-  CaptionOptions? caption;
+  CaptionOptions? m_caption;
+
+  CaptionOptions get caption { 
+    if (this.m_caption == null) {
+      this.m_caption = CaptionOptions();
+    }
+    return this.m_caption!;
+  }
+
+  void set caption (CaptionOptions v) {
+    this.m_caption = v;
+  }
+
+  
   /** 
   * @see: https://api.highcharts.com/stock/chart
   */
-  ChartOptions? chart;
+  ChartOptions? m_chart;
+
+  ChartOptions get chart { 
+    if (this.m_chart == null) {
+      this.m_chart = ChartOptions();
+    }
+    return this.m_chart!;
+  }
+
+  void set chart (ChartOptions v) {
+    this.m_chart = v;
+  }
+
+  
   /** 
   * @see: https://api.highcharts.com/stock/colorAxis
   */
-  ColorAxisOptions? colorAxis;
+  ColorAxisOptions? m_colorAxis;
+
+  ColorAxisOptions get colorAxis { 
+    if (this.m_colorAxis == null) {
+      this.m_colorAxis = ColorAxisOptions();
+    }
+    return this.m_colorAxis!;
+  }
+
+  void set colorAxis (ColorAxisOptions v) {
+    this.m_colorAxis = v;
+  }
+
+  
   /** 
   * @see: https://api.highcharts.com/stock/credits
   */
-  CreditsOptions? credits;
+  CreditsOptions? m_credits;
+
+  CreditsOptions get credits { 
+    if (this.m_credits == null) {
+      this.m_credits = CreditsOptions();
+    }
+    return this.m_credits!;
+  }
+
+  void set credits (CreditsOptions v) {
+    this.m_credits = v;
+  }
+
+  
   /** 
   * @see: https://api.highcharts.com/stock/exporting
   */
-  ExportingOptions? exporting;
+  ExportingOptions? m_exporting;
+
+  ExportingOptions get exporting { 
+    if (this.m_exporting == null) {
+      this.m_exporting = ExportingOptions();
+    }
+    return this.m_exporting!;
+  }
+
+  void set exporting (ExportingOptions v) {
+    this.m_exporting = v;
+  }
+
+  
   /** 
   * @see: https://api.highcharts.com/stock/legend
   */
-  LegendOptions? legend;
+  LegendOptions? m_legend;
+
+  LegendOptions get legend { 
+    if (this.m_legend == null) {
+      this.m_legend = LegendOptions();
+    }
+    return this.m_legend!;
+  }
+
+  void set legend (LegendOptions v) {
+    this.m_legend = v;
+  }
+
+  
   /** 
   * @see: https://api.highcharts.com/stock/loading
   */
-  LoadingOptions? loading;
+  LoadingOptions? m_loading;
+
+  LoadingOptions get loading { 
+    if (this.m_loading == null) {
+      this.m_loading = LoadingOptions();
+    }
+    return this.m_loading!;
+  }
+
+  void set loading (LoadingOptions v) {
+    this.m_loading = v;
+  }
+
+  
   /** 
   * @see: https://api.highcharts.com/stock/navigation
   */
-  NavigationOptions? navigation;
+  NavigationOptions? m_navigation;
+
+  NavigationOptions get navigation { 
+    if (this.m_navigation == null) {
+      this.m_navigation = NavigationOptions();
+    }
+    return this.m_navigation!;
+  }
+
+  void set navigation (NavigationOptions v) {
+    this.m_navigation = v;
+  }
+
+  
   /** 
   * @see: https://api.highcharts.com/stock/navigator
   */
-  NavigatorOptions? navigator;
+  NavigatorOptions? m_navigator;
+
+  NavigatorOptions get navigator { 
+    if (this.m_navigator == null) {
+      this.m_navigator = NavigatorOptions();
+    }
+    return this.m_navigator!;
+  }
+
+  void set navigator (NavigatorOptions v) {
+    this.m_navigator = v;
+  }
+
+  
   /** 
   * @see: https://api.highcharts.com/stock/plotOptions
   */
-  StockProductSeries? plotOptions;
+  StockProductSeries? m_plotOptions;
+
+  StockProductSeries get plotOptions { 
+    if (this.m_plotOptions == null) {
+      this.m_plotOptions = StockProductSeries();
+    }
+    return this.m_plotOptions!;
+  }
+
+  void set plotOptions (StockProductSeries v) {
+    this.m_plotOptions = v;
+  }
+
+  
   /** 
   * @see: https://api.highcharts.com/stock/rangeSelector
   */
-  RangeSelectorOptions? rangeSelector;
+  RangeSelectorOptions? m_rangeSelector;
+
+  RangeSelectorOptions get rangeSelector { 
+    if (this.m_rangeSelector == null) {
+      this.m_rangeSelector = RangeSelectorOptions();
+    }
+    return this.m_rangeSelector!;
+  }
+
+  void set rangeSelector (RangeSelectorOptions v) {
+    this.m_rangeSelector = v;
+  }
+
+  
   /** 
   * @see: https://api.highcharts.com/stock/scrollbar
   */
-  ScrollbarOptions? scrollbar;
+  ScrollbarOptions? m_scrollbar;
+
+  ScrollbarOptions get scrollbar { 
+    if (this.m_scrollbar == null) {
+      this.m_scrollbar = ScrollbarOptions();
+    }
+    return this.m_scrollbar!;
+  }
+
+  void set scrollbar (ScrollbarOptions v) {
+    this.m_scrollbar = v;
+  }
+
+  
   /** 
   * @see: https://api.highcharts.com/stock/stockTools
   */
-  StockToolsOptions? stockTools;
+  StockToolsOptions? m_stockTools;
+
+  StockToolsOptions get stockTools { 
+    if (this.m_stockTools == null) {
+      this.m_stockTools = StockToolsOptions();
+    }
+    return this.m_stockTools!;
+  }
+
+  void set stockTools (StockToolsOptions v) {
+    this.m_stockTools = v;
+  }
+
+  
   /** 
   * @see: https://api.highcharts.com/stock/subtitle
   */
-  SubtitleOptions? subtitle;
+  SubtitleOptions? m_subtitle;
+
+  SubtitleOptions get subtitle { 
+    if (this.m_subtitle == null) {
+      this.m_subtitle = SubtitleOptions();
+    }
+    return this.m_subtitle!;
+  }
+
+  void set subtitle (SubtitleOptions v) {
+    this.m_subtitle = v;
+  }
+
+  
   /** 
   * @see: https://api.highcharts.com/stock/time
   */
-  TimeOptions? time;
+  TimeOptions? m_time;
+
+  TimeOptions get time { 
+    if (this.m_time == null) {
+      this.m_time = TimeOptions();
+    }
+    return this.m_time!;
+  }
+
+  void set time (TimeOptions v) {
+    this.m_time = v;
+  }
+
+  
   /** 
   * @see: https://api.highcharts.com/stock/title
   */
-  TitleOptions? title;
+  TitleOptions? m_title;
+
+  TitleOptions get title { 
+    if (this.m_title == null) {
+      this.m_title = TitleOptions();
+    }
+    return this.m_title!;
+  }
+
+  void set title (TitleOptions v) {
+    this.m_title = v;
+  }
+
+  
   /** 
   * @see: https://api.highcharts.com/stock/tooltip
   */
-  TooltipOptions? tooltip;
+  TooltipOptions? m_tooltip;
+
+  TooltipOptions get tooltip { 
+    if (this.m_tooltip == null) {
+      this.m_tooltip = TooltipOptions();
+    }
+    return this.m_tooltip!;
+  }
+
+  void set tooltip (TooltipOptions v) {
+    this.m_tooltip = v;
+  }
+
+  
   /** 
   * @see: https://api.highcharts.com/stock/xAxis
   */
-  AxisOptions? xAxis;
+  AxisOptions? m_xAxis;
+
+  AxisOptions get xAxis { 
+    if (this.m_xAxis == null) {
+      this.m_xAxis = AxisOptions();
+    }
+    return this.m_xAxis!;
+  }
+
+  void set xAxis (AxisOptions v) {
+    this.m_xAxis = v;
+  }
+
+  
   /** 
   * @see: https://api.highcharts.com/stock/yAxis
   */
-  AxisOptions? yAxis;
+  AxisOptions? m_yAxis;
+
+  AxisOptions get yAxis { 
+    if (this.m_yAxis == null) {
+      this.m_yAxis = AxisOptions();
+    }
+    return this.m_yAxis!;
+  }
+
+  void set yAxis (AxisOptions v) {
+    this.m_yAxis = v;
+  }
+
+  
   /** 
   * @see: https://api.highcharts.com/stock/zAxis
   */
-  AxisOptions? zAxis;
+  AxisOptions? m_zAxis;
+
+  AxisOptions get zAxis { 
+    if (this.m_zAxis == null) {
+      this.m_zAxis = AxisOptions();
+    }
+    return this.m_zAxis!;
+  }
+
+  void set zAxis (AxisOptions v) {
+    this.m_zAxis = v;
+  }
+
+  
 
 
   // TODO: Generate series list based on allowed series.
@@ -232,29 +531,29 @@ class StockOptions extends OptionFragment {
 
   /** Constructor */
   StockOptions([
-    this.accessibility,
-    this.annotations,
-    this.boost,
-    this.caption,
-    this.chart,
-    this.colorAxis,
-    this.credits,
-    this.exporting,
-    this.legend,
-    this.loading,
-    this.navigation,
-    this.navigator,
-    this.plotOptions,
-    this.rangeSelector,
-    this.scrollbar,
-    this.stockTools,
-    this.subtitle,
-    this.time,
-    this.title,
-    this.tooltip,
-    this.xAxis,
-    this.yAxis,
-    this.zAxis
+    this.m_accessibility,
+    this.m_annotations,
+    this.m_boost,
+    this.m_caption,
+    this.m_chart,
+    this.m_colorAxis,
+    this.m_credits,
+    this.m_exporting,
+    this.m_legend,
+    this.m_loading,
+    this.m_navigation,
+    this.m_navigator,
+    this.m_plotOptions,
+    this.m_rangeSelector,
+    this.m_scrollbar,
+    this.m_stockTools,
+    this.m_subtitle,
+    this.m_time,
+    this.m_title,
+    this.m_tooltip,
+    this.m_xAxis,
+    this.m_yAxis,
+    this.m_zAxis
   ]);
   
   @override
@@ -343,96 +642,96 @@ class StockOptions extends OptionFragment {
       }
     }
   
-    if (this.accessibility != null) {  
-      buffer.writeAll(["\"accessibility\":", this.accessibility?.toJSON(), ","], "");
+    if (this.m_accessibility != null) {  
+      buffer.writeAll(["\"accessibility\":", this.m_accessibility?.toJSON(), ","], "");
     }
 
-    if (this.annotations != null) {  
-      buffer.writeAll(["\"annotations\":", this.annotations?.toJSON(), ","], "");
+    if (this.m_annotations != null) {  
+      buffer.writeAll(["\"annotations\":", this.m_annotations?.toJSON(), ","], "");
     }
 
-    if (this.boost != null) {  
-      buffer.writeAll(["\"boost\":", this.boost?.toJSON(), ","], "");
+    if (this.m_boost != null) {  
+      buffer.writeAll(["\"boost\":", this.m_boost?.toJSON(), ","], "");
     }
 
-    if (this.caption != null) {  
-      buffer.writeAll(["\"caption\":", this.caption?.toJSON(), ","], "");
+    if (this.m_caption != null) {  
+      buffer.writeAll(["\"caption\":", this.m_caption?.toJSON(), ","], "");
     }
 
-    if (this.chart != null) {  
-      buffer.writeAll(["\"chart\":", this.chart?.toJSON(), ","], "");
+    if (this.m_chart != null) {  
+      buffer.writeAll(["\"chart\":", this.m_chart?.toJSON(), ","], "");
     }
 
-    if (this.colorAxis != null) {  
-      buffer.writeAll(["\"colorAxis\":", this.colorAxis?.toJSON(), ","], "");
+    if (this.m_colorAxis != null) {  
+      buffer.writeAll(["\"colorAxis\":", this.m_colorAxis?.toJSON(), ","], "");
     }
 
-    if (this.credits != null) {  
-      buffer.writeAll(["\"credits\":", this.credits?.toJSON(), ","], "");
+    if (this.m_credits != null) {  
+      buffer.writeAll(["\"credits\":", this.m_credits?.toJSON(), ","], "");
     }
 
-    if (this.exporting != null) {  
-      buffer.writeAll(["\"exporting\":", this.exporting?.toJSON(), ","], "");
+    if (this.m_exporting != null) {  
+      buffer.writeAll(["\"exporting\":", this.m_exporting?.toJSON(), ","], "");
     }
 
-    if (this.legend != null) {  
-      buffer.writeAll(["\"legend\":", this.legend?.toJSON(), ","], "");
+    if (this.m_legend != null) {  
+      buffer.writeAll(["\"legend\":", this.m_legend?.toJSON(), ","], "");
     }
 
-    if (this.loading != null) {  
-      buffer.writeAll(["\"loading\":", this.loading?.toJSON(), ","], "");
+    if (this.m_loading != null) {  
+      buffer.writeAll(["\"loading\":", this.m_loading?.toJSON(), ","], "");
     }
 
-    if (this.navigation != null) {  
-      buffer.writeAll(["\"navigation\":", this.navigation?.toJSON(), ","], "");
+    if (this.m_navigation != null) {  
+      buffer.writeAll(["\"navigation\":", this.m_navigation?.toJSON(), ","], "");
     }
 
-    if (this.navigator != null) {  
-      buffer.writeAll(["\"navigator\":", this.navigator?.toJSON(), ","], "");
+    if (this.m_navigator != null) {  
+      buffer.writeAll(["\"navigator\":", this.m_navigator?.toJSON(), ","], "");
     }
 
-    if (this.plotOptions != null) {  
-      buffer.writeAll(["\"plotOptions\":", this.plotOptions?.toJSON(), ","], "");
+    if (this.m_plotOptions != null) {  
+      buffer.writeAll(["\"plotOptions\":", this.m_plotOptions?.toJSON(), ","], "");
     }
 
-    if (this.rangeSelector != null) {  
-      buffer.writeAll(["\"rangeSelector\":", this.rangeSelector?.toJSON(), ","], "");
+    if (this.m_rangeSelector != null) {  
+      buffer.writeAll(["\"rangeSelector\":", this.m_rangeSelector?.toJSON(), ","], "");
     }
 
-    if (this.scrollbar != null) {  
-      buffer.writeAll(["\"scrollbar\":", this.scrollbar?.toJSON(), ","], "");
+    if (this.m_scrollbar != null) {  
+      buffer.writeAll(["\"scrollbar\":", this.m_scrollbar?.toJSON(), ","], "");
     }
 
-    if (this.stockTools != null) {  
-      buffer.writeAll(["\"stockTools\":", this.stockTools?.toJSON(), ","], "");
+    if (this.m_stockTools != null) {  
+      buffer.writeAll(["\"stockTools\":", this.m_stockTools?.toJSON(), ","], "");
     }
 
-    if (this.subtitle != null) {  
-      buffer.writeAll(["\"subtitle\":", this.subtitle?.toJSON(), ","], "");
+    if (this.m_subtitle != null) {  
+      buffer.writeAll(["\"subtitle\":", this.m_subtitle?.toJSON(), ","], "");
     }
 
-    if (this.time != null) {  
-      buffer.writeAll(["\"time\":", this.time?.toJSON(), ","], "");
+    if (this.m_time != null) {  
+      buffer.writeAll(["\"time\":", this.m_time?.toJSON(), ","], "");
     }
 
-    if (this.title != null) {  
-      buffer.writeAll(["\"title\":", this.title?.toJSON(), ","], "");
+    if (this.m_title != null) {  
+      buffer.writeAll(["\"title\":", this.m_title?.toJSON(), ","], "");
     }
 
-    if (this.tooltip != null) {  
-      buffer.writeAll(["\"tooltip\":", this.tooltip?.toJSON(), ","], "");
+    if (this.m_tooltip != null) {  
+      buffer.writeAll(["\"tooltip\":", this.m_tooltip?.toJSON(), ","], "");
     }
 
-    if (this.xAxis != null) {  
-      buffer.writeAll(["\"xAxis\":", this.xAxis?.toJSON(), ","], "");
+    if (this.m_xAxis != null) {  
+      buffer.writeAll(["\"xAxis\":", this.m_xAxis?.toJSON(), ","], "");
     }
 
-    if (this.yAxis != null) {  
-      buffer.writeAll(["\"yAxis\":", this.yAxis?.toJSON(), ","], "");
+    if (this.m_yAxis != null) {  
+      buffer.writeAll(["\"yAxis\":", this.m_yAxis?.toJSON(), ","], "");
     }
 
-    if (this.zAxis != null) {  
-      buffer.writeAll(["\"zAxis\":", this.zAxis?.toJSON(), ","], "");
+    if (this.m_zAxis != null) {  
+      buffer.writeAll(["\"zAxis\":", this.m_zAxis?.toJSON(), ","], "");
     }
   }
 

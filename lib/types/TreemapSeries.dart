@@ -23,10 +23,58 @@ import 'OptionFragment.dart';
  */
 class TreemapSeries extends OptionFragment {
   TreemapSeries() : super();
-  String? colorKey;
-  bool? directTouch;
-  bool? getExtremesFromAll;
-  String? optionalAxis;
+  String? m_colorKey;  
+
+  String get colorKey { 
+    if (this.m_colorKey == null) {
+      this.m_colorKey = "";
+    }
+    return this.m_colorKey!;
+  }
+
+  void set colorKey (String v) {
+    this.m_colorKey = v;
+  }
+    
+  bool? m_directTouch;  
+
+  bool get directTouch { 
+    if (this.m_directTouch == null) {
+      this.m_directTouch = false;
+    }
+    return this.m_directTouch!;
+  }
+
+  void set directTouch (bool v) {
+    this.m_directTouch = v;
+  }
+    
+  bool? m_getExtremesFromAll;  
+
+  bool get getExtremesFromAll { 
+    if (this.m_getExtremesFromAll == null) {
+      this.m_getExtremesFromAll = false;
+    }
+    return this.m_getExtremesFromAll!;
+  }
+
+  void set getExtremesFromAll (bool v) {
+    this.m_getExtremesFromAll = v;
+  }
+    
+  String? m_optionalAxis;  
+
+  String get optionalAxis { 
+    if (this.m_optionalAxis == null) {
+      this.m_optionalAxis = "";
+    }
+    return this.m_optionalAxis!;
+  }
+
+  void set optionalAxis (String v) {
+    this.m_optionalAxis = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -35,20 +83,20 @@ class TreemapSeries extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.colorKey != null) {  
-      buffer.writeAll(["\"colorKey\":", this.colorKey, ","], "");
+    if (this.m_colorKey != null) {  
+      buffer.writeAll(["\"colorKey\":", this.m_colorKey, ","], "");
     }
 
-    if (this.directTouch != null) {  
-      buffer.writeAll(["\"directTouch\":", this.directTouch, ","], "");
+    if (this.m_directTouch != null) {  
+      buffer.writeAll(["\"directTouch\":", this.m_directTouch, ","], "");
     }
 
-    if (this.getExtremesFromAll != null) {  
-      buffer.writeAll(["\"getExtremesFromAll\":", this.getExtremesFromAll, ","], "");
+    if (this.m_getExtremesFromAll != null) {  
+      buffer.writeAll(["\"getExtremesFromAll\":", this.m_getExtremesFromAll, ","], "");
     }
 
-    if (this.optionalAxis != null) {  
-      buffer.writeAll(["\"optionalAxis\":", this.optionalAxis, ","], "");
+    if (this.m_optionalAxis != null) {  
+      buffer.writeAll(["\"optionalAxis\":", this.m_optionalAxis, ","], "");
     }
 
     // NOTE: skip serialization of parallelArrays (type string[] is ignored)} 

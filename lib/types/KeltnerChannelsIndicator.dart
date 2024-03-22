@@ -23,8 +23,32 @@ import 'OptionFragment.dart';
  */
 class KeltnerChannelsIndicator extends OptionFragment {
   KeltnerChannelsIndicator() : super();
-  String? nameBase;
-  String? pointValKey;
+  String? m_nameBase;  
+
+  String get nameBase { 
+    if (this.m_nameBase == null) {
+      this.m_nameBase = "";
+    }
+    return this.m_nameBase!;
+  }
+
+  void set nameBase (String v) {
+    this.m_nameBase = v;
+  }
+    
+  String? m_pointValKey;  
+
+  String get pointValKey { 
+    if (this.m_pointValKey == null) {
+      this.m_pointValKey = "";
+    }
+    return this.m_pointValKey!;
+  }
+
+  void set pointValKey (String v) {
+    this.m_pointValKey = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,8 +57,8 @@ class KeltnerChannelsIndicator extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.nameBase != null) {  
-      buffer.writeAll(["\"nameBase\":", this.nameBase, ","], "");
+    if (this.m_nameBase != null) {  
+      buffer.writeAll(["\"nameBase\":", this.m_nameBase, ","], "");
     }
 
     // NOTE: skip serialization of nameComponents (type string[] is ignored)} 
@@ -43,8 +67,8 @@ class KeltnerChannelsIndicator extends OptionFragment {
 
     // NOTE: skip serialization of pointClass (type typeof KeltnerChannelsPoint is ignored)} 
 
-    if (this.pointValKey != null) {  
-      buffer.writeAll(["\"pointValKey\":", this.pointValKey, ","], "");
+    if (this.m_pointValKey != null) {  
+      buffer.writeAll(["\"pointValKey\":", this.m_pointValKey, ","], "");
     }
   }
 

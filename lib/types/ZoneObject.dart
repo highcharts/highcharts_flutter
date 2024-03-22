@@ -26,7 +26,19 @@ import 'OptionFragment.dart';
  */
 class ZoneObject extends SeriesZonesOptions {
   ZoneObject() : super();
-  double? translated;
+  double? m_translated;  
+
+  double get translated { 
+    if (this.m_translated == null) {
+      this.m_translated = 0;
+    }
+    return this.m_translated!;
+  }
+
+  void set translated (double v) {
+    this.m_translated = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -45,8 +57,8 @@ class ZoneObject extends SeriesZonesOptions {
 
     // NOTE: skip serialization of simpleClip (type SVGElement is ignored)} 
 
-    if (this.translated != null) {  
-      buffer.writeAll(["\"translated\":", this.translated, ","], "");
+    if (this.m_translated != null) {  
+      buffer.writeAll(["\"translated\":", this.m_translated, ","], "");
     }
   }
 

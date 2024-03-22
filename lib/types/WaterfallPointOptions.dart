@@ -24,7 +24,19 @@ import 'OptionFragment.dart';
  */
 class WaterfallPointOptions extends ColumnPointOptions {
   WaterfallPointOptions() : super();
-  bool? isSum;
+  bool? m_isSum;  
+
+  bool get isSum { 
+    if (this.m_isSum == null) {
+      this.m_isSum = false;
+    }
+    return this.m_isSum!;
+  }
+
+  void set isSum (bool v) {
+    this.m_isSum = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,8 +45,8 @@ class WaterfallPointOptions extends ColumnPointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.isSum != null) {  
-      buffer.writeAll(["\"isSum\":", this.isSum, ","], "");
+    if (this.m_isSum != null) {  
+      buffer.writeAll(["\"isSum\":", this.m_isSum, ","], "");
     }
 
     // NOTE: skip serialization of y (type any is ignored)} 

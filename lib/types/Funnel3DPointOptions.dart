@@ -25,8 +25,32 @@ import 'OptionFragment.dart';
  */
 class Funnel3DPointOptions extends ColumnPointOptions {
   Funnel3DPointOptions() : super();
-  bool? gradientForSides;
-  double? y;
+  bool? m_gradientForSides;  
+
+  bool get gradientForSides { 
+    if (this.m_gradientForSides == null) {
+      this.m_gradientForSides = false;
+    }
+    return this.m_gradientForSides!;
+  }
+
+  void set gradientForSides (bool v) {
+    this.m_gradientForSides = v;
+  }
+    
+  double? m_y;  
+
+  double get y { 
+    if (this.m_y == null) {
+      this.m_y = 0;
+    }
+    return this.m_y!;
+  }
+
+  void set y (double v) {
+    this.m_y = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -35,14 +59,14 @@ class Funnel3DPointOptions extends ColumnPointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.gradientForSides != null) {  
-      buffer.writeAll(["\"gradientForSides\":", this.gradientForSides, ","], "");
+    if (this.m_gradientForSides != null) {  
+      buffer.writeAll(["\"gradientForSides\":", this.m_gradientForSides, ","], "");
     }
 
     // NOTE: skip serialization of dlBox (type BBoxObject is ignored)} 
 
-    if (this.y != null) {  
-      buffer.writeAll(["\"y\":", this.y, ","], "");
+    if (this.m_y != null) {  
+      buffer.writeAll(["\"y\":", this.m_y, ","], "");
     }
   }
 

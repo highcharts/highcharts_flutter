@@ -24,7 +24,19 @@ import 'OptionFragment.dart';
  */
 class TrendLineParamsOptions extends SMAParamsOptions {
   TrendLineParamsOptions() : super();
-  double? index;
+  double? m_index;  
+
+  double get index { 
+    if (this.m_index == null) {
+      this.m_index = 0;
+    }
+    return this.m_index!;
+  }
+
+  void set index (double v) {
+    this.m_index = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,8 +45,8 @@ class TrendLineParamsOptions extends SMAParamsOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.index != null) {  
-      buffer.writeAll(["\"index\":", this.index, ","], "");
+    if (this.m_index != null) {  
+      buffer.writeAll(["\"index\":", this.m_index, ","], "");
     }
   }
 

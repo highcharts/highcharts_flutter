@@ -37,7 +37,19 @@ class VBPOptions extends SMAOptions {
    * is fired on individual points, not on a group of points like e.g. during
    * the initial animation.  
       */
-  double? animationLimit;
+  double? m_animationLimit;  
+
+  double get animationLimit { 
+    if (this.m_animationLimit == null) {
+      this.m_animationLimit = 0;
+    }
+    return this.m_animationLimit!;
+  }
+
+  void set animationLimit (double v) {
+    this.m_animationLimit = v;
+  }
+    
   /**
    * When true, each point or column edge is rounded to its nearest pixel
    * in order to render sharp on screen. In some cases, when there are a
@@ -48,7 +60,19 @@ class VBPOptions extends SMAOptions {
    * 
    * Defaults to 'true'. 
       */
-  bool? crisp;
+  bool? m_crisp;  
+
+  bool get crisp { 
+    if (this.m_crisp == null) {
+      this.m_crisp = false;
+    }
+    return this.m_crisp!;
+  }
+
+  void set crisp (bool v) {
+    this.m_crisp = v;
+  }
+    
   /**
    * Data grouping is the concept of sampling the data values into larger
    * blocks in order to ease readability and increase performance of the
@@ -63,7 +87,19 @@ class VBPOptions extends SMAOptions {
    * the first point instance are copied over to the group point. This can be
    * altered through a custom `approximation` callback function.  
       */
-  DataGroupingOptions? dataGrouping;
+  DataGroupingOptions? m_dataGrouping;  
+
+  DataGroupingOptions get dataGrouping { 
+    if (this.m_dataGrouping == null) {
+      this.m_dataGrouping = DataGroupingOptions();
+    }
+    return this.m_dataGrouping!;
+  }
+
+  void set dataGrouping (DataGroupingOptions v) {
+    this.m_dataGrouping = v;
+  }
+    
   /**
    * Options for the series data labels, appearing next to each data
    * point.
@@ -84,25 +120,85 @@ class VBPOptions extends SMAOptions {
    * 
    * Defaults to 'true'. 
       */
-  bool? enableMouseTracking;
+  bool? m_enableMouseTracking;  
+
+  bool get enableMouseTracking { 
+    if (this.m_enableMouseTracking == null) {
+      this.m_enableMouseTracking = false;
+    }
+    return this.m_enableMouseTracking!;
+  }
+
+  void set enableMouseTracking (bool v) {
+    this.m_enableMouseTracking = v;
+  }
+    
   /**
    * Paramters used in calculation of regression series' points.  
       */
   /** NOTE: extparams is skipped here for now, as it overrides the base type. */
 
-  double? pointPadding;
+  double? m_pointPadding;  
+
+  double get pointPadding { 
+    if (this.m_pointPadding == null) {
+      this.m_pointPadding = 0;
+    }
+    return this.m_pointPadding!;
+  }
+
+  void set pointPadding (double v) {
+    this.m_pointPadding = v;
+  }
+    
   /**
    * The styles for bars when volume is divided into positive/negative.  
       */
-  VBPIndicatorStyleOptions? volumeDivision;
+  VBPIndicatorStyleOptions? m_volumeDivision;  
+
+  VBPIndicatorStyleOptions get volumeDivision { 
+    if (this.m_volumeDivision == null) {
+      this.m_volumeDivision = VBPIndicatorStyleOptions();
+    }
+    return this.m_volumeDivision!;
+  }
+
+  void set volumeDivision (VBPIndicatorStyleOptions v) {
+    this.m_volumeDivision = v;
+  }
+    
   /**
    * Define the z index of the series.  
       */
-  double? zIndex;
+  double? m_zIndex;  
+
+  double get zIndex { 
+    if (this.m_zIndex == null) {
+      this.m_zIndex = 0;
+    }
+    return this.m_zIndex!;
+  }
+
+  void set zIndex (double v) {
+    this.m_zIndex = v;
+  }
+    
   /**
    * The styles for lines which determine price zones.  
       */
-  VBPIndicatorStyleOptions? zoneLines;
+  VBPIndicatorStyleOptions? m_zoneLines;  
+
+  VBPIndicatorStyleOptions get zoneLines { 
+    if (this.m_zoneLines == null) {
+      this.m_zoneLines = VBPIndicatorStyleOptions();
+    }
+    return this.m_zoneLines!;
+  }
+
+  void set zoneLines (VBPIndicatorStyleOptions v) {
+    this.m_zoneLines = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -111,44 +207,42 @@ class VBPOptions extends SMAOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.animationLimit != null) {  
-      buffer.writeAll(["\"animationLimit\":", this.animationLimit, ","], "");
+    if (this.m_animationLimit != null) {  
+      buffer.writeAll(["\"animationLimit\":", this.m_animationLimit, ","], "");
     }
 
-    if (this.crisp != null) {  
-      buffer.writeAll(["\"crisp\":", this.crisp, ","], "");
+    if (this.m_crisp != null) {  
+      buffer.writeAll(["\"crisp\":", this.m_crisp, ","], "");
     }
 
-    if (this.dataGrouping != null) {  
-      buffer.writeAll(["\"dataGrouping\":", this.dataGrouping?.toJSON(), ","], "");
+    if (this.m_dataGrouping != null) {  
+      buffer.writeAll(["\"dataGrouping\":", this.m_dataGrouping?.toJSON(), ","], "");
     }
 
-    if (this.dataLabels != null) {  
-    // Skipped array dataLabels
+    // NOTE: skip serialization of dataLabels (type DataLabelOptions is ignored)} 
+
+    if (this.m_enableMouseTracking != null) {  
+      buffer.writeAll(["\"enableMouseTracking\":", this.m_enableMouseTracking, ","], "");
     }
 
-    if (this.enableMouseTracking != null) {  
-      buffer.writeAll(["\"enableMouseTracking\":", this.enableMouseTracking, ","], "");
+    if (this.m_params != null) {  
+      buffer.writeAll(["\"params\":", this.m_params?.toJSON(), ","], "");
     }
 
-    if (this.params != null) {  
-      buffer.writeAll(["\"params\":", this.params?.toJSON(), ","], "");
+    if (this.m_pointPadding != null) {  
+      buffer.writeAll(["\"pointPadding\":", this.m_pointPadding, ","], "");
     }
 
-    if (this.pointPadding != null) {  
-      buffer.writeAll(["\"pointPadding\":", this.pointPadding, ","], "");
+    if (this.m_volumeDivision != null) {  
+      buffer.writeAll(["\"volumeDivision\":", this.m_volumeDivision?.toJSON(), ","], "");
     }
 
-    if (this.volumeDivision != null) {  
-      buffer.writeAll(["\"volumeDivision\":", this.volumeDivision?.toJSON(), ","], "");
+    if (this.m_zIndex != null) {  
+      buffer.writeAll(["\"zIndex\":", this.m_zIndex, ","], "");
     }
 
-    if (this.zIndex != null) {  
-      buffer.writeAll(["\"zIndex\":", this.zIndex, ","], "");
-    }
-
-    if (this.zoneLines != null) {  
-      buffer.writeAll(["\"zoneLines\":", this.zoneLines?.toJSON(), ","], "");
+    if (this.m_zoneLines != null) {  
+      buffer.writeAll(["\"zoneLines\":", this.m_zoneLines?.toJSON(), ","], "");
     }
   }
 

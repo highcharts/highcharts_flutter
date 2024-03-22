@@ -24,8 +24,32 @@ import 'OptionFragment.dart';
  */
 class DragNodesSeriesOptions extends SeriesOptions {
   DragNodesSeriesOptions() : super();
-  bool? draggable;
-  bool? fixedDraggable;
+  bool? m_draggable;  
+
+  bool get draggable { 
+    if (this.m_draggable == null) {
+      this.m_draggable = false;
+    }
+    return this.m_draggable!;
+  }
+
+  void set draggable (bool v) {
+    this.m_draggable = v;
+  }
+    
+  bool? m_fixedDraggable;  
+
+  bool get fixedDraggable { 
+    if (this.m_fixedDraggable == null) {
+      this.m_fixedDraggable = false;
+    }
+    return this.m_fixedDraggable!;
+  }
+
+  void set fixedDraggable (bool v) {
+    this.m_fixedDraggable = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -34,12 +58,12 @@ class DragNodesSeriesOptions extends SeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.draggable != null) {  
-      buffer.writeAll(["\"draggable\":", this.draggable, ","], "");
+    if (this.m_draggable != null) {  
+      buffer.writeAll(["\"draggable\":", this.m_draggable, ","], "");
     }
 
-    if (this.fixedDraggable != null) {  
-      buffer.writeAll(["\"fixedDraggable\":", this.fixedDraggable, ","], "");
+    if (this.m_fixedDraggable != null) {  
+      buffer.writeAll(["\"fixedDraggable\":", this.m_fixedDraggable, ","], "");
     }
   }
 

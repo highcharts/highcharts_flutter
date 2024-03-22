@@ -26,7 +26,19 @@ import 'OptionFragment.dart';
  */
 class DragNodesSeries extends Series {
   DragNodesSeries() : super();
-  bool? hasDraggableNodes;
+  bool? m_hasDraggableNodes;  
+
+  bool get hasDraggableNodes { 
+    if (this.m_hasDraggableNodes == null) {
+      this.m_hasDraggableNodes = false;
+    }
+    return this.m_hasDraggableNodes!;
+  }
+
+  void set hasDraggableNodes (bool v) {
+    this.m_hasDraggableNodes = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -39,8 +51,8 @@ class DragNodesSeries extends Series {
 
     // NOTE: skip serialization of data (type DragNodesPoint[] is ignored)} 
 
-    if (this.hasDraggableNodes != null) {  
-      buffer.writeAll(["\"hasDraggableNodes\":", this.hasDraggableNodes, ","], "");
+    if (this.m_hasDraggableNodes != null) {  
+      buffer.writeAll(["\"hasDraggableNodes\":", this.m_hasDraggableNodes, ","], "");
     }
 
     // NOTE: skip serialization of layout (type ReingoldFruchtermanLayout is ignored)} 

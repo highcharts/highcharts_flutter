@@ -24,9 +24,45 @@ import 'OptionFragment.dart';
  */
 class SupertrendLinkedParentPointObject extends LinePoint {
   SupertrendLinkedParentPointObject() : super();
-  double? close;
-  double? index;
-  double? x;
+  double? m_close;  
+
+  double get close { 
+    if (this.m_close == null) {
+      this.m_close = 0;
+    }
+    return this.m_close!;
+  }
+
+  void set close (double v) {
+    this.m_close = v;
+  }
+    
+  double? m_index;  
+
+  double get index { 
+    if (this.m_index == null) {
+      this.m_index = 0;
+    }
+    return this.m_index!;
+  }
+
+  void set index (double v) {
+    this.m_index = v;
+  }
+    
+  double? m_x;  
+
+  double get x { 
+    if (this.m_x == null) {
+      this.m_x = 0;
+    }
+    return this.m_x!;
+  }
+
+  void set x (double v) {
+    this.m_x = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -35,16 +71,16 @@ class SupertrendLinkedParentPointObject extends LinePoint {
     super.toJSONInner(buffer);
 
     
-    if (this.close != null) {  
-      buffer.writeAll(["\"close\":", this.close, ","], "");
+    if (this.m_close != null) {  
+      buffer.writeAll(["\"close\":", this.m_close, ","], "");
     }
 
-    if (this.index != null) {  
-      buffer.writeAll(["\"index\":", this.index, ","], "");
+    if (this.m_index != null) {  
+      buffer.writeAll(["\"index\":", this.m_index, ","], "");
     }
 
-    if (this.x != null) {  
-      buffer.writeAll(["\"x\":", this.x, ","], "");
+    if (this.m_x != null) {  
+      buffer.writeAll(["\"x\":", this.m_x, ","], "");
     }
   }
 

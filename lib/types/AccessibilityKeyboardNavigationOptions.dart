@@ -25,8 +25,32 @@ import 'OptionFragment.dart';
  */
 class AccessibilityKeyboardNavigationOptions extends OptionFragment {
   AccessibilityKeyboardNavigationOptions() : super();
-  bool? enabled;
-  bool? wrapAround;
+  bool? m_enabled;  
+
+  bool get enabled { 
+    if (this.m_enabled == null) {
+      this.m_enabled = false;
+    }
+    return this.m_enabled!;
+  }
+
+  void set enabled (bool v) {
+    this.m_enabled = v;
+  }
+    
+  bool? m_wrapAround;  
+
+  bool get wrapAround { 
+    if (this.m_wrapAround == null) {
+      this.m_wrapAround = false;
+    }
+    return this.m_wrapAround!;
+  }
+
+  void set wrapAround (bool v) {
+    this.m_wrapAround = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -35,8 +59,8 @@ class AccessibilityKeyboardNavigationOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
+    if (this.m_enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this.m_enabled, ","], "");
     }
 
     // NOTE: skip serialization of focusBorder (type AccessibilityKeyboardNavigationFocusBorderOptions is ignored)} 
@@ -45,8 +69,8 @@ class AccessibilityKeyboardNavigationOptions extends OptionFragment {
 
     // NOTE: skip serialization of seriesNavigation (type AccessibilityKeyboardNavigationSeriesNavigationOptions is ignored)} 
 
-    if (this.wrapAround != null) {  
-      buffer.writeAll(["\"wrapAround\":", this.wrapAround, ","], "");
+    if (this.m_wrapAround != null) {  
+      buffer.writeAll(["\"wrapAround\":", this.m_wrapAround, ","], "");
     }
   }
 

@@ -23,12 +23,84 @@ import 'OptionFragment.dart';
  */
 class DragDropGuideBoxOptions extends OptionFragment {
   DragDropGuideBoxOptions() : super();
-  String? className;
-  String? color;
-  String? cursor;
-  String? lineColor;
-  double? lineWidth;
-  double? zIndex;
+  String? m_className;  
+
+  String get className { 
+    if (this.m_className == null) {
+      this.m_className = "";
+    }
+    return this.m_className!;
+  }
+
+  void set className (String v) {
+    this.m_className = v;
+  }
+    
+  String? m_color;  
+
+  String get color { 
+    if (this.m_color == null) {
+      this.m_color = "";
+    }
+    return this.m_color!;
+  }
+
+  void set color (String v) {
+    this.m_color = v;
+  }
+    
+  String? m_cursor;  
+
+  String get cursor { 
+    if (this.m_cursor == null) {
+      this.m_cursor = "";
+    }
+    return this.m_cursor!;
+  }
+
+  void set cursor (String v) {
+    this.m_cursor = v;
+  }
+    
+  String? m_lineColor;  
+
+  String get lineColor { 
+    if (this.m_lineColor == null) {
+      this.m_lineColor = "";
+    }
+    return this.m_lineColor!;
+  }
+
+  void set lineColor (String v) {
+    this.m_lineColor = v;
+  }
+    
+  double? m_lineWidth;  
+
+  double get lineWidth { 
+    if (this.m_lineWidth == null) {
+      this.m_lineWidth = 0;
+    }
+    return this.m_lineWidth!;
+  }
+
+  void set lineWidth (double v) {
+    this.m_lineWidth = v;
+  }
+    
+  double? m_zIndex;  
+
+  double get zIndex { 
+    if (this.m_zIndex == null) {
+      this.m_zIndex = 0;
+    }
+    return this.m_zIndex!;
+  }
+
+  void set zIndex (double v) {
+    this.m_zIndex = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -37,28 +109,28 @@ class DragDropGuideBoxOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.className != null) {  
-      buffer.writeAll(["\"className\":", this.className, ","], "");
+    if (this.m_className != null) {  
+      buffer.writeAll(["\"className\":", this.m_className, ","], "");
     }
 
-    if (this.color != null) {  
-      buffer.writeAll(["\"color\":", this.color, ","], "");
+    if (this.m_color != null) {  
+      buffer.writeAll(["\"color\":", this.m_color, ","], "");
     }
 
-    if (this.cursor != null) {  
-      buffer.writeAll(["\"cursor\":", this.cursor, ","], "");
+    if (this.m_cursor != null) {  
+      buffer.writeAll(["\"cursor\":", this.m_cursor, ","], "");
     }
 
-    if (this.lineColor != null) {  
-      buffer.writeAll(["\"lineColor\":", this.lineColor, ","], "");
+    if (this.m_lineColor != null) {  
+      buffer.writeAll(["\"lineColor\":", this.m_lineColor, ","], "");
     }
 
-    if (this.lineWidth != null) {  
-      buffer.writeAll(["\"lineWidth\":", this.lineWidth, ","], "");
+    if (this.m_lineWidth != null) {  
+      buffer.writeAll(["\"lineWidth\":", this.m_lineWidth, ","], "");
     }
 
-    if (this.zIndex != null) {  
-      buffer.writeAll(["\"zIndex\":", this.zIndex, ","], "");
+    if (this.m_zIndex != null) {  
+      buffer.writeAll(["\"zIndex\":", this.m_zIndex, ","], "");
     }
   }
 

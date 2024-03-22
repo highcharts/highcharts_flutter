@@ -23,9 +23,45 @@ import 'OptionFragment.dart';
  */
 class MenuObject extends OptionFragment {
   MenuObject() : super();
-  bool? separator;
-  String? text;
-  String? textKey;
+  bool? m_separator;  
+
+  bool get separator { 
+    if (this.m_separator == null) {
+      this.m_separator = false;
+    }
+    return this.m_separator!;
+  }
+
+  void set separator (bool v) {
+    this.m_separator = v;
+  }
+    
+  String? m_text;  
+
+  String get text { 
+    if (this.m_text == null) {
+      this.m_text = "";
+    }
+    return this.m_text!;
+  }
+
+  void set text (String v) {
+    this.m_text = v;
+  }
+    
+  String? m_textKey;  
+
+  String get textKey { 
+    if (this.m_textKey == null) {
+      this.m_textKey = "";
+    }
+    return this.m_textKey!;
+  }
+
+  void set textKey (String v) {
+    this.m_textKey = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -34,16 +70,16 @@ class MenuObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.separator != null) {  
-      buffer.writeAll(["\"separator\":", this.separator, ","], "");
+    if (this.m_separator != null) {  
+      buffer.writeAll(["\"separator\":", this.m_separator, ","], "");
     }
 
-    if (this.text != null) {  
-      buffer.writeAll(["\"text\":", this.text, ","], "");
+    if (this.m_text != null) {  
+      buffer.writeAll(["\"text\":", this.m_text, ","], "");
     }
 
-    if (this.textKey != null) {  
-      buffer.writeAll(["\"textKey\":", this.textKey, ","], "");
+    if (this.m_textKey != null) {  
+      buffer.writeAll(["\"textKey\":", this.m_textKey, ","], "");
     }
   }
 

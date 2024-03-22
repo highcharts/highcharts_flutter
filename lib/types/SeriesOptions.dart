@@ -49,7 +49,19 @@ class SeriesOptions extends OptionFragment {
    * 
    * Defaults to '300'. 
       */
-  double? cropThreshold;
+  double? m_cropThreshold;  
+
+  double get cropThreshold { 
+    if (this.m_cropThreshold == null) {
+      this.m_cropThreshold = 0;
+    }
+    return this.m_cropThreshold!;
+  }
+
+  void set cropThreshold (double v) {
+    this.m_cropThreshold = v;
+  }
+    
   /**
    * Determines what data value should be used to calculate point color
    * if `colorAxis` is used. Requires to set `min` and `max` if some
@@ -58,22 +70,82 @@ class SeriesOptions extends OptionFragment {
    * 
    * Defaults to 'y'. 
       */
-  String? colorKey;
-  double? legendIndex;
-  String? legendType;
+  String? m_colorKey;  
+
+  String get colorKey { 
+    if (this.m_colorKey == null) {
+      this.m_colorKey = "";
+    }
+    return this.m_colorKey!;
+  }
+
+  void set colorKey (String v) {
+    this.m_colorKey = v;
+  }
+    
+  double? m_legendIndex;  
+
+  double get legendIndex { 
+    if (this.m_legendIndex == null) {
+      this.m_legendIndex = 0;
+    }
+    return this.m_legendIndex!;
+  }
+
+  void set legendIndex (double v) {
+    this.m_legendIndex = v;
+  }
+    
+  String? m_legendType;  
+
+  String get legendType { 
+    if (this.m_legendType == null) {
+      this.m_legendType = "";
+    }
+    return this.m_legendType!;
+  }
+
+  void set legendType (String v) {
+    this.m_legendType = v;
+  }
+    
   /**
    * If true, a checkbox is displayed next to the legend item to allow
    * selecting the series. The state of the checkbox is determined by
    * the `selected` option.  
       */
-  bool? showCheckbox;
+  bool? m_showCheckbox;  
+
+  bool get showCheckbox { 
+    if (this.m_showCheckbox == null) {
+      this.m_showCheckbox = false;
+    }
+    return this.m_showCheckbox!;
+  }
+
+  void set showCheckbox (bool v) {
+    this.m_showCheckbox = v;
+  }
+    
   /**
    * Whether to display this particular series or series type in the
    * legend. Standalone series are shown in legend by default, and linked
    * series are not. Since v7.2.0 it is possible to show series that use
    * colorAxis by setting this option to `true`.  
       */
-  bool? showInLegend;
+  bool? m_showInLegend;  
+
+  bool get showInLegend { 
+    if (this.m_showInLegend == null) {
+      this.m_showInLegend = false;
+    }
+    return this.m_showInLegend!;
+  }
+
+  void set showInLegend (bool v) {
+    this.m_showInLegend = v;
+  }
+    
   /**
    * Options for the series data labels, appearing next to each data
    * point.
@@ -94,8 +166,32 @@ class SeriesOptions extends OptionFragment {
    * 
    * Defaults to '#cccccc'. 
       */
-  String? borderColor;
-  String? borderDashStyle;
+  String? m_borderColor;  
+
+  String get borderColor { 
+    if (this.m_borderColor == null) {
+      this.m_borderColor = "";
+    }
+    return this.m_borderColor!;
+  }
+
+  void set borderColor (String v) {
+    this.m_borderColor = v;
+  }
+    
+  String? m_borderDashStyle;  
+
+  String get borderDashStyle { 
+    if (this.m_borderDashStyle == null) {
+      this.m_borderDashStyle = "";
+    }
+    return this.m_borderDashStyle!;
+  }
+
+  void set borderDashStyle (String v) {
+    this.m_borderDashStyle = v;
+  }
+    
   /**
    * The corner radius of the border surrounding each column or bar. A number
    * signifies pixels. A percentage string, like for example `50%`, signifies
@@ -104,7 +200,19 @@ class SeriesOptions extends OptionFragment {
    * 
    * Defaults to '3'. 
       */
-  BorderRadiusOptionsObject? borderRadius;
+  BorderRadiusOptionsObject? m_borderRadius;  
+
+  BorderRadiusOptionsObject get borderRadius { 
+    if (this.m_borderRadius == null) {
+      this.m_borderRadius = BorderRadiusOptionsObject();
+    }
+    return this.m_borderRadius!;
+  }
+
+  void set borderRadius (BorderRadiusOptionsObject v) {
+    this.m_borderRadius = v;
+  }
+    
   /**
    * The border width of each map area.
    * 
@@ -113,13 +221,37 @@ class SeriesOptions extends OptionFragment {
    * 
    * Defaults to '1'. 
       */
-  double? borderWidth;
+  double? m_borderWidth;  
+
+  double get borderWidth { 
+    if (this.m_borderWidth == null) {
+      this.m_borderWidth = 0;
+    }
+    return this.m_borderWidth!;
+  }
+
+  void set borderWidth (double v) {
+    this.m_borderWidth = v;
+  }
+    
   /**
    * When `true`, the columns will center in the category, ignoring null
    * or missing points. When `false`, space will be reserved for null or
    * missing points.  
       */
-  bool? centerInCategory;
+  bool? m_centerInCategory;  
+
+  bool get centerInCategory { 
+    if (this.m_centerInCategory == null) {
+      this.m_centerInCategory = false;
+    }
+    return this.m_centerInCategory!;
+  }
+
+  void set centerInCategory (bool v) {
+    this.m_centerInCategory = v;
+  }
+    
   /**
    * Fill color or gradient for the area. When `null`, the series' `color`
    * is used with the series' `fillOpacity`.
@@ -127,7 +259,19 @@ class SeriesOptions extends OptionFragment {
    * In styled mode, the fill color can be set with the `.highcharts-area`
    * class name.  
       */
-  String? fillColor;
+  String? m_fillColor;  
+
+  String get fillColor { 
+    if (this.m_fillColor == null) {
+      this.m_fillColor = "";
+    }
+    return this.m_fillColor!;
+  }
+
+  void set fillColor (String v) {
+    this.m_fillColor = v;
+  }
+    
   /**
    * Whether to group non-stacked columns or to let them render
    * independent of each other. Non-grouped columns will be laid out
@@ -135,28 +279,88 @@ class SeriesOptions extends OptionFragment {
    * 
    * Defaults to 'true'. 
       */
-  bool? grouping;
+  bool? m_grouping;  
+
+  bool get grouping { 
+    if (this.m_grouping == null) {
+      this.m_grouping = false;
+    }
+    return this.m_grouping!;
+  }
+
+  void set grouping (bool v) {
+    this.m_grouping = v;
+  }
+    
   /**
    * Padding between each value groups, in x axis units. 
    * 
    * Defaults to '0.2'. 
       */
-  double? groupPadding;
+  double? m_groupPadding;  
+
+  double get groupPadding { 
+    if (this.m_groupPadding == null) {
+      this.m_groupPadding = 0;
+    }
+    return this.m_groupPadding!;
+  }
+
+  void set groupPadding (double v) {
+    this.m_groupPadding = v;
+  }
+    
   /**
    * A separate color for the negative part of the area.
    * 
    * In styled mode, a negative color is set with the
    * `.highcharts-negative` class name.  
       */
-  String? negativeFillColor;
+  String? m_negativeFillColor;  
+
+  String get negativeFillColor { 
+    if (this.m_negativeFillColor == null) {
+      this.m_negativeFillColor = "";
+    }
+    return this.m_negativeFillColor!;
+  }
+
+  void set negativeFillColor (String v) {
+    this.m_negativeFillColor = v;
+  }
+    
   /**
    * The width of each point on the x axis. For example in a column chart
    * with one value each day, the pointRange would be 1 day (= 24 * 3600
    * * 1000 milliseconds). This is normally computed automatically, but
    * this option can be used to override the automatic value.  
       */
-  double? pointRange;
-  String? stack;
+  double? m_pointRange;  
+
+  double get pointRange { 
+    if (this.m_pointRange == null) {
+      this.m_pointRange = 0;
+    }
+    return this.m_pointRange!;
+  }
+
+  void set pointRange (double v) {
+    this.m_pointRange = v;
+  }
+    
+  String? m_stack;  
+
+  String get stack { 
+    if (this.m_stack == null) {
+      this.m_stack = "";
+    }
+    return this.m_stack!;
+  }
+
+  void set stack (String v) {
+    this.m_stack = v;
+  }
+    
   /**
    * Whether to stack the values of each series on top of each other.
    * Possible values are `undefined` to disable, `"normal"` to stack by
@@ -170,7 +374,19 @@ class SeriesOptions extends OptionFragment {
    * The second one is `"overlap"`, which only applies to waterfall
    * series.  
       */
-  String? stacking;
+  String? m_stacking;  
+
+  String get stacking { 
+    if (this.m_stacking == null) {
+      this.m_stacking = "";
+    }
+    return this.m_stacking!;
+  }
+
+  void set stacking (String v) {
+    this.m_stacking = v;
+  }
+    
   /**
    * Data grouping is the concept of sampling the data values into larger
    * blocks in order to ease readability and increase performance of the
@@ -185,13 +401,37 @@ class SeriesOptions extends OptionFragment {
    * the first point instance are copied over to the group point. This can be
    * altered through a custom `approximation` callback function.  
       */
-  DataGroupingOptions? dataGrouping;
+  DataGroupingOptions? m_dataGrouping;  
+
+  DataGroupingOptions get dataGrouping { 
+    if (this.m_dataGrouping == null) {
+      this.m_dataGrouping = DataGroupingOptions();
+    }
+    return this.m_dataGrouping!;
+  }
+
+  void set dataGrouping (DataGroupingOptions v) {
+    this.m_dataGrouping = v;
+  }
+    
   /**
    * A configuration object for the tooltip rendering of each single
    * series. Properties are inherited from [tooltip](#tooltip), but only
    * the following properties can be defined on a series level.  
       */
-  TooltipOptions? tooltip;
+  TooltipOptions? m_tooltip;  
+
+  TooltipOptions get tooltip { 
+    if (this.m_tooltip == null) {
+      this.m_tooltip = TooltipOptions();
+    }
+    return this.m_tooltip!;
+  }
+
+  void set tooltip (TooltipOptions v) {
+    this.m_tooltip = v;
+  }
+    
   /**
    * Allow this series' points to be selected by clicking on the graphic
    * (columns, point markers, pie slices, map areas etc).
@@ -201,7 +441,19 @@ class SeriesOptions extends OptionFragment {
    * 
    * And alternative way of selecting points is through dragging.  
       */
-  bool? allowPointSelect;
+  bool? m_allowPointSelect;  
+
+  bool get allowPointSelect { 
+    if (this.m_allowPointSelect == null) {
+      this.m_allowPointSelect = false;
+    }
+    return this.m_allowPointSelect!;
+  }
+
+  void set allowPointSelect (bool v) {
+    this.m_allowPointSelect = v;
+  }
+    
   // NOTE: animation skipped - type Generic is ignored in gen
 
   /**
@@ -210,7 +462,19 @@ class SeriesOptions extends OptionFragment {
    * element. Changes to the series' color will also be reflected in a
    * chart's legend and tooltip.  
       */
-  String? className;
+  String? m_className;  
+
+  String get className { 
+    if (this.m_className == null) {
+      this.m_className = "";
+    }
+    return this.m_className!;
+  }
+
+  void set className (String v) {
+    this.m_className = v;
+  }
+    
   /**
    * Disable this option to allow series rendering in the whole plotting
    * area.
@@ -220,7 +484,19 @@ class SeriesOptions extends OptionFragment {
    * 
    * Defaults to 'true'. 
       */
-  bool? clip;
+  bool? m_clip;  
+
+  bool get clip { 
+    if (this.m_clip == null) {
+      this.m_clip = false;
+    }
+    return this.m_clip!;
+  }
+
+  void set clip (bool v) {
+    this.m_clip = v;
+  }
+    
   /**
    * The main color of the series. In line type series it applies to the
    * line and the point markers unless otherwise specified. In bar type
@@ -234,7 +510,19 @@ class SeriesOptions extends OptionFragment {
    * `.highcharts-series-{n}` class, or individual classes given by the
    * `className` option.  
       */
-  String? color;
+  String? m_color;  
+
+  String get color { 
+    if (this.m_color == null) {
+      this.m_color = "";
+    }
+    return this.m_color!;
+  }
+
+  void set color (String v) {
+    this.m_color = v;
+  }
+    
   /**
    * When using automatic point colors pulled from the global
    * [colors](colors) or series-specific
@@ -248,7 +536,19 @@ class SeriesOptions extends OptionFragment {
    * 
    * Defaults to 'false'. 
       */
-  bool? colorByPoint;
+  bool? m_colorByPoint;  
+
+  bool get colorByPoint { 
+    if (this.m_colorByPoint == null) {
+      this.m_colorByPoint = false;
+    }
+    return this.m_colorByPoint!;
+  }
+
+  void set colorByPoint (bool v) {
+    this.m_colorByPoint = v;
+  }
+    
   /**
    * Styled mode only. A specific color index to use for the series, so its
    * graphic representations are given the class name `highcharts-color-{n}`.
@@ -256,7 +556,19 @@ class SeriesOptions extends OptionFragment {
    * Since v11, CSS variables on the form `--highcharts-color-{n}` make
    * changing the color scheme very convenient.  
       */
-  double? colorIndex;
+  double? m_colorIndex;  
+
+  double get colorIndex { 
+    if (this.m_colorIndex == null) {
+      this.m_colorIndex = 0;
+    }
+    return this.m_colorIndex!;
+  }
+
+  void set colorIndex (double v) {
+    this.m_colorIndex = v;
+  }
+    
   /**
    * A series specific or series type specific color set to apply instead
    * of the global [colors](#colors) when [colorByPoint](#plotOptions.column.colorByPoint) is true.  
@@ -271,7 +583,19 @@ class SeriesOptions extends OptionFragment {
    * 
    * Defaults to 'false'. 
       */
-  bool? connectNulls;
+  bool? m_connectNulls;  
+
+  bool get connectNulls { 
+    if (this.m_connectNulls == null) {
+      this.m_connectNulls = false;
+    }
+    return this.m_connectNulls!;
+  }
+
+  void set connectNulls (bool v) {
+    this.m_connectNulls = v;
+  }
+    
   /**
    * When true, each point or column edge is rounded to its nearest pixel
    * in order to render sharp on screen. In some cases, when there are a
@@ -282,7 +606,19 @@ class SeriesOptions extends OptionFragment {
    * 
    * Defaults to 'true'. 
       */
-  bool? crisp;
+  bool? m_crisp;  
+
+  bool get crisp { 
+    if (this.m_crisp == null) {
+      this.m_crisp = false;
+    }
+    return this.m_crisp!;
+  }
+
+  void set crisp (bool v) {
+    this.m_crisp = v;
+  }
+    
   /**
    * You can set the cursor to "pointer" if you have click events attached
    * to the series, to signal to the user that the points and lines can
@@ -291,7 +627,19 @@ class SeriesOptions extends OptionFragment {
    * In styled mode, the series cursor can be set with the same classes
    * as listed under [series.color](#plotOptions.series.color).  
       */
-  String? cursor;
+  String? m_cursor;  
+
+  String get cursor { 
+    if (this.m_cursor == null) {
+      this.m_cursor = "";
+    }
+    return this.m_cursor!;
+  }
+
+  void set cursor (String v) {
+    this.m_cursor = v;
+  }
+    
   /**
    * Name of the dash style to use for the graph, or for some series types
    * the outline of each shape.
@@ -303,11 +651,35 @@ class SeriesOptions extends OptionFragment {
    * 
    * Defaults to 'Solid'. 
       */
-  String? dashStyle;
+  String? m_dashStyle;  
+
+  String get dashStyle { 
+    if (this.m_dashStyle == null) {
+      this.m_dashStyle = "";
+    }
+    return this.m_dashStyle!;
+  }
+
+  void set dashStyle (String v) {
+    this.m_dashStyle = v;
+  }
+    
   /**
    * Options for the series data sorting.  
       */
-  SeriesDataSortingOptions? dataSorting;
+  SeriesDataSortingOptions? m_dataSorting;  
+
+  SeriesDataSortingOptions get dataSorting { 
+    if (this.m_dataSorting == null) {
+      this.m_dataSorting = SeriesDataSortingOptions();
+    }
+    return this.m_dataSorting!;
+  }
+
+  void set dataSorting (SeriesDataSortingOptions v) {
+    this.m_dataSorting = v;
+  }
+    
   /**
    * Enable or disable the mouse tracking for a specific series. This
    * includes point tooltips and click events on graphs and points. For
@@ -315,13 +687,37 @@ class SeriesOptions extends OptionFragment {
    * 
    * Defaults to 'true'. 
       */
-  bool? enableMouseTracking;
+  bool? m_enableMouseTracking;  
+
+  bool get enableMouseTracking { 
+    if (this.m_enableMouseTracking == null) {
+      this.m_enableMouseTracking = false;
+    }
+    return this.m_enableMouseTracking!;
+  }
+
+  void set enableMouseTracking (bool v) {
+    this.m_enableMouseTracking = v;
+  }
+    
   /**
    * General event handlers for the series items. These event hooks can
    * also be attached to the series at run time using the
    * `Highcharts.addEvent` function.  
       */
-  SeriesEventsOptions? events;
+  SeriesEventsOptions? m_events;  
+
+  SeriesEventsOptions get events { 
+    if (this.m_events == null) {
+      this.m_events = SeriesEventsOptions();
+    }
+    return this.m_events!;
+  }
+
+  void set events (SeriesEventsOptions v) {
+    this.m_events = v;
+  }
+    
   /**
    * Determines whether the series should look for the nearest point
    * in both dimensions or just the x-dimension when hovering the series.
@@ -334,7 +730,19 @@ class SeriesOptions extends OptionFragment {
    * 
    * Defaults to 'x'. 
       */
-  String? findNearestPointBy;
+  String? m_findNearestPointBy;  
+
+  String get findNearestPointBy { 
+    if (this.m_findNearestPointBy == null) {
+      this.m_findNearestPointBy = "";
+    }
+    return this.m_findNearestPointBy!;
+  }
+
+  void set findNearestPointBy (String v) {
+    this.m_findNearestPointBy = v;
+  }
+    
   /**
    * Whether to use the Y extremes of the total chart width or only the
    * zoomed area when zooming in on parts of the X axis. By default, the
@@ -343,11 +751,71 @@ class SeriesOptions extends OptionFragment {
    * 
    * Defaults to 'false'. 
       */
-  bool? getExtremesFromAll;
-  String? id;
-  double? index;
-  bool? inactiveOtherPoints;
-  bool? isInternal;
+  bool? m_getExtremesFromAll;  
+
+  bool get getExtremesFromAll { 
+    if (this.m_getExtremesFromAll == null) {
+      this.m_getExtremesFromAll = false;
+    }
+    return this.m_getExtremesFromAll!;
+  }
+
+  void set getExtremesFromAll (bool v) {
+    this.m_getExtremesFromAll = v;
+  }
+    
+  String? m_id;  
+
+  String get id { 
+    if (this.m_id == null) {
+      this.m_id = "";
+    }
+    return this.m_id!;
+  }
+
+  void set id (String v) {
+    this.m_id = v;
+  }
+    
+  double? m_index;  
+
+  double get index { 
+    if (this.m_index == null) {
+      this.m_index = 0;
+    }
+    return this.m_index!;
+  }
+
+  void set index (double v) {
+    this.m_index = v;
+  }
+    
+  bool? m_inactiveOtherPoints;  
+
+  bool get inactiveOtherPoints { 
+    if (this.m_inactiveOtherPoints == null) {
+      this.m_inactiveOtherPoints = false;
+    }
+    return this.m_inactiveOtherPoints!;
+  }
+
+  void set inactiveOtherPoints (bool v) {
+    this.m_inactiveOtherPoints = v;
+  }
+    
+  bool? m_isInternal;  
+
+  bool get isInternal { 
+    if (this.m_isInternal == null) {
+      this.m_isInternal = false;
+    }
+    return this.m_isInternal!;
+  }
+
+  void set isInternal (bool v) {
+    this.m_isInternal = v;
+  }
+    
   /**
    * What property to join the `mapData` to the value data. For example,
    * if joinBy is "code", the mapData items with a specific code is merged
@@ -367,7 +835,19 @@ class SeriesOptions extends OptionFragment {
    * Defaults to 'hc-key'. 
       */
   List<String>? joinBy;
-  bool? kdNow;
+  bool? m_kdNow;  
+
+  bool get kdNow { 
+    if (this.m_kdNow == null) {
+      this.m_kdNow = false;
+    }
+    return this.m_kdNow!;
+  }
+
+  void set kdNow (bool v) {
+    this.m_kdNow = v;
+  }
+    
   /**
    * An array specifying which option maps to which key in the data point
    * array. This makes it convenient to work with unstructured data arrays
@@ -379,7 +859,19 @@ class SeriesOptions extends OptionFragment {
    * 
    * Defaults to 'round'. 
       */
-  String? linecap;
+  String? m_linecap;  
+
+  String get linecap { 
+    if (this.m_linecap == null) {
+      this.m_linecap = "";
+    }
+    return this.m_linecap!;
+  }
+
+  void set linecap (String v) {
+    this.m_linecap = v;
+  }
+    
   /**
    * A separate color for the graph line. By default the line takes the
    * `color` of the series, but the lineColor setting allows setting a
@@ -388,13 +880,37 @@ class SeriesOptions extends OptionFragment {
    * In styled mode, the line stroke can be set with the
    * `.highcharts-graph` class name.  
       */
-  String? lineColor;
+  String? m_lineColor;  
+
+  String get lineColor { 
+    if (this.m_lineColor == null) {
+      this.m_lineColor = "";
+    }
+    return this.m_lineColor!;
+  }
+
+  void set lineColor (String v) {
+    this.m_lineColor = v;
+  }
+    
   /**
    * Pixel width of the graph line. 
    * 
    * Defaults to '1'. 
       */
-  double? lineWidth;
+  double? m_lineWidth;  
+
+  double get lineWidth { 
+    if (this.m_lineWidth == null) {
+      this.m_lineWidth = 0;
+    }
+    return this.m_lineWidth!;
+  }
+
+  void set lineWidth (double v) {
+    this.m_lineWidth = v;
+  }
+    
   /**
    * The [id](#series.id) of another series to link to. Additionally,
    * the value can be ":previous" to link to the previous series. When
@@ -405,7 +921,19 @@ class SeriesOptions extends OptionFragment {
    * its own sorting definition, the linked series will be sorted in the
    * same order as the master one.  
       */
-  String? linkedTo;
+  String? m_linkedTo;  
+
+  String get linkedTo { 
+    if (this.m_linkedTo == null) {
+      this.m_linkedTo = "";
+    }
+    return this.m_linkedTo!;
+  }
+
+  void set linkedTo (String v) {
+    this.m_linkedTo = v;
+  }
+    
   /**
    * Options for the point markers of line and scatter-like series. Properties
    * like `fillColor`, `lineColor` and `lineWidth` define the visual
@@ -416,7 +944,19 @@ class SeriesOptions extends OptionFragment {
    * In styled mode, the markers can be styled with the `.highcharts-point`,
    * `.highcharts-point-hover` and `.highcharts-point-select` class names.  
       */
-  PointMarkerOptions? marker;
+  PointMarkerOptions? m_marker;  
+
+  PointMarkerOptions get marker { 
+    if (this.m_marker == null) {
+      this.m_marker = PointMarkerOptions();
+    }
+    return this.m_marker!;
+  }
+
+  void set marker (PointMarkerOptions v) {
+    this.m_marker = v;
+  }
+    
   /**
    * The name of the series as shown in the legend, tooltip etc. If not
    * set, it will be based on a technical indicator type and default
@@ -424,24 +964,72 @@ class SeriesOptions extends OptionFragment {
    * 
    * Defaults to 'undefined'. 
       */
-  String? name;
+  String? m_name;  
+
+  String get name { 
+    if (this.m_name == null) {
+      this.m_name = "";
+    }
+    return this.m_name!;
+  }
+
+  void set name (String v) {
+    this.m_name = v;
+  }
+    
   /**
    * The color for the parts of the graph or points that are below the
    * [threshold](#plotOptions.series.threshold). Note that `zones` takes
    * precedence over the negative color. Using `negativeColor` is
    * equivalent to applying a zone with value of 0.  
       */
-  String? negativeColor;
+  String? m_negativeColor;  
+
+  String get negativeColor { 
+    if (this.m_negativeColor == null) {
+      this.m_negativeColor = "";
+    }
+    return this.m_negativeColor!;
+  }
+
+  void set negativeColor (String v) {
+    this.m_negativeColor = v;
+  }
+    
   /**
    * Opacity of a series parts: line, fill (e.g. area) and dataLabels. 
    * 
    * Defaults to '1'. 
       */
-  double? opacity;
+  double? m_opacity;  
+
+  double get opacity { 
+    if (this.m_opacity == null) {
+      this.m_opacity = 0;
+    }
+    return this.m_opacity!;
+  }
+
+  void set opacity (double v) {
+    this.m_opacity = v;
+  }
+    
   /**
    * Properties for each single point.  
       */
-  SeriesPointOptions? point;
+  SeriesPointOptions? m_point;  
+
+  SeriesPointOptions get point { 
+    if (this.m_point == null) {
+      this.m_point = SeriesPointOptions();
+    }
+    return this.m_point!;
+  }
+
+  void set point (SeriesPointOptions v) {
+    this.m_point = v;
+  }
+    
   /**
    * Possible values: `"on"`, `"between"`, `number`.
    * 
@@ -468,7 +1056,19 @@ class SeriesOptions extends OptionFragment {
    * Defaults to `undefined` in cartesian charts, `"between"` in polar
    * charts.  
       */
-  String? pointPlacement;
+  String? m_pointPlacement;  
+
+  String get pointPlacement { 
+    if (this.m_pointPlacement == null) {
+      this.m_pointPlacement = "";
+    }
+    return this.m_pointPlacement!;
+  }
+
+  void set pointPlacement (String v) {
+    this.m_pointPlacement = v;
+  }
+    
   /**
    * If no x values are given for the points in a series, pointStart
    * defines on what value to start. For example, if a series contains one
@@ -481,7 +1081,19 @@ class SeriesOptions extends OptionFragment {
    * 
    * Defaults to '0'. 
       */
-  double? pointStart;
+  double? m_pointStart;  
+
+  double get pointStart { 
+    if (this.m_pointStart == null) {
+      this.m_pointStart = 0;
+    }
+    return this.m_pointStart!;
+  }
+
+  void set pointStart (double v) {
+    this.m_pointStart = v;
+  }
+    
   /**
    * When true, X values in the data set are relative to the current
    * `pointStart`, `pointInterval` and `pointIntervalUnit` settings. This
@@ -493,7 +1105,19 @@ class SeriesOptions extends OptionFragment {
    * 
    * Defaults to 'false'. 
       */
-  bool? relativeXValue;
+  bool? m_relativeXValue;  
+
+  bool get relativeXValue { 
+    if (this.m_relativeXValue == null) {
+      this.m_relativeXValue = false;
+    }
+    return this.m_relativeXValue!;
+  }
+
+  void set relativeXValue (bool v) {
+    this.m_relativeXValue = v;
+  }
+    
   /**
    * Determines which one of  `high`, `low`, `close` values should
    * be represented as `point.y`, which is later used to set dataLabel
@@ -501,7 +1125,19 @@ class SeriesOptions extends OptionFragment {
    * 
    * Defaults to 'close'. 
       */
-  String? pointValKey;
+  String? m_pointValKey;  
+
+  String get pointValKey { 
+    if (this.m_pointValKey == null) {
+      this.m_pointValKey = "";
+    }
+    return this.m_pointValKey!;
+  }
+
+  void set pointValKey (String v) {
+    this.m_pointValKey = v;
+  }
+    
   /**
    * Whether to select the series initially. If `showCheckbox` is true,
    * the checkbox next to the series name in the legend will be checked
@@ -509,7 +1145,19 @@ class SeriesOptions extends OptionFragment {
    * 
    * Defaults to 'false'. 
       */
-  bool? selected;
+  bool? m_selected;  
+
+  bool get selected { 
+    if (this.m_selected == null) {
+      this.m_selected = false;
+    }
+    return this.m_selected!;
+  }
+
+  void set selected (bool v) {
+    this.m_selected = v;
+  }
+    
   // NOTE: shadow skipped - type Generic is ignored in gen
 
   // NOTE: states skipped - type Generic is ignored in gen
@@ -518,7 +1166,19 @@ class SeriesOptions extends OptionFragment {
    * Whether to apply steps to the line. Possible values are `left`,
    * `center` and `right`.  
       */
-  String? step;
+  String? m_step;  
+
+  String get step { 
+    if (this.m_step == null) {
+      this.m_step = "";
+    }
+    return this.m_step!;
+  }
+
+  void set step (String v) {
+    this.m_step = v;
+  }
+    
   /**
    * Sticky tracking of mouse events. When true, the `mouseOut` event on a
    * series isn't triggered until the mouse moves over another series, or
@@ -534,7 +1194,19 @@ class SeriesOptions extends OptionFragment {
    * 
    * Defaults to 'true'. 
       */
-  bool? stickyTracking;
+  bool? m_stickyTracking;  
+
+  bool get stickyTracking { 
+    if (this.m_stickyTracking == null) {
+      this.m_stickyTracking = false;
+    }
+    return this.m_stickyTracking!;
+  }
+
+  void set stickyTracking (bool v) {
+    this.m_stickyTracking = v;
+  }
+    
   /**
    * When a series contains a data array that is longer than this, only
    * one dimensional arrays of numbers, or two dimensional arrays with
@@ -548,26 +1220,110 @@ class SeriesOptions extends OptionFragment {
    * 
    * Defaults to '1000'. 
       */
-  double? turboThreshold;
-  String? type;
+  double? m_turboThreshold;  
+
+  double get turboThreshold { 
+    if (this.m_turboThreshold == null) {
+      this.m_turboThreshold = 0;
+    }
+    return this.m_turboThreshold!;
+  }
+
+  void set turboThreshold (double v) {
+    this.m_turboThreshold = v;
+  }
+    
+  String? m_type;  
+
+  String get type { 
+    if (this.m_type == null) {
+      this.m_type = "";
+    }
+    return this.m_type!;
+  }
+
+  void set type (String v) {
+    this.m_type = v;
+  }
+    
   /**
    * Set the initial visibility of the series. 
    * 
    * Defaults to 'true'. 
       */
-  bool? visible;
-  String? xAxis;
-  String? yAxis;
+  bool? m_visible;  
+
+  bool get visible { 
+    if (this.m_visible == null) {
+      this.m_visible = false;
+    }
+    return this.m_visible!;
+  }
+
+  void set visible (bool v) {
+    this.m_visible = v;
+  }
+    
+  String? m_xAxis;  
+
+  String get xAxis { 
+    if (this.m_xAxis == null) {
+      this.m_xAxis = "";
+    }
+    return this.m_xAxis!;
+  }
+
+  void set xAxis (String v) {
+    this.m_xAxis = v;
+  }
+    
+  String? m_yAxis;  
+
+  String get yAxis { 
+    if (this.m_yAxis == null) {
+      this.m_yAxis = "";
+    }
+    return this.m_yAxis!;
+  }
+
+  void set yAxis (String v) {
+    this.m_yAxis = v;
+  }
+    
   /**
    * Define the z index of the series.  
       */
-  double? zIndex;
+  double? m_zIndex;  
+
+  double get zIndex { 
+    if (this.m_zIndex == null) {
+      this.m_zIndex = 0;
+    }
+    return this.m_zIndex!;
+  }
+
+  void set zIndex (double v) {
+    this.m_zIndex = v;
+  }
+    
   /**
    * Defines the Axis on which the zones are applied. 
    * 
    * Defaults to 'y'. 
       */
-  String? zoneAxis;
+  String? m_zoneAxis;  
+
+  String get zoneAxis { 
+    if (this.m_zoneAxis == null) {
+      this.m_zoneAxis = "";
+    }
+    return this.m_zoneAxis!;
+  }
+
+  void set zoneAxis (String v) {
+    this.m_zoneAxis = v;
+  }
+    
   /**
    * An array defining zones within a series. Zones can be applied to the
    * X axis, Y axis or Z axis for bubbles, according to the `zoneAxis`
@@ -586,7 +1342,19 @@ class SeriesOptions extends OptionFragment {
    * 
    * Defaults to 'rectangle'. 
       */
-  String? legendSymbol;
+  String? m_legendSymbol;  
+
+  String get legendSymbol { 
+    if (this.m_legendSymbol == null) {
+      this.m_legendSymbol = "";
+    }
+    return this.m_legendSymbol!;
+  }
+
+  void set legendSymbol (String v) {
+    this.m_legendSymbol = v;
+  }
+    
   /**
    * When this is true, the series will not cause the Y axis to cross
    * the zero plane (or [threshold](#plotOptions.series.threshold) option)
@@ -599,8 +1367,32 @@ class SeriesOptions extends OptionFragment {
    * 
    * Defaults to 'true'. 
       */
-  bool? softThreshold;
-  bool? startFromThreshold;
+  bool? m_softThreshold;  
+
+  bool get softThreshold { 
+    if (this.m_softThreshold == null) {
+      this.m_softThreshold = false;
+    }
+    return this.m_softThreshold!;
+  }
+
+  void set softThreshold (bool v) {
+    this.m_softThreshold = v;
+  }
+    
+  bool? m_startFromThreshold;  
+
+  bool get startFromThreshold { 
+    if (this.m_startFromThreshold == null) {
+      this.m_startFromThreshold = false;
+    }
+    return this.m_startFromThreshold!;
+  }
+
+  void set startFromThreshold (bool v) {
+    this.m_startFromThreshold = v;
+  }
+    
   /**
    * The threshold, also called zero level or base level. For line type
    * series this is only used in conjunction with
@@ -608,12 +1400,36 @@ class SeriesOptions extends OptionFragment {
    * 
    * Defaults to '0'. 
       */
-  double? threshold;
+  double? m_threshold;  
+
+  double get threshold { 
+    if (this.m_threshold == null) {
+      this.m_threshold = 0;
+    }
+    return this.m_threshold!;
+  }
+
+  void set threshold (double v) {
+    this.m_threshold = v;
+  }
+    
   /**
    * The parameter allows setting line series type and use OHLC indicators.
    * Data in OHLC format is required.  
       */
-  bool? useOhlcData;
+  bool? m_useOhlcData;  
+
+  bool get useOhlcData { 
+    if (this.m_useOhlcData == null) {
+      this.m_useOhlcData = false;
+    }
+    return this.m_useOhlcData!;
+  }
+
+  void set useOhlcData (bool v) {
+    this.m_useOhlcData = v;
+  }
+    
   /**
    * Fill opacity for the area. When you set an explicit `fillColor`,
    * the `fillOpacity` is not applied. Instead, you should define the
@@ -624,7 +1440,19 @@ class SeriesOptions extends OptionFragment {
    * In styled mode, the fill opacity can be set with the
    * `.highcharts-area` class name.  
       */
-  double? fillOpacity;
+  double? m_fillOpacity;  
+
+  double get fillOpacity { 
+    if (this.m_fillOpacity == null) {
+      this.m_fillOpacity = 0;
+    }
+    return this.m_fillOpacity!;
+  }
+
+  void set fillOpacity (double v) {
+    this.m_fillOpacity = v;
+  }
+    
   /**
    * Options for the corresponding navigator series if `showInNavigator`
    * is `true` for this series. Available options are the same as any
@@ -634,22 +1462,70 @@ class SeriesOptions extends OptionFragment {
    * These options are merged with options in [navigator.series](#navigator.series), and will take precedence if the same option is
    * defined both places.  
       */
-  SeriesOptions? navigatorOptions;
+  SeriesOptions? m_navigatorOptions;  
+
+  SeriesOptions get navigatorOptions { 
+    if (this.m_navigatorOptions == null) {
+      this.m_navigatorOptions = SeriesOptions();
+    }
+    return this.m_navigatorOptions!;
+  }
+
+  void set navigatorOptions (SeriesOptions v) {
+    this.m_navigatorOptions = v;
+  }
+    
   /**
    * Whether or not to show the series in the navigator. Takes precedence
    * over [navigator.baseSeries](#navigator.baseSeries) if defined.  
       */
-  bool? showInNavigator;
+  bool? m_showInNavigator;  
+
+  bool get showInNavigator { 
+    if (this.m_showInNavigator == null) {
+      this.m_showInNavigator = false;
+    }
+    return this.m_showInNavigator!;
+  }
+
+  void set showInNavigator (bool v) {
+    this.m_showInNavigator = v;
+  }
+    
   /**
    * Accessibility options for a series.  
       */
-  SeriesAccessibilityOptions? accessibility;
+  SeriesAccessibilityOptions? m_accessibility;  
+
+  SeriesAccessibilityOptions get accessibility { 
+    if (this.m_accessibility == null) {
+      this.m_accessibility = SeriesAccessibilityOptions();
+    }
+    return this.m_accessibility!;
+  }
+
+  void set accessibility (SeriesAccessibilityOptions v) {
+    this.m_accessibility = v;
+  }
+    
   /**
    * Sets the color blending in the boost module. 
    * 
    * Defaults to 'undefined'. 
       */
-  String? boostBlending;
+  String? m_boostBlending;  
+
+  String get boostBlending { 
+    if (this.m_boostBlending == null) {
+      this.m_boostBlending = "";
+    }
+    return this.m_boostBlending!;
+  }
+
+  void set boostBlending (String v) {
+    this.m_boostBlending = v;
+  }
+    
   /**
    * Set the point threshold for when a series should enter boost mode.
    * 
@@ -666,19 +1542,55 @@ class SeriesOptions extends OptionFragment {
    * 
    * Defaults to '5000'. 
       */
-  double? boostThreshold;
+  double? m_boostThreshold;  
+
+  double get boostThreshold { 
+    if (this.m_boostThreshold == null) {
+      this.m_boostThreshold = 0;
+    }
+    return this.m_boostThreshold!;
+  }
+
+  void set boostThreshold (double v) {
+    this.m_boostThreshold = v;
+  }
+    
   /**
    * Whether the whole area or just the line should respond to mouseover
    * tooltips and other mouse or touch events. 
    * 
    * Defaults to 'false'. 
       */
-  bool? trackByArea;
+  bool? m_trackByArea;  
+
+  bool get trackByArea { 
+    if (this.m_trackByArea == null) {
+      this.m_trackByArea = false;
+    }
+    return this.m_trackByArea!;
+  }
+
+  void set trackByArea (bool v) {
+    this.m_trackByArea = v;
+  }
+    
   /**
    * Override Pathfinder connector options for a series. Requires Highcharts Gantt
    * to be loaded.  
       */
-  ConnectorsOptions? connectors;
+  ConnectorsOptions? m_connectors;  
+
+  ConnectorsOptions get connectors { 
+    if (this.m_connectors == null) {
+      this.m_connectors = ConnectorsOptions();
+    }
+    return this.m_connectors!;
+  }
+
+  void set connectors (ConnectorsOptions v) {
+    this.m_connectors = v;
+  }
+    
   /**
    * Defines when to display a gap in the graph, together with the
    * [gapUnit](plotOptions.series.gapUnit) option.
@@ -698,7 +1610,19 @@ class SeriesOptions extends OptionFragment {
    * 
    * Defaults to '0'. 
       */
-  double? gapSize;
+  double? m_gapSize;  
+
+  double get gapSize { 
+    if (this.m_gapSize == null) {
+      this.m_gapSize = 0;
+    }
+    return this.m_gapSize!;
+  }
+
+  void set gapSize (double v) {
+    this.m_gapSize = v;
+  }
+    
   /**
    * Together with [gapSize](plotOptions.series.gapSize), this
    * option defines where to draw gaps in the graph.
@@ -715,7 +1639,19 @@ class SeriesOptions extends OptionFragment {
    * 
    * Defaults to 'relative'. 
       */
-  String? gapUnit;
+  String? m_gapUnit;  
+
+  String get gapUnit { 
+    if (this.m_gapUnit == null) {
+      this.m_gapUnit = "";
+    }
+    return this.m_gapUnit!;
+  }
+
+  void set gapUnit (String v) {
+    this.m_gapUnit = v;
+  }
+    
   /**
    * The draggable-points module allows points to be moved around or modified in
    * the chart. In addition to the options mentioned under the `dragDrop` API
@@ -724,7 +1660,19 @@ class SeriesOptions extends OptionFragment {
    * [point.drag](plotOptions.series.point.events.drag) and
    * [point.drop](plotOptions.series.point.events.drop).  
       */
-  DragDropOptions? dragDrop;
+  DragDropOptions? m_dragDrop;  
+
+  DragDropOptions get dragDrop { 
+    if (this.m_dragDrop == null) {
+      this.m_dragDrop = DragDropOptions();
+    }
+    return this.m_dragDrop!;
+  }
+
+  void set dragDrop (DragDropOptions v) {
+    this.m_dragDrop = v;
+  }
+    
   /**
    * When set to `false` will prevent the series data from being included in
    * any form of data export.
@@ -732,7 +1680,19 @@ class SeriesOptions extends OptionFragment {
    * Since version 6.0.0 until 7.1.0 the option was existing undocumented
    * as `includeInCSVExport`.  
       */
-  bool? includeInDataExport;
+  bool? m_includeInDataExport;  
+
+  bool get includeInDataExport { 
+    if (this.m_includeInDataExport == null) {
+      this.m_includeInDataExport = false;
+    }
+    return this.m_includeInDataExport!;
+  }
+
+  void set includeInDataExport (bool v) {
+    this.m_includeInDataExport = v;
+  }
+    
   /**
    * Options for marker clusters, the concept of sampling the data
    * values into larger blocks in order to ease readability and
@@ -745,14 +1705,50 @@ class SeriesOptions extends OptionFragment {
    * file to be loaded, found in the modules directory of the download
    * package, or online at [code.highcharts.com/modules/marker-clusters.js](code.highcharts.com/modules/marker-clusters.js).  
       */
-  MarkerClusterOptions? cluster;
-  String? baseSeries;
+  MarkerClusterOptions? m_cluster;  
+
+  MarkerClusterOptions get cluster { 
+    if (this.m_cluster == null) {
+      this.m_cluster = MarkerClusterOptions();
+    }
+    return this.m_cluster!;
+  }
+
+  void set cluster (MarkerClusterOptions v) {
+    this.m_cluster = v;
+  }
+    
+  String? m_baseSeries;  
+
+  String get baseSeries { 
+    if (this.m_baseSeries == null) {
+      this.m_baseSeries = "";
+    }
+    return this.m_baseSeries!;
+  }
+
+  void set baseSeries (String v) {
+    this.m_baseSeries = v;
+  }
+    
   /**
    * The id of another series in the chart that the wind barbs are
    * projected on. When `null`, the wind symbols are drawn on the X axis,
    * but offset up or down by the `yOffset` setting.  
       */
-  String? onSeries;
+  String? m_onSeries;  
+
+  String get onSeries { 
+    if (this.m_onSeries == null) {
+      this.m_onSeries = "";
+    }
+    return this.m_onSeries!;
+  }
+
+  void set onSeries (String v) {
+    this.m_onSeries = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -761,370 +1757,360 @@ class SeriesOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.cropThreshold != null) {  
-      buffer.writeAll(["\"cropThreshold\":", this.cropThreshold, ","], "");
+    if (this.m_cropThreshold != null) {  
+      buffer.writeAll(["\"cropThreshold\":", this.m_cropThreshold, ","], "");
     }
 
-    if (this.colorKey != null) {  
-      buffer.writeAll(["\"colorKey\":", this.colorKey, ","], "");
+    if (this.m_colorKey != null) {  
+      buffer.writeAll(["\"colorKey\":", this.m_colorKey, ","], "");
     }
 
-    if (this.legendIndex != null) {  
-      buffer.writeAll(["\"legendIndex\":", this.legendIndex, ","], "");
+    if (this.m_legendIndex != null) {  
+      buffer.writeAll(["\"legendIndex\":", this.m_legendIndex, ","], "");
     }
 
-    if (this.legendType != null) {  
-      buffer.writeAll(["\"legendType\":", this.legendType, ","], "");
+    if (this.m_legendType != null) {  
+      buffer.writeAll(["\"legendType\":", this.m_legendType, ","], "");
     }
 
-    if (this.showCheckbox != null) {  
-      buffer.writeAll(["\"showCheckbox\":", this.showCheckbox, ","], "");
+    if (this.m_showCheckbox != null) {  
+      buffer.writeAll(["\"showCheckbox\":", this.m_showCheckbox, ","], "");
     }
 
-    if (this.showInLegend != null) {  
-      buffer.writeAll(["\"showInLegend\":", this.showInLegend, ","], "");
+    if (this.m_showInLegend != null) {  
+      buffer.writeAll(["\"showInLegend\":", this.m_showInLegend, ","], "");
     }
 
-    if (this.dataLabels != null) {  
-    // Skipped array dataLabels
+    // NOTE: skip serialization of dataLabels (type DataLabelOptions[] is ignored)} 
+
+    if (this.m_borderColor != null) {  
+      buffer.writeAll(["\"borderColor\":", this.m_borderColor, ","], "");
     }
 
-    if (this.borderColor != null) {  
-      buffer.writeAll(["\"borderColor\":", this.borderColor, ","], "");
+    if (this.m_borderDashStyle != null) {  
+      buffer.writeAll(["\"borderDashStyle\":", this.m_borderDashStyle, ","], "");
     }
 
-    if (this.borderDashStyle != null) {  
-      buffer.writeAll(["\"borderDashStyle\":", this.borderDashStyle, ","], "");
+    if (this.m_borderRadius != null) {  
+      buffer.writeAll(["\"borderRadius\":", this.m_borderRadius?.toJSON(), ","], "");
     }
 
-    if (this.borderRadius != null) {  
-      buffer.writeAll(["\"borderRadius\":", this.borderRadius?.toJSON(), ","], "");
+    if (this.m_borderWidth != null) {  
+      buffer.writeAll(["\"borderWidth\":", this.m_borderWidth, ","], "");
     }
 
-    if (this.borderWidth != null) {  
-      buffer.writeAll(["\"borderWidth\":", this.borderWidth, ","], "");
+    if (this.m_centerInCategory != null) {  
+      buffer.writeAll(["\"centerInCategory\":", this.m_centerInCategory, ","], "");
     }
 
-    if (this.centerInCategory != null) {  
-      buffer.writeAll(["\"centerInCategory\":", this.centerInCategory, ","], "");
+    if (this.m_fillColor != null) {  
+      buffer.writeAll(["\"fillColor\":", this.m_fillColor, ","], "");
     }
 
-    if (this.fillColor != null) {  
-      buffer.writeAll(["\"fillColor\":", this.fillColor, ","], "");
+    if (this.m_grouping != null) {  
+      buffer.writeAll(["\"grouping\":", this.m_grouping, ","], "");
     }
 
-    if (this.grouping != null) {  
-      buffer.writeAll(["\"grouping\":", this.grouping, ","], "");
+    if (this.m_groupPadding != null) {  
+      buffer.writeAll(["\"groupPadding\":", this.m_groupPadding, ","], "");
     }
 
-    if (this.groupPadding != null) {  
-      buffer.writeAll(["\"groupPadding\":", this.groupPadding, ","], "");
+    if (this.m_negativeFillColor != null) {  
+      buffer.writeAll(["\"negativeFillColor\":", this.m_negativeFillColor, ","], "");
     }
 
-    if (this.negativeFillColor != null) {  
-      buffer.writeAll(["\"negativeFillColor\":", this.negativeFillColor, ","], "");
+    if (this.m_pointRange != null) {  
+      buffer.writeAll(["\"pointRange\":", this.m_pointRange, ","], "");
     }
 
-    if (this.pointRange != null) {  
-      buffer.writeAll(["\"pointRange\":", this.pointRange, ","], "");
+    if (this.m_stack != null) {  
+      buffer.writeAll(["\"stack\":", this.m_stack, ","], "");
     }
 
-    if (this.stack != null) {  
-      buffer.writeAll(["\"stack\":", this.stack, ","], "");
-    }
-
-    if (this.stacking != null) {  
-      buffer.writeAll(["\"stacking\":", this.stacking, ","], "");
+    if (this.m_stacking != null) {  
+      buffer.writeAll(["\"stacking\":", this.m_stacking, ","], "");
     }
 
     // NOTE: skip serialization of mapData (type MapPointOptions[] is ignored)} 
 
-    if (this.dataGrouping != null) {  
-      buffer.writeAll(["\"dataGrouping\":", this.dataGrouping?.toJSON(), ","], "");
+    if (this.m_dataGrouping != null) {  
+      buffer.writeAll(["\"dataGrouping\":", this.m_dataGrouping?.toJSON(), ","], "");
     }
 
     // NOTE: skip serialization of tooltip (type Generic is ignored)} 
 
     // NOTE: skip serialization of tooltip (type Generic is ignored)} 
 
-    if (this.allowPointSelect != null) {  
-      buffer.writeAll(["\"allowPointSelect\":", this.allowPointSelect, ","], "");
+    if (this.m_allowPointSelect != null) {  
+      buffer.writeAll(["\"allowPointSelect\":", this.m_allowPointSelect, ","], "");
     }
 
     // NOTE: skip serialization of animation (type Generic is ignored)} 
 
-    if (this.className != null) {  
-      buffer.writeAll(["\"className\":", this.className, ","], "");
+    if (this.m_className != null) {  
+      buffer.writeAll(["\"className\":", this.m_className, ","], "");
     }
 
-    if (this.clip != null) {  
-      buffer.writeAll(["\"clip\":", this.clip, ","], "");
+    if (this.m_clip != null) {  
+      buffer.writeAll(["\"clip\":", this.m_clip, ","], "");
     }
 
-    if (this.color != null) {  
-      buffer.writeAll(["\"color\":", this.color, ","], "");
+    if (this.m_color != null) {  
+      buffer.writeAll(["\"color\":", this.m_color, ","], "");
     }
 
-    if (this.colorByPoint != null) {  
-      buffer.writeAll(["\"colorByPoint\":", this.colorByPoint, ","], "");
+    if (this.m_colorByPoint != null) {  
+      buffer.writeAll(["\"colorByPoint\":", this.m_colorByPoint, ","], "");
     }
 
-    if (this.colorIndex != null) {  
-      buffer.writeAll(["\"colorIndex\":", this.colorIndex, ","], "");
+    if (this.m_colorIndex != null) {  
+      buffer.writeAll(["\"colorIndex\":", this.m_colorIndex, ","], "");
     }
 
-    if (this.colors != null) {  
-    // Skipped array colors
+    // NOTE: skip serialization of colors (type ColorType[] is ignored)} 
+
+    if (this.m_connectNulls != null) {  
+      buffer.writeAll(["\"connectNulls\":", this.m_connectNulls, ","], "");
     }
 
-    if (this.connectNulls != null) {  
-      buffer.writeAll(["\"connectNulls\":", this.connectNulls, ","], "");
+    if (this.m_crisp != null) {  
+      buffer.writeAll(["\"crisp\":", this.m_crisp, ","], "");
     }
 
-    if (this.crisp != null) {  
-      buffer.writeAll(["\"crisp\":", this.crisp, ","], "");
+    if (this.m_cursor != null) {  
+      buffer.writeAll(["\"cursor\":", this.m_cursor, ","], "");
     }
 
-    if (this.cursor != null) {  
-      buffer.writeAll(["\"cursor\":", this.cursor, ","], "");
-    }
-
-    if (this.dashStyle != null) {  
-      buffer.writeAll(["\"dashStyle\":", this.dashStyle, ","], "");
+    if (this.m_dashStyle != null) {  
+      buffer.writeAll(["\"dashStyle\":", this.m_dashStyle, ","], "");
     }
 
     // NOTE: skip serialization of data (type PointShortOptions)[] is ignored)} 
 
-    if (this.dataSorting != null) {  
-      buffer.writeAll(["\"dataSorting\":", this.dataSorting?.toJSON(), ","], "");
+    if (this.m_dataSorting != null) {  
+      buffer.writeAll(["\"dataSorting\":", this.m_dataSorting?.toJSON(), ","], "");
     }
 
-    if (this.enableMouseTracking != null) {  
-      buffer.writeAll(["\"enableMouseTracking\":", this.enableMouseTracking, ","], "");
+    if (this.m_enableMouseTracking != null) {  
+      buffer.writeAll(["\"enableMouseTracking\":", this.m_enableMouseTracking, ","], "");
     }
 
-    if (this.events != null) {  
-      buffer.writeAll(["\"events\":", this.events?.toJSON(), ","], "");
+    if (this.m_events != null) {  
+      buffer.writeAll(["\"events\":", this.m_events?.toJSON(), ","], "");
     }
 
-    if (this.findNearestPointBy != null) {  
-      buffer.writeAll(["\"findNearestPointBy\":", this.findNearestPointBy, ","], "");
+    if (this.m_findNearestPointBy != null) {  
+      buffer.writeAll(["\"findNearestPointBy\":", this.m_findNearestPointBy, ","], "");
     }
 
-    if (this.getExtremesFromAll != null) {  
-      buffer.writeAll(["\"getExtremesFromAll\":", this.getExtremesFromAll, ","], "");
+    if (this.m_getExtremesFromAll != null) {  
+      buffer.writeAll(["\"getExtremesFromAll\":", this.m_getExtremesFromAll, ","], "");
     }
 
-    if (this.id != null) {  
-      buffer.writeAll(["\"id\":", this.id, ","], "");
+    if (this.m_id != null) {  
+      buffer.writeAll(["\"id\":", this.m_id, ","], "");
     }
 
-    if (this.index != null) {  
-      buffer.writeAll(["\"index\":", this.index, ","], "");
+    if (this.m_index != null) {  
+      buffer.writeAll(["\"index\":", this.m_index, ","], "");
     }
 
-    if (this.inactiveOtherPoints != null) {  
-      buffer.writeAll(["\"inactiveOtherPoints\":", this.inactiveOtherPoints, ","], "");
+    if (this.m_inactiveOtherPoints != null) {  
+      buffer.writeAll(["\"inactiveOtherPoints\":", this.m_inactiveOtherPoints, ","], "");
     }
 
-    if (this.isInternal != null) {  
-      buffer.writeAll(["\"isInternal\":", this.isInternal, ","], "");
+    if (this.m_isInternal != null) {  
+      buffer.writeAll(["\"isInternal\":", this.m_isInternal, ","], "");
     }
 
-    if (this.joinBy != null) {  
-    // Skipped array joinBy
+    // NOTE: skip serialization of joinBy (type string[] is ignored)} 
+
+    if (this.m_kdNow != null) {  
+      buffer.writeAll(["\"kdNow\":", this.m_kdNow, ","], "");
     }
 
-    if (this.kdNow != null) {  
-      buffer.writeAll(["\"kdNow\":", this.kdNow, ","], "");
+    // NOTE: skip serialization of keys (type string[] is ignored)} 
+
+    if (this.m_linecap != null) {  
+      buffer.writeAll(["\"linecap\":", this.m_linecap, ","], "");
     }
 
-    if (this.keys != null) {  
-    // Skipped array keys
+    if (this.m_lineColor != null) {  
+      buffer.writeAll(["\"lineColor\":", this.m_lineColor, ","], "");
     }
 
-    if (this.linecap != null) {  
-      buffer.writeAll(["\"linecap\":", this.linecap, ","], "");
+    if (this.m_lineWidth != null) {  
+      buffer.writeAll(["\"lineWidth\":", this.m_lineWidth, ","], "");
     }
 
-    if (this.lineColor != null) {  
-      buffer.writeAll(["\"lineColor\":", this.lineColor, ","], "");
+    if (this.m_linkedTo != null) {  
+      buffer.writeAll(["\"linkedTo\":", this.m_linkedTo, ","], "");
     }
 
-    if (this.lineWidth != null) {  
-      buffer.writeAll(["\"lineWidth\":", this.lineWidth, ","], "");
+    if (this.m_marker != null) {  
+      buffer.writeAll(["\"marker\":", this.m_marker?.toJSON(), ","], "");
     }
 
-    if (this.linkedTo != null) {  
-      buffer.writeAll(["\"linkedTo\":", this.linkedTo, ","], "");
+    if (this.m_name != null) {  
+      buffer.writeAll(["\"name\":", this.m_name, ","], "");
     }
 
-    if (this.marker != null) {  
-      buffer.writeAll(["\"marker\":", this.marker?.toJSON(), ","], "");
+    if (this.m_negativeColor != null) {  
+      buffer.writeAll(["\"negativeColor\":", this.m_negativeColor, ","], "");
     }
 
-    if (this.name != null) {  
-      buffer.writeAll(["\"name\":", this.name, ","], "");
+    if (this.m_opacity != null) {  
+      buffer.writeAll(["\"opacity\":", this.m_opacity, ","], "");
     }
 
-    if (this.negativeColor != null) {  
-      buffer.writeAll(["\"negativeColor\":", this.negativeColor, ","], "");
+    if (this.m_point != null) {  
+      buffer.writeAll(["\"point\":", this.m_point?.toJSON(), ","], "");
     }
 
-    if (this.opacity != null) {  
-      buffer.writeAll(["\"opacity\":", this.opacity, ","], "");
+    if (this.m_pointPlacement != null) {  
+      buffer.writeAll(["\"pointPlacement\":", this.m_pointPlacement, ","], "");
     }
 
-    if (this.point != null) {  
-      buffer.writeAll(["\"point\":", this.point?.toJSON(), ","], "");
+    if (this.m_pointStart != null) {  
+      buffer.writeAll(["\"pointStart\":", this.m_pointStart, ","], "");
     }
 
-    if (this.pointPlacement != null) {  
-      buffer.writeAll(["\"pointPlacement\":", this.pointPlacement, ","], "");
+    if (this.m_relativeXValue != null) {  
+      buffer.writeAll(["\"relativeXValue\":", this.m_relativeXValue, ","], "");
     }
 
-    if (this.pointStart != null) {  
-      buffer.writeAll(["\"pointStart\":", this.pointStart, ","], "");
+    if (this.m_pointValKey != null) {  
+      buffer.writeAll(["\"pointValKey\":", this.m_pointValKey, ","], "");
     }
 
-    if (this.relativeXValue != null) {  
-      buffer.writeAll(["\"relativeXValue\":", this.relativeXValue, ","], "");
-    }
-
-    if (this.pointValKey != null) {  
-      buffer.writeAll(["\"pointValKey\":", this.pointValKey, ","], "");
-    }
-
-    if (this.selected != null) {  
-      buffer.writeAll(["\"selected\":", this.selected, ","], "");
+    if (this.m_selected != null) {  
+      buffer.writeAll(["\"selected\":", this.m_selected, ","], "");
     }
 
     // NOTE: skip serialization of shadow (type Generic is ignored)} 
 
     // NOTE: skip serialization of states (type Generic is ignored)} 
 
-    if (this.step != null) {  
-      buffer.writeAll(["\"step\":", this.step, ","], "");
+    if (this.m_step != null) {  
+      buffer.writeAll(["\"step\":", this.m_step, ","], "");
     }
 
-    if (this.stickyTracking != null) {  
-      buffer.writeAll(["\"stickyTracking\":", this.stickyTracking, ","], "");
+    if (this.m_stickyTracking != null) {  
+      buffer.writeAll(["\"stickyTracking\":", this.m_stickyTracking, ","], "");
     }
 
-    if (this.turboThreshold != null) {  
-      buffer.writeAll(["\"turboThreshold\":", this.turboThreshold, ","], "");
+    if (this.m_turboThreshold != null) {  
+      buffer.writeAll(["\"turboThreshold\":", this.m_turboThreshold, ","], "");
     }
 
-    if (this.type != null) {  
-      buffer.writeAll(["\"type\":", this.type, ","], "");
+    if (this.m_type != null) {  
+      buffer.writeAll(["\"type\":", this.m_type, ","], "");
     }
 
-    if (this.visible != null) {  
-      buffer.writeAll(["\"visible\":", this.visible, ","], "");
+    if (this.m_visible != null) {  
+      buffer.writeAll(["\"visible\":", this.m_visible, ","], "");
     }
 
-    if (this.xAxis != null) {  
-      buffer.writeAll(["\"xAxis\":", this.xAxis, ","], "");
+    if (this.m_xAxis != null) {  
+      buffer.writeAll(["\"xAxis\":", this.m_xAxis, ","], "");
     }
 
-    if (this.yAxis != null) {  
-      buffer.writeAll(["\"yAxis\":", this.yAxis, ","], "");
+    if (this.m_yAxis != null) {  
+      buffer.writeAll(["\"yAxis\":", this.m_yAxis, ","], "");
     }
 
-    if (this.zIndex != null) {  
-      buffer.writeAll(["\"zIndex\":", this.zIndex, ","], "");
+    if (this.m_zIndex != null) {  
+      buffer.writeAll(["\"zIndex\":", this.m_zIndex, ","], "");
     }
 
-    if (this.zoneAxis != null) {  
-      buffer.writeAll(["\"zoneAxis\":", this.zoneAxis, ","], "");
+    if (this.m_zoneAxis != null) {  
+      buffer.writeAll(["\"zoneAxis\":", this.m_zoneAxis, ","], "");
     }
 
-    if (this.zones != null) {  
-    // Skipped array zones
+    // NOTE: skip serialization of zones (type SeriesZonesOptions[] is ignored)} 
+
+    if (this.m_legendSymbol != null) {  
+      buffer.writeAll(["\"legendSymbol\":", this.m_legendSymbol, ","], "");
     }
 
-    if (this.legendSymbol != null) {  
-      buffer.writeAll(["\"legendSymbol\":", this.legendSymbol, ","], "");
+    if (this.m_softThreshold != null) {  
+      buffer.writeAll(["\"softThreshold\":", this.m_softThreshold, ","], "");
     }
 
-    if (this.softThreshold != null) {  
-      buffer.writeAll(["\"softThreshold\":", this.softThreshold, ","], "");
+    if (this.m_startFromThreshold != null) {  
+      buffer.writeAll(["\"startFromThreshold\":", this.m_startFromThreshold, ","], "");
     }
 
-    if (this.startFromThreshold != null) {  
-      buffer.writeAll(["\"startFromThreshold\":", this.startFromThreshold, ","], "");
+    if (this.m_threshold != null) {  
+      buffer.writeAll(["\"threshold\":", this.m_threshold, ","], "");
     }
 
-    if (this.threshold != null) {  
-      buffer.writeAll(["\"threshold\":", this.threshold, ","], "");
+    if (this.m_useOhlcData != null) {  
+      buffer.writeAll(["\"useOhlcData\":", this.m_useOhlcData, ","], "");
     }
 
-    if (this.useOhlcData != null) {  
-      buffer.writeAll(["\"useOhlcData\":", this.useOhlcData, ","], "");
+    if (this.m_fillOpacity != null) {  
+      buffer.writeAll(["\"fillOpacity\":", this.m_fillOpacity, ","], "");
     }
 
-    if (this.fillOpacity != null) {  
-      buffer.writeAll(["\"fillOpacity\":", this.fillOpacity, ","], "");
+    if (this.m_navigatorOptions != null) {  
+      buffer.writeAll(["\"navigatorOptions\":", this.m_navigatorOptions?.toJSON(), ","], "");
     }
 
-    if (this.navigatorOptions != null) {  
-      buffer.writeAll(["\"navigatorOptions\":", this.navigatorOptions?.toJSON(), ","], "");
+    if (this.m_showInNavigator != null) {  
+      buffer.writeAll(["\"showInNavigator\":", this.m_showInNavigator, ","], "");
     }
 
-    if (this.showInNavigator != null) {  
-      buffer.writeAll(["\"showInNavigator\":", this.showInNavigator, ","], "");
+    if (this.m_accessibility != null) {  
+      buffer.writeAll(["\"accessibility\":", this.m_accessibility?.toJSON(), ","], "");
     }
 
-    if (this.accessibility != null) {  
-      buffer.writeAll(["\"accessibility\":", this.accessibility?.toJSON(), ","], "");
+    if (this.m_boostBlending != null) {  
+      buffer.writeAll(["\"boostBlending\":", this.m_boostBlending, ","], "");
     }
 
-    if (this.boostBlending != null) {  
-      buffer.writeAll(["\"boostBlending\":", this.boostBlending, ","], "");
+    if (this.m_boostThreshold != null) {  
+      buffer.writeAll(["\"boostThreshold\":", this.m_boostThreshold, ","], "");
     }
 
-    if (this.boostThreshold != null) {  
-      buffer.writeAll(["\"boostThreshold\":", this.boostThreshold, ","], "");
+    if (this.m_trackByArea != null) {  
+      buffer.writeAll(["\"trackByArea\":", this.m_trackByArea, ","], "");
     }
 
-    if (this.trackByArea != null) {  
-      buffer.writeAll(["\"trackByArea\":", this.trackByArea, ","], "");
+    if (this.m_connectors != null) {  
+      buffer.writeAll(["\"connectors\":", this.m_connectors?.toJSON(), ","], "");
     }
 
-    if (this.connectors != null) {  
-      buffer.writeAll(["\"connectors\":", this.connectors?.toJSON(), ","], "");
+    if (this.m_gapSize != null) {  
+      buffer.writeAll(["\"gapSize\":", this.m_gapSize, ","], "");
     }
 
-    if (this.gapSize != null) {  
-      buffer.writeAll(["\"gapSize\":", this.gapSize, ","], "");
+    if (this.m_gapUnit != null) {  
+      buffer.writeAll(["\"gapUnit\":", this.m_gapUnit, ","], "");
     }
 
-    if (this.gapUnit != null) {  
-      buffer.writeAll(["\"gapUnit\":", this.gapUnit, ","], "");
+    if (this.m_useOhlcData != null) {  
+      buffer.writeAll(["\"useOhlcData\":", this.m_useOhlcData, ","], "");
     }
 
-    if (this.useOhlcData != null) {  
-      buffer.writeAll(["\"useOhlcData\":", this.useOhlcData, ","], "");
+    if (this.m_dragDrop != null) {  
+      buffer.writeAll(["\"dragDrop\":", this.m_dragDrop?.toJSON(), ","], "");
     }
 
-    if (this.dragDrop != null) {  
-      buffer.writeAll(["\"dragDrop\":", this.dragDrop?.toJSON(), ","], "");
+    if (this.m_includeInDataExport != null) {  
+      buffer.writeAll(["\"includeInDataExport\":", this.m_includeInDataExport, ","], "");
     }
 
-    if (this.includeInDataExport != null) {  
-      buffer.writeAll(["\"includeInDataExport\":", this.includeInDataExport, ","], "");
+    if (this.m_cluster != null) {  
+      buffer.writeAll(["\"cluster\":", this.m_cluster?.toJSON(), ","], "");
     }
 
-    if (this.cluster != null) {  
-      buffer.writeAll(["\"cluster\":", this.cluster?.toJSON(), ","], "");
+    if (this.m_baseSeries != null) {  
+      buffer.writeAll(["\"baseSeries\":", this.m_baseSeries, ","], "");
     }
 
-    if (this.baseSeries != null) {  
-      buffer.writeAll(["\"baseSeries\":", this.baseSeries, ","], "");
-    }
-
-    if (this.onSeries != null) {  
-      buffer.writeAll(["\"onSeries\":", this.onSeries, ","], "");
+    if (this.m_onSeries != null) {  
+      buffer.writeAll(["\"onSeries\":", this.m_onSeries, ","], "");
     }
   }
 

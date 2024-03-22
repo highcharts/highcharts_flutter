@@ -23,16 +23,136 @@ import 'OptionFragment.dart';
  */
 class PointMarkerOptions extends OptionFragment {
   PointMarkerOptions() : super();
-  bool? enabled;
-  double? enabledThreshold;
-  String? fillColor;
-  double? height;
-  String? lineColor;
-  double? lineWidth;
-  double? radius;
-  double? radiusPlus;
-  String? symbol;
-  double? width;
+  bool? m_enabled;  
+
+  bool get enabled { 
+    if (this.m_enabled == null) {
+      this.m_enabled = false;
+    }
+    return this.m_enabled!;
+  }
+
+  void set enabled (bool v) {
+    this.m_enabled = v;
+  }
+    
+  double? m_enabledThreshold;  
+
+  double get enabledThreshold { 
+    if (this.m_enabledThreshold == null) {
+      this.m_enabledThreshold = 0;
+    }
+    return this.m_enabledThreshold!;
+  }
+
+  void set enabledThreshold (double v) {
+    this.m_enabledThreshold = v;
+  }
+    
+  String? m_fillColor;  
+
+  String get fillColor { 
+    if (this.m_fillColor == null) {
+      this.m_fillColor = "";
+    }
+    return this.m_fillColor!;
+  }
+
+  void set fillColor (String v) {
+    this.m_fillColor = v;
+  }
+    
+  double? m_height;  
+
+  double get height { 
+    if (this.m_height == null) {
+      this.m_height = 0;
+    }
+    return this.m_height!;
+  }
+
+  void set height (double v) {
+    this.m_height = v;
+  }
+    
+  String? m_lineColor;  
+
+  String get lineColor { 
+    if (this.m_lineColor == null) {
+      this.m_lineColor = "";
+    }
+    return this.m_lineColor!;
+  }
+
+  void set lineColor (String v) {
+    this.m_lineColor = v;
+  }
+    
+  double? m_lineWidth;  
+
+  double get lineWidth { 
+    if (this.m_lineWidth == null) {
+      this.m_lineWidth = 0;
+    }
+    return this.m_lineWidth!;
+  }
+
+  void set lineWidth (double v) {
+    this.m_lineWidth = v;
+  }
+    
+  double? m_radius;  
+
+  double get radius { 
+    if (this.m_radius == null) {
+      this.m_radius = 0;
+    }
+    return this.m_radius!;
+  }
+
+  void set radius (double v) {
+    this.m_radius = v;
+  }
+    
+  double? m_radiusPlus;  
+
+  double get radiusPlus { 
+    if (this.m_radiusPlus == null) {
+      this.m_radiusPlus = 0;
+    }
+    return this.m_radiusPlus!;
+  }
+
+  void set radiusPlus (double v) {
+    this.m_radiusPlus = v;
+  }
+    
+  String? m_symbol;  
+
+  String get symbol { 
+    if (this.m_symbol == null) {
+      this.m_symbol = "";
+    }
+    return this.m_symbol!;
+  }
+
+  void set symbol (String v) {
+    this.m_symbol = v;
+  }
+    
+  double? m_width;  
+
+  double get width { 
+    if (this.m_width == null) {
+      this.m_width = 0;
+    }
+    return this.m_width!;
+  }
+
+  void set width (double v) {
+    this.m_width = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -41,46 +161,46 @@ class PointMarkerOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
+    if (this.m_enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this.m_enabled, ","], "");
     }
 
-    if (this.enabledThreshold != null) {  
-      buffer.writeAll(["\"enabledThreshold\":", this.enabledThreshold, ","], "");
+    if (this.m_enabledThreshold != null) {  
+      buffer.writeAll(["\"enabledThreshold\":", this.m_enabledThreshold, ","], "");
     }
 
-    if (this.fillColor != null) {  
-      buffer.writeAll(["\"fillColor\":", this.fillColor, ","], "");
+    if (this.m_fillColor != null) {  
+      buffer.writeAll(["\"fillColor\":", this.m_fillColor, ","], "");
     }
 
-    if (this.height != null) {  
-      buffer.writeAll(["\"height\":", this.height, ","], "");
+    if (this.m_height != null) {  
+      buffer.writeAll(["\"height\":", this.m_height, ","], "");
     }
 
-    if (this.lineColor != null) {  
-      buffer.writeAll(["\"lineColor\":", this.lineColor, ","], "");
+    if (this.m_lineColor != null) {  
+      buffer.writeAll(["\"lineColor\":", this.m_lineColor, ","], "");
     }
 
-    if (this.lineWidth != null) {  
-      buffer.writeAll(["\"lineWidth\":", this.lineWidth, ","], "");
+    if (this.m_lineWidth != null) {  
+      buffer.writeAll(["\"lineWidth\":", this.m_lineWidth, ","], "");
     }
 
-    if (this.radius != null) {  
-      buffer.writeAll(["\"radius\":", this.radius, ","], "");
+    if (this.m_radius != null) {  
+      buffer.writeAll(["\"radius\":", this.m_radius, ","], "");
     }
 
-    if (this.radiusPlus != null) {  
-      buffer.writeAll(["\"radiusPlus\":", this.radiusPlus, ","], "");
+    if (this.m_radiusPlus != null) {  
+      buffer.writeAll(["\"radiusPlus\":", this.m_radiusPlus, ","], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 
 
-    if (this.symbol != null) {  
-      buffer.writeAll(["\"symbol\":", this.symbol, ","], "");
+    if (this.m_symbol != null) {  
+      buffer.writeAll(["\"symbol\":", this.m_symbol, ","], "");
     }
 
-    if (this.width != null) {  
-      buffer.writeAll(["\"width\":", this.width, ","], "");
+    if (this.m_width != null) {  
+      buffer.writeAll(["\"width\":", this.m_width, ","], "");
     }
   }
 

@@ -24,7 +24,19 @@ import 'OptionFragment.dart';
  */
 class DisparityIndexParamsOptions extends SMAParamsOptions {
   DisparityIndexParamsOptions() : super();
-  String? average;
+  String? m_average;  
+
+  String get average { 
+    if (this.m_average == null) {
+      this.m_average = "";
+    }
+    return this.m_average!;
+  }
+
+  void set average (String v) {
+    this.m_average = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,8 +45,8 @@ class DisparityIndexParamsOptions extends SMAParamsOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.average != null) {  
-      buffer.writeAll(["\"average\":", this.average, ","], "");
+    if (this.m_average != null) {  
+      buffer.writeAll(["\"average\":", this.m_average, ","], "");
     }
   }
 

@@ -26,11 +26,71 @@ import 'OptionFragment.dart';
  */
 class LabelPositionObject extends OptionFragment {
   LabelPositionObject() : super();
-  String? alignment;
-  double? bottom;
-  double? distance;
-  double? sideOverflow;
-  double? top;
+  String? m_alignment;  
+
+  String get alignment { 
+    if (this.m_alignment == null) {
+      this.m_alignment = "";
+    }
+    return this.m_alignment!;
+  }
+
+  void set alignment (String v) {
+    this.m_alignment = v;
+  }
+    
+  double? m_bottom;  
+
+  double get bottom { 
+    if (this.m_bottom == null) {
+      this.m_bottom = 0;
+    }
+    return this.m_bottom!;
+  }
+
+  void set bottom (double v) {
+    this.m_bottom = v;
+  }
+    
+  double? m_distance;  
+
+  double get distance { 
+    if (this.m_distance == null) {
+      this.m_distance = 0;
+    }
+    return this.m_distance!;
+  }
+
+  void set distance (double v) {
+    this.m_distance = v;
+  }
+    
+  double? m_sideOverflow;  
+
+  double get sideOverflow { 
+    if (this.m_sideOverflow == null) {
+      this.m_sideOverflow = 0;
+    }
+    return this.m_sideOverflow!;
+  }
+
+  void set sideOverflow (double v) {
+    this.m_sideOverflow = v;
+  }
+    
+  double? m_top;  
+
+  double get top { 
+    if (this.m_top == null) {
+      this.m_top = 0;
+    }
+    return this.m_top!;
+  }
+
+  void set top (double v) {
+    this.m_top = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -39,34 +99,34 @@ class LabelPositionObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.alignment != null) {  
-      buffer.writeAll(["\"alignment\":", this.alignment, ","], "");
+    if (this.m_alignment != null) {  
+      buffer.writeAll(["\"alignment\":", this.m_alignment, ","], "");
     }
 
     // NOTE: skip serialization of attribs (type SVGAttributes is ignored)} 
 
-    if (this.bottom != null) {  
-      buffer.writeAll(["\"bottom\":", this.bottom, ","], "");
+    if (this.m_bottom != null) {  
+      buffer.writeAll(["\"bottom\":", this.m_bottom, ","], "");
     }
 
     // NOTE: skip serialization of connectorPosition (type LabelConnectorPositionObject is ignored)} 
 
     // NOTE: skip serialization of computed (type Generic is ignored)} 
 
-    if (this.distance != null) {  
-      buffer.writeAll(["\"distance\":", this.distance, ","], "");
+    if (this.m_distance != null) {  
+      buffer.writeAll(["\"distance\":", this.m_distance, ","], "");
     }
 
     // NOTE: skip serialization of natural (type PositionObject is ignored)} 
 
     // NOTE: skip serialization of posAttribs (type SVGAttributes is ignored)} 
 
-    if (this.sideOverflow != null) {  
-      buffer.writeAll(["\"sideOverflow\":", this.sideOverflow, ","], "");
+    if (this.m_sideOverflow != null) {  
+      buffer.writeAll(["\"sideOverflow\":", this.m_sideOverflow, ","], "");
     }
 
-    if (this.top != null) {  
-      buffer.writeAll(["\"top\":", this.top, ","], "");
+    if (this.m_top != null) {  
+      buffer.writeAll(["\"top\":", this.m_top, ","], "");
     }
   }
 

@@ -30,7 +30,19 @@ class TilemapSeriesOptions extends HeatmapSeriesOptions {
    * 
    * Defaults to 'hexagon'. 
       */
-  String? tileShape;
+  String? m_tileShape;  
+
+  String get tileShape { 
+    if (this.m_tileShape == null) {
+      this.m_tileShape = "";
+    }
+    return this.m_tileShape!;
+  }
+
+  void set tileShape (String v) {
+    this.m_tileShape = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -41,8 +53,8 @@ class TilemapSeriesOptions extends HeatmapSeriesOptions {
     
     // NOTE: skip serialization of state (type Generic is ignored)} 
 
-    if (this.tileShape != null) {  
-      buffer.writeAll(["\"tileShape\":", this.tileShape, ","], "");
+    if (this.m_tileShape != null) {  
+      buffer.writeAll(["\"tileShape\":", this.m_tileShape, ","], "");
     }
   }
 

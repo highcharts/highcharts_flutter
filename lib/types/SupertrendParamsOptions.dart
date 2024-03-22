@@ -24,7 +24,19 @@ import 'OptionFragment.dart';
  */
 class SupertrendParamsOptions extends SMAParamsOptions {
   SupertrendParamsOptions() : super();
-  double? multiplier;
+  double? m_multiplier;  
+
+  double get multiplier { 
+    if (this.m_multiplier == null) {
+      this.m_multiplier = 0;
+    }
+    return this.m_multiplier!;
+  }
+
+  void set multiplier (double v) {
+    this.m_multiplier = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,8 +45,8 @@ class SupertrendParamsOptions extends SMAParamsOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.multiplier != null) {  
-      buffer.writeAll(["\"multiplier\":", this.multiplier, ","], "");
+    if (this.m_multiplier != null) {  
+      buffer.writeAll(["\"multiplier\":", this.m_multiplier, ","], "");
     }
   }
 

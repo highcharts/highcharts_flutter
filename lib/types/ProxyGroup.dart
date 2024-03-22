@@ -24,7 +24,19 @@ import 'OptionFragment.dart';
  */
 class ProxyGroup extends OptionFragment {
   ProxyGroup() : super();
-  String? type;
+  String? m_type;  
+
+  String get type { 
+    if (this.m_type == null) {
+      this.m_type = "";
+    }
+    return this.m_type!;
+  }
+
+  void set type (String v) {
+    this.m_type = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -37,8 +49,8 @@ class ProxyGroup extends OptionFragment {
 
     // NOTE: skip serialization of groupElement (type HTMLElement is ignored)} 
 
-    if (this.type != null) {  
-      buffer.writeAll(["\"type\":", this.type, ","], "");
+    if (this.m_type != null) {  
+      buffer.writeAll(["\"type\":", this.m_type, ","], "");
     }
 
     // NOTE: skip serialization of proxyElements (type ProxyElement is ignored)} 

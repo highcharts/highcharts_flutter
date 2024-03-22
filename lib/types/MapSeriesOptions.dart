@@ -29,7 +29,19 @@ class MapSeriesOptions extends OptionFragment {
    * 
    * Defaults to 'true'. 
       */
-  bool? affectsMapView;
+  bool? m_affectsMapView;  
+
+  bool get affectsMapView { 
+    if (this.m_affectsMapView == null) {
+      this.m_affectsMapView = false;
+    }
+    return this.m_affectsMapView!;
+  }
+
+  void set affectsMapView (bool v) {
+    this.m_affectsMapView = v;
+  }
+    
   /**
    * The color to apply to null points.
    * 
@@ -38,12 +50,36 @@ class MapSeriesOptions extends OptionFragment {
    * 
    * Defaults to '#f7f7f7'. 
       */
-  String? nullColor;
+  String? m_nullColor;  
+
+  String get nullColor { 
+    if (this.m_nullColor == null) {
+      this.m_nullColor = "";
+    }
+    return this.m_nullColor!;
+  }
+
+  void set nullColor (String v) {
+    this.m_nullColor = v;
+  }
+    
   /**
    * Whether to allow pointer interaction like tooltips and mouse events
    * on null points.  
       */
-  bool? nullInteraction;
+  bool? m_nullInteraction;  
+
+  bool get nullInteraction { 
+    if (this.m_nullInteraction == null) {
+      this.m_nullInteraction = false;
+    }
+    return this.m_nullInteraction!;
+  }
+
+  void set nullInteraction (bool v) {
+    this.m_nullInteraction = v;
+  }
+    
   // NOTE: states skipped - type Generic is ignored in gen
 
 
@@ -54,18 +90,18 @@ class MapSeriesOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.affectsMapView != null) {  
-      buffer.writeAll(["\"affectsMapView\":", this.affectsMapView, ","], "");
+    if (this.m_affectsMapView != null) {  
+      buffer.writeAll(["\"affectsMapView\":", this.m_affectsMapView, ","], "");
     }
 
     // NOTE: skip serialization of data (type MapPointOptions)[] is ignored)} 
 
-    if (this.nullColor != null) {  
-      buffer.writeAll(["\"nullColor\":", this.nullColor, ","], "");
+    if (this.m_nullColor != null) {  
+      buffer.writeAll(["\"nullColor\":", this.m_nullColor, ","], "");
     }
 
-    if (this.nullInteraction != null) {  
-      buffer.writeAll(["\"nullInteraction\":", this.nullInteraction, ","], "");
+    if (this.m_nullInteraction != null) {  
+      buffer.writeAll(["\"nullInteraction\":", this.m_nullInteraction, ","], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 

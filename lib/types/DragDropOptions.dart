@@ -24,17 +24,149 @@ import 'OptionFragment.dart';
  */
 class DragDropOptions extends OptionFragment {
   DragDropOptions() : super();
-  bool? draggableX;
-  bool? draggableY;
-  double? dragMaxX;
-  double? dragMaxY;
-  double? dragMinX;
-  double? dragMinY;
-  double? dragPrecisionX;
-  double? dragPrecisionY;
-  double? dragSensitivity;
-  String? groupBy;
-  bool? liveRedraw;
+  bool? m_draggableX;  
+
+  bool get draggableX { 
+    if (this.m_draggableX == null) {
+      this.m_draggableX = false;
+    }
+    return this.m_draggableX!;
+  }
+
+  void set draggableX (bool v) {
+    this.m_draggableX = v;
+  }
+    
+  bool? m_draggableY;  
+
+  bool get draggableY { 
+    if (this.m_draggableY == null) {
+      this.m_draggableY = false;
+    }
+    return this.m_draggableY!;
+  }
+
+  void set draggableY (bool v) {
+    this.m_draggableY = v;
+  }
+    
+  double? m_dragMaxX;  
+
+  double get dragMaxX { 
+    if (this.m_dragMaxX == null) {
+      this.m_dragMaxX = 0;
+    }
+    return this.m_dragMaxX!;
+  }
+
+  void set dragMaxX (double v) {
+    this.m_dragMaxX = v;
+  }
+    
+  double? m_dragMaxY;  
+
+  double get dragMaxY { 
+    if (this.m_dragMaxY == null) {
+      this.m_dragMaxY = 0;
+    }
+    return this.m_dragMaxY!;
+  }
+
+  void set dragMaxY (double v) {
+    this.m_dragMaxY = v;
+  }
+    
+  double? m_dragMinX;  
+
+  double get dragMinX { 
+    if (this.m_dragMinX == null) {
+      this.m_dragMinX = 0;
+    }
+    return this.m_dragMinX!;
+  }
+
+  void set dragMinX (double v) {
+    this.m_dragMinX = v;
+  }
+    
+  double? m_dragMinY;  
+
+  double get dragMinY { 
+    if (this.m_dragMinY == null) {
+      this.m_dragMinY = 0;
+    }
+    return this.m_dragMinY!;
+  }
+
+  void set dragMinY (double v) {
+    this.m_dragMinY = v;
+  }
+    
+  double? m_dragPrecisionX;  
+
+  double get dragPrecisionX { 
+    if (this.m_dragPrecisionX == null) {
+      this.m_dragPrecisionX = 0;
+    }
+    return this.m_dragPrecisionX!;
+  }
+
+  void set dragPrecisionX (double v) {
+    this.m_dragPrecisionX = v;
+  }
+    
+  double? m_dragPrecisionY;  
+
+  double get dragPrecisionY { 
+    if (this.m_dragPrecisionY == null) {
+      this.m_dragPrecisionY = 0;
+    }
+    return this.m_dragPrecisionY!;
+  }
+
+  void set dragPrecisionY (double v) {
+    this.m_dragPrecisionY = v;
+  }
+    
+  double? m_dragSensitivity;  
+
+  double get dragSensitivity { 
+    if (this.m_dragSensitivity == null) {
+      this.m_dragSensitivity = 0;
+    }
+    return this.m_dragSensitivity!;
+  }
+
+  void set dragSensitivity (double v) {
+    this.m_dragSensitivity = v;
+  }
+    
+  String? m_groupBy;  
+
+  String get groupBy { 
+    if (this.m_groupBy == null) {
+      this.m_groupBy = "";
+    }
+    return this.m_groupBy!;
+  }
+
+  void set groupBy (String v) {
+    this.m_groupBy = v;
+  }
+    
+  bool? m_liveRedraw;  
+
+  bool get liveRedraw { 
+    if (this.m_liveRedraw == null) {
+      this.m_liveRedraw = false;
+    }
+    return this.m_liveRedraw!;
+  }
+
+  void set liveRedraw (bool v) {
+    this.m_liveRedraw = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -43,52 +175,52 @@ class DragDropOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.draggableX != null) {  
-      buffer.writeAll(["\"draggableX\":", this.draggableX, ","], "");
+    if (this.m_draggableX != null) {  
+      buffer.writeAll(["\"draggableX\":", this.m_draggableX, ","], "");
     }
 
-    if (this.draggableY != null) {  
-      buffer.writeAll(["\"draggableY\":", this.draggableY, ","], "");
+    if (this.m_draggableY != null) {  
+      buffer.writeAll(["\"draggableY\":", this.m_draggableY, ","], "");
     }
 
     // NOTE: skip serialization of dragHandle (type DragDropHandleOptions is ignored)} 
 
-    if (this.dragMaxX != null) {  
-      buffer.writeAll(["\"dragMaxX\":", this.dragMaxX, ","], "");
+    if (this.m_dragMaxX != null) {  
+      buffer.writeAll(["\"dragMaxX\":", this.m_dragMaxX, ","], "");
     }
 
-    if (this.dragMaxY != null) {  
-      buffer.writeAll(["\"dragMaxY\":", this.dragMaxY, ","], "");
+    if (this.m_dragMaxY != null) {  
+      buffer.writeAll(["\"dragMaxY\":", this.m_dragMaxY, ","], "");
     }
 
-    if (this.dragMinX != null) {  
-      buffer.writeAll(["\"dragMinX\":", this.dragMinX, ","], "");
+    if (this.m_dragMinX != null) {  
+      buffer.writeAll(["\"dragMinX\":", this.m_dragMinX, ","], "");
     }
 
-    if (this.dragMinY != null) {  
-      buffer.writeAll(["\"dragMinY\":", this.dragMinY, ","], "");
+    if (this.m_dragMinY != null) {  
+      buffer.writeAll(["\"dragMinY\":", this.m_dragMinY, ","], "");
     }
 
-    if (this.dragPrecisionX != null) {  
-      buffer.writeAll(["\"dragPrecisionX\":", this.dragPrecisionX, ","], "");
+    if (this.m_dragPrecisionX != null) {  
+      buffer.writeAll(["\"dragPrecisionX\":", this.m_dragPrecisionX, ","], "");
     }
 
-    if (this.dragPrecisionY != null) {  
-      buffer.writeAll(["\"dragPrecisionY\":", this.dragPrecisionY, ","], "");
+    if (this.m_dragPrecisionY != null) {  
+      buffer.writeAll(["\"dragPrecisionY\":", this.m_dragPrecisionY, ","], "");
     }
 
-    if (this.dragSensitivity != null) {  
-      buffer.writeAll(["\"dragSensitivity\":", this.dragSensitivity, ","], "");
+    if (this.m_dragSensitivity != null) {  
+      buffer.writeAll(["\"dragSensitivity\":", this.m_dragSensitivity, ","], "");
     }
 
-    if (this.groupBy != null) {  
-      buffer.writeAll(["\"groupBy\":", this.groupBy, ","], "");
+    if (this.m_groupBy != null) {  
+      buffer.writeAll(["\"groupBy\":", this.m_groupBy, ","], "");
     }
 
     // NOTE: skip serialization of guideBox (type Generic is ignored)} 
 
-    if (this.liveRedraw != null) {  
-      buffer.writeAll(["\"liveRedraw\":", this.liveRedraw, ","], "");
+    if (this.m_liveRedraw != null) {  
+      buffer.writeAll(["\"liveRedraw\":", this.m_liveRedraw, ","], "");
     }
   }
 

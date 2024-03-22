@@ -24,7 +24,19 @@ import 'OptionFragment.dart';
  */
 class PictorialPathOptions extends OptionFragment {
   PictorialPathOptions() : super();
-  double? max;
+  double? m_max;  
+
+  double get max { 
+    if (this.m_max == null) {
+      this.m_max = 0;
+    }
+    return this.m_max!;
+  }
+
+  void set max (double v) {
+    this.m_max = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -35,8 +47,8 @@ class PictorialPathOptions extends OptionFragment {
     
     // NOTE: skip serialization of definition (type SVGPath is ignored)} 
 
-    if (this.max != null) {  
-      buffer.writeAll(["\"max\":", this.max, ","], "");
+    if (this.m_max != null) {  
+      buffer.writeAll(["\"max\":", this.m_max, ","], "");
     }
   }
 

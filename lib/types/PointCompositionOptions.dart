@@ -24,11 +24,71 @@ import 'OptionFragment.dart';
  */
 class PointCompositionOptions extends PointOptions {
   PointCompositionOptions() : super();
-  String? id;
-  double? level;
-  double? mass;
-  bool? outgoing;
-  double? weight;
+  String? m_id;  
+
+  String get id { 
+    if (this.m_id == null) {
+      this.m_id = "";
+    }
+    return this.m_id!;
+  }
+
+  void set id (String v) {
+    this.m_id = v;
+  }
+    
+  double? m_level;  
+
+  double get level { 
+    if (this.m_level == null) {
+      this.m_level = 0;
+    }
+    return this.m_level!;
+  }
+
+  void set level (double v) {
+    this.m_level = v;
+  }
+    
+  double? m_mass;  
+
+  double get mass { 
+    if (this.m_mass == null) {
+      this.m_mass = 0;
+    }
+    return this.m_mass!;
+  }
+
+  void set mass (double v) {
+    this.m_mass = v;
+  }
+    
+  bool? m_outgoing;  
+
+  bool get outgoing { 
+    if (this.m_outgoing == null) {
+      this.m_outgoing = false;
+    }
+    return this.m_outgoing!;
+  }
+
+  void set outgoing (bool v) {
+    this.m_outgoing = v;
+  }
+    
+  double? m_weight;  
+
+  double get weight { 
+    if (this.m_weight == null) {
+      this.m_weight = 0;
+    }
+    return this.m_weight!;
+  }
+
+  void set weight (double v) {
+    this.m_weight = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -37,24 +97,24 @@ class PointCompositionOptions extends PointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.id != null) {  
-      buffer.writeAll(["\"id\":", this.id, ","], "");
+    if (this.m_id != null) {  
+      buffer.writeAll(["\"id\":", this.m_id, ","], "");
     }
 
-    if (this.level != null) {  
-      buffer.writeAll(["\"level\":", this.level, ","], "");
+    if (this.m_level != null) {  
+      buffer.writeAll(["\"level\":", this.m_level, ","], "");
     }
 
-    if (this.mass != null) {  
-      buffer.writeAll(["\"mass\":", this.mass, ","], "");
+    if (this.m_mass != null) {  
+      buffer.writeAll(["\"mass\":", this.m_mass, ","], "");
     }
 
-    if (this.outgoing != null) {  
-      buffer.writeAll(["\"outgoing\":", this.outgoing, ","], "");
+    if (this.m_outgoing != null) {  
+      buffer.writeAll(["\"outgoing\":", this.m_outgoing, ","], "");
     }
 
-    if (this.weight != null) {  
-      buffer.writeAll(["\"weight\":", this.weight, ","], "");
+    if (this.m_weight != null) {  
+      buffer.writeAll(["\"weight\":", this.m_weight, ","], "");
     }
   }
 

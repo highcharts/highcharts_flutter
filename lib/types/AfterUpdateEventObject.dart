@@ -24,7 +24,19 @@ import 'OptionFragment.dart';
  */
 class AfterUpdateEventObject extends OptionFragment {
   AfterUpdateEventObject() : super();
-  bool? redraw;
+  bool? m_redraw;  
+
+  bool get redraw { 
+    if (this.m_redraw == null) {
+      this.m_redraw = false;
+    }
+    return this.m_redraw!;
+  }
+
+  void set redraw (bool v) {
+    this.m_redraw = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -37,8 +49,8 @@ class AfterUpdateEventObject extends OptionFragment {
 
     // NOTE: skip serialization of options (type Options is ignored)} 
 
-    if (this.redraw != null) {  
-      buffer.writeAll(["\"redraw\":", this.redraw, ","], "");
+    if (this.m_redraw != null) {  
+      buffer.writeAll(["\"redraw\":", this.m_redraw, ","], "");
     }
   }
 

@@ -25,9 +25,45 @@ import 'OptionFragment.dart';
  */
 class TimelinePointOptions extends LinePointOptions {
   TimelinePointOptions() : super();
-  bool? isNull;
-  double? radius;
-  bool? visible;
+  bool? m_isNull;  
+
+  bool get isNull { 
+    if (this.m_isNull == null) {
+      this.m_isNull = false;
+    }
+    return this.m_isNull!;
+  }
+
+  void set isNull (bool v) {
+    this.m_isNull = v;
+  }
+    
+  double? m_radius;  
+
+  double get radius { 
+    if (this.m_radius == null) {
+      this.m_radius = 0;
+    }
+    return this.m_radius!;
+  }
+
+  void set radius (double v) {
+    this.m_radius = v;
+  }
+    
+  bool? m_visible;  
+
+  bool get visible { 
+    if (this.m_visible == null) {
+      this.m_visible = false;
+    }
+    return this.m_visible!;
+  }
+
+  void set visible (bool v) {
+    this.m_visible = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -38,16 +74,16 @@ class TimelinePointOptions extends LinePointOptions {
     
     // NOTE: skip serialization of dataLabels (type TimelineDataLabelOptions is ignored)} 
 
-    if (this.isNull != null) {  
-      buffer.writeAll(["\"isNull\":", this.isNull, ","], "");
+    if (this.m_isNull != null) {  
+      buffer.writeAll(["\"isNull\":", this.m_isNull, ","], "");
     }
 
-    if (this.radius != null) {  
-      buffer.writeAll(["\"radius\":", this.radius, ","], "");
+    if (this.m_radius != null) {  
+      buffer.writeAll(["\"radius\":", this.m_radius, ","], "");
     }
 
-    if (this.visible != null) {  
-      buffer.writeAll(["\"visible\":", this.visible, ","], "");
+    if (this.m_visible != null) {  
+      buffer.writeAll(["\"visible\":", this.m_visible, ","], "");
     }
   }
 

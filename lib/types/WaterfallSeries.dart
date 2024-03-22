@@ -23,8 +23,32 @@ import 'OptionFragment.dart';
  */
 class WaterfallSeries extends OptionFragment {
   WaterfallSeries() : super();
-  String? pointValKey;
-  bool? showLine;
+  String? m_pointValKey;  
+
+  String get pointValKey { 
+    if (this.m_pointValKey == null) {
+      this.m_pointValKey = "";
+    }
+    return this.m_pointValKey!;
+  }
+
+  void set pointValKey (String v) {
+    this.m_pointValKey = v;
+  }
+    
+  bool? m_showLine;  
+
+  bool get showLine { 
+    if (this.m_showLine == null) {
+      this.m_showLine = false;
+    }
+    return this.m_showLine!;
+  }
+
+  void set showLine (bool v) {
+    this.m_showLine = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -35,12 +59,12 @@ class WaterfallSeries extends OptionFragment {
     
     // NOTE: skip serialization of pointClass (type typeof WaterfallPoint is ignored)} 
 
-    if (this.pointValKey != null) {  
-      buffer.writeAll(["\"pointValKey\":", this.pointValKey, ","], "");
+    if (this.m_pointValKey != null) {  
+      buffer.writeAll(["\"pointValKey\":", this.m_pointValKey, ","], "");
     }
 
-    if (this.showLine != null) {  
-      buffer.writeAll(["\"showLine\":", this.showLine, ","], "");
+    if (this.m_showLine != null) {  
+      buffer.writeAll(["\"showLine\":", this.m_showLine, ","], "");
     }
   }
 

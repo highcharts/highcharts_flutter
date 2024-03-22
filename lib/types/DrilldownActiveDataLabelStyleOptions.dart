@@ -23,10 +23,58 @@ import 'OptionFragment.dart';
  */
 class DrilldownActiveDataLabelStyleOptions extends OptionFragment {
   DrilldownActiveDataLabelStyleOptions() : super();
-  String? color;
-  String? cursor;
-  String? fontWeight;
-  String? textDecoration;
+  String? m_color;  
+
+  String get color { 
+    if (this.m_color == null) {
+      this.m_color = "";
+    }
+    return this.m_color!;
+  }
+
+  void set color (String v) {
+    this.m_color = v;
+  }
+    
+  String? m_cursor;  
+
+  String get cursor { 
+    if (this.m_cursor == null) {
+      this.m_cursor = "";
+    }
+    return this.m_cursor!;
+  }
+
+  void set cursor (String v) {
+    this.m_cursor = v;
+  }
+    
+  String? m_fontWeight;  
+
+  String get fontWeight { 
+    if (this.m_fontWeight == null) {
+      this.m_fontWeight = "";
+    }
+    return this.m_fontWeight!;
+  }
+
+  void set fontWeight (String v) {
+    this.m_fontWeight = v;
+  }
+    
+  String? m_textDecoration;  
+
+  String get textDecoration { 
+    if (this.m_textDecoration == null) {
+      this.m_textDecoration = "";
+    }
+    return this.m_textDecoration!;
+  }
+
+  void set textDecoration (String v) {
+    this.m_textDecoration = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -35,20 +83,20 @@ class DrilldownActiveDataLabelStyleOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.color != null) {  
-      buffer.writeAll(["\"color\":", this.color, ","], "");
+    if (this.m_color != null) {  
+      buffer.writeAll(["\"color\":", this.m_color, ","], "");
     }
 
-    if (this.cursor != null) {  
-      buffer.writeAll(["\"cursor\":", this.cursor, ","], "");
+    if (this.m_cursor != null) {  
+      buffer.writeAll(["\"cursor\":", this.m_cursor, ","], "");
     }
 
-    if (this.fontWeight != null) {  
-      buffer.writeAll(["\"fontWeight\":", this.fontWeight, ","], "");
+    if (this.m_fontWeight != null) {  
+      buffer.writeAll(["\"fontWeight\":", this.m_fontWeight, ","], "");
     }
 
-    if (this.textDecoration != null) {  
-      buffer.writeAll(["\"textDecoration\":", this.textDecoration, ","], "");
+    if (this.m_textDecoration != null) {  
+      buffer.writeAll(["\"textDecoration\":", this.m_textDecoration, ","], "");
     }
   }
 

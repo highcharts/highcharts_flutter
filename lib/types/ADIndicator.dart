@@ -23,7 +23,19 @@ import 'OptionFragment.dart';
  */
 class ADIndicator extends OptionFragment {
   ADIndicator() : super();
-  String? nameBase;
+  String? m_nameBase;  
+
+  String get nameBase { 
+    if (this.m_nameBase == null) {
+      this.m_nameBase = "";
+    }
+    return this.m_nameBase!;
+  }
+
+  void set nameBase (String v) {
+    this.m_nameBase = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -36,8 +48,8 @@ class ADIndicator extends OptionFragment {
 
     // NOTE: skip serialization of nameComponents (type string[] is ignored)} 
 
-    if (this.nameBase != null) {  
-      buffer.writeAll(["\"nameBase\":", this.nameBase, ","], "");
+    if (this.m_nameBase != null) {  
+      buffer.writeAll(["\"nameBase\":", this.m_nameBase, ","], "");
     }
   }
 

@@ -25,7 +25,19 @@ import 'OptionFragment.dart';
  */
 class AxisPointBreakEventObject extends OptionFragment {
   AxisPointBreakEventObject() : super();
-  String? type;
+  String? m_type;  
+
+  String get type { 
+    if (this.m_type == null) {
+      this.m_type = "";
+    }
+    return this.m_type!;
+  }
+
+  void set type (String v) {
+    this.m_type = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -42,8 +54,8 @@ class AxisPointBreakEventObject extends OptionFragment {
 
     // NOTE: skip serialization of target (type SVGElement is ignored)} 
 
-    if (this.type != null) {  
-      buffer.writeAll(["\"type\":", this.type, ","], "");
+    if (this.m_type != null) {  
+      buffer.writeAll(["\"type\":", this.m_type, ","], "");
     }
   }
 

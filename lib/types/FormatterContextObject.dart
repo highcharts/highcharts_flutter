@@ -23,9 +23,45 @@ import 'OptionFragment.dart';
  */
 class FormatterContextObject extends OptionFragment {
   FormatterContextObject() : super();
-  double? center;
-  double? radius;
-  double? value;
+  double? m_center;  
+
+  double get center { 
+    if (this.m_center == null) {
+      this.m_center = 0;
+    }
+    return this.m_center!;
+  }
+
+  void set center (double v) {
+    this.m_center = v;
+  }
+    
+  double? m_radius;  
+
+  double get radius { 
+    if (this.m_radius == null) {
+      this.m_radius = 0;
+    }
+    return this.m_radius!;
+  }
+
+  void set radius (double v) {
+    this.m_radius = v;
+  }
+    
+  double? m_value;  
+
+  double get value { 
+    if (this.m_value == null) {
+      this.m_value = 0;
+    }
+    return this.m_value!;
+  }
+
+  void set value (double v) {
+    this.m_value = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -34,16 +70,16 @@ class FormatterContextObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.center != null) {  
-      buffer.writeAll(["\"center\":", this.center, ","], "");
+    if (this.m_center != null) {  
+      buffer.writeAll(["\"center\":", this.m_center, ","], "");
     }
 
-    if (this.radius != null) {  
-      buffer.writeAll(["\"radius\":", this.radius, ","], "");
+    if (this.m_radius != null) {  
+      buffer.writeAll(["\"radius\":", this.m_radius, ","], "");
     }
 
-    if (this.value != null) {  
-      buffer.writeAll(["\"value\":", this.value, ","], "");
+    if (this.m_value != null) {  
+      buffer.writeAll(["\"value\":", this.m_value, ","], "");
     }
 
     // NOTE: skip serialization of points (type FormatterContextObject[] is ignored)} 

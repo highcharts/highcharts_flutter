@@ -26,11 +26,71 @@ import 'OptionFragment.dart';
  */
 class SVGElementLike extends OptionFragment {
   SVGElementLike() : super();
-  bool? survive;
-  double? xCorr;
-  double? yCorr;
-  String? pathType;
-  bool? finishedOnAdd;
+  bool? m_survive;  
+
+  bool get survive { 
+    if (this.m_survive == null) {
+      this.m_survive = false;
+    }
+    return this.m_survive!;
+  }
+
+  void set survive (bool v) {
+    this.m_survive = v;
+  }
+    
+  double? m_xCorr;  
+
+  double get xCorr { 
+    if (this.m_xCorr == null) {
+      this.m_xCorr = 0;
+    }
+    return this.m_xCorr!;
+  }
+
+  void set xCorr (double v) {
+    this.m_xCorr = v;
+  }
+    
+  double? m_yCorr;  
+
+  double get yCorr { 
+    if (this.m_yCorr == null) {
+      this.m_yCorr = 0;
+    }
+    return this.m_yCorr!;
+  }
+
+  void set yCorr (double v) {
+    this.m_yCorr = v;
+  }
+    
+  String? m_pathType;  
+
+  String get pathType { 
+    if (this.m_pathType == null) {
+      this.m_pathType = "";
+    }
+    return this.m_pathType!;
+  }
+
+  void set pathType (String v) {
+    this.m_pathType = v;
+  }
+    
+  bool? m_finishedOnAdd;  
+
+  bool get finishedOnAdd { 
+    if (this.m_finishedOnAdd == null) {
+      this.m_finishedOnAdd = false;
+    }
+    return this.m_finishedOnAdd!;
+  }
+
+  void set finishedOnAdd (bool v) {
+    this.m_finishedOnAdd = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -41,8 +101,8 @@ class SVGElementLike extends OptionFragment {
     
     // NOTE: skip serialization of options (type DataLabelOptions is ignored)} 
 
-    if (this.survive != null) {  
-      buffer.writeAll(["\"survive\":", this.survive, ","], "");
+    if (this.m_survive != null) {  
+      buffer.writeAll(["\"survive\":", this.m_survive, ","], "");
     }
 
     // NOTE: skip serialization of element (type DOMElementType is ignored)} 
@@ -53,12 +113,12 @@ class SVGElementLike extends OptionFragment {
 
     // NOTE: skip serialization of style (type CSSObject & CSSStyleDeclaration is ignored)} 
 
-    if (this.xCorr != null) {  
-      buffer.writeAll(["\"xCorr\":", this.xCorr, ","], "");
+    if (this.m_xCorr != null) {  
+      buffer.writeAll(["\"xCorr\":", this.m_xCorr, ","], "");
     }
 
-    if (this.yCorr != null) {  
-      buffer.writeAll(["\"yCorr\":", this.yCorr, ","], "");
+    if (this.m_yCorr != null) {  
+      buffer.writeAll(["\"yCorr\":", this.m_yCorr, ","], "");
     }
 
     // NOTE: skip serialization of focusBorder (type SVGElement is ignored)} 
@@ -67,14 +127,14 @@ class SVGElementLike extends OptionFragment {
 
     // NOTE: skip serialization of parts (type string[] is ignored)} 
 
-    if (this.pathType != null) {  
-      buffer.writeAll(["\"pathType\":", this.pathType, ","], "");
+    if (this.m_pathType != null) {  
+      buffer.writeAll(["\"pathType\":", this.m_pathType, ","], "");
     }
 
     // NOTE: skip serialization of vertexes (type Position3DObject[] is ignored)} 
 
-    if (this.finishedOnAdd != null) {  
-      buffer.writeAll(["\"finishedOnAdd\":", this.finishedOnAdd, ","], "");
+    if (this.m_finishedOnAdd != null) {  
+      buffer.writeAll(["\"finishedOnAdd\":", this.m_finishedOnAdd, ","], "");
     }
 
     // NOTE: skip serialization of lowerGroup (type SVGElement is ignored)} 

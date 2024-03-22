@@ -23,8 +23,32 @@ import 'OptionFragment.dart';
  */
 class SVGPath extends OptionFragment {
   SVGPath() : super();
-  double? xMap;
-  bool? isArea;
+  double? m_xMap;  
+
+  double get xMap { 
+    if (this.m_xMap == null) {
+      this.m_xMap = 0;
+    }
+    return this.m_xMap!;
+  }
+
+  void set xMap (double v) {
+    this.m_xMap = v;
+  }
+    
+  bool? m_isArea;  
+
+  bool get isArea { 
+    if (this.m_isArea == null) {
+      this.m_isArea = false;
+    }
+    return this.m_isArea!;
+  }
+
+  void set isArea (bool v) {
+    this.m_isArea = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,12 +57,12 @@ class SVGPath extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.xMap != null) {  
-      buffer.writeAll(["\"xMap\":", this.xMap, ","], "");
+    if (this.m_xMap != null) {  
+      buffer.writeAll(["\"xMap\":", this.m_xMap, ","], "");
     }
 
-    if (this.isArea != null) {  
-      buffer.writeAll(["\"isArea\":", this.isArea, ","], "");
+    if (this.m_isArea != null) {  
+      buffer.writeAll(["\"isArea\":", this.m_isArea, ","], "");
     }
   }
 

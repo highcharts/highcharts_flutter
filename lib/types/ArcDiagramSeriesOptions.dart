@@ -34,25 +34,109 @@ class ArcDiagramSeriesOptions extends SankeySeriesOptions {
    * 
    * Defaults to 'false'. 
       */
-  bool? equalNodes;
+  bool? m_equalNodes;  
+
+  bool get equalNodes { 
+    if (this.m_equalNodes == null) {
+      this.m_equalNodes = false;
+    }
+    return this.m_equalNodes!;
+  }
+
+  void set equalNodes (bool v) {
+    this.m_equalNodes = v;
+  }
+    
   /**
    * The option to center links rather than position them one after
    * another 
    * 
    * Defaults to 'false'. 
       */
-  bool? centeredLinks;
-  double? linkRadius;
+  bool? m_centeredLinks;  
+
+  bool get centeredLinks { 
+    if (this.m_centeredLinks == null) {
+      this.m_centeredLinks = false;
+    }
+    return this.m_centeredLinks!;
+  }
+
+  void set centeredLinks (bool v) {
+    this.m_centeredLinks = v;
+  }
+    
+  double? m_linkRadius;  
+
+  double get linkRadius { 
+    if (this.m_linkRadius == null) {
+      this.m_linkRadius = 0;
+    }
+    return this.m_linkRadius!;
+  }
+
+  void set linkRadius (double v) {
+    this.m_linkRadius = v;
+  }
+    
   /**
    * Whether the series should be placed on the other side of the
    * `plotArea`. 
    * 
    * Defaults to 'false'. 
       */
-  bool? reversed;
-  double? scale;
-  String? offset;
-  double? linkWeight;
+  bool? m_reversed;  
+
+  bool get reversed { 
+    if (this.m_reversed == null) {
+      this.m_reversed = false;
+    }
+    return this.m_reversed!;
+  }
+
+  void set reversed (bool v) {
+    this.m_reversed = v;
+  }
+    
+  double? m_scale;  
+
+  double get scale { 
+    if (this.m_scale == null) {
+      this.m_scale = 0;
+    }
+    return this.m_scale!;
+  }
+
+  void set scale (double v) {
+    this.m_scale = v;
+  }
+    
+  String? m_offset;  
+
+  String get offset { 
+    if (this.m_offset == null) {
+      this.m_offset = "";
+    }
+    return this.m_offset!;
+  }
+
+  void set offset (String v) {
+    this.m_offset = v;
+  }
+    
+  double? m_linkWeight;  
+
+  double get linkWeight { 
+    if (this.m_linkWeight == null) {
+      this.m_linkWeight = 0;
+    }
+    return this.m_linkWeight!;
+  }
+
+  void set linkWeight (double v) {
+    this.m_linkWeight = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -63,32 +147,32 @@ class ArcDiagramSeriesOptions extends SankeySeriesOptions {
     
     // NOTE: skip serialization of states (type Generic is ignored)} 
 
-    if (this.equalNodes != null) {  
-      buffer.writeAll(["\"equalNodes\":", this.equalNodes, ","], "");
+    if (this.m_equalNodes != null) {  
+      buffer.writeAll(["\"equalNodes\":", this.m_equalNodes, ","], "");
     }
 
-    if (this.centeredLinks != null) {  
-      buffer.writeAll(["\"centeredLinks\":", this.centeredLinks, ","], "");
+    if (this.m_centeredLinks != null) {  
+      buffer.writeAll(["\"centeredLinks\":", this.m_centeredLinks, ","], "");
     }
 
-    if (this.linkRadius != null) {  
-      buffer.writeAll(["\"linkRadius\":", this.linkRadius, ","], "");
+    if (this.m_linkRadius != null) {  
+      buffer.writeAll(["\"linkRadius\":", this.m_linkRadius, ","], "");
     }
 
-    if (this.reversed != null) {  
-      buffer.writeAll(["\"reversed\":", this.reversed, ","], "");
+    if (this.m_reversed != null) {  
+      buffer.writeAll(["\"reversed\":", this.m_reversed, ","], "");
     }
 
-    if (this.scale != null) {  
-      buffer.writeAll(["\"scale\":", this.scale, ","], "");
+    if (this.m_scale != null) {  
+      buffer.writeAll(["\"scale\":", this.m_scale, ","], "");
     }
 
-    if (this.offset != null) {  
-      buffer.writeAll(["\"offset\":", this.offset, ","], "");
+    if (this.m_offset != null) {  
+      buffer.writeAll(["\"offset\":", this.m_offset, ","], "");
     }
 
-    if (this.linkWeight != null) {  
-      buffer.writeAll(["\"linkWeight\":", this.linkWeight, ","], "");
+    if (this.m_linkWeight != null) {  
+      buffer.writeAll(["\"linkWeight\":", this.m_linkWeight, ","], "");
     }
   }
 

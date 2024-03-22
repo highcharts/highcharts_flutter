@@ -23,7 +23,19 @@ import 'OptionFragment.dart';
  */
 class CylinderPoint extends OptionFragment {
   CylinderPoint() : super();
-  String? shapeType;
+  String? m_shapeType;  
+
+  String get shapeType { 
+    if (this.m_shapeType == null) {
+      this.m_shapeType = "";
+    }
+    return this.m_shapeType!;
+  }
+
+  void set shapeType (String v) {
+    this.m_shapeType = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -32,8 +44,8 @@ class CylinderPoint extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.shapeType != null) {  
-      buffer.writeAll(["\"shapeType\":", this.shapeType, ","], "");
+    if (this.m_shapeType != null) {  
+      buffer.writeAll(["\"shapeType\":", this.m_shapeType, ","], "");
     }
   }
 

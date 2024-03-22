@@ -24,8 +24,32 @@ import 'OptionFragment.dart';
  */
 class FilteredSeries extends OptionFragment {
   FilteredSeries() : super();
-  String? indicatorFullName;
-  String? indicatorType;
+  String? m_indicatorFullName;  
+
+  String get indicatorFullName { 
+    if (this.m_indicatorFullName == null) {
+      this.m_indicatorFullName = "";
+    }
+    return this.m_indicatorFullName!;
+  }
+
+  void set indicatorFullName (String v) {
+    this.m_indicatorFullName = v;
+  }
+    
+  String? m_indicatorType;  
+
+  String get indicatorType { 
+    if (this.m_indicatorType == null) {
+      this.m_indicatorType = "";
+    }
+    return this.m_indicatorType!;
+  }
+
+  void set indicatorType (String v) {
+    this.m_indicatorType = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -34,12 +58,12 @@ class FilteredSeries extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.indicatorFullName != null) {  
-      buffer.writeAll(["\"indicatorFullName\":", this.indicatorFullName, ","], "");
+    if (this.m_indicatorFullName != null) {  
+      buffer.writeAll(["\"indicatorFullName\":", this.m_indicatorFullName, ","], "");
     }
 
-    if (this.indicatorType != null) {  
-      buffer.writeAll(["\"indicatorType\":", this.indicatorType, ","], "");
+    if (this.m_indicatorType != null) {  
+      buffer.writeAll(["\"indicatorType\":", this.m_indicatorType, ","], "");
     }
 
     // NOTE: skip serialization of series (type SMAIndicator is ignored)} 

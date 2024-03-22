@@ -26,7 +26,19 @@ import 'OptionFragment.dart';
  */
 class PointDragEventObject extends OptionFragment {
   PointDragEventObject() : super();
-  String? newPointId;
+  String? m_newPointId;  
+
+  String get newPointId { 
+    if (this.m_newPointId == null) {
+      this.m_newPointId = "";
+    }
+    return this.m_newPointId!;
+  }
+
+  void set newPointId (String v) {
+    this.m_newPointId = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -37,8 +49,8 @@ class PointDragEventObject extends OptionFragment {
     
     // NOTE: skip serialization of newPoint (type PointDragDropObject is ignored)} 
 
-    if (this.newPointId != null) {  
-      buffer.writeAll(["\"newPointId\":", this.newPointId, ","], "");
+    if (this.m_newPointId != null) {  
+      buffer.writeAll(["\"newPointId\":", this.m_newPointId, ","], "");
     }
 
     // NOTE: skip serialization of newPoints (type Generic is ignored)} 

@@ -24,7 +24,19 @@ import 'OptionFragment.dart';
  */
 class ModifierEvent extends DataEvent {
   ModifierEvent() : super();
-  String? type;
+  String? m_type;  
+
+  String get type { 
+    if (this.m_type == null) {
+      this.m_type = "";
+    }
+    return this.m_type!;
+  }
+
+  void set type (String v) {
+    this.m_type = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,8 +45,8 @@ class ModifierEvent extends DataEvent {
     super.toJSONInner(buffer);
 
     
-    if (this.type != null) {  
-      buffer.writeAll(["\"type\":", this.type, ","], "");
+    if (this.m_type != null) {  
+      buffer.writeAll(["\"type\":", this.m_type, ","], "");
     }
 
     // NOTE: skip serialization of modifier (type DataModifier is ignored)} 

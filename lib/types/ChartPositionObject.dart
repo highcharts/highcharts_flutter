@@ -23,10 +23,58 @@ import 'OptionFragment.dart';
  */
 class ChartPositionObject extends OptionFragment {
   ChartPositionObject() : super();
-  double? left;
-  double? scaleX;
-  double? scaleY;
-  double? top;
+  double? m_left;  
+
+  double get left { 
+    if (this.m_left == null) {
+      this.m_left = 0;
+    }
+    return this.m_left!;
+  }
+
+  void set left (double v) {
+    this.m_left = v;
+  }
+    
+  double? m_scaleX;  
+
+  double get scaleX { 
+    if (this.m_scaleX == null) {
+      this.m_scaleX = 0;
+    }
+    return this.m_scaleX!;
+  }
+
+  void set scaleX (double v) {
+    this.m_scaleX = v;
+  }
+    
+  double? m_scaleY;  
+
+  double get scaleY { 
+    if (this.m_scaleY == null) {
+      this.m_scaleY = 0;
+    }
+    return this.m_scaleY!;
+  }
+
+  void set scaleY (double v) {
+    this.m_scaleY = v;
+  }
+    
+  double? m_top;  
+
+  double get top { 
+    if (this.m_top == null) {
+      this.m_top = 0;
+    }
+    return this.m_top!;
+  }
+
+  void set top (double v) {
+    this.m_top = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -35,20 +83,20 @@ class ChartPositionObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.left != null) {  
-      buffer.writeAll(["\"left\":", this.left, ","], "");
+    if (this.m_left != null) {  
+      buffer.writeAll(["\"left\":", this.m_left, ","], "");
     }
 
-    if (this.scaleX != null) {  
-      buffer.writeAll(["\"scaleX\":", this.scaleX, ","], "");
+    if (this.m_scaleX != null) {  
+      buffer.writeAll(["\"scaleX\":", this.m_scaleX, ","], "");
     }
 
-    if (this.scaleY != null) {  
-      buffer.writeAll(["\"scaleY\":", this.scaleY, ","], "");
+    if (this.m_scaleY != null) {  
+      buffer.writeAll(["\"scaleY\":", this.m_scaleY, ","], "");
     }
 
-    if (this.top != null) {  
-      buffer.writeAll(["\"top\":", this.top, ","], "");
+    if (this.m_top != null) {  
+      buffer.writeAll(["\"top\":", this.m_top, ","], "");
     }
   }
 

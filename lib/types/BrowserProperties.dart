@@ -23,9 +23,45 @@ import 'OptionFragment.dart';
  */
 class BrowserProperties extends OptionFragment {
   BrowserProperties() : super();
-  String? fullscreenChange;
-  String? requestFullscreen;
-  String? exitFullscreen;
+  String? m_fullscreenChange;  
+
+  String get fullscreenChange { 
+    if (this.m_fullscreenChange == null) {
+      this.m_fullscreenChange = "";
+    }
+    return this.m_fullscreenChange!;
+  }
+
+  void set fullscreenChange (String v) {
+    this.m_fullscreenChange = v;
+  }
+    
+  String? m_requestFullscreen;  
+
+  String get requestFullscreen { 
+    if (this.m_requestFullscreen == null) {
+      this.m_requestFullscreen = "";
+    }
+    return this.m_requestFullscreen!;
+  }
+
+  void set requestFullscreen (String v) {
+    this.m_requestFullscreen = v;
+  }
+    
+  String? m_exitFullscreen;  
+
+  String get exitFullscreen { 
+    if (this.m_exitFullscreen == null) {
+      this.m_exitFullscreen = "";
+    }
+    return this.m_exitFullscreen!;
+  }
+
+  void set exitFullscreen (String v) {
+    this.m_exitFullscreen = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -34,16 +70,16 @@ class BrowserProperties extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.fullscreenChange != null) {  
-      buffer.writeAll(["\"fullscreenChange\":", this.fullscreenChange, ","], "");
+    if (this.m_fullscreenChange != null) {  
+      buffer.writeAll(["\"fullscreenChange\":", this.m_fullscreenChange, ","], "");
     }
 
-    if (this.requestFullscreen != null) {  
-      buffer.writeAll(["\"requestFullscreen\":", this.requestFullscreen, ","], "");
+    if (this.m_requestFullscreen != null) {  
+      buffer.writeAll(["\"requestFullscreen\":", this.m_requestFullscreen, ","], "");
     }
 
-    if (this.exitFullscreen != null) {  
-      buffer.writeAll(["\"exitFullscreen\":", this.exitFullscreen, ","], "");
+    if (this.m_exitFullscreen != null) {  
+      buffer.writeAll(["\"exitFullscreen\":", this.m_exitFullscreen, ","], "");
     }
   }
 

@@ -24,7 +24,19 @@ import 'OptionFragment.dart';
  */
 class AutoAlignEvent extends Event {
   AutoAlignEvent() : super();
-  String? align;
+  String? m_align;  
+
+  String get align { 
+    if (this.m_align == null) {
+      this.m_align = "";
+    }
+    return this.m_align!;
+  }
+
+  void set align (String v) {
+    this.m_align = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,8 +45,8 @@ class AutoAlignEvent extends Event {
     super.toJSONInner(buffer);
 
     
-    if (this.align != null) {  
-      buffer.writeAll(["\"align\":", this.align, ","], "");
+    if (this.m_align != null) {  
+      buffer.writeAll(["\"align\":", this.m_align, ","], "");
     }
   }
 

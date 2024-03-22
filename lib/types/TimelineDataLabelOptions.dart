@@ -24,12 +24,60 @@ import 'OptionFragment.dart';
  */
 class TimelineDataLabelOptions extends DataLabelOptions {
   TimelineDataLabelOptions() : super();
-  bool? alternate;
-  String? connectorColor;
-  double? connectorWidth;
+  bool? m_alternate;  
+
+  bool get alternate { 
+    if (this.m_alternate == null) {
+      this.m_alternate = false;
+    }
+    return this.m_alternate!;
+  }
+
+  void set alternate (bool v) {
+    this.m_alternate = v;
+  }
+    
+  String? m_connectorColor;  
+
+  String get connectorColor { 
+    if (this.m_connectorColor == null) {
+      this.m_connectorColor = "";
+    }
+    return this.m_connectorColor!;
+  }
+
+  void set connectorColor (String v) {
+    this.m_connectorColor = v;
+  }
+    
+  double? m_connectorWidth;  
+
+  double get connectorWidth { 
+    if (this.m_connectorWidth == null) {
+      this.m_connectorWidth = 0;
+    }
+    return this.m_connectorWidth!;
+  }
+
+  void set connectorWidth (double v) {
+    this.m_connectorWidth = v;
+  }
+    
   /** NOTE: extdistance is skipped here for now, as it overrides the base type. */
 
-  double? width;
+  double? m_width;  
+
+  double get width { 
+    if (this.m_width == null) {
+      this.m_width = 0;
+    }
+    return this.m_width!;
+  }
+
+  void set width (double v) {
+    this.m_width = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -38,24 +86,24 @@ class TimelineDataLabelOptions extends DataLabelOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.alternate != null) {  
-      buffer.writeAll(["\"alternate\":", this.alternate, ","], "");
+    if (this.m_alternate != null) {  
+      buffer.writeAll(["\"alternate\":", this.m_alternate, ","], "");
     }
 
-    if (this.connectorColor != null) {  
-      buffer.writeAll(["\"connectorColor\":", this.connectorColor, ","], "");
+    if (this.m_connectorColor != null) {  
+      buffer.writeAll(["\"connectorColor\":", this.m_connectorColor, ","], "");
     }
 
-    if (this.connectorWidth != null) {  
-      buffer.writeAll(["\"connectorWidth\":", this.connectorWidth, ","], "");
+    if (this.m_connectorWidth != null) {  
+      buffer.writeAll(["\"connectorWidth\":", this.m_connectorWidth, ","], "");
     }
 
-    if (this.distance != null) {  
-      buffer.writeAll(["\"distance\":", this.distance, ","], "");
+    if (this.m_distance != null) {  
+      buffer.writeAll(["\"distance\":", this.m_distance, ","], "");
     }
 
-    if (this.width != null) {  
-      buffer.writeAll(["\"width\":", this.width, ","], "");
+    if (this.m_width != null) {  
+      buffer.writeAll(["\"width\":", this.m_width, ","], "");
     }
   }
 

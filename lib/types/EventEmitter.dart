@@ -25,9 +25,45 @@ import 'OptionFragment.dart';
  */
 class EventEmitter extends OptionFragment {
   EventEmitter() : super();
-  bool? cancelClick;
-  bool? hasDragged;
-  bool? isUpdating;
+  bool? m_cancelClick;  
+
+  bool get cancelClick { 
+    if (this.m_cancelClick == null) {
+      this.m_cancelClick = false;
+    }
+    return this.m_cancelClick!;
+  }
+
+  void set cancelClick (bool v) {
+    this.m_cancelClick = v;
+  }
+    
+  bool? m_hasDragged;  
+
+  bool get hasDragged { 
+    if (this.m_hasDragged == null) {
+      this.m_hasDragged = false;
+    }
+    return this.m_hasDragged!;
+  }
+
+  void set hasDragged (bool v) {
+    this.m_hasDragged = v;
+  }
+    
+  bool? m_isUpdating;  
+
+  bool get isUpdating { 
+    if (this.m_isUpdating == null) {
+      this.m_isUpdating = false;
+    }
+    return this.m_isUpdating!;
+  }
+
+  void set isUpdating (bool v) {
+    this.m_isUpdating = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -36,22 +72,22 @@ class EventEmitter extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.cancelClick != null) {  
-      buffer.writeAll(["\"cancelClick\":", this.cancelClick, ","], "");
+    if (this.m_cancelClick != null) {  
+      buffer.writeAll(["\"cancelClick\":", this.m_cancelClick, ","], "");
     }
 
     // NOTE: skip serialization of chart (type AnnotationChart is ignored)} 
 
     // NOTE: skip serialization of graphic (type SVGElement is ignored)} 
 
-    if (this.hasDragged != null) {  
-      buffer.writeAll(["\"hasDragged\":", this.hasDragged, ","], "");
+    if (this.m_hasDragged != null) {  
+      buffer.writeAll(["\"hasDragged\":", this.m_hasDragged, ","], "");
     }
 
     // NOTE: skip serialization of hcEvents (type unknown is ignored)} 
 
-    if (this.isUpdating != null) {  
-      buffer.writeAll(["\"isUpdating\":", this.isUpdating, ","], "");
+    if (this.m_isUpdating != null) {  
+      buffer.writeAll(["\"isUpdating\":", this.m_isUpdating, ","], "");
     }
 
     // NOTE: skip serialization of labels (type ControllableLabel[] is ignored)} 

@@ -23,10 +23,58 @@ import 'OptionFragment.dart';
  */
 class TilesItem extends OptionFragment {
   TilesItem() : super();
-  bool? isActive;
-  double? howManyTiles;
-  double? actualTilesCount;
-  bool? loaded;
+  bool? m_isActive;  
+
+  bool get isActive { 
+    if (this.m_isActive == null) {
+      this.m_isActive = false;
+    }
+    return this.m_isActive!;
+  }
+
+  void set isActive (bool v) {
+    this.m_isActive = v;
+  }
+    
+  double? m_howManyTiles;  
+
+  double get howManyTiles { 
+    if (this.m_howManyTiles == null) {
+      this.m_howManyTiles = 0;
+    }
+    return this.m_howManyTiles!;
+  }
+
+  void set howManyTiles (double v) {
+    this.m_howManyTiles = v;
+  }
+    
+  double? m_actualTilesCount;  
+
+  double get actualTilesCount { 
+    if (this.m_actualTilesCount == null) {
+      this.m_actualTilesCount = 0;
+    }
+    return this.m_actualTilesCount!;
+  }
+
+  void set actualTilesCount (double v) {
+    this.m_actualTilesCount = v;
+  }
+    
+  bool? m_loaded;  
+
+  bool get loaded { 
+    if (this.m_loaded == null) {
+      this.m_loaded = false;
+    }
+    return this.m_loaded!;
+  }
+
+  void set loaded (bool v) {
+    this.m_loaded = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -37,20 +85,20 @@ class TilesItem extends OptionFragment {
     
     // NOTE: skip serialization of tiles (type Generic is ignored)} 
 
-    if (this.isActive != null) {  
-      buffer.writeAll(["\"isActive\":", this.isActive, ","], "");
+    if (this.m_isActive != null) {  
+      buffer.writeAll(["\"isActive\":", this.m_isActive, ","], "");
     }
 
-    if (this.howManyTiles != null) {  
-      buffer.writeAll(["\"howManyTiles\":", this.howManyTiles, ","], "");
+    if (this.m_howManyTiles != null) {  
+      buffer.writeAll(["\"howManyTiles\":", this.m_howManyTiles, ","], "");
     }
 
-    if (this.actualTilesCount != null) {  
-      buffer.writeAll(["\"actualTilesCount\":", this.actualTilesCount, ","], "");
+    if (this.m_actualTilesCount != null) {  
+      buffer.writeAll(["\"actualTilesCount\":", this.m_actualTilesCount, ","], "");
     }
 
-    if (this.loaded != null) {  
-      buffer.writeAll(["\"loaded\":", this.loaded, ","], "");
+    if (this.m_loaded != null) {  
+      buffer.writeAll(["\"loaded\":", this.m_loaded, ","], "");
     }
   }
 

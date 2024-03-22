@@ -24,7 +24,19 @@ import 'OptionFragment.dart';
  */
 class DragHandlesObject extends OptionFragment {
   DragHandlesObject() : super();
-  String? point;
+  String? m_point;  
+
+  String get point { 
+    if (this.m_point == null) {
+      this.m_point = "";
+    }
+    return this.m_point!;
+  }
+
+  void set point (String v) {
+    this.m_point = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -35,8 +47,8 @@ class DragHandlesObject extends OptionFragment {
     
     // NOTE: skip serialization of group (type SVGElement is ignored)} 
 
-    if (this.point != null) {  
-      buffer.writeAll(["\"point\":", this.point, ","], "");
+    if (this.m_point != null) {  
+      buffer.writeAll(["\"point\":", this.m_point, ","], "");
     }
   }
 

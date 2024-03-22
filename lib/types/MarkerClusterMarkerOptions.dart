@@ -24,8 +24,32 @@ import 'OptionFragment.dart';
  */
 class MarkerClusterMarkerOptions extends PointMarkerOptions {
   MarkerClusterMarkerOptions() : super();
-  double? lineWidth;
-  double? radius;
+  double? m_lineWidth;  
+
+  double get lineWidth { 
+    if (this.m_lineWidth == null) {
+      this.m_lineWidth = 0;
+    }
+    return this.m_lineWidth!;
+  }
+
+  void set lineWidth (double v) {
+    this.m_lineWidth = v;
+  }
+    
+  double? m_radius;  
+
+  double get radius { 
+    if (this.m_radius == null) {
+      this.m_radius = 0;
+    }
+    return this.m_radius!;
+  }
+
+  void set radius (double v) {
+    this.m_radius = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -34,12 +58,12 @@ class MarkerClusterMarkerOptions extends PointMarkerOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.lineWidth != null) {  
-      buffer.writeAll(["\"lineWidth\":", this.lineWidth, ","], "");
+    if (this.m_lineWidth != null) {  
+      buffer.writeAll(["\"lineWidth\":", this.m_lineWidth, ","], "");
     }
 
-    if (this.radius != null) {  
-      buffer.writeAll(["\"radius\":", this.radius, ","], "");
+    if (this.m_radius != null) {  
+      buffer.writeAll(["\"radius\":", this.m_radius, ","], "");
     }
   }
 

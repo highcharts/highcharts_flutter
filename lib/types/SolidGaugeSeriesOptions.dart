@@ -30,27 +30,75 @@ class SolidGaugeSeriesOptions extends GaugeSeriesOptions {
    * 
    * Defaults to '"60%"'. 
       */
-  String? innerRadius;
+  String? m_innerRadius;  
+
+  String get innerRadius { 
+    if (this.m_innerRadius == null) {
+      this.m_innerRadius = "";
+    }
+    return this.m_innerRadius!;
+  }
+
+  void set innerRadius (String v) {
+    this.m_innerRadius = v;
+  }
+    
   /**
    * The line cap used for line ends and line joins on the graph. 
    * 
    * Defaults to 'round'. 
       */
-  String? linecap;
+  String? m_linecap;  
+
+  String get linecap { 
+    if (this.m_linecap == null) {
+      this.m_linecap = "";
+    }
+    return this.m_linecap!;
+  }
+
+  void set linecap (String v) {
+    this.m_linecap = v;
+  }
+    
   /**
    * Allow the dial to overshoot the end of the perimeter axis by
    * this many degrees. Say if the gauge axis goes from 0 to 60, a
    * value of 100, or 1000, will show 5 degrees beyond the end of the
    * axis when this option is set to 5.  
       */
-  double? overshoot;
+  double? m_overshoot;  
+
+  double get overshoot { 
+    if (this.m_overshoot == null) {
+      this.m_overshoot = 0;
+    }
+    return this.m_overshoot!;
+  }
+
+  void set overshoot (double v) {
+    this.m_overshoot = v;
+  }
+    
   /**
    * The outer radius for points in a solid gauge. Can be given only in
    * percentage, either as a number or a string like `"100%"`. 
    * 
    * Defaults to '"100%"'. 
       */
-  String? radius;
+  String? m_radius;  
+
+  String get radius { 
+    if (this.m_radius == null) {
+      this.m_radius = "";
+    }
+    return this.m_radius!;
+  }
+
+  void set radius (String v) {
+    this.m_radius = v;
+  }
+    
   /**
    * Whether to draw rounded edges on the gauge. This options adds the radius
    * of the rounding to the ends of the arc, so it extends past the actual
@@ -60,7 +108,19 @@ class SolidGaugeSeriesOptions extends GaugeSeriesOptions {
    * 
    * Defaults to 'false'. 
       */
-  bool? rounded;
+  bool? m_rounded;  
+
+  bool get rounded { 
+    if (this.m_rounded == null) {
+      this.m_rounded = false;
+    }
+    return this.m_rounded!;
+  }
+
+  void set rounded (bool v) {
+    this.m_rounded = v;
+  }
+    
   // NOTE: states skipped - type Generic is ignored in gen
 
   /**
@@ -70,7 +130,19 @@ class SolidGaugeSeriesOptions extends GaugeSeriesOptions {
    * 
    * Defaults to '0'. 
       */
-  double? threshold;
+  double? m_threshold;  
+
+  double get threshold { 
+    if (this.m_threshold == null) {
+      this.m_threshold = 0;
+    }
+    return this.m_threshold!;
+  }
+
+  void set threshold (double v) {
+    this.m_threshold = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -79,30 +151,30 @@ class SolidGaugeSeriesOptions extends GaugeSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.innerRadius != null) {  
-      buffer.writeAll(["\"innerRadius\":", this.innerRadius, ","], "");
+    if (this.m_innerRadius != null) {  
+      buffer.writeAll(["\"innerRadius\":", this.m_innerRadius, ","], "");
     }
 
-    if (this.linecap != null) {  
-      buffer.writeAll(["\"linecap\":", this.linecap, ","], "");
+    if (this.m_linecap != null) {  
+      buffer.writeAll(["\"linecap\":", this.m_linecap, ","], "");
     }
 
-    if (this.overshoot != null) {  
-      buffer.writeAll(["\"overshoot\":", this.overshoot, ","], "");
+    if (this.m_overshoot != null) {  
+      buffer.writeAll(["\"overshoot\":", this.m_overshoot, ","], "");
     }
 
-    if (this.radius != null) {  
-      buffer.writeAll(["\"radius\":", this.radius, ","], "");
+    if (this.m_radius != null) {  
+      buffer.writeAll(["\"radius\":", this.m_radius, ","], "");
     }
 
-    if (this.rounded != null) {  
-      buffer.writeAll(["\"rounded\":", this.rounded, ","], "");
+    if (this.m_rounded != null) {  
+      buffer.writeAll(["\"rounded\":", this.m_rounded, ","], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 
 
-    if (this.threshold != null) {  
-      buffer.writeAll(["\"threshold\":", this.threshold, ","], "");
+    if (this.m_threshold != null) {  
+      buffer.writeAll(["\"threshold\":", this.m_threshold, ","], "");
     }
   }
 

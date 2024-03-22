@@ -24,8 +24,32 @@ import 'OptionFragment.dart';
  */
 class WordcloudFieldObject extends PolygonBoxObject {
   WordcloudFieldObject() : super();
-  double? ratioX;
-  double? ratioY;
+  double? m_ratioX;  
+
+  double get ratioX { 
+    if (this.m_ratioX == null) {
+      this.m_ratioX = 0;
+    }
+    return this.m_ratioX!;
+  }
+
+  void set ratioX (double v) {
+    this.m_ratioX = v;
+  }
+    
+  double? m_ratioY;  
+
+  double get ratioY { 
+    if (this.m_ratioY == null) {
+      this.m_ratioY = 0;
+    }
+    return this.m_ratioY!;
+  }
+
+  void set ratioY (double v) {
+    this.m_ratioY = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -34,12 +58,12 @@ class WordcloudFieldObject extends PolygonBoxObject {
     super.toJSONInner(buffer);
 
     
-    if (this.ratioX != null) {  
-      buffer.writeAll(["\"ratioX\":", this.ratioX, ","], "");
+    if (this.m_ratioX != null) {  
+      buffer.writeAll(["\"ratioX\":", this.m_ratioX, ","], "");
     }
 
-    if (this.ratioY != null) {  
-      buffer.writeAll(["\"ratioY\":", this.ratioY, ","], "");
+    if (this.m_ratioY != null) {  
+      buffer.writeAll(["\"ratioY\":", this.m_ratioY, ","], "");
     }
   }
 

@@ -30,7 +30,19 @@ class TooltipOptions extends OptionFragment {
    * 
    * Defaults to 'true'. 
       */
-  bool? animation;
+  bool? m_animation;  
+
+  bool get animation { 
+    if (this.m_animation == null) {
+      this.m_animation = false;
+    }
+    return this.m_animation!;
+  }
+
+  void set animation (bool v) {
+    this.m_animation = v;
+  }
+    
   /**
    * The background color or gradient for the tooltip.
    * 
@@ -39,18 +51,54 @@ class TooltipOptions extends OptionFragment {
    * 
    * Defaults to '#ffffff'. 
       */
-  String? backgroundColor;
+  String? m_backgroundColor;  
+
+  String get backgroundColor { 
+    if (this.m_backgroundColor == null) {
+      this.m_backgroundColor = "";
+    }
+    return this.m_backgroundColor!;
+  }
+
+  void set backgroundColor (String v) {
+    this.m_backgroundColor = v;
+  }
+    
   /**
    * The color of the tooltip border. When `undefined`, the border takes
    * the color of the corresponding series or point.  
       */
-  String? borderColor;
+  String? m_borderColor;  
+
+  String get borderColor { 
+    if (this.m_borderColor == null) {
+      this.m_borderColor = "";
+    }
+    return this.m_borderColor!;
+  }
+
+  void set borderColor (String v) {
+    this.m_borderColor = v;
+  }
+    
   /**
    * The radius of the rounded border corners. 
    * 
    * Defaults to '3'. 
       */
-  double? borderRadius;
+  double? m_borderRadius;  
+
+  double get borderRadius { 
+    if (this.m_borderRadius == null) {
+      this.m_borderRadius = 0;
+    }
+    return this.m_borderRadius!;
+  }
+
+  void set borderRadius (double v) {
+    this.m_borderRadius = v;
+  }
+    
   /**
    * The pixel width of the tooltip border. Defaults to 0 for single
    * tooltips and 1 for split tooltips.
@@ -58,12 +106,36 @@ class TooltipOptions extends OptionFragment {
    * In styled mode, the stroke width is set in the
    * `.highcharts-tooltip-box` class.  
       */
-  double? borderWidth;
+  double? m_borderWidth;  
+
+  double get borderWidth { 
+    if (this.m_borderWidth == null) {
+      this.m_borderWidth = 0;
+    }
+    return this.m_borderWidth!;
+  }
+
+  void set borderWidth (double v) {
+    this.m_borderWidth = v;
+  }
+    
   /**
    * A CSS class name to apply to the tooltip's container div,
    * allowing unique CSS styling for each chart.  
       */
-  String? className;
+  String? m_className;  
+
+  String get className { 
+    if (this.m_className == null) {
+      this.m_className = "";
+    }
+    return this.m_className!;
+  }
+
+  void set className (String v) {
+    this.m_className = v;
+  }
+    
   /**
    * How many decimals to show for the `point.change`
    * or the `point.cumulativeSum` value when the `series.compare`
@@ -72,15 +144,21 @@ class TooltipOptions extends OptionFragment {
    * 
    * Defaults to '2'. 
       */
-  double? changeDecimals;
-  /**
-   * Since 4.1, the crosshair definitions are moved to the Axis object
-   * in order for a better separation from the tooltip. See
-   * [xAxis.crosshair](#xAxis.crosshair). 
-   * 
-   * Defaults to 'true'. 
-      */
-  var crosshairs;
+  double? m_changeDecimals;  
+
+  double get changeDecimals { 
+    if (this.m_changeDecimals == null) {
+      this.m_changeDecimals = 0;
+    }
+    return this.m_changeDecimals!;
+  }
+
+  void set changeDecimals (double v) {
+    this.m_changeDecimals = v;
+  }
+    
+  // NOTE: crosshairs skipped - type any is ignored in gen
+
   // NOTE: dateTimeLabelFormats skipped - type DateTimeLabelFormatsOption is ignored in gen
 
   /**
@@ -88,13 +166,37 @@ class TooltipOptions extends OptionFragment {
    * 
    * Defaults to '16'. 
       */
-  double? distance;
+  double? m_distance;  
+
+  double get distance { 
+    if (this.m_distance == null) {
+      this.m_distance = 0;
+    }
+    return this.m_distance!;
+  }
+
+  void set distance (double v) {
+    this.m_distance = v;
+  }
+    
   /**
    * Enable or disable the tooltip. 
    * 
    * Defaults to 'true'. 
       */
-  bool? enabled;
+  bool? m_enabled;  
+
+  bool get enabled { 
+    if (this.m_enabled == null) {
+      this.m_enabled = false;
+    }
+    return this.m_enabled!;
+  }
+
+  void set enabled (bool v) {
+    this.m_enabled = v;
+  }
+    
   /**
    * Whether the tooltip should follow the mouse as it moves across
    * columns, pie slices and other point types with an extent.
@@ -106,7 +208,19 @@ class TooltipOptions extends OptionFragment {
    * 
    * For touch moves to behave the same way, [followTouchMove](#tooltip.followTouchMove) must be `true` also.  
       */
-  bool? followPointer;
+  bool? m_followPointer;  
+
+  bool get followPointer { 
+    if (this.m_followPointer == null) {
+      this.m_followPointer = false;
+    }
+    return this.m_followPointer!;
+  }
+
+  void set followPointer (bool v) {
+    this.m_followPointer = v;
+  }
+    
   /**
    * Whether the tooltip should update as the finger moves on a touch
    * device. If this is `true` and [chart.panning](#chart.panning) is
@@ -119,11 +233,35 @@ class TooltipOptions extends OptionFragment {
    * below the column, but as `followTouchMove` is true, the tooltip will
    * jump from column to column as the user swipes across the plot area.  
       */
-  bool? followTouchMove;
+  bool? m_followTouchMove;  
+
+  bool get followTouchMove { 
+    if (this.m_followTouchMove == null) {
+      this.m_followTouchMove = false;
+    }
+    return this.m_followTouchMove!;
+  }
+
+  void set followTouchMove (bool v) {
+    this.m_followTouchMove = v;
+  }
+    
   /**
    * A string to append to the tooltip format.  
       */
-  String? footerFormat;
+  String? m_footerFormat;  
+
+  String get footerFormat { 
+    if (this.m_footerFormat == null) {
+      this.m_footerFormat = "";
+    }
+    return this.m_footerFormat!;
+  }
+
+  void set footerFormat (String v) {
+    this.m_footerFormat = v;
+  }
+    
   /**
    * A [format string](https://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting)
    * for the whole tooltip. When format strings are a requirement, it is
@@ -136,7 +274,19 @@ class TooltipOptions extends OptionFragment {
    * 
    * Defaults to 'undefined'. 
       */
-  String? format;
+  String? m_format;  
+
+  String get format { 
+    if (this.m_format == null) {
+      this.m_format = "";
+    }
+    return this.m_format!;
+  }
+
+  void set format (String v) {
+    this.m_format = v;
+  }
+    
   /**
    * The HTML of the tooltip header line. Variables are enclosed by
    * curly brackets. Available variables are `point.key`, `series.name`,
@@ -146,7 +296,19 @@ class TooltipOptions extends OptionFragment {
    * axes, the `point.key` date format can be set using
    * `tooltip.xDateFormat`.  
       */
-  String? headerFormat;
+  String? m_headerFormat;  
+
+  String get headerFormat { 
+    if (this.m_headerFormat == null) {
+      this.m_headerFormat = "";
+    }
+    return this.m_headerFormat!;
+  }
+
+  void set headerFormat (String v) {
+    this.m_headerFormat = v;
+  }
+    
   /**
    * The name of a symbol to use for the border around the tooltip
    * header. Applies only when [tooltip.split](#tooltip.split) is
@@ -158,19 +320,55 @@ class TooltipOptions extends OptionFragment {
    * 
    * Defaults to 'callout'. 
       */
-  String? headerShape;
+  String? m_headerShape;  
+
+  String get headerShape { 
+    if (this.m_headerShape == null) {
+      this.m_headerShape = "";
+    }
+    return this.m_headerShape!;
+  }
+
+  void set headerShape (String v) {
+    this.m_headerShape = v;
+  }
+    
   /**
    * The number of milliseconds to wait until the tooltip is hidden when
    * mouse out from a point or chart. 
    * 
    * Defaults to '500'. 
       */
-  double? hideDelay;
+  double? m_hideDelay;  
+
+  double get hideDelay { 
+    if (this.m_hideDelay == null) {
+      this.m_hideDelay = 0;
+    }
+    return this.m_hideDelay!;
+  }
+
+  void set hideDelay (double v) {
+    this.m_hideDelay = v;
+  }
+    
   /**
    * The HTML of the null point's line in the tooltip. Works analogously
    * to [pointFormat](#tooltip.pointFormat).  
       */
-  String? nullFormat;
+  String? m_nullFormat;  
+
+  String get nullFormat { 
+    if (this.m_nullFormat == null) {
+      this.m_nullFormat = "";
+    }
+    return this.m_nullFormat!;
+  }
+
+  void set nullFormat (String v) {
+    this.m_nullFormat = v;
+  }
+    
   /**
    * Whether to allow the tooltip to render outside the chart's SVG
    * element box. By default (`false`), the tooltip is rendered within the
@@ -185,13 +383,37 @@ class TooltipOptions extends OptionFragment {
    * 
    * Defaults to 'undefined'. 
       */
-  bool? outside;
+  bool? m_outside;  
+
+  bool get outside { 
+    if (this.m_outside == null) {
+      this.m_outside = false;
+    }
+    return this.m_outside!;
+  }
+
+  void set outside (bool v) {
+    this.m_outside = v;
+  }
+    
   /**
    * Padding inside the tooltip, in pixels. 
    * 
    * Defaults to '8'. 
       */
-  double? padding;
+  double? m_padding;  
+
+  double get padding { 
+    if (this.m_padding == null) {
+      this.m_padding = 0;
+    }
+    return this.m_padding!;
+  }
+
+  void set padding (double v) {
+    this.m_padding = v;
+  }
+    
   /**
    * The HTML of the point's line in the tooltip. Variables are enclosed
    * by curly brackets. Available variables are `point.x`, `point.y`,
@@ -204,7 +426,19 @@ class TooltipOptions extends OptionFragment {
    * In styled mode, the dot is colored by a class name rather
    * than the point color.  
       */
-  String? pointFormat;
+  String? m_pointFormat;  
+
+  String get pointFormat { 
+    if (this.m_pointFormat == null) {
+      this.m_pointFormat = "";
+    }
+    return this.m_pointFormat!;
+  }
+
+  void set pointFormat (String v) {
+    this.m_pointFormat = v;
+  }
+    
   // NOTE: shadow skipped - type Generic is ignored in gen
 
   /**
@@ -221,7 +455,19 @@ class TooltipOptions extends OptionFragment {
    * 
    * Defaults to 'callout'. 
       */
-  String? shape;
+  String? m_shape;  
+
+  String get shape { 
+    if (this.m_shape == null) {
+      this.m_shape = "";
+    }
+    return this.m_shape!;
+  }
+
+  void set shape (String v) {
+    this.m_shape = v;
+  }
+    
   /**
    * When the tooltip is shared, the entire plot area will capture mouse
    * movement or touch events. Tooltip texts for series types with ordered
@@ -233,7 +479,19 @@ class TooltipOptions extends OptionFragment {
    * charts with many series, especially line-type series. The
    * `tooltip.split` option takes precedence over `tooltip.shared`.  
       */
-  bool? shared;
+  bool? m_shared;  
+
+  bool get shared { 
+    if (this.m_shared == null) {
+      this.m_shared = false;
+    }
+    return this.m_shared!;
+  }
+
+  void set shared (bool v) {
+    this.m_shared = v;
+  }
+    
   /**
    * Proximity snap for graphs or single points. It defaults to 10 for
    * mouse-powered devices and 25 for touch devices.
@@ -246,7 +504,19 @@ class TooltipOptions extends OptionFragment {
    * 
    * Defaults to '10/25'. 
       */
-  double? snap;
+  double? m_snap;  
+
+  double get snap { 
+    if (this.m_snap == null) {
+      this.m_snap = 0;
+    }
+    return this.m_snap!;
+  }
+
+  void set snap (double v) {
+    this.m_snap = v;
+  }
+    
   /**
    * Split the tooltip into one label per series, with the header close
    * to the axis. This is recommended over [shared](#tooltip.shared)
@@ -255,12 +525,36 @@ class TooltipOptions extends OptionFragment {
    * 
    * Not supported for [polar](#chart.polar) and [inverted](#chart.inverted) charts.  
       */
-  bool? split;
+  bool? m_split;  
+
+  bool get split { 
+    if (this.m_split == null) {
+      this.m_split = false;
+    }
+    return this.m_split!;
+  }
+
+  void set split (bool v) {
+    this.m_split = v;
+  }
+    
   /**
    * Prevents the tooltip from switching or closing when touched or
    * pointed.  
       */
-  bool? stickOnContact;
+  bool? m_stickOnContact;  
+
+  bool get stickOnContact { 
+    if (this.m_stickOnContact == null) {
+      this.m_stickOnContact = false;
+    }
+    return this.m_stickOnContact!;
+  }
+
+  void set stickOnContact (bool v) {
+    this.m_stickOnContact = v;
+  }
+    
   /**
    * CSS styles for the tooltip. The tooltip can also be styled through
    * the CSS class `.highcharts-tooltip`.
@@ -269,7 +563,19 @@ class TooltipOptions extends OptionFragment {
    * mouse events, so in order to use clickable tooltips, this value must
    * be set to `auto`.  
       */
-  CSSObject? style;
+  CSSObject? m_style;  
+
+  CSSObject get style { 
+    if (this.m_style == null) {
+      this.m_style = CSSObject();
+    }
+    return this.m_style!;
+  }
+
+  void set style (CSSObject v) {
+    this.m_style = v;
+  }
+    
   /**
    * Use HTML to render the contents of the tooltip instead of SVG. Using
    * HTML allows advanced formatting like tables and images in the
@@ -278,29 +584,89 @@ class TooltipOptions extends OptionFragment {
    * 
    * Defaults to 'false'. 
       */
-  bool? useHTML;
+  bool? m_useHTML;  
+
+  bool get useHTML { 
+    if (this.m_useHTML == null) {
+      this.m_useHTML = false;
+    }
+    return this.m_useHTML!;
+  }
+
+  void set useHTML (bool v) {
+    this.m_useHTML = v;
+  }
+    
   /**
    * How many decimals to show in each series' y value. This is
    * overridable in each series' tooltip options object. The default is to
    * preserve all decimals.  
       */
-  double? valueDecimals;
+  double? m_valueDecimals;  
+
+  double get valueDecimals { 
+    if (this.m_valueDecimals == null) {
+      this.m_valueDecimals = 0;
+    }
+    return this.m_valueDecimals!;
+  }
+
+  void set valueDecimals (double v) {
+    this.m_valueDecimals = v;
+  }
+    
   /**
    * A string to prepend to each series' y value. Overridable in each
    * series' tooltip options object.  
       */
-  String? valuePrefix;
+  String? m_valuePrefix;  
+
+  String get valuePrefix { 
+    if (this.m_valuePrefix == null) {
+      this.m_valuePrefix = "";
+    }
+    return this.m_valuePrefix!;
+  }
+
+  void set valuePrefix (String v) {
+    this.m_valuePrefix = v;
+  }
+    
   /**
    * A string to append to each series' y value. Overridable in each
    * series' tooltip options object.  
       */
-  String? valueSuffix;
+  String? m_valueSuffix;  
+
+  String get valueSuffix { 
+    if (this.m_valueSuffix == null) {
+      this.m_valueSuffix = "";
+    }
+    return this.m_valueSuffix!;
+  }
+
+  void set valueSuffix (String v) {
+    this.m_valueSuffix = v;
+  }
+    
   /**
    * The format for the date in the tooltip header if the X axis is a
    * datetime axis. The default is a best guess based on the smallest
    * distance between points in the chart.  
       */
-  String? xDateFormat;
+  String? m_xDateFormat;  
+
+  String get xDateFormat { 
+    if (this.m_xDateFormat == null) {
+      this.m_xDateFormat = "";
+    }
+    return this.m_xDateFormat!;
+  }
+
+  void set xDateFormat (String v) {
+    this.m_xDateFormat = v;
+  }
+    
   /**
    * The HTML of the cluster point's in the tooltip. Works only with
    * marker-clusters module and analogously to
@@ -311,7 +677,19 @@ class TooltipOptions extends OptionFragment {
    * 
    * Defaults to 'Clustered points: {point.clusterPointsAmount}'. 
       */
-  String? clusterFormat;
+  String? m_clusterFormat;  
+
+  String get clusterFormat { 
+    if (this.m_clusterFormat == null) {
+      this.m_clusterFormat = "";
+    }
+    return this.m_clusterFormat!;
+  }
+
+  void set clusterFormat (String v) {
+    this.m_clusterFormat = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -320,140 +698,140 @@ class TooltipOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.animation != null) {  
-      buffer.writeAll(["\"animation\":", this.animation, ","], "");
+    if (this.m_animation != null) {  
+      buffer.writeAll(["\"animation\":", this.m_animation, ","], "");
     }
 
-    if (this.backgroundColor != null) {  
-      buffer.writeAll(["\"backgroundColor\":", this.backgroundColor, ","], "");
+    if (this.m_backgroundColor != null) {  
+      buffer.writeAll(["\"backgroundColor\":", this.m_backgroundColor, ","], "");
     }
 
-    if (this.borderColor != null) {  
-      buffer.writeAll(["\"borderColor\":", this.borderColor, ","], "");
+    if (this.m_borderColor != null) {  
+      buffer.writeAll(["\"borderColor\":", this.m_borderColor, ","], "");
     }
 
-    if (this.borderRadius != null) {  
-      buffer.writeAll(["\"borderRadius\":", this.borderRadius, ","], "");
+    if (this.m_borderRadius != null) {  
+      buffer.writeAll(["\"borderRadius\":", this.m_borderRadius, ","], "");
     }
 
-    if (this.borderWidth != null) {  
-      buffer.writeAll(["\"borderWidth\":", this.borderWidth, ","], "");
+    if (this.m_borderWidth != null) {  
+      buffer.writeAll(["\"borderWidth\":", this.m_borderWidth, ","], "");
     }
 
-    if (this.className != null) {  
-      buffer.writeAll(["\"className\":", this.className, ","], "");
+    if (this.m_className != null) {  
+      buffer.writeAll(["\"className\":", this.m_className, ","], "");
     }
 
-    if (this.changeDecimals != null) {  
-      buffer.writeAll(["\"changeDecimals\":", this.changeDecimals, ","], "");
+    if (this.m_changeDecimals != null) {  
+      buffer.writeAll(["\"changeDecimals\":", this.m_changeDecimals, ","], "");
     }
 
     // NOTE: skip serialization of crosshairs (type any is ignored)} 
 
     // NOTE: skip serialization of dateTimeLabelFormats (type DateTimeLabelFormatsOption is ignored)} 
 
-    if (this.distance != null) {  
-      buffer.writeAll(["\"distance\":", this.distance, ","], "");
+    if (this.m_distance != null) {  
+      buffer.writeAll(["\"distance\":", this.m_distance, ","], "");
     }
 
-    if (this.enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
+    if (this.m_enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this.m_enabled, ","], "");
     }
 
-    if (this.followPointer != null) {  
-      buffer.writeAll(["\"followPointer\":", this.followPointer, ","], "");
+    if (this.m_followPointer != null) {  
+      buffer.writeAll(["\"followPointer\":", this.m_followPointer, ","], "");
     }
 
-    if (this.followTouchMove != null) {  
-      buffer.writeAll(["\"followTouchMove\":", this.followTouchMove, ","], "");
+    if (this.m_followTouchMove != null) {  
+      buffer.writeAll(["\"followTouchMove\":", this.m_followTouchMove, ","], "");
     }
 
-    if (this.footerFormat != null) {  
-      buffer.writeAll(["\"footerFormat\":", this.footerFormat, ","], "");
+    if (this.m_footerFormat != null) {  
+      buffer.writeAll(["\"footerFormat\":", this.m_footerFormat, ","], "");
     }
 
-    if (this.format != null) {  
-      buffer.writeAll(["\"format\":", this.format, ","], "");
+    if (this.m_format != null) {  
+      buffer.writeAll(["\"format\":", this.m_format, ","], "");
     }
 
-    if (this.headerFormat != null) {  
-      buffer.writeAll(["\"headerFormat\":", this.headerFormat, ","], "");
+    if (this.m_headerFormat != null) {  
+      buffer.writeAll(["\"headerFormat\":", this.m_headerFormat, ","], "");
     }
 
-    if (this.headerShape != null) {  
-      buffer.writeAll(["\"headerShape\":", this.headerShape, ","], "");
+    if (this.m_headerShape != null) {  
+      buffer.writeAll(["\"headerShape\":", this.m_headerShape, ","], "");
     }
 
-    if (this.hideDelay != null) {  
-      buffer.writeAll(["\"hideDelay\":", this.hideDelay, ","], "");
+    if (this.m_hideDelay != null) {  
+      buffer.writeAll(["\"hideDelay\":", this.m_hideDelay, ","], "");
     }
 
-    if (this.nullFormat != null) {  
-      buffer.writeAll(["\"nullFormat\":", this.nullFormat, ","], "");
+    if (this.m_nullFormat != null) {  
+      buffer.writeAll(["\"nullFormat\":", this.m_nullFormat, ","], "");
     }
 
-    if (this.outside != null) {  
-      buffer.writeAll(["\"outside\":", this.outside, ","], "");
+    if (this.m_outside != null) {  
+      buffer.writeAll(["\"outside\":", this.m_outside, ","], "");
     }
 
-    if (this.padding != null) {  
-      buffer.writeAll(["\"padding\":", this.padding, ","], "");
+    if (this.m_padding != null) {  
+      buffer.writeAll(["\"padding\":", this.m_padding, ","], "");
     }
 
-    if (this.pointFormat != null) {  
-      buffer.writeAll(["\"pointFormat\":", this.pointFormat, ","], "");
+    if (this.m_pointFormat != null) {  
+      buffer.writeAll(["\"pointFormat\":", this.m_pointFormat, ","], "");
     }
 
     // NOTE: skip serialization of shadow (type Generic is ignored)} 
 
-    if (this.shape != null) {  
-      buffer.writeAll(["\"shape\":", this.shape, ","], "");
+    if (this.m_shape != null) {  
+      buffer.writeAll(["\"shape\":", this.m_shape, ","], "");
     }
 
-    if (this.shared != null) {  
-      buffer.writeAll(["\"shared\":", this.shared, ","], "");
+    if (this.m_shared != null) {  
+      buffer.writeAll(["\"shared\":", this.m_shared, ","], "");
     }
 
-    if (this.snap != null) {  
-      buffer.writeAll(["\"snap\":", this.snap, ","], "");
+    if (this.m_snap != null) {  
+      buffer.writeAll(["\"snap\":", this.m_snap, ","], "");
     }
 
-    if (this.split != null) {  
-      buffer.writeAll(["\"split\":", this.split, ","], "");
+    if (this.m_split != null) {  
+      buffer.writeAll(["\"split\":", this.m_split, ","], "");
     }
 
-    if (this.stickOnContact != null) {  
-      buffer.writeAll(["\"stickOnContact\":", this.stickOnContact, ","], "");
+    if (this.m_stickOnContact != null) {  
+      buffer.writeAll(["\"stickOnContact\":", this.m_stickOnContact, ","], "");
     }
 
-    if (this.style != null) {  
-      buffer.writeAll(["\"style\":", this.style?.toJSON(), ","], "");
+    if (this.m_style != null) {  
+      buffer.writeAll(["\"style\":", this.m_style?.toJSON(), ","], "");
     }
 
-    if (this.useHTML != null) {  
-      buffer.writeAll(["\"useHTML\":", this.useHTML, ","], "");
+    if (this.m_useHTML != null) {  
+      buffer.writeAll(["\"useHTML\":", this.m_useHTML, ","], "");
     }
 
     // NOTE: skip serialization of userOptions (type TooltipOptions is ignored)} 
 
-    if (this.valueDecimals != null) {  
-      buffer.writeAll(["\"valueDecimals\":", this.valueDecimals, ","], "");
+    if (this.m_valueDecimals != null) {  
+      buffer.writeAll(["\"valueDecimals\":", this.m_valueDecimals, ","], "");
     }
 
-    if (this.valuePrefix != null) {  
-      buffer.writeAll(["\"valuePrefix\":", this.valuePrefix, ","], "");
+    if (this.m_valuePrefix != null) {  
+      buffer.writeAll(["\"valuePrefix\":", this.m_valuePrefix, ","], "");
     }
 
-    if (this.valueSuffix != null) {  
-      buffer.writeAll(["\"valueSuffix\":", this.valueSuffix, ","], "");
+    if (this.m_valueSuffix != null) {  
+      buffer.writeAll(["\"valueSuffix\":", this.m_valueSuffix, ","], "");
     }
 
-    if (this.xDateFormat != null) {  
-      buffer.writeAll(["\"xDateFormat\":", this.xDateFormat, ","], "");
+    if (this.m_xDateFormat != null) {  
+      buffer.writeAll(["\"xDateFormat\":", this.m_xDateFormat, ","], "");
     }
 
-    if (this.clusterFormat != null) {  
-      buffer.writeAll(["\"clusterFormat\":", this.clusterFormat, ","], "");
+    if (this.m_clusterFormat != null) {  
+      buffer.writeAll(["\"clusterFormat\":", this.m_clusterFormat, ","], "");
     }
   }
 

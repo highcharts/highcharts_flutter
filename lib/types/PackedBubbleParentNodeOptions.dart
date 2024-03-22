@@ -23,7 +23,19 @@ import 'OptionFragment.dart';
  */
 class PackedBubbleParentNodeOptions extends OptionFragment {
   PackedBubbleParentNodeOptions() : super();
-  bool? allowPointSelect;
+  bool? m_allowPointSelect;  
+
+  bool get allowPointSelect { 
+    if (this.m_allowPointSelect == null) {
+      this.m_allowPointSelect = false;
+    }
+    return this.m_allowPointSelect!;
+  }
+
+  void set allowPointSelect (bool v) {
+    this.m_allowPointSelect = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -32,8 +44,8 @@ class PackedBubbleParentNodeOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.allowPointSelect != null) {  
-      buffer.writeAll(["\"allowPointSelect\":", this.allowPointSelect, ","], "");
+    if (this.m_allowPointSelect != null) {  
+      buffer.writeAll(["\"allowPointSelect\":", this.m_allowPointSelect, ","], "");
     }
   }
 

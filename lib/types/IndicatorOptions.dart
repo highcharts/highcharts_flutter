@@ -24,8 +24,32 @@ import 'OptionFragment.dart';
  */
 class IndicatorOptions extends SMAOptions {
   IndicatorOptions() : super();
-  String? fillColor;
-  double? gapSize;
+  String? m_fillColor;  
+
+  String get fillColor { 
+    if (this.m_fillColor == null) {
+      this.m_fillColor = "";
+    }
+    return this.m_fillColor!;
+  }
+
+  void set fillColor (String v) {
+    this.m_fillColor = v;
+  }
+    
+  double? m_gapSize;  
+
+  double get gapSize { 
+    if (this.m_gapSize == null) {
+      this.m_gapSize = 0;
+    }
+    return this.m_gapSize!;
+  }
+
+  void set gapSize (double v) {
+    this.m_gapSize = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -34,12 +58,12 @@ class IndicatorOptions extends SMAOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.fillColor != null) {  
-      buffer.writeAll(["\"fillColor\":", this.fillColor, ","], "");
+    if (this.m_fillColor != null) {  
+      buffer.writeAll(["\"fillColor\":", this.m_fillColor, ","], "");
     }
 
-    if (this.gapSize != null) {  
-      buffer.writeAll(["\"gapSize\":", this.gapSize, ","], "");
+    if (this.m_gapSize != null) {  
+      buffer.writeAll(["\"gapSize\":", this.m_gapSize, ","], "");
     }
   }
 

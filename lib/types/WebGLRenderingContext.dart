@@ -23,7 +23,19 @@ import 'OptionFragment.dart';
  */
 class WebGLRenderingContext extends OptionFragment {
   WebGLRenderingContext() : super();
-  double? FUNC_MIN;
+  double? m_FUNC_MIN;  
+
+  double get FUNC_MIN { 
+    if (this.m_FUNC_MIN == null) {
+      this.m_FUNC_MIN = 0;
+    }
+    return this.m_FUNC_MIN!;
+  }
+
+  void set FUNC_MIN (double v) {
+    this.m_FUNC_MIN = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -32,8 +44,8 @@ class WebGLRenderingContext extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.FUNC_MIN != null) {  
-      buffer.writeAll(["\"FUNC_MIN\":", this.FUNC_MIN, ","], "");
+    if (this.m_FUNC_MIN != null) {  
+      buffer.writeAll(["\"FUNC_MIN\":", this.m_FUNC_MIN, ","], "");
     }
   }
 

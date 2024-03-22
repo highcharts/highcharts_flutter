@@ -23,11 +23,71 @@ import 'OptionFragment.dart';
  */
 class LangAccessibilityAnnounceNewDataOptions extends OptionFragment {
   LangAccessibilityAnnounceNewDataOptions() : super();
-  String? newDataAnnounce;
-  String? newSeriesAnnounceSingle;
-  String? newPointAnnounceSingle;
-  String? newSeriesAnnounceMultiple;
-  String? newPointAnnounceMultiple;
+  String? m_newDataAnnounce;  
+
+  String get newDataAnnounce { 
+    if (this.m_newDataAnnounce == null) {
+      this.m_newDataAnnounce = "";
+    }
+    return this.m_newDataAnnounce!;
+  }
+
+  void set newDataAnnounce (String v) {
+    this.m_newDataAnnounce = v;
+  }
+    
+  String? m_newSeriesAnnounceSingle;  
+
+  String get newSeriesAnnounceSingle { 
+    if (this.m_newSeriesAnnounceSingle == null) {
+      this.m_newSeriesAnnounceSingle = "";
+    }
+    return this.m_newSeriesAnnounceSingle!;
+  }
+
+  void set newSeriesAnnounceSingle (String v) {
+    this.m_newSeriesAnnounceSingle = v;
+  }
+    
+  String? m_newPointAnnounceSingle;  
+
+  String get newPointAnnounceSingle { 
+    if (this.m_newPointAnnounceSingle == null) {
+      this.m_newPointAnnounceSingle = "";
+    }
+    return this.m_newPointAnnounceSingle!;
+  }
+
+  void set newPointAnnounceSingle (String v) {
+    this.m_newPointAnnounceSingle = v;
+  }
+    
+  String? m_newSeriesAnnounceMultiple;  
+
+  String get newSeriesAnnounceMultiple { 
+    if (this.m_newSeriesAnnounceMultiple == null) {
+      this.m_newSeriesAnnounceMultiple = "";
+    }
+    return this.m_newSeriesAnnounceMultiple!;
+  }
+
+  void set newSeriesAnnounceMultiple (String v) {
+    this.m_newSeriesAnnounceMultiple = v;
+  }
+    
+  String? m_newPointAnnounceMultiple;  
+
+  String get newPointAnnounceMultiple { 
+    if (this.m_newPointAnnounceMultiple == null) {
+      this.m_newPointAnnounceMultiple = "";
+    }
+    return this.m_newPointAnnounceMultiple!;
+  }
+
+  void set newPointAnnounceMultiple (String v) {
+    this.m_newPointAnnounceMultiple = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -36,24 +96,24 @@ class LangAccessibilityAnnounceNewDataOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.newDataAnnounce != null) {  
-      buffer.writeAll(["\"newDataAnnounce\":", this.newDataAnnounce, ","], "");
+    if (this.m_newDataAnnounce != null) {  
+      buffer.writeAll(["\"newDataAnnounce\":", this.m_newDataAnnounce, ","], "");
     }
 
-    if (this.newSeriesAnnounceSingle != null) {  
-      buffer.writeAll(["\"newSeriesAnnounceSingle\":", this.newSeriesAnnounceSingle, ","], "");
+    if (this.m_newSeriesAnnounceSingle != null) {  
+      buffer.writeAll(["\"newSeriesAnnounceSingle\":", this.m_newSeriesAnnounceSingle, ","], "");
     }
 
-    if (this.newPointAnnounceSingle != null) {  
-      buffer.writeAll(["\"newPointAnnounceSingle\":", this.newPointAnnounceSingle, ","], "");
+    if (this.m_newPointAnnounceSingle != null) {  
+      buffer.writeAll(["\"newPointAnnounceSingle\":", this.m_newPointAnnounceSingle, ","], "");
     }
 
-    if (this.newSeriesAnnounceMultiple != null) {  
-      buffer.writeAll(["\"newSeriesAnnounceMultiple\":", this.newSeriesAnnounceMultiple, ","], "");
+    if (this.m_newSeriesAnnounceMultiple != null) {  
+      buffer.writeAll(["\"newSeriesAnnounceMultiple\":", this.m_newSeriesAnnounceMultiple, ","], "");
     }
 
-    if (this.newPointAnnounceMultiple != null) {  
-      buffer.writeAll(["\"newPointAnnounceMultiple\":", this.newPointAnnounceMultiple, ","], "");
+    if (this.m_newPointAnnounceMultiple != null) {  
+      buffer.writeAll(["\"newPointAnnounceMultiple\":", this.m_newPointAnnounceMultiple, ","], "");
     }
   }
 

@@ -24,7 +24,19 @@ import 'OptionFragment.dart';
  */
 class PointStateInactiveOptions extends StateInactiveOptions {
   PointStateInactiveOptions() : super();
-  double? opacity;
+  double? m_opacity;  
+
+  double get opacity { 
+    if (this.m_opacity == null) {
+      this.m_opacity = 0;
+    }
+    return this.m_opacity!;
+  }
+
+  void set opacity (double v) {
+    this.m_opacity = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,8 +45,8 @@ class PointStateInactiveOptions extends StateInactiveOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.opacity != null) {  
-      buffer.writeAll(["\"opacity\":", this.opacity, ","], "");
+    if (this.m_opacity != null) {  
+      buffer.writeAll(["\"opacity\":", this.m_opacity, ","], "");
     }
 
     // NOTE: skip serialization of animation (type Generic is ignored)} 

@@ -30,7 +30,19 @@ class XRangeSeriesOptions extends ColumnSeriesOptions {
    * of a task is performed. The partial fill object can be set either on
    * series or point level.  
       */
-  XRangePointOptions? partialFill;
+  XRangePointOptions? m_partialFill;  
+
+  XRangePointOptions get partialFill { 
+    if (this.m_partialFill == null) {
+      this.m_partialFill = XRangePointOptions();
+    }
+    return this.m_partialFill!;
+  }
+
+  void set partialFill (XRangePointOptions v) {
+    this.m_partialFill = v;
+  }
+    
   // NOTE: states skipped - type Generic is ignored in gen
 
 
@@ -41,8 +53,8 @@ class XRangeSeriesOptions extends ColumnSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.partialFill != null) {  
-      buffer.writeAll(["\"partialFill\":", this.partialFill?.toJSON(), ","], "");
+    if (this.m_partialFill != null) {  
+      buffer.writeAll(["\"partialFill\":", this.m_partialFill?.toJSON(), ","], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 

@@ -24,7 +24,19 @@ import 'OptionFragment.dart';
  */
 class RectangleObject extends BBoxObject {
   RectangleObject() : super();
-  double? strokeWidth;
+  double? m_strokeWidth;  
+
+  double get strokeWidth { 
+    if (this.m_strokeWidth == null) {
+      this.m_strokeWidth = 0;
+    }
+    return this.m_strokeWidth!;
+  }
+
+  void set strokeWidth (double v) {
+    this.m_strokeWidth = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,8 +45,8 @@ class RectangleObject extends BBoxObject {
     super.toJSONInner(buffer);
 
     
-    if (this.strokeWidth != null) {  
-      buffer.writeAll(["\"strokeWidth\":", this.strokeWidth, ","], "");
+    if (this.m_strokeWidth != null) {  
+      buffer.writeAll(["\"strokeWidth\":", this.m_strokeWidth, ","], "");
     }
   }
 

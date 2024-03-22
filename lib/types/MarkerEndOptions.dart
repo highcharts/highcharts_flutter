@@ -23,10 +23,58 @@ import 'OptionFragment.dart';
  */
 class MarkerEndOptions extends OptionFragment {
   MarkerEndOptions() : super();
-  String? markerType;
-  bool? enabled;
-  String? width;
-  String? height;
+  String? m_markerType;  
+
+  String get markerType { 
+    if (this.m_markerType == null) {
+      this.m_markerType = "";
+    }
+    return this.m_markerType!;
+  }
+
+  void set markerType (String v) {
+    this.m_markerType = v;
+  }
+    
+  bool? m_enabled;  
+
+  bool get enabled { 
+    if (this.m_enabled == null) {
+      this.m_enabled = false;
+    }
+    return this.m_enabled!;
+  }
+
+  void set enabled (bool v) {
+    this.m_enabled = v;
+  }
+    
+  String? m_width;  
+
+  String get width { 
+    if (this.m_width == null) {
+      this.m_width = "";
+    }
+    return this.m_width!;
+  }
+
+  void set width (String v) {
+    this.m_width = v;
+  }
+    
+  String? m_height;  
+
+  String get height { 
+    if (this.m_height == null) {
+      this.m_height = "";
+    }
+    return this.m_height!;
+  }
+
+  void set height (String v) {
+    this.m_height = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -35,20 +83,20 @@ class MarkerEndOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.markerType != null) {  
-      buffer.writeAll(["\"markerType\":", this.markerType, ","], "");
+    if (this.m_markerType != null) {  
+      buffer.writeAll(["\"markerType\":", this.m_markerType, ","], "");
     }
 
-    if (this.enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
+    if (this.m_enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this.m_enabled, ","], "");
     }
 
-    if (this.width != null) {  
-      buffer.writeAll(["\"width\":", this.width, ","], "");
+    if (this.m_width != null) {  
+      buffer.writeAll(["\"width\":", this.m_width, ","], "");
     }
 
-    if (this.height != null) {  
-      buffer.writeAll(["\"height\":", this.height, ","], "");
+    if (this.m_height != null) {  
+      buffer.writeAll(["\"height\":", this.m_height, ","], "");
     }
   }
 

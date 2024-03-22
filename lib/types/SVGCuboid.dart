@@ -25,8 +25,32 @@ import 'OptionFragment.dart';
  */
 class SVGCuboid extends SVGPath3D {
   SVGCuboid() : super();
-  double? isFront;
-  double? isTop;
+  double? m_isFront;  
+
+  double get isFront { 
+    if (this.m_isFront == null) {
+      this.m_isFront = 0;
+    }
+    return this.m_isFront!;
+  }
+
+  void set isFront (double v) {
+    this.m_isFront = v;
+  }
+    
+  double? m_isTop;  
+
+  double get isTop { 
+    if (this.m_isTop == null) {
+      this.m_isTop = 0;
+    }
+    return this.m_isTop!;
+  }
+
+  void set isTop (double v) {
+    this.m_isTop = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -37,12 +61,12 @@ class SVGCuboid extends SVGPath3D {
     
     // NOTE: skip serialization of front (type SVGPath is ignored)} 
 
-    if (this.isFront != null) {  
-      buffer.writeAll(["\"isFront\":", this.isFront, ","], "");
+    if (this.m_isFront != null) {  
+      buffer.writeAll(["\"isFront\":", this.m_isFront, ","], "");
     }
 
-    if (this.isTop != null) {  
-      buffer.writeAll(["\"isTop\":", this.isTop, ","], "");
+    if (this.m_isTop != null) {  
+      buffer.writeAll(["\"isTop\":", this.m_isTop, ","], "");
     }
 
     // NOTE: skip serialization of side (type SVGPath is ignored)} 

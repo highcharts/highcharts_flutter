@@ -24,8 +24,32 @@ import 'OptionFragment.dart';
  */
 class AnnotationEventObject extends PointerEvent {
   AnnotationEventObject() : super();
-  double? prevChartX;
-  double? prevChartY;
+  double? m_prevChartX;  
+
+  double get prevChartX { 
+    if (this.m_prevChartX == null) {
+      this.m_prevChartX = 0;
+    }
+    return this.m_prevChartX!;
+  }
+
+  void set prevChartX (double v) {
+    this.m_prevChartX = v;
+  }
+    
+  double? m_prevChartY;  
+
+  double get prevChartY { 
+    if (this.m_prevChartY == null) {
+      this.m_prevChartY = 0;
+    }
+    return this.m_prevChartY!;
+  }
+
+  void set prevChartY (double v) {
+    this.m_prevChartY = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -34,12 +58,12 @@ class AnnotationEventObject extends PointerEvent {
     super.toJSONInner(buffer);
 
     
-    if (this.prevChartX != null) {  
-      buffer.writeAll(["\"prevChartX\":", this.prevChartX, ","], "");
+    if (this.m_prevChartX != null) {  
+      buffer.writeAll(["\"prevChartX\":", this.m_prevChartX, ","], "");
     }
 
-    if (this.prevChartY != null) {  
-      buffer.writeAll(["\"prevChartY\":", this.prevChartY, ","], "");
+    if (this.m_prevChartY != null) {  
+      buffer.writeAll(["\"prevChartY\":", this.m_prevChartY, ","], "");
     }
   }
 

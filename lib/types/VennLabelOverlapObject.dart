@@ -24,7 +24,19 @@ import 'OptionFragment.dart';
  */
 class VennLabelOverlapObject extends OptionFragment {
   VennLabelOverlapObject() : super();
-  double? loss;
+  double? m_loss;  
+
+  double get loss { 
+    if (this.m_loss == null) {
+      this.m_loss = 0;
+    }
+    return this.m_loss!;
+  }
+
+  void set loss (double v) {
+    this.m_loss = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -35,8 +47,8 @@ class VennLabelOverlapObject extends OptionFragment {
     
     // NOTE: skip serialization of coordinates (type PositionObject is ignored)} 
 
-    if (this.loss != null) {  
-      buffer.writeAll(["\"loss\":", this.loss, ","], "");
+    if (this.m_loss != null) {  
+      buffer.writeAll(["\"loss\":", this.m_loss, ","], "");
     }
   }
 

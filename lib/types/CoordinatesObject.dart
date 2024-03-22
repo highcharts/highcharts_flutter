@@ -23,8 +23,32 @@ import 'OptionFragment.dart';
  */
 class CoordinatesObject extends OptionFragment {
   CoordinatesObject() : super();
-  double? chartX;
-  double? chartY;
+  double? m_chartX;  
+
+  double get chartX { 
+    if (this.m_chartX == null) {
+      this.m_chartX = 0;
+    }
+    return this.m_chartX!;
+  }
+
+  void set chartX (double v) {
+    this.m_chartX = v;
+  }
+    
+  double? m_chartY;  
+
+  double get chartY { 
+    if (this.m_chartY == null) {
+      this.m_chartY = 0;
+    }
+    return this.m_chartY!;
+  }
+
+  void set chartY (double v) {
+    this.m_chartY = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,12 +57,12 @@ class CoordinatesObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.chartX != null) {  
-      buffer.writeAll(["\"chartX\":", this.chartX, ","], "");
+    if (this.m_chartX != null) {  
+      buffer.writeAll(["\"chartX\":", this.m_chartX, ","], "");
     }
 
-    if (this.chartY != null) {  
-      buffer.writeAll(["\"chartY\":", this.chartY, ","], "");
+    if (this.m_chartY != null) {  
+      buffer.writeAll(["\"chartY\":", this.m_chartY, ","], "");
     }
   }
 

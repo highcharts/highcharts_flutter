@@ -23,7 +23,19 @@ import 'OptionFragment.dart';
  */
 class TickLike extends OptionFragment {
   TickLike() : super();
-  double? slotWidth;
+  double? m_slotWidth;  
+
+  double get slotWidth { 
+    if (this.m_slotWidth == null) {
+      this.m_slotWidth = 0;
+    }
+    return this.m_slotWidth!;
+  }
+
+  void set slotWidth (double v) {
+    this.m_slotWidth = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -32,8 +44,8 @@ class TickLike extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.slotWidth != null) {  
-      buffer.writeAll(["\"slotWidth\":", this.slotWidth, ","], "");
+    if (this.m_slotWidth != null) {  
+      buffer.writeAll(["\"slotWidth\":", this.m_slotWidth, ","], "");
     }
   }
 

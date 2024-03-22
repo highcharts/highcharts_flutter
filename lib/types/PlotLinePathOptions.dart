@@ -24,13 +24,97 @@ import 'OptionFragment.dart';
  */
 class PlotLinePathOptions extends OptionFragment {
   PlotLinePathOptions() : super();
-  bool? acrossPanes;
-  String? force;
-  double? lineWidth;
-  bool? old;
-  bool? reverse;
-  double? translatedValue;
-  double? value;
+  bool? m_acrossPanes;  
+
+  bool get acrossPanes { 
+    if (this.m_acrossPanes == null) {
+      this.m_acrossPanes = false;
+    }
+    return this.m_acrossPanes!;
+  }
+
+  void set acrossPanes (bool v) {
+    this.m_acrossPanes = v;
+  }
+    
+  String? m_force;  
+
+  String get force { 
+    if (this.m_force == null) {
+      this.m_force = "";
+    }
+    return this.m_force!;
+  }
+
+  void set force (String v) {
+    this.m_force = v;
+  }
+    
+  double? m_lineWidth;  
+
+  double get lineWidth { 
+    if (this.m_lineWidth == null) {
+      this.m_lineWidth = 0;
+    }
+    return this.m_lineWidth!;
+  }
+
+  void set lineWidth (double v) {
+    this.m_lineWidth = v;
+  }
+    
+  bool? m_old;  
+
+  bool get old { 
+    if (this.m_old == null) {
+      this.m_old = false;
+    }
+    return this.m_old!;
+  }
+
+  void set old (bool v) {
+    this.m_old = v;
+  }
+    
+  bool? m_reverse;  
+
+  bool get reverse { 
+    if (this.m_reverse == null) {
+      this.m_reverse = false;
+    }
+    return this.m_reverse!;
+  }
+
+  void set reverse (bool v) {
+    this.m_reverse = v;
+  }
+    
+  double? m_translatedValue;  
+
+  double get translatedValue { 
+    if (this.m_translatedValue == null) {
+      this.m_translatedValue = 0;
+    }
+    return this.m_translatedValue!;
+  }
+
+  void set translatedValue (double v) {
+    this.m_translatedValue = v;
+  }
+    
+  double? m_value;  
+
+  double get value { 
+    if (this.m_value == null) {
+      this.m_value = 0;
+    }
+    return this.m_value!;
+  }
+
+  void set value (double v) {
+    this.m_value = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -39,34 +123,34 @@ class PlotLinePathOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.acrossPanes != null) {  
-      buffer.writeAll(["\"acrossPanes\":", this.acrossPanes, ","], "");
+    if (this.m_acrossPanes != null) {  
+      buffer.writeAll(["\"acrossPanes\":", this.m_acrossPanes, ","], "");
     }
 
-    if (this.force != null) {  
-      buffer.writeAll(["\"force\":", this.force, ","], "");
+    if (this.m_force != null) {  
+      buffer.writeAll(["\"force\":", this.m_force, ","], "");
     }
 
-    if (this.lineWidth != null) {  
-      buffer.writeAll(["\"lineWidth\":", this.lineWidth, ","], "");
+    if (this.m_lineWidth != null) {  
+      buffer.writeAll(["\"lineWidth\":", this.m_lineWidth, ","], "");
     }
 
-    if (this.old != null) {  
-      buffer.writeAll(["\"old\":", this.old, ","], "");
+    if (this.m_old != null) {  
+      buffer.writeAll(["\"old\":", this.m_old, ","], "");
     }
 
     // NOTE: skip serialization of path (type SVGPath is ignored)} 
 
-    if (this.reverse != null) {  
-      buffer.writeAll(["\"reverse\":", this.reverse, ","], "");
+    if (this.m_reverse != null) {  
+      buffer.writeAll(["\"reverse\":", this.m_reverse, ","], "");
     }
 
-    if (this.translatedValue != null) {  
-      buffer.writeAll(["\"translatedValue\":", this.translatedValue, ","], "");
+    if (this.m_translatedValue != null) {  
+      buffer.writeAll(["\"translatedValue\":", this.m_translatedValue, ","], "");
     }
 
-    if (this.value != null) {  
-      buffer.writeAll(["\"value\":", this.value, ","], "");
+    if (this.m_value != null) {  
+      buffer.writeAll(["\"value\":", this.m_value, ","], "");
     }
   }
 

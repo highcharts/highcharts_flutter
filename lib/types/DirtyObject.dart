@@ -25,7 +25,19 @@ import 'OptionFragment.dart';
  */
 class DirtyObject extends OptionFragment {
   DirtyObject() : super();
-  bool? hasDirty;
+  bool? m_hasDirty;  
+
+  bool get hasDirty { 
+    if (this.m_hasDirty == null) {
+      this.m_hasDirty = false;
+    }
+    return this.m_hasDirty!;
+  }
+
+  void set hasDirty (bool v) {
+    this.m_hasDirty = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -36,8 +48,8 @@ class DirtyObject extends OptionFragment {
     
     // NOTE: skip serialization of allSeries (type Generic is ignored)} 
 
-    if (this.hasDirty != null) {  
-      buffer.writeAll(["\"hasDirty\":", this.hasDirty, ","], "");
+    if (this.m_hasDirty != null) {  
+      buffer.writeAll(["\"hasDirty\":", this.m_hasDirty, ","], "");
     }
 
     // NOTE: skip serialization of newPoint (type PointComposition is ignored)} 

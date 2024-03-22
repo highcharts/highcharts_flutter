@@ -24,9 +24,45 @@ import 'OptionFragment.dart';
  */
 class DistributedBoxObject extends BoxObject {
   DistributedBoxObject() : super();
-  double? pos;
-  double? anchorX;
-  double? plotX;
+  double? m_pos;  
+
+  double get pos { 
+    if (this.m_pos == null) {
+      this.m_pos = 0;
+    }
+    return this.m_pos!;
+  }
+
+  void set pos (double v) {
+    this.m_pos = v;
+  }
+    
+  double? m_anchorX;  
+
+  double get anchorX { 
+    if (this.m_anchorX == null) {
+      this.m_anchorX = 0;
+    }
+    return this.m_anchorX!;
+  }
+
+  void set anchorX (double v) {
+    this.m_anchorX = v;
+  }
+    
+  double? m_plotX;  
+
+  double get plotX { 
+    if (this.m_plotX == null) {
+      this.m_plotX = 0;
+    }
+    return this.m_plotX!;
+  }
+
+  void set plotX (double v) {
+    this.m_plotX = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -35,16 +71,16 @@ class DistributedBoxObject extends BoxObject {
     super.toJSONInner(buffer);
 
     
-    if (this.pos != null) {  
-      buffer.writeAll(["\"pos\":", this.pos, ","], "");
+    if (this.m_pos != null) {  
+      buffer.writeAll(["\"pos\":", this.m_pos, ","], "");
     }
 
-    if (this.anchorX != null) {  
-      buffer.writeAll(["\"anchorX\":", this.anchorX, ","], "");
+    if (this.m_anchorX != null) {  
+      buffer.writeAll(["\"anchorX\":", this.m_anchorX, ","], "");
     }
 
-    if (this.plotX != null) {  
-      buffer.writeAll(["\"plotX\":", this.plotX, ","], "");
+    if (this.m_plotX != null) {  
+      buffer.writeAll(["\"plotX\":", this.m_plotX, ","], "");
     }
   }
 

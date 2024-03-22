@@ -24,7 +24,19 @@ import 'OptionFragment.dart';
  */
 class ChaikinParamsOptions extends EMAParamsOptions {
   ChaikinParamsOptions() : super();
-  String? volumeSeriesID;
+  String? m_volumeSeriesID;  
+
+  String get volumeSeriesID { 
+    if (this.m_volumeSeriesID == null) {
+      this.m_volumeSeriesID = "";
+    }
+    return this.m_volumeSeriesID!;
+  }
+
+  void set volumeSeriesID (String v) {
+    this.m_volumeSeriesID = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -35,8 +47,8 @@ class ChaikinParamsOptions extends EMAParamsOptions {
     
     // NOTE: skip serialization of periods (type number[] is ignored)} 
 
-    if (this.volumeSeriesID != null) {  
-      buffer.writeAll(["\"volumeSeriesID\":", this.volumeSeriesID, ","], "");
+    if (this.m_volumeSeriesID != null) {  
+      buffer.writeAll(["\"volumeSeriesID\":", this.m_volumeSeriesID, ","], "");
     }
   }
 

@@ -23,7 +23,19 @@ import 'OptionFragment.dart';
  */
 class AreaObject extends OptionFragment {
   AreaObject() : super();
-  double? direction;
+  double? m_direction;  
+
+  double get direction { 
+    if (this.m_direction == null) {
+      this.m_direction = 0;
+    }
+    return this.m_direction!;
+  }
+
+  void set direction (double v) {
+    this.m_direction = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -32,8 +44,8 @@ class AreaObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.direction != null) {  
-      buffer.writeAll(["\"direction\":", this.direction, ","], "");
+    if (this.m_direction != null) {  
+      buffer.writeAll(["\"direction\":", this.m_direction, ","], "");
     }
   }
 

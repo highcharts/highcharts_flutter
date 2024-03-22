@@ -24,7 +24,19 @@ import 'OptionFragment.dart';
  */
 class ArcDiagramPointOptions extends SankeyPointOptions {
   ArcDiagramPointOptions() : super();
-  double? linkWeight;
+  double? m_linkWeight;  
+
+  double get linkWeight { 
+    if (this.m_linkWeight == null) {
+      this.m_linkWeight = 0;
+    }
+    return this.m_linkWeight!;
+  }
+
+  void set linkWeight (double v) {
+    this.m_linkWeight = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,8 +45,8 @@ class ArcDiagramPointOptions extends SankeyPointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.linkWeight != null) {  
-      buffer.writeAll(["\"linkWeight\":", this.linkWeight, ","], "");
+    if (this.m_linkWeight != null) {  
+      buffer.writeAll(["\"linkWeight\":", this.m_linkWeight, ","], "");
     }
   }
 

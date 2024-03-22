@@ -31,7 +31,19 @@ class FunnelSeriesOptions extends PieSeriesOptions {
    * 
    * Defaults to '90%'. 
       */
-  String? width;
+  String? m_width;  
+
+  String get width { 
+    if (this.m_width == null) {
+      this.m_width = "";
+    }
+    return this.m_width!;
+  }
+
+  void set width (String v) {
+    this.m_width = v;
+  }
+    
   /**
    * The width of the neck, the lower part of the funnel. A number defines
    * pixel width, a percentage string defines a percentage of the plot
@@ -39,7 +51,19 @@ class FunnelSeriesOptions extends PieSeriesOptions {
    * 
    * Defaults to '30%'. 
       */
-  String? neckWidth;
+  String? m_neckWidth;  
+
+  String get neckWidth { 
+    if (this.m_neckWidth == null) {
+      this.m_neckWidth = "";
+    }
+    return this.m_neckWidth!;
+  }
+
+  void set neckWidth (String v) {
+    this.m_neckWidth = v;
+  }
+    
   /**
    * The height of the funnel or pyramid. If it is a number it defines
    * the pixel height, if it is a percentage string it is the percentage
@@ -47,7 +71,19 @@ class FunnelSeriesOptions extends PieSeriesOptions {
    * 
    * Defaults to '100%'. 
       */
-  String? height;
+  String? m_height;  
+
+  String get height { 
+    if (this.m_height == null) {
+      this.m_height = "";
+    }
+    return this.m_height!;
+  }
+
+  void set height (String v) {
+    this.m_height = v;
+  }
+    
   /**
    * The height of the neck, the lower part of the funnel. A number
    * defines pixel width, a percentage string defines a percentage of the
@@ -55,12 +91,36 @@ class FunnelSeriesOptions extends PieSeriesOptions {
    * 
    * Defaults to '25%'. 
       */
-  String? neckHeight;
+  String? m_neckHeight;  
+
+  String get neckHeight { 
+    if (this.m_neckHeight == null) {
+      this.m_neckHeight = "";
+    }
+    return this.m_neckHeight!;
+  }
+
+  void set neckHeight (String v) {
+    this.m_neckHeight = v;
+  }
+    
   /**
    * A reversed funnel has the widest area down. A reversed funnel with
    * no neck width and neck height is a pyramid.  
       */
-  bool? reversed;
+  bool? m_reversed;  
+
+  bool get reversed { 
+    if (this.m_reversed == null) {
+      this.m_reversed = false;
+    }
+    return this.m_reversed!;
+  }
+
+  void set reversed (bool v) {
+    this.m_reversed = v;
+  }
+    
   // NOTE: size skipped - type undefined is ignored in gen
 
   /**
@@ -86,31 +146,29 @@ class FunnelSeriesOptions extends PieSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.width != null) {  
-      buffer.writeAll(["\"width\":", this.width, ","], "");
+    if (this.m_width != null) {  
+      buffer.writeAll(["\"width\":", this.m_width, ","], "");
     }
 
-    if (this.neckWidth != null) {  
-      buffer.writeAll(["\"neckWidth\":", this.neckWidth, ","], "");
+    if (this.m_neckWidth != null) {  
+      buffer.writeAll(["\"neckWidth\":", this.m_neckWidth, ","], "");
     }
 
-    if (this.height != null) {  
-      buffer.writeAll(["\"height\":", this.height, ","], "");
+    if (this.m_height != null) {  
+      buffer.writeAll(["\"height\":", this.m_height, ","], "");
     }
 
-    if (this.neckHeight != null) {  
-      buffer.writeAll(["\"neckHeight\":", this.neckHeight, ","], "");
+    if (this.m_neckHeight != null) {  
+      buffer.writeAll(["\"neckHeight\":", this.m_neckHeight, ","], "");
     }
 
-    if (this.reversed != null) {  
-      buffer.writeAll(["\"reversed\":", this.reversed, ","], "");
+    if (this.m_reversed != null) {  
+      buffer.writeAll(["\"reversed\":", this.m_reversed, ","], "");
     }
 
     // NOTE: skip serialization of size (type undefined is ignored)} 
 
-    if (this.dataLabels != null) {  
-    // Skipped array dataLabels
-    }
+    // NOTE: skip serialization of dataLabels (type FunnelDataLabelOptions is ignored)} 
 
     // NOTE: skip serialization of states (type Generic is ignored)} 
   }

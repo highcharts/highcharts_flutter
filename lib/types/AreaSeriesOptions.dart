@@ -31,7 +31,19 @@ class AreaSeriesOptions extends LineSeriesOptions {
    * In styled mode, the fill color can be set with the `.highcharts-area`
    * class name.  
       */
-  String? fillColor;
+  String? m_fillColor;  
+
+  String get fillColor { 
+    if (this.m_fillColor == null) {
+      this.m_fillColor = "";
+    }
+    return this.m_fillColor!;
+  }
+
+  void set fillColor (String v) {
+    this.m_fillColor = v;
+  }
+    
   /**
    * Fill opacity for the area. When you set an explicit `fillColor`,
    * the `fillOpacity` is not applied. Instead, you should define the
@@ -42,14 +54,38 @@ class AreaSeriesOptions extends LineSeriesOptions {
    * In styled mode, the fill opacity can be set with the
    * `.highcharts-area` class name.  
       */
-  double? fillOpacity;
+  double? m_fillOpacity;  
+
+  double get fillOpacity { 
+    if (this.m_fillOpacity == null) {
+      this.m_fillOpacity = 0;
+    }
+    return this.m_fillOpacity!;
+  }
+
+  void set fillOpacity (double v) {
+    this.m_fillOpacity = v;
+  }
+    
   /**
    * A separate color for the negative part of the area.
    * 
    * In styled mode, a negative color is set with the
    * `.highcharts-negative` class name.  
       */
-  String? negativeFillColor;
+  String? m_negativeFillColor;  
+
+  String get negativeFillColor { 
+    if (this.m_negativeFillColor == null) {
+      this.m_negativeFillColor = "";
+    }
+    return this.m_negativeFillColor!;
+  }
+
+  void set negativeFillColor (String v) {
+    this.m_negativeFillColor = v;
+  }
+    
   // NOTE: states skipped - type Generic is ignored in gen
 
 
@@ -60,16 +96,16 @@ class AreaSeriesOptions extends LineSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.fillColor != null) {  
-      buffer.writeAll(["\"fillColor\":", this.fillColor, ","], "");
+    if (this.m_fillColor != null) {  
+      buffer.writeAll(["\"fillColor\":", this.m_fillColor, ","], "");
     }
 
-    if (this.fillOpacity != null) {  
-      buffer.writeAll(["\"fillOpacity\":", this.fillOpacity, ","], "");
+    if (this.m_fillOpacity != null) {  
+      buffer.writeAll(["\"fillOpacity\":", this.m_fillOpacity, ","], "");
     }
 
-    if (this.negativeFillColor != null) {  
-      buffer.writeAll(["\"negativeFillColor\":", this.negativeFillColor, ","], "");
+    if (this.m_negativeFillColor != null) {  
+      buffer.writeAll(["\"negativeFillColor\":", this.m_negativeFillColor, ","], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 

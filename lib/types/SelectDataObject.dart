@@ -24,8 +24,32 @@ import 'OptionFragment.dart';
  */
 class SelectDataObject extends OptionFragment {
   SelectDataObject() : super();
-  double? max;
-  double? min;
+  double? m_max;  
+
+  double get max { 
+    if (this.m_max == null) {
+      this.m_max = 0;
+    }
+    return this.m_max!;
+  }
+
+  void set max (double v) {
+    this.m_max = v;
+  }
+    
+  double? m_min;  
+
+  double get min { 
+    if (this.m_min == null) {
+      this.m_min = 0;
+    }
+    return this.m_min!;
+  }
+
+  void set min (double v) {
+    this.m_min = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -36,12 +60,12 @@ class SelectDataObject extends OptionFragment {
     
     // NOTE: skip serialization of axis (type Axis is ignored)} 
 
-    if (this.max != null) {  
-      buffer.writeAll(["\"max\":", this.max, ","], "");
+    if (this.m_max != null) {  
+      buffer.writeAll(["\"max\":", this.m_max, ","], "");
     }
 
-    if (this.min != null) {  
-      buffer.writeAll(["\"min\":", this.min, ","], "");
+    if (this.m_min != null) {  
+      buffer.writeAll(["\"min\":", this.m_min, ","], "");
     }
   }
 

@@ -41,7 +41,19 @@ class StochasticOptions extends SMAOptions {
    * the first point instance are copied over to the group point. This can be
    * altered through a custom `approximation` callback function.  
       */
-  DataGroupingOptions? dataGrouping;
+  DataGroupingOptions? m_dataGrouping;  
+
+  DataGroupingOptions get dataGrouping { 
+    if (this.m_dataGrouping == null) {
+      this.m_dataGrouping = DataGroupingOptions();
+    }
+    return this.m_dataGrouping!;
+  }
+
+  void set dataGrouping (DataGroupingOptions v) {
+    this.m_dataGrouping = v;
+  }
+    
   /**
    * Options for the point markers of line and scatter-like series. Properties
    * like `fillColor`, `lineColor` and `lineWidth` define the visual
@@ -52,7 +64,19 @@ class StochasticOptions extends SMAOptions {
    * In styled mode, the markers can be styled with the `.highcharts-point`,
    * `.highcharts-point-hover` and `.highcharts-point-select` class names.  
       */
-  PointMarkerOptions? marker;
+  PointMarkerOptions? m_marker;  
+
+  PointMarkerOptions get marker { 
+    if (this.m_marker == null) {
+      this.m_marker = PointMarkerOptions();
+    }
+    return this.m_marker!;
+  }
+
+  void set marker (PointMarkerOptions v) {
+    this.m_marker = v;
+  }
+    
   /**
    * Paramters used in calculation of regression series' points.  
       */
@@ -61,7 +85,19 @@ class StochasticOptions extends SMAOptions {
   /**
    * Smoothed line options.  
       */
-  Map<String, String>? smoothedLine;
+  Map<String, String>? m_smoothedLine;  
+
+  Map<String, String> get smoothedLine { 
+    if (this.m_smoothedLine == null) {
+      this.m_smoothedLine = Map<String, String>();
+    }
+    return this.m_smoothedLine!;
+  }
+
+  void set smoothedLine (Map<String, String> v) {
+    this.m_smoothedLine = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -70,20 +106,20 @@ class StochasticOptions extends SMAOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.dataGrouping != null) {  
-      buffer.writeAll(["\"dataGrouping\":", this.dataGrouping?.toJSON(), ","], "");
+    if (this.m_dataGrouping != null) {  
+      buffer.writeAll(["\"dataGrouping\":", this.m_dataGrouping?.toJSON(), ","], "");
     }
 
-    if (this.marker != null) {  
-      buffer.writeAll(["\"marker\":", this.marker?.toJSON(), ","], "");
+    if (this.m_marker != null) {  
+      buffer.writeAll(["\"marker\":", this.m_marker?.toJSON(), ","], "");
     }
 
-    if (this.params != null) {  
-      buffer.writeAll(["\"params\":", this.params?.toJSON(), ","], "");
+    if (this.m_params != null) {  
+      buffer.writeAll(["\"params\":", this.m_params?.toJSON(), ","], "");
     }
 
-    if (this.smoothedLine != null) {  
-      buffer.writeAll(["\"smoothedLine\":", this.smoothedLine, ","], "");
+    if (this.m_smoothedLine != null) {  
+      buffer.writeAll(["\"smoothedLine\":", this.m_smoothedLine, ","], "");
     }
   }
 

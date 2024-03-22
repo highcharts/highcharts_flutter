@@ -23,7 +23,19 @@ import 'OptionFragment.dart';
  */
 class GanttAnimationOptions extends OptionFragment {
   GanttAnimationOptions() : super();
-  bool? reversed;
+  bool? m_reversed;  
+
+  bool get reversed { 
+    if (this.m_reversed == null) {
+      this.m_reversed = false;
+    }
+    return this.m_reversed!;
+  }
+
+  void set reversed (bool v) {
+    this.m_reversed = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -32,8 +44,8 @@ class GanttAnimationOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.reversed != null) {  
-      buffer.writeAll(["\"reversed\":", this.reversed, ","], "");
+    if (this.m_reversed != null) {  
+      buffer.writeAll(["\"reversed\":", this.m_reversed, ","], "");
     }
   }
 

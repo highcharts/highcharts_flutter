@@ -25,8 +25,32 @@ import 'OptionFragment.dart';
  */
 class ErrorBarSeries extends BoxPlotSeries {
   ErrorBarSeries() : super();
-  bool? doQuartiles;
-  String? pointValKey;
+  bool? m_doQuartiles;  
+
+  bool get doQuartiles { 
+    if (this.m_doQuartiles == null) {
+      this.m_doQuartiles = false;
+    }
+    return this.m_doQuartiles!;
+  }
+
+  void set doQuartiles (bool v) {
+    this.m_doQuartiles = v;
+  }
+    
+  String? m_pointValKey;  
+
+  String get pointValKey { 
+    if (this.m_pointValKey == null) {
+      this.m_pointValKey = "";
+    }
+    return this.m_pointValKey!;
+  }
+
+  void set pointValKey (String v) {
+    this.m_pointValKey = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -37,16 +61,16 @@ class ErrorBarSeries extends BoxPlotSeries {
     
     // NOTE: skip serialization of pointClass (type typeof ErrorBarPoint is ignored)} 
 
-    if (this.doQuartiles != null) {  
-      buffer.writeAll(["\"doQuartiles\":", this.doQuartiles, ","], "");
+    if (this.m_doQuartiles != null) {  
+      buffer.writeAll(["\"doQuartiles\":", this.m_doQuartiles, ","], "");
     }
 
     // NOTE: skip serialization of linkedParent (type ErrorBarSeries is ignored)} 
 
     // NOTE: skip serialization of pointArrayMap (type string[] is ignored)} 
 
-    if (this.pointValKey != null) {  
-      buffer.writeAll(["\"pointValKey\":", this.pointValKey, ","], "");
+    if (this.m_pointValKey != null) {  
+      buffer.writeAll(["\"pointValKey\":", this.m_pointValKey, ","], "");
     }
   }
 

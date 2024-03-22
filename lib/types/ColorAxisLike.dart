@@ -26,7 +26,19 @@ import 'OptionFragment.dart';
  */
 class ColorAxisLike extends AxisComposition {
   ColorAxisLike() : super();
-  double? index;
+  double? m_index;  
+
+  double get index { 
+    if (this.m_index == null) {
+      this.m_index = 0;
+    }
+    return this.m_index!;
+  }
+
+  void set index (double v) {
+    this.m_index = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -39,8 +51,8 @@ class ColorAxisLike extends AxisComposition {
 
     // NOTE: skip serialization of dataClasses (type DataClassOptions[] is ignored)} 
 
-    if (this.index != null) {  
-      buffer.writeAll(["\"index\":", this.index, ","], "");
+    if (this.m_index != null) {  
+      buffer.writeAll(["\"index\":", this.m_index, ","], "");
     }
 
     // NOTE: skip serialization of options (type Options is ignored)} 

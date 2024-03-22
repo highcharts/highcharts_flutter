@@ -24,11 +24,71 @@ import 'OptionFragment.dart';
  */
 class VBPPoint extends OptionFragment {
   VBPPoint() : super();
-  double? barX;
-  double? pointWidth;
-  double? volumeAll;
-  double? volumeNeg;
-  double? volumePos;
+  double? m_barX;  
+
+  double get barX { 
+    if (this.m_barX == null) {
+      this.m_barX = 0;
+    }
+    return this.m_barX!;
+  }
+
+  void set barX (double v) {
+    this.m_barX = v;
+  }
+    
+  double? m_pointWidth;  
+
+  double get pointWidth { 
+    if (this.m_pointWidth == null) {
+      this.m_pointWidth = 0;
+    }
+    return this.m_pointWidth!;
+  }
+
+  void set pointWidth (double v) {
+    this.m_pointWidth = v;
+  }
+    
+  double? m_volumeAll;  
+
+  double get volumeAll { 
+    if (this.m_volumeAll == null) {
+      this.m_volumeAll = 0;
+    }
+    return this.m_volumeAll!;
+  }
+
+  void set volumeAll (double v) {
+    this.m_volumeAll = v;
+  }
+    
+  double? m_volumeNeg;  
+
+  double get volumeNeg { 
+    if (this.m_volumeNeg == null) {
+      this.m_volumeNeg = 0;
+    }
+    return this.m_volumeNeg!;
+  }
+
+  void set volumeNeg (double v) {
+    this.m_volumeNeg = v;
+  }
+    
+  double? m_volumePos;  
+
+  double get volumePos { 
+    if (this.m_volumePos == null) {
+      this.m_volumePos = 0;
+    }
+    return this.m_volumePos!;
+  }
+
+  void set volumePos (double v) {
+    this.m_volumePos = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -37,28 +97,28 @@ class VBPPoint extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.barX != null) {  
-      buffer.writeAll(["\"barX\":", this.barX, ","], "");
+    if (this.m_barX != null) {  
+      buffer.writeAll(["\"barX\":", this.m_barX, ","], "");
     }
 
     // NOTE: skip serialization of negativeGraphic (type unknown is ignored)} 
 
-    if (this.pointWidth != null) {  
-      buffer.writeAll(["\"pointWidth\":", this.pointWidth, ","], "");
+    if (this.m_pointWidth != null) {  
+      buffer.writeAll(["\"pointWidth\":", this.m_pointWidth, ","], "");
     }
 
     // NOTE: skip serialization of series (type VBPIndicator is ignored)} 
 
-    if (this.volumeAll != null) {  
-      buffer.writeAll(["\"volumeAll\":", this.volumeAll, ","], "");
+    if (this.m_volumeAll != null) {  
+      buffer.writeAll(["\"volumeAll\":", this.m_volumeAll, ","], "");
     }
 
-    if (this.volumeNeg != null) {  
-      buffer.writeAll(["\"volumeNeg\":", this.volumeNeg, ","], "");
+    if (this.m_volumeNeg != null) {  
+      buffer.writeAll(["\"volumeNeg\":", this.m_volumeNeg, ","], "");
     }
 
-    if (this.volumePos != null) {  
-      buffer.writeAll(["\"volumePos\":", this.volumePos, ","], "");
+    if (this.m_volumePos != null) {  
+      buffer.writeAll(["\"volumePos\":", this.m_volumePos, ","], "");
     }
   }
 

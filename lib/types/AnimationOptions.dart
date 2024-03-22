@@ -23,8 +23,32 @@ import 'OptionFragment.dart';
  */
 class AnimationOptions extends OptionFragment {
   AnimationOptions() : super();
-  double? defer;
-  double? duration;
+  double? m_defer;  
+
+  double get defer { 
+    if (this.m_defer == null) {
+      this.m_defer = 0;
+    }
+    return this.m_defer!;
+  }
+
+  void set defer (double v) {
+    this.m_defer = v;
+  }
+    
+  double? m_duration;  
+
+  double get duration { 
+    if (this.m_duration == null) {
+      this.m_duration = 0;
+    }
+    return this.m_duration!;
+  }
+
+  void set duration (double v) {
+    this.m_duration = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -37,12 +61,12 @@ class AnimationOptions extends OptionFragment {
 
     // NOTE: skip serialization of curAnim (type Generic is ignored)} 
 
-    if (this.defer != null) {  
-      buffer.writeAll(["\"defer\":", this.defer, ","], "");
+    if (this.m_defer != null) {  
+      buffer.writeAll(["\"defer\":", this.m_defer, ","], "");
     }
 
-    if (this.duration != null) {  
-      buffer.writeAll(["\"duration\":", this.duration, ","], "");
+    if (this.m_duration != null) {  
+      buffer.writeAll(["\"duration\":", this.m_duration, ","], "");
     }
 
     // NOTE: skip serialization of easing (type Function is ignored)} 
