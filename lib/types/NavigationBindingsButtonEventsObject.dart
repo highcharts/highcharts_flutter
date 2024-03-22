@@ -1,0 +1,42 @@
+/**
+ * Highcharts Flutter Integration
+ * 
+ * Copyright (c), Highsoft AS 2023
+ * 
+ * sales@highcharts.com
+ * support@highcharts.com
+ * 
+ * The use of this software requires a valid license.
+ * 
+ * See https://highcharts.com/license
+ * 
+ *
+ * Built for Highcharts v.xx.
+ * Build stamp: 2024-03-22
+ *
+ */ 
+
+import 'HTMLElement.dart';
+import 'NavigationBindingsOptions.dart';
+import 'OptionFragment.dart';
+
+/** 
+ * NavigationBindingsButtonEventsObject 
+ */
+class NavigationBindingsButtonEventsObject extends OptionFragment {
+  NavigationBindingsButtonEventsObject() : super();
+  
+
+  //////////////////////////////////////////////////////////////////////////////
+  
+  @override
+  void toJSONInner(StringBuffer buffer) {
+    super.toJSONInner(buffer);
+
+    
+    // NOTE: skip serialization of button (type HTMLElement is ignored)} 
+
+    // NOTE: skip serialization of events (type NavigationBindingsOptions is ignored)} 
+  }
+
+}

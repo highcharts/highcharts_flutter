@@ -1,0 +1,39 @@
+/**
+ * Highcharts Flutter Integration
+ * 
+ * Copyright (c), Highsoft AS 2023
+ * 
+ * sales@highcharts.com
+ * support@highcharts.com
+ * 
+ * The use of this software requires a valid license.
+ * 
+ * See https://highcharts.com/license
+ * 
+ *
+ * Built for Highcharts v.xx.
+ * Build stamp: 2024-03-22
+ *
+ */ 
+
+import 'OptionFragment.dart';
+
+/** 
+ * JsPDFEvent 
+ */
+class JsPDFEvent extends OptionFragment {
+  JsPDFEvent() : super();
+  // NOTE: 0 skipped - type string is ignored in gen
+
+
+  //////////////////////////////////////////////////////////////////////////////
+  
+  @override
+  void toJSONInner(StringBuffer buffer) {
+    super.toJSONInner(buffer);
+
+    
+    // NOTE: skip serialization of 0 (type string is ignored)} 
+  }
+
+}

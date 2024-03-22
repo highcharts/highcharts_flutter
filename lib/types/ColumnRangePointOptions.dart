@@ -1,0 +1,39 @@
+/**
+ * Highcharts Flutter Integration
+ * 
+ * Copyright (c), Highsoft AS 2023
+ * 
+ * sales@highcharts.com
+ * support@highcharts.com
+ * 
+ * The use of this software requires a valid license.
+ * 
+ * See https://highcharts.com/license
+ * 
+ *
+ * Built for Highcharts v.xx.
+ * Build stamp: 2024-03-22
+ *
+ */ 
+
+import 'AreaRangePointOptions.dart';
+import 'OptionFragment.dart';
+
+/** 
+ * ColumnRangePointOptions 
+ */
+class ColumnRangePointOptions extends AreaRangePointOptions {
+  ColumnRangePointOptions() : super();
+  
+
+  //////////////////////////////////////////////////////////////////////////////
+  
+  @override
+  void toJSONInner(StringBuffer buffer) {
+    super.toJSONInner(buffer);
+
+    
+    
+  }
+
+}
