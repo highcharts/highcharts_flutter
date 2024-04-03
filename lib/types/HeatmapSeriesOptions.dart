@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -31,33 +31,33 @@ class HeatmapSeriesOptions extends ScatterSeriesOptions {
    * 
    * Defaults to '1'. 
       */
-  double? m_colsize;  
+  double? _colsize;  
 
   double get colsize { 
-    if (this.m_colsize == null) {
-      this.m_colsize = 0;
+    if (this._colsize == null) {
+      this._colsize = 0;
     }
-    return this.m_colsize!;
+    return this._colsize!;
   }
 
   void set colsize (double v) {
-    this.m_colsize = v;
+    this._colsize = v;
   }
     
   /**
    * Make the heatmap render its data points as an interpolated image.  
       */
-  bool? m_interpolation;  
+  bool? _interpolation;  
 
   bool get interpolation { 
-    if (this.m_interpolation == null) {
-      this.m_interpolation = false;
+    if (this._interpolation == null) {
+      this._interpolation = false;
     }
-    return this.m_interpolation!;
+    return this._interpolation!;
   }
 
   void set interpolation (bool v) {
-    this.m_interpolation = v;
+    this._interpolation = v;
   }
     
   /**
@@ -78,17 +78,17 @@ class HeatmapSeriesOptions extends ScatterSeriesOptions {
    * 
    * Defaults to '#f7f7f7'. 
       */
-  String? m_nullColor;  
+  String? _nullColor;  
 
   String get nullColor { 
-    if (this.m_nullColor == null) {
-      this.m_nullColor = "";
+    if (this._nullColor == null) {
+      this._nullColor = "";
     }
-    return this.m_nullColor!;
+    return this._nullColor!;
   }
 
   void set nullColor (String v) {
-    this.m_nullColor = v;
+    this._nullColor = v;
   }
     
   /**
@@ -96,17 +96,17 @@ class HeatmapSeriesOptions extends ScatterSeriesOptions {
    * 
    * Defaults to '0'. 
       */
-  double? m_pointPadding;  
+  double? _pointPadding;  
 
   double get pointPadding { 
-    if (this.m_pointPadding == null) {
-      this.m_pointPadding = 0;
+    if (this._pointPadding == null) {
+      this._pointPadding = 0;
     }
-    return this.m_pointPadding!;
+    return this._pointPadding!;
   }
 
   void set pointPadding (double v) {
-    this.m_pointPadding = v;
+    this._pointPadding = v;
   }
     
   /**
@@ -114,17 +114,17 @@ class HeatmapSeriesOptions extends ScatterSeriesOptions {
    * 
    * Defaults to '1'. 
       */
-  double? m_rowsize;  
+  double? _rowsize;  
 
   double get rowsize { 
-    if (this.m_rowsize == null) {
-      this.m_rowsize = 0;
+    if (this._rowsize == null) {
+      this._rowsize = 0;
     }
-    return this.m_rowsize!;
+    return this._rowsize!;
   }
 
   void set rowsize (double v) {
-    this.m_rowsize = v;
+    this._rowsize = v;
   }
     
   // NOTE: states skipped - type Generic is ignored in gen
@@ -137,28 +137,26 @@ class HeatmapSeriesOptions extends ScatterSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_colsize != null) {  
-      buffer.writeAll(["\"colsize\":", this.m_colsize, ","], "");
+    if (this._colsize != null) {  
+      buffer.writeAll(["\"colsize\":", this._colsize, ","], "");
     }
 
-    if (this.m_interpolation != null) {  
-      buffer.writeAll(["\"interpolation\":", this.m_interpolation, ","], "");
+    if (this._interpolation != null) {  
+      buffer.writeAll(["\"interpolation\":", this._interpolation, ","], "");
     }
 
-    if (this.m_marker != null) {  
-      buffer.writeAll(["\"marker\":", this.m_marker?.toJSON(), ","], "");
+    // NOTE: skip serialization of marker (type HeatmapPointMarkerOptions is ignored)} 
+
+    if (this._nullColor != null) {  
+      buffer.writeAll(["\"nullColor\":\`", this._nullColor, "\`,"], "");
     }
 
-    if (this.m_nullColor != null) {  
-      buffer.writeAll(["\"nullColor\":", this.m_nullColor, ","], "");
+    if (this._pointPadding != null) {  
+      buffer.writeAll(["\"pointPadding\":", this._pointPadding, ","], "");
     }
 
-    if (this.m_pointPadding != null) {  
-      buffer.writeAll(["\"pointPadding\":", this.m_pointPadding, ","], "");
-    }
-
-    if (this.m_rowsize != null) {  
-      buffer.writeAll(["\"rowsize\":", this.m_rowsize, ","], "");
+    if (this._rowsize != null) {  
+      buffer.writeAll(["\"rowsize\":", this._rowsize, ","], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 

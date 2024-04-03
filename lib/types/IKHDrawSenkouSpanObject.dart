@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -27,17 +27,17 @@ import 'OptionFragment.dart';
  */
 class IKHDrawSenkouSpanObject extends OptionFragment {
   IKHDrawSenkouSpanObject() : super();
-  String? m_color;  
+  String? _color;  
 
   String get color { 
-    if (this.m_color == null) {
-      this.m_color = "";
+    if (this._color == null) {
+      this._color = "";
     }
-    return this.m_color!;
+    return this._color!;
   }
 
   void set color (String v) {
-    this.m_color = v;
+    this._color = v;
   }
     
 
@@ -54,8 +54,8 @@ class IKHDrawSenkouSpanObject extends OptionFragment {
 
     // NOTE: skip serialization of nextPoints (type IKHPoint[] is ignored)} 
 
-    if (this.m_color != null) {  
-      buffer.writeAll(["\"color\":", this.m_color, ","], "");
+    if (this._color != null) {  
+      buffer.writeAll(["\"color\":\`", this._color, "\`,"], "");
     }
 
     // NOTE: skip serialization of options (type IKHOptions is ignored)} 

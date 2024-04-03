@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -25,30 +25,30 @@ import 'OptionFragment.dart';
  */
 class ColumnEvent extends DataEvent {
   ColumnEvent() : super();
-  String? m_type;  
+  String? _type;  
 
   String get type { 
-    if (this.m_type == null) {
-      this.m_type = "";
+    if (this._type == null) {
+      this._type = "";
     }
-    return this.m_type!;
+    return this._type!;
   }
 
   void set type (String v) {
-    this.m_type = v;
+    this._type = v;
   }
     
-  double? m_rowIndex;  
+  double? _rowIndex;  
 
   double get rowIndex { 
-    if (this.m_rowIndex == null) {
-      this.m_rowIndex = 0;
+    if (this._rowIndex == null) {
+      this._rowIndex = 0;
     }
-    return this.m_rowIndex!;
+    return this._rowIndex!;
   }
 
   void set rowIndex (double v) {
-    this.m_rowIndex = v;
+    this._rowIndex = v;
   }
     
 
@@ -59,16 +59,16 @@ class ColumnEvent extends DataEvent {
     super.toJSONInner(buffer);
 
     
-    if (this.m_type != null) {  
-      buffer.writeAll(["\"type\":", this.m_type, ","], "");
+    if (this._type != null) {  
+      buffer.writeAll(["\"type\":\`", this._type, "\`,"], "");
     }
 
     // NOTE: skip serialization of columns (type ColumnCollection is ignored)} 
 
     // NOTE: skip serialization of columnNames (type string[] is ignored)} 
 
-    if (this.m_rowIndex != null) {  
-      buffer.writeAll(["\"rowIndex\":", this.m_rowIndex, ","], "");
+    if (this._rowIndex != null) {  
+      buffer.writeAll(["\"rowIndex\":", this._rowIndex, ","], "");
     }
   }
 

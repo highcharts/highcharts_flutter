@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -25,30 +25,30 @@ import 'OptionFragment.dart';
  */
 class TreeGridNode extends TreeNode {
   TreeGridNode() : super();
-  double? m_pos;  
+  double? _pos;  
 
   double get pos { 
-    if (this.m_pos == null) {
-      this.m_pos = 0;
+    if (this._pos == null) {
+      this._pos = 0;
     }
-    return this.m_pos!;
+    return this._pos!;
   }
 
   void set pos (double v) {
-    this.m_pos = v;
+    this._pos = v;
   }
     
-  double? m_seriesIndex;  
+  double? _seriesIndex;  
 
   double get seriesIndex { 
-    if (this.m_seriesIndex == null) {
-      this.m_seriesIndex = 0;
+    if (this._seriesIndex == null) {
+      this._seriesIndex = 0;
     }
-    return this.m_seriesIndex!;
+    return this._seriesIndex!;
   }
 
   void set seriesIndex (double v) {
-    this.m_seriesIndex = v;
+    this._seriesIndex = v;
   }
     
 
@@ -61,12 +61,12 @@ class TreeGridNode extends TreeNode {
     
     // NOTE: skip serialization of data (type PointOptions is ignored)} 
 
-    if (this.m_pos != null) {  
-      buffer.writeAll(["\"pos\":", this.m_pos, ","], "");
+    if (this._pos != null) {  
+      buffer.writeAll(["\"pos\":", this._pos, ","], "");
     }
 
-    if (this.m_seriesIndex != null) {  
-      buffer.writeAll(["\"seriesIndex\":", this.m_seriesIndex, ","], "");
+    if (this._seriesIndex != null) {  
+      buffer.writeAll(["\"seriesIndex\":", this._seriesIndex, ","], "");
     }
   }
 

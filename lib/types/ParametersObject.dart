@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,30 +23,30 @@ import 'OptionFragment.dart';
  */
 class ParametersObject extends OptionFragment {
   ParametersObject() : super();
-  String? m_category;  
+  String? _category;  
 
   String get category { 
-    if (this.m_category == null) {
-      this.m_category = "";
+    if (this._category == null) {
+      this._category = "";
     }
-    return this.m_category!;
+    return this._category!;
   }
 
   void set category (String v) {
-    this.m_category = v;
+    this._category = v;
   }
     
-  double? m_tickmarkOffset;  
+  double? _tickmarkOffset;  
 
   double get tickmarkOffset { 
-    if (this.m_tickmarkOffset == null) {
-      this.m_tickmarkOffset = 0;
+    if (this._tickmarkOffset == null) {
+      this._tickmarkOffset = 0;
     }
-    return this.m_tickmarkOffset!;
+    return this._tickmarkOffset!;
   }
 
   void set tickmarkOffset (double v) {
-    this.m_tickmarkOffset = v;
+    this._tickmarkOffset = v;
   }
     
 
@@ -57,14 +57,14 @@ class ParametersObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_category != null) {  
-      buffer.writeAll(["\"category\":", this.m_category, ","], "");
+    if (this._category != null) {  
+      buffer.writeAll(["\"category\":\`", this._category, "\`,"], "");
     }
 
     // NOTE: skip serialization of options (type AnyRecord is ignored)} 
 
-    if (this.m_tickmarkOffset != null) {  
-      buffer.writeAll(["\"tickmarkOffset\":", this.m_tickmarkOffset, ","], "");
+    if (this._tickmarkOffset != null) {  
+      buffer.writeAll(["\"tickmarkOffset\":", this._tickmarkOffset, ","], "");
     }
   }
 

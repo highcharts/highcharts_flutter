@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,43 +24,43 @@ import 'OptionFragment.dart';
  */
 class LangAccessibilityScreenReaderSectionOptions extends OptionFragment {
   LangAccessibilityScreenReaderSectionOptions() : super();
-  String? m_afterRegionLabel;  
+  String? _afterRegionLabel;  
 
   String get afterRegionLabel { 
-    if (this.m_afterRegionLabel == null) {
-      this.m_afterRegionLabel = "";
+    if (this._afterRegionLabel == null) {
+      this._afterRegionLabel = "";
     }
-    return this.m_afterRegionLabel!;
+    return this._afterRegionLabel!;
   }
 
   void set afterRegionLabel (String v) {
-    this.m_afterRegionLabel = v;
+    this._afterRegionLabel = v;
   }
     
-  String? m_beforeRegionLabel;  
+  String? _beforeRegionLabel;  
 
   String get beforeRegionLabel { 
-    if (this.m_beforeRegionLabel == null) {
-      this.m_beforeRegionLabel = "";
+    if (this._beforeRegionLabel == null) {
+      this._beforeRegionLabel = "";
     }
-    return this.m_beforeRegionLabel!;
+    return this._beforeRegionLabel!;
   }
 
   void set beforeRegionLabel (String v) {
-    this.m_beforeRegionLabel = v;
+    this._beforeRegionLabel = v;
   }
     
-  String? m_endOfChartMarker;  
+  String? _endOfChartMarker;  
 
   String get endOfChartMarker { 
-    if (this.m_endOfChartMarker == null) {
-      this.m_endOfChartMarker = "";
+    if (this._endOfChartMarker == null) {
+      this._endOfChartMarker = "";
     }
-    return this.m_endOfChartMarker!;
+    return this._endOfChartMarker!;
   }
 
   void set endOfChartMarker (String v) {
-    this.m_endOfChartMarker = v;
+    this._endOfChartMarker = v;
   }
     
 
@@ -71,18 +71,18 @@ class LangAccessibilityScreenReaderSectionOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_afterRegionLabel != null) {  
-      buffer.writeAll(["\"afterRegionLabel\":", this.m_afterRegionLabel, ","], "");
+    if (this._afterRegionLabel != null) {  
+      buffer.writeAll(["\"afterRegionLabel\":\`", this._afterRegionLabel, "\`,"], "");
     }
 
     // NOTE: skip serialization of annotations (type LangAccessibilityAnnotationOptions is ignored)} 
 
-    if (this.m_beforeRegionLabel != null) {  
-      buffer.writeAll(["\"beforeRegionLabel\":", this.m_beforeRegionLabel, ","], "");
+    if (this._beforeRegionLabel != null) {  
+      buffer.writeAll(["\"beforeRegionLabel\":\`", this._beforeRegionLabel, "\`,"], "");
     }
 
-    if (this.m_endOfChartMarker != null) {  
-      buffer.writeAll(["\"endOfChartMarker\":", this.m_endOfChartMarker, ","], "");
+    if (this._endOfChartMarker != null) {  
+      buffer.writeAll(["\"endOfChartMarker\":\`", this._endOfChartMarker, "\`,"], "");
     }
   }
 

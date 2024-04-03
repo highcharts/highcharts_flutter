@@ -12,10 +12,11 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
+import 'RangeSelectorButtonOptions.dart';
 import 'SVGElement.dart';
 import 'OptionFragment.dart';
 
@@ -24,17 +25,82 @@ import 'OptionFragment.dart';
  */
 class AxisSetExtremesEventObject extends OptionFragment {
   AxisSetExtremesEventObject() : super();
-  String? m_trigger;  
+  double? _max;  
+
+  double get max { 
+    if (this._max == null) {
+      this._max = 0;
+    }
+    return this._max!;
+  }
+
+  void set max (double v) {
+    this._max = v;
+  }
+    
+  double? _min;  
+
+  double get min { 
+    if (this._min == null) {
+      this._min = 0;
+    }
+    return this._min!;
+  }
+
+  void set min (double v) {
+    this._min = v;
+  }
+    
+  double? _move;  
+
+  double get move { 
+    if (this._move == null) {
+      this._move = 0;
+    }
+    return this._move!;
+  }
+
+  void set move (double v) {
+    this._move = v;
+  }
+    
+  double? _scale;  
+
+  double get scale { 
+    if (this._scale == null) {
+      this._scale = 0;
+    }
+    return this._scale!;
+  }
+
+  void set scale (double v) {
+    this._scale = v;
+  }
+    
+  String? _trigger;  
 
   String get trigger { 
-    if (this.m_trigger == null) {
-      this.m_trigger = "";
+    if (this._trigger == null) {
+      this._trigger = "";
     }
-    return this.m_trigger!;
+    return this._trigger!;
   }
 
   void set trigger (String v) {
-    this.m_trigger = v;
+    this._trigger = v;
+  }
+    
+  String? _triggerOp;  
+
+  String get triggerOp { 
+    if (this._triggerOp == null) {
+      this._triggerOp = "";
+    }
+    return this._triggerOp!;
+  }
+
+  void set triggerOp (String v) {
+    this._triggerOp = v;
   }
     
 
@@ -45,12 +111,36 @@ class AxisSetExtremesEventObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
+    // NOTE: skip serialization of DOMEvent (type any is ignored)} 
+
+    if (this._max != null) {  
+      buffer.writeAll(["\"max\":", this._max, ","], "");
+    }
+
+    if (this._min != null) {  
+      buffer.writeAll(["\"min\":", this._min, ","], "");
+    }
+
+    if (this._move != null) {  
+      buffer.writeAll(["\"move\":", this._move, ","], "");
+    }
+
     // NOTE: skip serialization of preventDefault (type Function is ignored)} 
+
+    // NOTE: skip serialization of rangeSelectorButton (type RangeSelectorButtonOptions is ignored)} 
+
+    if (this._scale != null) {  
+      buffer.writeAll(["\"scale\":", this._scale, ","], "");
+    }
 
     // NOTE: skip serialization of target (type SVGElement is ignored)} 
 
-    if (this.m_trigger != null) {  
-      buffer.writeAll(["\"trigger\":", this.m_trigger, ","], "");
+    if (this._trigger != null) {  
+      buffer.writeAll(["\"trigger\":\`", this._trigger, "\`,"], "");
+    }
+
+    if (this._triggerOp != null) {  
+      buffer.writeAll(["\"triggerOp\":\`", this._triggerOp, "\`,"], "");
     }
 
     // NOTE: skip serialization of type (type "setExtremes" is ignored)} 

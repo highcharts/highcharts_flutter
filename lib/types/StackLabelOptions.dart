@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,238 +24,238 @@ import 'OptionFragment.dart';
  */
 class StackLabelOptions extends OptionFragment {
   StackLabelOptions() : super();
-  String? m_align;  
+  String? _align;  
 
   String get align { 
-    if (this.m_align == null) {
-      this.m_align = "";
+    if (this._align == null) {
+      this._align = "";
     }
-    return this.m_align!;
+    return this._align!;
   }
 
   void set align (String v) {
-    this.m_align = v;
+    this._align = v;
   }
     
-  bool? m_allowOverlap;  
+  bool? _allowOverlap;  
 
   bool get allowOverlap { 
-    if (this.m_allowOverlap == null) {
-      this.m_allowOverlap = false;
+    if (this._allowOverlap == null) {
+      this._allowOverlap = false;
     }
-    return this.m_allowOverlap!;
+    return this._allowOverlap!;
   }
 
   void set allowOverlap (bool v) {
-    this.m_allowOverlap = v;
+    this._allowOverlap = v;
   }
     
-  String? m_backgroundColor;  
+  String? _backgroundColor;  
 
   String get backgroundColor { 
-    if (this.m_backgroundColor == null) {
-      this.m_backgroundColor = "";
+    if (this._backgroundColor == null) {
+      this._backgroundColor = "";
     }
-    return this.m_backgroundColor!;
+    return this._backgroundColor!;
   }
 
   void set backgroundColor (String v) {
-    this.m_backgroundColor = v;
+    this._backgroundColor = v;
   }
     
-  String? m_borderColor;  
+  String? _borderColor;  
 
   String get borderColor { 
-    if (this.m_borderColor == null) {
-      this.m_borderColor = "";
+    if (this._borderColor == null) {
+      this._borderColor = "";
     }
-    return this.m_borderColor!;
+    return this._borderColor!;
   }
 
   void set borderColor (String v) {
-    this.m_borderColor = v;
+    this._borderColor = v;
   }
     
-  double? m_borderRadius;  
+  double? _borderRadius;  
 
   double get borderRadius { 
-    if (this.m_borderRadius == null) {
-      this.m_borderRadius = 0;
+    if (this._borderRadius == null) {
+      this._borderRadius = 0;
     }
-    return this.m_borderRadius!;
+    return this._borderRadius!;
   }
 
   void set borderRadius (double v) {
-    this.m_borderRadius = v;
+    this._borderRadius = v;
   }
     
-  double? m_borderWidth;  
+  double? _borderWidth;  
 
   double get borderWidth { 
-    if (this.m_borderWidth == null) {
-      this.m_borderWidth = 0;
+    if (this._borderWidth == null) {
+      this._borderWidth = 0;
     }
-    return this.m_borderWidth!;
+    return this._borderWidth!;
   }
 
   void set borderWidth (double v) {
-    this.m_borderWidth = v;
+    this._borderWidth = v;
   }
     
-  bool? m_crop;  
+  bool? _crop;  
 
   bool get crop { 
-    if (this.m_crop == null) {
-      this.m_crop = false;
+    if (this._crop == null) {
+      this._crop = false;
     }
-    return this.m_crop!;
+    return this._crop!;
   }
 
   void set crop (bool v) {
-    this.m_crop = v;
+    this._crop = v;
   }
     
-  bool? m_enabled;  
+  bool? _enabled;  
 
   bool get enabled { 
-    if (this.m_enabled == null) {
-      this.m_enabled = false;
+    if (this._enabled == null) {
+      this._enabled = false;
     }
-    return this.m_enabled!;
+    return this._enabled!;
   }
 
   void set enabled (bool v) {
-    this.m_enabled = v;
+    this._enabled = v;
   }
     
-  String? m_format;  
+  String? _format;  
 
   String get format { 
-    if (this.m_format == null) {
-      this.m_format = "";
+    if (this._format == null) {
+      this._format = "";
     }
-    return this.m_format!;
+    return this._format!;
   }
 
   void set format (String v) {
-    this.m_format = v;
+    this._format = v;
   }
     
-  String? m_overflow;  
+  String? _overflow;  
 
   String get overflow { 
-    if (this.m_overflow == null) {
-      this.m_overflow = "";
+    if (this._overflow == null) {
+      this._overflow = "";
     }
-    return this.m_overflow!;
+    return this._overflow!;
   }
 
   void set overflow (String v) {
-    this.m_overflow = v;
+    this._overflow = v;
   }
     
-  double? m_padding;  
+  double? _padding;  
 
   double get padding { 
-    if (this.m_padding == null) {
-      this.m_padding = 0;
+    if (this._padding == null) {
+      this._padding = 0;
     }
-    return this.m_padding!;
+    return this._padding!;
   }
 
   void set padding (double v) {
-    this.m_padding = v;
+    this._padding = v;
   }
     
-  double? m_rotation;  
+  double? _rotation;  
 
   double get rotation { 
-    if (this.m_rotation == null) {
-      this.m_rotation = 0;
+    if (this._rotation == null) {
+      this._rotation = 0;
     }
-    return this.m_rotation!;
+    return this._rotation!;
   }
 
   void set rotation (double v) {
-    this.m_rotation = v;
+    this._rotation = v;
   }
     
-  String? m_shape;  
+  String? _shape;  
 
   String get shape { 
-    if (this.m_shape == null) {
-      this.m_shape = "";
+    if (this._shape == null) {
+      this._shape = "";
     }
-    return this.m_shape!;
+    return this._shape!;
   }
 
   void set shape (String v) {
-    this.m_shape = v;
+    this._shape = v;
   }
     
-  String? m_textAlign;  
+  String? _textAlign;  
 
   String get textAlign { 
-    if (this.m_textAlign == null) {
-      this.m_textAlign = "";
+    if (this._textAlign == null) {
+      this._textAlign = "";
     }
-    return this.m_textAlign!;
+    return this._textAlign!;
   }
 
   void set textAlign (String v) {
-    this.m_textAlign = v;
+    this._textAlign = v;
   }
     
-  bool? m_useHTML;  
+  bool? _useHTML;  
 
   bool get useHTML { 
-    if (this.m_useHTML == null) {
-      this.m_useHTML = false;
+    if (this._useHTML == null) {
+      this._useHTML = false;
     }
-    return this.m_useHTML!;
+    return this._useHTML!;
   }
 
   void set useHTML (bool v) {
-    this.m_useHTML = v;
+    this._useHTML = v;
   }
     
-  String? m_verticalAlign;  
+  String? _verticalAlign;  
 
   String get verticalAlign { 
-    if (this.m_verticalAlign == null) {
-      this.m_verticalAlign = "";
+    if (this._verticalAlign == null) {
+      this._verticalAlign = "";
     }
-    return this.m_verticalAlign!;
+    return this._verticalAlign!;
   }
 
   void set verticalAlign (String v) {
-    this.m_verticalAlign = v;
+    this._verticalAlign = v;
   }
     
-  double? m_x;  
+  double? _x;  
 
   double get x { 
-    if (this.m_x == null) {
-      this.m_x = 0;
+    if (this._x == null) {
+      this._x = 0;
     }
-    return this.m_x!;
+    return this._x!;
   }
 
   void set x (double v) {
-    this.m_x = v;
+    this._x = v;
   }
     
-  double? m_y;  
+  double? _y;  
 
   double get y { 
-    if (this.m_y == null) {
-      this.m_y = 0;
+    if (this._y == null) {
+      this._y = 0;
     }
-    return this.m_y!;
+    return this._y!;
   }
 
   void set y (double v) {
-    this.m_y = v;
+    this._y = v;
   }
     
 
@@ -268,78 +268,78 @@ class StackLabelOptions extends OptionFragment {
     
     // NOTE: skip serialization of animation (type Generic is ignored)} 
 
-    if (this.m_align != null) {  
-      buffer.writeAll(["\"align\":", this.m_align, ","], "");
+    if (this._align != null) {  
+      buffer.writeAll(["\"align\":\`", this._align, "\`,"], "");
     }
 
-    if (this.m_allowOverlap != null) {  
-      buffer.writeAll(["\"allowOverlap\":", this.m_allowOverlap, ","], "");
+    if (this._allowOverlap != null) {  
+      buffer.writeAll(["\"allowOverlap\":", this._allowOverlap, ","], "");
     }
 
-    if (this.m_backgroundColor != null) {  
-      buffer.writeAll(["\"backgroundColor\":", this.m_backgroundColor, ","], "");
+    if (this._backgroundColor != null) {  
+      buffer.writeAll(["\"backgroundColor\":\`", this._backgroundColor, "\`,"], "");
     }
 
-    if (this.m_borderColor != null) {  
-      buffer.writeAll(["\"borderColor\":", this.m_borderColor, ","], "");
+    if (this._borderColor != null) {  
+      buffer.writeAll(["\"borderColor\":\`", this._borderColor, "\`,"], "");
     }
 
-    if (this.m_borderRadius != null) {  
-      buffer.writeAll(["\"borderRadius\":", this.m_borderRadius, ","], "");
+    if (this._borderRadius != null) {  
+      buffer.writeAll(["\"borderRadius\":", this._borderRadius, ","], "");
     }
 
-    if (this.m_borderWidth != null) {  
-      buffer.writeAll(["\"borderWidth\":", this.m_borderWidth, ","], "");
+    if (this._borderWidth != null) {  
+      buffer.writeAll(["\"borderWidth\":", this._borderWidth, ","], "");
     }
 
-    if (this.m_crop != null) {  
-      buffer.writeAll(["\"crop\":", this.m_crop, ","], "");
+    if (this._crop != null) {  
+      buffer.writeAll(["\"crop\":", this._crop, ","], "");
     }
 
-    if (this.m_enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this.m_enabled, ","], "");
+    if (this._enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this._enabled, ","], "");
     }
 
-    if (this.m_format != null) {  
-      buffer.writeAll(["\"format\":", this.m_format, ","], "");
+    if (this._format != null) {  
+      buffer.writeAll(["\"format\":\`", this._format, "\`,"], "");
     }
 
-    if (this.m_overflow != null) {  
-      buffer.writeAll(["\"overflow\":", this.m_overflow, ","], "");
+    if (this._overflow != null) {  
+      buffer.writeAll(["\"overflow\":\`", this._overflow, "\`,"], "");
     }
 
-    if (this.m_padding != null) {  
-      buffer.writeAll(["\"padding\":", this.m_padding, ","], "");
+    if (this._padding != null) {  
+      buffer.writeAll(["\"padding\":", this._padding, ","], "");
     }
 
-    if (this.m_rotation != null) {  
-      buffer.writeAll(["\"rotation\":", this.m_rotation, ","], "");
+    if (this._rotation != null) {  
+      buffer.writeAll(["\"rotation\":", this._rotation, ","], "");
     }
 
-    if (this.m_shape != null) {  
-      buffer.writeAll(["\"shape\":", this.m_shape, ","], "");
+    if (this._shape != null) {  
+      buffer.writeAll(["\"shape\":\`", this._shape, "\`,"], "");
     }
 
     // NOTE: skip serialization of style (type CSSObject is ignored)} 
 
-    if (this.m_textAlign != null) {  
-      buffer.writeAll(["\"textAlign\":", this.m_textAlign, ","], "");
+    if (this._textAlign != null) {  
+      buffer.writeAll(["\"textAlign\":\`", this._textAlign, "\`,"], "");
     }
 
-    if (this.m_useHTML != null) {  
-      buffer.writeAll(["\"useHTML\":", this.m_useHTML, ","], "");
+    if (this._useHTML != null) {  
+      buffer.writeAll(["\"useHTML\":", this._useHTML, ","], "");
     }
 
-    if (this.m_verticalAlign != null) {  
-      buffer.writeAll(["\"verticalAlign\":", this.m_verticalAlign, ","], "");
+    if (this._verticalAlign != null) {  
+      buffer.writeAll(["\"verticalAlign\":\`", this._verticalAlign, "\`,"], "");
     }
 
-    if (this.m_x != null) {  
-      buffer.writeAll(["\"x\":", this.m_x, ","], "");
+    if (this._x != null) {  
+      buffer.writeAll(["\"x\":", this._x, ","], "");
     }
 
-    if (this.m_y != null) {  
-      buffer.writeAll(["\"y\":", this.m_y, ","], "");
+    if (this._y != null) {  
+      buffer.writeAll(["\"y\":", this._y, ","], "");
     }
   }
 

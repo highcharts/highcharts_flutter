@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -25,17 +25,17 @@ import 'OptionFragment.dart';
  */
 class DirtyObject extends OptionFragment {
   DirtyObject() : super();
-  bool? m_hasDirty;  
+  bool? _hasDirty;  
 
   bool get hasDirty { 
-    if (this.m_hasDirty == null) {
-      this.m_hasDirty = false;
+    if (this._hasDirty == null) {
+      this._hasDirty = false;
     }
-    return this.m_hasDirty!;
+    return this._hasDirty!;
   }
 
   void set hasDirty (bool v) {
-    this.m_hasDirty = v;
+    this._hasDirty = v;
   }
     
 
@@ -48,8 +48,8 @@ class DirtyObject extends OptionFragment {
     
     // NOTE: skip serialization of allSeries (type Generic is ignored)} 
 
-    if (this.m_hasDirty != null) {  
-      buffer.writeAll(["\"hasDirty\":", this.m_hasDirty, ","], "");
+    if (this._hasDirty != null) {  
+      buffer.writeAll(["\"hasDirty\":", this._hasDirty, ","], "");
     }
 
     // NOTE: skip serialization of newPoint (type PointComposition is ignored)} 

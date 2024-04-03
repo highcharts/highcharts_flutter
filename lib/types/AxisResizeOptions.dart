@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,95 +24,95 @@ import 'OptionFragment.dart';
  */
 class AxisResizeOptions extends OptionFragment {
   AxisResizeOptions() : super();
-  String? m_cursor;  
+  String? _cursor;  
 
   String get cursor { 
-    if (this.m_cursor == null) {
-      this.m_cursor = "";
+    if (this._cursor == null) {
+      this._cursor = "";
     }
-    return this.m_cursor!;
+    return this._cursor!;
   }
 
   void set cursor (String v) {
-    this.m_cursor = v;
+    this._cursor = v;
   }
     
-  bool? m_enabled;  
+  bool? _enabled;  
 
   bool get enabled { 
-    if (this.m_enabled == null) {
-      this.m_enabled = false;
+    if (this._enabled == null) {
+      this._enabled = false;
     }
-    return this.m_enabled!;
+    return this._enabled!;
   }
 
   void set enabled (bool v) {
-    this.m_enabled = v;
+    this._enabled = v;
   }
     
-  String? m_lineColor;  
+  String? _lineColor;  
 
   String get lineColor { 
-    if (this.m_lineColor == null) {
-      this.m_lineColor = "";
+    if (this._lineColor == null) {
+      this._lineColor = "";
     }
-    return this.m_lineColor!;
+    return this._lineColor!;
   }
 
   void set lineColor (String v) {
-    this.m_lineColor = v;
+    this._lineColor = v;
   }
     
-  String? m_lineDashStyle;  
+  String? _lineDashStyle;  
 
   String get lineDashStyle { 
-    if (this.m_lineDashStyle == null) {
-      this.m_lineDashStyle = "";
+    if (this._lineDashStyle == null) {
+      this._lineDashStyle = "";
     }
-    return this.m_lineDashStyle!;
+    return this._lineDashStyle!;
   }
 
   void set lineDashStyle (String v) {
-    this.m_lineDashStyle = v;
+    this._lineDashStyle = v;
   }
     
-  double? m_lineWidth;  
+  double? _lineWidth;  
 
   double get lineWidth { 
-    if (this.m_lineWidth == null) {
-      this.m_lineWidth = 0;
+    if (this._lineWidth == null) {
+      this._lineWidth = 0;
     }
-    return this.m_lineWidth!;
+    return this._lineWidth!;
   }
 
   void set lineWidth (double v) {
-    this.m_lineWidth = v;
+    this._lineWidth = v;
   }
     
-  double? m_x;  
+  double? _x;  
 
   double get x { 
-    if (this.m_x == null) {
-      this.m_x = 0;
+    if (this._x == null) {
+      this._x = 0;
     }
-    return this.m_x!;
+    return this._x!;
   }
 
   void set x (double v) {
-    this.m_x = v;
+    this._x = v;
   }
     
-  double? m_y;  
+  double? _y;  
 
   double get y { 
-    if (this.m_y == null) {
-      this.m_y = 0;
+    if (this._y == null) {
+      this._y = 0;
     }
-    return this.m_y!;
+    return this._y!;
   }
 
   void set y (double v) {
-    this.m_y = v;
+    this._y = v;
   }
     
 
@@ -125,32 +125,32 @@ class AxisResizeOptions extends OptionFragment {
     
     // NOTE: skip serialization of controlledAxis (type AxisResizeControlledAxisOptions is ignored)} 
 
-    if (this.m_cursor != null) {  
-      buffer.writeAll(["\"cursor\":", this.m_cursor, ","], "");
+    if (this._cursor != null) {  
+      buffer.writeAll(["\"cursor\":\`", this._cursor, "\`,"], "");
     }
 
-    if (this.m_enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this.m_enabled, ","], "");
+    if (this._enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this._enabled, ","], "");
     }
 
-    if (this.m_lineColor != null) {  
-      buffer.writeAll(["\"lineColor\":", this.m_lineColor, ","], "");
+    if (this._lineColor != null) {  
+      buffer.writeAll(["\"lineColor\":\`", this._lineColor, "\`,"], "");
     }
 
-    if (this.m_lineDashStyle != null) {  
-      buffer.writeAll(["\"lineDashStyle\":", this.m_lineDashStyle, ","], "");
+    if (this._lineDashStyle != null) {  
+      buffer.writeAll(["\"lineDashStyle\":\`", this._lineDashStyle, "\`,"], "");
     }
 
-    if (this.m_lineWidth != null) {  
-      buffer.writeAll(["\"lineWidth\":", this.m_lineWidth, ","], "");
+    if (this._lineWidth != null) {  
+      buffer.writeAll(["\"lineWidth\":", this._lineWidth, ","], "");
     }
 
-    if (this.m_x != null) {  
-      buffer.writeAll(["\"x\":", this.m_x, ","], "");
+    if (this._x != null) {  
+      buffer.writeAll(["\"x\":", this._x, ","], "");
     }
 
-    if (this.m_y != null) {  
-      buffer.writeAll(["\"y\":", this.m_y, ","], "");
+    if (this._y != null) {  
+      buffer.writeAll(["\"y\":", this._y, ","], "");
     }
   }
 

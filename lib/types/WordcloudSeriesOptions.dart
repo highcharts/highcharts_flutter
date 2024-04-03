@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -26,17 +26,17 @@ import 'OptionFragment.dart';
  */
 class WordcloudSeriesOptions extends ColumnSeriesOptions {
   WordcloudSeriesOptions() : super();
-  bool? m_allowExtendPlayingField;  
+  bool? _allowExtendPlayingField;  
 
   bool get allowExtendPlayingField { 
-    if (this.m_allowExtendPlayingField == null) {
-      this.m_allowExtendPlayingField = false;
+    if (this._allowExtendPlayingField == null) {
+      this._allowExtendPlayingField = false;
     }
-    return this.m_allowExtendPlayingField!;
+    return this._allowExtendPlayingField!;
   }
 
   void set allowExtendPlayingField (bool v) {
-    this.m_allowExtendPlayingField = v;
+    this._allowExtendPlayingField = v;
   }
     
   /**
@@ -47,17 +47,17 @@ class WordcloudSeriesOptions extends ColumnSeriesOptions {
    * 
    * Defaults to '25'. 
       */
-  double? m_maxFontSize;  
+  double? _maxFontSize;  
 
   double get maxFontSize { 
-    if (this.m_maxFontSize == null) {
-      this.m_maxFontSize = 0;
+    if (this._maxFontSize == null) {
+      this._maxFontSize = 0;
     }
-    return this.m_maxFontSize!;
+    return this._maxFontSize!;
   }
 
   void set maxFontSize (double v) {
-    this.m_maxFontSize = v;
+    this._maxFontSize = v;
   }
     
   /**
@@ -66,17 +66,17 @@ class WordcloudSeriesOptions extends ColumnSeriesOptions {
    * 
    * Defaults to '1'. 
       */
-  double? m_minFontSize;  
+  double? _minFontSize;  
 
   double get minFontSize { 
-    if (this.m_minFontSize == null) {
-      this.m_minFontSize = 0;
+    if (this._minFontSize == null) {
+      this._minFontSize = 0;
     }
-    return this.m_minFontSize!;
+    return this._minFontSize!;
   }
 
   void set minFontSize (double v) {
-    this.m_minFontSize = v;
+    this._minFontSize = v;
   }
     
   /**
@@ -89,33 +89,33 @@ class WordcloudSeriesOptions extends ColumnSeriesOptions {
    * 
    * Defaults to 'center'. 
       */
-  String? m_placementStrategy;  
+  String? _placementStrategy;  
 
   String get placementStrategy { 
-    if (this.m_placementStrategy == null) {
-      this.m_placementStrategy = "";
+    if (this._placementStrategy == null) {
+      this._placementStrategy = "";
     }
-    return this.m_placementStrategy!;
+    return this._placementStrategy!;
   }
 
   void set placementStrategy (String v) {
-    this.m_placementStrategy = v;
+    this._placementStrategy = v;
   }
     
   /**
    * Rotation options for the words in the wordcloud.  
       */
-  WordcloudSeriesRotationOptions? m_rotation;  
+  WordcloudSeriesRotationOptions? _rotation;  
 
   WordcloudSeriesRotationOptions get rotation { 
-    if (this.m_rotation == null) {
-      this.m_rotation = WordcloudSeriesRotationOptions();
+    if (this._rotation == null) {
+      this._rotation = WordcloudSeriesRotationOptions();
     }
-    return this.m_rotation!;
+    return this._rotation!;
   }
 
   void set rotation (WordcloudSeriesRotationOptions v) {
-    this.m_rotation = v;
+    this._rotation = v;
   }
     
   /**
@@ -127,17 +127,17 @@ class WordcloudSeriesOptions extends ColumnSeriesOptions {
    * 
    * Defaults to 'rectangular'. 
       */
-  String? m_spiral;  
+  String? _spiral;  
 
   String get spiral { 
-    if (this.m_spiral == null) {
-      this.m_spiral = "";
+    if (this._spiral == null) {
+      this._spiral = "";
     }
-    return this.m_spiral!;
+    return this._spiral!;
   }
 
   void set spiral (String v) {
-    this.m_spiral = v;
+    this._spiral = v;
   }
     
   // NOTE: states skipped - type Generic is ignored in gen
@@ -147,17 +147,17 @@ class WordcloudSeriesOptions extends ColumnSeriesOptions {
    * 
    * Defaults to '{"fontFamily":"sans-serif", "fontWeight": "900"}'. 
       */
-  CSSObject? m_style;  
+  CSSObject? _style;  
 
   CSSObject get style { 
-    if (this.m_style == null) {
-      this.m_style = CSSObject();
+    if (this._style == null) {
+      this._style = CSSObject();
     }
-    return this.m_style!;
+    return this._style!;
   }
 
   void set style (CSSObject v) {
-    this.m_style = v;
+    this._style = v;
   }
     
 
@@ -168,36 +168,36 @@ class WordcloudSeriesOptions extends ColumnSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_allowExtendPlayingField != null) {  
-      buffer.writeAll(["\"allowExtendPlayingField\":", this.m_allowExtendPlayingField, ","], "");
+    if (this._allowExtendPlayingField != null) {  
+      buffer.writeAll(["\"allowExtendPlayingField\":", this._allowExtendPlayingField, ","], "");
     }
 
     // NOTE: skip serialization of data (type WordcloudPointOptions)[] is ignored)} 
 
-    if (this.m_maxFontSize != null) {  
-      buffer.writeAll(["\"maxFontSize\":", this.m_maxFontSize, ","], "");
+    if (this._maxFontSize != null) {  
+      buffer.writeAll(["\"maxFontSize\":", this._maxFontSize, ","], "");
     }
 
-    if (this.m_minFontSize != null) {  
-      buffer.writeAll(["\"minFontSize\":", this.m_minFontSize, ","], "");
+    if (this._minFontSize != null) {  
+      buffer.writeAll(["\"minFontSize\":", this._minFontSize, ","], "");
     }
 
-    if (this.m_placementStrategy != null) {  
-      buffer.writeAll(["\"placementStrategy\":", this.m_placementStrategy, ","], "");
+    if (this._placementStrategy != null) {  
+      buffer.writeAll(["\"placementStrategy\":\`", this._placementStrategy, "\`,"], "");
     }
 
-    if (this.m_rotation != null) {  
-      buffer.writeAll(["\"rotation\":", this.m_rotation?.toJSON(), ","], "");
+    if (this._rotation != null) {  
+      buffer.writeAll(["\"rotation\":", this._rotation?.toJSON(), ","], "");
     }
 
-    if (this.m_spiral != null) {  
-      buffer.writeAll(["\"spiral\":", this.m_spiral, ","], "");
+    if (this._spiral != null) {  
+      buffer.writeAll(["\"spiral\":\`", this._spiral, "\`,"], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 
 
-    if (this.m_style != null) {  
-      buffer.writeAll(["\"style\":", this.m_style?.toJSON(), ","], "");
+    if (this._style != null) {  
+      buffer.writeAll(["\"style\":", this._style?.toJSON(), ","], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,17 +23,17 @@ import 'OptionFragment.dart';
  */
 class WilliamsRIndicator extends OptionFragment {
   WilliamsRIndicator() : super();
-  String? m_nameBase;  
+  String? _nameBase;  
 
   String get nameBase { 
-    if (this.m_nameBase == null) {
-      this.m_nameBase = "";
+    if (this._nameBase == null) {
+      this._nameBase = "";
     }
-    return this.m_nameBase!;
+    return this._nameBase!;
   }
 
   void set nameBase (String v) {
-    this.m_nameBase = v;
+    this._nameBase = v;
   }
     
 
@@ -44,8 +44,8 @@ class WilliamsRIndicator extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_nameBase != null) {  
-      buffer.writeAll(["\"nameBase\":", this.m_nameBase, ","], "");
+    if (this._nameBase != null) {  
+      buffer.writeAll(["\"nameBase\":\`", this._nameBase, "\`,"], "");
     }
 
     // NOTE: skip serialization of pointClass (type typeof WilliamsRPoint is ignored)} 

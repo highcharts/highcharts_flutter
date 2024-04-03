@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,108 +23,108 @@ import 'OptionFragment.dart';
  */
 class DataGroupingOptions extends OptionFragment {
   DataGroupingOptions() : super();
-  String? m_anchor;  
+  String? _anchor;  
 
   String get anchor { 
-    if (this.m_anchor == null) {
-      this.m_anchor = "";
+    if (this._anchor == null) {
+      this._anchor = "";
     }
-    return this.m_anchor!;
+    return this._anchor!;
   }
 
   void set anchor (String v) {
-    this.m_anchor = v;
+    this._anchor = v;
   }
     
-  bool? m_enabled;  
+  bool? _enabled;  
 
   bool get enabled { 
-    if (this.m_enabled == null) {
-      this.m_enabled = false;
+    if (this._enabled == null) {
+      this._enabled = false;
     }
-    return this.m_enabled!;
+    return this._enabled!;
   }
 
   void set enabled (bool v) {
-    this.m_enabled = v;
+    this._enabled = v;
   }
     
-  String? m_firstAnchor;  
+  String? _firstAnchor;  
 
   String get firstAnchor { 
-    if (this.m_firstAnchor == null) {
-      this.m_firstAnchor = "";
+    if (this._firstAnchor == null) {
+      this._firstAnchor = "";
     }
-    return this.m_firstAnchor!;
+    return this._firstAnchor!;
   }
 
   void set firstAnchor (String v) {
-    this.m_firstAnchor = v;
+    this._firstAnchor = v;
   }
     
-  bool? m_forced;  
+  bool? _forced;  
 
   bool get forced { 
-    if (this.m_forced == null) {
-      this.m_forced = false;
+    if (this._forced == null) {
+      this._forced = false;
     }
-    return this.m_forced!;
+    return this._forced!;
   }
 
   void set forced (bool v) {
-    this.m_forced = v;
+    this._forced = v;
   }
     
-  bool? m_groupAll;  
+  bool? _groupAll;  
 
   bool get groupAll { 
-    if (this.m_groupAll == null) {
-      this.m_groupAll = false;
+    if (this._groupAll == null) {
+      this._groupAll = false;
     }
-    return this.m_groupAll!;
+    return this._groupAll!;
   }
 
   void set groupAll (bool v) {
-    this.m_groupAll = v;
+    this._groupAll = v;
   }
     
-  double? m_groupPixelWidth;  
+  double? _groupPixelWidth;  
 
   double get groupPixelWidth { 
-    if (this.m_groupPixelWidth == null) {
-      this.m_groupPixelWidth = 0;
+    if (this._groupPixelWidth == null) {
+      this._groupPixelWidth = 0;
     }
-    return this.m_groupPixelWidth!;
+    return this._groupPixelWidth!;
   }
 
   void set groupPixelWidth (double v) {
-    this.m_groupPixelWidth = v;
+    this._groupPixelWidth = v;
   }
     
-  String? m_lastAnchor;  
+  String? _lastAnchor;  
 
   String get lastAnchor { 
-    if (this.m_lastAnchor == null) {
-      this.m_lastAnchor = "";
+    if (this._lastAnchor == null) {
+      this._lastAnchor = "";
     }
-    return this.m_lastAnchor!;
+    return this._lastAnchor!;
   }
 
   void set lastAnchor (String v) {
-    this.m_lastAnchor = v;
+    this._lastAnchor = v;
   }
     
-  bool? m_smoothed;  
+  bool? _smoothed;  
 
   bool get smoothed { 
-    if (this.m_smoothed == null) {
-      this.m_smoothed = false;
+    if (this._smoothed == null) {
+      this._smoothed = false;
     }
-    return this.m_smoothed!;
+    return this._smoothed!;
   }
 
   void set smoothed (bool v) {
-    this.m_smoothed = v;
+    this._smoothed = v;
   }
     
 
@@ -135,40 +135,40 @@ class DataGroupingOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_anchor != null) {  
-      buffer.writeAll(["\"anchor\":", this.m_anchor, ","], "");
+    if (this._anchor != null) {  
+      buffer.writeAll(["\"anchor\":\`", this._anchor, "\`,"], "");
     }
 
-    // NOTE: skip serialization of approximation (type Function is ignored)} 
+    // NOTE: skip serialization of approximation (type keyof ApproximationTypeRegistry is ignored)} 
 
     // NOTE: skip serialization of dateTimeLabelFormats (type Generic is ignored)} 
 
-    if (this.m_enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this.m_enabled, ","], "");
+    if (this._enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this._enabled, ","], "");
     }
 
-    if (this.m_firstAnchor != null) {  
-      buffer.writeAll(["\"firstAnchor\":", this.m_firstAnchor, ","], "");
+    if (this._firstAnchor != null) {  
+      buffer.writeAll(["\"firstAnchor\":\`", this._firstAnchor, "\`,"], "");
     }
 
-    if (this.m_forced != null) {  
-      buffer.writeAll(["\"forced\":", this.m_forced, ","], "");
+    if (this._forced != null) {  
+      buffer.writeAll(["\"forced\":", this._forced, ","], "");
     }
 
-    if (this.m_groupAll != null) {  
-      buffer.writeAll(["\"groupAll\":", this.m_groupAll, ","], "");
+    if (this._groupAll != null) {  
+      buffer.writeAll(["\"groupAll\":", this._groupAll, ","], "");
     }
 
-    if (this.m_groupPixelWidth != null) {  
-      buffer.writeAll(["\"groupPixelWidth\":", this.m_groupPixelWidth, ","], "");
+    if (this._groupPixelWidth != null) {  
+      buffer.writeAll(["\"groupPixelWidth\":", this._groupPixelWidth, ","], "");
     }
 
-    if (this.m_lastAnchor != null) {  
-      buffer.writeAll(["\"lastAnchor\":", this.m_lastAnchor, ","], "");
+    if (this._lastAnchor != null) {  
+      buffer.writeAll(["\"lastAnchor\":\`", this._lastAnchor, "\`,"], "");
     }
 
-    if (this.m_smoothed != null) {  
-      buffer.writeAll(["\"smoothed\":", this.m_smoothed, ","], "");
+    if (this._smoothed != null) {  
+      buffer.writeAll(["\"smoothed\":", this._smoothed, ","], "");
     }
 
     // NOTE: skip serialization of units (type [string, number[]][] is ignored)} 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,17 +23,17 @@ import 'OptionFragment.dart';
  */
 class VariwideSeries extends OptionFragment {
   VariwideSeries() : super();
-  bool? m_irregularWidths;  
+  bool? _irregularWidths;  
 
   bool get irregularWidths { 
-    if (this.m_irregularWidths == null) {
-      this.m_irregularWidths = false;
+    if (this._irregularWidths == null) {
+      this._irregularWidths = false;
     }
-    return this.m_irregularWidths!;
+    return this._irregularWidths!;
   }
 
   void set irregularWidths (bool v) {
-    this.m_irregularWidths = v;
+    this._irregularWidths = v;
   }
     
 
@@ -44,8 +44,8 @@ class VariwideSeries extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_irregularWidths != null) {  
-      buffer.writeAll(["\"irregularWidths\":", this.m_irregularWidths, ","], "");
+    if (this._irregularWidths != null) {  
+      buffer.writeAll(["\"irregularWidths\":", this._irregularWidths, ","], "");
     }
 
     // NOTE: skip serialization of parallelArrays (type string[] is ignored)} 

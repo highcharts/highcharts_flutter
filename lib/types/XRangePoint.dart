@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -25,56 +25,56 @@ import 'OptionFragment.dart';
  */
 class XRangePoint extends OptionFragment {
   XRangePoint() : super();
-  double? m_len;  
+  double? _len;  
 
   double get len { 
-    if (this.m_len == null) {
-      this.m_len = 0;
+    if (this._len == null) {
+      this._len = 0;
     }
-    return this.m_len!;
+    return this._len!;
   }
 
   void set len (double v) {
-    this.m_len = v;
+    this._len = v;
   }
     
-  String? m_shapeType;  
+  String? _shapeType;  
 
   String get shapeType { 
-    if (this.m_shapeType == null) {
-      this.m_shapeType = "";
+    if (this._shapeType == null) {
+      this._shapeType = "";
     }
-    return this.m_shapeType!;
+    return this._shapeType!;
   }
 
   void set shapeType (String v) {
-    this.m_shapeType = v;
+    this._shapeType = v;
   }
     
-  double? m_x2;  
+  double? _x2;  
 
   double get x2 { 
-    if (this.m_x2 == null) {
-      this.m_x2 = 0;
+    if (this._x2 == null) {
+      this._x2 = 0;
     }
-    return this.m_x2!;
+    return this._x2!;
   }
 
   void set x2 (double v) {
-    this.m_x2 = v;
+    this._x2 = v;
   }
     
-  String? m_yCategory;  
+  String? _yCategory;  
 
   String get yCategory { 
-    if (this.m_yCategory == null) {
-      this.m_yCategory = "";
+    if (this._yCategory == null) {
+      this._yCategory = "";
     }
-    return this.m_yCategory!;
+    return this._yCategory!;
   }
 
   void set yCategory (String v) {
-    this.m_yCategory = v;
+    this._yCategory = v;
   }
     
 
@@ -87,26 +87,26 @@ class XRangePoint extends OptionFragment {
     
     // NOTE: skip serialization of clipRectArgs (type RectangleObject is ignored)} 
 
-    if (this.m_len != null) {  
-      buffer.writeAll(["\"len\":", this.m_len, ","], "");
+    if (this._len != null) {  
+      buffer.writeAll(["\"len\":", this._len, ","], "");
     }
 
     // NOTE: skip serialization of partialFill (type XRangePointPartialFillOptions is ignored)} 
 
     // NOTE: skip serialization of partShapeArgs (type XRangePointPartialFillOptions is ignored)} 
 
-    if (this.m_shapeType != null) {  
-      buffer.writeAll(["\"shapeType\":", this.m_shapeType, ","], "");
+    if (this._shapeType != null) {  
+      buffer.writeAll(["\"shapeType\":\`", this._shapeType, "\`,"], "");
     }
 
     // NOTE: skip serialization of tooltipDateKeys (type string[] is ignored)} 
 
-    if (this.m_x2 != null) {  
-      buffer.writeAll(["\"x2\":", this.m_x2, ","], "");
+    if (this._x2 != null) {  
+      buffer.writeAll(["\"x2\":", this._x2, ","], "");
     }
 
-    if (this.m_yCategory != null) {  
-      buffer.writeAll(["\"yCategory\":", this.m_yCategory, ","], "");
+    if (this._yCategory != null) {  
+      buffer.writeAll(["\"yCategory\":\`", this._yCategory, "\`,"], "");
     }
   }
 

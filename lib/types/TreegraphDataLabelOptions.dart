@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,17 +24,17 @@ import 'OptionFragment.dart';
  */
 class TreegraphDataLabelOptions extends DataLabelOptions {
   TreegraphDataLabelOptions() : super();
-  String? m_linkFormat;  
+  String? _linkFormat;  
 
   String get linkFormat { 
-    if (this.m_linkFormat == null) {
-      this.m_linkFormat = "";
+    if (this._linkFormat == null) {
+      this._linkFormat = "";
     }
-    return this.m_linkFormat!;
+    return this._linkFormat!;
   }
 
   void set linkFormat (String v) {
-    this.m_linkFormat = v;
+    this._linkFormat = v;
   }
     
 
@@ -45,8 +45,8 @@ class TreegraphDataLabelOptions extends DataLabelOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_linkFormat != null) {  
-      buffer.writeAll(["\"linkFormat\":", this.m_linkFormat, ","], "");
+    if (this._linkFormat != null) {  
+      buffer.writeAll(["\"linkFormat\":\`", this._linkFormat, "\`,"], "");
     }
 
     // NOTE: skip serialization of linkTextPath (type DataLabelOptions is ignored)} 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,43 +24,43 @@ import 'OptionFragment.dart';
  */
 class CheckBoxElement extends HTMLDOMElement {
   CheckBoxElement() : super();
-  bool? m_checked;  
+  bool? _checked;  
 
   bool get checked { 
-    if (this.m_checked == null) {
-      this.m_checked = false;
+    if (this._checked == null) {
+      this._checked = false;
     }
-    return this.m_checked!;
+    return this._checked!;
   }
 
   void set checked (bool v) {
-    this.m_checked = v;
+    this._checked = v;
   }
     
-  double? m_x;  
+  double? _x;  
 
   double get x { 
-    if (this.m_x == null) {
-      this.m_x = 0;
+    if (this._x == null) {
+      this._x = 0;
     }
-    return this.m_x!;
+    return this._x!;
   }
 
   void set x (double v) {
-    this.m_x = v;
+    this._x = v;
   }
     
-  double? m_y;  
+  double? _y;  
 
   double get y { 
-    if (this.m_y == null) {
-      this.m_y = 0;
+    if (this._y == null) {
+      this._y = 0;
     }
-    return this.m_y!;
+    return this._y!;
   }
 
   void set y (double v) {
-    this.m_y = v;
+    this._y = v;
   }
     
 
@@ -71,16 +71,16 @@ class CheckBoxElement extends HTMLDOMElement {
     super.toJSONInner(buffer);
 
     
-    if (this.m_checked != null) {  
-      buffer.writeAll(["\"checked\":", this.m_checked, ","], "");
+    if (this._checked != null) {  
+      buffer.writeAll(["\"checked\":", this._checked, ","], "");
     }
 
-    if (this.m_x != null) {  
-      buffer.writeAll(["\"x\":", this.m_x, ","], "");
+    if (this._x != null) {  
+      buffer.writeAll(["\"x\":", this._x, ","], "");
     }
 
-    if (this.m_y != null) {  
-      buffer.writeAll(["\"y\":", this.m_y, ","], "");
+    if (this._y != null) {  
+      buffer.writeAll(["\"y\":", this._y, ","], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,43 +23,43 @@ import 'OptionFragment.dart';
  */
 class SeriesDataSortingOptions extends OptionFragment {
   SeriesDataSortingOptions() : super();
-  bool? m_enabled;  
+  bool? _enabled;  
 
   bool get enabled { 
-    if (this.m_enabled == null) {
-      this.m_enabled = false;
+    if (this._enabled == null) {
+      this._enabled = false;
     }
-    return this.m_enabled!;
+    return this._enabled!;
   }
 
   void set enabled (bool v) {
-    this.m_enabled = v;
+    this._enabled = v;
   }
     
-  bool? m_matchByName;  
+  bool? _matchByName;  
 
   bool get matchByName { 
-    if (this.m_matchByName == null) {
-      this.m_matchByName = false;
+    if (this._matchByName == null) {
+      this._matchByName = false;
     }
-    return this.m_matchByName!;
+    return this._matchByName!;
   }
 
   void set matchByName (bool v) {
-    this.m_matchByName = v;
+    this._matchByName = v;
   }
     
-  String? m_sortKey;  
+  String? _sortKey;  
 
   String get sortKey { 
-    if (this.m_sortKey == null) {
-      this.m_sortKey = "";
+    if (this._sortKey == null) {
+      this._sortKey = "";
     }
-    return this.m_sortKey!;
+    return this._sortKey!;
   }
 
   void set sortKey (String v) {
-    this.m_sortKey = v;
+    this._sortKey = v;
   }
     
 
@@ -70,16 +70,16 @@ class SeriesDataSortingOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this.m_enabled, ","], "");
+    if (this._enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this._enabled, ","], "");
     }
 
-    if (this.m_matchByName != null) {  
-      buffer.writeAll(["\"matchByName\":", this.m_matchByName, ","], "");
+    if (this._matchByName != null) {  
+      buffer.writeAll(["\"matchByName\":", this._matchByName, ","], "");
     }
 
-    if (this.m_sortKey != null) {  
-      buffer.writeAll(["\"sortKey\":", this.m_sortKey, ","], "");
+    if (this._sortKey != null) {  
+      buffer.writeAll(["\"sortKey\":\`", this._sortKey, "\`,"], "");
     }
   }
 

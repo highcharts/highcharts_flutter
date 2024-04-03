@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -25,69 +25,82 @@ import 'OptionFragment.dart';
  */
 class Series extends CoreSeries {
   Series() : super();
-  double? m_colorCounter;  
+  double? _colorCounter;  
 
   double get colorCounter { 
-    if (this.m_colorCounter == null) {
-      this.m_colorCounter = 0;
+    if (this._colorCounter == null) {
+      this._colorCounter = 0;
     }
-    return this.m_colorCounter!;
+    return this._colorCounter!;
   }
 
   void set colorCounter (double v) {
-    this.m_colorCounter = v;
+    this._colorCounter = v;
   }
     
-  bool? m_directTouch;  
+  bool? _directTouch;  
 
   bool get directTouch { 
-    if (this.m_directTouch == null) {
-      this.m_directTouch = false;
+    if (this._directTouch == null) {
+      this._directTouch = false;
     }
-    return this.m_directTouch!;
+    return this._directTouch!;
   }
 
   void set directTouch (bool v) {
-    this.m_directTouch = v;
+    this._directTouch = v;
   }
     
-  bool? m_isCartesian;  
+  bool? _invertible;  
+
+  bool get invertible { 
+    if (this._invertible == null) {
+      this._invertible = false;
+    }
+    return this._invertible!;
+  }
+
+  void set invertible (bool v) {
+    this._invertible = v;
+  }
+    
+  bool? _isCartesian;  
 
   bool get isCartesian { 
-    if (this.m_isCartesian == null) {
-      this.m_isCartesian = false;
+    if (this._isCartesian == null) {
+      this._isCartesian = false;
     }
-    return this.m_isCartesian!;
+    return this._isCartesian!;
   }
 
   void set isCartesian (bool v) {
-    this.m_isCartesian = v;
+    this._isCartesian = v;
   }
     
-  bool? m_requireSorting;  
+  bool? _requireSorting;  
 
   bool get requireSorting { 
-    if (this.m_requireSorting == null) {
-      this.m_requireSorting = false;
+    if (this._requireSorting == null) {
+      this._requireSorting = false;
     }
-    return this.m_requireSorting!;
+    return this._requireSorting!;
   }
 
   void set requireSorting (bool v) {
-    this.m_requireSorting = v;
+    this._requireSorting = v;
   }
     
-  bool? m_sorted;  
+  bool? _sorted;  
 
   bool get sorted { 
-    if (this.m_sorted == null) {
-      this.m_sorted = false;
+    if (this._sorted == null) {
+      this._sorted = false;
     }
-    return this.m_sorted!;
+    return this._sorted!;
   }
 
   void set sorted (bool v) {
-    this.m_sorted = v;
+    this._sorted = v;
   }
     
 
@@ -104,22 +117,26 @@ class Series extends CoreSeries {
 
     // NOTE: skip serialization of tree (type NodeObject is ignored)} 
 
-    // NOTE: skip serialization of axisTypes (type string[] is ignored)} 
+    // NOTE: skip serialization of axisTypes (type "zAxis")[] is ignored)} 
 
     // NOTE: skip serialization of coll (type "series" is ignored)} 
 
-    if (this.m_colorCounter != null) {  
-      buffer.writeAll(["\"colorCounter\":", this.m_colorCounter, ","], "");
+    if (this._colorCounter != null) {  
+      buffer.writeAll(["\"colorCounter\":", this._colorCounter, ","], "");
     }
 
-    if (this.m_directTouch != null) {  
-      buffer.writeAll(["\"directTouch\":", this.m_directTouch, ","], "");
+    if (this._directTouch != null) {  
+      buffer.writeAll(["\"directTouch\":", this._directTouch, ","], "");
     }
 
     // NOTE: skip serialization of hcEvents (type Generic is ignored)} 
 
-    if (this.m_isCartesian != null) {  
-      buffer.writeAll(["\"isCartesian\":", this.m_isCartesian, ","], "");
+    if (this._invertible != null) {  
+      buffer.writeAll(["\"invertible\":", this._invertible, ","], "");
+    }
+
+    if (this._isCartesian != null) {  
+      buffer.writeAll(["\"isCartesian\":", this._isCartesian, ","], "");
     }
 
     // NOTE: skip serialization of kdAxisArray (type (keyof KDPointSearchObject)[] is ignored)} 
@@ -128,12 +145,12 @@ class Series extends CoreSeries {
 
     // NOTE: skip serialization of pointClass (type typeof Point is ignored)} 
 
-    if (this.m_requireSorting != null) {  
-      buffer.writeAll(["\"requireSorting\":", this.m_requireSorting, ","], "");
+    if (this._requireSorting != null) {  
+      buffer.writeAll(["\"requireSorting\":", this._requireSorting, ","], "");
     }
 
-    if (this.m_sorted != null) {  
-      buffer.writeAll(["\"sorted\":", this.m_sorted, ","], "");
+    if (this._sorted != null) {  
+      buffer.writeAll(["\"sorted\":", this._sorted, ","], "");
     }
   }
 

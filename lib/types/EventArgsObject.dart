@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,43 +24,43 @@ import 'OptionFragment.dart';
  */
 class EventArgsObject extends OptionFragment {
   EventArgsObject() : super();
-  double? m_chartX;  
+  double? _chartX;  
 
   double get chartX { 
-    if (this.m_chartX == null) {
-      this.m_chartX = 0;
+    if (this._chartX == null) {
+      this._chartX = 0;
     }
-    return this.m_chartX!;
+    return this._chartX!;
   }
 
   void set chartX (double v) {
-    this.m_chartX = v;
+    this._chartX = v;
   }
     
-  double? m_chartY;  
+  double? _chartY;  
 
   double get chartY { 
-    if (this.m_chartY == null) {
-      this.m_chartY = 0;
+    if (this._chartY == null) {
+      this._chartY = 0;
     }
-    return this.m_chartY!;
+    return this._chartY!;
   }
 
   void set chartY (double v) {
-    this.m_chartY = v;
+    this._chartY = v;
   }
     
-  bool? m_shared;  
+  bool? _shared;  
 
   bool get shared { 
-    if (this.m_shared == null) {
-      this.m_shared = false;
+    if (this._shared == null) {
+      this._shared = false;
     }
-    return this.m_shared!;
+    return this._shared!;
   }
 
   void set shared (bool v) {
-    this.m_shared = v;
+    this._shared = v;
   }
     
 
@@ -71,20 +71,20 @@ class EventArgsObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_chartX != null) {  
-      buffer.writeAll(["\"chartX\":", this.m_chartX, ","], "");
+    if (this._chartX != null) {  
+      buffer.writeAll(["\"chartX\":", this._chartX, ","], "");
     }
 
-    if (this.m_chartY != null) {  
-      buffer.writeAll(["\"chartY\":", this.m_chartY, ","], "");
+    if (this._chartY != null) {  
+      buffer.writeAll(["\"chartY\":", this._chartY, ","], "");
     }
 
     // NOTE: skip serialization of filter (type Function is ignored)} 
 
     // NOTE: skip serialization of hoverPoint (type Point is ignored)} 
 
-    if (this.m_shared != null) {  
-      buffer.writeAll(["\"shared\":", this.m_shared, ","], "");
+    if (this._shared != null) {  
+      buffer.writeAll(["\"shared\":", this._shared, ","], "");
     }
   }
 

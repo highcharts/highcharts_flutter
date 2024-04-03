@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,56 +23,56 @@ import 'OptionFragment.dart';
  */
 class MetaColumn extends OptionFragment {
   MetaColumn() : super();
-  String? m_dataType;  
+  String? _dataType;  
 
   String get dataType { 
-    if (this.m_dataType == null) {
-      this.m_dataType = "";
+    if (this._dataType == null) {
+      this._dataType = "";
     }
-    return this.m_dataType!;
+    return this._dataType!;
   }
 
   void set dataType (String v) {
-    this.m_dataType = v;
+    this._dataType = v;
   }
     
-  String? m_defaultValue;  
+  String? _defaultValue;  
 
   String get defaultValue { 
-    if (this.m_defaultValue == null) {
-      this.m_defaultValue = "";
+    if (this._defaultValue == null) {
+      this._defaultValue = "";
     }
-    return this.m_defaultValue!;
+    return this._defaultValue!;
   }
 
   void set defaultValue (String v) {
-    this.m_defaultValue = v;
+    this._defaultValue = v;
   }
     
-  double? m_index;  
+  double? _index;  
 
   double get index { 
-    if (this.m_index == null) {
-      this.m_index = 0;
+    if (this._index == null) {
+      this._index = 0;
     }
-    return this.m_index!;
+    return this._index!;
   }
 
   void set index (double v) {
-    this.m_index = v;
+    this._index = v;
   }
     
-  String? m_title;  
+  String? _title;  
 
   String get title { 
-    if (this.m_title == null) {
-      this.m_title = "";
+    if (this._title == null) {
+      this._title = "";
     }
-    return this.m_title!;
+    return this._title!;
   }
 
   void set title (String v) {
-    this.m_title = v;
+    this._title = v;
   }
     
 
@@ -83,20 +83,20 @@ class MetaColumn extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_dataType != null) {  
-      buffer.writeAll(["\"dataType\":", this.m_dataType, ","], "");
+    if (this._dataType != null) {  
+      buffer.writeAll(["\"dataType\":\`", this._dataType, "\`,"], "");
     }
 
-    if (this.m_defaultValue != null) {  
-      buffer.writeAll(["\"defaultValue\":", this.m_defaultValue, ","], "");
+    if (this._defaultValue != null) {  
+      buffer.writeAll(["\"defaultValue\":\`", this._defaultValue, "\`,"], "");
     }
 
-    if (this.m_index != null) {  
-      buffer.writeAll(["\"index\":", this.m_index, ","], "");
+    if (this._index != null) {  
+      buffer.writeAll(["\"index\":", this._index, ","], "");
     }
 
-    if (this.m_title != null) {  
-      buffer.writeAll(["\"title\":", this.m_title, ","], "");
+    if (this._title != null) {  
+      buffer.writeAll(["\"title\":\`", this._title, "\`,"], "");
     }
   }
 

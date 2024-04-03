@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,30 +23,30 @@ import 'OptionFragment.dart';
  */
 class NavigationBindingsOptions extends OptionFragment {
   NavigationBindingsOptions() : super();
-  String? m_noDataState;  
+  String? _noDataState;  
 
   String get noDataState { 
-    if (this.m_noDataState == null) {
-      this.m_noDataState = "";
+    if (this._noDataState == null) {
+      this._noDataState = "";
     }
-    return this.m_noDataState!;
+    return this._noDataState!;
   }
 
   void set noDataState (String v) {
-    this.m_noDataState = v;
+    this._noDataState = v;
   }
     
-  String? m_className;  
+  String? _className;  
 
   String get className { 
-    if (this.m_className == null) {
-      this.m_className = "";
+    if (this._className == null) {
+      this._className = "";
     }
-    return this.m_className!;
+    return this._className!;
   }
 
   void set className (String v) {
-    this.m_className = v;
+    this._className = v;
   }
     
 
@@ -57,12 +57,12 @@ class NavigationBindingsOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_noDataState != null) {  
-      buffer.writeAll(["\"noDataState\":", this.m_noDataState, ","], "");
+    if (this._noDataState != null) {  
+      buffer.writeAll(["\"noDataState\":\`", this._noDataState, "\`,"], "");
     }
 
-    if (this.m_className != null) {  
-      buffer.writeAll(["\"className\":", this.m_className, ","], "");
+    if (this._className != null) {  
+      buffer.writeAll(["\"className\":\`", this._className, "\`,"], "");
     }
 
     // NOTE: skip serialization of end (type Function is ignored)} 

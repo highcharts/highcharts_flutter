@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,56 +23,56 @@ import 'OptionFragment.dart';
  */
 class EMALevelsObject extends OptionFragment {
   EMALevelsObject() : super();
-  double? m_level1;  
+  double? _level1;  
 
   double get level1 { 
-    if (this.m_level1 == null) {
-      this.m_level1 = 0;
+    if (this._level1 == null) {
+      this._level1 = 0;
     }
-    return this.m_level1!;
+    return this._level1!;
   }
 
   void set level1 (double v) {
-    this.m_level1 = v;
+    this._level1 = v;
   }
     
-  double? m_level2;  
+  double? _level2;  
 
   double get level2 { 
-    if (this.m_level2 == null) {
-      this.m_level2 = 0;
+    if (this._level2 == null) {
+      this._level2 = 0;
     }
-    return this.m_level2!;
+    return this._level2!;
   }
 
   void set level2 (double v) {
-    this.m_level2 = v;
+    this._level2 = v;
   }
     
-  double? m_level3;  
+  double? _level3;  
 
   double get level3 { 
-    if (this.m_level3 == null) {
-      this.m_level3 = 0;
+    if (this._level3 == null) {
+      this._level3 = 0;
     }
-    return this.m_level3!;
+    return this._level3!;
   }
 
   void set level3 (double v) {
-    this.m_level3 = v;
+    this._level3 = v;
   }
     
-  double? m_prevLevel3;  
+  double? _prevLevel3;  
 
   double get prevLevel3 { 
-    if (this.m_prevLevel3 == null) {
-      this.m_prevLevel3 = 0;
+    if (this._prevLevel3 == null) {
+      this._prevLevel3 = 0;
     }
-    return this.m_prevLevel3!;
+    return this._prevLevel3!;
   }
 
   void set prevLevel3 (double v) {
-    this.m_prevLevel3 = v;
+    this._prevLevel3 = v;
   }
     
 
@@ -83,20 +83,20 @@ class EMALevelsObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_level1 != null) {  
-      buffer.writeAll(["\"level1\":", this.m_level1, ","], "");
+    if (this._level1 != null) {  
+      buffer.writeAll(["\"level1\":", this._level1, ","], "");
     }
 
-    if (this.m_level2 != null) {  
-      buffer.writeAll(["\"level2\":", this.m_level2, ","], "");
+    if (this._level2 != null) {  
+      buffer.writeAll(["\"level2\":", this._level2, ","], "");
     }
 
-    if (this.m_level3 != null) {  
-      buffer.writeAll(["\"level3\":", this.m_level3, ","], "");
+    if (this._level3 != null) {  
+      buffer.writeAll(["\"level3\":", this._level3, ","], "");
     }
 
-    if (this.m_prevLevel3 != null) {  
-      buffer.writeAll(["\"prevLevel3\":", this.m_prevLevel3, ","], "");
+    if (this._prevLevel3 != null) {  
+      buffer.writeAll(["\"prevLevel3\":", this._prevLevel3, ","], "");
     }
   }
 

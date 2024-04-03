@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -37,17 +37,17 @@ class VBPOptions extends SMAOptions {
    * is fired on individual points, not on a group of points like e.g. during
    * the initial animation.  
       */
-  double? m_animationLimit;  
+  double? _animationLimit;  
 
   double get animationLimit { 
-    if (this.m_animationLimit == null) {
-      this.m_animationLimit = 0;
+    if (this._animationLimit == null) {
+      this._animationLimit = 0;
     }
-    return this.m_animationLimit!;
+    return this._animationLimit!;
   }
 
   void set animationLimit (double v) {
-    this.m_animationLimit = v;
+    this._animationLimit = v;
   }
     
   /**
@@ -60,17 +60,17 @@ class VBPOptions extends SMAOptions {
    * 
    * Defaults to 'true'. 
       */
-  bool? m_crisp;  
+  bool? _crisp;  
 
   bool get crisp { 
-    if (this.m_crisp == null) {
-      this.m_crisp = false;
+    if (this._crisp == null) {
+      this._crisp = false;
     }
-    return this.m_crisp!;
+    return this._crisp!;
   }
 
   void set crisp (bool v) {
-    this.m_crisp = v;
+    this._crisp = v;
   }
     
   /**
@@ -87,17 +87,17 @@ class VBPOptions extends SMAOptions {
    * the first point instance are copied over to the group point. This can be
    * altered through a custom `approximation` callback function.  
       */
-  DataGroupingOptions? m_dataGrouping;  
+  DataGroupingOptions? _dataGrouping;  
 
   DataGroupingOptions get dataGrouping { 
-    if (this.m_dataGrouping == null) {
-      this.m_dataGrouping = DataGroupingOptions();
+    if (this._dataGrouping == null) {
+      this._dataGrouping = DataGroupingOptions();
     }
-    return this.m_dataGrouping!;
+    return this._dataGrouping!;
   }
 
   void set dataGrouping (DataGroupingOptions v) {
-    this.m_dataGrouping = v;
+    this._dataGrouping = v;
   }
     
   /**
@@ -120,17 +120,17 @@ class VBPOptions extends SMAOptions {
    * 
    * Defaults to 'true'. 
       */
-  bool? m_enableMouseTracking;  
+  bool? _enableMouseTracking;  
 
   bool get enableMouseTracking { 
-    if (this.m_enableMouseTracking == null) {
-      this.m_enableMouseTracking = false;
+    if (this._enableMouseTracking == null) {
+      this._enableMouseTracking = false;
     }
-    return this.m_enableMouseTracking!;
+    return this._enableMouseTracking!;
   }
 
   void set enableMouseTracking (bool v) {
-    this.m_enableMouseTracking = v;
+    this._enableMouseTracking = v;
   }
     
   /**
@@ -138,65 +138,65 @@ class VBPOptions extends SMAOptions {
       */
   /** NOTE: extparams is skipped here for now, as it overrides the base type. */
 
-  double? m_pointPadding;  
+  double? _pointPadding;  
 
   double get pointPadding { 
-    if (this.m_pointPadding == null) {
-      this.m_pointPadding = 0;
+    if (this._pointPadding == null) {
+      this._pointPadding = 0;
     }
-    return this.m_pointPadding!;
+    return this._pointPadding!;
   }
 
   void set pointPadding (double v) {
-    this.m_pointPadding = v;
+    this._pointPadding = v;
   }
     
   /**
    * The styles for bars when volume is divided into positive/negative.  
       */
-  VBPIndicatorStyleOptions? m_volumeDivision;  
+  VBPIndicatorStyleOptions? _volumeDivision;  
 
   VBPIndicatorStyleOptions get volumeDivision { 
-    if (this.m_volumeDivision == null) {
-      this.m_volumeDivision = VBPIndicatorStyleOptions();
+    if (this._volumeDivision == null) {
+      this._volumeDivision = VBPIndicatorStyleOptions();
     }
-    return this.m_volumeDivision!;
+    return this._volumeDivision!;
   }
 
   void set volumeDivision (VBPIndicatorStyleOptions v) {
-    this.m_volumeDivision = v;
+    this._volumeDivision = v;
   }
     
   /**
    * Define the z index of the series.  
       */
-  double? m_zIndex;  
+  double? _zIndex;  
 
   double get zIndex { 
-    if (this.m_zIndex == null) {
-      this.m_zIndex = 0;
+    if (this._zIndex == null) {
+      this._zIndex = 0;
     }
-    return this.m_zIndex!;
+    return this._zIndex!;
   }
 
   void set zIndex (double v) {
-    this.m_zIndex = v;
+    this._zIndex = v;
   }
     
   /**
    * The styles for lines which determine price zones.  
       */
-  VBPIndicatorStyleOptions? m_zoneLines;  
+  VBPIndicatorStyleOptions? _zoneLines;  
 
   VBPIndicatorStyleOptions get zoneLines { 
-    if (this.m_zoneLines == null) {
-      this.m_zoneLines = VBPIndicatorStyleOptions();
+    if (this._zoneLines == null) {
+      this._zoneLines = VBPIndicatorStyleOptions();
     }
-    return this.m_zoneLines!;
+    return this._zoneLines!;
   }
 
   void set zoneLines (VBPIndicatorStyleOptions v) {
-    this.m_zoneLines = v;
+    this._zoneLines = v;
   }
     
 
@@ -207,42 +207,40 @@ class VBPOptions extends SMAOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_animationLimit != null) {  
-      buffer.writeAll(["\"animationLimit\":", this.m_animationLimit, ","], "");
+    if (this._animationLimit != null) {  
+      buffer.writeAll(["\"animationLimit\":", this._animationLimit, ","], "");
     }
 
-    if (this.m_crisp != null) {  
-      buffer.writeAll(["\"crisp\":", this.m_crisp, ","], "");
+    if (this._crisp != null) {  
+      buffer.writeAll(["\"crisp\":", this._crisp, ","], "");
     }
 
-    if (this.m_dataGrouping != null) {  
-      buffer.writeAll(["\"dataGrouping\":", this.m_dataGrouping?.toJSON(), ","], "");
+    if (this._dataGrouping != null) {  
+      buffer.writeAll(["\"dataGrouping\":", this._dataGrouping?.toJSON(), ","], "");
     }
 
     // NOTE: skip serialization of dataLabels (type DataLabelOptions is ignored)} 
 
-    if (this.m_enableMouseTracking != null) {  
-      buffer.writeAll(["\"enableMouseTracking\":", this.m_enableMouseTracking, ","], "");
+    if (this._enableMouseTracking != null) {  
+      buffer.writeAll(["\"enableMouseTracking\":", this._enableMouseTracking, ","], "");
     }
 
-    if (this.m_params != null) {  
-      buffer.writeAll(["\"params\":", this.m_params?.toJSON(), ","], "");
+    // NOTE: skip serialization of params (type VBPParamsOptions is ignored)} 
+
+    if (this._pointPadding != null) {  
+      buffer.writeAll(["\"pointPadding\":", this._pointPadding, ","], "");
     }
 
-    if (this.m_pointPadding != null) {  
-      buffer.writeAll(["\"pointPadding\":", this.m_pointPadding, ","], "");
+    if (this._volumeDivision != null) {  
+      buffer.writeAll(["\"volumeDivision\":", this._volumeDivision?.toJSON(), ","], "");
     }
 
-    if (this.m_volumeDivision != null) {  
-      buffer.writeAll(["\"volumeDivision\":", this.m_volumeDivision?.toJSON(), ","], "");
+    if (this._zIndex != null) {  
+      buffer.writeAll(["\"zIndex\":", this._zIndex, ","], "");
     }
 
-    if (this.m_zIndex != null) {  
-      buffer.writeAll(["\"zIndex\":", this.m_zIndex, ","], "");
-    }
-
-    if (this.m_zoneLines != null) {  
-      buffer.writeAll(["\"zoneLines\":", this.m_zoneLines?.toJSON(), ","], "");
+    if (this._zoneLines != null) {  
+      buffer.writeAll(["\"zoneLines\":", this._zoneLines?.toJSON(), ","], "");
     }
   }
 

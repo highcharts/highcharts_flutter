@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,17 +24,17 @@ import 'OptionFragment.dart';
  */
 class BBoxObjectWithCenter extends BBoxObject {
   BBoxObjectWithCenter() : super();
-  double? m_centerX;  
+  double? _centerX;  
 
   double get centerX { 
-    if (this.m_centerX == null) {
-      this.m_centerX = 0;
+    if (this._centerX == null) {
+      this._centerX = 0;
     }
-    return this.m_centerX!;
+    return this._centerX!;
   }
 
   void set centerX (double v) {
-    this.m_centerX = v;
+    this._centerX = v;
   }
     
 
@@ -45,8 +45,8 @@ class BBoxObjectWithCenter extends BBoxObject {
     super.toJSONInner(buffer);
 
     
-    if (this.m_centerX != null) {  
-      buffer.writeAll(["\"centerX\":", this.m_centerX, ","], "");
+    if (this._centerX != null) {  
+      buffer.writeAll(["\"centerX\":", this._centerX, ","], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -38,17 +38,17 @@ class LegendOptions extends OptionFragment {
    * 
    * Defaults to 'center'. 
       */
-  String? m_align;  
+  String? _align;  
 
   String get align { 
-    if (this.m_align == null) {
-      this.m_align = "";
+    if (this._align == null) {
+      this._align = "";
     }
-    return this.m_align!;
+    return this._align!;
   }
 
   void set align (String v) {
-    this.m_align = v;
+    this._align = v;
   }
     
   /**
@@ -59,33 +59,33 @@ class LegendOptions extends OptionFragment {
    * 
    * Defaults to 'true'. 
       */
-  bool? m_alignColumns;  
+  bool? _alignColumns;  
 
   bool get alignColumns { 
-    if (this.m_alignColumns == null) {
-      this.m_alignColumns = false;
+    if (this._alignColumns == null) {
+      this._alignColumns = false;
     }
-    return this.m_alignColumns!;
+    return this._alignColumns!;
   }
 
   void set alignColumns (bool v) {
-    this.m_alignColumns = v;
+    this._alignColumns = v;
   }
     
   /**
    * The background color of the legend.  
       */
-  String? m_backgroundColor;  
+  String? _backgroundColor;  
 
   String get backgroundColor { 
-    if (this.m_backgroundColor == null) {
-      this.m_backgroundColor = "";
+    if (this._backgroundColor == null) {
+      this._backgroundColor = "";
     }
-    return this.m_backgroundColor!;
+    return this._backgroundColor!;
   }
 
   void set backgroundColor (String v) {
-    this.m_backgroundColor = v;
+    this._backgroundColor = v;
   }
     
   /**
@@ -93,33 +93,33 @@ class LegendOptions extends OptionFragment {
    * 
    * Defaults to '#999999'. 
       */
-  String? m_borderColor;  
+  String? _borderColor;  
 
   String get borderColor { 
-    if (this.m_borderColor == null) {
-      this.m_borderColor = "";
+    if (this._borderColor == null) {
+      this._borderColor = "";
     }
-    return this.m_borderColor!;
+    return this._borderColor!;
   }
 
   void set borderColor (String v) {
-    this.m_borderColor = v;
+    this._borderColor = v;
   }
     
   /**
    * The border corner radius of the legend.  
       */
-  double? m_borderRadius;  
+  double? _borderRadius;  
 
   double get borderRadius { 
-    if (this.m_borderRadius == null) {
-      this.m_borderRadius = 0;
+    if (this._borderRadius == null) {
+      this._borderRadius = 0;
     }
-    return this.m_borderRadius!;
+    return this._borderRadius!;
   }
 
   void set borderRadius (double v) {
-    this.m_borderRadius = v;
+    this._borderRadius = v;
   }
     
   /**
@@ -127,17 +127,17 @@ class LegendOptions extends OptionFragment {
    * 
    * Defaults to '0'. 
       */
-  double? m_borderWidth;  
+  double? _borderWidth;  
 
   double get borderWidth { 
-    if (this.m_borderWidth == null) {
-      this.m_borderWidth = 0;
+    if (this._borderWidth == null) {
+      this._borderWidth = 0;
     }
-    return this.m_borderWidth!;
+    return this._borderWidth!;
   }
 
   void set borderWidth (double v) {
-    this.m_borderWidth = v;
+    this._borderWidth = v;
   }
     
   /**
@@ -145,17 +145,17 @@ class LegendOptions extends OptionFragment {
    * 
    * Defaults to 'highcharts-no-tooltip'. 
       */
-  String? m_className;  
+  String? _className;  
 
   String get className { 
-    if (this.m_className == null) {
-      this.m_className = "";
+    if (this._className == null) {
+      this._className = "";
     }
-    return this.m_className!;
+    return this._className!;
   }
 
   void set className (String v) {
-    this.m_className = v;
+    this._className = v;
   }
     
   /**
@@ -167,17 +167,17 @@ class LegendOptions extends OptionFragment {
    * 
    * Defaults to 'true'. 
       */
-  bool? m_enabled;  
+  bool? _enabled;  
 
   bool get enabled { 
-    if (this.m_enabled == null) {
-      this.m_enabled = false;
+    if (this._enabled == null) {
+      this._enabled = false;
     }
-    return this.m_enabled!;
+    return this._enabled!;
   }
 
   void set enabled (bool v) {
-    this.m_enabled = v;
+    this._enabled = v;
   }
     
   /**
@@ -186,17 +186,17 @@ class LegendOptions extends OptionFragment {
    * 
    * Defaults to 'false'. 
       */
-  bool? m_floating;  
+  bool? _floating;  
 
   bool get floating { 
-    if (this.m_floating == null) {
-      this.m_floating = false;
+    if (this._floating == null) {
+      this._floating = false;
     }
-    return this.m_floating!;
+    return this._floating!;
   }
 
   void set floating (bool v) {
-    this.m_floating = v;
+    this._floating = v;
   }
     
   /**
@@ -205,34 +205,34 @@ class LegendOptions extends OptionFragment {
    * 
    * Defaults to '{"width": "13px", "height": "13px", "position":"absolute"}'. 
       */
-  CSSObject? m_itemCheckboxStyle;  
+  CSSObject? _itemCheckboxStyle;  
 
   CSSObject get itemCheckboxStyle { 
-    if (this.m_itemCheckboxStyle == null) {
-      this.m_itemCheckboxStyle = CSSObject();
+    if (this._itemCheckboxStyle == null) {
+      this._itemCheckboxStyle = CSSObject();
     }
-    return this.m_itemCheckboxStyle!;
+    return this._itemCheckboxStyle!;
   }
 
   void set itemCheckboxStyle (CSSObject v) {
-    this.m_itemCheckboxStyle = v;
+    this._itemCheckboxStyle = v;
   }
     
   /**
    * In a legend with horizontal layout, the itemDistance defines the
    * pixel distance between each item.  
       */
-  double? m_itemDistance;  
+  double? _itemDistance;  
 
   double get itemDistance { 
-    if (this.m_itemDistance == null) {
-      this.m_itemDistance = 0;
+    if (this._itemDistance == null) {
+      this._itemDistance = 0;
     }
-    return this.m_itemDistance!;
+    return this._itemDistance!;
   }
 
   void set itemDistance (double v) {
-    this.m_itemDistance = v;
+    this._itemDistance = v;
   }
     
   /**
@@ -243,17 +243,17 @@ class LegendOptions extends OptionFragment {
    * 
    * Defaults to '{"color": "#cccccc"}'. 
       */
-  CSSObject? m_itemHiddenStyle;  
+  CSSObject? _itemHiddenStyle;  
 
   CSSObject get itemHiddenStyle { 
-    if (this.m_itemHiddenStyle == null) {
-      this.m_itemHiddenStyle = CSSObject();
+    if (this._itemHiddenStyle == null) {
+      this._itemHiddenStyle = CSSObject();
     }
-    return this.m_itemHiddenStyle!;
+    return this._itemHiddenStyle!;
   }
 
   void set itemHiddenStyle (CSSObject v) {
-    this.m_itemHiddenStyle = v;
+    this._itemHiddenStyle = v;
   }
     
   /**
@@ -263,17 +263,17 @@ class LegendOptions extends OptionFragment {
    * 
    * Defaults to '{"color": "#000000"}'. 
       */
-  CSSObject? m_itemHoverStyle;  
+  CSSObject? _itemHoverStyle;  
 
   CSSObject get itemHoverStyle { 
-    if (this.m_itemHoverStyle == null) {
-      this.m_itemHoverStyle = CSSObject();
+    if (this._itemHoverStyle == null) {
+      this._itemHoverStyle = CSSObject();
     }
-    return this.m_itemHoverStyle!;
+    return this._itemHoverStyle!;
   }
 
   void set itemHoverStyle (CSSObject v) {
-    this.m_itemHoverStyle = v;
+    this._itemHoverStyle = v;
   }
     
   /**
@@ -281,17 +281,17 @@ class LegendOptions extends OptionFragment {
    * 
    * Defaults to '2'. 
       */
-  double? m_itemMarginBottom;  
+  double? _itemMarginBottom;  
 
   double get itemMarginBottom { 
-    if (this.m_itemMarginBottom == null) {
-      this.m_itemMarginBottom = 0;
+    if (this._itemMarginBottom == null) {
+      this._itemMarginBottom = 0;
     }
-    return this.m_itemMarginBottom!;
+    return this._itemMarginBottom!;
   }
 
   void set itemMarginBottom (double v) {
-    this.m_itemMarginBottom = v;
+    this._itemMarginBottom = v;
   }
     
   /**
@@ -299,17 +299,17 @@ class LegendOptions extends OptionFragment {
    * 
    * Defaults to '2'. 
       */
-  double? m_itemMarginTop;  
+  double? _itemMarginTop;  
 
   double get itemMarginTop { 
-    if (this.m_itemMarginTop == null) {
-      this.m_itemMarginTop = 0;
+    if (this._itemMarginTop == null) {
+      this._itemMarginTop = 0;
     }
-    return this.m_itemMarginTop!;
+    return this._itemMarginTop!;
   }
 
   void set itemMarginTop (double v) {
-    this.m_itemMarginTop = v;
+    this._itemMarginTop = v;
   }
     
   /**
@@ -321,17 +321,17 @@ class LegendOptions extends OptionFragment {
    * 
    * Defaults to '{"color": "#333333", "cursor": "pointer", "fontSize": "0.75em", "fontWeight": "bold", "textOverflow": "ellipsis"}'. 
       */
-  CSSObject? m_itemStyle;  
+  CSSObject? _itemStyle;  
 
   CSSObject get itemStyle { 
-    if (this.m_itemStyle == null) {
-      this.m_itemStyle = CSSObject();
+    if (this._itemStyle == null) {
+      this._itemStyle = CSSObject();
     }
-    return this.m_itemStyle!;
+    return this._itemStyle!;
   }
 
   void set itemStyle (CSSObject v) {
-    this.m_itemStyle = v;
+    this._itemStyle = v;
   }
     
   /**
@@ -340,17 +340,17 @@ class LegendOptions extends OptionFragment {
    * are laid out across two rows or more, they will be vertically aligned
    * depending on the [legend.alignColumns](legend.alignColumns) option.  
       */
-  double? m_itemWidth;  
+  double? _itemWidth;  
 
   double get itemWidth { 
-    if (this.m_itemWidth == null) {
-      this.m_itemWidth = 0;
+    if (this._itemWidth == null) {
+      this._itemWidth = 0;
     }
-    return this.m_itemWidth!;
+    return this._itemWidth!;
   }
 
   void set itemWidth (double v) {
-    this.m_itemWidth = v;
+    this._itemWidth = v;
   }
     
   /**
@@ -362,17 +362,17 @@ class LegendOptions extends OptionFragment {
    * 
    * Defaults to 'horizontal'. 
       */
-  String? m_layout;  
+  String? _layout;  
 
   String get layout { 
-    if (this.m_layout == null) {
-      this.m_layout = "";
+    if (this._layout == null) {
+      this._layout = "";
     }
-    return this.m_layout!;
+    return this._layout!;
   }
 
   void set layout (String v) {
-    this.m_layout = v;
+    this._layout = v;
   }
     
   /**
@@ -382,17 +382,17 @@ class LegendOptions extends OptionFragment {
    * 
    * Defaults to '{name}'. 
       */
-  String? m_labelFormat;  
+  String? _labelFormat;  
 
   String get labelFormat { 
-    if (this.m_labelFormat == null) {
-      this.m_labelFormat = "";
+    if (this._labelFormat == null) {
+      this._labelFormat = "";
     }
-    return this.m_labelFormat!;
+    return this._labelFormat!;
   }
 
   void set labelFormat (String v) {
-    this.m_labelFormat = v;
+    this._labelFormat = v;
   }
     
   /**
@@ -403,17 +403,17 @@ class LegendOptions extends OptionFragment {
    * 
    * Defaults to '16'. 
       */
-  double? m_lineHeight;  
+  double? _lineHeight;  
 
   double get lineHeight { 
-    if (this.m_lineHeight == null) {
-      this.m_lineHeight = 0;
+    if (this._lineHeight == null) {
+      this._lineHeight = 0;
     }
-    return this.m_lineHeight!;
+    return this._lineHeight!;
   }
 
   void set lineHeight (double v) {
-    this.m_lineHeight = v;
+    this._lineHeight = v;
   }
     
   /**
@@ -423,34 +423,34 @@ class LegendOptions extends OptionFragment {
    * 
    * Defaults to '12'. 
       */
-  double? m_margin;  
+  double? _margin;  
 
   double get margin { 
-    if (this.m_margin == null) {
-      this.m_margin = 0;
+    if (this._margin == null) {
+      this._margin = 0;
     }
-    return this.m_margin!;
+    return this._margin!;
   }
 
   void set margin (double v) {
-    this.m_margin = v;
+    this._margin = v;
   }
     
   /**
    * Maximum pixel height for the legend. When the maximum height is
    * extended, navigation will show.  
       */
-  double? m_maxHeight;  
+  double? _maxHeight;  
 
   double get maxHeight { 
-    if (this.m_maxHeight == null) {
-      this.m_maxHeight = 0;
+    if (this._maxHeight == null) {
+      this._maxHeight = 0;
     }
-    return this.m_maxHeight!;
+    return this._maxHeight!;
   }
 
   void set maxHeight (double v) {
-    this.m_maxHeight = v;
+    this._maxHeight = v;
   }
     
   /**
@@ -460,17 +460,17 @@ class LegendOptions extends OptionFragment {
    * [increase the chart height in
    * export](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation-enabled-false/).  
       */
-  LegendNavigationOptions? m_navigation;  
+  LegendNavigationOptions? _navigation;  
 
   LegendNavigationOptions get navigation { 
-    if (this.m_navigation == null) {
-      this.m_navigation = LegendNavigationOptions();
+    if (this._navigation == null) {
+      this._navigation = LegendNavigationOptions();
     }
-    return this.m_navigation!;
+    return this._navigation!;
   }
 
   void set navigation (LegendNavigationOptions v) {
-    this.m_navigation = v;
+    this._navigation = v;
   }
     
   /**
@@ -478,17 +478,17 @@ class LegendOptions extends OptionFragment {
    * 
    * Defaults to '8'. 
       */
-  double? m_padding;  
+  double? _padding;  
 
   double get padding { 
-    if (this.m_padding == null) {
-      this.m_padding = 0;
+    if (this._padding == null) {
+      this._padding = 0;
     }
-    return this.m_padding!;
+    return this._padding!;
   }
 
   void set padding (double v) {
-    this.m_padding = v;
+    this._padding = v;
   }
     
   /**
@@ -497,17 +497,17 @@ class LegendOptions extends OptionFragment {
    * 
    * Defaults to 'false'. 
       */
-  bool? m_reversed;  
+  bool? _reversed;  
 
   bool get reversed { 
-    if (this.m_reversed == null) {
-      this.m_reversed = false;
+    if (this._reversed == null) {
+      this._reversed = false;
     }
-    return this.m_reversed!;
+    return this._reversed!;
   }
 
   void set reversed (bool v) {
-    this.m_reversed = v;
+    this._reversed = v;
   }
     
   /**
@@ -516,17 +516,17 @@ class LegendOptions extends OptionFragment {
    * 
    * Defaults to 'false'. 
       */
-  bool? m_rtl;  
+  bool? _rtl;  
 
   bool get rtl { 
-    if (this.m_rtl == null) {
-      this.m_rtl = false;
+    if (this._rtl == null) {
+      this._rtl = false;
     }
-    return this.m_rtl!;
+    return this._rtl!;
   }
 
   void set rtl (bool v) {
-    this.m_rtl = v;
+    this._rtl = v;
   }
     
   // NOTE: shadow skipped - type Generic is ignored in gen
@@ -538,17 +538,17 @@ class LegendOptions extends OptionFragment {
    * 
    * Defaults to 'true'. 
       */
-  bool? m_squareSymbol;  
+  bool? _squareSymbol;  
 
   bool get squareSymbol { 
-    if (this.m_squareSymbol == null) {
-      this.m_squareSymbol = false;
+    if (this._squareSymbol == null) {
+      this._squareSymbol = false;
     }
-    return this.m_squareSymbol!;
+    return this._squareSymbol!;
   }
 
   void set squareSymbol (bool v) {
-    this.m_squareSymbol = v;
+    this._squareSymbol = v;
   }
     
   /**
@@ -557,34 +557,34 @@ class LegendOptions extends OptionFragment {
    * determined by properties like `align`, `verticalAlign`, `x` and `y`,
    * but the styles are still parsed for backwards compatibility.  
       */
-  CSSObject? m_style;  
+  CSSObject? _style;  
 
   CSSObject get style { 
-    if (this.m_style == null) {
-      this.m_style = CSSObject();
+    if (this._style == null) {
+      this._style = CSSObject();
     }
-    return this.m_style!;
+    return this._style!;
   }
 
   void set style (CSSObject v) {
-    this.m_style = v;
+    this._style = v;
   }
     
   /**
    * The pixel height of the symbol for series types that use a rectangle
    * in the legend. Defaults to the font size of legend items.  
       */
-  double? m_symbolHeight;  
+  double? _symbolHeight;  
 
   double get symbolHeight { 
-    if (this.m_symbolHeight == null) {
-      this.m_symbolHeight = 0;
+    if (this._symbolHeight == null) {
+      this._symbolHeight = 0;
     }
-    return this.m_symbolHeight!;
+    return this._symbolHeight!;
   }
 
   void set symbolHeight (double v) {
-    this.m_symbolHeight = v;
+    this._symbolHeight = v;
   }
     
   /**
@@ -593,17 +593,17 @@ class LegendOptions extends OptionFragment {
    * 
    * Defaults to '5'. 
       */
-  double? m_symbolPadding;  
+  double? _symbolPadding;  
 
   double get symbolPadding { 
-    if (this.m_symbolPadding == null) {
-      this.m_symbolPadding = 0;
+    if (this._symbolPadding == null) {
+      this._symbolPadding = 0;
     }
-    return this.m_symbolPadding!;
+    return this._symbolPadding!;
   }
 
   void set symbolPadding (double v) {
-    this.m_symbolPadding = v;
+    this._symbolPadding = v;
   }
     
   /**
@@ -613,50 +613,50 @@ class LegendOptions extends OptionFragment {
    * 
    * For color axis scales, it defaults to 3.  
       */
-  double? m_symbolRadius;  
+  double? _symbolRadius;  
 
   double get symbolRadius { 
-    if (this.m_symbolRadius == null) {
-      this.m_symbolRadius = 0;
+    if (this._symbolRadius == null) {
+      this._symbolRadius = 0;
     }
-    return this.m_symbolRadius!;
+    return this._symbolRadius!;
   }
 
   void set symbolRadius (double v) {
-    this.m_symbolRadius = v;
+    this._symbolRadius = v;
   }
     
   /**
    * The pixel width of the legend item symbol. When the `squareSymbol`
    * option is set, this defaults to the `symbolHeight`, otherwise 16.  
       */
-  double? m_symbolWidth;  
+  double? _symbolWidth;  
 
   double get symbolWidth { 
-    if (this.m_symbolWidth == null) {
-      this.m_symbolWidth = 0;
+    if (this._symbolWidth == null) {
+      this._symbolWidth = 0;
     }
-    return this.m_symbolWidth!;
+    return this._symbolWidth!;
   }
 
   void set symbolWidth (double v) {
-    this.m_symbolWidth = v;
+    this._symbolWidth = v;
   }
     
   /**
    * A title to be added on top of the legend.  
       */
-  LegendTitleOptions? m_title;  
+  LegendTitleOptions? _title;  
 
   LegendTitleOptions get title { 
-    if (this.m_title == null) {
-      this.m_title = LegendTitleOptions();
+    if (this._title == null) {
+      this._title = LegendTitleOptions();
     }
-    return this.m_title!;
+    return this._title!;
   }
 
   void set title (LegendTitleOptions v) {
-    this.m_title = v;
+    this._title = v;
   }
     
   /**
@@ -667,17 +667,17 @@ class LegendOptions extends OptionFragment {
    * 
    * Defaults to 'false'. 
       */
-  bool? m_useHTML;  
+  bool? _useHTML;  
 
   bool get useHTML { 
-    if (this.m_useHTML == null) {
-      this.m_useHTML = false;
+    if (this._useHTML == null) {
+      this._useHTML = false;
     }
-    return this.m_useHTML!;
+    return this._useHTML!;
   }
 
   void set useHTML (bool v) {
-    this.m_useHTML = v;
+    this._useHTML = v;
   }
     
   /**
@@ -686,17 +686,17 @@ class LegendOptions extends OptionFragment {
    * 
    * Defaults to '-1'. 
       */
-  double? m_valueDecimals;  
+  double? _valueDecimals;  
 
   double get valueDecimals { 
-    if (this.m_valueDecimals == null) {
-      this.m_valueDecimals = 0;
+    if (this._valueDecimals == null) {
+      this._valueDecimals = 0;
     }
-    return this.m_valueDecimals!;
+    return this._valueDecimals!;
   }
 
   void set valueDecimals (double v) {
-    this.m_valueDecimals = v;
+    this._valueDecimals = v;
   }
     
   /**
@@ -705,17 +705,17 @@ class LegendOptions extends OptionFragment {
    * 
    * Defaults to ''''. 
       */
-  String? m_valueSuffix;  
+  String? _valueSuffix;  
 
   String get valueSuffix { 
-    if (this.m_valueSuffix == null) {
-      this.m_valueSuffix = "";
+    if (this._valueSuffix == null) {
+      this._valueSuffix = "";
     }
-    return this.m_valueSuffix!;
+    return this._valueSuffix!;
   }
 
   void set valueSuffix (String v) {
-    this.m_valueSuffix = v;
+    this._valueSuffix = v;
   }
     
   /**
@@ -732,17 +732,17 @@ class LegendOptions extends OptionFragment {
    * 
    * Defaults to 'bottom'. 
       */
-  String? m_verticalAlign;  
+  String? _verticalAlign;  
 
   String get verticalAlign { 
-    if (this.m_verticalAlign == null) {
-      this.m_verticalAlign = "";
+    if (this._verticalAlign == null) {
+      this._verticalAlign = "";
     }
-    return this.m_verticalAlign!;
+    return this._verticalAlign!;
   }
 
   void set verticalAlign (String v) {
-    this.m_verticalAlign = v;
+    this._verticalAlign = v;
   }
     
   /**
@@ -753,17 +753,17 @@ class LegendOptions extends OptionFragment {
    * Defaults to the full chart width for legends below or above the
    * chart, half the chart width for legends to the left and right.  
       */
-  String? m_width;  
+  String? _width;  
 
   String get width { 
-    if (this.m_width == null) {
-      this.m_width = "";
+    if (this._width == null) {
+      this._width = "";
     }
-    return this.m_width!;
+    return this._width!;
   }
 
   void set width (String v) {
-    this.m_width = v;
+    this._width = v;
   }
     
   /**
@@ -771,17 +771,17 @@ class LegendOptions extends OptionFragment {
    * `align` within chart.spacingLeft and chart.spacingRight. Negative
    * x moves it to the left, positive x moves it to the right.  
       */
-  double? m_x;  
+  double? _x;  
 
   double get x { 
-    if (this.m_x == null) {
-      this.m_x = 0;
+    if (this._x == null) {
+      this._x = 0;
     }
-    return this.m_x!;
+    return this._x!;
   }
 
   void set x (double v) {
-    this.m_x = v;
+    this._x = v;
   }
     
   /**
@@ -789,17 +789,17 @@ class LegendOptions extends OptionFragment {
    * `verticalAlign` within chart.spacingTop and chart.spacingBottom.
    *  Negative y moves it up, positive y moves it down.  
       */
-  double? m_y;  
+  double? _y;  
 
   double get y { 
-    if (this.m_y == null) {
-      this.m_y = 0;
+    if (this._y == null) {
+      this._y = 0;
     }
-    return this.m_y!;
+    return this._y!;
   }
 
   void set y (double v) {
-    this.m_y = v;
+    this._y = v;
   }
     
   /**
@@ -809,34 +809,34 @@ class LegendOptions extends OptionFragment {
    * automatically calculated ranges, a 1px margin of error is
    * permitted.  
       */
-  Options? m_bubbleLegend;  
+  Options? _bubbleLegend;  
 
   Options get bubbleLegend { 
-    if (this.m_bubbleLegend == null) {
-      this.m_bubbleLegend = Options();
+    if (this._bubbleLegend == null) {
+      this._bubbleLegend = Options();
     }
-    return this.m_bubbleLegend!;
+    return this._bubbleLegend!;
   }
 
   void set bubbleLegend (Options v) {
-    this.m_bubbleLegend = v;
+    this._bubbleLegend = v;
   }
     
   /**
    * Accessibility options for the legend. Requires the Accessibility
    * module.  
       */
-  LegendAccessibilityOptions? m_accessibility;  
+  LegendAccessibilityOptions? _accessibility;  
 
   LegendAccessibilityOptions get accessibility { 
-    if (this.m_accessibility == null) {
-      this.m_accessibility = LegendAccessibilityOptions();
+    if (this._accessibility == null) {
+      this._accessibility = LegendAccessibilityOptions();
     }
-    return this.m_accessibility!;
+    return this._accessibility!;
   }
 
   void set accessibility (LegendAccessibilityOptions v) {
-    this.m_accessibility = v;
+    this._accessibility = v;
   }
     
 
@@ -847,174 +847,174 @@ class LegendOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_align != null) {  
-      buffer.writeAll(["\"align\":", this.m_align, ","], "");
+    if (this._align != null) {  
+      buffer.writeAll(["\"align\":\`", this._align, "\`,"], "");
     }
 
-    if (this.m_alignColumns != null) {  
-      buffer.writeAll(["\"alignColumns\":", this.m_alignColumns, ","], "");
+    if (this._alignColumns != null) {  
+      buffer.writeAll(["\"alignColumns\":", this._alignColumns, ","], "");
     }
 
-    if (this.m_backgroundColor != null) {  
-      buffer.writeAll(["\"backgroundColor\":", this.m_backgroundColor, ","], "");
+    if (this._backgroundColor != null) {  
+      buffer.writeAll(["\"backgroundColor\":\`", this._backgroundColor, "\`,"], "");
     }
 
-    if (this.m_borderColor != null) {  
-      buffer.writeAll(["\"borderColor\":", this.m_borderColor, ","], "");
+    if (this._borderColor != null) {  
+      buffer.writeAll(["\"borderColor\":\`", this._borderColor, "\`,"], "");
     }
 
-    if (this.m_borderRadius != null) {  
-      buffer.writeAll(["\"borderRadius\":", this.m_borderRadius, ","], "");
+    if (this._borderRadius != null) {  
+      buffer.writeAll(["\"borderRadius\":", this._borderRadius, ","], "");
     }
 
-    if (this.m_borderWidth != null) {  
-      buffer.writeAll(["\"borderWidth\":", this.m_borderWidth, ","], "");
+    if (this._borderWidth != null) {  
+      buffer.writeAll(["\"borderWidth\":", this._borderWidth, ","], "");
     }
 
-    if (this.m_className != null) {  
-      buffer.writeAll(["\"className\":", this.m_className, ","], "");
+    if (this._className != null) {  
+      buffer.writeAll(["\"className\":\`", this._className, "\`,"], "");
     }
 
-    if (this.m_enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this.m_enabled, ","], "");
+    if (this._enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this._enabled, ","], "");
     }
 
-    if (this.m_floating != null) {  
-      buffer.writeAll(["\"floating\":", this.m_floating, ","], "");
+    if (this._floating != null) {  
+      buffer.writeAll(["\"floating\":", this._floating, ","], "");
     }
 
-    if (this.m_itemCheckboxStyle != null) {  
-      buffer.writeAll(["\"itemCheckboxStyle\":", this.m_itemCheckboxStyle?.toJSON(), ","], "");
+    if (this._itemCheckboxStyle != null) {  
+      buffer.writeAll(["\"itemCheckboxStyle\":", this._itemCheckboxStyle?.toJSON(), ","], "");
     }
 
-    if (this.m_itemDistance != null) {  
-      buffer.writeAll(["\"itemDistance\":", this.m_itemDistance, ","], "");
+    if (this._itemDistance != null) {  
+      buffer.writeAll(["\"itemDistance\":", this._itemDistance, ","], "");
     }
 
-    if (this.m_itemHiddenStyle != null) {  
-      buffer.writeAll(["\"itemHiddenStyle\":", this.m_itemHiddenStyle?.toJSON(), ","], "");
+    if (this._itemHiddenStyle != null) {  
+      buffer.writeAll(["\"itemHiddenStyle\":", this._itemHiddenStyle?.toJSON(), ","], "");
     }
 
-    if (this.m_itemHoverStyle != null) {  
-      buffer.writeAll(["\"itemHoverStyle\":", this.m_itemHoverStyle?.toJSON(), ","], "");
+    if (this._itemHoverStyle != null) {  
+      buffer.writeAll(["\"itemHoverStyle\":", this._itemHoverStyle?.toJSON(), ","], "");
     }
 
-    if (this.m_itemMarginBottom != null) {  
-      buffer.writeAll(["\"itemMarginBottom\":", this.m_itemMarginBottom, ","], "");
+    if (this._itemMarginBottom != null) {  
+      buffer.writeAll(["\"itemMarginBottom\":", this._itemMarginBottom, ","], "");
     }
 
-    if (this.m_itemMarginTop != null) {  
-      buffer.writeAll(["\"itemMarginTop\":", this.m_itemMarginTop, ","], "");
+    if (this._itemMarginTop != null) {  
+      buffer.writeAll(["\"itemMarginTop\":", this._itemMarginTop, ","], "");
     }
 
-    if (this.m_itemStyle != null) {  
-      buffer.writeAll(["\"itemStyle\":", this.m_itemStyle?.toJSON(), ","], "");
+    if (this._itemStyle != null) {  
+      buffer.writeAll(["\"itemStyle\":", this._itemStyle?.toJSON(), ","], "");
     }
 
-    if (this.m_itemWidth != null) {  
-      buffer.writeAll(["\"itemWidth\":", this.m_itemWidth, ","], "");
+    if (this._itemWidth != null) {  
+      buffer.writeAll(["\"itemWidth\":", this._itemWidth, ","], "");
     }
 
-    if (this.m_layout != null) {  
-      buffer.writeAll(["\"layout\":", this.m_layout, ","], "");
+    if (this._layout != null) {  
+      buffer.writeAll(["\"layout\":\`", this._layout, "\`,"], "");
     }
 
-    if (this.m_labelFormat != null) {  
-      buffer.writeAll(["\"labelFormat\":", this.m_labelFormat, ","], "");
+    if (this._labelFormat != null) {  
+      buffer.writeAll(["\"labelFormat\":\`", this._labelFormat, "\`,"], "");
     }
 
-    if (this.m_lineHeight != null) {  
-      buffer.writeAll(["\"lineHeight\":", this.m_lineHeight, ","], "");
+    if (this._lineHeight != null) {  
+      buffer.writeAll(["\"lineHeight\":", this._lineHeight, ","], "");
     }
 
-    if (this.m_margin != null) {  
-      buffer.writeAll(["\"margin\":", this.m_margin, ","], "");
+    if (this._margin != null) {  
+      buffer.writeAll(["\"margin\":", this._margin, ","], "");
     }
 
-    if (this.m_maxHeight != null) {  
-      buffer.writeAll(["\"maxHeight\":", this.m_maxHeight, ","], "");
+    if (this._maxHeight != null) {  
+      buffer.writeAll(["\"maxHeight\":", this._maxHeight, ","], "");
     }
 
-    if (this.m_navigation != null) {  
-      buffer.writeAll(["\"navigation\":", this.m_navigation?.toJSON(), ","], "");
+    if (this._navigation != null) {  
+      buffer.writeAll(["\"navigation\":", this._navigation?.toJSON(), ","], "");
     }
 
-    if (this.m_padding != null) {  
-      buffer.writeAll(["\"padding\":", this.m_padding, ","], "");
+    if (this._padding != null) {  
+      buffer.writeAll(["\"padding\":", this._padding, ","], "");
     }
 
-    if (this.m_reversed != null) {  
-      buffer.writeAll(["\"reversed\":", this.m_reversed, ","], "");
+    if (this._reversed != null) {  
+      buffer.writeAll(["\"reversed\":", this._reversed, ","], "");
     }
 
-    if (this.m_rtl != null) {  
-      buffer.writeAll(["\"rtl\":", this.m_rtl, ","], "");
+    if (this._rtl != null) {  
+      buffer.writeAll(["\"rtl\":", this._rtl, ","], "");
     }
 
     // NOTE: skip serialization of shadow (type Generic is ignored)} 
 
-    if (this.m_squareSymbol != null) {  
-      buffer.writeAll(["\"squareSymbol\":", this.m_squareSymbol, ","], "");
+    if (this._squareSymbol != null) {  
+      buffer.writeAll(["\"squareSymbol\":", this._squareSymbol, ","], "");
     }
 
-    if (this.m_style != null) {  
-      buffer.writeAll(["\"style\":", this.m_style?.toJSON(), ","], "");
+    if (this._style != null) {  
+      buffer.writeAll(["\"style\":", this._style?.toJSON(), ","], "");
     }
 
-    if (this.m_symbolHeight != null) {  
-      buffer.writeAll(["\"symbolHeight\":", this.m_symbolHeight, ","], "");
+    if (this._symbolHeight != null) {  
+      buffer.writeAll(["\"symbolHeight\":", this._symbolHeight, ","], "");
     }
 
-    if (this.m_symbolPadding != null) {  
-      buffer.writeAll(["\"symbolPadding\":", this.m_symbolPadding, ","], "");
+    if (this._symbolPadding != null) {  
+      buffer.writeAll(["\"symbolPadding\":", this._symbolPadding, ","], "");
     }
 
-    if (this.m_symbolRadius != null) {  
-      buffer.writeAll(["\"symbolRadius\":", this.m_symbolRadius, ","], "");
+    if (this._symbolRadius != null) {  
+      buffer.writeAll(["\"symbolRadius\":", this._symbolRadius, ","], "");
     }
 
-    if (this.m_symbolWidth != null) {  
-      buffer.writeAll(["\"symbolWidth\":", this.m_symbolWidth, ","], "");
+    if (this._symbolWidth != null) {  
+      buffer.writeAll(["\"symbolWidth\":", this._symbolWidth, ","], "");
     }
 
-    if (this.m_title != null) {  
-      buffer.writeAll(["\"title\":", this.m_title?.toJSON(), ","], "");
+    if (this._title != null) {  
+      buffer.writeAll(["\"title\":", this._title?.toJSON(), ","], "");
     }
 
-    if (this.m_useHTML != null) {  
-      buffer.writeAll(["\"useHTML\":", this.m_useHTML, ","], "");
+    if (this._useHTML != null) {  
+      buffer.writeAll(["\"useHTML\":", this._useHTML, ","], "");
     }
 
-    if (this.m_valueDecimals != null) {  
-      buffer.writeAll(["\"valueDecimals\":", this.m_valueDecimals, ","], "");
+    if (this._valueDecimals != null) {  
+      buffer.writeAll(["\"valueDecimals\":", this._valueDecimals, ","], "");
     }
 
-    if (this.m_valueSuffix != null) {  
-      buffer.writeAll(["\"valueSuffix\":", this.m_valueSuffix, ","], "");
+    if (this._valueSuffix != null) {  
+      buffer.writeAll(["\"valueSuffix\":\`", this._valueSuffix, "\`,"], "");
     }
 
-    if (this.m_verticalAlign != null) {  
-      buffer.writeAll(["\"verticalAlign\":", this.m_verticalAlign, ","], "");
+    if (this._verticalAlign != null) {  
+      buffer.writeAll(["\"verticalAlign\":\`", this._verticalAlign, "\`,"], "");
     }
 
-    if (this.m_width != null) {  
-      buffer.writeAll(["\"width\":", this.m_width, ","], "");
+    if (this._width != null) {  
+      buffer.writeAll(["\"width\":\`", this._width, "\`,"], "");
     }
 
-    if (this.m_x != null) {  
-      buffer.writeAll(["\"x\":", this.m_x, ","], "");
+    if (this._x != null) {  
+      buffer.writeAll(["\"x\":", this._x, ","], "");
     }
 
-    if (this.m_y != null) {  
-      buffer.writeAll(["\"y\":", this.m_y, ","], "");
+    if (this._y != null) {  
+      buffer.writeAll(["\"y\":", this._y, ","], "");
     }
 
-    if (this.m_bubbleLegend != null) {  
-      buffer.writeAll(["\"bubbleLegend\":", this.m_bubbleLegend?.toJSON(), ","], "");
+    if (this._bubbleLegend != null) {  
+      buffer.writeAll(["\"bubbleLegend\":", this._bubbleLegend?.toJSON(), ","], "");
     }
 
-    if (this.m_accessibility != null) {  
-      buffer.writeAll(["\"accessibility\":", this.m_accessibility?.toJSON(), ","], "");
+    if (this._accessibility != null) {  
+      buffer.writeAll(["\"accessibility\":", this._accessibility?.toJSON(), ","], "");
     }
   }
 

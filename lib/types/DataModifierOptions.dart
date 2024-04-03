@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,7 +23,19 @@ import 'OptionFragment.dart';
  */
 class DataModifierOptions extends OptionFragment {
   DataModifierOptions() : super();
-  
+  String? _type;  
+
+  String get type { 
+    if (this._type == null) {
+      this._type = "";
+    }
+    return this._type!;
+  }
+
+  void set type (String v) {
+    this._type = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -32,7 +44,9 @@ class DataModifierOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of type (type never is ignored)} 
+    if (this._type != null) {  
+      buffer.writeAll(["\"type\":\`", this._type, "\`,"], "");
+    }
   }
 
 }

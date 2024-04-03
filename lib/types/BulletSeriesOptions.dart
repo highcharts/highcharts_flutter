@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -28,17 +28,17 @@ class BulletSeriesOptions extends ColumnSeriesOptions {
   /**
    * All options related with look and positiong of targets.  
       */
-  BulletTargetOptions? m_targetOptions;  
+  BulletTargetOptions? _targetOptions;  
 
   BulletTargetOptions get targetOptions { 
-    if (this.m_targetOptions == null) {
-      this.m_targetOptions = BulletTargetOptions();
+    if (this._targetOptions == null) {
+      this._targetOptions = BulletTargetOptions();
     }
-    return this.m_targetOptions!;
+    return this._targetOptions!;
   }
 
   void set targetOptions (BulletTargetOptions v) {
-    this.m_targetOptions = v;
+    this._targetOptions = v;
   }
     
 
@@ -49,8 +49,8 @@ class BulletSeriesOptions extends ColumnSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_targetOptions != null) {  
-      buffer.writeAll(["\"targetOptions\":", this.m_targetOptions?.toJSON(), ","], "");
+    if (this._targetOptions != null) {  
+      buffer.writeAll(["\"targetOptions\":", this._targetOptions?.toJSON(), ","], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,17 +24,17 @@ import 'OptionFragment.dart';
  */
 class WaterfallPointOptions extends ColumnPointOptions {
   WaterfallPointOptions() : super();
-  bool? m_isSum;  
+  bool? _isSum;  
 
   bool get isSum { 
-    if (this.m_isSum == null) {
-      this.m_isSum = false;
+    if (this._isSum == null) {
+      this._isSum = false;
     }
-    return this.m_isSum!;
+    return this._isSum!;
   }
 
   void set isSum (bool v) {
-    this.m_isSum = v;
+    this._isSum = v;
   }
     
 
@@ -45,8 +45,8 @@ class WaterfallPointOptions extends ColumnPointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_isSum != null) {  
-      buffer.writeAll(["\"isSum\":", this.m_isSum, ","], "");
+    if (this._isSum != null) {  
+      buffer.writeAll(["\"isSum\":", this._isSum, ","], "");
     }
 
     // NOTE: skip serialization of y (type any is ignored)} 

@@ -12,11 +12,12 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
 import 'DataConnectorOptions.dart';
+import 'ColumnNamesOptions.dart';
 import 'OptionFragment.dart';
 
 /** 
@@ -24,69 +25,69 @@ import 'OptionFragment.dart';
  */
 class JSONConnectorOptions extends DataConnectorOptions {
   JSONConnectorOptions() : super();
-  bool? m_firstRowAsNames;  
-
-  bool get firstRowAsNames { 
-    if (this.m_firstRowAsNames == null) {
-      this.m_firstRowAsNames = false;
-    }
-    return this.m_firstRowAsNames!;
-  }
-
-  void set firstRowAsNames (bool v) {
-    this.m_firstRowAsNames = v;
-  }
-    
-  String? m_dataUrl;  
-
-  String get dataUrl { 
-    if (this.m_dataUrl == null) {
-      this.m_dataUrl = "";
-    }
-    return this.m_dataUrl!;
-  }
-
-  void set dataUrl (String v) {
-    this.m_dataUrl = v;
-  }
-    
-  bool? m_enablePolling;  
-
-  bool get enablePolling { 
-    if (this.m_enablePolling == null) {
-      this.m_enablePolling = false;
-    }
-    return this.m_enablePolling!;
-  }
-
-  void set enablePolling (bool v) {
-    this.m_enablePolling = v;
-  }
-    
-  double? m_dataRefreshRate;  
+  double? _dataRefreshRate;  
 
   double get dataRefreshRate { 
-    if (this.m_dataRefreshRate == null) {
-      this.m_dataRefreshRate = 0;
+    if (this._dataRefreshRate == null) {
+      this._dataRefreshRate = 0;
     }
-    return this.m_dataRefreshRate!;
+    return this._dataRefreshRate!;
   }
 
   void set dataRefreshRate (double v) {
-    this.m_dataRefreshRate = v;
+    this._dataRefreshRate = v;
   }
     
-  String? m_orientation;  
+  String? _dataUrl;  
+
+  String get dataUrl { 
+    if (this._dataUrl == null) {
+      this._dataUrl = "";
+    }
+    return this._dataUrl!;
+  }
+
+  void set dataUrl (String v) {
+    this._dataUrl = v;
+  }
+    
+  bool? _enablePolling;  
+
+  bool get enablePolling { 
+    if (this._enablePolling == null) {
+      this._enablePolling = false;
+    }
+    return this._enablePolling!;
+  }
+
+  void set enablePolling (bool v) {
+    this._enablePolling = v;
+  }
+    
+  bool? _firstRowAsNames;  
+
+  bool get firstRowAsNames { 
+    if (this._firstRowAsNames == null) {
+      this._firstRowAsNames = false;
+    }
+    return this._firstRowAsNames!;
+  }
+
+  void set firstRowAsNames (bool v) {
+    this._firstRowAsNames = v;
+  }
+    
+  String? _orientation;  
 
   String get orientation { 
-    if (this.m_orientation == null) {
-      this.m_orientation = "";
+    if (this._orientation == null) {
+      this._orientation = "";
     }
-    return this.m_orientation!;
+    return this._orientation!;
   }
 
   void set orientation (String v) {
-    this.m_orientation = v;
+    this._orientation = v;
   }
     
 
@@ -97,29 +98,29 @@ class JSONConnectorOptions extends DataConnectorOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_firstRowAsNames != null) {  
-      buffer.writeAll(["\"firstRowAsNames\":", this.m_firstRowAsNames, ","], "");
+    // NOTE: skip serialization of columnNames (type ColumnNamesOptions is ignored)} 
+
+    // NOTE: skip serialization of data (type Data is ignored)} 
+
+    if (this._dataRefreshRate != null) {  
+      buffer.writeAll(["\"dataRefreshRate\":", this._dataRefreshRate, ","], "");
     }
 
-    if (this.m_dataUrl != null) {  
-      buffer.writeAll(["\"dataUrl\":", this.m_dataUrl, ","], "");
+    if (this._dataUrl != null) {  
+      buffer.writeAll(["\"dataUrl\":\`", this._dataUrl, "\`,"], "");
     }
 
-    if (this.m_enablePolling != null) {  
-      buffer.writeAll(["\"enablePolling\":", this.m_enablePolling, ","], "");
+    if (this._enablePolling != null) {  
+      buffer.writeAll(["\"enablePolling\":", this._enablePolling, ","], "");
     }
 
-    // NOTE: skip serialization of data (type number)[][] is ignored)} 
-
-    if (this.m_dataRefreshRate != null) {  
-      buffer.writeAll(["\"dataRefreshRate\":", this.m_dataRefreshRate, ","], "");
+    if (this._firstRowAsNames != null) {  
+      buffer.writeAll(["\"firstRowAsNames\":", this._firstRowAsNames, ","], "");
     }
 
-    if (this.m_orientation != null) {  
-      buffer.writeAll(["\"orientation\":", this.m_orientation, ","], "");
+    if (this._orientation != null) {  
+      buffer.writeAll(["\"orientation\":\`", this._orientation, "\`,"], "");
     }
-
-    // NOTE: skip serialization of columnNames (type string[] is ignored)} 
   }
 
 }

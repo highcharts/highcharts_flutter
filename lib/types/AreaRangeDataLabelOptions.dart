@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,56 +24,56 @@ import 'OptionFragment.dart';
  */
 class AreaRangeDataLabelOptions extends DataLabelOptions {
   AreaRangeDataLabelOptions() : super();
-  double? m_xHigh;  
+  double? _xHigh;  
 
   double get xHigh { 
-    if (this.m_xHigh == null) {
-      this.m_xHigh = 0;
+    if (this._xHigh == null) {
+      this._xHigh = 0;
     }
-    return this.m_xHigh!;
+    return this._xHigh!;
   }
 
   void set xHigh (double v) {
-    this.m_xHigh = v;
+    this._xHigh = v;
   }
     
-  double? m_xLow;  
+  double? _xLow;  
 
   double get xLow { 
-    if (this.m_xLow == null) {
-      this.m_xLow = 0;
+    if (this._xLow == null) {
+      this._xLow = 0;
     }
-    return this.m_xLow!;
+    return this._xLow!;
   }
 
   void set xLow (double v) {
-    this.m_xLow = v;
+    this._xLow = v;
   }
     
-  double? m_yHigh;  
+  double? _yHigh;  
 
   double get yHigh { 
-    if (this.m_yHigh == null) {
-      this.m_yHigh = 0;
+    if (this._yHigh == null) {
+      this._yHigh = 0;
     }
-    return this.m_yHigh!;
+    return this._yHigh!;
   }
 
   void set yHigh (double v) {
-    this.m_yHigh = v;
+    this._yHigh = v;
   }
     
-  double? m_yLow;  
+  double? _yLow;  
 
   double get yLow { 
-    if (this.m_yLow == null) {
-      this.m_yLow = 0;
+    if (this._yLow == null) {
+      this._yLow = 0;
     }
-    return this.m_yLow!;
+    return this._yLow!;
   }
 
   void set yLow (double v) {
-    this.m_yLow = v;
+    this._yLow = v;
   }
     
 
@@ -84,20 +84,20 @@ class AreaRangeDataLabelOptions extends DataLabelOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_xHigh != null) {  
-      buffer.writeAll(["\"xHigh\":", this.m_xHigh, ","], "");
+    if (this._xHigh != null) {  
+      buffer.writeAll(["\"xHigh\":", this._xHigh, ","], "");
     }
 
-    if (this.m_xLow != null) {  
-      buffer.writeAll(["\"xLow\":", this.m_xLow, ","], "");
+    if (this._xLow != null) {  
+      buffer.writeAll(["\"xLow\":", this._xLow, ","], "");
     }
 
-    if (this.m_yHigh != null) {  
-      buffer.writeAll(["\"yHigh\":", this.m_yHigh, ","], "");
+    if (this._yHigh != null) {  
+      buffer.writeAll(["\"yHigh\":", this._yHigh, ","], "");
     }
 
-    if (this.m_yLow != null) {  
-      buffer.writeAll(["\"yLow\":", this.m_yLow, ","], "");
+    if (this._yLow != null) {  
+      buffer.writeAll(["\"yLow\":", this._yLow, ","], "");
     }
   }
 

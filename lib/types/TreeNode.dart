@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,82 +24,82 @@ import 'OptionFragment.dart';
  */
 class TreeNode extends OptionFragment {
   TreeNode() : super();
-  double? m_depth;  
+  double? _depth;  
 
   double get depth { 
-    if (this.m_depth == null) {
-      this.m_depth = 0;
+    if (this._depth == null) {
+      this._depth = 0;
     }
-    return this.m_depth!;
+    return this._depth!;
   }
 
   void set depth (double v) {
-    this.m_depth = v;
+    this._depth = v;
   }
     
-  double? m_descendants;  
+  double? _descendants;  
 
   double get descendants { 
-    if (this.m_descendants == null) {
-      this.m_descendants = 0;
+    if (this._descendants == null) {
+      this._descendants = 0;
     }
-    return this.m_descendants!;
+    return this._descendants!;
   }
 
   void set descendants (double v) {
-    this.m_descendants = v;
+    this._descendants = v;
   }
     
-  double? m_height;  
+  double? _height;  
 
   double get height { 
-    if (this.m_height == null) {
-      this.m_height = 0;
+    if (this._height == null) {
+      this._height = 0;
     }
-    return this.m_height!;
+    return this._height!;
   }
 
   void set height (double v) {
-    this.m_height = v;
+    this._height = v;
   }
     
-  String? m_id;  
+  String? _id;  
 
   String get id { 
-    if (this.m_id == null) {
-      this.m_id = "";
+    if (this._id == null) {
+      this._id = "";
     }
-    return this.m_id!;
+    return this._id!;
   }
 
   void set id (String v) {
-    this.m_id = v;
+    this._id = v;
   }
     
-  double? m_level;  
+  double? _level;  
 
   double get level { 
-    if (this.m_level == null) {
-      this.m_level = 0;
+    if (this._level == null) {
+      this._level = 0;
     }
-    return this.m_level!;
+    return this._level!;
   }
 
   void set level (double v) {
-    this.m_level = v;
+    this._level = v;
   }
     
-  String? m_parent;  
+  String? _parent;  
 
   String get parent { 
-    if (this.m_parent == null) {
-      this.m_parent = "";
+    if (this._parent == null) {
+      this._parent = "";
     }
-    return this.m_parent!;
+    return this._parent!;
   }
 
   void set parent (String v) {
-    this.m_parent = v;
+    this._parent = v;
   }
     
 
@@ -114,28 +114,28 @@ class TreeNode extends OptionFragment {
 
     // NOTE: skip serialization of data (type TreePointOptionsObject is ignored)} 
 
-    if (this.m_depth != null) {  
-      buffer.writeAll(["\"depth\":", this.m_depth, ","], "");
+    if (this._depth != null) {  
+      buffer.writeAll(["\"depth\":", this._depth, ","], "");
     }
 
-    if (this.m_descendants != null) {  
-      buffer.writeAll(["\"descendants\":", this.m_descendants, ","], "");
+    if (this._descendants != null) {  
+      buffer.writeAll(["\"descendants\":", this._descendants, ","], "");
     }
 
-    if (this.m_height != null) {  
-      buffer.writeAll(["\"height\":", this.m_height, ","], "");
+    if (this._height != null) {  
+      buffer.writeAll(["\"height\":", this._height, ","], "");
     }
 
-    if (this.m_id != null) {  
-      buffer.writeAll(["\"id\":", this.m_id, ","], "");
+    if (this._id != null) {  
+      buffer.writeAll(["\"id\":\`", this._id, "\`,"], "");
     }
 
-    if (this.m_level != null) {  
-      buffer.writeAll(["\"level\":", this.m_level, ","], "");
+    if (this._level != null) {  
+      buffer.writeAll(["\"level\":", this._level, ","], "");
     }
 
-    if (this.m_parent != null) {  
-      buffer.writeAll(["\"parent\":", this.m_parent, ","], "");
+    if (this._parent != null) {  
+      buffer.writeAll(["\"parent\":\`", this._parent, "\`,"], "");
     }
   }
 

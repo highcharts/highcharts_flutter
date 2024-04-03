@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -25,43 +25,43 @@ import 'OptionFragment.dart';
  */
 class HeatmapPointOptions extends ScatterPointOptions {
   HeatmapPointOptions() : super();
-  double? m_borderWidth;  
+  double? _borderWidth;  
 
   double get borderWidth { 
-    if (this.m_borderWidth == null) {
-      this.m_borderWidth = 0;
+    if (this._borderWidth == null) {
+      this._borderWidth = 0;
     }
-    return this.m_borderWidth!;
+    return this._borderWidth!;
   }
 
   void set borderWidth (double v) {
-    this.m_borderWidth = v;
+    this._borderWidth = v;
   }
     
-  double? m_pointPadding;  
+  double? _pointPadding;  
 
   double get pointPadding { 
-    if (this.m_pointPadding == null) {
-      this.m_pointPadding = 0;
+    if (this._pointPadding == null) {
+      this._pointPadding = 0;
     }
-    return this.m_pointPadding!;
+    return this._pointPadding!;
   }
 
   void set pointPadding (double v) {
-    this.m_pointPadding = v;
+    this._pointPadding = v;
   }
     
-  double? m_value;  
+  double? _value;  
 
   double get value { 
-    if (this.m_value == null) {
-      this.m_value = 0;
+    if (this._value == null) {
+      this._value = 0;
     }
-    return this.m_value!;
+    return this._value!;
   }
 
   void set value (double v) {
-    this.m_value = v;
+    this._value = v;
   }
     
 
@@ -72,18 +72,18 @@ class HeatmapPointOptions extends ScatterPointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_borderWidth != null) {  
-      buffer.writeAll(["\"borderWidth\":", this.m_borderWidth, ","], "");
+    if (this._borderWidth != null) {  
+      buffer.writeAll(["\"borderWidth\":", this._borderWidth, ","], "");
     }
 
     // NOTE: skip serialization of marker (type HeatmapPointMarkerOptions is ignored)} 
 
-    if (this.m_pointPadding != null) {  
-      buffer.writeAll(["\"pointPadding\":", this.m_pointPadding, ","], "");
+    if (this._pointPadding != null) {  
+      buffer.writeAll(["\"pointPadding\":", this._pointPadding, ","], "");
     }
 
-    if (this.m_value != null) {  
-      buffer.writeAll(["\"value\":", this.m_value, ","], "");
+    if (this._value != null) {  
+      buffer.writeAll(["\"value\":", this._value, ","], "");
     }
   }
 

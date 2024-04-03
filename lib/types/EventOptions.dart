@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,30 +23,30 @@ import 'OptionFragment.dart';
  */
 class EventOptions extends OptionFragment {
   EventOptions() : super();
-  double? m_order;  
+  double? _order;  
 
   double get order { 
-    if (this.m_order == null) {
-      this.m_order = 0;
+    if (this._order == null) {
+      this._order = 0;
     }
-    return this.m_order!;
+    return this._order!;
   }
 
   void set order (double v) {
-    this.m_order = v;
+    this._order = v;
   }
     
-  bool? m_passive;  
+  bool? _passive;  
 
   bool get passive { 
-    if (this.m_passive == null) {
-      this.m_passive = false;
+    if (this._passive == null) {
+      this._passive = false;
     }
-    return this.m_passive!;
+    return this._passive!;
   }
 
   void set passive (bool v) {
-    this.m_passive = v;
+    this._passive = v;
   }
     
 
@@ -57,12 +57,12 @@ class EventOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_order != null) {  
-      buffer.writeAll(["\"order\":", this.m_order, ","], "");
+    if (this._order != null) {  
+      buffer.writeAll(["\"order\":", this._order, ","], "");
     }
 
-    if (this.m_passive != null) {  
-      buffer.writeAll(["\"passive\":", this.m_passive, ","], "");
+    if (this._passive != null) {  
+      buffer.writeAll(["\"passive\":", this._passive, ","], "");
     }
   }
 

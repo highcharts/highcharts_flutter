@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -40,88 +40,88 @@ class MACDOptions extends SMAOptions {
    * 
    * Defaults to '0'. 
       */
-  double? m_threshold;  
+  double? _threshold;  
 
   double get threshold { 
-    if (this.m_threshold == null) {
-      this.m_threshold = 0;
+    if (this._threshold == null) {
+      this._threshold = 0;
     }
-    return this.m_threshold!;
+    return this._threshold!;
   }
 
   void set threshold (double v) {
-    this.m_threshold = v;
+    this._threshold = v;
   }
     
-  double? m_groupPadding;  
+  double? _groupPadding;  
 
   double get groupPadding { 
-    if (this.m_groupPadding == null) {
-      this.m_groupPadding = 0;
+    if (this._groupPadding == null) {
+      this._groupPadding = 0;
     }
-    return this.m_groupPadding!;
+    return this._groupPadding!;
   }
 
   void set groupPadding (double v) {
-    this.m_groupPadding = v;
+    this._groupPadding = v;
   }
     
-  double? m_pointPadding;  
+  double? _pointPadding;  
 
   double get pointPadding { 
-    if (this.m_pointPadding == null) {
-      this.m_pointPadding = 0;
+    if (this._pointPadding == null) {
+      this._pointPadding = 0;
     }
-    return this.m_pointPadding!;
+    return this._pointPadding!;
   }
 
   void set pointPadding (double v) {
-    this.m_pointPadding = v;
+    this._pointPadding = v;
   }
     
-  double? m_minPointLength;  
+  double? _minPointLength;  
 
   double get minPointLength { 
-    if (this.m_minPointLength == null) {
-      this.m_minPointLength = 0;
+    if (this._minPointLength == null) {
+      this._minPointLength = 0;
     }
-    return this.m_minPointLength!;
+    return this._minPointLength!;
   }
 
   void set minPointLength (double v) {
-    this.m_minPointLength = v;
+    this._minPointLength = v;
   }
     
   /**
    * The styles for signal line  
       */
-  MACDLineOptions? m_signalLine;  
+  MACDLineOptions? _signalLine;  
 
   MACDLineOptions get signalLine { 
-    if (this.m_signalLine == null) {
-      this.m_signalLine = MACDLineOptions();
+    if (this._signalLine == null) {
+      this._signalLine = MACDLineOptions();
     }
-    return this.m_signalLine!;
+    return this._signalLine!;
   }
 
   void set signalLine (MACDLineOptions v) {
-    this.m_signalLine = v;
+    this._signalLine = v;
   }
     
   /**
    * The styles for macd line  
       */
-  MACDLineOptions? m_macdLine;  
+  MACDLineOptions? _macdLine;  
 
   MACDLineOptions get macdLine { 
-    if (this.m_macdLine == null) {
-      this.m_macdLine = MACDLineOptions();
+    if (this._macdLine == null) {
+      this._macdLine = MACDLineOptions();
     }
-    return this.m_macdLine!;
+    return this._macdLine!;
   }
 
   void set macdLine (MACDLineOptions v) {
-    this.m_macdLine = v;
+    this._macdLine = v;
   }
     
 
@@ -132,34 +132,32 @@ class MACDOptions extends SMAOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_params != null) {  
-      buffer.writeAll(["\"params\":", this.m_params?.toJSON(), ","], "");
-    }
+    // NOTE: skip serialization of params (type MACDParamsOptions is ignored)} 
 
     // NOTE: skip serialization of states (type Generic is ignored)} 
 
-    if (this.m_threshold != null) {  
-      buffer.writeAll(["\"threshold\":", this.m_threshold, ","], "");
+    if (this._threshold != null) {  
+      buffer.writeAll(["\"threshold\":", this._threshold, ","], "");
     }
 
-    if (this.m_groupPadding != null) {  
-      buffer.writeAll(["\"groupPadding\":", this.m_groupPadding, ","], "");
+    if (this._groupPadding != null) {  
+      buffer.writeAll(["\"groupPadding\":", this._groupPadding, ","], "");
     }
 
-    if (this.m_pointPadding != null) {  
-      buffer.writeAll(["\"pointPadding\":", this.m_pointPadding, ","], "");
+    if (this._pointPadding != null) {  
+      buffer.writeAll(["\"pointPadding\":", this._pointPadding, ","], "");
     }
 
-    if (this.m_minPointLength != null) {  
-      buffer.writeAll(["\"minPointLength\":", this.m_minPointLength, ","], "");
+    if (this._minPointLength != null) {  
+      buffer.writeAll(["\"minPointLength\":", this._minPointLength, ","], "");
     }
 
-    if (this.m_signalLine != null) {  
-      buffer.writeAll(["\"signalLine\":", this.m_signalLine?.toJSON(), ","], "");
+    if (this._signalLine != null) {  
+      buffer.writeAll(["\"signalLine\":", this._signalLine?.toJSON(), ","], "");
     }
 
-    if (this.m_macdLine != null) {  
-      buffer.writeAll(["\"macdLine\":", this.m_macdLine?.toJSON(), ","], "");
+    if (this._macdLine != null) {  
+      buffer.writeAll(["\"macdLine\":", this._macdLine?.toJSON(), ","], "");
     }
   }
 

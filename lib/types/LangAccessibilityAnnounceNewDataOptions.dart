@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,69 +23,69 @@ import 'OptionFragment.dart';
  */
 class LangAccessibilityAnnounceNewDataOptions extends OptionFragment {
   LangAccessibilityAnnounceNewDataOptions() : super();
-  String? m_newDataAnnounce;  
+  String? _newDataAnnounce;  
 
   String get newDataAnnounce { 
-    if (this.m_newDataAnnounce == null) {
-      this.m_newDataAnnounce = "";
+    if (this._newDataAnnounce == null) {
+      this._newDataAnnounce = "";
     }
-    return this.m_newDataAnnounce!;
+    return this._newDataAnnounce!;
   }
 
   void set newDataAnnounce (String v) {
-    this.m_newDataAnnounce = v;
+    this._newDataAnnounce = v;
   }
     
-  String? m_newSeriesAnnounceSingle;  
+  String? _newSeriesAnnounceSingle;  
 
   String get newSeriesAnnounceSingle { 
-    if (this.m_newSeriesAnnounceSingle == null) {
-      this.m_newSeriesAnnounceSingle = "";
+    if (this._newSeriesAnnounceSingle == null) {
+      this._newSeriesAnnounceSingle = "";
     }
-    return this.m_newSeriesAnnounceSingle!;
+    return this._newSeriesAnnounceSingle!;
   }
 
   void set newSeriesAnnounceSingle (String v) {
-    this.m_newSeriesAnnounceSingle = v;
+    this._newSeriesAnnounceSingle = v;
   }
     
-  String? m_newPointAnnounceSingle;  
+  String? _newPointAnnounceSingle;  
 
   String get newPointAnnounceSingle { 
-    if (this.m_newPointAnnounceSingle == null) {
-      this.m_newPointAnnounceSingle = "";
+    if (this._newPointAnnounceSingle == null) {
+      this._newPointAnnounceSingle = "";
     }
-    return this.m_newPointAnnounceSingle!;
+    return this._newPointAnnounceSingle!;
   }
 
   void set newPointAnnounceSingle (String v) {
-    this.m_newPointAnnounceSingle = v;
+    this._newPointAnnounceSingle = v;
   }
     
-  String? m_newSeriesAnnounceMultiple;  
+  String? _newSeriesAnnounceMultiple;  
 
   String get newSeriesAnnounceMultiple { 
-    if (this.m_newSeriesAnnounceMultiple == null) {
-      this.m_newSeriesAnnounceMultiple = "";
+    if (this._newSeriesAnnounceMultiple == null) {
+      this._newSeriesAnnounceMultiple = "";
     }
-    return this.m_newSeriesAnnounceMultiple!;
+    return this._newSeriesAnnounceMultiple!;
   }
 
   void set newSeriesAnnounceMultiple (String v) {
-    this.m_newSeriesAnnounceMultiple = v;
+    this._newSeriesAnnounceMultiple = v;
   }
     
-  String? m_newPointAnnounceMultiple;  
+  String? _newPointAnnounceMultiple;  
 
   String get newPointAnnounceMultiple { 
-    if (this.m_newPointAnnounceMultiple == null) {
-      this.m_newPointAnnounceMultiple = "";
+    if (this._newPointAnnounceMultiple == null) {
+      this._newPointAnnounceMultiple = "";
     }
-    return this.m_newPointAnnounceMultiple!;
+    return this._newPointAnnounceMultiple!;
   }
 
   void set newPointAnnounceMultiple (String v) {
-    this.m_newPointAnnounceMultiple = v;
+    this._newPointAnnounceMultiple = v;
   }
     
 
@@ -96,24 +96,24 @@ class LangAccessibilityAnnounceNewDataOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_newDataAnnounce != null) {  
-      buffer.writeAll(["\"newDataAnnounce\":", this.m_newDataAnnounce, ","], "");
+    if (this._newDataAnnounce != null) {  
+      buffer.writeAll(["\"newDataAnnounce\":\`", this._newDataAnnounce, "\`,"], "");
     }
 
-    if (this.m_newSeriesAnnounceSingle != null) {  
-      buffer.writeAll(["\"newSeriesAnnounceSingle\":", this.m_newSeriesAnnounceSingle, ","], "");
+    if (this._newSeriesAnnounceSingle != null) {  
+      buffer.writeAll(["\"newSeriesAnnounceSingle\":\`", this._newSeriesAnnounceSingle, "\`,"], "");
     }
 
-    if (this.m_newPointAnnounceSingle != null) {  
-      buffer.writeAll(["\"newPointAnnounceSingle\":", this.m_newPointAnnounceSingle, ","], "");
+    if (this._newPointAnnounceSingle != null) {  
+      buffer.writeAll(["\"newPointAnnounceSingle\":\`", this._newPointAnnounceSingle, "\`,"], "");
     }
 
-    if (this.m_newSeriesAnnounceMultiple != null) {  
-      buffer.writeAll(["\"newSeriesAnnounceMultiple\":", this.m_newSeriesAnnounceMultiple, ","], "");
+    if (this._newSeriesAnnounceMultiple != null) {  
+      buffer.writeAll(["\"newSeriesAnnounceMultiple\":\`", this._newSeriesAnnounceMultiple, "\`,"], "");
     }
 
-    if (this.m_newPointAnnounceMultiple != null) {  
-      buffer.writeAll(["\"newPointAnnounceMultiple\":", this.m_newPointAnnounceMultiple, ","], "");
+    if (this._newPointAnnounceMultiple != null) {  
+      buffer.writeAll(["\"newPointAnnounceMultiple\":\`", this._newPointAnnounceMultiple, "\`,"], "");
     }
   }
 

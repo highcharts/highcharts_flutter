@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,82 +23,82 @@ import 'OptionFragment.dart';
  */
 class MapBounds extends OptionFragment {
   MapBounds() : super();
-  double? m_midX;  
+  double? _midX;  
 
   double get midX { 
-    if (this.m_midX == null) {
-      this.m_midX = 0;
+    if (this._midX == null) {
+      this._midX = 0;
     }
-    return this.m_midX!;
+    return this._midX!;
   }
 
   void set midX (double v) {
-    this.m_midX = v;
+    this._midX = v;
   }
     
-  double? m_midY;  
+  double? _midY;  
 
   double get midY { 
-    if (this.m_midY == null) {
-      this.m_midY = 0;
+    if (this._midY == null) {
+      this._midY = 0;
     }
-    return this.m_midY!;
+    return this._midY!;
   }
 
   void set midY (double v) {
-    this.m_midY = v;
+    this._midY = v;
   }
     
-  double? m_x1;  
+  double? _x1;  
 
   double get x1 { 
-    if (this.m_x1 == null) {
-      this.m_x1 = 0;
+    if (this._x1 == null) {
+      this._x1 = 0;
     }
-    return this.m_x1!;
+    return this._x1!;
   }
 
   void set x1 (double v) {
-    this.m_x1 = v;
+    this._x1 = v;
   }
     
-  double? m_y1;  
+  double? _y1;  
 
   double get y1 { 
-    if (this.m_y1 == null) {
-      this.m_y1 = 0;
+    if (this._y1 == null) {
+      this._y1 = 0;
     }
-    return this.m_y1!;
+    return this._y1!;
   }
 
   void set y1 (double v) {
-    this.m_y1 = v;
+    this._y1 = v;
   }
     
-  double? m_x2;  
+  double? _x2;  
 
   double get x2 { 
-    if (this.m_x2 == null) {
-      this.m_x2 = 0;
+    if (this._x2 == null) {
+      this._x2 = 0;
     }
-    return this.m_x2!;
+    return this._x2!;
   }
 
   void set x2 (double v) {
-    this.m_x2 = v;
+    this._x2 = v;
   }
     
-  double? m_y2;  
+  double? _y2;  
 
   double get y2 { 
-    if (this.m_y2 == null) {
-      this.m_y2 = 0;
+    if (this._y2 == null) {
+      this._y2 = 0;
     }
-    return this.m_y2!;
+    return this._y2!;
   }
 
   void set y2 (double v) {
-    this.m_y2 = v;
+    this._y2 = v;
   }
     
 
@@ -109,28 +109,28 @@ class MapBounds extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_midX != null) {  
-      buffer.writeAll(["\"midX\":", this.m_midX, ","], "");
+    if (this._midX != null) {  
+      buffer.writeAll(["\"midX\":", this._midX, ","], "");
     }
 
-    if (this.m_midY != null) {  
-      buffer.writeAll(["\"midY\":", this.m_midY, ","], "");
+    if (this._midY != null) {  
+      buffer.writeAll(["\"midY\":", this._midY, ","], "");
     }
 
-    if (this.m_x1 != null) {  
-      buffer.writeAll(["\"x1\":", this.m_x1, ","], "");
+    if (this._x1 != null) {  
+      buffer.writeAll(["\"x1\":", this._x1, ","], "");
     }
 
-    if (this.m_y1 != null) {  
-      buffer.writeAll(["\"y1\":", this.m_y1, ","], "");
+    if (this._y1 != null) {  
+      buffer.writeAll(["\"y1\":", this._y1, ","], "");
     }
 
-    if (this.m_x2 != null) {  
-      buffer.writeAll(["\"x2\":", this.m_x2, ","], "");
+    if (this._x2 != null) {  
+      buffer.writeAll(["\"x2\":", this._x2, ","], "");
     }
 
-    if (this.m_y2 != null) {  
-      buffer.writeAll(["\"y2\":", this.m_y2, ","], "");
+    if (this._y2 != null) {  
+      buffer.writeAll(["\"y2\":", this._y2, ","], "");
     }
   }
 

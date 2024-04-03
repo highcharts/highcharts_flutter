@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -25,95 +25,95 @@ import 'OptionFragment.dart';
  */
 class PointLabelObject extends OptionFragment {
   PointLabelObject() : super();
-  String? m_x;  
+  String? _x;  
 
   String get x { 
-    if (this.m_x == null) {
-      this.m_x = "";
+    if (this._x == null) {
+      this._x = "";
     }
-    return this.m_x!;
+    return this._x!;
   }
 
   void set x (String v) {
-    this.m_x = v;
+    this._x = v;
   }
     
-  double? m_y;  
+  double? _y;  
 
   double get y { 
-    if (this.m_y == null) {
-      this.m_y = 0;
+    if (this._y == null) {
+      this._y = 0;
     }
-    return this.m_y!;
+    return this._y!;
   }
 
   void set y (double v) {
-    this.m_y = v;
+    this._y = v;
   }
     
-  String? m_color;  
+  String? _color;  
 
   String get color { 
-    if (this.m_color == null) {
-      this.m_color = "";
+    if (this._color == null) {
+      this._color = "";
     }
-    return this.m_color!;
+    return this._color!;
   }
 
   void set color (String v) {
-    this.m_color = v;
+    this._color = v;
   }
     
-  double? m_colorIndex;  
+  double? _colorIndex;  
 
   double get colorIndex { 
-    if (this.m_colorIndex == null) {
-      this.m_colorIndex = 0;
+    if (this._colorIndex == null) {
+      this._colorIndex = 0;
     }
-    return this.m_colorIndex!;
+    return this._colorIndex!;
   }
 
   void set colorIndex (double v) {
-    this.m_colorIndex = v;
+    this._colorIndex = v;
   }
     
-  String? m_key;  
+  String? _key;  
 
   String get key { 
-    if (this.m_key == null) {
-      this.m_key = "";
+    if (this._key == null) {
+      this._key = "";
     }
-    return this.m_key!;
+    return this._key!;
   }
 
   void set key (String v) {
-    this.m_key = v;
+    this._key = v;
   }
     
-  double? m_percentage;  
+  double? _percentage;  
 
   double get percentage { 
-    if (this.m_percentage == null) {
-      this.m_percentage = 0;
+    if (this._percentage == null) {
+      this._percentage = 0;
     }
-    return this.m_percentage!;
+    return this._percentage!;
   }
 
   void set percentage (double v) {
-    this.m_percentage = v;
+    this._percentage = v;
   }
     
-  double? m_total;  
+  double? _total;  
 
   double get total { 
-    if (this.m_total == null) {
-      this.m_total = 0;
+    if (this._total == null) {
+      this._total = 0;
     }
-    return this.m_total!;
+    return this._total!;
   }
 
   void set total (double v) {
-    this.m_total = v;
+    this._total = v;
   }
     
 
@@ -124,36 +124,36 @@ class PointLabelObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_x != null) {  
-      buffer.writeAll(["\"x\":", this.m_x, ","], "");
+    if (this._x != null) {  
+      buffer.writeAll(["\"x\":\`", this._x, "\`,"], "");
     }
 
-    if (this.m_y != null) {  
-      buffer.writeAll(["\"y\":", this.m_y, ","], "");
+    if (this._y != null) {  
+      buffer.writeAll(["\"y\":", this._y, ","], "");
     }
 
-    if (this.m_color != null) {  
-      buffer.writeAll(["\"color\":", this.m_color, ","], "");
+    if (this._color != null) {  
+      buffer.writeAll(["\"color\":\`", this._color, "\`,"], "");
     }
 
-    if (this.m_colorIndex != null) {  
-      buffer.writeAll(["\"colorIndex\":", this.m_colorIndex, ","], "");
+    if (this._colorIndex != null) {  
+      buffer.writeAll(["\"colorIndex\":", this._colorIndex, ","], "");
     }
 
-    if (this.m_key != null) {  
-      buffer.writeAll(["\"key\":", this.m_key, ","], "");
+    if (this._key != null) {  
+      buffer.writeAll(["\"key\":\`", this._key, "\`,"], "");
     }
 
     // NOTE: skip serialization of series (type Series is ignored)} 
 
     // NOTE: skip serialization of point (type Point is ignored)} 
 
-    if (this.m_percentage != null) {  
-      buffer.writeAll(["\"percentage\":", this.m_percentage, ","], "");
+    if (this._percentage != null) {  
+      buffer.writeAll(["\"percentage\":", this._percentage, ","], "");
     }
 
-    if (this.m_total != null) {  
-      buffer.writeAll(["\"total\":", this.m_total, ","], "");
+    if (this._total != null) {  
+      buffer.writeAll(["\"total\":", this._total, ","], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,30 +23,30 @@ import 'OptionFragment.dart';
  */
 class DataExtremesObject extends OptionFragment {
   DataExtremesObject() : super();
-  double? m_dataMin;  
+  double? _dataMin;  
 
   double get dataMin { 
-    if (this.m_dataMin == null) {
-      this.m_dataMin = 0;
+    if (this._dataMin == null) {
+      this._dataMin = 0;
     }
-    return this.m_dataMin!;
+    return this._dataMin!;
   }
 
   void set dataMin (double v) {
-    this.m_dataMin = v;
+    this._dataMin = v;
   }
     
-  double? m_dataMax;  
+  double? _dataMax;  
 
   double get dataMax { 
-    if (this.m_dataMax == null) {
-      this.m_dataMax = 0;
+    if (this._dataMax == null) {
+      this._dataMax = 0;
     }
-    return this.m_dataMax!;
+    return this._dataMax!;
   }
 
   void set dataMax (double v) {
-    this.m_dataMax = v;
+    this._dataMax = v;
   }
     
 
@@ -59,12 +59,12 @@ class DataExtremesObject extends OptionFragment {
     
     // NOTE: skip serialization of activeYData (type number[] is ignored)} 
 
-    if (this.m_dataMin != null) {  
-      buffer.writeAll(["\"dataMin\":", this.m_dataMin, ","], "");
+    if (this._dataMin != null) {  
+      buffer.writeAll(["\"dataMin\":", this._dataMin, ","], "");
     }
 
-    if (this.m_dataMax != null) {  
-      buffer.writeAll(["\"dataMax\":", this.m_dataMax, ","], "");
+    if (this._dataMax != null) {  
+      buffer.writeAll(["\"dataMax\":", this._dataMax, ","], "");
     }
   }
 

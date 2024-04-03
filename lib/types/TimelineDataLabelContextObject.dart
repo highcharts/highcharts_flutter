@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,17 +24,17 @@ import 'OptionFragment.dart';
  */
 class TimelineDataLabelContextObject extends OptionFragment {
   TimelineDataLabelContextObject() : super();
-  String? m_key;  
+  String? _key;  
 
   String get key { 
-    if (this.m_key == null) {
-      this.m_key = "";
+    if (this._key == null) {
+      this._key = "";
     }
-    return this.m_key!;
+    return this._key!;
   }
 
   void set key (String v) {
-    this.m_key = v;
+    this._key = v;
   }
     
 
@@ -45,8 +45,8 @@ class TimelineDataLabelContextObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_key != null) {  
-      buffer.writeAll(["\"key\":", this.m_key, ","], "");
+    if (this._key != null) {  
+      buffer.writeAll(["\"key\":\`", this._key, "\`,"], "");
     }
 
     // NOTE: skip serialization of point (type TimelinePoint is ignored)} 

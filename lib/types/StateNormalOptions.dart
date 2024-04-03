@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,30 +23,30 @@ import 'OptionFragment.dart';
  */
 class StateNormalOptions extends OptionFragment {
   StateNormalOptions() : super();
-  String? m_color;  
+  String? _color;  
 
   String get color { 
-    if (this.m_color == null) {
-      this.m_color = "";
+    if (this._color == null) {
+      this._color = "";
     }
-    return this.m_color!;
+    return this._color!;
   }
 
   void set color (String v) {
-    this.m_color = v;
+    this._color = v;
   }
     
-  String? m_dashStyle;  
+  String? _dashStyle;  
 
   String get dashStyle { 
-    if (this.m_dashStyle == null) {
-      this.m_dashStyle = "";
+    if (this._dashStyle == null) {
+      this._dashStyle = "";
     }
-    return this.m_dashStyle!;
+    return this._dashStyle!;
   }
 
   void set dashStyle (String v) {
-    this.m_dashStyle = v;
+    this._dashStyle = v;
   }
     
 
@@ -57,12 +57,12 @@ class StateNormalOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_color != null) {  
-      buffer.writeAll(["\"color\":", this.m_color, ","], "");
+    if (this._color != null) {  
+      buffer.writeAll(["\"color\":\`", this._color, "\`,"], "");
     }
 
-    if (this.m_dashStyle != null) {  
-      buffer.writeAll(["\"dashStyle\":", this.m_dashStyle, ","], "");
+    if (this._dashStyle != null) {  
+      buffer.writeAll(["\"dashStyle\":\`", this._dashStyle, "\`,"], "");
     }
   }
 

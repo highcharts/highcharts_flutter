@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,82 +23,82 @@ import 'OptionFragment.dart';
  */
 class ColorAttribsType extends OptionFragment {
   ColorAttribsType() : super();
-  String? m_dashstyle;  
+  String? _dashstyle;  
 
   String get dashstyle { 
-    if (this.m_dashstyle == null) {
-      this.m_dashstyle = "";
+    if (this._dashstyle == null) {
+      this._dashstyle = "";
     }
-    return this.m_dashstyle!;
+    return this._dashstyle!;
   }
 
   void set dashstyle (String v) {
-    this.m_dashstyle = v;
+    this._dashstyle = v;
   }
     
-  String? m_fill;  
+  String? _fill;  
 
   String get fill { 
-    if (this.m_fill == null) {
-      this.m_fill = "";
+    if (this._fill == null) {
+      this._fill = "";
     }
-    return this.m_fill!;
+    return this._fill!;
   }
 
   void set fill (String v) {
-    this.m_fill = v;
+    this._fill = v;
   }
     
-  String? m_stroke;  
+  String? _stroke;  
 
   String get stroke { 
-    if (this.m_stroke == null) {
-      this.m_stroke = "";
+    if (this._stroke == null) {
+      this._stroke = "";
     }
-    return this.m_stroke!;
+    return this._stroke!;
   }
 
   void set stroke (String v) {
-    this.m_stroke = v;
+    this._stroke = v;
   }
     
-  String? m_stroke_linecap;  
+  String? _stroke_linecap;  
 
   String get stroke_linecap { 
-    if (this.m_stroke_linecap == null) {
-      this.m_stroke_linecap = "";
+    if (this._stroke_linecap == null) {
+      this._stroke_linecap = "";
     }
-    return this.m_stroke_linecap!;
+    return this._stroke_linecap!;
   }
 
   void set stroke_linecap (String v) {
-    this.m_stroke_linecap = v;
+    this._stroke_linecap = v;
   }
     
-  String? m_stroke_linejoin;  
+  String? _stroke_linejoin;  
 
   String get stroke_linejoin { 
-    if (this.m_stroke_linejoin == null) {
-      this.m_stroke_linejoin = "";
+    if (this._stroke_linejoin == null) {
+      this._stroke_linejoin = "";
     }
-    return this.m_stroke_linejoin!;
+    return this._stroke_linejoin!;
   }
 
   void set stroke_linejoin (String v) {
-    this.m_stroke_linejoin = v;
+    this._stroke_linejoin = v;
   }
     
-  double? m_stroke_width;  
+  double? _stroke_width;  
 
   double get stroke_width { 
-    if (this.m_stroke_width == null) {
-      this.m_stroke_width = 0;
+    if (this._stroke_width == null) {
+      this._stroke_width = 0;
     }
-    return this.m_stroke_width!;
+    return this._stroke_width!;
   }
 
   void set stroke_width (double v) {
-    this.m_stroke_width = v;
+    this._stroke_width = v;
   }
     
 
@@ -109,28 +109,28 @@ class ColorAttribsType extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_dashstyle != null) {  
-      buffer.writeAll(["\"dashstyle\":", this.m_dashstyle, ","], "");
+    if (this._dashstyle != null) {  
+      buffer.writeAll(["\"dashstyle\":\`", this._dashstyle, "\`,"], "");
     }
 
-    if (this.m_fill != null) {  
-      buffer.writeAll(["\"fill\":", this.m_fill, ","], "");
+    if (this._fill != null) {  
+      buffer.writeAll(["\"fill\":\`", this._fill, "\`,"], "");
     }
 
-    if (this.m_stroke != null) {  
-      buffer.writeAll(["\"stroke\":", this.m_stroke, ","], "");
+    if (this._stroke != null) {  
+      buffer.writeAll(["\"stroke\":\`", this._stroke, "\`,"], "");
     }
 
-    if (this.m_stroke_linecap != null) {  
-      buffer.writeAll(["\"stroke-linecap\":", this.m_stroke_linecap, ","], "");
+    if (this._stroke_linecap != null) {  
+      buffer.writeAll(["\"stroke-linecap\":\`", this._stroke_linecap, "\`,"], "");
     }
 
-    if (this.m_stroke_linejoin != null) {  
-      buffer.writeAll(["\"stroke-linejoin\":", this.m_stroke_linejoin, ","], "");
+    if (this._stroke_linejoin != null) {  
+      buffer.writeAll(["\"stroke-linejoin\":\`", this._stroke_linejoin, "\`,"], "");
     }
 
-    if (this.m_stroke_width != null) {  
-      buffer.writeAll(["\"stroke-width\":", this.m_stroke_width, ","], "");
+    if (this._stroke_width != null) {  
+      buffer.writeAll(["\"stroke-width\":", this._stroke_width, ","], "");
     }
   }
 

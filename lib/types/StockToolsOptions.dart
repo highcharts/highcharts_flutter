@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -27,17 +27,17 @@ class StockToolsOptions extends OptionFragment {
   /**
    * Definitions of buttons in Stock Tools GUI.  
       */
-  StockToolsGuiOptions? m_gui;  
+  StockToolsGuiOptions? _gui;  
 
   StockToolsGuiOptions get gui { 
-    if (this.m_gui == null) {
-      this.m_gui = StockToolsGuiOptions();
+    if (this._gui == null) {
+      this._gui = StockToolsGuiOptions();
     }
-    return this.m_gui!;
+    return this._gui!;
   }
 
   void set gui (StockToolsGuiOptions v) {
-    this.m_gui = v;
+    this._gui = v;
   }
     
 
@@ -48,8 +48,8 @@ class StockToolsOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_gui != null) {  
-      buffer.writeAll(["\"gui\":", this.m_gui?.toJSON(), ","], "");
+    if (this._gui != null) {  
+      buffer.writeAll(["\"gui\":", this._gui?.toJSON(), ","], "");
     }
   }
 

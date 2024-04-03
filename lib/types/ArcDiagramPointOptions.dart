@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,17 +24,17 @@ import 'OptionFragment.dart';
  */
 class ArcDiagramPointOptions extends SankeyPointOptions {
   ArcDiagramPointOptions() : super();
-  double? m_linkWeight;  
+  double? _linkWeight;  
 
   double get linkWeight { 
-    if (this.m_linkWeight == null) {
-      this.m_linkWeight = 0;
+    if (this._linkWeight == null) {
+      this._linkWeight = 0;
     }
-    return this.m_linkWeight!;
+    return this._linkWeight!;
   }
 
   void set linkWeight (double v) {
-    this.m_linkWeight = v;
+    this._linkWeight = v;
   }
     
 
@@ -45,8 +45,8 @@ class ArcDiagramPointOptions extends SankeyPointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_linkWeight != null) {  
-      buffer.writeAll(["\"linkWeight\":", this.m_linkWeight, ","], "");
+    if (this._linkWeight != null) {  
+      buffer.writeAll(["\"linkWeight\":", this._linkWeight, ","], "");
     }
   }
 

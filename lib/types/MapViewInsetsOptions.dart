@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -27,17 +27,17 @@ import 'OptionFragment.dart';
  */
 class MapViewInsetsOptions extends MapViewInsetOptions {
   MapViewInsetsOptions() : super();
-  String? m_id;  
+  String? _id;  
 
   String get id { 
-    if (this.m_id == null) {
-      this.m_id = "";
+    if (this._id == null) {
+      this._id = "";
     }
-    return this.m_id!;
+    return this._id!;
   }
 
   void set id (String v) {
-    this.m_id = v;
+    this._id = v;
   }
     
 
@@ -56,8 +56,8 @@ class MapViewInsetsOptions extends MapViewInsetOptions {
 
     // NOTE: skip serialization of geoBounds (type Polygon is ignored)} 
 
-    if (this.m_id != null) {  
-      buffer.writeAll(["\"id\":", this.m_id, ","], "");
+    if (this._id != null) {  
+      buffer.writeAll(["\"id\":\`", this._id, "\`,"], "");
     }
 
     // NOTE: skip serialization of projection (type ProjectionOptions is ignored)} 

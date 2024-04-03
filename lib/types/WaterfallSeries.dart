@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,30 +23,30 @@ import 'OptionFragment.dart';
  */
 class WaterfallSeries extends OptionFragment {
   WaterfallSeries() : super();
-  String? m_pointValKey;  
+  String? _pointValKey;  
 
   String get pointValKey { 
-    if (this.m_pointValKey == null) {
-      this.m_pointValKey = "";
+    if (this._pointValKey == null) {
+      this._pointValKey = "";
     }
-    return this.m_pointValKey!;
+    return this._pointValKey!;
   }
 
   void set pointValKey (String v) {
-    this.m_pointValKey = v;
+    this._pointValKey = v;
   }
     
-  bool? m_showLine;  
+  bool? _showLine;  
 
   bool get showLine { 
-    if (this.m_showLine == null) {
-      this.m_showLine = false;
+    if (this._showLine == null) {
+      this._showLine = false;
     }
-    return this.m_showLine!;
+    return this._showLine!;
   }
 
   void set showLine (bool v) {
-    this.m_showLine = v;
+    this._showLine = v;
   }
     
 
@@ -59,12 +59,12 @@ class WaterfallSeries extends OptionFragment {
     
     // NOTE: skip serialization of pointClass (type typeof WaterfallPoint is ignored)} 
 
-    if (this.m_pointValKey != null) {  
-      buffer.writeAll(["\"pointValKey\":", this.m_pointValKey, ","], "");
+    if (this._pointValKey != null) {  
+      buffer.writeAll(["\"pointValKey\":\`", this._pointValKey, "\`,"], "");
     }
 
-    if (this.m_showLine != null) {  
-      buffer.writeAll(["\"showLine\":", this.m_showLine, ","], "");
+    if (this._showLine != null) {  
+      buffer.writeAll(["\"showLine\":", this._showLine, ","], "");
     }
   }
 

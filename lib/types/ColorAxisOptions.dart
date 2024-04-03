@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -37,17 +37,17 @@ class ColorAxisOptions extends AxisOptions {
    * 
    * Defaults to 'tween'. 
       */
-  String? m_dataClassColor;  
+  String? _dataClassColor;  
 
   String get dataClassColor { 
-    if (this.m_dataClassColor == null) {
-      this.m_dataClassColor = "";
+    if (this._dataClassColor == null) {
+      this._dataClassColor = "";
     }
-    return this.m_dataClassColor!;
+    return this._dataClassColor!;
   }
 
   void set dataClassColor (String v) {
-    this.m_dataClassColor = v;
+    this._dataClassColor = v;
   }
     
   /**
@@ -55,22 +55,22 @@ class ColorAxisOptions extends AxisOptions {
    * none given, the color axis is scalar and values are distributed
    * as a gradient between the minimum and maximum colors.  
       */
-  List<ColorAxisDataClassesOptions>? dataClasses;
+  List<ColorAxisDataClassesOptions>? dataClasses; // ColorAxisDataClassesOptions
   /**
    * The layout of the color axis. Can be `'horizontal'` or `'vertical'`.
    * If none given, the color axis has the same layout as the legend.  
       */
-  String? m_layout;  
+  String? _layout;  
 
   String get layout { 
-    if (this.m_layout == null) {
-      this.m_layout = "";
+    if (this._layout == null) {
+      this._layout = "";
     }
-    return this.m_layout!;
+    return this._layout!;
   }
 
   void set layout (String v) {
-    this.m_layout = v;
+    this._layout = v;
   }
     
   /**
@@ -78,17 +78,17 @@ class ColorAxisOptions extends AxisOptions {
    * value of the hovered area. To disable the marker, set
    * `marker: null`.  
       */
-  ColorAxisMarkerOptions? m_marker;  
+  ColorAxisMarkerOptions? _marker;  
 
   ColorAxisMarkerOptions get marker { 
-    if (this.m_marker == null) {
-      this.m_marker = ColorAxisMarkerOptions();
+    if (this._marker == null) {
+      this._marker = ColorAxisMarkerOptions();
     }
-    return this.m_marker!;
+    return this._marker!;
   }
 
   void set marker (ColorAxisMarkerOptions v) {
-    this.m_marker = v;
+    this._marker = v;
   }
     
   /**
@@ -103,17 +103,17 @@ class ColorAxisOptions extends AxisOptions {
    * 
    * Defaults to '#0022ff'. 
       */
-  String? m_maxColor;  
+  String? _maxColor;  
 
   String get maxColor { 
-    if (this.m_maxColor == null) {
-      this.m_maxColor = "";
+    if (this._maxColor == null) {
+      this._maxColor = "";
     }
-    return this.m_maxColor!;
+    return this._maxColor!;
   }
 
   void set maxColor (String v) {
-    this.m_maxColor = v;
+    this._maxColor = v;
   }
     
   /**
@@ -128,17 +128,17 @@ class ColorAxisOptions extends AxisOptions {
    * 
    * Defaults to '#e6e9ff'. 
       */
-  String? m_minColor;  
+  String? _minColor;  
 
   String get minColor { 
-    if (this.m_minColor == null) {
-      this.m_minColor = "";
+    if (this._minColor == null) {
+      this._minColor = "";
     }
-    return this.m_minColor!;
+    return this._minColor!;
   }
 
   void set minColor (String v) {
-    this.m_minColor = v;
+    this._minColor = v;
   }
     
   /**
@@ -146,17 +146,17 @@ class ColorAxisOptions extends AxisOptions {
    * 
    * Defaults to 'true'. 
       */
-  bool? m_showInLegend;  
+  bool? _showInLegend;  
 
   bool get showInLegend { 
-    if (this.m_showInLegend == null) {
-      this.m_showInLegend = false;
+    if (this._showInLegend == null) {
+      this._showInLegend = false;
     }
-    return this.m_showInLegend!;
+    return this._showInLegend!;
   }
 
   void set showInLegend (bool v) {
-    this.m_showInLegend = v;
+    this._showInLegend = v;
   }
     
   /**
@@ -166,7 +166,7 @@ class ColorAxisOptions extends AxisOptions {
    * first item is a float between 0 and 1 assigning the relative
    * position in the gradient, and the second item is the color.  
       */
-  List<GradientColorStop>? stops;
+  List<GradientColorStop>? stops; // GradientColorStop
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -175,32 +175,32 @@ class ColorAxisOptions extends AxisOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_dataClassColor != null) {  
-      buffer.writeAll(["\"dataClassColor\":", this.m_dataClassColor, ","], "");
+    if (this._dataClassColor != null) {  
+      buffer.writeAll(["\"dataClassColor\":\`", this._dataClassColor, "\`,"], "");
     }
 
     // NOTE: skip serialization of dataClasses (type ColorAxisDataClassesOptions[] is ignored)} 
 
-    if (this.m_layout != null) {  
-      buffer.writeAll(["\"layout\":", this.m_layout, ","], "");
+    if (this._layout != null) {  
+      buffer.writeAll(["\"layout\":\`", this._layout, "\`,"], "");
     }
 
     // NOTE: skip serialization of legend (type LegendOptions is ignored)} 
 
-    if (this.m_marker != null) {  
-      buffer.writeAll(["\"marker\":", this.m_marker?.toJSON(), ","], "");
+    if (this._marker != null) {  
+      buffer.writeAll(["\"marker\":", this._marker?.toJSON(), ","], "");
     }
 
-    if (this.m_maxColor != null) {  
-      buffer.writeAll(["\"maxColor\":", this.m_maxColor, ","], "");
+    if (this._maxColor != null) {  
+      buffer.writeAll(["\"maxColor\":\`", this._maxColor, "\`,"], "");
     }
 
-    if (this.m_minColor != null) {  
-      buffer.writeAll(["\"minColor\":", this.m_minColor, ","], "");
+    if (this._minColor != null) {  
+      buffer.writeAll(["\"minColor\":\`", this._minColor, "\`,"], "");
     }
 
-    if (this.m_showInLegend != null) {  
-      buffer.writeAll(["\"showInLegend\":", this.m_showInLegend, ","], "");
+    if (this._showInLegend != null) {  
+      buffer.writeAll(["\"showInLegend\":", this._showInLegend, ","], "");
     }
 
     // NOTE: skip serialization of stops (type GradientColorStop[] is ignored)} 

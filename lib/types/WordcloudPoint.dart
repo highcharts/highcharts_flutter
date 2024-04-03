@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,17 +23,17 @@ import 'OptionFragment.dart';
  */
 class WordcloudPoint extends OptionFragment {
   WordcloudPoint() : super();
-  double? m_weight;  
+  double? _weight;  
 
   double get weight { 
-    if (this.m_weight == null) {
-      this.m_weight = 0;
+    if (this._weight == null) {
+      this._weight = 0;
     }
-    return this.m_weight!;
+    return this._weight!;
   }
 
   void set weight (double v) {
-    this.m_weight = v;
+    this._weight = v;
   }
     
 
@@ -44,8 +44,8 @@ class WordcloudPoint extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_weight != null) {  
-      buffer.writeAll(["\"weight\":", this.m_weight, ","], "");
+    if (this._weight != null) {  
+      buffer.writeAll(["\"weight\":", this._weight, ","], "");
     }
   }
 

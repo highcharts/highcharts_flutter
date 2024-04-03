@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -25,56 +25,56 @@ import 'OptionFragment.dart';
  */
 class SeriesDragDropPropsObject extends OptionFragment {
   SeriesDragDropPropsObject() : super();
-  String? m_axis;  
+  String? _axis;  
 
   String get axis { 
-    if (this.m_axis == null) {
-      this.m_axis = "";
+    if (this._axis == null) {
+      this._axis = "";
     }
-    return this.m_axis!;
+    return this._axis!;
   }
 
   void set axis (String v) {
-    this.m_axis = v;
+    this._axis = v;
   }
     
-  bool? m_move;  
+  bool? _move;  
 
   bool get move { 
-    if (this.m_move == null) {
-      this.m_move = false;
+    if (this._move == null) {
+      this._move = false;
     }
-    return this.m_move!;
+    return this._move!;
   }
 
   void set move (bool v) {
-    this.m_move = v;
+    this._move = v;
   }
     
-  String? m_optionName;  
+  String? _optionName;  
 
   String get optionName { 
-    if (this.m_optionName == null) {
-      this.m_optionName = "";
+    if (this._optionName == null) {
+      this._optionName = "";
     }
-    return this.m_optionName!;
+    return this._optionName!;
   }
 
   void set optionName (String v) {
-    this.m_optionName = v;
+    this._optionName = v;
   }
     
-  bool? m_resize;  
+  bool? _resize;  
 
   bool get resize { 
-    if (this.m_resize == null) {
-      this.m_resize = false;
+    if (this._resize == null) {
+      this._resize = false;
     }
-    return this.m_resize!;
+    return this._resize!;
   }
 
   void set resize (bool v) {
-    this.m_resize = v;
+    this._resize = v;
   }
     
 
@@ -85,24 +85,24 @@ class SeriesDragDropPropsObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_axis != null) {  
-      buffer.writeAll(["\"axis\":", this.m_axis, ","], "");
+    if (this._axis != null) {  
+      buffer.writeAll(["\"axis\":\`", this._axis, "\`,"], "");
     }
 
     // NOTE: skip serialization of beforeResize (type Function is ignored)} 
 
     // NOTE: skip serialization of handleOptions (type DragDropHandleOptions is ignored)} 
 
-    if (this.m_move != null) {  
-      buffer.writeAll(["\"move\":", this.m_move, ","], "");
+    if (this._move != null) {  
+      buffer.writeAll(["\"move\":", this._move, ","], "");
     }
 
-    if (this.m_optionName != null) {  
-      buffer.writeAll(["\"optionName\":", this.m_optionName, ","], "");
+    if (this._optionName != null) {  
+      buffer.writeAll(["\"optionName\":\`", this._optionName, "\`,"], "");
     }
 
-    if (this.m_resize != null) {  
-      buffer.writeAll(["\"resize\":", this.m_resize, ","], "");
+    if (this._resize != null) {  
+      buffer.writeAll(["\"resize\":", this._resize, ","], "");
     }
 
     // NOTE: skip serialization of resizeSide (type SeriesDragDropPropsResizeSideFunction is ignored)} 

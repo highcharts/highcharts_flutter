@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,69 +23,69 @@ import 'OptionFragment.dart';
  */
 class SankeySeries extends OptionFragment {
   SankeySeries() : super();
-  bool? m_forceDL;  
+  bool? _forceDL;  
 
   bool get forceDL { 
-    if (this.m_forceDL == null) {
-      this.m_forceDL = false;
+    if (this._forceDL == null) {
+      this._forceDL = false;
     }
-    return this.m_forceDL!;
+    return this._forceDL!;
   }
 
   void set forceDL (bool v) {
-    this.m_forceDL = v;
+    this._forceDL = v;
   }
     
-  bool? m_invertible;  
+  bool? _invertible;  
 
   bool get invertible { 
-    if (this.m_invertible == null) {
-      this.m_invertible = false;
+    if (this._invertible == null) {
+      this._invertible = false;
     }
-    return this.m_invertible!;
+    return this._invertible!;
   }
 
   void set invertible (bool v) {
-    this.m_invertible = v;
+    this._invertible = v;
   }
     
-  bool? m_isCartesian;  
+  bool? _isCartesian;  
 
   bool get isCartesian { 
-    if (this.m_isCartesian == null) {
-      this.m_isCartesian = false;
+    if (this._isCartesian == null) {
+      this._isCartesian = false;
     }
-    return this.m_isCartesian!;
+    return this._isCartesian!;
   }
 
   void set isCartesian (bool v) {
-    this.m_isCartesian = v;
+    this._isCartesian = v;
   }
     
-  bool? m_noSharedTooltip;  
+  bool? _noSharedTooltip;  
 
   bool get noSharedTooltip { 
-    if (this.m_noSharedTooltip == null) {
-      this.m_noSharedTooltip = false;
+    if (this._noSharedTooltip == null) {
+      this._noSharedTooltip = false;
     }
-    return this.m_noSharedTooltip!;
+    return this._noSharedTooltip!;
   }
 
   void set noSharedTooltip (bool v) {
-    this.m_noSharedTooltip = v;
+    this._noSharedTooltip = v;
   }
     
-  bool? m_orderNodes;  
+  bool? _orderNodes;  
 
   bool get orderNodes { 
-    if (this.m_orderNodes == null) {
-      this.m_orderNodes = false;
+    if (this._orderNodes == null) {
+      this._orderNodes = false;
     }
-    return this.m_orderNodes!;
+    return this._orderNodes!;
   }
 
   void set orderNodes (bool v) {
-    this.m_orderNodes = v;
+    this._orderNodes = v;
   }
     
 
@@ -96,24 +96,24 @@ class SankeySeries extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_forceDL != null) {  
-      buffer.writeAll(["\"forceDL\":", this.m_forceDL, ","], "");
+    if (this._forceDL != null) {  
+      buffer.writeAll(["\"forceDL\":", this._forceDL, ","], "");
     }
 
-    if (this.m_invertible != null) {  
-      buffer.writeAll(["\"invertible\":", this.m_invertible, ","], "");
+    if (this._invertible != null) {  
+      buffer.writeAll(["\"invertible\":", this._invertible, ","], "");
     }
 
-    if (this.m_isCartesian != null) {  
-      buffer.writeAll(["\"isCartesian\":", this.m_isCartesian, ","], "");
+    if (this._isCartesian != null) {  
+      buffer.writeAll(["\"isCartesian\":", this._isCartesian, ","], "");
     }
 
-    if (this.m_noSharedTooltip != null) {  
-      buffer.writeAll(["\"noSharedTooltip\":", this.m_noSharedTooltip, ","], "");
+    if (this._noSharedTooltip != null) {  
+      buffer.writeAll(["\"noSharedTooltip\":", this._noSharedTooltip, ","], "");
     }
 
-    if (this.m_orderNodes != null) {  
-      buffer.writeAll(["\"orderNodes\":", this.m_orderNodes, ","], "");
+    if (this._orderNodes != null) {  
+      buffer.writeAll(["\"orderNodes\":", this._orderNodes, ","], "");
     }
 
     // NOTE: skip serialization of pointArrayMap (type string[] is ignored)} 

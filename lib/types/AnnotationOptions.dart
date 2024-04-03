@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -37,17 +37,17 @@ class AnnotationOptions extends ControlTargetOptions {
    * Options from the controlPointOptions can be overwritten
    * by options in a specific control point.  
       */
-  ControlPointOptionsObject? m_controlPointOptions;  
+  ControlPointOptionsObject? _controlPointOptions;  
 
   ControlPointOptionsObject get controlPointOptions { 
-    if (this.m_controlPointOptions == null) {
-      this.m_controlPointOptions = ControlPointOptionsObject();
+    if (this._controlPointOptions == null) {
+      this._controlPointOptions = ControlPointOptionsObject();
     }
-    return this.m_controlPointOptions!;
+    return this._controlPointOptions!;
   }
 
   void set controlPointOptions (ControlPointOptionsObject v) {
-    this.m_controlPointOptions = v;
+    this._controlPointOptions = v;
   }
     
   /**
@@ -56,17 +56,17 @@ class AnnotationOptions extends ControlTargetOptions {
    * 
    * Defaults to 'true'. 
       */
-  bool? m_crop;  
+  bool? _crop;  
 
   bool get crop { 
-    if (this.m_crop == null) {
-      this.m_crop = false;
+    if (this._crop == null) {
+      this._crop = false;
     }
-    return this.m_crop!;
+    return this._crop!;
   }
 
   void set crop (bool v) {
-    this.m_crop = v;
+    this._crop = v;
   }
     
   /**
@@ -75,63 +75,63 @@ class AnnotationOptions extends ControlTargetOptions {
    * 
    * Defaults to 'xy'. 
       */
-  String? m_draggable;  
+  String? _draggable;  
 
   String get draggable { 
-    if (this.m_draggable == null) {
-      this.m_draggable = "";
+    if (this._draggable == null) {
+      this._draggable = "";
     }
-    return this.m_draggable!;
+    return this._draggable!;
   }
 
   void set draggable (String v) {
-    this.m_draggable = v;
+    this._draggable = v;
   }
     
   /**
    * Events available in annotations.  
       */
-  AnnotationEventsOptions? m_events;  
+  AnnotationEventsOptions? _events;  
 
   AnnotationEventsOptions get events { 
-    if (this.m_events == null) {
-      this.m_events = AnnotationEventsOptions();
+    if (this._events == null) {
+      this._events = AnnotationEventsOptions();
     }
-    return this.m_events!;
+    return this._events!;
   }
 
   void set events (AnnotationEventsOptions v) {
-    this.m_events = v;
+    this._events = v;
   }
     
   /**
    * Sets an ID for an annotation. Can be user later when
    * removing an annotation in [Chart#removeAnnotation(id)](/class-reference/Highcharts.Chart#removeAnnotation) method.  
       */
-  String? m_id;  
+  String? _id;  
 
   String get id { 
-    if (this.m_id == null) {
-      this.m_id = "";
+    if (this._id == null) {
+      this._id = "";
     }
-    return this.m_id!;
+    return this._id!;
   }
 
   void set id (String v) {
-    this.m_id = v;
+    this._id = v;
   }
     
-  String? m_itemType;  
+  String? _itemType;  
 
   String get itemType { 
-    if (this.m_itemType == null) {
-      this.m_itemType = "";
+    if (this._itemType == null) {
+      this._itemType = "";
     }
-    return this.m_itemType!;
+    return this._itemType!;
   }
 
   void set itemType (String v) {
-    this.m_itemType = v;
+    this._itemType = v;
   }
     
   /**
@@ -139,17 +139,17 @@ class AnnotationOptions extends ControlTargetOptions {
    * from the labelOptions object. An option from the labelOptions
    * can be overwritten by config for a specific label.  
       */
-  ControllableLabelOptions? m_labelOptions;  
+  ControllableLabelOptions? _labelOptions;  
 
   ControllableLabelOptions get labelOptions { 
-    if (this.m_labelOptions == null) {
-      this.m_labelOptions = ControllableLabelOptions();
+    if (this._labelOptions == null) {
+      this._labelOptions = ControllableLabelOptions();
     }
-    return this.m_labelOptions!;
+    return this._labelOptions!;
   }
 
   void set labelOptions (ControllableLabelOptions v) {
-    this.m_labelOptions = v;
+    this._labelOptions = v;
   }
     
   /**
@@ -157,18 +157,18 @@ class AnnotationOptions extends ControlTargetOptions {
    * to multiple labels, they can be added to the
    * [labelOptions](annotations.labelOptions.html).  
       */
-  List<ControllableLabelOptions>? labels;
-  String? m_langKey;  
+  List<ControllableLabelOptions>? labels; // ControllableLabelOptions
+  String? _langKey;  
 
   String get langKey { 
-    if (this.m_langKey == null) {
-      this.m_langKey = "";
+    if (this._langKey == null) {
+      this._langKey = "";
     }
-    return this.m_langKey!;
+    return this._langKey!;
   }
 
   void set langKey (String v) {
-    this.m_langKey = v;
+    this._langKey = v;
   }
     
   /**
@@ -176,17 +176,17 @@ class AnnotationOptions extends ControlTargetOptions {
    * from the shapeOptions object. An option from the shapeOptions
    * can be overwritten by config for a specific shape.  
       */
-  ControllableShapeOptions? m_shapeOptions;  
+  ControllableShapeOptions? _shapeOptions;  
 
   ControllableShapeOptions get shapeOptions { 
-    if (this.m_shapeOptions == null) {
-      this.m_shapeOptions = ControllableShapeOptions();
+    if (this._shapeOptions == null) {
+      this._shapeOptions = ControllableShapeOptions();
     }
-    return this.m_shapeOptions!;
+    return this._shapeOptions!;
   }
 
   void set shapeOptions (ControllableShapeOptions v) {
-    this.m_shapeOptions = v;
+    this._shapeOptions = v;
   }
     
   /**
@@ -194,18 +194,18 @@ class AnnotationOptions extends ControlTargetOptions {
    * to multiple shapes, then can be added to the
    * [shapeOptions](annotations.shapeOptions.html).  
       */
-  List<ControllableShapeOptions>? shapes;
-  String? m_type;  
+  List<ControllableShapeOptions>? shapes; // ControllableShapeOptions
+  String? _type;  
 
   String get type { 
-    if (this.m_type == null) {
-      this.m_type = "";
+    if (this._type == null) {
+      this._type = "";
     }
-    return this.m_type!;
+    return this._type!;
   }
 
   void set type (String v) {
-    this.m_type = v;
+    this._type = v;
   }
     
   /**
@@ -213,17 +213,17 @@ class AnnotationOptions extends ControlTargetOptions {
    * 
    * Defaults to 'true'. 
       */
-  bool? m_visible;  
+  bool? _visible;  
 
   bool get visible { 
-    if (this.m_visible == null) {
-      this.m_visible = false;
+    if (this._visible == null) {
+      this._visible = false;
     }
-    return this.m_visible!;
+    return this._visible!;
   }
 
   void set visible (bool v) {
-    this.m_visible = v;
+    this._visible = v;
   }
     
   /**
@@ -231,17 +231,17 @@ class AnnotationOptions extends ControlTargetOptions {
    * 
    * Defaults to '6'. 
       */
-  double? m_zIndex;  
+  double? _zIndex;  
 
   double get zIndex { 
-    if (this.m_zIndex == null) {
-      this.m_zIndex = 0;
+    if (this._zIndex == null) {
+      this._zIndex = 0;
     }
-    return this.m_zIndex!;
+    return this._zIndex!;
   }
 
   void set zIndex (double v) {
-    this.m_zIndex = v;
+    this._zIndex = v;
   }
     
 
@@ -254,58 +254,58 @@ class AnnotationOptions extends ControlTargetOptions {
     
     // NOTE: skip serialization of animation (type Generic is ignored)} 
 
-    if (this.m_controlPointOptions != null) {  
-      buffer.writeAll(["\"controlPointOptions\":", this.m_controlPointOptions?.toJSON(), ","], "");
+    if (this._controlPointOptions != null) {  
+      buffer.writeAll(["\"controlPointOptions\":", this._controlPointOptions?.toJSON(), ","], "");
     }
 
-    if (this.m_crop != null) {  
-      buffer.writeAll(["\"crop\":", this.m_crop, ","], "");
+    if (this._crop != null) {  
+      buffer.writeAll(["\"crop\":", this._crop, ","], "");
     }
 
-    if (this.m_draggable != null) {  
-      buffer.writeAll(["\"draggable\":", this.m_draggable, ","], "");
+    if (this._draggable != null) {  
+      buffer.writeAll(["\"draggable\":\`", this._draggable, "\`,"], "");
     }
 
-    if (this.m_events != null) {  
-      buffer.writeAll(["\"events\":", this.m_events?.toJSON(), ","], "");
+    if (this._events != null) {  
+      buffer.writeAll(["\"events\":", this._events?.toJSON(), ","], "");
     }
 
-    if (this.m_id != null) {  
-      buffer.writeAll(["\"id\":", this.m_id, ","], "");
+    if (this._id != null) {  
+      buffer.writeAll(["\"id\":\`", this._id, "\`,"], "");
     }
 
-    if (this.m_itemType != null) {  
-      buffer.writeAll(["\"itemType\":", this.m_itemType, ","], "");
+    if (this._itemType != null) {  
+      buffer.writeAll(["\"itemType\":\`", this._itemType, "\`,"], "");
     }
 
-    if (this.m_labelOptions != null) {  
-      buffer.writeAll(["\"labelOptions\":", this.m_labelOptions?.toJSON(), ","], "");
+    if (this._labelOptions != null) {  
+      buffer.writeAll(["\"labelOptions\":", this._labelOptions?.toJSON(), ","], "");
     }
 
     // NOTE: skip serialization of labels (type ControllableLabelOptions[] is ignored)} 
 
-    if (this.m_langKey != null) {  
-      buffer.writeAll(["\"langKey\":", this.m_langKey, ","], "");
+    if (this._langKey != null) {  
+      buffer.writeAll(["\"langKey\":\`", this._langKey, "\`,"], "");
     }
 
-    if (this.m_shapeOptions != null) {  
-      buffer.writeAll(["\"shapeOptions\":", this.m_shapeOptions?.toJSON(), ","], "");
+    if (this._shapeOptions != null) {  
+      buffer.writeAll(["\"shapeOptions\":", this._shapeOptions?.toJSON(), ","], "");
     }
 
     // NOTE: skip serialization of shapes (type ControllableShapeOptions[] is ignored)} 
 
-    if (this.m_type != null) {  
-      buffer.writeAll(["\"type\":", this.m_type, ","], "");
+    if (this._type != null) {  
+      buffer.writeAll(["\"type\":\`", this._type, "\`,"], "");
     }
 
     // NOTE: skip serialization of typeOptions (type AnnotationTypeOptions is ignored)} 
 
-    if (this.m_visible != null) {  
-      buffer.writeAll(["\"visible\":", this.m_visible, ","], "");
+    if (this._visible != null) {  
+      buffer.writeAll(["\"visible\":", this._visible, ","], "");
     }
 
-    if (this.m_zIndex != null) {  
-      buffer.writeAll(["\"zIndex\":", this.m_zIndex, ","], "");
+    if (this._zIndex != null) {  
+      buffer.writeAll(["\"zIndex\":", this._zIndex, ","], "");
     }
   }
 

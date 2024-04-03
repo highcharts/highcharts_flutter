@@ -12,11 +12,12 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
 import 'GradientColor.dart';
+import 'PatternObject.dart';
 import 'OptionFragment.dart';
 
 /** 
@@ -24,17 +25,17 @@ import 'OptionFragment.dart';
  */
 class ColorTypeRegistry extends OptionFragment {
   ColorTypeRegistry() : super();
-  String? m_ColorString;  
+  String? _ColorString;  
 
   String get ColorString { 
-    if (this.m_ColorString == null) {
-      this.m_ColorString = "";
+    if (this._ColorString == null) {
+      this._ColorString = "";
     }
-    return this.m_ColorString!;
+    return this._ColorString!;
   }
 
   void set ColorString (String v) {
-    this.m_ColorString = v;
+    this._ColorString = v;
   }
     
 
@@ -45,11 +46,13 @@ class ColorTypeRegistry extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_ColorString != null) {  
-      buffer.writeAll(["\"ColorString\":", this.m_ColorString, ","], "");
+    if (this._ColorString != null) {  
+      buffer.writeAll(["\"ColorString\":\`", this._ColorString, "\`,"], "");
     }
 
     // NOTE: skip serialization of mGradientColor (type GradientColor is ignored)} 
+
+    // NOTE: skip serialization of PatternFill (type PatternObject is ignored)} 
   }
 
 }

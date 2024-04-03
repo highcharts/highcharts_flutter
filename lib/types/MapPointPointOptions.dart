@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -25,56 +25,56 @@ import 'OptionFragment.dart';
  */
 class MapPointPointOptions extends ScatterPointOptions {
   MapPointPointOptions() : super();
-  double? m_lat;  
+  double? _lat;  
 
   double get lat { 
-    if (this.m_lat == null) {
-      this.m_lat = 0;
+    if (this._lat == null) {
+      this._lat = 0;
     }
-    return this.m_lat!;
+    return this._lat!;
   }
 
   void set lat (double v) {
-    this.m_lat = v;
+    this._lat = v;
   }
     
-  double? m_lon;  
+  double? _lon;  
 
   double get lon { 
-    if (this.m_lon == null) {
-      this.m_lon = 0;
+    if (this._lon == null) {
+      this._lon = 0;
     }
-    return this.m_lon!;
+    return this._lon!;
   }
 
   void set lon (double v) {
-    this.m_lon = v;
+    this._lon = v;
   }
     
-  double? m_x;  
+  double? _x;  
 
   double get x { 
-    if (this.m_x == null) {
-      this.m_x = 0;
+    if (this._x == null) {
+      this._x = 0;
     }
-    return this.m_x!;
+    return this._x!;
   }
 
   void set x (double v) {
-    this.m_x = v;
+    this._x = v;
   }
     
-  double? m_y;  
+  double? _y;  
 
   double get y { 
-    if (this.m_y == null) {
-      this.m_y = 0;
+    if (this._y == null) {
+      this._y = 0;
     }
-    return this.m_y!;
+    return this._y!;
   }
 
   void set y (double v) {
-    this.m_y = v;
+    this._y = v;
   }
     
 
@@ -87,22 +87,22 @@ class MapPointPointOptions extends ScatterPointOptions {
     
     // NOTE: skip serialization of geometry (type GeoJSONGeometryPoint is ignored)} 
 
-    if (this.m_lat != null) {  
-      buffer.writeAll(["\"lat\":", this.m_lat, ","], "");
+    if (this._lat != null) {  
+      buffer.writeAll(["\"lat\":", this._lat, ","], "");
     }
 
-    if (this.m_lon != null) {  
-      buffer.writeAll(["\"lon\":", this.m_lon, ","], "");
+    if (this._lon != null) {  
+      buffer.writeAll(["\"lon\":", this._lon, ","], "");
     }
 
     // NOTE: skip serialization of type (type "Point" is ignored)} 
 
-    if (this.m_x != null) {  
-      buffer.writeAll(["\"x\":", this.m_x, ","], "");
+    if (this._x != null) {  
+      buffer.writeAll(["\"x\":", this._x, ","], "");
     }
 
-    if (this.m_y != null) {  
-      buffer.writeAll(["\"y\":", this.m_y, ","], "");
+    if (this._y != null) {  
+      buffer.writeAll(["\"y\":", this._y, ","], "");
     }
   }
 

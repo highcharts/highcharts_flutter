@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,30 +23,30 @@ import 'OptionFragment.dart';
  */
 class XRangePointLabelObject extends OptionFragment {
   XRangePointLabelObject() : super();
-  double? m_x2;  
+  double? _x2;  
 
   double get x2 { 
-    if (this.m_x2 == null) {
-      this.m_x2 = 0;
+    if (this._x2 == null) {
+      this._x2 = 0;
     }
-    return this.m_x2!;
+    return this._x2!;
   }
 
   void set x2 (double v) {
-    this.m_x2 = v;
+    this._x2 = v;
   }
     
-  String? m_yCategory;  
+  String? _yCategory;  
 
   String get yCategory { 
-    if (this.m_yCategory == null) {
-      this.m_yCategory = "";
+    if (this._yCategory == null) {
+      this._yCategory = "";
     }
-    return this.m_yCategory!;
+    return this._yCategory!;
   }
 
   void set yCategory (String v) {
-    this.m_yCategory = v;
+    this._yCategory = v;
   }
     
 
@@ -57,12 +57,12 @@ class XRangePointLabelObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_x2 != null) {  
-      buffer.writeAll(["\"x2\":", this.m_x2, ","], "");
+    if (this._x2 != null) {  
+      buffer.writeAll(["\"x2\":", this._x2, ","], "");
     }
 
-    if (this.m_yCategory != null) {  
-      buffer.writeAll(["\"yCategory\":", this.m_yCategory, ","], "");
+    if (this._yCategory != null) {  
+      buffer.writeAll(["\"yCategory\":\`", this._yCategory, "\`,"], "");
     }
   }
 

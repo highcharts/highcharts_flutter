@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,108 +24,108 @@ import 'OptionFragment.dart';
  */
 class SeriesLabelOptions extends OptionFragment {
   SeriesLabelOptions() : super();
-  bool? m_connectorAllowed;  
+  bool? _connectorAllowed;  
 
   bool get connectorAllowed { 
-    if (this.m_connectorAllowed == null) {
-      this.m_connectorAllowed = false;
+    if (this._connectorAllowed == null) {
+      this._connectorAllowed = false;
     }
-    return this.m_connectorAllowed!;
+    return this._connectorAllowed!;
   }
 
   void set connectorAllowed (bool v) {
-    this.m_connectorAllowed = v;
+    this._connectorAllowed = v;
   }
     
-  double? m_connectorNeighbourDistance;  
+  double? _connectorNeighbourDistance;  
 
   double get connectorNeighbourDistance { 
-    if (this.m_connectorNeighbourDistance == null) {
-      this.m_connectorNeighbourDistance = 0;
+    if (this._connectorNeighbourDistance == null) {
+      this._connectorNeighbourDistance = 0;
     }
-    return this.m_connectorNeighbourDistance!;
+    return this._connectorNeighbourDistance!;
   }
 
   void set connectorNeighbourDistance (double v) {
-    this.m_connectorNeighbourDistance = v;
+    this._connectorNeighbourDistance = v;
   }
     
-  bool? m_enabled;  
+  bool? _enabled;  
 
   bool get enabled { 
-    if (this.m_enabled == null) {
-      this.m_enabled = false;
+    if (this._enabled == null) {
+      this._enabled = false;
     }
-    return this.m_enabled!;
+    return this._enabled!;
   }
 
   void set enabled (bool v) {
-    this.m_enabled = v;
+    this._enabled = v;
   }
     
-  String? m_format;  
+  String? _format;  
 
   String get format { 
-    if (this.m_format == null) {
-      this.m_format = "";
+    if (this._format == null) {
+      this._format = "";
     }
-    return this.m_format!;
+    return this._format!;
   }
 
   void set format (String v) {
-    this.m_format = v;
+    this._format = v;
   }
     
-  double? m_maxFontSize;  
+  double? _maxFontSize;  
 
   double get maxFontSize { 
-    if (this.m_maxFontSize == null) {
-      this.m_maxFontSize = 0;
+    if (this._maxFontSize == null) {
+      this._maxFontSize = 0;
     }
-    return this.m_maxFontSize!;
+    return this._maxFontSize!;
   }
 
   void set maxFontSize (double v) {
-    this.m_maxFontSize = v;
+    this._maxFontSize = v;
   }
     
-  double? m_minFontSize;  
+  double? _minFontSize;  
 
   double get minFontSize { 
-    if (this.m_minFontSize == null) {
-      this.m_minFontSize = 0;
+    if (this._minFontSize == null) {
+      this._minFontSize = 0;
     }
-    return this.m_minFontSize!;
+    return this._minFontSize!;
   }
 
   void set minFontSize (double v) {
-    this.m_minFontSize = v;
+    this._minFontSize = v;
   }
     
-  bool? m_onArea;  
+  bool? _onArea;  
 
   bool get onArea { 
-    if (this.m_onArea == null) {
-      this.m_onArea = false;
+    if (this._onArea == null) {
+      this._onArea = false;
     }
-    return this.m_onArea!;
+    return this._onArea!;
   }
 
   void set onArea (bool v) {
-    this.m_onArea = v;
+    this._onArea = v;
   }
     
-  bool? m_useHTML;  
+  bool? _useHTML;  
 
   bool get useHTML { 
-    if (this.m_useHTML == null) {
-      this.m_useHTML = false;
+    if (this._useHTML == null) {
+      this._useHTML = false;
     }
-    return this.m_useHTML!;
+    return this._useHTML!;
   }
 
   void set useHTML (bool v) {
-    this.m_useHTML = v;
+    this._useHTML = v;
   }
     
 
@@ -138,38 +138,38 @@ class SeriesLabelOptions extends OptionFragment {
     
     // NOTE: skip serialization of boxesToAvoid (type LabelIntersectBoxObject[] is ignored)} 
 
-    if (this.m_connectorAllowed != null) {  
-      buffer.writeAll(["\"connectorAllowed\":", this.m_connectorAllowed, ","], "");
+    if (this._connectorAllowed != null) {  
+      buffer.writeAll(["\"connectorAllowed\":", this._connectorAllowed, ","], "");
     }
 
-    if (this.m_connectorNeighbourDistance != null) {  
-      buffer.writeAll(["\"connectorNeighbourDistance\":", this.m_connectorNeighbourDistance, ","], "");
+    if (this._connectorNeighbourDistance != null) {  
+      buffer.writeAll(["\"connectorNeighbourDistance\":", this._connectorNeighbourDistance, ","], "");
     }
 
-    if (this.m_enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this.m_enabled, ","], "");
+    if (this._enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this._enabled, ","], "");
     }
 
-    if (this.m_format != null) {  
-      buffer.writeAll(["\"format\":", this.m_format, ","], "");
+    if (this._format != null) {  
+      buffer.writeAll(["\"format\":\`", this._format, "\`,"], "");
     }
 
-    if (this.m_maxFontSize != null) {  
-      buffer.writeAll(["\"maxFontSize\":", this.m_maxFontSize, ","], "");
+    if (this._maxFontSize != null) {  
+      buffer.writeAll(["\"maxFontSize\":", this._maxFontSize, ","], "");
     }
 
-    if (this.m_minFontSize != null) {  
-      buffer.writeAll(["\"minFontSize\":", this.m_minFontSize, ","], "");
+    if (this._minFontSize != null) {  
+      buffer.writeAll(["\"minFontSize\":", this._minFontSize, ","], "");
     }
 
-    if (this.m_onArea != null) {  
-      buffer.writeAll(["\"onArea\":", this.m_onArea, ","], "");
+    if (this._onArea != null) {  
+      buffer.writeAll(["\"onArea\":", this._onArea, ","], "");
     }
 
     // NOTE: skip serialization of style (type CSSObject is ignored)} 
 
-    if (this.m_useHTML != null) {  
-      buffer.writeAll(["\"useHTML\":", this.m_useHTML, ","], "");
+    if (this._useHTML != null) {  
+      buffer.writeAll(["\"useHTML\":", this._useHTML, ","], "");
     }
   }
 

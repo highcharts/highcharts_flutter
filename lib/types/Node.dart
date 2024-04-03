@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,30 +24,30 @@ import 'OptionFragment.dart';
  */
 class Node extends OptionFragment {
   Node() : super();
-  String? m_tagName;  
+  String? _tagName;  
 
   String get tagName { 
-    if (this.m_tagName == null) {
-      this.m_tagName = "";
+    if (this._tagName == null) {
+      this._tagName = "";
     }
-    return this.m_tagName!;
+    return this._tagName!;
   }
 
   void set tagName (String v) {
-    this.m_tagName = v;
+    this._tagName = v;
   }
     
-  String? m_textContent;  
+  String? _textContent;  
 
   String get textContent { 
-    if (this.m_textContent == null) {
-      this.m_textContent = "";
+    if (this._textContent == null) {
+      this._textContent = "";
     }
-    return this.m_textContent!;
+    return this._textContent!;
   }
 
   void set textContent (String v) {
-    this.m_textContent = v;
+    this._textContent = v;
   }
     
 
@@ -64,12 +64,12 @@ class Node extends OptionFragment {
 
     // NOTE: skip serialization of style (type CSSObject is ignored)} 
 
-    if (this.m_tagName != null) {  
-      buffer.writeAll(["\"tagName\":", this.m_tagName, ","], "");
+    if (this._tagName != null) {  
+      buffer.writeAll(["\"tagName\":\`", this._tagName, "\`,"], "");
     }
 
-    if (this.m_textContent != null) {  
-      buffer.writeAll(["\"textContent\":", this.m_textContent, ","], "");
+    if (this._textContent != null) {  
+      buffer.writeAll(["\"textContent\":\`", this._textContent, "\`,"], "");
     }
   }
 

@@ -12,304 +12,303 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
-import 'ControllableOptions.dart';
-import 'CSSObject.dart';
 import 'AnnotationsAccessibilityOptionsObject.dart';
+import 'CSSObject.dart';
 import 'OptionFragment.dart';
 
 /** 
  * ControllableLabelOptions 
  */
-class ControllableLabelOptions extends ControllableOptions {
+class ControllableLabelOptions extends OptionFragment {
   ControllableLabelOptions() : super();
-  String? m_align;  
+  String? _align;  
 
   String get align { 
-    if (this.m_align == null) {
-      this.m_align = "";
+    if (this._align == null) {
+      this._align = "";
     }
-    return this.m_align!;
+    return this._align!;
   }
 
   void set align (String v) {
-    this.m_align = v;
+    this._align = v;
   }
     
-  bool? m_allowOverlap;  
+  bool? _allowOverlap;  
 
   bool get allowOverlap { 
-    if (this.m_allowOverlap == null) {
-      this.m_allowOverlap = false;
+    if (this._allowOverlap == null) {
+      this._allowOverlap = false;
     }
-    return this.m_allowOverlap!;
+    return this._allowOverlap!;
   }
 
   void set allowOverlap (bool v) {
-    this.m_allowOverlap = v;
+    this._allowOverlap = v;
   }
     
-  String? m_backgroundColor;  
+  String? _backgroundColor;  
 
   String get backgroundColor { 
-    if (this.m_backgroundColor == null) {
-      this.m_backgroundColor = "";
+    if (this._backgroundColor == null) {
+      this._backgroundColor = "";
     }
-    return this.m_backgroundColor!;
+    return this._backgroundColor!;
   }
 
   void set backgroundColor (String v) {
-    this.m_backgroundColor = v;
+    this._backgroundColor = v;
   }
     
-  String? m_color;  
+  String? _color;  
 
   String get color { 
-    if (this.m_color == null) {
-      this.m_color = "";
+    if (this._color == null) {
+      this._color = "";
     }
-    return this.m_color!;
+    return this._color!;
   }
 
   void set color (String v) {
-    this.m_color = v;
+    this._color = v;
   }
     
-  String? m_borderColor;  
+  String? _borderColor;  
 
   String get borderColor { 
-    if (this.m_borderColor == null) {
-      this.m_borderColor = "";
+    if (this._borderColor == null) {
+      this._borderColor = "";
     }
-    return this.m_borderColor!;
+    return this._borderColor!;
   }
 
   void set borderColor (String v) {
-    this.m_borderColor = v;
+    this._borderColor = v;
   }
     
-  double? m_borderRadius;  
+  double? _borderRadius;  
 
   double get borderRadius { 
-    if (this.m_borderRadius == null) {
-      this.m_borderRadius = 0;
+    if (this._borderRadius == null) {
+      this._borderRadius = 0;
     }
-    return this.m_borderRadius!;
+    return this._borderRadius!;
   }
 
   void set borderRadius (double v) {
-    this.m_borderRadius = v;
+    this._borderRadius = v;
   }
     
-  double? m_borderWidth;  
+  double? _borderWidth;  
 
   double get borderWidth { 
-    if (this.m_borderWidth == null) {
-      this.m_borderWidth = 0;
+    if (this._borderWidth == null) {
+      this._borderWidth = 0;
     }
-    return this.m_borderWidth!;
+    return this._borderWidth!;
   }
 
   void set borderWidth (double v) {
-    this.m_borderWidth = v;
+    this._borderWidth = v;
   }
     
-  bool? m_crop;  
+  bool? _crop;  
 
   bool get crop { 
-    if (this.m_crop == null) {
-      this.m_crop = false;
+    if (this._crop == null) {
+      this._crop = false;
     }
-    return this.m_crop!;
+    return this._crop!;
   }
 
   void set crop (bool v) {
-    this.m_crop = v;
+    this._crop = v;
   }
     
-  String? m_dashStyle;  
+  String? _dashStyle;  
 
   String get dashStyle { 
-    if (this.m_dashStyle == null) {
-      this.m_dashStyle = "";
+    if (this._dashStyle == null) {
+      this._dashStyle = "";
     }
-    return this.m_dashStyle!;
+    return this._dashStyle!;
   }
 
   void set dashStyle (String v) {
-    this.m_dashStyle = v;
+    this._dashStyle = v;
   }
     
-  double? m_distance;  
+  double? _distance;  
 
   double get distance { 
-    if (this.m_distance == null) {
-      this.m_distance = 0;
+    if (this._distance == null) {
+      this._distance = 0;
     }
-    return this.m_distance!;
+    return this._distance!;
   }
 
   void set distance (double v) {
-    this.m_distance = v;
+    this._distance = v;
   }
     
-  String? m_format;  
+  String? _format;  
 
   String get format { 
-    if (this.m_format == null) {
-      this.m_format = "";
+    if (this._format == null) {
+      this._format = "";
     }
-    return this.m_format!;
+    return this._format!;
   }
 
   void set format (String v) {
-    this.m_format = v;
+    this._format = v;
   }
     
-  bool? m_includeInDataExport;  
+  bool? _includeInDataExport;  
 
   bool get includeInDataExport { 
-    if (this.m_includeInDataExport == null) {
-      this.m_includeInDataExport = false;
+    if (this._includeInDataExport == null) {
+      this._includeInDataExport = false;
     }
-    return this.m_includeInDataExport!;
+    return this._includeInDataExport!;
   }
 
   void set includeInDataExport (bool v) {
-    this.m_includeInDataExport = v;
+    this._includeInDataExport = v;
   }
     
-  String? m_overflow;  
+  String? _overflow;  
 
   String get overflow { 
-    if (this.m_overflow == null) {
-      this.m_overflow = "";
+    if (this._overflow == null) {
+      this._overflow = "";
     }
-    return this.m_overflow!;
+    return this._overflow!;
   }
 
   void set overflow (String v) {
-    this.m_overflow = v;
+    this._overflow = v;
   }
     
-  double? m_padding;  
+  double? _padding;  
 
   double get padding { 
-    if (this.m_padding == null) {
-      this.m_padding = 0;
+    if (this._padding == null) {
+      this._padding = 0;
     }
-    return this.m_padding!;
+    return this._padding!;
   }
 
   void set padding (double v) {
-    this.m_padding = v;
+    this._padding = v;
   }
     
-  String? m_shape;  
+  String? _shape;  
 
   String get shape { 
-    if (this.m_shape == null) {
-      this.m_shape = "";
+    if (this._shape == null) {
+      this._shape = "";
     }
-    return this.m_shape!;
+    return this._shape!;
   }
 
   void set shape (String v) {
-    this.m_shape = v;
+    this._shape = v;
   }
     
-  String? m_text;  
+  String? _text;  
 
   String get text { 
-    if (this.m_text == null) {
-      this.m_text = "";
+    if (this._text == null) {
+      this._text = "";
     }
-    return this.m_text!;
+    return this._text!;
   }
 
   void set text (String v) {
-    this.m_text = v;
+    this._text = v;
   }
     
-  bool? m_useHTML;  
+  bool? _useHTML;  
 
   bool get useHTML { 
-    if (this.m_useHTML == null) {
-      this.m_useHTML = false;
+    if (this._useHTML == null) {
+      this._useHTML = false;
     }
-    return this.m_useHTML!;
+    return this._useHTML!;
   }
 
   void set useHTML (bool v) {
-    this.m_useHTML = v;
+    this._useHTML = v;
   }
     
-  String? m_verticalAlign;  
+  String? _verticalAlign;  
 
   String get verticalAlign { 
-    if (this.m_verticalAlign == null) {
-      this.m_verticalAlign = "";
+    if (this._verticalAlign == null) {
+      this._verticalAlign = "";
     }
-    return this.m_verticalAlign!;
+    return this._verticalAlign!;
   }
 
   void set verticalAlign (String v) {
-    this.m_verticalAlign = v;
+    this._verticalAlign = v;
   }
     
-  double? m_x;  
+  double? _x;  
 
   double get x { 
-    if (this.m_x == null) {
-      this.m_x = 0;
+    if (this._x == null) {
+      this._x = 0;
     }
-    return this.m_x!;
+    return this._x!;
   }
 
   void set x (double v) {
-    this.m_x = v;
+    this._x = v;
   }
     
-  String? m_xAxis;  
+  String? _xAxis;  
 
   String get xAxis { 
-    if (this.m_xAxis == null) {
-      this.m_xAxis = "";
+    if (this._xAxis == null) {
+      this._xAxis = "";
     }
-    return this.m_xAxis!;
+    return this._xAxis!;
   }
 
   void set xAxis (String v) {
-    this.m_xAxis = v;
+    this._xAxis = v;
   }
     
-  double? m_y;  
+  double? _y;  
 
   double get y { 
-    if (this.m_y == null) {
-      this.m_y = 0;
+    if (this._y == null) {
+      this._y = 0;
     }
-    return this.m_y!;
+    return this._y!;
   }
 
   void set y (double v) {
-    this.m_y = v;
+    this._y = v;
   }
     
-  String? m_yAxis;  
+  String? _yAxis;  
 
   String get yAxis { 
-    if (this.m_yAxis == null) {
-      this.m_yAxis = "";
+    if (this._yAxis == null) {
+      this._yAxis = "";
     }
-    return this.m_yAxis!;
+    return this._yAxis!;
   }
 
   void set yAxis (String v) {
-    this.m_yAxis = v;
+    this._yAxis = v;
   }
     
 
@@ -320,99 +319,99 @@ class ControllableLabelOptions extends ControllableOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_align != null) {  
-      buffer.writeAll(["\"align\":", this.m_align, ","], "");
+    // NOTE: skip serialization of accessibility (type AnnotationsAccessibilityOptionsObject is ignored)} 
+
+    if (this._align != null) {  
+      buffer.writeAll(["\"align\":\`", this._align, "\`,"], "");
     }
 
-    if (this.m_allowOverlap != null) {  
-      buffer.writeAll(["\"allowOverlap\":", this.m_allowOverlap, ","], "");
+    if (this._allowOverlap != null) {  
+      buffer.writeAll(["\"allowOverlap\":", this._allowOverlap, ","], "");
     }
 
-    if (this.m_backgroundColor != null) {  
-      buffer.writeAll(["\"backgroundColor\":", this.m_backgroundColor, ","], "");
+    if (this._backgroundColor != null) {  
+      buffer.writeAll(["\"backgroundColor\":\`", this._backgroundColor, "\`,"], "");
     }
 
-    if (this.m_color != null) {  
-      buffer.writeAll(["\"color\":", this.m_color, ","], "");
+    if (this._color != null) {  
+      buffer.writeAll(["\"color\":\`", this._color, "\`,"], "");
     }
 
-    if (this.m_borderColor != null) {  
-      buffer.writeAll(["\"borderColor\":", this.m_borderColor, ","], "");
+    if (this._borderColor != null) {  
+      buffer.writeAll(["\"borderColor\":\`", this._borderColor, "\`,"], "");
     }
 
-    if (this.m_borderRadius != null) {  
-      buffer.writeAll(["\"borderRadius\":", this.m_borderRadius, ","], "");
+    if (this._borderRadius != null) {  
+      buffer.writeAll(["\"borderRadius\":", this._borderRadius, ","], "");
     }
 
-    if (this.m_borderWidth != null) {  
-      buffer.writeAll(["\"borderWidth\":", this.m_borderWidth, ","], "");
+    if (this._borderWidth != null) {  
+      buffer.writeAll(["\"borderWidth\":", this._borderWidth, ","], "");
     }
 
-    if (this.m_crop != null) {  
-      buffer.writeAll(["\"crop\":", this.m_crop, ","], "");
+    if (this._crop != null) {  
+      buffer.writeAll(["\"crop\":", this._crop, ","], "");
     }
 
-    if (this.m_dashStyle != null) {  
-      buffer.writeAll(["\"dashStyle\":", this.m_dashStyle, ","], "");
+    if (this._dashStyle != null) {  
+      buffer.writeAll(["\"dashStyle\":\`", this._dashStyle, "\`,"], "");
     }
 
-    if (this.m_distance != null) {  
-      buffer.writeAll(["\"distance\":", this.m_distance, ","], "");
+    if (this._distance != null) {  
+      buffer.writeAll(["\"distance\":", this._distance, ","], "");
     }
 
-    if (this.m_format != null) {  
-      buffer.writeAll(["\"format\":", this.m_format, ","], "");
+    if (this._format != null) {  
+      buffer.writeAll(["\"format\":\`", this._format, "\`,"], "");
     }
 
-    if (this.m_includeInDataExport != null) {  
-      buffer.writeAll(["\"includeInDataExport\":", this.m_includeInDataExport, ","], "");
+    if (this._includeInDataExport != null) {  
+      buffer.writeAll(["\"includeInDataExport\":", this._includeInDataExport, ","], "");
     }
 
-    if (this.m_overflow != null) {  
-      buffer.writeAll(["\"overflow\":", this.m_overflow, ","], "");
+    if (this._overflow != null) {  
+      buffer.writeAll(["\"overflow\":\`", this._overflow, "\`,"], "");
     }
 
-    if (this.m_padding != null) {  
-      buffer.writeAll(["\"padding\":", this.m_padding, ","], "");
+    if (this._padding != null) {  
+      buffer.writeAll(["\"padding\":", this._padding, ","], "");
     }
 
     // NOTE: skip serialization of shadow (type Generic is ignored)} 
 
-    if (this.m_shape != null) {  
-      buffer.writeAll(["\"shape\":", this.m_shape, ","], "");
+    if (this._shape != null) {  
+      buffer.writeAll(["\"shape\":\`", this._shape, "\`,"], "");
     }
 
     // NOTE: skip serialization of style (type CSSObject is ignored)} 
 
-    if (this.m_text != null) {  
-      buffer.writeAll(["\"text\":", this.m_text, ","], "");
+    if (this._text != null) {  
+      buffer.writeAll(["\"text\":\`", this._text, "\`,"], "");
     }
 
-    if (this.m_useHTML != null) {  
-      buffer.writeAll(["\"useHTML\":", this.m_useHTML, ","], "");
+    if (this._useHTML != null) {  
+      buffer.writeAll(["\"useHTML\":", this._useHTML, ","], "");
     }
 
-    if (this.m_verticalAlign != null) {  
-      buffer.writeAll(["\"verticalAlign\":", this.m_verticalAlign, ","], "");
+    if (this._verticalAlign != null) {  
+      buffer.writeAll(["\"verticalAlign\":\`", this._verticalAlign, "\`,"], "");
     }
 
-    if (this.m_x != null) {  
-      buffer.writeAll(["\"x\":", this.m_x, ","], "");
+    if (this._x != null) {  
+      buffer.writeAll(["\"x\":", this._x, ","], "");
     }
 
-    if (this.m_xAxis != null) {  
-      buffer.writeAll(["\"xAxis\":", this.m_xAxis, ","], "");
+    if (this._xAxis != null) {  
+      buffer.writeAll(["\"xAxis\":\`", this._xAxis, "\`,"], "");
     }
 
-    if (this.m_y != null) {  
-      buffer.writeAll(["\"y\":", this.m_y, ","], "");
+    if (this._y != null) {  
+      buffer.writeAll(["\"y\":", this._y, ","], "");
     }
 
-    if (this.m_yAxis != null) {  
-      buffer.writeAll(["\"yAxis\":", this.m_yAxis, ","], "");
+    if (this._yAxis != null) {  
+      buffer.writeAll(["\"yAxis\":\`", this._yAxis, "\`,"], "");
     }
-
-    // NOTE: skip serialization of accessibility (type AnnotationsAccessibilityOptionsObject is ignored)} 
   }
 
 }

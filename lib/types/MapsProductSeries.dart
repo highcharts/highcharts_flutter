@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -66,17 +66,17 @@ class MapsProductSeries extends OptionFragment {
    * ```
    *               
       */
-  ? m_geoheatmap;  
+  ? _geoheatmap;  
 
    get geoheatmap { 
-    if (this.m_geoheatmap == null) {
-      this.m_geoheatmap = ();
+    if (this._geoheatmap == null) {
+      this._geoheatmap = ();
     }
-    return this.m_geoheatmap!;
+    return this._geoheatmap!;
   }
 
   void set geoheatmap ( v) {
-    this.m_geoheatmap = v;
+    this._geoheatmap = v;
   }
     
 
@@ -89,8 +89,8 @@ class MapsProductSeries extends OptionFragment {
     
     // NOTE: skip serialization of flowmap (type FlowMapSeriesOptions is ignored)} 
 
-    if (this.m_geoheatmap != null) {  
-      buffer.writeAll(["\"geoheatmap\":", this.m_geoheatmap?.toJSON(), ","], "");
+    if (this._geoheatmap != null) {  
+      buffer.writeAll(["\"geoheatmap\":", this._geoheatmap?.toJSON(), ","], "");
     }
 
     // NOTE: skip serialization of heatmap (type HeatmapSeriesOptions is ignored)} 

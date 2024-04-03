@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,17 +24,17 @@ import 'OptionFragment.dart';
  */
 class HeatmapPointMarkerOptions extends PointMarkerOptions {
   HeatmapPointMarkerOptions() : super();
-  double? m_r;  
+  double? _r;  
 
   double get r { 
-    if (this.m_r == null) {
-      this.m_r = 0;
+    if (this._r == null) {
+      this._r = 0;
     }
-    return this.m_r!;
+    return this._r!;
   }
 
   void set r (double v) {
-    this.m_r = v;
+    this._r = v;
   }
     
 
@@ -45,8 +45,8 @@ class HeatmapPointMarkerOptions extends PointMarkerOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_r != null) {  
-      buffer.writeAll(["\"r\":", this.m_r, ","], "");
+    if (this._r != null) {  
+      buffer.writeAll(["\"r\":", this._r, ","], "");
     }
   }
 

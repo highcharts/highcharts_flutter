@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,17 +24,17 @@ import 'OptionFragment.dart';
  */
 class VennLabelOverlapObject extends OptionFragment {
   VennLabelOverlapObject() : super();
-  double? m_loss;  
+  double? _loss;  
 
   double get loss { 
-    if (this.m_loss == null) {
-      this.m_loss = 0;
+    if (this._loss == null) {
+      this._loss = 0;
     }
-    return this.m_loss!;
+    return this._loss!;
   }
 
   void set loss (double v) {
-    this.m_loss = v;
+    this._loss = v;
   }
     
 
@@ -47,8 +47,8 @@ class VennLabelOverlapObject extends OptionFragment {
     
     // NOTE: skip serialization of coordinates (type PositionObject is ignored)} 
 
-    if (this.m_loss != null) {  
-      buffer.writeAll(["\"loss\":", this.m_loss, ","], "");
+    if (this._loss != null) {  
+      buffer.writeAll(["\"loss\":", this._loss, ","], "");
     }
   }
 

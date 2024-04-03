@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,134 +23,134 @@ import 'OptionFragment.dart';
  */
 class GeoJSONTransform extends OptionFragment {
   GeoJSONTransform() : super();
-  String? m_crs;  
+  String? _crs;  
 
   String get crs { 
-    if (this.m_crs == null) {
-      this.m_crs = "";
+    if (this._crs == null) {
+      this._crs = "";
     }
-    return this.m_crs!;
+    return this._crs!;
   }
 
   void set crs (String v) {
-    this.m_crs = v;
+    this._crs = v;
   }
     
-  double? m_jsonmarginX;  
+  double? _jsonmarginX;  
 
   double get jsonmarginX { 
-    if (this.m_jsonmarginX == null) {
-      this.m_jsonmarginX = 0;
+    if (this._jsonmarginX == null) {
+      this._jsonmarginX = 0;
     }
-    return this.m_jsonmarginX!;
+    return this._jsonmarginX!;
   }
 
   void set jsonmarginX (double v) {
-    this.m_jsonmarginX = v;
+    this._jsonmarginX = v;
   }
     
-  double? m_jsonmarginY;  
+  double? _jsonmarginY;  
 
   double get jsonmarginY { 
-    if (this.m_jsonmarginY == null) {
-      this.m_jsonmarginY = 0;
+    if (this._jsonmarginY == null) {
+      this._jsonmarginY = 0;
     }
-    return this.m_jsonmarginY!;
+    return this._jsonmarginY!;
   }
 
   void set jsonmarginY (double v) {
-    this.m_jsonmarginY = v;
+    this._jsonmarginY = v;
   }
     
-  double? m_jsonres;  
+  double? _jsonres;  
 
   double get jsonres { 
-    if (this.m_jsonres == null) {
-      this.m_jsonres = 0;
+    if (this._jsonres == null) {
+      this._jsonres = 0;
     }
-    return this.m_jsonres!;
+    return this._jsonres!;
   }
 
   void set jsonres (double v) {
-    this.m_jsonres = v;
+    this._jsonres = v;
   }
     
-  double? m_rotation;  
+  double? _rotation;  
 
   double get rotation { 
-    if (this.m_rotation == null) {
-      this.m_rotation = 0;
+    if (this._rotation == null) {
+      this._rotation = 0;
     }
-    return this.m_rotation!;
+    return this._rotation!;
   }
 
   void set rotation (double v) {
-    this.m_rotation = v;
+    this._rotation = v;
   }
     
-  double? m_scale;  
+  double? _scale;  
 
   double get scale { 
-    if (this.m_scale == null) {
-      this.m_scale = 0;
+    if (this._scale == null) {
+      this._scale = 0;
     }
-    return this.m_scale!;
+    return this._scale!;
   }
 
   void set scale (double v) {
-    this.m_scale = v;
+    this._scale = v;
   }
     
-  double? m_xoffset;  
+  double? _xoffset;  
 
   double get xoffset { 
-    if (this.m_xoffset == null) {
-      this.m_xoffset = 0;
+    if (this._xoffset == null) {
+      this._xoffset = 0;
     }
-    return this.m_xoffset!;
+    return this._xoffset!;
   }
 
   void set xoffset (double v) {
-    this.m_xoffset = v;
+    this._xoffset = v;
   }
     
-  double? m_xpan;  
+  double? _xpan;  
 
   double get xpan { 
-    if (this.m_xpan == null) {
-      this.m_xpan = 0;
+    if (this._xpan == null) {
+      this._xpan = 0;
     }
-    return this.m_xpan!;
+    return this._xpan!;
   }
 
   void set xpan (double v) {
-    this.m_xpan = v;
+    this._xpan = v;
   }
     
-  double? m_yoffset;  
+  double? _yoffset;  
 
   double get yoffset { 
-    if (this.m_yoffset == null) {
-      this.m_yoffset = 0;
+    if (this._yoffset == null) {
+      this._yoffset = 0;
     }
-    return this.m_yoffset!;
+    return this._yoffset!;
   }
 
   void set yoffset (double v) {
-    this.m_yoffset = v;
+    this._yoffset = v;
   }
     
-  double? m_ypan;  
+  double? _ypan;  
 
   double get ypan { 
-    if (this.m_ypan == null) {
-      this.m_ypan = 0;
+    if (this._ypan == null) {
+      this._ypan = 0;
     }
-    return this.m_ypan!;
+    return this._ypan!;
   }
 
   void set ypan (double v) {
-    this.m_ypan = v;
+    this._ypan = v;
   }
     
 
@@ -161,46 +161,46 @@ class GeoJSONTransform extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_crs != null) {  
-      buffer.writeAll(["\"crs\":", this.m_crs, ","], "");
+    if (this._crs != null) {  
+      buffer.writeAll(["\"crs\":\`", this._crs, "\`,"], "");
     }
 
     // NOTE: skip serialization of hitZone (type AnyRecord is ignored)} 
 
-    if (this.m_jsonmarginX != null) {  
-      buffer.writeAll(["\"jsonmarginX\":", this.m_jsonmarginX, ","], "");
+    if (this._jsonmarginX != null) {  
+      buffer.writeAll(["\"jsonmarginX\":", this._jsonmarginX, ","], "");
     }
 
-    if (this.m_jsonmarginY != null) {  
-      buffer.writeAll(["\"jsonmarginY\":", this.m_jsonmarginY, ","], "");
+    if (this._jsonmarginY != null) {  
+      buffer.writeAll(["\"jsonmarginY\":", this._jsonmarginY, ","], "");
     }
 
-    if (this.m_jsonres != null) {  
-      buffer.writeAll(["\"jsonres\":", this.m_jsonres, ","], "");
+    if (this._jsonres != null) {  
+      buffer.writeAll(["\"jsonres\":", this._jsonres, ","], "");
     }
 
-    if (this.m_rotation != null) {  
-      buffer.writeAll(["\"rotation\":", this.m_rotation, ","], "");
+    if (this._rotation != null) {  
+      buffer.writeAll(["\"rotation\":", this._rotation, ","], "");
     }
 
-    if (this.m_scale != null) {  
-      buffer.writeAll(["\"scale\":", this.m_scale, ","], "");
+    if (this._scale != null) {  
+      buffer.writeAll(["\"scale\":", this._scale, ","], "");
     }
 
-    if (this.m_xoffset != null) {  
-      buffer.writeAll(["\"xoffset\":", this.m_xoffset, ","], "");
+    if (this._xoffset != null) {  
+      buffer.writeAll(["\"xoffset\":", this._xoffset, ","], "");
     }
 
-    if (this.m_xpan != null) {  
-      buffer.writeAll(["\"xpan\":", this.m_xpan, ","], "");
+    if (this._xpan != null) {  
+      buffer.writeAll(["\"xpan\":", this._xpan, ","], "");
     }
 
-    if (this.m_yoffset != null) {  
-      buffer.writeAll(["\"yoffset\":", this.m_yoffset, ","], "");
+    if (this._yoffset != null) {  
+      buffer.writeAll(["\"yoffset\":", this._yoffset, ","], "");
     }
 
-    if (this.m_ypan != null) {  
-      buffer.writeAll(["\"ypan\":", this.m_ypan, ","], "");
+    if (this._ypan != null) {  
+      buffer.writeAll(["\"ypan\":", this._ypan, ","], "");
     }
   }
 

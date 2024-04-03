@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -30,17 +30,17 @@ class TilemapSeriesOptions extends HeatmapSeriesOptions {
    * 
    * Defaults to 'hexagon'. 
       */
-  String? m_tileShape;  
+  String? _tileShape;  
 
   String get tileShape { 
-    if (this.m_tileShape == null) {
-      this.m_tileShape = "";
+    if (this._tileShape == null) {
+      this._tileShape = "";
     }
-    return this.m_tileShape!;
+    return this._tileShape!;
   }
 
   void set tileShape (String v) {
-    this.m_tileShape = v;
+    this._tileShape = v;
   }
     
 
@@ -53,8 +53,8 @@ class TilemapSeriesOptions extends HeatmapSeriesOptions {
     
     // NOTE: skip serialization of state (type Generic is ignored)} 
 
-    if (this.m_tileShape != null) {  
-      buffer.writeAll(["\"tileShape\":", this.m_tileShape, ","], "");
+    if (this._tileShape != null) {  
+      buffer.writeAll(["\"tileShape\":\`", this._tileShape, "\`,"], "");
     }
   }
 

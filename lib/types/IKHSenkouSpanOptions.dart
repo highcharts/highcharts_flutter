@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,30 +23,30 @@ import 'OptionFragment.dart';
  */
 class IKHSenkouSpanOptions extends OptionFragment {
   IKHSenkouSpanOptions() : super();
-  String? m_color;  
+  String? _color;  
 
   String get color { 
-    if (this.m_color == null) {
-      this.m_color = "";
+    if (this._color == null) {
+      this._color = "";
     }
-    return this.m_color!;
+    return this._color!;
   }
 
   void set color (String v) {
-    this.m_color = v;
+    this._color = v;
   }
     
-  String? m_negativeColor;  
+  String? _negativeColor;  
 
   String get negativeColor { 
-    if (this.m_negativeColor == null) {
-      this.m_negativeColor = "";
+    if (this._negativeColor == null) {
+      this._negativeColor = "";
     }
-    return this.m_negativeColor!;
+    return this._negativeColor!;
   }
 
   void set negativeColor (String v) {
-    this.m_negativeColor = v;
+    this._negativeColor = v;
   }
     
 
@@ -57,12 +57,12 @@ class IKHSenkouSpanOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_color != null) {  
-      buffer.writeAll(["\"color\":", this.m_color, ","], "");
+    if (this._color != null) {  
+      buffer.writeAll(["\"color\":\`", this._color, "\`,"], "");
     }
 
-    if (this.m_negativeColor != null) {  
-      buffer.writeAll(["\"negativeColor\":", this.m_negativeColor, ","], "");
+    if (this._negativeColor != null) {  
+      buffer.writeAll(["\"negativeColor\":\`", this._negativeColor, "\`,"], "");
     }
 
     // NOTE: skip serialization of styles (type CSSObject & { fill: ColorType; } is ignored)} 

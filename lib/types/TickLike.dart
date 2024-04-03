@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,17 +23,17 @@ import 'OptionFragment.dart';
  */
 class TickLike extends OptionFragment {
   TickLike() : super();
-  double? m_slotWidth;  
+  double? _slotWidth;  
 
   double get slotWidth { 
-    if (this.m_slotWidth == null) {
-      this.m_slotWidth = 0;
+    if (this._slotWidth == null) {
+      this._slotWidth = 0;
     }
-    return this.m_slotWidth!;
+    return this._slotWidth!;
   }
 
   void set slotWidth (double v) {
-    this.m_slotWidth = v;
+    this._slotWidth = v;
   }
     
 
@@ -44,8 +44,8 @@ class TickLike extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_slotWidth != null) {  
-      buffer.writeAll(["\"slotWidth\":", this.m_slotWidth, ","], "");
+    if (this._slotWidth != null) {  
+      buffer.writeAll(["\"slotWidth\":", this._slotWidth, ","], "");
     }
   }
 

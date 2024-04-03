@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -37,7 +37,7 @@ class SunburstSeriesOptions extends TreemapSeriesOptions {
    * 
    * Defaults to '[null, null]'. 
       */
-  List<double>? center;
+  List<double>? center; // double
   /**
    * Options for the series data labels, appearing next to each data
    * point.
@@ -49,22 +49,22 @@ class SunburstSeriesOptions extends TreemapSeriesOptions {
    * `.highcharts-data-label-box` and `.highcharts-data-label` class names
    * ([see example](https://www.highcharts.com/samples/highcharts/css/series-datalabels)).  
       */
-  List<SunburstDataLabelOptions>? dataLabels;
+  List<SunburstDataLabelOptions>? dataLabels; // SunburstDataLabelOptions
   /**
    * The end angle of the pie in degrees where 0 is top and 90 is right.
    * Defaults to `startAngle` plus 360.  
       */
-  double? m_endAngle;  
+  double? _endAngle;  
 
   double get endAngle { 
-    if (this.m_endAngle == null) {
-      this.m_endAngle = 0;
+    if (this._endAngle == null) {
+      this._endAngle = 0;
     }
-    return this.m_endAngle!;
+    return this._endAngle!;
   }
 
   void set endAngle (double v) {
-    this.m_endAngle = v;
+    this._endAngle = v;
   }
     
   /**
@@ -76,17 +76,17 @@ class SunburstSeriesOptions extends TreemapSeriesOptions {
   /**
    * Determines the width of the ring per level.  
       */
-  SunburstSeriesLevelSizeOptions? m_levelSize;  
+  SunburstSeriesLevelSizeOptions? _levelSize;  
 
   SunburstSeriesLevelSizeOptions get levelSize { 
-    if (this.m_levelSize == null) {
-      this.m_levelSize = SunburstSeriesLevelSizeOptions();
+    if (this._levelSize == null) {
+      this._levelSize = SunburstSeriesLevelSizeOptions();
     }
-    return this.m_levelSize!;
+    return this._levelSize!;
   }
 
   void set levelSize (SunburstSeriesLevelSizeOptions v) {
-    this.m_levelSize = v;
+    this._levelSize = v;
   }
     
   /**
@@ -94,17 +94,17 @@ class SunburstSeriesOptions extends TreemapSeriesOptions {
    * 
    * Defaults to 'undefined'. 
       */
-  String? m_rootId;  
+  String? _rootId;  
 
   String get rootId { 
-    if (this.m_rootId == null) {
-      this.m_rootId = "";
+    if (this._rootId == null) {
+      this._rootId = "";
     }
-    return this.m_rootId!;
+    return this._rootId!;
   }
 
   void set rootId (String v) {
-    this.m_rootId = v;
+    this._rootId = v;
   }
     
   /**
@@ -113,17 +113,17 @@ class SunburstSeriesOptions extends TreemapSeriesOptions {
    * 
    * Defaults to '10'. 
       */
-  double? m_slicedOffset;  
+  double? _slicedOffset;  
 
   double get slicedOffset { 
-    if (this.m_slicedOffset == null) {
-      this.m_slicedOffset = 0;
+    if (this._slicedOffset == null) {
+      this._slicedOffset = 0;
     }
-    return this.m_slicedOffset!;
+    return this._slicedOffset!;
   }
 
   void set slicedOffset (double v) {
-    this.m_slicedOffset = v;
+    this._slicedOffset = v;
   }
     
   /**
@@ -132,17 +132,17 @@ class SunburstSeriesOptions extends TreemapSeriesOptions {
    * 
    * Defaults to '0'. 
       */
-  double? m_startAngle;  
+  double? _startAngle;  
 
   double get startAngle { 
-    if (this.m_startAngle == null) {
-      this.m_startAngle = 0;
+    if (this._startAngle == null) {
+      this._startAngle = 0;
     }
-    return this.m_startAngle!;
+    return this._startAngle!;
   }
 
   void set startAngle (double v) {
-    this.m_startAngle = v;
+    this._startAngle = v;
   }
     
   // NOTE: states skipped - type Generic is ignored in gen
@@ -159,28 +159,28 @@ class SunburstSeriesOptions extends TreemapSeriesOptions {
 
     // NOTE: skip serialization of dataLabels (type SunburstDataLabelOptions[] is ignored)} 
 
-    if (this.m_endAngle != null) {  
-      buffer.writeAll(["\"endAngle\":", this.m_endAngle, ","], "");
+    if (this._endAngle != null) {  
+      buffer.writeAll(["\"endAngle\":", this._endAngle, ","], "");
     }
 
     // NOTE: skip serialization of levels (type SunburstSeriesLevelOptions[] is ignored)} 
 
-    if (this.m_levelSize != null) {  
-      buffer.writeAll(["\"levelSize\":", this.m_levelSize?.toJSON(), ","], "");
+    if (this._levelSize != null) {  
+      buffer.writeAll(["\"levelSize\":", this._levelSize?.toJSON(), ","], "");
     }
 
     // NOTE: skip serialization of mapIdToNode (type Generic is ignored)} 
 
-    if (this.m_rootId != null) {  
-      buffer.writeAll(["\"rootId\":", this.m_rootId, ","], "");
+    if (this._rootId != null) {  
+      buffer.writeAll(["\"rootId\":\`", this._rootId, "\`,"], "");
     }
 
-    if (this.m_slicedOffset != null) {  
-      buffer.writeAll(["\"slicedOffset\":", this.m_slicedOffset, ","], "");
+    if (this._slicedOffset != null) {  
+      buffer.writeAll(["\"slicedOffset\":", this._slicedOffset, ","], "");
     }
 
-    if (this.m_startAngle != null) {  
-      buffer.writeAll(["\"startAngle\":", this.m_startAngle, ","], "");
+    if (this._startAngle != null) {  
+      buffer.writeAll(["\"startAngle\":", this._startAngle, ","], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 

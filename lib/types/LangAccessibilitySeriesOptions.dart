@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,69 +24,69 @@ import 'OptionFragment.dart';
  */
 class LangAccessibilitySeriesOptions extends OptionFragment {
   LangAccessibilitySeriesOptions() : super();
-  String? m_description;  
+  String? _description;  
 
   String get description { 
-    if (this.m_description == null) {
-      this.m_description = "";
+    if (this._description == null) {
+      this._description = "";
     }
-    return this.m_description!;
+    return this._description!;
   }
 
   void set description (String v) {
-    this.m_description = v;
+    this._description = v;
   }
     
-  String? m_nullPointValue;  
+  String? _nullPointValue;  
 
   String get nullPointValue { 
-    if (this.m_nullPointValue == null) {
-      this.m_nullPointValue = "";
+    if (this._nullPointValue == null) {
+      this._nullPointValue = "";
     }
-    return this.m_nullPointValue!;
+    return this._nullPointValue!;
   }
 
   void set nullPointValue (String v) {
-    this.m_nullPointValue = v;
+    this._nullPointValue = v;
   }
     
-  String? m_pointAnnotationsDescription;  
+  String? _pointAnnotationsDescription;  
 
   String get pointAnnotationsDescription { 
-    if (this.m_pointAnnotationsDescription == null) {
-      this.m_pointAnnotationsDescription = "";
+    if (this._pointAnnotationsDescription == null) {
+      this._pointAnnotationsDescription = "";
     }
-    return this.m_pointAnnotationsDescription!;
+    return this._pointAnnotationsDescription!;
   }
 
   void set pointAnnotationsDescription (String v) {
-    this.m_pointAnnotationsDescription = v;
+    this._pointAnnotationsDescription = v;
   }
     
-  String? m_xAxisDescription;  
+  String? _xAxisDescription;  
 
   String get xAxisDescription { 
-    if (this.m_xAxisDescription == null) {
-      this.m_xAxisDescription = "";
+    if (this._xAxisDescription == null) {
+      this._xAxisDescription = "";
     }
-    return this.m_xAxisDescription!;
+    return this._xAxisDescription!;
   }
 
   void set xAxisDescription (String v) {
-    this.m_xAxisDescription = v;
+    this._xAxisDescription = v;
   }
     
-  String? m_yAxisDescription;  
+  String? _yAxisDescription;  
 
   String get yAxisDescription { 
-    if (this.m_yAxisDescription == null) {
-      this.m_yAxisDescription = "";
+    if (this._yAxisDescription == null) {
+      this._yAxisDescription = "";
     }
-    return this.m_yAxisDescription!;
+    return this._yAxisDescription!;
   }
 
   void set yAxisDescription (String v) {
-    this.m_yAxisDescription = v;
+    this._yAxisDescription = v;
   }
     
 
@@ -97,26 +97,26 @@ class LangAccessibilitySeriesOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_description != null) {  
-      buffer.writeAll(["\"description\":", this.m_description, ","], "");
+    if (this._description != null) {  
+      buffer.writeAll(["\"description\":\`", this._description, "\`,"], "");
     }
 
-    if (this.m_nullPointValue != null) {  
-      buffer.writeAll(["\"nullPointValue\":", this.m_nullPointValue, ","], "");
+    if (this._nullPointValue != null) {  
+      buffer.writeAll(["\"nullPointValue\":\`", this._nullPointValue, "\`,"], "");
     }
 
-    if (this.m_pointAnnotationsDescription != null) {  
-      buffer.writeAll(["\"pointAnnotationsDescription\":", this.m_pointAnnotationsDescription, ","], "");
+    if (this._pointAnnotationsDescription != null) {  
+      buffer.writeAll(["\"pointAnnotationsDescription\":\`", this._pointAnnotationsDescription, "\`,"], "");
     }
 
     // NOTE: skip serialization of summary (type LangAccessibilitySeriesSummaryOptions is ignored)} 
 
-    if (this.m_xAxisDescription != null) {  
-      buffer.writeAll(["\"xAxisDescription\":", this.m_xAxisDescription, ","], "");
+    if (this._xAxisDescription != null) {  
+      buffer.writeAll(["\"xAxisDescription\":\`", this._xAxisDescription, "\`,"], "");
     }
 
-    if (this.m_yAxisDescription != null) {  
-      buffer.writeAll(["\"yAxisDescription\":", this.m_yAxisDescription, ","], "");
+    if (this._yAxisDescription != null) {  
+      buffer.writeAll(["\"yAxisDescription\":\`", this._yAxisDescription, "\`,"], "");
     }
   }
 

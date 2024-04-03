@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,30 +23,30 @@ import 'OptionFragment.dart';
  */
 class QueuedAnnouncementObject extends OptionFragment {
   QueuedAnnouncementObject() : super();
-  String? m_message;  
+  String? _message;  
 
   String get message { 
-    if (this.m_message == null) {
-      this.m_message = "";
+    if (this._message == null) {
+      this._message = "";
     }
-    return this.m_message!;
+    return this._message!;
   }
 
   void set message (String v) {
-    this.m_message = v;
+    this._message = v;
   }
     
-  double? m_time;  
+  double? _time;  
 
   double get time { 
-    if (this.m_time == null) {
-      this.m_time = 0;
+    if (this._time == null) {
+      this._time = 0;
     }
-    return this.m_time!;
+    return this._time!;
   }
 
   void set time (double v) {
-    this.m_time = v;
+    this._time = v;
   }
     
 
@@ -57,14 +57,14 @@ class QueuedAnnouncementObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_message != null) {  
-      buffer.writeAll(["\"message\":", this.m_message, ","], "");
+    if (this._message != null) {  
+      buffer.writeAll(["\"message\":\`", this._message, "\`,"], "");
     }
 
     // NOTE: skip serialization of series (type SeriesComposition[] is ignored)} 
 
-    if (this.m_time != null) {  
-      buffer.writeAll(["\"time\":", this.m_time, ","], "");
+    if (this._time != null) {  
+      buffer.writeAll(["\"time\":", this._time, ","], "");
     }
   }
 

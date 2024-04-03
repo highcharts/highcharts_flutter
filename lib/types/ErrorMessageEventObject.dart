@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,30 +24,30 @@ import 'OptionFragment.dart';
  */
 class ErrorMessageEventObject extends OptionFragment {
   ErrorMessageEventObject() : super();
-  double? m_code;  
+  double? _code;  
 
   double get code { 
-    if (this.m_code == null) {
-      this.m_code = 0;
+    if (this._code == null) {
+      this._code = 0;
     }
-    return this.m_code!;
+    return this._code!;
   }
 
   void set code (double v) {
-    this.m_code = v;
+    this._code = v;
   }
     
-  String? m_message;  
+  String? _message;  
 
   String get message { 
-    if (this.m_message == null) {
-      this.m_message = "";
+    if (this._message == null) {
+      this._message = "";
     }
-    return this.m_message!;
+    return this._message!;
   }
 
   void set message (String v) {
-    this.m_message = v;
+    this._message = v;
   }
     
 
@@ -60,12 +60,12 @@ class ErrorMessageEventObject extends OptionFragment {
     
     // NOTE: skip serialization of chart (type Chart is ignored)} 
 
-    if (this.m_code != null) {  
-      buffer.writeAll(["\"code\":", this.m_code, ","], "");
+    if (this._code != null) {  
+      buffer.writeAll(["\"code\":", this._code, ","], "");
     }
 
-    if (this.m_message != null) {  
-      buffer.writeAll(["\"message\":", this.m_message, ","], "");
+    if (this._message != null) {  
+      buffer.writeAll(["\"message\":\`", this._message, "\`,"], "");
     }
 
     // NOTE: skip serialization of params (type Generic is ignored)} 

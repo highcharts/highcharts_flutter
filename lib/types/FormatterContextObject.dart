@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,43 +23,43 @@ import 'OptionFragment.dart';
  */
 class FormatterContextObject extends OptionFragment {
   FormatterContextObject() : super();
-  double? m_center;  
+  double? _center;  
 
   double get center { 
-    if (this.m_center == null) {
-      this.m_center = 0;
+    if (this._center == null) {
+      this._center = 0;
     }
-    return this.m_center!;
+    return this._center!;
   }
 
   void set center (double v) {
-    this.m_center = v;
+    this._center = v;
   }
     
-  double? m_radius;  
+  double? _radius;  
 
   double get radius { 
-    if (this.m_radius == null) {
-      this.m_radius = 0;
+    if (this._radius == null) {
+      this._radius = 0;
     }
-    return this.m_radius!;
+    return this._radius!;
   }
 
   void set radius (double v) {
-    this.m_radius = v;
+    this._radius = v;
   }
     
-  double? m_value;  
+  double? _value;  
 
   double get value { 
-    if (this.m_value == null) {
-      this.m_value = 0;
+    if (this._value == null) {
+      this._value = 0;
     }
-    return this.m_value!;
+    return this._value!;
   }
 
   void set value (double v) {
-    this.m_value = v;
+    this._value = v;
   }
     
 
@@ -70,19 +70,19 @@ class FormatterContextObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_center != null) {  
-      buffer.writeAll(["\"center\":", this.m_center, ","], "");
-    }
-
-    if (this.m_radius != null) {  
-      buffer.writeAll(["\"radius\":", this.m_radius, ","], "");
-    }
-
-    if (this.m_value != null) {  
-      buffer.writeAll(["\"value\":", this.m_value, ","], "");
-    }
-
     // NOTE: skip serialization of points (type FormatterContextObject[] is ignored)} 
+
+    if (this._center != null) {  
+      buffer.writeAll(["\"center\":", this._center, ","], "");
+    }
+
+    if (this._radius != null) {  
+      buffer.writeAll(["\"radius\":", this._radius, ","], "");
+    }
+
+    if (this._value != null) {  
+      buffer.writeAll(["\"value\":", this._value, ","], "");
+    }
   }
 
 }

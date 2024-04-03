@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,17 +24,17 @@ import 'OptionFragment.dart';
  */
 class RowContainerObject extends OptionFragment {
   RowContainerObject() : super();
-  double? m_angle;  
+  double? _angle;  
 
   double get angle { 
-    if (this.m_angle == null) {
-      this.m_angle = 0;
+    if (this._angle == null) {
+      this._angle = 0;
     }
-    return this.m_angle!;
+    return this._angle!;
   }
 
   void set angle (double v) {
-    this.m_angle = v;
+    this._angle = v;
   }
     
 
@@ -45,8 +45,8 @@ class RowContainerObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_angle != null) {  
-      buffer.writeAll(["\"angle\":", this.m_angle, ","], "");
+    if (this._angle != null) {  
+      buffer.writeAll(["\"angle\":", this._angle, ","], "");
     }
 
     // NOTE: skip serialization of row (type RowObject is ignored)} 

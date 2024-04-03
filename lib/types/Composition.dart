@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -34,6 +34,8 @@ class Composition extends Chart {
 
     
     // NOTE: skip serialization of navigation (type Additions is ignored)} 
+
+    // NOTE: skip serialization of chart3d (type Additions is ignored)} 
   }
 
 }

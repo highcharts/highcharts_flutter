@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,121 +24,121 @@ import 'OptionFragment.dart';
  */
 class NodeValuesObject extends BBoxObject {
   NodeValuesObject() : super();
-  double? m_direction;  
+  double? _direction;  
 
   double get direction { 
-    if (this.m_direction == null) {
-      this.m_direction = 0;
+    if (this._direction == null) {
+      this._direction = 0;
     }
-    return this.m_direction!;
+    return this._direction!;
   }
 
   void set direction (double v) {
-    this.m_direction = v;
+    this._direction = v;
   }
     
-  double? m_val;  
+  double? _val;  
 
   double get val { 
-    if (this.m_val == null) {
-      this.m_val = 0;
+    if (this._val == null) {
+      this._val = 0;
     }
-    return this.m_val!;
+    return this._val!;
   }
 
   void set val (double v) {
-    this.m_val = v;
+    this._val = v;
   }
     
-  String? m_color;  
+  String? _color;  
 
   String get color { 
-    if (this.m_color == null) {
-      this.m_color = "";
+    if (this._color == null) {
+      this._color = "";
     }
-    return this.m_color!;
+    return this._color!;
   }
 
   void set color (String v) {
-    this.m_color = v;
+    this._color = v;
   }
     
-  String? m_borderRadius;  
+  String? _borderRadius;  
 
   String get borderRadius { 
-    if (this.m_borderRadius == null) {
-      this.m_borderRadius = "";
+    if (this._borderRadius == null) {
+      this._borderRadius = "";
     }
-    return this.m_borderRadius!;
+    return this._borderRadius!;
   }
 
   void set borderRadius (String v) {
-    this.m_borderRadius = v;
+    this._borderRadius = v;
   }
     
-  double? m_index;  
+  double? _index;  
 
   double get index { 
-    if (this.m_index == null) {
-      this.m_index = 0;
+    if (this._index == null) {
+      this._index = 0;
     }
-    return this.m_index!;
+    return this._index!;
   }
 
   void set index (double v) {
-    this.m_index = v;
+    this._index = v;
   }
     
-  double? m_innerR;  
+  double? _innerR;  
 
   double get innerR { 
-    if (this.m_innerR == null) {
-      this.m_innerR = 0;
+    if (this._innerR == null) {
+      this._innerR = 0;
     }
-    return this.m_innerR!;
+    return this._innerR!;
   }
 
   void set innerR (double v) {
-    this.m_innerR = v;
+    this._innerR = v;
   }
     
-  double? m_r;  
+  double? _r;  
 
   double get r { 
-    if (this.m_r == null) {
-      this.m_r = 0;
+    if (this._r == null) {
+      this._r = 0;
     }
-    return this.m_r!;
+    return this._r!;
   }
 
   void set r (double v) {
-    this.m_r = v;
+    this._r = v;
   }
     
-  double? m_radius;  
+  double? _radius;  
 
   double get radius { 
-    if (this.m_radius == null) {
-      this.m_radius = 0;
+    if (this._radius == null) {
+      this._radius = 0;
     }
-    return this.m_radius!;
+    return this._radius!;
   }
 
   void set radius (double v) {
-    this.m_radius = v;
+    this._radius = v;
   }
     
-  double? m_siblings;  
+  double? _siblings;  
 
   double get siblings { 
-    if (this.m_siblings == null) {
-      this.m_siblings = 0;
+    if (this._siblings == null) {
+      this._siblings = 0;
     }
-    return this.m_siblings!;
+    return this._siblings!;
   }
 
   void set siblings (double v) {
-    this.m_siblings = v;
+    this._siblings = v;
   }
     
 
@@ -149,42 +149,42 @@ class NodeValuesObject extends BBoxObject {
     super.toJSONInner(buffer);
 
     
-    if (this.m_direction != null) {  
-      buffer.writeAll(["\"direction\":", this.m_direction, ","], "");
+    if (this._direction != null) {  
+      buffer.writeAll(["\"direction\":", this._direction, ","], "");
     }
 
-    if (this.m_val != null) {  
-      buffer.writeAll(["\"val\":", this.m_val, ","], "");
+    if (this._val != null) {  
+      buffer.writeAll(["\"val\":", this._val, ","], "");
     }
 
-    if (this.m_color != null) {  
-      buffer.writeAll(["\"color\":", this.m_color, ","], "");
+    if (this._color != null) {  
+      buffer.writeAll(["\"color\":\`", this._color, "\`,"], "");
     }
 
     // NOTE: skip serialization of mapOptionsToLevel (type SunburstSeriesLevelOptions[] is ignored)} 
 
-    if (this.m_borderRadius != null) {  
-      buffer.writeAll(["\"borderRadius\":", this.m_borderRadius, ","], "");
+    if (this._borderRadius != null) {  
+      buffer.writeAll(["\"borderRadius\":\`", this._borderRadius, "\`,"], "");
     }
 
-    if (this.m_index != null) {  
-      buffer.writeAll(["\"index\":", this.m_index, ","], "");
+    if (this._index != null) {  
+      buffer.writeAll(["\"index\":", this._index, ","], "");
     }
 
-    if (this.m_innerR != null) {  
-      buffer.writeAll(["\"innerR\":", this.m_innerR, ","], "");
+    if (this._innerR != null) {  
+      buffer.writeAll(["\"innerR\":", this._innerR, ","], "");
     }
 
-    if (this.m_r != null) {  
-      buffer.writeAll(["\"r\":", this.m_r, ","], "");
+    if (this._r != null) {  
+      buffer.writeAll(["\"r\":", this._r, ","], "");
     }
 
-    if (this.m_radius != null) {  
-      buffer.writeAll(["\"radius\":", this.m_radius, ","], "");
+    if (this._radius != null) {  
+      buffer.writeAll(["\"radius\":", this._radius, ","], "");
     }
 
-    if (this.m_siblings != null) {  
-      buffer.writeAll(["\"siblings\":", this.m_siblings, ","], "");
+    if (this._siblings != null) {  
+      buffer.writeAll(["\"siblings\":", this._siblings, ","], "");
     }
   }
 

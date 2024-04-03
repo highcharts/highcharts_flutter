@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,43 +24,43 @@ import 'OptionFragment.dart';
  */
 class SolidGaugeAxis extends ColorAxisLike {
   SolidGaugeAxis() : super();
-  String? m_coll;  
+  String? _coll;  
 
   String get coll { 
-    if (this.m_coll == null) {
-      this.m_coll = "";
+    if (this._coll == null) {
+      this._coll = "";
     }
-    return this.m_coll!;
+    return this._coll!;
   }
 
   void set coll (String v) {
-    this.m_coll = v;
+    this._coll = v;
   }
     
-  double? m_max;  
+  double? _max;  
 
   double get max { 
-    if (this.m_max == null) {
-      this.m_max = 0;
+    if (this._max == null) {
+      this._max = 0;
     }
-    return this.m_max!;
+    return this._max!;
   }
 
   void set max (double v) {
-    this.m_max = v;
+    this._max = v;
   }
     
-  double? m_min;  
+  double? _min;  
 
   double get min { 
-    if (this.m_min == null) {
-      this.m_min = 0;
+    if (this._min == null) {
+      this._min = 0;
     }
-    return this.m_min!;
+    return this._min!;
   }
 
   void set min (double v) {
-    this.m_min = v;
+    this._min = v;
   }
     
 
@@ -73,16 +73,16 @@ class SolidGaugeAxis extends ColorAxisLike {
     
     // NOTE: skip serialization of center (type number[] is ignored)} 
 
-    if (this.m_coll != null) {  
-      buffer.writeAll(["\"coll\":", this.m_coll, ","], "");
+    if (this._coll != null) {  
+      buffer.writeAll(["\"coll\":\`", this._coll, "\`,"], "");
     }
 
-    if (this.m_max != null) {  
-      buffer.writeAll(["\"max\":", this.m_max, ","], "");
+    if (this._max != null) {  
+      buffer.writeAll(["\"max\":", this._max, ","], "");
     }
 
-    if (this.m_min != null) {  
-      buffer.writeAll(["\"min\":", this.m_min, ","], "");
+    if (this._min != null) {  
+      buffer.writeAll(["\"min\":", this._min, ","], "");
     }
 
     // NOTE: skip serialization of options (type ColorAxisLike.Options & RadialAxis.Options is ignored)} 

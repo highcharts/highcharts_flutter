@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -26,17 +26,17 @@ import 'OptionFragment.dart';
  */
 class DragNodesSeries extends Series {
   DragNodesSeries() : super();
-  bool? m_hasDraggableNodes;  
+  bool? _hasDraggableNodes;  
 
   bool get hasDraggableNodes { 
-    if (this.m_hasDraggableNodes == null) {
-      this.m_hasDraggableNodes = false;
+    if (this._hasDraggableNodes == null) {
+      this._hasDraggableNodes = false;
     }
-    return this.m_hasDraggableNodes!;
+    return this._hasDraggableNodes!;
   }
 
   void set hasDraggableNodes (bool v) {
-    this.m_hasDraggableNodes = v;
+    this._hasDraggableNodes = v;
   }
     
 
@@ -51,8 +51,8 @@ class DragNodesSeries extends Series {
 
     // NOTE: skip serialization of data (type DragNodesPoint[] is ignored)} 
 
-    if (this.m_hasDraggableNodes != null) {  
-      buffer.writeAll(["\"hasDraggableNodes\":", this.m_hasDraggableNodes, ","], "");
+    if (this._hasDraggableNodes != null) {  
+      buffer.writeAll(["\"hasDraggableNodes\":", this._hasDraggableNodes, ","], "");
     }
 
     // NOTE: skip serialization of layout (type ReingoldFruchtermanLayout is ignored)} 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,56 +23,56 @@ import 'OptionFragment.dart';
  */
 class LayoutModifiers extends OptionFragment {
   LayoutModifiers() : super();
-  double? m_ax;  
+  double? _ax;  
 
   double get ax { 
-    if (this.m_ax == null) {
-      this.m_ax = 0;
+    if (this._ax == null) {
+      this._ax = 0;
     }
-    return this.m_ax!;
+    return this._ax!;
   }
 
   void set ax (double v) {
-    this.m_ax = v;
+    this._ax = v;
   }
     
-  double? m_bx;  
+  double? _bx;  
 
   double get bx { 
-    if (this.m_bx == null) {
-      this.m_bx = 0;
+    if (this._bx == null) {
+      this._bx = 0;
     }
-    return this.m_bx!;
+    return this._bx!;
   }
 
   void set bx (double v) {
-    this.m_bx = v;
+    this._bx = v;
   }
     
-  double? m_ay;  
+  double? _ay;  
 
   double get ay { 
-    if (this.m_ay == null) {
-      this.m_ay = 0;
+    if (this._ay == null) {
+      this._ay = 0;
     }
-    return this.m_ay!;
+    return this._ay!;
   }
 
   void set ay (double v) {
-    this.m_ay = v;
+    this._ay = v;
   }
     
-  double? m_by;  
+  double? _by;  
 
   double get by { 
-    if (this.m_by == null) {
-      this.m_by = 0;
+    if (this._by == null) {
+      this._by = 0;
     }
-    return this.m_by!;
+    return this._by!;
   }
 
   void set by (double v) {
-    this.m_by = v;
+    this._by = v;
   }
     
 
@@ -83,20 +83,20 @@ class LayoutModifiers extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_ax != null) {  
-      buffer.writeAll(["\"ax\":", this.m_ax, ","], "");
+    if (this._ax != null) {  
+      buffer.writeAll(["\"ax\":", this._ax, ","], "");
     }
 
-    if (this.m_bx != null) {  
-      buffer.writeAll(["\"bx\":", this.m_bx, ","], "");
+    if (this._bx != null) {  
+      buffer.writeAll(["\"bx\":", this._bx, ","], "");
     }
 
-    if (this.m_ay != null) {  
-      buffer.writeAll(["\"ay\":", this.m_ay, ","], "");
+    if (this._ay != null) {  
+      buffer.writeAll(["\"ay\":", this._ay, ","], "");
     }
 
-    if (this.m_by != null) {  
-      buffer.writeAll(["\"by\":", this.m_by, ","], "");
+    if (this._by != null) {  
+      buffer.writeAll(["\"by\":", this._by, ","], "");
     }
   }
 

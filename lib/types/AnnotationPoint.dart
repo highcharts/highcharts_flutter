@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,17 +24,17 @@ import 'OptionFragment.dart';
  */
 class AnnotationPoint extends OptionFragment {
   AnnotationPoint() : super();
-  String? m_command;  
+  String? _command;  
 
   String get command { 
-    if (this.m_command == null) {
-      this.m_command = "";
+    if (this._command == null) {
+      this._command = "";
     }
-    return this.m_command!;
+    return this._command!;
   }
 
   void set command (String v) {
-    this.m_command = v;
+    this._command = v;
   }
     
 
@@ -45,8 +45,8 @@ class AnnotationPoint extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_command != null) {  
-      buffer.writeAll(["\"command\":", this.m_command, ","], "");
+    if (this._command != null) {  
+      buffer.writeAll(["\"command\":\`", this._command, "\`,"], "");
     }
 
     // NOTE: skip serialization of mock (type undefined is ignored)} 

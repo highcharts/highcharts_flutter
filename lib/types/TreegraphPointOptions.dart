@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -26,17 +26,17 @@ import 'OptionFragment.dart';
  */
 class TreegraphPointOptions extends TreemapPointOptions {
   TreegraphPointOptions() : super();
-  double? m_borderRadius;  
+  double? _borderRadius;  
 
   double get borderRadius { 
-    if (this.m_borderRadius == null) {
-      this.m_borderRadius = 0;
+    if (this._borderRadius == null) {
+      this._borderRadius = 0;
     }
-    return this.m_borderRadius!;
+    return this._borderRadius!;
   }
 
   void set borderRadius (double v) {
-    this.m_borderRadius = v;
+    this._borderRadius = v;
   }
     
 
@@ -49,8 +49,8 @@ class TreegraphPointOptions extends TreemapPointOptions {
     
     // NOTE: skip serialization of collapseButton (type CollapseButtonOptions is ignored)} 
 
-    if (this.m_borderRadius != null) {  
-      buffer.writeAll(["\"borderRadius\":", this.m_borderRadius, ","], "");
+    if (this._borderRadius != null) {  
+      buffer.writeAll(["\"borderRadius\":", this._borderRadius, ","], "");
     }
 
     // NOTE: skip serialization of link (type TreegraphLinkOptions is ignored)} 

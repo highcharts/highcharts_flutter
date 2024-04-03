@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,69 +24,69 @@ import 'OptionFragment.dart';
  */
 class StackBoxProps extends OptionFragment {
   StackBoxProps() : super();
-  double? m_xOffset;  
+  double? _xOffset;  
 
   double get xOffset { 
-    if (this.m_xOffset == null) {
-      this.m_xOffset = 0;
+    if (this._xOffset == null) {
+      this._xOffset = 0;
     }
-    return this.m_xOffset!;
+    return this._xOffset!;
   }
 
   void set xOffset (double v) {
-    this.m_xOffset = v;
+    this._xOffset = v;
   }
     
-  double? m_width;  
+  double? _width;  
 
   double get width { 
-    if (this.m_width == null) {
-      this.m_width = 0;
+    if (this._width == null) {
+      this._width = 0;
     }
-    return this.m_width!;
+    return this._width!;
   }
 
   void set width (double v) {
-    this.m_width = v;
+    this._width = v;
   }
     
-  double? m_boxBottom;  
+  double? _boxBottom;  
 
   double get boxBottom { 
-    if (this.m_boxBottom == null) {
-      this.m_boxBottom = 0;
+    if (this._boxBottom == null) {
+      this._boxBottom = 0;
     }
-    return this.m_boxBottom!;
+    return this._boxBottom!;
   }
 
   void set boxBottom (double v) {
-    this.m_boxBottom = v;
+    this._boxBottom = v;
   }
     
-  double? m_boxTop;  
+  double? _boxTop;  
 
   double get boxTop { 
-    if (this.m_boxTop == null) {
-      this.m_boxTop = 0;
+    if (this._boxTop == null) {
+      this._boxTop = 0;
     }
-    return this.m_boxTop!;
+    return this._boxTop!;
   }
 
   void set boxTop (double v) {
-    this.m_boxTop = v;
+    this._boxTop = v;
   }
     
-  double? m_defaultX;  
+  double? _defaultX;  
 
   double get defaultX { 
-    if (this.m_defaultX == null) {
-      this.m_defaultX = 0;
+    if (this._defaultX == null) {
+      this._defaultX = 0;
     }
-    return this.m_defaultX!;
+    return this._defaultX!;
   }
 
   void set defaultX (double v) {
-    this.m_defaultX = v;
+    this._defaultX = v;
   }
     
 
@@ -97,24 +97,24 @@ class StackBoxProps extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_xOffset != null) {  
-      buffer.writeAll(["\"xOffset\":", this.m_xOffset, ","], "");
+    if (this._xOffset != null) {  
+      buffer.writeAll(["\"xOffset\":", this._xOffset, ","], "");
     }
 
-    if (this.m_width != null) {  
-      buffer.writeAll(["\"width\":", this.m_width, ","], "");
+    if (this._width != null) {  
+      buffer.writeAll(["\"width\":", this._width, ","], "");
     }
 
-    if (this.m_boxBottom != null) {  
-      buffer.writeAll(["\"boxBottom\":", this.m_boxBottom, ","], "");
+    if (this._boxBottom != null) {  
+      buffer.writeAll(["\"boxBottom\":", this._boxBottom, ","], "");
     }
 
-    if (this.m_boxTop != null) {  
-      buffer.writeAll(["\"boxTop\":", this.m_boxTop, ","], "");
+    if (this._boxTop != null) {  
+      buffer.writeAll(["\"boxTop\":", this._boxTop, ","], "");
     }
 
-    if (this.m_defaultX != null) {  
-      buffer.writeAll(["\"defaultX\":", this.m_defaultX, ","], "");
+    if (this._defaultX != null) {  
+      buffer.writeAll(["\"defaultX\":", this._defaultX, ","], "");
     }
 
     // NOTE: skip serialization of xAxis (type Axis is ignored)} 

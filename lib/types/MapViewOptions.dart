@@ -12,14 +12,13 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
 import 'MapViewInsetOptions.dart';
 import 'MapViewInsetsOptions.dart';
 import 'ProjectionOptions.dart';
-import 'MapViewOptions.dart';
 import 'OptionFragment.dart';
 
 /** 
@@ -35,17 +34,17 @@ class MapViewOptions extends OptionFragment {
    * Generic options for the placement and appearance of map insets like
    * non-contiguous territories.  
       */
-  MapViewInsetOptions? m_insetOptions;  
+  MapViewInsetOptions? _insetOptions;  
 
   MapViewInsetOptions get insetOptions { 
-    if (this.m_insetOptions == null) {
-      this.m_insetOptions = MapViewInsetOptions();
+    if (this._insetOptions == null) {
+      this._insetOptions = MapViewInsetOptions();
     }
-    return this.m_insetOptions!;
+    return this._insetOptions!;
   }
 
   void set insetOptions (MapViewInsetOptions v) {
-    this.m_insetOptions = v;
+    this._insetOptions = v;
   }
     
   /**
@@ -58,22 +57,22 @@ class MapViewOptions extends OptionFragment {
    * override the recommended inset options, an inset option with a matching id
    * can be applied, and it will be merged into the embedded settings.  
       */
-  List<MapViewInsetsOptions>? insets;
+  List<MapViewInsetsOptions>? insets; // MapViewInsetsOptions
   /**
    * Prevents the end user from zooming too far in on the map. See
    * [zoom](#mapView.zoom).  
       */
-  double? m_maxZoom;  
+  double? _maxZoom;  
 
   double get maxZoom { 
-    if (this.m_maxZoom == null) {
-      this.m_maxZoom = 0;
+    if (this._maxZoom == null) {
+      this._maxZoom = 0;
     }
-    return this.m_maxZoom!;
+    return this._maxZoom!;
   }
 
   void set maxZoom (double v) {
-    this.m_maxZoom = v;
+    this._maxZoom = v;
   }
     
   // NOTE: padding skipped - type MapViewPaddingType is ignored in gen
@@ -82,17 +81,17 @@ class MapViewOptions extends OptionFragment {
    * The projection options allow applying client side projection to a map
    * given in geographic coordinates, typically from TopoJSON or GeoJSON.  
       */
-  ProjectionOptions? m_projection;  
+  ProjectionOptions? _projection;  
 
   ProjectionOptions get projection { 
-    if (this.m_projection == null) {
-      this.m_projection = ProjectionOptions();
+    if (this._projection == null) {
+      this._projection = ProjectionOptions();
     }
-    return this.m_projection!;
+    return this._projection!;
   }
 
   void set projection (ProjectionOptions v) {
-    this.m_projection = v;
+    this._projection = v;
   }
     
   /**
@@ -104,30 +103,30 @@ class MapViewOptions extends OptionFragment {
    * the world in a 256x256 pixel square. This is a common concept for WMS
    * tiling software.  
       */
-  double? m_zoom;  
+  double? _zoom;  
 
   double get zoom { 
-    if (this.m_zoom == null) {
-      this.m_zoom = 0;
+    if (this._zoom == null) {
+      this._zoom = 0;
     }
-    return this.m_zoom!;
+    return this._zoom!;
   }
 
   void set zoom (double v) {
-    this.m_zoom = v;
+    this._zoom = v;
   }
     
-  double? m_minZoom;  
+  double? _minZoom;  
 
   double get minZoom { 
-    if (this.m_minZoom == null) {
-      this.m_minZoom = 0;
+    if (this._minZoom == null) {
+      this._minZoom = 0;
     }
-    return this.m_minZoom!;
+    return this._minZoom!;
   }
 
   void set minZoom (double v) {
-    this.m_minZoom = v;
+    this._minZoom = v;
   }
     
 
@@ -142,30 +141,28 @@ class MapViewOptions extends OptionFragment {
 
     // NOTE: skip serialization of center (type LonLatArray is ignored)} 
 
-    if (this.m_insetOptions != null) {  
-      buffer.writeAll(["\"insetOptions\":", this.m_insetOptions?.toJSON(), ","], "");
+    if (this._insetOptions != null) {  
+      buffer.writeAll(["\"insetOptions\":", this._insetOptions?.toJSON(), ","], "");
     }
 
     // NOTE: skip serialization of insets (type MapViewInsetsOptions is ignored)} 
 
-    if (this.m_maxZoom != null) {  
-      buffer.writeAll(["\"maxZoom\":", this.m_maxZoom, ","], "");
+    if (this._maxZoom != null) {  
+      buffer.writeAll(["\"maxZoom\":", this._maxZoom, ","], "");
     }
 
     // NOTE: skip serialization of padding (type MapViewPaddingType is ignored)} 
 
-    if (this.m_projection != null) {  
-      buffer.writeAll(["\"projection\":", this.m_projection?.toJSON(), ","], "");
+    if (this._projection != null) {  
+      buffer.writeAll(["\"projection\":", this._projection?.toJSON(), ","], "");
     }
 
-    // NOTE: skip serialization of recommendedMapView (type Generic is ignored)} 
-
-    if (this.m_zoom != null) {  
-      buffer.writeAll(["\"zoom\":", this.m_zoom, ","], "");
+    if (this._zoom != null) {  
+      buffer.writeAll(["\"zoom\":", this._zoom, ","], "");
     }
 
-    if (this.m_minZoom != null) {  
-      buffer.writeAll(["\"minZoom\":", this.m_minZoom, ","], "");
+    if (this._minZoom != null) {  
+      buffer.writeAll(["\"minZoom\":", this._minZoom, ","], "");
     }
   }
 

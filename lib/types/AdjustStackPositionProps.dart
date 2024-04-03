@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,30 +24,30 @@ import 'OptionFragment.dart';
  */
 class AdjustStackPositionProps extends OptionFragment {
   AdjustStackPositionProps() : super();
-  String? m_verticalAlign;  
+  String? _verticalAlign;  
 
   String get verticalAlign { 
-    if (this.m_verticalAlign == null) {
-      this.m_verticalAlign = "";
+    if (this._verticalAlign == null) {
+      this._verticalAlign = "";
     }
-    return this.m_verticalAlign!;
+    return this._verticalAlign!;
   }
 
   void set verticalAlign (String v) {
-    this.m_verticalAlign = v;
+    this._verticalAlign = v;
   }
     
-  String? m_textAlign;  
+  String? _textAlign;  
 
   String get textAlign { 
-    if (this.m_textAlign == null) {
-      this.m_textAlign = "";
+    if (this._textAlign == null) {
+      this._textAlign = "";
     }
-    return this.m_textAlign!;
+    return this._textAlign!;
   }
 
   void set textAlign (String v) {
-    this.m_textAlign = v;
+    this._textAlign = v;
   }
     
 
@@ -60,12 +60,12 @@ class AdjustStackPositionProps extends OptionFragment {
     
     // NOTE: skip serialization of labelBox (type BBoxObject is ignored)} 
 
-    if (this.m_verticalAlign != null) {  
-      buffer.writeAll(["\"verticalAlign\":", this.m_verticalAlign, ","], "");
+    if (this._verticalAlign != null) {  
+      buffer.writeAll(["\"verticalAlign\":\`", this._verticalAlign, "\`,"], "");
     }
 
-    if (this.m_textAlign != null) {  
-      buffer.writeAll(["\"textAlign\":", this.m_textAlign, ","], "");
+    if (this._textAlign != null) {  
+      buffer.writeAll(["\"textAlign\":\`", this._textAlign, "\`,"], "");
     }
   }
 

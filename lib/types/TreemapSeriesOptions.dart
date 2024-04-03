@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -30,17 +30,17 @@ class TreemapSeriesOptions extends OptionFragment {
    * Options for the breadcrumbs, the navigation at the top leading the
    * way up through the traversed levels.  
       */
-  BreadcrumbsOptions? m_breadcrumbs;  
+  BreadcrumbsOptions? _breadcrumbs;  
 
   BreadcrumbsOptions get breadcrumbs { 
-    if (this.m_breadcrumbs == null) {
-      this.m_breadcrumbs = BreadcrumbsOptions();
+    if (this._breadcrumbs == null) {
+      this._breadcrumbs = BreadcrumbsOptions();
     }
-    return this.m_breadcrumbs!;
+    return this._breadcrumbs!;
   }
 
   void set breadcrumbs (BreadcrumbsOptions v) {
-    this.m_breadcrumbs = v;
+    this._breadcrumbs = v;
   }
     
   /**
@@ -50,34 +50,34 @@ class TreemapSeriesOptions extends OptionFragment {
    * 
    * Defaults to 'false'. 
       */
-  bool? m_allowDrillToNode;  
+  bool? _allowDrillToNode;  
 
   bool get allowDrillToNode { 
-    if (this.m_allowDrillToNode == null) {
-      this.m_allowDrillToNode = false;
+    if (this._allowDrillToNode == null) {
+      this._allowDrillToNode = false;
     }
-    return this.m_allowDrillToNode!;
+    return this._allowDrillToNode!;
   }
 
   void set allowDrillToNode (bool v) {
-    this.m_allowDrillToNode = v;
+    this._allowDrillToNode = v;
   }
     
   /**
    * When enabled the user can click on a point which is a parent and
    * zoom in on its children.  
       */
-  bool? m_allowTraversingTree;  
+  bool? _allowTraversingTree;  
 
   bool get allowTraversingTree { 
-    if (this.m_allowTraversingTree == null) {
-      this.m_allowTraversingTree = false;
+    if (this._allowTraversingTree == null) {
+      this._allowTraversingTree = false;
     }
-    return this.m_allowTraversingTree!;
+    return this._allowTraversingTree!;
   }
 
   void set allowTraversingTree (bool v) {
-    this.m_allowTraversingTree = v;
+    this._allowTraversingTree = v;
   }
     
   /**
@@ -85,59 +85,59 @@ class TreemapSeriesOptions extends OptionFragment {
    * direction between vertical and horizontal. The next levels starting
    * direction will always be the opposite of the previous.  
       */
-  bool? m_alternateStartingDirection;  
+  bool? _alternateStartingDirection;  
 
   bool get alternateStartingDirection { 
-    if (this.m_alternateStartingDirection == null) {
-      this.m_alternateStartingDirection = false;
+    if (this._alternateStartingDirection == null) {
+      this._alternateStartingDirection = false;
     }
-    return this.m_alternateStartingDirection!;
+    return this._alternateStartingDirection!;
   }
 
   void set alternateStartingDirection (bool v) {
-    this.m_alternateStartingDirection = v;
+    this._alternateStartingDirection = v;
   }
     
-  String? m_borderDashStyle;  
+  String? _borderDashStyle;  
 
   String get borderDashStyle { 
-    if (this.m_borderDashStyle == null) {
-      this.m_borderDashStyle = "";
+    if (this._borderDashStyle == null) {
+      this._borderDashStyle = "";
     }
-    return this.m_borderDashStyle!;
+    return this._borderDashStyle!;
   }
 
   void set borderDashStyle (String v) {
-    this.m_borderDashStyle = v;
+    this._borderDashStyle = v;
   }
     
   /**
    * The border radius for each treemap item.  
       */
-  double? m_borderRadius;  
+  double? _borderRadius;  
 
   double get borderRadius { 
-    if (this.m_borderRadius == null) {
-      this.m_borderRadius = 0;
+    if (this._borderRadius == null) {
+      this._borderRadius = 0;
     }
-    return this.m_borderRadius!;
+    return this._borderRadius!;
   }
 
   void set borderRadius (double v) {
-    this.m_borderRadius = v;
+    this._borderRadius = v;
   }
     
-  double? m_brightness;  
+  double? _brightness;  
 
   double get brightness { 
-    if (this.m_brightness == null) {
-      this.m_brightness = 0;
+    if (this._brightness == null) {
+      this._brightness = 0;
     }
-    return this.m_brightness!;
+    return this._brightness!;
   }
 
   void set brightness (double v) {
-    this.m_brightness = v;
+    this._brightness = v;
   }
     
   /**
@@ -145,24 +145,24 @@ class TreemapSeriesOptions extends OptionFragment {
    * of the global [colors](#colors) when
    * [colorByPoint](#plotOptions.treemap.colorByPoint) is true.  
       */
-  List<String>? colors;
+  List<String>? colors; // String
   /**
    * Whether to ignore hidden points when the layout algorithm runs.
    * If `false`, hidden points will leave open spaces. 
    * 
    * Defaults to 'true'. 
       */
-  bool? m_ignoreHiddenPoint;  
+  bool? _ignoreHiddenPoint;  
 
   bool get ignoreHiddenPoint { 
-    if (this.m_ignoreHiddenPoint == null) {
-      this.m_ignoreHiddenPoint = false;
+    if (this._ignoreHiddenPoint == null) {
+      this._ignoreHiddenPoint = false;
     }
-    return this.m_ignoreHiddenPoint!;
+    return this._ignoreHiddenPoint!;
   }
 
   void set ignoreHiddenPoint (bool v) {
-    this.m_ignoreHiddenPoint = v;
+    this._ignoreHiddenPoint = v;
   }
     
   /**
@@ -171,17 +171,17 @@ class TreemapSeriesOptions extends OptionFragment {
    * true by default. However when allowTraversingTree is true, then it
    * will be false by default.  
       */
-  bool? m_interactByLeaf;  
+  bool? _interactByLeaf;  
 
   bool get interactByLeaf { 
-    if (this.m_interactByLeaf == null) {
-      this.m_interactByLeaf = false;
+    if (this._interactByLeaf == null) {
+      this._interactByLeaf = false;
     }
-    return this.m_interactByLeaf!;
+    return this._interactByLeaf!;
   }
 
   void set interactByLeaf (bool v) {
-    this.m_interactByLeaf = v;
+    this._interactByLeaf = v;
   }
     
   /**
@@ -190,17 +190,17 @@ class TreemapSeriesOptions extends OptionFragment {
    * 
    * Defaults to 'sliceAndDice'. 
       */
-  String? m_layoutAlgorithm;  
+  String? _layoutAlgorithm;  
 
   String get layoutAlgorithm { 
-    if (this.m_layoutAlgorithm == null) {
-      this.m_layoutAlgorithm = "";
+    if (this._layoutAlgorithm == null) {
+      this._layoutAlgorithm = "";
     }
-    return this.m_layoutAlgorithm!;
+    return this._layoutAlgorithm!;
   }
 
   void set layoutAlgorithm (String v) {
-    this.m_layoutAlgorithm = v;
+    this._layoutAlgorithm = v;
   }
     
   /**
@@ -208,17 +208,17 @@ class TreemapSeriesOptions extends OptionFragment {
    * 
    * Defaults to 'vertical'. 
       */
-  String? m_layoutStartingDirection;  
+  String? _layoutStartingDirection;  
 
   String get layoutStartingDirection { 
-    if (this.m_layoutStartingDirection == null) {
-      this.m_layoutStartingDirection = "";
+    if (this._layoutStartingDirection == null) {
+      this._layoutStartingDirection = "";
     }
-    return this.m_layoutStartingDirection!;
+    return this._layoutStartingDirection!;
   }
 
   void set layoutStartingDirection (String v) {
-    this.m_layoutStartingDirection = v;
+    this._layoutStartingDirection = v;
   }
     
   /**
@@ -229,38 +229,38 @@ class TreemapSeriesOptions extends OptionFragment {
    * 
    * Defaults to 'true'. 
       */
-  bool? m_levelIsConstant;  
+  bool? _levelIsConstant;  
 
   bool get levelIsConstant { 
-    if (this.m_levelIsConstant == null) {
-      this.m_levelIsConstant = false;
+    if (this._levelIsConstant == null) {
+      this._levelIsConstant = false;
     }
-    return this.m_levelIsConstant!;
+    return this._levelIsConstant!;
   }
 
   void set levelIsConstant (bool v) {
-    this.m_levelIsConstant = v;
+    this._levelIsConstant = v;
   }
     
   /**
    * Set options on specific levels. Takes precedence over series options,
    * but not point options.  
       */
-  List<TreemapSeriesLevelsOptions>? levels;
+  List<TreemapSeriesLevelsOptions>? levels; // TreemapSeriesLevelsOptions
   /**
    * The sort index of the point inside the treemap level.  
       */
-  double? m_sortIndex;  
+  double? _sortIndex;  
 
   double get sortIndex { 
-    if (this.m_sortIndex == null) {
-      this.m_sortIndex = 0;
+    if (this._sortIndex == null) {
+      this._sortIndex = 0;
     }
-    return this.m_sortIndex!;
+    return this._sortIndex!;
   }
 
   void set sortIndex (double v) {
-    this.m_sortIndex = v;
+    this._sortIndex = v;
   }
     
   // NOTE: states skipped - type Generic is ignored in gen
@@ -270,17 +270,17 @@ class TreemapSeriesOptions extends OptionFragment {
    * 
    * Since v9.3.3 the `traverseUpButton` is replaced by `breadcrumbs`.  
       */
-  TreemapSeriesUpButtonOptions? m_traverseUpButton;  
+  TreemapSeriesUpButtonOptions? _traverseUpButton;  
 
   TreemapSeriesUpButtonOptions get traverseUpButton { 
-    if (this.m_traverseUpButton == null) {
-      this.m_traverseUpButton = TreemapSeriesUpButtonOptions();
+    if (this._traverseUpButton == null) {
+      this._traverseUpButton = TreemapSeriesUpButtonOptions();
     }
-    return this.m_traverseUpButton!;
+    return this._traverseUpButton!;
   }
 
   void set traverseUpButton (TreemapSeriesUpButtonOptions v) {
-    this.m_traverseUpButton = v;
+    this._traverseUpButton = v;
   }
     
 
@@ -291,32 +291,32 @@ class TreemapSeriesOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_breadcrumbs != null) {  
-      buffer.writeAll(["\"breadcrumbs\":", this.m_breadcrumbs?.toJSON(), ","], "");
+    if (this._breadcrumbs != null) {  
+      buffer.writeAll(["\"breadcrumbs\":", this._breadcrumbs?.toJSON(), ","], "");
     }
 
-    if (this.m_allowDrillToNode != null) {  
-      buffer.writeAll(["\"allowDrillToNode\":", this.m_allowDrillToNode, ","], "");
+    if (this._allowDrillToNode != null) {  
+      buffer.writeAll(["\"allowDrillToNode\":", this._allowDrillToNode, ","], "");
     }
 
-    if (this.m_allowTraversingTree != null) {  
-      buffer.writeAll(["\"allowTraversingTree\":", this.m_allowTraversingTree, ","], "");
+    if (this._allowTraversingTree != null) {  
+      buffer.writeAll(["\"allowTraversingTree\":", this._allowTraversingTree, ","], "");
     }
 
-    if (this.m_alternateStartingDirection != null) {  
-      buffer.writeAll(["\"alternateStartingDirection\":", this.m_alternateStartingDirection, ","], "");
+    if (this._alternateStartingDirection != null) {  
+      buffer.writeAll(["\"alternateStartingDirection\":", this._alternateStartingDirection, ","], "");
     }
 
-    if (this.m_borderDashStyle != null) {  
-      buffer.writeAll(["\"borderDashStyle\":", this.m_borderDashStyle, ","], "");
+    if (this._borderDashStyle != null) {  
+      buffer.writeAll(["\"borderDashStyle\":\`", this._borderDashStyle, "\`,"], "");
     }
 
-    if (this.m_borderRadius != null) {  
-      buffer.writeAll(["\"borderRadius\":", this.m_borderRadius, ","], "");
+    if (this._borderRadius != null) {  
+      buffer.writeAll(["\"borderRadius\":", this._borderRadius, ","], "");
     }
 
-    if (this.m_brightness != null) {  
-      buffer.writeAll(["\"brightness\":", this.m_brightness, ","], "");
+    if (this._brightness != null) {  
+      buffer.writeAll(["\"brightness\":", this._brightness, ","], "");
     }
 
     // NOTE: skip serialization of colors (type ColorType[] is ignored)} 
@@ -325,38 +325,38 @@ class TreemapSeriesOptions extends OptionFragment {
 
     // NOTE: skip serialization of drillUpButton (type TreemapSeriesUpButtonOptions is ignored)} 
 
-    if (this.m_ignoreHiddenPoint != null) {  
-      buffer.writeAll(["\"ignoreHiddenPoint\":", this.m_ignoreHiddenPoint, ","], "");
+    if (this._ignoreHiddenPoint != null) {  
+      buffer.writeAll(["\"ignoreHiddenPoint\":", this._ignoreHiddenPoint, ","], "");
     }
 
-    if (this.m_interactByLeaf != null) {  
-      buffer.writeAll(["\"interactByLeaf\":", this.m_interactByLeaf, ","], "");
+    if (this._interactByLeaf != null) {  
+      buffer.writeAll(["\"interactByLeaf\":", this._interactByLeaf, ","], "");
     }
 
-    if (this.m_layoutAlgorithm != null) {  
-      buffer.writeAll(["\"layoutAlgorithm\":", this.m_layoutAlgorithm, ","], "");
+    if (this._layoutAlgorithm != null) {  
+      buffer.writeAll(["\"layoutAlgorithm\":\`", this._layoutAlgorithm, "\`,"], "");
     }
 
-    if (this.m_layoutStartingDirection != null) {  
-      buffer.writeAll(["\"layoutStartingDirection\":", this.m_layoutStartingDirection, ","], "");
+    if (this._layoutStartingDirection != null) {  
+      buffer.writeAll(["\"layoutStartingDirection\":\`", this._layoutStartingDirection, "\`,"], "");
     }
 
-    if (this.m_levelIsConstant != null) {  
-      buffer.writeAll(["\"levelIsConstant\":", this.m_levelIsConstant, ","], "");
+    if (this._levelIsConstant != null) {  
+      buffer.writeAll(["\"levelIsConstant\":", this._levelIsConstant, ","], "");
     }
 
     // NOTE: skip serialization of levels (type TreemapSeriesLevelsOptions[] is ignored)} 
 
     // NOTE: skip serialization of setRootNode (type Function is ignored)} 
 
-    if (this.m_sortIndex != null) {  
-      buffer.writeAll(["\"sortIndex\":", this.m_sortIndex, ","], "");
+    if (this._sortIndex != null) {  
+      buffer.writeAll(["\"sortIndex\":", this._sortIndex, ","], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 
 
-    if (this.m_traverseUpButton != null) {  
-      buffer.writeAll(["\"traverseUpButton\":", this.m_traverseUpButton?.toJSON(), ","], "");
+    if (this._traverseUpButton != null) {  
+      buffer.writeAll(["\"traverseUpButton\":", this._traverseUpButton?.toJSON(), ","], "");
     }
   }
 

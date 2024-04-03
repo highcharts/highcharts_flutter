@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,69 +23,69 @@ import 'OptionFragment.dart';
  */
 class ColorAxisDataClassesOptions extends OptionFragment {
   ColorAxisDataClassesOptions() : super();
-  String? m_color;  
+  String? _color;  
 
   String get color { 
-    if (this.m_color == null) {
-      this.m_color = "";
+    if (this._color == null) {
+      this._color = "";
     }
-    return this.m_color!;
+    return this._color!;
   }
 
   void set color (String v) {
-    this.m_color = v;
+    this._color = v;
   }
     
-  double? m_colorIndex;  
+  double? _colorIndex;  
 
   double get colorIndex { 
-    if (this.m_colorIndex == null) {
-      this.m_colorIndex = 0;
+    if (this._colorIndex == null) {
+      this._colorIndex = 0;
     }
-    return this.m_colorIndex!;
+    return this._colorIndex!;
   }
 
   void set colorIndex (double v) {
-    this.m_colorIndex = v;
+    this._colorIndex = v;
   }
     
-  double? m_from;  
+  double? _from;  
 
   double get from { 
-    if (this.m_from == null) {
-      this.m_from = 0;
+    if (this._from == null) {
+      this._from = 0;
     }
-    return this.m_from!;
+    return this._from!;
   }
 
   void set from (double v) {
-    this.m_from = v;
+    this._from = v;
   }
     
-  String? m_name;  
+  String? _name;  
 
   String get name { 
-    if (this.m_name == null) {
-      this.m_name = "";
+    if (this._name == null) {
+      this._name = "";
     }
-    return this.m_name!;
+    return this._name!;
   }
 
   void set name (String v) {
-    this.m_name = v;
+    this._name = v;
   }
     
-  double? m_to;  
+  double? _to;  
 
   double get to { 
-    if (this.m_to == null) {
-      this.m_to = 0;
+    if (this._to == null) {
+      this._to = 0;
     }
-    return this.m_to!;
+    return this._to!;
   }
 
   void set to (double v) {
-    this.m_to = v;
+    this._to = v;
   }
     
 
@@ -96,24 +96,24 @@ class ColorAxisDataClassesOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_color != null) {  
-      buffer.writeAll(["\"color\":", this.m_color, ","], "");
+    if (this._color != null) {  
+      buffer.writeAll(["\"color\":\`", this._color, "\`,"], "");
     }
 
-    if (this.m_colorIndex != null) {  
-      buffer.writeAll(["\"colorIndex\":", this.m_colorIndex, ","], "");
+    if (this._colorIndex != null) {  
+      buffer.writeAll(["\"colorIndex\":", this._colorIndex, ","], "");
     }
 
-    if (this.m_from != null) {  
-      buffer.writeAll(["\"from\":", this.m_from, ","], "");
+    if (this._from != null) {  
+      buffer.writeAll(["\"from\":", this._from, ","], "");
     }
 
-    if (this.m_name != null) {  
-      buffer.writeAll(["\"name\":", this.m_name, ","], "");
+    if (this._name != null) {  
+      buffer.writeAll(["\"name\":\`", this._name, "\`,"], "");
     }
 
-    if (this.m_to != null) {  
-      buffer.writeAll(["\"to\":", this.m_to, ","], "");
+    if (this._to != null) {  
+      buffer.writeAll(["\"to\":", this._to, ","], "");
     }
   }
 

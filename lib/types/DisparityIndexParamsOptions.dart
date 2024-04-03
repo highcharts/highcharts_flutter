@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,17 +24,17 @@ import 'OptionFragment.dart';
  */
 class DisparityIndexParamsOptions extends SMAParamsOptions {
   DisparityIndexParamsOptions() : super();
-  String? m_average;  
+  String? _average;  
 
   String get average { 
-    if (this.m_average == null) {
-      this.m_average = "";
+    if (this._average == null) {
+      this._average = "";
     }
-    return this.m_average!;
+    return this._average!;
   }
 
   void set average (String v) {
-    this.m_average = v;
+    this._average = v;
   }
     
 
@@ -45,8 +45,8 @@ class DisparityIndexParamsOptions extends SMAParamsOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_average != null) {  
-      buffer.writeAll(["\"average\":", this.m_average, ","], "");
+    if (this._average != null) {  
+      buffer.writeAll(["\"average\":\`", this._average, "\`,"], "");
     }
   }
 

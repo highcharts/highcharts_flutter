@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,30 +23,30 @@ import 'OptionFragment.dart';
  */
 class VennSeries extends OptionFragment {
   VennSeries() : super();
-  bool? m_directTouch;  
+  bool? _directTouch;  
 
   bool get directTouch { 
-    if (this.m_directTouch == null) {
-      this.m_directTouch = false;
+    if (this._directTouch == null) {
+      this._directTouch = false;
     }
-    return this.m_directTouch!;
+    return this._directTouch!;
   }
 
   void set directTouch (bool v) {
-    this.m_directTouch = v;
+    this._directTouch = v;
   }
     
-  bool? m_isCartesian;  
+  bool? _isCartesian;  
 
   bool get isCartesian { 
-    if (this.m_isCartesian == null) {
-      this.m_isCartesian = false;
+    if (this._isCartesian == null) {
+      this._isCartesian = false;
     }
-    return this.m_isCartesian!;
+    return this._isCartesian!;
   }
 
   void set isCartesian (bool v) {
-    this.m_isCartesian = v;
+    this._isCartesian = v;
   }
     
 
@@ -57,14 +57,12 @@ class VennSeries extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of axisTypes (type string[] is ignored)} 
-
-    if (this.m_directTouch != null) {  
-      buffer.writeAll(["\"directTouch\":", this.m_directTouch, ","], "");
+    if (this._directTouch != null) {  
+      buffer.writeAll(["\"directTouch\":", this._directTouch, ","], "");
     }
 
-    if (this.m_isCartesian != null) {  
-      buffer.writeAll(["\"isCartesian\":", this.m_isCartesian, ","], "");
+    if (this._isCartesian != null) {  
+      buffer.writeAll(["\"isCartesian\":", this._isCartesian, ","], "");
     }
 
     // NOTE: skip serialization of pointArrayMap (type string[] is ignored)} 

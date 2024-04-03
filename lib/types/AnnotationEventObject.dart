@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,30 +24,30 @@ import 'OptionFragment.dart';
  */
 class AnnotationEventObject extends PointerEvent {
   AnnotationEventObject() : super();
-  double? m_prevChartX;  
+  double? _prevChartX;  
 
   double get prevChartX { 
-    if (this.m_prevChartX == null) {
-      this.m_prevChartX = 0;
+    if (this._prevChartX == null) {
+      this._prevChartX = 0;
     }
-    return this.m_prevChartX!;
+    return this._prevChartX!;
   }
 
   void set prevChartX (double v) {
-    this.m_prevChartX = v;
+    this._prevChartX = v;
   }
     
-  double? m_prevChartY;  
+  double? _prevChartY;  
 
   double get prevChartY { 
-    if (this.m_prevChartY == null) {
-      this.m_prevChartY = 0;
+    if (this._prevChartY == null) {
+      this._prevChartY = 0;
     }
-    return this.m_prevChartY!;
+    return this._prevChartY!;
   }
 
   void set prevChartY (double v) {
-    this.m_prevChartY = v;
+    this._prevChartY = v;
   }
     
 
@@ -58,12 +58,12 @@ class AnnotationEventObject extends PointerEvent {
     super.toJSONInner(buffer);
 
     
-    if (this.m_prevChartX != null) {  
-      buffer.writeAll(["\"prevChartX\":", this.m_prevChartX, ","], "");
+    if (this._prevChartX != null) {  
+      buffer.writeAll(["\"prevChartX\":", this._prevChartX, ","], "");
     }
 
-    if (this.m_prevChartY != null) {  
-      buffer.writeAll(["\"prevChartY\":", this.m_prevChartY, ","], "");
+    if (this._prevChartY != null) {  
+      buffer.writeAll(["\"prevChartY\":", this._prevChartY, ","], "");
     }
   }
 

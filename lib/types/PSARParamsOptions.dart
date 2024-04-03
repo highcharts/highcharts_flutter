@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,56 +24,56 @@ import 'OptionFragment.dart';
  */
 class PSARParamsOptions extends SMAParamsOptions {
   PSARParamsOptions() : super();
-  double? m_initialAccelerationFactor;  
+  double? _initialAccelerationFactor;  
 
   double get initialAccelerationFactor { 
-    if (this.m_initialAccelerationFactor == null) {
-      this.m_initialAccelerationFactor = 0;
+    if (this._initialAccelerationFactor == null) {
+      this._initialAccelerationFactor = 0;
     }
-    return this.m_initialAccelerationFactor!;
+    return this._initialAccelerationFactor!;
   }
 
   void set initialAccelerationFactor (double v) {
-    this.m_initialAccelerationFactor = v;
+    this._initialAccelerationFactor = v;
   }
     
-  double? m_maxAccelerationFactor;  
+  double? _maxAccelerationFactor;  
 
   double get maxAccelerationFactor { 
-    if (this.m_maxAccelerationFactor == null) {
-      this.m_maxAccelerationFactor = 0;
+    if (this._maxAccelerationFactor == null) {
+      this._maxAccelerationFactor = 0;
     }
-    return this.m_maxAccelerationFactor!;
+    return this._maxAccelerationFactor!;
   }
 
   void set maxAccelerationFactor (double v) {
-    this.m_maxAccelerationFactor = v;
+    this._maxAccelerationFactor = v;
   }
     
-  double? m_increment;  
+  double? _increment;  
 
   double get increment { 
-    if (this.m_increment == null) {
-      this.m_increment = 0;
+    if (this._increment == null) {
+      this._increment = 0;
     }
-    return this.m_increment!;
+    return this._increment!;
   }
 
   void set increment (double v) {
-    this.m_increment = v;
+    this._increment = v;
   }
     
-  double? m_decimals;  
+  double? _decimals;  
 
   double get decimals { 
-    if (this.m_decimals == null) {
-      this.m_decimals = 0;
+    if (this._decimals == null) {
+      this._decimals = 0;
     }
-    return this.m_decimals!;
+    return this._decimals!;
   }
 
   void set decimals (double v) {
-    this.m_decimals = v;
+    this._decimals = v;
   }
     
 
@@ -84,20 +84,20 @@ class PSARParamsOptions extends SMAParamsOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_initialAccelerationFactor != null) {  
-      buffer.writeAll(["\"initialAccelerationFactor\":", this.m_initialAccelerationFactor, ","], "");
+    if (this._initialAccelerationFactor != null) {  
+      buffer.writeAll(["\"initialAccelerationFactor\":", this._initialAccelerationFactor, ","], "");
     }
 
-    if (this.m_maxAccelerationFactor != null) {  
-      buffer.writeAll(["\"maxAccelerationFactor\":", this.m_maxAccelerationFactor, ","], "");
+    if (this._maxAccelerationFactor != null) {  
+      buffer.writeAll(["\"maxAccelerationFactor\":", this._maxAccelerationFactor, ","], "");
     }
 
-    if (this.m_increment != null) {  
-      buffer.writeAll(["\"increment\":", this.m_increment, ","], "");
+    if (this._increment != null) {  
+      buffer.writeAll(["\"increment\":", this._increment, ","], "");
     }
 
-    if (this.m_decimals != null) {  
-      buffer.writeAll(["\"decimals\":", this.m_decimals, ","], "");
+    if (this._decimals != null) {  
+      buffer.writeAll(["\"decimals\":", this._decimals, ","], "");
     }
   }
 

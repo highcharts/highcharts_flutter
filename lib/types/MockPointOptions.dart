@@ -12,12 +12,12 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
-import 'ControllableLabelOptions.dart';
 import 'ControlPointOptionsObject.dart';
+import 'ControllableLabelOptions.dart';
 import 'OptionFragment.dart';
 
 /** 
@@ -25,43 +25,43 @@ import 'OptionFragment.dart';
  */
 class MockPointOptions extends OptionFragment {
   MockPointOptions() : super();
-  double? m_x;  
+  double? _x;  
 
   double get x { 
-    if (this.m_x == null) {
-      this.m_x = 0;
+    if (this._x == null) {
+      this._x = 0;
     }
-    return this.m_x!;
+    return this._x!;
   }
 
   void set x (double v) {
-    this.m_x = v;
+    this._x = v;
   }
     
-  double? m_y;  
+  double? _y;  
 
   double get y { 
-    if (this.m_y == null) {
-      this.m_y = 0;
+    if (this._y == null) {
+      this._y = 0;
     }
-    return this.m_y!;
+    return this._y!;
   }
 
   void set y (double v) {
-    this.m_y = v;
+    this._y = v;
   }
     
-  String? m_command;  
+  String? _command;  
 
   String get command { 
-    if (this.m_command == null) {
-      this.m_command = "";
+    if (this._command == null) {
+      this._command = "";
     }
-    return this.m_command!;
+    return this._command!;
   }
 
   void set command (String v) {
-    this.m_command = v;
+    this._command = v;
   }
     
 
@@ -72,24 +72,24 @@ class MockPointOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
+    // NOTE: skip serialization of controlPoint (type ControlPointOptionsObject is ignored)} 
+
     // NOTE: skip serialization of label (type ControllableLabelOptions is ignored)} 
 
-    if (this.m_x != null) {  
-      buffer.writeAll(["\"x\":", this.m_x, ","], "");
+    if (this._x != null) {  
+      buffer.writeAll(["\"x\":", this._x, ","], "");
     }
 
     // NOTE: skip serialization of xAxis (type AxisType is ignored)} 
 
-    if (this.m_y != null) {  
-      buffer.writeAll(["\"y\":", this.m_y, ","], "");
+    if (this._y != null) {  
+      buffer.writeAll(["\"y\":", this._y, ","], "");
     }
 
     // NOTE: skip serialization of yAxis (type AxisType is ignored)} 
 
-    // NOTE: skip serialization of controlPoint (type ControlPointOptionsObject is ignored)} 
-
-    if (this.m_command != null) {  
-      buffer.writeAll(["\"command\":", this.m_command, ","], "");
+    if (this._command != null) {  
+      buffer.writeAll(["\"command\":\`", this._command, "\`,"], "");
     }
 
     // NOTE: skip serialization of series (type undefined is ignored)} 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,56 +23,56 @@ import 'OptionFragment.dart';
  */
 class AccessibilityKeyboardNavigationSeriesNavigationOptions extends OptionFragment {
   AccessibilityKeyboardNavigationSeriesNavigationOptions() : super();
-  String? m_mode;  
+  String? _mode;  
 
   String get mode { 
-    if (this.m_mode == null) {
-      this.m_mode = "";
+    if (this._mode == null) {
+      this._mode = "";
     }
-    return this.m_mode!;
+    return this._mode!;
   }
 
   void set mode (String v) {
-    this.m_mode = v;
+    this._mode = v;
   }
     
-  double? m_pointNavigationEnabledThreshold;  
+  double? _pointNavigationEnabledThreshold;  
 
   double get pointNavigationEnabledThreshold { 
-    if (this.m_pointNavigationEnabledThreshold == null) {
-      this.m_pointNavigationEnabledThreshold = 0;
+    if (this._pointNavigationEnabledThreshold == null) {
+      this._pointNavigationEnabledThreshold = 0;
     }
-    return this.m_pointNavigationEnabledThreshold!;
+    return this._pointNavigationEnabledThreshold!;
   }
 
   void set pointNavigationEnabledThreshold (double v) {
-    this.m_pointNavigationEnabledThreshold = v;
+    this._pointNavigationEnabledThreshold = v;
   }
     
-  bool? m_skipNullPoints;  
+  bool? _skipNullPoints;  
 
   bool get skipNullPoints { 
-    if (this.m_skipNullPoints == null) {
-      this.m_skipNullPoints = false;
+    if (this._skipNullPoints == null) {
+      this._skipNullPoints = false;
     }
-    return this.m_skipNullPoints!;
+    return this._skipNullPoints!;
   }
 
   void set skipNullPoints (bool v) {
-    this.m_skipNullPoints = v;
+    this._skipNullPoints = v;
   }
     
-  bool? m_rememberPointFocus;  
+  bool? _rememberPointFocus;  
 
   bool get rememberPointFocus { 
-    if (this.m_rememberPointFocus == null) {
-      this.m_rememberPointFocus = false;
+    if (this._rememberPointFocus == null) {
+      this._rememberPointFocus = false;
     }
-    return this.m_rememberPointFocus!;
+    return this._rememberPointFocus!;
   }
 
   void set rememberPointFocus (bool v) {
-    this.m_rememberPointFocus = v;
+    this._rememberPointFocus = v;
   }
     
 
@@ -83,20 +83,20 @@ class AccessibilityKeyboardNavigationSeriesNavigationOptions extends OptionFragm
     super.toJSONInner(buffer);
 
     
-    if (this.m_mode != null) {  
-      buffer.writeAll(["\"mode\":", this.m_mode, ","], "");
+    if (this._mode != null) {  
+      buffer.writeAll(["\"mode\":\`", this._mode, "\`,"], "");
     }
 
-    if (this.m_pointNavigationEnabledThreshold != null) {  
-      buffer.writeAll(["\"pointNavigationEnabledThreshold\":", this.m_pointNavigationEnabledThreshold, ","], "");
+    if (this._pointNavigationEnabledThreshold != null) {  
+      buffer.writeAll(["\"pointNavigationEnabledThreshold\":", this._pointNavigationEnabledThreshold, ","], "");
     }
 
-    if (this.m_skipNullPoints != null) {  
-      buffer.writeAll(["\"skipNullPoints\":", this.m_skipNullPoints, ","], "");
+    if (this._skipNullPoints != null) {  
+      buffer.writeAll(["\"skipNullPoints\":", this._skipNullPoints, ","], "");
     }
 
-    if (this.m_rememberPointFocus != null) {  
-      buffer.writeAll(["\"rememberPointFocus\":", this.m_rememberPointFocus, ","], "");
+    if (this._rememberPointFocus != null) {  
+      buffer.writeAll(["\"rememberPointFocus\":", this._rememberPointFocus, ","], "");
     }
   }
 

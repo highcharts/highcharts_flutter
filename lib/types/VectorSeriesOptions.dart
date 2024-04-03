@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,32 +24,32 @@ import 'OptionFragment.dart';
  */
 class VectorSeriesOptions extends ScatterSeriesOptions {
   VectorSeriesOptions() : super();
-  String? m_rotationOrigin;  
+  String? _rotationOrigin;  
 
   String get rotationOrigin { 
-    if (this.m_rotationOrigin == null) {
-      this.m_rotationOrigin = "";
+    if (this._rotationOrigin == null) {
+      this._rotationOrigin = "";
     }
-    return this.m_rotationOrigin!;
+    return this._rotationOrigin!;
   }
 
   void set rotationOrigin (String v) {
-    this.m_rotationOrigin = v;
+    this._rotationOrigin = v;
   }
     
   // NOTE: states skipped - type Generic is ignored in gen
 
-  double? m_vectorLength;  
+  double? _vectorLength;  
 
   double get vectorLength { 
-    if (this.m_vectorLength == null) {
-      this.m_vectorLength = 0;
+    if (this._vectorLength == null) {
+      this._vectorLength = 0;
     }
-    return this.m_vectorLength!;
+    return this._vectorLength!;
   }
 
   void set vectorLength (double v) {
-    this.m_vectorLength = v;
+    this._vectorLength = v;
   }
     
 
@@ -60,14 +60,14 @@ class VectorSeriesOptions extends ScatterSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_rotationOrigin != null) {  
-      buffer.writeAll(["\"rotationOrigin\":", this.m_rotationOrigin, ","], "");
+    if (this._rotationOrigin != null) {  
+      buffer.writeAll(["\"rotationOrigin\":\`", this._rotationOrigin, "\`,"], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 
 
-    if (this.m_vectorLength != null) {  
-      buffer.writeAll(["\"vectorLength\":", this.m_vectorLength, ","], "");
+    if (this._vectorLength != null) {  
+      buffer.writeAll(["\"vectorLength\":", this._vectorLength, ","], "");
     }
   }
 

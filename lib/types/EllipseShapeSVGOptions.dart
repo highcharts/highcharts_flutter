@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,69 +23,69 @@ import 'OptionFragment.dart';
  */
 class EllipseShapeSVGOptions extends OptionFragment {
   EllipseShapeSVGOptions() : super();
-  double? m_cx;  
+  double? _cx;  
 
   double get cx { 
-    if (this.m_cx == null) {
-      this.m_cx = 0;
+    if (this._cx == null) {
+      this._cx = 0;
     }
-    return this.m_cx!;
+    return this._cx!;
   }
 
   void set cx (double v) {
-    this.m_cx = v;
+    this._cx = v;
   }
     
-  double? m_cy;  
+  double? _cy;  
 
   double get cy { 
-    if (this.m_cy == null) {
-      this.m_cy = 0;
+    if (this._cy == null) {
+      this._cy = 0;
     }
-    return this.m_cy!;
+    return this._cy!;
   }
 
   void set cy (double v) {
-    this.m_cy = v;
+    this._cy = v;
   }
     
-  double? m_rx;  
+  double? _rx;  
 
   double get rx { 
-    if (this.m_rx == null) {
-      this.m_rx = 0;
+    if (this._rx == null) {
+      this._rx = 0;
     }
-    return this.m_rx!;
+    return this._rx!;
   }
 
   void set rx (double v) {
-    this.m_rx = v;
+    this._rx = v;
   }
     
-  double? m_ry;  
+  double? _ry;  
 
   double get ry { 
-    if (this.m_ry == null) {
-      this.m_ry = 0;
+    if (this._ry == null) {
+      this._ry = 0;
     }
-    return this.m_ry!;
+    return this._ry!;
   }
 
   void set ry (double v) {
-    this.m_ry = v;
+    this._ry = v;
   }
     
-  double? m_angle;  
+  double? _angle;  
 
   double get angle { 
-    if (this.m_angle == null) {
-      this.m_angle = 0;
+    if (this._angle == null) {
+      this._angle = 0;
     }
-    return this.m_angle!;
+    return this._angle!;
   }
 
   void set angle (double v) {
-    this.m_angle = v;
+    this._angle = v;
   }
     
 
@@ -96,24 +96,24 @@ class EllipseShapeSVGOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_cx != null) {  
-      buffer.writeAll(["\"cx\":", this.m_cx, ","], "");
+    if (this._cx != null) {  
+      buffer.writeAll(["\"cx\":", this._cx, ","], "");
     }
 
-    if (this.m_cy != null) {  
-      buffer.writeAll(["\"cy\":", this.m_cy, ","], "");
+    if (this._cy != null) {  
+      buffer.writeAll(["\"cy\":", this._cy, ","], "");
     }
 
-    if (this.m_rx != null) {  
-      buffer.writeAll(["\"rx\":", this.m_rx, ","], "");
+    if (this._rx != null) {  
+      buffer.writeAll(["\"rx\":", this._rx, ","], "");
     }
 
-    if (this.m_ry != null) {  
-      buffer.writeAll(["\"ry\":", this.m_ry, ","], "");
+    if (this._ry != null) {  
+      buffer.writeAll(["\"ry\":", this._ry, ","], "");
     }
 
-    if (this.m_angle != null) {  
-      buffer.writeAll(["\"angle\":", this.m_angle, ","], "");
+    if (this._angle != null) {  
+      buffer.writeAll(["\"angle\":", this._angle, ","], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,17 +23,17 @@ import 'OptionFragment.dart';
  */
 class Funnel3DMethodsObject extends OptionFragment {
   Funnel3DMethodsObject() : super();
-  String? m_pathType;  
+  String? _pathType;  
 
   String get pathType { 
-    if (this.m_pathType == null) {
-      this.m_pathType = "";
+    if (this._pathType == null) {
+      this._pathType = "";
     }
-    return this.m_pathType!;
+    return this._pathType!;
   }
 
   void set pathType (String v) {
-    this.m_pathType = v;
+    this._pathType = v;
   }
     
 
@@ -52,8 +52,8 @@ class Funnel3DMethodsObject extends OptionFragment {
 
     // NOTE: skip serialization of sideParts (type Generic is ignored)} 
 
-    if (this.m_pathType != null) {  
-      buffer.writeAll(["\"pathType\":", this.m_pathType, ","], "");
+    if (this._pathType != null) {  
+      buffer.writeAll(["\"pathType\":\"", this._pathType, "\","], "");
     }
   }
 

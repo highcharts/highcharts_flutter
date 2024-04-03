@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,95 +24,95 @@ import 'OptionFragment.dart';
  */
 class PlotLinePathOptions extends OptionFragment {
   PlotLinePathOptions() : super();
-  bool? m_acrossPanes;  
+  bool? _acrossPanes;  
 
   bool get acrossPanes { 
-    if (this.m_acrossPanes == null) {
-      this.m_acrossPanes = false;
+    if (this._acrossPanes == null) {
+      this._acrossPanes = false;
     }
-    return this.m_acrossPanes!;
+    return this._acrossPanes!;
   }
 
   void set acrossPanes (bool v) {
-    this.m_acrossPanes = v;
+    this._acrossPanes = v;
   }
     
-  String? m_force;  
+  String? _force;  
 
   String get force { 
-    if (this.m_force == null) {
-      this.m_force = "";
+    if (this._force == null) {
+      this._force = "";
     }
-    return this.m_force!;
+    return this._force!;
   }
 
   void set force (String v) {
-    this.m_force = v;
+    this._force = v;
   }
     
-  double? m_lineWidth;  
+  double? _lineWidth;  
 
   double get lineWidth { 
-    if (this.m_lineWidth == null) {
-      this.m_lineWidth = 0;
+    if (this._lineWidth == null) {
+      this._lineWidth = 0;
     }
-    return this.m_lineWidth!;
+    return this._lineWidth!;
   }
 
   void set lineWidth (double v) {
-    this.m_lineWidth = v;
+    this._lineWidth = v;
   }
     
-  bool? m_old;  
+  bool? _old;  
 
   bool get old { 
-    if (this.m_old == null) {
-      this.m_old = false;
+    if (this._old == null) {
+      this._old = false;
     }
-    return this.m_old!;
+    return this._old!;
   }
 
   void set old (bool v) {
-    this.m_old = v;
+    this._old = v;
   }
     
-  bool? m_reverse;  
+  bool? _reverse;  
 
   bool get reverse { 
-    if (this.m_reverse == null) {
-      this.m_reverse = false;
+    if (this._reverse == null) {
+      this._reverse = false;
     }
-    return this.m_reverse!;
+    return this._reverse!;
   }
 
   void set reverse (bool v) {
-    this.m_reverse = v;
+    this._reverse = v;
   }
     
-  double? m_translatedValue;  
+  double? _translatedValue;  
 
   double get translatedValue { 
-    if (this.m_translatedValue == null) {
-      this.m_translatedValue = 0;
+    if (this._translatedValue == null) {
+      this._translatedValue = 0;
     }
-    return this.m_translatedValue!;
+    return this._translatedValue!;
   }
 
   void set translatedValue (double v) {
-    this.m_translatedValue = v;
+    this._translatedValue = v;
   }
     
-  double? m_value;  
+  double? _value;  
 
   double get value { 
-    if (this.m_value == null) {
-      this.m_value = 0;
+    if (this._value == null) {
+      this._value = 0;
     }
-    return this.m_value!;
+    return this._value!;
   }
 
   void set value (double v) {
-    this.m_value = v;
+    this._value = v;
   }
     
 
@@ -123,34 +123,34 @@ class PlotLinePathOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_acrossPanes != null) {  
-      buffer.writeAll(["\"acrossPanes\":", this.m_acrossPanes, ","], "");
+    if (this._acrossPanes != null) {  
+      buffer.writeAll(["\"acrossPanes\":", this._acrossPanes, ","], "");
     }
 
-    if (this.m_force != null) {  
-      buffer.writeAll(["\"force\":", this.m_force, ","], "");
+    if (this._force != null) {  
+      buffer.writeAll(["\"force\":\`", this._force, "\`,"], "");
     }
 
-    if (this.m_lineWidth != null) {  
-      buffer.writeAll(["\"lineWidth\":", this.m_lineWidth, ","], "");
+    if (this._lineWidth != null) {  
+      buffer.writeAll(["\"lineWidth\":", this._lineWidth, ","], "");
     }
 
-    if (this.m_old != null) {  
-      buffer.writeAll(["\"old\":", this.m_old, ","], "");
+    if (this._old != null) {  
+      buffer.writeAll(["\"old\":", this._old, ","], "");
     }
 
     // NOTE: skip serialization of path (type SVGPath is ignored)} 
 
-    if (this.m_reverse != null) {  
-      buffer.writeAll(["\"reverse\":", this.m_reverse, ","], "");
+    if (this._reverse != null) {  
+      buffer.writeAll(["\"reverse\":", this._reverse, ","], "");
     }
 
-    if (this.m_translatedValue != null) {  
-      buffer.writeAll(["\"translatedValue\":", this.m_translatedValue, ","], "");
+    if (this._translatedValue != null) {  
+      buffer.writeAll(["\"translatedValue\":", this._translatedValue, ","], "");
     }
 
-    if (this.m_value != null) {  
-      buffer.writeAll(["\"value\":", this.m_value, ","], "");
+    if (this._value != null) {  
+      buffer.writeAll(["\"value\":", this._value, ","], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -27,56 +27,56 @@ import 'OptionFragment.dart';
  */
 class MarkerClusterOptions extends OptionFragment {
   MarkerClusterOptions() : super();
-  bool? m_allowOverlap;  
+  bool? _allowOverlap;  
 
   bool get allowOverlap { 
-    if (this.m_allowOverlap == null) {
-      this.m_allowOverlap = false;
+    if (this._allowOverlap == null) {
+      this._allowOverlap = false;
     }
-    return this.m_allowOverlap!;
+    return this._allowOverlap!;
   }
 
   void set allowOverlap (bool v) {
-    this.m_allowOverlap = v;
+    this._allowOverlap = v;
   }
     
-  bool? m_drillToCluster;  
+  bool? _drillToCluster;  
 
   bool get drillToCluster { 
-    if (this.m_drillToCluster == null) {
-      this.m_drillToCluster = false;
+    if (this._drillToCluster == null) {
+      this._drillToCluster = false;
     }
-    return this.m_drillToCluster!;
+    return this._drillToCluster!;
   }
 
   void set drillToCluster (bool v) {
-    this.m_drillToCluster = v;
+    this._drillToCluster = v;
   }
     
-  bool? m_enabled;  
+  bool? _enabled;  
 
   bool get enabled { 
-    if (this.m_enabled == null) {
-      this.m_enabled = false;
+    if (this._enabled == null) {
+      this._enabled = false;
     }
-    return this.m_enabled!;
+    return this._enabled!;
   }
 
   void set enabled (bool v) {
-    this.m_enabled = v;
+    this._enabled = v;
   }
     
-  double? m_minimumClusterSize;  
+  double? _minimumClusterSize;  
 
   double get minimumClusterSize { 
-    if (this.m_minimumClusterSize == null) {
-      this.m_minimumClusterSize = 0;
+    if (this._minimumClusterSize == null) {
+      this._minimumClusterSize = 0;
     }
-    return this.m_minimumClusterSize!;
+    return this._minimumClusterSize!;
   }
 
   void set minimumClusterSize (double v) {
-    this.m_minimumClusterSize = v;
+    this._minimumClusterSize = v;
   }
     
 
@@ -87,20 +87,20 @@ class MarkerClusterOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_allowOverlap != null) {  
-      buffer.writeAll(["\"allowOverlap\":", this.m_allowOverlap, ","], "");
+    if (this._allowOverlap != null) {  
+      buffer.writeAll(["\"allowOverlap\":", this._allowOverlap, ","], "");
     }
 
     // NOTE: skip serialization of animation (type Generic is ignored)} 
 
     // NOTE: skip serialization of dataLabels (type DataLabelOptions is ignored)} 
 
-    if (this.m_drillToCluster != null) {  
-      buffer.writeAll(["\"drillToCluster\":", this.m_drillToCluster, ","], "");
+    if (this._drillToCluster != null) {  
+      buffer.writeAll(["\"drillToCluster\":", this._drillToCluster, ","], "");
     }
 
-    if (this.m_enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this.m_enabled, ","], "");
+    if (this._enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this._enabled, ","], "");
     }
 
     // NOTE: skip serialization of events (type MarkerClusterEventsOptions is ignored)} 
@@ -109,8 +109,8 @@ class MarkerClusterOptions extends OptionFragment {
 
     // NOTE: skip serialization of marker (type MarkerClusterMarkerOptions is ignored)} 
 
-    if (this.m_minimumClusterSize != null) {  
-      buffer.writeAll(["\"minimumClusterSize\":", this.m_minimumClusterSize, ","], "");
+    if (this._minimumClusterSize != null) {  
+      buffer.writeAll(["\"minimumClusterSize\":", this._minimumClusterSize, ","], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 

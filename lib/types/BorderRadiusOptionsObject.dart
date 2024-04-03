@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,43 +23,43 @@ import 'OptionFragment.dart';
  */
 class BorderRadiusOptionsObject extends OptionFragment {
   BorderRadiusOptionsObject() : super();
-  String? m_radius;  
+  String? _radius;  
 
   String get radius { 
-    if (this.m_radius == null) {
-      this.m_radius = "";
+    if (this._radius == null) {
+      this._radius = "";
     }
-    return this.m_radius!;
+    return this._radius!;
   }
 
   void set radius (String v) {
-    this.m_radius = v;
+    this._radius = v;
   }
     
-  String? m_scope;  
+  String? _scope;  
 
   String get scope { 
-    if (this.m_scope == null) {
-      this.m_scope = "";
+    if (this._scope == null) {
+      this._scope = "";
     }
-    return this.m_scope!;
+    return this._scope!;
   }
 
   void set scope (String v) {
-    this.m_scope = v;
+    this._scope = v;
   }
     
-  String? m_where;  
+  String? _where;  
 
   String get where { 
-    if (this.m_where == null) {
-      this.m_where = "";
+    if (this._where == null) {
+      this._where = "";
     }
-    return this.m_where!;
+    return this._where!;
   }
 
   void set where (String v) {
-    this.m_where = v;
+    this._where = v;
   }
     
 
@@ -70,16 +70,16 @@ class BorderRadiusOptionsObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_radius != null) {  
-      buffer.writeAll(["\"radius\":", this.m_radius, ","], "");
+    if (this._radius != null) {  
+      buffer.writeAll(["\"radius\":\`", this._radius, "\`,"], "");
     }
 
-    if (this.m_scope != null) {  
-      buffer.writeAll(["\"scope\":", this.m_scope, ","], "");
+    if (this._scope != null) {  
+      buffer.writeAll(["\"scope\":\`", this._scope, "\`,"], "");
     }
 
-    if (this.m_where != null) {  
-      buffer.writeAll(["\"where\":", this.m_where, ","], "");
+    if (this._where != null) {  
+      buffer.writeAll(["\"where\":\`", this._where, "\`,"], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,30 +24,30 @@ import 'OptionFragment.dart';
  */
 class VBPParamsOptions extends SMAParamsOptions {
   VBPParamsOptions() : super();
-  double? m_ranges;  
+  double? _ranges;  
 
   double get ranges { 
-    if (this.m_ranges == null) {
-      this.m_ranges = 0;
+    if (this._ranges == null) {
+      this._ranges = 0;
     }
-    return this.m_ranges!;
+    return this._ranges!;
   }
 
   void set ranges (double v) {
-    this.m_ranges = v;
+    this._ranges = v;
   }
     
-  String? m_volumeSeriesID;  
+  String? _volumeSeriesID;  
 
   String get volumeSeriesID { 
-    if (this.m_volumeSeriesID == null) {
-      this.m_volumeSeriesID = "";
+    if (this._volumeSeriesID == null) {
+      this._volumeSeriesID = "";
     }
-    return this.m_volumeSeriesID!;
+    return this._volumeSeriesID!;
   }
 
   void set volumeSeriesID (String v) {
-    this.m_volumeSeriesID = v;
+    this._volumeSeriesID = v;
   }
     
 
@@ -58,12 +58,12 @@ class VBPParamsOptions extends SMAParamsOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_ranges != null) {  
-      buffer.writeAll(["\"ranges\":", this.m_ranges, ","], "");
+    if (this._ranges != null) {  
+      buffer.writeAll(["\"ranges\":", this._ranges, ","], "");
     }
 
-    if (this.m_volumeSeriesID != null) {  
-      buffer.writeAll(["\"volumeSeriesID\":", this.m_volumeSeriesID, ","], "");
+    if (this._volumeSeriesID != null) {  
+      buffer.writeAll(["\"volumeSeriesID\":\`", this._volumeSeriesID, "\`,"], "");
     }
   }
 

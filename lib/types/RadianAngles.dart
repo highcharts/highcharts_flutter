@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,30 +23,30 @@ import 'OptionFragment.dart';
  */
 class RadianAngles extends OptionFragment {
   RadianAngles() : super();
-  double? m_end;  
+  double? _end;  
 
   double get end { 
-    if (this.m_end == null) {
-      this.m_end = 0;
+    if (this._end == null) {
+      this._end = 0;
     }
-    return this.m_end!;
+    return this._end!;
   }
 
   void set end (double v) {
-    this.m_end = v;
+    this._end = v;
   }
     
-  double? m_start;  
+  double? _start;  
 
   double get start { 
-    if (this.m_start == null) {
-      this.m_start = 0;
+    if (this._start == null) {
+      this._start = 0;
     }
-    return this.m_start!;
+    return this._start!;
   }
 
   void set start (double v) {
-    this.m_start = v;
+    this._start = v;
   }
     
 
@@ -57,12 +57,12 @@ class RadianAngles extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_end != null) {  
-      buffer.writeAll(["\"end\":", this.m_end, ","], "");
+    if (this._end != null) {  
+      buffer.writeAll(["\"end\":", this._end, ","], "");
     }
 
-    if (this.m_start != null) {  
-      buffer.writeAll(["\"start\":", this.m_start, ","], "");
+    if (this._start != null) {  
+      buffer.writeAll(["\"start\":", this._start, ","], "");
     }
   }
 

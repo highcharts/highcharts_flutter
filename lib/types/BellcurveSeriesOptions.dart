@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,17 +24,17 @@ import 'OptionFragment.dart';
  */
 class BellcurveSeriesOptions extends AreaSplineSeriesOptions {
   BellcurveSeriesOptions() : super();
-  String? m_baseSeries;  
+  String? _baseSeries;  
 
   String get baseSeries { 
-    if (this.m_baseSeries == null) {
-      this.m_baseSeries = "";
+    if (this._baseSeries == null) {
+      this._baseSeries = "";
     }
-    return this.m_baseSeries!;
+    return this._baseSeries!;
   }
 
   void set baseSeries (String v) {
-    this.m_baseSeries = v;
+    this._baseSeries = v;
   }
     
   /**
@@ -43,17 +43,17 @@ class BellcurveSeriesOptions extends AreaSplineSeriesOptions {
    * 
    * Defaults to '3'. 
       */
-  double? m_intervals;  
+  double? _intervals;  
 
   double get intervals { 
-    if (this.m_intervals == null) {
-      this.m_intervals = 0;
+    if (this._intervals == null) {
+      this._intervals = 0;
     }
-    return this.m_intervals!;
+    return this._intervals!;
   }
 
   void set intervals (double v) {
-    this.m_intervals = v;
+    this._intervals = v;
   }
     
   /**
@@ -62,17 +62,17 @@ class BellcurveSeriesOptions extends AreaSplineSeriesOptions {
    * 
    * Defaults to '3'. 
       */
-  double? m_pointsInInterval;  
+  double? _pointsInInterval;  
 
   double get pointsInInterval { 
-    if (this.m_pointsInInterval == null) {
-      this.m_pointsInInterval = 0;
+    if (this._pointsInInterval == null) {
+      this._pointsInInterval = 0;
     }
-    return this.m_pointsInInterval!;
+    return this._pointsInInterval!;
   }
 
   void set pointsInInterval (double v) {
-    this.m_pointsInInterval = v;
+    this._pointsInInterval = v;
   }
     
   // NOTE: states skipped - type Generic is ignored in gen
@@ -85,18 +85,18 @@ class BellcurveSeriesOptions extends AreaSplineSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_baseSeries != null) {  
-      buffer.writeAll(["\"baseSeries\":", this.m_baseSeries, ","], "");
+    if (this._baseSeries != null) {  
+      buffer.writeAll(["\"baseSeries\":\`", this._baseSeries, "\`,"], "");
     }
 
     // NOTE: skip serialization of data (type undefined is ignored)} 
 
-    if (this.m_intervals != null) {  
-      buffer.writeAll(["\"intervals\":", this.m_intervals, ","], "");
+    if (this._intervals != null) {  
+      buffer.writeAll(["\"intervals\":", this._intervals, ","], "");
     }
 
-    if (this.m_pointsInInterval != null) {  
-      buffer.writeAll(["\"pointsInInterval\":", this.m_pointsInInterval, ","], "");
+    if (this._pointsInInterval != null) {  
+      buffer.writeAll(["\"pointsInInterval\":", this._pointsInInterval, ","], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 

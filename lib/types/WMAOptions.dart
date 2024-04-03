@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -40,9 +40,7 @@ class WMAOptions extends SMAOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_params != null) {  
-      buffer.writeAll(["\"params\":", this.m_params?.toJSON(), ","], "");
-    }
+    // NOTE: skip serialization of params (type WMAParamsOptions is ignored)} 
 
     // NOTE: skip serialization of states (type Generic is ignored)} 
   }

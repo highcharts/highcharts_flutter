@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,43 +23,43 @@ import 'OptionFragment.dart';
  */
 class WordcloudSeriesRotationOptions extends OptionFragment {
   WordcloudSeriesRotationOptions() : super();
-  double? m_from;  
+  double? _from;  
 
   double get from { 
-    if (this.m_from == null) {
-      this.m_from = 0;
+    if (this._from == null) {
+      this._from = 0;
     }
-    return this.m_from!;
+    return this._from!;
   }
 
   void set from (double v) {
-    this.m_from = v;
+    this._from = v;
   }
     
-  double? m_orientations;  
+  double? _orientations;  
 
   double get orientations { 
-    if (this.m_orientations == null) {
-      this.m_orientations = 0;
+    if (this._orientations == null) {
+      this._orientations = 0;
     }
-    return this.m_orientations!;
+    return this._orientations!;
   }
 
   void set orientations (double v) {
-    this.m_orientations = v;
+    this._orientations = v;
   }
     
-  double? m_to;  
+  double? _to;  
 
   double get to { 
-    if (this.m_to == null) {
-      this.m_to = 0;
+    if (this._to == null) {
+      this._to = 0;
     }
-    return this.m_to!;
+    return this._to!;
   }
 
   void set to (double v) {
-    this.m_to = v;
+    this._to = v;
   }
     
 
@@ -70,16 +70,16 @@ class WordcloudSeriesRotationOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_from != null) {  
-      buffer.writeAll(["\"from\":", this.m_from, ","], "");
+    if (this._from != null) {  
+      buffer.writeAll(["\"from\":", this._from, ","], "");
     }
 
-    if (this.m_orientations != null) {  
-      buffer.writeAll(["\"orientations\":", this.m_orientations, ","], "");
+    if (this._orientations != null) {  
+      buffer.writeAll(["\"orientations\":", this._orientations, ","], "");
     }
 
-    if (this.m_to != null) {  
-      buffer.writeAll(["\"to\":", this.m_to, ","], "");
+    if (this._to != null) {  
+      buffer.writeAll(["\"to\":", this._to, ","], "");
     }
   }
 

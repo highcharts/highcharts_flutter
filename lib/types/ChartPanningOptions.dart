@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,30 +23,30 @@ import 'OptionFragment.dart';
  */
 class ChartPanningOptions extends OptionFragment {
   ChartPanningOptions() : super();
-  String? m_type;  
+  String? _type;  
 
   String get type { 
-    if (this.m_type == null) {
-      this.m_type = "";
+    if (this._type == null) {
+      this._type = "";
     }
-    return this.m_type!;
+    return this._type!;
   }
 
   void set type (String v) {
-    this.m_type = v;
+    this._type = v;
   }
     
-  bool? m_enabled;  
+  bool? _enabled;  
 
   bool get enabled { 
-    if (this.m_enabled == null) {
-      this.m_enabled = false;
+    if (this._enabled == null) {
+      this._enabled = false;
     }
-    return this.m_enabled!;
+    return this._enabled!;
   }
 
   void set enabled (bool v) {
-    this.m_enabled = v;
+    this._enabled = v;
   }
     
 
@@ -57,12 +57,12 @@ class ChartPanningOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_type != null) {  
-      buffer.writeAll(["\"type\":", this.m_type, ","], "");
+    if (this._type != null) {  
+      buffer.writeAll(["\"type\":\`", this._type, "\`,"], "");
     }
 
-    if (this.m_enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this.m_enabled, ","], "");
+    if (this._enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this._enabled, ","], "");
     }
   }
 

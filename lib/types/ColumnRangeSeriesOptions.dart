@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -31,17 +31,17 @@ class ColumnRangeSeriesOptions extends AreaRangeSeriesOptions {
    * column charts, minPointLength might not be respected for tightly
    * packed values.  
       */
-  double? m_minPointLength;  
+  double? _minPointLength;  
 
   double get minPointLength { 
-    if (this.m_minPointLength == null) {
-      this.m_minPointLength = 0;
+    if (this._minPointLength == null) {
+      this._minPointLength = 0;
     }
-    return this.m_minPointLength!;
+    return this._minPointLength!;
   }
 
   void set minPointLength (double v) {
-    this.m_minPointLength = v;
+    this._minPointLength = v;
   }
     
   // NOTE: states skipped - type Generic is ignored in gen
@@ -54,8 +54,8 @@ class ColumnRangeSeriesOptions extends AreaRangeSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_minPointLength != null) {  
-      buffer.writeAll(["\"minPointLength\":", this.m_minPointLength, ","], "");
+    if (this._minPointLength != null) {  
+      buffer.writeAll(["\"minPointLength\":", this._minPointLength, ","], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 

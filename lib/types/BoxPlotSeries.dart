@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,30 +24,30 @@ import 'OptionFragment.dart';
  */
 class BoxPlotSeries extends ColumnSeries {
   BoxPlotSeries() : super();
-  bool? m_doQuartiles;  
+  bool? _doQuartiles;  
 
   bool get doQuartiles { 
-    if (this.m_doQuartiles == null) {
-      this.m_doQuartiles = false;
+    if (this._doQuartiles == null) {
+      this._doQuartiles = false;
     }
-    return this.m_doQuartiles!;
+    return this._doQuartiles!;
   }
 
   void set doQuartiles (bool v) {
-    this.m_doQuartiles = v;
+    this._doQuartiles = v;
   }
     
-  String? m_pointValKey;  
+  String? _pointValKey;  
 
   String get pointValKey { 
-    if (this.m_pointValKey == null) {
-      this.m_pointValKey = "";
+    if (this._pointValKey == null) {
+      this._pointValKey = "";
     }
-    return this.m_pointValKey!;
+    return this._pointValKey!;
   }
 
   void set pointValKey (String v) {
-    this.m_pointValKey = v;
+    this._pointValKey = v;
   }
     
 
@@ -58,16 +58,16 @@ class BoxPlotSeries extends ColumnSeries {
     super.toJSONInner(buffer);
 
     
-    if (this.m_doQuartiles != null) {  
-      buffer.writeAll(["\"doQuartiles\":", this.m_doQuartiles, ","], "");
+    if (this._doQuartiles != null) {  
+      buffer.writeAll(["\"doQuartiles\":", this._doQuartiles, ","], "");
     }
 
     // NOTE: skip serialization of pointArrayMap (type string[] is ignored)} 
 
     // NOTE: skip serialization of pointClass (type typeof BoxPlotPoint is ignored)} 
 
-    if (this.m_pointValKey != null) {  
-      buffer.writeAll(["\"pointValKey\":", this.m_pointValKey, ","], "");
+    if (this._pointValKey != null) {  
+      buffer.writeAll(["\"pointValKey\":\`", this._pointValKey, "\`,"], "");
     }
   }
 

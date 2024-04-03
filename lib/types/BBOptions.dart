@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -38,9 +38,7 @@ class BBOptions extends SMAOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_params != null) {  
-      buffer.writeAll(["\"params\":", this.m_params?.toJSON(), ","], "");
-    }
+    // NOTE: skip serialization of params (type BBParamsOptions is ignored)} 
   }
 
 }

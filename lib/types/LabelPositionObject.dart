@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -26,69 +26,69 @@ import 'OptionFragment.dart';
  */
 class LabelPositionObject extends OptionFragment {
   LabelPositionObject() : super();
-  String? m_alignment;  
+  String? _alignment;  
 
   String get alignment { 
-    if (this.m_alignment == null) {
-      this.m_alignment = "";
+    if (this._alignment == null) {
+      this._alignment = "";
     }
-    return this.m_alignment!;
+    return this._alignment!;
   }
 
   void set alignment (String v) {
-    this.m_alignment = v;
+    this._alignment = v;
   }
     
-  double? m_bottom;  
+  double? _bottom;  
 
   double get bottom { 
-    if (this.m_bottom == null) {
-      this.m_bottom = 0;
+    if (this._bottom == null) {
+      this._bottom = 0;
     }
-    return this.m_bottom!;
+    return this._bottom!;
   }
 
   void set bottom (double v) {
-    this.m_bottom = v;
+    this._bottom = v;
   }
     
-  double? m_distance;  
+  double? _distance;  
 
   double get distance { 
-    if (this.m_distance == null) {
-      this.m_distance = 0;
+    if (this._distance == null) {
+      this._distance = 0;
     }
-    return this.m_distance!;
+    return this._distance!;
   }
 
   void set distance (double v) {
-    this.m_distance = v;
+    this._distance = v;
   }
     
-  double? m_sideOverflow;  
+  double? _sideOverflow;  
 
   double get sideOverflow { 
-    if (this.m_sideOverflow == null) {
-      this.m_sideOverflow = 0;
+    if (this._sideOverflow == null) {
+      this._sideOverflow = 0;
     }
-    return this.m_sideOverflow!;
+    return this._sideOverflow!;
   }
 
   void set sideOverflow (double v) {
-    this.m_sideOverflow = v;
+    this._sideOverflow = v;
   }
     
-  double? m_top;  
+  double? _top;  
 
   double get top { 
-    if (this.m_top == null) {
-      this.m_top = 0;
+    if (this._top == null) {
+      this._top = 0;
     }
-    return this.m_top!;
+    return this._top!;
   }
 
   void set top (double v) {
-    this.m_top = v;
+    this._top = v;
   }
     
 
@@ -99,34 +99,34 @@ class LabelPositionObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_alignment != null) {  
-      buffer.writeAll(["\"alignment\":", this.m_alignment, ","], "");
+    if (this._alignment != null) {  
+      buffer.writeAll(["\"alignment\":\`", this._alignment, "\`,"], "");
     }
 
     // NOTE: skip serialization of attribs (type SVGAttributes is ignored)} 
 
-    if (this.m_bottom != null) {  
-      buffer.writeAll(["\"bottom\":", this.m_bottom, ","], "");
+    if (this._bottom != null) {  
+      buffer.writeAll(["\"bottom\":", this._bottom, ","], "");
     }
 
     // NOTE: skip serialization of connectorPosition (type LabelConnectorPositionObject is ignored)} 
 
     // NOTE: skip serialization of computed (type Generic is ignored)} 
 
-    if (this.m_distance != null) {  
-      buffer.writeAll(["\"distance\":", this.m_distance, ","], "");
+    if (this._distance != null) {  
+      buffer.writeAll(["\"distance\":", this._distance, ","], "");
     }
 
     // NOTE: skip serialization of natural (type PositionObject is ignored)} 
 
     // NOTE: skip serialization of posAttribs (type SVGAttributes is ignored)} 
 
-    if (this.m_sideOverflow != null) {  
-      buffer.writeAll(["\"sideOverflow\":", this.m_sideOverflow, ","], "");
+    if (this._sideOverflow != null) {  
+      buffer.writeAll(["\"sideOverflow\":", this._sideOverflow, ","], "");
     }
 
-    if (this.m_top != null) {  
-      buffer.writeAll(["\"top\":", this.m_top, ","], "");
+    if (this._top != null) {  
+      buffer.writeAll(["\"top\":", this._top, ","], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,30 +24,30 @@ import 'OptionFragment.dart';
  */
 class WordcloudPointOptions extends ColumnPointOptions {
   WordcloudPointOptions() : super();
-  String? m_name;  
+  String? _name;  
 
   String get name { 
-    if (this.m_name == null) {
-      this.m_name = "";
+    if (this._name == null) {
+      this._name = "";
     }
-    return this.m_name!;
+    return this._name!;
   }
 
   void set name (String v) {
-    this.m_name = v;
+    this._name = v;
   }
     
-  double? m_weight;  
+  double? _weight;  
 
   double get weight { 
-    if (this.m_weight == null) {
-      this.m_weight = 0;
+    if (this._weight == null) {
+      this._weight = 0;
     }
-    return this.m_weight!;
+    return this._weight!;
   }
 
   void set weight (double v) {
-    this.m_weight = v;
+    this._weight = v;
   }
     
 
@@ -58,12 +58,12 @@ class WordcloudPointOptions extends ColumnPointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_name != null) {  
-      buffer.writeAll(["\"name\":", this.m_name, ","], "");
+    if (this._name != null) {  
+      buffer.writeAll(["\"name\":\`", this._name, "\`,"], "");
     }
 
-    if (this.m_weight != null) {  
-      buffer.writeAll(["\"weight\":", this.m_weight, ","], "");
+    if (this._weight != null) {  
+      buffer.writeAll(["\"weight\":", this._weight, ","], "");
     }
   }
 

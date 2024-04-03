@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,17 +23,17 @@ import 'OptionFragment.dart';
  */
 class EventWrapperObject extends OptionFragment {
   EventWrapperObject() : super();
-  double? m_order;  
+  double? _order;  
 
   double get order { 
-    if (this.m_order == null) {
-      this.m_order = 0;
+    if (this._order == null) {
+      this._order = 0;
     }
-    return this.m_order!;
+    return this._order!;
   }
 
   void set order (double v) {
-    this.m_order = v;
+    this._order = v;
   }
     
 
@@ -44,8 +44,8 @@ class EventWrapperObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_order != null) {  
-      buffer.writeAll(["\"order\":", this.m_order, ","], "");
+    if (this._order != null) {  
+      buffer.writeAll(["\"order\":", this._order, ","], "");
     }
   }
 

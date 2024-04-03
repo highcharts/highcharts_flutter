@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -31,30 +31,30 @@ class AOOptions extends SMAOptions {
    * 
    * Defaults to '#06b535'. 
       */
-  String? m_greaterBarColor;  
+  String? _greaterBarColor;  
 
   String get greaterBarColor { 
-    if (this.m_greaterBarColor == null) {
-      this.m_greaterBarColor = "";
+    if (this._greaterBarColor == null) {
+      this._greaterBarColor = "";
     }
-    return this.m_greaterBarColor!;
+    return this._greaterBarColor!;
   }
 
   void set greaterBarColor (String v) {
-    this.m_greaterBarColor = v;
+    this._greaterBarColor = v;
   }
     
-  double? m_groupPadding;  
+  double? _groupPadding;  
 
   double get groupPadding { 
-    if (this.m_groupPadding == null) {
-      this.m_groupPadding = 0;
+    if (this._groupPadding == null) {
+      this._groupPadding = 0;
     }
-    return this.m_groupPadding!;
+    return this._groupPadding!;
   }
 
   void set groupPadding (double v) {
-    this.m_groupPadding = v;
+    this._groupPadding = v;
   }
     
   /**
@@ -64,30 +64,30 @@ class AOOptions extends SMAOptions {
    * 
    * Defaults to '#f21313'. 
       */
-  String? m_lowerBarColor;  
+  String? _lowerBarColor;  
 
   String get lowerBarColor { 
-    if (this.m_lowerBarColor == null) {
-      this.m_lowerBarColor = "";
+    if (this._lowerBarColor == null) {
+      this._lowerBarColor = "";
     }
-    return this.m_lowerBarColor!;
+    return this._lowerBarColor!;
   }
 
   void set lowerBarColor (String v) {
-    this.m_lowerBarColor = v;
+    this._lowerBarColor = v;
   }
     
-  double? m_pointPadding;  
+  double? _pointPadding;  
 
   double get pointPadding { 
-    if (this.m_pointPadding == null) {
-      this.m_pointPadding = 0;
+    if (this._pointPadding == null) {
+      this._pointPadding = 0;
     }
-    return this.m_pointPadding!;
+    return this._pointPadding!;
   }
 
   void set pointPadding (double v) {
-    this.m_pointPadding = v;
+    this._pointPadding = v;
   }
     
   // NOTE: states skipped - type Generic is ignored in gen
@@ -99,17 +99,17 @@ class AOOptions extends SMAOptions {
    * 
    * Defaults to '0'. 
       */
-  double? m_threshold;  
+  double? _threshold;  
 
   double get threshold { 
-    if (this.m_threshold == null) {
-      this.m_threshold = 0;
+    if (this._threshold == null) {
+      this._threshold = 0;
     }
-    return this.m_threshold!;
+    return this._threshold!;
   }
 
   void set threshold (double v) {
-    this.m_threshold = v;
+    this._threshold = v;
   }
     
 
@@ -120,26 +120,26 @@ class AOOptions extends SMAOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_greaterBarColor != null) {  
-      buffer.writeAll(["\"greaterBarColor\":", this.m_greaterBarColor, ","], "");
+    if (this._greaterBarColor != null) {  
+      buffer.writeAll(["\"greaterBarColor\":\`", this._greaterBarColor, "\`,"], "");
     }
 
-    if (this.m_groupPadding != null) {  
-      buffer.writeAll(["\"groupPadding\":", this.m_groupPadding, ","], "");
+    if (this._groupPadding != null) {  
+      buffer.writeAll(["\"groupPadding\":", this._groupPadding, ","], "");
     }
 
-    if (this.m_lowerBarColor != null) {  
-      buffer.writeAll(["\"lowerBarColor\":", this.m_lowerBarColor, ","], "");
+    if (this._lowerBarColor != null) {  
+      buffer.writeAll(["\"lowerBarColor\":\`", this._lowerBarColor, "\`,"], "");
     }
 
-    if (this.m_pointPadding != null) {  
-      buffer.writeAll(["\"pointPadding\":", this.m_pointPadding, ","], "");
+    if (this._pointPadding != null) {  
+      buffer.writeAll(["\"pointPadding\":", this._pointPadding, ","], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 
 
-    if (this.m_threshold != null) {  
-      buffer.writeAll(["\"threshold\":", this.m_threshold, ","], "");
+    if (this._threshold != null) {  
+      buffer.writeAll(["\"threshold\":", this._threshold, ","], "");
     }
   }
 

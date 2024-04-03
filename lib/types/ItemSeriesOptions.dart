@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -31,17 +31,17 @@ class ItemSeriesOptions extends PieSeriesOptions {
    * 
    * Defaults to '0.1'. 
       */
-  double? m_itemPadding;  
+  double? _itemPadding;  
 
   double get itemPadding { 
-    if (this.m_itemPadding == null) {
-      this.m_itemPadding = 0;
+    if (this._itemPadding == null) {
+      this._itemPadding = 0;
     }
-    return this.m_itemPadding!;
+    return this._itemPadding!;
   }
 
   void set itemPadding (double v) {
-    this.m_itemPadding = v;
+    this._itemPadding = v;
   }
     
   /**
@@ -50,17 +50,17 @@ class ItemSeriesOptions extends PieSeriesOptions {
    * 
    * Defaults to 'vertical'. 
       */
-  String? m_layout;  
+  String? _layout;  
 
   String get layout { 
-    if (this.m_layout == null) {
-      this.m_layout = "";
+    if (this._layout == null) {
+      this._layout = "";
     }
-    return this.m_layout!;
+    return this._layout!;
   }
 
   void set layout (String v) {
-    this.m_layout = v;
+    this._layout = v;
   }
     
   /**
@@ -79,17 +79,17 @@ class ItemSeriesOptions extends PieSeriesOptions {
    * The number of rows to display in the rectangular or circular view. If
    * the `innerSize` is set, it will be overridden by the `rows` setting.  
       */
-  double? m_rows;  
+  double? _rows;  
 
   double get rows { 
-    if (this.m_rows == null) {
-      this.m_rows = 0;
+    if (this._rows == null) {
+      this._rows = 0;
     }
-    return this.m_rows!;
+    return this._rows!;
   }
 
   void set rows (double v) {
-    this.m_rows = v;
+    this._rows = v;
   }
     
   // NOTE: states skipped - type Generic is ignored in gen
@@ -102,20 +102,18 @@ class ItemSeriesOptions extends PieSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_itemPadding != null) {  
-      buffer.writeAll(["\"itemPadding\":", this.m_itemPadding, ","], "");
+    if (this._itemPadding != null) {  
+      buffer.writeAll(["\"itemPadding\":", this._itemPadding, ","], "");
     }
 
-    if (this.m_layout != null) {  
-      buffer.writeAll(["\"layout\":", this.m_layout, ","], "");
+    if (this._layout != null) {  
+      buffer.writeAll(["\"layout\":\`", this._layout, "\`,"], "");
     }
 
-    if (this.m_marker != null) {  
-      buffer.writeAll(["\"marker\":", this.m_marker?.toJSON(), ","], "");
-    }
+    // NOTE: skip serialization of marker (type ItemPointMarkerOptions is ignored)} 
 
-    if (this.m_rows != null) {  
-      buffer.writeAll(["\"rows\":", this.m_rows, ","], "");
+    if (this._rows != null) {  
+      buffer.writeAll(["\"rows\":", this._rows, ","], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 

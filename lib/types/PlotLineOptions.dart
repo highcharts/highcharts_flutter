@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -25,173 +25,173 @@ import 'OptionFragment.dart';
  */
 class PlotLineOptions extends OptionFragment {
   PlotLineOptions() : super();
-  bool? m_acrossPanes;  
+  bool? _acrossPanes;  
 
   bool get acrossPanes { 
-    if (this.m_acrossPanes == null) {
-      this.m_acrossPanes = false;
+    if (this._acrossPanes == null) {
+      this._acrossPanes = false;
     }
-    return this.m_acrossPanes!;
+    return this._acrossPanes!;
   }
 
   void set acrossPanes (bool v) {
-    this.m_acrossPanes = v;
+    this._acrossPanes = v;
   }
     
-  String? m_className;  
+  String? _className;  
 
   String get className { 
-    if (this.m_className == null) {
-      this.m_className = "";
+    if (this._className == null) {
+      this._className = "";
     }
-    return this.m_className!;
+    return this._className!;
   }
 
   void set className (String v) {
-    this.m_className = v;
+    this._className = v;
   }
     
-  String? m_color;  
+  String? _color;  
 
   String get color { 
-    if (this.m_color == null) {
-      this.m_color = "";
+    if (this._color == null) {
+      this._color = "";
     }
-    return this.m_color!;
+    return this._color!;
   }
 
   void set color (String v) {
-    this.m_color = v;
+    this._color = v;
   }
     
-  String? m_dashStyle;  
+  String? _dashStyle;  
 
   String get dashStyle { 
-    if (this.m_dashStyle == null) {
-      this.m_dashStyle = "";
+    if (this._dashStyle == null) {
+      this._dashStyle = "";
     }
-    return this.m_dashStyle!;
+    return this._dashStyle!;
   }
 
   void set dashStyle (String v) {
-    this.m_dashStyle = v;
+    this._dashStyle = v;
   }
     
-  String? m_id;  
+  String? _id;  
 
   String get id { 
-    if (this.m_id == null) {
-      this.m_id = "";
+    if (this._id == null) {
+      this._id = "";
     }
-    return this.m_id!;
+    return this._id!;
   }
 
   void set id (String v) {
-    this.m_id = v;
+    this._id = v;
   }
     
-  double? m_translatedValue;  
+  double? _translatedValue;  
 
   double get translatedValue { 
-    if (this.m_translatedValue == null) {
-      this.m_translatedValue = 0;
+    if (this._translatedValue == null) {
+      this._translatedValue = 0;
     }
-    return this.m_translatedValue!;
+    return this._translatedValue!;
   }
 
   void set translatedValue (double v) {
-    this.m_translatedValue = v;
+    this._translatedValue = v;
   }
     
-  double? m_value;  
+  double? _value;  
 
   double get value { 
-    if (this.m_value == null) {
-      this.m_value = 0;
+    if (this._value == null) {
+      this._value = 0;
     }
-    return this.m_value!;
+    return this._value!;
   }
 
   void set value (double v) {
-    this.m_value = v;
+    this._value = v;
   }
     
-  double? m_width;  
+  double? _width;  
 
   double get width { 
-    if (this.m_width == null) {
-      this.m_width = 0;
+    if (this._width == null) {
+      this._width = 0;
     }
-    return this.m_width!;
+    return this._width!;
   }
 
   void set width (double v) {
-    this.m_width = v;
+    this._width = v;
   }
     
-  double? m_zIndex;  
+  double? _zIndex;  
 
   double get zIndex { 
-    if (this.m_zIndex == null) {
-      this.m_zIndex = 0;
+    if (this._zIndex == null) {
+      this._zIndex = 0;
     }
-    return this.m_zIndex!;
+    return this._zIndex!;
   }
 
   void set zIndex (double v) {
-    this.m_zIndex = v;
+    this._zIndex = v;
   }
     
-  double? m_chartX;  
+  double? _chartX;  
 
   double get chartX { 
-    if (this.m_chartX == null) {
-      this.m_chartX = 0;
+    if (this._chartX == null) {
+      this._chartX = 0;
     }
-    return this.m_chartX!;
+    return this._chartX!;
   }
 
   void set chartX (double v) {
-    this.m_chartX = v;
+    this._chartX = v;
   }
     
-  double? m_chartY;  
+  double? _chartY;  
 
   double get chartY { 
-    if (this.m_chartY == null) {
-      this.m_chartY = 0;
+    if (this._chartY == null) {
+      this._chartY = 0;
     }
-    return this.m_chartY!;
+    return this._chartY!;
   }
 
   void set chartY (double v) {
-    this.m_chartY = v;
+    this._chartY = v;
   }
     
-  bool? m_isCrosshair;  
+  bool? _isCrosshair;  
 
   bool get isCrosshair { 
-    if (this.m_isCrosshair == null) {
-      this.m_isCrosshair = false;
+    if (this._isCrosshair == null) {
+      this._isCrosshair = false;
     }
-    return this.m_isCrosshair!;
+    return this._isCrosshair!;
   }
 
   void set isCrosshair (bool v) {
-    this.m_isCrosshair = v;
+    this._isCrosshair = v;
   }
     
-  bool? m_reverse;  
+  bool? _reverse;  
 
   bool get reverse { 
-    if (this.m_reverse == null) {
-      this.m_reverse = false;
+    if (this._reverse == null) {
+      this._reverse = false;
     }
-    return this.m_reverse!;
+    return this._reverse!;
   }
 
   void set reverse (bool v) {
-    this.m_reverse = v;
+    this._reverse = v;
   }
     
 
@@ -202,62 +202,62 @@ class PlotLineOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_acrossPanes != null) {  
-      buffer.writeAll(["\"acrossPanes\":", this.m_acrossPanes, ","], "");
+    if (this._acrossPanes != null) {  
+      buffer.writeAll(["\"acrossPanes\":", this._acrossPanes, ","], "");
     }
 
-    if (this.m_className != null) {  
-      buffer.writeAll(["\"className\":", this.m_className, ","], "");
+    if (this._className != null) {  
+      buffer.writeAll(["\"className\":\`", this._className, "\`,"], "");
     }
 
-    if (this.m_color != null) {  
-      buffer.writeAll(["\"color\":", this.m_color, ","], "");
+    if (this._color != null) {  
+      buffer.writeAll(["\"color\":\`", this._color, "\`,"], "");
     }
 
-    if (this.m_dashStyle != null) {  
-      buffer.writeAll(["\"dashStyle\":", this.m_dashStyle, ","], "");
+    if (this._dashStyle != null) {  
+      buffer.writeAll(["\"dashStyle\":\`", this._dashStyle, "\`,"], "");
     }
 
     // NOTE: skip serialization of events (type any is ignored)} 
 
-    if (this.m_id != null) {  
-      buffer.writeAll(["\"id\":", this.m_id, ","], "");
+    if (this._id != null) {  
+      buffer.writeAll(["\"id\":\`", this._id, "\`,"], "");
     }
 
     // NOTE: skip serialization of label (type PlotLineLabelOptions is ignored)} 
 
-    if (this.m_translatedValue != null) {  
-      buffer.writeAll(["\"translatedValue\":", this.m_translatedValue, ","], "");
+    if (this._translatedValue != null) {  
+      buffer.writeAll(["\"translatedValue\":", this._translatedValue, ","], "");
     }
 
-    if (this.m_value != null) {  
-      buffer.writeAll(["\"value\":", this.m_value, ","], "");
+    if (this._value != null) {  
+      buffer.writeAll(["\"value\":", this._value, ","], "");
     }
 
-    if (this.m_width != null) {  
-      buffer.writeAll(["\"width\":", this.m_width, ","], "");
+    if (this._width != null) {  
+      buffer.writeAll(["\"width\":", this._width, ","], "");
     }
 
-    if (this.m_zIndex != null) {  
-      buffer.writeAll(["\"zIndex\":", this.m_zIndex, ","], "");
+    if (this._zIndex != null) {  
+      buffer.writeAll(["\"zIndex\":", this._zIndex, ","], "");
     }
 
-    if (this.m_chartX != null) {  
-      buffer.writeAll(["\"chartX\":", this.m_chartX, ","], "");
+    if (this._chartX != null) {  
+      buffer.writeAll(["\"chartX\":", this._chartX, ","], "");
     }
 
-    if (this.m_chartY != null) {  
-      buffer.writeAll(["\"chartY\":", this.m_chartY, ","], "");
+    if (this._chartY != null) {  
+      buffer.writeAll(["\"chartY\":", this._chartY, ","], "");
     }
 
-    if (this.m_isCrosshair != null) {  
-      buffer.writeAll(["\"isCrosshair\":", this.m_isCrosshair, ","], "");
+    if (this._isCrosshair != null) {  
+      buffer.writeAll(["\"isCrosshair\":", this._isCrosshair, ","], "");
     }
 
     // NOTE: skip serialization of point (type Point is ignored)} 
 
-    if (this.m_reverse != null) {  
-      buffer.writeAll(["\"reverse\":", this.m_reverse, ","], "");
+    if (this._reverse != null) {  
+      buffer.writeAll(["\"reverse\":", this._reverse, ","], "");
     }
   }
 

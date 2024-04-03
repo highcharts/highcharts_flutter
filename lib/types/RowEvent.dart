@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,43 +24,43 @@ import 'OptionFragment.dart';
  */
 class RowEvent extends DataEvent {
   RowEvent() : super();
-  String? m_type;  
+  String? _type;  
 
   String get type { 
-    if (this.m_type == null) {
-      this.m_type = "";
+    if (this._type == null) {
+      this._type = "";
     }
-    return this.m_type!;
+    return this._type!;
   }
 
   void set type (String v) {
-    this.m_type = v;
+    this._type = v;
   }
     
-  double? m_rowCount;  
+  double? _rowCount;  
 
   double get rowCount { 
-    if (this.m_rowCount == null) {
-      this.m_rowCount = 0;
+    if (this._rowCount == null) {
+      this._rowCount = 0;
     }
-    return this.m_rowCount!;
+    return this._rowCount!;
   }
 
   void set rowCount (double v) {
-    this.m_rowCount = v;
+    this._rowCount = v;
   }
     
-  double? m_rowIndex;  
+  double? _rowIndex;  
 
   double get rowIndex { 
-    if (this.m_rowIndex == null) {
-      this.m_rowIndex = 0;
+    if (this._rowIndex == null) {
+      this._rowIndex = 0;
     }
-    return this.m_rowIndex!;
+    return this._rowIndex!;
   }
 
   void set rowIndex (double v) {
-    this.m_rowIndex = v;
+    this._rowIndex = v;
   }
     
 
@@ -71,16 +71,16 @@ class RowEvent extends DataEvent {
     super.toJSONInner(buffer);
 
     
-    if (this.m_type != null) {  
-      buffer.writeAll(["\"type\":", this.m_type, ","], "");
+    if (this._type != null) {  
+      buffer.writeAll(["\"type\":\`", this._type, "\`,"], "");
     }
 
-    if (this.m_rowCount != null) {  
-      buffer.writeAll(["\"rowCount\":", this.m_rowCount, ","], "");
+    if (this._rowCount != null) {  
+      buffer.writeAll(["\"rowCount\":", this._rowCount, ","], "");
     }
 
-    if (this.m_rowIndex != null) {  
-      buffer.writeAll(["\"rowIndex\":", this.m_rowIndex, ","], "");
+    if (this._rowIndex != null) {  
+      buffer.writeAll(["\"rowIndex\":", this._rowIndex, ","], "");
     }
 
     // NOTE: skip serialization of rows (type RowObject)[] is ignored)} 

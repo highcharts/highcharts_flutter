@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,30 +24,30 @@ import 'OptionFragment.dart';
  */
 class WordcloudFieldObject extends PolygonBoxObject {
   WordcloudFieldObject() : super();
-  double? m_ratioX;  
+  double? _ratioX;  
 
   double get ratioX { 
-    if (this.m_ratioX == null) {
-      this.m_ratioX = 0;
+    if (this._ratioX == null) {
+      this._ratioX = 0;
     }
-    return this.m_ratioX!;
+    return this._ratioX!;
   }
 
   void set ratioX (double v) {
-    this.m_ratioX = v;
+    this._ratioX = v;
   }
     
-  double? m_ratioY;  
+  double? _ratioY;  
 
   double get ratioY { 
-    if (this.m_ratioY == null) {
-      this.m_ratioY = 0;
+    if (this._ratioY == null) {
+      this._ratioY = 0;
     }
-    return this.m_ratioY!;
+    return this._ratioY!;
   }
 
   void set ratioY (double v) {
-    this.m_ratioY = v;
+    this._ratioY = v;
   }
     
 
@@ -58,12 +58,12 @@ class WordcloudFieldObject extends PolygonBoxObject {
     super.toJSONInner(buffer);
 
     
-    if (this.m_ratioX != null) {  
-      buffer.writeAll(["\"ratioX\":", this.m_ratioX, ","], "");
+    if (this._ratioX != null) {  
+      buffer.writeAll(["\"ratioX\":", this._ratioX, ","], "");
     }
 
-    if (this.m_ratioY != null) {  
-      buffer.writeAll(["\"ratioY\":", this.m_ratioY, ","], "");
+    if (this._ratioY != null) {  
+      buffer.writeAll(["\"ratioY\":", this._ratioY, ","], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,43 +24,43 @@ import 'OptionFragment.dart';
  */
 class DistributedBoxObject extends BoxObject {
   DistributedBoxObject() : super();
-  double? m_pos;  
+  double? _pos;  
 
   double get pos { 
-    if (this.m_pos == null) {
-      this.m_pos = 0;
+    if (this._pos == null) {
+      this._pos = 0;
     }
-    return this.m_pos!;
+    return this._pos!;
   }
 
   void set pos (double v) {
-    this.m_pos = v;
+    this._pos = v;
   }
     
-  double? m_anchorX;  
+  double? _anchorX;  
 
   double get anchorX { 
-    if (this.m_anchorX == null) {
-      this.m_anchorX = 0;
+    if (this._anchorX == null) {
+      this._anchorX = 0;
     }
-    return this.m_anchorX!;
+    return this._anchorX!;
   }
 
   void set anchorX (double v) {
-    this.m_anchorX = v;
+    this._anchorX = v;
   }
     
-  double? m_plotX;  
+  double? _plotX;  
 
   double get plotX { 
-    if (this.m_plotX == null) {
-      this.m_plotX = 0;
+    if (this._plotX == null) {
+      this._plotX = 0;
     }
-    return this.m_plotX!;
+    return this._plotX!;
   }
 
   void set plotX (double v) {
-    this.m_plotX = v;
+    this._plotX = v;
   }
     
 
@@ -71,16 +71,16 @@ class DistributedBoxObject extends BoxObject {
     super.toJSONInner(buffer);
 
     
-    if (this.m_pos != null) {  
-      buffer.writeAll(["\"pos\":", this.m_pos, ","], "");
+    if (this._pos != null) {  
+      buffer.writeAll(["\"pos\":", this._pos, ","], "");
     }
 
-    if (this.m_anchorX != null) {  
-      buffer.writeAll(["\"anchorX\":", this.m_anchorX, ","], "");
+    if (this._anchorX != null) {  
+      buffer.writeAll(["\"anchorX\":", this._anchorX, ","], "");
     }
 
-    if (this.m_plotX != null) {  
-      buffer.writeAll(["\"plotX\":", this.m_plotX, ","], "");
+    if (this._plotX != null) {  
+      buffer.writeAll(["\"plotX\":", this._plotX, ","], "");
     }
   }
 

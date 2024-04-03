@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,17 +24,17 @@ import 'OptionFragment.dart';
  */
 class VennLabelPositionObject extends OptionFragment {
   VennLabelPositionObject() : super();
-  double? m_margin;  
+  double? _margin;  
 
   double get margin { 
-    if (this.m_margin == null) {
-      this.m_margin = 0;
+    if (this._margin == null) {
+      this._margin = 0;
     }
-    return this.m_margin!;
+    return this._margin!;
   }
 
   void set margin (double v) {
-    this.m_margin = v;
+    this._margin = v;
   }
     
 
@@ -47,8 +47,8 @@ class VennLabelPositionObject extends OptionFragment {
     
     // NOTE: skip serialization of point (type PositionObject is ignored)} 
 
-    if (this.m_margin != null) {  
-      buffer.writeAll(["\"margin\":", this.m_margin, ","], "");
+    if (this._margin != null) {  
+      buffer.writeAll(["\"margin\":", this._margin, ","], "");
     }
   }
 

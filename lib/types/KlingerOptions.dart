@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -31,17 +31,17 @@ class KlingerOptions extends SMAOptions {
       */
   /** NOTE: extparams is skipped here for now, as it overrides the base type. */
 
-  KlingerSignalOptions? m_signalLine;  
+  KlingerSignalOptions? _signalLine;  
 
   KlingerSignalOptions get signalLine { 
-    if (this.m_signalLine == null) {
-      this.m_signalLine = KlingerSignalOptions();
+    if (this._signalLine == null) {
+      this._signalLine = KlingerSignalOptions();
     }
-    return this.m_signalLine!;
+    return this._signalLine!;
   }
 
   void set signalLine (KlingerSignalOptions v) {
-    this.m_signalLine = v;
+    this._signalLine = v;
   }
     
 
@@ -52,12 +52,10 @@ class KlingerOptions extends SMAOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_params != null) {  
-      buffer.writeAll(["\"params\":", this.m_params?.toJSON(), ","], "");
-    }
+    // NOTE: skip serialization of params (type KlingerParamsOptions is ignored)} 
 
-    if (this.m_signalLine != null) {  
-      buffer.writeAll(["\"signalLine\":", this.m_signalLine?.toJSON(), ","], "");
+    if (this._signalLine != null) {  
+      buffer.writeAll(["\"signalLine\":", this._signalLine?.toJSON(), ","], "");
     }
   }
 

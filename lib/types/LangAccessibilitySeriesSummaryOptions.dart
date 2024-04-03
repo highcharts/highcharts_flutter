@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,316 +23,316 @@ import 'OptionFragment.dart';
  */
 class LangAccessibilitySeriesSummaryOptions extends OptionFragment {
   LangAccessibilitySeriesSummaryOptions() : super();
-  String? m_bar;  
+  String? _bar;  
 
   String get bar { 
-    if (this.m_bar == null) {
-      this.m_bar = "";
+    if (this._bar == null) {
+      this._bar = "";
     }
-    return this.m_bar!;
+    return this._bar!;
   }
 
   void set bar (String v) {
-    this.m_bar = v;
+    this._bar = v;
   }
     
-  String? m_barCombination;  
+  String? _barCombination;  
 
   String get barCombination { 
-    if (this.m_barCombination == null) {
-      this.m_barCombination = "";
+    if (this._barCombination == null) {
+      this._barCombination = "";
     }
-    return this.m_barCombination!;
+    return this._barCombination!;
   }
 
   void set barCombination (String v) {
-    this.m_barCombination = v;
+    this._barCombination = v;
   }
     
-  String? m_boxplot;  
+  String? _boxplot;  
 
   String get boxplot { 
-    if (this.m_boxplot == null) {
-      this.m_boxplot = "";
+    if (this._boxplot == null) {
+      this._boxplot = "";
     }
-    return this.m_boxplot!;
+    return this._boxplot!;
   }
 
   void set boxplot (String v) {
-    this.m_boxplot = v;
+    this._boxplot = v;
   }
     
-  String? m_boxplotCombination;  
+  String? _boxplotCombination;  
 
   String get boxplotCombination { 
-    if (this.m_boxplotCombination == null) {
-      this.m_boxplotCombination = "";
+    if (this._boxplotCombination == null) {
+      this._boxplotCombination = "";
     }
-    return this.m_boxplotCombination!;
+    return this._boxplotCombination!;
   }
 
   void set boxplotCombination (String v) {
-    this.m_boxplotCombination = v;
+    this._boxplotCombination = v;
   }
     
-  String? m_bubble;  
+  String? _bubble;  
 
   String get bubble { 
-    if (this.m_bubble == null) {
-      this.m_bubble = "";
+    if (this._bubble == null) {
+      this._bubble = "";
     }
-    return this.m_bubble!;
+    return this._bubble!;
   }
 
   void set bubble (String v) {
-    this.m_bubble = v;
+    this._bubble = v;
   }
     
-  String? m_bubbleCombination;  
+  String? _bubbleCombination;  
 
   String get bubbleCombination { 
-    if (this.m_bubbleCombination == null) {
-      this.m_bubbleCombination = "";
+    if (this._bubbleCombination == null) {
+      this._bubbleCombination = "";
     }
-    return this.m_bubbleCombination!;
+    return this._bubbleCombination!;
   }
 
   void set bubbleCombination (String v) {
-    this.m_bubbleCombination = v;
+    this._bubbleCombination = v;
   }
     
-  String? m_column;  
+  String? _column;  
 
   String get column { 
-    if (this.m_column == null) {
-      this.m_column = "";
+    if (this._column == null) {
+      this._column = "";
     }
-    return this.m_column!;
+    return this._column!;
   }
 
   void set column (String v) {
-    this.m_column = v;
+    this._column = v;
   }
     
-  String? m_columnCombination;  
+  String? _columnCombination;  
 
   String get columnCombination { 
-    if (this.m_columnCombination == null) {
-      this.m_columnCombination = "";
+    if (this._columnCombination == null) {
+      this._columnCombination = "";
     }
-    return this.m_columnCombination!;
+    return this._columnCombination!;
   }
 
   void set columnCombination (String v) {
-    this.m_columnCombination = v;
+    this._columnCombination = v;
   }
     
-  String? m__default /** WARN: default is rewritten as it's a keyword */;  
+  String? _kw_default /** WARN: default is rewritten as it's a keyword */;  
 
-  String get _default /** WARN: default is rewritten as it's a keyword */ { 
-    if (this.m__default /** WARN: default is rewritten as it's a keyword */ == null) {
-      this.m__default /** WARN: default is rewritten as it's a keyword */ = "";
+  String get kw_default /** WARN: default is rewritten as it's a keyword */ { 
+    if (this._kw_default /** WARN: default is rewritten as it's a keyword */ == null) {
+      this._kw_default /** WARN: default is rewritten as it's a keyword */ = "";
     }
-    return this.m__default /** WARN: default is rewritten as it's a keyword */!;
+    return this._kw_default /** WARN: default is rewritten as it's a keyword */!;
   }
 
-  void set _default /** WARN: default is rewritten as it's a keyword */ (String v) {
-    this.m__default /** WARN: default is rewritten as it's a keyword */ = v;
+  void set kw_default /** WARN: default is rewritten as it's a keyword */ (String v) {
+    this._kw_default /** WARN: default is rewritten as it's a keyword */ = v;
   }
     
-  String? m_defaultCombination;  
+  String? _defaultCombination;  
 
   String get defaultCombination { 
-    if (this.m_defaultCombination == null) {
-      this.m_defaultCombination = "";
+    if (this._defaultCombination == null) {
+      this._defaultCombination = "";
     }
-    return this.m_defaultCombination!;
+    return this._defaultCombination!;
   }
 
   void set defaultCombination (String v) {
-    this.m_defaultCombination = v;
+    this._defaultCombination = v;
   }
     
-  String? m_line;  
+  String? _line;  
 
   String get line { 
-    if (this.m_line == null) {
-      this.m_line = "";
+    if (this._line == null) {
+      this._line = "";
     }
-    return this.m_line!;
+    return this._line!;
   }
 
   void set line (String v) {
-    this.m_line = v;
+    this._line = v;
   }
     
-  String? m_lineCombination;  
+  String? _lineCombination;  
 
   String get lineCombination { 
-    if (this.m_lineCombination == null) {
-      this.m_lineCombination = "";
+    if (this._lineCombination == null) {
+      this._lineCombination = "";
     }
-    return this.m_lineCombination!;
+    return this._lineCombination!;
   }
 
   void set lineCombination (String v) {
-    this.m_lineCombination = v;
+    this._lineCombination = v;
   }
     
-  String? m_map;  
+  String? _map;  
 
   String get map { 
-    if (this.m_map == null) {
-      this.m_map = "";
+    if (this._map == null) {
+      this._map = "";
     }
-    return this.m_map!;
+    return this._map!;
   }
 
   void set map (String v) {
-    this.m_map = v;
+    this._map = v;
   }
     
-  String? m_mapCombination;  
+  String? _mapCombination;  
 
   String get mapCombination { 
-    if (this.m_mapCombination == null) {
-      this.m_mapCombination = "";
+    if (this._mapCombination == null) {
+      this._mapCombination = "";
     }
-    return this.m_mapCombination!;
+    return this._mapCombination!;
   }
 
   void set mapCombination (String v) {
-    this.m_mapCombination = v;
+    this._mapCombination = v;
   }
     
-  String? m_mapbubble;  
+  String? _mapbubble;  
 
   String get mapbubble { 
-    if (this.m_mapbubble == null) {
-      this.m_mapbubble = "";
+    if (this._mapbubble == null) {
+      this._mapbubble = "";
     }
-    return this.m_mapbubble!;
+    return this._mapbubble!;
   }
 
   void set mapbubble (String v) {
-    this.m_mapbubble = v;
+    this._mapbubble = v;
   }
     
-  String? m_mapbubbleCombination;  
+  String? _mapbubbleCombination;  
 
   String get mapbubbleCombination { 
-    if (this.m_mapbubbleCombination == null) {
-      this.m_mapbubbleCombination = "";
+    if (this._mapbubbleCombination == null) {
+      this._mapbubbleCombination = "";
     }
-    return this.m_mapbubbleCombination!;
+    return this._mapbubbleCombination!;
   }
 
   void set mapbubbleCombination (String v) {
-    this.m_mapbubbleCombination = v;
+    this._mapbubbleCombination = v;
   }
     
-  String? m_mapline;  
+  String? _mapline;  
 
   String get mapline { 
-    if (this.m_mapline == null) {
-      this.m_mapline = "";
+    if (this._mapline == null) {
+      this._mapline = "";
     }
-    return this.m_mapline!;
+    return this._mapline!;
   }
 
   void set mapline (String v) {
-    this.m_mapline = v;
+    this._mapline = v;
   }
     
-  String? m_maplineCombination;  
+  String? _maplineCombination;  
 
   String get maplineCombination { 
-    if (this.m_maplineCombination == null) {
-      this.m_maplineCombination = "";
+    if (this._maplineCombination == null) {
+      this._maplineCombination = "";
     }
-    return this.m_maplineCombination!;
+    return this._maplineCombination!;
   }
 
   void set maplineCombination (String v) {
-    this.m_maplineCombination = v;
+    this._maplineCombination = v;
   }
     
-  String? m_pie;  
+  String? _pie;  
 
   String get pie { 
-    if (this.m_pie == null) {
-      this.m_pie = "";
+    if (this._pie == null) {
+      this._pie = "";
     }
-    return this.m_pie!;
+    return this._pie!;
   }
 
   void set pie (String v) {
-    this.m_pie = v;
+    this._pie = v;
   }
     
-  String? m_pieCombination;  
+  String? _pieCombination;  
 
   String get pieCombination { 
-    if (this.m_pieCombination == null) {
-      this.m_pieCombination = "";
+    if (this._pieCombination == null) {
+      this._pieCombination = "";
     }
-    return this.m_pieCombination!;
+    return this._pieCombination!;
   }
 
   void set pieCombination (String v) {
-    this.m_pieCombination = v;
+    this._pieCombination = v;
   }
     
-  String? m_scatter;  
+  String? _scatter;  
 
   String get scatter { 
-    if (this.m_scatter == null) {
-      this.m_scatter = "";
+    if (this._scatter == null) {
+      this._scatter = "";
     }
-    return this.m_scatter!;
+    return this._scatter!;
   }
 
   void set scatter (String v) {
-    this.m_scatter = v;
+    this._scatter = v;
   }
     
-  String? m_scatterCombination;  
+  String? _scatterCombination;  
 
   String get scatterCombination { 
-    if (this.m_scatterCombination == null) {
-      this.m_scatterCombination = "";
+    if (this._scatterCombination == null) {
+      this._scatterCombination = "";
     }
-    return this.m_scatterCombination!;
+    return this._scatterCombination!;
   }
 
   void set scatterCombination (String v) {
-    this.m_scatterCombination = v;
+    this._scatterCombination = v;
   }
     
-  String? m_spline;  
+  String? _spline;  
 
   String get spline { 
-    if (this.m_spline == null) {
-      this.m_spline = "";
+    if (this._spline == null) {
+      this._spline = "";
     }
-    return this.m_spline!;
+    return this._spline!;
   }
 
   void set spline (String v) {
-    this.m_spline = v;
+    this._spline = v;
   }
     
-  String? m_splineCombination;  
+  String? _splineCombination;  
 
   String get splineCombination { 
-    if (this.m_splineCombination == null) {
-      this.m_splineCombination = "";
+    if (this._splineCombination == null) {
+      this._splineCombination = "";
     }
-    return this.m_splineCombination!;
+    return this._splineCombination!;
   }
 
   void set splineCombination (String v) {
-    this.m_splineCombination = v;
+    this._splineCombination = v;
   }
     
 
@@ -343,100 +343,100 @@ class LangAccessibilitySeriesSummaryOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_bar != null) {  
-      buffer.writeAll(["\"bar\":", this.m_bar, ","], "");
+    if (this._bar != null) {  
+      buffer.writeAll(["\"bar\":\`", this._bar, "\`,"], "");
     }
 
-    if (this.m_barCombination != null) {  
-      buffer.writeAll(["\"barCombination\":", this.m_barCombination, ","], "");
+    if (this._barCombination != null) {  
+      buffer.writeAll(["\"barCombination\":\`", this._barCombination, "\`,"], "");
     }
 
-    if (this.m_boxplot != null) {  
-      buffer.writeAll(["\"boxplot\":", this.m_boxplot, ","], "");
+    if (this._boxplot != null) {  
+      buffer.writeAll(["\"boxplot\":\`", this._boxplot, "\`,"], "");
     }
 
-    if (this.m_boxplotCombination != null) {  
-      buffer.writeAll(["\"boxplotCombination\":", this.m_boxplotCombination, ","], "");
+    if (this._boxplotCombination != null) {  
+      buffer.writeAll(["\"boxplotCombination\":\`", this._boxplotCombination, "\`,"], "");
     }
 
-    if (this.m_bubble != null) {  
-      buffer.writeAll(["\"bubble\":", this.m_bubble, ","], "");
+    if (this._bubble != null) {  
+      buffer.writeAll(["\"bubble\":\`", this._bubble, "\`,"], "");
     }
 
-    if (this.m_bubbleCombination != null) {  
-      buffer.writeAll(["\"bubbleCombination\":", this.m_bubbleCombination, ","], "");
+    if (this._bubbleCombination != null) {  
+      buffer.writeAll(["\"bubbleCombination\":\`", this._bubbleCombination, "\`,"], "");
     }
 
-    if (this.m_column != null) {  
-      buffer.writeAll(["\"column\":", this.m_column, ","], "");
+    if (this._column != null) {  
+      buffer.writeAll(["\"column\":\`", this._column, "\`,"], "");
     }
 
-    if (this.m_columnCombination != null) {  
-      buffer.writeAll(["\"columnCombination\":", this.m_columnCombination, ","], "");
+    if (this._columnCombination != null) {  
+      buffer.writeAll(["\"columnCombination\":\`", this._columnCombination, "\`,"], "");
     }
 
-    if (this.m__default /** WARN: default is rewritten as it's a keyword */ != null) {  
-      buffer.writeAll(["\"default\":", this.m__default /** WARN: default is rewritten as it's a keyword */, ","], "");
+    if (this._kw_default /** WARN: default is rewritten as it's a keyword */ != null) {  
+      buffer.writeAll(["\"default\":\`", this._kw_default /** WARN: default is rewritten as it's a keyword */, "\`,"], "");
     }
 
-    if (this.m_defaultCombination != null) {  
-      buffer.writeAll(["\"defaultCombination\":", this.m_defaultCombination, ","], "");
+    if (this._defaultCombination != null) {  
+      buffer.writeAll(["\"defaultCombination\":\`", this._defaultCombination, "\`,"], "");
     }
 
-    if (this.m_line != null) {  
-      buffer.writeAll(["\"line\":", this.m_line, ","], "");
+    if (this._line != null) {  
+      buffer.writeAll(["\"line\":\`", this._line, "\`,"], "");
     }
 
-    if (this.m_lineCombination != null) {  
-      buffer.writeAll(["\"lineCombination\":", this.m_lineCombination, ","], "");
+    if (this._lineCombination != null) {  
+      buffer.writeAll(["\"lineCombination\":\`", this._lineCombination, "\`,"], "");
     }
 
-    if (this.m_map != null) {  
-      buffer.writeAll(["\"map\":", this.m_map, ","], "");
+    if (this._map != null) {  
+      buffer.writeAll(["\"map\":\`", this._map, "\`,"], "");
     }
 
-    if (this.m_mapCombination != null) {  
-      buffer.writeAll(["\"mapCombination\":", this.m_mapCombination, ","], "");
+    if (this._mapCombination != null) {  
+      buffer.writeAll(["\"mapCombination\":\`", this._mapCombination, "\`,"], "");
     }
 
-    if (this.m_mapbubble != null) {  
-      buffer.writeAll(["\"mapbubble\":", this.m_mapbubble, ","], "");
+    if (this._mapbubble != null) {  
+      buffer.writeAll(["\"mapbubble\":\`", this._mapbubble, "\`,"], "");
     }
 
-    if (this.m_mapbubbleCombination != null) {  
-      buffer.writeAll(["\"mapbubbleCombination\":", this.m_mapbubbleCombination, ","], "");
+    if (this._mapbubbleCombination != null) {  
+      buffer.writeAll(["\"mapbubbleCombination\":\`", this._mapbubbleCombination, "\`,"], "");
     }
 
-    if (this.m_mapline != null) {  
-      buffer.writeAll(["\"mapline\":", this.m_mapline, ","], "");
+    if (this._mapline != null) {  
+      buffer.writeAll(["\"mapline\":\`", this._mapline, "\`,"], "");
     }
 
-    if (this.m_maplineCombination != null) {  
-      buffer.writeAll(["\"maplineCombination\":", this.m_maplineCombination, ","], "");
+    if (this._maplineCombination != null) {  
+      buffer.writeAll(["\"maplineCombination\":\`", this._maplineCombination, "\`,"], "");
     }
 
-    if (this.m_pie != null) {  
-      buffer.writeAll(["\"pie\":", this.m_pie, ","], "");
+    if (this._pie != null) {  
+      buffer.writeAll(["\"pie\":\`", this._pie, "\`,"], "");
     }
 
-    if (this.m_pieCombination != null) {  
-      buffer.writeAll(["\"pieCombination\":", this.m_pieCombination, ","], "");
+    if (this._pieCombination != null) {  
+      buffer.writeAll(["\"pieCombination\":\`", this._pieCombination, "\`,"], "");
     }
 
-    if (this.m_scatter != null) {  
-      buffer.writeAll(["\"scatter\":", this.m_scatter, ","], "");
+    if (this._scatter != null) {  
+      buffer.writeAll(["\"scatter\":\`", this._scatter, "\`,"], "");
     }
 
-    if (this.m_scatterCombination != null) {  
-      buffer.writeAll(["\"scatterCombination\":", this.m_scatterCombination, ","], "");
+    if (this._scatterCombination != null) {  
+      buffer.writeAll(["\"scatterCombination\":\`", this._scatterCombination, "\`,"], "");
     }
 
-    if (this.m_spline != null) {  
-      buffer.writeAll(["\"spline\":", this.m_spline, ","], "");
+    if (this._spline != null) {  
+      buffer.writeAll(["\"spline\":\`", this._spline, "\`,"], "");
     }
 
-    if (this.m_splineCombination != null) {  
-      buffer.writeAll(["\"splineCombination\":", this.m_splineCombination, ","], "");
+    if (this._splineCombination != null) {  
+      buffer.writeAll(["\"splineCombination\":\`", this._splineCombination, "\`,"], "");
     }
   }
 

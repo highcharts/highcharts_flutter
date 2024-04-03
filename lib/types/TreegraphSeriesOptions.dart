@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -39,52 +39,78 @@ class TreegraphSeriesOptions extends TreemapSeriesOptions {
    * `.highcharts-data-label-box` and `.highcharts-data-label` class names
    * ([see example](https://www.highcharts.com/samples/highcharts/css/series-datalabels)).  
       */
-  List<TreegraphDataLabelOptions>? dataLabels;
+  List<TreegraphDataLabelOptions>? dataLabels; // TreegraphDataLabelOptions
   /**
    * Options applied to collapse Button. The collape button is the
    * small button which indicates, that the node is collapsable.  
       */
-  CollapseButtonOptions? m_collapseButton;  
+  CollapseButtonOptions? _collapseButton;  
 
   CollapseButtonOptions get collapseButton { 
-    if (this.m_collapseButton == null) {
-      this.m_collapseButton = CollapseButtonOptions();
+    if (this._collapseButton == null) {
+      this._collapseButton = CollapseButtonOptions();
     }
-    return this.m_collapseButton!;
+    return this._collapseButton!;
   }
 
   void set collapseButton (CollapseButtonOptions v) {
-    this.m_collapseButton = v;
+    this._collapseButton = v;
   }
     
   /**
    * Whether the treegraph series should fill the entire plot area in the X
    * axis direction, even when there are collapsed points.  
       */
-  bool? m_fillSpace;  
+  bool? _fillSpace;  
 
   bool get fillSpace { 
-    if (this.m_fillSpace == null) {
-      this.m_fillSpace = false;
+    if (this._fillSpace == null) {
+      this._fillSpace = false;
     }
-    return this.m_fillSpace!;
+    return this._fillSpace!;
   }
 
   void set fillSpace (bool v) {
-    this.m_fillSpace = v;
+    this._fillSpace = v;
   }
     
-  TreegraphLinkOptions? m_link;  
+  TreegraphLinkOptions? _link;  
 
   TreegraphLinkOptions get link { 
-    if (this.m_link == null) {
-      this.m_link = TreegraphLinkOptions();
+    if (this._link == null) {
+      this._link = TreegraphLinkOptions();
     }
-    return this.m_link!;
+    return this._link!;
   }
 
   void set link (TreegraphLinkOptions v) {
-    this.m_link = v;
+    this._link = v;
+  }
+    
+  String? _nodeDistance;  
+
+  String get nodeDistance { 
+    if (this._nodeDistance == null) {
+      this._nodeDistance = "";
+    }
+    return this._nodeDistance!;
+  }
+
+  void set nodeDistance (String v) {
+    this._nodeDistance = v;
+  }
+    
+  String? _nodeWidth;  
+
+  String get nodeWidth { 
+    if (this._nodeWidth == null) {
+      this._nodeWidth = "";
+    }
+    return this._nodeWidth!;
+  }
+
+  void set nodeWidth (String v) {
+    this._nodeWidth = v;
   }
     
   /**
@@ -93,17 +119,17 @@ class TreegraphSeriesOptions extends TreemapSeriesOptions {
    * 
    * Defaults to 'false'. 
       */
-  bool? m_reversed;  
+  bool? _reversed;  
 
   bool get reversed { 
-    if (this.m_reversed == null) {
-      this.m_reversed = false;
+    if (this._reversed == null) {
+      this._reversed = false;
     }
-    return this.m_reversed!;
+    return this._reversed!;
   }
 
   void set reversed (bool v) {
-    this.m_reversed = v;
+    this._reversed = v;
   }
     
   /**
@@ -116,17 +142,17 @@ class TreegraphSeriesOptions extends TreemapSeriesOptions {
    * In styled mode, the markers can be styled with the `.highcharts-point`,
    * `.highcharts-point-hover` and `.highcharts-point-select` class names.  
       */
-  PointMarkerOptions? m_marker;  
+  PointMarkerOptions? _marker;  
 
   PointMarkerOptions get marker { 
-    if (this.m_marker == null) {
-      this.m_marker = PointMarkerOptions();
+    if (this._marker == null) {
+      this._marker = PointMarkerOptions();
     }
-    return this.m_marker!;
+    return this._marker!;
   }
 
   void set marker (PointMarkerOptions v) {
-    this.m_marker = v;
+    this._marker = v;
   }
     
 
@@ -139,24 +165,32 @@ class TreegraphSeriesOptions extends TreemapSeriesOptions {
     
     // NOTE: skip serialization of dataLabels (type TreegraphDataLabelOptions[] is ignored)} 
 
-    if (this.m_collapseButton != null) {  
-      buffer.writeAll(["\"collapseButton\":", this.m_collapseButton?.toJSON(), ","], "");
+    if (this._collapseButton != null) {  
+      buffer.writeAll(["\"collapseButton\":", this._collapseButton?.toJSON(), ","], "");
     }
 
-    if (this.m_fillSpace != null) {  
-      buffer.writeAll(["\"fillSpace\":", this.m_fillSpace, ","], "");
+    if (this._fillSpace != null) {  
+      buffer.writeAll(["\"fillSpace\":", this._fillSpace, ","], "");
     }
 
-    if (this.m_link != null) {  
-      buffer.writeAll(["\"link\":", this.m_link?.toJSON(), ","], "");
+    if (this._link != null) {  
+      buffer.writeAll(["\"link\":", this._link?.toJSON(), ","], "");
     }
 
-    if (this.m_reversed != null) {  
-      buffer.writeAll(["\"reversed\":", this.m_reversed, ","], "");
+    if (this._nodeDistance != null) {  
+      buffer.writeAll(["\"nodeDistance\":\`", this._nodeDistance, "\`,"], "");
     }
 
-    if (this.m_marker != null) {  
-      buffer.writeAll(["\"marker\":", this.m_marker?.toJSON(), ","], "");
+    if (this._nodeWidth != null) {  
+      buffer.writeAll(["\"nodeWidth\":\`", this._nodeWidth, "\`,"], "");
+    }
+
+    if (this._reversed != null) {  
+      buffer.writeAll(["\"reversed\":", this._reversed, ","], "");
+    }
+
+    if (this._marker != null) {  
+      buffer.writeAll(["\"marker\":", this._marker?.toJSON(), ","], "");
     }
   }
 

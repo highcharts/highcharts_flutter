@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,17 +24,17 @@ import 'OptionFragment.dart';
  */
 class TrendLineParamsOptions extends SMAParamsOptions {
   TrendLineParamsOptions() : super();
-  double? m_index;  
+  double? _index;  
 
   double get index { 
-    if (this.m_index == null) {
-      this.m_index = 0;
+    if (this._index == null) {
+      this._index = 0;
     }
-    return this.m_index!;
+    return this._index!;
   }
 
   void set index (double v) {
-    this.m_index = v;
+    this._index = v;
   }
     
 
@@ -45,8 +45,8 @@ class TrendLineParamsOptions extends SMAParamsOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_index != null) {  
-      buffer.writeAll(["\"index\":", this.m_index, ","], "");
+    if (this._index != null) {  
+      buffer.writeAll(["\"index\":", this._index, ","], "");
     }
   }
 

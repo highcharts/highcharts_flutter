@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -34,17 +34,17 @@ class ArcDiagramSeriesOptions extends SankeySeriesOptions {
    * 
    * Defaults to 'false'. 
       */
-  bool? m_equalNodes;  
+  bool? _equalNodes;  
 
   bool get equalNodes { 
-    if (this.m_equalNodes == null) {
-      this.m_equalNodes = false;
+    if (this._equalNodes == null) {
+      this._equalNodes = false;
     }
-    return this.m_equalNodes!;
+    return this._equalNodes!;
   }
 
   void set equalNodes (bool v) {
-    this.m_equalNodes = v;
+    this._equalNodes = v;
   }
     
   /**
@@ -53,30 +53,30 @@ class ArcDiagramSeriesOptions extends SankeySeriesOptions {
    * 
    * Defaults to 'false'. 
       */
-  bool? m_centeredLinks;  
+  bool? _centeredLinks;  
 
   bool get centeredLinks { 
-    if (this.m_centeredLinks == null) {
-      this.m_centeredLinks = false;
+    if (this._centeredLinks == null) {
+      this._centeredLinks = false;
     }
-    return this.m_centeredLinks!;
+    return this._centeredLinks!;
   }
 
   void set centeredLinks (bool v) {
-    this.m_centeredLinks = v;
+    this._centeredLinks = v;
   }
     
-  double? m_linkRadius;  
+  double? _linkRadius;  
 
   double get linkRadius { 
-    if (this.m_linkRadius == null) {
-      this.m_linkRadius = 0;
+    if (this._linkRadius == null) {
+      this._linkRadius = 0;
     }
-    return this.m_linkRadius!;
+    return this._linkRadius!;
   }
 
   void set linkRadius (double v) {
-    this.m_linkRadius = v;
+    this._linkRadius = v;
   }
     
   /**
@@ -85,56 +85,56 @@ class ArcDiagramSeriesOptions extends SankeySeriesOptions {
    * 
    * Defaults to 'false'. 
       */
-  bool? m_reversed;  
+  bool? _reversed;  
 
   bool get reversed { 
-    if (this.m_reversed == null) {
-      this.m_reversed = false;
+    if (this._reversed == null) {
+      this._reversed = false;
     }
-    return this.m_reversed!;
+    return this._reversed!;
   }
 
   void set reversed (bool v) {
-    this.m_reversed = v;
+    this._reversed = v;
   }
     
-  double? m_scale;  
+  double? _scale;  
 
   double get scale { 
-    if (this.m_scale == null) {
-      this.m_scale = 0;
+    if (this._scale == null) {
+      this._scale = 0;
     }
-    return this.m_scale!;
+    return this._scale!;
   }
 
   void set scale (double v) {
-    this.m_scale = v;
+    this._scale = v;
   }
     
-  String? m_offset;  
+  String? _offset;  
 
   String get offset { 
-    if (this.m_offset == null) {
-      this.m_offset = "";
+    if (this._offset == null) {
+      this._offset = "";
     }
-    return this.m_offset!;
+    return this._offset!;
   }
 
   void set offset (String v) {
-    this.m_offset = v;
+    this._offset = v;
   }
     
-  double? m_linkWeight;  
+  double? _linkWeight;  
 
   double get linkWeight { 
-    if (this.m_linkWeight == null) {
-      this.m_linkWeight = 0;
+    if (this._linkWeight == null) {
+      this._linkWeight = 0;
     }
-    return this.m_linkWeight!;
+    return this._linkWeight!;
   }
 
   void set linkWeight (double v) {
-    this.m_linkWeight = v;
+    this._linkWeight = v;
   }
     
 
@@ -147,32 +147,32 @@ class ArcDiagramSeriesOptions extends SankeySeriesOptions {
     
     // NOTE: skip serialization of states (type Generic is ignored)} 
 
-    if (this.m_equalNodes != null) {  
-      buffer.writeAll(["\"equalNodes\":", this.m_equalNodes, ","], "");
+    if (this._equalNodes != null) {  
+      buffer.writeAll(["\"equalNodes\":", this._equalNodes, ","], "");
     }
 
-    if (this.m_centeredLinks != null) {  
-      buffer.writeAll(["\"centeredLinks\":", this.m_centeredLinks, ","], "");
+    if (this._centeredLinks != null) {  
+      buffer.writeAll(["\"centeredLinks\":", this._centeredLinks, ","], "");
     }
 
-    if (this.m_linkRadius != null) {  
-      buffer.writeAll(["\"linkRadius\":", this.m_linkRadius, ","], "");
+    if (this._linkRadius != null) {  
+      buffer.writeAll(["\"linkRadius\":", this._linkRadius, ","], "");
     }
 
-    if (this.m_reversed != null) {  
-      buffer.writeAll(["\"reversed\":", this.m_reversed, ","], "");
+    if (this._reversed != null) {  
+      buffer.writeAll(["\"reversed\":", this._reversed, ","], "");
     }
 
-    if (this.m_scale != null) {  
-      buffer.writeAll(["\"scale\":", this.m_scale, ","], "");
+    if (this._scale != null) {  
+      buffer.writeAll(["\"scale\":", this._scale, ","], "");
     }
 
-    if (this.m_offset != null) {  
-      buffer.writeAll(["\"offset\":", this.m_offset, ","], "");
+    if (this._offset != null) {  
+      buffer.writeAll(["\"offset\":\`", this._offset, "\`,"], "");
     }
 
-    if (this.m_linkWeight != null) {  
-      buffer.writeAll(["\"linkWeight\":", this.m_linkWeight, ","], "");
+    if (this._linkWeight != null) {  
+      buffer.writeAll(["\"linkWeight\":", this._linkWeight, ","], "");
     }
   }
 

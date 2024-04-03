@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,30 +23,30 @@ import 'OptionFragment.dart';
  */
 class MapBubbleSeries extends OptionFragment {
   MapBubbleSeries() : super();
-  String? m_type;  
+  String? _type;  
 
   String get type { 
-    if (this.m_type == null) {
-      this.m_type = "";
+    if (this._type == null) {
+      this._type = "";
     }
-    return this.m_type!;
+    return this._type!;
   }
 
   void set type (String v) {
-    this.m_type = v;
+    this._type = v;
   }
     
-  bool? m_xyFromShape;  
+  bool? _xyFromShape;  
 
   bool get xyFromShape { 
-    if (this.m_xyFromShape == null) {
-      this.m_xyFromShape = false;
+    if (this._xyFromShape == null) {
+      this._xyFromShape = false;
     }
-    return this.m_xyFromShape!;
+    return this._xyFromShape!;
   }
 
   void set xyFromShape (bool v) {
-    this.m_xyFromShape = v;
+    this._xyFromShape = v;
   }
     
 
@@ -57,16 +57,16 @@ class MapBubbleSeries extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_type != null) {  
-      buffer.writeAll(["\"type\":", this.m_type, ","], "");
+    if (this._type != null) {  
+      buffer.writeAll(["\"type\":\`", this._type, "\`,"], "");
     }
 
     // NOTE: skip serialization of pointArrayMap (type string[] is ignored)} 
 
     // NOTE: skip serialization of pointClass (type typeof MapBubblePoint is ignored)} 
 
-    if (this.m_xyFromShape != null) {  
-      buffer.writeAll(["\"xyFromShape\":", this.m_xyFromShape, ","], "");
+    if (this._xyFromShape != null) {  
+      buffer.writeAll(["\"xyFromShape\":", this._xyFromShape, ","], "");
     }
   }
 

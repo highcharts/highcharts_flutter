@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -29,17 +29,17 @@ class AroonOptions extends SMAOptions {
   /**
    * aroonDown line options.  
       */
-  Map<String, String>? m_aroonDown;  
+  Map<String, String>? _aroonDown;  
 
   Map<String, String> get aroonDown { 
-    if (this.m_aroonDown == null) {
-      this.m_aroonDown = Map<String, String>();
+    if (this._aroonDown == null) {
+      this._aroonDown = Map<String, String>();
     }
-    return this.m_aroonDown!;
+    return this._aroonDown!;
   }
 
   void set aroonDown (Map<String, String> v) {
-    this.m_aroonDown = v;
+    this._aroonDown = v;
   }
     
   /**
@@ -52,17 +52,17 @@ class AroonOptions extends SMAOptions {
    * In styled mode, the markers can be styled with the `.highcharts-point`,
    * `.highcharts-point-hover` and `.highcharts-point-select` class names.  
       */
-  PointMarkerOptions? m_marker;  
+  PointMarkerOptions? _marker;  
 
   PointMarkerOptions get marker { 
-    if (this.m_marker == null) {
-      this.m_marker = PointMarkerOptions();
+    if (this._marker == null) {
+      this._marker = PointMarkerOptions();
     }
-    return this.m_marker!;
+    return this._marker!;
   }
 
   void set marker (PointMarkerOptions v) {
-    this.m_marker = v;
+    this._marker = v;
   }
     
   /**
@@ -78,17 +78,15 @@ class AroonOptions extends SMAOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_aroonDown != null) {  
-      buffer.writeAll(["\"aroonDown\":", this.m_aroonDown, ","], "");
+    if (this._aroonDown != null) {  
+      buffer.writeAll(["\"aroonDown\":", this._aroonDown, ","], "");
     }
 
-    if (this.m_marker != null) {  
-      buffer.writeAll(["\"marker\":", this.m_marker?.toJSON(), ","], "");
+    if (this._marker != null) {  
+      buffer.writeAll(["\"marker\":", this._marker?.toJSON(), ","], "");
     }
 
-    if (this.m_params != null) {  
-      buffer.writeAll(["\"params\":", this.m_params?.toJSON(), ","], "");
-    }
+    // NOTE: skip serialization of params (type AroonParamsOptions is ignored)} 
   }
 
 }

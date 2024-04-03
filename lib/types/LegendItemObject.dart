@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -27,95 +27,95 @@ import 'OptionFragment.dart';
  */
 class LegendItemObject extends DataClassesOptions {
   LegendItemObject() : super();
-  String? m_name;  
+  String? _name;  
 
   String get name { 
-    if (this.m_name == null) {
-      this.m_name = "";
+    if (this._name == null) {
+      this._name = "";
     }
-    return this.m_name!;
+    return this._name!;
   }
 
   void set name (String v) {
-    this.m_name = v;
+    this._name = v;
   }
     
-  bool? m_visible;  
+  bool? _visible;  
 
   bool get visible { 
-    if (this.m_visible == null) {
-      this.m_visible = false;
+    if (this._visible == null) {
+      this._visible = false;
     }
-    return this.m_visible!;
+    return this._visible!;
   }
 
   void set visible (bool v) {
-    this.m_visible = v;
+    this._visible = v;
   }
     
-  double? m_labelHeight;  
+  double? _labelHeight;  
 
   double get labelHeight { 
-    if (this.m_labelHeight == null) {
-      this.m_labelHeight = 0;
+    if (this._labelHeight == null) {
+      this._labelHeight = 0;
     }
-    return this.m_labelHeight!;
+    return this._labelHeight!;
   }
 
   void set labelHeight (double v) {
-    this.m_labelHeight = v;
+    this._labelHeight = v;
   }
     
-  double? m_labelWidth;  
+  double? _labelWidth;  
 
   double get labelWidth { 
-    if (this.m_labelWidth == null) {
-      this.m_labelWidth = 0;
+    if (this._labelWidth == null) {
+      this._labelWidth = 0;
     }
-    return this.m_labelWidth!;
+    return this._labelWidth!;
   }
 
   void set labelWidth (double v) {
-    this.m_labelWidth = v;
+    this._labelWidth = v;
   }
     
-  double? m_pageIx;  
+  double? _pageIx;  
 
   double get pageIx { 
-    if (this.m_pageIx == null) {
-      this.m_pageIx = 0;
+    if (this._pageIx == null) {
+      this._pageIx = 0;
     }
-    return this.m_pageIx!;
+    return this._pageIx!;
   }
 
   void set pageIx (double v) {
-    this.m_pageIx = v;
+    this._pageIx = v;
   }
     
-  double? m_x;  
+  double? _x;  
 
   double get x { 
-    if (this.m_x == null) {
-      this.m_x = 0;
+    if (this._x == null) {
+      this._x = 0;
     }
-    return this.m_x!;
+    return this._x!;
   }
 
   void set x (double v) {
-    this.m_x = v;
+    this._x = v;
   }
     
-  double? m_y;  
+  double? _y;  
 
   double get y { 
-    if (this.m_y == null) {
-      this.m_y = 0;
+    if (this._y == null) {
+      this._y = 0;
     }
-    return this.m_y!;
+    return this._y!;
   }
 
   void set y (double v) {
-    this.m_y = v;
+    this._y = v;
   }
     
 
@@ -128,48 +128,50 @@ class LegendItemObject extends DataClassesOptions {
     
     // NOTE: skip serialization of chart (type Chart is ignored)} 
 
-    if (this.m_name != null) {  
-      buffer.writeAll(["\"name\":", this.m_name, ","], "");
+    if (this._name != null) {  
+      buffer.writeAll(["\"name\":\`", this._name, "\`,"], "");
     }
 
     // NOTE: skip serialization of options (type object is ignored)} 
 
-    if (this.m_visible != null) {  
-      buffer.writeAll(["\"visible\":", this.m_visible, ","], "");
+    if (this._visible != null) {  
+      buffer.writeAll(["\"visible\":", this._visible, ","], "");
     }
 
     // NOTE: skip serialization of isDataClass (type true is ignored)} 
 
     // NOTE: skip serialization of setVisible (type Function is ignored)} 
 
+    // NOTE: skip serialization of area (type SVGElement is ignored)} 
+
     // NOTE: skip serialization of group (type SVGElement is ignored)} 
 
     // NOTE: skip serialization of label (type LegendItemObject is ignored)} 
 
-    if (this.m_labelHeight != null) {  
-      buffer.writeAll(["\"labelHeight\":", this.m_labelHeight, ","], "");
+    if (this._labelHeight != null) {  
+      buffer.writeAll(["\"labelHeight\":", this._labelHeight, ","], "");
     }
 
     // NOTE: skip serialization of labels (type LegendItemObject)[] is ignored)} 
 
-    if (this.m_labelWidth != null) {  
-      buffer.writeAll(["\"labelWidth\":", this.m_labelWidth, ","], "");
+    if (this._labelWidth != null) {  
+      buffer.writeAll(["\"labelWidth\":", this._labelWidth, ","], "");
     }
 
     // NOTE: skip serialization of line (type SVGElement is ignored)} 
 
-    if (this.m_pageIx != null) {  
-      buffer.writeAll(["\"pageIx\":", this.m_pageIx, ","], "");
+    if (this._pageIx != null) {  
+      buffer.writeAll(["\"pageIx\":", this._pageIx, ","], "");
     }
 
     // NOTE: skip serialization of symbol (type SVGElement is ignored)} 
 
-    if (this.m_x != null) {  
-      buffer.writeAll(["\"x\":", this.m_x, ","], "");
+    if (this._x != null) {  
+      buffer.writeAll(["\"x\":", this._x, ","], "");
     }
 
-    if (this.m_y != null) {  
-      buffer.writeAll(["\"y\":", this.m_y, ","], "");
+    if (this._y != null) {  
+      buffer.writeAll(["\"y\":", this._y, ","], "");
     }
   }
 

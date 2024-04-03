@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -25,121 +25,121 @@ import 'OptionFragment.dart';
  */
 class MapNavigationButtonOptions extends OptionFragment {
   MapNavigationButtonOptions() : super();
-  String? m_align;  
+  String? _align;  
 
   String get align { 
-    if (this.m_align == null) {
-      this.m_align = "";
+    if (this._align == null) {
+      this._align = "";
     }
-    return this.m_align!;
+    return this._align!;
   }
 
   void set align (String v) {
-    this.m_align = v;
+    this._align = v;
   }
     
-  String? m_alignTo;  
+  String? _alignTo;  
 
   String get alignTo { 
-    if (this.m_alignTo == null) {
-      this.m_alignTo = "";
+    if (this._alignTo == null) {
+      this._alignTo = "";
     }
-    return this.m_alignTo!;
+    return this._alignTo!;
   }
 
   void set alignTo (String v) {
-    this.m_alignTo = v;
+    this._alignTo = v;
   }
     
-  double? m_height;  
+  double? _height;  
 
   double get height { 
-    if (this.m_height == null) {
-      this.m_height = 0;
+    if (this._height == null) {
+      this._height = 0;
     }
-    return this.m_height!;
+    return this._height!;
   }
 
   void set height (double v) {
-    this.m_height = v;
+    this._height = v;
   }
     
-  double? m_padding;  
+  double? _padding;  
 
   double get padding { 
-    if (this.m_padding == null) {
-      this.m_padding = 0;
+    if (this._padding == null) {
+      this._padding = 0;
     }
-    return this.m_padding!;
+    return this._padding!;
   }
 
   void set padding (double v) {
-    this.m_padding = v;
+    this._padding = v;
   }
     
-  String? m_text;  
+  String? _text;  
 
   String get text { 
-    if (this.m_text == null) {
-      this.m_text = "";
+    if (this._text == null) {
+      this._text = "";
     }
-    return this.m_text!;
+    return this._text!;
   }
 
   void set text (String v) {
-    this.m_text = v;
+    this._text = v;
   }
     
-  String? m_verticalAlign;  
+  String? _verticalAlign;  
 
   String get verticalAlign { 
-    if (this.m_verticalAlign == null) {
-      this.m_verticalAlign = "";
+    if (this._verticalAlign == null) {
+      this._verticalAlign = "";
     }
-    return this.m_verticalAlign!;
+    return this._verticalAlign!;
   }
 
   void set verticalAlign (String v) {
-    this.m_verticalAlign = v;
+    this._verticalAlign = v;
   }
     
-  double? m_width;  
+  double? _width;  
 
   double get width { 
-    if (this.m_width == null) {
-      this.m_width = 0;
+    if (this._width == null) {
+      this._width = 0;
     }
-    return this.m_width!;
+    return this._width!;
   }
 
   void set width (double v) {
-    this.m_width = v;
+    this._width = v;
   }
     
-  double? m_x;  
+  double? _x;  
 
   double get x { 
-    if (this.m_x == null) {
-      this.m_x = 0;
+    if (this._x == null) {
+      this._x = 0;
     }
-    return this.m_x!;
+    return this._x!;
   }
 
   void set x (double v) {
-    this.m_x = v;
+    this._x = v;
   }
     
-  double? m_y;  
+  double? _y;  
 
   double get y { 
-    if (this.m_y == null) {
-      this.m_y = 0;
+    if (this._y == null) {
+      this._y = 0;
     }
-    return this.m_y!;
+    return this._y!;
   }
 
   void set y (double v) {
-    this.m_y = v;
+    this._y = v;
   }
     
 
@@ -150,46 +150,46 @@ class MapNavigationButtonOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_align != null) {  
-      buffer.writeAll(["\"align\":", this.m_align, ","], "");
+    if (this._align != null) {  
+      buffer.writeAll(["\"align\":\`", this._align, "\`,"], "");
     }
 
-    if (this.m_alignTo != null) {  
-      buffer.writeAll(["\"alignTo\":", this.m_alignTo, ","], "");
+    if (this._alignTo != null) {  
+      buffer.writeAll(["\"alignTo\":\`", this._alignTo, "\`,"], "");
     }
 
-    if (this.m_height != null) {  
-      buffer.writeAll(["\"height\":", this.m_height, ","], "");
+    if (this._height != null) {  
+      buffer.writeAll(["\"height\":", this._height, ","], "");
     }
 
     // NOTE: skip serialization of onclick (type Function is ignored)} 
 
-    if (this.m_padding != null) {  
-      buffer.writeAll(["\"padding\":", this.m_padding, ","], "");
+    if (this._padding != null) {  
+      buffer.writeAll(["\"padding\":", this._padding, ","], "");
     }
 
     // NOTE: skip serialization of style (type CSSObject is ignored)} 
 
-    if (this.m_text != null) {  
-      buffer.writeAll(["\"text\":", this.m_text, ","], "");
+    if (this._text != null) {  
+      buffer.writeAll(["\"text\":\`", this._text, "\`,"], "");
     }
 
     // NOTE: skip serialization of theme (type ButtonThemeObject is ignored)} 
 
-    if (this.m_verticalAlign != null) {  
-      buffer.writeAll(["\"verticalAlign\":", this.m_verticalAlign, ","], "");
+    if (this._verticalAlign != null) {  
+      buffer.writeAll(["\"verticalAlign\":\`", this._verticalAlign, "\`,"], "");
     }
 
-    if (this.m_width != null) {  
-      buffer.writeAll(["\"width\":", this.m_width, ","], "");
+    if (this._width != null) {  
+      buffer.writeAll(["\"width\":", this._width, ","], "");
     }
 
-    if (this.m_x != null) {  
-      buffer.writeAll(["\"x\":", this.m_x, ","], "");
+    if (this._x != null) {  
+      buffer.writeAll(["\"x\":", this._x, ","], "");
     }
 
-    if (this.m_y != null) {  
-      buffer.writeAll(["\"y\":", this.m_y, ","], "");
+    if (this._y != null) {  
+      buffer.writeAll(["\"y\":", this._y, ","], "");
     }
   }
 

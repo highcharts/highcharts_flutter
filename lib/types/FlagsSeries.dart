@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,30 +24,30 @@ import 'OptionFragment.dart';
  */
 class FlagsSeries extends OptionFragment {
   FlagsSeries() : super();
-  bool? m_allowDG;  
+  bool? _allowDG;  
 
   bool get allowDG { 
-    if (this.m_allowDG == null) {
-      this.m_allowDG = false;
+    if (this._allowDG == null) {
+      this._allowDG = false;
     }
-    return this.m_allowDG!;
+    return this._allowDG!;
   }
 
   void set allowDG (bool v) {
-    this.m_allowDG = v;
+    this._allowDG = v;
   }
     
-  bool? m_takeOrdinalPosition;  
+  bool? _takeOrdinalPosition;  
 
   bool get takeOrdinalPosition { 
-    if (this.m_takeOrdinalPosition == null) {
-      this.m_takeOrdinalPosition = false;
+    if (this._takeOrdinalPosition == null) {
+      this._takeOrdinalPosition = false;
     }
-    return this.m_takeOrdinalPosition!;
+    return this._takeOrdinalPosition!;
   }
 
   void set takeOrdinalPosition (bool v) {
-    this.m_takeOrdinalPosition = v;
+    this._takeOrdinalPosition = v;
   }
     
 
@@ -58,16 +58,16 @@ class FlagsSeries extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_allowDG != null) {  
-      buffer.writeAll(["\"allowDG\":", this.m_allowDG, ","], "");
+    if (this._allowDG != null) {  
+      buffer.writeAll(["\"allowDG\":", this._allowDG, ","], "");
     }
 
     // NOTE: skip serialization of group (type SVGElement is ignored)} 
 
     // NOTE: skip serialization of pointClass (type typeof FlagsPoint is ignored)} 
 
-    if (this.m_takeOrdinalPosition != null) {  
-      buffer.writeAll(["\"takeOrdinalPosition\":", this.m_takeOrdinalPosition, ","], "");
+    if (this._takeOrdinalPosition != null) {  
+      buffer.writeAll(["\"takeOrdinalPosition\":", this._takeOrdinalPosition, ","], "");
     }
   }
 

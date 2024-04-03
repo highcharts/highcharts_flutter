@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -47,17 +47,17 @@ class AreaRangeSeriesOptions extends AreaSeriesOptions {
    * 
    * Defaults to 'false'. 
       */
-  bool? m_trackByArea;  
+  bool? _trackByArea;  
 
   bool get trackByArea { 
-    if (this.m_trackByArea == null) {
-      this.m_trackByArea = false;
+    if (this._trackByArea == null) {
+      this._trackByArea = false;
     }
-    return this.m_trackByArea!;
+    return this._trackByArea!;
   }
 
   void set trackByArea (bool v) {
-    this.m_trackByArea = v;
+    this._trackByArea = v;
   }
     
 
@@ -72,8 +72,8 @@ class AreaRangeSeriesOptions extends AreaSeriesOptions {
 
     // NOTE: skip serialization of states (type Generic is ignored)} 
 
-    if (this.m_trackByArea != null) {  
-      buffer.writeAll(["\"trackByArea\":", this.m_trackByArea, ","], "");
+    if (this._trackByArea != null) {  
+      buffer.writeAll(["\"trackByArea\":", this._trackByArea, ","], "");
     }
 
     // NOTE: skip serialization of lowMarker (type PointMarkerOptions is ignored)} 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,30 +23,30 @@ import 'OptionFragment.dart';
  */
 class CalculateOnObject extends OptionFragment {
   CalculateOnObject() : super();
-  String? m_chart;  
+  String? _chart;  
 
   String get chart { 
-    if (this.m_chart == null) {
-      this.m_chart = "";
+    if (this._chart == null) {
+      this._chart = "";
     }
-    return this.m_chart!;
+    return this._chart!;
   }
 
   void set chart (String v) {
-    this.m_chart = v;
+    this._chart = v;
   }
     
-  String? m_xAxis;  
+  String? _xAxis;  
 
   String get xAxis { 
-    if (this.m_xAxis == null) {
-      this.m_xAxis = "";
+    if (this._xAxis == null) {
+      this._xAxis = "";
     }
-    return this.m_xAxis!;
+    return this._xAxis!;
   }
 
   void set xAxis (String v) {
-    this.m_xAxis = v;
+    this._xAxis = v;
   }
     
 
@@ -57,12 +57,12 @@ class CalculateOnObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_chart != null) {  
-      buffer.writeAll(["\"chart\":", this.m_chart, ","], "");
+    if (this._chart != null) {  
+      buffer.writeAll(["\"chart\":\`", this._chart, "\`,"], "");
     }
 
-    if (this.m_xAxis != null) {  
-      buffer.writeAll(["\"xAxis\":", this.m_xAxis, ","], "");
+    if (this._xAxis != null) {  
+      buffer.writeAll(["\"xAxis\":\`", this._xAxis, "\`,"], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,30 +23,30 @@ import 'OptionFragment.dart';
  */
 class IndicatorNameCouple extends OptionFragment {
   IndicatorNameCouple() : super();
-  String? m_indicatorFullName;  
+  String? _indicatorFullName;  
 
   String get indicatorFullName { 
-    if (this.m_indicatorFullName == null) {
-      this.m_indicatorFullName = "";
+    if (this._indicatorFullName == null) {
+      this._indicatorFullName = "";
     }
-    return this.m_indicatorFullName!;
+    return this._indicatorFullName!;
   }
 
   void set indicatorFullName (String v) {
-    this.m_indicatorFullName = v;
+    this._indicatorFullName = v;
   }
     
-  String? m_indicatorType;  
+  String? _indicatorType;  
 
   String get indicatorType { 
-    if (this.m_indicatorType == null) {
-      this.m_indicatorType = "";
+    if (this._indicatorType == null) {
+      this._indicatorType = "";
     }
-    return this.m_indicatorType!;
+    return this._indicatorType!;
   }
 
   void set indicatorType (String v) {
-    this.m_indicatorType = v;
+    this._indicatorType = v;
   }
     
 
@@ -57,12 +57,12 @@ class IndicatorNameCouple extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_indicatorFullName != null) {  
-      buffer.writeAll(["\"indicatorFullName\":", this.m_indicatorFullName, ","], "");
+    if (this._indicatorFullName != null) {  
+      buffer.writeAll(["\"indicatorFullName\":\`", this._indicatorFullName, "\`,"], "");
     }
 
-    if (this.m_indicatorType != null) {  
-      buffer.writeAll(["\"indicatorType\":", this.m_indicatorType, ","], "");
+    if (this._indicatorType != null) {  
+      buffer.writeAll(["\"indicatorType\":\`", this._indicatorType, "\`,"], "");
     }
   }
 

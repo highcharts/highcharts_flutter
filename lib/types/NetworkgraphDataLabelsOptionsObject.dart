@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -25,30 +25,30 @@ import 'OptionFragment.dart';
  */
 class NetworkgraphDataLabelsOptionsObject extends DataLabelOptions {
   NetworkgraphDataLabelsOptionsObject() : super();
-  String? m_format;  
+  String? _format;  
 
   String get format { 
-    if (this.m_format == null) {
-      this.m_format = "";
+    if (this._format == null) {
+      this._format = "";
     }
-    return this.m_format!;
+    return this._format!;
   }
 
   void set format (String v) {
-    this.m_format = v;
+    this._format = v;
   }
     
-  String? m_linkFormat;  
+  String? _linkFormat;  
 
   String get linkFormat { 
-    if (this.m_linkFormat == null) {
-      this.m_linkFormat = "";
+    if (this._linkFormat == null) {
+      this._linkFormat = "";
     }
-    return this.m_linkFormat!;
+    return this._linkFormat!;
   }
 
   void set linkFormat (String v) {
-    this.m_linkFormat = v;
+    this._linkFormat = v;
   }
     
 
@@ -59,12 +59,12 @@ class NetworkgraphDataLabelsOptionsObject extends DataLabelOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_format != null) {  
-      buffer.writeAll(["\"format\":", this.m_format, ","], "");
+    if (this._format != null) {  
+      buffer.writeAll(["\"format\":\`", this._format, "\`,"], "");
     }
 
-    if (this.m_linkFormat != null) {  
-      buffer.writeAll(["\"linkFormat\":", this.m_linkFormat, ","], "");
+    if (this._linkFormat != null) {  
+      buffer.writeAll(["\"linkFormat\":\`", this._linkFormat, "\`,"], "");
     }
 
     // NOTE: skip serialization of linkTextPath (type DataLabelTextPathOptions is ignored)} 

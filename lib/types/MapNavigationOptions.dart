@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -29,17 +29,17 @@ class MapNavigationOptions extends OptionFragment {
    * can be given from the [mapNavigation.buttons](#mapNavigation.buttons)
    * option set.  
       */
-  MapNavigationButtonOptions? m_buttonOptions;  
+  MapNavigationButtonOptions? _buttonOptions;  
 
   MapNavigationButtonOptions get buttonOptions { 
-    if (this.m_buttonOptions == null) {
-      this.m_buttonOptions = MapNavigationButtonOptions();
+    if (this._buttonOptions == null) {
+      this._buttonOptions = MapNavigationButtonOptions();
     }
-    return this.m_buttonOptions!;
+    return this._buttonOptions!;
   }
 
   void set buttonOptions (MapNavigationButtonOptions v) {
-    this.m_buttonOptions = v;
+    this._buttonOptions = v;
   }
     
   /**
@@ -50,34 +50,34 @@ class MapNavigationOptions extends OptionFragment {
    * individual options can be overridden. But default, the `onclick`, `text`
    * and `y` options are individual.  
       */
-  Map<String, String>? m_buttons;  
+  Map<String, String>? _buttons;  
 
   Map<String, String> get buttons { 
-    if (this.m_buttons == null) {
-      this.m_buttons = Map<String, String>();
+    if (this._buttons == null) {
+      this._buttons = Map<String, String>();
     }
-    return this.m_buttons!;
+    return this._buttons!;
   }
 
   void set buttons (Map<String, String> v) {
-    this.m_buttons = v;
+    this._buttons = v;
   }
     
   /**
    * Whether to enable navigation buttons. By default it inherits the
    * [enabled](#mapNavigation.enabled) setting.  
       */
-  bool? m_enableButtons;  
+  bool? _enableButtons;  
 
   bool get enableButtons { 
-    if (this.m_enableButtons == null) {
-      this.m_enableButtons = false;
+    if (this._enableButtons == null) {
+      this._enableButtons = false;
     }
-    return this.m_enableButtons!;
+    return this._enableButtons!;
   }
 
   void set enableButtons (bool v) {
-    this.m_enableButtons = v;
+    this._enableButtons = v;
   }
     
   /**
@@ -93,34 +93,34 @@ class MapNavigationOptions extends OptionFragment {
    * 
    * Defaults to 'false'. 
       */
-  bool? m_enabled;  
+  bool? _enabled;  
 
   bool get enabled { 
-    if (this.m_enabled == null) {
-      this.m_enabled = false;
+    if (this._enabled == null) {
+      this._enabled = false;
     }
-    return this.m_enabled!;
+    return this._enabled!;
   }
 
   void set enabled (bool v) {
-    this.m_enabled = v;
+    this._enabled = v;
   }
     
   /**
    * Enables zooming in on an area on double clicking in the map. By default
    * it inherits the [enabled](#mapNavigation.enabled) setting.  
       */
-  bool? m_enableDoubleClickZoom;  
+  bool? _enableDoubleClickZoom;  
 
   bool get enableDoubleClickZoom { 
-    if (this.m_enableDoubleClickZoom == null) {
-      this.m_enableDoubleClickZoom = false;
+    if (this._enableDoubleClickZoom == null) {
+      this._enableDoubleClickZoom = false;
     }
-    return this.m_enableDoubleClickZoom!;
+    return this._enableDoubleClickZoom!;
   }
 
   void set enableDoubleClickZoom (bool v) {
-    this.m_enableDoubleClickZoom = v;
+    this._enableDoubleClickZoom = v;
   }
     
   /**
@@ -128,33 +128,33 @@ class MapNavigationOptions extends OptionFragment {
    * 
    * Defaults to 'false'. 
       */
-  bool? m_enableDoubleClickZoomTo;  
+  bool? _enableDoubleClickZoomTo;  
 
   bool get enableDoubleClickZoomTo { 
-    if (this.m_enableDoubleClickZoomTo == null) {
-      this.m_enableDoubleClickZoomTo = false;
+    if (this._enableDoubleClickZoomTo == null) {
+      this._enableDoubleClickZoomTo = false;
     }
-    return this.m_enableDoubleClickZoomTo!;
+    return this._enableDoubleClickZoomTo!;
   }
 
   void set enableDoubleClickZoomTo (bool v) {
-    this.m_enableDoubleClickZoomTo = v;
+    this._enableDoubleClickZoomTo = v;
   }
     
   /**
    * Enables zooming by mouse wheel. By default it inherits the [enabled](#mapNavigation.enabled) setting.  
       */
-  bool? m_enableMouseWheelZoom;  
+  bool? _enableMouseWheelZoom;  
 
   bool get enableMouseWheelZoom { 
-    if (this.m_enableMouseWheelZoom == null) {
-      this.m_enableMouseWheelZoom = false;
+    if (this._enableMouseWheelZoom == null) {
+      this._enableMouseWheelZoom = false;
     }
-    return this.m_enableMouseWheelZoom!;
+    return this._enableMouseWheelZoom!;
   }
 
   void set enableMouseWheelZoom (bool v) {
-    this.m_enableMouseWheelZoom = v;
+    this._enableMouseWheelZoom = v;
   }
     
   /**
@@ -164,17 +164,17 @@ class MapNavigationOptions extends OptionFragment {
    * chart. By default it inherits the [enabled](#mapNavigation.enabled)
    * setting.  
       */
-  bool? m_enableTouchZoom;  
+  bool? _enableTouchZoom;  
 
   bool get enableTouchZoom { 
-    if (this.m_enableTouchZoom == null) {
-      this.m_enableTouchZoom = false;
+    if (this._enableTouchZoom == null) {
+      this._enableTouchZoom = false;
     }
-    return this.m_enableTouchZoom!;
+    return this._enableTouchZoom!;
   }
 
   void set enableTouchZoom (bool v) {
-    this.m_enableTouchZoom = v;
+    this._enableTouchZoom = v;
   }
     
   /**
@@ -183,17 +183,17 @@ class MapNavigationOptions extends OptionFragment {
    * 
    * Defaults to '1.1'. 
       */
-  double? m_mouseWheelSensitivity;  
+  double? _mouseWheelSensitivity;  
 
   double get mouseWheelSensitivity { 
-    if (this.m_mouseWheelSensitivity == null) {
-      this.m_mouseWheelSensitivity = 0;
+    if (this._mouseWheelSensitivity == null) {
+      this._mouseWheelSensitivity = 0;
     }
-    return this.m_mouseWheelSensitivity!;
+    return this._mouseWheelSensitivity!;
   }
 
   void set mouseWheelSensitivity (double v) {
-    this.m_mouseWheelSensitivity = v;
+    this._mouseWheelSensitivity = v;
   }
     
 
@@ -204,40 +204,40 @@ class MapNavigationOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_buttonOptions != null) {  
-      buffer.writeAll(["\"buttonOptions\":", this.m_buttonOptions?.toJSON(), ","], "");
+    if (this._buttonOptions != null) {  
+      buffer.writeAll(["\"buttonOptions\":", this._buttonOptions?.toJSON(), ","], "");
     }
 
-    if (this.m_buttons != null) {  
-      buffer.writeAll(["\"buttons\":", this.m_buttons, ","], "");
+    if (this._buttons != null) {  
+      buffer.writeAll(["\"buttons\":", this._buttons, ","], "");
     }
 
-    if (this.m_enableButtons != null) {  
-      buffer.writeAll(["\"enableButtons\":", this.m_enableButtons, ","], "");
+    if (this._enableButtons != null) {  
+      buffer.writeAll(["\"enableButtons\":", this._enableButtons, ","], "");
     }
 
-    if (this.m_enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this.m_enabled, ","], "");
+    if (this._enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this._enabled, ","], "");
     }
 
-    if (this.m_enableDoubleClickZoom != null) {  
-      buffer.writeAll(["\"enableDoubleClickZoom\":", this.m_enableDoubleClickZoom, ","], "");
+    if (this._enableDoubleClickZoom != null) {  
+      buffer.writeAll(["\"enableDoubleClickZoom\":", this._enableDoubleClickZoom, ","], "");
     }
 
-    if (this.m_enableDoubleClickZoomTo != null) {  
-      buffer.writeAll(["\"enableDoubleClickZoomTo\":", this.m_enableDoubleClickZoomTo, ","], "");
+    if (this._enableDoubleClickZoomTo != null) {  
+      buffer.writeAll(["\"enableDoubleClickZoomTo\":", this._enableDoubleClickZoomTo, ","], "");
     }
 
-    if (this.m_enableMouseWheelZoom != null) {  
-      buffer.writeAll(["\"enableMouseWheelZoom\":", this.m_enableMouseWheelZoom, ","], "");
+    if (this._enableMouseWheelZoom != null) {  
+      buffer.writeAll(["\"enableMouseWheelZoom\":", this._enableMouseWheelZoom, ","], "");
     }
 
-    if (this.m_enableTouchZoom != null) {  
-      buffer.writeAll(["\"enableTouchZoom\":", this.m_enableTouchZoom, ","], "");
+    if (this._enableTouchZoom != null) {  
+      buffer.writeAll(["\"enableTouchZoom\":", this._enableTouchZoom, ","], "");
     }
 
-    if (this.m_mouseWheelSensitivity != null) {  
-      buffer.writeAll(["\"mouseWheelSensitivity\":", this.m_mouseWheelSensitivity, ","], "");
+    if (this._mouseWheelSensitivity != null) {  
+      buffer.writeAll(["\"mouseWheelSensitivity\":", this._mouseWheelSensitivity, ","], "");
     }
   }
 

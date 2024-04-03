@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,69 +23,69 @@ import 'OptionFragment.dart';
  */
 class AxisBreakOptions extends OptionFragment {
   AxisBreakOptions() : super();
-  double? m_breakSize;  
+  double? _breakSize;  
 
   double get breakSize { 
-    if (this.m_breakSize == null) {
-      this.m_breakSize = 0;
+    if (this._breakSize == null) {
+      this._breakSize = 0;
     }
-    return this.m_breakSize!;
+    return this._breakSize!;
   }
 
   void set breakSize (double v) {
-    this.m_breakSize = v;
+    this._breakSize = v;
   }
     
-  double? m_from;  
+  double? _from;  
 
   double get from { 
-    if (this.m_from == null) {
-      this.m_from = 0;
+    if (this._from == null) {
+      this._from = 0;
     }
-    return this.m_from!;
+    return this._from!;
   }
 
   void set from (double v) {
-    this.m_from = v;
+    this._from = v;
   }
     
-  bool? m_inclusive;  
+  bool? _inclusive;  
 
   bool get inclusive { 
-    if (this.m_inclusive == null) {
-      this.m_inclusive = false;
+    if (this._inclusive == null) {
+      this._inclusive = false;
     }
-    return this.m_inclusive!;
+    return this._inclusive!;
   }
 
   void set inclusive (bool v) {
-    this.m_inclusive = v;
+    this._inclusive = v;
   }
     
-  double? m_repeat;  
+  double? _repeat;  
 
   double get repeat { 
-    if (this.m_repeat == null) {
-      this.m_repeat = 0;
+    if (this._repeat == null) {
+      this._repeat = 0;
     }
-    return this.m_repeat!;
+    return this._repeat!;
   }
 
   void set repeat (double v) {
-    this.m_repeat = v;
+    this._repeat = v;
   }
     
-  double? m_to;  
+  double? _to;  
 
   double get to { 
-    if (this.m_to == null) {
-      this.m_to = 0;
+    if (this._to == null) {
+      this._to = 0;
     }
-    return this.m_to!;
+    return this._to!;
   }
 
   void set to (double v) {
-    this.m_to = v;
+    this._to = v;
   }
     
 
@@ -96,24 +96,24 @@ class AxisBreakOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_breakSize != null) {  
-      buffer.writeAll(["\"breakSize\":", this.m_breakSize, ","], "");
+    if (this._breakSize != null) {  
+      buffer.writeAll(["\"breakSize\":", this._breakSize, ","], "");
     }
 
-    if (this.m_from != null) {  
-      buffer.writeAll(["\"from\":", this.m_from, ","], "");
+    if (this._from != null) {  
+      buffer.writeAll(["\"from\":", this._from, ","], "");
     }
 
-    if (this.m_inclusive != null) {  
-      buffer.writeAll(["\"inclusive\":", this.m_inclusive, ","], "");
+    if (this._inclusive != null) {  
+      buffer.writeAll(["\"inclusive\":", this._inclusive, ","], "");
     }
 
-    if (this.m_repeat != null) {  
-      buffer.writeAll(["\"repeat\":", this.m_repeat, ","], "");
+    if (this._repeat != null) {  
+      buffer.writeAll(["\"repeat\":", this._repeat, ","], "");
     }
 
-    if (this.m_to != null) {  
-      buffer.writeAll(["\"to\":", this.m_to, ","], "");
+    if (this._to != null) {  
+      buffer.writeAll(["\"to\":", this._to, ","], "");
     }
   }
 

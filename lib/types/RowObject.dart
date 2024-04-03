@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,43 +24,43 @@ import 'OptionFragment.dart';
  */
 class RowObject extends Record {
   RowObject() : super();
-  double? m_colCount;  
+  double? _colCount;  
 
   double get colCount { 
-    if (this.m_colCount == null) {
-      this.m_colCount = 0;
+    if (this._colCount == null) {
+      this._colCount = 0;
     }
-    return this.m_colCount!;
+    return this._colCount!;
   }
 
   void set colCount (double v) {
-    this.m_colCount = v;
+    this._colCount = v;
   }
     
-  double? m_rowLength;  
+  double? _rowLength;  
 
   double get rowLength { 
-    if (this.m_rowLength == null) {
-      this.m_rowLength = 0;
+    if (this._rowLength == null) {
+      this._rowLength = 0;
     }
-    return this.m_rowLength!;
+    return this._rowLength!;
   }
 
   void set rowLength (double v) {
-    this.m_rowLength = v;
+    this._rowLength = v;
   }
     
-  double? m_rowRadius;  
+  double? _rowRadius;  
 
   double get rowRadius { 
-    if (this.m_rowRadius == null) {
-      this.m_rowRadius = 0;
+    if (this._rowRadius == null) {
+      this._rowRadius = 0;
     }
-    return this.m_rowRadius!;
+    return this._rowRadius!;
   }
 
   void set rowRadius (double v) {
-    this.m_rowRadius = v;
+    this._rowRadius = v;
   }
     
 
@@ -71,16 +71,16 @@ class RowObject extends Record {
     super.toJSONInner(buffer);
 
     
-    if (this.m_colCount != null) {  
-      buffer.writeAll(["\"colCount\":", this.m_colCount, ","], "");
+    if (this._colCount != null) {  
+      buffer.writeAll(["\"colCount\":", this._colCount, ","], "");
     }
 
-    if (this.m_rowLength != null) {  
-      buffer.writeAll(["\"rowLength\":", this.m_rowLength, ","], "");
+    if (this._rowLength != null) {  
+      buffer.writeAll(["\"rowLength\":", this._rowLength, ","], "");
     }
 
-    if (this.m_rowRadius != null) {  
-      buffer.writeAll(["\"rowRadius\":", this.m_rowRadius, ","], "");
+    if (this._rowRadius != null) {  
+      buffer.writeAll(["\"rowRadius\":", this._rowRadius, ","], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -30,17 +30,17 @@ class MomentumOptions extends SMAOptions {
       */
   /** NOTE: extparams is skipped here for now, as it overrides the base type. */
 
-  double? m_period;  
+  double? _period;  
 
   double get period { 
-    if (this.m_period == null) {
-      this.m_period = 0;
+    if (this._period == null) {
+      this._period = 0;
     }
-    return this.m_period!;
+    return this._period!;
   }
 
   void set period (double v) {
-    this.m_period = v;
+    this._period = v;
   }
     
 
@@ -51,12 +51,10 @@ class MomentumOptions extends SMAOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_params != null) {  
-      buffer.writeAll(["\"params\":", this.m_params?.toJSON(), ","], "");
-    }
+    // NOTE: skip serialization of params (type MomentumParamsOptions is ignored)} 
 
-    if (this.m_period != null) {  
-      buffer.writeAll(["\"period\":", this.m_period, ","], "");
+    if (this._period != null) {  
+      buffer.writeAll(["\"period\":", this._period, ","], "");
     }
   }
 

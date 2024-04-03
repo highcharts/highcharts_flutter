@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,43 +23,43 @@ import 'OptionFragment.dart';
  */
 class LangAccessibilityLegendOptions extends OptionFragment {
   LangAccessibilityLegendOptions() : super();
-  String? m_legendItem;  
+  String? _legendItem;  
 
   String get legendItem { 
-    if (this.m_legendItem == null) {
-      this.m_legendItem = "";
+    if (this._legendItem == null) {
+      this._legendItem = "";
     }
-    return this.m_legendItem!;
+    return this._legendItem!;
   }
 
   void set legendItem (String v) {
-    this.m_legendItem = v;
+    this._legendItem = v;
   }
     
-  String? m_legendLabel;  
+  String? _legendLabel;  
 
   String get legendLabel { 
-    if (this.m_legendLabel == null) {
-      this.m_legendLabel = "";
+    if (this._legendLabel == null) {
+      this._legendLabel = "";
     }
-    return this.m_legendLabel!;
+    return this._legendLabel!;
   }
 
   void set legendLabel (String v) {
-    this.m_legendLabel = v;
+    this._legendLabel = v;
   }
     
-  String? m_legendLabelNoTitle;  
+  String? _legendLabelNoTitle;  
 
   String get legendLabelNoTitle { 
-    if (this.m_legendLabelNoTitle == null) {
-      this.m_legendLabelNoTitle = "";
+    if (this._legendLabelNoTitle == null) {
+      this._legendLabelNoTitle = "";
     }
-    return this.m_legendLabelNoTitle!;
+    return this._legendLabelNoTitle!;
   }
 
   void set legendLabelNoTitle (String v) {
-    this.m_legendLabelNoTitle = v;
+    this._legendLabelNoTitle = v;
   }
     
 
@@ -70,16 +70,16 @@ class LangAccessibilityLegendOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_legendItem != null) {  
-      buffer.writeAll(["\"legendItem\":", this.m_legendItem, ","], "");
+    if (this._legendItem != null) {  
+      buffer.writeAll(["\"legendItem\":\`", this._legendItem, "\`,"], "");
     }
 
-    if (this.m_legendLabel != null) {  
-      buffer.writeAll(["\"legendLabel\":", this.m_legendLabel, ","], "");
+    if (this._legendLabel != null) {  
+      buffer.writeAll(["\"legendLabel\":\`", this._legendLabel, "\`,"], "");
     }
 
-    if (this.m_legendLabelNoTitle != null) {  
-      buffer.writeAll(["\"legendLabelNoTitle\":", this.m_legendLabelNoTitle, ","], "");
+    if (this._legendLabelNoTitle != null) {  
+      buffer.writeAll(["\"legendLabelNoTitle\":\`", this._legendLabelNoTitle, "\`,"], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,108 +24,108 @@ import 'OptionFragment.dart';
  */
 class GaugeSeriesDialOptions extends OptionFragment {
   GaugeSeriesDialOptions() : super();
-  String? m_backgroundColor;  
+  String? _backgroundColor;  
 
   String get backgroundColor { 
-    if (this.m_backgroundColor == null) {
-      this.m_backgroundColor = "";
+    if (this._backgroundColor == null) {
+      this._backgroundColor = "";
     }
-    return this.m_backgroundColor!;
+    return this._backgroundColor!;
   }
 
   void set backgroundColor (String v) {
-    this.m_backgroundColor = v;
+    this._backgroundColor = v;
   }
     
-  String? m_baseLength;  
+  String? _baseLength;  
 
   String get baseLength { 
-    if (this.m_baseLength == null) {
-      this.m_baseLength = "";
+    if (this._baseLength == null) {
+      this._baseLength = "";
     }
-    return this.m_baseLength!;
+    return this._baseLength!;
   }
 
   void set baseLength (String v) {
-    this.m_baseLength = v;
+    this._baseLength = v;
   }
     
-  double? m_baseWidth;  
+  double? _baseWidth;  
 
   double get baseWidth { 
-    if (this.m_baseWidth == null) {
-      this.m_baseWidth = 0;
+    if (this._baseWidth == null) {
+      this._baseWidth = 0;
     }
-    return this.m_baseWidth!;
+    return this._baseWidth!;
   }
 
   void set baseWidth (double v) {
-    this.m_baseWidth = v;
+    this._baseWidth = v;
   }
     
-  String? m_borderColor;  
+  String? _borderColor;  
 
   String get borderColor { 
-    if (this.m_borderColor == null) {
-      this.m_borderColor = "";
+    if (this._borderColor == null) {
+      this._borderColor = "";
     }
-    return this.m_borderColor!;
+    return this._borderColor!;
   }
 
   void set borderColor (String v) {
-    this.m_borderColor = v;
+    this._borderColor = v;
   }
     
-  double? m_borderWidth;  
+  double? _borderWidth;  
 
   double get borderWidth { 
-    if (this.m_borderWidth == null) {
-      this.m_borderWidth = 0;
+    if (this._borderWidth == null) {
+      this._borderWidth = 0;
     }
-    return this.m_borderWidth!;
+    return this._borderWidth!;
   }
 
   void set borderWidth (double v) {
-    this.m_borderWidth = v;
+    this._borderWidth = v;
   }
     
-  String? m_radius;  
+  String? _radius;  
 
   String get radius { 
-    if (this.m_radius == null) {
-      this.m_radius = "";
+    if (this._radius == null) {
+      this._radius = "";
     }
-    return this.m_radius!;
+    return this._radius!;
   }
 
   void set radius (String v) {
-    this.m_radius = v;
+    this._radius = v;
   }
     
-  String? m_rearLength;  
+  String? _rearLength;  
 
   String get rearLength { 
-    if (this.m_rearLength == null) {
-      this.m_rearLength = "";
+    if (this._rearLength == null) {
+      this._rearLength = "";
     }
-    return this.m_rearLength!;
+    return this._rearLength!;
   }
 
   void set rearLength (String v) {
-    this.m_rearLength = v;
+    this._rearLength = v;
   }
     
-  double? m_topWidth;  
+  double? _topWidth;  
 
   double get topWidth { 
-    if (this.m_topWidth == null) {
-      this.m_topWidth = 0;
+    if (this._topWidth == null) {
+      this._topWidth = 0;
     }
-    return this.m_topWidth!;
+    return this._topWidth!;
   }
 
   void set topWidth (double v) {
-    this.m_topWidth = v;
+    this._topWidth = v;
   }
     
 
@@ -136,38 +136,38 @@ class GaugeSeriesDialOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_backgroundColor != null) {  
-      buffer.writeAll(["\"backgroundColor\":", this.m_backgroundColor, ","], "");
+    if (this._backgroundColor != null) {  
+      buffer.writeAll(["\"backgroundColor\":\`", this._backgroundColor, "\`,"], "");
     }
 
-    if (this.m_baseLength != null) {  
-      buffer.writeAll(["\"baseLength\":", this.m_baseLength, ","], "");
+    if (this._baseLength != null) {  
+      buffer.writeAll(["\"baseLength\":\`", this._baseLength, "\`,"], "");
     }
 
-    if (this.m_baseWidth != null) {  
-      buffer.writeAll(["\"baseWidth\":", this.m_baseWidth, ","], "");
+    if (this._baseWidth != null) {  
+      buffer.writeAll(["\"baseWidth\":", this._baseWidth, ","], "");
     }
 
-    if (this.m_borderColor != null) {  
-      buffer.writeAll(["\"borderColor\":", this.m_borderColor, ","], "");
+    if (this._borderColor != null) {  
+      buffer.writeAll(["\"borderColor\":\`", this._borderColor, "\`,"], "");
     }
 
-    if (this.m_borderWidth != null) {  
-      buffer.writeAll(["\"borderWidth\":", this.m_borderWidth, ","], "");
+    if (this._borderWidth != null) {  
+      buffer.writeAll(["\"borderWidth\":", this._borderWidth, ","], "");
     }
 
     // NOTE: skip serialization of path (type SVGPath is ignored)} 
 
-    if (this.m_radius != null) {  
-      buffer.writeAll(["\"radius\":", this.m_radius, ","], "");
+    if (this._radius != null) {  
+      buffer.writeAll(["\"radius\":\`", this._radius, "\`,"], "");
     }
 
-    if (this.m_rearLength != null) {  
-      buffer.writeAll(["\"rearLength\":", this.m_rearLength, ","], "");
+    if (this._rearLength != null) {  
+      buffer.writeAll(["\"rearLength\":\`", this._rearLength, "\`,"], "");
     }
 
-    if (this.m_topWidth != null) {  
-      buffer.writeAll(["\"topWidth\":", this.m_topWidth, ","], "");
+    if (this._topWidth != null) {  
+      buffer.writeAll(["\"topWidth\":", this._topWidth, ","], "");
     }
   }
 

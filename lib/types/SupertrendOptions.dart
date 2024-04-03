@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -28,17 +28,17 @@ class SupertrendOptions extends SMAOptions {
   /**
    * The styles for the Supertrend line that intersect main series.  
       */
-  Map<String, String>? m_changeTrendLine;  
+  Map<String, String>? _changeTrendLine;  
 
   Map<String, String> get changeTrendLine { 
-    if (this.m_changeTrendLine == null) {
-      this.m_changeTrendLine = Map<String, String>();
+    if (this._changeTrendLine == null) {
+      this._changeTrendLine = Map<String, String>();
     }
-    return this.m_changeTrendLine!;
+    return this._changeTrendLine!;
   }
 
   void set changeTrendLine (Map<String, String> v) {
-    this.m_changeTrendLine = v;
+    this._changeTrendLine = v;
   }
     
   /**
@@ -46,17 +46,17 @@ class SupertrendOptions extends SMAOptions {
    * 
    * Defaults to '#f21313'. 
       */
-  String? m_fallingTrendColor;  
+  String? _fallingTrendColor;  
 
   String get fallingTrendColor { 
-    if (this.m_fallingTrendColor == null) {
-      this.m_fallingTrendColor = "";
+    if (this._fallingTrendColor == null) {
+      this._fallingTrendColor = "";
     }
-    return this.m_fallingTrendColor!;
+    return this._fallingTrendColor!;
   }
 
   void set fallingTrendColor (String v) {
-    this.m_fallingTrendColor = v;
+    this._fallingTrendColor = v;
   }
     
   /**
@@ -69,17 +69,17 @@ class SupertrendOptions extends SMAOptions {
    * 
    * Defaults to '#06b535'. 
       */
-  String? m_risingTrendColor;  
+  String? _risingTrendColor;  
 
   String get risingTrendColor { 
-    if (this.m_risingTrendColor == null) {
-      this.m_risingTrendColor = "";
+    if (this._risingTrendColor == null) {
+      this._risingTrendColor = "";
     }
-    return this.m_risingTrendColor!;
+    return this._risingTrendColor!;
   }
 
   void set risingTrendColor (String v) {
-    this.m_risingTrendColor = v;
+    this._risingTrendColor = v;
   }
     
 
@@ -90,20 +90,18 @@ class SupertrendOptions extends SMAOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_changeTrendLine != null) {  
-      buffer.writeAll(["\"changeTrendLine\":", this.m_changeTrendLine, ","], "");
+    if (this._changeTrendLine != null) {  
+      buffer.writeAll(["\"changeTrendLine\":", this._changeTrendLine, ","], "");
     }
 
-    if (this.m_fallingTrendColor != null) {  
-      buffer.writeAll(["\"fallingTrendColor\":", this.m_fallingTrendColor, ","], "");
+    if (this._fallingTrendColor != null) {  
+      buffer.writeAll(["\"fallingTrendColor\":\`", this._fallingTrendColor, "\`,"], "");
     }
 
-    if (this.m_params != null) {  
-      buffer.writeAll(["\"params\":", this.m_params?.toJSON(), ","], "");
-    }
+    // NOTE: skip serialization of params (type SupertrendParamsOptions is ignored)} 
 
-    if (this.m_risingTrendColor != null) {  
-      buffer.writeAll(["\"risingTrendColor\":", this.m_risingTrendColor, ","], "");
+    if (this._risingTrendColor != null) {  
+      buffer.writeAll(["\"risingTrendColor\":\`", this._risingTrendColor, "\`,"], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,7 +24,19 @@ import 'OptionFragment.dart';
  */
 class Callback extends CallbackLike {
   Callback() : super();
-  
+  String? _type;  
+
+  String get type { 
+    if (this._type == null) {
+      this._type = "";
+    }
+    return this._type!;
+  }
+
+  void set type (String v) {
+    this._type = v;
+  }
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,7 +45,11 @@ class Callback extends CallbackLike {
     super.toJSONInner(buffer);
 
     
-    
+    if (this._type != null) {  
+      buffer.writeAll(["\"type\":\`", this._type, "\`,"], "");
+    }
+
+    // NOTE: skip serialization of func (type Function is ignored)} 
   }
 
 }

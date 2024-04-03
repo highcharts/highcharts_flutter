@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,147 +24,173 @@ import 'OptionFragment.dart';
  */
 class AxisTitleOptions extends OptionFragment {
   AxisTitleOptions() : super();
-  String? m_align;  
+  String? _align;  
 
   String get align { 
-    if (this.m_align == null) {
-      this.m_align = "";
+    if (this._align == null) {
+      this._align = "";
     }
-    return this.m_align!;
+    return this._align!;
   }
 
   void set align (String v) {
-    this.m_align = v;
+    this._align = v;
   }
     
-  bool? m_enabled;  
+  bool? _enabled;  
 
   bool get enabled { 
-    if (this.m_enabled == null) {
-      this.m_enabled = false;
+    if (this._enabled == null) {
+      this._enabled = false;
     }
-    return this.m_enabled!;
+    return this._enabled!;
   }
 
   void set enabled (bool v) {
-    this.m_enabled = v;
+    this._enabled = v;
   }
     
-  double? m_margin;  
+  double? _margin;  
 
   double get margin { 
-    if (this.m_margin == null) {
-      this.m_margin = 0;
+    if (this._margin == null) {
+      this._margin = 0;
     }
-    return this.m_margin!;
+    return this._margin!;
   }
 
   void set margin (double v) {
-    this.m_margin = v;
+    this._margin = v;
   }
     
-  double? m_offset;  
+  double? _offset;  
 
   double get offset { 
-    if (this.m_offset == null) {
-      this.m_offset = 0;
+    if (this._offset == null) {
+      this._offset = 0;
     }
-    return this.m_offset!;
+    return this._offset!;
   }
 
   void set offset (double v) {
-    this.m_offset = v;
+    this._offset = v;
   }
     
-  bool? m_reserveSpace;  
+  bool? _reserveSpace;  
 
   bool get reserveSpace { 
-    if (this.m_reserveSpace == null) {
-      this.m_reserveSpace = false;
+    if (this._reserveSpace == null) {
+      this._reserveSpace = false;
     }
-    return this.m_reserveSpace!;
+    return this._reserveSpace!;
   }
 
   void set reserveSpace (bool v) {
-    this.m_reserveSpace = v;
+    this._reserveSpace = v;
   }
     
-  double? m_rotation;  
+  double? _rotation;  
 
   double get rotation { 
-    if (this.m_rotation == null) {
-      this.m_rotation = 0;
+    if (this._rotation == null) {
+      this._rotation = 0;
     }
-    return this.m_rotation!;
+    return this._rotation!;
   }
 
   void set rotation (double v) {
-    this.m_rotation = v;
+    this._rotation = v;
   }
     
-  String? m_text;  
+  String? _text;  
 
   String get text { 
-    if (this.m_text == null) {
-      this.m_text = "";
+    if (this._text == null) {
+      this._text = "";
     }
-    return this.m_text!;
+    return this._text!;
   }
 
   void set text (String v) {
-    this.m_text = v;
+    this._text = v;
   }
     
-  String? m_textAlign;  
+  String? _textAlign;  
 
   String get textAlign { 
-    if (this.m_textAlign == null) {
-      this.m_textAlign = "";
+    if (this._textAlign == null) {
+      this._textAlign = "";
     }
-    return this.m_textAlign!;
+    return this._textAlign!;
   }
 
   void set textAlign (String v) {
-    this.m_textAlign = v;
+    this._textAlign = v;
   }
     
-  bool? m_useHTML;  
+  bool? _useHTML;  
 
   bool get useHTML { 
-    if (this.m_useHTML == null) {
-      this.m_useHTML = false;
+    if (this._useHTML == null) {
+      this._useHTML = false;
     }
-    return this.m_useHTML!;
+    return this._useHTML!;
   }
 
   void set useHTML (bool v) {
-    this.m_useHTML = v;
+    this._useHTML = v;
   }
     
-  double? m_x;  
+  double? _x;  
 
   double get x { 
-    if (this.m_x == null) {
-      this.m_x = 0;
+    if (this._x == null) {
+      this._x = 0;
     }
-    return this.m_x!;
+    return this._x!;
   }
 
   void set x (double v) {
-    this.m_x = v;
+    this._x = v;
   }
     
-  double? m_y;  
+  double? _y;  
 
   double get y { 
-    if (this.m_y == null) {
-      this.m_y = 0;
+    if (this._y == null) {
+      this._y = 0;
     }
-    return this.m_y!;
+    return this._y!;
   }
 
   void set y (double v) {
-    this.m_y = v;
+    this._y = v;
+  }
+    
+  String? _position3d;  
+
+  String get position3d { 
+    if (this._position3d == null) {
+      this._position3d = "";
+    }
+    return this._position3d!;
+  }
+
+  void set position3d (String v) {
+    this._position3d = v;
+  }
+    
+  bool? _skew3d;  
+
+  bool get skew3d { 
+    if (this._skew3d == null) {
+      this._skew3d = false;
+    }
+    return this._skew3d!;
+  }
+
+  void set skew3d (bool v) {
+    this._skew3d = v;
   }
     
 
@@ -175,50 +201,58 @@ class AxisTitleOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_align != null) {  
-      buffer.writeAll(["\"align\":", this.m_align, ","], "");
+    if (this._align != null) {  
+      buffer.writeAll(["\"align\":\`", this._align, "\`,"], "");
     }
 
-    if (this.m_enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this.m_enabled, ","], "");
+    if (this._enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this._enabled, ","], "");
     }
 
-    if (this.m_margin != null) {  
-      buffer.writeAll(["\"margin\":", this.m_margin, ","], "");
+    if (this._margin != null) {  
+      buffer.writeAll(["\"margin\":", this._margin, ","], "");
     }
 
-    if (this.m_offset != null) {  
-      buffer.writeAll(["\"offset\":", this.m_offset, ","], "");
+    if (this._offset != null) {  
+      buffer.writeAll(["\"offset\":", this._offset, ","], "");
     }
 
-    if (this.m_reserveSpace != null) {  
-      buffer.writeAll(["\"reserveSpace\":", this.m_reserveSpace, ","], "");
+    if (this._reserveSpace != null) {  
+      buffer.writeAll(["\"reserveSpace\":", this._reserveSpace, ","], "");
     }
 
-    if (this.m_rotation != null) {  
-      buffer.writeAll(["\"rotation\":", this.m_rotation, ","], "");
+    if (this._rotation != null) {  
+      buffer.writeAll(["\"rotation\":", this._rotation, ","], "");
     }
 
     // NOTE: skip serialization of style (type CSSObject is ignored)} 
 
-    if (this.m_text != null) {  
-      buffer.writeAll(["\"text\":", this.m_text, ","], "");
+    if (this._text != null) {  
+      buffer.writeAll(["\"text\":\`", this._text, "\`,"], "");
     }
 
-    if (this.m_textAlign != null) {  
-      buffer.writeAll(["\"textAlign\":", this.m_textAlign, ","], "");
+    if (this._textAlign != null) {  
+      buffer.writeAll(["\"textAlign\":\`", this._textAlign, "\`,"], "");
     }
 
-    if (this.m_useHTML != null) {  
-      buffer.writeAll(["\"useHTML\":", this.m_useHTML, ","], "");
+    if (this._useHTML != null) {  
+      buffer.writeAll(["\"useHTML\":", this._useHTML, ","], "");
     }
 
-    if (this.m_x != null) {  
-      buffer.writeAll(["\"x\":", this.m_x, ","], "");
+    if (this._x != null) {  
+      buffer.writeAll(["\"x\":", this._x, ","], "");
     }
 
-    if (this.m_y != null) {  
-      buffer.writeAll(["\"y\":", this.m_y, ","], "");
+    if (this._y != null) {  
+      buffer.writeAll(["\"y\":", this._y, ","], "");
+    }
+
+    if (this._position3d != null) {  
+      buffer.writeAll(["\"position3d\":\`", this._position3d, "\`,"], "");
+    }
+
+    if (this._skew3d != null) {  
+      buffer.writeAll(["\"skew3d\":", this._skew3d, ","], "");
     }
   }
 

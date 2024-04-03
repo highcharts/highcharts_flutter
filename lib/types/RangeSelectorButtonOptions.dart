@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -25,134 +25,134 @@ import 'OptionFragment.dart';
  */
 class RangeSelectorButtonOptions extends OptionFragment {
   RangeSelectorButtonOptions() : super();
-  double? m_count;  
+  double? _count;  
 
   double get count { 
-    if (this.m_count == null) {
-      this.m_count = 0;
+    if (this._count == null) {
+      this._count = 0;
     }
-    return this.m_count!;
+    return this._count!;
   }
 
   void set count (double v) {
-    this.m_count = v;
+    this._count = v;
   }
     
-  String? m_title;  
+  String? _title;  
 
   String get title { 
-    if (this.m_title == null) {
-      this.m_title = "";
+    if (this._title == null) {
+      this._title = "";
     }
-    return this.m_title!;
+    return this._title!;
   }
 
   void set title (String v) {
-    this.m_title = v;
+    this._title = v;
   }
     
-  double? m_offsetMax;  
+  double? _offsetMax;  
 
   double get offsetMax { 
-    if (this.m_offsetMax == null) {
-      this.m_offsetMax = 0;
+    if (this._offsetMax == null) {
+      this._offsetMax = 0;
     }
-    return this.m_offsetMax!;
+    return this._offsetMax!;
   }
 
   void set offsetMax (double v) {
-    this.m_offsetMax = v;
+    this._offsetMax = v;
   }
     
-  double? m_offsetMin;  
+  double? _offsetMin;  
 
   double get offsetMin { 
-    if (this.m_offsetMin == null) {
-      this.m_offsetMin = 0;
+    if (this._offsetMin == null) {
+      this._offsetMin = 0;
     }
-    return this.m_offsetMin!;
+    return this._offsetMin!;
   }
 
   void set offsetMin (double v) {
-    this.m_offsetMin = v;
+    this._offsetMin = v;
   }
     
-  bool? m_preserveDataGrouping;  
+  bool? _preserveDataGrouping;  
 
   bool get preserveDataGrouping { 
-    if (this.m_preserveDataGrouping == null) {
-      this.m_preserveDataGrouping = false;
+    if (this._preserveDataGrouping == null) {
+      this._preserveDataGrouping = false;
     }
-    return this.m_preserveDataGrouping!;
+    return this._preserveDataGrouping!;
   }
 
   void set preserveDataGrouping (bool v) {
-    this.m_preserveDataGrouping = v;
+    this._preserveDataGrouping = v;
   }
     
-  String? m_text;  
+  String? _text;  
 
   String get text { 
-    if (this.m_text == null) {
-      this.m_text = "";
+    if (this._text == null) {
+      this._text = "";
     }
-    return this.m_text!;
+    return this._text!;
   }
 
   void set text (String v) {
-    this.m_text = v;
+    this._text = v;
   }
     
-  String? m_type;  
+  String? _type;  
 
   String get type { 
-    if (this.m_type == null) {
-      this.m_type = "";
+    if (this._type == null) {
+      this._type = "";
     }
-    return this.m_type!;
+    return this._type!;
   }
 
   void set type (String v) {
-    this.m_type = v;
+    this._type = v;
   }
     
-  double? m__offsetMax;  
+  double? _p_offsetMax;  
 
-  double get _offsetMax { 
-    if (this.m__offsetMax == null) {
-      this.m__offsetMax = 0;
+  double get p_offsetMax { 
+    if (this._p_offsetMax == null) {
+      this._p_offsetMax = 0;
     }
-    return this.m__offsetMax!;
+    return this._p_offsetMax!;
   }
 
-  void set _offsetMax (double v) {
-    this.m__offsetMax = v;
+  void set p_offsetMax (double v) {
+    this._p_offsetMax = v;
   }
     
-  double? m__offsetMin;  
+  double? _p_offsetMin;  
 
-  double get _offsetMin { 
-    if (this.m__offsetMin == null) {
-      this.m__offsetMin = 0;
+  double get p_offsetMin { 
+    if (this._p_offsetMin == null) {
+      this._p_offsetMin = 0;
     }
-    return this.m__offsetMin!;
+    return this._p_offsetMin!;
   }
 
-  void set _offsetMin (double v) {
-    this.m__offsetMin = v;
+  void set p_offsetMin (double v) {
+    this._p_offsetMin = v;
   }
     
-  double? m__range;  
+  double? _p_range;  
 
-  double get _range { 
-    if (this.m__range == null) {
-      this.m__range = 0;
+  double get p_range { 
+    if (this._p_range == null) {
+      this._p_range = 0;
     }
-    return this.m__range!;
+    return this._p_range!;
   }
 
-  void set _range (double v) {
-    this.m__range = v;
+  void set p_range (double v) {
+    this._p_range = v;
   }
     
 
@@ -163,48 +163,48 @@ class RangeSelectorButtonOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_count != null) {  
-      buffer.writeAll(["\"count\":", this.m_count, ","], "");
+    if (this._count != null) {  
+      buffer.writeAll(["\"count\":", this._count, ","], "");
     }
 
     // NOTE: skip serialization of dataGrouping (type DataGroupingOptions is ignored)} 
 
-    if (this.m_title != null) {  
-      buffer.writeAll(["\"title\":", this.m_title, ","], "");
+    if (this._title != null) {  
+      buffer.writeAll(["\"title\":\`", this._title, "\`,"], "");
     }
 
     // NOTE: skip serialization of events (type RangeSelectorButtonsEventsOptions is ignored)} 
 
-    if (this.m_offsetMax != null) {  
-      buffer.writeAll(["\"offsetMax\":", this.m_offsetMax, ","], "");
+    if (this._offsetMax != null) {  
+      buffer.writeAll(["\"offsetMax\":", this._offsetMax, ","], "");
     }
 
-    if (this.m_offsetMin != null) {  
-      buffer.writeAll(["\"offsetMin\":", this.m_offsetMin, ","], "");
+    if (this._offsetMin != null) {  
+      buffer.writeAll(["\"offsetMin\":", this._offsetMin, ","], "");
     }
 
-    if (this.m_preserveDataGrouping != null) {  
-      buffer.writeAll(["\"preserveDataGrouping\":", this.m_preserveDataGrouping, ","], "");
+    if (this._preserveDataGrouping != null) {  
+      buffer.writeAll(["\"preserveDataGrouping\":", this._preserveDataGrouping, ","], "");
     }
 
-    if (this.m_text != null) {  
-      buffer.writeAll(["\"text\":", this.m_text, ","], "");
+    if (this._text != null) {  
+      buffer.writeAll(["\"text\":\`", this._text, "\`,"], "");
     }
 
-    if (this.m_type != null) {  
-      buffer.writeAll(["\"type\":", this.m_type, ","], "");
+    if (this._type != null) {  
+      buffer.writeAll(["\"type\":\`", this._type, "\`,"], "");
     }
 
-    if (this.m__offsetMax != null) {  
-      buffer.writeAll(["\"_offsetMax\":", this.m__offsetMax, ","], "");
+    if (this._p_offsetMax != null) {  
+      buffer.writeAll(["\"_offsetMax\":", this._p_offsetMax, ","], "");
     }
 
-    if (this.m__offsetMin != null) {  
-      buffer.writeAll(["\"_offsetMin\":", this.m__offsetMin, ","], "");
+    if (this._p_offsetMin != null) {  
+      buffer.writeAll(["\"_offsetMin\":", this._p_offsetMin, ","], "");
     }
 
-    if (this.m__range != null) {  
-      buffer.writeAll(["\"_range\":", this.m__range, ","], "");
+    if (this._p_range != null) {  
+      buffer.writeAll(["\"_range\":", this._p_range, ","], "");
     }
   }
 

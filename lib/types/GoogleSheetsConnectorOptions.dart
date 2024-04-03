@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,147 +24,147 @@ import 'OptionFragment.dart';
  */
 class GoogleSheetsConnectorOptions extends DataConnectorOptions {
   GoogleSheetsConnectorOptions() : super();
-  double? m_dataRefreshRate;  
+  double? _dataRefreshRate;  
 
   double get dataRefreshRate { 
-    if (this.m_dataRefreshRate == null) {
-      this.m_dataRefreshRate = 0;
+    if (this._dataRefreshRate == null) {
+      this._dataRefreshRate = 0;
     }
-    return this.m_dataRefreshRate!;
+    return this._dataRefreshRate!;
   }
 
   void set dataRefreshRate (double v) {
-    this.m_dataRefreshRate = v;
+    this._dataRefreshRate = v;
   }
     
-  bool? m_enablePolling;  
+  bool? _enablePolling;  
 
   bool get enablePolling { 
-    if (this.m_enablePolling == null) {
-      this.m_enablePolling = false;
+    if (this._enablePolling == null) {
+      this._enablePolling = false;
     }
-    return this.m_enablePolling!;
+    return this._enablePolling!;
   }
 
   void set enablePolling (bool v) {
-    this.m_enablePolling = v;
+    this._enablePolling = v;
   }
     
-  double? m_endColumn;  
+  double? _endColumn;  
 
   double get endColumn { 
-    if (this.m_endColumn == null) {
-      this.m_endColumn = 0;
+    if (this._endColumn == null) {
+      this._endColumn = 0;
     }
-    return this.m_endColumn!;
+    return this._endColumn!;
   }
 
   void set endColumn (double v) {
-    this.m_endColumn = v;
+    this._endColumn = v;
   }
     
-  double? m_endRow;  
+  double? _endRow;  
 
   double get endRow { 
-    if (this.m_endRow == null) {
-      this.m_endRow = 0;
+    if (this._endRow == null) {
+      this._endRow = 0;
     }
-    return this.m_endRow!;
+    return this._endRow!;
   }
 
   void set endRow (double v) {
-    this.m_endRow = v;
+    this._endRow = v;
   }
     
-  bool? m_firstRowAsNames;  
+  bool? _firstRowAsNames;  
 
   bool get firstRowAsNames { 
-    if (this.m_firstRowAsNames == null) {
-      this.m_firstRowAsNames = false;
+    if (this._firstRowAsNames == null) {
+      this._firstRowAsNames = false;
     }
-    return this.m_firstRowAsNames!;
+    return this._firstRowAsNames!;
   }
 
   void set firstRowAsNames (bool v) {
-    this.m_firstRowAsNames = v;
+    this._firstRowAsNames = v;
   }
     
-  String? m_googleAPIKey;  
+  String? _googleAPIKey;  
 
   String get googleAPIKey { 
-    if (this.m_googleAPIKey == null) {
-      this.m_googleAPIKey = "";
+    if (this._googleAPIKey == null) {
+      this._googleAPIKey = "";
     }
-    return this.m_googleAPIKey!;
+    return this._googleAPIKey!;
   }
 
   void set googleAPIKey (String v) {
-    this.m_googleAPIKey = v;
+    this._googleAPIKey = v;
   }
     
-  String? m_googleSpreadsheetKey;  
+  String? _googleSpreadsheetKey;  
 
   String get googleSpreadsheetKey { 
-    if (this.m_googleSpreadsheetKey == null) {
-      this.m_googleSpreadsheetKey = "";
+    if (this._googleSpreadsheetKey == null) {
+      this._googleSpreadsheetKey = "";
     }
-    return this.m_googleSpreadsheetKey!;
+    return this._googleSpreadsheetKey!;
   }
 
   void set googleSpreadsheetKey (String v) {
-    this.m_googleSpreadsheetKey = v;
+    this._googleSpreadsheetKey = v;
   }
     
-  String? m_googleSpreadsheetRange;  
+  String? _googleSpreadsheetRange;  
 
   String get googleSpreadsheetRange { 
-    if (this.m_googleSpreadsheetRange == null) {
-      this.m_googleSpreadsheetRange = "";
+    if (this._googleSpreadsheetRange == null) {
+      this._googleSpreadsheetRange = "";
     }
-    return this.m_googleSpreadsheetRange!;
+    return this._googleSpreadsheetRange!;
   }
 
   void set googleSpreadsheetRange (String v) {
-    this.m_googleSpreadsheetRange = v;
+    this._googleSpreadsheetRange = v;
   }
     
-  double? m_startColumn;  
+  double? _startColumn;  
 
   double get startColumn { 
-    if (this.m_startColumn == null) {
-      this.m_startColumn = 0;
+    if (this._startColumn == null) {
+      this._startColumn = 0;
     }
-    return this.m_startColumn!;
+    return this._startColumn!;
   }
 
   void set startColumn (double v) {
-    this.m_startColumn = v;
+    this._startColumn = v;
   }
     
-  double? m_startRow;  
+  double? _startRow;  
 
   double get startRow { 
-    if (this.m_startRow == null) {
-      this.m_startRow = 0;
+    if (this._startRow == null) {
+      this._startRow = 0;
     }
-    return this.m_startRow!;
+    return this._startRow!;
   }
 
   void set startRow (double v) {
-    this.m_startRow = v;
+    this._startRow = v;
   }
     
-  double? m_worksheet;  
+  double? _worksheet;  
 
   double get worksheet { 
-    if (this.m_worksheet == null) {
-      this.m_worksheet = 0;
+    if (this._worksheet == null) {
+      this._worksheet = 0;
     }
-    return this.m_worksheet!;
+    return this._worksheet!;
   }
 
   void set worksheet (double v) {
-    this.m_worksheet = v;
+    this._worksheet = v;
   }
     
 
@@ -175,48 +175,48 @@ class GoogleSheetsConnectorOptions extends DataConnectorOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_dataRefreshRate != null) {  
-      buffer.writeAll(["\"dataRefreshRate\":", this.m_dataRefreshRate, ","], "");
+    if (this._dataRefreshRate != null) {  
+      buffer.writeAll(["\"dataRefreshRate\":", this._dataRefreshRate, ","], "");
     }
 
-    if (this.m_enablePolling != null) {  
-      buffer.writeAll(["\"enablePolling\":", this.m_enablePolling, ","], "");
+    if (this._enablePolling != null) {  
+      buffer.writeAll(["\"enablePolling\":", this._enablePolling, ","], "");
     }
 
-    if (this.m_endColumn != null) {  
-      buffer.writeAll(["\"endColumn\":", this.m_endColumn, ","], "");
+    if (this._endColumn != null) {  
+      buffer.writeAll(["\"endColumn\":", this._endColumn, ","], "");
     }
 
-    if (this.m_endRow != null) {  
-      buffer.writeAll(["\"endRow\":", this.m_endRow, ","], "");
+    if (this._endRow != null) {  
+      buffer.writeAll(["\"endRow\":", this._endRow, ","], "");
     }
 
-    if (this.m_firstRowAsNames != null) {  
-      buffer.writeAll(["\"firstRowAsNames\":", this.m_firstRowAsNames, ","], "");
+    if (this._firstRowAsNames != null) {  
+      buffer.writeAll(["\"firstRowAsNames\":", this._firstRowAsNames, ","], "");
     }
 
-    if (this.m_googleAPIKey != null) {  
-      buffer.writeAll(["\"googleAPIKey\":", this.m_googleAPIKey, ","], "");
+    if (this._googleAPIKey != null) {  
+      buffer.writeAll(["\"googleAPIKey\":\`", this._googleAPIKey, "\`,"], "");
     }
 
-    if (this.m_googleSpreadsheetKey != null) {  
-      buffer.writeAll(["\"googleSpreadsheetKey\":", this.m_googleSpreadsheetKey, ","], "");
+    if (this._googleSpreadsheetKey != null) {  
+      buffer.writeAll(["\"googleSpreadsheetKey\":\`", this._googleSpreadsheetKey, "\`,"], "");
     }
 
-    if (this.m_googleSpreadsheetRange != null) {  
-      buffer.writeAll(["\"googleSpreadsheetRange\":", this.m_googleSpreadsheetRange, ","], "");
+    if (this._googleSpreadsheetRange != null) {  
+      buffer.writeAll(["\"googleSpreadsheetRange\":\`", this._googleSpreadsheetRange, "\`,"], "");
     }
 
-    if (this.m_startColumn != null) {  
-      buffer.writeAll(["\"startColumn\":", this.m_startColumn, ","], "");
+    if (this._startColumn != null) {  
+      buffer.writeAll(["\"startColumn\":", this._startColumn, ","], "");
     }
 
-    if (this.m_startRow != null) {  
-      buffer.writeAll(["\"startRow\":", this.m_startRow, ","], "");
+    if (this._startRow != null) {  
+      buffer.writeAll(["\"startRow\":", this._startRow, ","], "");
     }
 
-    if (this.m_worksheet != null) {  
-      buffer.writeAll(["\"worksheet\":", this.m_worksheet, ","], "");
+    if (this._worksheet != null) {  
+      buffer.writeAll(["\"worksheet\":", this._worksheet, ","], "");
     }
   }
 

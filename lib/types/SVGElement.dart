@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -25,17 +25,17 @@ import 'OptionFragment.dart';
  */
 class SVGElement extends SVGElementLike {
   SVGElement() : super();
-  double? m_cutHeight;  
+  double? _cutHeight;  
 
   double get cutHeight { 
-    if (this.m_cutHeight == null) {
-      this.m_cutHeight = 0;
+    if (this._cutHeight == null) {
+      this._cutHeight = 0;
     }
-    return this.m_cutHeight!;
+    return this._cutHeight!;
   }
 
   void set cutHeight (double v) {
-    this.m_cutHeight = v;
+    this._cutHeight = v;
   }
     
 
@@ -46,8 +46,8 @@ class SVGElement extends SVGElementLike {
     super.toJSONInner(buffer);
 
     
-    if (this.m_cutHeight != null) {  
-      buffer.writeAll(["\"cutHeight\":", this.m_cutHeight, ","], "");
+    if (this._cutHeight != null) {  
+      buffer.writeAll(["\"cutHeight\":", this._cutHeight, ","], "");
     }
 
     // NOTE: skip serialization of parentNode (type SVGElement is ignored)} 

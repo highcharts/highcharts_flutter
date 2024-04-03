@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,56 +24,56 @@ import 'OptionFragment.dart';
  */
 class OrganizationSeriesNodeOptions extends SankeySeriesNodeOptions {
   OrganizationSeriesNodeOptions() : super();
-  String? m_description;  
+  String? _description;  
 
   String get description { 
-    if (this.m_description == null) {
-      this.m_description = "";
+    if (this._description == null) {
+      this._description = "";
     }
-    return this.m_description!;
+    return this._description!;
   }
 
   void set description (String v) {
-    this.m_description = v;
+    this._description = v;
   }
     
-  String? m_image;  
+  String? _image;  
 
   String get image { 
-    if (this.m_image == null) {
-      this.m_image = "";
+    if (this._image == null) {
+      this._image = "";
     }
-    return this.m_image!;
+    return this._image!;
   }
 
   void set image (String v) {
-    this.m_image = v;
+    this._image = v;
   }
     
-  String? m_layout;  
+  String? _layout;  
 
   String get layout { 
-    if (this.m_layout == null) {
-      this.m_layout = "";
+    if (this._layout == null) {
+      this._layout = "";
     }
-    return this.m_layout!;
+    return this._layout!;
   }
 
   void set layout (String v) {
-    this.m_layout = v;
+    this._layout = v;
   }
     
-  String? m_title;  
+  String? _title;  
 
   String get title { 
-    if (this.m_title == null) {
-      this.m_title = "";
+    if (this._title == null) {
+      this._title = "";
     }
-    return this.m_title!;
+    return this._title!;
   }
 
   void set title (String v) {
-    this.m_title = v;
+    this._title = v;
   }
     
 
@@ -84,20 +84,20 @@ class OrganizationSeriesNodeOptions extends SankeySeriesNodeOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_description != null) {  
-      buffer.writeAll(["\"description\":", this.m_description, ","], "");
+    if (this._description != null) {  
+      buffer.writeAll(["\"description\":\`", this._description, "\`,"], "");
     }
 
-    if (this.m_image != null) {  
-      buffer.writeAll(["\"image\":", this.m_image, ","], "");
+    if (this._image != null) {  
+      buffer.writeAll(["\"image\":\`", this._image, "\`,"], "");
     }
 
-    if (this.m_layout != null) {  
-      buffer.writeAll(["\"layout\":", this.m_layout, ","], "");
+    if (this._layout != null) {  
+      buffer.writeAll(["\"layout\":\`", this._layout, "\`,"], "");
     }
 
-    if (this.m_title != null) {  
-      buffer.writeAll(["\"title\":", this.m_title, ","], "");
+    if (this._title != null) {  
+      buffer.writeAll(["\"title\":\`", this._title, "\`,"], "");
     }
   }
 

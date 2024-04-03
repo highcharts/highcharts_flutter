@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,57 +23,57 @@ import 'OptionFragment.dart';
  */
 class DateTimeLabelFormatObject extends OptionFragment {
   DateTimeLabelFormatObject() : super();
-  String? m_from;  
+  String? _from;  
 
   String get from { 
-    if (this.m_from == null) {
-      this.m_from = "";
+    if (this._from == null) {
+      this._from = "";
     }
-    return this.m_from!;
+    return this._from!;
   }
 
   void set from (String v) {
-    this.m_from = v;
+    this._from = v;
   }
     
-  List<String>? list;
-  String? m_main;  
+  List<String>? list; // String
+  String? _main;  
 
   String get main { 
-    if (this.m_main == null) {
-      this.m_main = "";
+    if (this._main == null) {
+      this._main = "";
     }
-    return this.m_main!;
+    return this._main!;
   }
 
   void set main (String v) {
-    this.m_main = v;
+    this._main = v;
   }
     
-  bool? m_range;  
+  bool? _range;  
 
   bool get range { 
-    if (this.m_range == null) {
-      this.m_range = false;
+    if (this._range == null) {
+      this._range = false;
     }
-    return this.m_range!;
+    return this._range!;
   }
 
   void set range (bool v) {
-    this.m_range = v;
+    this._range = v;
   }
     
-  String? m_to;  
+  String? _to;  
 
   String get to { 
-    if (this.m_to == null) {
-      this.m_to = "";
+    if (this._to == null) {
+      this._to = "";
     }
-    return this.m_to!;
+    return this._to!;
   }
 
   void set to (String v) {
-    this.m_to = v;
+    this._to = v;
   }
     
 
@@ -84,22 +84,22 @@ class DateTimeLabelFormatObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_from != null) {  
-      buffer.writeAll(["\"from\":", this.m_from, ","], "");
+    if (this._from != null) {  
+      buffer.writeAll(["\"from\":\`", this._from, "\`,"], "");
     }
 
     // NOTE: skip serialization of list (type string is ignored)} 
 
-    if (this.m_main != null) {  
-      buffer.writeAll(["\"main\":", this.m_main, ","], "");
+    if (this._main != null) {  
+      buffer.writeAll(["\"main\":\`", this._main, "\`,"], "");
     }
 
-    if (this.m_range != null) {  
-      buffer.writeAll(["\"range\":", this.m_range, ","], "");
+    if (this._range != null) {  
+      buffer.writeAll(["\"range\":", this._range, ","], "");
     }
 
-    if (this.m_to != null) {  
-      buffer.writeAll(["\"to\":", this.m_to, ","], "");
+    if (this._to != null) {  
+      buffer.writeAll(["\"to\":\`", this._to, "\`,"], "");
     }
   }
 

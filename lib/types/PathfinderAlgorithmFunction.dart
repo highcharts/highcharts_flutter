@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,17 +23,17 @@ import 'OptionFragment.dart';
  */
 class PathfinderAlgorithmFunction extends OptionFragment {
   PathfinderAlgorithmFunction() : super();
-  bool? m_requiresObstacles;  
+  bool? _requiresObstacles;  
 
   bool get requiresObstacles { 
-    if (this.m_requiresObstacles == null) {
-      this.m_requiresObstacles = false;
+    if (this._requiresObstacles == null) {
+      this._requiresObstacles = false;
     }
-    return this.m_requiresObstacles!;
+    return this._requiresObstacles!;
   }
 
   void set requiresObstacles (bool v) {
-    this.m_requiresObstacles = v;
+    this._requiresObstacles = v;
   }
     
 
@@ -44,8 +44,8 @@ class PathfinderAlgorithmFunction extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_requiresObstacles != null) {  
-      buffer.writeAll(["\"requiresObstacles\":", this.m_requiresObstacles, ","], "");
+    if (this._requiresObstacles != null) {  
+      buffer.writeAll(["\"requiresObstacles\":", this._requiresObstacles, ","], "");
     }
   }
 

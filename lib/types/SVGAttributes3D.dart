@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,56 +24,56 @@ import 'OptionFragment.dart';
  */
 class SVGAttributes3D extends SVGAttributes {
   SVGAttributes3D() : super();
-  double? m_alpha;  
+  double? _alpha;  
 
   double get alpha { 
-    if (this.m_alpha == null) {
-      this.m_alpha = 0;
+    if (this._alpha == null) {
+      this._alpha = 0;
     }
-    return this.m_alpha!;
+    return this._alpha!;
   }
 
   void set alpha (double v) {
-    this.m_alpha = v;
+    this._alpha = v;
   }
     
-  double? m_beta;  
+  double? _beta;  
 
   double get beta { 
-    if (this.m_beta == null) {
-      this.m_beta = 0;
+    if (this._beta == null) {
+      this._beta = 0;
     }
-    return this.m_beta!;
+    return this._beta!;
   }
 
   void set beta (double v) {
-    this.m_beta = v;
+    this._beta = v;
   }
     
-  double? m_center;  
+  double? _center;  
 
   double get center { 
-    if (this.m_center == null) {
-      this.m_center = 0;
+    if (this._center == null) {
+      this._center = 0;
     }
-    return this.m_center!;
+    return this._center!;
   }
 
   void set center (double v) {
-    this.m_center = v;
+    this._center = v;
   }
     
-  bool? m_insidePlotArea;  
+  bool? _insidePlotArea;  
 
   bool get insidePlotArea { 
-    if (this.m_insidePlotArea == null) {
-      this.m_insidePlotArea = false;
+    if (this._insidePlotArea == null) {
+      this._insidePlotArea = false;
     }
-    return this.m_insidePlotArea!;
+    return this._insidePlotArea!;
   }
 
   void set insidePlotArea (bool v) {
-    this.m_insidePlotArea = v;
+    this._insidePlotArea = v;
   }
     
 
@@ -84,24 +84,24 @@ class SVGAttributes3D extends SVGAttributes {
     super.toJSONInner(buffer);
 
     
-    if (this.m_alpha != null) {  
-      buffer.writeAll(["\"alpha\":", this.m_alpha, ","], "");
+    if (this._alpha != null) {  
+      buffer.writeAll(["\"alpha\":", this._alpha, ","], "");
     }
 
-    if (this.m_beta != null) {  
-      buffer.writeAll(["\"beta\":", this.m_beta, ","], "");
+    if (this._beta != null) {  
+      buffer.writeAll(["\"beta\":", this._beta, ","], "");
     }
 
-    if (this.m_center != null) {  
-      buffer.writeAll(["\"center\":", this.m_center, ","], "");
+    if (this._center != null) {  
+      buffer.writeAll(["\"center\":", this._center, ","], "");
     }
 
     // NOTE: skip serialization of enabled (type "default" is ignored)} 
 
     // NOTE: skip serialization of faces (type SVGAttributes3D[] is ignored)} 
 
-    if (this.m_insidePlotArea != null) {  
-      buffer.writeAll(["\"insidePlotArea\":", this.m_insidePlotArea, ","], "");
+    if (this._insidePlotArea != null) {  
+      buffer.writeAll(["\"insidePlotArea\":", this._insidePlotArea, ","], "");
     }
 
     // NOTE: skip serialization of vertexes (type Position3DObject[] is ignored)} 

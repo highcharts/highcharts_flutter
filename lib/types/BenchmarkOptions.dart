@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,17 +23,17 @@ import 'OptionFragment.dart';
  */
 class BenchmarkOptions extends OptionFragment {
   BenchmarkOptions() : super();
-  double? m_iterations;  
+  double? _iterations;  
 
   double get iterations { 
-    if (this.m_iterations == null) {
-      this.m_iterations = 0;
+    if (this._iterations == null) {
+      this._iterations = 0;
     }
-    return this.m_iterations!;
+    return this._iterations!;
   }
 
   void set iterations (double v) {
-    this.m_iterations = v;
+    this._iterations = v;
   }
     
 
@@ -44,8 +44,8 @@ class BenchmarkOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_iterations != null) {  
-      buffer.writeAll(["\"iterations\":", this.m_iterations, ","], "");
+    if (this._iterations != null) {  
+      buffer.writeAll(["\"iterations\":", this._iterations, ","], "");
     }
   }
 

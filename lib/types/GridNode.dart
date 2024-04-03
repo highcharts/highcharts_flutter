@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,134 +23,134 @@ import 'OptionFragment.dart';
  */
 class GridNode extends OptionFragment {
   GridNode() : super();
-  bool? m_collapsed;  
+  bool? _collapsed;  
 
   bool get collapsed { 
-    if (this.m_collapsed == null) {
-      this.m_collapsed = false;
+    if (this._collapsed == null) {
+      this._collapsed = false;
     }
-    return this.m_collapsed!;
+    return this._collapsed!;
   }
 
   void set collapsed (bool v) {
-    this.m_collapsed = v;
+    this._collapsed = v;
   }
     
-  double? m_collapseEnd;  
+  double? _collapseEnd;  
 
   double get collapseEnd { 
-    if (this.m_collapseEnd == null) {
-      this.m_collapseEnd = 0;
+    if (this._collapseEnd == null) {
+      this._collapseEnd = 0;
     }
-    return this.m_collapseEnd!;
+    return this._collapseEnd!;
   }
 
   void set collapseEnd (double v) {
-    this.m_collapseEnd = v;
+    this._collapseEnd = v;
   }
     
-  double? m_collapseStart;  
+  double? _collapseStart;  
 
   double get collapseStart { 
-    if (this.m_collapseStart == null) {
-      this.m_collapseStart = 0;
+    if (this._collapseStart == null) {
+      this._collapseStart = 0;
     }
-    return this.m_collapseStart!;
+    return this._collapseStart!;
   }
 
   void set collapseStart (double v) {
-    this.m_collapseStart = v;
+    this._collapseStart = v;
   }
     
-  double? m_depth;  
+  double? _depth;  
 
   double get depth { 
-    if (this.m_depth == null) {
-      this.m_depth = 0;
+    if (this._depth == null) {
+      this._depth = 0;
     }
-    return this.m_depth!;
+    return this._depth!;
   }
 
   void set depth (double v) {
-    this.m_depth = v;
+    this._depth = v;
   }
     
-  double? m_descendants;  
+  double? _descendants;  
 
   double get descendants { 
-    if (this.m_descendants == null) {
-      this.m_descendants = 0;
+    if (this._descendants == null) {
+      this._descendants = 0;
     }
-    return this.m_descendants!;
+    return this._descendants!;
   }
 
   void set descendants (double v) {
-    this.m_descendants = v;
+    this._descendants = v;
   }
     
-  String? m_id;  
+  String? _id;  
 
   String get id { 
-    if (this.m_id == null) {
-      this.m_id = "";
+    if (this._id == null) {
+      this._id = "";
     }
-    return this.m_id!;
+    return this._id!;
   }
 
   void set id (String v) {
-    this.m_id = v;
+    this._id = v;
   }
     
-  double? m_height;  
+  double? _height;  
 
   double get height { 
-    if (this.m_height == null) {
-      this.m_height = 0;
+    if (this._height == null) {
+      this._height = 0;
     }
-    return this.m_height!;
+    return this._height!;
   }
 
   void set height (double v) {
-    this.m_height = v;
+    this._height = v;
   }
     
-  String? m_name;  
+  String? _name;  
 
   String get name { 
-    if (this.m_name == null) {
-      this.m_name = "";
+    if (this._name == null) {
+      this._name = "";
     }
-    return this.m_name!;
+    return this._name!;
   }
 
   void set name (String v) {
-    this.m_name = v;
+    this._name = v;
   }
     
-  double? m_pos;  
+  double? _pos;  
 
   double get pos { 
-    if (this.m_pos == null) {
-      this.m_pos = 0;
+    if (this._pos == null) {
+      this._pos = 0;
     }
-    return this.m_pos!;
+    return this._pos!;
   }
 
   void set pos (double v) {
-    this.m_pos = v;
+    this._pos = v;
   }
     
-  double? m_tickmarkOffset;  
+  double? _tickmarkOffset;  
 
   double get tickmarkOffset { 
-    if (this.m_tickmarkOffset == null) {
-      this.m_tickmarkOffset = 0;
+    if (this._tickmarkOffset == null) {
+      this._tickmarkOffset = 0;
     }
-    return this.m_tickmarkOffset!;
+    return this._tickmarkOffset!;
   }
 
   void set tickmarkOffset (double v) {
-    this.m_tickmarkOffset = v;
+    this._tickmarkOffset = v;
   }
     
 
@@ -163,44 +163,44 @@ class GridNode extends OptionFragment {
     
     // NOTE: skip serialization of children (type GridNode[] is ignored)} 
 
-    if (this.m_collapsed != null) {  
-      buffer.writeAll(["\"collapsed\":", this.m_collapsed, ","], "");
+    if (this._collapsed != null) {  
+      buffer.writeAll(["\"collapsed\":", this._collapsed, ","], "");
     }
 
-    if (this.m_collapseEnd != null) {  
-      buffer.writeAll(["\"collapseEnd\":", this.m_collapseEnd, ","], "");
+    if (this._collapseEnd != null) {  
+      buffer.writeAll(["\"collapseEnd\":", this._collapseEnd, ","], "");
     }
 
-    if (this.m_collapseStart != null) {  
-      buffer.writeAll(["\"collapseStart\":", this.m_collapseStart, ","], "");
+    if (this._collapseStart != null) {  
+      buffer.writeAll(["\"collapseStart\":", this._collapseStart, ","], "");
     }
 
-    if (this.m_depth != null) {  
-      buffer.writeAll(["\"depth\":", this.m_depth, ","], "");
+    if (this._depth != null) {  
+      buffer.writeAll(["\"depth\":", this._depth, ","], "");
     }
 
-    if (this.m_descendants != null) {  
-      buffer.writeAll(["\"descendants\":", this.m_descendants, ","], "");
+    if (this._descendants != null) {  
+      buffer.writeAll(["\"descendants\":", this._descendants, ","], "");
     }
 
-    if (this.m_id != null) {  
-      buffer.writeAll(["\"id\":", this.m_id, ","], "");
+    if (this._id != null) {  
+      buffer.writeAll(["\"id\":\`", this._id, "\`,"], "");
     }
 
-    if (this.m_height != null) {  
-      buffer.writeAll(["\"height\":", this.m_height, ","], "");
+    if (this._height != null) {  
+      buffer.writeAll(["\"height\":", this._height, ","], "");
     }
 
-    if (this.m_name != null) {  
-      buffer.writeAll(["\"name\":", this.m_name, ","], "");
+    if (this._name != null) {  
+      buffer.writeAll(["\"name\":\`", this._name, "\`,"], "");
     }
 
-    if (this.m_pos != null) {  
-      buffer.writeAll(["\"pos\":", this.m_pos, ","], "");
+    if (this._pos != null) {  
+      buffer.writeAll(["\"pos\":", this._pos, ","], "");
     }
 
-    if (this.m_tickmarkOffset != null) {  
-      buffer.writeAll(["\"tickmarkOffset\":", this.m_tickmarkOffset, ","], "");
+    if (this._tickmarkOffset != null) {  
+      buffer.writeAll(["\"tickmarkOffset\":", this._tickmarkOffset, ","], "");
     }
   }
 

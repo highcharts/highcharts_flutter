@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,30 +24,30 @@ import 'OptionFragment.dart';
  */
 class IKHParamsOptions extends SMAParamsOptions {
   IKHParamsOptions() : super();
-  double? m_periodTenkan;  
+  double? _periodTenkan;  
 
   double get periodTenkan { 
-    if (this.m_periodTenkan == null) {
-      this.m_periodTenkan = 0;
+    if (this._periodTenkan == null) {
+      this._periodTenkan = 0;
     }
-    return this.m_periodTenkan!;
+    return this._periodTenkan!;
   }
 
   void set periodTenkan (double v) {
-    this.m_periodTenkan = v;
+    this._periodTenkan = v;
   }
     
-  double? m_periodSenkouSpanB;  
+  double? _periodSenkouSpanB;  
 
   double get periodSenkouSpanB { 
-    if (this.m_periodSenkouSpanB == null) {
-      this.m_periodSenkouSpanB = 0;
+    if (this._periodSenkouSpanB == null) {
+      this._periodSenkouSpanB = 0;
     }
-    return this.m_periodSenkouSpanB!;
+    return this._periodSenkouSpanB!;
   }
 
   void set periodSenkouSpanB (double v) {
-    this.m_periodSenkouSpanB = v;
+    this._periodSenkouSpanB = v;
   }
     
 
@@ -58,12 +58,12 @@ class IKHParamsOptions extends SMAParamsOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_periodTenkan != null) {  
-      buffer.writeAll(["\"periodTenkan\":", this.m_periodTenkan, ","], "");
+    if (this._periodTenkan != null) {  
+      buffer.writeAll(["\"periodTenkan\":", this._periodTenkan, ","], "");
     }
 
-    if (this.m_periodSenkouSpanB != null) {  
-      buffer.writeAll(["\"periodSenkouSpanB\":", this.m_periodSenkouSpanB, ","], "");
+    if (this._periodSenkouSpanB != null) {  
+      buffer.writeAll(["\"periodSenkouSpanB\":", this._periodSenkouSpanB, ","], "");
     }
   }
 

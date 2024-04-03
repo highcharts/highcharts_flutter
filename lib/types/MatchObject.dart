@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,121 +23,121 @@ import 'OptionFragment.dart';
  */
 class MatchObject extends OptionFragment {
   MatchObject() : super();
-  String? m_body;  
+  String? _body;  
 
   String get body { 
-    if (this.m_body == null) {
-      this.m_body = "";
+    if (this._body == null) {
+      this._body = "";
     }
-    return this.m_body!;
+    return this._body!;
   }
 
   void set body (String v) {
-    this.m_body = v;
+    this._body = v;
   }
     
-  String? m_elseBody;  
+  String? _elseBody;  
 
   String get elseBody { 
-    if (this.m_elseBody == null) {
-      this.m_elseBody = "";
+    if (this._elseBody == null) {
+      this._elseBody = "";
     }
-    return this.m_elseBody!;
+    return this._elseBody!;
   }
 
   void set elseBody (String v) {
-    this.m_elseBody = v;
+    this._elseBody = v;
   }
     
-  String? m_expression;  
+  String? _expression;  
 
   String get expression { 
-    if (this.m_expression == null) {
-      this.m_expression = "";
+    if (this._expression == null) {
+      this._expression = "";
     }
-    return this.m_expression!;
+    return this._expression!;
   }
 
   void set expression (String v) {
-    this.m_expression = v;
+    this._expression = v;
   }
     
-  String? m_find;  
+  String? _find;  
 
   String get find { 
-    if (this.m_find == null) {
-      this.m_find = "";
+    if (this._find == null) {
+      this._find = "";
     }
-    return this.m_find!;
+    return this._find!;
   }
 
   void set find (String v) {
-    this.m_find = v;
+    this._find = v;
   }
     
-  String? m_fn;  
+  String? _fn;  
 
   String get fn { 
-    if (this.m_fn == null) {
-      this.m_fn = "";
+    if (this._fn == null) {
+      this._fn = "";
     }
-    return this.m_fn!;
+    return this._fn!;
   }
 
   void set fn (String v) {
-    this.m_fn = v;
+    this._fn = v;
   }
     
-  double? m_length;  
+  double? _length;  
 
   double get length { 
-    if (this.m_length == null) {
-      this.m_length = 0;
+    if (this._length == null) {
+      this._length = 0;
     }
-    return this.m_length!;
+    return this._length!;
   }
 
   void set length (double v) {
-    this.m_length = v;
+    this._length = v;
   }
     
-  bool? m_isBlock;  
+  bool? _isBlock;  
 
   bool get isBlock { 
-    if (this.m_isBlock == null) {
-      this.m_isBlock = false;
+    if (this._isBlock == null) {
+      this._isBlock = false;
     }
-    return this.m_isBlock!;
+    return this._isBlock!;
   }
 
   void set isBlock (bool v) {
-    this.m_isBlock = v;
+    this._isBlock = v;
   }
     
-  double? m_start;  
+  double? _start;  
 
   double get start { 
-    if (this.m_start == null) {
-      this.m_start = 0;
+    if (this._start == null) {
+      this._start = 0;
     }
-    return this.m_start!;
+    return this._start!;
   }
 
   void set start (double v) {
-    this.m_start = v;
+    this._start = v;
   }
     
-  double? m_startInner;  
+  double? _startInner;  
 
   double get startInner { 
-    if (this.m_startInner == null) {
-      this.m_startInner = 0;
+    if (this._startInner == null) {
+      this._startInner = 0;
     }
-    return this.m_startInner!;
+    return this._startInner!;
   }
 
   void set startInner (double v) {
-    this.m_startInner = v;
+    this._startInner = v;
   }
     
 
@@ -148,42 +148,42 @@ class MatchObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_body != null) {  
-      buffer.writeAll(["\"body\":", this.m_body, ","], "");
+    if (this._body != null) {  
+      buffer.writeAll(["\"body\":\`", this._body, "\`,"], "");
     }
 
     // NOTE: skip serialization of ctx (type any is ignored)} 
 
-    if (this.m_elseBody != null) {  
-      buffer.writeAll(["\"elseBody\":", this.m_elseBody, ","], "");
+    if (this._elseBody != null) {  
+      buffer.writeAll(["\"elseBody\":\`", this._elseBody, "\`,"], "");
     }
 
-    if (this.m_expression != null) {  
-      buffer.writeAll(["\"expression\":", this.m_expression, ","], "");
+    if (this._expression != null) {  
+      buffer.writeAll(["\"expression\":\`", this._expression, "\`,"], "");
     }
 
-    if (this.m_find != null) {  
-      buffer.writeAll(["\"find\":", this.m_find, ","], "");
+    if (this._find != null) {  
+      buffer.writeAll(["\"find\":\`", this._find, "\`,"], "");
     }
 
-    if (this.m_fn != null) {  
-      buffer.writeAll(["\"fn\":", this.m_fn, ","], "");
+    if (this._fn != null) {  
+      buffer.writeAll(["\"fn\":\`", this._fn, "\`,"], "");
     }
 
-    if (this.m_length != null) {  
-      buffer.writeAll(["\"length\":", this.m_length, ","], "");
+    if (this._length != null) {  
+      buffer.writeAll(["\"length\":", this._length, ","], "");
     }
 
-    if (this.m_isBlock != null) {  
-      buffer.writeAll(["\"isBlock\":", this.m_isBlock, ","], "");
+    if (this._isBlock != null) {  
+      buffer.writeAll(["\"isBlock\":", this._isBlock, ","], "");
     }
 
-    if (this.m_start != null) {  
-      buffer.writeAll(["\"start\":", this.m_start, ","], "");
+    if (this._start != null) {  
+      buffer.writeAll(["\"start\":", this._start, ","], "");
     }
 
-    if (this.m_startInner != null) {  
-      buffer.writeAll(["\"startInner\":", this.m_startInner, ","], "");
+    if (this._startInner != null) {  
+      buffer.writeAll(["\"startInner\":", this._startInner, ","], "");
     }
   }
 

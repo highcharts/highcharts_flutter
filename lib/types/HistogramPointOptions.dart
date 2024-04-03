@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,17 +24,17 @@ import 'OptionFragment.dart';
  */
 class HistogramPointOptions extends ColumnPointOptions {
   HistogramPointOptions() : super();
-  double? m_x2;  
+  double? _x2;  
 
   double get x2 { 
-    if (this.m_x2 == null) {
-      this.m_x2 = 0;
+    if (this._x2 == null) {
+      this._x2 = 0;
     }
-    return this.m_x2!;
+    return this._x2!;
   }
 
   void set x2 (double v) {
-    this.m_x2 = v;
+    this._x2 = v;
   }
     
 
@@ -45,8 +45,8 @@ class HistogramPointOptions extends ColumnPointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_x2 != null) {  
-      buffer.writeAll(["\"x2\":", this.m_x2, ","], "");
+    if (this._x2 != null) {  
+      buffer.writeAll(["\"x2\":", this._x2, ","], "");
     }
   }
 

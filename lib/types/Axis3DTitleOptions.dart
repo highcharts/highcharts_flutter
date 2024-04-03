@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,30 +24,30 @@ import 'OptionFragment.dart';
  */
 class Axis3DTitleOptions extends AxisTitleOptions {
   Axis3DTitleOptions() : super();
-  String? m_position3d;  
+  String? _position3d;  
 
   String get position3d { 
-    if (this.m_position3d == null) {
-      this.m_position3d = "";
+    if (this._position3d == null) {
+      this._position3d = "";
     }
-    return this.m_position3d!;
+    return this._position3d!;
   }
 
   void set position3d (String v) {
-    this.m_position3d = v;
+    this._position3d = v;
   }
     
-  bool? m_skew3d;  
+  bool? _skew3d;  
 
   bool get skew3d { 
-    if (this.m_skew3d == null) {
-      this.m_skew3d = false;
+    if (this._skew3d == null) {
+      this._skew3d = false;
     }
-    return this.m_skew3d!;
+    return this._skew3d!;
   }
 
   void set skew3d (bool v) {
-    this.m_skew3d = v;
+    this._skew3d = v;
   }
     
 
@@ -58,12 +58,12 @@ class Axis3DTitleOptions extends AxisTitleOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_position3d != null) {  
-      buffer.writeAll(["\"position3d\":", this.m_position3d, ","], "");
+    if (this._position3d != null) {  
+      buffer.writeAll(["\"position3d\":\`", this._position3d, "\`,"], "");
     }
 
-    if (this.m_skew3d != null) {  
-      buffer.writeAll(["\"skew3d\":", this.m_skew3d, ","], "");
+    if (this._skew3d != null) {  
+      buffer.writeAll(["\"skew3d\":", this._skew3d, ","], "");
     }
   }
 

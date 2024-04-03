@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -33,33 +33,33 @@ class RangeSelectorOptions extends OptionFragment {
    * but enabling all buttons allows for dynamically loading different
    * time ranges.  
       */
-  bool? m_allButtonsEnabled;  
+  bool? _allButtonsEnabled;  
 
   bool get allButtonsEnabled { 
-    if (this.m_allButtonsEnabled == null) {
-      this.m_allButtonsEnabled = false;
+    if (this._allButtonsEnabled == null) {
+      this._allButtonsEnabled = false;
     }
-    return this.m_allButtonsEnabled!;
+    return this._allButtonsEnabled!;
   }
 
   void set allButtonsEnabled (bool v) {
-    this.m_allButtonsEnabled = v;
+    this._allButtonsEnabled = v;
   }
     
   /**
    * Positioning for the button row.  
       */
-  RangeSelectorPositionOptions? m_buttonPosition;  
+  RangeSelectorPositionOptions? _buttonPosition;  
 
   RangeSelectorPositionOptions get buttonPosition { 
-    if (this.m_buttonPosition == null) {
-      this.m_buttonPosition = RangeSelectorPositionOptions();
+    if (this._buttonPosition == null) {
+      this._buttonPosition = RangeSelectorPositionOptions();
     }
-    return this.m_buttonPosition!;
+    return this._buttonPosition!;
   }
 
   void set buttonPosition (RangeSelectorPositionOptions v) {
-    this.m_buttonPosition = v;
+    this._buttonPosition = v;
   }
     
   /**
@@ -100,23 +100,23 @@ class RangeSelectorOptions extends OptionFragment {
    * 
    * Defaults to 'undefined'. 
       */
-  List<RangeSelectorButtonOptions>? buttons;
+  List<RangeSelectorButtonOptions>? buttons; // RangeSelectorButtonOptions
   /**
    * The space in pixels between the buttons in the range selector. 
    * 
    * Defaults to '5'. 
       */
-  double? m_buttonSpacing;  
+  double? _buttonSpacing;  
 
   double get buttonSpacing { 
-    if (this.m_buttonSpacing == null) {
-      this.m_buttonSpacing = 0;
+    if (this._buttonSpacing == null) {
+      this._buttonSpacing = 0;
     }
-    return this.m_buttonSpacing!;
+    return this._buttonSpacing!;
   }
 
   void set buttonSpacing (double v) {
-    this.m_buttonSpacing = v;
+    this._buttonSpacing = v;
   }
     
   /**
@@ -134,17 +134,17 @@ class RangeSelectorOptions extends OptionFragment {
    * `.highcharts-range-selector-buttons .highcharts-button` rule with its
    * different states.  
       */
-  ButtonThemeObject? m_buttonTheme;  
+  ButtonThemeObject? _buttonTheme;  
 
   ButtonThemeObject get buttonTheme { 
-    if (this.m_buttonTheme == null) {
-      this.m_buttonTheme = ButtonThemeObject();
+    if (this._buttonTheme == null) {
+      this._buttonTheme = ButtonThemeObject();
     }
-    return this.m_buttonTheme!;
+    return this._buttonTheme!;
   }
 
   void set buttonTheme (ButtonThemeObject v) {
-    this.m_buttonTheme = v;
+    this._buttonTheme = v;
   }
     
   /**
@@ -158,17 +158,17 @@ class RangeSelectorOptions extends OptionFragment {
    * 
    * Defaults to 'responsive'. 
       */
-  String? m_dropdown;  
+  String? _dropdown;  
 
   String get dropdown { 
-    if (this.m_dropdown == null) {
-      this.m_dropdown = "";
+    if (this._dropdown == null) {
+      this._dropdown = "";
     }
-    return this.m_dropdown!;
+    return this._dropdown!;
   }
 
   void set dropdown (String v) {
-    this.m_dropdown = v;
+    this._dropdown = v;
   }
     
   /**
@@ -177,51 +177,51 @@ class RangeSelectorOptions extends OptionFragment {
    * 
    * Defaults to 'undefined'. 
       */
-  bool? m_enabled;  
+  bool? _enabled;  
 
   bool get enabled { 
-    if (this.m_enabled == null) {
-      this.m_enabled = false;
+    if (this._enabled == null) {
+      this._enabled = false;
     }
-    return this.m_enabled!;
+    return this._enabled!;
   }
 
   void set enabled (bool v) {
-    this.m_enabled = v;
+    this._enabled = v;
   }
     
   /**
    * When the rangeselector is floating, the plot area does not reserve
    * space for it. This opens for positioning anywhere on the chart.  
       */
-  bool? m_floating;  
+  bool? _floating;  
 
   bool get floating { 
-    if (this.m_floating == null) {
-      this.m_floating = false;
+    if (this._floating == null) {
+      this._floating = false;
     }
-    return this.m_floating!;
+    return this._floating!;
   }
 
   void set floating (bool v) {
-    this.m_floating = v;
+    this._floating = v;
   }
     
   /**
    * Deprecated. The height of the range selector. Currently it is
    * calculated dynamically.  
       */
-  double? m_height;  
+  double? _height;  
 
   double get height { 
-    if (this.m_height == null) {
-      this.m_height = 0;
+    if (this._height == null) {
+      this._height = 0;
     }
-    return this.m_height!;
+    return this._height!;
   }
 
   void set height (double v) {
-    this.m_height = v;
+    this._height = v;
   }
     
   /**
@@ -229,17 +229,17 @@ class RangeSelectorOptions extends OptionFragment {
    * 
    * Defaults to 'none'. 
       */
-  String? m_inputBoxBorderColor;  
+  String? _inputBoxBorderColor;  
 
   String get inputBoxBorderColor { 
-    if (this.m_inputBoxBorderColor == null) {
-      this.m_inputBoxBorderColor = "";
+    if (this._inputBoxBorderColor == null) {
+      this._inputBoxBorderColor = "";
     }
-    return this.m_inputBoxBorderColor!;
+    return this._inputBoxBorderColor!;
   }
 
   void set inputBoxBorderColor (String v) {
-    this.m_inputBoxBorderColor = v;
+    this._inputBoxBorderColor = v;
   }
     
   /**
@@ -247,34 +247,34 @@ class RangeSelectorOptions extends OptionFragment {
    * 
    * Defaults to '17'. 
       */
-  double? m_inputBoxHeight;  
+  double? _inputBoxHeight;  
 
   double get inputBoxHeight { 
-    if (this.m_inputBoxHeight == null) {
-      this.m_inputBoxHeight = 0;
+    if (this._inputBoxHeight == null) {
+      this._inputBoxHeight = 0;
     }
-    return this.m_inputBoxHeight!;
+    return this._inputBoxHeight!;
   }
 
   void set inputBoxHeight (double v) {
-    this.m_inputBoxHeight = v;
+    this._inputBoxHeight = v;
   }
     
   /**
    * The pixel width of the date input boxes. When `undefined`, the width
    * is fitted to the rendered content.  
       */
-  double? m_inputBoxWidth;  
+  double? _inputBoxWidth;  
 
   double get inputBoxWidth { 
-    if (this.m_inputBoxWidth == null) {
-      this.m_inputBoxWidth = 0;
+    if (this._inputBoxWidth == null) {
+      this._inputBoxWidth = 0;
     }
-    return this.m_inputBoxWidth!;
+    return this._inputBoxWidth!;
   }
 
   void set inputBoxWidth (double v) {
-    this.m_inputBoxWidth = v;
+    this._inputBoxWidth = v;
   }
     
   /**
@@ -288,17 +288,17 @@ class RangeSelectorOptions extends OptionFragment {
    * 
    * Defaults to '%e %b %Y'. 
       */
-  String? m_inputDateFormat;  
+  String? _inputDateFormat;  
 
   String get inputDateFormat { 
-    if (this.m_inputDateFormat == null) {
-      this.m_inputDateFormat = "";
+    if (this._inputDateFormat == null) {
+      this._inputDateFormat = "";
     }
-    return this.m_inputDateFormat!;
+    return this._inputDateFormat!;
   }
 
   void set inputDateFormat (String v) {
-    this.m_inputDateFormat = v;
+    this._inputDateFormat = v;
   }
     
   /**
@@ -312,17 +312,17 @@ class RangeSelectorOptions extends OptionFragment {
    * 
    * Defaults to '%Y-%m-%d'. 
       */
-  String? m_inputEditDateFormat;  
+  String? _inputEditDateFormat;  
 
   String get inputEditDateFormat { 
-    if (this.m_inputEditDateFormat == null) {
-      this.m_inputEditDateFormat = "";
+    if (this._inputEditDateFormat == null) {
+      this._inputEditDateFormat = "";
     }
-    return this.m_inputEditDateFormat!;
+    return this._inputEditDateFormat!;
   }
 
   void set inputEditDateFormat (String v) {
-    this.m_inputEditDateFormat = v;
+    this._inputEditDateFormat = v;
   }
     
   /**
@@ -330,34 +330,34 @@ class RangeSelectorOptions extends OptionFragment {
    * 
    * Defaults to 'true'. 
       */
-  bool? m_inputEnabled;  
+  bool? _inputEnabled;  
 
   bool get inputEnabled { 
-    if (this.m_inputEnabled == null) {
-      this.m_inputEnabled = false;
+    if (this._inputEnabled == null) {
+      this._inputEnabled = false;
     }
-    return this.m_inputEnabled!;
+    return this._inputEnabled!;
   }
 
   void set inputEnabled (bool v) {
-    this.m_inputEnabled = v;
+    this._inputEnabled = v;
   }
     
   /**
    * Positioning for the input boxes. Allowed properties are `align`,
    *  `x` and `y`.  
       */
-  RangeSelectorPositionOptions? m_inputPosition;  
+  RangeSelectorPositionOptions? _inputPosition;  
 
   RangeSelectorPositionOptions get inputPosition { 
-    if (this.m_inputPosition == null) {
-      this.m_inputPosition = RangeSelectorPositionOptions();
+    if (this._inputPosition == null) {
+      this._inputPosition = RangeSelectorPositionOptions();
     }
-    return this.m_inputPosition!;
+    return this._inputPosition!;
   }
 
   void set inputPosition (RangeSelectorPositionOptions v) {
-    this.m_inputPosition = v;
+    this._inputPosition = v;
   }
     
   /**
@@ -366,17 +366,17 @@ class RangeSelectorOptions extends OptionFragment {
    * 
    * Defaults to '5'. 
       */
-  double? m_inputSpacing;  
+  double? _inputSpacing;  
 
   double get inputSpacing { 
-    if (this.m_inputSpacing == null) {
-      this.m_inputSpacing = 0;
+    if (this._inputSpacing == null) {
+      this._inputSpacing = 0;
     }
-    return this.m_inputSpacing!;
+    return this._inputSpacing!;
   }
 
   void set inputSpacing (double v) {
-    this.m_inputSpacing = v;
+    this._inputSpacing = v;
   }
     
   /**
@@ -386,17 +386,17 @@ class RangeSelectorOptions extends OptionFragment {
    * `.highcharts-range-input text` rule in SVG mode, and
    * `input.highcharts-range-selector` when active.  
       */
-  CSSObject? m_inputStyle;  
+  CSSObject? _inputStyle;  
 
   CSSObject get inputStyle { 
-    if (this.m_inputStyle == null) {
-      this.m_inputStyle = CSSObject();
+    if (this._inputStyle == null) {
+      this._inputStyle = CSSObject();
     }
-    return this.m_inputStyle!;
+    return this._inputStyle!;
   }
 
   void set inputStyle (CSSObject v) {
-    this.m_inputStyle = v;
+    this._inputStyle = v;
   }
     
   /**
@@ -405,33 +405,33 @@ class RangeSelectorOptions extends OptionFragment {
    * In styled mode, the labels are styled by the
    * `.highcharts-range-label` class.  
       */
-  CSSObject? m_labelStyle;  
+  CSSObject? _labelStyle;  
 
   CSSObject get labelStyle { 
-    if (this.m_labelStyle == null) {
-      this.m_labelStyle = CSSObject();
+    if (this._labelStyle == null) {
+      this._labelStyle = CSSObject();
     }
-    return this.m_labelStyle!;
+    return this._labelStyle!;
   }
 
   void set labelStyle (CSSObject v) {
-    this.m_labelStyle = v;
+    this._labelStyle = v;
   }
     
   /**
    * The index of the button to appear pre-selected.  
       */
-  double? m_selected;  
+  double? _selected;  
 
   double get selected { 
-    if (this.m_selected == null) {
-      this.m_selected = 0;
+    if (this._selected == null) {
+      this._selected = 0;
     }
-    return this.m_selected!;
+    return this._selected!;
   }
 
   void set selected (double v) {
-    this.m_selected = v;
+    this._selected = v;
   }
     
   /**
@@ -440,51 +440,51 @@ class RangeSelectorOptions extends OptionFragment {
    * 
    * Defaults to 'top'. 
       */
-  String? m_verticalAlign;  
+  String? _verticalAlign;  
 
   String get verticalAlign { 
-    if (this.m_verticalAlign == null) {
-      this.m_verticalAlign = "";
+    if (this._verticalAlign == null) {
+      this._verticalAlign = "";
     }
-    return this.m_verticalAlign!;
+    return this._verticalAlign!;
   }
 
   void set verticalAlign (String v) {
-    this.m_verticalAlign = v;
+    this._verticalAlign = v;
   }
     
   /**
    * The x offset of the range selector relative to its horizontal
    * alignment within `chart.spacingLeft` and `chart.spacingRight`.  
       */
-  double? m_x;  
+  double? _x;  
 
   double get x { 
-    if (this.m_x == null) {
-      this.m_x = 0;
+    if (this._x == null) {
+      this._x = 0;
     }
-    return this.m_x!;
+    return this._x!;
   }
 
   void set x (double v) {
-    this.m_x = v;
+    this._x = v;
   }
     
   /**
    * The y offset of the range selector relative to its horizontal
    * alignment within `chart.spacingLeft` and `chart.spacingRight`.  
       */
-  double? m_y;  
+  double? _y;  
 
   double get y { 
-    if (this.m_y == null) {
-      this.m_y = 0;
+    if (this._y == null) {
+      this._y = 0;
     }
-    return this.m_y!;
+    return this._y!;
   }
 
   void set y (double v) {
-    this.m_y = v;
+    this._y = v;
   }
     
 
@@ -495,94 +495,94 @@ class RangeSelectorOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_allButtonsEnabled != null) {  
-      buffer.writeAll(["\"allButtonsEnabled\":", this.m_allButtonsEnabled, ","], "");
+    if (this._allButtonsEnabled != null) {  
+      buffer.writeAll(["\"allButtonsEnabled\":", this._allButtonsEnabled, ","], "");
     }
 
-    if (this.m_buttonPosition != null) {  
-      buffer.writeAll(["\"buttonPosition\":", this.m_buttonPosition?.toJSON(), ","], "");
+    if (this._buttonPosition != null) {  
+      buffer.writeAll(["\"buttonPosition\":", this._buttonPosition?.toJSON(), ","], "");
     }
 
     // NOTE: skip serialization of buttons (type RangeSelectorButtonOptions[] is ignored)} 
 
-    if (this.m_buttonSpacing != null) {  
-      buffer.writeAll(["\"buttonSpacing\":", this.m_buttonSpacing, ","], "");
+    if (this._buttonSpacing != null) {  
+      buffer.writeAll(["\"buttonSpacing\":", this._buttonSpacing, ","], "");
     }
 
-    if (this.m_buttonTheme != null) {  
-      buffer.writeAll(["\"buttonTheme\":", this.m_buttonTheme?.toJSON(), ","], "");
+    if (this._buttonTheme != null) {  
+      buffer.writeAll(["\"buttonTheme\":", this._buttonTheme?.toJSON(), ","], "");
     }
 
-    if (this.m_dropdown != null) {  
-      buffer.writeAll(["\"dropdown\":", this.m_dropdown, ","], "");
+    if (this._dropdown != null) {  
+      buffer.writeAll(["\"dropdown\":\`", this._dropdown, "\`,"], "");
     }
 
-    if (this.m_enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this.m_enabled, ","], "");
+    if (this._enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this._enabled, ","], "");
     }
 
-    if (this.m_floating != null) {  
-      buffer.writeAll(["\"floating\":", this.m_floating, ","], "");
+    if (this._floating != null) {  
+      buffer.writeAll(["\"floating\":", this._floating, ","], "");
     }
 
-    if (this.m_height != null) {  
-      buffer.writeAll(["\"height\":", this.m_height, ","], "");
+    if (this._height != null) {  
+      buffer.writeAll(["\"height\":", this._height, ","], "");
     }
 
-    if (this.m_inputBoxBorderColor != null) {  
-      buffer.writeAll(["\"inputBoxBorderColor\":", this.m_inputBoxBorderColor, ","], "");
+    if (this._inputBoxBorderColor != null) {  
+      buffer.writeAll(["\"inputBoxBorderColor\":\`", this._inputBoxBorderColor, "\`,"], "");
     }
 
-    if (this.m_inputBoxHeight != null) {  
-      buffer.writeAll(["\"inputBoxHeight\":", this.m_inputBoxHeight, ","], "");
+    if (this._inputBoxHeight != null) {  
+      buffer.writeAll(["\"inputBoxHeight\":", this._inputBoxHeight, ","], "");
     }
 
-    if (this.m_inputBoxWidth != null) {  
-      buffer.writeAll(["\"inputBoxWidth\":", this.m_inputBoxWidth, ","], "");
+    if (this._inputBoxWidth != null) {  
+      buffer.writeAll(["\"inputBoxWidth\":", this._inputBoxWidth, ","], "");
     }
 
-    if (this.m_inputDateFormat != null) {  
-      buffer.writeAll(["\"inputDateFormat\":", this.m_inputDateFormat, ","], "");
+    if (this._inputDateFormat != null) {  
+      buffer.writeAll(["\"inputDateFormat\":\`", this._inputDateFormat, "\`,"], "");
     }
 
-    if (this.m_inputEditDateFormat != null) {  
-      buffer.writeAll(["\"inputEditDateFormat\":", this.m_inputEditDateFormat, ","], "");
+    if (this._inputEditDateFormat != null) {  
+      buffer.writeAll(["\"inputEditDateFormat\":\`", this._inputEditDateFormat, "\`,"], "");
     }
 
-    if (this.m_inputEnabled != null) {  
-      buffer.writeAll(["\"inputEnabled\":", this.m_inputEnabled, ","], "");
+    if (this._inputEnabled != null) {  
+      buffer.writeAll(["\"inputEnabled\":", this._inputEnabled, ","], "");
     }
 
-    if (this.m_inputPosition != null) {  
-      buffer.writeAll(["\"inputPosition\":", this.m_inputPosition?.toJSON(), ","], "");
+    if (this._inputPosition != null) {  
+      buffer.writeAll(["\"inputPosition\":", this._inputPosition?.toJSON(), ","], "");
     }
 
-    if (this.m_inputSpacing != null) {  
-      buffer.writeAll(["\"inputSpacing\":", this.m_inputSpacing, ","], "");
+    if (this._inputSpacing != null) {  
+      buffer.writeAll(["\"inputSpacing\":", this._inputSpacing, ","], "");
     }
 
-    if (this.m_inputStyle != null) {  
-      buffer.writeAll(["\"inputStyle\":", this.m_inputStyle?.toJSON(), ","], "");
+    if (this._inputStyle != null) {  
+      buffer.writeAll(["\"inputStyle\":", this._inputStyle?.toJSON(), ","], "");
     }
 
-    if (this.m_labelStyle != null) {  
-      buffer.writeAll(["\"labelStyle\":", this.m_labelStyle?.toJSON(), ","], "");
+    if (this._labelStyle != null) {  
+      buffer.writeAll(["\"labelStyle\":", this._labelStyle?.toJSON(), ","], "");
     }
 
-    if (this.m_selected != null) {  
-      buffer.writeAll(["\"selected\":", this.m_selected, ","], "");
+    if (this._selected != null) {  
+      buffer.writeAll(["\"selected\":", this._selected, ","], "");
     }
 
-    if (this.m_verticalAlign != null) {  
-      buffer.writeAll(["\"verticalAlign\":", this.m_verticalAlign, ","], "");
+    if (this._verticalAlign != null) {  
+      buffer.writeAll(["\"verticalAlign\":\`", this._verticalAlign, "\`,"], "");
     }
 
-    if (this.m_x != null) {  
-      buffer.writeAll(["\"x\":", this.m_x, ","], "");
+    if (this._x != null) {  
+      buffer.writeAll(["\"x\":", this._x, ","], "");
     }
 
-    if (this.m_y != null) {  
-      buffer.writeAll(["\"y\":", this.m_y, ","], "");
+    if (this._y != null) {  
+      buffer.writeAll(["\"y\":", this._y, ","], "");
     }
   }
 

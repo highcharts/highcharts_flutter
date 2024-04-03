@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -30,17 +30,17 @@ class CreditsOptions extends OptionFragment {
    * 
    * Defaults to 'true'. 
       */
-  bool? m_enabled;  
+  bool? _enabled;  
 
   bool get enabled { 
-    if (this.m_enabled == null) {
-      this.m_enabled = false;
+    if (this._enabled == null) {
+      this._enabled = false;
     }
-    return this.m_enabled!;
+    return this._enabled!;
   }
 
   void set enabled (bool v) {
-    this.m_enabled = v;
+    this._enabled = v;
   }
     
   /**
@@ -48,17 +48,17 @@ class CreditsOptions extends OptionFragment {
    * 
    * Defaults to 'https://www.highcharts.com?credits'. 
       */
-  String? m_href;  
+  String? _href;  
 
   String get href { 
-    if (this.m_href == null) {
-      this.m_href = "";
+    if (this._href == null) {
+      this._href = "";
     }
-    return this.m_href!;
+    return this._href!;
   }
 
   void set href (String v) {
-    this.m_href = v;
+    this._href = v;
   }
     
   /**
@@ -68,17 +68,17 @@ class CreditsOptions extends OptionFragment {
    * 
    * Defaults to '\u00a9 <a href="{geojson.copyrightUrl}">{geojson.copyrightShort}</a>'. 
       */
-  String? m_mapText;  
+  String? _mapText;  
 
   String get mapText { 
-    if (this.m_mapText == null) {
-      this.m_mapText = "";
+    if (this._mapText == null) {
+      this._mapText = "";
     }
-    return this.m_mapText!;
+    return this._mapText!;
   }
 
   void set mapText (String v) {
-    this.m_mapText = v;
+    this._mapText = v;
   }
     
   /**
@@ -88,49 +88,49 @@ class CreditsOptions extends OptionFragment {
    * 
    * Defaults to '{geojson.copyright}'. 
       */
-  String? m_mapTextFull;  
+  String? _mapTextFull;  
 
   String get mapTextFull { 
-    if (this.m_mapTextFull == null) {
-      this.m_mapTextFull = "";
+    if (this._mapTextFull == null) {
+      this._mapTextFull = "";
     }
-    return this.m_mapTextFull!;
+    return this._mapTextFull!;
   }
 
   void set mapTextFull (String v) {
-    this.m_mapTextFull = v;
+    this._mapTextFull = v;
   }
     
   /**
    * Position configuration for the credits label.  
       */
-  AlignObject? m_position;  
+  AlignObject? _position;  
 
   AlignObject get position { 
-    if (this.m_position == null) {
-      this.m_position = AlignObject();
+    if (this._position == null) {
+      this._position = AlignObject();
     }
-    return this.m_position!;
+    return this._position!;
   }
 
   void set position (AlignObject v) {
-    this.m_position = v;
+    this._position = v;
   }
     
   /**
    * CSS styles for the credits label.  
       */
-  CSSObject? m_style;  
+  CSSObject? _style;  
 
   CSSObject get style { 
-    if (this.m_style == null) {
-      this.m_style = CSSObject();
+    if (this._style == null) {
+      this._style = CSSObject();
     }
-    return this.m_style!;
+    return this._style!;
   }
 
   void set style (CSSObject v) {
-    this.m_style = v;
+    this._style = v;
   }
     
   /**
@@ -138,17 +138,17 @@ class CreditsOptions extends OptionFragment {
    * 
    * Defaults to 'Highcharts.com'. 
       */
-  String? m_text;  
+  String? _text;  
 
   String get text { 
-    if (this.m_text == null) {
-      this.m_text = "";
+    if (this._text == null) {
+      this._text = "";
     }
-    return this.m_text!;
+    return this._text!;
   }
 
   void set text (String v) {
-    this.m_text = v;
+    this._text = v;
   }
     
 
@@ -159,32 +159,32 @@ class CreditsOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this.m_enabled, ","], "");
+    if (this._enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this._enabled, ","], "");
     }
 
-    if (this.m_href != null) {  
-      buffer.writeAll(["\"href\":", this.m_href, ","], "");
+    if (this._href != null) {  
+      buffer.writeAll(["\"href\":\`", this._href, "\`,"], "");
     }
 
-    if (this.m_mapText != null) {  
-      buffer.writeAll(["\"mapText\":", this.m_mapText, ","], "");
+    if (this._mapText != null) {  
+      buffer.writeAll(["\"mapText\":\`", this._mapText, "\`,"], "");
     }
 
-    if (this.m_mapTextFull != null) {  
-      buffer.writeAll(["\"mapTextFull\":", this.m_mapTextFull, ","], "");
+    if (this._mapTextFull != null) {  
+      buffer.writeAll(["\"mapTextFull\":\`", this._mapTextFull, "\`,"], "");
     }
 
-    if (this.m_position != null) {  
-      buffer.writeAll(["\"position\":", this.m_position?.toJSON(), ","], "");
+    if (this._position != null) {  
+      buffer.writeAll(["\"position\":", this._position?.toJSON(), ","], "");
     }
 
-    if (this.m_style != null) {  
-      buffer.writeAll(["\"style\":", this.m_style?.toJSON(), ","], "");
+    if (this._style != null) {  
+      buffer.writeAll(["\"style\":", this._style?.toJSON(), ","], "");
     }
 
-    if (this.m_text != null) {  
-      buffer.writeAll(["\"text\":", this.m_text, ","], "");
+    if (this._text != null) {  
+      buffer.writeAll(["\"text\":\`", this._text, "\`,"], "");
     }
   }
 

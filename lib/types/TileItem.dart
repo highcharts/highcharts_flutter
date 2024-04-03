@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,56 +24,56 @@ import 'OptionFragment.dart';
  */
 class TileItem extends SVGElement {
   TileItem() : super();
-  double? m_posX;  
+  double? _posX;  
 
   double get posX { 
-    if (this.m_posX == null) {
-      this.m_posX = 0;
+    if (this._posX == null) {
+      this._posX = 0;
     }
-    return this.m_posX!;
+    return this._posX!;
   }
 
   void set posX (double v) {
-    this.m_posX = v;
+    this._posX = v;
   }
     
-  double? m_posY;  
+  double? _posY;  
 
   double get posY { 
-    if (this.m_posY == null) {
-      this.m_posY = 0;
+    if (this._posY == null) {
+      this._posY = 0;
     }
-    return this.m_posY!;
+    return this._posY!;
   }
 
   void set posY (double v) {
-    this.m_posY = v;
+    this._posY = v;
   }
     
-  String? m_originalURL;  
+  String? _originalURL;  
 
   String get originalURL { 
-    if (this.m_originalURL == null) {
-      this.m_originalURL = "";
+    if (this._originalURL == null) {
+      this._originalURL = "";
     }
-    return this.m_originalURL!;
+    return this._originalURL!;
   }
 
   void set originalURL (String v) {
-    this.m_originalURL = v;
+    this._originalURL = v;
   }
     
-  bool? m_isActive;  
+  bool? _isActive;  
 
   bool get isActive { 
-    if (this.m_isActive == null) {
-      this.m_isActive = false;
+    if (this._isActive == null) {
+      this._isActive = false;
     }
-    return this.m_isActive!;
+    return this._isActive!;
   }
 
   void set isActive (bool v) {
-    this.m_isActive = v;
+    this._isActive = v;
   }
     
 
@@ -84,20 +84,20 @@ class TileItem extends SVGElement {
     super.toJSONInner(buffer);
 
     
-    if (this.m_posX != null) {  
-      buffer.writeAll(["\"posX\":", this.m_posX, ","], "");
+    if (this._posX != null) {  
+      buffer.writeAll(["\"posX\":", this._posX, ","], "");
     }
 
-    if (this.m_posY != null) {  
-      buffer.writeAll(["\"posY\":", this.m_posY, ","], "");
+    if (this._posY != null) {  
+      buffer.writeAll(["\"posY\":", this._posY, ","], "");
     }
 
-    if (this.m_originalURL != null) {  
-      buffer.writeAll(["\"originalURL\":", this.m_originalURL, ","], "");
+    if (this._originalURL != null) {  
+      buffer.writeAll(["\"originalURL\":\`", this._originalURL, "\`,"], "");
     }
 
-    if (this.m_isActive != null) {  
-      buffer.writeAll(["\"isActive\":", this.m_isActive, ","], "");
+    if (this._isActive != null) {  
+      buffer.writeAll(["\"isActive\":", this._isActive, ","], "");
     }
   }
 

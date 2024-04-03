@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,43 +23,43 @@ import 'OptionFragment.dart';
  */
 class A11yBracketStatementObject extends OptionFragment {
   A11yBracketStatementObject() : super();
-  double? m_begin;  
+  double? _begin;  
 
   double get begin { 
-    if (this.m_begin == null) {
-      this.m_begin = 0;
+    if (this._begin == null) {
+      this._begin = 0;
     }
-    return this.m_begin!;
+    return this._begin!;
   }
 
   void set begin (double v) {
-    this.m_begin = v;
+    this._begin = v;
   }
     
-  double? m_end;  
+  double? _end;  
 
   double get end { 
-    if (this.m_end == null) {
-      this.m_end = 0;
+    if (this._end == null) {
+      this._end = 0;
     }
-    return this.m_end!;
+    return this._end!;
   }
 
   void set end (double v) {
-    this.m_end = v;
+    this._end = v;
   }
     
-  String? m_statement;  
+  String? _statement;  
 
   String get statement { 
-    if (this.m_statement == null) {
-      this.m_statement = "";
+    if (this._statement == null) {
+      this._statement = "";
     }
-    return this.m_statement!;
+    return this._statement!;
   }
 
   void set statement (String v) {
-    this.m_statement = v;
+    this._statement = v;
   }
     
 
@@ -70,16 +70,16 @@ class A11yBracketStatementObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_begin != null) {  
-      buffer.writeAll(["\"begin\":", this.m_begin, ","], "");
+    if (this._begin != null) {  
+      buffer.writeAll(["\"begin\":", this._begin, ","], "");
     }
 
-    if (this.m_end != null) {  
-      buffer.writeAll(["\"end\":", this.m_end, ","], "");
+    if (this._end != null) {  
+      buffer.writeAll(["\"end\":", this._end, ","], "");
     }
 
-    if (this.m_statement != null) {  
-      buffer.writeAll(["\"statement\":", this.m_statement, ","], "");
+    if (this._statement != null) {  
+      buffer.writeAll(["\"statement\":\`", this._statement, "\`,"], "");
     }
   }
 

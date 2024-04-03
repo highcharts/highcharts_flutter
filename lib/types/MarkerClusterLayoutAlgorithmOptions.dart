@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,82 +23,82 @@ import 'OptionFragment.dart';
  */
 class MarkerClusterLayoutAlgorithmOptions extends OptionFragment {
   MarkerClusterLayoutAlgorithmOptions() : super();
-  double? m_distance;  
+  double? _distance;  
 
   double get distance { 
-    if (this.m_distance == null) {
-      this.m_distance = 0;
+    if (this._distance == null) {
+      this._distance = 0;
     }
-    return this.m_distance!;
+    return this._distance!;
   }
 
   void set distance (double v) {
-    this.m_distance = v;
+    this._distance = v;
   }
     
-  double? m_gridSize;  
+  double? _gridSize;  
 
   double get gridSize { 
-    if (this.m_gridSize == null) {
-      this.m_gridSize = 0;
+    if (this._gridSize == null) {
+      this._gridSize = 0;
     }
-    return this.m_gridSize!;
+    return this._gridSize!;
   }
 
   void set gridSize (double v) {
-    this.m_gridSize = v;
+    this._gridSize = v;
   }
     
-  double? m_iterations;  
+  double? _iterations;  
 
   double get iterations { 
-    if (this.m_iterations == null) {
-      this.m_iterations = 0;
+    if (this._iterations == null) {
+      this._iterations = 0;
     }
-    return this.m_iterations!;
+    return this._iterations!;
   }
 
   void set iterations (double v) {
-    this.m_iterations = v;
+    this._iterations = v;
   }
     
-  double? m_kmeansThreshold;  
+  double? _kmeansThreshold;  
 
   double get kmeansThreshold { 
-    if (this.m_kmeansThreshold == null) {
-      this.m_kmeansThreshold = 0;
+    if (this._kmeansThreshold == null) {
+      this._kmeansThreshold = 0;
     }
-    return this.m_kmeansThreshold!;
+    return this._kmeansThreshold!;
   }
 
   void set kmeansThreshold (double v) {
-    this.m_kmeansThreshold = v;
+    this._kmeansThreshold = v;
   }
     
-  double? m_processedDistance;  
+  double? _processedDistance;  
 
   double get processedDistance { 
-    if (this.m_processedDistance == null) {
-      this.m_processedDistance = 0;
+    if (this._processedDistance == null) {
+      this._processedDistance = 0;
     }
-    return this.m_processedDistance!;
+    return this._processedDistance!;
   }
 
   void set processedDistance (double v) {
-    this.m_processedDistance = v;
+    this._processedDistance = v;
   }
     
-  double? m_processedGridSize;  
+  double? _processedGridSize;  
 
   double get processedGridSize { 
-    if (this.m_processedGridSize == null) {
-      this.m_processedGridSize = 0;
+    if (this._processedGridSize == null) {
+      this._processedGridSize = 0;
     }
-    return this.m_processedGridSize!;
+    return this._processedGridSize!;
   }
 
   void set processedGridSize (double v) {
-    this.m_processedGridSize = v;
+    this._processedGridSize = v;
   }
     
 
@@ -109,28 +109,28 @@ class MarkerClusterLayoutAlgorithmOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_distance != null) {  
-      buffer.writeAll(["\"distance\":", this.m_distance, ","], "");
+    if (this._distance != null) {  
+      buffer.writeAll(["\"distance\":", this._distance, ","], "");
     }
 
-    if (this.m_gridSize != null) {  
-      buffer.writeAll(["\"gridSize\":", this.m_gridSize, ","], "");
+    if (this._gridSize != null) {  
+      buffer.writeAll(["\"gridSize\":", this._gridSize, ","], "");
     }
 
-    if (this.m_iterations != null) {  
-      buffer.writeAll(["\"iterations\":", this.m_iterations, ","], "");
+    if (this._iterations != null) {  
+      buffer.writeAll(["\"iterations\":", this._iterations, ","], "");
     }
 
-    if (this.m_kmeansThreshold != null) {  
-      buffer.writeAll(["\"kmeansThreshold\":", this.m_kmeansThreshold, ","], "");
+    if (this._kmeansThreshold != null) {  
+      buffer.writeAll(["\"kmeansThreshold\":", this._kmeansThreshold, ","], "");
     }
 
-    if (this.m_processedDistance != null) {  
-      buffer.writeAll(["\"processedDistance\":", this.m_processedDistance, ","], "");
+    if (this._processedDistance != null) {  
+      buffer.writeAll(["\"processedDistance\":", this._processedDistance, ","], "");
     }
 
-    if (this.m_processedGridSize != null) {  
-      buffer.writeAll(["\"processedGridSize\":", this.m_processedGridSize, ","], "");
+    if (this._processedGridSize != null) {  
+      buffer.writeAll(["\"processedGridSize\":", this._processedGridSize, ","], "");
     }
 
     // NOTE: skip serialization of type (type MarkerClusterAlgorithmValue is ignored)} 

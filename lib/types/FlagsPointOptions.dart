@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,95 +24,95 @@ import 'OptionFragment.dart';
  */
 class FlagsPointOptions extends ColumnPointOptions {
   FlagsPointOptions() : super();
-  String? m_fillColor;  
+  String? _fillColor;  
 
   String get fillColor { 
-    if (this.m_fillColor == null) {
-      this.m_fillColor = "";
+    if (this._fillColor == null) {
+      this._fillColor = "";
     }
-    return this.m_fillColor!;
+    return this._fillColor!;
   }
 
   void set fillColor (String v) {
-    this.m_fillColor = v;
+    this._fillColor = v;
   }
     
-  double? m_labelrank;  
+  double? _labelrank;  
 
   double get labelrank { 
-    if (this.m_labelrank == null) {
-      this.m_labelrank = 0;
+    if (this._labelrank == null) {
+      this._labelrank = 0;
     }
-    return this.m_labelrank!;
+    return this._labelrank!;
   }
 
   void set labelrank (double v) {
-    this.m_labelrank = v;
+    this._labelrank = v;
   }
     
-  bool? m_selected;  
+  bool? _selected;  
 
   bool get selected { 
-    if (this.m_selected == null) {
-      this.m_selected = false;
+    if (this._selected == null) {
+      this._selected = false;
     }
-    return this.m_selected!;
+    return this._selected!;
   }
 
   void set selected (bool v) {
-    this.m_selected = v;
+    this._selected = v;
   }
     
-  String? m_shape;  
+  String? _shape;  
 
   String get shape { 
-    if (this.m_shape == null) {
-      this.m_shape = "";
+    if (this._shape == null) {
+      this._shape = "";
     }
-    return this.m_shape!;
+    return this._shape!;
   }
 
   void set shape (String v) {
-    this.m_shape = v;
+    this._shape = v;
   }
     
-  String? m_text;  
+  String? _text;  
 
   String get text { 
-    if (this.m_text == null) {
-      this.m_text = "";
+    if (this._text == null) {
+      this._text = "";
     }
-    return this.m_text!;
+    return this._text!;
   }
 
   void set text (String v) {
-    this.m_text = v;
+    this._text = v;
   }
     
-  String? m_title;  
+  String? _title;  
 
   String get title { 
-    if (this.m_title == null) {
-      this.m_title = "";
+    if (this._title == null) {
+      this._title = "";
     }
-    return this.m_title!;
+    return this._title!;
   }
 
   void set title (String v) {
-    this.m_title = v;
+    this._title = v;
   }
     
-  double? m_x;  
+  double? _x;  
 
   double get x { 
-    if (this.m_x == null) {
-      this.m_x = 0;
+    if (this._x == null) {
+      this._x = 0;
     }
-    return this.m_x!;
+    return this._x!;
   }
 
   void set x (double v) {
-    this.m_x = v;
+    this._x = v;
   }
     
 
@@ -123,32 +123,32 @@ class FlagsPointOptions extends ColumnPointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_fillColor != null) {  
-      buffer.writeAll(["\"fillColor\":", this.m_fillColor, ","], "");
+    if (this._fillColor != null) {  
+      buffer.writeAll(["\"fillColor\":\`", this._fillColor, "\`,"], "");
     }
 
-    if (this.m_labelrank != null) {  
-      buffer.writeAll(["\"labelrank\":", this.m_labelrank, ","], "");
+    if (this._labelrank != null) {  
+      buffer.writeAll(["\"labelrank\":", this._labelrank, ","], "");
     }
 
-    if (this.m_selected != null) {  
-      buffer.writeAll(["\"selected\":", this.m_selected, ","], "");
+    if (this._selected != null) {  
+      buffer.writeAll(["\"selected\":", this._selected, ","], "");
     }
 
-    if (this.m_shape != null) {  
-      buffer.writeAll(["\"shape\":", this.m_shape, ","], "");
+    if (this._shape != null) {  
+      buffer.writeAll(["\"shape\":\`", this._shape, "\`,"], "");
     }
 
-    if (this.m_text != null) {  
-      buffer.writeAll(["\"text\":", this.m_text, ","], "");
+    if (this._text != null) {  
+      buffer.writeAll(["\"text\":\`", this._text, "\`,"], "");
     }
 
-    if (this.m_title != null) {  
-      buffer.writeAll(["\"title\":", this.m_title, ","], "");
+    if (this._title != null) {  
+      buffer.writeAll(["\"title\":\`", this._title, "\`,"], "");
     }
 
-    if (this.m_x != null) {  
-      buffer.writeAll(["\"x\":", this.m_x, ","], "");
+    if (this._x != null) {  
+      buffer.writeAll(["\"x\":", this._x, ","], "");
     }
   }
 

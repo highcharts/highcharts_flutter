@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -30,17 +30,17 @@ class ColumnSeriesOptions extends LineSeriesOptions {
    * becoming too wide when there is a small number of points in the
    * chart.  
       */
-  double? m_maxPointWidth;  
+  double? _maxPointWidth;  
 
   double get maxPointWidth { 
-    if (this.m_maxPointWidth == null) {
-      this.m_maxPointWidth = 0;
+    if (this._maxPointWidth == null) {
+      this._maxPointWidth = 0;
     }
-    return this.m_maxPointWidth!;
+    return this._maxPointWidth!;
   }
 
   void set maxPointWidth (double v) {
-    this.m_maxPointWidth = v;
+    this._maxPointWidth = v;
   }
     
   /**
@@ -50,17 +50,17 @@ class ColumnSeriesOptions extends LineSeriesOptions {
    * column charts, minPointLength might not be respected for tightly
    * packed values.  
       */
-  double? m_minPointLength;  
+  double? _minPointLength;  
 
   double get minPointLength { 
-    if (this.m_minPointLength == null) {
-      this.m_minPointLength = 0;
+    if (this._minPointLength == null) {
+      this._minPointLength = 0;
     }
-    return this.m_minPointLength!;
+    return this._minPointLength!;
   }
 
   void set minPointLength (double v) {
-    this.m_minPointLength = v;
+    this._minPointLength = v;
   }
     
   /**
@@ -68,17 +68,17 @@ class ColumnSeriesOptions extends LineSeriesOptions {
    * 
    * Defaults to '0.1'. 
       */
-  double? m_pointPadding;  
+  double? _pointPadding;  
 
   double get pointPadding { 
-    if (this.m_pointPadding == null) {
-      this.m_pointPadding = 0;
+    if (this._pointPadding == null) {
+      this._pointPadding = 0;
     }
-    return this.m_pointPadding!;
+    return this._pointPadding!;
   }
 
   void set pointPadding (double v) {
-    this.m_pointPadding = v;
+    this._pointPadding = v;
   }
     
   /**
@@ -88,17 +88,17 @@ class ColumnSeriesOptions extends LineSeriesOptions {
    * that is not based on the point value. For column series it is the
    * hoizontal length and for bar series it is the vertical length.  
       */
-  double? m_pointWidth;  
+  double? _pointWidth;  
 
   double get pointWidth { 
-    if (this.m_pointWidth == null) {
-      this.m_pointWidth = 0;
+    if (this._pointWidth == null) {
+      this._pointWidth = 0;
     }
-    return this.m_pointWidth!;
+    return this._pointWidth!;
   }
 
   void set pointWidth (double v) {
-    this.m_pointWidth = v;
+    this._pointWidth = v;
   }
     
   // NOTE: states skipped - type Generic is ignored in gen
@@ -111,20 +111,20 @@ class ColumnSeriesOptions extends LineSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_maxPointWidth != null) {  
-      buffer.writeAll(["\"maxPointWidth\":", this.m_maxPointWidth, ","], "");
+    if (this._maxPointWidth != null) {  
+      buffer.writeAll(["\"maxPointWidth\":", this._maxPointWidth, ","], "");
     }
 
-    if (this.m_minPointLength != null) {  
-      buffer.writeAll(["\"minPointLength\":", this.m_minPointLength, ","], "");
+    if (this._minPointLength != null) {  
+      buffer.writeAll(["\"minPointLength\":", this._minPointLength, ","], "");
     }
 
-    if (this.m_pointPadding != null) {  
-      buffer.writeAll(["\"pointPadding\":", this.m_pointPadding, ","], "");
+    if (this._pointPadding != null) {  
+      buffer.writeAll(["\"pointPadding\":", this._pointPadding, ","], "");
     }
 
-    if (this.m_pointWidth != null) {  
-      buffer.writeAll(["\"pointWidth\":", this.m_pointWidth, ","], "");
+    if (this._pointWidth != null) {  
+      buffer.writeAll(["\"pointWidth\":", this._pointWidth, ","], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -25,43 +25,43 @@ import 'OptionFragment.dart';
  */
 class OrganizationSeriesLevelOptions extends SankeySeriesLevelOptions {
   OrganizationSeriesLevelOptions() : super();
-  double? m_borderRadius;  
+  double? _borderRadius;  
 
   double get borderRadius { 
-    if (this.m_borderRadius == null) {
-      this.m_borderRadius = 0;
+    if (this._borderRadius == null) {
+      this._borderRadius = 0;
     }
-    return this.m_borderRadius!;
+    return this._borderRadius!;
   }
 
   void set borderRadius (double v) {
-    this.m_borderRadius = v;
+    this._borderRadius = v;
   }
     
-  String? m_linkColor;  
+  String? _linkColor;  
 
   String get linkColor { 
-    if (this.m_linkColor == null) {
-      this.m_linkColor = "";
+    if (this._linkColor == null) {
+      this._linkColor = "";
     }
-    return this.m_linkColor!;
+    return this._linkColor!;
   }
 
   void set linkColor (String v) {
-    this.m_linkColor = v;
+    this._linkColor = v;
   }
     
-  double? m_linkLineWidth;  
+  double? _linkLineWidth;  
 
   double get linkLineWidth { 
-    if (this.m_linkLineWidth == null) {
-      this.m_linkLineWidth = 0;
+    if (this._linkLineWidth == null) {
+      this._linkLineWidth = 0;
     }
-    return this.m_linkLineWidth!;
+    return this._linkLineWidth!;
   }
 
   void set linkLineWidth (double v) {
-    this.m_linkLineWidth = v;
+    this._linkLineWidth = v;
   }
     
 
@@ -72,16 +72,16 @@ class OrganizationSeriesLevelOptions extends SankeySeriesLevelOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_borderRadius != null) {  
-      buffer.writeAll(["\"borderRadius\":", this.m_borderRadius, ","], "");
+    if (this._borderRadius != null) {  
+      buffer.writeAll(["\"borderRadius\":", this._borderRadius, ","], "");
     }
 
-    if (this.m_linkColor != null) {  
-      buffer.writeAll(["\"linkColor\":", this.m_linkColor, ","], "");
+    if (this._linkColor != null) {  
+      buffer.writeAll(["\"linkColor\":\`", this._linkColor, "\`,"], "");
     }
 
-    if (this.m_linkLineWidth != null) {  
-      buffer.writeAll(["\"linkLineWidth\":", this.m_linkLineWidth, ","], "");
+    if (this._linkLineWidth != null) {  
+      buffer.writeAll(["\"linkLineWidth\":", this._linkLineWidth, ","], "");
     }
 
     // NOTE: skip serialization of link (type OrganizationLinkOptions is ignored)} 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,17 +23,17 @@ import 'OptionFragment.dart';
  */
 class MACDIndicator extends OptionFragment {
   MACDIndicator() : super();
-  String? m_pointValKey;  
+  String? _pointValKey;  
 
   String get pointValKey { 
-    if (this.m_pointValKey == null) {
-      this.m_pointValKey = "";
+    if (this._pointValKey == null) {
+      this._pointValKey = "";
     }
-    return this.m_pointValKey!;
+    return this._pointValKey!;
   }
 
   void set pointValKey (String v) {
-    this.m_pointValKey = v;
+    this._pointValKey = v;
   }
     
 
@@ -52,8 +52,8 @@ class MACDIndicator extends OptionFragment {
 
     // NOTE: skip serialization of pointClass (type typeof MACDPoint is ignored)} 
 
-    if (this.m_pointValKey != null) {  
-      buffer.writeAll(["\"pointValKey\":", this.m_pointValKey, ","], "");
+    if (this._pointValKey != null) {  
+      buffer.writeAll(["\"pointValKey\":\`", this._pointValKey, "\`,"], "");
     }
   }
 

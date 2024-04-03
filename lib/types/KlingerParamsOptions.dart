@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,43 +24,43 @@ import 'OptionFragment.dart';
  */
 class KlingerParamsOptions extends SMAParamsOptions {
   KlingerParamsOptions() : super();
-  double? m_fastAvgPeriod;  
+  double? _fastAvgPeriod;  
 
   double get fastAvgPeriod { 
-    if (this.m_fastAvgPeriod == null) {
-      this.m_fastAvgPeriod = 0;
+    if (this._fastAvgPeriod == null) {
+      this._fastAvgPeriod = 0;
     }
-    return this.m_fastAvgPeriod!;
+    return this._fastAvgPeriod!;
   }
 
   void set fastAvgPeriod (double v) {
-    this.m_fastAvgPeriod = v;
+    this._fastAvgPeriod = v;
   }
     
-  double? m_slowAvgPeriod;  
+  double? _slowAvgPeriod;  
 
   double get slowAvgPeriod { 
-    if (this.m_slowAvgPeriod == null) {
-      this.m_slowAvgPeriod = 0;
+    if (this._slowAvgPeriod == null) {
+      this._slowAvgPeriod = 0;
     }
-    return this.m_slowAvgPeriod!;
+    return this._slowAvgPeriod!;
   }
 
   void set slowAvgPeriod (double v) {
-    this.m_slowAvgPeriod = v;
+    this._slowAvgPeriod = v;
   }
     
-  double? m_signalPeriod;  
+  double? _signalPeriod;  
 
   double get signalPeriod { 
-    if (this.m_signalPeriod == null) {
-      this.m_signalPeriod = 0;
+    if (this._signalPeriod == null) {
+      this._signalPeriod = 0;
     }
-    return this.m_signalPeriod!;
+    return this._signalPeriod!;
   }
 
   void set signalPeriod (double v) {
-    this.m_signalPeriod = v;
+    this._signalPeriod = v;
   }
     
 
@@ -71,16 +71,16 @@ class KlingerParamsOptions extends SMAParamsOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_fastAvgPeriod != null) {  
-      buffer.writeAll(["\"fastAvgPeriod\":", this.m_fastAvgPeriod, ","], "");
+    if (this._fastAvgPeriod != null) {  
+      buffer.writeAll(["\"fastAvgPeriod\":", this._fastAvgPeriod, ","], "");
     }
 
-    if (this.m_slowAvgPeriod != null) {  
-      buffer.writeAll(["\"slowAvgPeriod\":", this.m_slowAvgPeriod, ","], "");
+    if (this._slowAvgPeriod != null) {  
+      buffer.writeAll(["\"slowAvgPeriod\":", this._slowAvgPeriod, ","], "");
     }
 
-    if (this.m_signalPeriod != null) {  
-      buffer.writeAll(["\"signalPeriod\":", this.m_signalPeriod, ","], "");
+    if (this._signalPeriod != null) {  
+      buffer.writeAll(["\"signalPeriod\":", this._signalPeriod, ","], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -31,17 +31,17 @@ class FunnelSeriesOptions extends PieSeriesOptions {
    * 
    * Defaults to '90%'. 
       */
-  String? m_width;  
+  String? _width;  
 
   String get width { 
-    if (this.m_width == null) {
-      this.m_width = "";
+    if (this._width == null) {
+      this._width = "";
     }
-    return this.m_width!;
+    return this._width!;
   }
 
   void set width (String v) {
-    this.m_width = v;
+    this._width = v;
   }
     
   /**
@@ -51,17 +51,17 @@ class FunnelSeriesOptions extends PieSeriesOptions {
    * 
    * Defaults to '30%'. 
       */
-  String? m_neckWidth;  
+  String? _neckWidth;  
 
   String get neckWidth { 
-    if (this.m_neckWidth == null) {
-      this.m_neckWidth = "";
+    if (this._neckWidth == null) {
+      this._neckWidth = "";
     }
-    return this.m_neckWidth!;
+    return this._neckWidth!;
   }
 
   void set neckWidth (String v) {
-    this.m_neckWidth = v;
+    this._neckWidth = v;
   }
     
   /**
@@ -71,17 +71,17 @@ class FunnelSeriesOptions extends PieSeriesOptions {
    * 
    * Defaults to '100%'. 
       */
-  String? m_height;  
+  String? _height;  
 
   String get height { 
-    if (this.m_height == null) {
-      this.m_height = "";
+    if (this._height == null) {
+      this._height = "";
     }
-    return this.m_height!;
+    return this._height!;
   }
 
   void set height (String v) {
-    this.m_height = v;
+    this._height = v;
   }
     
   /**
@@ -91,34 +91,34 @@ class FunnelSeriesOptions extends PieSeriesOptions {
    * 
    * Defaults to '25%'. 
       */
-  String? m_neckHeight;  
+  String? _neckHeight;  
 
   String get neckHeight { 
-    if (this.m_neckHeight == null) {
-      this.m_neckHeight = "";
+    if (this._neckHeight == null) {
+      this._neckHeight = "";
     }
-    return this.m_neckHeight!;
+    return this._neckHeight!;
   }
 
   void set neckHeight (String v) {
-    this.m_neckHeight = v;
+    this._neckHeight = v;
   }
     
   /**
    * A reversed funnel has the widest area down. A reversed funnel with
    * no neck width and neck height is a pyramid.  
       */
-  bool? m_reversed;  
+  bool? _reversed;  
 
   bool get reversed { 
-    if (this.m_reversed == null) {
-      this.m_reversed = false;
+    if (this._reversed == null) {
+      this._reversed = false;
     }
-    return this.m_reversed!;
+    return this._reversed!;
   }
 
   void set reversed (bool v) {
-    this.m_reversed = v;
+    this._reversed = v;
   }
     
   // NOTE: size skipped - type undefined is ignored in gen
@@ -146,24 +146,24 @@ class FunnelSeriesOptions extends PieSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_width != null) {  
-      buffer.writeAll(["\"width\":", this.m_width, ","], "");
+    if (this._width != null) {  
+      buffer.writeAll(["\"width\":\`", this._width, "\`,"], "");
     }
 
-    if (this.m_neckWidth != null) {  
-      buffer.writeAll(["\"neckWidth\":", this.m_neckWidth, ","], "");
+    if (this._neckWidth != null) {  
+      buffer.writeAll(["\"neckWidth\":\`", this._neckWidth, "\`,"], "");
     }
 
-    if (this.m_height != null) {  
-      buffer.writeAll(["\"height\":", this.m_height, ","], "");
+    if (this._height != null) {  
+      buffer.writeAll(["\"height\":\`", this._height, "\`,"], "");
     }
 
-    if (this.m_neckHeight != null) {  
-      buffer.writeAll(["\"neckHeight\":", this.m_neckHeight, ","], "");
+    if (this._neckHeight != null) {  
+      buffer.writeAll(["\"neckHeight\":\`", this._neckHeight, "\`,"], "");
     }
 
-    if (this.m_reversed != null) {  
-      buffer.writeAll(["\"reversed\":", this.m_reversed, ","], "");
+    if (this._reversed != null) {  
+      buffer.writeAll(["\"reversed\":", this._reversed, ","], "");
     }
 
     // NOTE: skip serialization of size (type undefined is ignored)} 

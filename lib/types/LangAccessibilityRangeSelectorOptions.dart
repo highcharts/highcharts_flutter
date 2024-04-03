@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,56 +23,56 @@ import 'OptionFragment.dart';
  */
 class LangAccessibilityRangeSelectorOptions extends OptionFragment {
   LangAccessibilityRangeSelectorOptions() : super();
-  String? m_dropdownLabel;  
+  String? _dropdownLabel;  
 
   String get dropdownLabel { 
-    if (this.m_dropdownLabel == null) {
-      this.m_dropdownLabel = "";
+    if (this._dropdownLabel == null) {
+      this._dropdownLabel = "";
     }
-    return this.m_dropdownLabel!;
+    return this._dropdownLabel!;
   }
 
   void set dropdownLabel (String v) {
-    this.m_dropdownLabel = v;
+    this._dropdownLabel = v;
   }
     
-  String? m_maxInputLabel;  
+  String? _maxInputLabel;  
 
   String get maxInputLabel { 
-    if (this.m_maxInputLabel == null) {
-      this.m_maxInputLabel = "";
+    if (this._maxInputLabel == null) {
+      this._maxInputLabel = "";
     }
-    return this.m_maxInputLabel!;
+    return this._maxInputLabel!;
   }
 
   void set maxInputLabel (String v) {
-    this.m_maxInputLabel = v;
+    this._maxInputLabel = v;
   }
     
-  String? m_minInputLabel;  
+  String? _minInputLabel;  
 
   String get minInputLabel { 
-    if (this.m_minInputLabel == null) {
-      this.m_minInputLabel = "";
+    if (this._minInputLabel == null) {
+      this._minInputLabel = "";
     }
-    return this.m_minInputLabel!;
+    return this._minInputLabel!;
   }
 
   void set minInputLabel (String v) {
-    this.m_minInputLabel = v;
+    this._minInputLabel = v;
   }
     
-  String? m_clickButtonAnnouncement;  
+  String? _clickButtonAnnouncement;  
 
   String get clickButtonAnnouncement { 
-    if (this.m_clickButtonAnnouncement == null) {
-      this.m_clickButtonAnnouncement = "";
+    if (this._clickButtonAnnouncement == null) {
+      this._clickButtonAnnouncement = "";
     }
-    return this.m_clickButtonAnnouncement!;
+    return this._clickButtonAnnouncement!;
   }
 
   void set clickButtonAnnouncement (String v) {
-    this.m_clickButtonAnnouncement = v;
+    this._clickButtonAnnouncement = v;
   }
     
 
@@ -83,20 +83,20 @@ class LangAccessibilityRangeSelectorOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_dropdownLabel != null) {  
-      buffer.writeAll(["\"dropdownLabel\":", this.m_dropdownLabel, ","], "");
+    if (this._dropdownLabel != null) {  
+      buffer.writeAll(["\"dropdownLabel\":\`", this._dropdownLabel, "\`,"], "");
     }
 
-    if (this.m_maxInputLabel != null) {  
-      buffer.writeAll(["\"maxInputLabel\":", this.m_maxInputLabel, ","], "");
+    if (this._maxInputLabel != null) {  
+      buffer.writeAll(["\"maxInputLabel\":\`", this._maxInputLabel, "\`,"], "");
     }
 
-    if (this.m_minInputLabel != null) {  
-      buffer.writeAll(["\"minInputLabel\":", this.m_minInputLabel, ","], "");
+    if (this._minInputLabel != null) {  
+      buffer.writeAll(["\"minInputLabel\":\`", this._minInputLabel, "\`,"], "");
     }
 
-    if (this.m_clickButtonAnnouncement != null) {  
-      buffer.writeAll(["\"clickButtonAnnouncement\":", this.m_clickButtonAnnouncement, ","], "");
+    if (this._clickButtonAnnouncement != null) {  
+      buffer.writeAll(["\"clickButtonAnnouncement\":\`", this._clickButtonAnnouncement, "\`,"], "");
     }
   }
 

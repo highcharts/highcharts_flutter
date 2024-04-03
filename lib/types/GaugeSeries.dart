@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,69 +23,69 @@ import 'OptionFragment.dart';
  */
 class GaugeSeries extends OptionFragment {
   GaugeSeries() : super();
-  bool? m_angular;  
+  bool? _angular;  
 
   bool get angular { 
-    if (this.m_angular == null) {
-      this.m_angular = false;
+    if (this._angular == null) {
+      this._angular = false;
     }
-    return this.m_angular!;
+    return this._angular!;
   }
 
   void set angular (bool v) {
-    this.m_angular = v;
+    this._angular = v;
   }
     
-  bool? m_directTouch;  
+  bool? _directTouch;  
 
   bool get directTouch { 
-    if (this.m_directTouch == null) {
-      this.m_directTouch = false;
+    if (this._directTouch == null) {
+      this._directTouch = false;
     }
-    return this.m_directTouch!;
+    return this._directTouch!;
   }
 
   void set directTouch (bool v) {
-    this.m_directTouch = v;
+    this._directTouch = v;
   }
     
-  bool? m_fixedBox;  
+  bool? _fixedBox;  
 
   bool get fixedBox { 
-    if (this.m_fixedBox == null) {
-      this.m_fixedBox = false;
+    if (this._fixedBox == null) {
+      this._fixedBox = false;
     }
-    return this.m_fixedBox!;
+    return this._fixedBox!;
   }
 
   void set fixedBox (bool v) {
-    this.m_fixedBox = v;
+    this._fixedBox = v;
   }
     
-  bool? m_forceDL;  
+  bool? _forceDL;  
 
   bool get forceDL { 
-    if (this.m_forceDL == null) {
-      this.m_forceDL = false;
+    if (this._forceDL == null) {
+      this._forceDL = false;
     }
-    return this.m_forceDL!;
+    return this._forceDL!;
   }
 
   void set forceDL (bool v) {
-    this.m_forceDL = v;
+    this._forceDL = v;
   }
     
-  bool? m_noSharedTooltip;  
+  bool? _noSharedTooltip;  
 
   bool get noSharedTooltip { 
-    if (this.m_noSharedTooltip == null) {
-      this.m_noSharedTooltip = false;
+    if (this._noSharedTooltip == null) {
+      this._noSharedTooltip = false;
     }
-    return this.m_noSharedTooltip!;
+    return this._noSharedTooltip!;
   }
 
   void set noSharedTooltip (bool v) {
-    this.m_noSharedTooltip = v;
+    this._noSharedTooltip = v;
   }
     
 
@@ -96,24 +96,24 @@ class GaugeSeries extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_angular != null) {  
-      buffer.writeAll(["\"angular\":", this.m_angular, ","], "");
+    if (this._angular != null) {  
+      buffer.writeAll(["\"angular\":", this._angular, ","], "");
     }
 
-    if (this.m_directTouch != null) {  
-      buffer.writeAll(["\"directTouch\":", this.m_directTouch, ","], "");
+    if (this._directTouch != null) {  
+      buffer.writeAll(["\"directTouch\":", this._directTouch, ","], "");
     }
 
-    if (this.m_fixedBox != null) {  
-      buffer.writeAll(["\"fixedBox\":", this.m_fixedBox, ","], "");
+    if (this._fixedBox != null) {  
+      buffer.writeAll(["\"fixedBox\":", this._fixedBox, ","], "");
     }
 
-    if (this.m_forceDL != null) {  
-      buffer.writeAll(["\"forceDL\":", this.m_forceDL, ","], "");
+    if (this._forceDL != null) {  
+      buffer.writeAll(["\"forceDL\":", this._forceDL, ","], "");
     }
 
-    if (this.m_noSharedTooltip != null) {  
-      buffer.writeAll(["\"noSharedTooltip\":", this.m_noSharedTooltip, ","], "");
+    if (this._noSharedTooltip != null) {  
+      buffer.writeAll(["\"noSharedTooltip\":", this._noSharedTooltip, ","], "");
     }
 
     // NOTE: skip serialization of pointClass (type typeof GaugePoint is ignored)} 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,277 +24,277 @@ import 'OptionFragment.dart';
  */
 class ExportingButtonOptions extends OptionFragment {
   ExportingButtonOptions() : super();
-  String? m__titleKey;  
+  String? _p_titleKey;  
 
-  String get _titleKey { 
-    if (this.m__titleKey == null) {
-      this.m__titleKey = "";
+  String get p_titleKey { 
+    if (this._p_titleKey == null) {
+      this._p_titleKey = "";
     }
-    return this.m__titleKey!;
+    return this._p_titleKey!;
   }
 
-  void set _titleKey (String v) {
-    this.m__titleKey = v;
+  void set p_titleKey (String v) {
+    this._p_titleKey = v;
   }
     
-  String? m_align;  
+  String? _align;  
 
   String get align { 
-    if (this.m_align == null) {
-      this.m_align = "";
+    if (this._align == null) {
+      this._align = "";
     }
-    return this.m_align!;
+    return this._align!;
   }
 
   void set align (String v) {
-    this.m_align = v;
+    this._align = v;
   }
     
-  double? m_buttonSpacing;  
+  double? _buttonSpacing;  
 
   double get buttonSpacing { 
-    if (this.m_buttonSpacing == null) {
-      this.m_buttonSpacing = 0;
+    if (this._buttonSpacing == null) {
+      this._buttonSpacing = 0;
     }
-    return this.m_buttonSpacing!;
+    return this._buttonSpacing!;
   }
 
   void set buttonSpacing (double v) {
-    this.m_buttonSpacing = v;
+    this._buttonSpacing = v;
   }
     
-  String? m_className;  
+  String? _className;  
 
   String get className { 
-    if (this.m_className == null) {
-      this.m_className = "";
+    if (this._className == null) {
+      this._className = "";
     }
-    return this.m_className!;
+    return this._className!;
   }
 
   void set className (String v) {
-    this.m_className = v;
+    this._className = v;
   }
     
-  bool? m_enabled;  
+  bool? _enabled;  
 
   bool get enabled { 
-    if (this.m_enabled == null) {
-      this.m_enabled = false;
+    if (this._enabled == null) {
+      this._enabled = false;
     }
-    return this.m_enabled!;
+    return this._enabled!;
   }
 
   void set enabled (bool v) {
-    this.m_enabled = v;
+    this._enabled = v;
   }
     
-  double? m_height;  
+  double? _height;  
 
   double get height { 
-    if (this.m_height == null) {
-      this.m_height = 0;
+    if (this._height == null) {
+      this._height = 0;
     }
-    return this.m_height!;
+    return this._height!;
   }
 
   void set height (double v) {
-    this.m_height = v;
+    this._height = v;
   }
     
-  String? m_menuClassName;  
+  String? _menuClassName;  
 
   String get menuClassName { 
-    if (this.m_menuClassName == null) {
-      this.m_menuClassName = "";
+    if (this._menuClassName == null) {
+      this._menuClassName = "";
     }
-    return this.m_menuClassName!;
+    return this._menuClassName!;
   }
 
   void set menuClassName (String v) {
-    this.m_menuClassName = v;
+    this._menuClassName = v;
   }
     
-  String? m_symbol;  
+  String? _symbol;  
 
   String get symbol { 
-    if (this.m_symbol == null) {
-      this.m_symbol = "";
+    if (this._symbol == null) {
+      this._symbol = "";
     }
-    return this.m_symbol!;
+    return this._symbol!;
   }
 
   void set symbol (String v) {
-    this.m_symbol = v;
+    this._symbol = v;
   }
     
-  String? m_symbolFill;  
+  String? _symbolFill;  
 
   String get symbolFill { 
-    if (this.m_symbolFill == null) {
-      this.m_symbolFill = "";
+    if (this._symbolFill == null) {
+      this._symbolFill = "";
     }
-    return this.m_symbolFill!;
+    return this._symbolFill!;
   }
 
   void set symbolFill (String v) {
-    this.m_symbolFill = v;
+    this._symbolFill = v;
   }
     
-  double? m_symbolSize;  
+  double? _symbolSize;  
 
   double get symbolSize { 
-    if (this.m_symbolSize == null) {
-      this.m_symbolSize = 0;
+    if (this._symbolSize == null) {
+      this._symbolSize = 0;
     }
-    return this.m_symbolSize!;
+    return this._symbolSize!;
   }
 
   void set symbolSize (double v) {
-    this.m_symbolSize = v;
+    this._symbolSize = v;
   }
     
-  String? m_symbolStroke;  
+  String? _symbolStroke;  
 
   String get symbolStroke { 
-    if (this.m_symbolStroke == null) {
-      this.m_symbolStroke = "";
+    if (this._symbolStroke == null) {
+      this._symbolStroke = "";
     }
-    return this.m_symbolStroke!;
+    return this._symbolStroke!;
   }
 
   void set symbolStroke (String v) {
-    this.m_symbolStroke = v;
+    this._symbolStroke = v;
   }
     
-  double? m_symbolStrokeWidth;  
+  double? _symbolStrokeWidth;  
 
   double get symbolStrokeWidth { 
-    if (this.m_symbolStrokeWidth == null) {
-      this.m_symbolStrokeWidth = 0;
+    if (this._symbolStrokeWidth == null) {
+      this._symbolStrokeWidth = 0;
     }
-    return this.m_symbolStrokeWidth!;
+    return this._symbolStrokeWidth!;
   }
 
   void set symbolStrokeWidth (double v) {
-    this.m_symbolStrokeWidth = v;
+    this._symbolStrokeWidth = v;
   }
     
-  double? m_symbolX;  
+  double? _symbolX;  
 
   double get symbolX { 
-    if (this.m_symbolX == null) {
-      this.m_symbolX = 0;
+    if (this._symbolX == null) {
+      this._symbolX = 0;
     }
-    return this.m_symbolX!;
+    return this._symbolX!;
   }
 
   void set symbolX (double v) {
-    this.m_symbolX = v;
+    this._symbolX = v;
   }
     
-  double? m_symbolY;  
+  double? _symbolY;  
 
   double get symbolY { 
-    if (this.m_symbolY == null) {
-      this.m_symbolY = 0;
+    if (this._symbolY == null) {
+      this._symbolY = 0;
     }
-    return this.m_symbolY!;
+    return this._symbolY!;
   }
 
   void set symbolY (double v) {
-    this.m_symbolY = v;
+    this._symbolY = v;
   }
     
-  String? m_text;  
+  String? _text;  
 
   String get text { 
-    if (this.m_text == null) {
-      this.m_text = "";
+    if (this._text == null) {
+      this._text = "";
     }
-    return this.m_text!;
+    return this._text!;
   }
 
   void set text (String v) {
-    this.m_text = v;
+    this._text = v;
   }
     
-  String? m_titleKey;  
+  String? _titleKey;  
 
   String get titleKey { 
-    if (this.m_titleKey == null) {
-      this.m_titleKey = "";
+    if (this._titleKey == null) {
+      this._titleKey = "";
     }
-    return this.m_titleKey!;
+    return this._titleKey!;
   }
 
   void set titleKey (String v) {
-    this.m_titleKey = v;
+    this._titleKey = v;
   }
     
-  bool? m_useHTML;  
+  bool? _useHTML;  
 
   bool get useHTML { 
-    if (this.m_useHTML == null) {
-      this.m_useHTML = false;
+    if (this._useHTML == null) {
+      this._useHTML = false;
     }
-    return this.m_useHTML!;
+    return this._useHTML!;
   }
 
   void set useHTML (bool v) {
-    this.m_useHTML = v;
+    this._useHTML = v;
   }
     
-  String? m_verticalAlign;  
+  String? _verticalAlign;  
 
   String get verticalAlign { 
-    if (this.m_verticalAlign == null) {
-      this.m_verticalAlign = "";
+    if (this._verticalAlign == null) {
+      this._verticalAlign = "";
     }
-    return this.m_verticalAlign!;
+    return this._verticalAlign!;
   }
 
   void set verticalAlign (String v) {
-    this.m_verticalAlign = v;
+    this._verticalAlign = v;
   }
     
-  double? m_width;  
+  double? _width;  
 
   double get width { 
-    if (this.m_width == null) {
-      this.m_width = 0;
+    if (this._width == null) {
+      this._width = 0;
     }
-    return this.m_width!;
+    return this._width!;
   }
 
   void set width (double v) {
-    this.m_width = v;
+    this._width = v;
   }
     
-  double? m_x;  
+  double? _x;  
 
   double get x { 
-    if (this.m_x == null) {
-      this.m_x = 0;
+    if (this._x == null) {
+      this._x = 0;
     }
-    return this.m_x!;
+    return this._x!;
   }
 
   void set x (double v) {
-    this.m_x = v;
+    this._x = v;
   }
     
-  double? m_y;  
+  double? _y;  
 
   double get y { 
-    if (this.m_y == null) {
-      this.m_y = 0;
+    if (this._y == null) {
+      this._y = 0;
     }
-    return this.m_y!;
+    return this._y!;
   }
 
   void set y (double v) {
-    this.m_y = v;
+    this._y = v;
   }
     
 
@@ -305,94 +305,94 @@ class ExportingButtonOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m__titleKey != null) {  
-      buffer.writeAll(["\"_titleKey\":", this.m__titleKey, ","], "");
+    if (this._p_titleKey != null) {  
+      buffer.writeAll(["\"_titleKey\":\`", this._p_titleKey, "\`,"], "");
     }
 
-    if (this.m_align != null) {  
-      buffer.writeAll(["\"align\":", this.m_align, ","], "");
+    if (this._align != null) {  
+      buffer.writeAll(["\"align\":\`", this._align, "\`,"], "");
     }
 
-    if (this.m_buttonSpacing != null) {  
-      buffer.writeAll(["\"buttonSpacing\":", this.m_buttonSpacing, ","], "");
+    if (this._buttonSpacing != null) {  
+      buffer.writeAll(["\"buttonSpacing\":", this._buttonSpacing, ","], "");
     }
 
-    if (this.m_className != null) {  
-      buffer.writeAll(["\"className\":", this.m_className, ","], "");
+    if (this._className != null) {  
+      buffer.writeAll(["\"className\":\`", this._className, "\`,"], "");
     }
 
-    if (this.m_enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this.m_enabled, ","], "");
+    if (this._enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this._enabled, ","], "");
     }
 
-    if (this.m_height != null) {  
-      buffer.writeAll(["\"height\":", this.m_height, ","], "");
+    if (this._height != null) {  
+      buffer.writeAll(["\"height\":", this._height, ","], "");
     }
 
-    if (this.m_menuClassName != null) {  
-      buffer.writeAll(["\"menuClassName\":", this.m_menuClassName, ","], "");
+    if (this._menuClassName != null) {  
+      buffer.writeAll(["\"menuClassName\":\`", this._menuClassName, "\`,"], "");
     }
 
     // NOTE: skip serialization of menuItems (type string[] is ignored)} 
 
     // NOTE: skip serialization of onclick (type Function is ignored)} 
 
-    if (this.m_symbol != null) {  
-      buffer.writeAll(["\"symbol\":", this.m_symbol, ","], "");
+    if (this._symbol != null) {  
+      buffer.writeAll(["\"symbol\":\`", this._symbol, "\`,"], "");
     }
 
-    if (this.m_symbolFill != null) {  
-      buffer.writeAll(["\"symbolFill\":", this.m_symbolFill, ","], "");
+    if (this._symbolFill != null) {  
+      buffer.writeAll(["\"symbolFill\":\`", this._symbolFill, "\`,"], "");
     }
 
-    if (this.m_symbolSize != null) {  
-      buffer.writeAll(["\"symbolSize\":", this.m_symbolSize, ","], "");
+    if (this._symbolSize != null) {  
+      buffer.writeAll(["\"symbolSize\":", this._symbolSize, ","], "");
     }
 
-    if (this.m_symbolStroke != null) {  
-      buffer.writeAll(["\"symbolStroke\":", this.m_symbolStroke, ","], "");
+    if (this._symbolStroke != null) {  
+      buffer.writeAll(["\"symbolStroke\":\`", this._symbolStroke, "\`,"], "");
     }
 
-    if (this.m_symbolStrokeWidth != null) {  
-      buffer.writeAll(["\"symbolStrokeWidth\":", this.m_symbolStrokeWidth, ","], "");
+    if (this._symbolStrokeWidth != null) {  
+      buffer.writeAll(["\"symbolStrokeWidth\":", this._symbolStrokeWidth, ","], "");
     }
 
-    if (this.m_symbolX != null) {  
-      buffer.writeAll(["\"symbolX\":", this.m_symbolX, ","], "");
+    if (this._symbolX != null) {  
+      buffer.writeAll(["\"symbolX\":", this._symbolX, ","], "");
     }
 
-    if (this.m_symbolY != null) {  
-      buffer.writeAll(["\"symbolY\":", this.m_symbolY, ","], "");
+    if (this._symbolY != null) {  
+      buffer.writeAll(["\"symbolY\":", this._symbolY, ","], "");
     }
 
-    if (this.m_text != null) {  
-      buffer.writeAll(["\"text\":", this.m_text, ","], "");
+    if (this._text != null) {  
+      buffer.writeAll(["\"text\":\`", this._text, "\`,"], "");
     }
 
     // NOTE: skip serialization of theme (type ButtonThemeObject is ignored)} 
 
-    if (this.m_titleKey != null) {  
-      buffer.writeAll(["\"titleKey\":", this.m_titleKey, ","], "");
+    if (this._titleKey != null) {  
+      buffer.writeAll(["\"titleKey\":\`", this._titleKey, "\`,"], "");
     }
 
-    if (this.m_useHTML != null) {  
-      buffer.writeAll(["\"useHTML\":", this.m_useHTML, ","], "");
+    if (this._useHTML != null) {  
+      buffer.writeAll(["\"useHTML\":", this._useHTML, ","], "");
     }
 
-    if (this.m_verticalAlign != null) {  
-      buffer.writeAll(["\"verticalAlign\":", this.m_verticalAlign, ","], "");
+    if (this._verticalAlign != null) {  
+      buffer.writeAll(["\"verticalAlign\":\`", this._verticalAlign, "\`,"], "");
     }
 
-    if (this.m_width != null) {  
-      buffer.writeAll(["\"width\":", this.m_width, ","], "");
+    if (this._width != null) {  
+      buffer.writeAll(["\"width\":", this._width, ","], "");
     }
 
-    if (this.m_x != null) {  
-      buffer.writeAll(["\"x\":", this.m_x, ","], "");
+    if (this._x != null) {  
+      buffer.writeAll(["\"x\":", this._x, ","], "");
     }
 
-    if (this.m_y != null) {  
-      buffer.writeAll(["\"y\":", this.m_y, ","], "");
+    if (this._y != null) {  
+      buffer.writeAll(["\"y\":", this._y, ","], "");
     }
   }
 

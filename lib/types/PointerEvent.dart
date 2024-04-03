@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,108 +24,108 @@ import 'OptionFragment.dart';
  */
 class PointerEvent extends OptionFragment {
   PointerEvent() : super();
-  double? m_deltaY;  
-
-  double get deltaY { 
-    if (this.m_deltaY == null) {
-      this.m_deltaY = 0;
-    }
-    return this.m_deltaY!;
-  }
-
-  void set deltaY (double v) {
-    this.m_deltaY = v;
-  }
-    
-  double? m_wheelDelta;  
-
-  double get wheelDelta { 
-    if (this.m_wheelDelta == null) {
-      this.m_wheelDelta = 0;
-    }
-    return this.m_wheelDelta!;
-  }
-
-  void set wheelDelta (double v) {
-    this.m_wheelDelta = v;
-  }
-    
-  bool? m_accumulate;  
+  bool? _accumulate;  
 
   bool get accumulate { 
-    if (this.m_accumulate == null) {
-      this.m_accumulate = false;
+    if (this._accumulate == null) {
+      this._accumulate = false;
     }
-    return this.m_accumulate!;
+    return this._accumulate!;
   }
 
   void set accumulate (bool v) {
-    this.m_accumulate = v;
+    this._accumulate = v;
   }
     
-  double? m_chartX;  
+  double? _chartX;  
 
   double get chartX { 
-    if (this.m_chartX == null) {
-      this.m_chartX = 0;
+    if (this._chartX == null) {
+      this._chartX = 0;
     }
-    return this.m_chartX!;
+    return this._chartX!;
   }
 
   void set chartX (double v) {
-    this.m_chartX = v;
+    this._chartX = v;
   }
     
-  double? m_chartY;  
+  double? _chartY;  
 
   double get chartY { 
-    if (this.m_chartY == null) {
-      this.m_chartY = 0;
+    if (this._chartY == null) {
+      this._chartY = 0;
     }
-    return this.m_chartY!;
+    return this._chartY!;
   }
 
   void set chartY (double v) {
-    this.m_chartY = v;
+    this._chartY = v;
   }
     
-  double? m_lat;  
+  double? _lat;  
 
   double get lat { 
-    if (this.m_lat == null) {
-      this.m_lat = 0;
+    if (this._lat == null) {
+      this._lat = 0;
     }
-    return this.m_lat!;
+    return this._lat!;
   }
 
   void set lat (double v) {
-    this.m_lat = v;
+    this._lat = v;
   }
     
-  double? m_lon;  
+  double? _lon;  
 
   double get lon { 
-    if (this.m_lon == null) {
-      this.m_lon = 0;
+    if (this._lon == null) {
+      this._lon = 0;
     }
-    return this.m_lon!;
+    return this._lon!;
   }
 
   void set lon (double v) {
-    this.m_lon = v;
+    this._lon = v;
   }
     
-  bool? m_activeAnnotation;  
+  bool? _activeAnnotation;  
 
   bool get activeAnnotation { 
-    if (this.m_activeAnnotation == null) {
-      this.m_activeAnnotation = false;
+    if (this._activeAnnotation == null) {
+      this._activeAnnotation = false;
     }
-    return this.m_activeAnnotation!;
+    return this._activeAnnotation!;
   }
 
   void set activeAnnotation (bool v) {
-    this.m_activeAnnotation = v;
+    this._activeAnnotation = v;
+  }
+    
+  double? _deltaY;  
+
+  double get deltaY { 
+    if (this._deltaY == null) {
+      this._deltaY = 0;
+    }
+    return this._deltaY!;
+  }
+
+  void set deltaY (double v) {
+    this._deltaY = v;
+  }
+    
+  double? _wheelDelta;  
+
+  double get wheelDelta { 
+    if (this._wheelDelta == null) {
+      this._wheelDelta = 0;
+    }
+    return this._wheelDelta!;
+  }
+
+  void set wheelDelta (double v) {
+    this._wheelDelta = v;
   }
     
 
@@ -136,32 +136,24 @@ class PointerEvent extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_deltaY != null) {  
-      buffer.writeAll(["\"deltaY\":", this.m_deltaY, ","], "");
+    if (this._accumulate != null) {  
+      buffer.writeAll(["\"accumulate\":", this._accumulate, ","], "");
     }
 
-    if (this.m_wheelDelta != null) {  
-      buffer.writeAll(["\"wheelDelta\":", this.m_wheelDelta, ","], "");
+    if (this._chartX != null) {  
+      buffer.writeAll(["\"chartX\":", this._chartX, ","], "");
     }
 
-    if (this.m_accumulate != null) {  
-      buffer.writeAll(["\"accumulate\":", this.m_accumulate, ","], "");
+    if (this._chartY != null) {  
+      buffer.writeAll(["\"chartY\":", this._chartY, ","], "");
     }
 
-    if (this.m_chartX != null) {  
-      buffer.writeAll(["\"chartX\":", this.m_chartX, ","], "");
+    if (this._lat != null) {  
+      buffer.writeAll(["\"lat\":", this._lat, ","], "");
     }
 
-    if (this.m_chartY != null) {  
-      buffer.writeAll(["\"chartY\":", this.m_chartY, ","], "");
-    }
-
-    if (this.m_lat != null) {  
-      buffer.writeAll(["\"lat\":", this.m_lat, ","], "");
-    }
-
-    if (this.m_lon != null) {  
-      buffer.writeAll(["\"lon\":", this.m_lon, ","], "");
+    if (this._lon != null) {  
+      buffer.writeAll(["\"lon\":", this._lon, ","], "");
     }
 
     // NOTE: skip serialization of point (type Point is ignored)} 
@@ -172,8 +164,16 @@ class PointerEvent extends OptionFragment {
 
     // NOTE: skip serialization of yAxis (type AxisCoordinateObject[] is ignored)} 
 
-    if (this.m_activeAnnotation != null) {  
-      buffer.writeAll(["\"activeAnnotation\":", this.m_activeAnnotation, ","], "");
+    if (this._activeAnnotation != null) {  
+      buffer.writeAll(["\"activeAnnotation\":", this._activeAnnotation, ","], "");
+    }
+
+    if (this._deltaY != null) {  
+      buffer.writeAll(["\"deltaY\":", this._deltaY, ","], "");
+    }
+
+    if (this._wheelDelta != null) {  
+      buffer.writeAll(["\"wheelDelta\":", this._wheelDelta, ","], "");
     }
   }
 

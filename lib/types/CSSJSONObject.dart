@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,30 +24,30 @@ import 'OptionFragment.dart';
  */
 class CSSJSONObject extends CSSObject {
   CSSJSONObject() : super();
-  String? m_fill;  
+  String? _fill;  
 
   String get fill { 
-    if (this.m_fill == null) {
-      this.m_fill = "";
+    if (this._fill == null) {
+      this._fill = "";
     }
-    return this.m_fill!;
+    return this._fill!;
   }
 
   void set fill (String v) {
-    this.m_fill = v;
+    this._fill = v;
   }
     
-  String? m_stroke;  
+  String? _stroke;  
 
   String get stroke { 
-    if (this.m_stroke == null) {
-      this.m_stroke = "";
+    if (this._stroke == null) {
+      this._stroke = "";
     }
-    return this.m_stroke!;
+    return this._stroke!;
   }
 
   void set stroke (String v) {
-    this.m_stroke = v;
+    this._stroke = v;
   }
     
 
@@ -58,12 +58,12 @@ class CSSJSONObject extends CSSObject {
     super.toJSONInner(buffer);
 
     
-    if (this.m_fill != null) {  
-      buffer.writeAll(["\"fill\":", this.m_fill, ","], "");
+    if (this._fill != null) {  
+      buffer.writeAll(["\"fill\":\`", this._fill, "\`,"], "");
     }
 
-    if (this.m_stroke != null) {  
-      buffer.writeAll(["\"stroke\":", this.m_stroke, ","], "");
+    if (this._stroke != null) {  
+      buffer.writeAll(["\"stroke\":\`", this._stroke, "\`,"], "");
     }
   }
 

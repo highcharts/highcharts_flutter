@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,30 +23,30 @@ import 'OptionFragment.dart';
  */
 class KeltnerChannelsIndicator extends OptionFragment {
   KeltnerChannelsIndicator() : super();
-  String? m_nameBase;  
+  String? _nameBase;  
 
   String get nameBase { 
-    if (this.m_nameBase == null) {
-      this.m_nameBase = "";
+    if (this._nameBase == null) {
+      this._nameBase = "";
     }
-    return this.m_nameBase!;
+    return this._nameBase!;
   }
 
   void set nameBase (String v) {
-    this.m_nameBase = v;
+    this._nameBase = v;
   }
     
-  String? m_pointValKey;  
+  String? _pointValKey;  
 
   String get pointValKey { 
-    if (this.m_pointValKey == null) {
-      this.m_pointValKey = "";
+    if (this._pointValKey == null) {
+      this._pointValKey = "";
     }
-    return this.m_pointValKey!;
+    return this._pointValKey!;
   }
 
   void set pointValKey (String v) {
-    this.m_pointValKey = v;
+    this._pointValKey = v;
   }
     
 
@@ -57,8 +57,8 @@ class KeltnerChannelsIndicator extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_nameBase != null) {  
-      buffer.writeAll(["\"nameBase\":", this.m_nameBase, ","], "");
+    if (this._nameBase != null) {  
+      buffer.writeAll(["\"nameBase\":\`", this._nameBase, "\`,"], "");
     }
 
     // NOTE: skip serialization of nameComponents (type string[] is ignored)} 
@@ -67,8 +67,8 @@ class KeltnerChannelsIndicator extends OptionFragment {
 
     // NOTE: skip serialization of pointClass (type typeof KeltnerChannelsPoint is ignored)} 
 
-    if (this.m_pointValKey != null) {  
-      buffer.writeAll(["\"pointValKey\":", this.m_pointValKey, ","], "");
+    if (this._pointValKey != null) {  
+      buffer.writeAll(["\"pointValKey\":\`", this._pointValKey, "\`,"], "");
     }
   }
 

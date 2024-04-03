@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -29,199 +29,212 @@ import 'OptionFragment.dart';
  */
 class AxisLike extends LegendItem {
   AxisLike() : super();
-  double? m_labelLeft;  
+  double? _labelLeft;  
 
   double get labelLeft { 
-    if (this.m_labelLeft == null) {
-      this.m_labelLeft = 0;
+    if (this._labelLeft == null) {
+      this._labelLeft = 0;
     }
-    return this.m_labelLeft!;
+    return this._labelLeft!;
   }
 
   void set labelLeft (double v) {
-    this.m_labelLeft = v;
+    this._labelLeft = v;
   }
     
-  double? m_labelRight;  
+  double? _labelRight;  
 
   double get labelRight { 
-    if (this.m_labelRight == null) {
-      this.m_labelRight = 0;
+    if (this._labelRight == null) {
+      this._labelRight = 0;
     }
-    return this.m_labelRight!;
+    return this._labelRight!;
   }
 
   void set labelRight (double v) {
-    this.m_labelRight = v;
+    this._labelRight = v;
   }
     
-  double? m_newMax;  
+  double? _newMax;  
 
   double get newMax { 
-    if (this.m_newMax == null) {
-      this.m_newMax = 0;
+    if (this._newMax == null) {
+      this._newMax = 0;
     }
-    return this.m_newMax!;
+    return this._newMax!;
   }
 
   void set newMax (double v) {
-    this.m_newMax = v;
+    this._newMax = v;
   }
     
-  String? m_coll;  
+  String? _coll;  
 
   String get coll { 
-    if (this.m_coll == null) {
-      this.m_coll = "";
+    if (this._coll == null) {
+      this._coll = "";
     }
-    return this.m_coll!;
+    return this._coll!;
   }
 
   void set coll (String v) {
-    this.m_coll = v;
+    this._coll = v;
   }
     
-  bool? m_isXAxis;  
+  bool? _isXAxis;  
 
   bool get isXAxis { 
-    if (this.m_isXAxis == null) {
-      this.m_isXAxis = false;
+    if (this._isXAxis == null) {
+      this._isXAxis = false;
     }
-    return this.m_isXAxis!;
+    return this._isXAxis!;
   }
 
   void set isXAxis (bool v) {
-    this.m_isXAxis = v;
+    this._isXAxis = v;
   }
     
-  double? m_max;  
+  double? _max;  
 
   double get max { 
-    if (this.m_max == null) {
-      this.m_max = 0;
+    if (this._max == null) {
+      this._max = 0;
     }
-    return this.m_max!;
+    return this._max!;
   }
 
   void set max (double v) {
-    this.m_max = v;
+    this._max = v;
   }
     
-  double? m_min;  
+  double? _min;  
 
   double get min { 
-    if (this.m_min == null) {
-      this.m_min = 0;
+    if (this._min == null) {
+      this._min = 0;
     }
-    return this.m_min!;
+    return this._min!;
   }
 
   void set min (double v) {
-    this.m_min = v;
+    this._min = v;
   }
     
-  bool? m_reversed;  
+  bool? _reversed;  
 
   bool get reversed { 
-    if (this.m_reversed == null) {
-      this.m_reversed = false;
+    if (this._reversed == null) {
+      this._reversed = false;
     }
-    return this.m_reversed!;
+    return this._reversed!;
   }
 
   void set reversed (bool v) {
-    this.m_reversed = v;
+    this._reversed = v;
   }
     
-  double? m_side;  
+  double? _side;  
 
   double get side { 
-    if (this.m_side == null) {
-      this.m_side = 0;
+    if (this._side == null) {
+      this._side = 0;
     }
-    return this.m_side!;
+    return this._side!;
   }
 
   void set side (double v) {
-    this.m_side = v;
+    this._side = v;
   }
     
-  bool? m_visible;  
+  bool? _visible;  
 
   bool get visible { 
-    if (this.m_visible == null) {
-      this.m_visible = false;
+    if (this._visible == null) {
+      this._visible = false;
     }
-    return this.m_visible!;
+    return this._visible!;
   }
 
   void set visible (bool v) {
-    this.m_visible = v;
+    this._visible = v;
   }
     
-  String? m_extKey;  
+  String? _extKey;  
 
   String get extKey { 
-    if (this.m_extKey == null) {
-      this.m_extKey = "";
+    if (this._extKey == null) {
+      this._extKey = "";
     }
-    return this.m_extKey!;
+    return this._extKey!;
   }
 
   void set extKey (String v) {
-    this.m_extKey = v;
+    this._extKey = v;
   }
     
-  double? m_index;  
+  double? _index;  
 
   double get index { 
-    if (this.m_index == null) {
-      this.m_index = 0;
+    if (this._index == null) {
+      this._index = 0;
     }
-    return this.m_index!;
+    return this._index!;
   }
 
   void set index (double v) {
-    this.m_index = v;
+    this._index = v;
   }
     
-  bool? m_touched;  
+  bool? _touched;  
 
   bool get touched { 
-    if (this.m_touched == null) {
-      this.m_touched = false;
+    if (this._touched == null) {
+      this._touched = false;
     }
-    return this.m_touched!;
+    return this._touched!;
   }
 
   void set touched (bool v) {
-    this.m_touched = v;
+    this._touched = v;
   }
     
-  bool? m_recomputingForTilemap;  
+  double? _oldPos;  
+
+  double get oldPos { 
+    if (this._oldPos == null) {
+      this._oldPos = 0;
+    }
+    return this._oldPos!;
+  }
+
+  void set oldPos (double v) {
+    this._oldPos = v;
+  }
+    
+  bool? _recomputingForTilemap;  
 
   bool get recomputingForTilemap { 
-    if (this.m_recomputingForTilemap == null) {
-      this.m_recomputingForTilemap = false;
+    if (this._recomputingForTilemap == null) {
+      this._recomputingForTilemap = false;
     }
-    return this.m_recomputingForTilemap!;
+    return this._recomputingForTilemap!;
   }
 
   void set recomputingForTilemap (bool v) {
-    this.m_recomputingForTilemap = v;
+    this._recomputingForTilemap = v;
   }
     
-  bool? m_variwide;  
+  bool? _variwide;  
 
   bool get variwide { 
-    if (this.m_variwide == null) {
-      this.m_variwide = false;
+    if (this._variwide == null) {
+      this._variwide = false;
     }
-    return this.m_variwide!;
+    return this._variwide!;
   }
 
   void set variwide (bool v) {
-    this.m_variwide = v;
+    this._variwide = v;
   }
     
 
@@ -232,16 +245,16 @@ class AxisLike extends LegendItem {
     super.toJSONInner(buffer);
 
     
-    if (this.m_labelLeft != null) {  
-      buffer.writeAll(["\"labelLeft\":", this.m_labelLeft, ","], "");
+    if (this._labelLeft != null) {  
+      buffer.writeAll(["\"labelLeft\":", this._labelLeft, ","], "");
     }
 
-    if (this.m_labelRight != null) {  
-      buffer.writeAll(["\"labelRight\":", this.m_labelRight, ","], "");
+    if (this._labelRight != null) {  
+      buffer.writeAll(["\"labelRight\":", this._labelRight, ","], "");
     }
 
-    if (this.m_newMax != null) {  
-      buffer.writeAll(["\"newMax\":", this.m_newMax, ","], "");
+    if (this._newMax != null) {  
+      buffer.writeAll(["\"newMax\":", this._newMax, ","], "");
     }
 
     // NOTE: skip serialization of range (type RangeSelectorButtonOptions is ignored)} 
@@ -250,52 +263,52 @@ class AxisLike extends LegendItem {
 
     // NOTE: skip serialization of chart (type Chart is ignored)} 
 
-    if (this.m_coll != null) {  
-      buffer.writeAll(["\"coll\":", this.m_coll, ","], "");
+    if (this._coll != null) {  
+      buffer.writeAll(["\"coll\":\`", this._coll, "\`,"], "");
     }
 
-    if (this.m_isXAxis != null) {  
-      buffer.writeAll(["\"isXAxis\":", this.m_isXAxis, ","], "");
+    if (this._isXAxis != null) {  
+      buffer.writeAll(["\"isXAxis\":", this._isXAxis, ","], "");
     }
 
-    if (this.m_max != null) {  
-      buffer.writeAll(["\"max\":", this.m_max, ","], "");
+    if (this._max != null) {  
+      buffer.writeAll(["\"max\":", this._max, ","], "");
     }
 
-    if (this.m_min != null) {  
-      buffer.writeAll(["\"min\":", this.m_min, ","], "");
+    if (this._min != null) {  
+      buffer.writeAll(["\"min\":", this._min, ","], "");
     }
 
     // NOTE: skip serialization of options (type AxisOptions is ignored)} 
 
-    if (this.m_reversed != null) {  
-      buffer.writeAll(["\"reversed\":", this.m_reversed, ","], "");
+    if (this._reversed != null) {  
+      buffer.writeAll(["\"reversed\":", this._reversed, ","], "");
     }
 
     // NOTE: skip serialization of series (type Series[] is ignored)} 
 
-    if (this.m_side != null) {  
-      buffer.writeAll(["\"side\":", this.m_side, ","], "");
+    if (this._side != null) {  
+      buffer.writeAll(["\"side\":", this._side, ","], "");
     }
 
     // NOTE: skip serialization of ticks (type Generic is ignored)} 
 
     // NOTE: skip serialization of userOptions (type Generic is ignored)} 
 
-    if (this.m_visible != null) {  
-      buffer.writeAll(["\"visible\":", this.m_visible, ","], "");
+    if (this._visible != null) {  
+      buffer.writeAll(["\"visible\":", this._visible, ","], "");
     }
 
-    if (this.m_extKey != null) {  
-      buffer.writeAll(["\"extKey\":", this.m_extKey, ","], "");
+    if (this._extKey != null) {  
+      buffer.writeAll(["\"extKey\":\`", this._extKey, "\`,"], "");
     }
 
-    if (this.m_index != null) {  
-      buffer.writeAll(["\"index\":", this.m_index, ","], "");
+    if (this._index != null) {  
+      buffer.writeAll(["\"index\":", this._index, ","], "");
     }
 
-    if (this.m_touched != null) {  
-      buffer.writeAll(["\"touched\":", this.m_touched, ","], "");
+    if (this._touched != null) {  
+      buffer.writeAll(["\"touched\":", this._touched, ","], "");
     }
 
     // NOTE: skip serialization of pane (type Pane is ignored)} 
@@ -310,17 +323,27 @@ class AxisLike extends LegendItem {
 
     // NOTE: skip serialization of utils (type TreeGridAxisUtilsObject is ignored)} 
 
-    if (this.m_recomputingForTilemap != null) {  
-      buffer.writeAll(["\"recomputingForTilemap\":", this.m_recomputingForTilemap, ","], "");
+    // NOTE: skip serialization of crossLabel (type SVGElement is ignored)} 
+
+    // NOTE: skip serialization of resizer (type AxisResizer is ignored)} 
+
+    // NOTE: skip serialization of ddPoints (type Generic is ignored)} 
+
+    if (this._oldPos != null) {  
+      buffer.writeAll(["\"oldPos\":", this._oldPos, ","], "");
     }
 
-    if (this.m_variwide != null) {  
-      buffer.writeAll(["\"variwide\":", this.m_variwide, ","], "");
+    // NOTE: skip serialization of center (type number[] is ignored)} 
+
+    if (this._recomputingForTilemap != null) {  
+      buffer.writeAll(["\"recomputingForTilemap\":", this._recomputingForTilemap, ","], "");
+    }
+
+    if (this._variwide != null) {  
+      buffer.writeAll(["\"variwide\":", this._variwide, ","], "");
     }
 
     // NOTE: skip serialization of zData (type number[] is ignored)} 
-
-    // NOTE: skip serialization of crossLabel (type SVGElement is ignored)} 
   }
 
 }

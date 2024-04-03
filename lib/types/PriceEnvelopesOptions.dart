@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -28,33 +28,33 @@ class PriceEnvelopesOptions extends SMAOptions {
   /**
    * Bottom line options.  
       */
-  Map<String, String>? m_bottomLine;  
+  Map<String, String>? _bottomLine;  
 
   Map<String, String> get bottomLine { 
-    if (this.m_bottomLine == null) {
-      this.m_bottomLine = Map<String, String>();
+    if (this._bottomLine == null) {
+      this._bottomLine = Map<String, String>();
     }
-    return this.m_bottomLine!;
+    return this._bottomLine!;
   }
 
   void set bottomLine (Map<String, String> v) {
-    this.m_bottomLine = v;
+    this._bottomLine = v;
   }
     
   /**
    * Top line options.  
       */
-  Map<String, String>? m_topLine;  
+  Map<String, String>? _topLine;  
 
   Map<String, String> get topLine { 
-    if (this.m_topLine == null) {
-      this.m_topLine = Map<String, String>();
+    if (this._topLine == null) {
+      this._topLine = Map<String, String>();
     }
-    return this.m_topLine!;
+    return this._topLine!;
   }
 
   void set topLine (Map<String, String> v) {
-    this.m_topLine = v;
+    this._topLine = v;
   }
     
   /**
@@ -70,17 +70,15 @@ class PriceEnvelopesOptions extends SMAOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_bottomLine != null) {  
-      buffer.writeAll(["\"bottomLine\":", this.m_bottomLine, ","], "");
+    if (this._bottomLine != null) {  
+      buffer.writeAll(["\"bottomLine\":", this._bottomLine, ","], "");
     }
 
-    if (this.m_topLine != null) {  
-      buffer.writeAll(["\"topLine\":", this.m_topLine, ","], "");
+    if (this._topLine != null) {  
+      buffer.writeAll(["\"topLine\":", this._topLine, ","], "");
     }
 
-    if (this.m_params != null) {  
-      buffer.writeAll(["\"params\":", this.m_params?.toJSON(), ","], "");
-    }
+    // NOTE: skip serialization of params (type PriceEnvelopesParamsOptions is ignored)} 
   }
 
 }

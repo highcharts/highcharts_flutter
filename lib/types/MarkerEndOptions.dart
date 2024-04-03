@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,56 +23,56 @@ import 'OptionFragment.dart';
  */
 class MarkerEndOptions extends OptionFragment {
   MarkerEndOptions() : super();
-  String? m_markerType;  
+  String? _markerType;  
 
   String get markerType { 
-    if (this.m_markerType == null) {
-      this.m_markerType = "";
+    if (this._markerType == null) {
+      this._markerType = "";
     }
-    return this.m_markerType!;
+    return this._markerType!;
   }
 
   void set markerType (String v) {
-    this.m_markerType = v;
+    this._markerType = v;
   }
     
-  bool? m_enabled;  
+  bool? _enabled;  
 
   bool get enabled { 
-    if (this.m_enabled == null) {
-      this.m_enabled = false;
+    if (this._enabled == null) {
+      this._enabled = false;
     }
-    return this.m_enabled!;
+    return this._enabled!;
   }
 
   void set enabled (bool v) {
-    this.m_enabled = v;
+    this._enabled = v;
   }
     
-  String? m_width;  
+  String? _width;  
 
   String get width { 
-    if (this.m_width == null) {
-      this.m_width = "";
+    if (this._width == null) {
+      this._width = "";
     }
-    return this.m_width!;
+    return this._width!;
   }
 
   void set width (String v) {
-    this.m_width = v;
+    this._width = v;
   }
     
-  String? m_height;  
+  String? _height;  
 
   String get height { 
-    if (this.m_height == null) {
-      this.m_height = "";
+    if (this._height == null) {
+      this._height = "";
     }
-    return this.m_height!;
+    return this._height!;
   }
 
   void set height (String v) {
-    this.m_height = v;
+    this._height = v;
   }
     
 
@@ -83,20 +83,20 @@ class MarkerEndOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_markerType != null) {  
-      buffer.writeAll(["\"markerType\":", this.m_markerType, ","], "");
+    if (this._markerType != null) {  
+      buffer.writeAll(["\"markerType\":\`", this._markerType, "\`,"], "");
     }
 
-    if (this.m_enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this.m_enabled, ","], "");
+    if (this._enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this._enabled, ","], "");
     }
 
-    if (this.m_width != null) {  
-      buffer.writeAll(["\"width\":", this.m_width, ","], "");
+    if (this._width != null) {  
+      buffer.writeAll(["\"width\":\`", this._width, "\`,"], "");
     }
 
-    if (this.m_height != null) {  
-      buffer.writeAll(["\"height\":", this.m_height, ","], "");
+    if (this._height != null) {  
+      buffer.writeAll(["\"height\":\`", this._height, "\`,"], "");
     }
   }
 

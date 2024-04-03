@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,888 +23,888 @@ import 'OptionFragment.dart';
  */
 class CSSObject extends OptionFragment {
   CSSObject() : super();
-  String? m_strokeWidth;  
-
-  String get strokeWidth { 
-    if (this.m_strokeWidth == null) {
-      this.m_strokeWidth = "";
-    }
-    return this.m_strokeWidth!;
-  }
-
-  void set strokeWidth (String v) {
-    this.m_strokeWidth = v;
-  }
-    
-  String? m_align;  
+  String? _align;  
 
   String get align { 
-    if (this.m_align == null) {
-      this.m_align = "";
+    if (this._align == null) {
+      this._align = "";
     }
-    return this.m_align!;
+    return this._align!;
   }
 
   void set align (String v) {
-    this.m_align = v;
+    this._align = v;
   }
     
-  String? m_align_items;  
+  String? _align_items;  
 
   String get align_items { 
-    if (this.m_align_items == null) {
-      this.m_align_items = "";
+    if (this._align_items == null) {
+      this._align_items = "";
     }
-    return this.m_align_items!;
+    return this._align_items!;
   }
 
   void set align_items (String v) {
-    this.m_align_items = v;
+    this._align_items = v;
   }
     
-  String? m__ms_filter;  
+  String? _p_ms_filter;  
 
-  String get _ms_filter { 
-    if (this.m__ms_filter == null) {
-      this.m__ms_filter = "";
+  String get p_ms_filter { 
+    if (this._p_ms_filter == null) {
+      this._p_ms_filter = "";
     }
-    return this.m__ms_filter!;
+    return this._p_ms_filter!;
   }
 
-  void set _ms_filter (String v) {
-    this.m__ms_filter = v;
+  void set p_ms_filter (String v) {
+    this._p_ms_filter = v;
   }
     
-  String? m__ms_touch_action;  
+  String? _p_ms_touch_action;  
 
-  String get _ms_touch_action { 
-    if (this.m__ms_touch_action == null) {
-      this.m__ms_touch_action = "";
+  String get p_ms_touch_action { 
+    if (this._p_ms_touch_action == null) {
+      this._p_ms_touch_action = "";
     }
-    return this.m__ms_touch_action!;
+    return this._p_ms_touch_action!;
   }
 
-  void set _ms_touch_action (String v) {
-    this.m__ms_touch_action = v;
+  void set p_ms_touch_action (String v) {
+    this._p_ms_touch_action = v;
   }
     
-  String? m__ms_transform;  
+  String? _p_ms_transform;  
 
-  String get _ms_transform { 
-    if (this.m__ms_transform == null) {
-      this.m__ms_transform = "";
+  String get p_ms_transform { 
+    if (this._p_ms_transform == null) {
+      this._p_ms_transform = "";
     }
-    return this.m__ms_transform!;
+    return this._p_ms_transform!;
   }
 
-  void set _ms_transform (String v) {
-    this.m__ms_transform = v;
+  void set p_ms_transform (String v) {
+    this._p_ms_transform = v;
   }
     
-  String? m__o_transform;  
+  String? _p_o_transform;  
 
-  String get _o_transform { 
-    if (this.m__o_transform == null) {
-      this.m__o_transform = "";
+  String get p_o_transform { 
+    if (this._p_o_transform == null) {
+      this._p_o_transform = "";
     }
-    return this.m__o_transform!;
+    return this._p_o_transform!;
   }
 
-  void set _o_transform (String v) {
-    this.m__o_transform = v;
+  void set p_o_transform (String v) {
+    this._p_o_transform = v;
   }
     
-  String? m__webkit_transform;  
+  String? _p_webkit_transform;  
 
-  String get _webkit_transform { 
-    if (this.m__webkit_transform == null) {
-      this.m__webkit_transform = "";
+  String get p_webkit_transform { 
+    if (this._p_webkit_transform == null) {
+      this._p_webkit_transform = "";
     }
-    return this.m__webkit_transform!;
+    return this._p_webkit_transform!;
   }
 
-  void set _webkit_transform (String v) {
-    this.m__webkit_transform = v;
+  void set p_webkit_transform (String v) {
+    this._p_webkit_transform = v;
   }
     
-  String? m_background;  
+  String? _background;  
 
   String get background { 
-    if (this.m_background == null) {
-      this.m_background = "";
+    if (this._background == null) {
+      this._background = "";
     }
-    return this.m_background!;
+    return this._background!;
   }
 
   void set background (String v) {
-    this.m_background = v;
+    this._background = v;
   }
     
-  String? m_backgroundColor;  
+  String? _backgroundColor;  
 
   String get backgroundColor { 
-    if (this.m_backgroundColor == null) {
-      this.m_backgroundColor = "";
+    if (this._backgroundColor == null) {
+      this._backgroundColor = "";
     }
-    return this.m_backgroundColor!;
+    return this._backgroundColor!;
   }
 
   void set backgroundColor (String v) {
-    this.m_backgroundColor = v;
+    this._backgroundColor = v;
   }
     
-  String? m_borderRadius;  
+  String? _borderRadius;  
 
   String get borderRadius { 
-    if (this.m_borderRadius == null) {
-      this.m_borderRadius = "";
+    if (this._borderRadius == null) {
+      this._borderRadius = "";
     }
-    return this.m_borderRadius!;
+    return this._borderRadius!;
   }
 
   void set borderRadius (String v) {
-    this.m_borderRadius = v;
+    this._borderRadius = v;
   }
     
-  double? m_borderWidth;  
+  double? _borderWidth;  
 
   double get borderWidth { 
-    if (this.m_borderWidth == null) {
-      this.m_borderWidth = 0;
+    if (this._borderWidth == null) {
+      this._borderWidth = 0;
     }
-    return this.m_borderWidth!;
+    return this._borderWidth!;
   }
 
   void set borderWidth (double v) {
-    this.m_borderWidth = v;
+    this._borderWidth = v;
   }
     
-  String? m_border_radius;  
+  String? _border_radius;  
 
   String get border_radius { 
-    if (this.m_border_radius == null) {
-      this.m_border_radius = "";
+    if (this._border_radius == null) {
+      this._border_radius = "";
     }
-    return this.m_border_radius!;
+    return this._border_radius!;
   }
 
   void set border_radius (String v) {
-    this.m_border_radius = v;
+    this._border_radius = v;
   }
     
-  String? m_bottom;  
+  String? _bottom;  
 
   String get bottom { 
-    if (this.m_bottom == null) {
-      this.m_bottom = "";
+    if (this._bottom == null) {
+      this._bottom = "";
     }
-    return this.m_bottom!;
+    return this._bottom!;
   }
 
   void set bottom (String v) {
-    this.m_bottom = v;
+    this._bottom = v;
   }
     
-  String? m_boxShadow;  
+  String? _boxShadow;  
 
   String get boxShadow { 
-    if (this.m_boxShadow == null) {
-      this.m_boxShadow = "";
+    if (this._boxShadow == null) {
+      this._boxShadow = "";
     }
-    return this.m_boxShadow!;
+    return this._boxShadow!;
   }
 
   void set boxShadow (String v) {
-    this.m_boxShadow = v;
+    this._boxShadow = v;
   }
     
-  String? m_clip;  
+  String? _clip;  
 
   String get clip { 
-    if (this.m_clip == null) {
-      this.m_clip = "";
+    if (this._clip == null) {
+      this._clip = "";
     }
-    return this.m_clip!;
+    return this._clip!;
   }
 
   void set clip (String v) {
-    this.m_clip = v;
+    this._clip = v;
   }
     
-  String? m_color;  
+  String? _color;  
 
   String get color { 
-    if (this.m_color == null) {
-      this.m_color = "";
+    if (this._color == null) {
+      this._color = "";
     }
-    return this.m_color!;
+    return this._color!;
   }
 
   void set color (String v) {
-    this.m_color = v;
+    this._color = v;
   }
     
-  String? m_cursor;  
+  String? _cursor;  
 
   String get cursor { 
-    if (this.m_cursor == null) {
-      this.m_cursor = "";
+    if (this._cursor == null) {
+      this._cursor = "";
     }
-    return this.m_cursor!;
+    return this._cursor!;
   }
 
   void set cursor (String v) {
-    this.m_cursor = v;
+    this._cursor = v;
   }
     
-  String? m_direction;  
+  String? _direction;  
 
   String get direction { 
-    if (this.m_direction == null) {
-      this.m_direction = "";
+    if (this._direction == null) {
+      this._direction = "";
     }
-    return this.m_direction!;
+    return this._direction!;
   }
 
   void set direction (String v) {
-    this.m_direction = v;
+    this._direction = v;
   }
     
-  String? m_display;  
+  String? _display;  
 
   String get display { 
-    if (this.m_display == null) {
-      this.m_display = "";
+    if (this._display == null) {
+      this._display = "";
     }
-    return this.m_display!;
+    return this._display!;
   }
 
   void set display (String v) {
-    this.m_display = v;
+    this._display = v;
   }
     
-  String? m_fill;  
+  String? _fill;  
 
   String get fill { 
-    if (this.m_fill == null) {
-      this.m_fill = "";
+    if (this._fill == null) {
+      this._fill = "";
     }
-    return this.m_fill!;
+    return this._fill!;
   }
 
   void set fill (String v) {
-    this.m_fill = v;
+    this._fill = v;
   }
     
-  String? m_filter;  
+  String? _filter;  
 
   String get filter { 
-    if (this.m_filter == null) {
-      this.m_filter = "";
+    if (this._filter == null) {
+      this._filter = "";
     }
-    return this.m_filter!;
+    return this._filter!;
   }
 
   void set filter (String v) {
-    this.m_filter = v;
+    this._filter = v;
   }
     
-  String? m_flip;  
+  String? _flip;  
 
   String get flip { 
-    if (this.m_flip == null) {
-      this.m_flip = "";
+    if (this._flip == null) {
+      this._flip = "";
     }
-    return this.m_flip!;
+    return this._flip!;
   }
 
   void set flip (String v) {
-    this.m_flip = v;
+    this._flip = v;
   }
     
-  String? m_flex_direction;  
+  String? _flex_direction;  
 
   String get flex_direction { 
-    if (this.m_flex_direction == null) {
-      this.m_flex_direction = "";
+    if (this._flex_direction == null) {
+      this._flex_direction = "";
     }
-    return this.m_flex_direction!;
+    return this._flex_direction!;
   }
 
   void set flex_direction (String v) {
-    this.m_flex_direction = v;
+    this._flex_direction = v;
   }
     
-  String? m_font;  
+  String? _font;  
 
   String get font { 
-    if (this.m_font == null) {
-      this.m_font = "";
+    if (this._font == null) {
+      this._font = "";
     }
-    return this.m_font!;
+    return this._font!;
   }
 
   void set font (String v) {
-    this.m_font = v;
+    this._font = v;
   }
     
-  String? m_fontFamily;  
+  String? _fontFamily;  
 
   String get fontFamily { 
-    if (this.m_fontFamily == null) {
-      this.m_fontFamily = "";
+    if (this._fontFamily == null) {
+      this._fontFamily = "";
     }
-    return this.m_fontFamily!;
+    return this._fontFamily!;
   }
 
   void set fontFamily (String v) {
-    this.m_fontFamily = v;
+    this._fontFamily = v;
   }
     
-  String? m_fontSize;  
+  String? _fontSize;  
 
   String get fontSize { 
-    if (this.m_fontSize == null) {
-      this.m_fontSize = "";
+    if (this._fontSize == null) {
+      this._fontSize = "";
     }
-    return this.m_fontSize!;
+    return this._fontSize!;
   }
 
   void set fontSize (String v) {
-    this.m_fontSize = v;
+    this._fontSize = v;
   }
     
-  String? m_fontStyle;  
+  String? _fontStyle;  
 
   String get fontStyle { 
-    if (this.m_fontStyle == null) {
-      this.m_fontStyle = "";
+    if (this._fontStyle == null) {
+      this._fontStyle = "";
     }
-    return this.m_fontStyle!;
+    return this._fontStyle!;
   }
 
   void set fontStyle (String v) {
-    this.m_fontStyle = v;
+    this._fontStyle = v;
   }
     
-  String? m_fontWeight;  
+  String? _fontWeight;  
 
   String get fontWeight { 
-    if (this.m_fontWeight == null) {
-      this.m_fontWeight = "";
+    if (this._fontWeight == null) {
+      this._fontWeight = "";
     }
-    return this.m_fontWeight!;
+    return this._fontWeight!;
   }
 
   void set fontWeight (String v) {
-    this.m_fontWeight = v;
+    this._fontWeight = v;
   }
     
-  String? m_justify_content;  
+  String? _justify_content;  
 
   String get justify_content { 
-    if (this.m_justify_content == null) {
-      this.m_justify_content = "";
+    if (this._justify_content == null) {
+      this._justify_content = "";
     }
-    return this.m_justify_content!;
+    return this._justify_content!;
   }
 
   void set justify_content (String v) {
-    this.m_justify_content = v;
+    this._justify_content = v;
   }
     
-  String? m_lineWidth;  
+  String? _lineWidth;  
 
   String get lineWidth { 
-    if (this.m_lineWidth == null) {
-      this.m_lineWidth = "";
+    if (this._lineWidth == null) {
+      this._lineWidth = "";
     }
-    return this.m_lineWidth!;
+    return this._lineWidth!;
   }
 
   void set lineWidth (String v) {
-    this.m_lineWidth = v;
+    this._lineWidth = v;
   }
     
-  String? m_listStyle;  
+  String? _listStyle;  
 
   String get listStyle { 
-    if (this.m_listStyle == null) {
-      this.m_listStyle = "";
+    if (this._listStyle == null) {
+      this._listStyle = "";
     }
-    return this.m_listStyle!;
+    return this._listStyle!;
   }
 
   void set listStyle (String v) {
-    this.m_listStyle = v;
+    this._listStyle = v;
   }
     
-  String? m_max_height;  
+  String? _max_height;  
 
   String get max_height { 
-    if (this.m_max_height == null) {
-      this.m_max_height = "";
+    if (this._max_height == null) {
+      this._max_height = "";
     }
-    return this.m_max_height!;
+    return this._max_height!;
   }
 
   void set max_height (String v) {
-    this.m_max_height = v;
+    this._max_height = v;
   }
     
-  String? m_max_width;  
+  String? _max_width;  
 
   String get max_width { 
-    if (this.m_max_width == null) {
-      this.m_max_width = "";
+    if (this._max_width == null) {
+      this._max_width = "";
     }
-    return this.m_max_width!;
+    return this._max_width!;
   }
 
   void set max_width (String v) {
-    this.m_max_width = v;
+    this._max_width = v;
   }
     
-  String? m_MozBoxShadow;  
+  String? _MozBoxShadow;  
 
   String get MozBoxShadow { 
-    if (this.m_MozBoxShadow == null) {
-      this.m_MozBoxShadow = "";
+    if (this._MozBoxShadow == null) {
+      this._MozBoxShadow = "";
     }
-    return this.m_MozBoxShadow!;
+    return this._MozBoxShadow!;
   }
 
   void set MozBoxShadow (String v) {
-    this.m_MozBoxShadow = v;
+    this._MozBoxShadow = v;
   }
     
-  String? m_MozTransform;  
+  String? _MozTransform;  
 
   String get MozTransform { 
-    if (this.m_MozTransform == null) {
-      this.m_MozTransform = "";
+    if (this._MozTransform == null) {
+      this._MozTransform = "";
     }
-    return this.m_MozTransform!;
+    return this._MozTransform!;
   }
 
   void set MozTransform (String v) {
-    this.m_MozTransform = v;
+    this._MozTransform = v;
   }
     
-  double? m_opacity;  
+  double? _opacity;  
 
   double get opacity { 
-    if (this.m_opacity == null) {
-      this.m_opacity = 0;
+    if (this._opacity == null) {
+      this._opacity = 0;
     }
-    return this.m_opacity!;
+    return this._opacity!;
   }
 
   void set opacity (double v) {
-    this.m_opacity = v;
+    this._opacity = v;
   }
     
-  String? m_overflow;  
+  String? _overflow;  
 
   String get overflow { 
-    if (this.m_overflow == null) {
-      this.m_overflow = "";
+    if (this._overflow == null) {
+      this._overflow = "";
     }
-    return this.m_overflow!;
+    return this._overflow!;
   }
 
   void set overflow (String v) {
-    this.m_overflow = v;
+    this._overflow = v;
   }
     
-  String? m_overflowX;  
+  String? _overflowX;  
 
   String get overflowX { 
-    if (this.m_overflowX == null) {
-      this.m_overflowX = "";
+    if (this._overflowX == null) {
+      this._overflowX = "";
     }
-    return this.m_overflowX!;
+    return this._overflowX!;
   }
 
   void set overflowX (String v) {
-    this.m_overflowX = v;
+    this._overflowX = v;
   }
     
-  String? m_overflowY;  
+  String? _overflowY;  
 
   String get overflowY { 
-    if (this.m_overflowY == null) {
-      this.m_overflowY = "";
+    if (this._overflowY == null) {
+      this._overflowY = "";
     }
-    return this.m_overflowY!;
+    return this._overflowY!;
   }
 
   void set overflowY (String v) {
-    this.m_overflowY = v;
+    this._overflowY = v;
   }
     
-  String? m_outline;  
+  String? _outline;  
 
   String get outline { 
-    if (this.m_outline == null) {
-      this.m_outline = "";
+    if (this._outline == null) {
+      this._outline = "";
     }
-    return this.m_outline!;
+    return this._outline!;
   }
 
   void set outline (String v) {
-    this.m_outline = v;
+    this._outline = v;
   }
     
-  String? m_padding;  
+  String? _padding;  
 
   String get padding { 
-    if (this.m_padding == null) {
-      this.m_padding = "";
+    if (this._padding == null) {
+      this._padding = "";
     }
-    return this.m_padding!;
+    return this._padding!;
   }
 
   void set padding (String v) {
-    this.m_padding = v;
+    this._padding = v;
   }
     
-  String? m_pointer_events;  
+  String? _pointer_events;  
 
   String get pointer_events { 
-    if (this.m_pointer_events == null) {
-      this.m_pointer_events = "";
+    if (this._pointer_events == null) {
+      this._pointer_events = "";
     }
-    return this.m_pointer_events!;
+    return this._pointer_events!;
   }
 
   void set pointer_events (String v) {
-    this.m_pointer_events = v;
+    this._pointer_events = v;
   }
     
-  String? m_pointerEvents;  
+  String? _pointerEvents;  
 
   String get pointerEvents { 
-    if (this.m_pointerEvents == null) {
-      this.m_pointerEvents = "";
+    if (this._pointerEvents == null) {
+      this._pointerEvents = "";
     }
-    return this.m_pointerEvents!;
+    return this._pointerEvents!;
   }
 
   void set pointerEvents (String v) {
-    this.m_pointerEvents = v;
+    this._pointerEvents = v;
   }
     
-  String? m_position;  
+  String? _position;  
 
   String get position { 
-    if (this.m_position == null) {
-      this.m_position = "";
+    if (this._position == null) {
+      this._position = "";
     }
-    return this.m_position!;
+    return this._position!;
   }
 
   void set position (String v) {
-    this.m_position = v;
+    this._position = v;
   }
     
-  String? m_right;  
+  String? _right;  
 
   String get right { 
-    if (this.m_right == null) {
-      this.m_right = "";
+    if (this._right == null) {
+      this._right = "";
     }
-    return this.m_right!;
+    return this._right!;
   }
 
   void set right (String v) {
-    this.m_right = v;
+    this._right = v;
   }
     
-  double? m_rotation;  
+  double? _rotation;  
 
   double get rotation { 
-    if (this.m_rotation == null) {
-      this.m_rotation = 0;
+    if (this._rotation == null) {
+      this._rotation = 0;
     }
-    return this.m_rotation!;
+    return this._rotation!;
   }
 
   void set rotation (double v) {
-    this.m_rotation = v;
+    this._rotation = v;
   }
     
-  String? m_stroke;  
+  String? _stroke;  
 
   String get stroke { 
-    if (this.m_stroke == null) {
-      this.m_stroke = "";
+    if (this._stroke == null) {
+      this._stroke = "";
     }
-    return this.m_stroke!;
+    return this._stroke!;
   }
 
   void set stroke (String v) {
-    this.m_stroke = v;
+    this._stroke = v;
   }
     
-  String? m_stroke_width;  
+  String? _stroke_width;  
 
   String get stroke_width { 
-    if (this.m_stroke_width == null) {
-      this.m_stroke_width = "";
+    if (this._stroke_width == null) {
+      this._stroke_width = "";
     }
-    return this.m_stroke_width!;
+    return this._stroke_width!;
   }
 
   void set stroke_width (String v) {
-    this.m_stroke_width = v;
+    this._stroke_width = v;
   }
     
-  String? m_text_align;  
+  String? _strokeWidth;  
+
+  String get strokeWidth { 
+    if (this._strokeWidth == null) {
+      this._strokeWidth = "";
+    }
+    return this._strokeWidth!;
+  }
+
+  void set strokeWidth (String v) {
+    this._strokeWidth = v;
+  }
+    
+  String? _text_align;  
 
   String get text_align { 
-    if (this.m_text_align == null) {
-      this.m_text_align = "";
+    if (this._text_align == null) {
+      this._text_align = "";
     }
-    return this.m_text_align!;
+    return this._text_align!;
   }
 
   void set text_align (String v) {
-    this.m_text_align = v;
+    this._text_align = v;
   }
     
-  String? m_textAlign;  
+  String? _textAlign;  
 
   String get textAlign { 
-    if (this.m_textAlign == null) {
-      this.m_textAlign = "";
+    if (this._textAlign == null) {
+      this._textAlign = "";
     }
-    return this.m_textAlign!;
+    return this._textAlign!;
   }
 
   void set textAlign (String v) {
-    this.m_textAlign = v;
+    this._textAlign = v;
   }
     
-  String? m_textDecoration;  
+  String? _textDecoration;  
 
   String get textDecoration { 
-    if (this.m_textDecoration == null) {
-      this.m_textDecoration = "";
+    if (this._textDecoration == null) {
+      this._textDecoration = "";
     }
-    return this.m_textDecoration!;
+    return this._textDecoration!;
   }
 
   void set textDecoration (String v) {
-    this.m_textDecoration = v;
+    this._textDecoration = v;
   }
     
-  String? m_textOverflow;  
+  String? _textOverflow;  
 
   String get textOverflow { 
-    if (this.m_textOverflow == null) {
-      this.m_textOverflow = "";
+    if (this._textOverflow == null) {
+      this._textOverflow = "";
     }
-    return this.m_textOverflow!;
+    return this._textOverflow!;
   }
 
   void set textOverflow (String v) {
-    this.m_textOverflow = v;
+    this._textOverflow = v;
   }
     
-  String? m_textOutline;  
+  String? _textOutline;  
 
   String get textOutline { 
-    if (this.m_textOutline == null) {
-      this.m_textOutline = "";
+    if (this._textOutline == null) {
+      this._textOutline = "";
     }
-    return this.m_textOutline!;
+    return this._textOutline!;
   }
 
   void set textOutline (String v) {
-    this.m_textOutline = v;
+    this._textOutline = v;
   }
     
-  String? m_textTransform;  
+  String? _textTransform;  
 
   String get textTransform { 
-    if (this.m_textTransform == null) {
-      this.m_textTransform = "";
+    if (this._textTransform == null) {
+      this._textTransform = "";
     }
-    return this.m_textTransform!;
+    return this._textTransform!;
   }
 
   void set textTransform (String v) {
-    this.m_textTransform = v;
+    this._textTransform = v;
   }
     
-  String? m_touch_action;  
+  String? _touch_action;  
 
   String get touch_action { 
-    if (this.m_touch_action == null) {
-      this.m_touch_action = "";
+    if (this._touch_action == null) {
+      this._touch_action = "";
     }
-    return this.m_touch_action!;
+    return this._touch_action!;
   }
 
   void set touch_action (String v) {
-    this.m_touch_action = v;
+    this._touch_action = v;
   }
     
-  String? m_transform;  
+  String? _transform;  
 
   String get transform { 
-    if (this.m_transform == null) {
-      this.m_transform = "";
+    if (this._transform == null) {
+      this._transform = "";
     }
-    return this.m_transform!;
+    return this._transform!;
   }
 
   void set transform (String v) {
-    this.m_transform = v;
+    this._transform = v;
   }
     
-  String? m_transformOrigin;  
+  String? _transformOrigin;  
 
   String get transformOrigin { 
-    if (this.m_transformOrigin == null) {
-      this.m_transformOrigin = "";
+    if (this._transformOrigin == null) {
+      this._transformOrigin = "";
     }
-    return this.m_transformOrigin!;
+    return this._transformOrigin!;
   }
 
   void set transformOrigin (String v) {
-    this.m_transformOrigin = v;
+    this._transformOrigin = v;
   }
     
-  String? m_transition;  
+  String? _transition;  
 
   String get transition { 
-    if (this.m_transition == null) {
-      this.m_transition = "";
+    if (this._transition == null) {
+      this._transition = "";
     }
-    return this.m_transition!;
+    return this._transition!;
   }
 
   void set transition (String v) {
-    this.m_transition = v;
+    this._transition = v;
   }
     
-  String? m_userSelect;  
+  String? _userSelect;  
 
   String get userSelect { 
-    if (this.m_userSelect == null) {
-      this.m_userSelect = "";
+    if (this._userSelect == null) {
+      this._userSelect = "";
     }
-    return this.m_userSelect!;
+    return this._userSelect!;
   }
 
   void set userSelect (String v) {
-    this.m_userSelect = v;
+    this._userSelect = v;
   }
     
-  String? m_visibility;  
+  String? _visibility;  
 
   String get visibility { 
-    if (this.m_visibility == null) {
-      this.m_visibility = "";
+    if (this._visibility == null) {
+      this._visibility = "";
     }
-    return this.m_visibility!;
+    return this._visibility!;
   }
 
   void set visibility (String v) {
-    this.m_visibility = v;
+    this._visibility = v;
   }
     
-  String? m_white_space;  
+  String? _white_space;  
 
   String get white_space { 
-    if (this.m_white_space == null) {
-      this.m_white_space = "";
+    if (this._white_space == null) {
+      this._white_space = "";
     }
-    return this.m_white_space!;
+    return this._white_space!;
   }
 
   void set white_space (String v) {
-    this.m_white_space = v;
+    this._white_space = v;
   }
     
-  String? m_whiteSpace;  
+  String? _whiteSpace;  
 
   String get whiteSpace { 
-    if (this.m_whiteSpace == null) {
-      this.m_whiteSpace = "";
+    if (this._whiteSpace == null) {
+      this._whiteSpace = "";
     }
-    return this.m_whiteSpace!;
+    return this._whiteSpace!;
   }
 
   void set whiteSpace (String v) {
-    this.m_whiteSpace = v;
+    this._whiteSpace = v;
   }
     
-  String? m_WebkitBoxShadow;  
+  String? _WebkitBoxShadow;  
 
   String get WebkitBoxShadow { 
-    if (this.m_WebkitBoxShadow == null) {
-      this.m_WebkitBoxShadow = "";
+    if (this._WebkitBoxShadow == null) {
+      this._WebkitBoxShadow = "";
     }
-    return this.m_WebkitBoxShadow!;
+    return this._WebkitBoxShadow!;
   }
 
   void set WebkitBoxShadow (String v) {
-    this.m_WebkitBoxShadow = v;
+    this._WebkitBoxShadow = v;
   }
     
-  String? m_WebkitOverflowScrolling;  
+  String? _WebkitOverflowScrolling;  
 
   String get WebkitOverflowScrolling { 
-    if (this.m_WebkitOverflowScrolling == null) {
-      this.m_WebkitOverflowScrolling = "";
+    if (this._WebkitOverflowScrolling == null) {
+      this._WebkitOverflowScrolling = "";
     }
-    return this.m_WebkitOverflowScrolling!;
+    return this._WebkitOverflowScrolling!;
   }
 
   void set WebkitOverflowScrolling (String v) {
-    this.m_WebkitOverflowScrolling = v;
+    this._WebkitOverflowScrolling = v;
   }
     
-  String? m__webkit_tap_highlight_color;  
+  String? _p_webkit_tap_highlight_color;  
 
-  String get _webkit_tap_highlight_color { 
-    if (this.m__webkit_tap_highlight_color == null) {
-      this.m__webkit_tap_highlight_color = "";
+  String get p_webkit_tap_highlight_color { 
+    if (this._p_webkit_tap_highlight_color == null) {
+      this._p_webkit_tap_highlight_color = "";
     }
-    return this.m__webkit_tap_highlight_color!;
+    return this._p_webkit_tap_highlight_color!;
   }
 
-  void set _webkit_tap_highlight_color (String v) {
-    this.m__webkit_tap_highlight_color = v;
+  void set p_webkit_tap_highlight_color (String v) {
+    this._p_webkit_tap_highlight_color = v;
   }
     
-  double? m_zIndex;  
+  double? _zIndex;  
 
   double get zIndex { 
-    if (this.m_zIndex == null) {
-      this.m_zIndex = 0;
+    if (this._zIndex == null) {
+      this._zIndex = 0;
     }
-    return this.m_zIndex!;
+    return this._zIndex!;
   }
 
   void set zIndex (double v) {
-    this.m_zIndex = v;
+    this._zIndex = v;
   }
     
-  double? m_z_index;  
+  double? _z_index;  
 
   double get z_index { 
-    if (this.m_z_index == null) {
-      this.m_z_index = 0;
+    if (this._z_index == null) {
+      this._z_index = 0;
     }
-    return this.m_z_index!;
+    return this._z_index!;
   }
 
   void set z_index (double v) {
-    this.m_z_index = v;
+    this._z_index = v;
   }
     
 
@@ -915,140 +915,136 @@ class CSSObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_strokeWidth != null) {  
-      buffer.writeAll(["\"strokeWidth\":", this.m_strokeWidth, ","], "");
+    if (this._align != null) {  
+      buffer.writeAll(["\"align\":\`", this._align, "\`,"], "");
     }
 
-    if (this.m_align != null) {  
-      buffer.writeAll(["\"align\":", this.m_align, ","], "");
+    if (this._align_items != null) {  
+      buffer.writeAll(["\"align-items\":\`", this._align_items, "\`,"], "");
     }
 
-    if (this.m_align_items != null) {  
-      buffer.writeAll(["\"align-items\":", this.m_align_items, ","], "");
+    if (this._p_ms_filter != null) {  
+      buffer.writeAll(["\"-ms-filter\":\`", this._p_ms_filter, "\`,"], "");
     }
 
-    if (this.m__ms_filter != null) {  
-      buffer.writeAll(["\"-ms-filter\":", this.m__ms_filter, ","], "");
+    if (this._p_ms_touch_action != null) {  
+      buffer.writeAll(["\"-ms-touch-action\":\`", this._p_ms_touch_action, "\`,"], "");
     }
 
-    if (this.m__ms_touch_action != null) {  
-      buffer.writeAll(["\"-ms-touch-action\":", this.m__ms_touch_action, ","], "");
+    if (this._p_ms_transform != null) {  
+      buffer.writeAll(["\"-ms-transform\":\`", this._p_ms_transform, "\`,"], "");
     }
 
-    if (this.m__ms_transform != null) {  
-      buffer.writeAll(["\"-ms-transform\":", this.m__ms_transform, ","], "");
+    if (this._p_o_transform != null) {  
+      buffer.writeAll(["\"-o-transform\":\`", this._p_o_transform, "\`,"], "");
     }
 
-    if (this.m__o_transform != null) {  
-      buffer.writeAll(["\"-o-transform\":", this.m__o_transform, ","], "");
+    if (this._p_webkit_transform != null) {  
+      buffer.writeAll(["\"-webkit-transform\":\`", this._p_webkit_transform, "\`,"], "");
     }
 
-    if (this.m__webkit_transform != null) {  
-      buffer.writeAll(["\"-webkit-transform\":", this.m__webkit_transform, ","], "");
+    if (this._background != null) {  
+      buffer.writeAll(["\"background\":\`", this._background, "\`,"], "");
     }
 
-    if (this.m_background != null) {  
-      buffer.writeAll(["\"background\":", this.m_background, ","], "");
+    if (this._backgroundColor != null) {  
+      buffer.writeAll(["\"backgroundColor\":\`", this._backgroundColor, "\`,"], "");
     }
 
-    if (this.m_backgroundColor != null) {  
-      buffer.writeAll(["\"backgroundColor\":", this.m_backgroundColor, ","], "");
+    if (this._borderRadius != null) {  
+      buffer.writeAll(["\"borderRadius\":\`", this._borderRadius, "\`,"], "");
     }
 
-    if (this.m_borderRadius != null) {  
-      buffer.writeAll(["\"borderRadius\":", this.m_borderRadius, ","], "");
-    }
-
-    if (this.m_borderWidth != null) {  
-      buffer.writeAll(["\"borderWidth\":", this.m_borderWidth, ","], "");
+    if (this._borderWidth != null) {  
+      buffer.writeAll(["\"borderWidth\":", this._borderWidth, ","], "");
     }
 
     // NOTE: skip serialization of border (type 0 is ignored)} 
 
-    if (this.m_border_radius != null) {  
-      buffer.writeAll(["\"border-radius\":", this.m_border_radius, ","], "");
+    if (this._border_radius != null) {  
+      buffer.writeAll(["\"border-radius\":\`", this._border_radius, "\`,"], "");
     }
 
-    if (this.m_bottom != null) {  
-      buffer.writeAll(["\"bottom\":", this.m_bottom, ","], "");
+    if (this._bottom != null) {  
+      buffer.writeAll(["\"bottom\":\`", this._bottom, "\`,"], "");
     }
 
-    if (this.m_boxShadow != null) {  
-      buffer.writeAll(["\"boxShadow\":", this.m_boxShadow, ","], "");
+    if (this._boxShadow != null) {  
+      buffer.writeAll(["\"boxShadow\":\`", this._boxShadow, "\`,"], "");
     }
 
-    if (this.m_clip != null) {  
-      buffer.writeAll(["\"clip\":", this.m_clip, ","], "");
+    if (this._clip != null) {  
+      buffer.writeAll(["\"clip\":\`", this._clip, "\`,"], "");
     }
 
-    if (this.m_color != null) {  
-      buffer.writeAll(["\"color\":", this.m_color, ","], "");
+    if (this._color != null) {  
+      buffer.writeAll(["\"color\":\`", this._color, "\`,"], "");
     }
 
-    if (this.m_cursor != null) {  
-      buffer.writeAll(["\"cursor\":", this.m_cursor, ","], "");
+    if (this._cursor != null) {  
+      buffer.writeAll(["\"cursor\":\`", this._cursor, "\`,"], "");
     }
 
-    if (this.m_direction != null) {  
-      buffer.writeAll(["\"direction\":", this.m_direction, ","], "");
+    if (this._direction != null) {  
+      buffer.writeAll(["\"direction\":\`", this._direction, "\`,"], "");
     }
 
-    if (this.m_display != null) {  
-      buffer.writeAll(["\"display\":", this.m_display, ","], "");
+    if (this._display != null) {  
+      buffer.writeAll(["\"display\":\`", this._display, "\`,"], "");
     }
 
-    if (this.m_fill != null) {  
-      buffer.writeAll(["\"fill\":", this.m_fill, ","], "");
+    if (this._fill != null) {  
+      buffer.writeAll(["\"fill\":\`", this._fill, "\`,"], "");
     }
 
-    if (this.m_filter != null) {  
-      buffer.writeAll(["\"filter\":", this.m_filter, ","], "");
+    if (this._filter != null) {  
+      buffer.writeAll(["\"filter\":\`", this._filter, "\`,"], "");
     }
 
-    if (this.m_flip != null) {  
-      buffer.writeAll(["\"flip\":", this.m_flip, ","], "");
+    if (this._flip != null) {  
+      buffer.writeAll(["\"flip\":\`", this._flip, "\`,"], "");
     }
 
-    if (this.m_flex_direction != null) {  
-      buffer.writeAll(["\"flex-direction\":", this.m_flex_direction, ","], "");
+    if (this._flex_direction != null) {  
+      buffer.writeAll(["\"flex-direction\":\`", this._flex_direction, "\`,"], "");
     }
 
-    if (this.m_font != null) {  
-      buffer.writeAll(["\"font\":", this.m_font, ","], "");
+    if (this._font != null) {  
+      buffer.writeAll(["\"font\":\`", this._font, "\`,"], "");
     }
 
-    if (this.m_fontFamily != null) {  
-      buffer.writeAll(["\"fontFamily\":", this.m_fontFamily, ","], "");
+    if (this._fontFamily != null) {  
+      buffer.writeAll(["\"fontFamily\":\`", this._fontFamily, "\`,"], "");
     }
 
-    if (this.m_fontSize != null) {  
-      buffer.writeAll(["\"fontSize\":", this.m_fontSize, ","], "");
+    if (this._fontSize != null) {  
+      buffer.writeAll(["\"fontSize\":\`", this._fontSize, "\`,"], "");
     }
 
-    if (this.m_fontStyle != null) {  
-      buffer.writeAll(["\"fontStyle\":", this.m_fontStyle, ","], "");
+    if (this._fontStyle != null) {  
+      buffer.writeAll(["\"fontStyle\":\`", this._fontStyle, "\`,"], "");
     }
 
-    if (this.m_fontWeight != null) {  
-      buffer.writeAll(["\"fontWeight\":", this.m_fontWeight, ","], "");
+    if (this._fontWeight != null) {  
+      buffer.writeAll(["\"fontWeight\":\`", this._fontWeight, "\`,"], "");
     }
 
     // NOTE: skip serialization of height (type 0 is ignored)} 
 
-    if (this.m_justify_content != null) {  
-      buffer.writeAll(["\"justify-content\":", this.m_justify_content, ","], "");
+    if (this._justify_content != null) {  
+      buffer.writeAll(["\"justify-content\":\`", this._justify_content, "\`,"], "");
     }
 
     // NOTE: skip serialization of left (type 0 is ignored)} 
 
     // NOTE: skip serialization of lineHeight (type 0 is ignored)} 
 
-    if (this.m_lineWidth != null) {  
-      buffer.writeAll(["\"lineWidth\":", this.m_lineWidth, ","], "");
+    if (this._lineWidth != null) {  
+      buffer.writeAll(["\"lineWidth\":\`", this._lineWidth, "\`,"], "");
     }
 
-    if (this.m_listStyle != null) {  
-      buffer.writeAll(["\"listStyle\":", this.m_listStyle, ","], "");
+    if (this._listStyle != null) {  
+      buffer.writeAll(["\"listStyle\":\`", this._listStyle, "\`,"], "");
     }
 
     // NOTE: skip serialization of margin (type 0 is ignored)} 
@@ -1057,156 +1053,160 @@ class CSSObject extends OptionFragment {
 
     // NOTE: skip serialization of marginTop (type 0 is ignored)} 
 
-    if (this.m_max_height != null) {  
-      buffer.writeAll(["\"max-height\":", this.m_max_height, ","], "");
+    if (this._max_height != null) {  
+      buffer.writeAll(["\"max-height\":\`", this._max_height, "\`,"], "");
     }
 
-    if (this.m_max_width != null) {  
-      buffer.writeAll(["\"max-width\":", this.m_max_width, ","], "");
+    if (this._max_width != null) {  
+      buffer.writeAll(["\"max-width\":\`", this._max_width, "\`,"], "");
     }
 
-    if (this.m_MozBoxShadow != null) {  
-      buffer.writeAll(["\"MozBoxShadow\":", this.m_MozBoxShadow, ","], "");
+    if (this._MozBoxShadow != null) {  
+      buffer.writeAll(["\"MozBoxShadow\":\`", this._MozBoxShadow, "\`,"], "");
     }
 
-    if (this.m_MozTransform != null) {  
-      buffer.writeAll(["\"MozTransform\":", this.m_MozTransform, ","], "");
+    if (this._MozTransform != null) {  
+      buffer.writeAll(["\"MozTransform\":\`", this._MozTransform, "\`,"], "");
     }
 
-    if (this.m_opacity != null) {  
-      buffer.writeAll(["\"opacity\":", this.m_opacity, ","], "");
+    if (this._opacity != null) {  
+      buffer.writeAll(["\"opacity\":", this._opacity, ","], "");
     }
 
-    if (this.m_overflow != null) {  
-      buffer.writeAll(["\"overflow\":", this.m_overflow, ","], "");
+    if (this._overflow != null) {  
+      buffer.writeAll(["\"overflow\":\`", this._overflow, "\`,"], "");
     }
 
-    if (this.m_overflowX != null) {  
-      buffer.writeAll(["\"overflowX\":", this.m_overflowX, ","], "");
+    if (this._overflowX != null) {  
+      buffer.writeAll(["\"overflowX\":\`", this._overflowX, "\`,"], "");
     }
 
-    if (this.m_overflowY != null) {  
-      buffer.writeAll(["\"overflowY\":", this.m_overflowY, ","], "");
+    if (this._overflowY != null) {  
+      buffer.writeAll(["\"overflowY\":\`", this._overflowY, "\`,"], "");
     }
 
-    if (this.m_outline != null) {  
-      buffer.writeAll(["\"outline\":", this.m_outline, ","], "");
+    if (this._outline != null) {  
+      buffer.writeAll(["\"outline\":\`", this._outline, "\`,"], "");
     }
 
-    if (this.m_padding != null) {  
-      buffer.writeAll(["\"padding\":", this.m_padding, ","], "");
+    if (this._padding != null) {  
+      buffer.writeAll(["\"padding\":\`", this._padding, "\`,"], "");
     }
 
-    if (this.m_pointer_events != null) {  
-      buffer.writeAll(["\"pointer-events\":", this.m_pointer_events, ","], "");
+    if (this._pointer_events != null) {  
+      buffer.writeAll(["\"pointer-events\":\`", this._pointer_events, "\`,"], "");
     }
 
-    if (this.m_pointerEvents != null) {  
-      buffer.writeAll(["\"pointerEvents\":", this.m_pointerEvents, ","], "");
+    if (this._pointerEvents != null) {  
+      buffer.writeAll(["\"pointerEvents\":\`", this._pointerEvents, "\`,"], "");
     }
 
-    if (this.m_position != null) {  
-      buffer.writeAll(["\"position\":", this.m_position, ","], "");
+    if (this._position != null) {  
+      buffer.writeAll(["\"position\":\`", this._position, "\`,"], "");
     }
 
-    if (this.m_right != null) {  
-      buffer.writeAll(["\"right\":", this.m_right, ","], "");
+    if (this._right != null) {  
+      buffer.writeAll(["\"right\":\`", this._right, "\`,"], "");
     }
 
-    if (this.m_rotation != null) {  
-      buffer.writeAll(["\"rotation\":", this.m_rotation, ","], "");
+    if (this._rotation != null) {  
+      buffer.writeAll(["\"rotation\":", this._rotation, ","], "");
     }
 
-    if (this.m_stroke != null) {  
-      buffer.writeAll(["\"stroke\":", this.m_stroke, ","], "");
+    if (this._stroke != null) {  
+      buffer.writeAll(["\"stroke\":\`", this._stroke, "\`,"], "");
     }
 
-    if (this.m_stroke_width != null) {  
-      buffer.writeAll(["\"stroke-width\":", this.m_stroke_width, ","], "");
+    if (this._stroke_width != null) {  
+      buffer.writeAll(["\"stroke-width\":\`", this._stroke_width, "\`,"], "");
     }
 
-    if (this.m_strokeWidth != null) {  
-      buffer.writeAll(["\"strokeWidth\":", this.m_strokeWidth, ","], "");
+    if (this._strokeWidth != null) {  
+      buffer.writeAll(["\"strokeWidth\":\`", this._strokeWidth, "\`,"], "");
     }
 
-    if (this.m_text_align != null) {  
-      buffer.writeAll(["\"text-align\":", this.m_text_align, ","], "");
+    if (this._text_align != null) {  
+      buffer.writeAll(["\"text-align\":\`", this._text_align, "\`,"], "");
     }
 
-    if (this.m_textAlign != null) {  
-      buffer.writeAll(["\"textAlign\":", this.m_textAlign, ","], "");
+    if (this._textAlign != null) {  
+      buffer.writeAll(["\"textAlign\":\`", this._textAlign, "\`,"], "");
     }
 
-    if (this.m_textDecoration != null) {  
-      buffer.writeAll(["\"textDecoration\":", this.m_textDecoration, ","], "");
+    if (this._textDecoration != null) {  
+      buffer.writeAll(["\"textDecoration\":\`", this._textDecoration, "\`,"], "");
     }
 
-    if (this.m_textOverflow != null) {  
-      buffer.writeAll(["\"textOverflow\":", this.m_textOverflow, ","], "");
+    if (this._textOverflow != null) {  
+      buffer.writeAll(["\"textOverflow\":\`", this._textOverflow, "\`,"], "");
     }
 
-    if (this.m_textOutline != null) {  
-      buffer.writeAll(["\"textOutline\":", this.m_textOutline, ","], "");
+    if (this._textOutline != null) {  
+      buffer.writeAll(["\"textOutline\":\`", this._textOutline, "\`,"], "");
     }
 
-    if (this.m_textTransform != null) {  
-      buffer.writeAll(["\"textTransform\":", this.m_textTransform, ","], "");
+    if (this._textTransform != null) {  
+      buffer.writeAll(["\"textTransform\":\`", this._textTransform, "\`,"], "");
     }
 
     // NOTE: skip serialization of top (type 0 is ignored)} 
 
-    if (this.m_touch_action != null) {  
-      buffer.writeAll(["\"touch-action\":", this.m_touch_action, ","], "");
+    if (this._touch_action != null) {  
+      buffer.writeAll(["\"touch-action\":\`", this._touch_action, "\`,"], "");
     }
 
-    if (this.m_transform != null) {  
-      buffer.writeAll(["\"transform\":", this.m_transform, ","], "");
+    if (this._transform != null) {  
+      buffer.writeAll(["\"transform\":\`", this._transform, "\`,"], "");
     }
 
-    if (this.m_transformOrigin != null) {  
-      buffer.writeAll(["\"transformOrigin\":", this.m_transformOrigin, ","], "");
+    if (this._transformOrigin != null) {  
+      buffer.writeAll(["\"transformOrigin\":\`", this._transformOrigin, "\`,"], "");
     }
 
-    if (this.m_transition != null) {  
-      buffer.writeAll(["\"transition\":", this.m_transition, ","], "");
+    if (this._transition != null) {  
+      buffer.writeAll(["\"transition\":\`", this._transition, "\`,"], "");
     }
 
-    if (this.m_userSelect != null) {  
-      buffer.writeAll(["\"userSelect\":", this.m_userSelect, ","], "");
+    if (this._userSelect != null) {  
+      buffer.writeAll(["\"userSelect\":\`", this._userSelect, "\`,"], "");
     }
 
-    if (this.m_visibility != null) {  
-      buffer.writeAll(["\"visibility\":", this.m_visibility, ","], "");
+    if (this._visibility != null) {  
+      buffer.writeAll(["\"visibility\":\`", this._visibility, "\`,"], "");
     }
 
-    if (this.m_white_space != null) {  
-      buffer.writeAll(["\"white-space\":", this.m_white_space, ","], "");
+    if (this._white_space != null) {  
+      buffer.writeAll(["\"white-space\":\`", this._white_space, "\`,"], "");
     }
 
-    if (this.m_whiteSpace != null) {  
-      buffer.writeAll(["\"whiteSpace\":", this.m_whiteSpace, ","], "");
+    if (this._whiteSpace != null) {  
+      buffer.writeAll(["\"whiteSpace\":\`", this._whiteSpace, "\`,"], "");
     }
 
     // NOTE: skip serialization of width (type 0 is ignored)} 
 
-    if (this.m_WebkitBoxShadow != null) {  
-      buffer.writeAll(["\"WebkitBoxShadow\":", this.m_WebkitBoxShadow, ","], "");
+    if (this._WebkitBoxShadow != null) {  
+      buffer.writeAll(["\"WebkitBoxShadow\":\`", this._WebkitBoxShadow, "\`,"], "");
     }
 
-    if (this.m_WebkitOverflowScrolling != null) {  
-      buffer.writeAll(["\"WebkitOverflowScrolling\":", this.m_WebkitOverflowScrolling, ","], "");
+    if (this._WebkitOverflowScrolling != null) {  
+      buffer.writeAll(["\"WebkitOverflowScrolling\":\`", this._WebkitOverflowScrolling, "\`,"], "");
     }
 
-    if (this.m__webkit_tap_highlight_color != null) {  
-      buffer.writeAll(["\"-webkit-tap-highlight-color\":", this.m__webkit_tap_highlight_color, ","], "");
+    if (this._p_webkit_tap_highlight_color != null) {  
+      buffer.writeAll(["\"-webkit-tap-highlight-color\":\`", this._p_webkit_tap_highlight_color, "\`,"], "");
     }
 
-    if (this.m_zIndex != null) {  
-      buffer.writeAll(["\"zIndex\":", this.m_zIndex, ","], "");
+    if (this._zIndex != null) {  
+      buffer.writeAll(["\"zIndex\":", this._zIndex, ","], "");
     }
 
-    if (this.m_z_index != null) {  
-      buffer.writeAll(["\"z-index\":", this.m_z_index, ","], "");
+    if (this._z_index != null) {  
+      buffer.writeAll(["\"z-index\":", this._z_index, ","], "");
+    }
+
+    if (this._strokeWidth != null) {  
+      buffer.writeAll(["\"strokeWidth\":\`", this._strokeWidth, "\`,"], "");
     }
   }
 

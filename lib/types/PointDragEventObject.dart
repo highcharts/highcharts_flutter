@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -26,17 +26,17 @@ import 'OptionFragment.dart';
  */
 class PointDragEventObject extends OptionFragment {
   PointDragEventObject() : super();
-  String? m_newPointId;  
+  String? _newPointId;  
 
   String get newPointId { 
-    if (this.m_newPointId == null) {
-      this.m_newPointId = "";
+    if (this._newPointId == null) {
+      this._newPointId = "";
     }
-    return this.m_newPointId!;
+    return this._newPointId!;
   }
 
   void set newPointId (String v) {
-    this.m_newPointId = v;
+    this._newPointId = v;
   }
     
 
@@ -49,8 +49,8 @@ class PointDragEventObject extends OptionFragment {
     
     // NOTE: skip serialization of newPoint (type PointDragDropObject is ignored)} 
 
-    if (this.m_newPointId != null) {  
-      buffer.writeAll(["\"newPointId\":", this.m_newPointId, ","], "");
+    if (this._newPointId != null) {  
+      buffer.writeAll(["\"newPointId\":\`", this._newPointId, "\`,"], "");
     }
 
     // NOTE: skip serialization of newPoints (type Generic is ignored)} 

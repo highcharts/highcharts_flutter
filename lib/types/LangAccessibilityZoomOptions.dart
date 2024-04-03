@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,43 +23,43 @@ import 'OptionFragment.dart';
  */
 class LangAccessibilityZoomOptions extends OptionFragment {
   LangAccessibilityZoomOptions() : super();
-  String? m_mapZoomIn;  
+  String? _mapZoomIn;  
 
   String get mapZoomIn { 
-    if (this.m_mapZoomIn == null) {
-      this.m_mapZoomIn = "";
+    if (this._mapZoomIn == null) {
+      this._mapZoomIn = "";
     }
-    return this.m_mapZoomIn!;
+    return this._mapZoomIn!;
   }
 
   void set mapZoomIn (String v) {
-    this.m_mapZoomIn = v;
+    this._mapZoomIn = v;
   }
     
-  String? m_mapZoomOut;  
+  String? _mapZoomOut;  
 
   String get mapZoomOut { 
-    if (this.m_mapZoomOut == null) {
-      this.m_mapZoomOut = "";
+    if (this._mapZoomOut == null) {
+      this._mapZoomOut = "";
     }
-    return this.m_mapZoomOut!;
+    return this._mapZoomOut!;
   }
 
   void set mapZoomOut (String v) {
-    this.m_mapZoomOut = v;
+    this._mapZoomOut = v;
   }
     
-  String? m_resetZoomButton;  
+  String? _resetZoomButton;  
 
   String get resetZoomButton { 
-    if (this.m_resetZoomButton == null) {
-      this.m_resetZoomButton = "";
+    if (this._resetZoomButton == null) {
+      this._resetZoomButton = "";
     }
-    return this.m_resetZoomButton!;
+    return this._resetZoomButton!;
   }
 
   void set resetZoomButton (String v) {
-    this.m_resetZoomButton = v;
+    this._resetZoomButton = v;
   }
     
 
@@ -70,16 +70,16 @@ class LangAccessibilityZoomOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_mapZoomIn != null) {  
-      buffer.writeAll(["\"mapZoomIn\":", this.m_mapZoomIn, ","], "");
+    if (this._mapZoomIn != null) {  
+      buffer.writeAll(["\"mapZoomIn\":\`", this._mapZoomIn, "\`,"], "");
     }
 
-    if (this.m_mapZoomOut != null) {  
-      buffer.writeAll(["\"mapZoomOut\":", this.m_mapZoomOut, ","], "");
+    if (this._mapZoomOut != null) {  
+      buffer.writeAll(["\"mapZoomOut\":\`", this._mapZoomOut, "\`,"], "");
     }
 
-    if (this.m_resetZoomButton != null) {  
-      buffer.writeAll(["\"resetZoomButton\":", this.m_resetZoomButton, ","], "");
+    if (this._resetZoomButton != null) {  
+      buffer.writeAll(["\"resetZoomButton\":\`", this._resetZoomButton, "\`,"], "");
     }
   }
 

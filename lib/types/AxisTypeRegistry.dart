@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -45,11 +45,19 @@ class AxisTypeRegistry extends OptionFragment {
 
     // NOTE: skip serialization of BrokenAxis (type Composition is ignored)} 
 
+    // NOTE: skip serialization of DateTimeAxis (type Composition is ignored)} 
+
     // NOTE: skip serialization of GridAxis (type GridAxisComposition is ignored)} 
+
+    // NOTE: skip serialization of LogarithmicAxis (type Composition is ignored)} 
+
+    // NOTE: skip serialization of OrdinalAxis (type Composition is ignored)} 
 
     // NOTE: skip serialization of TreeGridAxis (type TreeGridAxisComposition is ignored)} 
 
     // NOTE: skip serialization of mWaterfallAxis (type WaterfallAxis is ignored)} 
+
+    // NOTE: skip serialization of mZAxis (type ZAxis is ignored)} 
   }
 
 }

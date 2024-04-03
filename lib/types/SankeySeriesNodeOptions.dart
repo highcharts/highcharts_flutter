@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,95 +23,95 @@ import 'OptionFragment.dart';
  */
 class SankeySeriesNodeOptions extends OptionFragment {
   SankeySeriesNodeOptions() : super();
-  String? m_color;  
+  String? _color;  
 
   String get color { 
-    if (this.m_color == null) {
-      this.m_color = "";
+    if (this._color == null) {
+      this._color = "";
     }
-    return this.m_color!;
+    return this._color!;
   }
 
   void set color (String v) {
-    this.m_color = v;
+    this._color = v;
   }
     
-  double? m_colorIndex;  
+  double? _colorIndex;  
 
   double get colorIndex { 
-    if (this.m_colorIndex == null) {
-      this.m_colorIndex = 0;
+    if (this._colorIndex == null) {
+      this._colorIndex = 0;
     }
-    return this.m_colorIndex!;
+    return this._colorIndex!;
   }
 
   void set colorIndex (double v) {
-    this.m_colorIndex = v;
+    this._colorIndex = v;
   }
     
-  double? m_column;  
+  double? _column;  
 
   double get column { 
-    if (this.m_column == null) {
-      this.m_column = 0;
+    if (this._column == null) {
+      this._column = 0;
     }
-    return this.m_column!;
+    return this._column!;
   }
 
   void set column (double v) {
-    this.m_column = v;
+    this._column = v;
   }
     
-  String? m_id;  
+  String? _id;  
 
   String get id { 
-    if (this.m_id == null) {
-      this.m_id = "";
+    if (this._id == null) {
+      this._id = "";
     }
-    return this.m_id!;
+    return this._id!;
   }
 
   void set id (String v) {
-    this.m_id = v;
+    this._id = v;
   }
     
-  double? m_level;  
+  double? _level;  
 
   double get level { 
-    if (this.m_level == null) {
-      this.m_level = 0;
+    if (this._level == null) {
+      this._level = 0;
     }
-    return this.m_level!;
+    return this._level!;
   }
 
   void set level (double v) {
-    this.m_level = v;
+    this._level = v;
   }
     
-  String? m_name;  
+  String? _name;  
 
   String get name { 
-    if (this.m_name == null) {
-      this.m_name = "";
+    if (this._name == null) {
+      this._name = "";
     }
-    return this.m_name!;
+    return this._name!;
   }
 
   void set name (String v) {
-    this.m_name = v;
+    this._name = v;
   }
     
-  String? m_offset;  
+  String? _offset;  
 
   String get offset { 
-    if (this.m_offset == null) {
-      this.m_offset = "";
+    if (this._offset == null) {
+      this._offset = "";
     }
-    return this.m_offset!;
+    return this._offset!;
   }
 
   void set offset (String v) {
-    this.m_offset = v;
+    this._offset = v;
   }
     
 
@@ -122,32 +122,32 @@ class SankeySeriesNodeOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_color != null) {  
-      buffer.writeAll(["\"color\":", this.m_color, ","], "");
+    if (this._color != null) {  
+      buffer.writeAll(["\"color\":\`", this._color, "\`,"], "");
     }
 
-    if (this.m_colorIndex != null) {  
-      buffer.writeAll(["\"colorIndex\":", this.m_colorIndex, ","], "");
+    if (this._colorIndex != null) {  
+      buffer.writeAll(["\"colorIndex\":", this._colorIndex, ","], "");
     }
 
-    if (this.m_column != null) {  
-      buffer.writeAll(["\"column\":", this.m_column, ","], "");
+    if (this._column != null) {  
+      buffer.writeAll(["\"column\":", this._column, ","], "");
     }
 
-    if (this.m_id != null) {  
-      buffer.writeAll(["\"id\":", this.m_id, ","], "");
+    if (this._id != null) {  
+      buffer.writeAll(["\"id\":\`", this._id, "\`,"], "");
     }
 
-    if (this.m_level != null) {  
-      buffer.writeAll(["\"level\":", this.m_level, ","], "");
+    if (this._level != null) {  
+      buffer.writeAll(["\"level\":", this._level, ","], "");
     }
 
-    if (this.m_name != null) {  
-      buffer.writeAll(["\"name\":", this.m_name, ","], "");
+    if (this._name != null) {  
+      buffer.writeAll(["\"name\":\`", this._name, "\`,"], "");
     }
 
-    if (this.m_offset != null) {  
-      buffer.writeAll(["\"offset\":", this.m_offset, ","], "");
+    if (this._offset != null) {  
+      buffer.writeAll(["\"offset\":\`", this._offset, "\`,"], "");
     }
   }
 

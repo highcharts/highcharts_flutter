@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -27,43 +27,43 @@ import 'OptionFragment.dart';
  */
 class DrawPointParams extends OptionFragment {
   DrawPointParams() : super();
-  String? m_imageUrl;  
+  String? _imageUrl;  
 
   String get imageUrl { 
-    if (this.m_imageUrl == null) {
-      this.m_imageUrl = "";
+    if (this._imageUrl == null) {
+      this._imageUrl = "";
     }
-    return this.m_imageUrl!;
+    return this._imageUrl!;
   }
 
   void set imageUrl (String v) {
-    this.m_imageUrl = v;
+    this._imageUrl = v;
   }
     
-  bool? m_isNew;  
+  bool? _isNew;  
 
   bool get isNew { 
-    if (this.m_isNew == null) {
-      this.m_isNew = false;
+    if (this._isNew == null) {
+      this._isNew = false;
     }
-    return this.m_isNew!;
+    return this._isNew!;
   }
 
   void set isNew (bool v) {
-    this.m_isNew = v;
+    this._isNew = v;
   }
     
-  String? m_shapeType;  
+  String? _shapeType;  
 
   String get shapeType { 
-    if (this.m_shapeType == null) {
-      this.m_shapeType = "";
+    if (this._shapeType == null) {
+      this._shapeType = "";
     }
-    return this.m_shapeType!;
+    return this._shapeType!;
   }
 
   void set shapeType (String v) {
-    this.m_shapeType = v;
+    this._shapeType = v;
   }
     
 
@@ -84,12 +84,12 @@ class DrawPointParams extends OptionFragment {
 
     // NOTE: skip serialization of onComplete (type Function is ignored)} 
 
-    if (this.m_imageUrl != null) {  
-      buffer.writeAll(["\"imageUrl\":", this.m_imageUrl, ","], "");
+    if (this._imageUrl != null) {  
+      buffer.writeAll(["\"imageUrl\":\`", this._imageUrl, "\`,"], "");
     }
 
-    if (this.m_isNew != null) {  
-      buffer.writeAll(["\"isNew\":", this.m_isNew, ","], "");
+    if (this._isNew != null) {  
+      buffer.writeAll(["\"isNew\":", this._isNew, ","], "");
     }
 
     // NOTE: skip serialization of renderer (type SVGRenderer is ignored)} 
@@ -98,8 +98,8 @@ class DrawPointParams extends OptionFragment {
 
     // NOTE: skip serialization of shapeArgs (type SVGAttributes is ignored)} 
 
-    if (this.m_shapeType != null) {  
-      buffer.writeAll(["\"shapeType\":", this.m_shapeType, ","], "");
+    if (this._shapeType != null) {  
+      buffer.writeAll(["\"shapeType\":\`", this._shapeType, "\`,"], "");
     }
   }
 

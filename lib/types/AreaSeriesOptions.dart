@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -31,17 +31,17 @@ class AreaSeriesOptions extends LineSeriesOptions {
    * In styled mode, the fill color can be set with the `.highcharts-area`
    * class name.  
       */
-  String? m_fillColor;  
+  String? _fillColor;  
 
   String get fillColor { 
-    if (this.m_fillColor == null) {
-      this.m_fillColor = "";
+    if (this._fillColor == null) {
+      this._fillColor = "";
     }
-    return this.m_fillColor!;
+    return this._fillColor!;
   }
 
   void set fillColor (String v) {
-    this.m_fillColor = v;
+    this._fillColor = v;
   }
     
   /**
@@ -54,17 +54,17 @@ class AreaSeriesOptions extends LineSeriesOptions {
    * In styled mode, the fill opacity can be set with the
    * `.highcharts-area` class name.  
       */
-  double? m_fillOpacity;  
+  double? _fillOpacity;  
 
   double get fillOpacity { 
-    if (this.m_fillOpacity == null) {
-      this.m_fillOpacity = 0;
+    if (this._fillOpacity == null) {
+      this._fillOpacity = 0;
     }
-    return this.m_fillOpacity!;
+    return this._fillOpacity!;
   }
 
   void set fillOpacity (double v) {
-    this.m_fillOpacity = v;
+    this._fillOpacity = v;
   }
     
   /**
@@ -73,17 +73,17 @@ class AreaSeriesOptions extends LineSeriesOptions {
    * In styled mode, a negative color is set with the
    * `.highcharts-negative` class name.  
       */
-  String? m_negativeFillColor;  
+  String? _negativeFillColor;  
 
   String get negativeFillColor { 
-    if (this.m_negativeFillColor == null) {
-      this.m_negativeFillColor = "";
+    if (this._negativeFillColor == null) {
+      this._negativeFillColor = "";
     }
-    return this.m_negativeFillColor!;
+    return this._negativeFillColor!;
   }
 
   void set negativeFillColor (String v) {
-    this.m_negativeFillColor = v;
+    this._negativeFillColor = v;
   }
     
   // NOTE: states skipped - type Generic is ignored in gen
@@ -96,16 +96,16 @@ class AreaSeriesOptions extends LineSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_fillColor != null) {  
-      buffer.writeAll(["\"fillColor\":", this.m_fillColor, ","], "");
+    if (this._fillColor != null) {  
+      buffer.writeAll(["\"fillColor\":\`", this._fillColor, "\`,"], "");
     }
 
-    if (this.m_fillOpacity != null) {  
-      buffer.writeAll(["\"fillOpacity\":", this.m_fillOpacity, ","], "");
+    if (this._fillOpacity != null) {  
+      buffer.writeAll(["\"fillOpacity\":", this._fillOpacity, ","], "");
     }
 
-    if (this.m_negativeFillColor != null) {  
-      buffer.writeAll(["\"negativeFillColor\":", this.m_negativeFillColor, ","], "");
+    if (this._negativeFillColor != null) {  
+      buffer.writeAll(["\"negativeFillColor\":\`", this._negativeFillColor, "\`,"], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 

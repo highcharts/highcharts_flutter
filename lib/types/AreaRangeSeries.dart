@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,30 +23,30 @@ import 'OptionFragment.dart';
  */
 class AreaRangeSeries extends OptionFragment {
   AreaRangeSeries() : super();
-  bool? m_deferTranslatePolar;  
+  bool? _deferTranslatePolar;  
 
   bool get deferTranslatePolar { 
-    if (this.m_deferTranslatePolar == null) {
-      this.m_deferTranslatePolar = false;
+    if (this._deferTranslatePolar == null) {
+      this._deferTranslatePolar = false;
     }
-    return this.m_deferTranslatePolar!;
+    return this._deferTranslatePolar!;
   }
 
   void set deferTranslatePolar (bool v) {
-    this.m_deferTranslatePolar = v;
+    this._deferTranslatePolar = v;
   }
     
-  String? m_pointValKey;  
+  String? _pointValKey;  
 
   String get pointValKey { 
-    if (this.m_pointValKey == null) {
-      this.m_pointValKey = "";
+    if (this._pointValKey == null) {
+      this._pointValKey = "";
     }
-    return this.m_pointValKey!;
+    return this._pointValKey!;
   }
 
   void set pointValKey (String v) {
-    this.m_pointValKey = v;
+    this._pointValKey = v;
   }
     
 
@@ -57,16 +57,16 @@ class AreaRangeSeries extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_deferTranslatePolar != null) {  
-      buffer.writeAll(["\"deferTranslatePolar\":", this.m_deferTranslatePolar, ","], "");
+    if (this._deferTranslatePolar != null) {  
+      buffer.writeAll(["\"deferTranslatePolar\":", this._deferTranslatePolar, ","], "");
     }
 
     // NOTE: skip serialization of pointArrayMap (type string[] is ignored)} 
 
     // NOTE: skip serialization of pointClass (type typeof AreaRangePoint is ignored)} 
 
-    if (this.m_pointValKey != null) {  
-      buffer.writeAll(["\"pointValKey\":", this.m_pointValKey, ","], "");
+    if (this._pointValKey != null) {  
+      buffer.writeAll(["\"pointValKey\":\`", this._pointValKey, "\`,"], "");
     }
   }
 

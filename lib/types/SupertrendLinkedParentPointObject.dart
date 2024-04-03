@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,43 +24,43 @@ import 'OptionFragment.dart';
  */
 class SupertrendLinkedParentPointObject extends LinePoint {
   SupertrendLinkedParentPointObject() : super();
-  double? m_close;  
+  double? _close;  
 
   double get close { 
-    if (this.m_close == null) {
-      this.m_close = 0;
+    if (this._close == null) {
+      this._close = 0;
     }
-    return this.m_close!;
+    return this._close!;
   }
 
   void set close (double v) {
-    this.m_close = v;
+    this._close = v;
   }
     
-  double? m_index;  
+  double? _index;  
 
   double get index { 
-    if (this.m_index == null) {
-      this.m_index = 0;
+    if (this._index == null) {
+      this._index = 0;
     }
-    return this.m_index!;
+    return this._index!;
   }
 
   void set index (double v) {
-    this.m_index = v;
+    this._index = v;
   }
     
-  double? m_x;  
+  double? _x;  
 
   double get x { 
-    if (this.m_x == null) {
-      this.m_x = 0;
+    if (this._x == null) {
+      this._x = 0;
     }
-    return this.m_x!;
+    return this._x!;
   }
 
   void set x (double v) {
-    this.m_x = v;
+    this._x = v;
   }
     
 
@@ -71,16 +71,16 @@ class SupertrendLinkedParentPointObject extends LinePoint {
     super.toJSONInner(buffer);
 
     
-    if (this.m_close != null) {  
-      buffer.writeAll(["\"close\":", this.m_close, ","], "");
+    if (this._close != null) {  
+      buffer.writeAll(["\"close\":", this._close, ","], "");
     }
 
-    if (this.m_index != null) {  
-      buffer.writeAll(["\"index\":", this.m_index, ","], "");
+    if (this._index != null) {  
+      buffer.writeAll(["\"index\":", this._index, ","], "");
     }
 
-    if (this.m_x != null) {  
-      buffer.writeAll(["\"x\":", this.m_x, ","], "");
+    if (this._x != null) {  
+      buffer.writeAll(["\"x\":", this._x, ","], "");
     }
   }
 

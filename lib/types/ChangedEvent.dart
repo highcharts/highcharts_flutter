@@ -12,10 +12,11 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
+import 'Event.dart';
 import 'OptionFragment.dart';
 
 /** 
@@ -23,43 +24,43 @@ import 'OptionFragment.dart';
  */
 class ChangedEvent extends OptionFragment {
   ChangedEvent() : super();
-  double? m_from;  
+  double? _from;  
 
   double get from { 
-    if (this.m_from == null) {
-      this.m_from = 0;
+    if (this._from == null) {
+      this._from = 0;
     }
-    return this.m_from!;
+    return this._from!;
   }
 
   void set from (double v) {
-    this.m_from = v;
+    this._from = v;
   }
     
-  double? m_to;  
+  double? _to;  
 
   double get to { 
-    if (this.m_to == null) {
-      this.m_to = 0;
+    if (this._to == null) {
+      this._to = 0;
     }
-    return this.m_to!;
+    return this._to!;
   }
 
   void set to (double v) {
-    this.m_to = v;
+    this._to = v;
   }
     
-  String? m_DOMType;  
+  String? _DOMType;  
 
   String get DOMType { 
-    if (this.m_DOMType == null) {
-      this.m_DOMType = "";
+    if (this._DOMType == null) {
+      this._DOMType = "";
     }
-    return this.m_DOMType!;
+    return this._DOMType!;
   }
 
   void set DOMType (String v) {
-    this.m_DOMType = v;
+    this._DOMType = v;
   }
     
 
@@ -70,18 +71,18 @@ class ChangedEvent extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_from != null) {  
-      buffer.writeAll(["\"from\":", this.m_from, ","], "");
+    if (this._from != null) {  
+      buffer.writeAll(["\"from\":", this._from, ","], "");
     }
 
-    if (this.m_to != null) {  
-      buffer.writeAll(["\"to\":", this.m_to, ","], "");
+    if (this._to != null) {  
+      buffer.writeAll(["\"to\":", this._to, ","], "");
     }
 
     // NOTE: skip serialization of trigger (type "scrollbar" is ignored)} 
 
-    if (this.m_DOMType != null) {  
-      buffer.writeAll(["\"DOMType\":", this.m_DOMType, ","], "");
+    if (this._DOMType != null) {  
+      buffer.writeAll(["\"DOMType\":\`", this._DOMType, "\`,"], "");
     }
 
     // NOTE: skip serialization of DOMEvent (type Event is ignored)} 

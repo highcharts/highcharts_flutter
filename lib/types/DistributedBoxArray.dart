@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,17 +24,17 @@ import 'OptionFragment.dart';
  */
 class DistributedBoxArray extends Array {
   DistributedBoxArray() : super();
-  double? m_reducedLen;  
+  double? _reducedLen;  
 
   double get reducedLen { 
-    if (this.m_reducedLen == null) {
-      this.m_reducedLen = 0;
+    if (this._reducedLen == null) {
+      this._reducedLen = 0;
     }
-    return this.m_reducedLen!;
+    return this._reducedLen!;
   }
 
   void set reducedLen (double v) {
-    this.m_reducedLen = v;
+    this._reducedLen = v;
   }
     
 
@@ -45,8 +45,8 @@ class DistributedBoxArray extends Array {
     super.toJSONInner(buffer);
 
     
-    if (this.m_reducedLen != null) {  
-      buffer.writeAll(["\"reducedLen\":", this.m_reducedLen, ","], "");
+    if (this._reducedLen != null) {  
+      buffer.writeAll(["\"reducedLen\":", this._reducedLen, ","], "");
     }
   }
 

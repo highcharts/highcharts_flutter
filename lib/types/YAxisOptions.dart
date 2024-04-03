@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,56 +24,56 @@ import 'OptionFragment.dart';
  */
 class YAxisOptions extends AxisOptions {
   YAxisOptions() : super();
-  String? m_maxColor;  
+  String? _maxColor;  
 
   String get maxColor { 
-    if (this.m_maxColor == null) {
-      this.m_maxColor = "";
+    if (this._maxColor == null) {
+      this._maxColor = "";
     }
-    return this.m_maxColor!;
+    return this._maxColor!;
   }
 
   void set maxColor (String v) {
-    this.m_maxColor = v;
+    this._maxColor = v;
   }
     
-  String? m_minColor;  
+  String? _minColor;  
 
   String get minColor { 
-    if (this.m_minColor == null) {
-      this.m_minColor = "";
+    if (this._minColor == null) {
+      this._minColor = "";
     }
-    return this.m_minColor!;
+    return this._minColor!;
   }
 
   void set minColor (String v) {
-    this.m_minColor = v;
+    this._minColor = v;
   }
     
-  double? m_staticScale;  
+  double? _staticScale;  
 
   double get staticScale { 
-    if (this.m_staticScale == null) {
-      this.m_staticScale = 0;
+    if (this._staticScale == null) {
+      this._staticScale = 0;
     }
-    return this.m_staticScale!;
+    return this._staticScale!;
   }
 
   void set staticScale (double v) {
-    this.m_staticScale = v;
+    this._staticScale = v;
   }
     
-  String? m_tooltipValueFormat;  
+  String? _tooltipValueFormat;  
 
   String get tooltipValueFormat { 
-    if (this.m_tooltipValueFormat == null) {
-      this.m_tooltipValueFormat = "";
+    if (this._tooltipValueFormat == null) {
+      this._tooltipValueFormat = "";
     }
-    return this.m_tooltipValueFormat!;
+    return this._tooltipValueFormat!;
   }
 
   void set tooltipValueFormat (String v) {
-    this.m_tooltipValueFormat = v;
+    this._tooltipValueFormat = v;
   }
     
 
@@ -84,22 +84,22 @@ class YAxisOptions extends AxisOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_maxColor != null) {  
-      buffer.writeAll(["\"maxColor\":", this.m_maxColor, ","], "");
+    if (this._maxColor != null) {  
+      buffer.writeAll(["\"maxColor\":\`", this._maxColor, "\`,"], "");
     }
 
-    if (this.m_minColor != null) {  
-      buffer.writeAll(["\"minColor\":", this.m_minColor, ","], "");
+    if (this._minColor != null) {  
+      buffer.writeAll(["\"minColor\":\`", this._minColor, "\`,"], "");
     }
 
-    if (this.m_staticScale != null) {  
-      buffer.writeAll(["\"staticScale\":", this.m_staticScale, ","], "");
+    if (this._staticScale != null) {  
+      buffer.writeAll(["\"staticScale\":", this._staticScale, ","], "");
     }
 
     // NOTE: skip serialization of stops (type GradientColorStop[] is ignored)} 
 
-    if (this.m_tooltipValueFormat != null) {  
-      buffer.writeAll(["\"tooltipValueFormat\":", this.m_tooltipValueFormat, ","], "");
+    if (this._tooltipValueFormat != null) {  
+      buffer.writeAll(["\"tooltipValueFormat\":\`", this._tooltipValueFormat, "\`,"], "");
     }
   }
 

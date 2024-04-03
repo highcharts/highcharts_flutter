@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -25,17 +25,17 @@ import 'OptionFragment.dart';
  */
 class SVGRenderer extends SVGRendererLike {
   SVGRenderer() : super();
-  String? m_SVG_NS;  
+  String? _SVG_NS;  
 
   String get SVG_NS { 
-    if (this.m_SVG_NS == null) {
-      this.m_SVG_NS = "";
+    if (this._SVG_NS == null) {
+      this._SVG_NS = "";
     }
-    return this.m_SVG_NS!;
+    return this._SVG_NS!;
   }
 
   void set SVG_NS (String v) {
-    this.m_SVG_NS = v;
+    this._SVG_NS = v;
   }
     
 
@@ -48,8 +48,8 @@ class SVGRenderer extends SVGRendererLike {
     
     // NOTE: skip serialization of Element (type typeof SVGElement is ignored)} 
 
-    if (this.m_SVG_NS != null) {  
-      buffer.writeAll(["\"SVG_NS\":", this.m_SVG_NS, ","], "");
+    if (this._SVG_NS != null) {  
+      buffer.writeAll(["\"SVG_NS\":\`", this._SVG_NS, "\`,"], "");
     }
 
     // NOTE: skip serialization of escapes (type Generic is ignored)} 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,17 +23,17 @@ import 'OptionFragment.dart';
  */
 class PointStateObject extends OptionFragment {
   PointStateObject() : super();
-  String? m_valueDescription;  
+  String? _valueDescription;  
 
   String get valueDescription { 
-    if (this.m_valueDescription == null) {
-      this.m_valueDescription = "";
+    if (this._valueDescription == null) {
+      this._valueDescription = "";
     }
-    return this.m_valueDescription!;
+    return this._valueDescription!;
   }
 
   void set valueDescription (String v) {
-    this.m_valueDescription = v;
+    this._valueDescription = v;
   }
     
 
@@ -44,8 +44,8 @@ class PointStateObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_valueDescription != null) {  
-      buffer.writeAll(["\"valueDescription\":", this.m_valueDescription, ","], "");
+    if (this._valueDescription != null) {  
+      buffer.writeAll(["\"valueDescription\":\`", this._valueDescription, "\`,"], "");
     }
   }
 

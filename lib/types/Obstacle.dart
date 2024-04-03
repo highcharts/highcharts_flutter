@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,56 +23,56 @@ import 'OptionFragment.dart';
  */
 class Obstacle extends OptionFragment {
   Obstacle() : super();
-  double? m_xMax;  
+  double? _xMax;  
 
   double get xMax { 
-    if (this.m_xMax == null) {
-      this.m_xMax = 0;
+    if (this._xMax == null) {
+      this._xMax = 0;
     }
-    return this.m_xMax!;
+    return this._xMax!;
   }
 
   void set xMax (double v) {
-    this.m_xMax = v;
+    this._xMax = v;
   }
     
-  double? m_xMin;  
+  double? _xMin;  
 
   double get xMin { 
-    if (this.m_xMin == null) {
-      this.m_xMin = 0;
+    if (this._xMin == null) {
+      this._xMin = 0;
     }
-    return this.m_xMin!;
+    return this._xMin!;
   }
 
   void set xMin (double v) {
-    this.m_xMin = v;
+    this._xMin = v;
   }
     
-  double? m_yMax;  
+  double? _yMax;  
 
   double get yMax { 
-    if (this.m_yMax == null) {
-      this.m_yMax = 0;
+    if (this._yMax == null) {
+      this._yMax = 0;
     }
-    return this.m_yMax!;
+    return this._yMax!;
   }
 
   void set yMax (double v) {
-    this.m_yMax = v;
+    this._yMax = v;
   }
     
-  double? m_yMin;  
+  double? _yMin;  
 
   double get yMin { 
-    if (this.m_yMin == null) {
-      this.m_yMin = 0;
+    if (this._yMin == null) {
+      this._yMin = 0;
     }
-    return this.m_yMin!;
+    return this._yMin!;
   }
 
   void set yMin (double v) {
-    this.m_yMin = v;
+    this._yMin = v;
   }
     
 
@@ -83,20 +83,20 @@ class Obstacle extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_xMax != null) {  
-      buffer.writeAll(["\"xMax\":", this.m_xMax, ","], "");
+    if (this._xMax != null) {  
+      buffer.writeAll(["\"xMax\":", this._xMax, ","], "");
     }
 
-    if (this.m_xMin != null) {  
-      buffer.writeAll(["\"xMin\":", this.m_xMin, ","], "");
+    if (this._xMin != null) {  
+      buffer.writeAll(["\"xMin\":", this._xMin, ","], "");
     }
 
-    if (this.m_yMax != null) {  
-      buffer.writeAll(["\"yMax\":", this.m_yMax, ","], "");
+    if (this._yMax != null) {  
+      buffer.writeAll(["\"yMax\":", this._yMax, ","], "");
     }
 
-    if (this.m_yMin != null) {  
-      buffer.writeAll(["\"yMin\":", this.m_yMin, ","], "");
+    if (this._yMin != null) {  
+      buffer.writeAll(["\"yMin\":", this._yMin, ","], "");
     }
   }
 

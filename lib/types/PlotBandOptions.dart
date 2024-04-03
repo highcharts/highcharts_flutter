@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,173 +24,173 @@ import 'OptionFragment.dart';
  */
 class PlotBandOptions extends OptionFragment {
   PlotBandOptions() : super();
-  bool? m_acrossPanes;  
+  bool? _acrossPanes;  
 
   bool get acrossPanes { 
-    if (this.m_acrossPanes == null) {
-      this.m_acrossPanes = false;
+    if (this._acrossPanes == null) {
+      this._acrossPanes = false;
     }
-    return this.m_acrossPanes!;
+    return this._acrossPanes!;
   }
 
   void set acrossPanes (bool v) {
-    this.m_acrossPanes = v;
+    this._acrossPanes = v;
   }
     
-  String? m_borderColor;  
+  String? _borderColor;  
 
   String get borderColor { 
-    if (this.m_borderColor == null) {
-      this.m_borderColor = "";
+    if (this._borderColor == null) {
+      this._borderColor = "";
     }
-    return this.m_borderColor!;
+    return this._borderColor!;
   }
 
   void set borderColor (String v) {
-    this.m_borderColor = v;
+    this._borderColor = v;
   }
     
-  double? m_borderWidth;  
+  double? _borderWidth;  
 
   double get borderWidth { 
-    if (this.m_borderWidth == null) {
-      this.m_borderWidth = 0;
+    if (this._borderWidth == null) {
+      this._borderWidth = 0;
     }
-    return this.m_borderWidth!;
+    return this._borderWidth!;
   }
 
   void set borderWidth (double v) {
-    this.m_borderWidth = v;
+    this._borderWidth = v;
   }
     
-  String? m_className;  
+  String? _className;  
 
   String get className { 
-    if (this.m_className == null) {
-      this.m_className = "";
+    if (this._className == null) {
+      this._className = "";
     }
-    return this.m_className!;
+    return this._className!;
   }
 
   void set className (String v) {
-    this.m_className = v;
+    this._className = v;
   }
     
-  String? m_color;  
+  String? _color;  
 
   String get color { 
-    if (this.m_color == null) {
-      this.m_color = "";
+    if (this._color == null) {
+      this._color = "";
     }
-    return this.m_color!;
+    return this._color!;
   }
 
   void set color (String v) {
-    this.m_color = v;
+    this._color = v;
   }
     
-  double? m_from;  
+  double? _from;  
 
   double get from { 
-    if (this.m_from == null) {
-      this.m_from = 0;
+    if (this._from == null) {
+      this._from = 0;
     }
-    return this.m_from!;
+    return this._from!;
   }
 
   void set from (double v) {
-    this.m_from = v;
+    this._from = v;
   }
     
-  String? m_id;  
+  String? _id;  
 
   String get id { 
-    if (this.m_id == null) {
-      this.m_id = "";
+    if (this._id == null) {
+      this._id = "";
     }
-    return this.m_id!;
+    return this._id!;
   }
 
   void set id (String v) {
-    this.m_id = v;
+    this._id = v;
   }
     
-  double? m_to;  
+  double? _to;  
 
   double get to { 
-    if (this.m_to == null) {
-      this.m_to = 0;
+    if (this._to == null) {
+      this._to = 0;
     }
-    return this.m_to!;
+    return this._to!;
   }
 
   void set to (double v) {
-    this.m_to = v;
+    this._to = v;
   }
     
-  double? m_zIndex;  
+  double? _zIndex;  
 
   double get zIndex { 
-    if (this.m_zIndex == null) {
-      this.m_zIndex = 0;
+    if (this._zIndex == null) {
+      this._zIndex = 0;
     }
-    return this.m_zIndex!;
+    return this._zIndex!;
   }
 
   void set zIndex (double v) {
-    this.m_zIndex = v;
+    this._zIndex = v;
   }
     
-  String? m_innerRadius;  
+  String? _innerRadius;  
 
   String get innerRadius { 
-    if (this.m_innerRadius == null) {
-      this.m_innerRadius = "";
+    if (this._innerRadius == null) {
+      this._innerRadius = "";
     }
-    return this.m_innerRadius!;
+    return this._innerRadius!;
   }
 
   void set innerRadius (String v) {
-    this.m_innerRadius = v;
+    this._innerRadius = v;
   }
     
-  String? m_outerRadius;  
+  String? _outerRadius;  
 
   String get outerRadius { 
-    if (this.m_outerRadius == null) {
-      this.m_outerRadius = "";
+    if (this._outerRadius == null) {
+      this._outerRadius = "";
     }
-    return this.m_outerRadius!;
+    return this._outerRadius!;
   }
 
   void set outerRadius (String v) {
-    this.m_outerRadius = v;
+    this._outerRadius = v;
   }
     
-  String? m_shape;  
+  String? _shape;  
 
   String get shape { 
-    if (this.m_shape == null) {
-      this.m_shape = "";
+    if (this._shape == null) {
+      this._shape = "";
     }
-    return this.m_shape!;
+    return this._shape!;
   }
 
   void set shape (String v) {
-    this.m_shape = v;
+    this._shape = v;
   }
     
-  String? m_thickness;  
+  String? _thickness;  
 
   String get thickness { 
-    if (this.m_thickness == null) {
-      this.m_thickness = "";
+    if (this._thickness == null) {
+      this._thickness = "";
     }
-    return this.m_thickness!;
+    return this._thickness!;
   }
 
   void set thickness (String v) {
-    this.m_thickness = v;
+    this._thickness = v;
   }
     
 
@@ -201,60 +201,60 @@ class PlotBandOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_acrossPanes != null) {  
-      buffer.writeAll(["\"acrossPanes\":", this.m_acrossPanes, ","], "");
+    if (this._acrossPanes != null) {  
+      buffer.writeAll(["\"acrossPanes\":", this._acrossPanes, ","], "");
     }
 
-    if (this.m_borderColor != null) {  
-      buffer.writeAll(["\"borderColor\":", this.m_borderColor, ","], "");
+    if (this._borderColor != null) {  
+      buffer.writeAll(["\"borderColor\":\`", this._borderColor, "\`,"], "");
     }
 
-    if (this.m_borderWidth != null) {  
-      buffer.writeAll(["\"borderWidth\":", this.m_borderWidth, ","], "");
+    if (this._borderWidth != null) {  
+      buffer.writeAll(["\"borderWidth\":", this._borderWidth, ","], "");
     }
 
-    if (this.m_className != null) {  
-      buffer.writeAll(["\"className\":", this.m_className, ","], "");
+    if (this._className != null) {  
+      buffer.writeAll(["\"className\":\`", this._className, "\`,"], "");
     }
 
-    if (this.m_color != null) {  
-      buffer.writeAll(["\"color\":", this.m_color, ","], "");
+    if (this._color != null) {  
+      buffer.writeAll(["\"color\":\`", this._color, "\`,"], "");
     }
 
     // NOTE: skip serialization of events (type any is ignored)} 
 
-    if (this.m_from != null) {  
-      buffer.writeAll(["\"from\":", this.m_from, ","], "");
+    if (this._from != null) {  
+      buffer.writeAll(["\"from\":", this._from, ","], "");
     }
 
-    if (this.m_id != null) {  
-      buffer.writeAll(["\"id\":", this.m_id, ","], "");
+    if (this._id != null) {  
+      buffer.writeAll(["\"id\":\`", this._id, "\`,"], "");
     }
 
     // NOTE: skip serialization of label (type PlotBandLabelOptions is ignored)} 
 
-    if (this.m_to != null) {  
-      buffer.writeAll(["\"to\":", this.m_to, ","], "");
+    if (this._to != null) {  
+      buffer.writeAll(["\"to\":", this._to, ","], "");
     }
 
-    if (this.m_zIndex != null) {  
-      buffer.writeAll(["\"zIndex\":", this.m_zIndex, ","], "");
+    if (this._zIndex != null) {  
+      buffer.writeAll(["\"zIndex\":", this._zIndex, ","], "");
     }
 
-    if (this.m_innerRadius != null) {  
-      buffer.writeAll(["\"innerRadius\":", this.m_innerRadius, ","], "");
+    if (this._innerRadius != null) {  
+      buffer.writeAll(["\"innerRadius\":\`", this._innerRadius, "\`,"], "");
     }
 
-    if (this.m_outerRadius != null) {  
-      buffer.writeAll(["\"outerRadius\":", this.m_outerRadius, ","], "");
+    if (this._outerRadius != null) {  
+      buffer.writeAll(["\"outerRadius\":\`", this._outerRadius, "\`,"], "");
     }
 
-    if (this.m_shape != null) {  
-      buffer.writeAll(["\"shape\":", this.m_shape, ","], "");
+    if (this._shape != null) {  
+      buffer.writeAll(["\"shape\":\`", this._shape, "\`,"], "");
     }
 
-    if (this.m_thickness != null) {  
-      buffer.writeAll(["\"thickness\":", this.m_thickness, ","], "");
+    if (this._thickness != null) {  
+      buffer.writeAll(["\"thickness\":\`", this._thickness, "\`,"], "");
     }
   }
 

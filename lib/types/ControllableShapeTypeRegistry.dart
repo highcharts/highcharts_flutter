@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -34,11 +34,11 @@ class ControllableShapeTypeRegistry extends OptionFragment {
     
     // NOTE: skip serialization of path (type typeof ControllablePath is ignored)} 
 
+    // NOTE: skip serialization of ellipse (type typeof ControllableEllipse is ignored)} 
+
     // NOTE: skip serialization of rect (type typeof ControllableRect is ignored)} 
 
     // NOTE: skip serialization of circle (type typeof ControllableCircle is ignored)} 
-
-    // NOTE: skip serialization of ellipse (type typeof ControllableEllipse is ignored)} 
 
     // NOTE: skip serialization of image (type typeof ControllableImage is ignored)} 
   }

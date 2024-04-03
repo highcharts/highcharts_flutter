@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,17 +23,17 @@ import 'OptionFragment.dart';
  */
 class AreaObject extends OptionFragment {
   AreaObject() : super();
-  double? m_direction;  
+  double? _direction;  
 
   double get direction { 
-    if (this.m_direction == null) {
-      this.m_direction = 0;
+    if (this._direction == null) {
+      this._direction = 0;
     }
-    return this.m_direction!;
+    return this._direction!;
   }
 
   void set direction (double v) {
-    this.m_direction = v;
+    this._direction = v;
   }
     
 
@@ -44,8 +44,8 @@ class AreaObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_direction != null) {  
-      buffer.writeAll(["\"direction\":", this.m_direction, ","], "");
+    if (this._direction != null) {  
+      buffer.writeAll(["\"direction\":", this._direction, ","], "");
     }
   }
 

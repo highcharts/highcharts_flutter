@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,56 +23,56 @@ import 'OptionFragment.dart';
  */
 class SetRootNodeObject extends OptionFragment {
   SetRootNodeObject() : super();
-  String? m_newRootId;  
+  String? _newRootId;  
 
   String get newRootId { 
-    if (this.m_newRootId == null) {
-      this.m_newRootId = "";
+    if (this._newRootId == null) {
+      this._newRootId = "";
     }
-    return this.m_newRootId!;
+    return this._newRootId!;
   }
 
   void set newRootId (String v) {
-    this.m_newRootId = v;
+    this._newRootId = v;
   }
     
-  String? m_previousRootId;  
+  String? _previousRootId;  
 
   String get previousRootId { 
-    if (this.m_previousRootId == null) {
-      this.m_previousRootId = "";
+    if (this._previousRootId == null) {
+      this._previousRootId = "";
     }
-    return this.m_previousRootId!;
+    return this._previousRootId!;
   }
 
   void set previousRootId (String v) {
-    this.m_previousRootId = v;
+    this._previousRootId = v;
   }
     
-  bool? m_redraw;  
+  bool? _redraw;  
 
   bool get redraw { 
-    if (this.m_redraw == null) {
-      this.m_redraw = false;
+    if (this._redraw == null) {
+      this._redraw = false;
     }
-    return this.m_redraw!;
+    return this._redraw!;
   }
 
   void set redraw (bool v) {
-    this.m_redraw = v;
+    this._redraw = v;
   }
     
-  String? m_trigger;  
+  String? _trigger;  
 
   String get trigger { 
-    if (this.m_trigger == null) {
-      this.m_trigger = "";
+    if (this._trigger == null) {
+      this._trigger = "";
     }
-    return this.m_trigger!;
+    return this._trigger!;
   }
 
   void set trigger (String v) {
-    this.m_trigger = v;
+    this._trigger = v;
   }
     
 
@@ -83,40 +83,40 @@ class SetRootNodeObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_newRootId != null) {  
-      buffer.writeAll(["\"newRootId\":", this.m_newRootId, ","], "");
+    if (this._newRootId != null) {  
+      buffer.writeAll(["\"newRootId\":\`", this._newRootId, "\`,"], "");
     }
 
-    if (this.m_previousRootId != null) {  
-      buffer.writeAll(["\"previousRootId\":", this.m_previousRootId, ","], "");
+    if (this._previousRootId != null) {  
+      buffer.writeAll(["\"previousRootId\":\`", this._previousRootId, "\`,"], "");
     }
 
-    if (this.m_redraw != null) {  
-      buffer.writeAll(["\"redraw\":", this.m_redraw, ","], "");
-    }
-
-    // NOTE: skip serialization of series (type object is ignored)} 
-
-    if (this.m_trigger != null) {  
-      buffer.writeAll(["\"trigger\":", this.m_trigger, ","], "");
-    }
-
-    if (this.m_newRootId != null) {  
-      buffer.writeAll(["\"newRootId\":", this.m_newRootId, ","], "");
-    }
-
-    if (this.m_previousRootId != null) {  
-      buffer.writeAll(["\"previousRootId\":", this.m_previousRootId, ","], "");
-    }
-
-    if (this.m_redraw != null) {  
-      buffer.writeAll(["\"redraw\":", this.m_redraw, ","], "");
+    if (this._redraw != null) {  
+      buffer.writeAll(["\"redraw\":", this._redraw, ","], "");
     }
 
     // NOTE: skip serialization of series (type object is ignored)} 
 
-    if (this.m_trigger != null) {  
-      buffer.writeAll(["\"trigger\":", this.m_trigger, ","], "");
+    if (this._trigger != null) {  
+      buffer.writeAll(["\"trigger\":\`", this._trigger, "\`,"], "");
+    }
+
+    if (this._newRootId != null) {  
+      buffer.writeAll(["\"newRootId\":\`", this._newRootId, "\`,"], "");
+    }
+
+    if (this._previousRootId != null) {  
+      buffer.writeAll(["\"previousRootId\":\`", this._previousRootId, "\`,"], "");
+    }
+
+    if (this._redraw != null) {  
+      buffer.writeAll(["\"redraw\":", this._redraw, ","], "");
+    }
+
+    // NOTE: skip serialization of series (type object is ignored)} 
+
+    if (this._trigger != null) {  
+      buffer.writeAll(["\"trigger\":\`", this._trigger, "\`,"], "");
     }
   }
 

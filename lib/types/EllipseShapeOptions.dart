@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,43 +24,43 @@ import 'OptionFragment.dart';
  */
 class EllipseShapeOptions extends ControllableShapeOptions {
   EllipseShapeOptions() : super();
-  double? m_yAxis;  
+  double? _yAxis;  
 
   double get yAxis { 
-    if (this.m_yAxis == null) {
-      this.m_yAxis = 0;
+    if (this._yAxis == null) {
+      this._yAxis = 0;
     }
-    return this.m_yAxis!;
+    return this._yAxis!;
   }
 
   void set yAxis (double v) {
-    this.m_yAxis = v;
+    this._yAxis = v;
   }
     
-  double? m_xAxis;  
+  double? _xAxis;  
 
   double get xAxis { 
-    if (this.m_xAxis == null) {
-      this.m_xAxis = 0;
+    if (this._xAxis == null) {
+      this._xAxis = 0;
     }
-    return this.m_xAxis!;
+    return this._xAxis!;
   }
 
   void set xAxis (double v) {
-    this.m_xAxis = v;
+    this._xAxis = v;
   }
     
-  double? m_ry;  
+  double? _ry;  
 
   double get ry { 
-    if (this.m_ry == null) {
-      this.m_ry = 0;
+    if (this._ry == null) {
+      this._ry = 0;
     }
-    return this.m_ry!;
+    return this._ry!;
   }
 
   void set ry (double v) {
-    this.m_ry = v;
+    this._ry = v;
   }
     
 
@@ -71,16 +71,16 @@ class EllipseShapeOptions extends ControllableShapeOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_yAxis != null) {  
-      buffer.writeAll(["\"yAxis\":", this.m_yAxis, ","], "");
+    if (this._yAxis != null) {  
+      buffer.writeAll(["\"yAxis\":", this._yAxis, ","], "");
     }
 
-    if (this.m_xAxis != null) {  
-      buffer.writeAll(["\"xAxis\":", this.m_xAxis, ","], "");
+    if (this._xAxis != null) {  
+      buffer.writeAll(["\"xAxis\":", this._xAxis, ","], "");
     }
 
-    if (this.m_ry != null) {  
-      buffer.writeAll(["\"ry\":", this.m_ry, ","], "");
+    if (this._ry != null) {  
+      buffer.writeAll(["\"ry\":", this._ry, ","], "");
     }
   }
 

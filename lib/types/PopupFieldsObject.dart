@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,56 +24,56 @@ import 'OptionFragment.dart';
  */
 class PopupFieldsObject extends OptionFragment {
   PopupFieldsObject() : super();
-  String? m_actionType;  
+  String? _actionType;  
 
   String get actionType { 
-    if (this.m_actionType == null) {
-      this.m_actionType = "";
+    if (this._actionType == null) {
+      this._actionType = "";
     }
-    return this.m_actionType!;
+    return this._actionType!;
   }
 
   void set actionType (String v) {
-    this.m_actionType = v;
+    this._actionType = v;
   }
     
-  String? m_linkedTo;  
+  String? _linkedTo;  
 
   String get linkedTo { 
-    if (this.m_linkedTo == null) {
-      this.m_linkedTo = "";
+    if (this._linkedTo == null) {
+      this._linkedTo = "";
     }
-    return this.m_linkedTo!;
+    return this._linkedTo!;
   }
 
   void set linkedTo (String v) {
-    this.m_linkedTo = v;
+    this._linkedTo = v;
   }
     
-  String? m_seriesId;  
+  String? _seriesId;  
 
   String get seriesId { 
-    if (this.m_seriesId == null) {
-      this.m_seriesId = "";
+    if (this._seriesId == null) {
+      this._seriesId = "";
     }
-    return this.m_seriesId!;
+    return this._seriesId!;
   }
 
   void set seriesId (String v) {
-    this.m_seriesId = v;
+    this._seriesId = v;
   }
     
-  String? m_type;  
+  String? _type;  
 
   String get type { 
-    if (this.m_type == null) {
-      this.m_type = "";
+    if (this._type == null) {
+      this._type = "";
     }
-    return this.m_type!;
+    return this._type!;
   }
 
   void set type (String v) {
-    this.m_type = v;
+    this._type = v;
   }
     
 
@@ -84,22 +84,22 @@ class PopupFieldsObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_actionType != null) {  
-      buffer.writeAll(["\"actionType\":", this.m_actionType, ","], "");
+    if (this._actionType != null) {  
+      buffer.writeAll(["\"actionType\":\`", this._actionType, "\`,"], "");
     }
 
     // NOTE: skip serialization of fields (type PopupFieldsTree is ignored)} 
 
-    if (this.m_linkedTo != null) {  
-      buffer.writeAll(["\"linkedTo\":", this.m_linkedTo, ","], "");
+    if (this._linkedTo != null) {  
+      buffer.writeAll(["\"linkedTo\":\`", this._linkedTo, "\`,"], "");
     }
 
-    if (this.m_seriesId != null) {  
-      buffer.writeAll(["\"seriesId\":", this.m_seriesId, ","], "");
+    if (this._seriesId != null) {  
+      buffer.writeAll(["\"seriesId\":\`", this._seriesId, "\`,"], "");
     }
 
-    if (this.m_type != null) {  
-      buffer.writeAll(["\"type\":", this.m_type, ","], "");
+    if (this._type != null) {  
+      buffer.writeAll(["\"type\":\`", this._type, "\`,"], "");
     }
   }
 

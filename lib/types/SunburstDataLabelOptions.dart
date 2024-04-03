@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,30 +24,30 @@ import 'OptionFragment.dart';
  */
 class SunburstDataLabelOptions extends DataLabelOptions {
   SunburstDataLabelOptions() : super();
-  bool? m_allowOverlap;  
+  bool? _allowOverlap;  
 
   bool get allowOverlap { 
-    if (this.m_allowOverlap == null) {
-      this.m_allowOverlap = false;
+    if (this._allowOverlap == null) {
+      this._allowOverlap = false;
     }
-    return this.m_allowOverlap!;
+    return this._allowOverlap!;
   }
 
   void set allowOverlap (bool v) {
-    this.m_allowOverlap = v;
+    this._allowOverlap = v;
   }
     
-  String? m_rotationMode;  
+  String? _rotationMode;  
 
   String get rotationMode { 
-    if (this.m_rotationMode == null) {
-      this.m_rotationMode = "";
+    if (this._rotationMode == null) {
+      this._rotationMode = "";
     }
-    return this.m_rotationMode!;
+    return this._rotationMode!;
   }
 
   void set rotationMode (String v) {
-    this.m_rotationMode = v;
+    this._rotationMode = v;
   }
     
 
@@ -58,12 +58,12 @@ class SunburstDataLabelOptions extends DataLabelOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_allowOverlap != null) {  
-      buffer.writeAll(["\"allowOverlap\":", this.m_allowOverlap, ","], "");
+    if (this._allowOverlap != null) {  
+      buffer.writeAll(["\"allowOverlap\":", this._allowOverlap, ","], "");
     }
 
-    if (this.m_rotationMode != null) {  
-      buffer.writeAll(["\"rotationMode\":", this.m_rotationMode, ","], "");
+    if (this._rotationMode != null) {  
+      buffer.writeAll(["\"rotationMode\":\`", this._rotationMode, "\`,"], "");
     }
   }
 

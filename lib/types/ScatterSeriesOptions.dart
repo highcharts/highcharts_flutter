@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -41,17 +41,17 @@ class ScatterSeriesOptions extends LineSeriesOptions {
    * and [pointPadding](https://api.highcharts.com/highcharts/plotOptions.column.pointPadding)
    * settings.  
       */
-  ScatterSeriesJitterOptions? m_jitter;  
+  ScatterSeriesJitterOptions? _jitter;  
 
   ScatterSeriesJitterOptions get jitter { 
-    if (this.m_jitter == null) {
-      this.m_jitter = ScatterSeriesJitterOptions();
+    if (this._jitter == null) {
+      this._jitter = ScatterSeriesJitterOptions();
     }
-    return this.m_jitter!;
+    return this._jitter!;
   }
 
   void set jitter (ScatterSeriesJitterOptions v) {
-    this.m_jitter = v;
+    this._jitter = v;
   }
     
   // NOTE: states skipped - type Generic is ignored in gen
@@ -64,8 +64,8 @@ class ScatterSeriesOptions extends LineSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_jitter != null) {  
-      buffer.writeAll(["\"jitter\":", this.m_jitter?.toJSON(), ","], "");
+    if (this._jitter != null) {  
+      buffer.writeAll(["\"jitter\":", this._jitter?.toJSON(), ","], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,30 +24,30 @@ import 'OptionFragment.dart';
  */
 class KeltnerChannelsParamsOptions extends SMAParamsOptions {
   KeltnerChannelsParamsOptions() : super();
-  double? m_periodATR;  
+  double? _periodATR;  
 
   double get periodATR { 
-    if (this.m_periodATR == null) {
-      this.m_periodATR = 0;
+    if (this._periodATR == null) {
+      this._periodATR = 0;
     }
-    return this.m_periodATR!;
+    return this._periodATR!;
   }
 
   void set periodATR (double v) {
-    this.m_periodATR = v;
+    this._periodATR = v;
   }
     
-  double? m_multiplierATR;  
+  double? _multiplierATR;  
 
   double get multiplierATR { 
-    if (this.m_multiplierATR == null) {
-      this.m_multiplierATR = 0;
+    if (this._multiplierATR == null) {
+      this._multiplierATR = 0;
     }
-    return this.m_multiplierATR!;
+    return this._multiplierATR!;
   }
 
   void set multiplierATR (double v) {
-    this.m_multiplierATR = v;
+    this._multiplierATR = v;
   }
     
 
@@ -58,12 +58,12 @@ class KeltnerChannelsParamsOptions extends SMAParamsOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_periodATR != null) {  
-      buffer.writeAll(["\"periodATR\":", this.m_periodATR, ","], "");
+    if (this._periodATR != null) {  
+      buffer.writeAll(["\"periodATR\":", this._periodATR, ","], "");
     }
 
-    if (this.m_multiplierATR != null) {  
-      buffer.writeAll(["\"multiplierATR\":", this.m_multiplierATR, ","], "");
+    if (this._multiplierATR != null) {  
+      buffer.writeAll(["\"multiplierATR\":", this._multiplierATR, ","], "");
     }
   }
 

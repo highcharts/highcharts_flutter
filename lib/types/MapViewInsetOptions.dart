@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,56 +23,56 @@ import 'OptionFragment.dart';
  */
 class MapViewInsetOptions extends OptionFragment {
   MapViewInsetOptions() : super();
-  String? m_borderColor;  
+  String? _borderColor;  
 
   String get borderColor { 
-    if (this.m_borderColor == null) {
-      this.m_borderColor = "";
+    if (this._borderColor == null) {
+      this._borderColor = "";
     }
-    return this.m_borderColor!;
+    return this._borderColor!;
   }
 
   void set borderColor (String v) {
-    this.m_borderColor = v;
+    this._borderColor = v;
   }
     
-  double? m_borderWidth;  
+  double? _borderWidth;  
 
   double get borderWidth { 
-    if (this.m_borderWidth == null) {
-      this.m_borderWidth = 0;
+    if (this._borderWidth == null) {
+      this._borderWidth = 0;
     }
-    return this.m_borderWidth!;
+    return this._borderWidth!;
   }
 
   void set borderWidth (double v) {
-    this.m_borderWidth = v;
+    this._borderWidth = v;
   }
     
-  String? m_relativeTo;  
+  String? _relativeTo;  
 
   String get relativeTo { 
-    if (this.m_relativeTo == null) {
-      this.m_relativeTo = "";
+    if (this._relativeTo == null) {
+      this._relativeTo = "";
     }
-    return this.m_relativeTo!;
+    return this._relativeTo!;
   }
 
   void set relativeTo (String v) {
-    this.m_relativeTo = v;
+    this._relativeTo = v;
   }
     
-  String? m_units;  
+  String? _units;  
 
   String get units { 
-    if (this.m_units == null) {
-      this.m_units = "";
+    if (this._units == null) {
+      this._units = "";
     }
-    return this.m_units!;
+    return this._units!;
   }
 
   void set units (String v) {
-    this.m_units = v;
+    this._units = v;
   }
     
 
@@ -83,22 +83,22 @@ class MapViewInsetOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_borderColor != null) {  
-      buffer.writeAll(["\"borderColor\":", this.m_borderColor, ","], "");
+    if (this._borderColor != null) {  
+      buffer.writeAll(["\"borderColor\":\`", this._borderColor, "\`,"], "");
     }
 
-    if (this.m_borderWidth != null) {  
-      buffer.writeAll(["\"borderWidth\":", this.m_borderWidth, ","], "");
+    if (this._borderWidth != null) {  
+      buffer.writeAll(["\"borderWidth\":", this._borderWidth, ","], "");
     }
 
     // NOTE: skip serialization of padding (type MapViewPaddingType is ignored)} 
 
-    if (this.m_relativeTo != null) {  
-      buffer.writeAll(["\"relativeTo\":", this.m_relativeTo, ","], "");
+    if (this._relativeTo != null) {  
+      buffer.writeAll(["\"relativeTo\":\`", this._relativeTo, "\`,"], "");
     }
 
-    if (this.m_units != null) {  
-      buffer.writeAll(["\"units\":", this.m_units, ","], "");
+    if (this._units != null) {  
+      buffer.writeAll(["\"units\":\`", this._units, "\`,"], "");
     }
   }
 

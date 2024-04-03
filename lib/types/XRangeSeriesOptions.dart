@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -30,17 +30,17 @@ class XRangeSeriesOptions extends ColumnSeriesOptions {
    * of a task is performed. The partial fill object can be set either on
    * series or point level.  
       */
-  XRangePointOptions? m_partialFill;  
+  XRangePointOptions? _partialFill;  
 
   XRangePointOptions get partialFill { 
-    if (this.m_partialFill == null) {
-      this.m_partialFill = XRangePointOptions();
+    if (this._partialFill == null) {
+      this._partialFill = XRangePointOptions();
     }
-    return this.m_partialFill!;
+    return this._partialFill!;
   }
 
   void set partialFill (XRangePointOptions v) {
-    this.m_partialFill = v;
+    this._partialFill = v;
   }
     
   // NOTE: states skipped - type Generic is ignored in gen
@@ -53,8 +53,8 @@ class XRangeSeriesOptions extends ColumnSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_partialFill != null) {  
-      buffer.writeAll(["\"partialFill\":", this.m_partialFill?.toJSON(), ","], "");
+    if (this._partialFill != null) {  
+      buffer.writeAll(["\"partialFill\":", this._partialFill?.toJSON(), ","], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 

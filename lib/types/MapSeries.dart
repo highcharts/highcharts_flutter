@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,17 +23,17 @@ import 'OptionFragment.dart';
  */
 class MapSeries extends OptionFragment {
   MapSeries() : super();
-  bool? m_preserveAspectRatio;  
+  bool? _preserveAspectRatio;  
 
   bool get preserveAspectRatio { 
-    if (this.m_preserveAspectRatio == null) {
-      this.m_preserveAspectRatio = false;
+    if (this._preserveAspectRatio == null) {
+      this._preserveAspectRatio = false;
     }
-    return this.m_preserveAspectRatio!;
+    return this._preserveAspectRatio!;
   }
 
   void set preserveAspectRatio (bool v) {
-    this.m_preserveAspectRatio = v;
+    this._preserveAspectRatio = v;
   }
     
 
@@ -48,8 +48,8 @@ class MapSeries extends OptionFragment {
 
     // NOTE: skip serialization of pointClass (type typeof MapPoint is ignored)} 
 
-    if (this.m_preserveAspectRatio != null) {  
-      buffer.writeAll(["\"preserveAspectRatio\":", this.m_preserveAspectRatio, ","], "");
+    if (this._preserveAspectRatio != null) {  
+      buffer.writeAll(["\"preserveAspectRatio\":", this._preserveAspectRatio, ","], "");
     }
 
     // NOTE: skip serialization of trackerGroups (type string[] is ignored)} 

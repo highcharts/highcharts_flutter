@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -27,17 +27,17 @@ class OHLCSeriesOptions extends HLCSeriesOptions {
   /**
    * Line color for up points.  
       */
-  String? m_upColor;  
+  String? _upColor;  
 
   String get upColor { 
-    if (this.m_upColor == null) {
-      this.m_upColor = "";
+    if (this._upColor == null) {
+      this._upColor = "";
     }
-    return this.m_upColor!;
+    return this._upColor!;
   }
 
   void set upColor (String v) {
-    this.m_upColor = v;
+    this._upColor = v;
   }
     
   // NOTE: states skipped - type Generic is ignored in gen
@@ -50,8 +50,8 @@ class OHLCSeriesOptions extends HLCSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_upColor != null) {  
-      buffer.writeAll(["\"upColor\":", this.m_upColor, ","], "");
+    if (this._upColor != null) {  
+      buffer.writeAll(["\"upColor\":\`", this._upColor, "\`,"], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 

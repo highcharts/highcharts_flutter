@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,56 +23,56 @@ import 'OptionFragment.dart';
  */
 class CanvasRenderingContext2D extends OptionFragment {
   CanvasRenderingContext2D() : super();
-  double? m_FUNC_MIN;  
+  double? _FUNC_MIN;  
 
   double get FUNC_MIN { 
-    if (this.m_FUNC_MIN == null) {
-      this.m_FUNC_MIN = 0;
+    if (this._FUNC_MIN == null) {
+      this._FUNC_MIN = 0;
     }
-    return this.m_FUNC_MIN!;
+    return this._FUNC_MIN!;
   }
 
   void set FUNC_MIN (double v) {
-    this.m_FUNC_MIN = v;
+    this._FUNC_MIN = v;
   }
     
-  bool? m_mozImageSmoothingEnabled;  
+  bool? _mozImageSmoothingEnabled;  
 
   bool get mozImageSmoothingEnabled { 
-    if (this.m_mozImageSmoothingEnabled == null) {
-      this.m_mozImageSmoothingEnabled = false;
+    if (this._mozImageSmoothingEnabled == null) {
+      this._mozImageSmoothingEnabled = false;
     }
-    return this.m_mozImageSmoothingEnabled!;
+    return this._mozImageSmoothingEnabled!;
   }
 
   void set mozImageSmoothingEnabled (bool v) {
-    this.m_mozImageSmoothingEnabled = v;
+    this._mozImageSmoothingEnabled = v;
   }
     
-  bool? m_msImageSmoothingEnabled;  
+  bool? _msImageSmoothingEnabled;  
 
   bool get msImageSmoothingEnabled { 
-    if (this.m_msImageSmoothingEnabled == null) {
-      this.m_msImageSmoothingEnabled = false;
+    if (this._msImageSmoothingEnabled == null) {
+      this._msImageSmoothingEnabled = false;
     }
-    return this.m_msImageSmoothingEnabled!;
+    return this._msImageSmoothingEnabled!;
   }
 
   void set msImageSmoothingEnabled (bool v) {
-    this.m_msImageSmoothingEnabled = v;
+    this._msImageSmoothingEnabled = v;
   }
     
-  bool? m_webkitImageSmoothingEnabled;  
+  bool? _webkitImageSmoothingEnabled;  
 
   bool get webkitImageSmoothingEnabled { 
-    if (this.m_webkitImageSmoothingEnabled == null) {
-      this.m_webkitImageSmoothingEnabled = false;
+    if (this._webkitImageSmoothingEnabled == null) {
+      this._webkitImageSmoothingEnabled = false;
     }
-    return this.m_webkitImageSmoothingEnabled!;
+    return this._webkitImageSmoothingEnabled!;
   }
 
   void set webkitImageSmoothingEnabled (bool v) {
-    this.m_webkitImageSmoothingEnabled = v;
+    this._webkitImageSmoothingEnabled = v;
   }
     
 
@@ -83,20 +83,20 @@ class CanvasRenderingContext2D extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_FUNC_MIN != null) {  
-      buffer.writeAll(["\"FUNC_MIN\":", this.m_FUNC_MIN, ","], "");
+    if (this._FUNC_MIN != null) {  
+      buffer.writeAll(["\"FUNC_MIN\":", this._FUNC_MIN, ","], "");
     }
 
-    if (this.m_mozImageSmoothingEnabled != null) {  
-      buffer.writeAll(["\"mozImageSmoothingEnabled\":", this.m_mozImageSmoothingEnabled, ","], "");
+    if (this._mozImageSmoothingEnabled != null) {  
+      buffer.writeAll(["\"mozImageSmoothingEnabled\":", this._mozImageSmoothingEnabled, ","], "");
     }
 
-    if (this.m_msImageSmoothingEnabled != null) {  
-      buffer.writeAll(["\"msImageSmoothingEnabled\":", this.m_msImageSmoothingEnabled, ","], "");
+    if (this._msImageSmoothingEnabled != null) {  
+      buffer.writeAll(["\"msImageSmoothingEnabled\":", this._msImageSmoothingEnabled, ","], "");
     }
 
-    if (this.m_webkitImageSmoothingEnabled != null) {  
-      buffer.writeAll(["\"webkitImageSmoothingEnabled\":", this.m_webkitImageSmoothingEnabled, ","], "");
+    if (this._webkitImageSmoothingEnabled != null) {  
+      buffer.writeAll(["\"webkitImageSmoothingEnabled\":", this._webkitImageSmoothingEnabled, ","], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,43 +23,43 @@ import 'OptionFragment.dart';
  */
 class AxisBreakBorderObject extends OptionFragment {
   AxisBreakBorderObject() : super();
-  String? m_move;  
+  String? _move;  
 
   String get move { 
-    if (this.m_move == null) {
-      this.m_move = "";
+    if (this._move == null) {
+      this._move = "";
     }
-    return this.m_move!;
+    return this._move!;
   }
 
   void set move (String v) {
-    this.m_move = v;
+    this._move = v;
   }
     
-  double? m_size;  
+  double? _size;  
 
   double get size { 
-    if (this.m_size == null) {
-      this.m_size = 0;
+    if (this._size == null) {
+      this._size = 0;
     }
-    return this.m_size!;
+    return this._size!;
   }
 
   void set size (double v) {
-    this.m_size = v;
+    this._size = v;
   }
     
-  double? m_value;  
+  double? _value;  
 
   double get value { 
-    if (this.m_value == null) {
-      this.m_value = 0;
+    if (this._value == null) {
+      this._value = 0;
     }
-    return this.m_value!;
+    return this._value!;
   }
 
   void set value (double v) {
-    this.m_value = v;
+    this._value = v;
   }
     
 
@@ -70,16 +70,16 @@ class AxisBreakBorderObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_move != null) {  
-      buffer.writeAll(["\"move\":", this.m_move, ","], "");
+    if (this._move != null) {  
+      buffer.writeAll(["\"move\":\`", this._move, "\`,"], "");
     }
 
-    if (this.m_size != null) {  
-      buffer.writeAll(["\"size\":", this.m_size, ","], "");
+    if (this._size != null) {  
+      buffer.writeAll(["\"size\":", this._size, ","], "");
     }
 
-    if (this.m_value != null) {  
-      buffer.writeAll(["\"value\":", this.m_value, ","], "");
+    if (this._value != null) {  
+      buffer.writeAll(["\"value\":", this._value, ","], "");
     }
   }
 

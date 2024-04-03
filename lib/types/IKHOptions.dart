@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -30,17 +30,17 @@ class IKHOptions extends SMAOptions {
   /**
    * The styles for Chikou line  
       */
-  Map<String, String>? m_chikouLine;  
+  Map<String, String>? _chikouLine;  
 
   Map<String, String> get chikouLine { 
-    if (this.m_chikouLine == null) {
-      this.m_chikouLine = Map<String, String>();
+    if (this._chikouLine == null) {
+      this._chikouLine = Map<String, String>();
     }
-    return this.m_chikouLine!;
+    return this._chikouLine!;
   }
 
   void set chikouLine (Map<String, String> v) {
-    this.m_chikouLine = v;
+    this._chikouLine = v;
   }
     
   /**
@@ -62,33 +62,33 @@ class IKHOptions extends SMAOptions {
    * 
    * Defaults to '0'. 
       */
-  double? m_gapSize;  
+  double? _gapSize;  
 
   double get gapSize { 
-    if (this.m_gapSize == null) {
-      this.m_gapSize = 0;
+    if (this._gapSize == null) {
+      this._gapSize = 0;
     }
-    return this.m_gapSize!;
+    return this._gapSize!;
   }
 
   void set gapSize (double v) {
-    this.m_gapSize = v;
+    this._gapSize = v;
   }
     
   /**
    * The styles for Kijun line  
       */
-  Map<String, String>? m_kijunLine;  
+  Map<String, String>? _kijunLine;  
 
   Map<String, String> get kijunLine { 
-    if (this.m_kijunLine == null) {
-      this.m_kijunLine = Map<String, String>();
+    if (this._kijunLine == null) {
+      this._kijunLine = Map<String, String>();
     }
-    return this.m_kijunLine!;
+    return this._kijunLine!;
   }
 
   void set kijunLine (Map<String, String> v) {
-    this.m_kijunLine = v;
+    this._kijunLine = v;
   }
     
   /**
@@ -101,17 +101,17 @@ class IKHOptions extends SMAOptions {
    * In styled mode, the markers can be styled with the `.highcharts-point`,
    * `.highcharts-point-hover` and `.highcharts-point-select` class names.  
       */
-  PointMarkerOptions? m_marker;  
+  PointMarkerOptions? _marker;  
 
   PointMarkerOptions get marker { 
-    if (this.m_marker == null) {
-      this.m_marker = PointMarkerOptions();
+    if (this._marker == null) {
+      this._marker = PointMarkerOptions();
     }
-    return this.m_marker!;
+    return this._marker!;
   }
 
   void set marker (PointMarkerOptions v) {
-    this.m_marker = v;
+    this._marker = v;
   }
     
   /**
@@ -122,65 +122,65 @@ class IKHOptions extends SMAOptions {
   /**
    * The styles for area between Senkou Span A and B.  
       */
-  IKHSenkouSpanOptions? m_senkouSpan;  
+  IKHSenkouSpanOptions? _senkouSpan;  
 
   IKHSenkouSpanOptions get senkouSpan { 
-    if (this.m_senkouSpan == null) {
-      this.m_senkouSpan = IKHSenkouSpanOptions();
+    if (this._senkouSpan == null) {
+      this._senkouSpan = IKHSenkouSpanOptions();
     }
-    return this.m_senkouSpan!;
+    return this._senkouSpan!;
   }
 
   void set senkouSpan (IKHSenkouSpanOptions v) {
-    this.m_senkouSpan = v;
+    this._senkouSpan = v;
   }
     
   /**
    * The styles for Senkou Span A line  
       */
-  Map<String, String>? m_senkouSpanA;  
+  Map<String, String>? _senkouSpanA;  
 
   Map<String, String> get senkouSpanA { 
-    if (this.m_senkouSpanA == null) {
-      this.m_senkouSpanA = Map<String, String>();
+    if (this._senkouSpanA == null) {
+      this._senkouSpanA = Map<String, String>();
     }
-    return this.m_senkouSpanA!;
+    return this._senkouSpanA!;
   }
 
   void set senkouSpanA (Map<String, String> v) {
-    this.m_senkouSpanA = v;
+    this._senkouSpanA = v;
   }
     
   /**
    * The styles for Senkou Span B line  
       */
-  Map<String, String>? m_senkouSpanB;  
+  Map<String, String>? _senkouSpanB;  
 
   Map<String, String> get senkouSpanB { 
-    if (this.m_senkouSpanB == null) {
-      this.m_senkouSpanB = Map<String, String>();
+    if (this._senkouSpanB == null) {
+      this._senkouSpanB = Map<String, String>();
     }
-    return this.m_senkouSpanB!;
+    return this._senkouSpanB!;
   }
 
   void set senkouSpanB (Map<String, String> v) {
-    this.m_senkouSpanB = v;
+    this._senkouSpanB = v;
   }
     
   /**
    * The styles for Tenkan line  
       */
-  Map<String, String>? m_tenkanLine;  
+  Map<String, String>? _tenkanLine;  
 
   Map<String, String> get tenkanLine { 
-    if (this.m_tenkanLine == null) {
-      this.m_tenkanLine = Map<String, String>();
+    if (this._tenkanLine == null) {
+      this._tenkanLine = Map<String, String>();
     }
-    return this.m_tenkanLine!;
+    return this._tenkanLine!;
   }
 
   void set tenkanLine (Map<String, String> v) {
-    this.m_tenkanLine = v;
+    this._tenkanLine = v;
   }
     
 
@@ -191,40 +191,38 @@ class IKHOptions extends SMAOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_chikouLine != null) {  
-      buffer.writeAll(["\"chikouLine\":", this.m_chikouLine, ","], "");
+    if (this._chikouLine != null) {  
+      buffer.writeAll(["\"chikouLine\":", this._chikouLine, ","], "");
     }
 
-    if (this.m_gapSize != null) {  
-      buffer.writeAll(["\"gapSize\":", this.m_gapSize, ","], "");
+    if (this._gapSize != null) {  
+      buffer.writeAll(["\"gapSize\":", this._gapSize, ","], "");
     }
 
-    if (this.m_kijunLine != null) {  
-      buffer.writeAll(["\"kijunLine\":", this.m_kijunLine, ","], "");
+    if (this._kijunLine != null) {  
+      buffer.writeAll(["\"kijunLine\":", this._kijunLine, ","], "");
     }
 
-    if (this.m_marker != null) {  
-      buffer.writeAll(["\"marker\":", this.m_marker?.toJSON(), ","], "");
+    if (this._marker != null) {  
+      buffer.writeAll(["\"marker\":", this._marker?.toJSON(), ","], "");
     }
 
-    if (this.m_params != null) {  
-      buffer.writeAll(["\"params\":", this.m_params?.toJSON(), ","], "");
+    // NOTE: skip serialization of params (type IKHParamsOptions is ignored)} 
+
+    if (this._senkouSpan != null) {  
+      buffer.writeAll(["\"senkouSpan\":", this._senkouSpan?.toJSON(), ","], "");
     }
 
-    if (this.m_senkouSpan != null) {  
-      buffer.writeAll(["\"senkouSpan\":", this.m_senkouSpan?.toJSON(), ","], "");
+    if (this._senkouSpanA != null) {  
+      buffer.writeAll(["\"senkouSpanA\":", this._senkouSpanA, ","], "");
     }
 
-    if (this.m_senkouSpanA != null) {  
-      buffer.writeAll(["\"senkouSpanA\":", this.m_senkouSpanA, ","], "");
+    if (this._senkouSpanB != null) {  
+      buffer.writeAll(["\"senkouSpanB\":", this._senkouSpanB, ","], "");
     }
 
-    if (this.m_senkouSpanB != null) {  
-      buffer.writeAll(["\"senkouSpanB\":", this.m_senkouSpanB, ","], "");
-    }
-
-    if (this.m_tenkanLine != null) {  
-      buffer.writeAll(["\"tenkanLine\":", this.m_tenkanLine, ","], "");
+    if (this._tenkanLine != null) {  
+      buffer.writeAll(["\"tenkanLine\":", this._tenkanLine, ","], "");
     }
   }
 

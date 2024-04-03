@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -31,21 +31,21 @@ class DependencyWheelSeriesOptions extends SankeySeriesOptions {
    * 
    * Defaults to '[null, null]'. 
       */
-  List<double>? center;
+  List<double>? center; // double
   /**
    * The start angle of the dependency wheel, in degrees where 0 is up.  
       */
-  double? m_startAngle;  
+  double? _startAngle;  
 
   double get startAngle { 
-    if (this.m_startAngle == null) {
-      this.m_startAngle = 0;
+    if (this._startAngle == null) {
+      this._startAngle = 0;
     }
-    return this.m_startAngle!;
+    return this._startAngle!;
   }
 
   void set startAngle (double v) {
-    this.m_startAngle = v;
+    this._startAngle = v;
   }
     
   // NOTE: states skipped - type Generic is ignored in gen
@@ -60,8 +60,8 @@ class DependencyWheelSeriesOptions extends SankeySeriesOptions {
     
     // NOTE: skip serialization of center (type number)[] is ignored)} 
 
-    if (this.m_startAngle != null) {  
-      buffer.writeAll(["\"startAngle\":", this.m_startAngle, ","], "");
+    if (this._startAngle != null) {  
+      buffer.writeAll(["\"startAngle\":", this._startAngle, ","], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 

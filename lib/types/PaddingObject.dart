@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,30 +23,30 @@ import 'OptionFragment.dart';
  */
 class PaddingObject extends OptionFragment {
   PaddingObject() : super();
-  double? m_xPad;  
+  double? _xPad;  
 
   double get xPad { 
-    if (this.m_xPad == null) {
-      this.m_xPad = 0;
+    if (this._xPad == null) {
+      this._xPad = 0;
     }
-    return this.m_xPad!;
+    return this._xPad!;
   }
 
   void set xPad (double v) {
-    this.m_xPad = v;
+    this._xPad = v;
   }
     
-  double? m_yPad;  
+  double? _yPad;  
 
   double get yPad { 
-    if (this.m_yPad == null) {
-      this.m_yPad = 0;
+    if (this._yPad == null) {
+      this._yPad = 0;
     }
-    return this.m_yPad!;
+    return this._yPad!;
   }
 
   void set yPad (double v) {
-    this.m_yPad = v;
+    this._yPad = v;
   }
     
 
@@ -57,12 +57,12 @@ class PaddingObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_xPad != null) {  
-      buffer.writeAll(["\"xPad\":", this.m_xPad, ","], "");
+    if (this._xPad != null) {  
+      buffer.writeAll(["\"xPad\":", this._xPad, ","], "");
     }
 
-    if (this.m_yPad != null) {  
-      buffer.writeAll(["\"yPad\":", this.m_yPad, ","], "");
+    if (this._yPad != null) {  
+      buffer.writeAll(["\"yPad\":", this._yPad, ","], "");
     }
   }
 

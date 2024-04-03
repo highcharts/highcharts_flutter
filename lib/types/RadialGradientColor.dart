@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,43 +23,43 @@ import 'OptionFragment.dart';
  */
 class RadialGradientColor extends OptionFragment {
   RadialGradientColor() : super();
-  double? m_cx;  
+  double? _cx;  
 
   double get cx { 
-    if (this.m_cx == null) {
-      this.m_cx = 0;
+    if (this._cx == null) {
+      this._cx = 0;
     }
-    return this.m_cx!;
+    return this._cx!;
   }
 
   void set cx (double v) {
-    this.m_cx = v;
+    this._cx = v;
   }
     
-  double? m_cy;  
+  double? _cy;  
 
   double get cy { 
-    if (this.m_cy == null) {
-      this.m_cy = 0;
+    if (this._cy == null) {
+      this._cy = 0;
     }
-    return this.m_cy!;
+    return this._cy!;
   }
 
   void set cy (double v) {
-    this.m_cy = v;
+    this._cy = v;
   }
     
-  double? m_r;  
+  double? _r;  
 
   double get r { 
-    if (this.m_r == null) {
-      this.m_r = 0;
+    if (this._r == null) {
+      this._r = 0;
     }
-    return this.m_r!;
+    return this._r!;
   }
 
   void set r (double v) {
-    this.m_r = v;
+    this._r = v;
   }
     
 
@@ -70,16 +70,16 @@ class RadialGradientColor extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_cx != null) {  
-      buffer.writeAll(["\"cx\":", this.m_cx, ","], "");
+    if (this._cx != null) {  
+      buffer.writeAll(["\"cx\":", this._cx, ","], "");
     }
 
-    if (this.m_cy != null) {  
-      buffer.writeAll(["\"cy\":", this.m_cy, ","], "");
+    if (this._cy != null) {  
+      buffer.writeAll(["\"cy\":", this._cy, ","], "");
     }
 
-    if (this.m_r != null) {  
-      buffer.writeAll(["\"r\":", this.m_r, ","], "");
+    if (this._r != null) {  
+      buffer.writeAll(["\"r\":", this._r, ","], "");
     }
   }
 

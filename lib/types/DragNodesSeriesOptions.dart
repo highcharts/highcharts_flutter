@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,30 +24,30 @@ import 'OptionFragment.dart';
  */
 class DragNodesSeriesOptions extends SeriesOptions {
   DragNodesSeriesOptions() : super();
-  bool? m_draggable;  
+  bool? _draggable;  
 
   bool get draggable { 
-    if (this.m_draggable == null) {
-      this.m_draggable = false;
+    if (this._draggable == null) {
+      this._draggable = false;
     }
-    return this.m_draggable!;
+    return this._draggable!;
   }
 
   void set draggable (bool v) {
-    this.m_draggable = v;
+    this._draggable = v;
   }
     
-  bool? m_fixedDraggable;  
+  bool? _fixedDraggable;  
 
   bool get fixedDraggable { 
-    if (this.m_fixedDraggable == null) {
-      this.m_fixedDraggable = false;
+    if (this._fixedDraggable == null) {
+      this._fixedDraggable = false;
     }
-    return this.m_fixedDraggable!;
+    return this._fixedDraggable!;
   }
 
   void set fixedDraggable (bool v) {
-    this.m_fixedDraggable = v;
+    this._fixedDraggable = v;
   }
     
 
@@ -58,12 +58,12 @@ class DragNodesSeriesOptions extends SeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_draggable != null) {  
-      buffer.writeAll(["\"draggable\":", this.m_draggable, ","], "");
+    if (this._draggable != null) {  
+      buffer.writeAll(["\"draggable\":", this._draggable, ","], "");
     }
 
-    if (this.m_fixedDraggable != null) {  
-      buffer.writeAll(["\"fixedDraggable\":", this.m_fixedDraggable, ","], "");
+    if (this._fixedDraggable != null) {  
+      buffer.writeAll(["\"fixedDraggable\":", this._fixedDraggable, ","], "");
     }
   }
 

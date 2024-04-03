@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,30 +24,30 @@ import 'OptionFragment.dart';
  */
 class VectorPointOptions extends ScatterPointOptions {
   VectorPointOptions() : super();
-  double? m_direction;  
+  double? _direction;  
 
   double get direction { 
-    if (this.m_direction == null) {
-      this.m_direction = 0;
+    if (this._direction == null) {
+      this._direction = 0;
     }
-    return this.m_direction!;
+    return this._direction!;
   }
 
   void set direction (double v) {
-    this.m_direction = v;
+    this._direction = v;
   }
     
-  double? m_length;  
+  double? _length;  
 
   double get length { 
-    if (this.m_length == null) {
-      this.m_length = 0;
+    if (this._length == null) {
+      this._length = 0;
     }
-    return this.m_length!;
+    return this._length!;
   }
 
   void set length (double v) {
-    this.m_length = v;
+    this._length = v;
   }
     
 
@@ -58,12 +58,12 @@ class VectorPointOptions extends ScatterPointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_direction != null) {  
-      buffer.writeAll(["\"direction\":", this.m_direction, ","], "");
+    if (this._direction != null) {  
+      buffer.writeAll(["\"direction\":", this._direction, ","], "");
     }
 
-    if (this.m_length != null) {  
-      buffer.writeAll(["\"length\":", this.m_length, ","], "");
+    if (this._length != null) {  
+      buffer.writeAll(["\"length\":", this._length, ","], "");
     }
   }
 

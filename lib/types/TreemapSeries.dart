@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,56 +23,56 @@ import 'OptionFragment.dart';
  */
 class TreemapSeries extends OptionFragment {
   TreemapSeries() : super();
-  String? m_colorKey;  
+  String? _colorKey;  
 
   String get colorKey { 
-    if (this.m_colorKey == null) {
-      this.m_colorKey = "";
+    if (this._colorKey == null) {
+      this._colorKey = "";
     }
-    return this.m_colorKey!;
+    return this._colorKey!;
   }
 
   void set colorKey (String v) {
-    this.m_colorKey = v;
+    this._colorKey = v;
   }
     
-  bool? m_directTouch;  
+  bool? _directTouch;  
 
   bool get directTouch { 
-    if (this.m_directTouch == null) {
-      this.m_directTouch = false;
+    if (this._directTouch == null) {
+      this._directTouch = false;
     }
-    return this.m_directTouch!;
+    return this._directTouch!;
   }
 
   void set directTouch (bool v) {
-    this.m_directTouch = v;
+    this._directTouch = v;
   }
     
-  bool? m_getExtremesFromAll;  
+  bool? _getExtremesFromAll;  
 
   bool get getExtremesFromAll { 
-    if (this.m_getExtremesFromAll == null) {
-      this.m_getExtremesFromAll = false;
+    if (this._getExtremesFromAll == null) {
+      this._getExtremesFromAll = false;
     }
-    return this.m_getExtremesFromAll!;
+    return this._getExtremesFromAll!;
   }
 
   void set getExtremesFromAll (bool v) {
-    this.m_getExtremesFromAll = v;
+    this._getExtremesFromAll = v;
   }
     
-  String? m_optionalAxis;  
+  String? _optionalAxis;  
 
   String get optionalAxis { 
-    if (this.m_optionalAxis == null) {
-      this.m_optionalAxis = "";
+    if (this._optionalAxis == null) {
+      this._optionalAxis = "";
     }
-    return this.m_optionalAxis!;
+    return this._optionalAxis!;
   }
 
   void set optionalAxis (String v) {
-    this.m_optionalAxis = v;
+    this._optionalAxis = v;
   }
     
 
@@ -83,20 +83,20 @@ class TreemapSeries extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_colorKey != null) {  
-      buffer.writeAll(["\"colorKey\":", this.m_colorKey, ","], "");
+    if (this._colorKey != null) {  
+      buffer.writeAll(["\"colorKey\":\`", this._colorKey, "\`,"], "");
     }
 
-    if (this.m_directTouch != null) {  
-      buffer.writeAll(["\"directTouch\":", this.m_directTouch, ","], "");
+    if (this._directTouch != null) {  
+      buffer.writeAll(["\"directTouch\":", this._directTouch, ","], "");
     }
 
-    if (this.m_getExtremesFromAll != null) {  
-      buffer.writeAll(["\"getExtremesFromAll\":", this.m_getExtremesFromAll, ","], "");
+    if (this._getExtremesFromAll != null) {  
+      buffer.writeAll(["\"getExtremesFromAll\":", this._getExtremesFromAll, ","], "");
     }
 
-    if (this.m_optionalAxis != null) {  
-      buffer.writeAll(["\"optionalAxis\":", this.m_optionalAxis, ","], "");
+    if (this._optionalAxis != null) {  
+      buffer.writeAll(["\"optionalAxis\":\`", this._optionalAxis, "\`,"], "");
     }
 
     // NOTE: skip serialization of parallelArrays (type string[] is ignored)} 

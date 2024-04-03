@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,212 +24,238 @@ import 'OptionFragment.dart';
  */
 class AxisLabelOptions extends OptionFragment {
   AxisLabelOptions() : super();
-  String? m_align;  
+  String? _align;  
 
   String get align { 
-    if (this.m_align == null) {
-      this.m_align = "";
+    if (this._align == null) {
+      this._align = "";
     }
-    return this.m_align!;
+    return this._align!;
   }
 
   void set align (String v) {
-    this.m_align = v;
+    this._align = v;
   }
     
-  bool? m_allowOverlap;  
+  bool? _allowOverlap;  
 
   bool get allowOverlap { 
-    if (this.m_allowOverlap == null) {
-      this.m_allowOverlap = false;
+    if (this._allowOverlap == null) {
+      this._allowOverlap = false;
     }
-    return this.m_allowOverlap!;
+    return this._allowOverlap!;
   }
 
   void set allowOverlap (bool v) {
-    this.m_allowOverlap = v;
+    this._allowOverlap = v;
   }
     
-  double? m_autoRotationLimit;  
+  double? _autoRotationLimit;  
 
   double get autoRotationLimit { 
-    if (this.m_autoRotationLimit == null) {
-      this.m_autoRotationLimit = 0;
+    if (this._autoRotationLimit == null) {
+      this._autoRotationLimit = 0;
     }
-    return this.m_autoRotationLimit!;
+    return this._autoRotationLimit!;
   }
 
   void set autoRotationLimit (double v) {
-    this.m_autoRotationLimit = v;
+    this._autoRotationLimit = v;
   }
     
-  double? m_distance;  
+  double? _distance;  
 
   double get distance { 
-    if (this.m_distance == null) {
-      this.m_distance = 0;
+    if (this._distance == null) {
+      this._distance = 0;
     }
-    return this.m_distance!;
+    return this._distance!;
   }
 
   void set distance (double v) {
-    this.m_distance = v;
+    this._distance = v;
   }
     
-  bool? m_enabled;  
+  bool? _enabled;  
 
   bool get enabled { 
-    if (this.m_enabled == null) {
-      this.m_enabled = false;
+    if (this._enabled == null) {
+      this._enabled = false;
     }
-    return this.m_enabled!;
+    return this._enabled!;
   }
 
   void set enabled (bool v) {
-    this.m_enabled = v;
+    this._enabled = v;
   }
     
-  String? m_format;  
+  String? _format;  
 
   String get format { 
-    if (this.m_format == null) {
-      this.m_format = "";
+    if (this._format == null) {
+      this._format = "";
     }
-    return this.m_format!;
+    return this._format!;
   }
 
   void set format (String v) {
-    this.m_format = v;
+    this._format = v;
   }
     
-  double? m_indentation;  
+  double? _indentation;  
 
   double get indentation { 
-    if (this.m_indentation == null) {
-      this.m_indentation = 0;
+    if (this._indentation == null) {
+      this._indentation = 0;
     }
-    return this.m_indentation!;
+    return this._indentation!;
   }
 
   void set indentation (double v) {
-    this.m_indentation = v;
+    this._indentation = v;
   }
     
-  String? m_overflow;  
+  String? _overflow;  
 
   String get overflow { 
-    if (this.m_overflow == null) {
-      this.m_overflow = "";
+    if (this._overflow == null) {
+      this._overflow = "";
     }
-    return this.m_overflow!;
+    return this._overflow!;
   }
 
   void set overflow (String v) {
-    this.m_overflow = v;
+    this._overflow = v;
   }
     
-  double? m_padding;  
+  double? _padding;  
 
   double get padding { 
-    if (this.m_padding == null) {
-      this.m_padding = 0;
+    if (this._padding == null) {
+      this._padding = 0;
     }
-    return this.m_padding!;
+    return this._padding!;
   }
 
   void set padding (double v) {
-    this.m_padding = v;
+    this._padding = v;
   }
     
-  bool? m_reserveSpace;  
+  bool? _reserveSpace;  
 
   bool get reserveSpace { 
-    if (this.m_reserveSpace == null) {
-      this.m_reserveSpace = false;
+    if (this._reserveSpace == null) {
+      this._reserveSpace = false;
     }
-    return this.m_reserveSpace!;
+    return this._reserveSpace!;
   }
 
   void set reserveSpace (bool v) {
-    this.m_reserveSpace = v;
+    this._reserveSpace = v;
   }
     
-  double? m_staggerLines;  
+  double? _staggerLines;  
 
   double get staggerLines { 
-    if (this.m_staggerLines == null) {
-      this.m_staggerLines = 0;
+    if (this._staggerLines == null) {
+      this._staggerLines = 0;
     }
-    return this.m_staggerLines!;
+    return this._staggerLines!;
   }
 
   void set staggerLines (double v) {
-    this.m_staggerLines = v;
+    this._staggerLines = v;
   }
     
-  double? m_step;  
+  double? _step;  
 
   double get step { 
-    if (this.m_step == null) {
-      this.m_step = 0;
+    if (this._step == null) {
+      this._step = 0;
     }
-    return this.m_step!;
+    return this._step!;
   }
 
   void set step (double v) {
-    this.m_step = v;
+    this._step = v;
   }
     
-  bool? m_useHTML;  
+  bool? _useHTML;  
 
   bool get useHTML { 
-    if (this.m_useHTML == null) {
-      this.m_useHTML = false;
+    if (this._useHTML == null) {
+      this._useHTML = false;
     }
-    return this.m_useHTML!;
+    return this._useHTML!;
   }
 
   void set useHTML (bool v) {
-    this.m_useHTML = v;
+    this._useHTML = v;
   }
     
-  double? m_x;  
+  double? _x;  
 
   double get x { 
-    if (this.m_x == null) {
-      this.m_x = 0;
+    if (this._x == null) {
+      this._x = 0;
     }
-    return this.m_x!;
+    return this._x!;
   }
 
   void set x (double v) {
-    this.m_x = v;
+    this._x = v;
   }
     
-  double? m_y;  
+  double? _y;  
 
   double get y { 
-    if (this.m_y == null) {
-      this.m_y = 0;
+    if (this._y == null) {
+      this._y = 0;
     }
-    return this.m_y!;
+    return this._y!;
   }
 
   void set y (double v) {
-    this.m_y = v;
+    this._y = v;
   }
     
-  double? m_zIndex;  
+  double? _zIndex;  
 
   double get zIndex { 
-    if (this.m_zIndex == null) {
-      this.m_zIndex = 0;
+    if (this._zIndex == null) {
+      this._zIndex = 0;
     }
-    return this.m_zIndex!;
+    return this._zIndex!;
   }
 
   void set zIndex (double v) {
-    this.m_zIndex = v;
+    this._zIndex = v;
+  }
+    
+  String? _position3d;  
+
+  String get position3d { 
+    if (this._position3d == null) {
+      this._position3d = "";
+    }
+    return this._position3d!;
+  }
+
+  void set position3d (String v) {
+    this._position3d = v;
+  }
+    
+  bool? _skew3d;  
+
+  bool get skew3d { 
+    if (this._skew3d == null) {
+      this._skew3d = false;
+    }
+    return this._skew3d!;
+  }
+
+  void set skew3d (bool v) {
+    this._skew3d = v;
   }
     
 
@@ -240,74 +266,82 @@ class AxisLabelOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_align != null) {  
-      buffer.writeAll(["\"align\":", this.m_align, ","], "");
+    if (this._align != null) {  
+      buffer.writeAll(["\"align\":\`", this._align, "\`,"], "");
     }
 
-    if (this.m_allowOverlap != null) {  
-      buffer.writeAll(["\"allowOverlap\":", this.m_allowOverlap, ","], "");
+    if (this._allowOverlap != null) {  
+      buffer.writeAll(["\"allowOverlap\":", this._allowOverlap, ","], "");
     }
 
     // NOTE: skip serialization of autoRotation (type number[] is ignored)} 
 
-    if (this.m_autoRotationLimit != null) {  
-      buffer.writeAll(["\"autoRotationLimit\":", this.m_autoRotationLimit, ","], "");
+    if (this._autoRotationLimit != null) {  
+      buffer.writeAll(["\"autoRotationLimit\":", this._autoRotationLimit, ","], "");
     }
 
-    if (this.m_distance != null) {  
-      buffer.writeAll(["\"distance\":", this.m_distance, ","], "");
+    if (this._distance != null) {  
+      buffer.writeAll(["\"distance\":", this._distance, ","], "");
     }
 
-    if (this.m_enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this.m_enabled, ","], "");
+    if (this._enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this._enabled, ","], "");
     }
 
-    if (this.m_format != null) {  
-      buffer.writeAll(["\"format\":", this.m_format, ","], "");
+    if (this._format != null) {  
+      buffer.writeAll(["\"format\":\`", this._format, "\`,"], "");
     }
 
-    if (this.m_indentation != null) {  
-      buffer.writeAll(["\"indentation\":", this.m_indentation, ","], "");
+    if (this._indentation != null) {  
+      buffer.writeAll(["\"indentation\":", this._indentation, ","], "");
     }
 
-    if (this.m_overflow != null) {  
-      buffer.writeAll(["\"overflow\":", this.m_overflow, ","], "");
+    if (this._overflow != null) {  
+      buffer.writeAll(["\"overflow\":\`", this._overflow, "\`,"], "");
     }
 
-    if (this.m_padding != null) {  
-      buffer.writeAll(["\"padding\":", this.m_padding, ","], "");
+    if (this._padding != null) {  
+      buffer.writeAll(["\"padding\":", this._padding, ","], "");
     }
 
-    if (this.m_reserveSpace != null) {  
-      buffer.writeAll(["\"reserveSpace\":", this.m_reserveSpace, ","], "");
+    if (this._reserveSpace != null) {  
+      buffer.writeAll(["\"reserveSpace\":", this._reserveSpace, ","], "");
     }
 
     // NOTE: skip serialization of rotation (type "auto" is ignored)} 
 
-    if (this.m_staggerLines != null) {  
-      buffer.writeAll(["\"staggerLines\":", this.m_staggerLines, ","], "");
+    if (this._staggerLines != null) {  
+      buffer.writeAll(["\"staggerLines\":", this._staggerLines, ","], "");
     }
 
-    if (this.m_step != null) {  
-      buffer.writeAll(["\"step\":", this.m_step, ","], "");
+    if (this._step != null) {  
+      buffer.writeAll(["\"step\":", this._step, ","], "");
     }
 
     // NOTE: skip serialization of style (type CSSObject is ignored)} 
 
-    if (this.m_useHTML != null) {  
-      buffer.writeAll(["\"useHTML\":", this.m_useHTML, ","], "");
+    if (this._useHTML != null) {  
+      buffer.writeAll(["\"useHTML\":", this._useHTML, ","], "");
     }
 
-    if (this.m_x != null) {  
-      buffer.writeAll(["\"x\":", this.m_x, ","], "");
+    if (this._x != null) {  
+      buffer.writeAll(["\"x\":", this._x, ","], "");
     }
 
-    if (this.m_y != null) {  
-      buffer.writeAll(["\"y\":", this.m_y, ","], "");
+    if (this._y != null) {  
+      buffer.writeAll(["\"y\":", this._y, ","], "");
     }
 
-    if (this.m_zIndex != null) {  
-      buffer.writeAll(["\"zIndex\":", this.m_zIndex, ","], "");
+    if (this._zIndex != null) {  
+      buffer.writeAll(["\"zIndex\":", this._zIndex, ","], "");
+    }
+
+    if (this._position3d != null) {  
+      buffer.writeAll(["\"position3d\":\`", this._position3d, "\`,"], "");
+    }
+
+    if (this._skew3d != null) {  
+      buffer.writeAll(["\"skew3d\":", this._skew3d, ","], "");
     }
   }
 

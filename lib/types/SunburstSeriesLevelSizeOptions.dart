@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,30 +23,30 @@ import 'OptionFragment.dart';
  */
 class SunburstSeriesLevelSizeOptions extends OptionFragment {
   SunburstSeriesLevelSizeOptions() : super();
-  String? m_unit;  
+  String? _unit;  
 
   String get unit { 
-    if (this.m_unit == null) {
-      this.m_unit = "";
+    if (this._unit == null) {
+      this._unit = "";
     }
-    return this.m_unit!;
+    return this._unit!;
   }
 
   void set unit (String v) {
-    this.m_unit = v;
+    this._unit = v;
   }
     
-  double? m_value;  
+  double? _value;  
 
   double get value { 
-    if (this.m_value == null) {
-      this.m_value = 0;
+    if (this._value == null) {
+      this._value = 0;
     }
-    return this.m_value!;
+    return this._value!;
   }
 
   void set value (double v) {
-    this.m_value = v;
+    this._value = v;
   }
     
 
@@ -57,12 +57,12 @@ class SunburstSeriesLevelSizeOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_unit != null) {  
-      buffer.writeAll(["\"unit\":", this.m_unit, ","], "");
+    if (this._unit != null) {  
+      buffer.writeAll(["\"unit\":\`", this._unit, "\`,"], "");
     }
 
-    if (this.m_value != null) {  
-      buffer.writeAll(["\"value\":", this.m_value, ","], "");
+    if (this._value != null) {  
+      buffer.writeAll(["\"value\":", this._value, ","], "");
     }
   }
 

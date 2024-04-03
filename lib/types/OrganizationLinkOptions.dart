@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,82 +23,82 @@ import 'OptionFragment.dart';
  */
 class OrganizationLinkOptions extends OptionFragment {
   OrganizationLinkOptions() : super();
-  double? m_linkOpacity;  
+  double? _linkOpacity;  
 
   double get linkOpacity { 
-    if (this.m_linkOpacity == null) {
-      this.m_linkOpacity = 0;
+    if (this._linkOpacity == null) {
+      this._linkOpacity = 0;
     }
-    return this.m_linkOpacity!;
+    return this._linkOpacity!;
   }
 
   void set linkOpacity (double v) {
-    this.m_linkOpacity = v;
+    this._linkOpacity = v;
   }
     
-  double? m_curveFactor;  
+  double? _curveFactor;  
 
   double get curveFactor { 
-    if (this.m_curveFactor == null) {
-      this.m_curveFactor = 0;
+    if (this._curveFactor == null) {
+      this._curveFactor = 0;
     }
-    return this.m_curveFactor!;
+    return this._curveFactor!;
   }
 
   void set curveFactor (double v) {
-    this.m_curveFactor = v;
+    this._curveFactor = v;
   }
     
-  String? m_color;  
+  String? _color;  
 
   String get color { 
-    if (this.m_color == null) {
-      this.m_color = "";
+    if (this._color == null) {
+      this._color = "";
     }
-    return this.m_color!;
+    return this._color!;
   }
 
   void set color (String v) {
-    this.m_color = v;
+    this._color = v;
   }
     
-  double? m_lineWidth;  
+  double? _lineWidth;  
 
   double get lineWidth { 
-    if (this.m_lineWidth == null) {
-      this.m_lineWidth = 0;
+    if (this._lineWidth == null) {
+      this._lineWidth = 0;
     }
-    return this.m_lineWidth!;
+    return this._lineWidth!;
   }
 
   void set lineWidth (double v) {
-    this.m_lineWidth = v;
+    this._lineWidth = v;
   }
     
-  String? m_type;  
+  String? _type;  
 
   String get type { 
-    if (this.m_type == null) {
-      this.m_type = "";
+    if (this._type == null) {
+      this._type = "";
     }
-    return this.m_type!;
+    return this._type!;
   }
 
   void set type (String v) {
-    this.m_type = v;
+    this._type = v;
   }
     
-  double? m_radius;  
+  double? _radius;  
 
   double get radius { 
-    if (this.m_radius == null) {
-      this.m_radius = 0;
+    if (this._radius == null) {
+      this._radius = 0;
     }
-    return this.m_radius!;
+    return this._radius!;
   }
 
   void set radius (double v) {
-    this.m_radius = v;
+    this._radius = v;
   }
     
 
@@ -109,28 +109,28 @@ class OrganizationLinkOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_linkOpacity != null) {  
-      buffer.writeAll(["\"linkOpacity\":", this.m_linkOpacity, ","], "");
+    if (this._linkOpacity != null) {  
+      buffer.writeAll(["\"linkOpacity\":", this._linkOpacity, ","], "");
     }
 
-    if (this.m_curveFactor != null) {  
-      buffer.writeAll(["\"curveFactor\":", this.m_curveFactor, ","], "");
+    if (this._curveFactor != null) {  
+      buffer.writeAll(["\"curveFactor\":", this._curveFactor, ","], "");
     }
 
-    if (this.m_color != null) {  
-      buffer.writeAll(["\"color\":", this.m_color, ","], "");
+    if (this._color != null) {  
+      buffer.writeAll(["\"color\":\`", this._color, "\`,"], "");
     }
 
-    if (this.m_lineWidth != null) {  
-      buffer.writeAll(["\"lineWidth\":", this.m_lineWidth, ","], "");
+    if (this._lineWidth != null) {  
+      buffer.writeAll(["\"lineWidth\":", this._lineWidth, ","], "");
     }
 
-    if (this.m_type != null) {  
-      buffer.writeAll(["\"type\":", this.m_type, ","], "");
+    if (this._type != null) {  
+      buffer.writeAll(["\"type\":\`", this._type, "\`,"], "");
     }
 
-    if (this.m_radius != null) {  
-      buffer.writeAll(["\"radius\":", this.m_radius, ","], "");
+    if (this._radius != null) {  
+      buffer.writeAll(["\"radius\":", this._radius, ","], "");
     }
   }
 

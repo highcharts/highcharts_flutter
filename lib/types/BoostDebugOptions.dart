@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,82 +23,82 @@ import 'OptionFragment.dart';
  */
 class BoostDebugOptions extends OptionFragment {
   BoostDebugOptions() : super();
-  bool? m_showSkipSummary;  
+  bool? _showSkipSummary;  
 
   bool get showSkipSummary { 
-    if (this.m_showSkipSummary == null) {
-      this.m_showSkipSummary = false;
+    if (this._showSkipSummary == null) {
+      this._showSkipSummary = false;
     }
-    return this.m_showSkipSummary!;
+    return this._showSkipSummary!;
   }
 
   void set showSkipSummary (bool v) {
-    this.m_showSkipSummary = v;
+    this._showSkipSummary = v;
   }
     
-  bool? m_timeBufferCopy;  
+  bool? _timeBufferCopy;  
 
   bool get timeBufferCopy { 
-    if (this.m_timeBufferCopy == null) {
-      this.m_timeBufferCopy = false;
+    if (this._timeBufferCopy == null) {
+      this._timeBufferCopy = false;
     }
-    return this.m_timeBufferCopy!;
+    return this._timeBufferCopy!;
   }
 
   void set timeBufferCopy (bool v) {
-    this.m_timeBufferCopy = v;
+    this._timeBufferCopy = v;
   }
     
-  bool? m_timeKDTree;  
+  bool? _timeKDTree;  
 
   bool get timeKDTree { 
-    if (this.m_timeKDTree == null) {
-      this.m_timeKDTree = false;
+    if (this._timeKDTree == null) {
+      this._timeKDTree = false;
     }
-    return this.m_timeKDTree!;
+    return this._timeKDTree!;
   }
 
   void set timeKDTree (bool v) {
-    this.m_timeKDTree = v;
+    this._timeKDTree = v;
   }
     
-  bool? m_timeRendering;  
+  bool? _timeRendering;  
 
   bool get timeRendering { 
-    if (this.m_timeRendering == null) {
-      this.m_timeRendering = false;
+    if (this._timeRendering == null) {
+      this._timeRendering = false;
     }
-    return this.m_timeRendering!;
+    return this._timeRendering!;
   }
 
   void set timeRendering (bool v) {
-    this.m_timeRendering = v;
+    this._timeRendering = v;
   }
     
-  bool? m_timeSeriesProcessing;  
+  bool? _timeSeriesProcessing;  
 
   bool get timeSeriesProcessing { 
-    if (this.m_timeSeriesProcessing == null) {
-      this.m_timeSeriesProcessing = false;
+    if (this._timeSeriesProcessing == null) {
+      this._timeSeriesProcessing = false;
     }
-    return this.m_timeSeriesProcessing!;
+    return this._timeSeriesProcessing!;
   }
 
   void set timeSeriesProcessing (bool v) {
-    this.m_timeSeriesProcessing = v;
+    this._timeSeriesProcessing = v;
   }
     
-  bool? m_timeSetup;  
+  bool? _timeSetup;  
 
   bool get timeSetup { 
-    if (this.m_timeSetup == null) {
-      this.m_timeSetup = false;
+    if (this._timeSetup == null) {
+      this._timeSetup = false;
     }
-    return this.m_timeSetup!;
+    return this._timeSetup!;
   }
 
   void set timeSetup (bool v) {
-    this.m_timeSetup = v;
+    this._timeSetup = v;
   }
     
 
@@ -109,28 +109,28 @@ class BoostDebugOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_showSkipSummary != null) {  
-      buffer.writeAll(["\"showSkipSummary\":", this.m_showSkipSummary, ","], "");
+    if (this._showSkipSummary != null) {  
+      buffer.writeAll(["\"showSkipSummary\":", this._showSkipSummary, ","], "");
     }
 
-    if (this.m_timeBufferCopy != null) {  
-      buffer.writeAll(["\"timeBufferCopy\":", this.m_timeBufferCopy, ","], "");
+    if (this._timeBufferCopy != null) {  
+      buffer.writeAll(["\"timeBufferCopy\":", this._timeBufferCopy, ","], "");
     }
 
-    if (this.m_timeKDTree != null) {  
-      buffer.writeAll(["\"timeKDTree\":", this.m_timeKDTree, ","], "");
+    if (this._timeKDTree != null) {  
+      buffer.writeAll(["\"timeKDTree\":", this._timeKDTree, ","], "");
     }
 
-    if (this.m_timeRendering != null) {  
-      buffer.writeAll(["\"timeRendering\":", this.m_timeRendering, ","], "");
+    if (this._timeRendering != null) {  
+      buffer.writeAll(["\"timeRendering\":", this._timeRendering, ","], "");
     }
 
-    if (this.m_timeSeriesProcessing != null) {  
-      buffer.writeAll(["\"timeSeriesProcessing\":", this.m_timeSeriesProcessing, ","], "");
+    if (this._timeSeriesProcessing != null) {  
+      buffer.writeAll(["\"timeSeriesProcessing\":", this._timeSeriesProcessing, ","], "");
     }
 
-    if (this.m_timeSetup != null) {  
-      buffer.writeAll(["\"timeSetup\":", this.m_timeSetup, ","], "");
+    if (this._timeSetup != null) {  
+      buffer.writeAll(["\"timeSetup\":", this._timeSetup, ","], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,17 +23,17 @@ import 'OptionFragment.dart';
  */
 class ArcDiagramSeries extends OptionFragment {
   ArcDiagramSeries() : super();
-  bool? m_orderNodes;  
+  bool? _orderNodes;  
 
   bool get orderNodes { 
-    if (this.m_orderNodes == null) {
-      this.m_orderNodes = false;
+    if (this._orderNodes == null) {
+      this._orderNodes = false;
     }
-    return this.m_orderNodes!;
+    return this._orderNodes!;
   }
 
   void set orderNodes (bool v) {
-    this.m_orderNodes = v;
+    this._orderNodes = v;
   }
     
 
@@ -44,8 +44,8 @@ class ArcDiagramSeries extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_orderNodes != null) {  
-      buffer.writeAll(["\"orderNodes\":", this.m_orderNodes, ","], "");
+    if (this._orderNodes != null) {  
+      buffer.writeAll(["\"orderNodes\":", this._orderNodes, ","], "");
     }
 
     // NOTE: skip serialization of pointClass (type typeof ArcDiagramPoint is ignored)} 

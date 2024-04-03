@@ -12,17 +12,16 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
-import 'Function.dart';
 import 'OptionFragment.dart';
 
 /** 
  * Class 
  */
-class Class extends Function {
+class Class extends OptionFragment {
   Class() : super();
   
 

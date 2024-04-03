@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -29,17 +29,17 @@ class LoadingOptions extends OptionFragment {
    * 
    * Defaults to '100'. 
       */
-  double? m_hideDuration;  
+  double? _hideDuration;  
 
   double get hideDuration { 
-    if (this.m_hideDuration == null) {
-      this.m_hideDuration = 0;
+    if (this._hideDuration == null) {
+      this._hideDuration = 0;
     }
-    return this.m_hideDuration!;
+    return this._hideDuration!;
   }
 
   void set hideDuration (double v) {
-    this.m_hideDuration = v;
+    this._hideDuration = v;
   }
     
   /**
@@ -47,17 +47,17 @@ class LoadingOptions extends OptionFragment {
    * 
    * Defaults to '{"fontWeight": "bold", "position": "relative", "top": "45%"}'. 
       */
-  CSSObject? m_labelStyle;  
+  CSSObject? _labelStyle;  
 
   CSSObject get labelStyle { 
-    if (this.m_labelStyle == null) {
-      this.m_labelStyle = CSSObject();
+    if (this._labelStyle == null) {
+      this._labelStyle = CSSObject();
     }
-    return this.m_labelStyle!;
+    return this._labelStyle!;
   }
 
   void set labelStyle (CSSObject v) {
-    this.m_labelStyle = v;
+    this._labelStyle = v;
   }
     
   /**
@@ -65,17 +65,17 @@ class LoadingOptions extends OptionFragment {
    * 
    * Defaults to '100'. 
       */
-  double? m_showDuration;  
+  double? _showDuration;  
 
   double get showDuration { 
-    if (this.m_showDuration == null) {
-      this.m_showDuration = 0;
+    if (this._showDuration == null) {
+      this._showDuration = 0;
     }
-    return this.m_showDuration!;
+    return this._showDuration!;
   }
 
   void set showDuration (double v) {
-    this.m_showDuration = v;
+    this._showDuration = v;
   }
     
   /**
@@ -86,17 +86,17 @@ class LoadingOptions extends OptionFragment {
    * 
    * Defaults to '{"position": "absolute", "backgroundColor": "#ffffff", "opacity": 0.5, "textAlign": "center"}'. 
       */
-  CSSObject? m_style;  
+  CSSObject? _style;  
 
   CSSObject get style { 
-    if (this.m_style == null) {
-      this.m_style = CSSObject();
+    if (this._style == null) {
+      this._style = CSSObject();
     }
-    return this.m_style!;
+    return this._style!;
   }
 
   void set style (CSSObject v) {
-    this.m_style = v;
+    this._style = v;
   }
     
 
@@ -107,20 +107,20 @@ class LoadingOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_hideDuration != null) {  
-      buffer.writeAll(["\"hideDuration\":", this.m_hideDuration, ","], "");
+    if (this._hideDuration != null) {  
+      buffer.writeAll(["\"hideDuration\":", this._hideDuration, ","], "");
     }
 
-    if (this.m_labelStyle != null) {  
-      buffer.writeAll(["\"labelStyle\":", this.m_labelStyle?.toJSON(), ","], "");
+    if (this._labelStyle != null) {  
+      buffer.writeAll(["\"labelStyle\":", this._labelStyle?.toJSON(), ","], "");
     }
 
-    if (this.m_showDuration != null) {  
-      buffer.writeAll(["\"showDuration\":", this.m_showDuration, ","], "");
+    if (this._showDuration != null) {  
+      buffer.writeAll(["\"showDuration\":", this._showDuration, ","], "");
     }
 
-    if (this.m_style != null) {  
-      buffer.writeAll(["\"style\":", this.m_style?.toJSON(), ","], "");
+    if (this._style != null) {  
+      buffer.writeAll(["\"style\":", this._style?.toJSON(), ","], "");
     }
   }
 

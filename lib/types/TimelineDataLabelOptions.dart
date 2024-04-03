@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,58 +24,58 @@ import 'OptionFragment.dart';
  */
 class TimelineDataLabelOptions extends DataLabelOptions {
   TimelineDataLabelOptions() : super();
-  bool? m_alternate;  
+  bool? _alternate;  
 
   bool get alternate { 
-    if (this.m_alternate == null) {
-      this.m_alternate = false;
+    if (this._alternate == null) {
+      this._alternate = false;
     }
-    return this.m_alternate!;
+    return this._alternate!;
   }
 
   void set alternate (bool v) {
-    this.m_alternate = v;
+    this._alternate = v;
   }
     
-  String? m_connectorColor;  
+  String? _connectorColor;  
 
   String get connectorColor { 
-    if (this.m_connectorColor == null) {
-      this.m_connectorColor = "";
+    if (this._connectorColor == null) {
+      this._connectorColor = "";
     }
-    return this.m_connectorColor!;
+    return this._connectorColor!;
   }
 
   void set connectorColor (String v) {
-    this.m_connectorColor = v;
+    this._connectorColor = v;
   }
     
-  double? m_connectorWidth;  
+  double? _connectorWidth;  
 
   double get connectorWidth { 
-    if (this.m_connectorWidth == null) {
-      this.m_connectorWidth = 0;
+    if (this._connectorWidth == null) {
+      this._connectorWidth = 0;
     }
-    return this.m_connectorWidth!;
+    return this._connectorWidth!;
   }
 
   void set connectorWidth (double v) {
-    this.m_connectorWidth = v;
+    this._connectorWidth = v;
   }
     
   /** NOTE: extdistance is skipped here for now, as it overrides the base type. */
 
-  double? m_width;  
+  double? _width;  
 
   double get width { 
-    if (this.m_width == null) {
-      this.m_width = 0;
+    if (this._width == null) {
+      this._width = 0;
     }
-    return this.m_width!;
+    return this._width!;
   }
 
   void set width (double v) {
-    this.m_width = v;
+    this._width = v;
   }
     
 
@@ -86,24 +86,22 @@ class TimelineDataLabelOptions extends DataLabelOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_alternate != null) {  
-      buffer.writeAll(["\"alternate\":", this.m_alternate, ","], "");
+    if (this._alternate != null) {  
+      buffer.writeAll(["\"alternate\":", this._alternate, ","], "");
     }
 
-    if (this.m_connectorColor != null) {  
-      buffer.writeAll(["\"connectorColor\":", this.m_connectorColor, ","], "");
+    if (this._connectorColor != null) {  
+      buffer.writeAll(["\"connectorColor\":\`", this._connectorColor, "\`,"], "");
     }
 
-    if (this.m_connectorWidth != null) {  
-      buffer.writeAll(["\"connectorWidth\":", this.m_connectorWidth, ","], "");
+    if (this._connectorWidth != null) {  
+      buffer.writeAll(["\"connectorWidth\":", this._connectorWidth, ","], "");
     }
 
-    if (this.m_distance != null) {  
-      buffer.writeAll(["\"distance\":", this.m_distance, ","], "");
-    }
+    // NOTE: skip serialization of distance (type number is ignored)} 
 
-    if (this.m_width != null) {  
-      buffer.writeAll(["\"width\":", this.m_width, ","], "");
+    if (this._width != null) {  
+      buffer.writeAll(["\"width\":", this._width, ","], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,108 +24,108 @@ import 'OptionFragment.dart';
  */
 class WGLSeriesObject extends OptionFragment {
   WGLSeriesObject() : super();
-  String? m_drawMode;  
+  String? _drawMode;  
 
   String get drawMode { 
-    if (this.m_drawMode == null) {
-      this.m_drawMode = "";
+    if (this._drawMode == null) {
+      this._drawMode = "";
     }
-    return this.m_drawMode!;
+    return this._drawMode!;
   }
 
   void set drawMode (String v) {
-    this.m_drawMode = v;
+    this._drawMode = v;
   }
     
-  bool? m_hasMarkers;  
+  bool? _hasMarkers;  
 
   bool get hasMarkers { 
-    if (this.m_hasMarkers == null) {
-      this.m_hasMarkers = false;
+    if (this._hasMarkers == null) {
+      this._hasMarkers = false;
     }
-    return this.m_hasMarkers!;
+    return this._hasMarkers!;
   }
 
   void set hasMarkers (bool v) {
-    this.m_hasMarkers = v;
+    this._hasMarkers = v;
   }
     
-  double? m_markerFrom;  
+  double? _markerFrom;  
 
   double get markerFrom { 
-    if (this.m_markerFrom == null) {
-      this.m_markerFrom = 0;
+    if (this._markerFrom == null) {
+      this._markerFrom = 0;
     }
-    return this.m_markerFrom!;
+    return this._markerFrom!;
   }
 
   void set markerFrom (double v) {
-    this.m_markerFrom = v;
+    this._markerFrom = v;
   }
     
-  double? m_markerTo;  
+  double? _markerTo;  
 
   double get markerTo { 
-    if (this.m_markerTo == null) {
-      this.m_markerTo = 0;
+    if (this._markerTo == null) {
+      this._markerTo = 0;
     }
-    return this.m_markerTo!;
+    return this._markerTo!;
   }
 
   void set markerTo (double v) {
-    this.m_markerTo = v;
+    this._markerTo = v;
   }
     
-  bool? m_showMarkers;  
+  bool? _showMarkers;  
 
   bool get showMarkers { 
-    if (this.m_showMarkers == null) {
-      this.m_showMarkers = false;
+    if (this._showMarkers == null) {
+      this._showMarkers = false;
     }
-    return this.m_showMarkers!;
+    return this._showMarkers!;
   }
 
   void set showMarkers (bool v) {
-    this.m_showMarkers = v;
+    this._showMarkers = v;
   }
     
-  bool? m_skipTranslation;  
+  bool? _skipTranslation;  
 
   bool get skipTranslation { 
-    if (this.m_skipTranslation == null) {
-      this.m_skipTranslation = false;
+    if (this._skipTranslation == null) {
+      this._skipTranslation = false;
     }
-    return this.m_skipTranslation!;
+    return this._skipTranslation!;
   }
 
   void set skipTranslation (bool v) {
-    this.m_skipTranslation = v;
+    this._skipTranslation = v;
   }
     
-  double? m_zMax;  
+  double? _zMax;  
 
   double get zMax { 
-    if (this.m_zMax == null) {
-      this.m_zMax = 0;
+    if (this._zMax == null) {
+      this._zMax = 0;
     }
-    return this.m_zMax!;
+    return this._zMax!;
   }
 
   void set zMax (double v) {
-    this.m_zMax = v;
+    this._zMax = v;
   }
     
-  double? m_zMin;  
+  double? _zMin;  
 
   double get zMin { 
-    if (this.m_zMin == null) {
-      this.m_zMin = 0;
+    if (this._zMin == null) {
+      this._zMin = 0;
     }
-    return this.m_zMin!;
+    return this._zMin!;
   }
 
   void set zMin (double v) {
-    this.m_zMin = v;
+    this._zMin = v;
   }
     
 
@@ -138,40 +138,40 @@ class WGLSeriesObject extends OptionFragment {
     
     // NOTE: skip serialization of colorData (type number[] is ignored)} 
 
-    if (this.m_drawMode != null) {  
-      buffer.writeAll(["\"drawMode\":", this.m_drawMode, ","], "");
+    if (this._drawMode != null) {  
+      buffer.writeAll(["\"drawMode\":\`", this._drawMode, "\`,"], "");
     }
 
-    if (this.m_hasMarkers != null) {  
-      buffer.writeAll(["\"hasMarkers\":", this.m_hasMarkers, ","], "");
+    if (this._hasMarkers != null) {  
+      buffer.writeAll(["\"hasMarkers\":", this._hasMarkers, ","], "");
     }
 
-    if (this.m_markerFrom != null) {  
-      buffer.writeAll(["\"markerFrom\":", this.m_markerFrom, ","], "");
+    if (this._markerFrom != null) {  
+      buffer.writeAll(["\"markerFrom\":", this._markerFrom, ","], "");
     }
 
-    if (this.m_markerTo != null) {  
-      buffer.writeAll(["\"markerTo\":", this.m_markerTo, ","], "");
+    if (this._markerTo != null) {  
+      buffer.writeAll(["\"markerTo\":", this._markerTo, ","], "");
     }
 
     // NOTE: skip serialization of segments (type Generic is ignored)} 
 
     // NOTE: skip serialization of series (type Series is ignored)} 
 
-    if (this.m_showMarkers != null) {  
-      buffer.writeAll(["\"showMarkers\":", this.m_showMarkers, ","], "");
+    if (this._showMarkers != null) {  
+      buffer.writeAll(["\"showMarkers\":", this._showMarkers, ","], "");
     }
 
-    if (this.m_skipTranslation != null) {  
-      buffer.writeAll(["\"skipTranslation\":", this.m_skipTranslation, ","], "");
+    if (this._skipTranslation != null) {  
+      buffer.writeAll(["\"skipTranslation\":", this._skipTranslation, ","], "");
     }
 
-    if (this.m_zMax != null) {  
-      buffer.writeAll(["\"zMax\":", this.m_zMax, ","], "");
+    if (this._zMax != null) {  
+      buffer.writeAll(["\"zMax\":", this._zMax, ","], "");
     }
 
-    if (this.m_zMin != null) {  
-      buffer.writeAll(["\"zMin\":", this.m_zMin, ","], "");
+    if (this._zMin != null) {  
+      buffer.writeAll(["\"zMin\":", this._zMin, ","], "");
     }
   }
 

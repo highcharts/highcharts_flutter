@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,17 +24,17 @@ import 'OptionFragment.dart';
  */
 class HistogramSeriesOptions extends ColumnSeriesOptions {
   HistogramSeriesOptions() : super();
-  String? m_baseSeries;  
+  String? _baseSeries;  
 
   String get baseSeries { 
-    if (this.m_baseSeries == null) {
-      this.m_baseSeries = "";
+    if (this._baseSeries == null) {
+      this._baseSeries = "";
     }
-    return this.m_baseSeries!;
+    return this._baseSeries!;
   }
 
   void set baseSeries (String v) {
-    this.m_baseSeries = v;
+    this._baseSeries = v;
   }
     
   /**
@@ -45,17 +45,17 @@ class HistogramSeriesOptions extends ColumnSeriesOptions {
    * which takes a `baseSeries` as a parameter and should return a
    * positive integer.  
       */
-  String? m_binsNumber;  
+  String? _binsNumber;  
 
   String get binsNumber { 
-    if (this.m_binsNumber == null) {
-      this.m_binsNumber = "";
+    if (this._binsNumber == null) {
+      this._binsNumber = "";
     }
-    return this.m_binsNumber!;
+    return this._binsNumber!;
   }
 
   void set binsNumber (String v) {
-    this.m_binsNumber = v;
+    this._binsNumber = v;
   }
     
   /**
@@ -63,17 +63,17 @@ class HistogramSeriesOptions extends ColumnSeriesOptions {
    * `(max - min) / number of bins`. This option takes precedence over
    * [binsNumber](#plotOptions.histogram.binsNumber).  
       */
-  double? m_binWidth;  
+  double? _binWidth;  
 
   double get binWidth { 
-    if (this.m_binWidth == null) {
-      this.m_binWidth = 0;
+    if (this._binWidth == null) {
+      this._binWidth = 0;
     }
-    return this.m_binWidth!;
+    return this._binWidth!;
   }
 
   void set binWidth (double v) {
-    this.m_binWidth = v;
+    this._binWidth = v;
   }
     
   // NOTE: states skipped - type Generic is ignored in gen
@@ -86,16 +86,16 @@ class HistogramSeriesOptions extends ColumnSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_baseSeries != null) {  
-      buffer.writeAll(["\"baseSeries\":", this.m_baseSeries, ","], "");
+    if (this._baseSeries != null) {  
+      buffer.writeAll(["\"baseSeries\":\`", this._baseSeries, "\`,"], "");
     }
 
-    if (this.m_binsNumber != null) {  
-      buffer.writeAll(["\"binsNumber\":", this.m_binsNumber, ","], "");
+    if (this._binsNumber != null) {  
+      buffer.writeAll(["\"binsNumber\":\`", this._binsNumber, "\`,"], "");
     }
 
-    if (this.m_binWidth != null) {  
-      buffer.writeAll(["\"binWidth\":", this.m_binWidth, ","], "");
+    if (this._binWidth != null) {  
+      buffer.writeAll(["\"binWidth\":", this._binWidth, ","], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 

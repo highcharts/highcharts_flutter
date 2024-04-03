@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,82 +23,82 @@ import 'OptionFragment.dart';
  */
 class ShadowOptionsObject extends OptionFragment {
   ShadowOptionsObject() : super();
-  String? m_color;  
+  String? _color;  
 
   String get color { 
-    if (this.m_color == null) {
-      this.m_color = "";
+    if (this._color == null) {
+      this._color = "";
     }
-    return this.m_color!;
+    return this._color!;
   }
 
   void set color (String v) {
-    this.m_color = v;
+    this._color = v;
   }
     
-  String? m_filterUnits;  
+  String? _filterUnits;  
 
   String get filterUnits { 
-    if (this.m_filterUnits == null) {
-      this.m_filterUnits = "";
+    if (this._filterUnits == null) {
+      this._filterUnits = "";
     }
-    return this.m_filterUnits!;
+    return this._filterUnits!;
   }
 
   void set filterUnits (String v) {
-    this.m_filterUnits = v;
+    this._filterUnits = v;
   }
     
-  double? m_offsetX;  
+  double? _offsetX;  
 
   double get offsetX { 
-    if (this.m_offsetX == null) {
-      this.m_offsetX = 0;
+    if (this._offsetX == null) {
+      this._offsetX = 0;
     }
-    return this.m_offsetX!;
+    return this._offsetX!;
   }
 
   void set offsetX (double v) {
-    this.m_offsetX = v;
+    this._offsetX = v;
   }
     
-  double? m_offsetY;  
+  double? _offsetY;  
 
   double get offsetY { 
-    if (this.m_offsetY == null) {
-      this.m_offsetY = 0;
+    if (this._offsetY == null) {
+      this._offsetY = 0;
     }
-    return this.m_offsetY!;
+    return this._offsetY!;
   }
 
   void set offsetY (double v) {
-    this.m_offsetY = v;
+    this._offsetY = v;
   }
     
-  double? m_opacity;  
+  double? _opacity;  
 
   double get opacity { 
-    if (this.m_opacity == null) {
-      this.m_opacity = 0;
+    if (this._opacity == null) {
+      this._opacity = 0;
     }
-    return this.m_opacity!;
+    return this._opacity!;
   }
 
   void set opacity (double v) {
-    this.m_opacity = v;
+    this._opacity = v;
   }
     
-  double? m_width;  
+  double? _width;  
 
   double get width { 
-    if (this.m_width == null) {
-      this.m_width = 0;
+    if (this._width == null) {
+      this._width = 0;
     }
-    return this.m_width!;
+    return this._width!;
   }
 
   void set width (double v) {
-    this.m_width = v;
+    this._width = v;
   }
     
 
@@ -109,28 +109,28 @@ class ShadowOptionsObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_color != null) {  
-      buffer.writeAll(["\"color\":", this.m_color, ","], "");
+    if (this._color != null) {  
+      buffer.writeAll(["\"color\":\`", this._color, "\`,"], "");
     }
 
-    if (this.m_filterUnits != null) {  
-      buffer.writeAll(["\"filterUnits\":", this.m_filterUnits, ","], "");
+    if (this._filterUnits != null) {  
+      buffer.writeAll(["\"filterUnits\":\`", this._filterUnits, "\`,"], "");
     }
 
-    if (this.m_offsetX != null) {  
-      buffer.writeAll(["\"offsetX\":", this.m_offsetX, ","], "");
+    if (this._offsetX != null) {  
+      buffer.writeAll(["\"offsetX\":", this._offsetX, ","], "");
     }
 
-    if (this.m_offsetY != null) {  
-      buffer.writeAll(["\"offsetY\":", this.m_offsetY, ","], "");
+    if (this._offsetY != null) {  
+      buffer.writeAll(["\"offsetY\":", this._offsetY, ","], "");
     }
 
-    if (this.m_opacity != null) {  
-      buffer.writeAll(["\"opacity\":", this.m_opacity, ","], "");
+    if (this._opacity != null) {  
+      buffer.writeAll(["\"opacity\":", this._opacity, ","], "");
     }
 
-    if (this.m_width != null) {  
-      buffer.writeAll(["\"width\":", this.m_width, ","], "");
+    if (this._width != null) {  
+      buffer.writeAll(["\"width\":", this._width, ","], "");
     }
   }
 

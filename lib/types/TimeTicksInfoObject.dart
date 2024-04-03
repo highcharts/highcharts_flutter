@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,17 +23,30 @@ import 'OptionFragment.dart';
  */
 class TimeTicksInfoObject extends OptionFragment {
   TimeTicksInfoObject() : super();
-  double? m_totalRange;  
+  double? _totalRange;  
 
   double get totalRange { 
-    if (this.m_totalRange == null) {
-      this.m_totalRange = 0;
+    if (this._totalRange == null) {
+      this._totalRange = 0;
     }
-    return this.m_totalRange!;
+    return this._totalRange!;
   }
 
   void set totalRange (double v) {
-    this.m_totalRange = v;
+    this._totalRange = v;
+  }
+    
+  double? _gapSize;  
+
+  double get gapSize { 
+    if (this._gapSize == null) {
+      this._gapSize = 0;
+    }
+    return this._gapSize!;
+  }
+
+  void set gapSize (double v) {
+    this._gapSize = v;
   }
     
 
@@ -46,8 +59,14 @@ class TimeTicksInfoObject extends OptionFragment {
     
     // NOTE: skip serialization of higherRanks (type Generic is ignored)} 
 
-    if (this.m_totalRange != null) {  
-      buffer.writeAll(["\"totalRange\":", this.m_totalRange, ","], "");
+    if (this._totalRange != null) {  
+      buffer.writeAll(["\"totalRange\":", this._totalRange, ","], "");
+    }
+
+    // NOTE: skip serialization of segmentStarts (type number[] is ignored)} 
+
+    if (this._gapSize != null) {  
+      buffer.writeAll(["\"gapSize\":", this._gapSize, ","], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -30,17 +30,17 @@ class SolidGaugeSeriesOptions extends GaugeSeriesOptions {
    * 
    * Defaults to '"60%"'. 
       */
-  String? m_innerRadius;  
+  String? _innerRadius;  
 
   String get innerRadius { 
-    if (this.m_innerRadius == null) {
-      this.m_innerRadius = "";
+    if (this._innerRadius == null) {
+      this._innerRadius = "";
     }
-    return this.m_innerRadius!;
+    return this._innerRadius!;
   }
 
   void set innerRadius (String v) {
-    this.m_innerRadius = v;
+    this._innerRadius = v;
   }
     
   /**
@@ -48,17 +48,17 @@ class SolidGaugeSeriesOptions extends GaugeSeriesOptions {
    * 
    * Defaults to 'round'. 
       */
-  String? m_linecap;  
+  String? _linecap;  
 
   String get linecap { 
-    if (this.m_linecap == null) {
-      this.m_linecap = "";
+    if (this._linecap == null) {
+      this._linecap = "";
     }
-    return this.m_linecap!;
+    return this._linecap!;
   }
 
   void set linecap (String v) {
-    this.m_linecap = v;
+    this._linecap = v;
   }
     
   /**
@@ -67,17 +67,17 @@ class SolidGaugeSeriesOptions extends GaugeSeriesOptions {
    * value of 100, or 1000, will show 5 degrees beyond the end of the
    * axis when this option is set to 5.  
       */
-  double? m_overshoot;  
+  double? _overshoot;  
 
   double get overshoot { 
-    if (this.m_overshoot == null) {
-      this.m_overshoot = 0;
+    if (this._overshoot == null) {
+      this._overshoot = 0;
     }
-    return this.m_overshoot!;
+    return this._overshoot!;
   }
 
   void set overshoot (double v) {
-    this.m_overshoot = v;
+    this._overshoot = v;
   }
     
   /**
@@ -86,17 +86,17 @@ class SolidGaugeSeriesOptions extends GaugeSeriesOptions {
    * 
    * Defaults to '"100%"'. 
       */
-  String? m_radius;  
+  String? _radius;  
 
   String get radius { 
-    if (this.m_radius == null) {
-      this.m_radius = "";
+    if (this._radius == null) {
+      this._radius = "";
     }
-    return this.m_radius!;
+    return this._radius!;
   }
 
   void set radius (String v) {
-    this.m_radius = v;
+    this._radius = v;
   }
     
   /**
@@ -108,17 +108,17 @@ class SolidGaugeSeriesOptions extends GaugeSeriesOptions {
    * 
    * Defaults to 'false'. 
       */
-  bool? m_rounded;  
+  bool? _rounded;  
 
   bool get rounded { 
-    if (this.m_rounded == null) {
-      this.m_rounded = false;
+    if (this._rounded == null) {
+      this._rounded = false;
     }
-    return this.m_rounded!;
+    return this._rounded!;
   }
 
   void set rounded (bool v) {
-    this.m_rounded = v;
+    this._rounded = v;
   }
     
   // NOTE: states skipped - type Generic is ignored in gen
@@ -130,17 +130,17 @@ class SolidGaugeSeriesOptions extends GaugeSeriesOptions {
    * 
    * Defaults to '0'. 
       */
-  double? m_threshold;  
+  double? _threshold;  
 
   double get threshold { 
-    if (this.m_threshold == null) {
-      this.m_threshold = 0;
+    if (this._threshold == null) {
+      this._threshold = 0;
     }
-    return this.m_threshold!;
+    return this._threshold!;
   }
 
   void set threshold (double v) {
-    this.m_threshold = v;
+    this._threshold = v;
   }
     
 
@@ -151,30 +151,30 @@ class SolidGaugeSeriesOptions extends GaugeSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_innerRadius != null) {  
-      buffer.writeAll(["\"innerRadius\":", this.m_innerRadius, ","], "");
+    if (this._innerRadius != null) {  
+      buffer.writeAll(["\"innerRadius\":\`", this._innerRadius, "\`,"], "");
     }
 
-    if (this.m_linecap != null) {  
-      buffer.writeAll(["\"linecap\":", this.m_linecap, ","], "");
+    if (this._linecap != null) {  
+      buffer.writeAll(["\"linecap\":\`", this._linecap, "\`,"], "");
     }
 
-    if (this.m_overshoot != null) {  
-      buffer.writeAll(["\"overshoot\":", this.m_overshoot, ","], "");
+    if (this._overshoot != null) {  
+      buffer.writeAll(["\"overshoot\":", this._overshoot, ","], "");
     }
 
-    if (this.m_radius != null) {  
-      buffer.writeAll(["\"radius\":", this.m_radius, ","], "");
+    if (this._radius != null) {  
+      buffer.writeAll(["\"radius\":\`", this._radius, "\`,"], "");
     }
 
-    if (this.m_rounded != null) {  
-      buffer.writeAll(["\"rounded\":", this.m_rounded, ","], "");
+    if (this._rounded != null) {  
+      buffer.writeAll(["\"rounded\":", this._rounded, ","], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 
 
-    if (this.m_threshold != null) {  
-      buffer.writeAll(["\"threshold\":", this.m_threshold, ","], "");
+    if (this._threshold != null) {  
+      buffer.writeAll(["\"threshold\":", this._threshold, ","], "");
     }
   }
 

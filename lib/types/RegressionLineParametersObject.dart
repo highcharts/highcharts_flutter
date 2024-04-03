@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,30 +23,30 @@ import 'OptionFragment.dart';
  */
 class RegressionLineParametersObject extends OptionFragment {
   RegressionLineParametersObject() : super();
-  double? m_slope;  
+  double? _slope;  
 
   double get slope { 
-    if (this.m_slope == null) {
-      this.m_slope = 0;
+    if (this._slope == null) {
+      this._slope = 0;
     }
-    return this.m_slope!;
+    return this._slope!;
   }
 
   void set slope (double v) {
-    this.m_slope = v;
+    this._slope = v;
   }
     
-  double? m_intercept;  
+  double? _intercept;  
 
   double get intercept { 
-    if (this.m_intercept == null) {
-      this.m_intercept = 0;
+    if (this._intercept == null) {
+      this._intercept = 0;
     }
-    return this.m_intercept!;
+    return this._intercept!;
   }
 
   void set intercept (double v) {
-    this.m_intercept = v;
+    this._intercept = v;
   }
     
 
@@ -57,12 +57,12 @@ class RegressionLineParametersObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_slope != null) {  
-      buffer.writeAll(["\"slope\":", this.m_slope, ","], "");
+    if (this._slope != null) {  
+      buffer.writeAll(["\"slope\":", this._slope, ","], "");
     }
 
-    if (this.m_intercept != null) {  
-      buffer.writeAll(["\"intercept\":", this.m_intercept, ","], "");
+    if (this._intercept != null) {  
+      buffer.writeAll(["\"intercept\":", this._intercept, ","], "");
     }
   }
 

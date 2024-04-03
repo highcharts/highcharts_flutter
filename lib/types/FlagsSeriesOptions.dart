@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -30,17 +30,17 @@ class FlagsSeriesOptions extends ColumnSeriesOptions {
    * flags are moved sideways using an algorithm that seeks to place every
    * flag as close as possible to its original position.  
       */
-  bool? m_allowOverlapX;  
+  bool? _allowOverlapX;  
 
   bool get allowOverlapX { 
-    if (this.m_allowOverlapX == null) {
-      this.m_allowOverlapX = false;
+    if (this._allowOverlapX == null) {
+      this._allowOverlapX = false;
     }
-    return this.m_allowOverlapX!;
+    return this._allowOverlapX!;
   }
 
   void set allowOverlapX (bool v) {
-    this.m_allowOverlapX = v;
+    this._allowOverlapX = v;
   }
     
   /**
@@ -48,34 +48,34 @@ class FlagsSeriesOptions extends ColumnSeriesOptions {
    * 
    * Defaults to '#ffffff'. 
       */
-  String? m_fillColor;  
+  String? _fillColor;  
 
   String get fillColor { 
-    if (this.m_fillColor == null) {
-      this.m_fillColor = "";
+    if (this._fillColor == null) {
+      this._fillColor = "";
     }
-    return this.m_fillColor!;
+    return this._fillColor!;
   }
 
   void set fillColor (String v) {
-    this.m_fillColor = v;
+    this._fillColor = v;
   }
     
   /**
    * Fixed height of the flag's shape. By default, height is
    * autocalculated according to the flag's title.  
       */
-  double? m_height;  
+  double? _height;  
 
   double get height { 
-    if (this.m_height == null) {
-      this.m_height = 0;
+    if (this._height == null) {
+      this._height = 0;
     }
-    return this.m_height!;
+    return this._height!;
   }
 
   void set height (double v) {
-    this.m_height = v;
+    this._height = v;
   }
     
   /**
@@ -86,17 +86,17 @@ class FlagsSeriesOptions extends ColumnSeriesOptions {
    * 
    * Defaults to '#000000'. 
       */
-  String? m_lineColor;  
+  String? _lineColor;  
 
   String get lineColor { 
-    if (this.m_lineColor == null) {
-      this.m_lineColor = "";
+    if (this._lineColor == null) {
+      this._lineColor = "";
     }
-    return this.m_lineColor!;
+    return this._lineColor!;
   }
 
   void set lineColor (String v) {
-    this.m_lineColor = v;
+    this._lineColor = v;
   }
     
   /**
@@ -104,17 +104,17 @@ class FlagsSeriesOptions extends ColumnSeriesOptions {
    * 
    * Defaults to '1'. 
       */
-  double? m_lineWidth;  
+  double? _lineWidth;  
 
   double get lineWidth { 
-    if (this.m_lineWidth == null) {
-      this.m_lineWidth = 0;
+    if (this._lineWidth == null) {
+      this._lineWidth = 0;
     }
-    return this.m_lineWidth!;
+    return this._lineWidth!;
   }
 
   void set lineWidth (double v) {
-    this.m_lineWidth = v;
+    this._lineWidth = v;
   }
     
   /**
@@ -125,34 +125,34 @@ class FlagsSeriesOptions extends ColumnSeriesOptions {
    * 
    * Defaults to 'y'. 
       */
-  String? m_onKey;  
+  String? _onKey;  
 
   String get onKey { 
-    if (this.m_onKey == null) {
-      this.m_onKey = "";
+    if (this._onKey == null) {
+      this._onKey = "";
     }
-    return this.m_onKey!;
+    return this._onKey!;
   }
 
   void set onKey (String v) {
-    this.m_onKey = v;
+    this._onKey = v;
   }
     
   /**
    * The id of the series that the flags should be drawn on. If no id
    * is given, the flags are drawn on the x axis.  
       */
-  String? m_onSeries;  
+  String? _onSeries;  
 
   String get onSeries { 
-    if (this.m_onSeries == null) {
-      this.m_onSeries = "";
+    if (this._onSeries == null) {
+      this._onSeries = "";
     }
-    return this.m_onSeries!;
+    return this._onSeries!;
   }
 
   void set onSeries (String v) {
-    this.m_onSeries = v;
+    this._onSeries = v;
   }
     
   /**
@@ -162,17 +162,17 @@ class FlagsSeriesOptions extends ColumnSeriesOptions {
    * 
    * Defaults to 'flag'. 
       */
-  String? m_shape;  
+  String? _shape;  
 
   String get shape { 
-    if (this.m_shape == null) {
-      this.m_shape = "";
+    if (this._shape == null) {
+      this._shape = "";
     }
-    return this.m_shape!;
+    return this._shape!;
   }
 
   void set shape (String v) {
-    this.m_shape = v;
+    this._shape = v;
   }
     
   /**
@@ -181,17 +181,17 @@ class FlagsSeriesOptions extends ColumnSeriesOptions {
    * 
    * Defaults to '12'. 
       */
-  double? m_stackDistance;  
+  double? _stackDistance;  
 
   double get stackDistance { 
-    if (this.m_stackDistance == null) {
-      this.m_stackDistance = 0;
+    if (this._stackDistance == null) {
+      this._stackDistance = 0;
     }
-    return this.m_stackDistance!;
+    return this._stackDistance!;
   }
 
   void set stackDistance (double v) {
-    this.m_stackDistance = v;
+    this._stackDistance = v;
   }
     
   // NOTE: states skipped - type Generic is ignored in gen
@@ -204,17 +204,17 @@ class FlagsSeriesOptions extends ColumnSeriesOptions {
    * 
    * Defaults to '{"fontSize": "11px", "fontWeight": "bold"}'. 
       */
-  CSSObject? m_style;  
+  CSSObject? _style;  
 
   CSSObject get style { 
-    if (this.m_style == null) {
-      this.m_style = CSSObject();
+    if (this._style == null) {
+      this._style = CSSObject();
     }
-    return this.m_style!;
+    return this._style!;
   }
 
   void set style (CSSObject v) {
-    this.m_style = v;
+    this._style = v;
   }
     
   /**
@@ -222,17 +222,17 @@ class FlagsSeriesOptions extends ColumnSeriesOptions {
    * 
    * Defaults to 'center'. 
       */
-  String? m_textAlign;  
+  String? _textAlign;  
 
   String get textAlign { 
-    if (this.m_textAlign == null) {
-      this.m_textAlign = "";
+    if (this._textAlign == null) {
+      this._textAlign = "";
     }
-    return this.m_textAlign!;
+    return this._textAlign!;
   }
 
   void set textAlign (String v) {
-    this.m_textAlign = v;
+    this._textAlign = v;
   }
     
   /**
@@ -241,17 +241,17 @@ class FlagsSeriesOptions extends ColumnSeriesOptions {
    * 
    * Defaults to 'A'. 
       */
-  String? m_title;  
+  String? _title;  
 
   String get title { 
-    if (this.m_title == null) {
-      this.m_title = "";
+    if (this._title == null) {
+      this._title = "";
     }
-    return this.m_title!;
+    return this._title!;
   }
 
   void set title (String v) {
-    this.m_title = v;
+    this._title = v;
   }
     
   /**
@@ -262,34 +262,34 @@ class FlagsSeriesOptions extends ColumnSeriesOptions {
    * 
    * Defaults to 'false'. 
       */
-  bool? m_useHTML;  
+  bool? _useHTML;  
 
   bool get useHTML { 
-    if (this.m_useHTML == null) {
-      this.m_useHTML = false;
+    if (this._useHTML == null) {
+      this._useHTML = false;
     }
-    return this.m_useHTML!;
+    return this._useHTML!;
   }
 
   void set useHTML (bool v) {
-    this.m_useHTML = v;
+    this._useHTML = v;
   }
     
   /**
    * Fixed width of the flag's shape. By default, width is autocalculated
    * according to the flag's title.  
       */
-  double? m_width;  
+  double? _width;  
 
   double get width { 
-    if (this.m_width == null) {
-      this.m_width = 0;
+    if (this._width == null) {
+      this._width = 0;
     }
-    return this.m_width!;
+    return this._width!;
   }
 
   void set width (double v) {
-    this.m_width = v;
+    this._width = v;
   }
     
   /**
@@ -299,17 +299,17 @@ class FlagsSeriesOptions extends ColumnSeriesOptions {
    * 
    * Defaults to '-30'. 
       */
-  double? m_y;  
+  double? _y;  
 
   double get y { 
-    if (this.m_y == null) {
-      this.m_y = 0;
+    if (this._y == null) {
+      this._y = 0;
     }
-    return this.m_y!;
+    return this._y!;
   }
 
   void set y (double v) {
-    this.m_y = v;
+    this._y = v;
   }
     
 
@@ -320,66 +320,66 @@ class FlagsSeriesOptions extends ColumnSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_allowOverlapX != null) {  
-      buffer.writeAll(["\"allowOverlapX\":", this.m_allowOverlapX, ","], "");
+    if (this._allowOverlapX != null) {  
+      buffer.writeAll(["\"allowOverlapX\":", this._allowOverlapX, ","], "");
     }
 
-    if (this.m_fillColor != null) {  
-      buffer.writeAll(["\"fillColor\":", this.m_fillColor, ","], "");
+    if (this._fillColor != null) {  
+      buffer.writeAll(["\"fillColor\":\`", this._fillColor, "\`,"], "");
     }
 
-    if (this.m_height != null) {  
-      buffer.writeAll(["\"height\":", this.m_height, ","], "");
+    if (this._height != null) {  
+      buffer.writeAll(["\"height\":", this._height, ","], "");
     }
 
-    if (this.m_lineColor != null) {  
-      buffer.writeAll(["\"lineColor\":", this.m_lineColor, ","], "");
+    if (this._lineColor != null) {  
+      buffer.writeAll(["\"lineColor\":\`", this._lineColor, "\`,"], "");
     }
 
-    if (this.m_lineWidth != null) {  
-      buffer.writeAll(["\"lineWidth\":", this.m_lineWidth, ","], "");
+    if (this._lineWidth != null) {  
+      buffer.writeAll(["\"lineWidth\":", this._lineWidth, ","], "");
     }
 
-    if (this.m_onKey != null) {  
-      buffer.writeAll(["\"onKey\":", this.m_onKey, ","], "");
+    if (this._onKey != null) {  
+      buffer.writeAll(["\"onKey\":\`", this._onKey, "\`,"], "");
     }
 
-    if (this.m_onSeries != null) {  
-      buffer.writeAll(["\"onSeries\":", this.m_onSeries, ","], "");
+    if (this._onSeries != null) {  
+      buffer.writeAll(["\"onSeries\":\`", this._onSeries, "\`,"], "");
     }
 
-    if (this.m_shape != null) {  
-      buffer.writeAll(["\"shape\":", this.m_shape, ","], "");
+    if (this._shape != null) {  
+      buffer.writeAll(["\"shape\":\`", this._shape, "\`,"], "");
     }
 
-    if (this.m_stackDistance != null) {  
-      buffer.writeAll(["\"stackDistance\":", this.m_stackDistance, ","], "");
+    if (this._stackDistance != null) {  
+      buffer.writeAll(["\"stackDistance\":", this._stackDistance, ","], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 
 
-    if (this.m_style != null) {  
-      buffer.writeAll(["\"style\":", this.m_style?.toJSON(), ","], "");
+    if (this._style != null) {  
+      buffer.writeAll(["\"style\":", this._style?.toJSON(), ","], "");
     }
 
-    if (this.m_textAlign != null) {  
-      buffer.writeAll(["\"textAlign\":", this.m_textAlign, ","], "");
+    if (this._textAlign != null) {  
+      buffer.writeAll(["\"textAlign\":\`", this._textAlign, "\`,"], "");
     }
 
-    if (this.m_title != null) {  
-      buffer.writeAll(["\"title\":", this.m_title, ","], "");
+    if (this._title != null) {  
+      buffer.writeAll(["\"title\":\`", this._title, "\`,"], "");
     }
 
-    if (this.m_useHTML != null) {  
-      buffer.writeAll(["\"useHTML\":", this.m_useHTML, ","], "");
+    if (this._useHTML != null) {  
+      buffer.writeAll(["\"useHTML\":", this._useHTML, ","], "");
     }
 
-    if (this.m_width != null) {  
-      buffer.writeAll(["\"width\":", this.m_width, ","], "");
+    if (this._width != null) {  
+      buffer.writeAll(["\"width\":", this._width, ","], "");
     }
 
-    if (this.m_y != null) {  
-      buffer.writeAll(["\"y\":", this.m_y, ","], "");
+    if (this._y != null) {  
+      buffer.writeAll(["\"y\":", this._y, ","], "");
     }
   }
 

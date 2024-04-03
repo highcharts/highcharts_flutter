@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,69 +24,69 @@ import 'OptionFragment.dart';
  */
 class SVGArc3D extends OptionFragment {
   SVGArc3D() : super();
-  double? m_zInn;  
+  double? _zInn;  
 
   double get zInn { 
-    if (this.m_zInn == null) {
-      this.m_zInn = 0;
+    if (this._zInn == null) {
+      this._zInn = 0;
     }
-    return this.m_zInn!;
+    return this._zInn!;
   }
 
   void set zInn (double v) {
-    this.m_zInn = v;
+    this._zInn = v;
   }
     
-  double? m_zOut;  
+  double? _zOut;  
 
   double get zOut { 
-    if (this.m_zOut == null) {
-      this.m_zOut = 0;
+    if (this._zOut == null) {
+      this._zOut = 0;
     }
-    return this.m_zOut!;
+    return this._zOut!;
   }
 
   void set zOut (double v) {
-    this.m_zOut = v;
+    this._zOut = v;
   }
     
-  double? m_zSide1;  
+  double? _zSide1;  
 
   double get zSide1 { 
-    if (this.m_zSide1 == null) {
-      this.m_zSide1 = 0;
+    if (this._zSide1 == null) {
+      this._zSide1 = 0;
     }
-    return this.m_zSide1!;
+    return this._zSide1!;
   }
 
   void set zSide1 (double v) {
-    this.m_zSide1 = v;
+    this._zSide1 = v;
   }
     
-  double? m_zSide2;  
+  double? _zSide2;  
 
   double get zSide2 { 
-    if (this.m_zSide2 == null) {
-      this.m_zSide2 = 0;
+    if (this._zSide2 == null) {
+      this._zSide2 = 0;
     }
-    return this.m_zSide2!;
+    return this._zSide2!;
   }
 
   void set zSide2 (double v) {
-    this.m_zSide2 = v;
+    this._zSide2 = v;
   }
     
-  double? m_zTop;  
+  double? _zTop;  
 
   double get zTop { 
-    if (this.m_zTop == null) {
-      this.m_zTop = 0;
+    if (this._zTop == null) {
+      this._zTop = 0;
     }
-    return this.m_zTop!;
+    return this._zTop!;
   }
 
   void set zTop (double v) {
-    this.m_zTop = v;
+    this._zTop = v;
   }
     
 
@@ -107,24 +107,24 @@ class SVGArc3D extends OptionFragment {
 
     // NOTE: skip serialization of top (type SVGPath is ignored)} 
 
-    if (this.m_zInn != null) {  
-      buffer.writeAll(["\"zInn\":", this.m_zInn, ","], "");
+    if (this._zInn != null) {  
+      buffer.writeAll(["\"zInn\":", this._zInn, ","], "");
     }
 
-    if (this.m_zOut != null) {  
-      buffer.writeAll(["\"zOut\":", this.m_zOut, ","], "");
+    if (this._zOut != null) {  
+      buffer.writeAll(["\"zOut\":", this._zOut, ","], "");
     }
 
-    if (this.m_zSide1 != null) {  
-      buffer.writeAll(["\"zSide1\":", this.m_zSide1, ","], "");
+    if (this._zSide1 != null) {  
+      buffer.writeAll(["\"zSide1\":", this._zSide1, ","], "");
     }
 
-    if (this.m_zSide2 != null) {  
-      buffer.writeAll(["\"zSide2\":", this.m_zSide2, ","], "");
+    if (this._zSide2 != null) {  
+      buffer.writeAll(["\"zSide2\":", this._zSide2, ","], "");
     }
 
-    if (this.m_zTop != null) {  
-      buffer.writeAll(["\"zTop\":", this.m_zTop, ","], "");
+    if (this._zTop != null) {  
+      buffer.writeAll(["\"zTop\":", this._zTop, ","], "");
     }
   }
 

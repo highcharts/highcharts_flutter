@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,30 +23,43 @@ import 'OptionFragment.dart';
  */
 class SVGPath extends OptionFragment {
   SVGPath() : super();
-  double? m_xMap;  
+  bool? _isFlat;  
+
+  bool get isFlat { 
+    if (this._isFlat == null) {
+      this._isFlat = false;
+    }
+    return this._isFlat!;
+  }
+
+  void set isFlat (bool v) {
+    this._isFlat = v;
+  }
+    
+  double? _xMap;  
 
   double get xMap { 
-    if (this.m_xMap == null) {
-      this.m_xMap = 0;
+    if (this._xMap == null) {
+      this._xMap = 0;
     }
-    return this.m_xMap!;
+    return this._xMap!;
   }
 
   void set xMap (double v) {
-    this.m_xMap = v;
+    this._xMap = v;
   }
     
-  bool? m_isArea;  
+  bool? _isArea;  
 
   bool get isArea { 
-    if (this.m_isArea == null) {
-      this.m_isArea = false;
+    if (this._isArea == null) {
+      this._isArea = false;
     }
-    return this.m_isArea!;
+    return this._isArea!;
   }
 
   void set isArea (bool v) {
-    this.m_isArea = v;
+    this._isArea = v;
   }
     
 
@@ -57,12 +70,20 @@ class SVGPath extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_xMap != null) {  
-      buffer.writeAll(["\"xMap\":", this.m_xMap, ","], "");
+    if (this._isFlat != null) {  
+      buffer.writeAll(["\"isFlat\":", this._isFlat, ","], "");
     }
 
-    if (this.m_isArea != null) {  
-      buffer.writeAll(["\"isArea\":", this.m_isArea, ","], "");
+    // NOTE: skip serialization of xBounds (type number[] is ignored)} 
+
+    // NOTE: skip serialization of yBounds (type number[] is ignored)} 
+
+    if (this._xMap != null) {  
+      buffer.writeAll(["\"xMap\":", this._xMap, ","], "");
+    }
+
+    if (this._isArea != null) {  
+      buffer.writeAll(["\"isArea\":", this._isArea, ","], "");
     }
   }
 

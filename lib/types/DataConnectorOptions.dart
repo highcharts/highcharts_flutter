@@ -12,10 +12,11 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
+import 'SortModifierOptions.dart';
 import 'DataTableOptions.dart';
 import 'Metadata.dart';
 import 'OptionFragment.dart';
@@ -34,7 +35,7 @@ class DataConnectorOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of dataModifier (type never is ignored)} 
+    // NOTE: skip serialization of dataModifier (type SortModifierOptions is ignored)} 
 
     // NOTE: skip serialization of dataTable (type DataTableOptions is ignored)} 
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,69 +23,69 @@ import 'OptionFragment.dart';
  */
 class SetTreeValuesOptions extends OptionFragment {
   SetTreeValuesOptions() : super();
-  String? m_idRoot;  
+  String? _idRoot;  
 
   String get idRoot { 
-    if (this.m_idRoot == null) {
-      this.m_idRoot = "";
+    if (this._idRoot == null) {
+      this._idRoot = "";
     }
-    return this.m_idRoot!;
+    return this._idRoot!;
   }
 
   void set idRoot (String v) {
-    this.m_idRoot = v;
+    this._idRoot = v;
   }
     
-  double? m_index;  
+  double? _index;  
 
   double get index { 
-    if (this.m_index == null) {
-      this.m_index = 0;
+    if (this._index == null) {
+      this._index = 0;
     }
-    return this.m_index!;
+    return this._index!;
   }
 
   void set index (double v) {
-    this.m_index = v;
+    this._index = v;
   }
     
-  bool? m_levelIsConstant;  
+  bool? _levelIsConstant;  
 
   bool get levelIsConstant { 
-    if (this.m_levelIsConstant == null) {
-      this.m_levelIsConstant = false;
+    if (this._levelIsConstant == null) {
+      this._levelIsConstant = false;
     }
-    return this.m_levelIsConstant!;
+    return this._levelIsConstant!;
   }
 
   void set levelIsConstant (bool v) {
-    this.m_levelIsConstant = v;
+    this._levelIsConstant = v;
   }
     
-  double? m_siblings;  
+  double? _siblings;  
 
   double get siblings { 
-    if (this.m_siblings == null) {
-      this.m_siblings = 0;
+    if (this._siblings == null) {
+      this._siblings = 0;
     }
-    return this.m_siblings!;
+    return this._siblings!;
   }
 
   void set siblings (double v) {
-    this.m_siblings = v;
+    this._siblings = v;
   }
     
-  bool? m_visible;  
+  bool? _visible;  
 
   bool get visible { 
-    if (this.m_visible == null) {
-      this.m_visible = false;
+    if (this._visible == null) {
+      this._visible = false;
     }
-    return this.m_visible!;
+    return this._visible!;
   }
 
   void set visible (bool v) {
-    this.m_visible = v;
+    this._visible = v;
   }
     
 
@@ -96,16 +96,16 @@ class SetTreeValuesOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_idRoot != null) {  
-      buffer.writeAll(["\"idRoot\":", this.m_idRoot, ","], "");
+    if (this._idRoot != null) {  
+      buffer.writeAll(["\"idRoot\":\`", this._idRoot, "\`,"], "");
     }
 
-    if (this.m_index != null) {  
-      buffer.writeAll(["\"index\":", this.m_index, ","], "");
+    if (this._index != null) {  
+      buffer.writeAll(["\"index\":", this._index, ","], "");
     }
 
-    if (this.m_levelIsConstant != null) {  
-      buffer.writeAll(["\"levelIsConstant\":", this.m_levelIsConstant, ","], "");
+    if (this._levelIsConstant != null) {  
+      buffer.writeAll(["\"levelIsConstant\":", this._levelIsConstant, ","], "");
     }
 
     // NOTE: skip serialization of mapIdToNode (type Record<string, NodeObject> is ignored)} 
@@ -114,12 +114,12 @@ class SetTreeValuesOptions extends OptionFragment {
 
     // NOTE: skip serialization of series (type T is ignored)} 
 
-    if (this.m_siblings != null) {  
-      buffer.writeAll(["\"siblings\":", this.m_siblings, ","], "");
+    if (this._siblings != null) {  
+      buffer.writeAll(["\"siblings\":", this._siblings, ","], "");
     }
 
-    if (this.m_visible != null) {  
-      buffer.writeAll(["\"visible\":", this.m_visible, ","], "");
+    if (this._visible != null) {  
+      buffer.writeAll(["\"visible\":", this._visible, ","], "");
     }
   }
 

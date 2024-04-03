@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -36,17 +36,17 @@ class OBVOptions extends SMAOptions {
    * In styled mode, the markers can be styled with the `.highcharts-point`,
    * `.highcharts-point-hover` and `.highcharts-point-select` class names.  
       */
-  PointMarkerOptions? m_marker;  
+  PointMarkerOptions? _marker;  
 
   PointMarkerOptions get marker { 
-    if (this.m_marker == null) {
-      this.m_marker = PointMarkerOptions();
+    if (this._marker == null) {
+      this._marker = PointMarkerOptions();
     }
-    return this.m_marker!;
+    return this._marker!;
   }
 
   void set marker (PointMarkerOptions v) {
-    this.m_marker = v;
+    this._marker = v;
   }
     
   /**
@@ -62,13 +62,11 @@ class OBVOptions extends SMAOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_marker != null) {  
-      buffer.writeAll(["\"marker\":", this.m_marker?.toJSON(), ","], "");
+    if (this._marker != null) {  
+      buffer.writeAll(["\"marker\":", this._marker?.toJSON(), ","], "");
     }
 
-    if (this.m_params != null) {  
-      buffer.writeAll(["\"params\":", this.m_params?.toJSON(), ","], "");
-    }
+    // NOTE: skip serialization of params (type OBVParamsOptions is ignored)} 
   }
 
 }

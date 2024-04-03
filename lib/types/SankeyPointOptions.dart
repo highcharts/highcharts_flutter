@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,134 +24,134 @@ import 'OptionFragment.dart';
  */
 class SankeyPointOptions extends ColumnPointOptions {
   SankeyPointOptions() : super();
-  double? m_column;  
+  double? _column;  
 
   double get column { 
-    if (this.m_column == null) {
-      this.m_column = 0;
+    if (this._column == null) {
+      this._column = 0;
     }
-    return this.m_column!;
+    return this._column!;
   }
 
   void set column (double v) {
-    this.m_column = v;
+    this._column = v;
   }
     
-  String? m_from;  
+  String? _from;  
 
   String get from { 
-    if (this.m_from == null) {
-      this.m_from = "";
+    if (this._from == null) {
+      this._from = "";
     }
-    return this.m_from!;
+    return this._from!;
   }
 
   void set from (String v) {
-    this.m_from = v;
+    this._from = v;
   }
     
-  double? m_height;  
+  double? _height;  
 
   double get height { 
-    if (this.m_height == null) {
-      this.m_height = 0;
+    if (this._height == null) {
+      this._height = 0;
     }
-    return this.m_height!;
+    return this._height!;
   }
 
   void set height (double v) {
-    this.m_height = v;
+    this._height = v;
   }
     
-  double? m_level;  
+  double? _level;  
 
   double get level { 
-    if (this.m_level == null) {
-      this.m_level = 0;
+    if (this._level == null) {
+      this._level = 0;
     }
-    return this.m_level!;
+    return this._level!;
   }
 
   void set level (double v) {
-    this.m_level = v;
+    this._level = v;
   }
     
-  String? m_linkColorMode;  
+  String? _linkColorMode;  
 
   String get linkColorMode { 
-    if (this.m_linkColorMode == null) {
-      this.m_linkColorMode = "";
+    if (this._linkColorMode == null) {
+      this._linkColorMode = "";
     }
-    return this.m_linkColorMode!;
+    return this._linkColorMode!;
   }
 
   void set linkColorMode (String v) {
-    this.m_linkColorMode = v;
+    this._linkColorMode = v;
   }
     
-  String? m_offset;  
+  String? _offset;  
 
   String get offset { 
-    if (this.m_offset == null) {
-      this.m_offset = "";
+    if (this._offset == null) {
+      this._offset = "";
     }
-    return this.m_offset!;
+    return this._offset!;
   }
 
   void set offset (String v) {
-    this.m_offset = v;
+    this._offset = v;
   }
     
-  String? m_offsetHorizontal;  
+  String? _offsetHorizontal;  
 
   String get offsetHorizontal { 
-    if (this.m_offsetHorizontal == null) {
-      this.m_offsetHorizontal = "";
+    if (this._offsetHorizontal == null) {
+      this._offsetHorizontal = "";
     }
-    return this.m_offsetHorizontal!;
+    return this._offsetHorizontal!;
   }
 
   void set offsetHorizontal (String v) {
-    this.m_offsetHorizontal = v;
+    this._offsetHorizontal = v;
   }
     
-  String? m_offsetVertical;  
+  String? _offsetVertical;  
 
   String get offsetVertical { 
-    if (this.m_offsetVertical == null) {
-      this.m_offsetVertical = "";
+    if (this._offsetVertical == null) {
+      this._offsetVertical = "";
     }
-    return this.m_offsetVertical!;
+    return this._offsetVertical!;
   }
 
   void set offsetVertical (String v) {
-    this.m_offsetVertical = v;
+    this._offsetVertical = v;
   }
     
-  String? m_to;  
+  String? _to;  
 
   String get to { 
-    if (this.m_to == null) {
-      this.m_to = "";
+    if (this._to == null) {
+      this._to = "";
     }
-    return this.m_to!;
+    return this._to!;
   }
 
   void set to (String v) {
-    this.m_to = v;
+    this._to = v;
   }
     
-  double? m_width;  
+  double? _width;  
 
   double get width { 
-    if (this.m_width == null) {
-      this.m_width = 0;
+    if (this._width == null) {
+      this._width = 0;
     }
-    return this.m_width!;
+    return this._width!;
   }
 
   void set width (double v) {
-    this.m_width = v;
+    this._width = v;
   }
     
 
@@ -162,44 +162,44 @@ class SankeyPointOptions extends ColumnPointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_column != null) {  
-      buffer.writeAll(["\"column\":", this.m_column, ","], "");
+    if (this._column != null) {  
+      buffer.writeAll(["\"column\":", this._column, ","], "");
     }
 
-    if (this.m_from != null) {  
-      buffer.writeAll(["\"from\":", this.m_from, ","], "");
+    if (this._from != null) {  
+      buffer.writeAll(["\"from\":\`", this._from, "\`,"], "");
     }
 
-    if (this.m_height != null) {  
-      buffer.writeAll(["\"height\":", this.m_height, ","], "");
+    if (this._height != null) {  
+      buffer.writeAll(["\"height\":", this._height, ","], "");
     }
 
-    if (this.m_level != null) {  
-      buffer.writeAll(["\"level\":", this.m_level, ","], "");
+    if (this._level != null) {  
+      buffer.writeAll(["\"level\":", this._level, ","], "");
     }
 
-    if (this.m_linkColorMode != null) {  
-      buffer.writeAll(["\"linkColorMode\":", this.m_linkColorMode, ","], "");
+    if (this._linkColorMode != null) {  
+      buffer.writeAll(["\"linkColorMode\":\`", this._linkColorMode, "\`,"], "");
     }
 
-    if (this.m_offset != null) {  
-      buffer.writeAll(["\"offset\":", this.m_offset, ","], "");
+    if (this._offset != null) {  
+      buffer.writeAll(["\"offset\":\`", this._offset, "\`,"], "");
     }
 
-    if (this.m_offsetHorizontal != null) {  
-      buffer.writeAll(["\"offsetHorizontal\":", this.m_offsetHorizontal, ","], "");
+    if (this._offsetHorizontal != null) {  
+      buffer.writeAll(["\"offsetHorizontal\":\`", this._offsetHorizontal, "\`,"], "");
     }
 
-    if (this.m_offsetVertical != null) {  
-      buffer.writeAll(["\"offsetVertical\":", this.m_offsetVertical, ","], "");
+    if (this._offsetVertical != null) {  
+      buffer.writeAll(["\"offsetVertical\":\`", this._offsetVertical, "\`,"], "");
     }
 
-    if (this.m_to != null) {  
-      buffer.writeAll(["\"to\":", this.m_to, ","], "");
+    if (this._to != null) {  
+      buffer.writeAll(["\"to\":\`", this._to, "\`,"], "");
     }
 
-    if (this.m_width != null) {  
-      buffer.writeAll(["\"width\":", this.m_width, ","], "");
+    if (this._width != null) {  
+      buffer.writeAll(["\"width\":", this._width, ","], "");
     }
   }
 

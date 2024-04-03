@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,43 +24,43 @@ import 'OptionFragment.dart';
  */
 class AnnotationTypeOptions extends OptionFragment {
   AnnotationTypeOptions() : super();
-  double? m_height;  
+  double? _height;  
 
   double get height { 
-    if (this.m_height == null) {
-      this.m_height = 0;
+    if (this._height == null) {
+      this._height = 0;
     }
-    return this.m_height!;
+    return this._height!;
   }
 
   void set height (double v) {
-    this.m_height = v;
+    this._height = v;
   }
     
-  double? m_xAxis;  
+  double? _xAxis;  
 
   double get xAxis { 
-    if (this.m_xAxis == null) {
-      this.m_xAxis = 0;
+    if (this._xAxis == null) {
+      this._xAxis = 0;
     }
-    return this.m_xAxis!;
+    return this._xAxis!;
   }
 
   void set xAxis (double v) {
-    this.m_xAxis = v;
+    this._xAxis = v;
   }
     
-  double? m_yAxis;  
+  double? _yAxis;  
 
   double get yAxis { 
-    if (this.m_yAxis == null) {
-      this.m_yAxis = 0;
+    if (this._yAxis == null) {
+      this._yAxis = 0;
     }
-    return this.m_yAxis!;
+    return this._yAxis!;
   }
 
   void set yAxis (double v) {
-    this.m_yAxis = v;
+    this._yAxis = v;
   }
     
 
@@ -73,8 +73,8 @@ class AnnotationTypeOptions extends OptionFragment {
     
     // NOTE: skip serialization of background (type Generic is ignored)} 
 
-    if (this.m_height != null) {  
-      buffer.writeAll(["\"height\":", this.m_height, ","], "");
+    if (this._height != null) {  
+      buffer.writeAll(["\"height\":", this._height, ","], "");
     }
 
     // NOTE: skip serialization of line (type Generic is ignored)} 
@@ -83,12 +83,12 @@ class AnnotationTypeOptions extends OptionFragment {
 
     // NOTE: skip serialization of points (type AnnotationTypePointsOptions[] is ignored)} 
 
-    if (this.m_xAxis != null) {  
-      buffer.writeAll(["\"xAxis\":", this.m_xAxis, ","], "");
+    if (this._xAxis != null) {  
+      buffer.writeAll(["\"xAxis\":", this._xAxis, ","], "");
     }
 
-    if (this.m_yAxis != null) {  
-      buffer.writeAll(["\"yAxis\":", this.m_yAxis, ","], "");
+    if (this._yAxis != null) {  
+      buffer.writeAll(["\"yAxis\":", this._yAxis, ","], "");
     }
   }
 

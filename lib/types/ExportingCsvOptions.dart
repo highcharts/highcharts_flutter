@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,56 +24,56 @@ import 'OptionFragment.dart';
  */
 class ExportingCsvOptions extends OptionFragment {
   ExportingCsvOptions() : super();
-  String? m_dateFormat;  
+  String? _dateFormat;  
 
   String get dateFormat { 
-    if (this.m_dateFormat == null) {
-      this.m_dateFormat = "";
+    if (this._dateFormat == null) {
+      this._dateFormat = "";
     }
-    return this.m_dateFormat!;
+    return this._dateFormat!;
   }
 
   void set dateFormat (String v) {
-    this.m_dateFormat = v;
+    this._dateFormat = v;
   }
     
-  String? m_decimalPoint;  
+  String? _decimalPoint;  
 
   String get decimalPoint { 
-    if (this.m_decimalPoint == null) {
-      this.m_decimalPoint = "";
+    if (this._decimalPoint == null) {
+      this._decimalPoint = "";
     }
-    return this.m_decimalPoint!;
+    return this._decimalPoint!;
   }
 
   void set decimalPoint (String v) {
-    this.m_decimalPoint = v;
+    this._decimalPoint = v;
   }
     
-  String? m_itemDelimiter;  
+  String? _itemDelimiter;  
 
   String get itemDelimiter { 
-    if (this.m_itemDelimiter == null) {
-      this.m_itemDelimiter = "";
+    if (this._itemDelimiter == null) {
+      this._itemDelimiter = "";
     }
-    return this.m_itemDelimiter!;
+    return this._itemDelimiter!;
   }
 
   void set itemDelimiter (String v) {
-    this.m_itemDelimiter = v;
+    this._itemDelimiter = v;
   }
     
-  String? m_lineDelimiter;  
+  String? _lineDelimiter;  
 
   String get lineDelimiter { 
-    if (this.m_lineDelimiter == null) {
-      this.m_lineDelimiter = "";
+    if (this._lineDelimiter == null) {
+      this._lineDelimiter = "";
     }
-    return this.m_lineDelimiter!;
+    return this._lineDelimiter!;
   }
 
   void set lineDelimiter (String v) {
-    this.m_lineDelimiter = v;
+    this._lineDelimiter = v;
   }
     
 
@@ -88,20 +88,20 @@ class ExportingCsvOptions extends OptionFragment {
 
     // NOTE: skip serialization of columnHeaderFormatter (type Function is ignored)} 
 
-    if (this.m_dateFormat != null) {  
-      buffer.writeAll(["\"dateFormat\":", this.m_dateFormat, ","], "");
+    if (this._dateFormat != null) {  
+      buffer.writeAll(["\"dateFormat\":\`", this._dateFormat, "\`,"], "");
     }
 
-    if (this.m_decimalPoint != null) {  
-      buffer.writeAll(["\"decimalPoint\":", this.m_decimalPoint, ","], "");
+    if (this._decimalPoint != null) {  
+      buffer.writeAll(["\"decimalPoint\":\`", this._decimalPoint, "\`,"], "");
     }
 
-    if (this.m_itemDelimiter != null) {  
-      buffer.writeAll(["\"itemDelimiter\":", this.m_itemDelimiter, ","], "");
+    if (this._itemDelimiter != null) {  
+      buffer.writeAll(["\"itemDelimiter\":\`", this._itemDelimiter, "\`,"], "");
     }
 
-    if (this.m_lineDelimiter != null) {  
-      buffer.writeAll(["\"lineDelimiter\":", this.m_lineDelimiter, ","], "");
+    if (this._lineDelimiter != null) {  
+      buffer.writeAll(["\"lineDelimiter\":\`", this._lineDelimiter, "\`,"], "");
     }
   }
 

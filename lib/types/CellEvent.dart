@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,43 +24,43 @@ import 'OptionFragment.dart';
  */
 class CellEvent extends DataEvent {
   CellEvent() : super();
-  String? m_type;  
+  String? _type;  
 
   String get type { 
-    if (this.m_type == null) {
-      this.m_type = "";
+    if (this._type == null) {
+      this._type = "";
     }
-    return this.m_type!;
+    return this._type!;
   }
 
   void set type (String v) {
-    this.m_type = v;
+    this._type = v;
   }
     
-  String? m_columnName;  
+  String? _columnName;  
 
   String get columnName { 
-    if (this.m_columnName == null) {
-      this.m_columnName = "";
+    if (this._columnName == null) {
+      this._columnName = "";
     }
-    return this.m_columnName!;
+    return this._columnName!;
   }
 
   void set columnName (String v) {
-    this.m_columnName = v;
+    this._columnName = v;
   }
     
-  double? m_rowIndex;  
+  double? _rowIndex;  
 
   double get rowIndex { 
-    if (this.m_rowIndex == null) {
-      this.m_rowIndex = 0;
+    if (this._rowIndex == null) {
+      this._rowIndex = 0;
     }
-    return this.m_rowIndex!;
+    return this._rowIndex!;
   }
 
   void set rowIndex (double v) {
-    this.m_rowIndex = v;
+    this._rowIndex = v;
   }
     
 
@@ -71,18 +71,18 @@ class CellEvent extends DataEvent {
     super.toJSONInner(buffer);
 
     
-    if (this.m_type != null) {  
-      buffer.writeAll(["\"type\":", this.m_type, ","], "");
+    if (this._type != null) {  
+      buffer.writeAll(["\"type\":\`", this._type, "\`,"], "");
     }
 
     // NOTE: skip serialization of cellValue (type CellType is ignored)} 
 
-    if (this.m_columnName != null) {  
-      buffer.writeAll(["\"columnName\":", this.m_columnName, ","], "");
+    if (this._columnName != null) {  
+      buffer.writeAll(["\"columnName\":\`", this._columnName, "\`,"], "");
     }
 
-    if (this.m_rowIndex != null) {  
-      buffer.writeAll(["\"rowIndex\":", this.m_rowIndex, ","], "");
+    if (this._rowIndex != null) {  
+      buffer.writeAll(["\"rowIndex\":", this._rowIndex, ","], "");
     }
   }
 

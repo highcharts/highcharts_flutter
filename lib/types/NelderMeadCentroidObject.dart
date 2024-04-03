@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,30 +23,30 @@ import 'OptionFragment.dart';
  */
 class NelderMeadCentroidObject extends OptionFragment {
   NelderMeadCentroidObject() : super();
-  double? m_i;  
+  double? _i;  
 
   double get i { 
-    if (this.m_i == null) {
-      this.m_i = 0;
+    if (this._i == null) {
+      this._i = 0;
     }
-    return this.m_i!;
+    return this._i!;
   }
 
   void set i (double v) {
-    this.m_i = v;
+    this._i = v;
   }
     
-  double? m_sum;  
+  double? _sum;  
 
   double get sum { 
-    if (this.m_sum == null) {
-      this.m_sum = 0;
+    if (this._sum == null) {
+      this._sum = 0;
     }
-    return this.m_sum!;
+    return this._sum!;
   }
 
   void set sum (double v) {
-    this.m_sum = v;
+    this._sum = v;
   }
     
 
@@ -57,12 +57,12 @@ class NelderMeadCentroidObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_i != null) {  
-      buffer.writeAll(["\"i\":", this.m_i, ","], "");
+    if (this._i != null) {  
+      buffer.writeAll(["\"i\":", this._i, ","], "");
     }
 
-    if (this.m_sum != null) {  
-      buffer.writeAll(["\"sum\":", this.m_sum, ","], "");
+    if (this._sum != null) {  
+      buffer.writeAll(["\"sum\":", this._sum, ","], "");
     }
   }
 

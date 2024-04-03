@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,17 +24,17 @@ import 'OptionFragment.dart';
  */
 class HTMLTableConnectorOptions extends DataConnectorOptions {
   HTMLTableConnectorOptions() : super();
-  String? m_table;  
+  String? _table;  
 
   String get table { 
-    if (this.m_table == null) {
-      this.m_table = "";
+    if (this._table == null) {
+      this._table = "";
     }
-    return this.m_table!;
+    return this._table!;
   }
 
   void set table (String v) {
-    this.m_table = v;
+    this._table = v;
   }
     
 
@@ -45,8 +45,8 @@ class HTMLTableConnectorOptions extends DataConnectorOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_table != null) {  
-      buffer.writeAll(["\"table\":", this.m_table, ","], "");
+    if (this._table != null) {  
+      buffer.writeAll(["\"table\":\`", this._table, "\`,"], "");
     }
   }
 

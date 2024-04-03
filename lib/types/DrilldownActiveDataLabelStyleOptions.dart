@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,56 +23,56 @@ import 'OptionFragment.dart';
  */
 class DrilldownActiveDataLabelStyleOptions extends OptionFragment {
   DrilldownActiveDataLabelStyleOptions() : super();
-  String? m_color;  
+  String? _color;  
 
   String get color { 
-    if (this.m_color == null) {
-      this.m_color = "";
+    if (this._color == null) {
+      this._color = "";
     }
-    return this.m_color!;
+    return this._color!;
   }
 
   void set color (String v) {
-    this.m_color = v;
+    this._color = v;
   }
     
-  String? m_cursor;  
+  String? _cursor;  
 
   String get cursor { 
-    if (this.m_cursor == null) {
-      this.m_cursor = "";
+    if (this._cursor == null) {
+      this._cursor = "";
     }
-    return this.m_cursor!;
+    return this._cursor!;
   }
 
   void set cursor (String v) {
-    this.m_cursor = v;
+    this._cursor = v;
   }
     
-  String? m_fontWeight;  
+  String? _fontWeight;  
 
   String get fontWeight { 
-    if (this.m_fontWeight == null) {
-      this.m_fontWeight = "";
+    if (this._fontWeight == null) {
+      this._fontWeight = "";
     }
-    return this.m_fontWeight!;
+    return this._fontWeight!;
   }
 
   void set fontWeight (String v) {
-    this.m_fontWeight = v;
+    this._fontWeight = v;
   }
     
-  String? m_textDecoration;  
+  String? _textDecoration;  
 
   String get textDecoration { 
-    if (this.m_textDecoration == null) {
-      this.m_textDecoration = "";
+    if (this._textDecoration == null) {
+      this._textDecoration = "";
     }
-    return this.m_textDecoration!;
+    return this._textDecoration!;
   }
 
   void set textDecoration (String v) {
-    this.m_textDecoration = v;
+    this._textDecoration = v;
   }
     
 
@@ -83,20 +83,20 @@ class DrilldownActiveDataLabelStyleOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_color != null) {  
-      buffer.writeAll(["\"color\":", this.m_color, ","], "");
+    if (this._color != null) {  
+      buffer.writeAll(["\"color\":\`", this._color, "\`,"], "");
     }
 
-    if (this.m_cursor != null) {  
-      buffer.writeAll(["\"cursor\":", this.m_cursor, ","], "");
+    if (this._cursor != null) {  
+      buffer.writeAll(["\"cursor\":\`", this._cursor, "\`,"], "");
     }
 
-    if (this.m_fontWeight != null) {  
-      buffer.writeAll(["\"fontWeight\":", this.m_fontWeight, ","], "");
+    if (this._fontWeight != null) {  
+      buffer.writeAll(["\"fontWeight\":\`", this._fontWeight, "\`,"], "");
     }
 
-    if (this.m_textDecoration != null) {  
-      buffer.writeAll(["\"textDecoration\":", this.m_textDecoration, ","], "");
+    if (this._textDecoration != null) {  
+      buffer.writeAll(["\"textDecoration\":\`", this._textDecoration, "\`,"], "");
     }
   }
 

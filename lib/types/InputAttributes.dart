@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,56 +23,56 @@ import 'OptionFragment.dart';
  */
 class InputAttributes extends OptionFragment {
   InputAttributes() : super();
-  String? m_value;  
+  String? _value;  
 
   String get value { 
-    if (this.m_value == null) {
-      this.m_value = "";
+    if (this._value == null) {
+      this._value = "";
     }
-    return this.m_value!;
+    return this._value!;
   }
 
   void set value (String v) {
-    this.m_value = v;
+    this._value = v;
   }
     
-  String? m_type;  
+  String? _type;  
 
   String get type { 
-    if (this.m_type == null) {
-      this.m_type = "";
+    if (this._type == null) {
+      this._type = "";
     }
-    return this.m_type!;
+    return this._type!;
   }
 
   void set type (String v) {
-    this.m_type = v;
+    this._type = v;
   }
     
-  String? m_htmlFor;  
+  String? _htmlFor;  
 
   String get htmlFor { 
-    if (this.m_htmlFor == null) {
-      this.m_htmlFor = "";
+    if (this._htmlFor == null) {
+      this._htmlFor = "";
     }
-    return this.m_htmlFor!;
+    return this._htmlFor!;
   }
 
   void set htmlFor (String v) {
-    this.m_htmlFor = v;
+    this._htmlFor = v;
   }
     
-  String? m_labelClassName;  
+  String? _labelClassName;  
 
   String get labelClassName { 
-    if (this.m_labelClassName == null) {
-      this.m_labelClassName = "";
+    if (this._labelClassName == null) {
+      this._labelClassName = "";
     }
-    return this.m_labelClassName!;
+    return this._labelClassName!;
   }
 
   void set labelClassName (String v) {
-    this.m_labelClassName = v;
+    this._labelClassName = v;
   }
     
 
@@ -83,20 +83,20 @@ class InputAttributes extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_value != null) {  
-      buffer.writeAll(["\"value\":", this.m_value, ","], "");
+    if (this._value != null) {  
+      buffer.writeAll(["\"value\":\`", this._value, "\`,"], "");
     }
 
-    if (this.m_type != null) {  
-      buffer.writeAll(["\"type\":", this.m_type, ","], "");
+    if (this._type != null) {  
+      buffer.writeAll(["\"type\":\`", this._type, "\`,"], "");
     }
 
-    if (this.m_htmlFor != null) {  
-      buffer.writeAll(["\"htmlFor\":", this.m_htmlFor, ","], "");
+    if (this._htmlFor != null) {  
+      buffer.writeAll(["\"htmlFor\":\`", this._htmlFor, "\`,"], "");
     }
 
-    if (this.m_labelClassName != null) {  
-      buffer.writeAll(["\"labelClassName\":", this.m_labelClassName, ","], "");
+    if (this._labelClassName != null) {  
+      buffer.writeAll(["\"labelClassName\":\`", this._labelClassName, "\`,"], "");
     }
   }
 

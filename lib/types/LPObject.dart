@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,95 +23,95 @@ import 'OptionFragment.dart';
  */
 class LPObject extends OptionFragment {
   LPObject() : super();
-  double? m_lH;  
+  double? _lH;  
 
   double get lH { 
-    if (this.m_lH == null) {
-      this.m_lH = 0;
+    if (this._lH == null) {
+      this._lH = 0;
     }
-    return this.m_lH!;
+    return this._lH!;
   }
 
   void set lH (double v) {
-    this.m_lH = v;
+    this._lH = v;
   }
     
-  double? m_lR;  
+  double? _lR;  
 
   double get lR { 
-    if (this.m_lR == null) {
-      this.m_lR = 0;
+    if (this._lR == null) {
+      this._lR = 0;
     }
-    return this.m_lR!;
+    return this._lR!;
   }
 
   void set lR (double v) {
-    this.m_lR = v;
+    this._lR = v;
   }
     
-  double? m_lW;  
+  double? _lW;  
 
   double get lW { 
-    if (this.m_lW == null) {
-      this.m_lW = 0;
+    if (this._lW == null) {
+      this._lW = 0;
     }
-    return this.m_lW!;
+    return this._lW!;
   }
 
   void set lW (double v) {
-    this.m_lW = v;
+    this._lW = v;
   }
     
-  double? m_nH;  
+  double? _nH;  
 
   double get nH { 
-    if (this.m_nH == null) {
-      this.m_nH = 0;
+    if (this._nH == null) {
+      this._nH = 0;
     }
-    return this.m_nH!;
+    return this._nH!;
   }
 
   void set nH (double v) {
-    this.m_nH = v;
+    this._nH = v;
   }
     
-  double? m_nR;  
+  double? _nR;  
 
   double get nR { 
-    if (this.m_nR == null) {
-      this.m_nR = 0;
+    if (this._nR == null) {
+      this._nR = 0;
     }
-    return this.m_nR!;
+    return this._nR!;
   }
 
   void set nR (double v) {
-    this.m_nR = v;
+    this._nR = v;
   }
     
-  double? m_nW;  
+  double? _nW;  
 
   double get nW { 
-    if (this.m_nW == null) {
-      this.m_nW = 0;
+    if (this._nW == null) {
+      this._nW = 0;
     }
-    return this.m_nW!;
+    return this._nW!;
   }
 
   void set nW (double v) {
-    this.m_nW = v;
+    this._nW = v;
   }
     
-  double? m_total;  
+  double? _total;  
 
   double get total { 
-    if (this.m_total == null) {
-      this.m_total = 0;
+    if (this._total == null) {
+      this._total = 0;
     }
-    return this.m_total!;
+    return this._total!;
   }
 
   void set total (double v) {
-    this.m_total = v;
+    this._total = v;
   }
     
 
@@ -122,32 +122,32 @@ class LPObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_lH != null) {  
-      buffer.writeAll(["\"lH\":", this.m_lH, ","], "");
+    if (this._lH != null) {  
+      buffer.writeAll(["\"lH\":", this._lH, ","], "");
     }
 
-    if (this.m_lR != null) {  
-      buffer.writeAll(["\"lR\":", this.m_lR, ","], "");
+    if (this._lR != null) {  
+      buffer.writeAll(["\"lR\":", this._lR, ","], "");
     }
 
-    if (this.m_lW != null) {  
-      buffer.writeAll(["\"lW\":", this.m_lW, ","], "");
+    if (this._lW != null) {  
+      buffer.writeAll(["\"lW\":", this._lW, ","], "");
     }
 
-    if (this.m_nH != null) {  
-      buffer.writeAll(["\"nH\":", this.m_nH, ","], "");
+    if (this._nH != null) {  
+      buffer.writeAll(["\"nH\":", this._nH, ","], "");
     }
 
-    if (this.m_nR != null) {  
-      buffer.writeAll(["\"nR\":", this.m_nR, ","], "");
+    if (this._nR != null) {  
+      buffer.writeAll(["\"nR\":", this._nR, ","], "");
     }
 
-    if (this.m_nW != null) {  
-      buffer.writeAll(["\"nW\":", this.m_nW, ","], "");
+    if (this._nW != null) {  
+      buffer.writeAll(["\"nW\":", this._nW, ","], "");
     }
 
-    if (this.m_total != null) {  
-      buffer.writeAll(["\"total\":", this.m_total, ","], "");
+    if (this._total != null) {  
+      buffer.writeAll(["\"total\":", this._total, ","], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,17 +24,17 @@ import 'OptionFragment.dart';
  */
 class DivElement extends HTMLDOMElement {
   DivElement() : super();
-  double? m_hideTimer;  
+  double? _hideTimer;  
 
   double get hideTimer { 
-    if (this.m_hideTimer == null) {
-      this.m_hideTimer = 0;
+    if (this._hideTimer == null) {
+      this._hideTimer = 0;
     }
-    return this.m_hideTimer!;
+    return this._hideTimer!;
   }
 
   void set hideTimer (double v) {
-    this.m_hideTimer = v;
+    this._hideTimer = v;
   }
     
 
@@ -45,8 +45,8 @@ class DivElement extends HTMLDOMElement {
     super.toJSONInner(buffer);
 
     
-    if (this.m_hideTimer != null) {  
-      buffer.writeAll(["\"hideTimer\":", this.m_hideTimer, ","], "");
+    if (this._hideTimer != null) {  
+      buffer.writeAll(["\"hideTimer\":", this._hideTimer, ","], "");
     }
   }
 

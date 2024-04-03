@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -22,6 +22,8 @@ import 'ChartPanningOptions.dart';
 import 'ChartResetZoomButtonOptions.dart';
 import 'CSSObject.dart';
 import 'NavigationOptions.dart';
+import 'Options.dart';
+import 'ScrollablePlotAreaOptions.dart';
 import 'OptionFragment.dart';
 
 /** 
@@ -41,17 +43,17 @@ class ChartOptions extends OptionFragment {
    * If `startOnTick` or `endOnTick` in the axis options are set to false, or
    * if the axis is logarithmic, the threshold will not be aligned.  
       */
-  bool? m_alignThresholds;  
+  bool? _alignThresholds;  
 
   bool get alignThresholds { 
-    if (this.m_alignThresholds == null) {
-      this.m_alignThresholds = false;
+    if (this._alignThresholds == null) {
+      this._alignThresholds = false;
     }
-    return this.m_alignThresholds!;
+    return this._alignThresholds!;
   }
 
   void set alignThresholds (bool v) {
-    this.m_alignThresholds = v;
+    this._alignThresholds = v;
   }
     
   /**
@@ -70,37 +72,50 @@ class ChartOptions extends OptionFragment {
    * 
    * Defaults to 'true'. 
       */
-  bool? m_alignTicks;  
+  bool? _alignTicks;  
 
   bool get alignTicks { 
-    if (this.m_alignTicks == null) {
-      this.m_alignTicks = false;
+    if (this._alignTicks == null) {
+      this._alignTicks = false;
     }
-    return this.m_alignTicks!;
+    return this._alignTicks!;
   }
 
   void set alignTicks (bool v) {
-    this.m_alignTicks = v;
+    this._alignTicks = v;
   }
     
   // NOTE: animation skipped - type Generic is ignored in gen
 
+  double? _axisLayoutRuns;  
+
+  double get axisLayoutRuns { 
+    if (this._axisLayoutRuns == null) {
+      this._axisLayoutRuns = 0;
+    }
+    return this._axisLayoutRuns!;
+  }
+
+  void set axisLayoutRuns (double v) {
+    this._axisLayoutRuns = v;
+  }
+    
   /**
    * The background color or gradient for the outer chart area. 
    * 
    * Defaults to '#ffffff'. 
       */
-  String? m_backgroundColor;  
+  String? _backgroundColor;  
 
   String get backgroundColor { 
-    if (this.m_backgroundColor == null) {
-      this.m_backgroundColor = "";
+    if (this._backgroundColor == null) {
+      this._backgroundColor = "";
     }
-    return this.m_backgroundColor!;
+    return this._backgroundColor!;
   }
 
   void set backgroundColor (String v) {
-    this.m_backgroundColor = v;
+    this._backgroundColor = v;
   }
     
   /**
@@ -108,33 +123,33 @@ class ChartOptions extends OptionFragment {
    * 
    * Defaults to '#334eff'. 
       */
-  String? m_borderColor;  
+  String? _borderColor;  
 
   String get borderColor { 
-    if (this.m_borderColor == null) {
-      this.m_borderColor = "";
+    if (this._borderColor == null) {
+      this._borderColor = "";
     }
-    return this.m_borderColor!;
+    return this._borderColor!;
   }
 
   void set borderColor (String v) {
-    this.m_borderColor = v;
+    this._borderColor = v;
   }
     
   /**
    * The corner radius of the outer chart border.  
       */
-  double? m_borderRadius;  
+  double? _borderRadius;  
 
   double get borderRadius { 
-    if (this.m_borderRadius == null) {
-      this.m_borderRadius = 0;
+    if (this._borderRadius == null) {
+      this._borderRadius = 0;
     }
-    return this.m_borderRadius!;
+    return this._borderRadius!;
   }
 
   void set borderRadius (double v) {
-    this.m_borderRadius = v;
+    this._borderRadius = v;
   }
     
   /**
@@ -142,34 +157,34 @@ class ChartOptions extends OptionFragment {
    * 
    * Defaults to '0'. 
       */
-  double? m_borderWidth;  
+  double? _borderWidth;  
 
   double get borderWidth { 
-    if (this.m_borderWidth == null) {
-      this.m_borderWidth = 0;
+    if (this._borderWidth == null) {
+      this._borderWidth = 0;
     }
-    return this.m_borderWidth!;
+    return this._borderWidth!;
   }
 
   void set borderWidth (double v) {
-    this.m_borderWidth = v;
+    this._borderWidth = v;
   }
     
   /**
    * A CSS class name to apply to the charts container `div`, allowing
    * unique CSS styling for each chart.  
       */
-  String? m_className;  
+  String? _className;  
 
   String get className { 
-    if (this.m_className == null) {
-      this.m_className = "";
+    if (this._className == null) {
+      this._className = "";
     }
-    return this.m_className!;
+    return this._className!;
   }
 
   void set className (String v) {
-    this.m_className = v;
+    this._className = v;
   }
     
   /**
@@ -181,30 +196,30 @@ class ChartOptions extends OptionFragment {
    * 
    * Defaults to '10'. 
       */
-  double? m_colorCount;  
+  double? _colorCount;  
 
   double get colorCount { 
-    if (this.m_colorCount == null) {
-      this.m_colorCount = 0;
+    if (this._colorCount == null) {
+      this._colorCount = 0;
     }
-    return this.m_colorCount!;
+    return this._colorCount!;
   }
 
   void set colorCount (double v) {
-    this.m_colorCount = v;
+    this._colorCount = v;
   }
     
-  String? m_defaultSeriesType;  
+  String? _defaultSeriesType;  
 
   String get defaultSeriesType { 
-    if (this.m_defaultSeriesType == null) {
-      this.m_defaultSeriesType = "";
+    if (this._defaultSeriesType == null) {
+      this._defaultSeriesType = "";
     }
-    return this.m_defaultSeriesType!;
+    return this._defaultSeriesType!;
   }
 
   void set defaultSeriesType (String v) {
-    this.m_defaultSeriesType = v;
+    this._defaultSeriesType = v;
   }
     
   /**
@@ -216,33 +231,33 @@ class ChartOptions extends OptionFragment {
    * 
    * Defaults to 'true'. 
       */
-  bool? m_allowMutatingData;  
+  bool? _allowMutatingData;  
 
   bool get allowMutatingData { 
-    if (this.m_allowMutatingData == null) {
-      this.m_allowMutatingData = false;
+    if (this._allowMutatingData == null) {
+      this._allowMutatingData = false;
     }
-    return this.m_allowMutatingData!;
+    return this._allowMutatingData!;
   }
 
   void set allowMutatingData (bool v) {
-    this.m_allowMutatingData = v;
+    this._allowMutatingData = v;
   }
     
   /**
    * Event listeners for the chart.  
       */
-  ChartEventsOptions? m_events;  
+  ChartEventsOptions? _events;  
 
   ChartEventsOptions get events { 
-    if (this.m_events == null) {
-      this.m_events = ChartEventsOptions();
+    if (this._events == null) {
+      this._events = ChartEventsOptions();
     }
-    return this.m_events!;
+    return this._events!;
   }
 
   void set events (ChartEventsOptions v) {
-    this.m_events = v;
+    this._events = v;
   }
     
   /**
@@ -256,17 +271,17 @@ class ChartOptions extends OptionFragment {
    * height of the containing element, or 400 pixels if the containing
    * element's height is 0.  
       */
-  String? m_height;  
+  String? _height;  
 
   String get height { 
-    if (this.m_height == null) {
-      this.m_height = "";
+    if (this._height == null) {
+      this._height = "";
     }
-    return this.m_height!;
+    return this._height!;
   }
 
   void set height (String v) {
-    this.m_height = v;
+    this._height = v;
   }
     
   /**
@@ -278,17 +293,17 @@ class ChartOptions extends OptionFragment {
    * 
    * Defaults to 'true'. 
       */
-  bool? m_ignoreHiddenSeries;  
+  bool? _ignoreHiddenSeries;  
 
   bool get ignoreHiddenSeries { 
-    if (this.m_ignoreHiddenSeries == null) {
-      this.m_ignoreHiddenSeries = false;
+    if (this._ignoreHiddenSeries == null) {
+      this._ignoreHiddenSeries = false;
     }
-    return this.m_ignoreHiddenSeries!;
+    return this._ignoreHiddenSeries!;
   }
 
   void set ignoreHiddenSeries (bool v) {
-    this.m_ignoreHiddenSeries = v;
+    this._ignoreHiddenSeries = v;
   }
     
   /**
@@ -298,17 +313,17 @@ class ChartOptions extends OptionFragment {
    * 
    * Defaults to 'false'. 
       */
-  bool? m_inverted;  
+  bool? _inverted;  
 
   bool get inverted { 
-    if (this.m_inverted == null) {
-      this.m_inverted = false;
+    if (this._inverted == null) {
+      this._inverted = false;
     }
-    return this.m_inverted!;
+    return this._inverted!;
   }
 
   void set inverted (bool v) {
-    this.m_inverted = v;
+    this._inverted = v;
   }
     
   /**
@@ -319,7 +334,7 @@ class ChartOptions extends OptionFragment {
    * For picking out individual shapes and geometries to use for each series
    * of the map, see [series.mapData](#series.map.mapData).  
       */
-  List<TopoJSON>? map;
+  List<TopoJSON>? map; // TopoJSON
   // NOTE: mapTransforms skipped - type any is ignored in gen
 
   /**
@@ -333,23 +348,23 @@ class ChartOptions extends OptionFragment {
    * subtitle and legend in addition to the `spacingTop`, `spacingRight`,
    * `spacingBottom` and `spacingLeft` options.  
       */
-  List<double>? margin;
+  List<double>? margin; // double
   /**
    * The margin between the bottom outer edge of the chart and the plot
    * area. Use this to set a fixed pixel value for the margin as opposed
    * to the default dynamic margin. See also `spacingBottom`.  
       */
-  double? m_marginBottom;  
+  double? _marginBottom;  
 
   double get marginBottom { 
-    if (this.m_marginBottom == null) {
-      this.m_marginBottom = 0;
+    if (this._marginBottom == null) {
+      this._marginBottom = 0;
     }
-    return this.m_marginBottom!;
+    return this._marginBottom!;
   }
 
   void set marginBottom (double v) {
-    this.m_marginBottom = v;
+    this._marginBottom = v;
   }
     
   /**
@@ -357,17 +372,17 @@ class ChartOptions extends OptionFragment {
    * area. Use this to set a fixed pixel value for the margin as opposed
    * to the default dynamic margin. See also `spacingLeft`.  
       */
-  double? m_marginLeft;  
+  double? _marginLeft;  
 
   double get marginLeft { 
-    if (this.m_marginLeft == null) {
-      this.m_marginLeft = 0;
+    if (this._marginLeft == null) {
+      this._marginLeft = 0;
     }
-    return this.m_marginLeft!;
+    return this._marginLeft!;
   }
 
   void set marginLeft (double v) {
-    this.m_marginLeft = v;
+    this._marginLeft = v;
   }
     
   /**
@@ -375,17 +390,17 @@ class ChartOptions extends OptionFragment {
    * area. Use this to set a fixed pixel value for the margin as opposed
    * to the default dynamic margin. See also `spacingRight`.  
       */
-  double? m_marginRight;  
+  double? _marginRight;  
 
   double get marginRight { 
-    if (this.m_marginRight == null) {
-      this.m_marginRight = 0;
+    if (this._marginRight == null) {
+      this._marginRight = 0;
     }
-    return this.m_marginRight!;
+    return this._marginRight!;
   }
 
   void set marginRight (double v) {
-    this.m_marginRight = v;
+    this._marginRight = v;
   }
     
   /**
@@ -393,30 +408,17 @@ class ChartOptions extends OptionFragment {
    * Use this to set a fixed pixel value for the margin as opposed to
    * the default dynamic margin. See also `spacingTop`.  
       */
-  double? m_marginTop;  
+  double? _marginTop;  
 
   double get marginTop { 
-    if (this.m_marginTop == null) {
-      this.m_marginTop = 0;
+    if (this._marginTop == null) {
+      this._marginTop = 0;
     }
-    return this.m_marginTop!;
+    return this._marginTop!;
   }
 
   void set marginTop (double v) {
-    this.m_marginTop = v;
-  }
-    
-  double? m_axisLayoutRuns;  
-
-  double get axisLayoutRuns { 
-    if (this.m_axisLayoutRuns == null) {
-      this.m_axisLayoutRuns = 0;
-    }
-    return this.m_axisLayoutRuns!;
-  }
-
-  void set axisLayoutRuns (double v) {
-    this.m_axisLayoutRuns = v;
+    this._marginTop = v;
   }
     
   /**
@@ -426,17 +428,17 @@ class ChartOptions extends OptionFragment {
    * properties of the click event argument (`event.altKey`,
    * `event.ctrlKey`, `event.metaKey` and `event.shiftKey`).  
       */
-  String? m_panKey;  
+  String? _panKey;  
 
   String get panKey { 
-    if (this.m_panKey == null) {
-      this.m_panKey = "";
+    if (this._panKey == null) {
+      this._panKey = "";
     }
-    return this.m_panKey!;
+    return this._panKey!;
   }
 
   void set panKey (String v) {
-    this.m_panKey = v;
+    this._panKey = v;
   }
     
   /**
@@ -447,17 +449,17 @@ class ChartOptions extends OptionFragment {
    * requires two fingers. To allow panning with one finger, set
    * `followTouchMove` to `false`.  
       */
-  ChartPanningOptions? m_panning;  
+  ChartPanningOptions? _panning;  
 
   ChartPanningOptions get panning { 
-    if (this.m_panning == null) {
-      this.m_panning = ChartPanningOptions();
+    if (this._panning == null) {
+      this._panning = ChartPanningOptions();
     }
-    return this.m_panning!;
+    return this._panning!;
   }
 
   void set panning (ChartPanningOptions v) {
-    this.m_panning = v;
+    this._panning = v;
   }
     
   /**
@@ -468,33 +470,33 @@ class ChartOptions extends OptionFragment {
    * chart, while pinching is enabled. When [tooltip.followTouchMove](#tooltip.followTouchMove) is true, pinchType only applies to
    * two-finger touches.  
       */
-  String? m_pinchType;  
+  String? _pinchType;  
 
   String get pinchType { 
-    if (this.m_pinchType == null) {
-      this.m_pinchType = "";
+    if (this._pinchType == null) {
+      this._pinchType = "";
     }
-    return this.m_pinchType!;
+    return this._pinchType!;
   }
 
   void set pinchType (String v) {
-    this.m_pinchType = v;
+    this._pinchType = v;
   }
     
   /**
    * The background color or gradient for the plot area.  
       */
-  String? m_plotBackgroundColor;  
+  String? _plotBackgroundColor;  
 
   String get plotBackgroundColor { 
-    if (this.m_plotBackgroundColor == null) {
-      this.m_plotBackgroundColor = "";
+    if (this._plotBackgroundColor == null) {
+      this._plotBackgroundColor = "";
     }
-    return this.m_plotBackgroundColor!;
+    return this._plotBackgroundColor!;
   }
 
   void set plotBackgroundColor (String v) {
-    this.m_plotBackgroundColor = v;
+    this._plotBackgroundColor = v;
   }
     
   /**
@@ -503,17 +505,17 @@ class ChartOptions extends OptionFragment {
    * to the container element. Note that for the image to be applied to
    * exported charts, its URL needs to be accessible by the export server.  
       */
-  String? m_plotBackgroundImage;  
+  String? _plotBackgroundImage;  
 
   String get plotBackgroundImage { 
-    if (this.m_plotBackgroundImage == null) {
-      this.m_plotBackgroundImage = "";
+    if (this._plotBackgroundImage == null) {
+      this._plotBackgroundImage = "";
     }
-    return this.m_plotBackgroundImage!;
+    return this._plotBackgroundImage!;
   }
 
   void set plotBackgroundImage (String v) {
-    this.m_plotBackgroundImage = v;
+    this._plotBackgroundImage = v;
   }
     
   /**
@@ -521,17 +523,17 @@ class ChartOptions extends OptionFragment {
    * 
    * Defaults to '#cccccc'. 
       */
-  String? m_plotBorderColor;  
+  String? _plotBorderColor;  
 
   String get plotBorderColor { 
-    if (this.m_plotBorderColor == null) {
-      this.m_plotBorderColor = "";
+    if (this._plotBorderColor == null) {
+      this._plotBorderColor = "";
     }
-    return this.m_plotBorderColor!;
+    return this._plotBorderColor!;
   }
 
   void set plotBorderColor (String v) {
-    this.m_plotBorderColor = v;
+    this._plotBorderColor = v;
   }
     
   /**
@@ -539,17 +541,17 @@ class ChartOptions extends OptionFragment {
    * 
    * Defaults to '0'. 
       */
-  double? m_plotBorderWidth;  
+  double? _plotBorderWidth;  
 
   double get plotBorderWidth { 
-    if (this.m_plotBorderWidth == null) {
-      this.m_plotBorderWidth = 0;
+    if (this._plotBorderWidth == null) {
+      this._plotBorderWidth = 0;
     }
-    return this.m_plotBorderWidth!;
+    return this._plotBorderWidth!;
   }
 
   void set plotBorderWidth (double v) {
-    this.m_plotBorderWidth = v;
+    this._plotBorderWidth = v;
   }
     
   // NOTE: plotShadow skipped - type Generic is ignored in gen
@@ -560,17 +562,17 @@ class ChartOptions extends OptionFragment {
    * 
    * Defaults to 'true'. 
       */
-  bool? m_reflow;  
+  bool? _reflow;  
 
   bool get reflow { 
-    if (this.m_reflow == null) {
-      this.m_reflow = false;
+    if (this._reflow == null) {
+      this._reflow = false;
     }
-    return this.m_reflow!;
+    return this._reflow!;
   }
 
   void set reflow (bool v) {
-    this.m_reflow = v;
+    this._reflow = v;
   }
     
   /**
@@ -579,34 +581,34 @@ class ChartOptions extends OptionFragment {
    * by direct reference, or as the first argument of the chart
    * constructor, in which case the option is not needed.  
       */
-  String? m_renderTo;  
+  String? _renderTo;  
 
   String get renderTo { 
-    if (this.m_renderTo == null) {
-      this.m_renderTo = "";
+    if (this._renderTo == null) {
+      this._renderTo = "";
     }
-    return this.m_renderTo!;
+    return this._renderTo!;
   }
 
   void set renderTo (String v) {
-    this.m_renderTo = v;
+    this._renderTo = v;
   }
     
   /**
    * The button that appears after a selection zoom, allowing the user
    * to reset zoom.  
       */
-  ChartResetZoomButtonOptions? m_resetZoomButton;  
+  ChartResetZoomButtonOptions? _resetZoomButton;  
 
   ChartResetZoomButtonOptions get resetZoomButton { 
-    if (this.m_resetZoomButton == null) {
-      this.m_resetZoomButton = ChartResetZoomButtonOptions();
+    if (this._resetZoomButton == null) {
+      this._resetZoomButton = ChartResetZoomButtonOptions();
     }
-    return this.m_resetZoomButton!;
+    return this._resetZoomButton!;
   }
 
   void set resetZoomButton (ChartResetZoomButtonOptions v) {
-    this.m_resetZoomButton = v;
+    this._resetZoomButton = v;
   }
     
   // NOTE: shadow skipped - type Generic is ignored in gen
@@ -617,17 +619,17 @@ class ChartOptions extends OptionFragment {
    * 
    * Defaults to 'rgba(51,92,173,0.25)'. 
       */
-  String? m_selectionMarkerFill;  
+  String? _selectionMarkerFill;  
 
   String get selectionMarkerFill { 
-    if (this.m_selectionMarkerFill == null) {
-      this.m_selectionMarkerFill = "";
+    if (this._selectionMarkerFill == null) {
+      this._selectionMarkerFill = "";
     }
-    return this.m_selectionMarkerFill!;
+    return this._selectionMarkerFill!;
   }
 
   void set selectionMarkerFill (String v) {
-    this.m_selectionMarkerFill = v;
+    this._selectionMarkerFill = v;
   }
     
   /**
@@ -635,17 +637,17 @@ class ChartOptions extends OptionFragment {
    * where series are added dynamically, as axes are automatically added
    * to cartesian series.  
       */
-  bool? m_showAxes;  
+  bool? _showAxes;  
 
   bool get showAxes { 
-    if (this.m_showAxes == null) {
-      this.m_showAxes = false;
+    if (this._showAxes == null) {
+      this._showAxes = false;
     }
-    return this.m_showAxes!;
+    return this._showAxes!;
   }
 
   void set showAxes (bool v) {
-    this.m_showAxes = v;
+    this._showAxes = v;
   }
     
   /**
@@ -657,7 +659,7 @@ class ChartOptions extends OptionFragment {
    * 
    * Defaults to '[10, 10, 15, 10]'. 
       */
-  List<double>? spacing;
+  List<double>? spacing; // double
   /**
    * The space between the bottom edge of the chart and the content (plot
    * area, axis title and labels, title, subtitle or legend in top
@@ -665,17 +667,17 @@ class ChartOptions extends OptionFragment {
    * 
    * Defaults to '15'. 
       */
-  double? m_spacingBottom;  
+  double? _spacingBottom;  
 
   double get spacingBottom { 
-    if (this.m_spacingBottom == null) {
-      this.m_spacingBottom = 0;
+    if (this._spacingBottom == null) {
+      this._spacingBottom = 0;
     }
-    return this.m_spacingBottom!;
+    return this._spacingBottom!;
   }
 
   void set spacingBottom (double v) {
-    this.m_spacingBottom = v;
+    this._spacingBottom = v;
   }
     
   /**
@@ -685,17 +687,17 @@ class ChartOptions extends OptionFragment {
    * 
    * Defaults to '10'. 
       */
-  double? m_spacingLeft;  
+  double? _spacingLeft;  
 
   double get spacingLeft { 
-    if (this.m_spacingLeft == null) {
-      this.m_spacingLeft = 0;
+    if (this._spacingLeft == null) {
+      this._spacingLeft = 0;
     }
-    return this.m_spacingLeft!;
+    return this._spacingLeft!;
   }
 
   void set spacingLeft (double v) {
-    this.m_spacingLeft = v;
+    this._spacingLeft = v;
   }
     
   /**
@@ -705,17 +707,17 @@ class ChartOptions extends OptionFragment {
    * 
    * Defaults to '10'. 
       */
-  double? m_spacingRight;  
+  double? _spacingRight;  
 
   double get spacingRight { 
-    if (this.m_spacingRight == null) {
-      this.m_spacingRight = 0;
+    if (this._spacingRight == null) {
+      this._spacingRight = 0;
     }
-    return this.m_spacingRight!;
+    return this._spacingRight!;
   }
 
   void set spacingRight (double v) {
-    this.m_spacingRight = v;
+    this._spacingRight = v;
   }
     
   /**
@@ -725,17 +727,17 @@ class ChartOptions extends OptionFragment {
    * 
    * Defaults to '10'. 
       */
-  double? m_spacingTop;  
+  double? _spacingTop;  
 
   double get spacingTop { 
-    if (this.m_spacingTop == null) {
-      this.m_spacingTop = 0;
+    if (this._spacingTop == null) {
+      this._spacingTop = 0;
     }
-    return this.m_spacingTop!;
+    return this._spacingTop!;
   }
 
   void set spacingTop (double v) {
-    this.m_spacingTop = v;
+    this._spacingTop = v;
   }
     
   /**
@@ -748,17 +750,17 @@ class ChartOptions extends OptionFragment {
    * 
    * Defaults to '{"fontFamily": Helvetica, Arial, sans-serif","fontSize":"1rem"}'. 
       */
-  CSSObject? m_style;  
+  CSSObject? _style;  
 
   CSSObject get style { 
-    if (this.m_style == null) {
-      this.m_style = CSSObject();
+    if (this._style == null) {
+      this._style = CSSObject();
     }
-    return this.m_style!;
+    return this._style!;
   }
 
   void set style (CSSObject v) {
-    this.m_style = v;
+    this._style = v;
   }
     
   /**
@@ -772,17 +774,17 @@ class ChartOptions extends OptionFragment {
    * 
    * Defaults to 'false'. 
       */
-  bool? m_styledMode;  
+  bool? _styledMode;  
 
   bool get styledMode { 
-    if (this.m_styledMode == null) {
-      this.m_styledMode = false;
+    if (this._styledMode == null) {
+      this._styledMode = false;
     }
-    return this.m_styledMode!;
+    return this._styledMode!;
   }
 
   void set styledMode (bool v) {
-    this.m_styledMode = v;
+    this._styledMode = v;
   }
     
   /**
@@ -793,47 +795,47 @@ class ChartOptions extends OptionFragment {
    * In TypeScript this option has no effect in sense of typing and
    * instead the `type` option must always be set in the series.  
       */
-  String? m_type;  
+  String? _type;  
 
   String get type { 
-    if (this.m_type == null) {
-      this.m_type = "";
+    if (this._type == null) {
+      this._type = "";
     }
-    return this.m_type!;
+    return this._type!;
   }
 
   void set type (String v) {
-    this.m_type = v;
+    this._type = v;
   }
     
   /**
    * An explicit width for the chart. By default (when `null`) the width
    * is calculated from the offset width of the containing element.  
       */
-  double? m_width;  
+  double? _width;  
 
   double get width { 
-    if (this.m_width == null) {
-      this.m_width = 0;
+    if (this._width == null) {
+      this._width = 0;
     }
-    return this.m_width!;
+    return this._width!;
   }
 
   void set width (double v) {
-    this.m_width = v;
+    this._width = v;
   }
     
-  bool? m_zoomBySingleTouch;  
+  bool? _zoomBySingleTouch;  
 
   bool get zoomBySingleTouch { 
-    if (this.m_zoomBySingleTouch == null) {
-      this.m_zoomBySingleTouch = false;
+    if (this._zoomBySingleTouch == null) {
+      this._zoomBySingleTouch = false;
     }
-    return this.m_zoomBySingleTouch!;
+    return this._zoomBySingleTouch!;
   }
 
   void set zoomBySingleTouch (bool v) {
-    this.m_zoomBySingleTouch = v;
+    this._zoomBySingleTouch = v;
   }
     
   // NOTE: zooming skipped - type Generic is ignored in gen
@@ -842,58 +844,95 @@ class ChartOptions extends OptionFragment {
    * Decides in what dimensions the user can zoom by dragging the mouse.
    * Can be one of `x`, `y` or `xy`.  
       */
-  String? m_zoomType;  
+  String? _zoomType;  
 
   String get zoomType { 
-    if (this.m_zoomType == null) {
-      this.m_zoomType = "";
+    if (this._zoomType == null) {
+      this._zoomType = "";
     }
-    return this.m_zoomType!;
+    return this._zoomType!;
   }
 
   void set zoomType (String v) {
-    this.m_zoomType = v;
+    this._zoomType = v;
+  }
+    
+  bool? _forExport;  
+
+  bool get forExport { 
+    if (this._forExport == null) {
+      this._forExport = false;
+    }
+    return this._forExport!;
+  }
+
+  void set forExport (bool v) {
+    this._forExport = v;
+  }
+    
+  String? _renderer;  
+
+  String get renderer { 
+    if (this._renderer == null) {
+      this._renderer = "";
+    }
+    return this._renderer!;
+  }
+
+  void set renderer (String v) {
+    this._renderer = v;
+  }
+    
+  bool? _skipClone;  
+
+  bool get skipClone { 
+    if (this._skipClone == null) {
+      this._skipClone = false;
+    }
+    return this._skipClone!;
+  }
+
+  void set skipClone (bool v) {
+    this._skipClone = v;
   }
     
   // NOTE: proj4 skipped - type any is ignored in gen
 
-  bool? m_forExport;  
+  /**
+   * Options to render charts in 3 dimensions. This feature requires
+   * `highcharts-3d.js`, found in the download package or online at
+   * [code.highcharts.com/highcharts-3d.js](https://code.highcharts.com/highcharts-3d.js).  
+      */
+  Options? _options3d;  
 
-  bool get forExport { 
-    if (this.m_forExport == null) {
-      this.m_forExport = false;
+  Options get options3d { 
+    if (this._options3d == null) {
+      this._options3d = Options();
     }
-    return this.m_forExport!;
+    return this._options3d!;
   }
 
-  void set forExport (bool v) {
-    this.m_forExport = v;
+  void set options3d (Options v) {
+    this._options3d = v;
   }
     
-  String? m_renderer;  
+  /**
+   * Whether to display errors on the chart. When `false`, the errors will
+   * be shown only in the console. 
+   * 
+   * Defaults to 'true'. 
+      */
+  bool? _displayErrors;  
 
-  String get renderer { 
-    if (this.m_renderer == null) {
-      this.m_renderer = "";
+  bool get displayErrors { 
+    if (this._displayErrors == null) {
+      this._displayErrors = false;
     }
-    return this.m_renderer!;
+    return this._displayErrors!;
   }
 
-  void set renderer (String v) {
-    this.m_renderer = v;
-  }
-    
-  bool? m_skipClone;  
-
-  bool get skipClone { 
-    if (this.m_skipClone == null) {
-      this.m_skipClone = false;
-    }
-    return this.m_skipClone!;
-  }
-
-  void set skipClone (bool v) {
-    this.m_skipClone = v;
+  void set displayErrors (bool v) {
+    this._displayErrors = v;
   }
     
   /**
@@ -901,17 +940,61 @@ class ChartOptions extends OptionFragment {
    * zooming while moving points. Should be set different than
    * [chart.panKey](#chart.panKey).  
       */
-  String? m_zoomKey;  
+  String? _zoomKey;  
 
   String get zoomKey { 
-    if (this.m_zoomKey == null) {
-      this.m_zoomKey = "";
+    if (this._zoomKey == null) {
+      this._zoomKey = "";
     }
-    return this.m_zoomKey!;
+    return this._zoomKey!;
   }
 
   void set zoomKey (String v) {
-    this.m_zoomKey = v;
+    this._zoomKey = v;
+  }
+    
+  /**
+   * Options for a scrollable plot area. This feature provides a minimum size for
+   * the plot area of the chart. If the size gets smaller than this, typically
+   * on mobile devices, a native browser scrollbar is presented. This scrollbar
+   * provides smooth scrolling for the contents of the plot area, whereas the
+   * title, legend and unaffected axes are fixed.
+   * 
+   * Since v7.1.2, a scrollable plot area can be defined for either horizontal or
+   * vertical scrolling, depending on whether the `minWidth` or `minHeight`
+   * option is set.  
+      */
+  ScrollablePlotAreaOptions? _scrollablePlotArea;  
+
+  ScrollablePlotAreaOptions get scrollablePlotArea { 
+    if (this._scrollablePlotArea == null) {
+      this._scrollablePlotArea = ScrollablePlotAreaOptions();
+    }
+    return this._scrollablePlotArea!;
+  }
+
+  void set scrollablePlotArea (ScrollablePlotAreaOptions v) {
+    this._scrollablePlotArea = v;
+  }
+    
+  /**
+   * When true, cartesian charts like line, spline, area and column are
+   * transformed into the polar coordinate system. This produces _polar
+   * charts_, also known as _radar charts_. 
+   * 
+   * Defaults to 'false'. 
+      */
+  bool? _polar;  
+
+  bool get polar { 
+    if (this._polar == null) {
+      this._polar = false;
+    }
+    return this._polar!;
+  }
+
+  void set polar (bool v) {
+    this._polar = v;
   }
     
 
@@ -922,62 +1005,66 @@ class ChartOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_alignThresholds != null) {  
-      buffer.writeAll(["\"alignThresholds\":", this.m_alignThresholds, ","], "");
+    if (this._alignThresholds != null) {  
+      buffer.writeAll(["\"alignThresholds\":", this._alignThresholds, ","], "");
     }
 
-    if (this.m_alignTicks != null) {  
-      buffer.writeAll(["\"alignTicks\":", this.m_alignTicks, ","], "");
+    if (this._alignTicks != null) {  
+      buffer.writeAll(["\"alignTicks\":", this._alignTicks, ","], "");
     }
 
     // NOTE: skip serialization of animation (type Generic is ignored)} 
 
-    if (this.m_backgroundColor != null) {  
-      buffer.writeAll(["\"backgroundColor\":", this.m_backgroundColor, ","], "");
+    if (this._axisLayoutRuns != null) {  
+      buffer.writeAll(["\"axisLayoutRuns\":", this._axisLayoutRuns, ","], "");
     }
 
-    if (this.m_borderColor != null) {  
-      buffer.writeAll(["\"borderColor\":", this.m_borderColor, ","], "");
+    if (this._backgroundColor != null) {  
+      buffer.writeAll(["\"backgroundColor\":\`", this._backgroundColor, "\`,"], "");
     }
 
-    if (this.m_borderRadius != null) {  
-      buffer.writeAll(["\"borderRadius\":", this.m_borderRadius, ","], "");
+    if (this._borderColor != null) {  
+      buffer.writeAll(["\"borderColor\":\`", this._borderColor, "\`,"], "");
     }
 
-    if (this.m_borderWidth != null) {  
-      buffer.writeAll(["\"borderWidth\":", this.m_borderWidth, ","], "");
+    if (this._borderRadius != null) {  
+      buffer.writeAll(["\"borderRadius\":", this._borderRadius, ","], "");
     }
 
-    if (this.m_className != null) {  
-      buffer.writeAll(["\"className\":", this.m_className, ","], "");
+    if (this._borderWidth != null) {  
+      buffer.writeAll(["\"borderWidth\":", this._borderWidth, ","], "");
     }
 
-    if (this.m_colorCount != null) {  
-      buffer.writeAll(["\"colorCount\":", this.m_colorCount, ","], "");
+    if (this._className != null) {  
+      buffer.writeAll(["\"className\":\`", this._className, "\`,"], "");
     }
 
-    if (this.m_defaultSeriesType != null) {  
-      buffer.writeAll(["\"defaultSeriesType\":", this.m_defaultSeriesType, ","], "");
+    if (this._colorCount != null) {  
+      buffer.writeAll(["\"colorCount\":", this._colorCount, ","], "");
     }
 
-    if (this.m_allowMutatingData != null) {  
-      buffer.writeAll(["\"allowMutatingData\":", this.m_allowMutatingData, ","], "");
+    if (this._defaultSeriesType != null) {  
+      buffer.writeAll(["\"defaultSeriesType\":\`", this._defaultSeriesType, "\`,"], "");
     }
 
-    if (this.m_events != null) {  
-      buffer.writeAll(["\"events\":", this.m_events?.toJSON(), ","], "");
+    if (this._allowMutatingData != null) {  
+      buffer.writeAll(["\"allowMutatingData\":", this._allowMutatingData, ","], "");
     }
 
-    if (this.m_height != null) {  
-      buffer.writeAll(["\"height\":", this.m_height, ","], "");
+    if (this._events != null) {  
+      buffer.writeAll(["\"events\":", this._events?.toJSON(), ","], "");
     }
 
-    if (this.m_ignoreHiddenSeries != null) {  
-      buffer.writeAll(["\"ignoreHiddenSeries\":", this.m_ignoreHiddenSeries, ","], "");
+    if (this._height != null) {  
+      buffer.writeAll(["\"height\":\`", this._height, "\`,"], "");
     }
 
-    if (this.m_inverted != null) {  
-      buffer.writeAll(["\"inverted\":", this.m_inverted, ","], "");
+    if (this._ignoreHiddenSeries != null) {  
+      buffer.writeAll(["\"ignoreHiddenSeries\":", this._ignoreHiddenSeries, ","], "");
+    }
+
+    if (this._inverted != null) {  
+      buffer.writeAll(["\"inverted\":", this._inverted, ","], "");
     }
 
     // NOTE: skip serialization of map (type TopoJSON is ignored)} 
@@ -986,136 +1073,130 @@ class ChartOptions extends OptionFragment {
 
     // NOTE: skip serialization of margin (type number[] is ignored)} 
 
-    if (this.m_marginBottom != null) {  
-      buffer.writeAll(["\"marginBottom\":", this.m_marginBottom, ","], "");
+    if (this._marginBottom != null) {  
+      buffer.writeAll(["\"marginBottom\":", this._marginBottom, ","], "");
     }
 
-    if (this.m_marginLeft != null) {  
-      buffer.writeAll(["\"marginLeft\":", this.m_marginLeft, ","], "");
+    if (this._marginLeft != null) {  
+      buffer.writeAll(["\"marginLeft\":", this._marginLeft, ","], "");
     }
 
-    if (this.m_marginRight != null) {  
-      buffer.writeAll(["\"marginRight\":", this.m_marginRight, ","], "");
+    if (this._marginRight != null) {  
+      buffer.writeAll(["\"marginRight\":", this._marginRight, ","], "");
     }
 
-    if (this.m_marginTop != null) {  
-      buffer.writeAll(["\"marginTop\":", this.m_marginTop, ","], "");
+    if (this._marginTop != null) {  
+      buffer.writeAll(["\"marginTop\":", this._marginTop, ","], "");
     }
 
-    if (this.m_axisLayoutRuns != null) {  
-      buffer.writeAll(["\"axisLayoutRuns\":", this.m_axisLayoutRuns, ","], "");
+    if (this._panKey != null) {  
+      buffer.writeAll(["\"panKey\":\`", this._panKey, "\`,"], "");
     }
 
-    if (this.m_panKey != null) {  
-      buffer.writeAll(["\"panKey\":", this.m_panKey, ","], "");
+    if (this._panning != null) {  
+      buffer.writeAll(["\"panning\":", this._panning?.toJSON(), ","], "");
     }
 
-    if (this.m_panning != null) {  
-      buffer.writeAll(["\"panning\":", this.m_panning?.toJSON(), ","], "");
+    if (this._pinchType != null) {  
+      buffer.writeAll(["\"pinchType\":\`", this._pinchType, "\`,"], "");
     }
 
-    if (this.m_pinchType != null) {  
-      buffer.writeAll(["\"pinchType\":", this.m_pinchType, ","], "");
+    if (this._plotBackgroundColor != null) {  
+      buffer.writeAll(["\"plotBackgroundColor\":\`", this._plotBackgroundColor, "\`,"], "");
     }
 
-    if (this.m_plotBackgroundColor != null) {  
-      buffer.writeAll(["\"plotBackgroundColor\":", this.m_plotBackgroundColor, ","], "");
+    if (this._plotBackgroundImage != null) {  
+      buffer.writeAll(["\"plotBackgroundImage\":\`", this._plotBackgroundImage, "\`,"], "");
     }
 
-    if (this.m_plotBackgroundImage != null) {  
-      buffer.writeAll(["\"plotBackgroundImage\":", this.m_plotBackgroundImage, ","], "");
+    if (this._plotBorderColor != null) {  
+      buffer.writeAll(["\"plotBorderColor\":\`", this._plotBorderColor, "\`,"], "");
     }
 
-    if (this.m_plotBorderColor != null) {  
-      buffer.writeAll(["\"plotBorderColor\":", this.m_plotBorderColor, ","], "");
-    }
-
-    if (this.m_plotBorderWidth != null) {  
-      buffer.writeAll(["\"plotBorderWidth\":", this.m_plotBorderWidth, ","], "");
+    if (this._plotBorderWidth != null) {  
+      buffer.writeAll(["\"plotBorderWidth\":", this._plotBorderWidth, ","], "");
     }
 
     // NOTE: skip serialization of plotShadow (type Generic is ignored)} 
 
-    if (this.m_reflow != null) {  
-      buffer.writeAll(["\"reflow\":", this.m_reflow, ","], "");
+    if (this._reflow != null) {  
+      buffer.writeAll(["\"reflow\":", this._reflow, ","], "");
     }
 
-    if (this.m_renderTo != null) {  
-      buffer.writeAll(["\"renderTo\":", this.m_renderTo, ","], "");
+    if (this._renderTo != null) {  
+      buffer.writeAll(["\"renderTo\":\`", this._renderTo, "\`,"], "");
     }
 
-    if (this.m_resetZoomButton != null) {  
-      buffer.writeAll(["\"resetZoomButton\":", this.m_resetZoomButton?.toJSON(), ","], "");
+    if (this._resetZoomButton != null) {  
+      buffer.writeAll(["\"resetZoomButton\":", this._resetZoomButton?.toJSON(), ","], "");
     }
 
     // NOTE: skip serialization of shadow (type Generic is ignored)} 
 
-    if (this.m_selectionMarkerFill != null) {  
-      buffer.writeAll(["\"selectionMarkerFill\":", this.m_selectionMarkerFill, ","], "");
+    if (this._selectionMarkerFill != null) {  
+      buffer.writeAll(["\"selectionMarkerFill\":\`", this._selectionMarkerFill, "\`,"], "");
     }
 
     // NOTE: skip serialization of seriesGroupShadow (type Generic is ignored)} 
 
-    if (this.m_showAxes != null) {  
-      buffer.writeAll(["\"showAxes\":", this.m_showAxes, ","], "");
+    if (this._showAxes != null) {  
+      buffer.writeAll(["\"showAxes\":", this._showAxes, ","], "");
     }
 
     // NOTE: skip serialization of spacing (type number[] is ignored)} 
 
-    if (this.m_spacingBottom != null) {  
-      buffer.writeAll(["\"spacingBottom\":", this.m_spacingBottom, ","], "");
+    if (this._spacingBottom != null) {  
+      buffer.writeAll(["\"spacingBottom\":", this._spacingBottom, ","], "");
     }
 
-    if (this.m_spacingLeft != null) {  
-      buffer.writeAll(["\"spacingLeft\":", this.m_spacingLeft, ","], "");
+    if (this._spacingLeft != null) {  
+      buffer.writeAll(["\"spacingLeft\":", this._spacingLeft, ","], "");
     }
 
-    if (this.m_spacingRight != null) {  
-      buffer.writeAll(["\"spacingRight\":", this.m_spacingRight, ","], "");
+    if (this._spacingRight != null) {  
+      buffer.writeAll(["\"spacingRight\":", this._spacingRight, ","], "");
     }
 
-    if (this.m_spacingTop != null) {  
-      buffer.writeAll(["\"spacingTop\":", this.m_spacingTop, ","], "");
+    if (this._spacingTop != null) {  
+      buffer.writeAll(["\"spacingTop\":", this._spacingTop, ","], "");
     }
 
-    if (this.m_style != null) {  
-      buffer.writeAll(["\"style\":", this.m_style?.toJSON(), ","], "");
+    if (this._style != null) {  
+      buffer.writeAll(["\"style\":", this._style?.toJSON(), ","], "");
     }
 
-    if (this.m_styledMode != null) {  
-      buffer.writeAll(["\"styledMode\":", this.m_styledMode, ","], "");
+    if (this._styledMode != null) {  
+      buffer.writeAll(["\"styledMode\":", this._styledMode, ","], "");
     }
 
-    if (this.m_type != null) {  
-      buffer.writeAll(["\"type\":", this.m_type, ","], "");
+    if (this._type != null) {  
+      buffer.writeAll(["\"type\":\`", this._type, "\`,"], "");
     }
 
-    if (this.m_width != null) {  
-      buffer.writeAll(["\"width\":", this.m_width, ","], "");
+    if (this._width != null) {  
+      buffer.writeAll(["\"width\":", this._width, ","], "");
     }
 
-    if (this.m_zoomBySingleTouch != null) {  
-      buffer.writeAll(["\"zoomBySingleTouch\":", this.m_zoomBySingleTouch, ","], "");
+    if (this._zoomBySingleTouch != null) {  
+      buffer.writeAll(["\"zoomBySingleTouch\":", this._zoomBySingleTouch, ","], "");
     }
 
     // NOTE: skip serialization of zooming (type Generic is ignored)} 
 
-    if (this.m_zoomType != null) {  
-      buffer.writeAll(["\"zoomType\":", this.m_zoomType, ","], "");
+    if (this._zoomType != null) {  
+      buffer.writeAll(["\"zoomType\":\`", this._zoomType, "\`,"], "");
     }
 
-    // NOTE: skip serialization of proj4 (type any is ignored)} 
-
-    if (this.m_forExport != null) {  
-      buffer.writeAll(["\"forExport\":", this.m_forExport, ","], "");
+    if (this._forExport != null) {  
+      buffer.writeAll(["\"forExport\":", this._forExport, ","], "");
     }
 
-    if (this.m_renderer != null) {  
-      buffer.writeAll(["\"renderer\":", this.m_renderer, ","], "");
+    if (this._renderer != null) {  
+      buffer.writeAll(["\"renderer\":\`", this._renderer, "\`,"], "");
     }
 
-    if (this.m_skipClone != null) {  
-      buffer.writeAll(["\"skipClone\":", this.m_skipClone, ","], "");
+    if (this._skipClone != null) {  
+      buffer.writeAll(["\"skipClone\":", this._skipClone, ","], "");
     }
 
     // NOTE: skip serialization of annotations (type AnnotationOptions[] is ignored)} 
@@ -1124,8 +1205,26 @@ class ChartOptions extends OptionFragment {
 
     // NOTE: skip serialization of navigation (type NavigationOptions is ignored)} 
 
-    if (this.m_zoomKey != null) {  
-      buffer.writeAll(["\"zoomKey\":", this.m_zoomKey, ","], "");
+    // NOTE: skip serialization of proj4 (type any is ignored)} 
+
+    if (this._options3d != null) {  
+      buffer.writeAll(["\"options3d\":", this._options3d?.toJSON(), ","], "");
+    }
+
+    if (this._displayErrors != null) {  
+      buffer.writeAll(["\"displayErrors\":", this._displayErrors, ","], "");
+    }
+
+    if (this._zoomKey != null) {  
+      buffer.writeAll(["\"zoomKey\":\`", this._zoomKey, "\`,"], "");
+    }
+
+    if (this._scrollablePlotArea != null) {  
+      buffer.writeAll(["\"scrollablePlotArea\":", this._scrollablePlotArea?.toJSON(), ","], "");
+    }
+
+    if (this._polar != null) {  
+      buffer.writeAll(["\"polar\":", this._polar, ","], "");
     }
   }
 

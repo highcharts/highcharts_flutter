@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,43 +23,43 @@ import 'OptionFragment.dart';
  */
 class AccessibilitySeriesOptions extends OptionFragment {
   AccessibilitySeriesOptions() : super();
-  String? m_descriptionFormat;  
+  String? _descriptionFormat;  
 
   String get descriptionFormat { 
-    if (this.m_descriptionFormat == null) {
-      this.m_descriptionFormat = "";
+    if (this._descriptionFormat == null) {
+      this._descriptionFormat = "";
     }
-    return this.m_descriptionFormat!;
+    return this._descriptionFormat!;
   }
 
   void set descriptionFormat (String v) {
-    this.m_descriptionFormat = v;
+    this._descriptionFormat = v;
   }
     
-  bool? m_describeSingleSeries;  
+  bool? _describeSingleSeries;  
 
   bool get describeSingleSeries { 
-    if (this.m_describeSingleSeries == null) {
-      this.m_describeSingleSeries = false;
+    if (this._describeSingleSeries == null) {
+      this._describeSingleSeries = false;
     }
-    return this.m_describeSingleSeries!;
+    return this._describeSingleSeries!;
   }
 
   void set describeSingleSeries (bool v) {
-    this.m_describeSingleSeries = v;
+    this._describeSingleSeries = v;
   }
     
-  double? m_pointDescriptionEnabledThreshold;  
+  double? _pointDescriptionEnabledThreshold;  
 
   double get pointDescriptionEnabledThreshold { 
-    if (this.m_pointDescriptionEnabledThreshold == null) {
-      this.m_pointDescriptionEnabledThreshold = 0;
+    if (this._pointDescriptionEnabledThreshold == null) {
+      this._pointDescriptionEnabledThreshold = 0;
     }
-    return this.m_pointDescriptionEnabledThreshold!;
+    return this._pointDescriptionEnabledThreshold!;
   }
 
   void set pointDescriptionEnabledThreshold (double v) {
-    this.m_pointDescriptionEnabledThreshold = v;
+    this._pointDescriptionEnabledThreshold = v;
   }
     
 
@@ -70,16 +70,16 @@ class AccessibilitySeriesOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_descriptionFormat != null) {  
-      buffer.writeAll(["\"descriptionFormat\":", this.m_descriptionFormat, ","], "");
+    if (this._descriptionFormat != null) {  
+      buffer.writeAll(["\"descriptionFormat\":\`", this._descriptionFormat, "\`,"], "");
     }
 
-    if (this.m_describeSingleSeries != null) {  
-      buffer.writeAll(["\"describeSingleSeries\":", this.m_describeSingleSeries, ","], "");
+    if (this._describeSingleSeries != null) {  
+      buffer.writeAll(["\"describeSingleSeries\":", this._describeSingleSeries, ","], "");
     }
 
-    if (this.m_pointDescriptionEnabledThreshold != null) {  
-      buffer.writeAll(["\"pointDescriptionEnabledThreshold\":", this.m_pointDescriptionEnabledThreshold, ","], "");
+    if (this._pointDescriptionEnabledThreshold != null) {  
+      buffer.writeAll(["\"pointDescriptionEnabledThreshold\":", this._pointDescriptionEnabledThreshold, ","], "");
     }
   }
 

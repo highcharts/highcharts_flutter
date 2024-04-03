@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,17 +24,17 @@ import 'OptionFragment.dart';
  */
 class PackedBubblePointOptions extends BubblePointOptions {
   PackedBubblePointOptions() : super();
-  double? m_mass;  
+  double? _mass;  
 
   double get mass { 
-    if (this.m_mass == null) {
-      this.m_mass = 0;
+    if (this._mass == null) {
+      this._mass = 0;
     }
-    return this.m_mass!;
+    return this._mass!;
   }
 
   void set mass (double v) {
-    this.m_mass = v;
+    this._mass = v;
   }
     
 
@@ -45,8 +45,8 @@ class PackedBubblePointOptions extends BubblePointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_mass != null) {  
-      buffer.writeAll(["\"mass\":", this.m_mass, ","], "");
+    if (this._mass != null) {  
+      buffer.writeAll(["\"mass\":", this._mass, ","], "");
     }
   }
 

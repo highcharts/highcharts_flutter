@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -41,17 +41,17 @@ class StochasticOptions extends SMAOptions {
    * the first point instance are copied over to the group point. This can be
    * altered through a custom `approximation` callback function.  
       */
-  DataGroupingOptions? m_dataGrouping;  
+  DataGroupingOptions? _dataGrouping;  
 
   DataGroupingOptions get dataGrouping { 
-    if (this.m_dataGrouping == null) {
-      this.m_dataGrouping = DataGroupingOptions();
+    if (this._dataGrouping == null) {
+      this._dataGrouping = DataGroupingOptions();
     }
-    return this.m_dataGrouping!;
+    return this._dataGrouping!;
   }
 
   void set dataGrouping (DataGroupingOptions v) {
-    this.m_dataGrouping = v;
+    this._dataGrouping = v;
   }
     
   /**
@@ -64,17 +64,17 @@ class StochasticOptions extends SMAOptions {
    * In styled mode, the markers can be styled with the `.highcharts-point`,
    * `.highcharts-point-hover` and `.highcharts-point-select` class names.  
       */
-  PointMarkerOptions? m_marker;  
+  PointMarkerOptions? _marker;  
 
   PointMarkerOptions get marker { 
-    if (this.m_marker == null) {
-      this.m_marker = PointMarkerOptions();
+    if (this._marker == null) {
+      this._marker = PointMarkerOptions();
     }
-    return this.m_marker!;
+    return this._marker!;
   }
 
   void set marker (PointMarkerOptions v) {
-    this.m_marker = v;
+    this._marker = v;
   }
     
   /**
@@ -85,17 +85,17 @@ class StochasticOptions extends SMAOptions {
   /**
    * Smoothed line options.  
       */
-  Map<String, String>? m_smoothedLine;  
+  Map<String, String>? _smoothedLine;  
 
   Map<String, String> get smoothedLine { 
-    if (this.m_smoothedLine == null) {
-      this.m_smoothedLine = Map<String, String>();
+    if (this._smoothedLine == null) {
+      this._smoothedLine = Map<String, String>();
     }
-    return this.m_smoothedLine!;
+    return this._smoothedLine!;
   }
 
   void set smoothedLine (Map<String, String> v) {
-    this.m_smoothedLine = v;
+    this._smoothedLine = v;
   }
     
 
@@ -106,20 +106,18 @@ class StochasticOptions extends SMAOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_dataGrouping != null) {  
-      buffer.writeAll(["\"dataGrouping\":", this.m_dataGrouping?.toJSON(), ","], "");
+    if (this._dataGrouping != null) {  
+      buffer.writeAll(["\"dataGrouping\":", this._dataGrouping?.toJSON(), ","], "");
     }
 
-    if (this.m_marker != null) {  
-      buffer.writeAll(["\"marker\":", this.m_marker?.toJSON(), ","], "");
+    if (this._marker != null) {  
+      buffer.writeAll(["\"marker\":", this._marker?.toJSON(), ","], "");
     }
 
-    if (this.m_params != null) {  
-      buffer.writeAll(["\"params\":", this.m_params?.toJSON(), ","], "");
-    }
+    // NOTE: skip serialization of params (type StochasticParamsOptions is ignored)} 
 
-    if (this.m_smoothedLine != null) {  
-      buffer.writeAll(["\"smoothedLine\":", this.m_smoothedLine, ","], "");
+    if (this._smoothedLine != null) {  
+      buffer.writeAll(["\"smoothedLine\":", this._smoothedLine, ","], "");
     }
   }
 

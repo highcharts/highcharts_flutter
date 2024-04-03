@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,30 +23,30 @@ import 'OptionFragment.dart';
  */
 class BubbleSeries extends OptionFragment {
   BubbleSeries() : super();
-  bool? m_bubblePadding;  
+  bool? _bubblePadding;  
 
   bool get bubblePadding { 
-    if (this.m_bubblePadding == null) {
-      this.m_bubblePadding = false;
+    if (this._bubblePadding == null) {
+      this._bubblePadding = false;
     }
-    return this.m_bubblePadding!;
+    return this._bubblePadding!;
   }
 
   void set bubblePadding (bool v) {
-    this.m_bubblePadding = v;
+    this._bubblePadding = v;
   }
     
-  String? m_specialGroup;  
+  String? _specialGroup;  
 
   String get specialGroup { 
-    if (this.m_specialGroup == null) {
-      this.m_specialGroup = "";
+    if (this._specialGroup == null) {
+      this._specialGroup = "";
     }
-    return this.m_specialGroup!;
+    return this._specialGroup!;
   }
 
   void set specialGroup (String v) {
-    this.m_specialGroup = v;
+    this._specialGroup = v;
   }
     
 
@@ -57,16 +57,16 @@ class BubbleSeries extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_bubblePadding != null) {  
-      buffer.writeAll(["\"bubblePadding\":", this.m_bubblePadding, ","], "");
+    if (this._bubblePadding != null) {  
+      buffer.writeAll(["\"bubblePadding\":", this._bubblePadding, ","], "");
     }
 
     // NOTE: skip serialization of isBubble (type true is ignored)} 
 
     // NOTE: skip serialization of pointClass (type typeof BubblePoint is ignored)} 
 
-    if (this.m_specialGroup != null) {  
-      buffer.writeAll(["\"specialGroup\":", this.m_specialGroup, ","], "");
+    if (this._specialGroup != null) {  
+      buffer.writeAll(["\"specialGroup\":\`", this._specialGroup, "\`,"], "");
     }
   }
 

@@ -12,10 +12,11 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
+import 'HTMLCanvasElement.dart';
 import 'SVGElement.dart';
 import 'CanvasRenderingContext2D.dart';
 import 'OptionFragment.dart';

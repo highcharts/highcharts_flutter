@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,43 +23,43 @@ import 'OptionFragment.dart';
  */
 class TimeNormalizedObject extends OptionFragment {
   TimeNormalizedObject() : super();
-  double? m_count;  
+  double? _count;  
 
   double get count { 
-    if (this.m_count == null) {
-      this.m_count = 0;
+    if (this._count == null) {
+      this._count = 0;
     }
-    return this.m_count!;
+    return this._count!;
   }
 
   void set count (double v) {
-    this.m_count = v;
+    this._count = v;
   }
     
-  String? m_unitName;  
+  String? _unitName;  
 
   String get unitName { 
-    if (this.m_unitName == null) {
-      this.m_unitName = "";
+    if (this._unitName == null) {
+      this._unitName = "";
     }
-    return this.m_unitName!;
+    return this._unitName!;
   }
 
   void set unitName (String v) {
-    this.m_unitName = v;
+    this._unitName = v;
   }
     
-  double? m_unitRange;  
+  double? _unitRange;  
 
   double get unitRange { 
-    if (this.m_unitRange == null) {
-      this.m_unitRange = 0;
+    if (this._unitRange == null) {
+      this._unitRange = 0;
     }
-    return this.m_unitRange!;
+    return this._unitRange!;
   }
 
   void set unitRange (double v) {
-    this.m_unitRange = v;
+    this._unitRange = v;
   }
     
 
@@ -70,16 +70,16 @@ class TimeNormalizedObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_count != null) {  
-      buffer.writeAll(["\"count\":", this.m_count, ","], "");
+    if (this._count != null) {  
+      buffer.writeAll(["\"count\":", this._count, ","], "");
     }
 
-    if (this.m_unitName != null) {  
-      buffer.writeAll(["\"unitName\":", this.m_unitName, ","], "");
+    if (this._unitName != null) {  
+      buffer.writeAll(["\"unitName\":\`", this._unitName, "\`,"], "");
     }
 
-    if (this.m_unitRange != null) {  
-      buffer.writeAll(["\"unitRange\":", this.m_unitRange, ","], "");
+    if (this._unitRange != null) {  
+      buffer.writeAll(["\"unitRange\":", this._unitRange, ","], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -30,17 +30,17 @@ class Funnel3DSeriesOptions extends ColumnSeriesOptions {
    * 
    * Defaults to 'true'. 
       */
-  bool? m_gradientForSides;  
+  bool? _gradientForSides;  
 
   bool get gradientForSides { 
-    if (this.m_gradientForSides == null) {
-      this.m_gradientForSides = false;
+    if (this._gradientForSides == null) {
+      this._gradientForSides = false;
     }
-    return this.m_gradientForSides!;
+    return this._gradientForSides!;
   }
 
   void set gradientForSides (bool v) {
-    this.m_gradientForSides = v;
+    this._gradientForSides = v;
   }
     
   /**
@@ -50,30 +50,30 @@ class Funnel3DSeriesOptions extends ColumnSeriesOptions {
    * 
    * Defaults to '100%'. 
       */
-  String? m_height;  
+  String? _height;  
 
   String get height { 
-    if (this.m_height == null) {
-      this.m_height = "";
+    if (this._height == null) {
+      this._height = "";
     }
-    return this.m_height!;
+    return this._height!;
   }
 
   void set height (String v) {
-    this.m_height = v;
+    this._height = v;
   }
     
-  bool? m_ignoreHiddenPoint;  
+  bool? _ignoreHiddenPoint;  
 
   bool get ignoreHiddenPoint { 
-    if (this.m_ignoreHiddenPoint == null) {
-      this.m_ignoreHiddenPoint = false;
+    if (this._ignoreHiddenPoint == null) {
+      this._ignoreHiddenPoint = false;
     }
-    return this.m_ignoreHiddenPoint!;
+    return this._ignoreHiddenPoint!;
   }
 
   void set ignoreHiddenPoint (bool v) {
-    this.m_ignoreHiddenPoint = v;
+    this._ignoreHiddenPoint = v;
   }
     
   /**
@@ -83,17 +83,17 @@ class Funnel3DSeriesOptions extends ColumnSeriesOptions {
    * 
    * Defaults to '25%'. 
       */
-  String? m_neckHeight;  
+  String? _neckHeight;  
 
   String get neckHeight { 
-    if (this.m_neckHeight == null) {
-      this.m_neckHeight = "";
+    if (this._neckHeight == null) {
+      this._neckHeight = "";
     }
-    return this.m_neckHeight!;
+    return this._neckHeight!;
   }
 
   void set neckHeight (String v) {
-    this.m_neckHeight = v;
+    this._neckHeight = v;
   }
     
   /**
@@ -103,34 +103,34 @@ class Funnel3DSeriesOptions extends ColumnSeriesOptions {
    * 
    * Defaults to '30%'. 
       */
-  String? m_neckWidth;  
+  String? _neckWidth;  
 
   String get neckWidth { 
-    if (this.m_neckWidth == null) {
-      this.m_neckWidth = "";
+    if (this._neckWidth == null) {
+      this._neckWidth = "";
     }
-    return this.m_neckWidth!;
+    return this._neckWidth!;
   }
 
   void set neckWidth (String v) {
-    this.m_neckWidth = v;
+    this._neckWidth = v;
   }
     
   /**
    * A reversed funnel has the widest area down. A reversed funnel with
    * no neck width and neck height is a pyramid.  
       */
-  bool? m_reversed;  
+  bool? _reversed;  
 
   bool get reversed { 
-    if (this.m_reversed == null) {
-      this.m_reversed = false;
+    if (this._reversed == null) {
+      this._reversed = false;
     }
-    return this.m_reversed!;
+    return this._reversed!;
   }
 
   void set reversed (bool v) {
-    this.m_reversed = v;
+    this._reversed = v;
   }
     
   // NOTE: states skipped - type Generic is ignored in gen
@@ -141,17 +141,17 @@ class Funnel3DSeriesOptions extends ColumnSeriesOptions {
    * 
    * Defaults to '90%'. 
       */
-  String? m_width;  
+  String? _width;  
 
   String get width { 
-    if (this.m_width == null) {
-      this.m_width = "";
+    if (this._width == null) {
+      this._width = "";
     }
-    return this.m_width!;
+    return this._width!;
   }
 
   void set width (String v) {
-    this.m_width = v;
+    this._width = v;
   }
     
 
@@ -166,34 +166,34 @@ class Funnel3DSeriesOptions extends ColumnSeriesOptions {
 
     // NOTE: skip serialization of data (type Funnel3DPointOptions)[] is ignored)} 
 
-    if (this.m_gradientForSides != null) {  
-      buffer.writeAll(["\"gradientForSides\":", this.m_gradientForSides, ","], "");
+    if (this._gradientForSides != null) {  
+      buffer.writeAll(["\"gradientForSides\":", this._gradientForSides, ","], "");
     }
 
-    if (this.m_height != null) {  
-      buffer.writeAll(["\"height\":", this.m_height, ","], "");
+    if (this._height != null) {  
+      buffer.writeAll(["\"height\":\`", this._height, "\`,"], "");
     }
 
-    if (this.m_ignoreHiddenPoint != null) {  
-      buffer.writeAll(["\"ignoreHiddenPoint\":", this.m_ignoreHiddenPoint, ","], "");
+    if (this._ignoreHiddenPoint != null) {  
+      buffer.writeAll(["\"ignoreHiddenPoint\":", this._ignoreHiddenPoint, ","], "");
     }
 
-    if (this.m_neckHeight != null) {  
-      buffer.writeAll(["\"neckHeight\":", this.m_neckHeight, ","], "");
+    if (this._neckHeight != null) {  
+      buffer.writeAll(["\"neckHeight\":\`", this._neckHeight, "\`,"], "");
     }
 
-    if (this.m_neckWidth != null) {  
-      buffer.writeAll(["\"neckWidth\":", this.m_neckWidth, ","], "");
+    if (this._neckWidth != null) {  
+      buffer.writeAll(["\"neckWidth\":\`", this._neckWidth, "\`,"], "");
     }
 
-    if (this.m_reversed != null) {  
-      buffer.writeAll(["\"reversed\":", this.m_reversed, ","], "");
+    if (this._reversed != null) {  
+      buffer.writeAll(["\"reversed\":", this._reversed, ","], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 
 
-    if (this.m_width != null) {  
-      buffer.writeAll(["\"width\":", this.m_width, ","], "");
+    if (this._width != null) {  
+      buffer.writeAll(["\"width\":\`", this._width, "\`,"], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,95 +23,95 @@ import 'OptionFragment.dart';
  */
 class AccessibilityPointOptions extends OptionFragment {
   AccessibilityPointOptions() : super();
-  String? m_dateFormat;  
+  String? _dateFormat;  
 
   String get dateFormat { 
-    if (this.m_dateFormat == null) {
-      this.m_dateFormat = "";
+    if (this._dateFormat == null) {
+      this._dateFormat = "";
     }
-    return this.m_dateFormat!;
+    return this._dateFormat!;
   }
 
   void set dateFormat (String v) {
-    this.m_dateFormat = v;
+    this._dateFormat = v;
   }
     
-  bool? m_describeNull;  
+  bool? _describeNull;  
 
   bool get describeNull { 
-    if (this.m_describeNull == null) {
-      this.m_describeNull = false;
+    if (this._describeNull == null) {
+      this._describeNull = false;
     }
-    return this.m_describeNull!;
+    return this._describeNull!;
   }
 
   void set describeNull (bool v) {
-    this.m_describeNull = v;
+    this._describeNull = v;
   }
     
-  String? m_descriptionFormat;  
+  String? _descriptionFormat;  
 
   String get descriptionFormat { 
-    if (this.m_descriptionFormat == null) {
-      this.m_descriptionFormat = "";
+    if (this._descriptionFormat == null) {
+      this._descriptionFormat = "";
     }
-    return this.m_descriptionFormat!;
+    return this._descriptionFormat!;
   }
 
   void set descriptionFormat (String v) {
-    this.m_descriptionFormat = v;
+    this._descriptionFormat = v;
   }
     
-  double? m_valueDecimals;  
+  double? _valueDecimals;  
 
   double get valueDecimals { 
-    if (this.m_valueDecimals == null) {
-      this.m_valueDecimals = 0;
+    if (this._valueDecimals == null) {
+      this._valueDecimals = 0;
     }
-    return this.m_valueDecimals!;
+    return this._valueDecimals!;
   }
 
   void set valueDecimals (double v) {
-    this.m_valueDecimals = v;
+    this._valueDecimals = v;
   }
     
-  String? m_valueDescriptionFormat;  
+  String? _valueDescriptionFormat;  
 
   String get valueDescriptionFormat { 
-    if (this.m_valueDescriptionFormat == null) {
-      this.m_valueDescriptionFormat = "";
+    if (this._valueDescriptionFormat == null) {
+      this._valueDescriptionFormat = "";
     }
-    return this.m_valueDescriptionFormat!;
+    return this._valueDescriptionFormat!;
   }
 
   void set valueDescriptionFormat (String v) {
-    this.m_valueDescriptionFormat = v;
+    this._valueDescriptionFormat = v;
   }
     
-  String? m_valuePrefix;  
+  String? _valuePrefix;  
 
   String get valuePrefix { 
-    if (this.m_valuePrefix == null) {
-      this.m_valuePrefix = "";
+    if (this._valuePrefix == null) {
+      this._valuePrefix = "";
     }
-    return this.m_valuePrefix!;
+    return this._valuePrefix!;
   }
 
   void set valuePrefix (String v) {
-    this.m_valuePrefix = v;
+    this._valuePrefix = v;
   }
     
-  String? m_valueSuffix;  
+  String? _valueSuffix;  
 
   String get valueSuffix { 
-    if (this.m_valueSuffix == null) {
-      this.m_valueSuffix = "";
+    if (this._valueSuffix == null) {
+      this._valueSuffix = "";
     }
-    return this.m_valueSuffix!;
+    return this._valueSuffix!;
   }
 
   void set valueSuffix (String v) {
-    this.m_valueSuffix = v;
+    this._valueSuffix = v;
   }
     
 
@@ -122,32 +122,32 @@ class AccessibilityPointOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_dateFormat != null) {  
-      buffer.writeAll(["\"dateFormat\":", this.m_dateFormat, ","], "");
+    if (this._dateFormat != null) {  
+      buffer.writeAll(["\"dateFormat\":\`", this._dateFormat, "\`,"], "");
     }
 
-    if (this.m_describeNull != null) {  
-      buffer.writeAll(["\"describeNull\":", this.m_describeNull, ","], "");
+    if (this._describeNull != null) {  
+      buffer.writeAll(["\"describeNull\":", this._describeNull, ","], "");
     }
 
-    if (this.m_descriptionFormat != null) {  
-      buffer.writeAll(["\"descriptionFormat\":", this.m_descriptionFormat, ","], "");
+    if (this._descriptionFormat != null) {  
+      buffer.writeAll(["\"descriptionFormat\":\`", this._descriptionFormat, "\`,"], "");
     }
 
-    if (this.m_valueDecimals != null) {  
-      buffer.writeAll(["\"valueDecimals\":", this.m_valueDecimals, ","], "");
+    if (this._valueDecimals != null) {  
+      buffer.writeAll(["\"valueDecimals\":", this._valueDecimals, ","], "");
     }
 
-    if (this.m_valueDescriptionFormat != null) {  
-      buffer.writeAll(["\"valueDescriptionFormat\":", this.m_valueDescriptionFormat, ","], "");
+    if (this._valueDescriptionFormat != null) {  
+      buffer.writeAll(["\"valueDescriptionFormat\":\`", this._valueDescriptionFormat, "\`,"], "");
     }
 
-    if (this.m_valuePrefix != null) {  
-      buffer.writeAll(["\"valuePrefix\":", this.m_valuePrefix, ","], "");
+    if (this._valuePrefix != null) {  
+      buffer.writeAll(["\"valuePrefix\":\`", this._valuePrefix, "\`,"], "");
     }
 
-    if (this.m_valueSuffix != null) {  
-      buffer.writeAll(["\"valueSuffix\":", this.m_valueSuffix, ","], "");
+    if (this._valueSuffix != null) {  
+      buffer.writeAll(["\"valueSuffix\":\`", this._valueSuffix, "\`,"], "");
     }
   }
 

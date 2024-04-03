@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,43 +24,43 @@ import 'OptionFragment.dart';
  */
 class SeriesStateInactiveOptions extends StateInactiveOptions {
   SeriesStateInactiveOptions() : super();
-  bool? m_enabled;  
+  bool? _enabled;  
 
   bool get enabled { 
-    if (this.m_enabled == null) {
-      this.m_enabled = false;
+    if (this._enabled == null) {
+      this._enabled = false;
     }
-    return this.m_enabled!;
+    return this._enabled!;
   }
 
   void set enabled (bool v) {
-    this.m_enabled = v;
+    this._enabled = v;
   }
     
-  double? m_brightness;  
+  double? _brightness;  
 
   double get brightness { 
-    if (this.m_brightness == null) {
-      this.m_brightness = 0;
+    if (this._brightness == null) {
+      this._brightness = 0;
     }
-    return this.m_brightness!;
+    return this._brightness!;
   }
 
   void set brightness (double v) {
-    this.m_brightness = v;
+    this._brightness = v;
   }
     
-  double? m_linkOpacity;  
+  double? _linkOpacity;  
 
   double get linkOpacity { 
-    if (this.m_linkOpacity == null) {
-      this.m_linkOpacity = 0;
+    if (this._linkOpacity == null) {
+      this._linkOpacity = 0;
     }
-    return this.m_linkOpacity!;
+    return this._linkOpacity!;
   }
 
   void set linkOpacity (double v) {
-    this.m_linkOpacity = v;
+    this._linkOpacity = v;
   }
     
 
@@ -71,18 +71,18 @@ class SeriesStateInactiveOptions extends StateInactiveOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this.m_enabled, ","], "");
+    if (this._enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this._enabled, ","], "");
     }
 
-    if (this.m_brightness != null) {  
-      buffer.writeAll(["\"brightness\":", this.m_brightness, ","], "");
+    if (this._brightness != null) {  
+      buffer.writeAll(["\"brightness\":", this._brightness, ","], "");
     }
 
     // NOTE: skip serialization of animation (type Generic is ignored)} 
 
-    if (this.m_linkOpacity != null) {  
-      buffer.writeAll(["\"linkOpacity\":", this.m_linkOpacity, ","], "");
+    if (this._linkOpacity != null) {  
+      buffer.writeAll(["\"linkOpacity\":", this._linkOpacity, ","], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,17 +24,17 @@ import 'OptionFragment.dart';
  */
 class SeriesStateSelectOptions extends StateSelectOptions {
   SeriesStateSelectOptions() : super();
-  double? m_brightness;  
+  double? _brightness;  
 
   double get brightness { 
-    if (this.m_brightness == null) {
-      this.m_brightness = 0;
+    if (this._brightness == null) {
+      this._brightness = 0;
     }
-    return this.m_brightness!;
+    return this._brightness!;
   }
 
   void set brightness (double v) {
-    this.m_brightness = v;
+    this._brightness = v;
   }
     
 
@@ -45,8 +45,8 @@ class SeriesStateSelectOptions extends StateSelectOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_brightness != null) {  
-      buffer.writeAll(["\"brightness\":", this.m_brightness, ","], "");
+    if (this._brightness != null) {  
+      buffer.writeAll(["\"brightness\":", this._brightness, ","], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -30,17 +30,17 @@ class VariablePieSeriesOptions extends PieSeriesOptions {
    * 
    * Defaults to '100%'. 
       */
-  String? m_maxPointSize;  
+  String? _maxPointSize;  
 
   String get maxPointSize { 
-    if (this.m_maxPointSize == null) {
-      this.m_maxPointSize = "";
+    if (this._maxPointSize == null) {
+      this._maxPointSize = "";
     }
-    return this.m_maxPointSize!;
+    return this._maxPointSize!;
   }
 
   void set maxPointSize (String v) {
-    this.m_maxPointSize = v;
+    this._maxPointSize = v;
   }
     
   /**
@@ -49,17 +49,17 @@ class VariablePieSeriesOptions extends PieSeriesOptions {
    * 
    * Defaults to '10%'. 
       */
-  String? m_minPointSize;  
+  String? _minPointSize;  
 
   String get minPointSize { 
-    if (this.m_minPointSize == null) {
-      this.m_minPointSize = "";
+    if (this._minPointSize == null) {
+      this._minPointSize = "";
     }
-    return this.m_minPointSize!;
+    return this._minPointSize!;
   }
 
   void set minPointSize (String v) {
-    this.m_minPointSize = v;
+    this._minPointSize = v;
   }
     
   /**
@@ -70,17 +70,17 @@ class VariablePieSeriesOptions extends PieSeriesOptions {
    * 
    * Defaults to 'area'. 
       */
-  String? m_sizeBy;  
+  String? _sizeBy;  
 
   String get sizeBy { 
-    if (this.m_sizeBy == null) {
-      this.m_sizeBy = "";
+    if (this._sizeBy == null) {
+      this._sizeBy = "";
     }
-    return this.m_sizeBy!;
+    return this._sizeBy!;
   }
 
   void set sizeBy (String v) {
-    this.m_sizeBy = v;
+    this._sizeBy = v;
   }
     
   // NOTE: states skipped - type Generic is ignored in gen
@@ -90,17 +90,17 @@ class VariablePieSeriesOptions extends PieSeriesOptions {
    * the point's Z value is bigger than zMax, the slice will be drawn
    * according to the zMax value  
       */
-  double? m_zMax;  
+  double? _zMax;  
 
   double get zMax { 
-    if (this.m_zMax == null) {
-      this.m_zMax = 0;
+    if (this._zMax == null) {
+      this._zMax = 0;
     }
-    return this.m_zMax!;
+    return this._zMax!;
   }
 
   void set zMax (double v) {
-    this.m_zMax = v;
+    this._zMax = v;
   }
     
   /**
@@ -108,17 +108,17 @@ class VariablePieSeriesOptions extends PieSeriesOptions {
    * the point's Z value is smaller than zMin, the slice will be drawn
    * according to the zMin value.  
       */
-  double? m_zMin;  
+  double? _zMin;  
 
   double get zMin { 
-    if (this.m_zMin == null) {
-      this.m_zMin = 0;
+    if (this._zMin == null) {
+      this._zMin = 0;
     }
-    return this.m_zMin!;
+    return this._zMin!;
   }
 
   void set zMin (double v) {
-    this.m_zMin = v;
+    this._zMin = v;
   }
     
 
@@ -129,26 +129,26 @@ class VariablePieSeriesOptions extends PieSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_maxPointSize != null) {  
-      buffer.writeAll(["\"maxPointSize\":", this.m_maxPointSize, ","], "");
+    if (this._maxPointSize != null) {  
+      buffer.writeAll(["\"maxPointSize\":\`", this._maxPointSize, "\`,"], "");
     }
 
-    if (this.m_minPointSize != null) {  
-      buffer.writeAll(["\"minPointSize\":", this.m_minPointSize, ","], "");
+    if (this._minPointSize != null) {  
+      buffer.writeAll(["\"minPointSize\":\`", this._minPointSize, "\`,"], "");
     }
 
-    if (this.m_sizeBy != null) {  
-      buffer.writeAll(["\"sizeBy\":", this.m_sizeBy, ","], "");
+    if (this._sizeBy != null) {  
+      buffer.writeAll(["\"sizeBy\":\`", this._sizeBy, "\`,"], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 
 
-    if (this.m_zMax != null) {  
-      buffer.writeAll(["\"zMax\":", this.m_zMax, ","], "");
+    if (this._zMax != null) {  
+      buffer.writeAll(["\"zMax\":", this._zMax, ","], "");
     }
 
-    if (this.m_zMin != null) {  
-      buffer.writeAll(["\"zMin\":", this.m_zMin, ","], "");
+    if (this._zMin != null) {  
+      buffer.writeAll(["\"zMin\":", this._zMin, ","], "");
     }
   }
 

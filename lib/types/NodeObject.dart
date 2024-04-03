@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,121 +23,121 @@ import 'OptionFragment.dart';
  */
 class NodeObject extends OptionFragment {
   NodeObject() : super();
-  double? m_childrenTotal;  
+  double? _childrenTotal;  
 
   double get childrenTotal { 
-    if (this.m_childrenTotal == null) {
-      this.m_childrenTotal = 0;
+    if (this._childrenTotal == null) {
+      this._childrenTotal = 0;
     }
-    return this.m_childrenTotal!;
+    return this._childrenTotal!;
   }
 
   void set childrenTotal (double v) {
-    this.m_childrenTotal = v;
+    this._childrenTotal = v;
   }
     
-  double? m_i;  
+  double? _i;  
 
   double get i { 
-    if (this.m_i == null) {
-      this.m_i = 0;
+    if (this._i == null) {
+      this._i = 0;
     }
-    return this.m_i!;
+    return this._i!;
   }
 
   void set i (double v) {
-    this.m_i = v;
+    this._i = v;
   }
     
-  String? m_id;  
+  String? _id;  
 
   String get id { 
-    if (this.m_id == null) {
-      this.m_id = "";
+    if (this._id == null) {
+      this._id = "";
     }
-    return this.m_id!;
+    return this._id!;
   }
 
   void set id (String v) {
-    this.m_id = v;
+    this._id = v;
   }
     
-  bool? m_isLeaf;  
+  bool? _isLeaf;  
 
   bool get isLeaf { 
-    if (this.m_isLeaf == null) {
-      this.m_isLeaf = false;
+    if (this._isLeaf == null) {
+      this._isLeaf = false;
     }
-    return this.m_isLeaf!;
+    return this._isLeaf!;
   }
 
   void set isLeaf (bool v) {
-    this.m_isLeaf = v;
+    this._isLeaf = v;
   }
     
-  double? m_levelDynamic;  
+  double? _levelDynamic;  
 
   double get levelDynamic { 
-    if (this.m_levelDynamic == null) {
-      this.m_levelDynamic = 0;
+    if (this._levelDynamic == null) {
+      this._levelDynamic = 0;
     }
-    return this.m_levelDynamic!;
+    return this._levelDynamic!;
   }
 
   void set levelDynamic (double v) {
-    this.m_levelDynamic = v;
+    this._levelDynamic = v;
   }
     
-  double? m_level;  
+  double? _level;  
 
   double get level { 
-    if (this.m_level == null) {
-      this.m_level = 0;
+    if (this._level == null) {
+      this._level = 0;
     }
-    return this.m_level!;
+    return this._level!;
   }
 
   void set level (double v) {
-    this.m_level = v;
+    this._level = v;
   }
     
-  String? m_name;  
+  String? _name;  
 
   String get name { 
-    if (this.m_name == null) {
-      this.m_name = "";
+    if (this._name == null) {
+      this._name = "";
     }
-    return this.m_name!;
+    return this._name!;
   }
 
   void set name (String v) {
-    this.m_name = v;
+    this._name = v;
   }
     
-  double? m_val;  
+  double? _val;  
 
   double get val { 
-    if (this.m_val == null) {
-      this.m_val = 0;
+    if (this._val == null) {
+      this._val = 0;
     }
-    return this.m_val!;
+    return this._val!;
   }
 
   void set val (double v) {
-    this.m_val = v;
+    this._val = v;
   }
     
-  bool? m_visible;  
+  bool? _visible;  
 
   bool get visible { 
-    if (this.m_visible == null) {
-      this.m_visible = false;
+    if (this._visible == null) {
+      this._visible = false;
     }
-    return this.m_visible!;
+    return this._visible!;
   }
 
   void set visible (bool v) {
-    this.m_visible = v;
+    this._visible = v;
   }
     
 
@@ -150,40 +150,40 @@ class NodeObject extends OptionFragment {
     
     // NOTE: skip serialization of children (type NodeObject[] is ignored)} 
 
-    if (this.m_childrenTotal != null) {  
-      buffer.writeAll(["\"childrenTotal\":", this.m_childrenTotal, ","], "");
+    if (this._childrenTotal != null) {  
+      buffer.writeAll(["\"childrenTotal\":", this._childrenTotal, ","], "");
     }
 
-    if (this.m_i != null) {  
-      buffer.writeAll(["\"i\":", this.m_i, ","], "");
+    if (this._i != null) {  
+      buffer.writeAll(["\"i\":", this._i, ","], "");
     }
 
-    if (this.m_id != null) {  
-      buffer.writeAll(["\"id\":", this.m_id, ","], "");
+    if (this._id != null) {  
+      buffer.writeAll(["\"id\":\`", this._id, "\`,"], "");
     }
 
-    if (this.m_isLeaf != null) {  
-      buffer.writeAll(["\"isLeaf\":", this.m_isLeaf, ","], "");
+    if (this._isLeaf != null) {  
+      buffer.writeAll(["\"isLeaf\":", this._isLeaf, ","], "");
     }
 
-    if (this.m_levelDynamic != null) {  
-      buffer.writeAll(["\"levelDynamic\":", this.m_levelDynamic, ","], "");
+    if (this._levelDynamic != null) {  
+      buffer.writeAll(["\"levelDynamic\":", this._levelDynamic, ","], "");
     }
 
-    if (this.m_level != null) {  
-      buffer.writeAll(["\"level\":", this.m_level, ","], "");
+    if (this._level != null) {  
+      buffer.writeAll(["\"level\":", this._level, ","], "");
     }
 
-    if (this.m_name != null) {  
-      buffer.writeAll(["\"name\":", this.m_name, ","], "");
+    if (this._name != null) {  
+      buffer.writeAll(["\"name\":\`", this._name, "\`,"], "");
     }
 
-    if (this.m_val != null) {  
-      buffer.writeAll(["\"val\":", this.m_val, ","], "");
+    if (this._val != null) {  
+      buffer.writeAll(["\"val\":", this._val, ","], "");
     }
 
-    if (this.m_visible != null) {  
-      buffer.writeAll(["\"visible\":", this.m_visible, ","], "");
+    if (this._visible != null) {  
+      buffer.writeAll(["\"visible\":", this._visible, ","], "");
     }
   }
 

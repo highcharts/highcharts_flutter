@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -25,17 +25,17 @@ import 'OptionFragment.dart';
  */
 class ChartResetZoomButtonOptions extends OptionFragment {
   ChartResetZoomButtonOptions() : super();
-  String? m_relativeTo;  
+  String? _relativeTo;  
 
   String get relativeTo { 
-    if (this.m_relativeTo == null) {
-      this.m_relativeTo = "";
+    if (this._relativeTo == null) {
+      this._relativeTo = "";
     }
-    return this.m_relativeTo!;
+    return this._relativeTo!;
   }
 
   void set relativeTo (String v) {
-    this.m_relativeTo = v;
+    this._relativeTo = v;
   }
     
 
@@ -48,8 +48,8 @@ class ChartResetZoomButtonOptions extends OptionFragment {
     
     // NOTE: skip serialization of position (type AlignObject is ignored)} 
 
-    if (this.m_relativeTo != null) {  
-      buffer.writeAll(["\"relativeTo\":", this.m_relativeTo, ","], "");
+    if (this._relativeTo != null) {  
+      buffer.writeAll(["\"relativeTo\":\`", this._relativeTo, "\`,"], "");
     }
 
     // NOTE: skip serialization of theme (type SVGAttributes is ignored)} 

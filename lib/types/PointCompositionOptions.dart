@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,69 +24,69 @@ import 'OptionFragment.dart';
  */
 class PointCompositionOptions extends PointOptions {
   PointCompositionOptions() : super();
-  String? m_id;  
+  String? _id;  
 
   String get id { 
-    if (this.m_id == null) {
-      this.m_id = "";
+    if (this._id == null) {
+      this._id = "";
     }
-    return this.m_id!;
+    return this._id!;
   }
 
   void set id (String v) {
-    this.m_id = v;
+    this._id = v;
   }
     
-  double? m_level;  
+  double? _level;  
 
   double get level { 
-    if (this.m_level == null) {
-      this.m_level = 0;
+    if (this._level == null) {
+      this._level = 0;
     }
-    return this.m_level!;
+    return this._level!;
   }
 
   void set level (double v) {
-    this.m_level = v;
+    this._level = v;
   }
     
-  double? m_mass;  
+  double? _mass;  
 
   double get mass { 
-    if (this.m_mass == null) {
-      this.m_mass = 0;
+    if (this._mass == null) {
+      this._mass = 0;
     }
-    return this.m_mass!;
+    return this._mass!;
   }
 
   void set mass (double v) {
-    this.m_mass = v;
+    this._mass = v;
   }
     
-  bool? m_outgoing;  
+  bool? _outgoing;  
 
   bool get outgoing { 
-    if (this.m_outgoing == null) {
-      this.m_outgoing = false;
+    if (this._outgoing == null) {
+      this._outgoing = false;
     }
-    return this.m_outgoing!;
+    return this._outgoing!;
   }
 
   void set outgoing (bool v) {
-    this.m_outgoing = v;
+    this._outgoing = v;
   }
     
-  double? m_weight;  
+  double? _weight;  
 
   double get weight { 
-    if (this.m_weight == null) {
-      this.m_weight = 0;
+    if (this._weight == null) {
+      this._weight = 0;
     }
-    return this.m_weight!;
+    return this._weight!;
   }
 
   void set weight (double v) {
-    this.m_weight = v;
+    this._weight = v;
   }
     
 
@@ -97,24 +97,24 @@ class PointCompositionOptions extends PointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_id != null) {  
-      buffer.writeAll(["\"id\":", this.m_id, ","], "");
+    if (this._id != null) {  
+      buffer.writeAll(["\"id\":\`", this._id, "\`,"], "");
     }
 
-    if (this.m_level != null) {  
-      buffer.writeAll(["\"level\":", this.m_level, ","], "");
+    if (this._level != null) {  
+      buffer.writeAll(["\"level\":", this._level, ","], "");
     }
 
-    if (this.m_mass != null) {  
-      buffer.writeAll(["\"mass\":", this.m_mass, ","], "");
+    if (this._mass != null) {  
+      buffer.writeAll(["\"mass\":", this._mass, ","], "");
     }
 
-    if (this.m_outgoing != null) {  
-      buffer.writeAll(["\"outgoing\":", this.m_outgoing, ","], "");
+    if (this._outgoing != null) {  
+      buffer.writeAll(["\"outgoing\":", this._outgoing, ","], "");
     }
 
-    if (this.m_weight != null) {  
-      buffer.writeAll(["\"weight\":", this.m_weight, ","], "");
+    if (this._weight != null) {  
+      buffer.writeAll(["\"weight\":", this._weight, ","], "");
     }
   }
 

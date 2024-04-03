@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,19 +23,7 @@ import 'OptionFragment.dart';
  */
 class ScatterSeries extends OptionFragment {
   ScatterSeries() : super();
-  bool? m_takeOrdinalPosition;  
-
-  bool get takeOrdinalPosition { 
-    if (this.m_takeOrdinalPosition == null) {
-      this.m_takeOrdinalPosition = false;
-    }
-    return this.m_takeOrdinalPosition!;
-  }
-
-  void set takeOrdinalPosition (bool v) {
-    this.m_takeOrdinalPosition = v;
-  }
-    
+  
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -45,10 +33,6 @@ class ScatterSeries extends OptionFragment {
 
     
     // NOTE: skip serialization of pointClass (type typeof ScatterPoint is ignored)} 
-
-    if (this.m_takeOrdinalPosition != null) {  
-      buffer.writeAll(["\"takeOrdinalPosition\":", this.m_takeOrdinalPosition, ","], "");
-    }
   }
 
 }

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -26,82 +26,82 @@ import 'OptionFragment.dart';
  */
 class LegendItem extends OptionFragment {
   LegendItem() : super();
-  double? m_checkboxOffset;  
+  double? _checkboxOffset;  
 
   double get checkboxOffset { 
-    if (this.m_checkboxOffset == null) {
-      this.m_checkboxOffset = 0;
+    if (this._checkboxOffset == null) {
+      this._checkboxOffset = 0;
     }
-    return this.m_checkboxOffset!;
+    return this._checkboxOffset!;
   }
 
   void set checkboxOffset (double v) {
-    this.m_checkboxOffset = v;
+    this._checkboxOffset = v;
   }
     
-  String? m_color;  
+  String? _color;  
 
   String get color { 
-    if (this.m_color == null) {
-      this.m_color = "";
+    if (this._color == null) {
+      this._color = "";
     }
-    return this.m_color!;
+    return this._color!;
   }
 
   void set color (String v) {
-    this.m_color = v;
+    this._color = v;
   }
     
-  double? m_itemHeight;  
+  double? _itemHeight;  
 
   double get itemHeight { 
-    if (this.m_itemHeight == null) {
-      this.m_itemHeight = 0;
+    if (this._itemHeight == null) {
+      this._itemHeight = 0;
     }
-    return this.m_itemHeight!;
+    return this._itemHeight!;
   }
 
   void set itemHeight (double v) {
-    this.m_itemHeight = v;
+    this._itemHeight = v;
   }
     
-  double? m_itemWidth;  
+  double? _itemWidth;  
 
   double get itemWidth { 
-    if (this.m_itemWidth == null) {
-      this.m_itemWidth = 0;
+    if (this._itemWidth == null) {
+      this._itemWidth = 0;
     }
-    return this.m_itemWidth!;
+    return this._itemWidth!;
   }
 
   void set itemWidth (double v) {
-    this.m_itemWidth = v;
+    this._itemWidth = v;
   }
     
-  String? m_name;  
+  String? _name;  
 
   String get name { 
-    if (this.m_name == null) {
-      this.m_name = "";
+    if (this._name == null) {
+      this._name = "";
     }
-    return this.m_name!;
+    return this._name!;
   }
 
   void set name (String v) {
-    this.m_name = v;
+    this._name = v;
   }
     
-  String? m_symbol;  
+  String? _symbol;  
 
   String get symbol { 
-    if (this.m_symbol == null) {
-      this.m_symbol = "";
+    if (this._symbol == null) {
+      this._symbol = "";
     }
-    return this.m_symbol!;
+    return this._symbol!;
   }
 
   void set symbol (String v) {
-    this.m_symbol = v;
+    this._symbol = v;
   }
     
 
@@ -116,30 +116,30 @@ class LegendItem extends OptionFragment {
 
     // NOTE: skip serialization of checkbox (type CheckBoxElement is ignored)} 
 
-    if (this.m_checkboxOffset != null) {  
-      buffer.writeAll(["\"checkboxOffset\":", this.m_checkboxOffset, ","], "");
+    if (this._checkboxOffset != null) {  
+      buffer.writeAll(["\"checkboxOffset\":", this._checkboxOffset, ","], "");
     }
 
-    if (this.m_color != null) {  
-      buffer.writeAll(["\"color\":", this.m_color, ","], "");
+    if (this._color != null) {  
+      buffer.writeAll(["\"color\":\`", this._color, "\`,"], "");
     }
 
-    if (this.m_itemHeight != null) {  
-      buffer.writeAll(["\"itemHeight\":", this.m_itemHeight, ","], "");
+    if (this._itemHeight != null) {  
+      buffer.writeAll(["\"itemHeight\":", this._itemHeight, ","], "");
     }
 
-    if (this.m_itemWidth != null) {  
-      buffer.writeAll(["\"itemWidth\":", this.m_itemWidth, ","], "");
+    if (this._itemWidth != null) {  
+      buffer.writeAll(["\"itemWidth\":", this._itemWidth, ","], "");
     }
 
     // NOTE: skip serialization of legendItem (type LegendItemObject is ignored)} 
 
-    if (this.m_name != null) {  
-      buffer.writeAll(["\"name\":", this.m_name, ","], "");
+    if (this._name != null) {  
+      buffer.writeAll(["\"name\":\`", this._name, "\`,"], "");
     }
 
-    if (this.m_symbol != null) {  
-      buffer.writeAll(["\"symbol\":", this.m_symbol, ","], "");
+    if (this._symbol != null) {  
+      buffer.writeAll(["\"symbol\":\`", this._symbol, "\`,"], "");
     }
 
     // NOTE: skip serialization of a11yProxyElement (type ProxyElement is ignored)} 

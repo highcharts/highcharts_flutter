@@ -12,13 +12,15 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
 import 'DataLabelOptions.dart';
 import 'SVGElement.dart';
 import 'SVGAttributes.dart';
+import 'BBoxObject.dart';
+import 'LabelPositionObject.dart';
 import 'OptionFragment.dart';
 
 /** 
@@ -26,69 +28,43 @@ import 'OptionFragment.dart';
  */
 class SVGElementLike extends OptionFragment {
   SVGElementLike() : super();
-  bool? m_survive;  
+  bool? _survive;  
 
   bool get survive { 
-    if (this.m_survive == null) {
-      this.m_survive = false;
+    if (this._survive == null) {
+      this._survive = false;
     }
-    return this.m_survive!;
+    return this._survive!;
   }
 
   void set survive (bool v) {
-    this.m_survive = v;
+    this._survive = v;
   }
     
-  double? m_xCorr;  
-
-  double get xCorr { 
-    if (this.m_xCorr == null) {
-      this.m_xCorr = 0;
-    }
-    return this.m_xCorr!;
-  }
-
-  void set xCorr (double v) {
-    this.m_xCorr = v;
-  }
-    
-  double? m_yCorr;  
-
-  double get yCorr { 
-    if (this.m_yCorr == null) {
-      this.m_yCorr = 0;
-    }
-    return this.m_yCorr!;
-  }
-
-  void set yCorr (double v) {
-    this.m_yCorr = v;
-  }
-    
-  String? m_pathType;  
+  String? _pathType;  
 
   String get pathType { 
-    if (this.m_pathType == null) {
-      this.m_pathType = "";
+    if (this._pathType == null) {
+      this._pathType = "";
     }
-    return this.m_pathType!;
+    return this._pathType!;
   }
 
   void set pathType (String v) {
-    this.m_pathType = v;
+    this._pathType = v;
   }
     
-  bool? m_finishedOnAdd;  
+  bool? _finishedOnAdd;  
 
   bool get finishedOnAdd { 
-    if (this.m_finishedOnAdd == null) {
-      this.m_finishedOnAdd = false;
+    if (this._finishedOnAdd == null) {
+      this._finishedOnAdd = false;
     }
-    return this.m_finishedOnAdd!;
+    return this._finishedOnAdd!;
   }
 
   void set finishedOnAdd (bool v) {
-    this.m_finishedOnAdd = v;
+    this._finishedOnAdd = v;
   }
     
 
@@ -101,24 +77,8 @@ class SVGElementLike extends OptionFragment {
     
     // NOTE: skip serialization of options (type DataLabelOptions is ignored)} 
 
-    if (this.m_survive != null) {  
-      buffer.writeAll(["\"survive\":", this.m_survive, ","], "");
-    }
-
-    // NOTE: skip serialization of element (type DOMElementType is ignored)} 
-
-    // NOTE: skip serialization of parentGroup (type SVGElement is ignored)} 
-
-    // NOTE: skip serialization of renderer (type HTMLRenderer is ignored)} 
-
-    // NOTE: skip serialization of style (type CSSObject & CSSStyleDeclaration is ignored)} 
-
-    if (this.m_xCorr != null) {  
-      buffer.writeAll(["\"xCorr\":", this.m_xCorr, ","], "");
-    }
-
-    if (this.m_yCorr != null) {  
-      buffer.writeAll(["\"yCorr\":", this.m_yCorr, ","], "");
+    if (this._survive != null) {  
+      buffer.writeAll(["\"survive\":", this._survive, ","], "");
     }
 
     // NOTE: skip serialization of focusBorder (type SVGElement is ignored)} 
@@ -127,14 +87,16 @@ class SVGElementLike extends OptionFragment {
 
     // NOTE: skip serialization of parts (type string[] is ignored)} 
 
-    if (this.m_pathType != null) {  
-      buffer.writeAll(["\"pathType\":", this.m_pathType, ","], "");
+    if (this._pathType != null) {  
+      buffer.writeAll(["\"pathType\":\`", this._pathType, "\`,"], "");
     }
 
     // NOTE: skip serialization of vertexes (type Position3DObject[] is ignored)} 
 
-    if (this.m_finishedOnAdd != null) {  
-      buffer.writeAll(["\"finishedOnAdd\":", this.m_finishedOnAdd, ","], "");
+    // NOTE: skip serialization of absoluteBox (type BBoxObject is ignored)} 
+
+    if (this._finishedOnAdd != null) {  
+      buffer.writeAll(["\"finishedOnAdd\":", this._finishedOnAdd, ","], "");
     }
 
     // NOTE: skip serialization of lowerGroup (type SVGElement is ignored)} 
@@ -146,6 +108,10 @@ class SVGElementLike extends OptionFragment {
     // NOTE: skip serialization of backLower (type SVGElement is ignored)} 
 
     // NOTE: skip serialization of rightLower (type SVGElement is ignored)} 
+
+    // NOTE: skip serialization of connector (type SVGElement is ignored)} 
+
+    // NOTE: skip serialization of dataLabelPosition (type LabelPositionObject is ignored)} 
   }
 
 }

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -25,82 +25,82 @@ import 'OptionFragment.dart';
  */
 class PieDataLabelOptions extends DataLabelOptions {
   PieDataLabelOptions() : super();
-  String? m_alignTo;  
+  String? _alignTo;  
 
   String get alignTo { 
-    if (this.m_alignTo == null) {
-      this.m_alignTo = "";
+    if (this._alignTo == null) {
+      this._alignTo = "";
     }
-    return this.m_alignTo!;
+    return this._alignTo!;
   }
 
   void set alignTo (String v) {
-    this.m_alignTo = v;
+    this._alignTo = v;
   }
     
-  String? m_connectorColor;  
+  String? _connectorColor;  
 
   String get connectorColor { 
-    if (this.m_connectorColor == null) {
-      this.m_connectorColor = "";
+    if (this._connectorColor == null) {
+      this._connectorColor = "";
     }
-    return this.m_connectorColor!;
+    return this._connectorColor!;
   }
 
   void set connectorColor (String v) {
-    this.m_connectorColor = v;
+    this._connectorColor = v;
   }
     
-  double? m_connectorPadding;  
+  double? _connectorPadding;  
 
   double get connectorPadding { 
-    if (this.m_connectorPadding == null) {
-      this.m_connectorPadding = 0;
+    if (this._connectorPadding == null) {
+      this._connectorPadding = 0;
     }
-    return this.m_connectorPadding!;
+    return this._connectorPadding!;
   }
 
   void set connectorPadding (double v) {
-    this.m_connectorPadding = v;
+    this._connectorPadding = v;
   }
     
-  double? m_connectorWidth;  
+  double? _connectorWidth;  
 
   double get connectorWidth { 
-    if (this.m_connectorWidth == null) {
-      this.m_connectorWidth = 0;
+    if (this._connectorWidth == null) {
+      this._connectorWidth = 0;
     }
-    return this.m_connectorWidth!;
+    return this._connectorWidth!;
   }
 
   void set connectorWidth (double v) {
-    this.m_connectorWidth = v;
+    this._connectorWidth = v;
   }
     
-  String? m_crookDistance;  
+  String? _crookDistance;  
 
   String get crookDistance { 
-    if (this.m_crookDistance == null) {
-      this.m_crookDistance = "";
+    if (this._crookDistance == null) {
+      this._crookDistance = "";
     }
-    return this.m_crookDistance!;
+    return this._crookDistance!;
   }
 
   void set crookDistance (String v) {
-    this.m_crookDistance = v;
+    this._crookDistance = v;
   }
     
-  bool? m_softConnector;  
+  bool? _softConnector;  
 
   bool get softConnector { 
-    if (this.m_softConnector == null) {
-      this.m_softConnector = false;
+    if (this._softConnector == null) {
+      this._softConnector = false;
     }
-    return this.m_softConnector!;
+    return this._softConnector!;
   }
 
   void set softConnector (bool v) {
-    this.m_softConnector = v;
+    this._softConnector = v;
   }
     
 
@@ -111,30 +111,30 @@ class PieDataLabelOptions extends DataLabelOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_alignTo != null) {  
-      buffer.writeAll(["\"alignTo\":", this.m_alignTo, ","], "");
+    if (this._alignTo != null) {  
+      buffer.writeAll(["\"alignTo\":\`", this._alignTo, "\`,"], "");
     }
 
-    if (this.m_connectorColor != null) {  
-      buffer.writeAll(["\"connectorColor\":", this.m_connectorColor, ","], "");
+    if (this._connectorColor != null) {  
+      buffer.writeAll(["\"connectorColor\":\`", this._connectorColor, "\`,"], "");
     }
 
-    if (this.m_connectorPadding != null) {  
-      buffer.writeAll(["\"connectorPadding\":", this.m_connectorPadding, ","], "");
+    if (this._connectorPadding != null) {  
+      buffer.writeAll(["\"connectorPadding\":", this._connectorPadding, ","], "");
     }
 
     // NOTE: skip serialization of connectorShape (type ConnectorShapeFunction is ignored)} 
 
-    if (this.m_connectorWidth != null) {  
-      buffer.writeAll(["\"connectorWidth\":", this.m_connectorWidth, ","], "");
+    if (this._connectorWidth != null) {  
+      buffer.writeAll(["\"connectorWidth\":", this._connectorWidth, ","], "");
     }
 
-    if (this.m_crookDistance != null) {  
-      buffer.writeAll(["\"crookDistance\":", this.m_crookDistance, ","], "");
+    if (this._crookDistance != null) {  
+      buffer.writeAll(["\"crookDistance\":\`", this._crookDistance, "\`,"], "");
     }
 
-    if (this.m_softConnector != null) {  
-      buffer.writeAll(["\"softConnector\":", this.m_softConnector, ","], "");
+    if (this._softConnector != null) {  
+      buffer.writeAll(["\"softConnector\":", this._softConnector, ","], "");
     }
   }
 

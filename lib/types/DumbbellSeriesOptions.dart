@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -30,17 +30,17 @@ class DumbbellSeriesOptions extends AreaRangeSeriesOptions {
    * Color of the line that connects the dumbbell point's values.
    * By default it is the series' color.  
       */
-  String? m_connectorColor;  
+  String? _connectorColor;  
 
   String get connectorColor { 
-    if (this.m_connectorColor == null) {
-      this.m_connectorColor = "";
+    if (this._connectorColor == null) {
+      this._connectorColor = "";
     }
-    return this.m_connectorColor!;
+    return this._connectorColor!;
   }
 
   void set connectorColor (String v) {
-    this.m_connectorColor = v;
+    this._connectorColor = v;
   }
     
   /**
@@ -49,43 +49,43 @@ class DumbbellSeriesOptions extends AreaRangeSeriesOptions {
    * 
    * Defaults to '1'. 
       */
-  double? m_connectorWidth;  
+  double? _connectorWidth;  
 
   double get connectorWidth { 
-    if (this.m_connectorWidth == null) {
-      this.m_connectorWidth = 0;
+    if (this._connectorWidth == null) {
+      this._connectorWidth = 0;
     }
-    return this.m_connectorWidth!;
+    return this._connectorWidth!;
   }
 
   void set connectorWidth (double v) {
-    this.m_connectorWidth = v;
+    this._connectorWidth = v;
   }
     
-  double? m_groupPadding;  
+  double? _groupPadding;  
 
   double get groupPadding { 
-    if (this.m_groupPadding == null) {
-      this.m_groupPadding = 0;
+    if (this._groupPadding == null) {
+      this._groupPadding = 0;
     }
-    return this.m_groupPadding!;
+    return this._groupPadding!;
   }
 
   void set groupPadding (double v) {
-    this.m_groupPadding = v;
+    this._groupPadding = v;
   }
     
-  double? m_pointPadding;  
+  double? _pointPadding;  
 
   double get pointPadding { 
-    if (this.m_pointPadding == null) {
-      this.m_pointPadding = 0;
+    if (this._pointPadding == null) {
+      this._pointPadding = 0;
     }
-    return this.m_pointPadding!;
+    return this._pointPadding!;
   }
 
   void set pointPadding (double v) {
-    this.m_pointPadding = v;
+    this._pointPadding = v;
   }
     
   /**
@@ -93,17 +93,17 @@ class DumbbellSeriesOptions extends AreaRangeSeriesOptions {
    * 
    * Defaults to '#333333'. 
       */
-  String? m_lowColor;  
+  String? _lowColor;  
 
   String get lowColor { 
-    if (this.m_lowColor == null) {
-      this.m_lowColor = "";
+    if (this._lowColor == null) {
+      this._lowColor = "";
     }
-    return this.m_lowColor!;
+    return this._lowColor!;
   }
 
   void set lowColor (String v) {
-    this.m_lowColor = v;
+    this._lowColor = v;
   }
     
 
@@ -116,24 +116,24 @@ class DumbbellSeriesOptions extends AreaRangeSeriesOptions {
     
     // NOTE: skip serialization of states (type Generic is ignored)} 
 
-    if (this.m_connectorColor != null) {  
-      buffer.writeAll(["\"connectorColor\":", this.m_connectorColor, ","], "");
+    if (this._connectorColor != null) {  
+      buffer.writeAll(["\"connectorColor\":\`", this._connectorColor, "\`,"], "");
     }
 
-    if (this.m_connectorWidth != null) {  
-      buffer.writeAll(["\"connectorWidth\":", this.m_connectorWidth, ","], "");
+    if (this._connectorWidth != null) {  
+      buffer.writeAll(["\"connectorWidth\":", this._connectorWidth, ","], "");
     }
 
-    if (this.m_groupPadding != null) {  
-      buffer.writeAll(["\"groupPadding\":", this.m_groupPadding, ","], "");
+    if (this._groupPadding != null) {  
+      buffer.writeAll(["\"groupPadding\":", this._groupPadding, ","], "");
     }
 
-    if (this.m_pointPadding != null) {  
-      buffer.writeAll(["\"pointPadding\":", this.m_pointPadding, ","], "");
+    if (this._pointPadding != null) {  
+      buffer.writeAll(["\"pointPadding\":", this._pointPadding, ","], "");
     }
 
-    if (this.m_lowColor != null) {  
-      buffer.writeAll(["\"lowColor\":", this.m_lowColor, ","], "");
+    if (this._lowColor != null) {  
+      buffer.writeAll(["\"lowColor\":\`", this._lowColor, "\`,"], "");
     }
   }
 

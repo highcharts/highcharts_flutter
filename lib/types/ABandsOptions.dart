@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -25,17 +25,17 @@ import 'OptionFragment.dart';
  */
 class ABandsOptions extends SMAOptions {
   ABandsOptions() : super();
-  Map<String, String>? m_bottomLine;  
+  Map<String, String>? _bottomLine;  
 
   Map<String, String> get bottomLine { 
-    if (this.m_bottomLine == null) {
-      this.m_bottomLine = Map<String, String>();
+    if (this._bottomLine == null) {
+      this._bottomLine = Map<String, String>();
     }
-    return this.m_bottomLine!;
+    return this._bottomLine!;
   }
 
   void set bottomLine (Map<String, String> v) {
-    this.m_bottomLine = v;
+    this._bottomLine = v;
   }
     
   /**
@@ -43,17 +43,17 @@ class ABandsOptions extends SMAOptions {
    * 
    * Defaults to '1'. 
       */
-  double? m_lineWidth;  
+  double? _lineWidth;  
 
   double get lineWidth { 
-    if (this.m_lineWidth == null) {
-      this.m_lineWidth = 0;
+    if (this._lineWidth == null) {
+      this._lineWidth = 0;
     }
-    return this.m_lineWidth!;
+    return this._lineWidth!;
   }
 
   void set lineWidth (double v) {
-    this.m_lineWidth = v;
+    this._lineWidth = v;
   }
     
   /**
@@ -61,17 +61,17 @@ class ABandsOptions extends SMAOptions {
       */
   /** NOTE: extparams is skipped here for now, as it overrides the base type. */
 
-  Map<String, String>? m_topLine;  
+  Map<String, String>? _topLine;  
 
   Map<String, String> get topLine { 
-    if (this.m_topLine == null) {
-      this.m_topLine = Map<String, String>();
+    if (this._topLine == null) {
+      this._topLine = Map<String, String>();
     }
-    return this.m_topLine!;
+    return this._topLine!;
   }
 
   void set topLine (Map<String, String> v) {
-    this.m_topLine = v;
+    this._topLine = v;
   }
     
 
@@ -82,20 +82,18 @@ class ABandsOptions extends SMAOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_bottomLine != null) {  
-      buffer.writeAll(["\"bottomLine\":", this.m_bottomLine, ","], "");
+    if (this._bottomLine != null) {  
+      buffer.writeAll(["\"bottomLine\":", this._bottomLine, ","], "");
     }
 
-    if (this.m_lineWidth != null) {  
-      buffer.writeAll(["\"lineWidth\":", this.m_lineWidth, ","], "");
+    if (this._lineWidth != null) {  
+      buffer.writeAll(["\"lineWidth\":", this._lineWidth, ","], "");
     }
 
-    if (this.m_params != null) {  
-      buffer.writeAll(["\"params\":", this.m_params?.toJSON(), ","], "");
-    }
+    // NOTE: skip serialization of params (type ABandsParamsOptions is ignored)} 
 
-    if (this.m_topLine != null) {  
-      buffer.writeAll(["\"topLine\":", this.m_topLine, ","], "");
+    if (this._topLine != null) {  
+      buffer.writeAll(["\"topLine\":", this._topLine, ","], "");
     }
   }
 

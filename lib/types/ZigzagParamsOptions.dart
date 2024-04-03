@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,43 +24,43 @@ import 'OptionFragment.dart';
  */
 class ZigzagParamsOptions extends SMAParamsOptions {
   ZigzagParamsOptions() : super();
-  double? m_lowIndex;  
+  double? _lowIndex;  
 
   double get lowIndex { 
-    if (this.m_lowIndex == null) {
-      this.m_lowIndex = 0;
+    if (this._lowIndex == null) {
+      this._lowIndex = 0;
     }
-    return this.m_lowIndex!;
+    return this._lowIndex!;
   }
 
   void set lowIndex (double v) {
-    this.m_lowIndex = v;
+    this._lowIndex = v;
   }
     
-  double? m_highIndex;  
+  double? _highIndex;  
 
   double get highIndex { 
-    if (this.m_highIndex == null) {
-      this.m_highIndex = 0;
+    if (this._highIndex == null) {
+      this._highIndex = 0;
     }
-    return this.m_highIndex!;
+    return this._highIndex!;
   }
 
   void set highIndex (double v) {
-    this.m_highIndex = v;
+    this._highIndex = v;
   }
     
-  double? m_deviation;  
+  double? _deviation;  
 
   double get deviation { 
-    if (this.m_deviation == null) {
-      this.m_deviation = 0;
+    if (this._deviation == null) {
+      this._deviation = 0;
     }
-    return this.m_deviation!;
+    return this._deviation!;
   }
 
   void set deviation (double v) {
-    this.m_deviation = v;
+    this._deviation = v;
   }
     
 
@@ -71,16 +71,16 @@ class ZigzagParamsOptions extends SMAParamsOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_lowIndex != null) {  
-      buffer.writeAll(["\"lowIndex\":", this.m_lowIndex, ","], "");
+    if (this._lowIndex != null) {  
+      buffer.writeAll(["\"lowIndex\":", this._lowIndex, ","], "");
     }
 
-    if (this.m_highIndex != null) {  
-      buffer.writeAll(["\"highIndex\":", this.m_highIndex, ","], "");
+    if (this._highIndex != null) {  
+      buffer.writeAll(["\"highIndex\":", this._highIndex, ","], "");
     }
 
-    if (this.m_deviation != null) {  
-      buffer.writeAll(["\"deviation\":", this.m_deviation, ","], "");
+    if (this._deviation != null) {  
+      buffer.writeAll(["\"deviation\":", this._deviation, ","], "");
     }
   }
 

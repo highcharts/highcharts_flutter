@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -25,134 +25,134 @@ import 'OptionFragment.dart';
  */
 class BoxObject extends OptionFragment {
   BoxObject() : super();
-  double? m_align;  
+  double? _align;  
 
   double get align { 
-    if (this.m_align == null) {
-      this.m_align = 0;
+    if (this._align == null) {
+      this._align = 0;
     }
-    return this.m_align!;
+    return this._align!;
   }
 
   void set align (double v) {
-    this.m_align = v;
+    this._align = v;
   }
     
-  double? m_pos;  
+  double? _pos;  
 
   double get pos { 
-    if (this.m_pos == null) {
-      this.m_pos = 0;
+    if (this._pos == null) {
+      this._pos = 0;
     }
-    return this.m_pos!;
+    return this._pos!;
   }
 
   void set pos (double v) {
-    this.m_pos = v;
+    this._pos = v;
   }
     
-  double? m_rank;  
+  double? _rank;  
 
   double get rank { 
-    if (this.m_rank == null) {
-      this.m_rank = 0;
+    if (this._rank == null) {
+      this._rank = 0;
     }
-    return this.m_rank!;
+    return this._rank!;
   }
 
   void set rank (double v) {
-    this.m_rank = v;
+    this._rank = v;
   }
     
-  double? m_size;  
+  double? _size;  
 
   double get size { 
-    if (this.m_size == null) {
-      this.m_size = 0;
+    if (this._size == null) {
+      this._size = 0;
     }
-    return this.m_size!;
+    return this._size!;
   }
 
   void set size (double v) {
-    this.m_size = v;
+    this._size = v;
   }
     
-  double? m_target;  
+  double? _target;  
 
   double get target { 
-    if (this.m_target == null) {
-      this.m_target = 0;
+    if (this._target == null) {
+      this._target = 0;
     }
-    return this.m_target!;
+    return this._target!;
   }
 
   void set target (double v) {
-    this.m_target = v;
+    this._target = v;
   }
     
-  double? m_anchorX;  
+  double? _anchorX;  
 
   double get anchorX { 
-    if (this.m_anchorX == null) {
-      this.m_anchorX = 0;
+    if (this._anchorX == null) {
+      this._anchorX = 0;
     }
-    return this.m_anchorX!;
+    return this._anchorX!;
   }
 
   void set anchorX (double v) {
-    this.m_anchorX = v;
+    this._anchorX = v;
   }
     
-  double? m_anchorY;  
+  double? _anchorY;  
 
   double get anchorY { 
-    if (this.m_anchorY == null) {
-      this.m_anchorY = 0;
+    if (this._anchorY == null) {
+      this._anchorY = 0;
     }
-    return this.m_anchorY!;
+    return this._anchorY!;
   }
 
   void set anchorY (double v) {
-    this.m_anchorY = v;
+    this._anchorY = v;
   }
     
-  double? m_boxWidth;  
+  double? _boxWidth;  
 
   double get boxWidth { 
-    if (this.m_boxWidth == null) {
-      this.m_boxWidth = 0;
+    if (this._boxWidth == null) {
+      this._boxWidth = 0;
     }
-    return this.m_boxWidth!;
+    return this._boxWidth!;
   }
 
   void set boxWidth (double v) {
-    this.m_boxWidth = v;
+    this._boxWidth = v;
   }
     
-  bool? m_isHeader;  
+  bool? _isHeader;  
 
   bool get isHeader { 
-    if (this.m_isHeader == null) {
-      this.m_isHeader = false;
+    if (this._isHeader == null) {
+      this._isHeader = false;
     }
-    return this.m_isHeader!;
+    return this._isHeader!;
   }
 
   void set isHeader (bool v) {
-    this.m_isHeader = v;
+    this._isHeader = v;
   }
     
-  double? m_x;  
+  double? _x;  
 
   double get x { 
-    if (this.m_x == null) {
-      this.m_x = 0;
+    if (this._x == null) {
+      this._x = 0;
     }
-    return this.m_x!;
+    return this._x!;
   }
 
   void set x (double v) {
-    this.m_x = v;
+    this._x = v;
   }
     
 
@@ -163,57 +163,57 @@ class BoxObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_align != null) {  
-      buffer.writeAll(["\"align\":", this.m_align, ","], "");
+    if (this._align != null) {  
+      buffer.writeAll(["\"align\":", this._align, ","], "");
     }
 
-    if (this.m_pos != null) {  
-      buffer.writeAll(["\"pos\":", this.m_pos, ","], "");
+    if (this._pos != null) {  
+      buffer.writeAll(["\"pos\":", this._pos, ","], "");
     }
 
-    if (this.m_rank != null) {  
-      buffer.writeAll(["\"rank\":", this.m_rank, ","], "");
+    if (this._rank != null) {  
+      buffer.writeAll(["\"rank\":", this._rank, ","], "");
     }
 
-    if (this.m_size != null) {  
-      buffer.writeAll(["\"size\":", this.m_size, ","], "");
+    if (this._size != null) {  
+      buffer.writeAll(["\"size\":", this._size, ","], "");
     }
 
-    if (this.m_target != null) {  
-      buffer.writeAll(["\"target\":", this.m_target, ","], "");
+    if (this._target != null) {  
+      buffer.writeAll(["\"target\":", this._target, ","], "");
     }
 
     // NOTE: skip serialization of targets (type number[] is ignored)} 
 
-    // NOTE: skip serialization of item (type Item is ignored)} 
-
-    if (this.m_anchorX != null) {  
-      buffer.writeAll(["\"anchorX\":", this.m_anchorX, ","], "");
+    if (this._anchorX != null) {  
+      buffer.writeAll(["\"anchorX\":", this._anchorX, ","], "");
     }
 
-    if (this.m_anchorY != null) {  
-      buffer.writeAll(["\"anchorY\":", this.m_anchorY, ","], "");
+    if (this._anchorY != null) {  
+      buffer.writeAll(["\"anchorY\":", this._anchorY, ","], "");
     }
 
-    if (this.m_boxWidth != null) {  
-      buffer.writeAll(["\"boxWidth\":", this.m_boxWidth, ","], "");
+    if (this._boxWidth != null) {  
+      buffer.writeAll(["\"boxWidth\":", this._boxWidth, ","], "");
     }
 
-    if (this.m_isHeader != null) {  
-      buffer.writeAll(["\"isHeader\":", this.m_isHeader, ","], "");
+    if (this._isHeader != null) {  
+      buffer.writeAll(["\"isHeader\":", this._isHeader, ","], "");
     }
 
     // NOTE: skip serialization of point (type Point is ignored)} 
 
-    if (this.m_pos != null) {  
-      buffer.writeAll(["\"pos\":", this.m_pos, ","], "");
+    if (this._pos != null) {  
+      buffer.writeAll(["\"pos\":", this._pos, ","], "");
     }
 
     // NOTE: skip serialization of tt (type SVGElement is ignored)} 
 
-    if (this.m_x != null) {  
-      buffer.writeAll(["\"x\":", this.m_x, ","], "");
+    if (this._x != null) {  
+      buffer.writeAll(["\"x\":", this._x, ","], "");
     }
+
+    // NOTE: skip serialization of item (type Item is ignored)} 
   }
 
 }

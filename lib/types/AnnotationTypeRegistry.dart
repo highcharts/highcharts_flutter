@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -32,7 +32,27 @@ class AnnotationTypeRegistry extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    
+    // NOTE: skip serialization of basicAnnotation (type typeof BasicAnnotation is ignored)} 
+
+    // NOTE: skip serialization of crookedLine (type typeof CrookedLine is ignored)} 
+
+    // NOTE: skip serialization of elliottWave (type typeof ElliottWave is ignored)} 
+
+    // NOTE: skip serialization of tunnel (type typeof Tunnel is ignored)} 
+
+    // NOTE: skip serialization of fibonacci (type typeof Fibonacci is ignored)} 
+
+    // NOTE: skip serialization of infinityLine (type typeof InfinityLine is ignored)} 
+
+    // NOTE: skip serialization of fibonacciTimeZones (type typeof FibonacciTimeZones is ignored)} 
+
+    // NOTE: skip serialization of measure (type typeof Measure is ignored)} 
+
+    // NOTE: skip serialization of pitchfork (type typeof Pitchfork is ignored)} 
+
+    // NOTE: skip serialization of timeCycles (type typeof TimeCycles is ignored)} 
+
+    // NOTE: skip serialization of verticalLine (type typeof VerticalLine is ignored)} 
   }
 
 }

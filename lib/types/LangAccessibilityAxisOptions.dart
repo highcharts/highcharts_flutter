@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,134 +23,134 @@ import 'OptionFragment.dart';
  */
 class LangAccessibilityAxisOptions extends OptionFragment {
   LangAccessibilityAxisOptions() : super();
-  String? m_rangeCategories;  
+  String? _rangeCategories;  
 
   String get rangeCategories { 
-    if (this.m_rangeCategories == null) {
-      this.m_rangeCategories = "";
+    if (this._rangeCategories == null) {
+      this._rangeCategories = "";
     }
-    return this.m_rangeCategories!;
+    return this._rangeCategories!;
   }
 
   void set rangeCategories (String v) {
-    this.m_rangeCategories = v;
+    this._rangeCategories = v;
   }
     
-  String? m_rangeFromTo;  
+  String? _rangeFromTo;  
 
   String get rangeFromTo { 
-    if (this.m_rangeFromTo == null) {
-      this.m_rangeFromTo = "";
+    if (this._rangeFromTo == null) {
+      this._rangeFromTo = "";
     }
-    return this.m_rangeFromTo!;
+    return this._rangeFromTo!;
   }
 
   void set rangeFromTo (String v) {
-    this.m_rangeFromTo = v;
+    this._rangeFromTo = v;
   }
     
-  String? m_timeRangeDays;  
+  String? _timeRangeDays;  
 
   String get timeRangeDays { 
-    if (this.m_timeRangeDays == null) {
-      this.m_timeRangeDays = "";
+    if (this._timeRangeDays == null) {
+      this._timeRangeDays = "";
     }
-    return this.m_timeRangeDays!;
+    return this._timeRangeDays!;
   }
 
   void set timeRangeDays (String v) {
-    this.m_timeRangeDays = v;
+    this._timeRangeDays = v;
   }
     
-  String? m_timeRangeHours;  
+  String? _timeRangeHours;  
 
   String get timeRangeHours { 
-    if (this.m_timeRangeHours == null) {
-      this.m_timeRangeHours = "";
+    if (this._timeRangeHours == null) {
+      this._timeRangeHours = "";
     }
-    return this.m_timeRangeHours!;
+    return this._timeRangeHours!;
   }
 
   void set timeRangeHours (String v) {
-    this.m_timeRangeHours = v;
+    this._timeRangeHours = v;
   }
     
-  String? m_timeRangeMinutes;  
+  String? _timeRangeMinutes;  
 
   String get timeRangeMinutes { 
-    if (this.m_timeRangeMinutes == null) {
-      this.m_timeRangeMinutes = "";
+    if (this._timeRangeMinutes == null) {
+      this._timeRangeMinutes = "";
     }
-    return this.m_timeRangeMinutes!;
+    return this._timeRangeMinutes!;
   }
 
   void set timeRangeMinutes (String v) {
-    this.m_timeRangeMinutes = v;
+    this._timeRangeMinutes = v;
   }
     
-  String? m_timeRangeSeconds;  
+  String? _timeRangeSeconds;  
 
   String get timeRangeSeconds { 
-    if (this.m_timeRangeSeconds == null) {
-      this.m_timeRangeSeconds = "";
+    if (this._timeRangeSeconds == null) {
+      this._timeRangeSeconds = "";
     }
-    return this.m_timeRangeSeconds!;
+    return this._timeRangeSeconds!;
   }
 
   void set timeRangeSeconds (String v) {
-    this.m_timeRangeSeconds = v;
+    this._timeRangeSeconds = v;
   }
     
-  String? m_xAxisDescriptionPlural;  
+  String? _xAxisDescriptionPlural;  
 
   String get xAxisDescriptionPlural { 
-    if (this.m_xAxisDescriptionPlural == null) {
-      this.m_xAxisDescriptionPlural = "";
+    if (this._xAxisDescriptionPlural == null) {
+      this._xAxisDescriptionPlural = "";
     }
-    return this.m_xAxisDescriptionPlural!;
+    return this._xAxisDescriptionPlural!;
   }
 
   void set xAxisDescriptionPlural (String v) {
-    this.m_xAxisDescriptionPlural = v;
+    this._xAxisDescriptionPlural = v;
   }
     
-  String? m_xAxisDescriptionSingular;  
+  String? _xAxisDescriptionSingular;  
 
   String get xAxisDescriptionSingular { 
-    if (this.m_xAxisDescriptionSingular == null) {
-      this.m_xAxisDescriptionSingular = "";
+    if (this._xAxisDescriptionSingular == null) {
+      this._xAxisDescriptionSingular = "";
     }
-    return this.m_xAxisDescriptionSingular!;
+    return this._xAxisDescriptionSingular!;
   }
 
   void set xAxisDescriptionSingular (String v) {
-    this.m_xAxisDescriptionSingular = v;
+    this._xAxisDescriptionSingular = v;
   }
     
-  String? m_yAxisDescriptionPlural;  
+  String? _yAxisDescriptionPlural;  
 
   String get yAxisDescriptionPlural { 
-    if (this.m_yAxisDescriptionPlural == null) {
-      this.m_yAxisDescriptionPlural = "";
+    if (this._yAxisDescriptionPlural == null) {
+      this._yAxisDescriptionPlural = "";
     }
-    return this.m_yAxisDescriptionPlural!;
+    return this._yAxisDescriptionPlural!;
   }
 
   void set yAxisDescriptionPlural (String v) {
-    this.m_yAxisDescriptionPlural = v;
+    this._yAxisDescriptionPlural = v;
   }
     
-  String? m_yAxisDescriptionSingular;  
+  String? _yAxisDescriptionSingular;  
 
   String get yAxisDescriptionSingular { 
-    if (this.m_yAxisDescriptionSingular == null) {
-      this.m_yAxisDescriptionSingular = "";
+    if (this._yAxisDescriptionSingular == null) {
+      this._yAxisDescriptionSingular = "";
     }
-    return this.m_yAxisDescriptionSingular!;
+    return this._yAxisDescriptionSingular!;
   }
 
   void set yAxisDescriptionSingular (String v) {
-    this.m_yAxisDescriptionSingular = v;
+    this._yAxisDescriptionSingular = v;
   }
     
 
@@ -161,44 +161,44 @@ class LangAccessibilityAxisOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_rangeCategories != null) {  
-      buffer.writeAll(["\"rangeCategories\":", this.m_rangeCategories, ","], "");
+    if (this._rangeCategories != null) {  
+      buffer.writeAll(["\"rangeCategories\":\`", this._rangeCategories, "\`,"], "");
     }
 
-    if (this.m_rangeFromTo != null) {  
-      buffer.writeAll(["\"rangeFromTo\":", this.m_rangeFromTo, ","], "");
+    if (this._rangeFromTo != null) {  
+      buffer.writeAll(["\"rangeFromTo\":\`", this._rangeFromTo, "\`,"], "");
     }
 
-    if (this.m_timeRangeDays != null) {  
-      buffer.writeAll(["\"timeRangeDays\":", this.m_timeRangeDays, ","], "");
+    if (this._timeRangeDays != null) {  
+      buffer.writeAll(["\"timeRangeDays\":\`", this._timeRangeDays, "\`,"], "");
     }
 
-    if (this.m_timeRangeHours != null) {  
-      buffer.writeAll(["\"timeRangeHours\":", this.m_timeRangeHours, ","], "");
+    if (this._timeRangeHours != null) {  
+      buffer.writeAll(["\"timeRangeHours\":\`", this._timeRangeHours, "\`,"], "");
     }
 
-    if (this.m_timeRangeMinutes != null) {  
-      buffer.writeAll(["\"timeRangeMinutes\":", this.m_timeRangeMinutes, ","], "");
+    if (this._timeRangeMinutes != null) {  
+      buffer.writeAll(["\"timeRangeMinutes\":\`", this._timeRangeMinutes, "\`,"], "");
     }
 
-    if (this.m_timeRangeSeconds != null) {  
-      buffer.writeAll(["\"timeRangeSeconds\":", this.m_timeRangeSeconds, ","], "");
+    if (this._timeRangeSeconds != null) {  
+      buffer.writeAll(["\"timeRangeSeconds\":\`", this._timeRangeSeconds, "\`,"], "");
     }
 
-    if (this.m_xAxisDescriptionPlural != null) {  
-      buffer.writeAll(["\"xAxisDescriptionPlural\":", this.m_xAxisDescriptionPlural, ","], "");
+    if (this._xAxisDescriptionPlural != null) {  
+      buffer.writeAll(["\"xAxisDescriptionPlural\":\`", this._xAxisDescriptionPlural, "\`,"], "");
     }
 
-    if (this.m_xAxisDescriptionSingular != null) {  
-      buffer.writeAll(["\"xAxisDescriptionSingular\":", this.m_xAxisDescriptionSingular, ","], "");
+    if (this._xAxisDescriptionSingular != null) {  
+      buffer.writeAll(["\"xAxisDescriptionSingular\":\`", this._xAxisDescriptionSingular, "\`,"], "");
     }
 
-    if (this.m_yAxisDescriptionPlural != null) {  
-      buffer.writeAll(["\"yAxisDescriptionPlural\":", this.m_yAxisDescriptionPlural, ","], "");
+    if (this._yAxisDescriptionPlural != null) {  
+      buffer.writeAll(["\"yAxisDescriptionPlural\":\`", this._yAxisDescriptionPlural, "\`,"], "");
     }
 
-    if (this.m_yAxisDescriptionSingular != null) {  
-      buffer.writeAll(["\"yAxisDescriptionSingular\":", this.m_yAxisDescriptionSingular, ","], "");
+    if (this._yAxisDescriptionSingular != null) {  
+      buffer.writeAll(["\"yAxisDescriptionSingular\":\`", this._yAxisDescriptionSingular, "\`,"], "");
     }
   }
 

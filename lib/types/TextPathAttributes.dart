@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,43 +24,43 @@ import 'OptionFragment.dart';
  */
 class TextPathAttributes extends SVGAttributes {
   TextPathAttributes() : super();
-  String? m_startOffset;  
+  String? _startOffset;  
 
   String get startOffset { 
-    if (this.m_startOffset == null) {
-      this.m_startOffset = "";
+    if (this._startOffset == null) {
+      this._startOffset = "";
     }
-    return this.m_startOffset!;
+    return this._startOffset!;
   }
 
   void set startOffset (String v) {
-    this.m_startOffset = v;
+    this._startOffset = v;
   }
     
-  String? m_textAnchor;  
+  String? _textAnchor;  
 
   String get textAnchor { 
-    if (this.m_textAnchor == null) {
-      this.m_textAnchor = "";
+    if (this._textAnchor == null) {
+      this._textAnchor = "";
     }
-    return this.m_textAnchor!;
+    return this._textAnchor!;
   }
 
   void set textAnchor (String v) {
-    this.m_textAnchor = v;
+    this._textAnchor = v;
   }
     
-  double? m_dy;  
+  double? _dy;  
 
   double get dy { 
-    if (this.m_dy == null) {
-      this.m_dy = 0;
+    if (this._dy == null) {
+      this._dy = 0;
     }
-    return this.m_dy!;
+    return this._dy!;
   }
 
   void set dy (double v) {
-    this.m_dy = v;
+    this._dy = v;
   }
     
 
@@ -71,16 +71,16 @@ class TextPathAttributes extends SVGAttributes {
     super.toJSONInner(buffer);
 
     
-    if (this.m_startOffset != null) {  
-      buffer.writeAll(["\"startOffset\":", this.m_startOffset, ","], "");
+    if (this._startOffset != null) {  
+      buffer.writeAll(["\"startOffset\":\`", this._startOffset, "\`,"], "");
     }
 
-    if (this.m_textAnchor != null) {  
-      buffer.writeAll(["\"textAnchor\":", this.m_textAnchor, ","], "");
+    if (this._textAnchor != null) {  
+      buffer.writeAll(["\"textAnchor\":\`", this._textAnchor, "\`,"], "");
     }
 
-    if (this.m_dy != null) {  
-      buffer.writeAll(["\"dy\":", this.m_dy, ","], "");
+    if (this._dy != null) {  
+      buffer.writeAll(["\"dy\":", this._dy, ","], "");
     }
   }
 

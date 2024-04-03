@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,17 +24,17 @@ import 'OptionFragment.dart';
  */
 class CMFParamsOptions extends SMAParamsOptions {
   CMFParamsOptions() : super();
-  String? m_volumeSeriesID;  
+  String? _volumeSeriesID;  
 
   String get volumeSeriesID { 
-    if (this.m_volumeSeriesID == null) {
-      this.m_volumeSeriesID = "";
+    if (this._volumeSeriesID == null) {
+      this._volumeSeriesID = "";
     }
-    return this.m_volumeSeriesID!;
+    return this._volumeSeriesID!;
   }
 
   void set volumeSeriesID (String v) {
-    this.m_volumeSeriesID = v;
+    this._volumeSeriesID = v;
   }
     
 
@@ -45,8 +45,8 @@ class CMFParamsOptions extends SMAParamsOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_volumeSeriesID != null) {  
-      buffer.writeAll(["\"volumeSeriesID\":", this.m_volumeSeriesID, ","], "");
+    if (this._volumeSeriesID != null) {  
+      buffer.writeAll(["\"volumeSeriesID\":\`", this._volumeSeriesID, "\`,"], "");
     }
   }
 

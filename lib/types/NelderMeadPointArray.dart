@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,17 +24,17 @@ import 'OptionFragment.dart';
  */
 class NelderMeadPointArray extends Array {
   NelderMeadPointArray() : super();
-  double? m_fx;  
+  double? _fx;  
 
   double get fx { 
-    if (this.m_fx == null) {
-      this.m_fx = 0;
+    if (this._fx == null) {
+      this._fx = 0;
     }
-    return this.m_fx!;
+    return this._fx!;
   }
 
   void set fx (double v) {
-    this.m_fx = v;
+    this._fx = v;
   }
     
 
@@ -45,8 +45,8 @@ class NelderMeadPointArray extends Array {
     super.toJSONInner(buffer);
 
     
-    if (this.m_fx != null) {  
-      buffer.writeAll(["\"fx\":", this.m_fx, ","], "");
+    if (this._fx != null) {  
+      buffer.writeAll(["\"fx\":", this._fx, ","], "");
     }
   }
 

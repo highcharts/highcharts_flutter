@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,30 +24,30 @@ import 'OptionFragment.dart';
  */
 class MFIParamsOptions extends SMAParamsOptions {
   MFIParamsOptions() : super();
-  String? m_volumeSeriesID;  
+  String? _volumeSeriesID;  
 
   String get volumeSeriesID { 
-    if (this.m_volumeSeriesID == null) {
-      this.m_volumeSeriesID = "";
+    if (this._volumeSeriesID == null) {
+      this._volumeSeriesID = "";
     }
-    return this.m_volumeSeriesID!;
+    return this._volumeSeriesID!;
   }
 
   void set volumeSeriesID (String v) {
-    this.m_volumeSeriesID = v;
+    this._volumeSeriesID = v;
   }
     
-  double? m_decimals;  
+  double? _decimals;  
 
   double get decimals { 
-    if (this.m_decimals == null) {
-      this.m_decimals = 0;
+    if (this._decimals == null) {
+      this._decimals = 0;
     }
-    return this.m_decimals!;
+    return this._decimals!;
   }
 
   void set decimals (double v) {
-    this.m_decimals = v;
+    this._decimals = v;
   }
     
 
@@ -58,12 +58,12 @@ class MFIParamsOptions extends SMAParamsOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_volumeSeriesID != null) {  
-      buffer.writeAll(["\"volumeSeriesID\":", this.m_volumeSeriesID, ","], "");
+    if (this._volumeSeriesID != null) {  
+      buffer.writeAll(["\"volumeSeriesID\":\`", this._volumeSeriesID, "\`,"], "");
     }
 
-    if (this.m_decimals != null) {  
-      buffer.writeAll(["\"decimals\":", this.m_decimals, ","], "");
+    if (this._decimals != null) {  
+      buffer.writeAll(["\"decimals\":", this._decimals, ","], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,17 +24,17 @@ import 'OptionFragment.dart';
  */
 class XYArray extends XYPair {
   XYArray() : super();
-  bool? m_isIntersection;  
+  bool? _isIntersection;  
 
   bool get isIntersection { 
-    if (this.m_isIntersection == null) {
-      this.m_isIntersection = false;
+    if (this._isIntersection == null) {
+      this._isIntersection = false;
     }
-    return this.m_isIntersection!;
+    return this._isIntersection!;
   }
 
   void set isIntersection (bool v) {
-    this.m_isIntersection = v;
+    this._isIntersection = v;
   }
     
 
@@ -45,8 +45,8 @@ class XYArray extends XYPair {
     super.toJSONInner(buffer);
 
     
-    if (this.m_isIntersection != null) {  
-      buffer.writeAll(["\"isIntersection\":", this.m_isIntersection, ","], "");
+    if (this._isIntersection != null) {  
+      buffer.writeAll(["\"isIntersection\":", this._isIntersection, ","], "");
     }
   }
 

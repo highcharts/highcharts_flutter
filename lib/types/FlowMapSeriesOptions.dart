@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -25,17 +25,17 @@ import 'OptionFragment.dart';
  */
 class FlowMapSeriesOptions extends MapLineSeriesOptions {
   FlowMapSeriesOptions() : super();
-  bool? m_growTowards;  
+  bool? _growTowards;  
 
   bool get growTowards { 
-    if (this.m_growTowards == null) {
-      this.m_growTowards = false;
+    if (this._growTowards == null) {
+      this._growTowards = false;
     }
-    return this.m_growTowards!;
+    return this._growTowards!;
   }
 
   void set growTowards (bool v) {
-    this.m_growTowards = v;
+    this._growTowards = v;
   }
     
   /**
@@ -43,17 +43,17 @@ class FlowMapSeriesOptions extends MapLineSeriesOptions {
    * flow at the destination. Specifying a `markerEnd` here will create
    * one for each link.  
       */
-  MarkerEndOptions? m_markerEnd;  
+  MarkerEndOptions? _markerEnd;  
 
   MarkerEndOptions get markerEnd { 
-    if (this.m_markerEnd == null) {
-      this.m_markerEnd = MarkerEndOptions();
+    if (this._markerEnd == null) {
+      this._markerEnd = MarkerEndOptions();
     }
-    return this.m_markerEnd!;
+    return this._markerEnd!;
   }
 
   void set markerEnd (MarkerEndOptions v) {
-    this.m_markerEnd = v;
+    this._markerEnd = v;
   }
     
   /**
@@ -62,17 +62,17 @@ class FlowMapSeriesOptions extends MapLineSeriesOptions {
    * 
    * Defaults to '25'. 
       */
-  double? m_maxWidth;  
+  double? _maxWidth;  
 
   double get maxWidth { 
-    if (this.m_maxWidth == null) {
-      this.m_maxWidth = 0;
+    if (this._maxWidth == null) {
+      this._maxWidth = 0;
     }
-    return this.m_maxWidth!;
+    return this._maxWidth!;
   }
 
   void set maxWidth (double v) {
-    this.m_maxWidth = v;
+    this._maxWidth = v;
   }
     
   /**
@@ -81,34 +81,34 @@ class FlowMapSeriesOptions extends MapLineSeriesOptions {
    * 
    * Defaults to '5'. 
       */
-  double? m_minWidth;  
+  double? _minWidth;  
 
   double get minWidth { 
-    if (this.m_minWidth == null) {
-      this.m_minWidth = 0;
+    if (this._minWidth == null) {
+      this._minWidth = 0;
     }
-    return this.m_minWidth!;
+    return this._minWidth!;
   }
 
   void set minWidth (double v) {
-    this.m_minWidth = v;
+    this._minWidth = v;
   }
     
   /**
    * The weight for all links with unspecified weights. The weight of a
    * link determines its thickness compared to other links.  
       */
-  double? m_weight;  
+  double? _weight;  
 
   double get weight { 
-    if (this.m_weight == null) {
-      this.m_weight = 0;
+    if (this._weight == null) {
+      this._weight = 0;
     }
-    return this.m_weight!;
+    return this._weight!;
   }
 
   void set weight (double v) {
-    this.m_weight = v;
+    this._weight = v;
   }
     
   /**
@@ -119,17 +119,17 @@ class FlowMapSeriesOptions extends MapLineSeriesOptions {
    * 
    * Defaults to 'undefined'. 
       */
-  double? m_curveFactor;  
+  double? _curveFactor;  
 
   double get curveFactor { 
-    if (this.m_curveFactor == null) {
-      this.m_curveFactor = 0;
+    if (this._curveFactor == null) {
+      this._curveFactor = 0;
     }
-    return this.m_curveFactor!;
+    return this._curveFactor!;
   }
 
   void set curveFactor (double v) {
-    this.m_curveFactor = v;
+    this._curveFactor = v;
   }
     
   /**
@@ -139,17 +139,17 @@ class FlowMapSeriesOptions extends MapLineSeriesOptions {
    * 
    * Defaults to '1'. 
       */
-  double? m_width;  
+  double? _width;  
 
   double get width { 
-    if (this.m_width == null) {
-      this.m_width = 0;
+    if (this._width == null) {
+      this._width = 0;
     }
-    return this.m_width!;
+    return this._width!;
   }
 
   void set width (double v) {
-    this.m_width = v;
+    this._width = v;
   }
     
   /**
@@ -157,17 +157,17 @@ class FlowMapSeriesOptions extends MapLineSeriesOptions {
    * 
    * Defaults to '1'. 
       */
-  double? m_lineWidth;  
+  double? _lineWidth;  
 
   double get lineWidth { 
-    if (this.m_lineWidth == null) {
-      this.m_lineWidth = 0;
+    if (this._lineWidth == null) {
+      this._lineWidth = 0;
     }
-    return this.m_lineWidth!;
+    return this._lineWidth!;
   }
 
   void set lineWidth (double v) {
-    this.m_lineWidth = v;
+    this._lineWidth = v;
   }
     
 
@@ -178,36 +178,36 @@ class FlowMapSeriesOptions extends MapLineSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_growTowards != null) {  
-      buffer.writeAll(["\"growTowards\":", this.m_growTowards, ","], "");
+    if (this._growTowards != null) {  
+      buffer.writeAll(["\"growTowards\":", this._growTowards, ","], "");
     }
 
-    if (this.m_markerEnd != null) {  
-      buffer.writeAll(["\"markerEnd\":", this.m_markerEnd?.toJSON(), ","], "");
+    if (this._markerEnd != null) {  
+      buffer.writeAll(["\"markerEnd\":", this._markerEnd?.toJSON(), ","], "");
     }
 
-    if (this.m_maxWidth != null) {  
-      buffer.writeAll(["\"maxWidth\":", this.m_maxWidth, ","], "");
+    if (this._maxWidth != null) {  
+      buffer.writeAll(["\"maxWidth\":", this._maxWidth, ","], "");
     }
 
-    if (this.m_minWidth != null) {  
-      buffer.writeAll(["\"minWidth\":", this.m_minWidth, ","], "");
+    if (this._minWidth != null) {  
+      buffer.writeAll(["\"minWidth\":", this._minWidth, ","], "");
     }
 
-    if (this.m_weight != null) {  
-      buffer.writeAll(["\"weight\":", this.m_weight, ","], "");
+    if (this._weight != null) {  
+      buffer.writeAll(["\"weight\":", this._weight, ","], "");
     }
 
-    if (this.m_curveFactor != null) {  
-      buffer.writeAll(["\"curveFactor\":", this.m_curveFactor, ","], "");
+    if (this._curveFactor != null) {  
+      buffer.writeAll(["\"curveFactor\":", this._curveFactor, ","], "");
     }
 
-    if (this.m_width != null) {  
-      buffer.writeAll(["\"width\":", this.m_width, ","], "");
+    if (this._width != null) {  
+      buffer.writeAll(["\"width\":", this._width, ","], "");
     }
 
-    if (this.m_lineWidth != null) {  
-      buffer.writeAll(["\"lineWidth\":", this.m_lineWidth, ","], "");
+    if (this._lineWidth != null) {  
+      buffer.writeAll(["\"lineWidth\":", this._lineWidth, ","], "");
     }
   }
 

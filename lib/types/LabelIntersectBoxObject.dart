@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,56 +23,56 @@ import 'OptionFragment.dart';
  */
 class LabelIntersectBoxObject extends OptionFragment {
   LabelIntersectBoxObject() : super();
-  double? m_bottom;  
+  double? _bottom;  
 
   double get bottom { 
-    if (this.m_bottom == null) {
-      this.m_bottom = 0;
+    if (this._bottom == null) {
+      this._bottom = 0;
     }
-    return this.m_bottom!;
+    return this._bottom!;
   }
 
   void set bottom (double v) {
-    this.m_bottom = v;
+    this._bottom = v;
   }
     
-  double? m_left;  
+  double? _left;  
 
   double get left { 
-    if (this.m_left == null) {
-      this.m_left = 0;
+    if (this._left == null) {
+      this._left = 0;
     }
-    return this.m_left!;
+    return this._left!;
   }
 
   void set left (double v) {
-    this.m_left = v;
+    this._left = v;
   }
     
-  double? m_right;  
+  double? _right;  
 
   double get right { 
-    if (this.m_right == null) {
-      this.m_right = 0;
+    if (this._right == null) {
+      this._right = 0;
     }
-    return this.m_right!;
+    return this._right!;
   }
 
   void set right (double v) {
-    this.m_right = v;
+    this._right = v;
   }
     
-  double? m_top;  
+  double? _top;  
 
   double get top { 
-    if (this.m_top == null) {
-      this.m_top = 0;
+    if (this._top == null) {
+      this._top = 0;
     }
-    return this.m_top!;
+    return this._top!;
   }
 
   void set top (double v) {
-    this.m_top = v;
+    this._top = v;
   }
     
 
@@ -83,20 +83,20 @@ class LabelIntersectBoxObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_bottom != null) {  
-      buffer.writeAll(["\"bottom\":", this.m_bottom, ","], "");
+    if (this._bottom != null) {  
+      buffer.writeAll(["\"bottom\":", this._bottom, ","], "");
     }
 
-    if (this.m_left != null) {  
-      buffer.writeAll(["\"left\":", this.m_left, ","], "");
+    if (this._left != null) {  
+      buffer.writeAll(["\"left\":", this._left, ","], "");
     }
 
-    if (this.m_right != null) {  
-      buffer.writeAll(["\"right\":", this.m_right, ","], "");
+    if (this._right != null) {  
+      buffer.writeAll(["\"right\":", this._right, ","], "");
     }
 
-    if (this.m_top != null) {  
-      buffer.writeAll(["\"top\":", this.m_top, ","], "");
+    if (this._top != null) {  
+      buffer.writeAll(["\"top\":", this._top, ","], "");
     }
   }
 

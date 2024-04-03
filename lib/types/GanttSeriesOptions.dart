@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -41,9 +41,7 @@ class GanttSeriesOptions extends XRangeSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_connectors != null) {  
-      buffer.writeAll(["\"connectors\":", this.m_connectors?.toJSON(), ","], "");
-    }
+    // NOTE: skip serialization of connectors (type GanttConnectorOptions is ignored)} 
 
     // NOTE: skip serialization of states (type Generic is ignored)} 
   }

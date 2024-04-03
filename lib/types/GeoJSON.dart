@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,69 +24,69 @@ import 'OptionFragment.dart';
  */
 class GeoJSON extends OptionFragment {
   GeoJSON() : super();
-  String? m_copyright;  
+  String? _copyright;  
 
   String get copyright { 
-    if (this.m_copyright == null) {
-      this.m_copyright = "";
+    if (this._copyright == null) {
+      this._copyright = "";
     }
-    return this.m_copyright!;
+    return this._copyright!;
   }
 
   void set copyright (String v) {
-    this.m_copyright = v;
+    this._copyright = v;
   }
     
-  String? m_copyrightShort;  
+  String? _copyrightShort;  
 
   String get copyrightShort { 
-    if (this.m_copyrightShort == null) {
-      this.m_copyrightShort = "";
+    if (this._copyrightShort == null) {
+      this._copyrightShort = "";
     }
-    return this.m_copyrightShort!;
+    return this._copyrightShort!;
   }
 
   void set copyrightShort (String v) {
-    this.m_copyrightShort = v;
+    this._copyrightShort = v;
   }
     
-  String? m_copyrightUrl;  
+  String? _copyrightUrl;  
 
   String get copyrightUrl { 
-    if (this.m_copyrightUrl == null) {
-      this.m_copyrightUrl = "";
+    if (this._copyrightUrl == null) {
+      this._copyrightUrl = "";
     }
-    return this.m_copyrightUrl!;
+    return this._copyrightUrl!;
   }
 
   void set copyrightUrl (String v) {
-    this.m_copyrightUrl = v;
+    this._copyrightUrl = v;
   }
     
-  String? m_title;  
+  String? _title;  
 
   String get title { 
-    if (this.m_title == null) {
-      this.m_title = "";
+    if (this._title == null) {
+      this._title = "";
     }
-    return this.m_title!;
+    return this._title!;
   }
 
   void set title (String v) {
-    this.m_title = v;
+    this._title = v;
   }
     
-  String? m_version;  
+  String? _version;  
 
   String get version { 
-    if (this.m_version == null) {
-      this.m_version = "";
+    if (this._version == null) {
+      this._version = "";
     }
-    return this.m_version!;
+    return this._version!;
   }
 
   void set version (String v) {
-    this.m_version = v;
+    this._version = v;
   }
     
 
@@ -97,16 +97,16 @@ class GeoJSON extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_copyright != null) {  
-      buffer.writeAll(["\"copyright\":", this.m_copyright, ","], "");
+    if (this._copyright != null) {  
+      buffer.writeAll(["\"copyright\":\`", this._copyright, "\`,"], "");
     }
 
-    if (this.m_copyrightShort != null) {  
-      buffer.writeAll(["\"copyrightShort\":", this.m_copyrightShort, ","], "");
+    if (this._copyrightShort != null) {  
+      buffer.writeAll(["\"copyrightShort\":\`", this._copyrightShort, "\`,"], "");
     }
 
-    if (this.m_copyrightUrl != null) {  
-      buffer.writeAll(["\"copyrightUrl\":", this.m_copyrightUrl, ","], "");
+    if (this._copyrightUrl != null) {  
+      buffer.writeAll(["\"copyrightUrl\":\`", this._copyrightUrl, "\`,"], "");
     }
 
     // NOTE: skip serialization of crs (type AnyRecord is ignored)} 
@@ -117,14 +117,14 @@ class GeoJSON extends OptionFragment {
 
     // NOTE: skip serialization of hc_recommended_mapview (type Generic is ignored)} 
 
-    if (this.m_title != null) {  
-      buffer.writeAll(["\"title\":", this.m_title, ","], "");
+    if (this._title != null) {  
+      buffer.writeAll(["\"title\":\`", this._title, "\`,"], "");
     }
 
     // NOTE: skip serialization of type (type "FeatureCollection" is ignored)} 
 
-    if (this.m_version != null) {  
-      buffer.writeAll(["\"version\":", this.m_version, ","], "");
+    if (this._version != null) {  
+      buffer.writeAll(["\"version\":\`", this._version, "\`,"], "");
     }
   }
 

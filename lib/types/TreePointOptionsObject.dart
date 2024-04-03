@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,69 +23,69 @@ import 'OptionFragment.dart';
  */
 class TreePointOptionsObject extends OptionFragment {
   TreePointOptionsObject() : super();
-  double? m_end;  
+  double? _end;  
 
   double get end { 
-    if (this.m_end == null) {
-      this.m_end = 0;
+    if (this._end == null) {
+      this._end = 0;
     }
-    return this.m_end!;
+    return this._end!;
   }
 
   void set end (double v) {
-    this.m_end = v;
+    this._end = v;
   }
     
-  String? m_id;  
+  String? _id;  
 
   String get id { 
-    if (this.m_id == null) {
-      this.m_id = "";
+    if (this._id == null) {
+      this._id = "";
     }
-    return this.m_id!;
+    return this._id!;
   }
 
   void set id (String v) {
-    this.m_id = v;
+    this._id = v;
   }
     
-  bool? m_milestone;  
+  bool? _milestone;  
 
   bool get milestone { 
-    if (this.m_milestone == null) {
-      this.m_milestone = false;
+    if (this._milestone == null) {
+      this._milestone = false;
     }
-    return this.m_milestone!;
+    return this._milestone!;
   }
 
   void set milestone (bool v) {
-    this.m_milestone = v;
+    this._milestone = v;
   }
     
-  String? m_parent;  
+  String? _parent;  
 
   String get parent { 
-    if (this.m_parent == null) {
-      this.m_parent = "";
+    if (this._parent == null) {
+      this._parent = "";
     }
-    return this.m_parent!;
+    return this._parent!;
   }
 
   void set parent (String v) {
-    this.m_parent = v;
+    this._parent = v;
   }
     
-  double? m_start;  
+  double? _start;  
 
   double get start { 
-    if (this.m_start == null) {
-      this.m_start = 0;
+    if (this._start == null) {
+      this._start = 0;
     }
-    return this.m_start!;
+    return this._start!;
   }
 
   void set start (double v) {
-    this.m_start = v;
+    this._start = v;
   }
     
 
@@ -96,24 +96,24 @@ class TreePointOptionsObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_end != null) {  
-      buffer.writeAll(["\"end\":", this.m_end, ","], "");
+    if (this._end != null) {  
+      buffer.writeAll(["\"end\":", this._end, ","], "");
     }
 
-    if (this.m_id != null) {  
-      buffer.writeAll(["\"id\":", this.m_id, ","], "");
+    if (this._id != null) {  
+      buffer.writeAll(["\"id\":\`", this._id, "\`,"], "");
     }
 
-    if (this.m_milestone != null) {  
-      buffer.writeAll(["\"milestone\":", this.m_milestone, ","], "");
+    if (this._milestone != null) {  
+      buffer.writeAll(["\"milestone\":", this._milestone, ","], "");
     }
 
-    if (this.m_parent != null) {  
-      buffer.writeAll(["\"parent\":", this.m_parent, ","], "");
+    if (this._parent != null) {  
+      buffer.writeAll(["\"parent\":\`", this._parent, "\`,"], "");
     }
 
-    if (this.m_start != null) {  
-      buffer.writeAll(["\"start\":", this.m_start, ","], "");
+    if (this._start != null) {  
+      buffer.writeAll(["\"start\":", this._start, ","], "");
     }
   }
 

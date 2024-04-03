@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,30 +23,30 @@ import 'OptionFragment.dart';
  */
 class AnimationOptions extends OptionFragment {
   AnimationOptions() : super();
-  double? m_defer;  
+  double? _defer;  
 
   double get defer { 
-    if (this.m_defer == null) {
-      this.m_defer = 0;
+    if (this._defer == null) {
+      this._defer = 0;
     }
-    return this.m_defer!;
+    return this._defer!;
   }
 
   void set defer (double v) {
-    this.m_defer = v;
+    this._defer = v;
   }
     
-  double? m_duration;  
+  double? _duration;  
 
   double get duration { 
-    if (this.m_duration == null) {
-      this.m_duration = 0;
+    if (this._duration == null) {
+      this._duration = 0;
     }
-    return this.m_duration!;
+    return this._duration!;
   }
 
   void set duration (double v) {
-    this.m_duration = v;
+    this._duration = v;
   }
     
 
@@ -61,12 +61,12 @@ class AnimationOptions extends OptionFragment {
 
     // NOTE: skip serialization of curAnim (type Generic is ignored)} 
 
-    if (this.m_defer != null) {  
-      buffer.writeAll(["\"defer\":", this.m_defer, ","], "");
+    if (this._defer != null) {  
+      buffer.writeAll(["\"defer\":", this._defer, ","], "");
     }
 
-    if (this.m_duration != null) {  
-      buffer.writeAll(["\"duration\":", this.m_duration, ","], "");
+    if (this._duration != null) {  
+      buffer.writeAll(["\"duration\":", this._duration, ","], "");
     }
 
     // NOTE: skip serialization of easing (type Function is ignored)} 

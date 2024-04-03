@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -25,30 +25,30 @@ import 'OptionFragment.dart';
  */
 class Funnel3DPointOptions extends ColumnPointOptions {
   Funnel3DPointOptions() : super();
-  bool? m_gradientForSides;  
+  bool? _gradientForSides;  
 
   bool get gradientForSides { 
-    if (this.m_gradientForSides == null) {
-      this.m_gradientForSides = false;
+    if (this._gradientForSides == null) {
+      this._gradientForSides = false;
     }
-    return this.m_gradientForSides!;
+    return this._gradientForSides!;
   }
 
   void set gradientForSides (bool v) {
-    this.m_gradientForSides = v;
+    this._gradientForSides = v;
   }
     
-  double? m_y;  
+  double? _y;  
 
   double get y { 
-    if (this.m_y == null) {
-      this.m_y = 0;
+    if (this._y == null) {
+      this._y = 0;
     }
-    return this.m_y!;
+    return this._y!;
   }
 
   void set y (double v) {
-    this.m_y = v;
+    this._y = v;
   }
     
 
@@ -59,14 +59,14 @@ class Funnel3DPointOptions extends ColumnPointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_gradientForSides != null) {  
-      buffer.writeAll(["\"gradientForSides\":", this.m_gradientForSides, ","], "");
+    if (this._gradientForSides != null) {  
+      buffer.writeAll(["\"gradientForSides\":", this._gradientForSides, ","], "");
     }
 
     // NOTE: skip serialization of dlBox (type BBoxObject is ignored)} 
 
-    if (this.m_y != null) {  
-      buffer.writeAll(["\"y\":", this.m_y, ","], "");
+    if (this._y != null) {  
+      buffer.writeAll(["\"y\":", this._y, ","], "");
     }
   }
 

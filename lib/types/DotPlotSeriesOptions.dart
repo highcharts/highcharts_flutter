@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,17 +24,17 @@ import 'OptionFragment.dart';
  */
 class DotPlotSeriesOptions extends ColumnSeriesOptions {
   DotPlotSeriesOptions() : super();
-  double? m_itemPadding;  
+  double? _itemPadding;  
 
   double get itemPadding { 
-    if (this.m_itemPadding == null) {
-      this.m_itemPadding = 0;
+    if (this._itemPadding == null) {
+      this._itemPadding = 0;
     }
-    return this.m_itemPadding!;
+    return this._itemPadding!;
   }
 
   void set itemPadding (double v) {
-    this.m_itemPadding = v;
+    this._itemPadding = v;
   }
     
 
@@ -45,8 +45,8 @@ class DotPlotSeriesOptions extends ColumnSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_itemPadding != null) {  
-      buffer.writeAll(["\"itemPadding\":", this.m_itemPadding, ","], "");
+    if (this._itemPadding != null) {  
+      buffer.writeAll(["\"itemPadding\":", this._itemPadding, ","], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 

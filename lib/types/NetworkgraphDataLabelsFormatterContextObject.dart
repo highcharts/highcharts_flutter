@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,30 +24,30 @@ import 'OptionFragment.dart';
  */
 class NetworkgraphDataLabelsFormatterContextObject extends OptionFragment {
   NetworkgraphDataLabelsFormatterContextObject() : super();
-  String? m_color;  
+  String? _color;  
 
   String get color { 
-    if (this.m_color == null) {
-      this.m_color = "";
+    if (this._color == null) {
+      this._color = "";
     }
-    return this.m_color!;
+    return this._color!;
   }
 
   void set color (String v) {
-    this.m_color = v;
+    this._color = v;
   }
     
-  String? m_key;  
+  String? _key;  
 
   String get key { 
-    if (this.m_key == null) {
-      this.m_key = "";
+    if (this._key == null) {
+      this._key = "";
     }
-    return this.m_key!;
+    return this._key!;
   }
 
   void set key (String v) {
-    this.m_key = v;
+    this._key = v;
   }
     
 
@@ -58,12 +58,12 @@ class NetworkgraphDataLabelsFormatterContextObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_color != null) {  
-      buffer.writeAll(["\"color\":", this.m_color, ","], "");
+    if (this._color != null) {  
+      buffer.writeAll(["\"color\":\`", this._color, "\`,"], "");
     }
 
-    if (this.m_key != null) {  
-      buffer.writeAll(["\"key\":", this.m_key, ","], "");
+    if (this._key != null) {  
+      buffer.writeAll(["\"key\":\`", this._key, "\`,"], "");
     }
 
     // NOTE: skip serialization of point (type NetworkgraphPoint is ignored)} 

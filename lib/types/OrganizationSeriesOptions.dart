@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -46,17 +46,17 @@ class OrganizationSeriesOptions extends SankeySeriesOptions {
    * 
    * Defaults to '20'. 
       */
-  double? m_hangingIndent;  
+  double? _hangingIndent;  
 
   double get hangingIndent { 
-    if (this.m_hangingIndent == null) {
-      this.m_hangingIndent = 0;
+    if (this._hangingIndent == null) {
+      this._hangingIndent = 0;
     }
-    return this.m_hangingIndent!;
+    return this._hangingIndent!;
   }
 
   void set hangingIndent (double v) {
-    this.m_hangingIndent = v;
+    this._hangingIndent = v;
   }
     
   /**
@@ -75,17 +75,30 @@ class OrganizationSeriesOptions extends SankeySeriesOptions {
    * 
    * Defaults to 'inherit'. 
       */
-  String? m_hangingIndentTranslation;  
+  String? _hangingIndentTranslation;  
 
   String get hangingIndentTranslation { 
-    if (this.m_hangingIndentTranslation == null) {
-      this.m_hangingIndentTranslation = "";
+    if (this._hangingIndentTranslation == null) {
+      this._hangingIndentTranslation = "";
     }
-    return this.m_hangingIndentTranslation!;
+    return this._hangingIndentTranslation!;
   }
 
   void set hangingIndentTranslation (String v) {
-    this.m_hangingIndentTranslation = v;
+    this._hangingIndentTranslation = v;
+  }
+    
+  String? _hangingSide;  
+
+  String get hangingSide { 
+    if (this._hangingSide == null) {
+      this._hangingSide = "";
+    }
+    return this._hangingSide!;
+  }
+
+  void set hangingSide (String v) {
+    this._hangingSide = v;
   }
     
   /**
@@ -97,56 +110,56 @@ class OrganizationSeriesOptions extends SankeySeriesOptions {
   /**
    * Link Styling options  
       */
-  OrganizationLinkOptions? m_link;  
+  OrganizationLinkOptions? _link;  
 
   OrganizationLinkOptions get link { 
-    if (this.m_link == null) {
-      this.m_link = OrganizationLinkOptions();
+    if (this._link == null) {
+      this._link = OrganizationLinkOptions();
     }
-    return this.m_link!;
+    return this._link!;
   }
 
   void set link (OrganizationLinkOptions v) {
-    this.m_link = v;
+    this._link = v;
   }
     
-  String? m_linkColor;  
+  String? _linkColor;  
 
   String get linkColor { 
-    if (this.m_linkColor == null) {
-      this.m_linkColor = "";
+    if (this._linkColor == null) {
+      this._linkColor = "";
     }
-    return this.m_linkColor!;
+    return this._linkColor!;
   }
 
   void set linkColor (String v) {
-    this.m_linkColor = v;
+    this._linkColor = v;
   }
     
-  double? m_linkLineWidth;  
+  double? _linkLineWidth;  
 
   double get linkLineWidth { 
-    if (this.m_linkLineWidth == null) {
-      this.m_linkLineWidth = 0;
+    if (this._linkLineWidth == null) {
+      this._linkLineWidth = 0;
     }
-    return this.m_linkLineWidth!;
+    return this._linkLineWidth!;
   }
 
   void set linkLineWidth (double v) {
-    this.m_linkLineWidth = v;
+    this._linkLineWidth = v;
   }
     
-  double? m_linkRadius;  
+  double? _linkRadius;  
 
   double get linkRadius { 
-    if (this.m_linkRadius == null) {
-      this.m_linkRadius = 0;
+    if (this._linkRadius == null) {
+      this._linkRadius = 0;
     }
-    return this.m_linkRadius!;
+    return this._linkRadius!;
   }
 
   void set linkRadius (double v) {
-    this.m_linkRadius = v;
+    this._linkRadius = v;
   }
     
   /**
@@ -160,17 +173,17 @@ class OrganizationSeriesOptions extends SankeySeriesOptions {
    * 
    * Defaults to '10'. 
       */
-  double? m_minNodeLength;  
+  double? _minNodeLength;  
 
   double get minNodeLength { 
-    if (this.m_minNodeLength == null) {
-      this.m_minNodeLength = 0;
+    if (this._minNodeLength == null) {
+      this._minNodeLength = 0;
     }
-    return this.m_minNodeLength!;
+    return this._minNodeLength!;
   }
 
   void set minNodeLength (double v) {
-    this.m_minNodeLength = v;
+    this._minNodeLength = v;
   }
     
   // NOTE: states skipped - type Generic is ignored in gen
@@ -185,34 +198,38 @@ class OrganizationSeriesOptions extends SankeySeriesOptions {
     
     // NOTE: skip serialization of dataLabels (type OrganizationDataLabelOptions is ignored)} 
 
-    if (this.m_hangingIndent != null) {  
-      buffer.writeAll(["\"hangingIndent\":", this.m_hangingIndent, ","], "");
+    if (this._hangingIndent != null) {  
+      buffer.writeAll(["\"hangingIndent\":", this._hangingIndent, ","], "");
     }
 
-    if (this.m_hangingIndentTranslation != null) {  
-      buffer.writeAll(["\"hangingIndentTranslation\":", this.m_hangingIndentTranslation, ","], "");
+    if (this._hangingIndentTranslation != null) {  
+      buffer.writeAll(["\"hangingIndentTranslation\":\`", this._hangingIndentTranslation, "\`,"], "");
+    }
+
+    if (this._hangingSide != null) {  
+      buffer.writeAll(["\"hangingSide\":\`", this._hangingSide, "\`,"], "");
     }
 
     // NOTE: skip serialization of levels (type OrganizationSeriesLevelOptions[] is ignored)} 
 
-    if (this.m_link != null) {  
-      buffer.writeAll(["\"link\":", this.m_link?.toJSON(), ","], "");
+    if (this._link != null) {  
+      buffer.writeAll(["\"link\":", this._link?.toJSON(), ","], "");
     }
 
-    if (this.m_linkColor != null) {  
-      buffer.writeAll(["\"linkColor\":", this.m_linkColor, ","], "");
+    if (this._linkColor != null) {  
+      buffer.writeAll(["\"linkColor\":\`", this._linkColor, "\`,"], "");
     }
 
-    if (this.m_linkLineWidth != null) {  
-      buffer.writeAll(["\"linkLineWidth\":", this.m_linkLineWidth, ","], "");
+    if (this._linkLineWidth != null) {  
+      buffer.writeAll(["\"linkLineWidth\":", this._linkLineWidth, ","], "");
     }
 
-    if (this.m_linkRadius != null) {  
-      buffer.writeAll(["\"linkRadius\":", this.m_linkRadius, ","], "");
+    if (this._linkRadius != null) {  
+      buffer.writeAll(["\"linkRadius\":", this._linkRadius, ","], "");
     }
 
-    if (this.m_minNodeLength != null) {  
-      buffer.writeAll(["\"minNodeLength\":", this.m_minNodeLength, ","], "");
+    if (this._minNodeLength != null) {  
+      buffer.writeAll(["\"minNodeLength\":", this._minNodeLength, ","], "");
     }
 
     // NOTE: skip serialization of nodes (type OrganizationSeriesNodeOptions[] is ignored)} 

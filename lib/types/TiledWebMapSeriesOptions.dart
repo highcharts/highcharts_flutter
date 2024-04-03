@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -28,17 +28,17 @@ class TiledWebMapSeriesOptions extends MapSeriesOptions {
   /**
    * Provider options for the series.  
       */
-  ProviderOptions? m_provider;  
+  ProviderOptions? _provider;  
 
   ProviderOptions get provider { 
-    if (this.m_provider == null) {
-      this.m_provider = ProviderOptions();
+    if (this._provider == null) {
+      this._provider = ProviderOptions();
     }
-    return this.m_provider!;
+    return this._provider!;
   }
 
   void set provider (ProviderOptions v) {
-    this.m_provider = v;
+    this._provider = v;
   }
     
   // NOTE: states skipped - type Generic is ignored in gen
@@ -51,8 +51,8 @@ class TiledWebMapSeriesOptions extends MapSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_provider != null) {  
-      buffer.writeAll(["\"provider\":", this.m_provider?.toJSON(), ","], "");
+    if (this._provider != null) {  
+      buffer.writeAll(["\"provider\":", this._provider?.toJSON(), ","], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 

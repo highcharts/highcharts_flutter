@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,69 +23,69 @@ import 'OptionFragment.dart';
  */
 class ProviderOptions extends OptionFragment {
   ProviderOptions() : super();
-  String? m_apiKey;  
+  String? _apiKey;  
 
   String get apiKey { 
-    if (this.m_apiKey == null) {
-      this.m_apiKey = "";
+    if (this._apiKey == null) {
+      this._apiKey = "";
     }
-    return this.m_apiKey!;
+    return this._apiKey!;
   }
 
   void set apiKey (String v) {
-    this.m_apiKey = v;
+    this._apiKey = v;
   }
     
-  String? m_subdomain;  
+  String? _subdomain;  
 
   String get subdomain { 
-    if (this.m_subdomain == null) {
-      this.m_subdomain = "";
+    if (this._subdomain == null) {
+      this._subdomain = "";
     }
-    return this.m_subdomain!;
+    return this._subdomain!;
   }
 
   void set subdomain (String v) {
-    this.m_subdomain = v;
+    this._subdomain = v;
   }
     
-  String? m_theme;  
+  String? _theme;  
 
   String get theme { 
-    if (this.m_theme == null) {
-      this.m_theme = "";
+    if (this._theme == null) {
+      this._theme = "";
     }
-    return this.m_theme!;
+    return this._theme!;
   }
 
   void set theme (String v) {
-    this.m_theme = v;
+    this._theme = v;
   }
     
-  String? m_type;  
+  String? _type;  
 
   String get type { 
-    if (this.m_type == null) {
-      this.m_type = "";
+    if (this._type == null) {
+      this._type = "";
     }
-    return this.m_type!;
+    return this._type!;
   }
 
   void set type (String v) {
-    this.m_type = v;
+    this._type = v;
   }
     
-  String? m_url;  
+  String? _url;  
 
   String get url { 
-    if (this.m_url == null) {
-      this.m_url = "";
+    if (this._url == null) {
+      this._url = "";
     }
-    return this.m_url!;
+    return this._url!;
   }
 
   void set url (String v) {
-    this.m_url = v;
+    this._url = v;
   }
     
 
@@ -96,26 +96,26 @@ class ProviderOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_apiKey != null) {  
-      buffer.writeAll(["\"apiKey\":", this.m_apiKey, ","], "");
+    if (this._apiKey != null) {  
+      buffer.writeAll(["\"apiKey\":\`", this._apiKey, "\`,"], "");
     }
 
     // NOTE: skip serialization of onload (type Function is ignored)} 
 
-    if (this.m_subdomain != null) {  
-      buffer.writeAll(["\"subdomain\":", this.m_subdomain, ","], "");
+    if (this._subdomain != null) {  
+      buffer.writeAll(["\"subdomain\":\`", this._subdomain, "\`,"], "");
     }
 
-    if (this.m_theme != null) {  
-      buffer.writeAll(["\"theme\":", this.m_theme, ","], "");
+    if (this._theme != null) {  
+      buffer.writeAll(["\"theme\":\`", this._theme, "\`,"], "");
     }
 
-    if (this.m_type != null) {  
-      buffer.writeAll(["\"type\":", this.m_type, ","], "");
+    if (this._type != null) {  
+      buffer.writeAll(["\"type\":\`", this._type, "\`,"], "");
     }
 
-    if (this.m_url != null) {  
-      buffer.writeAll(["\"url\":", this.m_url, ","], "");
+    if (this._url != null) {  
+      buffer.writeAll(["\"url\":\`", this._url, "\`,"], "");
     }
   }
 

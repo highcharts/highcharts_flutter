@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,17 +24,17 @@ import 'OptionFragment.dart';
  */
 class LabelsItemsOptions extends OptionFragment {
   LabelsItemsOptions() : super();
-  String? m_html;  
+  String? _html;  
 
   String get html { 
-    if (this.m_html == null) {
-      this.m_html = "";
+    if (this._html == null) {
+      this._html = "";
     }
-    return this.m_html!;
+    return this._html!;
   }
 
   void set html (String v) {
-    this.m_html = v;
+    this._html = v;
   }
     
 
@@ -45,8 +45,8 @@ class LabelsItemsOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_html != null) {  
-      buffer.writeAll(["\"html\":", this.m_html, ","], "");
+    if (this._html != null) {  
+      buffer.writeAll(["\"html\":\`", this._html, "\`,"], "");
     }
 
     // NOTE: skip serialization of style (type CSSObject is ignored)} 

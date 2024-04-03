@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,43 +23,43 @@ import 'OptionFragment.dart';
  */
 class BrowserProperties extends OptionFragment {
   BrowserProperties() : super();
-  String? m_fullscreenChange;  
+  String? _fullscreenChange;  
 
   String get fullscreenChange { 
-    if (this.m_fullscreenChange == null) {
-      this.m_fullscreenChange = "";
+    if (this._fullscreenChange == null) {
+      this._fullscreenChange = "";
     }
-    return this.m_fullscreenChange!;
+    return this._fullscreenChange!;
   }
 
   void set fullscreenChange (String v) {
-    this.m_fullscreenChange = v;
+    this._fullscreenChange = v;
   }
     
-  String? m_requestFullscreen;  
+  String? _requestFullscreen;  
 
   String get requestFullscreen { 
-    if (this.m_requestFullscreen == null) {
-      this.m_requestFullscreen = "";
+    if (this._requestFullscreen == null) {
+      this._requestFullscreen = "";
     }
-    return this.m_requestFullscreen!;
+    return this._requestFullscreen!;
   }
 
   void set requestFullscreen (String v) {
-    this.m_requestFullscreen = v;
+    this._requestFullscreen = v;
   }
     
-  String? m_exitFullscreen;  
+  String? _exitFullscreen;  
 
   String get exitFullscreen { 
-    if (this.m_exitFullscreen == null) {
-      this.m_exitFullscreen = "";
+    if (this._exitFullscreen == null) {
+      this._exitFullscreen = "";
     }
-    return this.m_exitFullscreen!;
+    return this._exitFullscreen!;
   }
 
   void set exitFullscreen (String v) {
-    this.m_exitFullscreen = v;
+    this._exitFullscreen = v;
   }
     
 
@@ -70,16 +70,16 @@ class BrowserProperties extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_fullscreenChange != null) {  
-      buffer.writeAll(["\"fullscreenChange\":", this.m_fullscreenChange, ","], "");
+    if (this._fullscreenChange != null) {  
+      buffer.writeAll(["\"fullscreenChange\":\`", this._fullscreenChange, "\`,"], "");
     }
 
-    if (this.m_requestFullscreen != null) {  
-      buffer.writeAll(["\"requestFullscreen\":", this.m_requestFullscreen, ","], "");
+    if (this._requestFullscreen != null) {  
+      buffer.writeAll(["\"requestFullscreen\":\`", this._requestFullscreen, "\`,"], "");
     }
 
-    if (this.m_exitFullscreen != null) {  
-      buffer.writeAll(["\"exitFullscreen\":", this.m_exitFullscreen, ","], "");
+    if (this._exitFullscreen != null) {  
+      buffer.writeAll(["\"exitFullscreen\":\`", this._exitFullscreen, "\`,"], "");
     }
   }
 

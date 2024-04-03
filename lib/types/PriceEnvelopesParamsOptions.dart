@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,43 +24,43 @@ import 'OptionFragment.dart';
  */
 class PriceEnvelopesParamsOptions extends SMAParamsOptions {
   PriceEnvelopesParamsOptions() : super();
-  double? m_topBand;  
+  double? _topBand;  
 
   double get topBand { 
-    if (this.m_topBand == null) {
-      this.m_topBand = 0;
+    if (this._topBand == null) {
+      this._topBand = 0;
     }
-    return this.m_topBand!;
+    return this._topBand!;
   }
 
   void set topBand (double v) {
-    this.m_topBand = v;
+    this._topBand = v;
   }
     
-  double? m_bottomBand;  
+  double? _bottomBand;  
 
   double get bottomBand { 
-    if (this.m_bottomBand == null) {
-      this.m_bottomBand = 0;
+    if (this._bottomBand == null) {
+      this._bottomBand = 0;
     }
-    return this.m_bottomBand!;
+    return this._bottomBand!;
   }
 
   void set bottomBand (double v) {
-    this.m_bottomBand = v;
+    this._bottomBand = v;
   }
     
-  double? m_period;  
+  double? _period;  
 
   double get period { 
-    if (this.m_period == null) {
-      this.m_period = 0;
+    if (this._period == null) {
+      this._period = 0;
     }
-    return this.m_period!;
+    return this._period!;
   }
 
   void set period (double v) {
-    this.m_period = v;
+    this._period = v;
   }
     
 
@@ -71,16 +71,16 @@ class PriceEnvelopesParamsOptions extends SMAParamsOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_topBand != null) {  
-      buffer.writeAll(["\"topBand\":", this.m_topBand, ","], "");
+    if (this._topBand != null) {  
+      buffer.writeAll(["\"topBand\":", this._topBand, ","], "");
     }
 
-    if (this.m_bottomBand != null) {  
-      buffer.writeAll(["\"bottomBand\":", this.m_bottomBand, ","], "");
+    if (this._bottomBand != null) {  
+      buffer.writeAll(["\"bottomBand\":", this._bottomBand, ","], "");
     }
 
-    if (this.m_period != null) {  
-      buffer.writeAll(["\"period\":", this.m_period, ","], "");
+    if (this._period != null) {  
+      buffer.writeAll(["\"period\":", this._period, ","], "");
     }
   }
 

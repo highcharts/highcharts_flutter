@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -37,17 +37,17 @@ class TimeOptions extends OptionFragment {
    * 
    * Defaults to 'undefined'. 
       */
-  String? m_timezone;  
+  String? _timezone;  
 
   String get timezone { 
-    if (this.m_timezone == null) {
-      this.m_timezone = "";
+    if (this._timezone == null) {
+      this._timezone = "";
     }
-    return this.m_timezone!;
+    return this._timezone!;
   }
 
   void set timezone (String v) {
-    this.m_timezone = v;
+    this._timezone = v;
   }
     
   /**
@@ -56,17 +56,17 @@ class TimeOptions extends OptionFragment {
    * [getTimezoneOffset](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset)
    * method. Use this to display UTC based data in a predefined time zone.  
       */
-  double? m_timezoneOffset;  
+  double? _timezoneOffset;  
 
   double get timezoneOffset { 
-    if (this.m_timezoneOffset == null) {
-      this.m_timezoneOffset = 0;
+    if (this._timezoneOffset == null) {
+      this._timezoneOffset = 0;
     }
-    return this.m_timezoneOffset!;
+    return this._timezoneOffset!;
   }
 
   void set timezoneOffset (double v) {
-    this.m_timezoneOffset = v;
+    this._timezoneOffset = v;
   }
     
   /**
@@ -79,21 +79,19 @@ class TimeOptions extends OptionFragment {
    * 
    * Defaults to 'true'. 
       */
-  bool? m_useUTC;  
+  bool? _useUTC;  
 
   bool get useUTC { 
-    if (this.m_useUTC == null) {
-      this.m_useUTC = false;
+    if (this._useUTC == null) {
+      this._useUTC = false;
     }
-    return this.m_useUTC!;
+    return this._useUTC!;
   }
 
   void set useUTC (bool v) {
-    this.m_useUTC = v;
+    this._useUTC = v;
   }
     
-  // NOTE: moment skipped - type any is ignored in gen
-
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -106,19 +104,17 @@ class TimeOptions extends OptionFragment {
 
     // NOTE: skip serialization of getTimezoneOffset (type Function is ignored)} 
 
-    if (this.m_timezone != null) {  
-      buffer.writeAll(["\"timezone\":", this.m_timezone, ","], "");
+    if (this._timezone != null) {  
+      buffer.writeAll(["\"timezone\":\`", this._timezone, "\`,"], "");
     }
 
-    if (this.m_timezoneOffset != null) {  
-      buffer.writeAll(["\"timezoneOffset\":", this.m_timezoneOffset, ","], "");
+    if (this._timezoneOffset != null) {  
+      buffer.writeAll(["\"timezoneOffset\":", this._timezoneOffset, ","], "");
     }
 
-    if (this.m_useUTC != null) {  
-      buffer.writeAll(["\"useUTC\":", this.m_useUTC, ","], "");
+    if (this._useUTC != null) {  
+      buffer.writeAll(["\"useUTC\":", this._useUTC, ","], "");
     }
-
-    // NOTE: skip serialization of moment (type any is ignored)} 
   }
 
 }

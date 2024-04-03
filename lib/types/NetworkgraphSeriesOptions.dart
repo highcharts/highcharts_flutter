@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -46,17 +46,17 @@ class NetworkgraphSeriesOptions extends SeriesOptions {
    * 
    * Defaults to 'true'. 
       */
-  bool? m_draggable;  
+  bool? _draggable;  
 
   bool get draggable { 
-    if (this.m_draggable == null) {
-      this.m_draggable = false;
+    if (this._draggable == null) {
+      this._draggable = false;
     }
-    return this.m_draggable!;
+    return this._draggable!;
   }
 
   void set draggable (bool v) {
-    this.m_draggable = v;
+    this._draggable = v;
   }
     
   /**
@@ -66,46 +66,46 @@ class NetworkgraphSeriesOptions extends SeriesOptions {
       */
   /** NOTE: extevents is skipped here for now, as it overrides the base type. */
 
-  bool? m_inactiveOtherPoints;  
+  bool? _inactiveOtherPoints;  
 
   bool get inactiveOtherPoints { 
-    if (this.m_inactiveOtherPoints == null) {
-      this.m_inactiveOtherPoints = false;
+    if (this._inactiveOtherPoints == null) {
+      this._inactiveOtherPoints = false;
     }
-    return this.m_inactiveOtherPoints!;
+    return this._inactiveOtherPoints!;
   }
 
   void set inactiveOtherPoints (bool v) {
-    this.m_inactiveOtherPoints = v;
+    this._inactiveOtherPoints = v;
   }
     
-  Options? m_layoutAlgorithm;  
+  Options? _layoutAlgorithm;  
 
   Options get layoutAlgorithm { 
-    if (this.m_layoutAlgorithm == null) {
-      this.m_layoutAlgorithm = Options();
+    if (this._layoutAlgorithm == null) {
+      this._layoutAlgorithm = Options();
     }
-    return this.m_layoutAlgorithm!;
+    return this._layoutAlgorithm!;
   }
 
   void set layoutAlgorithm (Options v) {
-    this.m_layoutAlgorithm = v;
+    this._layoutAlgorithm = v;
   }
     
   /**
    * Link style options  
       */
-  NetworkgraphLinkOptions? m_link;  
+  NetworkgraphLinkOptions? _link;  
 
   NetworkgraphLinkOptions get link { 
-    if (this.m_link == null) {
-      this.m_link = NetworkgraphLinkOptions();
+    if (this._link == null) {
+      this._link = NetworkgraphLinkOptions();
     }
-    return this.m_link!;
+    return this._link!;
   }
 
   void set link (NetworkgraphLinkOptions v) {
-    this.m_link = v;
+    this._link = v;
   }
     
   // NOTE: states skipped - type Generic is ignored in gen
@@ -120,24 +120,22 @@ class NetworkgraphSeriesOptions extends SeriesOptions {
     
     // NOTE: skip serialization of dataLabels (type NetworkgraphDataLabelsOptionsObject is ignored)} 
 
-    if (this.m_draggable != null) {  
-      buffer.writeAll(["\"draggable\":", this.m_draggable, ","], "");
+    if (this._draggable != null) {  
+      buffer.writeAll(["\"draggable\":", this._draggable, ","], "");
     }
 
-    if (this.m_events != null) {  
-      buffer.writeAll(["\"events\":", this.m_events?.toJSON(), ","], "");
+    // NOTE: skip serialization of events (type NetworkgraphEventsOptions is ignored)} 
+
+    if (this._inactiveOtherPoints != null) {  
+      buffer.writeAll(["\"inactiveOtherPoints\":", this._inactiveOtherPoints, ","], "");
     }
 
-    if (this.m_inactiveOtherPoints != null) {  
-      buffer.writeAll(["\"inactiveOtherPoints\":", this.m_inactiveOtherPoints, ","], "");
+    if (this._layoutAlgorithm != null) {  
+      buffer.writeAll(["\"layoutAlgorithm\":", this._layoutAlgorithm?.toJSON(), ","], "");
     }
 
-    if (this.m_layoutAlgorithm != null) {  
-      buffer.writeAll(["\"layoutAlgorithm\":", this.m_layoutAlgorithm?.toJSON(), ","], "");
-    }
-
-    if (this.m_link != null) {  
-      buffer.writeAll(["\"link\":", this.m_link?.toJSON(), ","], "");
+    if (this._link != null) {  
+      buffer.writeAll(["\"link\":", this._link?.toJSON(), ","], "");
     }
 
     // NOTE: skip serialization of nodes (type NetworkgraphPointOptions[] is ignored)} 

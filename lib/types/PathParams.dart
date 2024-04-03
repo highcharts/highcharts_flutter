@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,121 +23,121 @@ import 'OptionFragment.dart';
  */
 class PathParams extends OptionFragment {
   PathParams() : super();
-  double? m_x1;  
+  double? _x1;  
 
   double get x1 { 
-    if (this.m_x1 == null) {
-      this.m_x1 = 0;
+    if (this._x1 == null) {
+      this._x1 = 0;
     }
-    return this.m_x1!;
+    return this._x1!;
   }
 
   void set x1 (double v) {
-    this.m_x1 = v;
+    this._x1 = v;
   }
     
-  double? m_y1;  
+  double? _y1;  
 
   double get y1 { 
-    if (this.m_y1 == null) {
-      this.m_y1 = 0;
+    if (this._y1 == null) {
+      this._y1 = 0;
     }
-    return this.m_y1!;
+    return this._y1!;
   }
 
   void set y1 (double v) {
-    this.m_y1 = v;
+    this._y1 = v;
   }
     
-  double? m_x2;  
+  double? _x2;  
 
   double get x2 { 
-    if (this.m_x2 == null) {
-      this.m_x2 = 0;
+    if (this._x2 == null) {
+      this._x2 = 0;
     }
-    return this.m_x2!;
+    return this._x2!;
   }
 
   void set x2 (double v) {
-    this.m_x2 = v;
+    this._x2 = v;
   }
     
-  double? m_y2;  
+  double? _y2;  
 
   double get y2 { 
-    if (this.m_y2 == null) {
-      this.m_y2 = 0;
+    if (this._y2 == null) {
+      this._y2 = 0;
     }
-    return this.m_y2!;
+    return this._y2!;
   }
 
   void set y2 (double v) {
-    this.m_y2 = v;
+    this._y2 = v;
   }
     
-  double? m_offset;  
+  double? _offset;  
 
   double get offset { 
-    if (this.m_offset == null) {
-      this.m_offset = 0;
+    if (this._offset == null) {
+      this._offset = 0;
     }
-    return this.m_offset!;
+    return this._offset!;
   }
 
   void set offset (double v) {
-    this.m_offset = v;
+    this._offset = v;
   }
     
-  double? m_radius;  
+  double? _radius;  
 
   double get radius { 
-    if (this.m_radius == null) {
-      this.m_radius = 0;
+    if (this._radius == null) {
+      this._radius = 0;
     }
-    return this.m_radius!;
+    return this._radius!;
   }
 
   void set radius (double v) {
-    this.m_radius = v;
+    this._radius = v;
   }
     
-  double? m_width;  
+  double? _width;  
 
   double get width { 
-    if (this.m_width == null) {
-      this.m_width = 0;
+    if (this._width == null) {
+      this._width = 0;
     }
-    return this.m_width!;
+    return this._width!;
   }
 
   void set width (double v) {
-    this.m_width = v;
+    this._width = v;
   }
     
-  bool? m_inverted;  
+  bool? _inverted;  
 
   bool get inverted { 
-    if (this.m_inverted == null) {
-      this.m_inverted = false;
+    if (this._inverted == null) {
+      this._inverted = false;
     }
-    return this.m_inverted!;
+    return this._inverted!;
   }
 
   void set inverted (bool v) {
-    this.m_inverted = v;
+    this._inverted = v;
   }
     
-  bool? m_parentVisible;  
+  bool? _parentVisible;  
 
   bool get parentVisible { 
-    if (this.m_parentVisible == null) {
-      this.m_parentVisible = false;
+    if (this._parentVisible == null) {
+      this._parentVisible = false;
     }
-    return this.m_parentVisible!;
+    return this._parentVisible!;
   }
 
   void set parentVisible (bool v) {
-    this.m_parentVisible = v;
+    this._parentVisible = v;
   }
     
 
@@ -148,40 +148,40 @@ class PathParams extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_x1 != null) {  
-      buffer.writeAll(["\"x1\":", this.m_x1, ","], "");
+    if (this._x1 != null) {  
+      buffer.writeAll(["\"x1\":", this._x1, ","], "");
     }
 
-    if (this.m_y1 != null) {  
-      buffer.writeAll(["\"y1\":", this.m_y1, ","], "");
+    if (this._y1 != null) {  
+      buffer.writeAll(["\"y1\":", this._y1, ","], "");
     }
 
-    if (this.m_x2 != null) {  
-      buffer.writeAll(["\"x2\":", this.m_x2, ","], "");
+    if (this._x2 != null) {  
+      buffer.writeAll(["\"x2\":", this._x2, ","], "");
     }
 
-    if (this.m_y2 != null) {  
-      buffer.writeAll(["\"y2\":", this.m_y2, ","], "");
+    if (this._y2 != null) {  
+      buffer.writeAll(["\"y2\":", this._y2, ","], "");
     }
 
-    if (this.m_offset != null) {  
-      buffer.writeAll(["\"offset\":", this.m_offset, ","], "");
+    if (this._offset != null) {  
+      buffer.writeAll(["\"offset\":", this._offset, ","], "");
     }
 
-    if (this.m_radius != null) {  
-      buffer.writeAll(["\"radius\":", this.m_radius, ","], "");
+    if (this._radius != null) {  
+      buffer.writeAll(["\"radius\":", this._radius, ","], "");
     }
 
-    if (this.m_width != null) {  
-      buffer.writeAll(["\"width\":", this.m_width, ","], "");
+    if (this._width != null) {  
+      buffer.writeAll(["\"width\":", this._width, ","], "");
     }
 
-    if (this.m_inverted != null) {  
-      buffer.writeAll(["\"inverted\":", this.m_inverted, ","], "");
+    if (this._inverted != null) {  
+      buffer.writeAll(["\"inverted\":", this._inverted, ","], "");
     }
 
-    if (this.m_parentVisible != null) {  
-      buffer.writeAll(["\"parentVisible\":", this.m_parentVisible, ","], "");
+    if (this._parentVisible != null) {  
+      buffer.writeAll(["\"parentVisible\":", this._parentVisible, ","], "");
     }
   }
 

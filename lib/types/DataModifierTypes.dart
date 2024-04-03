@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -32,7 +32,15 @@ class DataModifierTypes extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    
+    // NOTE: skip serialization of Chain (type typeof ChainModifier is ignored)} 
+
+    // NOTE: skip serialization of Invert (type typeof InvertModifier is ignored)} 
+
+    // NOTE: skip serialization of Math (type typeof MathModifier is ignored)} 
+
+    // NOTE: skip serialization of Range (type typeof RangeModifier is ignored)} 
+
+    // NOTE: skip serialization of Sort (type typeof SortModifier is ignored)} 
   }
 
 }

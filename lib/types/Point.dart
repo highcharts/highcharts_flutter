@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -34,6 +34,8 @@ class Point extends OptionFragment {
 
     
     // NOTE: skip serialization of options (type PointOptions is ignored)} 
+
+    // NOTE: skip serialization of hcEvents (type Generic is ignored)} 
   }
 
 }

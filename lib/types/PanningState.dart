@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,43 +23,43 @@ import 'OptionFragment.dart';
  */
 class PanningState extends OptionFragment {
   PanningState() : super();
-  double? m_startMin;  
+  double? _startMin;  
 
   double get startMin { 
-    if (this.m_startMin == null) {
-      this.m_startMin = 0;
+    if (this._startMin == null) {
+      this._startMin = 0;
     }
-    return this.m_startMin!;
+    return this._startMin!;
   }
 
   void set startMin (double v) {
-    this.m_startMin = v;
+    this._startMin = v;
   }
     
-  double? m_startMax;  
+  double? _startMax;  
 
   double get startMax { 
-    if (this.m_startMax == null) {
-      this.m_startMax = 0;
+    if (this._startMax == null) {
+      this._startMax = 0;
     }
-    return this.m_startMax!;
+    return this._startMax!;
   }
 
   void set startMax (double v) {
-    this.m_startMax = v;
+    this._startMax = v;
   }
     
-  bool? m_isDirty;  
+  bool? _isDirty;  
 
   bool get isDirty { 
-    if (this.m_isDirty == null) {
-      this.m_isDirty = false;
+    if (this._isDirty == null) {
+      this._isDirty = false;
     }
-    return this.m_isDirty!;
+    return this._isDirty!;
   }
 
   void set isDirty (bool v) {
-    this.m_isDirty = v;
+    this._isDirty = v;
   }
     
 
@@ -70,16 +70,16 @@ class PanningState extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_startMin != null) {  
-      buffer.writeAll(["\"startMin\":", this.m_startMin, ","], "");
+    if (this._startMin != null) {  
+      buffer.writeAll(["\"startMin\":", this._startMin, ","], "");
     }
 
-    if (this.m_startMax != null) {  
-      buffer.writeAll(["\"startMax\":", this.m_startMax, ","], "");
+    if (this._startMax != null) {  
+      buffer.writeAll(["\"startMax\":", this._startMax, ","], "");
     }
 
-    if (this.m_isDirty != null) {  
-      buffer.writeAll(["\"isDirty\":", this.m_isDirty, ","], "");
+    if (this._isDirty != null) {  
+      buffer.writeAll(["\"isDirty\":", this._isDirty, ","], "");
     }
   }
 

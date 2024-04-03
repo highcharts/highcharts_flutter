@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,17 +24,17 @@ import 'OptionFragment.dart';
  */
 class RSIParamsOptions extends SMAParamsOptions {
   RSIParamsOptions() : super();
-  double? m_decimals;  
+  double? _decimals;  
 
   double get decimals { 
-    if (this.m_decimals == null) {
-      this.m_decimals = 0;
+    if (this._decimals == null) {
+      this._decimals = 0;
     }
-    return this.m_decimals!;
+    return this._decimals!;
   }
 
   void set decimals (double v) {
-    this.m_decimals = v;
+    this._decimals = v;
   }
     
 
@@ -45,8 +45,8 @@ class RSIParamsOptions extends SMAParamsOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_decimals != null) {  
-      buffer.writeAll(["\"decimals\":", this.m_decimals, ","], "");
+    if (this._decimals != null) {  
+      buffer.writeAll(["\"decimals\":", this._decimals, ","], "");
     }
   }
 

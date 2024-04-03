@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,82 +24,82 @@ import 'OptionFragment.dart';
  */
 class SankeySeriesLevelOptions extends OptionFragment {
   SankeySeriesLevelOptions() : super();
-  String? m_borderColor;  
+  String? _borderColor;  
 
   String get borderColor { 
-    if (this.m_borderColor == null) {
-      this.m_borderColor = "";
+    if (this._borderColor == null) {
+      this._borderColor = "";
     }
-    return this.m_borderColor!;
+    return this._borderColor!;
   }
 
   void set borderColor (String v) {
-    this.m_borderColor = v;
+    this._borderColor = v;
   }
     
-  double? m_borderWidth;  
+  double? _borderWidth;  
 
   double get borderWidth { 
-    if (this.m_borderWidth == null) {
-      this.m_borderWidth = 0;
+    if (this._borderWidth == null) {
+      this._borderWidth = 0;
     }
-    return this.m_borderWidth!;
+    return this._borderWidth!;
   }
 
   void set borderWidth (double v) {
-    this.m_borderWidth = v;
+    this._borderWidth = v;
   }
     
-  String? m_color;  
+  String? _color;  
 
   String get color { 
-    if (this.m_color == null) {
-      this.m_color = "";
+    if (this._color == null) {
+      this._color = "";
     }
-    return this.m_color!;
+    return this._color!;
   }
 
   void set color (String v) {
-    this.m_color = v;
+    this._color = v;
   }
     
-  bool? m_colorByPoint;  
+  bool? _colorByPoint;  
 
   bool get colorByPoint { 
-    if (this.m_colorByPoint == null) {
-      this.m_colorByPoint = false;
+    if (this._colorByPoint == null) {
+      this._colorByPoint = false;
     }
-    return this.m_colorByPoint!;
+    return this._colorByPoint!;
   }
 
   void set colorByPoint (bool v) {
-    this.m_colorByPoint = v;
+    this._colorByPoint = v;
   }
     
-  double? m_level;  
+  double? _level;  
 
   double get level { 
-    if (this.m_level == null) {
-      this.m_level = 0;
+    if (this._level == null) {
+      this._level = 0;
     }
-    return this.m_level!;
+    return this._level!;
   }
 
   void set level (double v) {
-    this.m_level = v;
+    this._level = v;
   }
     
-  double? m_linkOpacity;  
+  double? _linkOpacity;  
 
   double get linkOpacity { 
-    if (this.m_linkOpacity == null) {
-      this.m_linkOpacity = 0;
+    if (this._linkOpacity == null) {
+      this._linkOpacity = 0;
     }
-    return this.m_linkOpacity!;
+    return this._linkOpacity!;
   }
 
   void set linkOpacity (double v) {
-    this.m_linkOpacity = v;
+    this._linkOpacity = v;
   }
     
 
@@ -110,30 +110,30 @@ class SankeySeriesLevelOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_borderColor != null) {  
-      buffer.writeAll(["\"borderColor\":", this.m_borderColor, ","], "");
+    if (this._borderColor != null) {  
+      buffer.writeAll(["\"borderColor\":\`", this._borderColor, "\`,"], "");
     }
 
-    if (this.m_borderWidth != null) {  
-      buffer.writeAll(["\"borderWidth\":", this.m_borderWidth, ","], "");
+    if (this._borderWidth != null) {  
+      buffer.writeAll(["\"borderWidth\":", this._borderWidth, ","], "");
     }
 
-    if (this.m_color != null) {  
-      buffer.writeAll(["\"color\":", this.m_color, ","], "");
+    if (this._color != null) {  
+      buffer.writeAll(["\"color\":\`", this._color, "\`,"], "");
     }
 
-    if (this.m_colorByPoint != null) {  
-      buffer.writeAll(["\"colorByPoint\":", this.m_colorByPoint, ","], "");
+    if (this._colorByPoint != null) {  
+      buffer.writeAll(["\"colorByPoint\":", this._colorByPoint, ","], "");
     }
 
     // NOTE: skip serialization of dataLabels (type SankeyDataLabelOptions is ignored)} 
 
-    if (this.m_level != null) {  
-      buffer.writeAll(["\"level\":", this.m_level, ","], "");
+    if (this._level != null) {  
+      buffer.writeAll(["\"level\":", this._level, ","], "");
     }
 
-    if (this.m_linkOpacity != null) {  
-      buffer.writeAll(["\"linkOpacity\":", this.m_linkOpacity, ","], "");
+    if (this._linkOpacity != null) {  
+      buffer.writeAll(["\"linkOpacity\":", this._linkOpacity, ","], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 

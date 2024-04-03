@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,43 +23,43 @@ import 'OptionFragment.dart';
  */
 class MenuObject extends OptionFragment {
   MenuObject() : super();
-  bool? m_separator;  
+  bool? _separator;  
 
   bool get separator { 
-    if (this.m_separator == null) {
-      this.m_separator = false;
+    if (this._separator == null) {
+      this._separator = false;
     }
-    return this.m_separator!;
+    return this._separator!;
   }
 
   void set separator (bool v) {
-    this.m_separator = v;
+    this._separator = v;
   }
     
-  String? m_text;  
+  String? _text;  
 
   String get text { 
-    if (this.m_text == null) {
-      this.m_text = "";
+    if (this._text == null) {
+      this._text = "";
     }
-    return this.m_text!;
+    return this._text!;
   }
 
   void set text (String v) {
-    this.m_text = v;
+    this._text = v;
   }
     
-  String? m_textKey;  
+  String? _textKey;  
 
   String get textKey { 
-    if (this.m_textKey == null) {
-      this.m_textKey = "";
+    if (this._textKey == null) {
+      this._textKey = "";
     }
-    return this.m_textKey!;
+    return this._textKey!;
   }
 
   void set textKey (String v) {
-    this.m_textKey = v;
+    this._textKey = v;
   }
     
 
@@ -70,16 +70,16 @@ class MenuObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_separator != null) {  
-      buffer.writeAll(["\"separator\":", this.m_separator, ","], "");
+    if (this._separator != null) {  
+      buffer.writeAll(["\"separator\":", this._separator, ","], "");
     }
 
-    if (this.m_text != null) {  
-      buffer.writeAll(["\"text\":", this.m_text, ","], "");
+    if (this._text != null) {  
+      buffer.writeAll(["\"text\":\`", this._text, "\`,"], "");
     }
 
-    if (this.m_textKey != null) {  
-      buffer.writeAll(["\"textKey\":", this.m_textKey, ","], "");
+    if (this._textKey != null) {  
+      buffer.writeAll(["\"textKey\":\`", this._textKey, "\`,"], "");
     }
   }
 

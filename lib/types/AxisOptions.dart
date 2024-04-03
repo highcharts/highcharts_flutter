@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,10 +24,12 @@ import 'TickPositionsArray.dart';
 import 'AxisTitleOptions.dart';
 import 'PlotBandOptions.dart';
 import 'PlotLineOptions.dart';
-import 'ScrollbarOptions.dart';
 import 'AxisAccessibilityOptions.dart';
+import 'ScrollbarOptions.dart';
 import 'AxisBreakOptions.dart';
 import 'GridAxisOptions.dart';
+import 'CurrentDateIndicatorOptions.dart';
+import 'StackShadowOptions.dart';
 import 'OptionFragment.dart';
 
 /** 
@@ -51,17 +53,17 @@ class AxisOptions extends OptionFragment {
    * 
    * Defaults to 'true'. 
       */
-  bool? m_alignTicks;  
+  bool? _alignTicks;  
 
   bool get alignTicks { 
-    if (this.m_alignTicks == null) {
-      this.m_alignTicks = false;
+    if (this._alignTicks == null) {
+      this._alignTicks = false;
     }
-    return this.m_alignTicks!;
+    return this._alignTicks!;
   }
 
   void set alignTicks (bool v) {
-    this.m_alignTicks = v;
+    this._alignTicks = v;
   }
     
   /**
@@ -72,34 +74,34 @@ class AxisOptions extends OptionFragment {
    * 
    * Defaults to 'undefined'. 
       */
-  bool? m_allowDecimals;  
+  bool? _allowDecimals;  
 
   bool get allowDecimals { 
-    if (this.m_allowDecimals == null) {
-      this.m_allowDecimals = false;
+    if (this._allowDecimals == null) {
+      this._allowDecimals = false;
     }
-    return this.m_allowDecimals!;
+    return this._allowDecimals!;
   }
 
   void set allowDecimals (bool v) {
-    this.m_allowDecimals = v;
+    this._allowDecimals = v;
   }
     
   /**
    * When using an alternate grid color, a band is painted across the
    * plot area between every other grid line.  
       */
-  String? m_alternateGridColor;  
+  String? _alternateGridColor;  
 
   String get alternateGridColor { 
-    if (this.m_alternateGridColor == null) {
-      this.m_alternateGridColor = "";
+    if (this._alternateGridColor == null) {
+      this._alternateGridColor = "";
     }
-    return this.m_alternateGridColor!;
+    return this._alternateGridColor!;
   }
 
   void set alternateGridColor (String v) {
-    this.m_alternateGridColor = v;
+    this._alternateGridColor = v;
   }
     
   /**
@@ -113,21 +115,21 @@ class AxisOptions extends OptionFragment {
    * 
    * Example: `categories: ['Apples', 'Bananas', 'Oranges']`  
       */
-  List<String>? categories;
+  List<String>? categories; // String
   /**
    * The highest allowed value for automatically computed axis extremes.  
       */
-  double? m_ceiling;  
+  double? _ceiling;  
 
   double get ceiling { 
-    if (this.m_ceiling == null) {
-      this.m_ceiling = 0;
+    if (this._ceiling == null) {
+      this._ceiling = 0;
     }
-    return this.m_ceiling!;
+    return this._ceiling!;
   }
 
   void set ceiling (double v) {
-    this.m_ceiling = v;
+    this._ceiling = v;
   }
     
   /**
@@ -135,17 +137,17 @@ class AxisOptions extends OptionFragment {
    * Highcharts styled mode. The class name is applied to group elements
    * for the grid, axis elements and labels.  
       */
-  String? m_className;  
+  String? _className;  
 
   String get className { 
-    if (this.m_className == null) {
-      this.m_className = "";
+    if (this._className == null) {
+      this._className = "";
     }
-    return this.m_className!;
+    return this._className!;
   }
 
   void set className (String v) {
-    this.m_className = v;
+    this._className = v;
   }
     
   /**
@@ -158,17 +160,17 @@ class AxisOptions extends OptionFragment {
    * 
    * Defaults to 'false'. 
       */
-  AxisCrosshairOptions? m_crosshair;  
+  AxisCrosshairOptions? _crosshair;  
 
   AxisCrosshairOptions get crosshair { 
-    if (this.m_crosshair == null) {
-      this.m_crosshair = AxisCrosshairOptions();
+    if (this._crosshair == null) {
+      this._crosshair = AxisCrosshairOptions();
     }
-    return this.m_crosshair!;
+    return this._crosshair!;
   }
 
   void set crosshair (AxisCrosshairOptions v) {
-    this.m_crosshair = v;
+    this._crosshair = v;
   }
     
   /**
@@ -178,66 +180,66 @@ class AxisOptions extends OptionFragment {
    * the chart for axis labels and title, so those may be clipped. In this
    * case it is better to place the axes without the `crossing` option.  
       */
-  double? m_crossing;  
+  double? _crossing;  
 
   double get crossing { 
-    if (this.m_crossing == null) {
-      this.m_crossing = 0;
+    if (this._crossing == null) {
+      this._crossing = 0;
     }
-    return this.m_crossing!;
+    return this._crossing!;
   }
 
   void set crossing (double v) {
-    this.m_crossing = v;
+    this._crossing = v;
   }
     
   /**
    * Whether to force the axis to end on a tick. Use this option with
    * the `maxPadding` option to control the axis end.  
       */
-  bool? m_endOnTick;  
+  bool? _endOnTick;  
 
   bool get endOnTick { 
-    if (this.m_endOnTick == null) {
-      this.m_endOnTick = false;
+    if (this._endOnTick == null) {
+      this._endOnTick = false;
     }
-    return this.m_endOnTick!;
+    return this._endOnTick!;
   }
 
   void set endOnTick (bool v) {
-    this.m_endOnTick = v;
+    this._endOnTick = v;
   }
     
   /**
    * Event handlers for the axis.  
       */
-  AxisEventsOptions? m_events;  
+  AxisEventsOptions? _events;  
 
   AxisEventsOptions get events { 
-    if (this.m_events == null) {
-      this.m_events = AxisEventsOptions();
+    if (this._events == null) {
+      this._events = AxisEventsOptions();
     }
-    return this.m_events!;
+    return this._events!;
   }
 
   void set events (AxisEventsOptions v) {
-    this.m_events = v;
+    this._events = v;
   }
     
   /**
    * The lowest allowed value for automatically computed axis extremes.  
       */
-  double? m_floor;  
+  double? _floor;  
 
   double get floor { 
-    if (this.m_floor == null) {
-      this.m_floor = 0;
+    if (this._floor == null) {
+      this._floor = 0;
     }
-    return this.m_floor!;
+    return this._floor!;
   }
 
   void set floor (double v) {
-    this.m_floor = v;
+    this._floor = v;
   }
     
   /**
@@ -248,17 +250,17 @@ class AxisOptions extends OptionFragment {
    * 
    * Defaults to '#e6e6e6'. 
       */
-  String? m_gridLineColor;  
+  String? _gridLineColor;  
 
   String get gridLineColor { 
-    if (this.m_gridLineColor == null) {
-      this.m_gridLineColor = "";
+    if (this._gridLineColor == null) {
+      this._gridLineColor = "";
     }
-    return this.m_gridLineColor!;
+    return this._gridLineColor!;
   }
 
   void set gridLineColor (String v) {
-    this.m_gridLineColor = v;
+    this._gridLineColor = v;
   }
     
   /**
@@ -267,17 +269,17 @@ class AxisOptions extends OptionFragment {
    * 
    * Defaults to 'Solid'. 
       */
-  String? m_gridLineDashStyle;  
+  String? _gridLineDashStyle;  
 
   String get gridLineDashStyle { 
-    if (this.m_gridLineDashStyle == null) {
-      this.m_gridLineDashStyle = "";
+    if (this._gridLineDashStyle == null) {
+      this._gridLineDashStyle = "";
     }
-    return this.m_gridLineDashStyle!;
+    return this._gridLineDashStyle!;
   }
 
   void set gridLineDashStyle (String v) {
-    this.m_gridLineDashStyle = v;
+    this._gridLineDashStyle = v;
   }
     
   /**
@@ -288,17 +290,17 @@ class AxisOptions extends OptionFragment {
    * In styled mode, the stroke width is given in the
    * `.highcharts-grid-line` class.  
       */
-  double? m_gridLineWidth;  
+  double? _gridLineWidth;  
 
   double get gridLineWidth { 
-    if (this.m_gridLineWidth == null) {
-      this.m_gridLineWidth = 0;
+    if (this._gridLineWidth == null) {
+      this._gridLineWidth = 0;
     }
-    return this.m_gridLineWidth!;
+    return this._gridLineWidth!;
   }
 
   void set gridLineWidth (double v) {
-    this.m_gridLineWidth = v;
+    this._gridLineWidth = v;
   }
     
   /**
@@ -306,17 +308,17 @@ class AxisOptions extends OptionFragment {
    * 
    * Defaults to '1'. 
       */
-  double? m_gridZIndex;  
+  double? _gridZIndex;  
 
   double get gridZIndex { 
-    if (this.m_gridZIndex == null) {
-      this.m_gridZIndex = 0;
+    if (this._gridZIndex == null) {
+      this._gridZIndex = 0;
     }
-    return this.m_gridZIndex!;
+    return this._gridZIndex!;
   }
 
   void set gridZIndex (double v) {
-    this.m_gridZIndex = v;
+    this._gridZIndex = v;
   }
     
   /**
@@ -326,34 +328,34 @@ class AxisOptions extends OptionFragment {
    * Since Highcharts 2: If it's a percentage string, it is interpreted
    * as percentages of the total plot height.  
       */
-  String? m_height;  
+  String? _height;  
 
   String get height { 
-    if (this.m_height == null) {
-      this.m_height = "";
+    if (this._height == null) {
+      this._height = "";
     }
-    return this.m_height!;
+    return this._height!;
   }
 
   void set height (String v) {
-    this.m_height = v;
+    this._height = v;
   }
     
   /**
    * An id for the axis. This can be used after render time to get
    * a pointer to the axis object through `chart.get()`.  
       */
-  String? m_id;  
+  String? _id;  
 
   String get id { 
-    if (this.m_id == null) {
-      this.m_id = "";
+    if (this._id == null) {
+      this._id = "";
     }
-    return this.m_id!;
+    return this._id!;
   }
 
   void set id (String v) {
-    this.m_id = v;
+    this._id = v;
   }
     
   /**
@@ -362,17 +364,17 @@ class AxisOptions extends OptionFragment {
    * Since v8.0.0: Labels are animated in categorized x-axis with
    * updating data if `tickInterval` and `step` is set to 1.  
       */
-  AxisLabelOptions? m_labels;  
+  AxisLabelOptions? _labels;  
 
   AxisLabelOptions get labels { 
-    if (this.m_labels == null) {
-      this.m_labels = AxisLabelOptions();
+    if (this._labels == null) {
+      this._labels = AxisLabelOptions();
     }
-    return this.m_labels!;
+    return this._labels!;
   }
 
   void set labels (AxisLabelOptions v) {
-    this.m_labels = v;
+    this._labels = v;
   }
     
   /**
@@ -383,17 +385,17 @@ class AxisOptions extends OptionFragment {
    * interpreted as percentages of the plot width, offset from plot area
    * left.  
       */
-  String? m_left;  
+  String? _left;  
 
   String get left { 
-    if (this.m_left == null) {
-      this.m_left = "";
+    if (this._left == null) {
+      this._left = "";
     }
-    return this.m_left!;
+    return this._left!;
   }
 
   void set left (String v) {
-    this.m_left = v;
+    this._left = v;
   }
     
   /**
@@ -404,17 +406,17 @@ class AxisOptions extends OptionFragment {
    * 
    * Defaults to '#333333'. 
       */
-  String? m_lineColor;  
+  String? _lineColor;  
 
   String get lineColor { 
-    if (this.m_lineColor == null) {
-      this.m_lineColor = "";
+    if (this._lineColor == null) {
+      this._lineColor = "";
     }
-    return this.m_lineColor!;
+    return this._lineColor!;
   }
 
   void set lineColor (String v) {
-    this.m_lineColor = v;
+    this._lineColor = v;
   }
     
   /**
@@ -425,17 +427,17 @@ class AxisOptions extends OptionFragment {
    * 
    * Defaults to '1'. 
       */
-  double? m_lineWidth;  
+  double? _lineWidth;  
 
   double get lineWidth { 
-    if (this.m_lineWidth == null) {
-      this.m_lineWidth = 0;
+    if (this._lineWidth == null) {
+      this._lineWidth = 0;
     }
-    return this.m_lineWidth!;
+    return this._lineWidth!;
   }
 
   void set lineWidth (double v) {
-    this.m_lineWidth = v;
+    this._lineWidth = v;
   }
     
   /**
@@ -445,17 +447,17 @@ class AxisOptions extends OptionFragment {
    * It can be used to show additional info, or to ease reading the
    * chart by duplicating the scales.  
       */
-  double? m_linkedTo;  
+  double? _linkedTo;  
 
   double get linkedTo { 
-    if (this.m_linkedTo == null) {
-      this.m_linkedTo = 0;
+    if (this._linkedTo == null) {
+      this._linkedTo = 0;
     }
-    return this.m_linkedTo!;
+    return this._linkedTo!;
   }
 
   void set linkedTo (double v) {
-    this.m_linkedTo = v;
+    this._linkedTo = v;
   }
     
   /**
@@ -463,17 +465,17 @@ class AxisOptions extends OptionFragment {
    * margin between the axes. Defaults to 0 on vertical axes, 15 on
    * horizontal axes.  
       */
-  double? m_margin;  
+  double? _margin;  
 
   double get margin { 
-    if (this.m_margin == null) {
-      this.m_margin = 0;
+    if (this._margin == null) {
+      this._margin = 0;
     }
-    return this.m_margin!;
+    return this._margin!;
   }
 
   void set margin (double v) {
-    this.m_margin = v;
+    this._margin = v;
   }
     
   /**
@@ -488,17 +490,17 @@ class AxisOptions extends OptionFragment {
    * same may happen in a chart with multiple axes, determined by [chart.
    * alignTicks](#chart), where a `tickAmount` is applied internally.  
       */
-  double? m_max;  
+  double? _max;  
 
   double get max { 
-    if (this.m_max == null) {
-      this.m_max = 0;
+    if (this._max == null) {
+      this._max = 0;
     }
-    return this.m_max!;
+    return this._max!;
   }
 
   void set max (double v) {
-    this.m_max = v;
+    this._max = v;
   }
     
   /**
@@ -510,50 +512,50 @@ class AxisOptions extends OptionFragment {
    * 
    * Defaults to '0.01'. 
       */
-  double? m_maxPadding;  
+  double? _maxPadding;  
 
   double get maxPadding { 
-    if (this.m_maxPadding == null) {
-      this.m_maxPadding = 0;
+    if (this._maxPadding == null) {
+      this._maxPadding = 0;
     }
-    return this.m_maxPadding!;
+    return this._maxPadding!;
   }
 
   void set maxPadding (double v) {
-    this.m_maxPadding = v;
+    this._maxPadding = v;
   }
     
   /**
    * Maximum range which can be set using the navigator's handles.
    * Opposite of [xAxis.minRange](#xAxis.minRange).  
       */
-  double? m_maxRange;  
+  double? _maxRange;  
 
   double get maxRange { 
-    if (this.m_maxRange == null) {
-      this.m_maxRange = 0;
+    if (this._maxRange == null) {
+      this._maxRange = 0;
     }
-    return this.m_maxRange!;
+    return this._maxRange!;
   }
 
   void set maxRange (double v) {
-    this.m_maxRange = v;
+    this._maxRange = v;
   }
     
   /**
    * Deprecated. Use `minRange` instead.  
       */
-  double? m_maxZoom;  
+  double? _maxZoom;  
 
   double get maxZoom { 
-    if (this.m_maxZoom == null) {
-      this.m_maxZoom = 0;
+    if (this._maxZoom == null) {
+      this._maxZoom = 0;
     }
-    return this.m_maxZoom!;
+    return this._maxZoom!;
   }
 
   void set maxZoom (double v) {
-    this.m_maxZoom = v;
+    this._maxZoom = v;
   }
     
   /**
@@ -569,17 +571,17 @@ class AxisOptions extends OptionFragment {
    * as well as [series.threshold](#plotOptions.series.threshold)
    * and [series.softThreshold](#plotOptions.series.softThreshold).  
       */
-  double? m_min;  
+  double? _min;  
 
   double get min { 
-    if (this.m_min == null) {
-      this.m_min = 0;
+    if (this._min == null) {
+      this._min = 0;
     }
-    return this.m_min!;
+    return this._min!;
   }
 
   void set min (double v) {
-    this.m_min = v;
+    this._min = v;
   }
     
   /**
@@ -590,17 +592,17 @@ class AxisOptions extends OptionFragment {
    * 
    * Defaults to '#f2f2f2'. 
       */
-  String? m_minorGridLineColor;  
+  String? _minorGridLineColor;  
 
   String get minorGridLineColor { 
-    if (this.m_minorGridLineColor == null) {
-      this.m_minorGridLineColor = "";
+    if (this._minorGridLineColor == null) {
+      this._minorGridLineColor = "";
     }
-    return this.m_minorGridLineColor!;
+    return this._minorGridLineColor!;
   }
 
   void set minorGridLineColor (String v) {
-    this.m_minorGridLineColor = v;
+    this._minorGridLineColor = v;
   }
     
   /**
@@ -609,17 +611,17 @@ class AxisOptions extends OptionFragment {
    * 
    * Defaults to 'Solid'. 
       */
-  String? m_minorGridLineDashStyle;  
+  String? _minorGridLineDashStyle;  
 
   String get minorGridLineDashStyle { 
-    if (this.m_minorGridLineDashStyle == null) {
-      this.m_minorGridLineDashStyle = "";
+    if (this._minorGridLineDashStyle == null) {
+      this._minorGridLineDashStyle = "";
     }
-    return this.m_minorGridLineDashStyle!;
+    return this._minorGridLineDashStyle!;
   }
 
   void set minorGridLineDashStyle (String v) {
-    this.m_minorGridLineDashStyle = v;
+    this._minorGridLineDashStyle = v;
   }
     
   /**
@@ -630,17 +632,17 @@ class AxisOptions extends OptionFragment {
    * 
    * Defaults to '1'. 
       */
-  double? m_minorGridLineWidth;  
+  double? _minorGridLineWidth;  
 
   double get minorGridLineWidth { 
-    if (this.m_minorGridLineWidth == null) {
-      this.m_minorGridLineWidth = 0;
+    if (this._minorGridLineWidth == null) {
+      this._minorGridLineWidth = 0;
     }
-    return this.m_minorGridLineWidth!;
+    return this._minorGridLineWidth!;
   }
 
   void set minorGridLineWidth (double v) {
-    this.m_minorGridLineWidth = v;
+    this._minorGridLineWidth = v;
   }
     
   /**
@@ -648,17 +650,17 @@ class AxisOptions extends OptionFragment {
    * 
    * Defaults to '#999999'. 
       */
-  String? m_minorTickColor;  
+  String? _minorTickColor;  
 
   String get minorTickColor { 
-    if (this.m_minorTickColor == null) {
-      this.m_minorTickColor = "";
+    if (this._minorTickColor == null) {
+      this._minorTickColor = "";
     }
-    return this.m_minorTickColor!;
+    return this._minorTickColor!;
   }
 
   void set minorTickColor (String v) {
-    this.m_minorTickColor = v;
+    this._minorTickColor = v;
   }
     
   // NOTE: minorTickInterval skipped - type "auto" is ignored in gen
@@ -668,17 +670,17 @@ class AxisOptions extends OptionFragment {
    * 
    * Defaults to '2'. 
       */
-  double? m_minorTickLength;  
+  double? _minorTickLength;  
 
   double get minorTickLength { 
-    if (this.m_minorTickLength == null) {
-      this.m_minorTickLength = 0;
+    if (this._minorTickLength == null) {
+      this._minorTickLength = 0;
     }
-    return this.m_minorTickLength!;
+    return this._minorTickLength!;
   }
 
   void set minorTickLength (double v) {
-    this.m_minorTickLength = v;
+    this._minorTickLength = v;
   }
     
   /**
@@ -687,17 +689,17 @@ class AxisOptions extends OptionFragment {
    * 
    * Defaults to 'outside'. 
       */
-  String? m_minorTickPosition;  
+  String? _minorTickPosition;  
 
   String get minorTickPosition { 
-    if (this.m_minorTickPosition == null) {
-      this.m_minorTickPosition = "";
+    if (this._minorTickPosition == null) {
+      this._minorTickPosition = "";
     }
-    return this.m_minorTickPosition!;
+    return this._minorTickPosition!;
   }
 
   void set minorTickPosition (String v) {
-    this.m_minorTickPosition = v;
+    this._minorTickPosition = v;
   }
     
   /**
@@ -716,17 +718,17 @@ class AxisOptions extends OptionFragment {
    * 
    * Defaults to 'false'. 
       */
-  bool? m_minorTicks;  
+  bool? _minorTicks;  
 
   bool get minorTicks { 
-    if (this.m_minorTicks == null) {
-      this.m_minorTicks = false;
+    if (this._minorTicks == null) {
+      this._minorTicks = false;
     }
-    return this.m_minorTicks!;
+    return this._minorTicks!;
   }
 
   void set minorTicks (bool v) {
-    this.m_minorTicks = v;
+    this._minorTicks = v;
   }
     
   /**
@@ -735,17 +737,17 @@ class AxisOptions extends OptionFragment {
    * 
    * Defaults to '5'. 
       */
-  double? m_minorTicksPerMajor;  
+  double? _minorTicksPerMajor;  
 
   double get minorTicksPerMajor { 
-    if (this.m_minorTicksPerMajor == null) {
-      this.m_minorTicksPerMajor = 0;
+    if (this._minorTicksPerMajor == null) {
+      this._minorTicksPerMajor = 0;
     }
-    return this.m_minorTicksPerMajor!;
+    return this._minorTicksPerMajor!;
   }
 
   void set minorTicksPerMajor (double v) {
-    this.m_minorTicksPerMajor = v;
+    this._minorTicksPerMajor = v;
   }
     
   /**
@@ -753,17 +755,17 @@ class AxisOptions extends OptionFragment {
    * 
    * Defaults to '0'. 
       */
-  double? m_minorTickWidth;  
+  double? _minorTickWidth;  
 
   double get minorTickWidth { 
-    if (this.m_minorTickWidth == null) {
-      this.m_minorTickWidth = 0;
+    if (this._minorTickWidth == null) {
+      this._minorTickWidth = 0;
     }
-    return this.m_minorTickWidth!;
+    return this._minorTickWidth!;
   }
 
   void set minorTickWidth (double v) {
-    this.m_minorTickWidth = v;
+    this._minorTickWidth = v;
   }
     
   /**
@@ -775,17 +777,17 @@ class AxisOptions extends OptionFragment {
    * 
    * Defaults to '0.01'. 
       */
-  double? m_minPadding;  
+  double? _minPadding;  
 
   double get minPadding { 
-    if (this.m_minPadding == null) {
-      this.m_minPadding = 0;
+    if (this._minPadding == null) {
+      this._minPadding = 0;
     }
-    return this.m_minPadding!;
+    return this._minPadding!;
   }
 
   void set minPadding (double v) {
-    this.m_minPadding = v;
+    this._minPadding = v;
   }
     
   /**
@@ -805,17 +807,17 @@ class AxisOptions extends OptionFragment {
    * `endOnTick` settings also affect how the extremes of the axis
    * are computed.  
       */
-  double? m_minRange;  
+  double? _minRange;  
 
   double get minRange { 
-    if (this.m_minRange == null) {
-      this.m_minRange = 0;
+    if (this._minRange == null) {
+      this._minRange = 0;
     }
-    return this.m_minRange!;
+    return this._minRange!;
   }
 
   void set minRange (double v) {
-    this.m_minRange = v;
+    this._minRange = v;
   }
     
   /**
@@ -824,17 +826,17 @@ class AxisOptions extends OptionFragment {
    * the axis from showing hours. Defaults to the closest distance between
    * two points on the axis.  
       */
-  double? m_minTickInterval;  
+  double? _minTickInterval;  
 
   double get minTickInterval { 
-    if (this.m_minTickInterval == null) {
-      this.m_minTickInterval = 0;
+    if (this._minTickInterval == null) {
+      this._minTickInterval = 0;
     }
-    return this.m_minTickInterval!;
+    return this._minTickInterval!;
   }
 
   void set minTickInterval (double v) {
-    this.m_minTickInterval = v;
+    this._minTickInterval = v;
   }
     
   /**
@@ -845,17 +847,17 @@ class AxisOptions extends OptionFragment {
    * axes the offset is dynamically adjusted to avoid collision, this
    * can be overridden by setting offset explicitly.  
       */
-  double? m_offset;  
+  double? _offset;  
 
   double get offset { 
-    if (this.m_offset == null) {
-      this.m_offset = 0;
+    if (this._offset == null) {
+      this._offset = 0;
     }
-    return this.m_offset!;
+    return this._offset!;
   }
 
   void set offset (double v) {
-    this.m_offset = v;
+    this._offset = v;
   }
     
   /**
@@ -864,17 +866,17 @@ class AxisOptions extends OptionFragment {
    * horizontal, so the opposite sides will be right and top respectively.
    * This is typically used with dual or multiple axes.  
       */
-  bool? m_opposite;  
+  bool? _opposite;  
 
   bool get opposite { 
-    if (this.m_opposite == null) {
-      this.m_opposite = false;
+    if (this._opposite == null) {
+      this._opposite = false;
     }
-    return this.m_opposite!;
+    return this._opposite!;
   }
 
   void set opposite (bool v) {
-    this.m_opposite = v;
+    this._opposite = v;
   }
     
   /**
@@ -894,17 +896,17 @@ class AxisOptions extends OptionFragment {
    * 
    * Defaults to 'true'. 
       */
-  bool? m_ordinal;  
+  bool? _ordinal;  
 
   bool get ordinal { 
-    if (this.m_ordinal == null) {
-      this.m_ordinal = false;
+    if (this._ordinal == null) {
+      this._ordinal = false;
     }
-    return this.m_ordinal!;
+    return this._ordinal!;
   }
 
   void set ordinal (bool v) {
-    this.m_ordinal = v;
+    this._ordinal = v;
   }
     
   /**
@@ -914,17 +916,17 @@ class AxisOptions extends OptionFragment {
    * 
    * Defaults to '0'. 
       */
-  double? m_overscroll;  
+  String? _overscroll;  
 
-  double get overscroll { 
-    if (this.m_overscroll == null) {
-      this.m_overscroll = 0;
+  String get overscroll { 
+    if (this._overscroll == null) {
+      this._overscroll = "";
     }
-    return this.m_overscroll!;
+    return this._overscroll!;
   }
 
-  void set overscroll (double v) {
-    this.m_overscroll = v;
+  void set overscroll (String v) {
+    this._overscroll = v;
   }
     
   /**
@@ -932,17 +934,17 @@ class AxisOptions extends OptionFragment {
    * gauges and polar charts. When the option is not set then first pane
    * will be used.  
       */
-  double? m_pane;  
+  double? _pane;  
 
   double get pane { 
-    if (this.m_pane == null) {
-      this.m_pane = 0;
+    if (this._pane == null) {
+      this._pane = 0;
     }
-    return this.m_pane!;
+    return this._pane!;
   }
 
   void set pane (double v) {
-    this.m_pane = v;
+    this._pane = v;
   }
     
   /**
@@ -951,17 +953,17 @@ class AxisOptions extends OptionFragment {
    * 
    * Defaults to 'true'. 
       */
-  bool? m_panningEnabled;  
+  bool? _panningEnabled;  
 
   bool get panningEnabled { 
-    if (this.m_panningEnabled == null) {
-      this.m_panningEnabled = false;
+    if (this._panningEnabled == null) {
+      this._panningEnabled = false;
     }
-    return this.m_panningEnabled!;
+    return this._panningEnabled!;
   }
 
   void set panningEnabled (bool v) {
-    this.m_panningEnabled = v;
+    this._panningEnabled = v;
   }
     
   /**
@@ -969,17 +971,17 @@ class AxisOptions extends OptionFragment {
    * or `max`. For example, to show the latest month, a range of one month
    * can be set.  
       */
-  double? m_range;  
+  double? _range;  
 
   double get range { 
-    if (this.m_range == null) {
-      this.m_range = 0;
+    if (this._range == null) {
+      this._range = 0;
     }
-    return this.m_range!;
+    return this._range!;
   }
 
   void set range (double v) {
-    this.m_range = v;
+    this._range = v;
   }
     
   /**
@@ -989,17 +991,17 @@ class AxisOptions extends OptionFragment {
    * 
    * Defaults to 'undefined'. 
       */
-  bool? m_reversed;  
+  bool? _reversed;  
 
   bool get reversed { 
-    if (this.m_reversed == null) {
-      this.m_reversed = false;
+    if (this._reversed == null) {
+      this._reversed = false;
     }
-    return this.m_reversed!;
+    return this._reversed!;
   }
 
   void set reversed (bool v) {
-    this.m_reversed = v;
+    this._reversed = v;
   }
     
   /**
@@ -1008,17 +1010,17 @@ class AxisOptions extends OptionFragment {
    * comes last in a group. To keep order like for non-reversed xAxis
    * enable this option.  
       */
-  bool? m_reversedStacks;  
+  bool? _reversedStacks;  
 
   bool get reversedStacks { 
-    if (this.m_reversedStacks == null) {
-      this.m_reversedStacks = false;
+    if (this._reversedStacks == null) {
+      this._reversedStacks = false;
     }
-    return this.m_reversedStacks!;
+    return this._reversedStacks!;
   }
 
   void set reversedStacks (bool v) {
-    this.m_reversedStacks = v;
+    this._reversedStacks = v;
   }
     
   /**
@@ -1026,17 +1028,17 @@ class AxisOptions extends OptionFragment {
    * 
    * Defaults to 'true'. 
       */
-  bool? m_showEmpty;  
+  bool? _showEmpty;  
 
   bool get showEmpty { 
-    if (this.m_showEmpty == null) {
-      this.m_showEmpty = false;
+    if (this._showEmpty == null) {
+      this._showEmpty = false;
     }
-    return this.m_showEmpty!;
+    return this._showEmpty!;
   }
 
   void set showEmpty (bool v) {
-    this.m_showEmpty = v;
+    this._showEmpty = v;
   }
     
   /**
@@ -1044,17 +1046,17 @@ class AxisOptions extends OptionFragment {
    * 
    * Defaults to 'true'. 
       */
-  bool? m_showFirstLabel;  
+  bool? _showFirstLabel;  
 
   bool get showFirstLabel { 
-    if (this.m_showFirstLabel == null) {
-      this.m_showFirstLabel = false;
+    if (this._showFirstLabel == null) {
+      this._showFirstLabel = false;
     }
-    return this.m_showFirstLabel!;
+    return this._showFirstLabel!;
   }
 
   void set showFirstLabel (bool v) {
-    this.m_showFirstLabel = v;
+    this._showFirstLabel = v;
   }
     
   /**
@@ -1063,30 +1065,30 @@ class AxisOptions extends OptionFragment {
    * 
    * Defaults to 'undefined'. 
       */
-  bool? m_showLastLabel;  
+  bool? _showLastLabel;  
 
   bool get showLastLabel { 
-    if (this.m_showLastLabel == null) {
-      this.m_showLastLabel = false;
+    if (this._showLastLabel == null) {
+      this._showLastLabel = false;
     }
-    return this.m_showLastLabel!;
+    return this._showLastLabel!;
   }
 
   void set showLastLabel (bool v) {
-    this.m_showLastLabel = v;
+    this._showLastLabel = v;
   }
     
-  double? m_side;  
+  double? _side;  
 
   double get side { 
-    if (this.m_side == null) {
-      this.m_side = 0;
+    if (this._side == null) {
+      this._side = 0;
     }
-    return this.m_side!;
+    return this._side!;
   }
 
   void set side (double v) {
-    this.m_side = v;
+    this._side = v;
   }
     
   /**
@@ -1094,17 +1096,17 @@ class AxisOptions extends OptionFragment {
    * this, the axis will stay at this maximum, but if the series data
    * maximum is higher, the axis will flex to show all data.  
       */
-  double? m_softMax;  
+  double? _softMax;  
 
   double get softMax { 
-    if (this.m_softMax == null) {
-      this.m_softMax = 0;
+    if (this._softMax == null) {
+      this._softMax = 0;
     }
-    return this.m_softMax!;
+    return this._softMax!;
   }
 
   void set softMax (double v) {
-    this.m_softMax = v;
+    this._softMax = v;
   }
     
   /**
@@ -1112,17 +1114,17 @@ class AxisOptions extends OptionFragment {
    * than this, the axis will stay at this minimum, but if the series
    * data minimum is lower, the axis will flex to show all data.  
       */
-  double? m_softMin;  
+  double? _softMin;  
 
   double get softMin { 
-    if (this.m_softMin == null) {
-      this.m_softMin = 0;
+    if (this._softMin == null) {
+      this._softMin = 0;
     }
-    return this.m_softMin!;
+    return this._softMin!;
   }
 
   void set softMin (double v) {
-    this.m_softMin = v;
+    this._softMin = v;
   }
     
   /**
@@ -1131,34 +1133,34 @@ class AxisOptions extends OptionFragment {
    * 
    * Defaults to '1'. 
       */
-  double? m_startOfWeek;  
+  double? _startOfWeek;  
 
   double get startOfWeek { 
-    if (this.m_startOfWeek == null) {
-      this.m_startOfWeek = 0;
+    if (this._startOfWeek == null) {
+      this._startOfWeek = 0;
     }
-    return this.m_startOfWeek!;
+    return this._startOfWeek!;
   }
 
   void set startOfWeek (double v) {
-    this.m_startOfWeek = v;
+    this._startOfWeek = v;
   }
     
   /**
    * Whether to force the axis to start on a tick. Use this option with
    * the `minPadding` option to control the axis start.  
       */
-  bool? m_startOnTick;  
+  bool? _startOnTick;  
 
   bool get startOnTick { 
-    if (this.m_startOnTick == null) {
-      this.m_startOnTick = false;
+    if (this._startOnTick == null) {
+      this._startOnTick = false;
     }
-    return this.m_startOnTick!;
+    return this._startOnTick!;
   }
 
   void set startOnTick (bool v) {
-    this.m_startOnTick = v;
+    this._startOnTick = v;
   }
     
   /**
@@ -1169,17 +1171,17 @@ class AxisOptions extends OptionFragment {
    * This option only has an effect on linear axes. Datetime, logarithmic
    * or category axes are not affected.  
       */
-  double? m_tickAmount;  
+  double? _tickAmount;  
 
   double get tickAmount { 
-    if (this.m_tickAmount == null) {
-      this.m_tickAmount = 0;
+    if (this._tickAmount == null) {
+      this._tickAmount = 0;
     }
-    return this.m_tickAmount!;
+    return this._tickAmount!;
   }
 
   void set tickAmount (double v) {
-    this.m_tickAmount = v;
+    this._tickAmount = v;
   }
     
   /**
@@ -1190,17 +1192,17 @@ class AxisOptions extends OptionFragment {
    * 
    * Defaults to '#333333'. 
       */
-  String? m_tickColor;  
+  String? _tickColor;  
 
   String get tickColor { 
-    if (this.m_tickColor == null) {
-      this.m_tickColor = "";
+    if (this._tickColor == null) {
+      this._tickColor = "";
     }
-    return this.m_tickColor!;
+    return this._tickColor!;
   }
 
   void set tickColor (String v) {
-    this.m_tickColor = v;
+    this._tickColor = v;
   }
     
   /**
@@ -1225,17 +1227,17 @@ class AxisOptions extends OptionFragment {
    * If the chart has multiple axes, the [alignTicks](#chart.alignTicks)
    * option may interfere with the `tickInterval` setting.  
       */
-  double? m_tickInterval;  
+  double? _tickInterval;  
 
   double get tickInterval { 
-    if (this.m_tickInterval == null) {
-      this.m_tickInterval = 0;
+    if (this._tickInterval == null) {
+      this._tickInterval = 0;
     }
-    return this.m_tickInterval!;
+    return this._tickInterval!;
   }
 
   void set tickInterval (double v) {
-    this.m_tickInterval = v;
+    this._tickInterval = v;
   }
     
   /**
@@ -1243,17 +1245,17 @@ class AxisOptions extends OptionFragment {
    * 
    * Defaults to '10'. 
       */
-  double? m_tickLength;  
+  double? _tickLength;  
 
   double get tickLength { 
-    if (this.m_tickLength == null) {
-      this.m_tickLength = 0;
+    if (this._tickLength == null) {
+      this._tickLength = 0;
     }
-    return this.m_tickLength!;
+    return this._tickLength!;
   }
 
   void set tickLength (double v) {
-    this.m_tickLength = v;
+    this._tickLength = v;
   }
     
   /**
@@ -1264,17 +1266,17 @@ class AxisOptions extends OptionFragment {
    * 
    * Defaults to 'between'. 
       */
-  String? m_tickmarkPlacement;  
+  String? _tickmarkPlacement;  
 
   String get tickmarkPlacement { 
-    if (this.m_tickmarkPlacement == null) {
-      this.m_tickmarkPlacement = "";
+    if (this._tickmarkPlacement == null) {
+      this._tickmarkPlacement = "";
     }
-    return this.m_tickmarkPlacement!;
+    return this._tickmarkPlacement!;
   }
 
   void set tickmarkPlacement (String v) {
-    this.m_tickmarkPlacement = v;
+    this._tickmarkPlacement = v;
   }
     
   /**
@@ -1286,17 +1288,17 @@ class AxisOptions extends OptionFragment {
    * 
    * Defaults to '100'. 
       */
-  double? m_tickPixelInterval;  
+  double? _tickPixelInterval;  
 
   double get tickPixelInterval { 
-    if (this.m_tickPixelInterval == null) {
-      this.m_tickPixelInterval = 0;
+    if (this._tickPixelInterval == null) {
+      this._tickPixelInterval = 0;
     }
-    return this.m_tickPixelInterval!;
+    return this._tickPixelInterval!;
   }
 
   void set tickPixelInterval (double v) {
-    this.m_tickPixelInterval = v;
+    this._tickPixelInterval = v;
   }
     
   /**
@@ -1305,24 +1307,24 @@ class AxisOptions extends OptionFragment {
    * 
    * Defaults to 'outside'. 
       */
-  String? m_tickPosition;  
+  String? _tickPosition;  
 
   String get tickPosition { 
-    if (this.m_tickPosition == null) {
-      this.m_tickPosition = "";
+    if (this._tickPosition == null) {
+      this._tickPosition = "";
     }
-    return this.m_tickPosition!;
+    return this._tickPosition!;
   }
 
   void set tickPosition (String v) {
-    this.m_tickPosition = v;
+    this._tickPosition = v;
   }
     
   /**
    * An array defining where the ticks are laid out on the axis. This
    * overrides the default behaviour of [tickPixelInterval](#xAxis.tickPixelInterval) and [tickInterval](#xAxis.tickInterval).  
       */
-  List<TickPositionsArray>? tickPositions;
+  List<TickPositionsArray>? tickPositions; // TickPositionsArray
   /**
    * The pixel width of the major tick marks. Defaults to 0 on category
    * axes, otherwise 1.
@@ -1331,33 +1333,33 @@ class AxisOptions extends OptionFragment {
    * class, but in order for the element to be generated on category axes,
    * the option must be explicitly set to 1.  
       */
-  double? m_tickWidth;  
+  double? _tickWidth;  
 
   double get tickWidth { 
-    if (this.m_tickWidth == null) {
-      this.m_tickWidth = 0;
+    if (this._tickWidth == null) {
+      this._tickWidth = 0;
     }
-    return this.m_tickWidth!;
+    return this._tickWidth!;
   }
 
   void set tickWidth (double v) {
-    this.m_tickWidth = v;
+    this._tickWidth = v;
   }
     
   /**
    * The axis title, showing next to the axis line.  
       */
-  AxisTitleOptions? m_title;  
+  AxisTitleOptions? _title;  
 
   AxisTitleOptions get title { 
-    if (this.m_title == null) {
-      this.m_title = AxisTitleOptions();
+    if (this._title == null) {
+      this._title = AxisTitleOptions();
     }
-    return this.m_title!;
+    return this._title!;
   }
 
   void set title (AxisTitleOptions v) {
-    this.m_title = v;
+    this._title = v;
   }
     
   /**
@@ -1367,17 +1369,17 @@ class AxisOptions extends OptionFragment {
    * Since Highcharts 2: If it's a percentage string, it is interpreted
    * as percentages of the plot height, offset from plot area top.  
       */
-  String? m_top;  
+  String? _top;  
 
   String get top { 
-    if (this.m_top == null) {
-      this.m_top = "";
+    if (this._top == null) {
+      this._top = "";
     }
-    return this.m_top!;
+    return this._top!;
   }
 
   void set top (String v) {
-    this.m_top = v;
+    this._top = v;
   }
     
   /**
@@ -1391,17 +1393,17 @@ class AxisOptions extends OptionFragment {
    * 
    * Defaults to 'linear'. 
       */
-  String? m_type;  
+  String? _type;  
 
   String get type { 
-    if (this.m_type == null) {
-      this.m_type = "";
+    if (this._type == null) {
+      this._type = "";
     }
-    return this.m_type!;
+    return this._type!;
   }
 
   void set type (String v) {
-    this.m_type = v;
+    this._type = v;
   }
     
   /**
@@ -1415,17 +1417,17 @@ class AxisOptions extends OptionFragment {
    * 
    * Defaults to 'true'. 
       */
-  bool? m_uniqueNames;  
+  bool? _uniqueNames;  
 
   bool get uniqueNames { 
-    if (this.m_uniqueNames == null) {
-      this.m_uniqueNames = false;
+    if (this._uniqueNames == null) {
+      this._uniqueNames = false;
     }
-    return this.m_uniqueNames!;
+    return this._uniqueNames!;
   }
 
   void set uniqueNames (bool v) {
-    this.m_uniqueNames = v;
+    this._uniqueNames = v;
   }
     
   /**
@@ -1434,17 +1436,17 @@ class AxisOptions extends OptionFragment {
    * 
    * Defaults to 'true'. 
       */
-  bool? m_visible;  
+  bool? _visible;  
 
   bool get visible { 
-    if (this.m_visible == null) {
-      this.m_visible = false;
+    if (this._visible == null) {
+      this._visible = false;
     }
-    return this.m_visible!;
+    return this._visible!;
   }
 
   void set visible (bool v) {
-    this.m_visible = v;
+    this._visible = v;
   }
     
   /**
@@ -1454,17 +1456,17 @@ class AxisOptions extends OptionFragment {
    * Since Highcharts v5.0.13: If it's a percentage string, it is
    * interpreted as percentages of the total plot width.  
       */
-  String? m_width;  
+  String? _width;  
 
   String get width { 
-    if (this.m_width == null) {
-      this.m_width = "";
+    if (this._width == null) {
+      this._width = "";
     }
-    return this.m_width!;
+    return this._width!;
   }
 
   void set width (String v) {
-    this.m_width = v;
+    this._width = v;
   }
     
   /**
@@ -1472,17 +1474,17 @@ class AxisOptions extends OptionFragment {
    * 
    * Defaults to '2'. 
       */
-  double? m_zIndex;  
+  double? _zIndex;  
 
   double get zIndex { 
-    if (this.m_zIndex == null) {
-      this.m_zIndex = 0;
+    if (this._zIndex == null) {
+      this._zIndex = 0;
     }
-    return this.m_zIndex!;
+    return this._zIndex!;
   }
 
   void set zIndex (double v) {
-    this.m_zIndex = v;
+    this._zIndex = v;
   }
     
   /**
@@ -1491,17 +1493,17 @@ class AxisOptions extends OptionFragment {
    * 
    * Defaults to 'true'. 
       */
-  bool? m_zoomEnabled;  
+  bool? _zoomEnabled;  
 
   bool get zoomEnabled { 
-    if (this.m_zoomEnabled == null) {
-      this.m_zoomEnabled = false;
+    if (this._zoomEnabled == null) {
+      this._zoomEnabled = false;
     }
-    return this.m_zoomEnabled!;
+    return this._zoomEnabled!;
   }
 
   void set zoomEnabled (bool v) {
-    this.m_zoomEnabled = v;
+    this._zoomEnabled = v;
   }
     
   /**
@@ -1511,7 +1513,7 @@ class AxisOptions extends OptionFragment {
    * In styled mode, the plot bands are styled by the `.highcharts-plot-band`
    * class in addition to the `className` option.  
       */
-  List<PlotBandOptions>? plotBands;
+  List<PlotBandOptions>? plotBands; // PlotBandOptions
   /**
    * An array of lines stretching across the plot area, marking a specific
    * value on one of the axes.
@@ -1519,18 +1521,34 @@ class AxisOptions extends OptionFragment {
    * In styled mode, the plot lines are styled by the
    * `.highcharts-plot-line` class in addition to the `className` option.  
       */
-  List<PlotLineOptions>? plotLines;
-  String? m_internalKey;  
+  List<PlotLineOptions>? plotLines; // PlotLineOptions
+  /**
+   * Accessibility options for an axis. Requires the accessibility module.  
+      */
+  AxisAccessibilityOptions? _accessibility;  
+
+  AxisAccessibilityOptions get accessibility { 
+    if (this._accessibility == null) {
+      this._accessibility = AxisAccessibilityOptions();
+    }
+    return this._accessibility!;
+  }
+
+  void set accessibility (AxisAccessibilityOptions v) {
+    this._accessibility = v;
+  }
+    
+  String? _internalKey;  
 
   String get internalKey { 
-    if (this.m_internalKey == null) {
-      this.m_internalKey = "";
+    if (this._internalKey == null) {
+      this._internalKey = "";
     }
-    return this.m_internalKey!;
+    return this._internalKey!;
   }
 
   void set internalKey (String v) {
-    this.m_internalKey = v;
+    this._internalKey = v;
   }
     
   /**
@@ -1542,46 +1560,30 @@ class AxisOptions extends OptionFragment {
    * `.highcharts-scrollbar-arrow`, `.highcharts-scrollbar-button`,
    * `.highcharts-scrollbar-rifles` and `.highcharts-scrollbar-track`.  
       */
-  ScrollbarOptions? m_scrollbar;  
+  ScrollbarOptions? _scrollbar;  
 
   ScrollbarOptions get scrollbar { 
-    if (this.m_scrollbar == null) {
-      this.m_scrollbar = ScrollbarOptions();
+    if (this._scrollbar == null) {
+      this._scrollbar = ScrollbarOptions();
     }
-    return this.m_scrollbar!;
+    return this._scrollbar!;
   }
 
   void set scrollbar (ScrollbarOptions v) {
-    this.m_scrollbar = v;
+    this._scrollbar = v;
   }
     
-  String? m_description;  
+  String? _description;  
 
   String get description { 
-    if (this.m_description == null) {
-      this.m_description = "";
+    if (this._description == null) {
+      this._description = "";
     }
-    return this.m_description!;
+    return this._description!;
   }
 
   void set description (String v) {
-    this.m_description = v;
-  }
-    
-  /**
-   * Accessibility options for an axis. Requires the accessibility module.  
-      */
-  AxisAccessibilityOptions? m_accessibility;  
-
-  AxisAccessibilityOptions get accessibility { 
-    if (this.m_accessibility == null) {
-      this.m_accessibility = AxisAccessibilityOptions();
-    }
-    return this.m_accessibility!;
-  }
-
-  void set accessibility (AxisAccessibilityOptions v) {
-    this.m_accessibility = v;
+    this._description = v;
   }
     
   /**
@@ -1593,17 +1595,17 @@ class AxisOptions extends OptionFragment {
    * 
    * Defaults to '0'. 
       */
-  double? m_angle;  
+  double? _angle;  
 
   double get angle { 
-    if (this.m_angle == null) {
-      this.m_angle = 0;
+    if (this._angle == null) {
+      this._angle = 0;
     }
-    return this.m_angle!;
+    return this._angle!;
   }
 
   void set angle (double v) {
-    this.m_angle = v;
+    this._angle = v;
   }
     
   /**
@@ -1612,64 +1614,160 @@ class AxisOptions extends OptionFragment {
    * `circle` or `polygon`. Since v8.0.0 this option is also applicable
    * for X axis (inverted polar).  
       */
-  String? m_gridLineInterpolation;  
+  String? _gridLineInterpolation;  
 
   String get gridLineInterpolation { 
-    if (this.m_gridLineInterpolation == null) {
-      this.m_gridLineInterpolation = "";
+    if (this._gridLineInterpolation == null) {
+      this._gridLineInterpolation = "";
     }
-    return this.m_gridLineInterpolation!;
+    return this._gridLineInterpolation!;
   }
 
   void set gridLineInterpolation (String v) {
-    this.m_gridLineInterpolation = v;
-  }
-    
-  double? m_staticScale;  
-
-  double get staticScale { 
-    if (this.m_staticScale == null) {
-      this.m_staticScale = 0;
-    }
-    return this.m_staticScale!;
-  }
-
-  void set staticScale (double v) {
-    this.m_staticScale = v;
+    this._gridLineInterpolation = v;
   }
     
   /**
    * An array defining breaks in the axis, the sections defined will be
    * left out and all the points shifted closer to each other.  
       */
-  List<AxisBreakOptions>? breaks;
+  List<AxisBreakOptions>? breaks; // AxisBreakOptions
+  // NOTE: dateTimeLabelFormats skipped - type DateTimeLabelFormatsOption is ignored in gen
+
+  /**
+   * Datetime axis only. An array determining what time intervals the
+   * ticks are allowed to fall on. Each array item is an array where the
+   * first value is the time unit and the second value another array of
+   * allowed multiples.
+   * 
+   * Defaults to:
+   * ```js
+   * units: [[
+   *     'millisecond', // unit name
+   *     [1, 2, 5, 10, 20, 25, 50, 100, 200, 500] // allowed multiples
+   * ], [
+   *     'second',
+   *     [1, 2, 5, 10, 15, 30]
+   * ], [
+   *     'minute',
+   *     [1, 2, 5, 10, 15, 30]
+   * ], [
+   *     'hour',
+   *     [1, 2, 3, 4, 6, 8, 12]
+   * ], [
+   *     'day',
+   *     [1, 2]
+   * ], [
+   *     'week',
+   *     [1, 2]
+   * ], [
+   *     'month',
+   *     [1, 2, 3, 4, 6]
+   * ], [
+   *     'year',
+   *     null
+   * ]]
+   * ```  
+      */
+  Map<double, double>? _units;  
+
+  Map<double, double> get units { 
+    if (this._units == null) {
+      this._units = Map<double, double>();
+    }
+    return this._units!;
+  }
+
+  void set units (Map<double, double> v) {
+    this._units = v;
+  }
+    
   /**
    * Set grid options for the axis labels. Requires Highcharts Gantt.  
       */
-  GridAxisOptions? m_grid;  
+  GridAxisOptions? _grid;  
 
   GridAxisOptions get grid { 
-    if (this.m_grid == null) {
-      this.m_grid = GridAxisOptions();
+    if (this._grid == null) {
+      this._grid = GridAxisOptions();
     }
-    return this.m_grid!;
+    return this._grid!;
   }
 
   void set grid (GridAxisOptions v) {
-    this.m_grid = v;
+    this._grid = v;
   }
     
-  bool? m_isInternal;  
+  bool? _isInternal;  
 
   bool get isInternal { 
-    if (this.m_isInternal == null) {
-      this.m_isInternal = false;
+    if (this._isInternal == null) {
+      this._isInternal = false;
     }
-    return this.m_isInternal!;
+    return this._isInternal!;
   }
 
   void set isInternal (bool v) {
-    this.m_isInternal = v;
+    this._isInternal = v;
+  }
+    
+  bool? _keepOrdinalPadding;  
+
+  bool get keepOrdinalPadding { 
+    if (this._keepOrdinalPadding == null) {
+      this._keepOrdinalPadding = false;
+    }
+    return this._keepOrdinalPadding!;
+  }
+
+  void set keepOrdinalPadding (bool v) {
+    this._keepOrdinalPadding = v;
+  }
+    
+  double? _staticScale;  
+
+  double get staticScale { 
+    if (this._staticScale == null) {
+      this._staticScale = 0;
+    }
+    return this._staticScale!;
+  }
+
+  void set staticScale (double v) {
+    this._staticScale = v;
+  }
+    
+  /**
+   * Show an indicator on the axis for the current date and time. Can be a
+   * boolean or a configuration object similar to
+   * [xAxis.plotLines](#xAxis.plotLines). 
+   * 
+   * Defaults to 'true'. 
+      */
+  CurrentDateIndicatorOptions? _currentDateIndicator;  
+
+  CurrentDateIndicatorOptions get currentDateIndicator { 
+    if (this._currentDateIndicator == null) {
+      this._currentDateIndicator = CurrentDateIndicatorOptions();
+    }
+    return this._currentDateIndicator!;
+  }
+
+  void set currentDateIndicator (CurrentDateIndicatorOptions v) {
+    this._currentDateIndicator = v;
+  }
+    
+  String? _tooltipValueFormat;  
+
+  String get tooltipValueFormat { 
+    if (this._tooltipValueFormat == null) {
+      this._tooltipValueFormat = "";
+    }
+    return this._tooltipValueFormat!;
+  }
+
+  void set tooltipValueFormat (String v) {
+    this._tooltipValueFormat = v;
   }
     
 
@@ -1682,345 +1780,369 @@ class AxisOptions extends OptionFragment {
     
     // NOTE: skip serialization of stackLabels (type StackLabelOptions is ignored)} 
 
-    if (this.m_alignTicks != null) {  
-      buffer.writeAll(["\"alignTicks\":", this.m_alignTicks, ","], "");
+    if (this._alignTicks != null) {  
+      buffer.writeAll(["\"alignTicks\":", this._alignTicks, ","], "");
     }
 
-    if (this.m_allowDecimals != null) {  
-      buffer.writeAll(["\"allowDecimals\":", this.m_allowDecimals, ","], "");
+    if (this._allowDecimals != null) {  
+      buffer.writeAll(["\"allowDecimals\":", this._allowDecimals, ","], "");
     }
 
-    if (this.m_alternateGridColor != null) {  
-      buffer.writeAll(["\"alternateGridColor\":", this.m_alternateGridColor, ","], "");
+    if (this._alternateGridColor != null) {  
+      buffer.writeAll(["\"alternateGridColor\":\`", this._alternateGridColor, "\`,"], "");
     }
 
     // NOTE: skip serialization of categories (type string[] is ignored)} 
 
-    if (this.m_ceiling != null) {  
-      buffer.writeAll(["\"ceiling\":", this.m_ceiling, ","], "");
+    if (this._ceiling != null) {  
+      buffer.writeAll(["\"ceiling\":", this._ceiling, ","], "");
     }
 
-    if (this.m_className != null) {  
-      buffer.writeAll(["\"className\":", this.m_className, ","], "");
+    if (this._className != null) {  
+      buffer.writeAll(["\"className\":\`", this._className, "\`,"], "");
     }
 
-    if (this.m_crosshair != null) {  
-      buffer.writeAll(["\"crosshair\":", this.m_crosshair?.toJSON(), ","], "");
+    if (this._crosshair != null) {  
+      buffer.writeAll(["\"crosshair\":", this._crosshair?.toJSON(), ","], "");
     }
 
-    if (this.m_crossing != null) {  
-      buffer.writeAll(["\"crossing\":", this.m_crossing, ","], "");
+    if (this._crossing != null) {  
+      buffer.writeAll(["\"crossing\":", this._crossing, ","], "");
     }
 
-    if (this.m_endOnTick != null) {  
-      buffer.writeAll(["\"endOnTick\":", this.m_endOnTick, ","], "");
+    if (this._endOnTick != null) {  
+      buffer.writeAll(["\"endOnTick\":", this._endOnTick, ","], "");
     }
 
-    if (this.m_events != null) {  
-      buffer.writeAll(["\"events\":", this.m_events?.toJSON(), ","], "");
+    if (this._events != null) {  
+      buffer.writeAll(["\"events\":", this._events?.toJSON(), ","], "");
     }
 
-    if (this.m_floor != null) {  
-      buffer.writeAll(["\"floor\":", this.m_floor, ","], "");
+    if (this._floor != null) {  
+      buffer.writeAll(["\"floor\":", this._floor, ","], "");
     }
 
-    if (this.m_gridLineColor != null) {  
-      buffer.writeAll(["\"gridLineColor\":", this.m_gridLineColor, ","], "");
+    if (this._gridLineColor != null) {  
+      buffer.writeAll(["\"gridLineColor\":\`", this._gridLineColor, "\`,"], "");
     }
 
-    if (this.m_gridLineDashStyle != null) {  
-      buffer.writeAll(["\"gridLineDashStyle\":", this.m_gridLineDashStyle, ","], "");
+    if (this._gridLineDashStyle != null) {  
+      buffer.writeAll(["\"gridLineDashStyle\":\`", this._gridLineDashStyle, "\`,"], "");
     }
 
-    if (this.m_gridLineWidth != null) {  
-      buffer.writeAll(["\"gridLineWidth\":", this.m_gridLineWidth, ","], "");
+    if (this._gridLineWidth != null) {  
+      buffer.writeAll(["\"gridLineWidth\":", this._gridLineWidth, ","], "");
     }
 
-    if (this.m_gridZIndex != null) {  
-      buffer.writeAll(["\"gridZIndex\":", this.m_gridZIndex, ","], "");
+    if (this._gridZIndex != null) {  
+      buffer.writeAll(["\"gridZIndex\":", this._gridZIndex, ","], "");
     }
 
-    if (this.m_height != null) {  
-      buffer.writeAll(["\"height\":", this.m_height, ","], "");
+    if (this._height != null) {  
+      buffer.writeAll(["\"height\":\`", this._height, "\`,"], "");
     }
 
-    if (this.m_id != null) {  
-      buffer.writeAll(["\"id\":", this.m_id, ","], "");
+    if (this._id != null) {  
+      buffer.writeAll(["\"id\":\`", this._id, "\`,"], "");
     }
 
-    if (this.m_labels != null) {  
-      buffer.writeAll(["\"labels\":", this.m_labels?.toJSON(), ","], "");
+    if (this._labels != null) {  
+      buffer.writeAll(["\"labels\":", this._labels?.toJSON(), ","], "");
     }
 
-    if (this.m_left != null) {  
-      buffer.writeAll(["\"left\":", this.m_left, ","], "");
+    if (this._left != null) {  
+      buffer.writeAll(["\"left\":\`", this._left, "\`,"], "");
     }
 
-    if (this.m_lineColor != null) {  
-      buffer.writeAll(["\"lineColor\":", this.m_lineColor, ","], "");
+    if (this._lineColor != null) {  
+      buffer.writeAll(["\"lineColor\":\`", this._lineColor, "\`,"], "");
     }
 
-    if (this.m_lineWidth != null) {  
-      buffer.writeAll(["\"lineWidth\":", this.m_lineWidth, ","], "");
+    if (this._lineWidth != null) {  
+      buffer.writeAll(["\"lineWidth\":", this._lineWidth, ","], "");
     }
 
-    if (this.m_linkedTo != null) {  
-      buffer.writeAll(["\"linkedTo\":", this.m_linkedTo, ","], "");
+    if (this._linkedTo != null) {  
+      buffer.writeAll(["\"linkedTo\":", this._linkedTo, ","], "");
     }
 
-    if (this.m_margin != null) {  
-      buffer.writeAll(["\"margin\":", this.m_margin, ","], "");
+    if (this._margin != null) {  
+      buffer.writeAll(["\"margin\":", this._margin, ","], "");
     }
 
-    if (this.m_max != null) {  
-      buffer.writeAll(["\"max\":", this.m_max, ","], "");
+    if (this._max != null) {  
+      buffer.writeAll(["\"max\":", this._max, ","], "");
     }
 
-    if (this.m_maxPadding != null) {  
-      buffer.writeAll(["\"maxPadding\":", this.m_maxPadding, ","], "");
+    if (this._maxPadding != null) {  
+      buffer.writeAll(["\"maxPadding\":", this._maxPadding, ","], "");
     }
 
-    if (this.m_maxRange != null) {  
-      buffer.writeAll(["\"maxRange\":", this.m_maxRange, ","], "");
+    if (this._maxRange != null) {  
+      buffer.writeAll(["\"maxRange\":", this._maxRange, ","], "");
     }
 
-    if (this.m_maxZoom != null) {  
-      buffer.writeAll(["\"maxZoom\":", this.m_maxZoom, ","], "");
+    if (this._maxZoom != null) {  
+      buffer.writeAll(["\"maxZoom\":", this._maxZoom, ","], "");
     }
 
-    if (this.m_min != null) {  
-      buffer.writeAll(["\"min\":", this.m_min, ","], "");
+    if (this._min != null) {  
+      buffer.writeAll(["\"min\":", this._min, ","], "");
     }
 
-    if (this.m_minorGridLineColor != null) {  
-      buffer.writeAll(["\"minorGridLineColor\":", this.m_minorGridLineColor, ","], "");
+    if (this._minorGridLineColor != null) {  
+      buffer.writeAll(["\"minorGridLineColor\":\`", this._minorGridLineColor, "\`,"], "");
     }
 
-    if (this.m_minorGridLineDashStyle != null) {  
-      buffer.writeAll(["\"minorGridLineDashStyle\":", this.m_minorGridLineDashStyle, ","], "");
+    if (this._minorGridLineDashStyle != null) {  
+      buffer.writeAll(["\"minorGridLineDashStyle\":\`", this._minorGridLineDashStyle, "\`,"], "");
     }
 
-    if (this.m_minorGridLineWidth != null) {  
-      buffer.writeAll(["\"minorGridLineWidth\":", this.m_minorGridLineWidth, ","], "");
+    if (this._minorGridLineWidth != null) {  
+      buffer.writeAll(["\"minorGridLineWidth\":", this._minorGridLineWidth, ","], "");
     }
 
-    if (this.m_minorTickColor != null) {  
-      buffer.writeAll(["\"minorTickColor\":", this.m_minorTickColor, ","], "");
+    if (this._minorTickColor != null) {  
+      buffer.writeAll(["\"minorTickColor\":\`", this._minorTickColor, "\`,"], "");
     }
 
     // NOTE: skip serialization of minorTickInterval (type "auto" is ignored)} 
 
-    if (this.m_minorTickLength != null) {  
-      buffer.writeAll(["\"minorTickLength\":", this.m_minorTickLength, ","], "");
+    if (this._minorTickLength != null) {  
+      buffer.writeAll(["\"minorTickLength\":", this._minorTickLength, ","], "");
     }
 
-    if (this.m_minorTickPosition != null) {  
-      buffer.writeAll(["\"minorTickPosition\":", this.m_minorTickPosition, ","], "");
+    if (this._minorTickPosition != null) {  
+      buffer.writeAll(["\"minorTickPosition\":\`", this._minorTickPosition, "\`,"], "");
     }
 
-    if (this.m_minorTicks != null) {  
-      buffer.writeAll(["\"minorTicks\":", this.m_minorTicks, ","], "");
+    if (this._minorTicks != null) {  
+      buffer.writeAll(["\"minorTicks\":", this._minorTicks, ","], "");
     }
 
-    if (this.m_minorTicksPerMajor != null) {  
-      buffer.writeAll(["\"minorTicksPerMajor\":", this.m_minorTicksPerMajor, ","], "");
+    if (this._minorTicksPerMajor != null) {  
+      buffer.writeAll(["\"minorTicksPerMajor\":", this._minorTicksPerMajor, ","], "");
     }
 
-    if (this.m_minorTickWidth != null) {  
-      buffer.writeAll(["\"minorTickWidth\":", this.m_minorTickWidth, ","], "");
+    if (this._minorTickWidth != null) {  
+      buffer.writeAll(["\"minorTickWidth\":", this._minorTickWidth, ","], "");
     }
 
-    if (this.m_minPadding != null) {  
-      buffer.writeAll(["\"minPadding\":", this.m_minPadding, ","], "");
+    if (this._minPadding != null) {  
+      buffer.writeAll(["\"minPadding\":", this._minPadding, ","], "");
     }
 
-    if (this.m_minRange != null) {  
-      buffer.writeAll(["\"minRange\":", this.m_minRange, ","], "");
+    if (this._minRange != null) {  
+      buffer.writeAll(["\"minRange\":", this._minRange, ","], "");
     }
 
-    if (this.m_minTickInterval != null) {  
-      buffer.writeAll(["\"minTickInterval\":", this.m_minTickInterval, ","], "");
+    if (this._minTickInterval != null) {  
+      buffer.writeAll(["\"minTickInterval\":", this._minTickInterval, ","], "");
     }
 
-    if (this.m_offset != null) {  
-      buffer.writeAll(["\"offset\":", this.m_offset, ","], "");
+    if (this._offset != null) {  
+      buffer.writeAll(["\"offset\":", this._offset, ","], "");
     }
 
-    if (this.m_opposite != null) {  
-      buffer.writeAll(["\"opposite\":", this.m_opposite, ","], "");
+    if (this._opposite != null) {  
+      buffer.writeAll(["\"opposite\":", this._opposite, ","], "");
     }
 
-    if (this.m_ordinal != null) {  
-      buffer.writeAll(["\"ordinal\":", this.m_ordinal, ","], "");
+    if (this._ordinal != null) {  
+      buffer.writeAll(["\"ordinal\":", this._ordinal, ","], "");
     }
 
-    if (this.m_overscroll != null) {  
-      buffer.writeAll(["\"overscroll\":", this.m_overscroll, ","], "");
+    if (this._overscroll != null) {  
+      buffer.writeAll(["\"overscroll\":\`", this._overscroll, "\`,"], "");
     }
 
-    if (this.m_pane != null) {  
-      buffer.writeAll(["\"pane\":", this.m_pane, ","], "");
+    if (this._pane != null) {  
+      buffer.writeAll(["\"pane\":", this._pane, ","], "");
     }
 
-    if (this.m_panningEnabled != null) {  
-      buffer.writeAll(["\"panningEnabled\":", this.m_panningEnabled, ","], "");
+    if (this._panningEnabled != null) {  
+      buffer.writeAll(["\"panningEnabled\":", this._panningEnabled, ","], "");
     }
 
-    if (this.m_range != null) {  
-      buffer.writeAll(["\"range\":", this.m_range, ","], "");
+    if (this._range != null) {  
+      buffer.writeAll(["\"range\":", this._range, ","], "");
     }
 
-    if (this.m_reversed != null) {  
-      buffer.writeAll(["\"reversed\":", this.m_reversed, ","], "");
+    if (this._reversed != null) {  
+      buffer.writeAll(["\"reversed\":", this._reversed, ","], "");
     }
 
-    if (this.m_reversedStacks != null) {  
-      buffer.writeAll(["\"reversedStacks\":", this.m_reversedStacks, ","], "");
+    if (this._reversedStacks != null) {  
+      buffer.writeAll(["\"reversedStacks\":", this._reversedStacks, ","], "");
     }
 
-    if (this.m_showEmpty != null) {  
-      buffer.writeAll(["\"showEmpty\":", this.m_showEmpty, ","], "");
+    if (this._showEmpty != null) {  
+      buffer.writeAll(["\"showEmpty\":", this._showEmpty, ","], "");
     }
 
-    if (this.m_showFirstLabel != null) {  
-      buffer.writeAll(["\"showFirstLabel\":", this.m_showFirstLabel, ","], "");
+    if (this._showFirstLabel != null) {  
+      buffer.writeAll(["\"showFirstLabel\":", this._showFirstLabel, ","], "");
     }
 
-    if (this.m_showLastLabel != null) {  
-      buffer.writeAll(["\"showLastLabel\":", this.m_showLastLabel, ","], "");
+    if (this._showLastLabel != null) {  
+      buffer.writeAll(["\"showLastLabel\":", this._showLastLabel, ","], "");
     }
 
-    if (this.m_side != null) {  
-      buffer.writeAll(["\"side\":", this.m_side, ","], "");
+    if (this._side != null) {  
+      buffer.writeAll(["\"side\":", this._side, ","], "");
     }
 
-    if (this.m_softMax != null) {  
-      buffer.writeAll(["\"softMax\":", this.m_softMax, ","], "");
+    if (this._softMax != null) {  
+      buffer.writeAll(["\"softMax\":", this._softMax, ","], "");
     }
 
-    if (this.m_softMin != null) {  
-      buffer.writeAll(["\"softMin\":", this.m_softMin, ","], "");
+    if (this._softMin != null) {  
+      buffer.writeAll(["\"softMin\":", this._softMin, ","], "");
     }
 
-    if (this.m_startOfWeek != null) {  
-      buffer.writeAll(["\"startOfWeek\":", this.m_startOfWeek, ","], "");
+    if (this._startOfWeek != null) {  
+      buffer.writeAll(["\"startOfWeek\":", this._startOfWeek, ","], "");
     }
 
-    if (this.m_startOnTick != null) {  
-      buffer.writeAll(["\"startOnTick\":", this.m_startOnTick, ","], "");
+    if (this._startOnTick != null) {  
+      buffer.writeAll(["\"startOnTick\":", this._startOnTick, ","], "");
     }
 
-    if (this.m_tickAmount != null) {  
-      buffer.writeAll(["\"tickAmount\":", this.m_tickAmount, ","], "");
+    if (this._tickAmount != null) {  
+      buffer.writeAll(["\"tickAmount\":", this._tickAmount, ","], "");
     }
 
-    if (this.m_tickColor != null) {  
-      buffer.writeAll(["\"tickColor\":", this.m_tickColor, ","], "");
+    if (this._tickColor != null) {  
+      buffer.writeAll(["\"tickColor\":\`", this._tickColor, "\`,"], "");
     }
 
-    if (this.m_tickInterval != null) {  
-      buffer.writeAll(["\"tickInterval\":", this.m_tickInterval, ","], "");
+    if (this._tickInterval != null) {  
+      buffer.writeAll(["\"tickInterval\":", this._tickInterval, ","], "");
     }
 
-    if (this.m_tickLength != null) {  
-      buffer.writeAll(["\"tickLength\":", this.m_tickLength, ","], "");
+    if (this._tickLength != null) {  
+      buffer.writeAll(["\"tickLength\":", this._tickLength, ","], "");
     }
 
-    if (this.m_tickmarkPlacement != null) {  
-      buffer.writeAll(["\"tickmarkPlacement\":", this.m_tickmarkPlacement, ","], "");
+    if (this._tickmarkPlacement != null) {  
+      buffer.writeAll(["\"tickmarkPlacement\":\`", this._tickmarkPlacement, "\`,"], "");
     }
 
-    if (this.m_tickPixelInterval != null) {  
-      buffer.writeAll(["\"tickPixelInterval\":", this.m_tickPixelInterval, ","], "");
+    if (this._tickPixelInterval != null) {  
+      buffer.writeAll(["\"tickPixelInterval\":", this._tickPixelInterval, ","], "");
     }
 
-    if (this.m_tickPosition != null) {  
-      buffer.writeAll(["\"tickPosition\":", this.m_tickPosition, ","], "");
+    if (this._tickPosition != null) {  
+      buffer.writeAll(["\"tickPosition\":\`", this._tickPosition, "\`,"], "");
     }
 
     // NOTE: skip serialization of tickPositions (type TickPositionsArray is ignored)} 
 
-    if (this.m_tickWidth != null) {  
-      buffer.writeAll(["\"tickWidth\":", this.m_tickWidth, ","], "");
+    if (this._tickWidth != null) {  
+      buffer.writeAll(["\"tickWidth\":", this._tickWidth, ","], "");
     }
 
-    if (this.m_title != null) {  
-      buffer.writeAll(["\"title\":", this.m_title?.toJSON(), ","], "");
+    if (this._title != null) {  
+      buffer.writeAll(["\"title\":", this._title?.toJSON(), ","], "");
     }
 
-    if (this.m_top != null) {  
-      buffer.writeAll(["\"top\":", this.m_top, ","], "");
+    if (this._top != null) {  
+      buffer.writeAll(["\"top\":\`", this._top, "\`,"], "");
     }
 
-    if (this.m_type != null) {  
-      buffer.writeAll(["\"type\":", this.m_type, ","], "");
+    if (this._type != null) {  
+      buffer.writeAll(["\"type\":\`", this._type, "\`,"], "");
     }
 
-    if (this.m_uniqueNames != null) {  
-      buffer.writeAll(["\"uniqueNames\":", this.m_uniqueNames, ","], "");
+    if (this._uniqueNames != null) {  
+      buffer.writeAll(["\"uniqueNames\":", this._uniqueNames, ","], "");
     }
 
-    if (this.m_visible != null) {  
-      buffer.writeAll(["\"visible\":", this.m_visible, ","], "");
+    if (this._visible != null) {  
+      buffer.writeAll(["\"visible\":", this._visible, ","], "");
     }
 
-    if (this.m_width != null) {  
-      buffer.writeAll(["\"width\":", this.m_width, ","], "");
+    if (this._width != null) {  
+      buffer.writeAll(["\"width\":\`", this._width, "\`,"], "");
     }
 
-    if (this.m_zIndex != null) {  
-      buffer.writeAll(["\"zIndex\":", this.m_zIndex, ","], "");
+    if (this._zIndex != null) {  
+      buffer.writeAll(["\"zIndex\":", this._zIndex, ","], "");
     }
 
-    if (this.m_zoomEnabled != null) {  
-      buffer.writeAll(["\"zoomEnabled\":", this.m_zoomEnabled, ","], "");
+    if (this._zoomEnabled != null) {  
+      buffer.writeAll(["\"zoomEnabled\":", this._zoomEnabled, ","], "");
     }
 
     // NOTE: skip serialization of plotBands (type PlotBandOptions[] is ignored)} 
 
     // NOTE: skip serialization of plotLines (type PlotLineOptions[] is ignored)} 
 
-    if (this.m_internalKey != null) {  
-      buffer.writeAll(["\"internalKey\":", this.m_internalKey, ","], "");
+    if (this._accessibility != null) {  
+      buffer.writeAll(["\"accessibility\":", this._accessibility?.toJSON(), ","], "");
     }
 
-    if (this.m_maxRange != null) {  
-      buffer.writeAll(["\"maxRange\":", this.m_maxRange, ","], "");
+    if (this._internalKey != null) {  
+      buffer.writeAll(["\"internalKey\":\`", this._internalKey, "\`,"], "");
     }
 
-    if (this.m_scrollbar != null) {  
-      buffer.writeAll(["\"scrollbar\":", this.m_scrollbar?.toJSON(), ","], "");
+    if (this._maxRange != null) {  
+      buffer.writeAll(["\"maxRange\":", this._maxRange, ","], "");
     }
 
-    if (this.m_description != null) {  
-      buffer.writeAll(["\"description\":", this.m_description, ","], "");
+    if (this._scrollbar != null) {  
+      buffer.writeAll(["\"scrollbar\":", this._scrollbar?.toJSON(), ","], "");
     }
 
-    if (this.m_accessibility != null) {  
-      buffer.writeAll(["\"accessibility\":", this.m_accessibility?.toJSON(), ","], "");
+    if (this._description != null) {  
+      buffer.writeAll(["\"description\":\`", this._description, "\`,"], "");
     }
 
-    if (this.m_angle != null) {  
-      buffer.writeAll(["\"angle\":", this.m_angle, ","], "");
+    if (this._angle != null) {  
+      buffer.writeAll(["\"angle\":", this._angle, ","], "");
     }
 
-    if (this.m_gridLineInterpolation != null) {  
-      buffer.writeAll(["\"gridLineInterpolation\":", this.m_gridLineInterpolation, ","], "");
-    }
-
-    if (this.m_staticScale != null) {  
-      buffer.writeAll(["\"staticScale\":", this.m_staticScale, ","], "");
+    if (this._gridLineInterpolation != null) {  
+      buffer.writeAll(["\"gridLineInterpolation\":\`", this._gridLineInterpolation, "\`,"], "");
     }
 
     // NOTE: skip serialization of breaks (type AxisBreakOptions[] is ignored)} 
 
-    if (this.m_grid != null) {  
-      buffer.writeAll(["\"grid\":", this.m_grid?.toJSON(), ","], "");
+    // NOTE: skip serialization of dateTimeLabelFormats (type DateTimeLabelFormatsOption is ignored)} 
+
+    if (this._units != null) {  
+      buffer.writeAll(["\"units\":", this._units, ","], "");
     }
 
-    if (this.m_isInternal != null) {  
-      buffer.writeAll(["\"isInternal\":", this.m_isInternal, ","], "");
+    if (this._grid != null) {  
+      buffer.writeAll(["\"grid\":", this._grid?.toJSON(), ","], "");
     }
+
+    if (this._isInternal != null) {  
+      buffer.writeAll(["\"isInternal\":", this._isInternal, ","], "");
+    }
+
+    if (this._keepOrdinalPadding != null) {  
+      buffer.writeAll(["\"keepOrdinalPadding\":", this._keepOrdinalPadding, ","], "");
+    }
+
+    if (this._staticScale != null) {  
+      buffer.writeAll(["\"staticScale\":", this._staticScale, ","], "");
+    }
+
+    if (this._currentDateIndicator != null) {  
+      buffer.writeAll(["\"currentDateIndicator\":", this._currentDateIndicator?.toJSON(), ","], "");
+    }
+
+    if (this._angle != null) {  
+      buffer.writeAll(["\"angle\":", this._angle, ","], "");
+    }
+
+    if (this._tooltipValueFormat != null) {  
+      buffer.writeAll(["\"tooltipValueFormat\":\`", this._tooltipValueFormat, "\`,"], "");
+    }
+
+    // NOTE: skip serialization of stackShadow (type StackShadowOptions is ignored)} 
   }
 
 }

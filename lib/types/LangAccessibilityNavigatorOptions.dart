@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,43 +23,43 @@ import 'OptionFragment.dart';
  */
 class LangAccessibilityNavigatorOptions extends OptionFragment {
   LangAccessibilityNavigatorOptions() : super();
-  String? m_handleLabel;  
+  String? _handleLabel;  
 
   String get handleLabel { 
-    if (this.m_handleLabel == null) {
-      this.m_handleLabel = "";
+    if (this._handleLabel == null) {
+      this._handleLabel = "";
     }
-    return this.m_handleLabel!;
+    return this._handleLabel!;
   }
 
   void set handleLabel (String v) {
-    this.m_handleLabel = v;
+    this._handleLabel = v;
   }
     
-  String? m_groupLabel;  
+  String? _groupLabel;  
 
   String get groupLabel { 
-    if (this.m_groupLabel == null) {
-      this.m_groupLabel = "";
+    if (this._groupLabel == null) {
+      this._groupLabel = "";
     }
-    return this.m_groupLabel!;
+    return this._groupLabel!;
   }
 
   void set groupLabel (String v) {
-    this.m_groupLabel = v;
+    this._groupLabel = v;
   }
     
-  String? m_changeAnnouncement;  
+  String? _changeAnnouncement;  
 
   String get changeAnnouncement { 
-    if (this.m_changeAnnouncement == null) {
-      this.m_changeAnnouncement = "";
+    if (this._changeAnnouncement == null) {
+      this._changeAnnouncement = "";
     }
-    return this.m_changeAnnouncement!;
+    return this._changeAnnouncement!;
   }
 
   void set changeAnnouncement (String v) {
-    this.m_changeAnnouncement = v;
+    this._changeAnnouncement = v;
   }
     
 
@@ -70,16 +70,16 @@ class LangAccessibilityNavigatorOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_handleLabel != null) {  
-      buffer.writeAll(["\"handleLabel\":", this.m_handleLabel, ","], "");
+    if (this._handleLabel != null) {  
+      buffer.writeAll(["\"handleLabel\":\`", this._handleLabel, "\`,"], "");
     }
 
-    if (this.m_groupLabel != null) {  
-      buffer.writeAll(["\"groupLabel\":", this.m_groupLabel, ","], "");
+    if (this._groupLabel != null) {  
+      buffer.writeAll(["\"groupLabel\":\`", this._groupLabel, "\`,"], "");
     }
 
-    if (this.m_changeAnnouncement != null) {  
-      buffer.writeAll(["\"changeAnnouncement\":", this.m_changeAnnouncement, ","], "");
+    if (this._changeAnnouncement != null) {  
+      buffer.writeAll(["\"changeAnnouncement\":\`", this._changeAnnouncement, "\`,"], "");
     }
   }
 

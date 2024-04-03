@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,17 +23,17 @@ import 'OptionFragment.dart';
  */
 class BarSeries extends OptionFragment {
   BarSeries() : super();
-  bool? m_inverted;  
+  bool? _inverted;  
 
   bool get inverted { 
-    if (this.m_inverted == null) {
-      this.m_inverted = false;
+    if (this._inverted == null) {
+      this._inverted = false;
     }
-    return this.m_inverted!;
+    return this._inverted!;
   }
 
   void set inverted (bool v) {
-    this.m_inverted = v;
+    this._inverted = v;
   }
     
 
@@ -44,8 +44,8 @@ class BarSeries extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_inverted != null) {  
-      buffer.writeAll(["\"inverted\":", this.m_inverted, ","], "");
+    if (this._inverted != null) {  
+      buffer.writeAll(["\"inverted\":", this._inverted, ","], "");
     }
 
     // NOTE: skip serialization of pointClass (type typeof BarPoint is ignored)} 

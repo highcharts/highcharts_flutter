@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,30 +23,30 @@ import 'OptionFragment.dart';
  */
 class A11yFormatTokenObject extends OptionFragment {
   A11yFormatTokenObject() : super();
-  String? m_type;  
+  String? _type;  
 
   String get type { 
-    if (this.m_type == null) {
-      this.m_type = "";
+    if (this._type == null) {
+      this._type = "";
     }
-    return this.m_type!;
+    return this._type!;
   }
 
   void set type (String v) {
-    this.m_type = v;
+    this._type = v;
   }
     
-  String? m_value;  
+  String? _value;  
 
   String get value { 
-    if (this.m_value == null) {
-      this.m_value = "";
+    if (this._value == null) {
+      this._value = "";
     }
-    return this.m_value!;
+    return this._value!;
   }
 
   void set value (String v) {
-    this.m_value = v;
+    this._value = v;
   }
     
 
@@ -57,12 +57,12 @@ class A11yFormatTokenObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_type != null) {  
-      buffer.writeAll(["\"type\":", this.m_type, ","], "");
+    if (this._type != null) {  
+      buffer.writeAll(["\"type\":\`", this._type, "\`,"], "");
     }
 
-    if (this.m_value != null) {  
-      buffer.writeAll(["\"value\":", this.m_value, ","], "");
+    if (this._value != null) {  
+      buffer.writeAll(["\"value\":\`", this._value, "\`,"], "");
     }
   }
 

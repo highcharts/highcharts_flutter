@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -32,17 +32,17 @@ class LineSeriesOptions extends SeriesOptions {
    * 
    * Defaults to 'true'. 
       */
-  bool? m_allAreas;  
+  bool? _allAreas;  
 
   bool get allAreas { 
-    if (this.m_allAreas == null) {
-      this.m_allAreas = false;
+    if (this._allAreas == null) {
+      this._allAreas = false;
     }
-    return this.m_allAreas!;
+    return this._allAreas!;
   }
 
   void set allAreas (bool v) {
-    this.m_allAreas = v;
+    this._allAreas = v;
   }
     
   // NOTE: animation skipped - type Generic is ignored in gen
@@ -56,17 +56,17 @@ class LineSeriesOptions extends SeriesOptions {
    * is fired on individual points, not on a group of points like e.g. during
    * the initial animation.  
       */
-  double? m_animationLimit;  
+  double? _animationLimit;  
 
   double get animationLimit { 
-    if (this.m_animationLimit == null) {
-      this.m_animationLimit = 0;
+    if (this._animationLimit == null) {
+      this._animationLimit = 0;
     }
-    return this.m_animationLimit!;
+    return this._animationLimit!;
   }
 
   void set animationLimit (double v) {
-    this.m_animationLimit = v;
+    this._animationLimit = v;
   }
     
   /**
@@ -85,17 +85,17 @@ class LineSeriesOptions extends SeriesOptions {
    * 
    * Defaults to '5000'. 
       */
-  double? m_boostThreshold;  
+  double? _boostThreshold;  
 
   double get boostThreshold { 
-    if (this.m_boostThreshold == null) {
-      this.m_boostThreshold = 0;
+    if (this._boostThreshold == null) {
+      this._boostThreshold = 0;
     }
-    return this.m_boostThreshold!;
+    return this._boostThreshold!;
   }
 
   void set boostThreshold (double v) {
-    this.m_boostThreshold = v;
+    this._boostThreshold = v;
   }
     
   /**
@@ -106,17 +106,17 @@ class LineSeriesOptions extends SeriesOptions {
    * 
    * Defaults to '#cccccc'. 
       */
-  String? m_borderColor;  
+  String? _borderColor;  
 
   String get borderColor { 
-    if (this.m_borderColor == null) {
-      this.m_borderColor = "";
+    if (this._borderColor == null) {
+      this._borderColor = "";
     }
-    return this.m_borderColor!;
+    return this._borderColor!;
   }
 
   void set borderColor (String v) {
-    this.m_borderColor = v;
+    this._borderColor = v;
   }
     
   /**
@@ -127,17 +127,17 @@ class LineSeriesOptions extends SeriesOptions {
    * 
    * Defaults to '1'. 
       */
-  double? m_borderWidth;  
+  double? _borderWidth;  
 
   double get borderWidth { 
-    if (this.m_borderWidth == null) {
-      this.m_borderWidth = 0;
+    if (this._borderWidth == null) {
+      this._borderWidth = 0;
     }
-    return this.m_borderWidth!;
+    return this._borderWidth!;
   }
 
   void set borderWidth (double v) {
-    this.m_borderWidth = v;
+    this._borderWidth = v;
   }
     
   /**
@@ -154,34 +154,34 @@ class LineSeriesOptions extends SeriesOptions {
    * 
    * Defaults to '0'. 
       */
-  bool? m_colorAxis;  
+  bool? _colorAxis;  
 
   bool get colorAxis { 
-    if (this.m_colorAxis == null) {
-      this.m_colorAxis = false;
+    if (this._colorAxis == null) {
+      this._colorAxis = false;
     }
-    return this.m_colorAxis!;
+    return this._colorAxis!;
   }
 
   void set colorAxis (bool v) {
-    this.m_colorAxis = v;
+    this._colorAxis = v;
   }
     
   /**
    * Polar charts only. Whether to connect the ends of a line series
    * plot across the extremes.  
       */
-  bool? m_connectEnds;  
+  bool? _connectEnds;  
 
   bool get connectEnds { 
-    if (this.m_connectEnds == null) {
-      this.m_connectEnds = false;
+    if (this._connectEnds == null) {
+      this._connectEnds = false;
     }
-    return this.m_connectEnds!;
+    return this._connectEnds!;
   }
 
   void set connectEnds (bool v) {
-    this.m_connectEnds = v;
+    this._connectEnds = v;
   }
     
   /**
@@ -195,22 +195,22 @@ class LineSeriesOptions extends SeriesOptions {
    * `.highcharts-data-label-box` and `.highcharts-data-label` class names
    * ([see example](https://www.highcharts.com/samples/highcharts/css/series-datalabels)).  
       */
-  List<DataLabelOptions>? dataLabels;
+  List<DataLabelOptions>? dataLabels; // DataLabelOptions
   /**
    * A description of the series to add to the screen reader information
    * about the series.  
       */
-  String? m_description;  
+  String? _description;  
 
   String get description { 
-    if (this.m_description == null) {
-      this.m_description = "";
+    if (this._description == null) {
+      this._description = "";
     }
-    return this.m_description!;
+    return this._description!;
   }
 
   void set description (String v) {
-    this.m_description = v;
+    this._description = v;
   }
     
   /**
@@ -223,17 +223,17 @@ class LineSeriesOptions extends SeriesOptions {
    * its own sorting definition, the linked series will be sorted in the
    * same order as the master one.  
       */
-  String? m_linkedTo;  
+  String? _linkedTo;  
 
   String get linkedTo { 
-    if (this.m_linkedTo == null) {
-      this.m_linkedTo = "";
+    if (this._linkedTo == null) {
+      this._linkedTo = "";
     }
-    return this.m_linkedTo!;
+    return this._linkedTo!;
   }
 
   void set linkedTo (String v) {
-    this.m_linkedTo = v;
+    this._linkedTo = v;
   }
     
   // NOTE: pointDescriptionFormatter skipped - type Function is ignored in gen
@@ -250,49 +250,49 @@ class LineSeriesOptions extends SeriesOptions {
    * 
    * Defaults to '0'. 
       */
-  double? m_pointStart;  
+  double? _pointStart;  
 
   double get pointStart { 
-    if (this.m_pointStart == null) {
-      this.m_pointStart = 0;
+    if (this._pointStart == null) {
+      this._pointStart = 0;
     }
-    return this.m_pointStart!;
+    return this._pointStart!;
   }
 
   void set pointStart (double v) {
-    this.m_pointStart = v;
+    this._pointStart = v;
   }
     
   /**
    * If set to `true`, the accessibility module will skip past the points
    * in this series for keyboard navigation.  
       */
-  bool? m_skipKeyboardNavigation;  
+  bool? _skipKeyboardNavigation;  
 
   bool get skipKeyboardNavigation { 
-    if (this.m_skipKeyboardNavigation == null) {
-      this.m_skipKeyboardNavigation = false;
+    if (this._skipKeyboardNavigation == null) {
+      this._skipKeyboardNavigation = false;
     }
-    return this.m_skipKeyboardNavigation!;
+    return this._skipKeyboardNavigation!;
   }
 
   void set skipKeyboardNavigation (bool v) {
-    this.m_skipKeyboardNavigation = v;
+    this._skipKeyboardNavigation = v;
   }
     
   // NOTE: states skipped - type Generic is ignored in gen
 
-  String? m_supportingColor;  
+  String? _supportingColor;  
 
   String get supportingColor { 
-    if (this.m_supportingColor == null) {
-      this.m_supportingColor = "";
+    if (this._supportingColor == null) {
+      this._supportingColor = "";
     }
-    return this.m_supportingColor!;
+    return this._supportingColor!;
   }
 
   void set supportingColor (String v) {
-    this.m_supportingColor = v;
+    this._supportingColor = v;
   }
     
 
@@ -303,60 +303,60 @@ class LineSeriesOptions extends SeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_allAreas != null) {  
-      buffer.writeAll(["\"allAreas\":", this.m_allAreas, ","], "");
+    if (this._allAreas != null) {  
+      buffer.writeAll(["\"allAreas\":", this._allAreas, ","], "");
     }
 
     // NOTE: skip serialization of animation (type Generic is ignored)} 
 
-    if (this.m_animationLimit != null) {  
-      buffer.writeAll(["\"animationLimit\":", this.m_animationLimit, ","], "");
+    if (this._animationLimit != null) {  
+      buffer.writeAll(["\"animationLimit\":", this._animationLimit, ","], "");
     }
 
-    if (this.m_boostThreshold != null) {  
-      buffer.writeAll(["\"boostThreshold\":", this.m_boostThreshold, ","], "");
+    if (this._boostThreshold != null) {  
+      buffer.writeAll(["\"boostThreshold\":", this._boostThreshold, ","], "");
     }
 
-    if (this.m_borderColor != null) {  
-      buffer.writeAll(["\"borderColor\":", this.m_borderColor, ","], "");
+    if (this._borderColor != null) {  
+      buffer.writeAll(["\"borderColor\":\`", this._borderColor, "\`,"], "");
     }
 
-    if (this.m_borderWidth != null) {  
-      buffer.writeAll(["\"borderWidth\":", this.m_borderWidth, ","], "");
+    if (this._borderWidth != null) {  
+      buffer.writeAll(["\"borderWidth\":", this._borderWidth, ","], "");
     }
 
-    if (this.m_colorAxis != null) {  
-      buffer.writeAll(["\"colorAxis\":", this.m_colorAxis, ","], "");
+    if (this._colorAxis != null) {  
+      buffer.writeAll(["\"colorAxis\":", this._colorAxis, ","], "");
     }
 
-    if (this.m_connectEnds != null) {  
-      buffer.writeAll(["\"connectEnds\":", this.m_connectEnds, ","], "");
+    if (this._connectEnds != null) {  
+      buffer.writeAll(["\"connectEnds\":", this._connectEnds, ","], "");
     }
 
     // NOTE: skip serialization of dataLabels (type DataLabelOptions[] is ignored)} 
 
-    if (this.m_description != null) {  
-      buffer.writeAll(["\"description\":", this.m_description, ","], "");
+    if (this._description != null) {  
+      buffer.writeAll(["\"description\":\`", this._description, "\`,"], "");
     }
 
-    if (this.m_linkedTo != null) {  
-      buffer.writeAll(["\"linkedTo\":", this.m_linkedTo, ","], "");
+    if (this._linkedTo != null) {  
+      buffer.writeAll(["\"linkedTo\":\`", this._linkedTo, "\`,"], "");
     }
 
     // NOTE: skip serialization of pointDescriptionFormatter (type Function is ignored)} 
 
-    if (this.m_pointStart != null) {  
-      buffer.writeAll(["\"pointStart\":", this.m_pointStart, ","], "");
+    if (this._pointStart != null) {  
+      buffer.writeAll(["\"pointStart\":", this._pointStart, ","], "");
     }
 
-    if (this.m_skipKeyboardNavigation != null) {  
-      buffer.writeAll(["\"skipKeyboardNavigation\":", this.m_skipKeyboardNavigation, ","], "");
+    if (this._skipKeyboardNavigation != null) {  
+      buffer.writeAll(["\"skipKeyboardNavigation\":", this._skipKeyboardNavigation, ","], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 
 
-    if (this.m_supportingColor != null) {  
-      buffer.writeAll(["\"supportingColor\":", this.m_supportingColor, ","], "");
+    if (this._supportingColor != null) {  
+      buffer.writeAll(["\"supportingColor\":\`", this._supportingColor, "\`,"], "");
     }
   }
 

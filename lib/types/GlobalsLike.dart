@@ -12,13 +12,15 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
-import 'Options.dart';
+import 'DefaultOptions.dart';
 import 'Document.dart';
+import 'Navigator.dart';
 import 'SeriesTypeRegistry.dart';
+import 'Options.dart';
 import 'OptionFragment.dart';
 
 /** 
@@ -26,212 +28,199 @@ import 'OptionFragment.dart';
  */
 class GlobalsLike extends OptionFragment {
   GlobalsLike() : super();
-  String? m_SVG_NS;  
+  String? _SVG_NS;  
 
   String get SVG_NS { 
-    if (this.m_SVG_NS == null) {
-      this.m_SVG_NS = "";
+    if (this._SVG_NS == null) {
+      this._SVG_NS = "";
     }
-    return this.m_SVG_NS!;
+    return this._SVG_NS!;
   }
 
   void set SVG_NS (String v) {
-    this.m_SVG_NS = v;
+    this._SVG_NS = v;
   }
     
-  double? m_chartCount;  
+  double? _chartCount;  
 
   double get chartCount { 
-    if (this.m_chartCount == null) {
-      this.m_chartCount = 0;
+    if (this._chartCount == null) {
+      this._chartCount = 0;
     }
-    return this.m_chartCount!;
+    return this._chartCount!;
   }
 
   void set chartCount (double v) {
-    this.m_chartCount = v;
+    this._chartCount = v;
   }
     
-  double? m_deg2rad;  
+  double? _deg2rad;  
 
   double get deg2rad { 
-    if (this.m_deg2rad == null) {
-      this.m_deg2rad = 0;
+    if (this._deg2rad == null) {
+      this._deg2rad = 0;
     }
-    return this.m_deg2rad!;
+    return this._deg2rad!;
   }
 
   void set deg2rad (double v) {
-    this.m_deg2rad = v;
+    this._deg2rad = v;
   }
     
-  bool? m_hasBidiBug;  
+  bool? _hasBidiBug;  
 
   bool get hasBidiBug { 
-    if (this.m_hasBidiBug == null) {
-      this.m_hasBidiBug = false;
+    if (this._hasBidiBug == null) {
+      this._hasBidiBug = false;
     }
-    return this.m_hasBidiBug!;
+    return this._hasBidiBug!;
   }
 
   void set hasBidiBug (bool v) {
-    this.m_hasBidiBug = v;
+    this._hasBidiBug = v;
   }
     
-  bool? m_hasTouch;  
-
-  bool get hasTouch { 
-    if (this.m_hasTouch == null) {
-      this.m_hasTouch = false;
-    }
-    return this.m_hasTouch!;
-  }
-
-  void set hasTouch (bool v) {
-    this.m_hasTouch = v;
-  }
-    
-  bool? m_isChrome;  
+  bool? _isChrome;  
 
   bool get isChrome { 
-    if (this.m_isChrome == null) {
-      this.m_isChrome = false;
+    if (this._isChrome == null) {
+      this._isChrome = false;
     }
-    return this.m_isChrome!;
+    return this._isChrome!;
   }
 
   void set isChrome (bool v) {
-    this.m_isChrome = v;
+    this._isChrome = v;
   }
     
-  bool? m_isFirefox;  
+  bool? _isFirefox;  
 
   bool get isFirefox { 
-    if (this.m_isFirefox == null) {
-      this.m_isFirefox = false;
+    if (this._isFirefox == null) {
+      this._isFirefox = false;
     }
-    return this.m_isFirefox!;
+    return this._isFirefox!;
   }
 
   void set isFirefox (bool v) {
-    this.m_isFirefox = v;
+    this._isFirefox = v;
   }
     
-  bool? m_isMS;  
+  bool? _isMS;  
 
   bool get isMS { 
-    if (this.m_isMS == null) {
-      this.m_isMS = false;
+    if (this._isMS == null) {
+      this._isMS = false;
     }
-    return this.m_isMS!;
+    return this._isMS!;
   }
 
   void set isMS (bool v) {
-    this.m_isMS = v;
+    this._isMS = v;
   }
     
-  bool? m_isSafari;  
+  bool? _isSafari;  
 
   bool get isSafari { 
-    if (this.m_isSafari == null) {
-      this.m_isSafari = false;
+    if (this._isSafari == null) {
+      this._isSafari = false;
     }
-    return this.m_isSafari!;
+    return this._isSafari!;
   }
 
   void set isSafari (bool v) {
-    this.m_isSafari = v;
+    this._isSafari = v;
   }
     
-  bool? m_isTouchDevice;  
+  bool? _isTouchDevice;  
 
   bool get isTouchDevice { 
-    if (this.m_isTouchDevice == null) {
-      this.m_isTouchDevice = false;
+    if (this._isTouchDevice == null) {
+      this._isTouchDevice = false;
     }
-    return this.m_isTouchDevice!;
+    return this._isTouchDevice!;
   }
 
   void set isTouchDevice (bool v) {
-    this.m_isTouchDevice = v;
+    this._isTouchDevice = v;
   }
     
-  bool? m_isWebKit;  
+  bool? _isWebKit;  
 
   bool get isWebKit { 
-    if (this.m_isWebKit == null) {
-      this.m_isWebKit = false;
+    if (this._isWebKit == null) {
+      this._isWebKit = false;
     }
-    return this.m_isWebKit!;
+    return this._isWebKit!;
   }
 
   void set isWebKit (bool v) {
-    this.m_isWebKit = v;
+    this._isWebKit = v;
   }
     
-  String? m_product;  
+  String? _product;  
 
   String get product { 
-    if (this.m_product == null) {
-      this.m_product = "";
+    if (this._product == null) {
+      this._product = "";
     }
-    return this.m_product!;
+    return this._product!;
   }
 
   void set product (String v) {
-    this.m_product = v;
+    this._product = v;
   }
     
-  bool? m_supportsPassiveEvents;  
+  bool? _supportsPassiveEvents;  
 
   bool get supportsPassiveEvents { 
-    if (this.m_supportsPassiveEvents == null) {
-      this.m_supportsPassiveEvents = false;
+    if (this._supportsPassiveEvents == null) {
+      this._supportsPassiveEvents = false;
     }
-    return this.m_supportsPassiveEvents!;
+    return this._supportsPassiveEvents!;
   }
 
   void set supportsPassiveEvents (bool v) {
-    this.m_supportsPassiveEvents = v;
+    this._supportsPassiveEvents = v;
   }
     
-  bool? m_svg;  
+  bool? _svg;  
 
   bool get svg { 
-    if (this.m_svg == null) {
-      this.m_svg = false;
+    if (this._svg == null) {
+      this._svg = false;
     }
-    return this.m_svg!;
+    return this._svg!;
   }
 
   void set svg (bool v) {
-    this.m_svg = v;
+    this._svg = v;
   }
     
-  String? m_userAgent;  
+  String? _userAgent;  
 
   String get userAgent { 
-    if (this.m_userAgent == null) {
-      this.m_userAgent = "";
+    if (this._userAgent == null) {
+      this._userAgent = "";
     }
-    return this.m_userAgent!;
+    return this._userAgent!;
   }
 
   void set userAgent (String v) {
-    this.m_userAgent = v;
+    this._userAgent = v;
   }
     
-  String? m_version;  
+  String? _version;  
 
   String get version { 
-    if (this.m_version == null) {
-      this.m_version = "";
+    if (this._version == null) {
+      this._version = "";
     }
-    return this.m_version!;
+    return this._version!;
   }
 
   void set version (String v) {
-    this.m_version = v;
+    this._version = v;
   }
     
 
@@ -242,91 +231,91 @@ class GlobalsLike extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of defaultOptions (type Options is ignored)} 
+    // NOTE: skip serialization of defaultOptions (type DefaultOptions is ignored)} 
 
     // NOTE: skip serialization of time (type Time is ignored)} 
 
-    if (this.m_SVG_NS != null) {  
-      buffer.writeAll(["\"SVG_NS\":", this.m_SVG_NS, ","], "");
+    if (this._SVG_NS != null) {  
+      buffer.writeAll(["\"SVG_NS\":\`", this._SVG_NS, "\`,"], "");
     }
 
-    if (this.m_chartCount != null) {  
-      buffer.writeAll(["\"chartCount\":", this.m_chartCount, ","], "");
+    if (this._chartCount != null) {  
+      buffer.writeAll(["\"chartCount\":", this._chartCount, ","], "");
     }
 
     // NOTE: skip serialization of charts (type Chart[] is ignored)} 
 
+    // NOTE: skip serialization of composed (type unknown[] is ignored)} 
+
     // NOTE: skip serialization of dateFormats (type Generic is ignored)} 
 
-    if (this.m_deg2rad != null) {  
-      buffer.writeAll(["\"deg2rad\":", this.m_deg2rad, ","], "");
+    if (this._deg2rad != null) {  
+      buffer.writeAll(["\"deg2rad\":", this._deg2rad, ","], "");
     }
 
     // NOTE: skip serialization of doc (type Document is ignored)} 
 
-    if (this.m_hasBidiBug != null) {  
-      buffer.writeAll(["\"hasBidiBug\":", this.m_hasBidiBug, ","], "");
+    if (this._hasBidiBug != null) {  
+      buffer.writeAll(["\"hasBidiBug\":", this._hasBidiBug, ","], "");
     }
 
-    if (this.m_hasTouch != null) {  
-      buffer.writeAll(["\"hasTouch\":", this.m_hasTouch, ","], "");
+    if (this._isChrome != null) {  
+      buffer.writeAll(["\"isChrome\":", this._isChrome, ","], "");
     }
 
-    if (this.m_isChrome != null) {  
-      buffer.writeAll(["\"isChrome\":", this.m_isChrome, ","], "");
+    if (this._isFirefox != null) {  
+      buffer.writeAll(["\"isFirefox\":", this._isFirefox, ","], "");
     }
 
-    if (this.m_isFirefox != null) {  
-      buffer.writeAll(["\"isFirefox\":", this.m_isFirefox, ","], "");
+    if (this._isMS != null) {  
+      buffer.writeAll(["\"isMS\":", this._isMS, ","], "");
     }
 
-    if (this.m_isMS != null) {  
-      buffer.writeAll(["\"isMS\":", this.m_isMS, ","], "");
+    if (this._isSafari != null) {  
+      buffer.writeAll(["\"isSafari\":", this._isSafari, ","], "");
     }
 
-    if (this.m_isSafari != null) {  
-      buffer.writeAll(["\"isSafari\":", this.m_isSafari, ","], "");
+    if (this._isTouchDevice != null) {  
+      buffer.writeAll(["\"isTouchDevice\":", this._isTouchDevice, ","], "");
     }
 
-    if (this.m_isTouchDevice != null) {  
-      buffer.writeAll(["\"isTouchDevice\":", this.m_isTouchDevice, ","], "");
-    }
-
-    if (this.m_isWebKit != null) {  
-      buffer.writeAll(["\"isWebKit\":", this.m_isWebKit, ","], "");
+    if (this._isWebKit != null) {  
+      buffer.writeAll(["\"isWebKit\":", this._isWebKit, ","], "");
     }
 
     // NOTE: skip serialization of marginNames (type readonly string[] is ignored)} 
 
     // NOTE: skip serialization of nav (type Navigator is ignored)} 
 
-    if (this.m_product != null) {  
-      buffer.writeAll(["\"product\":", this.m_product, ","], "");
+    if (this._product != null) {  
+      buffer.writeAll(["\"product\":\`", this._product, "\`,"], "");
     }
 
     // NOTE: skip serialization of seriesTypes (type SeriesTypeRegistry is ignored)} 
 
-    if (this.m_supportsPassiveEvents != null) {  
-      buffer.writeAll(["\"supportsPassiveEvents\":", this.m_supportsPassiveEvents, ","], "");
+    if (this._supportsPassiveEvents != null) {  
+      buffer.writeAll(["\"supportsPassiveEvents\":", this._supportsPassiveEvents, ","], "");
     }
 
-    if (this.m_svg != null) {  
-      buffer.writeAll(["\"svg\":", this.m_svg, ","], "");
+    if (this._svg != null) {  
+      buffer.writeAll(["\"svg\":", this._svg, ","], "");
     }
 
     // NOTE: skip serialization of symbolSizes (type Generic is ignored)} 
 
     // NOTE: skip serialization of theme (type Generic is ignored)} 
 
-    if (this.m_userAgent != null) {  
-      buffer.writeAll(["\"userAgent\":", this.m_userAgent, ","], "");
+    if (this._userAgent != null) {  
+      buffer.writeAll(["\"userAgent\":\`", this._userAgent, "\`,"], "");
     }
 
-    if (this.m_version != null) {  
-      buffer.writeAll(["\"version\":", this.m_version, ","], "");
+    if (this._version != null) {  
+      buffer.writeAll(["\"version\":\`", this._version, "\`,"], "");
     }
 
     // NOTE: skip serialization of win (type Window & typeof globalThis is ignored)} 
+
+    // NOTE: skip serialization of navigators (type StandaloneNavigator[] is ignored)} 
   }
 
 }

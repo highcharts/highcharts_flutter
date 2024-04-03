@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -30,17 +30,17 @@ class BoxPlotSeriesOptions extends ColumnSeriesOptions {
    * 
    * Defaults to 'Solid'. 
       */
-  String? m_boxDashStyle;  
+  String? _boxDashStyle;  
 
   String get boxDashStyle { 
-    if (this.m_boxDashStyle == null) {
-      this.m_boxDashStyle = "";
+    if (this._boxDashStyle == null) {
+      this._boxDashStyle = "";
     }
-    return this.m_boxDashStyle!;
+    return this._boxDashStyle!;
   }
 
   void set boxDashStyle (String v) {
-    this.m_boxDashStyle = v;
+    this._boxDashStyle = v;
   }
     
   /**
@@ -51,17 +51,17 @@ class BoxPlotSeriesOptions extends ColumnSeriesOptions {
    * 
    * Defaults to '#ffffff'. 
       */
-  String? m_fillColor;  
+  String? _fillColor;  
 
   String get fillColor { 
-    if (this.m_fillColor == null) {
-      this.m_fillColor = "";
+    if (this._fillColor == null) {
+      this._fillColor = "";
     }
-    return this.m_fillColor!;
+    return this._fillColor!;
   }
 
   void set fillColor (String v) {
-    this.m_fillColor = v;
+    this._fillColor = v;
   }
     
   /**
@@ -71,17 +71,17 @@ class BoxPlotSeriesOptions extends ColumnSeriesOptions {
    * In styled mode, the median stroke width can be set with the
    * `.highcharts-boxplot-median` class.  
       */
-  GradientColor? m_medianColor;  
+  GradientColor? _medianColor;  
 
   GradientColor get medianColor { 
-    if (this.m_medianColor == null) {
-      this.m_medianColor = GradientColor();
+    if (this._medianColor == null) {
+      this._medianColor = GradientColor();
     }
-    return this.m_medianColor!;
+    return this._medianColor!;
   }
 
   void set medianColor (GradientColor v) {
-    this.m_medianColor = v;
+    this._medianColor = v;
   }
     
   /**
@@ -89,17 +89,17 @@ class BoxPlotSeriesOptions extends ColumnSeriesOptions {
    * 
    * Defaults to 'Solid'. 
       */
-  String? m_medianDashStyle;  
+  String? _medianDashStyle;  
 
   String get medianDashStyle { 
-    if (this.m_medianDashStyle == null) {
-      this.m_medianDashStyle = "";
+    if (this._medianDashStyle == null) {
+      this._medianDashStyle = "";
     }
-    return this.m_medianDashStyle!;
+    return this._medianDashStyle!;
   }
 
   void set medianDashStyle (String v) {
-    this.m_medianDashStyle = v;
+    this._medianDashStyle = v;
   }
     
   /**
@@ -111,17 +111,17 @@ class BoxPlotSeriesOptions extends ColumnSeriesOptions {
    * 
    * Defaults to '2'. 
       */
-  double? m_medianWidth;  
+  double? _medianWidth;  
 
   double get medianWidth { 
-    if (this.m_medianWidth == null) {
-      this.m_medianWidth = 0;
+    if (this._medianWidth == null) {
+      this._medianWidth = 0;
     }
-    return this.m_medianWidth!;
+    return this._medianWidth!;
   }
 
   void set medianWidth (double v) {
-    this.m_medianWidth = v;
+    this._medianWidth = v;
   }
     
   // NOTE: states skipped - type Generic is ignored in gen
@@ -133,17 +133,17 @@ class BoxPlotSeriesOptions extends ColumnSeriesOptions {
    * In styled mode, the stem stroke can be set with the
    * `.highcharts-boxplot-stem` class.  
       */
-  String? m_stemColor;  
+  String? _stemColor;  
 
   String get stemColor { 
-    if (this.m_stemColor == null) {
-      this.m_stemColor = "";
+    if (this._stemColor == null) {
+      this._stemColor = "";
     }
-    return this.m_stemColor!;
+    return this._stemColor!;
   }
 
   void set stemColor (String v) {
-    this.m_stemColor = v;
+    this._stemColor = v;
   }
     
   /**
@@ -152,17 +152,17 @@ class BoxPlotSeriesOptions extends ColumnSeriesOptions {
    * 
    * Defaults to 'Solid'. 
       */
-  String? m_stemDashStyle;  
+  String? _stemDashStyle;  
 
   String get stemDashStyle { 
-    if (this.m_stemDashStyle == null) {
-      this.m_stemDashStyle = "";
+    if (this._stemDashStyle == null) {
+      this._stemDashStyle = "";
     }
-    return this.m_stemDashStyle!;
+    return this._stemDashStyle!;
   }
 
   void set stemDashStyle (String v) {
-    this.m_stemDashStyle = v;
+    this._stemDashStyle = v;
   }
     
   /**
@@ -173,17 +173,17 @@ class BoxPlotSeriesOptions extends ColumnSeriesOptions {
    * In styled mode, the stem stroke width can be set with the
    * `.highcharts-boxplot-stem` class.  
       */
-  double? m_stemWidth;  
+  double? _stemWidth;  
 
   double get stemWidth { 
-    if (this.m_stemWidth == null) {
-      this.m_stemWidth = 0;
+    if (this._stemWidth == null) {
+      this._stemWidth = 0;
     }
-    return this.m_stemWidth!;
+    return this._stemWidth!;
   }
 
   void set stemWidth (double v) {
-    this.m_stemWidth = v;
+    this._stemWidth = v;
   }
     
   /**
@@ -193,17 +193,17 @@ class BoxPlotSeriesOptions extends ColumnSeriesOptions {
    * In styled mode, the whisker stroke can be set with the
    * `.highcharts-boxplot-whisker` class .  
       */
-  String? m_whiskerColor;  
+  String? _whiskerColor;  
 
   String get whiskerColor { 
-    if (this.m_whiskerColor == null) {
-      this.m_whiskerColor = "";
+    if (this._whiskerColor == null) {
+      this._whiskerColor = "";
     }
-    return this.m_whiskerColor!;
+    return this._whiskerColor!;
   }
 
   void set whiskerColor (String v) {
-    this.m_whiskerColor = v;
+    this._whiskerColor = v;
   }
     
   /**
@@ -211,17 +211,17 @@ class BoxPlotSeriesOptions extends ColumnSeriesOptions {
    * 
    * Defaults to 'Solid'. 
       */
-  String? m_whiskerDashStyle;  
+  String? _whiskerDashStyle;  
 
   String get whiskerDashStyle { 
-    if (this.m_whiskerDashStyle == null) {
-      this.m_whiskerDashStyle = "";
+    if (this._whiskerDashStyle == null) {
+      this._whiskerDashStyle = "";
     }
-    return this.m_whiskerDashStyle!;
+    return this._whiskerDashStyle!;
   }
 
   void set whiskerDashStyle (String v) {
-    this.m_whiskerDashStyle = v;
+    this._whiskerDashStyle = v;
   }
     
   /**
@@ -231,17 +231,17 @@ class BoxPlotSeriesOptions extends ColumnSeriesOptions {
    * 
    * Defaults to '50%'. 
       */
-  String? m_whiskerLength;  
+  String? _whiskerLength;  
 
   String get whiskerLength { 
-    if (this.m_whiskerLength == null) {
-      this.m_whiskerLength = "";
+    if (this._whiskerLength == null) {
+      this._whiskerLength = "";
     }
-    return this.m_whiskerLength!;
+    return this._whiskerLength!;
   }
 
   void set whiskerLength (String v) {
-    this.m_whiskerLength = v;
+    this._whiskerLength = v;
   }
     
   /**
@@ -254,17 +254,17 @@ class BoxPlotSeriesOptions extends ColumnSeriesOptions {
    * 
    * Defaults to '2'. 
       */
-  double? m_whiskerWidth;  
+  double? _whiskerWidth;  
 
   double get whiskerWidth { 
-    if (this.m_whiskerWidth == null) {
-      this.m_whiskerWidth = 0;
+    if (this._whiskerWidth == null) {
+      this._whiskerWidth = 0;
     }
-    return this.m_whiskerWidth!;
+    return this._whiskerWidth!;
   }
 
   void set whiskerWidth (double v) {
-    this.m_whiskerWidth = v;
+    this._whiskerWidth = v;
   }
     
 
@@ -275,54 +275,54 @@ class BoxPlotSeriesOptions extends ColumnSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_boxDashStyle != null) {  
-      buffer.writeAll(["\"boxDashStyle\":", this.m_boxDashStyle, ","], "");
+    if (this._boxDashStyle != null) {  
+      buffer.writeAll(["\"boxDashStyle\":\`", this._boxDashStyle, "\`,"], "");
     }
 
-    if (this.m_fillColor != null) {  
-      buffer.writeAll(["\"fillColor\":", this.m_fillColor, ","], "");
+    if (this._fillColor != null) {  
+      buffer.writeAll(["\"fillColor\":\`", this._fillColor, "\`,"], "");
     }
 
-    if (this.m_medianColor != null) {  
-      buffer.writeAll(["\"medianColor\":", this.m_medianColor?.toJSON(), ","], "");
+    if (this._medianColor != null) {  
+      buffer.writeAll(["\"medianColor\":", this._medianColor?.toJSON(), ","], "");
     }
 
-    if (this.m_medianDashStyle != null) {  
-      buffer.writeAll(["\"medianDashStyle\":", this.m_medianDashStyle, ","], "");
+    if (this._medianDashStyle != null) {  
+      buffer.writeAll(["\"medianDashStyle\":\`", this._medianDashStyle, "\`,"], "");
     }
 
-    if (this.m_medianWidth != null) {  
-      buffer.writeAll(["\"medianWidth\":", this.m_medianWidth, ","], "");
+    if (this._medianWidth != null) {  
+      buffer.writeAll(["\"medianWidth\":", this._medianWidth, ","], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 
 
-    if (this.m_stemColor != null) {  
-      buffer.writeAll(["\"stemColor\":", this.m_stemColor, ","], "");
+    if (this._stemColor != null) {  
+      buffer.writeAll(["\"stemColor\":\`", this._stemColor, "\`,"], "");
     }
 
-    if (this.m_stemDashStyle != null) {  
-      buffer.writeAll(["\"stemDashStyle\":", this.m_stemDashStyle, ","], "");
+    if (this._stemDashStyle != null) {  
+      buffer.writeAll(["\"stemDashStyle\":\`", this._stemDashStyle, "\`,"], "");
     }
 
-    if (this.m_stemWidth != null) {  
-      buffer.writeAll(["\"stemWidth\":", this.m_stemWidth, ","], "");
+    if (this._stemWidth != null) {  
+      buffer.writeAll(["\"stemWidth\":", this._stemWidth, ","], "");
     }
 
-    if (this.m_whiskerColor != null) {  
-      buffer.writeAll(["\"whiskerColor\":", this.m_whiskerColor, ","], "");
+    if (this._whiskerColor != null) {  
+      buffer.writeAll(["\"whiskerColor\":\`", this._whiskerColor, "\`,"], "");
     }
 
-    if (this.m_whiskerDashStyle != null) {  
-      buffer.writeAll(["\"whiskerDashStyle\":", this.m_whiskerDashStyle, ","], "");
+    if (this._whiskerDashStyle != null) {  
+      buffer.writeAll(["\"whiskerDashStyle\":\`", this._whiskerDashStyle, "\`,"], "");
     }
 
-    if (this.m_whiskerLength != null) {  
-      buffer.writeAll(["\"whiskerLength\":", this.m_whiskerLength, ","], "");
+    if (this._whiskerLength != null) {  
+      buffer.writeAll(["\"whiskerLength\":\`", this._whiskerLength, "\`,"], "");
     }
 
-    if (this.m_whiskerWidth != null) {  
-      buffer.writeAll(["\"whiskerWidth\":", this.m_whiskerWidth, ","], "");
+    if (this._whiskerWidth != null) {  
+      buffer.writeAll(["\"whiskerWidth\":", this._whiskerWidth, ","], "");
     }
   }
 

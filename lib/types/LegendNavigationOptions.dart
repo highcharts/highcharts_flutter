@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,56 +24,56 @@ import 'OptionFragment.dart';
  */
 class LegendNavigationOptions extends OptionFragment {
   LegendNavigationOptions() : super();
-  String? m_activeColor;  
+  String? _activeColor;  
 
   String get activeColor { 
-    if (this.m_activeColor == null) {
-      this.m_activeColor = "";
+    if (this._activeColor == null) {
+      this._activeColor = "";
     }
-    return this.m_activeColor!;
+    return this._activeColor!;
   }
 
   void set activeColor (String v) {
-    this.m_activeColor = v;
+    this._activeColor = v;
   }
     
-  double? m_arrowSize;  
+  double? _arrowSize;  
 
   double get arrowSize { 
-    if (this.m_arrowSize == null) {
-      this.m_arrowSize = 0;
+    if (this._arrowSize == null) {
+      this._arrowSize = 0;
     }
-    return this.m_arrowSize!;
+    return this._arrowSize!;
   }
 
   void set arrowSize (double v) {
-    this.m_arrowSize = v;
+    this._arrowSize = v;
   }
     
-  bool? m_enabled;  
+  bool? _enabled;  
 
   bool get enabled { 
-    if (this.m_enabled == null) {
-      this.m_enabled = false;
+    if (this._enabled == null) {
+      this._enabled = false;
     }
-    return this.m_enabled!;
+    return this._enabled!;
   }
 
   void set enabled (bool v) {
-    this.m_enabled = v;
+    this._enabled = v;
   }
     
-  String? m_inactiveColor;  
+  String? _inactiveColor;  
 
   String get inactiveColor { 
-    if (this.m_inactiveColor == null) {
-      this.m_inactiveColor = "";
+    if (this._inactiveColor == null) {
+      this._inactiveColor = "";
     }
-    return this.m_inactiveColor!;
+    return this._inactiveColor!;
   }
 
   void set inactiveColor (String v) {
-    this.m_inactiveColor = v;
+    this._inactiveColor = v;
   }
     
 
@@ -84,22 +84,22 @@ class LegendNavigationOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_activeColor != null) {  
-      buffer.writeAll(["\"activeColor\":", this.m_activeColor, ","], "");
+    if (this._activeColor != null) {  
+      buffer.writeAll(["\"activeColor\":\`", this._activeColor, "\`,"], "");
     }
 
     // NOTE: skip serialization of animation (type Generic is ignored)} 
 
-    if (this.m_arrowSize != null) {  
-      buffer.writeAll(["\"arrowSize\":", this.m_arrowSize, ","], "");
+    if (this._arrowSize != null) {  
+      buffer.writeAll(["\"arrowSize\":", this._arrowSize, ","], "");
     }
 
-    if (this.m_enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this.m_enabled, ","], "");
+    if (this._enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this._enabled, ","], "");
     }
 
-    if (this.m_inactiveColor != null) {  
-      buffer.writeAll(["\"inactiveColor\":", this.m_inactiveColor, ","], "");
+    if (this._inactiveColor != null) {  
+      buffer.writeAll(["\"inactiveColor\":\`", this._inactiveColor, "\`,"], "");
     }
 
     // NOTE: skip serialization of style (type CSSObject is ignored)} 

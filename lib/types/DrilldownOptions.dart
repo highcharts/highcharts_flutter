@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -27,30 +27,30 @@ import 'OptionFragment.dart';
  */
 class DrilldownOptions extends OptionFragment {
   DrilldownOptions() : super();
-  bool? m_allowPointDrilldown;  
+  bool? _allowPointDrilldown;  
 
   bool get allowPointDrilldown { 
-    if (this.m_allowPointDrilldown == null) {
-      this.m_allowPointDrilldown = false;
+    if (this._allowPointDrilldown == null) {
+      this._allowPointDrilldown = false;
     }
-    return this.m_allowPointDrilldown!;
+    return this._allowPointDrilldown!;
   }
 
   void set allowPointDrilldown (bool v) {
-    this.m_allowPointDrilldown = v;
+    this._allowPointDrilldown = v;
   }
     
-  bool? m_mapZooming;  
+  bool? _mapZooming;  
 
   bool get mapZooming { 
-    if (this.m_mapZooming == null) {
-      this.m_mapZooming = false;
+    if (this._mapZooming == null) {
+      this._mapZooming = false;
     }
-    return this.m_mapZooming!;
+    return this._mapZooming!;
   }
 
   void set mapZooming (bool v) {
-    this.m_mapZooming = v;
+    this._mapZooming = v;
   }
     
 
@@ -67,8 +67,8 @@ class DrilldownOptions extends OptionFragment {
 
     // NOTE: skip serialization of activeDataLabelStyle (type DrilldownActiveDataLabelStyleOptions is ignored)} 
 
-    if (this.m_allowPointDrilldown != null) {  
-      buffer.writeAll(["\"allowPointDrilldown\":", this.m_allowPointDrilldown, ","], "");
+    if (this._allowPointDrilldown != null) {  
+      buffer.writeAll(["\"allowPointDrilldown\":", this._allowPointDrilldown, ","], "");
     }
 
     // NOTE: skip serialization of animation (type Generic is ignored)} 
@@ -79,8 +79,8 @@ class DrilldownOptions extends OptionFragment {
 
     // NOTE: skip serialization of series (type SeriesOptions[] is ignored)} 
 
-    if (this.m_mapZooming != null) {  
-      buffer.writeAll(["\"mapZooming\":", this.m_mapZooming, ","], "");
+    if (this._mapZooming != null) {  
+      buffer.writeAll(["\"mapZooming\":", this._mapZooming, ","], "");
     }
   }
 

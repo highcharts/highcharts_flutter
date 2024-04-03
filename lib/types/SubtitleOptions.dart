@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -30,17 +30,17 @@ class SubtitleOptions extends OptionFragment {
    * 
    * Defaults to 'center'. 
       */
-  String? m_align;  
+  String? _align;  
 
   String get align { 
-    if (this.m_align == null) {
-      this.m_align = "";
+    if (this._align == null) {
+      this._align = "";
     }
-    return this.m_align!;
+    return this._align!;
   }
 
   void set align (String v) {
-    this.m_align = v;
+    this._align = v;
   }
     
   /**
@@ -49,17 +49,17 @@ class SubtitleOptions extends OptionFragment {
    * 
    * Defaults to 'false'. 
       */
-  bool? m_floating;  
+  bool? _floating;  
 
   bool get floating { 
-    if (this.m_floating == null) {
-      this.m_floating = false;
+    if (this._floating == null) {
+      this._floating = false;
     }
-    return this.m_floating!;
+    return this._floating!;
   }
 
   void set floating (bool v) {
-    this.m_floating = v;
+    this._floating = v;
   }
     
   /**
@@ -70,33 +70,33 @@ class SubtitleOptions extends OptionFragment {
    * 
    * Defaults to '{"color": "#666666"}'. 
       */
-  CSSObject? m_style;  
+  CSSObject? _style;  
 
   CSSObject get style { 
-    if (this.m_style == null) {
-      this.m_style = CSSObject();
+    if (this._style == null) {
+      this._style = CSSObject();
     }
-    return this.m_style!;
+    return this._style!;
   }
 
   void set style (CSSObject v) {
-    this.m_style = v;
+    this._style = v;
   }
     
   /**
    * The subtitle of the chart.  
       */
-  String? m_text;  
+  String? _text;  
 
   String get text { 
-    if (this.m_text == null) {
-      this.m_text = "";
+    if (this._text == null) {
+      this._text = "";
     }
-    return this.m_text!;
+    return this._text!;
   }
 
   void set text (String v) {
-    this.m_text = v;
+    this._text = v;
   }
     
   /**
@@ -106,17 +106,17 @@ class SubtitleOptions extends OptionFragment {
    * 
    * Defaults to 'false'. 
       */
-  bool? m_useHTML;  
+  bool? _useHTML;  
 
   bool get useHTML { 
-    if (this.m_useHTML == null) {
-      this.m_useHTML = false;
+    if (this._useHTML == null) {
+      this._useHTML = false;
     }
-    return this.m_useHTML!;
+    return this._useHTML!;
   }
 
   void set useHTML (bool v) {
-    this.m_useHTML = v;
+    this._useHTML = v;
   }
     
   /**
@@ -124,17 +124,17 @@ class SubtitleOptions extends OptionFragment {
    * `"middle"` and `"bottom"`. When middle, the subtitle behaves as
    * floating.  
       */
-  String? m_verticalAlign;  
+  String? _verticalAlign;  
 
   String get verticalAlign { 
-    if (this.m_verticalAlign == null) {
-      this.m_verticalAlign = "";
+    if (this._verticalAlign == null) {
+      this._verticalAlign = "";
     }
-    return this.m_verticalAlign!;
+    return this._verticalAlign!;
   }
 
   void set verticalAlign (String v) {
-    this.m_verticalAlign = v;
+    this._verticalAlign = v;
   }
     
   /**
@@ -143,17 +143,17 @@ class SubtitleOptions extends OptionFragment {
    * 
    * Defaults to '-44'. 
       */
-  double? m_widthAdjust;  
+  double? _widthAdjust;  
 
   double get widthAdjust { 
-    if (this.m_widthAdjust == null) {
-      this.m_widthAdjust = 0;
+    if (this._widthAdjust == null) {
+      this._widthAdjust = 0;
     }
-    return this.m_widthAdjust!;
+    return this._widthAdjust!;
   }
 
   void set widthAdjust (double v) {
-    this.m_widthAdjust = v;
+    this._widthAdjust = v;
   }
     
   /**
@@ -162,17 +162,17 @@ class SubtitleOptions extends OptionFragment {
    * 
    * Defaults to '0'. 
       */
-  double? m_x;  
+  double? _x;  
 
   double get x { 
-    if (this.m_x == null) {
-      this.m_x = 0;
+    if (this._x == null) {
+      this._x = 0;
     }
-    return this.m_x!;
+    return this._x!;
   }
 
   void set x (double v) {
-    this.m_x = v;
+    this._x = v;
   }
     
   /**
@@ -180,17 +180,30 @@ class SubtitleOptions extends OptionFragment {
    * `chart.spacingTop` and `chart.spacingBottom`. By default the subtitle
    * is laid out below the title unless the title is floating.  
       */
-  double? m_y;  
+  double? _y;  
 
   double get y { 
-    if (this.m_y == null) {
-      this.m_y = 0;
+    if (this._y == null) {
+      this._y = 0;
     }
-    return this.m_y!;
+    return this._y!;
   }
 
   void set y (double v) {
-    this.m_y = v;
+    this._y = v;
+  }
+    
+  String? _type;  
+
+  String get type { 
+    if (this._type == null) {
+      this._type = "";
+    }
+    return this._type!;
+  }
+
+  void set type (String v) {
+    this._type = v;
   }
     
 
@@ -201,40 +214,44 @@ class SubtitleOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_align != null) {  
-      buffer.writeAll(["\"align\":", this.m_align, ","], "");
+    if (this._align != null) {  
+      buffer.writeAll(["\"align\":\`", this._align, "\`,"], "");
     }
 
-    if (this.m_floating != null) {  
-      buffer.writeAll(["\"floating\":", this.m_floating, ","], "");
+    if (this._floating != null) {  
+      buffer.writeAll(["\"floating\":", this._floating, ","], "");
     }
 
-    if (this.m_style != null) {  
-      buffer.writeAll(["\"style\":", this.m_style?.toJSON(), ","], "");
+    if (this._style != null) {  
+      buffer.writeAll(["\"style\":", this._style?.toJSON(), ","], "");
     }
 
-    if (this.m_text != null) {  
-      buffer.writeAll(["\"text\":", this.m_text, ","], "");
+    if (this._text != null) {  
+      buffer.writeAll(["\"text\":\`", this._text, "\`,"], "");
     }
 
-    if (this.m_useHTML != null) {  
-      buffer.writeAll(["\"useHTML\":", this.m_useHTML, ","], "");
+    if (this._useHTML != null) {  
+      buffer.writeAll(["\"useHTML\":", this._useHTML, ","], "");
     }
 
-    if (this.m_verticalAlign != null) {  
-      buffer.writeAll(["\"verticalAlign\":", this.m_verticalAlign, ","], "");
+    if (this._verticalAlign != null) {  
+      buffer.writeAll(["\"verticalAlign\":\`", this._verticalAlign, "\`,"], "");
     }
 
-    if (this.m_widthAdjust != null) {  
-      buffer.writeAll(["\"widthAdjust\":", this.m_widthAdjust, ","], "");
+    if (this._widthAdjust != null) {  
+      buffer.writeAll(["\"widthAdjust\":", this._widthAdjust, ","], "");
     }
 
-    if (this.m_x != null) {  
-      buffer.writeAll(["\"x\":", this.m_x, ","], "");
+    if (this._x != null) {  
+      buffer.writeAll(["\"x\":", this._x, ","], "");
     }
 
-    if (this.m_y != null) {  
-      buffer.writeAll(["\"y\":", this.m_y, ","], "");
+    if (this._y != null) {  
+      buffer.writeAll(["\"y\":", this._y, ","], "");
+    }
+
+    if (this._type != null) {  
+      buffer.writeAll(["\"type\":\`", this._type, "\`,"], "");
     }
   }
 

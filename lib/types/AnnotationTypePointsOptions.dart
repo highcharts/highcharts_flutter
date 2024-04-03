@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -23,69 +23,69 @@ import 'OptionFragment.dart';
  */
 class AnnotationTypePointsOptions extends OptionFragment {
   AnnotationTypePointsOptions() : super();
-  double? m_controlPoint;  
+  double? _controlPoint;  
 
   double get controlPoint { 
-    if (this.m_controlPoint == null) {
-      this.m_controlPoint = 0;
+    if (this._controlPoint == null) {
+      this._controlPoint = 0;
     }
-    return this.m_controlPoint!;
+    return this._controlPoint!;
   }
 
   void set controlPoint (double v) {
-    this.m_controlPoint = v;
+    this._controlPoint = v;
   }
     
-  double? m_x;  
+  double? _x;  
 
   double get x { 
-    if (this.m_x == null) {
-      this.m_x = 0;
+    if (this._x == null) {
+      this._x = 0;
     }
-    return this.m_x!;
+    return this._x!;
   }
 
   void set x (double v) {
-    this.m_x = v;
+    this._x = v;
   }
     
-  double? m_xAxis;  
+  double? _xAxis;  
 
   double get xAxis { 
-    if (this.m_xAxis == null) {
-      this.m_xAxis = 0;
+    if (this._xAxis == null) {
+      this._xAxis = 0;
     }
-    return this.m_xAxis!;
+    return this._xAxis!;
   }
 
   void set xAxis (double v) {
-    this.m_xAxis = v;
+    this._xAxis = v;
   }
     
-  double? m_y;  
+  double? _y;  
 
   double get y { 
-    if (this.m_y == null) {
-      this.m_y = 0;
+    if (this._y == null) {
+      this._y = 0;
     }
-    return this.m_y!;
+    return this._y!;
   }
 
   void set y (double v) {
-    this.m_y = v;
+    this._y = v;
   }
     
-  double? m_yAxis;  
+  double? _yAxis;  
 
   double get yAxis { 
-    if (this.m_yAxis == null) {
-      this.m_yAxis = 0;
+    if (this._yAxis == null) {
+      this._yAxis = 0;
     }
-    return this.m_yAxis!;
+    return this._yAxis!;
   }
 
   void set yAxis (double v) {
-    this.m_yAxis = v;
+    this._yAxis = v;
   }
     
 
@@ -96,24 +96,24 @@ class AnnotationTypePointsOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.m_controlPoint != null) {  
-      buffer.writeAll(["\"controlPoint\":", this.m_controlPoint, ","], "");
+    if (this._controlPoint != null) {  
+      buffer.writeAll(["\"controlPoint\":", this._controlPoint, ","], "");
     }
 
-    if (this.m_x != null) {  
-      buffer.writeAll(["\"x\":", this.m_x, ","], "");
+    if (this._x != null) {  
+      buffer.writeAll(["\"x\":", this._x, ","], "");
     }
 
-    if (this.m_xAxis != null) {  
-      buffer.writeAll(["\"xAxis\":", this.m_xAxis, ","], "");
+    if (this._xAxis != null) {  
+      buffer.writeAll(["\"xAxis\":", this._xAxis, ","], "");
     }
 
-    if (this.m_y != null) {  
-      buffer.writeAll(["\"y\":", this.m_y, ","], "");
+    if (this._y != null) {  
+      buffer.writeAll(["\"y\":", this._y, ","], "");
     }
 
-    if (this.m_yAxis != null) {  
-      buffer.writeAll(["\"yAxis\":", this.m_yAxis, ","], "");
+    if (this._yAxis != null) {  
+      buffer.writeAll(["\"yAxis\":", this._yAxis, ","], "");
     }
   }
 

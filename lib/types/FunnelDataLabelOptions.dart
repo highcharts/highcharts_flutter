@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-03-22
+ * Build stamp: 2024-04-03
  *
  */ 
 
@@ -24,17 +24,17 @@ import 'OptionFragment.dart';
  */
 class FunnelDataLabelOptions extends PieDataLabelOptions {
   FunnelDataLabelOptions() : super();
-  String? m_position;  
+  String? _position;  
 
   String get position { 
-    if (this.m_position == null) {
-      this.m_position = "";
+    if (this._position == null) {
+      this._position = "";
     }
-    return this.m_position!;
+    return this._position!;
   }
 
   void set position (String v) {
-    this.m_position = v;
+    this._position = v;
   }
     
 
@@ -45,8 +45,8 @@ class FunnelDataLabelOptions extends PieDataLabelOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.m_position != null) {  
-      buffer.writeAll(["\"position\":", this.m_position, ","], "");
+    if (this._position != null) {  
+      buffer.writeAll(["\"position\":\`", this._position, "\`,"], "");
     }
   }
 
