@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -25,9 +25,12 @@ import 'OptionFragment.dart';
  * GetElementContainerOptions 
  */
 class GetElementContainerOptions extends OptionFragment {
-  GetElementContainerOptions() : super();
-  bool? _render;  
-
+  GetElementContainerOptions( {
+    this.render = null,
+    this.elementId = null
+  }) : super();
+  bool? render;
+    /*
   bool get render { 
     if (this._render == null) {
       this._render = false;
@@ -38,9 +41,10 @@ class GetElementContainerOptions extends OptionFragment {
   void set render (bool v) {
     this._render = v;
   }
+    */
     
-  String? _elementId;  
-
+  String? elementId;
+    /*
   String get elementId { 
     if (this._elementId == null) {
       this._elementId = "";
@@ -51,6 +55,7 @@ class GetElementContainerOptions extends OptionFragment {
   void set elementId (String v) {
     this._elementId = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -60,8 +65,8 @@ class GetElementContainerOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._render != null) {  
-      buffer.writeAll(["\"render\":", this._render, ","], "");
+    if (this.render != null) {  
+      buffer.writeAll(["\"render\":", this.render, ","], "");
     }
 
     // NOTE: skip serialization of parentContainer (type HTMLElement is ignored)} 
@@ -72,8 +77,8 @@ class GetElementContainerOptions extends OptionFragment {
 
     // NOTE: skip serialization of element (type HTMLElement is ignored)} 
 
-    if (this._elementId != null) {  
-      buffer.writeAll(["\"elementId\":\`", this._elementId, "\`,"], "");
+    if (this.elementId != null) {  
+      buffer.writeAll(["\"elementId\":\`", this.elementId, "\`,"], "");
     }
   }
 

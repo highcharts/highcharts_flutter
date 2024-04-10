@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,13 @@ import 'OptionFragment.dart';
  * ProviderDefinition 
  */
 class ProviderDefinition extends OptionFragment {
-  ProviderDefinition() : super();
-  String? _defaultCredits;  
-
+  ProviderDefinition( {
+    this.defaultCredits = null,
+    this.initialProjectionName = null,
+    this.requiresApiKey = null
+  }) : super();
+  String? defaultCredits;
+    /*
   String get defaultCredits { 
     if (this._defaultCredits == null) {
       this._defaultCredits = "";
@@ -36,9 +40,10 @@ class ProviderDefinition extends OptionFragment {
   void set defaultCredits (String v) {
     this._defaultCredits = v;
   }
+    */
     
-  String? _initialProjectionName;  
-
+  String? initialProjectionName;
+    /*
   String get initialProjectionName { 
     if (this._initialProjectionName == null) {
       this._initialProjectionName = "";
@@ -49,9 +54,10 @@ class ProviderDefinition extends OptionFragment {
   void set initialProjectionName (String v) {
     this._initialProjectionName = v;
   }
+    */
     
-  bool? _requiresApiKey;  
-
+  bool? requiresApiKey;
+    /*
   bool get requiresApiKey { 
     if (this._requiresApiKey == null) {
       this._requiresApiKey = false;
@@ -62,6 +68,7 @@ class ProviderDefinition extends OptionFragment {
   void set requiresApiKey (bool v) {
     this._requiresApiKey = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -71,16 +78,16 @@ class ProviderDefinition extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._defaultCredits != null) {  
-      buffer.writeAll(["\"defaultCredits\":\`", this._defaultCredits, "\`,"], "");
+    if (this.defaultCredits != null) {  
+      buffer.writeAll(["\"defaultCredits\":\`", this.defaultCredits, "\`,"], "");
     }
 
-    if (this._initialProjectionName != null) {  
-      buffer.writeAll(["\"initialProjectionName\":\`", this._initialProjectionName, "\`,"], "");
+    if (this.initialProjectionName != null) {  
+      buffer.writeAll(["\"initialProjectionName\":\`", this.initialProjectionName, "\`,"], "");
     }
 
-    if (this._requiresApiKey != null) {  
-      buffer.writeAll(["\"requiresApiKey\":", this._requiresApiKey, ","], "");
+    if (this.requiresApiKey != null) {  
+      buffer.writeAll(["\"requiresApiKey\":", this.requiresApiKey, ","], "");
     }
 
     // NOTE: skip serialization of subdomains (type string[] is ignored)} 

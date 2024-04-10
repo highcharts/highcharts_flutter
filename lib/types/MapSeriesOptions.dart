@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,15 +22,19 @@ import 'OptionFragment.dart';
  * MapSeriesOptions 
  */
 class MapSeriesOptions extends OptionFragment {
-  MapSeriesOptions() : super();
+  MapSeriesOptions( {
+    this.affectsMapView = null,
+    this.nullColor = null,
+    this.nullInteraction = null
+  }) : super();
   /**
    * Whether the MapView takes this series into account when computing the
    * default zoom and center of the map. 
    * 
    * Defaults to 'true'. 
       */
-  bool? _affectsMapView;  
-
+  bool? affectsMapView;
+    /*
   bool get affectsMapView { 
     if (this._affectsMapView == null) {
       this._affectsMapView = false;
@@ -41,6 +45,7 @@ class MapSeriesOptions extends OptionFragment {
   void set affectsMapView (bool v) {
     this._affectsMapView = v;
   }
+    */
     
   /**
    * The color to apply to null points.
@@ -50,8 +55,8 @@ class MapSeriesOptions extends OptionFragment {
    * 
    * Defaults to '#f7f7f7'. 
       */
-  String? _nullColor;  
-
+  String? nullColor;
+    /*
   String get nullColor { 
     if (this._nullColor == null) {
       this._nullColor = "";
@@ -62,13 +67,14 @@ class MapSeriesOptions extends OptionFragment {
   void set nullColor (String v) {
     this._nullColor = v;
   }
+    */
     
   /**
    * Whether to allow pointer interaction like tooltips and mouse events
    * on null points.  
       */
-  bool? _nullInteraction;  
-
+  bool? nullInteraction;
+    /*
   bool get nullInteraction { 
     if (this._nullInteraction == null) {
       this._nullInteraction = false;
@@ -79,6 +85,7 @@ class MapSeriesOptions extends OptionFragment {
   void set nullInteraction (bool v) {
     this._nullInteraction = v;
   }
+    */
     
   // NOTE: states skipped - type Generic is ignored in gen
 
@@ -90,18 +97,18 @@ class MapSeriesOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._affectsMapView != null) {  
-      buffer.writeAll(["\"affectsMapView\":", this._affectsMapView, ","], "");
+    if (this.affectsMapView != null) {  
+      buffer.writeAll(["\"affectsMapView\":", this.affectsMapView, ","], "");
     }
 
     // NOTE: skip serialization of data (type MapPointOptions)[] is ignored)} 
 
-    if (this._nullColor != null) {  
-      buffer.writeAll(["\"nullColor\":\`", this._nullColor, "\`,"], "");
+    if (this.nullColor != null) {  
+      buffer.writeAll(["\"nullColor\":\`", this.nullColor, "\`,"], "");
     }
 
-    if (this._nullInteraction != null) {  
-      buffer.writeAll(["\"nullInteraction\":", this._nullInteraction, ","], "");
+    if (this.nullInteraction != null) {  
+      buffer.writeAll(["\"nullInteraction\":", this.nullInteraction, ","], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 

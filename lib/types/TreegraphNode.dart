@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -24,9 +24,16 @@ import 'OptionFragment.dart';
  * TreegraphNode 
  */
 class TreegraphNode extends OptionFragment {
-  TreegraphNode() : super();
-  double? _column;  
-
+  TreegraphNode( {
+    this.column = null,
+    this.relativeXPosition = null,
+    this.xPosition = null,
+    this.yPosition = null,
+    this.nodeSizeX = null,
+    this.nodeSizeY = null
+  }) : super();
+  double? column;
+    /*
   double get column { 
     if (this._column == null) {
       this._column = 0;
@@ -37,9 +44,10 @@ class TreegraphNode extends OptionFragment {
   void set column (double v) {
     this._column = v;
   }
+    */
     
-  double? _relativeXPosition;  
-
+  double? relativeXPosition;
+    /*
   double get relativeXPosition { 
     if (this._relativeXPosition == null) {
       this._relativeXPosition = 0;
@@ -50,9 +58,10 @@ class TreegraphNode extends OptionFragment {
   void set relativeXPosition (double v) {
     this._relativeXPosition = v;
   }
+    */
     
-  double? _xPosition;  
-
+  double? xPosition;
+    /*
   double get xPosition { 
     if (this._xPosition == null) {
       this._xPosition = 0;
@@ -63,9 +72,10 @@ class TreegraphNode extends OptionFragment {
   void set xPosition (double v) {
     this._xPosition = v;
   }
+    */
     
-  double? _yPosition;  
-
+  double? yPosition;
+    /*
   double get yPosition { 
     if (this._yPosition == null) {
       this._yPosition = 0;
@@ -76,9 +86,10 @@ class TreegraphNode extends OptionFragment {
   void set yPosition (double v) {
     this._yPosition = v;
   }
+    */
     
-  double? _nodeSizeX;  
-
+  double? nodeSizeX;
+    /*
   double get nodeSizeX { 
     if (this._nodeSizeX == null) {
       this._nodeSizeX = 0;
@@ -89,9 +100,10 @@ class TreegraphNode extends OptionFragment {
   void set nodeSizeX (double v) {
     this._nodeSizeX = v;
   }
+    */
     
-  double? _nodeSizeY;  
-
+  double? nodeSizeY;
+    /*
   double get nodeSizeY { 
     if (this._nodeSizeY == null) {
       this._nodeSizeY = 0;
@@ -102,6 +114,7 @@ class TreegraphNode extends OptionFragment {
   void set nodeSizeY (double v) {
     this._nodeSizeY = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -115,30 +128,30 @@ class TreegraphNode extends OptionFragment {
 
     // NOTE: skip serialization of ancestor (type TreegraphNode is ignored)} 
 
-    if (this._column != null) {  
-      buffer.writeAll(["\"column\":", this._column, ","], "");
+    if (this.column != null) {  
+      buffer.writeAll(["\"column\":", this.column, ","], "");
     }
 
     // NOTE: skip serialization of parentNode (type TreegraphNode is ignored)} 
 
-    if (this._relativeXPosition != null) {  
-      buffer.writeAll(["\"relativeXPosition\":", this._relativeXPosition, ","], "");
+    if (this.relativeXPosition != null) {  
+      buffer.writeAll(["\"relativeXPosition\":", this.relativeXPosition, ","], "");
     }
 
-    if (this._xPosition != null) {  
-      buffer.writeAll(["\"xPosition\":", this._xPosition, ","], "");
+    if (this.xPosition != null) {  
+      buffer.writeAll(["\"xPosition\":", this.xPosition, ","], "");
     }
 
-    if (this._yPosition != null) {  
-      buffer.writeAll(["\"yPosition\":", this._yPosition, ","], "");
+    if (this.yPosition != null) {  
+      buffer.writeAll(["\"yPosition\":", this.yPosition, ","], "");
     }
 
-    if (this._nodeSizeX != null) {  
-      buffer.writeAll(["\"nodeSizeX\":", this._nodeSizeX, ","], "");
+    if (this.nodeSizeX != null) {  
+      buffer.writeAll(["\"nodeSizeX\":", this.nodeSizeX, ","], "");
     }
 
-    if (this._nodeSizeY != null) {  
-      buffer.writeAll(["\"nodeSizeY\":", this._nodeSizeY, ","], "");
+    if (this.nodeSizeY != null) {  
+      buffer.writeAll(["\"nodeSizeY\":", this.nodeSizeY, ","], "");
     }
 
     // NOTE: skip serialization of series (type TreegraphSeries is ignored)} 

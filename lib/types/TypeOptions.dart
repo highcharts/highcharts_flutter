@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -26,9 +26,15 @@ import 'OptionFragment.dart';
  * TypeOptions 
  */
 class TypeOptions extends AnnotationTypeOptions {
-  TypeOptions() : super();
-  double? _height;  
-
+  TypeOptions( {
+    this.height = null,
+    this.reversed = null,
+    this.lineColor = null,
+    this.type = null,
+    this.yOffset = null
+  }) : super();
+  double? height;
+    /*
   double get height { 
     if (this._height == null) {
       this._height = 0;
@@ -39,9 +45,10 @@ class TypeOptions extends AnnotationTypeOptions {
   void set height (double v) {
     this._height = v;
   }
+    */
     
-  bool? _reversed;  
-
+  bool? reversed;
+    /*
   bool get reversed { 
     if (this._reversed == null) {
       this._reversed = false;
@@ -52,9 +59,10 @@ class TypeOptions extends AnnotationTypeOptions {
   void set reversed (bool v) {
     this._reversed = v;
   }
+    */
     
-  String? _lineColor;  
-
+  String? lineColor;
+    /*
   String get lineColor { 
     if (this._lineColor == null) {
       this._lineColor = "";
@@ -65,9 +73,10 @@ class TypeOptions extends AnnotationTypeOptions {
   void set lineColor (String v) {
     this._lineColor = v;
   }
+    */
     
-  String? _type;  
-
+  String? type;
+    /*
   String get type { 
     if (this._type == null) {
       this._type = "";
@@ -78,9 +87,10 @@ class TypeOptions extends AnnotationTypeOptions {
   void set type (String v) {
     this._type = v;
   }
+    */
     
-  double? _yOffset;  
-
+  double? yOffset;
+    /*
   double get yOffset { 
     if (this._yOffset == null) {
       this._yOffset = 0;
@@ -91,6 +101,7 @@ class TypeOptions extends AnnotationTypeOptions {
   void set yOffset (double v) {
     this._yOffset = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -104,32 +115,32 @@ class TypeOptions extends AnnotationTypeOptions {
 
     // NOTE: skip serialization of labels (type string[] is ignored)} 
 
-    if (this._height != null) {  
-      buffer.writeAll(["\"height\":", this._height, ","], "");
+    if (this.height != null) {  
+      buffer.writeAll(["\"height\":", this.height, ","], "");
     }
 
     // NOTE: skip serialization of heightControlPoint (type ControlPointOptionsObject is ignored)} 
 
-    if (this._reversed != null) {  
-      buffer.writeAll(["\"reversed\":", this._reversed, ","], "");
+    if (this.reversed != null) {  
+      buffer.writeAll(["\"reversed\":", this.reversed, ","], "");
     }
 
     // NOTE: skip serialization of backgroundColors (type string[] is ignored)} 
 
     // NOTE: skip serialization of labels (type ControllableLabelOptions[] is ignored)} 
 
-    if (this._lineColor != null) {  
-      buffer.writeAll(["\"lineColor\":\`", this._lineColor, "\`,"], "");
+    if (this.lineColor != null) {  
+      buffer.writeAll(["\"lineColor\":\`", this.lineColor, "\`,"], "");
     }
 
     // NOTE: skip serialization of lineColors (type string[] is ignored)} 
 
-    if (this._type != null) {  
-      buffer.writeAll(["\"type\":\`", this._type, "\`,"], "");
+    if (this.type != null) {  
+      buffer.writeAll(["\"type\":\`", this.type, "\`,"], "");
     }
 
-    if (this._type != null) {  
-      buffer.writeAll(["\"type\":\`", this._type, "\`,"], "");
+    if (this.type != null) {  
+      buffer.writeAll(["\"type\":\`", this.type, "\`,"], "");
     }
 
     // NOTE: skip serialization of controlPointOptions (type ControlPointOptionsObject is ignored)} 
@@ -138,8 +149,8 @@ class TypeOptions extends AnnotationTypeOptions {
 
     // NOTE: skip serialization of outerBackground (type ControllableShapeOptions is ignored)} 
 
-    if (this._type != null) {  
-      buffer.writeAll(["\"type\":\`", this._type, "\`,"], "");
+    if (this.type != null) {  
+      buffer.writeAll(["\"type\":\`", this.type, "\`,"], "");
     }
 
     // NOTE: skip serialization of controlPointOptions (type ControlPointOptionsObject is ignored)} 
@@ -148,8 +159,8 @@ class TypeOptions extends AnnotationTypeOptions {
 
     // NOTE: skip serialization of label (type TypeLabelOptions is ignored)} 
 
-    if (this._yOffset != null) {  
-      buffer.writeAll(["\"yOffset\":", this._yOffset, ","], "");
+    if (this.yOffset != null) {  
+      buffer.writeAll(["\"yOffset\":", this.yOffset, ","], "");
     }
   }
 

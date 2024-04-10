@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,15 @@ import 'OptionFragment.dart';
  * DataClassOptions 
  */
 class DataClassOptions extends OptionFragment {
-  DataClassOptions() : super();
-  String? _color;  
-
+  DataClassOptions( {
+    this.color = null,
+    this.colorIndex = null,
+    this.from = null,
+    this.name = null,
+    this.to = null
+  }) : super();
+  String? color;
+    /*
   String get color { 
     if (this._color == null) {
       this._color = "";
@@ -35,9 +41,10 @@ class DataClassOptions extends OptionFragment {
   void set color (String v) {
     this._color = v;
   }
+    */
     
-  double? _colorIndex;  
-
+  double? colorIndex;
+    /*
   double get colorIndex { 
     if (this._colorIndex == null) {
       this._colorIndex = 0;
@@ -48,9 +55,10 @@ class DataClassOptions extends OptionFragment {
   void set colorIndex (double v) {
     this._colorIndex = v;
   }
+    */
     
-  double? _from;  
-
+  double? from;
+    /*
   double get from { 
     if (this._from == null) {
       this._from = 0;
@@ -61,9 +69,10 @@ class DataClassOptions extends OptionFragment {
   void set from (double v) {
     this._from = v;
   }
+    */
     
-  String? _name;  
-
+  String? name;
+    /*
   String get name { 
     if (this._name == null) {
       this._name = "";
@@ -74,9 +83,10 @@ class DataClassOptions extends OptionFragment {
   void set name (String v) {
     this._name = v;
   }
+    */
     
-  double? _to;  
-
+  double? to;
+    /*
   double get to { 
     if (this._to == null) {
       this._to = 0;
@@ -87,6 +97,7 @@ class DataClassOptions extends OptionFragment {
   void set to (double v) {
     this._to = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -96,24 +107,24 @@ class DataClassOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._color != null) {  
-      buffer.writeAll(["\"color\":\`", this._color, "\`,"], "");
+    if (this.color != null) {  
+      buffer.writeAll(["\"color\":\`", this.color, "\`,"], "");
     }
 
-    if (this._colorIndex != null) {  
-      buffer.writeAll(["\"colorIndex\":", this._colorIndex, ","], "");
+    if (this.colorIndex != null) {  
+      buffer.writeAll(["\"colorIndex\":", this.colorIndex, ","], "");
     }
 
-    if (this._from != null) {  
-      buffer.writeAll(["\"from\":", this._from, ","], "");
+    if (this.from != null) {  
+      buffer.writeAll(["\"from\":", this.from, ","], "");
     }
 
-    if (this._name != null) {  
-      buffer.writeAll(["\"name\":\`", this._name, "\`,"], "");
+    if (this.name != null) {  
+      buffer.writeAll(["\"name\":\`", this.name, "\`,"], "");
     }
 
-    if (this._to != null) {  
-      buffer.writeAll(["\"to\":", this._to, ","], "");
+    if (this.to != null) {  
+      buffer.writeAll(["\"to\":", this.to, ","], "");
     }
   }
 

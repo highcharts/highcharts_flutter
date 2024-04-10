@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -24,9 +24,15 @@ import 'OptionFragment.dart';
  * ControlPointOptionsObject 
  */
 class ControlPointOptionsObject extends OptionFragment {
-  ControlPointOptionsObject() : super();
-  double? _height;  
-
+  ControlPointOptionsObject( {
+    this.height = null,
+    this.index = null,
+    this.symbol = null,
+    this.visible = null,
+    this.width = null
+  }) : super();
+  double? height;
+    /*
   double get height { 
     if (this._height == null) {
       this._height = 0;
@@ -37,9 +43,10 @@ class ControlPointOptionsObject extends OptionFragment {
   void set height (double v) {
     this._height = v;
   }
+    */
     
-  double? _index;  
-
+  double? index;
+    /*
   double get index { 
     if (this._index == null) {
       this._index = 0;
@@ -50,9 +57,10 @@ class ControlPointOptionsObject extends OptionFragment {
   void set index (double v) {
     this._index = v;
   }
+    */
     
-  String? _symbol;  
-
+  String? symbol;
+    /*
   String get symbol { 
     if (this._symbol == null) {
       this._symbol = "";
@@ -63,9 +71,10 @@ class ControlPointOptionsObject extends OptionFragment {
   void set symbol (String v) {
     this._symbol = v;
   }
+    */
     
-  bool? _visible;  
-
+  bool? visible;
+    /*
   bool get visible { 
     if (this._visible == null) {
       this._visible = false;
@@ -76,9 +85,10 @@ class ControlPointOptionsObject extends OptionFragment {
   void set visible (bool v) {
     this._visible = v;
   }
+    */
     
-  double? _width;  
-
+  double? width;
+    /*
   double get width { 
     if (this._width == null) {
       this._width = 0;
@@ -89,6 +99,7 @@ class ControlPointOptionsObject extends OptionFragment {
   void set width (double v) {
     this._width = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -102,26 +113,26 @@ class ControlPointOptionsObject extends OptionFragment {
 
     // NOTE: skip serialization of events (type ControlPointEventsOptionsObject is ignored)} 
 
-    if (this._height != null) {  
-      buffer.writeAll(["\"height\":", this._height, ","], "");
+    if (this.height != null) {  
+      buffer.writeAll(["\"height\":", this.height, ","], "");
     }
 
-    if (this._index != null) {  
-      buffer.writeAll(["\"index\":", this._index, ","], "");
+    if (this.index != null) {  
+      buffer.writeAll(["\"index\":", this.index, ","], "");
     }
 
     // NOTE: skip serialization of style (type CSSObject is ignored)} 
 
-    if (this._symbol != null) {  
-      buffer.writeAll(["\"symbol\":\`", this._symbol, "\`,"], "");
+    if (this.symbol != null) {  
+      buffer.writeAll(["\"symbol\":\`", this.symbol, "\`,"], "");
     }
 
-    if (this._visible != null) {  
-      buffer.writeAll(["\"visible\":", this._visible, ","], "");
+    if (this.visible != null) {  
+      buffer.writeAll(["\"visible\":", this.visible, ","], "");
     }
 
-    if (this._width != null) {  
-      buffer.writeAll(["\"width\":", this._width, ","], "");
+    if (this.width != null) {  
+      buffer.writeAll(["\"width\":", this.width, ","], "");
     }
   }
 

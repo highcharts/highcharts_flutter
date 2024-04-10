@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,16 @@ import 'OptionFragment.dart';
  * WGLDebugOptions 
  */
 class WGLDebugOptions extends BoostDebugOptions {
-  WGLDebugOptions() : super();
-  bool? _timeBufferCopy;  
-
+  WGLDebugOptions( {
+    this.timeBufferCopy = null,
+    this.timeKDTree = null,
+    this.timeRendering = null,
+    this.timeSeriesProcessing = null,
+    this.timeSetup = null,
+    this.showSkipSummary = null
+  }) : super();
+  bool? timeBufferCopy;
+    /*
   bool get timeBufferCopy { 
     if (this._timeBufferCopy == null) {
       this._timeBufferCopy = false;
@@ -36,9 +43,10 @@ class WGLDebugOptions extends BoostDebugOptions {
   void set timeBufferCopy (bool v) {
     this._timeBufferCopy = v;
   }
+    */
     
-  bool? _timeKDTree;  
-
+  bool? timeKDTree;
+    /*
   bool get timeKDTree { 
     if (this._timeKDTree == null) {
       this._timeKDTree = false;
@@ -49,9 +57,10 @@ class WGLDebugOptions extends BoostDebugOptions {
   void set timeKDTree (bool v) {
     this._timeKDTree = v;
   }
+    */
     
-  bool? _timeRendering;  
-
+  bool? timeRendering;
+    /*
   bool get timeRendering { 
     if (this._timeRendering == null) {
       this._timeRendering = false;
@@ -62,9 +71,10 @@ class WGLDebugOptions extends BoostDebugOptions {
   void set timeRendering (bool v) {
     this._timeRendering = v;
   }
+    */
     
-  bool? _timeSeriesProcessing;  
-
+  bool? timeSeriesProcessing;
+    /*
   bool get timeSeriesProcessing { 
     if (this._timeSeriesProcessing == null) {
       this._timeSeriesProcessing = false;
@@ -75,9 +85,10 @@ class WGLDebugOptions extends BoostDebugOptions {
   void set timeSeriesProcessing (bool v) {
     this._timeSeriesProcessing = v;
   }
+    */
     
-  bool? _timeSetup;  
-
+  bool? timeSetup;
+    /*
   bool get timeSetup { 
     if (this._timeSetup == null) {
       this._timeSetup = false;
@@ -88,9 +99,10 @@ class WGLDebugOptions extends BoostDebugOptions {
   void set timeSetup (bool v) {
     this._timeSetup = v;
   }
+    */
     
-  bool? _showSkipSummary;  
-
+  bool? showSkipSummary;
+    /*
   bool get showSkipSummary { 
     if (this._showSkipSummary == null) {
       this._showSkipSummary = false;
@@ -101,6 +113,7 @@ class WGLDebugOptions extends BoostDebugOptions {
   void set showSkipSummary (bool v) {
     this._showSkipSummary = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -110,28 +123,28 @@ class WGLDebugOptions extends BoostDebugOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._timeBufferCopy != null) {  
-      buffer.writeAll(["\"timeBufferCopy\":", this._timeBufferCopy, ","], "");
+    if (this.timeBufferCopy != null) {  
+      buffer.writeAll(["\"timeBufferCopy\":", this.timeBufferCopy, ","], "");
     }
 
-    if (this._timeKDTree != null) {  
-      buffer.writeAll(["\"timeKDTree\":", this._timeKDTree, ","], "");
+    if (this.timeKDTree != null) {  
+      buffer.writeAll(["\"timeKDTree\":", this.timeKDTree, ","], "");
     }
 
-    if (this._timeRendering != null) {  
-      buffer.writeAll(["\"timeRendering\":", this._timeRendering, ","], "");
+    if (this.timeRendering != null) {  
+      buffer.writeAll(["\"timeRendering\":", this.timeRendering, ","], "");
     }
 
-    if (this._timeSeriesProcessing != null) {  
-      buffer.writeAll(["\"timeSeriesProcessing\":", this._timeSeriesProcessing, ","], "");
+    if (this.timeSeriesProcessing != null) {  
+      buffer.writeAll(["\"timeSeriesProcessing\":", this.timeSeriesProcessing, ","], "");
     }
 
-    if (this._timeSetup != null) {  
-      buffer.writeAll(["\"timeSetup\":", this._timeSetup, ","], "");
+    if (this.timeSetup != null) {  
+      buffer.writeAll(["\"timeSetup\":", this.timeSetup, ","], "");
     }
 
-    if (this._showSkipSummary != null) {  
-      buffer.writeAll(["\"showSkipSummary\":", this._showSkipSummary, ","], "");
+    if (this.showSkipSummary != null) {  
+      buffer.writeAll(["\"showSkipSummary\":", this.showSkipSummary, ","], "");
     }
   }
 

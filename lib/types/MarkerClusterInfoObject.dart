@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,14 @@ import 'OptionFragment.dart';
  * MarkerClusterInfoObject 
  */
 class MarkerClusterInfoObject extends OptionFragment {
-  MarkerClusterInfoObject() : super();
-  double? _initMinX;  
-
+  MarkerClusterInfoObject( {
+    this.initMinX = null,
+    this.initMaxX = null,
+    this.initMinY = null,
+    this.initMaxY = null
+  }) : super();
+  double? initMinX;
+    /*
   double get initMinX { 
     if (this._initMinX == null) {
       this._initMinX = 0;
@@ -36,9 +41,10 @@ class MarkerClusterInfoObject extends OptionFragment {
   void set initMinX (double v) {
     this._initMinX = v;
   }
+    */
     
-  double? _initMaxX;  
-
+  double? initMaxX;
+    /*
   double get initMaxX { 
     if (this._initMaxX == null) {
       this._initMaxX = 0;
@@ -49,9 +55,10 @@ class MarkerClusterInfoObject extends OptionFragment {
   void set initMaxX (double v) {
     this._initMaxX = v;
   }
+    */
     
-  double? _initMinY;  
-
+  double? initMinY;
+    /*
   double get initMinY { 
     if (this._initMinY == null) {
       this._initMinY = 0;
@@ -62,9 +69,10 @@ class MarkerClusterInfoObject extends OptionFragment {
   void set initMinY (double v) {
     this._initMinY = v;
   }
+    */
     
-  double? _initMaxY;  
-
+  double? initMaxY;
+    /*
   double get initMaxY { 
     if (this._initMaxY == null) {
       this._initMaxY = 0;
@@ -75,6 +83,7 @@ class MarkerClusterInfoObject extends OptionFragment {
   void set initMaxY (double v) {
     this._initMaxY = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -94,20 +103,20 @@ class MarkerClusterInfoObject extends OptionFragment {
 
     // NOTE: skip serialization of groupMap (type GroupMapObject[] is ignored)} 
 
-    if (this._initMinX != null) {  
-      buffer.writeAll(["\"initMinX\":", this._initMinX, ","], "");
+    if (this.initMinX != null) {  
+      buffer.writeAll(["\"initMinX\":", this.initMinX, ","], "");
     }
 
-    if (this._initMaxX != null) {  
-      buffer.writeAll(["\"initMaxX\":", this._initMaxX, ","], "");
+    if (this.initMaxX != null) {  
+      buffer.writeAll(["\"initMaxX\":", this.initMaxX, ","], "");
     }
 
-    if (this._initMinY != null) {  
-      buffer.writeAll(["\"initMinY\":", this._initMinY, ","], "");
+    if (this.initMinY != null) {  
+      buffer.writeAll(["\"initMinY\":", this.initMinY, ","], "");
     }
 
-    if (this._initMaxY != null) {  
-      buffer.writeAll(["\"initMaxY\":", this._initMaxY, ","], "");
+    if (this.initMaxY != null) {  
+      buffer.writeAll(["\"initMaxY\":", this.initMaxY, ","], "");
     }
 
     // NOTE: skip serialization of pointsState (type MarkerClusterPointsStateObject is ignored)} 

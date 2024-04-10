@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -26,9 +26,11 @@ import 'OptionFragment.dart';
  * EventObject 
  */
 class EventObject extends OptionFragment {
-  EventObject() : super();
-  double? _category;  
-
+  EventObject( {
+    this.category = null
+  }) : super();
+  double? category;
+    /*
   double get category { 
     if (this._category == null) {
       this._category = 0;
@@ -39,6 +41,7 @@ class EventObject extends OptionFragment {
   void set category (double v) {
     this._category = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -48,8 +51,8 @@ class EventObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._category != null) {  
-      buffer.writeAll(["\"category\":", this._category, ","], "");
+    if (this.category != null) {  
+      buffer.writeAll(["\"category\":", this.category, ","], "");
     }
 
     // NOTE: skip serialization of originalEvent (type Event is ignored)} 

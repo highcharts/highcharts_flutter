@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,14 @@ import 'OptionFragment.dart';
  * PdfFontOptions 
  */
 class PdfFontOptions extends OptionFragment {
-  PdfFontOptions() : super();
-  String? _bold;  
-
+  PdfFontOptions( {
+    this.bold = null,
+    this.bolditalic = null,
+    this.italic = null,
+    this.normal = null
+  }) : super();
+  String? bold;
+    /*
   String get bold { 
     if (this._bold == null) {
       this._bold = "";
@@ -35,9 +40,10 @@ class PdfFontOptions extends OptionFragment {
   void set bold (String v) {
     this._bold = v;
   }
+    */
     
-  String? _bolditalic;  
-
+  String? bolditalic;
+    /*
   String get bolditalic { 
     if (this._bolditalic == null) {
       this._bolditalic = "";
@@ -48,9 +54,10 @@ class PdfFontOptions extends OptionFragment {
   void set bolditalic (String v) {
     this._bolditalic = v;
   }
+    */
     
-  String? _italic;  
-
+  String? italic;
+    /*
   String get italic { 
     if (this._italic == null) {
       this._italic = "";
@@ -61,9 +68,10 @@ class PdfFontOptions extends OptionFragment {
   void set italic (String v) {
     this._italic = v;
   }
+    */
     
-  String? _normal;  
-
+  String? normal;
+    /*
   String get normal { 
     if (this._normal == null) {
       this._normal = "";
@@ -74,6 +82,7 @@ class PdfFontOptions extends OptionFragment {
   void set normal (String v) {
     this._normal = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -83,20 +92,20 @@ class PdfFontOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._bold != null) {  
-      buffer.writeAll(["\"bold\":\`", this._bold, "\`,"], "");
+    if (this.bold != null) {  
+      buffer.writeAll(["\"bold\":\`", this.bold, "\`,"], "");
     }
 
-    if (this._bolditalic != null) {  
-      buffer.writeAll(["\"bolditalic\":\`", this._bolditalic, "\`,"], "");
+    if (this.bolditalic != null) {  
+      buffer.writeAll(["\"bolditalic\":\`", this.bolditalic, "\`,"], "");
     }
 
-    if (this._italic != null) {  
-      buffer.writeAll(["\"italic\":\`", this._italic, "\`,"], "");
+    if (this.italic != null) {  
+      buffer.writeAll(["\"italic\":\`", this.italic, "\`,"], "");
     }
 
-    if (this._normal != null) {  
-      buffer.writeAll(["\"normal\":\`", this._normal, "\`,"], "");
+    if (this.normal != null) {  
+      buffer.writeAll(["\"normal\":\`", this.normal, "\`,"], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,11 @@ import 'OptionFragment.dart';
  * StreamgraphSeries 
  */
 class StreamgraphSeries extends OptionFragment {
-  StreamgraphSeries() : super();
-  bool? _negStacks;  
-
+  StreamgraphSeries( {
+    this.negStacks = null
+  }) : super();
+  bool? negStacks;
+    /*
   bool get negStacks { 
     if (this._negStacks == null) {
       this._negStacks = false;
@@ -35,6 +37,7 @@ class StreamgraphSeries extends OptionFragment {
   void set negStacks (bool v) {
     this._negStacks = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -44,8 +47,8 @@ class StreamgraphSeries extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._negStacks != null) {  
-      buffer.writeAll(["\"negStacks\":", this._negStacks, ","], "");
+    if (this.negStacks != null) {  
+      buffer.writeAll(["\"negStacks\":", this.negStacks, ","], "");
     }
 
     // NOTE: skip serialization of pointClass (type typeof StreamgraphPoint is ignored)} 

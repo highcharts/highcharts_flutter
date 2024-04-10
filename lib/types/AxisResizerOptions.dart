@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,12 @@ import 'OptionFragment.dart';
  * AxisResizerOptions 
  */
 class AxisResizerOptions extends OptionFragment {
-  AxisResizerOptions() : super();
-  String? _maxLength;  
-
+  AxisResizerOptions( {
+    this.maxLength = null,
+    this.minLength = null
+  }) : super();
+  String? maxLength;
+    /*
   String get maxLength { 
     if (this._maxLength == null) {
       this._maxLength = "";
@@ -36,9 +39,10 @@ class AxisResizerOptions extends OptionFragment {
   void set maxLength (String v) {
     this._maxLength = v;
   }
+    */
     
-  String? _minLength;  
-
+  String? minLength;
+    /*
   String get minLength { 
     if (this._minLength == null) {
       this._minLength = "";
@@ -49,6 +53,7 @@ class AxisResizerOptions extends OptionFragment {
   void set minLength (String v) {
     this._minLength = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -58,12 +63,12 @@ class AxisResizerOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._maxLength != null) {  
-      buffer.writeAll(["\"maxLength\":\`", this._maxLength, "\`,"], "");
+    if (this.maxLength != null) {  
+      buffer.writeAll(["\"maxLength\":\`", this.maxLength, "\`,"], "");
     }
 
-    if (this._minLength != null) {  
-      buffer.writeAll(["\"minLength\":\`", this._minLength, "\`,"], "");
+    if (this.minLength != null) {  
+      buffer.writeAll(["\"minLength\":\`", this.minLength, "\`,"], "");
     }
 
     // NOTE: skip serialization of resize (type AxisResizeOptions is ignored)} 

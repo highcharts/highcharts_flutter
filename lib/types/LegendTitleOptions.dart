@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,12 @@ import 'OptionFragment.dart';
  * LegendTitleOptions 
  */
 class LegendTitleOptions extends OptionFragment {
-  LegendTitleOptions() : super();
-  String? _text;  
-
+  LegendTitleOptions( {
+    this.text = null,
+    this.width = null
+  }) : super();
+  String? text;
+    /*
   String get text { 
     if (this._text == null) {
       this._text = "";
@@ -36,9 +39,10 @@ class LegendTitleOptions extends OptionFragment {
   void set text (String v) {
     this._text = v;
   }
+    */
     
-  double? _width;  
-
+  double? width;
+    /*
   double get width { 
     if (this._width == null) {
       this._width = 0;
@@ -49,6 +53,7 @@ class LegendTitleOptions extends OptionFragment {
   void set width (double v) {
     this._width = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -60,12 +65,12 @@ class LegendTitleOptions extends OptionFragment {
     
     // NOTE: skip serialization of style (type CSSObject is ignored)} 
 
-    if (this._text != null) {  
-      buffer.writeAll(["\"text\":\`", this._text, "\`,"], "");
+    if (this.text != null) {  
+      buffer.writeAll(["\"text\":\`", this.text, "\`,"], "");
     }
 
-    if (this._width != null) {  
-      buffer.writeAll(["\"width\":", this._width, ","], "");
+    if (this.width != null) {  
+      buffer.writeAll(["\"width\":", this.width, ","], "");
     }
   }
 

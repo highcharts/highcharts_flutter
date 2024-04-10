@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,19 @@ import 'OptionFragment.dart';
  * PackedBubbleSeries 
  */
 class PackedBubbleSeries extends DragNodesSeries {
-  PackedBubbleSeries() : super();
-  bool? _bubblePadding;  
-
+  PackedBubbleSeries( {
+    this.bubblePadding = null,
+    this.hasDraggableNodes = null,
+    this.isCartesian = null,
+    this.maxPxSize = null,
+    this.minPxSize = null,
+    this.noSharedTooltip = null,
+    this.pointValKey = null,
+    this.specialGroup = null,
+    this.zoneAxis = null
+  }) : super();
+  bool? bubblePadding;
+    /*
   bool get bubblePadding { 
     if (this._bubblePadding == null) {
       this._bubblePadding = false;
@@ -36,9 +46,10 @@ class PackedBubbleSeries extends DragNodesSeries {
   void set bubblePadding (bool v) {
     this._bubblePadding = v;
   }
+    */
     
-  bool? _hasDraggableNodes;  
-
+  bool? hasDraggableNodes;
+    /*
   bool get hasDraggableNodes { 
     if (this._hasDraggableNodes == null) {
       this._hasDraggableNodes = false;
@@ -49,9 +60,10 @@ class PackedBubbleSeries extends DragNodesSeries {
   void set hasDraggableNodes (bool v) {
     this._hasDraggableNodes = v;
   }
+    */
     
-  bool? _isCartesian;  
-
+  bool? isCartesian;
+    /*
   bool get isCartesian { 
     if (this._isCartesian == null) {
       this._isCartesian = false;
@@ -62,9 +74,10 @@ class PackedBubbleSeries extends DragNodesSeries {
   void set isCartesian (bool v) {
     this._isCartesian = v;
   }
+    */
     
-  double? _maxPxSize;  
-
+  double? maxPxSize;
+    /*
   double get maxPxSize { 
     if (this._maxPxSize == null) {
       this._maxPxSize = 0;
@@ -75,9 +88,10 @@ class PackedBubbleSeries extends DragNodesSeries {
   void set maxPxSize (double v) {
     this._maxPxSize = v;
   }
+    */
     
-  double? _minPxSize;  
-
+  double? minPxSize;
+    /*
   double get minPxSize { 
     if (this._minPxSize == null) {
       this._minPxSize = 0;
@@ -88,9 +102,10 @@ class PackedBubbleSeries extends DragNodesSeries {
   void set minPxSize (double v) {
     this._minPxSize = v;
   }
+    */
     
-  bool? _noSharedTooltip;  
-
+  bool? noSharedTooltip;
+    /*
   bool get noSharedTooltip { 
     if (this._noSharedTooltip == null) {
       this._noSharedTooltip = false;
@@ -101,9 +116,10 @@ class PackedBubbleSeries extends DragNodesSeries {
   void set noSharedTooltip (bool v) {
     this._noSharedTooltip = v;
   }
+    */
     
-  String? _pointValKey;  
-
+  String? pointValKey;
+    /*
   String get pointValKey { 
     if (this._pointValKey == null) {
       this._pointValKey = "";
@@ -114,9 +130,10 @@ class PackedBubbleSeries extends DragNodesSeries {
   void set pointValKey (String v) {
     this._pointValKey = v;
   }
+    */
     
-  String? _specialGroup;  
-
+  String? specialGroup;
+    /*
   String get specialGroup { 
     if (this._specialGroup == null) {
       this._specialGroup = "";
@@ -127,9 +144,10 @@ class PackedBubbleSeries extends DragNodesSeries {
   void set specialGroup (String v) {
     this._specialGroup = v;
   }
+    */
     
-  String? _zoneAxis;  
-
+  String? zoneAxis;
+    /*
   String get zoneAxis { 
     if (this._zoneAxis == null) {
       this._zoneAxis = "";
@@ -140,6 +158,7 @@ class PackedBubbleSeries extends DragNodesSeries {
   void set zoneAxis (String v) {
     this._zoneAxis = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -151,46 +170,46 @@ class PackedBubbleSeries extends DragNodesSeries {
     
     // NOTE: skip serialization of pointClass (type typeof PackedBubblePoint is ignored)} 
 
-    if (this._bubblePadding != null) {  
-      buffer.writeAll(["\"bubblePadding\":", this._bubblePadding, ","], "");
+    if (this.bubblePadding != null) {  
+      buffer.writeAll(["\"bubblePadding\":", this.bubblePadding, ","], "");
     }
 
     // NOTE: skip serialization of forces (type string[] is ignored)} 
 
-    if (this._hasDraggableNodes != null) {  
-      buffer.writeAll(["\"hasDraggableNodes\":", this._hasDraggableNodes, ","], "");
+    if (this.hasDraggableNodes != null) {  
+      buffer.writeAll(["\"hasDraggableNodes\":", this.hasDraggableNodes, ","], "");
     }
 
     // NOTE: skip serialization of isBubble (type true is ignored)} 
 
-    if (this._isCartesian != null) {  
-      buffer.writeAll(["\"isCartesian\":", this._isCartesian, ","], "");
+    if (this.isCartesian != null) {  
+      buffer.writeAll(["\"isCartesian\":", this.isCartesian, ","], "");
     }
 
-    if (this._maxPxSize != null) {  
-      buffer.writeAll(["\"maxPxSize\":", this._maxPxSize, ","], "");
+    if (this.maxPxSize != null) {  
+      buffer.writeAll(["\"maxPxSize\":", this.maxPxSize, ","], "");
     }
 
-    if (this._minPxSize != null) {  
-      buffer.writeAll(["\"minPxSize\":", this._minPxSize, ","], "");
+    if (this.minPxSize != null) {  
+      buffer.writeAll(["\"minPxSize\":", this.minPxSize, ","], "");
     }
 
     // NOTE: skip serialization of nodes (type NetworkgraphPoint[] is ignored)} 
 
-    if (this._noSharedTooltip != null) {  
-      buffer.writeAll(["\"noSharedTooltip\":", this._noSharedTooltip, ","], "");
+    if (this.noSharedTooltip != null) {  
+      buffer.writeAll(["\"noSharedTooltip\":", this.noSharedTooltip, ","], "");
     }
 
     // NOTE: skip serialization of pointArrayMap (type string[] is ignored)} 
 
-    if (this._pointValKey != null) {  
-      buffer.writeAll(["\"pointValKey\":\`", this._pointValKey, "\`,"], "");
+    if (this.pointValKey != null) {  
+      buffer.writeAll(["\"pointValKey\":\`", this.pointValKey, "\`,"], "");
     }
 
     // NOTE: skip serialization of radii (type number[] is ignored)} 
 
-    if (this._specialGroup != null) {  
-      buffer.writeAll(["\"specialGroup\":\`", this._specialGroup, "\`,"], "");
+    if (this.specialGroup != null) {  
+      buffer.writeAll(["\"specialGroup\":\`", this.specialGroup, "\`,"], "");
     }
 
     // NOTE: skip serialization of trackerGroups (type string[] is ignored)} 
@@ -199,8 +218,8 @@ class PackedBubbleSeries extends DragNodesSeries {
 
     // NOTE: skip serialization of zData (type number[] is ignored)} 
 
-    if (this._zoneAxis != null) {  
-      buffer.writeAll(["\"zoneAxis\":\`", this._zoneAxis, "\`,"], "");
+    if (this.zoneAxis != null) {  
+      buffer.writeAll(["\"zoneAxis\":\`", this.zoneAxis, "\`,"], "");
     }
   }
 

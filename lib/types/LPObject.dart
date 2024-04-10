@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,17 @@ import 'OptionFragment.dart';
  * LPObject 
  */
 class LPObject extends OptionFragment {
-  LPObject() : super();
-  double? _lH;  
-
+  LPObject( {
+    this.lH = null,
+    this.lR = null,
+    this.lW = null,
+    this.nH = null,
+    this.nR = null,
+    this.nW = null,
+    this.total = null
+  }) : super();
+  double? lH;
+    /*
   double get lH { 
     if (this._lH == null) {
       this._lH = 0;
@@ -35,9 +43,10 @@ class LPObject extends OptionFragment {
   void set lH (double v) {
     this._lH = v;
   }
+    */
     
-  double? _lR;  
-
+  double? lR;
+    /*
   double get lR { 
     if (this._lR == null) {
       this._lR = 0;
@@ -48,9 +57,10 @@ class LPObject extends OptionFragment {
   void set lR (double v) {
     this._lR = v;
   }
+    */
     
-  double? _lW;  
-
+  double? lW;
+    /*
   double get lW { 
     if (this._lW == null) {
       this._lW = 0;
@@ -61,9 +71,10 @@ class LPObject extends OptionFragment {
   void set lW (double v) {
     this._lW = v;
   }
+    */
     
-  double? _nH;  
-
+  double? nH;
+    /*
   double get nH { 
     if (this._nH == null) {
       this._nH = 0;
@@ -74,9 +85,10 @@ class LPObject extends OptionFragment {
   void set nH (double v) {
     this._nH = v;
   }
+    */
     
-  double? _nR;  
-
+  double? nR;
+    /*
   double get nR { 
     if (this._nR == null) {
       this._nR = 0;
@@ -87,9 +99,10 @@ class LPObject extends OptionFragment {
   void set nR (double v) {
     this._nR = v;
   }
+    */
     
-  double? _nW;  
-
+  double? nW;
+    /*
   double get nW { 
     if (this._nW == null) {
       this._nW = 0;
@@ -100,9 +113,10 @@ class LPObject extends OptionFragment {
   void set nW (double v) {
     this._nW = v;
   }
+    */
     
-  double? _total;  
-
+  double? total;
+    /*
   double get total { 
     if (this._total == null) {
       this._total = 0;
@@ -113,6 +127,7 @@ class LPObject extends OptionFragment {
   void set total (double v) {
     this._total = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -122,32 +137,32 @@ class LPObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._lH != null) {  
-      buffer.writeAll(["\"lH\":", this._lH, ","], "");
+    if (this.lH != null) {  
+      buffer.writeAll(["\"lH\":", this.lH, ","], "");
     }
 
-    if (this._lR != null) {  
-      buffer.writeAll(["\"lR\":", this._lR, ","], "");
+    if (this.lR != null) {  
+      buffer.writeAll(["\"lR\":", this.lR, ","], "");
     }
 
-    if (this._lW != null) {  
-      buffer.writeAll(["\"lW\":", this._lW, ","], "");
+    if (this.lW != null) {  
+      buffer.writeAll(["\"lW\":", this.lW, ","], "");
     }
 
-    if (this._nH != null) {  
-      buffer.writeAll(["\"nH\":", this._nH, ","], "");
+    if (this.nH != null) {  
+      buffer.writeAll(["\"nH\":", this.nH, ","], "");
     }
 
-    if (this._nR != null) {  
-      buffer.writeAll(["\"nR\":", this._nR, ","], "");
+    if (this.nR != null) {  
+      buffer.writeAll(["\"nR\":", this.nR, ","], "");
     }
 
-    if (this._nW != null) {  
-      buffer.writeAll(["\"nW\":", this._nW, ","], "");
+    if (this.nW != null) {  
+      buffer.writeAll(["\"nW\":", this.nW, ","], "");
     }
 
-    if (this._total != null) {  
-      buffer.writeAll(["\"total\":", this._total, ","], "");
+    if (this.total != null) {  
+      buffer.writeAll(["\"total\":", this.total, ","], "");
     }
   }
 

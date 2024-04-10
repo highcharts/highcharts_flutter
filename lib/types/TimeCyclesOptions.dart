@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,12 @@ import 'OptionFragment.dart';
  * TimeCyclesOptions 
  */
 class TimeCyclesOptions extends OptionFragment {
-  TimeCyclesOptions() : super();
-  double? _xAxis;  
-
+  TimeCyclesOptions( {
+    this.xAxis = null,
+    this.yAxis = null
+  }) : super();
+  double? xAxis;
+    /*
   double get xAxis { 
     if (this._xAxis == null) {
       this._xAxis = 0;
@@ -35,9 +38,10 @@ class TimeCyclesOptions extends OptionFragment {
   void set xAxis (double v) {
     this._xAxis = v;
   }
+    */
     
-  double? _yAxis;  
-
+  double? yAxis;
+    /*
   double get yAxis { 
     if (this._yAxis == null) {
       this._yAxis = 0;
@@ -48,6 +52,7 @@ class TimeCyclesOptions extends OptionFragment {
   void set yAxis (double v) {
     this._yAxis = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -57,12 +62,12 @@ class TimeCyclesOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._xAxis != null) {  
-      buffer.writeAll(["\"xAxis\":", this._xAxis, ","], "");
+    if (this.xAxis != null) {  
+      buffer.writeAll(["\"xAxis\":", this.xAxis, ","], "");
     }
 
-    if (this._yAxis != null) {  
-      buffer.writeAll(["\"yAxis\":", this._yAxis, ","], "");
+    if (this.yAxis != null) {  
+      buffer.writeAll(["\"yAxis\":", this.yAxis, ","], "");
     }
   }
 

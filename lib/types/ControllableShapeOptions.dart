@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -24,9 +24,19 @@ import 'OptionFragment.dart';
  * ControllableShapeOptions 
  */
 class ControllableShapeOptions extends ControllableOptions {
-  ControllableShapeOptions() : super();
-  String? _fill;  
-
+  ControllableShapeOptions( {
+    this.fill = null,
+    this.height = null,
+    this.r = null,
+    this.snap = null,
+    this.src = null,
+    this.stroke = null,
+    this.strokeWidth = null,
+    this.type = null,
+    this.width = null
+  }) : super();
+  String? fill;
+    /*
   String get fill { 
     if (this._fill == null) {
       this._fill = "";
@@ -37,9 +47,10 @@ class ControllableShapeOptions extends ControllableOptions {
   void set fill (String v) {
     this._fill = v;
   }
+    */
     
-  double? _height;  
-
+  double? height;
+    /*
   double get height { 
     if (this._height == null) {
       this._height = 0;
@@ -50,9 +61,10 @@ class ControllableShapeOptions extends ControllableOptions {
   void set height (double v) {
     this._height = v;
   }
+    */
     
-  double? _r;  
-
+  double? r;
+    /*
   double get r { 
     if (this._r == null) {
       this._r = 0;
@@ -63,9 +75,10 @@ class ControllableShapeOptions extends ControllableOptions {
   void set r (double v) {
     this._r = v;
   }
+    */
     
-  double? _snap;  
-
+  double? snap;
+    /*
   double get snap { 
     if (this._snap == null) {
       this._snap = 0;
@@ -76,9 +89,10 @@ class ControllableShapeOptions extends ControllableOptions {
   void set snap (double v) {
     this._snap = v;
   }
+    */
     
-  String? _src;  
-
+  String? src;
+    /*
   String get src { 
     if (this._src == null) {
       this._src = "";
@@ -89,9 +103,10 @@ class ControllableShapeOptions extends ControllableOptions {
   void set src (String v) {
     this._src = v;
   }
+    */
     
-  String? _stroke;  
-
+  String? stroke;
+    /*
   String get stroke { 
     if (this._stroke == null) {
       this._stroke = "";
@@ -102,9 +117,10 @@ class ControllableShapeOptions extends ControllableOptions {
   void set stroke (String v) {
     this._stroke = v;
   }
+    */
     
-  double? _strokeWidth;  
-
+  double? strokeWidth;
+    /*
   double get strokeWidth { 
     if (this._strokeWidth == null) {
       this._strokeWidth = 0;
@@ -115,9 +131,10 @@ class ControllableShapeOptions extends ControllableOptions {
   void set strokeWidth (double v) {
     this._strokeWidth = v;
   }
+    */
     
-  String? _type;  
-
+  String? type;
+    /*
   String get type { 
     if (this._type == null) {
       this._type = "";
@@ -128,9 +145,10 @@ class ControllableShapeOptions extends ControllableOptions {
   void set type (String v) {
     this._type = v;
   }
+    */
     
-  double? _width;  
-
+  double? width;
+    /*
   double get width { 
     if (this._width == null) {
       this._width = 0;
@@ -141,6 +159,7 @@ class ControllableShapeOptions extends ControllableOptions {
   void set width (double v) {
     this._width = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -152,40 +171,40 @@ class ControllableShapeOptions extends ControllableOptions {
     
     // NOTE: skip serialization of d (type SVGPath is ignored)} 
 
-    if (this._fill != null) {  
-      buffer.writeAll(["\"fill\":\`", this._fill, "\`,"], "");
+    if (this.fill != null) {  
+      buffer.writeAll(["\"fill\":\`", this.fill, "\`,"], "");
     }
 
-    if (this._height != null) {  
-      buffer.writeAll(["\"height\":", this._height, ","], "");
+    if (this.height != null) {  
+      buffer.writeAll(["\"height\":", this.height, ","], "");
     }
 
-    if (this._r != null) {  
-      buffer.writeAll(["\"r\":", this._r, ","], "");
+    if (this.r != null) {  
+      buffer.writeAll(["\"r\":", this.r, ","], "");
     }
 
-    if (this._snap != null) {  
-      buffer.writeAll(["\"snap\":", this._snap, ","], "");
+    if (this.snap != null) {  
+      buffer.writeAll(["\"snap\":", this.snap, ","], "");
     }
 
-    if (this._src != null) {  
-      buffer.writeAll(["\"src\":\`", this._src, "\`,"], "");
+    if (this.src != null) {  
+      buffer.writeAll(["\"src\":\`", this.src, "\`,"], "");
     }
 
-    if (this._stroke != null) {  
-      buffer.writeAll(["\"stroke\":\`", this._stroke, "\`,"], "");
+    if (this.stroke != null) {  
+      buffer.writeAll(["\"stroke\":\`", this.stroke, "\`,"], "");
     }
 
-    if (this._strokeWidth != null) {  
-      buffer.writeAll(["\"strokeWidth\":", this._strokeWidth, ","], "");
+    if (this.strokeWidth != null) {  
+      buffer.writeAll(["\"strokeWidth\":", this.strokeWidth, ","], "");
     }
 
-    if (this._type != null) {  
-      buffer.writeAll(["\"type\":\`", this._type, "\`,"], "");
+    if (this.type != null) {  
+      buffer.writeAll(["\"type\":\`", this.type, "\`,"], "");
     }
 
-    if (this._width != null) {  
-      buffer.writeAll(["\"width\":", this._width, ","], "");
+    if (this.width != null) {  
+      buffer.writeAll(["\"width\":", this.width, ","], "");
     }
   }
 

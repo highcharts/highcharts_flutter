@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,11 @@ import 'OptionFragment.dart';
  * TypeLabelOptions 
  */
 class TypeLabelOptions extends ControllableLabelOptions {
-  TypeLabelOptions() : super();
-  double? _offset;  
-
+  TypeLabelOptions( {
+    this.offset = null
+  }) : super();
+  double? offset;
+    /*
   double get offset { 
     if (this._offset == null) {
       this._offset = 0;
@@ -36,6 +38,7 @@ class TypeLabelOptions extends ControllableLabelOptions {
   void set offset (double v) {
     this._offset = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -45,8 +48,8 @@ class TypeLabelOptions extends ControllableLabelOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._offset != null) {  
-      buffer.writeAll(["\"offset\":", this._offset, ","], "");
+    if (this.offset != null) {  
+      buffer.writeAll(["\"offset\":", this.offset, ","], "");
     }
   }
 

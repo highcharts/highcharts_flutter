@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,11 @@ import 'OptionFragment.dart';
  * ErrorEvent 
  */
 class ErrorEvent extends DataEvent {
-  ErrorEvent() : super();
-  String? _csv;  
-
+  ErrorEvent( {
+    this.csv = null
+  }) : super();
+  String? csv;
+    /*
   String get csv { 
     if (this._csv == null) {
       this._csv = "";
@@ -36,6 +38,7 @@ class ErrorEvent extends DataEvent {
   void set csv (String v) {
     this._csv = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -53,8 +56,8 @@ class ErrorEvent extends DataEvent {
 
     // NOTE: skip serialization of error (type Error is ignored)} 
 
-    if (this._csv != null) {  
-      buffer.writeAll(["\"csv\":\`", this._csv, "\`,"], "");
+    if (this.csv != null) {  
+      buffer.writeAll(["\"csv\":\`", this.csv, "\`,"], "");
     }
 
     // NOTE: skip serialization of data (type Data is ignored)} 

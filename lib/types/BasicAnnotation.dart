@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,11 @@ import 'OptionFragment.dart';
  * BasicAnnotation 
  */
 class BasicAnnotation extends OptionFragment {
-  BasicAnnotation() : super();
-  String? _basicType;  
-
+  BasicAnnotation( {
+    this.basicType = null
+  }) : super();
+  String? basicType;
+    /*
   String get basicType { 
     if (this._basicType == null) {
       this._basicType = "";
@@ -36,6 +38,7 @@ class BasicAnnotation extends OptionFragment {
   void set basicType (String v) {
     this._basicType = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -45,8 +48,8 @@ class BasicAnnotation extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._basicType != null) {  
-      buffer.writeAll(["\"basicType\":\`", this._basicType, "\`,"], "");
+    if (this.basicType != null) {  
+      buffer.writeAll(["\"basicType\":\`", this.basicType, "\`,"], "");
     }
 
     // NOTE: skip serialization of defaultOptions (type AnnotationOptions is ignored)} 

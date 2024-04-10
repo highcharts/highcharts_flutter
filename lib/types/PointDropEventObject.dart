@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -25,9 +25,12 @@ import 'OptionFragment.dart';
  * PointDropEventObject 
  */
 class PointDropEventObject extends OptionFragment {
-  PointDropEventObject() : super();
-  String? _newPointId;  
-
+  PointDropEventObject( {
+    this.newPointId = null,
+    this.numNewPoints = null
+  }) : super();
+  String? newPointId;
+    /*
   String get newPointId { 
     if (this._newPointId == null) {
       this._newPointId = "";
@@ -38,9 +41,10 @@ class PointDropEventObject extends OptionFragment {
   void set newPointId (String v) {
     this._newPointId = v;
   }
+    */
     
-  double? _numNewPoints;  
-
+  double? numNewPoints;
+    /*
   double get numNewPoints { 
     if (this._numNewPoints == null) {
       this._numNewPoints = 0;
@@ -51,6 +55,7 @@ class PointDropEventObject extends OptionFragment {
   void set numNewPoints (double v) {
     this._numNewPoints = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -62,14 +67,14 @@ class PointDropEventObject extends OptionFragment {
     
     // NOTE: skip serialization of newPoint (type PointDragDropObject is ignored)} 
 
-    if (this._newPointId != null) {  
-      buffer.writeAll(["\"newPointId\":\`", this._newPointId, "\`,"], "");
+    if (this.newPointId != null) {  
+      buffer.writeAll(["\"newPointId\":\`", this.newPointId, "\`,"], "");
     }
 
     // NOTE: skip serialization of newPoints (type Generic is ignored)} 
 
-    if (this._numNewPoints != null) {  
-      buffer.writeAll(["\"numNewPoints\":", this._numNewPoints, ","], "");
+    if (this.numNewPoints != null) {  
+      buffer.writeAll(["\"numNewPoints\":", this.numNewPoints, ","], "");
     }
 
     // NOTE: skip serialization of origin (type DragDropPositionObject is ignored)} 

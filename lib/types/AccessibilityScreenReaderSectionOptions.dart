@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,13 @@ import 'OptionFragment.dart';
  * AccessibilityScreenReaderSectionOptions 
  */
 class AccessibilityScreenReaderSectionOptions extends OptionFragment {
-  AccessibilityScreenReaderSectionOptions() : super();
-  String? _afterChartFormat;  
-
+  AccessibilityScreenReaderSectionOptions( {
+    this.afterChartFormat = null,
+    this.axisRangeDateFormat = null,
+    this.beforeChartFormat = null
+  }) : super();
+  String? afterChartFormat;
+    /*
   String get afterChartFormat { 
     if (this._afterChartFormat == null) {
       this._afterChartFormat = "";
@@ -35,9 +39,10 @@ class AccessibilityScreenReaderSectionOptions extends OptionFragment {
   void set afterChartFormat (String v) {
     this._afterChartFormat = v;
   }
+    */
     
-  String? _axisRangeDateFormat;  
-
+  String? axisRangeDateFormat;
+    /*
   String get axisRangeDateFormat { 
     if (this._axisRangeDateFormat == null) {
       this._axisRangeDateFormat = "";
@@ -48,9 +53,10 @@ class AccessibilityScreenReaderSectionOptions extends OptionFragment {
   void set axisRangeDateFormat (String v) {
     this._axisRangeDateFormat = v;
   }
+    */
     
-  String? _beforeChartFormat;  
-
+  String? beforeChartFormat;
+    /*
   String get beforeChartFormat { 
     if (this._beforeChartFormat == null) {
       this._beforeChartFormat = "";
@@ -61,6 +67,7 @@ class AccessibilityScreenReaderSectionOptions extends OptionFragment {
   void set beforeChartFormat (String v) {
     this._beforeChartFormat = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -70,16 +77,16 @@ class AccessibilityScreenReaderSectionOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._afterChartFormat != null) {  
-      buffer.writeAll(["\"afterChartFormat\":\`", this._afterChartFormat, "\`,"], "");
+    if (this.afterChartFormat != null) {  
+      buffer.writeAll(["\"afterChartFormat\":\`", this.afterChartFormat, "\`,"], "");
     }
 
-    if (this._axisRangeDateFormat != null) {  
-      buffer.writeAll(["\"axisRangeDateFormat\":\`", this._axisRangeDateFormat, "\`,"], "");
+    if (this.axisRangeDateFormat != null) {  
+      buffer.writeAll(["\"axisRangeDateFormat\":\`", this.axisRangeDateFormat, "\`,"], "");
     }
 
-    if (this._beforeChartFormat != null) {  
-      buffer.writeAll(["\"beforeChartFormat\":\`", this._beforeChartFormat, "\`,"], "");
+    if (this.beforeChartFormat != null) {  
+      buffer.writeAll(["\"beforeChartFormat\":\`", this.beforeChartFormat, "\`,"], "");
     }
   }
 

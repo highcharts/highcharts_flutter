@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,11 @@ import 'OptionFragment.dart';
  * AfterUpdateEventObject 
  */
 class AfterUpdateEventObject extends OptionFragment {
-  AfterUpdateEventObject() : super();
-  bool? _redraw;  
-
+  AfterUpdateEventObject( {
+    this.redraw = null
+  }) : super();
+  bool? redraw;
+    /*
   bool get redraw { 
     if (this._redraw == null) {
       this._redraw = false;
@@ -36,6 +38,7 @@ class AfterUpdateEventObject extends OptionFragment {
   void set redraw (bool v) {
     this._redraw = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -49,8 +52,8 @@ class AfterUpdateEventObject extends OptionFragment {
 
     // NOTE: skip serialization of options (type Options is ignored)} 
 
-    if (this._redraw != null) {  
-      buffer.writeAll(["\"redraw\":", this._redraw, ","], "");
+    if (this.redraw != null) {  
+      buffer.writeAll(["\"redraw\":", this.redraw, ","], "");
     }
   }
 

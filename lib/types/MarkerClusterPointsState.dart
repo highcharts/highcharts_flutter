@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,13 @@ import 'OptionFragment.dart';
  * MarkerClusterPointsState 
  */
 class MarkerClusterPointsState extends OptionFragment {
-  MarkerClusterPointsState() : super();
-  double? _x;  
-
+  MarkerClusterPointsState( {
+    this.x = null,
+    this.y = null,
+    this.id = null
+  }) : super();
+  double? x;
+    /*
   double get x { 
     if (this._x == null) {
       this._x = 0;
@@ -36,9 +40,10 @@ class MarkerClusterPointsState extends OptionFragment {
   void set x (double v) {
     this._x = v;
   }
+    */
     
-  double? _y;  
-
+  double? y;
+    /*
   double get y { 
     if (this._y == null) {
       this._y = 0;
@@ -49,9 +54,10 @@ class MarkerClusterPointsState extends OptionFragment {
   void set y (double v) {
     this._y = v;
   }
+    */
     
-  String? _id;  
-
+  String? id;
+    /*
   String get id { 
     if (this._id == null) {
       this._id = "";
@@ -62,6 +68,7 @@ class MarkerClusterPointsState extends OptionFragment {
   void set id (String v) {
     this._id = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -71,16 +78,16 @@ class MarkerClusterPointsState extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._x != null) {  
-      buffer.writeAll(["\"x\":", this._x, ","], "");
+    if (this.x != null) {  
+      buffer.writeAll(["\"x\":", this.x, ","], "");
     }
 
-    if (this._y != null) {  
-      buffer.writeAll(["\"y\":", this._y, ","], "");
+    if (this.y != null) {  
+      buffer.writeAll(["\"y\":", this.y, ","], "");
     }
 
-    if (this._id != null) {  
-      buffer.writeAll(["\"id\":\`", this._id, "\`,"], "");
+    if (this.id != null) {  
+      buffer.writeAll(["\"id\":\`", this.id, "\`,"], "");
     }
 
     // NOTE: skip serialization of parentsId (type string[] is ignored)} 

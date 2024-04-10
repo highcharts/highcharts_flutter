@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,11 @@ import 'OptionFragment.dart';
  * PointConnectOptionsObject 
  */
 class PointConnectOptionsObject extends OptionFragment {
-  PointConnectOptionsObject() : super();
-  String? _to;  
-
+  PointConnectOptionsObject( {
+    this.to = null
+  }) : super();
+  String? to;
+    /*
   String get to { 
     if (this._to == null) {
       this._to = "";
@@ -35,6 +37,7 @@ class PointConnectOptionsObject extends OptionFragment {
   void set to (String v) {
     this._to = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -44,8 +47,8 @@ class PointConnectOptionsObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._to != null) {  
-      buffer.writeAll(["\"to\":\`", this._to, "\`,"], "");
+    if (this.to != null) {  
+      buffer.writeAll(["\"to\":\`", this.to, "\`,"], "");
     }
   }
 

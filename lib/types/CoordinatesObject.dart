@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,12 @@ import 'OptionFragment.dart';
  * CoordinatesObject 
  */
 class CoordinatesObject extends OptionFragment {
-  CoordinatesObject() : super();
-  double? _chartX;  
-
+  CoordinatesObject( {
+    this.chartX = null,
+    this.chartY = null
+  }) : super();
+  double? chartX;
+    /*
   double get chartX { 
     if (this._chartX == null) {
       this._chartX = 0;
@@ -35,9 +38,10 @@ class CoordinatesObject extends OptionFragment {
   void set chartX (double v) {
     this._chartX = v;
   }
+    */
     
-  double? _chartY;  
-
+  double? chartY;
+    /*
   double get chartY { 
     if (this._chartY == null) {
       this._chartY = 0;
@@ -48,6 +52,7 @@ class CoordinatesObject extends OptionFragment {
   void set chartY (double v) {
     this._chartY = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -57,12 +62,12 @@ class CoordinatesObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._chartX != null) {  
-      buffer.writeAll(["\"chartX\":", this._chartX, ","], "");
+    if (this.chartX != null) {  
+      buffer.writeAll(["\"chartX\":", this.chartX, ","], "");
     }
 
-    if (this._chartY != null) {  
-      buffer.writeAll(["\"chartY\":", this._chartY, ","], "");
+    if (this.chartY != null) {  
+      buffer.writeAll(["\"chartY\":", this.chartY, ","], "");
     }
   }
 

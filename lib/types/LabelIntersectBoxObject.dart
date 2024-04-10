@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,14 @@ import 'OptionFragment.dart';
  * LabelIntersectBoxObject 
  */
 class LabelIntersectBoxObject extends OptionFragment {
-  LabelIntersectBoxObject() : super();
-  double? _bottom;  
-
+  LabelIntersectBoxObject( {
+    this.bottom = null,
+    this.left = null,
+    this.right = null,
+    this.top = null
+  }) : super();
+  double? bottom;
+    /*
   double get bottom { 
     if (this._bottom == null) {
       this._bottom = 0;
@@ -35,9 +40,10 @@ class LabelIntersectBoxObject extends OptionFragment {
   void set bottom (double v) {
     this._bottom = v;
   }
+    */
     
-  double? _left;  
-
+  double? left;
+    /*
   double get left { 
     if (this._left == null) {
       this._left = 0;
@@ -48,9 +54,10 @@ class LabelIntersectBoxObject extends OptionFragment {
   void set left (double v) {
     this._left = v;
   }
+    */
     
-  double? _right;  
-
+  double? right;
+    /*
   double get right { 
     if (this._right == null) {
       this._right = 0;
@@ -61,9 +68,10 @@ class LabelIntersectBoxObject extends OptionFragment {
   void set right (double v) {
     this._right = v;
   }
+    */
     
-  double? _top;  
-
+  double? top;
+    /*
   double get top { 
     if (this._top == null) {
       this._top = 0;
@@ -74,6 +82,7 @@ class LabelIntersectBoxObject extends OptionFragment {
   void set top (double v) {
     this._top = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -83,20 +92,20 @@ class LabelIntersectBoxObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._bottom != null) {  
-      buffer.writeAll(["\"bottom\":", this._bottom, ","], "");
+    if (this.bottom != null) {  
+      buffer.writeAll(["\"bottom\":", this.bottom, ","], "");
     }
 
-    if (this._left != null) {  
-      buffer.writeAll(["\"left\":", this._left, ","], "");
+    if (this.left != null) {  
+      buffer.writeAll(["\"left\":", this.left, ","], "");
     }
 
-    if (this._right != null) {  
-      buffer.writeAll(["\"right\":", this._right, ","], "");
+    if (this.right != null) {  
+      buffer.writeAll(["\"right\":", this.right, ","], "");
     }
 
-    if (this._top != null) {  
-      buffer.writeAll(["\"top\":", this._top, ","], "");
+    if (this.top != null) {  
+      buffer.writeAll(["\"top\":", this.top, ","], "");
     }
   }
 

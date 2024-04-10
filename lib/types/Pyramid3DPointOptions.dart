@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,7 +23,7 @@ import 'OptionFragment.dart';
  * Pyramid3DPointOptions 
  */
 class Pyramid3DPointOptions extends Funnel3DPointOptions {
-  Pyramid3DPointOptions() : super();
+  Pyramid3DPointOptions( ) : super();
   
 
   //////////////////////////////////////////////////////////////////////////////

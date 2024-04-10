@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,7 +23,9 @@ import 'OptionFragment.dart';
  * ErrorBarSeriesOptions 
  */
 class ErrorBarSeriesOptions extends BoxPlotSeriesOptions {
-  ErrorBarSeriesOptions() : super();
+  ErrorBarSeriesOptions( {
+    this.whiskerWidth = null
+  }) : super();
   // NOTE: states skipped - type Generic is ignored in gen
 
   /**
@@ -36,8 +38,8 @@ class ErrorBarSeriesOptions extends BoxPlotSeriesOptions {
    * 
    * Defaults to '2'. 
       */
-  double? _whiskerWidth;  
-
+  double? whiskerWidth;
+    /*
   double get whiskerWidth { 
     if (this._whiskerWidth == null) {
       this._whiskerWidth = 0;
@@ -48,6 +50,7 @@ class ErrorBarSeriesOptions extends BoxPlotSeriesOptions {
   void set whiskerWidth (double v) {
     this._whiskerWidth = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -59,8 +62,8 @@ class ErrorBarSeriesOptions extends BoxPlotSeriesOptions {
     
     // NOTE: skip serialization of states (type Generic is ignored)} 
 
-    if (this._whiskerWidth != null) {  
-      buffer.writeAll(["\"whiskerWidth\":", this._whiskerWidth, ","], "");
+    if (this.whiskerWidth != null) {  
+      buffer.writeAll(["\"whiskerWidth\":", this.whiskerWidth, ","], "");
     }
   }
 

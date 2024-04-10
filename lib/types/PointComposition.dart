@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -24,9 +24,11 @@ import 'OptionFragment.dart';
  * PointComposition 
  */
 class PointComposition extends Point {
-  PointComposition() : super();
-  double? _value;  
-
+  PointComposition( {
+    this.value = null
+  }) : super();
+  double? value;
+    /*
   double get value { 
     if (this._value == null) {
       this._value = 0;
@@ -37,6 +39,7 @@ class PointComposition extends Point {
   void set value (double v) {
     this._value = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -48,8 +51,8 @@ class PointComposition extends Point {
     
     // NOTE: skip serialization of series (type SeriesComposition is ignored)} 
 
-    if (this._value != null) {  
-      buffer.writeAll(["\"value\":", this._value, ","], "");
+    if (this.value != null) {  
+      buffer.writeAll(["\"value\":", this.value, ","], "");
     }
   }
 

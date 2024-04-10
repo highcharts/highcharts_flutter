@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,12 @@ import 'OptionFragment.dart';
  * BoostAlteredObject 
  */
 class BoostAlteredObject extends OptionFragment {
-  BoostAlteredObject() : super();
-  bool? _own;  
-
+  BoostAlteredObject( {
+    this.own = null,
+    this.prop = null
+  }) : super();
+  bool? own;
+    /*
   bool get own { 
     if (this._own == null) {
       this._own = false;
@@ -35,9 +38,10 @@ class BoostAlteredObject extends OptionFragment {
   void set own (bool v) {
     this._own = v;
   }
+    */
     
-  String? _prop;  
-
+  String? prop;
+    /*
   String get prop { 
     if (this._prop == null) {
       this._prop = "";
@@ -48,6 +52,7 @@ class BoostAlteredObject extends OptionFragment {
   void set prop (String v) {
     this._prop = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -57,12 +62,12 @@ class BoostAlteredObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._own != null) {  
-      buffer.writeAll(["\"own\":", this._own, ","], "");
+    if (this.own != null) {  
+      buffer.writeAll(["\"own\":", this.own, ","], "");
     }
 
-    if (this._prop != null) {  
-      buffer.writeAll(["\"prop\":\`", this._prop, "\`,"], "");
+    if (this.prop != null) {  
+      buffer.writeAll(["\"prop\":\`", this.prop, "\`,"], "");
     }
 
     // NOTE: skip serialization of val (type unknown is ignored)} 

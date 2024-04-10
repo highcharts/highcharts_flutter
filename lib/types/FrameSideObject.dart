@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,12 @@ import 'OptionFragment.dart';
  * FrameSideObject 
  */
 class FrameSideObject extends FrameSideOptions {
-  FrameSideObject() : super();
-  bool? _frontFacing;  
-
+  FrameSideObject( {
+    this.frontFacing = null,
+    this.size = null
+  }) : super();
+  bool? frontFacing;
+    /*
   bool get frontFacing { 
     if (this._frontFacing == null) {
       this._frontFacing = false;
@@ -36,9 +39,10 @@ class FrameSideObject extends FrameSideOptions {
   void set frontFacing (bool v) {
     this._frontFacing = v;
   }
+    */
     
-  double? _size;  
-
+  double? size;
+    /*
   double get size { 
     if (this._size == null) {
       this._size = 0;
@@ -49,6 +53,7 @@ class FrameSideObject extends FrameSideOptions {
   void set size (double v) {
     this._size = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -58,12 +63,12 @@ class FrameSideObject extends FrameSideOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._frontFacing != null) {  
-      buffer.writeAll(["\"frontFacing\":", this._frontFacing, ","], "");
+    if (this.frontFacing != null) {  
+      buffer.writeAll(["\"frontFacing\":", this.frontFacing, ","], "");
     }
 
-    if (this._size != null) {  
-      buffer.writeAll(["\"size\":", this._size, ","], "");
+    if (this.size != null) {  
+      buffer.writeAll(["\"size\":", this.size, ","], "");
     }
   }
 

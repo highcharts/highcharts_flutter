@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,7 +23,9 @@ import 'OptionFragment.dart';
  * ColumnRangeSeriesOptions 
  */
 class ColumnRangeSeriesOptions extends AreaRangeSeriesOptions {
-  ColumnRangeSeriesOptions() : super();
+  ColumnRangeSeriesOptions( {
+    this.minPointLength = null
+  }) : super();
   /**
    * The minimal height for a column or width for a bar. By default,
    * 0 values are not shown. To visualize a 0 (or close to zero) point,
@@ -31,8 +33,8 @@ class ColumnRangeSeriesOptions extends AreaRangeSeriesOptions {
    * column charts, minPointLength might not be respected for tightly
    * packed values.  
       */
-  double? _minPointLength;  
-
+  double? minPointLength;
+    /*
   double get minPointLength { 
     if (this._minPointLength == null) {
       this._minPointLength = 0;
@@ -43,6 +45,7 @@ class ColumnRangeSeriesOptions extends AreaRangeSeriesOptions {
   void set minPointLength (double v) {
     this._minPointLength = v;
   }
+    */
     
   // NOTE: states skipped - type Generic is ignored in gen
 
@@ -54,8 +57,8 @@ class ColumnRangeSeriesOptions extends AreaRangeSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._minPointLength != null) {  
-      buffer.writeAll(["\"minPointLength\":", this._minPointLength, ","], "");
+    if (this.minPointLength != null) {  
+      buffer.writeAll(["\"minPointLength\":", this.minPointLength, ","], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 

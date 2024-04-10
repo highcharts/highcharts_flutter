@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,11 @@ import 'OptionFragment.dart';
  * AxisCoordinateObject 
  */
 class AxisCoordinateObject extends OptionFragment {
-  AxisCoordinateObject() : super();
-  double? _value;  
-
+  AxisCoordinateObject( {
+    this.value = null
+  }) : super();
+  double? value;
+    /*
   double get value { 
     if (this._value == null) {
       this._value = 0;
@@ -36,6 +38,7 @@ class AxisCoordinateObject extends OptionFragment {
   void set value (double v) {
     this._value = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -47,8 +50,8 @@ class AxisCoordinateObject extends OptionFragment {
     
     // NOTE: skip serialization of axis (type Axis is ignored)} 
 
-    if (this._value != null) {  
-      buffer.writeAll(["\"value\":", this._value, ","], "");
+    if (this.value != null) {  
+      buffer.writeAll(["\"value\":", this.value, ","], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,7 +22,7 @@ import 'OptionFragment.dart';
  * ErrorCallbackFunction 
  */
 class ErrorCallbackFunction extends OptionFragment {
-  ErrorCallbackFunction() : super();
+  ErrorCallbackFunction( ) : super();
   
 
   //////////////////////////////////////////////////////////////////////////////

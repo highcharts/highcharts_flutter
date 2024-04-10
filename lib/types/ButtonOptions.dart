@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -24,9 +24,14 @@ import 'OptionFragment.dart';
  * ButtonOptions 
  */
 class ButtonOptions extends ItemOptions {
-  ButtonOptions() : super();
-  String? _text;  
-
+  ButtonOptions( {
+    this.text = null,
+    this.className = null,
+    this.icon = null,
+    this.isDisabled = null
+  }) : super();
+  String? text;
+    /*
   String get text { 
     if (this._text == null) {
       this._text = "";
@@ -37,9 +42,10 @@ class ButtonOptions extends ItemOptions {
   void set text (String v) {
     this._text = v;
   }
+    */
     
-  String? _className;  
-
+  String? className;
+    /*
   String get className { 
     if (this._className == null) {
       this._className = "";
@@ -50,9 +56,10 @@ class ButtonOptions extends ItemOptions {
   void set className (String v) {
     this._className = v;
   }
+    */
     
-  String? _icon;  
-
+  String? icon;
+    /*
   String get icon { 
     if (this._icon == null) {
       this._icon = "";
@@ -63,9 +70,10 @@ class ButtonOptions extends ItemOptions {
   void set icon (String v) {
     this._icon = v;
   }
+    */
     
-  bool? _isDisabled;  
-
+  bool? isDisabled;
+    /*
   bool get isDisabled { 
     if (this._isDisabled == null) {
       this._isDisabled = false;
@@ -76,6 +84,7 @@ class ButtonOptions extends ItemOptions {
   void set isDisabled (bool v) {
     this._isDisabled = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -87,28 +96,28 @@ class ButtonOptions extends ItemOptions {
     
     // NOTE: skip serialization of type (type "button" is ignored)} 
 
-    if (this._text != null) {  
-      buffer.writeAll(["\"text\":\`", this._text, "\`,"], "");
+    if (this.text != null) {  
+      buffer.writeAll(["\"text\":\`", this.text, "\`,"], "");
     }
 
     // NOTE: skip serialization of events (type { update?: Function; click?: Function; } is ignored)} 
 
     // NOTE: skip serialization of callback (type Function is ignored)} 
 
-    if (this._text != null) {  
-      buffer.writeAll(["\"text\":\`", this._text, "\`,"], "");
+    if (this.text != null) {  
+      buffer.writeAll(["\"text\":\`", this.text, "\`,"], "");
     }
 
-    if (this._className != null) {  
-      buffer.writeAll(["\"className\":\`", this._className, "\`,"], "");
+    if (this.className != null) {  
+      buffer.writeAll(["\"className\":\`", this.className, "\`,"], "");
     }
 
-    if (this._icon != null) {  
-      buffer.writeAll(["\"icon\":\`", this._icon, "\`,"], "");
+    if (this.icon != null) {  
+      buffer.writeAll(["\"icon\":\`", this.icon, "\`,"], "");
     }
 
-    if (this._isDisabled != null) {  
-      buffer.writeAll(["\"isDisabled\":", this._isDisabled, ","], "");
+    if (this.isDisabled != null) {  
+      buffer.writeAll(["\"isDisabled\":", this.isDisabled, ","], "");
     }
 
     // NOTE: skip serialization of style (type CSSObject is ignored)} 

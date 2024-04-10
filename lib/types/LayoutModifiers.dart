@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,14 @@ import 'OptionFragment.dart';
  * LayoutModifiers 
  */
 class LayoutModifiers extends OptionFragment {
-  LayoutModifiers() : super();
-  double? _ax;  
-
+  LayoutModifiers( {
+    this.ax = null,
+    this.bx = null,
+    this.ay = null,
+    this.by = null
+  }) : super();
+  double? ax;
+    /*
   double get ax { 
     if (this._ax == null) {
       this._ax = 0;
@@ -35,9 +40,10 @@ class LayoutModifiers extends OptionFragment {
   void set ax (double v) {
     this._ax = v;
   }
+    */
     
-  double? _bx;  
-
+  double? bx;
+    /*
   double get bx { 
     if (this._bx == null) {
       this._bx = 0;
@@ -48,9 +54,10 @@ class LayoutModifiers extends OptionFragment {
   void set bx (double v) {
     this._bx = v;
   }
+    */
     
-  double? _ay;  
-
+  double? ay;
+    /*
   double get ay { 
     if (this._ay == null) {
       this._ay = 0;
@@ -61,9 +68,10 @@ class LayoutModifiers extends OptionFragment {
   void set ay (double v) {
     this._ay = v;
   }
+    */
     
-  double? _by;  
-
+  double? by;
+    /*
   double get by { 
     if (this._by == null) {
       this._by = 0;
@@ -74,6 +82,7 @@ class LayoutModifiers extends OptionFragment {
   void set by (double v) {
     this._by = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -83,20 +92,20 @@ class LayoutModifiers extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._ax != null) {  
-      buffer.writeAll(["\"ax\":", this._ax, ","], "");
+    if (this.ax != null) {  
+      buffer.writeAll(["\"ax\":", this.ax, ","], "");
     }
 
-    if (this._bx != null) {  
-      buffer.writeAll(["\"bx\":", this._bx, ","], "");
+    if (this.bx != null) {  
+      buffer.writeAll(["\"bx\":", this.bx, ","], "");
     }
 
-    if (this._ay != null) {  
-      buffer.writeAll(["\"ay\":", this._ay, ","], "");
+    if (this.ay != null) {  
+      buffer.writeAll(["\"ay\":", this.ay, ","], "");
     }
 
-    if (this._by != null) {  
-      buffer.writeAll(["\"by\":", this._by, ","], "");
+    if (this.by != null) {  
+      buffer.writeAll(["\"by\":", this.by, ","], "");
     }
   }
 

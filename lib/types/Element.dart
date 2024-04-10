@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,11 @@ import 'OptionFragment.dart';
  * Element 
  */
 class Element extends OptionFragment {
-  Element() : super();
-  String? _gradient;  
-
+  Element( {
+    this.gradient = null
+  }) : super();
+  String? gradient;
+    /*
   String get gradient { 
     if (this._gradient == null) {
       this._gradient = "";
@@ -35,6 +37,7 @@ class Element extends OptionFragment {
   void set gradient (String v) {
     this._gradient = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -44,8 +47,8 @@ class Element extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._gradient != null) {  
-      buffer.writeAll(["\"gradient\":\`", this._gradient, "\`,"], "");
+    if (this.gradient != null) {  
+      buffer.writeAll(["\"gradient\":\`", this.gradient, "\`,"], "");
     }
 
     // NOTE: skip serialization of radialReference (type number[] is ignored)} 

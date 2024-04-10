@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,11 @@ import 'OptionFragment.dart';
  * FetchURLOptions 
  */
 class FetchURLOptions extends OptionFragment {
-  FetchURLOptions() : super();
-  bool? _onlyColumnNames;  
-
+  FetchURLOptions( {
+    this.onlyColumnNames = null
+  }) : super();
+  bool? onlyColumnNames;
+    /*
   bool get onlyColumnNames { 
     if (this._onlyColumnNames == null) {
       this._onlyColumnNames = false;
@@ -35,6 +37,7 @@ class FetchURLOptions extends OptionFragment {
   void set onlyColumnNames (bool v) {
     this._onlyColumnNames = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -44,8 +47,8 @@ class FetchURLOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._onlyColumnNames != null) {  
-      buffer.writeAll(["\"onlyColumnNames\":", this._onlyColumnNames, ","], "");
+    if (this.onlyColumnNames != null) {  
+      buffer.writeAll(["\"onlyColumnNames\":", this.onlyColumnNames, ","], "");
     }
   }
 

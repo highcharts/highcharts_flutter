@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,15 @@ import 'OptionFragment.dart';
  * PointCompositionOptions 
  */
 class PointCompositionOptions extends PointOptions {
-  PointCompositionOptions() : super();
-  String? _id;  
-
+  PointCompositionOptions( {
+    this.id = null,
+    this.level = null,
+    this.mass = null,
+    this.outgoing = null,
+    this.weight = null
+  }) : super();
+  String? id;
+    /*
   String get id { 
     if (this._id == null) {
       this._id = "";
@@ -36,9 +42,10 @@ class PointCompositionOptions extends PointOptions {
   void set id (String v) {
     this._id = v;
   }
+    */
     
-  double? _level;  
-
+  double? level;
+    /*
   double get level { 
     if (this._level == null) {
       this._level = 0;
@@ -49,9 +56,10 @@ class PointCompositionOptions extends PointOptions {
   void set level (double v) {
     this._level = v;
   }
+    */
     
-  double? _mass;  
-
+  double? mass;
+    /*
   double get mass { 
     if (this._mass == null) {
       this._mass = 0;
@@ -62,9 +70,10 @@ class PointCompositionOptions extends PointOptions {
   void set mass (double v) {
     this._mass = v;
   }
+    */
     
-  bool? _outgoing;  
-
+  bool? outgoing;
+    /*
   bool get outgoing { 
     if (this._outgoing == null) {
       this._outgoing = false;
@@ -75,9 +84,10 @@ class PointCompositionOptions extends PointOptions {
   void set outgoing (bool v) {
     this._outgoing = v;
   }
+    */
     
-  double? _weight;  
-
+  double? weight;
+    /*
   double get weight { 
     if (this._weight == null) {
       this._weight = 0;
@@ -88,6 +98,7 @@ class PointCompositionOptions extends PointOptions {
   void set weight (double v) {
     this._weight = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -97,24 +108,24 @@ class PointCompositionOptions extends PointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._id != null) {  
-      buffer.writeAll(["\"id\":\`", this._id, "\`,"], "");
+    if (this.id != null) {  
+      buffer.writeAll(["\"id\":\`", this.id, "\`,"], "");
     }
 
-    if (this._level != null) {  
-      buffer.writeAll(["\"level\":", this._level, ","], "");
+    if (this.level != null) {  
+      buffer.writeAll(["\"level\":", this.level, ","], "");
     }
 
-    if (this._mass != null) {  
-      buffer.writeAll(["\"mass\":", this._mass, ","], "");
+    if (this.mass != null) {  
+      buffer.writeAll(["\"mass\":", this.mass, ","], "");
     }
 
-    if (this._outgoing != null) {  
-      buffer.writeAll(["\"outgoing\":", this._outgoing, ","], "");
+    if (this.outgoing != null) {  
+      buffer.writeAll(["\"outgoing\":", this.outgoing, ","], "");
     }
 
-    if (this._weight != null) {  
-      buffer.writeAll(["\"weight\":", this._weight, ","], "");
+    if (this.weight != null) {  
+      buffer.writeAll(["\"weight\":", this.weight, ","], "");
     }
   }
 

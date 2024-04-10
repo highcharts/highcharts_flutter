@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,20 @@ import 'OptionFragment.dart';
  * SankeyPointOptions 
  */
 class SankeyPointOptions extends ColumnPointOptions {
-  SankeyPointOptions() : super();
-  double? _column;  
-
+  SankeyPointOptions( {
+    this.column = null,
+    this.from = null,
+    this.height = null,
+    this.level = null,
+    this.linkColorMode = null,
+    this.offset = null,
+    this.offsetHorizontal = null,
+    this.offsetVertical = null,
+    this.to = null,
+    this.width = null
+  }) : super();
+  double? column;
+    /*
   double get column { 
     if (this._column == null) {
       this._column = 0;
@@ -36,9 +47,10 @@ class SankeyPointOptions extends ColumnPointOptions {
   void set column (double v) {
     this._column = v;
   }
+    */
     
-  String? _from;  
-
+  String? from;
+    /*
   String get from { 
     if (this._from == null) {
       this._from = "";
@@ -49,9 +61,10 @@ class SankeyPointOptions extends ColumnPointOptions {
   void set from (String v) {
     this._from = v;
   }
+    */
     
-  double? _height;  
-
+  double? height;
+    /*
   double get height { 
     if (this._height == null) {
       this._height = 0;
@@ -62,9 +75,10 @@ class SankeyPointOptions extends ColumnPointOptions {
   void set height (double v) {
     this._height = v;
   }
+    */
     
-  double? _level;  
-
+  double? level;
+    /*
   double get level { 
     if (this._level == null) {
       this._level = 0;
@@ -75,9 +89,10 @@ class SankeyPointOptions extends ColumnPointOptions {
   void set level (double v) {
     this._level = v;
   }
+    */
     
-  String? _linkColorMode;  
-
+  String? linkColorMode;
+    /*
   String get linkColorMode { 
     if (this._linkColorMode == null) {
       this._linkColorMode = "";
@@ -88,9 +103,10 @@ class SankeyPointOptions extends ColumnPointOptions {
   void set linkColorMode (String v) {
     this._linkColorMode = v;
   }
+    */
     
-  String? _offset;  
-
+  String? offset;
+    /*
   String get offset { 
     if (this._offset == null) {
       this._offset = "";
@@ -101,9 +117,10 @@ class SankeyPointOptions extends ColumnPointOptions {
   void set offset (String v) {
     this._offset = v;
   }
+    */
     
-  String? _offsetHorizontal;  
-
+  String? offsetHorizontal;
+    /*
   String get offsetHorizontal { 
     if (this._offsetHorizontal == null) {
       this._offsetHorizontal = "";
@@ -114,9 +131,10 @@ class SankeyPointOptions extends ColumnPointOptions {
   void set offsetHorizontal (String v) {
     this._offsetHorizontal = v;
   }
+    */
     
-  String? _offsetVertical;  
-
+  String? offsetVertical;
+    /*
   String get offsetVertical { 
     if (this._offsetVertical == null) {
       this._offsetVertical = "";
@@ -127,9 +145,10 @@ class SankeyPointOptions extends ColumnPointOptions {
   void set offsetVertical (String v) {
     this._offsetVertical = v;
   }
+    */
     
-  String? _to;  
-
+  String? to;
+    /*
   String get to { 
     if (this._to == null) {
       this._to = "";
@@ -140,9 +159,10 @@ class SankeyPointOptions extends ColumnPointOptions {
   void set to (String v) {
     this._to = v;
   }
+    */
     
-  double? _width;  
-
+  double? width;
+    /*
   double get width { 
     if (this._width == null) {
       this._width = 0;
@@ -153,6 +173,7 @@ class SankeyPointOptions extends ColumnPointOptions {
   void set width (double v) {
     this._width = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -162,44 +183,44 @@ class SankeyPointOptions extends ColumnPointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._column != null) {  
-      buffer.writeAll(["\"column\":", this._column, ","], "");
+    if (this.column != null) {  
+      buffer.writeAll(["\"column\":", this.column, ","], "");
     }
 
-    if (this._from != null) {  
-      buffer.writeAll(["\"from\":\`", this._from, "\`,"], "");
+    if (this.from != null) {  
+      buffer.writeAll(["\"from\":\`", this.from, "\`,"], "");
     }
 
-    if (this._height != null) {  
-      buffer.writeAll(["\"height\":", this._height, ","], "");
+    if (this.height != null) {  
+      buffer.writeAll(["\"height\":", this.height, ","], "");
     }
 
-    if (this._level != null) {  
-      buffer.writeAll(["\"level\":", this._level, ","], "");
+    if (this.level != null) {  
+      buffer.writeAll(["\"level\":", this.level, ","], "");
     }
 
-    if (this._linkColorMode != null) {  
-      buffer.writeAll(["\"linkColorMode\":\`", this._linkColorMode, "\`,"], "");
+    if (this.linkColorMode != null) {  
+      buffer.writeAll(["\"linkColorMode\":\`", this.linkColorMode, "\`,"], "");
     }
 
-    if (this._offset != null) {  
-      buffer.writeAll(["\"offset\":\`", this._offset, "\`,"], "");
+    if (this.offset != null) {  
+      buffer.writeAll(["\"offset\":\`", this.offset, "\`,"], "");
     }
 
-    if (this._offsetHorizontal != null) {  
-      buffer.writeAll(["\"offsetHorizontal\":\`", this._offsetHorizontal, "\`,"], "");
+    if (this.offsetHorizontal != null) {  
+      buffer.writeAll(["\"offsetHorizontal\":\`", this.offsetHorizontal, "\`,"], "");
     }
 
-    if (this._offsetVertical != null) {  
-      buffer.writeAll(["\"offsetVertical\":\`", this._offsetVertical, "\`,"], "");
+    if (this.offsetVertical != null) {  
+      buffer.writeAll(["\"offsetVertical\":\`", this.offsetVertical, "\`,"], "");
     }
 
-    if (this._to != null) {  
-      buffer.writeAll(["\"to\":\`", this._to, "\`,"], "");
+    if (this.to != null) {  
+      buffer.writeAll(["\"to\":\`", this.to, "\`,"], "");
     }
 
-    if (this._width != null) {  
-      buffer.writeAll(["\"width\":", this._width, ","], "");
+    if (this.width != null) {  
+      buffer.writeAll(["\"width\":", this.width, ","], "");
     }
   }
 

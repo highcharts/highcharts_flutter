@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -27,9 +27,63 @@ import 'OptionFragment.dart';
  * LangOptions 
  */
 class LangOptions extends OptionFragment {
-  LangOptions() : super();
-  String? _breadcrumbsToLabel;  
-
+  LangOptions( {
+    this.breadcrumbsToLabel = null,
+    this.mainBreadcrumb = null,
+    this.rangeSelectorFrom = null,
+    this.rangeSelectorTo = null,
+    this.rangeSelectorZoom = null,
+    this.decimalPoint = null,
+    this.invalidDate = null,
+    this.loading = null,
+    this.numericSymbolMagnitude = null,
+    this.resetZoom = null,
+    this.resetZoomTitle = null,
+    this.thousandsSep = null,
+    this.zoomIn = null,
+    this.zoomOut = null,
+    this.contextButtonTitle = null,
+    this.exitFullscreen = null,
+    this.downloadJPEG = null,
+    this.downloadPDF = null,
+    this.downloadPNG = null,
+    this.downloadSVG = null,
+    this.printChart = null,
+    this.viewFullscreen = null,
+    this.addComponent = null,
+    this.cancelButton = null,
+    this.caption = null,
+    this.chartClassName = null,
+    this.chartConfig = null,
+    this.chartID = null,
+    this.chartOptions = null,
+    this.chartType = null,
+    this.connectorName = null,
+    this.confirmButton = null,
+    this.confirmDestroyCell = null,
+    this.confirmDestroyRow = null,
+    this.dataLabels = null,
+    this.editMode = null,
+    this.errorMessage = null,
+    this.id = null,
+    this.off = null,
+    this.on = null,
+    this.pointFormat = null,
+    this.settings = null,
+    this.style = null,
+    this.title = null,
+    this.drillUpText = null,
+    this.downloadCSV = null,
+    this.downloadXLS = null,
+    this.viewData = null,
+    this.hideData = null,
+    this.exportInProgress = null,
+    this.noData = null,
+    this.downloadMIDI = null,
+    this.playAsSound = null
+  }) : super();
+  String? breadcrumbsToLabel;
+    /*
   String get breadcrumbsToLabel { 
     if (this._breadcrumbsToLabel == null) {
       this._breadcrumbsToLabel = "";
@@ -40,9 +94,10 @@ class LangOptions extends OptionFragment {
   void set breadcrumbsToLabel (String v) {
     this._breadcrumbsToLabel = v;
   }
+    */
     
-  String? _mainBreadcrumb;  
-
+  String? mainBreadcrumb;
+    /*
   String get mainBreadcrumb { 
     if (this._mainBreadcrumb == null) {
       this._mainBreadcrumb = "";
@@ -53,9 +108,10 @@ class LangOptions extends OptionFragment {
   void set mainBreadcrumb (String v) {
     this._mainBreadcrumb = v;
   }
+    */
     
-  String? _rangeSelectorFrom;  
-
+  String? rangeSelectorFrom;
+    /*
   String get rangeSelectorFrom { 
     if (this._rangeSelectorFrom == null) {
       this._rangeSelectorFrom = "";
@@ -66,9 +122,10 @@ class LangOptions extends OptionFragment {
   void set rangeSelectorFrom (String v) {
     this._rangeSelectorFrom = v;
   }
+    */
     
-  String? _rangeSelectorTo;  
-
+  String? rangeSelectorTo;
+    /*
   String get rangeSelectorTo { 
     if (this._rangeSelectorTo == null) {
       this._rangeSelectorTo = "";
@@ -79,9 +136,10 @@ class LangOptions extends OptionFragment {
   void set rangeSelectorTo (String v) {
     this._rangeSelectorTo = v;
   }
+    */
     
-  String? _rangeSelectorZoom;  
-
+  String? rangeSelectorZoom;
+    /*
   String get rangeSelectorZoom { 
     if (this._rangeSelectorZoom == null) {
       this._rangeSelectorZoom = "";
@@ -92,9 +150,10 @@ class LangOptions extends OptionFragment {
   void set rangeSelectorZoom (String v) {
     this._rangeSelectorZoom = v;
   }
+    */
     
-  String? _decimalPoint;  
-
+  String? decimalPoint;
+    /*
   String get decimalPoint { 
     if (this._decimalPoint == null) {
       this._decimalPoint = "";
@@ -105,9 +164,10 @@ class LangOptions extends OptionFragment {
   void set decimalPoint (String v) {
     this._decimalPoint = v;
   }
+    */
     
-  String? _invalidDate;  
-
+  String? invalidDate;
+    /*
   String get invalidDate { 
     if (this._invalidDate == null) {
       this._invalidDate = "";
@@ -118,9 +178,10 @@ class LangOptions extends OptionFragment {
   void set invalidDate (String v) {
     this._invalidDate = v;
   }
+    */
     
-  String? _loading;  
-
+  String? loading;
+    /*
   String get loading { 
     if (this._loading == null) {
       this._loading = "";
@@ -131,9 +192,10 @@ class LangOptions extends OptionFragment {
   void set loading (String v) {
     this._loading = v;
   }
+    */
     
-  double? _numericSymbolMagnitude;  
-
+  double? numericSymbolMagnitude;
+    /*
   double get numericSymbolMagnitude { 
     if (this._numericSymbolMagnitude == null) {
       this._numericSymbolMagnitude = 0;
@@ -144,9 +206,10 @@ class LangOptions extends OptionFragment {
   void set numericSymbolMagnitude (double v) {
     this._numericSymbolMagnitude = v;
   }
+    */
     
-  String? _resetZoom;  
-
+  String? resetZoom;
+    /*
   String get resetZoom { 
     if (this._resetZoom == null) {
       this._resetZoom = "";
@@ -157,9 +220,10 @@ class LangOptions extends OptionFragment {
   void set resetZoom (String v) {
     this._resetZoom = v;
   }
+    */
     
-  String? _resetZoomTitle;  
-
+  String? resetZoomTitle;
+    /*
   String get resetZoomTitle { 
     if (this._resetZoomTitle == null) {
       this._resetZoomTitle = "";
@@ -170,9 +234,10 @@ class LangOptions extends OptionFragment {
   void set resetZoomTitle (String v) {
     this._resetZoomTitle = v;
   }
+    */
     
-  String? _thousandsSep;  
-
+  String? thousandsSep;
+    /*
   String get thousandsSep { 
     if (this._thousandsSep == null) {
       this._thousandsSep = "";
@@ -183,9 +248,10 @@ class LangOptions extends OptionFragment {
   void set thousandsSep (String v) {
     this._thousandsSep = v;
   }
+    */
     
-  String? _zoomIn;  
-
+  String? zoomIn;
+    /*
   String get zoomIn { 
     if (this._zoomIn == null) {
       this._zoomIn = "";
@@ -196,9 +262,10 @@ class LangOptions extends OptionFragment {
   void set zoomIn (String v) {
     this._zoomIn = v;
   }
+    */
     
-  String? _zoomOut;  
-
+  String? zoomOut;
+    /*
   String get zoomOut { 
     if (this._zoomOut == null) {
       this._zoomOut = "";
@@ -209,9 +276,10 @@ class LangOptions extends OptionFragment {
   void set zoomOut (String v) {
     this._zoomOut = v;
   }
+    */
     
-  String? _contextButtonTitle;  
-
+  String? contextButtonTitle;
+    /*
   String get contextButtonTitle { 
     if (this._contextButtonTitle == null) {
       this._contextButtonTitle = "";
@@ -222,9 +290,10 @@ class LangOptions extends OptionFragment {
   void set contextButtonTitle (String v) {
     this._contextButtonTitle = v;
   }
+    */
     
-  String? _exitFullscreen;  
-
+  String? exitFullscreen;
+    /*
   String get exitFullscreen { 
     if (this._exitFullscreen == null) {
       this._exitFullscreen = "";
@@ -235,9 +304,10 @@ class LangOptions extends OptionFragment {
   void set exitFullscreen (String v) {
     this._exitFullscreen = v;
   }
+    */
     
-  String? _downloadJPEG;  
-
+  String? downloadJPEG;
+    /*
   String get downloadJPEG { 
     if (this._downloadJPEG == null) {
       this._downloadJPEG = "";
@@ -248,9 +318,10 @@ class LangOptions extends OptionFragment {
   void set downloadJPEG (String v) {
     this._downloadJPEG = v;
   }
+    */
     
-  String? _downloadPDF;  
-
+  String? downloadPDF;
+    /*
   String get downloadPDF { 
     if (this._downloadPDF == null) {
       this._downloadPDF = "";
@@ -261,9 +332,10 @@ class LangOptions extends OptionFragment {
   void set downloadPDF (String v) {
     this._downloadPDF = v;
   }
+    */
     
-  String? _downloadPNG;  
-
+  String? downloadPNG;
+    /*
   String get downloadPNG { 
     if (this._downloadPNG == null) {
       this._downloadPNG = "";
@@ -274,9 +346,10 @@ class LangOptions extends OptionFragment {
   void set downloadPNG (String v) {
     this._downloadPNG = v;
   }
+    */
     
-  String? _downloadSVG;  
-
+  String? downloadSVG;
+    /*
   String get downloadSVG { 
     if (this._downloadSVG == null) {
       this._downloadSVG = "";
@@ -287,9 +360,10 @@ class LangOptions extends OptionFragment {
   void set downloadSVG (String v) {
     this._downloadSVG = v;
   }
+    */
     
-  String? _printChart;  
-
+  String? printChart;
+    /*
   String get printChart { 
     if (this._printChart == null) {
       this._printChart = "";
@@ -300,9 +374,10 @@ class LangOptions extends OptionFragment {
   void set printChart (String v) {
     this._printChart = v;
   }
+    */
     
-  String? _viewFullscreen;  
-
+  String? viewFullscreen;
+    /*
   String get viewFullscreen { 
     if (this._viewFullscreen == null) {
       this._viewFullscreen = "";
@@ -313,9 +388,10 @@ class LangOptions extends OptionFragment {
   void set viewFullscreen (String v) {
     this._viewFullscreen = v;
   }
+    */
     
-  String? _addComponent;  
-
+  String? addComponent;
+    /*
   String get addComponent { 
     if (this._addComponent == null) {
       this._addComponent = "";
@@ -326,9 +402,10 @@ class LangOptions extends OptionFragment {
   void set addComponent (String v) {
     this._addComponent = v;
   }
+    */
     
-  String? _cancelButton;  
-
+  String? cancelButton;
+    /*
   String get cancelButton { 
     if (this._cancelButton == null) {
       this._cancelButton = "";
@@ -339,9 +416,10 @@ class LangOptions extends OptionFragment {
   void set cancelButton (String v) {
     this._cancelButton = v;
   }
+    */
     
-  String? _caption;  
-
+  String? caption;
+    /*
   String get caption { 
     if (this._caption == null) {
       this._caption = "";
@@ -352,9 +430,10 @@ class LangOptions extends OptionFragment {
   void set caption (String v) {
     this._caption = v;
   }
+    */
     
-  String? _chartClassName;  
-
+  String? chartClassName;
+    /*
   String get chartClassName { 
     if (this._chartClassName == null) {
       this._chartClassName = "";
@@ -365,9 +444,10 @@ class LangOptions extends OptionFragment {
   void set chartClassName (String v) {
     this._chartClassName = v;
   }
+    */
     
-  String? _chartConfig;  
-
+  String? chartConfig;
+    /*
   String get chartConfig { 
     if (this._chartConfig == null) {
       this._chartConfig = "";
@@ -378,9 +458,10 @@ class LangOptions extends OptionFragment {
   void set chartConfig (String v) {
     this._chartConfig = v;
   }
+    */
     
-  String? _chartID;  
-
+  String? chartID;
+    /*
   String get chartID { 
     if (this._chartID == null) {
       this._chartID = "";
@@ -391,9 +472,10 @@ class LangOptions extends OptionFragment {
   void set chartID (String v) {
     this._chartID = v;
   }
+    */
     
-  String? _chartOptions;  
-
+  String? chartOptions;
+    /*
   String get chartOptions { 
     if (this._chartOptions == null) {
       this._chartOptions = "";
@@ -404,9 +486,10 @@ class LangOptions extends OptionFragment {
   void set chartOptions (String v) {
     this._chartOptions = v;
   }
+    */
     
-  String? _chartType;  
-
+  String? chartType;
+    /*
   String get chartType { 
     if (this._chartType == null) {
       this._chartType = "";
@@ -417,9 +500,10 @@ class LangOptions extends OptionFragment {
   void set chartType (String v) {
     this._chartType = v;
   }
+    */
     
-  String? _connectorName;  
-
+  String? connectorName;
+    /*
   String get connectorName { 
     if (this._connectorName == null) {
       this._connectorName = "";
@@ -430,9 +514,10 @@ class LangOptions extends OptionFragment {
   void set connectorName (String v) {
     this._connectorName = v;
   }
+    */
     
-  String? _confirmButton;  
-
+  String? confirmButton;
+    /*
   String get confirmButton { 
     if (this._confirmButton == null) {
       this._confirmButton = "";
@@ -443,9 +528,10 @@ class LangOptions extends OptionFragment {
   void set confirmButton (String v) {
     this._confirmButton = v;
   }
+    */
     
-  String? _confirmDestroyCell;  
-
+  String? confirmDestroyCell;
+    /*
   String get confirmDestroyCell { 
     if (this._confirmDestroyCell == null) {
       this._confirmDestroyCell = "";
@@ -456,9 +542,10 @@ class LangOptions extends OptionFragment {
   void set confirmDestroyCell (String v) {
     this._confirmDestroyCell = v;
   }
+    */
     
-  String? _confirmDestroyRow;  
-
+  String? confirmDestroyRow;
+    /*
   String get confirmDestroyRow { 
     if (this._confirmDestroyRow == null) {
       this._confirmDestroyRow = "";
@@ -469,9 +556,10 @@ class LangOptions extends OptionFragment {
   void set confirmDestroyRow (String v) {
     this._confirmDestroyRow = v;
   }
+    */
     
-  String? _dataLabels;  
-
+  String? dataLabels;
+    /*
   String get dataLabels { 
     if (this._dataLabels == null) {
       this._dataLabels = "";
@@ -482,9 +570,10 @@ class LangOptions extends OptionFragment {
   void set dataLabels (String v) {
     this._dataLabels = v;
   }
+    */
     
-  String? _editMode;  
-
+  String? editMode;
+    /*
   String get editMode { 
     if (this._editMode == null) {
       this._editMode = "";
@@ -495,9 +584,10 @@ class LangOptions extends OptionFragment {
   void set editMode (String v) {
     this._editMode = v;
   }
+    */
     
-  String? _errorMessage;  
-
+  String? errorMessage;
+    /*
   String get errorMessage { 
     if (this._errorMessage == null) {
       this._errorMessage = "";
@@ -508,9 +598,10 @@ class LangOptions extends OptionFragment {
   void set errorMessage (String v) {
     this._errorMessage = v;
   }
+    */
     
-  String? _id;  
-
+  String? id;
+    /*
   String get id { 
     if (this._id == null) {
       this._id = "";
@@ -521,9 +612,10 @@ class LangOptions extends OptionFragment {
   void set id (String v) {
     this._id = v;
   }
+    */
     
-  String? _off;  
-
+  String? off;
+    /*
   String get off { 
     if (this._off == null) {
       this._off = "";
@@ -534,9 +626,10 @@ class LangOptions extends OptionFragment {
   void set off (String v) {
     this._off = v;
   }
+    */
     
-  String? _on;  
-
+  String? on;
+    /*
   String get on { 
     if (this._on == null) {
       this._on = "";
@@ -547,9 +640,10 @@ class LangOptions extends OptionFragment {
   void set on (String v) {
     this._on = v;
   }
+    */
     
-  String? _pointFormat;  
-
+  String? pointFormat;
+    /*
   String get pointFormat { 
     if (this._pointFormat == null) {
       this._pointFormat = "";
@@ -560,9 +654,10 @@ class LangOptions extends OptionFragment {
   void set pointFormat (String v) {
     this._pointFormat = v;
   }
+    */
     
-  String? _settings;  
-
+  String? settings;
+    /*
   String get settings { 
     if (this._settings == null) {
       this._settings = "";
@@ -573,9 +668,10 @@ class LangOptions extends OptionFragment {
   void set settings (String v) {
     this._settings = v;
   }
+    */
     
-  String? _style;  
-
+  String? style;
+    /*
   String get style { 
     if (this._style == null) {
       this._style = "";
@@ -586,9 +682,10 @@ class LangOptions extends OptionFragment {
   void set style (String v) {
     this._style = v;
   }
+    */
     
-  String? _title;  
-
+  String? title;
+    /*
   String get title { 
     if (this._title == null) {
       this._title = "";
@@ -599,9 +696,10 @@ class LangOptions extends OptionFragment {
   void set title (String v) {
     this._title = v;
   }
+    */
     
-  String? _drillUpText;  
-
+  String? drillUpText;
+    /*
   String get drillUpText { 
     if (this._drillUpText == null) {
       this._drillUpText = "";
@@ -612,9 +710,10 @@ class LangOptions extends OptionFragment {
   void set drillUpText (String v) {
     this._drillUpText = v;
   }
+    */
     
-  String? _downloadCSV;  
-
+  String? downloadCSV;
+    /*
   String get downloadCSV { 
     if (this._downloadCSV == null) {
       this._downloadCSV = "";
@@ -625,9 +724,10 @@ class LangOptions extends OptionFragment {
   void set downloadCSV (String v) {
     this._downloadCSV = v;
   }
+    */
     
-  String? _downloadXLS;  
-
+  String? downloadXLS;
+    /*
   String get downloadXLS { 
     if (this._downloadXLS == null) {
       this._downloadXLS = "";
@@ -638,9 +738,10 @@ class LangOptions extends OptionFragment {
   void set downloadXLS (String v) {
     this._downloadXLS = v;
   }
+    */
     
-  String? _viewData;  
-
+  String? viewData;
+    /*
   String get viewData { 
     if (this._viewData == null) {
       this._viewData = "";
@@ -651,9 +752,10 @@ class LangOptions extends OptionFragment {
   void set viewData (String v) {
     this._viewData = v;
   }
+    */
     
-  String? _hideData;  
-
+  String? hideData;
+    /*
   String get hideData { 
     if (this._hideData == null) {
       this._hideData = "";
@@ -664,9 +766,10 @@ class LangOptions extends OptionFragment {
   void set hideData (String v) {
     this._hideData = v;
   }
+    */
     
-  String? _exportInProgress;  
-
+  String? exportInProgress;
+    /*
   String get exportInProgress { 
     if (this._exportInProgress == null) {
       this._exportInProgress = "";
@@ -677,9 +780,10 @@ class LangOptions extends OptionFragment {
   void set exportInProgress (String v) {
     this._exportInProgress = v;
   }
+    */
     
-  String? _noData;  
-
+  String? noData;
+    /*
   String get noData { 
     if (this._noData == null) {
       this._noData = "";
@@ -690,9 +794,10 @@ class LangOptions extends OptionFragment {
   void set noData (String v) {
     this._noData = v;
   }
+    */
     
-  String? _downloadMIDI;  
-
+  String? downloadMIDI;
+    /*
   String get downloadMIDI { 
     if (this._downloadMIDI == null) {
       this._downloadMIDI = "";
@@ -703,9 +808,10 @@ class LangOptions extends OptionFragment {
   void set downloadMIDI (String v) {
     this._downloadMIDI = v;
   }
+    */
     
-  String? _playAsSound;  
-
+  String? playAsSound;
+    /*
   String get playAsSound { 
     if (this._playAsSound == null) {
       this._playAsSound = "";
@@ -716,6 +822,7 @@ class LangOptions extends OptionFragment {
   void set playAsSound (String v) {
     this._playAsSound = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -725,268 +832,268 @@ class LangOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._breadcrumbsToLabel != null) {  
-      buffer.writeAll(["\"breadcrumbsToLabel\":\`", this._breadcrumbsToLabel, "\`,"], "");
+    if (this.breadcrumbsToLabel != null) {  
+      buffer.writeAll(["\"breadcrumbsToLabel\":\`", this.breadcrumbsToLabel, "\`,"], "");
     }
 
-    if (this._mainBreadcrumb != null) {  
-      buffer.writeAll(["\"mainBreadcrumb\":\`", this._mainBreadcrumb, "\`,"], "");
+    if (this.mainBreadcrumb != null) {  
+      buffer.writeAll(["\"mainBreadcrumb\":\`", this.mainBreadcrumb, "\`,"], "");
     }
 
-    if (this._rangeSelectorFrom != null) {  
-      buffer.writeAll(["\"rangeSelectorFrom\":\`", this._rangeSelectorFrom, "\`,"], "");
+    if (this.rangeSelectorFrom != null) {  
+      buffer.writeAll(["\"rangeSelectorFrom\":\`", this.rangeSelectorFrom, "\`,"], "");
     }
 
-    if (this._rangeSelectorTo != null) {  
-      buffer.writeAll(["\"rangeSelectorTo\":\`", this._rangeSelectorTo, "\`,"], "");
+    if (this.rangeSelectorTo != null) {  
+      buffer.writeAll(["\"rangeSelectorTo\":\`", this.rangeSelectorTo, "\`,"], "");
     }
 
-    if (this._rangeSelectorZoom != null) {  
-      buffer.writeAll(["\"rangeSelectorZoom\":\`", this._rangeSelectorZoom, "\`,"], "");
+    if (this.rangeSelectorZoom != null) {  
+      buffer.writeAll(["\"rangeSelectorZoom\":\`", this.rangeSelectorZoom, "\`,"], "");
     }
 
-    if (this._decimalPoint != null) {  
-      buffer.writeAll(["\"decimalPoint\":\`", this._decimalPoint, "\`,"], "");
+    if (this.decimalPoint != null) {  
+      buffer.writeAll(["\"decimalPoint\":\`", this.decimalPoint, "\`,"], "");
     }
 
-    if (this._invalidDate != null) {  
-      buffer.writeAll(["\"invalidDate\":\`", this._invalidDate, "\`,"], "");
+    if (this.invalidDate != null) {  
+      buffer.writeAll(["\"invalidDate\":\`", this.invalidDate, "\`,"], "");
     }
 
-    if (this._loading != null) {  
-      buffer.writeAll(["\"loading\":\`", this._loading, "\`,"], "");
+    if (this.loading != null) {  
+      buffer.writeAll(["\"loading\":\`", this.loading, "\`,"], "");
     }
 
     // NOTE: skip serialization of months (type string[] is ignored)} 
 
-    if (this._numericSymbolMagnitude != null) {  
-      buffer.writeAll(["\"numericSymbolMagnitude\":", this._numericSymbolMagnitude, ","], "");
+    if (this.numericSymbolMagnitude != null) {  
+      buffer.writeAll(["\"numericSymbolMagnitude\":", this.numericSymbolMagnitude, ","], "");
     }
 
     // NOTE: skip serialization of numericSymbols (type string[] is ignored)} 
 
-    if (this._resetZoom != null) {  
-      buffer.writeAll(["\"resetZoom\":\`", this._resetZoom, "\`,"], "");
+    if (this.resetZoom != null) {  
+      buffer.writeAll(["\"resetZoom\":\`", this.resetZoom, "\`,"], "");
     }
 
-    if (this._resetZoomTitle != null) {  
-      buffer.writeAll(["\"resetZoomTitle\":\`", this._resetZoomTitle, "\`,"], "");
+    if (this.resetZoomTitle != null) {  
+      buffer.writeAll(["\"resetZoomTitle\":\`", this.resetZoomTitle, "\`,"], "");
     }
 
     // NOTE: skip serialization of shortMonths (type string[] is ignored)} 
 
     // NOTE: skip serialization of shortWeekdays (type string[] is ignored)} 
 
-    if (this._thousandsSep != null) {  
-      buffer.writeAll(["\"thousandsSep\":\`", this._thousandsSep, "\`,"], "");
+    if (this.thousandsSep != null) {  
+      buffer.writeAll(["\"thousandsSep\":\`", this.thousandsSep, "\`,"], "");
     }
 
     // NOTE: skip serialization of weekdays (type string[] is ignored)} 
 
-    if (this._zoomIn != null) {  
-      buffer.writeAll(["\"zoomIn\":\`", this._zoomIn, "\`,"], "");
+    if (this.zoomIn != null) {  
+      buffer.writeAll(["\"zoomIn\":\`", this.zoomIn, "\`,"], "");
     }
 
-    if (this._zoomOut != null) {  
-      buffer.writeAll(["\"zoomOut\":\`", this._zoomOut, "\`,"], "");
+    if (this.zoomOut != null) {  
+      buffer.writeAll(["\"zoomOut\":\`", this.zoomOut, "\`,"], "");
     }
 
     // NOTE: skip serialization of navigation (type LangNavigationOptions is ignored)} 
 
     // NOTE: skip serialization of navigation (type LangNavigationOptions is ignored)} 
 
-    if (this._contextButtonTitle != null) {  
-      buffer.writeAll(["\"contextButtonTitle\":\`", this._contextButtonTitle, "\`,"], "");
+    if (this.contextButtonTitle != null) {  
+      buffer.writeAll(["\"contextButtonTitle\":\`", this.contextButtonTitle, "\`,"], "");
     }
 
-    if (this._exitFullscreen != null) {  
-      buffer.writeAll(["\"exitFullscreen\":\`", this._exitFullscreen, "\`,"], "");
+    if (this.exitFullscreen != null) {  
+      buffer.writeAll(["\"exitFullscreen\":\`", this.exitFullscreen, "\`,"], "");
     }
 
-    if (this._downloadJPEG != null) {  
-      buffer.writeAll(["\"downloadJPEG\":\`", this._downloadJPEG, "\`,"], "");
+    if (this.downloadJPEG != null) {  
+      buffer.writeAll(["\"downloadJPEG\":\`", this.downloadJPEG, "\`,"], "");
     }
 
-    if (this._downloadPDF != null) {  
-      buffer.writeAll(["\"downloadPDF\":\`", this._downloadPDF, "\`,"], "");
+    if (this.downloadPDF != null) {  
+      buffer.writeAll(["\"downloadPDF\":\`", this.downloadPDF, "\`,"], "");
     }
 
-    if (this._downloadPNG != null) {  
-      buffer.writeAll(["\"downloadPNG\":\`", this._downloadPNG, "\`,"], "");
+    if (this.downloadPNG != null) {  
+      buffer.writeAll(["\"downloadPNG\":\`", this.downloadPNG, "\`,"], "");
     }
 
-    if (this._downloadSVG != null) {  
-      buffer.writeAll(["\"downloadSVG\":\`", this._downloadSVG, "\`,"], "");
+    if (this.downloadSVG != null) {  
+      buffer.writeAll(["\"downloadSVG\":\`", this.downloadSVG, "\`,"], "");
     }
 
-    if (this._printChart != null) {  
-      buffer.writeAll(["\"printChart\":\`", this._printChart, "\`,"], "");
+    if (this.printChart != null) {  
+      buffer.writeAll(["\"printChart\":\`", this.printChart, "\`,"], "");
     }
 
-    if (this._viewFullscreen != null) {  
-      buffer.writeAll(["\"viewFullscreen\":\`", this._viewFullscreen, "\`,"], "");
+    if (this.viewFullscreen != null) {  
+      buffer.writeAll(["\"viewFullscreen\":\`", this.viewFullscreen, "\`,"], "");
     }
 
     // NOTE: skip serialization of accessibility (type LangAccessibilityOptions is ignored)} 
 
     // NOTE: skip serialization of accessibility (type LangAccessibilityOptions is ignored)} 
 
-    if (this._addComponent != null) {  
-      buffer.writeAll(["\"addComponent\":\`", this._addComponent, "\`,"], "");
+    if (this.addComponent != null) {  
+      buffer.writeAll(["\"addComponent\":\`", this.addComponent, "\`,"], "");
     }
 
-    if (this._cancelButton != null) {  
-      buffer.writeAll(["\"cancelButton\":\`", this._cancelButton, "\`,"], "");
+    if (this.cancelButton != null) {  
+      buffer.writeAll(["\"cancelButton\":\`", this.cancelButton, "\`,"], "");
     }
 
-    if (this._caption != null) {  
-      buffer.writeAll(["\"caption\":\`", this._caption, "\`,"], "");
+    if (this.caption != null) {  
+      buffer.writeAll(["\"caption\":\`", this.caption, "\`,"], "");
     }
 
-    if (this._chartClassName != null) {  
-      buffer.writeAll(["\"chartClassName\":\`", this._chartClassName, "\`,"], "");
+    if (this.chartClassName != null) {  
+      buffer.writeAll(["\"chartClassName\":\`", this.chartClassName, "\`,"], "");
     }
 
-    if (this._chartConfig != null) {  
-      buffer.writeAll(["\"chartConfig\":\`", this._chartConfig, "\`,"], "");
+    if (this.chartConfig != null) {  
+      buffer.writeAll(["\"chartConfig\":\`", this.chartConfig, "\`,"], "");
     }
 
-    if (this._chartID != null) {  
-      buffer.writeAll(["\"chartID\":\`", this._chartID, "\`,"], "");
+    if (this.chartID != null) {  
+      buffer.writeAll(["\"chartID\":\`", this.chartID, "\`,"], "");
     }
 
-    if (this._chartOptions != null) {  
-      buffer.writeAll(["\"chartOptions\":\`", this._chartOptions, "\`,"], "");
+    if (this.chartOptions != null) {  
+      buffer.writeAll(["\"chartOptions\":\`", this.chartOptions, "\`,"], "");
     }
 
-    if (this._chartType != null) {  
-      buffer.writeAll(["\"chartType\":\`", this._chartType, "\`,"], "");
+    if (this.chartType != null) {  
+      buffer.writeAll(["\"chartType\":\`", this.chartType, "\`,"], "");
     }
 
-    if (this._connectorName != null) {  
-      buffer.writeAll(["\"connectorName\":\`", this._connectorName, "\`,"], "");
+    if (this.connectorName != null) {  
+      buffer.writeAll(["\"connectorName\":\`", this.connectorName, "\`,"], "");
     }
 
-    if (this._confirmButton != null) {  
-      buffer.writeAll(["\"confirmButton\":\`", this._confirmButton, "\`,"], "");
+    if (this.confirmButton != null) {  
+      buffer.writeAll(["\"confirmButton\":\`", this.confirmButton, "\`,"], "");
     }
 
-    if (this._confirmDestroyCell != null) {  
-      buffer.writeAll(["\"confirmDestroyCell\":\`", this._confirmDestroyCell, "\`,"], "");
+    if (this.confirmDestroyCell != null) {  
+      buffer.writeAll(["\"confirmDestroyCell\":\`", this.confirmDestroyCell, "\`,"], "");
     }
 
-    if (this._confirmDestroyRow != null) {  
-      buffer.writeAll(["\"confirmDestroyRow\":\`", this._confirmDestroyRow, "\`,"], "");
+    if (this.confirmDestroyRow != null) {  
+      buffer.writeAll(["\"confirmDestroyRow\":\`", this.confirmDestroyRow, "\`,"], "");
     }
 
-    if (this._dataLabels != null) {  
-      buffer.writeAll(["\"dataLabels\":\`", this._dataLabels, "\`,"], "");
+    if (this.dataLabels != null) {  
+      buffer.writeAll(["\"dataLabels\":\`", this.dataLabels, "\`,"], "");
     }
 
-    if (this._editMode != null) {  
-      buffer.writeAll(["\"editMode\":\`", this._editMode, "\`,"], "");
+    if (this.editMode != null) {  
+      buffer.writeAll(["\"editMode\":\`", this.editMode, "\`,"], "");
     }
 
-    if (this._errorMessage != null) {  
-      buffer.writeAll(["\"errorMessage\":\`", this._errorMessage, "\`,"], "");
+    if (this.errorMessage != null) {  
+      buffer.writeAll(["\"errorMessage\":\`", this.errorMessage, "\`,"], "");
     }
 
-    if (this._exitFullscreen != null) {  
-      buffer.writeAll(["\"exitFullscreen\":\`", this._exitFullscreen, "\`,"], "");
+    if (this.exitFullscreen != null) {  
+      buffer.writeAll(["\"exitFullscreen\":\`", this.exitFullscreen, "\`,"], "");
     }
 
-    if (this._id != null) {  
-      buffer.writeAll(["\"id\":\`", this._id, "\`,"], "");
+    if (this.id != null) {  
+      buffer.writeAll(["\"id\":\`", this.id, "\`,"], "");
     }
 
-    if (this._off != null) {  
-      buffer.writeAll(["\"off\":\`", this._off, "\`,"], "");
+    if (this.off != null) {  
+      buffer.writeAll(["\"off\":\`", this.off, "\`,"], "");
     }
 
-    if (this._on != null) {  
-      buffer.writeAll(["\"on\":\`", this._on, "\`,"], "");
+    if (this.on != null) {  
+      buffer.writeAll(["\"on\":\`", this.on, "\`,"], "");
     }
 
-    if (this._pointFormat != null) {  
-      buffer.writeAll(["\"pointFormat\":\`", this._pointFormat, "\`,"], "");
+    if (this.pointFormat != null) {  
+      buffer.writeAll(["\"pointFormat\":\`", this.pointFormat, "\`,"], "");
     }
 
-    if (this._settings != null) {  
-      buffer.writeAll(["\"settings\":\`", this._settings, "\`,"], "");
+    if (this.settings != null) {  
+      buffer.writeAll(["\"settings\":\`", this.settings, "\`,"], "");
     }
 
     // NOTE: skip serialization of sidebar (type SidebarLangOptions is ignored)} 
 
-    if (this._style != null) {  
-      buffer.writeAll(["\"style\":\`", this._style, "\`,"], "");
+    if (this.style != null) {  
+      buffer.writeAll(["\"style\":\`", this.style, "\`,"], "");
     }
 
-    if (this._title != null) {  
-      buffer.writeAll(["\"title\":\`", this._title, "\`,"], "");
+    if (this.title != null) {  
+      buffer.writeAll(["\"title\":\`", this.title, "\`,"], "");
     }
 
-    if (this._viewFullscreen != null) {  
-      buffer.writeAll(["\"viewFullscreen\":\`", this._viewFullscreen, "\`,"], "");
+    if (this.viewFullscreen != null) {  
+      buffer.writeAll(["\"viewFullscreen\":\`", this.viewFullscreen, "\`,"], "");
     }
 
-    if (this._drillUpText != null) {  
-      buffer.writeAll(["\"drillUpText\":\`", this._drillUpText, "\`,"], "");
+    if (this.drillUpText != null) {  
+      buffer.writeAll(["\"drillUpText\":\`", this.drillUpText, "\`,"], "");
     }
 
-    if (this._downloadCSV != null) {  
-      buffer.writeAll(["\"downloadCSV\":\`", this._downloadCSV, "\`,"], "");
+    if (this.downloadCSV != null) {  
+      buffer.writeAll(["\"downloadCSV\":\`", this.downloadCSV, "\`,"], "");
     }
 
-    if (this._downloadXLS != null) {  
-      buffer.writeAll(["\"downloadXLS\":\`", this._downloadXLS, "\`,"], "");
-    }
-
-    // NOTE: skip serialization of exportData (type ExportDataLangOptions is ignored)} 
-
-    if (this._viewData != null) {  
-      buffer.writeAll(["\"viewData\":\`", this._viewData, "\`,"], "");
-    }
-
-    if (this._hideData != null) {  
-      buffer.writeAll(["\"hideData\":\`", this._hideData, "\`,"], "");
-    }
-
-    if (this._exportInProgress != null) {  
-      buffer.writeAll(["\"exportInProgress\":\`", this._exportInProgress, "\`,"], "");
-    }
-
-    if (this._downloadCSV != null) {  
-      buffer.writeAll(["\"downloadCSV\":\`", this._downloadCSV, "\`,"], "");
-    }
-
-    if (this._downloadXLS != null) {  
-      buffer.writeAll(["\"downloadXLS\":\`", this._downloadXLS, "\`,"], "");
+    if (this.downloadXLS != null) {  
+      buffer.writeAll(["\"downloadXLS\":\`", this.downloadXLS, "\`,"], "");
     }
 
     // NOTE: skip serialization of exportData (type ExportDataLangOptions is ignored)} 
 
-    if (this._viewData != null) {  
-      buffer.writeAll(["\"viewData\":\`", this._viewData, "\`,"], "");
+    if (this.viewData != null) {  
+      buffer.writeAll(["\"viewData\":\`", this.viewData, "\`,"], "");
     }
 
-    if (this._hideData != null) {  
-      buffer.writeAll(["\"hideData\":\`", this._hideData, "\`,"], "");
+    if (this.hideData != null) {  
+      buffer.writeAll(["\"hideData\":\`", this.hideData, "\`,"], "");
     }
 
-    if (this._exportInProgress != null) {  
-      buffer.writeAll(["\"exportInProgress\":\`", this._exportInProgress, "\`,"], "");
+    if (this.exportInProgress != null) {  
+      buffer.writeAll(["\"exportInProgress\":\`", this.exportInProgress, "\`,"], "");
     }
 
-    if (this._noData != null) {  
-      buffer.writeAll(["\"noData\":\`", this._noData, "\`,"], "");
+    if (this.downloadCSV != null) {  
+      buffer.writeAll(["\"downloadCSV\":\`", this.downloadCSV, "\`,"], "");
     }
 
-    if (this._downloadMIDI != null) {  
-      buffer.writeAll(["\"downloadMIDI\":\`", this._downloadMIDI, "\`,"], "");
+    if (this.downloadXLS != null) {  
+      buffer.writeAll(["\"downloadXLS\":\`", this.downloadXLS, "\`,"], "");
     }
 
-    if (this._playAsSound != null) {  
-      buffer.writeAll(["\"playAsSound\":\`", this._playAsSound, "\`,"], "");
+    // NOTE: skip serialization of exportData (type ExportDataLangOptions is ignored)} 
+
+    if (this.viewData != null) {  
+      buffer.writeAll(["\"viewData\":\`", this.viewData, "\`,"], "");
+    }
+
+    if (this.hideData != null) {  
+      buffer.writeAll(["\"hideData\":\`", this.hideData, "\`,"], "");
+    }
+
+    if (this.exportInProgress != null) {  
+      buffer.writeAll(["\"exportInProgress\":\`", this.exportInProgress, "\`,"], "");
+    }
+
+    if (this.noData != null) {  
+      buffer.writeAll(["\"noData\":\`", this.noData, "\`,"], "");
+    }
+
+    if (this.downloadMIDI != null) {  
+      buffer.writeAll(["\"downloadMIDI\":\`", this.downloadMIDI, "\`,"], "");
+    }
+
+    if (this.playAsSound != null) {  
+      buffer.writeAll(["\"playAsSound\":\`", this.playAsSound, "\`,"], "");
     }
 
     // NOTE: skip serialization of navigation (type LangNavigationOptions is ignored)} 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -27,7 +27,13 @@ import 'OptionFragment.dart';
  * ColorAxisOptions 
  */
 class ColorAxisOptions extends AxisOptions {
-  ColorAxisOptions() : super();
+  ColorAxisOptions( {
+    this.dataClassColor = null,
+    this.layout = null,
+    this.maxColor = null,
+    this.minColor = null,
+    this.showInLegend = null
+  }) : super();
   /**
    * Determines how to set each data class' color if no individual
    * color is set. The default value, `tween`, computes intermediate
@@ -37,8 +43,8 @@ class ColorAxisOptions extends AxisOptions {
    * 
    * Defaults to 'tween'. 
       */
-  String? _dataClassColor;  
-
+  String? dataClassColor;
+    /*
   String get dataClassColor { 
     if (this._dataClassColor == null) {
       this._dataClassColor = "";
@@ -49,6 +55,7 @@ class ColorAxisOptions extends AxisOptions {
   void set dataClassColor (String v) {
     this._dataClassColor = v;
   }
+    */
     
   /**
    * An array of data classes or ranges for the choropleth map. If
@@ -60,8 +67,8 @@ class ColorAxisOptions extends AxisOptions {
    * The layout of the color axis. Can be `'horizontal'` or `'vertical'`.
    * If none given, the color axis has the same layout as the legend.  
       */
-  String? _layout;  
-
+  String? layout;
+    /*
   String get layout { 
     if (this._layout == null) {
       this._layout = "";
@@ -72,14 +79,15 @@ class ColorAxisOptions extends AxisOptions {
   void set layout (String v) {
     this._layout = v;
   }
+    */
     
   /**
    * The triangular marker on a scalar color axis that points to the
    * value of the hovered area. To disable the marker, set
    * `marker: null`.  
       */
-  ColorAxisMarkerOptions? _marker;  
-
+  ColorAxisMarkerOptions? marker;
+    /*
   ColorAxisMarkerOptions get marker { 
     if (this._marker == null) {
       this._marker = ColorAxisMarkerOptions();
@@ -90,6 +98,7 @@ class ColorAxisOptions extends AxisOptions {
   void set marker (ColorAxisMarkerOptions v) {
     this._marker = v;
   }
+    */
     
   /**
    * The color to represent the maximum of the color axis. Unless
@@ -103,8 +112,8 @@ class ColorAxisOptions extends AxisOptions {
    * 
    * Defaults to '#0022ff'. 
       */
-  String? _maxColor;  
-
+  String? maxColor;
+    /*
   String get maxColor { 
     if (this._maxColor == null) {
       this._maxColor = "";
@@ -115,6 +124,7 @@ class ColorAxisOptions extends AxisOptions {
   void set maxColor (String v) {
     this._maxColor = v;
   }
+    */
     
   /**
    * The color to represent the minimum of the color axis. Unless
@@ -128,8 +138,8 @@ class ColorAxisOptions extends AxisOptions {
    * 
    * Defaults to '#e6e9ff'. 
       */
-  String? _minColor;  
-
+  String? minColor;
+    /*
   String get minColor { 
     if (this._minColor == null) {
       this._minColor = "";
@@ -140,14 +150,15 @@ class ColorAxisOptions extends AxisOptions {
   void set minColor (String v) {
     this._minColor = v;
   }
+    */
     
   /**
    * Whether to display the colorAxis in the legend. 
    * 
    * Defaults to 'true'. 
       */
-  bool? _showInLegend;  
-
+  bool? showInLegend;
+    /*
   bool get showInLegend { 
     if (this._showInLegend == null) {
       this._showInLegend = false;
@@ -158,6 +169,7 @@ class ColorAxisOptions extends AxisOptions {
   void set showInLegend (bool v) {
     this._showInLegend = v;
   }
+    */
     
   /**
    * Color stops for the gradient of a scalar color axis. Use this in
@@ -175,32 +187,32 @@ class ColorAxisOptions extends AxisOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._dataClassColor != null) {  
-      buffer.writeAll(["\"dataClassColor\":\`", this._dataClassColor, "\`,"], "");
+    if (this.dataClassColor != null) {  
+      buffer.writeAll(["\"dataClassColor\":\`", this.dataClassColor, "\`,"], "");
     }
 
     // NOTE: skip serialization of dataClasses (type ColorAxisDataClassesOptions[] is ignored)} 
 
-    if (this._layout != null) {  
-      buffer.writeAll(["\"layout\":\`", this._layout, "\`,"], "");
+    if (this.layout != null) {  
+      buffer.writeAll(["\"layout\":\`", this.layout, "\`,"], "");
     }
 
     // NOTE: skip serialization of legend (type LegendOptions is ignored)} 
 
-    if (this._marker != null) {  
-      buffer.writeAll(["\"marker\":", this._marker?.toJSON(), ","], "");
+    if (this.marker != null) {  
+      buffer.writeAll(["\"marker\":", this.marker?.toJSON(), ","], "");
     }
 
-    if (this._maxColor != null) {  
-      buffer.writeAll(["\"maxColor\":\`", this._maxColor, "\`,"], "");
+    if (this.maxColor != null) {  
+      buffer.writeAll(["\"maxColor\":\`", this.maxColor, "\`,"], "");
     }
 
-    if (this._minColor != null) {  
-      buffer.writeAll(["\"minColor\":\`", this._minColor, "\`,"], "");
+    if (this.minColor != null) {  
+      buffer.writeAll(["\"minColor\":\`", this.minColor, "\`,"], "");
     }
 
-    if (this._showInLegend != null) {  
-      buffer.writeAll(["\"showInLegend\":", this._showInLegend, ","], "");
+    if (this.showInLegend != null) {  
+      buffer.writeAll(["\"showInLegend\":", this.showInLegend, ","], "");
     }
 
     // NOTE: skip serialization of stops (type GradientColorStop[] is ignored)} 

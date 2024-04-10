@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,13 @@ import 'OptionFragment.dart';
  * LabelOptions 
  */
 class LabelOptions extends ControllableLabelOptions {
-  LabelOptions() : super();
-  String? _backgroundColor;  
-
+  LabelOptions( {
+    this.backgroundColor = null,
+    this.borderWidth = null,
+    this.y = null
+  }) : super();
+  String? backgroundColor;
+    /*
   String get backgroundColor { 
     if (this._backgroundColor == null) {
       this._backgroundColor = "";
@@ -36,9 +40,10 @@ class LabelOptions extends ControllableLabelOptions {
   void set backgroundColor (String v) {
     this._backgroundColor = v;
   }
+    */
     
-  double? _borderWidth;  
-
+  double? borderWidth;
+    /*
   double get borderWidth { 
     if (this._borderWidth == null) {
       this._borderWidth = 0;
@@ -49,9 +54,10 @@ class LabelOptions extends ControllableLabelOptions {
   void set borderWidth (double v) {
     this._borderWidth = v;
   }
+    */
     
-  double? _y;  
-
+  double? y;
+    /*
   double get y { 
     if (this._y == null) {
       this._y = 0;
@@ -62,6 +68,7 @@ class LabelOptions extends ControllableLabelOptions {
   void set y (double v) {
     this._y = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -71,16 +78,16 @@ class LabelOptions extends ControllableLabelOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._backgroundColor != null) {  
-      buffer.writeAll(["\"backgroundColor\":\`", this._backgroundColor, "\`,"], "");
+    if (this.backgroundColor != null) {  
+      buffer.writeAll(["\"backgroundColor\":\`", this.backgroundColor, "\`,"], "");
     }
 
-    if (this._borderWidth != null) {  
-      buffer.writeAll(["\"borderWidth\":", this._borderWidth, ","], "");
+    if (this.borderWidth != null) {  
+      buffer.writeAll(["\"borderWidth\":", this.borderWidth, ","], "");
     }
 
-    if (this._y != null) {  
-      buffer.writeAll(["\"y\":", this._y, ","], "");
+    if (this.y != null) {  
+      buffer.writeAll(["\"y\":", this.y, ","], "");
     }
   }
 

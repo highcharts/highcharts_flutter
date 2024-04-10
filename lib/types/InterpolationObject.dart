@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,12 @@ import 'OptionFragment.dart';
  * InterpolationObject 
  */
 class InterpolationObject extends OptionFragment {
-  InterpolationObject() : super();
-  bool? _enabled;  
-
+  InterpolationObject( {
+    this.enabled = null,
+    this.blur = null
+  }) : super();
+  bool? enabled;
+    /*
   bool get enabled { 
     if (this._enabled == null) {
       this._enabled = false;
@@ -35,9 +38,10 @@ class InterpolationObject extends OptionFragment {
   void set enabled (bool v) {
     this._enabled = v;
   }
+    */
     
-  double? _blur;  
-
+  double? blur;
+    /*
   double get blur { 
     if (this._blur == null) {
       this._blur = 0;
@@ -48,6 +52,7 @@ class InterpolationObject extends OptionFragment {
   void set blur (double v) {
     this._blur = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -57,12 +62,12 @@ class InterpolationObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this._enabled, ","], "");
+    if (this.enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
     }
 
-    if (this._blur != null) {  
-      buffer.writeAll(["\"blur\":", this._blur, ","], "");
+    if (this.blur != null) {  
+      buffer.writeAll(["\"blur\":", this.blur, ","], "");
     }
   }
 

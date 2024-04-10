@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,15 @@ import 'OptionFragment.dart';
  * SVGArc3D 
  */
 class SVGArc3D extends OptionFragment {
-  SVGArc3D() : super();
-  double? _zInn;  
-
+  SVGArc3D( {
+    this.zInn = null,
+    this.zOut = null,
+    this.zSide1 = null,
+    this.zSide2 = null,
+    this.zTop = null
+  }) : super();
+  double? zInn;
+    /*
   double get zInn { 
     if (this._zInn == null) {
       this._zInn = 0;
@@ -36,9 +42,10 @@ class SVGArc3D extends OptionFragment {
   void set zInn (double v) {
     this._zInn = v;
   }
+    */
     
-  double? _zOut;  
-
+  double? zOut;
+    /*
   double get zOut { 
     if (this._zOut == null) {
       this._zOut = 0;
@@ -49,9 +56,10 @@ class SVGArc3D extends OptionFragment {
   void set zOut (double v) {
     this._zOut = v;
   }
+    */
     
-  double? _zSide1;  
-
+  double? zSide1;
+    /*
   double get zSide1 { 
     if (this._zSide1 == null) {
       this._zSide1 = 0;
@@ -62,9 +70,10 @@ class SVGArc3D extends OptionFragment {
   void set zSide1 (double v) {
     this._zSide1 = v;
   }
+    */
     
-  double? _zSide2;  
-
+  double? zSide2;
+    /*
   double get zSide2 { 
     if (this._zSide2 == null) {
       this._zSide2 = 0;
@@ -75,9 +84,10 @@ class SVGArc3D extends OptionFragment {
   void set zSide2 (double v) {
     this._zSide2 = v;
   }
+    */
     
-  double? _zTop;  
-
+  double? zTop;
+    /*
   double get zTop { 
     if (this._zTop == null) {
       this._zTop = 0;
@@ -88,6 +98,7 @@ class SVGArc3D extends OptionFragment {
   void set zTop (double v) {
     this._zTop = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -107,24 +118,24 @@ class SVGArc3D extends OptionFragment {
 
     // NOTE: skip serialization of top (type SVGPath is ignored)} 
 
-    if (this._zInn != null) {  
-      buffer.writeAll(["\"zInn\":", this._zInn, ","], "");
+    if (this.zInn != null) {  
+      buffer.writeAll(["\"zInn\":", this.zInn, ","], "");
     }
 
-    if (this._zOut != null) {  
-      buffer.writeAll(["\"zOut\":", this._zOut, ","], "");
+    if (this.zOut != null) {  
+      buffer.writeAll(["\"zOut\":", this.zOut, ","], "");
     }
 
-    if (this._zSide1 != null) {  
-      buffer.writeAll(["\"zSide1\":", this._zSide1, ","], "");
+    if (this.zSide1 != null) {  
+      buffer.writeAll(["\"zSide1\":", this.zSide1, ","], "");
     }
 
-    if (this._zSide2 != null) {  
-      buffer.writeAll(["\"zSide2\":", this._zSide2, ","], "");
+    if (this.zSide2 != null) {  
+      buffer.writeAll(["\"zSide2\":", this.zSide2, ","], "");
     }
 
-    if (this._zTop != null) {  
-      buffer.writeAll(["\"zTop\":", this._zTop, ","], "");
+    if (this.zTop != null) {  
+      buffer.writeAll(["\"zTop\":", this.zTop, ","], "");
     }
   }
 

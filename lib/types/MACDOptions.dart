@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -25,7 +25,12 @@ import 'OptionFragment.dart';
  * MACDOptions 
  */
 class MACDOptions extends SMAOptions {
-  MACDOptions() : super();
+  MACDOptions( {
+    this.threshold = null,
+    this.groupPadding = null,
+    this.pointPadding = null,
+    this.minPointLength = null
+  }) : super();
   /**
    * Paramters used in calculation of regression series' points.  
       */
@@ -40,8 +45,8 @@ class MACDOptions extends SMAOptions {
    * 
    * Defaults to '0'. 
       */
-  double? _threshold;  
-
+  double? threshold;
+    /*
   double get threshold { 
     if (this._threshold == null) {
       this._threshold = 0;
@@ -52,9 +57,10 @@ class MACDOptions extends SMAOptions {
   void set threshold (double v) {
     this._threshold = v;
   }
+    */
     
-  double? _groupPadding;  
-
+  double? groupPadding;
+    /*
   double get groupPadding { 
     if (this._groupPadding == null) {
       this._groupPadding = 0;
@@ -65,9 +71,10 @@ class MACDOptions extends SMAOptions {
   void set groupPadding (double v) {
     this._groupPadding = v;
   }
+    */
     
-  double? _pointPadding;  
-
+  double? pointPadding;
+    /*
   double get pointPadding { 
     if (this._pointPadding == null) {
       this._pointPadding = 0;
@@ -78,9 +85,10 @@ class MACDOptions extends SMAOptions {
   void set pointPadding (double v) {
     this._pointPadding = v;
   }
+    */
     
-  double? _minPointLength;  
-
+  double? minPointLength;
+    /*
   double get minPointLength { 
     if (this._minPointLength == null) {
       this._minPointLength = 0;
@@ -91,12 +99,13 @@ class MACDOptions extends SMAOptions {
   void set minPointLength (double v) {
     this._minPointLength = v;
   }
+    */
     
   /**
    * The styles for signal line  
       */
-  MACDLineOptions? _signalLine;  
-
+  MACDLineOptions? signalLine;
+    /*
   MACDLineOptions get signalLine { 
     if (this._signalLine == null) {
       this._signalLine = MACDLineOptions();
@@ -107,12 +116,13 @@ class MACDOptions extends SMAOptions {
   void set signalLine (MACDLineOptions v) {
     this._signalLine = v;
   }
+    */
     
   /**
    * The styles for macd line  
       */
-  MACDLineOptions? _macdLine;  
-
+  MACDLineOptions? macdLine;
+    /*
   MACDLineOptions get macdLine { 
     if (this._macdLine == null) {
       this._macdLine = MACDLineOptions();
@@ -123,6 +133,7 @@ class MACDOptions extends SMAOptions {
   void set macdLine (MACDLineOptions v) {
     this._macdLine = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -136,28 +147,28 @@ class MACDOptions extends SMAOptions {
 
     // NOTE: skip serialization of states (type Generic is ignored)} 
 
-    if (this._threshold != null) {  
-      buffer.writeAll(["\"threshold\":", this._threshold, ","], "");
+    if (this.threshold != null) {  
+      buffer.writeAll(["\"threshold\":", this.threshold, ","], "");
     }
 
-    if (this._groupPadding != null) {  
-      buffer.writeAll(["\"groupPadding\":", this._groupPadding, ","], "");
+    if (this.groupPadding != null) {  
+      buffer.writeAll(["\"groupPadding\":", this.groupPadding, ","], "");
     }
 
-    if (this._pointPadding != null) {  
-      buffer.writeAll(["\"pointPadding\":", this._pointPadding, ","], "");
+    if (this.pointPadding != null) {  
+      buffer.writeAll(["\"pointPadding\":", this.pointPadding, ","], "");
     }
 
-    if (this._minPointLength != null) {  
-      buffer.writeAll(["\"minPointLength\":", this._minPointLength, ","], "");
+    if (this.minPointLength != null) {  
+      buffer.writeAll(["\"minPointLength\":", this.minPointLength, ","], "");
     }
 
-    if (this._signalLine != null) {  
-      buffer.writeAll(["\"signalLine\":", this._signalLine?.toJSON(), ","], "");
+    if (this.signalLine != null) {  
+      buffer.writeAll(["\"signalLine\":", this.signalLine?.toJSON(), ","], "");
     }
 
-    if (this._macdLine != null) {  
-      buffer.writeAll(["\"macdLine\":", this._macdLine?.toJSON(), ","], "");
+    if (this.macdLine != null) {  
+      buffer.writeAll(["\"macdLine\":", this.macdLine?.toJSON(), ","], "");
     }
   }
 

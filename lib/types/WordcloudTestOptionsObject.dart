@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -25,9 +25,11 @@ import 'OptionFragment.dart';
  * WordcloudTestOptionsObject 
  */
 class WordcloudTestOptionsObject extends OptionFragment {
-  WordcloudTestOptionsObject() : super();
-  double? _rotation;  
-
+  WordcloudTestOptionsObject( {
+    this.rotation = null
+  }) : super();
+  double? rotation;
+    /*
   double get rotation { 
     if (this._rotation == null) {
       this._rotation = 0;
@@ -38,6 +40,7 @@ class WordcloudTestOptionsObject extends OptionFragment {
   void set rotation (double v) {
     this._rotation = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -55,8 +58,8 @@ class WordcloudTestOptionsObject extends OptionFragment {
 
     // NOTE: skip serialization of rectangle (type PolygonBoxObject is ignored)} 
 
-    if (this._rotation != null) {  
-      buffer.writeAll(["\"rotation\":", this._rotation, ","], "");
+    if (this.rotation != null) {  
+      buffer.writeAll(["\"rotation\":", this.rotation, ","], "");
     }
   }
 

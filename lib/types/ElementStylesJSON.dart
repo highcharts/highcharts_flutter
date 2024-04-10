@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,16 @@ import 'OptionFragment.dart';
  * ElementStylesJSON 
  */
 class ElementStylesJSON extends OptionFragment {
-  ElementStylesJSON() : super();
-  double? _borderLeft;  
-
+  ElementStylesJSON( {
+    this.borderLeft = null,
+    this.borderRight = null,
+    this.borderTop = null,
+    this.borderBottom = null,
+    this.minWidth = null,
+    this.minHeight = null
+  }) : super();
+  double? borderLeft;
+    /*
   double get borderLeft { 
     if (this._borderLeft == null) {
       this._borderLeft = 0;
@@ -35,9 +42,10 @@ class ElementStylesJSON extends OptionFragment {
   void set borderLeft (double v) {
     this._borderLeft = v;
   }
+    */
     
-  double? _borderRight;  
-
+  double? borderRight;
+    /*
   double get borderRight { 
     if (this._borderRight == null) {
       this._borderRight = 0;
@@ -48,9 +56,10 @@ class ElementStylesJSON extends OptionFragment {
   void set borderRight (double v) {
     this._borderRight = v;
   }
+    */
     
-  double? _borderTop;  
-
+  double? borderTop;
+    /*
   double get borderTop { 
     if (this._borderTop == null) {
       this._borderTop = 0;
@@ -61,9 +70,10 @@ class ElementStylesJSON extends OptionFragment {
   void set borderTop (double v) {
     this._borderTop = v;
   }
+    */
     
-  double? _borderBottom;  
-
+  double? borderBottom;
+    /*
   double get borderBottom { 
     if (this._borderBottom == null) {
       this._borderBottom = 0;
@@ -74,9 +84,10 @@ class ElementStylesJSON extends OptionFragment {
   void set borderBottom (double v) {
     this._borderBottom = v;
   }
+    */
     
-  double? _minWidth;  
-
+  double? minWidth;
+    /*
   double get minWidth { 
     if (this._minWidth == null) {
       this._minWidth = 0;
@@ -87,9 +98,10 @@ class ElementStylesJSON extends OptionFragment {
   void set minWidth (double v) {
     this._minWidth = v;
   }
+    */
     
-  double? _minHeight;  
-
+  double? minHeight;
+    /*
   double get minHeight { 
     if (this._minHeight == null) {
       this._minHeight = 0;
@@ -100,6 +112,7 @@ class ElementStylesJSON extends OptionFragment {
   void set minHeight (double v) {
     this._minHeight = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -109,28 +122,28 @@ class ElementStylesJSON extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._borderLeft != null) {  
-      buffer.writeAll(["\"borderLeft\":", this._borderLeft, ","], "");
+    if (this.borderLeft != null) {  
+      buffer.writeAll(["\"borderLeft\":", this.borderLeft, ","], "");
     }
 
-    if (this._borderRight != null) {  
-      buffer.writeAll(["\"borderRight\":", this._borderRight, ","], "");
+    if (this.borderRight != null) {  
+      buffer.writeAll(["\"borderRight\":", this.borderRight, ","], "");
     }
 
-    if (this._borderTop != null) {  
-      buffer.writeAll(["\"borderTop\":", this._borderTop, ","], "");
+    if (this.borderTop != null) {  
+      buffer.writeAll(["\"borderTop\":", this.borderTop, ","], "");
     }
 
-    if (this._borderBottom != null) {  
-      buffer.writeAll(["\"borderBottom\":", this._borderBottom, ","], "");
+    if (this.borderBottom != null) {  
+      buffer.writeAll(["\"borderBottom\":", this.borderBottom, ","], "");
     }
 
-    if (this._minWidth != null) {  
-      buffer.writeAll(["\"minWidth\":", this._minWidth, ","], "");
+    if (this.minWidth != null) {  
+      buffer.writeAll(["\"minWidth\":", this.minWidth, ","], "");
     }
 
-    if (this._minHeight != null) {  
-      buffer.writeAll(["\"minHeight\":", this._minHeight, ","], "");
+    if (this.minHeight != null) {  
+      buffer.writeAll(["\"minHeight\":", this.minHeight, ","], "");
     }
   }
 

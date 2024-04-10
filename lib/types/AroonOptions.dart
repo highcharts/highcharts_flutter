@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -25,12 +25,12 @@ import 'OptionFragment.dart';
  * AroonOptions 
  */
 class AroonOptions extends SMAOptions {
-  AroonOptions() : super();
+  AroonOptions( ) : super();
   /**
    * aroonDown line options.  
       */
-  Map<String, String>? _aroonDown;  
-
+  Map<String, String>? aroonDown;
+    /*
   Map<String, String> get aroonDown { 
     if (this._aroonDown == null) {
       this._aroonDown = Map<String, String>();
@@ -41,6 +41,7 @@ class AroonOptions extends SMAOptions {
   void set aroonDown (Map<String, String> v) {
     this._aroonDown = v;
   }
+    */
     
   /**
    * Options for the point markers of line and scatter-like series. Properties
@@ -52,8 +53,8 @@ class AroonOptions extends SMAOptions {
    * In styled mode, the markers can be styled with the `.highcharts-point`,
    * `.highcharts-point-hover` and `.highcharts-point-select` class names.  
       */
-  PointMarkerOptions? _marker;  
-
+  PointMarkerOptions? marker;
+    /*
   PointMarkerOptions get marker { 
     if (this._marker == null) {
       this._marker = PointMarkerOptions();
@@ -64,6 +65,7 @@ class AroonOptions extends SMAOptions {
   void set marker (PointMarkerOptions v) {
     this._marker = v;
   }
+    */
     
   /**
    * Paramters used in calculation of regression series' points.  
@@ -78,12 +80,12 @@ class AroonOptions extends SMAOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._aroonDown != null) {  
-      buffer.writeAll(["\"aroonDown\":", this._aroonDown, ","], "");
+    if (this.aroonDown != null) {  
+      buffer.writeAll(["\"aroonDown\":", this.aroonDown, ","], "");
     }
 
-    if (this._marker != null) {  
-      buffer.writeAll(["\"marker\":", this._marker?.toJSON(), ","], "");
+    if (this.marker != null) {  
+      buffer.writeAll(["\"marker\":", this.marker?.toJSON(), ","], "");
     }
 
     // NOTE: skip serialization of params (type AroonParamsOptions is ignored)} 

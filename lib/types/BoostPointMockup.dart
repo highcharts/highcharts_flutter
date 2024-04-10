@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,17 @@ import 'OptionFragment.dart';
  * BoostPointMockup 
  */
 class BoostPointMockup extends OptionFragment {
-  BoostPointMockup() : super();
-  double? _clientX;  
-
+  BoostPointMockup( {
+    this.clientX = null,
+    this.dist = null,
+    this.distX = null,
+    this.plotX = null,
+    this.plotY = null,
+    this.i = null,
+    this.percentage = null
+  }) : super();
+  double? clientX;
+    /*
   double get clientX { 
     if (this._clientX == null) {
       this._clientX = 0;
@@ -35,9 +43,10 @@ class BoostPointMockup extends OptionFragment {
   void set clientX (double v) {
     this._clientX = v;
   }
+    */
     
-  double? _dist;  
-
+  double? dist;
+    /*
   double get dist { 
     if (this._dist == null) {
       this._dist = 0;
@@ -48,9 +57,10 @@ class BoostPointMockup extends OptionFragment {
   void set dist (double v) {
     this._dist = v;
   }
+    */
     
-  double? _distX;  
-
+  double? distX;
+    /*
   double get distX { 
     if (this._distX == null) {
       this._distX = 0;
@@ -61,9 +71,10 @@ class BoostPointMockup extends OptionFragment {
   void set distX (double v) {
     this._distX = v;
   }
+    */
     
-  double? _plotX;  
-
+  double? plotX;
+    /*
   double get plotX { 
     if (this._plotX == null) {
       this._plotX = 0;
@@ -74,9 +85,10 @@ class BoostPointMockup extends OptionFragment {
   void set plotX (double v) {
     this._plotX = v;
   }
+    */
     
-  double? _plotY;  
-
+  double? plotY;
+    /*
   double get plotY { 
     if (this._plotY == null) {
       this._plotY = 0;
@@ -87,9 +99,10 @@ class BoostPointMockup extends OptionFragment {
   void set plotY (double v) {
     this._plotY = v;
   }
+    */
     
-  double? _i;  
-
+  double? i;
+    /*
   double get i { 
     if (this._i == null) {
       this._i = 0;
@@ -100,9 +113,10 @@ class BoostPointMockup extends OptionFragment {
   void set i (double v) {
     this._i = v;
   }
+    */
     
-  double? _percentage;  
-
+  double? percentage;
+    /*
   double get percentage { 
     if (this._percentage == null) {
       this._percentage = 0;
@@ -113,6 +127,7 @@ class BoostPointMockup extends OptionFragment {
   void set percentage (double v) {
     this._percentage = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -124,32 +139,32 @@ class BoostPointMockup extends OptionFragment {
     
     // NOTE: skip serialization of x (type false is ignored)} 
 
-    if (this._clientX != null) {  
-      buffer.writeAll(["\"clientX\":", this._clientX, ","], "");
+    if (this.clientX != null) {  
+      buffer.writeAll(["\"clientX\":", this.clientX, ","], "");
     }
 
-    if (this._dist != null) {  
-      buffer.writeAll(["\"dist\":", this._dist, ","], "");
+    if (this.dist != null) {  
+      buffer.writeAll(["\"dist\":", this.dist, ","], "");
     }
 
-    if (this._distX != null) {  
-      buffer.writeAll(["\"distX\":", this._distX, ","], "");
+    if (this.distX != null) {  
+      buffer.writeAll(["\"distX\":", this.distX, ","], "");
     }
 
-    if (this._plotX != null) {  
-      buffer.writeAll(["\"plotX\":", this._plotX, ","], "");
+    if (this.plotX != null) {  
+      buffer.writeAll(["\"plotX\":", this.plotX, ","], "");
     }
 
-    if (this._plotY != null) {  
-      buffer.writeAll(["\"plotY\":", this._plotY, ","], "");
+    if (this.plotY != null) {  
+      buffer.writeAll(["\"plotY\":", this.plotY, ","], "");
     }
 
-    if (this._i != null) {  
-      buffer.writeAll(["\"i\":", this._i, ","], "");
+    if (this.i != null) {  
+      buffer.writeAll(["\"i\":", this.i, ","], "");
     }
 
-    if (this._percentage != null) {  
-      buffer.writeAll(["\"percentage\":", this._percentage, ","], "");
+    if (this.percentage != null) {  
+      buffer.writeAll(["\"percentage\":", this.percentage, ","], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,11 @@ import 'OptionFragment.dart';
  * LinearRegressionInterceptIndicator 
  */
 class LinearRegressionInterceptIndicator extends OptionFragment {
-  LinearRegressionInterceptIndicator() : super();
-  String? _nameBase;  
-
+  LinearRegressionInterceptIndicator( {
+    this.nameBase = null
+  }) : super();
+  String? nameBase;
+    /*
   String get nameBase { 
     if (this._nameBase == null) {
       this._nameBase = "";
@@ -35,6 +37,7 @@ class LinearRegressionInterceptIndicator extends OptionFragment {
   void set nameBase (String v) {
     this._nameBase = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -46,8 +49,8 @@ class LinearRegressionInterceptIndicator extends OptionFragment {
     
     // NOTE: skip serialization of pointClass (type typeof LinearRegressionInterceptPoint is ignored)} 
 
-    if (this._nameBase != null) {  
-      buffer.writeAll(["\"nameBase\":\`", this._nameBase, "\`,"], "");
+    if (this.nameBase != null) {  
+      buffer.writeAll(["\"nameBase\":\`", this.nameBase, "\`,"], "");
     }
   }
 

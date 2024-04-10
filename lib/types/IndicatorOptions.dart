@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,12 @@ import 'OptionFragment.dart';
  * IndicatorOptions 
  */
 class IndicatorOptions extends SMAOptions {
-  IndicatorOptions() : super();
-  String? _fillColor;  
-
+  IndicatorOptions( {
+    this.fillColor = null,
+    this.gapSize = null
+  }) : super();
+  String? fillColor;
+    /*
   String get fillColor { 
     if (this._fillColor == null) {
       this._fillColor = "";
@@ -36,9 +39,10 @@ class IndicatorOptions extends SMAOptions {
   void set fillColor (String v) {
     this._fillColor = v;
   }
+    */
     
-  double? _gapSize;  
-
+  double? gapSize;
+    /*
   double get gapSize { 
     if (this._gapSize == null) {
       this._gapSize = 0;
@@ -49,6 +53,7 @@ class IndicatorOptions extends SMAOptions {
   void set gapSize (double v) {
     this._gapSize = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -58,12 +63,12 @@ class IndicatorOptions extends SMAOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._fillColor != null) {  
-      buffer.writeAll(["\"fillColor\":\`", this._fillColor, "\`,"], "");
+    if (this.fillColor != null) {  
+      buffer.writeAll(["\"fillColor\":\`", this.fillColor, "\`,"], "");
     }
 
-    if (this._gapSize != null) {  
-      buffer.writeAll(["\"gapSize\":", this._gapSize, ","], "");
+    if (this.gapSize != null) {  
+      buffer.writeAll(["\"gapSize\":", this.gapSize, ","], "");
     }
   }
 

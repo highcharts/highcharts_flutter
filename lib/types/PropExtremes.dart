@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,12 @@ import 'OptionFragment.dart';
  * PropExtremes 
  */
 class PropExtremes extends OptionFragment {
-  PropExtremes() : super();
-  double? _max;  
-
+  PropExtremes( {
+    this.max = null,
+    this.min = null
+  }) : super();
+  double? max;
+    /*
   double get max { 
     if (this._max == null) {
       this._max = 0;
@@ -35,9 +38,10 @@ class PropExtremes extends OptionFragment {
   void set max (double v) {
     this._max = v;
   }
+    */
     
-  double? _min;  
-
+  double? min;
+    /*
   double get min { 
     if (this._min == null) {
       this._min = 0;
@@ -48,6 +52,7 @@ class PropExtremes extends OptionFragment {
   void set min (double v) {
     this._min = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -57,12 +62,12 @@ class PropExtremes extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._max != null) {  
-      buffer.writeAll(["\"max\":", this._max, ","], "");
+    if (this.max != null) {  
+      buffer.writeAll(["\"max\":", this.max, ","], "");
     }
 
-    if (this._min != null) {  
-      buffer.writeAll(["\"min\":", this._min, ","], "");
+    if (this.min != null) {  
+      buffer.writeAll(["\"min\":", this.min, ","], "");
     }
   }
 

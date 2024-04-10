@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -24,9 +24,11 @@ import 'OptionFragment.dart';
  * SankeyDataLabelOptions 
  */
 class SankeyDataLabelOptions extends DataLabelOptions {
-  SankeyDataLabelOptions() : super();
-  String? _nodeFormat;  
-
+  SankeyDataLabelOptions( {
+    this.nodeFormat = null
+  }) : super();
+  String? nodeFormat;
+    /*
   String get nodeFormat { 
     if (this._nodeFormat == null) {
       this._nodeFormat = "";
@@ -37,6 +39,7 @@ class SankeyDataLabelOptions extends DataLabelOptions {
   void set nodeFormat (String v) {
     this._nodeFormat = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -46,8 +49,8 @@ class SankeyDataLabelOptions extends DataLabelOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._nodeFormat != null) {  
-      buffer.writeAll(["\"nodeFormat\":\`", this._nodeFormat, "\`,"], "");
+    if (this.nodeFormat != null) {  
+      buffer.writeAll(["\"nodeFormat\":\`", this.nodeFormat, "\`,"], "");
     }
 
     // NOTE: skip serialization of linkTextPath (type DataLabelTextPathOptions is ignored)} 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,11 @@ import 'OptionFragment.dart';
  * LangAccessibilityOptionsEditMode 
  */
 class LangAccessibilityOptionsEditMode extends OptionFragment {
-  LangAccessibilityOptionsEditMode() : super();
-  String? _editMode;  
-
+  LangAccessibilityOptionsEditMode( {
+    this.editMode = null
+  }) : super();
+  String? editMode;
+    /*
   String get editMode { 
     if (this._editMode == null) {
       this._editMode = "";
@@ -35,6 +37,7 @@ class LangAccessibilityOptionsEditMode extends OptionFragment {
   void set editMode (String v) {
     this._editMode = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -44,8 +47,8 @@ class LangAccessibilityOptionsEditMode extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._editMode != null) {  
-      buffer.writeAll(["\"editMode\":\`", this._editMode, "\`,"], "");
+    if (this.editMode != null) {  
+      buffer.writeAll(["\"editMode\":\`", this.editMode, "\`,"], "");
     }
   }
 

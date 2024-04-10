@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,11 @@ import 'OptionFragment.dart';
  * AddComponentDetails 
  */
 class AddComponentDetails extends OptionFragment {
-  AddComponentDetails() : super();
-  String? _text;  
-
+  AddComponentDetails( {
+    this.text = null
+  }) : super();
+  String? text;
+    /*
   String get text { 
     if (this._text == null) {
       this._text = "";
@@ -35,6 +37,7 @@ class AddComponentDetails extends OptionFragment {
   void set text (String v) {
     this._text = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -44,8 +47,8 @@ class AddComponentDetails extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._text != null) {  
-      buffer.writeAll(["\"text\":\`", this._text, "\`,"], "");
+    if (this.text != null) {  
+      buffer.writeAll(["\"text\":\`", this.text, "\`,"], "");
     }
 
     // NOTE: skip serialization of onDrop (type Function is ignored)} 

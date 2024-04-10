@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -24,15 +24,21 @@ import 'OptionFragment.dart';
  * FunnelSeriesOptions 
  */
 class FunnelSeriesOptions extends PieSeriesOptions {
-  FunnelSeriesOptions() : super();
+  FunnelSeriesOptions( {
+    this.width = null,
+    this.neckWidth = null,
+    this.height = null,
+    this.neckHeight = null,
+    this.reversed = null
+  }) : super();
   /**
    * The width of the funnel compared to the width of the plot area,
    * or the pixel width if it is a number. 
    * 
    * Defaults to '90%'. 
       */
-  String? _width;  
-
+  String? width;
+    /*
   String get width { 
     if (this._width == null) {
       this._width = "";
@@ -43,6 +49,7 @@ class FunnelSeriesOptions extends PieSeriesOptions {
   void set width (String v) {
     this._width = v;
   }
+    */
     
   /**
    * The width of the neck, the lower part of the funnel. A number defines
@@ -51,8 +58,8 @@ class FunnelSeriesOptions extends PieSeriesOptions {
    * 
    * Defaults to '30%'. 
       */
-  String? _neckWidth;  
-
+  String? neckWidth;
+    /*
   String get neckWidth { 
     if (this._neckWidth == null) {
       this._neckWidth = "";
@@ -63,6 +70,7 @@ class FunnelSeriesOptions extends PieSeriesOptions {
   void set neckWidth (String v) {
     this._neckWidth = v;
   }
+    */
     
   /**
    * The height of the funnel or pyramid. If it is a number it defines
@@ -71,8 +79,8 @@ class FunnelSeriesOptions extends PieSeriesOptions {
    * 
    * Defaults to '100%'. 
       */
-  String? _height;  
-
+  String? height;
+    /*
   String get height { 
     if (this._height == null) {
       this._height = "";
@@ -83,6 +91,7 @@ class FunnelSeriesOptions extends PieSeriesOptions {
   void set height (String v) {
     this._height = v;
   }
+    */
     
   /**
    * The height of the neck, the lower part of the funnel. A number
@@ -91,8 +100,8 @@ class FunnelSeriesOptions extends PieSeriesOptions {
    * 
    * Defaults to '25%'. 
       */
-  String? _neckHeight;  
-
+  String? neckHeight;
+    /*
   String get neckHeight { 
     if (this._neckHeight == null) {
       this._neckHeight = "";
@@ -103,13 +112,14 @@ class FunnelSeriesOptions extends PieSeriesOptions {
   void set neckHeight (String v) {
     this._neckHeight = v;
   }
+    */
     
   /**
    * A reversed funnel has the widest area down. A reversed funnel with
    * no neck width and neck height is a pyramid.  
       */
-  bool? _reversed;  
-
+  bool? reversed;
+    /*
   bool get reversed { 
     if (this._reversed == null) {
       this._reversed = false;
@@ -120,6 +130,7 @@ class FunnelSeriesOptions extends PieSeriesOptions {
   void set reversed (bool v) {
     this._reversed = v;
   }
+    */
     
   // NOTE: size skipped - type undefined is ignored in gen
 
@@ -146,24 +157,24 @@ class FunnelSeriesOptions extends PieSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._width != null) {  
-      buffer.writeAll(["\"width\":\`", this._width, "\`,"], "");
+    if (this.width != null) {  
+      buffer.writeAll(["\"width\":\`", this.width, "\`,"], "");
     }
 
-    if (this._neckWidth != null) {  
-      buffer.writeAll(["\"neckWidth\":\`", this._neckWidth, "\`,"], "");
+    if (this.neckWidth != null) {  
+      buffer.writeAll(["\"neckWidth\":\`", this.neckWidth, "\`,"], "");
     }
 
-    if (this._height != null) {  
-      buffer.writeAll(["\"height\":\`", this._height, "\`,"], "");
+    if (this.height != null) {  
+      buffer.writeAll(["\"height\":\`", this.height, "\`,"], "");
     }
 
-    if (this._neckHeight != null) {  
-      buffer.writeAll(["\"neckHeight\":\`", this._neckHeight, "\`,"], "");
+    if (this.neckHeight != null) {  
+      buffer.writeAll(["\"neckHeight\":\`", this.neckHeight, "\`,"], "");
     }
 
-    if (this._reversed != null) {  
-      buffer.writeAll(["\"reversed\":", this._reversed, ","], "");
+    if (this.reversed != null) {  
+      buffer.writeAll(["\"reversed\":", this.reversed, ","], "");
     }
 
     // NOTE: skip serialization of size (type undefined is ignored)} 

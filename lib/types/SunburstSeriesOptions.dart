@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -26,7 +26,12 @@ import 'OptionFragment.dart';
  * SunburstSeriesOptions 
  */
 class SunburstSeriesOptions extends TreemapSeriesOptions {
-  SunburstSeriesOptions() : super();
+  SunburstSeriesOptions( {
+    this.endAngle = null,
+    this.rootId = null,
+    this.slicedOffset = null,
+    this.startAngle = null
+  }) : super();
   /**
    * The center of the pie chart relative to the plot area. Can be
    * percentages or pixel values. The default behaviour (as of 3.0) is to
@@ -54,8 +59,8 @@ class SunburstSeriesOptions extends TreemapSeriesOptions {
    * The end angle of the pie in degrees where 0 is top and 90 is right.
    * Defaults to `startAngle` plus 360.  
       */
-  double? _endAngle;  
-
+  double? endAngle;
+    /*
   double get endAngle { 
     if (this._endAngle == null) {
       this._endAngle = 0;
@@ -66,6 +71,7 @@ class SunburstSeriesOptions extends TreemapSeriesOptions {
   void set endAngle (double v) {
     this._endAngle = v;
   }
+    */
     
   /**
    * Set options on specific levels. Takes precedence over series options,
@@ -76,8 +82,8 @@ class SunburstSeriesOptions extends TreemapSeriesOptions {
   /**
    * Determines the width of the ring per level.  
       */
-  SunburstSeriesLevelSizeOptions? _levelSize;  
-
+  SunburstSeriesLevelSizeOptions? levelSize;
+    /*
   SunburstSeriesLevelSizeOptions get levelSize { 
     if (this._levelSize == null) {
       this._levelSize = SunburstSeriesLevelSizeOptions();
@@ -88,14 +94,15 @@ class SunburstSeriesOptions extends TreemapSeriesOptions {
   void set levelSize (SunburstSeriesLevelSizeOptions v) {
     this._levelSize = v;
   }
+    */
     
   /**
    * Which point to use as a root in the visualization. 
    * 
    * Defaults to 'undefined'. 
       */
-  String? _rootId;  
-
+  String? rootId;
+    /*
   String get rootId { 
     if (this._rootId == null) {
       this._rootId = "";
@@ -106,6 +113,7 @@ class SunburstSeriesOptions extends TreemapSeriesOptions {
   void set rootId (String v) {
     this._rootId = v;
   }
+    */
     
   /**
    * If a point is sliced, moved out from the center, how many pixels
@@ -113,8 +121,8 @@ class SunburstSeriesOptions extends TreemapSeriesOptions {
    * 
    * Defaults to '10'. 
       */
-  double? _slicedOffset;  
-
+  double? slicedOffset;
+    /*
   double get slicedOffset { 
     if (this._slicedOffset == null) {
       this._slicedOffset = 0;
@@ -125,6 +133,7 @@ class SunburstSeriesOptions extends TreemapSeriesOptions {
   void set slicedOffset (double v) {
     this._slicedOffset = v;
   }
+    */
     
   /**
    * The start angle of the pie slices in degrees where 0 is top and 90
@@ -132,8 +141,8 @@ class SunburstSeriesOptions extends TreemapSeriesOptions {
    * 
    * Defaults to '0'. 
       */
-  double? _startAngle;  
-
+  double? startAngle;
+    /*
   double get startAngle { 
     if (this._startAngle == null) {
       this._startAngle = 0;
@@ -144,6 +153,7 @@ class SunburstSeriesOptions extends TreemapSeriesOptions {
   void set startAngle (double v) {
     this._startAngle = v;
   }
+    */
     
   // NOTE: states skipped - type Generic is ignored in gen
 
@@ -159,28 +169,28 @@ class SunburstSeriesOptions extends TreemapSeriesOptions {
 
     // NOTE: skip serialization of dataLabels (type SunburstDataLabelOptions[] is ignored)} 
 
-    if (this._endAngle != null) {  
-      buffer.writeAll(["\"endAngle\":", this._endAngle, ","], "");
+    if (this.endAngle != null) {  
+      buffer.writeAll(["\"endAngle\":", this.endAngle, ","], "");
     }
 
     // NOTE: skip serialization of levels (type SunburstSeriesLevelOptions[] is ignored)} 
 
-    if (this._levelSize != null) {  
-      buffer.writeAll(["\"levelSize\":", this._levelSize?.toJSON(), ","], "");
+    if (this.levelSize != null) {  
+      buffer.writeAll(["\"levelSize\":", this.levelSize?.toJSON(), ","], "");
     }
 
     // NOTE: skip serialization of mapIdToNode (type Generic is ignored)} 
 
-    if (this._rootId != null) {  
-      buffer.writeAll(["\"rootId\":\`", this._rootId, "\`,"], "");
+    if (this.rootId != null) {  
+      buffer.writeAll(["\"rootId\":\`", this.rootId, "\`,"], "");
     }
 
-    if (this._slicedOffset != null) {  
-      buffer.writeAll(["\"slicedOffset\":", this._slicedOffset, ","], "");
+    if (this.slicedOffset != null) {  
+      buffer.writeAll(["\"slicedOffset\":", this.slicedOffset, ","], "");
     }
 
-    if (this._startAngle != null) {  
-      buffer.writeAll(["\"startAngle\":", this._startAngle, ","], "");
+    if (this.startAngle != null) {  
+      buffer.writeAll(["\"startAngle\":", this.startAngle, ","], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 

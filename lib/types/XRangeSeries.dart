@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,13 @@ import 'OptionFragment.dart';
  * XRangeSeries 
  */
 class XRangeSeries extends OptionFragment {
-  XRangeSeries() : super();
-  bool? _getExtremesFromAll;  
-
+  XRangeSeries( {
+    this.getExtremesFromAll = null,
+    this.requireSorting = null,
+    this.type = null
+  }) : super();
+  bool? getExtremesFromAll;
+    /*
   bool get getExtremesFromAll { 
     if (this._getExtremesFromAll == null) {
       this._getExtremesFromAll = false;
@@ -36,9 +40,10 @@ class XRangeSeries extends OptionFragment {
   void set getExtremesFromAll (bool v) {
     this._getExtremesFromAll = v;
   }
+    */
     
-  bool? _requireSorting;  
-
+  bool? requireSorting;
+    /*
   bool get requireSorting { 
     if (this._requireSorting == null) {
       this._requireSorting = false;
@@ -49,9 +54,10 @@ class XRangeSeries extends OptionFragment {
   void set requireSorting (bool v) {
     this._requireSorting = v;
   }
+    */
     
-  String? _type;  
-
+  String? type;
+    /*
   String get type { 
     if (this._type == null) {
       this._type = "";
@@ -62,6 +68,7 @@ class XRangeSeries extends OptionFragment {
   void set type (String v) {
     this._type = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -75,18 +82,18 @@ class XRangeSeries extends OptionFragment {
 
     // NOTE: skip serialization of columnMetrics (type ColumnMetricsObject is ignored)} 
 
-    if (this._getExtremesFromAll != null) {  
-      buffer.writeAll(["\"getExtremesFromAll\":", this._getExtremesFromAll, ","], "");
+    if (this.getExtremesFromAll != null) {  
+      buffer.writeAll(["\"getExtremesFromAll\":", this.getExtremesFromAll, ","], "");
     }
 
     // NOTE: skip serialization of parallelArrays (type string[] is ignored)} 
 
-    if (this._requireSorting != null) {  
-      buffer.writeAll(["\"requireSorting\":", this._requireSorting, ","], "");
+    if (this.requireSorting != null) {  
+      buffer.writeAll(["\"requireSorting\":", this.requireSorting, ","], "");
     }
 
-    if (this._type != null) {  
-      buffer.writeAll(["\"type\":\`", this._type, "\`,"], "");
+    if (this.type != null) {  
+      buffer.writeAll(["\"type\":\`", this.type, "\`,"], "");
     }
 
     // NOTE: skip serialization of x2Data (type number[] is ignored)} 

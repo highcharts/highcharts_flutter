@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,19 @@ import 'OptionFragment.dart';
  * NodeValuesObject 
  */
 class NodeValuesObject extends BBoxObject {
-  NodeValuesObject() : super();
-  double? _direction;  
-
+  NodeValuesObject( {
+    this.direction = null,
+    this.val = null,
+    this.color = null,
+    this.borderRadius = null,
+    this.index = null,
+    this.innerR = null,
+    this.r = null,
+    this.radius = null,
+    this.siblings = null
+  }) : super();
+  double? direction;
+    /*
   double get direction { 
     if (this._direction == null) {
       this._direction = 0;
@@ -36,9 +46,10 @@ class NodeValuesObject extends BBoxObject {
   void set direction (double v) {
     this._direction = v;
   }
+    */
     
-  double? _val;  
-
+  double? val;
+    /*
   double get val { 
     if (this._val == null) {
       this._val = 0;
@@ -49,9 +60,10 @@ class NodeValuesObject extends BBoxObject {
   void set val (double v) {
     this._val = v;
   }
+    */
     
-  String? _color;  
-
+  String? color;
+    /*
   String get color { 
     if (this._color == null) {
       this._color = "";
@@ -62,9 +74,10 @@ class NodeValuesObject extends BBoxObject {
   void set color (String v) {
     this._color = v;
   }
+    */
     
-  String? _borderRadius;  
-
+  String? borderRadius;
+    /*
   String get borderRadius { 
     if (this._borderRadius == null) {
       this._borderRadius = "";
@@ -75,9 +88,10 @@ class NodeValuesObject extends BBoxObject {
   void set borderRadius (String v) {
     this._borderRadius = v;
   }
+    */
     
-  double? _index;  
-
+  double? index;
+    /*
   double get index { 
     if (this._index == null) {
       this._index = 0;
@@ -88,9 +102,10 @@ class NodeValuesObject extends BBoxObject {
   void set index (double v) {
     this._index = v;
   }
+    */
     
-  double? _innerR;  
-
+  double? innerR;
+    /*
   double get innerR { 
     if (this._innerR == null) {
       this._innerR = 0;
@@ -101,9 +116,10 @@ class NodeValuesObject extends BBoxObject {
   void set innerR (double v) {
     this._innerR = v;
   }
+    */
     
-  double? _r;  
-
+  double? r;
+    /*
   double get r { 
     if (this._r == null) {
       this._r = 0;
@@ -114,9 +130,10 @@ class NodeValuesObject extends BBoxObject {
   void set r (double v) {
     this._r = v;
   }
+    */
     
-  double? _radius;  
-
+  double? radius;
+    /*
   double get radius { 
     if (this._radius == null) {
       this._radius = 0;
@@ -127,9 +144,10 @@ class NodeValuesObject extends BBoxObject {
   void set radius (double v) {
     this._radius = v;
   }
+    */
     
-  double? _siblings;  
-
+  double? siblings;
+    /*
   double get siblings { 
     if (this._siblings == null) {
       this._siblings = 0;
@@ -140,6 +158,7 @@ class NodeValuesObject extends BBoxObject {
   void set siblings (double v) {
     this._siblings = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -149,42 +168,42 @@ class NodeValuesObject extends BBoxObject {
     super.toJSONInner(buffer);
 
     
-    if (this._direction != null) {  
-      buffer.writeAll(["\"direction\":", this._direction, ","], "");
+    if (this.direction != null) {  
+      buffer.writeAll(["\"direction\":", this.direction, ","], "");
     }
 
-    if (this._val != null) {  
-      buffer.writeAll(["\"val\":", this._val, ","], "");
+    if (this.val != null) {  
+      buffer.writeAll(["\"val\":", this.val, ","], "");
     }
 
-    if (this._color != null) {  
-      buffer.writeAll(["\"color\":\`", this._color, "\`,"], "");
+    if (this.color != null) {  
+      buffer.writeAll(["\"color\":\`", this.color, "\`,"], "");
     }
 
     // NOTE: skip serialization of mapOptionsToLevel (type SunburstSeriesLevelOptions[] is ignored)} 
 
-    if (this._borderRadius != null) {  
-      buffer.writeAll(["\"borderRadius\":\`", this._borderRadius, "\`,"], "");
+    if (this.borderRadius != null) {  
+      buffer.writeAll(["\"borderRadius\":\`", this.borderRadius, "\`,"], "");
     }
 
-    if (this._index != null) {  
-      buffer.writeAll(["\"index\":", this._index, ","], "");
+    if (this.index != null) {  
+      buffer.writeAll(["\"index\":", this.index, ","], "");
     }
 
-    if (this._innerR != null) {  
-      buffer.writeAll(["\"innerR\":", this._innerR, ","], "");
+    if (this.innerR != null) {  
+      buffer.writeAll(["\"innerR\":", this.innerR, ","], "");
     }
 
-    if (this._r != null) {  
-      buffer.writeAll(["\"r\":", this._r, ","], "");
+    if (this.r != null) {  
+      buffer.writeAll(["\"r\":", this.r, ","], "");
     }
 
-    if (this._radius != null) {  
-      buffer.writeAll(["\"radius\":", this._radius, ","], "");
+    if (this.radius != null) {  
+      buffer.writeAll(["\"radius\":", this.radius, ","], "");
     }
 
-    if (this._siblings != null) {  
-      buffer.writeAll(["\"siblings\":", this._siblings, ","], "");
+    if (this.siblings != null) {  
+      buffer.writeAll(["\"siblings\":", this.siblings, ","], "");
     }
   }
 

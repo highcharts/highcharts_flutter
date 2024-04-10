@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -24,13 +24,28 @@ import 'OptionFragment.dart';
  * PieSeriesOptions 
  */
 class PieSeriesOptions extends LineSeriesOptions {
-  PieSeriesOptions() : super();
+  PieSeriesOptions( {
+    this.endAngle = null,
+    this.colorByPoint = null,
+    this.fillColor = null,
+    this.ignoreHiddenPoint = null,
+    this.inactiveOtherPoints = null,
+    this.innerSize = null,
+    this.minSize = null,
+    this.size = null,
+    this.slicedOffset = null,
+    this.startAngle = null,
+    this.thickness = null,
+    this.depth = null,
+    this.edgeColor = null,
+    this.edgeWidth = null
+  }) : super();
   /**
    * The end angle of the pie in degrees where 0 is top and 90 is right.
    * Defaults to `startAngle` plus 360.  
       */
-  double? _endAngle;  
-
+  double? endAngle;
+    /*
   double get endAngle { 
     if (this._endAngle == null) {
       this._endAngle = 0;
@@ -41,9 +56,10 @@ class PieSeriesOptions extends LineSeriesOptions {
   void set endAngle (double v) {
     this._endAngle = v;
   }
+    */
     
-  bool? _colorByPoint;  
-
+  bool? colorByPoint;
+    /*
   bool get colorByPoint { 
     if (this._colorByPoint == null) {
       this._colorByPoint = false;
@@ -54,6 +70,7 @@ class PieSeriesOptions extends LineSeriesOptions {
   void set colorByPoint (bool v) {
     this._colorByPoint = v;
   }
+    */
     
   /**
    * Options for the series data labels, appearing next to each data
@@ -76,8 +93,8 @@ class PieSeriesOptions extends LineSeriesOptions {
    * 
    * Defaults to 'undefined'. 
       */
-  String? _fillColor;  
-
+  String? fillColor;
+    /*
   String get fillColor { 
     if (this._fillColor == null) {
       this._fillColor = "";
@@ -88,6 +105,7 @@ class PieSeriesOptions extends LineSeriesOptions {
   void set fillColor (String v) {
     this._fillColor = v;
   }
+    */
     
   /**
    * Equivalent to [chart.ignoreHiddenSeries](#chart.ignoreHiddenSeries),
@@ -99,8 +117,8 @@ class PieSeriesOptions extends LineSeriesOptions {
    * 
    * Defaults to 'true'. 
       */
-  bool? _ignoreHiddenPoint;  
-
+  bool? ignoreHiddenPoint;
+    /*
   bool get ignoreHiddenPoint { 
     if (this._ignoreHiddenPoint == null) {
       this._ignoreHiddenPoint = false;
@@ -111,9 +129,10 @@ class PieSeriesOptions extends LineSeriesOptions {
   void set ignoreHiddenPoint (bool v) {
     this._ignoreHiddenPoint = v;
   }
+    */
     
-  bool? _inactiveOtherPoints;  
-
+  bool? inactiveOtherPoints;
+    /*
   bool get inactiveOtherPoints { 
     if (this._inactiveOtherPoints == null) {
       this._inactiveOtherPoints = false;
@@ -124,6 +143,7 @@ class PieSeriesOptions extends LineSeriesOptions {
   void set inactiveOtherPoints (bool v) {
     this._inactiveOtherPoints = v;
   }
+    */
     
   /**
    * The size of the inner diameter for the pie. A size greater than 0
@@ -137,8 +157,8 @@ class PieSeriesOptions extends LineSeriesOptions {
    * 
    * Defaults to '0'. 
       */
-  String? _innerSize;  
-
+  String? innerSize;
+    /*
   String get innerSize { 
     if (this._innerSize == null) {
       this._innerSize = "";
@@ -149,6 +169,7 @@ class PieSeriesOptions extends LineSeriesOptions {
   void set innerSize (String v) {
     this._innerSize = v;
   }
+    */
     
   /**
    * The minimum size for a pie in response to auto margins. The pie will
@@ -157,8 +178,8 @@ class PieSeriesOptions extends LineSeriesOptions {
    * 
    * Defaults to '80'. 
       */
-  String? _minSize;  
-
+  String? minSize;
+    /*
   String get minSize { 
     if (this._minSize == null) {
       this._minSize = "";
@@ -169,6 +190,7 @@ class PieSeriesOptions extends LineSeriesOptions {
   void set minSize (String v) {
     this._minSize = v;
   }
+    */
     
   /**
    * The diameter of the pie relative to the plot area. Can be a
@@ -180,8 +202,8 @@ class PieSeriesOptions extends LineSeriesOptions {
    * vary when points are updated and data labels more around. In that
    * case it is best to set a fixed value, for example `"75%"`.  
       */
-  String? _size;  
-
+  String? size;
+    /*
   String get size { 
     if (this._size == null) {
       this._size = "";
@@ -192,6 +214,7 @@ class PieSeriesOptions extends LineSeriesOptions {
   void set size (String v) {
     this._size = v;
   }
+    */
     
   /**
    * If a point is sliced, moved out from the center, how many pixels
@@ -199,8 +222,8 @@ class PieSeriesOptions extends LineSeriesOptions {
    * 
    * Defaults to '10'. 
       */
-  double? _slicedOffset;  
-
+  double? slicedOffset;
+    /*
   double get slicedOffset { 
     if (this._slicedOffset == null) {
       this._slicedOffset = 0;
@@ -211,6 +234,7 @@ class PieSeriesOptions extends LineSeriesOptions {
   void set slicedOffset (double v) {
     this._slicedOffset = v;
   }
+    */
     
   /**
    * The start angle of the pie slices in degrees where 0 is top and 90
@@ -218,8 +242,8 @@ class PieSeriesOptions extends LineSeriesOptions {
    * 
    * Defaults to '0'. 
       */
-  double? _startAngle;  
-
+  double? startAngle;
+    /*
   double get startAngle { 
     if (this._startAngle == null) {
       this._startAngle = 0;
@@ -230,6 +254,7 @@ class PieSeriesOptions extends LineSeriesOptions {
   void set startAngle (double v) {
     this._startAngle = v;
   }
+    */
     
   // NOTE: states skipped - type Generic is ignored in gen
 
@@ -239,8 +264,8 @@ class PieSeriesOptions extends LineSeriesOptions {
    * 
    * Defaults to 'undefined'. 
       */
-  double? _thickness;  
-
+  double? thickness;
+    /*
   double get thickness { 
     if (this._thickness == null) {
       this._thickness = 0;
@@ -251,14 +276,15 @@ class PieSeriesOptions extends LineSeriesOptions {
   void set thickness (double v) {
     this._thickness = v;
   }
+    */
     
   /**
    * The thickness of a 3D pie. 
    * 
    * Defaults to '0'. 
       */
-  double? _depth;  
-
+  double? depth;
+    /*
   double get depth { 
     if (this._depth == null) {
       this._depth = 0;
@@ -269,9 +295,10 @@ class PieSeriesOptions extends LineSeriesOptions {
   void set depth (double v) {
     this._depth = v;
   }
+    */
     
-  String? _edgeColor;  
-
+  String? edgeColor;
+    /*
   String get edgeColor { 
     if (this._edgeColor == null) {
       this._edgeColor = "";
@@ -282,9 +309,10 @@ class PieSeriesOptions extends LineSeriesOptions {
   void set edgeColor (String v) {
     this._edgeColor = v;
   }
+    */
     
-  double? _edgeWidth;  
-
+  double? edgeWidth;
+    /*
   double get edgeWidth { 
     if (this._edgeWidth == null) {
       this._edgeWidth = 0;
@@ -295,6 +323,7 @@ class PieSeriesOptions extends LineSeriesOptions {
   void set edgeWidth (double v) {
     this._edgeWidth = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -304,64 +333,64 @@ class PieSeriesOptions extends LineSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._endAngle != null) {  
-      buffer.writeAll(["\"endAngle\":", this._endAngle, ","], "");
+    if (this.endAngle != null) {  
+      buffer.writeAll(["\"endAngle\":", this.endAngle, ","], "");
     }
 
-    if (this._colorByPoint != null) {  
-      buffer.writeAll(["\"colorByPoint\":", this._colorByPoint, ","], "");
+    if (this.colorByPoint != null) {  
+      buffer.writeAll(["\"colorByPoint\":", this.colorByPoint, ","], "");
     }
 
     // NOTE: skip serialization of dataLabels (type PieDataLabelOptions[] is ignored)} 
 
-    if (this._fillColor != null) {  
-      buffer.writeAll(["\"fillColor\":\`", this._fillColor, "\`,"], "");
+    if (this.fillColor != null) {  
+      buffer.writeAll(["\"fillColor\":\`", this.fillColor, "\`,"], "");
     }
 
-    if (this._ignoreHiddenPoint != null) {  
-      buffer.writeAll(["\"ignoreHiddenPoint\":", this._ignoreHiddenPoint, ","], "");
+    if (this.ignoreHiddenPoint != null) {  
+      buffer.writeAll(["\"ignoreHiddenPoint\":", this.ignoreHiddenPoint, ","], "");
     }
 
-    if (this._inactiveOtherPoints != null) {  
-      buffer.writeAll(["\"inactiveOtherPoints\":", this._inactiveOtherPoints, ","], "");
+    if (this.inactiveOtherPoints != null) {  
+      buffer.writeAll(["\"inactiveOtherPoints\":", this.inactiveOtherPoints, ","], "");
     }
 
-    if (this._innerSize != null) {  
-      buffer.writeAll(["\"innerSize\":\`", this._innerSize, "\`,"], "");
+    if (this.innerSize != null) {  
+      buffer.writeAll(["\"innerSize\":\`", this.innerSize, "\`,"], "");
     }
 
-    if (this._minSize != null) {  
-      buffer.writeAll(["\"minSize\":\`", this._minSize, "\`,"], "");
+    if (this.minSize != null) {  
+      buffer.writeAll(["\"minSize\":\`", this.minSize, "\`,"], "");
     }
 
-    if (this._size != null) {  
-      buffer.writeAll(["\"size\":\`", this._size, "\`,"], "");
+    if (this.size != null) {  
+      buffer.writeAll(["\"size\":\`", this.size, "\`,"], "");
     }
 
-    if (this._slicedOffset != null) {  
-      buffer.writeAll(["\"slicedOffset\":", this._slicedOffset, ","], "");
+    if (this.slicedOffset != null) {  
+      buffer.writeAll(["\"slicedOffset\":", this.slicedOffset, ","], "");
     }
 
-    if (this._startAngle != null) {  
-      buffer.writeAll(["\"startAngle\":", this._startAngle, ","], "");
+    if (this.startAngle != null) {  
+      buffer.writeAll(["\"startAngle\":", this.startAngle, ","], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 
 
-    if (this._thickness != null) {  
-      buffer.writeAll(["\"thickness\":", this._thickness, ","], "");
+    if (this.thickness != null) {  
+      buffer.writeAll(["\"thickness\":", this.thickness, ","], "");
     }
 
-    if (this._depth != null) {  
-      buffer.writeAll(["\"depth\":", this._depth, ","], "");
+    if (this.depth != null) {  
+      buffer.writeAll(["\"depth\":", this.depth, ","], "");
     }
 
-    if (this._edgeColor != null) {  
-      buffer.writeAll(["\"edgeColor\":\`", this._edgeColor, "\`,"], "");
+    if (this.edgeColor != null) {  
+      buffer.writeAll(["\"edgeColor\":\`", this.edgeColor, "\`,"], "");
     }
 
-    if (this._edgeWidth != null) {  
-      buffer.writeAll(["\"edgeWidth\":", this._edgeWidth, ","], "");
+    if (this.edgeWidth != null) {  
+      buffer.writeAll(["\"edgeWidth\":", this.edgeWidth, ","], "");
     }
   }
 

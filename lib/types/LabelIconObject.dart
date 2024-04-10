@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -26,9 +26,13 @@ import 'OptionFragment.dart';
  * LabelIconObject 
  */
 class LabelIconObject extends OptionFragment {
-  LabelIconObject() : super();
-  bool? _collapsed;  
-
+  LabelIconObject( {
+    this.collapsed = null,
+    this.color = null,
+    this.show = null
+  }) : super();
+  bool? collapsed;
+    /*
   bool get collapsed { 
     if (this._collapsed == null) {
       this._collapsed = false;
@@ -39,9 +43,10 @@ class LabelIconObject extends OptionFragment {
   void set collapsed (bool v) {
     this._collapsed = v;
   }
+    */
     
-  String? _color;  
-
+  String? color;
+    /*
   String get color { 
     if (this._color == null) {
       this._color = "";
@@ -52,9 +57,10 @@ class LabelIconObject extends OptionFragment {
   void set color (String v) {
     this._color = v;
   }
+    */
     
-  bool? _show;  
-
+  bool? show;
+    /*
   bool get show { 
     if (this._show == null) {
       this._show = false;
@@ -65,6 +71,7 @@ class LabelIconObject extends OptionFragment {
   void set show (bool v) {
     this._show = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -74,12 +81,12 @@ class LabelIconObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._collapsed != null) {  
-      buffer.writeAll(["\"collapsed\":", this._collapsed, ","], "");
+    if (this.collapsed != null) {  
+      buffer.writeAll(["\"collapsed\":", this.collapsed, ","], "");
     }
 
-    if (this._color != null) {  
-      buffer.writeAll(["\"color\":\`", this._color, "\`,"], "");
+    if (this.color != null) {  
+      buffer.writeAll(["\"color\":\`", this.color, "\`,"], "");
     }
 
     // NOTE: skip serialization of group (type SVGElement is ignored)} 
@@ -88,8 +95,8 @@ class LabelIconObject extends OptionFragment {
 
     // NOTE: skip serialization of renderer (type SVGRenderer is ignored)} 
 
-    if (this._show != null) {  
-      buffer.writeAll(["\"show\":", this._show, ","], "");
+    if (this.show != null) {  
+      buffer.writeAll(["\"show\":", this.show, ","], "");
     }
 
     // NOTE: skip serialization of xy (type PositionObject is ignored)} 

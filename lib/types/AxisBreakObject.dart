@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,14 @@ import 'OptionFragment.dart';
  * AxisBreakObject 
  */
 class AxisBreakObject extends OptionFragment {
-  AxisBreakObject() : super();
-  double? _from;  
-
+  AxisBreakObject( {
+    this.from = null,
+    this.len = null,
+    this.to = null,
+    this.showPoints = null
+  }) : super();
+  double? from;
+    /*
   double get from { 
     if (this._from == null) {
       this._from = 0;
@@ -35,9 +40,10 @@ class AxisBreakObject extends OptionFragment {
   void set from (double v) {
     this._from = v;
   }
+    */
     
-  double? _len;  
-
+  double? len;
+    /*
   double get len { 
     if (this._len == null) {
       this._len = 0;
@@ -48,9 +54,10 @@ class AxisBreakObject extends OptionFragment {
   void set len (double v) {
     this._len = v;
   }
+    */
     
-  double? _to;  
-
+  double? to;
+    /*
   double get to { 
     if (this._to == null) {
       this._to = 0;
@@ -61,9 +68,10 @@ class AxisBreakObject extends OptionFragment {
   void set to (double v) {
     this._to = v;
   }
+    */
     
-  bool? _showPoints;  
-
+  bool? showPoints;
+    /*
   bool get showPoints { 
     if (this._showPoints == null) {
       this._showPoints = false;
@@ -74,6 +82,7 @@ class AxisBreakObject extends OptionFragment {
   void set showPoints (bool v) {
     this._showPoints = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -83,20 +92,20 @@ class AxisBreakObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._from != null) {  
-      buffer.writeAll(["\"from\":", this._from, ","], "");
+    if (this.from != null) {  
+      buffer.writeAll(["\"from\":", this.from, ","], "");
     }
 
-    if (this._len != null) {  
-      buffer.writeAll(["\"len\":", this._len, ","], "");
+    if (this.len != null) {  
+      buffer.writeAll(["\"len\":", this.len, ","], "");
     }
 
-    if (this._to != null) {  
-      buffer.writeAll(["\"to\":", this._to, ","], "");
+    if (this.to != null) {  
+      buffer.writeAll(["\"to\":", this.to, ","], "");
     }
 
-    if (this._showPoints != null) {  
-      buffer.writeAll(["\"showPoints\":", this._showPoints, ","], "");
+    if (this.showPoints != null) {  
+      buffer.writeAll(["\"showPoints\":", this.showPoints, ","], "");
     }
   }
 

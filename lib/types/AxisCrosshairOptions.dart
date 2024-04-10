@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,16 @@ import 'OptionFragment.dart';
  * AxisCrosshairOptions 
  */
 class AxisCrosshairOptions extends OptionFragment {
-  AxisCrosshairOptions() : super();
-  String? _className;  
-
+  AxisCrosshairOptions( {
+    this.className = null,
+    this.color = null,
+    this.dashStyle = null,
+    this.snap = null,
+    this.width = null,
+    this.zIndex = null
+  }) : super();
+  String? className;
+    /*
   String get className { 
     if (this._className == null) {
       this._className = "";
@@ -36,9 +43,10 @@ class AxisCrosshairOptions extends OptionFragment {
   void set className (String v) {
     this._className = v;
   }
+    */
     
-  String? _color;  
-
+  String? color;
+    /*
   String get color { 
     if (this._color == null) {
       this._color = "";
@@ -49,9 +57,10 @@ class AxisCrosshairOptions extends OptionFragment {
   void set color (String v) {
     this._color = v;
   }
+    */
     
-  String? _dashStyle;  
-
+  String? dashStyle;
+    /*
   String get dashStyle { 
     if (this._dashStyle == null) {
       this._dashStyle = "";
@@ -62,9 +71,10 @@ class AxisCrosshairOptions extends OptionFragment {
   void set dashStyle (String v) {
     this._dashStyle = v;
   }
+    */
     
-  bool? _snap;  
-
+  bool? snap;
+    /*
   bool get snap { 
     if (this._snap == null) {
       this._snap = false;
@@ -75,9 +85,10 @@ class AxisCrosshairOptions extends OptionFragment {
   void set snap (bool v) {
     this._snap = v;
   }
+    */
     
-  double? _width;  
-
+  double? width;
+    /*
   double get width { 
     if (this._width == null) {
       this._width = 0;
@@ -88,9 +99,10 @@ class AxisCrosshairOptions extends OptionFragment {
   void set width (double v) {
     this._width = v;
   }
+    */
     
-  double? _zIndex;  
-
+  double? zIndex;
+    /*
   double get zIndex { 
     if (this._zIndex == null) {
       this._zIndex = 0;
@@ -101,6 +113,7 @@ class AxisCrosshairOptions extends OptionFragment {
   void set zIndex (double v) {
     this._zIndex = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -110,30 +123,30 @@ class AxisCrosshairOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._className != null) {  
-      buffer.writeAll(["\"className\":\`", this._className, "\`,"], "");
+    if (this.className != null) {  
+      buffer.writeAll(["\"className\":\`", this.className, "\`,"], "");
     }
 
-    if (this._color != null) {  
-      buffer.writeAll(["\"color\":\`", this._color, "\`,"], "");
+    if (this.color != null) {  
+      buffer.writeAll(["\"color\":\`", this.color, "\`,"], "");
     }
 
-    if (this._dashStyle != null) {  
-      buffer.writeAll(["\"dashStyle\":\`", this._dashStyle, "\`,"], "");
+    if (this.dashStyle != null) {  
+      buffer.writeAll(["\"dashStyle\":\`", this.dashStyle, "\`,"], "");
     }
 
     // NOTE: skip serialization of label (type AxisCrosshairLabelOptions is ignored)} 
 
-    if (this._snap != null) {  
-      buffer.writeAll(["\"snap\":", this._snap, ","], "");
+    if (this.snap != null) {  
+      buffer.writeAll(["\"snap\":", this.snap, ","], "");
     }
 
-    if (this._width != null) {  
-      buffer.writeAll(["\"width\":", this._width, ","], "");
+    if (this.width != null) {  
+      buffer.writeAll(["\"width\":", this.width, ","], "");
     }
 
-    if (this._zIndex != null) {  
-      buffer.writeAll(["\"zIndex\":", this._zIndex, ","], "");
+    if (this.zIndex != null) {  
+      buffer.writeAll(["\"zIndex\":", this.zIndex, ","], "");
     }
   }
 

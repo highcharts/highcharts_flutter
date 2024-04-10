@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,12 @@ import 'OptionFragment.dart';
  * ColorObject 
  */
 class ColorObject extends OptionFragment {
-  ColorObject() : super();
-  String? _color;  
-
+  ColorObject( {
+    this.color = null,
+    this.colorIndex = null
+  }) : super();
+  String? color;
+    /*
   String get color { 
     if (this._color == null) {
       this._color = "";
@@ -35,9 +38,10 @@ class ColorObject extends OptionFragment {
   void set color (String v) {
     this._color = v;
   }
+    */
     
-  double? _colorIndex;  
-
+  double? colorIndex;
+    /*
   double get colorIndex { 
     if (this._colorIndex == null) {
       this._colorIndex = 0;
@@ -48,6 +52,7 @@ class ColorObject extends OptionFragment {
   void set colorIndex (double v) {
     this._colorIndex = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -57,12 +62,12 @@ class ColorObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._color != null) {  
-      buffer.writeAll(["\"color\":\`", this._color, "\`,"], "");
+    if (this.color != null) {  
+      buffer.writeAll(["\"color\":\`", this.color, "\`,"], "");
     }
 
-    if (this._colorIndex != null) {  
-      buffer.writeAll(["\"colorIndex\":", this._colorIndex, ","], "");
+    if (this.colorIndex != null) {  
+      buffer.writeAll(["\"colorIndex\":", this.colorIndex, ","], "");
     }
   }
 

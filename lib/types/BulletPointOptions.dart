@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -24,9 +24,12 @@ import 'OptionFragment.dart';
  * BulletPointOptions 
  */
 class BulletPointOptions extends ColumnPointOptions {
-  BulletPointOptions() : super();
-  String? _borderColor;  
-
+  BulletPointOptions( {
+    this.borderColor = null,
+    this.target = null
+  }) : super();
+  String? borderColor;
+    /*
   String get borderColor { 
     if (this._borderColor == null) {
       this._borderColor = "";
@@ -37,9 +40,10 @@ class BulletPointOptions extends ColumnPointOptions {
   void set borderColor (String v) {
     this._borderColor = v;
   }
+    */
     
-  double? _target;  
-
+  double? target;
+    /*
   double get target { 
     if (this._target == null) {
       this._target = 0;
@@ -50,6 +54,7 @@ class BulletPointOptions extends ColumnPointOptions {
   void set target (double v) {
     this._target = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -59,12 +64,12 @@ class BulletPointOptions extends ColumnPointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._borderColor != null) {  
-      buffer.writeAll(["\"borderColor\":\`", this._borderColor, "\`,"], "");
+    if (this.borderColor != null) {  
+      buffer.writeAll(["\"borderColor\":\`", this.borderColor, "\`,"], "");
     }
 
-    if (this._target != null) {  
-      buffer.writeAll(["\"target\":", this._target, ","], "");
+    if (this.target != null) {  
+      buffer.writeAll(["\"target\":", this.target, ","], "");
     }
 
     // NOTE: skip serialization of targetOptions (type BulletTargetOptions is ignored)} 

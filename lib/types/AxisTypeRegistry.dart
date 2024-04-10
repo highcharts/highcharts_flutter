@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -27,7 +27,7 @@ import 'OptionFragment.dart';
  * AxisTypeRegistry 
  */
 class AxisTypeRegistry extends OptionFragment {
-  AxisTypeRegistry() : super();
+  AxisTypeRegistry( ) : super();
   
 
   //////////////////////////////////////////////////////////////////////////////

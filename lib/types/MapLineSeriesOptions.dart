@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,14 +23,16 @@ import 'OptionFragment.dart';
  * MapLineSeriesOptions 
  */
 class MapLineSeriesOptions extends MapSeriesOptions {
-  MapLineSeriesOptions() : super();
+  MapLineSeriesOptions( {
+    this.fillColor = null
+  }) : super();
   /**
    * Fill color for the map line shapes 
    * 
    * Defaults to 'none'. 
       */
-  String? _fillColor;  
-
+  String? fillColor;
+    /*
   String get fillColor { 
     if (this._fillColor == null) {
       this._fillColor = "";
@@ -41,6 +43,7 @@ class MapLineSeriesOptions extends MapSeriesOptions {
   void set fillColor (String v) {
     this._fillColor = v;
   }
+    */
     
   // NOTE: states skipped - type Generic is ignored in gen
 
@@ -52,8 +55,8 @@ class MapLineSeriesOptions extends MapSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._fillColor != null) {  
-      buffer.writeAll(["\"fillColor\":\`", this._fillColor, "\`,"], "");
+    if (this.fillColor != null) {  
+      buffer.writeAll(["\"fillColor\":\`", this.fillColor, "\`,"], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 

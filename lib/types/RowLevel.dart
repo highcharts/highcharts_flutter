@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,12 @@ import 'OptionFragment.dart';
  * RowLevel 
  */
 class RowLevel extends OptionFragment {
-  RowLevel() : super();
-  double? _top;  
-
+  RowLevel( {
+    this.top = null,
+    this.bottom = null
+  }) : super();
+  double? top;
+    /*
   double get top { 
     if (this._top == null) {
       this._top = 0;
@@ -35,9 +38,10 @@ class RowLevel extends OptionFragment {
   void set top (double v) {
     this._top = v;
   }
+    */
     
-  double? _bottom;  
-
+  double? bottom;
+    /*
   double get bottom { 
     if (this._bottom == null) {
       this._bottom = 0;
@@ -48,6 +52,7 @@ class RowLevel extends OptionFragment {
   void set bottom (double v) {
     this._bottom = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -57,12 +62,12 @@ class RowLevel extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._top != null) {  
-      buffer.writeAll(["\"top\":", this._top, ","], "");
+    if (this.top != null) {  
+      buffer.writeAll(["\"top\":", this.top, ","], "");
     }
 
-    if (this._bottom != null) {  
-      buffer.writeAll(["\"bottom\":", this._bottom, ","], "");
+    if (this.bottom != null) {  
+      buffer.writeAll(["\"bottom\":", this.bottom, ","], "");
     }
 
     // NOTE: skip serialization of cells (type Cell[] is ignored)} 

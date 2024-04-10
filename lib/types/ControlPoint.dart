@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,16 @@ import 'OptionFragment.dart';
  * ControlPoint 
  */
 class ControlPoint extends OptionFragment {
-  ControlPoint() : super();
-  double? _chartCenterX;  
-
+  ControlPoint( {
+    this.chartCenterX = null,
+    this.chartCenterY = null,
+    this.chartX = null,
+    this.chartY = null,
+    this.plotX = null,
+    this.plotY = null
+  }) : super();
+  double? chartCenterX;
+    /*
   double get chartCenterX { 
     if (this._chartCenterX == null) {
       this._chartCenterX = 0;
@@ -35,9 +42,10 @@ class ControlPoint extends OptionFragment {
   void set chartCenterX (double v) {
     this._chartCenterX = v;
   }
+    */
     
-  double? _chartCenterY;  
-
+  double? chartCenterY;
+    /*
   double get chartCenterY { 
     if (this._chartCenterY == null) {
       this._chartCenterY = 0;
@@ -48,9 +56,10 @@ class ControlPoint extends OptionFragment {
   void set chartCenterY (double v) {
     this._chartCenterY = v;
   }
+    */
     
-  double? _chartX;  
-
+  double? chartX;
+    /*
   double get chartX { 
     if (this._chartX == null) {
       this._chartX = 0;
@@ -61,9 +70,10 @@ class ControlPoint extends OptionFragment {
   void set chartX (double v) {
     this._chartX = v;
   }
+    */
     
-  double? _chartY;  
-
+  double? chartY;
+    /*
   double get chartY { 
     if (this._chartY == null) {
       this._chartY = 0;
@@ -74,9 +84,10 @@ class ControlPoint extends OptionFragment {
   void set chartY (double v) {
     this._chartY = v;
   }
+    */
     
-  double? _plotX;  
-
+  double? plotX;
+    /*
   double get plotX { 
     if (this._plotX == null) {
       this._plotX = 0;
@@ -87,9 +98,10 @@ class ControlPoint extends OptionFragment {
   void set plotX (double v) {
     this._plotX = v;
   }
+    */
     
-  double? _plotY;  
-
+  double? plotY;
+    /*
   double get plotY { 
     if (this._plotY == null) {
       this._plotY = 0;
@@ -100,6 +112,7 @@ class ControlPoint extends OptionFragment {
   void set plotY (double v) {
     this._plotY = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -109,28 +122,28 @@ class ControlPoint extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._chartCenterX != null) {  
-      buffer.writeAll(["\"chartCenterX\":", this._chartCenterX, ","], "");
+    if (this.chartCenterX != null) {  
+      buffer.writeAll(["\"chartCenterX\":", this.chartCenterX, ","], "");
     }
 
-    if (this._chartCenterY != null) {  
-      buffer.writeAll(["\"chartCenterY\":", this._chartCenterY, ","], "");
+    if (this.chartCenterY != null) {  
+      buffer.writeAll(["\"chartCenterY\":", this.chartCenterY, ","], "");
     }
 
-    if (this._chartX != null) {  
-      buffer.writeAll(["\"chartX\":", this._chartX, ","], "");
+    if (this.chartX != null) {  
+      buffer.writeAll(["\"chartX\":", this.chartX, ","], "");
     }
 
-    if (this._chartY != null) {  
-      buffer.writeAll(["\"chartY\":", this._chartY, ","], "");
+    if (this.chartY != null) {  
+      buffer.writeAll(["\"chartY\":", this.chartY, ","], "");
     }
 
-    if (this._plotX != null) {  
-      buffer.writeAll(["\"plotX\":", this._plotX, ","], "");
+    if (this.plotX != null) {  
+      buffer.writeAll(["\"plotX\":", this.plotX, ","], "");
     }
 
-    if (this._plotY != null) {  
-      buffer.writeAll(["\"plotY\":", this._plotY, ","], "");
+    if (this.plotY != null) {  
+      buffer.writeAll(["\"plotY\":", this.plotY, ","], "");
     }
   }
 

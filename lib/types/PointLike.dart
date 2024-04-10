@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -33,9 +33,74 @@ import 'OptionFragment.dart';
  * PointLike 
  */
 class PointLike extends OptionFragment {
-  PointLike() : super();
-  String? _category;  
-
+  PointLike( {
+    this.category = null,
+    this.clientX = null,
+    this.dist = null,
+    this.distX = null,
+    this.hasImage = null,
+    this.index = null,
+    this.isInside = null,
+    this.low = null,
+    this.negative = null,
+    this.stackTotal = null,
+    this.stackY = null,
+    this.yBottom = null,
+    this.dataLabelOnNull = null,
+    this.allowShadow = null,
+    this.leftCliff = null,
+    this.rightCliff = null,
+    this.bottom = null,
+    this.contrastColor = null,
+    this.dataLabelOnHidden = null,
+    this.top = null,
+    this.isHeader = null,
+    this.dataClass = null,
+    this.isBubble = null,
+    this.plotX = null,
+    this.plotY = null,
+    this.name = null,
+    this.className = null,
+    this.hasImportedEvents = null,
+    this.selected = null,
+    this.selectedStaging = null,
+    this.state = null,
+    this.touched = null,
+    this.hasMockGraphic = null,
+    this.borderColor = null,
+    this.crosshairPos = null,
+    this.axisXpos = null,
+    this.axisYpos = null,
+    this.axisZpos = null,
+    this.plotZ = null,
+    this.z = null,
+    this.isCliff = null,
+    this.lat = null,
+    this.lon = null,
+    this.plotHigh = null,
+    this.plotLow = null,
+    this.drilldown = null,
+    this.isCluster = null,
+    this.clusterPointsAmount = null,
+    this.height = null,
+    this.outside3dPlot = null,
+    this.shapey = null,
+    this.change = null,
+    this.cumulativeSum = null,
+    this.dispX = null,
+    this.dispY = null,
+    this.mass = null,
+    this.prevX = null,
+    this.prevY = null,
+    this.degree = null,
+    this.temperature = null,
+    this.rectPlotX = null,
+    this.rectPlotY = null,
+    this.ttBelow = null,
+    this.crosshairWidth = null
+  }) : super();
+  String? category;
+    /*
   String get category { 
     if (this._category == null) {
       this._category = "";
@@ -46,9 +111,10 @@ class PointLike extends OptionFragment {
   void set category (String v) {
     this._category = v;
   }
+    */
     
-  double? _clientX;  
-
+  double? clientX;
+    /*
   double get clientX { 
     if (this._clientX == null) {
       this._clientX = 0;
@@ -59,9 +125,10 @@ class PointLike extends OptionFragment {
   void set clientX (double v) {
     this._clientX = v;
   }
+    */
     
-  double? _dist;  
-
+  double? dist;
+    /*
   double get dist { 
     if (this._dist == null) {
       this._dist = 0;
@@ -72,9 +139,10 @@ class PointLike extends OptionFragment {
   void set dist (double v) {
     this._dist = v;
   }
+    */
     
-  double? _distX;  
-
+  double? distX;
+    /*
   double get distX { 
     if (this._distX == null) {
       this._distX = 0;
@@ -85,9 +153,10 @@ class PointLike extends OptionFragment {
   void set distX (double v) {
     this._distX = v;
   }
+    */
     
-  bool? _hasImage;  
-
+  bool? hasImage;
+    /*
   bool get hasImage { 
     if (this._hasImage == null) {
       this._hasImage = false;
@@ -98,9 +167,10 @@ class PointLike extends OptionFragment {
   void set hasImage (bool v) {
     this._hasImage = v;
   }
+    */
     
-  double? _index;  
-
+  double? index;
+    /*
   double get index { 
     if (this._index == null) {
       this._index = 0;
@@ -111,9 +181,10 @@ class PointLike extends OptionFragment {
   void set index (double v) {
     this._index = v;
   }
+    */
     
-  bool? _isInside;  
-
+  bool? isInside;
+    /*
   bool get isInside { 
     if (this._isInside == null) {
       this._isInside = false;
@@ -124,9 +195,10 @@ class PointLike extends OptionFragment {
   void set isInside (bool v) {
     this._isInside = v;
   }
+    */
     
-  double? _low;  
-
+  double? low;
+    /*
   double get low { 
     if (this._low == null) {
       this._low = 0;
@@ -137,9 +209,10 @@ class PointLike extends OptionFragment {
   void set low (double v) {
     this._low = v;
   }
+    */
     
-  bool? _negative;  
-
+  bool? negative;
+    /*
   bool get negative { 
     if (this._negative == null) {
       this._negative = false;
@@ -150,9 +223,10 @@ class PointLike extends OptionFragment {
   void set negative (bool v) {
     this._negative = v;
   }
+    */
     
-  double? _stackTotal;  
-
+  double? stackTotal;
+    /*
   double get stackTotal { 
     if (this._stackTotal == null) {
       this._stackTotal = 0;
@@ -163,9 +237,10 @@ class PointLike extends OptionFragment {
   void set stackTotal (double v) {
     this._stackTotal = v;
   }
+    */
     
-  double? _stackY;  
-
+  double? stackY;
+    /*
   double get stackY { 
     if (this._stackY == null) {
       this._stackY = 0;
@@ -176,9 +251,10 @@ class PointLike extends OptionFragment {
   void set stackY (double v) {
     this._stackY = v;
   }
+    */
     
-  double? _yBottom;  
-
+  double? yBottom;
+    /*
   double get yBottom { 
     if (this._yBottom == null) {
       this._yBottom = 0;
@@ -189,9 +265,10 @@ class PointLike extends OptionFragment {
   void set yBottom (double v) {
     this._yBottom = v;
   }
+    */
     
-  bool? _dataLabelOnNull;  
-
+  bool? dataLabelOnNull;
+    /*
   bool get dataLabelOnNull { 
     if (this._dataLabelOnNull == null) {
       this._dataLabelOnNull = false;
@@ -202,9 +279,10 @@ class PointLike extends OptionFragment {
   void set dataLabelOnNull (bool v) {
     this._dataLabelOnNull = v;
   }
+    */
     
-  bool? _allowShadow;  
-
+  bool? allowShadow;
+    /*
   bool get allowShadow { 
     if (this._allowShadow == null) {
       this._allowShadow = false;
@@ -215,9 +293,10 @@ class PointLike extends OptionFragment {
   void set allowShadow (bool v) {
     this._allowShadow = v;
   }
+    */
     
-  double? _leftCliff;  
-
+  double? leftCliff;
+    /*
   double get leftCliff { 
     if (this._leftCliff == null) {
       this._leftCliff = 0;
@@ -228,9 +307,10 @@ class PointLike extends OptionFragment {
   void set leftCliff (double v) {
     this._leftCliff = v;
   }
+    */
     
-  double? _rightCliff;  
-
+  double? rightCliff;
+    /*
   double get rightCliff { 
     if (this._rightCliff == null) {
       this._rightCliff = 0;
@@ -241,9 +321,10 @@ class PointLike extends OptionFragment {
   void set rightCliff (double v) {
     this._rightCliff = v;
   }
+    */
     
-  double? _bottom;  
-
+  double? bottom;
+    /*
   double get bottom { 
     if (this._bottom == null) {
       this._bottom = 0;
@@ -254,9 +335,10 @@ class PointLike extends OptionFragment {
   void set bottom (double v) {
     this._bottom = v;
   }
+    */
     
-  String? _contrastColor;  
-
+  String? contrastColor;
+    /*
   String get contrastColor { 
     if (this._contrastColor == null) {
       this._contrastColor = "";
@@ -267,9 +349,10 @@ class PointLike extends OptionFragment {
   void set contrastColor (String v) {
     this._contrastColor = v;
   }
+    */
     
-  bool? _dataLabelOnHidden;  
-
+  bool? dataLabelOnHidden;
+    /*
   bool get dataLabelOnHidden { 
     if (this._dataLabelOnHidden == null) {
       this._dataLabelOnHidden = false;
@@ -280,9 +363,10 @@ class PointLike extends OptionFragment {
   void set dataLabelOnHidden (bool v) {
     this._dataLabelOnHidden = v;
   }
+    */
     
-  double? _top;  
-
+  double? top;
+    /*
   double get top { 
     if (this._top == null) {
       this._top = 0;
@@ -293,9 +377,10 @@ class PointLike extends OptionFragment {
   void set top (double v) {
     this._top = v;
   }
+    */
     
-  bool? _isHeader;  
-
+  bool? isHeader;
+    /*
   bool get isHeader { 
     if (this._isHeader == null) {
       this._isHeader = false;
@@ -306,9 +391,10 @@ class PointLike extends OptionFragment {
   void set isHeader (bool v) {
     this._isHeader = v;
   }
+    */
     
-  double? _dataClass;  
-
+  double? dataClass;
+    /*
   double get dataClass { 
     if (this._dataClass == null) {
       this._dataClass = 0;
@@ -319,9 +405,10 @@ class PointLike extends OptionFragment {
   void set dataClass (double v) {
     this._dataClass = v;
   }
+    */
     
-  bool? _isBubble;  
-
+  bool? isBubble;
+    /*
   bool get isBubble { 
     if (this._isBubble == null) {
       this._isBubble = false;
@@ -332,9 +419,10 @@ class PointLike extends OptionFragment {
   void set isBubble (bool v) {
     this._isBubble = v;
   }
+    */
     
-  double? _plotX;  
-
+  double? plotX;
+    /*
   double get plotX { 
     if (this._plotX == null) {
       this._plotX = 0;
@@ -345,9 +433,10 @@ class PointLike extends OptionFragment {
   void set plotX (double v) {
     this._plotX = v;
   }
+    */
     
-  double? _plotY;  
-
+  double? plotY;
+    /*
   double get plotY { 
     if (this._plotY == null) {
       this._plotY = 0;
@@ -358,9 +447,10 @@ class PointLike extends OptionFragment {
   void set plotY (double v) {
     this._plotY = v;
   }
+    */
     
-  String? _name;  
-
+  String? name;
+    /*
   String get name { 
     if (this._name == null) {
       this._name = "";
@@ -371,9 +461,10 @@ class PointLike extends OptionFragment {
   void set name (String v) {
     this._name = v;
   }
+    */
     
-  String? _className;  
-
+  String? className;
+    /*
   String get className { 
     if (this._className == null) {
       this._className = "";
@@ -384,9 +475,10 @@ class PointLike extends OptionFragment {
   void set className (String v) {
     this._className = v;
   }
+    */
     
-  bool? _hasImportedEvents;  
-
+  bool? hasImportedEvents;
+    /*
   bool get hasImportedEvents { 
     if (this._hasImportedEvents == null) {
       this._hasImportedEvents = false;
@@ -397,9 +489,10 @@ class PointLike extends OptionFragment {
   void set hasImportedEvents (bool v) {
     this._hasImportedEvents = v;
   }
+    */
     
-  bool? _selected;  
-
+  bool? selected;
+    /*
   bool get selected { 
     if (this._selected == null) {
       this._selected = false;
@@ -410,9 +503,10 @@ class PointLike extends OptionFragment {
   void set selected (bool v) {
     this._selected = v;
   }
+    */
     
-  bool? _selectedStaging;  
-
+  bool? selectedStaging;
+    /*
   bool get selectedStaging { 
     if (this._selectedStaging == null) {
       this._selectedStaging = false;
@@ -423,9 +517,10 @@ class PointLike extends OptionFragment {
   void set selectedStaging (bool v) {
     this._selectedStaging = v;
   }
+    */
     
-  String? _state;  
-
+  String? state;
+    /*
   String get state { 
     if (this._state == null) {
       this._state = "";
@@ -436,9 +531,10 @@ class PointLike extends OptionFragment {
   void set state (String v) {
     this._state = v;
   }
+    */
     
-  bool? _touched;  
-
+  bool? touched;
+    /*
   bool get touched { 
     if (this._touched == null) {
       this._touched = false;
@@ -449,9 +545,10 @@ class PointLike extends OptionFragment {
   void set touched (bool v) {
     this._touched = v;
   }
+    */
     
-  bool? _hasMockGraphic;  
-
+  bool? hasMockGraphic;
+    /*
   bool get hasMockGraphic { 
     if (this._hasMockGraphic == null) {
       this._hasMockGraphic = false;
@@ -462,9 +559,10 @@ class PointLike extends OptionFragment {
   void set hasMockGraphic (bool v) {
     this._hasMockGraphic = v;
   }
+    */
     
-  String? _borderColor;  
-
+  String? borderColor;
+    /*
   String get borderColor { 
     if (this._borderColor == null) {
       this._borderColor = "";
@@ -475,9 +573,10 @@ class PointLike extends OptionFragment {
   void set borderColor (String v) {
     this._borderColor = v;
   }
+    */
     
-  double? _crosshairPos;  
-
+  double? crosshairPos;
+    /*
   double get crosshairPos { 
     if (this._crosshairPos == null) {
       this._crosshairPos = 0;
@@ -488,9 +587,10 @@ class PointLike extends OptionFragment {
   void set crosshairPos (double v) {
     this._crosshairPos = v;
   }
+    */
     
-  double? _axisXpos;  
-
+  double? axisXpos;
+    /*
   double get axisXpos { 
     if (this._axisXpos == null) {
       this._axisXpos = 0;
@@ -501,9 +601,10 @@ class PointLike extends OptionFragment {
   void set axisXpos (double v) {
     this._axisXpos = v;
   }
+    */
     
-  double? _axisYpos;  
-
+  double? axisYpos;
+    /*
   double get axisYpos { 
     if (this._axisYpos == null) {
       this._axisYpos = 0;
@@ -514,9 +615,10 @@ class PointLike extends OptionFragment {
   void set axisYpos (double v) {
     this._axisYpos = v;
   }
+    */
     
-  double? _axisZpos;  
-
+  double? axisZpos;
+    /*
   double get axisZpos { 
     if (this._axisZpos == null) {
       this._axisZpos = 0;
@@ -527,9 +629,10 @@ class PointLike extends OptionFragment {
   void set axisZpos (double v) {
     this._axisZpos = v;
   }
+    */
     
-  double? _plotZ;  
-
+  double? plotZ;
+    /*
   double get plotZ { 
     if (this._plotZ == null) {
       this._plotZ = 0;
@@ -540,9 +643,10 @@ class PointLike extends OptionFragment {
   void set plotZ (double v) {
     this._plotZ = v;
   }
+    */
     
-  double? _z;  
-
+  double? z;
+    /*
   double get z { 
     if (this._z == null) {
       this._z = 0;
@@ -553,9 +657,10 @@ class PointLike extends OptionFragment {
   void set z (double v) {
     this._z = v;
   }
+    */
     
-  bool? _isCliff;  
-
+  bool? isCliff;
+    /*
   bool get isCliff { 
     if (this._isCliff == null) {
       this._isCliff = false;
@@ -566,9 +671,10 @@ class PointLike extends OptionFragment {
   void set isCliff (bool v) {
     this._isCliff = v;
   }
+    */
     
-  double? _lat;  
-
+  double? lat;
+    /*
   double get lat { 
     if (this._lat == null) {
       this._lat = 0;
@@ -579,9 +685,10 @@ class PointLike extends OptionFragment {
   void set lat (double v) {
     this._lat = v;
   }
+    */
     
-  double? _lon;  
-
+  double? lon;
+    /*
   double get lon { 
     if (this._lon == null) {
       this._lon = 0;
@@ -592,9 +699,10 @@ class PointLike extends OptionFragment {
   void set lon (double v) {
     this._lon = v;
   }
+    */
     
-  double? _plotHigh;  
-
+  double? plotHigh;
+    /*
   double get plotHigh { 
     if (this._plotHigh == null) {
       this._plotHigh = 0;
@@ -605,9 +713,10 @@ class PointLike extends OptionFragment {
   void set plotHigh (double v) {
     this._plotHigh = v;
   }
+    */
     
-  double? _plotLow;  
-
+  double? plotLow;
+    /*
   double get plotLow { 
     if (this._plotLow == null) {
       this._plotLow = 0;
@@ -618,9 +727,10 @@ class PointLike extends OptionFragment {
   void set plotLow (double v) {
     this._plotLow = v;
   }
+    */
     
-  String? _drilldown;  
-
+  String? drilldown;
+    /*
   String get drilldown { 
     if (this._drilldown == null) {
       this._drilldown = "";
@@ -631,9 +741,10 @@ class PointLike extends OptionFragment {
   void set drilldown (String v) {
     this._drilldown = v;
   }
+    */
     
-  bool? _isCluster;  
-
+  bool? isCluster;
+    /*
   bool get isCluster { 
     if (this._isCluster == null) {
       this._isCluster = false;
@@ -644,9 +755,10 @@ class PointLike extends OptionFragment {
   void set isCluster (bool v) {
     this._isCluster = v;
   }
+    */
     
-  double? _clusterPointsAmount;  
-
+  double? clusterPointsAmount;
+    /*
   double get clusterPointsAmount { 
     if (this._clusterPointsAmount == null) {
       this._clusterPointsAmount = 0;
@@ -657,9 +769,10 @@ class PointLike extends OptionFragment {
   void set clusterPointsAmount (double v) {
     this._clusterPointsAmount = v;
   }
+    */
     
-  double? _height;  
-
+  double? height;
+    /*
   double get height { 
     if (this._height == null) {
       this._height = 0;
@@ -670,9 +783,10 @@ class PointLike extends OptionFragment {
   void set height (double v) {
     this._height = v;
   }
+    */
     
-  bool? _outside3dPlot;  
-
+  bool? outside3dPlot;
+    /*
   bool get outside3dPlot { 
     if (this._outside3dPlot == null) {
       this._outside3dPlot = false;
@@ -683,9 +797,10 @@ class PointLike extends OptionFragment {
   void set outside3dPlot (bool v) {
     this._outside3dPlot = v;
   }
+    */
     
-  double? _shapey;  
-
+  double? shapey;
+    /*
   double get shapey { 
     if (this._shapey == null) {
       this._shapey = 0;
@@ -696,9 +811,10 @@ class PointLike extends OptionFragment {
   void set shapey (double v) {
     this._shapey = v;
   }
+    */
     
-  double? _change;  
-
+  double? change;
+    /*
   double get change { 
     if (this._change == null) {
       this._change = 0;
@@ -709,9 +825,10 @@ class PointLike extends OptionFragment {
   void set change (double v) {
     this._change = v;
   }
+    */
     
-  double? _cumulativeSum;  
-
+  double? cumulativeSum;
+    /*
   double get cumulativeSum { 
     if (this._cumulativeSum == null) {
       this._cumulativeSum = 0;
@@ -722,9 +839,10 @@ class PointLike extends OptionFragment {
   void set cumulativeSum (double v) {
     this._cumulativeSum = v;
   }
+    */
     
-  double? _dispX;  
-
+  double? dispX;
+    /*
   double get dispX { 
     if (this._dispX == null) {
       this._dispX = 0;
@@ -735,9 +853,10 @@ class PointLike extends OptionFragment {
   void set dispX (double v) {
     this._dispX = v;
   }
+    */
     
-  double? _dispY;  
-
+  double? dispY;
+    /*
   double get dispY { 
     if (this._dispY == null) {
       this._dispY = 0;
@@ -748,9 +867,10 @@ class PointLike extends OptionFragment {
   void set dispY (double v) {
     this._dispY = v;
   }
+    */
     
-  double? _mass;  
-
+  double? mass;
+    /*
   double get mass { 
     if (this._mass == null) {
       this._mass = 0;
@@ -761,9 +881,10 @@ class PointLike extends OptionFragment {
   void set mass (double v) {
     this._mass = v;
   }
+    */
     
-  double? _prevX;  
-
+  double? prevX;
+    /*
   double get prevX { 
     if (this._prevX == null) {
       this._prevX = 0;
@@ -774,9 +895,10 @@ class PointLike extends OptionFragment {
   void set prevX (double v) {
     this._prevX = v;
   }
+    */
     
-  double? _prevY;  
-
+  double? prevY;
+    /*
   double get prevY { 
     if (this._prevY == null) {
       this._prevY = 0;
@@ -787,9 +909,10 @@ class PointLike extends OptionFragment {
   void set prevY (double v) {
     this._prevY = v;
   }
+    */
     
-  double? _degree;  
-
+  double? degree;
+    /*
   double get degree { 
     if (this._degree == null) {
       this._degree = 0;
@@ -800,9 +923,10 @@ class PointLike extends OptionFragment {
   void set degree (double v) {
     this._degree = v;
   }
+    */
     
-  double? _temperature;  
-
+  double? temperature;
+    /*
   double get temperature { 
     if (this._temperature == null) {
       this._temperature = 0;
@@ -813,9 +937,10 @@ class PointLike extends OptionFragment {
   void set temperature (double v) {
     this._temperature = v;
   }
+    */
     
-  double? _rectPlotX;  
-
+  double? rectPlotX;
+    /*
   double get rectPlotX { 
     if (this._rectPlotX == null) {
       this._rectPlotX = 0;
@@ -826,9 +951,10 @@ class PointLike extends OptionFragment {
   void set rectPlotX (double v) {
     this._rectPlotX = v;
   }
+    */
     
-  double? _rectPlotY;  
-
+  double? rectPlotY;
+    /*
   double get rectPlotY { 
     if (this._rectPlotY == null) {
       this._rectPlotY = 0;
@@ -839,9 +965,10 @@ class PointLike extends OptionFragment {
   void set rectPlotY (double v) {
     this._rectPlotY = v;
   }
+    */
     
-  bool? _ttBelow;  
-
+  bool? ttBelow;
+    /*
   bool get ttBelow { 
     if (this._ttBelow == null) {
       this._ttBelow = false;
@@ -852,9 +979,10 @@ class PointLike extends OptionFragment {
   void set ttBelow (bool v) {
     this._ttBelow = v;
   }
+    */
     
-  double? _crosshairWidth;  
-
+  double? crosshairWidth;
+    /*
   double get crosshairWidth { 
     if (this._crosshairWidth == null) {
       this._crosshairWidth = 0;
@@ -865,6 +993,7 @@ class PointLike extends OptionFragment {
   void set crosshairWidth (double v) {
     this._crosshairWidth = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -874,92 +1003,92 @@ class PointLike extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._category != null) {  
-      buffer.writeAll(["\"category\":\`", this._category, "\`,"], "");
+    if (this.category != null) {  
+      buffer.writeAll(["\"category\":\`", this.category, "\`,"], "");
     }
 
-    if (this._clientX != null) {  
-      buffer.writeAll(["\"clientX\":", this._clientX, ","], "");
+    if (this.clientX != null) {  
+      buffer.writeAll(["\"clientX\":", this.clientX, ","], "");
     }
 
-    if (this._dist != null) {  
-      buffer.writeAll(["\"dist\":", this._dist, ","], "");
+    if (this.dist != null) {  
+      buffer.writeAll(["\"dist\":", this.dist, ","], "");
     }
 
-    if (this._distX != null) {  
-      buffer.writeAll(["\"distX\":", this._distX, ","], "");
+    if (this.distX != null) {  
+      buffer.writeAll(["\"distX\":", this.distX, ","], "");
     }
 
-    if (this._hasImage != null) {  
-      buffer.writeAll(["\"hasImage\":", this._hasImage, ","], "");
+    if (this.hasImage != null) {  
+      buffer.writeAll(["\"hasImage\":", this.hasImage, ","], "");
     }
 
-    if (this._index != null) {  
-      buffer.writeAll(["\"index\":", this._index, ","], "");
+    if (this.index != null) {  
+      buffer.writeAll(["\"index\":", this.index, ","], "");
     }
 
-    if (this._isInside != null) {  
-      buffer.writeAll(["\"isInside\":", this._isInside, ","], "");
+    if (this.isInside != null) {  
+      buffer.writeAll(["\"isInside\":", this.isInside, ","], "");
     }
 
-    if (this._low != null) {  
-      buffer.writeAll(["\"low\":", this._low, ","], "");
+    if (this.low != null) {  
+      buffer.writeAll(["\"low\":", this.low, ","], "");
     }
 
-    if (this._negative != null) {  
-      buffer.writeAll(["\"negative\":", this._negative, ","], "");
+    if (this.negative != null) {  
+      buffer.writeAll(["\"negative\":", this.negative, ","], "");
     }
 
     // NOTE: skip serialization of options (type PointOptions is ignored)} 
 
     // NOTE: skip serialization of stackBox (type BBoxObject is ignored)} 
 
-    if (this._stackTotal != null) {  
-      buffer.writeAll(["\"stackTotal\":", this._stackTotal, ","], "");
+    if (this.stackTotal != null) {  
+      buffer.writeAll(["\"stackTotal\":", this.stackTotal, ","], "");
     }
 
-    if (this._stackY != null) {  
-      buffer.writeAll(["\"stackY\":", this._stackY, ","], "");
+    if (this.stackY != null) {  
+      buffer.writeAll(["\"stackY\":", this.stackY, ","], "");
     }
 
-    if (this._yBottom != null) {  
-      buffer.writeAll(["\"yBottom\":", this._yBottom, ","], "");
+    if (this.yBottom != null) {  
+      buffer.writeAll(["\"yBottom\":", this.yBottom, ","], "");
     }
 
     // NOTE: skip serialization of zone (type ZoneObject is ignored)} 
 
-    if (this._dataLabelOnNull != null) {  
-      buffer.writeAll(["\"dataLabelOnNull\":", this._dataLabelOnNull, ","], "");
+    if (this.dataLabelOnNull != null) {  
+      buffer.writeAll(["\"dataLabelOnNull\":", this.dataLabelOnNull, ","], "");
     }
 
-    if (this._allowShadow != null) {  
-      buffer.writeAll(["\"allowShadow\":", this._allowShadow, ","], "");
+    if (this.allowShadow != null) {  
+      buffer.writeAll(["\"allowShadow\":", this.allowShadow, ","], "");
     }
 
-    if (this._leftCliff != null) {  
-      buffer.writeAll(["\"leftCliff\":", this._leftCliff, ","], "");
+    if (this.leftCliff != null) {  
+      buffer.writeAll(["\"leftCliff\":", this.leftCliff, ","], "");
     }
 
-    if (this._rightCliff != null) {  
-      buffer.writeAll(["\"rightCliff\":", this._rightCliff, ","], "");
+    if (this.rightCliff != null) {  
+      buffer.writeAll(["\"rightCliff\":", this.rightCliff, ","], "");
     }
 
-    if (this._bottom != null) {  
-      buffer.writeAll(["\"bottom\":", this._bottom, ","], "");
+    if (this.bottom != null) {  
+      buffer.writeAll(["\"bottom\":", this.bottom, ","], "");
     }
 
-    if (this._contrastColor != null) {  
-      buffer.writeAll(["\"contrastColor\":\`", this._contrastColor, "\`,"], "");
+    if (this.contrastColor != null) {  
+      buffer.writeAll(["\"contrastColor\":\`", this.contrastColor, "\`,"], "");
     }
 
     // NOTE: skip serialization of dataLabel (type SVGLabel is ignored)} 
 
-    if (this._dataLabelOnHidden != null) {  
-      buffer.writeAll(["\"dataLabelOnHidden\":", this._dataLabelOnHidden, ","], "");
+    if (this.dataLabelOnHidden != null) {  
+      buffer.writeAll(["\"dataLabelOnHidden\":", this.dataLabelOnHidden, ","], "");
     }
 
-    if (this._dataLabelOnNull != null) {  
-      buffer.writeAll(["\"dataLabelOnNull\":", this._dataLabelOnNull, ","], "");
+    if (this.dataLabelOnNull != null) {  
+      buffer.writeAll(["\"dataLabelOnNull\":", this.dataLabelOnNull, ","], "");
     }
 
     // NOTE: skip serialization of dataLabelPath (type SVGElement is ignored)} 
@@ -972,168 +1101,168 @@ class PointLike extends OptionFragment {
 
     // NOTE: skip serialization of dlOptions (type DataLabelOptions is ignored)} 
 
-    if (this._top != null) {  
-      buffer.writeAll(["\"top\":", this._top, ","], "");
+    if (this.top != null) {  
+      buffer.writeAll(["\"top\":", this.top, ","], "");
     }
 
-    if (this._isHeader != null) {  
-      buffer.writeAll(["\"isHeader\":", this._isHeader, ","], "");
+    if (this.isHeader != null) {  
+      buffer.writeAll(["\"isHeader\":", this.isHeader, ","], "");
     }
 
     // NOTE: skip serialization of tooltipPos (type number[] is ignored)} 
 
-    if (this._dataClass != null) {  
-      buffer.writeAll(["\"dataClass\":", this._dataClass, ","], "");
+    if (this.dataClass != null) {  
+      buffer.writeAll(["\"dataClass\":", this.dataClass, ","], "");
     }
 
-    if (this._isBubble != null) {  
-      buffer.writeAll(["\"isBubble\":", this._isBubble, ","], "");
+    if (this.isBubble != null) {  
+      buffer.writeAll(["\"isBubble\":", this.isBubble, ","], "");
     }
 
-    if (this._plotX != null) {  
-      buffer.writeAll(["\"plotX\":", this._plotX, ","], "");
+    if (this.plotX != null) {  
+      buffer.writeAll(["\"plotX\":", this.plotX, ","], "");
     }
 
-    if (this._plotY != null) {  
-      buffer.writeAll(["\"plotY\":", this._plotY, ","], "");
+    if (this.plotY != null) {  
+      buffer.writeAll(["\"plotY\":", this.plotY, ","], "");
     }
 
-    if (this._name != null) {  
-      buffer.writeAll(["\"name\":\`", this._name, "\`,"], "");
+    if (this.name != null) {  
+      buffer.writeAll(["\"name\":\`", this.name, "\`,"], "");
     }
 
     // NOTE: skip serialization of options (type PointOptions is ignored)} 
 
     // NOTE: skip serialization of series (type SeriesLike is ignored)} 
 
-    if (this._className != null) {  
-      buffer.writeAll(["\"className\":\`", this._className, "\`,"], "");
+    if (this.className != null) {  
+      buffer.writeAll(["\"className\":\`", this.className, "\`,"], "");
     }
 
     // NOTE: skip serialization of events (type PointEventsOptions is ignored)} 
 
-    if (this._hasImportedEvents != null) {  
-      buffer.writeAll(["\"hasImportedEvents\":", this._hasImportedEvents, ","], "");
+    if (this.hasImportedEvents != null) {  
+      buffer.writeAll(["\"hasImportedEvents\":", this.hasImportedEvents, ","], "");
     }
 
-    if (this._selected != null) {  
-      buffer.writeAll(["\"selected\":", this._selected, ","], "");
+    if (this.selected != null) {  
+      buffer.writeAll(["\"selected\":", this.selected, ","], "");
     }
 
-    if (this._selectedStaging != null) {  
-      buffer.writeAll(["\"selectedStaging\":", this._selectedStaging, ","], "");
+    if (this.selectedStaging != null) {  
+      buffer.writeAll(["\"selectedStaging\":", this.selectedStaging, ","], "");
     }
 
-    if (this._state != null) {  
-      buffer.writeAll(["\"state\":\`", this._state, "\`,"], "");
+    if (this.state != null) {  
+      buffer.writeAll(["\"state\":\`", this.state, "\`,"], "");
     }
 
-    if (this._touched != null) {  
-      buffer.writeAll(["\"touched\":", this._touched, ","], "");
+    if (this.touched != null) {  
+      buffer.writeAll(["\"touched\":", this.touched, ","], "");
     }
 
     // NOTE: skip serialization of a11yProxyElement (type ProxyElement is ignored)} 
 
-    if (this._hasMockGraphic != null) {  
-      buffer.writeAll(["\"hasMockGraphic\":", this._hasMockGraphic, ","], "");
+    if (this.hasMockGraphic != null) {  
+      buffer.writeAll(["\"hasMockGraphic\":", this.hasMockGraphic, ","], "");
     }
 
-    if (this._borderColor != null) {  
-      buffer.writeAll(["\"borderColor\":\`", this._borderColor, "\`,"], "");
+    if (this.borderColor != null) {  
+      buffer.writeAll(["\"borderColor\":\`", this.borderColor, "\`,"], "");
     }
 
-    if (this._crosshairPos != null) {  
-      buffer.writeAll(["\"crosshairPos\":", this._crosshairPos, ","], "");
+    if (this.crosshairPos != null) {  
+      buffer.writeAll(["\"crosshairPos\":", this.crosshairPos, ","], "");
     }
 
-    if (this._axisXpos != null) {  
-      buffer.writeAll(["\"axisXpos\":", this._axisXpos, ","], "");
+    if (this.axisXpos != null) {  
+      buffer.writeAll(["\"axisXpos\":", this.axisXpos, ","], "");
     }
 
-    if (this._axisYpos != null) {  
-      buffer.writeAll(["\"axisYpos\":", this._axisYpos, ","], "");
+    if (this.axisYpos != null) {  
+      buffer.writeAll(["\"axisYpos\":", this.axisYpos, ","], "");
     }
 
-    if (this._axisZpos != null) {  
-      buffer.writeAll(["\"axisZpos\":", this._axisZpos, ","], "");
+    if (this.axisZpos != null) {  
+      buffer.writeAll(["\"axisZpos\":", this.axisZpos, ","], "");
     }
 
     // NOTE: skip serialization of tooltipDateKeys (type string[] is ignored)} 
 
-    if (this._plotZ != null) {  
-      buffer.writeAll(["\"plotZ\":", this._plotZ, ","], "");
+    if (this.plotZ != null) {  
+      buffer.writeAll(["\"plotZ\":", this.plotZ, ","], "");
     }
 
-    if (this._z != null) {  
-      buffer.writeAll(["\"z\":", this._z, ","], "");
+    if (this.z != null) {  
+      buffer.writeAll(["\"z\":", this.z, ","], "");
     }
 
-    if (this._isCliff != null) {  
-      buffer.writeAll(["\"isCliff\":", this._isCliff, ","], "");
+    if (this.isCliff != null) {  
+      buffer.writeAll(["\"isCliff\":", this.isCliff, ","], "");
     }
 
-    if (this._lat != null) {  
-      buffer.writeAll(["\"lat\":", this._lat, ","], "");
+    if (this.lat != null) {  
+      buffer.writeAll(["\"lat\":", this.lat, ","], "");
     }
 
-    if (this._lon != null) {  
-      buffer.writeAll(["\"lon\":", this._lon, ","], "");
+    if (this.lon != null) {  
+      buffer.writeAll(["\"lon\":", this.lon, ","], "");
     }
 
     // NOTE: skip serialization of dataGroup (type DataGroupingInfoObject is ignored)} 
 
-    if (this._plotHigh != null) {  
-      buffer.writeAll(["\"plotHigh\":", this._plotHigh, ","], "");
+    if (this.plotHigh != null) {  
+      buffer.writeAll(["\"plotHigh\":", this.plotHigh, ","], "");
     }
 
-    if (this._plotLow != null) {  
-      buffer.writeAll(["\"plotLow\":", this._plotLow, ","], "");
+    if (this.plotLow != null) {  
+      buffer.writeAll(["\"plotLow\":", this.plotLow, ","], "");
     }
 
-    if (this._drilldown != null) {  
-      buffer.writeAll(["\"drilldown\":\`", this._drilldown, "\`,"], "");
+    if (this.drilldown != null) {  
+      buffer.writeAll(["\"drilldown\":\`", this.drilldown, "\`,"], "");
     }
 
     // NOTE: skip serialization of unbindDrilldownClick (type Function is ignored)} 
 
-    if (this._isCluster != null) {  
-      buffer.writeAll(["\"isCluster\":", this._isCluster, ","], "");
+    if (this.isCluster != null) {  
+      buffer.writeAll(["\"isCluster\":", this.isCluster, ","], "");
     }
 
     // NOTE: skip serialization of clusteredData (type MarkerClusterSplitDataObject[] is ignored)} 
 
-    if (this._clusterPointsAmount != null) {  
-      buffer.writeAll(["\"clusterPointsAmount\":", this._clusterPointsAmount, ","], "");
+    if (this.clusterPointsAmount != null) {  
+      buffer.writeAll(["\"clusterPointsAmount\":", this.clusterPointsAmount, ","], "");
     }
 
-    if (this._height != null) {  
-      buffer.writeAll(["\"height\":", this._height, ","], "");
+    if (this.height != null) {  
+      buffer.writeAll(["\"height\":", this.height, ","], "");
     }
 
-    if (this._outside3dPlot != null) {  
-      buffer.writeAll(["\"outside3dPlot\":", this._outside3dPlot, ","], "");
+    if (this.outside3dPlot != null) {  
+      buffer.writeAll(["\"outside3dPlot\":", this.outside3dPlot, ","], "");
     }
 
-    if (this._shapey != null) {  
-      buffer.writeAll(["\"shapey\":", this._shapey, ","], "");
+    if (this.shapey != null) {  
+      buffer.writeAll(["\"shapey\":", this.shapey, ","], "");
     }
 
     // NOTE: skip serialization of plot3d (type Position3DObject is ignored)} 
 
-    if (this._change != null) {  
-      buffer.writeAll(["\"change\":", this._change, ","], "");
+    if (this.change != null) {  
+      buffer.writeAll(["\"change\":", this.change, ","], "");
     }
 
-    if (this._cumulativeSum != null) {  
-      buffer.writeAll(["\"cumulativeSum\":", this._cumulativeSum, ","], "");
+    if (this.cumulativeSum != null) {  
+      buffer.writeAll(["\"cumulativeSum\":", this.cumulativeSum, ","], "");
     }
 
-    if (this._dispX != null) {  
-      buffer.writeAll(["\"dispX\":", this._dispX, ","], "");
+    if (this.dispX != null) {  
+      buffer.writeAll(["\"dispX\":", this.dispX, ","], "");
     }
 
-    if (this._dispY != null) {  
-      buffer.writeAll(["\"dispY\":", this._dispY, ","], "");
+    if (this.dispY != null) {  
+      buffer.writeAll(["\"dispY\":", this.dispY, ","], "");
     }
 
     // NOTE: skip serialization of fromNode (type Point is ignored)} 
@@ -1142,42 +1271,42 @@ class PointLike extends OptionFragment {
 
     // NOTE: skip serialization of linksTo (type Point[] is ignored)} 
 
-    if (this._mass != null) {  
-      buffer.writeAll(["\"mass\":", this._mass, ","], "");
+    if (this.mass != null) {  
+      buffer.writeAll(["\"mass\":", this.mass, ","], "");
     }
 
-    if (this._prevX != null) {  
-      buffer.writeAll(["\"prevX\":", this._prevX, ","], "");
+    if (this.prevX != null) {  
+      buffer.writeAll(["\"prevX\":", this.prevX, ","], "");
     }
 
-    if (this._prevY != null) {  
-      buffer.writeAll(["\"prevY\":", this._prevY, ","], "");
+    if (this.prevY != null) {  
+      buffer.writeAll(["\"prevY\":", this.prevY, ","], "");
     }
 
     // NOTE: skip serialization of toNode (type Point is ignored)} 
 
-    if (this._degree != null) {  
-      buffer.writeAll(["\"degree\":", this._degree, ","], "");
+    if (this.degree != null) {  
+      buffer.writeAll(["\"degree\":", this.degree, ","], "");
     }
 
-    if (this._temperature != null) {  
-      buffer.writeAll(["\"temperature\":", this._temperature, ","], "");
+    if (this.temperature != null) {  
+      buffer.writeAll(["\"temperature\":", this.temperature, ","], "");
     }
 
-    if (this._rectPlotX != null) {  
-      buffer.writeAll(["\"rectPlotX\":", this._rectPlotX, ","], "");
+    if (this.rectPlotX != null) {  
+      buffer.writeAll(["\"rectPlotX\":", this.rectPlotX, ","], "");
     }
 
-    if (this._rectPlotY != null) {  
-      buffer.writeAll(["\"rectPlotY\":", this._rectPlotY, ","], "");
+    if (this.rectPlotY != null) {  
+      buffer.writeAll(["\"rectPlotY\":", this.rectPlotY, ","], "");
     }
 
-    if (this._ttBelow != null) {  
-      buffer.writeAll(["\"ttBelow\":", this._ttBelow, ","], "");
+    if (this.ttBelow != null) {  
+      buffer.writeAll(["\"ttBelow\":", this.ttBelow, ","], "");
     }
 
-    if (this._crosshairWidth != null) {  
-      buffer.writeAll(["\"crosshairWidth\":", this._crosshairWidth, ","], "");
+    if (this.crosshairWidth != null) {  
+      buffer.writeAll(["\"crosshairWidth\":", this.crosshairWidth, ","], "");
     }
   }
 

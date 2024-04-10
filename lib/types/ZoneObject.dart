@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -25,9 +25,11 @@ import 'OptionFragment.dart';
  * ZoneObject 
  */
 class ZoneObject extends SeriesZonesOptions {
-  ZoneObject() : super();
-  double? _translated;  
-
+  ZoneObject( {
+    this.translated = null
+  }) : super();
+  double? translated;
+    /*
   double get translated { 
     if (this._translated == null) {
       this._translated = 0;
@@ -38,6 +40,7 @@ class ZoneObject extends SeriesZonesOptions {
   void set translated (double v) {
     this._translated = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -57,8 +60,8 @@ class ZoneObject extends SeriesZonesOptions {
 
     // NOTE: skip serialization of simpleClip (type SVGElement is ignored)} 
 
-    if (this._translated != null) {  
-      buffer.writeAll(["\"translated\":", this._translated, ","], "");
+    if (this.translated != null) {  
+      buffer.writeAll(["\"translated\":", this.translated, ","], "");
     }
   }
 

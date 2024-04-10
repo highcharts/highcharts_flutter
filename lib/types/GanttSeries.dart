@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,11 @@ import 'OptionFragment.dart';
  * GanttSeries 
  */
 class GanttSeries extends OptionFragment {
-  GanttSeries() : super();
-  bool? _keyboardMoveVertical;  
-
+  GanttSeries( {
+    this.keyboardMoveVertical = null
+  }) : super();
+  bool? keyboardMoveVertical;
+    /*
   bool get keyboardMoveVertical { 
     if (this._keyboardMoveVertical == null) {
       this._keyboardMoveVertical = false;
@@ -35,6 +37,7 @@ class GanttSeries extends OptionFragment {
   void set keyboardMoveVertical (bool v) {
     this._keyboardMoveVertical = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -44,8 +47,8 @@ class GanttSeries extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._keyboardMoveVertical != null) {  
-      buffer.writeAll(["\"keyboardMoveVertical\":", this._keyboardMoveVertical, ","], "");
+    if (this.keyboardMoveVertical != null) {  
+      buffer.writeAll(["\"keyboardMoveVertical\":", this.keyboardMoveVertical, ","], "");
     }
 
     // NOTE: skip serialization of pointClass (type typeof GanttPoint is ignored)} 

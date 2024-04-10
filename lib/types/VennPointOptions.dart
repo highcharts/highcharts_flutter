@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,12 @@ import 'OptionFragment.dart';
  * VennPointOptions 
  */
 class VennPointOptions extends ScatterPointOptions {
-  VennPointOptions() : super();
-  String? _name;  
-
+  VennPointOptions( {
+    this.name = null,
+    this.value = null
+  }) : super();
+  String? name;
+    /*
   String get name { 
     if (this._name == null) {
       this._name = "";
@@ -36,9 +39,10 @@ class VennPointOptions extends ScatterPointOptions {
   void set name (String v) {
     this._name = v;
   }
+    */
     
-  double? _value;  
-
+  double? value;
+    /*
   double get value { 
     if (this._value == null) {
       this._value = 0;
@@ -49,6 +53,7 @@ class VennPointOptions extends ScatterPointOptions {
   void set value (double v) {
     this._value = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -58,14 +63,14 @@ class VennPointOptions extends ScatterPointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._name != null) {  
-      buffer.writeAll(["\"name\":\`", this._name, "\`,"], "");
+    if (this.name != null) {  
+      buffer.writeAll(["\"name\":\`", this.name, "\`,"], "");
     }
 
     // NOTE: skip serialization of sets (type string[] is ignored)} 
 
-    if (this._value != null) {  
-      buffer.writeAll(["\"value\":", this._value, ","], "");
+    if (this.value != null) {  
+      buffer.writeAll(["\"value\":", this.value, ","], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,13 @@ import 'OptionFragment.dart';
  * ChangedEvent 
  */
 class ChangedEvent extends OptionFragment {
-  ChangedEvent() : super();
-  double? _from;  
-
+  ChangedEvent( {
+    this.from = null,
+    this.to = null,
+    this.DOMType = null
+  }) : super();
+  double? from;
+    /*
   double get from { 
     if (this._from == null) {
       this._from = 0;
@@ -36,9 +40,10 @@ class ChangedEvent extends OptionFragment {
   void set from (double v) {
     this._from = v;
   }
+    */
     
-  double? _to;  
-
+  double? to;
+    /*
   double get to { 
     if (this._to == null) {
       this._to = 0;
@@ -49,9 +54,10 @@ class ChangedEvent extends OptionFragment {
   void set to (double v) {
     this._to = v;
   }
+    */
     
-  String? _DOMType;  
-
+  String? DOMType;
+    /*
   String get DOMType { 
     if (this._DOMType == null) {
       this._DOMType = "";
@@ -62,6 +68,7 @@ class ChangedEvent extends OptionFragment {
   void set DOMType (String v) {
     this._DOMType = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -71,18 +78,18 @@ class ChangedEvent extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._from != null) {  
-      buffer.writeAll(["\"from\":", this._from, ","], "");
+    if (this.from != null) {  
+      buffer.writeAll(["\"from\":", this.from, ","], "");
     }
 
-    if (this._to != null) {  
-      buffer.writeAll(["\"to\":", this._to, ","], "");
+    if (this.to != null) {  
+      buffer.writeAll(["\"to\":", this.to, ","], "");
     }
 
     // NOTE: skip serialization of trigger (type "scrollbar" is ignored)} 
 
-    if (this._DOMType != null) {  
-      buffer.writeAll(["\"DOMType\":\`", this._DOMType, "\`,"], "");
+    if (this.DOMType != null) {  
+      buffer.writeAll(["\"DOMType\":\`", this.DOMType, "\`,"], "");
     }
 
     // NOTE: skip serialization of DOMEvent (type Event is ignored)} 

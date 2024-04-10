@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -24,9 +24,13 @@ import 'OptionFragment.dart';
  * LoadEvent 
  */
 class LoadEvent extends Event {
-  LoadEvent() : super();
-  String? _type;  
-
+  LoadEvent( {
+    this.type = null,
+    this.csv = null,
+    this.url = null
+  }) : super();
+  String? type;
+    /*
   String get type { 
     if (this._type == null) {
       this._type = "";
@@ -37,9 +41,10 @@ class LoadEvent extends Event {
   void set type (String v) {
     this._type = v;
   }
+    */
     
-  String? _csv;  
-
+  String? csv;
+    /*
   String get csv { 
     if (this._csv == null) {
       this._csv = "";
@@ -50,9 +55,10 @@ class LoadEvent extends Event {
   void set csv (String v) {
     this._csv = v;
   }
+    */
     
-  String? _url;  
-
+  String? url;
+    /*
   String get url { 
     if (this._url == null) {
       this._url = "";
@@ -63,6 +69,7 @@ class LoadEvent extends Event {
   void set url (String v) {
     this._url = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -72,16 +79,16 @@ class LoadEvent extends Event {
     super.toJSONInner(buffer);
 
     
-    if (this._type != null) {  
-      buffer.writeAll(["\"type\":\`", this._type, "\`,"], "");
+    if (this.type != null) {  
+      buffer.writeAll(["\"type\":\`", this.type, "\`,"], "");
     }
 
-    if (this._csv != null) {  
-      buffer.writeAll(["\"csv\":\`", this._csv, "\`,"], "");
+    if (this.csv != null) {  
+      buffer.writeAll(["\"csv\":\`", this.csv, "\`,"], "");
     }
 
-    if (this._url != null) {  
-      buffer.writeAll(["\"url\":\`", this._url, "\`,"], "");
+    if (this.url != null) {  
+      buffer.writeAll(["\"url\":\`", this.url, "\`,"], "");
     }
 
     // NOTE: skip serialization of tableElement (type HTMLElement is ignored)} 

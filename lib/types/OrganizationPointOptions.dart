@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -24,9 +24,15 @@ import 'OptionFragment.dart';
  * OrganizationPointOptions 
  */
 class OrganizationPointOptions extends SankeyPointOptions {
-  OrganizationPointOptions() : super();
-  String? _linkColor;  
-
+  OrganizationPointOptions( {
+    this.linkColor = null,
+    this.linkOpacity = null,
+    this.linkLineWidth = null,
+    this.borderRadius = null,
+    this.offset = null
+  }) : super();
+  String? linkColor;
+    /*
   String get linkColor { 
     if (this._linkColor == null) {
       this._linkColor = "";
@@ -37,9 +43,10 @@ class OrganizationPointOptions extends SankeyPointOptions {
   void set linkColor (String v) {
     this._linkColor = v;
   }
+    */
     
-  double? _linkOpacity;  
-
+  double? linkOpacity;
+    /*
   double get linkOpacity { 
     if (this._linkOpacity == null) {
       this._linkOpacity = 0;
@@ -50,9 +57,10 @@ class OrganizationPointOptions extends SankeyPointOptions {
   void set linkOpacity (double v) {
     this._linkOpacity = v;
   }
+    */
     
-  double? _linkLineWidth;  
-
+  double? linkLineWidth;
+    /*
   double get linkLineWidth { 
     if (this._linkLineWidth == null) {
       this._linkLineWidth = 0;
@@ -63,9 +71,10 @@ class OrganizationPointOptions extends SankeyPointOptions {
   void set linkLineWidth (double v) {
     this._linkLineWidth = v;
   }
+    */
     
-  double? _borderRadius;  
-
+  double? borderRadius;
+    /*
   double get borderRadius { 
     if (this._borderRadius == null) {
       this._borderRadius = 0;
@@ -76,9 +85,10 @@ class OrganizationPointOptions extends SankeyPointOptions {
   void set borderRadius (double v) {
     this._borderRadius = v;
   }
+    */
     
-  String? _offset;  
-
+  String? offset;
+    /*
   String get offset { 
     if (this._offset == null) {
       this._offset = "";
@@ -89,6 +99,7 @@ class OrganizationPointOptions extends SankeyPointOptions {
   void set offset (String v) {
     this._offset = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -98,28 +109,28 @@ class OrganizationPointOptions extends SankeyPointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._linkColor != null) {  
-      buffer.writeAll(["\"linkColor\":\`", this._linkColor, "\`,"], "");
+    if (this.linkColor != null) {  
+      buffer.writeAll(["\"linkColor\":\`", this.linkColor, "\`,"], "");
     }
 
-    if (this._linkOpacity != null) {  
-      buffer.writeAll(["\"linkOpacity\":", this._linkOpacity, ","], "");
+    if (this.linkOpacity != null) {  
+      buffer.writeAll(["\"linkOpacity\":", this.linkOpacity, ","], "");
     }
 
-    if (this._linkLineWidth != null) {  
-      buffer.writeAll(["\"linkLineWidth\":", this._linkLineWidth, ","], "");
+    if (this.linkLineWidth != null) {  
+      buffer.writeAll(["\"linkLineWidth\":", this.linkLineWidth, ","], "");
     }
 
     // NOTE: skip serialization of link (type OrganizationLinkOptions is ignored)} 
 
-    if (this._borderRadius != null) {  
-      buffer.writeAll(["\"borderRadius\":", this._borderRadius, ","], "");
+    if (this.borderRadius != null) {  
+      buffer.writeAll(["\"borderRadius\":", this.borderRadius, ","], "");
     }
 
     // NOTE: skip serialization of dataLabels (type OrganizationDataLabelOptions[] is ignored)} 
 
-    if (this._offset != null) {  
-      buffer.writeAll(["\"offset\":\`", this._offset, "\`,"], "");
+    if (this.offset != null) {  
+      buffer.writeAll(["\"offset\":\`", this.offset, "\`,"], "");
     }
   }
 

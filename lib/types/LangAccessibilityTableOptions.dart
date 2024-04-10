@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,12 @@ import 'OptionFragment.dart';
  * LangAccessibilityTableOptions 
  */
 class LangAccessibilityTableOptions extends OptionFragment {
-  LangAccessibilityTableOptions() : super();
-  String? _tableSummary;  
-
+  LangAccessibilityTableOptions( {
+    this.tableSummary = null,
+    this.viewAsDataTableButtonText = null
+  }) : super();
+  String? tableSummary;
+    /*
   String get tableSummary { 
     if (this._tableSummary == null) {
       this._tableSummary = "";
@@ -35,9 +38,10 @@ class LangAccessibilityTableOptions extends OptionFragment {
   void set tableSummary (String v) {
     this._tableSummary = v;
   }
+    */
     
-  String? _viewAsDataTableButtonText;  
-
+  String? viewAsDataTableButtonText;
+    /*
   String get viewAsDataTableButtonText { 
     if (this._viewAsDataTableButtonText == null) {
       this._viewAsDataTableButtonText = "";
@@ -48,6 +52,7 @@ class LangAccessibilityTableOptions extends OptionFragment {
   void set viewAsDataTableButtonText (String v) {
     this._viewAsDataTableButtonText = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -57,12 +62,12 @@ class LangAccessibilityTableOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._tableSummary != null) {  
-      buffer.writeAll(["\"tableSummary\":\`", this._tableSummary, "\`,"], "");
+    if (this.tableSummary != null) {  
+      buffer.writeAll(["\"tableSummary\":\`", this.tableSummary, "\`,"], "");
     }
 
-    if (this._viewAsDataTableButtonText != null) {  
-      buffer.writeAll(["\"viewAsDataTableButtonText\":\`", this._viewAsDataTableButtonText, "\`,"], "");
+    if (this.viewAsDataTableButtonText != null) {  
+      buffer.writeAll(["\"viewAsDataTableButtonText\":\`", this.viewAsDataTableButtonText, "\`,"], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,16 @@ import 'OptionFragment.dart';
  * OrganizationLinkOptions 
  */
 class OrganizationLinkOptions extends OptionFragment {
-  OrganizationLinkOptions() : super();
-  double? _linkOpacity;  
-
+  OrganizationLinkOptions( {
+    this.linkOpacity = null,
+    this.curveFactor = null,
+    this.color = null,
+    this.lineWidth = null,
+    this.type = null,
+    this.radius = null
+  }) : super();
+  double? linkOpacity;
+    /*
   double get linkOpacity { 
     if (this._linkOpacity == null) {
       this._linkOpacity = 0;
@@ -35,9 +42,10 @@ class OrganizationLinkOptions extends OptionFragment {
   void set linkOpacity (double v) {
     this._linkOpacity = v;
   }
+    */
     
-  double? _curveFactor;  
-
+  double? curveFactor;
+    /*
   double get curveFactor { 
     if (this._curveFactor == null) {
       this._curveFactor = 0;
@@ -48,9 +56,10 @@ class OrganizationLinkOptions extends OptionFragment {
   void set curveFactor (double v) {
     this._curveFactor = v;
   }
+    */
     
-  String? _color;  
-
+  String? color;
+    /*
   String get color { 
     if (this._color == null) {
       this._color = "";
@@ -61,9 +70,10 @@ class OrganizationLinkOptions extends OptionFragment {
   void set color (String v) {
     this._color = v;
   }
+    */
     
-  double? _lineWidth;  
-
+  double? lineWidth;
+    /*
   double get lineWidth { 
     if (this._lineWidth == null) {
       this._lineWidth = 0;
@@ -74,9 +84,10 @@ class OrganizationLinkOptions extends OptionFragment {
   void set lineWidth (double v) {
     this._lineWidth = v;
   }
+    */
     
-  String? _type;  
-
+  String? type;
+    /*
   String get type { 
     if (this._type == null) {
       this._type = "";
@@ -87,9 +98,10 @@ class OrganizationLinkOptions extends OptionFragment {
   void set type (String v) {
     this._type = v;
   }
+    */
     
-  double? _radius;  
-
+  double? radius;
+    /*
   double get radius { 
     if (this._radius == null) {
       this._radius = 0;
@@ -100,6 +112,7 @@ class OrganizationLinkOptions extends OptionFragment {
   void set radius (double v) {
     this._radius = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -109,28 +122,28 @@ class OrganizationLinkOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._linkOpacity != null) {  
-      buffer.writeAll(["\"linkOpacity\":", this._linkOpacity, ","], "");
+    if (this.linkOpacity != null) {  
+      buffer.writeAll(["\"linkOpacity\":", this.linkOpacity, ","], "");
     }
 
-    if (this._curveFactor != null) {  
-      buffer.writeAll(["\"curveFactor\":", this._curveFactor, ","], "");
+    if (this.curveFactor != null) {  
+      buffer.writeAll(["\"curveFactor\":", this.curveFactor, ","], "");
     }
 
-    if (this._color != null) {  
-      buffer.writeAll(["\"color\":\`", this._color, "\`,"], "");
+    if (this.color != null) {  
+      buffer.writeAll(["\"color\":\`", this.color, "\`,"], "");
     }
 
-    if (this._lineWidth != null) {  
-      buffer.writeAll(["\"lineWidth\":", this._lineWidth, ","], "");
+    if (this.lineWidth != null) {  
+      buffer.writeAll(["\"lineWidth\":", this.lineWidth, ","], "");
     }
 
-    if (this._type != null) {  
-      buffer.writeAll(["\"type\":\`", this._type, "\`,"], "");
+    if (this.type != null) {  
+      buffer.writeAll(["\"type\":\`", this.type, "\`,"], "");
     }
 
-    if (this._radius != null) {  
-      buffer.writeAll(["\"radius\":", this._radius, ","], "");
+    if (this.radius != null) {  
+      buffer.writeAll(["\"radius\":", this.radius, ","], "");
     }
   }
 

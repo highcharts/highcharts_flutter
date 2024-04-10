@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -25,7 +25,7 @@ import 'OptionFragment.dart';
  * Axis3DOptions 
  */
 class Axis3DOptions extends AxisOptions {
-  Axis3DOptions() : super();
+  Axis3DOptions( ) : super();
   
 
   //////////////////////////////////////////////////////////////////////////////

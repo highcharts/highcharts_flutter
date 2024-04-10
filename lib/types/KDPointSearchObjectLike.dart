@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,15 @@ import 'OptionFragment.dart';
  * KDPointSearchObjectLike 
  */
 class KDPointSearchObjectLike extends OptionFragment {
-  KDPointSearchObjectLike() : super();
-  double? _clientX;  
-
+  KDPointSearchObjectLike( {
+    this.clientX = null,
+    this.plotY = null,
+    this.lat = null,
+    this.lon = null,
+    this.plotX = null
+  }) : super();
+  double? clientX;
+    /*
   double get clientX { 
     if (this._clientX == null) {
       this._clientX = 0;
@@ -35,9 +41,10 @@ class KDPointSearchObjectLike extends OptionFragment {
   void set clientX (double v) {
     this._clientX = v;
   }
+    */
     
-  double? _plotY;  
-
+  double? plotY;
+    /*
   double get plotY { 
     if (this._plotY == null) {
       this._plotY = 0;
@@ -48,9 +55,10 @@ class KDPointSearchObjectLike extends OptionFragment {
   void set plotY (double v) {
     this._plotY = v;
   }
+    */
     
-  double? _lat;  
-
+  double? lat;
+    /*
   double get lat { 
     if (this._lat == null) {
       this._lat = 0;
@@ -61,9 +69,10 @@ class KDPointSearchObjectLike extends OptionFragment {
   void set lat (double v) {
     this._lat = v;
   }
+    */
     
-  double? _lon;  
-
+  double? lon;
+    /*
   double get lon { 
     if (this._lon == null) {
       this._lon = 0;
@@ -74,9 +83,10 @@ class KDPointSearchObjectLike extends OptionFragment {
   void set lon (double v) {
     this._lon = v;
   }
+    */
     
-  double? _plotX;  
-
+  double? plotX;
+    /*
   double get plotX { 
     if (this._plotX == null) {
       this._plotX = 0;
@@ -87,6 +97,7 @@ class KDPointSearchObjectLike extends OptionFragment {
   void set plotX (double v) {
     this._plotX = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -96,28 +107,28 @@ class KDPointSearchObjectLike extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._clientX != null) {  
-      buffer.writeAll(["\"clientX\":", this._clientX, ","], "");
+    if (this.clientX != null) {  
+      buffer.writeAll(["\"clientX\":", this.clientX, ","], "");
     }
 
-    if (this._plotY != null) {  
-      buffer.writeAll(["\"plotY\":", this._plotY, ","], "");
+    if (this.plotY != null) {  
+      buffer.writeAll(["\"plotY\":", this.plotY, ","], "");
     }
 
-    if (this._lat != null) {  
-      buffer.writeAll(["\"lat\":", this._lat, ","], "");
+    if (this.lat != null) {  
+      buffer.writeAll(["\"lat\":", this.lat, ","], "");
     }
 
-    if (this._lon != null) {  
-      buffer.writeAll(["\"lon\":", this._lon, ","], "");
+    if (this.lon != null) {  
+      buffer.writeAll(["\"lon\":", this.lon, ","], "");
     }
 
-    if (this._plotX != null) {  
-      buffer.writeAll(["\"plotX\":", this._plotX, ","], "");
+    if (this.plotX != null) {  
+      buffer.writeAll(["\"plotX\":", this.plotX, ","], "");
     }
 
-    if (this._plotY != null) {  
-      buffer.writeAll(["\"plotY\":", this._plotY, ","], "");
+    if (this.plotY != null) {  
+      buffer.writeAll(["\"plotY\":", this.plotY, ","], "");
     }
   }
 

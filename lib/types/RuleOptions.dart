@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -24,9 +24,9 @@ import 'OptionFragment.dart';
  * RuleOptions 
  */
 class RuleOptions extends OptionFragment {
-  RuleOptions() : super();
-  String? _p_id;  
-
+  RuleOptions( ) : super();
+  String? p_id;
+    /*
   String get p_id { 
     if (this._p_id == null) {
       this._p_id = "";
@@ -37,6 +37,7 @@ class RuleOptions extends OptionFragment {
   void set p_id (String v) {
     this._p_id = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -46,8 +47,8 @@ class RuleOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._p_id != null) {  
-      buffer.writeAll(["\"_id\":\`", this._p_id, "\`,"], "");
+    if (this.p_id != null) {  
+      buffer.writeAll(["\"_id\":\`", this.p_id, "\`,"], "");
     }
 
     // NOTE: skip serialization of chartOptions (type Options is ignored)} 

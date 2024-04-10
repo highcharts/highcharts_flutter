@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,12 @@ import 'OptionFragment.dart';
  * SeriesBuilderReaderObject 
  */
 class SeriesBuilderReaderObject extends OptionFragment {
-  SeriesBuilderReaderObject() : super();
-  double? _columnIndex;  
-
+  SeriesBuilderReaderObject( {
+    this.columnIndex = null,
+    this.configName = null
+  }) : super();
+  double? columnIndex;
+    /*
   double get columnIndex { 
     if (this._columnIndex == null) {
       this._columnIndex = 0;
@@ -35,9 +38,10 @@ class SeriesBuilderReaderObject extends OptionFragment {
   void set columnIndex (double v) {
     this._columnIndex = v;
   }
+    */
     
-  String? _configName;  
-
+  String? configName;
+    /*
   String get configName { 
     if (this._configName == null) {
       this._configName = "";
@@ -48,6 +52,7 @@ class SeriesBuilderReaderObject extends OptionFragment {
   void set configName (String v) {
     this._configName = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -57,12 +62,12 @@ class SeriesBuilderReaderObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._columnIndex != null) {  
-      buffer.writeAll(["\"columnIndex\":", this._columnIndex, ","], "");
+    if (this.columnIndex != null) {  
+      buffer.writeAll(["\"columnIndex\":", this.columnIndex, ","], "");
     }
 
-    if (this._configName != null) {  
-      buffer.writeAll(["\"configName\":\`", this._configName, "\`,"], "");
+    if (this.configName != null) {  
+      buffer.writeAll(["\"configName\":\`", this.configName, "\`,"], "");
     }
   }
 

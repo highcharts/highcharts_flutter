@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -24,7 +24,16 @@ import 'OptionFragment.dart';
  * BubbleSeriesOptions 
  */
 class BubbleSeriesOptions extends ScatterSeriesOptions {
-  BubbleSeriesOptions() : super();
+  BubbleSeriesOptions( {
+    this.displayNegative = null,
+    this.minSize = null,
+    this.maxSize = null,
+    this.sizeBy = null,
+    this.sizeByAbsoluteValue = null,
+    this.zMax = null,
+    this.zMin = null,
+    this.zThreshold = null
+  }) : super();
   /**
    * Whether to display negative sized bubbles. The threshold is given
    * by the [zThreshold](#plotOptions.bubble.zThreshold) option, and negative
@@ -33,8 +42,8 @@ class BubbleSeriesOptions extends ScatterSeriesOptions {
    * 
    * Defaults to 'true'. 
       */
-  bool? _displayNegative;  
-
+  bool? displayNegative;
+    /*
   bool get displayNegative { 
     if (this._displayNegative == null) {
       this._displayNegative = false;
@@ -45,6 +54,7 @@ class BubbleSeriesOptions extends ScatterSeriesOptions {
   void set displayNegative (bool v) {
     this._displayNegative = v;
   }
+    */
     
   /**
    * Options for the point markers of line and scatter-like series. Properties
@@ -66,8 +76,8 @@ class BubbleSeriesOptions extends ScatterSeriesOptions {
    * 
    * Defaults to '8'. 
       */
-  String? _minSize;  
-
+  String? minSize;
+    /*
   String get minSize { 
     if (this._minSize == null) {
       this._minSize = "";
@@ -78,6 +88,7 @@ class BubbleSeriesOptions extends ScatterSeriesOptions {
   void set minSize (String v) {
     this._minSize = v;
   }
+    */
     
   /**
    * Maximum bubble size. Bubbles will automatically size between the
@@ -87,8 +98,8 @@ class BubbleSeriesOptions extends ScatterSeriesOptions {
    * 
    * Defaults to '20%'. 
       */
-  String? _maxSize;  
-
+  String? maxSize;
+    /*
   String get maxSize { 
     if (this._maxSize == null) {
       this._maxSize = "";
@@ -99,6 +110,7 @@ class BubbleSeriesOptions extends ScatterSeriesOptions {
   void set maxSize (String v) {
     this._maxSize = v;
   }
+    */
     
   /**
    * Whether the bubble's value should be represented by the area or the
@@ -107,8 +119,8 @@ class BubbleSeriesOptions extends ScatterSeriesOptions {
    * 
    * Defaults to 'area'. 
       */
-  String? _sizeBy;  
-
+  String? sizeBy;
+    /*
   String get sizeBy { 
     if (this._sizeBy == null) {
       this._sizeBy = "";
@@ -119,6 +131,7 @@ class BubbleSeriesOptions extends ScatterSeriesOptions {
   void set sizeBy (String v) {
     this._sizeBy = v;
   }
+    */
     
   /**
    * When this is true, the absolute value of z determines the size of
@@ -129,8 +142,8 @@ class BubbleSeriesOptions extends ScatterSeriesOptions {
    * 
    * Defaults to 'false'. 
       */
-  bool? _sizeByAbsoluteValue;  
-
+  bool? sizeByAbsoluteValue;
+    /*
   bool get sizeByAbsoluteValue { 
     if (this._sizeByAbsoluteValue == null) {
       this._sizeByAbsoluteValue = false;
@@ -141,13 +154,14 @@ class BubbleSeriesOptions extends ScatterSeriesOptions {
   void set sizeByAbsoluteValue (bool v) {
     this._sizeByAbsoluteValue = v;
   }
+    */
     
   /**
    * The minimum for the Z value range. Defaults to the highest Z value
    * in the data.  
       */
-  double? _zMax;  
-
+  double? zMax;
+    /*
   double get zMax { 
     if (this._zMax == null) {
       this._zMax = 0;
@@ -158,13 +172,14 @@ class BubbleSeriesOptions extends ScatterSeriesOptions {
   void set zMax (double v) {
     this._zMax = v;
   }
+    */
     
   /**
    * The minimum for the Z value range. Defaults to the lowest Z value
    * in the data.  
       */
-  double? _zMin;  
-
+  double? zMin;
+    /*
   double get zMin { 
     if (this._zMin == null) {
       this._zMin = 0;
@@ -175,6 +190,7 @@ class BubbleSeriesOptions extends ScatterSeriesOptions {
   void set zMin (double v) {
     this._zMin = v;
   }
+    */
     
   /**
    * When [displayNegative](#plotOptions.bubble.displayNegative) is `false`,
@@ -182,8 +198,8 @@ class BubbleSeriesOptions extends ScatterSeriesOptions {
    * is `true` and a [negativeColor](#plotOptions.bubble.negativeColor)
    * is given, points with lower Z is colored.  
       */
-  double? _zThreshold;  
-
+  double? zThreshold;
+    /*
   double get zThreshold { 
     if (this._zThreshold == null) {
       this._zThreshold = 0;
@@ -194,6 +210,7 @@ class BubbleSeriesOptions extends ScatterSeriesOptions {
   void set zThreshold (double v) {
     this._zThreshold = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -203,38 +220,38 @@ class BubbleSeriesOptions extends ScatterSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._displayNegative != null) {  
-      buffer.writeAll(["\"displayNegative\":", this._displayNegative, ","], "");
+    if (this.displayNegative != null) {  
+      buffer.writeAll(["\"displayNegative\":", this.displayNegative, ","], "");
     }
 
     // NOTE: skip serialization of marker (type BubblePointMarkerOptions is ignored)} 
 
-    if (this._minSize != null) {  
-      buffer.writeAll(["\"minSize\":\`", this._minSize, "\`,"], "");
+    if (this.minSize != null) {  
+      buffer.writeAll(["\"minSize\":\`", this.minSize, "\`,"], "");
     }
 
-    if (this._maxSize != null) {  
-      buffer.writeAll(["\"maxSize\":\`", this._maxSize, "\`,"], "");
+    if (this.maxSize != null) {  
+      buffer.writeAll(["\"maxSize\":\`", this.maxSize, "\`,"], "");
     }
 
-    if (this._sizeBy != null) {  
-      buffer.writeAll(["\"sizeBy\":\`", this._sizeBy, "\`,"], "");
+    if (this.sizeBy != null) {  
+      buffer.writeAll(["\"sizeBy\":\`", this.sizeBy, "\`,"], "");
     }
 
-    if (this._sizeByAbsoluteValue != null) {  
-      buffer.writeAll(["\"sizeByAbsoluteValue\":", this._sizeByAbsoluteValue, ","], "");
+    if (this.sizeByAbsoluteValue != null) {  
+      buffer.writeAll(["\"sizeByAbsoluteValue\":", this.sizeByAbsoluteValue, ","], "");
     }
 
-    if (this._zMax != null) {  
-      buffer.writeAll(["\"zMax\":", this._zMax, ","], "");
+    if (this.zMax != null) {  
+      buffer.writeAll(["\"zMax\":", this.zMax, ","], "");
     }
 
-    if (this._zMin != null) {  
-      buffer.writeAll(["\"zMin\":", this._zMin, ","], "");
+    if (this.zMin != null) {  
+      buffer.writeAll(["\"zMin\":", this.zMin, ","], "");
     }
 
-    if (this._zThreshold != null) {  
-      buffer.writeAll(["\"zThreshold\":", this._zThreshold, ","], "");
+    if (this.zThreshold != null) {  
+      buffer.writeAll(["\"zThreshold\":", this.zThreshold, ","], "");
     }
   }
 

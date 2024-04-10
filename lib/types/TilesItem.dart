@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,14 @@ import 'OptionFragment.dart';
  * TilesItem 
  */
 class TilesItem extends OptionFragment {
-  TilesItem() : super();
-  bool? _isActive;  
-
+  TilesItem( {
+    this.isActive = null,
+    this.howManyTiles = null,
+    this.actualTilesCount = null,
+    this.loaded = null
+  }) : super();
+  bool? isActive;
+    /*
   bool get isActive { 
     if (this._isActive == null) {
       this._isActive = false;
@@ -35,9 +40,10 @@ class TilesItem extends OptionFragment {
   void set isActive (bool v) {
     this._isActive = v;
   }
+    */
     
-  double? _howManyTiles;  
-
+  double? howManyTiles;
+    /*
   double get howManyTiles { 
     if (this._howManyTiles == null) {
       this._howManyTiles = 0;
@@ -48,9 +54,10 @@ class TilesItem extends OptionFragment {
   void set howManyTiles (double v) {
     this._howManyTiles = v;
   }
+    */
     
-  double? _actualTilesCount;  
-
+  double? actualTilesCount;
+    /*
   double get actualTilesCount { 
     if (this._actualTilesCount == null) {
       this._actualTilesCount = 0;
@@ -61,9 +68,10 @@ class TilesItem extends OptionFragment {
   void set actualTilesCount (double v) {
     this._actualTilesCount = v;
   }
+    */
     
-  bool? _loaded;  
-
+  bool? loaded;
+    /*
   bool get loaded { 
     if (this._loaded == null) {
       this._loaded = false;
@@ -74,6 +82,7 @@ class TilesItem extends OptionFragment {
   void set loaded (bool v) {
     this._loaded = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -85,20 +94,20 @@ class TilesItem extends OptionFragment {
     
     // NOTE: skip serialization of tiles (type Generic is ignored)} 
 
-    if (this._isActive != null) {  
-      buffer.writeAll(["\"isActive\":", this._isActive, ","], "");
+    if (this.isActive != null) {  
+      buffer.writeAll(["\"isActive\":", this.isActive, ","], "");
     }
 
-    if (this._howManyTiles != null) {  
-      buffer.writeAll(["\"howManyTiles\":", this._howManyTiles, ","], "");
+    if (this.howManyTiles != null) {  
+      buffer.writeAll(["\"howManyTiles\":", this.howManyTiles, ","], "");
     }
 
-    if (this._actualTilesCount != null) {  
-      buffer.writeAll(["\"actualTilesCount\":", this._actualTilesCount, ","], "");
+    if (this.actualTilesCount != null) {  
+      buffer.writeAll(["\"actualTilesCount\":", this.actualTilesCount, ","], "");
     }
 
-    if (this._loaded != null) {  
-      buffer.writeAll(["\"loaded\":", this._loaded, ","], "");
+    if (this.loaded != null) {  
+      buffer.writeAll(["\"loaded\":", this.loaded, ","], "");
     }
   }
 

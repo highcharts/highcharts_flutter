@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -24,9 +24,16 @@ import 'OptionFragment.dart';
  * WGLOptions 
  */
 class WGLOptions extends BoostOptions {
-  WGLOptions() : super();
-  String? _fillColor;  
-
+  WGLOptions( {
+    this.fillColor = null,
+    this.lineWidth = null,
+    this.pointSize = null,
+    this.useAlpha = null,
+    this.useGPUTranslations = null,
+    this.usePreallocated = null
+  }) : super();
+  String? fillColor;
+    /*
   String get fillColor { 
     if (this._fillColor == null) {
       this._fillColor = "";
@@ -37,9 +44,10 @@ class WGLOptions extends BoostOptions {
   void set fillColor (String v) {
     this._fillColor = v;
   }
+    */
     
-  double? _lineWidth;  
-
+  double? lineWidth;
+    /*
   double get lineWidth { 
     if (this._lineWidth == null) {
       this._lineWidth = 0;
@@ -50,9 +58,10 @@ class WGLOptions extends BoostOptions {
   void set lineWidth (double v) {
     this._lineWidth = v;
   }
+    */
     
-  double? _pointSize;  
-
+  double? pointSize;
+    /*
   double get pointSize { 
     if (this._pointSize == null) {
       this._pointSize = 0;
@@ -63,9 +72,10 @@ class WGLOptions extends BoostOptions {
   void set pointSize (double v) {
     this._pointSize = v;
   }
+    */
     
-  bool? _useAlpha;  
-
+  bool? useAlpha;
+    /*
   bool get useAlpha { 
     if (this._useAlpha == null) {
       this._useAlpha = false;
@@ -76,9 +86,10 @@ class WGLOptions extends BoostOptions {
   void set useAlpha (bool v) {
     this._useAlpha = v;
   }
+    */
     
-  bool? _useGPUTranslations;  
-
+  bool? useGPUTranslations;
+    /*
   bool get useGPUTranslations { 
     if (this._useGPUTranslations == null) {
       this._useGPUTranslations = false;
@@ -89,9 +100,10 @@ class WGLOptions extends BoostOptions {
   void set useGPUTranslations (bool v) {
     this._useGPUTranslations = v;
   }
+    */
     
-  bool? _usePreallocated;  
-
+  bool? usePreallocated;
+    /*
   bool get usePreallocated { 
     if (this._usePreallocated == null) {
       this._usePreallocated = false;
@@ -102,6 +114,7 @@ class WGLOptions extends BoostOptions {
   void set usePreallocated (bool v) {
     this._usePreallocated = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -113,28 +126,28 @@ class WGLOptions extends BoostOptions {
     
     // NOTE: skip serialization of debug (type WGLDebugOptions is ignored)} 
 
-    if (this._fillColor != null) {  
-      buffer.writeAll(["\"fillColor\":\`", this._fillColor, "\`,"], "");
+    if (this.fillColor != null) {  
+      buffer.writeAll(["\"fillColor\":\`", this.fillColor, "\`,"], "");
     }
 
-    if (this._lineWidth != null) {  
-      buffer.writeAll(["\"lineWidth\":", this._lineWidth, ","], "");
+    if (this.lineWidth != null) {  
+      buffer.writeAll(["\"lineWidth\":", this.lineWidth, ","], "");
     }
 
-    if (this._pointSize != null) {  
-      buffer.writeAll(["\"pointSize\":", this._pointSize, ","], "");
+    if (this.pointSize != null) {  
+      buffer.writeAll(["\"pointSize\":", this.pointSize, ","], "");
     }
 
-    if (this._useAlpha != null) {  
-      buffer.writeAll(["\"useAlpha\":", this._useAlpha, ","], "");
+    if (this.useAlpha != null) {  
+      buffer.writeAll(["\"useAlpha\":", this.useAlpha, ","], "");
     }
 
-    if (this._useGPUTranslations != null) {  
-      buffer.writeAll(["\"useGPUTranslations\":", this._useGPUTranslations, ","], "");
+    if (this.useGPUTranslations != null) {  
+      buffer.writeAll(["\"useGPUTranslations\":", this.useGPUTranslations, ","], "");
     }
 
-    if (this._usePreallocated != null) {  
-      buffer.writeAll(["\"usePreallocated\":", this._usePreallocated, ","], "");
+    if (this.usePreallocated != null) {  
+      buffer.writeAll(["\"usePreallocated\":", this.usePreallocated, ","], "");
     }
   }
 

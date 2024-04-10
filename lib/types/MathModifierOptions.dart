@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,11 @@ import 'OptionFragment.dart';
  * MathModifierOptions 
  */
 class MathModifierOptions extends DataModifierOptions {
-  MathModifierOptions() : super();
-  bool? _alternativeSeparators;  
-
+  MathModifierOptions( {
+    this.alternativeSeparators = null
+  }) : super();
+  bool? alternativeSeparators;
+    /*
   bool get alternativeSeparators { 
     if (this._alternativeSeparators == null) {
       this._alternativeSeparators = false;
@@ -36,6 +38,7 @@ class MathModifierOptions extends DataModifierOptions {
   void set alternativeSeparators (bool v) {
     this._alternativeSeparators = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -47,8 +50,8 @@ class MathModifierOptions extends DataModifierOptions {
     
     // NOTE: skip serialization of type (type "Math" is ignored)} 
 
-    if (this._alternativeSeparators != null) {  
-      buffer.writeAll(["\"alternativeSeparators\":", this._alternativeSeparators, ","], "");
+    if (this.alternativeSeparators != null) {  
+      buffer.writeAll(["\"alternativeSeparators\":", this.alternativeSeparators, ","], "");
     }
 
     // NOTE: skip serialization of columnFormulas (type MathModifierColumnFormulaOptions[] is ignored)} 

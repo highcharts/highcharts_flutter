@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,30 @@ import 'OptionFragment.dart';
  * ExportingButtonOptions 
  */
 class ExportingButtonOptions extends OptionFragment {
-  ExportingButtonOptions() : super();
-  String? _p_titleKey;  
-
+  ExportingButtonOptions( {
+    this.align = null,
+    this.buttonSpacing = null,
+    this.className = null,
+    this.enabled = null,
+    this.height = null,
+    this.menuClassName = null,
+    this.symbol = null,
+    this.symbolFill = null,
+    this.symbolSize = null,
+    this.symbolStroke = null,
+    this.symbolStrokeWidth = null,
+    this.symbolX = null,
+    this.symbolY = null,
+    this.text = null,
+    this.titleKey = null,
+    this.useHTML = null,
+    this.verticalAlign = null,
+    this.width = null,
+    this.x = null,
+    this.y = null
+  }) : super();
+  String? p_titleKey;
+    /*
   String get p_titleKey { 
     if (this._p_titleKey == null) {
       this._p_titleKey = "";
@@ -36,9 +57,10 @@ class ExportingButtonOptions extends OptionFragment {
   void set p_titleKey (String v) {
     this._p_titleKey = v;
   }
+    */
     
-  String? _align;  
-
+  String? align;
+    /*
   String get align { 
     if (this._align == null) {
       this._align = "";
@@ -49,9 +71,10 @@ class ExportingButtonOptions extends OptionFragment {
   void set align (String v) {
     this._align = v;
   }
+    */
     
-  double? _buttonSpacing;  
-
+  double? buttonSpacing;
+    /*
   double get buttonSpacing { 
     if (this._buttonSpacing == null) {
       this._buttonSpacing = 0;
@@ -62,9 +85,10 @@ class ExportingButtonOptions extends OptionFragment {
   void set buttonSpacing (double v) {
     this._buttonSpacing = v;
   }
+    */
     
-  String? _className;  
-
+  String? className;
+    /*
   String get className { 
     if (this._className == null) {
       this._className = "";
@@ -75,9 +99,10 @@ class ExportingButtonOptions extends OptionFragment {
   void set className (String v) {
     this._className = v;
   }
+    */
     
-  bool? _enabled;  
-
+  bool? enabled;
+    /*
   bool get enabled { 
     if (this._enabled == null) {
       this._enabled = false;
@@ -88,9 +113,10 @@ class ExportingButtonOptions extends OptionFragment {
   void set enabled (bool v) {
     this._enabled = v;
   }
+    */
     
-  double? _height;  
-
+  double? height;
+    /*
   double get height { 
     if (this._height == null) {
       this._height = 0;
@@ -101,9 +127,10 @@ class ExportingButtonOptions extends OptionFragment {
   void set height (double v) {
     this._height = v;
   }
+    */
     
-  String? _menuClassName;  
-
+  String? menuClassName;
+    /*
   String get menuClassName { 
     if (this._menuClassName == null) {
       this._menuClassName = "";
@@ -114,9 +141,10 @@ class ExportingButtonOptions extends OptionFragment {
   void set menuClassName (String v) {
     this._menuClassName = v;
   }
+    */
     
-  String? _symbol;  
-
+  String? symbol;
+    /*
   String get symbol { 
     if (this._symbol == null) {
       this._symbol = "";
@@ -127,9 +155,10 @@ class ExportingButtonOptions extends OptionFragment {
   void set symbol (String v) {
     this._symbol = v;
   }
+    */
     
-  String? _symbolFill;  
-
+  String? symbolFill;
+    /*
   String get symbolFill { 
     if (this._symbolFill == null) {
       this._symbolFill = "";
@@ -140,9 +169,10 @@ class ExportingButtonOptions extends OptionFragment {
   void set symbolFill (String v) {
     this._symbolFill = v;
   }
+    */
     
-  double? _symbolSize;  
-
+  double? symbolSize;
+    /*
   double get symbolSize { 
     if (this._symbolSize == null) {
       this._symbolSize = 0;
@@ -153,9 +183,10 @@ class ExportingButtonOptions extends OptionFragment {
   void set symbolSize (double v) {
     this._symbolSize = v;
   }
+    */
     
-  String? _symbolStroke;  
-
+  String? symbolStroke;
+    /*
   String get symbolStroke { 
     if (this._symbolStroke == null) {
       this._symbolStroke = "";
@@ -166,9 +197,10 @@ class ExportingButtonOptions extends OptionFragment {
   void set symbolStroke (String v) {
     this._symbolStroke = v;
   }
+    */
     
-  double? _symbolStrokeWidth;  
-
+  double? symbolStrokeWidth;
+    /*
   double get symbolStrokeWidth { 
     if (this._symbolStrokeWidth == null) {
       this._symbolStrokeWidth = 0;
@@ -179,9 +211,10 @@ class ExportingButtonOptions extends OptionFragment {
   void set symbolStrokeWidth (double v) {
     this._symbolStrokeWidth = v;
   }
+    */
     
-  double? _symbolX;  
-
+  double? symbolX;
+    /*
   double get symbolX { 
     if (this._symbolX == null) {
       this._symbolX = 0;
@@ -192,9 +225,10 @@ class ExportingButtonOptions extends OptionFragment {
   void set symbolX (double v) {
     this._symbolX = v;
   }
+    */
     
-  double? _symbolY;  
-
+  double? symbolY;
+    /*
   double get symbolY { 
     if (this._symbolY == null) {
       this._symbolY = 0;
@@ -205,9 +239,10 @@ class ExportingButtonOptions extends OptionFragment {
   void set symbolY (double v) {
     this._symbolY = v;
   }
+    */
     
-  String? _text;  
-
+  String? text;
+    /*
   String get text { 
     if (this._text == null) {
       this._text = "";
@@ -218,9 +253,10 @@ class ExportingButtonOptions extends OptionFragment {
   void set text (String v) {
     this._text = v;
   }
+    */
     
-  String? _titleKey;  
-
+  String? titleKey;
+    /*
   String get titleKey { 
     if (this._titleKey == null) {
       this._titleKey = "";
@@ -231,9 +267,10 @@ class ExportingButtonOptions extends OptionFragment {
   void set titleKey (String v) {
     this._titleKey = v;
   }
+    */
     
-  bool? _useHTML;  
-
+  bool? useHTML;
+    /*
   bool get useHTML { 
     if (this._useHTML == null) {
       this._useHTML = false;
@@ -244,9 +281,10 @@ class ExportingButtonOptions extends OptionFragment {
   void set useHTML (bool v) {
     this._useHTML = v;
   }
+    */
     
-  String? _verticalAlign;  
-
+  String? verticalAlign;
+    /*
   String get verticalAlign { 
     if (this._verticalAlign == null) {
       this._verticalAlign = "";
@@ -257,9 +295,10 @@ class ExportingButtonOptions extends OptionFragment {
   void set verticalAlign (String v) {
     this._verticalAlign = v;
   }
+    */
     
-  double? _width;  
-
+  double? width;
+    /*
   double get width { 
     if (this._width == null) {
       this._width = 0;
@@ -270,9 +309,10 @@ class ExportingButtonOptions extends OptionFragment {
   void set width (double v) {
     this._width = v;
   }
+    */
     
-  double? _x;  
-
+  double? x;
+    /*
   double get x { 
     if (this._x == null) {
       this._x = 0;
@@ -283,9 +323,10 @@ class ExportingButtonOptions extends OptionFragment {
   void set x (double v) {
     this._x = v;
   }
+    */
     
-  double? _y;  
-
+  double? y;
+    /*
   double get y { 
     if (this._y == null) {
       this._y = 0;
@@ -296,6 +337,7 @@ class ExportingButtonOptions extends OptionFragment {
   void set y (double v) {
     this._y = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -305,94 +347,94 @@ class ExportingButtonOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._p_titleKey != null) {  
-      buffer.writeAll(["\"_titleKey\":\`", this._p_titleKey, "\`,"], "");
+    if (this.p_titleKey != null) {  
+      buffer.writeAll(["\"_titleKey\":\`", this.p_titleKey, "\`,"], "");
     }
 
-    if (this._align != null) {  
-      buffer.writeAll(["\"align\":\`", this._align, "\`,"], "");
+    if (this.align != null) {  
+      buffer.writeAll(["\"align\":\`", this.align, "\`,"], "");
     }
 
-    if (this._buttonSpacing != null) {  
-      buffer.writeAll(["\"buttonSpacing\":", this._buttonSpacing, ","], "");
+    if (this.buttonSpacing != null) {  
+      buffer.writeAll(["\"buttonSpacing\":", this.buttonSpacing, ","], "");
     }
 
-    if (this._className != null) {  
-      buffer.writeAll(["\"className\":\`", this._className, "\`,"], "");
+    if (this.className != null) {  
+      buffer.writeAll(["\"className\":\`", this.className, "\`,"], "");
     }
 
-    if (this._enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this._enabled, ","], "");
+    if (this.enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
     }
 
-    if (this._height != null) {  
-      buffer.writeAll(["\"height\":", this._height, ","], "");
+    if (this.height != null) {  
+      buffer.writeAll(["\"height\":", this.height, ","], "");
     }
 
-    if (this._menuClassName != null) {  
-      buffer.writeAll(["\"menuClassName\":\`", this._menuClassName, "\`,"], "");
+    if (this.menuClassName != null) {  
+      buffer.writeAll(["\"menuClassName\":\`", this.menuClassName, "\`,"], "");
     }
 
     // NOTE: skip serialization of menuItems (type string[] is ignored)} 
 
     // NOTE: skip serialization of onclick (type Function is ignored)} 
 
-    if (this._symbol != null) {  
-      buffer.writeAll(["\"symbol\":\`", this._symbol, "\`,"], "");
+    if (this.symbol != null) {  
+      buffer.writeAll(["\"symbol\":\`", this.symbol, "\`,"], "");
     }
 
-    if (this._symbolFill != null) {  
-      buffer.writeAll(["\"symbolFill\":\`", this._symbolFill, "\`,"], "");
+    if (this.symbolFill != null) {  
+      buffer.writeAll(["\"symbolFill\":\`", this.symbolFill, "\`,"], "");
     }
 
-    if (this._symbolSize != null) {  
-      buffer.writeAll(["\"symbolSize\":", this._symbolSize, ","], "");
+    if (this.symbolSize != null) {  
+      buffer.writeAll(["\"symbolSize\":", this.symbolSize, ","], "");
     }
 
-    if (this._symbolStroke != null) {  
-      buffer.writeAll(["\"symbolStroke\":\`", this._symbolStroke, "\`,"], "");
+    if (this.symbolStroke != null) {  
+      buffer.writeAll(["\"symbolStroke\":\`", this.symbolStroke, "\`,"], "");
     }
 
-    if (this._symbolStrokeWidth != null) {  
-      buffer.writeAll(["\"symbolStrokeWidth\":", this._symbolStrokeWidth, ","], "");
+    if (this.symbolStrokeWidth != null) {  
+      buffer.writeAll(["\"symbolStrokeWidth\":", this.symbolStrokeWidth, ","], "");
     }
 
-    if (this._symbolX != null) {  
-      buffer.writeAll(["\"symbolX\":", this._symbolX, ","], "");
+    if (this.symbolX != null) {  
+      buffer.writeAll(["\"symbolX\":", this.symbolX, ","], "");
     }
 
-    if (this._symbolY != null) {  
-      buffer.writeAll(["\"symbolY\":", this._symbolY, ","], "");
+    if (this.symbolY != null) {  
+      buffer.writeAll(["\"symbolY\":", this.symbolY, ","], "");
     }
 
-    if (this._text != null) {  
-      buffer.writeAll(["\"text\":\`", this._text, "\`,"], "");
+    if (this.text != null) {  
+      buffer.writeAll(["\"text\":\`", this.text, "\`,"], "");
     }
 
     // NOTE: skip serialization of theme (type ButtonThemeObject is ignored)} 
 
-    if (this._titleKey != null) {  
-      buffer.writeAll(["\"titleKey\":\`", this._titleKey, "\`,"], "");
+    if (this.titleKey != null) {  
+      buffer.writeAll(["\"titleKey\":\`", this.titleKey, "\`,"], "");
     }
 
-    if (this._useHTML != null) {  
-      buffer.writeAll(["\"useHTML\":", this._useHTML, ","], "");
+    if (this.useHTML != null) {  
+      buffer.writeAll(["\"useHTML\":", this.useHTML, ","], "");
     }
 
-    if (this._verticalAlign != null) {  
-      buffer.writeAll(["\"verticalAlign\":\`", this._verticalAlign, "\`,"], "");
+    if (this.verticalAlign != null) {  
+      buffer.writeAll(["\"verticalAlign\":\`", this.verticalAlign, "\`,"], "");
     }
 
-    if (this._width != null) {  
-      buffer.writeAll(["\"width\":", this._width, ","], "");
+    if (this.width != null) {  
+      buffer.writeAll(["\"width\":", this.width, ","], "");
     }
 
-    if (this._x != null) {  
-      buffer.writeAll(["\"x\":", this._x, ","], "");
+    if (this.x != null) {  
+      buffer.writeAll(["\"x\":", this.x, ","], "");
     }
 
-    if (this._y != null) {  
-      buffer.writeAll(["\"y\":", this._y, ","], "");
+    if (this.y != null) {  
+      buffer.writeAll(["\"y\":", this.y, ","], "");
     }
   }
 

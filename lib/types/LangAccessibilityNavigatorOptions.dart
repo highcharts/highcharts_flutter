@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,13 @@ import 'OptionFragment.dart';
  * LangAccessibilityNavigatorOptions 
  */
 class LangAccessibilityNavigatorOptions extends OptionFragment {
-  LangAccessibilityNavigatorOptions() : super();
-  String? _handleLabel;  
-
+  LangAccessibilityNavigatorOptions( {
+    this.handleLabel = null,
+    this.groupLabel = null,
+    this.changeAnnouncement = null
+  }) : super();
+  String? handleLabel;
+    /*
   String get handleLabel { 
     if (this._handleLabel == null) {
       this._handleLabel = "";
@@ -35,9 +39,10 @@ class LangAccessibilityNavigatorOptions extends OptionFragment {
   void set handleLabel (String v) {
     this._handleLabel = v;
   }
+    */
     
-  String? _groupLabel;  
-
+  String? groupLabel;
+    /*
   String get groupLabel { 
     if (this._groupLabel == null) {
       this._groupLabel = "";
@@ -48,9 +53,10 @@ class LangAccessibilityNavigatorOptions extends OptionFragment {
   void set groupLabel (String v) {
     this._groupLabel = v;
   }
+    */
     
-  String? _changeAnnouncement;  
-
+  String? changeAnnouncement;
+    /*
   String get changeAnnouncement { 
     if (this._changeAnnouncement == null) {
       this._changeAnnouncement = "";
@@ -61,6 +67,7 @@ class LangAccessibilityNavigatorOptions extends OptionFragment {
   void set changeAnnouncement (String v) {
     this._changeAnnouncement = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -70,16 +77,16 @@ class LangAccessibilityNavigatorOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._handleLabel != null) {  
-      buffer.writeAll(["\"handleLabel\":\`", this._handleLabel, "\`,"], "");
+    if (this.handleLabel != null) {  
+      buffer.writeAll(["\"handleLabel\":\`", this.handleLabel, "\`,"], "");
     }
 
-    if (this._groupLabel != null) {  
-      buffer.writeAll(["\"groupLabel\":\`", this._groupLabel, "\`,"], "");
+    if (this.groupLabel != null) {  
+      buffer.writeAll(["\"groupLabel\":\`", this.groupLabel, "\`,"], "");
     }
 
-    if (this._changeAnnouncement != null) {  
-      buffer.writeAll(["\"changeAnnouncement\":\`", this._changeAnnouncement, "\`,"], "");
+    if (this.changeAnnouncement != null) {  
+      buffer.writeAll(["\"changeAnnouncement\":\`", this.changeAnnouncement, "\`,"], "");
     }
   }
 

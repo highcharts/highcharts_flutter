@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -24,15 +24,19 @@ import 'OptionFragment.dart';
  * ItemSeriesOptions 
  */
 class ItemSeriesOptions extends PieSeriesOptions {
-  ItemSeriesOptions() : super();
+  ItemSeriesOptions( {
+    this.itemPadding = null,
+    this.layout = null,
+    this.rows = null
+  }) : super();
   /**
    * The padding between the items, given in relative size where the size
    * of the item is 1. 
    * 
    * Defaults to '0.1'. 
       */
-  double? _itemPadding;  
-
+  double? itemPadding;
+    /*
   double get itemPadding { 
     if (this._itemPadding == null) {
       this._itemPadding = 0;
@@ -43,6 +47,7 @@ class ItemSeriesOptions extends PieSeriesOptions {
   void set itemPadding (double v) {
     this._itemPadding = v;
   }
+    */
     
   /**
    * The layout of the items in rectangular view. Can be either
@@ -50,8 +55,8 @@ class ItemSeriesOptions extends PieSeriesOptions {
    * 
    * Defaults to 'vertical'. 
       */
-  String? _layout;  
-
+  String? layout;
+    /*
   String get layout { 
     if (this._layout == null) {
       this._layout = "";
@@ -62,6 +67,7 @@ class ItemSeriesOptions extends PieSeriesOptions {
   void set layout (String v) {
     this._layout = v;
   }
+    */
     
   /**
    * Options for the point markers of line and scatter-like series. Properties
@@ -79,8 +85,8 @@ class ItemSeriesOptions extends PieSeriesOptions {
    * The number of rows to display in the rectangular or circular view. If
    * the `innerSize` is set, it will be overridden by the `rows` setting.  
       */
-  double? _rows;  
-
+  double? rows;
+    /*
   double get rows { 
     if (this._rows == null) {
       this._rows = 0;
@@ -91,6 +97,7 @@ class ItemSeriesOptions extends PieSeriesOptions {
   void set rows (double v) {
     this._rows = v;
   }
+    */
     
   // NOTE: states skipped - type Generic is ignored in gen
 
@@ -102,18 +109,18 @@ class ItemSeriesOptions extends PieSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._itemPadding != null) {  
-      buffer.writeAll(["\"itemPadding\":", this._itemPadding, ","], "");
+    if (this.itemPadding != null) {  
+      buffer.writeAll(["\"itemPadding\":", this.itemPadding, ","], "");
     }
 
-    if (this._layout != null) {  
-      buffer.writeAll(["\"layout\":\`", this._layout, "\`,"], "");
+    if (this.layout != null) {  
+      buffer.writeAll(["\"layout\":\`", this.layout, "\`,"], "");
     }
 
     // NOTE: skip serialization of marker (type ItemPointMarkerOptions is ignored)} 
 
-    if (this._rows != null) {  
-      buffer.writeAll(["\"rows\":", this._rows, ","], "");
+    if (this.rows != null) {  
+      buffer.writeAll(["\"rows\":", this.rows, ","], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 

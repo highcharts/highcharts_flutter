@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,23 @@ import 'OptionFragment.dart';
  * PlotBandOptions 
  */
 class PlotBandOptions extends OptionFragment {
-  PlotBandOptions() : super();
-  bool? _acrossPanes;  
-
+  PlotBandOptions( {
+    this.acrossPanes = null,
+    this.borderColor = null,
+    this.borderWidth = null,
+    this.className = null,
+    this.color = null,
+    this.from = null,
+    this.id = null,
+    this.to = null,
+    this.zIndex = null,
+    this.innerRadius = null,
+    this.outerRadius = null,
+    this.shape = null,
+    this.thickness = null
+  }) : super();
+  bool? acrossPanes;
+    /*
   bool get acrossPanes { 
     if (this._acrossPanes == null) {
       this._acrossPanes = false;
@@ -36,9 +50,10 @@ class PlotBandOptions extends OptionFragment {
   void set acrossPanes (bool v) {
     this._acrossPanes = v;
   }
+    */
     
-  String? _borderColor;  
-
+  String? borderColor;
+    /*
   String get borderColor { 
     if (this._borderColor == null) {
       this._borderColor = "";
@@ -49,9 +64,10 @@ class PlotBandOptions extends OptionFragment {
   void set borderColor (String v) {
     this._borderColor = v;
   }
+    */
     
-  double? _borderWidth;  
-
+  double? borderWidth;
+    /*
   double get borderWidth { 
     if (this._borderWidth == null) {
       this._borderWidth = 0;
@@ -62,9 +78,10 @@ class PlotBandOptions extends OptionFragment {
   void set borderWidth (double v) {
     this._borderWidth = v;
   }
+    */
     
-  String? _className;  
-
+  String? className;
+    /*
   String get className { 
     if (this._className == null) {
       this._className = "";
@@ -75,9 +92,10 @@ class PlotBandOptions extends OptionFragment {
   void set className (String v) {
     this._className = v;
   }
+    */
     
-  String? _color;  
-
+  String? color;
+    /*
   String get color { 
     if (this._color == null) {
       this._color = "";
@@ -88,9 +106,10 @@ class PlotBandOptions extends OptionFragment {
   void set color (String v) {
     this._color = v;
   }
+    */
     
-  double? _from;  
-
+  double? from;
+    /*
   double get from { 
     if (this._from == null) {
       this._from = 0;
@@ -101,9 +120,10 @@ class PlotBandOptions extends OptionFragment {
   void set from (double v) {
     this._from = v;
   }
+    */
     
-  String? _id;  
-
+  String? id;
+    /*
   String get id { 
     if (this._id == null) {
       this._id = "";
@@ -114,9 +134,10 @@ class PlotBandOptions extends OptionFragment {
   void set id (String v) {
     this._id = v;
   }
+    */
     
-  double? _to;  
-
+  double? to;
+    /*
   double get to { 
     if (this._to == null) {
       this._to = 0;
@@ -127,9 +148,10 @@ class PlotBandOptions extends OptionFragment {
   void set to (double v) {
     this._to = v;
   }
+    */
     
-  double? _zIndex;  
-
+  double? zIndex;
+    /*
   double get zIndex { 
     if (this._zIndex == null) {
       this._zIndex = 0;
@@ -140,9 +162,10 @@ class PlotBandOptions extends OptionFragment {
   void set zIndex (double v) {
     this._zIndex = v;
   }
+    */
     
-  String? _innerRadius;  
-
+  String? innerRadius;
+    /*
   String get innerRadius { 
     if (this._innerRadius == null) {
       this._innerRadius = "";
@@ -153,9 +176,10 @@ class PlotBandOptions extends OptionFragment {
   void set innerRadius (String v) {
     this._innerRadius = v;
   }
+    */
     
-  String? _outerRadius;  
-
+  String? outerRadius;
+    /*
   String get outerRadius { 
     if (this._outerRadius == null) {
       this._outerRadius = "";
@@ -166,9 +190,10 @@ class PlotBandOptions extends OptionFragment {
   void set outerRadius (String v) {
     this._outerRadius = v;
   }
+    */
     
-  String? _shape;  
-
+  String? shape;
+    /*
   String get shape { 
     if (this._shape == null) {
       this._shape = "";
@@ -179,9 +204,10 @@ class PlotBandOptions extends OptionFragment {
   void set shape (String v) {
     this._shape = v;
   }
+    */
     
-  String? _thickness;  
-
+  String? thickness;
+    /*
   String get thickness { 
     if (this._thickness == null) {
       this._thickness = "";
@@ -192,6 +218,7 @@ class PlotBandOptions extends OptionFragment {
   void set thickness (String v) {
     this._thickness = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -201,60 +228,60 @@ class PlotBandOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._acrossPanes != null) {  
-      buffer.writeAll(["\"acrossPanes\":", this._acrossPanes, ","], "");
+    if (this.acrossPanes != null) {  
+      buffer.writeAll(["\"acrossPanes\":", this.acrossPanes, ","], "");
     }
 
-    if (this._borderColor != null) {  
-      buffer.writeAll(["\"borderColor\":\`", this._borderColor, "\`,"], "");
+    if (this.borderColor != null) {  
+      buffer.writeAll(["\"borderColor\":\`", this.borderColor, "\`,"], "");
     }
 
-    if (this._borderWidth != null) {  
-      buffer.writeAll(["\"borderWidth\":", this._borderWidth, ","], "");
+    if (this.borderWidth != null) {  
+      buffer.writeAll(["\"borderWidth\":", this.borderWidth, ","], "");
     }
 
-    if (this._className != null) {  
-      buffer.writeAll(["\"className\":\`", this._className, "\`,"], "");
+    if (this.className != null) {  
+      buffer.writeAll(["\"className\":\`", this.className, "\`,"], "");
     }
 
-    if (this._color != null) {  
-      buffer.writeAll(["\"color\":\`", this._color, "\`,"], "");
+    if (this.color != null) {  
+      buffer.writeAll(["\"color\":\`", this.color, "\`,"], "");
     }
 
     // NOTE: skip serialization of events (type any is ignored)} 
 
-    if (this._from != null) {  
-      buffer.writeAll(["\"from\":", this._from, ","], "");
+    if (this.from != null) {  
+      buffer.writeAll(["\"from\":", this.from, ","], "");
     }
 
-    if (this._id != null) {  
-      buffer.writeAll(["\"id\":\`", this._id, "\`,"], "");
+    if (this.id != null) {  
+      buffer.writeAll(["\"id\":\`", this.id, "\`,"], "");
     }
 
     // NOTE: skip serialization of label (type PlotBandLabelOptions is ignored)} 
 
-    if (this._to != null) {  
-      buffer.writeAll(["\"to\":", this._to, ","], "");
+    if (this.to != null) {  
+      buffer.writeAll(["\"to\":", this.to, ","], "");
     }
 
-    if (this._zIndex != null) {  
-      buffer.writeAll(["\"zIndex\":", this._zIndex, ","], "");
+    if (this.zIndex != null) {  
+      buffer.writeAll(["\"zIndex\":", this.zIndex, ","], "");
     }
 
-    if (this._innerRadius != null) {  
-      buffer.writeAll(["\"innerRadius\":\`", this._innerRadius, "\`,"], "");
+    if (this.innerRadius != null) {  
+      buffer.writeAll(["\"innerRadius\":\`", this.innerRadius, "\`,"], "");
     }
 
-    if (this._outerRadius != null) {  
-      buffer.writeAll(["\"outerRadius\":\`", this._outerRadius, "\`,"], "");
+    if (this.outerRadius != null) {  
+      buffer.writeAll(["\"outerRadius\":\`", this.outerRadius, "\`,"], "");
     }
 
-    if (this._shape != null) {  
-      buffer.writeAll(["\"shape\":\`", this._shape, "\`,"], "");
+    if (this.shape != null) {  
+      buffer.writeAll(["\"shape\":\`", this.shape, "\`,"], "");
     }
 
-    if (this._thickness != null) {  
-      buffer.writeAll(["\"thickness\":\`", this._thickness, "\`,"], "");
+    if (this.thickness != null) {  
+      buffer.writeAll(["\"thickness\":\`", this.thickness, "\`,"], "");
     }
   }
 

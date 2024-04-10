@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,12 @@ import 'OptionFragment.dart';
  * CandlestickPointOptions 
  */
 class CandlestickPointOptions extends OHLCPointOptions {
-  CandlestickPointOptions() : super();
-  String? _lineColor;  
-
+  CandlestickPointOptions( {
+    this.lineColor = null,
+    this.upLineColor = null
+  }) : super();
+  String? lineColor;
+    /*
   String get lineColor { 
     if (this._lineColor == null) {
       this._lineColor = "";
@@ -36,9 +39,10 @@ class CandlestickPointOptions extends OHLCPointOptions {
   void set lineColor (String v) {
     this._lineColor = v;
   }
+    */
     
-  String? _upLineColor;  
-
+  String? upLineColor;
+    /*
   String get upLineColor { 
     if (this._upLineColor == null) {
       this._upLineColor = "";
@@ -49,6 +53,7 @@ class CandlestickPointOptions extends OHLCPointOptions {
   void set upLineColor (String v) {
     this._upLineColor = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -58,12 +63,12 @@ class CandlestickPointOptions extends OHLCPointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._lineColor != null) {  
-      buffer.writeAll(["\"lineColor\":\`", this._lineColor, "\`,"], "");
+    if (this.lineColor != null) {  
+      buffer.writeAll(["\"lineColor\":\`", this.lineColor, "\`,"], "");
     }
 
-    if (this._upLineColor != null) {  
-      buffer.writeAll(["\"upLineColor\":\`", this._upLineColor, "\`,"], "");
+    if (this.upLineColor != null) {  
+      buffer.writeAll(["\"upLineColor\":\`", this.upLineColor, "\`,"], "");
     }
   }
 

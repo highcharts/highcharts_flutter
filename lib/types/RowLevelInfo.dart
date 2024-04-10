@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,11 @@ import 'OptionFragment.dart';
  * RowLevelInfo 
  */
 class RowLevelInfo extends OptionFragment {
-  RowLevelInfo() : super();
-  double? _index;  
-
+  RowLevelInfo( {
+    this.index = null
+  }) : super();
+  double? index;
+    /*
   double get index { 
     if (this._index == null) {
       this._index = 0;
@@ -36,6 +38,7 @@ class RowLevelInfo extends OptionFragment {
   void set index (double v) {
     this._index = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -45,8 +48,8 @@ class RowLevelInfo extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._index != null) {  
-      buffer.writeAll(["\"index\":", this._index, ","], "");
+    if (this.index != null) {  
+      buffer.writeAll(["\"index\":", this.index, ","], "");
     }
 
     // NOTE: skip serialization of rowLevels (type RowLevel[] is ignored)} 

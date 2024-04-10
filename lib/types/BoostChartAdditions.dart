@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -24,9 +24,11 @@ import 'OptionFragment.dart';
  * BoostChartAdditions 
  */
 class BoostChartAdditions extends BoostTargetAdditions {
-  BoostChartAdditions() : super();
-  bool? _forceChartBoost;  
-
+  BoostChartAdditions( {
+    this.forceChartBoost = null
+  }) : super();
+  bool? forceChartBoost;
+    /*
   bool get forceChartBoost { 
     if (this._forceChartBoost == null) {
       this._forceChartBoost = false;
@@ -37,6 +39,7 @@ class BoostChartAdditions extends BoostTargetAdditions {
   void set forceChartBoost (bool v) {
     this._forceChartBoost = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -46,8 +49,8 @@ class BoostChartAdditions extends BoostTargetAdditions {
     super.toJSONInner(buffer);
 
     
-    if (this._forceChartBoost != null) {  
-      buffer.writeAll(["\"forceChartBoost\":", this._forceChartBoost, ","], "");
+    if (this.forceChartBoost != null) {  
+      buffer.writeAll(["\"forceChartBoost\":", this.forceChartBoost, ","], "");
     }
 
     // NOTE: skip serialization of markerGroup (type SVGElement is ignored)} 

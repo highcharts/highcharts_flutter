@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,18 @@ import 'OptionFragment.dart';
  * TreeGridAxisLabelIconOptions 
  */
 class TreeGridAxisLabelIconOptions extends OptionFragment {
-  TreeGridAxisLabelIconOptions() : super();
-  double? _height;  
-
+  TreeGridAxisLabelIconOptions( {
+    this.height = null,
+    this.lineColor = null,
+    this.lineWidth = null,
+    this.padding = null,
+    this.type = null,
+    this.width = null,
+    this.x = null,
+    this.y = null
+  }) : super();
+  double? height;
+    /*
   double get height { 
     if (this._height == null) {
       this._height = 0;
@@ -35,9 +44,10 @@ class TreeGridAxisLabelIconOptions extends OptionFragment {
   void set height (double v) {
     this._height = v;
   }
+    */
     
-  String? _lineColor;  
-
+  String? lineColor;
+    /*
   String get lineColor { 
     if (this._lineColor == null) {
       this._lineColor = "";
@@ -48,9 +58,10 @@ class TreeGridAxisLabelIconOptions extends OptionFragment {
   void set lineColor (String v) {
     this._lineColor = v;
   }
+    */
     
-  double? _lineWidth;  
-
+  double? lineWidth;
+    /*
   double get lineWidth { 
     if (this._lineWidth == null) {
       this._lineWidth = 0;
@@ -61,9 +72,10 @@ class TreeGridAxisLabelIconOptions extends OptionFragment {
   void set lineWidth (double v) {
     this._lineWidth = v;
   }
+    */
     
-  double? _padding;  
-
+  double? padding;
+    /*
   double get padding { 
     if (this._padding == null) {
       this._padding = 0;
@@ -74,9 +86,10 @@ class TreeGridAxisLabelIconOptions extends OptionFragment {
   void set padding (double v) {
     this._padding = v;
   }
+    */
     
-  double? _type;  
-
+  double? type;
+    /*
   double get type { 
     if (this._type == null) {
       this._type = 0;
@@ -87,9 +100,10 @@ class TreeGridAxisLabelIconOptions extends OptionFragment {
   void set type (double v) {
     this._type = v;
   }
+    */
     
-  double? _width;  
-
+  double? width;
+    /*
   double get width { 
     if (this._width == null) {
       this._width = 0;
@@ -100,9 +114,10 @@ class TreeGridAxisLabelIconOptions extends OptionFragment {
   void set width (double v) {
     this._width = v;
   }
+    */
     
-  double? _x;  
-
+  double? x;
+    /*
   double get x { 
     if (this._x == null) {
       this._x = 0;
@@ -113,9 +128,10 @@ class TreeGridAxisLabelIconOptions extends OptionFragment {
   void set x (double v) {
     this._x = v;
   }
+    */
     
-  double? _y;  
-
+  double? y;
+    /*
   double get y { 
     if (this._y == null) {
       this._y = 0;
@@ -126,6 +142,7 @@ class TreeGridAxisLabelIconOptions extends OptionFragment {
   void set y (double v) {
     this._y = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -135,36 +152,36 @@ class TreeGridAxisLabelIconOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._height != null) {  
-      buffer.writeAll(["\"height\":", this._height, ","], "");
+    if (this.height != null) {  
+      buffer.writeAll(["\"height\":", this.height, ","], "");
     }
 
-    if (this._lineColor != null) {  
-      buffer.writeAll(["\"lineColor\":\`", this._lineColor, "\`,"], "");
+    if (this.lineColor != null) {  
+      buffer.writeAll(["\"lineColor\":\`", this.lineColor, "\`,"], "");
     }
 
-    if (this._lineWidth != null) {  
-      buffer.writeAll(["\"lineWidth\":", this._lineWidth, ","], "");
+    if (this.lineWidth != null) {  
+      buffer.writeAll(["\"lineWidth\":", this.lineWidth, ","], "");
     }
 
-    if (this._padding != null) {  
-      buffer.writeAll(["\"padding\":", this._padding, ","], "");
+    if (this.padding != null) {  
+      buffer.writeAll(["\"padding\":", this.padding, ","], "");
     }
 
-    if (this._type != null) {  
-      buffer.writeAll(["\"type\":", this._type, ","], "");
+    if (this.type != null) {  
+      buffer.writeAll(["\"type\":", this.type, ","], "");
     }
 
-    if (this._width != null) {  
-      buffer.writeAll(["\"width\":", this._width, ","], "");
+    if (this.width != null) {  
+      buffer.writeAll(["\"width\":", this.width, ","], "");
     }
 
-    if (this._x != null) {  
-      buffer.writeAll(["\"x\":", this._x, ","], "");
+    if (this.x != null) {  
+      buffer.writeAll(["\"x\":", this.x, ","], "");
     }
 
-    if (this._y != null) {  
-      buffer.writeAll(["\"y\":", this._y, ","], "");
+    if (this.y != null) {  
+      buffer.writeAll(["\"y\":", this.y, ","], "");
     }
   }
 

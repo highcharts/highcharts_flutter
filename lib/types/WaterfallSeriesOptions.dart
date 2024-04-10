@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,7 +23,9 @@ import 'OptionFragment.dart';
  * WaterfallSeriesOptions 
  */
 class WaterfallSeriesOptions extends ColumnSeriesOptions {
-  WaterfallSeriesOptions() : super();
+  WaterfallSeriesOptions( {
+    this.upColor = null
+  }) : super();
   /**
    * The color used specifically for positive point columns. When not
    * specified, the general series color is used.
@@ -32,8 +34,8 @@ class WaterfallSeriesOptions extends ColumnSeriesOptions {
    * `.highcharts-point-negative`, `.highcharts-sum` and
    * `.highcharts-intermediate-sum` classes.  
       */
-  String? _upColor;  
-
+  String? upColor;
+    /*
   String get upColor { 
     if (this._upColor == null) {
       this._upColor = "";
@@ -44,6 +46,7 @@ class WaterfallSeriesOptions extends ColumnSeriesOptions {
   void set upColor (String v) {
     this._upColor = v;
   }
+    */
     
   // NOTE: states skipped - type Generic is ignored in gen
 
@@ -55,8 +58,8 @@ class WaterfallSeriesOptions extends ColumnSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._upColor != null) {  
-      buffer.writeAll(["\"upColor\":\`", this._upColor, "\`,"], "");
+    if (this.upColor != null) {  
+      buffer.writeAll(["\"upColor\":\`", this.upColor, "\`,"], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 

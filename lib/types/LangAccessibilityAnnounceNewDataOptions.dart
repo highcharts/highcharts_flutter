@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,15 @@ import 'OptionFragment.dart';
  * LangAccessibilityAnnounceNewDataOptions 
  */
 class LangAccessibilityAnnounceNewDataOptions extends OptionFragment {
-  LangAccessibilityAnnounceNewDataOptions() : super();
-  String? _newDataAnnounce;  
-
+  LangAccessibilityAnnounceNewDataOptions( {
+    this.newDataAnnounce = null,
+    this.newSeriesAnnounceSingle = null,
+    this.newPointAnnounceSingle = null,
+    this.newSeriesAnnounceMultiple = null,
+    this.newPointAnnounceMultiple = null
+  }) : super();
+  String? newDataAnnounce;
+    /*
   String get newDataAnnounce { 
     if (this._newDataAnnounce == null) {
       this._newDataAnnounce = "";
@@ -35,9 +41,10 @@ class LangAccessibilityAnnounceNewDataOptions extends OptionFragment {
   void set newDataAnnounce (String v) {
     this._newDataAnnounce = v;
   }
+    */
     
-  String? _newSeriesAnnounceSingle;  
-
+  String? newSeriesAnnounceSingle;
+    /*
   String get newSeriesAnnounceSingle { 
     if (this._newSeriesAnnounceSingle == null) {
       this._newSeriesAnnounceSingle = "";
@@ -48,9 +55,10 @@ class LangAccessibilityAnnounceNewDataOptions extends OptionFragment {
   void set newSeriesAnnounceSingle (String v) {
     this._newSeriesAnnounceSingle = v;
   }
+    */
     
-  String? _newPointAnnounceSingle;  
-
+  String? newPointAnnounceSingle;
+    /*
   String get newPointAnnounceSingle { 
     if (this._newPointAnnounceSingle == null) {
       this._newPointAnnounceSingle = "";
@@ -61,9 +69,10 @@ class LangAccessibilityAnnounceNewDataOptions extends OptionFragment {
   void set newPointAnnounceSingle (String v) {
     this._newPointAnnounceSingle = v;
   }
+    */
     
-  String? _newSeriesAnnounceMultiple;  
-
+  String? newSeriesAnnounceMultiple;
+    /*
   String get newSeriesAnnounceMultiple { 
     if (this._newSeriesAnnounceMultiple == null) {
       this._newSeriesAnnounceMultiple = "";
@@ -74,9 +83,10 @@ class LangAccessibilityAnnounceNewDataOptions extends OptionFragment {
   void set newSeriesAnnounceMultiple (String v) {
     this._newSeriesAnnounceMultiple = v;
   }
+    */
     
-  String? _newPointAnnounceMultiple;  
-
+  String? newPointAnnounceMultiple;
+    /*
   String get newPointAnnounceMultiple { 
     if (this._newPointAnnounceMultiple == null) {
       this._newPointAnnounceMultiple = "";
@@ -87,6 +97,7 @@ class LangAccessibilityAnnounceNewDataOptions extends OptionFragment {
   void set newPointAnnounceMultiple (String v) {
     this._newPointAnnounceMultiple = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -96,24 +107,24 @@ class LangAccessibilityAnnounceNewDataOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._newDataAnnounce != null) {  
-      buffer.writeAll(["\"newDataAnnounce\":\`", this._newDataAnnounce, "\`,"], "");
+    if (this.newDataAnnounce != null) {  
+      buffer.writeAll(["\"newDataAnnounce\":\`", this.newDataAnnounce, "\`,"], "");
     }
 
-    if (this._newSeriesAnnounceSingle != null) {  
-      buffer.writeAll(["\"newSeriesAnnounceSingle\":\`", this._newSeriesAnnounceSingle, "\`,"], "");
+    if (this.newSeriesAnnounceSingle != null) {  
+      buffer.writeAll(["\"newSeriesAnnounceSingle\":\`", this.newSeriesAnnounceSingle, "\`,"], "");
     }
 
-    if (this._newPointAnnounceSingle != null) {  
-      buffer.writeAll(["\"newPointAnnounceSingle\":\`", this._newPointAnnounceSingle, "\`,"], "");
+    if (this.newPointAnnounceSingle != null) {  
+      buffer.writeAll(["\"newPointAnnounceSingle\":\`", this.newPointAnnounceSingle, "\`,"], "");
     }
 
-    if (this._newSeriesAnnounceMultiple != null) {  
-      buffer.writeAll(["\"newSeriesAnnounceMultiple\":\`", this._newSeriesAnnounceMultiple, "\`,"], "");
+    if (this.newSeriesAnnounceMultiple != null) {  
+      buffer.writeAll(["\"newSeriesAnnounceMultiple\":\`", this.newSeriesAnnounceMultiple, "\`,"], "");
     }
 
-    if (this._newPointAnnounceMultiple != null) {  
-      buffer.writeAll(["\"newPointAnnounceMultiple\":\`", this._newPointAnnounceMultiple, "\`,"], "");
+    if (this.newPointAnnounceMultiple != null) {  
+      buffer.writeAll(["\"newPointAnnounceMultiple\":\`", this.newPointAnnounceMultiple, "\`,"], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -24,12 +24,12 @@ import 'OptionFragment.dart';
  * BulletSeriesOptions 
  */
 class BulletSeriesOptions extends ColumnSeriesOptions {
-  BulletSeriesOptions() : super();
+  BulletSeriesOptions( ) : super();
   /**
    * All options related with look and positiong of targets.  
       */
-  BulletTargetOptions? _targetOptions;  
-
+  BulletTargetOptions? targetOptions;
+    /*
   BulletTargetOptions get targetOptions { 
     if (this._targetOptions == null) {
       this._targetOptions = BulletTargetOptions();
@@ -40,6 +40,7 @@ class BulletSeriesOptions extends ColumnSeriesOptions {
   void set targetOptions (BulletTargetOptions v) {
     this._targetOptions = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -49,8 +50,8 @@ class BulletSeriesOptions extends ColumnSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._targetOptions != null) {  
-      buffer.writeAll(["\"targetOptions\":", this._targetOptions?.toJSON(), ","], "");
+    if (this.targetOptions != null) {  
+      buffer.writeAll(["\"targetOptions\":", this.targetOptions?.toJSON(), ","], "");
     }
   }
 

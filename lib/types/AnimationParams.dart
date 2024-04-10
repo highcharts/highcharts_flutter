@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -26,9 +26,14 @@ import 'OptionFragment.dart';
  * AnimationParams 
  */
 class AnimationParams extends OptionFragment {
-  AnimationParams() : super();
-  String? _idPreviousRoot;  
-
+  AnimationParams( {
+    this.idPreviousRoot = null,
+    this.idRoot = null,
+    this.innerR = null,
+    this.visible = null
+  }) : super();
+  String? idPreviousRoot;
+    /*
   String get idPreviousRoot { 
     if (this._idPreviousRoot == null) {
       this._idPreviousRoot = "";
@@ -39,9 +44,10 @@ class AnimationParams extends OptionFragment {
   void set idPreviousRoot (String v) {
     this._idPreviousRoot = v;
   }
+    */
     
-  String? _idRoot;  
-
+  String? idRoot;
+    /*
   String get idRoot { 
     if (this._idRoot == null) {
       this._idRoot = "";
@@ -52,9 +58,10 @@ class AnimationParams extends OptionFragment {
   void set idRoot (String v) {
     this._idRoot = v;
   }
+    */
     
-  double? _innerR;  
-
+  double? innerR;
+    /*
   double get innerR { 
     if (this._innerR == null) {
       this._innerR = 0;
@@ -65,9 +72,10 @@ class AnimationParams extends OptionFragment {
   void set innerR (double v) {
     this._innerR = v;
   }
+    */
     
-  bool? _visible;  
-
+  bool? visible;
+    /*
   bool get visible { 
     if (this._visible == null) {
       this._visible = false;
@@ -78,6 +86,7 @@ class AnimationParams extends OptionFragment {
   void set visible (bool v) {
     this._visible = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -89,16 +98,16 @@ class AnimationParams extends OptionFragment {
     
     // NOTE: skip serialization of center (type PositionObject is ignored)} 
 
-    if (this._idPreviousRoot != null) {  
-      buffer.writeAll(["\"idPreviousRoot\":\`", this._idPreviousRoot, "\`,"], "");
+    if (this.idPreviousRoot != null) {  
+      buffer.writeAll(["\"idPreviousRoot\":\`", this.idPreviousRoot, "\`,"], "");
     }
 
-    if (this._idRoot != null) {  
-      buffer.writeAll(["\"idRoot\":\`", this._idRoot, "\`,"], "");
+    if (this.idRoot != null) {  
+      buffer.writeAll(["\"idRoot\":\`", this.idRoot, "\`,"], "");
     }
 
-    if (this._innerR != null) {  
-      buffer.writeAll(["\"innerR\":", this._innerR, ","], "");
+    if (this.innerR != null) {  
+      buffer.writeAll(["\"innerR\":", this.innerR, ","], "");
     }
 
     // NOTE: skip serialization of point (type SunburstPoint is ignored)} 
@@ -111,8 +120,8 @@ class AnimationParams extends OptionFragment {
 
     // NOTE: skip serialization of shapeRoot (type NodeValuesObject is ignored)} 
 
-    if (this._visible != null) {  
-      buffer.writeAll(["\"visible\":", this._visible, ","], "");
+    if (this.visible != null) {  
+      buffer.writeAll(["\"visible\":", this.visible, ","], "");
     }
   }
 

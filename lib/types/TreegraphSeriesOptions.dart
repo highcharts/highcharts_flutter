@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -27,7 +27,12 @@ import 'OptionFragment.dart';
  * TreegraphSeriesOptions 
  */
 class TreegraphSeriesOptions extends TreemapSeriesOptions {
-  TreegraphSeriesOptions() : super();
+  TreegraphSeriesOptions( {
+    this.fillSpace = null,
+    this.nodeDistance = null,
+    this.nodeWidth = null,
+    this.reversed = null
+  }) : super();
   /**
    * Options for the series data labels, appearing next to each data
    * point.
@@ -44,8 +49,8 @@ class TreegraphSeriesOptions extends TreemapSeriesOptions {
    * Options applied to collapse Button. The collape button is the
    * small button which indicates, that the node is collapsable.  
       */
-  CollapseButtonOptions? _collapseButton;  
-
+  CollapseButtonOptions? collapseButton;
+    /*
   CollapseButtonOptions get collapseButton { 
     if (this._collapseButton == null) {
       this._collapseButton = CollapseButtonOptions();
@@ -56,13 +61,14 @@ class TreegraphSeriesOptions extends TreemapSeriesOptions {
   void set collapseButton (CollapseButtonOptions v) {
     this._collapseButton = v;
   }
+    */
     
   /**
    * Whether the treegraph series should fill the entire plot area in the X
    * axis direction, even when there are collapsed points.  
       */
-  bool? _fillSpace;  
-
+  bool? fillSpace;
+    /*
   bool get fillSpace { 
     if (this._fillSpace == null) {
       this._fillSpace = false;
@@ -73,9 +79,10 @@ class TreegraphSeriesOptions extends TreemapSeriesOptions {
   void set fillSpace (bool v) {
     this._fillSpace = v;
   }
+    */
     
-  TreegraphLinkOptions? _link;  
-
+  TreegraphLinkOptions? link;
+    /*
   TreegraphLinkOptions get link { 
     if (this._link == null) {
       this._link = TreegraphLinkOptions();
@@ -86,9 +93,10 @@ class TreegraphSeriesOptions extends TreemapSeriesOptions {
   void set link (TreegraphLinkOptions v) {
     this._link = v;
   }
+    */
     
-  String? _nodeDistance;  
-
+  String? nodeDistance;
+    /*
   String get nodeDistance { 
     if (this._nodeDistance == null) {
       this._nodeDistance = "";
@@ -99,9 +107,10 @@ class TreegraphSeriesOptions extends TreemapSeriesOptions {
   void set nodeDistance (String v) {
     this._nodeDistance = v;
   }
+    */
     
-  String? _nodeWidth;  
-
+  String? nodeWidth;
+    /*
   String get nodeWidth { 
     if (this._nodeWidth == null) {
       this._nodeWidth = "";
@@ -112,6 +121,7 @@ class TreegraphSeriesOptions extends TreemapSeriesOptions {
   void set nodeWidth (String v) {
     this._nodeWidth = v;
   }
+    */
     
   /**
    * Flips the positions of the nodes of a treegraph along the
@@ -119,8 +129,8 @@ class TreegraphSeriesOptions extends TreemapSeriesOptions {
    * 
    * Defaults to 'false'. 
       */
-  bool? _reversed;  
-
+  bool? reversed;
+    /*
   bool get reversed { 
     if (this._reversed == null) {
       this._reversed = false;
@@ -131,6 +141,7 @@ class TreegraphSeriesOptions extends TreemapSeriesOptions {
   void set reversed (bool v) {
     this._reversed = v;
   }
+    */
     
   /**
    * Options for the point markers of line and scatter-like series. Properties
@@ -142,8 +153,8 @@ class TreegraphSeriesOptions extends TreemapSeriesOptions {
    * In styled mode, the markers can be styled with the `.highcharts-point`,
    * `.highcharts-point-hover` and `.highcharts-point-select` class names.  
       */
-  PointMarkerOptions? _marker;  
-
+  PointMarkerOptions? marker;
+    /*
   PointMarkerOptions get marker { 
     if (this._marker == null) {
       this._marker = PointMarkerOptions();
@@ -154,6 +165,7 @@ class TreegraphSeriesOptions extends TreemapSeriesOptions {
   void set marker (PointMarkerOptions v) {
     this._marker = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -165,32 +177,32 @@ class TreegraphSeriesOptions extends TreemapSeriesOptions {
     
     // NOTE: skip serialization of dataLabels (type TreegraphDataLabelOptions[] is ignored)} 
 
-    if (this._collapseButton != null) {  
-      buffer.writeAll(["\"collapseButton\":", this._collapseButton?.toJSON(), ","], "");
+    if (this.collapseButton != null) {  
+      buffer.writeAll(["\"collapseButton\":", this.collapseButton?.toJSON(), ","], "");
     }
 
-    if (this._fillSpace != null) {  
-      buffer.writeAll(["\"fillSpace\":", this._fillSpace, ","], "");
+    if (this.fillSpace != null) {  
+      buffer.writeAll(["\"fillSpace\":", this.fillSpace, ","], "");
     }
 
-    if (this._link != null) {  
-      buffer.writeAll(["\"link\":", this._link?.toJSON(), ","], "");
+    if (this.link != null) {  
+      buffer.writeAll(["\"link\":", this.link?.toJSON(), ","], "");
     }
 
-    if (this._nodeDistance != null) {  
-      buffer.writeAll(["\"nodeDistance\":\`", this._nodeDistance, "\`,"], "");
+    if (this.nodeDistance != null) {  
+      buffer.writeAll(["\"nodeDistance\":\`", this.nodeDistance, "\`,"], "");
     }
 
-    if (this._nodeWidth != null) {  
-      buffer.writeAll(["\"nodeWidth\":\`", this._nodeWidth, "\`,"], "");
+    if (this.nodeWidth != null) {  
+      buffer.writeAll(["\"nodeWidth\":\`", this.nodeWidth, "\`,"], "");
     }
 
-    if (this._reversed != null) {  
-      buffer.writeAll(["\"reversed\":", this._reversed, ","], "");
+    if (this.reversed != null) {  
+      buffer.writeAll(["\"reversed\":", this.reversed, ","], "");
     }
 
-    if (this._marker != null) {  
-      buffer.writeAll(["\"marker\":", this._marker?.toJSON(), ","], "");
+    if (this.marker != null) {  
+      buffer.writeAll(["\"marker\":", this.marker?.toJSON(), ","], "");
     }
   }
 

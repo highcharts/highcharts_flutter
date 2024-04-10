@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,16 @@ import 'OptionFragment.dart';
  * SankeySeriesLevelOptions 
  */
 class SankeySeriesLevelOptions extends OptionFragment {
-  SankeySeriesLevelOptions() : super();
-  String? _borderColor;  
-
+  SankeySeriesLevelOptions( {
+    this.borderColor = null,
+    this.borderWidth = null,
+    this.color = null,
+    this.colorByPoint = null,
+    this.level = null,
+    this.linkOpacity = null
+  }) : super();
+  String? borderColor;
+    /*
   String get borderColor { 
     if (this._borderColor == null) {
       this._borderColor = "";
@@ -36,9 +43,10 @@ class SankeySeriesLevelOptions extends OptionFragment {
   void set borderColor (String v) {
     this._borderColor = v;
   }
+    */
     
-  double? _borderWidth;  
-
+  double? borderWidth;
+    /*
   double get borderWidth { 
     if (this._borderWidth == null) {
       this._borderWidth = 0;
@@ -49,9 +57,10 @@ class SankeySeriesLevelOptions extends OptionFragment {
   void set borderWidth (double v) {
     this._borderWidth = v;
   }
+    */
     
-  String? _color;  
-
+  String? color;
+    /*
   String get color { 
     if (this._color == null) {
       this._color = "";
@@ -62,9 +71,10 @@ class SankeySeriesLevelOptions extends OptionFragment {
   void set color (String v) {
     this._color = v;
   }
+    */
     
-  bool? _colorByPoint;  
-
+  bool? colorByPoint;
+    /*
   bool get colorByPoint { 
     if (this._colorByPoint == null) {
       this._colorByPoint = false;
@@ -75,9 +85,10 @@ class SankeySeriesLevelOptions extends OptionFragment {
   void set colorByPoint (bool v) {
     this._colorByPoint = v;
   }
+    */
     
-  double? _level;  
-
+  double? level;
+    /*
   double get level { 
     if (this._level == null) {
       this._level = 0;
@@ -88,9 +99,10 @@ class SankeySeriesLevelOptions extends OptionFragment {
   void set level (double v) {
     this._level = v;
   }
+    */
     
-  double? _linkOpacity;  
-
+  double? linkOpacity;
+    /*
   double get linkOpacity { 
     if (this._linkOpacity == null) {
       this._linkOpacity = 0;
@@ -101,6 +113,7 @@ class SankeySeriesLevelOptions extends OptionFragment {
   void set linkOpacity (double v) {
     this._linkOpacity = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -110,30 +123,30 @@ class SankeySeriesLevelOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._borderColor != null) {  
-      buffer.writeAll(["\"borderColor\":\`", this._borderColor, "\`,"], "");
+    if (this.borderColor != null) {  
+      buffer.writeAll(["\"borderColor\":\`", this.borderColor, "\`,"], "");
     }
 
-    if (this._borderWidth != null) {  
-      buffer.writeAll(["\"borderWidth\":", this._borderWidth, ","], "");
+    if (this.borderWidth != null) {  
+      buffer.writeAll(["\"borderWidth\":", this.borderWidth, ","], "");
     }
 
-    if (this._color != null) {  
-      buffer.writeAll(["\"color\":\`", this._color, "\`,"], "");
+    if (this.color != null) {  
+      buffer.writeAll(["\"color\":\`", this.color, "\`,"], "");
     }
 
-    if (this._colorByPoint != null) {  
-      buffer.writeAll(["\"colorByPoint\":", this._colorByPoint, ","], "");
+    if (this.colorByPoint != null) {  
+      buffer.writeAll(["\"colorByPoint\":", this.colorByPoint, ","], "");
     }
 
     // NOTE: skip serialization of dataLabels (type SankeyDataLabelOptions is ignored)} 
 
-    if (this._level != null) {  
-      buffer.writeAll(["\"level\":", this._level, ","], "");
+    if (this.level != null) {  
+      buffer.writeAll(["\"level\":", this.level, ","], "");
     }
 
-    if (this._linkOpacity != null) {  
-      buffer.writeAll(["\"linkOpacity\":", this._linkOpacity, ","], "");
+    if (this.linkOpacity != null) {  
+      buffer.writeAll(["\"linkOpacity\":", this.linkOpacity, ","], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 

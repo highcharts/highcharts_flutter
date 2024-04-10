@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -24,15 +24,21 @@ import 'OptionFragment.dart';
  * HeatmapSeriesOptions 
  */
 class HeatmapSeriesOptions extends ScatterSeriesOptions {
-  HeatmapSeriesOptions() : super();
+  HeatmapSeriesOptions( {
+    this.colsize = null,
+    this.interpolation = null,
+    this.nullColor = null,
+    this.pointPadding = null,
+    this.rowsize = null
+  }) : super();
   /**
    * The column size - how many X axis units each column in the heatmap
    * should span. 
    * 
    * Defaults to '1'. 
       */
-  double? _colsize;  
-
+  double? colsize;
+    /*
   double get colsize { 
     if (this._colsize == null) {
       this._colsize = 0;
@@ -43,12 +49,13 @@ class HeatmapSeriesOptions extends ScatterSeriesOptions {
   void set colsize (double v) {
     this._colsize = v;
   }
+    */
     
   /**
    * Make the heatmap render its data points as an interpolated image.  
       */
-  bool? _interpolation;  
-
+  bool? interpolation;
+    /*
   bool get interpolation { 
     if (this._interpolation == null) {
       this._interpolation = false;
@@ -59,6 +66,7 @@ class HeatmapSeriesOptions extends ScatterSeriesOptions {
   void set interpolation (bool v) {
     this._interpolation = v;
   }
+    */
     
   /**
    * Options for the point markers of line and scatter-like series. Properties
@@ -78,8 +86,8 @@ class HeatmapSeriesOptions extends ScatterSeriesOptions {
    * 
    * Defaults to '#f7f7f7'. 
       */
-  String? _nullColor;  
-
+  String? nullColor;
+    /*
   String get nullColor { 
     if (this._nullColor == null) {
       this._nullColor = "";
@@ -90,14 +98,15 @@ class HeatmapSeriesOptions extends ScatterSeriesOptions {
   void set nullColor (String v) {
     this._nullColor = v;
   }
+    */
     
   /**
    * Padding between the points in the heatmap. 
    * 
    * Defaults to '0'. 
       */
-  double? _pointPadding;  
-
+  double? pointPadding;
+    /*
   double get pointPadding { 
     if (this._pointPadding == null) {
       this._pointPadding = 0;
@@ -108,14 +117,15 @@ class HeatmapSeriesOptions extends ScatterSeriesOptions {
   void set pointPadding (double v) {
     this._pointPadding = v;
   }
+    */
     
   /**
    * The row size - how many Y axis units each heatmap row should span. 
    * 
    * Defaults to '1'. 
       */
-  double? _rowsize;  
-
+  double? rowsize;
+    /*
   double get rowsize { 
     if (this._rowsize == null) {
       this._rowsize = 0;
@@ -126,6 +136,7 @@ class HeatmapSeriesOptions extends ScatterSeriesOptions {
   void set rowsize (double v) {
     this._rowsize = v;
   }
+    */
     
   // NOTE: states skipped - type Generic is ignored in gen
 
@@ -137,26 +148,26 @@ class HeatmapSeriesOptions extends ScatterSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._colsize != null) {  
-      buffer.writeAll(["\"colsize\":", this._colsize, ","], "");
+    if (this.colsize != null) {  
+      buffer.writeAll(["\"colsize\":", this.colsize, ","], "");
     }
 
-    if (this._interpolation != null) {  
-      buffer.writeAll(["\"interpolation\":", this._interpolation, ","], "");
+    if (this.interpolation != null) {  
+      buffer.writeAll(["\"interpolation\":", this.interpolation, ","], "");
     }
 
     // NOTE: skip serialization of marker (type HeatmapPointMarkerOptions is ignored)} 
 
-    if (this._nullColor != null) {  
-      buffer.writeAll(["\"nullColor\":\`", this._nullColor, "\`,"], "");
+    if (this.nullColor != null) {  
+      buffer.writeAll(["\"nullColor\":\`", this.nullColor, "\`,"], "");
     }
 
-    if (this._pointPadding != null) {  
-      buffer.writeAll(["\"pointPadding\":", this._pointPadding, ","], "");
+    if (this.pointPadding != null) {  
+      buffer.writeAll(["\"pointPadding\":", this.pointPadding, ","], "");
     }
 
-    if (this._rowsize != null) {  
-      buffer.writeAll(["\"rowsize\":", this._rowsize, ","], "");
+    if (this.rowsize != null) {  
+      buffer.writeAll(["\"rowsize\":", this.rowsize, ","], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 

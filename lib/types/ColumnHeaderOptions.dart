@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,11 @@ import 'OptionFragment.dart';
  * ColumnHeaderOptions 
  */
 class ColumnHeaderOptions extends OptionFragment {
-  ColumnHeaderOptions() : super();
-  bool? _enabled;  
-
+  ColumnHeaderOptions( {
+    this.enabled = null
+  }) : super();
+  bool? enabled;
+    /*
   bool get enabled { 
     if (this._enabled == null) {
       this._enabled = false;
@@ -35,6 +37,7 @@ class ColumnHeaderOptions extends OptionFragment {
   void set enabled (bool v) {
     this._enabled = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -44,8 +47,8 @@ class ColumnHeaderOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this._enabled, ","], "");
+    if (this.enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
     }
   }
 

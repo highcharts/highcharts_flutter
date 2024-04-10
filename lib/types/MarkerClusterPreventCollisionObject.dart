@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,16 @@ import 'OptionFragment.dart';
  * MarkerClusterPreventCollisionObject 
  */
 class MarkerClusterPreventCollisionObject extends OptionFragment {
-  MarkerClusterPreventCollisionObject() : super();
-  double? _x;  
-
+  MarkerClusterPreventCollisionObject( {
+    this.x = null,
+    this.y = null,
+    this.key = null,
+    this.gridSize = null,
+    this.defaultRadius = null,
+    this.clusterRadius = null
+  }) : super();
+  double? x;
+    /*
   double get x { 
     if (this._x == null) {
       this._x = 0;
@@ -35,9 +42,10 @@ class MarkerClusterPreventCollisionObject extends OptionFragment {
   void set x (double v) {
     this._x = v;
   }
+    */
     
-  double? _y;  
-
+  double? y;
+    /*
   double get y { 
     if (this._y == null) {
       this._y = 0;
@@ -48,9 +56,10 @@ class MarkerClusterPreventCollisionObject extends OptionFragment {
   void set y (double v) {
     this._y = v;
   }
+    */
     
-  String? _key;  
-
+  String? key;
+    /*
   String get key { 
     if (this._key == null) {
       this._key = "";
@@ -61,9 +70,10 @@ class MarkerClusterPreventCollisionObject extends OptionFragment {
   void set key (String v) {
     this._key = v;
   }
+    */
     
-  double? _gridSize;  
-
+  double? gridSize;
+    /*
   double get gridSize { 
     if (this._gridSize == null) {
       this._gridSize = 0;
@@ -74,9 +84,10 @@ class MarkerClusterPreventCollisionObject extends OptionFragment {
   void set gridSize (double v) {
     this._gridSize = v;
   }
+    */
     
-  double? _defaultRadius;  
-
+  double? defaultRadius;
+    /*
   double get defaultRadius { 
     if (this._defaultRadius == null) {
       this._defaultRadius = 0;
@@ -87,9 +98,10 @@ class MarkerClusterPreventCollisionObject extends OptionFragment {
   void set defaultRadius (double v) {
     this._defaultRadius = v;
   }
+    */
     
-  double? _clusterRadius;  
-
+  double? clusterRadius;
+    /*
   double get clusterRadius { 
     if (this._clusterRadius == null) {
       this._clusterRadius = 0;
@@ -100,6 +112,7 @@ class MarkerClusterPreventCollisionObject extends OptionFragment {
   void set clusterRadius (double v) {
     this._clusterRadius = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -109,30 +122,30 @@ class MarkerClusterPreventCollisionObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._x != null) {  
-      buffer.writeAll(["\"x\":", this._x, ","], "");
+    if (this.x != null) {  
+      buffer.writeAll(["\"x\":", this.x, ","], "");
     }
 
-    if (this._y != null) {  
-      buffer.writeAll(["\"y\":", this._y, ","], "");
+    if (this.y != null) {  
+      buffer.writeAll(["\"y\":", this.y, ","], "");
     }
 
-    if (this._key != null) {  
-      buffer.writeAll(["\"key\":\`", this._key, "\`,"], "");
+    if (this.key != null) {  
+      buffer.writeAll(["\"key\":\`", this.key, "\`,"], "");
     }
 
     // NOTE: skip serialization of groupedData (type Generic is ignored)} 
 
-    if (this._gridSize != null) {  
-      buffer.writeAll(["\"gridSize\":", this._gridSize, ","], "");
+    if (this.gridSize != null) {  
+      buffer.writeAll(["\"gridSize\":", this.gridSize, ","], "");
     }
 
-    if (this._defaultRadius != null) {  
-      buffer.writeAll(["\"defaultRadius\":", this._defaultRadius, ","], "");
+    if (this.defaultRadius != null) {  
+      buffer.writeAll(["\"defaultRadius\":", this.defaultRadius, ","], "");
     }
 
-    if (this._clusterRadius != null) {  
-      buffer.writeAll(["\"clusterRadius\":", this._clusterRadius, ","], "");
+    if (this.clusterRadius != null) {  
+      buffer.writeAll(["\"clusterRadius\":", this.clusterRadius, ","], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,16 @@ import 'OptionFragment.dart';
  * StockToolsGuiOptions 
  */
 class StockToolsGuiOptions extends OptionFragment {
-  StockToolsGuiOptions() : super();
-  String? _className;  
-
+  StockToolsGuiOptions( {
+    this.className = null,
+    this.enabled = null,
+    this.iconsURL = null,
+    this.placed = null,
+    this.toolbarClassName = null,
+    this.visible = null
+  }) : super();
+  String? className;
+    /*
   String get className { 
     if (this._className == null) {
       this._className = "";
@@ -36,9 +43,10 @@ class StockToolsGuiOptions extends OptionFragment {
   void set className (String v) {
     this._className = v;
   }
+    */
     
-  bool? _enabled;  
-
+  bool? enabled;
+    /*
   bool get enabled { 
     if (this._enabled == null) {
       this._enabled = false;
@@ -49,9 +57,10 @@ class StockToolsGuiOptions extends OptionFragment {
   void set enabled (bool v) {
     this._enabled = v;
   }
+    */
     
-  String? _iconsURL;  
-
+  String? iconsURL;
+    /*
   String get iconsURL { 
     if (this._iconsURL == null) {
       this._iconsURL = "";
@@ -62,9 +71,10 @@ class StockToolsGuiOptions extends OptionFragment {
   void set iconsURL (String v) {
     this._iconsURL = v;
   }
+    */
     
-  bool? _placed;  
-
+  bool? placed;
+    /*
   bool get placed { 
     if (this._placed == null) {
       this._placed = false;
@@ -75,9 +85,10 @@ class StockToolsGuiOptions extends OptionFragment {
   void set placed (bool v) {
     this._placed = v;
   }
+    */
     
-  String? _toolbarClassName;  
-
+  String? toolbarClassName;
+    /*
   String get toolbarClassName { 
     if (this._toolbarClassName == null) {
       this._toolbarClassName = "";
@@ -88,9 +99,10 @@ class StockToolsGuiOptions extends OptionFragment {
   void set toolbarClassName (String v) {
     this._toolbarClassName = v;
   }
+    */
     
-  bool? _visible;  
-
+  bool? visible;
+    /*
   bool get visible { 
     if (this._visible == null) {
       this._visible = false;
@@ -101,6 +113,7 @@ class StockToolsGuiOptions extends OptionFragment {
   void set visible (bool v) {
     this._visible = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -112,30 +125,30 @@ class StockToolsGuiOptions extends OptionFragment {
     
     // NOTE: skip serialization of buttons (type string[] is ignored)} 
 
-    if (this._className != null) {  
-      buffer.writeAll(["\"className\":\`", this._className, "\`,"], "");
+    if (this.className != null) {  
+      buffer.writeAll(["\"className\":\`", this.className, "\`,"], "");
     }
 
     // NOTE: skip serialization of definitions (type StockToolsGuiDefinitionsOptions is ignored)} 
 
-    if (this._enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this._enabled, ","], "");
+    if (this.enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
     }
 
-    if (this._iconsURL != null) {  
-      buffer.writeAll(["\"iconsURL\":\`", this._iconsURL, "\`,"], "");
+    if (this.iconsURL != null) {  
+      buffer.writeAll(["\"iconsURL\":\`", this.iconsURL, "\`,"], "");
     }
 
-    if (this._placed != null) {  
-      buffer.writeAll(["\"placed\":", this._placed, ","], "");
+    if (this.placed != null) {  
+      buffer.writeAll(["\"placed\":", this.placed, ","], "");
     }
 
-    if (this._toolbarClassName != null) {  
-      buffer.writeAll(["\"toolbarClassName\":\`", this._toolbarClassName, "\`,"], "");
+    if (this.toolbarClassName != null) {  
+      buffer.writeAll(["\"toolbarClassName\":\`", this.toolbarClassName, "\`,"], "");
     }
 
-    if (this._visible != null) {  
-      buffer.writeAll(["\"visible\":", this._visible, ","], "");
+    if (this.visible != null) {  
+      buffer.writeAll(["\"visible\":", this.visible, ","], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,12 @@ import 'OptionFragment.dart';
  * IconFormFieldOptions 
  */
 class IconFormFieldOptions extends OptionFragment {
-  IconFormFieldOptions() : super();
-  String? _className;  
-
+  IconFormFieldOptions( {
+    this.className = null,
+    this.icon = null
+  }) : super();
+  String? className;
+    /*
   String get className { 
     if (this._className == null) {
       this._className = "";
@@ -35,9 +38,10 @@ class IconFormFieldOptions extends OptionFragment {
   void set className (String v) {
     this._className = v;
   }
+    */
     
-  String? _icon;  
-
+  String? icon;
+    /*
   String get icon { 
     if (this._icon == null) {
       this._icon = "";
@@ -48,6 +52,7 @@ class IconFormFieldOptions extends OptionFragment {
   void set icon (String v) {
     this._icon = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -57,12 +62,12 @@ class IconFormFieldOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._className != null) {  
-      buffer.writeAll(["\"className\":\`", this._className, "\`,"], "");
+    if (this.className != null) {  
+      buffer.writeAll(["\"className\":\`", this.className, "\`,"], "");
     }
 
-    if (this._icon != null) {  
-      buffer.writeAll(["\"icon\":\`", this._icon, "\`,"], "");
+    if (this.icon != null) {  
+      buffer.writeAll(["\"icon\":\`", this.icon, "\`,"], "");
     }
 
     // NOTE: skip serialization of click (type Function is ignored)} 

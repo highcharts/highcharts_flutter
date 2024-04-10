@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,13 @@ import 'OptionFragment.dart';
  * DataLabelFilterOptions 
  */
 class DataLabelFilterOptions extends OptionFragment {
-  DataLabelFilterOptions() : super();
-  String? _operator;  
-
+  DataLabelFilterOptions( {
+    this.operator = null,
+    this.property = null,
+    this.value = null
+  }) : super();
+  String? operator;
+    /*
   String get operator { 
     if (this._operator == null) {
       this._operator = "";
@@ -35,9 +39,10 @@ class DataLabelFilterOptions extends OptionFragment {
   void set operator (String v) {
     this._operator = v;
   }
+    */
     
-  String? _property;  
-
+  String? property;
+    /*
   String get property { 
     if (this._property == null) {
       this._property = "";
@@ -48,9 +53,10 @@ class DataLabelFilterOptions extends OptionFragment {
   void set property (String v) {
     this._property = v;
   }
+    */
     
-  double? _value;  
-
+  double? value;
+    /*
   double get value { 
     if (this._value == null) {
       this._value = 0;
@@ -61,6 +67,7 @@ class DataLabelFilterOptions extends OptionFragment {
   void set value (double v) {
     this._value = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -70,16 +77,16 @@ class DataLabelFilterOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._operator != null) {  
-      buffer.writeAll(["\"operator\":\`", this._operator, "\`,"], "");
+    if (this.operator != null) {  
+      buffer.writeAll(["\"operator\":\`", this.operator, "\`,"], "");
     }
 
-    if (this._property != null) {  
-      buffer.writeAll(["\"property\":\`", this._property, "\`,"], "");
+    if (this.property != null) {  
+      buffer.writeAll(["\"property\":\`", this.property, "\`,"], "");
     }
 
-    if (this._value != null) {  
-      buffer.writeAll(["\"value\":", this._value, ","], "");
+    if (this.value != null) {  
+      buffer.writeAll(["\"value\":", this.value, ","], "");
     }
   }
 

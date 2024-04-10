@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,12 @@ import 'OptionFragment.dart';
  * LangAccessibilitySonificationOptions 
  */
 class LangAccessibilitySonificationOptions extends OptionFragment {
-  LangAccessibilitySonificationOptions() : super();
-  String? _playAsSoundButtonText;  
-
+  LangAccessibilitySonificationOptions( {
+    this.playAsSoundButtonText = null,
+    this.playAsSoundClickAnnouncement = null
+  }) : super();
+  String? playAsSoundButtonText;
+    /*
   String get playAsSoundButtonText { 
     if (this._playAsSoundButtonText == null) {
       this._playAsSoundButtonText = "";
@@ -35,9 +38,10 @@ class LangAccessibilitySonificationOptions extends OptionFragment {
   void set playAsSoundButtonText (String v) {
     this._playAsSoundButtonText = v;
   }
+    */
     
-  String? _playAsSoundClickAnnouncement;  
-
+  String? playAsSoundClickAnnouncement;
+    /*
   String get playAsSoundClickAnnouncement { 
     if (this._playAsSoundClickAnnouncement == null) {
       this._playAsSoundClickAnnouncement = "";
@@ -48,6 +52,7 @@ class LangAccessibilitySonificationOptions extends OptionFragment {
   void set playAsSoundClickAnnouncement (String v) {
     this._playAsSoundClickAnnouncement = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -57,12 +62,12 @@ class LangAccessibilitySonificationOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._playAsSoundButtonText != null) {  
-      buffer.writeAll(["\"playAsSoundButtonText\":\`", this._playAsSoundButtonText, "\`,"], "");
+    if (this.playAsSoundButtonText != null) {  
+      buffer.writeAll(["\"playAsSoundButtonText\":\`", this.playAsSoundButtonText, "\`,"], "");
     }
 
-    if (this._playAsSoundClickAnnouncement != null) {  
-      buffer.writeAll(["\"playAsSoundClickAnnouncement\":\`", this._playAsSoundClickAnnouncement, "\`,"], "");
+    if (this.playAsSoundClickAnnouncement != null) {  
+      buffer.writeAll(["\"playAsSoundClickAnnouncement\":\`", this.playAsSoundClickAnnouncement, "\`,"], "");
     }
   }
 

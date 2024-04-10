@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -24,9 +24,13 @@ import 'OptionFragment.dart';
  * EventEmitter 
  */
 class EventEmitter extends OptionFragment {
-  EventEmitter() : super();
-  bool? _cancelClick;  
-
+  EventEmitter( {
+    this.cancelClick = null,
+    this.hasDragged = null,
+    this.isUpdating = null
+  }) : super();
+  bool? cancelClick;
+    /*
   bool get cancelClick { 
     if (this._cancelClick == null) {
       this._cancelClick = false;
@@ -37,9 +41,10 @@ class EventEmitter extends OptionFragment {
   void set cancelClick (bool v) {
     this._cancelClick = v;
   }
+    */
     
-  bool? _hasDragged;  
-
+  bool? hasDragged;
+    /*
   bool get hasDragged { 
     if (this._hasDragged == null) {
       this._hasDragged = false;
@@ -50,9 +55,10 @@ class EventEmitter extends OptionFragment {
   void set hasDragged (bool v) {
     this._hasDragged = v;
   }
+    */
     
-  bool? _isUpdating;  
-
+  bool? isUpdating;
+    /*
   bool get isUpdating { 
     if (this._isUpdating == null) {
       this._isUpdating = false;
@@ -63,6 +69,7 @@ class EventEmitter extends OptionFragment {
   void set isUpdating (bool v) {
     this._isUpdating = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -72,22 +79,22 @@ class EventEmitter extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._cancelClick != null) {  
-      buffer.writeAll(["\"cancelClick\":", this._cancelClick, ","], "");
+    if (this.cancelClick != null) {  
+      buffer.writeAll(["\"cancelClick\":", this.cancelClick, ","], "");
     }
 
     // NOTE: skip serialization of chart (type AnnotationChart is ignored)} 
 
     // NOTE: skip serialization of graphic (type SVGElement is ignored)} 
 
-    if (this._hasDragged != null) {  
-      buffer.writeAll(["\"hasDragged\":", this._hasDragged, ","], "");
+    if (this.hasDragged != null) {  
+      buffer.writeAll(["\"hasDragged\":", this.hasDragged, ","], "");
     }
 
     // NOTE: skip serialization of hcEvents (type unknown is ignored)} 
 
-    if (this._isUpdating != null) {  
-      buffer.writeAll(["\"isUpdating\":", this._isUpdating, ","], "");
+    if (this.isUpdating != null) {  
+      buffer.writeAll(["\"isUpdating\":", this.isUpdating, ","], "");
     }
 
     // NOTE: skip serialization of labels (type ControllableLabel[] is ignored)} 

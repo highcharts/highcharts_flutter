@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,14 @@ import 'OptionFragment.dart';
  * DrilldownDrillUpButtonPositionOptions 
  */
 class DrilldownDrillUpButtonPositionOptions extends OptionFragment {
-  DrilldownDrillUpButtonPositionOptions() : super();
-  String? _align;  
-
+  DrilldownDrillUpButtonPositionOptions( {
+    this.align = null,
+    this.verticalAlign = null,
+    this.x = null,
+    this.y = null
+  }) : super();
+  String? align;
+    /*
   String get align { 
     if (this._align == null) {
       this._align = "";
@@ -35,9 +40,10 @@ class DrilldownDrillUpButtonPositionOptions extends OptionFragment {
   void set align (String v) {
     this._align = v;
   }
+    */
     
-  String? _verticalAlign;  
-
+  String? verticalAlign;
+    /*
   String get verticalAlign { 
     if (this._verticalAlign == null) {
       this._verticalAlign = "";
@@ -48,9 +54,10 @@ class DrilldownDrillUpButtonPositionOptions extends OptionFragment {
   void set verticalAlign (String v) {
     this._verticalAlign = v;
   }
+    */
     
-  double? _x;  
-
+  double? x;
+    /*
   double get x { 
     if (this._x == null) {
       this._x = 0;
@@ -61,9 +68,10 @@ class DrilldownDrillUpButtonPositionOptions extends OptionFragment {
   void set x (double v) {
     this._x = v;
   }
+    */
     
-  double? _y;  
-
+  double? y;
+    /*
   double get y { 
     if (this._y == null) {
       this._y = 0;
@@ -74,6 +82,7 @@ class DrilldownDrillUpButtonPositionOptions extends OptionFragment {
   void set y (double v) {
     this._y = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -83,20 +92,20 @@ class DrilldownDrillUpButtonPositionOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._align != null) {  
-      buffer.writeAll(["\"align\":\`", this._align, "\`,"], "");
+    if (this.align != null) {  
+      buffer.writeAll(["\"align\":\`", this.align, "\`,"], "");
     }
 
-    if (this._verticalAlign != null) {  
-      buffer.writeAll(["\"verticalAlign\":\`", this._verticalAlign, "\`,"], "");
+    if (this.verticalAlign != null) {  
+      buffer.writeAll(["\"verticalAlign\":\`", this.verticalAlign, "\`,"], "");
     }
 
-    if (this._x != null) {  
-      buffer.writeAll(["\"x\":", this._x, ","], "");
+    if (this.x != null) {  
+      buffer.writeAll(["\"x\":", this.x, ","], "");
     }
 
-    if (this._y != null) {  
-      buffer.writeAll(["\"y\":", this._y, ","], "");
+    if (this.y != null) {  
+      buffer.writeAll(["\"y\":", this.y, ","], "");
     }
   }
 

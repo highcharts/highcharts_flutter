@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,18 @@ import 'OptionFragment.dart';
  * FormFieldOptions 
  */
 class FormFieldOptions extends OptionFragment {
-  FormFieldOptions() : super();
-  String? _iconsURLPrefix;  
-
+  FormFieldOptions( {
+    this.iconsURLPrefix = null,
+    this.icon = null,
+    this.id = null,
+    this.name = null,
+    this.title = null,
+    this.value = null,
+    this.className = null,
+    this.enabledOnOffLabels = null
+  }) : super();
+  String? iconsURLPrefix;
+    /*
   String get iconsURLPrefix { 
     if (this._iconsURLPrefix == null) {
       this._iconsURLPrefix = "";
@@ -35,9 +44,10 @@ class FormFieldOptions extends OptionFragment {
   void set iconsURLPrefix (String v) {
     this._iconsURLPrefix = v;
   }
+    */
     
-  String? _icon;  
-
+  String? icon;
+    /*
   String get icon { 
     if (this._icon == null) {
       this._icon = "";
@@ -48,9 +58,10 @@ class FormFieldOptions extends OptionFragment {
   void set icon (String v) {
     this._icon = v;
   }
+    */
     
-  String? _id;  
-
+  String? id;
+    /*
   String get id { 
     if (this._id == null) {
       this._id = "";
@@ -61,9 +72,10 @@ class FormFieldOptions extends OptionFragment {
   void set id (String v) {
     this._id = v;
   }
+    */
     
-  String? _name;  
-
+  String? name;
+    /*
   String get name { 
     if (this._name == null) {
       this._name = "";
@@ -74,9 +86,10 @@ class FormFieldOptions extends OptionFragment {
   void set name (String v) {
     this._name = v;
   }
+    */
     
-  String? _title;  
-
+  String? title;
+    /*
   String get title { 
     if (this._title == null) {
       this._title = "";
@@ -87,9 +100,10 @@ class FormFieldOptions extends OptionFragment {
   void set title (String v) {
     this._title = v;
   }
+    */
     
-  String? _value;  
-
+  String? value;
+    /*
   String get value { 
     if (this._value == null) {
       this._value = "";
@@ -100,9 +114,10 @@ class FormFieldOptions extends OptionFragment {
   void set value (String v) {
     this._value = v;
   }
+    */
     
-  String? _className;  
-
+  String? className;
+    /*
   String get className { 
     if (this._className == null) {
       this._className = "";
@@ -113,9 +128,10 @@ class FormFieldOptions extends OptionFragment {
   void set className (String v) {
     this._className = v;
   }
+    */
     
-  bool? _enabledOnOffLabels;  
-
+  bool? enabledOnOffLabels;
+    /*
   bool get enabledOnOffLabels { 
     if (this._enabledOnOffLabels == null) {
       this._enabledOnOffLabels = false;
@@ -126,6 +142,7 @@ class FormFieldOptions extends OptionFragment {
   void set enabledOnOffLabels (bool v) {
     this._enabledOnOffLabels = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -137,40 +154,40 @@ class FormFieldOptions extends OptionFragment {
     
     // NOTE: skip serialization of propertyPath (type string[] is ignored)} 
 
-    if (this._iconsURLPrefix != null) {  
-      buffer.writeAll(["\"iconsURLPrefix\":\`", this._iconsURLPrefix, "\`,"], "");
+    if (this.iconsURLPrefix != null) {  
+      buffer.writeAll(["\"iconsURLPrefix\":\`", this.iconsURLPrefix, "\`,"], "");
     }
 
-    if (this._icon != null) {  
-      buffer.writeAll(["\"icon\":\`", this._icon, "\`,"], "");
+    if (this.icon != null) {  
+      buffer.writeAll(["\"icon\":\`", this.icon, "\`,"], "");
     }
 
-    if (this._id != null) {  
-      buffer.writeAll(["\"id\":\`", this._id, "\`,"], "");
+    if (this.id != null) {  
+      buffer.writeAll(["\"id\":\`", this.id, "\`,"], "");
     }
 
-    if (this._name != null) {  
-      buffer.writeAll(["\"name\":\`", this._name, "\`,"], "");
+    if (this.name != null) {  
+      buffer.writeAll(["\"name\":\`", this.name, "\`,"], "");
     }
 
     // NOTE: skip serialization of callback (type Function is ignored)} 
 
-    if (this._title != null) {  
-      buffer.writeAll(["\"title\":\`", this._title, "\`,"], "");
+    if (this.title != null) {  
+      buffer.writeAll(["\"title\":\`", this.title, "\`,"], "");
     }
 
     // NOTE: skip serialization of onchange (type Function is ignored)} 
 
-    if (this._value != null) {  
-      buffer.writeAll(["\"value\":\`", this._value, "\`,"], "");
+    if (this.value != null) {  
+      buffer.writeAll(["\"value\":\`", this.value, "\`,"], "");
     }
 
-    if (this._className != null) {  
-      buffer.writeAll(["\"className\":\`", this._className, "\`,"], "");
+    if (this.className != null) {  
+      buffer.writeAll(["\"className\":\`", this.className, "\`,"], "");
     }
 
-    if (this._enabledOnOffLabels != null) {  
-      buffer.writeAll(["\"enabledOnOffLabels\":", this._enabledOnOffLabels, ","], "");
+    if (this.enabledOnOffLabels != null) {  
+      buffer.writeAll(["\"enabledOnOffLabels\":", this.enabledOnOffLabels, ","], "");
     }
   }
 

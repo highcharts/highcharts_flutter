@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,20 @@ import 'OptionFragment.dart';
  * GeoJSONTransform 
  */
 class GeoJSONTransform extends OptionFragment {
-  GeoJSONTransform() : super();
-  String? _crs;  
-
+  GeoJSONTransform( {
+    this.crs = null,
+    this.jsonmarginX = null,
+    this.jsonmarginY = null,
+    this.jsonres = null,
+    this.rotation = null,
+    this.scale = null,
+    this.xoffset = null,
+    this.xpan = null,
+    this.yoffset = null,
+    this.ypan = null
+  }) : super();
+  String? crs;
+    /*
   String get crs { 
     if (this._crs == null) {
       this._crs = "";
@@ -35,9 +46,10 @@ class GeoJSONTransform extends OptionFragment {
   void set crs (String v) {
     this._crs = v;
   }
+    */
     
-  double? _jsonmarginX;  
-
+  double? jsonmarginX;
+    /*
   double get jsonmarginX { 
     if (this._jsonmarginX == null) {
       this._jsonmarginX = 0;
@@ -48,9 +60,10 @@ class GeoJSONTransform extends OptionFragment {
   void set jsonmarginX (double v) {
     this._jsonmarginX = v;
   }
+    */
     
-  double? _jsonmarginY;  
-
+  double? jsonmarginY;
+    /*
   double get jsonmarginY { 
     if (this._jsonmarginY == null) {
       this._jsonmarginY = 0;
@@ -61,9 +74,10 @@ class GeoJSONTransform extends OptionFragment {
   void set jsonmarginY (double v) {
     this._jsonmarginY = v;
   }
+    */
     
-  double? _jsonres;  
-
+  double? jsonres;
+    /*
   double get jsonres { 
     if (this._jsonres == null) {
       this._jsonres = 0;
@@ -74,9 +88,10 @@ class GeoJSONTransform extends OptionFragment {
   void set jsonres (double v) {
     this._jsonres = v;
   }
+    */
     
-  double? _rotation;  
-
+  double? rotation;
+    /*
   double get rotation { 
     if (this._rotation == null) {
       this._rotation = 0;
@@ -87,9 +102,10 @@ class GeoJSONTransform extends OptionFragment {
   void set rotation (double v) {
     this._rotation = v;
   }
+    */
     
-  double? _scale;  
-
+  double? scale;
+    /*
   double get scale { 
     if (this._scale == null) {
       this._scale = 0;
@@ -100,9 +116,10 @@ class GeoJSONTransform extends OptionFragment {
   void set scale (double v) {
     this._scale = v;
   }
+    */
     
-  double? _xoffset;  
-
+  double? xoffset;
+    /*
   double get xoffset { 
     if (this._xoffset == null) {
       this._xoffset = 0;
@@ -113,9 +130,10 @@ class GeoJSONTransform extends OptionFragment {
   void set xoffset (double v) {
     this._xoffset = v;
   }
+    */
     
-  double? _xpan;  
-
+  double? xpan;
+    /*
   double get xpan { 
     if (this._xpan == null) {
       this._xpan = 0;
@@ -126,9 +144,10 @@ class GeoJSONTransform extends OptionFragment {
   void set xpan (double v) {
     this._xpan = v;
   }
+    */
     
-  double? _yoffset;  
-
+  double? yoffset;
+    /*
   double get yoffset { 
     if (this._yoffset == null) {
       this._yoffset = 0;
@@ -139,9 +158,10 @@ class GeoJSONTransform extends OptionFragment {
   void set yoffset (double v) {
     this._yoffset = v;
   }
+    */
     
-  double? _ypan;  
-
+  double? ypan;
+    /*
   double get ypan { 
     if (this._ypan == null) {
       this._ypan = 0;
@@ -152,6 +172,7 @@ class GeoJSONTransform extends OptionFragment {
   void set ypan (double v) {
     this._ypan = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -161,46 +182,46 @@ class GeoJSONTransform extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._crs != null) {  
-      buffer.writeAll(["\"crs\":\`", this._crs, "\`,"], "");
+    if (this.crs != null) {  
+      buffer.writeAll(["\"crs\":\`", this.crs, "\`,"], "");
     }
 
     // NOTE: skip serialization of hitZone (type AnyRecord is ignored)} 
 
-    if (this._jsonmarginX != null) {  
-      buffer.writeAll(["\"jsonmarginX\":", this._jsonmarginX, ","], "");
+    if (this.jsonmarginX != null) {  
+      buffer.writeAll(["\"jsonmarginX\":", this.jsonmarginX, ","], "");
     }
 
-    if (this._jsonmarginY != null) {  
-      buffer.writeAll(["\"jsonmarginY\":", this._jsonmarginY, ","], "");
+    if (this.jsonmarginY != null) {  
+      buffer.writeAll(["\"jsonmarginY\":", this.jsonmarginY, ","], "");
     }
 
-    if (this._jsonres != null) {  
-      buffer.writeAll(["\"jsonres\":", this._jsonres, ","], "");
+    if (this.jsonres != null) {  
+      buffer.writeAll(["\"jsonres\":", this.jsonres, ","], "");
     }
 
-    if (this._rotation != null) {  
-      buffer.writeAll(["\"rotation\":", this._rotation, ","], "");
+    if (this.rotation != null) {  
+      buffer.writeAll(["\"rotation\":", this.rotation, ","], "");
     }
 
-    if (this._scale != null) {  
-      buffer.writeAll(["\"scale\":", this._scale, ","], "");
+    if (this.scale != null) {  
+      buffer.writeAll(["\"scale\":", this.scale, ","], "");
     }
 
-    if (this._xoffset != null) {  
-      buffer.writeAll(["\"xoffset\":", this._xoffset, ","], "");
+    if (this.xoffset != null) {  
+      buffer.writeAll(["\"xoffset\":", this.xoffset, ","], "");
     }
 
-    if (this._xpan != null) {  
-      buffer.writeAll(["\"xpan\":", this._xpan, ","], "");
+    if (this.xpan != null) {  
+      buffer.writeAll(["\"xpan\":", this.xpan, ","], "");
     }
 
-    if (this._yoffset != null) {  
-      buffer.writeAll(["\"yoffset\":", this._yoffset, ","], "");
+    if (this.yoffset != null) {  
+      buffer.writeAll(["\"yoffset\":", this.yoffset, ","], "");
     }
 
-    if (this._ypan != null) {  
-      buffer.writeAll(["\"ypan\":", this._ypan, ","], "");
+    if (this.ypan != null) {  
+      buffer.writeAll(["\"ypan\":", this.ypan, ","], "");
     }
   }
 

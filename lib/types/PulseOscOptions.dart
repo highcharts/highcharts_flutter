@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,13 @@ import 'OptionFragment.dart';
  * PulseOscOptions 
  */
 class PulseOscOptions extends OptionFragment {
-  PulseOscOptions() : super();
-  double? _detune;  
-
+  PulseOscOptions( {
+    this.detune = null,
+    this.pulseWidth = null,
+    this.frequency = null
+  }) : super();
+  double? detune;
+    /*
   double get detune { 
     if (this._detune == null) {
       this._detune = 0;
@@ -35,9 +39,10 @@ class PulseOscOptions extends OptionFragment {
   void set detune (double v) {
     this._detune = v;
   }
+    */
     
-  double? _pulseWidth;  
-
+  double? pulseWidth;
+    /*
   double get pulseWidth { 
     if (this._pulseWidth == null) {
       this._pulseWidth = 0;
@@ -48,9 +53,10 @@ class PulseOscOptions extends OptionFragment {
   void set pulseWidth (double v) {
     this._pulseWidth = v;
   }
+    */
     
-  double? _frequency;  
-
+  double? frequency;
+    /*
   double get frequency { 
     if (this._frequency == null) {
       this._frequency = 0;
@@ -61,6 +67,7 @@ class PulseOscOptions extends OptionFragment {
   void set frequency (double v) {
     this._frequency = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -70,16 +77,16 @@ class PulseOscOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._detune != null) {  
-      buffer.writeAll(["\"detune\":", this._detune, ","], "");
+    if (this.detune != null) {  
+      buffer.writeAll(["\"detune\":", this.detune, ","], "");
     }
 
-    if (this._pulseWidth != null) {  
-      buffer.writeAll(["\"pulseWidth\":", this._pulseWidth, ","], "");
+    if (this.pulseWidth != null) {  
+      buffer.writeAll(["\"pulseWidth\":", this.pulseWidth, ","], "");
     }
 
-    if (this._frequency != null) {  
-      buffer.writeAll(["\"frequency\":", this._frequency, ","], "");
+    if (this.frequency != null) {  
+      buffer.writeAll(["\"frequency\":", this.frequency, ","], "");
     }
   }
 

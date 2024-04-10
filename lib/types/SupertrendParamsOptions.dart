@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,11 @@ import 'OptionFragment.dart';
  * SupertrendParamsOptions 
  */
 class SupertrendParamsOptions extends SMAParamsOptions {
-  SupertrendParamsOptions() : super();
-  double? _multiplier;  
-
+  SupertrendParamsOptions( {
+    this.multiplier = null
+  }) : super();
+  double? multiplier;
+    /*
   double get multiplier { 
     if (this._multiplier == null) {
       this._multiplier = 0;
@@ -36,6 +38,7 @@ class SupertrendParamsOptions extends SMAParamsOptions {
   void set multiplier (double v) {
     this._multiplier = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -45,8 +48,8 @@ class SupertrendParamsOptions extends SMAParamsOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._multiplier != null) {  
-      buffer.writeAll(["\"multiplier\":", this._multiplier, ","], "");
+    if (this.multiplier != null) {  
+      buffer.writeAll(["\"multiplier\":", this.multiplier, ","], "");
     }
   }
 

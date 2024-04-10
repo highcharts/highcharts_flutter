@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,14 @@ import 'OptionFragment.dart';
  * MarkerClusterSplitDataObject 
  */
 class MarkerClusterSplitDataObject extends OptionFragment {
-  MarkerClusterSplitDataObject() : super();
-  double? _dataIndex;  
-
+  MarkerClusterSplitDataObject( {
+    this.dataIndex = null,
+    this.x = null,
+    this.y = null,
+    this.parentStateId = null
+  }) : super();
+  double? dataIndex;
+    /*
   double get dataIndex { 
     if (this._dataIndex == null) {
       this._dataIndex = 0;
@@ -35,9 +40,10 @@ class MarkerClusterSplitDataObject extends OptionFragment {
   void set dataIndex (double v) {
     this._dataIndex = v;
   }
+    */
     
-  double? _x;  
-
+  double? x;
+    /*
   double get x { 
     if (this._x == null) {
       this._x = 0;
@@ -48,9 +54,10 @@ class MarkerClusterSplitDataObject extends OptionFragment {
   void set x (double v) {
     this._x = v;
   }
+    */
     
-  double? _y;  
-
+  double? y;
+    /*
   double get y { 
     if (this._y == null) {
       this._y = 0;
@@ -61,9 +68,10 @@ class MarkerClusterSplitDataObject extends OptionFragment {
   void set y (double v) {
     this._y = v;
   }
+    */
     
-  String? _parentStateId;  
-
+  String? parentStateId;
+    /*
   String get parentStateId { 
     if (this._parentStateId == null) {
       this._parentStateId = "";
@@ -74,6 +82,7 @@ class MarkerClusterSplitDataObject extends OptionFragment {
   void set parentStateId (String v) {
     this._parentStateId = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -83,20 +92,20 @@ class MarkerClusterSplitDataObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._dataIndex != null) {  
-      buffer.writeAll(["\"dataIndex\":", this._dataIndex, ","], "");
+    if (this.dataIndex != null) {  
+      buffer.writeAll(["\"dataIndex\":", this.dataIndex, ","], "");
     }
 
-    if (this._x != null) {  
-      buffer.writeAll(["\"x\":", this._x, ","], "");
+    if (this.x != null) {  
+      buffer.writeAll(["\"x\":", this.x, ","], "");
     }
 
-    if (this._y != null) {  
-      buffer.writeAll(["\"y\":", this._y, ","], "");
+    if (this.y != null) {  
+      buffer.writeAll(["\"y\":", this.y, ","], "");
     }
 
-    if (this._parentStateId != null) {  
-      buffer.writeAll(["\"parentStateId\":\`", this._parentStateId, "\`,"], "");
+    if (this.parentStateId != null) {  
+      buffer.writeAll(["\"parentStateId\":\`", this.parentStateId, "\`,"], "");
     }
 
     // NOTE: skip serialization of options (type PointShortOptions is ignored)} 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,13 @@ import 'OptionFragment.dart';
  * FocusBorderStyleObject 
  */
 class FocusBorderStyleObject extends OptionFragment {
-  FocusBorderStyleObject() : super();
-  double? _borderRadius;  
-
+  FocusBorderStyleObject( {
+    this.borderRadius = null,
+    this.color = null,
+    this.lineWidth = null
+  }) : super();
+  double? borderRadius;
+    /*
   double get borderRadius { 
     if (this._borderRadius == null) {
       this._borderRadius = 0;
@@ -35,9 +39,10 @@ class FocusBorderStyleObject extends OptionFragment {
   void set borderRadius (double v) {
     this._borderRadius = v;
   }
+    */
     
-  String? _color;  
-
+  String? color;
+    /*
   String get color { 
     if (this._color == null) {
       this._color = "";
@@ -48,9 +53,10 @@ class FocusBorderStyleObject extends OptionFragment {
   void set color (String v) {
     this._color = v;
   }
+    */
     
-  double? _lineWidth;  
-
+  double? lineWidth;
+    /*
   double get lineWidth { 
     if (this._lineWidth == null) {
       this._lineWidth = 0;
@@ -61,6 +67,7 @@ class FocusBorderStyleObject extends OptionFragment {
   void set lineWidth (double v) {
     this._lineWidth = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -70,16 +77,16 @@ class FocusBorderStyleObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._borderRadius != null) {  
-      buffer.writeAll(["\"borderRadius\":", this._borderRadius, ","], "");
+    if (this.borderRadius != null) {  
+      buffer.writeAll(["\"borderRadius\":", this.borderRadius, ","], "");
     }
 
-    if (this._color != null) {  
-      buffer.writeAll(["\"color\":\`", this._color, "\`,"], "");
+    if (this.color != null) {  
+      buffer.writeAll(["\"color\":\`", this.color, "\`,"], "");
     }
 
-    if (this._lineWidth != null) {  
-      buffer.writeAll(["\"lineWidth\":", this._lineWidth, ","], "");
+    if (this.lineWidth != null) {  
+      buffer.writeAll(["\"lineWidth\":", this.lineWidth, ","], "");
     }
   }
 

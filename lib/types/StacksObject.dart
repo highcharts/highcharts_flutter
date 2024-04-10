@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,11 @@ import 'OptionFragment.dart';
  * StacksObject 
  */
 class StacksObject extends OptionFragment {
-  StacksObject() : super();
-  bool? _changed;  
-
+  StacksObject( {
+    this.changed = null
+  }) : super();
+  bool? changed;
+    /*
   bool get changed { 
     if (this._changed == null) {
       this._changed = false;
@@ -35,6 +37,7 @@ class StacksObject extends OptionFragment {
   void set changed (bool v) {
     this._changed = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -44,8 +47,8 @@ class StacksObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._changed != null) {  
-      buffer.writeAll(["\"changed\":", this._changed, ","], "");
+    if (this.changed != null) {  
+      buffer.writeAll(["\"changed\":", this.changed, ","], "");
     }
 
     // NOTE: skip serialization of alreadyChanged (type string[] is ignored)} 

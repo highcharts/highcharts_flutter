@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -27,9 +27,16 @@ import 'OptionFragment.dart';
  * AxisLabelFormatterContextObject 
  */
 class AxisLabelFormatterContextObject extends OptionFragment {
-  AxisLabelFormatterContextObject() : super();
-  String? _dateTimeLabelFormat;  
-
+  AxisLabelFormatterContextObject( {
+    this.dateTimeLabelFormat = null,
+    this.isFirst = null,
+    this.isLast = null,
+    this.pos = null,
+    this.text = null,
+    this.value = null
+  }) : super();
+  String? dateTimeLabelFormat;
+    /*
   String get dateTimeLabelFormat { 
     if (this._dateTimeLabelFormat == null) {
       this._dateTimeLabelFormat = "";
@@ -40,9 +47,10 @@ class AxisLabelFormatterContextObject extends OptionFragment {
   void set dateTimeLabelFormat (String v) {
     this._dateTimeLabelFormat = v;
   }
+    */
     
-  bool? _isFirst;  
-
+  bool? isFirst;
+    /*
   bool get isFirst { 
     if (this._isFirst == null) {
       this._isFirst = false;
@@ -53,9 +61,10 @@ class AxisLabelFormatterContextObject extends OptionFragment {
   void set isFirst (bool v) {
     this._isFirst = v;
   }
+    */
     
-  bool? _isLast;  
-
+  bool? isLast;
+    /*
   bool get isLast { 
     if (this._isLast == null) {
       this._isLast = false;
@@ -66,9 +75,10 @@ class AxisLabelFormatterContextObject extends OptionFragment {
   void set isLast (bool v) {
     this._isLast = v;
   }
+    */
     
-  double? _pos;  
-
+  double? pos;
+    /*
   double get pos { 
     if (this._pos == null) {
       this._pos = 0;
@@ -79,9 +89,10 @@ class AxisLabelFormatterContextObject extends OptionFragment {
   void set pos (double v) {
     this._pos = v;
   }
+    */
     
-  String? _text;  
-
+  String? text;
+    /*
   String get text { 
     if (this._text == null) {
       this._text = "";
@@ -92,9 +103,10 @@ class AxisLabelFormatterContextObject extends OptionFragment {
   void set text (String v) {
     this._text = v;
   }
+    */
     
-  String? _value;  
-
+  String? value;
+    /*
   String get value { 
     if (this._value == null) {
       this._value = "";
@@ -105,6 +117,7 @@ class AxisLabelFormatterContextObject extends OptionFragment {
   void set value (String v) {
     this._value = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -120,30 +133,30 @@ class AxisLabelFormatterContextObject extends OptionFragment {
 
     // NOTE: skip serialization of chart (type Chart is ignored)} 
 
-    if (this._dateTimeLabelFormat != null) {  
-      buffer.writeAll(["\"dateTimeLabelFormat\":\`", this._dateTimeLabelFormat, "\`,"], "");
+    if (this.dateTimeLabelFormat != null) {  
+      buffer.writeAll(["\"dateTimeLabelFormat\":\`", this.dateTimeLabelFormat, "\`,"], "");
     }
 
-    if (this._isFirst != null) {  
-      buffer.writeAll(["\"isFirst\":", this._isFirst, ","], "");
+    if (this.isFirst != null) {  
+      buffer.writeAll(["\"isFirst\":", this.isFirst, ","], "");
     }
 
-    if (this._isLast != null) {  
-      buffer.writeAll(["\"isLast\":", this._isLast, ","], "");
+    if (this.isLast != null) {  
+      buffer.writeAll(["\"isLast\":", this.isLast, ","], "");
     }
 
-    if (this._pos != null) {  
-      buffer.writeAll(["\"pos\":", this._pos, ","], "");
+    if (this.pos != null) {  
+      buffer.writeAll(["\"pos\":", this.pos, ","], "");
     }
 
-    if (this._text != null) {  
-      buffer.writeAll(["\"text\":\`", this._text, "\`,"], "");
+    if (this.text != null) {  
+      buffer.writeAll(["\"text\":\`", this.text, "\`,"], "");
     }
 
     // NOTE: skip serialization of tick (type Tick is ignored)} 
 
-    if (this._value != null) {  
-      buffer.writeAll(["\"value\":\`", this._value, "\`,"], "");
+    if (this.value != null) {  
+      buffer.writeAll(["\"value\":\`", this.value, "\`,"], "");
     }
 
     // NOTE: skip serialization of point (type Point is ignored)} 

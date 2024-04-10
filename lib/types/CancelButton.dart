@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,11 @@ import 'OptionFragment.dart';
  * CancelButton 
  */
 class CancelButton extends OptionFragment {
-  CancelButton() : super();
-  String? _value;  
-
+  CancelButton( {
+    this.value = null
+  }) : super();
+  String? value;
+    /*
   String get value { 
     if (this._value == null) {
       this._value = "";
@@ -35,6 +37,7 @@ class CancelButton extends OptionFragment {
   void set value (String v) {
     this._value = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -44,8 +47,8 @@ class CancelButton extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._value != null) {  
-      buffer.writeAll(["\"value\":\`", this._value, "\`,"], "");
+    if (this.value != null) {  
+      buffer.writeAll(["\"value\":\`", this.value, "\`,"], "");
     }
 
     // NOTE: skip serialization of callback (type Function is ignored)} 

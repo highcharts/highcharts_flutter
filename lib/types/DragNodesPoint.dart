@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -24,9 +24,12 @@ import 'OptionFragment.dart';
  * DragNodesPoint 
  */
 class DragNodesPoint extends Point {
-  DragNodesPoint() : super();
-  bool? _hasDragged;  
-
+  DragNodesPoint( {
+    this.hasDragged = null,
+    this.inDragMode = null
+  }) : super();
+  bool? hasDragged;
+    /*
   bool get hasDragged { 
     if (this._hasDragged == null) {
       this._hasDragged = false;
@@ -37,9 +40,10 @@ class DragNodesPoint extends Point {
   void set hasDragged (bool v) {
     this._hasDragged = v;
   }
+    */
     
-  bool? _inDragMode;  
-
+  bool? inDragMode;
+    /*
   bool get inDragMode { 
     if (this._inDragMode == null) {
       this._inDragMode = false;
@@ -50,6 +54,7 @@ class DragNodesPoint extends Point {
   void set inDragMode (bool v) {
     this._inDragMode = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -61,12 +66,12 @@ class DragNodesPoint extends Point {
     
     // NOTE: skip serialization of fixedPosition (type Generic is ignored)} 
 
-    if (this._hasDragged != null) {  
-      buffer.writeAll(["\"hasDragged\":", this._hasDragged, ","], "");
+    if (this.hasDragged != null) {  
+      buffer.writeAll(["\"hasDragged\":", this.hasDragged, ","], "");
     }
 
-    if (this._inDragMode != null) {  
-      buffer.writeAll(["\"inDragMode\":", this._inDragMode, ","], "");
+    if (this.inDragMode != null) {  
+      buffer.writeAll(["\"inDragMode\":", this.inDragMode, ","], "");
     }
 
     // NOTE: skip serialization of series (type DragNodesSeries is ignored)} 

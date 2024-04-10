@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -26,7 +26,7 @@ import 'OptionFragment.dart';
  * DlOptionsParams 
  */
 class DlOptionsParams extends OptionFragment {
-  DlOptionsParams() : super();
+  DlOptionsParams( ) : super();
   
 
   //////////////////////////////////////////////////////////////////////////////

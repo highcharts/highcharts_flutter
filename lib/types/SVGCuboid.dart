@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -24,9 +24,12 @@ import 'OptionFragment.dart';
  * SVGCuboid 
  */
 class SVGCuboid extends SVGPath3D {
-  SVGCuboid() : super();
-  double? _isFront;  
-
+  SVGCuboid( {
+    this.isFront = null,
+    this.isTop = null
+  }) : super();
+  double? isFront;
+    /*
   double get isFront { 
     if (this._isFront == null) {
       this._isFront = 0;
@@ -37,9 +40,10 @@ class SVGCuboid extends SVGPath3D {
   void set isFront (double v) {
     this._isFront = v;
   }
+    */
     
-  double? _isTop;  
-
+  double? isTop;
+    /*
   double get isTop { 
     if (this._isTop == null) {
       this._isTop = 0;
@@ -50,6 +54,7 @@ class SVGCuboid extends SVGPath3D {
   void set isTop (double v) {
     this._isTop = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -61,12 +66,12 @@ class SVGCuboid extends SVGPath3D {
     
     // NOTE: skip serialization of front (type SVGPath is ignored)} 
 
-    if (this._isFront != null) {  
-      buffer.writeAll(["\"isFront\":", this._isFront, ","], "");
+    if (this.isFront != null) {  
+      buffer.writeAll(["\"isFront\":", this.isFront, ","], "");
     }
 
-    if (this._isTop != null) {  
-      buffer.writeAll(["\"isTop\":", this._isTop, ","], "");
+    if (this.isTop != null) {  
+      buffer.writeAll(["\"isTop\":", this.isTop, ","], "");
     }
 
     // NOTE: skip serialization of side (type SVGPath is ignored)} 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -25,7 +25,7 @@ import 'OptionFragment.dart';
  * OBVOptions 
  */
 class OBVOptions extends SMAOptions {
-  OBVOptions() : super();
+  OBVOptions( ) : super();
   /**
    * Options for the point markers of line and scatter-like series. Properties
    * like `fillColor`, `lineColor` and `lineWidth` define the visual
@@ -36,8 +36,8 @@ class OBVOptions extends SMAOptions {
    * In styled mode, the markers can be styled with the `.highcharts-point`,
    * `.highcharts-point-hover` and `.highcharts-point-select` class names.  
       */
-  PointMarkerOptions? _marker;  
-
+  PointMarkerOptions? marker;
+    /*
   PointMarkerOptions get marker { 
     if (this._marker == null) {
       this._marker = PointMarkerOptions();
@@ -48,6 +48,7 @@ class OBVOptions extends SMAOptions {
   void set marker (PointMarkerOptions v) {
     this._marker = v;
   }
+    */
     
   /**
    * Paramters used in calculation of regression series' points.  
@@ -62,8 +63,8 @@ class OBVOptions extends SMAOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._marker != null) {  
-      buffer.writeAll(["\"marker\":", this._marker?.toJSON(), ","], "");
+    if (this.marker != null) {  
+      buffer.writeAll(["\"marker\":", this.marker?.toJSON(), ","], "");
     }
 
     // NOTE: skip serialization of params (type OBVParamsOptions is ignored)} 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,11 @@ import 'OptionFragment.dart';
  * OrganizationDataLabelOptions 
  */
 class OrganizationDataLabelOptions extends SankeyDataLabelOptions {
-  OrganizationDataLabelOptions() : super();
-  String? _linkFormat;  
-
+  OrganizationDataLabelOptions( {
+    this.linkFormat = null
+  }) : super();
+  String? linkFormat;
+    /*
   String get linkFormat { 
     if (this._linkFormat == null) {
       this._linkFormat = "";
@@ -36,6 +38,7 @@ class OrganizationDataLabelOptions extends SankeyDataLabelOptions {
   void set linkFormat (String v) {
     this._linkFormat = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -45,8 +48,8 @@ class OrganizationDataLabelOptions extends SankeyDataLabelOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._linkFormat != null) {  
-      buffer.writeAll(["\"linkFormat\":\`", this._linkFormat, "\`,"], "");
+    if (this.linkFormat != null) {  
+      buffer.writeAll(["\"linkFormat\":\`", this.linkFormat, "\`,"], "");
     }
   }
 

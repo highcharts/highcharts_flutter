@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,19 @@ import 'OptionFragment.dart';
  * LangAccessibilitySeriesTypeDescriptionsOptions 
  */
 class LangAccessibilitySeriesTypeDescriptionsOptions extends OptionFragment {
-  LangAccessibilitySeriesTypeDescriptionsOptions() : super();
-  String? _arearange;  
-
+  LangAccessibilitySeriesTypeDescriptionsOptions( {
+    this.arearange = null,
+    this.areasplinerange = null,
+    this.boxplot = null,
+    this.bubble = null,
+    this.columnrange = null,
+    this.errorbar = null,
+    this.funnel = null,
+    this.pyramid = null,
+    this.waterfall = null
+  }) : super();
+  String? arearange;
+    /*
   String get arearange { 
     if (this._arearange == null) {
       this._arearange = "";
@@ -35,9 +45,10 @@ class LangAccessibilitySeriesTypeDescriptionsOptions extends OptionFragment {
   void set arearange (String v) {
     this._arearange = v;
   }
+    */
     
-  String? _areasplinerange;  
-
+  String? areasplinerange;
+    /*
   String get areasplinerange { 
     if (this._areasplinerange == null) {
       this._areasplinerange = "";
@@ -48,9 +59,10 @@ class LangAccessibilitySeriesTypeDescriptionsOptions extends OptionFragment {
   void set areasplinerange (String v) {
     this._areasplinerange = v;
   }
+    */
     
-  String? _boxplot;  
-
+  String? boxplot;
+    /*
   String get boxplot { 
     if (this._boxplot == null) {
       this._boxplot = "";
@@ -61,9 +73,10 @@ class LangAccessibilitySeriesTypeDescriptionsOptions extends OptionFragment {
   void set boxplot (String v) {
     this._boxplot = v;
   }
+    */
     
-  String? _bubble;  
-
+  String? bubble;
+    /*
   String get bubble { 
     if (this._bubble == null) {
       this._bubble = "";
@@ -74,9 +87,10 @@ class LangAccessibilitySeriesTypeDescriptionsOptions extends OptionFragment {
   void set bubble (String v) {
     this._bubble = v;
   }
+    */
     
-  String? _columnrange;  
-
+  String? columnrange;
+    /*
   String get columnrange { 
     if (this._columnrange == null) {
       this._columnrange = "";
@@ -87,9 +101,10 @@ class LangAccessibilitySeriesTypeDescriptionsOptions extends OptionFragment {
   void set columnrange (String v) {
     this._columnrange = v;
   }
+    */
     
-  String? _errorbar;  
-
+  String? errorbar;
+    /*
   String get errorbar { 
     if (this._errorbar == null) {
       this._errorbar = "";
@@ -100,9 +115,10 @@ class LangAccessibilitySeriesTypeDescriptionsOptions extends OptionFragment {
   void set errorbar (String v) {
     this._errorbar = v;
   }
+    */
     
-  String? _funnel;  
-
+  String? funnel;
+    /*
   String get funnel { 
     if (this._funnel == null) {
       this._funnel = "";
@@ -113,9 +129,10 @@ class LangAccessibilitySeriesTypeDescriptionsOptions extends OptionFragment {
   void set funnel (String v) {
     this._funnel = v;
   }
+    */
     
-  String? _pyramid;  
-
+  String? pyramid;
+    /*
   String get pyramid { 
     if (this._pyramid == null) {
       this._pyramid = "";
@@ -126,9 +143,10 @@ class LangAccessibilitySeriesTypeDescriptionsOptions extends OptionFragment {
   void set pyramid (String v) {
     this._pyramid = v;
   }
+    */
     
-  String? _waterfall;  
-
+  String? waterfall;
+    /*
   String get waterfall { 
     if (this._waterfall == null) {
       this._waterfall = "";
@@ -139,6 +157,7 @@ class LangAccessibilitySeriesTypeDescriptionsOptions extends OptionFragment {
   void set waterfall (String v) {
     this._waterfall = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -148,40 +167,40 @@ class LangAccessibilitySeriesTypeDescriptionsOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._arearange != null) {  
-      buffer.writeAll(["\"arearange\":\`", this._arearange, "\`,"], "");
+    if (this.arearange != null) {  
+      buffer.writeAll(["\"arearange\":\`", this.arearange, "\`,"], "");
     }
 
-    if (this._areasplinerange != null) {  
-      buffer.writeAll(["\"areasplinerange\":\`", this._areasplinerange, "\`,"], "");
+    if (this.areasplinerange != null) {  
+      buffer.writeAll(["\"areasplinerange\":\`", this.areasplinerange, "\`,"], "");
     }
 
-    if (this._boxplot != null) {  
-      buffer.writeAll(["\"boxplot\":\`", this._boxplot, "\`,"], "");
+    if (this.boxplot != null) {  
+      buffer.writeAll(["\"boxplot\":\`", this.boxplot, "\`,"], "");
     }
 
-    if (this._bubble != null) {  
-      buffer.writeAll(["\"bubble\":\`", this._bubble, "\`,"], "");
+    if (this.bubble != null) {  
+      buffer.writeAll(["\"bubble\":\`", this.bubble, "\`,"], "");
     }
 
-    if (this._columnrange != null) {  
-      buffer.writeAll(["\"columnrange\":\`", this._columnrange, "\`,"], "");
+    if (this.columnrange != null) {  
+      buffer.writeAll(["\"columnrange\":\`", this.columnrange, "\`,"], "");
     }
 
-    if (this._errorbar != null) {  
-      buffer.writeAll(["\"errorbar\":\`", this._errorbar, "\`,"], "");
+    if (this.errorbar != null) {  
+      buffer.writeAll(["\"errorbar\":\`", this.errorbar, "\`,"], "");
     }
 
-    if (this._funnel != null) {  
-      buffer.writeAll(["\"funnel\":\`", this._funnel, "\`,"], "");
+    if (this.funnel != null) {  
+      buffer.writeAll(["\"funnel\":\`", this.funnel, "\`,"], "");
     }
 
-    if (this._pyramid != null) {  
-      buffer.writeAll(["\"pyramid\":\`", this._pyramid, "\`,"], "");
+    if (this.pyramid != null) {  
+      buffer.writeAll(["\"pyramid\":\`", this.pyramid, "\`,"], "");
     }
 
-    if (this._waterfall != null) {  
-      buffer.writeAll(["\"waterfall\":\`", this._waterfall, "\`,"], "");
+    if (this.waterfall != null) {  
+      buffer.writeAll(["\"waterfall\":\`", this.waterfall, "\`,"], "");
     }
   }
 

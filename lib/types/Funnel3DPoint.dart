@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,11 @@ import 'OptionFragment.dart';
  * Funnel3DPoint 
  */
 class Funnel3DPoint extends OptionFragment {
-  Funnel3DPoint() : super();
-  String? _shapeType;  
-
+  Funnel3DPoint( {
+    this.shapeType = null
+  }) : super();
+  String? shapeType;
+    /*
   String get shapeType { 
     if (this._shapeType == null) {
       this._shapeType = "";
@@ -35,6 +37,7 @@ class Funnel3DPoint extends OptionFragment {
   void set shapeType (String v) {
     this._shapeType = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -44,8 +47,8 @@ class Funnel3DPoint extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._shapeType != null) {  
-      buffer.writeAll(["\"shapeType\":\`", this._shapeType, "\`,"], "");
+    if (this.shapeType != null) {  
+      buffer.writeAll(["\"shapeType\":\`", this.shapeType, "\`,"], "");
     }
   }
 

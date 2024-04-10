@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,12 @@ import 'OptionFragment.dart';
  * HoverPointEventDetails 
  */
 class HoverPointEventDetails extends OptionFragment {
-  HoverPointEventDetails() : super();
-  bool? _isDataGrid;  
-
+  HoverPointEventDetails( {
+    this.isDataGrid = null,
+    this.sender = null
+  }) : super();
+  bool? isDataGrid;
+    /*
   bool get isDataGrid { 
     if (this._isDataGrid == null) {
       this._isDataGrid = false;
@@ -35,9 +38,10 @@ class HoverPointEventDetails extends OptionFragment {
   void set isDataGrid (bool v) {
     this._isDataGrid = v;
   }
+    */
     
-  String? _sender;  
-
+  String? sender;
+    /*
   String get sender { 
     if (this._sender == null) {
       this._sender = "";
@@ -48,6 +52,7 @@ class HoverPointEventDetails extends OptionFragment {
   void set sender (String v) {
     this._sender = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -59,12 +64,12 @@ class HoverPointEventDetails extends OptionFragment {
     
     // NOTE: skip serialization of detail (type AnyRecord is ignored)} 
 
-    if (this._isDataGrid != null) {  
-      buffer.writeAll(["\"isDataGrid\":", this._isDataGrid, ","], "");
+    if (this.isDataGrid != null) {  
+      buffer.writeAll(["\"isDataGrid\":", this.isDataGrid, ","], "");
     }
 
-    if (this._sender != null) {  
-      buffer.writeAll(["\"sender\":\`", this._sender, "\`,"], "");
+    if (this.sender != null) {  
+      buffer.writeAll(["\"sender\":\`", this.sender, "\`,"], "");
     }
   }
 

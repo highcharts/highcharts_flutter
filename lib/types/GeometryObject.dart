@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,12 @@ import 'OptionFragment.dart';
  * GeometryObject 
  */
 class GeometryObject extends PositionObject {
-  GeometryObject() : super();
-  double? _angle;  
-
+  GeometryObject( {
+    this.angle = null,
+    this.r = null
+  }) : super();
+  double? angle;
+    /*
   double get angle { 
     if (this._angle == null) {
       this._angle = 0;
@@ -36,9 +39,10 @@ class GeometryObject extends PositionObject {
   void set angle (double v) {
     this._angle = v;
   }
+    */
     
-  double? _r;  
-
+  double? r;
+    /*
   double get r { 
     if (this._r == null) {
       this._r = 0;
@@ -49,6 +53,7 @@ class GeometryObject extends PositionObject {
   void set r (double v) {
     this._r = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -58,16 +63,16 @@ class GeometryObject extends PositionObject {
     super.toJSONInner(buffer);
 
     
-    if (this._angle != null) {  
-      buffer.writeAll(["\"angle\":", this._angle, ","], "");
+    if (this.angle != null) {  
+      buffer.writeAll(["\"angle\":", this.angle, ","], "");
     }
 
-    if (this._r != null) {  
-      buffer.writeAll(["\"r\":", this._r, ","], "");
+    if (this.r != null) {  
+      buffer.writeAll(["\"r\":", this.r, ","], "");
     }
 
-    if (this._angle != null) {  
-      buffer.writeAll(["\"angle\":", this._angle, ","], "");
+    if (this.angle != null) {  
+      buffer.writeAll(["\"angle\":", this.angle, ","], "");
     }
   }
 

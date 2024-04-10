@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,11 @@ import 'OptionFragment.dart';
  * ProxyGroup 
  */
 class ProxyGroup extends OptionFragment {
-  ProxyGroup() : super();
-  String? _type;  
-
+  ProxyGroup( {
+    this.type = null
+  }) : super();
+  String? type;
+    /*
   String get type { 
     if (this._type == null) {
       this._type = "";
@@ -36,6 +38,7 @@ class ProxyGroup extends OptionFragment {
   void set type (String v) {
     this._type = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -49,8 +52,8 @@ class ProxyGroup extends OptionFragment {
 
     // NOTE: skip serialization of groupElement (type HTMLElement is ignored)} 
 
-    if (this._type != null) {  
-      buffer.writeAll(["\"type\":\`", this._type, "\`,"], "");
+    if (this.type != null) {  
+      buffer.writeAll(["\"type\":\`", this.type, "\`,"], "");
     }
 
     // NOTE: skip serialization of proxyElements (type ProxyElement is ignored)} 

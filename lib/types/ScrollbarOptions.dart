@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,14 +22,42 @@ import 'OptionFragment.dart';
  * ScrollbarOptions 
  */
 class ScrollbarOptions extends OptionFragment {
-  ScrollbarOptions() : super();
+  ScrollbarOptions( {
+    this.barBackgroundColor = null,
+    this.barBorderColor = null,
+    this.barBorderRadius = null,
+    this.barBorderWidth = null,
+    this.buttonArrowColor = null,
+    this.buttonBackgroundColor = null,
+    this.buttonBorderColor = null,
+    this.buttonBorderRadius = null,
+    this.buttonBorderWidth = null,
+    this.buttonsEnabled = null,
+    this.enabled = null,
+    this.height = null,
+    this.inverted = null,
+    this.liveRedraw = null,
+    this.margin = null,
+    this.minWidth = null,
+    this.opposite = null,
+    this.rifleColor = null,
+    this.showFull = null,
+    this.size = null,
+    this.step = null,
+    this.trackBackgroundColor = null,
+    this.trackBorderColor = null,
+    this.trackBorderRadius = null,
+    this.trackBorderWidth = null,
+    this.vertical = null,
+    this.zIndex = null
+  }) : super();
   /**
    * The background color of the scrollbar itself. 
    * 
    * Defaults to '#cccccc'. 
       */
-  String? _barBackgroundColor;  
-
+  String? barBackgroundColor;
+    /*
   String get barBackgroundColor { 
     if (this._barBackgroundColor == null) {
       this._barBackgroundColor = "";
@@ -40,14 +68,15 @@ class ScrollbarOptions extends OptionFragment {
   void set barBackgroundColor (String v) {
     this._barBackgroundColor = v;
   }
+    */
     
   /**
    * The color of the scrollbar's border. 
    * 
    * Defaults to '#cccccc'. 
       */
-  String? _barBorderColor;  
-
+  String? barBorderColor;
+    /*
   String get barBorderColor { 
     if (this._barBorderColor == null) {
       this._barBorderColor = "";
@@ -58,14 +87,15 @@ class ScrollbarOptions extends OptionFragment {
   void set barBorderColor (String v) {
     this._barBorderColor = v;
   }
+    */
     
   /**
    * The border rounding radius of the bar. 
    * 
    * Defaults to '5'. 
       */
-  double? _barBorderRadius;  
-
+  double? barBorderRadius;
+    /*
   double get barBorderRadius { 
     if (this._barBorderRadius == null) {
       this._barBorderRadius = 0;
@@ -76,12 +106,13 @@ class ScrollbarOptions extends OptionFragment {
   void set barBorderRadius (double v) {
     this._barBorderRadius = v;
   }
+    */
     
   /**
    * The width of the bar's border.  
       */
-  double? _barBorderWidth;  
-
+  double? barBorderWidth;
+    /*
   double get barBorderWidth { 
     if (this._barBorderWidth == null) {
       this._barBorderWidth = 0;
@@ -92,14 +123,15 @@ class ScrollbarOptions extends OptionFragment {
   void set barBorderWidth (double v) {
     this._barBorderWidth = v;
   }
+    */
     
   /**
    * The color of the small arrow inside the scrollbar buttons. 
    * 
    * Defaults to '#333333'. 
       */
-  String? _buttonArrowColor;  
-
+  String? buttonArrowColor;
+    /*
   String get buttonArrowColor { 
     if (this._buttonArrowColor == null) {
       this._buttonArrowColor = "";
@@ -110,14 +142,15 @@ class ScrollbarOptions extends OptionFragment {
   void set buttonArrowColor (String v) {
     this._buttonArrowColor = v;
   }
+    */
     
   /**
    * The color of scrollbar buttons. 
    * 
    * Defaults to '#e6e6e6'. 
       */
-  String? _buttonBackgroundColor;  
-
+  String? buttonBackgroundColor;
+    /*
   String get buttonBackgroundColor { 
     if (this._buttonBackgroundColor == null) {
       this._buttonBackgroundColor = "";
@@ -128,14 +161,15 @@ class ScrollbarOptions extends OptionFragment {
   void set buttonBackgroundColor (String v) {
     this._buttonBackgroundColor = v;
   }
+    */
     
   /**
    * The color of the border of the scrollbar buttons. 
    * 
    * Defaults to '#cccccc'. 
       */
-  String? _buttonBorderColor;  
-
+  String? buttonBorderColor;
+    /*
   String get buttonBorderColor { 
     if (this._buttonBorderColor == null) {
       this._buttonBorderColor = "";
@@ -146,12 +180,13 @@ class ScrollbarOptions extends OptionFragment {
   void set buttonBorderColor (String v) {
     this._buttonBorderColor = v;
   }
+    */
     
   /**
    * The corner radius of the scrollbar buttons.  
       */
-  double? _buttonBorderRadius;  
-
+  double? buttonBorderRadius;
+    /*
   double get buttonBorderRadius { 
     if (this._buttonBorderRadius == null) {
       this._buttonBorderRadius = 0;
@@ -162,14 +197,15 @@ class ScrollbarOptions extends OptionFragment {
   void set buttonBorderRadius (double v) {
     this._buttonBorderRadius = v;
   }
+    */
     
   /**
    * The border width of the scrollbar buttons. 
    * 
    * Defaults to '1'. 
       */
-  double? _buttonBorderWidth;  
-
+  double? buttonBorderWidth;
+    /*
   double get buttonBorderWidth { 
     if (this._buttonBorderWidth == null) {
       this._buttonBorderWidth = 0;
@@ -180,12 +216,13 @@ class ScrollbarOptions extends OptionFragment {
   void set buttonBorderWidth (double v) {
     this._buttonBorderWidth = v;
   }
+    */
     
   /**
    * Enable or disable the buttons at the end of the scrollbar.  
       */
-  bool? _buttonsEnabled;  
-
+  bool? buttonsEnabled;
+    /*
   bool get buttonsEnabled { 
     if (this._buttonsEnabled == null) {
       this._buttonsEnabled = false;
@@ -196,14 +233,15 @@ class ScrollbarOptions extends OptionFragment {
   void set buttonsEnabled (bool v) {
     this._buttonsEnabled = v;
   }
+    */
     
   /**
    * Enable or disable the scrollbar. 
    * 
    * Defaults to 'true'. 
       */
-  bool? _enabled;  
-
+  bool? enabled;
+    /*
   bool get enabled { 
     if (this._enabled == null) {
       this._enabled = false;
@@ -214,6 +252,7 @@ class ScrollbarOptions extends OptionFragment {
   void set enabled (bool v) {
     this._enabled = v;
   }
+    */
     
   /**
    * The height of the scrollbar. If `buttonsEnabled` is true , the height
@@ -222,8 +261,8 @@ class ScrollbarOptions extends OptionFragment {
    * 
    * Defaults to '10'. 
       */
-  double? _height;  
-
+  double? height;
+    /*
   double get height { 
     if (this._height == null) {
       this._height = 0;
@@ -234,9 +273,10 @@ class ScrollbarOptions extends OptionFragment {
   void set height (double v) {
     this._height = v;
   }
+    */
     
-  bool? _inverted;  
-
+  bool? inverted;
+    /*
   bool get inverted { 
     if (this._inverted == null) {
       this._inverted = false;
@@ -247,6 +287,7 @@ class ScrollbarOptions extends OptionFragment {
   void set inverted (bool v) {
     this._inverted = v;
   }
+    */
     
   /**
    * Whether to redraw the main chart as the scrollbar or the navigator
@@ -255,8 +296,8 @@ class ScrollbarOptions extends OptionFragment {
    * 
    * Defaults to 'undefined'. 
       */
-  bool? _liveRedraw;  
-
+  bool? liveRedraw;
+    /*
   bool get liveRedraw { 
     if (this._liveRedraw == null) {
       this._liveRedraw = false;
@@ -267,14 +308,15 @@ class ScrollbarOptions extends OptionFragment {
   void set liveRedraw (bool v) {
     this._liveRedraw = v;
   }
+    */
     
   /**
    * The margin between the scrollbar and its axis when the scrollbar is
    * applied directly to an axis, or the navigator in case that is enabled.
    * Defaults to 10 for axis, 0 for navigator.  
       */
-  double? _margin;  
-
+  double? margin;
+    /*
   double get margin { 
     if (this._margin == null) {
       this._margin = 0;
@@ -285,14 +327,15 @@ class ScrollbarOptions extends OptionFragment {
   void set margin (double v) {
     this._margin = v;
   }
+    */
     
   /**
    * The minimum width of the scrollbar. 
    * 
    * Defaults to '6'. 
       */
-  double? _minWidth;  
-
+  double? minWidth;
+    /*
   double get minWidth { 
     if (this._minWidth == null) {
       this._minWidth = 0;
@@ -303,9 +346,10 @@ class ScrollbarOptions extends OptionFragment {
   void set minWidth (double v) {
     this._minWidth = v;
   }
+    */
     
-  bool? _opposite;  
-
+  bool? opposite;
+    /*
   bool get opposite { 
     if (this._opposite == null) {
       this._opposite = false;
@@ -316,14 +360,15 @@ class ScrollbarOptions extends OptionFragment {
   void set opposite (bool v) {
     this._opposite = v;
   }
+    */
     
   /**
    * The color of the small rifles in the middle of the scrollbar. 
    * 
    * Defaults to 'none'. 
       */
-  String? _rifleColor;  
-
+  String? rifleColor;
+    /*
   String get rifleColor { 
     if (this._rifleColor == null) {
       this._rifleColor = "";
@@ -334,6 +379,7 @@ class ScrollbarOptions extends OptionFragment {
   void set rifleColor (String v) {
     this._rifleColor = v;
   }
+    */
     
   /**
    * Whether to show or hide the scrollbar when the scrolled content is
@@ -341,8 +387,8 @@ class ScrollbarOptions extends OptionFragment {
    * 
    * Defaults to 'true'. 
       */
-  bool? _showFull;  
-
+  bool? showFull;
+    /*
   bool get showFull { 
     if (this._showFull == null) {
       this._showFull = false;
@@ -353,9 +399,10 @@ class ScrollbarOptions extends OptionFragment {
   void set showFull (bool v) {
     this._showFull = v;
   }
+    */
     
-  double? _size;  
-
+  double? size;
+    /*
   double get size { 
     if (this._size == null) {
       this._size = 0;
@@ -366,9 +413,10 @@ class ScrollbarOptions extends OptionFragment {
   void set size (double v) {
     this._size = v;
   }
+    */
     
-  double? _step;  
-
+  double? step;
+    /*
   double get step { 
     if (this._step == null) {
       this._step = 0;
@@ -379,14 +427,15 @@ class ScrollbarOptions extends OptionFragment {
   void set step (double v) {
     this._step = v;
   }
+    */
     
   /**
    * The color of the track background. 
    * 
    * Defaults to 'rgba(255, 255, 255, 0.001)'. 
       */
-  String? _trackBackgroundColor;  
-
+  String? trackBackgroundColor;
+    /*
   String get trackBackgroundColor { 
     if (this._trackBackgroundColor == null) {
       this._trackBackgroundColor = "";
@@ -397,14 +446,15 @@ class ScrollbarOptions extends OptionFragment {
   void set trackBackgroundColor (String v) {
     this._trackBackgroundColor = v;
   }
+    */
     
   /**
    * The color of the border of the scrollbar track. 
    * 
    * Defaults to '#cccccc'. 
       */
-  String? _trackBorderColor;  
-
+  String? trackBorderColor;
+    /*
   String get trackBorderColor { 
     if (this._trackBorderColor == null) {
       this._trackBorderColor = "";
@@ -415,14 +465,15 @@ class ScrollbarOptions extends OptionFragment {
   void set trackBorderColor (String v) {
     this._trackBorderColor = v;
   }
+    */
     
   /**
    * The corner radius of the border of the scrollbar track. 
    * 
    * Defaults to '5'. 
       */
-  double? _trackBorderRadius;  
-
+  double? trackBorderRadius;
+    /*
   double get trackBorderRadius { 
     if (this._trackBorderRadius == null) {
       this._trackBorderRadius = 0;
@@ -433,14 +484,15 @@ class ScrollbarOptions extends OptionFragment {
   void set trackBorderRadius (double v) {
     this._trackBorderRadius = v;
   }
+    */
     
   /**
    * The width of the border of the scrollbar track. 
    * 
    * Defaults to '1'. 
       */
-  double? _trackBorderWidth;  
-
+  double? trackBorderWidth;
+    /*
   double get trackBorderWidth { 
     if (this._trackBorderWidth == null) {
       this._trackBorderWidth = 0;
@@ -451,9 +503,10 @@ class ScrollbarOptions extends OptionFragment {
   void set trackBorderWidth (double v) {
     this._trackBorderWidth = v;
   }
+    */
     
-  bool? _vertical;  
-
+  bool? vertical;
+    /*
   bool get vertical { 
     if (this._vertical == null) {
       this._vertical = false;
@@ -464,14 +517,15 @@ class ScrollbarOptions extends OptionFragment {
   void set vertical (bool v) {
     this._vertical = v;
   }
+    */
     
   /**
    * The z index of the scrollbar group. 
    * 
    * Defaults to '3'. 
       */
-  double? _zIndex;  
-
+  double? zIndex;
+    /*
   double get zIndex { 
     if (this._zIndex == null) {
       this._zIndex = 0;
@@ -482,6 +536,7 @@ class ScrollbarOptions extends OptionFragment {
   void set zIndex (double v) {
     this._zIndex = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -491,112 +546,112 @@ class ScrollbarOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._barBackgroundColor != null) {  
-      buffer.writeAll(["\"barBackgroundColor\":\`", this._barBackgroundColor, "\`,"], "");
+    if (this.barBackgroundColor != null) {  
+      buffer.writeAll(["\"barBackgroundColor\":\`", this.barBackgroundColor, "\`,"], "");
     }
 
-    if (this._barBorderColor != null) {  
-      buffer.writeAll(["\"barBorderColor\":\`", this._barBorderColor, "\`,"], "");
+    if (this.barBorderColor != null) {  
+      buffer.writeAll(["\"barBorderColor\":\`", this.barBorderColor, "\`,"], "");
     }
 
-    if (this._barBorderRadius != null) {  
-      buffer.writeAll(["\"barBorderRadius\":", this._barBorderRadius, ","], "");
+    if (this.barBorderRadius != null) {  
+      buffer.writeAll(["\"barBorderRadius\":", this.barBorderRadius, ","], "");
     }
 
-    if (this._barBorderWidth != null) {  
-      buffer.writeAll(["\"barBorderWidth\":", this._barBorderWidth, ","], "");
+    if (this.barBorderWidth != null) {  
+      buffer.writeAll(["\"barBorderWidth\":", this.barBorderWidth, ","], "");
     }
 
-    if (this._buttonArrowColor != null) {  
-      buffer.writeAll(["\"buttonArrowColor\":\`", this._buttonArrowColor, "\`,"], "");
+    if (this.buttonArrowColor != null) {  
+      buffer.writeAll(["\"buttonArrowColor\":\`", this.buttonArrowColor, "\`,"], "");
     }
 
-    if (this._buttonBackgroundColor != null) {  
-      buffer.writeAll(["\"buttonBackgroundColor\":\`", this._buttonBackgroundColor, "\`,"], "");
+    if (this.buttonBackgroundColor != null) {  
+      buffer.writeAll(["\"buttonBackgroundColor\":\`", this.buttonBackgroundColor, "\`,"], "");
     }
 
-    if (this._buttonBorderColor != null) {  
-      buffer.writeAll(["\"buttonBorderColor\":\`", this._buttonBorderColor, "\`,"], "");
+    if (this.buttonBorderColor != null) {  
+      buffer.writeAll(["\"buttonBorderColor\":\`", this.buttonBorderColor, "\`,"], "");
     }
 
-    if (this._buttonBorderRadius != null) {  
-      buffer.writeAll(["\"buttonBorderRadius\":", this._buttonBorderRadius, ","], "");
+    if (this.buttonBorderRadius != null) {  
+      buffer.writeAll(["\"buttonBorderRadius\":", this.buttonBorderRadius, ","], "");
     }
 
-    if (this._buttonBorderWidth != null) {  
-      buffer.writeAll(["\"buttonBorderWidth\":", this._buttonBorderWidth, ","], "");
+    if (this.buttonBorderWidth != null) {  
+      buffer.writeAll(["\"buttonBorderWidth\":", this.buttonBorderWidth, ","], "");
     }
 
-    if (this._buttonsEnabled != null) {  
-      buffer.writeAll(["\"buttonsEnabled\":", this._buttonsEnabled, ","], "");
+    if (this.buttonsEnabled != null) {  
+      buffer.writeAll(["\"buttonsEnabled\":", this.buttonsEnabled, ","], "");
     }
 
-    if (this._enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this._enabled, ","], "");
+    if (this.enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
     }
 
-    if (this._height != null) {  
-      buffer.writeAll(["\"height\":", this._height, ","], "");
+    if (this.height != null) {  
+      buffer.writeAll(["\"height\":", this.height, ","], "");
     }
 
-    if (this._inverted != null) {  
-      buffer.writeAll(["\"inverted\":", this._inverted, ","], "");
+    if (this.inverted != null) {  
+      buffer.writeAll(["\"inverted\":", this.inverted, ","], "");
     }
 
-    if (this._liveRedraw != null) {  
-      buffer.writeAll(["\"liveRedraw\":", this._liveRedraw, ","], "");
+    if (this.liveRedraw != null) {  
+      buffer.writeAll(["\"liveRedraw\":", this.liveRedraw, ","], "");
     }
 
-    if (this._margin != null) {  
-      buffer.writeAll(["\"margin\":", this._margin, ","], "");
+    if (this.margin != null) {  
+      buffer.writeAll(["\"margin\":", this.margin, ","], "");
     }
 
-    if (this._minWidth != null) {  
-      buffer.writeAll(["\"minWidth\":", this._minWidth, ","], "");
+    if (this.minWidth != null) {  
+      buffer.writeAll(["\"minWidth\":", this.minWidth, ","], "");
     }
 
-    if (this._opposite != null) {  
-      buffer.writeAll(["\"opposite\":", this._opposite, ","], "");
+    if (this.opposite != null) {  
+      buffer.writeAll(["\"opposite\":", this.opposite, ","], "");
     }
 
-    if (this._rifleColor != null) {  
-      buffer.writeAll(["\"rifleColor\":\`", this._rifleColor, "\`,"], "");
+    if (this.rifleColor != null) {  
+      buffer.writeAll(["\"rifleColor\":\`", this.rifleColor, "\`,"], "");
     }
 
-    if (this._showFull != null) {  
-      buffer.writeAll(["\"showFull\":", this._showFull, ","], "");
+    if (this.showFull != null) {  
+      buffer.writeAll(["\"showFull\":", this.showFull, ","], "");
     }
 
-    if (this._size != null) {  
-      buffer.writeAll(["\"size\":", this._size, ","], "");
+    if (this.size != null) {  
+      buffer.writeAll(["\"size\":", this.size, ","], "");
     }
 
-    if (this._step != null) {  
-      buffer.writeAll(["\"step\":", this._step, ","], "");
+    if (this.step != null) {  
+      buffer.writeAll(["\"step\":", this.step, ","], "");
     }
 
-    if (this._trackBackgroundColor != null) {  
-      buffer.writeAll(["\"trackBackgroundColor\":\`", this._trackBackgroundColor, "\`,"], "");
+    if (this.trackBackgroundColor != null) {  
+      buffer.writeAll(["\"trackBackgroundColor\":\`", this.trackBackgroundColor, "\`,"], "");
     }
 
-    if (this._trackBorderColor != null) {  
-      buffer.writeAll(["\"trackBorderColor\":\`", this._trackBorderColor, "\`,"], "");
+    if (this.trackBorderColor != null) {  
+      buffer.writeAll(["\"trackBorderColor\":\`", this.trackBorderColor, "\`,"], "");
     }
 
-    if (this._trackBorderRadius != null) {  
-      buffer.writeAll(["\"trackBorderRadius\":", this._trackBorderRadius, ","], "");
+    if (this.trackBorderRadius != null) {  
+      buffer.writeAll(["\"trackBorderRadius\":", this.trackBorderRadius, ","], "");
     }
 
-    if (this._trackBorderWidth != null) {  
-      buffer.writeAll(["\"trackBorderWidth\":", this._trackBorderWidth, ","], "");
+    if (this.trackBorderWidth != null) {  
+      buffer.writeAll(["\"trackBorderWidth\":", this.trackBorderWidth, ","], "");
     }
 
-    if (this._vertical != null) {  
-      buffer.writeAll(["\"vertical\":", this._vertical, ","], "");
+    if (this.vertical != null) {  
+      buffer.writeAll(["\"vertical\":", this.vertical, ","], "");
     }
 
-    if (this._zIndex != null) {  
-      buffer.writeAll(["\"zIndex\":", this._zIndex, ","], "");
+    if (this.zIndex != null) {  
+      buffer.writeAll(["\"zIndex\":", this.zIndex, ","], "");
     }
   }
 

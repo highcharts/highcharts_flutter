@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,15 +23,17 @@ import 'OptionFragment.dart';
  * TilemapSeriesOptions 
  */
 class TilemapSeriesOptions extends HeatmapSeriesOptions {
-  TilemapSeriesOptions() : super();
+  TilemapSeriesOptions( {
+    this.tileShape = null
+  }) : super();
   /**
    * The shape of the tiles in the tilemap. Possible values are `hexagon`,
    * `circle`, `diamond`, and `square`. 
    * 
    * Defaults to 'hexagon'. 
       */
-  String? _tileShape;  
-
+  String? tileShape;
+    /*
   String get tileShape { 
     if (this._tileShape == null) {
       this._tileShape = "";
@@ -42,6 +44,7 @@ class TilemapSeriesOptions extends HeatmapSeriesOptions {
   void set tileShape (String v) {
     this._tileShape = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -53,8 +56,8 @@ class TilemapSeriesOptions extends HeatmapSeriesOptions {
     
     // NOTE: skip serialization of state (type Generic is ignored)} 
 
-    if (this._tileShape != null) {  
-      buffer.writeAll(["\"tileShape\":\`", this._tileShape, "\`,"], "");
+    if (this.tileShape != null) {  
+      buffer.writeAll(["\"tileShape\":\`", this.tileShape, "\`,"], "");
     }
   }
 

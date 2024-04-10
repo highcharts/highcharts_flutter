@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -24,9 +24,14 @@ import 'OptionFragment.dart';
  * SeriesAccessibilityOptions 
  */
 class SeriesAccessibilityOptions extends OptionFragment {
-  SeriesAccessibilityOptions() : super();
-  String? _description;  
-
+  SeriesAccessibilityOptions( {
+    this.description = null,
+    this.descriptionFormat = null,
+    this.enabled = null,
+    this.exposeAsGroupOnly = null
+  }) : super();
+  String? description;
+    /*
   String get description { 
     if (this._description == null) {
       this._description = "";
@@ -37,9 +42,10 @@ class SeriesAccessibilityOptions extends OptionFragment {
   void set description (String v) {
     this._description = v;
   }
+    */
     
-  String? _descriptionFormat;  
-
+  String? descriptionFormat;
+    /*
   String get descriptionFormat { 
     if (this._descriptionFormat == null) {
       this._descriptionFormat = "";
@@ -50,9 +56,10 @@ class SeriesAccessibilityOptions extends OptionFragment {
   void set descriptionFormat (String v) {
     this._descriptionFormat = v;
   }
+    */
     
-  bool? _enabled;  
-
+  bool? enabled;
+    /*
   bool get enabled { 
     if (this._enabled == null) {
       this._enabled = false;
@@ -63,9 +70,10 @@ class SeriesAccessibilityOptions extends OptionFragment {
   void set enabled (bool v) {
     this._enabled = v;
   }
+    */
     
-  bool? _exposeAsGroupOnly;  
-
+  bool? exposeAsGroupOnly;
+    /*
   bool get exposeAsGroupOnly { 
     if (this._exposeAsGroupOnly == null) {
       this._exposeAsGroupOnly = false;
@@ -76,6 +84,7 @@ class SeriesAccessibilityOptions extends OptionFragment {
   void set exposeAsGroupOnly (bool v) {
     this._exposeAsGroupOnly = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -85,20 +94,20 @@ class SeriesAccessibilityOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._description != null) {  
-      buffer.writeAll(["\"description\":\`", this._description, "\`,"], "");
+    if (this.description != null) {  
+      buffer.writeAll(["\"description\":\`", this.description, "\`,"], "");
     }
 
-    if (this._descriptionFormat != null) {  
-      buffer.writeAll(["\"descriptionFormat\":\`", this._descriptionFormat, "\`,"], "");
+    if (this.descriptionFormat != null) {  
+      buffer.writeAll(["\"descriptionFormat\":\`", this.descriptionFormat, "\`,"], "");
     }
 
-    if (this._enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this._enabled, ","], "");
+    if (this.enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
     }
 
-    if (this._exposeAsGroupOnly != null) {  
-      buffer.writeAll(["\"exposeAsGroupOnly\":", this._exposeAsGroupOnly, ","], "");
+    if (this.exposeAsGroupOnly != null) {  
+      buffer.writeAll(["\"exposeAsGroupOnly\":", this.exposeAsGroupOnly, ","], "");
     }
 
     // NOTE: skip serialization of keyboardNavigation (type SeriesAccessibilityKeyboardNavigationOptions is ignored)} 

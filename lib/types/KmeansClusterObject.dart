@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,15 @@ import 'OptionFragment.dart';
  * KmeansClusterObject 
  */
 class KmeansClusterObject extends OptionFragment {
-  KmeansClusterObject() : super();
-  double? _posX;  
-
+  KmeansClusterObject( {
+    this.posX = null,
+    this.posY = null,
+    this.oldX = null,
+    this.oldY = null,
+    this.startPointsLen = null
+  }) : super();
+  double? posX;
+    /*
   double get posX { 
     if (this._posX == null) {
       this._posX = 0;
@@ -35,9 +41,10 @@ class KmeansClusterObject extends OptionFragment {
   void set posX (double v) {
     this._posX = v;
   }
+    */
     
-  double? _posY;  
-
+  double? posY;
+    /*
   double get posY { 
     if (this._posY == null) {
       this._posY = 0;
@@ -48,9 +55,10 @@ class KmeansClusterObject extends OptionFragment {
   void set posY (double v) {
     this._posY = v;
   }
+    */
     
-  double? _oldX;  
-
+  double? oldX;
+    /*
   double get oldX { 
     if (this._oldX == null) {
       this._oldX = 0;
@@ -61,9 +69,10 @@ class KmeansClusterObject extends OptionFragment {
   void set oldX (double v) {
     this._oldX = v;
   }
+    */
     
-  double? _oldY;  
-
+  double? oldY;
+    /*
   double get oldY { 
     if (this._oldY == null) {
       this._oldY = 0;
@@ -74,9 +83,10 @@ class KmeansClusterObject extends OptionFragment {
   void set oldY (double v) {
     this._oldY = v;
   }
+    */
     
-  double? _startPointsLen;  
-
+  double? startPointsLen;
+    /*
   double get startPointsLen { 
     if (this._startPointsLen == null) {
       this._startPointsLen = 0;
@@ -87,6 +97,7 @@ class KmeansClusterObject extends OptionFragment {
   void set startPointsLen (double v) {
     this._startPointsLen = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -96,24 +107,24 @@ class KmeansClusterObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._posX != null) {  
-      buffer.writeAll(["\"posX\":", this._posX, ","], "");
+    if (this.posX != null) {  
+      buffer.writeAll(["\"posX\":", this.posX, ","], "");
     }
 
-    if (this._posY != null) {  
-      buffer.writeAll(["\"posY\":", this._posY, ","], "");
+    if (this.posY != null) {  
+      buffer.writeAll(["\"posY\":", this.posY, ","], "");
     }
 
-    if (this._oldX != null) {  
-      buffer.writeAll(["\"oldX\":", this._oldX, ","], "");
+    if (this.oldX != null) {  
+      buffer.writeAll(["\"oldX\":", this.oldX, ","], "");
     }
 
-    if (this._oldY != null) {  
-      buffer.writeAll(["\"oldY\":", this._oldY, ","], "");
+    if (this.oldY != null) {  
+      buffer.writeAll(["\"oldY\":", this.oldY, ","], "");
     }
 
-    if (this._startPointsLen != null) {  
-      buffer.writeAll(["\"startPointsLen\":", this._startPointsLen, ","], "");
+    if (this.startPointsLen != null) {  
+      buffer.writeAll(["\"startPointsLen\":", this.startPointsLen, ","], "");
     }
 
     // NOTE: skip serialization of points (type MarkerClusterSplitDataObject[] is ignored)} 

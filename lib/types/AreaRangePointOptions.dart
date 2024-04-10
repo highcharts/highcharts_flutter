@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,12 @@ import 'OptionFragment.dart';
  * AreaRangePointOptions 
  */
 class AreaRangePointOptions extends AreaPointOptions {
-  AreaRangePointOptions() : super();
-  double? _high;  
-
+  AreaRangePointOptions( {
+    this.high = null,
+    this.low = null
+  }) : super();
+  double? high;
+    /*
   double get high { 
     if (this._high == null) {
       this._high = 0;
@@ -36,9 +39,10 @@ class AreaRangePointOptions extends AreaPointOptions {
   void set high (double v) {
     this._high = v;
   }
+    */
     
-  double? _low;  
-
+  double? low;
+    /*
   double get low { 
     if (this._low == null) {
       this._low = 0;
@@ -49,6 +53,7 @@ class AreaRangePointOptions extends AreaPointOptions {
   void set low (double v) {
     this._low = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -58,12 +63,12 @@ class AreaRangePointOptions extends AreaPointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._high != null) {  
-      buffer.writeAll(["\"high\":", this._high, ","], "");
+    if (this.high != null) {  
+      buffer.writeAll(["\"high\":", this.high, ","], "");
     }
 
-    if (this._low != null) {  
-      buffer.writeAll(["\"low\":", this._low, ","], "");
+    if (this.low != null) {  
+      buffer.writeAll(["\"low\":", this.low, ","], "");
     }
   }
 

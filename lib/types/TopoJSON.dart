@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -24,10 +24,16 @@ import 'OptionFragment.dart';
  * TopoJSON 
  */
 class TopoJSON extends OptionFragment {
-  TopoJSON() : super();
+  TopoJSON( {
+    this.arcs = null,
+    this.copyright = null,
+    this.copyrightShort = null,
+    this.copyrightUrl = null,
+    this.title = null
+  }) : super();
   List<double>? arcs; // double
-  String? _copyright;  
-
+  String? copyright;
+    /*
   String get copyright { 
     if (this._copyright == null) {
       this._copyright = "";
@@ -38,9 +44,10 @@ class TopoJSON extends OptionFragment {
   void set copyright (String v) {
     this._copyright = v;
   }
+    */
     
-  String? _copyrightShort;  
-
+  String? copyrightShort;
+    /*
   String get copyrightShort { 
     if (this._copyrightShort == null) {
       this._copyrightShort = "";
@@ -51,9 +58,10 @@ class TopoJSON extends OptionFragment {
   void set copyrightShort (String v) {
     this._copyrightShort = v;
   }
+    */
     
-  String? _copyrightUrl;  
-
+  String? copyrightUrl;
+    /*
   String get copyrightUrl { 
     if (this._copyrightUrl == null) {
       this._copyrightUrl = "";
@@ -64,9 +72,10 @@ class TopoJSON extends OptionFragment {
   void set copyrightUrl (String v) {
     this._copyrightUrl = v;
   }
+    */
     
-  String? _title;  
-
+  String? title;
+    /*
   String get title { 
     if (this._title == null) {
       this._title = "";
@@ -77,6 +86,7 @@ class TopoJSON extends OptionFragment {
   void set title (String v) {
     this._title = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -88,22 +98,22 @@ class TopoJSON extends OptionFragment {
     
     // NOTE: skip serialization of arcs (type number is ignored)} 
 
-    if (this._copyright != null) {  
-      buffer.writeAll(["\"copyright\":\`", this._copyright, "\`,"], "");
+    if (this.copyright != null) {  
+      buffer.writeAll(["\"copyright\":\`", this.copyright, "\`,"], "");
     }
 
-    if (this._copyrightShort != null) {  
-      buffer.writeAll(["\"copyrightShort\":\`", this._copyrightShort, "\`,"], "");
+    if (this.copyrightShort != null) {  
+      buffer.writeAll(["\"copyrightShort\":\`", this.copyrightShort, "\`,"], "");
     }
 
-    if (this._copyrightUrl != null) {  
-      buffer.writeAll(["\"copyrightUrl\":\`", this._copyrightUrl, "\`,"], "");
+    if (this.copyrightUrl != null) {  
+      buffer.writeAll(["\"copyrightUrl\":\`", this.copyrightUrl, "\`,"], "");
     }
 
     // NOTE: skip serialization of objects (type TopoJSONObjects is ignored)} 
 
-    if (this._title != null) {  
-      buffer.writeAll(["\"title\":\`", this._title, "\`,"], "");
+    if (this.title != null) {  
+      buffer.writeAll(["\"title\":\`", this.title, "\`,"], "");
     }
 
     // NOTE: skip serialization of transform (type TopoJSONTransform is ignored)} 

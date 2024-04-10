@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,11 @@ import 'OptionFragment.dart';
  * Function 
  */
 class Function extends OptionFragment {
-  Function() : super();
-  String? _name;  
-
+  Function( {
+    this.name = null
+  }) : super();
+  String? name;
+    /*
   String get name { 
     if (this._name == null) {
       this._name = "";
@@ -35,6 +37,7 @@ class Function extends OptionFragment {
   void set name (String v) {
     this._name = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -46,8 +49,8 @@ class Function extends OptionFragment {
     
     // NOTE: skip serialization of args (type Arguments is ignored)} 
 
-    if (this._name != null) {  
-      buffer.writeAll(["\"name\":\`", this._name, "\`,"], "");
+    if (this.name != null) {  
+      buffer.writeAll(["\"name\":\`", this.name, "\`,"], "");
     }
 
     // NOTE: skip serialization of type (type "function" is ignored)} 

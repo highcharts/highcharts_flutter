@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,12 @@ import 'OptionFragment.dart';
  * HollowcandleInfo 
  */
 class HollowcandleInfo extends OptionFragment {
-  HollowcandleInfo() : super();
-  bool? _isBullish;  
-
+  HollowcandleInfo( {
+    this.isBullish = null,
+    this.trendDirection = null
+  }) : super();
+  bool? isBullish;
+    /*
   bool get isBullish { 
     if (this._isBullish == null) {
       this._isBullish = false;
@@ -35,9 +38,10 @@ class HollowcandleInfo extends OptionFragment {
   void set isBullish (bool v) {
     this._isBullish = v;
   }
+    */
     
-  String? _trendDirection;  
-
+  String? trendDirection;
+    /*
   String get trendDirection { 
     if (this._trendDirection == null) {
       this._trendDirection = "";
@@ -48,6 +52,7 @@ class HollowcandleInfo extends OptionFragment {
   void set trendDirection (String v) {
     this._trendDirection = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -57,12 +62,12 @@ class HollowcandleInfo extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._isBullish != null) {  
-      buffer.writeAll(["\"isBullish\":", this._isBullish, ","], "");
+    if (this.isBullish != null) {  
+      buffer.writeAll(["\"isBullish\":", this.isBullish, ","], "");
     }
 
-    if (this._trendDirection != null) {  
-      buffer.writeAll(["\"trendDirection\":\`", this._trendDirection, "\`,"], "");
+    if (this.trendDirection != null) {  
+      buffer.writeAll(["\"trendDirection\":\`", this.trendDirection, "\`,"], "");
     }
   }
 

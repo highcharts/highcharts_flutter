@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -24,9 +24,15 @@ import 'OptionFragment.dart';
  * IsInsideOptionsObject 
  */
 class IsInsideOptionsObject extends OptionFragment {
-  IsInsideOptionsObject() : super();
-  bool? _ignoreX;  
-
+  IsInsideOptionsObject( {
+    this.ignoreX = null,
+    this.ignoreY = null,
+    this.inverted = null,
+    this.paneCoordinates = null,
+    this.visiblePlotOnly = null
+  }) : super();
+  bool? ignoreX;
+    /*
   bool get ignoreX { 
     if (this._ignoreX == null) {
       this._ignoreX = false;
@@ -37,9 +43,10 @@ class IsInsideOptionsObject extends OptionFragment {
   void set ignoreX (bool v) {
     this._ignoreX = v;
   }
+    */
     
-  bool? _ignoreY;  
-
+  bool? ignoreY;
+    /*
   bool get ignoreY { 
     if (this._ignoreY == null) {
       this._ignoreY = false;
@@ -50,9 +57,10 @@ class IsInsideOptionsObject extends OptionFragment {
   void set ignoreY (bool v) {
     this._ignoreY = v;
   }
+    */
     
-  bool? _inverted;  
-
+  bool? inverted;
+    /*
   bool get inverted { 
     if (this._inverted == null) {
       this._inverted = false;
@@ -63,9 +71,10 @@ class IsInsideOptionsObject extends OptionFragment {
   void set inverted (bool v) {
     this._inverted = v;
   }
+    */
     
-  bool? _paneCoordinates;  
-
+  bool? paneCoordinates;
+    /*
   bool get paneCoordinates { 
     if (this._paneCoordinates == null) {
       this._paneCoordinates = false;
@@ -76,9 +85,10 @@ class IsInsideOptionsObject extends OptionFragment {
   void set paneCoordinates (bool v) {
     this._paneCoordinates = v;
   }
+    */
     
-  bool? _visiblePlotOnly;  
-
+  bool? visiblePlotOnly;
+    /*
   bool get visiblePlotOnly { 
     if (this._visiblePlotOnly == null) {
       this._visiblePlotOnly = false;
@@ -89,6 +99,7 @@ class IsInsideOptionsObject extends OptionFragment {
   void set visiblePlotOnly (bool v) {
     this._visiblePlotOnly = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -100,26 +111,26 @@ class IsInsideOptionsObject extends OptionFragment {
     
     // NOTE: skip serialization of axis (type Axis is ignored)} 
 
-    if (this._ignoreX != null) {  
-      buffer.writeAll(["\"ignoreX\":", this._ignoreX, ","], "");
+    if (this.ignoreX != null) {  
+      buffer.writeAll(["\"ignoreX\":", this.ignoreX, ","], "");
     }
 
-    if (this._ignoreY != null) {  
-      buffer.writeAll(["\"ignoreY\":", this._ignoreY, ","], "");
+    if (this.ignoreY != null) {  
+      buffer.writeAll(["\"ignoreY\":", this.ignoreY, ","], "");
     }
 
-    if (this._inverted != null) {  
-      buffer.writeAll(["\"inverted\":", this._inverted, ","], "");
+    if (this.inverted != null) {  
+      buffer.writeAll(["\"inverted\":", this.inverted, ","], "");
     }
 
-    if (this._paneCoordinates != null) {  
-      buffer.writeAll(["\"paneCoordinates\":", this._paneCoordinates, ","], "");
+    if (this.paneCoordinates != null) {  
+      buffer.writeAll(["\"paneCoordinates\":", this.paneCoordinates, ","], "");
     }
 
     // NOTE: skip serialization of series (type Series is ignored)} 
 
-    if (this._visiblePlotOnly != null) {  
-      buffer.writeAll(["\"visiblePlotOnly\":", this._visiblePlotOnly, ","], "");
+    if (this.visiblePlotOnly != null) {  
+      buffer.writeAll(["\"visiblePlotOnly\":", this.visiblePlotOnly, ","], "");
     }
   }
 

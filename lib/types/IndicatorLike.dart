@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,11 @@ import 'OptionFragment.dart';
  * IndicatorLike 
  */
 class IndicatorLike extends Series {
-  IndicatorLike() : super();
-  bool? _useCommonDataGrouping;  
-
+  IndicatorLike( {
+    this.useCommonDataGrouping = null
+  }) : super();
+  bool? useCommonDataGrouping;
+    /*
   bool get useCommonDataGrouping { 
     if (this._useCommonDataGrouping == null) {
       this._useCommonDataGrouping = false;
@@ -36,6 +38,7 @@ class IndicatorLike extends Series {
   void set useCommonDataGrouping (bool v) {
     this._useCommonDataGrouping = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -45,8 +48,8 @@ class IndicatorLike extends Series {
     super.toJSONInner(buffer);
 
     
-    if (this._useCommonDataGrouping != null) {  
-      buffer.writeAll(["\"useCommonDataGrouping\":", this._useCommonDataGrouping, ","], "");
+    if (this.useCommonDataGrouping != null) {  
+      buffer.writeAll(["\"useCommonDataGrouping\":", this.useCommonDataGrouping, ","], "");
     }
   }
 

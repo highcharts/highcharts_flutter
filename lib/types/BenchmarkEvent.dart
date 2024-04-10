@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,11 @@ import 'OptionFragment.dart';
  * BenchmarkEvent 
  */
 class BenchmarkEvent extends DataEvent {
-  BenchmarkEvent() : super();
-  String? _type;  
-
+  BenchmarkEvent( {
+    this.type = null
+  }) : super();
+  String? type;
+    /*
   String get type { 
     if (this._type == null) {
       this._type = "";
@@ -36,6 +38,7 @@ class BenchmarkEvent extends DataEvent {
   void set type (String v) {
     this._type = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -45,8 +48,8 @@ class BenchmarkEvent extends DataEvent {
     super.toJSONInner(buffer);
 
     
-    if (this._type != null) {  
-      buffer.writeAll(["\"type\":\`", this._type, "\`,"], "");
+    if (this.type != null) {  
+      buffer.writeAll(["\"type\":\`", this.type, "\`,"], "");
     }
 
     // NOTE: skip serialization of results (type number[] is ignored)} 

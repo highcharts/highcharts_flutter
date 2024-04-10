@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,17 @@ import 'OptionFragment.dart';
  * SankeySeriesNodeOptions 
  */
 class SankeySeriesNodeOptions extends OptionFragment {
-  SankeySeriesNodeOptions() : super();
-  String? _color;  
-
+  SankeySeriesNodeOptions( {
+    this.color = null,
+    this.colorIndex = null,
+    this.column = null,
+    this.id = null,
+    this.level = null,
+    this.name = null,
+    this.offset = null
+  }) : super();
+  String? color;
+    /*
   String get color { 
     if (this._color == null) {
       this._color = "";
@@ -35,9 +43,10 @@ class SankeySeriesNodeOptions extends OptionFragment {
   void set color (String v) {
     this._color = v;
   }
+    */
     
-  double? _colorIndex;  
-
+  double? colorIndex;
+    /*
   double get colorIndex { 
     if (this._colorIndex == null) {
       this._colorIndex = 0;
@@ -48,9 +57,10 @@ class SankeySeriesNodeOptions extends OptionFragment {
   void set colorIndex (double v) {
     this._colorIndex = v;
   }
+    */
     
-  double? _column;  
-
+  double? column;
+    /*
   double get column { 
     if (this._column == null) {
       this._column = 0;
@@ -61,9 +71,10 @@ class SankeySeriesNodeOptions extends OptionFragment {
   void set column (double v) {
     this._column = v;
   }
+    */
     
-  String? _id;  
-
+  String? id;
+    /*
   String get id { 
     if (this._id == null) {
       this._id = "";
@@ -74,9 +85,10 @@ class SankeySeriesNodeOptions extends OptionFragment {
   void set id (String v) {
     this._id = v;
   }
+    */
     
-  double? _level;  
-
+  double? level;
+    /*
   double get level { 
     if (this._level == null) {
       this._level = 0;
@@ -87,9 +99,10 @@ class SankeySeriesNodeOptions extends OptionFragment {
   void set level (double v) {
     this._level = v;
   }
+    */
     
-  String? _name;  
-
+  String? name;
+    /*
   String get name { 
     if (this._name == null) {
       this._name = "";
@@ -100,9 +113,10 @@ class SankeySeriesNodeOptions extends OptionFragment {
   void set name (String v) {
     this._name = v;
   }
+    */
     
-  String? _offset;  
-
+  String? offset;
+    /*
   String get offset { 
     if (this._offset == null) {
       this._offset = "";
@@ -113,6 +127,7 @@ class SankeySeriesNodeOptions extends OptionFragment {
   void set offset (String v) {
     this._offset = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -122,32 +137,32 @@ class SankeySeriesNodeOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._color != null) {  
-      buffer.writeAll(["\"color\":\`", this._color, "\`,"], "");
+    if (this.color != null) {  
+      buffer.writeAll(["\"color\":\`", this.color, "\`,"], "");
     }
 
-    if (this._colorIndex != null) {  
-      buffer.writeAll(["\"colorIndex\":", this._colorIndex, ","], "");
+    if (this.colorIndex != null) {  
+      buffer.writeAll(["\"colorIndex\":", this.colorIndex, ","], "");
     }
 
-    if (this._column != null) {  
-      buffer.writeAll(["\"column\":", this._column, ","], "");
+    if (this.column != null) {  
+      buffer.writeAll(["\"column\":", this.column, ","], "");
     }
 
-    if (this._id != null) {  
-      buffer.writeAll(["\"id\":\`", this._id, "\`,"], "");
+    if (this.id != null) {  
+      buffer.writeAll(["\"id\":\`", this.id, "\`,"], "");
     }
 
-    if (this._level != null) {  
-      buffer.writeAll(["\"level\":", this._level, ","], "");
+    if (this.level != null) {  
+      buffer.writeAll(["\"level\":", this.level, ","], "");
     }
 
-    if (this._name != null) {  
-      buffer.writeAll(["\"name\":\`", this._name, "\`,"], "");
+    if (this.name != null) {  
+      buffer.writeAll(["\"name\":\`", this.name, "\`,"], "");
     }
 
-    if (this._offset != null) {  
-      buffer.writeAll(["\"offset\":\`", this._offset, "\`,"], "");
+    if (this.offset != null) {  
+      buffer.writeAll(["\"offset\":\`", this.offset, "\`,"], "");
     }
   }
 

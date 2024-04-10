@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,12 @@ import 'OptionFragment.dart';
  * MarkerOptions 
  */
 class MarkerOptions extends OptionFragment {
-  MarkerOptions() : super();
-  String? _color;  
-
+  MarkerOptions( {
+    this.color = null,
+    this.width = null
+  }) : super();
+  String? color;
+    /*
   String get color { 
     if (this._color == null) {
       this._color = "";
@@ -35,9 +38,10 @@ class MarkerOptions extends OptionFragment {
   void set color (String v) {
     this._color = v;
   }
+    */
     
-  double? _width;  
-
+  double? width;
+    /*
   double get width { 
     if (this._width == null) {
       this._width = 0;
@@ -48,6 +52,7 @@ class MarkerOptions extends OptionFragment {
   void set width (double v) {
     this._width = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -59,12 +64,12 @@ class MarkerOptions extends OptionFragment {
     
     // NOTE: skip serialization of animation (type Generic is ignored)} 
 
-    if (this._color != null) {  
-      buffer.writeAll(["\"color\":\`", this._color, "\`,"], "");
+    if (this.color != null) {  
+      buffer.writeAll(["\"color\":\`", this.color, "\`,"], "");
     }
 
-    if (this._width != null) {  
-      buffer.writeAll(["\"width\":", this._width, ","], "");
+    if (this.width != null) {  
+      buffer.writeAll(["\"width\":", this.width, ","], "");
     }
   }
 

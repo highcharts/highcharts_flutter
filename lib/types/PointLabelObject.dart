@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -24,9 +24,17 @@ import 'OptionFragment.dart';
  * PointLabelObject 
  */
 class PointLabelObject extends OptionFragment {
-  PointLabelObject() : super();
-  String? _x;  
-
+  PointLabelObject( {
+    this.x = null,
+    this.y = null,
+    this.color = null,
+    this.colorIndex = null,
+    this.key = null,
+    this.percentage = null,
+    this.total = null
+  }) : super();
+  String? x;
+    /*
   String get x { 
     if (this._x == null) {
       this._x = "";
@@ -37,9 +45,10 @@ class PointLabelObject extends OptionFragment {
   void set x (String v) {
     this._x = v;
   }
+    */
     
-  double? _y;  
-
+  double? y;
+    /*
   double get y { 
     if (this._y == null) {
       this._y = 0;
@@ -50,9 +59,10 @@ class PointLabelObject extends OptionFragment {
   void set y (double v) {
     this._y = v;
   }
+    */
     
-  String? _color;  
-
+  String? color;
+    /*
   String get color { 
     if (this._color == null) {
       this._color = "";
@@ -63,9 +73,10 @@ class PointLabelObject extends OptionFragment {
   void set color (String v) {
     this._color = v;
   }
+    */
     
-  double? _colorIndex;  
-
+  double? colorIndex;
+    /*
   double get colorIndex { 
     if (this._colorIndex == null) {
       this._colorIndex = 0;
@@ -76,9 +87,10 @@ class PointLabelObject extends OptionFragment {
   void set colorIndex (double v) {
     this._colorIndex = v;
   }
+    */
     
-  String? _key;  
-
+  String? key;
+    /*
   String get key { 
     if (this._key == null) {
       this._key = "";
@@ -89,9 +101,10 @@ class PointLabelObject extends OptionFragment {
   void set key (String v) {
     this._key = v;
   }
+    */
     
-  double? _percentage;  
-
+  double? percentage;
+    /*
   double get percentage { 
     if (this._percentage == null) {
       this._percentage = 0;
@@ -102,9 +115,10 @@ class PointLabelObject extends OptionFragment {
   void set percentage (double v) {
     this._percentage = v;
   }
+    */
     
-  double? _total;  
-
+  double? total;
+    /*
   double get total { 
     if (this._total == null) {
       this._total = 0;
@@ -115,6 +129,7 @@ class PointLabelObject extends OptionFragment {
   void set total (double v) {
     this._total = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -124,36 +139,36 @@ class PointLabelObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._x != null) {  
-      buffer.writeAll(["\"x\":\`", this._x, "\`,"], "");
+    if (this.x != null) {  
+      buffer.writeAll(["\"x\":\`", this.x, "\`,"], "");
     }
 
-    if (this._y != null) {  
-      buffer.writeAll(["\"y\":", this._y, ","], "");
+    if (this.y != null) {  
+      buffer.writeAll(["\"y\":", this.y, ","], "");
     }
 
-    if (this._color != null) {  
-      buffer.writeAll(["\"color\":\`", this._color, "\`,"], "");
+    if (this.color != null) {  
+      buffer.writeAll(["\"color\":\`", this.color, "\`,"], "");
     }
 
-    if (this._colorIndex != null) {  
-      buffer.writeAll(["\"colorIndex\":", this._colorIndex, ","], "");
+    if (this.colorIndex != null) {  
+      buffer.writeAll(["\"colorIndex\":", this.colorIndex, ","], "");
     }
 
-    if (this._key != null) {  
-      buffer.writeAll(["\"key\":\`", this._key, "\`,"], "");
+    if (this.key != null) {  
+      buffer.writeAll(["\"key\":\`", this.key, "\`,"], "");
     }
 
     // NOTE: skip serialization of series (type Series is ignored)} 
 
     // NOTE: skip serialization of point (type Point is ignored)} 
 
-    if (this._percentage != null) {  
-      buffer.writeAll(["\"percentage\":", this._percentage, ","], "");
+    if (this.percentage != null) {  
+      buffer.writeAll(["\"percentage\":", this.percentage, ","], "");
     }
 
-    if (this._total != null) {  
-      buffer.writeAll(["\"total\":", this._total, ","], "");
+    if (this.total != null) {  
+      buffer.writeAll(["\"total\":", this.total, ","], "");
     }
   }
 

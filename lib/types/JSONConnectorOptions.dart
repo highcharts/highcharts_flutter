@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -24,9 +24,15 @@ import 'OptionFragment.dart';
  * JSONConnectorOptions 
  */
 class JSONConnectorOptions extends DataConnectorOptions {
-  JSONConnectorOptions() : super();
-  double? _dataRefreshRate;  
-
+  JSONConnectorOptions( {
+    this.dataRefreshRate = null,
+    this.dataUrl = null,
+    this.enablePolling = null,
+    this.firstRowAsNames = null,
+    this.orientation = null
+  }) : super();
+  double? dataRefreshRate;
+    /*
   double get dataRefreshRate { 
     if (this._dataRefreshRate == null) {
       this._dataRefreshRate = 0;
@@ -37,9 +43,10 @@ class JSONConnectorOptions extends DataConnectorOptions {
   void set dataRefreshRate (double v) {
     this._dataRefreshRate = v;
   }
+    */
     
-  String? _dataUrl;  
-
+  String? dataUrl;
+    /*
   String get dataUrl { 
     if (this._dataUrl == null) {
       this._dataUrl = "";
@@ -50,9 +57,10 @@ class JSONConnectorOptions extends DataConnectorOptions {
   void set dataUrl (String v) {
     this._dataUrl = v;
   }
+    */
     
-  bool? _enablePolling;  
-
+  bool? enablePolling;
+    /*
   bool get enablePolling { 
     if (this._enablePolling == null) {
       this._enablePolling = false;
@@ -63,9 +71,10 @@ class JSONConnectorOptions extends DataConnectorOptions {
   void set enablePolling (bool v) {
     this._enablePolling = v;
   }
+    */
     
-  bool? _firstRowAsNames;  
-
+  bool? firstRowAsNames;
+    /*
   bool get firstRowAsNames { 
     if (this._firstRowAsNames == null) {
       this._firstRowAsNames = false;
@@ -76,9 +85,10 @@ class JSONConnectorOptions extends DataConnectorOptions {
   void set firstRowAsNames (bool v) {
     this._firstRowAsNames = v;
   }
+    */
     
-  String? _orientation;  
-
+  String? orientation;
+    /*
   String get orientation { 
     if (this._orientation == null) {
       this._orientation = "";
@@ -89,6 +99,7 @@ class JSONConnectorOptions extends DataConnectorOptions {
   void set orientation (String v) {
     this._orientation = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -102,24 +113,24 @@ class JSONConnectorOptions extends DataConnectorOptions {
 
     // NOTE: skip serialization of data (type Data is ignored)} 
 
-    if (this._dataRefreshRate != null) {  
-      buffer.writeAll(["\"dataRefreshRate\":", this._dataRefreshRate, ","], "");
+    if (this.dataRefreshRate != null) {  
+      buffer.writeAll(["\"dataRefreshRate\":", this.dataRefreshRate, ","], "");
     }
 
-    if (this._dataUrl != null) {  
-      buffer.writeAll(["\"dataUrl\":\`", this._dataUrl, "\`,"], "");
+    if (this.dataUrl != null) {  
+      buffer.writeAll(["\"dataUrl\":\`", this.dataUrl, "\`,"], "");
     }
 
-    if (this._enablePolling != null) {  
-      buffer.writeAll(["\"enablePolling\":", this._enablePolling, ","], "");
+    if (this.enablePolling != null) {  
+      buffer.writeAll(["\"enablePolling\":", this.enablePolling, ","], "");
     }
 
-    if (this._firstRowAsNames != null) {  
-      buffer.writeAll(["\"firstRowAsNames\":", this._firstRowAsNames, ","], "");
+    if (this.firstRowAsNames != null) {  
+      buffer.writeAll(["\"firstRowAsNames\":", this.firstRowAsNames, ","], "");
     }
 
-    if (this._orientation != null) {  
-      buffer.writeAll(["\"orientation\":\`", this._orientation, "\`,"], "");
+    if (this.orientation != null) {  
+      buffer.writeAll(["\"orientation\":\`", this.orientation, "\`,"], "");
     }
   }
 

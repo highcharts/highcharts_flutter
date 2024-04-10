@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,15 +23,25 @@ import 'OptionFragment.dart';
  * BoostOptions 
  */
 class BoostOptions extends OptionFragment {
-  BoostOptions() : super();
+  BoostOptions( {
+    this.allowForce = null,
+    this.enabled = null,
+    this.seriesThreshold = null,
+    this.pixelRatio = null,
+    this.useGPUTranslations = null,
+    this.usePreallocated = null,
+    this.timeRendering = null,
+    this.timeSeriesProcessing = null,
+    this.timeSetup = null
+  }) : super();
   /**
    * The chart will be boosted, if one of the series crosses its threshold and all
    * the series in the chart can be boosted. 
    * 
    * Defaults to 'true'. 
       */
-  bool? _allowForce;  
-
+  bool? allowForce;
+    /*
   bool get allowForce { 
     if (this._allowForce == null) {
       this._allowForce = false;
@@ -42,13 +52,14 @@ class BoostOptions extends OptionFragment {
   void set allowForce (bool v) {
     this._allowForce = v;
   }
+    */
     
   /**
    * Debugging options for boost.
    * Useful for benchmarking, and general timing.  
       */
-  BoostDebugOptions? _debug;  
-
+  BoostDebugOptions? debug;
+    /*
   BoostDebugOptions get debug { 
     if (this._debug == null) {
       this._debug = BoostDebugOptions();
@@ -59,14 +70,15 @@ class BoostOptions extends OptionFragment {
   void set debug (BoostDebugOptions v) {
     this._debug = v;
   }
+    */
     
   /**
    * Enable or disable boost on a chart. 
    * 
    * Defaults to 'true'. 
       */
-  bool? _enabled;  
-
+  bool? enabled;
+    /*
   bool get enabled { 
     if (this._enabled == null) {
       this._enabled = false;
@@ -77,6 +89,7 @@ class BoostOptions extends OptionFragment {
   void set enabled (bool v) {
     this._enabled = v;
   }
+    */
     
   /**
    * Set the series threshold for when the boost should kick in globally.
@@ -89,8 +102,8 @@ class BoostOptions extends OptionFragment {
    * 
    * Defaults to '50'. 
       */
-  double? _seriesThreshold;  
-
+  double? seriesThreshold;
+    /*
   double get seriesThreshold { 
     if (this._seriesThreshold == null) {
       this._seriesThreshold = 0;
@@ -101,6 +114,7 @@ class BoostOptions extends OptionFragment {
   void set seriesThreshold (double v) {
     this._seriesThreshold = v;
   }
+    */
     
   /**
    * The pixel ratio for the WebGL content. If 0, the `window.devicePixelRatio` is
@@ -120,8 +134,8 @@ class BoostOptions extends OptionFragment {
    * 
    * Defaults to '1'. 
       */
-  double? _pixelRatio;  
-
+  double? pixelRatio;
+    /*
   double get pixelRatio { 
     if (this._pixelRatio == null) {
       this._pixelRatio = 0;
@@ -132,6 +146,7 @@ class BoostOptions extends OptionFragment {
   void set pixelRatio (double v) {
     this._pixelRatio = v;
   }
+    */
     
   /**
    * Enable or disable GPU translations. GPU translations are faster than doing
@@ -144,8 +159,8 @@ class BoostOptions extends OptionFragment {
    * 
    * Defaults to 'false'. 
       */
-  bool? _useGPUTranslations;  
-
+  bool? useGPUTranslations;
+    /*
   bool get useGPUTranslations { 
     if (this._useGPUTranslations == null) {
       this._useGPUTranslations = false;
@@ -156,6 +171,7 @@ class BoostOptions extends OptionFragment {
   void set useGPUTranslations (bool v) {
     this._useGPUTranslations = v;
   }
+    */
     
   /**
    * Enable or disable pre-allocation of vertex buffers.
@@ -173,8 +189,8 @@ class BoostOptions extends OptionFragment {
    * 
    * Defaults to 'false'. 
       */
-  bool? _usePreallocated;  
-
+  bool? usePreallocated;
+    /*
   bool get usePreallocated { 
     if (this._usePreallocated == null) {
       this._usePreallocated = false;
@@ -185,9 +201,10 @@ class BoostOptions extends OptionFragment {
   void set usePreallocated (bool v) {
     this._usePreallocated = v;
   }
+    */
     
-  bool? _timeRendering;  
-
+  bool? timeRendering;
+    /*
   bool get timeRendering { 
     if (this._timeRendering == null) {
       this._timeRendering = false;
@@ -198,9 +215,10 @@ class BoostOptions extends OptionFragment {
   void set timeRendering (bool v) {
     this._timeRendering = v;
   }
+    */
     
-  bool? _timeSeriesProcessing;  
-
+  bool? timeSeriesProcessing;
+    /*
   bool get timeSeriesProcessing { 
     if (this._timeSeriesProcessing == null) {
       this._timeSeriesProcessing = false;
@@ -211,9 +229,10 @@ class BoostOptions extends OptionFragment {
   void set timeSeriesProcessing (bool v) {
     this._timeSeriesProcessing = v;
   }
+    */
     
-  bool? _timeSetup;  
-
+  bool? timeSetup;
+    /*
   bool get timeSetup { 
     if (this._timeSetup == null) {
       this._timeSetup = false;
@@ -224,6 +243,7 @@ class BoostOptions extends OptionFragment {
   void set timeSetup (bool v) {
     this._timeSetup = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -233,44 +253,44 @@ class BoostOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._allowForce != null) {  
-      buffer.writeAll(["\"allowForce\":", this._allowForce, ","], "");
+    if (this.allowForce != null) {  
+      buffer.writeAll(["\"allowForce\":", this.allowForce, ","], "");
     }
 
-    if (this._debug != null) {  
-      buffer.writeAll(["\"debug\":", this._debug?.toJSON(), ","], "");
+    if (this.debug != null) {  
+      buffer.writeAll(["\"debug\":", this.debug?.toJSON(), ","], "");
     }
 
-    if (this._enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this._enabled, ","], "");
+    if (this.enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
     }
 
-    if (this._seriesThreshold != null) {  
-      buffer.writeAll(["\"seriesThreshold\":", this._seriesThreshold, ","], "");
+    if (this.seriesThreshold != null) {  
+      buffer.writeAll(["\"seriesThreshold\":", this.seriesThreshold, ","], "");
     }
 
-    if (this._pixelRatio != null) {  
-      buffer.writeAll(["\"pixelRatio\":", this._pixelRatio, ","], "");
+    if (this.pixelRatio != null) {  
+      buffer.writeAll(["\"pixelRatio\":", this.pixelRatio, ","], "");
     }
 
-    if (this._useGPUTranslations != null) {  
-      buffer.writeAll(["\"useGPUTranslations\":", this._useGPUTranslations, ","], "");
+    if (this.useGPUTranslations != null) {  
+      buffer.writeAll(["\"useGPUTranslations\":", this.useGPUTranslations, ","], "");
     }
 
-    if (this._usePreallocated != null) {  
-      buffer.writeAll(["\"usePreallocated\":", this._usePreallocated, ","], "");
+    if (this.usePreallocated != null) {  
+      buffer.writeAll(["\"usePreallocated\":", this.usePreallocated, ","], "");
     }
 
-    if (this._timeRendering != null) {  
-      buffer.writeAll(["\"timeRendering\":", this._timeRendering, ","], "");
+    if (this.timeRendering != null) {  
+      buffer.writeAll(["\"timeRendering\":", this.timeRendering, ","], "");
     }
 
-    if (this._timeSeriesProcessing != null) {  
-      buffer.writeAll(["\"timeSeriesProcessing\":", this._timeSeriesProcessing, ","], "");
+    if (this.timeSeriesProcessing != null) {  
+      buffer.writeAll(["\"timeSeriesProcessing\":", this.timeSeriesProcessing, ","], "");
     }
 
-    if (this._timeSetup != null) {  
-      buffer.writeAll(["\"timeSetup\":", this._timeSetup, ","], "");
+    if (this.timeSetup != null) {  
+      buffer.writeAll(["\"timeSetup\":", this.timeSetup, ","], "");
     }
   }
 

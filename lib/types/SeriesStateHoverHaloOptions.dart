@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,14 @@ import 'OptionFragment.dart';
  * SeriesStateHoverHaloOptions 
  */
 class SeriesStateHoverHaloOptions extends OptionFragment {
-  SeriesStateHoverHaloOptions() : super();
-  double? _brightness;  
-
+  SeriesStateHoverHaloOptions( {
+    this.brightness = null,
+    this.opacity = null,
+    this.size = null,
+    this.enabled = null
+  }) : super();
+  double? brightness;
+    /*
   double get brightness { 
     if (this._brightness == null) {
       this._brightness = 0;
@@ -36,9 +41,10 @@ class SeriesStateHoverHaloOptions extends OptionFragment {
   void set brightness (double v) {
     this._brightness = v;
   }
+    */
     
-  double? _opacity;  
-
+  double? opacity;
+    /*
   double get opacity { 
     if (this._opacity == null) {
       this._opacity = 0;
@@ -49,9 +55,10 @@ class SeriesStateHoverHaloOptions extends OptionFragment {
   void set opacity (double v) {
     this._opacity = v;
   }
+    */
     
-  double? _size;  
-
+  double? size;
+    /*
   double get size { 
     if (this._size == null) {
       this._size = 0;
@@ -62,9 +69,10 @@ class SeriesStateHoverHaloOptions extends OptionFragment {
   void set size (double v) {
     this._size = v;
   }
+    */
     
-  bool? _enabled;  
-
+  bool? enabled;
+    /*
   bool get enabled { 
     if (this._enabled == null) {
       this._enabled = false;
@@ -75,6 +83,7 @@ class SeriesStateHoverHaloOptions extends OptionFragment {
   void set enabled (bool v) {
     this._enabled = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -86,20 +95,20 @@ class SeriesStateHoverHaloOptions extends OptionFragment {
     
     // NOTE: skip serialization of attributes (type SVGAttributes is ignored)} 
 
-    if (this._brightness != null) {  
-      buffer.writeAll(["\"brightness\":", this._brightness, ","], "");
+    if (this.brightness != null) {  
+      buffer.writeAll(["\"brightness\":", this.brightness, ","], "");
     }
 
-    if (this._opacity != null) {  
-      buffer.writeAll(["\"opacity\":", this._opacity, ","], "");
+    if (this.opacity != null) {  
+      buffer.writeAll(["\"opacity\":", this.opacity, ","], "");
     }
 
-    if (this._size != null) {  
-      buffer.writeAll(["\"size\":", this._size, ","], "");
+    if (this.size != null) {  
+      buffer.writeAll(["\"size\":", this.size, ","], "");
     }
 
-    if (this._enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this._enabled, ","], "");
+    if (this.enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
     }
   }
 

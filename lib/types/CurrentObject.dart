@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,11 @@ import 'OptionFragment.dart';
  * CurrentObject 
  */
 class CurrentObject extends OptionFragment {
-  CurrentObject() : super();
-  String? _ruleIds;  
-
+  CurrentObject( {
+    this.ruleIds = null
+  }) : super();
+  String? ruleIds;
+    /*
   String get ruleIds { 
     if (this._ruleIds == null) {
       this._ruleIds = "";
@@ -35,6 +37,7 @@ class CurrentObject extends OptionFragment {
   void set ruleIds (String v) {
     this._ruleIds = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -46,8 +49,8 @@ class CurrentObject extends OptionFragment {
     
     // NOTE: skip serialization of mergedOptions (type Generic is ignored)} 
 
-    if (this._ruleIds != null) {  
-      buffer.writeAll(["\"ruleIds\":\`", this._ruleIds, "\`,"], "");
+    if (this.ruleIds != null) {  
+      buffer.writeAll(["\"ruleIds\":\`", this.ruleIds, "\`,"], "");
     }
 
     // NOTE: skip serialization of undoOptions (type Generic is ignored)} 

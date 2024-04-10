@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -24,9 +24,11 @@ import 'OptionFragment.dart';
  * TreeGridAxisLabelOptions 
  */
 class TreeGridAxisLabelOptions extends AxisLabelOptions {
-  TreeGridAxisLabelOptions() : super();
-  double? _levels;  
-
+  TreeGridAxisLabelOptions( {
+    this.levels = null
+  }) : super();
+  double? levels;
+    /*
   double get levels { 
     if (this._levels == null) {
       this._levels = 0;
@@ -37,6 +39,7 @@ class TreeGridAxisLabelOptions extends AxisLabelOptions {
   void set levels (double v) {
     this._levels = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -46,8 +49,8 @@ class TreeGridAxisLabelOptions extends AxisLabelOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._levels != null) {  
-      buffer.writeAll(["\"levels\":", this._levels, ","], "");
+    if (this.levels != null) {  
+      buffer.writeAll(["\"levels\":", this.levels, ","], "");
     }
 
     // NOTE: skip serialization of symbol (type TreeGridAxisLabelIconOptions is ignored)} 

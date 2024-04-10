@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,15 @@ import 'OptionFragment.dart';
  * SetTreeValuesOptions 
  */
 class SetTreeValuesOptions extends OptionFragment {
-  SetTreeValuesOptions() : super();
-  String? _idRoot;  
-
+  SetTreeValuesOptions( {
+    this.idRoot = null,
+    this.index = null,
+    this.levelIsConstant = null,
+    this.siblings = null,
+    this.visible = null
+  }) : super();
+  String? idRoot;
+    /*
   String get idRoot { 
     if (this._idRoot == null) {
       this._idRoot = "";
@@ -35,9 +41,10 @@ class SetTreeValuesOptions extends OptionFragment {
   void set idRoot (String v) {
     this._idRoot = v;
   }
+    */
     
-  double? _index;  
-
+  double? index;
+    /*
   double get index { 
     if (this._index == null) {
       this._index = 0;
@@ -48,9 +55,10 @@ class SetTreeValuesOptions extends OptionFragment {
   void set index (double v) {
     this._index = v;
   }
+    */
     
-  bool? _levelIsConstant;  
-
+  bool? levelIsConstant;
+    /*
   bool get levelIsConstant { 
     if (this._levelIsConstant == null) {
       this._levelIsConstant = false;
@@ -61,9 +69,10 @@ class SetTreeValuesOptions extends OptionFragment {
   void set levelIsConstant (bool v) {
     this._levelIsConstant = v;
   }
+    */
     
-  double? _siblings;  
-
+  double? siblings;
+    /*
   double get siblings { 
     if (this._siblings == null) {
       this._siblings = 0;
@@ -74,9 +83,10 @@ class SetTreeValuesOptions extends OptionFragment {
   void set siblings (double v) {
     this._siblings = v;
   }
+    */
     
-  bool? _visible;  
-
+  bool? visible;
+    /*
   bool get visible { 
     if (this._visible == null) {
       this._visible = false;
@@ -87,6 +97,7 @@ class SetTreeValuesOptions extends OptionFragment {
   void set visible (bool v) {
     this._visible = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -96,16 +107,16 @@ class SetTreeValuesOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._idRoot != null) {  
-      buffer.writeAll(["\"idRoot\":\`", this._idRoot, "\`,"], "");
+    if (this.idRoot != null) {  
+      buffer.writeAll(["\"idRoot\":\`", this.idRoot, "\`,"], "");
     }
 
-    if (this._index != null) {  
-      buffer.writeAll(["\"index\":", this._index, ","], "");
+    if (this.index != null) {  
+      buffer.writeAll(["\"index\":", this.index, ","], "");
     }
 
-    if (this._levelIsConstant != null) {  
-      buffer.writeAll(["\"levelIsConstant\":", this._levelIsConstant, ","], "");
+    if (this.levelIsConstant != null) {  
+      buffer.writeAll(["\"levelIsConstant\":", this.levelIsConstant, ","], "");
     }
 
     // NOTE: skip serialization of mapIdToNode (type Record<string, NodeObject> is ignored)} 
@@ -114,12 +125,12 @@ class SetTreeValuesOptions extends OptionFragment {
 
     // NOTE: skip serialization of series (type T is ignored)} 
 
-    if (this._siblings != null) {  
-      buffer.writeAll(["\"siblings\":", this._siblings, ","], "");
+    if (this.siblings != null) {  
+      buffer.writeAll(["\"siblings\":", this.siblings, ","], "");
     }
 
-    if (this._visible != null) {  
-      buffer.writeAll(["\"visible\":", this._visible, ","], "");
+    if (this.visible != null) {  
+      buffer.writeAll(["\"visible\":", this.visible, ","], "");
     }
   }
 

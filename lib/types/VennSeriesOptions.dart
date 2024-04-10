@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,13 @@ import 'OptionFragment.dart';
  * VennSeriesOptions 
  */
 class VennSeriesOptions extends ScatterSeriesOptions {
-  VennSeriesOptions() : super();
-  String? _borderDashStyle;  
-
+  VennSeriesOptions( {
+    this.borderDashStyle = null,
+    this.brighten = null,
+    this.brightness = null
+  }) : super();
+  String? borderDashStyle;
+    /*
   String get borderDashStyle { 
     if (this._borderDashStyle == null) {
       this._borderDashStyle = "";
@@ -36,9 +40,10 @@ class VennSeriesOptions extends ScatterSeriesOptions {
   void set borderDashStyle (String v) {
     this._borderDashStyle = v;
   }
+    */
     
-  double? _brighten;  
-
+  double? brighten;
+    /*
   double get brighten { 
     if (this._brighten == null) {
       this._brighten = 0;
@@ -49,9 +54,10 @@ class VennSeriesOptions extends ScatterSeriesOptions {
   void set brighten (double v) {
     this._brighten = v;
   }
+    */
     
-  double? _brightness;  
-
+  double? brightness;
+    /*
   double get brightness { 
     if (this._brightness == null) {
       this._brightness = 0;
@@ -62,6 +68,7 @@ class VennSeriesOptions extends ScatterSeriesOptions {
   void set brightness (double v) {
     this._brightness = v;
   }
+    */
     
   // NOTE: states skipped - type Generic is ignored in gen
 
@@ -73,16 +80,16 @@ class VennSeriesOptions extends ScatterSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._borderDashStyle != null) {  
-      buffer.writeAll(["\"borderDashStyle\":\`", this._borderDashStyle, "\`,"], "");
+    if (this.borderDashStyle != null) {  
+      buffer.writeAll(["\"borderDashStyle\":\`", this.borderDashStyle, "\`,"], "");
     }
 
-    if (this._brighten != null) {  
-      buffer.writeAll(["\"brighten\":", this._brighten, ","], "");
+    if (this.brighten != null) {  
+      buffer.writeAll(["\"brighten\":", this.brighten, ","], "");
     }
 
-    if (this._brightness != null) {  
-      buffer.writeAll(["\"brightness\":", this._brightness, ","], "");
+    if (this.brightness != null) {  
+      buffer.writeAll(["\"brightness\":", this.brightness, ","], "");
     }
 
     // NOTE: skip serialization of data (type VennPointOptions[] is ignored)} 

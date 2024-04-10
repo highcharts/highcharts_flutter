@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,12 @@ import 'OptionFragment.dart';
  * MarkerClusterMarkerOptions 
  */
 class MarkerClusterMarkerOptions extends PointMarkerOptions {
-  MarkerClusterMarkerOptions() : super();
-  double? _lineWidth;  
-
+  MarkerClusterMarkerOptions( {
+    this.lineWidth = null,
+    this.radius = null
+  }) : super();
+  double? lineWidth;
+    /*
   double get lineWidth { 
     if (this._lineWidth == null) {
       this._lineWidth = 0;
@@ -36,9 +39,10 @@ class MarkerClusterMarkerOptions extends PointMarkerOptions {
   void set lineWidth (double v) {
     this._lineWidth = v;
   }
+    */
     
-  double? _radius;  
-
+  double? radius;
+    /*
   double get radius { 
     if (this._radius == null) {
       this._radius = 0;
@@ -49,6 +53,7 @@ class MarkerClusterMarkerOptions extends PointMarkerOptions {
   void set radius (double v) {
     this._radius = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -58,12 +63,12 @@ class MarkerClusterMarkerOptions extends PointMarkerOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._lineWidth != null) {  
-      buffer.writeAll(["\"lineWidth\":", this._lineWidth, ","], "");
+    if (this.lineWidth != null) {  
+      buffer.writeAll(["\"lineWidth\":", this.lineWidth, ","], "");
     }
 
-    if (this._radius != null) {  
-      buffer.writeAll(["\"radius\":", this._radius, ","], "");
+    if (this.radius != null) {  
+      buffer.writeAll(["\"radius\":", this.radius, ","], "");
     }
   }
 

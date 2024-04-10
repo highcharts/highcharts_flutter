@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,14 @@ import 'OptionFragment.dart';
  * TextOptions 
  */
 class TextOptions extends OptionFragment {
-  TextOptions() : super();
-  String? _className;  
-
+  TextOptions( {
+    this.className = null,
+    this.text = null,
+    this.title = null,
+    this.isLabel = null
+  }) : super();
+  String? className;
+    /*
   String get className { 
     if (this._className == null) {
       this._className = "";
@@ -36,9 +41,10 @@ class TextOptions extends OptionFragment {
   void set className (String v) {
     this._className = v;
   }
+    */
     
-  String? _text;  
-
+  String? text;
+    /*
   String get text { 
     if (this._text == null) {
       this._text = "";
@@ -49,9 +55,10 @@ class TextOptions extends OptionFragment {
   void set text (String v) {
     this._text = v;
   }
+    */
     
-  String? _title;  
-
+  String? title;
+    /*
   String get title { 
     if (this._title == null) {
       this._title = "";
@@ -62,9 +69,10 @@ class TextOptions extends OptionFragment {
   void set title (String v) {
     this._title = v;
   }
+    */
     
-  bool? _isLabel;  
-
+  bool? isLabel;
+    /*
   bool get isLabel { 
     if (this._isLabel == null) {
       this._isLabel = false;
@@ -75,6 +83,7 @@ class TextOptions extends OptionFragment {
   void set isLabel (bool v) {
     this._isLabel = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -84,28 +93,28 @@ class TextOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._className != null) {  
-      buffer.writeAll(["\"className\":\`", this._className, "\`,"], "");
+    if (this.className != null) {  
+      buffer.writeAll(["\"className\":\`", this.className, "\`,"], "");
     }
 
     // NOTE: skip serialization of style (type CSSObject is ignored)} 
 
-    if (this._text != null) {  
-      buffer.writeAll(["\"text\":\`", this._text, "\`,"], "");
+    if (this.text != null) {  
+      buffer.writeAll(["\"text\":\`", this.text, "\`,"], "");
     }
 
     // NOTE: skip serialization of type (type "text" is ignored)} 
 
-    if (this._title != null) {  
-      buffer.writeAll(["\"title\":\`", this._title, "\`,"], "");
+    if (this.title != null) {  
+      buffer.writeAll(["\"title\":\`", this.title, "\`,"], "");
     }
 
-    if (this._className != null) {  
-      buffer.writeAll(["\"className\":\`", this._className, "\`,"], "");
+    if (this.className != null) {  
+      buffer.writeAll(["\"className\":\`", this.className, "\`,"], "");
     }
 
-    if (this._isLabel != null) {  
-      buffer.writeAll(["\"isLabel\":", this._isLabel, ","], "");
+    if (this.isLabel != null) {  
+      buffer.writeAll(["\"isLabel\":", this.isLabel, ","], "");
     }
   }
 

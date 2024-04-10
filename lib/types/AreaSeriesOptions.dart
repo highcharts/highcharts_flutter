@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,7 +23,11 @@ import 'OptionFragment.dart';
  * AreaSeriesOptions 
  */
 class AreaSeriesOptions extends LineSeriesOptions {
-  AreaSeriesOptions() : super();
+  AreaSeriesOptions( {
+    this.fillColor = null,
+    this.fillOpacity = null,
+    this.negativeFillColor = null
+  }) : super();
   /**
    * Fill color or gradient for the area. When `null`, the series' `color`
    * is used with the series' `fillOpacity`.
@@ -31,8 +35,8 @@ class AreaSeriesOptions extends LineSeriesOptions {
    * In styled mode, the fill color can be set with the `.highcharts-area`
    * class name.  
       */
-  String? _fillColor;  
-
+  String? fillColor;
+    /*
   String get fillColor { 
     if (this._fillColor == null) {
       this._fillColor = "";
@@ -43,6 +47,7 @@ class AreaSeriesOptions extends LineSeriesOptions {
   void set fillColor (String v) {
     this._fillColor = v;
   }
+    */
     
   /**
    * Fill opacity for the area. When you set an explicit `fillColor`,
@@ -54,8 +59,8 @@ class AreaSeriesOptions extends LineSeriesOptions {
    * In styled mode, the fill opacity can be set with the
    * `.highcharts-area` class name.  
       */
-  double? _fillOpacity;  
-
+  double? fillOpacity;
+    /*
   double get fillOpacity { 
     if (this._fillOpacity == null) {
       this._fillOpacity = 0;
@@ -66,6 +71,7 @@ class AreaSeriesOptions extends LineSeriesOptions {
   void set fillOpacity (double v) {
     this._fillOpacity = v;
   }
+    */
     
   /**
    * A separate color for the negative part of the area.
@@ -73,8 +79,8 @@ class AreaSeriesOptions extends LineSeriesOptions {
    * In styled mode, a negative color is set with the
    * `.highcharts-negative` class name.  
       */
-  String? _negativeFillColor;  
-
+  String? negativeFillColor;
+    /*
   String get negativeFillColor { 
     if (this._negativeFillColor == null) {
       this._negativeFillColor = "";
@@ -85,6 +91,7 @@ class AreaSeriesOptions extends LineSeriesOptions {
   void set negativeFillColor (String v) {
     this._negativeFillColor = v;
   }
+    */
     
   // NOTE: states skipped - type Generic is ignored in gen
 
@@ -96,16 +103,16 @@ class AreaSeriesOptions extends LineSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._fillColor != null) {  
-      buffer.writeAll(["\"fillColor\":\`", this._fillColor, "\`,"], "");
+    if (this.fillColor != null) {  
+      buffer.writeAll(["\"fillColor\":\`", this.fillColor, "\`,"], "");
     }
 
-    if (this._fillOpacity != null) {  
-      buffer.writeAll(["\"fillOpacity\":", this._fillOpacity, ","], "");
+    if (this.fillOpacity != null) {  
+      buffer.writeAll(["\"fillOpacity\":", this.fillOpacity, ","], "");
     }
 
-    if (this._negativeFillColor != null) {  
-      buffer.writeAll(["\"negativeFillColor\":\`", this._negativeFillColor, "\`,"], "");
+    if (this.negativeFillColor != null) {  
+      buffer.writeAll(["\"negativeFillColor\":\`", this.negativeFillColor, "\`,"], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,7 +23,16 @@ import 'OptionFragment.dart';
  * NavigatorOptions 
  */
 class NavigatorOptions extends OptionFragment {
-  NavigatorOptions() : super();
+  NavigatorOptions( {
+    this.adaptToUpdatedData = null,
+    this.baseSeries = null,
+    this.enabled = null,
+    this.isInternal = null,
+    this.margin = null,
+    this.opposite = null,
+    this.stickToMax = null,
+    this.top = null
+  }) : super();
   /**
    * Whether the navigator and scrollbar should adapt to updated data
    * in the base X axis. When loading data async, as in the demo below,
@@ -34,8 +43,8 @@ class NavigatorOptions extends OptionFragment {
    * 
    * Defaults to 'true'. 
       */
-  bool? _adaptToUpdatedData;  
-
+  bool? adaptToUpdatedData;
+    /*
   bool get adaptToUpdatedData { 
     if (this._adaptToUpdatedData == null) {
       this._adaptToUpdatedData = false;
@@ -46,6 +55,7 @@ class NavigatorOptions extends OptionFragment {
   void set adaptToUpdatedData (bool v) {
     this._adaptToUpdatedData = v;
   }
+    */
     
   /**
    * An integer identifying the index to use for the base series, or a
@@ -56,8 +66,8 @@ class NavigatorOptions extends OptionFragment {
    * 
    * Defaults to '0'. 
       */
-  String? _baseSeries;  
-
+  String? baseSeries;
+    /*
   String get baseSeries { 
     if (this._baseSeries == null) {
       this._baseSeries = "";
@@ -68,14 +78,15 @@ class NavigatorOptions extends OptionFragment {
   void set baseSeries (String v) {
     this._baseSeries = v;
   }
+    */
     
   /**
    * Enable or disable the navigator. 
    * 
    * Defaults to 'true'. 
       */
-  bool? _enabled;  
-
+  bool? enabled;
+    /*
   bool get enabled { 
     if (this._enabled == null) {
       this._enabled = false;
@@ -86,9 +97,10 @@ class NavigatorOptions extends OptionFragment {
   void set enabled (bool v) {
     this._enabled = v;
   }
+    */
     
-  bool? _isInternal;  
-
+  bool? isInternal;
+    /*
   bool get isInternal { 
     if (this._isInternal == null) {
       this._isInternal = false;
@@ -99,14 +111,15 @@ class NavigatorOptions extends OptionFragment {
   void set isInternal (bool v) {
     this._isInternal = v;
   }
+    */
     
   /**
    * The distance from the nearest element, the X axis or X axis labels. 
    * 
    * Defaults to '25'. 
       */
-  double? _margin;  
-
+  double? margin;
+    /*
   double get margin { 
     if (this._margin == null) {
       this._margin = 0;
@@ -117,6 +130,7 @@ class NavigatorOptions extends OptionFragment {
   void set margin (double v) {
     this._margin = v;
   }
+    */
     
   /**
    * When the chart is inverted, whether to draw the navigator on the
@@ -124,8 +138,8 @@ class NavigatorOptions extends OptionFragment {
    * 
    * Defaults to 'false'. 
       */
-  bool? _opposite;  
-
+  bool? opposite;
+    /*
   bool get opposite { 
     if (this._opposite == null) {
       this._opposite = false;
@@ -136,6 +150,7 @@ class NavigatorOptions extends OptionFragment {
   void set opposite (bool v) {
     this._opposite = v;
   }
+    */
     
   /**
    * Enable or disable navigator sticking to right, while adding new
@@ -144,8 +159,8 @@ class NavigatorOptions extends OptionFragment {
    * 
    * Defaults to 'undefined'. 
       */
-  bool? _stickToMax;  
-
+  bool? stickToMax;
+    /*
   bool get stickToMax { 
     if (this._stickToMax == null) {
       this._stickToMax = false;
@@ -156,9 +171,10 @@ class NavigatorOptions extends OptionFragment {
   void set stickToMax (bool v) {
     this._stickToMax = v;
   }
+    */
     
-  double? _top;  
-
+  double? top;
+    /*
   double get top { 
     if (this._top == null) {
       this._top = 0;
@@ -169,6 +185,7 @@ class NavigatorOptions extends OptionFragment {
   void set top (double v) {
     this._top = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -180,36 +197,36 @@ class NavigatorOptions extends OptionFragment {
     
     // NOTE: skip serialization of accessibility (type NavigatorAccessibilityOptions is ignored)} 
 
-    if (this._adaptToUpdatedData != null) {  
-      buffer.writeAll(["\"adaptToUpdatedData\":", this._adaptToUpdatedData, ","], "");
+    if (this.adaptToUpdatedData != null) {  
+      buffer.writeAll(["\"adaptToUpdatedData\":", this.adaptToUpdatedData, ","], "");
     }
 
-    if (this._baseSeries != null) {  
-      buffer.writeAll(["\"baseSeries\":\`", this._baseSeries, "\`,"], "");
+    if (this.baseSeries != null) {  
+      buffer.writeAll(["\"baseSeries\":\`", this.baseSeries, "\`,"], "");
     }
 
-    if (this._enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this._enabled, ","], "");
+    if (this.enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
     }
 
-    if (this._isInternal != null) {  
-      buffer.writeAll(["\"isInternal\":", this._isInternal, ","], "");
+    if (this.isInternal != null) {  
+      buffer.writeAll(["\"isInternal\":", this.isInternal, ","], "");
     }
 
-    if (this._margin != null) {  
-      buffer.writeAll(["\"margin\":", this._margin, ","], "");
+    if (this.margin != null) {  
+      buffer.writeAll(["\"margin\":", this.margin, ","], "");
     }
 
-    if (this._opposite != null) {  
-      buffer.writeAll(["\"opposite\":", this._opposite, ","], "");
+    if (this.opposite != null) {  
+      buffer.writeAll(["\"opposite\":", this.opposite, ","], "");
     }
 
-    if (this._stickToMax != null) {  
-      buffer.writeAll(["\"stickToMax\":", this._stickToMax, ","], "");
+    if (this.stickToMax != null) {  
+      buffer.writeAll(["\"stickToMax\":", this.stickToMax, ","], "");
     }
 
-    if (this._top != null) {  
-      buffer.writeAll(["\"top\":", this._top, ","], "");
+    if (this.top != null) {  
+      buffer.writeAll(["\"top\":", this.top, ","], "");
     }
   }
 

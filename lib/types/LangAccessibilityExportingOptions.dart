@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,13 @@ import 'OptionFragment.dart';
  * LangAccessibilityExportingOptions 
  */
 class LangAccessibilityExportingOptions extends OptionFragment {
-  LangAccessibilityExportingOptions() : super();
-  String? _chartMenuLabel;  
-
+  LangAccessibilityExportingOptions( {
+    this.chartMenuLabel = null,
+    this.exportRegionLabel = null,
+    this.menuButtonLabel = null
+  }) : super();
+  String? chartMenuLabel;
+    /*
   String get chartMenuLabel { 
     if (this._chartMenuLabel == null) {
       this._chartMenuLabel = "";
@@ -35,9 +39,10 @@ class LangAccessibilityExportingOptions extends OptionFragment {
   void set chartMenuLabel (String v) {
     this._chartMenuLabel = v;
   }
+    */
     
-  String? _exportRegionLabel;  
-
+  String? exportRegionLabel;
+    /*
   String get exportRegionLabel { 
     if (this._exportRegionLabel == null) {
       this._exportRegionLabel = "";
@@ -48,9 +53,10 @@ class LangAccessibilityExportingOptions extends OptionFragment {
   void set exportRegionLabel (String v) {
     this._exportRegionLabel = v;
   }
+    */
     
-  String? _menuButtonLabel;  
-
+  String? menuButtonLabel;
+    /*
   String get menuButtonLabel { 
     if (this._menuButtonLabel == null) {
       this._menuButtonLabel = "";
@@ -61,6 +67,7 @@ class LangAccessibilityExportingOptions extends OptionFragment {
   void set menuButtonLabel (String v) {
     this._menuButtonLabel = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -70,16 +77,16 @@ class LangAccessibilityExportingOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._chartMenuLabel != null) {  
-      buffer.writeAll(["\"chartMenuLabel\":\`", this._chartMenuLabel, "\`,"], "");
+    if (this.chartMenuLabel != null) {  
+      buffer.writeAll(["\"chartMenuLabel\":\`", this.chartMenuLabel, "\`,"], "");
     }
 
-    if (this._exportRegionLabel != null) {  
-      buffer.writeAll(["\"exportRegionLabel\":\`", this._exportRegionLabel, "\`,"], "");
+    if (this.exportRegionLabel != null) {  
+      buffer.writeAll(["\"exportRegionLabel\":\`", this.exportRegionLabel, "\`,"], "");
     }
 
-    if (this._menuButtonLabel != null) {  
-      buffer.writeAll(["\"menuButtonLabel\":\`", this._menuButtonLabel, "\`,"], "");
+    if (this.menuButtonLabel != null) {  
+      buffer.writeAll(["\"menuButtonLabel\":\`", this.menuButtonLabel, "\`,"], "");
     }
   }
 

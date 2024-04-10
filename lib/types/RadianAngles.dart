@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,12 @@ import 'OptionFragment.dart';
  * RadianAngles 
  */
 class RadianAngles extends OptionFragment {
-  RadianAngles() : super();
-  double? _end;  
-
+  RadianAngles( {
+    this.end = null,
+    this.start = null
+  }) : super();
+  double? end;
+    /*
   double get end { 
     if (this._end == null) {
       this._end = 0;
@@ -35,9 +38,10 @@ class RadianAngles extends OptionFragment {
   void set end (double v) {
     this._end = v;
   }
+    */
     
-  double? _start;  
-
+  double? start;
+    /*
   double get start { 
     if (this._start == null) {
       this._start = 0;
@@ -48,6 +52,7 @@ class RadianAngles extends OptionFragment {
   void set start (double v) {
     this._start = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -57,12 +62,12 @@ class RadianAngles extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._end != null) {  
-      buffer.writeAll(["\"end\":", this._end, ","], "");
+    if (this.end != null) {  
+      buffer.writeAll(["\"end\":", this.end, ","], "");
     }
 
-    if (this._start != null) {  
-      buffer.writeAll(["\"start\":", this._start, ","], "");
+    if (this.start != null) {  
+      buffer.writeAll(["\"start\":", this.start, ","], "");
     }
   }
 

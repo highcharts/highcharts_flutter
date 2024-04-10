@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,11 @@ import 'OptionFragment.dart';
  * DataTableOptions 
  */
 class DataTableOptions extends OptionFragment {
-  DataTableOptions() : super();
-  String? _id;  
-
+  DataTableOptions( {
+    this.id = null
+  }) : super();
+  String? id;
+    /*
   String get id { 
     if (this._id == null) {
       this._id = "";
@@ -35,6 +37,7 @@ class DataTableOptions extends OptionFragment {
   void set id (String v) {
     this._id = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -48,8 +51,8 @@ class DataTableOptions extends OptionFragment {
 
     // NOTE: skip serialization of columns (type Generic is ignored)} 
 
-    if (this._id != null) {  
-      buffer.writeAll(["\"id\":\`", this._id, "\`,"], "");
+    if (this.id != null) {  
+      buffer.writeAll(["\"id\":\`", this.id, "\`,"], "");
     }
   }
 

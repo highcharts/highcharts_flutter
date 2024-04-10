@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -24,7 +24,7 @@ import 'OptionFragment.dart';
  * WilliamsROptions 
  */
 class WilliamsROptions extends SMAOptions {
-  WilliamsROptions() : super();
+  WilliamsROptions( ) : super();
   /**
    * Paramters used in calculation of regression series' points.  
       */

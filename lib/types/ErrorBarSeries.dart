@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -24,9 +24,12 @@ import 'OptionFragment.dart';
  * ErrorBarSeries 
  */
 class ErrorBarSeries extends BoxPlotSeries {
-  ErrorBarSeries() : super();
-  bool? _doQuartiles;  
-
+  ErrorBarSeries( {
+    this.doQuartiles = null,
+    this.pointValKey = null
+  }) : super();
+  bool? doQuartiles;
+    /*
   bool get doQuartiles { 
     if (this._doQuartiles == null) {
       this._doQuartiles = false;
@@ -37,9 +40,10 @@ class ErrorBarSeries extends BoxPlotSeries {
   void set doQuartiles (bool v) {
     this._doQuartiles = v;
   }
+    */
     
-  String? _pointValKey;  
-
+  String? pointValKey;
+    /*
   String get pointValKey { 
     if (this._pointValKey == null) {
       this._pointValKey = "";
@@ -50,6 +54,7 @@ class ErrorBarSeries extends BoxPlotSeries {
   void set pointValKey (String v) {
     this._pointValKey = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -61,16 +66,16 @@ class ErrorBarSeries extends BoxPlotSeries {
     
     // NOTE: skip serialization of pointClass (type typeof ErrorBarPoint is ignored)} 
 
-    if (this._doQuartiles != null) {  
-      buffer.writeAll(["\"doQuartiles\":", this._doQuartiles, ","], "");
+    if (this.doQuartiles != null) {  
+      buffer.writeAll(["\"doQuartiles\":", this.doQuartiles, ","], "");
     }
 
     // NOTE: skip serialization of linkedParent (type ErrorBarSeries is ignored)} 
 
     // NOTE: skip serialization of pointArrayMap (type string[] is ignored)} 
 
-    if (this._pointValKey != null) {  
-      buffer.writeAll(["\"pointValKey\":\`", this._pointValKey, "\`,"], "");
+    if (this.pointValKey != null) {  
+      buffer.writeAll(["\"pointValKey\":\`", this.pointValKey, "\`,"], "");
     }
   }
 

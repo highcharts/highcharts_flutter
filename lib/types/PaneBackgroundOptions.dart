@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,19 @@ import 'OptionFragment.dart';
  * PaneBackgroundOptions 
  */
 class PaneBackgroundOptions extends OptionFragment {
-  PaneBackgroundOptions() : super();
-  String? _backgroundColor;  
-
+  PaneBackgroundOptions( {
+    this.backgroundColor = null,
+    this.borderColor = null,
+    this.borderWidth = null,
+    this.className = null,
+    this.from = null,
+    this.innerRadius = null,
+    this.outerRadius = null,
+    this.shape = null,
+    this.to = null
+  }) : super();
+  String? backgroundColor;
+    /*
   String get backgroundColor { 
     if (this._backgroundColor == null) {
       this._backgroundColor = "";
@@ -35,9 +45,10 @@ class PaneBackgroundOptions extends OptionFragment {
   void set backgroundColor (String v) {
     this._backgroundColor = v;
   }
+    */
     
-  String? _borderColor;  
-
+  String? borderColor;
+    /*
   String get borderColor { 
     if (this._borderColor == null) {
       this._borderColor = "";
@@ -48,9 +59,10 @@ class PaneBackgroundOptions extends OptionFragment {
   void set borderColor (String v) {
     this._borderColor = v;
   }
+    */
     
-  double? _borderWidth;  
-
+  double? borderWidth;
+    /*
   double get borderWidth { 
     if (this._borderWidth == null) {
       this._borderWidth = 0;
@@ -61,9 +73,10 @@ class PaneBackgroundOptions extends OptionFragment {
   void set borderWidth (double v) {
     this._borderWidth = v;
   }
+    */
     
-  String? _className;  
-
+  String? className;
+    /*
   String get className { 
     if (this._className == null) {
       this._className = "";
@@ -74,9 +87,10 @@ class PaneBackgroundOptions extends OptionFragment {
   void set className (String v) {
     this._className = v;
   }
+    */
     
-  double? _from;  
-
+  double? from;
+    /*
   double get from { 
     if (this._from == null) {
       this._from = 0;
@@ -87,9 +101,10 @@ class PaneBackgroundOptions extends OptionFragment {
   void set from (double v) {
     this._from = v;
   }
+    */
     
-  String? _innerRadius;  
-
+  String? innerRadius;
+    /*
   String get innerRadius { 
     if (this._innerRadius == null) {
       this._innerRadius = "";
@@ -100,9 +115,10 @@ class PaneBackgroundOptions extends OptionFragment {
   void set innerRadius (String v) {
     this._innerRadius = v;
   }
+    */
     
-  String? _outerRadius;  
-
+  String? outerRadius;
+    /*
   String get outerRadius { 
     if (this._outerRadius == null) {
       this._outerRadius = "";
@@ -113,9 +129,10 @@ class PaneBackgroundOptions extends OptionFragment {
   void set outerRadius (String v) {
     this._outerRadius = v;
   }
+    */
     
-  String? _shape;  
-
+  String? shape;
+    /*
   String get shape { 
     if (this._shape == null) {
       this._shape = "";
@@ -126,9 +143,10 @@ class PaneBackgroundOptions extends OptionFragment {
   void set shape (String v) {
     this._shape = v;
   }
+    */
     
-  double? _to;  
-
+  double? to;
+    /*
   double get to { 
     if (this._to == null) {
       this._to = 0;
@@ -139,6 +157,7 @@ class PaneBackgroundOptions extends OptionFragment {
   void set to (double v) {
     this._to = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -148,40 +167,40 @@ class PaneBackgroundOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._backgroundColor != null) {  
-      buffer.writeAll(["\"backgroundColor\":\`", this._backgroundColor, "\`,"], "");
+    if (this.backgroundColor != null) {  
+      buffer.writeAll(["\"backgroundColor\":\`", this.backgroundColor, "\`,"], "");
     }
 
-    if (this._borderColor != null) {  
-      buffer.writeAll(["\"borderColor\":\`", this._borderColor, "\`,"], "");
+    if (this.borderColor != null) {  
+      buffer.writeAll(["\"borderColor\":\`", this.borderColor, "\`,"], "");
     }
 
-    if (this._borderWidth != null) {  
-      buffer.writeAll(["\"borderWidth\":", this._borderWidth, ","], "");
+    if (this.borderWidth != null) {  
+      buffer.writeAll(["\"borderWidth\":", this.borderWidth, ","], "");
     }
 
-    if (this._className != null) {  
-      buffer.writeAll(["\"className\":\`", this._className, "\`,"], "");
+    if (this.className != null) {  
+      buffer.writeAll(["\"className\":\`", this.className, "\`,"], "");
     }
 
-    if (this._from != null) {  
-      buffer.writeAll(["\"from\":", this._from, ","], "");
+    if (this.from != null) {  
+      buffer.writeAll(["\"from\":", this.from, ","], "");
     }
 
-    if (this._innerRadius != null) {  
-      buffer.writeAll(["\"innerRadius\":\`", this._innerRadius, "\`,"], "");
+    if (this.innerRadius != null) {  
+      buffer.writeAll(["\"innerRadius\":\`", this.innerRadius, "\`,"], "");
     }
 
-    if (this._outerRadius != null) {  
-      buffer.writeAll(["\"outerRadius\":\`", this._outerRadius, "\`,"], "");
+    if (this.outerRadius != null) {  
+      buffer.writeAll(["\"outerRadius\":\`", this.outerRadius, "\`,"], "");
     }
 
-    if (this._shape != null) {  
-      buffer.writeAll(["\"shape\":\`", this._shape, "\`,"], "");
+    if (this.shape != null) {  
+      buffer.writeAll(["\"shape\":\`", this.shape, "\`,"], "");
     }
 
-    if (this._to != null) {  
-      buffer.writeAll(["\"to\":", this._to, ","], "");
+    if (this.to != null) {  
+      buffer.writeAll(["\"to\":", this.to, ","], "");
     }
   }
 

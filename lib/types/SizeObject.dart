@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,12 @@ import 'OptionFragment.dart';
  * SizeObject 
  */
 class SizeObject extends OptionFragment {
-  SizeObject() : super();
-  double? _height;  
-
+  SizeObject( {
+    this.height = null,
+    this.width = null
+  }) : super();
+  double? height;
+    /*
   double get height { 
     if (this._height == null) {
       this._height = 0;
@@ -35,9 +38,10 @@ class SizeObject extends OptionFragment {
   void set height (double v) {
     this._height = v;
   }
+    */
     
-  double? _width;  
-
+  double? width;
+    /*
   double get width { 
     if (this._width == null) {
       this._width = 0;
@@ -48,6 +52,7 @@ class SizeObject extends OptionFragment {
   void set width (double v) {
     this._width = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -57,12 +62,12 @@ class SizeObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._height != null) {  
-      buffer.writeAll(["\"height\":", this._height, ","], "");
+    if (this.height != null) {  
+      buffer.writeAll(["\"height\":", this.height, ","], "");
     }
 
-    if (this._width != null) {  
-      buffer.writeAll(["\"width\":", this._width, ","], "");
+    if (this.width != null) {  
+      buffer.writeAll(["\"width\":", this.width, ","], "");
     }
   }
 

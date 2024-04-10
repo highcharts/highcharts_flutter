@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,12 @@ import 'OptionFragment.dart';
  * PolygonSeriesOptions 
  */
 class PolygonSeriesOptions extends ScatterSeriesOptions {
-  PolygonSeriesOptions() : super();
-  String? _fillColor;  
-
+  PolygonSeriesOptions( {
+    this.fillColor = null,
+    this.trackByArea = null
+  }) : super();
+  String? fillColor;
+    /*
   String get fillColor { 
     if (this._fillColor == null) {
       this._fillColor = "";
@@ -36,11 +39,12 @@ class PolygonSeriesOptions extends ScatterSeriesOptions {
   void set fillColor (String v) {
     this._fillColor = v;
   }
+    */
     
   // NOTE: states skipped - type Generic is ignored in gen
 
-  bool? _trackByArea;  
-
+  bool? trackByArea;
+    /*
   bool get trackByArea { 
     if (this._trackByArea == null) {
       this._trackByArea = false;
@@ -51,6 +55,7 @@ class PolygonSeriesOptions extends ScatterSeriesOptions {
   void set trackByArea (bool v) {
     this._trackByArea = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -60,14 +65,14 @@ class PolygonSeriesOptions extends ScatterSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._fillColor != null) {  
-      buffer.writeAll(["\"fillColor\":\`", this._fillColor, "\`,"], "");
+    if (this.fillColor != null) {  
+      buffer.writeAll(["\"fillColor\":\`", this.fillColor, "\`,"], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 
 
-    if (this._trackByArea != null) {  
-      buffer.writeAll(["\"trackByArea\":", this._trackByArea, ","], "");
+    if (this.trackByArea != null) {  
+      buffer.writeAll(["\"trackByArea\":", this.trackByArea, ","], "");
     }
   }
 

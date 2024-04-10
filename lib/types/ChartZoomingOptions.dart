@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -24,9 +24,14 @@ import 'OptionFragment.dart';
  * ChartZoomingOptions 
  */
 class ChartZoomingOptions extends OptionFragment {
-  ChartZoomingOptions() : super();
-  String? _key;  
-
+  ChartZoomingOptions( {
+    this.key = null,
+    this.pinchType = null,
+    this.singleTouch = null,
+    this.type = null
+  }) : super();
+  String? key;
+    /*
   String get key { 
     if (this._key == null) {
       this._key = "";
@@ -37,9 +42,10 @@ class ChartZoomingOptions extends OptionFragment {
   void set key (String v) {
     this._key = v;
   }
+    */
     
-  String? _pinchType;  
-
+  String? pinchType;
+    /*
   String get pinchType { 
     if (this._pinchType == null) {
       this._pinchType = "";
@@ -50,9 +56,10 @@ class ChartZoomingOptions extends OptionFragment {
   void set pinchType (String v) {
     this._pinchType = v;
   }
+    */
     
-  bool? _singleTouch;  
-
+  bool? singleTouch;
+    /*
   bool get singleTouch { 
     if (this._singleTouch == null) {
       this._singleTouch = false;
@@ -63,9 +70,10 @@ class ChartZoomingOptions extends OptionFragment {
   void set singleTouch (bool v) {
     this._singleTouch = v;
   }
+    */
     
-  String? _type;  
-
+  String? type;
+    /*
   String get type { 
     if (this._type == null) {
       this._type = "";
@@ -76,6 +84,7 @@ class ChartZoomingOptions extends OptionFragment {
   void set type (String v) {
     this._type = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -85,22 +94,22 @@ class ChartZoomingOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._key != null) {  
-      buffer.writeAll(["\"key\":\`", this._key, "\`,"], "");
+    if (this.key != null) {  
+      buffer.writeAll(["\"key\":\`", this.key, "\`,"], "");
     }
 
-    if (this._pinchType != null) {  
-      buffer.writeAll(["\"pinchType\":\`", this._pinchType, "\`,"], "");
+    if (this.pinchType != null) {  
+      buffer.writeAll(["\"pinchType\":\`", this.pinchType, "\`,"], "");
     }
 
     // NOTE: skip serialization of resetButton (type ChartResetZoomButtonOptions is ignored)} 
 
-    if (this._singleTouch != null) {  
-      buffer.writeAll(["\"singleTouch\":", this._singleTouch, ","], "");
+    if (this.singleTouch != null) {  
+      buffer.writeAll(["\"singleTouch\":", this.singleTouch, ","], "");
     }
 
-    if (this._type != null) {  
-      buffer.writeAll(["\"type\":\`", this._type, "\`,"], "");
+    if (this.type != null) {  
+      buffer.writeAll(["\"type\":\`", this.type, "\`,"], "");
     }
 
     // NOTE: skip serialization of mouseWheel (type MouseWheelZoomOptions is ignored)} 

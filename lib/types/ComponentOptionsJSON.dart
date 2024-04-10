@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,17 @@ import 'OptionFragment.dart';
  * ComponentOptionsJSON 
  */
 class ComponentOptionsJSON extends OptionFragment {
-  ComponentOptionsJSON() : super();
-  String? _caption;  
-
+  ComponentOptionsJSON( {
+    this.caption = null,
+    this.className = null,
+    this.renderTo = null,
+    this.id = null,
+    this.parentElement = null,
+    this.title = null,
+    this.type = null
+  }) : super();
+  String? caption;
+    /*
   String get caption { 
     if (this._caption == null) {
       this._caption = "";
@@ -36,9 +44,10 @@ class ComponentOptionsJSON extends OptionFragment {
   void set caption (String v) {
     this._caption = v;
   }
+    */
     
-  String? _className;  
-
+  String? className;
+    /*
   String get className { 
     if (this._className == null) {
       this._className = "";
@@ -49,9 +58,10 @@ class ComponentOptionsJSON extends OptionFragment {
   void set className (String v) {
     this._className = v;
   }
+    */
     
-  String? _renderTo;  
-
+  String? renderTo;
+    /*
   String get renderTo { 
     if (this._renderTo == null) {
       this._renderTo = "";
@@ -62,9 +72,10 @@ class ComponentOptionsJSON extends OptionFragment {
   void set renderTo (String v) {
     this._renderTo = v;
   }
+    */
     
-  String? _id;  
-
+  String? id;
+    /*
   String get id { 
     if (this._id == null) {
       this._id = "";
@@ -75,9 +86,10 @@ class ComponentOptionsJSON extends OptionFragment {
   void set id (String v) {
     this._id = v;
   }
+    */
     
-  String? _parentElement;  
-
+  String? parentElement;
+    /*
   String get parentElement { 
     if (this._parentElement == null) {
       this._parentElement = "";
@@ -88,9 +100,10 @@ class ComponentOptionsJSON extends OptionFragment {
   void set parentElement (String v) {
     this._parentElement = v;
   }
+    */
     
-  String? _title;  
-
+  String? title;
+    /*
   String get title { 
     if (this._title == null) {
       this._title = "";
@@ -101,9 +114,10 @@ class ComponentOptionsJSON extends OptionFragment {
   void set title (String v) {
     this._title = v;
   }
+    */
     
-  String? _type;  
-
+  String? type;
+    /*
   String get type { 
     if (this._type == null) {
       this._type = "";
@@ -114,6 +128,7 @@ class ComponentOptionsJSON extends OptionFragment {
   void set type (String v) {
     this._type = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -123,42 +138,42 @@ class ComponentOptionsJSON extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._caption != null) {  
-      buffer.writeAll(["\"caption\":\`", this._caption, "\`,"], "");
+    if (this.caption != null) {  
+      buffer.writeAll(["\"caption\":\`", this.caption, "\`,"], "");
     }
 
-    if (this._className != null) {  
-      buffer.writeAll(["\"className\":\`", this._className, "\`,"], "");
+    if (this.className != null) {  
+      buffer.writeAll(["\"className\":\`", this.className, "\`,"], "");
     }
 
-    if (this._renderTo != null) {  
-      buffer.writeAll(["\"renderTo\":\`", this._renderTo, "\`,"], "");
+    if (this.renderTo != null) {  
+      buffer.writeAll(["\"renderTo\":\`", this.renderTo, "\`,"], "");
     }
 
     // NOTE: skip serialization of editableOptions (type Generic is ignored)} 
 
     // NOTE: skip serialization of editableOptionsBindings (type Generic is ignored)} 
 
-    if (this._id != null) {  
-      buffer.writeAll(["\"id\":\`", this._id, "\`,"], "");
+    if (this.id != null) {  
+      buffer.writeAll(["\"id\":\`", this.id, "\`,"], "");
     }
 
     // NOTE: skip serialization of parentCell (type JSON is ignored)} 
 
-    if (this._parentElement != null) {  
-      buffer.writeAll(["\"parentElement\":\`", this._parentElement, "\`,"], "");
+    if (this.parentElement != null) {  
+      buffer.writeAll(["\"parentElement\":\`", this.parentElement, "\`,"], "");
     }
 
     // NOTE: skip serialization of style (type {} is ignored)} 
 
     // NOTE: skip serialization of sync (type Generic is ignored)} 
 
-    if (this._title != null) {  
-      buffer.writeAll(["\"title\":\`", this._title, "\`,"], "");
+    if (this.title != null) {  
+      buffer.writeAll(["\"title\":\`", this.title, "\`,"], "");
     }
 
-    if (this._type != null) {  
-      buffer.writeAll(["\"type\":\`", this._type, "\`,"], "");
+    if (this.type != null) {  
+      buffer.writeAll(["\"type\":\`", this.type, "\`,"], "");
     }
   }
 

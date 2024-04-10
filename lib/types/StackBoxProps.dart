@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,15 @@ import 'OptionFragment.dart';
  * StackBoxProps 
  */
 class StackBoxProps extends OptionFragment {
-  StackBoxProps() : super();
-  double? _xOffset;  
-
+  StackBoxProps( {
+    this.xOffset = null,
+    this.width = null,
+    this.boxBottom = null,
+    this.boxTop = null,
+    this.defaultX = null
+  }) : super();
+  double? xOffset;
+    /*
   double get xOffset { 
     if (this._xOffset == null) {
       this._xOffset = 0;
@@ -36,9 +42,10 @@ class StackBoxProps extends OptionFragment {
   void set xOffset (double v) {
     this._xOffset = v;
   }
+    */
     
-  double? _width;  
-
+  double? width;
+    /*
   double get width { 
     if (this._width == null) {
       this._width = 0;
@@ -49,9 +56,10 @@ class StackBoxProps extends OptionFragment {
   void set width (double v) {
     this._width = v;
   }
+    */
     
-  double? _boxBottom;  
-
+  double? boxBottom;
+    /*
   double get boxBottom { 
     if (this._boxBottom == null) {
       this._boxBottom = 0;
@@ -62,9 +70,10 @@ class StackBoxProps extends OptionFragment {
   void set boxBottom (double v) {
     this._boxBottom = v;
   }
+    */
     
-  double? _boxTop;  
-
+  double? boxTop;
+    /*
   double get boxTop { 
     if (this._boxTop == null) {
       this._boxTop = 0;
@@ -75,9 +84,10 @@ class StackBoxProps extends OptionFragment {
   void set boxTop (double v) {
     this._boxTop = v;
   }
+    */
     
-  double? _defaultX;  
-
+  double? defaultX;
+    /*
   double get defaultX { 
     if (this._defaultX == null) {
       this._defaultX = 0;
@@ -88,6 +98,7 @@ class StackBoxProps extends OptionFragment {
   void set defaultX (double v) {
     this._defaultX = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -97,24 +108,24 @@ class StackBoxProps extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._xOffset != null) {  
-      buffer.writeAll(["\"xOffset\":", this._xOffset, ","], "");
+    if (this.xOffset != null) {  
+      buffer.writeAll(["\"xOffset\":", this.xOffset, ","], "");
     }
 
-    if (this._width != null) {  
-      buffer.writeAll(["\"width\":", this._width, ","], "");
+    if (this.width != null) {  
+      buffer.writeAll(["\"width\":", this.width, ","], "");
     }
 
-    if (this._boxBottom != null) {  
-      buffer.writeAll(["\"boxBottom\":", this._boxBottom, ","], "");
+    if (this.boxBottom != null) {  
+      buffer.writeAll(["\"boxBottom\":", this.boxBottom, ","], "");
     }
 
-    if (this._boxTop != null) {  
-      buffer.writeAll(["\"boxTop\":", this._boxTop, ","], "");
+    if (this.boxTop != null) {  
+      buffer.writeAll(["\"boxTop\":", this.boxTop, ","], "");
     }
 
-    if (this._defaultX != null) {  
-      buffer.writeAll(["\"defaultX\":", this._defaultX, ","], "");
+    if (this.defaultX != null) {  
+      buffer.writeAll(["\"defaultX\":", this.defaultX, ","], "");
     }
 
     // NOTE: skip serialization of xAxis (type Axis is ignored)} 

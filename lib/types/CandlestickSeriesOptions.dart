@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,7 +23,10 @@ import 'OptionFragment.dart';
  * CandlestickSeriesOptions 
  */
 class CandlestickSeriesOptions extends OHLCSeriesOptions {
-  CandlestickSeriesOptions() : super();
+  CandlestickSeriesOptions( {
+    this.lineColor = null,
+    this.upLineColor = null
+  }) : super();
   /**
    * The color of the line/border of the candlestick.
    * 
@@ -32,8 +35,8 @@ class CandlestickSeriesOptions extends OHLCSeriesOptions {
    * 
    * Defaults to '#000000'. 
       */
-  String? _lineColor;  
-
+  String? lineColor;
+    /*
   String get lineColor { 
     if (this._lineColor == null) {
       this._lineColor = "";
@@ -44,6 +47,7 @@ class CandlestickSeriesOptions extends OHLCSeriesOptions {
   void set lineColor (String v) {
     this._lineColor = v;
   }
+    */
     
   // NOTE: states skipped - type Generic is ignored in gen
 
@@ -51,8 +55,8 @@ class CandlestickSeriesOptions extends OHLCSeriesOptions {
    * The specific line color for up candle sticks. The default is to
    * inherit the general `lineColor` setting.  
       */
-  String? _upLineColor;  
-
+  String? upLineColor;
+    /*
   String get upLineColor { 
     if (this._upLineColor == null) {
       this._upLineColor = "";
@@ -63,6 +67,7 @@ class CandlestickSeriesOptions extends OHLCSeriesOptions {
   void set upLineColor (String v) {
     this._upLineColor = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -72,14 +77,14 @@ class CandlestickSeriesOptions extends OHLCSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._lineColor != null) {  
-      buffer.writeAll(["\"lineColor\":\`", this._lineColor, "\`,"], "");
+    if (this.lineColor != null) {  
+      buffer.writeAll(["\"lineColor\":\`", this.lineColor, "\`,"], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 
 
-    if (this._upLineColor != null) {  
-      buffer.writeAll(["\"upLineColor\":\`", this._upLineColor, "\`,"], "");
+    if (this.upLineColor != null) {  
+      buffer.writeAll(["\"upLineColor\":\`", this.upLineColor, "\`,"], "");
     }
   }
 

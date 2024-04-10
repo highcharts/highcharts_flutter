@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -24,9 +24,12 @@ import 'OptionFragment.dart';
  * OnPoint 
  */
 class OnPoint extends OptionFragment {
-  OnPoint() : super();
-  String? _id;  
-
+  OnPoint( {
+    this.id = null,
+    this.z = null
+  }) : super();
+  String? id;
+    /*
   String get id { 
     if (this._id == null) {
       this._id = "";
@@ -37,9 +40,10 @@ class OnPoint extends OptionFragment {
   void set id (String v) {
     this._id = v;
   }
+    */
     
-  double? _z;  
-
+  double? z;
+    /*
   double get z { 
     if (this._z == null) {
       this._z = 0;
@@ -50,6 +54,7 @@ class OnPoint extends OptionFragment {
   void set z (double v) {
     this._z = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -61,14 +66,14 @@ class OnPoint extends OptionFragment {
     
     // NOTE: skip serialization of connectorOptions (type SVGAttributes is ignored)} 
 
-    if (this._id != null) {  
-      buffer.writeAll(["\"id\":\`", this._id, "\`,"], "");
+    if (this.id != null) {  
+      buffer.writeAll(["\"id\":\`", this.id, "\`,"], "");
     }
 
     // NOTE: skip serialization of position (type Position is ignored)} 
 
-    if (this._z != null) {  
-      buffer.writeAll(["\"z\":", this._z, ","], "");
+    if (this.z != null) {  
+      buffer.writeAll(["\"z\":", this.z, ","], "");
     }
   }
 

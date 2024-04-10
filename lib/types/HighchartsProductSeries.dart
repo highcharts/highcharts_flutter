@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -75,7 +75,7 @@ import 'OptionFragment.dart';
  * HighchartsProductSeries 
  */
 class HighchartsProductSeries extends OptionFragment {
-  HighchartsProductSeries() : super();
+  HighchartsProductSeries( ) : super();
   
 
   //////////////////////////////////////////////////////////////////////////////

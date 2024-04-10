@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,14 @@ import 'OptionFragment.dart';
  * MetaColumn 
  */
 class MetaColumn extends OptionFragment {
-  MetaColumn() : super();
-  String? _dataType;  
-
+  MetaColumn( {
+    this.dataType = null,
+    this.defaultValue = null,
+    this.index = null,
+    this.title = null
+  }) : super();
+  String? dataType;
+    /*
   String get dataType { 
     if (this._dataType == null) {
       this._dataType = "";
@@ -35,9 +40,10 @@ class MetaColumn extends OptionFragment {
   void set dataType (String v) {
     this._dataType = v;
   }
+    */
     
-  String? _defaultValue;  
-
+  String? defaultValue;
+    /*
   String get defaultValue { 
     if (this._defaultValue == null) {
       this._defaultValue = "";
@@ -48,9 +54,10 @@ class MetaColumn extends OptionFragment {
   void set defaultValue (String v) {
     this._defaultValue = v;
   }
+    */
     
-  double? _index;  
-
+  double? index;
+    /*
   double get index { 
     if (this._index == null) {
       this._index = 0;
@@ -61,9 +68,10 @@ class MetaColumn extends OptionFragment {
   void set index (double v) {
     this._index = v;
   }
+    */
     
-  String? _title;  
-
+  String? title;
+    /*
   String get title { 
     if (this._title == null) {
       this._title = "";
@@ -74,6 +82,7 @@ class MetaColumn extends OptionFragment {
   void set title (String v) {
     this._title = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -83,20 +92,20 @@ class MetaColumn extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._dataType != null) {  
-      buffer.writeAll(["\"dataType\":\`", this._dataType, "\`,"], "");
+    if (this.dataType != null) {  
+      buffer.writeAll(["\"dataType\":\`", this.dataType, "\`,"], "");
     }
 
-    if (this._defaultValue != null) {  
-      buffer.writeAll(["\"defaultValue\":\`", this._defaultValue, "\`,"], "");
+    if (this.defaultValue != null) {  
+      buffer.writeAll(["\"defaultValue\":\`", this.defaultValue, "\`,"], "");
     }
 
-    if (this._index != null) {  
-      buffer.writeAll(["\"index\":", this._index, ","], "");
+    if (this.index != null) {  
+      buffer.writeAll(["\"index\":", this.index, ","], "");
     }
 
-    if (this._title != null) {  
-      buffer.writeAll(["\"title\":\`", this._title, "\`,"], "");
+    if (this.title != null) {  
+      buffer.writeAll(["\"title\":\`", this.title, "\`,"], "");
     }
   }
 

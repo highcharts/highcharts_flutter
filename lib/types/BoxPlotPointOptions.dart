@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,15 @@ import 'OptionFragment.dart';
  * BoxPlotPointOptions 
  */
 class BoxPlotPointOptions extends ColumnPointOptions {
-  BoxPlotPointOptions() : super();
-  double? _high;  
-
+  BoxPlotPointOptions( {
+    this.high = null,
+    this.low = null,
+    this.median = null,
+    this.q1 = null,
+    this.q3 = null
+  }) : super();
+  double? high;
+    /*
   double get high { 
     if (this._high == null) {
       this._high = 0;
@@ -36,9 +42,10 @@ class BoxPlotPointOptions extends ColumnPointOptions {
   void set high (double v) {
     this._high = v;
   }
+    */
     
-  double? _low;  
-
+  double? low;
+    /*
   double get low { 
     if (this._low == null) {
       this._low = 0;
@@ -49,9 +56,10 @@ class BoxPlotPointOptions extends ColumnPointOptions {
   void set low (double v) {
     this._low = v;
   }
+    */
     
-  double? _median;  
-
+  double? median;
+    /*
   double get median { 
     if (this._median == null) {
       this._median = 0;
@@ -62,9 +70,10 @@ class BoxPlotPointOptions extends ColumnPointOptions {
   void set median (double v) {
     this._median = v;
   }
+    */
     
-  double? _q1;  
-
+  double? q1;
+    /*
   double get q1 { 
     if (this._q1 == null) {
       this._q1 = 0;
@@ -75,9 +84,10 @@ class BoxPlotPointOptions extends ColumnPointOptions {
   void set q1 (double v) {
     this._q1 = v;
   }
+    */
     
-  double? _q3;  
-
+  double? q3;
+    /*
   double get q3 { 
     if (this._q3 == null) {
       this._q3 = 0;
@@ -88,6 +98,7 @@ class BoxPlotPointOptions extends ColumnPointOptions {
   void set q3 (double v) {
     this._q3 = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -97,24 +108,24 @@ class BoxPlotPointOptions extends ColumnPointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._high != null) {  
-      buffer.writeAll(["\"high\":", this._high, ","], "");
+    if (this.high != null) {  
+      buffer.writeAll(["\"high\":", this.high, ","], "");
     }
 
-    if (this._low != null) {  
-      buffer.writeAll(["\"low\":", this._low, ","], "");
+    if (this.low != null) {  
+      buffer.writeAll(["\"low\":", this.low, ","], "");
     }
 
-    if (this._median != null) {  
-      buffer.writeAll(["\"median\":", this._median, ","], "");
+    if (this.median != null) {  
+      buffer.writeAll(["\"median\":", this.median, ","], "");
     }
 
-    if (this._q1 != null) {  
-      buffer.writeAll(["\"q1\":", this._q1, ","], "");
+    if (this.q1 != null) {  
+      buffer.writeAll(["\"q1\":", this.q1, ","], "");
     }
 
-    if (this._q3 != null) {  
-      buffer.writeAll(["\"q3\":", this._q3, ","], "");
+    if (this.q3 != null) {  
+      buffer.writeAll(["\"q3\":", this.q3, ","], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -25,9 +25,19 @@ import 'OptionFragment.dart';
  * OptionsJSON 
  */
 class OptionsJSON extends OptionFragment {
-  OptionsJSON() : super();
-  String? _containerId;  
-
+  OptionsJSON( {
+    this.containerId = null,
+    this.parentContainerId = null,
+    this.width = null,
+    this.height = null,
+    this.guiEnabled = null,
+    this.chartOptions = null,
+    this.chartClassName = null,
+    this.chartID = null,
+    this.chartConstructor = null
+  }) : super();
+  String? containerId;
+    /*
   String get containerId { 
     if (this._containerId == null) {
       this._containerId = "";
@@ -38,9 +48,10 @@ class OptionsJSON extends OptionFragment {
   void set containerId (String v) {
     this._containerId = v;
   }
+    */
     
-  String? _parentContainerId;  
-
+  String? parentContainerId;
+    /*
   String get parentContainerId { 
     if (this._parentContainerId == null) {
       this._parentContainerId = "";
@@ -51,9 +62,10 @@ class OptionsJSON extends OptionFragment {
   void set parentContainerId (String v) {
     this._parentContainerId = v;
   }
+    */
     
-  String? _width;  
-
+  String? width;
+    /*
   String get width { 
     if (this._width == null) {
       this._width = "";
@@ -64,9 +76,10 @@ class OptionsJSON extends OptionFragment {
   void set width (String v) {
     this._width = v;
   }
+    */
     
-  String? _height;  
-
+  String? height;
+    /*
   String get height { 
     if (this._height == null) {
       this._height = "";
@@ -77,9 +90,10 @@ class OptionsJSON extends OptionFragment {
   void set height (String v) {
     this._height = v;
   }
+    */
     
-  bool? _guiEnabled;  
-
+  bool? guiEnabled;
+    /*
   bool get guiEnabled { 
     if (this._guiEnabled == null) {
       this._guiEnabled = false;
@@ -90,9 +104,10 @@ class OptionsJSON extends OptionFragment {
   void set guiEnabled (bool v) {
     this._guiEnabled = v;
   }
+    */
     
-  String? _chartOptions;  
-
+  String? chartOptions;
+    /*
   String get chartOptions { 
     if (this._chartOptions == null) {
       this._chartOptions = "";
@@ -103,9 +118,10 @@ class OptionsJSON extends OptionFragment {
   void set chartOptions (String v) {
     this._chartOptions = v;
   }
+    */
     
-  String? _chartClassName;  
-
+  String? chartClassName;
+    /*
   String get chartClassName { 
     if (this._chartClassName == null) {
       this._chartClassName = "";
@@ -116,9 +132,10 @@ class OptionsJSON extends OptionFragment {
   void set chartClassName (String v) {
     this._chartClassName = v;
   }
+    */
     
-  String? _chartID;  
-
+  String? chartID;
+    /*
   String get chartID { 
     if (this._chartID == null) {
       this._chartID = "";
@@ -129,9 +146,10 @@ class OptionsJSON extends OptionFragment {
   void set chartID (String v) {
     this._chartID = v;
   }
+    */
     
-  String? _chartConstructor;  
-
+  String? chartConstructor;
+    /*
   String get chartConstructor { 
     if (this._chartConstructor == null) {
       this._chartConstructor = "";
@@ -142,6 +160,7 @@ class OptionsJSON extends OptionFragment {
   void set chartConstructor (String v) {
     this._chartConstructor = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -151,44 +170,44 @@ class OptionsJSON extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._containerId != null) {  
-      buffer.writeAll(["\"containerId\":\`", this._containerId, "\`,"], "");
+    if (this.containerId != null) {  
+      buffer.writeAll(["\"containerId\":\`", this.containerId, "\`,"], "");
     }
 
-    if (this._parentContainerId != null) {  
-      buffer.writeAll(["\"parentContainerId\":\`", this._parentContainerId, "\`,"], "");
+    if (this.parentContainerId != null) {  
+      buffer.writeAll(["\"parentContainerId\":\`", this.parentContainerId, "\`,"], "");
     }
 
     // NOTE: skip serialization of cells (type JSON[] is ignored)} 
 
     // NOTE: skip serialization of style (type CSSJSONObject is ignored)} 
 
-    if (this._containerId != null) {  
-      buffer.writeAll(["\"containerId\":\`", this._containerId, "\`,"], "");
+    if (this.containerId != null) {  
+      buffer.writeAll(["\"containerId\":\`", this.containerId, "\`,"], "");
     }
 
-    if (this._parentContainerId != null) {  
-      buffer.writeAll(["\"parentContainerId\":\`", this._parentContainerId, "\`,"], "");
+    if (this.parentContainerId != null) {  
+      buffer.writeAll(["\"parentContainerId\":\`", this.parentContainerId, "\`,"], "");
     }
 
     // NOTE: skip serialization of rows (type JSON[] is ignored)} 
 
     // NOTE: skip serialization of style (type CSSJSONObject is ignored)} 
 
-    if (this._width != null) {  
-      buffer.writeAll(["\"width\":\`", this._width, "\`,"], "");
+    if (this.width != null) {  
+      buffer.writeAll(["\"width\":\`", this.width, "\`,"], "");
     }
 
-    if (this._height != null) {  
-      buffer.writeAll(["\"height\":\`", this._height, "\`,"], "");
+    if (this.height != null) {  
+      buffer.writeAll(["\"height\":\`", this.height, "\`,"], "");
     }
 
-    if (this._containerId != null) {  
-      buffer.writeAll(["\"containerId\":\`", this._containerId, "\`,"], "");
+    if (this.containerId != null) {  
+      buffer.writeAll(["\"containerId\":\`", this.containerId, "\`,"], "");
     }
 
-    if (this._parentContainerId != null) {  
-      buffer.writeAll(["\"parentContainerId\":\`", this._parentContainerId, "\`,"], "");
+    if (this.parentContainerId != null) {  
+      buffer.writeAll(["\"parentContainerId\":\`", this.parentContainerId, "\`,"], "");
     }
 
     // NOTE: skip serialization of mountedComponentJSON (type JSON is ignored)} 
@@ -201,34 +220,34 @@ class OptionsJSON extends OptionFragment {
 
     // NOTE: skip serialization of components (type ComponentOptionsJSON[] is ignored)} 
 
-    if (this._containerId != null) {  
-      buffer.writeAll(["\"containerId\":\`", this._containerId, "\`,"], "");
+    if (this.containerId != null) {  
+      buffer.writeAll(["\"containerId\":\`", this.containerId, "\`,"], "");
     }
 
     // NOTE: skip serialization of dataPool (type Generic is ignored)} 
 
     // NOTE: skip serialization of layouts (type JSON[] is ignored)} 
 
-    if (this._guiEnabled != null) {  
-      buffer.writeAll(["\"guiEnabled\":", this._guiEnabled, ","], "");
+    if (this.guiEnabled != null) {  
+      buffer.writeAll(["\"guiEnabled\":", this.guiEnabled, ","], "");
     }
 
     // NOTE: skip serialization of responsiveBreakpoints (type ResponsiveBreakpoints is ignored)} 
 
-    if (this._chartOptions != null) {  
-      buffer.writeAll(["\"chartOptions\":\`", this._chartOptions, "\`,"], "");
+    if (this.chartOptions != null) {  
+      buffer.writeAll(["\"chartOptions\":\`", this.chartOptions, "\`,"], "");
     }
 
-    if (this._chartClassName != null) {  
-      buffer.writeAll(["\"chartClassName\":\`", this._chartClassName, "\`,"], "");
+    if (this.chartClassName != null) {  
+      buffer.writeAll(["\"chartClassName\":\`", this.chartClassName, "\`,"], "");
     }
 
-    if (this._chartID != null) {  
-      buffer.writeAll(["\"chartID\":\`", this._chartID, "\`,"], "");
+    if (this.chartID != null) {  
+      buffer.writeAll(["\"chartID\":\`", this.chartID, "\`,"], "");
     }
 
-    if (this._chartConstructor != null) {  
-      buffer.writeAll(["\"chartConstructor\":\`", this._chartConstructor, "\`,"], "");
+    if (this.chartConstructor != null) {  
+      buffer.writeAll(["\"chartConstructor\":\`", this.chartConstructor, "\`,"], "");
     }
 
     // NOTE: skip serialization of type (type "Highcharts" is ignored)} 

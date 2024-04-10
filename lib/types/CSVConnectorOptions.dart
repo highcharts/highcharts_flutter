@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,17 @@ import 'OptionFragment.dart';
  * CSVConnectorOptions 
  */
 class CSVConnectorOptions extends DataConnectorOptions {
-  CSVConnectorOptions() : super();
-  String? _csv;  
-
+  CSVConnectorOptions( {
+    this.csv = null,
+    this.csvURL = null,
+    this.decimalPoint = null,
+    this.dataRefreshRate = null,
+    this.enablePolling = null,
+    this.firstRowAsNames = null,
+    this.itemDelimiter = null
+  }) : super();
+  String? csv;
+    /*
   String get csv { 
     if (this._csv == null) {
       this._csv = "";
@@ -36,9 +44,10 @@ class CSVConnectorOptions extends DataConnectorOptions {
   void set csv (String v) {
     this._csv = v;
   }
+    */
     
-  String? _csvURL;  
-
+  String? csvURL;
+    /*
   String get csvURL { 
     if (this._csvURL == null) {
       this._csvURL = "";
@@ -49,9 +58,10 @@ class CSVConnectorOptions extends DataConnectorOptions {
   void set csvURL (String v) {
     this._csvURL = v;
   }
+    */
     
-  String? _decimalPoint;  
-
+  String? decimalPoint;
+    /*
   String get decimalPoint { 
     if (this._decimalPoint == null) {
       this._decimalPoint = "";
@@ -62,9 +72,10 @@ class CSVConnectorOptions extends DataConnectorOptions {
   void set decimalPoint (String v) {
     this._decimalPoint = v;
   }
+    */
     
-  double? _dataRefreshRate;  
-
+  double? dataRefreshRate;
+    /*
   double get dataRefreshRate { 
     if (this._dataRefreshRate == null) {
       this._dataRefreshRate = 0;
@@ -75,9 +86,10 @@ class CSVConnectorOptions extends DataConnectorOptions {
   void set dataRefreshRate (double v) {
     this._dataRefreshRate = v;
   }
+    */
     
-  bool? _enablePolling;  
-
+  bool? enablePolling;
+    /*
   bool get enablePolling { 
     if (this._enablePolling == null) {
       this._enablePolling = false;
@@ -88,9 +100,10 @@ class CSVConnectorOptions extends DataConnectorOptions {
   void set enablePolling (bool v) {
     this._enablePolling = v;
   }
+    */
     
-  bool? _firstRowAsNames;  
-
+  bool? firstRowAsNames;
+    /*
   bool get firstRowAsNames { 
     if (this._firstRowAsNames == null) {
       this._firstRowAsNames = false;
@@ -101,9 +114,10 @@ class CSVConnectorOptions extends DataConnectorOptions {
   void set firstRowAsNames (bool v) {
     this._firstRowAsNames = v;
   }
+    */
     
-  String? _itemDelimiter;  
-
+  String? itemDelimiter;
+    /*
   String get itemDelimiter { 
     if (this._itemDelimiter == null) {
       this._itemDelimiter = "";
@@ -114,6 +128,7 @@ class CSVConnectorOptions extends DataConnectorOptions {
   void set itemDelimiter (String v) {
     this._itemDelimiter = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -123,32 +138,32 @@ class CSVConnectorOptions extends DataConnectorOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._csv != null) {  
-      buffer.writeAll(["\"csv\":\`", this._csv, "\`,"], "");
+    if (this.csv != null) {  
+      buffer.writeAll(["\"csv\":\`", this.csv, "\`,"], "");
     }
 
-    if (this._csvURL != null) {  
-      buffer.writeAll(["\"csvURL\":\`", this._csvURL, "\`,"], "");
+    if (this.csvURL != null) {  
+      buffer.writeAll(["\"csvURL\":\`", this.csvURL, "\`,"], "");
     }
 
-    if (this._decimalPoint != null) {  
-      buffer.writeAll(["\"decimalPoint\":\`", this._decimalPoint, "\`,"], "");
+    if (this.decimalPoint != null) {  
+      buffer.writeAll(["\"decimalPoint\":\`", this.decimalPoint, "\`,"], "");
     }
 
-    if (this._dataRefreshRate != null) {  
-      buffer.writeAll(["\"dataRefreshRate\":", this._dataRefreshRate, ","], "");
+    if (this.dataRefreshRate != null) {  
+      buffer.writeAll(["\"dataRefreshRate\":", this.dataRefreshRate, ","], "");
     }
 
-    if (this._enablePolling != null) {  
-      buffer.writeAll(["\"enablePolling\":", this._enablePolling, ","], "");
+    if (this.enablePolling != null) {  
+      buffer.writeAll(["\"enablePolling\":", this.enablePolling, ","], "");
     }
 
-    if (this._firstRowAsNames != null) {  
-      buffer.writeAll(["\"firstRowAsNames\":", this._firstRowAsNames, ","], "");
+    if (this.firstRowAsNames != null) {  
+      buffer.writeAll(["\"firstRowAsNames\":", this.firstRowAsNames, ","], "");
     }
 
-    if (this._itemDelimiter != null) {  
-      buffer.writeAll(["\"itemDelimiter\":\`", this._itemDelimiter, "\`,"], "");
+    if (this.itemDelimiter != null) {  
+      buffer.writeAll(["\"itemDelimiter\":\`", this.itemDelimiter, "\`,"], "");
     }
   }
 

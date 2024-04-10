@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,14 @@ import 'OptionFragment.dart';
  * TreemapSeries 
  */
 class TreemapSeries extends OptionFragment {
-  TreemapSeries() : super();
-  String? _colorKey;  
-
+  TreemapSeries( {
+    this.colorKey = null,
+    this.directTouch = null,
+    this.getExtremesFromAll = null,
+    this.optionalAxis = null
+  }) : super();
+  String? colorKey;
+    /*
   String get colorKey { 
     if (this._colorKey == null) {
       this._colorKey = "";
@@ -35,9 +40,10 @@ class TreemapSeries extends OptionFragment {
   void set colorKey (String v) {
     this._colorKey = v;
   }
+    */
     
-  bool? _directTouch;  
-
+  bool? directTouch;
+    /*
   bool get directTouch { 
     if (this._directTouch == null) {
       this._directTouch = false;
@@ -48,9 +54,10 @@ class TreemapSeries extends OptionFragment {
   void set directTouch (bool v) {
     this._directTouch = v;
   }
+    */
     
-  bool? _getExtremesFromAll;  
-
+  bool? getExtremesFromAll;
+    /*
   bool get getExtremesFromAll { 
     if (this._getExtremesFromAll == null) {
       this._getExtremesFromAll = false;
@@ -61,9 +68,10 @@ class TreemapSeries extends OptionFragment {
   void set getExtremesFromAll (bool v) {
     this._getExtremesFromAll = v;
   }
+    */
     
-  String? _optionalAxis;  
-
+  String? optionalAxis;
+    /*
   String get optionalAxis { 
     if (this._optionalAxis == null) {
       this._optionalAxis = "";
@@ -74,6 +82,7 @@ class TreemapSeries extends OptionFragment {
   void set optionalAxis (String v) {
     this._optionalAxis = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -83,20 +92,20 @@ class TreemapSeries extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._colorKey != null) {  
-      buffer.writeAll(["\"colorKey\":\`", this._colorKey, "\`,"], "");
+    if (this.colorKey != null) {  
+      buffer.writeAll(["\"colorKey\":\`", this.colorKey, "\`,"], "");
     }
 
-    if (this._directTouch != null) {  
-      buffer.writeAll(["\"directTouch\":", this._directTouch, ","], "");
+    if (this.directTouch != null) {  
+      buffer.writeAll(["\"directTouch\":", this.directTouch, ","], "");
     }
 
-    if (this._getExtremesFromAll != null) {  
-      buffer.writeAll(["\"getExtremesFromAll\":", this._getExtremesFromAll, ","], "");
+    if (this.getExtremesFromAll != null) {  
+      buffer.writeAll(["\"getExtremesFromAll\":", this.getExtremesFromAll, ","], "");
     }
 
-    if (this._optionalAxis != null) {  
-      buffer.writeAll(["\"optionalAxis\":\`", this._optionalAxis, "\`,"], "");
+    if (this.optionalAxis != null) {  
+      buffer.writeAll(["\"optionalAxis\":\`", this.optionalAxis, "\`,"], "");
     }
 
     // NOTE: skip serialization of parallelArrays (type string[] is ignored)} 

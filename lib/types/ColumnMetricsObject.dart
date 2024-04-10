@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,14 @@ import 'OptionFragment.dart';
  * ColumnMetricsObject 
  */
 class ColumnMetricsObject extends OptionFragment {
-  ColumnMetricsObject() : super();
-  double? _offset;  
-
+  ColumnMetricsObject( {
+    this.offset = null,
+    this.width = null,
+    this.paddedWidth = null,
+    this.columnCount = null
+  }) : super();
+  double? offset;
+    /*
   double get offset { 
     if (this._offset == null) {
       this._offset = 0;
@@ -35,9 +40,10 @@ class ColumnMetricsObject extends OptionFragment {
   void set offset (double v) {
     this._offset = v;
   }
+    */
     
-  double? _width;  
-
+  double? width;
+    /*
   double get width { 
     if (this._width == null) {
       this._width = 0;
@@ -48,9 +54,10 @@ class ColumnMetricsObject extends OptionFragment {
   void set width (double v) {
     this._width = v;
   }
+    */
     
-  double? _paddedWidth;  
-
+  double? paddedWidth;
+    /*
   double get paddedWidth { 
     if (this._paddedWidth == null) {
       this._paddedWidth = 0;
@@ -61,9 +68,10 @@ class ColumnMetricsObject extends OptionFragment {
   void set paddedWidth (double v) {
     this._paddedWidth = v;
   }
+    */
     
-  double? _columnCount;  
-
+  double? columnCount;
+    /*
   double get columnCount { 
     if (this._columnCount == null) {
       this._columnCount = 0;
@@ -74,6 +82,7 @@ class ColumnMetricsObject extends OptionFragment {
   void set columnCount (double v) {
     this._columnCount = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -83,20 +92,20 @@ class ColumnMetricsObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._offset != null) {  
-      buffer.writeAll(["\"offset\":", this._offset, ","], "");
+    if (this.offset != null) {  
+      buffer.writeAll(["\"offset\":", this.offset, ","], "");
     }
 
-    if (this._width != null) {  
-      buffer.writeAll(["\"width\":", this._width, ","], "");
+    if (this.width != null) {  
+      buffer.writeAll(["\"width\":", this.width, ","], "");
     }
 
-    if (this._paddedWidth != null) {  
-      buffer.writeAll(["\"paddedWidth\":", this._paddedWidth, ","], "");
+    if (this.paddedWidth != null) {  
+      buffer.writeAll(["\"paddedWidth\":", this.paddedWidth, ","], "");
     }
 
-    if (this._columnCount != null) {  
-      buffer.writeAll(["\"columnCount\":", this._columnCount, ","], "");
+    if (this.columnCount != null) {  
+      buffer.writeAll(["\"columnCount\":", this.columnCount, ","], "");
     }
   }
 

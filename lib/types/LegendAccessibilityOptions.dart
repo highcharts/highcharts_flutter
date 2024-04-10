@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,11 @@ import 'OptionFragment.dart';
  * LegendAccessibilityOptions 
  */
 class LegendAccessibilityOptions extends OptionFragment {
-  LegendAccessibilityOptions() : super();
-  bool? _enabled;  
-
+  LegendAccessibilityOptions( {
+    this.enabled = null
+  }) : super();
+  bool? enabled;
+    /*
   bool get enabled { 
     if (this._enabled == null) {
       this._enabled = false;
@@ -36,6 +38,7 @@ class LegendAccessibilityOptions extends OptionFragment {
   void set enabled (bool v) {
     this._enabled = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -45,8 +48,8 @@ class LegendAccessibilityOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this._enabled, ","], "");
+    if (this.enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
     }
 
     // NOTE: skip serialization of keyboardNavigation (type LegendAccessibilityKeyboardNavigationOptions is ignored)} 

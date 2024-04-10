@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,15 @@ import 'OptionFragment.dart';
  * ScrollablePlotAreaOptions 
  */
 class ScrollablePlotAreaOptions extends OptionFragment {
-  ScrollablePlotAreaOptions() : super();
-  double? _minHeight;  
-
+  ScrollablePlotAreaOptions( {
+    this.minHeight = null,
+    this.minWidth = null,
+    this.opacity = null,
+    this.scrollPositionX = null,
+    this.scrollPositionY = null
+  }) : super();
+  double? minHeight;
+    /*
   double get minHeight { 
     if (this._minHeight == null) {
       this._minHeight = 0;
@@ -35,9 +41,10 @@ class ScrollablePlotAreaOptions extends OptionFragment {
   void set minHeight (double v) {
     this._minHeight = v;
   }
+    */
     
-  double? _minWidth;  
-
+  double? minWidth;
+    /*
   double get minWidth { 
     if (this._minWidth == null) {
       this._minWidth = 0;
@@ -48,9 +55,10 @@ class ScrollablePlotAreaOptions extends OptionFragment {
   void set minWidth (double v) {
     this._minWidth = v;
   }
+    */
     
-  double? _opacity;  
-
+  double? opacity;
+    /*
   double get opacity { 
     if (this._opacity == null) {
       this._opacity = 0;
@@ -61,9 +69,10 @@ class ScrollablePlotAreaOptions extends OptionFragment {
   void set opacity (double v) {
     this._opacity = v;
   }
+    */
     
-  double? _scrollPositionX;  
-
+  double? scrollPositionX;
+    /*
   double get scrollPositionX { 
     if (this._scrollPositionX == null) {
       this._scrollPositionX = 0;
@@ -74,9 +83,10 @@ class ScrollablePlotAreaOptions extends OptionFragment {
   void set scrollPositionX (double v) {
     this._scrollPositionX = v;
   }
+    */
     
-  double? _scrollPositionY;  
-
+  double? scrollPositionY;
+    /*
   double get scrollPositionY { 
     if (this._scrollPositionY == null) {
       this._scrollPositionY = 0;
@@ -87,6 +97,7 @@ class ScrollablePlotAreaOptions extends OptionFragment {
   void set scrollPositionY (double v) {
     this._scrollPositionY = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -96,24 +107,24 @@ class ScrollablePlotAreaOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._minHeight != null) {  
-      buffer.writeAll(["\"minHeight\":", this._minHeight, ","], "");
+    if (this.minHeight != null) {  
+      buffer.writeAll(["\"minHeight\":", this.minHeight, ","], "");
     }
 
-    if (this._minWidth != null) {  
-      buffer.writeAll(["\"minWidth\":", this._minWidth, ","], "");
+    if (this.minWidth != null) {  
+      buffer.writeAll(["\"minWidth\":", this.minWidth, ","], "");
     }
 
-    if (this._opacity != null) {  
-      buffer.writeAll(["\"opacity\":", this._opacity, ","], "");
+    if (this.opacity != null) {  
+      buffer.writeAll(["\"opacity\":", this.opacity, ","], "");
     }
 
-    if (this._scrollPositionX != null) {  
-      buffer.writeAll(["\"scrollPositionX\":", this._scrollPositionX, ","], "");
+    if (this.scrollPositionX != null) {  
+      buffer.writeAll(["\"scrollPositionX\":", this.scrollPositionX, ","], "");
     }
 
-    if (this._scrollPositionY != null) {  
-      buffer.writeAll(["\"scrollPositionY\":", this._scrollPositionY, ","], "");
+    if (this.scrollPositionY != null) {  
+      buffer.writeAll(["\"scrollPositionY\":", this.scrollPositionY, ","], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,12 @@ import 'OptionFragment.dart';
  * FrameSideOptions 
  */
 class FrameSideOptions extends OptionFragment {
-  FrameSideOptions() : super();
-  String? _color;  
-
+  FrameSideOptions( {
+    this.color = null,
+    this.size = null
+  }) : super();
+  String? color;
+    /*
   String get color { 
     if (this._color == null) {
       this._color = "";
@@ -35,9 +38,10 @@ class FrameSideOptions extends OptionFragment {
   void set color (String v) {
     this._color = v;
   }
+    */
     
-  double? _size;  
-
+  double? size;
+    /*
   double get size { 
     if (this._size == null) {
       this._size = 0;
@@ -48,6 +52,7 @@ class FrameSideOptions extends OptionFragment {
   void set size (double v) {
     this._size = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -57,12 +62,12 @@ class FrameSideOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._color != null) {  
-      buffer.writeAll(["\"color\":\`", this._color, "\`,"], "");
+    if (this.color != null) {  
+      buffer.writeAll(["\"color\":\`", this.color, "\`,"], "");
     }
 
-    if (this._size != null) {  
-      buffer.writeAll(["\"size\":", this._size, ","], "");
+    if (this.size != null) {  
+      buffer.writeAll(["\"size\":", this.size, ","], "");
     }
 
     // NOTE: skip serialization of visible (type "default" is ignored)} 

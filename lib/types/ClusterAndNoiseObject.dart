@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -24,9 +24,16 @@ import 'OptionFragment.dart';
  * ClusterAndNoiseObject 
  */
 class ClusterAndNoiseObject extends OptionFragment {
-  ClusterAndNoiseObject() : super();
-  String? _id;  
-
+  ClusterAndNoiseObject( {
+    this.id = null,
+    this.index = null,
+    this.stateId = null,
+    this.x = null,
+    this.y = null,
+    this.clusterZoneClassName = null
+  }) : super();
+  String? id;
+    /*
   String get id { 
     if (this._id == null) {
       this._id = "";
@@ -37,9 +44,10 @@ class ClusterAndNoiseObject extends OptionFragment {
   void set id (String v) {
     this._id = v;
   }
+    */
     
-  double? _index;  
-
+  double? index;
+    /*
   double get index { 
     if (this._index == null) {
       this._index = 0;
@@ -50,9 +58,10 @@ class ClusterAndNoiseObject extends OptionFragment {
   void set index (double v) {
     this._index = v;
   }
+    */
     
-  String? _stateId;  
-
+  String? stateId;
+    /*
   String get stateId { 
     if (this._stateId == null) {
       this._stateId = "";
@@ -63,9 +72,10 @@ class ClusterAndNoiseObject extends OptionFragment {
   void set stateId (String v) {
     this._stateId = v;
   }
+    */
     
-  double? _x;  
-
+  double? x;
+    /*
   double get x { 
     if (this._x == null) {
       this._x = 0;
@@ -76,9 +86,10 @@ class ClusterAndNoiseObject extends OptionFragment {
   void set x (double v) {
     this._x = v;
   }
+    */
     
-  double? _y;  
-
+  double? y;
+    /*
   double get y { 
     if (this._y == null) {
       this._y = 0;
@@ -89,9 +100,10 @@ class ClusterAndNoiseObject extends OptionFragment {
   void set y (double v) {
     this._y = v;
   }
+    */
     
-  String? _clusterZoneClassName;  
-
+  String? clusterZoneClassName;
+    /*
   String get clusterZoneClassName { 
     if (this._clusterZoneClassName == null) {
       this._clusterZoneClassName = "";
@@ -102,6 +114,7 @@ class ClusterAndNoiseObject extends OptionFragment {
   void set clusterZoneClassName (String v) {
     this._clusterZoneClassName = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -113,32 +126,32 @@ class ClusterAndNoiseObject extends OptionFragment {
     
     // NOTE: skip serialization of data (type MarkerClusterSplitDataObject[] is ignored)} 
 
-    if (this._id != null) {  
-      buffer.writeAll(["\"id\":\`", this._id, "\`,"], "");
+    if (this.id != null) {  
+      buffer.writeAll(["\"id\":\`", this.id, "\`,"], "");
     }
 
-    if (this._index != null) {  
-      buffer.writeAll(["\"index\":", this._index, ","], "");
+    if (this.index != null) {  
+      buffer.writeAll(["\"index\":", this.index, ","], "");
     }
 
-    if (this._stateId != null) {  
-      buffer.writeAll(["\"stateId\":\`", this._stateId, "\`,"], "");
+    if (this.stateId != null) {  
+      buffer.writeAll(["\"stateId\":\`", this.stateId, "\`,"], "");
     }
 
-    if (this._x != null) {  
-      buffer.writeAll(["\"x\":", this._x, ","], "");
+    if (this.x != null) {  
+      buffer.writeAll(["\"x\":", this.x, ","], "");
     }
 
-    if (this._y != null) {  
-      buffer.writeAll(["\"y\":", this._y, ","], "");
+    if (this.y != null) {  
+      buffer.writeAll(["\"y\":", this.y, ","], "");
     }
 
     // NOTE: skip serialization of point (type Point is ignored)} 
 
     // NOTE: skip serialization of clusterZone (type MarkerClusterZonesOptions is ignored)} 
 
-    if (this._clusterZoneClassName != null) {  
-      buffer.writeAll(["\"clusterZoneClassName\":\`", this._clusterZoneClassName, "\`,"], "");
+    if (this.clusterZoneClassName != null) {  
+      buffer.writeAll(["\"clusterZoneClassName\":\`", this.clusterZoneClassName, "\`,"], "");
     }
 
     // NOTE: skip serialization of pointsOutside (type MarkerClusterSplitDataObject[] is ignored)} 

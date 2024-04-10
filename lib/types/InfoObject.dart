@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,11 @@ import 'OptionFragment.dart';
  * InfoObject 
  */
 class InfoObject extends OptionFragment {
-  InfoObject() : super();
-  double? _counter;  
-
+  InfoObject( {
+    this.counter = null
+  }) : super();
+  double? counter;
+    /*
   double get counter { 
     if (this._counter == null) {
       this._counter = 0;
@@ -35,6 +37,7 @@ class InfoObject extends OptionFragment {
   void set counter (double v) {
     this._counter = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -44,8 +47,8 @@ class InfoObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._counter != null) {  
-      buffer.writeAll(["\"counter\":", this._counter, ","], "");
+    if (this.counter != null) {  
+      buffer.writeAll(["\"counter\":", this.counter, ","], "");
     }
   }
 

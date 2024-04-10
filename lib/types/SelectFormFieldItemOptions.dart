@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,13 @@ import 'OptionFragment.dart';
  * SelectFormFieldItemOptions 
  */
 class SelectFormFieldItemOptions extends OptionFragment {
-  SelectFormFieldItemOptions() : super();
-  String? _iconsURLPrefix;  
-
+  SelectFormFieldItemOptions( {
+    this.iconsURLPrefix = null,
+    this.name = null,
+    this.iconURL = null
+  }) : super();
+  String? iconsURLPrefix;
+    /*
   String get iconsURLPrefix { 
     if (this._iconsURLPrefix == null) {
       this._iconsURLPrefix = "";
@@ -35,9 +39,10 @@ class SelectFormFieldItemOptions extends OptionFragment {
   void set iconsURLPrefix (String v) {
     this._iconsURLPrefix = v;
   }
+    */
     
-  String? _name;  
-
+  String? name;
+    /*
   String get name { 
     if (this._name == null) {
       this._name = "";
@@ -48,9 +53,10 @@ class SelectFormFieldItemOptions extends OptionFragment {
   void set name (String v) {
     this._name = v;
   }
+    */
     
-  String? _iconURL;  
-
+  String? iconURL;
+    /*
   String get iconURL { 
     if (this._iconURL == null) {
       this._iconURL = "";
@@ -61,6 +67,7 @@ class SelectFormFieldItemOptions extends OptionFragment {
   void set iconURL (String v) {
     this._iconURL = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -70,16 +77,16 @@ class SelectFormFieldItemOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._iconsURLPrefix != null) {  
-      buffer.writeAll(["\"iconsURLPrefix\":\`", this._iconsURLPrefix, "\`,"], "");
+    if (this.iconsURLPrefix != null) {  
+      buffer.writeAll(["\"iconsURLPrefix\":\`", this.iconsURLPrefix, "\`,"], "");
     }
 
-    if (this._name != null) {  
-      buffer.writeAll(["\"name\":\`", this._name, "\`,"], "");
+    if (this.name != null) {  
+      buffer.writeAll(["\"name\":\`", this.name, "\`,"], "");
     }
 
-    if (this._iconURL != null) {  
-      buffer.writeAll(["\"iconURL\":\`", this._iconURL, "\`,"], "");
+    if (this.iconURL != null) {  
+      buffer.writeAll(["\"iconURL\":\`", this.iconURL, "\`,"], "");
     }
   }
 

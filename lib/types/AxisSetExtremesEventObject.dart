@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -24,9 +24,16 @@ import 'OptionFragment.dart';
  * AxisSetExtremesEventObject 
  */
 class AxisSetExtremesEventObject extends OptionFragment {
-  AxisSetExtremesEventObject() : super();
-  double? _max;  
-
+  AxisSetExtremesEventObject( {
+    this.max = null,
+    this.min = null,
+    this.move = null,
+    this.scale = null,
+    this.trigger = null,
+    this.triggerOp = null
+  }) : super();
+  double? max;
+    /*
   double get max { 
     if (this._max == null) {
       this._max = 0;
@@ -37,9 +44,10 @@ class AxisSetExtremesEventObject extends OptionFragment {
   void set max (double v) {
     this._max = v;
   }
+    */
     
-  double? _min;  
-
+  double? min;
+    /*
   double get min { 
     if (this._min == null) {
       this._min = 0;
@@ -50,9 +58,10 @@ class AxisSetExtremesEventObject extends OptionFragment {
   void set min (double v) {
     this._min = v;
   }
+    */
     
-  double? _move;  
-
+  double? move;
+    /*
   double get move { 
     if (this._move == null) {
       this._move = 0;
@@ -63,9 +72,10 @@ class AxisSetExtremesEventObject extends OptionFragment {
   void set move (double v) {
     this._move = v;
   }
+    */
     
-  double? _scale;  
-
+  double? scale;
+    /*
   double get scale { 
     if (this._scale == null) {
       this._scale = 0;
@@ -76,9 +86,10 @@ class AxisSetExtremesEventObject extends OptionFragment {
   void set scale (double v) {
     this._scale = v;
   }
+    */
     
-  String? _trigger;  
-
+  String? trigger;
+    /*
   String get trigger { 
     if (this._trigger == null) {
       this._trigger = "";
@@ -89,9 +100,10 @@ class AxisSetExtremesEventObject extends OptionFragment {
   void set trigger (String v) {
     this._trigger = v;
   }
+    */
     
-  String? _triggerOp;  
-
+  String? triggerOp;
+    /*
   String get triggerOp { 
     if (this._triggerOp == null) {
       this._triggerOp = "";
@@ -102,6 +114,7 @@ class AxisSetExtremesEventObject extends OptionFragment {
   void set triggerOp (String v) {
     this._triggerOp = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -113,34 +126,34 @@ class AxisSetExtremesEventObject extends OptionFragment {
     
     // NOTE: skip serialization of DOMEvent (type any is ignored)} 
 
-    if (this._max != null) {  
-      buffer.writeAll(["\"max\":", this._max, ","], "");
+    if (this.max != null) {  
+      buffer.writeAll(["\"max\":", this.max, ","], "");
     }
 
-    if (this._min != null) {  
-      buffer.writeAll(["\"min\":", this._min, ","], "");
+    if (this.min != null) {  
+      buffer.writeAll(["\"min\":", this.min, ","], "");
     }
 
-    if (this._move != null) {  
-      buffer.writeAll(["\"move\":", this._move, ","], "");
+    if (this.move != null) {  
+      buffer.writeAll(["\"move\":", this.move, ","], "");
     }
 
     // NOTE: skip serialization of preventDefault (type Function is ignored)} 
 
     // NOTE: skip serialization of rangeSelectorButton (type RangeSelectorButtonOptions is ignored)} 
 
-    if (this._scale != null) {  
-      buffer.writeAll(["\"scale\":", this._scale, ","], "");
+    if (this.scale != null) {  
+      buffer.writeAll(["\"scale\":", this.scale, ","], "");
     }
 
     // NOTE: skip serialization of target (type SVGElement is ignored)} 
 
-    if (this._trigger != null) {  
-      buffer.writeAll(["\"trigger\":\`", this._trigger, "\`,"], "");
+    if (this.trigger != null) {  
+      buffer.writeAll(["\"trigger\":\`", this.trigger, "\`,"], "");
     }
 
-    if (this._triggerOp != null) {  
-      buffer.writeAll(["\"triggerOp\":\`", this._triggerOp, "\`,"], "");
+    if (this.triggerOp != null) {  
+      buffer.writeAll(["\"triggerOp\":\`", this.triggerOp, "\`,"], "");
     }
 
     // NOTE: skip serialization of type (type "setExtremes" is ignored)} 

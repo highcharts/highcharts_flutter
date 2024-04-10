@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,12 @@ import 'OptionFragment.dart';
  * NavigationBindingsLike 
  */
 class NavigationBindingsLike extends OptionFragment {
-  NavigationBindingsLike() : super();
-  bool? _toggledAnnotations;  
-
+  NavigationBindingsLike( {
+    this.toggledAnnotations = null,
+    this.verticalCounter = null
+  }) : super();
+  bool? toggledAnnotations;
+    /*
   bool get toggledAnnotations { 
     if (this._toggledAnnotations == null) {
       this._toggledAnnotations = false;
@@ -35,9 +38,10 @@ class NavigationBindingsLike extends OptionFragment {
   void set toggledAnnotations (bool v) {
     this._toggledAnnotations = v;
   }
+    */
     
-  double? _verticalCounter;  
-
+  double? verticalCounter;
+    /*
   double get verticalCounter { 
     if (this._verticalCounter == null) {
       this._verticalCounter = 0;
@@ -48,6 +52,7 @@ class NavigationBindingsLike extends OptionFragment {
   void set verticalCounter (double v) {
     this._verticalCounter = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -57,12 +62,12 @@ class NavigationBindingsLike extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._toggledAnnotations != null) {  
-      buffer.writeAll(["\"toggledAnnotations\":", this._toggledAnnotations, ","], "");
+    if (this.toggledAnnotations != null) {  
+      buffer.writeAll(["\"toggledAnnotations\":", this.toggledAnnotations, ","], "");
     }
 
-    if (this._verticalCounter != null) {  
-      buffer.writeAll(["\"verticalCounter\":", this._verticalCounter, ","], "");
+    if (this.verticalCounter != null) {  
+      buffer.writeAll(["\"verticalCounter\":", this.verticalCounter, ","], "");
     }
 
     // NOTE: skip serialization of utils (type Generic is ignored)} 

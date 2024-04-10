@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,14 @@ import 'OptionFragment.dart';
  * YAxisOptions 
  */
 class YAxisOptions extends AxisOptions {
-  YAxisOptions() : super();
-  String? _maxColor;  
-
+  YAxisOptions( {
+    this.maxColor = null,
+    this.minColor = null,
+    this.staticScale = null,
+    this.tooltipValueFormat = null
+  }) : super();
+  String? maxColor;
+    /*
   String get maxColor { 
     if (this._maxColor == null) {
       this._maxColor = "";
@@ -36,9 +41,10 @@ class YAxisOptions extends AxisOptions {
   void set maxColor (String v) {
     this._maxColor = v;
   }
+    */
     
-  String? _minColor;  
-
+  String? minColor;
+    /*
   String get minColor { 
     if (this._minColor == null) {
       this._minColor = "";
@@ -49,9 +55,10 @@ class YAxisOptions extends AxisOptions {
   void set minColor (String v) {
     this._minColor = v;
   }
+    */
     
-  double? _staticScale;  
-
+  double? staticScale;
+    /*
   double get staticScale { 
     if (this._staticScale == null) {
       this._staticScale = 0;
@@ -62,9 +69,10 @@ class YAxisOptions extends AxisOptions {
   void set staticScale (double v) {
     this._staticScale = v;
   }
+    */
     
-  String? _tooltipValueFormat;  
-
+  String? tooltipValueFormat;
+    /*
   String get tooltipValueFormat { 
     if (this._tooltipValueFormat == null) {
       this._tooltipValueFormat = "";
@@ -75,6 +83,7 @@ class YAxisOptions extends AxisOptions {
   void set tooltipValueFormat (String v) {
     this._tooltipValueFormat = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -84,22 +93,22 @@ class YAxisOptions extends AxisOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._maxColor != null) {  
-      buffer.writeAll(["\"maxColor\":\`", this._maxColor, "\`,"], "");
+    if (this.maxColor != null) {  
+      buffer.writeAll(["\"maxColor\":\`", this.maxColor, "\`,"], "");
     }
 
-    if (this._minColor != null) {  
-      buffer.writeAll(["\"minColor\":\`", this._minColor, "\`,"], "");
+    if (this.minColor != null) {  
+      buffer.writeAll(["\"minColor\":\`", this.minColor, "\`,"], "");
     }
 
-    if (this._staticScale != null) {  
-      buffer.writeAll(["\"staticScale\":", this._staticScale, ","], "");
+    if (this.staticScale != null) {  
+      buffer.writeAll(["\"staticScale\":", this.staticScale, ","], "");
     }
 
     // NOTE: skip serialization of stops (type GradientColorStop[] is ignored)} 
 
-    if (this._tooltipValueFormat != null) {  
-      buffer.writeAll(["\"tooltipValueFormat\":\`", this._tooltipValueFormat, "\`,"], "");
+    if (this.tooltipValueFormat != null) {  
+      buffer.writeAll(["\"tooltipValueFormat\":\`", this.tooltipValueFormat, "\`,"], "");
     }
   }
 

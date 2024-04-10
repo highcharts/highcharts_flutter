@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,11 @@ import 'OptionFragment.dart';
  * ApproximationArray 
  */
 class ApproximationArray extends Array {
-  ApproximationArray() : super();
-  bool? _hasNulls;  
-
+  ApproximationArray( {
+    this.hasNulls = null
+  }) : super();
+  bool? hasNulls;
+    /*
   bool get hasNulls { 
     if (this._hasNulls == null) {
       this._hasNulls = false;
@@ -36,6 +38,7 @@ class ApproximationArray extends Array {
   void set hasNulls (bool v) {
     this._hasNulls = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -45,8 +48,8 @@ class ApproximationArray extends Array {
     super.toJSONInner(buffer);
 
     
-    if (this._hasNulls != null) {  
-      buffer.writeAll(["\"hasNulls\":", this._hasNulls, ","], "");
+    if (this.hasNulls != null) {  
+      buffer.writeAll(["\"hasNulls\":", this.hasNulls, ","], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,13 @@ import 'OptionFragment.dart';
  * AccessibilityAnnounceNewDataOptions 
  */
 class AccessibilityAnnounceNewDataOptions extends OptionFragment {
-  AccessibilityAnnounceNewDataOptions() : super();
-  bool? _enabled;  
-
+  AccessibilityAnnounceNewDataOptions( {
+    this.enabled = null,
+    this.interruptUser = null,
+    this.minAnnounceInterval = null
+  }) : super();
+  bool? enabled;
+    /*
   bool get enabled { 
     if (this._enabled == null) {
       this._enabled = false;
@@ -35,9 +39,10 @@ class AccessibilityAnnounceNewDataOptions extends OptionFragment {
   void set enabled (bool v) {
     this._enabled = v;
   }
+    */
     
-  bool? _interruptUser;  
-
+  bool? interruptUser;
+    /*
   bool get interruptUser { 
     if (this._interruptUser == null) {
       this._interruptUser = false;
@@ -48,9 +53,10 @@ class AccessibilityAnnounceNewDataOptions extends OptionFragment {
   void set interruptUser (bool v) {
     this._interruptUser = v;
   }
+    */
     
-  double? _minAnnounceInterval;  
-
+  double? minAnnounceInterval;
+    /*
   double get minAnnounceInterval { 
     if (this._minAnnounceInterval == null) {
       this._minAnnounceInterval = 0;
@@ -61,6 +67,7 @@ class AccessibilityAnnounceNewDataOptions extends OptionFragment {
   void set minAnnounceInterval (double v) {
     this._minAnnounceInterval = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -70,16 +77,16 @@ class AccessibilityAnnounceNewDataOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this._enabled, ","], "");
+    if (this.enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
     }
 
-    if (this._interruptUser != null) {  
-      buffer.writeAll(["\"interruptUser\":", this._interruptUser, ","], "");
+    if (this.interruptUser != null) {  
+      buffer.writeAll(["\"interruptUser\":", this.interruptUser, ","], "");
     }
 
-    if (this._minAnnounceInterval != null) {  
-      buffer.writeAll(["\"minAnnounceInterval\":", this._minAnnounceInterval, ","], "");
+    if (this.minAnnounceInterval != null) {  
+      buffer.writeAll(["\"minAnnounceInterval\":", this.minAnnounceInterval, ","], "");
     }
   }
 

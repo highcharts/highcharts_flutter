@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,7 +23,7 @@ import 'OptionFragment.dart';
  * Polygon 
  */
 class Polygon extends BaseGeometry {
-  Polygon() : super();
+  Polygon( ) : super();
   
 
   //////////////////////////////////////////////////////////////////////////////

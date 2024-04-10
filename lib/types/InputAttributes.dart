@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,14 @@ import 'OptionFragment.dart';
  * InputAttributes 
  */
 class InputAttributes extends OptionFragment {
-  InputAttributes() : super();
-  String? _value;  
-
+  InputAttributes( {
+    this.value = null,
+    this.type = null,
+    this.htmlFor = null,
+    this.labelClassName = null
+  }) : super();
+  String? value;
+    /*
   String get value { 
     if (this._value == null) {
       this._value = "";
@@ -35,9 +40,10 @@ class InputAttributes extends OptionFragment {
   void set value (String v) {
     this._value = v;
   }
+    */
     
-  String? _type;  
-
+  String? type;
+    /*
   String get type { 
     if (this._type == null) {
       this._type = "";
@@ -48,9 +54,10 @@ class InputAttributes extends OptionFragment {
   void set type (String v) {
     this._type = v;
   }
+    */
     
-  String? _htmlFor;  
-
+  String? htmlFor;
+    /*
   String get htmlFor { 
     if (this._htmlFor == null) {
       this._htmlFor = "";
@@ -61,9 +68,10 @@ class InputAttributes extends OptionFragment {
   void set htmlFor (String v) {
     this._htmlFor = v;
   }
+    */
     
-  String? _labelClassName;  
-
+  String? labelClassName;
+    /*
   String get labelClassName { 
     if (this._labelClassName == null) {
       this._labelClassName = "";
@@ -74,6 +82,7 @@ class InputAttributes extends OptionFragment {
   void set labelClassName (String v) {
     this._labelClassName = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -83,20 +92,20 @@ class InputAttributes extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._value != null) {  
-      buffer.writeAll(["\"value\":\`", this._value, "\`,"], "");
+    if (this.value != null) {  
+      buffer.writeAll(["\"value\":\`", this.value, "\`,"], "");
     }
 
-    if (this._type != null) {  
-      buffer.writeAll(["\"type\":\`", this._type, "\`,"], "");
+    if (this.type != null) {  
+      buffer.writeAll(["\"type\":\`", this.type, "\`,"], "");
     }
 
-    if (this._htmlFor != null) {  
-      buffer.writeAll(["\"htmlFor\":\`", this._htmlFor, "\`,"], "");
+    if (this.htmlFor != null) {  
+      buffer.writeAll(["\"htmlFor\":\`", this.htmlFor, "\`,"], "");
     }
 
-    if (this._labelClassName != null) {  
-      buffer.writeAll(["\"labelClassName\":\`", this._labelClassName, "\`,"], "");
+    if (this.labelClassName != null) {  
+      buffer.writeAll(["\"labelClassName\":\`", this.labelClassName, "\`,"], "");
     }
   }
 

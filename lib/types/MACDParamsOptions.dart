@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,14 @@ import 'OptionFragment.dart';
  * MACDParamsOptions 
  */
 class MACDParamsOptions extends SMAParamsOptions {
-  MACDParamsOptions() : super();
-  double? _period;  
-
+  MACDParamsOptions( {
+    this.period = null,
+    this.shortPeriod = null,
+    this.longPeriod = null,
+    this.signalPeriod = null
+  }) : super();
+  double? period;
+    /*
   double get period { 
     if (this._period == null) {
       this._period = 0;
@@ -36,9 +41,10 @@ class MACDParamsOptions extends SMAParamsOptions {
   void set period (double v) {
     this._period = v;
   }
+    */
     
-  double? _shortPeriod;  
-
+  double? shortPeriod;
+    /*
   double get shortPeriod { 
     if (this._shortPeriod == null) {
       this._shortPeriod = 0;
@@ -49,9 +55,10 @@ class MACDParamsOptions extends SMAParamsOptions {
   void set shortPeriod (double v) {
     this._shortPeriod = v;
   }
+    */
     
-  double? _longPeriod;  
-
+  double? longPeriod;
+    /*
   double get longPeriod { 
     if (this._longPeriod == null) {
       this._longPeriod = 0;
@@ -62,9 +69,10 @@ class MACDParamsOptions extends SMAParamsOptions {
   void set longPeriod (double v) {
     this._longPeriod = v;
   }
+    */
     
-  double? _signalPeriod;  
-
+  double? signalPeriod;
+    /*
   double get signalPeriod { 
     if (this._signalPeriod == null) {
       this._signalPeriod = 0;
@@ -75,6 +83,7 @@ class MACDParamsOptions extends SMAParamsOptions {
   void set signalPeriod (double v) {
     this._signalPeriod = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -84,20 +93,20 @@ class MACDParamsOptions extends SMAParamsOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._period != null) {  
-      buffer.writeAll(["\"period\":", this._period, ","], "");
+    if (this.period != null) {  
+      buffer.writeAll(["\"period\":", this.period, ","], "");
     }
 
-    if (this._shortPeriod != null) {  
-      buffer.writeAll(["\"shortPeriod\":", this._shortPeriod, ","], "");
+    if (this.shortPeriod != null) {  
+      buffer.writeAll(["\"shortPeriod\":", this.shortPeriod, ","], "");
     }
 
-    if (this._longPeriod != null) {  
-      buffer.writeAll(["\"longPeriod\":", this._longPeriod, ","], "");
+    if (this.longPeriod != null) {  
+      buffer.writeAll(["\"longPeriod\":", this.longPeriod, ","], "");
     }
 
-    if (this._signalPeriod != null) {  
-      buffer.writeAll(["\"signalPeriod\":", this._signalPeriod, ","], "");
+    if (this.signalPeriod != null) {  
+      buffer.writeAll(["\"signalPeriod\":", this.signalPeriod, ","], "");
     }
   }
 

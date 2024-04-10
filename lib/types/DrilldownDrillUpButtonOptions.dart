@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,11 @@ import 'OptionFragment.dart';
  * DrilldownDrillUpButtonOptions 
  */
 class DrilldownDrillUpButtonOptions extends OptionFragment {
-  DrilldownDrillUpButtonOptions() : super();
-  String? _relativeTo;  
-
+  DrilldownDrillUpButtonOptions( {
+    this.relativeTo = null
+  }) : super();
+  String? relativeTo;
+    /*
   String get relativeTo { 
     if (this._relativeTo == null) {
       this._relativeTo = "";
@@ -36,6 +38,7 @@ class DrilldownDrillUpButtonOptions extends OptionFragment {
   void set relativeTo (String v) {
     this._relativeTo = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -47,8 +50,8 @@ class DrilldownDrillUpButtonOptions extends OptionFragment {
     
     // NOTE: skip serialization of position (type DrilldownDrillUpButtonPositionOptions is ignored)} 
 
-    if (this._relativeTo != null) {  
-      buffer.writeAll(["\"relativeTo\":\`", this._relativeTo, "\`,"], "");
+    if (this.relativeTo != null) {  
+      buffer.writeAll(["\"relativeTo\":\`", this.relativeTo, "\`,"], "");
     }
 
     // NOTE: skip serialization of theme (type object is ignored)} 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,17 @@ import 'OptionFragment.dart';
  * FlagsPointOptions 
  */
 class FlagsPointOptions extends ColumnPointOptions {
-  FlagsPointOptions() : super();
-  String? _fillColor;  
-
+  FlagsPointOptions( {
+    this.fillColor = null,
+    this.labelrank = null,
+    this.selected = null,
+    this.shape = null,
+    this.text = null,
+    this.title = null,
+    this.x = null
+  }) : super();
+  String? fillColor;
+    /*
   String get fillColor { 
     if (this._fillColor == null) {
       this._fillColor = "";
@@ -36,9 +44,10 @@ class FlagsPointOptions extends ColumnPointOptions {
   void set fillColor (String v) {
     this._fillColor = v;
   }
+    */
     
-  double? _labelrank;  
-
+  double? labelrank;
+    /*
   double get labelrank { 
     if (this._labelrank == null) {
       this._labelrank = 0;
@@ -49,9 +58,10 @@ class FlagsPointOptions extends ColumnPointOptions {
   void set labelrank (double v) {
     this._labelrank = v;
   }
+    */
     
-  bool? _selected;  
-
+  bool? selected;
+    /*
   bool get selected { 
     if (this._selected == null) {
       this._selected = false;
@@ -62,9 +72,10 @@ class FlagsPointOptions extends ColumnPointOptions {
   void set selected (bool v) {
     this._selected = v;
   }
+    */
     
-  String? _shape;  
-
+  String? shape;
+    /*
   String get shape { 
     if (this._shape == null) {
       this._shape = "";
@@ -75,9 +86,10 @@ class FlagsPointOptions extends ColumnPointOptions {
   void set shape (String v) {
     this._shape = v;
   }
+    */
     
-  String? _text;  
-
+  String? text;
+    /*
   String get text { 
     if (this._text == null) {
       this._text = "";
@@ -88,9 +100,10 @@ class FlagsPointOptions extends ColumnPointOptions {
   void set text (String v) {
     this._text = v;
   }
+    */
     
-  String? _title;  
-
+  String? title;
+    /*
   String get title { 
     if (this._title == null) {
       this._title = "";
@@ -101,9 +114,10 @@ class FlagsPointOptions extends ColumnPointOptions {
   void set title (String v) {
     this._title = v;
   }
+    */
     
-  double? _x;  
-
+  double? x;
+    /*
   double get x { 
     if (this._x == null) {
       this._x = 0;
@@ -114,6 +128,7 @@ class FlagsPointOptions extends ColumnPointOptions {
   void set x (double v) {
     this._x = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -123,32 +138,32 @@ class FlagsPointOptions extends ColumnPointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._fillColor != null) {  
-      buffer.writeAll(["\"fillColor\":\`", this._fillColor, "\`,"], "");
+    if (this.fillColor != null) {  
+      buffer.writeAll(["\"fillColor\":\`", this.fillColor, "\`,"], "");
     }
 
-    if (this._labelrank != null) {  
-      buffer.writeAll(["\"labelrank\":", this._labelrank, ","], "");
+    if (this.labelrank != null) {  
+      buffer.writeAll(["\"labelrank\":", this.labelrank, ","], "");
     }
 
-    if (this._selected != null) {  
-      buffer.writeAll(["\"selected\":", this._selected, ","], "");
+    if (this.selected != null) {  
+      buffer.writeAll(["\"selected\":", this.selected, ","], "");
     }
 
-    if (this._shape != null) {  
-      buffer.writeAll(["\"shape\":\`", this._shape, "\`,"], "");
+    if (this.shape != null) {  
+      buffer.writeAll(["\"shape\":\`", this.shape, "\`,"], "");
     }
 
-    if (this._text != null) {  
-      buffer.writeAll(["\"text\":\`", this._text, "\`,"], "");
+    if (this.text != null) {  
+      buffer.writeAll(["\"text\":\`", this.text, "\`,"], "");
     }
 
-    if (this._title != null) {  
-      buffer.writeAll(["\"title\":\`", this._title, "\`,"], "");
+    if (this.title != null) {  
+      buffer.writeAll(["\"title\":\`", this.title, "\`,"], "");
     }
 
-    if (this._x != null) {  
-      buffer.writeAll(["\"x\":", this._x, ","], "");
+    if (this.x != null) {  
+      buffer.writeAll(["\"x\":", this.x, ","], "");
     }
   }
 

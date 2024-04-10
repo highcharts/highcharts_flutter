@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,17 @@ import 'OptionFragment.dart';
  * Range 
  */
 class Range extends OptionFragment {
-  Range() : super();
-  double? _firstRow;  
-
+  Range( {
+    this.firstRow = null,
+    this.lastRow = null,
+    this.state = null,
+    this.beginColumn = null,
+    this.beginRow = null,
+    this.endColumn = null,
+    this.endRow = null
+  }) : super();
+  double? firstRow;
+    /*
   double get firstRow { 
     if (this._firstRow == null) {
       this._firstRow = 0;
@@ -35,9 +43,10 @@ class Range extends OptionFragment {
   void set firstRow (double v) {
     this._firstRow = v;
   }
+    */
     
-  double? _lastRow;  
-
+  double? lastRow;
+    /*
   double get lastRow { 
     if (this._lastRow == null) {
       this._lastRow = 0;
@@ -48,9 +57,10 @@ class Range extends OptionFragment {
   void set lastRow (double v) {
     this._lastRow = v;
   }
+    */
     
-  String? _state;  
-
+  String? state;
+    /*
   String get state { 
     if (this._state == null) {
       this._state = "";
@@ -61,9 +71,10 @@ class Range extends OptionFragment {
   void set state (String v) {
     this._state = v;
   }
+    */
     
-  double? _beginColumn;  
-
+  double? beginColumn;
+    /*
   double get beginColumn { 
     if (this._beginColumn == null) {
       this._beginColumn = 0;
@@ -74,9 +85,10 @@ class Range extends OptionFragment {
   void set beginColumn (double v) {
     this._beginColumn = v;
   }
+    */
     
-  double? _beginRow;  
-
+  double? beginRow;
+    /*
   double get beginRow { 
     if (this._beginRow == null) {
       this._beginRow = 0;
@@ -87,9 +99,10 @@ class Range extends OptionFragment {
   void set beginRow (double v) {
     this._beginRow = v;
   }
+    */
     
-  double? _endColumn;  
-
+  double? endColumn;
+    /*
   double get endColumn { 
     if (this._endColumn == null) {
       this._endColumn = 0;
@@ -100,9 +113,10 @@ class Range extends OptionFragment {
   void set endColumn (double v) {
     this._endColumn = v;
   }
+    */
     
-  double? _endRow;  
-
+  double? endRow;
+    /*
   double get endRow { 
     if (this._endRow == null) {
       this._endRow = 0;
@@ -113,6 +127,7 @@ class Range extends OptionFragment {
   void set endRow (double v) {
     this._endRow = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -126,38 +141,38 @@ class Range extends OptionFragment {
 
     // NOTE: skip serialization of columns (type string[] is ignored)} 
 
-    if (this._firstRow != null) {  
-      buffer.writeAll(["\"firstRow\":", this._firstRow, ","], "");
+    if (this.firstRow != null) {  
+      buffer.writeAll(["\"firstRow\":", this.firstRow, ","], "");
     }
 
-    if (this._lastRow != null) {  
-      buffer.writeAll(["\"lastRow\":", this._lastRow, ","], "");
+    if (this.lastRow != null) {  
+      buffer.writeAll(["\"lastRow\":", this.lastRow, ","], "");
     }
 
-    if (this._state != null) {  
-      buffer.writeAll(["\"state\":\`", this._state, "\`,"], "");
+    if (this.state != null) {  
+      buffer.writeAll(["\"state\":\`", this.state, "\`,"], "");
     }
 
-    if (this._beginColumn != null) {  
-      buffer.writeAll(["\"beginColumn\":", this._beginColumn, ","], "");
+    if (this.beginColumn != null) {  
+      buffer.writeAll(["\"beginColumn\":", this.beginColumn, ","], "");
     }
 
     // NOTE: skip serialization of beginColumnRelative (type true is ignored)} 
 
-    if (this._beginRow != null) {  
-      buffer.writeAll(["\"beginRow\":", this._beginRow, ","], "");
+    if (this.beginRow != null) {  
+      buffer.writeAll(["\"beginRow\":", this.beginRow, ","], "");
     }
 
     // NOTE: skip serialization of beginRowRelative (type true is ignored)} 
 
-    if (this._endColumn != null) {  
-      buffer.writeAll(["\"endColumn\":", this._endColumn, ","], "");
+    if (this.endColumn != null) {  
+      buffer.writeAll(["\"endColumn\":", this.endColumn, ","], "");
     }
 
     // NOTE: skip serialization of endColumnRelative (type true is ignored)} 
 
-    if (this._endRow != null) {  
-      buffer.writeAll(["\"endRow\":", this._endRow, ","], "");
+    if (this.endRow != null) {  
+      buffer.writeAll(["\"endRow\":", this.endRow, ","], "");
     }
 
     // NOTE: skip serialization of endRowRelative (type true is ignored)} 

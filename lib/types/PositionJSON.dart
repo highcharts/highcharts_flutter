@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,13 @@ import 'OptionFragment.dart';
  * PositionJSON 
  */
 class PositionJSON extends OptionFragment {
-  PositionJSON() : super();
-  String? _column;  
-
+  PositionJSON( {
+    this.column = null,
+    this.row = null,
+    this.state = null
+  }) : super();
+  String? column;
+    /*
   String get column { 
     if (this._column == null) {
       this._column = "";
@@ -35,9 +39,10 @@ class PositionJSON extends OptionFragment {
   void set column (String v) {
     this._column = v;
   }
+    */
     
-  double? _row;  
-
+  double? row;
+    /*
   double get row { 
     if (this._row == null) {
       this._row = 0;
@@ -48,9 +53,10 @@ class PositionJSON extends OptionFragment {
   void set row (double v) {
     this._row = v;
   }
+    */
     
-  String? _state;  
-
+  String? state;
+    /*
   String get state { 
     if (this._state == null) {
       this._state = "";
@@ -61,6 +67,7 @@ class PositionJSON extends OptionFragment {
   void set state (String v) {
     this._state = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -70,16 +77,16 @@ class PositionJSON extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._column != null) {  
-      buffer.writeAll(["\"column\":\`", this._column, "\`,"], "");
+    if (this.column != null) {  
+      buffer.writeAll(["\"column\":\`", this.column, "\`,"], "");
     }
 
-    if (this._row != null) {  
-      buffer.writeAll(["\"row\":", this._row, ","], "");
+    if (this.row != null) {  
+      buffer.writeAll(["\"row\":", this.row, ","], "");
     }
 
-    if (this._state != null) {  
-      buffer.writeAll(["\"state\":\`", this._state, "\`,"], "");
+    if (this.state != null) {  
+      buffer.writeAll(["\"state\":\`", this.state, "\`,"], "");
     }
 
     // NOTE: skip serialization of type (type "position" is ignored)} 

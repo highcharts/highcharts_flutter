@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,12 @@ import 'OptionFragment.dart';
  * SelectFormFieldOptions 
  */
 class SelectFormFieldOptions extends FormFieldOptions {
-  SelectFormFieldOptions() : super();
-  String? _title;  
-
+  SelectFormFieldOptions( {
+    this.title = null,
+    this.value = null
+  }) : super();
+  String? title;
+    /*
   String get title { 
     if (this._title == null) {
       this._title = "";
@@ -36,9 +39,10 @@ class SelectFormFieldOptions extends FormFieldOptions {
   void set title (String v) {
     this._title = v;
   }
+    */
     
-  String? _value;  
-
+  String? value;
+    /*
   String get value { 
     if (this._value == null) {
       this._value = "";
@@ -49,6 +53,7 @@ class SelectFormFieldOptions extends FormFieldOptions {
   void set value (String v) {
     this._value = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -58,12 +63,12 @@ class SelectFormFieldOptions extends FormFieldOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._title != null) {  
-      buffer.writeAll(["\"title\":\`", this._title, "\`,"], "");
+    if (this.title != null) {  
+      buffer.writeAll(["\"title\":\`", this.title, "\`,"], "");
     }
 
-    if (this._value != null) {  
-      buffer.writeAll(["\"value\":\`", this._value, "\`,"], "");
+    if (this.value != null) {  
+      buffer.writeAll(["\"value\":\`", this.value, "\`,"], "");
     }
 
     // NOTE: skip serialization of selectOptions (type SelectFormFieldItemOptions[] is ignored)} 

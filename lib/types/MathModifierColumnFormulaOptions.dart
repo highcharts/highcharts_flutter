@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,14 @@ import 'OptionFragment.dart';
  * MathModifierColumnFormulaOptions 
  */
 class MathModifierColumnFormulaOptions extends OptionFragment {
-  MathModifierColumnFormulaOptions() : super();
-  String? _column;  
-
+  MathModifierColumnFormulaOptions( {
+    this.column = null,
+    this.formula = null,
+    this.rowEnd = null,
+    this.rowStart = null
+  }) : super();
+  String? column;
+    /*
   String get column { 
     if (this._column == null) {
       this._column = "";
@@ -35,9 +40,10 @@ class MathModifierColumnFormulaOptions extends OptionFragment {
   void set column (String v) {
     this._column = v;
   }
+    */
     
-  String? _formula;  
-
+  String? formula;
+    /*
   String get formula { 
     if (this._formula == null) {
       this._formula = "";
@@ -48,9 +54,10 @@ class MathModifierColumnFormulaOptions extends OptionFragment {
   void set formula (String v) {
     this._formula = v;
   }
+    */
     
-  double? _rowEnd;  
-
+  double? rowEnd;
+    /*
   double get rowEnd { 
     if (this._rowEnd == null) {
       this._rowEnd = 0;
@@ -61,9 +68,10 @@ class MathModifierColumnFormulaOptions extends OptionFragment {
   void set rowEnd (double v) {
     this._rowEnd = v;
   }
+    */
     
-  double? _rowStart;  
-
+  double? rowStart;
+    /*
   double get rowStart { 
     if (this._rowStart == null) {
       this._rowStart = 0;
@@ -74,6 +82,7 @@ class MathModifierColumnFormulaOptions extends OptionFragment {
   void set rowStart (double v) {
     this._rowStart = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -83,20 +92,20 @@ class MathModifierColumnFormulaOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._column != null) {  
-      buffer.writeAll(["\"column\":\`", this._column, "\`,"], "");
+    if (this.column != null) {  
+      buffer.writeAll(["\"column\":\`", this.column, "\`,"], "");
     }
 
-    if (this._formula != null) {  
-      buffer.writeAll(["\"formula\":\`", this._formula, "\`,"], "");
+    if (this.formula != null) {  
+      buffer.writeAll(["\"formula\":\`", this.formula, "\`,"], "");
     }
 
-    if (this._rowEnd != null) {  
-      buffer.writeAll(["\"rowEnd\":", this._rowEnd, ","], "");
+    if (this.rowEnd != null) {  
+      buffer.writeAll(["\"rowEnd\":", this.rowEnd, ","], "");
     }
 
-    if (this._rowStart != null) {  
-      buffer.writeAll(["\"rowStart\":", this._rowStart, ","], "");
+    if (this.rowStart != null) {  
+      buffer.writeAll(["\"rowStart\":", this.rowStart, ","], "");
     }
   }
 

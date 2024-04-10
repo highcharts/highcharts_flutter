@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,13 @@ import 'OptionFragment.dart';
  * EQOptions 
  */
 class EQOptions extends OptionFragment {
-  EQOptions() : super();
-  double? _frequency;  
-
+  EQOptions( {
+    this.frequency = null,
+    this.gain = null,
+    this.Q = null
+  }) : super();
+  double? frequency;
+    /*
   double get frequency { 
     if (this._frequency == null) {
       this._frequency = 0;
@@ -35,9 +39,10 @@ class EQOptions extends OptionFragment {
   void set frequency (double v) {
     this._frequency = v;
   }
+    */
     
-  double? _gain;  
-
+  double? gain;
+    /*
   double get gain { 
     if (this._gain == null) {
       this._gain = 0;
@@ -48,9 +53,10 @@ class EQOptions extends OptionFragment {
   void set gain (double v) {
     this._gain = v;
   }
+    */
     
-  double? _Q;  
-
+  double? Q;
+    /*
   double get Q { 
     if (this._Q == null) {
       this._Q = 0;
@@ -61,6 +67,7 @@ class EQOptions extends OptionFragment {
   void set Q (double v) {
     this._Q = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -70,16 +77,16 @@ class EQOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._frequency != null) {  
-      buffer.writeAll(["\"frequency\":", this._frequency, ","], "");
+    if (this.frequency != null) {  
+      buffer.writeAll(["\"frequency\":", this.frequency, ","], "");
     }
 
-    if (this._gain != null) {  
-      buffer.writeAll(["\"gain\":", this._gain, ","], "");
+    if (this.gain != null) {  
+      buffer.writeAll(["\"gain\":", this.gain, ","], "");
     }
 
-    if (this._Q != null) {  
-      buffer.writeAll(["\"Q\":", this._Q, ","], "");
+    if (this.Q != null) {  
+      buffer.writeAll(["\"Q\":", this.Q, ","], "");
     }
   }
 

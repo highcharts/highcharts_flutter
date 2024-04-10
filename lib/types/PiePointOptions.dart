@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,12 @@ import 'OptionFragment.dart';
  * PiePointOptions 
  */
 class PiePointOptions extends LinePointOptions {
-  PiePointOptions() : super();
-  bool? _sliced;  
-
+  PiePointOptions( {
+    this.sliced = null,
+    this.visible = null
+  }) : super();
+  bool? sliced;
+    /*
   bool get sliced { 
     if (this._sliced == null) {
       this._sliced = false;
@@ -36,9 +39,10 @@ class PiePointOptions extends LinePointOptions {
   void set sliced (bool v) {
     this._sliced = v;
   }
+    */
     
-  bool? _visible;  
-
+  bool? visible;
+    /*
   bool get visible { 
     if (this._visible == null) {
       this._visible = false;
@@ -49,6 +53,7 @@ class PiePointOptions extends LinePointOptions {
   void set visible (bool v) {
     this._visible = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -60,12 +65,12 @@ class PiePointOptions extends LinePointOptions {
     
     // NOTE: skip serialization of dataLabels (type PieDataLabelOptions[] is ignored)} 
 
-    if (this._sliced != null) {  
-      buffer.writeAll(["\"sliced\":", this._sliced, ","], "");
+    if (this.sliced != null) {  
+      buffer.writeAll(["\"sliced\":", this.sliced, ","], "");
     }
 
-    if (this._visible != null) {  
-      buffer.writeAll(["\"visible\":", this._visible, ","], "");
+    if (this.visible != null) {  
+      buffer.writeAll(["\"visible\":", this.visible, ","], "");
     }
   }
 

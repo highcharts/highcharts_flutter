@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -24,9 +24,16 @@ import 'OptionFragment.dart';
  * Series 
  */
 class Series extends CoreSeries {
-  Series() : super();
-  double? _colorCounter;  
-
+  Series( {
+    this.colorCounter = null,
+    this.directTouch = null,
+    this.invertible = null,
+    this.isCartesian = null,
+    this.requireSorting = null,
+    this.sorted = null
+  }) : super();
+  double? colorCounter;
+    /*
   double get colorCounter { 
     if (this._colorCounter == null) {
       this._colorCounter = 0;
@@ -37,9 +44,10 @@ class Series extends CoreSeries {
   void set colorCounter (double v) {
     this._colorCounter = v;
   }
+    */
     
-  bool? _directTouch;  
-
+  bool? directTouch;
+    /*
   bool get directTouch { 
     if (this._directTouch == null) {
       this._directTouch = false;
@@ -50,9 +58,10 @@ class Series extends CoreSeries {
   void set directTouch (bool v) {
     this._directTouch = v;
   }
+    */
     
-  bool? _invertible;  
-
+  bool? invertible;
+    /*
   bool get invertible { 
     if (this._invertible == null) {
       this._invertible = false;
@@ -63,9 +72,10 @@ class Series extends CoreSeries {
   void set invertible (bool v) {
     this._invertible = v;
   }
+    */
     
-  bool? _isCartesian;  
-
+  bool? isCartesian;
+    /*
   bool get isCartesian { 
     if (this._isCartesian == null) {
       this._isCartesian = false;
@@ -76,9 +86,10 @@ class Series extends CoreSeries {
   void set isCartesian (bool v) {
     this._isCartesian = v;
   }
+    */
     
-  bool? _requireSorting;  
-
+  bool? requireSorting;
+    /*
   bool get requireSorting { 
     if (this._requireSorting == null) {
       this._requireSorting = false;
@@ -89,9 +100,10 @@ class Series extends CoreSeries {
   void set requireSorting (bool v) {
     this._requireSorting = v;
   }
+    */
     
-  bool? _sorted;  
-
+  bool? sorted;
+    /*
   bool get sorted { 
     if (this._sorted == null) {
       this._sorted = false;
@@ -102,6 +114,7 @@ class Series extends CoreSeries {
   void set sorted (bool v) {
     this._sorted = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -121,22 +134,22 @@ class Series extends CoreSeries {
 
     // NOTE: skip serialization of coll (type "series" is ignored)} 
 
-    if (this._colorCounter != null) {  
-      buffer.writeAll(["\"colorCounter\":", this._colorCounter, ","], "");
+    if (this.colorCounter != null) {  
+      buffer.writeAll(["\"colorCounter\":", this.colorCounter, ","], "");
     }
 
-    if (this._directTouch != null) {  
-      buffer.writeAll(["\"directTouch\":", this._directTouch, ","], "");
+    if (this.directTouch != null) {  
+      buffer.writeAll(["\"directTouch\":", this.directTouch, ","], "");
     }
 
     // NOTE: skip serialization of hcEvents (type Generic is ignored)} 
 
-    if (this._invertible != null) {  
-      buffer.writeAll(["\"invertible\":", this._invertible, ","], "");
+    if (this.invertible != null) {  
+      buffer.writeAll(["\"invertible\":", this.invertible, ","], "");
     }
 
-    if (this._isCartesian != null) {  
-      buffer.writeAll(["\"isCartesian\":", this._isCartesian, ","], "");
+    if (this.isCartesian != null) {  
+      buffer.writeAll(["\"isCartesian\":", this.isCartesian, ","], "");
     }
 
     // NOTE: skip serialization of kdAxisArray (type (keyof KDPointSearchObject)[] is ignored)} 
@@ -145,12 +158,12 @@ class Series extends CoreSeries {
 
     // NOTE: skip serialization of pointClass (type typeof Point is ignored)} 
 
-    if (this._requireSorting != null) {  
-      buffer.writeAll(["\"requireSorting\":", this._requireSorting, ","], "");
+    if (this.requireSorting != null) {  
+      buffer.writeAll(["\"requireSorting\":", this.requireSorting, ","], "");
     }
 
-    if (this._sorted != null) {  
-      buffer.writeAll(["\"sorted\":", this._sorted, ","], "");
+    if (this.sorted != null) {  
+      buffer.writeAll(["\"sorted\":", this.sorted, ","], "");
     }
   }
 

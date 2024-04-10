@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -24,9 +24,12 @@ import 'OptionFragment.dart';
  * GeoHeatmapSeriesOptions 
  */
 class GeoHeatmapSeriesOptions extends MapSeriesOptions {
-  GeoHeatmapSeriesOptions() : super();
-  double? _colsize;  
-
+  GeoHeatmapSeriesOptions( {
+    this.colsize = null,
+    this.rowsize = null
+  }) : super();
+  double? colsize;
+    /*
   double get colsize { 
     if (this._colsize == null) {
       this._colsize = 0;
@@ -37,9 +40,10 @@ class GeoHeatmapSeriesOptions extends MapSeriesOptions {
   void set colsize (double v) {
     this._colsize = v;
   }
+    */
     
-  double? _rowsize;  
-
+  double? rowsize;
+    /*
   double get rowsize { 
     if (this._rowsize == null) {
       this._rowsize = 0;
@@ -50,6 +54,7 @@ class GeoHeatmapSeriesOptions extends MapSeriesOptions {
   void set rowsize (double v) {
     this._rowsize = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -59,12 +64,12 @@ class GeoHeatmapSeriesOptions extends MapSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._colsize != null) {  
-      buffer.writeAll(["\"colsize\":", this._colsize, ","], "");
+    if (this.colsize != null) {  
+      buffer.writeAll(["\"colsize\":", this.colsize, ","], "");
     }
 
-    if (this._rowsize != null) {  
-      buffer.writeAll(["\"rowsize\":", this._rowsize, ","], "");
+    if (this.rowsize != null) {  
+      buffer.writeAll(["\"rowsize\":", this.rowsize, ","], "");
     }
 
     // NOTE: skip serialization of interpolation (type InterpolationObject is ignored)} 

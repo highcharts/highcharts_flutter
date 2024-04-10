@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,14 @@ import 'OptionFragment.dart';
  * Rotation3DObject 
  */
 class Rotation3DObject extends OptionFragment {
-  Rotation3DObject() : super();
-  double? _cosA;  
-
+  Rotation3DObject( {
+    this.cosA = null,
+    this.cosB = null,
+    this.sinA = null,
+    this.sinB = null
+  }) : super();
+  double? cosA;
+    /*
   double get cosA { 
     if (this._cosA == null) {
       this._cosA = 0;
@@ -35,9 +40,10 @@ class Rotation3DObject extends OptionFragment {
   void set cosA (double v) {
     this._cosA = v;
   }
+    */
     
-  double? _cosB;  
-
+  double? cosB;
+    /*
   double get cosB { 
     if (this._cosB == null) {
       this._cosB = 0;
@@ -48,9 +54,10 @@ class Rotation3DObject extends OptionFragment {
   void set cosB (double v) {
     this._cosB = v;
   }
+    */
     
-  double? _sinA;  
-
+  double? sinA;
+    /*
   double get sinA { 
     if (this._sinA == null) {
       this._sinA = 0;
@@ -61,9 +68,10 @@ class Rotation3DObject extends OptionFragment {
   void set sinA (double v) {
     this._sinA = v;
   }
+    */
     
-  double? _sinB;  
-
+  double? sinB;
+    /*
   double get sinB { 
     if (this._sinB == null) {
       this._sinB = 0;
@@ -74,6 +82,7 @@ class Rotation3DObject extends OptionFragment {
   void set sinB (double v) {
     this._sinB = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -83,20 +92,20 @@ class Rotation3DObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._cosA != null) {  
-      buffer.writeAll(["\"cosA\":", this._cosA, ","], "");
+    if (this.cosA != null) {  
+      buffer.writeAll(["\"cosA\":", this.cosA, ","], "");
     }
 
-    if (this._cosB != null) {  
-      buffer.writeAll(["\"cosB\":", this._cosB, ","], "");
+    if (this.cosB != null) {  
+      buffer.writeAll(["\"cosB\":", this.cosB, ","], "");
     }
 
-    if (this._sinA != null) {  
-      buffer.writeAll(["\"sinA\":", this._sinA, ","], "");
+    if (this.sinA != null) {  
+      buffer.writeAll(["\"sinA\":", this.sinA, ","], "");
     }
 
-    if (this._sinB != null) {  
-      buffer.writeAll(["\"sinB\":", this._sinB, ","], "");
+    if (this.sinB != null) {  
+      buffer.writeAll(["\"sinB\":", this.sinB, ","], "");
     }
   }
 

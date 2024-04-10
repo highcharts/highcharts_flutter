@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -27,9 +27,13 @@ import 'OptionFragment.dart';
  * SVGElementLike 
  */
 class SVGElementLike extends OptionFragment {
-  SVGElementLike() : super();
-  bool? _survive;  
-
+  SVGElementLike( {
+    this.survive = null,
+    this.pathType = null,
+    this.finishedOnAdd = null
+  }) : super();
+  bool? survive;
+    /*
   bool get survive { 
     if (this._survive == null) {
       this._survive = false;
@@ -40,9 +44,10 @@ class SVGElementLike extends OptionFragment {
   void set survive (bool v) {
     this._survive = v;
   }
+    */
     
-  String? _pathType;  
-
+  String? pathType;
+    /*
   String get pathType { 
     if (this._pathType == null) {
       this._pathType = "";
@@ -53,9 +58,10 @@ class SVGElementLike extends OptionFragment {
   void set pathType (String v) {
     this._pathType = v;
   }
+    */
     
-  bool? _finishedOnAdd;  
-
+  bool? finishedOnAdd;
+    /*
   bool get finishedOnAdd { 
     if (this._finishedOnAdd == null) {
       this._finishedOnAdd = false;
@@ -66,6 +72,7 @@ class SVGElementLike extends OptionFragment {
   void set finishedOnAdd (bool v) {
     this._finishedOnAdd = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -77,8 +84,8 @@ class SVGElementLike extends OptionFragment {
     
     // NOTE: skip serialization of options (type DataLabelOptions is ignored)} 
 
-    if (this._survive != null) {  
-      buffer.writeAll(["\"survive\":", this._survive, ","], "");
+    if (this.survive != null) {  
+      buffer.writeAll(["\"survive\":", this.survive, ","], "");
     }
 
     // NOTE: skip serialization of focusBorder (type SVGElement is ignored)} 
@@ -87,16 +94,16 @@ class SVGElementLike extends OptionFragment {
 
     // NOTE: skip serialization of parts (type string[] is ignored)} 
 
-    if (this._pathType != null) {  
-      buffer.writeAll(["\"pathType\":\`", this._pathType, "\`,"], "");
+    if (this.pathType != null) {  
+      buffer.writeAll(["\"pathType\":\`", this.pathType, "\`,"], "");
     }
 
     // NOTE: skip serialization of vertexes (type Position3DObject[] is ignored)} 
 
     // NOTE: skip serialization of absoluteBox (type BBoxObject is ignored)} 
 
-    if (this._finishedOnAdd != null) {  
-      buffer.writeAll(["\"finishedOnAdd\":", this._finishedOnAdd, ","], "");
+    if (this.finishedOnAdd != null) {  
+      buffer.writeAll(["\"finishedOnAdd\":", this.finishedOnAdd, ","], "");
     }
 
     // NOTE: skip serialization of lowerGroup (type SVGElement is ignored)} 

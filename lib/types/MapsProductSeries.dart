@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -31,7 +31,7 @@ import 'OptionFragment.dart';
  * MapsProductSeries 
  */
 class MapsProductSeries extends OptionFragment {
-  MapsProductSeries() : super();
+  MapsProductSeries( ) : super();
   /**
    * A `geoheatmap` series is a variety of heatmap series, composed into
    * the map projection, where the units are expressed in the latitude
@@ -66,8 +66,8 @@ class MapsProductSeries extends OptionFragment {
    * ```
    *               
       */
-  ? _geoheatmap;  
-
+  ? geoheatmap;
+    /*
    get geoheatmap { 
     if (this._geoheatmap == null) {
       this._geoheatmap = ();
@@ -78,6 +78,7 @@ class MapsProductSeries extends OptionFragment {
   void set geoheatmap ( v) {
     this._geoheatmap = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -89,8 +90,8 @@ class MapsProductSeries extends OptionFragment {
     
     // NOTE: skip serialization of flowmap (type FlowMapSeriesOptions is ignored)} 
 
-    if (this._geoheatmap != null) {  
-      buffer.writeAll(["\"geoheatmap\":", this._geoheatmap?.toJSON(), ","], "");
+    if (this.geoheatmap != null) {  
+      buffer.writeAll(["\"geoheatmap\":", this.geoheatmap?.toJSON(), ","], "");
     }
 
     // NOTE: skip serialization of heatmap (type HeatmapSeriesOptions is ignored)} 

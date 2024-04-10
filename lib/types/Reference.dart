@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,12 @@ import 'OptionFragment.dart';
  * Reference 
  */
 class Reference extends OptionFragment {
-  Reference() : super();
-  double? _column;  
-
+  Reference( {
+    this.column = null,
+    this.row = null
+  }) : super();
+  double? column;
+    /*
   double get column { 
     if (this._column == null) {
       this._column = 0;
@@ -35,9 +38,10 @@ class Reference extends OptionFragment {
   void set column (double v) {
     this._column = v;
   }
+    */
     
-  double? _row;  
-
+  double? row;
+    /*
   double get row { 
     if (this._row == null) {
       this._row = 0;
@@ -48,6 +52,7 @@ class Reference extends OptionFragment {
   void set row (double v) {
     this._row = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -57,14 +62,14 @@ class Reference extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._column != null) {  
-      buffer.writeAll(["\"column\":", this._column, ","], "");
+    if (this.column != null) {  
+      buffer.writeAll(["\"column\":", this.column, ","], "");
     }
 
     // NOTE: skip serialization of columnRelative (type true is ignored)} 
 
-    if (this._row != null) {  
-      buffer.writeAll(["\"row\":", this._row, ","], "");
+    if (this.row != null) {  
+      buffer.writeAll(["\"row\":", this.row, ","], "");
     }
 
     // NOTE: skip serialization of rowRelative (type true is ignored)} 

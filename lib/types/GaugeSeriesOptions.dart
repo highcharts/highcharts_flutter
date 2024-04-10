@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -25,15 +25,18 @@ import 'OptionFragment.dart';
  * GaugeSeriesOptions 
  */
 class GaugeSeriesOptions extends LineSeriesOptions {
-  GaugeSeriesOptions() : super();
+  GaugeSeriesOptions( {
+    this.overshoot = null,
+    this.wrap = null
+  }) : super();
   /**
    * Options for the dial or arrow pointer of the gauge.
    * 
    * In styled mode, the dial is styled with the
    * `.highcharts-gauge-series .highcharts-dial` rule.  
       */
-  GaugeSeriesDialOptions? _dial;  
-
+  GaugeSeriesDialOptions? dial;
+    /*
   GaugeSeriesDialOptions get dial { 
     if (this._dial == null) {
       this._dial = GaugeSeriesDialOptions();
@@ -44,6 +47,7 @@ class GaugeSeriesOptions extends LineSeriesOptions {
   void set dial (GaugeSeriesDialOptions v) {
     this._dial = v;
   }
+    */
     
   /**
    * Allow the dial to overshoot the end of the perimeter axis by
@@ -51,8 +55,8 @@ class GaugeSeriesOptions extends LineSeriesOptions {
    * value of 100, or 1000, will show 5 degrees beyond the end of the
    * axis when this option is set to 5.  
       */
-  double? _overshoot;  
-
+  double? overshoot;
+    /*
   double get overshoot { 
     if (this._overshoot == null) {
       this._overshoot = 0;
@@ -63,6 +67,7 @@ class GaugeSeriesOptions extends LineSeriesOptions {
   void set overshoot (double v) {
     this._overshoot = v;
   }
+    */
     
   /**
    * Options for the pivot or the center point of the gauge.
@@ -70,8 +75,8 @@ class GaugeSeriesOptions extends LineSeriesOptions {
    * In styled mode, the pivot is styled with the
    * `.highcharts-gauge-series .highcharts-pivot` rule.  
       */
-  GaugeSeriesPivotOptions? _pivot;  
-
+  GaugeSeriesPivotOptions? pivot;
+    /*
   GaugeSeriesPivotOptions get pivot { 
     if (this._pivot == null) {
       this._pivot = GaugeSeriesPivotOptions();
@@ -82,6 +87,7 @@ class GaugeSeriesOptions extends LineSeriesOptions {
   void set pivot (GaugeSeriesPivotOptions v) {
     this._pivot = v;
   }
+    */
     
   // NOTE: states skipped - type Generic is ignored in gen
 
@@ -93,8 +99,8 @@ class GaugeSeriesOptions extends LineSeriesOptions {
    * 
    * Defaults to 'true'. 
       */
-  bool? _wrap;  
-
+  bool? wrap;
+    /*
   bool get wrap { 
     if (this._wrap == null) {
       this._wrap = false;
@@ -105,6 +111,7 @@ class GaugeSeriesOptions extends LineSeriesOptions {
   void set wrap (bool v) {
     this._wrap = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -114,22 +121,22 @@ class GaugeSeriesOptions extends LineSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._dial != null) {  
-      buffer.writeAll(["\"dial\":", this._dial?.toJSON(), ","], "");
+    if (this.dial != null) {  
+      buffer.writeAll(["\"dial\":", this.dial?.toJSON(), ","], "");
     }
 
-    if (this._overshoot != null) {  
-      buffer.writeAll(["\"overshoot\":", this._overshoot, ","], "");
+    if (this.overshoot != null) {  
+      buffer.writeAll(["\"overshoot\":", this.overshoot, ","], "");
     }
 
-    if (this._pivot != null) {  
-      buffer.writeAll(["\"pivot\":", this._pivot?.toJSON(), ","], "");
+    if (this.pivot != null) {  
+      buffer.writeAll(["\"pivot\":", this.pivot?.toJSON(), ","], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 
 
-    if (this._wrap != null) {  
-      buffer.writeAll(["\"wrap\":", this._wrap, ","], "");
+    if (this.wrap != null) {  
+      buffer.writeAll(["\"wrap\":", this.wrap, ","], "");
     }
   }
 

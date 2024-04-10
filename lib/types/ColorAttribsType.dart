@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,16 @@ import 'OptionFragment.dart';
  * ColorAttribsType 
  */
 class ColorAttribsType extends OptionFragment {
-  ColorAttribsType() : super();
-  String? _dashstyle;  
-
+  ColorAttribsType( {
+    this.dashstyle = null,
+    this.fill = null,
+    this.stroke = null,
+    this.stroke_linecap = null,
+    this.stroke_linejoin = null,
+    this.stroke_width = null
+  }) : super();
+  String? dashstyle;
+    /*
   String get dashstyle { 
     if (this._dashstyle == null) {
       this._dashstyle = "";
@@ -35,9 +42,10 @@ class ColorAttribsType extends OptionFragment {
   void set dashstyle (String v) {
     this._dashstyle = v;
   }
+    */
     
-  String? _fill;  
-
+  String? fill;
+    /*
   String get fill { 
     if (this._fill == null) {
       this._fill = "";
@@ -48,9 +56,10 @@ class ColorAttribsType extends OptionFragment {
   void set fill (String v) {
     this._fill = v;
   }
+    */
     
-  String? _stroke;  
-
+  String? stroke;
+    /*
   String get stroke { 
     if (this._stroke == null) {
       this._stroke = "";
@@ -61,9 +70,10 @@ class ColorAttribsType extends OptionFragment {
   void set stroke (String v) {
     this._stroke = v;
   }
+    */
     
-  String? _stroke_linecap;  
-
+  String? stroke_linecap;
+    /*
   String get stroke_linecap { 
     if (this._stroke_linecap == null) {
       this._stroke_linecap = "";
@@ -74,9 +84,10 @@ class ColorAttribsType extends OptionFragment {
   void set stroke_linecap (String v) {
     this._stroke_linecap = v;
   }
+    */
     
-  String? _stroke_linejoin;  
-
+  String? stroke_linejoin;
+    /*
   String get stroke_linejoin { 
     if (this._stroke_linejoin == null) {
       this._stroke_linejoin = "";
@@ -87,9 +98,10 @@ class ColorAttribsType extends OptionFragment {
   void set stroke_linejoin (String v) {
     this._stroke_linejoin = v;
   }
+    */
     
-  double? _stroke_width;  
-
+  double? stroke_width;
+    /*
   double get stroke_width { 
     if (this._stroke_width == null) {
       this._stroke_width = 0;
@@ -100,6 +112,7 @@ class ColorAttribsType extends OptionFragment {
   void set stroke_width (double v) {
     this._stroke_width = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -109,28 +122,28 @@ class ColorAttribsType extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._dashstyle != null) {  
-      buffer.writeAll(["\"dashstyle\":\`", this._dashstyle, "\`,"], "");
+    if (this.dashstyle != null) {  
+      buffer.writeAll(["\"dashstyle\":\`", this.dashstyle, "\`,"], "");
     }
 
-    if (this._fill != null) {  
-      buffer.writeAll(["\"fill\":\`", this._fill, "\`,"], "");
+    if (this.fill != null) {  
+      buffer.writeAll(["\"fill\":\`", this.fill, "\`,"], "");
     }
 
-    if (this._stroke != null) {  
-      buffer.writeAll(["\"stroke\":\`", this._stroke, "\`,"], "");
+    if (this.stroke != null) {  
+      buffer.writeAll(["\"stroke\":\`", this.stroke, "\`,"], "");
     }
 
-    if (this._stroke_linecap != null) {  
-      buffer.writeAll(["\"stroke-linecap\":\`", this._stroke_linecap, "\`,"], "");
+    if (this.stroke_linecap != null) {  
+      buffer.writeAll(["\"stroke-linecap\":\`", this.stroke_linecap, "\`,"], "");
     }
 
-    if (this._stroke_linejoin != null) {  
-      buffer.writeAll(["\"stroke-linejoin\":\`", this._stroke_linejoin, "\`,"], "");
+    if (this.stroke_linejoin != null) {  
+      buffer.writeAll(["\"stroke-linejoin\":\`", this.stroke_linejoin, "\`,"], "");
     }
 
-    if (this._stroke_width != null) {  
-      buffer.writeAll(["\"stroke-width\":", this._stroke_width, ","], "");
+    if (this.stroke_width != null) {  
+      buffer.writeAll(["\"stroke-width\":", this.stroke_width, ","], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -24,12 +24,15 @@ import 'OptionFragment.dart';
  * SupertrendOptions 
  */
 class SupertrendOptions extends SMAOptions {
-  SupertrendOptions() : super();
+  SupertrendOptions( {
+    this.fallingTrendColor = null,
+    this.risingTrendColor = null
+  }) : super();
   /**
    * The styles for the Supertrend line that intersect main series.  
       */
-  Map<String, String>? _changeTrendLine;  
-
+  Map<String, String>? changeTrendLine;
+    /*
   Map<String, String> get changeTrendLine { 
     if (this._changeTrendLine == null) {
       this._changeTrendLine = Map<String, String>();
@@ -40,14 +43,15 @@ class SupertrendOptions extends SMAOptions {
   void set changeTrendLine (Map<String, String> v) {
     this._changeTrendLine = v;
   }
+    */
     
   /**
    * Color of the Supertrend series line that is above the main series. 
    * 
    * Defaults to '#f21313'. 
       */
-  String? _fallingTrendColor;  
-
+  String? fallingTrendColor;
+    /*
   String get fallingTrendColor { 
     if (this._fallingTrendColor == null) {
       this._fallingTrendColor = "";
@@ -58,6 +62,7 @@ class SupertrendOptions extends SMAOptions {
   void set fallingTrendColor (String v) {
     this._fallingTrendColor = v;
   }
+    */
     
   /**
    * Paramters used in calculation of regression series' points.  
@@ -69,8 +74,8 @@ class SupertrendOptions extends SMAOptions {
    * 
    * Defaults to '#06b535'. 
       */
-  String? _risingTrendColor;  
-
+  String? risingTrendColor;
+    /*
   String get risingTrendColor { 
     if (this._risingTrendColor == null) {
       this._risingTrendColor = "";
@@ -81,6 +86,7 @@ class SupertrendOptions extends SMAOptions {
   void set risingTrendColor (String v) {
     this._risingTrendColor = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -90,18 +96,18 @@ class SupertrendOptions extends SMAOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._changeTrendLine != null) {  
-      buffer.writeAll(["\"changeTrendLine\":", this._changeTrendLine, ","], "");
+    if (this.changeTrendLine != null) {  
+      buffer.writeAll(["\"changeTrendLine\":", this.changeTrendLine, ","], "");
     }
 
-    if (this._fallingTrendColor != null) {  
-      buffer.writeAll(["\"fallingTrendColor\":\`", this._fallingTrendColor, "\`,"], "");
+    if (this.fallingTrendColor != null) {  
+      buffer.writeAll(["\"fallingTrendColor\":\`", this.fallingTrendColor, "\`,"], "");
     }
 
     // NOTE: skip serialization of params (type SupertrendParamsOptions is ignored)} 
 
-    if (this._risingTrendColor != null) {  
-      buffer.writeAll(["\"risingTrendColor\":\`", this._risingTrendColor, "\`,"], "");
+    if (this.risingTrendColor != null) {  
+      buffer.writeAll(["\"risingTrendColor\":\`", this.risingTrendColor, "\`,"], "");
     }
   }
 

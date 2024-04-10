@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -24,9 +24,13 @@ import 'OptionFragment.dart';
  * MockPointOptions 
  */
 class MockPointOptions extends OptionFragment {
-  MockPointOptions() : super();
-  double? _x;  
-
+  MockPointOptions( {
+    this.x = null,
+    this.y = null,
+    this.command = null
+  }) : super();
+  double? x;
+    /*
   double get x { 
     if (this._x == null) {
       this._x = 0;
@@ -37,9 +41,10 @@ class MockPointOptions extends OptionFragment {
   void set x (double v) {
     this._x = v;
   }
+    */
     
-  double? _y;  
-
+  double? y;
+    /*
   double get y { 
     if (this._y == null) {
       this._y = 0;
@@ -50,9 +55,10 @@ class MockPointOptions extends OptionFragment {
   void set y (double v) {
     this._y = v;
   }
+    */
     
-  String? _command;  
-
+  String? command;
+    /*
   String get command { 
     if (this._command == null) {
       this._command = "";
@@ -63,6 +69,7 @@ class MockPointOptions extends OptionFragment {
   void set command (String v) {
     this._command = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -76,20 +83,20 @@ class MockPointOptions extends OptionFragment {
 
     // NOTE: skip serialization of label (type ControllableLabelOptions is ignored)} 
 
-    if (this._x != null) {  
-      buffer.writeAll(["\"x\":", this._x, ","], "");
+    if (this.x != null) {  
+      buffer.writeAll(["\"x\":", this.x, ","], "");
     }
 
     // NOTE: skip serialization of xAxis (type AxisType is ignored)} 
 
-    if (this._y != null) {  
-      buffer.writeAll(["\"y\":", this._y, ","], "");
+    if (this.y != null) {  
+      buffer.writeAll(["\"y\":", this.y, ","], "");
     }
 
     // NOTE: skip serialization of yAxis (type AxisType is ignored)} 
 
-    if (this._command != null) {  
-      buffer.writeAll(["\"command\":\`", this._command, "\`,"], "");
+    if (this.command != null) {  
+      buffer.writeAll(["\"command\":\`", this.command, "\`,"], "");
     }
 
     // NOTE: skip serialization of series (type undefined is ignored)} 

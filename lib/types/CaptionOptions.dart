@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,15 +23,25 @@ import 'OptionFragment.dart';
  * CaptionOptions 
  */
 class CaptionOptions extends OptionFragment {
-  CaptionOptions() : super();
+  CaptionOptions( {
+    this.align = null,
+    this.floating = null,
+    this.margin = null,
+    this.text = null,
+    this.useHTML = null,
+    this.verticalAlign = null,
+    this.widthAdjust = null,
+    this.x = null,
+    this.y = null
+  }) : super();
   /**
    * The horizontal alignment of the caption. Can be one of "left",
    *  "center" and "right". 
    * 
    * Defaults to 'left'. 
       */
-  String? _align;  
-
+  String? align;
+    /*
   String get align { 
     if (this._align == null) {
       this._align = "";
@@ -42,6 +52,7 @@ class CaptionOptions extends OptionFragment {
   void set align (String v) {
     this._align = v;
   }
+    */
     
   /**
    * When the caption is floating, the plot area will not move to make
@@ -49,8 +60,8 @@ class CaptionOptions extends OptionFragment {
    * 
    * Defaults to 'false'. 
       */
-  bool? _floating;  
-
+  bool? floating;
+    /*
   bool get floating { 
     if (this._floating == null) {
       this._floating = false;
@@ -61,14 +72,15 @@ class CaptionOptions extends OptionFragment {
   void set floating (bool v) {
     this._floating = v;
   }
+    */
     
   /**
    * The margin between the caption and the plot area. 
    * 
    * Defaults to '15'. 
       */
-  double? _margin;  
-
+  double? margin;
+    /*
   double get margin { 
     if (this._margin == null) {
       this._margin = 0;
@@ -79,6 +91,7 @@ class CaptionOptions extends OptionFragment {
   void set margin (double v) {
     this._margin = v;
   }
+    */
     
   /**
    * CSS styles for the caption.
@@ -88,8 +101,8 @@ class CaptionOptions extends OptionFragment {
    * 
    * Defaults to '{"color": "#666666"}'. 
       */
-  CSSObject? _style;  
-
+  CSSObject? style;
+    /*
   CSSObject get style { 
     if (this._style == null) {
       this._style = CSSObject();
@@ -100,12 +113,13 @@ class CaptionOptions extends OptionFragment {
   void set style (CSSObject v) {
     this._style = v;
   }
+    */
     
   /**
    * The caption text of the chart.  
       */
-  String? _text;  
-
+  String? text;
+    /*
   String get text { 
     if (this._text == null) {
       this._text = "";
@@ -116,6 +130,7 @@ class CaptionOptions extends OptionFragment {
   void set text (String v) {
     this._text = v;
   }
+    */
     
   /**
    * Whether to
@@ -124,8 +139,8 @@ class CaptionOptions extends OptionFragment {
    * 
    * Defaults to 'false'. 
       */
-  bool? _useHTML;  
-
+  bool? useHTML;
+    /*
   bool get useHTML { 
     if (this._useHTML == null) {
       this._useHTML = false;
@@ -136,6 +151,7 @@ class CaptionOptions extends OptionFragment {
   void set useHTML (bool v) {
     this._useHTML = v;
   }
+    */
     
   /**
    * The vertical alignment of the caption. Can be one of `"top"`,
@@ -144,8 +160,8 @@ class CaptionOptions extends OptionFragment {
    * 
    * Defaults to 'bottom'. 
       */
-  String? _verticalAlign;  
-
+  String? verticalAlign;
+    /*
   String get verticalAlign { 
     if (this._verticalAlign == null) {
       this._verticalAlign = "";
@@ -156,9 +172,10 @@ class CaptionOptions extends OptionFragment {
   void set verticalAlign (String v) {
     this._verticalAlign = v;
   }
+    */
     
-  double? _widthAdjust;  
-
+  double? widthAdjust;
+    /*
   double get widthAdjust { 
     if (this._widthAdjust == null) {
       this._widthAdjust = 0;
@@ -169,6 +186,7 @@ class CaptionOptions extends OptionFragment {
   void set widthAdjust (double v) {
     this._widthAdjust = v;
   }
+    */
     
   /**
    * The x position of the caption relative to the alignment within
@@ -176,8 +194,8 @@ class CaptionOptions extends OptionFragment {
    * 
    * Defaults to '0'. 
       */
-  double? _x;  
-
+  double? x;
+    /*
   double get x { 
     if (this._x == null) {
       this._x = 0;
@@ -188,13 +206,14 @@ class CaptionOptions extends OptionFragment {
   void set x (double v) {
     this._x = v;
   }
+    */
     
   /**
    * The y position of the caption relative to the alignment within
    * `chart.spacingTop` and `chart.spacingBottom`.  
       */
-  double? _y;  
-
+  double? y;
+    /*
   double get y { 
     if (this._y == null) {
       this._y = 0;
@@ -205,6 +224,7 @@ class CaptionOptions extends OptionFragment {
   void set y (double v) {
     this._y = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -214,44 +234,44 @@ class CaptionOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._align != null) {  
-      buffer.writeAll(["\"align\":\`", this._align, "\`,"], "");
+    if (this.align != null) {  
+      buffer.writeAll(["\"align\":\`", this.align, "\`,"], "");
     }
 
-    if (this._floating != null) {  
-      buffer.writeAll(["\"floating\":", this._floating, ","], "");
+    if (this.floating != null) {  
+      buffer.writeAll(["\"floating\":", this.floating, ","], "");
     }
 
-    if (this._margin != null) {  
-      buffer.writeAll(["\"margin\":", this._margin, ","], "");
+    if (this.margin != null) {  
+      buffer.writeAll(["\"margin\":", this.margin, ","], "");
     }
 
-    if (this._style != null) {  
-      buffer.writeAll(["\"style\":", this._style?.toJSON(), ","], "");
+    if (this.style != null) {  
+      buffer.writeAll(["\"style\":", this.style?.toJSON(), ","], "");
     }
 
-    if (this._text != null) {  
-      buffer.writeAll(["\"text\":\`", this._text, "\`,"], "");
+    if (this.text != null) {  
+      buffer.writeAll(["\"text\":\`", this.text, "\`,"], "");
     }
 
-    if (this._useHTML != null) {  
-      buffer.writeAll(["\"useHTML\":", this._useHTML, ","], "");
+    if (this.useHTML != null) {  
+      buffer.writeAll(["\"useHTML\":", this.useHTML, ","], "");
     }
 
-    if (this._verticalAlign != null) {  
-      buffer.writeAll(["\"verticalAlign\":\`", this._verticalAlign, "\`,"], "");
+    if (this.verticalAlign != null) {  
+      buffer.writeAll(["\"verticalAlign\":\`", this.verticalAlign, "\`,"], "");
     }
 
-    if (this._widthAdjust != null) {  
-      buffer.writeAll(["\"widthAdjust\":", this._widthAdjust, ","], "");
+    if (this.widthAdjust != null) {  
+      buffer.writeAll(["\"widthAdjust\":", this.widthAdjust, ","], "");
     }
 
-    if (this._x != null) {  
-      buffer.writeAll(["\"x\":", this._x, ","], "");
+    if (this.x != null) {  
+      buffer.writeAll(["\"x\":", this.x, ","], "");
     }
 
-    if (this._y != null) {  
-      buffer.writeAll(["\"y\":", this._y, ","], "");
+    if (this.y != null) {  
+      buffer.writeAll(["\"y\":", this.y, ","], "");
     }
   }
 

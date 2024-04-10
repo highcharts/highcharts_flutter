@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -24,9 +24,22 @@ import 'OptionFragment.dart';
  * Measure 
  */
 class Measure extends OptionFragment {
-  Measure() : super();
-  double? _offsetX;  
-
+  Measure( {
+    this.offsetX = null,
+    this.offsetY = null,
+    this.resizeX = null,
+    this.resizeY = null,
+    this.startXMax = null,
+    this.startXMin = null,
+    this.startYMax = null,
+    this.startYMin = null,
+    this.xAxisMin = null,
+    this.xAxisMax = null,
+    this.yAxisMin = null,
+    this.yAxisMax = null
+  }) : super();
+  double? offsetX;
+    /*
   double get offsetX { 
     if (this._offsetX == null) {
       this._offsetX = 0;
@@ -37,9 +50,10 @@ class Measure extends OptionFragment {
   void set offsetX (double v) {
     this._offsetX = v;
   }
+    */
     
-  double? _offsetY;  
-
+  double? offsetY;
+    /*
   double get offsetY { 
     if (this._offsetY == null) {
       this._offsetY = 0;
@@ -50,9 +64,10 @@ class Measure extends OptionFragment {
   void set offsetY (double v) {
     this._offsetY = v;
   }
+    */
     
-  double? _resizeX;  
-
+  double? resizeX;
+    /*
   double get resizeX { 
     if (this._resizeX == null) {
       this._resizeX = 0;
@@ -63,9 +78,10 @@ class Measure extends OptionFragment {
   void set resizeX (double v) {
     this._resizeX = v;
   }
+    */
     
-  double? _resizeY;  
-
+  double? resizeY;
+    /*
   double get resizeY { 
     if (this._resizeY == null) {
       this._resizeY = 0;
@@ -76,9 +92,10 @@ class Measure extends OptionFragment {
   void set resizeY (double v) {
     this._resizeY = v;
   }
+    */
     
-  double? _startXMax;  
-
+  double? startXMax;
+    /*
   double get startXMax { 
     if (this._startXMax == null) {
       this._startXMax = 0;
@@ -89,9 +106,10 @@ class Measure extends OptionFragment {
   void set startXMax (double v) {
     this._startXMax = v;
   }
+    */
     
-  double? _startXMin;  
-
+  double? startXMin;
+    /*
   double get startXMin { 
     if (this._startXMin == null) {
       this._startXMin = 0;
@@ -102,9 +120,10 @@ class Measure extends OptionFragment {
   void set startXMin (double v) {
     this._startXMin = v;
   }
+    */
     
-  double? _startYMax;  
-
+  double? startYMax;
+    /*
   double get startYMax { 
     if (this._startYMax == null) {
       this._startYMax = 0;
@@ -115,9 +134,10 @@ class Measure extends OptionFragment {
   void set startYMax (double v) {
     this._startYMax = v;
   }
+    */
     
-  double? _startYMin;  
-
+  double? startYMin;
+    /*
   double get startYMin { 
     if (this._startYMin == null) {
       this._startYMin = 0;
@@ -128,9 +148,10 @@ class Measure extends OptionFragment {
   void set startYMin (double v) {
     this._startYMin = v;
   }
+    */
     
-  double? _xAxisMin;  
-
+  double? xAxisMin;
+    /*
   double get xAxisMin { 
     if (this._xAxisMin == null) {
       this._xAxisMin = 0;
@@ -141,9 +162,10 @@ class Measure extends OptionFragment {
   void set xAxisMin (double v) {
     this._xAxisMin = v;
   }
+    */
     
-  double? _xAxisMax;  
-
+  double? xAxisMax;
+    /*
   double get xAxisMax { 
     if (this._xAxisMax == null) {
       this._xAxisMax = 0;
@@ -154,9 +176,10 @@ class Measure extends OptionFragment {
   void set xAxisMax (double v) {
     this._xAxisMax = v;
   }
+    */
     
-  double? _yAxisMin;  
-
+  double? yAxisMin;
+    /*
   double get yAxisMin { 
     if (this._yAxisMin == null) {
       this._yAxisMin = 0;
@@ -167,9 +190,10 @@ class Measure extends OptionFragment {
   void set yAxisMin (double v) {
     this._yAxisMin = v;
   }
+    */
     
-  double? _yAxisMax;  
-
+  double? yAxisMax;
+    /*
   double get yAxisMax { 
     if (this._yAxisMax == null) {
       this._yAxisMax = 0;
@@ -180,6 +204,7 @@ class Measure extends OptionFragment {
   void set yAxisMax (double v) {
     this._yAxisMax = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -199,54 +224,54 @@ class Measure extends OptionFragment {
 
     // NOTE: skip serialization of max (type "" is ignored)} 
 
-    if (this._offsetX != null) {  
-      buffer.writeAll(["\"offsetX\":", this._offsetX, ","], "");
+    if (this.offsetX != null) {  
+      buffer.writeAll(["\"offsetX\":", this.offsetX, ","], "");
     }
 
-    if (this._offsetY != null) {  
-      buffer.writeAll(["\"offsetY\":", this._offsetY, ","], "");
+    if (this.offsetY != null) {  
+      buffer.writeAll(["\"offsetY\":", this.offsetY, ","], "");
     }
 
     // NOTE: skip serialization of options (type MeasureOptions is ignored)} 
 
-    if (this._resizeX != null) {  
-      buffer.writeAll(["\"resizeX\":", this._resizeX, ","], "");
+    if (this.resizeX != null) {  
+      buffer.writeAll(["\"resizeX\":", this.resizeX, ","], "");
     }
 
-    if (this._resizeY != null) {  
-      buffer.writeAll(["\"resizeY\":", this._resizeY, ","], "");
+    if (this.resizeY != null) {  
+      buffer.writeAll(["\"resizeY\":", this.resizeY, ","], "");
     }
 
-    if (this._startXMax != null) {  
-      buffer.writeAll(["\"startXMax\":", this._startXMax, ","], "");
+    if (this.startXMax != null) {  
+      buffer.writeAll(["\"startXMax\":", this.startXMax, ","], "");
     }
 
-    if (this._startXMin != null) {  
-      buffer.writeAll(["\"startXMin\":", this._startXMin, ","], "");
+    if (this.startXMin != null) {  
+      buffer.writeAll(["\"startXMin\":", this.startXMin, ","], "");
     }
 
-    if (this._startYMax != null) {  
-      buffer.writeAll(["\"startYMax\":", this._startYMax, ","], "");
+    if (this.startYMax != null) {  
+      buffer.writeAll(["\"startYMax\":", this.startYMax, ","], "");
     }
 
-    if (this._startYMin != null) {  
-      buffer.writeAll(["\"startYMin\":", this._startYMin, ","], "");
+    if (this.startYMin != null) {  
+      buffer.writeAll(["\"startYMin\":", this.startYMin, ","], "");
     }
 
-    if (this._xAxisMin != null) {  
-      buffer.writeAll(["\"xAxisMin\":", this._xAxisMin, ","], "");
+    if (this.xAxisMin != null) {  
+      buffer.writeAll(["\"xAxisMin\":", this.xAxisMin, ","], "");
     }
 
-    if (this._xAxisMax != null) {  
-      buffer.writeAll(["\"xAxisMax\":", this._xAxisMax, ","], "");
+    if (this.xAxisMax != null) {  
+      buffer.writeAll(["\"xAxisMax\":", this.xAxisMax, ","], "");
     }
 
-    if (this._yAxisMin != null) {  
-      buffer.writeAll(["\"yAxisMin\":", this._yAxisMin, ","], "");
+    if (this.yAxisMin != null) {  
+      buffer.writeAll(["\"yAxisMin\":", this.yAxisMin, ","], "");
     }
 
-    if (this._yAxisMax != null) {  
-      buffer.writeAll(["\"yAxisMax\":", this._yAxisMax, ","], "");
+    if (this.yAxisMax != null) {  
+      buffer.writeAll(["\"yAxisMax\":", this.yAxisMax, ","], "");
     }
   }
 

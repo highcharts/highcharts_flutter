@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,11 @@ import 'OptionFragment.dart';
  * LastVisiblePriceLabelOptions 
  */
 class LastVisiblePriceLabelOptions extends OptionFragment {
-  LastVisiblePriceLabelOptions() : super();
-  String? _color;  
-
+  LastVisiblePriceLabelOptions( {
+    this.color = null
+  }) : super();
+  String? color;
+    /*
   String get color { 
     if (this._color == null) {
       this._color = "";
@@ -35,6 +37,7 @@ class LastVisiblePriceLabelOptions extends OptionFragment {
   void set color (String v) {
     this._color = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -46,8 +49,8 @@ class LastVisiblePriceLabelOptions extends OptionFragment {
     
     // NOTE: skip serialization of enabled (type true is ignored)} 
 
-    if (this._color != null) {  
-      buffer.writeAll(["\"color\":\`", this._color, "\`,"], "");
+    if (this.color != null) {  
+      buffer.writeAll(["\"color\":\`", this.color, "\`,"], "");
     }
   }
 

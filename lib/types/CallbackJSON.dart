@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,12 @@ import 'OptionFragment.dart';
  * CallbackJSON 
  */
 class CallbackJSON extends OptionFragment {
-  CallbackJSON() : super();
-  String? _type;  
-
+  CallbackJSON( {
+    this.type = null,
+    this.func = null
+  }) : super();
+  String? type;
+    /*
   String get type { 
     if (this._type == null) {
       this._type = "";
@@ -35,9 +38,10 @@ class CallbackJSON extends OptionFragment {
   void set type (String v) {
     this._type = v;
   }
+    */
     
-  String? _func;  
-
+  String? func;
+    /*
   String get func { 
     if (this._func == null) {
       this._func = "";
@@ -48,6 +52,7 @@ class CallbackJSON extends OptionFragment {
   void set func (String v) {
     this._func = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -57,12 +62,12 @@ class CallbackJSON extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._type != null) {  
-      buffer.writeAll(["\"type\":\`", this._type, "\`,"], "");
+    if (this.type != null) {  
+      buffer.writeAll(["\"type\":\`", this.type, "\`,"], "");
     }
 
-    if (this._func != null) {  
-      buffer.writeAll(["\"func\":\`", this._func, "\`,"], "");
+    if (this.func != null) {  
+      buffer.writeAll(["\"func\":\`", this.func, "\`,"], "");
     }
   }
 

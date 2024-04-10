@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,14 @@ import 'OptionFragment.dart';
  * ExportingCsvOptions 
  */
 class ExportingCsvOptions extends OptionFragment {
-  ExportingCsvOptions() : super();
-  String? _dateFormat;  
-
+  ExportingCsvOptions( {
+    this.dateFormat = null,
+    this.decimalPoint = null,
+    this.itemDelimiter = null,
+    this.lineDelimiter = null
+  }) : super();
+  String? dateFormat;
+    /*
   String get dateFormat { 
     if (this._dateFormat == null) {
       this._dateFormat = "";
@@ -36,9 +41,10 @@ class ExportingCsvOptions extends OptionFragment {
   void set dateFormat (String v) {
     this._dateFormat = v;
   }
+    */
     
-  String? _decimalPoint;  
-
+  String? decimalPoint;
+    /*
   String get decimalPoint { 
     if (this._decimalPoint == null) {
       this._decimalPoint = "";
@@ -49,9 +55,10 @@ class ExportingCsvOptions extends OptionFragment {
   void set decimalPoint (String v) {
     this._decimalPoint = v;
   }
+    */
     
-  String? _itemDelimiter;  
-
+  String? itemDelimiter;
+    /*
   String get itemDelimiter { 
     if (this._itemDelimiter == null) {
       this._itemDelimiter = "";
@@ -62,9 +69,10 @@ class ExportingCsvOptions extends OptionFragment {
   void set itemDelimiter (String v) {
     this._itemDelimiter = v;
   }
+    */
     
-  String? _lineDelimiter;  
-
+  String? lineDelimiter;
+    /*
   String get lineDelimiter { 
     if (this._lineDelimiter == null) {
       this._lineDelimiter = "";
@@ -75,6 +83,7 @@ class ExportingCsvOptions extends OptionFragment {
   void set lineDelimiter (String v) {
     this._lineDelimiter = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -88,20 +97,20 @@ class ExportingCsvOptions extends OptionFragment {
 
     // NOTE: skip serialization of columnHeaderFormatter (type Function is ignored)} 
 
-    if (this._dateFormat != null) {  
-      buffer.writeAll(["\"dateFormat\":\`", this._dateFormat, "\`,"], "");
+    if (this.dateFormat != null) {  
+      buffer.writeAll(["\"dateFormat\":\`", this.dateFormat, "\`,"], "");
     }
 
-    if (this._decimalPoint != null) {  
-      buffer.writeAll(["\"decimalPoint\":\`", this._decimalPoint, "\`,"], "");
+    if (this.decimalPoint != null) {  
+      buffer.writeAll(["\"decimalPoint\":\`", this.decimalPoint, "\`,"], "");
     }
 
-    if (this._itemDelimiter != null) {  
-      buffer.writeAll(["\"itemDelimiter\":\`", this._itemDelimiter, "\`,"], "");
+    if (this.itemDelimiter != null) {  
+      buffer.writeAll(["\"itemDelimiter\":\`", this.itemDelimiter, "\`,"], "");
     }
 
-    if (this._lineDelimiter != null) {  
-      buffer.writeAll(["\"lineDelimiter\":\`", this._lineDelimiter, "\`,"], "");
+    if (this.lineDelimiter != null) {  
+      buffer.writeAll(["\"lineDelimiter\":\`", this.lineDelimiter, "\`,"], "");
     }
   }
 

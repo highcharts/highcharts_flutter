@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,11 @@ import 'OptionFragment.dart';
  * ContextPointer 
  */
 class ContextPointer extends OptionFragment {
-  ContextPointer() : super();
-  bool? _isVisible;  
-
+  ContextPointer( {
+    this.isVisible = null
+  }) : super();
+  bool? isVisible;
+    /*
   bool get isVisible { 
     if (this._isVisible == null) {
       this._isVisible = false;
@@ -36,6 +38,7 @@ class ContextPointer extends OptionFragment {
   void set isVisible (bool v) {
     this._isVisible = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -45,8 +48,8 @@ class ContextPointer extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._isVisible != null) {  
-      buffer.writeAll(["\"isVisible\":", this._isVisible, ","], "");
+    if (this.isVisible != null) {  
+      buffer.writeAll(["\"isVisible\":", this.isVisible, ","], "");
     }
 
     // NOTE: skip serialization of element (type HTMLElement is ignored)} 

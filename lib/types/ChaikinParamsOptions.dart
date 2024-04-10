@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,11 @@ import 'OptionFragment.dart';
  * ChaikinParamsOptions 
  */
 class ChaikinParamsOptions extends EMAParamsOptions {
-  ChaikinParamsOptions() : super();
-  String? _volumeSeriesID;  
-
+  ChaikinParamsOptions( {
+    this.volumeSeriesID = null
+  }) : super();
+  String? volumeSeriesID;
+    /*
   String get volumeSeriesID { 
     if (this._volumeSeriesID == null) {
       this._volumeSeriesID = "";
@@ -36,6 +38,7 @@ class ChaikinParamsOptions extends EMAParamsOptions {
   void set volumeSeriesID (String v) {
     this._volumeSeriesID = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -47,8 +50,8 @@ class ChaikinParamsOptions extends EMAParamsOptions {
     
     // NOTE: skip serialization of periods (type number[] is ignored)} 
 
-    if (this._volumeSeriesID != null) {  
-      buffer.writeAll(["\"volumeSeriesID\":\`", this._volumeSeriesID, "\`,"], "");
+    if (this.volumeSeriesID != null) {  
+      buffer.writeAll(["\"volumeSeriesID\":\`", this.volumeSeriesID, "\`,"], "");
     }
   }
 

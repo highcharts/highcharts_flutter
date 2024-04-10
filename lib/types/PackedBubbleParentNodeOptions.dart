@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,11 @@ import 'OptionFragment.dart';
  * PackedBubbleParentNodeOptions 
  */
 class PackedBubbleParentNodeOptions extends OptionFragment {
-  PackedBubbleParentNodeOptions() : super();
-  bool? _allowPointSelect;  
-
+  PackedBubbleParentNodeOptions( {
+    this.allowPointSelect = null
+  }) : super();
+  bool? allowPointSelect;
+    /*
   bool get allowPointSelect { 
     if (this._allowPointSelect == null) {
       this._allowPointSelect = false;
@@ -35,6 +37,7 @@ class PackedBubbleParentNodeOptions extends OptionFragment {
   void set allowPointSelect (bool v) {
     this._allowPointSelect = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -44,8 +47,8 @@ class PackedBubbleParentNodeOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._allowPointSelect != null) {  
-      buffer.writeAll(["\"allowPointSelect\":", this._allowPointSelect, ","], "");
+    if (this.allowPointSelect != null) {  
+      buffer.writeAll(["\"allowPointSelect\":", this.allowPointSelect, ","], "");
     }
   }
 

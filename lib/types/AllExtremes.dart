@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,12 @@ import 'OptionFragment.dart';
  * AllExtremes 
  */
 class AllExtremes extends OptionFragment {
-  AllExtremes() : super();
-  double? _dataMin;  
-
+  AllExtremes( {
+    this.dataMin = null,
+    this.dataMax = null
+  }) : super();
+  double? dataMin;
+    /*
   double get dataMin { 
     if (this._dataMin == null) {
       this._dataMin = 0;
@@ -35,9 +38,10 @@ class AllExtremes extends OptionFragment {
   void set dataMin (double v) {
     this._dataMin = v;
   }
+    */
     
-  double? _dataMax;  
-
+  double? dataMax;
+    /*
   double get dataMax { 
     if (this._dataMax == null) {
       this._dataMax = 0;
@@ -48,6 +52,7 @@ class AllExtremes extends OptionFragment {
   void set dataMax (double v) {
     this._dataMax = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -57,12 +62,12 @@ class AllExtremes extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._dataMin != null) {  
-      buffer.writeAll(["\"dataMin\":", this._dataMin, ","], "");
+    if (this.dataMin != null) {  
+      buffer.writeAll(["\"dataMin\":", this.dataMin, ","], "");
     }
 
-    if (this._dataMax != null) {  
-      buffer.writeAll(["\"dataMax\":", this._dataMax, ","], "");
+    if (this.dataMax != null) {  
+      buffer.writeAll(["\"dataMax\":", this.dataMax, ","], "");
     }
   }
 

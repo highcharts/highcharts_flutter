@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,16 @@ import 'OptionFragment.dart';
  * ExtremesObject 
  */
 class ExtremesObject extends OptionFragment {
-  ExtremesObject() : super();
-  double? _dataMax;  
-
+  ExtremesObject( {
+    this.dataMax = null,
+    this.dataMin = null,
+    this.max = null,
+    this.min = null,
+    this.userMax = null,
+    this.userMin = null
+  }) : super();
+  double? dataMax;
+    /*
   double get dataMax { 
     if (this._dataMax == null) {
       this._dataMax = 0;
@@ -35,9 +42,10 @@ class ExtremesObject extends OptionFragment {
   void set dataMax (double v) {
     this._dataMax = v;
   }
+    */
     
-  double? _dataMin;  
-
+  double? dataMin;
+    /*
   double get dataMin { 
     if (this._dataMin == null) {
       this._dataMin = 0;
@@ -48,9 +56,10 @@ class ExtremesObject extends OptionFragment {
   void set dataMin (double v) {
     this._dataMin = v;
   }
+    */
     
-  double? _max;  
-
+  double? max;
+    /*
   double get max { 
     if (this._max == null) {
       this._max = 0;
@@ -61,9 +70,10 @@ class ExtremesObject extends OptionFragment {
   void set max (double v) {
     this._max = v;
   }
+    */
     
-  double? _min;  
-
+  double? min;
+    /*
   double get min { 
     if (this._min == null) {
       this._min = 0;
@@ -74,9 +84,10 @@ class ExtremesObject extends OptionFragment {
   void set min (double v) {
     this._min = v;
   }
+    */
     
-  double? _userMax;  
-
+  double? userMax;
+    /*
   double get userMax { 
     if (this._userMax == null) {
       this._userMax = 0;
@@ -87,9 +98,10 @@ class ExtremesObject extends OptionFragment {
   void set userMax (double v) {
     this._userMax = v;
   }
+    */
     
-  double? _userMin;  
-
+  double? userMin;
+    /*
   double get userMin { 
     if (this._userMin == null) {
       this._userMin = 0;
@@ -100,6 +112,7 @@ class ExtremesObject extends OptionFragment {
   void set userMin (double v) {
     this._userMin = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -109,52 +122,52 @@ class ExtremesObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._dataMax != null) {  
-      buffer.writeAll(["\"dataMax\":", this._dataMax, ","], "");
+    if (this.dataMax != null) {  
+      buffer.writeAll(["\"dataMax\":", this.dataMax, ","], "");
     }
 
-    if (this._dataMin != null) {  
-      buffer.writeAll(["\"dataMin\":", this._dataMin, ","], "");
+    if (this.dataMin != null) {  
+      buffer.writeAll(["\"dataMin\":", this.dataMin, ","], "");
     }
 
-    if (this._max != null) {  
-      buffer.writeAll(["\"max\":", this._max, ","], "");
+    if (this.max != null) {  
+      buffer.writeAll(["\"max\":", this.max, ","], "");
     }
 
-    if (this._min != null) {  
-      buffer.writeAll(["\"min\":", this._min, ","], "");
+    if (this.min != null) {  
+      buffer.writeAll(["\"min\":", this.min, ","], "");
     }
 
-    if (this._userMax != null) {  
-      buffer.writeAll(["\"userMax\":", this._userMax, ","], "");
+    if (this.userMax != null) {  
+      buffer.writeAll(["\"userMax\":", this.userMax, ","], "");
     }
 
-    if (this._userMin != null) {  
-      buffer.writeAll(["\"userMin\":", this._userMin, ","], "");
+    if (this.userMin != null) {  
+      buffer.writeAll(["\"userMin\":", this.userMin, ","], "");
     }
 
-    if (this._dataMax != null) {  
-      buffer.writeAll(["\"dataMax\":", this._dataMax, ","], "");
+    if (this.dataMax != null) {  
+      buffer.writeAll(["\"dataMax\":", this.dataMax, ","], "");
     }
 
-    if (this._dataMin != null) {  
-      buffer.writeAll(["\"dataMin\":", this._dataMin, ","], "");
+    if (this.dataMin != null) {  
+      buffer.writeAll(["\"dataMin\":", this.dataMin, ","], "");
     }
 
-    if (this._max != null) {  
-      buffer.writeAll(["\"max\":", this._max, ","], "");
+    if (this.max != null) {  
+      buffer.writeAll(["\"max\":", this.max, ","], "");
     }
 
-    if (this._min != null) {  
-      buffer.writeAll(["\"min\":", this._min, ","], "");
+    if (this.min != null) {  
+      buffer.writeAll(["\"min\":", this.min, ","], "");
     }
 
-    if (this._userMax != null) {  
-      buffer.writeAll(["\"userMax\":", this._userMax, ","], "");
+    if (this.userMax != null) {  
+      buffer.writeAll(["\"userMax\":", this.userMax, ","], "");
     }
 
-    if (this._userMin != null) {  
-      buffer.writeAll(["\"userMin\":", this._userMin, ","], "");
+    if (this.userMin != null) {  
+      buffer.writeAll(["\"userMin\":", this.userMin, ","], "");
     }
   }
 

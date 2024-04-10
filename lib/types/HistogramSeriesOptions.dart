@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,13 @@ import 'OptionFragment.dart';
  * HistogramSeriesOptions 
  */
 class HistogramSeriesOptions extends ColumnSeriesOptions {
-  HistogramSeriesOptions() : super();
-  String? _baseSeries;  
-
+  HistogramSeriesOptions( {
+    this.baseSeries = null,
+    this.binsNumber = null,
+    this.binWidth = null
+  }) : super();
+  String? baseSeries;
+    /*
   String get baseSeries { 
     if (this._baseSeries == null) {
       this._baseSeries = "";
@@ -36,6 +40,7 @@ class HistogramSeriesOptions extends ColumnSeriesOptions {
   void set baseSeries (String v) {
     this._baseSeries = v;
   }
+    */
     
   /**
    * A preferable number of bins. It is a suggestion, so a histogram may
@@ -45,8 +50,8 @@ class HistogramSeriesOptions extends ColumnSeriesOptions {
    * which takes a `baseSeries` as a parameter and should return a
    * positive integer.  
       */
-  String? _binsNumber;  
-
+  String? binsNumber;
+    /*
   String get binsNumber { 
     if (this._binsNumber == null) {
       this._binsNumber = "";
@@ -57,14 +62,15 @@ class HistogramSeriesOptions extends ColumnSeriesOptions {
   void set binsNumber (String v) {
     this._binsNumber = v;
   }
+    */
     
   /**
    * Width of each bin. By default the bin's width is calculated as
    * `(max - min) / number of bins`. This option takes precedence over
    * [binsNumber](#plotOptions.histogram.binsNumber).  
       */
-  double? _binWidth;  
-
+  double? binWidth;
+    /*
   double get binWidth { 
     if (this._binWidth == null) {
       this._binWidth = 0;
@@ -75,6 +81,7 @@ class HistogramSeriesOptions extends ColumnSeriesOptions {
   void set binWidth (double v) {
     this._binWidth = v;
   }
+    */
     
   // NOTE: states skipped - type Generic is ignored in gen
 
@@ -86,16 +93,16 @@ class HistogramSeriesOptions extends ColumnSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._baseSeries != null) {  
-      buffer.writeAll(["\"baseSeries\":\`", this._baseSeries, "\`,"], "");
+    if (this.baseSeries != null) {  
+      buffer.writeAll(["\"baseSeries\":\`", this.baseSeries, "\`,"], "");
     }
 
-    if (this._binsNumber != null) {  
-      buffer.writeAll(["\"binsNumber\":\`", this._binsNumber, "\`,"], "");
+    if (this.binsNumber != null) {  
+      buffer.writeAll(["\"binsNumber\":\`", this.binsNumber, "\`,"], "");
     }
 
-    if (this._binWidth != null) {  
-      buffer.writeAll(["\"binWidth\":", this._binWidth, ","], "");
+    if (this.binWidth != null) {  
+      buffer.writeAll(["\"binWidth\":", this.binWidth, ","], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 

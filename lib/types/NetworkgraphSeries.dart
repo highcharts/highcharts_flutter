@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -24,9 +24,15 @@ import 'OptionFragment.dart';
  * NetworkgraphSeries 
  */
 class NetworkgraphSeries extends DragNodesSeries {
-  NetworkgraphSeries() : super();
-  bool? _directTouch;  
-
+  NetworkgraphSeries( {
+    this.directTouch = null,
+    this.hasDraggableNodes = null,
+    this.isCartesian = null,
+    this.noSharedTooltip = null,
+    this.requireSorting = null
+  }) : super();
+  bool? directTouch;
+    /*
   bool get directTouch { 
     if (this._directTouch == null) {
       this._directTouch = false;
@@ -37,9 +43,10 @@ class NetworkgraphSeries extends DragNodesSeries {
   void set directTouch (bool v) {
     this._directTouch = v;
   }
+    */
     
-  bool? _hasDraggableNodes;  
-
+  bool? hasDraggableNodes;
+    /*
   bool get hasDraggableNodes { 
     if (this._hasDraggableNodes == null) {
       this._hasDraggableNodes = false;
@@ -50,9 +57,10 @@ class NetworkgraphSeries extends DragNodesSeries {
   void set hasDraggableNodes (bool v) {
     this._hasDraggableNodes = v;
   }
+    */
     
-  bool? _isCartesian;  
-
+  bool? isCartesian;
+    /*
   bool get isCartesian { 
     if (this._isCartesian == null) {
       this._isCartesian = false;
@@ -63,9 +71,10 @@ class NetworkgraphSeries extends DragNodesSeries {
   void set isCartesian (bool v) {
     this._isCartesian = v;
   }
+    */
     
-  bool? _noSharedTooltip;  
-
+  bool? noSharedTooltip;
+    /*
   bool get noSharedTooltip { 
     if (this._noSharedTooltip == null) {
       this._noSharedTooltip = false;
@@ -76,9 +85,10 @@ class NetworkgraphSeries extends DragNodesSeries {
   void set noSharedTooltip (bool v) {
     this._noSharedTooltip = v;
   }
+    */
     
-  bool? _requireSorting;  
-
+  bool? requireSorting;
+    /*
   bool get requireSorting { 
     if (this._requireSorting == null) {
       this._requireSorting = false;
@@ -89,6 +99,7 @@ class NetworkgraphSeries extends DragNodesSeries {
   void set requireSorting (bool v) {
     this._requireSorting = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -104,18 +115,18 @@ class NetworkgraphSeries extends DragNodesSeries {
 
     // NOTE: skip serialization of data (type NetworkgraphPoint[] is ignored)} 
 
-    if (this._directTouch != null) {  
-      buffer.writeAll(["\"directTouch\":", this._directTouch, ","], "");
+    if (this.directTouch != null) {  
+      buffer.writeAll(["\"directTouch\":", this.directTouch, ","], "");
     }
 
     // NOTE: skip serialization of forces (type string[] is ignored)} 
 
-    if (this._hasDraggableNodes != null) {  
-      buffer.writeAll(["\"hasDraggableNodes\":", this._hasDraggableNodes, ","], "");
+    if (this.hasDraggableNodes != null) {  
+      buffer.writeAll(["\"hasDraggableNodes\":", this.hasDraggableNodes, ","], "");
     }
 
-    if (this._isCartesian != null) {  
-      buffer.writeAll(["\"isCartesian\":", this._isCartesian, ","], "");
+    if (this.isCartesian != null) {  
+      buffer.writeAll(["\"isCartesian\":", this.isCartesian, ","], "");
     }
 
     // NOTE: skip serialization of layout (type ReingoldFruchtermanLayout is ignored)} 
@@ -124,14 +135,14 @@ class NetworkgraphSeries extends DragNodesSeries {
 
     // NOTE: skip serialization of nodes (type NetworkgraphPoint[] is ignored)} 
 
-    if (this._noSharedTooltip != null) {  
-      buffer.writeAll(["\"noSharedTooltip\":", this._noSharedTooltip, ","], "");
+    if (this.noSharedTooltip != null) {  
+      buffer.writeAll(["\"noSharedTooltip\":", this.noSharedTooltip, ","], "");
     }
 
     // NOTE: skip serialization of pointArrayMap (type string[] is ignored)} 
 
-    if (this._requireSorting != null) {  
-      buffer.writeAll(["\"requireSorting\":", this._requireSorting, ","], "");
+    if (this.requireSorting != null) {  
+      buffer.writeAll(["\"requireSorting\":", this.requireSorting, ","], "");
     }
 
     // NOTE: skip serialization of trackerGroups (type string[] is ignored)} 

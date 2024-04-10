@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,27 @@ import 'OptionFragment.dart';
  * SeriesStateHoverOptions 
  */
 class SeriesStateHoverOptions extends OptionFragment {
-  SeriesStateHoverOptions() : super();
-  double? _brightness;  
-
+  SeriesStateHoverOptions( {
+    this.brightness = null,
+    this.borderColor = null,
+    this.borderDashStyle = null,
+    this.borderRadius = null,
+    this.borderWidth = null,
+    this.color = null,
+    this.dashStyle = null,
+    this.enabled = null,
+    this.lineWidth = null,
+    this.lineWidthPlus = null,
+    this.radius = null,
+    this.radiusPlus = null,
+    this.opacity = null,
+    this.fillColor = null,
+    this.lineColor = null,
+    this.shape = null,
+    this.connectorWidthPlus = null
+  }) : super();
+  double? brightness;
+    /*
   double get brightness { 
     if (this._brightness == null) {
       this._brightness = 0;
@@ -36,9 +54,10 @@ class SeriesStateHoverOptions extends OptionFragment {
   void set brightness (double v) {
     this._brightness = v;
   }
+    */
     
-  String? _borderColor;  
-
+  String? borderColor;
+    /*
   String get borderColor { 
     if (this._borderColor == null) {
       this._borderColor = "";
@@ -49,9 +68,10 @@ class SeriesStateHoverOptions extends OptionFragment {
   void set borderColor (String v) {
     this._borderColor = v;
   }
+    */
     
-  String? _borderDashStyle;  
-
+  String? borderDashStyle;
+    /*
   String get borderDashStyle { 
     if (this._borderDashStyle == null) {
       this._borderDashStyle = "";
@@ -62,9 +82,10 @@ class SeriesStateHoverOptions extends OptionFragment {
   void set borderDashStyle (String v) {
     this._borderDashStyle = v;
   }
+    */
     
-  double? _borderRadius;  
-
+  double? borderRadius;
+    /*
   double get borderRadius { 
     if (this._borderRadius == null) {
       this._borderRadius = 0;
@@ -75,9 +96,10 @@ class SeriesStateHoverOptions extends OptionFragment {
   void set borderRadius (double v) {
     this._borderRadius = v;
   }
+    */
     
-  double? _borderWidth;  
-
+  double? borderWidth;
+    /*
   double get borderWidth { 
     if (this._borderWidth == null) {
       this._borderWidth = 0;
@@ -88,9 +110,10 @@ class SeriesStateHoverOptions extends OptionFragment {
   void set borderWidth (double v) {
     this._borderWidth = v;
   }
+    */
     
-  String? _color;  
-
+  String? color;
+    /*
   String get color { 
     if (this._color == null) {
       this._color = "";
@@ -101,9 +124,10 @@ class SeriesStateHoverOptions extends OptionFragment {
   void set color (String v) {
     this._color = v;
   }
+    */
     
-  String? _dashStyle;  
-
+  String? dashStyle;
+    /*
   String get dashStyle { 
     if (this._dashStyle == null) {
       this._dashStyle = "";
@@ -114,9 +138,10 @@ class SeriesStateHoverOptions extends OptionFragment {
   void set dashStyle (String v) {
     this._dashStyle = v;
   }
+    */
     
-  bool? _enabled;  
-
+  bool? enabled;
+    /*
   bool get enabled { 
     if (this._enabled == null) {
       this._enabled = false;
@@ -127,9 +152,10 @@ class SeriesStateHoverOptions extends OptionFragment {
   void set enabled (bool v) {
     this._enabled = v;
   }
+    */
     
-  double? _lineWidth;  
-
+  double? lineWidth;
+    /*
   double get lineWidth { 
     if (this._lineWidth == null) {
       this._lineWidth = 0;
@@ -140,9 +166,10 @@ class SeriesStateHoverOptions extends OptionFragment {
   void set lineWidth (double v) {
     this._lineWidth = v;
   }
+    */
     
-  double? _lineWidthPlus;  
-
+  double? lineWidthPlus;
+    /*
   double get lineWidthPlus { 
     if (this._lineWidthPlus == null) {
       this._lineWidthPlus = 0;
@@ -153,9 +180,10 @@ class SeriesStateHoverOptions extends OptionFragment {
   void set lineWidthPlus (double v) {
     this._lineWidthPlus = v;
   }
+    */
     
-  double? _radius;  
-
+  double? radius;
+    /*
   double get radius { 
     if (this._radius == null) {
       this._radius = 0;
@@ -166,9 +194,10 @@ class SeriesStateHoverOptions extends OptionFragment {
   void set radius (double v) {
     this._radius = v;
   }
+    */
     
-  double? _radiusPlus;  
-
+  double? radiusPlus;
+    /*
   double get radiusPlus { 
     if (this._radiusPlus == null) {
       this._radiusPlus = 0;
@@ -179,9 +208,10 @@ class SeriesStateHoverOptions extends OptionFragment {
   void set radiusPlus (double v) {
     this._radiusPlus = v;
   }
+    */
     
-  double? _opacity;  
-
+  double? opacity;
+    /*
   double get opacity { 
     if (this._opacity == null) {
       this._opacity = 0;
@@ -192,9 +222,10 @@ class SeriesStateHoverOptions extends OptionFragment {
   void set opacity (double v) {
     this._opacity = v;
   }
+    */
     
-  String? _fillColor;  
-
+  String? fillColor;
+    /*
   String get fillColor { 
     if (this._fillColor == null) {
       this._fillColor = "";
@@ -205,9 +236,10 @@ class SeriesStateHoverOptions extends OptionFragment {
   void set fillColor (String v) {
     this._fillColor = v;
   }
+    */
     
-  String? _lineColor;  
-
+  String? lineColor;
+    /*
   String get lineColor { 
     if (this._lineColor == null) {
       this._lineColor = "";
@@ -218,9 +250,10 @@ class SeriesStateHoverOptions extends OptionFragment {
   void set lineColor (String v) {
     this._lineColor = v;
   }
+    */
     
-  String? _shape;  
-
+  String? shape;
+    /*
   String get shape { 
     if (this._shape == null) {
       this._shape = "";
@@ -231,9 +264,10 @@ class SeriesStateHoverOptions extends OptionFragment {
   void set shape (String v) {
     this._shape = v;
   }
+    */
     
-  double? _connectorWidthPlus;  
-
+  double? connectorWidthPlus;
+    /*
   double get connectorWidthPlus { 
     if (this._connectorWidthPlus == null) {
       this._connectorWidthPlus = 0;
@@ -244,6 +278,7 @@ class SeriesStateHoverOptions extends OptionFragment {
   void set connectorWidthPlus (double v) {
     this._connectorWidthPlus = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -253,108 +288,108 @@ class SeriesStateHoverOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._brightness != null) {  
-      buffer.writeAll(["\"brightness\":", this._brightness, ","], "");
+    if (this.brightness != null) {  
+      buffer.writeAll(["\"brightness\":", this.brightness, ","], "");
     }
 
-    if (this._borderColor != null) {  
-      buffer.writeAll(["\"borderColor\":\`", this._borderColor, "\`,"], "");
+    if (this.borderColor != null) {  
+      buffer.writeAll(["\"borderColor\":\`", this.borderColor, "\`,"], "");
     }
 
-    if (this._borderDashStyle != null) {  
-      buffer.writeAll(["\"borderDashStyle\":\`", this._borderDashStyle, "\`,"], "");
+    if (this.borderDashStyle != null) {  
+      buffer.writeAll(["\"borderDashStyle\":\`", this.borderDashStyle, "\`,"], "");
     }
 
-    if (this._borderRadius != null) {  
-      buffer.writeAll(["\"borderRadius\":", this._borderRadius, ","], "");
+    if (this.borderRadius != null) {  
+      buffer.writeAll(["\"borderRadius\":", this.borderRadius, ","], "");
     }
 
-    if (this._borderWidth != null) {  
-      buffer.writeAll(["\"borderWidth\":", this._borderWidth, ","], "");
+    if (this.borderWidth != null) {  
+      buffer.writeAll(["\"borderWidth\":", this.borderWidth, ","], "");
     }
 
-    if (this._brightness != null) {  
-      buffer.writeAll(["\"brightness\":", this._brightness, ","], "");
+    if (this.brightness != null) {  
+      buffer.writeAll(["\"brightness\":", this.brightness, ","], "");
     }
 
-    if (this._color != null) {  
-      buffer.writeAll(["\"color\":\`", this._color, "\`,"], "");
+    if (this.color != null) {  
+      buffer.writeAll(["\"color\":\`", this.color, "\`,"], "");
     }
 
-    if (this._dashStyle != null) {  
-      buffer.writeAll(["\"dashStyle\":\`", this._dashStyle, "\`,"], "");
+    if (this.dashStyle != null) {  
+      buffer.writeAll(["\"dashStyle\":\`", this.dashStyle, "\`,"], "");
     }
 
     // NOTE: skip serialization of animation (type Generic is ignored)} 
 
-    if (this._brightness != null) {  
-      buffer.writeAll(["\"brightness\":", this._brightness, ","], "");
+    if (this.brightness != null) {  
+      buffer.writeAll(["\"brightness\":", this.brightness, ","], "");
     }
 
-    if (this._enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this._enabled, ","], "");
+    if (this.enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
     }
 
     // NOTE: skip serialization of halo (type SeriesStateHoverHaloOptions is ignored)} 
 
-    if (this._lineWidth != null) {  
-      buffer.writeAll(["\"lineWidth\":", this._lineWidth, ","], "");
+    if (this.lineWidth != null) {  
+      buffer.writeAll(["\"lineWidth\":", this.lineWidth, ","], "");
     }
 
-    if (this._lineWidthPlus != null) {  
-      buffer.writeAll(["\"lineWidthPlus\":", this._lineWidthPlus, ","], "");
+    if (this.lineWidthPlus != null) {  
+      buffer.writeAll(["\"lineWidthPlus\":", this.lineWidthPlus, ","], "");
     }
 
-    if (this._radius != null) {  
-      buffer.writeAll(["\"radius\":", this._radius, ","], "");
+    if (this.radius != null) {  
+      buffer.writeAll(["\"radius\":", this.radius, ","], "");
     }
 
-    if (this._radiusPlus != null) {  
-      buffer.writeAll(["\"radiusPlus\":", this._radiusPlus, ","], "");
+    if (this.radiusPlus != null) {  
+      buffer.writeAll(["\"radiusPlus\":", this.radiusPlus, ","], "");
     }
 
-    if (this._opacity != null) {  
-      buffer.writeAll(["\"opacity\":", this._opacity, ","], "");
+    if (this.opacity != null) {  
+      buffer.writeAll(["\"opacity\":", this.opacity, ","], "");
     }
 
-    if (this._brightness != null) {  
-      buffer.writeAll(["\"brightness\":", this._brightness, ","], "");
+    if (this.brightness != null) {  
+      buffer.writeAll(["\"brightness\":", this.brightness, ","], "");
     }
 
-    if (this._color != null) {  
-      buffer.writeAll(["\"color\":\`", this._color, "\`,"], "");
+    if (this.color != null) {  
+      buffer.writeAll(["\"color\":\`", this.color, "\`,"], "");
     }
 
-    if (this._fillColor != null) {  
-      buffer.writeAll(["\"fillColor\":\`", this._fillColor, "\`,"], "");
+    if (this.fillColor != null) {  
+      buffer.writeAll(["\"fillColor\":\`", this.fillColor, "\`,"], "");
     }
 
-    if (this._lineColor != null) {  
-      buffer.writeAll(["\"lineColor\":\`", this._lineColor, "\`,"], "");
+    if (this.lineColor != null) {  
+      buffer.writeAll(["\"lineColor\":\`", this.lineColor, "\`,"], "");
     }
 
-    if (this._shape != null) {  
-      buffer.writeAll(["\"shape\":\`", this._shape, "\`,"], "");
+    if (this.shape != null) {  
+      buffer.writeAll(["\"shape\":\`", this.shape, "\`,"], "");
     }
 
-    if (this._brightness != null) {  
-      buffer.writeAll(["\"brightness\":", this._brightness, ","], "");
+    if (this.brightness != null) {  
+      buffer.writeAll(["\"brightness\":", this.brightness, ","], "");
     }
 
-    if (this._connectorWidthPlus != null) {  
-      buffer.writeAll(["\"connectorWidthPlus\":", this._connectorWidthPlus, ","], "");
+    if (this.connectorWidthPlus != null) {  
+      buffer.writeAll(["\"connectorWidthPlus\":", this.connectorWidthPlus, ","], "");
     }
 
-    if (this._connectorWidthPlus != null) {  
-      buffer.writeAll(["\"connectorWidthPlus\":", this._connectorWidthPlus, ","], "");
+    if (this.connectorWidthPlus != null) {  
+      buffer.writeAll(["\"connectorWidthPlus\":", this.connectorWidthPlus, ","], "");
     }
 
-    if (this._borderColor != null) {  
-      buffer.writeAll(["\"borderColor\":\`", this._borderColor, "\`,"], "");
+    if (this.borderColor != null) {  
+      buffer.writeAll(["\"borderColor\":\`", this.borderColor, "\`,"], "");
     }
 
-    if (this._color != null) {  
-      buffer.writeAll(["\"color\":\`", this._color, "\`,"], "");
+    if (this.color != null) {  
+      buffer.writeAll(["\"color\":\`", this.color, "\`,"], "");
     }
   }
 

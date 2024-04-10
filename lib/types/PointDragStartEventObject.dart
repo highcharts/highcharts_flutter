@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,11 @@ import 'OptionFragment.dart';
  * PointDragStartEventObject 
  */
 class PointDragStartEventObject extends MouseEvent {
-  PointDragStartEventObject() : super();
-  String? _updateProp;  
-
+  PointDragStartEventObject( {
+    this.updateProp = null
+  }) : super();
+  String? updateProp;
+    /*
   String get updateProp { 
     if (this._updateProp == null) {
       this._updateProp = "";
@@ -36,6 +38,7 @@ class PointDragStartEventObject extends MouseEvent {
   void set updateProp (String v) {
     this._updateProp = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -45,8 +48,8 @@ class PointDragStartEventObject extends MouseEvent {
     super.toJSONInner(buffer);
 
     
-    if (this._updateProp != null) {  
-      buffer.writeAll(["\"updateProp\":\`", this._updateProp, "\`,"], "");
+    if (this.updateProp != null) {  
+      buffer.writeAll(["\"updateProp\":\`", this.updateProp, "\`,"], "");
     }
   }
 

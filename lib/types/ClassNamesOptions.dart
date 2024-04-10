@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,91 @@ import 'OptionFragment.dart';
  * ClassNamesOptions 
  */
 class ClassNamesOptions extends OptionFragment {
-  ClassNamesOptions() : super();
-  String? _accordionContainer;  
-
+  ClassNamesOptions( {
+    this.accordionContainer = null,
+    this.accordionContent = null,
+    this.accordionHeader = null,
+    this.accordionHeaderBtn = null,
+    this.accordionHeaderIcon = null,
+    this.accordionMenu = null,
+    this.accordionMenuButton = null,
+    this.accordionMenuButtonsContainer = null,
+    this.accordionNestedWrapper = null,
+    this.button = null,
+    this.cellEditHighlight = null,
+    this.collapsableContentHeader = null,
+    this.confirmationPopup = null,
+    this.contextDetectionPointer = null,
+    this.contextMenu = null,
+    this.contextMenuBtn = null,
+    this.contextMenuBtnText = null,
+    this.contextMenuItem = null,
+    this.currentEditedElement = null,
+    this.customSelect = null,
+    this.customSelectButton = null,
+    this.dashboardCellEditHighlightActive = null,
+    this.dragMock = null,
+    this.dropPointer = null,
+    this.dropdown = null,
+    this.dropdownButton = null,
+    this.dropdownButtonContent = null,
+    this.dropdownContent = null,
+    this.dropdownIcon = null,
+    this.editGridItems = null,
+    this.editModeEnabled = null,
+    this.editOverlay = null,
+    this.editOverlayActive = null,
+    this.editSidebar = null,
+    this.editSidebarHide = null,
+    this.editSidebarMenuItem = null,
+    this.editSidebarRight = null,
+    this.editSidebarRightShow = null,
+    this.editSidebarShow = null,
+    this.editSidebarTabBtn = null,
+    this.editSidebarTabBtnWrapper = null,
+    this.editSidebarTitle = null,
+    this.editSidebarWrapper = null,
+    this.editToolbar = null,
+    this.editToolbarCell = null,
+    this.editToolbarCellOutline = null,
+    this.editToolbarItem = null,
+    this.editToolbarRow = null,
+    this.editToolbarRowOutline = null,
+    this.editTools = null,
+    this.editToolsBtn = null,
+    this.hiddenElement = null,
+    this.icon = null,
+    this.labelText = null,
+    this.maskElement = null,
+    this.menu = null,
+    this.menuDestroy = null,
+    this.menuHorizontalSeparator = null,
+    this.menuItem = null,
+    this.menuVerticalSeparator = null,
+    this.popupCloseButton = null,
+    this.popupCancelBtn = null,
+    this.popupConfirmBtn = null,
+    this.popupButtonContainer = null,
+    this.popupContentContainer = null,
+    this.resizePointer = null,
+    this.resizeSnap = null,
+    this.resizeSnapX = null,
+    this.resizeSnapY = null,
+    this.resizerMenuBtnActive = null,
+    this.collapsedElement = null,
+    this.rowContextHighlight = null,
+    this.separator = null,
+    this.sidebarCloseButton = null,
+    this.sidebarNavButton = null,
+    this.toggleContainer = null,
+    this.toggleLabels = null,
+    this.toggleSlider = null,
+    this.toggleWrapper = null,
+    this.toggleWrapperColored = null,
+    this.viewFullscreen = null
+  }) : super();
+  String? accordionContainer;
+    /*
   String get accordionContainer { 
     if (this._accordionContainer == null) {
       this._accordionContainer = "";
@@ -35,9 +117,10 @@ class ClassNamesOptions extends OptionFragment {
   void set accordionContainer (String v) {
     this._accordionContainer = v;
   }
+    */
     
-  String? _accordionContent;  
-
+  String? accordionContent;
+    /*
   String get accordionContent { 
     if (this._accordionContent == null) {
       this._accordionContent = "";
@@ -48,9 +131,10 @@ class ClassNamesOptions extends OptionFragment {
   void set accordionContent (String v) {
     this._accordionContent = v;
   }
+    */
     
-  String? _accordionHeader;  
-
+  String? accordionHeader;
+    /*
   String get accordionHeader { 
     if (this._accordionHeader == null) {
       this._accordionHeader = "";
@@ -61,9 +145,10 @@ class ClassNamesOptions extends OptionFragment {
   void set accordionHeader (String v) {
     this._accordionHeader = v;
   }
+    */
     
-  String? _accordionHeaderBtn;  
-
+  String? accordionHeaderBtn;
+    /*
   String get accordionHeaderBtn { 
     if (this._accordionHeaderBtn == null) {
       this._accordionHeaderBtn = "";
@@ -74,9 +159,10 @@ class ClassNamesOptions extends OptionFragment {
   void set accordionHeaderBtn (String v) {
     this._accordionHeaderBtn = v;
   }
+    */
     
-  String? _accordionHeaderIcon;  
-
+  String? accordionHeaderIcon;
+    /*
   String get accordionHeaderIcon { 
     if (this._accordionHeaderIcon == null) {
       this._accordionHeaderIcon = "";
@@ -87,9 +173,10 @@ class ClassNamesOptions extends OptionFragment {
   void set accordionHeaderIcon (String v) {
     this._accordionHeaderIcon = v;
   }
+    */
     
-  String? _accordionMenu;  
-
+  String? accordionMenu;
+    /*
   String get accordionMenu { 
     if (this._accordionMenu == null) {
       this._accordionMenu = "";
@@ -100,9 +187,10 @@ class ClassNamesOptions extends OptionFragment {
   void set accordionMenu (String v) {
     this._accordionMenu = v;
   }
+    */
     
-  String? _accordionMenuButton;  
-
+  String? accordionMenuButton;
+    /*
   String get accordionMenuButton { 
     if (this._accordionMenuButton == null) {
       this._accordionMenuButton = "";
@@ -113,9 +201,10 @@ class ClassNamesOptions extends OptionFragment {
   void set accordionMenuButton (String v) {
     this._accordionMenuButton = v;
   }
+    */
     
-  String? _accordionMenuButtonsContainer;  
-
+  String? accordionMenuButtonsContainer;
+    /*
   String get accordionMenuButtonsContainer { 
     if (this._accordionMenuButtonsContainer == null) {
       this._accordionMenuButtonsContainer = "";
@@ -126,9 +215,10 @@ class ClassNamesOptions extends OptionFragment {
   void set accordionMenuButtonsContainer (String v) {
     this._accordionMenuButtonsContainer = v;
   }
+    */
     
-  String? _accordionNestedWrapper;  
-
+  String? accordionNestedWrapper;
+    /*
   String get accordionNestedWrapper { 
     if (this._accordionNestedWrapper == null) {
       this._accordionNestedWrapper = "";
@@ -139,9 +229,10 @@ class ClassNamesOptions extends OptionFragment {
   void set accordionNestedWrapper (String v) {
     this._accordionNestedWrapper = v;
   }
+    */
     
-  String? _button;  
-
+  String? button;
+    /*
   String get button { 
     if (this._button == null) {
       this._button = "";
@@ -152,9 +243,10 @@ class ClassNamesOptions extends OptionFragment {
   void set button (String v) {
     this._button = v;
   }
+    */
     
-  String? _cellEditHighlight;  
-
+  String? cellEditHighlight;
+    /*
   String get cellEditHighlight { 
     if (this._cellEditHighlight == null) {
       this._cellEditHighlight = "";
@@ -165,9 +257,10 @@ class ClassNamesOptions extends OptionFragment {
   void set cellEditHighlight (String v) {
     this._cellEditHighlight = v;
   }
+    */
     
-  String? _collapsableContentHeader;  
-
+  String? collapsableContentHeader;
+    /*
   String get collapsableContentHeader { 
     if (this._collapsableContentHeader == null) {
       this._collapsableContentHeader = "";
@@ -178,9 +271,10 @@ class ClassNamesOptions extends OptionFragment {
   void set collapsableContentHeader (String v) {
     this._collapsableContentHeader = v;
   }
+    */
     
-  String? _confirmationPopup;  
-
+  String? confirmationPopup;
+    /*
   String get confirmationPopup { 
     if (this._confirmationPopup == null) {
       this._confirmationPopup = "";
@@ -191,9 +285,10 @@ class ClassNamesOptions extends OptionFragment {
   void set confirmationPopup (String v) {
     this._confirmationPopup = v;
   }
+    */
     
-  String? _contextDetectionPointer;  
-
+  String? contextDetectionPointer;
+    /*
   String get contextDetectionPointer { 
     if (this._contextDetectionPointer == null) {
       this._contextDetectionPointer = "";
@@ -204,9 +299,10 @@ class ClassNamesOptions extends OptionFragment {
   void set contextDetectionPointer (String v) {
     this._contextDetectionPointer = v;
   }
+    */
     
-  String? _contextMenu;  
-
+  String? contextMenu;
+    /*
   String get contextMenu { 
     if (this._contextMenu == null) {
       this._contextMenu = "";
@@ -217,9 +313,10 @@ class ClassNamesOptions extends OptionFragment {
   void set contextMenu (String v) {
     this._contextMenu = v;
   }
+    */
     
-  String? _contextMenuBtn;  
-
+  String? contextMenuBtn;
+    /*
   String get contextMenuBtn { 
     if (this._contextMenuBtn == null) {
       this._contextMenuBtn = "";
@@ -230,9 +327,10 @@ class ClassNamesOptions extends OptionFragment {
   void set contextMenuBtn (String v) {
     this._contextMenuBtn = v;
   }
+    */
     
-  String? _contextMenuBtnText;  
-
+  String? contextMenuBtnText;
+    /*
   String get contextMenuBtnText { 
     if (this._contextMenuBtnText == null) {
       this._contextMenuBtnText = "";
@@ -243,9 +341,10 @@ class ClassNamesOptions extends OptionFragment {
   void set contextMenuBtnText (String v) {
     this._contextMenuBtnText = v;
   }
+    */
     
-  String? _contextMenuItem;  
-
+  String? contextMenuItem;
+    /*
   String get contextMenuItem { 
     if (this._contextMenuItem == null) {
       this._contextMenuItem = "";
@@ -256,9 +355,10 @@ class ClassNamesOptions extends OptionFragment {
   void set contextMenuItem (String v) {
     this._contextMenuItem = v;
   }
+    */
     
-  String? _currentEditedElement;  
-
+  String? currentEditedElement;
+    /*
   String get currentEditedElement { 
     if (this._currentEditedElement == null) {
       this._currentEditedElement = "";
@@ -269,9 +369,10 @@ class ClassNamesOptions extends OptionFragment {
   void set currentEditedElement (String v) {
     this._currentEditedElement = v;
   }
+    */
     
-  String? _customSelect;  
-
+  String? customSelect;
+    /*
   String get customSelect { 
     if (this._customSelect == null) {
       this._customSelect = "";
@@ -282,9 +383,10 @@ class ClassNamesOptions extends OptionFragment {
   void set customSelect (String v) {
     this._customSelect = v;
   }
+    */
     
-  String? _customSelectButton;  
-
+  String? customSelectButton;
+    /*
   String get customSelectButton { 
     if (this._customSelectButton == null) {
       this._customSelectButton = "";
@@ -295,9 +397,10 @@ class ClassNamesOptions extends OptionFragment {
   void set customSelectButton (String v) {
     this._customSelectButton = v;
   }
+    */
     
-  String? _dashboardCellEditHighlightActive;  
-
+  String? dashboardCellEditHighlightActive;
+    /*
   String get dashboardCellEditHighlightActive { 
     if (this._dashboardCellEditHighlightActive == null) {
       this._dashboardCellEditHighlightActive = "";
@@ -308,9 +411,10 @@ class ClassNamesOptions extends OptionFragment {
   void set dashboardCellEditHighlightActive (String v) {
     this._dashboardCellEditHighlightActive = v;
   }
+    */
     
-  String? _dragMock;  
-
+  String? dragMock;
+    /*
   String get dragMock { 
     if (this._dragMock == null) {
       this._dragMock = "";
@@ -321,9 +425,10 @@ class ClassNamesOptions extends OptionFragment {
   void set dragMock (String v) {
     this._dragMock = v;
   }
+    */
     
-  String? _dropPointer;  
-
+  String? dropPointer;
+    /*
   String get dropPointer { 
     if (this._dropPointer == null) {
       this._dropPointer = "";
@@ -334,9 +439,10 @@ class ClassNamesOptions extends OptionFragment {
   void set dropPointer (String v) {
     this._dropPointer = v;
   }
+    */
     
-  String? _dropdown;  
-
+  String? dropdown;
+    /*
   String get dropdown { 
     if (this._dropdown == null) {
       this._dropdown = "";
@@ -347,9 +453,10 @@ class ClassNamesOptions extends OptionFragment {
   void set dropdown (String v) {
     this._dropdown = v;
   }
+    */
     
-  String? _dropdownButton;  
-
+  String? dropdownButton;
+    /*
   String get dropdownButton { 
     if (this._dropdownButton == null) {
       this._dropdownButton = "";
@@ -360,9 +467,10 @@ class ClassNamesOptions extends OptionFragment {
   void set dropdownButton (String v) {
     this._dropdownButton = v;
   }
+    */
     
-  String? _dropdownButtonContent;  
-
+  String? dropdownButtonContent;
+    /*
   String get dropdownButtonContent { 
     if (this._dropdownButtonContent == null) {
       this._dropdownButtonContent = "";
@@ -373,9 +481,10 @@ class ClassNamesOptions extends OptionFragment {
   void set dropdownButtonContent (String v) {
     this._dropdownButtonContent = v;
   }
+    */
     
-  String? _dropdownContent;  
-
+  String? dropdownContent;
+    /*
   String get dropdownContent { 
     if (this._dropdownContent == null) {
       this._dropdownContent = "";
@@ -386,9 +495,10 @@ class ClassNamesOptions extends OptionFragment {
   void set dropdownContent (String v) {
     this._dropdownContent = v;
   }
+    */
     
-  String? _dropdownIcon;  
-
+  String? dropdownIcon;
+    /*
   String get dropdownIcon { 
     if (this._dropdownIcon == null) {
       this._dropdownIcon = "";
@@ -399,9 +509,10 @@ class ClassNamesOptions extends OptionFragment {
   void set dropdownIcon (String v) {
     this._dropdownIcon = v;
   }
+    */
     
-  String? _editGridItems;  
-
+  String? editGridItems;
+    /*
   String get editGridItems { 
     if (this._editGridItems == null) {
       this._editGridItems = "";
@@ -412,9 +523,10 @@ class ClassNamesOptions extends OptionFragment {
   void set editGridItems (String v) {
     this._editGridItems = v;
   }
+    */
     
-  String? _editModeEnabled;  
-
+  String? editModeEnabled;
+    /*
   String get editModeEnabled { 
     if (this._editModeEnabled == null) {
       this._editModeEnabled = "";
@@ -425,9 +537,10 @@ class ClassNamesOptions extends OptionFragment {
   void set editModeEnabled (String v) {
     this._editModeEnabled = v;
   }
+    */
     
-  String? _editOverlay;  
-
+  String? editOverlay;
+    /*
   String get editOverlay { 
     if (this._editOverlay == null) {
       this._editOverlay = "";
@@ -438,9 +551,10 @@ class ClassNamesOptions extends OptionFragment {
   void set editOverlay (String v) {
     this._editOverlay = v;
   }
+    */
     
-  String? _editOverlayActive;  
-
+  String? editOverlayActive;
+    /*
   String get editOverlayActive { 
     if (this._editOverlayActive == null) {
       this._editOverlayActive = "";
@@ -451,9 +565,10 @@ class ClassNamesOptions extends OptionFragment {
   void set editOverlayActive (String v) {
     this._editOverlayActive = v;
   }
+    */
     
-  String? _editSidebar;  
-
+  String? editSidebar;
+    /*
   String get editSidebar { 
     if (this._editSidebar == null) {
       this._editSidebar = "";
@@ -464,9 +579,10 @@ class ClassNamesOptions extends OptionFragment {
   void set editSidebar (String v) {
     this._editSidebar = v;
   }
+    */
     
-  String? _editSidebarHide;  
-
+  String? editSidebarHide;
+    /*
   String get editSidebarHide { 
     if (this._editSidebarHide == null) {
       this._editSidebarHide = "";
@@ -477,9 +593,10 @@ class ClassNamesOptions extends OptionFragment {
   void set editSidebarHide (String v) {
     this._editSidebarHide = v;
   }
+    */
     
-  String? _editSidebarMenuItem;  
-
+  String? editSidebarMenuItem;
+    /*
   String get editSidebarMenuItem { 
     if (this._editSidebarMenuItem == null) {
       this._editSidebarMenuItem = "";
@@ -490,9 +607,10 @@ class ClassNamesOptions extends OptionFragment {
   void set editSidebarMenuItem (String v) {
     this._editSidebarMenuItem = v;
   }
+    */
     
-  String? _editSidebarRight;  
-
+  String? editSidebarRight;
+    /*
   String get editSidebarRight { 
     if (this._editSidebarRight == null) {
       this._editSidebarRight = "";
@@ -503,9 +621,10 @@ class ClassNamesOptions extends OptionFragment {
   void set editSidebarRight (String v) {
     this._editSidebarRight = v;
   }
+    */
     
-  String? _editSidebarRightShow;  
-
+  String? editSidebarRightShow;
+    /*
   String get editSidebarRightShow { 
     if (this._editSidebarRightShow == null) {
       this._editSidebarRightShow = "";
@@ -516,9 +635,10 @@ class ClassNamesOptions extends OptionFragment {
   void set editSidebarRightShow (String v) {
     this._editSidebarRightShow = v;
   }
+    */
     
-  String? _editSidebarShow;  
-
+  String? editSidebarShow;
+    /*
   String get editSidebarShow { 
     if (this._editSidebarShow == null) {
       this._editSidebarShow = "";
@@ -529,9 +649,10 @@ class ClassNamesOptions extends OptionFragment {
   void set editSidebarShow (String v) {
     this._editSidebarShow = v;
   }
+    */
     
-  String? _editSidebarTabBtn;  
-
+  String? editSidebarTabBtn;
+    /*
   String get editSidebarTabBtn { 
     if (this._editSidebarTabBtn == null) {
       this._editSidebarTabBtn = "";
@@ -542,9 +663,10 @@ class ClassNamesOptions extends OptionFragment {
   void set editSidebarTabBtn (String v) {
     this._editSidebarTabBtn = v;
   }
+    */
     
-  String? _editSidebarTabBtnWrapper;  
-
+  String? editSidebarTabBtnWrapper;
+    /*
   String get editSidebarTabBtnWrapper { 
     if (this._editSidebarTabBtnWrapper == null) {
       this._editSidebarTabBtnWrapper = "";
@@ -555,9 +677,10 @@ class ClassNamesOptions extends OptionFragment {
   void set editSidebarTabBtnWrapper (String v) {
     this._editSidebarTabBtnWrapper = v;
   }
+    */
     
-  String? _editSidebarTitle;  
-
+  String? editSidebarTitle;
+    /*
   String get editSidebarTitle { 
     if (this._editSidebarTitle == null) {
       this._editSidebarTitle = "";
@@ -568,9 +691,10 @@ class ClassNamesOptions extends OptionFragment {
   void set editSidebarTitle (String v) {
     this._editSidebarTitle = v;
   }
+    */
     
-  String? _editSidebarWrapper;  
-
+  String? editSidebarWrapper;
+    /*
   String get editSidebarWrapper { 
     if (this._editSidebarWrapper == null) {
       this._editSidebarWrapper = "";
@@ -581,9 +705,10 @@ class ClassNamesOptions extends OptionFragment {
   void set editSidebarWrapper (String v) {
     this._editSidebarWrapper = v;
   }
+    */
     
-  String? _editToolbar;  
-
+  String? editToolbar;
+    /*
   String get editToolbar { 
     if (this._editToolbar == null) {
       this._editToolbar = "";
@@ -594,9 +719,10 @@ class ClassNamesOptions extends OptionFragment {
   void set editToolbar (String v) {
     this._editToolbar = v;
   }
+    */
     
-  String? _editToolbarCell;  
-
+  String? editToolbarCell;
+    /*
   String get editToolbarCell { 
     if (this._editToolbarCell == null) {
       this._editToolbarCell = "";
@@ -607,9 +733,10 @@ class ClassNamesOptions extends OptionFragment {
   void set editToolbarCell (String v) {
     this._editToolbarCell = v;
   }
+    */
     
-  String? _editToolbarCellOutline;  
-
+  String? editToolbarCellOutline;
+    /*
   String get editToolbarCellOutline { 
     if (this._editToolbarCellOutline == null) {
       this._editToolbarCellOutline = "";
@@ -620,9 +747,10 @@ class ClassNamesOptions extends OptionFragment {
   void set editToolbarCellOutline (String v) {
     this._editToolbarCellOutline = v;
   }
+    */
     
-  String? _editToolbarItem;  
-
+  String? editToolbarItem;
+    /*
   String get editToolbarItem { 
     if (this._editToolbarItem == null) {
       this._editToolbarItem = "";
@@ -633,9 +761,10 @@ class ClassNamesOptions extends OptionFragment {
   void set editToolbarItem (String v) {
     this._editToolbarItem = v;
   }
+    */
     
-  String? _editToolbarRow;  
-
+  String? editToolbarRow;
+    /*
   String get editToolbarRow { 
     if (this._editToolbarRow == null) {
       this._editToolbarRow = "";
@@ -646,9 +775,10 @@ class ClassNamesOptions extends OptionFragment {
   void set editToolbarRow (String v) {
     this._editToolbarRow = v;
   }
+    */
     
-  String? _editToolbarRowOutline;  
-
+  String? editToolbarRowOutline;
+    /*
   String get editToolbarRowOutline { 
     if (this._editToolbarRowOutline == null) {
       this._editToolbarRowOutline = "";
@@ -659,9 +789,10 @@ class ClassNamesOptions extends OptionFragment {
   void set editToolbarRowOutline (String v) {
     this._editToolbarRowOutline = v;
   }
+    */
     
-  String? _editTools;  
-
+  String? editTools;
+    /*
   String get editTools { 
     if (this._editTools == null) {
       this._editTools = "";
@@ -672,9 +803,10 @@ class ClassNamesOptions extends OptionFragment {
   void set editTools (String v) {
     this._editTools = v;
   }
+    */
     
-  String? _editToolsBtn;  
-
+  String? editToolsBtn;
+    /*
   String get editToolsBtn { 
     if (this._editToolsBtn == null) {
       this._editToolsBtn = "";
@@ -685,9 +817,10 @@ class ClassNamesOptions extends OptionFragment {
   void set editToolsBtn (String v) {
     this._editToolsBtn = v;
   }
+    */
     
-  String? _hiddenElement;  
-
+  String? hiddenElement;
+    /*
   String get hiddenElement { 
     if (this._hiddenElement == null) {
       this._hiddenElement = "";
@@ -698,9 +831,10 @@ class ClassNamesOptions extends OptionFragment {
   void set hiddenElement (String v) {
     this._hiddenElement = v;
   }
+    */
     
-  String? _icon;  
-
+  String? icon;
+    /*
   String get icon { 
     if (this._icon == null) {
       this._icon = "";
@@ -711,9 +845,10 @@ class ClassNamesOptions extends OptionFragment {
   void set icon (String v) {
     this._icon = v;
   }
+    */
     
-  String? _labelText;  
-
+  String? labelText;
+    /*
   String get labelText { 
     if (this._labelText == null) {
       this._labelText = "";
@@ -724,9 +859,10 @@ class ClassNamesOptions extends OptionFragment {
   void set labelText (String v) {
     this._labelText = v;
   }
+    */
     
-  String? _maskElement;  
-
+  String? maskElement;
+    /*
   String get maskElement { 
     if (this._maskElement == null) {
       this._maskElement = "";
@@ -737,9 +873,10 @@ class ClassNamesOptions extends OptionFragment {
   void set maskElement (String v) {
     this._maskElement = v;
   }
+    */
     
-  String? _menu;  
-
+  String? menu;
+    /*
   String get menu { 
     if (this._menu == null) {
       this._menu = "";
@@ -750,9 +887,10 @@ class ClassNamesOptions extends OptionFragment {
   void set menu (String v) {
     this._menu = v;
   }
+    */
     
-  String? _menuDestroy;  
-
+  String? menuDestroy;
+    /*
   String get menuDestroy { 
     if (this._menuDestroy == null) {
       this._menuDestroy = "";
@@ -763,9 +901,10 @@ class ClassNamesOptions extends OptionFragment {
   void set menuDestroy (String v) {
     this._menuDestroy = v;
   }
+    */
     
-  String? _menuHorizontalSeparator;  
-
+  String? menuHorizontalSeparator;
+    /*
   String get menuHorizontalSeparator { 
     if (this._menuHorizontalSeparator == null) {
       this._menuHorizontalSeparator = "";
@@ -776,9 +915,10 @@ class ClassNamesOptions extends OptionFragment {
   void set menuHorizontalSeparator (String v) {
     this._menuHorizontalSeparator = v;
   }
+    */
     
-  String? _menuItem;  
-
+  String? menuItem;
+    /*
   String get menuItem { 
     if (this._menuItem == null) {
       this._menuItem = "";
@@ -789,9 +929,10 @@ class ClassNamesOptions extends OptionFragment {
   void set menuItem (String v) {
     this._menuItem = v;
   }
+    */
     
-  String? _menuVerticalSeparator;  
-
+  String? menuVerticalSeparator;
+    /*
   String get menuVerticalSeparator { 
     if (this._menuVerticalSeparator == null) {
       this._menuVerticalSeparator = "";
@@ -802,9 +943,10 @@ class ClassNamesOptions extends OptionFragment {
   void set menuVerticalSeparator (String v) {
     this._menuVerticalSeparator = v;
   }
+    */
     
-  String? _popupCloseButton;  
-
+  String? popupCloseButton;
+    /*
   String get popupCloseButton { 
     if (this._popupCloseButton == null) {
       this._popupCloseButton = "";
@@ -815,9 +957,10 @@ class ClassNamesOptions extends OptionFragment {
   void set popupCloseButton (String v) {
     this._popupCloseButton = v;
   }
+    */
     
-  String? _popupCancelBtn;  
-
+  String? popupCancelBtn;
+    /*
   String get popupCancelBtn { 
     if (this._popupCancelBtn == null) {
       this._popupCancelBtn = "";
@@ -828,9 +971,10 @@ class ClassNamesOptions extends OptionFragment {
   void set popupCancelBtn (String v) {
     this._popupCancelBtn = v;
   }
+    */
     
-  String? _popupConfirmBtn;  
-
+  String? popupConfirmBtn;
+    /*
   String get popupConfirmBtn { 
     if (this._popupConfirmBtn == null) {
       this._popupConfirmBtn = "";
@@ -841,9 +985,10 @@ class ClassNamesOptions extends OptionFragment {
   void set popupConfirmBtn (String v) {
     this._popupConfirmBtn = v;
   }
+    */
     
-  String? _popupButtonContainer;  
-
+  String? popupButtonContainer;
+    /*
   String get popupButtonContainer { 
     if (this._popupButtonContainer == null) {
       this._popupButtonContainer = "";
@@ -854,9 +999,10 @@ class ClassNamesOptions extends OptionFragment {
   void set popupButtonContainer (String v) {
     this._popupButtonContainer = v;
   }
+    */
     
-  String? _popupContentContainer;  
-
+  String? popupContentContainer;
+    /*
   String get popupContentContainer { 
     if (this._popupContentContainer == null) {
       this._popupContentContainer = "";
@@ -867,9 +1013,10 @@ class ClassNamesOptions extends OptionFragment {
   void set popupContentContainer (String v) {
     this._popupContentContainer = v;
   }
+    */
     
-  String? _resizePointer;  
-
+  String? resizePointer;
+    /*
   String get resizePointer { 
     if (this._resizePointer == null) {
       this._resizePointer = "";
@@ -880,9 +1027,10 @@ class ClassNamesOptions extends OptionFragment {
   void set resizePointer (String v) {
     this._resizePointer = v;
   }
+    */
     
-  String? _resizeSnap;  
-
+  String? resizeSnap;
+    /*
   String get resizeSnap { 
     if (this._resizeSnap == null) {
       this._resizeSnap = "";
@@ -893,9 +1041,10 @@ class ClassNamesOptions extends OptionFragment {
   void set resizeSnap (String v) {
     this._resizeSnap = v;
   }
+    */
     
-  String? _resizeSnapX;  
-
+  String? resizeSnapX;
+    /*
   String get resizeSnapX { 
     if (this._resizeSnapX == null) {
       this._resizeSnapX = "";
@@ -906,9 +1055,10 @@ class ClassNamesOptions extends OptionFragment {
   void set resizeSnapX (String v) {
     this._resizeSnapX = v;
   }
+    */
     
-  String? _resizeSnapY;  
-
+  String? resizeSnapY;
+    /*
   String get resizeSnapY { 
     if (this._resizeSnapY == null) {
       this._resizeSnapY = "";
@@ -919,9 +1069,10 @@ class ClassNamesOptions extends OptionFragment {
   void set resizeSnapY (String v) {
     this._resizeSnapY = v;
   }
+    */
     
-  String? _resizerMenuBtnActive;  
-
+  String? resizerMenuBtnActive;
+    /*
   String get resizerMenuBtnActive { 
     if (this._resizerMenuBtnActive == null) {
       this._resizerMenuBtnActive = "";
@@ -932,9 +1083,10 @@ class ClassNamesOptions extends OptionFragment {
   void set resizerMenuBtnActive (String v) {
     this._resizerMenuBtnActive = v;
   }
+    */
     
-  String? _collapsedElement;  
-
+  String? collapsedElement;
+    /*
   String get collapsedElement { 
     if (this._collapsedElement == null) {
       this._collapsedElement = "";
@@ -945,9 +1097,10 @@ class ClassNamesOptions extends OptionFragment {
   void set collapsedElement (String v) {
     this._collapsedElement = v;
   }
+    */
     
-  String? _rowContextHighlight;  
-
+  String? rowContextHighlight;
+    /*
   String get rowContextHighlight { 
     if (this._rowContextHighlight == null) {
       this._rowContextHighlight = "";
@@ -958,9 +1111,10 @@ class ClassNamesOptions extends OptionFragment {
   void set rowContextHighlight (String v) {
     this._rowContextHighlight = v;
   }
+    */
     
-  String? _separator;  
-
+  String? separator;
+    /*
   String get separator { 
     if (this._separator == null) {
       this._separator = "";
@@ -971,9 +1125,10 @@ class ClassNamesOptions extends OptionFragment {
   void set separator (String v) {
     this._separator = v;
   }
+    */
     
-  String? _sidebarCloseButton;  
-
+  String? sidebarCloseButton;
+    /*
   String get sidebarCloseButton { 
     if (this._sidebarCloseButton == null) {
       this._sidebarCloseButton = "";
@@ -984,9 +1139,10 @@ class ClassNamesOptions extends OptionFragment {
   void set sidebarCloseButton (String v) {
     this._sidebarCloseButton = v;
   }
+    */
     
-  String? _sidebarNavButton;  
-
+  String? sidebarNavButton;
+    /*
   String get sidebarNavButton { 
     if (this._sidebarNavButton == null) {
       this._sidebarNavButton = "";
@@ -997,9 +1153,10 @@ class ClassNamesOptions extends OptionFragment {
   void set sidebarNavButton (String v) {
     this._sidebarNavButton = v;
   }
+    */
     
-  String? _toggleContainer;  
-
+  String? toggleContainer;
+    /*
   String get toggleContainer { 
     if (this._toggleContainer == null) {
       this._toggleContainer = "";
@@ -1010,9 +1167,10 @@ class ClassNamesOptions extends OptionFragment {
   void set toggleContainer (String v) {
     this._toggleContainer = v;
   }
+    */
     
-  String? _toggleLabels;  
-
+  String? toggleLabels;
+    /*
   String get toggleLabels { 
     if (this._toggleLabels == null) {
       this._toggleLabels = "";
@@ -1023,9 +1181,10 @@ class ClassNamesOptions extends OptionFragment {
   void set toggleLabels (String v) {
     this._toggleLabels = v;
   }
+    */
     
-  String? _toggleSlider;  
-
+  String? toggleSlider;
+    /*
   String get toggleSlider { 
     if (this._toggleSlider == null) {
       this._toggleSlider = "";
@@ -1036,9 +1195,10 @@ class ClassNamesOptions extends OptionFragment {
   void set toggleSlider (String v) {
     this._toggleSlider = v;
   }
+    */
     
-  String? _toggleWrapper;  
-
+  String? toggleWrapper;
+    /*
   String get toggleWrapper { 
     if (this._toggleWrapper == null) {
       this._toggleWrapper = "";
@@ -1049,9 +1209,10 @@ class ClassNamesOptions extends OptionFragment {
   void set toggleWrapper (String v) {
     this._toggleWrapper = v;
   }
+    */
     
-  String? _toggleWrapperColored;  
-
+  String? toggleWrapperColored;
+    /*
   String get toggleWrapperColored { 
     if (this._toggleWrapperColored == null) {
       this._toggleWrapperColored = "";
@@ -1062,9 +1223,10 @@ class ClassNamesOptions extends OptionFragment {
   void set toggleWrapperColored (String v) {
     this._toggleWrapperColored = v;
   }
+    */
     
-  String? _viewFullscreen;  
-
+  String? viewFullscreen;
+    /*
   String get viewFullscreen { 
     if (this._viewFullscreen == null) {
       this._viewFullscreen = "";
@@ -1075,6 +1237,7 @@ class ClassNamesOptions extends OptionFragment {
   void set viewFullscreen (String v) {
     this._viewFullscreen = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -1084,328 +1247,328 @@ class ClassNamesOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._accordionContainer != null) {  
-      buffer.writeAll(["\"accordionContainer\":\`", this._accordionContainer, "\`,"], "");
+    if (this.accordionContainer != null) {  
+      buffer.writeAll(["\"accordionContainer\":\`", this.accordionContainer, "\`,"], "");
     }
 
-    if (this._accordionContent != null) {  
-      buffer.writeAll(["\"accordionContent\":\`", this._accordionContent, "\`,"], "");
+    if (this.accordionContent != null) {  
+      buffer.writeAll(["\"accordionContent\":\`", this.accordionContent, "\`,"], "");
     }
 
-    if (this._accordionHeader != null) {  
-      buffer.writeAll(["\"accordionHeader\":\`", this._accordionHeader, "\`,"], "");
+    if (this.accordionHeader != null) {  
+      buffer.writeAll(["\"accordionHeader\":\`", this.accordionHeader, "\`,"], "");
     }
 
-    if (this._accordionHeaderBtn != null) {  
-      buffer.writeAll(["\"accordionHeaderBtn\":\`", this._accordionHeaderBtn, "\`,"], "");
+    if (this.accordionHeaderBtn != null) {  
+      buffer.writeAll(["\"accordionHeaderBtn\":\`", this.accordionHeaderBtn, "\`,"], "");
     }
 
-    if (this._accordionHeaderIcon != null) {  
-      buffer.writeAll(["\"accordionHeaderIcon\":\`", this._accordionHeaderIcon, "\`,"], "");
+    if (this.accordionHeaderIcon != null) {  
+      buffer.writeAll(["\"accordionHeaderIcon\":\`", this.accordionHeaderIcon, "\`,"], "");
     }
 
-    if (this._accordionMenu != null) {  
-      buffer.writeAll(["\"accordionMenu\":\`", this._accordionMenu, "\`,"], "");
+    if (this.accordionMenu != null) {  
+      buffer.writeAll(["\"accordionMenu\":\`", this.accordionMenu, "\`,"], "");
     }
 
-    if (this._accordionMenuButton != null) {  
-      buffer.writeAll(["\"accordionMenuButton\":\`", this._accordionMenuButton, "\`,"], "");
+    if (this.accordionMenuButton != null) {  
+      buffer.writeAll(["\"accordionMenuButton\":\`", this.accordionMenuButton, "\`,"], "");
     }
 
-    if (this._accordionMenuButtonsContainer != null) {  
-      buffer.writeAll(["\"accordionMenuButtonsContainer\":\`", this._accordionMenuButtonsContainer, "\`,"], "");
+    if (this.accordionMenuButtonsContainer != null) {  
+      buffer.writeAll(["\"accordionMenuButtonsContainer\":\`", this.accordionMenuButtonsContainer, "\`,"], "");
     }
 
-    if (this._accordionNestedWrapper != null) {  
-      buffer.writeAll(["\"accordionNestedWrapper\":\`", this._accordionNestedWrapper, "\`,"], "");
+    if (this.accordionNestedWrapper != null) {  
+      buffer.writeAll(["\"accordionNestedWrapper\":\`", this.accordionNestedWrapper, "\`,"], "");
     }
 
-    if (this._button != null) {  
-      buffer.writeAll(["\"button\":\`", this._button, "\`,"], "");
+    if (this.button != null) {  
+      buffer.writeAll(["\"button\":\`", this.button, "\`,"], "");
     }
 
-    if (this._cellEditHighlight != null) {  
-      buffer.writeAll(["\"cellEditHighlight\":\`", this._cellEditHighlight, "\`,"], "");
+    if (this.cellEditHighlight != null) {  
+      buffer.writeAll(["\"cellEditHighlight\":\`", this.cellEditHighlight, "\`,"], "");
     }
 
-    if (this._collapsableContentHeader != null) {  
-      buffer.writeAll(["\"collapsableContentHeader\":\`", this._collapsableContentHeader, "\`,"], "");
+    if (this.collapsableContentHeader != null) {  
+      buffer.writeAll(["\"collapsableContentHeader\":\`", this.collapsableContentHeader, "\`,"], "");
     }
 
-    if (this._confirmationPopup != null) {  
-      buffer.writeAll(["\"confirmationPopup\":\`", this._confirmationPopup, "\`,"], "");
+    if (this.confirmationPopup != null) {  
+      buffer.writeAll(["\"confirmationPopup\":\`", this.confirmationPopup, "\`,"], "");
     }
 
-    if (this._contextDetectionPointer != null) {  
-      buffer.writeAll(["\"contextDetectionPointer\":\`", this._contextDetectionPointer, "\`,"], "");
+    if (this.contextDetectionPointer != null) {  
+      buffer.writeAll(["\"contextDetectionPointer\":\`", this.contextDetectionPointer, "\`,"], "");
     }
 
-    if (this._contextMenu != null) {  
-      buffer.writeAll(["\"contextMenu\":\`", this._contextMenu, "\`,"], "");
+    if (this.contextMenu != null) {  
+      buffer.writeAll(["\"contextMenu\":\`", this.contextMenu, "\`,"], "");
     }
 
-    if (this._contextMenuBtn != null) {  
-      buffer.writeAll(["\"contextMenuBtn\":\`", this._contextMenuBtn, "\`,"], "");
+    if (this.contextMenuBtn != null) {  
+      buffer.writeAll(["\"contextMenuBtn\":\`", this.contextMenuBtn, "\`,"], "");
     }
 
-    if (this._contextMenuBtnText != null) {  
-      buffer.writeAll(["\"contextMenuBtnText\":\`", this._contextMenuBtnText, "\`,"], "");
+    if (this.contextMenuBtnText != null) {  
+      buffer.writeAll(["\"contextMenuBtnText\":\`", this.contextMenuBtnText, "\`,"], "");
     }
 
-    if (this._contextMenuItem != null) {  
-      buffer.writeAll(["\"contextMenuItem\":\`", this._contextMenuItem, "\`,"], "");
+    if (this.contextMenuItem != null) {  
+      buffer.writeAll(["\"contextMenuItem\":\`", this.contextMenuItem, "\`,"], "");
     }
 
-    if (this._currentEditedElement != null) {  
-      buffer.writeAll(["\"currentEditedElement\":\`", this._currentEditedElement, "\`,"], "");
+    if (this.currentEditedElement != null) {  
+      buffer.writeAll(["\"currentEditedElement\":\`", this.currentEditedElement, "\`,"], "");
     }
 
-    if (this._customSelect != null) {  
-      buffer.writeAll(["\"customSelect\":\`", this._customSelect, "\`,"], "");
+    if (this.customSelect != null) {  
+      buffer.writeAll(["\"customSelect\":\`", this.customSelect, "\`,"], "");
     }
 
-    if (this._customSelectButton != null) {  
-      buffer.writeAll(["\"customSelectButton\":\`", this._customSelectButton, "\`,"], "");
+    if (this.customSelectButton != null) {  
+      buffer.writeAll(["\"customSelectButton\":\`", this.customSelectButton, "\`,"], "");
     }
 
-    if (this._dashboardCellEditHighlightActive != null) {  
-      buffer.writeAll(["\"dashboardCellEditHighlightActive\":\`", this._dashboardCellEditHighlightActive, "\`,"], "");
+    if (this.dashboardCellEditHighlightActive != null) {  
+      buffer.writeAll(["\"dashboardCellEditHighlightActive\":\`", this.dashboardCellEditHighlightActive, "\`,"], "");
     }
 
-    if (this._dragMock != null) {  
-      buffer.writeAll(["\"dragMock\":\`", this._dragMock, "\`,"], "");
+    if (this.dragMock != null) {  
+      buffer.writeAll(["\"dragMock\":\`", this.dragMock, "\`,"], "");
     }
 
-    if (this._dropPointer != null) {  
-      buffer.writeAll(["\"dropPointer\":\`", this._dropPointer, "\`,"], "");
+    if (this.dropPointer != null) {  
+      buffer.writeAll(["\"dropPointer\":\`", this.dropPointer, "\`,"], "");
     }
 
-    if (this._dropdown != null) {  
-      buffer.writeAll(["\"dropdown\":\`", this._dropdown, "\`,"], "");
+    if (this.dropdown != null) {  
+      buffer.writeAll(["\"dropdown\":\`", this.dropdown, "\`,"], "");
     }
 
-    if (this._dropdownButton != null) {  
-      buffer.writeAll(["\"dropdownButton\":\`", this._dropdownButton, "\`,"], "");
+    if (this.dropdownButton != null) {  
+      buffer.writeAll(["\"dropdownButton\":\`", this.dropdownButton, "\`,"], "");
     }
 
-    if (this._dropdownButtonContent != null) {  
-      buffer.writeAll(["\"dropdownButtonContent\":\`", this._dropdownButtonContent, "\`,"], "");
+    if (this.dropdownButtonContent != null) {  
+      buffer.writeAll(["\"dropdownButtonContent\":\`", this.dropdownButtonContent, "\`,"], "");
     }
 
-    if (this._dropdownContent != null) {  
-      buffer.writeAll(["\"dropdownContent\":\`", this._dropdownContent, "\`,"], "");
+    if (this.dropdownContent != null) {  
+      buffer.writeAll(["\"dropdownContent\":\`", this.dropdownContent, "\`,"], "");
     }
 
-    if (this._dropdownIcon != null) {  
-      buffer.writeAll(["\"dropdownIcon\":\`", this._dropdownIcon, "\`,"], "");
+    if (this.dropdownIcon != null) {  
+      buffer.writeAll(["\"dropdownIcon\":\`", this.dropdownIcon, "\`,"], "");
     }
 
-    if (this._editGridItems != null) {  
-      buffer.writeAll(["\"editGridItems\":\`", this._editGridItems, "\`,"], "");
+    if (this.editGridItems != null) {  
+      buffer.writeAll(["\"editGridItems\":\`", this.editGridItems, "\`,"], "");
     }
 
-    if (this._editModeEnabled != null) {  
-      buffer.writeAll(["\"editModeEnabled\":\`", this._editModeEnabled, "\`,"], "");
+    if (this.editModeEnabled != null) {  
+      buffer.writeAll(["\"editModeEnabled\":\`", this.editModeEnabled, "\`,"], "");
     }
 
-    if (this._editOverlay != null) {  
-      buffer.writeAll(["\"editOverlay\":\`", this._editOverlay, "\`,"], "");
+    if (this.editOverlay != null) {  
+      buffer.writeAll(["\"editOverlay\":\`", this.editOverlay, "\`,"], "");
     }
 
-    if (this._editOverlayActive != null) {  
-      buffer.writeAll(["\"editOverlayActive\":\`", this._editOverlayActive, "\`,"], "");
+    if (this.editOverlayActive != null) {  
+      buffer.writeAll(["\"editOverlayActive\":\`", this.editOverlayActive, "\`,"], "");
     }
 
-    if (this._editSidebar != null) {  
-      buffer.writeAll(["\"editSidebar\":\`", this._editSidebar, "\`,"], "");
+    if (this.editSidebar != null) {  
+      buffer.writeAll(["\"editSidebar\":\`", this.editSidebar, "\`,"], "");
     }
 
-    if (this._editSidebarHide != null) {  
-      buffer.writeAll(["\"editSidebarHide\":\`", this._editSidebarHide, "\`,"], "");
+    if (this.editSidebarHide != null) {  
+      buffer.writeAll(["\"editSidebarHide\":\`", this.editSidebarHide, "\`,"], "");
     }
 
-    if (this._editSidebarMenuItem != null) {  
-      buffer.writeAll(["\"editSidebarMenuItem\":\`", this._editSidebarMenuItem, "\`,"], "");
+    if (this.editSidebarMenuItem != null) {  
+      buffer.writeAll(["\"editSidebarMenuItem\":\`", this.editSidebarMenuItem, "\`,"], "");
     }
 
-    if (this._editSidebarRight != null) {  
-      buffer.writeAll(["\"editSidebarRight\":\`", this._editSidebarRight, "\`,"], "");
+    if (this.editSidebarRight != null) {  
+      buffer.writeAll(["\"editSidebarRight\":\`", this.editSidebarRight, "\`,"], "");
     }
 
-    if (this._editSidebarRightShow != null) {  
-      buffer.writeAll(["\"editSidebarRightShow\":\`", this._editSidebarRightShow, "\`,"], "");
+    if (this.editSidebarRightShow != null) {  
+      buffer.writeAll(["\"editSidebarRightShow\":\`", this.editSidebarRightShow, "\`,"], "");
     }
 
-    if (this._editSidebarShow != null) {  
-      buffer.writeAll(["\"editSidebarShow\":\`", this._editSidebarShow, "\`,"], "");
+    if (this.editSidebarShow != null) {  
+      buffer.writeAll(["\"editSidebarShow\":\`", this.editSidebarShow, "\`,"], "");
     }
 
-    if (this._editSidebarTabBtn != null) {  
-      buffer.writeAll(["\"editSidebarTabBtn\":\`", this._editSidebarTabBtn, "\`,"], "");
+    if (this.editSidebarTabBtn != null) {  
+      buffer.writeAll(["\"editSidebarTabBtn\":\`", this.editSidebarTabBtn, "\`,"], "");
     }
 
-    if (this._editSidebarTabBtnWrapper != null) {  
-      buffer.writeAll(["\"editSidebarTabBtnWrapper\":\`", this._editSidebarTabBtnWrapper, "\`,"], "");
+    if (this.editSidebarTabBtnWrapper != null) {  
+      buffer.writeAll(["\"editSidebarTabBtnWrapper\":\`", this.editSidebarTabBtnWrapper, "\`,"], "");
     }
 
-    if (this._editSidebarTitle != null) {  
-      buffer.writeAll(["\"editSidebarTitle\":\`", this._editSidebarTitle, "\`,"], "");
+    if (this.editSidebarTitle != null) {  
+      buffer.writeAll(["\"editSidebarTitle\":\`", this.editSidebarTitle, "\`,"], "");
     }
 
-    if (this._editSidebarWrapper != null) {  
-      buffer.writeAll(["\"editSidebarWrapper\":\`", this._editSidebarWrapper, "\`,"], "");
+    if (this.editSidebarWrapper != null) {  
+      buffer.writeAll(["\"editSidebarWrapper\":\`", this.editSidebarWrapper, "\`,"], "");
     }
 
-    if (this._editToolbar != null) {  
-      buffer.writeAll(["\"editToolbar\":\`", this._editToolbar, "\`,"], "");
+    if (this.editToolbar != null) {  
+      buffer.writeAll(["\"editToolbar\":\`", this.editToolbar, "\`,"], "");
     }
 
-    if (this._editToolbarCell != null) {  
-      buffer.writeAll(["\"editToolbarCell\":\`", this._editToolbarCell, "\`,"], "");
+    if (this.editToolbarCell != null) {  
+      buffer.writeAll(["\"editToolbarCell\":\`", this.editToolbarCell, "\`,"], "");
     }
 
-    if (this._editToolbarCellOutline != null) {  
-      buffer.writeAll(["\"editToolbarCellOutline\":\`", this._editToolbarCellOutline, "\`,"], "");
+    if (this.editToolbarCellOutline != null) {  
+      buffer.writeAll(["\"editToolbarCellOutline\":\`", this.editToolbarCellOutline, "\`,"], "");
     }
 
-    if (this._editToolbarItem != null) {  
-      buffer.writeAll(["\"editToolbarItem\":\`", this._editToolbarItem, "\`,"], "");
+    if (this.editToolbarItem != null) {  
+      buffer.writeAll(["\"editToolbarItem\":\`", this.editToolbarItem, "\`,"], "");
     }
 
-    if (this._editToolbarRow != null) {  
-      buffer.writeAll(["\"editToolbarRow\":\`", this._editToolbarRow, "\`,"], "");
+    if (this.editToolbarRow != null) {  
+      buffer.writeAll(["\"editToolbarRow\":\`", this.editToolbarRow, "\`,"], "");
     }
 
-    if (this._editToolbarRowOutline != null) {  
-      buffer.writeAll(["\"editToolbarRowOutline\":\`", this._editToolbarRowOutline, "\`,"], "");
+    if (this.editToolbarRowOutline != null) {  
+      buffer.writeAll(["\"editToolbarRowOutline\":\`", this.editToolbarRowOutline, "\`,"], "");
     }
 
-    if (this._editTools != null) {  
-      buffer.writeAll(["\"editTools\":\`", this._editTools, "\`,"], "");
+    if (this.editTools != null) {  
+      buffer.writeAll(["\"editTools\":\`", this.editTools, "\`,"], "");
     }
 
-    if (this._editToolsBtn != null) {  
-      buffer.writeAll(["\"editToolsBtn\":\`", this._editToolsBtn, "\`,"], "");
+    if (this.editToolsBtn != null) {  
+      buffer.writeAll(["\"editToolsBtn\":\`", this.editToolsBtn, "\`,"], "");
     }
 
-    if (this._hiddenElement != null) {  
-      buffer.writeAll(["\"hiddenElement\":\`", this._hiddenElement, "\`,"], "");
+    if (this.hiddenElement != null) {  
+      buffer.writeAll(["\"hiddenElement\":\`", this.hiddenElement, "\`,"], "");
     }
 
-    if (this._icon != null) {  
-      buffer.writeAll(["\"icon\":\`", this._icon, "\`,"], "");
+    if (this.icon != null) {  
+      buffer.writeAll(["\"icon\":\`", this.icon, "\`,"], "");
     }
 
-    if (this._labelText != null) {  
-      buffer.writeAll(["\"labelText\":\`", this._labelText, "\`,"], "");
+    if (this.labelText != null) {  
+      buffer.writeAll(["\"labelText\":\`", this.labelText, "\`,"], "");
     }
 
-    if (this._maskElement != null) {  
-      buffer.writeAll(["\"maskElement\":\`", this._maskElement, "\`,"], "");
+    if (this.maskElement != null) {  
+      buffer.writeAll(["\"maskElement\":\`", this.maskElement, "\`,"], "");
     }
 
-    if (this._menu != null) {  
-      buffer.writeAll(["\"menu\":\`", this._menu, "\`,"], "");
+    if (this.menu != null) {  
+      buffer.writeAll(["\"menu\":\`", this.menu, "\`,"], "");
     }
 
-    if (this._menuDestroy != null) {  
-      buffer.writeAll(["\"menuDestroy\":\`", this._menuDestroy, "\`,"], "");
+    if (this.menuDestroy != null) {  
+      buffer.writeAll(["\"menuDestroy\":\`", this.menuDestroy, "\`,"], "");
     }
 
-    if (this._menuHorizontalSeparator != null) {  
-      buffer.writeAll(["\"menuHorizontalSeparator\":\`", this._menuHorizontalSeparator, "\`,"], "");
+    if (this.menuHorizontalSeparator != null) {  
+      buffer.writeAll(["\"menuHorizontalSeparator\":\`", this.menuHorizontalSeparator, "\`,"], "");
     }
 
-    if (this._menuItem != null) {  
-      buffer.writeAll(["\"menuItem\":\`", this._menuItem, "\`,"], "");
+    if (this.menuItem != null) {  
+      buffer.writeAll(["\"menuItem\":\`", this.menuItem, "\`,"], "");
     }
 
-    if (this._menuVerticalSeparator != null) {  
-      buffer.writeAll(["\"menuVerticalSeparator\":\`", this._menuVerticalSeparator, "\`,"], "");
+    if (this.menuVerticalSeparator != null) {  
+      buffer.writeAll(["\"menuVerticalSeparator\":\`", this.menuVerticalSeparator, "\`,"], "");
     }
 
-    if (this._popupCloseButton != null) {  
-      buffer.writeAll(["\"popupCloseButton\":\`", this._popupCloseButton, "\`,"], "");
+    if (this.popupCloseButton != null) {  
+      buffer.writeAll(["\"popupCloseButton\":\`", this.popupCloseButton, "\`,"], "");
     }
 
-    if (this._popupCancelBtn != null) {  
-      buffer.writeAll(["\"popupCancelBtn\":\`", this._popupCancelBtn, "\`,"], "");
+    if (this.popupCancelBtn != null) {  
+      buffer.writeAll(["\"popupCancelBtn\":\`", this.popupCancelBtn, "\`,"], "");
     }
 
-    if (this._popupConfirmBtn != null) {  
-      buffer.writeAll(["\"popupConfirmBtn\":\`", this._popupConfirmBtn, "\`,"], "");
+    if (this.popupConfirmBtn != null) {  
+      buffer.writeAll(["\"popupConfirmBtn\":\`", this.popupConfirmBtn, "\`,"], "");
     }
 
-    if (this._popupButtonContainer != null) {  
-      buffer.writeAll(["\"popupButtonContainer\":\`", this._popupButtonContainer, "\`,"], "");
+    if (this.popupButtonContainer != null) {  
+      buffer.writeAll(["\"popupButtonContainer\":\`", this.popupButtonContainer, "\`,"], "");
     }
 
-    if (this._popupContentContainer != null) {  
-      buffer.writeAll(["\"popupContentContainer\":\`", this._popupContentContainer, "\`,"], "");
+    if (this.popupContentContainer != null) {  
+      buffer.writeAll(["\"popupContentContainer\":\`", this.popupContentContainer, "\`,"], "");
     }
 
-    if (this._resizePointer != null) {  
-      buffer.writeAll(["\"resizePointer\":\`", this._resizePointer, "\`,"], "");
+    if (this.resizePointer != null) {  
+      buffer.writeAll(["\"resizePointer\":\`", this.resizePointer, "\`,"], "");
     }
 
-    if (this._resizeSnap != null) {  
-      buffer.writeAll(["\"resizeSnap\":\`", this._resizeSnap, "\`,"], "");
+    if (this.resizeSnap != null) {  
+      buffer.writeAll(["\"resizeSnap\":\`", this.resizeSnap, "\`,"], "");
     }
 
-    if (this._resizeSnapX != null) {  
-      buffer.writeAll(["\"resizeSnapX\":\`", this._resizeSnapX, "\`,"], "");
+    if (this.resizeSnapX != null) {  
+      buffer.writeAll(["\"resizeSnapX\":\`", this.resizeSnapX, "\`,"], "");
     }
 
-    if (this._resizeSnapY != null) {  
-      buffer.writeAll(["\"resizeSnapY\":\`", this._resizeSnapY, "\`,"], "");
+    if (this.resizeSnapY != null) {  
+      buffer.writeAll(["\"resizeSnapY\":\`", this.resizeSnapY, "\`,"], "");
     }
 
-    if (this._resizerMenuBtnActive != null) {  
-      buffer.writeAll(["\"resizerMenuBtnActive\":\`", this._resizerMenuBtnActive, "\`,"], "");
+    if (this.resizerMenuBtnActive != null) {  
+      buffer.writeAll(["\"resizerMenuBtnActive\":\`", this.resizerMenuBtnActive, "\`,"], "");
     }
 
-    if (this._collapsedElement != null) {  
-      buffer.writeAll(["\"collapsedElement\":\`", this._collapsedElement, "\`,"], "");
+    if (this.collapsedElement != null) {  
+      buffer.writeAll(["\"collapsedElement\":\`", this.collapsedElement, "\`,"], "");
     }
 
-    if (this._rowContextHighlight != null) {  
-      buffer.writeAll(["\"rowContextHighlight\":\`", this._rowContextHighlight, "\`,"], "");
+    if (this.rowContextHighlight != null) {  
+      buffer.writeAll(["\"rowContextHighlight\":\`", this.rowContextHighlight, "\`,"], "");
     }
 
-    if (this._separator != null) {  
-      buffer.writeAll(["\"separator\":\`", this._separator, "\`,"], "");
+    if (this.separator != null) {  
+      buffer.writeAll(["\"separator\":\`", this.separator, "\`,"], "");
     }
 
-    if (this._sidebarCloseButton != null) {  
-      buffer.writeAll(["\"sidebarCloseButton\":\`", this._sidebarCloseButton, "\`,"], "");
+    if (this.sidebarCloseButton != null) {  
+      buffer.writeAll(["\"sidebarCloseButton\":\`", this.sidebarCloseButton, "\`,"], "");
     }
 
-    if (this._sidebarNavButton != null) {  
-      buffer.writeAll(["\"sidebarNavButton\":\`", this._sidebarNavButton, "\`,"], "");
+    if (this.sidebarNavButton != null) {  
+      buffer.writeAll(["\"sidebarNavButton\":\`", this.sidebarNavButton, "\`,"], "");
     }
 
-    if (this._toggleContainer != null) {  
-      buffer.writeAll(["\"toggleContainer\":\`", this._toggleContainer, "\`,"], "");
+    if (this.toggleContainer != null) {  
+      buffer.writeAll(["\"toggleContainer\":\`", this.toggleContainer, "\`,"], "");
     }
 
-    if (this._toggleLabels != null) {  
-      buffer.writeAll(["\"toggleLabels\":\`", this._toggleLabels, "\`,"], "");
+    if (this.toggleLabels != null) {  
+      buffer.writeAll(["\"toggleLabels\":\`", this.toggleLabels, "\`,"], "");
     }
 
-    if (this._toggleSlider != null) {  
-      buffer.writeAll(["\"toggleSlider\":\`", this._toggleSlider, "\`,"], "");
+    if (this.toggleSlider != null) {  
+      buffer.writeAll(["\"toggleSlider\":\`", this.toggleSlider, "\`,"], "");
     }
 
-    if (this._toggleWrapper != null) {  
-      buffer.writeAll(["\"toggleWrapper\":\`", this._toggleWrapper, "\`,"], "");
+    if (this.toggleWrapper != null) {  
+      buffer.writeAll(["\"toggleWrapper\":\`", this.toggleWrapper, "\`,"], "");
     }
 
-    if (this._toggleWrapperColored != null) {  
-      buffer.writeAll(["\"toggleWrapperColored\":\`", this._toggleWrapperColored, "\`,"], "");
+    if (this.toggleWrapperColored != null) {  
+      buffer.writeAll(["\"toggleWrapperColored\":\`", this.toggleWrapperColored, "\`,"], "");
     }
 
-    if (this._viewFullscreen != null) {  
-      buffer.writeAll(["\"viewFullscreen\":\`", this._viewFullscreen, "\`,"], "");
+    if (this.viewFullscreen != null) {  
+      buffer.writeAll(["\"viewFullscreen\":\`", this.viewFullscreen, "\`,"], "");
     }
   }
 

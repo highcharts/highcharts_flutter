@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,17 @@ import 'OptionFragment.dart';
  * AlignObject 
  */
 class AlignObject extends OptionFragment {
-  AlignObject() : super();
-  String? _align;  
-
+  AlignObject( {
+    this.align = null,
+    this.alignByTranslate = null,
+    this.verticalAlign = null,
+    this.x = null,
+    this.y = null,
+    this.width = null,
+    this.height = null
+  }) : super();
+  String? align;
+    /*
   String get align { 
     if (this._align == null) {
       this._align = "";
@@ -35,9 +43,10 @@ class AlignObject extends OptionFragment {
   void set align (String v) {
     this._align = v;
   }
+    */
     
-  bool? _alignByTranslate;  
-
+  bool? alignByTranslate;
+    /*
   bool get alignByTranslate { 
     if (this._alignByTranslate == null) {
       this._alignByTranslate = false;
@@ -48,9 +57,10 @@ class AlignObject extends OptionFragment {
   void set alignByTranslate (bool v) {
     this._alignByTranslate = v;
   }
+    */
     
-  String? _verticalAlign;  
-
+  String? verticalAlign;
+    /*
   String get verticalAlign { 
     if (this._verticalAlign == null) {
       this._verticalAlign = "";
@@ -61,9 +71,10 @@ class AlignObject extends OptionFragment {
   void set verticalAlign (String v) {
     this._verticalAlign = v;
   }
+    */
     
-  double? _x;  
-
+  double? x;
+    /*
   double get x { 
     if (this._x == null) {
       this._x = 0;
@@ -74,9 +85,10 @@ class AlignObject extends OptionFragment {
   void set x (double v) {
     this._x = v;
   }
+    */
     
-  double? _y;  
-
+  double? y;
+    /*
   double get y { 
     if (this._y == null) {
       this._y = 0;
@@ -87,9 +99,10 @@ class AlignObject extends OptionFragment {
   void set y (double v) {
     this._y = v;
   }
+    */
     
-  double? _width;  
-
+  double? width;
+    /*
   double get width { 
     if (this._width == null) {
       this._width = 0;
@@ -100,9 +113,10 @@ class AlignObject extends OptionFragment {
   void set width (double v) {
     this._width = v;
   }
+    */
     
-  double? _height;  
-
+  double? height;
+    /*
   double get height { 
     if (this._height == null) {
       this._height = 0;
@@ -113,6 +127,7 @@ class AlignObject extends OptionFragment {
   void set height (double v) {
     this._height = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -122,32 +137,32 @@ class AlignObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._align != null) {  
-      buffer.writeAll(["\"align\":\`", this._align, "\`,"], "");
+    if (this.align != null) {  
+      buffer.writeAll(["\"align\":\`", this.align, "\`,"], "");
     }
 
-    if (this._alignByTranslate != null) {  
-      buffer.writeAll(["\"alignByTranslate\":", this._alignByTranslate, ","], "");
+    if (this.alignByTranslate != null) {  
+      buffer.writeAll(["\"alignByTranslate\":", this.alignByTranslate, ","], "");
     }
 
-    if (this._verticalAlign != null) {  
-      buffer.writeAll(["\"verticalAlign\":\`", this._verticalAlign, "\`,"], "");
+    if (this.verticalAlign != null) {  
+      buffer.writeAll(["\"verticalAlign\":\`", this.verticalAlign, "\`,"], "");
     }
 
-    if (this._x != null) {  
-      buffer.writeAll(["\"x\":", this._x, ","], "");
+    if (this.x != null) {  
+      buffer.writeAll(["\"x\":", this.x, ","], "");
     }
 
-    if (this._y != null) {  
-      buffer.writeAll(["\"y\":", this._y, ","], "");
+    if (this.y != null) {  
+      buffer.writeAll(["\"y\":", this.y, ","], "");
     }
 
-    if (this._width != null) {  
-      buffer.writeAll(["\"width\":", this._width, ","], "");
+    if (this.width != null) {  
+      buffer.writeAll(["\"width\":", this.width, ","], "");
     }
 
-    if (this._height != null) {  
-      buffer.writeAll(["\"height\":", this._height, ","], "");
+    if (this.height != null) {  
+      buffer.writeAll(["\"height\":", this.height, ","], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -24,9 +24,23 @@ import 'OptionFragment.dart';
  * PlotLineOptions 
  */
 class PlotLineOptions extends OptionFragment {
-  PlotLineOptions() : super();
-  bool? _acrossPanes;  
-
+  PlotLineOptions( {
+    this.acrossPanes = null,
+    this.className = null,
+    this.color = null,
+    this.dashStyle = null,
+    this.id = null,
+    this.translatedValue = null,
+    this.value = null,
+    this.width = null,
+    this.zIndex = null,
+    this.chartX = null,
+    this.chartY = null,
+    this.isCrosshair = null,
+    this.reverse = null
+  }) : super();
+  bool? acrossPanes;
+    /*
   bool get acrossPanes { 
     if (this._acrossPanes == null) {
       this._acrossPanes = false;
@@ -37,9 +51,10 @@ class PlotLineOptions extends OptionFragment {
   void set acrossPanes (bool v) {
     this._acrossPanes = v;
   }
+    */
     
-  String? _className;  
-
+  String? className;
+    /*
   String get className { 
     if (this._className == null) {
       this._className = "";
@@ -50,9 +65,10 @@ class PlotLineOptions extends OptionFragment {
   void set className (String v) {
     this._className = v;
   }
+    */
     
-  String? _color;  
-
+  String? color;
+    /*
   String get color { 
     if (this._color == null) {
       this._color = "";
@@ -63,9 +79,10 @@ class PlotLineOptions extends OptionFragment {
   void set color (String v) {
     this._color = v;
   }
+    */
     
-  String? _dashStyle;  
-
+  String? dashStyle;
+    /*
   String get dashStyle { 
     if (this._dashStyle == null) {
       this._dashStyle = "";
@@ -76,9 +93,10 @@ class PlotLineOptions extends OptionFragment {
   void set dashStyle (String v) {
     this._dashStyle = v;
   }
+    */
     
-  String? _id;  
-
+  String? id;
+    /*
   String get id { 
     if (this._id == null) {
       this._id = "";
@@ -89,9 +107,10 @@ class PlotLineOptions extends OptionFragment {
   void set id (String v) {
     this._id = v;
   }
+    */
     
-  double? _translatedValue;  
-
+  double? translatedValue;
+    /*
   double get translatedValue { 
     if (this._translatedValue == null) {
       this._translatedValue = 0;
@@ -102,9 +121,10 @@ class PlotLineOptions extends OptionFragment {
   void set translatedValue (double v) {
     this._translatedValue = v;
   }
+    */
     
-  double? _value;  
-
+  double? value;
+    /*
   double get value { 
     if (this._value == null) {
       this._value = 0;
@@ -115,9 +135,10 @@ class PlotLineOptions extends OptionFragment {
   void set value (double v) {
     this._value = v;
   }
+    */
     
-  double? _width;  
-
+  double? width;
+    /*
   double get width { 
     if (this._width == null) {
       this._width = 0;
@@ -128,9 +149,10 @@ class PlotLineOptions extends OptionFragment {
   void set width (double v) {
     this._width = v;
   }
+    */
     
-  double? _zIndex;  
-
+  double? zIndex;
+    /*
   double get zIndex { 
     if (this._zIndex == null) {
       this._zIndex = 0;
@@ -141,9 +163,10 @@ class PlotLineOptions extends OptionFragment {
   void set zIndex (double v) {
     this._zIndex = v;
   }
+    */
     
-  double? _chartX;  
-
+  double? chartX;
+    /*
   double get chartX { 
     if (this._chartX == null) {
       this._chartX = 0;
@@ -154,9 +177,10 @@ class PlotLineOptions extends OptionFragment {
   void set chartX (double v) {
     this._chartX = v;
   }
+    */
     
-  double? _chartY;  
-
+  double? chartY;
+    /*
   double get chartY { 
     if (this._chartY == null) {
       this._chartY = 0;
@@ -167,9 +191,10 @@ class PlotLineOptions extends OptionFragment {
   void set chartY (double v) {
     this._chartY = v;
   }
+    */
     
-  bool? _isCrosshair;  
-
+  bool? isCrosshair;
+    /*
   bool get isCrosshair { 
     if (this._isCrosshair == null) {
       this._isCrosshair = false;
@@ -180,9 +205,10 @@ class PlotLineOptions extends OptionFragment {
   void set isCrosshair (bool v) {
     this._isCrosshair = v;
   }
+    */
     
-  bool? _reverse;  
-
+  bool? reverse;
+    /*
   bool get reverse { 
     if (this._reverse == null) {
       this._reverse = false;
@@ -193,6 +219,7 @@ class PlotLineOptions extends OptionFragment {
   void set reverse (bool v) {
     this._reverse = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -202,62 +229,62 @@ class PlotLineOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._acrossPanes != null) {  
-      buffer.writeAll(["\"acrossPanes\":", this._acrossPanes, ","], "");
+    if (this.acrossPanes != null) {  
+      buffer.writeAll(["\"acrossPanes\":", this.acrossPanes, ","], "");
     }
 
-    if (this._className != null) {  
-      buffer.writeAll(["\"className\":\`", this._className, "\`,"], "");
+    if (this.className != null) {  
+      buffer.writeAll(["\"className\":\`", this.className, "\`,"], "");
     }
 
-    if (this._color != null) {  
-      buffer.writeAll(["\"color\":\`", this._color, "\`,"], "");
+    if (this.color != null) {  
+      buffer.writeAll(["\"color\":\`", this.color, "\`,"], "");
     }
 
-    if (this._dashStyle != null) {  
-      buffer.writeAll(["\"dashStyle\":\`", this._dashStyle, "\`,"], "");
+    if (this.dashStyle != null) {  
+      buffer.writeAll(["\"dashStyle\":\`", this.dashStyle, "\`,"], "");
     }
 
     // NOTE: skip serialization of events (type any is ignored)} 
 
-    if (this._id != null) {  
-      buffer.writeAll(["\"id\":\`", this._id, "\`,"], "");
+    if (this.id != null) {  
+      buffer.writeAll(["\"id\":\`", this.id, "\`,"], "");
     }
 
     // NOTE: skip serialization of label (type PlotLineLabelOptions is ignored)} 
 
-    if (this._translatedValue != null) {  
-      buffer.writeAll(["\"translatedValue\":", this._translatedValue, ","], "");
+    if (this.translatedValue != null) {  
+      buffer.writeAll(["\"translatedValue\":", this.translatedValue, ","], "");
     }
 
-    if (this._value != null) {  
-      buffer.writeAll(["\"value\":", this._value, ","], "");
+    if (this.value != null) {  
+      buffer.writeAll(["\"value\":", this.value, ","], "");
     }
 
-    if (this._width != null) {  
-      buffer.writeAll(["\"width\":", this._width, ","], "");
+    if (this.width != null) {  
+      buffer.writeAll(["\"width\":", this.width, ","], "");
     }
 
-    if (this._zIndex != null) {  
-      buffer.writeAll(["\"zIndex\":", this._zIndex, ","], "");
+    if (this.zIndex != null) {  
+      buffer.writeAll(["\"zIndex\":", this.zIndex, ","], "");
     }
 
-    if (this._chartX != null) {  
-      buffer.writeAll(["\"chartX\":", this._chartX, ","], "");
+    if (this.chartX != null) {  
+      buffer.writeAll(["\"chartX\":", this.chartX, ","], "");
     }
 
-    if (this._chartY != null) {  
-      buffer.writeAll(["\"chartY\":", this._chartY, ","], "");
+    if (this.chartY != null) {  
+      buffer.writeAll(["\"chartY\":", this.chartY, ","], "");
     }
 
-    if (this._isCrosshair != null) {  
-      buffer.writeAll(["\"isCrosshair\":", this._isCrosshair, ","], "");
+    if (this.isCrosshair != null) {  
+      buffer.writeAll(["\"isCrosshair\":", this.isCrosshair, ","], "");
     }
 
     // NOTE: skip serialization of point (type Point is ignored)} 
 
-    if (this._reverse != null) {  
-      buffer.writeAll(["\"reverse\":", this._reverse, ","], "");
+    if (this.reverse != null) {  
+      buffer.writeAll(["\"reverse\":", this.reverse, ","], "");
     }
   }
 

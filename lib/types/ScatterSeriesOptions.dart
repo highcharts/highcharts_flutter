@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -24,7 +24,7 @@ import 'OptionFragment.dart';
  * ScatterSeriesOptions 
  */
 class ScatterSeriesOptions extends LineSeriesOptions {
-  ScatterSeriesOptions() : super();
+  ScatterSeriesOptions( ) : super();
   /**
    * Apply a jitter effect for the rendered markers. When plotting
    * discrete values, a little random noise may help telling the points
@@ -41,8 +41,8 @@ class ScatterSeriesOptions extends LineSeriesOptions {
    * and [pointPadding](https://api.highcharts.com/highcharts/plotOptions.column.pointPadding)
    * settings.  
       */
-  ScatterSeriesJitterOptions? _jitter;  
-
+  ScatterSeriesJitterOptions? jitter;
+    /*
   ScatterSeriesJitterOptions get jitter { 
     if (this._jitter == null) {
       this._jitter = ScatterSeriesJitterOptions();
@@ -53,6 +53,7 @@ class ScatterSeriesOptions extends LineSeriesOptions {
   void set jitter (ScatterSeriesJitterOptions v) {
     this._jitter = v;
   }
+    */
     
   // NOTE: states skipped - type Generic is ignored in gen
 
@@ -64,8 +65,8 @@ class ScatterSeriesOptions extends LineSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._jitter != null) {  
-      buffer.writeAll(["\"jitter\":", this._jitter?.toJSON(), ","], "");
+    if (this.jitter != null) {  
+      buffer.writeAll(["\"jitter\":", this.jitter?.toJSON(), ","], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 

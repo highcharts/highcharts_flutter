@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,13 @@ import 'OptionFragment.dart';
  * WordcloudSeriesRotationOptions 
  */
 class WordcloudSeriesRotationOptions extends OptionFragment {
-  WordcloudSeriesRotationOptions() : super();
-  double? _from;  
-
+  WordcloudSeriesRotationOptions( {
+    this.from = null,
+    this.orientations = null,
+    this.to = null
+  }) : super();
+  double? from;
+    /*
   double get from { 
     if (this._from == null) {
       this._from = 0;
@@ -35,9 +39,10 @@ class WordcloudSeriesRotationOptions extends OptionFragment {
   void set from (double v) {
     this._from = v;
   }
+    */
     
-  double? _orientations;  
-
+  double? orientations;
+    /*
   double get orientations { 
     if (this._orientations == null) {
       this._orientations = 0;
@@ -48,9 +53,10 @@ class WordcloudSeriesRotationOptions extends OptionFragment {
   void set orientations (double v) {
     this._orientations = v;
   }
+    */
     
-  double? _to;  
-
+  double? to;
+    /*
   double get to { 
     if (this._to == null) {
       this._to = 0;
@@ -61,6 +67,7 @@ class WordcloudSeriesRotationOptions extends OptionFragment {
   void set to (double v) {
     this._to = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -70,16 +77,16 @@ class WordcloudSeriesRotationOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._from != null) {  
-      buffer.writeAll(["\"from\":", this._from, ","], "");
+    if (this.from != null) {  
+      buffer.writeAll(["\"from\":", this.from, ","], "");
     }
 
-    if (this._orientations != null) {  
-      buffer.writeAll(["\"orientations\":", this._orientations, ","], "");
+    if (this.orientations != null) {  
+      buffer.writeAll(["\"orientations\":", this.orientations, ","], "");
     }
 
-    if (this._to != null) {  
-      buffer.writeAll(["\"to\":", this._to, ","], "");
+    if (this.to != null) {  
+      buffer.writeAll(["\"to\":", this.to, ","], "");
     }
   }
 

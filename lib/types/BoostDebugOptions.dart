@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,16 @@ import 'OptionFragment.dart';
  * BoostDebugOptions 
  */
 class BoostDebugOptions extends OptionFragment {
-  BoostDebugOptions() : super();
-  bool? _showSkipSummary;  
-
+  BoostDebugOptions( {
+    this.showSkipSummary = null,
+    this.timeBufferCopy = null,
+    this.timeKDTree = null,
+    this.timeRendering = null,
+    this.timeSeriesProcessing = null,
+    this.timeSetup = null
+  }) : super();
+  bool? showSkipSummary;
+    /*
   bool get showSkipSummary { 
     if (this._showSkipSummary == null) {
       this._showSkipSummary = false;
@@ -35,9 +42,10 @@ class BoostDebugOptions extends OptionFragment {
   void set showSkipSummary (bool v) {
     this._showSkipSummary = v;
   }
+    */
     
-  bool? _timeBufferCopy;  
-
+  bool? timeBufferCopy;
+    /*
   bool get timeBufferCopy { 
     if (this._timeBufferCopy == null) {
       this._timeBufferCopy = false;
@@ -48,9 +56,10 @@ class BoostDebugOptions extends OptionFragment {
   void set timeBufferCopy (bool v) {
     this._timeBufferCopy = v;
   }
+    */
     
-  bool? _timeKDTree;  
-
+  bool? timeKDTree;
+    /*
   bool get timeKDTree { 
     if (this._timeKDTree == null) {
       this._timeKDTree = false;
@@ -61,9 +70,10 @@ class BoostDebugOptions extends OptionFragment {
   void set timeKDTree (bool v) {
     this._timeKDTree = v;
   }
+    */
     
-  bool? _timeRendering;  
-
+  bool? timeRendering;
+    /*
   bool get timeRendering { 
     if (this._timeRendering == null) {
       this._timeRendering = false;
@@ -74,9 +84,10 @@ class BoostDebugOptions extends OptionFragment {
   void set timeRendering (bool v) {
     this._timeRendering = v;
   }
+    */
     
-  bool? _timeSeriesProcessing;  
-
+  bool? timeSeriesProcessing;
+    /*
   bool get timeSeriesProcessing { 
     if (this._timeSeriesProcessing == null) {
       this._timeSeriesProcessing = false;
@@ -87,9 +98,10 @@ class BoostDebugOptions extends OptionFragment {
   void set timeSeriesProcessing (bool v) {
     this._timeSeriesProcessing = v;
   }
+    */
     
-  bool? _timeSetup;  
-
+  bool? timeSetup;
+    /*
   bool get timeSetup { 
     if (this._timeSetup == null) {
       this._timeSetup = false;
@@ -100,6 +112,7 @@ class BoostDebugOptions extends OptionFragment {
   void set timeSetup (bool v) {
     this._timeSetup = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -109,28 +122,28 @@ class BoostDebugOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._showSkipSummary != null) {  
-      buffer.writeAll(["\"showSkipSummary\":", this._showSkipSummary, ","], "");
+    if (this.showSkipSummary != null) {  
+      buffer.writeAll(["\"showSkipSummary\":", this.showSkipSummary, ","], "");
     }
 
-    if (this._timeBufferCopy != null) {  
-      buffer.writeAll(["\"timeBufferCopy\":", this._timeBufferCopy, ","], "");
+    if (this.timeBufferCopy != null) {  
+      buffer.writeAll(["\"timeBufferCopy\":", this.timeBufferCopy, ","], "");
     }
 
-    if (this._timeKDTree != null) {  
-      buffer.writeAll(["\"timeKDTree\":", this._timeKDTree, ","], "");
+    if (this.timeKDTree != null) {  
+      buffer.writeAll(["\"timeKDTree\":", this.timeKDTree, ","], "");
     }
 
-    if (this._timeRendering != null) {  
-      buffer.writeAll(["\"timeRendering\":", this._timeRendering, ","], "");
+    if (this.timeRendering != null) {  
+      buffer.writeAll(["\"timeRendering\":", this.timeRendering, ","], "");
     }
 
-    if (this._timeSeriesProcessing != null) {  
-      buffer.writeAll(["\"timeSeriesProcessing\":", this._timeSeriesProcessing, ","], "");
+    if (this.timeSeriesProcessing != null) {  
+      buffer.writeAll(["\"timeSeriesProcessing\":", this.timeSeriesProcessing, ","], "");
     }
 
-    if (this._timeSetup != null) {  
-      buffer.writeAll(["\"timeSetup\":", this._timeSetup, ","], "");
+    if (this.timeSetup != null) {  
+      buffer.writeAll(["\"timeSetup\":", this.timeSetup, ","], "");
     }
   }
 

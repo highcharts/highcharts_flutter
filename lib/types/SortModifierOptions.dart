@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,13 @@ import 'OptionFragment.dart';
  * SortModifierOptions 
  */
 class SortModifierOptions extends DataModifierOptions {
-  SortModifierOptions() : super();
-  String? _direction;  
-
+  SortModifierOptions( {
+    this.direction = null,
+    this.orderByColumn = null,
+    this.orderInColumn = null
+  }) : super();
+  String? direction;
+    /*
   String get direction { 
     if (this._direction == null) {
       this._direction = "";
@@ -36,9 +40,10 @@ class SortModifierOptions extends DataModifierOptions {
   void set direction (String v) {
     this._direction = v;
   }
+    */
     
-  String? _orderByColumn;  
-
+  String? orderByColumn;
+    /*
   String get orderByColumn { 
     if (this._orderByColumn == null) {
       this._orderByColumn = "";
@@ -49,9 +54,10 @@ class SortModifierOptions extends DataModifierOptions {
   void set orderByColumn (String v) {
     this._orderByColumn = v;
   }
+    */
     
-  String? _orderInColumn;  
-
+  String? orderInColumn;
+    /*
   String get orderInColumn { 
     if (this._orderInColumn == null) {
       this._orderInColumn = "";
@@ -62,6 +68,7 @@ class SortModifierOptions extends DataModifierOptions {
   void set orderInColumn (String v) {
     this._orderInColumn = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -73,16 +80,16 @@ class SortModifierOptions extends DataModifierOptions {
     
     // NOTE: skip serialization of type (type "Sort" is ignored)} 
 
-    if (this._direction != null) {  
-      buffer.writeAll(["\"direction\":\`", this._direction, "\`,"], "");
+    if (this.direction != null) {  
+      buffer.writeAll(["\"direction\":\`", this.direction, "\`,"], "");
     }
 
-    if (this._orderByColumn != null) {  
-      buffer.writeAll(["\"orderByColumn\":\`", this._orderByColumn, "\`,"], "");
+    if (this.orderByColumn != null) {  
+      buffer.writeAll(["\"orderByColumn\":\`", this.orderByColumn, "\`,"], "");
     }
 
-    if (this._orderInColumn != null) {  
-      buffer.writeAll(["\"orderInColumn\":\`", this._orderInColumn, "\`,"], "");
+    if (this.orderInColumn != null) {  
+      buffer.writeAll(["\"orderInColumn\":\`", this.orderInColumn, "\`,"], "");
     }
   }
 

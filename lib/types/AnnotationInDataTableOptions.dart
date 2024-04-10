@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,12 @@ import 'OptionFragment.dart';
  * AnnotationInDataTableOptions 
  */
 class AnnotationInDataTableOptions extends OptionFragment {
-  AnnotationInDataTableOptions() : super();
-  String? _itemDelimiter;  
-
+  AnnotationInDataTableOptions( {
+    this.itemDelimiter = null,
+    this.join = null
+  }) : super();
+  String? itemDelimiter;
+    /*
   String get itemDelimiter { 
     if (this._itemDelimiter == null) {
       this._itemDelimiter = "";
@@ -35,9 +38,10 @@ class AnnotationInDataTableOptions extends OptionFragment {
   void set itemDelimiter (String v) {
     this._itemDelimiter = v;
   }
+    */
     
-  bool? _join;  
-
+  bool? join;
+    /*
   bool get join { 
     if (this._join == null) {
       this._join = false;
@@ -48,6 +52,7 @@ class AnnotationInDataTableOptions extends OptionFragment {
   void set join (bool v) {
     this._join = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -57,12 +62,12 @@ class AnnotationInDataTableOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._itemDelimiter != null) {  
-      buffer.writeAll(["\"itemDelimiter\":\`", this._itemDelimiter, "\`,"], "");
+    if (this.itemDelimiter != null) {  
+      buffer.writeAll(["\"itemDelimiter\":\`", this.itemDelimiter, "\`,"], "");
     }
 
-    if (this._join != null) {  
-      buffer.writeAll(["\"join\":", this._join, ","], "");
+    if (this.join != null) {  
+      buffer.writeAll(["\"join\":", this.join, ","], "");
     }
   }
 

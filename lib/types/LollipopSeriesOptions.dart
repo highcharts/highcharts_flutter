@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,13 +23,19 @@ import 'OptionFragment.dart';
  * LollipopSeriesOptions 
  */
 class LollipopSeriesOptions extends ScatterSeriesOptions {
-  LollipopSeriesOptions() : super();
+  LollipopSeriesOptions( {
+    this.connectorColor = null,
+    this.connectorWidth = null,
+    this.groupPadding = null,
+    this.lowColor = null,
+    this.pointPadding = null
+  }) : super();
   /**
    * Color of the line that connects the dumbbell point's values.
    * By default it is the series' color.  
       */
-  String? _connectorColor;  
-
+  String? connectorColor;
+    /*
   String get connectorColor { 
     if (this._connectorColor == null) {
       this._connectorColor = "";
@@ -40,6 +46,7 @@ class LollipopSeriesOptions extends ScatterSeriesOptions {
   void set connectorColor (String v) {
     this._connectorColor = v;
   }
+    */
     
   /**
    * Pixel width of the line that connects the dumbbell point's
@@ -47,8 +54,8 @@ class LollipopSeriesOptions extends ScatterSeriesOptions {
    * 
    * Defaults to '1'. 
       */
-  double? _connectorWidth;  
-
+  double? connectorWidth;
+    /*
   double get connectorWidth { 
     if (this._connectorWidth == null) {
       this._connectorWidth = 0;
@@ -59,9 +66,10 @@ class LollipopSeriesOptions extends ScatterSeriesOptions {
   void set connectorWidth (double v) {
     this._connectorWidth = v;
   }
+    */
     
-  double? _groupPadding;  
-
+  double? groupPadding;
+    /*
   double get groupPadding { 
     if (this._groupPadding == null) {
       this._groupPadding = 0;
@@ -72,14 +80,15 @@ class LollipopSeriesOptions extends ScatterSeriesOptions {
   void set groupPadding (double v) {
     this._groupPadding = v;
   }
+    */
     
   /**
    * Color of the start markers in a dumbbell graph. 
    * 
    * Defaults to '#333333'. 
       */
-  String? _lowColor;  
-
+  String? lowColor;
+    /*
   String get lowColor { 
     if (this._lowColor == null) {
       this._lowColor = "";
@@ -90,9 +99,10 @@ class LollipopSeriesOptions extends ScatterSeriesOptions {
   void set lowColor (String v) {
     this._lowColor = v;
   }
+    */
     
-  double? _pointPadding;  
-
+  double? pointPadding;
+    /*
   double get pointPadding { 
     if (this._pointPadding == null) {
       this._pointPadding = 0;
@@ -103,6 +113,7 @@ class LollipopSeriesOptions extends ScatterSeriesOptions {
   void set pointPadding (double v) {
     this._pointPadding = v;
   }
+    */
     
   // NOTE: states skipped - type Generic is ignored in gen
 
@@ -114,24 +125,24 @@ class LollipopSeriesOptions extends ScatterSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._connectorColor != null) {  
-      buffer.writeAll(["\"connectorColor\":\`", this._connectorColor, "\`,"], "");
+    if (this.connectorColor != null) {  
+      buffer.writeAll(["\"connectorColor\":\`", this.connectorColor, "\`,"], "");
     }
 
-    if (this._connectorWidth != null) {  
-      buffer.writeAll(["\"connectorWidth\":", this._connectorWidth, ","], "");
+    if (this.connectorWidth != null) {  
+      buffer.writeAll(["\"connectorWidth\":", this.connectorWidth, ","], "");
     }
 
-    if (this._groupPadding != null) {  
-      buffer.writeAll(["\"groupPadding\":", this._groupPadding, ","], "");
+    if (this.groupPadding != null) {  
+      buffer.writeAll(["\"groupPadding\":", this.groupPadding, ","], "");
     }
 
-    if (this._lowColor != null) {  
-      buffer.writeAll(["\"lowColor\":\`", this._lowColor, "\`,"], "");
+    if (this.lowColor != null) {  
+      buffer.writeAll(["\"lowColor\":\`", this.lowColor, "\`,"], "");
     }
 
-    if (this._pointPadding != null) {  
-      buffer.writeAll(["\"pointPadding\":", this._pointPadding, ","], "");
+    if (this.pointPadding != null) {  
+      buffer.writeAll(["\"pointPadding\":", this.pointPadding, ","], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 

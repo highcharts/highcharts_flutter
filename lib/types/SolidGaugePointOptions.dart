@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,12 @@ import 'OptionFragment.dart';
  * SolidGaugePointOptions 
  */
 class SolidGaugePointOptions extends GaugePointOptions {
-  SolidGaugePointOptions() : super();
-  String? _innerRadius;  
-
+  SolidGaugePointOptions( {
+    this.innerRadius = null,
+    this.radius = null
+  }) : super();
+  String? innerRadius;
+    /*
   String get innerRadius { 
     if (this._innerRadius == null) {
       this._innerRadius = "";
@@ -36,9 +39,10 @@ class SolidGaugePointOptions extends GaugePointOptions {
   void set innerRadius (String v) {
     this._innerRadius = v;
   }
+    */
     
-  String? _radius;  
-
+  String? radius;
+    /*
   String get radius { 
     if (this._radius == null) {
       this._radius = "";
@@ -49,6 +53,7 @@ class SolidGaugePointOptions extends GaugePointOptions {
   void set radius (String v) {
     this._radius = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -58,12 +63,12 @@ class SolidGaugePointOptions extends GaugePointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._innerRadius != null) {  
-      buffer.writeAll(["\"innerRadius\":\`", this._innerRadius, "\`,"], "");
+    if (this.innerRadius != null) {  
+      buffer.writeAll(["\"innerRadius\":\`", this.innerRadius, "\`,"], "");
     }
 
-    if (this._radius != null) {  
-      buffer.writeAll(["\"radius\":\`", this._radius, "\`,"], "");
+    if (this.radius != null) {  
+      buffer.writeAll(["\"radius\":\`", this.radius, "\`,"], "");
     }
   }
 

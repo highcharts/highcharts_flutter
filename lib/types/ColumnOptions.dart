@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,14 @@ import 'OptionFragment.dart';
  * ColumnOptions 
  */
 class ColumnOptions extends OptionFragment {
-  ColumnOptions() : super();
-  String? _cellFormat;  
-
+  ColumnOptions( {
+    this.cellFormat = null,
+    this.editable = null,
+    this.headerFormat = null,
+    this.show = null
+  }) : super();
+  String? cellFormat;
+    /*
   String get cellFormat { 
     if (this._cellFormat == null) {
       this._cellFormat = "";
@@ -35,9 +40,10 @@ class ColumnOptions extends OptionFragment {
   void set cellFormat (String v) {
     this._cellFormat = v;
   }
+    */
     
-  bool? _editable;  
-
+  bool? editable;
+    /*
   bool get editable { 
     if (this._editable == null) {
       this._editable = false;
@@ -48,9 +54,10 @@ class ColumnOptions extends OptionFragment {
   void set editable (bool v) {
     this._editable = v;
   }
+    */
     
-  String? _headerFormat;  
-
+  String? headerFormat;
+    /*
   String get headerFormat { 
     if (this._headerFormat == null) {
       this._headerFormat = "";
@@ -61,9 +68,10 @@ class ColumnOptions extends OptionFragment {
   void set headerFormat (String v) {
     this._headerFormat = v;
   }
+    */
     
-  bool? _show;  
-
+  bool? show;
+    /*
   bool get show { 
     if (this._show == null) {
       this._show = false;
@@ -74,6 +82,7 @@ class ColumnOptions extends OptionFragment {
   void set show (bool v) {
     this._show = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -83,20 +92,20 @@ class ColumnOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._cellFormat != null) {  
-      buffer.writeAll(["\"cellFormat\":\`", this._cellFormat, "\`,"], "");
+    if (this.cellFormat != null) {  
+      buffer.writeAll(["\"cellFormat\":\`", this.cellFormat, "\`,"], "");
     }
 
-    if (this._editable != null) {  
-      buffer.writeAll(["\"editable\":", this._editable, ","], "");
+    if (this.editable != null) {  
+      buffer.writeAll(["\"editable\":", this.editable, ","], "");
     }
 
-    if (this._headerFormat != null) {  
-      buffer.writeAll(["\"headerFormat\":\`", this._headerFormat, "\`,"], "");
+    if (this.headerFormat != null) {  
+      buffer.writeAll(["\"headerFormat\":\`", this.headerFormat, "\`,"], "");
     }
 
-    if (this._show != null) {  
-      buffer.writeAll(["\"show\":", this._show, ","], "");
+    if (this.show != null) {  
+      buffer.writeAll(["\"show\":", this.show, ","], "");
     }
   }
 

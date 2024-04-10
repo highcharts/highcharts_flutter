@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -24,9 +24,11 @@ import 'OptionFragment.dart';
  * PopupConfigObject 
  */
 class PopupConfigObject extends OptionFragment {
-  PopupConfigObject() : super();
-  String? _formType;  
-
+  PopupConfigObject( {
+    this.formType = null
+  }) : super();
+  String? formType;
+    /*
   String get formType { 
     if (this._formType == null) {
       this._formType = "";
@@ -37,6 +39,7 @@ class PopupConfigObject extends OptionFragment {
   void set formType (String v) {
     this._formType = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -48,8 +51,8 @@ class PopupConfigObject extends OptionFragment {
     
     // NOTE: skip serialization of annotation (type Annotation is ignored)} 
 
-    if (this._formType != null) {  
-      buffer.writeAll(["\"formType\":\`", this._formType, "\`,"], "");
+    if (this.formType != null) {  
+      buffer.writeAll(["\"formType\":\`", this.formType, "\`,"], "");
     }
 
     // NOTE: skip serialization of onSubmit (type Function is ignored)} 

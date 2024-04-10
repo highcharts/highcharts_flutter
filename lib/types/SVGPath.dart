@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,13 @@ import 'OptionFragment.dart';
  * SVGPath 
  */
 class SVGPath extends OptionFragment {
-  SVGPath() : super();
-  bool? _isFlat;  
-
+  SVGPath( {
+    this.isFlat = null,
+    this.xMap = null,
+    this.isArea = null
+  }) : super();
+  bool? isFlat;
+    /*
   bool get isFlat { 
     if (this._isFlat == null) {
       this._isFlat = false;
@@ -35,9 +39,10 @@ class SVGPath extends OptionFragment {
   void set isFlat (bool v) {
     this._isFlat = v;
   }
+    */
     
-  double? _xMap;  
-
+  double? xMap;
+    /*
   double get xMap { 
     if (this._xMap == null) {
       this._xMap = 0;
@@ -48,9 +53,10 @@ class SVGPath extends OptionFragment {
   void set xMap (double v) {
     this._xMap = v;
   }
+    */
     
-  bool? _isArea;  
-
+  bool? isArea;
+    /*
   bool get isArea { 
     if (this._isArea == null) {
       this._isArea = false;
@@ -61,6 +67,7 @@ class SVGPath extends OptionFragment {
   void set isArea (bool v) {
     this._isArea = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -70,20 +77,20 @@ class SVGPath extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._isFlat != null) {  
-      buffer.writeAll(["\"isFlat\":", this._isFlat, ","], "");
+    if (this.isFlat != null) {  
+      buffer.writeAll(["\"isFlat\":", this.isFlat, ","], "");
     }
 
     // NOTE: skip serialization of xBounds (type number[] is ignored)} 
 
     // NOTE: skip serialization of yBounds (type number[] is ignored)} 
 
-    if (this._xMap != null) {  
-      buffer.writeAll(["\"xMap\":", this._xMap, ","], "");
+    if (this.xMap != null) {  
+      buffer.writeAll(["\"xMap\":", this.xMap, ","], "");
     }
 
-    if (this._isArea != null) {  
-      buffer.writeAll(["\"isArea\":", this._isArea, ","], "");
+    if (this.isArea != null) {  
+      buffer.writeAll(["\"isArea\":", this.isArea, ","], "");
     }
   }
 

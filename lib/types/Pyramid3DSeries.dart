@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,7 +22,7 @@ import 'OptionFragment.dart';
  * Pyramid3DSeries 
  */
 class Pyramid3DSeries extends OptionFragment {
-  Pyramid3DSeries() : super();
+  Pyramid3DSeries( ) : super();
   
 
   //////////////////////////////////////////////////////////////////////////////

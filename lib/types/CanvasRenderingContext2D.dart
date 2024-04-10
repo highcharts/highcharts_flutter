@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,14 @@ import 'OptionFragment.dart';
  * CanvasRenderingContext2D 
  */
 class CanvasRenderingContext2D extends OptionFragment {
-  CanvasRenderingContext2D() : super();
-  double? _FUNC_MIN;  
-
+  CanvasRenderingContext2D( {
+    this.FUNC_MIN = null,
+    this.mozImageSmoothingEnabled = null,
+    this.msImageSmoothingEnabled = null,
+    this.webkitImageSmoothingEnabled = null
+  }) : super();
+  double? FUNC_MIN;
+    /*
   double get FUNC_MIN { 
     if (this._FUNC_MIN == null) {
       this._FUNC_MIN = 0;
@@ -35,9 +40,10 @@ class CanvasRenderingContext2D extends OptionFragment {
   void set FUNC_MIN (double v) {
     this._FUNC_MIN = v;
   }
+    */
     
-  bool? _mozImageSmoothingEnabled;  
-
+  bool? mozImageSmoothingEnabled;
+    /*
   bool get mozImageSmoothingEnabled { 
     if (this._mozImageSmoothingEnabled == null) {
       this._mozImageSmoothingEnabled = false;
@@ -48,9 +54,10 @@ class CanvasRenderingContext2D extends OptionFragment {
   void set mozImageSmoothingEnabled (bool v) {
     this._mozImageSmoothingEnabled = v;
   }
+    */
     
-  bool? _msImageSmoothingEnabled;  
-
+  bool? msImageSmoothingEnabled;
+    /*
   bool get msImageSmoothingEnabled { 
     if (this._msImageSmoothingEnabled == null) {
       this._msImageSmoothingEnabled = false;
@@ -61,9 +68,10 @@ class CanvasRenderingContext2D extends OptionFragment {
   void set msImageSmoothingEnabled (bool v) {
     this._msImageSmoothingEnabled = v;
   }
+    */
     
-  bool? _webkitImageSmoothingEnabled;  
-
+  bool? webkitImageSmoothingEnabled;
+    /*
   bool get webkitImageSmoothingEnabled { 
     if (this._webkitImageSmoothingEnabled == null) {
       this._webkitImageSmoothingEnabled = false;
@@ -74,6 +82,7 @@ class CanvasRenderingContext2D extends OptionFragment {
   void set webkitImageSmoothingEnabled (bool v) {
     this._webkitImageSmoothingEnabled = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -83,20 +92,20 @@ class CanvasRenderingContext2D extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._FUNC_MIN != null) {  
-      buffer.writeAll(["\"FUNC_MIN\":", this._FUNC_MIN, ","], "");
+    if (this.FUNC_MIN != null) {  
+      buffer.writeAll(["\"FUNC_MIN\":", this.FUNC_MIN, ","], "");
     }
 
-    if (this._mozImageSmoothingEnabled != null) {  
-      buffer.writeAll(["\"mozImageSmoothingEnabled\":", this._mozImageSmoothingEnabled, ","], "");
+    if (this.mozImageSmoothingEnabled != null) {  
+      buffer.writeAll(["\"mozImageSmoothingEnabled\":", this.mozImageSmoothingEnabled, ","], "");
     }
 
-    if (this._msImageSmoothingEnabled != null) {  
-      buffer.writeAll(["\"msImageSmoothingEnabled\":", this._msImageSmoothingEnabled, ","], "");
+    if (this.msImageSmoothingEnabled != null) {  
+      buffer.writeAll(["\"msImageSmoothingEnabled\":", this.msImageSmoothingEnabled, ","], "");
     }
 
-    if (this._webkitImageSmoothingEnabled != null) {  
-      buffer.writeAll(["\"webkitImageSmoothingEnabled\":", this._webkitImageSmoothingEnabled, ","], "");
+    if (this.webkitImageSmoothingEnabled != null) {  
+      buffer.writeAll(["\"webkitImageSmoothingEnabled\":", this.webkitImageSmoothingEnabled, ","], "");
     }
   }
 

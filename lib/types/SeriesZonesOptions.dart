@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,17 @@ import 'OptionFragment.dart';
  * SeriesZonesOptions 
  */
 class SeriesZonesOptions extends OptionFragment {
-  SeriesZonesOptions() : super();
-  String? _borderColor;  
-
+  SeriesZonesOptions( {
+    this.borderColor = null,
+    this.borderWidth = null,
+    this.color = null,
+    this.className = null,
+    this.dashStyle = null,
+    this.fillColor = null,
+    this.value = null
+  }) : super();
+  String? borderColor;
+    /*
   String get borderColor { 
     if (this._borderColor == null) {
       this._borderColor = "";
@@ -35,9 +43,10 @@ class SeriesZonesOptions extends OptionFragment {
   void set borderColor (String v) {
     this._borderColor = v;
   }
+    */
     
-  double? _borderWidth;  
-
+  double? borderWidth;
+    /*
   double get borderWidth { 
     if (this._borderWidth == null) {
       this._borderWidth = 0;
@@ -48,9 +57,10 @@ class SeriesZonesOptions extends OptionFragment {
   void set borderWidth (double v) {
     this._borderWidth = v;
   }
+    */
     
-  String? _color;  
-
+  String? color;
+    /*
   String get color { 
     if (this._color == null) {
       this._color = "";
@@ -61,9 +71,10 @@ class SeriesZonesOptions extends OptionFragment {
   void set color (String v) {
     this._color = v;
   }
+    */
     
-  String? _className;  
-
+  String? className;
+    /*
   String get className { 
     if (this._className == null) {
       this._className = "";
@@ -74,9 +85,10 @@ class SeriesZonesOptions extends OptionFragment {
   void set className (String v) {
     this._className = v;
   }
+    */
     
-  String? _dashStyle;  
-
+  String? dashStyle;
+    /*
   String get dashStyle { 
     if (this._dashStyle == null) {
       this._dashStyle = "";
@@ -87,9 +99,10 @@ class SeriesZonesOptions extends OptionFragment {
   void set dashStyle (String v) {
     this._dashStyle = v;
   }
+    */
     
-  String? _fillColor;  
-
+  String? fillColor;
+    /*
   String get fillColor { 
     if (this._fillColor == null) {
       this._fillColor = "";
@@ -100,9 +113,10 @@ class SeriesZonesOptions extends OptionFragment {
   void set fillColor (String v) {
     this._fillColor = v;
   }
+    */
     
-  double? _value;  
-
+  double? value;
+    /*
   double get value { 
     if (this._value == null) {
       this._value = 0;
@@ -113,6 +127,7 @@ class SeriesZonesOptions extends OptionFragment {
   void set value (double v) {
     this._value = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -122,36 +137,36 @@ class SeriesZonesOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._borderColor != null) {  
-      buffer.writeAll(["\"borderColor\":\`", this._borderColor, "\`,"], "");
+    if (this.borderColor != null) {  
+      buffer.writeAll(["\"borderColor\":\`", this.borderColor, "\`,"], "");
     }
 
-    if (this._borderWidth != null) {  
-      buffer.writeAll(["\"borderWidth\":", this._borderWidth, ","], "");
+    if (this.borderWidth != null) {  
+      buffer.writeAll(["\"borderWidth\":", this.borderWidth, ","], "");
     }
 
-    if (this._color != null) {  
-      buffer.writeAll(["\"color\":\`", this._color, "\`,"], "");
+    if (this.color != null) {  
+      buffer.writeAll(["\"color\":\`", this.color, "\`,"], "");
     }
 
-    if (this._className != null) {  
-      buffer.writeAll(["\"className\":\`", this._className, "\`,"], "");
+    if (this.className != null) {  
+      buffer.writeAll(["\"className\":\`", this.className, "\`,"], "");
     }
 
-    if (this._color != null) {  
-      buffer.writeAll(["\"color\":\`", this._color, "\`,"], "");
+    if (this.color != null) {  
+      buffer.writeAll(["\"color\":\`", this.color, "\`,"], "");
     }
 
-    if (this._dashStyle != null) {  
-      buffer.writeAll(["\"dashStyle\":\`", this._dashStyle, "\`,"], "");
+    if (this.dashStyle != null) {  
+      buffer.writeAll(["\"dashStyle\":\`", this.dashStyle, "\`,"], "");
     }
 
-    if (this._fillColor != null) {  
-      buffer.writeAll(["\"fillColor\":\`", this._fillColor, "\`,"], "");
+    if (this.fillColor != null) {  
+      buffer.writeAll(["\"fillColor\":\`", this.fillColor, "\`,"], "");
     }
 
-    if (this._value != null) {  
-      buffer.writeAll(["\"value\":", this._value, ","], "");
+    if (this.value != null) {  
+      buffer.writeAll(["\"value\":", this.value, ","], "");
     }
   }
 

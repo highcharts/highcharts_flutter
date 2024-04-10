@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -27,9 +27,18 @@ import 'OptionFragment.dart';
  * BreadcrumbsOptions 
  */
 class BreadcrumbsOptions extends OptionFragment {
-  BreadcrumbsOptions() : super();
-  double? _buttonSpacing;  
-
+  BreadcrumbsOptions( {
+    this.buttonSpacing = null,
+    this.floating = null,
+    this.format = null,
+    this.relativeTo = null,
+    this.rtl = null,
+    this.showFullPath = null,
+    this.useHTML = null,
+    this.zIndex = null
+  }) : super();
+  double? buttonSpacing;
+    /*
   double get buttonSpacing { 
     if (this._buttonSpacing == null) {
       this._buttonSpacing = 0;
@@ -40,9 +49,10 @@ class BreadcrumbsOptions extends OptionFragment {
   void set buttonSpacing (double v) {
     this._buttonSpacing = v;
   }
+    */
     
-  bool? _floating;  
-
+  bool? floating;
+    /*
   bool get floating { 
     if (this._floating == null) {
       this._floating = false;
@@ -53,9 +63,10 @@ class BreadcrumbsOptions extends OptionFragment {
   void set floating (bool v) {
     this._floating = v;
   }
+    */
     
-  String? _format;  
-
+  String? format;
+    /*
   String get format { 
     if (this._format == null) {
       this._format = "";
@@ -66,9 +77,10 @@ class BreadcrumbsOptions extends OptionFragment {
   void set format (String v) {
     this._format = v;
   }
+    */
     
-  String? _relativeTo;  
-
+  String? relativeTo;
+    /*
   String get relativeTo { 
     if (this._relativeTo == null) {
       this._relativeTo = "";
@@ -79,9 +91,10 @@ class BreadcrumbsOptions extends OptionFragment {
   void set relativeTo (String v) {
     this._relativeTo = v;
   }
+    */
     
-  bool? _rtl;  
-
+  bool? rtl;
+    /*
   bool get rtl { 
     if (this._rtl == null) {
       this._rtl = false;
@@ -92,9 +105,10 @@ class BreadcrumbsOptions extends OptionFragment {
   void set rtl (bool v) {
     this._rtl = v;
   }
+    */
     
-  bool? _showFullPath;  
-
+  bool? showFullPath;
+    /*
   bool get showFullPath { 
     if (this._showFullPath == null) {
       this._showFullPath = false;
@@ -105,9 +119,10 @@ class BreadcrumbsOptions extends OptionFragment {
   void set showFullPath (bool v) {
     this._showFullPath = v;
   }
+    */
     
-  bool? _useHTML;  
-
+  bool? useHTML;
+    /*
   bool get useHTML { 
     if (this._useHTML == null) {
       this._useHTML = false;
@@ -118,9 +133,10 @@ class BreadcrumbsOptions extends OptionFragment {
   void set useHTML (bool v) {
     this._useHTML = v;
   }
+    */
     
-  double? _zIndex;  
-
+  double? zIndex;
+    /*
   double get zIndex { 
     if (this._zIndex == null) {
       this._zIndex = 0;
@@ -131,6 +147,7 @@ class BreadcrumbsOptions extends OptionFragment {
   void set zIndex (double v) {
     this._zIndex = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -142,44 +159,44 @@ class BreadcrumbsOptions extends OptionFragment {
     
     // NOTE: skip serialization of buttonTheme (type ButtonThemeObject is ignored)} 
 
-    if (this._buttonSpacing != null) {  
-      buffer.writeAll(["\"buttonSpacing\":", this._buttonSpacing, ","], "");
+    if (this.buttonSpacing != null) {  
+      buffer.writeAll(["\"buttonSpacing\":", this.buttonSpacing, ","], "");
     }
 
     // NOTE: skip serialization of events (type BreadcrumbsButtonsEventsOptions is ignored)} 
 
-    if (this._floating != null) {  
-      buffer.writeAll(["\"floating\":", this._floating, ","], "");
+    if (this.floating != null) {  
+      buffer.writeAll(["\"floating\":", this.floating, ","], "");
     }
 
-    if (this._format != null) {  
-      buffer.writeAll(["\"format\":\`", this._format, "\`,"], "");
+    if (this.format != null) {  
+      buffer.writeAll(["\"format\":\`", this.format, "\`,"], "");
     }
 
-    if (this._relativeTo != null) {  
-      buffer.writeAll(["\"relativeTo\":\`", this._relativeTo, "\`,"], "");
+    if (this.relativeTo != null) {  
+      buffer.writeAll(["\"relativeTo\":\`", this.relativeTo, "\`,"], "");
     }
 
-    if (this._rtl != null) {  
-      buffer.writeAll(["\"rtl\":", this._rtl, ","], "");
+    if (this.rtl != null) {  
+      buffer.writeAll(["\"rtl\":", this.rtl, ","], "");
     }
 
     // NOTE: skip serialization of position (type BreadcrumbsAlignOptions is ignored)} 
 
     // NOTE: skip serialization of separator (type BreadcrumbsSeparatorOptions is ignored)} 
 
-    if (this._showFullPath != null) {  
-      buffer.writeAll(["\"showFullPath\":", this._showFullPath, ","], "");
+    if (this.showFullPath != null) {  
+      buffer.writeAll(["\"showFullPath\":", this.showFullPath, ","], "");
     }
 
     // NOTE: skip serialization of style (type CSSObject is ignored)} 
 
-    if (this._useHTML != null) {  
-      buffer.writeAll(["\"useHTML\":", this._useHTML, ","], "");
+    if (this.useHTML != null) {  
+      buffer.writeAll(["\"useHTML\":", this.useHTML, ","], "");
     }
 
-    if (this._zIndex != null) {  
-      buffer.writeAll(["\"zIndex\":", this._zIndex, ","], "");
+    if (this.zIndex != null) {  
+      buffer.writeAll(["\"zIndex\":", this.zIndex, ","], "");
     }
   }
 

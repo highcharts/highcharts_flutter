@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -24,9 +24,14 @@ import 'OptionFragment.dart';
  * GanttPointOptions 
  */
 class GanttPointOptions extends XRangePointOptions {
-  GanttPointOptions() : super();
-  double? _end;  
-
+  GanttPointOptions( {
+    this.end = null,
+    this.milestone = null,
+    this.parent = null,
+    this.start = null
+  }) : super();
+  double? end;
+    /*
   double get end { 
     if (this._end == null) {
       this._end = 0;
@@ -37,9 +42,10 @@ class GanttPointOptions extends XRangePointOptions {
   void set end (double v) {
     this._end = v;
   }
+    */
     
-  bool? _milestone;  
-
+  bool? milestone;
+    /*
   bool get milestone { 
     if (this._milestone == null) {
       this._milestone = false;
@@ -50,9 +56,10 @@ class GanttPointOptions extends XRangePointOptions {
   void set milestone (bool v) {
     this._milestone = v;
   }
+    */
     
-  String? _parent;  
-
+  String? parent;
+    /*
   String get parent { 
     if (this._parent == null) {
       this._parent = "";
@@ -63,9 +70,10 @@ class GanttPointOptions extends XRangePointOptions {
   void set parent (String v) {
     this._parent = v;
   }
+    */
     
-  double? _start;  
-
+  double? start;
+    /*
   double get start { 
     if (this._start == null) {
       this._start = 0;
@@ -76,6 +84,7 @@ class GanttPointOptions extends XRangePointOptions {
   void set start (double v) {
     this._start = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -89,20 +98,20 @@ class GanttPointOptions extends XRangePointOptions {
 
     // NOTE: skip serialization of dependency (type GanttDependencyOptions is ignored)} 
 
-    if (this._end != null) {  
-      buffer.writeAll(["\"end\":", this._end, ","], "");
+    if (this.end != null) {  
+      buffer.writeAll(["\"end\":", this.end, ","], "");
     }
 
-    if (this._milestone != null) {  
-      buffer.writeAll(["\"milestone\":", this._milestone, ","], "");
+    if (this.milestone != null) {  
+      buffer.writeAll(["\"milestone\":", this.milestone, ","], "");
     }
 
-    if (this._parent != null) {  
-      buffer.writeAll(["\"parent\":\`", this._parent, "\`,"], "");
+    if (this.parent != null) {  
+      buffer.writeAll(["\"parent\":\`", this.parent, "\`,"], "");
     }
 
-    if (this._start != null) {  
-      buffer.writeAll(["\"start\":", this._start, ","], "");
+    if (this.start != null) {  
+      buffer.writeAll(["\"start\":", this.start, ","], "");
     }
   }
 

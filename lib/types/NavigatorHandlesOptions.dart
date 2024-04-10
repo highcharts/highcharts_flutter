@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,17 @@ import 'OptionFragment.dart';
  * NavigatorHandlesOptions 
  */
 class NavigatorHandlesOptions extends OptionFragment {
-  NavigatorHandlesOptions() : super();
-  String? _backgroundColor;  
-
+  NavigatorHandlesOptions( {
+    this.backgroundColor = null,
+    this.borderColor = null,
+    this.enabled = null,
+    this.height = null,
+    this.inverted = null,
+    this.lineWidth = null,
+    this.width = null
+  }) : super();
+  String? backgroundColor;
+    /*
   String get backgroundColor { 
     if (this._backgroundColor == null) {
       this._backgroundColor = "";
@@ -35,9 +43,10 @@ class NavigatorHandlesOptions extends OptionFragment {
   void set backgroundColor (String v) {
     this._backgroundColor = v;
   }
+    */
     
-  String? _borderColor;  
-
+  String? borderColor;
+    /*
   String get borderColor { 
     if (this._borderColor == null) {
       this._borderColor = "";
@@ -48,9 +57,10 @@ class NavigatorHandlesOptions extends OptionFragment {
   void set borderColor (String v) {
     this._borderColor = v;
   }
+    */
     
-  bool? _enabled;  
-
+  bool? enabled;
+    /*
   bool get enabled { 
     if (this._enabled == null) {
       this._enabled = false;
@@ -61,9 +71,10 @@ class NavigatorHandlesOptions extends OptionFragment {
   void set enabled (bool v) {
     this._enabled = v;
   }
+    */
     
-  double? _height;  
-
+  double? height;
+    /*
   double get height { 
     if (this._height == null) {
       this._height = 0;
@@ -74,9 +85,10 @@ class NavigatorHandlesOptions extends OptionFragment {
   void set height (double v) {
     this._height = v;
   }
+    */
     
-  bool? _inverted;  
-
+  bool? inverted;
+    /*
   bool get inverted { 
     if (this._inverted == null) {
       this._inverted = false;
@@ -87,9 +99,10 @@ class NavigatorHandlesOptions extends OptionFragment {
   void set inverted (bool v) {
     this._inverted = v;
   }
+    */
     
-  double? _lineWidth;  
-
+  double? lineWidth;
+    /*
   double get lineWidth { 
     if (this._lineWidth == null) {
       this._lineWidth = 0;
@@ -100,9 +113,10 @@ class NavigatorHandlesOptions extends OptionFragment {
   void set lineWidth (double v) {
     this._lineWidth = v;
   }
+    */
     
-  double? _width;  
-
+  double? width;
+    /*
   double get width { 
     if (this._width == null) {
       this._width = 0;
@@ -113,6 +127,7 @@ class NavigatorHandlesOptions extends OptionFragment {
   void set width (double v) {
     this._width = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -122,34 +137,34 @@ class NavigatorHandlesOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._backgroundColor != null) {  
-      buffer.writeAll(["\"backgroundColor\":\`", this._backgroundColor, "\`,"], "");
+    if (this.backgroundColor != null) {  
+      buffer.writeAll(["\"backgroundColor\":\`", this.backgroundColor, "\`,"], "");
     }
 
-    if (this._borderColor != null) {  
-      buffer.writeAll(["\"borderColor\":\`", this._borderColor, "\`,"], "");
+    if (this.borderColor != null) {  
+      buffer.writeAll(["\"borderColor\":\`", this.borderColor, "\`,"], "");
     }
 
-    if (this._enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this._enabled, ","], "");
+    if (this.enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
     }
 
-    if (this._height != null) {  
-      buffer.writeAll(["\"height\":", this._height, ","], "");
+    if (this.height != null) {  
+      buffer.writeAll(["\"height\":", this.height, ","], "");
     }
 
-    if (this._inverted != null) {  
-      buffer.writeAll(["\"inverted\":", this._inverted, ","], "");
+    if (this.inverted != null) {  
+      buffer.writeAll(["\"inverted\":", this.inverted, ","], "");
     }
 
-    if (this._lineWidth != null) {  
-      buffer.writeAll(["\"lineWidth\":", this._lineWidth, ","], "");
+    if (this.lineWidth != null) {  
+      buffer.writeAll(["\"lineWidth\":", this.lineWidth, ","], "");
     }
 
     // NOTE: skip serialization of symbols (type (keyof SymbolTypeRegistry)[] is ignored)} 
 
-    if (this._width != null) {  
-      buffer.writeAll(["\"width\":", this._width, ","], "");
+    if (this.width != null) {  
+      buffer.writeAll(["\"width\":", this.width, ","], "");
     }
   }
 

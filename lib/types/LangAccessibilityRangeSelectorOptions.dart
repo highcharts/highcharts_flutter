@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,14 @@ import 'OptionFragment.dart';
  * LangAccessibilityRangeSelectorOptions 
  */
 class LangAccessibilityRangeSelectorOptions extends OptionFragment {
-  LangAccessibilityRangeSelectorOptions() : super();
-  String? _dropdownLabel;  
-
+  LangAccessibilityRangeSelectorOptions( {
+    this.dropdownLabel = null,
+    this.maxInputLabel = null,
+    this.minInputLabel = null,
+    this.clickButtonAnnouncement = null
+  }) : super();
+  String? dropdownLabel;
+    /*
   String get dropdownLabel { 
     if (this._dropdownLabel == null) {
       this._dropdownLabel = "";
@@ -35,9 +40,10 @@ class LangAccessibilityRangeSelectorOptions extends OptionFragment {
   void set dropdownLabel (String v) {
     this._dropdownLabel = v;
   }
+    */
     
-  String? _maxInputLabel;  
-
+  String? maxInputLabel;
+    /*
   String get maxInputLabel { 
     if (this._maxInputLabel == null) {
       this._maxInputLabel = "";
@@ -48,9 +54,10 @@ class LangAccessibilityRangeSelectorOptions extends OptionFragment {
   void set maxInputLabel (String v) {
     this._maxInputLabel = v;
   }
+    */
     
-  String? _minInputLabel;  
-
+  String? minInputLabel;
+    /*
   String get minInputLabel { 
     if (this._minInputLabel == null) {
       this._minInputLabel = "";
@@ -61,9 +68,10 @@ class LangAccessibilityRangeSelectorOptions extends OptionFragment {
   void set minInputLabel (String v) {
     this._minInputLabel = v;
   }
+    */
     
-  String? _clickButtonAnnouncement;  
-
+  String? clickButtonAnnouncement;
+    /*
   String get clickButtonAnnouncement { 
     if (this._clickButtonAnnouncement == null) {
       this._clickButtonAnnouncement = "";
@@ -74,6 +82,7 @@ class LangAccessibilityRangeSelectorOptions extends OptionFragment {
   void set clickButtonAnnouncement (String v) {
     this._clickButtonAnnouncement = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -83,20 +92,20 @@ class LangAccessibilityRangeSelectorOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._dropdownLabel != null) {  
-      buffer.writeAll(["\"dropdownLabel\":\`", this._dropdownLabel, "\`,"], "");
+    if (this.dropdownLabel != null) {  
+      buffer.writeAll(["\"dropdownLabel\":\`", this.dropdownLabel, "\`,"], "");
     }
 
-    if (this._maxInputLabel != null) {  
-      buffer.writeAll(["\"maxInputLabel\":\`", this._maxInputLabel, "\`,"], "");
+    if (this.maxInputLabel != null) {  
+      buffer.writeAll(["\"maxInputLabel\":\`", this.maxInputLabel, "\`,"], "");
     }
 
-    if (this._minInputLabel != null) {  
-      buffer.writeAll(["\"minInputLabel\":\`", this._minInputLabel, "\`,"], "");
+    if (this.minInputLabel != null) {  
+      buffer.writeAll(["\"minInputLabel\":\`", this.minInputLabel, "\`,"], "");
     }
 
-    if (this._clickButtonAnnouncement != null) {  
-      buffer.writeAll(["\"clickButtonAnnouncement\":\`", this._clickButtonAnnouncement, "\`,"], "");
+    if (this.clickButtonAnnouncement != null) {  
+      buffer.writeAll(["\"clickButtonAnnouncement\":\`", this.clickButtonAnnouncement, "\`,"], "");
     }
   }
 

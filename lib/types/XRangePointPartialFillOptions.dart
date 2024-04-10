@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,17 @@ import 'OptionFragment.dart';
  * XRangePointPartialFillOptions 
  */
 class XRangePointPartialFillOptions extends OptionFragment {
-  XRangePointPartialFillOptions() : super();
-  double? _amount;  
-
+  XRangePointPartialFillOptions( {
+    this.amount = null,
+    this.fill = null,
+    this.height = null,
+    this.width = null,
+    this.r = null,
+    this.x = null,
+    this.y = null
+  }) : super();
+  double? amount;
+    /*
   double get amount { 
     if (this._amount == null) {
       this._amount = 0;
@@ -35,9 +43,10 @@ class XRangePointPartialFillOptions extends OptionFragment {
   void set amount (double v) {
     this._amount = v;
   }
+    */
     
-  String? _fill;  
-
+  String? fill;
+    /*
   String get fill { 
     if (this._fill == null) {
       this._fill = "";
@@ -48,9 +57,10 @@ class XRangePointPartialFillOptions extends OptionFragment {
   void set fill (String v) {
     this._fill = v;
   }
+    */
     
-  double? _height;  
-
+  double? height;
+    /*
   double get height { 
     if (this._height == null) {
       this._height = 0;
@@ -61,9 +71,10 @@ class XRangePointPartialFillOptions extends OptionFragment {
   void set height (double v) {
     this._height = v;
   }
+    */
     
-  double? _width;  
-
+  double? width;
+    /*
   double get width { 
     if (this._width == null) {
       this._width = 0;
@@ -74,9 +85,10 @@ class XRangePointPartialFillOptions extends OptionFragment {
   void set width (double v) {
     this._width = v;
   }
+    */
     
-  double? _r;  
-
+  double? r;
+    /*
   double get r { 
     if (this._r == null) {
       this._r = 0;
@@ -87,9 +99,10 @@ class XRangePointPartialFillOptions extends OptionFragment {
   void set r (double v) {
     this._r = v;
   }
+    */
     
-  double? _x;  
-
+  double? x;
+    /*
   double get x { 
     if (this._x == null) {
       this._x = 0;
@@ -100,9 +113,10 @@ class XRangePointPartialFillOptions extends OptionFragment {
   void set x (double v) {
     this._x = v;
   }
+    */
     
-  double? _y;  
-
+  double? y;
+    /*
   double get y { 
     if (this._y == null) {
       this._y = 0;
@@ -113,6 +127,7 @@ class XRangePointPartialFillOptions extends OptionFragment {
   void set y (double v) {
     this._y = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -122,32 +137,32 @@ class XRangePointPartialFillOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._amount != null) {  
-      buffer.writeAll(["\"amount\":", this._amount, ","], "");
+    if (this.amount != null) {  
+      buffer.writeAll(["\"amount\":", this.amount, ","], "");
     }
 
-    if (this._fill != null) {  
-      buffer.writeAll(["\"fill\":\`", this._fill, "\`,"], "");
+    if (this.fill != null) {  
+      buffer.writeAll(["\"fill\":\`", this.fill, "\`,"], "");
     }
 
-    if (this._height != null) {  
-      buffer.writeAll(["\"height\":", this._height, ","], "");
+    if (this.height != null) {  
+      buffer.writeAll(["\"height\":", this.height, ","], "");
     }
 
-    if (this._width != null) {  
-      buffer.writeAll(["\"width\":", this._width, ","], "");
+    if (this.width != null) {  
+      buffer.writeAll(["\"width\":", this.width, ","], "");
     }
 
-    if (this._r != null) {  
-      buffer.writeAll(["\"r\":", this._r, ","], "");
+    if (this.r != null) {  
+      buffer.writeAll(["\"r\":", this.r, ","], "");
     }
 
-    if (this._x != null) {  
-      buffer.writeAll(["\"x\":", this._x, ","], "");
+    if (this.x != null) {  
+      buffer.writeAll(["\"x\":", this.x, ","], "");
     }
 
-    if (this._y != null) {  
-      buffer.writeAll(["\"y\":", this._y, ","], "");
+    if (this.y != null) {  
+      buffer.writeAll(["\"y\":", this.y, ","], "");
     }
   }
 

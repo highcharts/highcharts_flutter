@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,11 @@ import 'OptionFragment.dart';
  * MockSeries 
  */
 class MockSeries extends OptionFragment {
-  MockSeries() : super();
-  bool? _visible;  
-
+  MockSeries( {
+    this.visible = null
+  }) : super();
+  bool? visible;
+    /*
   bool get visible { 
     if (this._visible == null) {
       this._visible = false;
@@ -36,6 +38,7 @@ class MockSeries extends OptionFragment {
   void set visible (bool v) {
     this._visible = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -51,8 +54,8 @@ class MockSeries extends OptionFragment {
 
     // NOTE: skip serialization of yAxis (type Axis is ignored)} 
 
-    if (this._visible != null) {  
-      buffer.writeAll(["\"visible\":", this._visible, ","], "");
+    if (this.visible != null) {  
+      buffer.writeAll(["\"visible\":", this.visible, ","], "");
     }
   }
 

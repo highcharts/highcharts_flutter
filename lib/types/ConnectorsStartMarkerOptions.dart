@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,21 @@ import 'OptionFragment.dart';
  * ConnectorsStartMarkerOptions 
  */
 class ConnectorsStartMarkerOptions extends OptionFragment {
-  ConnectorsStartMarkerOptions() : super();
-  String? _align;  
-
+  ConnectorsStartMarkerOptions( {
+    this.align = null,
+    this.color = null,
+    this.enabled = null,
+    this.height = null,
+    this.inside = null,
+    this.lineColor = null,
+    this.lineWidth = null,
+    this.radius = null,
+    this.symbol = null,
+    this.verticalAlign = null,
+    this.width = null
+  }) : super();
+  String? align;
+    /*
   String get align { 
     if (this._align == null) {
       this._align = "";
@@ -35,9 +47,10 @@ class ConnectorsStartMarkerOptions extends OptionFragment {
   void set align (String v) {
     this._align = v;
   }
+    */
     
-  String? _color;  
-
+  String? color;
+    /*
   String get color { 
     if (this._color == null) {
       this._color = "";
@@ -48,9 +61,10 @@ class ConnectorsStartMarkerOptions extends OptionFragment {
   void set color (String v) {
     this._color = v;
   }
+    */
     
-  bool? _enabled;  
-
+  bool? enabled;
+    /*
   bool get enabled { 
     if (this._enabled == null) {
       this._enabled = false;
@@ -61,9 +75,10 @@ class ConnectorsStartMarkerOptions extends OptionFragment {
   void set enabled (bool v) {
     this._enabled = v;
   }
+    */
     
-  double? _height;  
-
+  double? height;
+    /*
   double get height { 
     if (this._height == null) {
       this._height = 0;
@@ -74,9 +89,10 @@ class ConnectorsStartMarkerOptions extends OptionFragment {
   void set height (double v) {
     this._height = v;
   }
+    */
     
-  bool? _inside;  
-
+  bool? inside;
+    /*
   bool get inside { 
     if (this._inside == null) {
       this._inside = false;
@@ -87,9 +103,10 @@ class ConnectorsStartMarkerOptions extends OptionFragment {
   void set inside (bool v) {
     this._inside = v;
   }
+    */
     
-  String? _lineColor;  
-
+  String? lineColor;
+    /*
   String get lineColor { 
     if (this._lineColor == null) {
       this._lineColor = "";
@@ -100,9 +117,10 @@ class ConnectorsStartMarkerOptions extends OptionFragment {
   void set lineColor (String v) {
     this._lineColor = v;
   }
+    */
     
-  double? _lineWidth;  
-
+  double? lineWidth;
+    /*
   double get lineWidth { 
     if (this._lineWidth == null) {
       this._lineWidth = 0;
@@ -113,9 +131,10 @@ class ConnectorsStartMarkerOptions extends OptionFragment {
   void set lineWidth (double v) {
     this._lineWidth = v;
   }
+    */
     
-  double? _radius;  
-
+  double? radius;
+    /*
   double get radius { 
     if (this._radius == null) {
       this._radius = 0;
@@ -126,9 +145,10 @@ class ConnectorsStartMarkerOptions extends OptionFragment {
   void set radius (double v) {
     this._radius = v;
   }
+    */
     
-  String? _symbol;  
-
+  String? symbol;
+    /*
   String get symbol { 
     if (this._symbol == null) {
       this._symbol = "";
@@ -139,9 +159,10 @@ class ConnectorsStartMarkerOptions extends OptionFragment {
   void set symbol (String v) {
     this._symbol = v;
   }
+    */
     
-  String? _verticalAlign;  
-
+  String? verticalAlign;
+    /*
   String get verticalAlign { 
     if (this._verticalAlign == null) {
       this._verticalAlign = "";
@@ -152,9 +173,10 @@ class ConnectorsStartMarkerOptions extends OptionFragment {
   void set verticalAlign (String v) {
     this._verticalAlign = v;
   }
+    */
     
-  double? _width;  
-
+  double? width;
+    /*
   double get width { 
     if (this._width == null) {
       this._width = 0;
@@ -165,6 +187,7 @@ class ConnectorsStartMarkerOptions extends OptionFragment {
   void set width (double v) {
     this._width = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -174,48 +197,48 @@ class ConnectorsStartMarkerOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._align != null) {  
-      buffer.writeAll(["\"align\":\`", this._align, "\`,"], "");
+    if (this.align != null) {  
+      buffer.writeAll(["\"align\":\`", this.align, "\`,"], "");
     }
 
-    if (this._color != null) {  
-      buffer.writeAll(["\"color\":\`", this._color, "\`,"], "");
+    if (this.color != null) {  
+      buffer.writeAll(["\"color\":\`", this.color, "\`,"], "");
     }
 
-    if (this._enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this._enabled, ","], "");
+    if (this.enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
     }
 
-    if (this._height != null) {  
-      buffer.writeAll(["\"height\":", this._height, ","], "");
+    if (this.height != null) {  
+      buffer.writeAll(["\"height\":", this.height, ","], "");
     }
 
-    if (this._inside != null) {  
-      buffer.writeAll(["\"inside\":", this._inside, ","], "");
+    if (this.inside != null) {  
+      buffer.writeAll(["\"inside\":", this.inside, ","], "");
     }
 
-    if (this._lineColor != null) {  
-      buffer.writeAll(["\"lineColor\":\`", this._lineColor, "\`,"], "");
+    if (this.lineColor != null) {  
+      buffer.writeAll(["\"lineColor\":\`", this.lineColor, "\`,"], "");
     }
 
-    if (this._lineWidth != null) {  
-      buffer.writeAll(["\"lineWidth\":", this._lineWidth, ","], "");
+    if (this.lineWidth != null) {  
+      buffer.writeAll(["\"lineWidth\":", this.lineWidth, ","], "");
     }
 
-    if (this._radius != null) {  
-      buffer.writeAll(["\"radius\":", this._radius, ","], "");
+    if (this.radius != null) {  
+      buffer.writeAll(["\"radius\":", this.radius, ","], "");
     }
 
-    if (this._symbol != null) {  
-      buffer.writeAll(["\"symbol\":\`", this._symbol, "\`,"], "");
+    if (this.symbol != null) {  
+      buffer.writeAll(["\"symbol\":\`", this.symbol, "\`,"], "");
     }
 
-    if (this._verticalAlign != null) {  
-      buffer.writeAll(["\"verticalAlign\":\`", this._verticalAlign, "\`,"], "");
+    if (this.verticalAlign != null) {  
+      buffer.writeAll(["\"verticalAlign\":\`", this.verticalAlign, "\`,"], "");
     }
 
-    if (this._width != null) {  
-      buffer.writeAll(["\"width\":", this._width, ","], "");
+    if (this.width != null) {  
+      buffer.writeAll(["\"width\":", this.width, ","], "");
     }
   }
 

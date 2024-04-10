@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,14 @@ import 'OptionFragment.dart';
  * CellAttributes 
  */
 class CellAttributes extends Record {
-  CellAttributes() : super();
-  double? _x1;  
-
+  CellAttributes( {
+    this.x1 = null,
+    this.x2 = null,
+    this.y1 = null,
+    this.y2 = null
+  }) : super();
+  double? x1;
+    /*
   double get x1 { 
     if (this._x1 == null) {
       this._x1 = 0;
@@ -36,9 +41,10 @@ class CellAttributes extends Record {
   void set x1 (double v) {
     this._x1 = v;
   }
+    */
     
-  double? _x2;  
-
+  double? x2;
+    /*
   double get x2 { 
     if (this._x2 == null) {
       this._x2 = 0;
@@ -49,9 +55,10 @@ class CellAttributes extends Record {
   void set x2 (double v) {
     this._x2 = v;
   }
+    */
     
-  double? _y1;  
-
+  double? y1;
+    /*
   double get y1 { 
     if (this._y1 == null) {
       this._y1 = 0;
@@ -62,9 +69,10 @@ class CellAttributes extends Record {
   void set y1 (double v) {
     this._y1 = v;
   }
+    */
     
-  double? _y2;  
-
+  double? y2;
+    /*
   double get y2 { 
     if (this._y2 == null) {
       this._y2 = 0;
@@ -75,6 +83,7 @@ class CellAttributes extends Record {
   void set y2 (double v) {
     this._y2 = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -84,20 +93,20 @@ class CellAttributes extends Record {
     super.toJSONInner(buffer);
 
     
-    if (this._x1 != null) {  
-      buffer.writeAll(["\"x1\":", this._x1, ","], "");
+    if (this.x1 != null) {  
+      buffer.writeAll(["\"x1\":", this.x1, ","], "");
     }
 
-    if (this._x2 != null) {  
-      buffer.writeAll(["\"x2\":", this._x2, ","], "");
+    if (this.x2 != null) {  
+      buffer.writeAll(["\"x2\":", this.x2, ","], "");
     }
 
-    if (this._y1 != null) {  
-      buffer.writeAll(["\"y1\":", this._y1, ","], "");
+    if (this.y1 != null) {  
+      buffer.writeAll(["\"y1\":", this.y1, ","], "");
     }
 
-    if (this._y2 != null) {  
-      buffer.writeAll(["\"y2\":", this._y2, ","], "");
+    if (this.y2 != null) {  
+      buffer.writeAll(["\"y2\":", this.y2, ","], "");
     }
   }
 

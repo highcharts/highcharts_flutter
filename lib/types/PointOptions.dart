@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -28,7 +28,27 @@ import 'OptionFragment.dart';
  * PointOptions 
  */
 class PointOptions extends OptionFragment {
-  PointOptions() : super();
+  PointOptions( {
+    this.borderColor = null,
+    this.labelrank = null,
+    this.value = null,
+    this.className = null,
+    this.color = null,
+    this.colorIndex = null,
+    this.drilldown = null,
+    this.id = null,
+    this.index = null,
+    this.legendIndex = null,
+    this.name = null,
+    this.selected = null,
+    this.visible = null,
+    this.x = null,
+    this.y = null,
+    this.collapsed = null,
+    this.seriesIndex = null,
+    this.lat = null,
+    this.lon = null
+  }) : super();
   /**
    * An array specifying which option maps to which key in the data point
    * array. This makes it convenient to work with unstructured data arrays
@@ -43,8 +63,8 @@ class PointOptions extends OptionFragment {
    * 
    * Defaults to '#cccccc'. 
       */
-  String? _borderColor;  
-
+  String? borderColor;
+    /*
   String get borderColor { 
     if (this._borderColor == null) {
       this._borderColor = "";
@@ -55,6 +75,7 @@ class PointOptions extends OptionFragment {
   void set borderColor (String v) {
     this._borderColor = v;
   }
+    */
     
   /**
    * Options for the series data labels, appearing next to each data
@@ -68,8 +89,8 @@ class PointOptions extends OptionFragment {
    * ([see example](https://www.highcharts.com/samples/highcharts/css/series-datalabels)).  
       */
   List<DataLabelOptions>? dataLabels; // DataLabelOptions
-  double? _labelrank;  
-
+  double? labelrank;
+    /*
   double get labelrank { 
     if (this._labelrank == null) {
       this._labelrank = 0;
@@ -80,9 +101,10 @@ class PointOptions extends OptionFragment {
   void set labelrank (double v) {
     this._labelrank = v;
   }
+    */
     
-  double? _value;  
-
+  double? value;
+    /*
   double get value { 
     if (this._value == null) {
       this._value = 0;
@@ -93,6 +115,7 @@ class PointOptions extends OptionFragment {
   void set value (double v) {
     this._value = v;
   }
+    */
     
   /**
    * An additional class name to apply to the series' graphical elements.
@@ -100,8 +123,8 @@ class PointOptions extends OptionFragment {
    * element. Changes to the series' color will also be reflected in a
    * chart's legend and tooltip.  
       */
-  String? _className;  
-
+  String? className;
+    /*
   String get className { 
     if (this._className == null) {
       this._className = "";
@@ -112,6 +135,7 @@ class PointOptions extends OptionFragment {
   void set className (String v) {
     this._className = v;
   }
+    */
     
   /**
    * The main color of the series. In line type series it applies to the
@@ -126,8 +150,8 @@ class PointOptions extends OptionFragment {
    * `.highcharts-series-{n}` class, or individual classes given by the
    * `className` option.  
       */
-  String? _color;  
-
+  String? color;
+    /*
   String get color { 
     if (this._color == null) {
       this._color = "";
@@ -138,6 +162,7 @@ class PointOptions extends OptionFragment {
   void set color (String v) {
     this._color = v;
   }
+    */
     
   /**
    * Styled mode only. A specific color index to use for the series, so its
@@ -146,8 +171,8 @@ class PointOptions extends OptionFragment {
    * Since v11, CSS variables on the form `--highcharts-color-{n}` make
    * changing the color scheme very convenient.  
       */
-  double? _colorIndex;  
-
+  double? colorIndex;
+    /*
   double get colorIndex { 
     if (this._colorIndex == null) {
       this._colorIndex = 0;
@@ -158,11 +183,12 @@ class PointOptions extends OptionFragment {
   void set colorIndex (double v) {
     this._colorIndex = v;
   }
+    */
     
   // NOTE: custom skipped - type AnyRecord is ignored in gen
 
-  String? _drilldown;  
-
+  String? drilldown;
+    /*
   String get drilldown { 
     if (this._drilldown == null) {
       this._drilldown = "";
@@ -173,14 +199,15 @@ class PointOptions extends OptionFragment {
   void set drilldown (String v) {
     this._drilldown = v;
   }
+    */
     
   /**
    * General event handlers for the series items. These event hooks can
    * also be attached to the series at run time using the
    * `Highcharts.addEvent` function.  
       */
-  PointEventsOptions? _events;  
-
+  PointEventsOptions? events;
+    /*
   PointEventsOptions get events { 
     if (this._events == null) {
       this._events = PointEventsOptions();
@@ -191,9 +218,10 @@ class PointOptions extends OptionFragment {
   void set events (PointEventsOptions v) {
     this._events = v;
   }
+    */
     
-  String? _id;  
-
+  String? id;
+    /*
   String get id { 
     if (this._id == null) {
       this._id = "";
@@ -204,9 +232,10 @@ class PointOptions extends OptionFragment {
   void set id (String v) {
     this._id = v;
   }
+    */
     
-  double? _index;  
-
+  double? index;
+    /*
   double get index { 
     if (this._index == null) {
       this._index = 0;
@@ -217,9 +246,10 @@ class PointOptions extends OptionFragment {
   void set index (double v) {
     this._index = v;
   }
+    */
     
-  double? _legendIndex;  
-
+  double? legendIndex;
+    /*
   double get legendIndex { 
     if (this._legendIndex == null) {
       this._legendIndex = 0;
@@ -230,6 +260,7 @@ class PointOptions extends OptionFragment {
   void set legendIndex (double v) {
     this._legendIndex = v;
   }
+    */
     
   /**
    * Options for the point markers of line and scatter-like series. Properties
@@ -241,8 +272,8 @@ class PointOptions extends OptionFragment {
    * In styled mode, the markers can be styled with the `.highcharts-point`,
    * `.highcharts-point-hover` and `.highcharts-point-select` class names.  
       */
-  PointMarkerOptions? _marker;  
-
+  PointMarkerOptions? marker;
+    /*
   PointMarkerOptions get marker { 
     if (this._marker == null) {
       this._marker = PointMarkerOptions();
@@ -253,9 +284,10 @@ class PointOptions extends OptionFragment {
   void set marker (PointMarkerOptions v) {
     this._marker = v;
   }
+    */
     
-  String? _name;  
-
+  String? name;
+    /*
   String get name { 
     if (this._name == null) {
       this._name = "";
@@ -266,6 +298,7 @@ class PointOptions extends OptionFragment {
   void set name (String v) {
     this._name = v;
   }
+    */
     
   /**
    * Whether to select the series initially. If `showCheckbox` is true,
@@ -274,8 +307,8 @@ class PointOptions extends OptionFragment {
    * 
    * Defaults to 'false'. 
       */
-  bool? _selected;  
-
+  bool? selected;
+    /*
   bool get selected { 
     if (this._selected == null) {
       this._selected = false;
@@ -286,6 +319,7 @@ class PointOptions extends OptionFragment {
   void set selected (bool v) {
     this._selected = v;
   }
+    */
     
   // NOTE: states skipped - type Generic is ignored in gen
 
@@ -294,8 +328,8 @@ class PointOptions extends OptionFragment {
    * 
    * Defaults to 'true'. 
       */
-  bool? _visible;  
-
+  bool? visible;
+    /*
   bool get visible { 
     if (this._visible == null) {
       this._visible = false;
@@ -306,9 +340,10 @@ class PointOptions extends OptionFragment {
   void set visible (bool v) {
     this._visible = v;
   }
+    */
     
-  double? _x;  
-
+  double? x;
+    /*
   double get x { 
     if (this._x == null) {
       this._x = 0;
@@ -319,9 +354,10 @@ class PointOptions extends OptionFragment {
   void set x (double v) {
     this._x = v;
   }
+    */
     
-  double? _y;  
-
+  double? y;
+    /*
   double get y { 
     if (this._y == null) {
       this._y = 0;
@@ -332,12 +368,13 @@ class PointOptions extends OptionFragment {
   void set y (double v) {
     this._y = v;
   }
+    */
     
   /**
    * Accessibility options for a series.  
       */
-  PointAccessibilityOptionsObject? _accessibility;  
-
+  PointAccessibilityOptionsObject? accessibility;
+    /*
   PointAccessibilityOptionsObject get accessibility { 
     if (this._accessibility == null) {
       this._accessibility = PointAccessibilityOptionsObject();
@@ -348,13 +385,14 @@ class PointOptions extends OptionFragment {
   void set accessibility (PointAccessibilityOptionsObject v) {
     this._accessibility = v;
   }
+    */
     
   /**
    * Override Pathfinder connector options for a series. Requires Highcharts Gantt
    * to be loaded.  
       */
-  ConnectorsOptions? _connectors;  
-
+  ConnectorsOptions? connectors;
+    /*
   ConnectorsOptions get connectors { 
     if (this._connectors == null) {
       this._connectors = ConnectorsOptions();
@@ -365,9 +403,10 @@ class PointOptions extends OptionFragment {
   void set connectors (ConnectorsOptions v) {
     this._connectors = v;
   }
+    */
     
-  bool? _collapsed;  
-
+  bool? collapsed;
+    /*
   bool get collapsed { 
     if (this._collapsed == null) {
       this._collapsed = false;
@@ -378,9 +417,10 @@ class PointOptions extends OptionFragment {
   void set collapsed (bool v) {
     this._collapsed = v;
   }
+    */
     
-  double? _seriesIndex;  
-
+  double? seriesIndex;
+    /*
   double get seriesIndex { 
     if (this._seriesIndex == null) {
       this._seriesIndex = 0;
@@ -391,6 +431,7 @@ class PointOptions extends OptionFragment {
   void set seriesIndex (double v) {
     this._seriesIndex = v;
   }
+    */
     
   /**
    * The draggable-points module allows points to be moved around or modified in
@@ -400,8 +441,8 @@ class PointOptions extends OptionFragment {
    * [point.drag](plotOptions.series.point.events.drag) and
    * [point.drop](plotOptions.series.point.events.drop).  
       */
-  DragDropOptions? _dragDrop;  
-
+  DragDropOptions? dragDrop;
+    /*
   DragDropOptions get dragDrop { 
     if (this._dragDrop == null) {
       this._dragDrop = DragDropOptions();
@@ -412,9 +453,10 @@ class PointOptions extends OptionFragment {
   void set dragDrop (DragDropOptions v) {
     this._dragDrop = v;
   }
+    */
     
-  double? _lat;  
-
+  double? lat;
+    /*
   double get lat { 
     if (this._lat == null) {
       this._lat = 0;
@@ -425,9 +467,10 @@ class PointOptions extends OptionFragment {
   void set lat (double v) {
     this._lat = v;
   }
+    */
     
-  double? _lon;  
-
+  double? lon;
+    /*
   double get lon { 
     if (this._lon == null) {
       this._lon = 0;
@@ -438,6 +481,7 @@ class PointOptions extends OptionFragment {
   void set lon (double v) {
     this._lon = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -449,112 +493,112 @@ class PointOptions extends OptionFragment {
     
     // NOTE: skip serialization of keys (type string[] is ignored)} 
 
-    if (this._borderColor != null) {  
-      buffer.writeAll(["\"borderColor\":\`", this._borderColor, "\`,"], "");
+    if (this.borderColor != null) {  
+      buffer.writeAll(["\"borderColor\":\`", this.borderColor, "\`,"], "");
     }
 
     // NOTE: skip serialization of dataLabels (type DataLabelOptions[] is ignored)} 
 
-    if (this._labelrank != null) {  
-      buffer.writeAll(["\"labelrank\":", this._labelrank, ","], "");
+    if (this.labelrank != null) {  
+      buffer.writeAll(["\"labelrank\":", this.labelrank, ","], "");
     }
 
-    if (this._value != null) {  
-      buffer.writeAll(["\"value\":", this._value, ","], "");
+    if (this.value != null) {  
+      buffer.writeAll(["\"value\":", this.value, ","], "");
     }
 
-    if (this._className != null) {  
-      buffer.writeAll(["\"className\":\`", this._className, "\`,"], "");
+    if (this.className != null) {  
+      buffer.writeAll(["\"className\":\`", this.className, "\`,"], "");
     }
 
-    if (this._color != null) {  
-      buffer.writeAll(["\"color\":\`", this._color, "\`,"], "");
+    if (this.color != null) {  
+      buffer.writeAll(["\"color\":\`", this.color, "\`,"], "");
     }
 
-    if (this._colorIndex != null) {  
-      buffer.writeAll(["\"colorIndex\":", this._colorIndex, ","], "");
+    if (this.colorIndex != null) {  
+      buffer.writeAll(["\"colorIndex\":", this.colorIndex, ","], "");
     }
 
     // NOTE: skip serialization of custom (type AnyRecord is ignored)} 
 
-    if (this._drilldown != null) {  
-      buffer.writeAll(["\"drilldown\":\`", this._drilldown, "\`,"], "");
+    if (this.drilldown != null) {  
+      buffer.writeAll(["\"drilldown\":\`", this.drilldown, "\`,"], "");
     }
 
-    if (this._events != null) {  
-      buffer.writeAll(["\"events\":", this._events?.toJSON(), ","], "");
+    if (this.events != null) {  
+      buffer.writeAll(["\"events\":", this.events?.toJSON(), ","], "");
     }
 
-    if (this._id != null) {  
-      buffer.writeAll(["\"id\":\`", this._id, "\`,"], "");
+    if (this.id != null) {  
+      buffer.writeAll(["\"id\":\`", this.id, "\`,"], "");
     }
 
-    if (this._index != null) {  
-      buffer.writeAll(["\"index\":", this._index, ","], "");
+    if (this.index != null) {  
+      buffer.writeAll(["\"index\":", this.index, ","], "");
     }
 
-    if (this._labelrank != null) {  
-      buffer.writeAll(["\"labelrank\":", this._labelrank, ","], "");
+    if (this.labelrank != null) {  
+      buffer.writeAll(["\"labelrank\":", this.labelrank, ","], "");
     }
 
-    if (this._legendIndex != null) {  
-      buffer.writeAll(["\"legendIndex\":", this._legendIndex, ","], "");
+    if (this.legendIndex != null) {  
+      buffer.writeAll(["\"legendIndex\":", this.legendIndex, ","], "");
     }
 
-    if (this._marker != null) {  
-      buffer.writeAll(["\"marker\":", this._marker?.toJSON(), ","], "");
+    if (this.marker != null) {  
+      buffer.writeAll(["\"marker\":", this.marker?.toJSON(), ","], "");
     }
 
-    if (this._name != null) {  
-      buffer.writeAll(["\"name\":\`", this._name, "\`,"], "");
+    if (this.name != null) {  
+      buffer.writeAll(["\"name\":\`", this.name, "\`,"], "");
     }
 
-    if (this._selected != null) {  
-      buffer.writeAll(["\"selected\":", this._selected, ","], "");
+    if (this.selected != null) {  
+      buffer.writeAll(["\"selected\":", this.selected, ","], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 
 
-    if (this._visible != null) {  
-      buffer.writeAll(["\"visible\":", this._visible, ","], "");
+    if (this.visible != null) {  
+      buffer.writeAll(["\"visible\":", this.visible, ","], "");
     }
 
-    if (this._x != null) {  
-      buffer.writeAll(["\"x\":", this._x, ","], "");
+    if (this.x != null) {  
+      buffer.writeAll(["\"x\":", this.x, ","], "");
     }
 
-    if (this._y != null) {  
-      buffer.writeAll(["\"y\":", this._y, ","], "");
+    if (this.y != null) {  
+      buffer.writeAll(["\"y\":", this.y, ","], "");
     }
 
-    if (this._accessibility != null) {  
-      buffer.writeAll(["\"accessibility\":", this._accessibility?.toJSON(), ","], "");
+    if (this.accessibility != null) {  
+      buffer.writeAll(["\"accessibility\":", this.accessibility?.toJSON(), ","], "");
     }
 
     // NOTE: skip serialization of connect (type GanttDependencyOptions is ignored)} 
 
-    if (this._connectors != null) {  
-      buffer.writeAll(["\"connectors\":", this._connectors?.toJSON(), ","], "");
+    if (this.connectors != null) {  
+      buffer.writeAll(["\"connectors\":", this.connectors?.toJSON(), ","], "");
     }
 
-    if (this._collapsed != null) {  
-      buffer.writeAll(["\"collapsed\":", this._collapsed, ","], "");
+    if (this.collapsed != null) {  
+      buffer.writeAll(["\"collapsed\":", this.collapsed, ","], "");
     }
 
-    if (this._seriesIndex != null) {  
-      buffer.writeAll(["\"seriesIndex\":", this._seriesIndex, ","], "");
+    if (this.seriesIndex != null) {  
+      buffer.writeAll(["\"seriesIndex\":", this.seriesIndex, ","], "");
     }
 
-    if (this._dragDrop != null) {  
-      buffer.writeAll(["\"dragDrop\":", this._dragDrop?.toJSON(), ","], "");
+    if (this.dragDrop != null) {  
+      buffer.writeAll(["\"dragDrop\":", this.dragDrop?.toJSON(), ","], "");
     }
 
-    if (this._lat != null) {  
-      buffer.writeAll(["\"lat\":", this._lat, ","], "");
+    if (this.lat != null) {  
+      buffer.writeAll(["\"lat\":", this.lat, ","], "");
     }
 
-    if (this._lon != null) {  
-      buffer.writeAll(["\"lon\":", this._lon, ","], "");
+    if (this.lon != null) {  
+      buffer.writeAll(["\"lon\":", this.lon, ","], "");
     }
   }
 

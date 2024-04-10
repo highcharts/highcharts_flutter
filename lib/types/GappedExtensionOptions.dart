@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,11 @@ import 'OptionFragment.dart';
  * GappedExtensionOptions 
  */
 class GappedExtensionOptions extends OptionFragment {
-  GappedExtensionOptions() : super();
-  double? _gapSize;  
-
+  GappedExtensionOptions( {
+    this.gapSize = null
+  }) : super();
+  double? gapSize;
+    /*
   double get gapSize { 
     if (this._gapSize == null) {
       this._gapSize = 0;
@@ -35,6 +37,7 @@ class GappedExtensionOptions extends OptionFragment {
   void set gapSize (double v) {
     this._gapSize = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -44,8 +47,8 @@ class GappedExtensionOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._gapSize != null) {  
-      buffer.writeAll(["\"gapSize\":", this._gapSize, ","], "");
+    if (this.gapSize != null) {  
+      buffer.writeAll(["\"gapSize\":", this.gapSize, ","], "");
     }
   }
 

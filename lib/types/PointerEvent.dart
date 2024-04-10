@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,18 @@ import 'OptionFragment.dart';
  * PointerEvent 
  */
 class PointerEvent extends OptionFragment {
-  PointerEvent() : super();
-  bool? _accumulate;  
-
+  PointerEvent( {
+    this.accumulate = null,
+    this.chartX = null,
+    this.chartY = null,
+    this.lat = null,
+    this.lon = null,
+    this.activeAnnotation = null,
+    this.deltaY = null,
+    this.wheelDelta = null
+  }) : super();
+  bool? accumulate;
+    /*
   bool get accumulate { 
     if (this._accumulate == null) {
       this._accumulate = false;
@@ -36,9 +45,10 @@ class PointerEvent extends OptionFragment {
   void set accumulate (bool v) {
     this._accumulate = v;
   }
+    */
     
-  double? _chartX;  
-
+  double? chartX;
+    /*
   double get chartX { 
     if (this._chartX == null) {
       this._chartX = 0;
@@ -49,9 +59,10 @@ class PointerEvent extends OptionFragment {
   void set chartX (double v) {
     this._chartX = v;
   }
+    */
     
-  double? _chartY;  
-
+  double? chartY;
+    /*
   double get chartY { 
     if (this._chartY == null) {
       this._chartY = 0;
@@ -62,9 +73,10 @@ class PointerEvent extends OptionFragment {
   void set chartY (double v) {
     this._chartY = v;
   }
+    */
     
-  double? _lat;  
-
+  double? lat;
+    /*
   double get lat { 
     if (this._lat == null) {
       this._lat = 0;
@@ -75,9 +87,10 @@ class PointerEvent extends OptionFragment {
   void set lat (double v) {
     this._lat = v;
   }
+    */
     
-  double? _lon;  
-
+  double? lon;
+    /*
   double get lon { 
     if (this._lon == null) {
       this._lon = 0;
@@ -88,9 +101,10 @@ class PointerEvent extends OptionFragment {
   void set lon (double v) {
     this._lon = v;
   }
+    */
     
-  bool? _activeAnnotation;  
-
+  bool? activeAnnotation;
+    /*
   bool get activeAnnotation { 
     if (this._activeAnnotation == null) {
       this._activeAnnotation = false;
@@ -101,9 +115,10 @@ class PointerEvent extends OptionFragment {
   void set activeAnnotation (bool v) {
     this._activeAnnotation = v;
   }
+    */
     
-  double? _deltaY;  
-
+  double? deltaY;
+    /*
   double get deltaY { 
     if (this._deltaY == null) {
       this._deltaY = 0;
@@ -114,9 +129,10 @@ class PointerEvent extends OptionFragment {
   void set deltaY (double v) {
     this._deltaY = v;
   }
+    */
     
-  double? _wheelDelta;  
-
+  double? wheelDelta;
+    /*
   double get wheelDelta { 
     if (this._wheelDelta == null) {
       this._wheelDelta = 0;
@@ -127,6 +143,7 @@ class PointerEvent extends OptionFragment {
   void set wheelDelta (double v) {
     this._wheelDelta = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -136,24 +153,24 @@ class PointerEvent extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._accumulate != null) {  
-      buffer.writeAll(["\"accumulate\":", this._accumulate, ","], "");
+    if (this.accumulate != null) {  
+      buffer.writeAll(["\"accumulate\":", this.accumulate, ","], "");
     }
 
-    if (this._chartX != null) {  
-      buffer.writeAll(["\"chartX\":", this._chartX, ","], "");
+    if (this.chartX != null) {  
+      buffer.writeAll(["\"chartX\":", this.chartX, ","], "");
     }
 
-    if (this._chartY != null) {  
-      buffer.writeAll(["\"chartY\":", this._chartY, ","], "");
+    if (this.chartY != null) {  
+      buffer.writeAll(["\"chartY\":", this.chartY, ","], "");
     }
 
-    if (this._lat != null) {  
-      buffer.writeAll(["\"lat\":", this._lat, ","], "");
+    if (this.lat != null) {  
+      buffer.writeAll(["\"lat\":", this.lat, ","], "");
     }
 
-    if (this._lon != null) {  
-      buffer.writeAll(["\"lon\":", this._lon, ","], "");
+    if (this.lon != null) {  
+      buffer.writeAll(["\"lon\":", this.lon, ","], "");
     }
 
     // NOTE: skip serialization of point (type Point is ignored)} 
@@ -164,16 +181,16 @@ class PointerEvent extends OptionFragment {
 
     // NOTE: skip serialization of yAxis (type AxisCoordinateObject[] is ignored)} 
 
-    if (this._activeAnnotation != null) {  
-      buffer.writeAll(["\"activeAnnotation\":", this._activeAnnotation, ","], "");
+    if (this.activeAnnotation != null) {  
+      buffer.writeAll(["\"activeAnnotation\":", this.activeAnnotation, ","], "");
     }
 
-    if (this._deltaY != null) {  
-      buffer.writeAll(["\"deltaY\":", this._deltaY, ","], "");
+    if (this.deltaY != null) {  
+      buffer.writeAll(["\"deltaY\":", this.deltaY, ","], "");
     }
 
-    if (this._wheelDelta != null) {  
-      buffer.writeAll(["\"wheelDelta\":", this._wheelDelta, ","], "");
+    if (this.wheelDelta != null) {  
+      buffer.writeAll(["\"wheelDelta\":", this.wheelDelta, ","], "");
     }
   }
 

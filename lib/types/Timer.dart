@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,12 @@ import 'OptionFragment.dart';
  * Timer 
  */
 class Timer extends OptionFragment {
-  Timer() : super();
-  String? _prop;  
-
+  Timer( {
+    this.prop = null,
+    this.stopped = null
+  }) : super();
+  String? prop;
+    /*
   String get prop { 
     if (this._prop == null) {
       this._prop = "";
@@ -36,9 +39,10 @@ class Timer extends OptionFragment {
   void set prop (String v) {
     this._prop = v;
   }
+    */
     
-  bool? _stopped;  
-
+  bool? stopped;
+    /*
   bool get stopped { 
     if (this._stopped == null) {
       this._stopped = false;
@@ -49,6 +53,7 @@ class Timer extends OptionFragment {
   void set stopped (bool v) {
     this._stopped = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -60,12 +65,12 @@ class Timer extends OptionFragment {
     
     // NOTE: skip serialization of elem (type SVGElement is ignored)} 
 
-    if (this._prop != null) {  
-      buffer.writeAll(["\"prop\":\`", this._prop, "\`,"], "");
+    if (this.prop != null) {  
+      buffer.writeAll(["\"prop\":\`", this.prop, "\`,"], "");
     }
 
-    if (this._stopped != null) {  
-      buffer.writeAll(["\"stopped\":", this._stopped, ","], "");
+    if (this.stopped != null) {  
+      buffer.writeAll(["\"stopped\":", this.stopped, ","], "");
     }
   }
 

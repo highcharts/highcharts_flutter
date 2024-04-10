@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,11 @@ import 'OptionFragment.dart';
  * WGLNode 
  */
 class WGLNode extends OptionFragment {
-  WGLNode() : super();
-  double? _levelDynamic;  
-
+  WGLNode( {
+    this.levelDynamic = null
+  }) : super();
+  double? levelDynamic;
+    /*
   double get levelDynamic { 
     if (this._levelDynamic == null) {
       this._levelDynamic = 0;
@@ -35,6 +37,7 @@ class WGLNode extends OptionFragment {
   void set levelDynamic (double v) {
     this._levelDynamic = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -44,8 +47,8 @@ class WGLNode extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._levelDynamic != null) {  
-      buffer.writeAll(["\"levelDynamic\":", this._levelDynamic, ","], "");
+    if (this.levelDynamic != null) {  
+      buffer.writeAll(["\"levelDynamic\":", this.levelDynamic, ","], "");
     }
   }
 

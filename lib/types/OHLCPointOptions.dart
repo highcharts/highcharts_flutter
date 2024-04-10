@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,11 @@ import 'OptionFragment.dart';
  * OHLCPointOptions 
  */
 class OHLCPointOptions extends HLCPointOptions {
-  OHLCPointOptions() : super();
-  String? _upColor;  
-
+  OHLCPointOptions( {
+    this.upColor = null
+  }) : super();
+  String? upColor;
+    /*
   String get upColor { 
     if (this._upColor == null) {
       this._upColor = "";
@@ -36,6 +38,7 @@ class OHLCPointOptions extends HLCPointOptions {
   void set upColor (String v) {
     this._upColor = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -45,8 +48,8 @@ class OHLCPointOptions extends HLCPointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._upColor != null) {  
-      buffer.writeAll(["\"upColor\":\`", this._upColor, "\`,"], "");
+    if (this.upColor != null) {  
+      buffer.writeAll(["\"upColor\":\`", this.upColor, "\`,"], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,13 @@ import 'OptionFragment.dart';
  * MIDIEvent 
  */
 class MIDIEvent extends OptionFragment {
-  MIDIEvent() : super();
-  double? _timeMS;  
-
+  MIDIEvent( {
+    this.timeMS = null,
+    this.type = null,
+    this.data = null
+  }) : super();
+  double? timeMS;
+    /*
   double get timeMS { 
     if (this._timeMS == null) {
       this._timeMS = 0;
@@ -35,9 +39,10 @@ class MIDIEvent extends OptionFragment {
   void set timeMS (double v) {
     this._timeMS = v;
   }
+    */
     
-  String? _type;  
-
+  String? type;
+    /*
   String get type { 
     if (this._type == null) {
       this._type = "";
@@ -48,6 +53,7 @@ class MIDIEvent extends OptionFragment {
   void set type (String v) {
     this._type = v;
   }
+    */
     
   List<double>? data; // double
 
@@ -58,12 +64,12 @@ class MIDIEvent extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._timeMS != null) {  
-      buffer.writeAll(["\"timeMS\":", this._timeMS, ","], "");
+    if (this.timeMS != null) {  
+      buffer.writeAll(["\"timeMS\":", this.timeMS, ","], "");
     }
 
-    if (this._type != null) {  
-      buffer.writeAll(["\"type\":\`", this._type, "\`,"], "");
+    if (this.type != null) {  
+      buffer.writeAll(["\"type\":\`", this.type, "\`,"], "");
     }
 
     // NOTE: skip serialization of data (type number is ignored)} 

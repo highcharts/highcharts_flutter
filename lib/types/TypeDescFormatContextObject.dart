@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,13 @@ import 'OptionFragment.dart';
  * TypeDescFormatContextObject 
  */
 class TypeDescFormatContextObject extends OptionFragment {
-  TypeDescFormatContextObject() : super();
-  String? _mapTitle;  
-
+  TypeDescFormatContextObject( {
+    this.mapTitle = null,
+    this.numSeries = null,
+    this.numPoints = null
+  }) : super();
+  String? mapTitle;
+    /*
   String get mapTitle { 
     if (this._mapTitle == null) {
       this._mapTitle = "";
@@ -36,9 +40,10 @@ class TypeDescFormatContextObject extends OptionFragment {
   void set mapTitle (String v) {
     this._mapTitle = v;
   }
+    */
     
-  double? _numSeries;  
-
+  double? numSeries;
+    /*
   double get numSeries { 
     if (this._numSeries == null) {
       this._numSeries = 0;
@@ -49,9 +54,10 @@ class TypeDescFormatContextObject extends OptionFragment {
   void set numSeries (double v) {
     this._numSeries = v;
   }
+    */
     
-  double? _numPoints;  
-
+  double? numPoints;
+    /*
   double get numPoints { 
     if (this._numPoints == null) {
       this._numPoints = 0;
@@ -62,6 +68,7 @@ class TypeDescFormatContextObject extends OptionFragment {
   void set numPoints (double v) {
     this._numPoints = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -73,16 +80,16 @@ class TypeDescFormatContextObject extends OptionFragment {
     
     // NOTE: skip serialization of chart (type Chart is ignored)} 
 
-    if (this._mapTitle != null) {  
-      buffer.writeAll(["\"mapTitle\":\`", this._mapTitle, "\`,"], "");
+    if (this.mapTitle != null) {  
+      buffer.writeAll(["\"mapTitle\":\`", this.mapTitle, "\`,"], "");
     }
 
-    if (this._numSeries != null) {  
-      buffer.writeAll(["\"numSeries\":", this._numSeries, ","], "");
+    if (this.numSeries != null) {  
+      buffer.writeAll(["\"numSeries\":", this.numSeries, ","], "");
     }
 
-    if (this._numPoints != null) {  
-      buffer.writeAll(["\"numPoints\":", this._numPoints, ","], "");
+    if (this.numPoints != null) {  
+      buffer.writeAll(["\"numPoints\":", this.numPoints, ","], "");
     }
   }
 

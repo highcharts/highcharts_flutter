@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,11 @@ import 'OptionFragment.dart';
  * WGLTextureObject 
  */
 class WGLTextureObject extends OptionFragment {
-  WGLTextureObject() : super();
-  bool? _isReady;  
-
+  WGLTextureObject( {
+    this.isReady = null
+  }) : super();
+  bool? isReady;
+    /*
   bool get isReady { 
     if (this._isReady == null) {
       this._isReady = false;
@@ -36,6 +38,7 @@ class WGLTextureObject extends OptionFragment {
   void set isReady (bool v) {
     this._isReady = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -45,8 +48,8 @@ class WGLTextureObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._isReady != null) {  
-      buffer.writeAll(["\"isReady\":", this._isReady, ","], "");
+    if (this.isReady != null) {  
+      buffer.writeAll(["\"isReady\":", this.isReady, ","], "");
     }
 
     // NOTE: skip serialization of texture (type HTMLCanvasElement is ignored)} 

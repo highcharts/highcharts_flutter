@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -24,7 +24,11 @@ import 'OptionFragment.dart';
  * TimelineSeriesOptions 
  */
 class TimelineSeriesOptions extends LineSeriesOptions {
-  TimelineSeriesOptions() : super();
+  TimelineSeriesOptions( {
+    this.ignoreHiddenPoint = null,
+    this.radius = null,
+    this.radiusPlus = null
+  }) : super();
   /**
    * Options for the series data labels, appearing next to each data
    * point.
@@ -38,8 +42,8 @@ class TimelineSeriesOptions extends LineSeriesOptions {
       */
   /** NOTE: extextdataLabels is skipped here for now, as it overrides the base type. */
 
-  bool? _ignoreHiddenPoint;  
-
+  bool? ignoreHiddenPoint;
+    /*
   bool get ignoreHiddenPoint { 
     if (this._ignoreHiddenPoint == null) {
       this._ignoreHiddenPoint = false;
@@ -50,9 +54,10 @@ class TimelineSeriesOptions extends LineSeriesOptions {
   void set ignoreHiddenPoint (bool v) {
     this._ignoreHiddenPoint = v;
   }
+    */
     
-  double? _radius;  
-
+  double? radius;
+    /*
   double get radius { 
     if (this._radius == null) {
       this._radius = 0;
@@ -63,9 +68,10 @@ class TimelineSeriesOptions extends LineSeriesOptions {
   void set radius (double v) {
     this._radius = v;
   }
+    */
     
-  double? _radiusPlus;  
-
+  double? radiusPlus;
+    /*
   double get radiusPlus { 
     if (this._radiusPlus == null) {
       this._radiusPlus = 0;
@@ -76,6 +82,7 @@ class TimelineSeriesOptions extends LineSeriesOptions {
   void set radiusPlus (double v) {
     this._radiusPlus = v;
   }
+    */
     
   // NOTE: states skipped - type Generic is ignored in gen
 
@@ -91,16 +98,16 @@ class TimelineSeriesOptions extends LineSeriesOptions {
 
     // NOTE: skip serialization of dataLabels (type TimelineDataLabelOptions is ignored)} 
 
-    if (this._ignoreHiddenPoint != null) {  
-      buffer.writeAll(["\"ignoreHiddenPoint\":", this._ignoreHiddenPoint, ","], "");
+    if (this.ignoreHiddenPoint != null) {  
+      buffer.writeAll(["\"ignoreHiddenPoint\":", this.ignoreHiddenPoint, ","], "");
     }
 
-    if (this._radius != null) {  
-      buffer.writeAll(["\"radius\":", this._radius, ","], "");
+    if (this.radius != null) {  
+      buffer.writeAll(["\"radius\":", this.radius, ","], "");
     }
 
-    if (this._radiusPlus != null) {  
-      buffer.writeAll(["\"radiusPlus\":", this._radiusPlus, ","], "");
+    if (this.radiusPlus != null) {  
+      buffer.writeAll(["\"radiusPlus\":", this.radiusPlus, ","], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,13 @@ import 'OptionFragment.dart';
  * AccessibilitySeriesOptions 
  */
 class AccessibilitySeriesOptions extends OptionFragment {
-  AccessibilitySeriesOptions() : super();
-  String? _descriptionFormat;  
-
+  AccessibilitySeriesOptions( {
+    this.descriptionFormat = null,
+    this.describeSingleSeries = null,
+    this.pointDescriptionEnabledThreshold = null
+  }) : super();
+  String? descriptionFormat;
+    /*
   String get descriptionFormat { 
     if (this._descriptionFormat == null) {
       this._descriptionFormat = "";
@@ -35,9 +39,10 @@ class AccessibilitySeriesOptions extends OptionFragment {
   void set descriptionFormat (String v) {
     this._descriptionFormat = v;
   }
+    */
     
-  bool? _describeSingleSeries;  
-
+  bool? describeSingleSeries;
+    /*
   bool get describeSingleSeries { 
     if (this._describeSingleSeries == null) {
       this._describeSingleSeries = false;
@@ -48,9 +53,10 @@ class AccessibilitySeriesOptions extends OptionFragment {
   void set describeSingleSeries (bool v) {
     this._describeSingleSeries = v;
   }
+    */
     
-  double? _pointDescriptionEnabledThreshold;  
-
+  double? pointDescriptionEnabledThreshold;
+    /*
   double get pointDescriptionEnabledThreshold { 
     if (this._pointDescriptionEnabledThreshold == null) {
       this._pointDescriptionEnabledThreshold = 0;
@@ -61,6 +67,7 @@ class AccessibilitySeriesOptions extends OptionFragment {
   void set pointDescriptionEnabledThreshold (double v) {
     this._pointDescriptionEnabledThreshold = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -70,16 +77,16 @@ class AccessibilitySeriesOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._descriptionFormat != null) {  
-      buffer.writeAll(["\"descriptionFormat\":\`", this._descriptionFormat, "\`,"], "");
+    if (this.descriptionFormat != null) {  
+      buffer.writeAll(["\"descriptionFormat\":\`", this.descriptionFormat, "\`,"], "");
     }
 
-    if (this._describeSingleSeries != null) {  
-      buffer.writeAll(["\"describeSingleSeries\":", this._describeSingleSeries, ","], "");
+    if (this.describeSingleSeries != null) {  
+      buffer.writeAll(["\"describeSingleSeries\":", this.describeSingleSeries, ","], "");
     }
 
-    if (this._pointDescriptionEnabledThreshold != null) {  
-      buffer.writeAll(["\"pointDescriptionEnabledThreshold\":", this._pointDescriptionEnabledThreshold, ","], "");
+    if (this.pointDescriptionEnabledThreshold != null) {  
+      buffer.writeAll(["\"pointDescriptionEnabledThreshold\":", this.pointDescriptionEnabledThreshold, ","], "");
     }
   }
 

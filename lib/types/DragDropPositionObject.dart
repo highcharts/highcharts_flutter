@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,14 @@ import 'OptionFragment.dart';
  * DragDropPositionObject 
  */
 class DragDropPositionObject extends OptionFragment {
-  DragDropPositionObject() : super();
-  double? _chartX;  
-
+  DragDropPositionObject( {
+    this.chartX = null,
+    this.chartY = null,
+    this.prevdX = null,
+    this.prevdY = null
+  }) : super();
+  double? chartX;
+    /*
   double get chartX { 
     if (this._chartX == null) {
       this._chartX = 0;
@@ -36,9 +41,10 @@ class DragDropPositionObject extends OptionFragment {
   void set chartX (double v) {
     this._chartX = v;
   }
+    */
     
-  double? _chartY;  
-
+  double? chartY;
+    /*
   double get chartY { 
     if (this._chartY == null) {
       this._chartY = 0;
@@ -49,9 +55,10 @@ class DragDropPositionObject extends OptionFragment {
   void set chartY (double v) {
     this._chartY = v;
   }
+    */
     
-  double? _prevdX;  
-
+  double? prevdX;
+    /*
   double get prevdX { 
     if (this._prevdX == null) {
       this._prevdX = 0;
@@ -62,9 +69,10 @@ class DragDropPositionObject extends OptionFragment {
   void set prevdX (double v) {
     this._prevdX = v;
   }
+    */
     
-  double? _prevdY;  
-
+  double? prevdY;
+    /*
   double get prevdY { 
     if (this._prevdY == null) {
       this._prevdY = 0;
@@ -75,6 +83,7 @@ class DragDropPositionObject extends OptionFragment {
   void set prevdY (double v) {
     this._prevdY = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -84,24 +93,24 @@ class DragDropPositionObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._chartX != null) {  
-      buffer.writeAll(["\"chartX\":", this._chartX, ","], "");
+    if (this.chartX != null) {  
+      buffer.writeAll(["\"chartX\":", this.chartX, ","], "");
     }
 
-    if (this._chartY != null) {  
-      buffer.writeAll(["\"chartY\":", this._chartY, ","], "");
+    if (this.chartY != null) {  
+      buffer.writeAll(["\"chartY\":", this.chartY, ","], "");
     }
 
     // NOTE: skip serialization of guideBox (type BBoxObject is ignored)} 
 
     // NOTE: skip serialization of points (type Generic is ignored)} 
 
-    if (this._prevdX != null) {  
-      buffer.writeAll(["\"prevdX\":", this._prevdX, ","], "");
+    if (this.prevdX != null) {  
+      buffer.writeAll(["\"prevdX\":", this.prevdX, ","], "");
     }
 
-    if (this._prevdY != null) {  
-      buffer.writeAll(["\"prevdY\":", this._prevdY, ","], "");
+    if (this.prevdY != null) {  
+      buffer.writeAll(["\"prevdY\":", this.prevdY, ","], "");
     }
   }
 

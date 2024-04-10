@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -24,9 +24,13 @@ import 'OptionFragment.dart';
  * SMAIndicator 
  */
 class SMAIndicator extends IndicatorLike {
-  SMAIndicator() : super();
-  bool? _hasDerivedData;  
-
+  SMAIndicator( {
+    this.hasDerivedData = null,
+    this.useCommonDataGrouping = null,
+    this.updateAllPoints = null
+  }) : super();
+  bool? hasDerivedData;
+    /*
   bool get hasDerivedData { 
     if (this._hasDerivedData == null) {
       this._hasDerivedData = false;
@@ -37,9 +41,10 @@ class SMAIndicator extends IndicatorLike {
   void set hasDerivedData (bool v) {
     this._hasDerivedData = v;
   }
+    */
     
-  bool? _useCommonDataGrouping;  
-
+  bool? useCommonDataGrouping;
+    /*
   bool get useCommonDataGrouping { 
     if (this._useCommonDataGrouping == null) {
       this._useCommonDataGrouping = false;
@@ -50,9 +55,10 @@ class SMAIndicator extends IndicatorLike {
   void set useCommonDataGrouping (bool v) {
     this._useCommonDataGrouping = v;
   }
+    */
     
-  bool? _updateAllPoints;  
-
+  bool? updateAllPoints;
+    /*
   bool get updateAllPoints { 
     if (this._updateAllPoints == null) {
       this._updateAllPoints = false;
@@ -63,6 +69,7 @@ class SMAIndicator extends IndicatorLike {
   void set updateAllPoints (bool v) {
     this._updateAllPoints = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -74,8 +81,8 @@ class SMAIndicator extends IndicatorLike {
     
     // NOTE: skip serialization of calculateOn (type CalculateOnObject is ignored)} 
 
-    if (this._hasDerivedData != null) {  
-      buffer.writeAll(["\"hasDerivedData\":", this._hasDerivedData, ","], "");
+    if (this.hasDerivedData != null) {  
+      buffer.writeAll(["\"hasDerivedData\":", this.hasDerivedData, ","], "");
     }
 
     // NOTE: skip serialization of nameComponents (type string[] is ignored)} 
@@ -84,12 +91,12 @@ class SMAIndicator extends IndicatorLike {
 
     // NOTE: skip serialization of pointClass (type typeof SMAPoint is ignored)} 
 
-    if (this._useCommonDataGrouping != null) {  
-      buffer.writeAll(["\"useCommonDataGrouping\":", this._useCommonDataGrouping, ","], "");
+    if (this.useCommonDataGrouping != null) {  
+      buffer.writeAll(["\"useCommonDataGrouping\":", this.useCommonDataGrouping, ","], "");
     }
 
-    if (this._updateAllPoints != null) {  
-      buffer.writeAll(["\"updateAllPoints\":", this._updateAllPoints, ","], "");
+    if (this.updateAllPoints != null) {  
+      buffer.writeAll(["\"updateAllPoints\":", this.updateAllPoints, ","], "");
     }
   }
 

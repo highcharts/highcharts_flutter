@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -25,9 +25,11 @@ import 'OptionFragment.dart';
  * SeriesComposition 
  */
 class SeriesComposition extends Series {
-  SeriesComposition() : super();
-  String? _optionalAxis;  
-
+  SeriesComposition( {
+    this.optionalAxis = null
+  }) : super();
+  String? optionalAxis;
+    /*
   String get optionalAxis { 
     if (this._optionalAxis == null) {
       this._optionalAxis = "";
@@ -38,6 +40,7 @@ class SeriesComposition extends Series {
   void set optionalAxis (String v) {
     this._optionalAxis = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -55,8 +58,8 @@ class SeriesComposition extends Series {
 
     // NOTE: skip serialization of options (type SeriesCompositionOptions is ignored)} 
 
-    if (this._optionalAxis != null) {  
-      buffer.writeAll(["\"optionalAxis\":\`", this._optionalAxis, "\`,"], "");
+    if (this.optionalAxis != null) {  
+      buffer.writeAll(["\"optionalAxis\":\`", this.optionalAxis, "\`,"], "");
     }
   }
 

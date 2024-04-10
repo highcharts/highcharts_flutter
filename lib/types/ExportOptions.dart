@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,17 @@ import 'OptionFragment.dart';
  * ExportOptions 
  */
 class ExportOptions extends OptionFragment {
-  ExportOptions() : super();
-  String? _decimalPoint;  
-
+  ExportOptions( {
+    this.decimalPoint = null,
+    this.exportIDColumn = null,
+    this.tableCaption = null,
+    this.useLocalDecimalPoint = null,
+    this.useMultiLevelHeaders = null,
+    this.useRowspanHeaders = null,
+    this.usePresentationOrder = null
+  }) : super();
+  String? decimalPoint;
+    /*
   String get decimalPoint { 
     if (this._decimalPoint == null) {
       this._decimalPoint = "";
@@ -35,9 +43,10 @@ class ExportOptions extends OptionFragment {
   void set decimalPoint (String v) {
     this._decimalPoint = v;
   }
+    */
     
-  bool? _exportIDColumn;  
-
+  bool? exportIDColumn;
+    /*
   bool get exportIDColumn { 
     if (this._exportIDColumn == null) {
       this._exportIDColumn = false;
@@ -48,9 +57,10 @@ class ExportOptions extends OptionFragment {
   void set exportIDColumn (bool v) {
     this._exportIDColumn = v;
   }
+    */
     
-  String? _tableCaption;  
-
+  String? tableCaption;
+    /*
   String get tableCaption { 
     if (this._tableCaption == null) {
       this._tableCaption = "";
@@ -61,9 +71,10 @@ class ExportOptions extends OptionFragment {
   void set tableCaption (String v) {
     this._tableCaption = v;
   }
+    */
     
-  bool? _useLocalDecimalPoint;  
-
+  bool? useLocalDecimalPoint;
+    /*
   bool get useLocalDecimalPoint { 
     if (this._useLocalDecimalPoint == null) {
       this._useLocalDecimalPoint = false;
@@ -74,9 +85,10 @@ class ExportOptions extends OptionFragment {
   void set useLocalDecimalPoint (bool v) {
     this._useLocalDecimalPoint = v;
   }
+    */
     
-  bool? _useMultiLevelHeaders;  
-
+  bool? useMultiLevelHeaders;
+    /*
   bool get useMultiLevelHeaders { 
     if (this._useMultiLevelHeaders == null) {
       this._useMultiLevelHeaders = false;
@@ -87,9 +99,10 @@ class ExportOptions extends OptionFragment {
   void set useMultiLevelHeaders (bool v) {
     this._useMultiLevelHeaders = v;
   }
+    */
     
-  bool? _useRowspanHeaders;  
-
+  bool? useRowspanHeaders;
+    /*
   bool get useRowspanHeaders { 
     if (this._useRowspanHeaders == null) {
       this._useRowspanHeaders = false;
@@ -100,9 +113,10 @@ class ExportOptions extends OptionFragment {
   void set useRowspanHeaders (bool v) {
     this._useRowspanHeaders = v;
   }
+    */
     
-  bool? _usePresentationOrder;  
-
+  bool? usePresentationOrder;
+    /*
   bool get usePresentationOrder { 
     if (this._usePresentationOrder == null) {
       this._usePresentationOrder = false;
@@ -113,6 +127,7 @@ class ExportOptions extends OptionFragment {
   void set usePresentationOrder (bool v) {
     this._usePresentationOrder = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -122,32 +137,32 @@ class ExportOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._decimalPoint != null) {  
-      buffer.writeAll(["\"decimalPoint\":\`", this._decimalPoint, "\`,"], "");
+    if (this.decimalPoint != null) {  
+      buffer.writeAll(["\"decimalPoint\":\`", this.decimalPoint, "\`,"], "");
     }
 
-    if (this._exportIDColumn != null) {  
-      buffer.writeAll(["\"exportIDColumn\":", this._exportIDColumn, ","], "");
+    if (this.exportIDColumn != null) {  
+      buffer.writeAll(["\"exportIDColumn\":", this.exportIDColumn, ","], "");
     }
 
-    if (this._tableCaption != null) {  
-      buffer.writeAll(["\"tableCaption\":\`", this._tableCaption, "\`,"], "");
+    if (this.tableCaption != null) {  
+      buffer.writeAll(["\"tableCaption\":\`", this.tableCaption, "\`,"], "");
     }
 
-    if (this._useLocalDecimalPoint != null) {  
-      buffer.writeAll(["\"useLocalDecimalPoint\":", this._useLocalDecimalPoint, ","], "");
+    if (this.useLocalDecimalPoint != null) {  
+      buffer.writeAll(["\"useLocalDecimalPoint\":", this.useLocalDecimalPoint, ","], "");
     }
 
-    if (this._useMultiLevelHeaders != null) {  
-      buffer.writeAll(["\"useMultiLevelHeaders\":", this._useMultiLevelHeaders, ","], "");
+    if (this.useMultiLevelHeaders != null) {  
+      buffer.writeAll(["\"useMultiLevelHeaders\":", this.useMultiLevelHeaders, ","], "");
     }
 
-    if (this._useRowspanHeaders != null) {  
-      buffer.writeAll(["\"useRowspanHeaders\":", this._useRowspanHeaders, ","], "");
+    if (this.useRowspanHeaders != null) {  
+      buffer.writeAll(["\"useRowspanHeaders\":", this.useRowspanHeaders, ","], "");
     }
 
-    if (this._usePresentationOrder != null) {  
-      buffer.writeAll(["\"usePresentationOrder\":", this._usePresentationOrder, ","], "");
+    if (this.usePresentationOrder != null) {  
+      buffer.writeAll(["\"usePresentationOrder\":", this.usePresentationOrder, ","], "");
     }
   }
 

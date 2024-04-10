@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -25,9 +25,17 @@ import 'OptionFragment.dart';
  * NetworkgraphPoint 
  */
 class NetworkgraphPoint extends OptionFragment {
-  NetworkgraphPoint() : super();
-  String? _className;  
-
+  NetworkgraphPoint( {
+    this.className = null,
+    this.degree = null,
+    this.formatPrefix = null,
+    this.from = null,
+    this.mass = null,
+    this.radius = null,
+    this.to = null
+  }) : super();
+  String? className;
+    /*
   String get className { 
     if (this._className == null) {
       this._className = "";
@@ -38,9 +46,10 @@ class NetworkgraphPoint extends OptionFragment {
   void set className (String v) {
     this._className = v;
   }
+    */
     
-  double? _degree;  
-
+  double? degree;
+    /*
   double get degree { 
     if (this._degree == null) {
       this._degree = 0;
@@ -51,9 +60,10 @@ class NetworkgraphPoint extends OptionFragment {
   void set degree (double v) {
     this._degree = v;
   }
+    */
     
-  String? _formatPrefix;  
-
+  String? formatPrefix;
+    /*
   String get formatPrefix { 
     if (this._formatPrefix == null) {
       this._formatPrefix = "";
@@ -64,9 +74,10 @@ class NetworkgraphPoint extends OptionFragment {
   void set formatPrefix (String v) {
     this._formatPrefix = v;
   }
+    */
     
-  String? _from;  
-
+  String? from;
+    /*
   String get from { 
     if (this._from == null) {
       this._from = "";
@@ -77,9 +88,10 @@ class NetworkgraphPoint extends OptionFragment {
   void set from (String v) {
     this._from = v;
   }
+    */
     
-  double? _mass;  
-
+  double? mass;
+    /*
   double get mass { 
     if (this._mass == null) {
       this._mass = 0;
@@ -90,9 +102,10 @@ class NetworkgraphPoint extends OptionFragment {
   void set mass (double v) {
     this._mass = v;
   }
+    */
     
-  double? _radius;  
-
+  double? radius;
+    /*
   double get radius { 
     if (this._radius == null) {
       this._radius = 0;
@@ -103,9 +116,10 @@ class NetworkgraphPoint extends OptionFragment {
   void set radius (double v) {
     this._radius = v;
   }
+    */
     
-  String? _to;  
-
+  String? to;
+    /*
   String get to { 
     if (this._to == null) {
       this._to = "";
@@ -116,6 +130,7 @@ class NetworkgraphPoint extends OptionFragment {
   void set to (String v) {
     this._to = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -125,20 +140,20 @@ class NetworkgraphPoint extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._className != null) {  
-      buffer.writeAll(["\"className\":\`", this._className, "\`,"], "");
+    if (this.className != null) {  
+      buffer.writeAll(["\"className\":\`", this.className, "\`,"], "");
     }
 
-    if (this._degree != null) {  
-      buffer.writeAll(["\"degree\":", this._degree, ","], "");
+    if (this.degree != null) {  
+      buffer.writeAll(["\"degree\":", this.degree, ","], "");
     }
 
-    if (this._formatPrefix != null) {  
-      buffer.writeAll(["\"formatPrefix\":\`", this._formatPrefix, "\`,"], "");
+    if (this.formatPrefix != null) {  
+      buffer.writeAll(["\"formatPrefix\":\`", this.formatPrefix, "\`,"], "");
     }
 
-    if (this._from != null) {  
-      buffer.writeAll(["\"from\":\`", this._from, "\`,"], "");
+    if (this.from != null) {  
+      buffer.writeAll(["\"from\":\`", this.from, "\`,"], "");
     }
 
     // NOTE: skip serialization of fromNode (type NetworkgraphPoint is ignored)} 
@@ -149,20 +164,20 @@ class NetworkgraphPoint extends OptionFragment {
 
     // NOTE: skip serialization of linksTo (type NetworkgraphPoint[] is ignored)} 
 
-    if (this._mass != null) {  
-      buffer.writeAll(["\"mass\":", this._mass, ","], "");
+    if (this.mass != null) {  
+      buffer.writeAll(["\"mass\":", this.mass, ","], "");
     }
 
     // NOTE: skip serialization of options (type NetworkgraphPointOptions is ignored)} 
 
-    if (this._radius != null) {  
-      buffer.writeAll(["\"radius\":", this._radius, ","], "");
+    if (this.radius != null) {  
+      buffer.writeAll(["\"radius\":", this.radius, ","], "");
     }
 
     // NOTE: skip serialization of series (type NetworkgraphSeries is ignored)} 
 
-    if (this._to != null) {  
-      buffer.writeAll(["\"to\":\`", this._to, "\`,"], "");
+    if (this.to != null) {  
+      buffer.writeAll(["\"to\":\`", this.to, "\`,"], "");
     }
 
     // NOTE: skip serialization of toNode (type NetworkgraphPoint is ignored)} 

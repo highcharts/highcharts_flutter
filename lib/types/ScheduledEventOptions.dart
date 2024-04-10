@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,21 @@ import 'OptionFragment.dart';
  * ScheduledEventOptions 
  */
 class ScheduledEventOptions extends OptionFragment {
-  ScheduledEventOptions() : super();
-  String? _note;  
-
+  ScheduledEventOptions( {
+    this.note = null,
+    this.frequency = null,
+    this.noteDuration = null,
+    this.tremoloDepth = null,
+    this.tremoloSpeed = null,
+    this.pan = null,
+    this.volume = null,
+    this.lowpassFreq = null,
+    this.lowpassResonance = null,
+    this.highpassFreq = null,
+    this.highpassResonance = null
+  }) : super();
+  String? note;
+    /*
   String get note { 
     if (this._note == null) {
       this._note = "";
@@ -35,9 +47,10 @@ class ScheduledEventOptions extends OptionFragment {
   void set note (String v) {
     this._note = v;
   }
+    */
     
-  double? _frequency;  
-
+  double? frequency;
+    /*
   double get frequency { 
     if (this._frequency == null) {
       this._frequency = 0;
@@ -48,9 +61,10 @@ class ScheduledEventOptions extends OptionFragment {
   void set frequency (double v) {
     this._frequency = v;
   }
+    */
     
-  double? _noteDuration;  
-
+  double? noteDuration;
+    /*
   double get noteDuration { 
     if (this._noteDuration == null) {
       this._noteDuration = 0;
@@ -61,9 +75,10 @@ class ScheduledEventOptions extends OptionFragment {
   void set noteDuration (double v) {
     this._noteDuration = v;
   }
+    */
     
-  double? _tremoloDepth;  
-
+  double? tremoloDepth;
+    /*
   double get tremoloDepth { 
     if (this._tremoloDepth == null) {
       this._tremoloDepth = 0;
@@ -74,9 +89,10 @@ class ScheduledEventOptions extends OptionFragment {
   void set tremoloDepth (double v) {
     this._tremoloDepth = v;
   }
+    */
     
-  double? _tremoloSpeed;  
-
+  double? tremoloSpeed;
+    /*
   double get tremoloSpeed { 
     if (this._tremoloSpeed == null) {
       this._tremoloSpeed = 0;
@@ -87,9 +103,10 @@ class ScheduledEventOptions extends OptionFragment {
   void set tremoloSpeed (double v) {
     this._tremoloSpeed = v;
   }
+    */
     
-  double? _pan;  
-
+  double? pan;
+    /*
   double get pan { 
     if (this._pan == null) {
       this._pan = 0;
@@ -100,9 +117,10 @@ class ScheduledEventOptions extends OptionFragment {
   void set pan (double v) {
     this._pan = v;
   }
+    */
     
-  double? _volume;  
-
+  double? volume;
+    /*
   double get volume { 
     if (this._volume == null) {
       this._volume = 0;
@@ -113,9 +131,10 @@ class ScheduledEventOptions extends OptionFragment {
   void set volume (double v) {
     this._volume = v;
   }
+    */
     
-  double? _lowpassFreq;  
-
+  double? lowpassFreq;
+    /*
   double get lowpassFreq { 
     if (this._lowpassFreq == null) {
       this._lowpassFreq = 0;
@@ -126,9 +145,10 @@ class ScheduledEventOptions extends OptionFragment {
   void set lowpassFreq (double v) {
     this._lowpassFreq = v;
   }
+    */
     
-  double? _lowpassResonance;  
-
+  double? lowpassResonance;
+    /*
   double get lowpassResonance { 
     if (this._lowpassResonance == null) {
       this._lowpassResonance = 0;
@@ -139,9 +159,10 @@ class ScheduledEventOptions extends OptionFragment {
   void set lowpassResonance (double v) {
     this._lowpassResonance = v;
   }
+    */
     
-  double? _highpassFreq;  
-
+  double? highpassFreq;
+    /*
   double get highpassFreq { 
     if (this._highpassFreq == null) {
       this._highpassFreq = 0;
@@ -152,9 +173,10 @@ class ScheduledEventOptions extends OptionFragment {
   void set highpassFreq (double v) {
     this._highpassFreq = v;
   }
+    */
     
-  double? _highpassResonance;  
-
+  double? highpassResonance;
+    /*
   double get highpassResonance { 
     if (this._highpassResonance == null) {
       this._highpassResonance = 0;
@@ -165,6 +187,7 @@ class ScheduledEventOptions extends OptionFragment {
   void set highpassResonance (double v) {
     this._highpassResonance = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -174,48 +197,48 @@ class ScheduledEventOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._note != null) {  
-      buffer.writeAll(["\"note\":\`", this._note, "\`,"], "");
+    if (this.note != null) {  
+      buffer.writeAll(["\"note\":\`", this.note, "\`,"], "");
     }
 
-    if (this._frequency != null) {  
-      buffer.writeAll(["\"frequency\":", this._frequency, ","], "");
+    if (this.frequency != null) {  
+      buffer.writeAll(["\"frequency\":", this.frequency, ","], "");
     }
 
-    if (this._noteDuration != null) {  
-      buffer.writeAll(["\"noteDuration\":", this._noteDuration, ","], "");
+    if (this.noteDuration != null) {  
+      buffer.writeAll(["\"noteDuration\":", this.noteDuration, ","], "");
     }
 
-    if (this._tremoloDepth != null) {  
-      buffer.writeAll(["\"tremoloDepth\":", this._tremoloDepth, ","], "");
+    if (this.tremoloDepth != null) {  
+      buffer.writeAll(["\"tremoloDepth\":", this.tremoloDepth, ","], "");
     }
 
-    if (this._tremoloSpeed != null) {  
-      buffer.writeAll(["\"tremoloSpeed\":", this._tremoloSpeed, ","], "");
+    if (this.tremoloSpeed != null) {  
+      buffer.writeAll(["\"tremoloSpeed\":", this.tremoloSpeed, ","], "");
     }
 
-    if (this._pan != null) {  
-      buffer.writeAll(["\"pan\":", this._pan, ","], "");
+    if (this.pan != null) {  
+      buffer.writeAll(["\"pan\":", this.pan, ","], "");
     }
 
-    if (this._volume != null) {  
-      buffer.writeAll(["\"volume\":", this._volume, ","], "");
+    if (this.volume != null) {  
+      buffer.writeAll(["\"volume\":", this.volume, ","], "");
     }
 
-    if (this._lowpassFreq != null) {  
-      buffer.writeAll(["\"lowpassFreq\":", this._lowpassFreq, ","], "");
+    if (this.lowpassFreq != null) {  
+      buffer.writeAll(["\"lowpassFreq\":", this.lowpassFreq, ","], "");
     }
 
-    if (this._lowpassResonance != null) {  
-      buffer.writeAll(["\"lowpassResonance\":", this._lowpassResonance, ","], "");
+    if (this.lowpassResonance != null) {  
+      buffer.writeAll(["\"lowpassResonance\":", this.lowpassResonance, ","], "");
     }
 
-    if (this._highpassFreq != null) {  
-      buffer.writeAll(["\"highpassFreq\":", this._highpassFreq, ","], "");
+    if (this.highpassFreq != null) {  
+      buffer.writeAll(["\"highpassFreq\":", this.highpassFreq, ","], "");
     }
 
-    if (this._highpassResonance != null) {  
-      buffer.writeAll(["\"highpassResonance\":", this._highpassResonance, ","], "");
+    if (this.highpassResonance != null) {  
+      buffer.writeAll(["\"highpassResonance\":", this.highpassResonance, ","], "");
     }
   }
 

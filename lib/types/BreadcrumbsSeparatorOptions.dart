@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,11 @@ import 'OptionFragment.dart';
  * BreadcrumbsSeparatorOptions 
  */
 class BreadcrumbsSeparatorOptions extends OptionFragment {
-  BreadcrumbsSeparatorOptions() : super();
-  String? _text;  
-
+  BreadcrumbsSeparatorOptions( {
+    this.text = null
+  }) : super();
+  String? text;
+    /*
   String get text { 
     if (this._text == null) {
       this._text = "";
@@ -36,6 +38,7 @@ class BreadcrumbsSeparatorOptions extends OptionFragment {
   void set text (String v) {
     this._text = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -45,8 +48,8 @@ class BreadcrumbsSeparatorOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._text != null) {  
-      buffer.writeAll(["\"text\":\`", this._text, "\`,"], "");
+    if (this.text != null) {  
+      buffer.writeAll(["\"text\":\`", this.text, "\`,"], "");
     }
 
     // NOTE: skip serialization of style (type CSSObject is ignored)} 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,12 @@ import 'OptionFragment.dart';
  * SelectOptions 
  */
 class SelectOptions extends OptionFragment {
-  SelectOptions() : super();
-  String? _name;  
-
+  SelectOptions( {
+    this.name = null,
+    this.iconURL = null
+  }) : super();
+  String? name;
+    /*
   String get name { 
     if (this._name == null) {
       this._name = "";
@@ -35,9 +38,10 @@ class SelectOptions extends OptionFragment {
   void set name (String v) {
     this._name = v;
   }
+    */
     
-  String? _iconURL;  
-
+  String? iconURL;
+    /*
   String get iconURL { 
     if (this._iconURL == null) {
       this._iconURL = "";
@@ -48,6 +52,7 @@ class SelectOptions extends OptionFragment {
   void set iconURL (String v) {
     this._iconURL = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -57,12 +62,12 @@ class SelectOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._name != null) {  
-      buffer.writeAll(["\"name\":\`", this._name, "\`,"], "");
+    if (this.name != null) {  
+      buffer.writeAll(["\"name\":\`", this.name, "\`,"], "");
     }
 
-    if (this._iconURL != null) {  
-      buffer.writeAll(["\"iconURL\":\`", this._iconURL, "\`,"], "");
+    if (this.iconURL != null) {  
+      buffer.writeAll(["\"iconURL\":\`", this.iconURL, "\`,"], "");
     }
   }
 

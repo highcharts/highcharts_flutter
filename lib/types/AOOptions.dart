@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,7 +23,13 @@ import 'OptionFragment.dart';
  * AOOptions 
  */
 class AOOptions extends SMAOptions {
-  AOOptions() : super();
+  AOOptions( {
+    this.greaterBarColor = null,
+    this.groupPadding = null,
+    this.lowerBarColor = null,
+    this.pointPadding = null,
+    this.threshold = null
+  }) : super();
   /**
    * Color of the Awesome oscillator series bar that is greater than the
    * previous one. Note that if a `color` is defined, the `color`
@@ -31,8 +37,8 @@ class AOOptions extends SMAOptions {
    * 
    * Defaults to '#06b535'. 
       */
-  String? _greaterBarColor;  
-
+  String? greaterBarColor;
+    /*
   String get greaterBarColor { 
     if (this._greaterBarColor == null) {
       this._greaterBarColor = "";
@@ -43,9 +49,10 @@ class AOOptions extends SMAOptions {
   void set greaterBarColor (String v) {
     this._greaterBarColor = v;
   }
+    */
     
-  double? _groupPadding;  
-
+  double? groupPadding;
+    /*
   double get groupPadding { 
     if (this._groupPadding == null) {
       this._groupPadding = 0;
@@ -56,6 +63,7 @@ class AOOptions extends SMAOptions {
   void set groupPadding (double v) {
     this._groupPadding = v;
   }
+    */
     
   /**
    * Color of the Awesome oscillator series bar that is lower than the
@@ -64,8 +72,8 @@ class AOOptions extends SMAOptions {
    * 
    * Defaults to '#f21313'. 
       */
-  String? _lowerBarColor;  
-
+  String? lowerBarColor;
+    /*
   String get lowerBarColor { 
     if (this._lowerBarColor == null) {
       this._lowerBarColor = "";
@@ -76,9 +84,10 @@ class AOOptions extends SMAOptions {
   void set lowerBarColor (String v) {
     this._lowerBarColor = v;
   }
+    */
     
-  double? _pointPadding;  
-
+  double? pointPadding;
+    /*
   double get pointPadding { 
     if (this._pointPadding == null) {
       this._pointPadding = 0;
@@ -89,6 +98,7 @@ class AOOptions extends SMAOptions {
   void set pointPadding (double v) {
     this._pointPadding = v;
   }
+    */
     
   // NOTE: states skipped - type Generic is ignored in gen
 
@@ -99,8 +109,8 @@ class AOOptions extends SMAOptions {
    * 
    * Defaults to '0'. 
       */
-  double? _threshold;  
-
+  double? threshold;
+    /*
   double get threshold { 
     if (this._threshold == null) {
       this._threshold = 0;
@@ -111,6 +121,7 @@ class AOOptions extends SMAOptions {
   void set threshold (double v) {
     this._threshold = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -120,26 +131,26 @@ class AOOptions extends SMAOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._greaterBarColor != null) {  
-      buffer.writeAll(["\"greaterBarColor\":\`", this._greaterBarColor, "\`,"], "");
+    if (this.greaterBarColor != null) {  
+      buffer.writeAll(["\"greaterBarColor\":\`", this.greaterBarColor, "\`,"], "");
     }
 
-    if (this._groupPadding != null) {  
-      buffer.writeAll(["\"groupPadding\":", this._groupPadding, ","], "");
+    if (this.groupPadding != null) {  
+      buffer.writeAll(["\"groupPadding\":", this.groupPadding, ","], "");
     }
 
-    if (this._lowerBarColor != null) {  
-      buffer.writeAll(["\"lowerBarColor\":\`", this._lowerBarColor, "\`,"], "");
+    if (this.lowerBarColor != null) {  
+      buffer.writeAll(["\"lowerBarColor\":\`", this.lowerBarColor, "\`,"], "");
     }
 
-    if (this._pointPadding != null) {  
-      buffer.writeAll(["\"pointPadding\":", this._pointPadding, ","], "");
+    if (this.pointPadding != null) {  
+      buffer.writeAll(["\"pointPadding\":", this.pointPadding, ","], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 
 
-    if (this._threshold != null) {  
-      buffer.writeAll(["\"threshold\":", this._threshold, ","], "");
+    if (this.threshold != null) {  
+      buffer.writeAll(["\"threshold\":", this.threshold, ","], "");
     }
   }
 

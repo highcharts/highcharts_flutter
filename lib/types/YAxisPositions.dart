@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,11 @@ import 'OptionFragment.dart';
  * YAxisPositions 
  */
 class YAxisPositions extends OptionFragment {
-  YAxisPositions() : super();
-  double? _allAxesHeight;  
-
+  YAxisPositions( {
+    this.allAxesHeight = null
+  }) : super();
+  double? allAxesHeight;
+    /*
   double get allAxesHeight { 
     if (this._allAxesHeight == null) {
       this._allAxesHeight = 0;
@@ -35,6 +37,7 @@ class YAxisPositions extends OptionFragment {
   void set allAxesHeight (double v) {
     this._allAxesHeight = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -46,8 +49,8 @@ class YAxisPositions extends OptionFragment {
     
     // NOTE: skip serialization of positions (type Generic is ignored)} 
 
-    if (this._allAxesHeight != null) {  
-      buffer.writeAll(["\"allAxesHeight\":", this._allAxesHeight, ","], "");
+    if (this.allAxesHeight != null) {  
+      buffer.writeAll(["\"allAxesHeight\":", this.allAxesHeight, ","], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,14 @@ import 'OptionFragment.dart';
  * CenteredSeriesOptions 
  */
 class CenteredSeriesOptions extends SeriesOptions {
-  CenteredSeriesOptions() : super();
-  String? _innerSize;  
-
+  CenteredSeriesOptions( {
+    this.innerSize = null,
+    this.size = null,
+    this.slicedOffset = null,
+    this.thickness = null
+  }) : super();
+  String? innerSize;
+    /*
   String get innerSize { 
     if (this._innerSize == null) {
       this._innerSize = "";
@@ -36,9 +41,10 @@ class CenteredSeriesOptions extends SeriesOptions {
   void set innerSize (String v) {
     this._innerSize = v;
   }
+    */
     
-  String? _size;  
-
+  String? size;
+    /*
   String get size { 
     if (this._size == null) {
       this._size = "";
@@ -49,9 +55,10 @@ class CenteredSeriesOptions extends SeriesOptions {
   void set size (String v) {
     this._size = v;
   }
+    */
     
-  double? _slicedOffset;  
-
+  double? slicedOffset;
+    /*
   double get slicedOffset { 
     if (this._slicedOffset == null) {
       this._slicedOffset = 0;
@@ -62,9 +69,10 @@ class CenteredSeriesOptions extends SeriesOptions {
   void set slicedOffset (double v) {
     this._slicedOffset = v;
   }
+    */
     
-  double? _thickness;  
-
+  double? thickness;
+    /*
   double get thickness { 
     if (this._thickness == null) {
       this._thickness = 0;
@@ -75,6 +83,7 @@ class CenteredSeriesOptions extends SeriesOptions {
   void set thickness (double v) {
     this._thickness = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -86,20 +95,20 @@ class CenteredSeriesOptions extends SeriesOptions {
     
     // NOTE: skip serialization of center (type number)[] is ignored)} 
 
-    if (this._innerSize != null) {  
-      buffer.writeAll(["\"innerSize\":\`", this._innerSize, "\`,"], "");
+    if (this.innerSize != null) {  
+      buffer.writeAll(["\"innerSize\":\`", this.innerSize, "\`,"], "");
     }
 
-    if (this._size != null) {  
-      buffer.writeAll(["\"size\":\`", this._size, "\`,"], "");
+    if (this.size != null) {  
+      buffer.writeAll(["\"size\":\`", this.size, "\`,"], "");
     }
 
-    if (this._slicedOffset != null) {  
-      buffer.writeAll(["\"slicedOffset\":", this._slicedOffset, ","], "");
+    if (this.slicedOffset != null) {  
+      buffer.writeAll(["\"slicedOffset\":", this.slicedOffset, ","], "");
     }
 
-    if (this._thickness != null) {  
-      buffer.writeAll(["\"thickness\":", this._thickness, ","], "");
+    if (this.thickness != null) {  
+      buffer.writeAll(["\"thickness\":", this.thickness, ","], "");
     }
   }
 

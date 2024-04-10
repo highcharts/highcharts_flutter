@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,15 @@ import 'OptionFragment.dart';
  * SpeakerOptions 
  */
 class SpeakerOptions extends OptionFragment {
-  SpeakerOptions() : super();
-  String? _name;  
-
+  SpeakerOptions( {
+    this.name = null,
+    this.language = null,
+    this.pitch = null,
+    this.rate = null,
+    this.volume = null
+  }) : super();
+  String? name;
+    /*
   String get name { 
     if (this._name == null) {
       this._name = "";
@@ -35,9 +41,10 @@ class SpeakerOptions extends OptionFragment {
   void set name (String v) {
     this._name = v;
   }
+    */
     
-  String? _language;  
-
+  String? language;
+    /*
   String get language { 
     if (this._language == null) {
       this._language = "";
@@ -48,9 +55,10 @@ class SpeakerOptions extends OptionFragment {
   void set language (String v) {
     this._language = v;
   }
+    */
     
-  double? _pitch;  
-
+  double? pitch;
+    /*
   double get pitch { 
     if (this._pitch == null) {
       this._pitch = 0;
@@ -61,9 +69,10 @@ class SpeakerOptions extends OptionFragment {
   void set pitch (double v) {
     this._pitch = v;
   }
+    */
     
-  double? _rate;  
-
+  double? rate;
+    /*
   double get rate { 
     if (this._rate == null) {
       this._rate = 0;
@@ -74,9 +83,10 @@ class SpeakerOptions extends OptionFragment {
   void set rate (double v) {
     this._rate = v;
   }
+    */
     
-  double? _volume;  
-
+  double? volume;
+    /*
   double get volume { 
     if (this._volume == null) {
       this._volume = 0;
@@ -87,6 +97,7 @@ class SpeakerOptions extends OptionFragment {
   void set volume (double v) {
     this._volume = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -96,24 +107,24 @@ class SpeakerOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._name != null) {  
-      buffer.writeAll(["\"name\":\`", this._name, "\`,"], "");
+    if (this.name != null) {  
+      buffer.writeAll(["\"name\":\`", this.name, "\`,"], "");
     }
 
-    if (this._language != null) {  
-      buffer.writeAll(["\"language\":\`", this._language, "\`,"], "");
+    if (this.language != null) {  
+      buffer.writeAll(["\"language\":\`", this.language, "\`,"], "");
     }
 
-    if (this._pitch != null) {  
-      buffer.writeAll(["\"pitch\":", this._pitch, ","], "");
+    if (this.pitch != null) {  
+      buffer.writeAll(["\"pitch\":", this.pitch, ","], "");
     }
 
-    if (this._rate != null) {  
-      buffer.writeAll(["\"rate\":", this._rate, ","], "");
+    if (this.rate != null) {  
+      buffer.writeAll(["\"rate\":", this.rate, ","], "");
     }
 
-    if (this._volume != null) {  
-      buffer.writeAll(["\"volume\":", this._volume, ","], "");
+    if (this.volume != null) {  
+      buffer.writeAll(["\"volume\":", this.volume, ","], "");
     }
   }
 

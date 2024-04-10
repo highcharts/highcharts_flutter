@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,11 @@ import 'OptionFragment.dart';
  * SankeySeriesTooltipOptions 
  */
 class SankeySeriesTooltipOptions extends OptionFragment {
-  SankeySeriesTooltipOptions() : super();
-  String? _nodeFormat;  
-
+  SankeySeriesTooltipOptions( {
+    this.nodeFormat = null
+  }) : super();
+  String? nodeFormat;
+    /*
   String get nodeFormat { 
     if (this._nodeFormat == null) {
       this._nodeFormat = "";
@@ -35,6 +37,7 @@ class SankeySeriesTooltipOptions extends OptionFragment {
   void set nodeFormat (String v) {
     this._nodeFormat = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -44,8 +47,8 @@ class SankeySeriesTooltipOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._nodeFormat != null) {  
-      buffer.writeAll(["\"nodeFormat\":\`", this._nodeFormat, "\`,"], "");
+    if (this.nodeFormat != null) {  
+      buffer.writeAll(["\"nodeFormat\":\`", this.nodeFormat, "\`,"], "");
     }
   }
 

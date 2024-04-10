@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,14 @@ import 'OptionFragment.dart';
  * MeasureTypeCrosshairOptions 
  */
 class MeasureTypeCrosshairOptions extends OptionFragment {
-  MeasureTypeCrosshairOptions() : super();
-  String? _dashStyle;  
-
+  MeasureTypeCrosshairOptions( {
+    this.dashStyle = null,
+    this.enabled = null,
+    this.markerEnd = null,
+    this.zIndex = null
+  }) : super();
+  String? dashStyle;
+    /*
   String get dashStyle { 
     if (this._dashStyle == null) {
       this._dashStyle = "";
@@ -35,9 +40,10 @@ class MeasureTypeCrosshairOptions extends OptionFragment {
   void set dashStyle (String v) {
     this._dashStyle = v;
   }
+    */
     
-  bool? _enabled;  
-
+  bool? enabled;
+    /*
   bool get enabled { 
     if (this._enabled == null) {
       this._enabled = false;
@@ -48,9 +54,10 @@ class MeasureTypeCrosshairOptions extends OptionFragment {
   void set enabled (bool v) {
     this._enabled = v;
   }
+    */
     
-  String? _markerEnd;  
-
+  String? markerEnd;
+    /*
   String get markerEnd { 
     if (this._markerEnd == null) {
       this._markerEnd = "";
@@ -61,9 +68,10 @@ class MeasureTypeCrosshairOptions extends OptionFragment {
   void set markerEnd (String v) {
     this._markerEnd = v;
   }
+    */
     
-  double? _zIndex;  
-
+  double? zIndex;
+    /*
   double get zIndex { 
     if (this._zIndex == null) {
       this._zIndex = 0;
@@ -74,6 +82,7 @@ class MeasureTypeCrosshairOptions extends OptionFragment {
   void set zIndex (double v) {
     this._zIndex = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -83,20 +92,20 @@ class MeasureTypeCrosshairOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._dashStyle != null) {  
-      buffer.writeAll(["\"dashStyle\":\`", this._dashStyle, "\`,"], "");
+    if (this.dashStyle != null) {  
+      buffer.writeAll(["\"dashStyle\":\`", this.dashStyle, "\`,"], "");
     }
 
-    if (this._enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this._enabled, ","], "");
+    if (this.enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
     }
 
-    if (this._markerEnd != null) {  
-      buffer.writeAll(["\"markerEnd\":\`", this._markerEnd, "\`,"], "");
+    if (this.markerEnd != null) {  
+      buffer.writeAll(["\"markerEnd\":\`", this.markerEnd, "\`,"], "");
     }
 
-    if (this._zIndex != null) {  
-      buffer.writeAll(["\"zIndex\":", this._zIndex, ","], "");
+    if (this.zIndex != null) {  
+      buffer.writeAll(["\"zIndex\":", this.zIndex, ","], "");
     }
   }
 

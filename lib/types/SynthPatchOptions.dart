@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,13 @@ import 'OptionFragment.dart';
  * SynthPatchOptions 
  */
 class SynthPatchOptions extends OptionFragment {
-  SynthPatchOptions() : super();
-  double? _masterVolume;  
-
+  SynthPatchOptions( {
+    this.masterVolume = null,
+    this.noteGlideDuration = null,
+    this.midiInstrument = null
+  }) : super();
+  double? masterVolume;
+    /*
   double get masterVolume { 
     if (this._masterVolume == null) {
       this._masterVolume = 0;
@@ -35,9 +39,10 @@ class SynthPatchOptions extends OptionFragment {
   void set masterVolume (double v) {
     this._masterVolume = v;
   }
+    */
     
-  double? _noteGlideDuration;  
-
+  double? noteGlideDuration;
+    /*
   double get noteGlideDuration { 
     if (this._noteGlideDuration == null) {
       this._noteGlideDuration = 0;
@@ -48,9 +53,10 @@ class SynthPatchOptions extends OptionFragment {
   void set noteGlideDuration (double v) {
     this._noteGlideDuration = v;
   }
+    */
     
-  double? _midiInstrument;  
-
+  double? midiInstrument;
+    /*
   double get midiInstrument { 
     if (this._midiInstrument == null) {
       this._midiInstrument = 0;
@@ -61,6 +67,7 @@ class SynthPatchOptions extends OptionFragment {
   void set midiInstrument (double v) {
     this._midiInstrument = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -76,18 +83,18 @@ class SynthPatchOptions extends OptionFragment {
 
     // NOTE: skip serialization of masterReleaseEnvelope (type Envelope is ignored)} 
 
-    if (this._masterVolume != null) {  
-      buffer.writeAll(["\"masterVolume\":", this._masterVolume, ","], "");
+    if (this.masterVolume != null) {  
+      buffer.writeAll(["\"masterVolume\":", this.masterVolume, ","], "");
     }
 
-    if (this._noteGlideDuration != null) {  
-      buffer.writeAll(["\"noteGlideDuration\":", this._noteGlideDuration, ","], "");
+    if (this.noteGlideDuration != null) {  
+      buffer.writeAll(["\"noteGlideDuration\":", this.noteGlideDuration, ","], "");
     }
 
     // NOTE: skip serialization of oscillators (type OscOptions[] is ignored)} 
 
-    if (this._midiInstrument != null) {  
-      buffer.writeAll(["\"midiInstrument\":", this._midiInstrument, ","], "");
+    if (this.midiInstrument != null) {  
+      buffer.writeAll(["\"midiInstrument\":", this.midiInstrument, ","], "");
     }
   }
 

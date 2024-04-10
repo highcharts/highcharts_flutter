@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,14 +23,22 @@ import 'OptionFragment.dart';
  * MapNavigationOptions 
  */
 class MapNavigationOptions extends OptionFragment {
-  MapNavigationOptions() : super();
+  MapNavigationOptions( {
+    this.enableButtons = null,
+    this.enabled = null,
+    this.enableDoubleClickZoom = null,
+    this.enableDoubleClickZoomTo = null,
+    this.enableMouseWheelZoom = null,
+    this.enableTouchZoom = null,
+    this.mouseWheelSensitivity = null
+  }) : super();
   /**
    * General options for the map navigation buttons. Individual options
    * can be given from the [mapNavigation.buttons](#mapNavigation.buttons)
    * option set.  
       */
-  MapNavigationButtonOptions? _buttonOptions;  
-
+  MapNavigationButtonOptions? buttonOptions;
+    /*
   MapNavigationButtonOptions get buttonOptions { 
     if (this._buttonOptions == null) {
       this._buttonOptions = MapNavigationButtonOptions();
@@ -41,6 +49,7 @@ class MapNavigationOptions extends OptionFragment {
   void set buttonOptions (MapNavigationButtonOptions v) {
     this._buttonOptions = v;
   }
+    */
     
   /**
    * The individual buttons for the map navigation. This usually includes
@@ -50,8 +59,8 @@ class MapNavigationOptions extends OptionFragment {
    * individual options can be overridden. But default, the `onclick`, `text`
    * and `y` options are individual.  
       */
-  Map<String, String>? _buttons;  
-
+  Map<String, String>? buttons;
+    /*
   Map<String, String> get buttons { 
     if (this._buttons == null) {
       this._buttons = Map<String, String>();
@@ -62,13 +71,14 @@ class MapNavigationOptions extends OptionFragment {
   void set buttons (Map<String, String> v) {
     this._buttons = v;
   }
+    */
     
   /**
    * Whether to enable navigation buttons. By default it inherits the
    * [enabled](#mapNavigation.enabled) setting.  
       */
-  bool? _enableButtons;  
-
+  bool? enableButtons;
+    /*
   bool get enableButtons { 
     if (this._enableButtons == null) {
       this._enableButtons = false;
@@ -79,6 +89,7 @@ class MapNavigationOptions extends OptionFragment {
   void set enableButtons (bool v) {
     this._enableButtons = v;
   }
+    */
     
   /**
    * Whether to enable map navigation. The default is not to enable
@@ -93,8 +104,8 @@ class MapNavigationOptions extends OptionFragment {
    * 
    * Defaults to 'false'. 
       */
-  bool? _enabled;  
-
+  bool? enabled;
+    /*
   bool get enabled { 
     if (this._enabled == null) {
       this._enabled = false;
@@ -105,13 +116,14 @@ class MapNavigationOptions extends OptionFragment {
   void set enabled (bool v) {
     this._enabled = v;
   }
+    */
     
   /**
    * Enables zooming in on an area on double clicking in the map. By default
    * it inherits the [enabled](#mapNavigation.enabled) setting.  
       */
-  bool? _enableDoubleClickZoom;  
-
+  bool? enableDoubleClickZoom;
+    /*
   bool get enableDoubleClickZoom { 
     if (this._enableDoubleClickZoom == null) {
       this._enableDoubleClickZoom = false;
@@ -122,14 +134,15 @@ class MapNavigationOptions extends OptionFragment {
   void set enableDoubleClickZoom (bool v) {
     this._enableDoubleClickZoom = v;
   }
+    */
     
   /**
    * Whether to zoom in on an area when that area is double clicked. 
    * 
    * Defaults to 'false'. 
       */
-  bool? _enableDoubleClickZoomTo;  
-
+  bool? enableDoubleClickZoomTo;
+    /*
   bool get enableDoubleClickZoomTo { 
     if (this._enableDoubleClickZoomTo == null) {
       this._enableDoubleClickZoomTo = false;
@@ -140,12 +153,13 @@ class MapNavigationOptions extends OptionFragment {
   void set enableDoubleClickZoomTo (bool v) {
     this._enableDoubleClickZoomTo = v;
   }
+    */
     
   /**
    * Enables zooming by mouse wheel. By default it inherits the [enabled](#mapNavigation.enabled) setting.  
       */
-  bool? _enableMouseWheelZoom;  
-
+  bool? enableMouseWheelZoom;
+    /*
   bool get enableMouseWheelZoom { 
     if (this._enableMouseWheelZoom == null) {
       this._enableMouseWheelZoom = false;
@@ -156,6 +170,7 @@ class MapNavigationOptions extends OptionFragment {
   void set enableMouseWheelZoom (bool v) {
     this._enableMouseWheelZoom = v;
   }
+    */
     
   /**
    * Whether to enable multitouch zooming. Note that if the chart covers the
@@ -164,8 +179,8 @@ class MapNavigationOptions extends OptionFragment {
    * chart. By default it inherits the [enabled](#mapNavigation.enabled)
    * setting.  
       */
-  bool? _enableTouchZoom;  
-
+  bool? enableTouchZoom;
+    /*
   bool get enableTouchZoom { 
     if (this._enableTouchZoom == null) {
       this._enableTouchZoom = false;
@@ -176,6 +191,7 @@ class MapNavigationOptions extends OptionFragment {
   void set enableTouchZoom (bool v) {
     this._enableTouchZoom = v;
   }
+    */
     
   /**
    * Sensitivity of mouse wheel or trackpad scrolling. 1 is no sensitivity,
@@ -183,8 +199,8 @@ class MapNavigationOptions extends OptionFragment {
    * 
    * Defaults to '1.1'. 
       */
-  double? _mouseWheelSensitivity;  
-
+  double? mouseWheelSensitivity;
+    /*
   double get mouseWheelSensitivity { 
     if (this._mouseWheelSensitivity == null) {
       this._mouseWheelSensitivity = 0;
@@ -195,6 +211,7 @@ class MapNavigationOptions extends OptionFragment {
   void set mouseWheelSensitivity (double v) {
     this._mouseWheelSensitivity = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -204,40 +221,40 @@ class MapNavigationOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._buttonOptions != null) {  
-      buffer.writeAll(["\"buttonOptions\":", this._buttonOptions?.toJSON(), ","], "");
+    if (this.buttonOptions != null) {  
+      buffer.writeAll(["\"buttonOptions\":", this.buttonOptions?.toJSON(), ","], "");
     }
 
-    if (this._buttons != null) {  
-      buffer.writeAll(["\"buttons\":", this._buttons, ","], "");
+    if (this.buttons != null) {  
+      buffer.writeAll(["\"buttons\":", this.buttons, ","], "");
     }
 
-    if (this._enableButtons != null) {  
-      buffer.writeAll(["\"enableButtons\":", this._enableButtons, ","], "");
+    if (this.enableButtons != null) {  
+      buffer.writeAll(["\"enableButtons\":", this.enableButtons, ","], "");
     }
 
-    if (this._enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this._enabled, ","], "");
+    if (this.enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
     }
 
-    if (this._enableDoubleClickZoom != null) {  
-      buffer.writeAll(["\"enableDoubleClickZoom\":", this._enableDoubleClickZoom, ","], "");
+    if (this.enableDoubleClickZoom != null) {  
+      buffer.writeAll(["\"enableDoubleClickZoom\":", this.enableDoubleClickZoom, ","], "");
     }
 
-    if (this._enableDoubleClickZoomTo != null) {  
-      buffer.writeAll(["\"enableDoubleClickZoomTo\":", this._enableDoubleClickZoomTo, ","], "");
+    if (this.enableDoubleClickZoomTo != null) {  
+      buffer.writeAll(["\"enableDoubleClickZoomTo\":", this.enableDoubleClickZoomTo, ","], "");
     }
 
-    if (this._enableMouseWheelZoom != null) {  
-      buffer.writeAll(["\"enableMouseWheelZoom\":", this._enableMouseWheelZoom, ","], "");
+    if (this.enableMouseWheelZoom != null) {  
+      buffer.writeAll(["\"enableMouseWheelZoom\":", this.enableMouseWheelZoom, ","], "");
     }
 
-    if (this._enableTouchZoom != null) {  
-      buffer.writeAll(["\"enableTouchZoom\":", this._enableTouchZoom, ","], "");
+    if (this.enableTouchZoom != null) {  
+      buffer.writeAll(["\"enableTouchZoom\":", this.enableTouchZoom, ","], "");
     }
 
-    if (this._mouseWheelSensitivity != null) {  
-      buffer.writeAll(["\"mouseWheelSensitivity\":", this._mouseWheelSensitivity, ","], "");
+    if (this.mouseWheelSensitivity != null) {  
+      buffer.writeAll(["\"mouseWheelSensitivity\":", this.mouseWheelSensitivity, ","], "");
     }
   }
 

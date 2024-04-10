@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -24,9 +24,13 @@ import 'OptionFragment.dart';
  * TimelinePointOptions 
  */
 class TimelinePointOptions extends LinePointOptions {
-  TimelinePointOptions() : super();
-  bool? _isNull;  
-
+  TimelinePointOptions( {
+    this.isNull = null,
+    this.radius = null,
+    this.visible = null
+  }) : super();
+  bool? isNull;
+    /*
   bool get isNull { 
     if (this._isNull == null) {
       this._isNull = false;
@@ -37,9 +41,10 @@ class TimelinePointOptions extends LinePointOptions {
   void set isNull (bool v) {
     this._isNull = v;
   }
+    */
     
-  double? _radius;  
-
+  double? radius;
+    /*
   double get radius { 
     if (this._radius == null) {
       this._radius = 0;
@@ -50,9 +55,10 @@ class TimelinePointOptions extends LinePointOptions {
   void set radius (double v) {
     this._radius = v;
   }
+    */
     
-  bool? _visible;  
-
+  bool? visible;
+    /*
   bool get visible { 
     if (this._visible == null) {
       this._visible = false;
@@ -63,6 +69,7 @@ class TimelinePointOptions extends LinePointOptions {
   void set visible (bool v) {
     this._visible = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -74,16 +81,16 @@ class TimelinePointOptions extends LinePointOptions {
     
     // NOTE: skip serialization of dataLabels (type TimelineDataLabelOptions is ignored)} 
 
-    if (this._isNull != null) {  
-      buffer.writeAll(["\"isNull\":", this._isNull, ","], "");
+    if (this.isNull != null) {  
+      buffer.writeAll(["\"isNull\":", this.isNull, ","], "");
     }
 
-    if (this._radius != null) {  
-      buffer.writeAll(["\"radius\":", this._radius, ","], "");
+    if (this.radius != null) {  
+      buffer.writeAll(["\"radius\":", this.radius, ","], "");
     }
 
-    if (this._visible != null) {  
-      buffer.writeAll(["\"visible\":", this._visible, ","], "");
+    if (this.visible != null) {  
+      buffer.writeAll(["\"visible\":", this.visible, ","], "");
     }
   }
 

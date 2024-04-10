@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,14 +23,19 @@ import 'OptionFragment.dart';
  * WindbarbSeriesOptions 
  */
 class WindbarbSeriesOptions extends ColumnSeriesOptions {
-  WindbarbSeriesOptions() : super();
+  WindbarbSeriesOptions( {
+    this.onSeries = null,
+    this.vectorLength = null,
+    this.xOffset = null,
+    this.yOffset = null
+  }) : super();
   /**
    * The id of another series in the chart that the wind barbs are
    * projected on. When `null`, the wind symbols are drawn on the X axis,
    * but offset up or down by the `yOffset` setting.  
       */
-  String? _onSeries;  
-
+  String? onSeries;
+    /*
   String get onSeries { 
     if (this._onSeries == null) {
       this._onSeries = "";
@@ -41,6 +46,7 @@ class WindbarbSeriesOptions extends ColumnSeriesOptions {
   void set onSeries (String v) {
     this._onSeries = v;
   }
+    */
     
   // NOTE: states skipped - type Generic is ignored in gen
 
@@ -49,8 +55,8 @@ class WindbarbSeriesOptions extends ColumnSeriesOptions {
    * 
    * Defaults to '20'. 
       */
-  double? _vectorLength;  
-
+  double? vectorLength;
+    /*
   double get vectorLength { 
     if (this._vectorLength == null) {
       this._vectorLength = 0;
@@ -61,14 +67,15 @@ class WindbarbSeriesOptions extends ColumnSeriesOptions {
   void set vectorLength (double v) {
     this._vectorLength = v;
   }
+    */
     
   /**
    * Horizontal offset from the cartesian position, in pixels. When the
    * chart is inverted, this option allows translation like
    * [yOffset](#plotOptions.windbarb.yOffset) in non inverted charts.  
       */
-  double? _xOffset;  
-
+  double? xOffset;
+    /*
   double get xOffset { 
     if (this._xOffset == null) {
       this._xOffset = 0;
@@ -79,6 +86,7 @@ class WindbarbSeriesOptions extends ColumnSeriesOptions {
   void set xOffset (double v) {
     this._xOffset = v;
   }
+    */
     
   /**
    * Vertical offset from the cartesian position, in pixels. The default
@@ -88,8 +96,8 @@ class WindbarbSeriesOptions extends ColumnSeriesOptions {
    * 
    * Defaults to '-20'. 
       */
-  double? _yOffset;  
-
+  double? yOffset;
+    /*
   double get yOffset { 
     if (this._yOffset == null) {
       this._yOffset = 0;
@@ -100,6 +108,7 @@ class WindbarbSeriesOptions extends ColumnSeriesOptions {
   void set yOffset (double v) {
     this._yOffset = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -109,22 +118,22 @@ class WindbarbSeriesOptions extends ColumnSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._onSeries != null) {  
-      buffer.writeAll(["\"onSeries\":\`", this._onSeries, "\`,"], "");
+    if (this.onSeries != null) {  
+      buffer.writeAll(["\"onSeries\":\`", this.onSeries, "\`,"], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 
 
-    if (this._vectorLength != null) {  
-      buffer.writeAll(["\"vectorLength\":", this._vectorLength, ","], "");
+    if (this.vectorLength != null) {  
+      buffer.writeAll(["\"vectorLength\":", this.vectorLength, ","], "");
     }
 
-    if (this._xOffset != null) {  
-      buffer.writeAll(["\"xOffset\":", this._xOffset, ","], "");
+    if (this.xOffset != null) {  
+      buffer.writeAll(["\"xOffset\":", this.xOffset, ","], "");
     }
 
-    if (this._yOffset != null) {  
-      buffer.writeAll(["\"yOffset\":", this._yOffset, ","], "");
+    if (this.yOffset != null) {  
+      buffer.writeAll(["\"yOffset\":", this.yOffset, ","], "");
     }
   }
 

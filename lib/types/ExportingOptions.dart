@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -27,13 +27,32 @@ import 'OptionFragment.dart';
  * ExportingOptions 
  */
 class ExportingOptions extends OptionFragment {
-  ExportingOptions() : super();
+  ExportingOptions( {
+    this.allowHTML = null,
+    this.allowTableSorting = null,
+    this.enabled = null,
+    this.fallbackToExportServer = null,
+    this.filename = null,
+    this.libURL = null,
+    this.printMaxWidth = null,
+    this.scale = null,
+    this.sourceHeight = null,
+    this.sourceWidth = null,
+    this.type = null,
+    this.url = null,
+    this.useMultiLevelHeaders = null,
+    this.useRowspanHeaders = null,
+    this.width = null,
+    this.showTable = null,
+    this.tableCaption = null,
+    this.showExportInProgress = null
+  }) : super();
   /**
    * Accessibility options for the exporting menu. Requires the
    * Accessibility module.  
       */
-  ExportingAccessibilityOptions? _accessibility;  
-
+  ExportingAccessibilityOptions? accessibility;
+    /*
   ExportingAccessibilityOptions get accessibility { 
     if (this._accessibility == null) {
       this._accessibility = ExportingAccessibilityOptions();
@@ -44,6 +63,7 @@ class ExportingOptions extends OptionFragment {
   void set accessibility (ExportingAccessibilityOptions v) {
     this._accessibility = v;
   }
+    */
     
   /**
    * Experimental setting to allow HTML inside the chart (added through
@@ -59,8 +79,8 @@ class ExportingOptions extends OptionFragment {
    * 
    * Defaults to 'false'. 
       */
-  bool? _allowHTML;  
-
+  bool? allowHTML;
+    /*
   bool get allowHTML { 
     if (this._allowHTML == null) {
       this._allowHTML = false;
@@ -71,14 +91,15 @@ class ExportingOptions extends OptionFragment {
   void set allowHTML (bool v) {
     this._allowHTML = v;
   }
+    */
     
   /**
    * Allows the end user to sort the data table by clicking on column headers. 
    * 
    * Defaults to 'true'. 
       */
-  bool? _allowTableSorting;  
-
+  bool? allowTableSorting;
+    /*
   bool get allowTableSorting { 
     if (this._allowTableSorting == null) {
       this._allowTableSorting = false;
@@ -89,6 +110,7 @@ class ExportingOptions extends OptionFragment {
   void set allowTableSorting (bool v) {
     this._allowTableSorting = v;
   }
+    */
     
   /**
    * Options for the export related buttons, print and export. In addition
@@ -96,8 +118,8 @@ class ExportingOptions extends OptionFragment {
    * See [navigation.buttonOptions](#navigation.buttonOptions) for general
    * options.  
       */
-  ExportingButtonsOptions? _buttons;  
-
+  ExportingButtonsOptions? buttons;
+    /*
   ExportingButtonsOptions get buttons { 
     if (this._buttons == null) {
       this._buttons = ExportingButtonsOptions();
@@ -108,6 +130,7 @@ class ExportingOptions extends OptionFragment {
   void set buttons (ExportingButtonsOptions v) {
     this._buttons = v;
   }
+    */
     
   /**
    * Additional chart options to be merged into the chart before exporting to
@@ -118,8 +141,8 @@ class ExportingOptions extends OptionFragment {
    * readability of the exported chart, or to add a printer-friendly color
    * scheme to exported PDFs.  
       */
-  Options? _chartOptions;  
-
+  Options? chartOptions;
+    /*
   Options get chartOptions { 
     if (this._chartOptions == null) {
       this._chartOptions = Options();
@@ -130,6 +153,7 @@ class ExportingOptions extends OptionFragment {
   void set chartOptions (Options v) {
     this._chartOptions = v;
   }
+    */
     
   /**
    * Whether to enable the exporting module. Disabling the module will
@@ -137,8 +161,8 @@ class ExportingOptions extends OptionFragment {
    * 
    * Defaults to 'true'. 
       */
-  bool? _enabled;  
-
+  bool? enabled;
+    /*
   bool get enabled { 
     if (this._enabled == null) {
       this._enabled = false;
@@ -149,6 +173,7 @@ class ExportingOptions extends OptionFragment {
   void set enabled (bool v) {
     this._enabled = v;
   }
+    */
     
   /**
    * Whether or not to fall back to the export server if the offline-exporting
@@ -163,8 +188,8 @@ class ExportingOptions extends OptionFragment {
    * 
    * Defaults to 'true'. 
       */
-  bool? _fallbackToExportServer;  
-
+  bool? fallbackToExportServer;
+    /*
   bool get fallbackToExportServer { 
     if (this._fallbackToExportServer == null) {
       this._fallbackToExportServer = false;
@@ -175,14 +200,15 @@ class ExportingOptions extends OptionFragment {
   void set fallbackToExportServer (bool v) {
     this._fallbackToExportServer = v;
   }
+    */
     
   /**
    * The filename, without extension, to use for the exported chart. 
    * 
    * Defaults to 'chart'. 
       */
-  String? _filename;  
-
+  String? filename;
+    /*
   String get filename { 
     if (this._filename == null) {
       this._filename = "";
@@ -193,6 +219,7 @@ class ExportingOptions extends OptionFragment {
   void set filename (String v) {
     this._filename = v;
   }
+    */
     
   /**
    * Path where Highcharts will look for export module dependencies to
@@ -202,8 +229,8 @@ class ExportingOptions extends OptionFragment {
    * [svg2pdf.js](https://github.com/yWorks/svg2pdf.js), required for client
    * side export in certain browsers.  
       */
-  String? _libURL;  
-
+  String? libURL;
+    /*
   String get libURL { 
     if (this._libURL == null) {
       this._libURL = "";
@@ -214,6 +241,7 @@ class ExportingOptions extends OptionFragment {
   void set libURL (String v) {
     this._libURL = v;
   }
+    */
     
   /**
    * An object consisting of definitions for the menu items in the context
@@ -233,8 +261,8 @@ class ExportingOptions extends OptionFragment {
    * 
    * Defaults to '{"viewFullscreen": {}, "printChart": {}, "separator": {}, "downloadPNG": {}, "downloadJPEG": {}, "downloadPDF": {}, "downloadSVG": {}}'. 
       */
-  Map<String, String>? _menuItemDefinitions;  
-
+  Map<String, String>? menuItemDefinitions;
+    /*
   Map<String, String> get menuItemDefinitions { 
     if (this._menuItemDefinitions == null) {
       this._menuItemDefinitions = Map<String, String>();
@@ -245,6 +273,7 @@ class ExportingOptions extends OptionFragment {
   void set menuItemDefinitions (Map<String, String> v) {
     this._menuItemDefinitions = v;
   }
+    */
     
   /**
    * Settings for a custom font for the exported PDF, when using the
@@ -260,8 +289,8 @@ class ExportingOptions extends OptionFragment {
    * See more in [the
    * docs](https://www.highcharts.com/docs/export-module/client-side-export).  
       */
-  PdfFontOptions? _pdfFont;  
-
+  PdfFontOptions? pdfFont;
+    /*
   PdfFontOptions get pdfFont { 
     if (this._pdfFont == null) {
       this._pdfFont = PdfFontOptions();
@@ -272,6 +301,7 @@ class ExportingOptions extends OptionFragment {
   void set pdfFont (PdfFontOptions v) {
     this._pdfFont = v;
   }
+    */
     
   /**
    * When printing the chart from the menu item in the burger menu, if
@@ -282,8 +312,8 @@ class ExportingOptions extends OptionFragment {
    * 
    * Defaults to '780'. 
       */
-  double? _printMaxWidth;  
-
+  double? printMaxWidth;
+    /*
   double get printMaxWidth { 
     if (this._printMaxWidth == null) {
       this._printMaxWidth = 0;
@@ -294,6 +324,7 @@ class ExportingOptions extends OptionFragment {
   void set printMaxWidth (double v) {
     this._printMaxWidth = v;
   }
+    */
     
   /**
    * Defines the scale or zoom factor for the exported image compared
@@ -303,8 +334,8 @@ class ExportingOptions extends OptionFragment {
    * 
    * Defaults to '2'. 
       */
-  double? _scale;  
-
+  double? scale;
+    /*
   double get scale { 
     if (this._scale == null) {
       this._scale = 0;
@@ -315,12 +346,13 @@ class ExportingOptions extends OptionFragment {
   void set scale (double v) {
     this._scale = v;
   }
+    */
     
   /**
    * Analogous to [sourceWidth](#exporting.sourceWidth).  
       */
-  double? _sourceHeight;  
-
+  double? sourceHeight;
+    /*
   double get sourceHeight { 
     if (this._sourceHeight == null) {
       this._sourceHeight = 0;
@@ -331,6 +363,7 @@ class ExportingOptions extends OptionFragment {
   void set sourceHeight (double v) {
     this._sourceHeight = v;
   }
+    */
     
   /**
    * The width of the original chart when exported, unless an explicit
@@ -338,8 +371,8 @@ class ExportingOptions extends OptionFragment {
    * container. The width exported raster image is then multiplied by
    * [scale](#exporting.scale).  
       */
-  double? _sourceWidth;  
-
+  double? sourceWidth;
+    /*
   double get sourceWidth { 
     if (this._sourceWidth == null) {
       this._sourceWidth = 0;
@@ -350,6 +383,7 @@ class ExportingOptions extends OptionFragment {
   void set sourceWidth (double v) {
     this._sourceWidth = v;
   }
+    */
     
   /**
    * Default MIME type for exporting if `chart.exportChart()` is called
@@ -358,8 +392,8 @@ class ExportingOptions extends OptionFragment {
    * 
    * Defaults to 'image/png'. 
       */
-  String? _type;  
-
+  String? type;
+    /*
   String get type { 
     if (this._type == null) {
       this._type = "";
@@ -370,6 +404,7 @@ class ExportingOptions extends OptionFragment {
   void set type (String v) {
     this._type = v;
   }
+    */
     
   /**
    * The URL for the server module converting the SVG string to an image
@@ -377,8 +412,8 @@ class ExportingOptions extends OptionFragment {
    * 
    * Defaults to 'https://export.highcharts.com/'. 
       */
-  String? _url;  
-
+  String? url;
+    /*
   String get url { 
     if (this._url == null) {
       this._url = "";
@@ -389,6 +424,7 @@ class ExportingOptions extends OptionFragment {
   void set url (String v) {
     this._url = v;
   }
+    */
     
   /**
    * Use multi level headers in data table. If [csv.columnHeaderFormatter](#exporting.csv.columnHeaderFormatter) is defined, it has to return
@@ -396,8 +432,8 @@ class ExportingOptions extends OptionFragment {
    * 
    * Defaults to 'true'. 
       */
-  bool? _useMultiLevelHeaders;  
-
+  bool? useMultiLevelHeaders;
+    /*
   bool get useMultiLevelHeaders { 
     if (this._useMultiLevelHeaders == null) {
       this._useMultiLevelHeaders = false;
@@ -408,6 +444,7 @@ class ExportingOptions extends OptionFragment {
   void set useMultiLevelHeaders (bool v) {
     this._useMultiLevelHeaders = v;
   }
+    */
     
   /**
    * If using multi level table headers, use rowspans for headers that
@@ -415,8 +452,8 @@ class ExportingOptions extends OptionFragment {
    * 
    * Defaults to 'true'. 
       */
-  bool? _useRowspanHeaders;  
-
+  bool? useRowspanHeaders;
+    /*
   bool get useRowspanHeaders { 
     if (this._useRowspanHeaders == null) {
       this._useRowspanHeaders = false;
@@ -427,14 +464,15 @@ class ExportingOptions extends OptionFragment {
   void set useRowspanHeaders (bool v) {
     this._useRowspanHeaders = v;
   }
+    */
     
   /**
    * The pixel width of charts exported to PNG or JPG. As of Highcharts
    * 3.0, the default pixel width is a function of the [chart.width](#chart.width) or [exporting.sourceWidth](#exporting.sourceWidth) and the
    * [exporting.scale](#exporting.scale).  
       */
-  double? _width;  
-
+  double? width;
+    /*
   double get width { 
     if (this._width == null) {
       this._width = 0;
@@ -445,6 +483,7 @@ class ExportingOptions extends OptionFragment {
   void set width (double v) {
     this._width = v;
   }
+    */
     
   /**
    * Options for exporting data to CSV or ExCel, or displaying the data
@@ -459,8 +498,8 @@ class ExportingOptions extends OptionFragment {
    * opening. The workaround for this is to use a third party XLSX
    * converter, as demonstrated in the sample below.  
       */
-  ExportingCsvOptions? _csv;  
-
+  ExportingCsvOptions? csv;
+    /*
   ExportingCsvOptions get csv { 
     if (this._csv == null) {
       this._csv = ExportingCsvOptions();
@@ -471,12 +510,13 @@ class ExportingOptions extends OptionFragment {
   void set csv (ExportingCsvOptions v) {
     this._csv = v;
   }
+    */
     
   /**
    * Show a HTML table below the chart with the chart's current data.  
       */
-  bool? _showTable;  
-
+  bool? showTable;
+    /*
   bool get showTable { 
     if (this._showTable == null) {
       this._showTable = false;
@@ -487,13 +527,14 @@ class ExportingOptions extends OptionFragment {
   void set showTable (bool v) {
     this._showTable = v;
   }
+    */
     
   /**
    * Caption for the data table. Same as chart title by default. Set to
    * `false` to disable.  
       */
-  String? _tableCaption;  
-
+  String? tableCaption;
+    /*
   String get tableCaption { 
     if (this._tableCaption == null) {
       this._tableCaption = "";
@@ -504,9 +545,10 @@ class ExportingOptions extends OptionFragment {
   void set tableCaption (String v) {
     this._tableCaption = v;
   }
+    */
     
-  bool? _showExportInProgress;  
-
+  bool? showExportInProgress;
+    /*
   bool get showExportInProgress { 
     if (this._showExportInProgress == null) {
       this._showExportInProgress = false;
@@ -517,6 +559,7 @@ class ExportingOptions extends OptionFragment {
   void set showExportInProgress (bool v) {
     this._showExportInProgress = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -526,124 +569,124 @@ class ExportingOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._accessibility != null) {  
-      buffer.writeAll(["\"accessibility\":", this._accessibility?.toJSON(), ","], "");
+    if (this.accessibility != null) {  
+      buffer.writeAll(["\"accessibility\":", this.accessibility?.toJSON(), ","], "");
     }
 
-    if (this._allowHTML != null) {  
-      buffer.writeAll(["\"allowHTML\":", this._allowHTML, ","], "");
+    if (this.allowHTML != null) {  
+      buffer.writeAll(["\"allowHTML\":", this.allowHTML, ","], "");
     }
 
-    if (this._allowTableSorting != null) {  
-      buffer.writeAll(["\"allowTableSorting\":", this._allowTableSorting, ","], "");
+    if (this.allowTableSorting != null) {  
+      buffer.writeAll(["\"allowTableSorting\":", this.allowTableSorting, ","], "");
     }
 
-    if (this._buttons != null) {  
-      buffer.writeAll(["\"buttons\":", this._buttons?.toJSON(), ","], "");
+    if (this.buttons != null) {  
+      buffer.writeAll(["\"buttons\":", this.buttons?.toJSON(), ","], "");
     }
 
-    if (this._chartOptions != null) {  
-      buffer.writeAll(["\"chartOptions\":", this._chartOptions?.toJSON(), ","], "");
+    if (this.chartOptions != null) {  
+      buffer.writeAll(["\"chartOptions\":", this.chartOptions?.toJSON(), ","], "");
     }
 
-    if (this._enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this._enabled, ","], "");
+    if (this.enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
     }
 
-    if (this._fallbackToExportServer != null) {  
-      buffer.writeAll(["\"fallbackToExportServer\":", this._fallbackToExportServer, ","], "");
+    if (this.fallbackToExportServer != null) {  
+      buffer.writeAll(["\"fallbackToExportServer\":", this.fallbackToExportServer, ","], "");
     }
 
-    if (this._filename != null) {  
-      buffer.writeAll(["\"filename\":\`", this._filename, "\`,"], "");
+    if (this.filename != null) {  
+      buffer.writeAll(["\"filename\":\`", this.filename, "\`,"], "");
     }
 
     // NOTE: skip serialization of fetchOptions (type RequestInit is ignored)} 
 
-    if (this._libURL != null) {  
-      buffer.writeAll(["\"libURL\":\`", this._libURL, "\`,"], "");
+    if (this.libURL != null) {  
+      buffer.writeAll(["\"libURL\":\`", this.libURL, "\`,"], "");
     }
 
-    if (this._menuItemDefinitions != null) {  
-      buffer.writeAll(["\"menuItemDefinitions\":", this._menuItemDefinitions, ","], "");
+    if (this.menuItemDefinitions != null) {  
+      buffer.writeAll(["\"menuItemDefinitions\":", this.menuItemDefinitions, ","], "");
     }
 
-    if (this._pdfFont != null) {  
-      buffer.writeAll(["\"pdfFont\":", this._pdfFont?.toJSON(), ","], "");
+    if (this.pdfFont != null) {  
+      buffer.writeAll(["\"pdfFont\":", this.pdfFont?.toJSON(), ","], "");
     }
 
-    if (this._printMaxWidth != null) {  
-      buffer.writeAll(["\"printMaxWidth\":", this._printMaxWidth, ","], "");
+    if (this.printMaxWidth != null) {  
+      buffer.writeAll(["\"printMaxWidth\":", this.printMaxWidth, ","], "");
     }
 
-    if (this._scale != null) {  
-      buffer.writeAll(["\"scale\":", this._scale, ","], "");
+    if (this.scale != null) {  
+      buffer.writeAll(["\"scale\":", this.scale, ","], "");
     }
 
-    if (this._sourceHeight != null) {  
-      buffer.writeAll(["\"sourceHeight\":", this._sourceHeight, ","], "");
+    if (this.sourceHeight != null) {  
+      buffer.writeAll(["\"sourceHeight\":", this.sourceHeight, ","], "");
     }
 
-    if (this._sourceWidth != null) {  
-      buffer.writeAll(["\"sourceWidth\":", this._sourceWidth, ","], "");
+    if (this.sourceWidth != null) {  
+      buffer.writeAll(["\"sourceWidth\":", this.sourceWidth, ","], "");
     }
 
-    if (this._type != null) {  
-      buffer.writeAll(["\"type\":\`", this._type, "\`,"], "");
+    if (this.type != null) {  
+      buffer.writeAll(["\"type\":\`", this.type, "\`,"], "");
     }
 
-    if (this._url != null) {  
-      buffer.writeAll(["\"url\":\`", this._url, "\`,"], "");
+    if (this.url != null) {  
+      buffer.writeAll(["\"url\":\`", this.url, "\`,"], "");
     }
 
-    if (this._useMultiLevelHeaders != null) {  
-      buffer.writeAll(["\"useMultiLevelHeaders\":", this._useMultiLevelHeaders, ","], "");
+    if (this.useMultiLevelHeaders != null) {  
+      buffer.writeAll(["\"useMultiLevelHeaders\":", this.useMultiLevelHeaders, ","], "");
     }
 
-    if (this._useRowspanHeaders != null) {  
-      buffer.writeAll(["\"useRowspanHeaders\":", this._useRowspanHeaders, ","], "");
+    if (this.useRowspanHeaders != null) {  
+      buffer.writeAll(["\"useRowspanHeaders\":", this.useRowspanHeaders, ","], "");
     }
 
-    if (this._width != null) {  
-      buffer.writeAll(["\"width\":", this._width, ","], "");
+    if (this.width != null) {  
+      buffer.writeAll(["\"width\":", this.width, ","], "");
     }
 
-    if (this._csv != null) {  
-      buffer.writeAll(["\"csv\":", this._csv?.toJSON(), ","], "");
+    if (this.csv != null) {  
+      buffer.writeAll(["\"csv\":", this.csv?.toJSON(), ","], "");
     }
 
-    if (this._showTable != null) {  
-      buffer.writeAll(["\"showTable\":", this._showTable, ","], "");
+    if (this.showTable != null) {  
+      buffer.writeAll(["\"showTable\":", this.showTable, ","], "");
     }
 
-    if (this._tableCaption != null) {  
-      buffer.writeAll(["\"tableCaption\":\`", this._tableCaption, "\`,"], "");
+    if (this.tableCaption != null) {  
+      buffer.writeAll(["\"tableCaption\":\`", this.tableCaption, "\`,"], "");
     }
 
-    if (this._showExportInProgress != null) {  
-      buffer.writeAll(["\"showExportInProgress\":", this._showExportInProgress, ","], "");
+    if (this.showExportInProgress != null) {  
+      buffer.writeAll(["\"showExportInProgress\":", this.showExportInProgress, ","], "");
     }
 
     // NOTE: skip serialization of csv (type ExportingCsvOptions is ignored)} 
 
-    if (this._showTable != null) {  
-      buffer.writeAll(["\"showTable\":", this._showTable, ","], "");
+    if (this.showTable != null) {  
+      buffer.writeAll(["\"showTable\":", this.showTable, ","], "");
     }
 
-    if (this._tableCaption != null) {  
-      buffer.writeAll(["\"tableCaption\":\`", this._tableCaption, "\`,"], "");
+    if (this.tableCaption != null) {  
+      buffer.writeAll(["\"tableCaption\":\`", this.tableCaption, "\`,"], "");
     }
 
-    if (this._useMultiLevelHeaders != null) {  
-      buffer.writeAll(["\"useMultiLevelHeaders\":", this._useMultiLevelHeaders, ","], "");
+    if (this.useMultiLevelHeaders != null) {  
+      buffer.writeAll(["\"useMultiLevelHeaders\":", this.useMultiLevelHeaders, ","], "");
     }
 
-    if (this._useRowspanHeaders != null) {  
-      buffer.writeAll(["\"useRowspanHeaders\":", this._useRowspanHeaders, ","], "");
+    if (this.useRowspanHeaders != null) {  
+      buffer.writeAll(["\"useRowspanHeaders\":", this.useRowspanHeaders, ","], "");
     }
 
-    if (this._showExportInProgress != null) {  
-      buffer.writeAll(["\"showExportInProgress\":", this._showExportInProgress, ","], "");
+    if (this.showExportInProgress != null) {  
+      buffer.writeAll(["\"showExportInProgress\":", this.showExportInProgress, ","], "");
     }
   }
 

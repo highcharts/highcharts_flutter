@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -24,9 +24,12 @@ import 'OptionFragment.dart';
  * AccessibilityKeyboardNavigationOptions 
  */
 class AccessibilityKeyboardNavigationOptions extends OptionFragment {
-  AccessibilityKeyboardNavigationOptions() : super();
-  bool? _enabled;  
-
+  AccessibilityKeyboardNavigationOptions( {
+    this.enabled = null,
+    this.wrapAround = null
+  }) : super();
+  bool? enabled;
+    /*
   bool get enabled { 
     if (this._enabled == null) {
       this._enabled = false;
@@ -37,9 +40,10 @@ class AccessibilityKeyboardNavigationOptions extends OptionFragment {
   void set enabled (bool v) {
     this._enabled = v;
   }
+    */
     
-  bool? _wrapAround;  
-
+  bool? wrapAround;
+    /*
   bool get wrapAround { 
     if (this._wrapAround == null) {
       this._wrapAround = false;
@@ -50,6 +54,7 @@ class AccessibilityKeyboardNavigationOptions extends OptionFragment {
   void set wrapAround (bool v) {
     this._wrapAround = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -59,8 +64,8 @@ class AccessibilityKeyboardNavigationOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this._enabled, ","], "");
+    if (this.enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
     }
 
     // NOTE: skip serialization of focusBorder (type AccessibilityKeyboardNavigationFocusBorderOptions is ignored)} 
@@ -69,8 +74,8 @@ class AccessibilityKeyboardNavigationOptions extends OptionFragment {
 
     // NOTE: skip serialization of seriesNavigation (type AccessibilityKeyboardNavigationSeriesNavigationOptions is ignored)} 
 
-    if (this._wrapAround != null) {  
-      buffer.writeAll(["\"wrapAround\":", this._wrapAround, ","], "");
+    if (this.wrapAround != null) {  
+      buffer.writeAll(["\"wrapAround\":", this.wrapAround, ","], "");
     }
   }
 

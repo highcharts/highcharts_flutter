@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,11 @@ import 'OptionFragment.dart';
  * CrossfilterSyncOptions 
  */
 class CrossfilterSyncOptions extends OptionFragment {
-  CrossfilterSyncOptions() : super();
-  bool? _affectNavigator;  
-
+  CrossfilterSyncOptions( {
+    this.affectNavigator = null
+  }) : super();
+  bool? affectNavigator;
+    /*
   bool get affectNavigator { 
     if (this._affectNavigator == null) {
       this._affectNavigator = false;
@@ -35,6 +37,7 @@ class CrossfilterSyncOptions extends OptionFragment {
   void set affectNavigator (bool v) {
     this._affectNavigator = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -44,8 +47,8 @@ class CrossfilterSyncOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._affectNavigator != null) {  
-      buffer.writeAll(["\"affectNavigator\":", this._affectNavigator, ","], "");
+    if (this.affectNavigator != null) {  
+      buffer.writeAll(["\"affectNavigator\":", this.affectNavigator, ","], "");
     }
   }
 

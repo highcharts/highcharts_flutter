@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -24,9 +24,15 @@ import 'OptionFragment.dart';
  * TreemapNode 
  */
 class TreemapNode extends OptionFragment {
-  TreemapNode() : super();
-  double? _height;  
-
+  TreemapNode( {
+    this.height = null,
+    this.i = null,
+    this.id = null,
+    this.level = null,
+    this.val = null
+  }) : super();
+  double? height;
+    /*
   double get height { 
     if (this._height == null) {
       this._height = 0;
@@ -37,9 +43,10 @@ class TreemapNode extends OptionFragment {
   void set height (double v) {
     this._height = v;
   }
+    */
     
-  double? _i;  
-
+  double? i;
+    /*
   double get i { 
     if (this._i == null) {
       this._i = 0;
@@ -50,9 +57,10 @@ class TreemapNode extends OptionFragment {
   void set i (double v) {
     this._i = v;
   }
+    */
     
-  String? _id;  
-
+  String? id;
+    /*
   String get id { 
     if (this._id == null) {
       this._id = "";
@@ -63,9 +71,10 @@ class TreemapNode extends OptionFragment {
   void set id (String v) {
     this._id = v;
   }
+    */
     
-  double? _level;  
-
+  double? level;
+    /*
   double get level { 
     if (this._level == null) {
       this._level = 0;
@@ -76,9 +85,10 @@ class TreemapNode extends OptionFragment {
   void set level (double v) {
     this._level = v;
   }
+    */
     
-  double? _val;  
-
+  double? val;
+    /*
   double get val { 
     if (this._val == null) {
       this._val = 0;
@@ -89,6 +99,7 @@ class TreemapNode extends OptionFragment {
   void set val (double v) {
     this._val = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -98,28 +109,28 @@ class TreemapNode extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._height != null) {  
-      buffer.writeAll(["\"height\":", this._height, ","], "");
+    if (this.height != null) {  
+      buffer.writeAll(["\"height\":", this.height, ","], "");
     }
 
-    if (this._i != null) {  
-      buffer.writeAll(["\"i\":", this._i, ","], "");
+    if (this.i != null) {  
+      buffer.writeAll(["\"i\":", this.i, ","], "");
     }
 
-    if (this._id != null) {  
-      buffer.writeAll(["\"id\":\`", this._id, "\`,"], "");
+    if (this.id != null) {  
+      buffer.writeAll(["\"id\":\`", this.id, "\`,"], "");
     }
 
     // NOTE: skip serialization of children (type TreemapNode[] is ignored)} 
 
-    if (this._level != null) {  
-      buffer.writeAll(["\"level\":", this._level, ","], "");
+    if (this.level != null) {  
+      buffer.writeAll(["\"level\":", this.level, ","], "");
     }
 
     // NOTE: skip serialization of series (type TreemapSeries is ignored)} 
 
-    if (this._val != null) {  
-      buffer.writeAll(["\"val\":", this._val, ","], "");
+    if (this.val != null) {  
+      buffer.writeAll(["\"val\":", this.val, ","], "");
     }
 
     // NOTE: skip serialization of point (type TreemapPoint is ignored)} 

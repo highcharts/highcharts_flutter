@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,7 +22,11 @@ import 'OptionFragment.dart';
  * TimeOptions 
  */
 class TimeOptions extends OptionFragment {
-  TimeOptions() : super();
+  TimeOptions( {
+    this.timezone = null,
+    this.timezoneOffset = null,
+    this.useUTC = null
+  }) : super();
   // NOTE: Date skipped - type any is ignored in gen
 
   // NOTE: getTimezoneOffset skipped - type Function is ignored in gen
@@ -37,8 +41,8 @@ class TimeOptions extends OptionFragment {
    * 
    * Defaults to 'undefined'. 
       */
-  String? _timezone;  
-
+  String? timezone;
+    /*
   String get timezone { 
     if (this._timezone == null) {
       this._timezone = "";
@@ -49,6 +53,7 @@ class TimeOptions extends OptionFragment {
   void set timezone (String v) {
     this._timezone = v;
   }
+    */
     
   /**
    * The timezone offset in minutes. Positive values are west, negative
@@ -56,8 +61,8 @@ class TimeOptions extends OptionFragment {
    * [getTimezoneOffset](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset)
    * method. Use this to display UTC based data in a predefined time zone.  
       */
-  double? _timezoneOffset;  
-
+  double? timezoneOffset;
+    /*
   double get timezoneOffset { 
     if (this._timezoneOffset == null) {
       this._timezoneOffset = 0;
@@ -68,6 +73,7 @@ class TimeOptions extends OptionFragment {
   void set timezoneOffset (double v) {
     this._timezoneOffset = v;
   }
+    */
     
   /**
    * Whether to use UTC time for axis scaling, tickmark placement and
@@ -79,8 +85,8 @@ class TimeOptions extends OptionFragment {
    * 
    * Defaults to 'true'. 
       */
-  bool? _useUTC;  
-
+  bool? useUTC;
+    /*
   bool get useUTC { 
     if (this._useUTC == null) {
       this._useUTC = false;
@@ -91,6 +97,7 @@ class TimeOptions extends OptionFragment {
   void set useUTC (bool v) {
     this._useUTC = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -104,16 +111,16 @@ class TimeOptions extends OptionFragment {
 
     // NOTE: skip serialization of getTimezoneOffset (type Function is ignored)} 
 
-    if (this._timezone != null) {  
-      buffer.writeAll(["\"timezone\":\`", this._timezone, "\`,"], "");
+    if (this.timezone != null) {  
+      buffer.writeAll(["\"timezone\":\`", this.timezone, "\`,"], "");
     }
 
-    if (this._timezoneOffset != null) {  
-      buffer.writeAll(["\"timezoneOffset\":", this._timezoneOffset, ","], "");
+    if (this.timezoneOffset != null) {  
+      buffer.writeAll(["\"timezoneOffset\":", this.timezoneOffset, ","], "");
     }
 
-    if (this._useUTC != null) {  
-      buffer.writeAll(["\"useUTC\":", this._useUTC, ","], "");
+    if (this.useUTC != null) {  
+      buffer.writeAll(["\"useUTC\":", this.useUTC, ","], "");
     }
   }
 

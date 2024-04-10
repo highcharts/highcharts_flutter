@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,17 @@ import 'OptionFragment.dart';
  * SelectEventObject 
  */
 class SelectEventObject extends OptionFragment {
-  SelectEventObject() : super();
-  bool? _animation;  
-
+  SelectEventObject( {
+    this.animation = null,
+    this.height = null,
+    this.resetSelection = null,
+    this.trigger = null,
+    this.width = null,
+    this.x = null,
+    this.y = null
+  }) : super();
+  bool? animation;
+    /*
   bool get animation { 
     if (this._animation == null) {
       this._animation = false;
@@ -36,9 +44,10 @@ class SelectEventObject extends OptionFragment {
   void set animation (bool v) {
     this._animation = v;
   }
+    */
     
-  double? _height;  
-
+  double? height;
+    /*
   double get height { 
     if (this._height == null) {
       this._height = 0;
@@ -49,9 +58,10 @@ class SelectEventObject extends OptionFragment {
   void set height (double v) {
     this._height = v;
   }
+    */
     
-  bool? _resetSelection;  
-
+  bool? resetSelection;
+    /*
   bool get resetSelection { 
     if (this._resetSelection == null) {
       this._resetSelection = false;
@@ -62,9 +72,10 @@ class SelectEventObject extends OptionFragment {
   void set resetSelection (bool v) {
     this._resetSelection = v;
   }
+    */
     
-  String? _trigger;  
-
+  String? trigger;
+    /*
   String get trigger { 
     if (this._trigger == null) {
       this._trigger = "";
@@ -75,9 +86,10 @@ class SelectEventObject extends OptionFragment {
   void set trigger (String v) {
     this._trigger = v;
   }
+    */
     
-  double? _width;  
-
+  double? width;
+    /*
   double get width { 
     if (this._width == null) {
       this._width = 0;
@@ -88,9 +100,10 @@ class SelectEventObject extends OptionFragment {
   void set width (double v) {
     this._width = v;
   }
+    */
     
-  double? _x;  
-
+  double? x;
+    /*
   double get x { 
     if (this._x == null) {
       this._x = 0;
@@ -101,9 +114,10 @@ class SelectEventObject extends OptionFragment {
   void set x (double v) {
     this._x = v;
   }
+    */
     
-  double? _y;  
-
+  double? y;
+    /*
   double get y { 
     if (this._y == null) {
       this._y = 0;
@@ -114,6 +128,7 @@ class SelectEventObject extends OptionFragment {
   void set y (double v) {
     this._y = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -123,36 +138,36 @@ class SelectEventObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._animation != null) {  
-      buffer.writeAll(["\"animation\":", this._animation, ","], "");
+    if (this.animation != null) {  
+      buffer.writeAll(["\"animation\":", this.animation, ","], "");
     }
 
-    if (this._height != null) {  
-      buffer.writeAll(["\"height\":", this._height, ","], "");
+    if (this.height != null) {  
+      buffer.writeAll(["\"height\":", this.height, ","], "");
     }
 
     // NOTE: skip serialization of originalEvent (type Event is ignored)} 
 
-    if (this._resetSelection != null) {  
-      buffer.writeAll(["\"resetSelection\":", this._resetSelection, ","], "");
+    if (this.resetSelection != null) {  
+      buffer.writeAll(["\"resetSelection\":", this.resetSelection, ","], "");
     }
 
-    if (this._trigger != null) {  
-      buffer.writeAll(["\"trigger\":\`", this._trigger, "\`,"], "");
+    if (this.trigger != null) {  
+      buffer.writeAll(["\"trigger\":\`", this.trigger, "\`,"], "");
     }
 
-    if (this._width != null) {  
-      buffer.writeAll(["\"width\":", this._width, ","], "");
+    if (this.width != null) {  
+      buffer.writeAll(["\"width\":", this.width, ","], "");
     }
 
-    if (this._x != null) {  
-      buffer.writeAll(["\"x\":", this._x, ","], "");
+    if (this.x != null) {  
+      buffer.writeAll(["\"x\":", this.x, ","], "");
     }
 
     // NOTE: skip serialization of xAxis (type SelectDataObject[] is ignored)} 
 
-    if (this._y != null) {  
-      buffer.writeAll(["\"y\":", this._y, ","], "");
+    if (this.y != null) {  
+      buffer.writeAll(["\"y\":", this.y, ","], "");
     }
 
     // NOTE: skip serialization of yAxis (type SelectDataObject[] is ignored)} 

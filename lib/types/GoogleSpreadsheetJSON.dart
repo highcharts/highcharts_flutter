@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,11 @@ import 'OptionFragment.dart';
  * GoogleSpreadsheetJSON 
  */
 class GoogleSpreadsheetJSON extends OptionFragment {
-  GoogleSpreadsheetJSON() : super();
-  String? _majorDimension;  
-
+  GoogleSpreadsheetJSON( {
+    this.majorDimension = null
+  }) : super();
+  String? majorDimension;
+    /*
   String get majorDimension { 
     if (this._majorDimension == null) {
       this._majorDimension = "";
@@ -35,6 +37,7 @@ class GoogleSpreadsheetJSON extends OptionFragment {
   void set majorDimension (String v) {
     this._majorDimension = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -44,8 +47,8 @@ class GoogleSpreadsheetJSON extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._majorDimension != null) {  
-      buffer.writeAll(["\"majorDimension\":\`", this._majorDimension, "\`,"], "");
+    if (this.majorDimension != null) {  
+      buffer.writeAll(["\"majorDimension\":\`", this.majorDimension, "\`,"], "");
     }
 
     // NOTE: skip serialization of values (type boolean)[][] is ignored)} 

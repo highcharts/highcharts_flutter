@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -26,9 +26,15 @@ import 'OptionFragment.dart';
  * BaseNavigatorOptions 
  */
 class BaseNavigatorOptions extends OptionFragment {
-  BaseNavigatorOptions() : super();
-  String? _maskFill;  
-
+  BaseNavigatorOptions( {
+    this.maskFill = null,
+    this.maskInside = null,
+    this.height = null,
+    this.outlineColor = null,
+    this.outlineWidth = null
+  }) : super();
+  String? maskFill;
+    /*
   String get maskFill { 
     if (this._maskFill == null) {
       this._maskFill = "";
@@ -39,9 +45,10 @@ class BaseNavigatorOptions extends OptionFragment {
   void set maskFill (String v) {
     this._maskFill = v;
   }
+    */
     
-  bool? _maskInside;  
-
+  bool? maskInside;
+    /*
   bool get maskInside { 
     if (this._maskInside == null) {
       this._maskInside = false;
@@ -52,9 +59,10 @@ class BaseNavigatorOptions extends OptionFragment {
   void set maskInside (bool v) {
     this._maskInside = v;
   }
+    */
     
-  double? _height;  
-
+  double? height;
+    /*
   double get height { 
     if (this._height == null) {
       this._height = 0;
@@ -65,9 +73,10 @@ class BaseNavigatorOptions extends OptionFragment {
   void set height (double v) {
     this._height = v;
   }
+    */
     
-  String? _outlineColor;  
-
+  String? outlineColor;
+    /*
   String get outlineColor { 
     if (this._outlineColor == null) {
       this._outlineColor = "";
@@ -78,9 +87,10 @@ class BaseNavigatorOptions extends OptionFragment {
   void set outlineColor (String v) {
     this._outlineColor = v;
   }
+    */
     
-  double? _outlineWidth;  
-
+  double? outlineWidth;
+    /*
   double get outlineWidth { 
     if (this._outlineWidth == null) {
       this._outlineWidth = 0;
@@ -91,6 +101,7 @@ class BaseNavigatorOptions extends OptionFragment {
   void set outlineWidth (double v) {
     this._outlineWidth = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -100,26 +111,26 @@ class BaseNavigatorOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._maskFill != null) {  
-      buffer.writeAll(["\"maskFill\":\`", this._maskFill, "\`,"], "");
+    if (this.maskFill != null) {  
+      buffer.writeAll(["\"maskFill\":\`", this.maskFill, "\`,"], "");
     }
 
-    if (this._maskInside != null) {  
-      buffer.writeAll(["\"maskInside\":", this._maskInside, ","], "");
+    if (this.maskInside != null) {  
+      buffer.writeAll(["\"maskInside\":", this.maskInside, ","], "");
     }
 
     // NOTE: skip serialization of handles (type NavigatorHandlesOptions is ignored)} 
 
-    if (this._height != null) {  
-      buffer.writeAll(["\"height\":", this._height, ","], "");
+    if (this.height != null) {  
+      buffer.writeAll(["\"height\":", this.height, ","], "");
     }
 
-    if (this._outlineColor != null) {  
-      buffer.writeAll(["\"outlineColor\":\`", this._outlineColor, "\`,"], "");
+    if (this.outlineColor != null) {  
+      buffer.writeAll(["\"outlineColor\":\`", this.outlineColor, "\`,"], "");
     }
 
-    if (this._outlineWidth != null) {  
-      buffer.writeAll(["\"outlineWidth\":", this._outlineWidth, ","], "");
+    if (this.outlineWidth != null) {  
+      buffer.writeAll(["\"outlineWidth\":", this.outlineWidth, ","], "");
     }
 
     // NOTE: skip serialization of series (type SeriesOptions is ignored)} 

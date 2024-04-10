@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,11 @@ import 'OptionFragment.dart';
  * BBIndicator 
  */
 class BBIndicator extends OptionFragment {
-  BBIndicator() : super();
-  String? _pointValKey;  
-
+  BBIndicator( {
+    this.pointValKey = null
+  }) : super();
+  String? pointValKey;
+    /*
   String get pointValKey { 
     if (this._pointValKey == null) {
       this._pointValKey = "";
@@ -35,6 +37,7 @@ class BBIndicator extends OptionFragment {
   void set pointValKey (String v) {
     this._pointValKey = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -52,8 +55,8 @@ class BBIndicator extends OptionFragment {
 
     // NOTE: skip serialization of pointClass (type typeof BBPoint is ignored)} 
 
-    if (this._pointValKey != null) {  
-      buffer.writeAll(["\"pointValKey\":\`", this._pointValKey, "\`,"], "");
+    if (this.pointValKey != null) {  
+      buffer.writeAll(["\"pointValKey\":\`", this.pointValKey, "\`,"], "");
     }
   }
 

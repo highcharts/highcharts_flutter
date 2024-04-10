@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,16 @@ import 'OptionFragment.dart';
  * PolarConnector 
  */
 class PolarConnector extends OptionFragment {
-  PolarConnector() : super();
-  double? _leftContX;  
-
+  PolarConnector( {
+    this.leftContX = null,
+    this.leftContY = null,
+    this.plotX = null,
+    this.plotY = null,
+    this.rightContX = null,
+    this.rightContY = null
+  }) : super();
+  double? leftContX;
+    /*
   double get leftContX { 
     if (this._leftContX == null) {
       this._leftContX = 0;
@@ -36,9 +43,10 @@ class PolarConnector extends OptionFragment {
   void set leftContX (double v) {
     this._leftContX = v;
   }
+    */
     
-  double? _leftContY;  
-
+  double? leftContY;
+    /*
   double get leftContY { 
     if (this._leftContY == null) {
       this._leftContY = 0;
@@ -49,9 +57,10 @@ class PolarConnector extends OptionFragment {
   void set leftContY (double v) {
     this._leftContY = v;
   }
+    */
     
-  double? _plotX;  
-
+  double? plotX;
+    /*
   double get plotX { 
     if (this._plotX == null) {
       this._plotX = 0;
@@ -62,9 +71,10 @@ class PolarConnector extends OptionFragment {
   void set plotX (double v) {
     this._plotX = v;
   }
+    */
     
-  double? _plotY;  
-
+  double? plotY;
+    /*
   double get plotY { 
     if (this._plotY == null) {
       this._plotY = 0;
@@ -75,9 +85,10 @@ class PolarConnector extends OptionFragment {
   void set plotY (double v) {
     this._plotY = v;
   }
+    */
     
-  double? _rightContX;  
-
+  double? rightContX;
+    /*
   double get rightContX { 
     if (this._rightContX == null) {
       this._rightContX = 0;
@@ -88,9 +99,10 @@ class PolarConnector extends OptionFragment {
   void set rightContX (double v) {
     this._rightContX = v;
   }
+    */
     
-  double? _rightContY;  
-
+  double? rightContY;
+    /*
   double get rightContY { 
     if (this._rightContY == null) {
       this._rightContY = 0;
@@ -101,6 +113,7 @@ class PolarConnector extends OptionFragment {
   void set rightContY (double v) {
     this._rightContY = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -110,30 +123,30 @@ class PolarConnector extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._leftContX != null) {  
-      buffer.writeAll(["\"leftContX\":", this._leftContX, ","], "");
+    if (this.leftContX != null) {  
+      buffer.writeAll(["\"leftContX\":", this.leftContX, ","], "");
     }
 
-    if (this._leftContY != null) {  
-      buffer.writeAll(["\"leftContY\":", this._leftContY, ","], "");
+    if (this.leftContY != null) {  
+      buffer.writeAll(["\"leftContY\":", this.leftContY, ","], "");
     }
 
-    if (this._plotX != null) {  
-      buffer.writeAll(["\"plotX\":", this._plotX, ","], "");
+    if (this.plotX != null) {  
+      buffer.writeAll(["\"plotX\":", this.plotX, ","], "");
     }
 
-    if (this._plotY != null) {  
-      buffer.writeAll(["\"plotY\":", this._plotY, ","], "");
+    if (this.plotY != null) {  
+      buffer.writeAll(["\"plotY\":", this.plotY, ","], "");
     }
 
     // NOTE: skip serialization of prevPointCont (type PolarConnector is ignored)} 
 
-    if (this._rightContX != null) {  
-      buffer.writeAll(["\"rightContX\":", this._rightContX, ","], "");
+    if (this.rightContX != null) {  
+      buffer.writeAll(["\"rightContX\":", this.rightContX, ","], "");
     }
 
-    if (this._rightContY != null) {  
-      buffer.writeAll(["\"rightContY\":", this._rightContY, ","], "");
+    if (this.rightContY != null) {  
+      buffer.writeAll(["\"rightContY\":", this.rightContY, ","], "");
     }
   }
 

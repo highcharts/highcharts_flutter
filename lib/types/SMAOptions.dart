@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -24,13 +24,15 @@ import 'OptionFragment.dart';
  * SMAOptions 
  */
 class SMAOptions extends LineSeriesOptions {
-  SMAOptions() : super();
+  SMAOptions( {
+    this.compareToMain = null
+  }) : super();
   /**
    * Whether to compare indicator to the main series values
    * or indicator values.  
       */
-  bool? _compareToMain;  
-
+  bool? compareToMain;
+    /*
   bool get compareToMain { 
     if (this._compareToMain == null) {
       this._compareToMain = false;
@@ -41,12 +43,13 @@ class SMAOptions extends LineSeriesOptions {
   void set compareToMain (bool v) {
     this._compareToMain = v;
   }
+    */
     
   /**
    * Paramters used in calculation of regression series' points.  
       */
-  SMAParamsOptions? _params;  
-
+  SMAParamsOptions? params;
+    /*
   SMAParamsOptions get params { 
     if (this._params == null) {
       this._params = SMAParamsOptions();
@@ -57,6 +60,7 @@ class SMAOptions extends LineSeriesOptions {
   void set params (SMAParamsOptions v) {
     this._params = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -66,14 +70,14 @@ class SMAOptions extends LineSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._compareToMain != null) {  
-      buffer.writeAll(["\"compareToMain\":", this._compareToMain, ","], "");
+    if (this.compareToMain != null) {  
+      buffer.writeAll(["\"compareToMain\":", this.compareToMain, ","], "");
     }
 
     // NOTE: skip serialization of data (type number[][] is ignored)} 
 
-    if (this._params != null) {  
-      buffer.writeAll(["\"params\":", this._params?.toJSON(), ","], "");
+    if (this.params != null) {  
+      buffer.writeAll(["\"params\":", this.params?.toJSON(), ","], "");
     }
   }
 

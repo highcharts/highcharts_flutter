@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -27,7 +27,13 @@ import 'OptionFragment.dart';
  * AccessibilityOptions 
  */
 class AccessibilityOptions extends OptionFragment {
-  AccessibilityOptions() : super();
+  AccessibilityOptions( {
+    this.description = null,
+    this.enabled = null,
+    this.landmarkVerbosity = null,
+    this.linkedDescription = null,
+    this.typeDescription = null
+  }) : super();
   /**
    * Options for announcing new data to screen reader users. Useful
    * for dynamic data applications and drilldown.
@@ -37,8 +43,8 @@ class AccessibilityOptions extends OptionFragment {
    * applications, consider making snapshots of the data accessible, and
    * do the announcements in batches.  
       */
-  AccessibilityAnnounceNewDataOptions? _announceNewData;  
-
+  AccessibilityAnnounceNewDataOptions? announceNewData;
+    /*
   AccessibilityAnnounceNewDataOptions get announceNewData { 
     if (this._announceNewData == null) {
       this._announceNewData = AccessibilityAnnounceNewDataOptions();
@@ -49,6 +55,7 @@ class AccessibilityOptions extends OptionFragment {
   void set announceNewData (AccessibilityAnnounceNewDataOptions v) {
     this._announceNewData = v;
   }
+    */
     
   // NOTE: customComponents skipped - type AnyRecord is ignored in gen
 
@@ -68,8 +75,8 @@ class AccessibilityOptions extends OptionFragment {
    * `accessibility.description` option is defined, the linked description
    * is ignored, and the caption is hidden from screen reader users.  
       */
-  String? _description;  
-
+  String? description;
+    /*
   String get description { 
     if (this._description == null) {
       this._description = "";
@@ -80,6 +87,7 @@ class AccessibilityOptions extends OptionFragment {
   void set description (String v) {
     this._description = v;
   }
+    */
     
   /**
    * Enable accessibility functionality for the chart. For more
@@ -96,8 +104,8 @@ class AccessibilityOptions extends OptionFragment {
    * 
    * Defaults to 'true'. 
       */
-  bool? _enabled;  
-
+  bool? enabled;
+    /*
   bool get enabled { 
     if (this._enabled == null) {
       this._enabled = false;
@@ -108,14 +116,15 @@ class AccessibilityOptions extends OptionFragment {
   void set enabled (bool v) {
     this._enabled = v;
   }
+    */
     
   // NOTE: highContrastTheme skipped - type AnyRecord is ignored in gen
 
   /**
    * Options for keyboard navigation.  
       */
-  AccessibilityKeyboardNavigationOptions? _keyboardNavigation;  
-
+  AccessibilityKeyboardNavigationOptions? keyboardNavigation;
+    /*
   AccessibilityKeyboardNavigationOptions get keyboardNavigation { 
     if (this._keyboardNavigation == null) {
       this._keyboardNavigation = AccessibilityKeyboardNavigationOptions();
@@ -126,6 +135,7 @@ class AccessibilityOptions extends OptionFragment {
   void set keyboardNavigation (AccessibilityKeyboardNavigationOptions v) {
     this._keyboardNavigation = v;
   }
+    */
     
   /**
    * Amount of landmarks/regions to create for screen reader users. More
@@ -139,8 +149,8 @@ class AccessibilityOptions extends OptionFragment {
    * 
    * Defaults to 'all'. 
       */
-  String? _landmarkVerbosity;  
-
+  String? landmarkVerbosity;
+    /*
   String get landmarkVerbosity { 
     if (this._landmarkVerbosity == null) {
       this._landmarkVerbosity = "";
@@ -151,6 +161,7 @@ class AccessibilityOptions extends OptionFragment {
   void set landmarkVerbosity (String v) {
     this._landmarkVerbosity = v;
   }
+    */
     
   /**
    * Link the chart to an HTML element describing the contents of the
@@ -184,8 +195,8 @@ class AccessibilityOptions extends OptionFragment {
    * 
    * Defaults to '*[data-highcharts-chart="{index}"] + .highcharts-description'. 
       */
-  String? _linkedDescription;  
-
+  String? linkedDescription;
+    /*
   String get linkedDescription { 
     if (this._linkedDescription == null) {
       this._linkedDescription = "";
@@ -196,12 +207,13 @@ class AccessibilityOptions extends OptionFragment {
   void set linkedDescription (String v) {
     this._linkedDescription = v;
   }
+    */
     
   /**
    * Options for descriptions of individual data points.  
       */
-  AccessibilityPointOptions? _point;  
-
+  AccessibilityPointOptions? point;
+    /*
   AccessibilityPointOptions get point { 
     if (this._point == null) {
       this._point = AccessibilityPointOptions();
@@ -212,14 +224,15 @@ class AccessibilityOptions extends OptionFragment {
   void set point (AccessibilityPointOptions v) {
     this._point = v;
   }
+    */
     
   /**
    * Accessibility options global to all data series. Individual series
    * can also have specific [accessibility options](#plotOptions.series.accessibility)
    * set.  
       */
-  AccessibilitySeriesOptions? _series;  
-
+  AccessibilitySeriesOptions? series;
+    /*
   AccessibilitySeriesOptions get series { 
     if (this._series == null) {
       this._series = AccessibilitySeriesOptions();
@@ -230,13 +243,14 @@ class AccessibilityOptions extends OptionFragment {
   void set series (AccessibilitySeriesOptions v) {
     this._series = v;
   }
+    */
     
   /**
    * Accessibility options for the screen reader information sections
    * added before and after the chart.  
       */
-  AccessibilityScreenReaderSectionOptions? _screenReaderSection;  
-
+  AccessibilityScreenReaderSectionOptions? screenReaderSection;
+    /*
   AccessibilityScreenReaderSectionOptions get screenReaderSection { 
     if (this._screenReaderSection == null) {
       this._screenReaderSection = AccessibilityScreenReaderSectionOptions();
@@ -247,6 +261,7 @@ class AccessibilityOptions extends OptionFragment {
   void set screenReaderSection (AccessibilityScreenReaderSectionOptions v) {
     this._screenReaderSection = v;
   }
+    */
     
   /**
    * A text description of the chart type.
@@ -258,8 +273,8 @@ class AccessibilityOptions extends OptionFragment {
    * more complex charts it is recommended to specify this property for
    * clarity.  
       */
-  String? _typeDescription;  
-
+  String? typeDescription;
+    /*
   String get typeDescription { 
     if (this._typeDescription == null) {
       this._typeDescription = "";
@@ -270,6 +285,7 @@ class AccessibilityOptions extends OptionFragment {
   void set typeDescription (String v) {
     this._typeDescription = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -279,50 +295,50 @@ class AccessibilityOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._announceNewData != null) {  
-      buffer.writeAll(["\"announceNewData\":", this._announceNewData?.toJSON(), ","], "");
+    if (this.announceNewData != null) {  
+      buffer.writeAll(["\"announceNewData\":", this.announceNewData?.toJSON(), ","], "");
     }
 
     // NOTE: skip serialization of customComponents (type AnyRecord is ignored)} 
 
-    if (this._description != null) {  
-      buffer.writeAll(["\"description\":\`", this._description, "\`,"], "");
+    if (this.description != null) {  
+      buffer.writeAll(["\"description\":\`", this.description, "\`,"], "");
     }
 
-    if (this._enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this._enabled, ","], "");
+    if (this.enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
     }
 
     // NOTE: skip serialization of highContrastMode (type "auto" is ignored)} 
 
     // NOTE: skip serialization of highContrastTheme (type AnyRecord is ignored)} 
 
-    if (this._keyboardNavigation != null) {  
-      buffer.writeAll(["\"keyboardNavigation\":", this._keyboardNavigation?.toJSON(), ","], "");
+    if (this.keyboardNavigation != null) {  
+      buffer.writeAll(["\"keyboardNavigation\":", this.keyboardNavigation?.toJSON(), ","], "");
     }
 
-    if (this._landmarkVerbosity != null) {  
-      buffer.writeAll(["\"landmarkVerbosity\":\`", this._landmarkVerbosity, "\`,"], "");
+    if (this.landmarkVerbosity != null) {  
+      buffer.writeAll(["\"landmarkVerbosity\":\`", this.landmarkVerbosity, "\`,"], "");
     }
 
-    if (this._linkedDescription != null) {  
-      buffer.writeAll(["\"linkedDescription\":\`", this._linkedDescription, "\`,"], "");
+    if (this.linkedDescription != null) {  
+      buffer.writeAll(["\"linkedDescription\":\`", this.linkedDescription, "\`,"], "");
     }
 
-    if (this._point != null) {  
-      buffer.writeAll(["\"point\":", this._point?.toJSON(), ","], "");
+    if (this.point != null) {  
+      buffer.writeAll(["\"point\":", this.point?.toJSON(), ","], "");
     }
 
-    if (this._series != null) {  
-      buffer.writeAll(["\"series\":", this._series?.toJSON(), ","], "");
+    if (this.series != null) {  
+      buffer.writeAll(["\"series\":", this.series?.toJSON(), ","], "");
     }
 
-    if (this._screenReaderSection != null) {  
-      buffer.writeAll(["\"screenReaderSection\":", this._screenReaderSection?.toJSON(), ","], "");
+    if (this.screenReaderSection != null) {  
+      buffer.writeAll(["\"screenReaderSection\":", this.screenReaderSection?.toJSON(), ","], "");
     }
 
-    if (this._typeDescription != null) {  
-      buffer.writeAll(["\"typeDescription\":\`", this._typeDescription, "\`,"], "");
+    if (this.typeDescription != null) {  
+      buffer.writeAll(["\"typeDescription\":\`", this.typeDescription, "\`,"], "");
     }
   }
 

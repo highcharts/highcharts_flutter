@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,13 @@ import 'OptionFragment.dart';
  * BellcurveSeriesOptions 
  */
 class BellcurveSeriesOptions extends AreaSplineSeriesOptions {
-  BellcurveSeriesOptions() : super();
-  String? _baseSeries;  
-
+  BellcurveSeriesOptions( {
+    this.baseSeries = null,
+    this.intervals = null,
+    this.pointsInInterval = null
+  }) : super();
+  String? baseSeries;
+    /*
   String get baseSeries { 
     if (this._baseSeries == null) {
       this._baseSeries = "";
@@ -36,6 +40,7 @@ class BellcurveSeriesOptions extends AreaSplineSeriesOptions {
   void set baseSeries (String v) {
     this._baseSeries = v;
   }
+    */
     
   /**
    * This option allows to define the length of the bell curve. A unit of
@@ -43,8 +48,8 @@ class BellcurveSeriesOptions extends AreaSplineSeriesOptions {
    * 
    * Defaults to '3'. 
       */
-  double? _intervals;  
-
+  double? intervals;
+    /*
   double get intervals { 
     if (this._intervals == null) {
       this._intervals = 0;
@@ -55,6 +60,7 @@ class BellcurveSeriesOptions extends AreaSplineSeriesOptions {
   void set intervals (double v) {
     this._intervals = v;
   }
+    */
     
   /**
    * Defines how many points should be plotted within 1 interval. See
@@ -62,8 +68,8 @@ class BellcurveSeriesOptions extends AreaSplineSeriesOptions {
    * 
    * Defaults to '3'. 
       */
-  double? _pointsInInterval;  
-
+  double? pointsInInterval;
+    /*
   double get pointsInInterval { 
     if (this._pointsInInterval == null) {
       this._pointsInInterval = 0;
@@ -74,6 +80,7 @@ class BellcurveSeriesOptions extends AreaSplineSeriesOptions {
   void set pointsInInterval (double v) {
     this._pointsInInterval = v;
   }
+    */
     
   // NOTE: states skipped - type Generic is ignored in gen
 
@@ -85,18 +92,18 @@ class BellcurveSeriesOptions extends AreaSplineSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._baseSeries != null) {  
-      buffer.writeAll(["\"baseSeries\":\`", this._baseSeries, "\`,"], "");
+    if (this.baseSeries != null) {  
+      buffer.writeAll(["\"baseSeries\":\`", this.baseSeries, "\`,"], "");
     }
 
     // NOTE: skip serialization of data (type undefined is ignored)} 
 
-    if (this._intervals != null) {  
-      buffer.writeAll(["\"intervals\":", this._intervals, ","], "");
+    if (this.intervals != null) {  
+      buffer.writeAll(["\"intervals\":", this.intervals, ","], "");
     }
 
-    if (this._pointsInInterval != null) {  
-      buffer.writeAll(["\"pointsInInterval\":", this._pointsInInterval, ","], "");
+    if (this.pointsInInterval != null) {  
+      buffer.writeAll(["\"pointsInInterval\":", this.pointsInInterval, ","], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 

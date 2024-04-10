@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,12 @@ import 'OptionFragment.dart';
  * ScatterSeriesJitterOptions 
  */
 class ScatterSeriesJitterOptions extends OptionFragment {
-  ScatterSeriesJitterOptions() : super();
-  double? _x;  
-
+  ScatterSeriesJitterOptions( {
+    this.x = null,
+    this.y = null
+  }) : super();
+  double? x;
+    /*
   double get x { 
     if (this._x == null) {
       this._x = 0;
@@ -35,9 +38,10 @@ class ScatterSeriesJitterOptions extends OptionFragment {
   void set x (double v) {
     this._x = v;
   }
+    */
     
-  double? _y;  
-
+  double? y;
+    /*
   double get y { 
     if (this._y == null) {
       this._y = 0;
@@ -48,6 +52,7 @@ class ScatterSeriesJitterOptions extends OptionFragment {
   void set y (double v) {
     this._y = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -57,12 +62,12 @@ class ScatterSeriesJitterOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._x != null) {  
-      buffer.writeAll(["\"x\":", this._x, ","], "");
+    if (this.x != null) {  
+      buffer.writeAll(["\"x\":", this.x, ","], "");
     }
 
-    if (this._y != null) {  
-      buffer.writeAll(["\"y\":", this._y, ","], "");
+    if (this.y != null) {  
+      buffer.writeAll(["\"y\":", this.y, ","], "");
     }
   }
 

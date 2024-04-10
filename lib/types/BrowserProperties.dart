@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,13 @@ import 'OptionFragment.dart';
  * BrowserProperties 
  */
 class BrowserProperties extends OptionFragment {
-  BrowserProperties() : super();
-  String? _fullscreenChange;  
-
+  BrowserProperties( {
+    this.fullscreenChange = null,
+    this.requestFullscreen = null,
+    this.exitFullscreen = null
+  }) : super();
+  String? fullscreenChange;
+    /*
   String get fullscreenChange { 
     if (this._fullscreenChange == null) {
       this._fullscreenChange = "";
@@ -35,9 +39,10 @@ class BrowserProperties extends OptionFragment {
   void set fullscreenChange (String v) {
     this._fullscreenChange = v;
   }
+    */
     
-  String? _requestFullscreen;  
-
+  String? requestFullscreen;
+    /*
   String get requestFullscreen { 
     if (this._requestFullscreen == null) {
       this._requestFullscreen = "";
@@ -48,9 +53,10 @@ class BrowserProperties extends OptionFragment {
   void set requestFullscreen (String v) {
     this._requestFullscreen = v;
   }
+    */
     
-  String? _exitFullscreen;  
-
+  String? exitFullscreen;
+    /*
   String get exitFullscreen { 
     if (this._exitFullscreen == null) {
       this._exitFullscreen = "";
@@ -61,6 +67,7 @@ class BrowserProperties extends OptionFragment {
   void set exitFullscreen (String v) {
     this._exitFullscreen = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -70,16 +77,16 @@ class BrowserProperties extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._fullscreenChange != null) {  
-      buffer.writeAll(["\"fullscreenChange\":\`", this._fullscreenChange, "\`,"], "");
+    if (this.fullscreenChange != null) {  
+      buffer.writeAll(["\"fullscreenChange\":\`", this.fullscreenChange, "\`,"], "");
     }
 
-    if (this._requestFullscreen != null) {  
-      buffer.writeAll(["\"requestFullscreen\":\`", this._requestFullscreen, "\`,"], "");
+    if (this.requestFullscreen != null) {  
+      buffer.writeAll(["\"requestFullscreen\":\`", this.requestFullscreen, "\`,"], "");
     }
 
-    if (this._exitFullscreen != null) {  
-      buffer.writeAll(["\"exitFullscreen\":\`", this._exitFullscreen, "\`,"], "");
+    if (this.exitFullscreen != null) {  
+      buffer.writeAll(["\"exitFullscreen\":\`", this.exitFullscreen, "\`,"], "");
     }
   }
 

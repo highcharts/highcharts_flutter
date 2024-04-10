@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,16 @@ import 'OptionFragment.dart';
  * PointStateSelectOptions 
  */
 class PointStateSelectOptions extends StateSelectOptions {
-  PointStateSelectOptions() : super();
-  bool? _enabled;  
-
+  PointStateSelectOptions( {
+    this.enabled = null,
+    this.fillColor = null,
+    this.lineColor = null,
+    this.lineWidth = null,
+    this.opacity = null,
+    this.radius = null
+  }) : super();
+  bool? enabled;
+    /*
   bool get enabled { 
     if (this._enabled == null) {
       this._enabled = false;
@@ -36,9 +43,10 @@ class PointStateSelectOptions extends StateSelectOptions {
   void set enabled (bool v) {
     this._enabled = v;
   }
+    */
     
-  String? _fillColor;  
-
+  String? fillColor;
+    /*
   String get fillColor { 
     if (this._fillColor == null) {
       this._fillColor = "";
@@ -49,9 +57,10 @@ class PointStateSelectOptions extends StateSelectOptions {
   void set fillColor (String v) {
     this._fillColor = v;
   }
+    */
     
-  String? _lineColor;  
-
+  String? lineColor;
+    /*
   String get lineColor { 
     if (this._lineColor == null) {
       this._lineColor = "";
@@ -62,9 +71,10 @@ class PointStateSelectOptions extends StateSelectOptions {
   void set lineColor (String v) {
     this._lineColor = v;
   }
+    */
     
-  double? _lineWidth;  
-
+  double? lineWidth;
+    /*
   double get lineWidth { 
     if (this._lineWidth == null) {
       this._lineWidth = 0;
@@ -75,9 +85,10 @@ class PointStateSelectOptions extends StateSelectOptions {
   void set lineWidth (double v) {
     this._lineWidth = v;
   }
+    */
     
-  double? _opacity;  
-
+  double? opacity;
+    /*
   double get opacity { 
     if (this._opacity == null) {
       this._opacity = 0;
@@ -88,9 +99,10 @@ class PointStateSelectOptions extends StateSelectOptions {
   void set opacity (double v) {
     this._opacity = v;
   }
+    */
     
-  double? _radius;  
-
+  double? radius;
+    /*
   double get radius { 
     if (this._radius == null) {
       this._radius = 0;
@@ -101,6 +113,7 @@ class PointStateSelectOptions extends StateSelectOptions {
   void set radius (double v) {
     this._radius = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -110,28 +123,28 @@ class PointStateSelectOptions extends StateSelectOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this._enabled, ","], "");
+    if (this.enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
     }
 
-    if (this._fillColor != null) {  
-      buffer.writeAll(["\"fillColor\":\`", this._fillColor, "\`,"], "");
+    if (this.fillColor != null) {  
+      buffer.writeAll(["\"fillColor\":\`", this.fillColor, "\`,"], "");
     }
 
-    if (this._lineColor != null) {  
-      buffer.writeAll(["\"lineColor\":\`", this._lineColor, "\`,"], "");
+    if (this.lineColor != null) {  
+      buffer.writeAll(["\"lineColor\":\`", this.lineColor, "\`,"], "");
     }
 
-    if (this._lineWidth != null) {  
-      buffer.writeAll(["\"lineWidth\":", this._lineWidth, ","], "");
+    if (this.lineWidth != null) {  
+      buffer.writeAll(["\"lineWidth\":", this.lineWidth, ","], "");
     }
 
-    if (this._opacity != null) {  
-      buffer.writeAll(["\"opacity\":", this._opacity, ","], "");
+    if (this.opacity != null) {  
+      buffer.writeAll(["\"opacity\":", this.opacity, ","], "");
     }
 
-    if (this._radius != null) {  
-      buffer.writeAll(["\"radius\":", this._radius, ","], "");
+    if (this.radius != null) {  
+      buffer.writeAll(["\"radius\":", this.radius, ","], "");
     }
   }
 

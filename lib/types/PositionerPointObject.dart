@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,12 @@ import 'OptionFragment.dart';
  * PositionerPointObject 
  */
 class PositionerPointObject extends OptionFragment {
-  PositionerPointObject() : super();
-  double? _plotX;  
-
+  PositionerPointObject( {
+    this.plotX = null,
+    this.plotY = null
+  }) : super();
+  double? plotX;
+    /*
   double get plotX { 
     if (this._plotX == null) {
       this._plotX = 0;
@@ -35,9 +38,10 @@ class PositionerPointObject extends OptionFragment {
   void set plotX (double v) {
     this._plotX = v;
   }
+    */
     
-  double? _plotY;  
-
+  double? plotY;
+    /*
   double get plotY { 
     if (this._plotY == null) {
       this._plotY = 0;
@@ -48,6 +52,7 @@ class PositionerPointObject extends OptionFragment {
   void set plotY (double v) {
     this._plotY = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -59,12 +64,12 @@ class PositionerPointObject extends OptionFragment {
     
     // NOTE: skip serialization of isHeader (type true is ignored)} 
 
-    if (this._plotX != null) {  
-      buffer.writeAll(["\"plotX\":", this._plotX, ","], "");
+    if (this.plotX != null) {  
+      buffer.writeAll(["\"plotX\":", this.plotX, ","], "");
     }
 
-    if (this._plotY != null) {  
-      buffer.writeAll(["\"plotY\":", this._plotY, ","], "");
+    if (this.plotY != null) {  
+      buffer.writeAll(["\"plotY\":", this.plotY, ","], "");
     }
   }
 

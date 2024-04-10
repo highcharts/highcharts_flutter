@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,14 @@ import 'OptionFragment.dart';
  * MarkerClusterZonesOptions 
  */
 class MarkerClusterZonesOptions extends OptionFragment {
-  MarkerClusterZonesOptions() : super();
-  String? _className;  
-
+  MarkerClusterZonesOptions( {
+    this.className = null,
+    this.from = null,
+    this.to = null,
+    this.zoneIndex = null
+  }) : super();
+  String? className;
+    /*
   String get className { 
     if (this._className == null) {
       this._className = "";
@@ -36,9 +41,10 @@ class MarkerClusterZonesOptions extends OptionFragment {
   void set className (String v) {
     this._className = v;
   }
+    */
     
-  double? _from;  
-
+  double? from;
+    /*
   double get from { 
     if (this._from == null) {
       this._from = 0;
@@ -49,9 +55,10 @@ class MarkerClusterZonesOptions extends OptionFragment {
   void set from (double v) {
     this._from = v;
   }
+    */
     
-  double? _to;  
-
+  double? to;
+    /*
   double get to { 
     if (this._to == null) {
       this._to = 0;
@@ -62,9 +69,10 @@ class MarkerClusterZonesOptions extends OptionFragment {
   void set to (double v) {
     this._to = v;
   }
+    */
     
-  double? _zoneIndex;  
-
+  double? zoneIndex;
+    /*
   double get zoneIndex { 
     if (this._zoneIndex == null) {
       this._zoneIndex = 0;
@@ -75,6 +83,7 @@ class MarkerClusterZonesOptions extends OptionFragment {
   void set zoneIndex (double v) {
     this._zoneIndex = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -84,22 +93,22 @@ class MarkerClusterZonesOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._className != null) {  
-      buffer.writeAll(["\"className\":\`", this._className, "\`,"], "");
+    if (this.className != null) {  
+      buffer.writeAll(["\"className\":\`", this.className, "\`,"], "");
     }
 
-    if (this._from != null) {  
-      buffer.writeAll(["\"from\":", this._from, ","], "");
+    if (this.from != null) {  
+      buffer.writeAll(["\"from\":", this.from, ","], "");
     }
 
     // NOTE: skip serialization of marker (type PointMarkerOptions is ignored)} 
 
-    if (this._to != null) {  
-      buffer.writeAll(["\"to\":", this._to, ","], "");
+    if (this.to != null) {  
+      buffer.writeAll(["\"to\":", this.to, ","], "");
     }
 
-    if (this._zoneIndex != null) {  
-      buffer.writeAll(["\"zoneIndex\":", this._zoneIndex, ","], "");
+    if (this.zoneIndex != null) {  
+      buffer.writeAll(["\"zoneIndex\":", this.zoneIndex, ","], "");
     }
   }
 

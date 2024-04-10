@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,17 @@ import 'OptionFragment.dart';
  * NetworkgraphPointOptions 
  */
 class NetworkgraphPointOptions extends PointOptions {
-  NetworkgraphPointOptions() : super();
-  String? _color;  
-
+  NetworkgraphPointOptions( {
+    this.color = null,
+    this.colorIndex = null,
+    this.dashStyle = null,
+    this.mass = null,
+    this.name = null,
+    this.opacity = null,
+    this.width = null
+  }) : super();
+  String? color;
+    /*
   String get color { 
     if (this._color == null) {
       this._color = "";
@@ -36,9 +44,10 @@ class NetworkgraphPointOptions extends PointOptions {
   void set color (String v) {
     this._color = v;
   }
+    */
     
-  double? _colorIndex;  
-
+  double? colorIndex;
+    /*
   double get colorIndex { 
     if (this._colorIndex == null) {
       this._colorIndex = 0;
@@ -49,9 +58,10 @@ class NetworkgraphPointOptions extends PointOptions {
   void set colorIndex (double v) {
     this._colorIndex = v;
   }
+    */
     
-  String? _dashStyle;  
-
+  String? dashStyle;
+    /*
   String get dashStyle { 
     if (this._dashStyle == null) {
       this._dashStyle = "";
@@ -62,9 +72,10 @@ class NetworkgraphPointOptions extends PointOptions {
   void set dashStyle (String v) {
     this._dashStyle = v;
   }
+    */
     
-  double? _mass;  
-
+  double? mass;
+    /*
   double get mass { 
     if (this._mass == null) {
       this._mass = 0;
@@ -75,9 +86,10 @@ class NetworkgraphPointOptions extends PointOptions {
   void set mass (double v) {
     this._mass = v;
   }
+    */
     
-  String? _name;  
-
+  String? name;
+    /*
   String get name { 
     if (this._name == null) {
       this._name = "";
@@ -88,9 +100,10 @@ class NetworkgraphPointOptions extends PointOptions {
   void set name (String v) {
     this._name = v;
   }
+    */
     
-  double? _opacity;  
-
+  double? opacity;
+    /*
   double get opacity { 
     if (this._opacity == null) {
       this._opacity = 0;
@@ -101,9 +114,10 @@ class NetworkgraphPointOptions extends PointOptions {
   void set opacity (double v) {
     this._opacity = v;
   }
+    */
     
-  double? _width;  
-
+  double? width;
+    /*
   double get width { 
     if (this._width == null) {
       this._width = 0;
@@ -114,6 +128,7 @@ class NetworkgraphPointOptions extends PointOptions {
   void set width (double v) {
     this._width = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -123,32 +138,32 @@ class NetworkgraphPointOptions extends PointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._color != null) {  
-      buffer.writeAll(["\"color\":\`", this._color, "\`,"], "");
+    if (this.color != null) {  
+      buffer.writeAll(["\"color\":\`", this.color, "\`,"], "");
     }
 
-    if (this._colorIndex != null) {  
-      buffer.writeAll(["\"colorIndex\":", this._colorIndex, ","], "");
+    if (this.colorIndex != null) {  
+      buffer.writeAll(["\"colorIndex\":", this.colorIndex, ","], "");
     }
 
-    if (this._dashStyle != null) {  
-      buffer.writeAll(["\"dashStyle\":\`", this._dashStyle, "\`,"], "");
+    if (this.dashStyle != null) {  
+      buffer.writeAll(["\"dashStyle\":\`", this.dashStyle, "\`,"], "");
     }
 
-    if (this._mass != null) {  
-      buffer.writeAll(["\"mass\":", this._mass, ","], "");
+    if (this.mass != null) {  
+      buffer.writeAll(["\"mass\":", this.mass, ","], "");
     }
 
-    if (this._name != null) {  
-      buffer.writeAll(["\"name\":\`", this._name, "\`,"], "");
+    if (this.name != null) {  
+      buffer.writeAll(["\"name\":\`", this.name, "\`,"], "");
     }
 
-    if (this._opacity != null) {  
-      buffer.writeAll(["\"opacity\":", this._opacity, ","], "");
+    if (this.opacity != null) {  
+      buffer.writeAll(["\"opacity\":", this.opacity, ","], "");
     }
 
-    if (this._width != null) {  
-      buffer.writeAll(["\"width\":", this._width, ","], "");
+    if (this.width != null) {  
+      buffer.writeAll(["\"width\":", this.width, ","], "");
     }
   }
 

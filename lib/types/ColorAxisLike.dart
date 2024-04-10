@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -25,9 +25,11 @@ import 'OptionFragment.dart';
  * ColorAxisLike 
  */
 class ColorAxisLike extends AxisComposition {
-  ColorAxisLike() : super();
-  double? _index;  
-
+  ColorAxisLike( {
+    this.index = null
+  }) : super();
+  double? index;
+    /*
   double get index { 
     if (this._index == null) {
       this._index = 0;
@@ -38,6 +40,7 @@ class ColorAxisLike extends AxisComposition {
   void set index (double v) {
     this._index = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -51,8 +54,8 @@ class ColorAxisLike extends AxisComposition {
 
     // NOTE: skip serialization of dataClasses (type DataClassOptions[] is ignored)} 
 
-    if (this._index != null) {  
-      buffer.writeAll(["\"index\":", this._index, ","], "");
+    if (this.index != null) {  
+      buffer.writeAll(["\"index\":", this.index, ","], "");
     }
 
     // NOTE: skip serialization of options (type Options is ignored)} 

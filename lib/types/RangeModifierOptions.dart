@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,12 @@ import 'OptionFragment.dart';
  * RangeModifierOptions 
  */
 class RangeModifierOptions extends DataModifierOptions {
-  RangeModifierOptions() : super();
-  bool? _additive;  
-
+  RangeModifierOptions( {
+    this.additive = null,
+    this.strict = null
+  }) : super();
+  bool? additive;
+    /*
   bool get additive { 
     if (this._additive == null) {
       this._additive = false;
@@ -36,9 +39,10 @@ class RangeModifierOptions extends DataModifierOptions {
   void set additive (bool v) {
     this._additive = v;
   }
+    */
     
-  bool? _strict;  
-
+  bool? strict;
+    /*
   bool get strict { 
     if (this._strict == null) {
       this._strict = false;
@@ -49,6 +53,7 @@ class RangeModifierOptions extends DataModifierOptions {
   void set strict (bool v) {
     this._strict = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -60,14 +65,14 @@ class RangeModifierOptions extends DataModifierOptions {
     
     // NOTE: skip serialization of type (type "Range" is ignored)} 
 
-    if (this._additive != null) {  
-      buffer.writeAll(["\"additive\":", this._additive, ","], "");
+    if (this.additive != null) {  
+      buffer.writeAll(["\"additive\":", this.additive, ","], "");
     }
 
     // NOTE: skip serialization of ranges (type RangeModifierRangeOptions[] is ignored)} 
 
-    if (this._strict != null) {  
-      buffer.writeAll(["\"strict\":", this._strict, ","], "");
+    if (this.strict != null) {  
+      buffer.writeAll(["\"strict\":", this.strict, ","], "");
     }
   }
 

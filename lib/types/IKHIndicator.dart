@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,11 @@ import 'OptionFragment.dart';
  * IKHIndicator 
  */
 class IKHIndicator extends OptionFragment {
-  IKHIndicator() : super();
-  String? _pointValKey;  
-
+  IKHIndicator( {
+    this.pointValKey = null
+  }) : super();
+  String? pointValKey;
+    /*
   String get pointValKey { 
     if (this._pointValKey == null) {
       this._pointValKey = "";
@@ -35,6 +37,7 @@ class IKHIndicator extends OptionFragment {
   void set pointValKey (String v) {
     this._pointValKey = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -48,8 +51,8 @@ class IKHIndicator extends OptionFragment {
 
     // NOTE: skip serialization of nameComponents (type string[] is ignored)} 
 
-    if (this._pointValKey != null) {  
-      buffer.writeAll(["\"pointValKey\":\`", this._pointValKey, "\`,"], "");
+    if (this.pointValKey != null) {  
+      buffer.writeAll(["\"pointValKey\":\`", this.pointValKey, "\`,"], "");
     }
 
     // NOTE: skip serialization of pointArrayMap (type (keyof IKHPoint)[] is ignored)} 

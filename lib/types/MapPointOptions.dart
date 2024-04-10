@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -25,9 +25,18 @@ import 'OptionFragment.dart';
  * MapPointOptions 
  */
 class MapPointOptions extends ScatterPointOptions {
-  MapPointOptions() : super();
-  String? _color;  
-
+  MapPointOptions( {
+    this.color = null,
+    this.drilldown = null,
+    this.id = null,
+    this.labelrank = null,
+    this.middleX = null,
+    this.middleY = null,
+    this.name = null,
+    this.value = null
+  }) : super();
+  String? color;
+    /*
   String get color { 
     if (this._color == null) {
       this._color = "";
@@ -38,9 +47,10 @@ class MapPointOptions extends ScatterPointOptions {
   void set color (String v) {
     this._color = v;
   }
+    */
     
-  String? _drilldown;  
-
+  String? drilldown;
+    /*
   String get drilldown { 
     if (this._drilldown == null) {
       this._drilldown = "";
@@ -51,9 +61,10 @@ class MapPointOptions extends ScatterPointOptions {
   void set drilldown (String v) {
     this._drilldown = v;
   }
+    */
     
-  String? _id;  
-
+  String? id;
+    /*
   String get id { 
     if (this._id == null) {
       this._id = "";
@@ -64,9 +75,10 @@ class MapPointOptions extends ScatterPointOptions {
   void set id (String v) {
     this._id = v;
   }
+    */
     
-  double? _labelrank;  
-
+  double? labelrank;
+    /*
   double get labelrank { 
     if (this._labelrank == null) {
       this._labelrank = 0;
@@ -77,9 +89,10 @@ class MapPointOptions extends ScatterPointOptions {
   void set labelrank (double v) {
     this._labelrank = v;
   }
+    */
     
-  double? _middleX;  
-
+  double? middleX;
+    /*
   double get middleX { 
     if (this._middleX == null) {
       this._middleX = 0;
@@ -90,9 +103,10 @@ class MapPointOptions extends ScatterPointOptions {
   void set middleX (double v) {
     this._middleX = v;
   }
+    */
     
-  double? _middleY;  
-
+  double? middleY;
+    /*
   double get middleY { 
     if (this._middleY == null) {
       this._middleY = 0;
@@ -103,9 +117,10 @@ class MapPointOptions extends ScatterPointOptions {
   void set middleY (double v) {
     this._middleY = v;
   }
+    */
     
-  String? _name;  
-
+  String? name;
+    /*
   String get name { 
     if (this._name == null) {
       this._name = "";
@@ -116,9 +131,10 @@ class MapPointOptions extends ScatterPointOptions {
   void set name (String v) {
     this._name = v;
   }
+    */
     
-  double? _value;  
-
+  double? value;
+    /*
   double get value { 
     if (this._value == null) {
       this._value = 0;
@@ -129,6 +145,7 @@ class MapPointOptions extends ScatterPointOptions {
   void set value (double v) {
     this._value = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -138,44 +155,44 @@ class MapPointOptions extends ScatterPointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._color != null) {  
-      buffer.writeAll(["\"color\":\`", this._color, "\`,"], "");
+    if (this.color != null) {  
+      buffer.writeAll(["\"color\":\`", this.color, "\`,"], "");
     }
 
     // NOTE: skip serialization of dataLabels (type DataLabelOptions is ignored)} 
 
-    if (this._drilldown != null) {  
-      buffer.writeAll(["\"drilldown\":\`", this._drilldown, "\`,"], "");
+    if (this.drilldown != null) {  
+      buffer.writeAll(["\"drilldown\":\`", this.drilldown, "\`,"], "");
     }
 
     // NOTE: skip serialization of geometry (type GeoJSONGeometryMultiPoint is ignored)} 
 
-    if (this._id != null) {  
-      buffer.writeAll(["\"id\":\`", this._id, "\`,"], "");
+    if (this.id != null) {  
+      buffer.writeAll(["\"id\":\`", this.id, "\`,"], "");
     }
 
-    if (this._labelrank != null) {  
-      buffer.writeAll(["\"labelrank\":", this._labelrank, ","], "");
+    if (this.labelrank != null) {  
+      buffer.writeAll(["\"labelrank\":", this.labelrank, ","], "");
     }
 
-    if (this._middleX != null) {  
-      buffer.writeAll(["\"middleX\":", this._middleX, ","], "");
+    if (this.middleX != null) {  
+      buffer.writeAll(["\"middleX\":", this.middleX, ","], "");
     }
 
-    if (this._middleY != null) {  
-      buffer.writeAll(["\"middleY\":", this._middleY, ","], "");
+    if (this.middleY != null) {  
+      buffer.writeAll(["\"middleY\":", this.middleY, ","], "");
     }
 
-    if (this._name != null) {  
-      buffer.writeAll(["\"name\":\`", this._name, "\`,"], "");
+    if (this.name != null) {  
+      buffer.writeAll(["\"name\":\`", this.name, "\`,"], "");
     }
 
     // NOTE: skip serialization of path (type SVGPath is ignored)} 
 
     // NOTE: skip serialization of properties (type AnyRecord is ignored)} 
 
-    if (this._value != null) {  
-      buffer.writeAll(["\"value\":", this._value, ","], "");
+    if (this.value != null) {  
+      buffer.writeAll(["\"value\":", this.value, ","], "");
     }
   }
 

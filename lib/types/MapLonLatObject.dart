@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,12 @@ import 'OptionFragment.dart';
  * MapLonLatObject 
  */
 class MapLonLatObject extends OptionFragment {
-  MapLonLatObject() : super();
-  double? _lat;  
-
+  MapLonLatObject( {
+    this.lat = null,
+    this.lon = null
+  }) : super();
+  double? lat;
+    /*
   double get lat { 
     if (this._lat == null) {
       this._lat = 0;
@@ -35,9 +38,10 @@ class MapLonLatObject extends OptionFragment {
   void set lat (double v) {
     this._lat = v;
   }
+    */
     
-  double? _lon;  
-
+  double? lon;
+    /*
   double get lon { 
     if (this._lon == null) {
       this._lon = 0;
@@ -48,6 +52,7 @@ class MapLonLatObject extends OptionFragment {
   void set lon (double v) {
     this._lon = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -57,12 +62,12 @@ class MapLonLatObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._lat != null) {  
-      buffer.writeAll(["\"lat\":", this._lat, ","], "");
+    if (this.lat != null) {  
+      buffer.writeAll(["\"lat\":", this.lat, ","], "");
     }
 
-    if (this._lon != null) {  
-      buffer.writeAll(["\"lon\":", this._lon, ","], "");
+    if (this.lon != null) {  
+      buffer.writeAll(["\"lon\":", this.lon, ","], "");
     }
   }
 

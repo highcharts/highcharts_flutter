@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -25,9 +25,16 @@ import 'OptionFragment.dart';
  * SunburstSeriesLevelOptions 
  */
 class SunburstSeriesLevelOptions extends TreemapSeriesLevelsOptions {
-  SunburstSeriesLevelOptions() : super();
-  String? _borderColor;  
-
+  SunburstSeriesLevelOptions( {
+    this.borderColor = null,
+    this.borderDashStyle = null,
+    this.borderWidth = null,
+    this.color = null,
+    this.rotation = null,
+    this.rotationMode = null
+  }) : super();
+  String? borderColor;
+    /*
   String get borderColor { 
     if (this._borderColor == null) {
       this._borderColor = "";
@@ -38,9 +45,10 @@ class SunburstSeriesLevelOptions extends TreemapSeriesLevelsOptions {
   void set borderColor (String v) {
     this._borderColor = v;
   }
+    */
     
-  String? _borderDashStyle;  
-
+  String? borderDashStyle;
+    /*
   String get borderDashStyle { 
     if (this._borderDashStyle == null) {
       this._borderDashStyle = "";
@@ -51,9 +59,10 @@ class SunburstSeriesLevelOptions extends TreemapSeriesLevelsOptions {
   void set borderDashStyle (String v) {
     this._borderDashStyle = v;
   }
+    */
     
-  double? _borderWidth;  
-
+  double? borderWidth;
+    /*
   double get borderWidth { 
     if (this._borderWidth == null) {
       this._borderWidth = 0;
@@ -64,9 +73,10 @@ class SunburstSeriesLevelOptions extends TreemapSeriesLevelsOptions {
   void set borderWidth (double v) {
     this._borderWidth = v;
   }
+    */
     
-  String? _color;  
-
+  String? color;
+    /*
   String get color { 
     if (this._color == null) {
       this._color = "";
@@ -77,9 +87,10 @@ class SunburstSeriesLevelOptions extends TreemapSeriesLevelsOptions {
   void set color (String v) {
     this._color = v;
   }
+    */
     
-  double? _rotation;  
-
+  double? rotation;
+    /*
   double get rotation { 
     if (this._rotation == null) {
       this._rotation = 0;
@@ -90,9 +101,10 @@ class SunburstSeriesLevelOptions extends TreemapSeriesLevelsOptions {
   void set rotation (double v) {
     this._rotation = v;
   }
+    */
     
-  String? _rotationMode;  
-
+  String? rotationMode;
+    /*
   String get rotationMode { 
     if (this._rotationMode == null) {
       this._rotationMode = "";
@@ -103,6 +115,7 @@ class SunburstSeriesLevelOptions extends TreemapSeriesLevelsOptions {
   void set rotationMode (String v) {
     this._rotationMode = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -112,20 +125,20 @@ class SunburstSeriesLevelOptions extends TreemapSeriesLevelsOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._borderColor != null) {  
-      buffer.writeAll(["\"borderColor\":\`", this._borderColor, "\`,"], "");
+    if (this.borderColor != null) {  
+      buffer.writeAll(["\"borderColor\":\`", this.borderColor, "\`,"], "");
     }
 
-    if (this._borderDashStyle != null) {  
-      buffer.writeAll(["\"borderDashStyle\":\`", this._borderDashStyle, "\`,"], "");
+    if (this.borderDashStyle != null) {  
+      buffer.writeAll(["\"borderDashStyle\":\`", this.borderDashStyle, "\`,"], "");
     }
 
-    if (this._borderWidth != null) {  
-      buffer.writeAll(["\"borderWidth\":", this._borderWidth, ","], "");
+    if (this.borderWidth != null) {  
+      buffer.writeAll(["\"borderWidth\":", this.borderWidth, ","], "");
     }
 
-    if (this._color != null) {  
-      buffer.writeAll(["\"color\":\`", this._color, "\`,"], "");
+    if (this.color != null) {  
+      buffer.writeAll(["\"color\":\`", this.color, "\`,"], "");
     }
 
     // NOTE: skip serialization of colorVariation (type SunburstSeriesLevelsColorVariationOptions is ignored)} 
@@ -134,12 +147,12 @@ class SunburstSeriesLevelOptions extends TreemapSeriesLevelsOptions {
 
     // NOTE: skip serialization of levelSize (type unknown is ignored)} 
 
-    if (this._rotation != null) {  
-      buffer.writeAll(["\"rotation\":", this._rotation, ","], "");
+    if (this.rotation != null) {  
+      buffer.writeAll(["\"rotation\":", this.rotation, ","], "");
     }
 
-    if (this._rotationMode != null) {  
-      buffer.writeAll(["\"rotationMode\":\`", this._rotationMode, "\`,"], "");
+    if (this.rotationMode != null) {  
+      buffer.writeAll(["\"rotationMode\":\`", this.rotationMode, "\`,"], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,11 @@ import 'OptionFragment.dart';
  * ADParamsOptions 
  */
 class ADParamsOptions extends SMAParamsOptions {
-  ADParamsOptions() : super();
-  String? _volumeSeriesID;  
-
+  ADParamsOptions( {
+    this.volumeSeriesID = null
+  }) : super();
+  String? volumeSeriesID;
+    /*
   String get volumeSeriesID { 
     if (this._volumeSeriesID == null) {
       this._volumeSeriesID = "";
@@ -36,6 +38,7 @@ class ADParamsOptions extends SMAParamsOptions {
   void set volumeSeriesID (String v) {
     this._volumeSeriesID = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -45,8 +48,8 @@ class ADParamsOptions extends SMAParamsOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._volumeSeriesID != null) {  
-      buffer.writeAll(["\"volumeSeriesID\":\`", this._volumeSeriesID, "\`,"], "");
+    if (this.volumeSeriesID != null) {  
+      buffer.writeAll(["\"volumeSeriesID\":\`", this.volumeSeriesID, "\`,"], "");
     }
   }
 

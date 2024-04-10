@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,19 @@ import 'OptionFragment.dart';
  * OscOptions 
  */
 class OscOptions extends OptionFragment {
-  OscOptions() : super();
-  double? _detune;  
-
+  OscOptions( {
+    this.detune = null,
+    this.freqMultiplier = null,
+    this.fixedFrequency = null,
+    this.fmOscillator = null,
+    this.pulseWidth = null,
+    this.type = null,
+    this.vmOscillator = null,
+    this.volume = null,
+    this.volumePitchTrackingMultiplier = null
+  }) : super();
+  double? detune;
+    /*
   double get detune { 
     if (this._detune == null) {
       this._detune = 0;
@@ -36,9 +46,10 @@ class OscOptions extends OptionFragment {
   void set detune (double v) {
     this._detune = v;
   }
+    */
     
-  double? _freqMultiplier;  
-
+  double? freqMultiplier;
+    /*
   double get freqMultiplier { 
     if (this._freqMultiplier == null) {
       this._freqMultiplier = 0;
@@ -49,9 +60,10 @@ class OscOptions extends OptionFragment {
   void set freqMultiplier (double v) {
     this._freqMultiplier = v;
   }
+    */
     
-  double? _fixedFrequency;  
-
+  double? fixedFrequency;
+    /*
   double get fixedFrequency { 
     if (this._fixedFrequency == null) {
       this._fixedFrequency = 0;
@@ -62,9 +74,10 @@ class OscOptions extends OptionFragment {
   void set fixedFrequency (double v) {
     this._fixedFrequency = v;
   }
+    */
     
-  double? _fmOscillator;  
-
+  double? fmOscillator;
+    /*
   double get fmOscillator { 
     if (this._fmOscillator == null) {
       this._fmOscillator = 0;
@@ -75,9 +88,10 @@ class OscOptions extends OptionFragment {
   void set fmOscillator (double v) {
     this._fmOscillator = v;
   }
+    */
     
-  double? _pulseWidth;  
-
+  double? pulseWidth;
+    /*
   double get pulseWidth { 
     if (this._pulseWidth == null) {
       this._pulseWidth = 0;
@@ -88,9 +102,10 @@ class OscOptions extends OptionFragment {
   void set pulseWidth (double v) {
     this._pulseWidth = v;
   }
+    */
     
-  String? _type;  
-
+  String? type;
+    /*
   String get type { 
     if (this._type == null) {
       this._type = "";
@@ -101,9 +116,10 @@ class OscOptions extends OptionFragment {
   void set type (String v) {
     this._type = v;
   }
+    */
     
-  double? _vmOscillator;  
-
+  double? vmOscillator;
+    /*
   double get vmOscillator { 
     if (this._vmOscillator == null) {
       this._vmOscillator = 0;
@@ -114,9 +130,10 @@ class OscOptions extends OptionFragment {
   void set vmOscillator (double v) {
     this._vmOscillator = v;
   }
+    */
     
-  double? _volume;  
-
+  double? volume;
+    /*
   double get volume { 
     if (this._volume == null) {
       this._volume = 0;
@@ -127,9 +144,10 @@ class OscOptions extends OptionFragment {
   void set volume (double v) {
     this._volume = v;
   }
+    */
     
-  double? _volumePitchTrackingMultiplier;  
-
+  double? volumePitchTrackingMultiplier;
+    /*
   double get volumePitchTrackingMultiplier { 
     if (this._volumePitchTrackingMultiplier == null) {
       this._volumePitchTrackingMultiplier = 0;
@@ -140,6 +158,7 @@ class OscOptions extends OptionFragment {
   void set volumePitchTrackingMultiplier (double v) {
     this._volumePitchTrackingMultiplier = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -151,46 +170,46 @@ class OscOptions extends OptionFragment {
     
     // NOTE: skip serialization of attackEnvelope (type Envelope is ignored)} 
 
-    if (this._detune != null) {  
-      buffer.writeAll(["\"detune\":", this._detune, ","], "");
+    if (this.detune != null) {  
+      buffer.writeAll(["\"detune\":", this.detune, ","], "");
     }
 
-    if (this._freqMultiplier != null) {  
-      buffer.writeAll(["\"freqMultiplier\":", this._freqMultiplier, ","], "");
+    if (this.freqMultiplier != null) {  
+      buffer.writeAll(["\"freqMultiplier\":", this.freqMultiplier, ","], "");
     }
 
-    if (this._fixedFrequency != null) {  
-      buffer.writeAll(["\"fixedFrequency\":", this._fixedFrequency, ","], "");
+    if (this.fixedFrequency != null) {  
+      buffer.writeAll(["\"fixedFrequency\":", this.fixedFrequency, ","], "");
     }
 
-    if (this._fmOscillator != null) {  
-      buffer.writeAll(["\"fmOscillator\":", this._fmOscillator, ","], "");
+    if (this.fmOscillator != null) {  
+      buffer.writeAll(["\"fmOscillator\":", this.fmOscillator, ","], "");
     }
 
     // NOTE: skip serialization of highpass (type FilterOptions is ignored)} 
 
     // NOTE: skip serialization of lowpass (type FilterOptions is ignored)} 
 
-    if (this._pulseWidth != null) {  
-      buffer.writeAll(["\"pulseWidth\":", this._pulseWidth, ","], "");
+    if (this.pulseWidth != null) {  
+      buffer.writeAll(["\"pulseWidth\":", this.pulseWidth, ","], "");
     }
 
     // NOTE: skip serialization of releaseEnvelope (type Envelope is ignored)} 
 
-    if (this._type != null) {  
-      buffer.writeAll(["\"type\":\`", this._type, "\`,"], "");
+    if (this.type != null) {  
+      buffer.writeAll(["\"type\":\`", this.type, "\`,"], "");
     }
 
-    if (this._vmOscillator != null) {  
-      buffer.writeAll(["\"vmOscillator\":", this._vmOscillator, ","], "");
+    if (this.vmOscillator != null) {  
+      buffer.writeAll(["\"vmOscillator\":", this.vmOscillator, ","], "");
     }
 
-    if (this._volume != null) {  
-      buffer.writeAll(["\"volume\":", this._volume, ","], "");
+    if (this.volume != null) {  
+      buffer.writeAll(["\"volume\":", this.volume, ","], "");
     }
 
-    if (this._volumePitchTrackingMultiplier != null) {  
-      buffer.writeAll(["\"volumePitchTrackingMultiplier\":", this._volumePitchTrackingMultiplier, ","], "");
+    if (this.volumePitchTrackingMultiplier != null) {  
+      buffer.writeAll(["\"volumePitchTrackingMultiplier\":", this.volumePitchTrackingMultiplier, ","], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,13 @@ import 'OptionFragment.dart';
  * A11yBracketStatementObject 
  */
 class A11yBracketStatementObject extends OptionFragment {
-  A11yBracketStatementObject() : super();
-  double? _begin;  
-
+  A11yBracketStatementObject( {
+    this.begin = null,
+    this.end = null,
+    this.statement = null
+  }) : super();
+  double? begin;
+    /*
   double get begin { 
     if (this._begin == null) {
       this._begin = 0;
@@ -35,9 +39,10 @@ class A11yBracketStatementObject extends OptionFragment {
   void set begin (double v) {
     this._begin = v;
   }
+    */
     
-  double? _end;  
-
+  double? end;
+    /*
   double get end { 
     if (this._end == null) {
       this._end = 0;
@@ -48,9 +53,10 @@ class A11yBracketStatementObject extends OptionFragment {
   void set end (double v) {
     this._end = v;
   }
+    */
     
-  String? _statement;  
-
+  String? statement;
+    /*
   String get statement { 
     if (this._statement == null) {
       this._statement = "";
@@ -61,6 +67,7 @@ class A11yBracketStatementObject extends OptionFragment {
   void set statement (String v) {
     this._statement = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -70,16 +77,16 @@ class A11yBracketStatementObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._begin != null) {  
-      buffer.writeAll(["\"begin\":", this._begin, ","], "");
+    if (this.begin != null) {  
+      buffer.writeAll(["\"begin\":", this.begin, ","], "");
     }
 
-    if (this._end != null) {  
-      buffer.writeAll(["\"end\":", this._end, ","], "");
+    if (this.end != null) {  
+      buffer.writeAll(["\"end\":", this.end, ","], "");
     }
 
-    if (this._statement != null) {  
-      buffer.writeAll(["\"statement\":\`", this._statement, "\`,"], "");
+    if (this.statement != null) {  
+      buffer.writeAll(["\"statement\":\`", this.statement, "\`,"], "");
     }
   }
 

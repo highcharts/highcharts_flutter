@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,15 @@ import 'OptionFragment.dart';
  * AxisBreakOptions 
  */
 class AxisBreakOptions extends OptionFragment {
-  AxisBreakOptions() : super();
-  double? _breakSize;  
-
+  AxisBreakOptions( {
+    this.breakSize = null,
+    this.from = null,
+    this.inclusive = null,
+    this.repeat = null,
+    this.to = null
+  }) : super();
+  double? breakSize;
+    /*
   double get breakSize { 
     if (this._breakSize == null) {
       this._breakSize = 0;
@@ -35,9 +41,10 @@ class AxisBreakOptions extends OptionFragment {
   void set breakSize (double v) {
     this._breakSize = v;
   }
+    */
     
-  double? _from;  
-
+  double? from;
+    /*
   double get from { 
     if (this._from == null) {
       this._from = 0;
@@ -48,9 +55,10 @@ class AxisBreakOptions extends OptionFragment {
   void set from (double v) {
     this._from = v;
   }
+    */
     
-  bool? _inclusive;  
-
+  bool? inclusive;
+    /*
   bool get inclusive { 
     if (this._inclusive == null) {
       this._inclusive = false;
@@ -61,9 +69,10 @@ class AxisBreakOptions extends OptionFragment {
   void set inclusive (bool v) {
     this._inclusive = v;
   }
+    */
     
-  double? _repeat;  
-
+  double? repeat;
+    /*
   double get repeat { 
     if (this._repeat == null) {
       this._repeat = 0;
@@ -74,9 +83,10 @@ class AxisBreakOptions extends OptionFragment {
   void set repeat (double v) {
     this._repeat = v;
   }
+    */
     
-  double? _to;  
-
+  double? to;
+    /*
   double get to { 
     if (this._to == null) {
       this._to = 0;
@@ -87,6 +97,7 @@ class AxisBreakOptions extends OptionFragment {
   void set to (double v) {
     this._to = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -96,24 +107,24 @@ class AxisBreakOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._breakSize != null) {  
-      buffer.writeAll(["\"breakSize\":", this._breakSize, ","], "");
+    if (this.breakSize != null) {  
+      buffer.writeAll(["\"breakSize\":", this.breakSize, ","], "");
     }
 
-    if (this._from != null) {  
-      buffer.writeAll(["\"from\":", this._from, ","], "");
+    if (this.from != null) {  
+      buffer.writeAll(["\"from\":", this.from, ","], "");
     }
 
-    if (this._inclusive != null) {  
-      buffer.writeAll(["\"inclusive\":", this._inclusive, ","], "");
+    if (this.inclusive != null) {  
+      buffer.writeAll(["\"inclusive\":", this.inclusive, ","], "");
     }
 
-    if (this._repeat != null) {  
-      buffer.writeAll(["\"repeat\":", this._repeat, ","], "");
+    if (this.repeat != null) {  
+      buffer.writeAll(["\"repeat\":", this.repeat, ","], "");
     }
 
-    if (this._to != null) {  
-      buffer.writeAll(["\"to\":", this._to, ","], "");
+    if (this.to != null) {  
+      buffer.writeAll(["\"to\":", this.to, ","], "");
     }
   }
 

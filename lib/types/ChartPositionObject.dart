@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,14 @@ import 'OptionFragment.dart';
  * ChartPositionObject 
  */
 class ChartPositionObject extends OptionFragment {
-  ChartPositionObject() : super();
-  double? _left;  
-
+  ChartPositionObject( {
+    this.left = null,
+    this.scaleX = null,
+    this.scaleY = null,
+    this.top = null
+  }) : super();
+  double? left;
+    /*
   double get left { 
     if (this._left == null) {
       this._left = 0;
@@ -35,9 +40,10 @@ class ChartPositionObject extends OptionFragment {
   void set left (double v) {
     this._left = v;
   }
+    */
     
-  double? _scaleX;  
-
+  double? scaleX;
+    /*
   double get scaleX { 
     if (this._scaleX == null) {
       this._scaleX = 0;
@@ -48,9 +54,10 @@ class ChartPositionObject extends OptionFragment {
   void set scaleX (double v) {
     this._scaleX = v;
   }
+    */
     
-  double? _scaleY;  
-
+  double? scaleY;
+    /*
   double get scaleY { 
     if (this._scaleY == null) {
       this._scaleY = 0;
@@ -61,9 +68,10 @@ class ChartPositionObject extends OptionFragment {
   void set scaleY (double v) {
     this._scaleY = v;
   }
+    */
     
-  double? _top;  
-
+  double? top;
+    /*
   double get top { 
     if (this._top == null) {
       this._top = 0;
@@ -74,6 +82,7 @@ class ChartPositionObject extends OptionFragment {
   void set top (double v) {
     this._top = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -83,20 +92,20 @@ class ChartPositionObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._left != null) {  
-      buffer.writeAll(["\"left\":", this._left, ","], "");
+    if (this.left != null) {  
+      buffer.writeAll(["\"left\":", this.left, ","], "");
     }
 
-    if (this._scaleX != null) {  
-      buffer.writeAll(["\"scaleX\":", this._scaleX, ","], "");
+    if (this.scaleX != null) {  
+      buffer.writeAll(["\"scaleX\":", this.scaleX, ","], "");
     }
 
-    if (this._scaleY != null) {  
-      buffer.writeAll(["\"scaleY\":", this._scaleY, ","], "");
+    if (this.scaleY != null) {  
+      buffer.writeAll(["\"scaleY\":", this.scaleY, ","], "");
     }
 
-    if (this._top != null) {  
-      buffer.writeAll(["\"top\":", this._top, ","], "");
+    if (this.top != null) {  
+      buffer.writeAll(["\"top\":", this.top, ","], "");
     }
   }
 

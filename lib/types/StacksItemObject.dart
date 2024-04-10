@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,18 @@ import 'OptionFragment.dart';
  * StacksItemObject 
  */
 class StacksItemObject extends OptionFragment {
-  StacksItemObject() : super();
-  double? _absoluteNeg;  
-
+  StacksItemObject( {
+    this.absoluteNeg = null,
+    this.absolutePos = null,
+    this.connectorThreshold = null,
+    this.negTotal = null,
+    this.posTotal = null,
+    this.stackTotal = null,
+    this.stateIndex = null,
+    this.threshold = null
+  }) : super();
+  double? absoluteNeg;
+    /*
   double get absoluteNeg { 
     if (this._absoluteNeg == null) {
       this._absoluteNeg = 0;
@@ -35,9 +44,10 @@ class StacksItemObject extends OptionFragment {
   void set absoluteNeg (double v) {
     this._absoluteNeg = v;
   }
+    */
     
-  double? _absolutePos;  
-
+  double? absolutePos;
+    /*
   double get absolutePos { 
     if (this._absolutePos == null) {
       this._absolutePos = 0;
@@ -48,9 +58,10 @@ class StacksItemObject extends OptionFragment {
   void set absolutePos (double v) {
     this._absolutePos = v;
   }
+    */
     
-  double? _connectorThreshold;  
-
+  double? connectorThreshold;
+    /*
   double get connectorThreshold { 
     if (this._connectorThreshold == null) {
       this._connectorThreshold = 0;
@@ -61,9 +72,10 @@ class StacksItemObject extends OptionFragment {
   void set connectorThreshold (double v) {
     this._connectorThreshold = v;
   }
+    */
     
-  double? _negTotal;  
-
+  double? negTotal;
+    /*
   double get negTotal { 
     if (this._negTotal == null) {
       this._negTotal = 0;
@@ -74,9 +86,10 @@ class StacksItemObject extends OptionFragment {
   void set negTotal (double v) {
     this._negTotal = v;
   }
+    */
     
-  double? _posTotal;  
-
+  double? posTotal;
+    /*
   double get posTotal { 
     if (this._posTotal == null) {
       this._posTotal = 0;
@@ -87,9 +100,10 @@ class StacksItemObject extends OptionFragment {
   void set posTotal (double v) {
     this._posTotal = v;
   }
+    */
     
-  double? _stackTotal;  
-
+  double? stackTotal;
+    /*
   double get stackTotal { 
     if (this._stackTotal == null) {
       this._stackTotal = 0;
@@ -100,9 +114,10 @@ class StacksItemObject extends OptionFragment {
   void set stackTotal (double v) {
     this._stackTotal = v;
   }
+    */
     
-  double? _stateIndex;  
-
+  double? stateIndex;
+    /*
   double get stateIndex { 
     if (this._stateIndex == null) {
       this._stateIndex = 0;
@@ -113,9 +128,10 @@ class StacksItemObject extends OptionFragment {
   void set stateIndex (double v) {
     this._stateIndex = v;
   }
+    */
     
-  double? _threshold;  
-
+  double? threshold;
+    /*
   double get threshold { 
     if (this._threshold == null) {
       this._threshold = 0;
@@ -126,6 +142,7 @@ class StacksItemObject extends OptionFragment {
   void set threshold (double v) {
     this._threshold = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -135,40 +152,40 @@ class StacksItemObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._absoluteNeg != null) {  
-      buffer.writeAll(["\"absoluteNeg\":", this._absoluteNeg, ","], "");
+    if (this.absoluteNeg != null) {  
+      buffer.writeAll(["\"absoluteNeg\":", this.absoluteNeg, ","], "");
     }
 
-    if (this._absolutePos != null) {  
-      buffer.writeAll(["\"absolutePos\":", this._absolutePos, ","], "");
+    if (this.absolutePos != null) {  
+      buffer.writeAll(["\"absolutePos\":", this.absolutePos, ","], "");
     }
 
-    if (this._connectorThreshold != null) {  
-      buffer.writeAll(["\"connectorThreshold\":", this._connectorThreshold, ","], "");
+    if (this.connectorThreshold != null) {  
+      buffer.writeAll(["\"connectorThreshold\":", this.connectorThreshold, ","], "");
     }
 
     // NOTE: skip serialization of label (type SVGLabel is ignored)} 
 
-    if (this._negTotal != null) {  
-      buffer.writeAll(["\"negTotal\":", this._negTotal, ","], "");
+    if (this.negTotal != null) {  
+      buffer.writeAll(["\"negTotal\":", this.negTotal, ","], "");
     }
 
-    if (this._posTotal != null) {  
-      buffer.writeAll(["\"posTotal\":", this._posTotal, ","], "");
+    if (this.posTotal != null) {  
+      buffer.writeAll(["\"posTotal\":", this.posTotal, ","], "");
     }
 
     // NOTE: skip serialization of stackState (type number[] is ignored)} 
 
-    if (this._stackTotal != null) {  
-      buffer.writeAll(["\"stackTotal\":", this._stackTotal, ","], "");
+    if (this.stackTotal != null) {  
+      buffer.writeAll(["\"stackTotal\":", this.stackTotal, ","], "");
     }
 
-    if (this._stateIndex != null) {  
-      buffer.writeAll(["\"stateIndex\":", this._stateIndex, ","], "");
+    if (this.stateIndex != null) {  
+      buffer.writeAll(["\"stateIndex\":", this.stateIndex, ","], "");
     }
 
-    if (this._threshold != null) {  
-      buffer.writeAll(["\"threshold\":", this._threshold, ","], "");
+    if (this.threshold != null) {  
+      buffer.writeAll(["\"threshold\":", this.threshold, ","], "");
     }
   }
 

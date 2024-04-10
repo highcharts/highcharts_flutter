@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,11 @@ import 'OptionFragment.dart';
  * SeriesMeta 
  */
 class SeriesMeta extends OptionFragment {
-  SeriesMeta() : super();
-  String? _id;  
-
+  SeriesMeta( {
+    this.id = null
+  }) : super();
+  String? id;
+    /*
   String get id { 
     if (this._id == null) {
       this._id = "";
@@ -36,6 +38,7 @@ class SeriesMeta extends OptionFragment {
   void set id (String v) {
     this._id = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -45,8 +48,8 @@ class SeriesMeta extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._id != null) {  
-      buffer.writeAll(["\"id\":\`", this._id, "\`,"], "");
+    if (this.id != null) {  
+      buffer.writeAll(["\"id\":\`", this.id, "\`,"], "");
     }
 
     // NOTE: skip serialization of pointArrayMap (type string[] is ignored)} 

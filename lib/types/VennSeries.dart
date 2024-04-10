@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,12 @@ import 'OptionFragment.dart';
  * VennSeries 
  */
 class VennSeries extends OptionFragment {
-  VennSeries() : super();
-  bool? _directTouch;  
-
+  VennSeries( {
+    this.directTouch = null,
+    this.isCartesian = null
+  }) : super();
+  bool? directTouch;
+    /*
   bool get directTouch { 
     if (this._directTouch == null) {
       this._directTouch = false;
@@ -35,9 +38,10 @@ class VennSeries extends OptionFragment {
   void set directTouch (bool v) {
     this._directTouch = v;
   }
+    */
     
-  bool? _isCartesian;  
-
+  bool? isCartesian;
+    /*
   bool get isCartesian { 
     if (this._isCartesian == null) {
       this._isCartesian = false;
@@ -48,6 +52,7 @@ class VennSeries extends OptionFragment {
   void set isCartesian (bool v) {
     this._isCartesian = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -57,12 +62,12 @@ class VennSeries extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._directTouch != null) {  
-      buffer.writeAll(["\"directTouch\":", this._directTouch, ","], "");
+    if (this.directTouch != null) {  
+      buffer.writeAll(["\"directTouch\":", this.directTouch, ","], "");
     }
 
-    if (this._isCartesian != null) {  
-      buffer.writeAll(["\"isCartesian\":", this._isCartesian, ","], "");
+    if (this.isCartesian != null) {  
+      buffer.writeAll(["\"isCartesian\":", this.isCartesian, ","], "");
     }
 
     // NOTE: skip serialization of pointArrayMap (type string[] is ignored)} 

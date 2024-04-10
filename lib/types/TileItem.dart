@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,14 @@ import 'OptionFragment.dart';
  * TileItem 
  */
 class TileItem extends SVGElement {
-  TileItem() : super();
-  double? _posX;  
-
+  TileItem( {
+    this.posX = null,
+    this.posY = null,
+    this.originalURL = null,
+    this.isActive = null
+  }) : super();
+  double? posX;
+    /*
   double get posX { 
     if (this._posX == null) {
       this._posX = 0;
@@ -36,9 +41,10 @@ class TileItem extends SVGElement {
   void set posX (double v) {
     this._posX = v;
   }
+    */
     
-  double? _posY;  
-
+  double? posY;
+    /*
   double get posY { 
     if (this._posY == null) {
       this._posY = 0;
@@ -49,9 +55,10 @@ class TileItem extends SVGElement {
   void set posY (double v) {
     this._posY = v;
   }
+    */
     
-  String? _originalURL;  
-
+  String? originalURL;
+    /*
   String get originalURL { 
     if (this._originalURL == null) {
       this._originalURL = "";
@@ -62,9 +69,10 @@ class TileItem extends SVGElement {
   void set originalURL (String v) {
     this._originalURL = v;
   }
+    */
     
-  bool? _isActive;  
-
+  bool? isActive;
+    /*
   bool get isActive { 
     if (this._isActive == null) {
       this._isActive = false;
@@ -75,6 +83,7 @@ class TileItem extends SVGElement {
   void set isActive (bool v) {
     this._isActive = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -84,20 +93,20 @@ class TileItem extends SVGElement {
     super.toJSONInner(buffer);
 
     
-    if (this._posX != null) {  
-      buffer.writeAll(["\"posX\":", this._posX, ","], "");
+    if (this.posX != null) {  
+      buffer.writeAll(["\"posX\":", this.posX, ","], "");
     }
 
-    if (this._posY != null) {  
-      buffer.writeAll(["\"posY\":", this._posY, ","], "");
+    if (this.posY != null) {  
+      buffer.writeAll(["\"posY\":", this.posY, ","], "");
     }
 
-    if (this._originalURL != null) {  
-      buffer.writeAll(["\"originalURL\":\`", this._originalURL, "\`,"], "");
+    if (this.originalURL != null) {  
+      buffer.writeAll(["\"originalURL\":\`", this.originalURL, "\`,"], "");
     }
 
-    if (this._isActive != null) {  
-      buffer.writeAll(["\"isActive\":", this._isActive, ","], "");
+    if (this.isActive != null) {  
+      buffer.writeAll(["\"isActive\":", this.isActive, ","], "");
     }
   }
 

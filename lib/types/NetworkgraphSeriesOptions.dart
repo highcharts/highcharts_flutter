@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -27,7 +27,10 @@ import 'OptionFragment.dart';
  * NetworkgraphSeriesOptions 
  */
 class NetworkgraphSeriesOptions extends SeriesOptions {
-  NetworkgraphSeriesOptions() : super();
+  NetworkgraphSeriesOptions( {
+    this.draggable = null,
+    this.inactiveOtherPoints = null
+  }) : super();
   /**
    * Options for the series data labels, appearing next to each data
    * point.
@@ -46,8 +49,8 @@ class NetworkgraphSeriesOptions extends SeriesOptions {
    * 
    * Defaults to 'true'. 
       */
-  bool? _draggable;  
-
+  bool? draggable;
+    /*
   bool get draggable { 
     if (this._draggable == null) {
       this._draggable = false;
@@ -58,6 +61,7 @@ class NetworkgraphSeriesOptions extends SeriesOptions {
   void set draggable (bool v) {
     this._draggable = v;
   }
+    */
     
   /**
    * General event handlers for the series items. These event hooks can
@@ -66,8 +70,8 @@ class NetworkgraphSeriesOptions extends SeriesOptions {
       */
   /** NOTE: extevents is skipped here for now, as it overrides the base type. */
 
-  bool? _inactiveOtherPoints;  
-
+  bool? inactiveOtherPoints;
+    /*
   bool get inactiveOtherPoints { 
     if (this._inactiveOtherPoints == null) {
       this._inactiveOtherPoints = false;
@@ -78,9 +82,10 @@ class NetworkgraphSeriesOptions extends SeriesOptions {
   void set inactiveOtherPoints (bool v) {
     this._inactiveOtherPoints = v;
   }
+    */
     
-  Options? _layoutAlgorithm;  
-
+  Options? layoutAlgorithm;
+    /*
   Options get layoutAlgorithm { 
     if (this._layoutAlgorithm == null) {
       this._layoutAlgorithm = Options();
@@ -91,12 +96,13 @@ class NetworkgraphSeriesOptions extends SeriesOptions {
   void set layoutAlgorithm (Options v) {
     this._layoutAlgorithm = v;
   }
+    */
     
   /**
    * Link style options  
       */
-  NetworkgraphLinkOptions? _link;  
-
+  NetworkgraphLinkOptions? link;
+    /*
   NetworkgraphLinkOptions get link { 
     if (this._link == null) {
       this._link = NetworkgraphLinkOptions();
@@ -107,6 +113,7 @@ class NetworkgraphSeriesOptions extends SeriesOptions {
   void set link (NetworkgraphLinkOptions v) {
     this._link = v;
   }
+    */
     
   // NOTE: states skipped - type Generic is ignored in gen
 
@@ -120,22 +127,22 @@ class NetworkgraphSeriesOptions extends SeriesOptions {
     
     // NOTE: skip serialization of dataLabels (type NetworkgraphDataLabelsOptionsObject is ignored)} 
 
-    if (this._draggable != null) {  
-      buffer.writeAll(["\"draggable\":", this._draggable, ","], "");
+    if (this.draggable != null) {  
+      buffer.writeAll(["\"draggable\":", this.draggable, ","], "");
     }
 
     // NOTE: skip serialization of events (type NetworkgraphEventsOptions is ignored)} 
 
-    if (this._inactiveOtherPoints != null) {  
-      buffer.writeAll(["\"inactiveOtherPoints\":", this._inactiveOtherPoints, ","], "");
+    if (this.inactiveOtherPoints != null) {  
+      buffer.writeAll(["\"inactiveOtherPoints\":", this.inactiveOtherPoints, ","], "");
     }
 
-    if (this._layoutAlgorithm != null) {  
-      buffer.writeAll(["\"layoutAlgorithm\":", this._layoutAlgorithm?.toJSON(), ","], "");
+    if (this.layoutAlgorithm != null) {  
+      buffer.writeAll(["\"layoutAlgorithm\":", this.layoutAlgorithm?.toJSON(), ","], "");
     }
 
-    if (this._link != null) {  
-      buffer.writeAll(["\"link\":", this._link?.toJSON(), ","], "");
+    if (this.link != null) {  
+      buffer.writeAll(["\"link\":", this.link?.toJSON(), ","], "");
     }
 
     // NOTE: skip serialization of nodes (type NetworkgraphPointOptions[] is ignored)} 

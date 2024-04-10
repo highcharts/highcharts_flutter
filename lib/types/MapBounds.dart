@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,16 @@ import 'OptionFragment.dart';
  * MapBounds 
  */
 class MapBounds extends OptionFragment {
-  MapBounds() : super();
-  double? _midX;  
-
+  MapBounds( {
+    this.midX = null,
+    this.midY = null,
+    this.x1 = null,
+    this.y1 = null,
+    this.x2 = null,
+    this.y2 = null
+  }) : super();
+  double? midX;
+    /*
   double get midX { 
     if (this._midX == null) {
       this._midX = 0;
@@ -35,9 +42,10 @@ class MapBounds extends OptionFragment {
   void set midX (double v) {
     this._midX = v;
   }
+    */
     
-  double? _midY;  
-
+  double? midY;
+    /*
   double get midY { 
     if (this._midY == null) {
       this._midY = 0;
@@ -48,9 +56,10 @@ class MapBounds extends OptionFragment {
   void set midY (double v) {
     this._midY = v;
   }
+    */
     
-  double? _x1;  
-
+  double? x1;
+    /*
   double get x1 { 
     if (this._x1 == null) {
       this._x1 = 0;
@@ -61,9 +70,10 @@ class MapBounds extends OptionFragment {
   void set x1 (double v) {
     this._x1 = v;
   }
+    */
     
-  double? _y1;  
-
+  double? y1;
+    /*
   double get y1 { 
     if (this._y1 == null) {
       this._y1 = 0;
@@ -74,9 +84,10 @@ class MapBounds extends OptionFragment {
   void set y1 (double v) {
     this._y1 = v;
   }
+    */
     
-  double? _x2;  
-
+  double? x2;
+    /*
   double get x2 { 
     if (this._x2 == null) {
       this._x2 = 0;
@@ -87,9 +98,10 @@ class MapBounds extends OptionFragment {
   void set x2 (double v) {
     this._x2 = v;
   }
+    */
     
-  double? _y2;  
-
+  double? y2;
+    /*
   double get y2 { 
     if (this._y2 == null) {
       this._y2 = 0;
@@ -100,6 +112,7 @@ class MapBounds extends OptionFragment {
   void set y2 (double v) {
     this._y2 = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -109,28 +122,28 @@ class MapBounds extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._midX != null) {  
-      buffer.writeAll(["\"midX\":", this._midX, ","], "");
+    if (this.midX != null) {  
+      buffer.writeAll(["\"midX\":", this.midX, ","], "");
     }
 
-    if (this._midY != null) {  
-      buffer.writeAll(["\"midY\":", this._midY, ","], "");
+    if (this.midY != null) {  
+      buffer.writeAll(["\"midY\":", this.midY, ","], "");
     }
 
-    if (this._x1 != null) {  
-      buffer.writeAll(["\"x1\":", this._x1, ","], "");
+    if (this.x1 != null) {  
+      buffer.writeAll(["\"x1\":", this.x1, ","], "");
     }
 
-    if (this._y1 != null) {  
-      buffer.writeAll(["\"y1\":", this._y1, ","], "");
+    if (this.y1 != null) {  
+      buffer.writeAll(["\"y1\":", this.y1, ","], "");
     }
 
-    if (this._x2 != null) {  
-      buffer.writeAll(["\"x2\":", this._x2, ","], "");
+    if (this.x2 != null) {  
+      buffer.writeAll(["\"x2\":", this.x2, ","], "");
     }
 
-    if (this._y2 != null) {  
-      buffer.writeAll(["\"y2\":", this._y2, ","], "");
+    if (this.y2 != null) {  
+      buffer.writeAll(["\"y2\":", this.y2, ","], "");
     }
   }
 

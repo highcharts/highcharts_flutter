@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,13 @@ import 'OptionFragment.dart';
  * AxisAccessibilityOptions 
  */
 class AxisAccessibilityOptions extends OptionFragment {
-  AxisAccessibilityOptions() : super();
-  String? _description;  
-
+  AxisAccessibilityOptions( {
+    this.description = null,
+    this.enabled = null,
+    this.rangeDescription = null
+  }) : super();
+  String? description;
+    /*
   String get description { 
     if (this._description == null) {
       this._description = "";
@@ -35,9 +39,10 @@ class AxisAccessibilityOptions extends OptionFragment {
   void set description (String v) {
     this._description = v;
   }
+    */
     
-  bool? _enabled;  
-
+  bool? enabled;
+    /*
   bool get enabled { 
     if (this._enabled == null) {
       this._enabled = false;
@@ -48,9 +53,10 @@ class AxisAccessibilityOptions extends OptionFragment {
   void set enabled (bool v) {
     this._enabled = v;
   }
+    */
     
-  String? _rangeDescription;  
-
+  String? rangeDescription;
+    /*
   String get rangeDescription { 
     if (this._rangeDescription == null) {
       this._rangeDescription = "";
@@ -61,6 +67,7 @@ class AxisAccessibilityOptions extends OptionFragment {
   void set rangeDescription (String v) {
     this._rangeDescription = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -70,16 +77,16 @@ class AxisAccessibilityOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._description != null) {  
-      buffer.writeAll(["\"description\":\`", this._description, "\`,"], "");
+    if (this.description != null) {  
+      buffer.writeAll(["\"description\":\`", this.description, "\`,"], "");
     }
 
-    if (this._enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this._enabled, ","], "");
+    if (this.enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
     }
 
-    if (this._rangeDescription != null) {  
-      buffer.writeAll(["\"rangeDescription\":\`", this._rangeDescription, "\`,"], "");
+    if (this.rangeDescription != null) {  
+      buffer.writeAll(["\"rangeDescription\":\`", this.rangeDescription, "\`,"], "");
     }
   }
 

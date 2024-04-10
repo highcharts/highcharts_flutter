@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,15 @@ import 'OptionFragment.dart';
  * GetColorOptions 
  */
 class GetColorOptions extends OptionFragment {
-  GetColorOptions() : super();
-  double? _colorIndex;  
-
+  GetColorOptions( {
+    this.colorIndex = null,
+    this.index = null,
+    this.parentColor = null,
+    this.parentColorIndex = null,
+    this.siblings = null
+  }) : super();
+  double? colorIndex;
+    /*
   double get colorIndex { 
     if (this._colorIndex == null) {
       this._colorIndex = 0;
@@ -36,9 +42,10 @@ class GetColorOptions extends OptionFragment {
   void set colorIndex (double v) {
     this._colorIndex = v;
   }
+    */
     
-  double? _index;  
-
+  double? index;
+    /*
   double get index { 
     if (this._index == null) {
       this._index = 0;
@@ -49,9 +56,10 @@ class GetColorOptions extends OptionFragment {
   void set index (double v) {
     this._index = v;
   }
+    */
     
-  String? _parentColor;  
-
+  String? parentColor;
+    /*
   String get parentColor { 
     if (this._parentColor == null) {
       this._parentColor = "";
@@ -62,9 +70,10 @@ class GetColorOptions extends OptionFragment {
   void set parentColor (String v) {
     this._parentColor = v;
   }
+    */
     
-  double? _parentColorIndex;  
-
+  double? parentColorIndex;
+    /*
   double get parentColorIndex { 
     if (this._parentColorIndex == null) {
       this._parentColorIndex = 0;
@@ -75,9 +84,10 @@ class GetColorOptions extends OptionFragment {
   void set parentColorIndex (double v) {
     this._parentColorIndex = v;
   }
+    */
     
-  double? _siblings;  
-
+  double? siblings;
+    /*
   double get siblings { 
     if (this._siblings == null) {
       this._siblings = 0;
@@ -88,6 +98,7 @@ class GetColorOptions extends OptionFragment {
   void set siblings (double v) {
     this._siblings = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -97,30 +108,30 @@ class GetColorOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._colorIndex != null) {  
-      buffer.writeAll(["\"colorIndex\":", this._colorIndex, ","], "");
+    if (this.colorIndex != null) {  
+      buffer.writeAll(["\"colorIndex\":", this.colorIndex, ","], "");
     }
 
     // NOTE: skip serialization of colors (type ColorType[] is ignored)} 
 
-    if (this._index != null) {  
-      buffer.writeAll(["\"index\":", this._index, ","], "");
+    if (this.index != null) {  
+      buffer.writeAll(["\"index\":", this.index, ","], "");
     }
 
     // NOTE: skip serialization of mapOptionsToLevel (type any is ignored)} 
 
-    if (this._parentColor != null) {  
-      buffer.writeAll(["\"parentColor\":\`", this._parentColor, "\`,"], "");
+    if (this.parentColor != null) {  
+      buffer.writeAll(["\"parentColor\":\`", this.parentColor, "\`,"], "");
     }
 
-    if (this._parentColorIndex != null) {  
-      buffer.writeAll(["\"parentColorIndex\":", this._parentColorIndex, ","], "");
+    if (this.parentColorIndex != null) {  
+      buffer.writeAll(["\"parentColorIndex\":", this.parentColorIndex, ","], "");
     }
 
     // NOTE: skip serialization of series (type Series is ignored)} 
 
-    if (this._siblings != null) {  
-      buffer.writeAll(["\"siblings\":", this._siblings, ","], "");
+    if (this.siblings != null) {  
+      buffer.writeAll(["\"siblings\":", this.siblings, ","], "");
     }
   }
 

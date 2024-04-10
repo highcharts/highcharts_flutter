@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,11 @@ import 'OptionFragment.dart';
  * CreateAxisOptionsObject 
  */
 class CreateAxisOptionsObject extends OptionFragment {
-  CreateAxisOptionsObject() : super();
-  bool? _redraw;  
-
+  CreateAxisOptionsObject( {
+    this.redraw = null
+  }) : super();
+  bool? redraw;
+    /*
   bool get redraw { 
     if (this._redraw == null) {
       this._redraw = false;
@@ -35,6 +37,7 @@ class CreateAxisOptionsObject extends OptionFragment {
   void set redraw (bool v) {
     this._redraw = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -48,8 +51,8 @@ class CreateAxisOptionsObject extends OptionFragment {
 
     // NOTE: skip serialization of axis (type Generic is ignored)} 
 
-    if (this._redraw != null) {  
-      buffer.writeAll(["\"redraw\":", this._redraw, ","], "");
+    if (this.redraw != null) {  
+      buffer.writeAll(["\"redraw\":", this.redraw, ","], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,11 @@ import 'OptionFragment.dart';
  * BBParamsOptions 
  */
 class BBParamsOptions extends SMAParamsOptions {
-  BBParamsOptions() : super();
-  double? _standardDeviation;  
-
+  BBParamsOptions( {
+    this.standardDeviation = null
+  }) : super();
+  double? standardDeviation;
+    /*
   double get standardDeviation { 
     if (this._standardDeviation == null) {
       this._standardDeviation = 0;
@@ -36,6 +38,7 @@ class BBParamsOptions extends SMAParamsOptions {
   void set standardDeviation (double v) {
     this._standardDeviation = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -45,8 +48,8 @@ class BBParamsOptions extends SMAParamsOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._standardDeviation != null) {  
-      buffer.writeAll(["\"standardDeviation\":", this._standardDeviation, ","], "");
+    if (this.standardDeviation != null) {  
+      buffer.writeAll(["\"standardDeviation\":", this.standardDeviation, ","], "");
     }
   }
 

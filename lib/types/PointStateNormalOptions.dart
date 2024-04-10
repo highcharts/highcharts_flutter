@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,11 @@ import 'OptionFragment.dart';
  * PointStateNormalOptions 
  */
 class PointStateNormalOptions extends StateNormalOptions {
-  PointStateNormalOptions() : super();
-  double? _opacity;  
-
+  PointStateNormalOptions( {
+    this.opacity = null
+  }) : super();
+  double? opacity;
+    /*
   double get opacity { 
     if (this._opacity == null) {
       this._opacity = 0;
@@ -36,6 +38,7 @@ class PointStateNormalOptions extends StateNormalOptions {
   void set opacity (double v) {
     this._opacity = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -47,8 +50,8 @@ class PointStateNormalOptions extends StateNormalOptions {
     
     // NOTE: skip serialization of animation (type Generic is ignored)} 
 
-    if (this._opacity != null) {  
-      buffer.writeAll(["\"opacity\":", this._opacity, ","], "");
+    if (this.opacity != null) {  
+      buffer.writeAll(["\"opacity\":", this.opacity, ","], "");
     }
   }
 

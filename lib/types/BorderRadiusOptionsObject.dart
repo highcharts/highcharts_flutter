@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,13 @@ import 'OptionFragment.dart';
  * BorderRadiusOptionsObject 
  */
 class BorderRadiusOptionsObject extends OptionFragment {
-  BorderRadiusOptionsObject() : super();
-  String? _radius;  
-
+  BorderRadiusOptionsObject( {
+    this.radius = null,
+    this.scope = null,
+    this.where = null
+  }) : super();
+  String? radius;
+    /*
   String get radius { 
     if (this._radius == null) {
       this._radius = "";
@@ -35,9 +39,10 @@ class BorderRadiusOptionsObject extends OptionFragment {
   void set radius (String v) {
     this._radius = v;
   }
+    */
     
-  String? _scope;  
-
+  String? scope;
+    /*
   String get scope { 
     if (this._scope == null) {
       this._scope = "";
@@ -48,9 +53,10 @@ class BorderRadiusOptionsObject extends OptionFragment {
   void set scope (String v) {
     this._scope = v;
   }
+    */
     
-  String? _where;  
-
+  String? where;
+    /*
   String get where { 
     if (this._where == null) {
       this._where = "";
@@ -61,6 +67,7 @@ class BorderRadiusOptionsObject extends OptionFragment {
   void set where (String v) {
     this._where = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -70,16 +77,16 @@ class BorderRadiusOptionsObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._radius != null) {  
-      buffer.writeAll(["\"radius\":\`", this._radius, "\`,"], "");
+    if (this.radius != null) {  
+      buffer.writeAll(["\"radius\":\`", this.radius, "\`,"], "");
     }
 
-    if (this._scope != null) {  
-      buffer.writeAll(["\"scope\":\`", this._scope, "\`,"], "");
+    if (this.scope != null) {  
+      buffer.writeAll(["\"scope\":\`", this.scope, "\`,"], "");
     }
 
-    if (this._where != null) {  
-      buffer.writeAll(["\"where\":\`", this._where, "\`,"], "");
+    if (this.where != null) {  
+      buffer.writeAll(["\"where\":\`", this.where, "\`,"], "");
     }
   }
 

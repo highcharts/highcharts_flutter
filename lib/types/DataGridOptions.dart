@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -24,9 +24,14 @@ import 'OptionFragment.dart';
  * DataGridOptions 
  */
 class DataGridOptions extends OptionFragment {
-  DataGridOptions() : super();
-  double? _cellHeight;  
-
+  DataGridOptions( {
+    this.cellHeight = null,
+    this.defaultHeight = null,
+    this.editable = null,
+    this.resizableColumns = null
+  }) : super();
+  double? cellHeight;
+    /*
   double get cellHeight { 
     if (this._cellHeight == null) {
       this._cellHeight = 0;
@@ -37,9 +42,10 @@ class DataGridOptions extends OptionFragment {
   void set cellHeight (double v) {
     this._cellHeight = v;
   }
+    */
     
-  double? _defaultHeight;  
-
+  double? defaultHeight;
+    /*
   double get defaultHeight { 
     if (this._defaultHeight == null) {
       this._defaultHeight = 0;
@@ -50,9 +56,10 @@ class DataGridOptions extends OptionFragment {
   void set defaultHeight (double v) {
     this._defaultHeight = v;
   }
+    */
     
-  bool? _editable;  
-
+  bool? editable;
+    /*
   bool get editable { 
     if (this._editable == null) {
       this._editable = false;
@@ -63,9 +70,10 @@ class DataGridOptions extends OptionFragment {
   void set editable (bool v) {
     this._editable = v;
   }
+    */
     
-  bool? _resizableColumns;  
-
+  bool? resizableColumns;
+    /*
   bool get resizableColumns { 
     if (this._resizableColumns == null) {
       this._resizableColumns = false;
@@ -76,6 +84,7 @@ class DataGridOptions extends OptionFragment {
   void set resizableColumns (bool v) {
     this._resizableColumns = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -85,8 +94,8 @@ class DataGridOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._cellHeight != null) {  
-      buffer.writeAll(["\"cellHeight\":", this._cellHeight, ","], "");
+    if (this.cellHeight != null) {  
+      buffer.writeAll(["\"cellHeight\":", this.cellHeight, ","], "");
     }
 
     // NOTE: skip serialization of columnHeaders (type ColumnHeaderOptions is ignored)} 
@@ -95,16 +104,16 @@ class DataGridOptions extends OptionFragment {
 
     // NOTE: skip serialization of dataTable (type DataTable is ignored)} 
 
-    if (this._defaultHeight != null) {  
-      buffer.writeAll(["\"defaultHeight\":", this._defaultHeight, ","], "");
+    if (this.defaultHeight != null) {  
+      buffer.writeAll(["\"defaultHeight\":", this.defaultHeight, ","], "");
     }
 
-    if (this._editable != null) {  
-      buffer.writeAll(["\"editable\":", this._editable, ","], "");
+    if (this.editable != null) {  
+      buffer.writeAll(["\"editable\":", this.editable, ","], "");
     }
 
-    if (this._resizableColumns != null) {  
-      buffer.writeAll(["\"resizableColumns\":", this._resizableColumns, ","], "");
+    if (this.resizableColumns != null) {  
+      buffer.writeAll(["\"resizableColumns\":", this.resizableColumns, ","], "");
     }
 
     // NOTE: skip serialization of events (type DataGridEvents is ignored)} 

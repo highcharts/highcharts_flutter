@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -24,9 +24,12 @@ import 'OptionFragment.dart';
  * PackedBubbleDataLabelOptions 
  */
 class PackedBubbleDataLabelOptions extends DataLabelOptions {
-  PackedBubbleDataLabelOptions() : super();
-  String? _format;  
-
+  PackedBubbleDataLabelOptions( {
+    this.format = null,
+    this.parentNodeFormat = null
+  }) : super();
+  String? format;
+    /*
   String get format { 
     if (this._format == null) {
       this._format = "";
@@ -37,9 +40,10 @@ class PackedBubbleDataLabelOptions extends DataLabelOptions {
   void set format (String v) {
     this._format = v;
   }
+    */
     
-  String? _parentNodeFormat;  
-
+  String? parentNodeFormat;
+    /*
   String get parentNodeFormat { 
     if (this._parentNodeFormat == null) {
       this._parentNodeFormat = "";
@@ -50,6 +54,7 @@ class PackedBubbleDataLabelOptions extends DataLabelOptions {
   void set parentNodeFormat (String v) {
     this._parentNodeFormat = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -59,12 +64,12 @@ class PackedBubbleDataLabelOptions extends DataLabelOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._format != null) {  
-      buffer.writeAll(["\"format\":\`", this._format, "\`,"], "");
+    if (this.format != null) {  
+      buffer.writeAll(["\"format\":\`", this.format, "\`,"], "");
     }
 
-    if (this._parentNodeFormat != null) {  
-      buffer.writeAll(["\"parentNodeFormat\":\`", this._parentNodeFormat, "\`,"], "");
+    if (this.parentNodeFormat != null) {  
+      buffer.writeAll(["\"parentNodeFormat\":\`", this.parentNodeFormat, "\`,"], "");
     }
 
     // NOTE: skip serialization of parentNodeTextPath (type DataLabelTextPathOptions is ignored)} 

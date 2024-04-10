@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,14 @@ import 'OptionFragment.dart';
  * GlobalOptions 
  */
 class GlobalOptions extends OptionFragment {
-  GlobalOptions() : super();
-  String? _canvasToolsURL;  
-
+  GlobalOptions( {
+    this.canvasToolsURL = null,
+    this.timezone = null,
+    this.timezoneOffset = null,
+    this.useUTC = null
+  }) : super();
+  String? canvasToolsURL;
+    /*
   String get canvasToolsURL { 
     if (this._canvasToolsURL == null) {
       this._canvasToolsURL = "";
@@ -35,9 +40,10 @@ class GlobalOptions extends OptionFragment {
   void set canvasToolsURL (String v) {
     this._canvasToolsURL = v;
   }
+    */
     
-  String? _timezone;  
-
+  String? timezone;
+    /*
   String get timezone { 
     if (this._timezone == null) {
       this._timezone = "";
@@ -48,9 +54,10 @@ class GlobalOptions extends OptionFragment {
   void set timezone (String v) {
     this._timezone = v;
   }
+    */
     
-  double? _timezoneOffset;  
-
+  double? timezoneOffset;
+    /*
   double get timezoneOffset { 
     if (this._timezoneOffset == null) {
       this._timezoneOffset = 0;
@@ -61,9 +68,10 @@ class GlobalOptions extends OptionFragment {
   void set timezoneOffset (double v) {
     this._timezoneOffset = v;
   }
+    */
     
-  bool? _useUTC;  
-
+  bool? useUTC;
+    /*
   bool get useUTC { 
     if (this._useUTC == null) {
       this._useUTC = false;
@@ -74,6 +82,7 @@ class GlobalOptions extends OptionFragment {
   void set useUTC (bool v) {
     this._useUTC = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -83,24 +92,24 @@ class GlobalOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._canvasToolsURL != null) {  
-      buffer.writeAll(["\"canvasToolsURL\":\`", this._canvasToolsURL, "\`,"], "");
+    if (this.canvasToolsURL != null) {  
+      buffer.writeAll(["\"canvasToolsURL\":\`", this.canvasToolsURL, "\`,"], "");
     }
 
     // NOTE: skip serialization of Date (type Function is ignored)} 
 
     // NOTE: skip serialization of getTimezoneOffset (type Function is ignored)} 
 
-    if (this._timezone != null) {  
-      buffer.writeAll(["\"timezone\":\`", this._timezone, "\`,"], "");
+    if (this.timezone != null) {  
+      buffer.writeAll(["\"timezone\":\`", this.timezone, "\`,"], "");
     }
 
-    if (this._timezoneOffset != null) {  
-      buffer.writeAll(["\"timezoneOffset\":", this._timezoneOffset, ","], "");
+    if (this.timezoneOffset != null) {  
+      buffer.writeAll(["\"timezoneOffset\":", this.timezoneOffset, ","], "");
     }
 
-    if (this._useUTC != null) {  
-      buffer.writeAll(["\"useUTC\":", this._useUTC, ","], "");
+    if (this.useUTC != null) {  
+      buffer.writeAll(["\"useUTC\":", this.useUTC, ","], "");
     }
   }
 

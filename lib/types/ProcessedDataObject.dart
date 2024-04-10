@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,13 @@ import 'OptionFragment.dart';
  * ProcessedDataObject 
  */
 class ProcessedDataObject extends OptionFragment {
-  ProcessedDataObject() : super();
-  bool? _cropped;  
-
+  ProcessedDataObject( {
+    this.cropped = null,
+    this.cropStart = null,
+    this.closestPointRange = null
+  }) : super();
+  bool? cropped;
+    /*
   bool get cropped { 
     if (this._cropped == null) {
       this._cropped = false;
@@ -35,9 +39,10 @@ class ProcessedDataObject extends OptionFragment {
   void set cropped (bool v) {
     this._cropped = v;
   }
+    */
     
-  double? _cropStart;  
-
+  double? cropStart;
+    /*
   double get cropStart { 
     if (this._cropStart == null) {
       this._cropStart = 0;
@@ -48,9 +53,10 @@ class ProcessedDataObject extends OptionFragment {
   void set cropStart (double v) {
     this._cropStart = v;
   }
+    */
     
-  double? _closestPointRange;  
-
+  double? closestPointRange;
+    /*
   double get closestPointRange { 
     if (this._closestPointRange == null) {
       this._closestPointRange = 0;
@@ -61,6 +67,7 @@ class ProcessedDataObject extends OptionFragment {
   void set closestPointRange (double v) {
     this._closestPointRange = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -74,16 +81,16 @@ class ProcessedDataObject extends OptionFragment {
 
     // NOTE: skip serialization of yData (type number[][] is ignored)} 
 
-    if (this._cropped != null) {  
-      buffer.writeAll(["\"cropped\":", this._cropped, ","], "");
+    if (this.cropped != null) {  
+      buffer.writeAll(["\"cropped\":", this.cropped, ","], "");
     }
 
-    if (this._cropStart != null) {  
-      buffer.writeAll(["\"cropStart\":", this._cropStart, ","], "");
+    if (this.cropStart != null) {  
+      buffer.writeAll(["\"cropStart\":", this.cropStart, ","], "");
     }
 
-    if (this._closestPointRange != null) {  
-      buffer.writeAll(["\"closestPointRange\":", this._closestPointRange, ","], "");
+    if (this.closestPointRange != null) {  
+      buffer.writeAll(["\"closestPointRange\":", this.closestPointRange, ","], "");
     }
   }
 

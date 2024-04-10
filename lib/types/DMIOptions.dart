@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -25,7 +25,7 @@ import 'OptionFragment.dart';
  * DMIOptions 
  */
 class DMIOptions extends SMAOptions {
-  DMIOptions() : super();
+  DMIOptions( ) : super();
   /**
    * Paramters used in calculation of regression series' points.  
       */
@@ -34,8 +34,8 @@ class DMIOptions extends SMAOptions {
   /**
    * +DI line options.  
       */
-  DMILineOptions? _plusDILine;  
-
+  DMILineOptions? plusDILine;
+    /*
   DMILineOptions get plusDILine { 
     if (this._plusDILine == null) {
       this._plusDILine = DMILineOptions();
@@ -46,12 +46,13 @@ class DMIOptions extends SMAOptions {
   void set plusDILine (DMILineOptions v) {
     this._plusDILine = v;
   }
+    */
     
   /**
    * -DI line options.  
       */
-  DMILineOptions? _minusDILine;  
-
+  DMILineOptions? minusDILine;
+    /*
   DMILineOptions get minusDILine { 
     if (this._minusDILine == null) {
       this._minusDILine = DMILineOptions();
@@ -62,6 +63,7 @@ class DMIOptions extends SMAOptions {
   void set minusDILine (DMILineOptions v) {
     this._minusDILine = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -73,12 +75,12 @@ class DMIOptions extends SMAOptions {
     
     // NOTE: skip serialization of params (type DMIParamsOptions is ignored)} 
 
-    if (this._plusDILine != null) {  
-      buffer.writeAll(["\"plusDILine\":", this._plusDILine?.toJSON(), ","], "");
+    if (this.plusDILine != null) {  
+      buffer.writeAll(["\"plusDILine\":", this.plusDILine?.toJSON(), ","], "");
     }
 
-    if (this._minusDILine != null) {  
-      buffer.writeAll(["\"minusDILine\":", this._minusDILine?.toJSON(), ","], "");
+    if (this.minusDILine != null) {  
+      buffer.writeAll(["\"minusDILine\":", this.minusDILine?.toJSON(), ","], "");
     }
   }
 

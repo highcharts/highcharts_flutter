@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -24,9 +24,16 @@ import 'OptionFragment.dart';
  * PieDataLabelOptions 
  */
 class PieDataLabelOptions extends DataLabelOptions {
-  PieDataLabelOptions() : super();
-  String? _alignTo;  
-
+  PieDataLabelOptions( {
+    this.alignTo = null,
+    this.connectorColor = null,
+    this.connectorPadding = null,
+    this.connectorWidth = null,
+    this.crookDistance = null,
+    this.softConnector = null
+  }) : super();
+  String? alignTo;
+    /*
   String get alignTo { 
     if (this._alignTo == null) {
       this._alignTo = "";
@@ -37,9 +44,10 @@ class PieDataLabelOptions extends DataLabelOptions {
   void set alignTo (String v) {
     this._alignTo = v;
   }
+    */
     
-  String? _connectorColor;  
-
+  String? connectorColor;
+    /*
   String get connectorColor { 
     if (this._connectorColor == null) {
       this._connectorColor = "";
@@ -50,9 +58,10 @@ class PieDataLabelOptions extends DataLabelOptions {
   void set connectorColor (String v) {
     this._connectorColor = v;
   }
+    */
     
-  double? _connectorPadding;  
-
+  double? connectorPadding;
+    /*
   double get connectorPadding { 
     if (this._connectorPadding == null) {
       this._connectorPadding = 0;
@@ -63,9 +72,10 @@ class PieDataLabelOptions extends DataLabelOptions {
   void set connectorPadding (double v) {
     this._connectorPadding = v;
   }
+    */
     
-  double? _connectorWidth;  
-
+  double? connectorWidth;
+    /*
   double get connectorWidth { 
     if (this._connectorWidth == null) {
       this._connectorWidth = 0;
@@ -76,9 +86,10 @@ class PieDataLabelOptions extends DataLabelOptions {
   void set connectorWidth (double v) {
     this._connectorWidth = v;
   }
+    */
     
-  String? _crookDistance;  
-
+  String? crookDistance;
+    /*
   String get crookDistance { 
     if (this._crookDistance == null) {
       this._crookDistance = "";
@@ -89,9 +100,10 @@ class PieDataLabelOptions extends DataLabelOptions {
   void set crookDistance (String v) {
     this._crookDistance = v;
   }
+    */
     
-  bool? _softConnector;  
-
+  bool? softConnector;
+    /*
   bool get softConnector { 
     if (this._softConnector == null) {
       this._softConnector = false;
@@ -102,6 +114,7 @@ class PieDataLabelOptions extends DataLabelOptions {
   void set softConnector (bool v) {
     this._softConnector = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -111,30 +124,30 @@ class PieDataLabelOptions extends DataLabelOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._alignTo != null) {  
-      buffer.writeAll(["\"alignTo\":\`", this._alignTo, "\`,"], "");
+    if (this.alignTo != null) {  
+      buffer.writeAll(["\"alignTo\":\`", this.alignTo, "\`,"], "");
     }
 
-    if (this._connectorColor != null) {  
-      buffer.writeAll(["\"connectorColor\":\`", this._connectorColor, "\`,"], "");
+    if (this.connectorColor != null) {  
+      buffer.writeAll(["\"connectorColor\":\`", this.connectorColor, "\`,"], "");
     }
 
-    if (this._connectorPadding != null) {  
-      buffer.writeAll(["\"connectorPadding\":", this._connectorPadding, ","], "");
+    if (this.connectorPadding != null) {  
+      buffer.writeAll(["\"connectorPadding\":", this.connectorPadding, ","], "");
     }
 
     // NOTE: skip serialization of connectorShape (type ConnectorShapeFunction is ignored)} 
 
-    if (this._connectorWidth != null) {  
-      buffer.writeAll(["\"connectorWidth\":", this._connectorWidth, ","], "");
+    if (this.connectorWidth != null) {  
+      buffer.writeAll(["\"connectorWidth\":", this.connectorWidth, ","], "");
     }
 
-    if (this._crookDistance != null) {  
-      buffer.writeAll(["\"crookDistance\":\`", this._crookDistance, "\`,"], "");
+    if (this.crookDistance != null) {  
+      buffer.writeAll(["\"crookDistance\":\`", this.crookDistance, "\`,"], "");
     }
 
-    if (this._softConnector != null) {  
-      buffer.writeAll(["\"softConnector\":", this._softConnector, ","], "");
+    if (this.softConnector != null) {  
+      buffer.writeAll(["\"softConnector\":", this.softConnector, ","], "");
     }
   }
 

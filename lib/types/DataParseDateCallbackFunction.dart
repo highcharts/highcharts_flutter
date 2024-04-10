@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,7 +22,7 @@ import 'OptionFragment.dart';
  * DataParseDateCallbackFunction 
  */
 class DataParseDateCallbackFunction extends OptionFragment {
-  DataParseDateCallbackFunction() : super();
+  DataParseDateCallbackFunction( ) : super();
   
 
   //////////////////////////////////////////////////////////////////////////////

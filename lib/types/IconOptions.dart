@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,11 @@ import 'OptionFragment.dart';
  * IconOptions 
  */
 class IconOptions extends ItemOptions {
-  IconOptions() : super();
-  String? _icon;  
-
+  IconOptions( {
+    this.icon = null
+  }) : super();
+  String? icon;
+    /*
   String get icon { 
     if (this._icon == null) {
       this._icon = "";
@@ -36,6 +38,7 @@ class IconOptions extends ItemOptions {
   void set icon (String v) {
     this._icon = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -47,8 +50,8 @@ class IconOptions extends ItemOptions {
     
     // NOTE: skip serialization of type (type "icon" is ignored)} 
 
-    if (this._icon != null) {  
-      buffer.writeAll(["\"icon\":\`", this._icon, "\`,"], "");
+    if (this.icon != null) {  
+      buffer.writeAll(["\"icon\":\`", this.icon, "\`,"], "");
     }
 
     // NOTE: skip serialization of events (type { update?: Function; onmousedown?: Function; click?: Function; } is ignored)} 

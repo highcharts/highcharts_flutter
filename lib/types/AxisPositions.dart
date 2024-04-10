@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,12 @@ import 'OptionFragment.dart';
  * AxisPositions 
  */
 class AxisPositions extends OptionFragment {
-  AxisPositions() : super();
-  String? _top;  
-
+  AxisPositions( {
+    this.top = null,
+    this.height = null
+  }) : super();
+  String? top;
+    /*
   String get top { 
     if (this._top == null) {
       this._top = "";
@@ -35,9 +38,10 @@ class AxisPositions extends OptionFragment {
   void set top (String v) {
     this._top = v;
   }
+    */
     
-  String? _height;  
-
+  String? height;
+    /*
   String get height { 
     if (this._height == null) {
       this._height = "";
@@ -48,6 +52,7 @@ class AxisPositions extends OptionFragment {
   void set height (String v) {
     this._height = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -57,12 +62,12 @@ class AxisPositions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._top != null) {  
-      buffer.writeAll(["\"top\":\`", this._top, "\`,"], "");
+    if (this.top != null) {  
+      buffer.writeAll(["\"top\":\`", this.top, "\`,"], "");
     }
 
-    if (this._height != null) {  
-      buffer.writeAll(["\"height\":\`", this._height, "\`,"], "");
+    if (this.height != null) {  
+      buffer.writeAll(["\"height\":\`", this.height, "\`,"], "");
     }
   }
 

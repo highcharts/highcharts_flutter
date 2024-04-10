@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,11 @@ import 'OptionFragment.dart';
  * GetSelectionMarkerAttrsEvent 
  */
 class GetSelectionMarkerAttrsEvent extends OptionFragment {
-  GetSelectionMarkerAttrsEvent() : super();
-  String? _shapeType;  
-
+  GetSelectionMarkerAttrsEvent( {
+    this.shapeType = null
+  }) : super();
+  String? shapeType;
+    /*
   String get shapeType { 
     if (this._shapeType == null) {
       this._shapeType = "";
@@ -36,6 +38,7 @@ class GetSelectionMarkerAttrsEvent extends OptionFragment {
   void set shapeType (String v) {
     this._shapeType = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -49,8 +52,8 @@ class GetSelectionMarkerAttrsEvent extends OptionFragment {
 
     // NOTE: skip serialization of attrs (type SVGAttributes is ignored)} 
 
-    if (this._shapeType != null) {  
-      buffer.writeAll(["\"shapeType\":\`", this._shapeType, "\`,"], "");
+    if (this.shapeType != null) {  
+      buffer.writeAll(["\"shapeType\":\`", this.shapeType, "\`,"], "");
     }
   }
 

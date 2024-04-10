@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -25,9 +25,17 @@ import 'OptionFragment.dart';
  * FlowMapPointOptions 
  */
 class FlowMapPointOptions extends MapLinePointOptions {
-  FlowMapPointOptions() : super();
-  double? _curveFactor;  
-
+  FlowMapPointOptions( {
+    this.curveFactor = null,
+    this.fillColor = null,
+    this.fillOpacity = null,
+    this.growTowards = null,
+    this.opacity = null,
+    this.weight = null,
+    this.lineWidth = null
+  }) : super();
+  double? curveFactor;
+    /*
   double get curveFactor { 
     if (this._curveFactor == null) {
       this._curveFactor = 0;
@@ -38,9 +46,10 @@ class FlowMapPointOptions extends MapLinePointOptions {
   void set curveFactor (double v) {
     this._curveFactor = v;
   }
+    */
     
-  String? _fillColor;  
-
+  String? fillColor;
+    /*
   String get fillColor { 
     if (this._fillColor == null) {
       this._fillColor = "";
@@ -51,9 +60,10 @@ class FlowMapPointOptions extends MapLinePointOptions {
   void set fillColor (String v) {
     this._fillColor = v;
   }
+    */
     
-  double? _fillOpacity;  
-
+  double? fillOpacity;
+    /*
   double get fillOpacity { 
     if (this._fillOpacity == null) {
       this._fillOpacity = 0;
@@ -64,9 +74,10 @@ class FlowMapPointOptions extends MapLinePointOptions {
   void set fillOpacity (double v) {
     this._fillOpacity = v;
   }
+    */
     
-  bool? _growTowards;  
-
+  bool? growTowards;
+    /*
   bool get growTowards { 
     if (this._growTowards == null) {
       this._growTowards = false;
@@ -77,9 +88,10 @@ class FlowMapPointOptions extends MapLinePointOptions {
   void set growTowards (bool v) {
     this._growTowards = v;
   }
+    */
     
-  double? _opacity;  
-
+  double? opacity;
+    /*
   double get opacity { 
     if (this._opacity == null) {
       this._opacity = 0;
@@ -90,9 +102,10 @@ class FlowMapPointOptions extends MapLinePointOptions {
   void set opacity (double v) {
     this._opacity = v;
   }
+    */
     
-  double? _weight;  
-
+  double? weight;
+    /*
   double get weight { 
     if (this._weight == null) {
       this._weight = 0;
@@ -103,9 +116,10 @@ class FlowMapPointOptions extends MapLinePointOptions {
   void set weight (double v) {
     this._weight = v;
   }
+    */
     
-  double? _lineWidth;  
-
+  double? lineWidth;
+    /*
   double get lineWidth { 
     if (this._lineWidth == null) {
       this._lineWidth = 0;
@@ -116,6 +130,7 @@ class FlowMapPointOptions extends MapLinePointOptions {
   void set lineWidth (double v) {
     this._lineWidth = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -125,38 +140,38 @@ class FlowMapPointOptions extends MapLinePointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._curveFactor != null) {  
-      buffer.writeAll(["\"curveFactor\":", this._curveFactor, ","], "");
+    if (this.curveFactor != null) {  
+      buffer.writeAll(["\"curveFactor\":", this.curveFactor, ","], "");
     }
 
-    if (this._fillColor != null) {  
-      buffer.writeAll(["\"fillColor\":\`", this._fillColor, "\`,"], "");
+    if (this.fillColor != null) {  
+      buffer.writeAll(["\"fillColor\":\`", this.fillColor, "\`,"], "");
     }
 
-    if (this._fillOpacity != null) {  
-      buffer.writeAll(["\"fillOpacity\":", this._fillOpacity, ","], "");
+    if (this.fillOpacity != null) {  
+      buffer.writeAll(["\"fillOpacity\":", this.fillOpacity, ","], "");
     }
 
     // NOTE: skip serialization of from (type MapLonLatObject is ignored)} 
 
-    if (this._growTowards != null) {  
-      buffer.writeAll(["\"growTowards\":", this._growTowards, ","], "");
+    if (this.growTowards != null) {  
+      buffer.writeAll(["\"growTowards\":", this.growTowards, ","], "");
     }
 
     // NOTE: skip serialization of markerEnd (type MarkerEndOptions is ignored)} 
 
-    if (this._opacity != null) {  
-      buffer.writeAll(["\"opacity\":", this._opacity, ","], "");
+    if (this.opacity != null) {  
+      buffer.writeAll(["\"opacity\":", this.opacity, ","], "");
     }
 
     // NOTE: skip serialization of to (type MapLonLatObject is ignored)} 
 
-    if (this._weight != null) {  
-      buffer.writeAll(["\"weight\":", this._weight, ","], "");
+    if (this.weight != null) {  
+      buffer.writeAll(["\"weight\":", this.weight, ","], "");
     }
 
-    if (this._lineWidth != null) {  
-      buffer.writeAll(["\"lineWidth\":", this._lineWidth, ","], "");
+    if (this.lineWidth != null) {  
+      buffer.writeAll(["\"lineWidth\":", this.lineWidth, ","], "");
     }
   }
 

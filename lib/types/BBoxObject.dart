@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,16 @@ import 'OptionFragment.dart';
  * BBoxObject 
  */
 class BBoxObject extends PositionObject {
-  BBoxObject() : super();
-  double? _height;  
-
+  BBoxObject( {
+    this.height = null,
+    this.width = null,
+    this.x = null,
+    this.y = null,
+    this.bottomWidth = null,
+    this.topWidth = null
+  }) : super();
+  double? height;
+    /*
   double get height { 
     if (this._height == null) {
       this._height = 0;
@@ -36,9 +43,10 @@ class BBoxObject extends PositionObject {
   void set height (double v) {
     this._height = v;
   }
+    */
     
-  double? _width;  
-
+  double? width;
+    /*
   double get width { 
     if (this._width == null) {
       this._width = 0;
@@ -49,9 +57,10 @@ class BBoxObject extends PositionObject {
   void set width (double v) {
     this._width = v;
   }
+    */
     
-  double? _x;  
-
+  double? x;
+    /*
   double get x { 
     if (this._x == null) {
       this._x = 0;
@@ -62,9 +71,10 @@ class BBoxObject extends PositionObject {
   void set x (double v) {
     this._x = v;
   }
+    */
     
-  double? _y;  
-
+  double? y;
+    /*
   double get y { 
     if (this._y == null) {
       this._y = 0;
@@ -75,9 +85,10 @@ class BBoxObject extends PositionObject {
   void set y (double v) {
     this._y = v;
   }
+    */
     
-  double? _bottomWidth;  
-
+  double? bottomWidth;
+    /*
   double get bottomWidth { 
     if (this._bottomWidth == null) {
       this._bottomWidth = 0;
@@ -88,9 +99,10 @@ class BBoxObject extends PositionObject {
   void set bottomWidth (double v) {
     this._bottomWidth = v;
   }
+    */
     
-  double? _topWidth;  
-
+  double? topWidth;
+    /*
   double get topWidth { 
     if (this._topWidth == null) {
       this._topWidth = 0;
@@ -101,6 +113,7 @@ class BBoxObject extends PositionObject {
   void set topWidth (double v) {
     this._topWidth = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -110,28 +123,28 @@ class BBoxObject extends PositionObject {
     super.toJSONInner(buffer);
 
     
-    if (this._height != null) {  
-      buffer.writeAll(["\"height\":", this._height, ","], "");
+    if (this.height != null) {  
+      buffer.writeAll(["\"height\":", this.height, ","], "");
     }
 
-    if (this._width != null) {  
-      buffer.writeAll(["\"width\":", this._width, ","], "");
+    if (this.width != null) {  
+      buffer.writeAll(["\"width\":", this.width, ","], "");
     }
 
-    if (this._x != null) {  
-      buffer.writeAll(["\"x\":", this._x, ","], "");
+    if (this.x != null) {  
+      buffer.writeAll(["\"x\":", this.x, ","], "");
     }
 
-    if (this._y != null) {  
-      buffer.writeAll(["\"y\":", this._y, ","], "");
+    if (this.y != null) {  
+      buffer.writeAll(["\"y\":", this.y, ","], "");
     }
 
-    if (this._bottomWidth != null) {  
-      buffer.writeAll(["\"bottomWidth\":", this._bottomWidth, ","], "");
+    if (this.bottomWidth != null) {  
+      buffer.writeAll(["\"bottomWidth\":", this.bottomWidth, ","], "");
     }
 
-    if (this._topWidth != null) {  
-      buffer.writeAll(["\"topWidth\":", this._topWidth, ","], "");
+    if (this.topWidth != null) {  
+      buffer.writeAll(["\"topWidth\":", this.topWidth, ","], "");
     }
   }
 

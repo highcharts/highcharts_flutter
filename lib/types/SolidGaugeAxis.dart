@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,13 @@ import 'OptionFragment.dart';
  * SolidGaugeAxis 
  */
 class SolidGaugeAxis extends ColorAxisLike {
-  SolidGaugeAxis() : super();
-  String? _coll;  
-
+  SolidGaugeAxis( {
+    this.coll = null,
+    this.max = null,
+    this.min = null
+  }) : super();
+  String? coll;
+    /*
   String get coll { 
     if (this._coll == null) {
       this._coll = "";
@@ -36,9 +40,10 @@ class SolidGaugeAxis extends ColorAxisLike {
   void set coll (String v) {
     this._coll = v;
   }
+    */
     
-  double? _max;  
-
+  double? max;
+    /*
   double get max { 
     if (this._max == null) {
       this._max = 0;
@@ -49,9 +54,10 @@ class SolidGaugeAxis extends ColorAxisLike {
   void set max (double v) {
     this._max = v;
   }
+    */
     
-  double? _min;  
-
+  double? min;
+    /*
   double get min { 
     if (this._min == null) {
       this._min = 0;
@@ -62,6 +68,7 @@ class SolidGaugeAxis extends ColorAxisLike {
   void set min (double v) {
     this._min = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -73,16 +80,16 @@ class SolidGaugeAxis extends ColorAxisLike {
     
     // NOTE: skip serialization of center (type number[] is ignored)} 
 
-    if (this._coll != null) {  
-      buffer.writeAll(["\"coll\":\`", this._coll, "\`,"], "");
+    if (this.coll != null) {  
+      buffer.writeAll(["\"coll\":\`", this.coll, "\`,"], "");
     }
 
-    if (this._max != null) {  
-      buffer.writeAll(["\"max\":", this._max, ","], "");
+    if (this.max != null) {  
+      buffer.writeAll(["\"max\":", this.max, ","], "");
     }
 
-    if (this._min != null) {  
-      buffer.writeAll(["\"min\":", this._min, ","], "");
+    if (this.min != null) {  
+      buffer.writeAll(["\"min\":", this.min, ","], "");
     }
 
     // NOTE: skip serialization of options (type ColorAxisLike.Options & RadialAxis.Options is ignored)} 

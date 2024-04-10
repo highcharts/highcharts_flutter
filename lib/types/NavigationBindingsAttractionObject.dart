@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,15 @@ import 'OptionFragment.dart';
  * NavigationBindingsAttractionObject 
  */
 class NavigationBindingsAttractionObject extends OptionFragment {
-  NavigationBindingsAttractionObject() : super();
-  double? _x;  
-
+  NavigationBindingsAttractionObject( {
+    this.x = null,
+    this.y = null,
+    this.below = null,
+    this.xAxis = null,
+    this.yAxis = null
+  }) : super();
+  double? x;
+    /*
   double get x { 
     if (this._x == null) {
       this._x = 0;
@@ -36,9 +42,10 @@ class NavigationBindingsAttractionObject extends OptionFragment {
   void set x (double v) {
     this._x = v;
   }
+    */
     
-  double? _y;  
-
+  double? y;
+    /*
   double get y { 
     if (this._y == null) {
       this._y = 0;
@@ -49,9 +56,10 @@ class NavigationBindingsAttractionObject extends OptionFragment {
   void set y (double v) {
     this._y = v;
   }
+    */
     
-  bool? _below;  
-
+  bool? below;
+    /*
   bool get below { 
     if (this._below == null) {
       this._below = false;
@@ -62,9 +70,10 @@ class NavigationBindingsAttractionObject extends OptionFragment {
   void set below (bool v) {
     this._below = v;
   }
+    */
     
-  double? _xAxis;  
-
+  double? xAxis;
+    /*
   double get xAxis { 
     if (this._xAxis == null) {
       this._xAxis = 0;
@@ -75,9 +84,10 @@ class NavigationBindingsAttractionObject extends OptionFragment {
   void set xAxis (double v) {
     this._xAxis = v;
   }
+    */
     
-  double? _yAxis;  
-
+  double? yAxis;
+    /*
   double get yAxis { 
     if (this._yAxis == null) {
       this._yAxis = 0;
@@ -88,6 +98,7 @@ class NavigationBindingsAttractionObject extends OptionFragment {
   void set yAxis (double v) {
     this._yAxis = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -97,26 +108,26 @@ class NavigationBindingsAttractionObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._x != null) {  
-      buffer.writeAll(["\"x\":", this._x, ","], "");
+    if (this.x != null) {  
+      buffer.writeAll(["\"x\":", this.x, ","], "");
     }
 
-    if (this._y != null) {  
-      buffer.writeAll(["\"y\":", this._y, ","], "");
+    if (this.y != null) {  
+      buffer.writeAll(["\"y\":", this.y, ","], "");
     }
 
-    if (this._below != null) {  
-      buffer.writeAll(["\"below\":", this._below, ","], "");
+    if (this.below != null) {  
+      buffer.writeAll(["\"below\":", this.below, ","], "");
     }
 
     // NOTE: skip serialization of series (type Series is ignored)} 
 
-    if (this._xAxis != null) {  
-      buffer.writeAll(["\"xAxis\":", this._xAxis, ","], "");
+    if (this.xAxis != null) {  
+      buffer.writeAll(["\"xAxis\":", this.xAxis, ","], "");
     }
 
-    if (this._yAxis != null) {  
-      buffer.writeAll(["\"yAxis\":", this._yAxis, ","], "");
+    if (this.yAxis != null) {  
+      buffer.writeAll(["\"yAxis\":", this.yAxis, ","], "");
     }
   }
 

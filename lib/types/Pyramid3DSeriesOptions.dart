@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,7 +23,7 @@ import 'OptionFragment.dart';
  * Pyramid3DSeriesOptions 
  */
 class Pyramid3DSeriesOptions extends Funnel3DSeriesOptions {
-  Pyramid3DSeriesOptions() : super();
+  Pyramid3DSeriesOptions( ) : super();
   // NOTE: states skipped - type Generic is ignored in gen
 
 

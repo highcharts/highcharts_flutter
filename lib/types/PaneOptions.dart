@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,16 @@ import 'OptionFragment.dart';
  * PaneOptions 
  */
 class PaneOptions extends OptionFragment {
-  PaneOptions() : super();
-  double? _endAngle;  
-
+  PaneOptions( {
+    this.endAngle = null,
+    this.id = null,
+    this.innerSize = null,
+    this.size = null,
+    this.startAngle = null,
+    this.zIndex = null
+  }) : super();
+  double? endAngle;
+    /*
   double get endAngle { 
     if (this._endAngle == null) {
       this._endAngle = 0;
@@ -35,9 +42,10 @@ class PaneOptions extends OptionFragment {
   void set endAngle (double v) {
     this._endAngle = v;
   }
+    */
     
-  String? _id;  
-
+  String? id;
+    /*
   String get id { 
     if (this._id == null) {
       this._id = "";
@@ -48,9 +56,10 @@ class PaneOptions extends OptionFragment {
   void set id (String v) {
     this._id = v;
   }
+    */
     
-  String? _innerSize;  
-
+  String? innerSize;
+    /*
   String get innerSize { 
     if (this._innerSize == null) {
       this._innerSize = "";
@@ -61,9 +70,10 @@ class PaneOptions extends OptionFragment {
   void set innerSize (String v) {
     this._innerSize = v;
   }
+    */
     
-  String? _size;  
-
+  String? size;
+    /*
   String get size { 
     if (this._size == null) {
       this._size = "";
@@ -74,9 +84,10 @@ class PaneOptions extends OptionFragment {
   void set size (String v) {
     this._size = v;
   }
+    */
     
-  double? _startAngle;  
-
+  double? startAngle;
+    /*
   double get startAngle { 
     if (this._startAngle == null) {
       this._startAngle = 0;
@@ -87,9 +98,10 @@ class PaneOptions extends OptionFragment {
   void set startAngle (double v) {
     this._startAngle = v;
   }
+    */
     
-  double? _zIndex;  
-
+  double? zIndex;
+    /*
   double get zIndex { 
     if (this._zIndex == null) {
       this._zIndex = 0;
@@ -100,6 +112,7 @@ class PaneOptions extends OptionFragment {
   void set zIndex (double v) {
     this._zIndex = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -113,28 +126,28 @@ class PaneOptions extends OptionFragment {
 
     // NOTE: skip serialization of center (type number)[] is ignored)} 
 
-    if (this._endAngle != null) {  
-      buffer.writeAll(["\"endAngle\":", this._endAngle, ","], "");
+    if (this.endAngle != null) {  
+      buffer.writeAll(["\"endAngle\":", this.endAngle, ","], "");
     }
 
-    if (this._id != null) {  
-      buffer.writeAll(["\"id\":\`", this._id, "\`,"], "");
+    if (this.id != null) {  
+      buffer.writeAll(["\"id\":\`", this.id, "\`,"], "");
     }
 
-    if (this._innerSize != null) {  
-      buffer.writeAll(["\"innerSize\":\`", this._innerSize, "\`,"], "");
+    if (this.innerSize != null) {  
+      buffer.writeAll(["\"innerSize\":\`", this.innerSize, "\`,"], "");
     }
 
-    if (this._size != null) {  
-      buffer.writeAll(["\"size\":\`", this._size, "\`,"], "");
+    if (this.size != null) {  
+      buffer.writeAll(["\"size\":\`", this.size, "\`,"], "");
     }
 
-    if (this._startAngle != null) {  
-      buffer.writeAll(["\"startAngle\":", this._startAngle, ","], "");
+    if (this.startAngle != null) {  
+      buffer.writeAll(["\"startAngle\":", this.startAngle, ","], "");
     }
 
-    if (this._zIndex != null) {  
-      buffer.writeAll(["\"zIndex\":", this._zIndex, ","], "");
+    if (this.zIndex != null) {  
+      buffer.writeAll(["\"zIndex\":", this.zIndex, ","], "");
     }
   }
 

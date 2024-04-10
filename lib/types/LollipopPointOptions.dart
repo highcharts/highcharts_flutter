@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,15 @@ import 'OptionFragment.dart';
  * LollipopPointOptions 
  */
 class LollipopPointOptions extends ScatterPointOptions {
-  LollipopPointOptions() : super();
-  String? _connectorColor;  
-
+  LollipopPointOptions( {
+    this.connectorColor = null,
+    this.connectorWidth = null,
+    this.dashStyle = null,
+    this.lowColor = null,
+    this.pointWidth = null
+  }) : super();
+  String? connectorColor;
+    /*
   String get connectorColor { 
     if (this._connectorColor == null) {
       this._connectorColor = "";
@@ -36,9 +42,10 @@ class LollipopPointOptions extends ScatterPointOptions {
   void set connectorColor (String v) {
     this._connectorColor = v;
   }
+    */
     
-  double? _connectorWidth;  
-
+  double? connectorWidth;
+    /*
   double get connectorWidth { 
     if (this._connectorWidth == null) {
       this._connectorWidth = 0;
@@ -49,9 +56,10 @@ class LollipopPointOptions extends ScatterPointOptions {
   void set connectorWidth (double v) {
     this._connectorWidth = v;
   }
+    */
     
-  String? _dashStyle;  
-
+  String? dashStyle;
+    /*
   String get dashStyle { 
     if (this._dashStyle == null) {
       this._dashStyle = "";
@@ -62,9 +70,10 @@ class LollipopPointOptions extends ScatterPointOptions {
   void set dashStyle (String v) {
     this._dashStyle = v;
   }
+    */
     
-  String? _lowColor;  
-
+  String? lowColor;
+    /*
   String get lowColor { 
     if (this._lowColor == null) {
       this._lowColor = "";
@@ -75,9 +84,10 @@ class LollipopPointOptions extends ScatterPointOptions {
   void set lowColor (String v) {
     this._lowColor = v;
   }
+    */
     
-  double? _pointWidth;  
-
+  double? pointWidth;
+    /*
   double get pointWidth { 
     if (this._pointWidth == null) {
       this._pointWidth = 0;
@@ -88,6 +98,7 @@ class LollipopPointOptions extends ScatterPointOptions {
   void set pointWidth (double v) {
     this._pointWidth = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -97,24 +108,24 @@ class LollipopPointOptions extends ScatterPointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._connectorColor != null) {  
-      buffer.writeAll(["\"connectorColor\":\`", this._connectorColor, "\`,"], "");
+    if (this.connectorColor != null) {  
+      buffer.writeAll(["\"connectorColor\":\`", this.connectorColor, "\`,"], "");
     }
 
-    if (this._connectorWidth != null) {  
-      buffer.writeAll(["\"connectorWidth\":", this._connectorWidth, ","], "");
+    if (this.connectorWidth != null) {  
+      buffer.writeAll(["\"connectorWidth\":", this.connectorWidth, ","], "");
     }
 
-    if (this._dashStyle != null) {  
-      buffer.writeAll(["\"dashStyle\":\`", this._dashStyle, "\`,"], "");
+    if (this.dashStyle != null) {  
+      buffer.writeAll(["\"dashStyle\":\`", this.dashStyle, "\`,"], "");
     }
 
-    if (this._lowColor != null) {  
-      buffer.writeAll(["\"lowColor\":\`", this._lowColor, "\`,"], "");
+    if (this.lowColor != null) {  
+      buffer.writeAll(["\"lowColor\":\`", this.lowColor, "\`,"], "");
     }
 
-    if (this._pointWidth != null) {  
-      buffer.writeAll(["\"pointWidth\":", this._pointWidth, ","], "");
+    if (this.pointWidth != null) {  
+      buffer.writeAll(["\"pointWidth\":", this.pointWidth, ","], "");
     }
   }
 

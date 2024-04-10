@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -25,14 +25,14 @@ import 'OptionFragment.dart';
  * KlingerOptions 
  */
 class KlingerOptions extends SMAOptions {
-  KlingerOptions() : super();
+  KlingerOptions( ) : super();
   /**
    * Paramters used in calculation of regression series' points.  
       */
   /** NOTE: extparams is skipped here for now, as it overrides the base type. */
 
-  KlingerSignalOptions? _signalLine;  
-
+  KlingerSignalOptions? signalLine;
+    /*
   KlingerSignalOptions get signalLine { 
     if (this._signalLine == null) {
       this._signalLine = KlingerSignalOptions();
@@ -43,6 +43,7 @@ class KlingerOptions extends SMAOptions {
   void set signalLine (KlingerSignalOptions v) {
     this._signalLine = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -54,8 +55,8 @@ class KlingerOptions extends SMAOptions {
     
     // NOTE: skip serialization of params (type KlingerParamsOptions is ignored)} 
 
-    if (this._signalLine != null) {  
-      buffer.writeAll(["\"signalLine\":", this._signalLine?.toJSON(), ","], "");
+    if (this.signalLine != null) {  
+      buffer.writeAll(["\"signalLine\":", this.signalLine?.toJSON(), ","], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,14 @@ import 'OptionFragment.dart';
  * GridAxisOptions 
  */
 class GridAxisOptions extends OptionFragment {
-  GridAxisOptions() : super();
-  String? _borderColor;  
-
+  GridAxisOptions( {
+    this.borderColor = null,
+    this.borderWidth = null,
+    this.cellHeight = null,
+    this.enabled = null
+  }) : super();
+  String? borderColor;
+    /*
   String get borderColor { 
     if (this._borderColor == null) {
       this._borderColor = "";
@@ -35,9 +40,10 @@ class GridAxisOptions extends OptionFragment {
   void set borderColor (String v) {
     this._borderColor = v;
   }
+    */
     
-  double? _borderWidth;  
-
+  double? borderWidth;
+    /*
   double get borderWidth { 
     if (this._borderWidth == null) {
       this._borderWidth = 0;
@@ -48,9 +54,10 @@ class GridAxisOptions extends OptionFragment {
   void set borderWidth (double v) {
     this._borderWidth = v;
   }
+    */
     
-  double? _cellHeight;  
-
+  double? cellHeight;
+    /*
   double get cellHeight { 
     if (this._cellHeight == null) {
       this._cellHeight = 0;
@@ -61,9 +68,10 @@ class GridAxisOptions extends OptionFragment {
   void set cellHeight (double v) {
     this._cellHeight = v;
   }
+    */
     
-  bool? _enabled;  
-
+  bool? enabled;
+    /*
   bool get enabled { 
     if (this._enabled == null) {
       this._enabled = false;
@@ -74,6 +82,7 @@ class GridAxisOptions extends OptionFragment {
   void set enabled (bool v) {
     this._enabled = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -83,22 +92,22 @@ class GridAxisOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._borderColor != null) {  
-      buffer.writeAll(["\"borderColor\":\`", this._borderColor, "\`,"], "");
+    if (this.borderColor != null) {  
+      buffer.writeAll(["\"borderColor\":\`", this.borderColor, "\`,"], "");
     }
 
-    if (this._borderWidth != null) {  
-      buffer.writeAll(["\"borderWidth\":", this._borderWidth, ","], "");
+    if (this.borderWidth != null) {  
+      buffer.writeAll(["\"borderWidth\":", this.borderWidth, ","], "");
     }
 
-    if (this._cellHeight != null) {  
-      buffer.writeAll(["\"cellHeight\":", this._cellHeight, ","], "");
+    if (this.cellHeight != null) {  
+      buffer.writeAll(["\"cellHeight\":", this.cellHeight, ","], "");
     }
 
     // NOTE: skip serialization of columns (type AxisOptions[] is ignored)} 
 
-    if (this._enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this._enabled, ","], "");
+    if (this.enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
     }
   }
 

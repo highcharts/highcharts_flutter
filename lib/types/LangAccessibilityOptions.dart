@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -37,9 +37,18 @@ import 'OptionFragment.dart';
  * LangAccessibilityOptions 
  */
 class LangAccessibilityOptions extends OptionFragment {
-  LangAccessibilityOptions() : super();
-  String? _chartContainerLabel;  
-
+  LangAccessibilityOptions( {
+    this.chartContainerLabel = null,
+    this.credits = null,
+    this.defaultChartTitle = null,
+    this.drillUpButton = null,
+    this.graphicContainerLabel = null,
+    this.svgContainerLabel = null,
+    this.svgContainerTitle = null,
+    this.thousandsSep = null
+  }) : super();
+  String? chartContainerLabel;
+    /*
   String get chartContainerLabel { 
     if (this._chartContainerLabel == null) {
       this._chartContainerLabel = "";
@@ -50,9 +59,10 @@ class LangAccessibilityOptions extends OptionFragment {
   void set chartContainerLabel (String v) {
     this._chartContainerLabel = v;
   }
+    */
     
-  String? _credits;  
-
+  String? credits;
+    /*
   String get credits { 
     if (this._credits == null) {
       this._credits = "";
@@ -63,9 +73,10 @@ class LangAccessibilityOptions extends OptionFragment {
   void set credits (String v) {
     this._credits = v;
   }
+    */
     
-  String? _defaultChartTitle;  
-
+  String? defaultChartTitle;
+    /*
   String get defaultChartTitle { 
     if (this._defaultChartTitle == null) {
       this._defaultChartTitle = "";
@@ -76,9 +87,10 @@ class LangAccessibilityOptions extends OptionFragment {
   void set defaultChartTitle (String v) {
     this._defaultChartTitle = v;
   }
+    */
     
-  String? _drillUpButton;  
-
+  String? drillUpButton;
+    /*
   String get drillUpButton { 
     if (this._drillUpButton == null) {
       this._drillUpButton = "";
@@ -89,9 +101,10 @@ class LangAccessibilityOptions extends OptionFragment {
   void set drillUpButton (String v) {
     this._drillUpButton = v;
   }
+    */
     
-  String? _graphicContainerLabel;  
-
+  String? graphicContainerLabel;
+    /*
   String get graphicContainerLabel { 
     if (this._graphicContainerLabel == null) {
       this._graphicContainerLabel = "";
@@ -102,9 +115,10 @@ class LangAccessibilityOptions extends OptionFragment {
   void set graphicContainerLabel (String v) {
     this._graphicContainerLabel = v;
   }
+    */
     
-  String? _svgContainerLabel;  
-
+  String? svgContainerLabel;
+    /*
   String get svgContainerLabel { 
     if (this._svgContainerLabel == null) {
       this._svgContainerLabel = "";
@@ -115,9 +129,10 @@ class LangAccessibilityOptions extends OptionFragment {
   void set svgContainerLabel (String v) {
     this._svgContainerLabel = v;
   }
+    */
     
-  String? _svgContainerTitle;  
-
+  String? svgContainerTitle;
+    /*
   String get svgContainerTitle { 
     if (this._svgContainerTitle == null) {
       this._svgContainerTitle = "";
@@ -128,9 +143,10 @@ class LangAccessibilityOptions extends OptionFragment {
   void set svgContainerTitle (String v) {
     this._svgContainerTitle = v;
   }
+    */
     
-  String? _thousandsSep;  
-
+  String? thousandsSep;
+    /*
   String get thousandsSep { 
     if (this._thousandsSep == null) {
       this._thousandsSep = "";
@@ -141,6 +157,7 @@ class LangAccessibilityOptions extends OptionFragment {
   void set thousandsSep (String v) {
     this._thousandsSep = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -154,28 +171,28 @@ class LangAccessibilityOptions extends OptionFragment {
 
     // NOTE: skip serialization of axis (type LangAccessibilityAxisOptions is ignored)} 
 
-    if (this._chartContainerLabel != null) {  
-      buffer.writeAll(["\"chartContainerLabel\":\`", this._chartContainerLabel, "\`,"], "");
+    if (this.chartContainerLabel != null) {  
+      buffer.writeAll(["\"chartContainerLabel\":\`", this.chartContainerLabel, "\`,"], "");
     }
 
     // NOTE: skip serialization of chartTypes (type LangAccessibilityChartTypesOptions is ignored)} 
 
-    if (this._credits != null) {  
-      buffer.writeAll(["\"credits\":\`", this._credits, "\`,"], "");
+    if (this.credits != null) {  
+      buffer.writeAll(["\"credits\":\`", this.credits, "\`,"], "");
     }
 
-    if (this._defaultChartTitle != null) {  
-      buffer.writeAll(["\"defaultChartTitle\":\`", this._defaultChartTitle, "\`,"], "");
+    if (this.defaultChartTitle != null) {  
+      buffer.writeAll(["\"defaultChartTitle\":\`", this.defaultChartTitle, "\`,"], "");
     }
 
-    if (this._drillUpButton != null) {  
-      buffer.writeAll(["\"drillUpButton\":\`", this._drillUpButton, "\`,"], "");
+    if (this.drillUpButton != null) {  
+      buffer.writeAll(["\"drillUpButton\":\`", this.drillUpButton, "\`,"], "");
     }
 
     // NOTE: skip serialization of exporting (type LangAccessibilityExportingOptions is ignored)} 
 
-    if (this._graphicContainerLabel != null) {  
-      buffer.writeAll(["\"graphicContainerLabel\":\`", this._graphicContainerLabel, "\`,"], "");
+    if (this.graphicContainerLabel != null) {  
+      buffer.writeAll(["\"graphicContainerLabel\":\`", this.graphicContainerLabel, "\`,"], "");
     }
 
     // NOTE: skip serialization of legend (type LangAccessibilityLegendOptions is ignored)} 
@@ -192,18 +209,18 @@ class LangAccessibilityOptions extends OptionFragment {
 
     // NOTE: skip serialization of sonification (type LangAccessibilitySonificationOptions is ignored)} 
 
-    if (this._svgContainerLabel != null) {  
-      buffer.writeAll(["\"svgContainerLabel\":\`", this._svgContainerLabel, "\`,"], "");
+    if (this.svgContainerLabel != null) {  
+      buffer.writeAll(["\"svgContainerLabel\":\`", this.svgContainerLabel, "\`,"], "");
     }
 
-    if (this._svgContainerTitle != null) {  
-      buffer.writeAll(["\"svgContainerTitle\":\`", this._svgContainerTitle, "\`,"], "");
+    if (this.svgContainerTitle != null) {  
+      buffer.writeAll(["\"svgContainerTitle\":\`", this.svgContainerTitle, "\`,"], "");
     }
 
     // NOTE: skip serialization of table (type LangAccessibilityTableOptions is ignored)} 
 
-    if (this._thousandsSep != null) {  
-      buffer.writeAll(["\"thousandsSep\":\`", this._thousandsSep, "\`,"], "");
+    if (this.thousandsSep != null) {  
+      buffer.writeAll(["\"thousandsSep\":\`", this.thousandsSep, "\`,"], "");
     }
 
     // NOTE: skip serialization of zoom (type LangAccessibilityZoomOptions is ignored)} 

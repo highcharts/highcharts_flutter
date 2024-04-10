@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -25,9 +25,13 @@ import 'OptionFragment.dart';
  * Event 
  */
 class Event extends DataEvent {
-  Event() : super();
-  String? _type;  
-
+  Event( {
+    this.type = null,
+    this.group = null,
+    this.revision = null
+  }) : super();
+  String? type;
+    /*
   String get type { 
     if (this._type == null) {
       this._type = "";
@@ -38,9 +42,10 @@ class Event extends DataEvent {
   void set type (String v) {
     this._type = v;
   }
+    */
     
-  String? _group;  
-
+  String? group;
+    /*
   String get group { 
     if (this._group == null) {
       this._group = "";
@@ -51,9 +56,10 @@ class Event extends DataEvent {
   void set group (String v) {
     this._group = v;
   }
+    */
     
-  double? _revision;  
-
+  double? revision;
+    /*
   double get revision { 
     if (this._revision == null) {
       this._revision = 0;
@@ -64,6 +70,7 @@ class Event extends DataEvent {
   void set revision (double v) {
     this._revision = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -73,8 +80,8 @@ class Event extends DataEvent {
     super.toJSONInner(buffer);
 
     
-    if (this._type != null) {  
-      buffer.writeAll(["\"type\":\`", this._type, "\`,"], "");
+    if (this.type != null) {  
+      buffer.writeAll(["\"type\":\`", this.type, "\`,"], "");
     }
 
     // NOTE: skip serialization of columns (type Column[] is ignored)} 
@@ -91,14 +98,14 @@ class Event extends DataEvent {
 
     // NOTE: skip serialization of event (type Event is ignored)} 
 
-    if (this._group != null) {  
-      buffer.writeAll(["\"group\":\`", this._group, "\`,"], "");
+    if (this.group != null) {  
+      buffer.writeAll(["\"group\":\`", this.group, "\`,"], "");
     }
 
     // NOTE: skip serialization of table (type DataTable is ignored)} 
 
-    if (this._type != null) {  
-      buffer.writeAll(["\"type\":\`", this._type, "\`,"], "");
+    if (this.type != null) {  
+      buffer.writeAll(["\"type\":\`", this.type, "\`,"], "");
     }
 
     // NOTE: skip serialization of options (type Generic is ignored)} 
@@ -109,8 +116,8 @@ class Event extends DataEvent {
 
     // NOTE: skip serialization of Sync (type typeof Sync is ignored)} 
 
-    if (this._revision != null) {  
-      buffer.writeAll(["\"revision\":", this._revision, ","], "");
+    if (this.revision != null) {  
+      buffer.writeAll(["\"revision\":", this.revision, ","], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,12 @@ import 'OptionFragment.dart';
  * TranslationAttributes 
  */
 class TranslationAttributes extends SVGAttributes {
-  TranslationAttributes() : super();
-  double? _translateX;  
-
+  TranslationAttributes( {
+    this.translateX = null,
+    this.translateY = null
+  }) : super();
+  double? translateX;
+    /*
   double get translateX { 
     if (this._translateX == null) {
       this._translateX = 0;
@@ -36,9 +39,10 @@ class TranslationAttributes extends SVGAttributes {
   void set translateX (double v) {
     this._translateX = v;
   }
+    */
     
-  double? _translateY;  
-
+  double? translateY;
+    /*
   double get translateY { 
     if (this._translateY == null) {
       this._translateY = 0;
@@ -49,6 +53,7 @@ class TranslationAttributes extends SVGAttributes {
   void set translateY (double v) {
     this._translateY = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -58,12 +63,12 @@ class TranslationAttributes extends SVGAttributes {
     super.toJSONInner(buffer);
 
     
-    if (this._translateX != null) {  
-      buffer.writeAll(["\"translateX\":", this._translateX, ","], "");
+    if (this.translateX != null) {  
+      buffer.writeAll(["\"translateX\":", this.translateX, ","], "");
     }
 
-    if (this._translateY != null) {  
-      buffer.writeAll(["\"translateY\":", this._translateY, ","], "");
+    if (this.translateY != null) {  
+      buffer.writeAll(["\"translateY\":", this.translateY, ","], "");
     }
   }
 

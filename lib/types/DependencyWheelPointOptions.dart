@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,11 @@ import 'OptionFragment.dart';
  * DependencyWheelPointOptions 
  */
 class DependencyWheelPointOptions extends SankeyPointOptions {
-  DependencyWheelPointOptions() : super();
-  double? _linkWeight;  
-
+  DependencyWheelPointOptions( {
+    this.linkWeight = null
+  }) : super();
+  double? linkWeight;
+    /*
   double get linkWeight { 
     if (this._linkWeight == null) {
       this._linkWeight = 0;
@@ -36,6 +38,7 @@ class DependencyWheelPointOptions extends SankeyPointOptions {
   void set linkWeight (double v) {
     this._linkWeight = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -45,8 +48,8 @@ class DependencyWheelPointOptions extends SankeyPointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._linkWeight != null) {  
-      buffer.writeAll(["\"linkWeight\":", this._linkWeight, ","], "");
+    if (this.linkWeight != null) {  
+      buffer.writeAll(["\"linkWeight\":", this.linkWeight, ","], "");
     }
   }
 

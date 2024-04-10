@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -28,9 +28,26 @@ import 'OptionFragment.dart';
  * AxisLike 
  */
 class AxisLike extends LegendItem {
-  AxisLike() : super();
-  double? _labelLeft;  
-
+  AxisLike( {
+    this.labelLeft = null,
+    this.labelRight = null,
+    this.newMax = null,
+    this.coll = null,
+    this.isXAxis = null,
+    this.max = null,
+    this.min = null,
+    this.reversed = null,
+    this.side = null,
+    this.visible = null,
+    this.extKey = null,
+    this.index = null,
+    this.touched = null,
+    this.oldPos = null,
+    this.recomputingForTilemap = null,
+    this.variwide = null
+  }) : super();
+  double? labelLeft;
+    /*
   double get labelLeft { 
     if (this._labelLeft == null) {
       this._labelLeft = 0;
@@ -41,9 +58,10 @@ class AxisLike extends LegendItem {
   void set labelLeft (double v) {
     this._labelLeft = v;
   }
+    */
     
-  double? _labelRight;  
-
+  double? labelRight;
+    /*
   double get labelRight { 
     if (this._labelRight == null) {
       this._labelRight = 0;
@@ -54,9 +72,10 @@ class AxisLike extends LegendItem {
   void set labelRight (double v) {
     this._labelRight = v;
   }
+    */
     
-  double? _newMax;  
-
+  double? newMax;
+    /*
   double get newMax { 
     if (this._newMax == null) {
       this._newMax = 0;
@@ -67,9 +86,10 @@ class AxisLike extends LegendItem {
   void set newMax (double v) {
     this._newMax = v;
   }
+    */
     
-  String? _coll;  
-
+  String? coll;
+    /*
   String get coll { 
     if (this._coll == null) {
       this._coll = "";
@@ -80,9 +100,10 @@ class AxisLike extends LegendItem {
   void set coll (String v) {
     this._coll = v;
   }
+    */
     
-  bool? _isXAxis;  
-
+  bool? isXAxis;
+    /*
   bool get isXAxis { 
     if (this._isXAxis == null) {
       this._isXAxis = false;
@@ -93,9 +114,10 @@ class AxisLike extends LegendItem {
   void set isXAxis (bool v) {
     this._isXAxis = v;
   }
+    */
     
-  double? _max;  
-
+  double? max;
+    /*
   double get max { 
     if (this._max == null) {
       this._max = 0;
@@ -106,9 +128,10 @@ class AxisLike extends LegendItem {
   void set max (double v) {
     this._max = v;
   }
+    */
     
-  double? _min;  
-
+  double? min;
+    /*
   double get min { 
     if (this._min == null) {
       this._min = 0;
@@ -119,9 +142,10 @@ class AxisLike extends LegendItem {
   void set min (double v) {
     this._min = v;
   }
+    */
     
-  bool? _reversed;  
-
+  bool? reversed;
+    /*
   bool get reversed { 
     if (this._reversed == null) {
       this._reversed = false;
@@ -132,9 +156,10 @@ class AxisLike extends LegendItem {
   void set reversed (bool v) {
     this._reversed = v;
   }
+    */
     
-  double? _side;  
-
+  double? side;
+    /*
   double get side { 
     if (this._side == null) {
       this._side = 0;
@@ -145,9 +170,10 @@ class AxisLike extends LegendItem {
   void set side (double v) {
     this._side = v;
   }
+    */
     
-  bool? _visible;  
-
+  bool? visible;
+    /*
   bool get visible { 
     if (this._visible == null) {
       this._visible = false;
@@ -158,9 +184,10 @@ class AxisLike extends LegendItem {
   void set visible (bool v) {
     this._visible = v;
   }
+    */
     
-  String? _extKey;  
-
+  String? extKey;
+    /*
   String get extKey { 
     if (this._extKey == null) {
       this._extKey = "";
@@ -171,9 +198,10 @@ class AxisLike extends LegendItem {
   void set extKey (String v) {
     this._extKey = v;
   }
+    */
     
-  double? _index;  
-
+  double? index;
+    /*
   double get index { 
     if (this._index == null) {
       this._index = 0;
@@ -184,9 +212,10 @@ class AxisLike extends LegendItem {
   void set index (double v) {
     this._index = v;
   }
+    */
     
-  bool? _touched;  
-
+  bool? touched;
+    /*
   bool get touched { 
     if (this._touched == null) {
       this._touched = false;
@@ -197,9 +226,10 @@ class AxisLike extends LegendItem {
   void set touched (bool v) {
     this._touched = v;
   }
+    */
     
-  double? _oldPos;  
-
+  double? oldPos;
+    /*
   double get oldPos { 
     if (this._oldPos == null) {
       this._oldPos = 0;
@@ -210,9 +240,10 @@ class AxisLike extends LegendItem {
   void set oldPos (double v) {
     this._oldPos = v;
   }
+    */
     
-  bool? _recomputingForTilemap;  
-
+  bool? recomputingForTilemap;
+    /*
   bool get recomputingForTilemap { 
     if (this._recomputingForTilemap == null) {
       this._recomputingForTilemap = false;
@@ -223,9 +254,10 @@ class AxisLike extends LegendItem {
   void set recomputingForTilemap (bool v) {
     this._recomputingForTilemap = v;
   }
+    */
     
-  bool? _variwide;  
-
+  bool? variwide;
+    /*
   bool get variwide { 
     if (this._variwide == null) {
       this._variwide = false;
@@ -236,6 +268,7 @@ class AxisLike extends LegendItem {
   void set variwide (bool v) {
     this._variwide = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -245,16 +278,16 @@ class AxisLike extends LegendItem {
     super.toJSONInner(buffer);
 
     
-    if (this._labelLeft != null) {  
-      buffer.writeAll(["\"labelLeft\":", this._labelLeft, ","], "");
+    if (this.labelLeft != null) {  
+      buffer.writeAll(["\"labelLeft\":", this.labelLeft, ","], "");
     }
 
-    if (this._labelRight != null) {  
-      buffer.writeAll(["\"labelRight\":", this._labelRight, ","], "");
+    if (this.labelRight != null) {  
+      buffer.writeAll(["\"labelRight\":", this.labelRight, ","], "");
     }
 
-    if (this._newMax != null) {  
-      buffer.writeAll(["\"newMax\":", this._newMax, ","], "");
+    if (this.newMax != null) {  
+      buffer.writeAll(["\"newMax\":", this.newMax, ","], "");
     }
 
     // NOTE: skip serialization of range (type RangeSelectorButtonOptions is ignored)} 
@@ -263,52 +296,52 @@ class AxisLike extends LegendItem {
 
     // NOTE: skip serialization of chart (type Chart is ignored)} 
 
-    if (this._coll != null) {  
-      buffer.writeAll(["\"coll\":\`", this._coll, "\`,"], "");
+    if (this.coll != null) {  
+      buffer.writeAll(["\"coll\":\`", this.coll, "\`,"], "");
     }
 
-    if (this._isXAxis != null) {  
-      buffer.writeAll(["\"isXAxis\":", this._isXAxis, ","], "");
+    if (this.isXAxis != null) {  
+      buffer.writeAll(["\"isXAxis\":", this.isXAxis, ","], "");
     }
 
-    if (this._max != null) {  
-      buffer.writeAll(["\"max\":", this._max, ","], "");
+    if (this.max != null) {  
+      buffer.writeAll(["\"max\":", this.max, ","], "");
     }
 
-    if (this._min != null) {  
-      buffer.writeAll(["\"min\":", this._min, ","], "");
+    if (this.min != null) {  
+      buffer.writeAll(["\"min\":", this.min, ","], "");
     }
 
     // NOTE: skip serialization of options (type AxisOptions is ignored)} 
 
-    if (this._reversed != null) {  
-      buffer.writeAll(["\"reversed\":", this._reversed, ","], "");
+    if (this.reversed != null) {  
+      buffer.writeAll(["\"reversed\":", this.reversed, ","], "");
     }
 
     // NOTE: skip serialization of series (type Series[] is ignored)} 
 
-    if (this._side != null) {  
-      buffer.writeAll(["\"side\":", this._side, ","], "");
+    if (this.side != null) {  
+      buffer.writeAll(["\"side\":", this.side, ","], "");
     }
 
     // NOTE: skip serialization of ticks (type Generic is ignored)} 
 
     // NOTE: skip serialization of userOptions (type Generic is ignored)} 
 
-    if (this._visible != null) {  
-      buffer.writeAll(["\"visible\":", this._visible, ","], "");
+    if (this.visible != null) {  
+      buffer.writeAll(["\"visible\":", this.visible, ","], "");
     }
 
-    if (this._extKey != null) {  
-      buffer.writeAll(["\"extKey\":\`", this._extKey, "\`,"], "");
+    if (this.extKey != null) {  
+      buffer.writeAll(["\"extKey\":\`", this.extKey, "\`,"], "");
     }
 
-    if (this._index != null) {  
-      buffer.writeAll(["\"index\":", this._index, ","], "");
+    if (this.index != null) {  
+      buffer.writeAll(["\"index\":", this.index, ","], "");
     }
 
-    if (this._touched != null) {  
-      buffer.writeAll(["\"touched\":", this._touched, ","], "");
+    if (this.touched != null) {  
+      buffer.writeAll(["\"touched\":", this.touched, ","], "");
     }
 
     // NOTE: skip serialization of pane (type Pane is ignored)} 
@@ -329,18 +362,18 @@ class AxisLike extends LegendItem {
 
     // NOTE: skip serialization of ddPoints (type Generic is ignored)} 
 
-    if (this._oldPos != null) {  
-      buffer.writeAll(["\"oldPos\":", this._oldPos, ","], "");
+    if (this.oldPos != null) {  
+      buffer.writeAll(["\"oldPos\":", this.oldPos, ","], "");
     }
 
     // NOTE: skip serialization of center (type number[] is ignored)} 
 
-    if (this._recomputingForTilemap != null) {  
-      buffer.writeAll(["\"recomputingForTilemap\":", this._recomputingForTilemap, ","], "");
+    if (this.recomputingForTilemap != null) {  
+      buffer.writeAll(["\"recomputingForTilemap\":", this.recomputingForTilemap, ","], "");
     }
 
-    if (this._variwide != null) {  
-      buffer.writeAll(["\"variwide\":", this._variwide, ","], "");
+    if (this.variwide != null) {  
+      buffer.writeAll(["\"variwide\":", this.variwide, ","], "");
     }
 
     // NOTE: skip serialization of zData (type number[] is ignored)} 

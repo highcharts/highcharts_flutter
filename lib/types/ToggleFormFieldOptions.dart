@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,17 @@ import 'OptionFragment.dart';
  * ToggleFormFieldOptions 
  */
 class ToggleFormFieldOptions extends OptionFragment {
-  ToggleFormFieldOptions() : super();
-  String? _title;  
-
+  ToggleFormFieldOptions( {
+    this.title = null,
+    this.value = null,
+    this.enabledOnOffLabels = null,
+    this.className = null,
+    this.id = null,
+    this.name = null,
+    this.langKey = null
+  }) : super();
+  String? title;
+    /*
   String get title { 
     if (this._title == null) {
       this._title = "";
@@ -36,9 +44,10 @@ class ToggleFormFieldOptions extends OptionFragment {
   void set title (String v) {
     this._title = v;
   }
+    */
     
-  bool? _value;  
-
+  bool? value;
+    /*
   bool get value { 
     if (this._value == null) {
       this._value = false;
@@ -49,9 +58,10 @@ class ToggleFormFieldOptions extends OptionFragment {
   void set value (bool v) {
     this._value = v;
   }
+    */
     
-  bool? _enabledOnOffLabels;  
-
+  bool? enabledOnOffLabels;
+    /*
   bool get enabledOnOffLabels { 
     if (this._enabledOnOffLabels == null) {
       this._enabledOnOffLabels = false;
@@ -62,9 +72,10 @@ class ToggleFormFieldOptions extends OptionFragment {
   void set enabledOnOffLabels (bool v) {
     this._enabledOnOffLabels = v;
   }
+    */
     
-  String? _className;  
-
+  String? className;
+    /*
   String get className { 
     if (this._className == null) {
       this._className = "";
@@ -75,9 +86,10 @@ class ToggleFormFieldOptions extends OptionFragment {
   void set className (String v) {
     this._className = v;
   }
+    */
     
-  String? _id;  
-
+  String? id;
+    /*
   String get id { 
     if (this._id == null) {
       this._id = "";
@@ -88,9 +100,10 @@ class ToggleFormFieldOptions extends OptionFragment {
   void set id (String v) {
     this._id = v;
   }
+    */
     
-  String? _name;  
-
+  String? name;
+    /*
   String get name { 
     if (this._name == null) {
       this._name = "";
@@ -101,9 +114,10 @@ class ToggleFormFieldOptions extends OptionFragment {
   void set name (String v) {
     this._name = v;
   }
+    */
     
-  String? _langKey;  
-
+  String? langKey;
+    /*
   String get langKey { 
     if (this._langKey == null) {
       this._langKey = "";
@@ -114,6 +128,7 @@ class ToggleFormFieldOptions extends OptionFragment {
   void set langKey (String v) {
     this._langKey = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -123,34 +138,34 @@ class ToggleFormFieldOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._title != null) {  
-      buffer.writeAll(["\"title\":\`", this._title, "\`,"], "");
+    if (this.title != null) {  
+      buffer.writeAll(["\"title\":\`", this.title, "\`,"], "");
     }
 
-    if (this._value != null) {  
-      buffer.writeAll(["\"value\":", this._value, ","], "");
+    if (this.value != null) {  
+      buffer.writeAll(["\"value\":", this.value, ","], "");
     }
 
-    if (this._enabledOnOffLabels != null) {  
-      buffer.writeAll(["\"enabledOnOffLabels\":", this._enabledOnOffLabels, ","], "");
+    if (this.enabledOnOffLabels != null) {  
+      buffer.writeAll(["\"enabledOnOffLabels\":", this.enabledOnOffLabels, ","], "");
     }
 
-    if (this._className != null) {  
-      buffer.writeAll(["\"className\":\`", this._className, "\`,"], "");
+    if (this.className != null) {  
+      buffer.writeAll(["\"className\":\`", this.className, "\`,"], "");
     }
 
-    if (this._id != null) {  
-      buffer.writeAll(["\"id\":\`", this._id, "\`,"], "");
+    if (this.id != null) {  
+      buffer.writeAll(["\"id\":\`", this.id, "\`,"], "");
     }
 
-    if (this._name != null) {  
-      buffer.writeAll(["\"name\":\`", this._name, "\`,"], "");
+    if (this.name != null) {  
+      buffer.writeAll(["\"name\":\`", this.name, "\`,"], "");
     }
 
     // NOTE: skip serialization of lang (type LangOptions is ignored)} 
 
-    if (this._langKey != null) {  
-      buffer.writeAll(["\"langKey\":\`", this._langKey, "\`,"], "");
+    if (this.langKey != null) {  
+      buffer.writeAll(["\"langKey\":\`", this.langKey, "\`,"], "");
     }
   }
 

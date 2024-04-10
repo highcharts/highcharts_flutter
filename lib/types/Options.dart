@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -76,9 +76,108 @@ import 'OptionFragment.dart';
  * Options 
  */
 class Options extends OptionFragment {
-  Options() : super();
-  String? _dataClassColor;  
-
+  Options( {
+    this.dataClassColor = null,
+    this.maxColor = null,
+    this.minColor = null,
+    this.layout = null,
+    this.showInLegend = null,
+    this.borderColor = null,
+    this.borderWidth = null,
+    this.className = null,
+    this.color = null,
+    this.connectorClassName = null,
+    this.connectorColor = null,
+    this.connectorDistance = null,
+    this.connectorWidth = null,
+    this.enabled = null,
+    this.legendIndex = null,
+    this.maxSize = null,
+    this.minSize = null,
+    this.placed = null,
+    this.seriesIndex = null,
+    this.sizeBy = null,
+    this.sizeByAbsoluteValue = null,
+    this.zIndex = null,
+    this.zThreshold = null,
+    this.exposeElementToA11y = null,
+    this.alpha = null,
+    this.beta = null,
+    this.depth = null,
+    this.fitToPlot = null,
+    this.viewDistance = null,
+    this.isGantt = null,
+    this.isStock = null,
+    this.isResponsiveOptions = null,
+    this.id = null,
+    this.parentContainerId = null,
+    this.copyId = null,
+    this.layoutClassName = null,
+    this.rowClassName = null,
+    this.cellClassName = null,
+    this.width = null,
+    this.height = null,
+    this.itemsClassName = null,
+    this.outline = null,
+    this.outlineClassName = null,
+    this.icon = null,
+    this.text = null,
+    this.cellDropOffset = null,
+    this.dropPointerSize = null,
+    this.rowDropOffset = null,
+    this.type = null,
+    this.iconsURLPrefix = null,
+    this.name = null,
+    this.orientation = null,
+    this.dateFormat = null,
+    this.alternativeFormat = null,
+    this.decimalPoint = null,
+    this.startRow = null,
+    this.endRow = null,
+    this.startColumn = null,
+    this.endColumn = null,
+    this.firstRowAsNames = null,
+    this.switchRowsAndColumns = null,
+    this.cell = null,
+    this.renderTo = null,
+    this.html = null,
+    this.dataGridClassName = null,
+    this.dataGridID = null,
+    this.chartClassName = null,
+    this.chartID = null,
+    this.allowConnectorUpdate = null,
+    this.chartConstructor = null,
+    this.columnName = null,
+    this.value = null,
+    this.minFontSize = null,
+    this.valueFormat = null,
+    this.csv = null,
+    this.itemDelimiter = null,
+    this.lineDelimiter = null,
+    this.useLocalDecimalPoint = null,
+    this.usePresentationOrder = null,
+    this.exportIDColumn = null,
+    this.tableCaption = null,
+    this.useMultiLevelHeaders = null,
+    this.useRowspanHeaders = null,
+    this.bubblePadding = null,
+    this.dragBetweenSeries = null,
+    this.enableSimulation = null,
+    this.friction = null,
+    this.gravitationalConstant = null,
+    this.initialPositionRadius = null,
+    this.maxIterations = null,
+    this.maxSpeed = null,
+    this.parentNodeLimit = null,
+    this.seriesInteraction = null,
+    this.splitSeries = null,
+    this.approximation = null,
+    this.integration = null,
+    this.linkLength = null,
+    this.theta = null
+  }) : super();
+  String? dataClassColor;
+    /*
   String get dataClassColor { 
     if (this._dataClassColor == null) {
       this._dataClassColor = "";
@@ -89,9 +188,10 @@ class Options extends OptionFragment {
   void set dataClassColor (String v) {
     this._dataClassColor = v;
   }
+    */
     
-  String? _maxColor;  
-
+  String? maxColor;
+    /*
   String get maxColor { 
     if (this._maxColor == null) {
       this._maxColor = "";
@@ -102,9 +202,10 @@ class Options extends OptionFragment {
   void set maxColor (String v) {
     this._maxColor = v;
   }
+    */
     
-  String? _minColor;  
-
+  String? minColor;
+    /*
   String get minColor { 
     if (this._minColor == null) {
       this._minColor = "";
@@ -115,9 +216,10 @@ class Options extends OptionFragment {
   void set minColor (String v) {
     this._minColor = v;
   }
+    */
     
-  String? _layout;  
-
+  String? layout;
+    /*
   String get layout { 
     if (this._layout == null) {
       this._layout = "";
@@ -128,9 +230,10 @@ class Options extends OptionFragment {
   void set layout (String v) {
     this._layout = v;
   }
+    */
     
-  bool? _showInLegend;  
-
+  bool? showInLegend;
+    /*
   bool get showInLegend { 
     if (this._showInLegend == null) {
       this._showInLegend = false;
@@ -141,9 +244,10 @@ class Options extends OptionFragment {
   void set showInLegend (bool v) {
     this._showInLegend = v;
   }
+    */
     
-  String? _borderColor;  
-
+  String? borderColor;
+    /*
   String get borderColor { 
     if (this._borderColor == null) {
       this._borderColor = "";
@@ -154,9 +258,10 @@ class Options extends OptionFragment {
   void set borderColor (String v) {
     this._borderColor = v;
   }
+    */
     
-  double? _borderWidth;  
-
+  double? borderWidth;
+    /*
   double get borderWidth { 
     if (this._borderWidth == null) {
       this._borderWidth = 0;
@@ -167,9 +272,10 @@ class Options extends OptionFragment {
   void set borderWidth (double v) {
     this._borderWidth = v;
   }
+    */
     
-  String? _className;  
-
+  String? className;
+    /*
   String get className { 
     if (this._className == null) {
       this._className = "";
@@ -180,9 +286,10 @@ class Options extends OptionFragment {
   void set className (String v) {
     this._className = v;
   }
+    */
     
-  String? _color;  
-
+  String? color;
+    /*
   String get color { 
     if (this._color == null) {
       this._color = "";
@@ -193,9 +300,10 @@ class Options extends OptionFragment {
   void set color (String v) {
     this._color = v;
   }
+    */
     
-  String? _connectorClassName;  
-
+  String? connectorClassName;
+    /*
   String get connectorClassName { 
     if (this._connectorClassName == null) {
       this._connectorClassName = "";
@@ -206,9 +314,10 @@ class Options extends OptionFragment {
   void set connectorClassName (String v) {
     this._connectorClassName = v;
   }
+    */
     
-  String? _connectorColor;  
-
+  String? connectorColor;
+    /*
   String get connectorColor { 
     if (this._connectorColor == null) {
       this._connectorColor = "";
@@ -219,9 +328,10 @@ class Options extends OptionFragment {
   void set connectorColor (String v) {
     this._connectorColor = v;
   }
+    */
     
-  double? _connectorDistance;  
-
+  double? connectorDistance;
+    /*
   double get connectorDistance { 
     if (this._connectorDistance == null) {
       this._connectorDistance = 0;
@@ -232,9 +342,10 @@ class Options extends OptionFragment {
   void set connectorDistance (double v) {
     this._connectorDistance = v;
   }
+    */
     
-  double? _connectorWidth;  
-
+  double? connectorWidth;
+    /*
   double get connectorWidth { 
     if (this._connectorWidth == null) {
       this._connectorWidth = 0;
@@ -245,9 +356,10 @@ class Options extends OptionFragment {
   void set connectorWidth (double v) {
     this._connectorWidth = v;
   }
+    */
     
-  bool? _enabled;  
-
+  bool? enabled;
+    /*
   bool get enabled { 
     if (this._enabled == null) {
       this._enabled = false;
@@ -258,9 +370,10 @@ class Options extends OptionFragment {
   void set enabled (bool v) {
     this._enabled = v;
   }
+    */
     
-  double? _legendIndex;  
-
+  double? legendIndex;
+    /*
   double get legendIndex { 
     if (this._legendIndex == null) {
       this._legendIndex = 0;
@@ -271,9 +384,10 @@ class Options extends OptionFragment {
   void set legendIndex (double v) {
     this._legendIndex = v;
   }
+    */
     
-  double? _maxSize;  
-
+  double? maxSize;
+    /*
   double get maxSize { 
     if (this._maxSize == null) {
       this._maxSize = 0;
@@ -284,9 +398,10 @@ class Options extends OptionFragment {
   void set maxSize (double v) {
     this._maxSize = v;
   }
+    */
     
-  double? _minSize;  
-
+  double? minSize;
+    /*
   double get minSize { 
     if (this._minSize == null) {
       this._minSize = 0;
@@ -297,9 +412,10 @@ class Options extends OptionFragment {
   void set minSize (double v) {
     this._minSize = v;
   }
+    */
     
-  bool? _placed;  
-
+  bool? placed;
+    /*
   bool get placed { 
     if (this._placed == null) {
       this._placed = false;
@@ -310,9 +426,10 @@ class Options extends OptionFragment {
   void set placed (bool v) {
     this._placed = v;
   }
+    */
     
-  double? _seriesIndex;  
-
+  double? seriesIndex;
+    /*
   double get seriesIndex { 
     if (this._seriesIndex == null) {
       this._seriesIndex = 0;
@@ -323,9 +440,10 @@ class Options extends OptionFragment {
   void set seriesIndex (double v) {
     this._seriesIndex = v;
   }
+    */
     
-  String? _sizeBy;  
-
+  String? sizeBy;
+    /*
   String get sizeBy { 
     if (this._sizeBy == null) {
       this._sizeBy = "";
@@ -336,9 +454,10 @@ class Options extends OptionFragment {
   void set sizeBy (String v) {
     this._sizeBy = v;
   }
+    */
     
-  bool? _sizeByAbsoluteValue;  
-
+  bool? sizeByAbsoluteValue;
+    /*
   bool get sizeByAbsoluteValue { 
     if (this._sizeByAbsoluteValue == null) {
       this._sizeByAbsoluteValue = false;
@@ -349,9 +468,10 @@ class Options extends OptionFragment {
   void set sizeByAbsoluteValue (bool v) {
     this._sizeByAbsoluteValue = v;
   }
+    */
     
-  double? _zIndex;  
-
+  double? zIndex;
+    /*
   double get zIndex { 
     if (this._zIndex == null) {
       this._zIndex = 0;
@@ -362,9 +482,10 @@ class Options extends OptionFragment {
   void set zIndex (double v) {
     this._zIndex = v;
   }
+    */
     
-  double? _zThreshold;  
-
+  double? zThreshold;
+    /*
   double get zThreshold { 
     if (this._zThreshold == null) {
       this._zThreshold = 0;
@@ -375,9 +496,10 @@ class Options extends OptionFragment {
   void set zThreshold (double v) {
     this._zThreshold = v;
   }
+    */
     
-  bool? _exposeElementToA11y;  
-
+  bool? exposeElementToA11y;
+    /*
   bool get exposeElementToA11y { 
     if (this._exposeElementToA11y == null) {
       this._exposeElementToA11y = false;
@@ -388,9 +510,10 @@ class Options extends OptionFragment {
   void set exposeElementToA11y (bool v) {
     this._exposeElementToA11y = v;
   }
+    */
     
-  double? _alpha;  
-
+  double? alpha;
+    /*
   double get alpha { 
     if (this._alpha == null) {
       this._alpha = 0;
@@ -401,9 +524,10 @@ class Options extends OptionFragment {
   void set alpha (double v) {
     this._alpha = v;
   }
+    */
     
-  double? _beta;  
-
+  double? beta;
+    /*
   double get beta { 
     if (this._beta == null) {
       this._beta = 0;
@@ -414,9 +538,10 @@ class Options extends OptionFragment {
   void set beta (double v) {
     this._beta = v;
   }
+    */
     
-  double? _depth;  
-
+  double? depth;
+    /*
   double get depth { 
     if (this._depth == null) {
       this._depth = 0;
@@ -427,9 +552,10 @@ class Options extends OptionFragment {
   void set depth (double v) {
     this._depth = v;
   }
+    */
     
-  bool? _fitToPlot;  
-
+  bool? fitToPlot;
+    /*
   bool get fitToPlot { 
     if (this._fitToPlot == null) {
       this._fitToPlot = false;
@@ -440,9 +566,10 @@ class Options extends OptionFragment {
   void set fitToPlot (bool v) {
     this._fitToPlot = v;
   }
+    */
     
-  double? _viewDistance;  
-
+  double? viewDistance;
+    /*
   double get viewDistance { 
     if (this._viewDistance == null) {
       this._viewDistance = 0;
@@ -453,9 +580,10 @@ class Options extends OptionFragment {
   void set viewDistance (double v) {
     this._viewDistance = v;
   }
+    */
     
-  bool? _isGantt;  
-
+  bool? isGantt;
+    /*
   bool get isGantt { 
     if (this._isGantt == null) {
       this._isGantt = false;
@@ -466,9 +594,10 @@ class Options extends OptionFragment {
   void set isGantt (bool v) {
     this._isGantt = v;
   }
+    */
     
-  bool? _isStock;  
-
+  bool? isStock;
+    /*
   bool get isStock { 
     if (this._isStock == null) {
       this._isStock = false;
@@ -479,9 +608,10 @@ class Options extends OptionFragment {
   void set isStock (bool v) {
     this._isStock = v;
   }
+    */
     
-  bool? _isResponsiveOptions;  
-
+  bool? isResponsiveOptions;
+    /*
   bool get isResponsiveOptions { 
     if (this._isResponsiveOptions == null) {
       this._isResponsiveOptions = false;
@@ -492,9 +622,10 @@ class Options extends OptionFragment {
   void set isResponsiveOptions (bool v) {
     this._isResponsiveOptions = v;
   }
+    */
     
-  String? _id;  
-
+  String? id;
+    /*
   String get id { 
     if (this._id == null) {
       this._id = "";
@@ -505,9 +636,10 @@ class Options extends OptionFragment {
   void set id (String v) {
     this._id = v;
   }
+    */
     
-  String? _parentContainerId;  
-
+  String? parentContainerId;
+    /*
   String get parentContainerId { 
     if (this._parentContainerId == null) {
       this._parentContainerId = "";
@@ -518,9 +650,10 @@ class Options extends OptionFragment {
   void set parentContainerId (String v) {
     this._parentContainerId = v;
   }
+    */
     
-  String? _copyId;  
-
+  String? copyId;
+    /*
   String get copyId { 
     if (this._copyId == null) {
       this._copyId = "";
@@ -531,9 +664,10 @@ class Options extends OptionFragment {
   void set copyId (String v) {
     this._copyId = v;
   }
+    */
     
-  String? _layoutClassName;  
-
+  String? layoutClassName;
+    /*
   String get layoutClassName { 
     if (this._layoutClassName == null) {
       this._layoutClassName = "";
@@ -544,9 +678,10 @@ class Options extends OptionFragment {
   void set layoutClassName (String v) {
     this._layoutClassName = v;
   }
+    */
     
-  String? _rowClassName;  
-
+  String? rowClassName;
+    /*
   String get rowClassName { 
     if (this._rowClassName == null) {
       this._rowClassName = "";
@@ -557,9 +692,10 @@ class Options extends OptionFragment {
   void set rowClassName (String v) {
     this._rowClassName = v;
   }
+    */
     
-  String? _cellClassName;  
-
+  String? cellClassName;
+    /*
   String get cellClassName { 
     if (this._cellClassName == null) {
       this._cellClassName = "";
@@ -570,9 +706,10 @@ class Options extends OptionFragment {
   void set cellClassName (String v) {
     this._cellClassName = v;
   }
+    */
     
-  String? _width;  
-
+  String? width;
+    /*
   String get width { 
     if (this._width == null) {
       this._width = "";
@@ -583,9 +720,10 @@ class Options extends OptionFragment {
   void set width (String v) {
     this._width = v;
   }
+    */
     
-  String? _height;  
-
+  String? height;
+    /*
   String get height { 
     if (this._height == null) {
       this._height = "";
@@ -596,9 +734,10 @@ class Options extends OptionFragment {
   void set height (String v) {
     this._height = v;
   }
+    */
     
-  String? _itemsClassName;  
-
+  String? itemsClassName;
+    /*
   String get itemsClassName { 
     if (this._itemsClassName == null) {
       this._itemsClassName = "";
@@ -609,9 +748,10 @@ class Options extends OptionFragment {
   void set itemsClassName (String v) {
     this._itemsClassName = v;
   }
+    */
     
-  bool? _outline;  
-
+  bool? outline;
+    /*
   bool get outline { 
     if (this._outline == null) {
       this._outline = false;
@@ -622,9 +762,10 @@ class Options extends OptionFragment {
   void set outline (bool v) {
     this._outline = v;
   }
+    */
     
-  String? _outlineClassName;  
-
+  String? outlineClassName;
+    /*
   String get outlineClassName { 
     if (this._outlineClassName == null) {
       this._outlineClassName = "";
@@ -635,9 +776,10 @@ class Options extends OptionFragment {
   void set outlineClassName (String v) {
     this._outlineClassName = v;
   }
+    */
     
-  String? _icon;  
-
+  String? icon;
+    /*
   String get icon { 
     if (this._icon == null) {
       this._icon = "";
@@ -648,9 +790,10 @@ class Options extends OptionFragment {
   void set icon (String v) {
     this._icon = v;
   }
+    */
     
-  String? _text;  
-
+  String? text;
+    /*
   String get text { 
     if (this._text == null) {
       this._text = "";
@@ -661,9 +804,10 @@ class Options extends OptionFragment {
   void set text (String v) {
     this._text = v;
   }
+    */
     
-  double? _cellDropOffset;  
-
+  double? cellDropOffset;
+    /*
   double get cellDropOffset { 
     if (this._cellDropOffset == null) {
       this._cellDropOffset = 0;
@@ -674,9 +818,10 @@ class Options extends OptionFragment {
   void set cellDropOffset (double v) {
     this._cellDropOffset = v;
   }
+    */
     
-  double? _dropPointerSize;  
-
+  double? dropPointerSize;
+    /*
   double get dropPointerSize { 
     if (this._dropPointerSize == null) {
       this._dropPointerSize = 0;
@@ -687,9 +832,10 @@ class Options extends OptionFragment {
   void set dropPointerSize (double v) {
     this._dropPointerSize = v;
   }
+    */
     
-  double? _rowDropOffset;  
-
+  double? rowDropOffset;
+    /*
   double get rowDropOffset { 
     if (this._rowDropOffset == null) {
       this._rowDropOffset = 0;
@@ -700,9 +846,10 @@ class Options extends OptionFragment {
   void set rowDropOffset (double v) {
     this._rowDropOffset = v;
   }
+    */
     
-  String? _type;  
-
+  String? type;
+    /*
   String get type { 
     if (this._type == null) {
       this._type = "";
@@ -713,9 +860,10 @@ class Options extends OptionFragment {
   void set type (String v) {
     this._type = v;
   }
+    */
     
-  String? _iconsURLPrefix;  
-
+  String? iconsURLPrefix;
+    /*
   String get iconsURLPrefix { 
     if (this._iconsURLPrefix == null) {
       this._iconsURLPrefix = "";
@@ -726,9 +874,10 @@ class Options extends OptionFragment {
   void set iconsURLPrefix (String v) {
     this._iconsURLPrefix = v;
   }
+    */
     
-  String? _name;  
-
+  String? name;
+    /*
   String get name { 
     if (this._name == null) {
       this._name = "";
@@ -739,9 +888,10 @@ class Options extends OptionFragment {
   void set name (String v) {
     this._name = v;
   }
+    */
     
-  String? _orientation;  
-
+  String? orientation;
+    /*
   String get orientation { 
     if (this._orientation == null) {
       this._orientation = "";
@@ -752,9 +902,10 @@ class Options extends OptionFragment {
   void set orientation (String v) {
     this._orientation = v;
   }
+    */
     
-  String? _dateFormat;  
-
+  String? dateFormat;
+    /*
   String get dateFormat { 
     if (this._dateFormat == null) {
       this._dateFormat = "";
@@ -765,9 +916,10 @@ class Options extends OptionFragment {
   void set dateFormat (String v) {
     this._dateFormat = v;
   }
+    */
     
-  String? _alternativeFormat;  
-
+  String? alternativeFormat;
+    /*
   String get alternativeFormat { 
     if (this._alternativeFormat == null) {
       this._alternativeFormat = "";
@@ -778,9 +930,10 @@ class Options extends OptionFragment {
   void set alternativeFormat (String v) {
     this._alternativeFormat = v;
   }
+    */
     
-  String? _decimalPoint;  
-
+  String? decimalPoint;
+    /*
   String get decimalPoint { 
     if (this._decimalPoint == null) {
       this._decimalPoint = "";
@@ -791,9 +944,10 @@ class Options extends OptionFragment {
   void set decimalPoint (String v) {
     this._decimalPoint = v;
   }
+    */
     
-  double? _startRow;  
-
+  double? startRow;
+    /*
   double get startRow { 
     if (this._startRow == null) {
       this._startRow = 0;
@@ -804,9 +958,10 @@ class Options extends OptionFragment {
   void set startRow (double v) {
     this._startRow = v;
   }
+    */
     
-  double? _endRow;  
-
+  double? endRow;
+    /*
   double get endRow { 
     if (this._endRow == null) {
       this._endRow = 0;
@@ -817,9 +972,10 @@ class Options extends OptionFragment {
   void set endRow (double v) {
     this._endRow = v;
   }
+    */
     
-  double? _startColumn;  
-
+  double? startColumn;
+    /*
   double get startColumn { 
     if (this._startColumn == null) {
       this._startColumn = 0;
@@ -830,9 +986,10 @@ class Options extends OptionFragment {
   void set startColumn (double v) {
     this._startColumn = v;
   }
+    */
     
-  double? _endColumn;  
-
+  double? endColumn;
+    /*
   double get endColumn { 
     if (this._endColumn == null) {
       this._endColumn = 0;
@@ -843,9 +1000,10 @@ class Options extends OptionFragment {
   void set endColumn (double v) {
     this._endColumn = v;
   }
+    */
     
-  bool? _firstRowAsNames;  
-
+  bool? firstRowAsNames;
+    /*
   bool get firstRowAsNames { 
     if (this._firstRowAsNames == null) {
       this._firstRowAsNames = false;
@@ -856,9 +1014,10 @@ class Options extends OptionFragment {
   void set firstRowAsNames (bool v) {
     this._firstRowAsNames = v;
   }
+    */
     
-  bool? _switchRowsAndColumns;  
-
+  bool? switchRowsAndColumns;
+    /*
   bool get switchRowsAndColumns { 
     if (this._switchRowsAndColumns == null) {
       this._switchRowsAndColumns = false;
@@ -869,9 +1028,10 @@ class Options extends OptionFragment {
   void set switchRowsAndColumns (bool v) {
     this._switchRowsAndColumns = v;
   }
+    */
     
-  String? _cell;  
-
+  String? cell;
+    /*
   String get cell { 
     if (this._cell == null) {
       this._cell = "";
@@ -882,9 +1042,10 @@ class Options extends OptionFragment {
   void set cell (String v) {
     this._cell = v;
   }
+    */
     
-  String? _renderTo;  
-
+  String? renderTo;
+    /*
   String get renderTo { 
     if (this._renderTo == null) {
       this._renderTo = "";
@@ -895,9 +1056,10 @@ class Options extends OptionFragment {
   void set renderTo (String v) {
     this._renderTo = v;
   }
+    */
     
-  String? _html;  
-
+  String? html;
+    /*
   String get html { 
     if (this._html == null) {
       this._html = "";
@@ -908,9 +1070,10 @@ class Options extends OptionFragment {
   void set html (String v) {
     this._html = v;
   }
+    */
     
-  String? _dataGridClassName;  
-
+  String? dataGridClassName;
+    /*
   String get dataGridClassName { 
     if (this._dataGridClassName == null) {
       this._dataGridClassName = "";
@@ -921,9 +1084,10 @@ class Options extends OptionFragment {
   void set dataGridClassName (String v) {
     this._dataGridClassName = v;
   }
+    */
     
-  String? _dataGridID;  
-
+  String? dataGridID;
+    /*
   String get dataGridID { 
     if (this._dataGridID == null) {
       this._dataGridID = "";
@@ -934,9 +1098,10 @@ class Options extends OptionFragment {
   void set dataGridID (String v) {
     this._dataGridID = v;
   }
+    */
     
-  String? _chartClassName;  
-
+  String? chartClassName;
+    /*
   String get chartClassName { 
     if (this._chartClassName == null) {
       this._chartClassName = "";
@@ -947,9 +1112,10 @@ class Options extends OptionFragment {
   void set chartClassName (String v) {
     this._chartClassName = v;
   }
+    */
     
-  String? _chartID;  
-
+  String? chartID;
+    /*
   String get chartID { 
     if (this._chartID == null) {
       this._chartID = "";
@@ -960,9 +1126,10 @@ class Options extends OptionFragment {
   void set chartID (String v) {
     this._chartID = v;
   }
+    */
     
-  bool? _allowConnectorUpdate;  
-
+  bool? allowConnectorUpdate;
+    /*
   bool get allowConnectorUpdate { 
     if (this._allowConnectorUpdate == null) {
       this._allowConnectorUpdate = false;
@@ -973,9 +1140,10 @@ class Options extends OptionFragment {
   void set allowConnectorUpdate (bool v) {
     this._allowConnectorUpdate = v;
   }
+    */
     
-  String? _chartConstructor;  
-
+  String? chartConstructor;
+    /*
   String get chartConstructor { 
     if (this._chartConstructor == null) {
       this._chartConstructor = "";
@@ -986,9 +1154,10 @@ class Options extends OptionFragment {
   void set chartConstructor (String v) {
     this._chartConstructor = v;
   }
+    */
     
-  String? _columnName;  
-
+  String? columnName;
+    /*
   String get columnName { 
     if (this._columnName == null) {
       this._columnName = "";
@@ -999,9 +1168,10 @@ class Options extends OptionFragment {
   void set columnName (String v) {
     this._columnName = v;
   }
+    */
     
-  String? _value;  
-
+  String? value;
+    /*
   String get value { 
     if (this._value == null) {
       this._value = "";
@@ -1012,9 +1182,10 @@ class Options extends OptionFragment {
   void set value (String v) {
     this._value = v;
   }
+    */
     
-  double? _minFontSize;  
-
+  double? minFontSize;
+    /*
   double get minFontSize { 
     if (this._minFontSize == null) {
       this._minFontSize = 0;
@@ -1025,9 +1196,10 @@ class Options extends OptionFragment {
   void set minFontSize (double v) {
     this._minFontSize = v;
   }
+    */
     
-  String? _valueFormat;  
-
+  String? valueFormat;
+    /*
   String get valueFormat { 
     if (this._valueFormat == null) {
       this._valueFormat = "";
@@ -1038,9 +1210,10 @@ class Options extends OptionFragment {
   void set valueFormat (String v) {
     this._valueFormat = v;
   }
+    */
     
-  String? _csv;  
-
+  String? csv;
+    /*
   String get csv { 
     if (this._csv == null) {
       this._csv = "";
@@ -1051,9 +1224,10 @@ class Options extends OptionFragment {
   void set csv (String v) {
     this._csv = v;
   }
+    */
     
-  String? _itemDelimiter;  
-
+  String? itemDelimiter;
+    /*
   String get itemDelimiter { 
     if (this._itemDelimiter == null) {
       this._itemDelimiter = "";
@@ -1064,9 +1238,10 @@ class Options extends OptionFragment {
   void set itemDelimiter (String v) {
     this._itemDelimiter = v;
   }
+    */
     
-  String? _lineDelimiter;  
-
+  String? lineDelimiter;
+    /*
   String get lineDelimiter { 
     if (this._lineDelimiter == null) {
       this._lineDelimiter = "";
@@ -1077,9 +1252,10 @@ class Options extends OptionFragment {
   void set lineDelimiter (String v) {
     this._lineDelimiter = v;
   }
+    */
     
-  bool? _useLocalDecimalPoint;  
-
+  bool? useLocalDecimalPoint;
+    /*
   bool get useLocalDecimalPoint { 
     if (this._useLocalDecimalPoint == null) {
       this._useLocalDecimalPoint = false;
@@ -1090,9 +1266,10 @@ class Options extends OptionFragment {
   void set useLocalDecimalPoint (bool v) {
     this._useLocalDecimalPoint = v;
   }
+    */
     
-  bool? _usePresentationOrder;  
-
+  bool? usePresentationOrder;
+    /*
   bool get usePresentationOrder { 
     if (this._usePresentationOrder == null) {
       this._usePresentationOrder = false;
@@ -1103,9 +1280,10 @@ class Options extends OptionFragment {
   void set usePresentationOrder (bool v) {
     this._usePresentationOrder = v;
   }
+    */
     
-  bool? _exportIDColumn;  
-
+  bool? exportIDColumn;
+    /*
   bool get exportIDColumn { 
     if (this._exportIDColumn == null) {
       this._exportIDColumn = false;
@@ -1116,9 +1294,10 @@ class Options extends OptionFragment {
   void set exportIDColumn (bool v) {
     this._exportIDColumn = v;
   }
+    */
     
-  String? _tableCaption;  
-
+  String? tableCaption;
+    /*
   String get tableCaption { 
     if (this._tableCaption == null) {
       this._tableCaption = "";
@@ -1129,9 +1308,10 @@ class Options extends OptionFragment {
   void set tableCaption (String v) {
     this._tableCaption = v;
   }
+    */
     
-  bool? _useMultiLevelHeaders;  
-
+  bool? useMultiLevelHeaders;
+    /*
   bool get useMultiLevelHeaders { 
     if (this._useMultiLevelHeaders == null) {
       this._useMultiLevelHeaders = false;
@@ -1142,9 +1322,10 @@ class Options extends OptionFragment {
   void set useMultiLevelHeaders (bool v) {
     this._useMultiLevelHeaders = v;
   }
+    */
     
-  bool? _useRowspanHeaders;  
-
+  bool? useRowspanHeaders;
+    /*
   bool get useRowspanHeaders { 
     if (this._useRowspanHeaders == null) {
       this._useRowspanHeaders = false;
@@ -1155,9 +1336,10 @@ class Options extends OptionFragment {
   void set useRowspanHeaders (bool v) {
     this._useRowspanHeaders = v;
   }
+    */
     
-  double? _bubblePadding;  
-
+  double? bubblePadding;
+    /*
   double get bubblePadding { 
     if (this._bubblePadding == null) {
       this._bubblePadding = 0;
@@ -1168,9 +1350,10 @@ class Options extends OptionFragment {
   void set bubblePadding (double v) {
     this._bubblePadding = v;
   }
+    */
     
-  bool? _dragBetweenSeries;  
-
+  bool? dragBetweenSeries;
+    /*
   bool get dragBetweenSeries { 
     if (this._dragBetweenSeries == null) {
       this._dragBetweenSeries = false;
@@ -1181,9 +1364,10 @@ class Options extends OptionFragment {
   void set dragBetweenSeries (bool v) {
     this._dragBetweenSeries = v;
   }
+    */
     
-  bool? _enableSimulation;  
-
+  bool? enableSimulation;
+    /*
   bool get enableSimulation { 
     if (this._enableSimulation == null) {
       this._enableSimulation = false;
@@ -1194,9 +1378,10 @@ class Options extends OptionFragment {
   void set enableSimulation (bool v) {
     this._enableSimulation = v;
   }
+    */
     
-  double? _friction;  
-
+  double? friction;
+    /*
   double get friction { 
     if (this._friction == null) {
       this._friction = 0;
@@ -1207,9 +1392,10 @@ class Options extends OptionFragment {
   void set friction (double v) {
     this._friction = v;
   }
+    */
     
-  double? _gravitationalConstant;  
-
+  double? gravitationalConstant;
+    /*
   double get gravitationalConstant { 
     if (this._gravitationalConstant == null) {
       this._gravitationalConstant = 0;
@@ -1220,9 +1406,10 @@ class Options extends OptionFragment {
   void set gravitationalConstant (double v) {
     this._gravitationalConstant = v;
   }
+    */
     
-  double? _initialPositionRadius;  
-
+  double? initialPositionRadius;
+    /*
   double get initialPositionRadius { 
     if (this._initialPositionRadius == null) {
       this._initialPositionRadius = 0;
@@ -1233,9 +1420,10 @@ class Options extends OptionFragment {
   void set initialPositionRadius (double v) {
     this._initialPositionRadius = v;
   }
+    */
     
-  double? _maxIterations;  
-
+  double? maxIterations;
+    /*
   double get maxIterations { 
     if (this._maxIterations == null) {
       this._maxIterations = 0;
@@ -1246,9 +1434,10 @@ class Options extends OptionFragment {
   void set maxIterations (double v) {
     this._maxIterations = v;
   }
+    */
     
-  double? _maxSpeed;  
-
+  double? maxSpeed;
+    /*
   double get maxSpeed { 
     if (this._maxSpeed == null) {
       this._maxSpeed = 0;
@@ -1259,9 +1448,10 @@ class Options extends OptionFragment {
   void set maxSpeed (double v) {
     this._maxSpeed = v;
   }
+    */
     
-  bool? _parentNodeLimit;  
-
+  bool? parentNodeLimit;
+    /*
   bool get parentNodeLimit { 
     if (this._parentNodeLimit == null) {
       this._parentNodeLimit = false;
@@ -1272,9 +1462,10 @@ class Options extends OptionFragment {
   void set parentNodeLimit (bool v) {
     this._parentNodeLimit = v;
   }
+    */
     
-  bool? _seriesInteraction;  
-
+  bool? seriesInteraction;
+    /*
   bool get seriesInteraction { 
     if (this._seriesInteraction == null) {
       this._seriesInteraction = false;
@@ -1285,9 +1476,10 @@ class Options extends OptionFragment {
   void set seriesInteraction (bool v) {
     this._seriesInteraction = v;
   }
+    */
     
-  bool? _splitSeries;  
-
+  bool? splitSeries;
+    /*
   bool get splitSeries { 
     if (this._splitSeries == null) {
       this._splitSeries = false;
@@ -1298,9 +1490,10 @@ class Options extends OptionFragment {
   void set splitSeries (bool v) {
     this._splitSeries = v;
   }
+    */
     
-  String? _approximation;  
-
+  String? approximation;
+    /*
   String get approximation { 
     if (this._approximation == null) {
       this._approximation = "";
@@ -1311,9 +1504,10 @@ class Options extends OptionFragment {
   void set approximation (String v) {
     this._approximation = v;
   }
+    */
     
-  String? _integration;  
-
+  String? integration;
+    /*
   String get integration { 
     if (this._integration == null) {
       this._integration = "";
@@ -1324,9 +1518,10 @@ class Options extends OptionFragment {
   void set integration (String v) {
     this._integration = v;
   }
+    */
     
-  double? _linkLength;  
-
+  double? linkLength;
+    /*
   double get linkLength { 
     if (this._linkLength == null) {
       this._linkLength = 0;
@@ -1337,9 +1532,10 @@ class Options extends OptionFragment {
   void set linkLength (double v) {
     this._linkLength = v;
   }
+    */
     
-  double? _theta;  
-
+  double? theta;
+    /*
   double get theta { 
     if (this._theta == null) {
       this._theta = 0;
@@ -1350,6 +1546,7 @@ class Options extends OptionFragment {
   void set theta (double v) {
     this._theta = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -1369,18 +1566,18 @@ class Options extends OptionFragment {
 
     // NOTE: skip serialization of tooltip (type TooltipOptions is ignored)} 
 
-    if (this._dataClassColor != null) {  
-      buffer.writeAll(["\"dataClassColor\":\`", this._dataClassColor, "\`,"], "");
+    if (this.dataClassColor != null) {  
+      buffer.writeAll(["\"dataClassColor\":\`", this.dataClassColor, "\`,"], "");
     }
 
     // NOTE: skip serialization of dataClasses (type DataClassOptions[] is ignored)} 
 
-    if (this._maxColor != null) {  
-      buffer.writeAll(["\"maxColor\":\`", this._maxColor, "\`,"], "");
+    if (this.maxColor != null) {  
+      buffer.writeAll(["\"maxColor\":\`", this.maxColor, "\`,"], "");
     }
 
-    if (this._minColor != null) {  
-      buffer.writeAll(["\"minColor\":\`", this._minColor, "\`,"], "");
+    if (this.minColor != null) {  
+      buffer.writeAll(["\"minColor\":\`", this.minColor, "\`,"], "");
     }
 
     // NOTE: skip serialization of stops (type GradientColorStop[] is ignored)} 
@@ -1389,92 +1586,92 @@ class Options extends OptionFragment {
 
     // NOTE: skip serialization of dataClasses (type DataClassOptions[] is ignored)} 
 
-    if (this._layout != null) {  
-      buffer.writeAll(["\"layout\":\`", this._layout, "\`,"], "");
+    if (this.layout != null) {  
+      buffer.writeAll(["\"layout\":\`", this.layout, "\`,"], "");
     }
 
     // NOTE: skip serialization of legend (type LegendOptions is ignored)} 
 
     // NOTE: skip serialization of marker (type MarkerOptions is ignored)} 
 
-    if (this._showInLegend != null) {  
-      buffer.writeAll(["\"showInLegend\":", this._showInLegend, ","], "");
+    if (this.showInLegend != null) {  
+      buffer.writeAll(["\"showInLegend\":", this.showInLegend, ","], "");
     }
 
-    if (this._borderColor != null) {  
-      buffer.writeAll(["\"borderColor\":\`", this._borderColor, "\`,"], "");
+    if (this.borderColor != null) {  
+      buffer.writeAll(["\"borderColor\":\`", this.borderColor, "\`,"], "");
     }
 
-    if (this._borderWidth != null) {  
-      buffer.writeAll(["\"borderWidth\":", this._borderWidth, ","], "");
+    if (this.borderWidth != null) {  
+      buffer.writeAll(["\"borderWidth\":", this.borderWidth, ","], "");
     }
 
-    if (this._className != null) {  
-      buffer.writeAll(["\"className\":\`", this._className, "\`,"], "");
+    if (this.className != null) {  
+      buffer.writeAll(["\"className\":\`", this.className, "\`,"], "");
     }
 
-    if (this._color != null) {  
-      buffer.writeAll(["\"color\":\`", this._color, "\`,"], "");
+    if (this.color != null) {  
+      buffer.writeAll(["\"color\":\`", this.color, "\`,"], "");
     }
 
-    if (this._connectorClassName != null) {  
-      buffer.writeAll(["\"connectorClassName\":\`", this._connectorClassName, "\`,"], "");
+    if (this.connectorClassName != null) {  
+      buffer.writeAll(["\"connectorClassName\":\`", this.connectorClassName, "\`,"], "");
     }
 
-    if (this._connectorColor != null) {  
-      buffer.writeAll(["\"connectorColor\":\`", this._connectorColor, "\`,"], "");
+    if (this.connectorColor != null) {  
+      buffer.writeAll(["\"connectorColor\":\`", this.connectorColor, "\`,"], "");
     }
 
-    if (this._connectorDistance != null) {  
-      buffer.writeAll(["\"connectorDistance\":", this._connectorDistance, ","], "");
+    if (this.connectorDistance != null) {  
+      buffer.writeAll(["\"connectorDistance\":", this.connectorDistance, ","], "");
     }
 
-    if (this._connectorWidth != null) {  
-      buffer.writeAll(["\"connectorWidth\":", this._connectorWidth, ","], "");
+    if (this.connectorWidth != null) {  
+      buffer.writeAll(["\"connectorWidth\":", this.connectorWidth, ","], "");
     }
 
-    if (this._enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this._enabled, ","], "");
+    if (this.enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
     }
 
     // NOTE: skip serialization of labels (type LabelsOptions is ignored)} 
 
-    if (this._legendIndex != null) {  
-      buffer.writeAll(["\"legendIndex\":", this._legendIndex, ","], "");
+    if (this.legendIndex != null) {  
+      buffer.writeAll(["\"legendIndex\":", this.legendIndex, ","], "");
     }
 
-    if (this._maxSize != null) {  
-      buffer.writeAll(["\"maxSize\":", this._maxSize, ","], "");
+    if (this.maxSize != null) {  
+      buffer.writeAll(["\"maxSize\":", this.maxSize, ","], "");
     }
 
-    if (this._minSize != null) {  
-      buffer.writeAll(["\"minSize\":", this._minSize, ","], "");
+    if (this.minSize != null) {  
+      buffer.writeAll(["\"minSize\":", this.minSize, ","], "");
     }
 
-    if (this._placed != null) {  
-      buffer.writeAll(["\"placed\":", this._placed, ","], "");
+    if (this.placed != null) {  
+      buffer.writeAll(["\"placed\":", this.placed, ","], "");
     }
 
     // NOTE: skip serialization of ranges (type RangesOptions[] is ignored)} 
 
-    if (this._seriesIndex != null) {  
-      buffer.writeAll(["\"seriesIndex\":", this._seriesIndex, ","], "");
+    if (this.seriesIndex != null) {  
+      buffer.writeAll(["\"seriesIndex\":", this.seriesIndex, ","], "");
     }
 
-    if (this._sizeBy != null) {  
-      buffer.writeAll(["\"sizeBy\":\`", this._sizeBy, "\`,"], "");
+    if (this.sizeBy != null) {  
+      buffer.writeAll(["\"sizeBy\":\`", this.sizeBy, "\`,"], "");
     }
 
-    if (this._sizeByAbsoluteValue != null) {  
-      buffer.writeAll(["\"sizeByAbsoluteValue\":", this._sizeByAbsoluteValue, ","], "");
+    if (this.sizeByAbsoluteValue != null) {  
+      buffer.writeAll(["\"sizeByAbsoluteValue\":", this.sizeByAbsoluteValue, ","], "");
     }
 
-    if (this._zIndex != null) {  
-      buffer.writeAll(["\"zIndex\":", this._zIndex, ","], "");
+    if (this.zIndex != null) {  
+      buffer.writeAll(["\"zIndex\":", this.zIndex, ","], "");
     }
 
-    if (this._zThreshold != null) {  
-      buffer.writeAll(["\"zThreshold\":", this._zThreshold, ","], "");
+    if (this.zThreshold != null) {  
+      buffer.writeAll(["\"zThreshold\":", this.zThreshold, ","], "");
     }
 
     // NOTE: skip serialization of rangeSelector (type Generic is ignored)} 
@@ -1531,8 +1728,8 @@ class Options extends OptionFragment {
 
     // NOTE: skip serialization of scrollbar (type ScrollbarOptions is ignored)} 
 
-    if (this._exposeElementToA11y != null) {  
-      buffer.writeAll(["\"exposeElementToA11y\":", this._exposeElementToA11y, ","], "");
+    if (this.exposeElementToA11y != null) {  
+      buffer.writeAll(["\"exposeElementToA11y\":", this.exposeElementToA11y, ","], "");
     }
 
     // NOTE: skip serialization of pane (type PaneOptions[] is ignored)} 
@@ -1541,44 +1738,44 @@ class Options extends OptionFragment {
 
     // NOTE: skip serialization of zAxis (type Generic is ignored)} 
 
-    if (this._alpha != null) {  
-      buffer.writeAll(["\"alpha\":", this._alpha, ","], "");
+    if (this.alpha != null) {  
+      buffer.writeAll(["\"alpha\":", this.alpha, ","], "");
     }
 
     // NOTE: skip serialization of axisLabelPosition (type "auto" is ignored)} 
 
-    if (this._beta != null) {  
-      buffer.writeAll(["\"beta\":", this._beta, ","], "");
+    if (this.beta != null) {  
+      buffer.writeAll(["\"beta\":", this.beta, ","], "");
     }
 
-    if (this._depth != null) {  
-      buffer.writeAll(["\"depth\":", this._depth, ","], "");
+    if (this.depth != null) {  
+      buffer.writeAll(["\"depth\":", this.depth, ","], "");
     }
 
-    if (this._enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this._enabled, ","], "");
+    if (this.enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
     }
 
-    if (this._fitToPlot != null) {  
-      buffer.writeAll(["\"fitToPlot\":", this._fitToPlot, ","], "");
+    if (this.fitToPlot != null) {  
+      buffer.writeAll(["\"fitToPlot\":", this.fitToPlot, ","], "");
     }
 
     // NOTE: skip serialization of frame (type FrameOptions is ignored)} 
 
-    if (this._viewDistance != null) {  
-      buffer.writeAll(["\"viewDistance\":", this._viewDistance, ","], "");
+    if (this.viewDistance != null) {  
+      buffer.writeAll(["\"viewDistance\":", this.viewDistance, ","], "");
     }
 
-    if (this._isGantt != null) {  
-      buffer.writeAll(["\"isGantt\":", this._isGantt, ","], "");
+    if (this.isGantt != null) {  
+      buffer.writeAll(["\"isGantt\":", this.isGantt, ","], "");
     }
 
-    if (this._isStock != null) {  
-      buffer.writeAll(["\"isStock\":", this._isStock, ","], "");
+    if (this.isStock != null) {  
+      buffer.writeAll(["\"isStock\":", this.isStock, ","], "");
     }
 
-    if (this._isResponsiveOptions != null) {  
-      buffer.writeAll(["\"isResponsiveOptions\":", this._isResponsiveOptions, ","], "");
+    if (this.isResponsiveOptions != null) {  
+      buffer.writeAll(["\"isResponsiveOptions\":", this.isResponsiveOptions, ","], "");
     }
 
     // NOTE: skip serialization of responsive (type Options is ignored)} 
@@ -1587,12 +1784,12 @@ class Options extends OptionFragment {
 
     // NOTE: skip serialization of seriesOptions (type SeriesOptions[] is ignored)} 
 
-    if (this._id != null) {  
-      buffer.writeAll(["\"id\":\`", this._id, "\`,"], "");
+    if (this.id != null) {  
+      buffer.writeAll(["\"id\":\`", this.id, "\`,"], "");
     }
 
-    if (this._parentContainerId != null) {  
-      buffer.writeAll(["\"parentContainerId\":\`", this._parentContainerId, "\`,"], "");
+    if (this.parentContainerId != null) {  
+      buffer.writeAll(["\"parentContainerId\":\`", this.parentContainerId, "\`,"], "");
     }
 
     // NOTE: skip serialization of cells (type Options[] is ignored)} 
@@ -1601,28 +1798,28 @@ class Options extends OptionFragment {
 
     // NOTE: skip serialization of cellsJSON (type JSON[] is ignored)} 
 
-    if (this._id != null) {  
-      buffer.writeAll(["\"id\":\`", this._id, "\`,"], "");
+    if (this.id != null) {  
+      buffer.writeAll(["\"id\":\`", this.id, "\`,"], "");
     }
 
-    if (this._parentContainerId != null) {  
-      buffer.writeAll(["\"parentContainerId\":\`", this._parentContainerId, "\`,"], "");
+    if (this.parentContainerId != null) {  
+      buffer.writeAll(["\"parentContainerId\":\`", this.parentContainerId, "\`,"], "");
     }
 
-    if (this._copyId != null) {  
-      buffer.writeAll(["\"copyId\":\`", this._copyId, "\`,"], "");
+    if (this.copyId != null) {  
+      buffer.writeAll(["\"copyId\":\`", this.copyId, "\`,"], "");
     }
 
-    if (this._layoutClassName != null) {  
-      buffer.writeAll(["\"layoutClassName\":\`", this._layoutClassName, "\`,"], "");
+    if (this.layoutClassName != null) {  
+      buffer.writeAll(["\"layoutClassName\":\`", this.layoutClassName, "\`,"], "");
     }
 
-    if (this._rowClassName != null) {  
-      buffer.writeAll(["\"rowClassName\":\`", this._rowClassName, "\`,"], "");
+    if (this.rowClassName != null) {  
+      buffer.writeAll(["\"rowClassName\":\`", this.rowClassName, "\`,"], "");
     }
 
-    if (this._cellClassName != null) {  
-      buffer.writeAll(["\"cellClassName\":\`", this._cellClassName, "\`,"], "");
+    if (this.cellClassName != null) {  
+      buffer.writeAll(["\"cellClassName\":\`", this.cellClassName, "\`,"], "");
     }
 
     // NOTE: skip serialization of rows (type Options[] is ignored)} 
@@ -1631,22 +1828,22 @@ class Options extends OptionFragment {
 
     // NOTE: skip serialization of rowsJSON (type JSON[] is ignored)} 
 
-    if (this._id != null) {  
-      buffer.writeAll(["\"id\":\`", this._id, "\`,"], "");
+    if (this.id != null) {  
+      buffer.writeAll(["\"id\":\`", this.id, "\`,"], "");
     }
 
-    if (this._width != null) {  
-      buffer.writeAll(["\"width\":\`", this._width, "\`,"], "");
+    if (this.width != null) {  
+      buffer.writeAll(["\"width\":\`", this.width, "\`,"], "");
     }
 
-    if (this._height != null) {  
-      buffer.writeAll(["\"height\":\`", this._height, "\`,"], "");
+    if (this.height != null) {  
+      buffer.writeAll(["\"height\":\`", this.height, "\`,"], "");
     }
 
     // NOTE: skip serialization of style (type CSSJSONObject is ignored)} 
 
-    if (this._parentContainerId != null) {  
-      buffer.writeAll(["\"parentContainerId\":\`", this._parentContainerId, "\`,"], "");
+    if (this.parentContainerId != null) {  
+      buffer.writeAll(["\"parentContainerId\":\`", this.parentContainerId, "\`,"], "");
     }
 
     // NOTE: skip serialization of mountedComponentJSON (type JSON is ignored)} 
@@ -1657,72 +1854,72 @@ class Options extends OptionFragment {
 
     // NOTE: skip serialization of responsive (type Generic is ignored)} 
 
-    if (this._className != null) {  
-      buffer.writeAll(["\"className\":\`", this._className, "\`,"], "");
+    if (this.className != null) {  
+      buffer.writeAll(["\"className\":\`", this.className, "\`,"], "");
     }
 
     // NOTE: skip serialization of items (type Options)[] is ignored)} 
 
-    if (this._itemsClassName != null) {  
-      buffer.writeAll(["\"itemsClassName\":\`", this._itemsClassName, "\`,"], "");
+    if (this.itemsClassName != null) {  
+      buffer.writeAll(["\"itemsClassName\":\`", this.itemsClassName, "\`,"], "");
     }
 
-    if (this._enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this._enabled, ","], "");
+    if (this.enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
     }
 
-    if (this._className != null) {  
-      buffer.writeAll(["\"className\":\`", this._className, "\`,"], "");
+    if (this.className != null) {  
+      buffer.writeAll(["\"className\":\`", this.className, "\`,"], "");
     }
 
-    if (this._enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this._enabled, ","], "");
+    if (this.enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
     }
 
     // NOTE: skip serialization of menu (type Options is ignored)} 
 
-    if (this._outline != null) {  
-      buffer.writeAll(["\"outline\":", this._outline, ","], "");
+    if (this.outline != null) {  
+      buffer.writeAll(["\"outline\":", this.outline, ","], "");
     }
 
-    if (this._outlineClassName != null) {  
-      buffer.writeAll(["\"outlineClassName\":\`", this._outlineClassName, "\`,"], "");
+    if (this.outlineClassName != null) {  
+      buffer.writeAll(["\"outlineClassName\":\`", this.outlineClassName, "\`,"], "");
     }
 
-    if (this._icon != null) {  
-      buffer.writeAll(["\"icon\":\`", this._icon, "\`,"], "");
+    if (this.icon != null) {  
+      buffer.writeAll(["\"icon\":\`", this.icon, "\`,"], "");
     }
 
-    if (this._text != null) {  
-      buffer.writeAll(["\"text\":\`", this._text, "\`,"], "");
+    if (this.text != null) {  
+      buffer.writeAll(["\"text\":\`", this.text, "\`,"], "");
     }
 
-    if (this._width != null) {  
-      buffer.writeAll(["\"width\":", this._width, ","], "");
+    if (this.width != null) {  
+      buffer.writeAll(["\"width\":", this.width, ","], "");
     }
 
-    if (this._cellDropOffset != null) {  
-      buffer.writeAll(["\"cellDropOffset\":", this._cellDropOffset, ","], "");
+    if (this.cellDropOffset != null) {  
+      buffer.writeAll(["\"cellDropOffset\":", this.cellDropOffset, ","], "");
     }
 
-    if (this._dropPointerSize != null) {  
-      buffer.writeAll(["\"dropPointerSize\":", this._dropPointerSize, ","], "");
+    if (this.dropPointerSize != null) {  
+      buffer.writeAll(["\"dropPointerSize\":", this.dropPointerSize, ","], "");
     }
 
-    if (this._enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this._enabled, ","], "");
+    if (this.enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
     }
 
-    if (this._rowDropOffset != null) {  
-      buffer.writeAll(["\"rowDropOffset\":", this._rowDropOffset, ","], "");
+    if (this.rowDropOffset != null) {  
+      buffer.writeAll(["\"rowDropOffset\":", this.rowDropOffset, ","], "");
     }
 
-    if (this._enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this._enabled, ","], "");
+    if (this.enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
     }
 
-    if (this._type != null) {  
-      buffer.writeAll(["\"type\":\`", this._type, "\`,"], "");
+    if (this.type != null) {  
+      buffer.writeAll(["\"type\":\`", this.type, "\`,"], "");
     }
 
     // NOTE: skip serialization of snap (type SnapOptions is ignored)} 
@@ -1735,14 +1932,14 @@ class Options extends OptionFragment {
 
     // NOTE: skip serialization of confirmationPopup (type Options is ignored)} 
 
-    if (this._enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this._enabled, ","], "");
+    if (this.enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
     }
 
     // NOTE: skip serialization of dragDrop (type Options is ignored)} 
 
-    if (this._iconsURLPrefix != null) {  
-      buffer.writeAll(["\"iconsURLPrefix\":\`", this._iconsURLPrefix, "\`,"], "");
+    if (this.iconsURLPrefix != null) {  
+      buffer.writeAll(["\"iconsURLPrefix\":\`", this.iconsURLPrefix, "\`,"], "");
     }
 
     // NOTE: skip serialization of lang (type LangOptions is ignored)} 
@@ -1755,12 +1952,12 @@ class Options extends OptionFragment {
 
     // NOTE: skip serialization of tools (type Tools is ignored)} 
 
-    if (this._name != null) {  
-      buffer.writeAll(["\"name\":\`", this._name, "\`,"], "");
+    if (this.name != null) {  
+      buffer.writeAll(["\"name\":\`", this.name, "\`,"], "");
     }
 
-    if (this._type != null) {  
-      buffer.writeAll(["\"type\":\`", this._type, "\`,"], "");
+    if (this.type != null) {  
+      buffer.writeAll(["\"type\":\`", this.type, "\`,"], "");
     }
 
     // NOTE: skip serialization of nestedOptions (type NestedOptions[] is ignored)} 
@@ -1775,60 +1972,60 @@ class Options extends OptionFragment {
 
     // NOTE: skip serialization of data (type Data is ignored)} 
 
-    if (this._orientation != null) {  
-      buffer.writeAll(["\"orientation\":\`", this._orientation, "\`,"], "");
+    if (this.orientation != null) {  
+      buffer.writeAll(["\"orientation\":\`", this.orientation, "\`,"], "");
     }
 
-    if (this._dateFormat != null) {  
-      buffer.writeAll(["\"dateFormat\":\`", this._dateFormat, "\`,"], "");
+    if (this.dateFormat != null) {  
+      buffer.writeAll(["\"dateFormat\":\`", this.dateFormat, "\`,"], "");
     }
 
-    if (this._alternativeFormat != null) {  
-      buffer.writeAll(["\"alternativeFormat\":\`", this._alternativeFormat, "\`,"], "");
+    if (this.alternativeFormat != null) {  
+      buffer.writeAll(["\"alternativeFormat\":\`", this.alternativeFormat, "\`,"], "");
     }
 
-    if (this._decimalPoint != null) {  
-      buffer.writeAll(["\"decimalPoint\":\`", this._decimalPoint, "\`,"], "");
+    if (this.decimalPoint != null) {  
+      buffer.writeAll(["\"decimalPoint\":\`", this.decimalPoint, "\`,"], "");
     }
 
-    if (this._startRow != null) {  
-      buffer.writeAll(["\"startRow\":", this._startRow, ","], "");
+    if (this.startRow != null) {  
+      buffer.writeAll(["\"startRow\":", this.startRow, ","], "");
     }
 
-    if (this._endRow != null) {  
-      buffer.writeAll(["\"endRow\":", this._endRow, ","], "");
+    if (this.endRow != null) {  
+      buffer.writeAll(["\"endRow\":", this.endRow, ","], "");
     }
 
-    if (this._startColumn != null) {  
-      buffer.writeAll(["\"startColumn\":", this._startColumn, ","], "");
+    if (this.startColumn != null) {  
+      buffer.writeAll(["\"startColumn\":", this.startColumn, ","], "");
     }
 
-    if (this._endColumn != null) {  
-      buffer.writeAll(["\"endColumn\":", this._endColumn, ","], "");
+    if (this.endColumn != null) {  
+      buffer.writeAll(["\"endColumn\":", this.endColumn, ","], "");
     }
 
-    if (this._firstRowAsNames != null) {  
-      buffer.writeAll(["\"firstRowAsNames\":", this._firstRowAsNames, ","], "");
+    if (this.firstRowAsNames != null) {  
+      buffer.writeAll(["\"firstRowAsNames\":", this.firstRowAsNames, ","], "");
     }
 
-    if (this._switchRowsAndColumns != null) {  
-      buffer.writeAll(["\"switchRowsAndColumns\":", this._switchRowsAndColumns, ","], "");
+    if (this.switchRowsAndColumns != null) {  
+      buffer.writeAll(["\"switchRowsAndColumns\":", this.switchRowsAndColumns, ","], "");
     }
 
-    if (this._cell != null) {  
-      buffer.writeAll(["\"cell\":\`", this._cell, "\`,"], "");
+    if (this.cell != null) {  
+      buffer.writeAll(["\"cell\":\`", this.cell, "\`,"], "");
     }
 
-    if (this._renderTo != null) {  
-      buffer.writeAll(["\"renderTo\":\`", this._renderTo, "\`,"], "");
+    if (this.renderTo != null) {  
+      buffer.writeAll(["\"renderTo\":\`", this.renderTo, "\`,"], "");
     }
 
-    if (this._className != null) {  
-      buffer.writeAll(["\"className\":\`", this._className, "\`,"], "");
+    if (this.className != null) {  
+      buffer.writeAll(["\"className\":\`", this.className, "\`,"], "");
     }
 
-    if (this._type != null) {  
-      buffer.writeAll(["\"type\":\`", this._type, "\`,"], "");
+    if (this.type != null) {  
+      buffer.writeAll(["\"type\":\`", this.type, "\`,"], "");
     }
 
     // NOTE: skip serialization of navigationBindings (type AnyRecord[] is ignored)} 
@@ -1845,8 +2042,8 @@ class Options extends OptionFragment {
 
     // NOTE: skip serialization of connector (type ComponentConnectorOptions is ignored)} 
 
-    if (this._id != null) {  
-      buffer.writeAll(["\"id\":\`", this._id, "\`,"], "");
+    if (this.id != null) {  
+      buffer.writeAll(["\"id\":\`", this.id, "\`,"], "");
     }
 
     // NOTE: skip serialization of title (type TextOptionsType is ignored)} 
@@ -1855,8 +2052,8 @@ class Options extends OptionFragment {
 
     // NOTE: skip serialization of elements (type Node)[] is ignored)} 
 
-    if (this._html != null) {  
-      buffer.writeAll(["\"html\":\`", this._html, "\`,"], "");
+    if (this.html != null) {  
+      buffer.writeAll(["\"html\":\`", this.html, "\`,"], "");
     }
 
     // NOTE: skip serialization of type (type "HTML" is ignored)} 
@@ -1875,24 +2072,24 @@ class Options extends OptionFragment {
 
     // NOTE: skip serialization of responsiveBreakpoints (type ResponsiveBreakpoints is ignored)} 
 
-    if (this._dataGridClassName != null) {  
-      buffer.writeAll(["\"dataGridClassName\":\`", this._dataGridClassName, "\`,"], "");
+    if (this.dataGridClassName != null) {  
+      buffer.writeAll(["\"dataGridClassName\":\`", this.dataGridClassName, "\`,"], "");
     }
 
-    if (this._dataGridID != null) {  
-      buffer.writeAll(["\"dataGridID\":\`", this._dataGridID, "\`,"], "");
+    if (this.dataGridID != null) {  
+      buffer.writeAll(["\"dataGridID\":\`", this.dataGridID, "\`,"], "");
     }
 
     // NOTE: skip serialization of type (type "DataGrid" is ignored)} 
 
     // NOTE: skip serialization of dataGridOptions (type DataGridOptions is ignored)} 
 
-    if (this._chartClassName != null) {  
-      buffer.writeAll(["\"chartClassName\":\`", this._chartClassName, "\`,"], "");
+    if (this.chartClassName != null) {  
+      buffer.writeAll(["\"chartClassName\":\`", this.chartClassName, "\`,"], "");
     }
 
-    if (this._chartID != null) {  
-      buffer.writeAll(["\"chartID\":\`", this._chartID, "\`,"], "");
+    if (this.chartID != null) {  
+      buffer.writeAll(["\"chartID\":\`", this.chartID, "\`,"], "");
     }
 
     // NOTE: skip serialization of tableAxisMap (type Generic is ignored)} 
@@ -1903,12 +2100,12 @@ class Options extends OptionFragment {
 
     // NOTE: skip serialization of visibleColumns (type string[] is ignored)} 
 
-    if (this._allowConnectorUpdate != null) {  
-      buffer.writeAll(["\"allowConnectorUpdate\":", this._allowConnectorUpdate, ","], "");
+    if (this.allowConnectorUpdate != null) {  
+      buffer.writeAll(["\"allowConnectorUpdate\":", this.allowConnectorUpdate, ","], "");
     }
 
-    if (this._chartConstructor != null) {  
-      buffer.writeAll(["\"chartConstructor\":\`", this._chartConstructor, "\`,"], "");
+    if (this.chartConstructor != null) {  
+      buffer.writeAll(["\"chartConstructor\":\`", this.chartConstructor, "\`,"], "");
     }
 
     // NOTE: skip serialization of connector (type ConnectorOptions is ignored)} 
@@ -1917,12 +2114,12 @@ class Options extends OptionFragment {
 
     // NOTE: skip serialization of chartOptions (type Generic is ignored)} 
 
-    if (this._chartClassName != null) {  
-      buffer.writeAll(["\"chartClassName\":\`", this._chartClassName, "\`,"], "");
+    if (this.chartClassName != null) {  
+      buffer.writeAll(["\"chartClassName\":\`", this.chartClassName, "\`,"], "");
     }
 
-    if (this._chartID != null) {  
-      buffer.writeAll(["\"chartID\":\`", this._chartID, "\`,"], "");
+    if (this.chartID != null) {  
+      buffer.writeAll(["\"chartID\":\`", this.chartID, "\`,"], "");
     }
 
     // NOTE: skip serialization of columnAssignment (type Generic is ignored)} 
@@ -1931,8 +2128,8 @@ class Options extends OptionFragment {
 
     // NOTE: skip serialization of syncHandlers (type OptionsRecord is ignored)} 
 
-    if (this._columnName != null) {  
-      buffer.writeAll(["\"columnName\":\`", this._columnName, "\`,"], "");
+    if (this.columnName != null) {  
+      buffer.writeAll(["\"columnName\":\`", this.columnName, "\`,"], "");
     }
 
     // NOTE: skip serialization of chartOptions (type Options is ignored)} 
@@ -1945,20 +2142,20 @@ class Options extends OptionFragment {
 
     // NOTE: skip serialization of type (type "KPI" is ignored)} 
 
-    if (this._value != null) {  
-      buffer.writeAll(["\"value\":\`", this._value, "\`,"], "");
+    if (this.value != null) {  
+      buffer.writeAll(["\"value\":\`", this.value, "\`,"], "");
     }
 
-    if (this._minFontSize != null) {  
-      buffer.writeAll(["\"minFontSize\":", this._minFontSize, ","], "");
+    if (this.minFontSize != null) {  
+      buffer.writeAll(["\"minFontSize\":", this.minFontSize, ","], "");
     }
 
     // NOTE: skip serialization of subtitle (type SubtitleOptions is ignored)} 
 
     // NOTE: skip serialization of syncHandlers (type OptionsRecord is ignored)} 
 
-    if (this._valueFormat != null) {  
-      buffer.writeAll(["\"valueFormat\":\`", this._valueFormat, "\`,"], "");
+    if (this.valueFormat != null) {  
+      buffer.writeAll(["\"valueFormat\":\`", this.valueFormat, "\`,"], "");
     }
 
     // NOTE: skip serialization of linkedValueTo (type LinkedValueToOptions is ignored)} 
@@ -1973,60 +2170,60 @@ class Options extends OptionFragment {
 
     // NOTE: skip serialization of type (type "Navigator" is ignored)} 
 
-    if (this._csv != null) {  
-      buffer.writeAll(["\"csv\":\`", this._csv, "\`,"], "");
+    if (this.csv != null) {  
+      buffer.writeAll(["\"csv\":\`", this.csv, "\`,"], "");
     }
 
-    if (this._decimalPoint != null) {  
-      buffer.writeAll(["\"decimalPoint\":\`", this._decimalPoint, "\`,"], "");
+    if (this.decimalPoint != null) {  
+      buffer.writeAll(["\"decimalPoint\":\`", this.decimalPoint, "\`,"], "");
     }
 
-    if (this._itemDelimiter != null) {  
-      buffer.writeAll(["\"itemDelimiter\":\`", this._itemDelimiter, "\`,"], "");
+    if (this.itemDelimiter != null) {  
+      buffer.writeAll(["\"itemDelimiter\":\`", this.itemDelimiter, "\`,"], "");
     }
 
-    if (this._lineDelimiter != null) {  
-      buffer.writeAll(["\"lineDelimiter\":\`", this._lineDelimiter, "\`,"], "");
+    if (this.lineDelimiter != null) {  
+      buffer.writeAll(["\"lineDelimiter\":\`", this.lineDelimiter, "\`,"], "");
     }
 
-    if (this._useLocalDecimalPoint != null) {  
-      buffer.writeAll(["\"useLocalDecimalPoint\":", this._useLocalDecimalPoint, ","], "");
+    if (this.useLocalDecimalPoint != null) {  
+      buffer.writeAll(["\"useLocalDecimalPoint\":", this.useLocalDecimalPoint, ","], "");
     }
 
-    if (this._usePresentationOrder != null) {  
-      buffer.writeAll(["\"usePresentationOrder\":", this._usePresentationOrder, ","], "");
+    if (this.usePresentationOrder != null) {  
+      buffer.writeAll(["\"usePresentationOrder\":", this.usePresentationOrder, ","], "");
     }
 
     // NOTE: skip serialization of json (type GoogleSpreadsheetJSON is ignored)} 
 
-    if (this._decimalPoint != null) {  
-      buffer.writeAll(["\"decimalPoint\":\`", this._decimalPoint, "\`,"], "");
+    if (this.decimalPoint != null) {  
+      buffer.writeAll(["\"decimalPoint\":\`", this.decimalPoint, "\`,"], "");
     }
 
-    if (this._exportIDColumn != null) {  
-      buffer.writeAll(["\"exportIDColumn\":", this._exportIDColumn, ","], "");
+    if (this.exportIDColumn != null) {  
+      buffer.writeAll(["\"exportIDColumn\":", this.exportIDColumn, ","], "");
     }
 
-    if (this._tableCaption != null) {  
-      buffer.writeAll(["\"tableCaption\":\`", this._tableCaption, "\`,"], "");
+    if (this.tableCaption != null) {  
+      buffer.writeAll(["\"tableCaption\":\`", this.tableCaption, "\`,"], "");
     }
 
     // NOTE: skip serialization of tableElement (type HTMLElement is ignored)} 
 
-    if (this._useLocalDecimalPoint != null) {  
-      buffer.writeAll(["\"useLocalDecimalPoint\":", this._useLocalDecimalPoint, ","], "");
+    if (this.useLocalDecimalPoint != null) {  
+      buffer.writeAll(["\"useLocalDecimalPoint\":", this.useLocalDecimalPoint, ","], "");
     }
 
-    if (this._useMultiLevelHeaders != null) {  
-      buffer.writeAll(["\"useMultiLevelHeaders\":", this._useMultiLevelHeaders, ","], "");
+    if (this.useMultiLevelHeaders != null) {  
+      buffer.writeAll(["\"useMultiLevelHeaders\":", this.useMultiLevelHeaders, ","], "");
     }
 
-    if (this._useRowspanHeaders != null) {  
-      buffer.writeAll(["\"useRowspanHeaders\":", this._useRowspanHeaders, ","], "");
+    if (this.useRowspanHeaders != null) {  
+      buffer.writeAll(["\"useRowspanHeaders\":", this.useRowspanHeaders, ","], "");
     }
 
-    if (this._usePresentationOrder != null) {  
-      buffer.writeAll(["\"usePresentationOrder\":", this._usePresentationOrder, ","], "");
+    if (this.usePresentationOrder != null) {  
+      buffer.writeAll(["\"usePresentationOrder\":", this.usePresentationOrder, ","], "");
     }
 
     // NOTE: skip serialization of typeOptions (type TypeOptions is ignored)} 
@@ -2059,102 +2256,102 @@ class Options extends OptionFragment {
 
     // NOTE: skip serialization of sonification (type ChartSonificationOptions is ignored)} 
 
-    if (this._bubblePadding != null) {  
-      buffer.writeAll(["\"bubblePadding\":", this._bubblePadding, ","], "");
+    if (this.bubblePadding != null) {  
+      buffer.writeAll(["\"bubblePadding\":", this.bubblePadding, ","], "");
     }
 
-    if (this._dragBetweenSeries != null) {  
-      buffer.writeAll(["\"dragBetweenSeries\":", this._dragBetweenSeries, ","], "");
+    if (this.dragBetweenSeries != null) {  
+      buffer.writeAll(["\"dragBetweenSeries\":", this.dragBetweenSeries, ","], "");
     }
 
-    if (this._enableSimulation != null) {  
-      buffer.writeAll(["\"enableSimulation\":", this._enableSimulation, ","], "");
+    if (this.enableSimulation != null) {  
+      buffer.writeAll(["\"enableSimulation\":", this.enableSimulation, ","], "");
     }
 
-    if (this._friction != null) {  
-      buffer.writeAll(["\"friction\":", this._friction, ","], "");
+    if (this.friction != null) {  
+      buffer.writeAll(["\"friction\":", this.friction, ","], "");
     }
 
-    if (this._gravitationalConstant != null) {  
-      buffer.writeAll(["\"gravitationalConstant\":", this._gravitationalConstant, ","], "");
+    if (this.gravitationalConstant != null) {  
+      buffer.writeAll(["\"gravitationalConstant\":", this.gravitationalConstant, ","], "");
     }
 
-    if (this._initialPositionRadius != null) {  
-      buffer.writeAll(["\"initialPositionRadius\":", this._initialPositionRadius, ","], "");
+    if (this.initialPositionRadius != null) {  
+      buffer.writeAll(["\"initialPositionRadius\":", this.initialPositionRadius, ","], "");
     }
 
     // NOTE: skip serialization of marker (type BubblePointMarkerOptions is ignored)} 
 
-    if (this._maxIterations != null) {  
-      buffer.writeAll(["\"maxIterations\":", this._maxIterations, ","], "");
+    if (this.maxIterations != null) {  
+      buffer.writeAll(["\"maxIterations\":", this.maxIterations, ","], "");
     }
 
-    if (this._maxSpeed != null) {  
-      buffer.writeAll(["\"maxSpeed\":", this._maxSpeed, ","], "");
+    if (this.maxSpeed != null) {  
+      buffer.writeAll(["\"maxSpeed\":", this.maxSpeed, ","], "");
     }
 
-    if (this._parentNodeLimit != null) {  
-      buffer.writeAll(["\"parentNodeLimit\":", this._parentNodeLimit, ","], "");
+    if (this.parentNodeLimit != null) {  
+      buffer.writeAll(["\"parentNodeLimit\":", this.parentNodeLimit, ","], "");
     }
 
     // NOTE: skip serialization of parentNodeOptions (type Options is ignored)} 
 
-    if (this._seriesInteraction != null) {  
-      buffer.writeAll(["\"seriesInteraction\":", this._seriesInteraction, ","], "");
+    if (this.seriesInteraction != null) {  
+      buffer.writeAll(["\"seriesInteraction\":", this.seriesInteraction, ","], "");
     }
 
-    if (this._splitSeries != null) {  
-      buffer.writeAll(["\"splitSeries\":", this._splitSeries, ","], "");
+    if (this.splitSeries != null) {  
+      buffer.writeAll(["\"splitSeries\":", this.splitSeries, ","], "");
     }
 
-    if (this._approximation != null) {  
-      buffer.writeAll(["\"approximation\":\`", this._approximation, "\`,"], "");
+    if (this.approximation != null) {  
+      buffer.writeAll(["\"approximation\":\`", this.approximation, "\`,"], "");
     }
 
     // NOTE: skip serialization of attractiveForce (type Function is ignored)} 
 
-    if (this._enableSimulation != null) {  
-      buffer.writeAll(["\"enableSimulation\":", this._enableSimulation, ","], "");
+    if (this.enableSimulation != null) {  
+      buffer.writeAll(["\"enableSimulation\":", this.enableSimulation, ","], "");
     }
 
-    if (this._friction != null) {  
-      buffer.writeAll(["\"friction\":", this._friction, ","], "");
+    if (this.friction != null) {  
+      buffer.writeAll(["\"friction\":", this.friction, ","], "");
     }
 
-    if (this._gravitationalConstant != null) {  
-      buffer.writeAll(["\"gravitationalConstant\":", this._gravitationalConstant, ","], "");
+    if (this.gravitationalConstant != null) {  
+      buffer.writeAll(["\"gravitationalConstant\":", this.gravitationalConstant, ","], "");
     }
 
-    if (this._initialPositionRadius != null) {  
-      buffer.writeAll(["\"initialPositionRadius\":", this._initialPositionRadius, ","], "");
+    if (this.initialPositionRadius != null) {  
+      buffer.writeAll(["\"initialPositionRadius\":", this.initialPositionRadius, ","], "");
     }
 
     // NOTE: skip serialization of initialPositions (type Function is ignored)} 
 
-    if (this._integration != null) {  
-      buffer.writeAll(["\"integration\":\`", this._integration, "\`,"], "");
+    if (this.integration != null) {  
+      buffer.writeAll(["\"integration\":\`", this.integration, "\`,"], "");
     }
 
-    if (this._linkLength != null) {  
-      buffer.writeAll(["\"linkLength\":", this._linkLength, ","], "");
+    if (this.linkLength != null) {  
+      buffer.writeAll(["\"linkLength\":", this.linkLength, ","], "");
     }
 
-    if (this._maxIterations != null) {  
-      buffer.writeAll(["\"maxIterations\":", this._maxIterations, ","], "");
+    if (this.maxIterations != null) {  
+      buffer.writeAll(["\"maxIterations\":", this.maxIterations, ","], "");
     }
 
-    if (this._maxSpeed != null) {  
-      buffer.writeAll(["\"maxSpeed\":", this._maxSpeed, ","], "");
+    if (this.maxSpeed != null) {  
+      buffer.writeAll(["\"maxSpeed\":", this.maxSpeed, ","], "");
     }
 
     // NOTE: skip serialization of repulsiveForce (type Function is ignored)} 
 
-    if (this._theta != null) {  
-      buffer.writeAll(["\"theta\":", this._theta, ","], "");
+    if (this.theta != null) {  
+      buffer.writeAll(["\"theta\":", this.theta, ","], "");
     }
 
-    if (this._type != null) {  
-      buffer.writeAll(["\"type\":\`", this._type, "\`,"], "");
+    if (this.type != null) {  
+      buffer.writeAll(["\"type\":\`", this.type, "\`,"], "");
     }
 
     // NOTE: skip serialization of stockTools (type StockToolsOptions is ignored)} 

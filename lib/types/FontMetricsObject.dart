@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,13 @@ import 'OptionFragment.dart';
  * FontMetricsObject 
  */
 class FontMetricsObject extends OptionFragment {
-  FontMetricsObject() : super();
-  double? _b;  
-
+  FontMetricsObject( {
+    this.b = null,
+    this.f = null,
+    this.h = null
+  }) : super();
+  double? b;
+    /*
   double get b { 
     if (this._b == null) {
       this._b = 0;
@@ -35,9 +39,10 @@ class FontMetricsObject extends OptionFragment {
   void set b (double v) {
     this._b = v;
   }
+    */
     
-  double? _f;  
-
+  double? f;
+    /*
   double get f { 
     if (this._f == null) {
       this._f = 0;
@@ -48,9 +53,10 @@ class FontMetricsObject extends OptionFragment {
   void set f (double v) {
     this._f = v;
   }
+    */
     
-  double? _h;  
-
+  double? h;
+    /*
   double get h { 
     if (this._h == null) {
       this._h = 0;
@@ -61,6 +67,7 @@ class FontMetricsObject extends OptionFragment {
   void set h (double v) {
     this._h = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -70,16 +77,16 @@ class FontMetricsObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._b != null) {  
-      buffer.writeAll(["\"b\":", this._b, ","], "");
+    if (this.b != null) {  
+      buffer.writeAll(["\"b\":", this.b, ","], "");
     }
 
-    if (this._f != null) {  
-      buffer.writeAll(["\"f\":", this._f, ","], "");
+    if (this.f != null) {  
+      buffer.writeAll(["\"f\":", this.f, ","], "");
     }
 
-    if (this._h != null) {  
-      buffer.writeAll(["\"h\":", this._h, ","], "");
+    if (this.h != null) {  
+      buffer.writeAll(["\"h\":", this.h, ","], "");
     }
   }
 

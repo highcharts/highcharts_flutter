@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,13 @@ import 'OptionFragment.dart';
  * DrilldownObject 
  */
 class DrilldownObject extends OptionFragment {
-  DrilldownObject() : super();
-  double? _x;  
-
+  DrilldownObject( {
+    this.x = null,
+    this.y = null,
+    this.seriesName = null
+  }) : super();
+  double? x;
+    /*
   double get x { 
     if (this._x == null) {
       this._x = 0;
@@ -35,9 +39,10 @@ class DrilldownObject extends OptionFragment {
   void set x (double v) {
     this._x = v;
   }
+    */
     
-  double? _y;  
-
+  double? y;
+    /*
   double get y { 
     if (this._y == null) {
       this._y = 0;
@@ -48,9 +53,10 @@ class DrilldownObject extends OptionFragment {
   void set y (double v) {
     this._y = v;
   }
+    */
     
-  String? _seriesName;  
-
+  String? seriesName;
+    /*
   String get seriesName { 
     if (this._seriesName == null) {
       this._seriesName = "";
@@ -61,6 +67,7 @@ class DrilldownObject extends OptionFragment {
   void set seriesName (String v) {
     this._seriesName = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -70,16 +77,16 @@ class DrilldownObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._x != null) {  
-      buffer.writeAll(["\"x\":", this._x, ","], "");
+    if (this.x != null) {  
+      buffer.writeAll(["\"x\":", this.x, ","], "");
     }
 
-    if (this._y != null) {  
-      buffer.writeAll(["\"y\":", this._y, ","], "");
+    if (this.y != null) {  
+      buffer.writeAll(["\"y\":", this.y, ","], "");
     }
 
-    if (this._seriesName != null) {  
-      buffer.writeAll(["\"seriesName\":\`", this._seriesName, "\`,"], "");
+    if (this.seriesName != null) {  
+      buffer.writeAll(["\"seriesName\":\`", this.seriesName, "\`,"], "");
     }
   }
 

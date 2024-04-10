@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,11 @@ import 'OptionFragment.dart';
  * PackedBubblePoint 
  */
 class PackedBubblePoint extends NetworkgraphPoint {
-  PackedBubblePoint() : super();
-  String? _className;  
-
+  PackedBubblePoint( {
+    this.className = null
+  }) : super();
+  String? className;
+    /*
   String get className { 
     if (this._className == null) {
       this._className = "";
@@ -36,6 +38,7 @@ class PackedBubblePoint extends NetworkgraphPoint {
   void set className (String v) {
     this._className = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -45,8 +48,8 @@ class PackedBubblePoint extends NetworkgraphPoint {
     super.toJSONInner(buffer);
 
     
-    if (this._className != null) {  
-      buffer.writeAll(["\"className\":\`", this._className, "\`,"], "");
+    if (this.className != null) {  
+      buffer.writeAll(["\"className\":\`", this.className, "\`,"], "");
     }
 
     // NOTE: skip serialization of fromNode (type NetworkgraphPoint is ignored)} 

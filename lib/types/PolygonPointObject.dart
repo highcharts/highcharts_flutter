@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,7 +23,7 @@ import 'OptionFragment.dart';
  * PolygonPointObject 
  */
 class PolygonPointObject extends Array {
-  PolygonPointObject() : super();
+  PolygonPointObject( ) : super();
   // NOTE: 0 skipped - type number is ignored in gen
 
   // NOTE: 1 skipped - type number is ignored in gen

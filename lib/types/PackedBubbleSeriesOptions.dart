@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -26,9 +26,13 @@ import 'OptionFragment.dart';
  * PackedBubbleSeriesOptions 
  */
 class PackedBubbleSeriesOptions extends BubbleSeriesOptions {
-  PackedBubbleSeriesOptions() : super();
-  bool? _draggable;  
-
+  PackedBubbleSeriesOptions( {
+    this.draggable = null,
+    this.minSize = null,
+    this.useSimulation = null
+  }) : super();
+  bool? draggable;
+    /*
   bool get draggable { 
     if (this._draggable == null) {
       this._draggable = false;
@@ -39,9 +43,10 @@ class PackedBubbleSeriesOptions extends BubbleSeriesOptions {
   void set draggable (bool v) {
     this._draggable = v;
   }
+    */
     
-  String? _minSize;  
-
+  String? minSize;
+    /*
   String get minSize { 
     if (this._minSize == null) {
       this._minSize = "";
@@ -52,9 +57,10 @@ class PackedBubbleSeriesOptions extends BubbleSeriesOptions {
   void set minSize (String v) {
     this._minSize = v;
   }
+    */
     
-  bool? _useSimulation;  
-
+  bool? useSimulation;
+    /*
   bool get useSimulation { 
     if (this._useSimulation == null) {
       this._useSimulation = false;
@@ -65,6 +71,7 @@ class PackedBubbleSeriesOptions extends BubbleSeriesOptions {
   void set useSimulation (bool v) {
     this._useSimulation = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -78,20 +85,20 @@ class PackedBubbleSeriesOptions extends BubbleSeriesOptions {
 
     // NOTE: skip serialization of dataLabels (type PackedBubbleDataLabelOptions is ignored)} 
 
-    if (this._draggable != null) {  
-      buffer.writeAll(["\"draggable\":", this._draggable, ","], "");
+    if (this.draggable != null) {  
+      buffer.writeAll(["\"draggable\":", this.draggable, ","], "");
     }
 
     // NOTE: skip serialization of layoutAlgorithm (type Options is ignored)} 
 
-    if (this._minSize != null) {  
-      buffer.writeAll(["\"minSize\":\`", this._minSize, "\`,"], "");
+    if (this.minSize != null) {  
+      buffer.writeAll(["\"minSize\":\`", this.minSize, "\`,"], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 
 
-    if (this._useSimulation != null) {  
-      buffer.writeAll(["\"useSimulation\":", this._useSimulation, ","], "");
+    if (this.useSimulation != null) {  
+      buffer.writeAll(["\"useSimulation\":", this.useSimulation, ","], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,13 @@ import 'OptionFragment.dart';
  * RangeModifierRangeOptions 
  */
 class RangeModifierRangeOptions extends OptionFragment {
-  RangeModifierRangeOptions() : super();
-  String? _column;  
-
+  RangeModifierRangeOptions( {
+    this.column = null,
+    this.maxValue = null,
+    this.minValue = null
+  }) : super();
+  String? column;
+    /*
   String get column { 
     if (this._column == null) {
       this._column = "";
@@ -35,9 +39,10 @@ class RangeModifierRangeOptions extends OptionFragment {
   void set column (String v) {
     this._column = v;
   }
+    */
     
-  String? _maxValue;  
-
+  String? maxValue;
+    /*
   String get maxValue { 
     if (this._maxValue == null) {
       this._maxValue = "";
@@ -48,9 +53,10 @@ class RangeModifierRangeOptions extends OptionFragment {
   void set maxValue (String v) {
     this._maxValue = v;
   }
+    */
     
-  String? _minValue;  
-
+  String? minValue;
+    /*
   String get minValue { 
     if (this._minValue == null) {
       this._minValue = "";
@@ -61,6 +67,7 @@ class RangeModifierRangeOptions extends OptionFragment {
   void set minValue (String v) {
     this._minValue = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -70,16 +77,16 @@ class RangeModifierRangeOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._column != null) {  
-      buffer.writeAll(["\"column\":\`", this._column, "\`,"], "");
+    if (this.column != null) {  
+      buffer.writeAll(["\"column\":\`", this.column, "\`,"], "");
     }
 
-    if (this._maxValue != null) {  
-      buffer.writeAll(["\"maxValue\":\`", this._maxValue, "\`,"], "");
+    if (this.maxValue != null) {  
+      buffer.writeAll(["\"maxValue\":\`", this.maxValue, "\`,"], "");
     }
 
-    if (this._minValue != null) {  
-      buffer.writeAll(["\"minValue\":\`", this._minValue, "\`,"], "");
+    if (this.minValue != null) {  
+      buffer.writeAll(["\"minValue\":\`", this.minValue, "\`,"], "");
     }
   }
 

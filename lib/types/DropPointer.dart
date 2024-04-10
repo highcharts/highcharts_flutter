@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,13 @@ import 'OptionFragment.dart';
  * DropPointer 
  */
 class DropPointer extends OptionFragment {
-  DropPointer() : super();
-  bool? _isVisible;  
-
+  DropPointer( {
+    this.isVisible = null,
+    this.align = null,
+    this.nested = null
+  }) : super();
+  bool? isVisible;
+    /*
   bool get isVisible { 
     if (this._isVisible == null) {
       this._isVisible = false;
@@ -36,9 +40,10 @@ class DropPointer extends OptionFragment {
   void set isVisible (bool v) {
     this._isVisible = v;
   }
+    */
     
-  String? _align;  
-
+  String? align;
+    /*
   String get align { 
     if (this._align == null) {
       this._align = "";
@@ -49,9 +54,10 @@ class DropPointer extends OptionFragment {
   void set align (String v) {
     this._align = v;
   }
+    */
     
-  bool? _nested;  
-
+  bool? nested;
+    /*
   bool get nested { 
     if (this._nested == null) {
       this._nested = false;
@@ -62,6 +68,7 @@ class DropPointer extends OptionFragment {
   void set nested (bool v) {
     this._nested = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -71,18 +78,18 @@ class DropPointer extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._isVisible != null) {  
-      buffer.writeAll(["\"isVisible\":", this._isVisible, ","], "");
+    if (this.isVisible != null) {  
+      buffer.writeAll(["\"isVisible\":", this.isVisible, ","], "");
     }
 
     // NOTE: skip serialization of element (type HTMLElement is ignored)} 
 
-    if (this._align != null) {  
-      buffer.writeAll(["\"align\":\`", this._align, "\`,"], "");
+    if (this.align != null) {  
+      buffer.writeAll(["\"align\":\`", this.align, "\`,"], "");
     }
 
-    if (this._nested != null) {  
-      buffer.writeAll(["\"nested\":", this._nested, ","], "");
+    if (this.nested != null) {  
+      buffer.writeAll(["\"nested\":", this.nested, ","], "");
     }
   }
 

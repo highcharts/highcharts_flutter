@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,13 @@ import 'OptionFragment.dart';
  * ColumnResizeEvent 
  */
 class ColumnResizeEvent extends DataEvent {
-  ColumnResizeEvent() : super();
-  double? _width;  
-
+  ColumnResizeEvent( {
+    this.width = null,
+    this.index = null,
+    this.name = null
+  }) : super();
+  double? width;
+    /*
   double get width { 
     if (this._width == null) {
       this._width = 0;
@@ -36,9 +40,10 @@ class ColumnResizeEvent extends DataEvent {
   void set width (double v) {
     this._width = v;
   }
+    */
     
-  double? _index;  
-
+  double? index;
+    /*
   double get index { 
     if (this._index == null) {
       this._index = 0;
@@ -49,9 +54,10 @@ class ColumnResizeEvent extends DataEvent {
   void set index (double v) {
     this._index = v;
   }
+    */
     
-  String? _name;  
-
+  String? name;
+    /*
   String get name { 
     if (this._name == null) {
       this._name = "";
@@ -62,6 +68,7 @@ class ColumnResizeEvent extends DataEvent {
   void set name (String v) {
     this._name = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -73,16 +80,16 @@ class ColumnResizeEvent extends DataEvent {
     
     // NOTE: skip serialization of type (type "afterResizeColumn" is ignored)} 
 
-    if (this._width != null) {  
-      buffer.writeAll(["\"width\":", this._width, ","], "");
+    if (this.width != null) {  
+      buffer.writeAll(["\"width\":", this.width, ","], "");
     }
 
-    if (this._index != null) {  
-      buffer.writeAll(["\"index\":", this._index, ","], "");
+    if (this.index != null) {  
+      buffer.writeAll(["\"index\":", this.index, ","], "");
     }
 
-    if (this._name != null) {  
-      buffer.writeAll(["\"name\":\`", this._name, "\`,"], "");
+    if (this.name != null) {  
+      buffer.writeAll(["\"name\":\`", this.name, "\`,"], "");
     }
   }
 

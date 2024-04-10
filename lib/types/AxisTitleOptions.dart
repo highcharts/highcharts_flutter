@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,23 @@ import 'OptionFragment.dart';
  * AxisTitleOptions 
  */
 class AxisTitleOptions extends OptionFragment {
-  AxisTitleOptions() : super();
-  String? _align;  
-
+  AxisTitleOptions( {
+    this.align = null,
+    this.enabled = null,
+    this.margin = null,
+    this.offset = null,
+    this.reserveSpace = null,
+    this.rotation = null,
+    this.text = null,
+    this.textAlign = null,
+    this.useHTML = null,
+    this.x = null,
+    this.y = null,
+    this.position3d = null,
+    this.skew3d = null
+  }) : super();
+  String? align;
+    /*
   String get align { 
     if (this._align == null) {
       this._align = "";
@@ -36,9 +50,10 @@ class AxisTitleOptions extends OptionFragment {
   void set align (String v) {
     this._align = v;
   }
+    */
     
-  bool? _enabled;  
-
+  bool? enabled;
+    /*
   bool get enabled { 
     if (this._enabled == null) {
       this._enabled = false;
@@ -49,9 +64,10 @@ class AxisTitleOptions extends OptionFragment {
   void set enabled (bool v) {
     this._enabled = v;
   }
+    */
     
-  double? _margin;  
-
+  double? margin;
+    /*
   double get margin { 
     if (this._margin == null) {
       this._margin = 0;
@@ -62,9 +78,10 @@ class AxisTitleOptions extends OptionFragment {
   void set margin (double v) {
     this._margin = v;
   }
+    */
     
-  double? _offset;  
-
+  double? offset;
+    /*
   double get offset { 
     if (this._offset == null) {
       this._offset = 0;
@@ -75,9 +92,10 @@ class AxisTitleOptions extends OptionFragment {
   void set offset (double v) {
     this._offset = v;
   }
+    */
     
-  bool? _reserveSpace;  
-
+  bool? reserveSpace;
+    /*
   bool get reserveSpace { 
     if (this._reserveSpace == null) {
       this._reserveSpace = false;
@@ -88,9 +106,10 @@ class AxisTitleOptions extends OptionFragment {
   void set reserveSpace (bool v) {
     this._reserveSpace = v;
   }
+    */
     
-  double? _rotation;  
-
+  double? rotation;
+    /*
   double get rotation { 
     if (this._rotation == null) {
       this._rotation = 0;
@@ -101,9 +120,10 @@ class AxisTitleOptions extends OptionFragment {
   void set rotation (double v) {
     this._rotation = v;
   }
+    */
     
-  String? _text;  
-
+  String? text;
+    /*
   String get text { 
     if (this._text == null) {
       this._text = "";
@@ -114,9 +134,10 @@ class AxisTitleOptions extends OptionFragment {
   void set text (String v) {
     this._text = v;
   }
+    */
     
-  String? _textAlign;  
-
+  String? textAlign;
+    /*
   String get textAlign { 
     if (this._textAlign == null) {
       this._textAlign = "";
@@ -127,9 +148,10 @@ class AxisTitleOptions extends OptionFragment {
   void set textAlign (String v) {
     this._textAlign = v;
   }
+    */
     
-  bool? _useHTML;  
-
+  bool? useHTML;
+    /*
   bool get useHTML { 
     if (this._useHTML == null) {
       this._useHTML = false;
@@ -140,9 +162,10 @@ class AxisTitleOptions extends OptionFragment {
   void set useHTML (bool v) {
     this._useHTML = v;
   }
+    */
     
-  double? _x;  
-
+  double? x;
+    /*
   double get x { 
     if (this._x == null) {
       this._x = 0;
@@ -153,9 +176,10 @@ class AxisTitleOptions extends OptionFragment {
   void set x (double v) {
     this._x = v;
   }
+    */
     
-  double? _y;  
-
+  double? y;
+    /*
   double get y { 
     if (this._y == null) {
       this._y = 0;
@@ -166,9 +190,10 @@ class AxisTitleOptions extends OptionFragment {
   void set y (double v) {
     this._y = v;
   }
+    */
     
-  String? _position3d;  
-
+  String? position3d;
+    /*
   String get position3d { 
     if (this._position3d == null) {
       this._position3d = "";
@@ -179,9 +204,10 @@ class AxisTitleOptions extends OptionFragment {
   void set position3d (String v) {
     this._position3d = v;
   }
+    */
     
-  bool? _skew3d;  
-
+  bool? skew3d;
+    /*
   bool get skew3d { 
     if (this._skew3d == null) {
       this._skew3d = false;
@@ -192,6 +218,7 @@ class AxisTitleOptions extends OptionFragment {
   void set skew3d (bool v) {
     this._skew3d = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -201,58 +228,58 @@ class AxisTitleOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._align != null) {  
-      buffer.writeAll(["\"align\":\`", this._align, "\`,"], "");
+    if (this.align != null) {  
+      buffer.writeAll(["\"align\":\`", this.align, "\`,"], "");
     }
 
-    if (this._enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this._enabled, ","], "");
+    if (this.enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
     }
 
-    if (this._margin != null) {  
-      buffer.writeAll(["\"margin\":", this._margin, ","], "");
+    if (this.margin != null) {  
+      buffer.writeAll(["\"margin\":", this.margin, ","], "");
     }
 
-    if (this._offset != null) {  
-      buffer.writeAll(["\"offset\":", this._offset, ","], "");
+    if (this.offset != null) {  
+      buffer.writeAll(["\"offset\":", this.offset, ","], "");
     }
 
-    if (this._reserveSpace != null) {  
-      buffer.writeAll(["\"reserveSpace\":", this._reserveSpace, ","], "");
+    if (this.reserveSpace != null) {  
+      buffer.writeAll(["\"reserveSpace\":", this.reserveSpace, ","], "");
     }
 
-    if (this._rotation != null) {  
-      buffer.writeAll(["\"rotation\":", this._rotation, ","], "");
+    if (this.rotation != null) {  
+      buffer.writeAll(["\"rotation\":", this.rotation, ","], "");
     }
 
     // NOTE: skip serialization of style (type CSSObject is ignored)} 
 
-    if (this._text != null) {  
-      buffer.writeAll(["\"text\":\`", this._text, "\`,"], "");
+    if (this.text != null) {  
+      buffer.writeAll(["\"text\":\`", this.text, "\`,"], "");
     }
 
-    if (this._textAlign != null) {  
-      buffer.writeAll(["\"textAlign\":\`", this._textAlign, "\`,"], "");
+    if (this.textAlign != null) {  
+      buffer.writeAll(["\"textAlign\":\`", this.textAlign, "\`,"], "");
     }
 
-    if (this._useHTML != null) {  
-      buffer.writeAll(["\"useHTML\":", this._useHTML, ","], "");
+    if (this.useHTML != null) {  
+      buffer.writeAll(["\"useHTML\":", this.useHTML, ","], "");
     }
 
-    if (this._x != null) {  
-      buffer.writeAll(["\"x\":", this._x, ","], "");
+    if (this.x != null) {  
+      buffer.writeAll(["\"x\":", this.x, ","], "");
     }
 
-    if (this._y != null) {  
-      buffer.writeAll(["\"y\":", this._y, ","], "");
+    if (this.y != null) {  
+      buffer.writeAll(["\"y\":", this.y, ","], "");
     }
 
-    if (this._position3d != null) {  
-      buffer.writeAll(["\"position3d\":\`", this._position3d, "\`,"], "");
+    if (this.position3d != null) {  
+      buffer.writeAll(["\"position3d\":\`", this.position3d, "\`,"], "");
     }
 
-    if (this._skew3d != null) {  
-      buffer.writeAll(["\"skew3d\":", this._skew3d, ","], "");
+    if (this.skew3d != null) {  
+      buffer.writeAll(["\"skew3d\":", this.skew3d, ","], "");
     }
   }
 

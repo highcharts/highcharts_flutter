@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,12 @@ import 'OptionFragment.dart';
  * TreemapSeriesLevelsColorVariationOptions 
  */
 class TreemapSeriesLevelsColorVariationOptions extends OptionFragment {
-  TreemapSeriesLevelsColorVariationOptions() : super();
-  String? _key;  
-
+  TreemapSeriesLevelsColorVariationOptions( {
+    this.key = null,
+    this.to = null
+  }) : super();
+  String? key;
+    /*
   String get key { 
     if (this._key == null) {
       this._key = "";
@@ -35,9 +38,10 @@ class TreemapSeriesLevelsColorVariationOptions extends OptionFragment {
   void set key (String v) {
     this._key = v;
   }
+    */
     
-  double? _to;  
-
+  double? to;
+    /*
   double get to { 
     if (this._to == null) {
       this._to = 0;
@@ -48,6 +52,7 @@ class TreemapSeriesLevelsColorVariationOptions extends OptionFragment {
   void set to (double v) {
     this._to = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -57,12 +62,12 @@ class TreemapSeriesLevelsColorVariationOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._key != null) {  
-      buffer.writeAll(["\"key\":\`", this._key, "\`,"], "");
+    if (this.key != null) {  
+      buffer.writeAll(["\"key\":\`", this.key, "\`,"], "");
     }
 
-    if (this._to != null) {  
-      buffer.writeAll(["\"to\":", this._to, ","], "");
+    if (this.to != null) {  
+      buffer.writeAll(["\"to\":", this.to, ","], "");
     }
   }
 

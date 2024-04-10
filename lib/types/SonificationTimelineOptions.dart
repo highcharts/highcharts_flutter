@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,13 @@ import 'OptionFragment.dart';
  * SonificationTimelineOptions 
  */
 class SonificationTimelineOptions extends OptionFragment {
-  SonificationTimelineOptions() : super();
-  bool? _showTooltip;  
-
+  SonificationTimelineOptions( {
+    this.showTooltip = null,
+    this.showCrosshair = null,
+    this.skipThreshold = null
+  }) : super();
+  bool? showTooltip;
+    /*
   bool get showTooltip { 
     if (this._showTooltip == null) {
       this._showTooltip = false;
@@ -35,9 +39,10 @@ class SonificationTimelineOptions extends OptionFragment {
   void set showTooltip (bool v) {
     this._showTooltip = v;
   }
+    */
     
-  bool? _showCrosshair;  
-
+  bool? showCrosshair;
+    /*
   bool get showCrosshair { 
     if (this._showCrosshair == null) {
       this._showCrosshair = false;
@@ -48,9 +53,10 @@ class SonificationTimelineOptions extends OptionFragment {
   void set showCrosshair (bool v) {
     this._showCrosshair = v;
   }
+    */
     
-  double? _skipThreshold;  
-
+  double? skipThreshold;
+    /*
   double get skipThreshold { 
     if (this._skipThreshold == null) {
       this._skipThreshold = 0;
@@ -61,6 +67,7 @@ class SonificationTimelineOptions extends OptionFragment {
   void set skipThreshold (double v) {
     this._skipThreshold = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -70,16 +77,16 @@ class SonificationTimelineOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._showTooltip != null) {  
-      buffer.writeAll(["\"showTooltip\":", this._showTooltip, ","], "");
+    if (this.showTooltip != null) {  
+      buffer.writeAll(["\"showTooltip\":", this.showTooltip, ","], "");
     }
 
-    if (this._showCrosshair != null) {  
-      buffer.writeAll(["\"showCrosshair\":", this._showCrosshair, ","], "");
+    if (this.showCrosshair != null) {  
+      buffer.writeAll(["\"showCrosshair\":", this.showCrosshair, ","], "");
     }
 
-    if (this._skipThreshold != null) {  
-      buffer.writeAll(["\"skipThreshold\":", this._skipThreshold, ","], "");
+    if (this.skipThreshold != null) {  
+      buffer.writeAll(["\"skipThreshold\":", this.skipThreshold, ","], "");
     }
   }
 

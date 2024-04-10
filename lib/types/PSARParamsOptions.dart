@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,14 @@ import 'OptionFragment.dart';
  * PSARParamsOptions 
  */
 class PSARParamsOptions extends SMAParamsOptions {
-  PSARParamsOptions() : super();
-  double? _initialAccelerationFactor;  
-
+  PSARParamsOptions( {
+    this.initialAccelerationFactor = null,
+    this.maxAccelerationFactor = null,
+    this.increment = null,
+    this.decimals = null
+  }) : super();
+  double? initialAccelerationFactor;
+    /*
   double get initialAccelerationFactor { 
     if (this._initialAccelerationFactor == null) {
       this._initialAccelerationFactor = 0;
@@ -36,9 +41,10 @@ class PSARParamsOptions extends SMAParamsOptions {
   void set initialAccelerationFactor (double v) {
     this._initialAccelerationFactor = v;
   }
+    */
     
-  double? _maxAccelerationFactor;  
-
+  double? maxAccelerationFactor;
+    /*
   double get maxAccelerationFactor { 
     if (this._maxAccelerationFactor == null) {
       this._maxAccelerationFactor = 0;
@@ -49,9 +55,10 @@ class PSARParamsOptions extends SMAParamsOptions {
   void set maxAccelerationFactor (double v) {
     this._maxAccelerationFactor = v;
   }
+    */
     
-  double? _increment;  
-
+  double? increment;
+    /*
   double get increment { 
     if (this._increment == null) {
       this._increment = 0;
@@ -62,9 +69,10 @@ class PSARParamsOptions extends SMAParamsOptions {
   void set increment (double v) {
     this._increment = v;
   }
+    */
     
-  double? _decimals;  
-
+  double? decimals;
+    /*
   double get decimals { 
     if (this._decimals == null) {
       this._decimals = 0;
@@ -75,6 +83,7 @@ class PSARParamsOptions extends SMAParamsOptions {
   void set decimals (double v) {
     this._decimals = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -84,20 +93,20 @@ class PSARParamsOptions extends SMAParamsOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._initialAccelerationFactor != null) {  
-      buffer.writeAll(["\"initialAccelerationFactor\":", this._initialAccelerationFactor, ","], "");
+    if (this.initialAccelerationFactor != null) {  
+      buffer.writeAll(["\"initialAccelerationFactor\":", this.initialAccelerationFactor, ","], "");
     }
 
-    if (this._maxAccelerationFactor != null) {  
-      buffer.writeAll(["\"maxAccelerationFactor\":", this._maxAccelerationFactor, ","], "");
+    if (this.maxAccelerationFactor != null) {  
+      buffer.writeAll(["\"maxAccelerationFactor\":", this.maxAccelerationFactor, ","], "");
     }
 
-    if (this._increment != null) {  
-      buffer.writeAll(["\"increment\":", this._increment, ","], "");
+    if (this.increment != null) {  
+      buffer.writeAll(["\"increment\":", this.increment, ","], "");
     }
 
-    if (this._decimals != null) {  
-      buffer.writeAll(["\"decimals\":", this._decimals, ","], "");
+    if (this.decimals != null) {  
+      buffer.writeAll(["\"decimals\":", this.decimals, ","], "");
     }
   }
 

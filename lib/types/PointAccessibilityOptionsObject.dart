@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,12 @@ import 'OptionFragment.dart';
  * PointAccessibilityOptionsObject 
  */
 class PointAccessibilityOptionsObject extends OptionFragment {
-  PointAccessibilityOptionsObject() : super();
-  String? _description;  
-
+  PointAccessibilityOptionsObject( {
+    this.description = null,
+    this.enabled = null
+  }) : super();
+  String? description;
+    /*
   String get description { 
     if (this._description == null) {
       this._description = "";
@@ -35,9 +38,10 @@ class PointAccessibilityOptionsObject extends OptionFragment {
   void set description (String v) {
     this._description = v;
   }
+    */
     
-  bool? _enabled;  
-
+  bool? enabled;
+    /*
   bool get enabled { 
     if (this._enabled == null) {
       this._enabled = false;
@@ -48,6 +52,7 @@ class PointAccessibilityOptionsObject extends OptionFragment {
   void set enabled (bool v) {
     this._enabled = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -57,12 +62,12 @@ class PointAccessibilityOptionsObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._description != null) {  
-      buffer.writeAll(["\"description\":\`", this._description, "\`,"], "");
+    if (this.description != null) {  
+      buffer.writeAll(["\"description\":\`", this.description, "\`,"], "");
     }
 
-    if (this._enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this._enabled, ","], "");
+    if (this.enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
     }
   }
 

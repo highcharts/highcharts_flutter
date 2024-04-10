@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,11 @@ import 'OptionFragment.dart';
  * BubblePointOptions 
  */
 class BubblePointOptions extends ScatterPointOptions {
-  BubblePointOptions() : super();
-  double? _z;  
-
+  BubblePointOptions( {
+    this.z = null
+  }) : super();
+  double? z;
+    /*
   double get z { 
     if (this._z == null) {
       this._z = 0;
@@ -36,6 +38,7 @@ class BubblePointOptions extends ScatterPointOptions {
   void set z (double v) {
     this._z = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -45,8 +48,8 @@ class BubblePointOptions extends ScatterPointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._z != null) {  
-      buffer.writeAll(["\"z\":", this._z, ","], "");
+    if (this.z != null) {  
+      buffer.writeAll(["\"z\":", this.z, ","], "");
     }
   }
 

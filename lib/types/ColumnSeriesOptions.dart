@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,15 +23,20 @@ import 'OptionFragment.dart';
  * ColumnSeriesOptions 
  */
 class ColumnSeriesOptions extends LineSeriesOptions {
-  ColumnSeriesOptions() : super();
+  ColumnSeriesOptions( {
+    this.maxPointWidth = null,
+    this.minPointLength = null,
+    this.pointPadding = null,
+    this.pointWidth = null
+  }) : super();
   /**
    * The maximum allowed pixel width for a column, translated to the
    * height of a bar in a bar chart. This prevents the columns from
    * becoming too wide when there is a small number of points in the
    * chart.  
       */
-  double? _maxPointWidth;  
-
+  double? maxPointWidth;
+    /*
   double get maxPointWidth { 
     if (this._maxPointWidth == null) {
       this._maxPointWidth = 0;
@@ -42,6 +47,7 @@ class ColumnSeriesOptions extends LineSeriesOptions {
   void set maxPointWidth (double v) {
     this._maxPointWidth = v;
   }
+    */
     
   /**
    * The minimal height for a column or width for a bar. By default,
@@ -50,8 +56,8 @@ class ColumnSeriesOptions extends LineSeriesOptions {
    * column charts, minPointLength might not be respected for tightly
    * packed values.  
       */
-  double? _minPointLength;  
-
+  double? minPointLength;
+    /*
   double get minPointLength { 
     if (this._minPointLength == null) {
       this._minPointLength = 0;
@@ -62,14 +68,15 @@ class ColumnSeriesOptions extends LineSeriesOptions {
   void set minPointLength (double v) {
     this._minPointLength = v;
   }
+    */
     
   /**
    * Padding between each column or bar, in x axis units. 
    * 
    * Defaults to '0.1'. 
       */
-  double? _pointPadding;  
-
+  double? pointPadding;
+    /*
   double get pointPadding { 
     if (this._pointPadding == null) {
       this._pointPadding = 0;
@@ -80,6 +87,7 @@ class ColumnSeriesOptions extends LineSeriesOptions {
   void set pointPadding (double v) {
     this._pointPadding = v;
   }
+    */
     
   /**
    * A pixel value specifying a fixed width for each column or bar point.
@@ -88,8 +96,8 @@ class ColumnSeriesOptions extends LineSeriesOptions {
    * that is not based on the point value. For column series it is the
    * hoizontal length and for bar series it is the vertical length.  
       */
-  double? _pointWidth;  
-
+  double? pointWidth;
+    /*
   double get pointWidth { 
     if (this._pointWidth == null) {
       this._pointWidth = 0;
@@ -100,6 +108,7 @@ class ColumnSeriesOptions extends LineSeriesOptions {
   void set pointWidth (double v) {
     this._pointWidth = v;
   }
+    */
     
   // NOTE: states skipped - type Generic is ignored in gen
 
@@ -111,20 +120,20 @@ class ColumnSeriesOptions extends LineSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._maxPointWidth != null) {  
-      buffer.writeAll(["\"maxPointWidth\":", this._maxPointWidth, ","], "");
+    if (this.maxPointWidth != null) {  
+      buffer.writeAll(["\"maxPointWidth\":", this.maxPointWidth, ","], "");
     }
 
-    if (this._minPointLength != null) {  
-      buffer.writeAll(["\"minPointLength\":", this._minPointLength, ","], "");
+    if (this.minPointLength != null) {  
+      buffer.writeAll(["\"minPointLength\":", this.minPointLength, ","], "");
     }
 
-    if (this._pointPadding != null) {  
-      buffer.writeAll(["\"pointPadding\":", this._pointPadding, ","], "");
+    if (this.pointPadding != null) {  
+      buffer.writeAll(["\"pointPadding\":", this.pointPadding, ","], "");
     }
 
-    if (this._pointWidth != null) {  
-      buffer.writeAll(["\"pointWidth\":", this._pointWidth, ","], "");
+    if (this.pointWidth != null) {  
+      buffer.writeAll(["\"pointWidth\":", this.pointWidth, ","], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 

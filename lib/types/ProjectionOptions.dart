@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,12 @@ import 'OptionFragment.dart';
  * ProjectionOptions 
  */
 class ProjectionOptions extends OptionFragment {
-  ProjectionOptions() : super();
-  String? _name;  
-
+  ProjectionOptions( {
+    this.name = null,
+    this.parallels = null
+  }) : super();
+  String? name;
+    /*
   String get name { 
     if (this._name == null) {
       this._name = "";
@@ -35,6 +38,7 @@ class ProjectionOptions extends OptionFragment {
   void set name (String v) {
     this._name = v;
   }
+    */
     
   List<double>? parallels; // double
 
@@ -47,8 +51,8 @@ class ProjectionOptions extends OptionFragment {
     
     // NOTE: skip serialization of projectedBounds (type "world" is ignored)} 
 
-    if (this._name != null) {  
-      buffer.writeAll(["\"name\":\`", this._name, "\`,"], "");
+    if (this.name != null) {  
+      buffer.writeAll(["\"name\":\`", this.name, "\`,"], "");
     }
 
     // NOTE: skip serialization of parallels (type number is ignored)} 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,12 @@ import 'OptionFragment.dart';
  * Intersection 
  */
 class Intersection extends OptionFragment {
-  Intersection() : super();
-  double? _i;  
-
+  Intersection( {
+    this.i = null,
+    this.lat = null
+  }) : super();
+  double? i;
+    /*
   double get i { 
     if (this._i == null) {
       this._i = 0;
@@ -35,9 +38,10 @@ class Intersection extends OptionFragment {
   void set i (double v) {
     this._i = v;
   }
+    */
     
-  double? _lat;  
-
+  double? lat;
+    /*
   double get lat { 
     if (this._lat == null) {
       this._lat = 0;
@@ -48,6 +52,7 @@ class Intersection extends OptionFragment {
   void set lat (double v) {
     this._lat = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -57,12 +62,12 @@ class Intersection extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._i != null) {  
-      buffer.writeAll(["\"i\":", this._i, ","], "");
+    if (this.i != null) {  
+      buffer.writeAll(["\"i\":", this.i, ","], "");
     }
 
-    if (this._lat != null) {  
-      buffer.writeAll(["\"lat\":", this._lat, ","], "");
+    if (this.lat != null) {  
+      buffer.writeAll(["\"lat\":", this.lat, ","], "");
     }
 
     // NOTE: skip serialization of direction (type -1 is ignored)} 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,13 @@ import 'OptionFragment.dart';
  * DataGroupingInfoObject 
  */
 class DataGroupingInfoObject extends OptionFragment {
-  DataGroupingInfoObject() : super();
-  double? _length;  
-
+  DataGroupingInfoObject( {
+    this.length = null,
+    this.start = null,
+    this.groupStart = null
+  }) : super();
+  double? length;
+    /*
   double get length { 
     if (this._length == null) {
       this._length = 0;
@@ -35,9 +39,10 @@ class DataGroupingInfoObject extends OptionFragment {
   void set length (double v) {
     this._length = v;
   }
+    */
     
-  double? _start;  
-
+  double? start;
+    /*
   double get start { 
     if (this._start == null) {
       this._start = 0;
@@ -48,9 +53,10 @@ class DataGroupingInfoObject extends OptionFragment {
   void set start (double v) {
     this._start = v;
   }
+    */
     
-  double? _groupStart;  
-
+  double? groupStart;
+    /*
   double get groupStart { 
     if (this._groupStart == null) {
       this._groupStart = 0;
@@ -61,6 +67,7 @@ class DataGroupingInfoObject extends OptionFragment {
   void set groupStart (double v) {
     this._groupStart = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -70,18 +77,18 @@ class DataGroupingInfoObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._length != null) {  
-      buffer.writeAll(["\"length\":", this._length, ","], "");
+    if (this.length != null) {  
+      buffer.writeAll(["\"length\":", this.length, ","], "");
     }
 
     // NOTE: skip serialization of options (type PointShortOptions is ignored)} 
 
-    if (this._start != null) {  
-      buffer.writeAll(["\"start\":", this._start, ","], "");
+    if (this.start != null) {  
+      buffer.writeAll(["\"start\":", this.start, ","], "");
     }
 
-    if (this._groupStart != null) {  
-      buffer.writeAll(["\"groupStart\":", this._groupStart, ","], "");
+    if (this.groupStart != null) {  
+      buffer.writeAll(["\"groupStart\":", this.groupStart, ","], "");
     }
   }
 

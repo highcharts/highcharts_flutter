@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,14 @@ import 'OptionFragment.dart';
  * TimeCycles 
  */
 class TimeCycles extends OptionFragment {
-  TimeCycles() : super();
-  double? _startX;  
-
+  TimeCycles( {
+    this.startX = null,
+    this.pixelInterval = null,
+    this.numberOfCircles = null,
+    this.y = null
+  }) : super();
+  double? startX;
+    /*
   double get startX { 
     if (this._startX == null) {
       this._startX = 0;
@@ -36,9 +41,10 @@ class TimeCycles extends OptionFragment {
   void set startX (double v) {
     this._startX = v;
   }
+    */
     
-  double? _pixelInterval;  
-
+  double? pixelInterval;
+    /*
   double get pixelInterval { 
     if (this._pixelInterval == null) {
       this._pixelInterval = 0;
@@ -49,9 +55,10 @@ class TimeCycles extends OptionFragment {
   void set pixelInterval (double v) {
     this._pixelInterval = v;
   }
+    */
     
-  double? _numberOfCircles;  
-
+  double? numberOfCircles;
+    /*
   double get numberOfCircles { 
     if (this._numberOfCircles == null) {
       this._numberOfCircles = 0;
@@ -62,9 +69,10 @@ class TimeCycles extends OptionFragment {
   void set numberOfCircles (double v) {
     this._numberOfCircles = v;
   }
+    */
     
-  double? _y;  
-
+  double? y;
+    /*
   double get y { 
     if (this._y == null) {
       this._y = 0;
@@ -75,6 +83,7 @@ class TimeCycles extends OptionFragment {
   void set y (double v) {
     this._y = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -86,20 +95,20 @@ class TimeCycles extends OptionFragment {
     
     // NOTE: skip serialization of defaultOptions (type AnnotationOptions is ignored)} 
 
-    if (this._startX != null) {  
-      buffer.writeAll(["\"startX\":", this._startX, ","], "");
+    if (this.startX != null) {  
+      buffer.writeAll(["\"startX\":", this.startX, ","], "");
     }
 
-    if (this._pixelInterval != null) {  
-      buffer.writeAll(["\"pixelInterval\":", this._pixelInterval, ","], "");
+    if (this.pixelInterval != null) {  
+      buffer.writeAll(["\"pixelInterval\":", this.pixelInterval, ","], "");
     }
 
-    if (this._numberOfCircles != null) {  
-      buffer.writeAll(["\"numberOfCircles\":", this._numberOfCircles, ","], "");
+    if (this.numberOfCircles != null) {  
+      buffer.writeAll(["\"numberOfCircles\":", this.numberOfCircles, ","], "");
     }
 
-    if (this._y != null) {  
-      buffer.writeAll(["\"y\":", this._y, ","], "");
+    if (this.y != null) {  
+      buffer.writeAll(["\"y\":", this.y, ","], "");
     }
   }
 

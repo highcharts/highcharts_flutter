@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,18 @@ import 'OptionFragment.dart';
  * SeriesLabelOptions 
  */
 class SeriesLabelOptions extends OptionFragment {
-  SeriesLabelOptions() : super();
-  bool? _connectorAllowed;  
-
+  SeriesLabelOptions( {
+    this.connectorAllowed = null,
+    this.connectorNeighbourDistance = null,
+    this.enabled = null,
+    this.format = null,
+    this.maxFontSize = null,
+    this.minFontSize = null,
+    this.onArea = null,
+    this.useHTML = null
+  }) : super();
+  bool? connectorAllowed;
+    /*
   bool get connectorAllowed { 
     if (this._connectorAllowed == null) {
       this._connectorAllowed = false;
@@ -36,9 +45,10 @@ class SeriesLabelOptions extends OptionFragment {
   void set connectorAllowed (bool v) {
     this._connectorAllowed = v;
   }
+    */
     
-  double? _connectorNeighbourDistance;  
-
+  double? connectorNeighbourDistance;
+    /*
   double get connectorNeighbourDistance { 
     if (this._connectorNeighbourDistance == null) {
       this._connectorNeighbourDistance = 0;
@@ -49,9 +59,10 @@ class SeriesLabelOptions extends OptionFragment {
   void set connectorNeighbourDistance (double v) {
     this._connectorNeighbourDistance = v;
   }
+    */
     
-  bool? _enabled;  
-
+  bool? enabled;
+    /*
   bool get enabled { 
     if (this._enabled == null) {
       this._enabled = false;
@@ -62,9 +73,10 @@ class SeriesLabelOptions extends OptionFragment {
   void set enabled (bool v) {
     this._enabled = v;
   }
+    */
     
-  String? _format;  
-
+  String? format;
+    /*
   String get format { 
     if (this._format == null) {
       this._format = "";
@@ -75,9 +87,10 @@ class SeriesLabelOptions extends OptionFragment {
   void set format (String v) {
     this._format = v;
   }
+    */
     
-  double? _maxFontSize;  
-
+  double? maxFontSize;
+    /*
   double get maxFontSize { 
     if (this._maxFontSize == null) {
       this._maxFontSize = 0;
@@ -88,9 +101,10 @@ class SeriesLabelOptions extends OptionFragment {
   void set maxFontSize (double v) {
     this._maxFontSize = v;
   }
+    */
     
-  double? _minFontSize;  
-
+  double? minFontSize;
+    /*
   double get minFontSize { 
     if (this._minFontSize == null) {
       this._minFontSize = 0;
@@ -101,9 +115,10 @@ class SeriesLabelOptions extends OptionFragment {
   void set minFontSize (double v) {
     this._minFontSize = v;
   }
+    */
     
-  bool? _onArea;  
-
+  bool? onArea;
+    /*
   bool get onArea { 
     if (this._onArea == null) {
       this._onArea = false;
@@ -114,9 +129,10 @@ class SeriesLabelOptions extends OptionFragment {
   void set onArea (bool v) {
     this._onArea = v;
   }
+    */
     
-  bool? _useHTML;  
-
+  bool? useHTML;
+    /*
   bool get useHTML { 
     if (this._useHTML == null) {
       this._useHTML = false;
@@ -127,6 +143,7 @@ class SeriesLabelOptions extends OptionFragment {
   void set useHTML (bool v) {
     this._useHTML = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -138,38 +155,38 @@ class SeriesLabelOptions extends OptionFragment {
     
     // NOTE: skip serialization of boxesToAvoid (type LabelIntersectBoxObject[] is ignored)} 
 
-    if (this._connectorAllowed != null) {  
-      buffer.writeAll(["\"connectorAllowed\":", this._connectorAllowed, ","], "");
+    if (this.connectorAllowed != null) {  
+      buffer.writeAll(["\"connectorAllowed\":", this.connectorAllowed, ","], "");
     }
 
-    if (this._connectorNeighbourDistance != null) {  
-      buffer.writeAll(["\"connectorNeighbourDistance\":", this._connectorNeighbourDistance, ","], "");
+    if (this.connectorNeighbourDistance != null) {  
+      buffer.writeAll(["\"connectorNeighbourDistance\":", this.connectorNeighbourDistance, ","], "");
     }
 
-    if (this._enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this._enabled, ","], "");
+    if (this.enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
     }
 
-    if (this._format != null) {  
-      buffer.writeAll(["\"format\":\`", this._format, "\`,"], "");
+    if (this.format != null) {  
+      buffer.writeAll(["\"format\":\`", this.format, "\`,"], "");
     }
 
-    if (this._maxFontSize != null) {  
-      buffer.writeAll(["\"maxFontSize\":", this._maxFontSize, ","], "");
+    if (this.maxFontSize != null) {  
+      buffer.writeAll(["\"maxFontSize\":", this.maxFontSize, ","], "");
     }
 
-    if (this._minFontSize != null) {  
-      buffer.writeAll(["\"minFontSize\":", this._minFontSize, ","], "");
+    if (this.minFontSize != null) {  
+      buffer.writeAll(["\"minFontSize\":", this.minFontSize, ","], "");
     }
 
-    if (this._onArea != null) {  
-      buffer.writeAll(["\"onArea\":", this._onArea, ","], "");
+    if (this.onArea != null) {  
+      buffer.writeAll(["\"onArea\":", this.onArea, ","], "");
     }
 
     // NOTE: skip serialization of style (type CSSObject is ignored)} 
 
-    if (this._useHTML != null) {  
-      buffer.writeAll(["\"useHTML\":", this._useHTML, ","], "");
+    if (this.useHTML != null) {  
+      buffer.writeAll(["\"useHTML\":", this.useHTML, ","], "");
     }
   }
 

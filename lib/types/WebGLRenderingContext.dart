@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,11 @@ import 'OptionFragment.dart';
  * WebGLRenderingContext 
  */
 class WebGLRenderingContext extends OptionFragment {
-  WebGLRenderingContext() : super();
-  double? _FUNC_MIN;  
-
+  WebGLRenderingContext( {
+    this.FUNC_MIN = null
+  }) : super();
+  double? FUNC_MIN;
+    /*
   double get FUNC_MIN { 
     if (this._FUNC_MIN == null) {
       this._FUNC_MIN = 0;
@@ -35,6 +37,7 @@ class WebGLRenderingContext extends OptionFragment {
   void set FUNC_MIN (double v) {
     this._FUNC_MIN = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -44,8 +47,8 @@ class WebGLRenderingContext extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._FUNC_MIN != null) {  
-      buffer.writeAll(["\"FUNC_MIN\":", this._FUNC_MIN, ","], "");
+    if (this.FUNC_MIN != null) {  
+      buffer.writeAll(["\"FUNC_MIN\":", this.FUNC_MIN, ","], "");
     }
   }
 

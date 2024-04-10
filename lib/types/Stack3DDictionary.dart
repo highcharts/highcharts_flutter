@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,11 @@ import 'OptionFragment.dart';
  * Stack3DDictionary 
  */
 class Stack3DDictionary extends OptionFragment {
-  Stack3DDictionary() : super();
-  double? _totalStacks;  
-
+  Stack3DDictionary( {
+    this.totalStacks = null
+  }) : super();
+  double? totalStacks;
+    /*
   double get totalStacks { 
     if (this._totalStacks == null) {
       this._totalStacks = 0;
@@ -35,6 +37,7 @@ class Stack3DDictionary extends OptionFragment {
   void set totalStacks (double v) {
     this._totalStacks = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -44,8 +47,8 @@ class Stack3DDictionary extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._totalStacks != null) {  
-      buffer.writeAll(["\"totalStacks\":", this._totalStacks, ","], "");
+    if (this.totalStacks != null) {  
+      buffer.writeAll(["\"totalStacks\":", this.totalStacks, ","], "");
     }
   }
 

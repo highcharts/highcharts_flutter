@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,12 @@ import 'OptionFragment.dart';
  * ColumnPointOptions 
  */
 class ColumnPointOptions extends LinePointOptions {
-  ColumnPointOptions() : super();
-  String? _dashStyle;  
-
+  ColumnPointOptions( {
+    this.dashStyle = null,
+    this.pointWidth = null
+  }) : super();
+  String? dashStyle;
+    /*
   String get dashStyle { 
     if (this._dashStyle == null) {
       this._dashStyle = "";
@@ -36,9 +39,10 @@ class ColumnPointOptions extends LinePointOptions {
   void set dashStyle (String v) {
     this._dashStyle = v;
   }
+    */
     
-  double? _pointWidth;  
-
+  double? pointWidth;
+    /*
   double get pointWidth { 
     if (this._pointWidth == null) {
       this._pointWidth = 0;
@@ -49,6 +53,7 @@ class ColumnPointOptions extends LinePointOptions {
   void set pointWidth (double v) {
     this._pointWidth = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -58,12 +63,12 @@ class ColumnPointOptions extends LinePointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._dashStyle != null) {  
-      buffer.writeAll(["\"dashStyle\":\`", this._dashStyle, "\`,"], "");
+    if (this.dashStyle != null) {  
+      buffer.writeAll(["\"dashStyle\":\`", this.dashStyle, "\`,"], "");
     }
 
-    if (this._pointWidth != null) {  
-      buffer.writeAll(["\"pointWidth\":", this._pointWidth, ","], "");
+    if (this.pointWidth != null) {  
+      buffer.writeAll(["\"pointWidth\":", this.pointWidth, ","], "");
     }
   }
 

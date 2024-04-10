@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,12 @@ import 'OptionFragment.dart';
  * TimeTicksInfoObject 
  */
 class TimeTicksInfoObject extends OptionFragment {
-  TimeTicksInfoObject() : super();
-  double? _totalRange;  
-
+  TimeTicksInfoObject( {
+    this.totalRange = null,
+    this.gapSize = null
+  }) : super();
+  double? totalRange;
+    /*
   double get totalRange { 
     if (this._totalRange == null) {
       this._totalRange = 0;
@@ -35,9 +38,10 @@ class TimeTicksInfoObject extends OptionFragment {
   void set totalRange (double v) {
     this._totalRange = v;
   }
+    */
     
-  double? _gapSize;  
-
+  double? gapSize;
+    /*
   double get gapSize { 
     if (this._gapSize == null) {
       this._gapSize = 0;
@@ -48,6 +52,7 @@ class TimeTicksInfoObject extends OptionFragment {
   void set gapSize (double v) {
     this._gapSize = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -59,14 +64,14 @@ class TimeTicksInfoObject extends OptionFragment {
     
     // NOTE: skip serialization of higherRanks (type Generic is ignored)} 
 
-    if (this._totalRange != null) {  
-      buffer.writeAll(["\"totalRange\":", this._totalRange, ","], "");
+    if (this.totalRange != null) {  
+      buffer.writeAll(["\"totalRange\":", this.totalRange, ","], "");
     }
 
     // NOTE: skip serialization of segmentStarts (type number[] is ignored)} 
 
-    if (this._gapSize != null) {  
-      buffer.writeAll(["\"gapSize\":", this._gapSize, ","], "");
+    if (this.gapSize != null) {  
+      buffer.writeAll(["\"gapSize\":", this.gapSize, ","], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,12 @@ import 'OptionFragment.dart';
  * AfterSetOffsetEvent 
  */
 class AfterSetOffsetEvent extends OptionFragment {
-  AfterSetOffsetEvent() : super();
-  double? _xOffset;  
-
+  AfterSetOffsetEvent( {
+    this.xOffset = null,
+    this.width = null
+  }) : super();
+  double? xOffset;
+    /*
   double get xOffset { 
     if (this._xOffset == null) {
       this._xOffset = 0;
@@ -35,9 +38,10 @@ class AfterSetOffsetEvent extends OptionFragment {
   void set xOffset (double v) {
     this._xOffset = v;
   }
+    */
     
-  double? _width;  
-
+  double? width;
+    /*
   double get width { 
     if (this._width == null) {
       this._width = 0;
@@ -48,6 +52,7 @@ class AfterSetOffsetEvent extends OptionFragment {
   void set width (double v) {
     this._width = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -57,12 +62,12 @@ class AfterSetOffsetEvent extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._xOffset != null) {  
-      buffer.writeAll(["\"xOffset\":", this._xOffset, ","], "");
+    if (this.xOffset != null) {  
+      buffer.writeAll(["\"xOffset\":", this.xOffset, ","], "");
     }
 
-    if (this._width != null) {  
-      buffer.writeAll(["\"width\":", this._width, ","], "");
+    if (this.width != null) {  
+      buffer.writeAll(["\"width\":", this.width, ","], "");
     }
   }
 

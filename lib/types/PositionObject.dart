@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,13 @@ import 'OptionFragment.dart';
  * PositionObject 
  */
 class PositionObject extends OptionFragment {
-  PositionObject() : super();
-  double? _x;  
-
+  PositionObject( {
+    this.x = null,
+    this.y = null,
+    this.alignment = null
+  }) : super();
+  double? x;
+    /*
   double get x { 
     if (this._x == null) {
       this._x = 0;
@@ -35,9 +39,10 @@ class PositionObject extends OptionFragment {
   void set x (double v) {
     this._x = v;
   }
+    */
     
-  double? _y;  
-
+  double? y;
+    /*
   double get y { 
     if (this._y == null) {
       this._y = 0;
@@ -48,9 +53,10 @@ class PositionObject extends OptionFragment {
   void set y (double v) {
     this._y = v;
   }
+    */
     
-  String? _alignment;  
-
+  String? alignment;
+    /*
   String get alignment { 
     if (this._alignment == null) {
       this._alignment = "";
@@ -61,6 +67,7 @@ class PositionObject extends OptionFragment {
   void set alignment (String v) {
     this._alignment = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -70,16 +77,16 @@ class PositionObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._x != null) {  
-      buffer.writeAll(["\"x\":", this._x, ","], "");
+    if (this.x != null) {  
+      buffer.writeAll(["\"x\":", this.x, ","], "");
     }
 
-    if (this._y != null) {  
-      buffer.writeAll(["\"y\":", this._y, ","], "");
+    if (this.y != null) {  
+      buffer.writeAll(["\"y\":", this.y, ","], "");
     }
 
-    if (this._alignment != null) {  
-      buffer.writeAll(["\"alignment\":\`", this._alignment, "\`,"], "");
+    if (this.alignment != null) {  
+      buffer.writeAll(["\"alignment\":\`", this.alignment, "\`,"], "");
     }
   }
 

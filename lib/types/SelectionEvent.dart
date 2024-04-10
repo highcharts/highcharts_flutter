@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,12 @@ import 'OptionFragment.dart';
  * SelectionEvent 
  */
 class SelectionEvent extends OptionFragment {
-  SelectionEvent() : super();
-  String? _type;  
-
+  SelectionEvent( {
+    this.type = null,
+    this.reset = null
+  }) : super();
+  String? type;
+    /*
   String get type { 
     if (this._type == null) {
       this._type = "";
@@ -35,9 +38,10 @@ class SelectionEvent extends OptionFragment {
   void set type (String v) {
     this._type = v;
   }
+    */
     
-  bool? _reset;  
-
+  bool? reset;
+    /*
   bool get reset { 
     if (this._reset == null) {
       this._reset = false;
@@ -48,6 +52,7 @@ class SelectionEvent extends OptionFragment {
   void set reset (bool v) {
     this._reset = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -57,14 +62,14 @@ class SelectionEvent extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._type != null) {  
-      buffer.writeAll(["\"type\":\`", this._type, "\`,"], "");
+    if (this.type != null) {  
+      buffer.writeAll(["\"type\":\`", this.type, "\`,"], "");
     }
 
     // NOTE: skip serialization of detail (type AnyRecord is ignored)} 
 
-    if (this._reset != null) {  
-      buffer.writeAll(["\"reset\":", this._reset, ","], "");
+    if (this.reset != null) {  
+      buffer.writeAll(["\"reset\":", this.reset, ","], "");
     }
 
     // NOTE: skip serialization of selection (type Generic is ignored)} 

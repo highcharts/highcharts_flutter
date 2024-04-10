@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,13 @@ import 'OptionFragment.dart';
  * GroupMapOptionsObject 
  */
 class GroupMapOptionsObject extends SeriesOptions {
-  GroupMapOptionsObject() : super();
-  String? _formatPrefix;  
-
+  GroupMapOptionsObject( {
+    this.formatPrefix = null,
+    this.x = null,
+    this.y = null
+  }) : super();
+  String? formatPrefix;
+    /*
   String get formatPrefix { 
     if (this._formatPrefix == null) {
       this._formatPrefix = "";
@@ -36,9 +40,10 @@ class GroupMapOptionsObject extends SeriesOptions {
   void set formatPrefix (String v) {
     this._formatPrefix = v;
   }
+    */
     
-  double? _x;  
-
+  double? x;
+    /*
   double get x { 
     if (this._x == null) {
       this._x = 0;
@@ -49,9 +54,10 @@ class GroupMapOptionsObject extends SeriesOptions {
   void set x (double v) {
     this._x = v;
   }
+    */
     
-  double? _y;  
-
+  double? y;
+    /*
   double get y { 
     if (this._y == null) {
       this._y = 0;
@@ -62,6 +68,7 @@ class GroupMapOptionsObject extends SeriesOptions {
   void set y (double v) {
     this._y = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -71,18 +78,18 @@ class GroupMapOptionsObject extends SeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._formatPrefix != null) {  
-      buffer.writeAll(["\"formatPrefix\":\`", this._formatPrefix, "\`,"], "");
+    if (this.formatPrefix != null) {  
+      buffer.writeAll(["\"formatPrefix\":\`", this.formatPrefix, "\`,"], "");
     }
 
     // NOTE: skip serialization of userOptions (type PointShortOptions is ignored)} 
 
-    if (this._x != null) {  
-      buffer.writeAll(["\"x\":", this._x, ","], "");
+    if (this.x != null) {  
+      buffer.writeAll(["\"x\":", this.x, ","], "");
     }
 
-    if (this._y != null) {  
-      buffer.writeAll(["\"y\":", this._y, ","], "");
+    if (this.y != null) {  
+      buffer.writeAll(["\"y\":", this.y, ","], "");
     }
   }
 

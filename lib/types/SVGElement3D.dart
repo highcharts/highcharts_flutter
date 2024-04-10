@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,7 +23,7 @@ import 'OptionFragment.dart';
  * SVGElement3D 
  */
 class SVGElement3D extends OptionFragment {
-  SVGElement3D() : super();
+  SVGElement3D( ) : super();
   
 
   //////////////////////////////////////////////////////////////////////////////

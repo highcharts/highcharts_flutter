@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -25,9 +25,16 @@ import 'OptionFragment.dart';
  * LegendItem 
  */
 class LegendItem extends OptionFragment {
-  LegendItem() : super();
-  double? _checkboxOffset;  
-
+  LegendItem( {
+    this.checkboxOffset = null,
+    this.color = null,
+    this.itemHeight = null,
+    this.itemWidth = null,
+    this.name = null,
+    this.symbol = null
+  }) : super();
+  double? checkboxOffset;
+    /*
   double get checkboxOffset { 
     if (this._checkboxOffset == null) {
       this._checkboxOffset = 0;
@@ -38,9 +45,10 @@ class LegendItem extends OptionFragment {
   void set checkboxOffset (double v) {
     this._checkboxOffset = v;
   }
+    */
     
-  String? _color;  
-
+  String? color;
+    /*
   String get color { 
     if (this._color == null) {
       this._color = "";
@@ -51,9 +59,10 @@ class LegendItem extends OptionFragment {
   void set color (String v) {
     this._color = v;
   }
+    */
     
-  double? _itemHeight;  
-
+  double? itemHeight;
+    /*
   double get itemHeight { 
     if (this._itemHeight == null) {
       this._itemHeight = 0;
@@ -64,9 +73,10 @@ class LegendItem extends OptionFragment {
   void set itemHeight (double v) {
     this._itemHeight = v;
   }
+    */
     
-  double? _itemWidth;  
-
+  double? itemWidth;
+    /*
   double get itemWidth { 
     if (this._itemWidth == null) {
       this._itemWidth = 0;
@@ -77,9 +87,10 @@ class LegendItem extends OptionFragment {
   void set itemWidth (double v) {
     this._itemWidth = v;
   }
+    */
     
-  String? _name;  
-
+  String? name;
+    /*
   String get name { 
     if (this._name == null) {
       this._name = "";
@@ -90,9 +101,10 @@ class LegendItem extends OptionFragment {
   void set name (String v) {
     this._name = v;
   }
+    */
     
-  String? _symbol;  
-
+  String? symbol;
+    /*
   String get symbol { 
     if (this._symbol == null) {
       this._symbol = "";
@@ -103,6 +115,7 @@ class LegendItem extends OptionFragment {
   void set symbol (String v) {
     this._symbol = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -116,30 +129,30 @@ class LegendItem extends OptionFragment {
 
     // NOTE: skip serialization of checkbox (type CheckBoxElement is ignored)} 
 
-    if (this._checkboxOffset != null) {  
-      buffer.writeAll(["\"checkboxOffset\":", this._checkboxOffset, ","], "");
+    if (this.checkboxOffset != null) {  
+      buffer.writeAll(["\"checkboxOffset\":", this.checkboxOffset, ","], "");
     }
 
-    if (this._color != null) {  
-      buffer.writeAll(["\"color\":\`", this._color, "\`,"], "");
+    if (this.color != null) {  
+      buffer.writeAll(["\"color\":\`", this.color, "\`,"], "");
     }
 
-    if (this._itemHeight != null) {  
-      buffer.writeAll(["\"itemHeight\":", this._itemHeight, ","], "");
+    if (this.itemHeight != null) {  
+      buffer.writeAll(["\"itemHeight\":", this.itemHeight, ","], "");
     }
 
-    if (this._itemWidth != null) {  
-      buffer.writeAll(["\"itemWidth\":", this._itemWidth, ","], "");
+    if (this.itemWidth != null) {  
+      buffer.writeAll(["\"itemWidth\":", this.itemWidth, ","], "");
     }
 
     // NOTE: skip serialization of legendItem (type LegendItemObject is ignored)} 
 
-    if (this._name != null) {  
-      buffer.writeAll(["\"name\":\`", this._name, "\`,"], "");
+    if (this.name != null) {  
+      buffer.writeAll(["\"name\":\`", this.name, "\`,"], "");
     }
 
-    if (this._symbol != null) {  
-      buffer.writeAll(["\"symbol\":\`", this._symbol, "\`,"], "");
+    if (this.symbol != null) {  
+      buffer.writeAll(["\"symbol\":\`", this.symbol, "\`,"], "");
     }
 
     // NOTE: skip serialization of a11yProxyElement (type ProxyElement is ignored)} 

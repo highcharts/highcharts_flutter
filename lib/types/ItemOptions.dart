@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,16 @@ import 'OptionFragment.dart';
  * ItemOptions 
  */
 class ItemOptions extends OptionFragment {
-  ItemOptions() : super();
-  String? _id;  
-
+  ItemOptions( {
+    this.id = null,
+    this.name = null,
+    this.type = null,
+    this.className = null,
+    this.text = null,
+    this.langKey = null
+  }) : super();
+  String? id;
+    /*
   String get id { 
     if (this._id == null) {
       this._id = "";
@@ -36,9 +43,10 @@ class ItemOptions extends OptionFragment {
   void set id (String v) {
     this._id = v;
   }
+    */
     
-  String? _name;  
-
+  String? name;
+    /*
   String get name { 
     if (this._name == null) {
       this._name = "";
@@ -49,9 +57,10 @@ class ItemOptions extends OptionFragment {
   void set name (String v) {
     this._name = v;
   }
+    */
     
-  String? _type;  
-
+  String? type;
+    /*
   String get type { 
     if (this._type == null) {
       this._type = "";
@@ -62,9 +71,10 @@ class ItemOptions extends OptionFragment {
   void set type (String v) {
     this._type = v;
   }
+    */
     
-  String? _className;  
-
+  String? className;
+    /*
   String get className { 
     if (this._className == null) {
       this._className = "";
@@ -75,9 +85,10 @@ class ItemOptions extends OptionFragment {
   void set className (String v) {
     this._className = v;
   }
+    */
     
-  String? _text;  
-
+  String? text;
+    /*
   String get text { 
     if (this._text == null) {
       this._text = "";
@@ -88,9 +99,10 @@ class ItemOptions extends OptionFragment {
   void set text (String v) {
     this._text = v;
   }
+    */
     
-  String? _langKey;  
-
+  String? langKey;
+    /*
   String get langKey { 
     if (this._langKey == null) {
       this._langKey = "";
@@ -101,6 +113,7 @@ class ItemOptions extends OptionFragment {
   void set langKey (String v) {
     this._langKey = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -110,28 +123,28 @@ class ItemOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._id != null) {  
-      buffer.writeAll(["\"id\":\`", this._id, "\`,"], "");
+    if (this.id != null) {  
+      buffer.writeAll(["\"id\":\`", this.id, "\`,"], "");
     }
 
-    if (this._name != null) {  
-      buffer.writeAll(["\"name\":\`", this._name, "\`,"], "");
+    if (this.name != null) {  
+      buffer.writeAll(["\"name\":\`", this.name, "\`,"], "");
     }
 
-    if (this._type != null) {  
-      buffer.writeAll(["\"type\":\`", this._type, "\`,"], "");
+    if (this.type != null) {  
+      buffer.writeAll(["\"type\":\`", this.type, "\`,"], "");
     }
 
-    if (this._className != null) {  
-      buffer.writeAll(["\"className\":\`", this._className, "\`,"], "");
+    if (this.className != null) {  
+      buffer.writeAll(["\"className\":\`", this.className, "\`,"], "");
     }
 
-    if (this._text != null) {  
-      buffer.writeAll(["\"text\":\`", this._text, "\`,"], "");
+    if (this.text != null) {  
+      buffer.writeAll(["\"text\":\`", this.text, "\`,"], "");
     }
 
-    if (this._langKey != null) {  
-      buffer.writeAll(["\"langKey\":\`", this._langKey, "\`,"], "");
+    if (this.langKey != null) {  
+      buffer.writeAll(["\"langKey\":\`", this.langKey, "\`,"], "");
     }
 
     // NOTE: skip serialization of style (type CSSJSONObject is ignored)} 

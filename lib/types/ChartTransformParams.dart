@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -24,9 +24,12 @@ import 'OptionFragment.dart';
  * ChartTransformParams 
  */
 class ChartTransformParams extends OptionFragment {
-  ChartTransformParams() : super();
-  bool? _reset;  
-
+  ChartTransformParams( {
+    this.reset = null,
+    this.trigger = null
+  }) : super();
+  bool? reset;
+    /*
   bool get reset { 
     if (this._reset == null) {
       this._reset = false;
@@ -37,9 +40,10 @@ class ChartTransformParams extends OptionFragment {
   void set reset (bool v) {
     this._reset = v;
   }
+    */
     
-  String? _trigger;  
-
+  String? trigger;
+    /*
   String get trigger { 
     if (this._trigger == null) {
       this._trigger = "";
@@ -50,6 +54,7 @@ class ChartTransformParams extends OptionFragment {
   void set trigger (String v) {
     this._trigger = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -65,16 +70,16 @@ class ChartTransformParams extends OptionFragment {
 
     // NOTE: skip serialization of to (type Generic is ignored)} 
 
-    if (this._reset != null) {  
-      buffer.writeAll(["\"reset\":", this._reset, ","], "");
+    if (this.reset != null) {  
+      buffer.writeAll(["\"reset\":", this.reset, ","], "");
     }
 
     // NOTE: skip serialization of selection (type SelectEventObject is ignored)} 
 
     // NOTE: skip serialization of from (type Generic is ignored)} 
 
-    if (this._trigger != null) {  
-      buffer.writeAll(["\"trigger\":\`", this._trigger, "\`,"], "");
+    if (this.trigger != null) {  
+      buffer.writeAll(["\"trigger\":\`", this.trigger, "\`,"], "");
     }
   }
 

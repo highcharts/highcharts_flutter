@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,13 @@ import 'OptionFragment.dart';
  * HighlightSyncOptions 
  */
 class HighlightSyncOptions extends OptionFragment {
-  HighlightSyncOptions() : super();
-  bool? _highlightPoint;  
-
+  HighlightSyncOptions( {
+    this.highlightPoint = null,
+    this.showTooltip = null,
+    this.showCrosshair = null
+  }) : super();
+  bool? highlightPoint;
+    /*
   bool get highlightPoint { 
     if (this._highlightPoint == null) {
       this._highlightPoint = false;
@@ -35,9 +39,10 @@ class HighlightSyncOptions extends OptionFragment {
   void set highlightPoint (bool v) {
     this._highlightPoint = v;
   }
+    */
     
-  bool? _showTooltip;  
-
+  bool? showTooltip;
+    /*
   bool get showTooltip { 
     if (this._showTooltip == null) {
       this._showTooltip = false;
@@ -48,9 +53,10 @@ class HighlightSyncOptions extends OptionFragment {
   void set showTooltip (bool v) {
     this._showTooltip = v;
   }
+    */
     
-  bool? _showCrosshair;  
-
+  bool? showCrosshair;
+    /*
   bool get showCrosshair { 
     if (this._showCrosshair == null) {
       this._showCrosshair = false;
@@ -61,6 +67,7 @@ class HighlightSyncOptions extends OptionFragment {
   void set showCrosshair (bool v) {
     this._showCrosshair = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -70,16 +77,16 @@ class HighlightSyncOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._highlightPoint != null) {  
-      buffer.writeAll(["\"highlightPoint\":", this._highlightPoint, ","], "");
+    if (this.highlightPoint != null) {  
+      buffer.writeAll(["\"highlightPoint\":", this.highlightPoint, ","], "");
     }
 
-    if (this._showTooltip != null) {  
-      buffer.writeAll(["\"showTooltip\":", this._showTooltip, ","], "");
+    if (this.showTooltip != null) {  
+      buffer.writeAll(["\"showTooltip\":", this.showTooltip, ","], "");
     }
 
-    if (this._showCrosshair != null) {  
-      buffer.writeAll(["\"showCrosshair\":", this._showCrosshair, ","], "");
+    if (this.showCrosshair != null) {  
+      buffer.writeAll(["\"showCrosshair\":", this.showCrosshair, ","], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,14 @@ import 'OptionFragment.dart';
  * DumbbellPointOptions 
  */
 class DumbbellPointOptions extends AreaRangePointOptions {
-  DumbbellPointOptions() : super();
-  String? _connectorColor;  
-
+  DumbbellPointOptions( {
+    this.connectorColor = null,
+    this.connectorWidth = null,
+    this.dashStyle = null,
+    this.lowColor = null
+  }) : super();
+  String? connectorColor;
+    /*
   String get connectorColor { 
     if (this._connectorColor == null) {
       this._connectorColor = "";
@@ -36,9 +41,10 @@ class DumbbellPointOptions extends AreaRangePointOptions {
   void set connectorColor (String v) {
     this._connectorColor = v;
   }
+    */
     
-  double? _connectorWidth;  
-
+  double? connectorWidth;
+    /*
   double get connectorWidth { 
     if (this._connectorWidth == null) {
       this._connectorWidth = 0;
@@ -49,9 +55,10 @@ class DumbbellPointOptions extends AreaRangePointOptions {
   void set connectorWidth (double v) {
     this._connectorWidth = v;
   }
+    */
     
-  String? _dashStyle;  
-
+  String? dashStyle;
+    /*
   String get dashStyle { 
     if (this._dashStyle == null) {
       this._dashStyle = "";
@@ -62,9 +69,10 @@ class DumbbellPointOptions extends AreaRangePointOptions {
   void set dashStyle (String v) {
     this._dashStyle = v;
   }
+    */
     
-  String? _lowColor;  
-
+  String? lowColor;
+    /*
   String get lowColor { 
     if (this._lowColor == null) {
       this._lowColor = "";
@@ -75,6 +83,7 @@ class DumbbellPointOptions extends AreaRangePointOptions {
   void set lowColor (String v) {
     this._lowColor = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -84,20 +93,20 @@ class DumbbellPointOptions extends AreaRangePointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._connectorColor != null) {  
-      buffer.writeAll(["\"connectorColor\":\`", this._connectorColor, "\`,"], "");
+    if (this.connectorColor != null) {  
+      buffer.writeAll(["\"connectorColor\":\`", this.connectorColor, "\`,"], "");
     }
 
-    if (this._connectorWidth != null) {  
-      buffer.writeAll(["\"connectorWidth\":", this._connectorWidth, ","], "");
+    if (this.connectorWidth != null) {  
+      buffer.writeAll(["\"connectorWidth\":", this.connectorWidth, ","], "");
     }
 
-    if (this._dashStyle != null) {  
-      buffer.writeAll(["\"dashStyle\":\`", this._dashStyle, "\`,"], "");
+    if (this.dashStyle != null) {  
+      buffer.writeAll(["\"dashStyle\":\`", this.dashStyle, "\`,"], "");
     }
 
-    if (this._lowColor != null) {  
-      buffer.writeAll(["\"lowColor\":\`", this._lowColor, "\`,"], "");
+    if (this.lowColor != null) {  
+      buffer.writeAll(["\"lowColor\":\`", this.lowColor, "\`,"], "");
     }
   }
 

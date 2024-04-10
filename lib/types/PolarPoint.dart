@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,16 @@ import 'OptionFragment.dart';
  * PolarPoint 
  */
 class PolarPoint extends Point {
-  PolarPoint() : super();
-  double? _plotX;  
-
+  PolarPoint( {
+    this.plotX = null,
+    this.plotY = null,
+    this.polarPlotX = null,
+    this.polarPlotY = null,
+    this.rectPlotX = null,
+    this.rectPlotY = null
+  }) : super();
+  double? plotX;
+    /*
   double get plotX { 
     if (this._plotX == null) {
       this._plotX = 0;
@@ -36,9 +43,10 @@ class PolarPoint extends Point {
   void set plotX (double v) {
     this._plotX = v;
   }
+    */
     
-  double? _plotY;  
-
+  double? plotY;
+    /*
   double get plotY { 
     if (this._plotY == null) {
       this._plotY = 0;
@@ -49,9 +57,10 @@ class PolarPoint extends Point {
   void set plotY (double v) {
     this._plotY = v;
   }
+    */
     
-  double? _polarPlotX;  
-
+  double? polarPlotX;
+    /*
   double get polarPlotX { 
     if (this._polarPlotX == null) {
       this._polarPlotX = 0;
@@ -62,9 +71,10 @@ class PolarPoint extends Point {
   void set polarPlotX (double v) {
     this._polarPlotX = v;
   }
+    */
     
-  double? _polarPlotY;  
-
+  double? polarPlotY;
+    /*
   double get polarPlotY { 
     if (this._polarPlotY == null) {
       this._polarPlotY = 0;
@@ -75,9 +85,10 @@ class PolarPoint extends Point {
   void set polarPlotY (double v) {
     this._polarPlotY = v;
   }
+    */
     
-  double? _rectPlotX;  
-
+  double? rectPlotX;
+    /*
   double get rectPlotX { 
     if (this._rectPlotX == null) {
       this._rectPlotX = 0;
@@ -88,9 +99,10 @@ class PolarPoint extends Point {
   void set rectPlotX (double v) {
     this._rectPlotX = v;
   }
+    */
     
-  double? _rectPlotY;  
-
+  double? rectPlotY;
+    /*
   double get rectPlotY { 
     if (this._rectPlotY == null) {
       this._rectPlotY = 0;
@@ -101,6 +113,7 @@ class PolarPoint extends Point {
   void set rectPlotY (double v) {
     this._rectPlotY = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -110,28 +123,28 @@ class PolarPoint extends Point {
     super.toJSONInner(buffer);
 
     
-    if (this._plotX != null) {  
-      buffer.writeAll(["\"plotX\":", this._plotX, ","], "");
+    if (this.plotX != null) {  
+      buffer.writeAll(["\"plotX\":", this.plotX, ","], "");
     }
 
-    if (this._plotY != null) {  
-      buffer.writeAll(["\"plotY\":", this._plotY, ","], "");
+    if (this.plotY != null) {  
+      buffer.writeAll(["\"plotY\":", this.plotY, ","], "");
     }
 
-    if (this._polarPlotX != null) {  
-      buffer.writeAll(["\"polarPlotX\":", this._polarPlotX, ","], "");
+    if (this.polarPlotX != null) {  
+      buffer.writeAll(["\"polarPlotX\":", this.polarPlotX, ","], "");
     }
 
-    if (this._polarPlotY != null) {  
-      buffer.writeAll(["\"polarPlotY\":", this._polarPlotY, ","], "");
+    if (this.polarPlotY != null) {  
+      buffer.writeAll(["\"polarPlotY\":", this.polarPlotY, ","], "");
     }
 
-    if (this._rectPlotX != null) {  
-      buffer.writeAll(["\"rectPlotX\":", this._rectPlotX, ","], "");
+    if (this.rectPlotX != null) {  
+      buffer.writeAll(["\"rectPlotX\":", this.rectPlotX, ","], "");
     }
 
-    if (this._rectPlotY != null) {  
-      buffer.writeAll(["\"rectPlotY\":", this._rectPlotY, ","], "");
+    if (this.rectPlotY != null) {  
+      buffer.writeAll(["\"rectPlotY\":", this.rectPlotY, ","], "");
     }
 
     // NOTE: skip serialization of series (type PolarSeriesComposition is ignored)} 

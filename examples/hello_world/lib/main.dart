@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/Highcharts.dart';
 import 'package:highcharts_flutter/types/LineSeriesOptions.dart';
 
+import 'package:highcharts_flutter/types/TitleOptions.dart';
+import 'package:highcharts_flutter/types/DataOptions.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -35,27 +38,17 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
 
-    HighchartsOptions options = HighchartsOptions();
-    options.title.text = "Hello world!";
-
-     options.data.csv = '''A,B
-    1,5
-    2,1
-    3,20
-    ''';
-
-    final HighchartsChart chart = HighchartsChart(options);
-
-    final VoidCallback? onPressed =  () {
-      options.title.text = "You clicked the button";
-      options.subtitle.text = "Now we're only missing the data!";
-
-      LineSeriesOptions series  = LineSeriesOptions();
-      series.name = "Series 1";
-      options.series.add(series);
-
-      chart.refresh(); 
-    };
+    final HighchartsChart chart = HighchartsChart(
+      HighchartsOptions(
+        data: DataOptions(
+          csvURL: 'https://demo-live-data.highcharts.com/time-data.csv',
+          enablePolling: true
+        ),
+        title: TitleOptions(
+          text: 'Live refresh of external CSV data'
+        )
+      )
+    );
 
     return Scaffold(
       appBar: AppBar(
@@ -66,8 +59,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            chart,
-            FilledButton(onPressed: onPressed, child: const Text('Add Series')),
+            chart
           ],
         ),
       ),

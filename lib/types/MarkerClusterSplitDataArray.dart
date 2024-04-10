@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,12 @@ import 'OptionFragment.dart';
  * MarkerClusterSplitDataArray 
  */
 class MarkerClusterSplitDataArray extends Array {
-  MarkerClusterSplitDataArray() : super();
-  double? _posX;  
-
+  MarkerClusterSplitDataArray( {
+    this.posX = null,
+    this.posY = null
+  }) : super();
+  double? posX;
+    /*
   double get posX { 
     if (this._posX == null) {
       this._posX = 0;
@@ -36,9 +39,10 @@ class MarkerClusterSplitDataArray extends Array {
   void set posX (double v) {
     this._posX = v;
   }
+    */
     
-  double? _posY;  
-
+  double? posY;
+    /*
   double get posY { 
     if (this._posY == null) {
       this._posY = 0;
@@ -49,6 +53,7 @@ class MarkerClusterSplitDataArray extends Array {
   void set posY (double v) {
     this._posY = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -58,12 +63,12 @@ class MarkerClusterSplitDataArray extends Array {
     super.toJSONInner(buffer);
 
     
-    if (this._posX != null) {  
-      buffer.writeAll(["\"posX\":", this._posX, ","], "");
+    if (this.posX != null) {  
+      buffer.writeAll(["\"posX\":", this.posX, ","], "");
     }
 
-    if (this._posY != null) {  
-      buffer.writeAll(["\"posY\":", this._posY, ","], "");
+    if (this.posY != null) {  
+      buffer.writeAll(["\"posY\":", this.posY, ","], "");
     }
   }
 

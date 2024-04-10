@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,11 @@ import 'OptionFragment.dart';
  * TreegraphSeries 
  */
 class TreegraphSeries extends OptionFragment {
-  TreegraphSeries() : super();
-  bool? _inverted;  
-
+  TreegraphSeries( {
+    this.inverted = null
+  }) : super();
+  bool? inverted;
+    /*
   bool get inverted { 
     if (this._inverted == null) {
       this._inverted = false;
@@ -35,6 +37,7 @@ class TreegraphSeries extends OptionFragment {
   void set inverted (bool v) {
     this._inverted = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -44,8 +47,8 @@ class TreegraphSeries extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._inverted != null) {  
-      buffer.writeAll(["\"inverted\":", this._inverted, ","], "");
+    if (this.inverted != null) {  
+      buffer.writeAll(["\"inverted\":", this.inverted, ","], "");
     }
 
     // NOTE: skip serialization of pointClass (type typeof TreegraphPoint is ignored)} 

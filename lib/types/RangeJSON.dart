@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,13 @@ import 'OptionFragment.dart';
  * RangeJSON 
  */
 class RangeJSON extends OptionFragment {
-  RangeJSON() : super();
-  double? _firstRow;  
-
+  RangeJSON( {
+    this.firstRow = null,
+    this.lastRow = null,
+    this.state = null
+  }) : super();
+  double? firstRow;
+    /*
   double get firstRow { 
     if (this._firstRow == null) {
       this._firstRow = 0;
@@ -35,9 +39,10 @@ class RangeJSON extends OptionFragment {
   void set firstRow (double v) {
     this._firstRow = v;
   }
+    */
     
-  double? _lastRow;  
-
+  double? lastRow;
+    /*
   double get lastRow { 
     if (this._lastRow == null) {
       this._lastRow = 0;
@@ -48,9 +53,10 @@ class RangeJSON extends OptionFragment {
   void set lastRow (double v) {
     this._lastRow = v;
   }
+    */
     
-  String? _state;  
-
+  String? state;
+    /*
   String get state { 
     if (this._state == null) {
       this._state = "";
@@ -61,6 +67,7 @@ class RangeJSON extends OptionFragment {
   void set state (String v) {
     this._state = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -72,16 +79,16 @@ class RangeJSON extends OptionFragment {
     
     // NOTE: skip serialization of columns (type string[] is ignored)} 
 
-    if (this._firstRow != null) {  
-      buffer.writeAll(["\"firstRow\":", this._firstRow, ","], "");
+    if (this.firstRow != null) {  
+      buffer.writeAll(["\"firstRow\":", this.firstRow, ","], "");
     }
 
-    if (this._lastRow != null) {  
-      buffer.writeAll(["\"lastRow\":", this._lastRow, ","], "");
+    if (this.lastRow != null) {  
+      buffer.writeAll(["\"lastRow\":", this.lastRow, ","], "");
     }
 
-    if (this._state != null) {  
-      buffer.writeAll(["\"state\":\`", this._state, "\`,"], "");
+    if (this.state != null) {  
+      buffer.writeAll(["\"state\":\`", this.state, "\`,"], "");
     }
 
     // NOTE: skip serialization of type (type "range" is ignored)} 

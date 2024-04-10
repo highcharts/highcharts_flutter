@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,7 +23,9 @@ import 'OptionFragment.dart';
  * StreamgraphSeriesOptions 
  */
 class StreamgraphSeriesOptions extends AreaSplineSeriesOptions {
-  StreamgraphSeriesOptions() : super();
+  StreamgraphSeriesOptions( {
+    this.fillOpacity = null
+  }) : super();
   /**
    * Fill opacity for the area. When you set an explicit `fillColor`,
    * the `fillOpacity` is not applied. Instead, you should define the
@@ -34,8 +36,8 @@ class StreamgraphSeriesOptions extends AreaSplineSeriesOptions {
    * In styled mode, the fill opacity can be set with the
    * `.highcharts-area` class name.  
       */
-  double? _fillOpacity;  
-
+  double? fillOpacity;
+    /*
   double get fillOpacity { 
     if (this._fillOpacity == null) {
       this._fillOpacity = 0;
@@ -46,6 +48,7 @@ class StreamgraphSeriesOptions extends AreaSplineSeriesOptions {
   void set fillOpacity (double v) {
     this._fillOpacity = v;
   }
+    */
     
   // NOTE: states skipped - type Generic is ignored in gen
 
@@ -57,8 +60,8 @@ class StreamgraphSeriesOptions extends AreaSplineSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._fillOpacity != null) {  
-      buffer.writeAll(["\"fillOpacity\":", this._fillOpacity, ","], "");
+    if (this.fillOpacity != null) {  
+      buffer.writeAll(["\"fillOpacity\":", this.fillOpacity, ","], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 

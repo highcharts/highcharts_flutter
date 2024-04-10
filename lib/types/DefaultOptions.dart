@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -25,7 +25,7 @@ import 'OptionFragment.dart';
  * DefaultOptions 
  */
 class DefaultOptions extends Options {
-  DefaultOptions() : super();
+  DefaultOptions( ) : super();
   
 
   //////////////////////////////////////////////////////////////////////////////

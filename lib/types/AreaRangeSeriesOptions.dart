@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -25,7 +25,9 @@ import 'OptionFragment.dart';
  * AreaRangeSeriesOptions 
  */
 class AreaRangeSeriesOptions extends AreaSeriesOptions {
-  AreaRangeSeriesOptions() : super();
+  AreaRangeSeriesOptions( {
+    this.trackByArea = null
+  }) : super();
   /**
    * Options for the series data labels, appearing next to each data
    * point.
@@ -47,8 +49,8 @@ class AreaRangeSeriesOptions extends AreaSeriesOptions {
    * 
    * Defaults to 'false'. 
       */
-  bool? _trackByArea;  
-
+  bool? trackByArea;
+    /*
   bool get trackByArea { 
     if (this._trackByArea == null) {
       this._trackByArea = false;
@@ -59,6 +61,7 @@ class AreaRangeSeriesOptions extends AreaSeriesOptions {
   void set trackByArea (bool v) {
     this._trackByArea = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -72,8 +75,8 @@ class AreaRangeSeriesOptions extends AreaSeriesOptions {
 
     // NOTE: skip serialization of states (type Generic is ignored)} 
 
-    if (this._trackByArea != null) {  
-      buffer.writeAll(["\"trackByArea\":", this._trackByArea, ","], "");
+    if (this.trackByArea != null) {  
+      buffer.writeAll(["\"trackByArea\":", this.trackByArea, ","], "");
     }
 
     // NOTE: skip serialization of lowMarker (type PointMarkerOptions is ignored)} 

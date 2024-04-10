@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -24,7 +24,20 @@ import 'OptionFragment.dart';
  * LineSeriesOptions 
  */
 class LineSeriesOptions extends SeriesOptions {
-  LineSeriesOptions() : super();
+  LineSeriesOptions( {
+    this.allAreas = null,
+    this.animationLimit = null,
+    this.boostThreshold = null,
+    this.borderColor = null,
+    this.borderWidth = null,
+    this.colorAxis = null,
+    this.connectEnds = null,
+    this.description = null,
+    this.linkedTo = null,
+    this.pointStart = null,
+    this.skipKeyboardNavigation = null,
+    this.supportingColor = null
+  }) : super();
   /**
    * Whether all areas of the map defined in `mapData` should be rendered.
    * If `true`, areas which don't correspond to a data point, are rendered
@@ -32,8 +45,8 @@ class LineSeriesOptions extends SeriesOptions {
    * 
    * Defaults to 'true'. 
       */
-  bool? _allAreas;  
-
+  bool? allAreas;
+    /*
   bool get allAreas { 
     if (this._allAreas == null) {
       this._allAreas = false;
@@ -44,6 +57,7 @@ class LineSeriesOptions extends SeriesOptions {
   void set allAreas (bool v) {
     this._allAreas = v;
   }
+    */
     
   // NOTE: animation skipped - type Generic is ignored in gen
 
@@ -56,8 +70,8 @@ class LineSeriesOptions extends SeriesOptions {
    * is fired on individual points, not on a group of points like e.g. during
    * the initial animation.  
       */
-  double? _animationLimit;  
-
+  double? animationLimit;
+    /*
   double get animationLimit { 
     if (this._animationLimit == null) {
       this._animationLimit = 0;
@@ -68,6 +82,7 @@ class LineSeriesOptions extends SeriesOptions {
   void set animationLimit (double v) {
     this._animationLimit = v;
   }
+    */
     
   /**
    * Set the point threshold for when a series should enter boost mode.
@@ -85,8 +100,8 @@ class LineSeriesOptions extends SeriesOptions {
    * 
    * Defaults to '5000'. 
       */
-  double? _boostThreshold;  
-
+  double? boostThreshold;
+    /*
   double get boostThreshold { 
     if (this._boostThreshold == null) {
       this._boostThreshold = 0;
@@ -97,6 +112,7 @@ class LineSeriesOptions extends SeriesOptions {
   void set boostThreshold (double v) {
     this._boostThreshold = v;
   }
+    */
     
   /**
    * The border color of the map areas.
@@ -106,8 +122,8 @@ class LineSeriesOptions extends SeriesOptions {
    * 
    * Defaults to '#cccccc'. 
       */
-  String? _borderColor;  
-
+  String? borderColor;
+    /*
   String get borderColor { 
     if (this._borderColor == null) {
       this._borderColor = "";
@@ -118,6 +134,7 @@ class LineSeriesOptions extends SeriesOptions {
   void set borderColor (String v) {
     this._borderColor = v;
   }
+    */
     
   /**
    * The border width of each map area.
@@ -127,8 +144,8 @@ class LineSeriesOptions extends SeriesOptions {
    * 
    * Defaults to '1'. 
       */
-  double? _borderWidth;  
-
+  double? borderWidth;
+    /*
   double get borderWidth { 
     if (this._borderWidth == null) {
       this._borderWidth = 0;
@@ -139,6 +156,7 @@ class LineSeriesOptions extends SeriesOptions {
   void set borderWidth (double v) {
     this._borderWidth = v;
   }
+    */
     
   /**
    * When using dual or multiple color axes, this number defines which
@@ -154,8 +172,8 @@ class LineSeriesOptions extends SeriesOptions {
    * 
    * Defaults to '0'. 
       */
-  bool? _colorAxis;  
-
+  bool? colorAxis;
+    /*
   bool get colorAxis { 
     if (this._colorAxis == null) {
       this._colorAxis = false;
@@ -166,13 +184,14 @@ class LineSeriesOptions extends SeriesOptions {
   void set colorAxis (bool v) {
     this._colorAxis = v;
   }
+    */
     
   /**
    * Polar charts only. Whether to connect the ends of a line series
    * plot across the extremes.  
       */
-  bool? _connectEnds;  
-
+  bool? connectEnds;
+    /*
   bool get connectEnds { 
     if (this._connectEnds == null) {
       this._connectEnds = false;
@@ -183,6 +202,7 @@ class LineSeriesOptions extends SeriesOptions {
   void set connectEnds (bool v) {
     this._connectEnds = v;
   }
+    */
     
   /**
    * Options for the series data labels, appearing next to each data
@@ -200,8 +220,8 @@ class LineSeriesOptions extends SeriesOptions {
    * A description of the series to add to the screen reader information
    * about the series.  
       */
-  String? _description;  
-
+  String? description;
+    /*
   String get description { 
     if (this._description == null) {
       this._description = "";
@@ -212,6 +232,7 @@ class LineSeriesOptions extends SeriesOptions {
   void set description (String v) {
     this._description = v;
   }
+    */
     
   /**
    * The [id](#series.id) of another series to link to. Additionally,
@@ -223,8 +244,8 @@ class LineSeriesOptions extends SeriesOptions {
    * its own sorting definition, the linked series will be sorted in the
    * same order as the master one.  
       */
-  String? _linkedTo;  
-
+  String? linkedTo;
+    /*
   String get linkedTo { 
     if (this._linkedTo == null) {
       this._linkedTo = "";
@@ -235,6 +256,7 @@ class LineSeriesOptions extends SeriesOptions {
   void set linkedTo (String v) {
     this._linkedTo = v;
   }
+    */
     
   // NOTE: pointDescriptionFormatter skipped - type Function is ignored in gen
 
@@ -250,8 +272,8 @@ class LineSeriesOptions extends SeriesOptions {
    * 
    * Defaults to '0'. 
       */
-  double? _pointStart;  
-
+  double? pointStart;
+    /*
   double get pointStart { 
     if (this._pointStart == null) {
       this._pointStart = 0;
@@ -262,13 +284,14 @@ class LineSeriesOptions extends SeriesOptions {
   void set pointStart (double v) {
     this._pointStart = v;
   }
+    */
     
   /**
    * If set to `true`, the accessibility module will skip past the points
    * in this series for keyboard navigation.  
       */
-  bool? _skipKeyboardNavigation;  
-
+  bool? skipKeyboardNavigation;
+    /*
   bool get skipKeyboardNavigation { 
     if (this._skipKeyboardNavigation == null) {
       this._skipKeyboardNavigation = false;
@@ -279,11 +302,12 @@ class LineSeriesOptions extends SeriesOptions {
   void set skipKeyboardNavigation (bool v) {
     this._skipKeyboardNavigation = v;
   }
+    */
     
   // NOTE: states skipped - type Generic is ignored in gen
 
-  String? _supportingColor;  
-
+  String? supportingColor;
+    /*
   String get supportingColor { 
     if (this._supportingColor == null) {
       this._supportingColor = "";
@@ -294,6 +318,7 @@ class LineSeriesOptions extends SeriesOptions {
   void set supportingColor (String v) {
     this._supportingColor = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -303,60 +328,60 @@ class LineSeriesOptions extends SeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._allAreas != null) {  
-      buffer.writeAll(["\"allAreas\":", this._allAreas, ","], "");
+    if (this.allAreas != null) {  
+      buffer.writeAll(["\"allAreas\":", this.allAreas, ","], "");
     }
 
     // NOTE: skip serialization of animation (type Generic is ignored)} 
 
-    if (this._animationLimit != null) {  
-      buffer.writeAll(["\"animationLimit\":", this._animationLimit, ","], "");
+    if (this.animationLimit != null) {  
+      buffer.writeAll(["\"animationLimit\":", this.animationLimit, ","], "");
     }
 
-    if (this._boostThreshold != null) {  
-      buffer.writeAll(["\"boostThreshold\":", this._boostThreshold, ","], "");
+    if (this.boostThreshold != null) {  
+      buffer.writeAll(["\"boostThreshold\":", this.boostThreshold, ","], "");
     }
 
-    if (this._borderColor != null) {  
-      buffer.writeAll(["\"borderColor\":\`", this._borderColor, "\`,"], "");
+    if (this.borderColor != null) {  
+      buffer.writeAll(["\"borderColor\":\`", this.borderColor, "\`,"], "");
     }
 
-    if (this._borderWidth != null) {  
-      buffer.writeAll(["\"borderWidth\":", this._borderWidth, ","], "");
+    if (this.borderWidth != null) {  
+      buffer.writeAll(["\"borderWidth\":", this.borderWidth, ","], "");
     }
 
-    if (this._colorAxis != null) {  
-      buffer.writeAll(["\"colorAxis\":", this._colorAxis, ","], "");
+    if (this.colorAxis != null) {  
+      buffer.writeAll(["\"colorAxis\":", this.colorAxis, ","], "");
     }
 
-    if (this._connectEnds != null) {  
-      buffer.writeAll(["\"connectEnds\":", this._connectEnds, ","], "");
+    if (this.connectEnds != null) {  
+      buffer.writeAll(["\"connectEnds\":", this.connectEnds, ","], "");
     }
 
     // NOTE: skip serialization of dataLabels (type DataLabelOptions[] is ignored)} 
 
-    if (this._description != null) {  
-      buffer.writeAll(["\"description\":\`", this._description, "\`,"], "");
+    if (this.description != null) {  
+      buffer.writeAll(["\"description\":\`", this.description, "\`,"], "");
     }
 
-    if (this._linkedTo != null) {  
-      buffer.writeAll(["\"linkedTo\":\`", this._linkedTo, "\`,"], "");
+    if (this.linkedTo != null) {  
+      buffer.writeAll(["\"linkedTo\":\`", this.linkedTo, "\`,"], "");
     }
 
     // NOTE: skip serialization of pointDescriptionFormatter (type Function is ignored)} 
 
-    if (this._pointStart != null) {  
-      buffer.writeAll(["\"pointStart\":", this._pointStart, ","], "");
+    if (this.pointStart != null) {  
+      buffer.writeAll(["\"pointStart\":", this.pointStart, ","], "");
     }
 
-    if (this._skipKeyboardNavigation != null) {  
-      buffer.writeAll(["\"skipKeyboardNavigation\":", this._skipKeyboardNavigation, ","], "");
+    if (this.skipKeyboardNavigation != null) {  
+      buffer.writeAll(["\"skipKeyboardNavigation\":", this.skipKeyboardNavigation, ","], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 
 
-    if (this._supportingColor != null) {  
-      buffer.writeAll(["\"supportingColor\":\`", this._supportingColor, "\`,"], "");
+    if (this.supportingColor != null) {  
+      buffer.writeAll(["\"supportingColor\":\`", this.supportingColor, "\`,"], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,14 @@ import 'OptionFragment.dart';
  * AjaxSettingsObject 
  */
 class AjaxSettingsObject extends OptionFragment {
-  AjaxSettingsObject() : super();
-  String? _dataType;  
-
+  AjaxSettingsObject( {
+    this.dataType = null,
+    this.responseType = null,
+    this.type = null,
+    this.url = null
+  }) : super();
+  String? dataType;
+    /*
   String get dataType { 
     if (this._dataType == null) {
       this._dataType = "";
@@ -36,9 +41,10 @@ class AjaxSettingsObject extends OptionFragment {
   void set dataType (String v) {
     this._dataType = v;
   }
+    */
     
-  String? _responseType;  
-
+  String? responseType;
+    /*
   String get responseType { 
     if (this._responseType == null) {
       this._responseType = "";
@@ -49,9 +55,10 @@ class AjaxSettingsObject extends OptionFragment {
   void set responseType (String v) {
     this._responseType = v;
   }
+    */
     
-  String? _type;  
-
+  String? type;
+    /*
   String get type { 
     if (this._type == null) {
       this._type = "";
@@ -62,9 +69,10 @@ class AjaxSettingsObject extends OptionFragment {
   void set type (String v) {
     this._type = v;
   }
+    */
     
-  String? _url;  
-
+  String? url;
+    /*
   String get url { 
     if (this._url == null) {
       this._url = "";
@@ -75,6 +83,7 @@ class AjaxSettingsObject extends OptionFragment {
   void set url (String v) {
     this._url = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -86,22 +95,22 @@ class AjaxSettingsObject extends OptionFragment {
     
     // NOTE: skip serialization of data (type JSON is ignored)} 
 
-    if (this._dataType != null) {  
-      buffer.writeAll(["\"dataType\":\`", this._dataType, "\`,"], "");
+    if (this.dataType != null) {  
+      buffer.writeAll(["\"dataType\":\`", this.dataType, "\`,"], "");
     }
 
     // NOTE: skip serialization of headers (type Generic is ignored)} 
 
-    if (this._responseType != null) {  
-      buffer.writeAll(["\"responseType\":\`", this._responseType, "\`,"], "");
+    if (this.responseType != null) {  
+      buffer.writeAll(["\"responseType\":\`", this.responseType, "\`,"], "");
     }
 
-    if (this._type != null) {  
-      buffer.writeAll(["\"type\":\`", this._type, "\`,"], "");
+    if (this.type != null) {  
+      buffer.writeAll(["\"type\":\`", this.type, "\`,"], "");
     }
 
-    if (this._url != null) {  
-      buffer.writeAll(["\"url\":\`", this._url, "\`,"], "");
+    if (this.url != null) {  
+      buffer.writeAll(["\"url\":\`", this.url, "\`,"], "");
     }
   }
 

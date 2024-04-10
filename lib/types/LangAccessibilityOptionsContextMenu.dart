@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,11 @@ import 'OptionFragment.dart';
  * LangAccessibilityOptionsContextMenu 
  */
 class LangAccessibilityOptionsContextMenu extends OptionFragment {
-  LangAccessibilityOptionsContextMenu() : super();
-  String? _button;  
-
+  LangAccessibilityOptionsContextMenu( {
+    this.button = null
+  }) : super();
+  String? button;
+    /*
   String get button { 
     if (this._button == null) {
       this._button = "";
@@ -35,6 +37,7 @@ class LangAccessibilityOptionsContextMenu extends OptionFragment {
   void set button (String v) {
     this._button = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -44,8 +47,8 @@ class LangAccessibilityOptionsContextMenu extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._button != null) {  
-      buffer.writeAll(["\"button\":\`", this._button, "\`,"], "");
+    if (this.button != null) {  
+      buffer.writeAll(["\"button\":\`", this.button, "\`,"], "");
     }
   }
 

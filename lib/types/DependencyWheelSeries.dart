@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,11 @@ import 'OptionFragment.dart';
  * DependencyWheelSeries 
  */
 class DependencyWheelSeries extends OptionFragment {
-  DependencyWheelSeries() : super();
-  bool? _orderNodes;  
-
+  DependencyWheelSeries( {
+    this.orderNodes = null
+  }) : super();
+  bool? orderNodes;
+    /*
   bool get orderNodes { 
     if (this._orderNodes == null) {
       this._orderNodes = false;
@@ -35,6 +37,7 @@ class DependencyWheelSeries extends OptionFragment {
   void set orderNodes (bool v) {
     this._orderNodes = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -44,8 +47,8 @@ class DependencyWheelSeries extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._orderNodes != null) {  
-      buffer.writeAll(["\"orderNodes\":", this._orderNodes, ","], "");
+    if (this.orderNodes != null) {  
+      buffer.writeAll(["\"orderNodes\":", this.orderNodes, ","], "");
     }
 
     // NOTE: skip serialization of pointClass (type typeof DependencyWheelPoint is ignored)} 

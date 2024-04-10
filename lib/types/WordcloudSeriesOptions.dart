@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -25,9 +25,15 @@ import 'OptionFragment.dart';
  * WordcloudSeriesOptions 
  */
 class WordcloudSeriesOptions extends ColumnSeriesOptions {
-  WordcloudSeriesOptions() : super();
-  bool? _allowExtendPlayingField;  
-
+  WordcloudSeriesOptions( {
+    this.allowExtendPlayingField = null,
+    this.maxFontSize = null,
+    this.minFontSize = null,
+    this.placementStrategy = null,
+    this.spiral = null
+  }) : super();
+  bool? allowExtendPlayingField;
+    /*
   bool get allowExtendPlayingField { 
     if (this._allowExtendPlayingField == null) {
       this._allowExtendPlayingField = false;
@@ -38,6 +44,7 @@ class WordcloudSeriesOptions extends ColumnSeriesOptions {
   void set allowExtendPlayingField (bool v) {
     this._allowExtendPlayingField = v;
   }
+    */
     
   /**
    * The word with the largest weight will have a font size equal to this
@@ -47,8 +54,8 @@ class WordcloudSeriesOptions extends ColumnSeriesOptions {
    * 
    * Defaults to '25'. 
       */
-  double? _maxFontSize;  
-
+  double? maxFontSize;
+    /*
   double get maxFontSize { 
     if (this._maxFontSize == null) {
       this._maxFontSize = 0;
@@ -59,6 +66,7 @@ class WordcloudSeriesOptions extends ColumnSeriesOptions {
   void set maxFontSize (double v) {
     this._maxFontSize = v;
   }
+    */
     
   /**
    * A threshold determining the minimum font size that can be applied to
@@ -66,8 +74,8 @@ class WordcloudSeriesOptions extends ColumnSeriesOptions {
    * 
    * Defaults to '1'. 
       */
-  double? _minFontSize;  
-
+  double? minFontSize;
+    /*
   double get minFontSize { 
     if (this._minFontSize == null) {
       this._minFontSize = 0;
@@ -78,6 +86,7 @@ class WordcloudSeriesOptions extends ColumnSeriesOptions {
   void set minFontSize (double v) {
     this._minFontSize = v;
   }
+    */
     
   /**
    * This option decides which algorithm is used for placement, and
@@ -89,8 +98,8 @@ class WordcloudSeriesOptions extends ColumnSeriesOptions {
    * 
    * Defaults to 'center'. 
       */
-  String? _placementStrategy;  
-
+  String? placementStrategy;
+    /*
   String get placementStrategy { 
     if (this._placementStrategy == null) {
       this._placementStrategy = "";
@@ -101,12 +110,13 @@ class WordcloudSeriesOptions extends ColumnSeriesOptions {
   void set placementStrategy (String v) {
     this._placementStrategy = v;
   }
+    */
     
   /**
    * Rotation options for the words in the wordcloud.  
       */
-  WordcloudSeriesRotationOptions? _rotation;  
-
+  WordcloudSeriesRotationOptions? rotation;
+    /*
   WordcloudSeriesRotationOptions get rotation { 
     if (this._rotation == null) {
       this._rotation = WordcloudSeriesRotationOptions();
@@ -117,6 +127,7 @@ class WordcloudSeriesOptions extends ColumnSeriesOptions {
   void set rotation (WordcloudSeriesRotationOptions v) {
     this._rotation = v;
   }
+    */
     
   /**
    * Spiral used for placing a word after the initial position
@@ -127,8 +138,8 @@ class WordcloudSeriesOptions extends ColumnSeriesOptions {
    * 
    * Defaults to 'rectangular'. 
       */
-  String? _spiral;  
-
+  String? spiral;
+    /*
   String get spiral { 
     if (this._spiral == null) {
       this._spiral = "";
@@ -139,6 +150,7 @@ class WordcloudSeriesOptions extends ColumnSeriesOptions {
   void set spiral (String v) {
     this._spiral = v;
   }
+    */
     
   // NOTE: states skipped - type Generic is ignored in gen
 
@@ -147,8 +159,8 @@ class WordcloudSeriesOptions extends ColumnSeriesOptions {
    * 
    * Defaults to '{"fontFamily":"sans-serif", "fontWeight": "900"}'. 
       */
-  CSSObject? _style;  
-
+  CSSObject? style;
+    /*
   CSSObject get style { 
     if (this._style == null) {
       this._style = CSSObject();
@@ -159,6 +171,7 @@ class WordcloudSeriesOptions extends ColumnSeriesOptions {
   void set style (CSSObject v) {
     this._style = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -168,36 +181,36 @@ class WordcloudSeriesOptions extends ColumnSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._allowExtendPlayingField != null) {  
-      buffer.writeAll(["\"allowExtendPlayingField\":", this._allowExtendPlayingField, ","], "");
+    if (this.allowExtendPlayingField != null) {  
+      buffer.writeAll(["\"allowExtendPlayingField\":", this.allowExtendPlayingField, ","], "");
     }
 
     // NOTE: skip serialization of data (type WordcloudPointOptions)[] is ignored)} 
 
-    if (this._maxFontSize != null) {  
-      buffer.writeAll(["\"maxFontSize\":", this._maxFontSize, ","], "");
+    if (this.maxFontSize != null) {  
+      buffer.writeAll(["\"maxFontSize\":", this.maxFontSize, ","], "");
     }
 
-    if (this._minFontSize != null) {  
-      buffer.writeAll(["\"minFontSize\":", this._minFontSize, ","], "");
+    if (this.minFontSize != null) {  
+      buffer.writeAll(["\"minFontSize\":", this.minFontSize, ","], "");
     }
 
-    if (this._placementStrategy != null) {  
-      buffer.writeAll(["\"placementStrategy\":\`", this._placementStrategy, "\`,"], "");
+    if (this.placementStrategy != null) {  
+      buffer.writeAll(["\"placementStrategy\":\`", this.placementStrategy, "\`,"], "");
     }
 
-    if (this._rotation != null) {  
-      buffer.writeAll(["\"rotation\":", this._rotation?.toJSON(), ","], "");
+    if (this.rotation != null) {  
+      buffer.writeAll(["\"rotation\":", this.rotation?.toJSON(), ","], "");
     }
 
-    if (this._spiral != null) {  
-      buffer.writeAll(["\"spiral\":\`", this._spiral, "\`,"], "");
+    if (this.spiral != null) {  
+      buffer.writeAll(["\"spiral\":\`", this.spiral, "\`,"], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored)} 
 
-    if (this._style != null) {  
-      buffer.writeAll(["\"style\":", this._style?.toJSON(), ","], "");
+    if (this.style != null) {  
+      buffer.writeAll(["\"style\":", this.style?.toJSON(), ","], "");
     }
   }
 

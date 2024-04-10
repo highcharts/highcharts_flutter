@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,13 @@ import 'OptionFragment.dart';
  * SonificationInstrumentCapabilitiesOptions 
  */
 class SonificationInstrumentCapabilitiesOptions extends OptionFragment {
-  SonificationInstrumentCapabilitiesOptions() : super();
-  bool? _filters;  
-
+  SonificationInstrumentCapabilitiesOptions( {
+    this.filters = null,
+    this.tremolo = null,
+    this.pan = null
+  }) : super();
+  bool? filters;
+    /*
   bool get filters { 
     if (this._filters == null) {
       this._filters = false;
@@ -35,9 +39,10 @@ class SonificationInstrumentCapabilitiesOptions extends OptionFragment {
   void set filters (bool v) {
     this._filters = v;
   }
+    */
     
-  bool? _tremolo;  
-
+  bool? tremolo;
+    /*
   bool get tremolo { 
     if (this._tremolo == null) {
       this._tremolo = false;
@@ -48,9 +53,10 @@ class SonificationInstrumentCapabilitiesOptions extends OptionFragment {
   void set tremolo (bool v) {
     this._tremolo = v;
   }
+    */
     
-  bool? _pan;  
-
+  bool? pan;
+    /*
   bool get pan { 
     if (this._pan == null) {
       this._pan = false;
@@ -61,6 +67,7 @@ class SonificationInstrumentCapabilitiesOptions extends OptionFragment {
   void set pan (bool v) {
     this._pan = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -70,16 +77,16 @@ class SonificationInstrumentCapabilitiesOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._filters != null) {  
-      buffer.writeAll(["\"filters\":", this._filters, ","], "");
+    if (this.filters != null) {  
+      buffer.writeAll(["\"filters\":", this.filters, ","], "");
     }
 
-    if (this._tremolo != null) {  
-      buffer.writeAll(["\"tremolo\":", this._tremolo, ","], "");
+    if (this.tremolo != null) {  
+      buffer.writeAll(["\"tremolo\":", this.tremolo, ","], "");
     }
 
-    if (this._pan != null) {  
-      buffer.writeAll(["\"pan\":", this._pan, ","], "");
+    if (this.pan != null) {  
+      buffer.writeAll(["\"pan\":", this.pan, ","], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,20 @@ import 'OptionFragment.dart';
  * PlotBandLabelOptions 
  */
 class PlotBandLabelOptions extends OptionFragment {
-  PlotBandLabelOptions() : super();
-  String? _align;  
-
+  PlotBandLabelOptions( {
+    this.align = null,
+    this.className = null,
+    this.clip = null,
+    this.rotation = null,
+    this.text = null,
+    this.textAlign = null,
+    this.useHTML = null,
+    this.verticalAlign = null,
+    this.x = null,
+    this.y = null
+  }) : super();
+  String? align;
+    /*
   String get align { 
     if (this._align == null) {
       this._align = "";
@@ -36,9 +47,10 @@ class PlotBandLabelOptions extends OptionFragment {
   void set align (String v) {
     this._align = v;
   }
+    */
     
-  String? _className;  
-
+  String? className;
+    /*
   String get className { 
     if (this._className == null) {
       this._className = "";
@@ -49,9 +61,10 @@ class PlotBandLabelOptions extends OptionFragment {
   void set className (String v) {
     this._className = v;
   }
+    */
     
-  bool? _clip;  
-
+  bool? clip;
+    /*
   bool get clip { 
     if (this._clip == null) {
       this._clip = false;
@@ -62,9 +75,10 @@ class PlotBandLabelOptions extends OptionFragment {
   void set clip (bool v) {
     this._clip = v;
   }
+    */
     
-  double? _rotation;  
-
+  double? rotation;
+    /*
   double get rotation { 
     if (this._rotation == null) {
       this._rotation = 0;
@@ -75,9 +89,10 @@ class PlotBandLabelOptions extends OptionFragment {
   void set rotation (double v) {
     this._rotation = v;
   }
+    */
     
-  String? _text;  
-
+  String? text;
+    /*
   String get text { 
     if (this._text == null) {
       this._text = "";
@@ -88,9 +103,10 @@ class PlotBandLabelOptions extends OptionFragment {
   void set text (String v) {
     this._text = v;
   }
+    */
     
-  String? _textAlign;  
-
+  String? textAlign;
+    /*
   String get textAlign { 
     if (this._textAlign == null) {
       this._textAlign = "";
@@ -101,9 +117,10 @@ class PlotBandLabelOptions extends OptionFragment {
   void set textAlign (String v) {
     this._textAlign = v;
   }
+    */
     
-  bool? _useHTML;  
-
+  bool? useHTML;
+    /*
   bool get useHTML { 
     if (this._useHTML == null) {
       this._useHTML = false;
@@ -114,9 +131,10 @@ class PlotBandLabelOptions extends OptionFragment {
   void set useHTML (bool v) {
     this._useHTML = v;
   }
+    */
     
-  String? _verticalAlign;  
-
+  String? verticalAlign;
+    /*
   String get verticalAlign { 
     if (this._verticalAlign == null) {
       this._verticalAlign = "";
@@ -127,9 +145,10 @@ class PlotBandLabelOptions extends OptionFragment {
   void set verticalAlign (String v) {
     this._verticalAlign = v;
   }
+    */
     
-  double? _x;  
-
+  double? x;
+    /*
   double get x { 
     if (this._x == null) {
       this._x = 0;
@@ -140,9 +159,10 @@ class PlotBandLabelOptions extends OptionFragment {
   void set x (double v) {
     this._x = v;
   }
+    */
     
-  double? _y;  
-
+  double? y;
+    /*
   double get y { 
     if (this._y == null) {
       this._y = 0;
@@ -153,6 +173,7 @@ class PlotBandLabelOptions extends OptionFragment {
   void set y (double v) {
     this._y = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -162,46 +183,46 @@ class PlotBandLabelOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._align != null) {  
-      buffer.writeAll(["\"align\":\`", this._align, "\`,"], "");
+    if (this.align != null) {  
+      buffer.writeAll(["\"align\":\`", this.align, "\`,"], "");
     }
 
-    if (this._className != null) {  
-      buffer.writeAll(["\"className\":\`", this._className, "\`,"], "");
+    if (this.className != null) {  
+      buffer.writeAll(["\"className\":\`", this.className, "\`,"], "");
     }
 
-    if (this._clip != null) {  
-      buffer.writeAll(["\"clip\":", this._clip, ","], "");
+    if (this.clip != null) {  
+      buffer.writeAll(["\"clip\":", this.clip, ","], "");
     }
 
-    if (this._rotation != null) {  
-      buffer.writeAll(["\"rotation\":", this._rotation, ","], "");
+    if (this.rotation != null) {  
+      buffer.writeAll(["\"rotation\":", this.rotation, ","], "");
     }
 
     // NOTE: skip serialization of style (type CSSObject is ignored)} 
 
-    if (this._text != null) {  
-      buffer.writeAll(["\"text\":\`", this._text, "\`,"], "");
+    if (this.text != null) {  
+      buffer.writeAll(["\"text\":\`", this.text, "\`,"], "");
     }
 
-    if (this._textAlign != null) {  
-      buffer.writeAll(["\"textAlign\":\`", this._textAlign, "\`,"], "");
+    if (this.textAlign != null) {  
+      buffer.writeAll(["\"textAlign\":\`", this.textAlign, "\`,"], "");
     }
 
-    if (this._useHTML != null) {  
-      buffer.writeAll(["\"useHTML\":", this._useHTML, ","], "");
+    if (this.useHTML != null) {  
+      buffer.writeAll(["\"useHTML\":", this.useHTML, ","], "");
     }
 
-    if (this._verticalAlign != null) {  
-      buffer.writeAll(["\"verticalAlign\":\`", this._verticalAlign, "\`,"], "");
+    if (this.verticalAlign != null) {  
+      buffer.writeAll(["\"verticalAlign\":\`", this.verticalAlign, "\`,"], "");
     }
 
-    if (this._x != null) {  
-      buffer.writeAll(["\"x\":", this._x, ","], "");
+    if (this.x != null) {  
+      buffer.writeAll(["\"x\":", this.x, ","], "");
     }
 
-    if (this._y != null) {  
-      buffer.writeAll(["\"y\":", this._y, ","], "");
+    if (this.y != null) {  
+      buffer.writeAll(["\"y\":", this.y, ","], "");
     }
   }
 

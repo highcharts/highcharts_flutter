@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,12 @@ import 'OptionFragment.dart';
  * Document 
  */
 class Document extends OptionFragment {
-  Document() : super();
-  bool? _msHidden;  
-
+  Document( {
+    this.msHidden = null,
+    this.webkitHidden = null
+  }) : super();
+  bool? msHidden;
+    /*
   bool get msHidden { 
     if (this._msHidden == null) {
       this._msHidden = false;
@@ -35,9 +38,10 @@ class Document extends OptionFragment {
   void set msHidden (bool v) {
     this._msHidden = v;
   }
+    */
     
-  bool? _webkitHidden;  
-
+  bool? webkitHidden;
+    /*
   bool get webkitHidden { 
     if (this._webkitHidden == null) {
       this._webkitHidden = false;
@@ -48,6 +52,7 @@ class Document extends OptionFragment {
   void set webkitHidden (bool v) {
     this._webkitHidden = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -61,14 +66,14 @@ class Document extends OptionFragment {
 
     // NOTE: skip serialization of msExitFullscreen (type Function is ignored)} 
 
-    if (this._msHidden != null) {  
-      buffer.writeAll(["\"msHidden\":", this._msHidden, ","], "");
+    if (this.msHidden != null) {  
+      buffer.writeAll(["\"msHidden\":", this.msHidden, ","], "");
     }
 
     // NOTE: skip serialization of webkitExitFullscreen (type Function is ignored)} 
 
-    if (this._webkitHidden != null) {  
-      buffer.writeAll(["\"webkitHidden\":", this._webkitHidden, ","], "");
+    if (this.webkitHidden != null) {  
+      buffer.writeAll(["\"webkitHidden\":", this.webkitHidden, ","], "");
     }
   }
 

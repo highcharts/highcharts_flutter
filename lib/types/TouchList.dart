@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,7 +22,7 @@ import 'OptionFragment.dart';
  * TouchList 
  */
 class TouchList extends OptionFragment {
-  TouchList() : super();
+  TouchList( ) : super();
   
 
   //////////////////////////////////////////////////////////////////////////////

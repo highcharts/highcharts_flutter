@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,12 @@ import 'OptionFragment.dart';
  * StockToolsGuiDefinitionsButtonOptions 
  */
 class StockToolsGuiDefinitionsButtonOptions extends OptionFragment {
-  StockToolsGuiDefinitionsButtonOptions() : super();
-  String? _elementType;  
-
+  StockToolsGuiDefinitionsButtonOptions( {
+    this.elementType = null,
+    this.symbol = null
+  }) : super();
+  String? elementType;
+    /*
   String get elementType { 
     if (this._elementType == null) {
       this._elementType = "";
@@ -35,9 +38,10 @@ class StockToolsGuiDefinitionsButtonOptions extends OptionFragment {
   void set elementType (String v) {
     this._elementType = v;
   }
+    */
     
-  String? _symbol;  
-
+  String? symbol;
+    /*
   String get symbol { 
     if (this._symbol == null) {
       this._symbol = "";
@@ -48,6 +52,7 @@ class StockToolsGuiDefinitionsButtonOptions extends OptionFragment {
   void set symbol (String v) {
     this._symbol = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -57,12 +62,12 @@ class StockToolsGuiDefinitionsButtonOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._elementType != null) {  
-      buffer.writeAll(["\"elementType\":\`", this._elementType, "\`,"], "");
+    if (this.elementType != null) {  
+      buffer.writeAll(["\"elementType\":\`", this.elementType, "\`,"], "");
     }
 
-    if (this._symbol != null) {  
-      buffer.writeAll(["\"symbol\":\`", this._symbol, "\`,"], "");
+    if (this.symbol != null) {  
+      buffer.writeAll(["\"symbol\":\`", this.symbol, "\`,"], "");
     }
   }
 

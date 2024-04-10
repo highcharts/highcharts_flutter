@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,11 @@ import 'OptionFragment.dart';
  * DataLabelTextPathOptions 
  */
 class DataLabelTextPathOptions extends OptionFragment {
-  DataLabelTextPathOptions() : super();
-  bool? _enabled;  
-
+  DataLabelTextPathOptions( {
+    this.enabled = null
+  }) : super();
+  bool? enabled;
+    /*
   bool get enabled { 
     if (this._enabled == null) {
       this._enabled = false;
@@ -36,6 +38,7 @@ class DataLabelTextPathOptions extends OptionFragment {
   void set enabled (bool v) {
     this._enabled = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -47,8 +50,8 @@ class DataLabelTextPathOptions extends OptionFragment {
     
     // NOTE: skip serialization of attributes (type TextPathAttributes is ignored)} 
 
-    if (this._enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this._enabled, ","], "");
+    if (this.enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
     }
   }
 

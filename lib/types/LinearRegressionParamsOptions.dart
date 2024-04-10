@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,11 @@ import 'OptionFragment.dart';
  * LinearRegressionParamsOptions 
  */
 class LinearRegressionParamsOptions extends SMAParamsOptions {
-  LinearRegressionParamsOptions() : super();
-  double? _xAxisUnit;  
-
+  LinearRegressionParamsOptions( {
+    this.xAxisUnit = null
+  }) : super();
+  double? xAxisUnit;
+    /*
   double get xAxisUnit { 
     if (this._xAxisUnit == null) {
       this._xAxisUnit = 0;
@@ -36,6 +38,7 @@ class LinearRegressionParamsOptions extends SMAParamsOptions {
   void set xAxisUnit (double v) {
     this._xAxisUnit = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -45,8 +48,8 @@ class LinearRegressionParamsOptions extends SMAParamsOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._xAxisUnit != null) {  
-      buffer.writeAll(["\"xAxisUnit\":", this._xAxisUnit, ","], "");
+    if (this.xAxisUnit != null) {  
+      buffer.writeAll(["\"xAxisUnit\":", this.xAxisUnit, ","], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,13 @@ import 'OptionFragment.dart';
  * RowObject 
  */
 class RowObject extends Record {
-  RowObject() : super();
-  double? _colCount;  
-
+  RowObject( {
+    this.colCount = null,
+    this.rowLength = null,
+    this.rowRadius = null
+  }) : super();
+  double? colCount;
+    /*
   double get colCount { 
     if (this._colCount == null) {
       this._colCount = 0;
@@ -36,9 +40,10 @@ class RowObject extends Record {
   void set colCount (double v) {
     this._colCount = v;
   }
+    */
     
-  double? _rowLength;  
-
+  double? rowLength;
+    /*
   double get rowLength { 
     if (this._rowLength == null) {
       this._rowLength = 0;
@@ -49,9 +54,10 @@ class RowObject extends Record {
   void set rowLength (double v) {
     this._rowLength = v;
   }
+    */
     
-  double? _rowRadius;  
-
+  double? rowRadius;
+    /*
   double get rowRadius { 
     if (this._rowRadius == null) {
       this._rowRadius = 0;
@@ -62,6 +68,7 @@ class RowObject extends Record {
   void set rowRadius (double v) {
     this._rowRadius = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -71,16 +78,16 @@ class RowObject extends Record {
     super.toJSONInner(buffer);
 
     
-    if (this._colCount != null) {  
-      buffer.writeAll(["\"colCount\":", this._colCount, ","], "");
+    if (this.colCount != null) {  
+      buffer.writeAll(["\"colCount\":", this.colCount, ","], "");
     }
 
-    if (this._rowLength != null) {  
-      buffer.writeAll(["\"rowLength\":", this._rowLength, ","], "");
+    if (this.rowLength != null) {  
+      buffer.writeAll(["\"rowLength\":", this.rowLength, ","], "");
     }
 
-    if (this._rowRadius != null) {  
-      buffer.writeAll(["\"rowRadius\":", this._rowRadius, ","], "");
+    if (this.rowRadius != null) {  
+      buffer.writeAll(["\"rowRadius\":", this.rowRadius, ","], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,18 @@ import 'OptionFragment.dart';
  * ControllableOptions 
  */
 class ControllableOptions extends ControlTargetOptions {
-  ControllableOptions() : super();
-  String? _className;  
-
+  ControllableOptions( {
+    this.className = null,
+    this.id = null,
+    this.markerEnd = null,
+    this.markerStart = null,
+    this.r = null,
+    this.rx = null,
+    this.ry = null,
+    this.type = null
+  }) : super();
+  String? className;
+    /*
   String get className { 
     if (this._className == null) {
       this._className = "";
@@ -36,9 +45,10 @@ class ControllableOptions extends ControlTargetOptions {
   void set className (String v) {
     this._className = v;
   }
+    */
     
-  String? _id;  
-
+  String? id;
+    /*
   String get id { 
     if (this._id == null) {
       this._id = "";
@@ -49,9 +59,10 @@ class ControllableOptions extends ControlTargetOptions {
   void set id (String v) {
     this._id = v;
   }
+    */
     
-  String? _markerEnd;  
-
+  String? markerEnd;
+    /*
   String get markerEnd { 
     if (this._markerEnd == null) {
       this._markerEnd = "";
@@ -62,9 +73,10 @@ class ControllableOptions extends ControlTargetOptions {
   void set markerEnd (String v) {
     this._markerEnd = v;
   }
+    */
     
-  String? _markerStart;  
-
+  String? markerStart;
+    /*
   String get markerStart { 
     if (this._markerStart == null) {
       this._markerStart = "";
@@ -75,9 +87,10 @@ class ControllableOptions extends ControlTargetOptions {
   void set markerStart (String v) {
     this._markerStart = v;
   }
+    */
     
-  double? _r;  
-
+  double? r;
+    /*
   double get r { 
     if (this._r == null) {
       this._r = 0;
@@ -88,9 +101,10 @@ class ControllableOptions extends ControlTargetOptions {
   void set r (double v) {
     this._r = v;
   }
+    */
     
-  double? _rx;  
-
+  double? rx;
+    /*
   double get rx { 
     if (this._rx == null) {
       this._rx = 0;
@@ -101,9 +115,10 @@ class ControllableOptions extends ControlTargetOptions {
   void set rx (double v) {
     this._rx = v;
   }
+    */
     
-  double? _ry;  
-
+  double? ry;
+    /*
   double get ry { 
     if (this._ry == null) {
       this._ry = 0;
@@ -114,9 +129,10 @@ class ControllableOptions extends ControlTargetOptions {
   void set ry (double v) {
     this._ry = v;
   }
+    */
     
-  String? _type;  
-
+  String? type;
+    /*
   String get type { 
     if (this._type == null) {
       this._type = "";
@@ -127,6 +143,7 @@ class ControllableOptions extends ControlTargetOptions {
   void set type (String v) {
     this._type = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -136,36 +153,36 @@ class ControllableOptions extends ControlTargetOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._className != null) {  
-      buffer.writeAll(["\"className\":\`", this._className, "\`,"], "");
+    if (this.className != null) {  
+      buffer.writeAll(["\"className\":\`", this.className, "\`,"], "");
     }
 
-    if (this._id != null) {  
-      buffer.writeAll(["\"id\":\`", this._id, "\`,"], "");
+    if (this.id != null) {  
+      buffer.writeAll(["\"id\":\`", this.id, "\`,"], "");
     }
 
-    if (this._markerEnd != null) {  
-      buffer.writeAll(["\"markerEnd\":\`", this._markerEnd, "\`,"], "");
+    if (this.markerEnd != null) {  
+      buffer.writeAll(["\"markerEnd\":\`", this.markerEnd, "\`,"], "");
     }
 
-    if (this._markerStart != null) {  
-      buffer.writeAll(["\"markerStart\":\`", this._markerStart, "\`,"], "");
+    if (this.markerStart != null) {  
+      buffer.writeAll(["\"markerStart\":\`", this.markerStart, "\`,"], "");
     }
 
-    if (this._r != null) {  
-      buffer.writeAll(["\"r\":", this._r, ","], "");
+    if (this.r != null) {  
+      buffer.writeAll(["\"r\":", this.r, ","], "");
     }
 
-    if (this._rx != null) {  
-      buffer.writeAll(["\"rx\":", this._rx, ","], "");
+    if (this.rx != null) {  
+      buffer.writeAll(["\"rx\":", this.rx, ","], "");
     }
 
-    if (this._ry != null) {  
-      buffer.writeAll(["\"ry\":", this._ry, ","], "");
+    if (this.ry != null) {  
+      buffer.writeAll(["\"ry\":", this.ry, ","], "");
     }
 
-    if (this._type != null) {  
-      buffer.writeAll(["\"type\":\`", this._type, "\`,"], "");
+    if (this.type != null) {  
+      buffer.writeAll(["\"type\":\`", this.type, "\`,"], "");
     }
   }
 

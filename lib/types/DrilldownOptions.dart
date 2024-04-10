@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -26,9 +26,12 @@ import 'OptionFragment.dart';
  * DrilldownOptions 
  */
 class DrilldownOptions extends OptionFragment {
-  DrilldownOptions() : super();
-  bool? _allowPointDrilldown;  
-
+  DrilldownOptions( {
+    this.allowPointDrilldown = null,
+    this.mapZooming = null
+  }) : super();
+  bool? allowPointDrilldown;
+    /*
   bool get allowPointDrilldown { 
     if (this._allowPointDrilldown == null) {
       this._allowPointDrilldown = false;
@@ -39,9 +42,10 @@ class DrilldownOptions extends OptionFragment {
   void set allowPointDrilldown (bool v) {
     this._allowPointDrilldown = v;
   }
+    */
     
-  bool? _mapZooming;  
-
+  bool? mapZooming;
+    /*
   bool get mapZooming { 
     if (this._mapZooming == null) {
       this._mapZooming = false;
@@ -52,6 +56,7 @@ class DrilldownOptions extends OptionFragment {
   void set mapZooming (bool v) {
     this._mapZooming = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -67,8 +72,8 @@ class DrilldownOptions extends OptionFragment {
 
     // NOTE: skip serialization of activeDataLabelStyle (type DrilldownActiveDataLabelStyleOptions is ignored)} 
 
-    if (this._allowPointDrilldown != null) {  
-      buffer.writeAll(["\"allowPointDrilldown\":", this._allowPointDrilldown, ","], "");
+    if (this.allowPointDrilldown != null) {  
+      buffer.writeAll(["\"allowPointDrilldown\":", this.allowPointDrilldown, ","], "");
     }
 
     // NOTE: skip serialization of animation (type Generic is ignored)} 
@@ -79,8 +84,8 @@ class DrilldownOptions extends OptionFragment {
 
     // NOTE: skip serialization of series (type SeriesOptions[] is ignored)} 
 
-    if (this._mapZooming != null) {  
-      buffer.writeAll(["\"mapZooming\":", this._mapZooming, ","], "");
+    if (this.mapZooming != null) {  
+      buffer.writeAll(["\"mapZooming\":", this.mapZooming, ","], "");
     }
   }
 

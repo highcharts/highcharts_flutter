@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -26,9 +26,13 @@ import 'OptionFragment.dart';
  * DrawPointParams 
  */
 class DrawPointParams extends OptionFragment {
-  DrawPointParams() : super();
-  String? _imageUrl;  
-
+  DrawPointParams( {
+    this.imageUrl = null,
+    this.isNew = null,
+    this.shapeType = null
+  }) : super();
+  String? imageUrl;
+    /*
   String get imageUrl { 
     if (this._imageUrl == null) {
       this._imageUrl = "";
@@ -39,9 +43,10 @@ class DrawPointParams extends OptionFragment {
   void set imageUrl (String v) {
     this._imageUrl = v;
   }
+    */
     
-  bool? _isNew;  
-
+  bool? isNew;
+    /*
   bool get isNew { 
     if (this._isNew == null) {
       this._isNew = false;
@@ -52,9 +57,10 @@ class DrawPointParams extends OptionFragment {
   void set isNew (bool v) {
     this._isNew = v;
   }
+    */
     
-  String? _shapeType;  
-
+  String? shapeType;
+    /*
   String get shapeType { 
     if (this._shapeType == null) {
       this._shapeType = "";
@@ -65,6 +71,7 @@ class DrawPointParams extends OptionFragment {
   void set shapeType (String v) {
     this._shapeType = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -84,12 +91,12 @@ class DrawPointParams extends OptionFragment {
 
     // NOTE: skip serialization of onComplete (type Function is ignored)} 
 
-    if (this._imageUrl != null) {  
-      buffer.writeAll(["\"imageUrl\":\`", this._imageUrl, "\`,"], "");
+    if (this.imageUrl != null) {  
+      buffer.writeAll(["\"imageUrl\":\`", this.imageUrl, "\`,"], "");
     }
 
-    if (this._isNew != null) {  
-      buffer.writeAll(["\"isNew\":", this._isNew, ","], "");
+    if (this.isNew != null) {  
+      buffer.writeAll(["\"isNew\":", this.isNew, ","], "");
     }
 
     // NOTE: skip serialization of renderer (type SVGRenderer is ignored)} 
@@ -98,8 +105,8 @@ class DrawPointParams extends OptionFragment {
 
     // NOTE: skip serialization of shapeArgs (type SVGAttributes is ignored)} 
 
-    if (this._shapeType != null) {  
-      buffer.writeAll(["\"shapeType\":\`", this._shapeType, "\`,"], "");
+    if (this.shapeType != null) {  
+      buffer.writeAll(["\"shapeType\":\`", this.shapeType, "\`,"], "");
     }
   }
 

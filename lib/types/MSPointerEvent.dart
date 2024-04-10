@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,12 @@ import 'OptionFragment.dart';
  * MSPointerEvent 
  */
 class MSPointerEvent extends OptionFragment {
-  MSPointerEvent() : super();
-  String? _MSPOINTER_TYPE_TOUCH;  
-
+  MSPointerEvent( {
+    this.MSPOINTER_TYPE_TOUCH = null,
+    this.pointerId = null
+  }) : super();
+  String? MSPOINTER_TYPE_TOUCH;
+    /*
   String get MSPOINTER_TYPE_TOUCH { 
     if (this._MSPOINTER_TYPE_TOUCH == null) {
       this._MSPOINTER_TYPE_TOUCH = "";
@@ -36,9 +39,10 @@ class MSPointerEvent extends OptionFragment {
   void set MSPOINTER_TYPE_TOUCH (String v) {
     this._MSPOINTER_TYPE_TOUCH = v;
   }
+    */
     
-  double? _pointerId;  
-
+  double? pointerId;
+    /*
   double get pointerId { 
     if (this._pointerId == null) {
       this._pointerId = 0;
@@ -49,6 +53,7 @@ class MSPointerEvent extends OptionFragment {
   void set pointerId (double v) {
     this._pointerId = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -58,14 +63,14 @@ class MSPointerEvent extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._MSPOINTER_TYPE_TOUCH != null) {  
-      buffer.writeAll(["\"MSPOINTER_TYPE_TOUCH\":\`", this._MSPOINTER_TYPE_TOUCH, "\`,"], "");
+    if (this.MSPOINTER_TYPE_TOUCH != null) {  
+      buffer.writeAll(["\"MSPOINTER_TYPE_TOUCH\":\`", this.MSPOINTER_TYPE_TOUCH, "\`,"], "");
     }
 
     // NOTE: skip serialization of currentTarget (type EventTarget is ignored)} 
 
-    if (this._pointerId != null) {  
-      buffer.writeAll(["\"pointerId\":", this._pointerId, ","], "");
+    if (this.pointerId != null) {  
+      buffer.writeAll(["\"pointerId\":", this.pointerId, ","], "");
     }
 
     // NOTE: skip serialization of pointerType (type undefined is ignored)} 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,11 @@ import 'OptionFragment.dart';
  * FormulaProcessError 
  */
 class FormulaProcessError extends Error {
-  FormulaProcessError() : super();
-  String? _message;  
-
+  FormulaProcessError( {
+    this.message = null
+  }) : super();
+  String? message;
+    /*
   String get message { 
     if (this._message == null) {
       this._message = "";
@@ -36,6 +38,7 @@ class FormulaProcessError extends Error {
   void set message (String v) {
     this._message = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -45,8 +48,8 @@ class FormulaProcessError extends Error {
     super.toJSONInner(buffer);
 
     
-    if (this._message != null) {  
-      buffer.writeAll(["\"message\":\`", this._message, "\`,"], "");
+    if (this.message != null) {  
+      buffer.writeAll(["\"message\":\`", this.message, "\`,"], "");
     }
 
     // NOTE: skip serialization of name (type "FormulaProcessError" is ignored)} 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,14 @@ import 'OptionFragment.dart';
  * LangAccessibilityAnnotationOptions 
  */
 class LangAccessibilityAnnotationOptions extends OptionFragment {
-  LangAccessibilityAnnotationOptions() : super();
-  String? _heading;  
-
+  LangAccessibilityAnnotationOptions( {
+    this.heading = null,
+    this.descriptionSinglePoint = null,
+    this.descriptionMultiplePoints = null,
+    this.descriptionNoPoints = null
+  }) : super();
+  String? heading;
+    /*
   String get heading { 
     if (this._heading == null) {
       this._heading = "";
@@ -35,9 +40,10 @@ class LangAccessibilityAnnotationOptions extends OptionFragment {
   void set heading (String v) {
     this._heading = v;
   }
+    */
     
-  String? _descriptionSinglePoint;  
-
+  String? descriptionSinglePoint;
+    /*
   String get descriptionSinglePoint { 
     if (this._descriptionSinglePoint == null) {
       this._descriptionSinglePoint = "";
@@ -48,9 +54,10 @@ class LangAccessibilityAnnotationOptions extends OptionFragment {
   void set descriptionSinglePoint (String v) {
     this._descriptionSinglePoint = v;
   }
+    */
     
-  String? _descriptionMultiplePoints;  
-
+  String? descriptionMultiplePoints;
+    /*
   String get descriptionMultiplePoints { 
     if (this._descriptionMultiplePoints == null) {
       this._descriptionMultiplePoints = "";
@@ -61,9 +68,10 @@ class LangAccessibilityAnnotationOptions extends OptionFragment {
   void set descriptionMultiplePoints (String v) {
     this._descriptionMultiplePoints = v;
   }
+    */
     
-  String? _descriptionNoPoints;  
-
+  String? descriptionNoPoints;
+    /*
   String get descriptionNoPoints { 
     if (this._descriptionNoPoints == null) {
       this._descriptionNoPoints = "";
@@ -74,6 +82,7 @@ class LangAccessibilityAnnotationOptions extends OptionFragment {
   void set descriptionNoPoints (String v) {
     this._descriptionNoPoints = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -83,20 +92,20 @@ class LangAccessibilityAnnotationOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._heading != null) {  
-      buffer.writeAll(["\"heading\":\`", this._heading, "\`,"], "");
+    if (this.heading != null) {  
+      buffer.writeAll(["\"heading\":\`", this.heading, "\`,"], "");
     }
 
-    if (this._descriptionSinglePoint != null) {  
-      buffer.writeAll(["\"descriptionSinglePoint\":\`", this._descriptionSinglePoint, "\`,"], "");
+    if (this.descriptionSinglePoint != null) {  
+      buffer.writeAll(["\"descriptionSinglePoint\":\`", this.descriptionSinglePoint, "\`,"], "");
     }
 
-    if (this._descriptionMultiplePoints != null) {  
-      buffer.writeAll(["\"descriptionMultiplePoints\":\`", this._descriptionMultiplePoints, "\`,"], "");
+    if (this.descriptionMultiplePoints != null) {  
+      buffer.writeAll(["\"descriptionMultiplePoints\":\`", this.descriptionMultiplePoints, "\`,"], "");
     }
 
-    if (this._descriptionNoPoints != null) {  
-      buffer.writeAll(["\"descriptionNoPoints\":\`", this._descriptionNoPoints, "\`,"], "");
+    if (this.descriptionNoPoints != null) {  
+      buffer.writeAll(["\"descriptionNoPoints\":\`", this.descriptionNoPoints, "\`,"], "");
     }
   }
 

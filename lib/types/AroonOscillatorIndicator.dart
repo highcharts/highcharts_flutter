@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,11 @@ import 'OptionFragment.dart';
  * AroonOscillatorIndicator 
  */
 class AroonOscillatorIndicator extends OptionFragment {
-  AroonOscillatorIndicator() : super();
-  String? _nameBase;  
-
+  AroonOscillatorIndicator( {
+    this.nameBase = null
+  }) : super();
+  String? nameBase;
+    /*
   String get nameBase { 
     if (this._nameBase == null) {
       this._nameBase = "";
@@ -35,6 +37,7 @@ class AroonOscillatorIndicator extends OptionFragment {
   void set nameBase (String v) {
     this._nameBase = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -44,8 +47,8 @@ class AroonOscillatorIndicator extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._nameBase != null) {  
-      buffer.writeAll(["\"nameBase\":\`", this._nameBase, "\`,"], "");
+    if (this.nameBase != null) {  
+      buffer.writeAll(["\"nameBase\":\`", this.nameBase, "\`,"], "");
     }
 
     // NOTE: skip serialization of pointArrayMap (type (keyof AroonOscillatorPoint)[] is ignored)} 

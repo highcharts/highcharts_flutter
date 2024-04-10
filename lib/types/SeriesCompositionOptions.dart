@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,12 @@ import 'OptionFragment.dart';
  * SeriesCompositionOptions 
  */
 class SeriesCompositionOptions extends SeriesOptions {
-  SeriesCompositionOptions() : super();
-  String? _nullColor;  
-
+  SeriesCompositionOptions( {
+    this.nullColor = null,
+    this.mass = null
+  }) : super();
+  String? nullColor;
+    /*
   String get nullColor { 
     if (this._nullColor == null) {
       this._nullColor = "";
@@ -36,9 +39,10 @@ class SeriesCompositionOptions extends SeriesOptions {
   void set nullColor (String v) {
     this._nullColor = v;
   }
+    */
     
-  double? _mass;  
-
+  double? mass;
+    /*
   double get mass { 
     if (this._mass == null) {
       this._mass = 0;
@@ -49,6 +53,7 @@ class SeriesCompositionOptions extends SeriesOptions {
   void set mass (double v) {
     this._mass = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -58,12 +63,12 @@ class SeriesCompositionOptions extends SeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._nullColor != null) {  
-      buffer.writeAll(["\"nullColor\":\`", this._nullColor, "\`,"], "");
+    if (this.nullColor != null) {  
+      buffer.writeAll(["\"nullColor\":\`", this.nullColor, "\`,"], "");
     }
 
-    if (this._mass != null) {  
-      buffer.writeAll(["\"mass\":", this._mass, ","], "");
+    if (this.mass != null) {  
+      buffer.writeAll(["\"mass\":", this.mass, ","], "");
     }
 
     // NOTE: skip serialization of nodes (type PointCompositionOptions[] is ignored)} 

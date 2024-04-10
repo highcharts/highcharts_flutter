@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,13 @@ import 'OptionFragment.dart';
  * RwdIcons 
  */
 class RwdIcons extends OptionFragment {
-  RwdIcons() : super();
-  String? _small;  
-
+  RwdIcons( {
+    this.small = null,
+    this.medium = null,
+    this.large = null
+  }) : super();
+  String? small;
+    /*
   String get small { 
     if (this._small == null) {
       this._small = "";
@@ -35,9 +39,10 @@ class RwdIcons extends OptionFragment {
   void set small (String v) {
     this._small = v;
   }
+    */
     
-  String? _medium;  
-
+  String? medium;
+    /*
   String get medium { 
     if (this._medium == null) {
       this._medium = "";
@@ -48,9 +53,10 @@ class RwdIcons extends OptionFragment {
   void set medium (String v) {
     this._medium = v;
   }
+    */
     
-  String? _large;  
-
+  String? large;
+    /*
   String get large { 
     if (this._large == null) {
       this._large = "";
@@ -61,6 +67,7 @@ class RwdIcons extends OptionFragment {
   void set large (String v) {
     this._large = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -70,16 +77,16 @@ class RwdIcons extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._small != null) {  
-      buffer.writeAll(["\"small\":\`", this._small, "\`,"], "");
+    if (this.small != null) {  
+      buffer.writeAll(["\"small\":\`", this.small, "\`,"], "");
     }
 
-    if (this._medium != null) {  
-      buffer.writeAll(["\"medium\":\`", this._medium, "\`,"], "");
+    if (this.medium != null) {  
+      buffer.writeAll(["\"medium\":\`", this.medium, "\`,"], "");
     }
 
-    if (this._large != null) {  
-      buffer.writeAll(["\"large\":\`", this._large, "\`,"], "");
+    if (this.large != null) {  
+      buffer.writeAll(["\"large\":\`", this.large, "\`,"], "");
     }
   }
 

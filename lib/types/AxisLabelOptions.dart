@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,28 @@ import 'OptionFragment.dart';
  * AxisLabelOptions 
  */
 class AxisLabelOptions extends OptionFragment {
-  AxisLabelOptions() : super();
-  String? _align;  
-
+  AxisLabelOptions( {
+    this.align = null,
+    this.allowOverlap = null,
+    this.autoRotationLimit = null,
+    this.distance = null,
+    this.enabled = null,
+    this.format = null,
+    this.indentation = null,
+    this.overflow = null,
+    this.padding = null,
+    this.reserveSpace = null,
+    this.staggerLines = null,
+    this.step = null,
+    this.useHTML = null,
+    this.x = null,
+    this.y = null,
+    this.zIndex = null,
+    this.position3d = null,
+    this.skew3d = null
+  }) : super();
+  String? align;
+    /*
   String get align { 
     if (this._align == null) {
       this._align = "";
@@ -36,9 +55,10 @@ class AxisLabelOptions extends OptionFragment {
   void set align (String v) {
     this._align = v;
   }
+    */
     
-  bool? _allowOverlap;  
-
+  bool? allowOverlap;
+    /*
   bool get allowOverlap { 
     if (this._allowOverlap == null) {
       this._allowOverlap = false;
@@ -49,9 +69,10 @@ class AxisLabelOptions extends OptionFragment {
   void set allowOverlap (bool v) {
     this._allowOverlap = v;
   }
+    */
     
-  double? _autoRotationLimit;  
-
+  double? autoRotationLimit;
+    /*
   double get autoRotationLimit { 
     if (this._autoRotationLimit == null) {
       this._autoRotationLimit = 0;
@@ -62,9 +83,10 @@ class AxisLabelOptions extends OptionFragment {
   void set autoRotationLimit (double v) {
     this._autoRotationLimit = v;
   }
+    */
     
-  double? _distance;  
-
+  double? distance;
+    /*
   double get distance { 
     if (this._distance == null) {
       this._distance = 0;
@@ -75,9 +97,10 @@ class AxisLabelOptions extends OptionFragment {
   void set distance (double v) {
     this._distance = v;
   }
+    */
     
-  bool? _enabled;  
-
+  bool? enabled;
+    /*
   bool get enabled { 
     if (this._enabled == null) {
       this._enabled = false;
@@ -88,9 +111,10 @@ class AxisLabelOptions extends OptionFragment {
   void set enabled (bool v) {
     this._enabled = v;
   }
+    */
     
-  String? _format;  
-
+  String? format;
+    /*
   String get format { 
     if (this._format == null) {
       this._format = "";
@@ -101,9 +125,10 @@ class AxisLabelOptions extends OptionFragment {
   void set format (String v) {
     this._format = v;
   }
+    */
     
-  double? _indentation;  
-
+  double? indentation;
+    /*
   double get indentation { 
     if (this._indentation == null) {
       this._indentation = 0;
@@ -114,9 +139,10 @@ class AxisLabelOptions extends OptionFragment {
   void set indentation (double v) {
     this._indentation = v;
   }
+    */
     
-  String? _overflow;  
-
+  String? overflow;
+    /*
   String get overflow { 
     if (this._overflow == null) {
       this._overflow = "";
@@ -127,9 +153,10 @@ class AxisLabelOptions extends OptionFragment {
   void set overflow (String v) {
     this._overflow = v;
   }
+    */
     
-  double? _padding;  
-
+  double? padding;
+    /*
   double get padding { 
     if (this._padding == null) {
       this._padding = 0;
@@ -140,9 +167,10 @@ class AxisLabelOptions extends OptionFragment {
   void set padding (double v) {
     this._padding = v;
   }
+    */
     
-  bool? _reserveSpace;  
-
+  bool? reserveSpace;
+    /*
   bool get reserveSpace { 
     if (this._reserveSpace == null) {
       this._reserveSpace = false;
@@ -153,9 +181,10 @@ class AxisLabelOptions extends OptionFragment {
   void set reserveSpace (bool v) {
     this._reserveSpace = v;
   }
+    */
     
-  double? _staggerLines;  
-
+  double? staggerLines;
+    /*
   double get staggerLines { 
     if (this._staggerLines == null) {
       this._staggerLines = 0;
@@ -166,9 +195,10 @@ class AxisLabelOptions extends OptionFragment {
   void set staggerLines (double v) {
     this._staggerLines = v;
   }
+    */
     
-  double? _step;  
-
+  double? step;
+    /*
   double get step { 
     if (this._step == null) {
       this._step = 0;
@@ -179,9 +209,10 @@ class AxisLabelOptions extends OptionFragment {
   void set step (double v) {
     this._step = v;
   }
+    */
     
-  bool? _useHTML;  
-
+  bool? useHTML;
+    /*
   bool get useHTML { 
     if (this._useHTML == null) {
       this._useHTML = false;
@@ -192,9 +223,10 @@ class AxisLabelOptions extends OptionFragment {
   void set useHTML (bool v) {
     this._useHTML = v;
   }
+    */
     
-  double? _x;  
-
+  double? x;
+    /*
   double get x { 
     if (this._x == null) {
       this._x = 0;
@@ -205,9 +237,10 @@ class AxisLabelOptions extends OptionFragment {
   void set x (double v) {
     this._x = v;
   }
+    */
     
-  double? _y;  
-
+  double? y;
+    /*
   double get y { 
     if (this._y == null) {
       this._y = 0;
@@ -218,9 +251,10 @@ class AxisLabelOptions extends OptionFragment {
   void set y (double v) {
     this._y = v;
   }
+    */
     
-  double? _zIndex;  
-
+  double? zIndex;
+    /*
   double get zIndex { 
     if (this._zIndex == null) {
       this._zIndex = 0;
@@ -231,9 +265,10 @@ class AxisLabelOptions extends OptionFragment {
   void set zIndex (double v) {
     this._zIndex = v;
   }
+    */
     
-  String? _position3d;  
-
+  String? position3d;
+    /*
   String get position3d { 
     if (this._position3d == null) {
       this._position3d = "";
@@ -244,9 +279,10 @@ class AxisLabelOptions extends OptionFragment {
   void set position3d (String v) {
     this._position3d = v;
   }
+    */
     
-  bool? _skew3d;  
-
+  bool? skew3d;
+    /*
   bool get skew3d { 
     if (this._skew3d == null) {
       this._skew3d = false;
@@ -257,6 +293,7 @@ class AxisLabelOptions extends OptionFragment {
   void set skew3d (bool v) {
     this._skew3d = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -266,82 +303,82 @@ class AxisLabelOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._align != null) {  
-      buffer.writeAll(["\"align\":\`", this._align, "\`,"], "");
+    if (this.align != null) {  
+      buffer.writeAll(["\"align\":\`", this.align, "\`,"], "");
     }
 
-    if (this._allowOverlap != null) {  
-      buffer.writeAll(["\"allowOverlap\":", this._allowOverlap, ","], "");
+    if (this.allowOverlap != null) {  
+      buffer.writeAll(["\"allowOverlap\":", this.allowOverlap, ","], "");
     }
 
     // NOTE: skip serialization of autoRotation (type number[] is ignored)} 
 
-    if (this._autoRotationLimit != null) {  
-      buffer.writeAll(["\"autoRotationLimit\":", this._autoRotationLimit, ","], "");
+    if (this.autoRotationLimit != null) {  
+      buffer.writeAll(["\"autoRotationLimit\":", this.autoRotationLimit, ","], "");
     }
 
-    if (this._distance != null) {  
-      buffer.writeAll(["\"distance\":", this._distance, ","], "");
+    if (this.distance != null) {  
+      buffer.writeAll(["\"distance\":", this.distance, ","], "");
     }
 
-    if (this._enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this._enabled, ","], "");
+    if (this.enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
     }
 
-    if (this._format != null) {  
-      buffer.writeAll(["\"format\":\`", this._format, "\`,"], "");
+    if (this.format != null) {  
+      buffer.writeAll(["\"format\":\`", this.format, "\`,"], "");
     }
 
-    if (this._indentation != null) {  
-      buffer.writeAll(["\"indentation\":", this._indentation, ","], "");
+    if (this.indentation != null) {  
+      buffer.writeAll(["\"indentation\":", this.indentation, ","], "");
     }
 
-    if (this._overflow != null) {  
-      buffer.writeAll(["\"overflow\":\`", this._overflow, "\`,"], "");
+    if (this.overflow != null) {  
+      buffer.writeAll(["\"overflow\":\`", this.overflow, "\`,"], "");
     }
 
-    if (this._padding != null) {  
-      buffer.writeAll(["\"padding\":", this._padding, ","], "");
+    if (this.padding != null) {  
+      buffer.writeAll(["\"padding\":", this.padding, ","], "");
     }
 
-    if (this._reserveSpace != null) {  
-      buffer.writeAll(["\"reserveSpace\":", this._reserveSpace, ","], "");
+    if (this.reserveSpace != null) {  
+      buffer.writeAll(["\"reserveSpace\":", this.reserveSpace, ","], "");
     }
 
     // NOTE: skip serialization of rotation (type "auto" is ignored)} 
 
-    if (this._staggerLines != null) {  
-      buffer.writeAll(["\"staggerLines\":", this._staggerLines, ","], "");
+    if (this.staggerLines != null) {  
+      buffer.writeAll(["\"staggerLines\":", this.staggerLines, ","], "");
     }
 
-    if (this._step != null) {  
-      buffer.writeAll(["\"step\":", this._step, ","], "");
+    if (this.step != null) {  
+      buffer.writeAll(["\"step\":", this.step, ","], "");
     }
 
     // NOTE: skip serialization of style (type CSSObject is ignored)} 
 
-    if (this._useHTML != null) {  
-      buffer.writeAll(["\"useHTML\":", this._useHTML, ","], "");
+    if (this.useHTML != null) {  
+      buffer.writeAll(["\"useHTML\":", this.useHTML, ","], "");
     }
 
-    if (this._x != null) {  
-      buffer.writeAll(["\"x\":", this._x, ","], "");
+    if (this.x != null) {  
+      buffer.writeAll(["\"x\":", this.x, ","], "");
     }
 
-    if (this._y != null) {  
-      buffer.writeAll(["\"y\":", this._y, ","], "");
+    if (this.y != null) {  
+      buffer.writeAll(["\"y\":", this.y, ","], "");
     }
 
-    if (this._zIndex != null) {  
-      buffer.writeAll(["\"zIndex\":", this._zIndex, ","], "");
+    if (this.zIndex != null) {  
+      buffer.writeAll(["\"zIndex\":", this.zIndex, ","], "");
     }
 
-    if (this._position3d != null) {  
-      buffer.writeAll(["\"position3d\":\`", this._position3d, "\`,"], "");
+    if (this.position3d != null) {  
+      buffer.writeAll(["\"position3d\":\`", this.position3d, "\`,"], "");
     }
 
-    if (this._skew3d != null) {  
-      buffer.writeAll(["\"skew3d\":", this._skew3d, ","], "");
+    if (this.skew3d != null) {  
+      buffer.writeAll(["\"skew3d\":", this.skew3d, ","], "");
     }
   }
 

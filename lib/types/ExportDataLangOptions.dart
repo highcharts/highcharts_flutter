@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,13 @@ import 'OptionFragment.dart';
  * ExportDataLangOptions 
  */
 class ExportDataLangOptions extends OptionFragment {
-  ExportDataLangOptions() : super();
-  String? _annotationHeader;  
-
+  ExportDataLangOptions( {
+    this.annotationHeader = null,
+    this.categoryHeader = null,
+    this.categoryDatetimeHeader = null
+  }) : super();
+  String? annotationHeader;
+    /*
   String get annotationHeader { 
     if (this._annotationHeader == null) {
       this._annotationHeader = "";
@@ -35,9 +39,10 @@ class ExportDataLangOptions extends OptionFragment {
   void set annotationHeader (String v) {
     this._annotationHeader = v;
   }
+    */
     
-  String? _categoryHeader;  
-
+  String? categoryHeader;
+    /*
   String get categoryHeader { 
     if (this._categoryHeader == null) {
       this._categoryHeader = "";
@@ -48,9 +53,10 @@ class ExportDataLangOptions extends OptionFragment {
   void set categoryHeader (String v) {
     this._categoryHeader = v;
   }
+    */
     
-  String? _categoryDatetimeHeader;  
-
+  String? categoryDatetimeHeader;
+    /*
   String get categoryDatetimeHeader { 
     if (this._categoryDatetimeHeader == null) {
       this._categoryDatetimeHeader = "";
@@ -61,6 +67,7 @@ class ExportDataLangOptions extends OptionFragment {
   void set categoryDatetimeHeader (String v) {
     this._categoryDatetimeHeader = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -70,16 +77,16 @@ class ExportDataLangOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._annotationHeader != null) {  
-      buffer.writeAll(["\"annotationHeader\":\`", this._annotationHeader, "\`,"], "");
+    if (this.annotationHeader != null) {  
+      buffer.writeAll(["\"annotationHeader\":\`", this.annotationHeader, "\`,"], "");
     }
 
-    if (this._categoryHeader != null) {  
-      buffer.writeAll(["\"categoryHeader\":\`", this._categoryHeader, "\`,"], "");
+    if (this.categoryHeader != null) {  
+      buffer.writeAll(["\"categoryHeader\":\`", this.categoryHeader, "\`,"], "");
     }
 
-    if (this._categoryDatetimeHeader != null) {  
-      buffer.writeAll(["\"categoryDatetimeHeader\":\`", this._categoryDatetimeHeader, "\`,"], "");
+    if (this.categoryDatetimeHeader != null) {  
+      buffer.writeAll(["\"categoryDatetimeHeader\":\`", this.categoryDatetimeHeader, "\`,"], "");
     }
   }
 

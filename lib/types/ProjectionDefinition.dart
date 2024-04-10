@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -24,9 +24,12 @@ import 'OptionFragment.dart';
  * ProjectionDefinition 
  */
 class ProjectionDefinition extends Projector {
-  ProjectionDefinition() : super();
-  bool? _antimeridianCutting;  
-
+  ProjectionDefinition( {
+    this.antimeridianCutting = null,
+    this.maxLatitude = null
+  }) : super();
+  bool? antimeridianCutting;
+    /*
   bool get antimeridianCutting { 
     if (this._antimeridianCutting == null) {
       this._antimeridianCutting = false;
@@ -37,9 +40,10 @@ class ProjectionDefinition extends Projector {
   void set antimeridianCutting (bool v) {
     this._antimeridianCutting = v;
   }
+    */
     
-  double? _maxLatitude;  
-
+  double? maxLatitude;
+    /*
   double get maxLatitude { 
     if (this._maxLatitude == null) {
       this._maxLatitude = 0;
@@ -50,6 +54,7 @@ class ProjectionDefinition extends Projector {
   void set maxLatitude (double v) {
     this._maxLatitude = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -59,14 +64,14 @@ class ProjectionDefinition extends Projector {
     super.toJSONInner(buffer);
 
     
-    if (this._antimeridianCutting != null) {  
-      buffer.writeAll(["\"antimeridianCutting\":", this._antimeridianCutting, ","], "");
+    if (this.antimeridianCutting != null) {  
+      buffer.writeAll(["\"antimeridianCutting\":", this.antimeridianCutting, ","], "");
     }
 
     // NOTE: skip serialization of bounds (type MapBounds is ignored)} 
 
-    if (this._maxLatitude != null) {  
-      buffer.writeAll(["\"maxLatitude\":", this._maxLatitude, ","], "");
+    if (this.maxLatitude != null) {  
+      buffer.writeAll(["\"maxLatitude\":", this.maxLatitude, ","], "");
     }
   }
 

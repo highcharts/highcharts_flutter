@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -24,9 +24,102 @@ import 'OptionFragment.dart';
  * SVGAttributes 
  */
 class SVGAttributes extends OptionFragment {
-  SVGAttributes() : super();
-  String? _align;  
-
+  SVGAttributes( {
+    this.align = null,
+    this.alignment_baseline = null,
+    this.alphaCorrection = null,
+    this.anchorX = null,
+    this.anchorY = null,
+    this.animator = null,
+    this.aria_expanded = null,
+    this.aria_hidden = null,
+    this.aria_label = null,
+    this.kw_class /** WARN: class is rewritten as it's a keyword */ = null,
+    this.clip_path = null,
+    this.clockwise = null,
+    this.cursor = null,
+    this.cx = null,
+    this.cy = null,
+    this.dashstyle = null,
+    this.depth = null,
+    this.display = null,
+    this.dominant_baseline = null,
+    this.dx = null,
+    this.dy = null,
+    this.end = null,
+    this.fill = null,
+    this.fill_opacity = null,
+    this.filter = null,
+    this.filterUnits = null,
+    this.flood_color = null,
+    this.flood_opacity = null,
+    this.height = null,
+    this.href = null,
+    this.id = null,
+    this.kw_in /** WARN: in is rewritten as it's a keyword */ = null,
+    this.innerR = null,
+    this.inverted = null,
+    this.longArc = null,
+    this.markerHeight = null,
+    this.markerWidth = null,
+    this.offset = null,
+    this.opacity = null,
+    this.open = null,
+    this.padding = null,
+    this.patternContentUnits = null,
+    this.patternTransform = null,
+    this.preserveAspectRatio = null,
+    this.r = null,
+    this.refX = null,
+    this.refY = null,
+    this.rx = null,
+    this.ry = null,
+    this.role = null,
+    this.rotation = null,
+    this.rotationOriginX = null,
+    this.rotationOriginY = null,
+    this.scaleX = null,
+    this.scaleY = null,
+    this.slope = null,
+    this.start = null,
+    this.stdDeviation = null,
+    this.stroke = null,
+    this.stroke_linecap = null,
+    this.stroke_linejoin = null,
+    this.stroke_opacity = null,
+    this.stroke_width = null,
+    this.strokeWidth = null,
+    this.stop_color = null,
+    this.stop_opacity = null,
+    this.tabindex = null,
+    this.tableValues = null,
+    this.text = null,
+    this.text_align = null,
+    this.text_anchor = null,
+    this.title = null,
+    this.transform = null,
+    this.translateX = null,
+    this.translateY = null,
+    this.type = null,
+    this.version = null,
+    this.viewBox = null,
+    this.visibility = null,
+    this.width = null,
+    this.x = null,
+    this.x1 = null,
+    this.x2 = null,
+    this.xmlns = null,
+    this.y = null,
+    this.y1 = null,
+    this.y2 = null,
+    this.z = null,
+    this.zIndex = null,
+    this.borderRadius = null,
+    this.brBoxHeight = null,
+    this.brBoxY = null
+  }) : super();
+  String? align;
+    /*
   String get align { 
     if (this._align == null) {
       this._align = "";
@@ -37,9 +130,10 @@ class SVGAttributes extends OptionFragment {
   void set align (String v) {
     this._align = v;
   }
+    */
     
-  String? _alignment_baseline;  
-
+  String? alignment_baseline;
+    /*
   String get alignment_baseline { 
     if (this._alignment_baseline == null) {
       this._alignment_baseline = "";
@@ -50,9 +144,10 @@ class SVGAttributes extends OptionFragment {
   void set alignment_baseline (String v) {
     this._alignment_baseline = v;
   }
+    */
     
-  double? _alphaCorrection;  
-
+  double? alphaCorrection;
+    /*
   double get alphaCorrection { 
     if (this._alphaCorrection == null) {
       this._alphaCorrection = 0;
@@ -63,9 +158,10 @@ class SVGAttributes extends OptionFragment {
   void set alphaCorrection (double v) {
     this._alphaCorrection = v;
   }
+    */
     
-  double? _anchorX;  
-
+  double? anchorX;
+    /*
   double get anchorX { 
     if (this._anchorX == null) {
       this._anchorX = 0;
@@ -76,9 +172,10 @@ class SVGAttributes extends OptionFragment {
   void set anchorX (double v) {
     this._anchorX = v;
   }
+    */
     
-  double? _anchorY;  
-
+  double? anchorY;
+    /*
   double get anchorY { 
     if (this._anchorY == null) {
       this._anchorY = 0;
@@ -89,9 +186,10 @@ class SVGAttributes extends OptionFragment {
   void set anchorY (double v) {
     this._anchorY = v;
   }
+    */
     
-  double? _animator;  
-
+  double? animator;
+    /*
   double get animator { 
     if (this._animator == null) {
       this._animator = 0;
@@ -102,9 +200,10 @@ class SVGAttributes extends OptionFragment {
   void set animator (double v) {
     this._animator = v;
   }
+    */
     
-  bool? _aria_expanded;  
-
+  bool? aria_expanded;
+    /*
   bool get aria_expanded { 
     if (this._aria_expanded == null) {
       this._aria_expanded = false;
@@ -115,9 +214,10 @@ class SVGAttributes extends OptionFragment {
   void set aria_expanded (bool v) {
     this._aria_expanded = v;
   }
+    */
     
-  bool? _aria_hidden;  
-
+  bool? aria_hidden;
+    /*
   bool get aria_hidden { 
     if (this._aria_hidden == null) {
       this._aria_hidden = false;
@@ -128,9 +228,10 @@ class SVGAttributes extends OptionFragment {
   void set aria_hidden (bool v) {
     this._aria_hidden = v;
   }
+    */
     
-  String? _aria_label;  
-
+  String? aria_label;
+    /*
   String get aria_label { 
     if (this._aria_label == null) {
       this._aria_label = "";
@@ -141,9 +242,10 @@ class SVGAttributes extends OptionFragment {
   void set aria_label (String v) {
     this._aria_label = v;
   }
+    */
     
-  String? _kw_class /** WARN: class is rewritten as it's a keyword */;  
-
+  String? kw_class /** WARN: class is rewritten as it's a keyword */;
+    /*
   String get kw_class /** WARN: class is rewritten as it's a keyword */ { 
     if (this._kw_class /** WARN: class is rewritten as it's a keyword */ == null) {
       this._kw_class /** WARN: class is rewritten as it's a keyword */ = "";
@@ -154,9 +256,10 @@ class SVGAttributes extends OptionFragment {
   void set kw_class /** WARN: class is rewritten as it's a keyword */ (String v) {
     this._kw_class /** WARN: class is rewritten as it's a keyword */ = v;
   }
+    */
     
-  String? _clip_path;  
-
+  String? clip_path;
+    /*
   String get clip_path { 
     if (this._clip_path == null) {
       this._clip_path = "";
@@ -167,9 +270,10 @@ class SVGAttributes extends OptionFragment {
   void set clip_path (String v) {
     this._clip_path = v;
   }
+    */
     
-  double? _clockwise;  
-
+  double? clockwise;
+    /*
   double get clockwise { 
     if (this._clockwise == null) {
       this._clockwise = 0;
@@ -180,9 +284,10 @@ class SVGAttributes extends OptionFragment {
   void set clockwise (double v) {
     this._clockwise = v;
   }
+    */
     
-  String? _cursor;  
-
+  String? cursor;
+    /*
   String get cursor { 
     if (this._cursor == null) {
       this._cursor = "";
@@ -193,9 +298,10 @@ class SVGAttributes extends OptionFragment {
   void set cursor (String v) {
     this._cursor = v;
   }
+    */
     
-  double? _cx;  
-
+  double? cx;
+    /*
   double get cx { 
     if (this._cx == null) {
       this._cx = 0;
@@ -206,9 +312,10 @@ class SVGAttributes extends OptionFragment {
   void set cx (double v) {
     this._cx = v;
   }
+    */
     
-  double? _cy;  
-
+  double? cy;
+    /*
   double get cy { 
     if (this._cy == null) {
       this._cy = 0;
@@ -219,9 +326,10 @@ class SVGAttributes extends OptionFragment {
   void set cy (double v) {
     this._cy = v;
   }
+    */
     
-  String? _dashstyle;  
-
+  String? dashstyle;
+    /*
   String get dashstyle { 
     if (this._dashstyle == null) {
       this._dashstyle = "";
@@ -232,9 +340,10 @@ class SVGAttributes extends OptionFragment {
   void set dashstyle (String v) {
     this._dashstyle = v;
   }
+    */
     
-  double? _depth;  
-
+  double? depth;
+    /*
   double get depth { 
     if (this._depth == null) {
       this._depth = 0;
@@ -245,9 +354,10 @@ class SVGAttributes extends OptionFragment {
   void set depth (double v) {
     this._depth = v;
   }
+    */
     
-  String? _display;  
-
+  String? display;
+    /*
   String get display { 
     if (this._display == null) {
       this._display = "";
@@ -258,9 +368,10 @@ class SVGAttributes extends OptionFragment {
   void set display (String v) {
     this._display = v;
   }
+    */
     
-  String? _dominant_baseline;  
-
+  String? dominant_baseline;
+    /*
   String get dominant_baseline { 
     if (this._dominant_baseline == null) {
       this._dominant_baseline = "";
@@ -271,9 +382,10 @@ class SVGAttributes extends OptionFragment {
   void set dominant_baseline (String v) {
     this._dominant_baseline = v;
   }
+    */
     
-  double? _dx;  
-
+  double? dx;
+    /*
   double get dx { 
     if (this._dx == null) {
       this._dx = 0;
@@ -284,9 +396,10 @@ class SVGAttributes extends OptionFragment {
   void set dx (double v) {
     this._dx = v;
   }
+    */
     
-  double? _dy;  
-
+  double? dy;
+    /*
   double get dy { 
     if (this._dy == null) {
       this._dy = 0;
@@ -297,9 +410,10 @@ class SVGAttributes extends OptionFragment {
   void set dy (double v) {
     this._dy = v;
   }
+    */
     
-  double? _end;  
-
+  double? end;
+    /*
   double get end { 
     if (this._end == null) {
       this._end = 0;
@@ -310,9 +424,10 @@ class SVGAttributes extends OptionFragment {
   void set end (double v) {
     this._end = v;
   }
+    */
     
-  String? _fill;  
-
+  String? fill;
+    /*
   String get fill { 
     if (this._fill == null) {
       this._fill = "";
@@ -323,9 +438,10 @@ class SVGAttributes extends OptionFragment {
   void set fill (String v) {
     this._fill = v;
   }
+    */
     
-  double? _fill_opacity;  
-
+  double? fill_opacity;
+    /*
   double get fill_opacity { 
     if (this._fill_opacity == null) {
       this._fill_opacity = 0;
@@ -336,9 +452,10 @@ class SVGAttributes extends OptionFragment {
   void set fill_opacity (double v) {
     this._fill_opacity = v;
   }
+    */
     
-  String? _filter;  
-
+  String? filter;
+    /*
   String get filter { 
     if (this._filter == null) {
       this._filter = "";
@@ -349,9 +466,10 @@ class SVGAttributes extends OptionFragment {
   void set filter (String v) {
     this._filter = v;
   }
+    */
     
-  String? _filterUnits;  
-
+  String? filterUnits;
+    /*
   String get filterUnits { 
     if (this._filterUnits == null) {
       this._filterUnits = "";
@@ -362,9 +480,10 @@ class SVGAttributes extends OptionFragment {
   void set filterUnits (String v) {
     this._filterUnits = v;
   }
+    */
     
-  String? _flood_color;  
-
+  String? flood_color;
+    /*
   String get flood_color { 
     if (this._flood_color == null) {
       this._flood_color = "";
@@ -375,9 +494,10 @@ class SVGAttributes extends OptionFragment {
   void set flood_color (String v) {
     this._flood_color = v;
   }
+    */
     
-  double? _flood_opacity;  
-
+  double? flood_opacity;
+    /*
   double get flood_opacity { 
     if (this._flood_opacity == null) {
       this._flood_opacity = 0;
@@ -388,9 +508,10 @@ class SVGAttributes extends OptionFragment {
   void set flood_opacity (double v) {
     this._flood_opacity = v;
   }
+    */
     
-  double? _height;  
-
+  double? height;
+    /*
   double get height { 
     if (this._height == null) {
       this._height = 0;
@@ -401,9 +522,10 @@ class SVGAttributes extends OptionFragment {
   void set height (double v) {
     this._height = v;
   }
+    */
     
-  String? _href;  
-
+  String? href;
+    /*
   String get href { 
     if (this._href == null) {
       this._href = "";
@@ -414,9 +536,10 @@ class SVGAttributes extends OptionFragment {
   void set href (String v) {
     this._href = v;
   }
+    */
     
-  String? _id;  
-
+  String? id;
+    /*
   String get id { 
     if (this._id == null) {
       this._id = "";
@@ -427,9 +550,10 @@ class SVGAttributes extends OptionFragment {
   void set id (String v) {
     this._id = v;
   }
+    */
     
-  String? _kw_in /** WARN: in is rewritten as it's a keyword */;  
-
+  String? kw_in /** WARN: in is rewritten as it's a keyword */;
+    /*
   String get kw_in /** WARN: in is rewritten as it's a keyword */ { 
     if (this._kw_in /** WARN: in is rewritten as it's a keyword */ == null) {
       this._kw_in /** WARN: in is rewritten as it's a keyword */ = "";
@@ -440,9 +564,10 @@ class SVGAttributes extends OptionFragment {
   void set kw_in /** WARN: in is rewritten as it's a keyword */ (String v) {
     this._kw_in /** WARN: in is rewritten as it's a keyword */ = v;
   }
+    */
     
-  double? _innerR;  
-
+  double? innerR;
+    /*
   double get innerR { 
     if (this._innerR == null) {
       this._innerR = 0;
@@ -453,9 +578,10 @@ class SVGAttributes extends OptionFragment {
   void set innerR (double v) {
     this._innerR = v;
   }
+    */
     
-  bool? _inverted;  
-
+  bool? inverted;
+    /*
   bool get inverted { 
     if (this._inverted == null) {
       this._inverted = false;
@@ -466,9 +592,10 @@ class SVGAttributes extends OptionFragment {
   void set inverted (bool v) {
     this._inverted = v;
   }
+    */
     
-  double? _longArc;  
-
+  double? longArc;
+    /*
   double get longArc { 
     if (this._longArc == null) {
       this._longArc = 0;
@@ -479,9 +606,10 @@ class SVGAttributes extends OptionFragment {
   void set longArc (double v) {
     this._longArc = v;
   }
+    */
     
-  double? _markerHeight;  
-
+  double? markerHeight;
+    /*
   double get markerHeight { 
     if (this._markerHeight == null) {
       this._markerHeight = 0;
@@ -492,9 +620,10 @@ class SVGAttributes extends OptionFragment {
   void set markerHeight (double v) {
     this._markerHeight = v;
   }
+    */
     
-  double? _markerWidth;  
-
+  double? markerWidth;
+    /*
   double get markerWidth { 
     if (this._markerWidth == null) {
       this._markerWidth = 0;
@@ -505,9 +634,10 @@ class SVGAttributes extends OptionFragment {
   void set markerWidth (double v) {
     this._markerWidth = v;
   }
+    */
     
-  double? _offset;  
-
+  double? offset;
+    /*
   double get offset { 
     if (this._offset == null) {
       this._offset = 0;
@@ -518,9 +648,10 @@ class SVGAttributes extends OptionFragment {
   void set offset (double v) {
     this._offset = v;
   }
+    */
     
-  double? _opacity;  
-
+  double? opacity;
+    /*
   double get opacity { 
     if (this._opacity == null) {
       this._opacity = 0;
@@ -531,9 +662,10 @@ class SVGAttributes extends OptionFragment {
   void set opacity (double v) {
     this._opacity = v;
   }
+    */
     
-  bool? _open;  
-
+  bool? open;
+    /*
   bool get open { 
     if (this._open == null) {
       this._open = false;
@@ -544,9 +676,10 @@ class SVGAttributes extends OptionFragment {
   void set open (bool v) {
     this._open = v;
   }
+    */
     
-  double? _padding;  
-
+  double? padding;
+    /*
   double get padding { 
     if (this._padding == null) {
       this._padding = 0;
@@ -557,9 +690,10 @@ class SVGAttributes extends OptionFragment {
   void set padding (double v) {
     this._padding = v;
   }
+    */
     
-  String? _patternContentUnits;  
-
+  String? patternContentUnits;
+    /*
   String get patternContentUnits { 
     if (this._patternContentUnits == null) {
       this._patternContentUnits = "";
@@ -570,9 +704,10 @@ class SVGAttributes extends OptionFragment {
   void set patternContentUnits (String v) {
     this._patternContentUnits = v;
   }
+    */
     
-  String? _patternTransform;  
-
+  String? patternTransform;
+    /*
   String get patternTransform { 
     if (this._patternTransform == null) {
       this._patternTransform = "";
@@ -583,9 +718,10 @@ class SVGAttributes extends OptionFragment {
   void set patternTransform (String v) {
     this._patternTransform = v;
   }
+    */
     
-  String? _preserveAspectRatio;  
-
+  String? preserveAspectRatio;
+    /*
   String get preserveAspectRatio { 
     if (this._preserveAspectRatio == null) {
       this._preserveAspectRatio = "";
@@ -596,9 +732,10 @@ class SVGAttributes extends OptionFragment {
   void set preserveAspectRatio (String v) {
     this._preserveAspectRatio = v;
   }
+    */
     
-  double? _r;  
-
+  double? r;
+    /*
   double get r { 
     if (this._r == null) {
       this._r = 0;
@@ -609,9 +746,10 @@ class SVGAttributes extends OptionFragment {
   void set r (double v) {
     this._r = v;
   }
+    */
     
-  double? _refX;  
-
+  double? refX;
+    /*
   double get refX { 
     if (this._refX == null) {
       this._refX = 0;
@@ -622,9 +760,10 @@ class SVGAttributes extends OptionFragment {
   void set refX (double v) {
     this._refX = v;
   }
+    */
     
-  double? _refY;  
-
+  double? refY;
+    /*
   double get refY { 
     if (this._refY == null) {
       this._refY = 0;
@@ -635,9 +774,10 @@ class SVGAttributes extends OptionFragment {
   void set refY (double v) {
     this._refY = v;
   }
+    */
     
-  double? _rx;  
-
+  double? rx;
+    /*
   double get rx { 
     if (this._rx == null) {
       this._rx = 0;
@@ -648,9 +788,10 @@ class SVGAttributes extends OptionFragment {
   void set rx (double v) {
     this._rx = v;
   }
+    */
     
-  double? _ry;  
-
+  double? ry;
+    /*
   double get ry { 
     if (this._ry == null) {
       this._ry = 0;
@@ -661,9 +802,10 @@ class SVGAttributes extends OptionFragment {
   void set ry (double v) {
     this._ry = v;
   }
+    */
     
-  String? _role;  
-
+  String? role;
+    /*
   String get role { 
     if (this._role == null) {
       this._role = "";
@@ -674,9 +816,10 @@ class SVGAttributes extends OptionFragment {
   void set role (String v) {
     this._role = v;
   }
+    */
     
-  double? _rotation;  
-
+  double? rotation;
+    /*
   double get rotation { 
     if (this._rotation == null) {
       this._rotation = 0;
@@ -687,9 +830,10 @@ class SVGAttributes extends OptionFragment {
   void set rotation (double v) {
     this._rotation = v;
   }
+    */
     
-  double? _rotationOriginX;  
-
+  double? rotationOriginX;
+    /*
   double get rotationOriginX { 
     if (this._rotationOriginX == null) {
       this._rotationOriginX = 0;
@@ -700,9 +844,10 @@ class SVGAttributes extends OptionFragment {
   void set rotationOriginX (double v) {
     this._rotationOriginX = v;
   }
+    */
     
-  double? _rotationOriginY;  
-
+  double? rotationOriginY;
+    /*
   double get rotationOriginY { 
     if (this._rotationOriginY == null) {
       this._rotationOriginY = 0;
@@ -713,9 +858,10 @@ class SVGAttributes extends OptionFragment {
   void set rotationOriginY (double v) {
     this._rotationOriginY = v;
   }
+    */
     
-  double? _scaleX;  
-
+  double? scaleX;
+    /*
   double get scaleX { 
     if (this._scaleX == null) {
       this._scaleX = 0;
@@ -726,9 +872,10 @@ class SVGAttributes extends OptionFragment {
   void set scaleX (double v) {
     this._scaleX = v;
   }
+    */
     
-  double? _scaleY;  
-
+  double? scaleY;
+    /*
   double get scaleY { 
     if (this._scaleY == null) {
       this._scaleY = 0;
@@ -739,9 +886,10 @@ class SVGAttributes extends OptionFragment {
   void set scaleY (double v) {
     this._scaleY = v;
   }
+    */
     
-  double? _slope;  
-
+  double? slope;
+    /*
   double get slope { 
     if (this._slope == null) {
       this._slope = 0;
@@ -752,9 +900,10 @@ class SVGAttributes extends OptionFragment {
   void set slope (double v) {
     this._slope = v;
   }
+    */
     
-  double? _start;  
-
+  double? start;
+    /*
   double get start { 
     if (this._start == null) {
       this._start = 0;
@@ -765,9 +914,10 @@ class SVGAttributes extends OptionFragment {
   void set start (double v) {
     this._start = v;
   }
+    */
     
-  double? _stdDeviation;  
-
+  double? stdDeviation;
+    /*
   double get stdDeviation { 
     if (this._stdDeviation == null) {
       this._stdDeviation = 0;
@@ -778,9 +928,10 @@ class SVGAttributes extends OptionFragment {
   void set stdDeviation (double v) {
     this._stdDeviation = v;
   }
+    */
     
-  String? _stroke;  
-
+  String? stroke;
+    /*
   String get stroke { 
     if (this._stroke == null) {
       this._stroke = "";
@@ -791,9 +942,10 @@ class SVGAttributes extends OptionFragment {
   void set stroke (String v) {
     this._stroke = v;
   }
+    */
     
-  String? _stroke_linecap;  
-
+  String? stroke_linecap;
+    /*
   String get stroke_linecap { 
     if (this._stroke_linecap == null) {
       this._stroke_linecap = "";
@@ -804,9 +956,10 @@ class SVGAttributes extends OptionFragment {
   void set stroke_linecap (String v) {
     this._stroke_linecap = v;
   }
+    */
     
-  String? _stroke_linejoin;  
-
+  String? stroke_linejoin;
+    /*
   String get stroke_linejoin { 
     if (this._stroke_linejoin == null) {
       this._stroke_linejoin = "";
@@ -817,9 +970,10 @@ class SVGAttributes extends OptionFragment {
   void set stroke_linejoin (String v) {
     this._stroke_linejoin = v;
   }
+    */
     
-  double? _stroke_opacity;  
-
+  double? stroke_opacity;
+    /*
   double get stroke_opacity { 
     if (this._stroke_opacity == null) {
       this._stroke_opacity = 0;
@@ -830,9 +984,10 @@ class SVGAttributes extends OptionFragment {
   void set stroke_opacity (double v) {
     this._stroke_opacity = v;
   }
+    */
     
-  double? _stroke_width;  
-
+  double? stroke_width;
+    /*
   double get stroke_width { 
     if (this._stroke_width == null) {
       this._stroke_width = 0;
@@ -843,9 +998,10 @@ class SVGAttributes extends OptionFragment {
   void set stroke_width (double v) {
     this._stroke_width = v;
   }
+    */
     
-  double? _strokeWidth;  
-
+  double? strokeWidth;
+    /*
   double get strokeWidth { 
     if (this._strokeWidth == null) {
       this._strokeWidth = 0;
@@ -856,9 +1012,10 @@ class SVGAttributes extends OptionFragment {
   void set strokeWidth (double v) {
     this._strokeWidth = v;
   }
+    */
     
-  String? _stop_color;  
-
+  String? stop_color;
+    /*
   String get stop_color { 
     if (this._stop_color == null) {
       this._stop_color = "";
@@ -869,9 +1026,10 @@ class SVGAttributes extends OptionFragment {
   void set stop_color (String v) {
     this._stop_color = v;
   }
+    */
     
-  double? _stop_opacity;  
-
+  double? stop_opacity;
+    /*
   double get stop_opacity { 
     if (this._stop_opacity == null) {
       this._stop_opacity = 0;
@@ -882,9 +1040,10 @@ class SVGAttributes extends OptionFragment {
   void set stop_opacity (double v) {
     this._stop_opacity = v;
   }
+    */
     
-  double? _tabindex;  
-
+  double? tabindex;
+    /*
   double get tabindex { 
     if (this._tabindex == null) {
       this._tabindex = 0;
@@ -895,9 +1054,10 @@ class SVGAttributes extends OptionFragment {
   void set tabindex (double v) {
     this._tabindex = v;
   }
+    */
     
-  String? _tableValues;  
-
+  String? tableValues;
+    /*
   String get tableValues { 
     if (this._tableValues == null) {
       this._tableValues = "";
@@ -908,9 +1068,10 @@ class SVGAttributes extends OptionFragment {
   void set tableValues (String v) {
     this._tableValues = v;
   }
+    */
     
-  String? _text;  
-
+  String? text;
+    /*
   String get text { 
     if (this._text == null) {
       this._text = "";
@@ -921,9 +1082,10 @@ class SVGAttributes extends OptionFragment {
   void set text (String v) {
     this._text = v;
   }
+    */
     
-  String? _text_align;  
-
+  String? text_align;
+    /*
   String get text_align { 
     if (this._text_align == null) {
       this._text_align = "";
@@ -934,9 +1096,10 @@ class SVGAttributes extends OptionFragment {
   void set text_align (String v) {
     this._text_align = v;
   }
+    */
     
-  String? _text_anchor;  
-
+  String? text_anchor;
+    /*
   String get text_anchor { 
     if (this._text_anchor == null) {
       this._text_anchor = "";
@@ -947,9 +1110,10 @@ class SVGAttributes extends OptionFragment {
   void set text_anchor (String v) {
     this._text_anchor = v;
   }
+    */
     
-  String? _title;  
-
+  String? title;
+    /*
   String get title { 
     if (this._title == null) {
       this._title = "";
@@ -960,9 +1124,10 @@ class SVGAttributes extends OptionFragment {
   void set title (String v) {
     this._title = v;
   }
+    */
     
-  String? _transform;  
-
+  String? transform;
+    /*
   String get transform { 
     if (this._transform == null) {
       this._transform = "";
@@ -973,9 +1138,10 @@ class SVGAttributes extends OptionFragment {
   void set transform (String v) {
     this._transform = v;
   }
+    */
     
-  double? _translateX;  
-
+  double? translateX;
+    /*
   double get translateX { 
     if (this._translateX == null) {
       this._translateX = 0;
@@ -986,9 +1152,10 @@ class SVGAttributes extends OptionFragment {
   void set translateX (double v) {
     this._translateX = v;
   }
+    */
     
-  double? _translateY;  
-
+  double? translateY;
+    /*
   double get translateY { 
     if (this._translateY == null) {
       this._translateY = 0;
@@ -999,9 +1166,10 @@ class SVGAttributes extends OptionFragment {
   void set translateY (double v) {
     this._translateY = v;
   }
+    */
     
-  String? _type;  
-
+  String? type;
+    /*
   String get type { 
     if (this._type == null) {
       this._type = "";
@@ -1012,9 +1180,10 @@ class SVGAttributes extends OptionFragment {
   void set type (String v) {
     this._type = v;
   }
+    */
     
-  String? _version;  
-
+  String? version;
+    /*
   String get version { 
     if (this._version == null) {
       this._version = "";
@@ -1025,9 +1194,10 @@ class SVGAttributes extends OptionFragment {
   void set version (String v) {
     this._version = v;
   }
+    */
     
-  String? _viewBox;  
-
+  String? viewBox;
+    /*
   String get viewBox { 
     if (this._viewBox == null) {
       this._viewBox = "";
@@ -1038,9 +1208,10 @@ class SVGAttributes extends OptionFragment {
   void set viewBox (String v) {
     this._viewBox = v;
   }
+    */
     
-  String? _visibility;  
-
+  String? visibility;
+    /*
   String get visibility { 
     if (this._visibility == null) {
       this._visibility = "";
@@ -1051,9 +1222,10 @@ class SVGAttributes extends OptionFragment {
   void set visibility (String v) {
     this._visibility = v;
   }
+    */
     
-  double? _width;  
-
+  double? width;
+    /*
   double get width { 
     if (this._width == null) {
       this._width = 0;
@@ -1064,9 +1236,10 @@ class SVGAttributes extends OptionFragment {
   void set width (double v) {
     this._width = v;
   }
+    */
     
-  double? _x;  
-
+  double? x;
+    /*
   double get x { 
     if (this._x == null) {
       this._x = 0;
@@ -1077,9 +1250,10 @@ class SVGAttributes extends OptionFragment {
   void set x (double v) {
     this._x = v;
   }
+    */
     
-  double? _x1;  
-
+  double? x1;
+    /*
   double get x1 { 
     if (this._x1 == null) {
       this._x1 = 0;
@@ -1090,9 +1264,10 @@ class SVGAttributes extends OptionFragment {
   void set x1 (double v) {
     this._x1 = v;
   }
+    */
     
-  double? _x2;  
-
+  double? x2;
+    /*
   double get x2 { 
     if (this._x2 == null) {
       this._x2 = 0;
@@ -1103,9 +1278,10 @@ class SVGAttributes extends OptionFragment {
   void set x2 (double v) {
     this._x2 = v;
   }
+    */
     
-  String? _xmlns;  
-
+  String? xmlns;
+    /*
   String get xmlns { 
     if (this._xmlns == null) {
       this._xmlns = "";
@@ -1116,9 +1292,10 @@ class SVGAttributes extends OptionFragment {
   void set xmlns (String v) {
     this._xmlns = v;
   }
+    */
     
-  double? _y;  
-
+  double? y;
+    /*
   double get y { 
     if (this._y == null) {
       this._y = 0;
@@ -1129,9 +1306,10 @@ class SVGAttributes extends OptionFragment {
   void set y (double v) {
     this._y = v;
   }
+    */
     
-  double? _y1;  
-
+  double? y1;
+    /*
   double get y1 { 
     if (this._y1 == null) {
       this._y1 = 0;
@@ -1142,9 +1320,10 @@ class SVGAttributes extends OptionFragment {
   void set y1 (double v) {
     this._y1 = v;
   }
+    */
     
-  double? _y2;  
-
+  double? y2;
+    /*
   double get y2 { 
     if (this._y2 == null) {
       this._y2 = 0;
@@ -1155,9 +1334,10 @@ class SVGAttributes extends OptionFragment {
   void set y2 (double v) {
     this._y2 = v;
   }
+    */
     
-  double? _z;  
-
+  double? z;
+    /*
   double get z { 
     if (this._z == null) {
       this._z = 0;
@@ -1168,9 +1348,10 @@ class SVGAttributes extends OptionFragment {
   void set z (double v) {
     this._z = v;
   }
+    */
     
-  double? _zIndex;  
-
+  double? zIndex;
+    /*
   double get zIndex { 
     if (this._zIndex == null) {
       this._zIndex = 0;
@@ -1181,9 +1362,10 @@ class SVGAttributes extends OptionFragment {
   void set zIndex (double v) {
     this._zIndex = v;
   }
+    */
     
-  String? _borderRadius;  
-
+  String? borderRadius;
+    /*
   String get borderRadius { 
     if (this._borderRadius == null) {
       this._borderRadius = "";
@@ -1194,9 +1376,10 @@ class SVGAttributes extends OptionFragment {
   void set borderRadius (String v) {
     this._borderRadius = v;
   }
+    */
     
-  double? _brBoxHeight;  
-
+  double? brBoxHeight;
+    /*
   double get brBoxHeight { 
     if (this._brBoxHeight == null) {
       this._brBoxHeight = 0;
@@ -1207,9 +1390,10 @@ class SVGAttributes extends OptionFragment {
   void set brBoxHeight (double v) {
     this._brBoxHeight = v;
   }
+    */
     
-  double? _brBoxY;  
-
+  double? brBoxY;
+    /*
   double get brBoxY { 
     if (this._brBoxY == null) {
       this._brBoxY = 0;
@@ -1220,6 +1404,7 @@ class SVGAttributes extends OptionFragment {
   void set brBoxY (double v) {
     this._brBoxY = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -1229,388 +1414,388 @@ class SVGAttributes extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._align != null) {  
-      buffer.writeAll(["\"align\":\`", this._align, "\`,"], "");
+    if (this.align != null) {  
+      buffer.writeAll(["\"align\":\`", this.align, "\`,"], "");
     }
 
-    if (this._alignment_baseline != null) {  
-      buffer.writeAll(["\"alignment-baseline\":\`", this._alignment_baseline, "\`,"], "");
+    if (this.alignment_baseline != null) {  
+      buffer.writeAll(["\"alignment-baseline\":\`", this.alignment_baseline, "\`,"], "");
     }
 
-    if (this._alphaCorrection != null) {  
-      buffer.writeAll(["\"alphaCorrection\":", this._alphaCorrection, ","], "");
+    if (this.alphaCorrection != null) {  
+      buffer.writeAll(["\"alphaCorrection\":", this.alphaCorrection, ","], "");
     }
 
-    if (this._anchorX != null) {  
-      buffer.writeAll(["\"anchorX\":", this._anchorX, ","], "");
+    if (this.anchorX != null) {  
+      buffer.writeAll(["\"anchorX\":", this.anchorX, ","], "");
     }
 
-    if (this._anchorY != null) {  
-      buffer.writeAll(["\"anchorY\":", this._anchorY, ","], "");
+    if (this.anchorY != null) {  
+      buffer.writeAll(["\"anchorY\":", this.anchorY, ","], "");
     }
 
-    if (this._animator != null) {  
-      buffer.writeAll(["\"animator\":", this._animator, ","], "");
+    if (this.animator != null) {  
+      buffer.writeAll(["\"animator\":", this.animator, ","], "");
     }
 
-    if (this._aria_expanded != null) {  
-      buffer.writeAll(["\"aria-expanded\":", this._aria_expanded, ","], "");
+    if (this.aria_expanded != null) {  
+      buffer.writeAll(["\"aria-expanded\":", this.aria_expanded, ","], "");
     }
 
-    if (this._aria_hidden != null) {  
-      buffer.writeAll(["\"aria-hidden\":", this._aria_hidden, ","], "");
+    if (this.aria_hidden != null) {  
+      buffer.writeAll(["\"aria-hidden\":", this.aria_hidden, ","], "");
     }
 
-    if (this._aria_label != null) {  
-      buffer.writeAll(["\"aria-label\":\`", this._aria_label, "\`,"], "");
+    if (this.aria_label != null) {  
+      buffer.writeAll(["\"aria-label\":\`", this.aria_label, "\`,"], "");
     }
 
-    if (this._kw_class /** WARN: class is rewritten as it's a keyword */ != null) {  
-      buffer.writeAll(["\"class\":\`", this._kw_class /** WARN: class is rewritten as it's a keyword */, "\`,"], "");
+    if (this.kw_class /** WARN: class is rewritten as it's a keyword */ != null) {  
+      buffer.writeAll(["\"class\":\`", this.kw_class /** WARN: class is rewritten as it's a keyword */, "\`,"], "");
     }
 
-    if (this._clip_path != null) {  
-      buffer.writeAll(["\"clip-path\":\`", this._clip_path, "\`,"], "");
+    if (this.clip_path != null) {  
+      buffer.writeAll(["\"clip-path\":\`", this.clip_path, "\`,"], "");
     }
 
-    if (this._clockwise != null) {  
-      buffer.writeAll(["\"clockwise\":", this._clockwise, ","], "");
+    if (this.clockwise != null) {  
+      buffer.writeAll(["\"clockwise\":", this.clockwise, ","], "");
     }
 
-    if (this._cursor != null) {  
-      buffer.writeAll(["\"cursor\":\`", this._cursor, "\`,"], "");
+    if (this.cursor != null) {  
+      buffer.writeAll(["\"cursor\":\`", this.cursor, "\`,"], "");
     }
 
-    if (this._cx != null) {  
-      buffer.writeAll(["\"cx\":", this._cx, ","], "");
+    if (this.cx != null) {  
+      buffer.writeAll(["\"cx\":", this.cx, ","], "");
     }
 
-    if (this._cy != null) {  
-      buffer.writeAll(["\"cy\":", this._cy, ","], "");
+    if (this.cy != null) {  
+      buffer.writeAll(["\"cy\":", this.cy, ","], "");
     }
 
     // NOTE: skip serialization of d (type SVGPath is ignored)} 
 
-    if (this._dashstyle != null) {  
-      buffer.writeAll(["\"dashstyle\":\`", this._dashstyle, "\`,"], "");
+    if (this.dashstyle != null) {  
+      buffer.writeAll(["\"dashstyle\":\`", this.dashstyle, "\`,"], "");
     }
 
-    if (this._depth != null) {  
-      buffer.writeAll(["\"depth\":", this._depth, ","], "");
+    if (this.depth != null) {  
+      buffer.writeAll(["\"depth\":", this.depth, ","], "");
     }
 
-    if (this._display != null) {  
-      buffer.writeAll(["\"display\":\`", this._display, "\`,"], "");
+    if (this.display != null) {  
+      buffer.writeAll(["\"display\":\`", this.display, "\`,"], "");
     }
 
-    if (this._dominant_baseline != null) {  
-      buffer.writeAll(["\"dominant-baseline\":\`", this._dominant_baseline, "\`,"], "");
+    if (this.dominant_baseline != null) {  
+      buffer.writeAll(["\"dominant-baseline\":\`", this.dominant_baseline, "\`,"], "");
     }
 
-    if (this._dx != null) {  
-      buffer.writeAll(["\"dx\":", this._dx, ","], "");
+    if (this.dx != null) {  
+      buffer.writeAll(["\"dx\":", this.dx, ","], "");
     }
 
-    if (this._dy != null) {  
-      buffer.writeAll(["\"dy\":", this._dy, ","], "");
+    if (this.dy != null) {  
+      buffer.writeAll(["\"dy\":", this.dy, ","], "");
     }
 
-    if (this._end != null) {  
-      buffer.writeAll(["\"end\":", this._end, ","], "");
+    if (this.end != null) {  
+      buffer.writeAll(["\"end\":", this.end, ","], "");
     }
 
-    if (this._fill != null) {  
-      buffer.writeAll(["\"fill\":\`", this._fill, "\`,"], "");
+    if (this.fill != null) {  
+      buffer.writeAll(["\"fill\":\`", this.fill, "\`,"], "");
     }
 
-    if (this._fill_opacity != null) {  
-      buffer.writeAll(["\"fill-opacity\":", this._fill_opacity, ","], "");
+    if (this.fill_opacity != null) {  
+      buffer.writeAll(["\"fill-opacity\":", this.fill_opacity, ","], "");
     }
 
-    if (this._filter != null) {  
-      buffer.writeAll(["\"filter\":\`", this._filter, "\`,"], "");
+    if (this.filter != null) {  
+      buffer.writeAll(["\"filter\":\`", this.filter, "\`,"], "");
     }
 
-    if (this._filterUnits != null) {  
-      buffer.writeAll(["\"filterUnits\":\`", this._filterUnits, "\`,"], "");
+    if (this.filterUnits != null) {  
+      buffer.writeAll(["\"filterUnits\":\`", this.filterUnits, "\`,"], "");
     }
 
-    if (this._flood_color != null) {  
-      buffer.writeAll(["\"flood-color\":\`", this._flood_color, "\`,"], "");
+    if (this.flood_color != null) {  
+      buffer.writeAll(["\"flood-color\":\`", this.flood_color, "\`,"], "");
     }
 
-    if (this._flood_opacity != null) {  
-      buffer.writeAll(["\"flood-opacity\":", this._flood_opacity, ","], "");
+    if (this.flood_opacity != null) {  
+      buffer.writeAll(["\"flood-opacity\":", this.flood_opacity, ","], "");
     }
 
     // NOTE: skip serialization of gradientUnits (type "userSpaceOnUse" is ignored)} 
 
-    if (this._height != null) {  
-      buffer.writeAll(["\"height\":", this._height, ","], "");
+    if (this.height != null) {  
+      buffer.writeAll(["\"height\":", this.height, ","], "");
     }
 
-    if (this._href != null) {  
-      buffer.writeAll(["\"href\":\`", this._href, "\`,"], "");
+    if (this.href != null) {  
+      buffer.writeAll(["\"href\":\`", this.href, "\`,"], "");
     }
 
-    if (this._id != null) {  
-      buffer.writeAll(["\"id\":\`", this._id, "\`,"], "");
+    if (this.id != null) {  
+      buffer.writeAll(["\"id\":\`", this.id, "\`,"], "");
     }
 
-    if (this._kw_in /** WARN: in is rewritten as it's a keyword */ != null) {  
-      buffer.writeAll(["\"in\":\`", this._kw_in /** WARN: in is rewritten as it's a keyword */, "\`,"], "");
+    if (this.kw_in /** WARN: in is rewritten as it's a keyword */ != null) {  
+      buffer.writeAll(["\"in\":\`", this.kw_in /** WARN: in is rewritten as it's a keyword */, "\`,"], "");
     }
 
-    if (this._innerR != null) {  
-      buffer.writeAll(["\"innerR\":", this._innerR, ","], "");
+    if (this.innerR != null) {  
+      buffer.writeAll(["\"innerR\":", this.innerR, ","], "");
     }
 
-    if (this._inverted != null) {  
-      buffer.writeAll(["\"inverted\":", this._inverted, ","], "");
+    if (this.inverted != null) {  
+      buffer.writeAll(["\"inverted\":", this.inverted, ","], "");
     }
 
-    if (this._longArc != null) {  
-      buffer.writeAll(["\"longArc\":", this._longArc, ","], "");
+    if (this.longArc != null) {  
+      buffer.writeAll(["\"longArc\":", this.longArc, ","], "");
     }
 
-    if (this._markerHeight != null) {  
-      buffer.writeAll(["\"markerHeight\":", this._markerHeight, ","], "");
+    if (this.markerHeight != null) {  
+      buffer.writeAll(["\"markerHeight\":", this.markerHeight, ","], "");
     }
 
-    if (this._markerWidth != null) {  
-      buffer.writeAll(["\"markerWidth\":", this._markerWidth, ","], "");
+    if (this.markerWidth != null) {  
+      buffer.writeAll(["\"markerWidth\":", this.markerWidth, ","], "");
     }
 
     // NOTE: skip serialization of matrix (type number[] is ignored)} 
 
-    if (this._offset != null) {  
-      buffer.writeAll(["\"offset\":", this._offset, ","], "");
+    if (this.offset != null) {  
+      buffer.writeAll(["\"offset\":", this.offset, ","], "");
     }
 
-    if (this._opacity != null) {  
-      buffer.writeAll(["\"opacity\":", this._opacity, ","], "");
+    if (this.opacity != null) {  
+      buffer.writeAll(["\"opacity\":", this.opacity, ","], "");
     }
 
-    if (this._open != null) {  
-      buffer.writeAll(["\"open\":", this._open, ","], "");
+    if (this.open != null) {  
+      buffer.writeAll(["\"open\":", this.open, ","], "");
     }
 
-    if (this._padding != null) {  
-      buffer.writeAll(["\"padding\":", this._padding, ","], "");
+    if (this.padding != null) {  
+      buffer.writeAll(["\"padding\":", this.padding, ","], "");
     }
 
     // NOTE: skip serialization of paddingLeft (type "unset" is ignored)} 
 
     // NOTE: skip serialization of paddingRight (type "unset" is ignored)} 
 
-    if (this._patternContentUnits != null) {  
-      buffer.writeAll(["\"patternContentUnits\":\`", this._patternContentUnits, "\`,"], "");
+    if (this.patternContentUnits != null) {  
+      buffer.writeAll(["\"patternContentUnits\":\`", this.patternContentUnits, "\`,"], "");
     }
 
-    if (this._patternTransform != null) {  
-      buffer.writeAll(["\"patternTransform\":\`", this._patternTransform, "\`,"], "");
+    if (this.patternTransform != null) {  
+      buffer.writeAll(["\"patternTransform\":\`", this.patternTransform, "\`,"], "");
     }
 
     // NOTE: skip serialization of patternUnits (type "userSpaceOnUse" is ignored)} 
 
-    if (this._preserveAspectRatio != null) {  
-      buffer.writeAll(["\"preserveAspectRatio\":\`", this._preserveAspectRatio, "\`,"], "");
+    if (this.preserveAspectRatio != null) {  
+      buffer.writeAll(["\"preserveAspectRatio\":\`", this.preserveAspectRatio, "\`,"], "");
     }
 
-    if (this._r != null) {  
-      buffer.writeAll(["\"r\":", this._r, ","], "");
+    if (this.r != null) {  
+      buffer.writeAll(["\"r\":", this.r, ","], "");
     }
 
-    if (this._refX != null) {  
-      buffer.writeAll(["\"refX\":", this._refX, ","], "");
+    if (this.refX != null) {  
+      buffer.writeAll(["\"refX\":", this.refX, ","], "");
     }
 
-    if (this._refY != null) {  
-      buffer.writeAll(["\"refY\":", this._refY, ","], "");
+    if (this.refY != null) {  
+      buffer.writeAll(["\"refY\":", this.refY, ","], "");
     }
 
-    if (this._rx != null) {  
-      buffer.writeAll(["\"rx\":", this._rx, ","], "");
+    if (this.rx != null) {  
+      buffer.writeAll(["\"rx\":", this.rx, ","], "");
     }
 
-    if (this._ry != null) {  
-      buffer.writeAll(["\"ry\":", this._ry, ","], "");
+    if (this.ry != null) {  
+      buffer.writeAll(["\"ry\":", this.ry, ","], "");
     }
 
-    if (this._role != null) {  
-      buffer.writeAll(["\"role\":\`", this._role, "\`,"], "");
+    if (this.role != null) {  
+      buffer.writeAll(["\"role\":\`", this.role, "\`,"], "");
     }
 
-    if (this._rotation != null) {  
-      buffer.writeAll(["\"rotation\":", this._rotation, ","], "");
+    if (this.rotation != null) {  
+      buffer.writeAll(["\"rotation\":", this.rotation, ","], "");
     }
 
-    if (this._rotationOriginX != null) {  
-      buffer.writeAll(["\"rotationOriginX\":", this._rotationOriginX, ","], "");
+    if (this.rotationOriginX != null) {  
+      buffer.writeAll(["\"rotationOriginX\":", this.rotationOriginX, ","], "");
     }
 
-    if (this._rotationOriginY != null) {  
-      buffer.writeAll(["\"rotationOriginY\":", this._rotationOriginY, ","], "");
+    if (this.rotationOriginY != null) {  
+      buffer.writeAll(["\"rotationOriginY\":", this.rotationOriginY, ","], "");
     }
 
-    if (this._scaleX != null) {  
-      buffer.writeAll(["\"scaleX\":", this._scaleX, ","], "");
+    if (this.scaleX != null) {  
+      buffer.writeAll(["\"scaleX\":", this.scaleX, ","], "");
     }
 
-    if (this._scaleY != null) {  
-      buffer.writeAll(["\"scaleY\":", this._scaleY, ","], "");
+    if (this.scaleY != null) {  
+      buffer.writeAll(["\"scaleY\":", this.scaleY, ","], "");
     }
 
-    if (this._slope != null) {  
-      buffer.writeAll(["\"slope\":", this._slope, ","], "");
+    if (this.slope != null) {  
+      buffer.writeAll(["\"slope\":", this.slope, ","], "");
     }
 
-    if (this._start != null) {  
-      buffer.writeAll(["\"start\":", this._start, ","], "");
+    if (this.start != null) {  
+      buffer.writeAll(["\"start\":", this.start, ","], "");
     }
 
-    if (this._stdDeviation != null) {  
-      buffer.writeAll(["\"stdDeviation\":", this._stdDeviation, ","], "");
+    if (this.stdDeviation != null) {  
+      buffer.writeAll(["\"stdDeviation\":", this.stdDeviation, ","], "");
     }
 
-    if (this._stroke != null) {  
-      buffer.writeAll(["\"stroke\":\`", this._stroke, "\`,"], "");
+    if (this.stroke != null) {  
+      buffer.writeAll(["\"stroke\":\`", this.stroke, "\`,"], "");
     }
 
-    if (this._stroke_linecap != null) {  
-      buffer.writeAll(["\"stroke-linecap\":\`", this._stroke_linecap, "\`,"], "");
+    if (this.stroke_linecap != null) {  
+      buffer.writeAll(["\"stroke-linecap\":\`", this.stroke_linecap, "\`,"], "");
     }
 
-    if (this._stroke_linejoin != null) {  
-      buffer.writeAll(["\"stroke-linejoin\":\`", this._stroke_linejoin, "\`,"], "");
+    if (this.stroke_linejoin != null) {  
+      buffer.writeAll(["\"stroke-linejoin\":\`", this.stroke_linejoin, "\`,"], "");
     }
 
-    if (this._stroke_opacity != null) {  
-      buffer.writeAll(["\"stroke-opacity\":", this._stroke_opacity, ","], "");
+    if (this.stroke_opacity != null) {  
+      buffer.writeAll(["\"stroke-opacity\":", this.stroke_opacity, ","], "");
     }
 
-    if (this._stroke_width != null) {  
-      buffer.writeAll(["\"stroke-width\":", this._stroke_width, ","], "");
+    if (this.stroke_width != null) {  
+      buffer.writeAll(["\"stroke-width\":", this.stroke_width, ","], "");
     }
 
-    if (this._strokeWidth != null) {  
-      buffer.writeAll(["\"strokeWidth\":", this._strokeWidth, ","], "");
+    if (this.strokeWidth != null) {  
+      buffer.writeAll(["\"strokeWidth\":", this.strokeWidth, ","], "");
     }
 
-    if (this._stop_color != null) {  
-      buffer.writeAll(["\"stop-color\":\`", this._stop_color, "\`,"], "");
+    if (this.stop_color != null) {  
+      buffer.writeAll(["\"stop-color\":\`", this.stop_color, "\`,"], "");
     }
 
-    if (this._stop_opacity != null) {  
-      buffer.writeAll(["\"stop-opacity\":", this._stop_opacity, ","], "");
+    if (this.stop_opacity != null) {  
+      buffer.writeAll(["\"stop-opacity\":", this.stop_opacity, ","], "");
     }
 
     // NOTE: skip serialization of style (type CSSObject is ignored)} 
 
     // NOTE: skip serialization of sweep_flag (type 1 is ignored)} 
 
-    if (this._tabindex != null) {  
-      buffer.writeAll(["\"tabindex\":", this._tabindex, ","], "");
+    if (this.tabindex != null) {  
+      buffer.writeAll(["\"tabindex\":", this.tabindex, ","], "");
     }
 
-    if (this._tableValues != null) {  
-      buffer.writeAll(["\"tableValues\":\`", this._tableValues, "\`,"], "");
+    if (this.tableValues != null) {  
+      buffer.writeAll(["\"tableValues\":\`", this.tableValues, "\`,"], "");
     }
 
-    if (this._text != null) {  
-      buffer.writeAll(["\"text\":\`", this._text, "\`,"], "");
+    if (this.text != null) {  
+      buffer.writeAll(["\"text\":\`", this.text, "\`,"], "");
     }
 
-    if (this._text_align != null) {  
-      buffer.writeAll(["\"text-align\":\`", this._text_align, "\`,"], "");
+    if (this.text_align != null) {  
+      buffer.writeAll(["\"text-align\":\`", this.text_align, "\`,"], "");
     }
 
-    if (this._text_anchor != null) {  
-      buffer.writeAll(["\"text-anchor\":\`", this._text_anchor, "\`,"], "");
+    if (this.text_anchor != null) {  
+      buffer.writeAll(["\"text-anchor\":\`", this.text_anchor, "\`,"], "");
     }
 
-    if (this._title != null) {  
-      buffer.writeAll(["\"title\":\`", this._title, "\`,"], "");
+    if (this.title != null) {  
+      buffer.writeAll(["\"title\":\`", this.title, "\`,"], "");
     }
 
-    if (this._transform != null) {  
-      buffer.writeAll(["\"transform\":\`", this._transform, "\`,"], "");
+    if (this.transform != null) {  
+      buffer.writeAll(["\"transform\":\`", this.transform, "\`,"], "");
     }
 
-    if (this._translateX != null) {  
-      buffer.writeAll(["\"translateX\":", this._translateX, ","], "");
+    if (this.translateX != null) {  
+      buffer.writeAll(["\"translateX\":", this.translateX, ","], "");
     }
 
-    if (this._translateY != null) {  
-      buffer.writeAll(["\"translateY\":", this._translateY, ","], "");
+    if (this.translateY != null) {  
+      buffer.writeAll(["\"translateY\":", this.translateY, ","], "");
     }
 
-    if (this._type != null) {  
-      buffer.writeAll(["\"type\":\`", this._type, "\`,"], "");
+    if (this.type != null) {  
+      buffer.writeAll(["\"type\":\`", this.type, "\`,"], "");
     }
 
-    if (this._version != null) {  
-      buffer.writeAll(["\"version\":\`", this._version, "\`,"], "");
+    if (this.version != null) {  
+      buffer.writeAll(["\"version\":\`", this.version, "\`,"], "");
     }
 
-    if (this._viewBox != null) {  
-      buffer.writeAll(["\"viewBox\":\`", this._viewBox, "\`,"], "");
+    if (this.viewBox != null) {  
+      buffer.writeAll(["\"viewBox\":\`", this.viewBox, "\`,"], "");
     }
 
-    if (this._visibility != null) {  
-      buffer.writeAll(["\"visibility\":\`", this._visibility, "\`,"], "");
+    if (this.visibility != null) {  
+      buffer.writeAll(["\"visibility\":\`", this.visibility, "\`,"], "");
     }
 
-    if (this._width != null) {  
-      buffer.writeAll(["\"width\":", this._width, ","], "");
+    if (this.width != null) {  
+      buffer.writeAll(["\"width\":", this.width, ","], "");
     }
 
-    if (this._x != null) {  
-      buffer.writeAll(["\"x\":", this._x, ","], "");
+    if (this.x != null) {  
+      buffer.writeAll(["\"x\":", this.x, ","], "");
     }
 
-    if (this._x1 != null) {  
-      buffer.writeAll(["\"x1\":", this._x1, ","], "");
+    if (this.x1 != null) {  
+      buffer.writeAll(["\"x1\":", this.x1, ","], "");
     }
 
-    if (this._x2 != null) {  
-      buffer.writeAll(["\"x2\":", this._x2, ","], "");
+    if (this.x2 != null) {  
+      buffer.writeAll(["\"x2\":", this.x2, ","], "");
     }
 
-    if (this._xmlns != null) {  
-      buffer.writeAll(["\"xmlns\":\`", this._xmlns, "\`,"], "");
+    if (this.xmlns != null) {  
+      buffer.writeAll(["\"xmlns\":\`", this.xmlns, "\`,"], "");
     }
 
-    if (this._y != null) {  
-      buffer.writeAll(["\"y\":", this._y, ","], "");
+    if (this.y != null) {  
+      buffer.writeAll(["\"y\":", this.y, ","], "");
     }
 
-    if (this._y1 != null) {  
-      buffer.writeAll(["\"y1\":", this._y1, ","], "");
+    if (this.y1 != null) {  
+      buffer.writeAll(["\"y1\":", this.y1, ","], "");
     }
 
-    if (this._y2 != null) {  
-      buffer.writeAll(["\"y2\":", this._y2, ","], "");
+    if (this.y2 != null) {  
+      buffer.writeAll(["\"y2\":", this.y2, ","], "");
     }
 
-    if (this._z != null) {  
-      buffer.writeAll(["\"z\":", this._z, ","], "");
+    if (this.z != null) {  
+      buffer.writeAll(["\"z\":", this.z, ","], "");
     }
 
-    if (this._zIndex != null) {  
-      buffer.writeAll(["\"zIndex\":", this._zIndex, ","], "");
+    if (this.zIndex != null) {  
+      buffer.writeAll(["\"zIndex\":", this.zIndex, ","], "");
     }
 
-    if (this._borderRadius != null) {  
-      buffer.writeAll(["\"borderRadius\":\`", this._borderRadius, "\`,"], "");
+    if (this.borderRadius != null) {  
+      buffer.writeAll(["\"borderRadius\":\`", this.borderRadius, "\`,"], "");
     }
 
-    if (this._brBoxHeight != null) {  
-      buffer.writeAll(["\"brBoxHeight\":", this._brBoxHeight, ","], "");
+    if (this.brBoxHeight != null) {  
+      buffer.writeAll(["\"brBoxHeight\":", this.brBoxHeight, ","], "");
     }
 
-    if (this._brBoxY != null) {  
-      buffer.writeAll(["\"brBoxY\":", this._brBoxY, ","], "");
+    if (this.brBoxY != null) {  
+      buffer.writeAll(["\"brBoxY\":", this.brBoxY, ","], "");
     }
   }
 

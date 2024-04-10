@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,7 +23,7 @@ import 'OptionFragment.dart';
  * EMAParamsOptions 
  */
 class EMAParamsOptions extends SMAParamsOptions {
-  EMAParamsOptions() : super();
+  EMAParamsOptions( ) : super();
   
 
   //////////////////////////////////////////////////////////////////////////////

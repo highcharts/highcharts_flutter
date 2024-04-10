@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,14 @@ import 'OptionFragment.dart';
  * Theme 
  */
 class Theme extends OptionFragment {
-  Theme() : super();
-  String? _credits;  
-
+  Theme( {
+    this.credits = null,
+    this.maxZoom = null,
+    this.minZoom = null,
+    this.url = null
+  }) : super();
+  String? credits;
+    /*
   String get credits { 
     if (this._credits == null) {
       this._credits = "";
@@ -35,9 +40,10 @@ class Theme extends OptionFragment {
   void set credits (String v) {
     this._credits = v;
   }
+    */
     
-  double? _maxZoom;  
-
+  double? maxZoom;
+    /*
   double get maxZoom { 
     if (this._maxZoom == null) {
       this._maxZoom = 0;
@@ -48,9 +54,10 @@ class Theme extends OptionFragment {
   void set maxZoom (double v) {
     this._maxZoom = v;
   }
+    */
     
-  double? _minZoom;  
-
+  double? minZoom;
+    /*
   double get minZoom { 
     if (this._minZoom == null) {
       this._minZoom = 0;
@@ -61,9 +68,10 @@ class Theme extends OptionFragment {
   void set minZoom (double v) {
     this._minZoom = v;
   }
+    */
     
-  String? _url;  
-
+  String? url;
+    /*
   String get url { 
     if (this._url == null) {
       this._url = "";
@@ -74,6 +82,7 @@ class Theme extends OptionFragment {
   void set url (String v) {
     this._url = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -83,20 +92,20 @@ class Theme extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._credits != null) {  
-      buffer.writeAll(["\"credits\":\`", this._credits, "\`,"], "");
+    if (this.credits != null) {  
+      buffer.writeAll(["\"credits\":\`", this.credits, "\`,"], "");
     }
 
-    if (this._maxZoom != null) {  
-      buffer.writeAll(["\"maxZoom\":", this._maxZoom, ","], "");
+    if (this.maxZoom != null) {  
+      buffer.writeAll(["\"maxZoom\":", this.maxZoom, ","], "");
     }
 
-    if (this._minZoom != null) {  
-      buffer.writeAll(["\"minZoom\":", this._minZoom, ","], "");
+    if (this.minZoom != null) {  
+      buffer.writeAll(["\"minZoom\":", this.minZoom, ","], "");
     }
 
-    if (this._url != null) {  
-      buffer.writeAll(["\"url\":\`", this._url, "\`,"], "");
+    if (this.url != null) {  
+      buffer.writeAll(["\"url\":\`", this.url, "\`,"], "");
     }
   }
 

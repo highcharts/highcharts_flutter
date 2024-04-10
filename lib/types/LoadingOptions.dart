@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,14 +23,17 @@ import 'OptionFragment.dart';
  * LoadingOptions 
  */
 class LoadingOptions extends OptionFragment {
-  LoadingOptions() : super();
+  LoadingOptions( {
+    this.hideDuration = null,
+    this.showDuration = null
+  }) : super();
   /**
    * The duration in milliseconds of the fade out effect. 
    * 
    * Defaults to '100'. 
       */
-  double? _hideDuration;  
-
+  double? hideDuration;
+    /*
   double get hideDuration { 
     if (this._hideDuration == null) {
       this._hideDuration = 0;
@@ -41,14 +44,15 @@ class LoadingOptions extends OptionFragment {
   void set hideDuration (double v) {
     this._hideDuration = v;
   }
+    */
     
   /**
    * CSS styles for the loading label `span`. 
    * 
    * Defaults to '{"fontWeight": "bold", "position": "relative", "top": "45%"}'. 
       */
-  CSSObject? _labelStyle;  
-
+  CSSObject? labelStyle;
+    /*
   CSSObject get labelStyle { 
     if (this._labelStyle == null) {
       this._labelStyle = CSSObject();
@@ -59,14 +63,15 @@ class LoadingOptions extends OptionFragment {
   void set labelStyle (CSSObject v) {
     this._labelStyle = v;
   }
+    */
     
   /**
    * The duration in milliseconds of the fade in effect. 
    * 
    * Defaults to '100'. 
       */
-  double? _showDuration;  
-
+  double? showDuration;
+    /*
   double get showDuration { 
     if (this._showDuration == null) {
       this._showDuration = 0;
@@ -77,6 +82,7 @@ class LoadingOptions extends OptionFragment {
   void set showDuration (double v) {
     this._showDuration = v;
   }
+    */
     
   /**
    * CSS styles for the loading screen that covers the plot area.
@@ -86,8 +92,8 @@ class LoadingOptions extends OptionFragment {
    * 
    * Defaults to '{"position": "absolute", "backgroundColor": "#ffffff", "opacity": 0.5, "textAlign": "center"}'. 
       */
-  CSSObject? _style;  
-
+  CSSObject? style;
+    /*
   CSSObject get style { 
     if (this._style == null) {
       this._style = CSSObject();
@@ -98,6 +104,7 @@ class LoadingOptions extends OptionFragment {
   void set style (CSSObject v) {
     this._style = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -107,20 +114,20 @@ class LoadingOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._hideDuration != null) {  
-      buffer.writeAll(["\"hideDuration\":", this._hideDuration, ","], "");
+    if (this.hideDuration != null) {  
+      buffer.writeAll(["\"hideDuration\":", this.hideDuration, ","], "");
     }
 
-    if (this._labelStyle != null) {  
-      buffer.writeAll(["\"labelStyle\":", this._labelStyle?.toJSON(), ","], "");
+    if (this.labelStyle != null) {  
+      buffer.writeAll(["\"labelStyle\":", this.labelStyle?.toJSON(), ","], "");
     }
 
-    if (this._showDuration != null) {  
-      buffer.writeAll(["\"showDuration\":", this._showDuration, ","], "");
+    if (this.showDuration != null) {  
+      buffer.writeAll(["\"showDuration\":", this.showDuration, ","], "");
     }
 
-    if (this._style != null) {  
-      buffer.writeAll(["\"style\":", this._style?.toJSON(), ","], "");
+    if (this.style != null) {  
+      buffer.writeAll(["\"style\":", this.style?.toJSON(), ","], "");
     }
   }
 

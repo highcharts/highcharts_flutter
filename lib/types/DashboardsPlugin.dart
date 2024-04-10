@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,13 @@ import 'OptionFragment.dart';
  * DashboardsPlugin 
  */
 class DashboardsPlugin extends OptionFragment {
-  DashboardsPlugin() : super();
-  double? _maxRevision;  
-
+  DashboardsPlugin( {
+    this.maxRevision = null,
+    this.minRevision = null,
+    this.name = null
+  }) : super();
+  double? maxRevision;
+    /*
   double get maxRevision { 
     if (this._maxRevision == null) {
       this._maxRevision = 0;
@@ -35,9 +39,10 @@ class DashboardsPlugin extends OptionFragment {
   void set maxRevision (double v) {
     this._maxRevision = v;
   }
+    */
     
-  double? _minRevision;  
-
+  double? minRevision;
+    /*
   double get minRevision { 
     if (this._minRevision == null) {
       this._minRevision = 0;
@@ -48,9 +53,10 @@ class DashboardsPlugin extends OptionFragment {
   void set minRevision (double v) {
     this._minRevision = v;
   }
+    */
     
-  String? _name;  
-
+  String? name;
+    /*
   String get name { 
     if (this._name == null) {
       this._name = "";
@@ -61,6 +67,7 @@ class DashboardsPlugin extends OptionFragment {
   void set name (String v) {
     this._name = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -72,16 +79,16 @@ class DashboardsPlugin extends OptionFragment {
     
     // NOTE: skip serialization of custom (type T is ignored)} 
 
-    if (this._maxRevision != null) {  
-      buffer.writeAll(["\"maxRevision\":", this._maxRevision, ","], "");
+    if (this.maxRevision != null) {  
+      buffer.writeAll(["\"maxRevision\":", this.maxRevision, ","], "");
     }
 
-    if (this._minRevision != null) {  
-      buffer.writeAll(["\"minRevision\":", this._minRevision, ","], "");
+    if (this.minRevision != null) {  
+      buffer.writeAll(["\"minRevision\":", this.minRevision, ","], "");
     }
 
-    if (this._name != null) {  
-      buffer.writeAll(["\"name\":\`", this._name, "\`,"], "");
+    if (this.name != null) {  
+      buffer.writeAll(["\"name\":\`", this.name, "\`,"], "");
     }
   }
 

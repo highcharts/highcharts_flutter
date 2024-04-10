@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,13 @@ import 'OptionFragment.dart';
  * RowEvent 
  */
 class RowEvent extends DataEvent {
-  RowEvent() : super();
-  String? _type;  
-
+  RowEvent( {
+    this.type = null,
+    this.rowCount = null,
+    this.rowIndex = null
+  }) : super();
+  String? type;
+    /*
   String get type { 
     if (this._type == null) {
       this._type = "";
@@ -36,9 +40,10 @@ class RowEvent extends DataEvent {
   void set type (String v) {
     this._type = v;
   }
+    */
     
-  double? _rowCount;  
-
+  double? rowCount;
+    /*
   double get rowCount { 
     if (this._rowCount == null) {
       this._rowCount = 0;
@@ -49,9 +54,10 @@ class RowEvent extends DataEvent {
   void set rowCount (double v) {
     this._rowCount = v;
   }
+    */
     
-  double? _rowIndex;  
-
+  double? rowIndex;
+    /*
   double get rowIndex { 
     if (this._rowIndex == null) {
       this._rowIndex = 0;
@@ -62,6 +68,7 @@ class RowEvent extends DataEvent {
   void set rowIndex (double v) {
     this._rowIndex = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -71,16 +78,16 @@ class RowEvent extends DataEvent {
     super.toJSONInner(buffer);
 
     
-    if (this._type != null) {  
-      buffer.writeAll(["\"type\":\`", this._type, "\`,"], "");
+    if (this.type != null) {  
+      buffer.writeAll(["\"type\":\`", this.type, "\`,"], "");
     }
 
-    if (this._rowCount != null) {  
-      buffer.writeAll(["\"rowCount\":", this._rowCount, ","], "");
+    if (this.rowCount != null) {  
+      buffer.writeAll(["\"rowCount\":", this.rowCount, ","], "");
     }
 
-    if (this._rowIndex != null) {  
-      buffer.writeAll(["\"rowIndex\":", this._rowIndex, ","], "");
+    if (this.rowIndex != null) {  
+      buffer.writeAll(["\"rowIndex\":", this.rowIndex, ","], "");
     }
 
     // NOTE: skip serialization of rows (type RowObject)[] is ignored)} 

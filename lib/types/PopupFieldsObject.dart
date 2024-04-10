@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,14 @@ import 'OptionFragment.dart';
  * PopupFieldsObject 
  */
 class PopupFieldsObject extends OptionFragment {
-  PopupFieldsObject() : super();
-  String? _actionType;  
-
+  PopupFieldsObject( {
+    this.actionType = null,
+    this.linkedTo = null,
+    this.seriesId = null,
+    this.type = null
+  }) : super();
+  String? actionType;
+    /*
   String get actionType { 
     if (this._actionType == null) {
       this._actionType = "";
@@ -36,9 +41,10 @@ class PopupFieldsObject extends OptionFragment {
   void set actionType (String v) {
     this._actionType = v;
   }
+    */
     
-  String? _linkedTo;  
-
+  String? linkedTo;
+    /*
   String get linkedTo { 
     if (this._linkedTo == null) {
       this._linkedTo = "";
@@ -49,9 +55,10 @@ class PopupFieldsObject extends OptionFragment {
   void set linkedTo (String v) {
     this._linkedTo = v;
   }
+    */
     
-  String? _seriesId;  
-
+  String? seriesId;
+    /*
   String get seriesId { 
     if (this._seriesId == null) {
       this._seriesId = "";
@@ -62,9 +69,10 @@ class PopupFieldsObject extends OptionFragment {
   void set seriesId (String v) {
     this._seriesId = v;
   }
+    */
     
-  String? _type;  
-
+  String? type;
+    /*
   String get type { 
     if (this._type == null) {
       this._type = "";
@@ -75,6 +83,7 @@ class PopupFieldsObject extends OptionFragment {
   void set type (String v) {
     this._type = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -84,22 +93,22 @@ class PopupFieldsObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._actionType != null) {  
-      buffer.writeAll(["\"actionType\":\`", this._actionType, "\`,"], "");
+    if (this.actionType != null) {  
+      buffer.writeAll(["\"actionType\":\`", this.actionType, "\`,"], "");
     }
 
     // NOTE: skip serialization of fields (type PopupFieldsTree is ignored)} 
 
-    if (this._linkedTo != null) {  
-      buffer.writeAll(["\"linkedTo\":\`", this._linkedTo, "\`,"], "");
+    if (this.linkedTo != null) {  
+      buffer.writeAll(["\"linkedTo\":\`", this.linkedTo, "\`,"], "");
     }
 
-    if (this._seriesId != null) {  
-      buffer.writeAll(["\"seriesId\":\`", this._seriesId, "\`,"], "");
+    if (this.seriesId != null) {  
+      buffer.writeAll(["\"seriesId\":\`", this.seriesId, "\`,"], "");
     }
 
-    if (this._type != null) {  
-      buffer.writeAll(["\"type\":\`", this._type, "\`,"], "");
+    if (this.type != null) {  
+      buffer.writeAll(["\"type\":\`", this.type, "\`,"], "");
     }
   }
 

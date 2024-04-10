@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,34 @@ import 'OptionFragment.dart';
  * LangAccessibilitySeriesSummaryOptions 
  */
 class LangAccessibilitySeriesSummaryOptions extends OptionFragment {
-  LangAccessibilitySeriesSummaryOptions() : super();
-  String? _bar;  
-
+  LangAccessibilitySeriesSummaryOptions( {
+    this.bar = null,
+    this.barCombination = null,
+    this.boxplot = null,
+    this.boxplotCombination = null,
+    this.bubble = null,
+    this.bubbleCombination = null,
+    this.column = null,
+    this.columnCombination = null,
+    this.kw_default /** WARN: default is rewritten as it's a keyword */ = null,
+    this.defaultCombination = null,
+    this.line = null,
+    this.lineCombination = null,
+    this.map = null,
+    this.mapCombination = null,
+    this.mapbubble = null,
+    this.mapbubbleCombination = null,
+    this.mapline = null,
+    this.maplineCombination = null,
+    this.pie = null,
+    this.pieCombination = null,
+    this.scatter = null,
+    this.scatterCombination = null,
+    this.spline = null,
+    this.splineCombination = null
+  }) : super();
+  String? bar;
+    /*
   String get bar { 
     if (this._bar == null) {
       this._bar = "";
@@ -35,9 +60,10 @@ class LangAccessibilitySeriesSummaryOptions extends OptionFragment {
   void set bar (String v) {
     this._bar = v;
   }
+    */
     
-  String? _barCombination;  
-
+  String? barCombination;
+    /*
   String get barCombination { 
     if (this._barCombination == null) {
       this._barCombination = "";
@@ -48,9 +74,10 @@ class LangAccessibilitySeriesSummaryOptions extends OptionFragment {
   void set barCombination (String v) {
     this._barCombination = v;
   }
+    */
     
-  String? _boxplot;  
-
+  String? boxplot;
+    /*
   String get boxplot { 
     if (this._boxplot == null) {
       this._boxplot = "";
@@ -61,9 +88,10 @@ class LangAccessibilitySeriesSummaryOptions extends OptionFragment {
   void set boxplot (String v) {
     this._boxplot = v;
   }
+    */
     
-  String? _boxplotCombination;  
-
+  String? boxplotCombination;
+    /*
   String get boxplotCombination { 
     if (this._boxplotCombination == null) {
       this._boxplotCombination = "";
@@ -74,9 +102,10 @@ class LangAccessibilitySeriesSummaryOptions extends OptionFragment {
   void set boxplotCombination (String v) {
     this._boxplotCombination = v;
   }
+    */
     
-  String? _bubble;  
-
+  String? bubble;
+    /*
   String get bubble { 
     if (this._bubble == null) {
       this._bubble = "";
@@ -87,9 +116,10 @@ class LangAccessibilitySeriesSummaryOptions extends OptionFragment {
   void set bubble (String v) {
     this._bubble = v;
   }
+    */
     
-  String? _bubbleCombination;  
-
+  String? bubbleCombination;
+    /*
   String get bubbleCombination { 
     if (this._bubbleCombination == null) {
       this._bubbleCombination = "";
@@ -100,9 +130,10 @@ class LangAccessibilitySeriesSummaryOptions extends OptionFragment {
   void set bubbleCombination (String v) {
     this._bubbleCombination = v;
   }
+    */
     
-  String? _column;  
-
+  String? column;
+    /*
   String get column { 
     if (this._column == null) {
       this._column = "";
@@ -113,9 +144,10 @@ class LangAccessibilitySeriesSummaryOptions extends OptionFragment {
   void set column (String v) {
     this._column = v;
   }
+    */
     
-  String? _columnCombination;  
-
+  String? columnCombination;
+    /*
   String get columnCombination { 
     if (this._columnCombination == null) {
       this._columnCombination = "";
@@ -126,9 +158,10 @@ class LangAccessibilitySeriesSummaryOptions extends OptionFragment {
   void set columnCombination (String v) {
     this._columnCombination = v;
   }
+    */
     
-  String? _kw_default /** WARN: default is rewritten as it's a keyword */;  
-
+  String? kw_default /** WARN: default is rewritten as it's a keyword */;
+    /*
   String get kw_default /** WARN: default is rewritten as it's a keyword */ { 
     if (this._kw_default /** WARN: default is rewritten as it's a keyword */ == null) {
       this._kw_default /** WARN: default is rewritten as it's a keyword */ = "";
@@ -139,9 +172,10 @@ class LangAccessibilitySeriesSummaryOptions extends OptionFragment {
   void set kw_default /** WARN: default is rewritten as it's a keyword */ (String v) {
     this._kw_default /** WARN: default is rewritten as it's a keyword */ = v;
   }
+    */
     
-  String? _defaultCombination;  
-
+  String? defaultCombination;
+    /*
   String get defaultCombination { 
     if (this._defaultCombination == null) {
       this._defaultCombination = "";
@@ -152,9 +186,10 @@ class LangAccessibilitySeriesSummaryOptions extends OptionFragment {
   void set defaultCombination (String v) {
     this._defaultCombination = v;
   }
+    */
     
-  String? _line;  
-
+  String? line;
+    /*
   String get line { 
     if (this._line == null) {
       this._line = "";
@@ -165,9 +200,10 @@ class LangAccessibilitySeriesSummaryOptions extends OptionFragment {
   void set line (String v) {
     this._line = v;
   }
+    */
     
-  String? _lineCombination;  
-
+  String? lineCombination;
+    /*
   String get lineCombination { 
     if (this._lineCombination == null) {
       this._lineCombination = "";
@@ -178,9 +214,10 @@ class LangAccessibilitySeriesSummaryOptions extends OptionFragment {
   void set lineCombination (String v) {
     this._lineCombination = v;
   }
+    */
     
-  String? _map;  
-
+  String? map;
+    /*
   String get map { 
     if (this._map == null) {
       this._map = "";
@@ -191,9 +228,10 @@ class LangAccessibilitySeriesSummaryOptions extends OptionFragment {
   void set map (String v) {
     this._map = v;
   }
+    */
     
-  String? _mapCombination;  
-
+  String? mapCombination;
+    /*
   String get mapCombination { 
     if (this._mapCombination == null) {
       this._mapCombination = "";
@@ -204,9 +242,10 @@ class LangAccessibilitySeriesSummaryOptions extends OptionFragment {
   void set mapCombination (String v) {
     this._mapCombination = v;
   }
+    */
     
-  String? _mapbubble;  
-
+  String? mapbubble;
+    /*
   String get mapbubble { 
     if (this._mapbubble == null) {
       this._mapbubble = "";
@@ -217,9 +256,10 @@ class LangAccessibilitySeriesSummaryOptions extends OptionFragment {
   void set mapbubble (String v) {
     this._mapbubble = v;
   }
+    */
     
-  String? _mapbubbleCombination;  
-
+  String? mapbubbleCombination;
+    /*
   String get mapbubbleCombination { 
     if (this._mapbubbleCombination == null) {
       this._mapbubbleCombination = "";
@@ -230,9 +270,10 @@ class LangAccessibilitySeriesSummaryOptions extends OptionFragment {
   void set mapbubbleCombination (String v) {
     this._mapbubbleCombination = v;
   }
+    */
     
-  String? _mapline;  
-
+  String? mapline;
+    /*
   String get mapline { 
     if (this._mapline == null) {
       this._mapline = "";
@@ -243,9 +284,10 @@ class LangAccessibilitySeriesSummaryOptions extends OptionFragment {
   void set mapline (String v) {
     this._mapline = v;
   }
+    */
     
-  String? _maplineCombination;  
-
+  String? maplineCombination;
+    /*
   String get maplineCombination { 
     if (this._maplineCombination == null) {
       this._maplineCombination = "";
@@ -256,9 +298,10 @@ class LangAccessibilitySeriesSummaryOptions extends OptionFragment {
   void set maplineCombination (String v) {
     this._maplineCombination = v;
   }
+    */
     
-  String? _pie;  
-
+  String? pie;
+    /*
   String get pie { 
     if (this._pie == null) {
       this._pie = "";
@@ -269,9 +312,10 @@ class LangAccessibilitySeriesSummaryOptions extends OptionFragment {
   void set pie (String v) {
     this._pie = v;
   }
+    */
     
-  String? _pieCombination;  
-
+  String? pieCombination;
+    /*
   String get pieCombination { 
     if (this._pieCombination == null) {
       this._pieCombination = "";
@@ -282,9 +326,10 @@ class LangAccessibilitySeriesSummaryOptions extends OptionFragment {
   void set pieCombination (String v) {
     this._pieCombination = v;
   }
+    */
     
-  String? _scatter;  
-
+  String? scatter;
+    /*
   String get scatter { 
     if (this._scatter == null) {
       this._scatter = "";
@@ -295,9 +340,10 @@ class LangAccessibilitySeriesSummaryOptions extends OptionFragment {
   void set scatter (String v) {
     this._scatter = v;
   }
+    */
     
-  String? _scatterCombination;  
-
+  String? scatterCombination;
+    /*
   String get scatterCombination { 
     if (this._scatterCombination == null) {
       this._scatterCombination = "";
@@ -308,9 +354,10 @@ class LangAccessibilitySeriesSummaryOptions extends OptionFragment {
   void set scatterCombination (String v) {
     this._scatterCombination = v;
   }
+    */
     
-  String? _spline;  
-
+  String? spline;
+    /*
   String get spline { 
     if (this._spline == null) {
       this._spline = "";
@@ -321,9 +368,10 @@ class LangAccessibilitySeriesSummaryOptions extends OptionFragment {
   void set spline (String v) {
     this._spline = v;
   }
+    */
     
-  String? _splineCombination;  
-
+  String? splineCombination;
+    /*
   String get splineCombination { 
     if (this._splineCombination == null) {
       this._splineCombination = "";
@@ -334,6 +382,7 @@ class LangAccessibilitySeriesSummaryOptions extends OptionFragment {
   void set splineCombination (String v) {
     this._splineCombination = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -343,100 +392,100 @@ class LangAccessibilitySeriesSummaryOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._bar != null) {  
-      buffer.writeAll(["\"bar\":\`", this._bar, "\`,"], "");
+    if (this.bar != null) {  
+      buffer.writeAll(["\"bar\":\`", this.bar, "\`,"], "");
     }
 
-    if (this._barCombination != null) {  
-      buffer.writeAll(["\"barCombination\":\`", this._barCombination, "\`,"], "");
+    if (this.barCombination != null) {  
+      buffer.writeAll(["\"barCombination\":\`", this.barCombination, "\`,"], "");
     }
 
-    if (this._boxplot != null) {  
-      buffer.writeAll(["\"boxplot\":\`", this._boxplot, "\`,"], "");
+    if (this.boxplot != null) {  
+      buffer.writeAll(["\"boxplot\":\`", this.boxplot, "\`,"], "");
     }
 
-    if (this._boxplotCombination != null) {  
-      buffer.writeAll(["\"boxplotCombination\":\`", this._boxplotCombination, "\`,"], "");
+    if (this.boxplotCombination != null) {  
+      buffer.writeAll(["\"boxplotCombination\":\`", this.boxplotCombination, "\`,"], "");
     }
 
-    if (this._bubble != null) {  
-      buffer.writeAll(["\"bubble\":\`", this._bubble, "\`,"], "");
+    if (this.bubble != null) {  
+      buffer.writeAll(["\"bubble\":\`", this.bubble, "\`,"], "");
     }
 
-    if (this._bubbleCombination != null) {  
-      buffer.writeAll(["\"bubbleCombination\":\`", this._bubbleCombination, "\`,"], "");
+    if (this.bubbleCombination != null) {  
+      buffer.writeAll(["\"bubbleCombination\":\`", this.bubbleCombination, "\`,"], "");
     }
 
-    if (this._column != null) {  
-      buffer.writeAll(["\"column\":\`", this._column, "\`,"], "");
+    if (this.column != null) {  
+      buffer.writeAll(["\"column\":\`", this.column, "\`,"], "");
     }
 
-    if (this._columnCombination != null) {  
-      buffer.writeAll(["\"columnCombination\":\`", this._columnCombination, "\`,"], "");
+    if (this.columnCombination != null) {  
+      buffer.writeAll(["\"columnCombination\":\`", this.columnCombination, "\`,"], "");
     }
 
-    if (this._kw_default /** WARN: default is rewritten as it's a keyword */ != null) {  
-      buffer.writeAll(["\"default\":\`", this._kw_default /** WARN: default is rewritten as it's a keyword */, "\`,"], "");
+    if (this.kw_default /** WARN: default is rewritten as it's a keyword */ != null) {  
+      buffer.writeAll(["\"default\":\`", this.kw_default /** WARN: default is rewritten as it's a keyword */, "\`,"], "");
     }
 
-    if (this._defaultCombination != null) {  
-      buffer.writeAll(["\"defaultCombination\":\`", this._defaultCombination, "\`,"], "");
+    if (this.defaultCombination != null) {  
+      buffer.writeAll(["\"defaultCombination\":\`", this.defaultCombination, "\`,"], "");
     }
 
-    if (this._line != null) {  
-      buffer.writeAll(["\"line\":\`", this._line, "\`,"], "");
+    if (this.line != null) {  
+      buffer.writeAll(["\"line\":\`", this.line, "\`,"], "");
     }
 
-    if (this._lineCombination != null) {  
-      buffer.writeAll(["\"lineCombination\":\`", this._lineCombination, "\`,"], "");
+    if (this.lineCombination != null) {  
+      buffer.writeAll(["\"lineCombination\":\`", this.lineCombination, "\`,"], "");
     }
 
-    if (this._map != null) {  
-      buffer.writeAll(["\"map\":\`", this._map, "\`,"], "");
+    if (this.map != null) {  
+      buffer.writeAll(["\"map\":\`", this.map, "\`,"], "");
     }
 
-    if (this._mapCombination != null) {  
-      buffer.writeAll(["\"mapCombination\":\`", this._mapCombination, "\`,"], "");
+    if (this.mapCombination != null) {  
+      buffer.writeAll(["\"mapCombination\":\`", this.mapCombination, "\`,"], "");
     }
 
-    if (this._mapbubble != null) {  
-      buffer.writeAll(["\"mapbubble\":\`", this._mapbubble, "\`,"], "");
+    if (this.mapbubble != null) {  
+      buffer.writeAll(["\"mapbubble\":\`", this.mapbubble, "\`,"], "");
     }
 
-    if (this._mapbubbleCombination != null) {  
-      buffer.writeAll(["\"mapbubbleCombination\":\`", this._mapbubbleCombination, "\`,"], "");
+    if (this.mapbubbleCombination != null) {  
+      buffer.writeAll(["\"mapbubbleCombination\":\`", this.mapbubbleCombination, "\`,"], "");
     }
 
-    if (this._mapline != null) {  
-      buffer.writeAll(["\"mapline\":\`", this._mapline, "\`,"], "");
+    if (this.mapline != null) {  
+      buffer.writeAll(["\"mapline\":\`", this.mapline, "\`,"], "");
     }
 
-    if (this._maplineCombination != null) {  
-      buffer.writeAll(["\"maplineCombination\":\`", this._maplineCombination, "\`,"], "");
+    if (this.maplineCombination != null) {  
+      buffer.writeAll(["\"maplineCombination\":\`", this.maplineCombination, "\`,"], "");
     }
 
-    if (this._pie != null) {  
-      buffer.writeAll(["\"pie\":\`", this._pie, "\`,"], "");
+    if (this.pie != null) {  
+      buffer.writeAll(["\"pie\":\`", this.pie, "\`,"], "");
     }
 
-    if (this._pieCombination != null) {  
-      buffer.writeAll(["\"pieCombination\":\`", this._pieCombination, "\`,"], "");
+    if (this.pieCombination != null) {  
+      buffer.writeAll(["\"pieCombination\":\`", this.pieCombination, "\`,"], "");
     }
 
-    if (this._scatter != null) {  
-      buffer.writeAll(["\"scatter\":\`", this._scatter, "\`,"], "");
+    if (this.scatter != null) {  
+      buffer.writeAll(["\"scatter\":\`", this.scatter, "\`,"], "");
     }
 
-    if (this._scatterCombination != null) {  
-      buffer.writeAll(["\"scatterCombination\":\`", this._scatterCombination, "\`,"], "");
+    if (this.scatterCombination != null) {  
+      buffer.writeAll(["\"scatterCombination\":\`", this.scatterCombination, "\`,"], "");
     }
 
-    if (this._spline != null) {  
-      buffer.writeAll(["\"spline\":\`", this._spline, "\`,"], "");
+    if (this.spline != null) {  
+      buffer.writeAll(["\"spline\":\`", this.spline, "\`,"], "");
     }
 
-    if (this._splineCombination != null) {  
-      buffer.writeAll(["\"splineCombination\":\`", this._splineCombination, "\`,"], "");
+    if (this.splineCombination != null) {  
+      buffer.writeAll(["\"splineCombination\":\`", this.splineCombination, "\`,"], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,11 @@ import 'OptionFragment.dart';
  * RectangleObject 
  */
 class RectangleObject extends BBoxObject {
-  RectangleObject() : super();
-  double? _strokeWidth;  
-
+  RectangleObject( {
+    this.strokeWidth = null
+  }) : super();
+  double? strokeWidth;
+    /*
   double get strokeWidth { 
     if (this._strokeWidth == null) {
       this._strokeWidth = 0;
@@ -36,6 +38,7 @@ class RectangleObject extends BBoxObject {
   void set strokeWidth (double v) {
     this._strokeWidth = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -45,8 +48,8 @@ class RectangleObject extends BBoxObject {
     super.toJSONInner(buffer);
 
     
-    if (this._strokeWidth != null) {  
-      buffer.writeAll(["\"strokeWidth\":", this._strokeWidth, ","], "");
+    if (this.strokeWidth != null) {  
+      buffer.writeAll(["\"strokeWidth\":", this.strokeWidth, ","], "");
     }
   }
 

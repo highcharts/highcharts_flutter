@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,15 +23,25 @@ import 'OptionFragment.dart';
  * SubtitleOptions 
  */
 class SubtitleOptions extends OptionFragment {
-  SubtitleOptions() : super();
+  SubtitleOptions( {
+    this.align = null,
+    this.floating = null,
+    this.text = null,
+    this.useHTML = null,
+    this.verticalAlign = null,
+    this.widthAdjust = null,
+    this.x = null,
+    this.y = null,
+    this.type = null
+  }) : super();
   /**
    * The horizontal alignment of the subtitle. Can be one of "left",
    *  "center" and "right". 
    * 
    * Defaults to 'center'. 
       */
-  String? _align;  
-
+  String? align;
+    /*
   String get align { 
     if (this._align == null) {
       this._align = "";
@@ -42,6 +52,7 @@ class SubtitleOptions extends OptionFragment {
   void set align (String v) {
     this._align = v;
   }
+    */
     
   /**
    * When the subtitle is floating, the plot area will not move to make
@@ -49,8 +60,8 @@ class SubtitleOptions extends OptionFragment {
    * 
    * Defaults to 'false'. 
       */
-  bool? _floating;  
-
+  bool? floating;
+    /*
   bool get floating { 
     if (this._floating == null) {
       this._floating = false;
@@ -61,6 +72,7 @@ class SubtitleOptions extends OptionFragment {
   void set floating (bool v) {
     this._floating = v;
   }
+    */
     
   /**
    * CSS styles for the title.
@@ -70,8 +82,8 @@ class SubtitleOptions extends OptionFragment {
    * 
    * Defaults to '{"color": "#666666"}'. 
       */
-  CSSObject? _style;  
-
+  CSSObject? style;
+    /*
   CSSObject get style { 
     if (this._style == null) {
       this._style = CSSObject();
@@ -82,12 +94,13 @@ class SubtitleOptions extends OptionFragment {
   void set style (CSSObject v) {
     this._style = v;
   }
+    */
     
   /**
    * The subtitle of the chart.  
       */
-  String? _text;  
-
+  String? text;
+    /*
   String get text { 
     if (this._text == null) {
       this._text = "";
@@ -98,6 +111,7 @@ class SubtitleOptions extends OptionFragment {
   void set text (String v) {
     this._text = v;
   }
+    */
     
   /**
    * Whether to
@@ -106,8 +120,8 @@ class SubtitleOptions extends OptionFragment {
    * 
    * Defaults to 'false'. 
       */
-  bool? _useHTML;  
-
+  bool? useHTML;
+    /*
   bool get useHTML { 
     if (this._useHTML == null) {
       this._useHTML = false;
@@ -118,14 +132,15 @@ class SubtitleOptions extends OptionFragment {
   void set useHTML (bool v) {
     this._useHTML = v;
   }
+    */
     
   /**
    * The vertical alignment of the title. Can be one of `"top"`,
    * `"middle"` and `"bottom"`. When middle, the subtitle behaves as
    * floating.  
       */
-  String? _verticalAlign;  
-
+  String? verticalAlign;
+    /*
   String get verticalAlign { 
     if (this._verticalAlign == null) {
       this._verticalAlign = "";
@@ -136,6 +151,7 @@ class SubtitleOptions extends OptionFragment {
   void set verticalAlign (String v) {
     this._verticalAlign = v;
   }
+    */
     
   /**
    * Adjustment made to the subtitle width, normally to reserve space
@@ -143,8 +159,8 @@ class SubtitleOptions extends OptionFragment {
    * 
    * Defaults to '-44'. 
       */
-  double? _widthAdjust;  
-
+  double? widthAdjust;
+    /*
   double get widthAdjust { 
     if (this._widthAdjust == null) {
       this._widthAdjust = 0;
@@ -155,6 +171,7 @@ class SubtitleOptions extends OptionFragment {
   void set widthAdjust (double v) {
     this._widthAdjust = v;
   }
+    */
     
   /**
    * The x position of the subtitle relative to the alignment within
@@ -162,8 +179,8 @@ class SubtitleOptions extends OptionFragment {
    * 
    * Defaults to '0'. 
       */
-  double? _x;  
-
+  double? x;
+    /*
   double get x { 
     if (this._x == null) {
       this._x = 0;
@@ -174,14 +191,15 @@ class SubtitleOptions extends OptionFragment {
   void set x (double v) {
     this._x = v;
   }
+    */
     
   /**
    * The y position of the subtitle relative to the alignment within
    * `chart.spacingTop` and `chart.spacingBottom`. By default the subtitle
    * is laid out below the title unless the title is floating.  
       */
-  double? _y;  
-
+  double? y;
+    /*
   double get y { 
     if (this._y == null) {
       this._y = 0;
@@ -192,9 +210,10 @@ class SubtitleOptions extends OptionFragment {
   void set y (double v) {
     this._y = v;
   }
+    */
     
-  String? _type;  
-
+  String? type;
+    /*
   String get type { 
     if (this._type == null) {
       this._type = "";
@@ -205,6 +224,7 @@ class SubtitleOptions extends OptionFragment {
   void set type (String v) {
     this._type = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -214,44 +234,44 @@ class SubtitleOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._align != null) {  
-      buffer.writeAll(["\"align\":\`", this._align, "\`,"], "");
+    if (this.align != null) {  
+      buffer.writeAll(["\"align\":\`", this.align, "\`,"], "");
     }
 
-    if (this._floating != null) {  
-      buffer.writeAll(["\"floating\":", this._floating, ","], "");
+    if (this.floating != null) {  
+      buffer.writeAll(["\"floating\":", this.floating, ","], "");
     }
 
-    if (this._style != null) {  
-      buffer.writeAll(["\"style\":", this._style?.toJSON(), ","], "");
+    if (this.style != null) {  
+      buffer.writeAll(["\"style\":", this.style?.toJSON(), ","], "");
     }
 
-    if (this._text != null) {  
-      buffer.writeAll(["\"text\":\`", this._text, "\`,"], "");
+    if (this.text != null) {  
+      buffer.writeAll(["\"text\":\`", this.text, "\`,"], "");
     }
 
-    if (this._useHTML != null) {  
-      buffer.writeAll(["\"useHTML\":", this._useHTML, ","], "");
+    if (this.useHTML != null) {  
+      buffer.writeAll(["\"useHTML\":", this.useHTML, ","], "");
     }
 
-    if (this._verticalAlign != null) {  
-      buffer.writeAll(["\"verticalAlign\":\`", this._verticalAlign, "\`,"], "");
+    if (this.verticalAlign != null) {  
+      buffer.writeAll(["\"verticalAlign\":\`", this.verticalAlign, "\`,"], "");
     }
 
-    if (this._widthAdjust != null) {  
-      buffer.writeAll(["\"widthAdjust\":", this._widthAdjust, ","], "");
+    if (this.widthAdjust != null) {  
+      buffer.writeAll(["\"widthAdjust\":", this.widthAdjust, ","], "");
     }
 
-    if (this._x != null) {  
-      buffer.writeAll(["\"x\":", this._x, ","], "");
+    if (this.x != null) {  
+      buffer.writeAll(["\"x\":", this.x, ","], "");
     }
 
-    if (this._y != null) {  
-      buffer.writeAll(["\"y\":", this._y, ","], "");
+    if (this.y != null) {  
+      buffer.writeAll(["\"y\":", this.y, ","], "");
     }
 
-    if (this._type != null) {  
-      buffer.writeAll(["\"type\":\`", this._type, "\`,"], "");
+    if (this.type != null) {  
+      buffer.writeAll(["\"type\":\`", this.type, "\`,"], "");
     }
   }
 

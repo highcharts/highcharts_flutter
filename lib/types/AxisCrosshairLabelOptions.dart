@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,19 @@ import 'OptionFragment.dart';
  * AxisCrosshairLabelOptions 
  */
 class AxisCrosshairLabelOptions extends OptionFragment {
-  AxisCrosshairLabelOptions() : super();
-  String? _align;  
-
+  AxisCrosshairLabelOptions( {
+    this.align = null,
+    this.backgroundColor = null,
+    this.borderColor = null,
+    this.borderRadius = null,
+    this.borderWidth = null,
+    this.enabled = null,
+    this.format = null,
+    this.padding = null,
+    this.shape = null
+  }) : super();
+  String? align;
+    /*
   String get align { 
     if (this._align == null) {
       this._align = "";
@@ -36,9 +46,10 @@ class AxisCrosshairLabelOptions extends OptionFragment {
   void set align (String v) {
     this._align = v;
   }
+    */
     
-  String? _backgroundColor;  
-
+  String? backgroundColor;
+    /*
   String get backgroundColor { 
     if (this._backgroundColor == null) {
       this._backgroundColor = "";
@@ -49,9 +60,10 @@ class AxisCrosshairLabelOptions extends OptionFragment {
   void set backgroundColor (String v) {
     this._backgroundColor = v;
   }
+    */
     
-  String? _borderColor;  
-
+  String? borderColor;
+    /*
   String get borderColor { 
     if (this._borderColor == null) {
       this._borderColor = "";
@@ -62,9 +74,10 @@ class AxisCrosshairLabelOptions extends OptionFragment {
   void set borderColor (String v) {
     this._borderColor = v;
   }
+    */
     
-  double? _borderRadius;  
-
+  double? borderRadius;
+    /*
   double get borderRadius { 
     if (this._borderRadius == null) {
       this._borderRadius = 0;
@@ -75,9 +88,10 @@ class AxisCrosshairLabelOptions extends OptionFragment {
   void set borderRadius (double v) {
     this._borderRadius = v;
   }
+    */
     
-  double? _borderWidth;  
-
+  double? borderWidth;
+    /*
   double get borderWidth { 
     if (this._borderWidth == null) {
       this._borderWidth = 0;
@@ -88,9 +102,10 @@ class AxisCrosshairLabelOptions extends OptionFragment {
   void set borderWidth (double v) {
     this._borderWidth = v;
   }
+    */
     
-  bool? _enabled;  
-
+  bool? enabled;
+    /*
   bool get enabled { 
     if (this._enabled == null) {
       this._enabled = false;
@@ -101,9 +116,10 @@ class AxisCrosshairLabelOptions extends OptionFragment {
   void set enabled (bool v) {
     this._enabled = v;
   }
+    */
     
-  String? _format;  
-
+  String? format;
+    /*
   String get format { 
     if (this._format == null) {
       this._format = "";
@@ -114,9 +130,10 @@ class AxisCrosshairLabelOptions extends OptionFragment {
   void set format (String v) {
     this._format = v;
   }
+    */
     
-  double? _padding;  
-
+  double? padding;
+    /*
   double get padding { 
     if (this._padding == null) {
       this._padding = 0;
@@ -127,9 +144,10 @@ class AxisCrosshairLabelOptions extends OptionFragment {
   void set padding (double v) {
     this._padding = v;
   }
+    */
     
-  String? _shape;  
-
+  String? shape;
+    /*
   String get shape { 
     if (this._shape == null) {
       this._shape = "";
@@ -140,6 +158,7 @@ class AxisCrosshairLabelOptions extends OptionFragment {
   void set shape (String v) {
     this._shape = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -149,40 +168,40 @@ class AxisCrosshairLabelOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._align != null) {  
-      buffer.writeAll(["\"align\":\`", this._align, "\`,"], "");
+    if (this.align != null) {  
+      buffer.writeAll(["\"align\":\`", this.align, "\`,"], "");
     }
 
-    if (this._backgroundColor != null) {  
-      buffer.writeAll(["\"backgroundColor\":\`", this._backgroundColor, "\`,"], "");
+    if (this.backgroundColor != null) {  
+      buffer.writeAll(["\"backgroundColor\":\`", this.backgroundColor, "\`,"], "");
     }
 
-    if (this._borderColor != null) {  
-      buffer.writeAll(["\"borderColor\":\`", this._borderColor, "\`,"], "");
+    if (this.borderColor != null) {  
+      buffer.writeAll(["\"borderColor\":\`", this.borderColor, "\`,"], "");
     }
 
-    if (this._borderRadius != null) {  
-      buffer.writeAll(["\"borderRadius\":", this._borderRadius, ","], "");
+    if (this.borderRadius != null) {  
+      buffer.writeAll(["\"borderRadius\":", this.borderRadius, ","], "");
     }
 
-    if (this._borderWidth != null) {  
-      buffer.writeAll(["\"borderWidth\":", this._borderWidth, ","], "");
+    if (this.borderWidth != null) {  
+      buffer.writeAll(["\"borderWidth\":", this.borderWidth, ","], "");
     }
 
-    if (this._enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this._enabled, ","], "");
+    if (this.enabled != null) {  
+      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
     }
 
-    if (this._format != null) {  
-      buffer.writeAll(["\"format\":\`", this._format, "\`,"], "");
+    if (this.format != null) {  
+      buffer.writeAll(["\"format\":\`", this.format, "\`,"], "");
     }
 
-    if (this._padding != null) {  
-      buffer.writeAll(["\"padding\":", this._padding, ","], "");
+    if (this.padding != null) {  
+      buffer.writeAll(["\"padding\":", this.padding, ","], "");
     }
 
-    if (this._shape != null) {  
-      buffer.writeAll(["\"shape\":\`", this._shape, "\`,"], "");
+    if (this.shape != null) {  
+      buffer.writeAll(["\"shape\":\`", this.shape, "\`,"], "");
     }
 
     // NOTE: skip serialization of style (type CSSObject is ignored)} 

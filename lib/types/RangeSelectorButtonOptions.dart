@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -24,9 +24,17 @@ import 'OptionFragment.dart';
  * RangeSelectorButtonOptions 
  */
 class RangeSelectorButtonOptions extends OptionFragment {
-  RangeSelectorButtonOptions() : super();
-  double? _count;  
-
+  RangeSelectorButtonOptions( {
+    this.count = null,
+    this.title = null,
+    this.offsetMax = null,
+    this.offsetMin = null,
+    this.preserveDataGrouping = null,
+    this.text = null,
+    this.type = null
+  }) : super();
+  double? count;
+    /*
   double get count { 
     if (this._count == null) {
       this._count = 0;
@@ -37,9 +45,10 @@ class RangeSelectorButtonOptions extends OptionFragment {
   void set count (double v) {
     this._count = v;
   }
+    */
     
-  String? _title;  
-
+  String? title;
+    /*
   String get title { 
     if (this._title == null) {
       this._title = "";
@@ -50,9 +59,10 @@ class RangeSelectorButtonOptions extends OptionFragment {
   void set title (String v) {
     this._title = v;
   }
+    */
     
-  double? _offsetMax;  
-
+  double? offsetMax;
+    /*
   double get offsetMax { 
     if (this._offsetMax == null) {
       this._offsetMax = 0;
@@ -63,9 +73,10 @@ class RangeSelectorButtonOptions extends OptionFragment {
   void set offsetMax (double v) {
     this._offsetMax = v;
   }
+    */
     
-  double? _offsetMin;  
-
+  double? offsetMin;
+    /*
   double get offsetMin { 
     if (this._offsetMin == null) {
       this._offsetMin = 0;
@@ -76,9 +87,10 @@ class RangeSelectorButtonOptions extends OptionFragment {
   void set offsetMin (double v) {
     this._offsetMin = v;
   }
+    */
     
-  bool? _preserveDataGrouping;  
-
+  bool? preserveDataGrouping;
+    /*
   bool get preserveDataGrouping { 
     if (this._preserveDataGrouping == null) {
       this._preserveDataGrouping = false;
@@ -89,9 +101,10 @@ class RangeSelectorButtonOptions extends OptionFragment {
   void set preserveDataGrouping (bool v) {
     this._preserveDataGrouping = v;
   }
+    */
     
-  String? _text;  
-
+  String? text;
+    /*
   String get text { 
     if (this._text == null) {
       this._text = "";
@@ -102,9 +115,10 @@ class RangeSelectorButtonOptions extends OptionFragment {
   void set text (String v) {
     this._text = v;
   }
+    */
     
-  String? _type;  
-
+  String? type;
+    /*
   String get type { 
     if (this._type == null) {
       this._type = "";
@@ -115,9 +129,10 @@ class RangeSelectorButtonOptions extends OptionFragment {
   void set type (String v) {
     this._type = v;
   }
+    */
     
-  double? _p_offsetMax;  
-
+  double? p_offsetMax;
+    /*
   double get p_offsetMax { 
     if (this._p_offsetMax == null) {
       this._p_offsetMax = 0;
@@ -128,9 +143,10 @@ class RangeSelectorButtonOptions extends OptionFragment {
   void set p_offsetMax (double v) {
     this._p_offsetMax = v;
   }
+    */
     
-  double? _p_offsetMin;  
-
+  double? p_offsetMin;
+    /*
   double get p_offsetMin { 
     if (this._p_offsetMin == null) {
       this._p_offsetMin = 0;
@@ -141,9 +157,10 @@ class RangeSelectorButtonOptions extends OptionFragment {
   void set p_offsetMin (double v) {
     this._p_offsetMin = v;
   }
+    */
     
-  double? _p_range;  
-
+  double? p_range;
+    /*
   double get p_range { 
     if (this._p_range == null) {
       this._p_range = 0;
@@ -154,6 +171,7 @@ class RangeSelectorButtonOptions extends OptionFragment {
   void set p_range (double v) {
     this._p_range = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -163,48 +181,48 @@ class RangeSelectorButtonOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._count != null) {  
-      buffer.writeAll(["\"count\":", this._count, ","], "");
+    if (this.count != null) {  
+      buffer.writeAll(["\"count\":", this.count, ","], "");
     }
 
     // NOTE: skip serialization of dataGrouping (type DataGroupingOptions is ignored)} 
 
-    if (this._title != null) {  
-      buffer.writeAll(["\"title\":\`", this._title, "\`,"], "");
+    if (this.title != null) {  
+      buffer.writeAll(["\"title\":\`", this.title, "\`,"], "");
     }
 
     // NOTE: skip serialization of events (type RangeSelectorButtonsEventsOptions is ignored)} 
 
-    if (this._offsetMax != null) {  
-      buffer.writeAll(["\"offsetMax\":", this._offsetMax, ","], "");
+    if (this.offsetMax != null) {  
+      buffer.writeAll(["\"offsetMax\":", this.offsetMax, ","], "");
     }
 
-    if (this._offsetMin != null) {  
-      buffer.writeAll(["\"offsetMin\":", this._offsetMin, ","], "");
+    if (this.offsetMin != null) {  
+      buffer.writeAll(["\"offsetMin\":", this.offsetMin, ","], "");
     }
 
-    if (this._preserveDataGrouping != null) {  
-      buffer.writeAll(["\"preserveDataGrouping\":", this._preserveDataGrouping, ","], "");
+    if (this.preserveDataGrouping != null) {  
+      buffer.writeAll(["\"preserveDataGrouping\":", this.preserveDataGrouping, ","], "");
     }
 
-    if (this._text != null) {  
-      buffer.writeAll(["\"text\":\`", this._text, "\`,"], "");
+    if (this.text != null) {  
+      buffer.writeAll(["\"text\":\`", this.text, "\`,"], "");
     }
 
-    if (this._type != null) {  
-      buffer.writeAll(["\"type\":\`", this._type, "\`,"], "");
+    if (this.type != null) {  
+      buffer.writeAll(["\"type\":\`", this.type, "\`,"], "");
     }
 
-    if (this._p_offsetMax != null) {  
-      buffer.writeAll(["\"_offsetMax\":", this._p_offsetMax, ","], "");
+    if (this.p_offsetMax != null) {  
+      buffer.writeAll(["\"_offsetMax\":", this.p_offsetMax, ","], "");
     }
 
-    if (this._p_offsetMin != null) {  
-      buffer.writeAll(["\"_offsetMin\":", this._p_offsetMin, ","], "");
+    if (this.p_offsetMin != null) {  
+      buffer.writeAll(["\"_offsetMin\":", this.p_offsetMin, ","], "");
     }
 
-    if (this._p_range != null) {  
-      buffer.writeAll(["\"_range\":", this._p_range, ","], "");
+    if (this.p_range != null) {  
+      buffer.writeAll(["\"_range\":", this.p_range, ","], "");
     }
   }
 

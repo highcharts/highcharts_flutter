@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,12 @@ import 'OptionFragment.dart';
  * FrameOptions 
  */
 class FrameOptions extends OptionFragment {
-  FrameOptions() : super();
-  double? _size;  
-
+  FrameOptions( {
+    this.size = null,
+    this.visible = null
+  }) : super();
+  double? size;
+    /*
   double get size { 
     if (this._size == null) {
       this._size = 0;
@@ -36,9 +39,10 @@ class FrameOptions extends OptionFragment {
   void set size (double v) {
     this._size = v;
   }
+    */
     
-  String? _visible;  
-
+  String? visible;
+    /*
   String get visible { 
     if (this._visible == null) {
       this._visible = "";
@@ -49,6 +53,7 @@ class FrameOptions extends OptionFragment {
   void set visible (String v) {
     this._visible = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -68,14 +73,14 @@ class FrameOptions extends OptionFragment {
 
     // NOTE: skip serialization of right (type FrameSideOptions is ignored)} 
 
-    if (this._size != null) {  
-      buffer.writeAll(["\"size\":", this._size, ","], "");
+    if (this.size != null) {  
+      buffer.writeAll(["\"size\":", this.size, ","], "");
     }
 
     // NOTE: skip serialization of top (type FrameSideOptions is ignored)} 
 
-    if (this._visible != null) {  
-      buffer.writeAll(["\"visible\":\`", this._visible, "\`,"], "");
+    if (this.visible != null) {  
+      buffer.writeAll(["\"visible\":\`", this.visible, "\`,"], "");
     }
   }
 

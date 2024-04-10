@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,32 @@ import 'OptionFragment.dart';
  * LangAccessibilityChartTypesOptions 
  */
 class LangAccessibilityChartTypesOptions extends OptionFragment {
-  LangAccessibilityChartTypesOptions() : super();
-  String? _barMultiple;  
-
+  LangAccessibilityChartTypesOptions( {
+    this.barMultiple = null,
+    this.barSingle = null,
+    this.boxplotMultiple = null,
+    this.boxplotSingle = null,
+    this.bubbleSingle = null,
+    this.bubbleMultiple = null,
+    this.columnMultiple = null,
+    this.columnSingle = null,
+    this.combinationChart = null,
+    this.defaultMultiple = null,
+    this.defaultSingle = null,
+    this.emptyChart = null,
+    this.lineMultiple = null,
+    this.lineSingle = null,
+    this.mapTypeDescription = null,
+    this.pieMultiple = null,
+    this.pieSingle = null,
+    this.scatterMultiple = null,
+    this.scatterSingle = null,
+    this.splineMultiple = null,
+    this.splineSingle = null,
+    this.unknownMap = null
+  }) : super();
+  String? barMultiple;
+    /*
   String get barMultiple { 
     if (this._barMultiple == null) {
       this._barMultiple = "";
@@ -35,9 +58,10 @@ class LangAccessibilityChartTypesOptions extends OptionFragment {
   void set barMultiple (String v) {
     this._barMultiple = v;
   }
+    */
     
-  String? _barSingle;  
-
+  String? barSingle;
+    /*
   String get barSingle { 
     if (this._barSingle == null) {
       this._barSingle = "";
@@ -48,9 +72,10 @@ class LangAccessibilityChartTypesOptions extends OptionFragment {
   void set barSingle (String v) {
     this._barSingle = v;
   }
+    */
     
-  String? _boxplotMultiple;  
-
+  String? boxplotMultiple;
+    /*
   String get boxplotMultiple { 
     if (this._boxplotMultiple == null) {
       this._boxplotMultiple = "";
@@ -61,9 +86,10 @@ class LangAccessibilityChartTypesOptions extends OptionFragment {
   void set boxplotMultiple (String v) {
     this._boxplotMultiple = v;
   }
+    */
     
-  String? _boxplotSingle;  
-
+  String? boxplotSingle;
+    /*
   String get boxplotSingle { 
     if (this._boxplotSingle == null) {
       this._boxplotSingle = "";
@@ -74,9 +100,10 @@ class LangAccessibilityChartTypesOptions extends OptionFragment {
   void set boxplotSingle (String v) {
     this._boxplotSingle = v;
   }
+    */
     
-  String? _bubbleSingle;  
-
+  String? bubbleSingle;
+    /*
   String get bubbleSingle { 
     if (this._bubbleSingle == null) {
       this._bubbleSingle = "";
@@ -87,9 +114,10 @@ class LangAccessibilityChartTypesOptions extends OptionFragment {
   void set bubbleSingle (String v) {
     this._bubbleSingle = v;
   }
+    */
     
-  String? _bubbleMultiple;  
-
+  String? bubbleMultiple;
+    /*
   String get bubbleMultiple { 
     if (this._bubbleMultiple == null) {
       this._bubbleMultiple = "";
@@ -100,9 +128,10 @@ class LangAccessibilityChartTypesOptions extends OptionFragment {
   void set bubbleMultiple (String v) {
     this._bubbleMultiple = v;
   }
+    */
     
-  String? _columnMultiple;  
-
+  String? columnMultiple;
+    /*
   String get columnMultiple { 
     if (this._columnMultiple == null) {
       this._columnMultiple = "";
@@ -113,9 +142,10 @@ class LangAccessibilityChartTypesOptions extends OptionFragment {
   void set columnMultiple (String v) {
     this._columnMultiple = v;
   }
+    */
     
-  String? _columnSingle;  
-
+  String? columnSingle;
+    /*
   String get columnSingle { 
     if (this._columnSingle == null) {
       this._columnSingle = "";
@@ -126,9 +156,10 @@ class LangAccessibilityChartTypesOptions extends OptionFragment {
   void set columnSingle (String v) {
     this._columnSingle = v;
   }
+    */
     
-  String? _combinationChart;  
-
+  String? combinationChart;
+    /*
   String get combinationChart { 
     if (this._combinationChart == null) {
       this._combinationChart = "";
@@ -139,9 +170,10 @@ class LangAccessibilityChartTypesOptions extends OptionFragment {
   void set combinationChart (String v) {
     this._combinationChart = v;
   }
+    */
     
-  String? _defaultMultiple;  
-
+  String? defaultMultiple;
+    /*
   String get defaultMultiple { 
     if (this._defaultMultiple == null) {
       this._defaultMultiple = "";
@@ -152,9 +184,10 @@ class LangAccessibilityChartTypesOptions extends OptionFragment {
   void set defaultMultiple (String v) {
     this._defaultMultiple = v;
   }
+    */
     
-  String? _defaultSingle;  
-
+  String? defaultSingle;
+    /*
   String get defaultSingle { 
     if (this._defaultSingle == null) {
       this._defaultSingle = "";
@@ -165,9 +198,10 @@ class LangAccessibilityChartTypesOptions extends OptionFragment {
   void set defaultSingle (String v) {
     this._defaultSingle = v;
   }
+    */
     
-  String? _emptyChart;  
-
+  String? emptyChart;
+    /*
   String get emptyChart { 
     if (this._emptyChart == null) {
       this._emptyChart = "";
@@ -178,9 +212,10 @@ class LangAccessibilityChartTypesOptions extends OptionFragment {
   void set emptyChart (String v) {
     this._emptyChart = v;
   }
+    */
     
-  String? _lineMultiple;  
-
+  String? lineMultiple;
+    /*
   String get lineMultiple { 
     if (this._lineMultiple == null) {
       this._lineMultiple = "";
@@ -191,9 +226,10 @@ class LangAccessibilityChartTypesOptions extends OptionFragment {
   void set lineMultiple (String v) {
     this._lineMultiple = v;
   }
+    */
     
-  String? _lineSingle;  
-
+  String? lineSingle;
+    /*
   String get lineSingle { 
     if (this._lineSingle == null) {
       this._lineSingle = "";
@@ -204,9 +240,10 @@ class LangAccessibilityChartTypesOptions extends OptionFragment {
   void set lineSingle (String v) {
     this._lineSingle = v;
   }
+    */
     
-  String? _mapTypeDescription;  
-
+  String? mapTypeDescription;
+    /*
   String get mapTypeDescription { 
     if (this._mapTypeDescription == null) {
       this._mapTypeDescription = "";
@@ -217,9 +254,10 @@ class LangAccessibilityChartTypesOptions extends OptionFragment {
   void set mapTypeDescription (String v) {
     this._mapTypeDescription = v;
   }
+    */
     
-  String? _pieMultiple;  
-
+  String? pieMultiple;
+    /*
   String get pieMultiple { 
     if (this._pieMultiple == null) {
       this._pieMultiple = "";
@@ -230,9 +268,10 @@ class LangAccessibilityChartTypesOptions extends OptionFragment {
   void set pieMultiple (String v) {
     this._pieMultiple = v;
   }
+    */
     
-  String? _pieSingle;  
-
+  String? pieSingle;
+    /*
   String get pieSingle { 
     if (this._pieSingle == null) {
       this._pieSingle = "";
@@ -243,9 +282,10 @@ class LangAccessibilityChartTypesOptions extends OptionFragment {
   void set pieSingle (String v) {
     this._pieSingle = v;
   }
+    */
     
-  String? _scatterMultiple;  
-
+  String? scatterMultiple;
+    /*
   String get scatterMultiple { 
     if (this._scatterMultiple == null) {
       this._scatterMultiple = "";
@@ -256,9 +296,10 @@ class LangAccessibilityChartTypesOptions extends OptionFragment {
   void set scatterMultiple (String v) {
     this._scatterMultiple = v;
   }
+    */
     
-  String? _scatterSingle;  
-
+  String? scatterSingle;
+    /*
   String get scatterSingle { 
     if (this._scatterSingle == null) {
       this._scatterSingle = "";
@@ -269,9 +310,10 @@ class LangAccessibilityChartTypesOptions extends OptionFragment {
   void set scatterSingle (String v) {
     this._scatterSingle = v;
   }
+    */
     
-  String? _splineMultiple;  
-
+  String? splineMultiple;
+    /*
   String get splineMultiple { 
     if (this._splineMultiple == null) {
       this._splineMultiple = "";
@@ -282,9 +324,10 @@ class LangAccessibilityChartTypesOptions extends OptionFragment {
   void set splineMultiple (String v) {
     this._splineMultiple = v;
   }
+    */
     
-  String? _splineSingle;  
-
+  String? splineSingle;
+    /*
   String get splineSingle { 
     if (this._splineSingle == null) {
       this._splineSingle = "";
@@ -295,9 +338,10 @@ class LangAccessibilityChartTypesOptions extends OptionFragment {
   void set splineSingle (String v) {
     this._splineSingle = v;
   }
+    */
     
-  String? _unknownMap;  
-
+  String? unknownMap;
+    /*
   String get unknownMap { 
     if (this._unknownMap == null) {
       this._unknownMap = "";
@@ -308,6 +352,7 @@ class LangAccessibilityChartTypesOptions extends OptionFragment {
   void set unknownMap (String v) {
     this._unknownMap = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -317,92 +362,92 @@ class LangAccessibilityChartTypesOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._barMultiple != null) {  
-      buffer.writeAll(["\"barMultiple\":\`", this._barMultiple, "\`,"], "");
+    if (this.barMultiple != null) {  
+      buffer.writeAll(["\"barMultiple\":\`", this.barMultiple, "\`,"], "");
     }
 
-    if (this._barSingle != null) {  
-      buffer.writeAll(["\"barSingle\":\`", this._barSingle, "\`,"], "");
+    if (this.barSingle != null) {  
+      buffer.writeAll(["\"barSingle\":\`", this.barSingle, "\`,"], "");
     }
 
-    if (this._boxplotMultiple != null) {  
-      buffer.writeAll(["\"boxplotMultiple\":\`", this._boxplotMultiple, "\`,"], "");
+    if (this.boxplotMultiple != null) {  
+      buffer.writeAll(["\"boxplotMultiple\":\`", this.boxplotMultiple, "\`,"], "");
     }
 
-    if (this._boxplotSingle != null) {  
-      buffer.writeAll(["\"boxplotSingle\":\`", this._boxplotSingle, "\`,"], "");
+    if (this.boxplotSingle != null) {  
+      buffer.writeAll(["\"boxplotSingle\":\`", this.boxplotSingle, "\`,"], "");
     }
 
-    if (this._bubbleSingle != null) {  
-      buffer.writeAll(["\"bubbleSingle\":\`", this._bubbleSingle, "\`,"], "");
+    if (this.bubbleSingle != null) {  
+      buffer.writeAll(["\"bubbleSingle\":\`", this.bubbleSingle, "\`,"], "");
     }
 
-    if (this._bubbleMultiple != null) {  
-      buffer.writeAll(["\"bubbleMultiple\":\`", this._bubbleMultiple, "\`,"], "");
+    if (this.bubbleMultiple != null) {  
+      buffer.writeAll(["\"bubbleMultiple\":\`", this.bubbleMultiple, "\`,"], "");
     }
 
-    if (this._columnMultiple != null) {  
-      buffer.writeAll(["\"columnMultiple\":\`", this._columnMultiple, "\`,"], "");
+    if (this.columnMultiple != null) {  
+      buffer.writeAll(["\"columnMultiple\":\`", this.columnMultiple, "\`,"], "");
     }
 
-    if (this._columnSingle != null) {  
-      buffer.writeAll(["\"columnSingle\":\`", this._columnSingle, "\`,"], "");
+    if (this.columnSingle != null) {  
+      buffer.writeAll(["\"columnSingle\":\`", this.columnSingle, "\`,"], "");
     }
 
-    if (this._combinationChart != null) {  
-      buffer.writeAll(["\"combinationChart\":\`", this._combinationChart, "\`,"], "");
+    if (this.combinationChart != null) {  
+      buffer.writeAll(["\"combinationChart\":\`", this.combinationChart, "\`,"], "");
     }
 
-    if (this._defaultMultiple != null) {  
-      buffer.writeAll(["\"defaultMultiple\":\`", this._defaultMultiple, "\`,"], "");
+    if (this.defaultMultiple != null) {  
+      buffer.writeAll(["\"defaultMultiple\":\`", this.defaultMultiple, "\`,"], "");
     }
 
-    if (this._defaultSingle != null) {  
-      buffer.writeAll(["\"defaultSingle\":\`", this._defaultSingle, "\`,"], "");
+    if (this.defaultSingle != null) {  
+      buffer.writeAll(["\"defaultSingle\":\`", this.defaultSingle, "\`,"], "");
     }
 
-    if (this._emptyChart != null) {  
-      buffer.writeAll(["\"emptyChart\":\`", this._emptyChart, "\`,"], "");
+    if (this.emptyChart != null) {  
+      buffer.writeAll(["\"emptyChart\":\`", this.emptyChart, "\`,"], "");
     }
 
-    if (this._lineMultiple != null) {  
-      buffer.writeAll(["\"lineMultiple\":\`", this._lineMultiple, "\`,"], "");
+    if (this.lineMultiple != null) {  
+      buffer.writeAll(["\"lineMultiple\":\`", this.lineMultiple, "\`,"], "");
     }
 
-    if (this._lineSingle != null) {  
-      buffer.writeAll(["\"lineSingle\":\`", this._lineSingle, "\`,"], "");
+    if (this.lineSingle != null) {  
+      buffer.writeAll(["\"lineSingle\":\`", this.lineSingle, "\`,"], "");
     }
 
-    if (this._mapTypeDescription != null) {  
-      buffer.writeAll(["\"mapTypeDescription\":\`", this._mapTypeDescription, "\`,"], "");
+    if (this.mapTypeDescription != null) {  
+      buffer.writeAll(["\"mapTypeDescription\":\`", this.mapTypeDescription, "\`,"], "");
     }
 
-    if (this._pieMultiple != null) {  
-      buffer.writeAll(["\"pieMultiple\":\`", this._pieMultiple, "\`,"], "");
+    if (this.pieMultiple != null) {  
+      buffer.writeAll(["\"pieMultiple\":\`", this.pieMultiple, "\`,"], "");
     }
 
-    if (this._pieSingle != null) {  
-      buffer.writeAll(["\"pieSingle\":\`", this._pieSingle, "\`,"], "");
+    if (this.pieSingle != null) {  
+      buffer.writeAll(["\"pieSingle\":\`", this.pieSingle, "\`,"], "");
     }
 
-    if (this._scatterMultiple != null) {  
-      buffer.writeAll(["\"scatterMultiple\":\`", this._scatterMultiple, "\`,"], "");
+    if (this.scatterMultiple != null) {  
+      buffer.writeAll(["\"scatterMultiple\":\`", this.scatterMultiple, "\`,"], "");
     }
 
-    if (this._scatterSingle != null) {  
-      buffer.writeAll(["\"scatterSingle\":\`", this._scatterSingle, "\`,"], "");
+    if (this.scatterSingle != null) {  
+      buffer.writeAll(["\"scatterSingle\":\`", this.scatterSingle, "\`,"], "");
     }
 
-    if (this._splineMultiple != null) {  
-      buffer.writeAll(["\"splineMultiple\":\`", this._splineMultiple, "\`,"], "");
+    if (this.splineMultiple != null) {  
+      buffer.writeAll(["\"splineMultiple\":\`", this.splineMultiple, "\`,"], "");
     }
 
-    if (this._splineSingle != null) {  
-      buffer.writeAll(["\"splineSingle\":\`", this._splineSingle, "\`,"], "");
+    if (this.splineSingle != null) {  
+      buffer.writeAll(["\"splineSingle\":\`", this.splineSingle, "\`,"], "");
     }
 
-    if (this._unknownMap != null) {  
-      buffer.writeAll(["\"unknownMap\":\`", this._unknownMap, "\`,"], "");
+    if (this.unknownMap != null) {  
+      buffer.writeAll(["\"unknownMap\":\`", this.unknownMap, "\`,"], "");
     }
   }
 

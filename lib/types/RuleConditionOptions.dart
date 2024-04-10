@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,14 @@ import 'OptionFragment.dart';
  * RuleConditionOptions 
  */
 class RuleConditionOptions extends OptionFragment {
-  RuleConditionOptions() : super();
-  double? _maxHeight;  
-
+  RuleConditionOptions( {
+    this.maxHeight = null,
+    this.maxWidth = null,
+    this.minHeight = null,
+    this.minWidth = null
+  }) : super();
+  double? maxHeight;
+    /*
   double get maxHeight { 
     if (this._maxHeight == null) {
       this._maxHeight = 0;
@@ -35,9 +40,10 @@ class RuleConditionOptions extends OptionFragment {
   void set maxHeight (double v) {
     this._maxHeight = v;
   }
+    */
     
-  double? _maxWidth;  
-
+  double? maxWidth;
+    /*
   double get maxWidth { 
     if (this._maxWidth == null) {
       this._maxWidth = 0;
@@ -48,9 +54,10 @@ class RuleConditionOptions extends OptionFragment {
   void set maxWidth (double v) {
     this._maxWidth = v;
   }
+    */
     
-  double? _minHeight;  
-
+  double? minHeight;
+    /*
   double get minHeight { 
     if (this._minHeight == null) {
       this._minHeight = 0;
@@ -61,9 +68,10 @@ class RuleConditionOptions extends OptionFragment {
   void set minHeight (double v) {
     this._minHeight = v;
   }
+    */
     
-  double? _minWidth;  
-
+  double? minWidth;
+    /*
   double get minWidth { 
     if (this._minWidth == null) {
       this._minWidth = 0;
@@ -74,6 +82,7 @@ class RuleConditionOptions extends OptionFragment {
   void set minWidth (double v) {
     this._minWidth = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -83,20 +92,20 @@ class RuleConditionOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._maxHeight != null) {  
-      buffer.writeAll(["\"maxHeight\":", this._maxHeight, ","], "");
+    if (this.maxHeight != null) {  
+      buffer.writeAll(["\"maxHeight\":", this.maxHeight, ","], "");
     }
 
-    if (this._maxWidth != null) {  
-      buffer.writeAll(["\"maxWidth\":", this._maxWidth, ","], "");
+    if (this.maxWidth != null) {  
+      buffer.writeAll(["\"maxWidth\":", this.maxWidth, ","], "");
     }
 
-    if (this._minHeight != null) {  
-      buffer.writeAll(["\"minHeight\":", this._minHeight, ","], "");
+    if (this.minHeight != null) {  
+      buffer.writeAll(["\"minHeight\":", this.minHeight, ","], "");
     }
 
-    if (this._minWidth != null) {  
-      buffer.writeAll(["\"minWidth\":", this._minWidth, ","], "");
+    if (this.minWidth != null) {  
+      buffer.writeAll(["\"minWidth\":", this.minWidth, ","], "");
     }
   }
 

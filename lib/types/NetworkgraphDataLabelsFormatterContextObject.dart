@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,12 @@ import 'OptionFragment.dart';
  * NetworkgraphDataLabelsFormatterContextObject 
  */
 class NetworkgraphDataLabelsFormatterContextObject extends OptionFragment {
-  NetworkgraphDataLabelsFormatterContextObject() : super();
-  String? _color;  
-
+  NetworkgraphDataLabelsFormatterContextObject( {
+    this.color = null,
+    this.key = null
+  }) : super();
+  String? color;
+    /*
   String get color { 
     if (this._color == null) {
       this._color = "";
@@ -36,9 +39,10 @@ class NetworkgraphDataLabelsFormatterContextObject extends OptionFragment {
   void set color (String v) {
     this._color = v;
   }
+    */
     
-  String? _key;  
-
+  String? key;
+    /*
   String get key { 
     if (this._key == null) {
       this._key = "";
@@ -49,6 +53,7 @@ class NetworkgraphDataLabelsFormatterContextObject extends OptionFragment {
   void set key (String v) {
     this._key = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -58,12 +63,12 @@ class NetworkgraphDataLabelsFormatterContextObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._color != null) {  
-      buffer.writeAll(["\"color\":\`", this._color, "\`,"], "");
+    if (this.color != null) {  
+      buffer.writeAll(["\"color\":\`", this.color, "\`,"], "");
     }
 
-    if (this._key != null) {  
-      buffer.writeAll(["\"key\":\`", this._key, "\`,"], "");
+    if (this.key != null) {  
+      buffer.writeAll(["\"key\":\`", this.key, "\`,"], "");
     }
 
     // NOTE: skip serialization of point (type NetworkgraphPoint is ignored)} 

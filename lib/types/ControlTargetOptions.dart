@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -24,15 +24,18 @@ import 'OptionFragment.dart';
  * ControlTargetOptions 
  */
 class ControlTargetOptions extends OptionFragment {
-  ControlTargetOptions() : super();
+  ControlTargetOptions( {
+    this.x = null,
+    this.y = null
+  }) : super();
   /**
    * Options for annotation's control points. Each control point
    * inherits options from controlPointOptions object.
    * Options from the controlPointOptions can be overwritten
    * by options in a specific control point.  
       */
-  ControlPointOptionsObject? _controlPointOptions;  
-
+  ControlPointOptionsObject? controlPointOptions;
+    /*
   ControlPointOptionsObject get controlPointOptions { 
     if (this._controlPointOptions == null) {
       this._controlPointOptions = ControlPointOptionsObject();
@@ -43,9 +46,10 @@ class ControlTargetOptions extends OptionFragment {
   void set controlPointOptions (ControlPointOptionsObject v) {
     this._controlPointOptions = v;
   }
+    */
     
-  double? _x;  
-
+  double? x;
+    /*
   double get x { 
     if (this._x == null) {
       this._x = 0;
@@ -56,9 +60,10 @@ class ControlTargetOptions extends OptionFragment {
   void set x (double v) {
     this._x = v;
   }
+    */
     
-  double? _y;  
-
+  double? y;
+    /*
   double get y { 
     if (this._y == null) {
       this._y = 0;
@@ -69,6 +74,7 @@ class ControlTargetOptions extends OptionFragment {
   void set y (double v) {
     this._y = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -78,8 +84,8 @@ class ControlTargetOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._controlPointOptions != null) {  
-      buffer.writeAll(["\"controlPointOptions\":", this._controlPointOptions?.toJSON(), ","], "");
+    if (this.controlPointOptions != null) {  
+      buffer.writeAll(["\"controlPointOptions\":", this.controlPointOptions?.toJSON(), ","], "");
     }
 
     // NOTE: skip serialization of controlPoints (type ControlPointOptionsObject[] is ignored)} 
@@ -88,12 +94,12 @@ class ControlTargetOptions extends OptionFragment {
 
     // NOTE: skip serialization of points (type MockPointOptions)[] is ignored)} 
 
-    if (this._x != null) {  
-      buffer.writeAll(["\"x\":", this._x, ","], "");
+    if (this.x != null) {  
+      buffer.writeAll(["\"x\":", this.x, ","], "");
     }
 
-    if (this._y != null) {  
-      buffer.writeAll(["\"y\":", this._y, ","], "");
+    if (this.y != null) {  
+      buffer.writeAll(["\"y\":", this.y, ","], "");
     }
   }
 

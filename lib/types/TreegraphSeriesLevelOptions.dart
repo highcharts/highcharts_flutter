@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,11 @@ import 'OptionFragment.dart';
  * TreegraphSeriesLevelOptions 
  */
 class TreegraphSeriesLevelOptions extends TreegraphSeriesOptions {
-  TreegraphSeriesLevelOptions() : super();
-  bool? _collapsed;  
-
+  TreegraphSeriesLevelOptions( {
+    this.collapsed = null
+  }) : super();
+  bool? collapsed;
+    /*
   bool get collapsed { 
     if (this._collapsed == null) {
       this._collapsed = false;
@@ -36,6 +38,7 @@ class TreegraphSeriesLevelOptions extends TreegraphSeriesOptions {
   void set collapsed (bool v) {
     this._collapsed = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -45,8 +48,8 @@ class TreegraphSeriesLevelOptions extends TreegraphSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._collapsed != null) {  
-      buffer.writeAll(["\"collapsed\":", this._collapsed, ","], "");
+    if (this.collapsed != null) {  
+      buffer.writeAll(["\"collapsed\":", this.collapsed, ","], "");
     }
   }
 

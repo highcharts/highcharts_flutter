@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,7 +22,9 @@ import 'OptionFragment.dart';
  * HiddenRowEvent 
  */
 class HiddenRowEvent extends OptionFragment {
-  HiddenRowEvent() : super();
+  HiddenRowEvent( {
+    this.hiddenRows = null
+  }) : super();
   List<double>? hiddenRows; // double
 
   //////////////////////////////////////////////////////////////////////////////

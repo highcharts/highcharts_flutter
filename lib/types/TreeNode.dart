@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,16 @@ import 'OptionFragment.dart';
  * TreeNode 
  */
 class TreeNode extends OptionFragment {
-  TreeNode() : super();
-  double? _depth;  
-
+  TreeNode( {
+    this.depth = null,
+    this.descendants = null,
+    this.height = null,
+    this.id = null,
+    this.level = null,
+    this.parent = null
+  }) : super();
+  double? depth;
+    /*
   double get depth { 
     if (this._depth == null) {
       this._depth = 0;
@@ -36,9 +43,10 @@ class TreeNode extends OptionFragment {
   void set depth (double v) {
     this._depth = v;
   }
+    */
     
-  double? _descendants;  
-
+  double? descendants;
+    /*
   double get descendants { 
     if (this._descendants == null) {
       this._descendants = 0;
@@ -49,9 +57,10 @@ class TreeNode extends OptionFragment {
   void set descendants (double v) {
     this._descendants = v;
   }
+    */
     
-  double? _height;  
-
+  double? height;
+    /*
   double get height { 
     if (this._height == null) {
       this._height = 0;
@@ -62,9 +71,10 @@ class TreeNode extends OptionFragment {
   void set height (double v) {
     this._height = v;
   }
+    */
     
-  String? _id;  
-
+  String? id;
+    /*
   String get id { 
     if (this._id == null) {
       this._id = "";
@@ -75,9 +85,10 @@ class TreeNode extends OptionFragment {
   void set id (String v) {
     this._id = v;
   }
+    */
     
-  double? _level;  
-
+  double? level;
+    /*
   double get level { 
     if (this._level == null) {
       this._level = 0;
@@ -88,9 +99,10 @@ class TreeNode extends OptionFragment {
   void set level (double v) {
     this._level = v;
   }
+    */
     
-  String? _parent;  
-
+  String? parent;
+    /*
   String get parent { 
     if (this._parent == null) {
       this._parent = "";
@@ -101,6 +113,7 @@ class TreeNode extends OptionFragment {
   void set parent (String v) {
     this._parent = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -114,28 +127,28 @@ class TreeNode extends OptionFragment {
 
     // NOTE: skip serialization of data (type TreePointOptionsObject is ignored)} 
 
-    if (this._depth != null) {  
-      buffer.writeAll(["\"depth\":", this._depth, ","], "");
+    if (this.depth != null) {  
+      buffer.writeAll(["\"depth\":", this.depth, ","], "");
     }
 
-    if (this._descendants != null) {  
-      buffer.writeAll(["\"descendants\":", this._descendants, ","], "");
+    if (this.descendants != null) {  
+      buffer.writeAll(["\"descendants\":", this.descendants, ","], "");
     }
 
-    if (this._height != null) {  
-      buffer.writeAll(["\"height\":", this._height, ","], "");
+    if (this.height != null) {  
+      buffer.writeAll(["\"height\":", this.height, ","], "");
     }
 
-    if (this._id != null) {  
-      buffer.writeAll(["\"id\":\`", this._id, "\`,"], "");
+    if (this.id != null) {  
+      buffer.writeAll(["\"id\":\`", this.id, "\`,"], "");
     }
 
-    if (this._level != null) {  
-      buffer.writeAll(["\"level\":", this._level, ","], "");
+    if (this.level != null) {  
+      buffer.writeAll(["\"level\":", this.level, ","], "");
     }
 
-    if (this._parent != null) {  
-      buffer.writeAll(["\"parent\":\`", this._parent, "\`,"], "");
+    if (this.parent != null) {  
+      buffer.writeAll(["\"parent\":\`", this.parent, "\`,"], "");
     }
   }
 

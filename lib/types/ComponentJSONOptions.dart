@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,18 @@ import 'OptionFragment.dart';
  * ComponentJSONOptions 
  */
 class ComponentJSONOptions extends OptionFragment {
-  ComponentJSONOptions() : super();
-  String? _dataGridOptions;  
-
+  ComponentJSONOptions( {
+    this.dataGridOptions = null,
+    this.chartClassName = null,
+    this.chartID = null,
+    this.title = null,
+    this.chartOptions = null,
+    this.value = null,
+    this.subtitle = null,
+    this.valueFormat = null
+  }) : super();
+  String? dataGridOptions;
+    /*
   String get dataGridOptions { 
     if (this._dataGridOptions == null) {
       this._dataGridOptions = "";
@@ -35,9 +44,10 @@ class ComponentJSONOptions extends OptionFragment {
   void set dataGridOptions (String v) {
     this._dataGridOptions = v;
   }
+    */
     
-  String? _chartClassName;  
-
+  String? chartClassName;
+    /*
   String get chartClassName { 
     if (this._chartClassName == null) {
       this._chartClassName = "";
@@ -48,9 +58,10 @@ class ComponentJSONOptions extends OptionFragment {
   void set chartClassName (String v) {
     this._chartClassName = v;
   }
+    */
     
-  String? _chartID;  
-
+  String? chartID;
+    /*
   String get chartID { 
     if (this._chartID == null) {
       this._chartID = "";
@@ -61,9 +72,10 @@ class ComponentJSONOptions extends OptionFragment {
   void set chartID (String v) {
     this._chartID = v;
   }
+    */
     
-  String? _title;  
-
+  String? title;
+    /*
   String get title { 
     if (this._title == null) {
       this._title = "";
@@ -74,9 +86,10 @@ class ComponentJSONOptions extends OptionFragment {
   void set title (String v) {
     this._title = v;
   }
+    */
     
-  String? _chartOptions;  
-
+  String? chartOptions;
+    /*
   String get chartOptions { 
     if (this._chartOptions == null) {
       this._chartOptions = "";
@@ -87,9 +100,10 @@ class ComponentJSONOptions extends OptionFragment {
   void set chartOptions (String v) {
     this._chartOptions = v;
   }
+    */
     
-  String? _value;  
-
+  String? value;
+    /*
   String get value { 
     if (this._value == null) {
       this._value = "";
@@ -100,9 +114,10 @@ class ComponentJSONOptions extends OptionFragment {
   void set value (String v) {
     this._value = v;
   }
+    */
     
-  String? _subtitle;  
-
+  String? subtitle;
+    /*
   String get subtitle { 
     if (this._subtitle == null) {
       this._subtitle = "";
@@ -113,9 +128,10 @@ class ComponentJSONOptions extends OptionFragment {
   void set subtitle (String v) {
     this._subtitle = v;
   }
+    */
     
-  String? _valueFormat;  
-
+  String? valueFormat;
+    /*
   String get valueFormat { 
     if (this._valueFormat == null) {
       this._valueFormat = "";
@@ -126,6 +142,7 @@ class ComponentJSONOptions extends OptionFragment {
   void set valueFormat (String v) {
     this._valueFormat = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -135,24 +152,24 @@ class ComponentJSONOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._dataGridOptions != null) {  
-      buffer.writeAll(["\"dataGridOptions\":\`", this._dataGridOptions, "\`,"], "");
+    if (this.dataGridOptions != null) {  
+      buffer.writeAll(["\"dataGridOptions\":\`", this.dataGridOptions, "\`,"], "");
     }
 
-    if (this._chartClassName != null) {  
-      buffer.writeAll(["\"chartClassName\":\`", this._chartClassName, "\`,"], "");
+    if (this.chartClassName != null) {  
+      buffer.writeAll(["\"chartClassName\":\`", this.chartClassName, "\`,"], "");
     }
 
-    if (this._chartID != null) {  
-      buffer.writeAll(["\"chartID\":\`", this._chartID, "\`,"], "");
+    if (this.chartID != null) {  
+      buffer.writeAll(["\"chartID\":\`", this.chartID, "\`,"], "");
     }
 
-    if (this._title != null) {  
-      buffer.writeAll(["\"title\":\`", this._title, "\`,"], "");
+    if (this.title != null) {  
+      buffer.writeAll(["\"title\":\`", this.title, "\`,"], "");
     }
 
-    if (this._chartOptions != null) {  
-      buffer.writeAll(["\"chartOptions\":\`", this._chartOptions, "\`,"], "");
+    if (this.chartOptions != null) {  
+      buffer.writeAll(["\"chartOptions\":\`", this.chartOptions, "\`,"], "");
     }
 
     // NOTE: skip serialization of threshold (type number[] is ignored)} 
@@ -161,16 +178,16 @@ class ComponentJSONOptions extends OptionFragment {
 
     // NOTE: skip serialization of type (type "KPI" is ignored)} 
 
-    if (this._value != null) {  
-      buffer.writeAll(["\"value\":\`", this._value, "\`,"], "");
+    if (this.value != null) {  
+      buffer.writeAll(["\"value\":\`", this.value, "\`,"], "");
     }
 
-    if (this._subtitle != null) {  
-      buffer.writeAll(["\"subtitle\":\`", this._subtitle, "\`,"], "");
+    if (this.subtitle != null) {  
+      buffer.writeAll(["\"subtitle\":\`", this.subtitle, "\`,"], "");
     }
 
-    if (this._valueFormat != null) {  
-      buffer.writeAll(["\"valueFormat\":\`", this._valueFormat, "\`,"], "");
+    if (this.valueFormat != null) {  
+      buffer.writeAll(["\"valueFormat\":\`", this.valueFormat, "\`,"], "");
     }
   }
 

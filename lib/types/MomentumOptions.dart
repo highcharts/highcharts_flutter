@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -24,14 +24,16 @@ import 'OptionFragment.dart';
  * MomentumOptions 
  */
 class MomentumOptions extends SMAOptions {
-  MomentumOptions() : super();
+  MomentumOptions( {
+    this.period = null
+  }) : super();
   /**
    * Paramters used in calculation of regression series' points.  
       */
   /** NOTE: extparams is skipped here for now, as it overrides the base type. */
 
-  double? _period;  
-
+  double? period;
+    /*
   double get period { 
     if (this._period == null) {
       this._period = 0;
@@ -42,6 +44,7 @@ class MomentumOptions extends SMAOptions {
   void set period (double v) {
     this._period = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -53,8 +56,8 @@ class MomentumOptions extends SMAOptions {
     
     // NOTE: skip serialization of params (type MomentumParamsOptions is ignored)} 
 
-    if (this._period != null) {  
-      buffer.writeAll(["\"period\":", this._period, ","], "");
+    if (this.period != null) {  
+      buffer.writeAll(["\"period\":", this.period, ","], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -113,8 +113,9 @@ class HighchartsOptions extends OptionFragment {
   /** 
   * @see: https://api.highcharts.com/highcharts/accessibility
   */
-  AccessibilityOptions? _accessibility;
+  AccessibilityOptions? accessibility;
 
+      /*
   AccessibilityOptions get accessibility { 
     if (this._accessibility == null) {
       this._accessibility = AccessibilityOptions();
@@ -127,12 +128,15 @@ class HighchartsOptions extends OptionFragment {
     // notifyListeners();
   }
 
+      */
+
   
   /** 
   * @see: https://api.highcharts.com/highcharts/annotations
   */
-  AnnotationOptions? _annotations;
+  AnnotationOptions? annotations;
 
+      /*
   AnnotationOptions get annotations { 
     if (this._annotations == null) {
       this._annotations = AnnotationOptions();
@@ -145,12 +149,15 @@ class HighchartsOptions extends OptionFragment {
     // notifyListeners();
   }
 
+      */
+
   
   /** 
   * @see: https://api.highcharts.com/highcharts/boost
   */
-  BoostOptions? _boost;
+  BoostOptions? boost;
 
+      /*
   BoostOptions get boost { 
     if (this._boost == null) {
       this._boost = BoostOptions();
@@ -163,12 +170,15 @@ class HighchartsOptions extends OptionFragment {
     // notifyListeners();
   }
 
+      */
+
   
   /** 
   * @see: https://api.highcharts.com/highcharts/caption
   */
-  CaptionOptions? _caption;
+  CaptionOptions? caption;
 
+      /*
   CaptionOptions get caption { 
     if (this._caption == null) {
       this._caption = CaptionOptions();
@@ -181,12 +191,15 @@ class HighchartsOptions extends OptionFragment {
     // notifyListeners();
   }
 
+      */
+
   
   /** 
   * @see: https://api.highcharts.com/highcharts/chart
   */
-  ChartOptions? _chart;
+  ChartOptions? chart;
 
+      /*
   ChartOptions get chart { 
     if (this._chart == null) {
       this._chart = ChartOptions();
@@ -199,12 +212,15 @@ class HighchartsOptions extends OptionFragment {
     // notifyListeners();
   }
 
+      */
+
   
   /** 
   * @see: https://api.highcharts.com/highcharts/colorAxis
   */
-  ColorAxisOptions? _colorAxis;
+  ColorAxisOptions? colorAxis;
 
+      /*
   ColorAxisOptions get colorAxis { 
     if (this._colorAxis == null) {
       this._colorAxis = ColorAxisOptions();
@@ -217,12 +233,15 @@ class HighchartsOptions extends OptionFragment {
     // notifyListeners();
   }
 
+      */
+
   
   /** 
   * @see: https://api.highcharts.com/highcharts/credits
   */
-  CreditsOptions? _credits;
+  CreditsOptions? credits;
 
+      /*
   CreditsOptions get credits { 
     if (this._credits == null) {
       this._credits = CreditsOptions();
@@ -235,12 +254,15 @@ class HighchartsOptions extends OptionFragment {
     // notifyListeners();
   }
 
+      */
+
   
   /** 
   * @see: https://api.highcharts.com/highcharts/data
   */
-  DataOptions? _data;
+  DataOptions? data;
 
+      /*
   DataOptions get data { 
     if (this._data == null) {
       this._data = DataOptions();
@@ -253,12 +275,15 @@ class HighchartsOptions extends OptionFragment {
     // notifyListeners();
   }
 
+      */
+
   
   /** 
   * @see: https://api.highcharts.com/highcharts/exporting
   */
-  ExportingOptions? _exporting;
+  ExportingOptions? exporting;
 
+      /*
   ExportingOptions get exporting { 
     if (this._exporting == null) {
       this._exporting = ExportingOptions();
@@ -271,12 +296,15 @@ class HighchartsOptions extends OptionFragment {
     // notifyListeners();
   }
 
+      */
+
   
   /** 
   * @see: https://api.highcharts.com/highcharts/legend
   */
-  LegendOptions? _legend;
+  LegendOptions? legend;
 
+      /*
   LegendOptions get legend { 
     if (this._legend == null) {
       this._legend = LegendOptions();
@@ -289,12 +317,15 @@ class HighchartsOptions extends OptionFragment {
     // notifyListeners();
   }
 
+      */
+
   
   /** 
   * @see: https://api.highcharts.com/highcharts/loading
   */
-  LoadingOptions? _loading;
+  LoadingOptions? loading;
 
+      /*
   LoadingOptions get loading { 
     if (this._loading == null) {
       this._loading = LoadingOptions();
@@ -307,12 +338,15 @@ class HighchartsOptions extends OptionFragment {
     // notifyListeners();
   }
 
+      */
+
   
   /** 
   * @see: https://api.highcharts.com/highcharts/navigation
   */
-  NavigationOptions? _navigation;
+  NavigationOptions? navigation;
 
+      /*
   NavigationOptions get navigation { 
     if (this._navigation == null) {
       this._navigation = NavigationOptions();
@@ -325,12 +359,15 @@ class HighchartsOptions extends OptionFragment {
     // notifyListeners();
   }
 
+      */
+
   
   /** 
   * @see: https://api.highcharts.com/highcharts/plotOptions
   */
-  HighchartsProductSeries? _plotOptions;
+  HighchartsProductSeries? plotOptions;
 
+      /*
   HighchartsProductSeries get plotOptions { 
     if (this._plotOptions == null) {
       this._plotOptions = HighchartsProductSeries();
@@ -343,12 +380,15 @@ class HighchartsOptions extends OptionFragment {
     // notifyListeners();
   }
 
+      */
+
   
   /** 
   * @see: https://api.highcharts.com/highcharts/scrollbar
   */
-  ScrollbarOptions? _scrollbar;
+  ScrollbarOptions? scrollbar;
 
+      /*
   ScrollbarOptions get scrollbar { 
     if (this._scrollbar == null) {
       this._scrollbar = ScrollbarOptions();
@@ -361,12 +401,15 @@ class HighchartsOptions extends OptionFragment {
     // notifyListeners();
   }
 
+      */
+
   
   /** 
   * @see: https://api.highcharts.com/highcharts/subtitle
   */
-  SubtitleOptions? _subtitle;
+  SubtitleOptions? subtitle;
 
+      /*
   SubtitleOptions get subtitle { 
     if (this._subtitle == null) {
       this._subtitle = SubtitleOptions();
@@ -379,12 +422,15 @@ class HighchartsOptions extends OptionFragment {
     // notifyListeners();
   }
 
+      */
+
   
   /** 
   * @see: https://api.highcharts.com/highcharts/time
   */
-  TimeOptions? _time;
+  TimeOptions? time;
 
+      /*
   TimeOptions get time { 
     if (this._time == null) {
       this._time = TimeOptions();
@@ -397,12 +443,15 @@ class HighchartsOptions extends OptionFragment {
     // notifyListeners();
   }
 
+      */
+
   
   /** 
   * @see: https://api.highcharts.com/highcharts/title
   */
-  TitleOptions? _title;
+  TitleOptions? title;
 
+      /*
   TitleOptions get title { 
     if (this._title == null) {
       this._title = TitleOptions();
@@ -415,12 +464,15 @@ class HighchartsOptions extends OptionFragment {
     // notifyListeners();
   }
 
+      */
+
   
   /** 
   * @see: https://api.highcharts.com/highcharts/tooltip
   */
-  TooltipOptions? _tooltip;
+  TooltipOptions? tooltip;
 
+      /*
   TooltipOptions get tooltip { 
     if (this._tooltip == null) {
       this._tooltip = TooltipOptions();
@@ -433,12 +485,15 @@ class HighchartsOptions extends OptionFragment {
     // notifyListeners();
   }
 
+      */
+
   
   /** 
   * @see: https://api.highcharts.com/highcharts/xAxis
   */
-  AxisOptions? _xAxis;
+  AxisOptions? xAxis;
 
+      /*
   AxisOptions get xAxis { 
     if (this._xAxis == null) {
       this._xAxis = AxisOptions();
@@ -451,12 +506,15 @@ class HighchartsOptions extends OptionFragment {
     // notifyListeners();
   }
 
+      */
+
   
   /** 
   * @see: https://api.highcharts.com/highcharts/yAxis
   */
-  AxisOptions? _yAxis;
+  AxisOptions? yAxis;
 
+      /*
   AxisOptions get yAxis { 
     if (this._yAxis == null) {
       this._yAxis = AxisOptions();
@@ -469,12 +527,15 @@ class HighchartsOptions extends OptionFragment {
     // notifyListeners();
   }
 
+      */
+
   
   /** 
   * @see: https://api.highcharts.com/highcharts/zAxis
   */
-  AxisOptions? _zAxis;
+  AxisOptions? zAxis;
 
+      /*
   AxisOptions get zAxis { 
     if (this._zAxis == null) {
       this._zAxis = AxisOptions();
@@ -487,6 +548,8 @@ class HighchartsOptions extends OptionFragment {
     // notifyListeners();
   }
 
+      */
+
   
 
 
@@ -496,29 +559,29 @@ class HighchartsOptions extends OptionFragment {
   //////////////////////////////////////////////////////////////////////////////
 
   /** Constructor */
-  HighchartsOptions([
-    this._accessibility,
-    this._annotations,
-    this._boost,
-    this._caption,
-    this._chart,
-    this._colorAxis,
-    this._credits,
-    this._data,
-    this._exporting,
-    this._legend,
-    this._loading,
-    this._navigation,
-    this._plotOptions,
-    this._scrollbar,
-    this._subtitle,
-    this._time,
-    this._title,
-    this._tooltip,
-    this._xAxis,
-    this._yAxis,
-    this._zAxis
-  ]);
+  HighchartsOptions({
+    this.accessibility = null,
+    this.annotations = null,
+    this.boost = null,
+    this.caption = null,
+    this.chart = null,
+    this.colorAxis = null,
+    this.credits = null,
+    this.data = null,
+    this.exporting = null,
+    this.legend = null,
+    this.loading = null,
+    this.navigation = null,
+    this.plotOptions = null,
+    this.scrollbar = null,
+    this.subtitle = null,
+    this.time = null,
+    this.title = null,
+    this.tooltip = null,
+    this.xAxis = null,
+    this.yAxis = null,
+    this.zAxis = null
+  });
   
   @override
   void toJSONInner(StringBuffer buffer) {
@@ -597,88 +660,88 @@ class HighchartsOptions extends OptionFragment {
 
     buffer.writeAll(["\"series\": [", seriesData, "],"], "");
   
-    if (this._accessibility != null) {  
-      buffer.writeAll(["\"accessibility\":", this._accessibility?.toJSON(), ","], "");
+    if (this.accessibility != null) {  
+      buffer.writeAll(["\"accessibility\":", this.accessibility?.toJSON(), ","], "");
     }
 
-    if (this._annotations != null) {  
-      buffer.writeAll(["\"annotations\":", this._annotations?.toJSON(), ","], "");
+    if (this.annotations != null) {  
+      buffer.writeAll(["\"annotations\":", this.annotations?.toJSON(), ","], "");
     }
 
-    if (this._boost != null) {  
-      buffer.writeAll(["\"boost\":", this._boost?.toJSON(), ","], "");
+    if (this.boost != null) {  
+      buffer.writeAll(["\"boost\":", this.boost?.toJSON(), ","], "");
     }
 
-    if (this._caption != null) {  
-      buffer.writeAll(["\"caption\":", this._caption?.toJSON(), ","], "");
+    if (this.caption != null) {  
+      buffer.writeAll(["\"caption\":", this.caption?.toJSON(), ","], "");
     }
 
-    if (this._chart != null) {  
-      buffer.writeAll(["\"chart\":", this._chart?.toJSON(), ","], "");
+    if (this.chart != null) {  
+      buffer.writeAll(["\"chart\":", this.chart?.toJSON(), ","], "");
     }
 
-    if (this._colorAxis != null) {  
-      buffer.writeAll(["\"colorAxis\":", this._colorAxis?.toJSON(), ","], "");
+    if (this.colorAxis != null) {  
+      buffer.writeAll(["\"colorAxis\":", this.colorAxis?.toJSON(), ","], "");
     }
 
-    if (this._credits != null) {  
-      buffer.writeAll(["\"credits\":", this._credits?.toJSON(), ","], "");
+    if (this.credits != null) {  
+      buffer.writeAll(["\"credits\":", this.credits?.toJSON(), ","], "");
     }
 
-    if (this._data != null) {  
-      buffer.writeAll(["\"data\":", this._data?.toJSON(), ","], "");
+    if (this.data != null) {  
+      buffer.writeAll(["\"data\":", this.data?.toJSON(), ","], "");
     }
 
-    if (this._exporting != null) {  
-      buffer.writeAll(["\"exporting\":", this._exporting?.toJSON(), ","], "");
+    if (this.exporting != null) {  
+      buffer.writeAll(["\"exporting\":", this.exporting?.toJSON(), ","], "");
     }
 
-    if (this._legend != null) {  
-      buffer.writeAll(["\"legend\":", this._legend?.toJSON(), ","], "");
+    if (this.legend != null) {  
+      buffer.writeAll(["\"legend\":", this.legend?.toJSON(), ","], "");
     }
 
-    if (this._loading != null) {  
-      buffer.writeAll(["\"loading\":", this._loading?.toJSON(), ","], "");
+    if (this.loading != null) {  
+      buffer.writeAll(["\"loading\":", this.loading?.toJSON(), ","], "");
     }
 
-    if (this._navigation != null) {  
-      buffer.writeAll(["\"navigation\":", this._navigation?.toJSON(), ","], "");
+    if (this.navigation != null) {  
+      buffer.writeAll(["\"navigation\":", this.navigation?.toJSON(), ","], "");
     }
 
-    if (this._plotOptions != null) {  
-      buffer.writeAll(["\"plotOptions\":", this._plotOptions?.toJSON(), ","], "");
+    if (this.plotOptions != null) {  
+      buffer.writeAll(["\"plotOptions\":", this.plotOptions?.toJSON(), ","], "");
     }
 
-    if (this._scrollbar != null) {  
-      buffer.writeAll(["\"scrollbar\":", this._scrollbar?.toJSON(), ","], "");
+    if (this.scrollbar != null) {  
+      buffer.writeAll(["\"scrollbar\":", this.scrollbar?.toJSON(), ","], "");
     }
 
-    if (this._subtitle != null) {  
-      buffer.writeAll(["\"subtitle\":", this._subtitle?.toJSON(), ","], "");
+    if (this.subtitle != null) {  
+      buffer.writeAll(["\"subtitle\":", this.subtitle?.toJSON(), ","], "");
     }
 
-    if (this._time != null) {  
-      buffer.writeAll(["\"time\":", this._time?.toJSON(), ","], "");
+    if (this.time != null) {  
+      buffer.writeAll(["\"time\":", this.time?.toJSON(), ","], "");
     }
 
-    if (this._title != null) {  
-      buffer.writeAll(["\"title\":", this._title?.toJSON(), ","], "");
+    if (this.title != null) {  
+      buffer.writeAll(["\"title\":", this.title?.toJSON(), ","], "");
     }
 
-    if (this._tooltip != null) {  
-      buffer.writeAll(["\"tooltip\":", this._tooltip?.toJSON(), ","], "");
+    if (this.tooltip != null) {  
+      buffer.writeAll(["\"tooltip\":", this.tooltip?.toJSON(), ","], "");
     }
 
-    if (this._xAxis != null) {  
-      buffer.writeAll(["\"xAxis\":", this._xAxis?.toJSON(), ","], "");
+    if (this.xAxis != null) {  
+      buffer.writeAll(["\"xAxis\":", this.xAxis?.toJSON(), ","], "");
     }
 
-    if (this._yAxis != null) {  
-      buffer.writeAll(["\"yAxis\":", this._yAxis?.toJSON(), ","], "");
+    if (this.yAxis != null) {  
+      buffer.writeAll(["\"yAxis\":", this.yAxis?.toJSON(), ","], "");
     }
 
-    if (this._zAxis != null) {  
-      buffer.writeAll(["\"zAxis\":", this._zAxis?.toJSON(), ","], "");
+    if (this.zAxis != null) {  
+      buffer.writeAll(["\"zAxis\":", this.zAxis?.toJSON(), ","], "");
     }
   }
 

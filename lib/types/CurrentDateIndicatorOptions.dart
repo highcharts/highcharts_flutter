@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,17 @@ import 'OptionFragment.dart';
  * CurrentDateIndicatorOptions 
  */
 class CurrentDateIndicatorOptions extends OptionFragment {
-  CurrentDateIndicatorOptions() : super();
-  bool? _acrossPanes;  
-
+  CurrentDateIndicatorOptions( {
+    this.acrossPanes = null,
+    this.className = null,
+    this.color = null,
+    this.dashStyle = null,
+    this.id = null,
+    this.width = null,
+    this.zIndex = null
+  }) : super();
+  bool? acrossPanes;
+    /*
   bool get acrossPanes { 
     if (this._acrossPanes == null) {
       this._acrossPanes = false;
@@ -36,9 +44,10 @@ class CurrentDateIndicatorOptions extends OptionFragment {
   void set acrossPanes (bool v) {
     this._acrossPanes = v;
   }
+    */
     
-  String? _className;  
-
+  String? className;
+    /*
   String get className { 
     if (this._className == null) {
       this._className = "";
@@ -49,9 +58,10 @@ class CurrentDateIndicatorOptions extends OptionFragment {
   void set className (String v) {
     this._className = v;
   }
+    */
     
-  String? _color;  
-
+  String? color;
+    /*
   String get color { 
     if (this._color == null) {
       this._color = "";
@@ -62,9 +72,10 @@ class CurrentDateIndicatorOptions extends OptionFragment {
   void set color (String v) {
     this._color = v;
   }
+    */
     
-  String? _dashStyle;  
-
+  String? dashStyle;
+    /*
   String get dashStyle { 
     if (this._dashStyle == null) {
       this._dashStyle = "";
@@ -75,9 +86,10 @@ class CurrentDateIndicatorOptions extends OptionFragment {
   void set dashStyle (String v) {
     this._dashStyle = v;
   }
+    */
     
-  String? _id;  
-
+  String? id;
+    /*
   String get id { 
     if (this._id == null) {
       this._id = "";
@@ -88,9 +100,10 @@ class CurrentDateIndicatorOptions extends OptionFragment {
   void set id (String v) {
     this._id = v;
   }
+    */
     
-  double? _width;  
-
+  double? width;
+    /*
   double get width { 
     if (this._width == null) {
       this._width = 0;
@@ -101,9 +114,10 @@ class CurrentDateIndicatorOptions extends OptionFragment {
   void set width (double v) {
     this._width = v;
   }
+    */
     
-  double? _zIndex;  
-
+  double? zIndex;
+    /*
   double get zIndex { 
     if (this._zIndex == null) {
       this._zIndex = 0;
@@ -114,6 +128,7 @@ class CurrentDateIndicatorOptions extends OptionFragment {
   void set zIndex (double v) {
     this._zIndex = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -123,36 +138,36 @@ class CurrentDateIndicatorOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._acrossPanes != null) {  
-      buffer.writeAll(["\"acrossPanes\":", this._acrossPanes, ","], "");
+    if (this.acrossPanes != null) {  
+      buffer.writeAll(["\"acrossPanes\":", this.acrossPanes, ","], "");
     }
 
-    if (this._className != null) {  
-      buffer.writeAll(["\"className\":\`", this._className, "\`,"], "");
+    if (this.className != null) {  
+      buffer.writeAll(["\"className\":\`", this.className, "\`,"], "");
     }
 
-    if (this._color != null) {  
-      buffer.writeAll(["\"color\":\`", this._color, "\`,"], "");
+    if (this.color != null) {  
+      buffer.writeAll(["\"color\":\`", this.color, "\`,"], "");
     }
 
-    if (this._dashStyle != null) {  
-      buffer.writeAll(["\"dashStyle\":\`", this._dashStyle, "\`,"], "");
+    if (this.dashStyle != null) {  
+      buffer.writeAll(["\"dashStyle\":\`", this.dashStyle, "\`,"], "");
     }
 
     // NOTE: skip serialization of events (type any is ignored)} 
 
-    if (this._id != null) {  
-      buffer.writeAll(["\"id\":\`", this._id, "\`,"], "");
+    if (this.id != null) {  
+      buffer.writeAll(["\"id\":\`", this.id, "\`,"], "");
     }
 
     // NOTE: skip serialization of label (type CurrentDateIndicatorLabelOptions is ignored)} 
 
-    if (this._width != null) {  
-      buffer.writeAll(["\"width\":", this._width, ","], "");
+    if (this.width != null) {  
+      buffer.writeAll(["\"width\":", this.width, ","], "");
     }
 
-    if (this._zIndex != null) {  
-      buffer.writeAll(["\"zIndex\":", this._zIndex, ","], "");
+    if (this.zIndex != null) {  
+      buffer.writeAll(["\"zIndex\":", this.zIndex, ","], "");
     }
   }
 

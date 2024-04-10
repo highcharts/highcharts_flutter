@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,14 @@ import 'OptionFragment.dart';
  * PlotBoxTransform 
  */
 class PlotBoxTransform extends SVGAttributes {
-  PlotBoxTransform() : super();
-  double? _scaleX;  
-
+  PlotBoxTransform( {
+    this.scaleX = null,
+    this.scaleY = null,
+    this.translateX = null,
+    this.translateY = null
+  }) : super();
+  double? scaleX;
+    /*
   double get scaleX { 
     if (this._scaleX == null) {
       this._scaleX = 0;
@@ -36,9 +41,10 @@ class PlotBoxTransform extends SVGAttributes {
   void set scaleX (double v) {
     this._scaleX = v;
   }
+    */
     
-  double? _scaleY;  
-
+  double? scaleY;
+    /*
   double get scaleY { 
     if (this._scaleY == null) {
       this._scaleY = 0;
@@ -49,9 +55,10 @@ class PlotBoxTransform extends SVGAttributes {
   void set scaleY (double v) {
     this._scaleY = v;
   }
+    */
     
-  double? _translateX;  
-
+  double? translateX;
+    /*
   double get translateX { 
     if (this._translateX == null) {
       this._translateX = 0;
@@ -62,9 +69,10 @@ class PlotBoxTransform extends SVGAttributes {
   void set translateX (double v) {
     this._translateX = v;
   }
+    */
     
-  double? _translateY;  
-
+  double? translateY;
+    /*
   double get translateY { 
     if (this._translateY == null) {
       this._translateY = 0;
@@ -75,6 +83,7 @@ class PlotBoxTransform extends SVGAttributes {
   void set translateY (double v) {
     this._translateY = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -84,20 +93,20 @@ class PlotBoxTransform extends SVGAttributes {
     super.toJSONInner(buffer);
 
     
-    if (this._scaleX != null) {  
-      buffer.writeAll(["\"scaleX\":", this._scaleX, ","], "");
+    if (this.scaleX != null) {  
+      buffer.writeAll(["\"scaleX\":", this.scaleX, ","], "");
     }
 
-    if (this._scaleY != null) {  
-      buffer.writeAll(["\"scaleY\":", this._scaleY, ","], "");
+    if (this.scaleY != null) {  
+      buffer.writeAll(["\"scaleY\":", this.scaleY, ","], "");
     }
 
-    if (this._translateX != null) {  
-      buffer.writeAll(["\"translateX\":", this._translateX, ","], "");
+    if (this.translateX != null) {  
+      buffer.writeAll(["\"translateX\":", this.translateX, ","], "");
     }
 
-    if (this._translateY != null) {  
-      buffer.writeAll(["\"translateY\":", this._translateY, ","], "");
+    if (this.translateY != null) {  
+      buffer.writeAll(["\"translateY\":", this.translateY, ","], "");
     }
   }
 

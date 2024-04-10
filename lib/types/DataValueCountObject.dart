@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,11 @@ import 'OptionFragment.dart';
  * DataValueCountObject 
  */
 class DataValueCountObject extends OptionFragment {
-  DataValueCountObject() : super();
-  double? _global;  
-
+  DataValueCountObject( {
+    this.global = null
+  }) : super();
+  double? global;
+    /*
   double get global { 
     if (this._global == null) {
       this._global = 0;
@@ -35,6 +37,7 @@ class DataValueCountObject extends OptionFragment {
   void set global (double v) {
     this._global = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -44,8 +47,8 @@ class DataValueCountObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._global != null) {  
-      buffer.writeAll(["\"global\":", this._global, ","], "");
+    if (this.global != null) {  
+      buffer.writeAll(["\"global\":", this.global, ","], "");
     }
 
     // NOTE: skip serialization of globalPointArrayMap (type string[] is ignored)} 

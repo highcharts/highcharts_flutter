@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -24,7 +24,7 @@ import 'OptionFragment.dart';
  * GanttSeriesOptions 
  */
 class GanttSeriesOptions extends XRangeSeriesOptions {
-  GanttSeriesOptions() : super();
+  GanttSeriesOptions( ) : super();
   /**
    * Override Pathfinder connector options for a series. Requires Highcharts Gantt
    * to be loaded.  

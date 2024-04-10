@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -24,9 +24,11 @@ import 'OptionFragment.dart';
  * DragDropDefaults 
  */
 class DragDropDefaults extends DragDropOptions {
-  DragDropDefaults() : super();
-  double? _dragSensitivity;  
-
+  DragDropDefaults( {
+    this.dragSensitivity = null
+  }) : super();
+  double? dragSensitivity;
+    /*
   double get dragSensitivity { 
     if (this._dragSensitivity == null) {
       this._dragSensitivity = 0;
@@ -37,6 +39,7 @@ class DragDropDefaults extends DragDropOptions {
   void set dragSensitivity (double v) {
     this._dragSensitivity = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -46,8 +49,8 @@ class DragDropDefaults extends DragDropOptions {
     super.toJSONInner(buffer);
 
     
-    if (this._dragSensitivity != null) {  
-      buffer.writeAll(["\"dragSensitivity\":", this._dragSensitivity, ","], "");
+    if (this.dragSensitivity != null) {  
+      buffer.writeAll(["\"dragSensitivity\":", this.dragSensitivity, ","], "");
     }
 
     // NOTE: skip serialization of dragHandle (type DragDropHandleOptions is ignored)} 

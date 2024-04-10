@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,12 @@ import 'OptionFragment.dart';
  * ComponentConnectorOptions 
  */
 class ComponentConnectorOptions extends OptionFragment {
-  ComponentConnectorOptions() : super();
-  bool? _allowSave;  
-
+  ComponentConnectorOptions( {
+    this.allowSave = null,
+    this.id = null
+  }) : super();
+  bool? allowSave;
+    /*
   bool get allowSave { 
     if (this._allowSave == null) {
       this._allowSave = false;
@@ -35,9 +38,10 @@ class ComponentConnectorOptions extends OptionFragment {
   void set allowSave (bool v) {
     this._allowSave = v;
   }
+    */
     
-  String? _id;  
-
+  String? id;
+    /*
   String get id { 
     if (this._id == null) {
       this._id = "";
@@ -48,6 +52,7 @@ class ComponentConnectorOptions extends OptionFragment {
   void set id (String v) {
     this._id = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -57,12 +62,12 @@ class ComponentConnectorOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._allowSave != null) {  
-      buffer.writeAll(["\"allowSave\":", this._allowSave, ","], "");
+    if (this.allowSave != null) {  
+      buffer.writeAll(["\"allowSave\":", this.allowSave, ","], "");
     }
 
-    if (this._id != null) {  
-      buffer.writeAll(["\"id\":\`", this._id, "\`,"], "");
+    if (this.id != null) {  
+      buffer.writeAll(["\"id\":\`", this.id, "\`,"], "");
     }
   }
 

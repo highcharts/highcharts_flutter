@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -24,9 +24,14 @@ import 'OptionFragment.dart';
  * DragDropDataObject 
  */
 class DragDropDataObject extends OptionFragment {
-  DragDropDataObject() : super();
-  bool? _draggedPastSensitivity;  
-
+  DragDropDataObject( {
+    this.draggedPastSensitivity = null,
+    this.isDragging = null,
+    this.isHoveringHandle = null,
+    this.updateProp = null
+  }) : super();
+  bool? draggedPastSensitivity;
+    /*
   bool get draggedPastSensitivity { 
     if (this._draggedPastSensitivity == null) {
       this._draggedPastSensitivity = false;
@@ -37,9 +42,10 @@ class DragDropDataObject extends OptionFragment {
   void set draggedPastSensitivity (bool v) {
     this._draggedPastSensitivity = v;
   }
+    */
     
-  bool? _isDragging;  
-
+  bool? isDragging;
+    /*
   bool get isDragging { 
     if (this._isDragging == null) {
       this._isDragging = false;
@@ -50,9 +56,10 @@ class DragDropDataObject extends OptionFragment {
   void set isDragging (bool v) {
     this._isDragging = v;
   }
+    */
     
-  String? _isHoveringHandle;  
-
+  String? isHoveringHandle;
+    /*
   String get isHoveringHandle { 
     if (this._isHoveringHandle == null) {
       this._isHoveringHandle = "";
@@ -63,9 +70,10 @@ class DragDropDataObject extends OptionFragment {
   void set isHoveringHandle (String v) {
     this._isHoveringHandle = v;
   }
+    */
     
-  String? _updateProp;  
-
+  String? updateProp;
+    /*
   String get updateProp { 
     if (this._updateProp == null) {
       this._updateProp = "";
@@ -76,6 +84,7 @@ class DragDropDataObject extends OptionFragment {
   void set updateProp (String v) {
     this._updateProp = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -85,18 +94,18 @@ class DragDropDataObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._draggedPastSensitivity != null) {  
-      buffer.writeAll(["\"draggedPastSensitivity\":", this._draggedPastSensitivity, ","], "");
+    if (this.draggedPastSensitivity != null) {  
+      buffer.writeAll(["\"draggedPastSensitivity\":", this.draggedPastSensitivity, ","], "");
     }
 
     // NOTE: skip serialization of groupedPoints (type Point[] is ignored)} 
 
-    if (this._isDragging != null) {  
-      buffer.writeAll(["\"isDragging\":", this._isDragging, ","], "");
+    if (this.isDragging != null) {  
+      buffer.writeAll(["\"isDragging\":", this.isDragging, ","], "");
     }
 
-    if (this._isHoveringHandle != null) {  
-      buffer.writeAll(["\"isHoveringHandle\":\`", this._isHoveringHandle, "\`,"], "");
+    if (this.isHoveringHandle != null) {  
+      buffer.writeAll(["\"isHoveringHandle\":\`", this.isHoveringHandle, "\`,"], "");
     }
 
     // NOTE: skip serialization of newPoints (type Generic is ignored)} 
@@ -105,8 +114,8 @@ class DragDropDataObject extends OptionFragment {
 
     // NOTE: skip serialization of point (type Point is ignored)} 
 
-    if (this._updateProp != null) {  
-      buffer.writeAll(["\"updateProp\":\`", this._updateProp, "\`,"], "");
+    if (this.updateProp != null) {  
+      buffer.writeAll(["\"updateProp\":\`", this.updateProp, "\`,"], "");
     }
   }
 

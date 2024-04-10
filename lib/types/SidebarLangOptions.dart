@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -22,9 +22,15 @@ import 'OptionFragment.dart';
  * SidebarLangOptions 
  */
 class SidebarLangOptions extends OptionFragment {
-  SidebarLangOptions() : super();
-  String? _HTML;  
-
+  SidebarLangOptions( {
+    this.HTML = null,
+    this.layout = null,
+    this.Highcharts = null,
+    this.DataGrid = null,
+    this.KPI = null
+  }) : super();
+  String? HTML;
+    /*
   String get HTML { 
     if (this._HTML == null) {
       this._HTML = "";
@@ -35,9 +41,10 @@ class SidebarLangOptions extends OptionFragment {
   void set HTML (String v) {
     this._HTML = v;
   }
+    */
     
-  String? _layout;  
-
+  String? layout;
+    /*
   String get layout { 
     if (this._layout == null) {
       this._layout = "";
@@ -48,9 +55,10 @@ class SidebarLangOptions extends OptionFragment {
   void set layout (String v) {
     this._layout = v;
   }
+    */
     
-  String? _Highcharts;  
-
+  String? Highcharts;
+    /*
   String get Highcharts { 
     if (this._Highcharts == null) {
       this._Highcharts = "";
@@ -61,9 +69,10 @@ class SidebarLangOptions extends OptionFragment {
   void set Highcharts (String v) {
     this._Highcharts = v;
   }
+    */
     
-  String? _DataGrid;  
-
+  String? DataGrid;
+    /*
   String get DataGrid { 
     if (this._DataGrid == null) {
       this._DataGrid = "";
@@ -74,9 +83,10 @@ class SidebarLangOptions extends OptionFragment {
   void set DataGrid (String v) {
     this._DataGrid = v;
   }
+    */
     
-  String? _KPI;  
-
+  String? KPI;
+    /*
   String get KPI { 
     if (this._KPI == null) {
       this._KPI = "";
@@ -87,6 +97,7 @@ class SidebarLangOptions extends OptionFragment {
   void set KPI (String v) {
     this._KPI = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -96,24 +107,24 @@ class SidebarLangOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this._HTML != null) {  
-      buffer.writeAll(["\"HTML\":\`", this._HTML, "\`,"], "");
+    if (this.HTML != null) {  
+      buffer.writeAll(["\"HTML\":\`", this.HTML, "\`,"], "");
     }
 
-    if (this._layout != null) {  
-      buffer.writeAll(["\"layout\":\`", this._layout, "\`,"], "");
+    if (this.layout != null) {  
+      buffer.writeAll(["\"layout\":\`", this.layout, "\`,"], "");
     }
 
-    if (this._Highcharts != null) {  
-      buffer.writeAll(["\"Highcharts\":\`", this._Highcharts, "\`,"], "");
+    if (this.Highcharts != null) {  
+      buffer.writeAll(["\"Highcharts\":\`", this.Highcharts, "\`,"], "");
     }
 
-    if (this._DataGrid != null) {  
-      buffer.writeAll(["\"DataGrid\":\`", this._DataGrid, "\`,"], "");
+    if (this.DataGrid != null) {  
+      buffer.writeAll(["\"DataGrid\":\`", this.DataGrid, "\`,"], "");
     }
 
-    if (this._KPI != null) {  
-      buffer.writeAll(["\"KPI\":\`", this._KPI, "\`,"], "");
+    if (this.KPI != null) {  
+      buffer.writeAll(["\"KPI\":\`", this.KPI, "\`,"], "");
     }
   }
 

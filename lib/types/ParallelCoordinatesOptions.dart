@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-03
+ * Build stamp: 2024-04-09
  *
  */ 
 
@@ -23,9 +23,11 @@ import 'OptionFragment.dart';
  * ParallelCoordinatesOptions 
  */
 class ParallelCoordinatesOptions extends OptionFragment {
-  ParallelCoordinatesOptions() : super();
-  bool? _parallelCoordinates;  
-
+  ParallelCoordinatesOptions( {
+    this.parallelCoordinates = null
+  }) : super();
+  bool? parallelCoordinates;
+    /*
   bool get parallelCoordinates { 
     if (this._parallelCoordinates == null) {
       this._parallelCoordinates = false;
@@ -36,6 +38,7 @@ class ParallelCoordinatesOptions extends OptionFragment {
   void set parallelCoordinates (bool v) {
     this._parallelCoordinates = v;
   }
+    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -47,8 +50,8 @@ class ParallelCoordinatesOptions extends OptionFragment {
     
     // NOTE: skip serialization of parallelAxes (type Generic is ignored)} 
 
-    if (this._parallelCoordinates != null) {  
-      buffer.writeAll(["\"parallelCoordinates\":", this._parallelCoordinates, ","], "");
+    if (this.parallelCoordinates != null) {  
+      buffer.writeAll(["\"parallelCoordinates\":", this.parallelCoordinates, ","], "");
     }
   }
 
