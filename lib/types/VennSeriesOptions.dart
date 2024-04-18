@@ -12,11 +12,12 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
 import 'ScatterSeriesOptions.dart';
+import 'VennPointOptions.dart';
 import 'OptionFragment.dart';
 
 /** 
@@ -24,53 +25,90 @@ import 'OptionFragment.dart';
  */
 class VennSeriesOptions extends ScatterSeriesOptions {
   VennSeriesOptions( {
+    super.accessibility = null,
+    super.allAreas = null,
+    super.allowPointSelect = null,
+    super.animationLimit = null,
+    super.boostBlending = null,
+    super.boostThreshold = null,
+    super.borderColor = null,
     this.borderDashStyle = null,
+    super.borderWidth = null,
     this.brighten = null,
-    this.brightness = null
+    super.className = null,
+    super.clip = null,
+    super.color = null,
+    super.colorAxis = null,
+    super.colorIndex = null,
+    super.colorKey = null,
+    super.compare = null,
+    super.compareStart = null,
+    super.connectEnds = null,
+    super.connectNulls = null,
+    super.connectors = null,
+    super.crisp = null,
+    super.cropThreshold = null,
+    super.cumulative = null,
+    super.cursor = null,
+    super.dashStyle = null,
+    super.dataGrouping = null,
+    super.dataLabels = null,
+    super.dataSorting = null,
+    super.description = null,
+    super.dragDrop = null,
+    super.enableMouseTracking = null,
+    super.events = null,
+    super.findNearestPointBy = null,
+    super.gapSize = null,
+    super.gapUnit = null,
+    super.getExtremesFromAll = null,
+    super.includeInDataExport = null,
+    super.jitter = null,
+    super.joinBy = null,
+    super.keys = null,
+    super.label = null,
+    super.lastPrice = null,
+    super.lastVisiblePrice = null,
+    super.legendSymbol = null,
+    super.linecap = null,
+    super.lineWidth = null,
+    super.linkedTo = null,
+    super.marker = null,
+    super.navigatorOptions = null,
+    super.negativeColor = null,
+    super.onPoint = null,
+    super.opacity = null,
+    super.point = null,
+    super.pointInterval = null,
+    super.pointIntervalUnit = null,
+    super.pointPlacement = null,
+    super.pointRange = null,
+    super.pointStart = null,
+    super.relativeXValue = null,
+    super.selected = null,
+    super.showCheckbox = null,
+    super.showInLegend = null,
+    super.showInNavigator = null,
+    super.skipKeyboardNavigation = null,
+    super.softThreshold = null,
+    super.stacking = null,
+    super.step = null,
+    super.stickyTracking = null,
+    super.threshold = null,
+    super.tooltip = null,
+    super.turboThreshold = null,
+    super.visible = null,
+    super.zIndex = null,
+    super.zoneAxis = null,
+    super.zones = null
   }) : super();
   String? borderDashStyle;
-    /*
-  String get borderDashStyle { 
-    if (this._borderDashStyle == null) {
-      this._borderDashStyle = "";
-    }
-    return this._borderDashStyle!;
-  }
-
-  void set borderDashStyle (String v) {
-    this._borderDashStyle = v;
-  }
-    */
     
   double? brighten;
-    /*
-  double get brighten { 
-    if (this._brighten == null) {
-      this._brighten = 0;
-    }
-    return this._brighten!;
-  }
-
-  void set brighten (double v) {
-    this._brighten = v;
-  }
-    */
     
-  double? brightness;
-    /*
-  double get brightness { 
-    if (this._brightness == null) {
-      this._brightness = 0;
-    }
-    return this._brightness!;
-  }
+  // NOTE: brightness skipped - type number is ignored in gen 
 
-  void set brightness (double v) {
-    this._brightness = v;
-  }
-    */
-    
-  // NOTE: states skipped - type Generic is ignored in gen
+  // NOTE: states skipped - type Generic is ignored in gen 
 
 
   //////////////////////////////////////////////////////////////////////////////
@@ -81,20 +119,18 @@ class VennSeriesOptions extends ScatterSeriesOptions {
 
     
     if (this.borderDashStyle != null) {  
-      buffer.writeAll(["\"borderDashStyle\":\`", this.borderDashStyle, "\`,"], "");
+      buffer.writeAll(["\"borderDashStyle\":\`",this.borderDashStyle, "\`,"], "");
     }
 
     if (this.brighten != null) {  
-      buffer.writeAll(["\"brighten\":", this.brighten, ","], "");
+      buffer.writeAll(["\"brighten\":",this.brighten, ","], "");
     }
 
-    if (this.brightness != null) {  
-      buffer.writeAll(["\"brightness\":", this.brightness, ","], "");
-    }
+    // NOTE: skip serialization of brightness (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of data (type VennPointOptions[] is ignored)} 
+    // NOTE: skip serialization of data (type VennPointOptions[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of states (type Generic is ignored)} 
+    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
   }
 
 }

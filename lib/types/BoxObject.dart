@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,158 +24,27 @@ import 'OptionFragment.dart';
  * BoxObject 
  */
 class BoxObject extends OptionFragment {
-  BoxObject( {
-    this.align = null,
-    this.pos = null,
-    this.rank = null,
-    this.size = null,
-    this.target = null,
-    this.anchorX = null,
-    this.anchorY = null,
-    this.boxWidth = null,
-    this.isHeader = null,
-    this.x = null
-  }) : super();
-  double? align;
-    /*
-  double get align { 
-    if (this._align == null) {
-      this._align = 0;
-    }
-    return this._align!;
-  }
+  BoxObject( ) : super();
+  // NOTE: align skipped - type number is ignored in gen 
 
-  void set align (double v) {
-    this._align = v;
-  }
-    */
-    
-  double? pos;
-    /*
-  double get pos { 
-    if (this._pos == null) {
-      this._pos = 0;
-    }
-    return this._pos!;
-  }
+  // NOTE: pos skipped - type number is ignored in gen 
 
-  void set pos (double v) {
-    this._pos = v;
-  }
-    */
-    
-  double? rank;
-    /*
-  double get rank { 
-    if (this._rank == null) {
-      this._rank = 0;
-    }
-    return this._rank!;
-  }
+  // NOTE: rank skipped - type number is ignored in gen 
 
-  void set rank (double v) {
-    this._rank = v;
-  }
-    */
-    
-  double? size;
-    /*
-  double get size { 
-    if (this._size == null) {
-      this._size = 0;
-    }
-    return this._size!;
-  }
+  // NOTE: size skipped - type number is ignored in gen 
 
-  void set size (double v) {
-    this._size = v;
-  }
-    */
-    
-  double? target;
-    /*
-  double get target { 
-    if (this._target == null) {
-      this._target = 0;
-    }
-    return this._target!;
-  }
+  // NOTE: target skipped - type number is ignored in gen 
 
-  void set target (double v) {
-    this._target = v;
-  }
-    */
-    
-  double? anchorX;
-    /*
-  double get anchorX { 
-    if (this._anchorX == null) {
-      this._anchorX = 0;
-    }
-    return this._anchorX!;
-  }
+  // NOTE: anchorX skipped - type number is ignored in gen 
 
-  void set anchorX (double v) {
-    this._anchorX = v;
-  }
-    */
-    
-  double? anchorY;
-    /*
-  double get anchorY { 
-    if (this._anchorY == null) {
-      this._anchorY = 0;
-    }
-    return this._anchorY!;
-  }
+  // NOTE: anchorY skipped - type number is ignored in gen 
 
-  void set anchorY (double v) {
-    this._anchorY = v;
-  }
-    */
-    
-  double? boxWidth;
-    /*
-  double get boxWidth { 
-    if (this._boxWidth == null) {
-      this._boxWidth = 0;
-    }
-    return this._boxWidth!;
-  }
+  // NOTE: boxWidth skipped - type number is ignored in gen 
 
-  void set boxWidth (double v) {
-    this._boxWidth = v;
-  }
-    */
-    
-  bool? isHeader;
-    /*
-  bool get isHeader { 
-    if (this._isHeader == null) {
-      this._isHeader = false;
-    }
-    return this._isHeader!;
-  }
+  // NOTE: isHeader skipped - type boolean is ignored in gen 
 
-  void set isHeader (bool v) {
-    this._isHeader = v;
-  }
-    */
-    
-  double? x;
-    /*
-  double get x { 
-    if (this._x == null) {
-      this._x = 0;
-    }
-    return this._x!;
-  }
+  // NOTE: x skipped - type number is ignored in gen 
 
-  void set x (double v) {
-    this._x = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -184,57 +53,35 @@ class BoxObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.align != null) {  
-      buffer.writeAll(["\"align\":", this.align, ","], "");
-    }
+    // NOTE: skip serialization of align (type number is ignored) ignore type: true
 
-    if (this.pos != null) {  
-      buffer.writeAll(["\"pos\":", this.pos, ","], "");
-    }
+    // NOTE: skip serialization of pos (type number is ignored) ignore type: true
 
-    if (this.rank != null) {  
-      buffer.writeAll(["\"rank\":", this.rank, ","], "");
-    }
+    // NOTE: skip serialization of rank (type number is ignored) ignore type: true
 
-    if (this.size != null) {  
-      buffer.writeAll(["\"size\":", this.size, ","], "");
-    }
+    // NOTE: skip serialization of size (type number is ignored) ignore type: true
 
-    if (this.target != null) {  
-      buffer.writeAll(["\"target\":", this.target, ","], "");
-    }
+    // NOTE: skip serialization of target (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of targets (type number[] is ignored)} 
+    // NOTE: skip serialization of targets (type number[] is ignored) ignore type: true
 
-    if (this.anchorX != null) {  
-      buffer.writeAll(["\"anchorX\":", this.anchorX, ","], "");
-    }
+    // NOTE: skip serialization of anchorX (type number is ignored) ignore type: true
 
-    if (this.anchorY != null) {  
-      buffer.writeAll(["\"anchorY\":", this.anchorY, ","], "");
-    }
+    // NOTE: skip serialization of anchorY (type number is ignored) ignore type: true
 
-    if (this.boxWidth != null) {  
-      buffer.writeAll(["\"boxWidth\":", this.boxWidth, ","], "");
-    }
+    // NOTE: skip serialization of boxWidth (type number is ignored) ignore type: true
 
-    if (this.isHeader != null) {  
-      buffer.writeAll(["\"isHeader\":", this.isHeader, ","], "");
-    }
+    // NOTE: skip serialization of isHeader (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of point (type Point is ignored)} 
+    // NOTE: skip serialization of point (type Point is ignored) ignore type: true
 
-    if (this.pos != null) {  
-      buffer.writeAll(["\"pos\":", this.pos, ","], "");
-    }
+    // NOTE: skip serialization of pos (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of tt (type SVGElement is ignored)} 
+    // NOTE: skip serialization of tt (type SVGElement is ignored) ignore type: true
 
-    if (this.x != null) {  
-      buffer.writeAll(["\"x\":", this.x, ","], "");
-    }
+    // NOTE: skip serialization of x (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of item (type Item is ignored)} 
+    // NOTE: skip serialization of item (type Item is ignored) ignore type: true
   }
 
 }

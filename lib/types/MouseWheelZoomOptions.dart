@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,53 +22,13 @@ import 'OptionFragment.dart';
  * MouseWheelZoomOptions 
  */
 class MouseWheelZoomOptions extends OptionFragment {
-  MouseWheelZoomOptions( {
-    this.enabled = null,
-    this.sensitivity = null,
-    this.type = null
-  }) : super();
-  bool? enabled;
-    /*
-  bool get enabled { 
-    if (this._enabled == null) {
-      this._enabled = false;
-    }
-    return this._enabled!;
-  }
+  MouseWheelZoomOptions( ) : super();
+  // NOTE: enabled skipped - type boolean is ignored in gen 
 
-  void set enabled (bool v) {
-    this._enabled = v;
-  }
-    */
-    
-  double? sensitivity;
-    /*
-  double get sensitivity { 
-    if (this._sensitivity == null) {
-      this._sensitivity = 0;
-    }
-    return this._sensitivity!;
-  }
+  // NOTE: sensitivity skipped - type number is ignored in gen 
 
-  void set sensitivity (double v) {
-    this._sensitivity = v;
-  }
-    */
-    
-  String? type;
-    /*
-  String get type { 
-    if (this._type == null) {
-      this._type = "";
-    }
-    return this._type!;
-  }
+  // NOTE: type skipped - type string is ignored in gen 
 
-  void set type (String v) {
-    this._type = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -77,17 +37,11 @@ class MouseWheelZoomOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
-    }
+    // NOTE: skip serialization of enabled (type boolean is ignored) ignore type: true
 
-    if (this.sensitivity != null) {  
-      buffer.writeAll(["\"sensitivity\":", this.sensitivity, ","], "");
-    }
+    // NOTE: skip serialization of sensitivity (type number is ignored) ignore type: true
 
-    if (this.type != null) {  
-      buffer.writeAll(["\"type\":\`", this.type, "\`,"], "");
-    }
+    // NOTE: skip serialization of type (type string is ignored) ignore type: true
   }
 
 }

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,7 +23,14 @@ import 'OptionFragment.dart';
  */
 class NavigationEventsOptions extends OptionFragment {
   NavigationEventsOptions( ) : super();
-  
+  // NOTE: closePopup skipped - type Function is ignored in gen 
+
+  // NOTE: deselectButton skipped - type Function is ignored in gen 
+
+  // NOTE: selectButton skipped - type Function is ignored in gen 
+
+  // NOTE: showPopup skipped - type Function is ignored in gen 
+
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -32,13 +39,13 @@ class NavigationEventsOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of closePopup (type Function is ignored)} 
+    // NOTE: skip serialization of closePopup (type Function is ignored) ignore type: 1
 
-    // NOTE: skip serialization of deselectButton (type Function is ignored)} 
+    // NOTE: skip serialization of deselectButton (type Function is ignored) ignore type: 1
 
-    // NOTE: skip serialization of selectButton (type Function is ignored)} 
+    // NOTE: skip serialization of selectButton (type Function is ignored) ignore type: 1
 
-    // NOTE: skip serialization of showPopup (type Function is ignored)} 
+    // NOTE: skip serialization of showPopup (type Function is ignored) ignore type: 1
   }
 
 }

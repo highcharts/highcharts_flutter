@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,23 +23,9 @@ import 'OptionFragment.dart';
  * WordcloudPlacementObject 
  */
 class WordcloudPlacementObject extends PositionObject {
-  WordcloudPlacementObject( {
-    this.rotation = null
-  }) : super();
-  double? rotation;
-    /*
-  double get rotation { 
-    if (this._rotation == null) {
-      this._rotation = 0;
-    }
-    return this._rotation!;
-  }
+  WordcloudPlacementObject( ) : super();
+  // NOTE: rotation skipped - type number is ignored in gen 
 
-  void set rotation (double v) {
-    this._rotation = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -48,9 +34,7 @@ class WordcloudPlacementObject extends PositionObject {
     super.toJSONInner(buffer);
 
     
-    if (this.rotation != null) {  
-      buffer.writeAll(["\"rotation\":", this.rotation, ","], "");
-    }
+    // NOTE: skip serialization of rotation (type number is ignored) ignore type: true
   }
 
 }

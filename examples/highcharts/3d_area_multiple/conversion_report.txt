@@ -1,0 +1,24 @@
+[
+  {
+    "type": "missing_mapping",
+    "path": "lang"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "yAxis.title"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "yAxis.labels"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "plotOptions.area.marker"
+  },
+  {
+    "path": "plotOptions.area.states",
+    "parentType": "Generic",
+    "memberName": "inactive",
+    "msg": "The member is not present in the Flutter integration API"
+  }
+]

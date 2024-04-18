@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -33,9 +33,9 @@ class MSBlobBuilder extends Blob {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of append (type Function is ignored)} 
+    // NOTE: skip serialization of append (type Function is ignored) ignore type: 1
 
-    // NOTE: skip serialization of getBlob (type Function is ignored)} 
+    // NOTE: skip serialization of getBlob (type Function is ignored) ignore type: 1
   }
 
 }

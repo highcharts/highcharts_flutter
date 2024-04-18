@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,68 +22,15 @@ import 'OptionFragment.dart';
  * GlobalOptions 
  */
 class GlobalOptions extends OptionFragment {
-  GlobalOptions( {
-    this.canvasToolsURL = null,
-    this.timezone = null,
-    this.timezoneOffset = null,
-    this.useUTC = null
-  }) : super();
-  String? canvasToolsURL;
-    /*
-  String get canvasToolsURL { 
-    if (this._canvasToolsURL == null) {
-      this._canvasToolsURL = "";
-    }
-    return this._canvasToolsURL!;
-  }
+  GlobalOptions( ) : super();
+  // NOTE: canvasToolsURL skipped - type string is ignored in gen 
 
-  void set canvasToolsURL (String v) {
-    this._canvasToolsURL = v;
-  }
-    */
-    
-  String? timezone;
-    /*
-  String get timezone { 
-    if (this._timezone == null) {
-      this._timezone = "";
-    }
-    return this._timezone!;
-  }
+  // NOTE: timezone skipped - type string is ignored in gen 
 
-  void set timezone (String v) {
-    this._timezone = v;
-  }
-    */
-    
-  double? timezoneOffset;
-    /*
-  double get timezoneOffset { 
-    if (this._timezoneOffset == null) {
-      this._timezoneOffset = 0;
-    }
-    return this._timezoneOffset!;
-  }
+  // NOTE: timezoneOffset skipped - type number is ignored in gen 
 
-  void set timezoneOffset (double v) {
-    this._timezoneOffset = v;
-  }
-    */
-    
-  bool? useUTC;
-    /*
-  bool get useUTC { 
-    if (this._useUTC == null) {
-      this._useUTC = false;
-    }
-    return this._useUTC!;
-  }
+  // NOTE: useUTC skipped - type boolean is ignored in gen 
 
-  void set useUTC (bool v) {
-    this._useUTC = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -92,25 +39,17 @@ class GlobalOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.canvasToolsURL != null) {  
-      buffer.writeAll(["\"canvasToolsURL\":\`", this.canvasToolsURL, "\`,"], "");
-    }
+    // NOTE: skip serialization of canvasToolsURL (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of Date (type Function is ignored)} 
+    // NOTE: skip serialization of Date (type Function is ignored) ignore type: 1
 
-    // NOTE: skip serialization of getTimezoneOffset (type Function is ignored)} 
+    // NOTE: skip serialization of getTimezoneOffset (type Function is ignored) ignore type: 1
 
-    if (this.timezone != null) {  
-      buffer.writeAll(["\"timezone\":\`", this.timezone, "\`,"], "");
-    }
+    // NOTE: skip serialization of timezone (type string is ignored) ignore type: true
 
-    if (this.timezoneOffset != null) {  
-      buffer.writeAll(["\"timezoneOffset\":", this.timezoneOffset, ","], "");
-    }
+    // NOTE: skip serialization of timezoneOffset (type number is ignored) ignore type: true
 
-    if (this.useUTC != null) {  
-      buffer.writeAll(["\"useUTC\":", this.useUTC, ","], "");
-    }
+    // NOTE: skip serialization of useUTC (type boolean is ignored) ignore type: true
   }
 
 }

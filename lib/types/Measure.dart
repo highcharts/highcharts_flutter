@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,188 +24,31 @@ import 'OptionFragment.dart';
  * Measure 
  */
 class Measure extends OptionFragment {
-  Measure( {
-    this.offsetX = null,
-    this.offsetY = null,
-    this.resizeX = null,
-    this.resizeY = null,
-    this.startXMax = null,
-    this.startXMin = null,
-    this.startYMax = null,
-    this.startYMin = null,
-    this.xAxisMin = null,
-    this.xAxisMax = null,
-    this.yAxisMin = null,
-    this.yAxisMax = null
-  }) : super();
-  double? offsetX;
-    /*
-  double get offsetX { 
-    if (this._offsetX == null) {
-      this._offsetX = 0;
-    }
-    return this._offsetX!;
-  }
+  Measure( ) : super();
+  // NOTE: offsetX skipped - type number is ignored in gen 
 
-  void set offsetX (double v) {
-    this._offsetX = v;
-  }
-    */
-    
-  double? offsetY;
-    /*
-  double get offsetY { 
-    if (this._offsetY == null) {
-      this._offsetY = 0;
-    }
-    return this._offsetY!;
-  }
+  // NOTE: offsetY skipped - type number is ignored in gen 
 
-  void set offsetY (double v) {
-    this._offsetY = v;
-  }
-    */
-    
-  double? resizeX;
-    /*
-  double get resizeX { 
-    if (this._resizeX == null) {
-      this._resizeX = 0;
-    }
-    return this._resizeX!;
-  }
+  // NOTE: resizeX skipped - type number is ignored in gen 
 
-  void set resizeX (double v) {
-    this._resizeX = v;
-  }
-    */
-    
-  double? resizeY;
-    /*
-  double get resizeY { 
-    if (this._resizeY == null) {
-      this._resizeY = 0;
-    }
-    return this._resizeY!;
-  }
+  // NOTE: resizeY skipped - type number is ignored in gen 
 
-  void set resizeY (double v) {
-    this._resizeY = v;
-  }
-    */
-    
-  double? startXMax;
-    /*
-  double get startXMax { 
-    if (this._startXMax == null) {
-      this._startXMax = 0;
-    }
-    return this._startXMax!;
-  }
+  // NOTE: startXMax skipped - type number is ignored in gen 
 
-  void set startXMax (double v) {
-    this._startXMax = v;
-  }
-    */
-    
-  double? startXMin;
-    /*
-  double get startXMin { 
-    if (this._startXMin == null) {
-      this._startXMin = 0;
-    }
-    return this._startXMin!;
-  }
+  // NOTE: startXMin skipped - type number is ignored in gen 
 
-  void set startXMin (double v) {
-    this._startXMin = v;
-  }
-    */
-    
-  double? startYMax;
-    /*
-  double get startYMax { 
-    if (this._startYMax == null) {
-      this._startYMax = 0;
-    }
-    return this._startYMax!;
-  }
+  // NOTE: startYMax skipped - type number is ignored in gen 
 
-  void set startYMax (double v) {
-    this._startYMax = v;
-  }
-    */
-    
-  double? startYMin;
-    /*
-  double get startYMin { 
-    if (this._startYMin == null) {
-      this._startYMin = 0;
-    }
-    return this._startYMin!;
-  }
+  // NOTE: startYMin skipped - type number is ignored in gen 
 
-  void set startYMin (double v) {
-    this._startYMin = v;
-  }
-    */
-    
-  double? xAxisMin;
-    /*
-  double get xAxisMin { 
-    if (this._xAxisMin == null) {
-      this._xAxisMin = 0;
-    }
-    return this._xAxisMin!;
-  }
+  // NOTE: xAxisMin skipped - type number is ignored in gen 
 
-  void set xAxisMin (double v) {
-    this._xAxisMin = v;
-  }
-    */
-    
-  double? xAxisMax;
-    /*
-  double get xAxisMax { 
-    if (this._xAxisMax == null) {
-      this._xAxisMax = 0;
-    }
-    return this._xAxisMax!;
-  }
+  // NOTE: xAxisMax skipped - type number is ignored in gen 
 
-  void set xAxisMax (double v) {
-    this._xAxisMax = v;
-  }
-    */
-    
-  double? yAxisMin;
-    /*
-  double get yAxisMin { 
-    if (this._yAxisMin == null) {
-      this._yAxisMin = 0;
-    }
-    return this._yAxisMin!;
-  }
+  // NOTE: yAxisMin skipped - type number is ignored in gen 
 
-  void set yAxisMin (double v) {
-    this._yAxisMin = v;
-  }
-    */
-    
-  double? yAxisMax;
-    /*
-  double get yAxisMax { 
-    if (this._yAxisMax == null) {
-      this._yAxisMax = 0;
-    }
-    return this._yAxisMax!;
-  }
+  // NOTE: yAxisMax skipped - type number is ignored in gen 
 
-  void set yAxisMax (double v) {
-    this._yAxisMax = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -214,65 +57,41 @@ class Measure extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of average (type "" is ignored)} 
+    // NOTE: skip serialization of average (type "" is ignored) ignore type: true
 
-    // NOTE: skip serialization of bins (type "" is ignored)} 
+    // NOTE: skip serialization of bins (type "" is ignored) ignore type: true
 
-    // NOTE: skip serialization of defaultOptions (type AnnotationOptions is ignored)} 
+    // NOTE: skip serialization of defaultOptions (type AnnotationOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of min (type "" is ignored)} 
+    // NOTE: skip serialization of min (type "" is ignored) ignore type: true
 
-    // NOTE: skip serialization of max (type "" is ignored)} 
+    // NOTE: skip serialization of max (type "" is ignored) ignore type: true
 
-    if (this.offsetX != null) {  
-      buffer.writeAll(["\"offsetX\":", this.offsetX, ","], "");
-    }
+    // NOTE: skip serialization of offsetX (type number is ignored) ignore type: true
 
-    if (this.offsetY != null) {  
-      buffer.writeAll(["\"offsetY\":", this.offsetY, ","], "");
-    }
+    // NOTE: skip serialization of offsetY (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of options (type MeasureOptions is ignored)} 
+    // NOTE: skip serialization of options (type MeasureOptions is ignored) ignore type: true
 
-    if (this.resizeX != null) {  
-      buffer.writeAll(["\"resizeX\":", this.resizeX, ","], "");
-    }
+    // NOTE: skip serialization of resizeX (type number is ignored) ignore type: true
 
-    if (this.resizeY != null) {  
-      buffer.writeAll(["\"resizeY\":", this.resizeY, ","], "");
-    }
+    // NOTE: skip serialization of resizeY (type number is ignored) ignore type: true
 
-    if (this.startXMax != null) {  
-      buffer.writeAll(["\"startXMax\":", this.startXMax, ","], "");
-    }
+    // NOTE: skip serialization of startXMax (type number is ignored) ignore type: true
 
-    if (this.startXMin != null) {  
-      buffer.writeAll(["\"startXMin\":", this.startXMin, ","], "");
-    }
+    // NOTE: skip serialization of startXMin (type number is ignored) ignore type: true
 
-    if (this.startYMax != null) {  
-      buffer.writeAll(["\"startYMax\":", this.startYMax, ","], "");
-    }
+    // NOTE: skip serialization of startYMax (type number is ignored) ignore type: true
 
-    if (this.startYMin != null) {  
-      buffer.writeAll(["\"startYMin\":", this.startYMin, ","], "");
-    }
+    // NOTE: skip serialization of startYMin (type number is ignored) ignore type: true
 
-    if (this.xAxisMin != null) {  
-      buffer.writeAll(["\"xAxisMin\":", this.xAxisMin, ","], "");
-    }
+    // NOTE: skip serialization of xAxisMin (type number is ignored) ignore type: true
 
-    if (this.xAxisMax != null) {  
-      buffer.writeAll(["\"xAxisMax\":", this.xAxisMax, ","], "");
-    }
+    // NOTE: skip serialization of xAxisMax (type number is ignored) ignore type: true
 
-    if (this.yAxisMin != null) {  
-      buffer.writeAll(["\"yAxisMin\":", this.yAxisMin, ","], "");
-    }
+    // NOTE: skip serialization of yAxisMin (type number is ignored) ignore type: true
 
-    if (this.yAxisMax != null) {  
-      buffer.writeAll(["\"yAxisMax\":", this.yAxisMax, ","], "");
-    }
+    // NOTE: skip serialization of yAxisMax (type number is ignored) ignore type: true
   }
 
 }

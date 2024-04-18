@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -26,53 +26,13 @@ import 'OptionFragment.dart';
  * MeasureTypeOptions 
  */
 class MeasureTypeOptions extends AnnotationTypeOptions {
-  MeasureTypeOptions( {
-    this.selectType = null,
-    this.xAxis = null,
-    this.yAxis = null
-  }) : super();
-  String? selectType;
-    /*
-  String get selectType { 
-    if (this._selectType == null) {
-      this._selectType = "";
-    }
-    return this._selectType!;
-  }
+  MeasureTypeOptions( ) : super();
+  // NOTE: selectType skipped - type string is ignored in gen 
 
-  void set selectType (String v) {
-    this._selectType = v;
-  }
-    */
-    
-  double? xAxis;
-    /*
-  double get xAxis { 
-    if (this._xAxis == null) {
-      this._xAxis = 0;
-    }
-    return this._xAxis!;
-  }
+  // NOTE: xAxis skipped - type number is ignored in gen 
 
-  void set xAxis (double v) {
-    this._xAxis = v;
-  }
-    */
-    
-  double? yAxis;
-    /*
-  double get yAxis { 
-    if (this._yAxis == null) {
-      this._yAxis = 0;
-    }
-    return this._yAxis!;
-  }
+  // NOTE: yAxis skipped - type number is ignored in gen 
 
-  void set yAxis (double v) {
-    this._yAxis = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -81,25 +41,19 @@ class MeasureTypeOptions extends AnnotationTypeOptions {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of background (type ControllableShapeOptions is ignored)} 
+    // NOTE: skip serialization of background (type ControllableShapeOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of crosshairX (type MeasureTypeCrosshairOptions is ignored)} 
+    // NOTE: skip serialization of crosshairX (type MeasureTypeCrosshairOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of crosshairY (type MeasureTypeCrosshairOptions is ignored)} 
+    // NOTE: skip serialization of crosshairY (type MeasureTypeCrosshairOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of label (type MeasureTypeLabelOptions is ignored)} 
+    // NOTE: skip serialization of label (type MeasureTypeLabelOptions is ignored) ignore type: true
 
-    if (this.selectType != null) {  
-      buffer.writeAll(["\"selectType\":\`", this.selectType, "\`,"], "");
-    }
+    // NOTE: skip serialization of selectType (type string is ignored) ignore type: true
 
-    if (this.xAxis != null) {  
-      buffer.writeAll(["\"xAxis\":", this.xAxis, ","], "");
-    }
+    // NOTE: skip serialization of xAxis (type number is ignored) ignore type: true
 
-    if (this.yAxis != null) {  
-      buffer.writeAll(["\"yAxis\":", this.yAxis, ","], "");
-    }
+    // NOTE: skip serialization of yAxis (type number is ignored) ignore type: true
   }
 
 }

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,38 +22,11 @@ import 'OptionFragment.dart';
  * NavigationBindingsLike 
  */
 class NavigationBindingsLike extends OptionFragment {
-  NavigationBindingsLike( {
-    this.toggledAnnotations = null,
-    this.verticalCounter = null
-  }) : super();
-  bool? toggledAnnotations;
-    /*
-  bool get toggledAnnotations { 
-    if (this._toggledAnnotations == null) {
-      this._toggledAnnotations = false;
-    }
-    return this._toggledAnnotations!;
-  }
+  NavigationBindingsLike( ) : super();
+  // NOTE: toggledAnnotations skipped - type boolean is ignored in gen 
 
-  void set toggledAnnotations (bool v) {
-    this._toggledAnnotations = v;
-  }
-    */
-    
-  double? verticalCounter;
-    /*
-  double get verticalCounter { 
-    if (this._verticalCounter == null) {
-      this._verticalCounter = 0;
-    }
-    return this._verticalCounter!;
-  }
+  // NOTE: verticalCounter skipped - type number is ignored in gen 
 
-  void set verticalCounter (double v) {
-    this._verticalCounter = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -62,15 +35,11 @@ class NavigationBindingsLike extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.toggledAnnotations != null) {  
-      buffer.writeAll(["\"toggledAnnotations\":", this.toggledAnnotations, ","], "");
-    }
+    // NOTE: skip serialization of toggledAnnotations (type boolean is ignored) ignore type: true
 
-    if (this.verticalCounter != null) {  
-      buffer.writeAll(["\"verticalCounter\":", this.verticalCounter, ","], "");
-    }
+    // NOTE: skip serialization of verticalCounter (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of utils (type Generic is ignored)} 
+    // NOTE: skip serialization of utils (type Generic is ignored) ignore type: true
   }
 
 }

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,113 +22,21 @@ import 'OptionFragment.dart';
  * ExportOptions 
  */
 class ExportOptions extends OptionFragment {
-  ExportOptions( {
-    this.decimalPoint = null,
-    this.exportIDColumn = null,
-    this.tableCaption = null,
-    this.useLocalDecimalPoint = null,
-    this.useMultiLevelHeaders = null,
-    this.useRowspanHeaders = null,
-    this.usePresentationOrder = null
-  }) : super();
-  String? decimalPoint;
-    /*
-  String get decimalPoint { 
-    if (this._decimalPoint == null) {
-      this._decimalPoint = "";
-    }
-    return this._decimalPoint!;
-  }
+  ExportOptions( ) : super();
+  // NOTE: decimalPoint skipped - type string is ignored in gen 
 
-  void set decimalPoint (String v) {
-    this._decimalPoint = v;
-  }
-    */
-    
-  bool? exportIDColumn;
-    /*
-  bool get exportIDColumn { 
-    if (this._exportIDColumn == null) {
-      this._exportIDColumn = false;
-    }
-    return this._exportIDColumn!;
-  }
+  // NOTE: exportIDColumn skipped - type boolean is ignored in gen 
 
-  void set exportIDColumn (bool v) {
-    this._exportIDColumn = v;
-  }
-    */
-    
-  String? tableCaption;
-    /*
-  String get tableCaption { 
-    if (this._tableCaption == null) {
-      this._tableCaption = "";
-    }
-    return this._tableCaption!;
-  }
+  // NOTE: tableCaption skipped - type string is ignored in gen 
 
-  void set tableCaption (String v) {
-    this._tableCaption = v;
-  }
-    */
-    
-  bool? useLocalDecimalPoint;
-    /*
-  bool get useLocalDecimalPoint { 
-    if (this._useLocalDecimalPoint == null) {
-      this._useLocalDecimalPoint = false;
-    }
-    return this._useLocalDecimalPoint!;
-  }
+  // NOTE: useLocalDecimalPoint skipped - type boolean is ignored in gen 
 
-  void set useLocalDecimalPoint (bool v) {
-    this._useLocalDecimalPoint = v;
-  }
-    */
-    
-  bool? useMultiLevelHeaders;
-    /*
-  bool get useMultiLevelHeaders { 
-    if (this._useMultiLevelHeaders == null) {
-      this._useMultiLevelHeaders = false;
-    }
-    return this._useMultiLevelHeaders!;
-  }
+  // NOTE: useMultiLevelHeaders skipped - type boolean is ignored in gen 
 
-  void set useMultiLevelHeaders (bool v) {
-    this._useMultiLevelHeaders = v;
-  }
-    */
-    
-  bool? useRowspanHeaders;
-    /*
-  bool get useRowspanHeaders { 
-    if (this._useRowspanHeaders == null) {
-      this._useRowspanHeaders = false;
-    }
-    return this._useRowspanHeaders!;
-  }
+  // NOTE: useRowspanHeaders skipped - type boolean is ignored in gen 
 
-  void set useRowspanHeaders (bool v) {
-    this._useRowspanHeaders = v;
-  }
-    */
-    
-  bool? usePresentationOrder;
-    /*
-  bool get usePresentationOrder { 
-    if (this._usePresentationOrder == null) {
-      this._usePresentationOrder = false;
-    }
-    return this._usePresentationOrder!;
-  }
+  // NOTE: usePresentationOrder skipped - type boolean is ignored in gen 
 
-  void set usePresentationOrder (bool v) {
-    this._usePresentationOrder = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -137,33 +45,19 @@ class ExportOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.decimalPoint != null) {  
-      buffer.writeAll(["\"decimalPoint\":\`", this.decimalPoint, "\`,"], "");
-    }
+    // NOTE: skip serialization of decimalPoint (type string is ignored) ignore type: true
 
-    if (this.exportIDColumn != null) {  
-      buffer.writeAll(["\"exportIDColumn\":", this.exportIDColumn, ","], "");
-    }
+    // NOTE: skip serialization of exportIDColumn (type boolean is ignored) ignore type: true
 
-    if (this.tableCaption != null) {  
-      buffer.writeAll(["\"tableCaption\":\`", this.tableCaption, "\`,"], "");
-    }
+    // NOTE: skip serialization of tableCaption (type string is ignored) ignore type: true
 
-    if (this.useLocalDecimalPoint != null) {  
-      buffer.writeAll(["\"useLocalDecimalPoint\":", this.useLocalDecimalPoint, ","], "");
-    }
+    // NOTE: skip serialization of useLocalDecimalPoint (type boolean is ignored) ignore type: true
 
-    if (this.useMultiLevelHeaders != null) {  
-      buffer.writeAll(["\"useMultiLevelHeaders\":", this.useMultiLevelHeaders, ","], "");
-    }
+    // NOTE: skip serialization of useMultiLevelHeaders (type boolean is ignored) ignore type: true
 
-    if (this.useRowspanHeaders != null) {  
-      buffer.writeAll(["\"useRowspanHeaders\":", this.useRowspanHeaders, ","], "");
-    }
+    // NOTE: skip serialization of useRowspanHeaders (type boolean is ignored) ignore type: true
 
-    if (this.usePresentationOrder != null) {  
-      buffer.writeAll(["\"usePresentationOrder\":", this.usePresentationOrder, ","], "");
-    }
+    // NOTE: skip serialization of usePresentationOrder (type boolean is ignored) ignore type: true
   }
 
 }

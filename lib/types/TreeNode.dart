@@ -12,10 +12,11 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
+import 'TreeNode.dart';
 import 'TreePointOptionsObject.dart';
 import 'OptionFragment.dart';
 
@@ -23,98 +24,19 @@ import 'OptionFragment.dart';
  * TreeNode 
  */
 class TreeNode extends OptionFragment {
-  TreeNode( {
-    this.depth = null,
-    this.descendants = null,
-    this.height = null,
-    this.id = null,
-    this.level = null,
-    this.parent = null
-  }) : super();
-  double? depth;
-    /*
-  double get depth { 
-    if (this._depth == null) {
-      this._depth = 0;
-    }
-    return this._depth!;
-  }
+  TreeNode( ) : super();
+  // NOTE: depth skipped - type number is ignored in gen 
 
-  void set depth (double v) {
-    this._depth = v;
-  }
-    */
-    
-  double? descendants;
-    /*
-  double get descendants { 
-    if (this._descendants == null) {
-      this._descendants = 0;
-    }
-    return this._descendants!;
-  }
+  // NOTE: descendants skipped - type number is ignored in gen 
 
-  void set descendants (double v) {
-    this._descendants = v;
-  }
-    */
-    
-  double? height;
-    /*
-  double get height { 
-    if (this._height == null) {
-      this._height = 0;
-    }
-    return this._height!;
-  }
+  // NOTE: height skipped - type number is ignored in gen 
 
-  void set height (double v) {
-    this._height = v;
-  }
-    */
-    
-  String? id;
-    /*
-  String get id { 
-    if (this._id == null) {
-      this._id = "";
-    }
-    return this._id!;
-  }
+  // NOTE: id skipped - type string is ignored in gen 
 
-  void set id (String v) {
-    this._id = v;
-  }
-    */
-    
-  double? level;
-    /*
-  double get level { 
-    if (this._level == null) {
-      this._level = 0;
-    }
-    return this._level!;
-  }
+  // NOTE: level skipped - type number is ignored in gen 
 
-  void set level (double v) {
-    this._level = v;
-  }
-    */
-    
-  String? parent;
-    /*
-  String get parent { 
-    if (this._parent == null) {
-      this._parent = "";
-    }
-    return this._parent!;
-  }
+  // NOTE: parent skipped - type string is ignored in gen 
 
-  void set parent (String v) {
-    this._parent = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -123,33 +45,21 @@ class TreeNode extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of children (type TreeNode[] is ignored)} 
+    // NOTE: skip serialization of children (type TreeNode[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of data (type TreePointOptionsObject is ignored)} 
+    // NOTE: skip serialization of data (type TreePointOptionsObject is ignored) ignore type: true
 
-    if (this.depth != null) {  
-      buffer.writeAll(["\"depth\":", this.depth, ","], "");
-    }
+    // NOTE: skip serialization of depth (type number is ignored) ignore type: true
 
-    if (this.descendants != null) {  
-      buffer.writeAll(["\"descendants\":", this.descendants, ","], "");
-    }
+    // NOTE: skip serialization of descendants (type number is ignored) ignore type: true
 
-    if (this.height != null) {  
-      buffer.writeAll(["\"height\":", this.height, ","], "");
-    }
+    // NOTE: skip serialization of height (type number is ignored) ignore type: true
 
-    if (this.id != null) {  
-      buffer.writeAll(["\"id\":\`", this.id, "\`,"], "");
-    }
+    // NOTE: skip serialization of id (type string is ignored) ignore type: true
 
-    if (this.level != null) {  
-      buffer.writeAll(["\"level\":", this.level, ","], "");
-    }
+    // NOTE: skip serialization of level (type number is ignored) ignore type: true
 
-    if (this.parent != null) {  
-      buffer.writeAll(["\"parent\":\`", this.parent, "\`,"], "");
-    }
+    // NOTE: skip serialization of parent (type string is ignored) ignore type: true
   }
 
 }

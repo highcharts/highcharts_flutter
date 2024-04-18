@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -25,38 +25,11 @@ import 'OptionFragment.dart';
  * GetElementContainerOptions 
  */
 class GetElementContainerOptions extends OptionFragment {
-  GetElementContainerOptions( {
-    this.render = null,
-    this.elementId = null
-  }) : super();
-  bool? render;
-    /*
-  bool get render { 
-    if (this._render == null) {
-      this._render = false;
-    }
-    return this._render!;
-  }
+  GetElementContainerOptions( ) : super();
+  // NOTE: render skipped - type boolean is ignored in gen 
 
-  void set render (bool v) {
-    this._render = v;
-  }
-    */
-    
-  String? elementId;
-    /*
-  String get elementId { 
-    if (this._elementId == null) {
-      this._elementId = "";
-    }
-    return this._elementId!;
-  }
+  // NOTE: elementId skipped - type string is ignored in gen 
 
-  void set elementId (String v) {
-    this._elementId = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -65,21 +38,17 @@ class GetElementContainerOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.render != null) {  
-      buffer.writeAll(["\"render\":", this.render, ","], "");
-    }
+    // NOTE: skip serialization of render (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of parentContainer (type HTMLElement is ignored)} 
+    // NOTE: skip serialization of parentContainer (type HTMLElement is ignored) ignore type: true
 
-    // NOTE: skip serialization of attribs (type HTMLAttributes is ignored)} 
+    // NOTE: skip serialization of attribs (type HTMLAttributes is ignored) ignore type: true
 
-    // NOTE: skip serialization of style (type CSSObject is ignored)} 
+    // NOTE: skip serialization of style (type CSSObject is ignored) ignore type: true
 
-    // NOTE: skip serialization of element (type HTMLElement is ignored)} 
+    // NOTE: skip serialization of element (type HTMLElement is ignored) ignore type: true
 
-    if (this.elementId != null) {  
-      buffer.writeAll(["\"elementId\":\`", this.elementId, "\`,"], "");
-    }
+    // NOTE: skip serialization of elementId (type string is ignored) ignore type: true
   }
 
 }

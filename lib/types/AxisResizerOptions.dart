@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,38 +23,11 @@ import 'OptionFragment.dart';
  * AxisResizerOptions 
  */
 class AxisResizerOptions extends OptionFragment {
-  AxisResizerOptions( {
-    this.maxLength = null,
-    this.minLength = null
-  }) : super();
-  String? maxLength;
-    /*
-  String get maxLength { 
-    if (this._maxLength == null) {
-      this._maxLength = "";
-    }
-    return this._maxLength!;
-  }
+  AxisResizerOptions( ) : super();
+  // NOTE: maxLength skipped - type string is ignored in gen 
 
-  void set maxLength (String v) {
-    this._maxLength = v;
-  }
-    */
-    
-  String? minLength;
-    /*
-  String get minLength { 
-    if (this._minLength == null) {
-      this._minLength = "";
-    }
-    return this._minLength!;
-  }
+  // NOTE: minLength skipped - type string is ignored in gen 
 
-  void set minLength (String v) {
-    this._minLength = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -63,15 +36,11 @@ class AxisResizerOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.maxLength != null) {  
-      buffer.writeAll(["\"maxLength\":\`", this.maxLength, "\`,"], "");
-    }
+    // NOTE: skip serialization of maxLength (type string is ignored) ignore type: true
 
-    if (this.minLength != null) {  
-      buffer.writeAll(["\"minLength\":\`", this.minLength, "\`,"], "");
-    }
+    // NOTE: skip serialization of minLength (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of resize (type AxisResizeOptions is ignored)} 
+    // NOTE: skip serialization of resize (type AxisResizeOptions is ignored) ignore type: true
   }
 
 }

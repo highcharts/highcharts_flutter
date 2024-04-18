@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -36,47 +36,47 @@ class JSON extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of $class (type T is ignored)} 
+    // NOTE: skip serialization of $class (type T is ignored) ignore type: 1
 
-    // NOTE: skip serialization of options (type OptionsJSON is ignored)} 
+    // NOTE: skip serialization of options (type OptionsJSON is ignored) ignore type: true
 
-    // NOTE: skip serialization of options (type OptionsJSON is ignored)} 
+    // NOTE: skip serialization of options (type OptionsJSON is ignored) ignore type: true
 
-    // NOTE: skip serialization of options (type OptionsJSON is ignored)} 
+    // NOTE: skip serialization of options (type OptionsJSON is ignored) ignore type: true
 
-    // NOTE: skip serialization of options (type JSONOptions is ignored)} 
+    // NOTE: skip serialization of options (type JSONOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of columnOrder (type string[] is ignored)} 
+    // NOTE: skip serialization of columnOrder (type string[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of visibilityMap (type ColumnVisibilityType is ignored)} 
+    // NOTE: skip serialization of visibilityMap (type ColumnVisibilityType is ignored) ignore type: true
 
-    // NOTE: skip serialization of hoverpoint (type { x: number; y: number; id: string; } is ignored)} 
+    // NOTE: skip serialization of hoverpoint (type { x: number; y: number; id: string; } is ignored) ignore type: true
 
-    // NOTE: skip serialization of selection (type SelectionObjectType is ignored)} 
+    // NOTE: skip serialization of selection (type SelectionObjectType is ignored) ignore type: true
 
-    // NOTE: skip serialization of options (type ComponentOptionsJSON is ignored)} 
+    // NOTE: skip serialization of options (type ComponentOptionsJSON is ignored) ignore type: true
 
-    // NOTE: skip serialization of stateMap (type StateMapJSON is ignored)} 
+    // NOTE: skip serialization of stateMap (type StateMapJSON is ignored) ignore type: 1
 
-    // NOTE: skip serialization of dataCursor (type JSON is ignored)} 
+    // NOTE: skip serialization of dataCursor (type JSON is ignored) ignore type: true
 
-    // NOTE: skip serialization of options (type OptionsJSON is ignored)} 
+    // NOTE: skip serialization of options (type OptionsJSON is ignored) ignore type: true
 
-    // NOTE: skip serialization of options (type OptionsJSON is ignored)} 
+    // NOTE: skip serialization of options (type OptionsJSON is ignored) ignore type: true
 
-    // NOTE: skip serialization of chain (type ChainJSON[] is ignored)} 
+    // NOTE: skip serialization of chain (type ChainJSON[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of options (type OptionsJSON is ignored)} 
+    // NOTE: skip serialization of options (type OptionsJSON is ignored) ignore type: true
 
-    // NOTE: skip serialization of options (type OptionsJSON is ignored)} 
+    // NOTE: skip serialization of options (type OptionsJSON is ignored) ignore type: true
 
-    // NOTE: skip serialization of options (type OptionsJSON is ignored)} 
+    // NOTE: skip serialization of options (type OptionsJSON is ignored) ignore type: true
 
-    // NOTE: skip serialization of options (type OptionsJSON is ignored)} 
+    // NOTE: skip serialization of options (type OptionsJSON is ignored) ignore type: true
 
-    // NOTE: skip serialization of options (type OptionsJSON is ignored)} 
+    // NOTE: skip serialization of options (type OptionsJSON is ignored) ignore type: true
 
-    // NOTE: skip serialization of options (type OptionsJSON is ignored)} 
+    // NOTE: skip serialization of options (type OptionsJSON is ignored) ignore type: true
   }
 
 }

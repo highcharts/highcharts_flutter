@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,53 +23,13 @@ import 'OptionFragment.dart';
  * SortModifierOptions 
  */
 class SortModifierOptions extends DataModifierOptions {
-  SortModifierOptions( {
-    this.direction = null,
-    this.orderByColumn = null,
-    this.orderInColumn = null
-  }) : super();
-  String? direction;
-    /*
-  String get direction { 
-    if (this._direction == null) {
-      this._direction = "";
-    }
-    return this._direction!;
-  }
+  SortModifierOptions( ) : super();
+  // NOTE: direction skipped - type string is ignored in gen 
 
-  void set direction (String v) {
-    this._direction = v;
-  }
-    */
-    
-  String? orderByColumn;
-    /*
-  String get orderByColumn { 
-    if (this._orderByColumn == null) {
-      this._orderByColumn = "";
-    }
-    return this._orderByColumn!;
-  }
+  // NOTE: orderByColumn skipped - type string is ignored in gen 
 
-  void set orderByColumn (String v) {
-    this._orderByColumn = v;
-  }
-    */
-    
-  String? orderInColumn;
-    /*
-  String get orderInColumn { 
-    if (this._orderInColumn == null) {
-      this._orderInColumn = "";
-    }
-    return this._orderInColumn!;
-  }
+  // NOTE: orderInColumn skipped - type string is ignored in gen 
 
-  void set orderInColumn (String v) {
-    this._orderInColumn = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -78,19 +38,13 @@ class SortModifierOptions extends DataModifierOptions {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of type (type "Sort" is ignored)} 
+    // NOTE: skip serialization of type (type "Sort" is ignored) ignore type: true
 
-    if (this.direction != null) {  
-      buffer.writeAll(["\"direction\":\`", this.direction, "\`,"], "");
-    }
+    // NOTE: skip serialization of direction (type string is ignored) ignore type: true
 
-    if (this.orderByColumn != null) {  
-      buffer.writeAll(["\"orderByColumn\":\`", this.orderByColumn, "\`,"], "");
-    }
+    // NOTE: skip serialization of orderByColumn (type string is ignored) ignore type: true
 
-    if (this.orderInColumn != null) {  
-      buffer.writeAll(["\"orderInColumn\":\`", this.orderInColumn, "\`,"], "");
-    }
+    // NOTE: skip serialization of orderInColumn (type string is ignored) ignore type: true
   }
 
 }

@@ -12,38 +12,90 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
-import 'SVGElement.dart';
-import 'OptionFragment.dart';
+import 'WindbarbSeriesOptions.dart';
+import 'Series.dart';
+import 'PointOptions.dart';
 
-/** 
- * WindbarbSeries 
- */
-class WindbarbSeries extends OptionFragment {
-  WindbarbSeries( ) : super();
-  
+class WindbarbSeries extends Series {
 
-  //////////////////////////////////////////////////////////////////////////////
+  String? name;
+  WindbarbSeriesOptions? options;
+  List<PointOptions>? points;
+  List<List<double>>? data;
+
+  WindbarbSeries({
+    this.name = null,
+    this.options = null,
+    this.points = null,
+    this.data = null
+  });
+
   
   @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of beaufortFloor (type number[] is ignored)} 
 
-    // NOTE: skip serialization of beaufortName (type string[] is ignored)} 
+    if (this.name != null) {
+      buffer.writeAll(["\"name\": \"", this.name!, "\","], "");
+    }
 
-    // NOTE: skip serialization of group (type SVGElement is ignored)} 
+    buffer.write("\"type\": \"windbarb\",");
 
-    // NOTE: skip serialization of parallelArrays (type string[] is ignored)} 
+    if (this.data != null && this.points == null) {
+      // Serialize as a 2d array
 
-    // NOTE: skip serialization of pointArrayMap (type string[] is ignored)} 
+      StringBuffer seriesData = StringBuffer();
 
-    // NOTE: skip serialization of pointClass (type typeof WindbarbPoint is ignored)} 
+      for (var point in this.data!) {
+        seriesData.writeAll(["["], "");
+        for (var item in point) {
+          seriesData.writeAll([item, ","]);
+        }
+        seriesData.writeAll(["],"], "");
+      }
+
+      buffer.writeAll(["\"data\": [", seriesData, "],"], "");   
+
+
+    } else if (this.points != null) {
+      // Go through the points and write them
+      StringBuffer seriesData = StringBuffer();
+
+      for (var point in this.points!) {
+        seriesData.writeAll(["{"], "");
+        point.toJSONInner(seriesData); 
+        seriesData.writeAll(["},"], "");
+      }
+
+      buffer.writeAll(["\"data\": [", seriesData, "],"], "");
+    }
+
+
+
+    
+    if (this.options?.onSeries != null) {  
+      buffer.writeAll(["\"onSeries\":\`",this.options?.onSeries, "\`,"], "");
+    }
+
+    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
+
+    if (this.options?.vectorLength != null) {  
+      buffer.writeAll(["\"vectorLength\":",this.options?.vectorLength, ","], "");
+    }
+
+    if (this.options?.xOffset != null) {  
+      buffer.writeAll(["\"xOffset\":",this.options?.xOffset, ","], "");
+    }
+
+    if (this.options?.yOffset != null) {  
+      buffer.writeAll(["\"yOffset\":",this.options?.yOffset, ","], "");
+    }
   }
 
 }

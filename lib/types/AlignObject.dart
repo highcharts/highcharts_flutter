@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,111 +24,24 @@ import 'OptionFragment.dart';
 class AlignObject extends OptionFragment {
   AlignObject( {
     this.align = null,
-    this.alignByTranslate = null,
     this.verticalAlign = null,
     this.x = null,
-    this.y = null,
-    this.width = null,
-    this.height = null
+    this.y = null
   }) : super();
   String? align;
-    /*
-  String get align { 
-    if (this._align == null) {
-      this._align = "";
-    }
-    return this._align!;
-  }
-
-  void set align (String v) {
-    this._align = v;
-  }
-    */
     
-  bool? alignByTranslate;
-    /*
-  bool get alignByTranslate { 
-    if (this._alignByTranslate == null) {
-      this._alignByTranslate = false;
-    }
-    return this._alignByTranslate!;
-  }
+  // NOTE: alignByTranslate skipped - type boolean is ignored in gen 
 
-  void set alignByTranslate (bool v) {
-    this._alignByTranslate = v;
-  }
-    */
-    
   String? verticalAlign;
-    /*
-  String get verticalAlign { 
-    if (this._verticalAlign == null) {
-      this._verticalAlign = "";
-    }
-    return this._verticalAlign!;
-  }
-
-  void set verticalAlign (String v) {
-    this._verticalAlign = v;
-  }
-    */
     
   double? x;
-    /*
-  double get x { 
-    if (this._x == null) {
-      this._x = 0;
-    }
-    return this._x!;
-  }
-
-  void set x (double v) {
-    this._x = v;
-  }
-    */
     
   double? y;
-    /*
-  double get y { 
-    if (this._y == null) {
-      this._y = 0;
-    }
-    return this._y!;
-  }
-
-  void set y (double v) {
-    this._y = v;
-  }
-    */
     
-  double? width;
-    /*
-  double get width { 
-    if (this._width == null) {
-      this._width = 0;
-    }
-    return this._width!;
-  }
+  // NOTE: width skipped - type number is ignored in gen 
 
-  void set width (double v) {
-    this._width = v;
-  }
-    */
-    
-  double? height;
-    /*
-  double get height { 
-    if (this._height == null) {
-      this._height = 0;
-    }
-    return this._height!;
-  }
+  // NOTE: height skipped - type number is ignored in gen 
 
-  void set height (double v) {
-    this._height = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -138,32 +51,26 @@ class AlignObject extends OptionFragment {
 
     
     if (this.align != null) {  
-      buffer.writeAll(["\"align\":\`", this.align, "\`,"], "");
+      buffer.writeAll(["\"align\":\`",this.align, "\`,"], "");
     }
 
-    if (this.alignByTranslate != null) {  
-      buffer.writeAll(["\"alignByTranslate\":", this.alignByTranslate, ","], "");
-    }
+    // NOTE: skip serialization of alignByTranslate (type boolean is ignored) ignore type: true
 
     if (this.verticalAlign != null) {  
-      buffer.writeAll(["\"verticalAlign\":\`", this.verticalAlign, "\`,"], "");
+      buffer.writeAll(["\"verticalAlign\":\`",this.verticalAlign, "\`,"], "");
     }
 
     if (this.x != null) {  
-      buffer.writeAll(["\"x\":", this.x, ","], "");
+      buffer.writeAll(["\"x\":",this.x, ","], "");
     }
 
     if (this.y != null) {  
-      buffer.writeAll(["\"y\":", this.y, ","], "");
+      buffer.writeAll(["\"y\":",this.y, ","], "");
     }
 
-    if (this.width != null) {  
-      buffer.writeAll(["\"width\":", this.width, ","], "");
-    }
+    // NOTE: skip serialization of width (type number is ignored) ignore type: true
 
-    if (this.height != null) {  
-      buffer.writeAll(["\"height\":", this.height, ","], "");
-    }
+    // NOTE: skip serialization of height (type number is ignored) ignore type: true
   }
 
 }

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,53 +23,13 @@ import 'OptionFragment.dart';
  * DropPointer 
  */
 class DropPointer extends OptionFragment {
-  DropPointer( {
-    this.isVisible = null,
-    this.align = null,
-    this.nested = null
-  }) : super();
-  bool? isVisible;
-    /*
-  bool get isVisible { 
-    if (this._isVisible == null) {
-      this._isVisible = false;
-    }
-    return this._isVisible!;
-  }
+  DropPointer( ) : super();
+  // NOTE: isVisible skipped - type boolean is ignored in gen 
 
-  void set isVisible (bool v) {
-    this._isVisible = v;
-  }
-    */
-    
-  String? align;
-    /*
-  String get align { 
-    if (this._align == null) {
-      this._align = "";
-    }
-    return this._align!;
-  }
+  // NOTE: align skipped - type string is ignored in gen 
 
-  void set align (String v) {
-    this._align = v;
-  }
-    */
-    
-  bool? nested;
-    /*
-  bool get nested { 
-    if (this._nested == null) {
-      this._nested = false;
-    }
-    return this._nested!;
-  }
+  // NOTE: nested skipped - type boolean is ignored in gen 
 
-  void set nested (bool v) {
-    this._nested = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -78,19 +38,13 @@ class DropPointer extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.isVisible != null) {  
-      buffer.writeAll(["\"isVisible\":", this.isVisible, ","], "");
-    }
+    // NOTE: skip serialization of isVisible (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of element (type HTMLElement is ignored)} 
+    // NOTE: skip serialization of element (type HTMLElement is ignored) ignore type: true
 
-    if (this.align != null) {  
-      buffer.writeAll(["\"align\":\`", this.align, "\`,"], "");
-    }
+    // NOTE: skip serialization of align (type string is ignored) ignore type: true
 
-    if (this.nested != null) {  
-      buffer.writeAll(["\"nested\":", this.nested, ","], "");
-    }
+    // NOTE: skip serialization of nested (type boolean is ignored) ignore type: true
   }
 
 }

@@ -12,46 +12,76 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
-import 'OptionFragment.dart';
+import 'GanttSeriesOptions.dart';
+import 'Series.dart';
+import 'PointOptions.dart';
 
-/** 
- * GanttSeries 
- */
-class GanttSeries extends OptionFragment {
-  GanttSeries( {
-    this.keyboardMoveVertical = null
-  }) : super();
-  bool? keyboardMoveVertical;
-    /*
-  bool get keyboardMoveVertical { 
-    if (this._keyboardMoveVertical == null) {
-      this._keyboardMoveVertical = false;
-    }
-    return this._keyboardMoveVertical!;
-  }
+class GanttSeries extends Series {
 
-  void set keyboardMoveVertical (bool v) {
-    this._keyboardMoveVertical = v;
-  }
-    */
-    
+  String? name;
+  GanttSeriesOptions? options;
+  List<PointOptions>? points;
+  List<List<double>>? data;
 
-  //////////////////////////////////////////////////////////////////////////////
+  GanttSeries({
+    this.name = null,
+    this.options = null,
+    this.points = null,
+    this.data = null
+  });
+
   
   @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    if (this.keyboardMoveVertical != null) {  
-      buffer.writeAll(["\"keyboardMoveVertical\":", this.keyboardMoveVertical, ","], "");
+
+    if (this.name != null) {
+      buffer.writeAll(["\"name\": \"", this.name!, "\","], "");
     }
 
-    // NOTE: skip serialization of pointClass (type typeof GanttPoint is ignored)} 
+    buffer.write("\"type\": \"gantt\",");
+
+    if (this.data != null && this.points == null) {
+      // Serialize as a 2d array
+
+      StringBuffer seriesData = StringBuffer();
+
+      for (var point in this.data!) {
+        seriesData.writeAll(["["], "");
+        for (var item in point) {
+          seriesData.writeAll([item, ","]);
+        }
+        seriesData.writeAll(["],"], "");
+      }
+
+      buffer.writeAll(["\"data\": [", seriesData, "],"], "");   
+
+
+    } else if (this.points != null) {
+      // Go through the points and write them
+      StringBuffer seriesData = StringBuffer();
+
+      for (var point in this.points!) {
+        seriesData.writeAll(["{"], "");
+        point.toJSONInner(seriesData); 
+        seriesData.writeAll(["},"], "");
+      }
+
+      buffer.writeAll(["\"data\": [", seriesData, "],"], "");
+    }
+
+
+
+    
+    // NOTE: skip serialization of connectors (type GanttConnectorOptions is ignored) ignore type: false
+
+    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
   }
 
 }

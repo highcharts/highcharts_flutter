@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,113 +24,106 @@ import 'OptionFragment.dart';
  */
 class VariablePieSeriesOptions extends PieSeriesOptions {
   VariablePieSeriesOptions( {
+    super.accessibility = null,
+    super.allAreas = null,
+    super.allowPointSelect = null,
+    super.animationLimit = null,
+    super.boostBlending = null,
+    super.boostThreshold = null,
+    super.borderColor = null,
+    super.borderWidth = null,
+    super.className = null,
+    super.clip = null,
+    super.color = null,
+    super.colorAxis = null,
+    super.colorIndex = null,
+    super.colorKey = null,
+    super.compare = null,
+    super.compareStart = null,
+    super.connectEnds = null,
+    super.connectNulls = null,
+    super.connectors = null,
+    super.crisp = null,
+    super.cropThreshold = null,
+    super.cumulative = null,
+    super.cursor = null,
+    super.dashStyle = null,
+    super.dataGrouping = null,
+    super.dataLabels = null,
+    super.dataSorting = null,
+    super.depth = null,
+    super.description = null,
+    super.dragDrop = null,
+    super.enableMouseTracking = null,
+    super.endAngle = null,
+    super.events = null,
+    super.fillColor = null,
+    super.findNearestPointBy = null,
+    super.gapSize = null,
+    super.gapUnit = null,
+    super.getExtremesFromAll = null,
+    super.ignoreHiddenPoint = null,
+    super.includeInDataExport = null,
+    super.innerSize = null,
+    super.joinBy = null,
+    super.keys = null,
+    super.label = null,
+    super.lastPrice = null,
+    super.lastVisiblePrice = null,
+    super.legendSymbol = null,
+    super.linecap = null,
+    super.lineWidth = null,
+    super.linkedTo = null,
+    super.marker = null,
     this.maxPointSize = null,
     this.minPointSize = null,
+    super.minSize = null,
+    super.navigatorOptions = null,
+    super.negativeColor = null,
+    super.onPoint = null,
+    super.opacity = null,
+    super.point = null,
+    super.pointInterval = null,
+    super.pointIntervalUnit = null,
+    super.pointPlacement = null,
+    super.pointRange = null,
+    super.pointStart = null,
+    super.relativeXValue = null,
+    super.selected = null,
+    super.showCheckbox = null,
+    super.showInLegend = null,
+    super.showInNavigator = null,
+    super.size = null,
     this.sizeBy = null,
+    super.skipKeyboardNavigation = null,
+    super.slicedOffset = null,
+    super.softThreshold = null,
+    super.stacking = null,
+    super.startAngle = null,
+    super.step = null,
+    super.stickyTracking = null,
+    super.thickness = null,
+    super.threshold = null,
+    super.tooltip = null,
+    super.turboThreshold = null,
+    super.visible = null,
+    super.zIndex = null,
     this.zMax = null,
-    this.zMin = null
+    this.zMin = null,
+    super.zoneAxis = null,
+    super.zones = null
   }) : super();
-  /**
-   * The maximum size of the points' radius related to chart's `plotArea`.
-   * If a number is set, it applies in pixels. 
-   * 
-   * Defaults to '100%'. 
-      */
   String? maxPointSize;
-    /*
-  String get maxPointSize { 
-    if (this._maxPointSize == null) {
-      this._maxPointSize = "";
-    }
-    return this._maxPointSize!;
-  }
-
-  void set maxPointSize (String v) {
-    this._maxPointSize = v;
-  }
-    */
     
-  /**
-   * The minimum size of the points' radius related to chart's `plotArea`.
-   * If a number is set, it applies in pixels. 
-   * 
-   * Defaults to '10%'. 
-      */
   String? minPointSize;
-    /*
-  String get minPointSize { 
-    if (this._minPointSize == null) {
-      this._minPointSize = "";
-    }
-    return this._minPointSize!;
-  }
-
-  void set minPointSize (String v) {
-    this._minPointSize = v;
-  }
-    */
     
-  /**
-   * Whether the pie slice's value should be represented by the area or
-   * the radius of the slice. Can be either `area` or `radius`. The
-   * default, `area`, corresponds best to the human perception of the size
-   * of each pie slice. 
-   * 
-   * Defaults to 'area'. 
-      */
   String? sizeBy;
-    /*
-  String get sizeBy { 
-    if (this._sizeBy == null) {
-      this._sizeBy = "";
-    }
-    return this._sizeBy!;
-  }
-
-  void set sizeBy (String v) {
-    this._sizeBy = v;
-  }
-    */
     
-  // NOTE: states skipped - type Generic is ignored in gen
+  // NOTE: states skipped - type Generic is ignored in gen 
 
-  /**
-   * The maximum possible z value for the point's radius calculation. If
-   * the point's Z value is bigger than zMax, the slice will be drawn
-   * according to the zMax value  
-      */
   double? zMax;
-    /*
-  double get zMax { 
-    if (this._zMax == null) {
-      this._zMax = 0;
-    }
-    return this._zMax!;
-  }
-
-  void set zMax (double v) {
-    this._zMax = v;
-  }
-    */
     
-  /**
-   * The minimum possible z value for the point's radius calculation. If
-   * the point's Z value is smaller than zMin, the slice will be drawn
-   * according to the zMin value.  
-      */
   double? zMin;
-    /*
-  double get zMin { 
-    if (this._zMin == null) {
-      this._zMin = 0;
-    }
-    return this._zMin!;
-  }
-
-  void set zMin (double v) {
-    this._zMin = v;
-  }
-    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -141,25 +134,25 @@ class VariablePieSeriesOptions extends PieSeriesOptions {
 
     
     if (this.maxPointSize != null) {  
-      buffer.writeAll(["\"maxPointSize\":\`", this.maxPointSize, "\`,"], "");
+      buffer.writeAll(["\"maxPointSize\":\`",this.maxPointSize, "\`,"], "");
     }
 
     if (this.minPointSize != null) {  
-      buffer.writeAll(["\"minPointSize\":\`", this.minPointSize, "\`,"], "");
+      buffer.writeAll(["\"minPointSize\":\`",this.minPointSize, "\`,"], "");
     }
 
     if (this.sizeBy != null) {  
-      buffer.writeAll(["\"sizeBy\":\`", this.sizeBy, "\`,"], "");
+      buffer.writeAll(["\"sizeBy\":\`",this.sizeBy, "\`,"], "");
     }
 
-    // NOTE: skip serialization of states (type Generic is ignored)} 
+    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
 
     if (this.zMax != null) {  
-      buffer.writeAll(["\"zMax\":", this.zMax, ","], "");
+      buffer.writeAll(["\"zMax\":",this.zMax, ","], "");
     }
 
     if (this.zMin != null) {  
-      buffer.writeAll(["\"zMin\":", this.zMin, ","], "");
+      buffer.writeAll(["\"zMin\":",this.zMin, ","], "");
     }
   }
 

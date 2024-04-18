@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,67 +24,17 @@ import 'OptionFragment.dart';
  */
 class MACDParamsOptions extends SMAParamsOptions {
   MACDParamsOptions( {
-    this.period = null,
-    this.shortPeriod = null,
-    this.longPeriod = null,
-    this.signalPeriod = null
+    super.index = null,
+    this.period = null
   }) : super();
   double? period;
-    /*
-  double get period { 
-    if (this._period == null) {
-      this._period = 0;
-    }
-    return this._period!;
-  }
-
-  void set period (double v) {
-    this._period = v;
-  }
-    */
     
-  double? shortPeriod;
-    /*
-  double get shortPeriod { 
-    if (this._shortPeriod == null) {
-      this._shortPeriod = 0;
-    }
-    return this._shortPeriod!;
-  }
+  // NOTE: shortPeriod skipped - type number is ignored in gen 
 
-  void set shortPeriod (double v) {
-    this._shortPeriod = v;
-  }
-    */
-    
-  double? longPeriod;
-    /*
-  double get longPeriod { 
-    if (this._longPeriod == null) {
-      this._longPeriod = 0;
-    }
-    return this._longPeriod!;
-  }
+  // NOTE: longPeriod skipped - type number is ignored in gen 
 
-  void set longPeriod (double v) {
-    this._longPeriod = v;
-  }
-    */
-    
-  double? signalPeriod;
-    /*
-  double get signalPeriod { 
-    if (this._signalPeriod == null) {
-      this._signalPeriod = 0;
-    }
-    return this._signalPeriod!;
-  }
+  // NOTE: signalPeriod skipped - type number is ignored in gen 
 
-  void set signalPeriod (double v) {
-    this._signalPeriod = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -94,20 +44,14 @@ class MACDParamsOptions extends SMAParamsOptions {
 
     
     if (this.period != null) {  
-      buffer.writeAll(["\"period\":", this.period, ","], "");
+      buffer.writeAll(["\"period\":",this.period, ","], "");
     }
 
-    if (this.shortPeriod != null) {  
-      buffer.writeAll(["\"shortPeriod\":", this.shortPeriod, ","], "");
-    }
+    // NOTE: skip serialization of shortPeriod (type number is ignored) ignore type: true
 
-    if (this.longPeriod != null) {  
-      buffer.writeAll(["\"longPeriod\":", this.longPeriod, ","], "");
-    }
+    // NOTE: skip serialization of longPeriod (type number is ignored) ignore type: true
 
-    if (this.signalPeriod != null) {  
-      buffer.writeAll(["\"signalPeriod\":", this.signalPeriod, ","], "");
-    }
+    // NOTE: skip serialization of signalPeriod (type number is ignored) ignore type: true
   }
 
 }

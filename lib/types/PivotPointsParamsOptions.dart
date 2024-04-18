@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,22 +24,11 @@ import 'OptionFragment.dart';
  */
 class PivotPointsParamsOptions extends SMAParamsOptions {
   PivotPointsParamsOptions( {
-    this.algorithm = null
+    super.index = null,
+    super.period = null
   }) : super();
-  String? algorithm;
-    /*
-  String get algorithm { 
-    if (this._algorithm == null) {
-      this._algorithm = "";
-    }
-    return this._algorithm!;
-  }
+  // NOTE: algorithm skipped - type string is ignored in gen 
 
-  void set algorithm (String v) {
-    this._algorithm = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -48,9 +37,7 @@ class PivotPointsParamsOptions extends SMAParamsOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.algorithm != null) {  
-      buffer.writeAll(["\"algorithm\":\`", this.algorithm, "\`,"], "");
-    }
+    // NOTE: skip serialization of algorithm (type string is ignored) ignore type: true
   }
 
 }

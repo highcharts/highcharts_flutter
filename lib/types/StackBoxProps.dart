@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,83 +23,17 @@ import 'OptionFragment.dart';
  * StackBoxProps 
  */
 class StackBoxProps extends OptionFragment {
-  StackBoxProps( {
-    this.xOffset = null,
-    this.width = null,
-    this.boxBottom = null,
-    this.boxTop = null,
-    this.defaultX = null
-  }) : super();
-  double? xOffset;
-    /*
-  double get xOffset { 
-    if (this._xOffset == null) {
-      this._xOffset = 0;
-    }
-    return this._xOffset!;
-  }
+  StackBoxProps( ) : super();
+  // NOTE: xOffset skipped - type number is ignored in gen 
 
-  void set xOffset (double v) {
-    this._xOffset = v;
-  }
-    */
-    
-  double? width;
-    /*
-  double get width { 
-    if (this._width == null) {
-      this._width = 0;
-    }
-    return this._width!;
-  }
+  // NOTE: width skipped - type number is ignored in gen 
 
-  void set width (double v) {
-    this._width = v;
-  }
-    */
-    
-  double? boxBottom;
-    /*
-  double get boxBottom { 
-    if (this._boxBottom == null) {
-      this._boxBottom = 0;
-    }
-    return this._boxBottom!;
-  }
+  // NOTE: boxBottom skipped - type number is ignored in gen 
 
-  void set boxBottom (double v) {
-    this._boxBottom = v;
-  }
-    */
-    
-  double? boxTop;
-    /*
-  double get boxTop { 
-    if (this._boxTop == null) {
-      this._boxTop = 0;
-    }
-    return this._boxTop!;
-  }
+  // NOTE: boxTop skipped - type number is ignored in gen 
 
-  void set boxTop (double v) {
-    this._boxTop = v;
-  }
-    */
-    
-  double? defaultX;
-    /*
-  double get defaultX { 
-    if (this._defaultX == null) {
-      this._defaultX = 0;
-    }
-    return this._defaultX!;
-  }
+  // NOTE: defaultX skipped - type number is ignored in gen 
 
-  void set defaultX (double v) {
-    this._defaultX = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -108,27 +42,17 @@ class StackBoxProps extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.xOffset != null) {  
-      buffer.writeAll(["\"xOffset\":", this.xOffset, ","], "");
-    }
+    // NOTE: skip serialization of xOffset (type number is ignored) ignore type: true
 
-    if (this.width != null) {  
-      buffer.writeAll(["\"width\":", this.width, ","], "");
-    }
+    // NOTE: skip serialization of width (type number is ignored) ignore type: true
 
-    if (this.boxBottom != null) {  
-      buffer.writeAll(["\"boxBottom\":", this.boxBottom, ","], "");
-    }
+    // NOTE: skip serialization of boxBottom (type number is ignored) ignore type: true
 
-    if (this.boxTop != null) {  
-      buffer.writeAll(["\"boxTop\":", this.boxTop, ","], "");
-    }
+    // NOTE: skip serialization of boxTop (type number is ignored) ignore type: true
 
-    if (this.defaultX != null) {  
-      buffer.writeAll(["\"defaultX\":", this.defaultX, ","], "");
-    }
+    // NOTE: skip serialization of defaultX (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of xAxis (type Axis is ignored)} 
+    // NOTE: skip serialization of xAxis (type Axis is ignored) ignore type: true
   }
 
 }

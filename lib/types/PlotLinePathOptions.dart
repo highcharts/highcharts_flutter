@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,113 +23,21 @@ import 'OptionFragment.dart';
  * PlotLinePathOptions 
  */
 class PlotLinePathOptions extends OptionFragment {
-  PlotLinePathOptions( {
-    this.acrossPanes = null,
-    this.force = null,
-    this.lineWidth = null,
-    this.old = null,
-    this.reverse = null,
-    this.translatedValue = null,
-    this.value = null
-  }) : super();
-  bool? acrossPanes;
-    /*
-  bool get acrossPanes { 
-    if (this._acrossPanes == null) {
-      this._acrossPanes = false;
-    }
-    return this._acrossPanes!;
-  }
+  PlotLinePathOptions( ) : super();
+  // NOTE: acrossPanes skipped - type boolean is ignored in gen 
 
-  void set acrossPanes (bool v) {
-    this._acrossPanes = v;
-  }
-    */
-    
-  String? force;
-    /*
-  String get force { 
-    if (this._force == null) {
-      this._force = "";
-    }
-    return this._force!;
-  }
+  // NOTE: force skipped - type string is ignored in gen 
 
-  void set force (String v) {
-    this._force = v;
-  }
-    */
-    
-  double? lineWidth;
-    /*
-  double get lineWidth { 
-    if (this._lineWidth == null) {
-      this._lineWidth = 0;
-    }
-    return this._lineWidth!;
-  }
+  // NOTE: lineWidth skipped - type number is ignored in gen 
 
-  void set lineWidth (double v) {
-    this._lineWidth = v;
-  }
-    */
-    
-  bool? old;
-    /*
-  bool get old { 
-    if (this._old == null) {
-      this._old = false;
-    }
-    return this._old!;
-  }
+  // NOTE: old skipped - type boolean is ignored in gen 
 
-  void set old (bool v) {
-    this._old = v;
-  }
-    */
-    
-  bool? reverse;
-    /*
-  bool get reverse { 
-    if (this._reverse == null) {
-      this._reverse = false;
-    }
-    return this._reverse!;
-  }
+  // NOTE: reverse skipped - type boolean is ignored in gen 
 
-  void set reverse (bool v) {
-    this._reverse = v;
-  }
-    */
-    
-  double? translatedValue;
-    /*
-  double get translatedValue { 
-    if (this._translatedValue == null) {
-      this._translatedValue = 0;
-    }
-    return this._translatedValue!;
-  }
+  // NOTE: translatedValue skipped - type number is ignored in gen 
 
-  void set translatedValue (double v) {
-    this._translatedValue = v;
-  }
-    */
-    
-  double? value;
-    /*
-  double get value { 
-    if (this._value == null) {
-      this._value = 0;
-    }
-    return this._value!;
-  }
+  // NOTE: value skipped - type number is ignored in gen 
 
-  void set value (double v) {
-    this._value = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -138,35 +46,21 @@ class PlotLinePathOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.acrossPanes != null) {  
-      buffer.writeAll(["\"acrossPanes\":", this.acrossPanes, ","], "");
-    }
+    // NOTE: skip serialization of acrossPanes (type boolean is ignored) ignore type: true
 
-    if (this.force != null) {  
-      buffer.writeAll(["\"force\":\`", this.force, "\`,"], "");
-    }
+    // NOTE: skip serialization of force (type string is ignored) ignore type: true
 
-    if (this.lineWidth != null) {  
-      buffer.writeAll(["\"lineWidth\":", this.lineWidth, ","], "");
-    }
+    // NOTE: skip serialization of lineWidth (type number is ignored) ignore type: true
 
-    if (this.old != null) {  
-      buffer.writeAll(["\"old\":", this.old, ","], "");
-    }
+    // NOTE: skip serialization of old (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of path (type SVGPath is ignored)} 
+    // NOTE: skip serialization of path (type SVGPath is ignored) ignore type: true
 
-    if (this.reverse != null) {  
-      buffer.writeAll(["\"reverse\":", this.reverse, ","], "");
-    }
+    // NOTE: skip serialization of reverse (type boolean is ignored) ignore type: true
 
-    if (this.translatedValue != null) {  
-      buffer.writeAll(["\"translatedValue\":", this.translatedValue, ","], "");
-    }
+    // NOTE: skip serialization of translatedValue (type number is ignored) ignore type: true
 
-    if (this.value != null) {  
-      buffer.writeAll(["\"value\":", this.value, ","], "");
-    }
+    // NOTE: skip serialization of value (type number is ignored) ignore type: true
   }
 
 }

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,68 +23,15 @@ import 'OptionFragment.dart';
  * TextOptions 
  */
 class TextOptions extends OptionFragment {
-  TextOptions( {
-    this.className = null,
-    this.text = null,
-    this.title = null,
-    this.isLabel = null
-  }) : super();
-  String? className;
-    /*
-  String get className { 
-    if (this._className == null) {
-      this._className = "";
-    }
-    return this._className!;
-  }
+  TextOptions( ) : super();
+  // NOTE: className skipped - type string is ignored in gen 
 
-  void set className (String v) {
-    this._className = v;
-  }
-    */
-    
-  String? text;
-    /*
-  String get text { 
-    if (this._text == null) {
-      this._text = "";
-    }
-    return this._text!;
-  }
+  // NOTE: text skipped - type string is ignored in gen 
 
-  void set text (String v) {
-    this._text = v;
-  }
-    */
-    
-  String? title;
-    /*
-  String get title { 
-    if (this._title == null) {
-      this._title = "";
-    }
-    return this._title!;
-  }
+  // NOTE: title skipped - type string is ignored in gen 
 
-  void set title (String v) {
-    this._title = v;
-  }
-    */
-    
-  bool? isLabel;
-    /*
-  bool get isLabel { 
-    if (this._isLabel == null) {
-      this._isLabel = false;
-    }
-    return this._isLabel!;
-  }
+  // NOTE: isLabel skipped - type boolean is ignored in gen 
 
-  void set isLabel (bool v) {
-    this._isLabel = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -93,29 +40,19 @@ class TextOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.className != null) {  
-      buffer.writeAll(["\"className\":\`", this.className, "\`,"], "");
-    }
+    // NOTE: skip serialization of className (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of style (type CSSObject is ignored)} 
+    // NOTE: skip serialization of style (type CSSObject is ignored) ignore type: true
 
-    if (this.text != null) {  
-      buffer.writeAll(["\"text\":\`", this.text, "\`,"], "");
-    }
+    // NOTE: skip serialization of text (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of type (type "text" is ignored)} 
+    // NOTE: skip serialization of type (type "text" is ignored) ignore type: true
 
-    if (this.title != null) {  
-      buffer.writeAll(["\"title\":\`", this.title, "\`,"], "");
-    }
+    // NOTE: skip serialization of title (type string is ignored) ignore type: true
 
-    if (this.className != null) {  
-      buffer.writeAll(["\"className\":\`", this.className, "\`,"], "");
-    }
+    // NOTE: skip serialization of className (type string is ignored) ignore type: true
 
-    if (this.isLabel != null) {  
-      buffer.writeAll(["\"isLabel\":", this.isLabel, ","], "");
-    }
+    // NOTE: skip serialization of isLabel (type boolean is ignored) ignore type: true
   }
 
 }

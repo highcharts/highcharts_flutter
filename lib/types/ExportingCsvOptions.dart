@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,66 +24,23 @@ import 'OptionFragment.dart';
  */
 class ExportingCsvOptions extends OptionFragment {
   ExportingCsvOptions( {
+    this.annotations = null,
     this.dateFormat = null,
     this.decimalPoint = null,
     this.itemDelimiter = null,
     this.lineDelimiter = null
   }) : super();
-  String? dateFormat;
-    /*
-  String get dateFormat { 
-    if (this._dateFormat == null) {
-      this._dateFormat = "";
-    }
-    return this._dateFormat!;
-  }
+  AnnotationInDataTableOptions? annotations;
+    
+  // NOTE: columnHeaderFormatter skipped - type Function is ignored in gen 
 
-  void set dateFormat (String v) {
-    this._dateFormat = v;
-  }
-    */
+  String? dateFormat;
     
   String? decimalPoint;
-    /*
-  String get decimalPoint { 
-    if (this._decimalPoint == null) {
-      this._decimalPoint = "";
-    }
-    return this._decimalPoint!;
-  }
-
-  void set decimalPoint (String v) {
-    this._decimalPoint = v;
-  }
-    */
     
   String? itemDelimiter;
-    /*
-  String get itemDelimiter { 
-    if (this._itemDelimiter == null) {
-      this._itemDelimiter = "";
-    }
-    return this._itemDelimiter!;
-  }
-
-  void set itemDelimiter (String v) {
-    this._itemDelimiter = v;
-  }
-    */
     
   String? lineDelimiter;
-    /*
-  String get lineDelimiter { 
-    if (this._lineDelimiter == null) {
-      this._lineDelimiter = "";
-    }
-    return this._lineDelimiter!;
-  }
-
-  void set lineDelimiter (String v) {
-    this._lineDelimiter = v;
-  }
-    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -93,24 +50,26 @@ class ExportingCsvOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of annotations (type AnnotationInDataTableOptions is ignored)} 
+    if (this.annotations != null) {  
+      buffer.writeAll(["\"annotations\":",this.annotations?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of columnHeaderFormatter (type Function is ignored)} 
+    // NOTE: skip serialization of columnHeaderFormatter (type Function is ignored) ignore type: 1
 
     if (this.dateFormat != null) {  
-      buffer.writeAll(["\"dateFormat\":\`", this.dateFormat, "\`,"], "");
+      buffer.writeAll(["\"dateFormat\":\`",this.dateFormat, "\`,"], "");
     }
 
     if (this.decimalPoint != null) {  
-      buffer.writeAll(["\"decimalPoint\":\`", this.decimalPoint, "\`,"], "");
+      buffer.writeAll(["\"decimalPoint\":\`",this.decimalPoint, "\`,"], "");
     }
 
     if (this.itemDelimiter != null) {  
-      buffer.writeAll(["\"itemDelimiter\":\`", this.itemDelimiter, "\`,"], "");
+      buffer.writeAll(["\"itemDelimiter\":\`",this.itemDelimiter, "\`,"], "");
     }
 
     if (this.lineDelimiter != null) {  
-      buffer.writeAll(["\"lineDelimiter\":\`", this.lineDelimiter, "\`,"], "");
+      buffer.writeAll(["\"lineDelimiter\":\`",this.lineDelimiter, "\`,"], "");
     }
   }
 

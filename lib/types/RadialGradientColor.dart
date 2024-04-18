@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,53 +22,13 @@ import 'OptionFragment.dart';
  * RadialGradientColor 
  */
 class RadialGradientColor extends OptionFragment {
-  RadialGradientColor( {
-    this.cx = null,
-    this.cy = null,
-    this.r = null
-  }) : super();
-  double? cx;
-    /*
-  double get cx { 
-    if (this._cx == null) {
-      this._cx = 0;
-    }
-    return this._cx!;
-  }
+  RadialGradientColor( ) : super();
+  // NOTE: cx skipped - type number is ignored in gen 
 
-  void set cx (double v) {
-    this._cx = v;
-  }
-    */
-    
-  double? cy;
-    /*
-  double get cy { 
-    if (this._cy == null) {
-      this._cy = 0;
-    }
-    return this._cy!;
-  }
+  // NOTE: cy skipped - type number is ignored in gen 
 
-  void set cy (double v) {
-    this._cy = v;
-  }
-    */
-    
-  double? r;
-    /*
-  double get r { 
-    if (this._r == null) {
-      this._r = 0;
-    }
-    return this._r!;
-  }
+  // NOTE: r skipped - type number is ignored in gen 
 
-  void set r (double v) {
-    this._r = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -77,17 +37,11 @@ class RadialGradientColor extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.cx != null) {  
-      buffer.writeAll(["\"cx\":", this.cx, ","], "");
-    }
+    // NOTE: skip serialization of cx (type number is ignored) ignore type: true
 
-    if (this.cy != null) {  
-      buffer.writeAll(["\"cy\":", this.cy, ","], "");
-    }
+    // NOTE: skip serialization of cy (type number is ignored) ignore type: true
 
-    if (this.r != null) {  
-      buffer.writeAll(["\"r\":", this.r, ","], "");
-    }
+    // NOTE: skip serialization of r (type number is ignored) ignore type: true
   }
 
 }

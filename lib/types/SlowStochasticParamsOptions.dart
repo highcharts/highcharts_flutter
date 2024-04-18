@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,7 +23,10 @@ import 'OptionFragment.dart';
  * SlowStochasticParamsOptions 
  */
 class SlowStochasticParamsOptions extends StochasticParamsOptions {
-  SlowStochasticParamsOptions( ) : super();
+  SlowStochasticParamsOptions( {
+    super.index = null,
+    super.period = null
+  }) : super();
   
 
   //////////////////////////////////////////////////////////////////////////////

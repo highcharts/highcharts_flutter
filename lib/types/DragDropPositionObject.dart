@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,68 +23,15 @@ import 'OptionFragment.dart';
  * DragDropPositionObject 
  */
 class DragDropPositionObject extends OptionFragment {
-  DragDropPositionObject( {
-    this.chartX = null,
-    this.chartY = null,
-    this.prevdX = null,
-    this.prevdY = null
-  }) : super();
-  double? chartX;
-    /*
-  double get chartX { 
-    if (this._chartX == null) {
-      this._chartX = 0;
-    }
-    return this._chartX!;
-  }
+  DragDropPositionObject( ) : super();
+  // NOTE: chartX skipped - type number is ignored in gen 
 
-  void set chartX (double v) {
-    this._chartX = v;
-  }
-    */
-    
-  double? chartY;
-    /*
-  double get chartY { 
-    if (this._chartY == null) {
-      this._chartY = 0;
-    }
-    return this._chartY!;
-  }
+  // NOTE: chartY skipped - type number is ignored in gen 
 
-  void set chartY (double v) {
-    this._chartY = v;
-  }
-    */
-    
-  double? prevdX;
-    /*
-  double get prevdX { 
-    if (this._prevdX == null) {
-      this._prevdX = 0;
-    }
-    return this._prevdX!;
-  }
+  // NOTE: prevdX skipped - type number is ignored in gen 
 
-  void set prevdX (double v) {
-    this._prevdX = v;
-  }
-    */
-    
-  double? prevdY;
-    /*
-  double get prevdY { 
-    if (this._prevdY == null) {
-      this._prevdY = 0;
-    }
-    return this._prevdY!;
-  }
+  // NOTE: prevdY skipped - type number is ignored in gen 
 
-  void set prevdY (double v) {
-    this._prevdY = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -93,25 +40,17 @@ class DragDropPositionObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.chartX != null) {  
-      buffer.writeAll(["\"chartX\":", this.chartX, ","], "");
-    }
+    // NOTE: skip serialization of chartX (type number is ignored) ignore type: true
 
-    if (this.chartY != null) {  
-      buffer.writeAll(["\"chartY\":", this.chartY, ","], "");
-    }
+    // NOTE: skip serialization of chartY (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of guideBox (type BBoxObject is ignored)} 
+    // NOTE: skip serialization of guideBox (type BBoxObject is ignored) ignore type: true
 
-    // NOTE: skip serialization of points (type Generic is ignored)} 
+    // NOTE: skip serialization of points (type Generic is ignored) ignore type: true
 
-    if (this.prevdX != null) {  
-      buffer.writeAll(["\"prevdX\":", this.prevdX, ","], "");
-    }
+    // NOTE: skip serialization of prevdX (type number is ignored) ignore type: true
 
-    if (this.prevdY != null) {  
-      buffer.writeAll(["\"prevdY\":", this.prevdY, ","], "");
-    }
+    // NOTE: skip serialization of prevdY (type number is ignored) ignore type: true
   }
 
 }

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,83 +22,17 @@ import 'OptionFragment.dart';
  * SetTreeValuesOptions 
  */
 class SetTreeValuesOptions extends OptionFragment {
-  SetTreeValuesOptions( {
-    this.idRoot = null,
-    this.index = null,
-    this.levelIsConstant = null,
-    this.siblings = null,
-    this.visible = null
-  }) : super();
-  String? idRoot;
-    /*
-  String get idRoot { 
-    if (this._idRoot == null) {
-      this._idRoot = "";
-    }
-    return this._idRoot!;
-  }
+  SetTreeValuesOptions( ) : super();
+  // NOTE: idRoot skipped - type string is ignored in gen 
 
-  void set idRoot (String v) {
-    this._idRoot = v;
-  }
-    */
-    
-  double? index;
-    /*
-  double get index { 
-    if (this._index == null) {
-      this._index = 0;
-    }
-    return this._index!;
-  }
+  // NOTE: index skipped - type number is ignored in gen 
 
-  void set index (double v) {
-    this._index = v;
-  }
-    */
-    
-  bool? levelIsConstant;
-    /*
-  bool get levelIsConstant { 
-    if (this._levelIsConstant == null) {
-      this._levelIsConstant = false;
-    }
-    return this._levelIsConstant!;
-  }
+  // NOTE: levelIsConstant skipped - type boolean is ignored in gen 
 
-  void set levelIsConstant (bool v) {
-    this._levelIsConstant = v;
-  }
-    */
-    
-  double? siblings;
-    /*
-  double get siblings { 
-    if (this._siblings == null) {
-      this._siblings = 0;
-    }
-    return this._siblings!;
-  }
+  // NOTE: siblings skipped - type number is ignored in gen 
 
-  void set siblings (double v) {
-    this._siblings = v;
-  }
-    */
-    
-  bool? visible;
-    /*
-  bool get visible { 
-    if (this._visible == null) {
-      this._visible = false;
-    }
-    return this._visible!;
-  }
+  // NOTE: visible skipped - type boolean is ignored in gen 
 
-  void set visible (bool v) {
-    this._visible = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -107,31 +41,21 @@ class SetTreeValuesOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.idRoot != null) {  
-      buffer.writeAll(["\"idRoot\":\`", this.idRoot, "\`,"], "");
-    }
+    // NOTE: skip serialization of idRoot (type string is ignored) ignore type: true
 
-    if (this.index != null) {  
-      buffer.writeAll(["\"index\":", this.index, ","], "");
-    }
+    // NOTE: skip serialization of index (type number is ignored) ignore type: true
 
-    if (this.levelIsConstant != null) {  
-      buffer.writeAll(["\"levelIsConstant\":", this.levelIsConstant, ","], "");
-    }
+    // NOTE: skip serialization of levelIsConstant (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of mapIdToNode (type Record<string, NodeObject> is ignored)} 
+    // NOTE: skip serialization of mapIdToNode (type Record<string, NodeObject> is ignored) ignore type: true
 
-    // NOTE: skip serialization of points (type T["points"] is ignored)} 
+    // NOTE: skip serialization of points (type T["points"] is ignored) ignore type: true
 
-    // NOTE: skip serialization of series (type T is ignored)} 
+    // NOTE: skip serialization of series (type T is ignored) ignore type: 1
 
-    if (this.siblings != null) {  
-      buffer.writeAll(["\"siblings\":", this.siblings, ","], "");
-    }
+    // NOTE: skip serialization of siblings (type number is ignored) ignore type: true
 
-    if (this.visible != null) {  
-      buffer.writeAll(["\"visible\":", this.visible, ","], "");
-    }
+    // NOTE: skip serialization of visible (type boolean is ignored) ignore type: true
   }
 
 }

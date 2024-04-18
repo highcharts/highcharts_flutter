@@ -12,19 +12,26 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
 import 'MACDLineStyleOptions.dart';
+import 'SeriesZonesOptions.dart';
 import 'OptionFragment.dart';
 
 /** 
  * MACDLineOptions 
  */
 class MACDLineOptions extends OptionFragment {
-  MACDLineOptions( ) : super();
-  
+  MACDLineOptions( {
+    this.styles = null,
+    this.zones = null
+  }) : super();
+  MACDLineStyleOptions? styles;
+    
+  SeriesZonesOptions? zones;
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,9 +40,13 @@ class MACDLineOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of styles (type MACDLineStyleOptions is ignored)} 
+    if (this.styles != null) {  
+      buffer.writeAll(["\"styles\":",this.styles?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of zones (type SeriesZonesOptions[] is ignored)} 
+    if (this.zones != null) {  
+      buffer.writeAll(["\"zones\":",this.zones, ","], "");
+    }
   }
 
 }

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,38 +22,11 @@ import 'OptionFragment.dart';
  * ParametersObject 
  */
 class ParametersObject extends OptionFragment {
-  ParametersObject( {
-    this.category = null,
-    this.tickmarkOffset = null
-  }) : super();
-  String? category;
-    /*
-  String get category { 
-    if (this._category == null) {
-      this._category = "";
-    }
-    return this._category!;
-  }
+  ParametersObject( ) : super();
+  // NOTE: category skipped - type string is ignored in gen 
 
-  void set category (String v) {
-    this._category = v;
-  }
-    */
-    
-  double? tickmarkOffset;
-    /*
-  double get tickmarkOffset { 
-    if (this._tickmarkOffset == null) {
-      this._tickmarkOffset = 0;
-    }
-    return this._tickmarkOffset!;
-  }
+  // NOTE: tickmarkOffset skipped - type number is ignored in gen 
 
-  void set tickmarkOffset (double v) {
-    this._tickmarkOffset = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -62,15 +35,11 @@ class ParametersObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.category != null) {  
-      buffer.writeAll(["\"category\":\`", this.category, "\`,"], "");
-    }
+    // NOTE: skip serialization of category (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of options (type AnyRecord is ignored)} 
+    // NOTE: skip serialization of options (type AnyRecord is ignored) ignore type: 1
 
-    if (this.tickmarkOffset != null) {  
-      buffer.writeAll(["\"tickmarkOffset\":", this.tickmarkOffset, ","], "");
-    }
+    // NOTE: skip serialization of tickmarkOffset (type number is ignored) ignore type: true
   }
 
 }

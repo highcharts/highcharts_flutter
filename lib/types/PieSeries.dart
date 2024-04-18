@@ -12,29 +12,124 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
-import 'OptionFragment.dart';
+import 'PieSeriesOptions.dart';
+import 'Series.dart';
+import 'PointOptions.dart';
 
-/** 
- * PieSeries 
- */
-class PieSeries extends OptionFragment {
-  PieSeries( ) : super();
-  
+class PieSeries extends Series {
 
-  //////////////////////////////////////////////////////////////////////////////
+  String? name;
+  PieSeriesOptions? options;
+  List<PointOptions>? points;
+  List<List<double>>? data;
+
+  PieSeries({
+    this.name = null,
+    this.options = null,
+    this.points = null,
+    this.data = null
+  });
+
   
   @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of drawGraph (type undefined is ignored)} 
 
-    // NOTE: skip serialization of pointClass (type typeof PiePoint is ignored)} 
+    if (this.name != null) {
+      buffer.writeAll(["\"name\": \"", this.name!, "\","], "");
+    }
+
+    buffer.write("\"type\": \"pie\",");
+
+    if (this.data != null && this.points == null) {
+      // Serialize as a 2d array
+
+      StringBuffer seriesData = StringBuffer();
+
+      for (var point in this.data!) {
+        seriesData.writeAll(["["], "");
+        for (var item in point) {
+          seriesData.writeAll([item, ","]);
+        }
+        seriesData.writeAll(["],"], "");
+      }
+
+      buffer.writeAll(["\"data\": [", seriesData, "],"], "");   
+
+
+    } else if (this.points != null) {
+      // Go through the points and write them
+      StringBuffer seriesData = StringBuffer();
+
+      for (var point in this.points!) {
+        seriesData.writeAll(["{"], "");
+        point.toJSONInner(seriesData); 
+        seriesData.writeAll(["},"], "");
+      }
+
+      buffer.writeAll(["\"data\": [", seriesData, "],"], "");
+    }
+
+
+
+    
+    if (this.options?.endAngle != null) {  
+      buffer.writeAll(["\"endAngle\":",this.options?.endAngle, ","], "");
+    }
+
+    // NOTE: skip serialization of colorByPoint (type boolean is ignored) ignore type: true
+
+    // NOTE: skip serialization of dataLabels (type PieDataLabelOptions[] is ignored) ignore type: false
+
+    if (this.options?.fillColor != null) {  
+      buffer.writeAll(["\"fillColor\":\`",this.options?.fillColor, "\`,"], "");
+    }
+
+    if (this.options?.ignoreHiddenPoint != null) {  
+      buffer.writeAll(["\"ignoreHiddenPoint\":",this.options?.ignoreHiddenPoint, ","], "");
+    }
+
+    // NOTE: skip serialization of inactiveOtherPoints (type boolean is ignored) ignore type: true
+
+    if (this.options?.innerSize != null) {  
+      buffer.writeAll(["\"innerSize\":\`",this.options?.innerSize, "\`,"], "");
+    }
+
+    if (this.options?.minSize != null) {  
+      buffer.writeAll(["\"minSize\":\`",this.options?.minSize, "\`,"], "");
+    }
+
+    if (this.options?.size != null) {  
+      buffer.writeAll(["\"size\":\`",this.options?.size, "\`,"], "");
+    }
+
+    if (this.options?.slicedOffset != null) {  
+      buffer.writeAll(["\"slicedOffset\":",this.options?.slicedOffset, ","], "");
+    }
+
+    if (this.options?.startAngle != null) {  
+      buffer.writeAll(["\"startAngle\":",this.options?.startAngle, ","], "");
+    }
+
+    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
+
+    if (this.options?.thickness != null) {  
+      buffer.writeAll(["\"thickness\":",this.options?.thickness, ","], "");
+    }
+
+    if (this.options?.depth != null) {  
+      buffer.writeAll(["\"depth\":",this.options?.depth, ","], "");
+    }
+
+    // NOTE: skip serialization of edgeColor (type string is ignored) ignore type: true
+
+    // NOTE: skip serialization of edgeWidth (type number is ignored) ignore type: true
   }
 
 }

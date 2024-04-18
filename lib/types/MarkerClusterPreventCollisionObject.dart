@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,98 +22,19 @@ import 'OptionFragment.dart';
  * MarkerClusterPreventCollisionObject 
  */
 class MarkerClusterPreventCollisionObject extends OptionFragment {
-  MarkerClusterPreventCollisionObject( {
-    this.x = null,
-    this.y = null,
-    this.key = null,
-    this.gridSize = null,
-    this.defaultRadius = null,
-    this.clusterRadius = null
-  }) : super();
-  double? x;
-    /*
-  double get x { 
-    if (this._x == null) {
-      this._x = 0;
-    }
-    return this._x!;
-  }
+  MarkerClusterPreventCollisionObject( ) : super();
+  // NOTE: x skipped - type number is ignored in gen 
 
-  void set x (double v) {
-    this._x = v;
-  }
-    */
-    
-  double? y;
-    /*
-  double get y { 
-    if (this._y == null) {
-      this._y = 0;
-    }
-    return this._y!;
-  }
+  // NOTE: y skipped - type number is ignored in gen 
 
-  void set y (double v) {
-    this._y = v;
-  }
-    */
-    
-  String? key;
-    /*
-  String get key { 
-    if (this._key == null) {
-      this._key = "";
-    }
-    return this._key!;
-  }
+  // NOTE: key skipped - type string is ignored in gen 
 
-  void set key (String v) {
-    this._key = v;
-  }
-    */
-    
-  double? gridSize;
-    /*
-  double get gridSize { 
-    if (this._gridSize == null) {
-      this._gridSize = 0;
-    }
-    return this._gridSize!;
-  }
+  // NOTE: gridSize skipped - type number is ignored in gen 
 
-  void set gridSize (double v) {
-    this._gridSize = v;
-  }
-    */
-    
-  double? defaultRadius;
-    /*
-  double get defaultRadius { 
-    if (this._defaultRadius == null) {
-      this._defaultRadius = 0;
-    }
-    return this._defaultRadius!;
-  }
+  // NOTE: defaultRadius skipped - type number is ignored in gen 
 
-  void set defaultRadius (double v) {
-    this._defaultRadius = v;
-  }
-    */
-    
-  double? clusterRadius;
-    /*
-  double get clusterRadius { 
-    if (this._clusterRadius == null) {
-      this._clusterRadius = 0;
-    }
-    return this._clusterRadius!;
-  }
+  // NOTE: clusterRadius skipped - type number is ignored in gen 
 
-  void set clusterRadius (double v) {
-    this._clusterRadius = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -122,31 +43,19 @@ class MarkerClusterPreventCollisionObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.x != null) {  
-      buffer.writeAll(["\"x\":", this.x, ","], "");
-    }
+    // NOTE: skip serialization of x (type number is ignored) ignore type: true
 
-    if (this.y != null) {  
-      buffer.writeAll(["\"y\":", this.y, ","], "");
-    }
+    // NOTE: skip serialization of y (type number is ignored) ignore type: true
 
-    if (this.key != null) {  
-      buffer.writeAll(["\"key\":\`", this.key, "\`,"], "");
-    }
+    // NOTE: skip serialization of key (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of groupedData (type Generic is ignored)} 
+    // NOTE: skip serialization of groupedData (type Generic is ignored) ignore type: true
 
-    if (this.gridSize != null) {  
-      buffer.writeAll(["\"gridSize\":", this.gridSize, ","], "");
-    }
+    // NOTE: skip serialization of gridSize (type number is ignored) ignore type: true
 
-    if (this.defaultRadius != null) {  
-      buffer.writeAll(["\"defaultRadius\":", this.defaultRadius, ","], "");
-    }
+    // NOTE: skip serialization of defaultRadius (type number is ignored) ignore type: true
 
-    if (this.clusterRadius != null) {  
-      buffer.writeAll(["\"clusterRadius\":", this.clusterRadius, ","], "");
-    }
+    // NOTE: skip serialization of clusterRadius (type number is ignored) ignore type: true
   }
 
 }

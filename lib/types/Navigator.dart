@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -32,7 +32,7 @@ class Navigator extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of msSaveOrOpenBlob (type Function is ignored)} 
+    // NOTE: skip serialization of msSaveOrOpenBlob (type Function is ignored) ignore type: 1
   }
 
 }

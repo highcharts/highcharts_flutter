@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -34,11 +34,11 @@ class TopoJSONObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of geometries (type GeoJSONGeometry is ignored)} 
+    // NOTE: skip serialization of geometries (type GeoJSONGeometry is ignored) ignore type: true
 
-    // NOTE: skip serialization of hc_decoded_geojson (type GeoJSON is ignored)} 
+    // NOTE: skip serialization of hc_decoded_geojson (type GeoJSON is ignored) ignore type: true
 
-    // NOTE: skip serialization of hc_recommended_mapview (type Generic is ignored)} 
+    // NOTE: skip serialization of hc_recommended_mapview (type Generic is ignored) ignore type: true
   }
 
 }

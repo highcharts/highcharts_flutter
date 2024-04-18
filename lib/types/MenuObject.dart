@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,53 +22,13 @@ import 'OptionFragment.dart';
  * MenuObject 
  */
 class MenuObject extends OptionFragment {
-  MenuObject( {
-    this.separator = null,
-    this.text = null,
-    this.textKey = null
-  }) : super();
-  bool? separator;
-    /*
-  bool get separator { 
-    if (this._separator == null) {
-      this._separator = false;
-    }
-    return this._separator!;
-  }
+  MenuObject( ) : super();
+  // NOTE: separator skipped - type boolean is ignored in gen 
 
-  void set separator (bool v) {
-    this._separator = v;
-  }
-    */
-    
-  String? text;
-    /*
-  String get text { 
-    if (this._text == null) {
-      this._text = "";
-    }
-    return this._text!;
-  }
+  // NOTE: text skipped - type string is ignored in gen 
 
-  void set text (String v) {
-    this._text = v;
-  }
-    */
-    
-  String? textKey;
-    /*
-  String get textKey { 
-    if (this._textKey == null) {
-      this._textKey = "";
-    }
-    return this._textKey!;
-  }
+  // NOTE: textKey skipped - type string is ignored in gen 
 
-  void set textKey (String v) {
-    this._textKey = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -77,17 +37,11 @@ class MenuObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.separator != null) {  
-      buffer.writeAll(["\"separator\":", this.separator, ","], "");
-    }
+    // NOTE: skip serialization of separator (type boolean is ignored) ignore type: true
 
-    if (this.text != null) {  
-      buffer.writeAll(["\"text\":\`", this.text, "\`,"], "");
-    }
+    // NOTE: skip serialization of text (type string is ignored) ignore type: true
 
-    if (this.textKey != null) {  
-      buffer.writeAll(["\"textKey\":\`", this.textKey, "\`,"], "");
-    }
+    // NOTE: skip serialization of textKey (type string is ignored) ignore type: true
   }
 
 }

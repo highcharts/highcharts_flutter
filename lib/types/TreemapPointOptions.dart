@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,67 +24,28 @@ import 'OptionFragment.dart';
  */
 class TreemapPointOptions extends ScatterPointOptions {
   TreemapPointOptions( {
-    this.name = null,
-    this.parent = null,
-    this.value = null,
-    this.width = null
+    super.accessibility = null,
+    super.borderColor = null,
+    super.className = null,
+    super.color = null,
+    super.colorIndex = null,
+    super.connectors = null,
+    super.dataLabels = null,
+    super.dragDrop = null,
+    super.events = null,
+    super.keys = null,
+    super.marker = null,
+    super.selected = null,
+    super.visible = null
   }) : super();
-  String? name;
-    /*
-  String get name { 
-    if (this._name == null) {
-      this._name = "";
-    }
-    return this._name!;
-  }
+  // NOTE: name skipped - type string is ignored in gen 
 
-  void set name (String v) {
-    this._name = v;
-  }
-    */
-    
-  String? parent;
-    /*
-  String get parent { 
-    if (this._parent == null) {
-      this._parent = "";
-    }
-    return this._parent!;
-  }
+  // NOTE: parent skipped - type string is ignored in gen 
 
-  void set parent (String v) {
-    this._parent = v;
-  }
-    */
-    
-  double? value;
-    /*
-  double get value { 
-    if (this._value == null) {
-      this._value = 0;
-    }
-    return this._value!;
-  }
+  // NOTE: value skipped - type number is ignored in gen 
 
-  void set value (double v) {
-    this._value = v;
-  }
-    */
-    
-  double? width;
-    /*
-  double get width { 
-    if (this._width == null) {
-      this._width = 0;
-    }
-    return this._width!;
-  }
+  // NOTE: width skipped - type number is ignored in gen 
 
-  void set width (double v) {
-    this._width = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -93,21 +54,13 @@ class TreemapPointOptions extends ScatterPointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.name != null) {  
-      buffer.writeAll(["\"name\":\`", this.name, "\`,"], "");
-    }
+    // NOTE: skip serialization of name (type string is ignored) ignore type: true
 
-    if (this.parent != null) {  
-      buffer.writeAll(["\"parent\":\`", this.parent, "\`,"], "");
-    }
+    // NOTE: skip serialization of parent (type string is ignored) ignore type: true
 
-    if (this.value != null) {  
-      buffer.writeAll(["\"value\":", this.value, ","], "");
-    }
+    // NOTE: skip serialization of value (type number is ignored) ignore type: true
 
-    if (this.width != null) {  
-      buffer.writeAll(["\"width\":", this.width, ","], "");
-    }
+    // NOTE: skip serialization of width (type number is ignored) ignore type: true
   }
 
 }

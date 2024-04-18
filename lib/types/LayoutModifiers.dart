@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,68 +22,15 @@ import 'OptionFragment.dart';
  * LayoutModifiers 
  */
 class LayoutModifiers extends OptionFragment {
-  LayoutModifiers( {
-    this.ax = null,
-    this.bx = null,
-    this.ay = null,
-    this.by = null
-  }) : super();
-  double? ax;
-    /*
-  double get ax { 
-    if (this._ax == null) {
-      this._ax = 0;
-    }
-    return this._ax!;
-  }
+  LayoutModifiers( ) : super();
+  // NOTE: ax skipped - type number is ignored in gen 
 
-  void set ax (double v) {
-    this._ax = v;
-  }
-    */
-    
-  double? bx;
-    /*
-  double get bx { 
-    if (this._bx == null) {
-      this._bx = 0;
-    }
-    return this._bx!;
-  }
+  // NOTE: bx skipped - type number is ignored in gen 
 
-  void set bx (double v) {
-    this._bx = v;
-  }
-    */
-    
-  double? ay;
-    /*
-  double get ay { 
-    if (this._ay == null) {
-      this._ay = 0;
-    }
-    return this._ay!;
-  }
+  // NOTE: ay skipped - type number is ignored in gen 
 
-  void set ay (double v) {
-    this._ay = v;
-  }
-    */
-    
-  double? by;
-    /*
-  double get by { 
-    if (this._by == null) {
-      this._by = 0;
-    }
-    return this._by!;
-  }
+  // NOTE: by skipped - type number is ignored in gen 
 
-  void set by (double v) {
-    this._by = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -92,21 +39,13 @@ class LayoutModifiers extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.ax != null) {  
-      buffer.writeAll(["\"ax\":", this.ax, ","], "");
-    }
+    // NOTE: skip serialization of ax (type number is ignored) ignore type: true
 
-    if (this.bx != null) {  
-      buffer.writeAll(["\"bx\":", this.bx, ","], "");
-    }
+    // NOTE: skip serialization of bx (type number is ignored) ignore type: true
 
-    if (this.ay != null) {  
-      buffer.writeAll(["\"ay\":", this.ay, ","], "");
-    }
+    // NOTE: skip serialization of ay (type number is ignored) ignore type: true
 
-    if (this.by != null) {  
-      buffer.writeAll(["\"by\":", this.by, ","], "");
-    }
+    // NOTE: skip serialization of by (type number is ignored) ignore type: true
   }
 
 }

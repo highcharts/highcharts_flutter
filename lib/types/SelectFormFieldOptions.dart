@@ -12,49 +12,23 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
 import 'FormFieldOptions.dart';
+import 'SelectFormFieldItemOptions.dart';
 import 'OptionFragment.dart';
 
 /** 
  * SelectFormFieldOptions 
  */
 class SelectFormFieldOptions extends FormFieldOptions {
-  SelectFormFieldOptions( {
-    this.title = null,
-    this.value = null
-  }) : super();
-  String? title;
-    /*
-  String get title { 
-    if (this._title == null) {
-      this._title = "";
-    }
-    return this._title!;
-  }
+  SelectFormFieldOptions( ) : super();
+  // NOTE: title skipped - type string is ignored in gen 
 
-  void set title (String v) {
-    this._title = v;
-  }
-    */
-    
-  String? value;
-    /*
-  String get value { 
-    if (this._value == null) {
-      this._value = "";
-    }
-    return this._value!;
-  }
+  // NOTE: value skipped - type string is ignored in gen 
 
-  void set value (String v) {
-    this._value = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -63,15 +37,11 @@ class SelectFormFieldOptions extends FormFieldOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.title != null) {  
-      buffer.writeAll(["\"title\":\`", this.title, "\`,"], "");
-    }
+    // NOTE: skip serialization of title (type string is ignored) ignore type: true
 
-    if (this.value != null) {  
-      buffer.writeAll(["\"value\":\`", this.value, "\`,"], "");
-    }
+    // NOTE: skip serialization of value (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of selectOptions (type SelectFormFieldItemOptions[] is ignored)} 
+    // NOTE: skip serialization of selectOptions (type SelectFormFieldItemOptions[] is ignored) ignore type: true
   }
 
 }

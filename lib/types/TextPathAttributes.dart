@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,52 +24,16 @@ import 'OptionFragment.dart';
  */
 class TextPathAttributes extends SVGAttributes {
   TextPathAttributes( {
-    this.startOffset = null,
-    this.textAnchor = null,
-    this.dy = null
+    super.dashstyle = null,
+    super.stroke = null,
+    super.width = null
   }) : super();
-  String? startOffset;
-    /*
-  String get startOffset { 
-    if (this._startOffset == null) {
-      this._startOffset = "";
-    }
-    return this._startOffset!;
-  }
+  // NOTE: startOffset skipped - type string is ignored in gen 
 
-  void set startOffset (String v) {
-    this._startOffset = v;
-  }
-    */
-    
-  String? textAnchor;
-    /*
-  String get textAnchor { 
-    if (this._textAnchor == null) {
-      this._textAnchor = "";
-    }
-    return this._textAnchor!;
-  }
+  // NOTE: textAnchor skipped - type string is ignored in gen 
 
-  void set textAnchor (String v) {
-    this._textAnchor = v;
-  }
-    */
-    
-  double? dy;
-    /*
-  double get dy { 
-    if (this._dy == null) {
-      this._dy = 0;
-    }
-    return this._dy!;
-  }
+  // NOTE: dy skipped - type number is ignored in gen 
 
-  void set dy (double v) {
-    this._dy = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -78,17 +42,11 @@ class TextPathAttributes extends SVGAttributes {
     super.toJSONInner(buffer);
 
     
-    if (this.startOffset != null) {  
-      buffer.writeAll(["\"startOffset\":\`", this.startOffset, "\`,"], "");
-    }
+    // NOTE: skip serialization of startOffset (type string is ignored) ignore type: true
 
-    if (this.textAnchor != null) {  
-      buffer.writeAll(["\"textAnchor\":\`", this.textAnchor, "\`,"], "");
-    }
+    // NOTE: skip serialization of textAnchor (type string is ignored) ignore type: true
 
-    if (this.dy != null) {  
-      buffer.writeAll(["\"dy\":", this.dy, ","], "");
-    }
+    // NOTE: skip serialization of dy (type number is ignored) ignore type: true
   }
 
 }

@@ -12,12 +12,13 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
 import 'Series.dart';
 import 'ColorAxis.dart';
+import 'PointComposition.dart';
 import 'SeriesCompositionOptions.dart';
 import 'OptionFragment.dart';
 
@@ -25,23 +26,9 @@ import 'OptionFragment.dart';
  * SeriesComposition 
  */
 class SeriesComposition extends Series {
-  SeriesComposition( {
-    this.optionalAxis = null
-  }) : super();
-  String? optionalAxis;
-    /*
-  String get optionalAxis { 
-    if (this._optionalAxis == null) {
-      this._optionalAxis = "";
-    }
-    return this._optionalAxis!;
-  }
+  SeriesComposition( ) : super();
+  // NOTE: optionalAxis skipped - type string is ignored in gen 
 
-  void set optionalAxis (String v) {
-    this._optionalAxis = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -50,17 +37,15 @@ class SeriesComposition extends Series {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of colorAxis (type ColorAxis is ignored)} 
+    // NOTE: skip serialization of colorAxis (type ColorAxis is ignored) ignore type: true
 
-    // NOTE: skip serialization of data (type PointComposition[] is ignored)} 
+    // NOTE: skip serialization of data (type PointComposition[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of points (type PointComposition[] is ignored)} 
+    // NOTE: skip serialization of points (type PointComposition[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of options (type SeriesCompositionOptions is ignored)} 
+    // NOTE: skip serialization of options (type SeriesCompositionOptions is ignored) ignore type: true
 
-    if (this.optionalAxis != null) {  
-      buffer.writeAll(["\"optionalAxis\":\`", this.optionalAxis, "\`,"], "");
-    }
+    // NOTE: skip serialization of optionalAxis (type string is ignored) ignore type: true
   }
 
 }

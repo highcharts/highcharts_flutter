@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,37 +24,13 @@ import 'OptionFragment.dart';
  */
 class KeltnerChannelsParamsOptions extends SMAParamsOptions {
   KeltnerChannelsParamsOptions( {
-    this.periodATR = null,
-    this.multiplierATR = null
+    super.index = null,
+    super.period = null
   }) : super();
-  double? periodATR;
-    /*
-  double get periodATR { 
-    if (this._periodATR == null) {
-      this._periodATR = 0;
-    }
-    return this._periodATR!;
-  }
+  // NOTE: periodATR skipped - type number is ignored in gen 
 
-  void set periodATR (double v) {
-    this._periodATR = v;
-  }
-    */
-    
-  double? multiplierATR;
-    /*
-  double get multiplierATR { 
-    if (this._multiplierATR == null) {
-      this._multiplierATR = 0;
-    }
-    return this._multiplierATR!;
-  }
+  // NOTE: multiplierATR skipped - type number is ignored in gen 
 
-  void set multiplierATR (double v) {
-    this._multiplierATR = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -63,13 +39,9 @@ class KeltnerChannelsParamsOptions extends SMAParamsOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.periodATR != null) {  
-      buffer.writeAll(["\"periodATR\":", this.periodATR, ","], "");
-    }
+    // NOTE: skip serialization of periodATR (type number is ignored) ignore type: true
 
-    if (this.multiplierATR != null) {  
-      buffer.writeAll(["\"multiplierATR\":", this.multiplierATR, ","], "");
-    }
+    // NOTE: skip serialization of multiplierATR (type number is ignored) ignore type: true
   }
 
 }

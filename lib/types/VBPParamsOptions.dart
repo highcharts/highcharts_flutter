@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,37 +24,13 @@ import 'OptionFragment.dart';
  */
 class VBPParamsOptions extends SMAParamsOptions {
   VBPParamsOptions( {
-    this.ranges = null,
-    this.volumeSeriesID = null
+    super.index = null,
+    super.period = null
   }) : super();
-  double? ranges;
-    /*
-  double get ranges { 
-    if (this._ranges == null) {
-      this._ranges = 0;
-    }
-    return this._ranges!;
-  }
+  // NOTE: ranges skipped - type number is ignored in gen 
 
-  void set ranges (double v) {
-    this._ranges = v;
-  }
-    */
-    
-  String? volumeSeriesID;
-    /*
-  String get volumeSeriesID { 
-    if (this._volumeSeriesID == null) {
-      this._volumeSeriesID = "";
-    }
-    return this._volumeSeriesID!;
-  }
+  // NOTE: volumeSeriesID skipped - type string is ignored in gen 
 
-  void set volumeSeriesID (String v) {
-    this._volumeSeriesID = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -63,13 +39,9 @@ class VBPParamsOptions extends SMAParamsOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.ranges != null) {  
-      buffer.writeAll(["\"ranges\":", this.ranges, ","], "");
-    }
+    // NOTE: skip serialization of ranges (type number is ignored) ignore type: true
 
-    if (this.volumeSeriesID != null) {  
-      buffer.writeAll(["\"volumeSeriesID\":\`", this.volumeSeriesID, "\`,"], "");
-    }
+    // NOTE: skip serialization of volumeSeriesID (type string is ignored) ignore type: true
   }
 
 }

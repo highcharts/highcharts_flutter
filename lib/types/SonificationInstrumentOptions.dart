@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,23 +24,9 @@ import 'OptionFragment.dart';
  * SonificationInstrumentOptions 
  */
 class SonificationInstrumentOptions extends OptionFragment {
-  SonificationInstrumentOptions( {
-    this.midiTrackName = null
-  }) : super();
-  String? midiTrackName;
-    /*
-  String get midiTrackName { 
-    if (this._midiTrackName == null) {
-      this._midiTrackName = "";
-    }
-    return this._midiTrackName!;
-  }
+  SonificationInstrumentOptions( ) : super();
+  // NOTE: midiTrackName skipped - type string is ignored in gen 
 
-  void set midiTrackName (String v) {
-    this._midiTrackName = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -49,13 +35,11 @@ class SonificationInstrumentOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of synthPatch (type SynthPatchOptions is ignored)} 
+    // NOTE: skip serialization of synthPatch (type SynthPatchOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of capabilities (type SonificationInstrumentCapabilitiesOptions is ignored)} 
+    // NOTE: skip serialization of capabilities (type SonificationInstrumentCapabilitiesOptions is ignored) ignore type: true
 
-    if (this.midiTrackName != null) {  
-      buffer.writeAll(["\"midiTrackName\":\`", this.midiTrackName, "\`,"], "");
-    }
+    // NOTE: skip serialization of midiTrackName (type string is ignored) ignore type: true
   }
 
 }

@@ -12,10 +12,11 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
+import 'ChartClickEventAxisObject.dart';
 import 'OptionFragment.dart';
 
 /** 
@@ -32,11 +33,11 @@ class ChartClickEventObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of xAxis (type ChartClickEventAxisObject[] is ignored)} 
+    // NOTE: skip serialization of xAxis (type ChartClickEventAxisObject[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of yAxis (type ChartClickEventAxisObject[] is ignored)} 
+    // NOTE: skip serialization of yAxis (type ChartClickEventAxisObject[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of zAxis (type ChartClickEventAxisObject[] is ignored)} 
+    // NOTE: skip serialization of zAxis (type ChartClickEventAxisObject[] is ignored) ignore type: true
   }
 
 }

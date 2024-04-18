@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -25,52 +25,26 @@ import 'OptionFragment.dart';
  */
 class HeatmapPointOptions extends ScatterPointOptions {
   HeatmapPointOptions( {
-    this.borderWidth = null,
-    this.pointPadding = null,
-    this.value = null
+    super.accessibility = null,
+    super.borderColor = null,
+    super.className = null,
+    super.color = null,
+    super.colorIndex = null,
+    super.connectors = null,
+    super.dataLabels = null,
+    super.dragDrop = null,
+    super.events = null,
+    super.keys = null,
+    super.marker = null,
+    super.selected = null,
+    super.visible = null
   }) : super();
-  double? borderWidth;
-    /*
-  double get borderWidth { 
-    if (this._borderWidth == null) {
-      this._borderWidth = 0;
-    }
-    return this._borderWidth!;
-  }
+  // NOTE: borderWidth skipped - type number is ignored in gen 
 
-  void set borderWidth (double v) {
-    this._borderWidth = v;
-  }
-    */
-    
-  double? pointPadding;
-    /*
-  double get pointPadding { 
-    if (this._pointPadding == null) {
-      this._pointPadding = 0;
-    }
-    return this._pointPadding!;
-  }
+  // NOTE: pointPadding skipped - type number is ignored in gen 
 
-  void set pointPadding (double v) {
-    this._pointPadding = v;
-  }
-    */
-    
-  double? value;
-    /*
-  double get value { 
-    if (this._value == null) {
-      this._value = 0;
-    }
-    return this._value!;
-  }
+  // NOTE: value skipped - type number is ignored in gen 
 
-  void set value (double v) {
-    this._value = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -79,19 +53,13 @@ class HeatmapPointOptions extends ScatterPointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.borderWidth != null) {  
-      buffer.writeAll(["\"borderWidth\":", this.borderWidth, ","], "");
-    }
+    // NOTE: skip serialization of borderWidth (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of marker (type HeatmapPointMarkerOptions is ignored)} 
+    // NOTE: skip serialization of marker (type HeatmapPointMarkerOptions is ignored) ignore type: true
 
-    if (this.pointPadding != null) {  
-      buffer.writeAll(["\"pointPadding\":", this.pointPadding, ","], "");
-    }
+    // NOTE: skip serialization of pointPadding (type number is ignored) ignore type: true
 
-    if (this.value != null) {  
-      buffer.writeAll(["\"value\":", this.value, ","], "");
-    }
+    // NOTE: skip serialization of value (type number is ignored) ignore type: true
   }
 
 }

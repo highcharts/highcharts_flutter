@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,113 +24,21 @@ import 'OptionFragment.dart';
  * PointLabelObject 
  */
 class PointLabelObject extends OptionFragment {
-  PointLabelObject( {
-    this.x = null,
-    this.y = null,
-    this.color = null,
-    this.colorIndex = null,
-    this.key = null,
-    this.percentage = null,
-    this.total = null
-  }) : super();
-  String? x;
-    /*
-  String get x { 
-    if (this._x == null) {
-      this._x = "";
-    }
-    return this._x!;
-  }
+  PointLabelObject( ) : super();
+  // NOTE: x skipped - type string is ignored in gen 
 
-  void set x (String v) {
-    this._x = v;
-  }
-    */
-    
-  double? y;
-    /*
-  double get y { 
-    if (this._y == null) {
-      this._y = 0;
-    }
-    return this._y!;
-  }
+  // NOTE: y skipped - type number is ignored in gen 
 
-  void set y (double v) {
-    this._y = v;
-  }
-    */
-    
-  String? color;
-    /*
-  String get color { 
-    if (this._color == null) {
-      this._color = "";
-    }
-    return this._color!;
-  }
+  // NOTE: color skipped - type string is ignored in gen 
 
-  void set color (String v) {
-    this._color = v;
-  }
-    */
-    
-  double? colorIndex;
-    /*
-  double get colorIndex { 
-    if (this._colorIndex == null) {
-      this._colorIndex = 0;
-    }
-    return this._colorIndex!;
-  }
+  // NOTE: colorIndex skipped - type number is ignored in gen 
 
-  void set colorIndex (double v) {
-    this._colorIndex = v;
-  }
-    */
-    
-  String? key;
-    /*
-  String get key { 
-    if (this._key == null) {
-      this._key = "";
-    }
-    return this._key!;
-  }
+  // NOTE: key skipped - type string is ignored in gen 
 
-  void set key (String v) {
-    this._key = v;
-  }
-    */
-    
-  double? percentage;
-    /*
-  double get percentage { 
-    if (this._percentage == null) {
-      this._percentage = 0;
-    }
-    return this._percentage!;
-  }
+  // NOTE: percentage skipped - type number is ignored in gen 
 
-  void set percentage (double v) {
-    this._percentage = v;
-  }
-    */
-    
-  double? total;
-    /*
-  double get total { 
-    if (this._total == null) {
-      this._total = 0;
-    }
-    return this._total!;
-  }
+  // NOTE: total skipped - type number is ignored in gen 
 
-  void set total (double v) {
-    this._total = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -139,37 +47,23 @@ class PointLabelObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.x != null) {  
-      buffer.writeAll(["\"x\":\`", this.x, "\`,"], "");
-    }
+    // NOTE: skip serialization of x (type string is ignored) ignore type: true
 
-    if (this.y != null) {  
-      buffer.writeAll(["\"y\":", this.y, ","], "");
-    }
+    // NOTE: skip serialization of y (type number is ignored) ignore type: true
 
-    if (this.color != null) {  
-      buffer.writeAll(["\"color\":\`", this.color, "\`,"], "");
-    }
+    // NOTE: skip serialization of color (type string is ignored) ignore type: true
 
-    if (this.colorIndex != null) {  
-      buffer.writeAll(["\"colorIndex\":", this.colorIndex, ","], "");
-    }
+    // NOTE: skip serialization of colorIndex (type number is ignored) ignore type: true
 
-    if (this.key != null) {  
-      buffer.writeAll(["\"key\":\`", this.key, "\`,"], "");
-    }
+    // NOTE: skip serialization of key (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of series (type Series is ignored)} 
+    // NOTE: skip serialization of series (type Series is ignored) ignore type: true
 
-    // NOTE: skip serialization of point (type Point is ignored)} 
+    // NOTE: skip serialization of point (type Point is ignored) ignore type: true
 
-    if (this.percentage != null) {  
-      buffer.writeAll(["\"percentage\":", this.percentage, ","], "");
-    }
+    // NOTE: skip serialization of percentage (type number is ignored) ignore type: true
 
-    if (this.total != null) {  
-      buffer.writeAll(["\"total\":", this.total, ","], "");
-    }
+    // NOTE: skip serialization of total (type number is ignored) ignore type: true
   }
 
 }

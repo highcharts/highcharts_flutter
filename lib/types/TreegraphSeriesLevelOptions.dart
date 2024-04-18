@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,22 +24,29 @@ import 'OptionFragment.dart';
  */
 class TreegraphSeriesLevelOptions extends TreegraphSeriesOptions {
   TreegraphSeriesLevelOptions( {
-    this.collapsed = null
+    super.allowDrillToNode = null,
+    super.allowTraversingTree = null,
+    super.alternateStartingDirection = null,
+    super.borderRadius = null,
+    super.breadcrumbs = null,
+    super.collapseButton = null,
+    super.colors = null,
+    super.dataLabels = null,
+    super.fillSpace = null,
+    super.ignoreHiddenPoint = null,
+    super.interactByLeaf = null,
+    super.layoutAlgorithm = null,
+    super.layoutStartingDirection = null,
+    super.levelIsConstant = null,
+    super.levels = null,
+    super.link = null,
+    super.marker = null,
+    super.reversed = null,
+    super.sortIndex = null,
+    super.traverseUpButton = null
   }) : super();
-  bool? collapsed;
-    /*
-  bool get collapsed { 
-    if (this._collapsed == null) {
-      this._collapsed = false;
-    }
-    return this._collapsed!;
-  }
+  // NOTE: collapsed skipped - type boolean is ignored in gen 
 
-  void set collapsed (bool v) {
-    this._collapsed = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -48,9 +55,7 @@ class TreegraphSeriesLevelOptions extends TreegraphSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.collapsed != null) {  
-      buffer.writeAll(["\"collapsed\":", this.collapsed, ","], "");
-    }
+    // NOTE: skip serialization of collapsed (type boolean is ignored) ignore type: true
   }
 
 }

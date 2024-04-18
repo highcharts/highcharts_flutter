@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,53 +22,13 @@ import 'OptionFragment.dart';
  * DataGroupingInfoObject 
  */
 class DataGroupingInfoObject extends OptionFragment {
-  DataGroupingInfoObject( {
-    this.length = null,
-    this.start = null,
-    this.groupStart = null
-  }) : super();
-  double? length;
-    /*
-  double get length { 
-    if (this._length == null) {
-      this._length = 0;
-    }
-    return this._length!;
-  }
+  DataGroupingInfoObject( ) : super();
+  // NOTE: length skipped - type number is ignored in gen 
 
-  void set length (double v) {
-    this._length = v;
-  }
-    */
-    
-  double? start;
-    /*
-  double get start { 
-    if (this._start == null) {
-      this._start = 0;
-    }
-    return this._start!;
-  }
+  // NOTE: start skipped - type number is ignored in gen 
 
-  void set start (double v) {
-    this._start = v;
-  }
-    */
-    
-  double? groupStart;
-    /*
-  double get groupStart { 
-    if (this._groupStart == null) {
-      this._groupStart = 0;
-    }
-    return this._groupStart!;
-  }
+  // NOTE: groupStart skipped - type number is ignored in gen 
 
-  void set groupStart (double v) {
-    this._groupStart = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -77,19 +37,13 @@ class DataGroupingInfoObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.length != null) {  
-      buffer.writeAll(["\"length\":", this.length, ","], "");
-    }
+    // NOTE: skip serialization of length (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of options (type PointShortOptions is ignored)} 
+    // NOTE: skip serialization of options (type PointShortOptions is ignored) ignore type: 1
 
-    if (this.start != null) {  
-      buffer.writeAll(["\"start\":", this.start, ","], "");
-    }
+    // NOTE: skip serialization of start (type number is ignored) ignore type: true
 
-    if (this.groupStart != null) {  
-      buffer.writeAll(["\"groupStart\":", this.groupStart, ","], "");
-    }
+    // NOTE: skip serialization of groupStart (type number is ignored) ignore type: true
   }
 
 }

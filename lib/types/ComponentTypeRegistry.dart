@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -32,15 +32,15 @@ class ComponentTypeRegistry extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of HTML (type typeof HTMLComponent is ignored)} 
+    // NOTE: skip serialization of HTML (type typeof HTMLComponent is ignored) ignore type: true
 
-    // NOTE: skip serialization of DataGrid (type typeof DataGridComponent is ignored)} 
+    // NOTE: skip serialization of DataGrid (type typeof DataGridComponent is ignored) ignore type: true
 
-    // NOTE: skip serialization of Highcharts (type typeof HighchartsComponent is ignored)} 
+    // NOTE: skip serialization of Highcharts (type typeof HighchartsComponent is ignored) ignore type: true
 
-    // NOTE: skip serialization of KPI (type typeof KPIComponent is ignored)} 
+    // NOTE: skip serialization of KPI (type typeof KPIComponent is ignored) ignore type: true
 
-    // NOTE: skip serialization of Navigator (type typeof NavigatorComponent is ignored)} 
+    // NOTE: skip serialization of Navigator (type typeof NavigatorComponent is ignored) ignore type: true
   }
 
 }

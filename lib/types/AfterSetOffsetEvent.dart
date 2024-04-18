@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,38 +22,11 @@ import 'OptionFragment.dart';
  * AfterSetOffsetEvent 
  */
 class AfterSetOffsetEvent extends OptionFragment {
-  AfterSetOffsetEvent( {
-    this.xOffset = null,
-    this.width = null
-  }) : super();
-  double? xOffset;
-    /*
-  double get xOffset { 
-    if (this._xOffset == null) {
-      this._xOffset = 0;
-    }
-    return this._xOffset!;
-  }
+  AfterSetOffsetEvent( ) : super();
+  // NOTE: xOffset skipped - type number is ignored in gen 
 
-  void set xOffset (double v) {
-    this._xOffset = v;
-  }
-    */
-    
-  double? width;
-    /*
-  double get width { 
-    if (this._width == null) {
-      this._width = 0;
-    }
-    return this._width!;
-  }
+  // NOTE: width skipped - type number is ignored in gen 
 
-  void set width (double v) {
-    this._width = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -62,13 +35,9 @@ class AfterSetOffsetEvent extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.xOffset != null) {  
-      buffer.writeAll(["\"xOffset\":", this.xOffset, ","], "");
-    }
+    // NOTE: skip serialization of xOffset (type number is ignored) ignore type: true
 
-    if (this.width != null) {  
-      buffer.writeAll(["\"width\":", this.width, ","], "");
-    }
+    // NOTE: skip serialization of width (type number is ignored) ignore type: true
   }
 
 }

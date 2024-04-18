@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -34,17 +34,17 @@ class Funnel3DPathsObject extends SVGPath3D {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of backLower (type SVGPath is ignored)} 
+    // NOTE: skip serialization of backLower (type SVGPath is ignored) ignore type: true
 
-    // NOTE: skip serialization of backUpper (type SVGPath is ignored)} 
+    // NOTE: skip serialization of backUpper (type SVGPath is ignored) ignore type: true
 
-    // NOTE: skip serialization of frontLower (type SVGPath is ignored)} 
+    // NOTE: skip serialization of frontLower (type SVGPath is ignored) ignore type: true
 
-    // NOTE: skip serialization of frontUpper (type SVGPath is ignored)} 
+    // NOTE: skip serialization of frontUpper (type SVGPath is ignored) ignore type: true
 
-    // NOTE: skip serialization of rightLower (type SVGPath is ignored)} 
+    // NOTE: skip serialization of rightLower (type SVGPath is ignored) ignore type: true
 
-    // NOTE: skip serialization of rightUpper (type SVGPath is ignored)} 
+    // NOTE: skip serialization of rightUpper (type SVGPath is ignored) ignore type: true
   }
 
 }

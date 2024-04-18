@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,38 +22,11 @@ import 'OptionFragment.dart';
  * Reference 
  */
 class Reference extends OptionFragment {
-  Reference( {
-    this.column = null,
-    this.row = null
-  }) : super();
-  double? column;
-    /*
-  double get column { 
-    if (this._column == null) {
-      this._column = 0;
-    }
-    return this._column!;
-  }
+  Reference( ) : super();
+  // NOTE: column skipped - type number is ignored in gen 
 
-  void set column (double v) {
-    this._column = v;
-  }
-    */
-    
-  double? row;
-    /*
-  double get row { 
-    if (this._row == null) {
-      this._row = 0;
-    }
-    return this._row!;
-  }
+  // NOTE: row skipped - type number is ignored in gen 
 
-  void set row (double v) {
-    this._row = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -62,19 +35,15 @@ class Reference extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.column != null) {  
-      buffer.writeAll(["\"column\":", this.column, ","], "");
-    }
+    // NOTE: skip serialization of column (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of columnRelative (type true is ignored)} 
+    // NOTE: skip serialization of columnRelative (type true is ignored) ignore type: 1
 
-    if (this.row != null) {  
-      buffer.writeAll(["\"row\":", this.row, ","], "");
-    }
+    // NOTE: skip serialization of row (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of rowRelative (type true is ignored)} 
+    // NOTE: skip serialization of rowRelative (type true is ignored) ignore type: 1
 
-    // NOTE: skip serialization of type (type "reference" is ignored)} 
+    // NOTE: skip serialization of type (type "reference" is ignored) ignore type: true
   }
 
 }

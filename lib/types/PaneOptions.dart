@@ -12,108 +12,30 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
+import 'PaneBackgroundOptions.dart';
 import 'OptionFragment.dart';
 
 /** 
  * PaneOptions 
  */
 class PaneOptions extends OptionFragment {
-  PaneOptions( {
-    this.endAngle = null,
-    this.id = null,
-    this.innerSize = null,
-    this.size = null,
-    this.startAngle = null,
-    this.zIndex = null
-  }) : super();
-  double? endAngle;
-    /*
-  double get endAngle { 
-    if (this._endAngle == null) {
-      this._endAngle = 0;
-    }
-    return this._endAngle!;
-  }
+  PaneOptions( ) : super();
+  // NOTE: endAngle skipped - type number is ignored in gen 
 
-  void set endAngle (double v) {
-    this._endAngle = v;
-  }
-    */
-    
-  String? id;
-    /*
-  String get id { 
-    if (this._id == null) {
-      this._id = "";
-    }
-    return this._id!;
-  }
+  // NOTE: id skipped - type string is ignored in gen 
 
-  void set id (String v) {
-    this._id = v;
-  }
-    */
-    
-  String? innerSize;
-    /*
-  String get innerSize { 
-    if (this._innerSize == null) {
-      this._innerSize = "";
-    }
-    return this._innerSize!;
-  }
+  // NOTE: innerSize skipped - type string is ignored in gen 
 
-  void set innerSize (String v) {
-    this._innerSize = v;
-  }
-    */
-    
-  String? size;
-    /*
-  String get size { 
-    if (this._size == null) {
-      this._size = "";
-    }
-    return this._size!;
-  }
+  // NOTE: size skipped - type string is ignored in gen 
 
-  void set size (String v) {
-    this._size = v;
-  }
-    */
-    
-  double? startAngle;
-    /*
-  double get startAngle { 
-    if (this._startAngle == null) {
-      this._startAngle = 0;
-    }
-    return this._startAngle!;
-  }
+  // NOTE: startAngle skipped - type number is ignored in gen 
 
-  void set startAngle (double v) {
-    this._startAngle = v;
-  }
-    */
-    
-  double? zIndex;
-    /*
-  double get zIndex { 
-    if (this._zIndex == null) {
-      this._zIndex = 0;
-    }
-    return this._zIndex!;
-  }
+  // NOTE: zIndex skipped - type number is ignored in gen 
 
-  void set zIndex (double v) {
-    this._zIndex = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -122,33 +44,21 @@ class PaneOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of background (type PaneBackgroundOptions[] is ignored)} 
+    // NOTE: skip serialization of background (type PaneBackgroundOptions[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of center (type number)[] is ignored)} 
+    // NOTE: skip serialization of center (type number)[] is ignored) ignore type: true
 
-    if (this.endAngle != null) {  
-      buffer.writeAll(["\"endAngle\":", this.endAngle, ","], "");
-    }
+    // NOTE: skip serialization of endAngle (type number is ignored) ignore type: true
 
-    if (this.id != null) {  
-      buffer.writeAll(["\"id\":\`", this.id, "\`,"], "");
-    }
+    // NOTE: skip serialization of id (type string is ignored) ignore type: true
 
-    if (this.innerSize != null) {  
-      buffer.writeAll(["\"innerSize\":\`", this.innerSize, "\`,"], "");
-    }
+    // NOTE: skip serialization of innerSize (type string is ignored) ignore type: true
 
-    if (this.size != null) {  
-      buffer.writeAll(["\"size\":\`", this.size, "\`,"], "");
-    }
+    // NOTE: skip serialization of size (type string is ignored) ignore type: true
 
-    if (this.startAngle != null) {  
-      buffer.writeAll(["\"startAngle\":", this.startAngle, ","], "");
-    }
+    // NOTE: skip serialization of startAngle (type number is ignored) ignore type: true
 
-    if (this.zIndex != null) {  
-      buffer.writeAll(["\"zIndex\":", this.zIndex, ","], "");
-    }
+    // NOTE: skip serialization of zIndex (type number is ignored) ignore type: true
   }
 
 }

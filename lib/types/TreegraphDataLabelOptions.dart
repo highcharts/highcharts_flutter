@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,22 +24,35 @@ import 'OptionFragment.dart';
  */
 class TreegraphDataLabelOptions extends DataLabelOptions {
   TreegraphDataLabelOptions( {
-    this.linkFormat = null
+    super.align = null,
+    super.allowOverlap = null,
+    super.backgroundColor = null,
+    super.borderColor = null,
+    super.borderRadius = null,
+    super.borderWidth = null,
+    super.className = null,
+    super.color = null,
+    super.crop = null,
+    super.defer = null,
+    super.enabled = null,
+    super.filter = null,
+    super.format = null,
+    super.inside = null,
+    super.nullFormat = null,
+    super.overflow = null,
+    super.padding = null,
+    super.rotation = null,
+    super.shape = null,
+    super.style = null,
+    super.textPath = null,
+    super.useHTML = null,
+    super.verticalAlign = null,
+    super.x = null,
+    super.y = null,
+    super.zIndex = null
   }) : super();
-  String? linkFormat;
-    /*
-  String get linkFormat { 
-    if (this._linkFormat == null) {
-      this._linkFormat = "";
-    }
-    return this._linkFormat!;
-  }
+  // NOTE: linkFormat skipped - type string is ignored in gen 
 
-  void set linkFormat (String v) {
-    this._linkFormat = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -48,11 +61,9 @@ class TreegraphDataLabelOptions extends DataLabelOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.linkFormat != null) {  
-      buffer.writeAll(["\"linkFormat\":\`", this.linkFormat, "\`,"], "");
-    }
+    // NOTE: skip serialization of linkFormat (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of linkTextPath (type DataLabelOptions is ignored)} 
+    // NOTE: skip serialization of linkTextPath (type DataLabelOptions is ignored) ignore type: true
   }
 
 }

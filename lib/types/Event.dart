@@ -12,11 +12,12 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
 import 'DataEvent.dart';
+import 'Column.dart';
 import 'ColumnNamesOptions.dart';
 import 'Event.dart';
 import 'OptionFragment.dart';
@@ -25,53 +26,13 @@ import 'OptionFragment.dart';
  * Event 
  */
 class Event extends DataEvent {
-  Event( {
-    this.type = null,
-    this.group = null,
-    this.revision = null
-  }) : super();
-  String? type;
-    /*
-  String get type { 
-    if (this._type == null) {
-      this._type = "";
-    }
-    return this._type!;
-  }
+  Event( ) : super();
+  // NOTE: type skipped - type string is ignored in gen 
 
-  void set type (String v) {
-    this._type = v;
-  }
-    */
-    
-  String? group;
-    /*
-  String get group { 
-    if (this._group == null) {
-      this._group = "";
-    }
-    return this._group!;
-  }
+  // NOTE: group skipped - type string is ignored in gen 
 
-  void set group (String v) {
-    this._group = v;
-  }
-    */
-    
-  double? revision;
-    /*
-  double get revision { 
-    if (this._revision == null) {
-      this._revision = 0;
-    }
-    return this._revision!;
-  }
+  // NOTE: revision skipped - type number is ignored in gen 
 
-  void set revision (double v) {
-    this._revision = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -80,45 +41,37 @@ class Event extends DataEvent {
     super.toJSONInner(buffer);
 
     
-    if (this.type != null) {  
-      buffer.writeAll(["\"type\":\`", this.type, "\`,"], "");
-    }
+    // NOTE: skip serialization of type (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of columns (type Column[] is ignored)} 
+    // NOTE: skip serialization of columns (type Column[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of error (type Error is ignored)} 
+    // NOTE: skip serialization of error (type Error is ignored) ignore type: true
 
-    // NOTE: skip serialization of headers (type ColumnNamesOptions is ignored)} 
+    // NOTE: skip serialization of headers (type ColumnNamesOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of table (type DataTable is ignored)} 
+    // NOTE: skip serialization of table (type DataTable is ignored) ignore type: true
 
-    // NOTE: skip serialization of cursor (type Type is ignored)} 
+    // NOTE: skip serialization of cursor (type Type is ignored) ignore type: true
 
-    // NOTE: skip serialization of cursors (type Type[] is ignored)} 
+    // NOTE: skip serialization of cursors (type Type[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of event (type Event is ignored)} 
+    // NOTE: skip serialization of event (type Event is ignored) ignore type: 1
 
-    if (this.group != null) {  
-      buffer.writeAll(["\"group\":\`", this.group, "\`,"], "");
-    }
+    // NOTE: skip serialization of group (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of table (type DataTable is ignored)} 
+    // NOTE: skip serialization of table (type DataTable is ignored) ignore type: true
 
-    if (this.type != null) {  
-      buffer.writeAll(["\"type\":\`", this.type, "\`,"], "");
-    }
+    // NOTE: skip serialization of type (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of options (type Generic is ignored)} 
+    // NOTE: skip serialization of options (type Generic is ignored) ignore type: true
 
-    // NOTE: skip serialization of ComponentRegistry (type typeof ComponentRegistry is ignored)} 
+    // NOTE: skip serialization of ComponentRegistry (type typeof ComponentRegistry is ignored) ignore type: true
 
-    // NOTE: skip serialization of Board (type typeof Board is ignored)} 
+    // NOTE: skip serialization of Board (type typeof Board is ignored) ignore type: true
 
-    // NOTE: skip serialization of Sync (type typeof Sync is ignored)} 
+    // NOTE: skip serialization of Sync (type typeof Sync is ignored) ignore type: true
 
-    if (this.revision != null) {  
-      buffer.writeAll(["\"revision\":", this.revision, ","], "");
-    }
+    // NOTE: skip serialization of revision (type number is ignored) ignore type: true
   }
 
 }

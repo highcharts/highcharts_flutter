@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,23 +23,9 @@ import 'OptionFragment.dart';
  * FormulaParserError 
  */
 class FormulaParserError extends Error {
-  FormulaParserError( {
-    this.message = null
-  }) : super();
-  String? message;
-    /*
-  String get message { 
-    if (this._message == null) {
-      this._message = "";
-    }
-    return this._message!;
-  }
+  FormulaParserError( ) : super();
+  // NOTE: message skipped - type string is ignored in gen 
 
-  void set message (String v) {
-    this._message = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -48,11 +34,9 @@ class FormulaParserError extends Error {
     super.toJSONInner(buffer);
 
     
-    if (this.message != null) {  
-      buffer.writeAll(["\"message\":\`", this.message, "\`,"], "");
-    }
+    // NOTE: skip serialization of message (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of name (type "FormulaParseError" is ignored)} 
+    // NOTE: skip serialization of name (type "FormulaParseError" is ignored) ignore type: true
   }
 
 }

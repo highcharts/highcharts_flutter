@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,82 +24,30 @@ import 'OptionFragment.dart';
  */
 class LollipopPointOptions extends ScatterPointOptions {
   LollipopPointOptions( {
-    this.connectorColor = null,
-    this.connectorWidth = null,
-    this.dashStyle = null,
-    this.lowColor = null,
-    this.pointWidth = null
+    super.accessibility = null,
+    super.borderColor = null,
+    super.className = null,
+    super.color = null,
+    super.colorIndex = null,
+    super.connectors = null,
+    super.dataLabels = null,
+    super.dragDrop = null,
+    super.events = null,
+    super.keys = null,
+    super.marker = null,
+    super.selected = null,
+    super.visible = null
   }) : super();
-  String? connectorColor;
-    /*
-  String get connectorColor { 
-    if (this._connectorColor == null) {
-      this._connectorColor = "";
-    }
-    return this._connectorColor!;
-  }
+  // NOTE: connectorColor skipped - type string is ignored in gen 
 
-  void set connectorColor (String v) {
-    this._connectorColor = v;
-  }
-    */
-    
-  double? connectorWidth;
-    /*
-  double get connectorWidth { 
-    if (this._connectorWidth == null) {
-      this._connectorWidth = 0;
-    }
-    return this._connectorWidth!;
-  }
+  // NOTE: connectorWidth skipped - type number is ignored in gen 
 
-  void set connectorWidth (double v) {
-    this._connectorWidth = v;
-  }
-    */
-    
-  String? dashStyle;
-    /*
-  String get dashStyle { 
-    if (this._dashStyle == null) {
-      this._dashStyle = "";
-    }
-    return this._dashStyle!;
-  }
+  // NOTE: dashStyle skipped - type string is ignored in gen 
 
-  void set dashStyle (String v) {
-    this._dashStyle = v;
-  }
-    */
-    
-  String? lowColor;
-    /*
-  String get lowColor { 
-    if (this._lowColor == null) {
-      this._lowColor = "";
-    }
-    return this._lowColor!;
-  }
+  // NOTE: lowColor skipped - type string is ignored in gen 
 
-  void set lowColor (String v) {
-    this._lowColor = v;
-  }
-    */
-    
-  double? pointWidth;
-    /*
-  double get pointWidth { 
-    if (this._pointWidth == null) {
-      this._pointWidth = 0;
-    }
-    return this._pointWidth!;
-  }
+  // NOTE: pointWidth skipped - type number is ignored in gen 
 
-  void set pointWidth (double v) {
-    this._pointWidth = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -108,25 +56,15 @@ class LollipopPointOptions extends ScatterPointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.connectorColor != null) {  
-      buffer.writeAll(["\"connectorColor\":\`", this.connectorColor, "\`,"], "");
-    }
+    // NOTE: skip serialization of connectorColor (type string is ignored) ignore type: true
 
-    if (this.connectorWidth != null) {  
-      buffer.writeAll(["\"connectorWidth\":", this.connectorWidth, ","], "");
-    }
+    // NOTE: skip serialization of connectorWidth (type number is ignored) ignore type: true
 
-    if (this.dashStyle != null) {  
-      buffer.writeAll(["\"dashStyle\":\`", this.dashStyle, "\`,"], "");
-    }
+    // NOTE: skip serialization of dashStyle (type string is ignored) ignore type: true
 
-    if (this.lowColor != null) {  
-      buffer.writeAll(["\"lowColor\":\`", this.lowColor, "\`,"], "");
-    }
+    // NOTE: skip serialization of lowColor (type string is ignored) ignore type: true
 
-    if (this.pointWidth != null) {  
-      buffer.writeAll(["\"pointWidth\":", this.pointWidth, ","], "");
-    }
+    // NOTE: skip serialization of pointWidth (type number is ignored) ignore type: true
   }
 
 }

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,68 +22,15 @@ import 'OptionFragment.dart';
  * MetaColumn 
  */
 class MetaColumn extends OptionFragment {
-  MetaColumn( {
-    this.dataType = null,
-    this.defaultValue = null,
-    this.index = null,
-    this.title = null
-  }) : super();
-  String? dataType;
-    /*
-  String get dataType { 
-    if (this._dataType == null) {
-      this._dataType = "";
-    }
-    return this._dataType!;
-  }
+  MetaColumn( ) : super();
+  // NOTE: dataType skipped - type string is ignored in gen 
 
-  void set dataType (String v) {
-    this._dataType = v;
-  }
-    */
-    
-  String? defaultValue;
-    /*
-  String get defaultValue { 
-    if (this._defaultValue == null) {
-      this._defaultValue = "";
-    }
-    return this._defaultValue!;
-  }
+  // NOTE: defaultValue skipped - type string is ignored in gen 
 
-  void set defaultValue (String v) {
-    this._defaultValue = v;
-  }
-    */
-    
-  double? index;
-    /*
-  double get index { 
-    if (this._index == null) {
-      this._index = 0;
-    }
-    return this._index!;
-  }
+  // NOTE: index skipped - type number is ignored in gen 
 
-  void set index (double v) {
-    this._index = v;
-  }
-    */
-    
-  String? title;
-    /*
-  String get title { 
-    if (this._title == null) {
-      this._title = "";
-    }
-    return this._title!;
-  }
+  // NOTE: title skipped - type string is ignored in gen 
 
-  void set title (String v) {
-    this._title = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -92,21 +39,13 @@ class MetaColumn extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.dataType != null) {  
-      buffer.writeAll(["\"dataType\":\`", this.dataType, "\`,"], "");
-    }
+    // NOTE: skip serialization of dataType (type string is ignored) ignore type: true
 
-    if (this.defaultValue != null) {  
-      buffer.writeAll(["\"defaultValue\":\`", this.defaultValue, "\`,"], "");
-    }
+    // NOTE: skip serialization of defaultValue (type string is ignored) ignore type: true
 
-    if (this.index != null) {  
-      buffer.writeAll(["\"index\":", this.index, ","], "");
-    }
+    // NOTE: skip serialization of index (type number is ignored) ignore type: true
 
-    if (this.title != null) {  
-      buffer.writeAll(["\"title\":\`", this.title, "\`,"], "");
-    }
+    // NOTE: skip serialization of title (type string is ignored) ignore type: true
   }
 
 }

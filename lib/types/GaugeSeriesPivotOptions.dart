@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -29,60 +29,12 @@ class GaugeSeriesPivotOptions extends OptionFragment {
     this.radius = null
   }) : super();
   String? backgroundColor;
-    /*
-  String get backgroundColor { 
-    if (this._backgroundColor == null) {
-      this._backgroundColor = "";
-    }
-    return this._backgroundColor!;
-  }
-
-  void set backgroundColor (String v) {
-    this._backgroundColor = v;
-  }
-    */
     
   String? borderColor;
-    /*
-  String get borderColor { 
-    if (this._borderColor == null) {
-      this._borderColor = "";
-    }
-    return this._borderColor!;
-  }
-
-  void set borderColor (String v) {
-    this._borderColor = v;
-  }
-    */
     
   double? borderWidth;
-    /*
-  double get borderWidth { 
-    if (this._borderWidth == null) {
-      this._borderWidth = 0;
-    }
-    return this._borderWidth!;
-  }
-
-  void set borderWidth (double v) {
-    this._borderWidth = v;
-  }
-    */
     
   double? radius;
-    /*
-  double get radius { 
-    if (this._radius == null) {
-      this._radius = 0;
-    }
-    return this._radius!;
-  }
-
-  void set radius (double v) {
-    this._radius = v;
-  }
-    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -93,19 +45,19 @@ class GaugeSeriesPivotOptions extends OptionFragment {
 
     
     if (this.backgroundColor != null) {  
-      buffer.writeAll(["\"backgroundColor\":\`", this.backgroundColor, "\`,"], "");
+      buffer.writeAll(["\"backgroundColor\":\`",this.backgroundColor, "\`,"], "");
     }
 
     if (this.borderColor != null) {  
-      buffer.writeAll(["\"borderColor\":\`", this.borderColor, "\`,"], "");
+      buffer.writeAll(["\"borderColor\":\`",this.borderColor, "\`,"], "");
     }
 
     if (this.borderWidth != null) {  
-      buffer.writeAll(["\"borderWidth\":", this.borderWidth, ","], "");
+      buffer.writeAll(["\"borderWidth\":",this.borderWidth, ","], "");
     }
 
     if (this.radius != null) {  
-      buffer.writeAll(["\"radius\":", this.radius, ","], "");
+      buffer.writeAll(["\"radius\":",this.radius, ","], "");
     }
   }
 

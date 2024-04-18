@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,23 +22,9 @@ import 'OptionFragment.dart';
  * MACDGappedExtensionOptions 
  */
 class MACDGappedExtensionOptions extends OptionFragment {
-  MACDGappedExtensionOptions( {
-    this.gapSize = null
-  }) : super();
-  double? gapSize;
-    /*
-  double get gapSize { 
-    if (this._gapSize == null) {
-      this._gapSize = 0;
-    }
-    return this._gapSize!;
-  }
+  MACDGappedExtensionOptions( ) : super();
+  // NOTE: gapSize skipped - type number is ignored in gen 
 
-  void set gapSize (double v) {
-    this._gapSize = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -47,9 +33,7 @@ class MACDGappedExtensionOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.gapSize != null) {  
-      buffer.writeAll(["\"gapSize\":", this.gapSize, ","], "");
-    }
+    // NOTE: skip serialization of gapSize (type number is ignored) ignore type: true
   }
 
 }

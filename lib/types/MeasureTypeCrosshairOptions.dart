@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,68 +22,15 @@ import 'OptionFragment.dart';
  * MeasureTypeCrosshairOptions 
  */
 class MeasureTypeCrosshairOptions extends OptionFragment {
-  MeasureTypeCrosshairOptions( {
-    this.dashStyle = null,
-    this.enabled = null,
-    this.markerEnd = null,
-    this.zIndex = null
-  }) : super();
-  String? dashStyle;
-    /*
-  String get dashStyle { 
-    if (this._dashStyle == null) {
-      this._dashStyle = "";
-    }
-    return this._dashStyle!;
-  }
+  MeasureTypeCrosshairOptions( ) : super();
+  // NOTE: dashStyle skipped - type string is ignored in gen 
 
-  void set dashStyle (String v) {
-    this._dashStyle = v;
-  }
-    */
-    
-  bool? enabled;
-    /*
-  bool get enabled { 
-    if (this._enabled == null) {
-      this._enabled = false;
-    }
-    return this._enabled!;
-  }
+  // NOTE: enabled skipped - type boolean is ignored in gen 
 
-  void set enabled (bool v) {
-    this._enabled = v;
-  }
-    */
-    
-  String? markerEnd;
-    /*
-  String get markerEnd { 
-    if (this._markerEnd == null) {
-      this._markerEnd = "";
-    }
-    return this._markerEnd!;
-  }
+  // NOTE: markerEnd skipped - type string is ignored in gen 
 
-  void set markerEnd (String v) {
-    this._markerEnd = v;
-  }
-    */
-    
-  double? zIndex;
-    /*
-  double get zIndex { 
-    if (this._zIndex == null) {
-      this._zIndex = 0;
-    }
-    return this._zIndex!;
-  }
+  // NOTE: zIndex skipped - type number is ignored in gen 
 
-  void set zIndex (double v) {
-    this._zIndex = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -92,21 +39,13 @@ class MeasureTypeCrosshairOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.dashStyle != null) {  
-      buffer.writeAll(["\"dashStyle\":\`", this.dashStyle, "\`,"], "");
-    }
+    // NOTE: skip serialization of dashStyle (type string is ignored) ignore type: true
 
-    if (this.enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
-    }
+    // NOTE: skip serialization of enabled (type boolean is ignored) ignore type: true
 
-    if (this.markerEnd != null) {  
-      buffer.writeAll(["\"markerEnd\":\`", this.markerEnd, "\`,"], "");
-    }
+    // NOTE: skip serialization of markerEnd (type string is ignored) ignore type: true
 
-    if (this.zIndex != null) {  
-      buffer.writeAll(["\"zIndex\":", this.zIndex, ","], "");
-    }
+    // NOTE: skip serialization of zIndex (type number is ignored) ignore type: true
   }
 
 }

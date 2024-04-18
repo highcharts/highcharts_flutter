@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -27,171 +27,105 @@ import 'OptionFragment.dart';
  */
 class IKHOptions extends SMAOptions {
   IKHOptions( {
-    this.gapSize = null
+    super.accessibility = null,
+    super.allAreas = null,
+    super.allowPointSelect = null,
+    super.animationLimit = null,
+    super.boostBlending = null,
+    super.boostThreshold = null,
+    super.borderColor = null,
+    super.borderWidth = null,
+    this.chikouLine = null,
+    super.className = null,
+    super.clip = null,
+    super.color = null,
+    super.colorAxis = null,
+    super.colorIndex = null,
+    super.colorKey = null,
+    super.compare = null,
+    super.compareStart = null,
+    super.compareToMain = null,
+    super.connectEnds = null,
+    super.connectNulls = null,
+    super.connectors = null,
+    super.crisp = null,
+    super.cropThreshold = null,
+    super.cumulative = null,
+    super.cursor = null,
+    super.dashStyle = null,
+    super.dataGrouping = null,
+    super.dataLabels = null,
+    super.dataSorting = null,
+    super.description = null,
+    super.dragDrop = null,
+    super.enableMouseTracking = null,
+    super.events = null,
+    super.findNearestPointBy = null,
+    this.gapSize = null,
+    super.gapUnit = null,
+    super.getExtremesFromAll = null,
+    super.includeInDataExport = null,
+    super.joinBy = null,
+    super.keys = null,
+    this.kijunLine = null,
+    super.label = null,
+    super.lastPrice = null,
+    super.lastVisiblePrice = null,
+    super.legendSymbol = null,
+    super.linecap = null,
+    super.lineWidth = null,
+    super.linkedTo = null,
+    this.marker = null,
+    super.navigatorOptions = null,
+    super.negativeColor = null,
+    super.onPoint = null,
+    super.opacity = null,
+    super.params = null,
+    super.point = null,
+    super.pointInterval = null,
+    super.pointIntervalUnit = null,
+    super.pointPlacement = null,
+    super.pointRange = null,
+    super.pointStart = null,
+    super.relativeXValue = null,
+    super.selected = null,
+    this.senkouSpan = null,
+    this.senkouSpanA = null,
+    this.senkouSpanB = null,
+    super.showCheckbox = null,
+    super.showInLegend = null,
+    super.showInNavigator = null,
+    super.skipKeyboardNavigation = null,
+    super.softThreshold = null,
+    super.stacking = null,
+    super.step = null,
+    super.stickyTracking = null,
+    this.tenkanLine = null,
+    super.threshold = null,
+    super.tooltip = null,
+    super.turboThreshold = null,
+    super.visible = null,
+    super.zIndex = null,
+    super.zoneAxis = null,
+    super.zones = null
   }) : super();
-  /**
-   * The styles for Chikou line  
-      */
   Map<String, String>? chikouLine;
-    /*
-  Map<String, String> get chikouLine { 
-    if (this._chikouLine == null) {
-      this._chikouLine = Map<String, String>();
-    }
-    return this._chikouLine!;
-  }
-
-  void set chikouLine (Map<String, String> v) {
-    this._chikouLine = v;
-  }
-    */
     
-  /**
-   * Defines when to display a gap in the graph, together with the
-   * [gapUnit](plotOptions.series.gapUnit) option.
-   * 
-   * In case when `dataGrouping` is enabled, points can be grouped
-   * into a larger time span. This can make the grouped points to
-   * have a greater distance than the absolute value of `gapSize`
-   * property, which will result in disappearing graph completely.
-   * To prevent this situation the mentioned distance between
-   * grouped points is used instead of previously defined
-   * `gapSize`.
-   * 
-   * In practice, this option is most often used to visualize gaps
-   * in time series. In a stock chart, intraday data is available
-   * for daytime hours, while gaps will appear in nights and
-   * weekends. 
-   * 
-   * Defaults to '0'. 
-      */
   double? gapSize;
-    /*
-  double get gapSize { 
-    if (this._gapSize == null) {
-      this._gapSize = 0;
-    }
-    return this._gapSize!;
-  }
-
-  void set gapSize (double v) {
-    this._gapSize = v;
-  }
-    */
     
-  /**
-   * The styles for Kijun line  
-      */
   Map<String, String>? kijunLine;
-    /*
-  Map<String, String> get kijunLine { 
-    if (this._kijunLine == null) {
-      this._kijunLine = Map<String, String>();
-    }
-    return this._kijunLine!;
-  }
-
-  void set kijunLine (Map<String, String> v) {
-    this._kijunLine = v;
-  }
-    */
     
-  /**
-   * Options for the point markers of line and scatter-like series. Properties
-   * like `fillColor`, `lineColor` and `lineWidth` define the visual
-   * appearance of the markers. The `symbol` option defines the shape. Other
-   * series types, like column series, don't have markers, but have visual
-   * options on the series level instead.
-   * 
-   * In styled mode, the markers can be styled with the `.highcharts-point`,
-   * `.highcharts-point-hover` and `.highcharts-point-select` class names.  
-      */
   PointMarkerOptions? marker;
-    /*
-  PointMarkerOptions get marker { 
-    if (this._marker == null) {
-      this._marker = PointMarkerOptions();
-    }
-    return this._marker!;
-  }
-
-  void set marker (PointMarkerOptions v) {
-    this._marker = v;
-  }
-    */
     
-  /**
-   * Paramters used in calculation of regression series' points.  
-      */
   /** NOTE: extparams is skipped here for now, as it overrides the base type. */
 
-  /**
-   * The styles for area between Senkou Span A and B.  
-      */
   IKHSenkouSpanOptions? senkouSpan;
-    /*
-  IKHSenkouSpanOptions get senkouSpan { 
-    if (this._senkouSpan == null) {
-      this._senkouSpan = IKHSenkouSpanOptions();
-    }
-    return this._senkouSpan!;
-  }
-
-  void set senkouSpan (IKHSenkouSpanOptions v) {
-    this._senkouSpan = v;
-  }
-    */
     
-  /**
-   * The styles for Senkou Span A line  
-      */
   Map<String, String>? senkouSpanA;
-    /*
-  Map<String, String> get senkouSpanA { 
-    if (this._senkouSpanA == null) {
-      this._senkouSpanA = Map<String, String>();
-    }
-    return this._senkouSpanA!;
-  }
-
-  void set senkouSpanA (Map<String, String> v) {
-    this._senkouSpanA = v;
-  }
-    */
     
-  /**
-   * The styles for Senkou Span B line  
-      */
   Map<String, String>? senkouSpanB;
-    /*
-  Map<String, String> get senkouSpanB { 
-    if (this._senkouSpanB == null) {
-      this._senkouSpanB = Map<String, String>();
-    }
-    return this._senkouSpanB!;
-  }
-
-  void set senkouSpanB (Map<String, String> v) {
-    this._senkouSpanB = v;
-  }
-    */
     
-  /**
-   * The styles for Tenkan line  
-      */
   Map<String, String>? tenkanLine;
-    /*
-  Map<String, String> get tenkanLine { 
-    if (this._tenkanLine == null) {
-      this._tenkanLine = Map<String, String>();
-    }
-    return this._tenkanLine!;
-  }
-
-  void set tenkanLine (Map<String, String> v) {
-    this._tenkanLine = v;
-  }
-    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -202,37 +136,37 @@ class IKHOptions extends SMAOptions {
 
     
     if (this.chikouLine != null) {  
-      buffer.writeAll(["\"chikouLine\":", this.chikouLine, ","], "");
+      buffer.writeAll(["\"chikouLine\":",this.chikouLine, ","], "");
     }
 
     if (this.gapSize != null) {  
-      buffer.writeAll(["\"gapSize\":", this.gapSize, ","], "");
+      buffer.writeAll(["\"gapSize\":",this.gapSize, ","], "");
     }
 
     if (this.kijunLine != null) {  
-      buffer.writeAll(["\"kijunLine\":", this.kijunLine, ","], "");
+      buffer.writeAll(["\"kijunLine\":",this.kijunLine, ","], "");
     }
 
     if (this.marker != null) {  
-      buffer.writeAll(["\"marker\":", this.marker?.toJSON(), ","], "");
+      buffer.writeAll(["\"marker\":",this.marker?.toJSON(), ","], "");
     }
 
-    // NOTE: skip serialization of params (type IKHParamsOptions is ignored)} 
+    // NOTE: skip serialization of params (type IKHParamsOptions is ignored) ignore type: false
 
     if (this.senkouSpan != null) {  
-      buffer.writeAll(["\"senkouSpan\":", this.senkouSpan?.toJSON(), ","], "");
+      buffer.writeAll(["\"senkouSpan\":",this.senkouSpan?.toJSON(), ","], "");
     }
 
     if (this.senkouSpanA != null) {  
-      buffer.writeAll(["\"senkouSpanA\":", this.senkouSpanA, ","], "");
+      buffer.writeAll(["\"senkouSpanA\":",this.senkouSpanA, ","], "");
     }
 
     if (this.senkouSpanB != null) {  
-      buffer.writeAll(["\"senkouSpanB\":", this.senkouSpanB, ","], "");
+      buffer.writeAll(["\"senkouSpanB\":",this.senkouSpanB, ","], "");
     }
 
     if (this.tenkanLine != null) {  
-      buffer.writeAll(["\"tenkanLine\":", this.tenkanLine, ","], "");
+      buffer.writeAll(["\"tenkanLine\":",this.tenkanLine, ","], "");
     }
   }
 

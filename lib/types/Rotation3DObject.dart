@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,68 +22,15 @@ import 'OptionFragment.dart';
  * Rotation3DObject 
  */
 class Rotation3DObject extends OptionFragment {
-  Rotation3DObject( {
-    this.cosA = null,
-    this.cosB = null,
-    this.sinA = null,
-    this.sinB = null
-  }) : super();
-  double? cosA;
-    /*
-  double get cosA { 
-    if (this._cosA == null) {
-      this._cosA = 0;
-    }
-    return this._cosA!;
-  }
+  Rotation3DObject( ) : super();
+  // NOTE: cosA skipped - type number is ignored in gen 
 
-  void set cosA (double v) {
-    this._cosA = v;
-  }
-    */
-    
-  double? cosB;
-    /*
-  double get cosB { 
-    if (this._cosB == null) {
-      this._cosB = 0;
-    }
-    return this._cosB!;
-  }
+  // NOTE: cosB skipped - type number is ignored in gen 
 
-  void set cosB (double v) {
-    this._cosB = v;
-  }
-    */
-    
-  double? sinA;
-    /*
-  double get sinA { 
-    if (this._sinA == null) {
-      this._sinA = 0;
-    }
-    return this._sinA!;
-  }
+  // NOTE: sinA skipped - type number is ignored in gen 
 
-  void set sinA (double v) {
-    this._sinA = v;
-  }
-    */
-    
-  double? sinB;
-    /*
-  double get sinB { 
-    if (this._sinB == null) {
-      this._sinB = 0;
-    }
-    return this._sinB!;
-  }
+  // NOTE: sinB skipped - type number is ignored in gen 
 
-  void set sinB (double v) {
-    this._sinB = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -92,21 +39,13 @@ class Rotation3DObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.cosA != null) {  
-      buffer.writeAll(["\"cosA\":", this.cosA, ","], "");
-    }
+    // NOTE: skip serialization of cosA (type number is ignored) ignore type: true
 
-    if (this.cosB != null) {  
-      buffer.writeAll(["\"cosB\":", this.cosB, ","], "");
-    }
+    // NOTE: skip serialization of cosB (type number is ignored) ignore type: true
 
-    if (this.sinA != null) {  
-      buffer.writeAll(["\"sinA\":", this.sinA, ","], "");
-    }
+    // NOTE: skip serialization of sinA (type number is ignored) ignore type: true
 
-    if (this.sinB != null) {  
-      buffer.writeAll(["\"sinB\":", this.sinB, ","], "");
-    }
+    // NOTE: skip serialization of sinB (type number is ignored) ignore type: true
   }
 
 }

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,53 +23,13 @@ import 'OptionFragment.dart';
  * DistributedBoxObject 
  */
 class DistributedBoxObject extends BoxObject {
-  DistributedBoxObject( {
-    this.pos = null,
-    this.anchorX = null,
-    this.plotX = null
-  }) : super();
-  double? pos;
-    /*
-  double get pos { 
-    if (this._pos == null) {
-      this._pos = 0;
-    }
-    return this._pos!;
-  }
+  DistributedBoxObject( ) : super();
+  // NOTE: pos skipped - type number is ignored in gen 
 
-  void set pos (double v) {
-    this._pos = v;
-  }
-    */
-    
-  double? anchorX;
-    /*
-  double get anchorX { 
-    if (this._anchorX == null) {
-      this._anchorX = 0;
-    }
-    return this._anchorX!;
-  }
+  // NOTE: anchorX skipped - type number is ignored in gen 
 
-  void set anchorX (double v) {
-    this._anchorX = v;
-  }
-    */
-    
-  double? plotX;
-    /*
-  double get plotX { 
-    if (this._plotX == null) {
-      this._plotX = 0;
-    }
-    return this._plotX!;
-  }
+  // NOTE: plotX skipped - type number is ignored in gen 
 
-  void set plotX (double v) {
-    this._plotX = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -78,17 +38,11 @@ class DistributedBoxObject extends BoxObject {
     super.toJSONInner(buffer);
 
     
-    if (this.pos != null) {  
-      buffer.writeAll(["\"pos\":", this.pos, ","], "");
-    }
+    // NOTE: skip serialization of pos (type number is ignored) ignore type: true
 
-    if (this.anchorX != null) {  
-      buffer.writeAll(["\"anchorX\":", this.anchorX, ","], "");
-    }
+    // NOTE: skip serialization of anchorX (type number is ignored) ignore type: true
 
-    if (this.plotX != null) {  
-      buffer.writeAll(["\"plotX\":", this.plotX, ","], "");
-    }
+    // NOTE: skip serialization of plotX (type number is ignored) ignore type: true
   }
 
 }

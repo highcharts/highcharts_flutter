@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,53 +22,13 @@ import 'OptionFragment.dart';
  * LangAccessibilityNavigatorOptions 
  */
 class LangAccessibilityNavigatorOptions extends OptionFragment {
-  LangAccessibilityNavigatorOptions( {
-    this.handleLabel = null,
-    this.groupLabel = null,
-    this.changeAnnouncement = null
-  }) : super();
-  String? handleLabel;
-    /*
-  String get handleLabel { 
-    if (this._handleLabel == null) {
-      this._handleLabel = "";
-    }
-    return this._handleLabel!;
-  }
+  LangAccessibilityNavigatorOptions( ) : super();
+  // NOTE: handleLabel skipped - type string is ignored in gen 
 
-  void set handleLabel (String v) {
-    this._handleLabel = v;
-  }
-    */
-    
-  String? groupLabel;
-    /*
-  String get groupLabel { 
-    if (this._groupLabel == null) {
-      this._groupLabel = "";
-    }
-    return this._groupLabel!;
-  }
+  // NOTE: groupLabel skipped - type string is ignored in gen 
 
-  void set groupLabel (String v) {
-    this._groupLabel = v;
-  }
-    */
-    
-  String? changeAnnouncement;
-    /*
-  String get changeAnnouncement { 
-    if (this._changeAnnouncement == null) {
-      this._changeAnnouncement = "";
-    }
-    return this._changeAnnouncement!;
-  }
+  // NOTE: changeAnnouncement skipped - type string is ignored in gen 
 
-  void set changeAnnouncement (String v) {
-    this._changeAnnouncement = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -77,17 +37,11 @@ class LangAccessibilityNavigatorOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.handleLabel != null) {  
-      buffer.writeAll(["\"handleLabel\":\`", this.handleLabel, "\`,"], "");
-    }
+    // NOTE: skip serialization of handleLabel (type string is ignored) ignore type: true
 
-    if (this.groupLabel != null) {  
-      buffer.writeAll(["\"groupLabel\":\`", this.groupLabel, "\`,"], "");
-    }
+    // NOTE: skip serialization of groupLabel (type string is ignored) ignore type: true
 
-    if (this.changeAnnouncement != null) {  
-      buffer.writeAll(["\"changeAnnouncement\":\`", this.changeAnnouncement, "\`,"], "");
-    }
+    // NOTE: skip serialization of changeAnnouncement (type string is ignored) ignore type: true
   }
 
 }

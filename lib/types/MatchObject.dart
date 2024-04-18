@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,143 +22,25 @@ import 'OptionFragment.dart';
  * MatchObject 
  */
 class MatchObject extends OptionFragment {
-  MatchObject( {
-    this.body = null,
-    this.elseBody = null,
-    this.expression = null,
-    this.find = null,
-    this.fn = null,
-    this.length = null,
-    this.isBlock = null,
-    this.start = null,
-    this.startInner = null
-  }) : super();
-  String? body;
-    /*
-  String get body { 
-    if (this._body == null) {
-      this._body = "";
-    }
-    return this._body!;
-  }
+  MatchObject( ) : super();
+  // NOTE: body skipped - type string is ignored in gen 
 
-  void set body (String v) {
-    this._body = v;
-  }
-    */
-    
-  String? elseBody;
-    /*
-  String get elseBody { 
-    if (this._elseBody == null) {
-      this._elseBody = "";
-    }
-    return this._elseBody!;
-  }
+  // NOTE: elseBody skipped - type string is ignored in gen 
 
-  void set elseBody (String v) {
-    this._elseBody = v;
-  }
-    */
-    
-  String? expression;
-    /*
-  String get expression { 
-    if (this._expression == null) {
-      this._expression = "";
-    }
-    return this._expression!;
-  }
+  // NOTE: expression skipped - type string is ignored in gen 
 
-  void set expression (String v) {
-    this._expression = v;
-  }
-    */
-    
-  String? find;
-    /*
-  String get find { 
-    if (this._find == null) {
-      this._find = "";
-    }
-    return this._find!;
-  }
+  // NOTE: find skipped - type string is ignored in gen 
 
-  void set find (String v) {
-    this._find = v;
-  }
-    */
-    
-  String? fn;
-    /*
-  String get fn { 
-    if (this._fn == null) {
-      this._fn = "";
-    }
-    return this._fn!;
-  }
+  // NOTE: fn skipped - type string is ignored in gen 
 
-  void set fn (String v) {
-    this._fn = v;
-  }
-    */
-    
-  double? length;
-    /*
-  double get length { 
-    if (this._length == null) {
-      this._length = 0;
-    }
-    return this._length!;
-  }
+  // NOTE: length skipped - type number is ignored in gen 
 
-  void set length (double v) {
-    this._length = v;
-  }
-    */
-    
-  bool? isBlock;
-    /*
-  bool get isBlock { 
-    if (this._isBlock == null) {
-      this._isBlock = false;
-    }
-    return this._isBlock!;
-  }
+  // NOTE: isBlock skipped - type boolean is ignored in gen 
 
-  void set isBlock (bool v) {
-    this._isBlock = v;
-  }
-    */
-    
-  double? start;
-    /*
-  double get start { 
-    if (this._start == null) {
-      this._start = 0;
-    }
-    return this._start!;
-  }
+  // NOTE: start skipped - type number is ignored in gen 
 
-  void set start (double v) {
-    this._start = v;
-  }
-    */
-    
-  double? startInner;
-    /*
-  double get startInner { 
-    if (this._startInner == null) {
-      this._startInner = 0;
-    }
-    return this._startInner!;
-  }
+  // NOTE: startInner skipped - type number is ignored in gen 
 
-  void set startInner (double v) {
-    this._startInner = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -167,43 +49,25 @@ class MatchObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.body != null) {  
-      buffer.writeAll(["\"body\":\`", this.body, "\`,"], "");
-    }
+    // NOTE: skip serialization of body (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of ctx (type any is ignored)} 
+    // NOTE: skip serialization of ctx (type any is ignored) ignore type: 1
 
-    if (this.elseBody != null) {  
-      buffer.writeAll(["\"elseBody\":\`", this.elseBody, "\`,"], "");
-    }
+    // NOTE: skip serialization of elseBody (type string is ignored) ignore type: true
 
-    if (this.expression != null) {  
-      buffer.writeAll(["\"expression\":\`", this.expression, "\`,"], "");
-    }
+    // NOTE: skip serialization of expression (type string is ignored) ignore type: true
 
-    if (this.find != null) {  
-      buffer.writeAll(["\"find\":\`", this.find, "\`,"], "");
-    }
+    // NOTE: skip serialization of find (type string is ignored) ignore type: true
 
-    if (this.fn != null) {  
-      buffer.writeAll(["\"fn\":\`", this.fn, "\`,"], "");
-    }
+    // NOTE: skip serialization of fn (type string is ignored) ignore type: true
 
-    if (this.length != null) {  
-      buffer.writeAll(["\"length\":", this.length, ","], "");
-    }
+    // NOTE: skip serialization of length (type number is ignored) ignore type: true
 
-    if (this.isBlock != null) {  
-      buffer.writeAll(["\"isBlock\":", this.isBlock, ","], "");
-    }
+    // NOTE: skip serialization of isBlock (type boolean is ignored) ignore type: true
 
-    if (this.start != null) {  
-      buffer.writeAll(["\"start\":", this.start, ","], "");
-    }
+    // NOTE: skip serialization of start (type number is ignored) ignore type: true
 
-    if (this.startInner != null) {  
-      buffer.writeAll(["\"startInner\":", this.startInner, ","], "");
-    }
+    // NOTE: skip serialization of startInner (type number is ignored) ignore type: true
   }
 
 }

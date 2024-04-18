@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,53 +22,13 @@ import 'OptionFragment.dart';
  * ExportDataLangOptions 
  */
 class ExportDataLangOptions extends OptionFragment {
-  ExportDataLangOptions( {
-    this.annotationHeader = null,
-    this.categoryHeader = null,
-    this.categoryDatetimeHeader = null
-  }) : super();
-  String? annotationHeader;
-    /*
-  String get annotationHeader { 
-    if (this._annotationHeader == null) {
-      this._annotationHeader = "";
-    }
-    return this._annotationHeader!;
-  }
+  ExportDataLangOptions( ) : super();
+  // NOTE: annotationHeader skipped - type string is ignored in gen 
 
-  void set annotationHeader (String v) {
-    this._annotationHeader = v;
-  }
-    */
-    
-  String? categoryHeader;
-    /*
-  String get categoryHeader { 
-    if (this._categoryHeader == null) {
-      this._categoryHeader = "";
-    }
-    return this._categoryHeader!;
-  }
+  // NOTE: categoryHeader skipped - type string is ignored in gen 
 
-  void set categoryHeader (String v) {
-    this._categoryHeader = v;
-  }
-    */
-    
-  String? categoryDatetimeHeader;
-    /*
-  String get categoryDatetimeHeader { 
-    if (this._categoryDatetimeHeader == null) {
-      this._categoryDatetimeHeader = "";
-    }
-    return this._categoryDatetimeHeader!;
-  }
+  // NOTE: categoryDatetimeHeader skipped - type string is ignored in gen 
 
-  void set categoryDatetimeHeader (String v) {
-    this._categoryDatetimeHeader = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -77,17 +37,11 @@ class ExportDataLangOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.annotationHeader != null) {  
-      buffer.writeAll(["\"annotationHeader\":\`", this.annotationHeader, "\`,"], "");
-    }
+    // NOTE: skip serialization of annotationHeader (type string is ignored) ignore type: true
 
-    if (this.categoryHeader != null) {  
-      buffer.writeAll(["\"categoryHeader\":\`", this.categoryHeader, "\`,"], "");
-    }
+    // NOTE: skip serialization of categoryHeader (type string is ignored) ignore type: true
 
-    if (this.categoryDatetimeHeader != null) {  
-      buffer.writeAll(["\"categoryDatetimeHeader\":\`", this.categoryDatetimeHeader, "\`,"], "");
-    }
+    // NOTE: skip serialization of categoryDatetimeHeader (type string is ignored) ignore type: true
   }
 
 }

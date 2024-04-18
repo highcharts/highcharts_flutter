@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,23 +23,9 @@ import 'OptionFragment.dart';
  * AutoAlignEvent 
  */
 class AutoAlignEvent extends Event {
-  AutoAlignEvent( {
-    this.align = null
-  }) : super();
-  String? align;
-    /*
-  String get align { 
-    if (this._align == null) {
-      this._align = "";
-    }
-    return this._align!;
-  }
+  AutoAlignEvent( ) : super();
+  // NOTE: align skipped - type string is ignored in gen 
 
-  void set align (String v) {
-    this._align = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -48,9 +34,7 @@ class AutoAlignEvent extends Event {
     super.toJSONInner(buffer);
 
     
-    if (this.align != null) {  
-      buffer.writeAll(["\"align\":\`", this.align, "\`,"], "");
-    }
+    // NOTE: skip serialization of align (type string is ignored) ignore type: true
   }
 
 }

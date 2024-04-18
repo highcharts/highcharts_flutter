@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,52 +24,81 @@ import 'OptionFragment.dart';
  */
 class GroupMapOptionsObject extends SeriesOptions {
   GroupMapOptionsObject( {
-    this.formatPrefix = null,
-    this.x = null,
-    this.y = null
+    super.accessibility = null,
+    super.allowPointSelect = null,
+    super.boostBlending = null,
+    super.boostThreshold = null,
+    super.borderColor = null,
+    super.borderWidth = null,
+    super.className = null,
+    super.clip = null,
+    super.color = null,
+    super.colorIndex = null,
+    super.colorKey = null,
+    super.compare = null,
+    super.compareStart = null,
+    super.connectEnds = null,
+    super.connectNulls = null,
+    super.connectors = null,
+    super.crisp = null,
+    super.cropThreshold = null,
+    super.cumulative = null,
+    super.cursor = null,
+    super.dashStyle = null,
+    super.dataGrouping = null,
+    super.dataLabels = null,
+    super.dataSorting = null,
+    super.dragDrop = null,
+    super.enableMouseTracking = null,
+    super.events = null,
+    super.findNearestPointBy = null,
+    super.gapSize = null,
+    super.gapUnit = null,
+    super.getExtremesFromAll = null,
+    super.includeInDataExport = null,
+    super.joinBy = null,
+    super.keys = null,
+    super.label = null,
+    super.lastPrice = null,
+    super.lastVisiblePrice = null,
+    super.legendSymbol = null,
+    super.linecap = null,
+    super.lineWidth = null,
+    super.linkedTo = null,
+    super.marker = null,
+    super.navigatorOptions = null,
+    super.negativeColor = null,
+    super.onPoint = null,
+    super.opacity = null,
+    super.point = null,
+    super.pointInterval = null,
+    super.pointIntervalUnit = null,
+    super.pointPlacement = null,
+    super.pointRange = null,
+    super.pointStart = null,
+    super.relativeXValue = null,
+    super.selected = null,
+    super.showCheckbox = null,
+    super.showInLegend = null,
+    super.showInNavigator = null,
+    super.softThreshold = null,
+    super.stacking = null,
+    super.step = null,
+    super.stickyTracking = null,
+    super.threshold = null,
+    super.tooltip = null,
+    super.turboThreshold = null,
+    super.visible = null,
+    super.zIndex = null,
+    super.zoneAxis = null,
+    super.zones = null
   }) : super();
-  String? formatPrefix;
-    /*
-  String get formatPrefix { 
-    if (this._formatPrefix == null) {
-      this._formatPrefix = "";
-    }
-    return this._formatPrefix!;
-  }
+  // NOTE: formatPrefix skipped - type string is ignored in gen 
 
-  void set formatPrefix (String v) {
-    this._formatPrefix = v;
-  }
-    */
-    
-  double? x;
-    /*
-  double get x { 
-    if (this._x == null) {
-      this._x = 0;
-    }
-    return this._x!;
-  }
+  // NOTE: x skipped - type number is ignored in gen 
 
-  void set x (double v) {
-    this._x = v;
-  }
-    */
-    
-  double? y;
-    /*
-  double get y { 
-    if (this._y == null) {
-      this._y = 0;
-    }
-    return this._y!;
-  }
+  // NOTE: y skipped - type number is ignored in gen 
 
-  void set y (double v) {
-    this._y = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -78,19 +107,13 @@ class GroupMapOptionsObject extends SeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.formatPrefix != null) {  
-      buffer.writeAll(["\"formatPrefix\":\`", this.formatPrefix, "\`,"], "");
-    }
+    // NOTE: skip serialization of formatPrefix (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of userOptions (type PointShortOptions is ignored)} 
+    // NOTE: skip serialization of userOptions (type PointShortOptions is ignored) ignore type: 1
 
-    if (this.x != null) {  
-      buffer.writeAll(["\"x\":", this.x, ","], "");
-    }
+    // NOTE: skip serialization of x (type number is ignored) ignore type: true
 
-    if (this.y != null) {  
-      buffer.writeAll(["\"y\":", this.y, ","], "");
-    }
+    // NOTE: skip serialization of y (type number is ignored) ignore type: true
   }
 
 }

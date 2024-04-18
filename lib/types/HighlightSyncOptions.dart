@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,53 +22,13 @@ import 'OptionFragment.dart';
  * HighlightSyncOptions 
  */
 class HighlightSyncOptions extends OptionFragment {
-  HighlightSyncOptions( {
-    this.highlightPoint = null,
-    this.showTooltip = null,
-    this.showCrosshair = null
-  }) : super();
-  bool? highlightPoint;
-    /*
-  bool get highlightPoint { 
-    if (this._highlightPoint == null) {
-      this._highlightPoint = false;
-    }
-    return this._highlightPoint!;
-  }
+  HighlightSyncOptions( ) : super();
+  // NOTE: highlightPoint skipped - type boolean is ignored in gen 
 
-  void set highlightPoint (bool v) {
-    this._highlightPoint = v;
-  }
-    */
-    
-  bool? showTooltip;
-    /*
-  bool get showTooltip { 
-    if (this._showTooltip == null) {
-      this._showTooltip = false;
-    }
-    return this._showTooltip!;
-  }
+  // NOTE: showTooltip skipped - type boolean is ignored in gen 
 
-  void set showTooltip (bool v) {
-    this._showTooltip = v;
-  }
-    */
-    
-  bool? showCrosshair;
-    /*
-  bool get showCrosshair { 
-    if (this._showCrosshair == null) {
-      this._showCrosshair = false;
-    }
-    return this._showCrosshair!;
-  }
+  // NOTE: showCrosshair skipped - type boolean is ignored in gen 
 
-  void set showCrosshair (bool v) {
-    this._showCrosshair = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -77,17 +37,11 @@ class HighlightSyncOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.highlightPoint != null) {  
-      buffer.writeAll(["\"highlightPoint\":", this.highlightPoint, ","], "");
-    }
+    // NOTE: skip serialization of highlightPoint (type boolean is ignored) ignore type: true
 
-    if (this.showTooltip != null) {  
-      buffer.writeAll(["\"showTooltip\":", this.showTooltip, ","], "");
-    }
+    // NOTE: skip serialization of showTooltip (type boolean is ignored) ignore type: true
 
-    if (this.showCrosshair != null) {  
-      buffer.writeAll(["\"showCrosshair\":", this.showCrosshair, ","], "");
-    }
+    // NOTE: skip serialization of showCrosshair (type boolean is ignored) ignore type: true
   }
 
 }

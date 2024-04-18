@@ -12,122 +12,90 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
-import 'OptionFragment.dart';
+import 'GaugeSeriesOptions.dart';
+import 'Series.dart';
+import 'PointOptions.dart';
 
-/** 
- * GaugeSeries 
- */
-class GaugeSeries extends OptionFragment {
-  GaugeSeries( {
-    this.angular = null,
-    this.directTouch = null,
-    this.fixedBox = null,
-    this.forceDL = null,
-    this.noSharedTooltip = null
-  }) : super();
-  bool? angular;
-    /*
-  bool get angular { 
-    if (this._angular == null) {
-      this._angular = false;
-    }
-    return this._angular!;
-  }
+class GaugeSeries extends Series {
 
-  void set angular (bool v) {
-    this._angular = v;
-  }
-    */
-    
-  bool? directTouch;
-    /*
-  bool get directTouch { 
-    if (this._directTouch == null) {
-      this._directTouch = false;
-    }
-    return this._directTouch!;
-  }
+  String? name;
+  GaugeSeriesOptions? options;
+  List<PointOptions>? points;
+  List<List<double>>? data;
 
-  void set directTouch (bool v) {
-    this._directTouch = v;
-  }
-    */
-    
-  bool? fixedBox;
-    /*
-  bool get fixedBox { 
-    if (this._fixedBox == null) {
-      this._fixedBox = false;
-    }
-    return this._fixedBox!;
-  }
+  GaugeSeries({
+    this.name = null,
+    this.options = null,
+    this.points = null,
+    this.data = null
+  });
 
-  void set fixedBox (bool v) {
-    this._fixedBox = v;
-  }
-    */
-    
-  bool? forceDL;
-    /*
-  bool get forceDL { 
-    if (this._forceDL == null) {
-      this._forceDL = false;
-    }
-    return this._forceDL!;
-  }
-
-  void set forceDL (bool v) {
-    this._forceDL = v;
-  }
-    */
-    
-  bool? noSharedTooltip;
-    /*
-  bool get noSharedTooltip { 
-    if (this._noSharedTooltip == null) {
-      this._noSharedTooltip = false;
-    }
-    return this._noSharedTooltip!;
-  }
-
-  void set noSharedTooltip (bool v) {
-    this._noSharedTooltip = v;
-  }
-    */
-    
-
-  //////////////////////////////////////////////////////////////////////////////
   
   @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    if (this.angular != null) {  
-      buffer.writeAll(["\"angular\":", this.angular, ","], "");
+
+    if (this.name != null) {
+      buffer.writeAll(["\"name\": \"", this.name!, "\","], "");
     }
 
-    if (this.directTouch != null) {  
-      buffer.writeAll(["\"directTouch\":", this.directTouch, ","], "");
+    buffer.write("\"type\": \"gauge\",");
+
+    if (this.data != null && this.points == null) {
+      // Serialize as a 2d array
+
+      StringBuffer seriesData = StringBuffer();
+
+      for (var point in this.data!) {
+        seriesData.writeAll(["["], "");
+        for (var item in point) {
+          seriesData.writeAll([item, ","]);
+        }
+        seriesData.writeAll(["],"], "");
+      }
+
+      buffer.writeAll(["\"data\": [", seriesData, "],"], "");   
+
+
+    } else if (this.points != null) {
+      // Go through the points and write them
+      StringBuffer seriesData = StringBuffer();
+
+      for (var point in this.points!) {
+        seriesData.writeAll(["{"], "");
+        point.toJSONInner(seriesData); 
+        seriesData.writeAll(["},"], "");
+      }
+
+      buffer.writeAll(["\"data\": [", seriesData, "],"], "");
     }
 
-    if (this.fixedBox != null) {  
-      buffer.writeAll(["\"fixedBox\":", this.fixedBox, ","], "");
+
+
+    
+    if (this.options?.dial != null) {  
+      buffer.writeAll(["\"dial\":",this.options?.dial?.toJSON(), ","], "");
     }
 
-    if (this.forceDL != null) {  
-      buffer.writeAll(["\"forceDL\":", this.forceDL, ","], "");
+    if (this.options?.overshoot != null) {  
+      buffer.writeAll(["\"overshoot\":",this.options?.overshoot, ","], "");
     }
 
-    if (this.noSharedTooltip != null) {  
-      buffer.writeAll(["\"noSharedTooltip\":", this.noSharedTooltip, ","], "");
+    if (this.options?.pivot != null) {  
+      buffer.writeAll(["\"pivot\":",this.options?.pivot?.toJSON(), ","], "");
     }
 
-    // NOTE: skip serialization of pointClass (type typeof GaugePoint is ignored)} 
+    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
+
+    if (this.options?.wrap != null) {  
+      buffer.writeAll(["\"wrap\":",this.options?.wrap, ","], "");
+    }
   }
 
 }

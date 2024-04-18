@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,38 +22,11 @@ import 'OptionFragment.dart';
  * CallbackJSON 
  */
 class CallbackJSON extends OptionFragment {
-  CallbackJSON( {
-    this.type = null,
-    this.func = null
-  }) : super();
-  String? type;
-    /*
-  String get type { 
-    if (this._type == null) {
-      this._type = "";
-    }
-    return this._type!;
-  }
+  CallbackJSON( ) : super();
+  // NOTE: type skipped - type string is ignored in gen 
 
-  void set type (String v) {
-    this._type = v;
-  }
-    */
-    
-  String? func;
-    /*
-  String get func { 
-    if (this._func == null) {
-      this._func = "";
-    }
-    return this._func!;
-  }
+  // NOTE: func skipped - type string is ignored in gen 
 
-  void set func (String v) {
-    this._func = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -62,13 +35,9 @@ class CallbackJSON extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.type != null) {  
-      buffer.writeAll(["\"type\":\`", this.type, "\`,"], "");
-    }
+    // NOTE: skip serialization of type (type string is ignored) ignore type: true
 
-    if (this.func != null) {  
-      buffer.writeAll(["\"func\":\`", this.func, "\`,"], "");
-    }
+    // NOTE: skip serialization of func (type string is ignored) ignore type: true
   }
 
 }

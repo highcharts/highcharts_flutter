@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -25,22 +25,21 @@ import 'OptionFragment.dart';
  */
 class DragDropDefaults extends DragDropOptions {
   DragDropDefaults( {
-    this.dragSensitivity = null
+    super.draggableX = null,
+    super.draggableY = null,
+    super.dragMaxX = null,
+    super.dragMaxY = null,
+    super.dragMinX = null,
+    super.dragMinY = null,
+    super.dragPrecisionX = null,
+    super.dragPrecisionY = null,
+    super.dragSensitivity = null,
+    super.groupBy = null,
+    super.guideBox = null,
+    super.liveRedraw = null
   }) : super();
-  double? dragSensitivity;
-    /*
-  double get dragSensitivity { 
-    if (this._dragSensitivity == null) {
-      this._dragSensitivity = 0;
-    }
-    return this._dragSensitivity!;
-  }
+  // NOTE: dragSensitivity skipped - type number is ignored in gen 
 
-  void set dragSensitivity (double v) {
-    this._dragSensitivity = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -49,13 +48,11 @@ class DragDropDefaults extends DragDropOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.dragSensitivity != null) {  
-      buffer.writeAll(["\"dragSensitivity\":", this.dragSensitivity, ","], "");
-    }
+    // NOTE: skip serialization of dragSensitivity (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of dragHandle (type DragDropHandleOptions is ignored)} 
+    // NOTE: skip serialization of dragHandle (type DragDropHandleOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of guideBox (type Generic is ignored)} 
+    // NOTE: skip serialization of guideBox (type Generic is ignored) ignore type: true
   }
 
 }

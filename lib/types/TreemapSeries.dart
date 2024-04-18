@@ -12,113 +12,152 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
-import 'OptionFragment.dart';
+import 'TreemapSeriesOptions.dart';
+import 'Series.dart';
+import 'PointOptions.dart';
 
-/** 
- * TreemapSeries 
- */
-class TreemapSeries extends OptionFragment {
-  TreemapSeries( {
-    this.colorKey = null,
-    this.directTouch = null,
-    this.getExtremesFromAll = null,
-    this.optionalAxis = null
-  }) : super();
-  String? colorKey;
-    /*
-  String get colorKey { 
-    if (this._colorKey == null) {
-      this._colorKey = "";
-    }
-    return this._colorKey!;
-  }
+class TreemapSeries extends Series {
 
-  void set colorKey (String v) {
-    this._colorKey = v;
-  }
-    */
-    
-  bool? directTouch;
-    /*
-  bool get directTouch { 
-    if (this._directTouch == null) {
-      this._directTouch = false;
-    }
-    return this._directTouch!;
-  }
+  String? name;
+  TreemapSeriesOptions? options;
+  List<PointOptions>? points;
+  List<List<double>>? data;
 
-  void set directTouch (bool v) {
-    this._directTouch = v;
-  }
-    */
-    
-  bool? getExtremesFromAll;
-    /*
-  bool get getExtremesFromAll { 
-    if (this._getExtremesFromAll == null) {
-      this._getExtremesFromAll = false;
-    }
-    return this._getExtremesFromAll!;
-  }
+  TreemapSeries({
+    this.name = null,
+    this.options = null,
+    this.points = null,
+    this.data = null
+  });
 
-  void set getExtremesFromAll (bool v) {
-    this._getExtremesFromAll = v;
-  }
-    */
-    
-  String? optionalAxis;
-    /*
-  String get optionalAxis { 
-    if (this._optionalAxis == null) {
-      this._optionalAxis = "";
-    }
-    return this._optionalAxis!;
-  }
-
-  void set optionalAxis (String v) {
-    this._optionalAxis = v;
-  }
-    */
-    
-
-  //////////////////////////////////////////////////////////////////////////////
   
   @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    if (this.colorKey != null) {  
-      buffer.writeAll(["\"colorKey\":\`", this.colorKey, "\`,"], "");
+
+    if (this.name != null) {
+      buffer.writeAll(["\"name\": \"", this.name!, "\","], "");
     }
 
-    if (this.directTouch != null) {  
-      buffer.writeAll(["\"directTouch\":", this.directTouch, ","], "");
+    buffer.write("\"type\": \"treemap\",");
+
+    if (this.data != null && this.points == null) {
+      // Serialize as a 2d array
+
+      StringBuffer seriesData = StringBuffer();
+
+      for (var point in this.data!) {
+        seriesData.writeAll(["["], "");
+        for (var item in point) {
+          seriesData.writeAll([item, ","]);
+        }
+        seriesData.writeAll(["],"], "");
+      }
+
+      buffer.writeAll(["\"data\": [", seriesData, "],"], "");   
+
+
+    } else if (this.points != null) {
+      // Go through the points and write them
+      StringBuffer seriesData = StringBuffer();
+
+      for (var point in this.points!) {
+        seriesData.writeAll(["{"], "");
+        point.toJSONInner(seriesData); 
+        seriesData.writeAll(["},"], "");
+      }
+
+      buffer.writeAll(["\"data\": [", seriesData, "],"], "");
     }
 
-    if (this.getExtremesFromAll != null) {  
-      buffer.writeAll(["\"getExtremesFromAll\":", this.getExtremesFromAll, ","], "");
+
+
+    
+    if (this.options?.breadcrumbs != null) {  
+      buffer.writeAll(["\"breadcrumbs\":",this.options?.breadcrumbs?.toJSON(), ","], "");
     }
 
-    if (this.optionalAxis != null) {  
-      buffer.writeAll(["\"optionalAxis\":\`", this.optionalAxis, "\`,"], "");
+    if (this.options?.allowDrillToNode != null) {  
+      buffer.writeAll(["\"allowDrillToNode\":",this.options?.allowDrillToNode, ","], "");
     }
 
-    // NOTE: skip serialization of parallelArrays (type string[] is ignored)} 
+    if (this.options?.allowTraversingTree != null) {  
+      buffer.writeAll(["\"allowTraversingTree\":",this.options?.allowTraversingTree, ","], "");
+    }
 
-    // NOTE: skip serialization of pointArrayMap (type string[] is ignored)} 
+    if (this.options?.alternateStartingDirection != null) {  
+      buffer.writeAll(["\"alternateStartingDirection\":",this.options?.alternateStartingDirection, ","], "");
+    }
 
-    // NOTE: skip serialization of pointClass (type typeof TreemapPoint is ignored)} 
+    // NOTE: skip serialization of borderDashStyle (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of NodeClass (type typeof TreemapNode is ignored)} 
+    if (this.options?.borderRadius != null) {  
+      buffer.writeAll(["\"borderRadius\":",this.options?.borderRadius, ","], "");
+    }
 
-    // NOTE: skip serialization of trackerGroups (type string[] is ignored)} 
+    // NOTE: skip serialization of brightness (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of utils (type Generic is ignored)} 
+    if (this.options?.colors != null) {  
+     StringBuffer arrData = StringBuffer();
+
+      arrData.writeAll(this.options!.colors!, ",");
+      buffer.writeAll(["\"colors\": [", arrData , "],"], "");   
+        
+    }
+
+    // NOTE: skip serialization of data (type TreemapPointOptions[] is ignored) ignore type: true
+
+    // NOTE: skip serialization of drillUpButton (type TreemapSeriesUpButtonOptions is ignored) ignore type: true
+
+    if (this.options?.ignoreHiddenPoint != null) {  
+      buffer.writeAll(["\"ignoreHiddenPoint\":",this.options?.ignoreHiddenPoint, ","], "");
+    }
+
+    if (this.options?.interactByLeaf != null) {  
+      buffer.writeAll(["\"interactByLeaf\":",this.options?.interactByLeaf, ","], "");
+    }
+
+    if (this.options?.layoutAlgorithm != null) {  
+      buffer.writeAll(["\"layoutAlgorithm\":\`",this.options?.layoutAlgorithm, "\`,"], "");
+    }
+
+    if (this.options?.layoutStartingDirection != null) {  
+      buffer.writeAll(["\"layoutStartingDirection\":\`",this.options?.layoutStartingDirection, "\`,"], "");
+    }
+
+    if (this.options?.levelIsConstant != null) {  
+      buffer.writeAll(["\"levelIsConstant\":",this.options?.levelIsConstant, ","], "");
+    }
+
+    if (this.options?.levels != null) {  
+     StringBuffer arrData = StringBuffer();
+
+      for (var item in this.options!.levels!) {
+          arrData.write("{");
+          item.toJSONInner(arrData);
+          arrData.write("}");
+      }
+      buffer.writeAll(["\"levels\": [", arrData , "],"], "");   
+        
+    }
+
+    // NOTE: skip serialization of setRootNode (type Function is ignored) ignore type: 1
+
+    if (this.options?.sortIndex != null) {  
+      buffer.writeAll(["\"sortIndex\":",this.options?.sortIndex, ","], "");
+    }
+
+    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
+
+    if (this.options?.traverseUpButton != null) {  
+      buffer.writeAll(["\"traverseUpButton\":",this.options?.traverseUpButton?.toJSON(), ","], "");
+    }
   }
 
 }

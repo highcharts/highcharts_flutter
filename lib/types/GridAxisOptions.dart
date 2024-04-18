@@ -12,10 +12,11 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
+import 'AxisOptions.dart';
 import 'OptionFragment.dart';
 
 /** 
@@ -26,63 +27,17 @@ class GridAxisOptions extends OptionFragment {
     this.borderColor = null,
     this.borderWidth = null,
     this.cellHeight = null,
+    this.columns = null,
     this.enabled = null
   }) : super();
   String? borderColor;
-    /*
-  String get borderColor { 
-    if (this._borderColor == null) {
-      this._borderColor = "";
-    }
-    return this._borderColor!;
-  }
-
-  void set borderColor (String v) {
-    this._borderColor = v;
-  }
-    */
     
   double? borderWidth;
-    /*
-  double get borderWidth { 
-    if (this._borderWidth == null) {
-      this._borderWidth = 0;
-    }
-    return this._borderWidth!;
-  }
-
-  void set borderWidth (double v) {
-    this._borderWidth = v;
-  }
-    */
     
   double? cellHeight;
-    /*
-  double get cellHeight { 
-    if (this._cellHeight == null) {
-      this._cellHeight = 0;
-    }
-    return this._cellHeight!;
-  }
-
-  void set cellHeight (double v) {
-    this._cellHeight = v;
-  }
-    */
     
+  List<AxisOptions>? columns; // AxisOptions
   bool? enabled;
-    /*
-  bool get enabled { 
-    if (this._enabled == null) {
-      this._enabled = false;
-    }
-    return this._enabled!;
-  }
-
-  void set enabled (bool v) {
-    this._enabled = v;
-  }
-    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -93,21 +48,31 @@ class GridAxisOptions extends OptionFragment {
 
     
     if (this.borderColor != null) {  
-      buffer.writeAll(["\"borderColor\":\`", this.borderColor, "\`,"], "");
+      buffer.writeAll(["\"borderColor\":\`",this.borderColor, "\`,"], "");
     }
 
     if (this.borderWidth != null) {  
-      buffer.writeAll(["\"borderWidth\":", this.borderWidth, ","], "");
+      buffer.writeAll(["\"borderWidth\":",this.borderWidth, ","], "");
     }
 
     if (this.cellHeight != null) {  
-      buffer.writeAll(["\"cellHeight\":", this.cellHeight, ","], "");
+      buffer.writeAll(["\"cellHeight\":",this.cellHeight, ","], "");
     }
 
-    // NOTE: skip serialization of columns (type AxisOptions[] is ignored)} 
+    if (this.columns != null) {  
+     StringBuffer arrData = StringBuffer();
+
+      for (var item in this.columns!) {
+          arrData.write("{");
+          item.toJSONInner(arrData);
+          arrData.write("}");
+      }
+      buffer.writeAll(["\"columns\": [", arrData , "],"], "");   
+        
+    }
 
     if (this.enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
+      buffer.writeAll(["\"enabled\":",this.enabled, ","], "");
     }
   }
 

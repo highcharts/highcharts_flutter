@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,53 +22,13 @@ import 'OptionFragment.dart';
  * RangeModifierRangeOptions 
  */
 class RangeModifierRangeOptions extends OptionFragment {
-  RangeModifierRangeOptions( {
-    this.column = null,
-    this.maxValue = null,
-    this.minValue = null
-  }) : super();
-  String? column;
-    /*
-  String get column { 
-    if (this._column == null) {
-      this._column = "";
-    }
-    return this._column!;
-  }
+  RangeModifierRangeOptions( ) : super();
+  // NOTE: column skipped - type string is ignored in gen 
 
-  void set column (String v) {
-    this._column = v;
-  }
-    */
-    
-  String? maxValue;
-    /*
-  String get maxValue { 
-    if (this._maxValue == null) {
-      this._maxValue = "";
-    }
-    return this._maxValue!;
-  }
+  // NOTE: maxValue skipped - type string is ignored in gen 
 
-  void set maxValue (String v) {
-    this._maxValue = v;
-  }
-    */
-    
-  String? minValue;
-    /*
-  String get minValue { 
-    if (this._minValue == null) {
-      this._minValue = "";
-    }
-    return this._minValue!;
-  }
+  // NOTE: minValue skipped - type string is ignored in gen 
 
-  void set minValue (String v) {
-    this._minValue = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -77,17 +37,11 @@ class RangeModifierRangeOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.column != null) {  
-      buffer.writeAll(["\"column\":\`", this.column, "\`,"], "");
-    }
+    // NOTE: skip serialization of column (type string is ignored) ignore type: true
 
-    if (this.maxValue != null) {  
-      buffer.writeAll(["\"maxValue\":\`", this.maxValue, "\`,"], "");
-    }
+    // NOTE: skip serialization of maxValue (type string is ignored) ignore type: true
 
-    if (this.minValue != null) {  
-      buffer.writeAll(["\"minValue\":\`", this.minValue, "\`,"], "");
-    }
+    // NOTE: skip serialization of minValue (type string is ignored) ignore type: true
   }
 
 }

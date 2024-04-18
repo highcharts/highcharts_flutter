@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,53 +23,13 @@ import 'OptionFragment.dart';
  * ProviderDefinition 
  */
 class ProviderDefinition extends OptionFragment {
-  ProviderDefinition( {
-    this.defaultCredits = null,
-    this.initialProjectionName = null,
-    this.requiresApiKey = null
-  }) : super();
-  String? defaultCredits;
-    /*
-  String get defaultCredits { 
-    if (this._defaultCredits == null) {
-      this._defaultCredits = "";
-    }
-    return this._defaultCredits!;
-  }
+  ProviderDefinition( ) : super();
+  // NOTE: defaultCredits skipped - type string is ignored in gen 
 
-  void set defaultCredits (String v) {
-    this._defaultCredits = v;
-  }
-    */
-    
-  String? initialProjectionName;
-    /*
-  String get initialProjectionName { 
-    if (this._initialProjectionName == null) {
-      this._initialProjectionName = "";
-    }
-    return this._initialProjectionName!;
-  }
+  // NOTE: initialProjectionName skipped - type string is ignored in gen 
 
-  void set initialProjectionName (String v) {
-    this._initialProjectionName = v;
-  }
-    */
-    
-  bool? requiresApiKey;
-    /*
-  bool get requiresApiKey { 
-    if (this._requiresApiKey == null) {
-      this._requiresApiKey = false;
-    }
-    return this._requiresApiKey!;
-  }
+  // NOTE: requiresApiKey skipped - type boolean is ignored in gen 
 
-  void set requiresApiKey (bool v) {
-    this._requiresApiKey = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -78,21 +38,15 @@ class ProviderDefinition extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.defaultCredits != null) {  
-      buffer.writeAll(["\"defaultCredits\":\`", this.defaultCredits, "\`,"], "");
-    }
+    // NOTE: skip serialization of defaultCredits (type string is ignored) ignore type: true
 
-    if (this.initialProjectionName != null) {  
-      buffer.writeAll(["\"initialProjectionName\":\`", this.initialProjectionName, "\`,"], "");
-    }
+    // NOTE: skip serialization of initialProjectionName (type string is ignored) ignore type: true
 
-    if (this.requiresApiKey != null) {  
-      buffer.writeAll(["\"requiresApiKey\":", this.requiresApiKey, ","], "");
-    }
+    // NOTE: skip serialization of requiresApiKey (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of subdomains (type string[] is ignored)} 
+    // NOTE: skip serialization of subdomains (type string[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of themes (type Themes is ignored)} 
+    // NOTE: skip serialization of themes (type Themes is ignored) ignore type: true
   }
 
 }

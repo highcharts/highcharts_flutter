@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,83 +24,17 @@ import 'OptionFragment.dart';
  * JSONConnectorOptions 
  */
 class JSONConnectorOptions extends DataConnectorOptions {
-  JSONConnectorOptions( {
-    this.dataRefreshRate = null,
-    this.dataUrl = null,
-    this.enablePolling = null,
-    this.firstRowAsNames = null,
-    this.orientation = null
-  }) : super();
-  double? dataRefreshRate;
-    /*
-  double get dataRefreshRate { 
-    if (this._dataRefreshRate == null) {
-      this._dataRefreshRate = 0;
-    }
-    return this._dataRefreshRate!;
-  }
+  JSONConnectorOptions( ) : super();
+  // NOTE: dataRefreshRate skipped - type number is ignored in gen 
 
-  void set dataRefreshRate (double v) {
-    this._dataRefreshRate = v;
-  }
-    */
-    
-  String? dataUrl;
-    /*
-  String get dataUrl { 
-    if (this._dataUrl == null) {
-      this._dataUrl = "";
-    }
-    return this._dataUrl!;
-  }
+  // NOTE: dataUrl skipped - type string is ignored in gen 
 
-  void set dataUrl (String v) {
-    this._dataUrl = v;
-  }
-    */
-    
-  bool? enablePolling;
-    /*
-  bool get enablePolling { 
-    if (this._enablePolling == null) {
-      this._enablePolling = false;
-    }
-    return this._enablePolling!;
-  }
+  // NOTE: enablePolling skipped - type boolean is ignored in gen 
 
-  void set enablePolling (bool v) {
-    this._enablePolling = v;
-  }
-    */
-    
-  bool? firstRowAsNames;
-    /*
-  bool get firstRowAsNames { 
-    if (this._firstRowAsNames == null) {
-      this._firstRowAsNames = false;
-    }
-    return this._firstRowAsNames!;
-  }
+  // NOTE: firstRowAsNames skipped - type boolean is ignored in gen 
 
-  void set firstRowAsNames (bool v) {
-    this._firstRowAsNames = v;
-  }
-    */
-    
-  String? orientation;
-    /*
-  String get orientation { 
-    if (this._orientation == null) {
-      this._orientation = "";
-    }
-    return this._orientation!;
-  }
+  // NOTE: orientation skipped - type string is ignored in gen 
 
-  void set orientation (String v) {
-    this._orientation = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -109,29 +43,19 @@ class JSONConnectorOptions extends DataConnectorOptions {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of columnNames (type ColumnNamesOptions is ignored)} 
+    // NOTE: skip serialization of columnNames (type ColumnNamesOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of data (type Data is ignored)} 
+    // NOTE: skip serialization of data (type Data is ignored) ignore type: true
 
-    if (this.dataRefreshRate != null) {  
-      buffer.writeAll(["\"dataRefreshRate\":", this.dataRefreshRate, ","], "");
-    }
+    // NOTE: skip serialization of dataRefreshRate (type number is ignored) ignore type: true
 
-    if (this.dataUrl != null) {  
-      buffer.writeAll(["\"dataUrl\":\`", this.dataUrl, "\`,"], "");
-    }
+    // NOTE: skip serialization of dataUrl (type string is ignored) ignore type: true
 
-    if (this.enablePolling != null) {  
-      buffer.writeAll(["\"enablePolling\":", this.enablePolling, ","], "");
-    }
+    // NOTE: skip serialization of enablePolling (type boolean is ignored) ignore type: true
 
-    if (this.firstRowAsNames != null) {  
-      buffer.writeAll(["\"firstRowAsNames\":", this.firstRowAsNames, ","], "");
-    }
+    // NOTE: skip serialization of firstRowAsNames (type boolean is ignored) ignore type: true
 
-    if (this.orientation != null) {  
-      buffer.writeAll(["\"orientation\":\`", this.orientation, "\`,"], "");
-    }
+    // NOTE: skip serialization of orientation (type string is ignored) ignore type: true
   }
 
 }

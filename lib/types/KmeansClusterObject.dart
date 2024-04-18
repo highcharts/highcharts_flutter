@@ -12,93 +12,28 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
+import 'MarkerClusterSplitDataObject.dart';
 import 'OptionFragment.dart';
 
 /** 
  * KmeansClusterObject 
  */
 class KmeansClusterObject extends OptionFragment {
-  KmeansClusterObject( {
-    this.posX = null,
-    this.posY = null,
-    this.oldX = null,
-    this.oldY = null,
-    this.startPointsLen = null
-  }) : super();
-  double? posX;
-    /*
-  double get posX { 
-    if (this._posX == null) {
-      this._posX = 0;
-    }
-    return this._posX!;
-  }
+  KmeansClusterObject( ) : super();
+  // NOTE: posX skipped - type number is ignored in gen 
 
-  void set posX (double v) {
-    this._posX = v;
-  }
-    */
-    
-  double? posY;
-    /*
-  double get posY { 
-    if (this._posY == null) {
-      this._posY = 0;
-    }
-    return this._posY!;
-  }
+  // NOTE: posY skipped - type number is ignored in gen 
 
-  void set posY (double v) {
-    this._posY = v;
-  }
-    */
-    
-  double? oldX;
-    /*
-  double get oldX { 
-    if (this._oldX == null) {
-      this._oldX = 0;
-    }
-    return this._oldX!;
-  }
+  // NOTE: oldX skipped - type number is ignored in gen 
 
-  void set oldX (double v) {
-    this._oldX = v;
-  }
-    */
-    
-  double? oldY;
-    /*
-  double get oldY { 
-    if (this._oldY == null) {
-      this._oldY = 0;
-    }
-    return this._oldY!;
-  }
+  // NOTE: oldY skipped - type number is ignored in gen 
 
-  void set oldY (double v) {
-    this._oldY = v;
-  }
-    */
-    
-  double? startPointsLen;
-    /*
-  double get startPointsLen { 
-    if (this._startPointsLen == null) {
-      this._startPointsLen = 0;
-    }
-    return this._startPointsLen!;
-  }
+  // NOTE: startPointsLen skipped - type number is ignored in gen 
 
-  void set startPointsLen (double v) {
-    this._startPointsLen = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -107,27 +42,17 @@ class KmeansClusterObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.posX != null) {  
-      buffer.writeAll(["\"posX\":", this.posX, ","], "");
-    }
+    // NOTE: skip serialization of posX (type number is ignored) ignore type: true
 
-    if (this.posY != null) {  
-      buffer.writeAll(["\"posY\":", this.posY, ","], "");
-    }
+    // NOTE: skip serialization of posY (type number is ignored) ignore type: true
 
-    if (this.oldX != null) {  
-      buffer.writeAll(["\"oldX\":", this.oldX, ","], "");
-    }
+    // NOTE: skip serialization of oldX (type number is ignored) ignore type: true
 
-    if (this.oldY != null) {  
-      buffer.writeAll(["\"oldY\":", this.oldY, ","], "");
-    }
+    // NOTE: skip serialization of oldY (type number is ignored) ignore type: true
 
-    if (this.startPointsLen != null) {  
-      buffer.writeAll(["\"startPointsLen\":", this.startPointsLen, ","], "");
-    }
+    // NOTE: skip serialization of startPointsLen (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of points (type MarkerClusterSplitDataObject[] is ignored)} 
+    // NOTE: skip serialization of points (type MarkerClusterSplitDataObject[] is ignored) ignore type: true
   }
 
 }

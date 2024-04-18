@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,30 +24,88 @@ import 'OptionFragment.dart';
  */
 class ColumnRangeSeriesOptions extends AreaRangeSeriesOptions {
   ColumnRangeSeriesOptions( {
-    this.minPointLength = null
+    super.accessibility = null,
+    super.allAreas = null,
+    super.allowPointSelect = null,
+    super.animationLimit = null,
+    super.boostBlending = null,
+    super.boostThreshold = null,
+    super.borderColor = null,
+    super.borderWidth = null,
+    super.className = null,
+    super.clip = null,
+    super.color = null,
+    super.colorAxis = null,
+    super.colorIndex = null,
+    super.colorKey = null,
+    super.compare = null,
+    super.compareStart = null,
+    super.connectEnds = null,
+    super.connectNulls = null,
+    super.connectors = null,
+    super.crisp = null,
+    super.cropThreshold = null,
+    super.cumulative = null,
+    super.cursor = null,
+    super.dashStyle = null,
+    super.dataGrouping = null,
+    super.dataLabels = null,
+    super.dataSorting = null,
+    super.description = null,
+    super.dragDrop = null,
+    super.enableMouseTracking = null,
+    super.events = null,
+    super.fillColor = null,
+    super.fillOpacity = null,
+    super.findNearestPointBy = null,
+    super.gapSize = null,
+    super.gapUnit = null,
+    super.getExtremesFromAll = null,
+    super.includeInDataExport = null,
+    super.joinBy = null,
+    super.keys = null,
+    super.label = null,
+    super.lastPrice = null,
+    super.lastVisiblePrice = null,
+    super.legendSymbol = null,
+    super.linecap = null,
+    super.lineWidth = null,
+    super.linkedTo = null,
+    super.marker = null,
+    this.minPointLength = null,
+    super.navigatorOptions = null,
+    super.negativeColor = null,
+    super.negativeFillColor = null,
+    super.onPoint = null,
+    super.opacity = null,
+    super.point = null,
+    super.pointInterval = null,
+    super.pointIntervalUnit = null,
+    super.pointPlacement = null,
+    super.pointRange = null,
+    super.pointStart = null,
+    super.relativeXValue = null,
+    super.selected = null,
+    super.showCheckbox = null,
+    super.showInLegend = null,
+    super.showInNavigator = null,
+    super.skipKeyboardNavigation = null,
+    super.softThreshold = null,
+    super.stacking = null,
+    super.step = null,
+    super.stickyTracking = null,
+    super.threshold = null,
+    super.tooltip = null,
+    super.trackByArea = null,
+    super.turboThreshold = null,
+    super.visible = null,
+    super.zIndex = null,
+    super.zoneAxis = null,
+    super.zones = null
   }) : super();
-  /**
-   * The minimal height for a column or width for a bar. By default,
-   * 0 values are not shown. To visualize a 0 (or close to zero) point,
-   * set the minimal point length to a pixel value like 3\. In stacked
-   * column charts, minPointLength might not be respected for tightly
-   * packed values.  
-      */
   double? minPointLength;
-    /*
-  double get minPointLength { 
-    if (this._minPointLength == null) {
-      this._minPointLength = 0;
-    }
-    return this._minPointLength!;
-  }
-
-  void set minPointLength (double v) {
-    this._minPointLength = v;
-  }
-    */
     
-  // NOTE: states skipped - type Generic is ignored in gen
+  // NOTE: states skipped - type Generic is ignored in gen 
 
 
   //////////////////////////////////////////////////////////////////////////////
@@ -58,10 +116,10 @@ class ColumnRangeSeriesOptions extends AreaRangeSeriesOptions {
 
     
     if (this.minPointLength != null) {  
-      buffer.writeAll(["\"minPointLength\":", this.minPointLength, ","], "");
+      buffer.writeAll(["\"minPointLength\":",this.minPointLength, ","], "");
     }
 
-    // NOTE: skip serialization of states (type Generic is ignored)} 
+    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
   }
 
 }

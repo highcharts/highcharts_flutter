@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,52 +24,24 @@ import 'OptionFragment.dart';
  */
 class EllipseShapeOptions extends ControllableShapeOptions {
   EllipseShapeOptions( {
-    this.yAxis = null,
-    this.xAxis = null,
-    this.ry = null
+    super.controlPointOptions = null,
+    super.fill = null,
+    super.height = null,
+    super.r = null,
+    super.ry = null,
+    super.snap = null,
+    super.src = null,
+    super.stroke = null,
+    super.strokeWidth = null,
+    super.type = null,
+    super.width = null
   }) : super();
-  double? yAxis;
-    /*
-  double get yAxis { 
-    if (this._yAxis == null) {
-      this._yAxis = 0;
-    }
-    return this._yAxis!;
-  }
+  // NOTE: yAxis skipped - type number is ignored in gen 
 
-  void set yAxis (double v) {
-    this._yAxis = v;
-  }
-    */
-    
-  double? xAxis;
-    /*
-  double get xAxis { 
-    if (this._xAxis == null) {
-      this._xAxis = 0;
-    }
-    return this._xAxis!;
-  }
+  // NOTE: xAxis skipped - type number is ignored in gen 
 
-  void set xAxis (double v) {
-    this._xAxis = v;
-  }
-    */
-    
-  double? ry;
-    /*
-  double get ry { 
-    if (this._ry == null) {
-      this._ry = 0;
-    }
-    return this._ry!;
-  }
+  // NOTE: ry skipped - type number is ignored in gen 
 
-  void set ry (double v) {
-    this._ry = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -78,17 +50,11 @@ class EllipseShapeOptions extends ControllableShapeOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.yAxis != null) {  
-      buffer.writeAll(["\"yAxis\":", this.yAxis, ","], "");
-    }
+    // NOTE: skip serialization of yAxis (type number is ignored) ignore type: true
 
-    if (this.xAxis != null) {  
-      buffer.writeAll(["\"xAxis\":", this.xAxis, ","], "");
-    }
+    // NOTE: skip serialization of xAxis (type number is ignored) ignore type: true
 
-    if (this.ry != null) {  
-      buffer.writeAll(["\"ry\":", this.ry, ","], "");
-    }
+    // NOTE: skip serialization of ry (type number is ignored) ignore type: true
   }
 
 }

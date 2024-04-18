@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,53 +22,13 @@ import 'OptionFragment.dart';
  * SonificationTimelineOptions 
  */
 class SonificationTimelineOptions extends OptionFragment {
-  SonificationTimelineOptions( {
-    this.showTooltip = null,
-    this.showCrosshair = null,
-    this.skipThreshold = null
-  }) : super();
-  bool? showTooltip;
-    /*
-  bool get showTooltip { 
-    if (this._showTooltip == null) {
-      this._showTooltip = false;
-    }
-    return this._showTooltip!;
-  }
+  SonificationTimelineOptions( ) : super();
+  // NOTE: showTooltip skipped - type boolean is ignored in gen 
 
-  void set showTooltip (bool v) {
-    this._showTooltip = v;
-  }
-    */
-    
-  bool? showCrosshair;
-    /*
-  bool get showCrosshair { 
-    if (this._showCrosshair == null) {
-      this._showCrosshair = false;
-    }
-    return this._showCrosshair!;
-  }
+  // NOTE: showCrosshair skipped - type boolean is ignored in gen 
 
-  void set showCrosshair (bool v) {
-    this._showCrosshair = v;
-  }
-    */
-    
-  double? skipThreshold;
-    /*
-  double get skipThreshold { 
-    if (this._skipThreshold == null) {
-      this._skipThreshold = 0;
-    }
-    return this._skipThreshold!;
-  }
+  // NOTE: skipThreshold skipped - type number is ignored in gen 
 
-  void set skipThreshold (double v) {
-    this._skipThreshold = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -77,17 +37,11 @@ class SonificationTimelineOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.showTooltip != null) {  
-      buffer.writeAll(["\"showTooltip\":", this.showTooltip, ","], "");
-    }
+    // NOTE: skip serialization of showTooltip (type boolean is ignored) ignore type: true
 
-    if (this.showCrosshair != null) {  
-      buffer.writeAll(["\"showCrosshair\":", this.showCrosshair, ","], "");
-    }
+    // NOTE: skip serialization of showCrosshair (type boolean is ignored) ignore type: true
 
-    if (this.skipThreshold != null) {  
-      buffer.writeAll(["\"skipThreshold\":", this.skipThreshold, ","], "");
-    }
+    // NOTE: skip serialization of skipThreshold (type number is ignored) ignore type: true
   }
 
 }

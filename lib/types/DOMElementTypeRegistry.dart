@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -34,9 +34,9 @@ class DOMElementTypeRegistry extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of HTMLDOMElement (type HTMLElement is ignored)} 
+    // NOTE: skip serialization of HTMLDOMElement (type HTMLElement is ignored) ignore type: true
 
-    // NOTE: skip serialization of SVGDOMElement (type SVGElement is ignored)} 
+    // NOTE: skip serialization of SVGDOMElement (type SVGElement is ignored) ignore type: true
   }
 
 }

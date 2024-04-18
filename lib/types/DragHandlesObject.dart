@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,23 +23,9 @@ import 'OptionFragment.dart';
  * DragHandlesObject 
  */
 class DragHandlesObject extends OptionFragment {
-  DragHandlesObject( {
-    this.point = null
-  }) : super();
-  String? point;
-    /*
-  String get point { 
-    if (this._point == null) {
-      this._point = "";
-    }
-    return this._point!;
-  }
+  DragHandlesObject( ) : super();
+  // NOTE: point skipped - type string is ignored in gen 
 
-  void set point (String v) {
-    this._point = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -48,11 +34,9 @@ class DragHandlesObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of group (type SVGElement is ignored)} 
+    // NOTE: skip serialization of group (type SVGElement is ignored) ignore type: true
 
-    if (this.point != null) {  
-      buffer.writeAll(["\"point\":\`", this.point, "\`,"], "");
-    }
+    // NOTE: skip serialization of point (type string is ignored) ignore type: true
   }
 
 }

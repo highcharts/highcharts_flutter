@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,22 +24,22 @@ import 'OptionFragment.dart';
  */
 class ArcDiagramPointOptions extends SankeyPointOptions {
   ArcDiagramPointOptions( {
-    this.linkWeight = null
+    super.accessibility = null,
+    super.borderColor = null,
+    super.className = null,
+    super.color = null,
+    super.colorIndex = null,
+    super.connectors = null,
+    super.dataLabels = null,
+    super.dragDrop = null,
+    super.events = null,
+    super.keys = null,
+    super.marker = null,
+    super.selected = null,
+    super.visible = null
   }) : super();
-  double? linkWeight;
-    /*
-  double get linkWeight { 
-    if (this._linkWeight == null) {
-      this._linkWeight = 0;
-    }
-    return this._linkWeight!;
-  }
+  // NOTE: linkWeight skipped - type number is ignored in gen 
 
-  void set linkWeight (double v) {
-    this._linkWeight = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -48,9 +48,7 @@ class ArcDiagramPointOptions extends SankeyPointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.linkWeight != null) {  
-      buffer.writeAll(["\"linkWeight\":", this.linkWeight, ","], "");
-    }
+    // NOTE: skip serialization of linkWeight (type number is ignored) ignore type: true
   }
 
 }

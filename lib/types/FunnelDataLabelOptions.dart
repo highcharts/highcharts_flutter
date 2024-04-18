@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,21 +24,35 @@ import 'OptionFragment.dart';
  */
 class FunnelDataLabelOptions extends PieDataLabelOptions {
   FunnelDataLabelOptions( {
-    this.position = null
+    super.align = null,
+    super.allowOverlap = null,
+    super.backgroundColor = null,
+    super.borderColor = null,
+    super.borderRadius = null,
+    super.borderWidth = null,
+    super.className = null,
+    super.color = null,
+    super.crop = null,
+    super.defer = null,
+    super.enabled = null,
+    super.filter = null,
+    super.format = null,
+    super.inside = null,
+    super.nullFormat = null,
+    super.overflow = null,
+    super.padding = null,
+    this.position = null,
+    super.rotation = null,
+    super.shape = null,
+    super.style = null,
+    super.textPath = null,
+    super.useHTML = null,
+    super.verticalAlign = null,
+    super.x = null,
+    super.y = null,
+    super.zIndex = null
   }) : super();
   String? position;
-    /*
-  String get position { 
-    if (this._position == null) {
-      this._position = "";
-    }
-    return this._position!;
-  }
-
-  void set position (String v) {
-    this._position = v;
-  }
-    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -49,7 +63,7 @@ class FunnelDataLabelOptions extends PieDataLabelOptions {
 
     
     if (this.position != null) {  
-      buffer.writeAll(["\"position\":\`", this.position, "\`,"], "");
+      buffer.writeAll(["\"position\":\`",this.position, "\`,"], "");
     }
   }
 

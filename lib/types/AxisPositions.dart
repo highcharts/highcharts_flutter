@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,38 +22,11 @@ import 'OptionFragment.dart';
  * AxisPositions 
  */
 class AxisPositions extends OptionFragment {
-  AxisPositions( {
-    this.top = null,
-    this.height = null
-  }) : super();
-  String? top;
-    /*
-  String get top { 
-    if (this._top == null) {
-      this._top = "";
-    }
-    return this._top!;
-  }
+  AxisPositions( ) : super();
+  // NOTE: top skipped - type string is ignored in gen 
 
-  void set top (String v) {
-    this._top = v;
-  }
-    */
-    
-  String? height;
-    /*
-  String get height { 
-    if (this._height == null) {
-      this._height = "";
-    }
-    return this._height!;
-  }
+  // NOTE: height skipped - type string is ignored in gen 
 
-  void set height (String v) {
-    this._height = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -62,13 +35,9 @@ class AxisPositions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.top != null) {  
-      buffer.writeAll(["\"top\":\`", this.top, "\`,"], "");
-    }
+    // NOTE: skip serialization of top (type string is ignored) ignore type: true
 
-    if (this.height != null) {  
-      buffer.writeAll(["\"height\":\`", this.height, "\`,"], "");
-    }
+    // NOTE: skip serialization of height (type string is ignored) ignore type: true
   }
 
 }

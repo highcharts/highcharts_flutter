@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,23 +23,9 @@ import 'OptionFragment.dart';
  * PatternObject 
  */
 class PatternObject extends OptionFragment {
-  PatternObject( {
-    this.patternIndex = null
-  }) : super();
-  double? patternIndex;
-    /*
-  double get patternIndex { 
-    if (this._patternIndex == null) {
-      this._patternIndex = 0;
-    }
-    return this._patternIndex!;
-  }
+  PatternObject( ) : super();
+  // NOTE: patternIndex skipped - type number is ignored in gen 
 
-  void set patternIndex (double v) {
-    this._patternIndex = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -48,13 +34,11 @@ class PatternObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of animation (type Generic is ignored)} 
+    // NOTE: skip serialization of animation (type Generic is ignored) ignore type: true
 
-    // NOTE: skip serialization of pattern (type PatternOptionsObject is ignored)} 
+    // NOTE: skip serialization of pattern (type PatternOptionsObject is ignored) ignore type: true
 
-    if (this.patternIndex != null) {  
-      buffer.writeAll(["\"patternIndex\":", this.patternIndex, ","], "");
-    }
+    // NOTE: skip serialization of patternIndex (type number is ignored) ignore type: true
   }
 
 }

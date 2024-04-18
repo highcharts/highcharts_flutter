@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -33,9 +33,9 @@ class ToggleOptions extends ItemOptions {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of type (type "toggle" is ignored)} 
+    // NOTE: skip serialization of type (type "toggle" is ignored) ignore type: true
 
-    // NOTE: skip serialization of events (type { update?: Function; click: Function; } is ignored)} 
+    // NOTE: skip serialization of events (type { update?: Function; click: Function; } is ignored) ignore type: true
   }
 
 }

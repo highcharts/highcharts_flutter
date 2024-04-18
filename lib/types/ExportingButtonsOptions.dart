@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,8 +23,11 @@ import 'OptionFragment.dart';
  * ExportingButtonsOptions 
  */
 class ExportingButtonsOptions extends OptionFragment {
-  ExportingButtonsOptions( ) : super();
-  
+  ExportingButtonsOptions( {
+    this.contextButton = null
+  }) : super();
+  ExportingButtonOptions? contextButton;
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,7 +36,9 @@ class ExportingButtonsOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of contextButton (type ExportingButtonOptions is ignored)} 
+    if (this.contextButton != null) {  
+      buffer.writeAll(["\"contextButton\":",this.contextButton?.toJSON(), ","], "");
+    }
   }
 
 }

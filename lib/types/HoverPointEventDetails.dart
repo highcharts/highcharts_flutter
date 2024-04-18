@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,38 +22,11 @@ import 'OptionFragment.dart';
  * HoverPointEventDetails 
  */
 class HoverPointEventDetails extends OptionFragment {
-  HoverPointEventDetails( {
-    this.isDataGrid = null,
-    this.sender = null
-  }) : super();
-  bool? isDataGrid;
-    /*
-  bool get isDataGrid { 
-    if (this._isDataGrid == null) {
-      this._isDataGrid = false;
-    }
-    return this._isDataGrid!;
-  }
+  HoverPointEventDetails( ) : super();
+  // NOTE: isDataGrid skipped - type boolean is ignored in gen 
 
-  void set isDataGrid (bool v) {
-    this._isDataGrid = v;
-  }
-    */
-    
-  String? sender;
-    /*
-  String get sender { 
-    if (this._sender == null) {
-      this._sender = "";
-    }
-    return this._sender!;
-  }
+  // NOTE: sender skipped - type string is ignored in gen 
 
-  void set sender (String v) {
-    this._sender = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -62,15 +35,11 @@ class HoverPointEventDetails extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of detail (type AnyRecord is ignored)} 
+    // NOTE: skip serialization of detail (type AnyRecord is ignored) ignore type: 1
 
-    if (this.isDataGrid != null) {  
-      buffer.writeAll(["\"isDataGrid\":", this.isDataGrid, ","], "");
-    }
+    // NOTE: skip serialization of isDataGrid (type boolean is ignored) ignore type: true
 
-    if (this.sender != null) {  
-      buffer.writeAll(["\"sender\":\`", this.sender, "\`,"], "");
-    }
+    // NOTE: skip serialization of sender (type string is ignored) ignore type: true
   }
 
 }

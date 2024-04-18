@@ -1,0 +1,35 @@
+[
+  {
+    "type": "missing_mapping",
+    "path": "sonification"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "yAxis.plotLines"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "yAxis.title"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "yAxis.labels"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "xAxis.plotBands"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "xAxis.plotLines"
+  },
+  {
+    "type": "mixed_type",
+    "path": "xAxis.crosshair",
+    "msg": "Path is set as a basic type, but flutter wants a AxisCrosshairOptions"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "xAxis.categories"
+  }
+]

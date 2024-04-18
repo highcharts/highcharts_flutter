@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,65 +24,89 @@ import 'OptionFragment.dart';
  */
 class BellcurveSeriesOptions extends AreaSplineSeriesOptions {
   BellcurveSeriesOptions( {
-    this.baseSeries = null,
+    super.accessibility = null,
+    super.allAreas = null,
+    super.allowPointSelect = null,
+    super.animationLimit = null,
+    super.boostBlending = null,
+    super.boostThreshold = null,
+    super.borderColor = null,
+    super.borderWidth = null,
+    super.className = null,
+    super.clip = null,
+    super.color = null,
+    super.colorAxis = null,
+    super.colorIndex = null,
+    super.colorKey = null,
+    super.compare = null,
+    super.compareStart = null,
+    super.connectEnds = null,
+    super.connectNulls = null,
+    super.connectors = null,
+    super.crisp = null,
+    super.cropThreshold = null,
+    super.cumulative = null,
+    super.cursor = null,
+    super.dashStyle = null,
+    super.dataGrouping = null,
+    super.dataLabels = null,
+    super.dataSorting = null,
+    super.description = null,
+    super.dragDrop = null,
+    super.enableMouseTracking = null,
+    super.events = null,
+    super.findNearestPointBy = null,
+    super.gapSize = null,
+    super.gapUnit = null,
+    super.getExtremesFromAll = null,
+    super.includeInDataExport = null,
     this.intervals = null,
-    this.pointsInInterval = null
+    super.joinBy = null,
+    super.keys = null,
+    super.label = null,
+    super.lastPrice = null,
+    super.lastVisiblePrice = null,
+    super.legendSymbol = null,
+    super.linecap = null,
+    super.lineWidth = null,
+    super.linkedTo = null,
+    super.marker = null,
+    super.navigatorOptions = null,
+    super.negativeColor = null,
+    super.onPoint = null,
+    super.opacity = null,
+    super.point = null,
+    super.pointInterval = null,
+    super.pointIntervalUnit = null,
+    super.pointPlacement = null,
+    super.pointRange = null,
+    this.pointsInInterval = null,
+    super.pointStart = null,
+    super.relativeXValue = null,
+    super.selected = null,
+    super.showCheckbox = null,
+    super.showInLegend = null,
+    super.showInNavigator = null,
+    super.skipKeyboardNavigation = null,
+    super.softThreshold = null,
+    super.stacking = null,
+    super.step = null,
+    super.stickyTracking = null,
+    super.threshold = null,
+    super.tooltip = null,
+    super.turboThreshold = null,
+    super.visible = null,
+    super.zIndex = null,
+    super.zoneAxis = null,
+    super.zones = null
   }) : super();
-  String? baseSeries;
-    /*
-  String get baseSeries { 
-    if (this._baseSeries == null) {
-      this._baseSeries = "";
-    }
-    return this._baseSeries!;
-  }
+  // NOTE: baseSeries skipped - type string is ignored in gen 
 
-  void set baseSeries (String v) {
-    this._baseSeries = v;
-  }
-    */
-    
-  /**
-   * This option allows to define the length of the bell curve. A unit of
-   * the length of the bell curve is standard deviation. 
-   * 
-   * Defaults to '3'. 
-      */
   double? intervals;
-    /*
-  double get intervals { 
-    if (this._intervals == null) {
-      this._intervals = 0;
-    }
-    return this._intervals!;
-  }
-
-  void set intervals (double v) {
-    this._intervals = v;
-  }
-    */
     
-  /**
-   * Defines how many points should be plotted within 1 interval. See
-   * `plotOptions.bellcurve.intervals`. 
-   * 
-   * Defaults to '3'. 
-      */
   double? pointsInInterval;
-    /*
-  double get pointsInInterval { 
-    if (this._pointsInInterval == null) {
-      this._pointsInInterval = 0;
-    }
-    return this._pointsInInterval!;
-  }
-
-  void set pointsInInterval (double v) {
-    this._pointsInInterval = v;
-  }
-    */
     
-  // NOTE: states skipped - type Generic is ignored in gen
+  // NOTE: states skipped - type Generic is ignored in gen 
 
 
   //////////////////////////////////////////////////////////////////////////////
@@ -92,21 +116,19 @@ class BellcurveSeriesOptions extends AreaSplineSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.baseSeries != null) {  
-      buffer.writeAll(["\"baseSeries\":\`", this.baseSeries, "\`,"], "");
-    }
+    // NOTE: skip serialization of baseSeries (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of data (type undefined is ignored)} 
+    // NOTE: skip serialization of data (type undefined is ignored) ignore type: 1
 
     if (this.intervals != null) {  
-      buffer.writeAll(["\"intervals\":", this.intervals, ","], "");
+      buffer.writeAll(["\"intervals\":",this.intervals, ","], "");
     }
 
     if (this.pointsInInterval != null) {  
-      buffer.writeAll(["\"pointsInInterval\":", this.pointsInInterval, ","], "");
+      buffer.writeAll(["\"pointsInInterval\":",this.pointsInInterval, ","], "");
     }
 
-    // NOTE: skip serialization of states (type Generic is ignored)} 
+    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
   }
 
 }

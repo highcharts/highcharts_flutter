@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,53 +24,13 @@ import 'OptionFragment.dart';
  * OrganizationSeriesLevelOptions 
  */
 class OrganizationSeriesLevelOptions extends SankeySeriesLevelOptions {
-  OrganizationSeriesLevelOptions( {
-    this.borderRadius = null,
-    this.linkColor = null,
-    this.linkLineWidth = null
-  }) : super();
-  double? borderRadius;
-    /*
-  double get borderRadius { 
-    if (this._borderRadius == null) {
-      this._borderRadius = 0;
-    }
-    return this._borderRadius!;
-  }
+  OrganizationSeriesLevelOptions( ) : super();
+  // NOTE: borderRadius skipped - type number is ignored in gen 
 
-  void set borderRadius (double v) {
-    this._borderRadius = v;
-  }
-    */
-    
-  String? linkColor;
-    /*
-  String get linkColor { 
-    if (this._linkColor == null) {
-      this._linkColor = "";
-    }
-    return this._linkColor!;
-  }
+  // NOTE: linkColor skipped - type string is ignored in gen 
 
-  void set linkColor (String v) {
-    this._linkColor = v;
-  }
-    */
-    
-  double? linkLineWidth;
-    /*
-  double get linkLineWidth { 
-    if (this._linkLineWidth == null) {
-      this._linkLineWidth = 0;
-    }
-    return this._linkLineWidth!;
-  }
+  // NOTE: linkLineWidth skipped - type number is ignored in gen 
 
-  void set linkLineWidth (double v) {
-    this._linkLineWidth = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -79,21 +39,15 @@ class OrganizationSeriesLevelOptions extends SankeySeriesLevelOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.borderRadius != null) {  
-      buffer.writeAll(["\"borderRadius\":", this.borderRadius, ","], "");
-    }
+    // NOTE: skip serialization of borderRadius (type number is ignored) ignore type: true
 
-    if (this.linkColor != null) {  
-      buffer.writeAll(["\"linkColor\":\`", this.linkColor, "\`,"], "");
-    }
+    // NOTE: skip serialization of linkColor (type string is ignored) ignore type: true
 
-    if (this.linkLineWidth != null) {  
-      buffer.writeAll(["\"linkLineWidth\":", this.linkLineWidth, ","], "");
-    }
+    // NOTE: skip serialization of linkLineWidth (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of link (type OrganizationLinkOptions is ignored)} 
+    // NOTE: skip serialization of link (type OrganizationLinkOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of states (type Generic is ignored)} 
+    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
   }
 
 }

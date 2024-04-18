@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,38 +22,11 @@ import 'OptionFragment.dart';
  * ColorObject 
  */
 class ColorObject extends OptionFragment {
-  ColorObject( {
-    this.color = null,
-    this.colorIndex = null
-  }) : super();
-  String? color;
-    /*
-  String get color { 
-    if (this._color == null) {
-      this._color = "";
-    }
-    return this._color!;
-  }
+  ColorObject( ) : super();
+  // NOTE: color skipped - type string is ignored in gen 
 
-  void set color (String v) {
-    this._color = v;
-  }
-    */
-    
-  double? colorIndex;
-    /*
-  double get colorIndex { 
-    if (this._colorIndex == null) {
-      this._colorIndex = 0;
-    }
-    return this._colorIndex!;
-  }
+  // NOTE: colorIndex skipped - type number is ignored in gen 
 
-  void set colorIndex (double v) {
-    this._colorIndex = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -62,13 +35,9 @@ class ColorObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.color != null) {  
-      buffer.writeAll(["\"color\":\`", this.color, "\`,"], "");
-    }
+    // NOTE: skip serialization of color (type string is ignored) ignore type: true
 
-    if (this.colorIndex != null) {  
-      buffer.writeAll(["\"colorIndex\":", this.colorIndex, ","], "");
-    }
+    // NOTE: skip serialization of colorIndex (type number is ignored) ignore type: true
   }
 
 }

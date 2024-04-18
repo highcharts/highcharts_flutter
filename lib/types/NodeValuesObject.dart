@@ -12,154 +12,37 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
 import 'BBoxObject.dart';
+import 'SunburstSeriesLevelOptions.dart';
 import 'OptionFragment.dart';
 
 /** 
  * NodeValuesObject 
  */
 class NodeValuesObject extends BBoxObject {
-  NodeValuesObject( {
-    this.direction = null,
-    this.val = null,
-    this.color = null,
-    this.borderRadius = null,
-    this.index = null,
-    this.innerR = null,
-    this.r = null,
-    this.radius = null,
-    this.siblings = null
-  }) : super();
-  double? direction;
-    /*
-  double get direction { 
-    if (this._direction == null) {
-      this._direction = 0;
-    }
-    return this._direction!;
-  }
+  NodeValuesObject( ) : super();
+  // NOTE: direction skipped - type number is ignored in gen 
 
-  void set direction (double v) {
-    this._direction = v;
-  }
-    */
-    
-  double? val;
-    /*
-  double get val { 
-    if (this._val == null) {
-      this._val = 0;
-    }
-    return this._val!;
-  }
+  // NOTE: val skipped - type number is ignored in gen 
 
-  void set val (double v) {
-    this._val = v;
-  }
-    */
-    
-  String? color;
-    /*
-  String get color { 
-    if (this._color == null) {
-      this._color = "";
-    }
-    return this._color!;
-  }
+  // NOTE: color skipped - type string is ignored in gen 
 
-  void set color (String v) {
-    this._color = v;
-  }
-    */
-    
-  String? borderRadius;
-    /*
-  String get borderRadius { 
-    if (this._borderRadius == null) {
-      this._borderRadius = "";
-    }
-    return this._borderRadius!;
-  }
+  // NOTE: borderRadius skipped - type string is ignored in gen 
 
-  void set borderRadius (String v) {
-    this._borderRadius = v;
-  }
-    */
-    
-  double? index;
-    /*
-  double get index { 
-    if (this._index == null) {
-      this._index = 0;
-    }
-    return this._index!;
-  }
+  // NOTE: index skipped - type number is ignored in gen 
 
-  void set index (double v) {
-    this._index = v;
-  }
-    */
-    
-  double? innerR;
-    /*
-  double get innerR { 
-    if (this._innerR == null) {
-      this._innerR = 0;
-    }
-    return this._innerR!;
-  }
+  // NOTE: innerR skipped - type number is ignored in gen 
 
-  void set innerR (double v) {
-    this._innerR = v;
-  }
-    */
-    
-  double? r;
-    /*
-  double get r { 
-    if (this._r == null) {
-      this._r = 0;
-    }
-    return this._r!;
-  }
+  // NOTE: r skipped - type number is ignored in gen 
 
-  void set r (double v) {
-    this._r = v;
-  }
-    */
-    
-  double? radius;
-    /*
-  double get radius { 
-    if (this._radius == null) {
-      this._radius = 0;
-    }
-    return this._radius!;
-  }
+  // NOTE: radius skipped - type number is ignored in gen 
 
-  void set radius (double v) {
-    this._radius = v;
-  }
-    */
-    
-  double? siblings;
-    /*
-  double get siblings { 
-    if (this._siblings == null) {
-      this._siblings = 0;
-    }
-    return this._siblings!;
-  }
+  // NOTE: siblings skipped - type number is ignored in gen 
 
-  void set siblings (double v) {
-    this._siblings = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -168,43 +51,25 @@ class NodeValuesObject extends BBoxObject {
     super.toJSONInner(buffer);
 
     
-    if (this.direction != null) {  
-      buffer.writeAll(["\"direction\":", this.direction, ","], "");
-    }
+    // NOTE: skip serialization of direction (type number is ignored) ignore type: true
 
-    if (this.val != null) {  
-      buffer.writeAll(["\"val\":", this.val, ","], "");
-    }
+    // NOTE: skip serialization of val (type number is ignored) ignore type: true
 
-    if (this.color != null) {  
-      buffer.writeAll(["\"color\":\`", this.color, "\`,"], "");
-    }
+    // NOTE: skip serialization of color (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of mapOptionsToLevel (type SunburstSeriesLevelOptions[] is ignored)} 
+    // NOTE: skip serialization of mapOptionsToLevel (type SunburstSeriesLevelOptions[] is ignored) ignore type: true
 
-    if (this.borderRadius != null) {  
-      buffer.writeAll(["\"borderRadius\":\`", this.borderRadius, "\`,"], "");
-    }
+    // NOTE: skip serialization of borderRadius (type string is ignored) ignore type: true
 
-    if (this.index != null) {  
-      buffer.writeAll(["\"index\":", this.index, ","], "");
-    }
+    // NOTE: skip serialization of index (type number is ignored) ignore type: true
 
-    if (this.innerR != null) {  
-      buffer.writeAll(["\"innerR\":", this.innerR, ","], "");
-    }
+    // NOTE: skip serialization of innerR (type number is ignored) ignore type: true
 
-    if (this.r != null) {  
-      buffer.writeAll(["\"r\":", this.r, ","], "");
-    }
+    // NOTE: skip serialization of r (type number is ignored) ignore type: true
 
-    if (this.radius != null) {  
-      buffer.writeAll(["\"radius\":", this.radius, ","], "");
-    }
+    // NOTE: skip serialization of radius (type number is ignored) ignore type: true
 
-    if (this.siblings != null) {  
-      buffer.writeAll(["\"siblings\":", this.siblings, ","], "");
-    }
+    // NOTE: skip serialization of siblings (type number is ignored) ignore type: true
   }
 
 }

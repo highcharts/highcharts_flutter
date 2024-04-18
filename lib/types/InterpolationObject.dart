@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,38 +22,11 @@ import 'OptionFragment.dart';
  * InterpolationObject 
  */
 class InterpolationObject extends OptionFragment {
-  InterpolationObject( {
-    this.enabled = null,
-    this.blur = null
-  }) : super();
-  bool? enabled;
-    /*
-  bool get enabled { 
-    if (this._enabled == null) {
-      this._enabled = false;
-    }
-    return this._enabled!;
-  }
+  InterpolationObject( ) : super();
+  // NOTE: enabled skipped - type boolean is ignored in gen 
 
-  void set enabled (bool v) {
-    this._enabled = v;
-  }
-    */
-    
-  double? blur;
-    /*
-  double get blur { 
-    if (this._blur == null) {
-      this._blur = 0;
-    }
-    return this._blur!;
-  }
+  // NOTE: blur skipped - type number is ignored in gen 
 
-  void set blur (double v) {
-    this._blur = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -62,13 +35,9 @@ class InterpolationObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
-    }
+    // NOTE: skip serialization of enabled (type boolean is ignored) ignore type: true
 
-    if (this.blur != null) {  
-      buffer.writeAll(["\"blur\":", this.blur, ","], "");
-    }
+    // NOTE: skip serialization of blur (type number is ignored) ignore type: true
   }
 
 }

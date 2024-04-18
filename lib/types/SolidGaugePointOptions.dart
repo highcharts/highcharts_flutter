@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,37 +24,24 @@ import 'OptionFragment.dart';
  */
 class SolidGaugePointOptions extends GaugePointOptions {
   SolidGaugePointOptions( {
-    this.innerRadius = null,
-    this.radius = null
+    super.accessibility = null,
+    super.borderColor = null,
+    super.className = null,
+    super.color = null,
+    super.colorIndex = null,
+    super.connectors = null,
+    super.dataLabels = null,
+    super.dragDrop = null,
+    super.events = null,
+    super.keys = null,
+    super.marker = null,
+    super.selected = null,
+    super.visible = null
   }) : super();
-  String? innerRadius;
-    /*
-  String get innerRadius { 
-    if (this._innerRadius == null) {
-      this._innerRadius = "";
-    }
-    return this._innerRadius!;
-  }
+  // NOTE: innerRadius skipped - type string is ignored in gen 
 
-  void set innerRadius (String v) {
-    this._innerRadius = v;
-  }
-    */
-    
-  String? radius;
-    /*
-  String get radius { 
-    if (this._radius == null) {
-      this._radius = "";
-    }
-    return this._radius!;
-  }
+  // NOTE: radius skipped - type string is ignored in gen 
 
-  void set radius (String v) {
-    this._radius = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -63,13 +50,9 @@ class SolidGaugePointOptions extends GaugePointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.innerRadius != null) {  
-      buffer.writeAll(["\"innerRadius\":\`", this.innerRadius, "\`,"], "");
-    }
+    // NOTE: skip serialization of innerRadius (type string is ignored) ignore type: true
 
-    if (this.radius != null) {  
-      buffer.writeAll(["\"radius\":\`", this.radius, "\`,"], "");
-    }
+    // NOTE: skip serialization of radius (type string is ignored) ignore type: true
   }
 
 }

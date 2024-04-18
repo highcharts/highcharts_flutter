@@ -12,65 +12,78 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
-import 'OptionFragment.dart';
+import 'WaterfallSeriesOptions.dart';
+import 'Series.dart';
+import 'PointOptions.dart';
 
-/** 
- * WaterfallSeries 
- */
-class WaterfallSeries extends OptionFragment {
-  WaterfallSeries( {
-    this.pointValKey = null,
-    this.showLine = null
-  }) : super();
-  String? pointValKey;
-    /*
-  String get pointValKey { 
-    if (this._pointValKey == null) {
-      this._pointValKey = "";
-    }
-    return this._pointValKey!;
-  }
+class WaterfallSeries extends Series {
 
-  void set pointValKey (String v) {
-    this._pointValKey = v;
-  }
-    */
-    
-  bool? showLine;
-    /*
-  bool get showLine { 
-    if (this._showLine == null) {
-      this._showLine = false;
-    }
-    return this._showLine!;
-  }
+  String? name;
+  WaterfallSeriesOptions? options;
+  List<PointOptions>? points;
+  List<List<double>>? data;
 
-  void set showLine (bool v) {
-    this._showLine = v;
-  }
-    */
-    
+  WaterfallSeries({
+    this.name = null,
+    this.options = null,
+    this.points = null,
+    this.data = null
+  });
 
-  //////////////////////////////////////////////////////////////////////////////
   
   @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of pointClass (type typeof WaterfallPoint is ignored)} 
 
-    if (this.pointValKey != null) {  
-      buffer.writeAll(["\"pointValKey\":\`", this.pointValKey, "\`,"], "");
+    if (this.name != null) {
+      buffer.writeAll(["\"name\": \"", this.name!, "\","], "");
     }
 
-    if (this.showLine != null) {  
-      buffer.writeAll(["\"showLine\":", this.showLine, ","], "");
+    buffer.write("\"type\": \"waterfall\",");
+
+    if (this.data != null && this.points == null) {
+      // Serialize as a 2d array
+
+      StringBuffer seriesData = StringBuffer();
+
+      for (var point in this.data!) {
+        seriesData.writeAll(["["], "");
+        for (var item in point) {
+          seriesData.writeAll([item, ","]);
+        }
+        seriesData.writeAll(["],"], "");
+      }
+
+      buffer.writeAll(["\"data\": [", seriesData, "],"], "");   
+
+
+    } else if (this.points != null) {
+      // Go through the points and write them
+      StringBuffer seriesData = StringBuffer();
+
+      for (var point in this.points!) {
+        seriesData.writeAll(["{"], "");
+        point.toJSONInner(seriesData); 
+        seriesData.writeAll(["},"], "");
+      }
+
+      buffer.writeAll(["\"data\": [", seriesData, "],"], "");
     }
+
+
+
+    
+    if (this.options?.upColor != null) {  
+      buffer.writeAll(["\"upColor\":\`",this.options?.upColor, "\`,"], "");
+    }
+
+    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
   }
 
 }

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,23 +22,9 @@ import 'OptionFragment.dart';
  * DataEvent 
  */
 class DataEvent extends OptionFragment {
-  DataEvent( {
-    this.type = null
-  }) : super();
-  String? type;
-    /*
-  String get type { 
-    if (this._type == null) {
-      this._type = "";
-    }
-    return this._type!;
-  }
+  DataEvent( ) : super();
+  // NOTE: type skipped - type string is ignored in gen 
 
-  void set type (String v) {
-    this._type = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -47,11 +33,9 @@ class DataEvent extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of detail (type Detail is ignored)} 
+    // NOTE: skip serialization of detail (type Detail is ignored) ignore type: true
 
-    if (this.type != null) {  
-      buffer.writeAll(["\"type\":\`", this.type, "\`,"], "");
-    }
+    // NOTE: skip serialization of type (type string is ignored) ignore type: true
   }
 
 }

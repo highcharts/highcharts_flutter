@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,68 +24,15 @@ import 'OptionFragment.dart';
  * ChartZoomingOptions 
  */
 class ChartZoomingOptions extends OptionFragment {
-  ChartZoomingOptions( {
-    this.key = null,
-    this.pinchType = null,
-    this.singleTouch = null,
-    this.type = null
-  }) : super();
-  String? key;
-    /*
-  String get key { 
-    if (this._key == null) {
-      this._key = "";
-    }
-    return this._key!;
-  }
+  ChartZoomingOptions( ) : super();
+  // NOTE: key skipped - type string is ignored in gen 
 
-  void set key (String v) {
-    this._key = v;
-  }
-    */
-    
-  String? pinchType;
-    /*
-  String get pinchType { 
-    if (this._pinchType == null) {
-      this._pinchType = "";
-    }
-    return this._pinchType!;
-  }
+  // NOTE: pinchType skipped - type string is ignored in gen 
 
-  void set pinchType (String v) {
-    this._pinchType = v;
-  }
-    */
-    
-  bool? singleTouch;
-    /*
-  bool get singleTouch { 
-    if (this._singleTouch == null) {
-      this._singleTouch = false;
-    }
-    return this._singleTouch!;
-  }
+  // NOTE: singleTouch skipped - type boolean is ignored in gen 
 
-  void set singleTouch (bool v) {
-    this._singleTouch = v;
-  }
-    */
-    
-  String? type;
-    /*
-  String get type { 
-    if (this._type == null) {
-      this._type = "";
-    }
-    return this._type!;
-  }
+  // NOTE: type skipped - type string is ignored in gen 
 
-  void set type (String v) {
-    this._type = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -94,25 +41,17 @@ class ChartZoomingOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.key != null) {  
-      buffer.writeAll(["\"key\":\`", this.key, "\`,"], "");
-    }
+    // NOTE: skip serialization of key (type string is ignored) ignore type: true
 
-    if (this.pinchType != null) {  
-      buffer.writeAll(["\"pinchType\":\`", this.pinchType, "\`,"], "");
-    }
+    // NOTE: skip serialization of pinchType (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of resetButton (type ChartResetZoomButtonOptions is ignored)} 
+    // NOTE: skip serialization of resetButton (type ChartResetZoomButtonOptions is ignored) ignore type: true
 
-    if (this.singleTouch != null) {  
-      buffer.writeAll(["\"singleTouch\":", this.singleTouch, ","], "");
-    }
+    // NOTE: skip serialization of singleTouch (type boolean is ignored) ignore type: true
 
-    if (this.type != null) {  
-      buffer.writeAll(["\"type\":\`", this.type, "\`,"], "");
-    }
+    // NOTE: skip serialization of type (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of mouseWheel (type MouseWheelZoomOptions is ignored)} 
+    // NOTE: skip serialization of mouseWheel (type MouseWheelZoomOptions is ignored) ignore type: true
   }
 
 }

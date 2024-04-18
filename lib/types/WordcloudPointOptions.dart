@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,37 +24,24 @@ import 'OptionFragment.dart';
  */
 class WordcloudPointOptions extends ColumnPointOptions {
   WordcloudPointOptions( {
-    this.name = null,
-    this.weight = null
+    super.accessibility = null,
+    super.borderColor = null,
+    super.className = null,
+    super.color = null,
+    super.colorIndex = null,
+    super.connectors = null,
+    super.dataLabels = null,
+    super.dragDrop = null,
+    super.events = null,
+    super.keys = null,
+    super.marker = null,
+    super.selected = null,
+    super.visible = null
   }) : super();
-  String? name;
-    /*
-  String get name { 
-    if (this._name == null) {
-      this._name = "";
-    }
-    return this._name!;
-  }
+  // NOTE: name skipped - type string is ignored in gen 
 
-  void set name (String v) {
-    this._name = v;
-  }
-    */
-    
-  double? weight;
-    /*
-  double get weight { 
-    if (this._weight == null) {
-      this._weight = 0;
-    }
-    return this._weight!;
-  }
+  // NOTE: weight skipped - type number is ignored in gen 
 
-  void set weight (double v) {
-    this._weight = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -63,13 +50,9 @@ class WordcloudPointOptions extends ColumnPointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.name != null) {  
-      buffer.writeAll(["\"name\":\`", this.name, "\`,"], "");
-    }
+    // NOTE: skip serialization of name (type string is ignored) ignore type: true
 
-    if (this.weight != null) {  
-      buffer.writeAll(["\"weight\":", this.weight, ","], "");
-    }
+    // NOTE: skip serialization of weight (type number is ignored) ignore type: true
   }
 
 }

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,38 +23,11 @@ import 'OptionFragment.dart';
  * AdjustStackPositionProps 
  */
 class AdjustStackPositionProps extends OptionFragment {
-  AdjustStackPositionProps( {
-    this.verticalAlign = null,
-    this.textAlign = null
-  }) : super();
-  String? verticalAlign;
-    /*
-  String get verticalAlign { 
-    if (this._verticalAlign == null) {
-      this._verticalAlign = "";
-    }
-    return this._verticalAlign!;
-  }
+  AdjustStackPositionProps( ) : super();
+  // NOTE: verticalAlign skipped - type string is ignored in gen 
 
-  void set verticalAlign (String v) {
-    this._verticalAlign = v;
-  }
-    */
-    
-  String? textAlign;
-    /*
-  String get textAlign { 
-    if (this._textAlign == null) {
-      this._textAlign = "";
-    }
-    return this._textAlign!;
-  }
+  // NOTE: textAlign skipped - type string is ignored in gen 
 
-  void set textAlign (String v) {
-    this._textAlign = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -63,15 +36,11 @@ class AdjustStackPositionProps extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of labelBox (type BBoxObject is ignored)} 
+    // NOTE: skip serialization of labelBox (type BBoxObject is ignored) ignore type: true
 
-    if (this.verticalAlign != null) {  
-      buffer.writeAll(["\"verticalAlign\":\`", this.verticalAlign, "\`,"], "");
-    }
+    // NOTE: skip serialization of verticalAlign (type string is ignored) ignore type: true
 
-    if (this.textAlign != null) {  
-      buffer.writeAll(["\"textAlign\":\`", this.textAlign, "\`,"], "");
-    }
+    // NOTE: skip serialization of textAlign (type string is ignored) ignore type: true
   }
 
 }

@@ -1,0 +1,24 @@
+[
+  {
+    "type": "missing_mapping",
+    "path": "series.keys"
+  },
+  {
+    "path": "series",
+    "parentType": "LineSeriesOptions",
+    "memberName": "levels",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "path": "series",
+    "parentType": "LineSeriesOptions",
+    "memberName": "nodes",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "path": "series",
+    "parentType": "LineSeriesOptions",
+    "memberName": "nodeWidth",
+    "msg": "The member is not present in the Flutter integration API"
+  }
+]

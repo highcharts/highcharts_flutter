@@ -1,0 +1,28 @@
+[
+  {
+    "type": "missing_mapping",
+    "path": "colors"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "series.keys"
+  },
+  {
+    "path": "series",
+    "parentType": "LineSeriesOptions",
+    "memberName": "linkWeight",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "path": "series",
+    "parentType": "LineSeriesOptions",
+    "memberName": "centeredLinks",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "path": "series",
+    "parentType": "LineSeriesOptions",
+    "memberName": "offset",
+    "msg": "The member is not present in the Flutter integration API"
+  }
+]

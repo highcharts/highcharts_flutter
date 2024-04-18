@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,36 +23,12 @@ import 'OptionFragment.dart';
  */
 class ChartPanningOptions extends OptionFragment {
   ChartPanningOptions( {
-    this.type = null,
-    this.enabled = null
+    this.enabled = null,
+    this.type = null
   }) : super();
   String? type;
-    /*
-  String get type { 
-    if (this._type == null) {
-      this._type = "";
-    }
-    return this._type!;
-  }
-
-  void set type (String v) {
-    this._type = v;
-  }
-    */
     
   bool? enabled;
-    /*
-  bool get enabled { 
-    if (this._enabled == null) {
-      this._enabled = false;
-    }
-    return this._enabled!;
-  }
-
-  void set enabled (bool v) {
-    this._enabled = v;
-  }
-    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -63,11 +39,11 @@ class ChartPanningOptions extends OptionFragment {
 
     
     if (this.type != null) {  
-      buffer.writeAll(["\"type\":\`", this.type, "\`,"], "");
+      buffer.writeAll(["\"type\":\`",this.type, "\`,"], "");
     }
 
     if (this.enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
+      buffer.writeAll(["\"enabled\":",this.enabled, ","], "");
     }
   }
 

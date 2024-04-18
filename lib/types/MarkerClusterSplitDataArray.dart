@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,38 +23,11 @@ import 'OptionFragment.dart';
  * MarkerClusterSplitDataArray 
  */
 class MarkerClusterSplitDataArray extends Array {
-  MarkerClusterSplitDataArray( {
-    this.posX = null,
-    this.posY = null
-  }) : super();
-  double? posX;
-    /*
-  double get posX { 
-    if (this._posX == null) {
-      this._posX = 0;
-    }
-    return this._posX!;
-  }
+  MarkerClusterSplitDataArray( ) : super();
+  // NOTE: posX skipped - type number is ignored in gen 
 
-  void set posX (double v) {
-    this._posX = v;
-  }
-    */
-    
-  double? posY;
-    /*
-  double get posY { 
-    if (this._posY == null) {
-      this._posY = 0;
-    }
-    return this._posY!;
-  }
+  // NOTE: posY skipped - type number is ignored in gen 
 
-  void set posY (double v) {
-    this._posY = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -63,13 +36,9 @@ class MarkerClusterSplitDataArray extends Array {
     super.toJSONInner(buffer);
 
     
-    if (this.posX != null) {  
-      buffer.writeAll(["\"posX\":", this.posX, ","], "");
-    }
+    // NOTE: skip serialization of posX (type number is ignored) ignore type: true
 
-    if (this.posY != null) {  
-      buffer.writeAll(["\"posY\":", this.posY, ","], "");
-    }
+    // NOTE: skip serialization of posY (type number is ignored) ignore type: true
   }
 
 }

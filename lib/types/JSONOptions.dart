@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,38 +24,11 @@ import 'OptionFragment.dart';
  * JSONOptions 
  */
 class JSONOptions extends OptionFragment {
-  JSONOptions( {
-    this.enabled = null,
-    this.type = null
-  }) : super();
-  bool? enabled;
-    /*
-  bool get enabled { 
-    if (this._enabled == null) {
-      this._enabled = false;
-    }
-    return this._enabled!;
-  }
+  JSONOptions( ) : super();
+  // NOTE: enabled skipped - type boolean is ignored in gen 
 
-  void set enabled (bool v) {
-    this._enabled = v;
-  }
-    */
-    
-  String? type;
-    /*
-  String get type { 
-    if (this._type == null) {
-      this._type = "";
-    }
-    return this._type!;
-  }
+  // NOTE: type skipped - type string is ignored in gen 
 
-  void set type (String v) {
-    this._type = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -64,17 +37,13 @@ class JSONOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
-    }
+    // NOTE: skip serialization of enabled (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of styles (type ElementStylesJSON is ignored)} 
+    // NOTE: skip serialization of styles (type ElementStylesJSON is ignored) ignore type: true
 
-    if (this.type != null) {  
-      buffer.writeAll(["\"type\":\`", this.type, "\`,"], "");
-    }
+    // NOTE: skip serialization of type (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of snap (type SnapJSON is ignored)} 
+    // NOTE: skip serialization of snap (type SnapJSON is ignored) ignore type: true
   }
 
 }

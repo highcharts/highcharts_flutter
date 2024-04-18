@@ -1,0 +1,22 @@
+[
+  {
+    "type": "missing_mapping",
+    "path": "colors"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "pane"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "xAxis.labels"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "xAxis.categories"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "yAxis.crosshair"
+  }
+]

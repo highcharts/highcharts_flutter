@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,22 +24,22 @@ import 'OptionFragment.dart';
  */
 class OHLCPointOptions extends HLCPointOptions {
   OHLCPointOptions( {
-    this.upColor = null
+    super.accessibility = null,
+    super.borderColor = null,
+    super.className = null,
+    super.color = null,
+    super.colorIndex = null,
+    super.connectors = null,
+    super.dataLabels = null,
+    super.dragDrop = null,
+    super.events = null,
+    super.keys = null,
+    super.marker = null,
+    super.selected = null,
+    super.visible = null
   }) : super();
-  String? upColor;
-    /*
-  String get upColor { 
-    if (this._upColor == null) {
-      this._upColor = "";
-    }
-    return this._upColor!;
-  }
+  // NOTE: upColor skipped - type string is ignored in gen 
 
-  void set upColor (String v) {
-    this._upColor = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -48,9 +48,7 @@ class OHLCPointOptions extends HLCPointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.upColor != null) {  
-      buffer.writeAll(["\"upColor\":\`", this.upColor, "\`,"], "");
-    }
+    // NOTE: skip serialization of upColor (type string is ignored) ignore type: true
   }
 
 }

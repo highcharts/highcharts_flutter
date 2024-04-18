@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,68 +22,15 @@ import 'OptionFragment.dart';
  * SetRootNodeObject 
  */
 class SetRootNodeObject extends OptionFragment {
-  SetRootNodeObject( {
-    this.newRootId = null,
-    this.previousRootId = null,
-    this.redraw = null,
-    this.trigger = null
-  }) : super();
-  String? newRootId;
-    /*
-  String get newRootId { 
-    if (this._newRootId == null) {
-      this._newRootId = "";
-    }
-    return this._newRootId!;
-  }
+  SetRootNodeObject( ) : super();
+  // NOTE: newRootId skipped - type string is ignored in gen 
 
-  void set newRootId (String v) {
-    this._newRootId = v;
-  }
-    */
-    
-  String? previousRootId;
-    /*
-  String get previousRootId { 
-    if (this._previousRootId == null) {
-      this._previousRootId = "";
-    }
-    return this._previousRootId!;
-  }
+  // NOTE: previousRootId skipped - type string is ignored in gen 
 
-  void set previousRootId (String v) {
-    this._previousRootId = v;
-  }
-    */
-    
-  bool? redraw;
-    /*
-  bool get redraw { 
-    if (this._redraw == null) {
-      this._redraw = false;
-    }
-    return this._redraw!;
-  }
+  // NOTE: redraw skipped - type boolean is ignored in gen 
 
-  void set redraw (bool v) {
-    this._redraw = v;
-  }
-    */
-    
-  String? trigger;
-    /*
-  String get trigger { 
-    if (this._trigger == null) {
-      this._trigger = "";
-    }
-    return this._trigger!;
-  }
+  // NOTE: trigger skipped - type string is ignored in gen 
 
-  void set trigger (String v) {
-    this._trigger = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -92,41 +39,25 @@ class SetRootNodeObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.newRootId != null) {  
-      buffer.writeAll(["\"newRootId\":\`", this.newRootId, "\`,"], "");
-    }
+    // NOTE: skip serialization of newRootId (type string is ignored) ignore type: true
 
-    if (this.previousRootId != null) {  
-      buffer.writeAll(["\"previousRootId\":\`", this.previousRootId, "\`,"], "");
-    }
+    // NOTE: skip serialization of previousRootId (type string is ignored) ignore type: true
 
-    if (this.redraw != null) {  
-      buffer.writeAll(["\"redraw\":", this.redraw, ","], "");
-    }
+    // NOTE: skip serialization of redraw (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of series (type object is ignored)} 
+    // NOTE: skip serialization of series (type object is ignored) ignore type: 1
 
-    if (this.trigger != null) {  
-      buffer.writeAll(["\"trigger\":\`", this.trigger, "\`,"], "");
-    }
+    // NOTE: skip serialization of trigger (type string is ignored) ignore type: true
 
-    if (this.newRootId != null) {  
-      buffer.writeAll(["\"newRootId\":\`", this.newRootId, "\`,"], "");
-    }
+    // NOTE: skip serialization of newRootId (type string is ignored) ignore type: true
 
-    if (this.previousRootId != null) {  
-      buffer.writeAll(["\"previousRootId\":\`", this.previousRootId, "\`,"], "");
-    }
+    // NOTE: skip serialization of previousRootId (type string is ignored) ignore type: true
 
-    if (this.redraw != null) {  
-      buffer.writeAll(["\"redraw\":", this.redraw, ","], "");
-    }
+    // NOTE: skip serialization of redraw (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of series (type object is ignored)} 
+    // NOTE: skip serialization of series (type object is ignored) ignore type: 1
 
-    if (this.trigger != null) {  
-      buffer.writeAll(["\"trigger\":\`", this.trigger, "\`,"], "");
-    }
+    // NOTE: skip serialization of trigger (type string is ignored) ignore type: true
   }
 
 }

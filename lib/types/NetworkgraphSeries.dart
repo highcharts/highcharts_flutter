@@ -12,140 +12,94 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
-import 'DragNodesSeries.dart';
-import 'NetworkgraphChart.dart';
-import 'OptionFragment.dart';
+import 'NetworkgraphSeriesOptions.dart';
+import 'Series.dart';
+import 'PointOptions.dart';
 
-/** 
- * NetworkgraphSeries 
- */
-class NetworkgraphSeries extends DragNodesSeries {
-  NetworkgraphSeries( {
-    this.directTouch = null,
-    this.hasDraggableNodes = null,
-    this.isCartesian = null,
-    this.noSharedTooltip = null,
-    this.requireSorting = null
-  }) : super();
-  bool? directTouch;
-    /*
-  bool get directTouch { 
-    if (this._directTouch == null) {
-      this._directTouch = false;
-    }
-    return this._directTouch!;
-  }
+class NetworkgraphSeries extends Series {
 
-  void set directTouch (bool v) {
-    this._directTouch = v;
-  }
-    */
-    
-  bool? hasDraggableNodes;
-    /*
-  bool get hasDraggableNodes { 
-    if (this._hasDraggableNodes == null) {
-      this._hasDraggableNodes = false;
-    }
-    return this._hasDraggableNodes!;
-  }
+  String? name;
+  NetworkgraphSeriesOptions? options;
+  List<PointOptions>? points;
+  List<List<double>>? data;
 
-  void set hasDraggableNodes (bool v) {
-    this._hasDraggableNodes = v;
-  }
-    */
-    
-  bool? isCartesian;
-    /*
-  bool get isCartesian { 
-    if (this._isCartesian == null) {
-      this._isCartesian = false;
-    }
-    return this._isCartesian!;
-  }
+  NetworkgraphSeries({
+    this.name = null,
+    this.options = null,
+    this.points = null,
+    this.data = null
+  });
 
-  void set isCartesian (bool v) {
-    this._isCartesian = v;
-  }
-    */
-    
-  bool? noSharedTooltip;
-    /*
-  bool get noSharedTooltip { 
-    if (this._noSharedTooltip == null) {
-      this._noSharedTooltip = false;
-    }
-    return this._noSharedTooltip!;
-  }
-
-  void set noSharedTooltip (bool v) {
-    this._noSharedTooltip = v;
-  }
-    */
-    
-  bool? requireSorting;
-    /*
-  bool get requireSorting { 
-    if (this._requireSorting == null) {
-      this._requireSorting = false;
-    }
-    return this._requireSorting!;
-  }
-
-  void set requireSorting (bool v) {
-    this._requireSorting = v;
-  }
-    */
-    
-
-  //////////////////////////////////////////////////////////////////////////////
   
   @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of pointClass (type typeof NetworkgraphPoint is ignored)} 
 
-    // NOTE: skip serialization of chart (type NetworkgraphChart is ignored)} 
-
-    // NOTE: skip serialization of data (type NetworkgraphPoint[] is ignored)} 
-
-    if (this.directTouch != null) {  
-      buffer.writeAll(["\"directTouch\":", this.directTouch, ","], "");
+    if (this.name != null) {
+      buffer.writeAll(["\"name\": \"", this.name!, "\","], "");
     }
 
-    // NOTE: skip serialization of forces (type string[] is ignored)} 
+    buffer.write("\"type\": \"networkgraph\",");
 
-    if (this.hasDraggableNodes != null) {  
-      buffer.writeAll(["\"hasDraggableNodes\":", this.hasDraggableNodes, ","], "");
+    if (this.data != null && this.points == null) {
+      // Serialize as a 2d array
+
+      StringBuffer seriesData = StringBuffer();
+
+      for (var point in this.data!) {
+        seriesData.writeAll(["["], "");
+        for (var item in point) {
+          seriesData.writeAll([item, ","]);
+        }
+        seriesData.writeAll(["],"], "");
+      }
+
+      buffer.writeAll(["\"data\": [", seriesData, "],"], "");   
+
+
+    } else if (this.points != null) {
+      // Go through the points and write them
+      StringBuffer seriesData = StringBuffer();
+
+      for (var point in this.points!) {
+        seriesData.writeAll(["{"], "");
+        point.toJSONInner(seriesData); 
+        seriesData.writeAll(["},"], "");
+      }
+
+      buffer.writeAll(["\"data\": [", seriesData, "],"], "");
     }
 
-    if (this.isCartesian != null) {  
-      buffer.writeAll(["\"isCartesian\":", this.isCartesian, ","], "");
+
+
+    
+    // NOTE: skip serialization of dataLabels (type NetworkgraphDataLabelsOptionsObject is ignored) ignore type: false
+
+    if (this.options?.draggable != null) {  
+      buffer.writeAll(["\"draggable\":",this.options?.draggable, ","], "");
     }
 
-    // NOTE: skip serialization of layout (type ReingoldFruchtermanLayout is ignored)} 
+    // NOTE: skip serialization of events (type NetworkgraphEventsOptions is ignored) ignore type: false
 
-    // NOTE: skip serialization of nodeLookup (type Generic is ignored)} 
+    // NOTE: skip serialization of inactiveOtherPoints (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of nodes (type NetworkgraphPoint[] is ignored)} 
-
-    if (this.noSharedTooltip != null) {  
-      buffer.writeAll(["\"noSharedTooltip\":", this.noSharedTooltip, ","], "");
+    if (this.options?.layoutAlgorithm != null) {  
+      buffer.writeAll(["\"layoutAlgorithm\":",this.options?.layoutAlgorithm?.toJSON(), ","], "");
     }
 
-    // NOTE: skip serialization of pointArrayMap (type string[] is ignored)} 
-
-    if (this.requireSorting != null) {  
-      buffer.writeAll(["\"requireSorting\":", this.requireSorting, ","], "");
+    if (this.options?.link != null) {  
+      buffer.writeAll(["\"link\":",this.options?.link?.toJSON(), ","], "");
     }
 
-    // NOTE: skip serialization of trackerGroups (type string[] is ignored)} 
+    // NOTE: skip serialization of nodes (type NetworkgraphPointOptions[] is ignored) ignore type: true
+
+    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
   }
 
 }

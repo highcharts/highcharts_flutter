@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -33,11 +33,11 @@ class Toolbars extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of cell (type Options is ignored)} 
+    // NOTE: skip serialization of cell (type Options is ignored) ignore type: true
 
-    // NOTE: skip serialization of row (type Options is ignored)} 
+    // NOTE: skip serialization of row (type Options is ignored) ignore type: true
 
-    // NOTE: skip serialization of sidebar (type Options is ignored)} 
+    // NOTE: skip serialization of sidebar (type Options is ignored) ignore type: true
   }
 
 }

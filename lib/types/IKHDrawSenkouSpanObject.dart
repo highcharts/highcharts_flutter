@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -26,23 +26,9 @@ import 'OptionFragment.dart';
  * IKHDrawSenkouSpanObject 
  */
 class IKHDrawSenkouSpanObject extends OptionFragment {
-  IKHDrawSenkouSpanObject( {
-    this.color = null
-  }) : super();
-  String? color;
-    /*
-  String get color { 
-    if (this._color == null) {
-      this._color = "";
-    }
-    return this._color!;
-  }
+  IKHDrawSenkouSpanObject( ) : super();
+  // NOTE: color skipped - type string is ignored in gen 
 
-  void set color (String v) {
-    this._color = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -51,21 +37,19 @@ class IKHDrawSenkouSpanObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of indicator (type IKHIndicator is ignored)} 
+    // NOTE: skip serialization of indicator (type IKHIndicator is ignored) ignore type: true
 
-    // NOTE: skip serialization of points (type IKHPoint[] is ignored)} 
+    // NOTE: skip serialization of points (type IKHPoint[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of nextPoints (type IKHPoint[] is ignored)} 
+    // NOTE: skip serialization of nextPoints (type IKHPoint[] is ignored) ignore type: true
 
-    if (this.color != null) {  
-      buffer.writeAll(["\"color\":\`", this.color, "\`,"], "");
-    }
+    // NOTE: skip serialization of color (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of options (type IKHOptions is ignored)} 
+    // NOTE: skip serialization of options (type IKHOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of gap (type IKHGapExtensionObject is ignored)} 
+    // NOTE: skip serialization of gap (type IKHGapExtensionObject is ignored) ignore type: true
 
-    // NOTE: skip serialization of graph (type SVGElement is ignored)} 
+    // NOTE: skip serialization of graph (type SVGElement is ignored) ignore type: true
   }
 
 }

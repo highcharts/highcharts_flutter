@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,113 +23,21 @@ import 'OptionFragment.dart';
  * ToggleFormFieldOptions 
  */
 class ToggleFormFieldOptions extends OptionFragment {
-  ToggleFormFieldOptions( {
-    this.title = null,
-    this.value = null,
-    this.enabledOnOffLabels = null,
-    this.className = null,
-    this.id = null,
-    this.name = null,
-    this.langKey = null
-  }) : super();
-  String? title;
-    /*
-  String get title { 
-    if (this._title == null) {
-      this._title = "";
-    }
-    return this._title!;
-  }
+  ToggleFormFieldOptions( ) : super();
+  // NOTE: title skipped - type string is ignored in gen 
 
-  void set title (String v) {
-    this._title = v;
-  }
-    */
-    
-  bool? value;
-    /*
-  bool get value { 
-    if (this._value == null) {
-      this._value = false;
-    }
-    return this._value!;
-  }
+  // NOTE: value skipped - type boolean is ignored in gen 
 
-  void set value (bool v) {
-    this._value = v;
-  }
-    */
-    
-  bool? enabledOnOffLabels;
-    /*
-  bool get enabledOnOffLabels { 
-    if (this._enabledOnOffLabels == null) {
-      this._enabledOnOffLabels = false;
-    }
-    return this._enabledOnOffLabels!;
-  }
+  // NOTE: enabledOnOffLabels skipped - type boolean is ignored in gen 
 
-  void set enabledOnOffLabels (bool v) {
-    this._enabledOnOffLabels = v;
-  }
-    */
-    
-  String? className;
-    /*
-  String get className { 
-    if (this._className == null) {
-      this._className = "";
-    }
-    return this._className!;
-  }
+  // NOTE: className skipped - type string is ignored in gen 
 
-  void set className (String v) {
-    this._className = v;
-  }
-    */
-    
-  String? id;
-    /*
-  String get id { 
-    if (this._id == null) {
-      this._id = "";
-    }
-    return this._id!;
-  }
+  // NOTE: id skipped - type string is ignored in gen 
 
-  void set id (String v) {
-    this._id = v;
-  }
-    */
-    
-  String? name;
-    /*
-  String get name { 
-    if (this._name == null) {
-      this._name = "";
-    }
-    return this._name!;
-  }
+  // NOTE: name skipped - type string is ignored in gen 
 
-  void set name (String v) {
-    this._name = v;
-  }
-    */
-    
-  String? langKey;
-    /*
-  String get langKey { 
-    if (this._langKey == null) {
-      this._langKey = "";
-    }
-    return this._langKey!;
-  }
+  // NOTE: langKey skipped - type string is ignored in gen 
 
-  void set langKey (String v) {
-    this._langKey = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -138,35 +46,21 @@ class ToggleFormFieldOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.title != null) {  
-      buffer.writeAll(["\"title\":\`", this.title, "\`,"], "");
-    }
+    // NOTE: skip serialization of title (type string is ignored) ignore type: true
 
-    if (this.value != null) {  
-      buffer.writeAll(["\"value\":", this.value, ","], "");
-    }
+    // NOTE: skip serialization of value (type boolean is ignored) ignore type: true
 
-    if (this.enabledOnOffLabels != null) {  
-      buffer.writeAll(["\"enabledOnOffLabels\":", this.enabledOnOffLabels, ","], "");
-    }
+    // NOTE: skip serialization of enabledOnOffLabels (type boolean is ignored) ignore type: true
 
-    if (this.className != null) {  
-      buffer.writeAll(["\"className\":\`", this.className, "\`,"], "");
-    }
+    // NOTE: skip serialization of className (type string is ignored) ignore type: true
 
-    if (this.id != null) {  
-      buffer.writeAll(["\"id\":\`", this.id, "\`,"], "");
-    }
+    // NOTE: skip serialization of id (type string is ignored) ignore type: true
 
-    if (this.name != null) {  
-      buffer.writeAll(["\"name\":\`", this.name, "\`,"], "");
-    }
+    // NOTE: skip serialization of name (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of lang (type LangOptions is ignored)} 
+    // NOTE: skip serialization of lang (type LangOptions is ignored) ignore type: true
 
-    if (this.langKey != null) {  
-      buffer.writeAll(["\"langKey\":\`", this.langKey, "\`,"], "");
-    }
+    // NOTE: skip serialization of langKey (type string is ignored) ignore type: true
   }
 
 }

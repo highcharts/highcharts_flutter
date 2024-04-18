@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,113 +22,21 @@ import 'OptionFragment.dart';
  * BoostPointMockup 
  */
 class BoostPointMockup extends OptionFragment {
-  BoostPointMockup( {
-    this.clientX = null,
-    this.dist = null,
-    this.distX = null,
-    this.plotX = null,
-    this.plotY = null,
-    this.i = null,
-    this.percentage = null
-  }) : super();
-  double? clientX;
-    /*
-  double get clientX { 
-    if (this._clientX == null) {
-      this._clientX = 0;
-    }
-    return this._clientX!;
-  }
+  BoostPointMockup( ) : super();
+  // NOTE: clientX skipped - type number is ignored in gen 
 
-  void set clientX (double v) {
-    this._clientX = v;
-  }
-    */
-    
-  double? dist;
-    /*
-  double get dist { 
-    if (this._dist == null) {
-      this._dist = 0;
-    }
-    return this._dist!;
-  }
+  // NOTE: dist skipped - type number is ignored in gen 
 
-  void set dist (double v) {
-    this._dist = v;
-  }
-    */
-    
-  double? distX;
-    /*
-  double get distX { 
-    if (this._distX == null) {
-      this._distX = 0;
-    }
-    return this._distX!;
-  }
+  // NOTE: distX skipped - type number is ignored in gen 
 
-  void set distX (double v) {
-    this._distX = v;
-  }
-    */
-    
-  double? plotX;
-    /*
-  double get plotX { 
-    if (this._plotX == null) {
-      this._plotX = 0;
-    }
-    return this._plotX!;
-  }
+  // NOTE: plotX skipped - type number is ignored in gen 
 
-  void set plotX (double v) {
-    this._plotX = v;
-  }
-    */
-    
-  double? plotY;
-    /*
-  double get plotY { 
-    if (this._plotY == null) {
-      this._plotY = 0;
-    }
-    return this._plotY!;
-  }
+  // NOTE: plotY skipped - type number is ignored in gen 
 
-  void set plotY (double v) {
-    this._plotY = v;
-  }
-    */
-    
-  double? i;
-    /*
-  double get i { 
-    if (this._i == null) {
-      this._i = 0;
-    }
-    return this._i!;
-  }
+  // NOTE: i skipped - type number is ignored in gen 
 
-  void set i (double v) {
-    this._i = v;
-  }
-    */
-    
-  double? percentage;
-    /*
-  double get percentage { 
-    if (this._percentage == null) {
-      this._percentage = 0;
-    }
-    return this._percentage!;
-  }
+  // NOTE: percentage skipped - type number is ignored in gen 
 
-  void set percentage (double v) {
-    this._percentage = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -137,35 +45,21 @@ class BoostPointMockup extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of x (type false is ignored)} 
+    // NOTE: skip serialization of x (type false is ignored) ignore type: true
 
-    if (this.clientX != null) {  
-      buffer.writeAll(["\"clientX\":", this.clientX, ","], "");
-    }
+    // NOTE: skip serialization of clientX (type number is ignored) ignore type: true
 
-    if (this.dist != null) {  
-      buffer.writeAll(["\"dist\":", this.dist, ","], "");
-    }
+    // NOTE: skip serialization of dist (type number is ignored) ignore type: true
 
-    if (this.distX != null) {  
-      buffer.writeAll(["\"distX\":", this.distX, ","], "");
-    }
+    // NOTE: skip serialization of distX (type number is ignored) ignore type: true
 
-    if (this.plotX != null) {  
-      buffer.writeAll(["\"plotX\":", this.plotX, ","], "");
-    }
+    // NOTE: skip serialization of plotX (type number is ignored) ignore type: true
 
-    if (this.plotY != null) {  
-      buffer.writeAll(["\"plotY\":", this.plotY, ","], "");
-    }
+    // NOTE: skip serialization of plotY (type number is ignored) ignore type: true
 
-    if (this.i != null) {  
-      buffer.writeAll(["\"i\":", this.i, ","], "");
-    }
+    // NOTE: skip serialization of i (type number is ignored) ignore type: true
 
-    if (this.percentage != null) {  
-      buffer.writeAll(["\"percentage\":", this.percentage, ","], "");
-    }
+    // NOTE: skip serialization of percentage (type number is ignored) ignore type: true
   }
 
 }

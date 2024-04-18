@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,23 +22,9 @@ import 'OptionFragment.dart';
  * Element 
  */
 class Element extends OptionFragment {
-  Element( {
-    this.gradient = null
-  }) : super();
-  String? gradient;
-    /*
-  String get gradient { 
-    if (this._gradient == null) {
-      this._gradient = "";
-    }
-    return this._gradient!;
-  }
+  Element( ) : super();
+  // NOTE: gradient skipped - type string is ignored in gen 
 
-  void set gradient (String v) {
-    this._gradient = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -47,19 +33,17 @@ class Element extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.gradient != null) {  
-      buffer.writeAll(["\"gradient\":\`", this.gradient, "\`,"], "");
-    }
+    // NOTE: skip serialization of gradient (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of radialReference (type number[] is ignored)} 
+    // NOTE: skip serialization of radialReference (type number[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of currentStyle (type ElementCSSInlineStyle is ignored)} 
+    // NOTE: skip serialization of currentStyle (type ElementCSSInlineStyle is ignored) ignore type: true
 
-    // NOTE: skip serialization of mozRequestFullScreen (type Function is ignored)} 
+    // NOTE: skip serialization of mozRequestFullScreen (type Function is ignored) ignore type: 1
 
-    // NOTE: skip serialization of msRequestFullscreen (type Function is ignored)} 
+    // NOTE: skip serialization of msRequestFullscreen (type Function is ignored) ignore type: 1
 
-    // NOTE: skip serialization of webkitRequestFullScreen (type Function is ignored)} 
+    // NOTE: skip serialization of webkitRequestFullScreen (type Function is ignored) ignore type: 1
   }
 
 }

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -34,9 +34,9 @@ class MapPointer extends Pointer {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of chart (type MapChart is ignored)} 
+    // NOTE: skip serialization of chart (type MapChart is ignored) ignore type: true
 
-    // NOTE: skip serialization of mapNavigation (type MapNavigation is ignored)} 
+    // NOTE: skip serialization of mapNavigation (type MapNavigation is ignored) ignore type: true
   }
 
 }

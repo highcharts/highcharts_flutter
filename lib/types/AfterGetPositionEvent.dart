@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -34,7 +34,7 @@ class AfterGetPositionEvent extends Event {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of pos (type PositionObject is ignored)} 
+    // NOTE: skip serialization of pos (type PositionObject is ignored) ignore type: true
   }
 
 }

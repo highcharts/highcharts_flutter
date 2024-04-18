@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,40 +22,13 @@ import 'OptionFragment.dart';
  * MIDIEvent 
  */
 class MIDIEvent extends OptionFragment {
-  MIDIEvent( {
-    this.timeMS = null,
-    this.type = null,
-    this.data = null
-  }) : super();
-  double? timeMS;
-    /*
-  double get timeMS { 
-    if (this._timeMS == null) {
-      this._timeMS = 0;
-    }
-    return this._timeMS!;
-  }
+  MIDIEvent( ) : super();
+  // NOTE: timeMS skipped - type number is ignored in gen 
 
-  void set timeMS (double v) {
-    this._timeMS = v;
-  }
-    */
-    
-  String? type;
-    /*
-  String get type { 
-    if (this._type == null) {
-      this._type = "";
-    }
-    return this._type!;
-  }
+  // NOTE: type skipped - type string is ignored in gen 
 
-  void set type (String v) {
-    this._type = v;
-  }
-    */
-    
-  List<double>? data; // double
+  // NOTE: data skipped - type number is ignored in gen 
+
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -64,15 +37,11 @@ class MIDIEvent extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.timeMS != null) {  
-      buffer.writeAll(["\"timeMS\":", this.timeMS, ","], "");
-    }
+    // NOTE: skip serialization of timeMS (type number is ignored) ignore type: true
 
-    if (this.type != null) {  
-      buffer.writeAll(["\"type\":\`", this.type, "\`,"], "");
-    }
+    // NOTE: skip serialization of type (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of data (type number is ignored)} 
+    // NOTE: skip serialization of data (type number is ignored) ignore type: true
   }
 
 }

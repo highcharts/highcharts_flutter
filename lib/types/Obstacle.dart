@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,68 +22,15 @@ import 'OptionFragment.dart';
  * Obstacle 
  */
 class Obstacle extends OptionFragment {
-  Obstacle( {
-    this.xMax = null,
-    this.xMin = null,
-    this.yMax = null,
-    this.yMin = null
-  }) : super();
-  double? xMax;
-    /*
-  double get xMax { 
-    if (this._xMax == null) {
-      this._xMax = 0;
-    }
-    return this._xMax!;
-  }
+  Obstacle( ) : super();
+  // NOTE: xMax skipped - type number is ignored in gen 
 
-  void set xMax (double v) {
-    this._xMax = v;
-  }
-    */
-    
-  double? xMin;
-    /*
-  double get xMin { 
-    if (this._xMin == null) {
-      this._xMin = 0;
-    }
-    return this._xMin!;
-  }
+  // NOTE: xMin skipped - type number is ignored in gen 
 
-  void set xMin (double v) {
-    this._xMin = v;
-  }
-    */
-    
-  double? yMax;
-    /*
-  double get yMax { 
-    if (this._yMax == null) {
-      this._yMax = 0;
-    }
-    return this._yMax!;
-  }
+  // NOTE: yMax skipped - type number is ignored in gen 
 
-  void set yMax (double v) {
-    this._yMax = v;
-  }
-    */
-    
-  double? yMin;
-    /*
-  double get yMin { 
-    if (this._yMin == null) {
-      this._yMin = 0;
-    }
-    return this._yMin!;
-  }
+  // NOTE: yMin skipped - type number is ignored in gen 
 
-  void set yMin (double v) {
-    this._yMin = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -92,21 +39,13 @@ class Obstacle extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.xMax != null) {  
-      buffer.writeAll(["\"xMax\":", this.xMax, ","], "");
-    }
+    // NOTE: skip serialization of xMax (type number is ignored) ignore type: true
 
-    if (this.xMin != null) {  
-      buffer.writeAll(["\"xMin\":", this.xMin, ","], "");
-    }
+    // NOTE: skip serialization of xMin (type number is ignored) ignore type: true
 
-    if (this.yMax != null) {  
-      buffer.writeAll(["\"yMax\":", this.yMax, ","], "");
-    }
+    // NOTE: skip serialization of yMax (type number is ignored) ignore type: true
 
-    if (this.yMin != null) {  
-      buffer.writeAll(["\"yMin\":", this.yMin, ","], "");
-    }
+    // NOTE: skip serialization of yMin (type number is ignored) ignore type: true
   }
 
 }

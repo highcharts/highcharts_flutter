@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,23 +23,9 @@ import 'OptionFragment.dart';
  * PointStateInactiveOptions 
  */
 class PointStateInactiveOptions extends StateInactiveOptions {
-  PointStateInactiveOptions( {
-    this.opacity = null
-  }) : super();
-  double? opacity;
-    /*
-  double get opacity { 
-    if (this._opacity == null) {
-      this._opacity = 0;
-    }
-    return this._opacity!;
-  }
+  PointStateInactiveOptions( ) : super();
+  // NOTE: opacity skipped - type number is ignored in gen 
 
-  void set opacity (double v) {
-    this._opacity = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -48,11 +34,9 @@ class PointStateInactiveOptions extends StateInactiveOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.opacity != null) {  
-      buffer.writeAll(["\"opacity\":", this.opacity, ","], "");
-    }
+    // NOTE: skip serialization of opacity (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of animation (type Generic is ignored)} 
+    // NOTE: skip serialization of animation (type Generic is ignored) ignore type: true
   }
 
 }

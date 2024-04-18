@@ -12,154 +12,37 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
 import 'DragNodesSeries.dart';
+import 'NetworkgraphPoint.dart';
 import 'OptionFragment.dart';
 
 /** 
  * PackedBubbleSeries 
  */
 class PackedBubbleSeries extends DragNodesSeries {
-  PackedBubbleSeries( {
-    this.bubblePadding = null,
-    this.hasDraggableNodes = null,
-    this.isCartesian = null,
-    this.maxPxSize = null,
-    this.minPxSize = null,
-    this.noSharedTooltip = null,
-    this.pointValKey = null,
-    this.specialGroup = null,
-    this.zoneAxis = null
-  }) : super();
-  bool? bubblePadding;
-    /*
-  bool get bubblePadding { 
-    if (this._bubblePadding == null) {
-      this._bubblePadding = false;
-    }
-    return this._bubblePadding!;
-  }
+  PackedBubbleSeries( ) : super();
+  // NOTE: bubblePadding skipped - type boolean is ignored in gen 
 
-  void set bubblePadding (bool v) {
-    this._bubblePadding = v;
-  }
-    */
-    
-  bool? hasDraggableNodes;
-    /*
-  bool get hasDraggableNodes { 
-    if (this._hasDraggableNodes == null) {
-      this._hasDraggableNodes = false;
-    }
-    return this._hasDraggableNodes!;
-  }
+  // NOTE: hasDraggableNodes skipped - type boolean is ignored in gen 
 
-  void set hasDraggableNodes (bool v) {
-    this._hasDraggableNodes = v;
-  }
-    */
-    
-  bool? isCartesian;
-    /*
-  bool get isCartesian { 
-    if (this._isCartesian == null) {
-      this._isCartesian = false;
-    }
-    return this._isCartesian!;
-  }
+  // NOTE: isCartesian skipped - type boolean is ignored in gen 
 
-  void set isCartesian (bool v) {
-    this._isCartesian = v;
-  }
-    */
-    
-  double? maxPxSize;
-    /*
-  double get maxPxSize { 
-    if (this._maxPxSize == null) {
-      this._maxPxSize = 0;
-    }
-    return this._maxPxSize!;
-  }
+  // NOTE: maxPxSize skipped - type number is ignored in gen 
 
-  void set maxPxSize (double v) {
-    this._maxPxSize = v;
-  }
-    */
-    
-  double? minPxSize;
-    /*
-  double get minPxSize { 
-    if (this._minPxSize == null) {
-      this._minPxSize = 0;
-    }
-    return this._minPxSize!;
-  }
+  // NOTE: minPxSize skipped - type number is ignored in gen 
 
-  void set minPxSize (double v) {
-    this._minPxSize = v;
-  }
-    */
-    
-  bool? noSharedTooltip;
-    /*
-  bool get noSharedTooltip { 
-    if (this._noSharedTooltip == null) {
-      this._noSharedTooltip = false;
-    }
-    return this._noSharedTooltip!;
-  }
+  // NOTE: noSharedTooltip skipped - type boolean is ignored in gen 
 
-  void set noSharedTooltip (bool v) {
-    this._noSharedTooltip = v;
-  }
-    */
-    
-  String? pointValKey;
-    /*
-  String get pointValKey { 
-    if (this._pointValKey == null) {
-      this._pointValKey = "";
-    }
-    return this._pointValKey!;
-  }
+  // NOTE: pointValKey skipped - type string is ignored in gen 
 
-  void set pointValKey (String v) {
-    this._pointValKey = v;
-  }
-    */
-    
-  String? specialGroup;
-    /*
-  String get specialGroup { 
-    if (this._specialGroup == null) {
-      this._specialGroup = "";
-    }
-    return this._specialGroup!;
-  }
+  // NOTE: specialGroup skipped - type string is ignored in gen 
 
-  void set specialGroup (String v) {
-    this._specialGroup = v;
-  }
-    */
-    
-  String? zoneAxis;
-    /*
-  String get zoneAxis { 
-    if (this._zoneAxis == null) {
-      this._zoneAxis = "";
-    }
-    return this._zoneAxis!;
-  }
+  // NOTE: zoneAxis skipped - type string is ignored in gen 
 
-  void set zoneAxis (String v) {
-    this._zoneAxis = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -168,59 +51,41 @@ class PackedBubbleSeries extends DragNodesSeries {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of pointClass (type typeof PackedBubblePoint is ignored)} 
+    // NOTE: skip serialization of pointClass (type typeof PackedBubblePoint is ignored) ignore type: true
 
-    if (this.bubblePadding != null) {  
-      buffer.writeAll(["\"bubblePadding\":", this.bubblePadding, ","], "");
-    }
+    // NOTE: skip serialization of bubblePadding (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of forces (type string[] is ignored)} 
+    // NOTE: skip serialization of forces (type string[] is ignored) ignore type: true
 
-    if (this.hasDraggableNodes != null) {  
-      buffer.writeAll(["\"hasDraggableNodes\":", this.hasDraggableNodes, ","], "");
-    }
+    // NOTE: skip serialization of hasDraggableNodes (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of isBubble (type true is ignored)} 
+    // NOTE: skip serialization of isBubble (type true is ignored) ignore type: 1
 
-    if (this.isCartesian != null) {  
-      buffer.writeAll(["\"isCartesian\":", this.isCartesian, ","], "");
-    }
+    // NOTE: skip serialization of isCartesian (type boolean is ignored) ignore type: true
 
-    if (this.maxPxSize != null) {  
-      buffer.writeAll(["\"maxPxSize\":", this.maxPxSize, ","], "");
-    }
+    // NOTE: skip serialization of maxPxSize (type number is ignored) ignore type: true
 
-    if (this.minPxSize != null) {  
-      buffer.writeAll(["\"minPxSize\":", this.minPxSize, ","], "");
-    }
+    // NOTE: skip serialization of minPxSize (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of nodes (type NetworkgraphPoint[] is ignored)} 
+    // NOTE: skip serialization of nodes (type NetworkgraphPoint[] is ignored) ignore type: true
 
-    if (this.noSharedTooltip != null) {  
-      buffer.writeAll(["\"noSharedTooltip\":", this.noSharedTooltip, ","], "");
-    }
+    // NOTE: skip serialization of noSharedTooltip (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of pointArrayMap (type string[] is ignored)} 
+    // NOTE: skip serialization of pointArrayMap (type string[] is ignored) ignore type: true
 
-    if (this.pointValKey != null) {  
-      buffer.writeAll(["\"pointValKey\":\`", this.pointValKey, "\`,"], "");
-    }
+    // NOTE: skip serialization of pointValKey (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of radii (type number[] is ignored)} 
+    // NOTE: skip serialization of radii (type number[] is ignored) ignore type: true
 
-    if (this.specialGroup != null) {  
-      buffer.writeAll(["\"specialGroup\":\`", this.specialGroup, "\`,"], "");
-    }
+    // NOTE: skip serialization of specialGroup (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of trackerGroups (type string[] is ignored)} 
+    // NOTE: skip serialization of trackerGroups (type string[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of yData (type number[] is ignored)} 
+    // NOTE: skip serialization of yData (type number[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of zData (type number[] is ignored)} 
+    // NOTE: skip serialization of zData (type number[] is ignored) ignore type: true
 
-    if (this.zoneAxis != null) {  
-      buffer.writeAll(["\"zoneAxis\":\`", this.zoneAxis, "\`,"], "");
-    }
+    // NOTE: skip serialization of zoneAxis (type string is ignored) ignore type: true
   }
 
 }

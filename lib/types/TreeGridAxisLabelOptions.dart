@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -25,22 +25,29 @@ import 'OptionFragment.dart';
  */
 class TreeGridAxisLabelOptions extends AxisLabelOptions {
   TreeGridAxisLabelOptions( {
-    this.levels = null
+    super.align = null,
+    super.allowOverlap = null,
+    super.autoRotation = null,
+    super.autoRotationLimit = null,
+    super.distance = null,
+    super.enabled = null,
+    super.format = null,
+    super.indentation = null,
+    super.overflow = null,
+    super.padding = null,
+    super.position3d = null,
+    super.reserveSpace = null,
+    super.skew3d = null,
+    super.staggerLines = null,
+    super.step = null,
+    super.style = null,
+    super.useHTML = null,
+    super.x = null,
+    super.y = null,
+    super.zIndex = null
   }) : super();
-  double? levels;
-    /*
-  double get levels { 
-    if (this._levels == null) {
-      this._levels = 0;
-    }
-    return this._levels!;
-  }
+  // NOTE: levels skipped - type number is ignored in gen 
 
-  void set levels (double v) {
-    this._levels = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -49,11 +56,9 @@ class TreeGridAxisLabelOptions extends AxisLabelOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.levels != null) {  
-      buffer.writeAll(["\"levels\":", this.levels, ","], "");
-    }
+    // NOTE: skip serialization of levels (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of symbol (type TreeGridAxisLabelIconOptions is ignored)} 
+    // NOTE: skip serialization of symbol (type TreeGridAxisLabelIconOptions is ignored) ignore type: true
   }
 
 }

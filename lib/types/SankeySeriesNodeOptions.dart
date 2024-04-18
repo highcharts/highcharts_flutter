@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,113 +22,21 @@ import 'OptionFragment.dart';
  * SankeySeriesNodeOptions 
  */
 class SankeySeriesNodeOptions extends OptionFragment {
-  SankeySeriesNodeOptions( {
-    this.color = null,
-    this.colorIndex = null,
-    this.column = null,
-    this.id = null,
-    this.level = null,
-    this.name = null,
-    this.offset = null
-  }) : super();
-  String? color;
-    /*
-  String get color { 
-    if (this._color == null) {
-      this._color = "";
-    }
-    return this._color!;
-  }
+  SankeySeriesNodeOptions( ) : super();
+  // NOTE: color skipped - type string is ignored in gen 
 
-  void set color (String v) {
-    this._color = v;
-  }
-    */
-    
-  double? colorIndex;
-    /*
-  double get colorIndex { 
-    if (this._colorIndex == null) {
-      this._colorIndex = 0;
-    }
-    return this._colorIndex!;
-  }
+  // NOTE: colorIndex skipped - type number is ignored in gen 
 
-  void set colorIndex (double v) {
-    this._colorIndex = v;
-  }
-    */
-    
-  double? column;
-    /*
-  double get column { 
-    if (this._column == null) {
-      this._column = 0;
-    }
-    return this._column!;
-  }
+  // NOTE: column skipped - type number is ignored in gen 
 
-  void set column (double v) {
-    this._column = v;
-  }
-    */
-    
-  String? id;
-    /*
-  String get id { 
-    if (this._id == null) {
-      this._id = "";
-    }
-    return this._id!;
-  }
+  // NOTE: id skipped - type string is ignored in gen 
 
-  void set id (String v) {
-    this._id = v;
-  }
-    */
-    
-  double? level;
-    /*
-  double get level { 
-    if (this._level == null) {
-      this._level = 0;
-    }
-    return this._level!;
-  }
+  // NOTE: level skipped - type number is ignored in gen 
 
-  void set level (double v) {
-    this._level = v;
-  }
-    */
-    
-  String? name;
-    /*
-  String get name { 
-    if (this._name == null) {
-      this._name = "";
-    }
-    return this._name!;
-  }
+  // NOTE: name skipped - type string is ignored in gen 
 
-  void set name (String v) {
-    this._name = v;
-  }
-    */
-    
-  String? offset;
-    /*
-  String get offset { 
-    if (this._offset == null) {
-      this._offset = "";
-    }
-    return this._offset!;
-  }
+  // NOTE: offset skipped - type string is ignored in gen 
 
-  void set offset (String v) {
-    this._offset = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -137,33 +45,19 @@ class SankeySeriesNodeOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.color != null) {  
-      buffer.writeAll(["\"color\":\`", this.color, "\`,"], "");
-    }
+    // NOTE: skip serialization of color (type string is ignored) ignore type: true
 
-    if (this.colorIndex != null) {  
-      buffer.writeAll(["\"colorIndex\":", this.colorIndex, ","], "");
-    }
+    // NOTE: skip serialization of colorIndex (type number is ignored) ignore type: true
 
-    if (this.column != null) {  
-      buffer.writeAll(["\"column\":", this.column, ","], "");
-    }
+    // NOTE: skip serialization of column (type number is ignored) ignore type: true
 
-    if (this.id != null) {  
-      buffer.writeAll(["\"id\":\`", this.id, "\`,"], "");
-    }
+    // NOTE: skip serialization of id (type string is ignored) ignore type: true
 
-    if (this.level != null) {  
-      buffer.writeAll(["\"level\":", this.level, ","], "");
-    }
+    // NOTE: skip serialization of level (type number is ignored) ignore type: true
 
-    if (this.name != null) {  
-      buffer.writeAll(["\"name\":\`", this.name, "\`,"], "");
-    }
+    // NOTE: skip serialization of name (type string is ignored) ignore type: true
 
-    if (this.offset != null) {  
-      buffer.writeAll(["\"offset\":\`", this.offset, "\`,"], "");
-    }
+    // NOTE: skip serialization of offset (type string is ignored) ignore type: true
   }
 
 }

@@ -1,0 +1,27 @@
+[
+  {
+    "type": "missing_mapping",
+    "path": "xAxis.categories"
+  },
+  {
+    "type": "mixed_type",
+    "path": "xAxis.crosshair",
+    "msg": "Path is set as a basic type, but flutter wants a AxisCrosshairOptions"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "yAxis.title"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "yAxis.title"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "yAxis.labels"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "series.tooltip"
+  }
+]

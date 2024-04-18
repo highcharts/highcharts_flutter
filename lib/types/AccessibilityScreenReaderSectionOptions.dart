@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -28,46 +28,10 @@ class AccessibilityScreenReaderSectionOptions extends OptionFragment {
     this.beforeChartFormat = null
   }) : super();
   String? afterChartFormat;
-    /*
-  String get afterChartFormat { 
-    if (this._afterChartFormat == null) {
-      this._afterChartFormat = "";
-    }
-    return this._afterChartFormat!;
-  }
-
-  void set afterChartFormat (String v) {
-    this._afterChartFormat = v;
-  }
-    */
     
   String? axisRangeDateFormat;
-    /*
-  String get axisRangeDateFormat { 
-    if (this._axisRangeDateFormat == null) {
-      this._axisRangeDateFormat = "";
-    }
-    return this._axisRangeDateFormat!;
-  }
-
-  void set axisRangeDateFormat (String v) {
-    this._axisRangeDateFormat = v;
-  }
-    */
     
   String? beforeChartFormat;
-    /*
-  String get beforeChartFormat { 
-    if (this._beforeChartFormat == null) {
-      this._beforeChartFormat = "";
-    }
-    return this._beforeChartFormat!;
-  }
-
-  void set beforeChartFormat (String v) {
-    this._beforeChartFormat = v;
-  }
-    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -78,15 +42,15 @@ class AccessibilityScreenReaderSectionOptions extends OptionFragment {
 
     
     if (this.afterChartFormat != null) {  
-      buffer.writeAll(["\"afterChartFormat\":\`", this.afterChartFormat, "\`,"], "");
+      buffer.writeAll(["\"afterChartFormat\":\`",this.afterChartFormat, "\`,"], "");
     }
 
     if (this.axisRangeDateFormat != null) {  
-      buffer.writeAll(["\"axisRangeDateFormat\":\`", this.axisRangeDateFormat, "\`,"], "");
+      buffer.writeAll(["\"axisRangeDateFormat\":\`",this.axisRangeDateFormat, "\`,"], "");
     }
 
     if (this.beforeChartFormat != null) {  
-      buffer.writeAll(["\"beforeChartFormat\":\`", this.beforeChartFormat, "\`,"], "");
+      buffer.writeAll(["\"beforeChartFormat\":\`",this.beforeChartFormat, "\`,"], "");
     }
   }
 

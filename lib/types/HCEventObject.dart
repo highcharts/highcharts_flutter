@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,23 +22,9 @@ import 'OptionFragment.dart';
  * HCEventObject 
  */
 class HCEventObject extends OptionFragment {
-  HCEventObject( {
-    this.order = null
-  }) : super();
-  double? order;
-    /*
-  double get order { 
-    if (this._order == null) {
-      this._order = 0;
-    }
-    return this._order!;
-  }
+  HCEventObject( ) : super();
+  // NOTE: order skipped - type number is ignored in gen 
 
-  void set order (double v) {
-    this._order = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -47,9 +33,7 @@ class HCEventObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.order != null) {  
-      buffer.writeAll(["\"order\":", this.order, ","], "");
-    }
+    // NOTE: skip serialization of order (type number is ignored) ignore type: true
   }
 
 }

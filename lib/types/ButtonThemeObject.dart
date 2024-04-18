@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -25,8 +25,14 @@ import 'OptionFragment.dart';
  * ButtonThemeObject 
  */
 class ButtonThemeObject extends SVGAttributes {
-  ButtonThemeObject( ) : super();
-  
+  ButtonThemeObject( {
+    super.dashstyle = null,
+    super.stroke = null,
+    this.style = null,
+    super.width = null
+  }) : super();
+  CSSObject? style;
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -35,9 +41,11 @@ class ButtonThemeObject extends SVGAttributes {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of states (type ButtonThemeStatesObject is ignored)} 
+    // NOTE: skip serialization of states (type ButtonThemeStatesObject is ignored) ignore type: true
 
-    // NOTE: skip serialization of style (type CSSObject is ignored)} 
+    if (this.style != null) {  
+      buffer.writeAll(["\"style\":",this.style?.toJSON(), ","], "");
+    }
   }
 
 }

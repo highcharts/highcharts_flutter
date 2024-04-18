@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -34,7 +34,7 @@ class TickPositionsArray extends Array {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of info (type TimeTicksInfoObject is ignored)} 
+    // NOTE: skip serialization of info (type TimeTicksInfoObject is ignored) ignore type: true
   }
 
 }

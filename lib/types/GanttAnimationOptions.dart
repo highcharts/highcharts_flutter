@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,23 +22,9 @@ import 'OptionFragment.dart';
  * GanttAnimationOptions 
  */
 class GanttAnimationOptions extends OptionFragment {
-  GanttAnimationOptions( {
-    this.reversed = null
-  }) : super();
-  bool? reversed;
-    /*
-  bool get reversed { 
-    if (this._reversed == null) {
-      this._reversed = false;
-    }
-    return this._reversed!;
-  }
+  GanttAnimationOptions( ) : super();
+  // NOTE: reversed skipped - type boolean is ignored in gen 
 
-  void set reversed (bool v) {
-    this._reversed = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -47,9 +33,7 @@ class GanttAnimationOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.reversed != null) {  
-      buffer.writeAll(["\"reversed\":", this.reversed, ","], "");
-    }
+    // NOTE: skip serialization of reversed (type boolean is ignored) ignore type: true
   }
 
 }

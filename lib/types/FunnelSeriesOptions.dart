@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -25,129 +25,110 @@ import 'OptionFragment.dart';
  */
 class FunnelSeriesOptions extends PieSeriesOptions {
   FunnelSeriesOptions( {
-    this.width = null,
-    this.neckWidth = null,
+    super.accessibility = null,
+    super.allAreas = null,
+    super.allowPointSelect = null,
+    super.animationLimit = null,
+    super.boostBlending = null,
+    super.boostThreshold = null,
+    super.borderColor = null,
+    super.borderWidth = null,
+    super.className = null,
+    super.clip = null,
+    super.color = null,
+    super.colorAxis = null,
+    super.colorIndex = null,
+    super.colorKey = null,
+    super.compare = null,
+    super.compareStart = null,
+    super.connectEnds = null,
+    super.connectNulls = null,
+    super.connectors = null,
+    super.crisp = null,
+    super.cropThreshold = null,
+    super.cumulative = null,
+    super.cursor = null,
+    super.dashStyle = null,
+    super.dataGrouping = null,
+    super.dataLabels = null,
+    super.dataSorting = null,
+    super.depth = null,
+    super.description = null,
+    super.dragDrop = null,
+    super.enableMouseTracking = null,
+    super.endAngle = null,
+    super.events = null,
+    super.fillColor = null,
+    super.findNearestPointBy = null,
+    super.gapSize = null,
+    super.gapUnit = null,
+    super.getExtremesFromAll = null,
     this.height = null,
+    super.ignoreHiddenPoint = null,
+    super.includeInDataExport = null,
+    super.innerSize = null,
+    super.joinBy = null,
+    super.keys = null,
+    super.label = null,
+    super.lastPrice = null,
+    super.lastVisiblePrice = null,
+    super.legendSymbol = null,
+    super.linecap = null,
+    super.lineWidth = null,
+    super.linkedTo = null,
+    super.marker = null,
+    super.minSize = null,
+    super.navigatorOptions = null,
     this.neckHeight = null,
-    this.reversed = null
+    this.neckWidth = null,
+    super.negativeColor = null,
+    super.onPoint = null,
+    super.opacity = null,
+    super.point = null,
+    super.pointInterval = null,
+    super.pointIntervalUnit = null,
+    super.pointPlacement = null,
+    super.pointRange = null,
+    super.pointStart = null,
+    super.relativeXValue = null,
+    this.reversed = null,
+    super.selected = null,
+    super.showCheckbox = null,
+    super.showInLegend = null,
+    super.showInNavigator = null,
+    super.size = null,
+    super.skipKeyboardNavigation = null,
+    super.slicedOffset = null,
+    super.softThreshold = null,
+    super.stacking = null,
+    super.startAngle = null,
+    super.step = null,
+    super.stickyTracking = null,
+    super.thickness = null,
+    super.threshold = null,
+    super.tooltip = null,
+    super.turboThreshold = null,
+    super.visible = null,
+    this.width = null,
+    super.zIndex = null,
+    super.zoneAxis = null,
+    super.zones = null
   }) : super();
-  /**
-   * The width of the funnel compared to the width of the plot area,
-   * or the pixel width if it is a number. 
-   * 
-   * Defaults to '90%'. 
-      */
   String? width;
-    /*
-  String get width { 
-    if (this._width == null) {
-      this._width = "";
-    }
-    return this._width!;
-  }
-
-  void set width (String v) {
-    this._width = v;
-  }
-    */
     
-  /**
-   * The width of the neck, the lower part of the funnel. A number defines
-   * pixel width, a percentage string defines a percentage of the plot
-   * area width. 
-   * 
-   * Defaults to '30%'. 
-      */
   String? neckWidth;
-    /*
-  String get neckWidth { 
-    if (this._neckWidth == null) {
-      this._neckWidth = "";
-    }
-    return this._neckWidth!;
-  }
-
-  void set neckWidth (String v) {
-    this._neckWidth = v;
-  }
-    */
     
-  /**
-   * The height of the funnel or pyramid. If it is a number it defines
-   * the pixel height, if it is a percentage string it is the percentage
-   * of the plot area height. 
-   * 
-   * Defaults to '100%'. 
-      */
   String? height;
-    /*
-  String get height { 
-    if (this._height == null) {
-      this._height = "";
-    }
-    return this._height!;
-  }
-
-  void set height (String v) {
-    this._height = v;
-  }
-    */
     
-  /**
-   * The height of the neck, the lower part of the funnel. A number
-   * defines pixel width, a percentage string defines a percentage of the
-   * plot area height. 
-   * 
-   * Defaults to '25%'. 
-      */
   String? neckHeight;
-    /*
-  String get neckHeight { 
-    if (this._neckHeight == null) {
-      this._neckHeight = "";
-    }
-    return this._neckHeight!;
-  }
-
-  void set neckHeight (String v) {
-    this._neckHeight = v;
-  }
-    */
     
-  /**
-   * A reversed funnel has the widest area down. A reversed funnel with
-   * no neck width and neck height is a pyramid.  
-      */
   bool? reversed;
-    /*
-  bool get reversed { 
-    if (this._reversed == null) {
-      this._reversed = false;
-    }
-    return this._reversed!;
-  }
-
-  void set reversed (bool v) {
-    this._reversed = v;
-  }
-    */
     
-  // NOTE: size skipped - type undefined is ignored in gen
+  // NOTE: size skipped - type undefined is ignored in gen 
 
-  /**
-   * Options for the series data labels, appearing next to each data
-   * point.
-   * 
-   * Since v6.2.0, multiple data labels can be applied to each single
-   * point by defining them as an array of configs.
-   * 
-   * In styled mode, the data labels can be styled with the
-   * `.highcharts-data-label-box` and `.highcharts-data-label` class names
-   * ([see example](https://www.highcharts.com/samples/highcharts/css/series-datalabels)).  
-      */
   /** NOTE: extextextdataLabels is skipped here for now, as it overrides the base type. */
 
-  // NOTE: states skipped - type Generic is ignored in gen
+  // NOTE: states skipped - type Generic is ignored in gen 
 
 
   //////////////////////////////////////////////////////////////////////////////
@@ -158,30 +139,30 @@ class FunnelSeriesOptions extends PieSeriesOptions {
 
     
     if (this.width != null) {  
-      buffer.writeAll(["\"width\":\`", this.width, "\`,"], "");
+      buffer.writeAll(["\"width\":\`",this.width, "\`,"], "");
     }
 
     if (this.neckWidth != null) {  
-      buffer.writeAll(["\"neckWidth\":\`", this.neckWidth, "\`,"], "");
+      buffer.writeAll(["\"neckWidth\":\`",this.neckWidth, "\`,"], "");
     }
 
     if (this.height != null) {  
-      buffer.writeAll(["\"height\":\`", this.height, "\`,"], "");
+      buffer.writeAll(["\"height\":\`",this.height, "\`,"], "");
     }
 
     if (this.neckHeight != null) {  
-      buffer.writeAll(["\"neckHeight\":\`", this.neckHeight, "\`,"], "");
+      buffer.writeAll(["\"neckHeight\":\`",this.neckHeight, "\`,"], "");
     }
 
     if (this.reversed != null) {  
-      buffer.writeAll(["\"reversed\":", this.reversed, ","], "");
+      buffer.writeAll(["\"reversed\":",this.reversed, ","], "");
     }
 
-    // NOTE: skip serialization of size (type undefined is ignored)} 
+    // NOTE: skip serialization of size (type undefined is ignored) ignore type: 1
 
-    // NOTE: skip serialization of dataLabels (type FunnelDataLabelOptions is ignored)} 
+    // NOTE: skip serialization of dataLabels (type FunnelDataLabelOptions is ignored) ignore type: false
 
-    // NOTE: skip serialization of states (type Generic is ignored)} 
+    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
   }
 
 }

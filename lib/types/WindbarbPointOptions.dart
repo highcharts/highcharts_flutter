@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,37 +24,24 @@ import 'OptionFragment.dart';
  */
 class WindbarbPointOptions extends ColumnPointOptions {
   WindbarbPointOptions( {
-    this.direction = null,
-    this.value = null
+    super.accessibility = null,
+    super.borderColor = null,
+    super.className = null,
+    super.color = null,
+    super.colorIndex = null,
+    super.connectors = null,
+    super.dataLabels = null,
+    super.dragDrop = null,
+    super.events = null,
+    super.keys = null,
+    super.marker = null,
+    super.selected = null,
+    super.visible = null
   }) : super();
-  double? direction;
-    /*
-  double get direction { 
-    if (this._direction == null) {
-      this._direction = 0;
-    }
-    return this._direction!;
-  }
+  // NOTE: direction skipped - type number is ignored in gen 
 
-  void set direction (double v) {
-    this._direction = v;
-  }
-    */
-    
-  double? value;
-    /*
-  double get value { 
-    if (this._value == null) {
-      this._value = 0;
-    }
-    return this._value!;
-  }
+  // NOTE: value skipped - type number is ignored in gen 
 
-  void set value (double v) {
-    this._value = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -63,13 +50,9 @@ class WindbarbPointOptions extends ColumnPointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.direction != null) {  
-      buffer.writeAll(["\"direction\":", this.direction, ","], "");
-    }
+    // NOTE: skip serialization of direction (type number is ignored) ignore type: true
 
-    if (this.value != null) {  
-      buffer.writeAll(["\"value\":", this.value, ","], "");
-    }
+    // NOTE: skip serialization of value (type number is ignored) ignore type: true
   }
 
 }

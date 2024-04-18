@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,98 +22,19 @@ import 'OptionFragment.dart';
  * StateInactiveOptions 
  */
 class StateInactiveOptions extends OptionFragment {
-  StateInactiveOptions( {
-    this.color = null,
-    this.dashStyle = null,
-    this.height = null,
-    this.heightPlus = null,
-    this.width = null,
-    this.widthPlus = null
-  }) : super();
-  String? color;
-    /*
-  String get color { 
-    if (this._color == null) {
-      this._color = "";
-    }
-    return this._color!;
-  }
+  StateInactiveOptions( ) : super();
+  // NOTE: color skipped - type string is ignored in gen 
 
-  void set color (String v) {
-    this._color = v;
-  }
-    */
-    
-  String? dashStyle;
-    /*
-  String get dashStyle { 
-    if (this._dashStyle == null) {
-      this._dashStyle = "";
-    }
-    return this._dashStyle!;
-  }
+  // NOTE: dashStyle skipped - type string is ignored in gen 
 
-  void set dashStyle (String v) {
-    this._dashStyle = v;
-  }
-    */
-    
-  double? height;
-    /*
-  double get height { 
-    if (this._height == null) {
-      this._height = 0;
-    }
-    return this._height!;
-  }
+  // NOTE: height skipped - type number is ignored in gen 
 
-  void set height (double v) {
-    this._height = v;
-  }
-    */
-    
-  double? heightPlus;
-    /*
-  double get heightPlus { 
-    if (this._heightPlus == null) {
-      this._heightPlus = 0;
-    }
-    return this._heightPlus!;
-  }
+  // NOTE: heightPlus skipped - type number is ignored in gen 
 
-  void set heightPlus (double v) {
-    this._heightPlus = v;
-  }
-    */
-    
-  double? width;
-    /*
-  double get width { 
-    if (this._width == null) {
-      this._width = 0;
-    }
-    return this._width!;
-  }
+  // NOTE: width skipped - type number is ignored in gen 
 
-  void set width (double v) {
-    this._width = v;
-  }
-    */
-    
-  double? widthPlus;
-    /*
-  double get widthPlus { 
-    if (this._widthPlus == null) {
-      this._widthPlus = 0;
-    }
-    return this._widthPlus!;
-  }
+  // NOTE: widthPlus skipped - type number is ignored in gen 
 
-  void set widthPlus (double v) {
-    this._widthPlus = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -122,29 +43,17 @@ class StateInactiveOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.color != null) {  
-      buffer.writeAll(["\"color\":\`", this.color, "\`,"], "");
-    }
+    // NOTE: skip serialization of color (type string is ignored) ignore type: true
 
-    if (this.dashStyle != null) {  
-      buffer.writeAll(["\"dashStyle\":\`", this.dashStyle, "\`,"], "");
-    }
+    // NOTE: skip serialization of dashStyle (type string is ignored) ignore type: true
 
-    if (this.height != null) {  
-      buffer.writeAll(["\"height\":", this.height, ","], "");
-    }
+    // NOTE: skip serialization of height (type number is ignored) ignore type: true
 
-    if (this.heightPlus != null) {  
-      buffer.writeAll(["\"heightPlus\":", this.heightPlus, ","], "");
-    }
+    // NOTE: skip serialization of heightPlus (type number is ignored) ignore type: true
 
-    if (this.width != null) {  
-      buffer.writeAll(["\"width\":", this.width, ","], "");
-    }
+    // NOTE: skip serialization of width (type number is ignored) ignore type: true
 
-    if (this.widthPlus != null) {  
-      buffer.writeAll(["\"widthPlus\":", this.widthPlus, ","], "");
-    }
+    // NOTE: skip serialization of widthPlus (type number is ignored) ignore type: true
   }
 
 }

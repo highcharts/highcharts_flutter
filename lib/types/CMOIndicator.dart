@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -32,7 +32,7 @@ class CMOIndicator extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of pointClass (type typeof CMOPoint is ignored)} 
+    // NOTE: skip serialization of pointClass (type typeof CMOPoint is ignored) ignore type: true
   }
 
 }

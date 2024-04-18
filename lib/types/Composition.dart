@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -33,9 +33,9 @@ class Composition extends Chart {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of navigation (type Additions is ignored)} 
+    // NOTE: skip serialization of navigation (type Additions is ignored) ignore type: true
 
-    // NOTE: skip serialization of chart3d (type Additions is ignored)} 
+    // NOTE: skip serialization of chart3d (type Additions is ignored) ignore type: true
   }
 
 }

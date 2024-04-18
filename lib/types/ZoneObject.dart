@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -25,23 +25,9 @@ import 'OptionFragment.dart';
  * ZoneObject 
  */
 class ZoneObject extends SeriesZonesOptions {
-  ZoneObject( {
-    this.translated = null
-  }) : super();
-  double? translated;
-    /*
-  double get translated { 
-    if (this._translated == null) {
-      this._translated = 0;
-    }
-    return this._translated!;
-  }
+  ZoneObject( ) : super();
+  // NOTE: translated skipped - type number is ignored in gen 
 
-  void set translated (double v) {
-    this._translated = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -50,19 +36,17 @@ class ZoneObject extends SeriesZonesOptions {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of area (type SVGElement is ignored)} 
+    // NOTE: skip serialization of area (type SVGElement is ignored) ignore type: true
 
-    // NOTE: skip serialization of clip (type SVGElement is ignored)} 
+    // NOTE: skip serialization of clip (type SVGElement is ignored) ignore type: true
 
-    // NOTE: skip serialization of graph (type SVGElement is ignored)} 
+    // NOTE: skip serialization of graph (type SVGElement is ignored) ignore type: true
 
-    // NOTE: skip serialization of lineClip (type SVGPath is ignored)} 
+    // NOTE: skip serialization of lineClip (type SVGPath is ignored) ignore type: true
 
-    // NOTE: skip serialization of simpleClip (type SVGElement is ignored)} 
+    // NOTE: skip serialization of simpleClip (type SVGElement is ignored) ignore type: true
 
-    if (this.translated != null) {  
-      buffer.writeAll(["\"translated\":", this.translated, ","], "");
-    }
+    // NOTE: skip serialization of translated (type number is ignored) ignore type: true
   }
 
 }

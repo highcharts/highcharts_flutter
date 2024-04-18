@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -33,7 +33,7 @@ class IKHGapExtensionObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of options (type IKHGapSizeOptions is ignored)} 
+    // NOTE: skip serialization of options (type IKHGapSizeOptions is ignored) ignore type: true
   }
 
 }

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,98 +23,19 @@ import 'OptionFragment.dart';
  * ItemOptions 
  */
 class ItemOptions extends OptionFragment {
-  ItemOptions( {
-    this.id = null,
-    this.name = null,
-    this.type = null,
-    this.className = null,
-    this.text = null,
-    this.langKey = null
-  }) : super();
-  String? id;
-    /*
-  String get id { 
-    if (this._id == null) {
-      this._id = "";
-    }
-    return this._id!;
-  }
+  ItemOptions( ) : super();
+  // NOTE: id skipped - type string is ignored in gen 
 
-  void set id (String v) {
-    this._id = v;
-  }
-    */
-    
-  String? name;
-    /*
-  String get name { 
-    if (this._name == null) {
-      this._name = "";
-    }
-    return this._name!;
-  }
+  // NOTE: name skipped - type string is ignored in gen 
 
-  void set name (String v) {
-    this._name = v;
-  }
-    */
-    
-  String? type;
-    /*
-  String get type { 
-    if (this._type == null) {
-      this._type = "";
-    }
-    return this._type!;
-  }
+  // NOTE: type skipped - type string is ignored in gen 
 
-  void set type (String v) {
-    this._type = v;
-  }
-    */
-    
-  String? className;
-    /*
-  String get className { 
-    if (this._className == null) {
-      this._className = "";
-    }
-    return this._className!;
-  }
+  // NOTE: className skipped - type string is ignored in gen 
 
-  void set className (String v) {
-    this._className = v;
-  }
-    */
-    
-  String? text;
-    /*
-  String get text { 
-    if (this._text == null) {
-      this._text = "";
-    }
-    return this._text!;
-  }
+  // NOTE: text skipped - type string is ignored in gen 
 
-  void set text (String v) {
-    this._text = v;
-  }
-    */
-    
-  String? langKey;
-    /*
-  String get langKey { 
-    if (this._langKey == null) {
-      this._langKey = "";
-    }
-    return this._langKey!;
-  }
+  // NOTE: langKey skipped - type string is ignored in gen 
 
-  void set langKey (String v) {
-    this._langKey = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -123,33 +44,21 @@ class ItemOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.id != null) {  
-      buffer.writeAll(["\"id\":\`", this.id, "\`,"], "");
-    }
+    // NOTE: skip serialization of id (type string is ignored) ignore type: true
 
-    if (this.name != null) {  
-      buffer.writeAll(["\"name\":\`", this.name, "\`,"], "");
-    }
+    // NOTE: skip serialization of name (type string is ignored) ignore type: true
 
-    if (this.type != null) {  
-      buffer.writeAll(["\"type\":\`", this.type, "\`,"], "");
-    }
+    // NOTE: skip serialization of type (type string is ignored) ignore type: true
 
-    if (this.className != null) {  
-      buffer.writeAll(["\"className\":\`", this.className, "\`,"], "");
-    }
+    // NOTE: skip serialization of className (type string is ignored) ignore type: true
 
-    if (this.text != null) {  
-      buffer.writeAll(["\"text\":\`", this.text, "\`,"], "");
-    }
+    // NOTE: skip serialization of text (type string is ignored) ignore type: true
 
-    if (this.langKey != null) {  
-      buffer.writeAll(["\"langKey\":\`", this.langKey, "\`,"], "");
-    }
+    // NOTE: skip serialization of langKey (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of style (type CSSJSONObject is ignored)} 
+    // NOTE: skip serialization of style (type CSSJSONObject is ignored) ignore type: true
 
-    // NOTE: skip serialization of events (type { update?: Function; } is ignored)} 
+    // NOTE: skip serialization of events (type { update?: Function; } is ignored) ignore type: true
   }
 
 }

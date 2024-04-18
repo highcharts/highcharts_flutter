@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,23 +22,9 @@ import 'OptionFragment.dart';
  * VennPropsObject 
  */
 class VennPropsObject extends OptionFragment {
-  VennPropsObject( {
-    this.totalOverlap = null
-  }) : super();
-  double? totalOverlap;
-    /*
-  double get totalOverlap { 
-    if (this._totalOverlap == null) {
-      this._totalOverlap = 0;
-    }
-    return this._totalOverlap!;
-  }
+  VennPropsObject( ) : super();
+  // NOTE: totalOverlap skipped - type number is ignored in gen 
 
-  void set totalOverlap (double v) {
-    this._totalOverlap = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -47,11 +33,9 @@ class VennPropsObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of overlapping (type Generic is ignored)} 
+    // NOTE: skip serialization of overlapping (type Generic is ignored) ignore type: true
 
-    if (this.totalOverlap != null) {  
-      buffer.writeAll(["\"totalOverlap\":", this.totalOverlap, ","], "");
-    }
+    // NOTE: skip serialization of totalOverlap (type number is ignored) ignore type: true
   }
 
 }

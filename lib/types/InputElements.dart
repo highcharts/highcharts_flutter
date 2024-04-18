@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -33,11 +33,11 @@ class InputElements extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of dateBox (type SVGElement is ignored)} 
+    // NOTE: skip serialization of dateBox (type SVGElement is ignored) ignore type: true
 
-    // NOTE: skip serialization of input (type HTMLInputElement is ignored)} 
+    // NOTE: skip serialization of input (type HTMLInputElement is ignored) ignore type: true
 
-    // NOTE: skip serialization of label (type SVGElement is ignored)} 
+    // NOTE: skip serialization of label (type SVGElement is ignored) ignore type: true
   }
 
 }

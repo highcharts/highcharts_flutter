@@ -1,0 +1,86 @@
+[
+  {
+    "path": "plotOptions.series",
+    "parentType": "SeriesOptions",
+    "memberName": "neckWidth",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "path": "plotOptions.series",
+    "parentType": "SeriesOptions",
+    "memberName": "neckHeight",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "path": "plotOptions.series",
+    "parentType": "SeriesOptions",
+    "memberName": "width",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "path": "plotOptions.series",
+    "parentType": "SeriesOptions",
+    "memberName": "height",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "path": "series.data",
+    "parentType": "Funnel3DPointOptions)",
+    "memberName": "0",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "path": "series.data",
+    "parentType": "Funnel3DPointOptions)",
+    "memberName": "1",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "path": "series.data",
+    "parentType": "Funnel3DPointOptions)",
+    "memberName": "0",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "path": "series.data",
+    "parentType": "Funnel3DPointOptions)",
+    "memberName": "1",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "path": "series.data",
+    "parentType": "Funnel3DPointOptions)",
+    "memberName": "0",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "path": "series.data",
+    "parentType": "Funnel3DPointOptions)",
+    "memberName": "1",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "path": "series.data",
+    "parentType": "Funnel3DPointOptions)",
+    "memberName": "0",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "path": "series.data",
+    "parentType": "Funnel3DPointOptions)",
+    "memberName": "1",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "path": "series.data",
+    "parentType": "Funnel3DPointOptions)",
+    "memberName": "0",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "path": "series.data",
+    "parentType": "Funnel3DPointOptions)",
+    "memberName": "1",
+    "msg": "The member is not present in the Flutter integration API"
+  }
+]

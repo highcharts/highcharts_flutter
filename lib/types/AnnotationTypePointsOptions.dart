@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,83 +22,17 @@ import 'OptionFragment.dart';
  * AnnotationTypePointsOptions 
  */
 class AnnotationTypePointsOptions extends OptionFragment {
-  AnnotationTypePointsOptions( {
-    this.controlPoint = null,
-    this.x = null,
-    this.xAxis = null,
-    this.y = null,
-    this.yAxis = null
-  }) : super();
-  double? controlPoint;
-    /*
-  double get controlPoint { 
-    if (this._controlPoint == null) {
-      this._controlPoint = 0;
-    }
-    return this._controlPoint!;
-  }
+  AnnotationTypePointsOptions( ) : super();
+  // NOTE: controlPoint skipped - type number is ignored in gen 
 
-  void set controlPoint (double v) {
-    this._controlPoint = v;
-  }
-    */
-    
-  double? x;
-    /*
-  double get x { 
-    if (this._x == null) {
-      this._x = 0;
-    }
-    return this._x!;
-  }
+  // NOTE: x skipped - type number is ignored in gen 
 
-  void set x (double v) {
-    this._x = v;
-  }
-    */
-    
-  double? xAxis;
-    /*
-  double get xAxis { 
-    if (this._xAxis == null) {
-      this._xAxis = 0;
-    }
-    return this._xAxis!;
-  }
+  // NOTE: xAxis skipped - type number is ignored in gen 
 
-  void set xAxis (double v) {
-    this._xAxis = v;
-  }
-    */
-    
-  double? y;
-    /*
-  double get y { 
-    if (this._y == null) {
-      this._y = 0;
-    }
-    return this._y!;
-  }
+  // NOTE: y skipped - type number is ignored in gen 
 
-  void set y (double v) {
-    this._y = v;
-  }
-    */
-    
-  double? yAxis;
-    /*
-  double get yAxis { 
-    if (this._yAxis == null) {
-      this._yAxis = 0;
-    }
-    return this._yAxis!;
-  }
+  // NOTE: yAxis skipped - type number is ignored in gen 
 
-  void set yAxis (double v) {
-    this._yAxis = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -107,25 +41,15 @@ class AnnotationTypePointsOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.controlPoint != null) {  
-      buffer.writeAll(["\"controlPoint\":", this.controlPoint, ","], "");
-    }
+    // NOTE: skip serialization of controlPoint (type number is ignored) ignore type: true
 
-    if (this.x != null) {  
-      buffer.writeAll(["\"x\":", this.x, ","], "");
-    }
+    // NOTE: skip serialization of x (type number is ignored) ignore type: true
 
-    if (this.xAxis != null) {  
-      buffer.writeAll(["\"xAxis\":", this.xAxis, ","], "");
-    }
+    // NOTE: skip serialization of xAxis (type number is ignored) ignore type: true
 
-    if (this.y != null) {  
-      buffer.writeAll(["\"y\":", this.y, ","], "");
-    }
+    // NOTE: skip serialization of y (type number is ignored) ignore type: true
 
-    if (this.yAxis != null) {  
-      buffer.writeAll(["\"yAxis\":", this.yAxis, ","], "");
-    }
+    // NOTE: skip serialization of yAxis (type number is ignored) ignore type: true
   }
 
 }

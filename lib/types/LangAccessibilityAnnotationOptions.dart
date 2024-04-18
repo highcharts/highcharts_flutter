@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,68 +22,15 @@ import 'OptionFragment.dart';
  * LangAccessibilityAnnotationOptions 
  */
 class LangAccessibilityAnnotationOptions extends OptionFragment {
-  LangAccessibilityAnnotationOptions( {
-    this.heading = null,
-    this.descriptionSinglePoint = null,
-    this.descriptionMultiplePoints = null,
-    this.descriptionNoPoints = null
-  }) : super();
-  String? heading;
-    /*
-  String get heading { 
-    if (this._heading == null) {
-      this._heading = "";
-    }
-    return this._heading!;
-  }
+  LangAccessibilityAnnotationOptions( ) : super();
+  // NOTE: heading skipped - type string is ignored in gen 
 
-  void set heading (String v) {
-    this._heading = v;
-  }
-    */
-    
-  String? descriptionSinglePoint;
-    /*
-  String get descriptionSinglePoint { 
-    if (this._descriptionSinglePoint == null) {
-      this._descriptionSinglePoint = "";
-    }
-    return this._descriptionSinglePoint!;
-  }
+  // NOTE: descriptionSinglePoint skipped - type string is ignored in gen 
 
-  void set descriptionSinglePoint (String v) {
-    this._descriptionSinglePoint = v;
-  }
-    */
-    
-  String? descriptionMultiplePoints;
-    /*
-  String get descriptionMultiplePoints { 
-    if (this._descriptionMultiplePoints == null) {
-      this._descriptionMultiplePoints = "";
-    }
-    return this._descriptionMultiplePoints!;
-  }
+  // NOTE: descriptionMultiplePoints skipped - type string is ignored in gen 
 
-  void set descriptionMultiplePoints (String v) {
-    this._descriptionMultiplePoints = v;
-  }
-    */
-    
-  String? descriptionNoPoints;
-    /*
-  String get descriptionNoPoints { 
-    if (this._descriptionNoPoints == null) {
-      this._descriptionNoPoints = "";
-    }
-    return this._descriptionNoPoints!;
-  }
+  // NOTE: descriptionNoPoints skipped - type string is ignored in gen 
 
-  void set descriptionNoPoints (String v) {
-    this._descriptionNoPoints = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -92,21 +39,13 @@ class LangAccessibilityAnnotationOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.heading != null) {  
-      buffer.writeAll(["\"heading\":\`", this.heading, "\`,"], "");
-    }
+    // NOTE: skip serialization of heading (type string is ignored) ignore type: true
 
-    if (this.descriptionSinglePoint != null) {  
-      buffer.writeAll(["\"descriptionSinglePoint\":\`", this.descriptionSinglePoint, "\`,"], "");
-    }
+    // NOTE: skip serialization of descriptionSinglePoint (type string is ignored) ignore type: true
 
-    if (this.descriptionMultiplePoints != null) {  
-      buffer.writeAll(["\"descriptionMultiplePoints\":\`", this.descriptionMultiplePoints, "\`,"], "");
-    }
+    // NOTE: skip serialization of descriptionMultiplePoints (type string is ignored) ignore type: true
 
-    if (this.descriptionNoPoints != null) {  
-      buffer.writeAll(["\"descriptionNoPoints\":\`", this.descriptionNoPoints, "\`,"], "");
-    }
+    // NOTE: skip serialization of descriptionNoPoints (type string is ignored) ignore type: true
   }
 
 }

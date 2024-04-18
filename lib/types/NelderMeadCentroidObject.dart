@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,38 +22,11 @@ import 'OptionFragment.dart';
  * NelderMeadCentroidObject 
  */
 class NelderMeadCentroidObject extends OptionFragment {
-  NelderMeadCentroidObject( {
-    this.i = null,
-    this.sum = null
-  }) : super();
-  double? i;
-    /*
-  double get i { 
-    if (this._i == null) {
-      this._i = 0;
-    }
-    return this._i!;
-  }
+  NelderMeadCentroidObject( ) : super();
+  // NOTE: i skipped - type number is ignored in gen 
 
-  void set i (double v) {
-    this._i = v;
-  }
-    */
-    
-  double? sum;
-    /*
-  double get sum { 
-    if (this._sum == null) {
-      this._sum = 0;
-    }
-    return this._sum!;
-  }
+  // NOTE: sum skipped - type number is ignored in gen 
 
-  void set sum (double v) {
-    this._sum = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -62,13 +35,9 @@ class NelderMeadCentroidObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.i != null) {  
-      buffer.writeAll(["\"i\":", this.i, ","], "");
-    }
+    // NOTE: skip serialization of i (type number is ignored) ignore type: true
 
-    if (this.sum != null) {  
-      buffer.writeAll(["\"sum\":", this.sum, ","], "");
-    }
+    // NOTE: skip serialization of sum (type number is ignored) ignore type: true
   }
 
 }

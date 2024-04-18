@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,25 +22,11 @@ import 'OptionFragment.dart';
  * ComponentGroup 
  */
 class ComponentGroup extends OptionFragment {
-  ComponentGroup( {
-    this.id = null,
-    this.components = null
-  }) : super();
-  String? id;
-    /*
-  String get id { 
-    if (this._id == null) {
-      this._id = "";
-    }
-    return this._id!;
-  }
+  ComponentGroup( ) : super();
+  // NOTE: id skipped - type string is ignored in gen 
 
-  void set id (String v) {
-    this._id = v;
-  }
-    */
-    
-  List<String>? components; // String
+  // NOTE: components skipped - type string is ignored in gen 
+
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -49,13 +35,11 @@ class ComponentGroup extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.id != null) {  
-      buffer.writeAll(["\"id\":\`", this.id, "\`,"], "");
-    }
+    // NOTE: skip serialization of id (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of state (type SharedComponentState is ignored)} 
+    // NOTE: skip serialization of state (type SharedComponentState is ignored) ignore type: true
 
-    // NOTE: skip serialization of components (type string is ignored)} 
+    // NOTE: skip serialization of components (type string is ignored) ignore type: true
   }
 
 }

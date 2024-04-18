@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,38 +24,85 @@ import 'OptionFragment.dart';
  * ScatterSeriesOptions 
  */
 class ScatterSeriesOptions extends LineSeriesOptions {
-  ScatterSeriesOptions( ) : super();
-  /**
-   * Apply a jitter effect for the rendered markers. When plotting
-   * discrete values, a little random noise may help telling the points
-   * apart. The jitter setting applies a random displacement of up to `n`
-   * axis units in either direction. So for example on a horizontal X
-   * axis, setting the `jitter.x` to 0.24 will render the point in a
-   * random position between 0.24 units to the left and 0.24 units to the
-   * right of the true axis position. On a category axis, setting it to
-   * 0.5 will fill up the bin and make the data appear continuous.
-   * 
-   * When rendered on top of a box plot or a column series, a jitter value
-   * of 0.24 will correspond to the underlying series' default
-   * [groupPadding](https://api.highcharts.com/highcharts/plotOptions.column.groupPadding)
-   * and [pointPadding](https://api.highcharts.com/highcharts/plotOptions.column.pointPadding)
-   * settings.  
-      */
+  ScatterSeriesOptions( {
+    super.accessibility = null,
+    super.allAreas = null,
+    super.allowPointSelect = null,
+    super.animationLimit = null,
+    super.boostBlending = null,
+    super.boostThreshold = null,
+    super.borderColor = null,
+    super.borderWidth = null,
+    super.className = null,
+    super.clip = null,
+    super.color = null,
+    super.colorAxis = null,
+    super.colorIndex = null,
+    super.colorKey = null,
+    super.compare = null,
+    super.compareStart = null,
+    super.connectEnds = null,
+    super.connectNulls = null,
+    super.connectors = null,
+    super.crisp = null,
+    super.cropThreshold = null,
+    super.cumulative = null,
+    super.cursor = null,
+    super.dashStyle = null,
+    super.dataGrouping = null,
+    super.dataLabels = null,
+    super.dataSorting = null,
+    super.description = null,
+    super.dragDrop = null,
+    super.enableMouseTracking = null,
+    super.events = null,
+    super.findNearestPointBy = null,
+    super.gapSize = null,
+    super.gapUnit = null,
+    super.getExtremesFromAll = null,
+    super.includeInDataExport = null,
+    this.jitter = null,
+    super.joinBy = null,
+    super.keys = null,
+    super.label = null,
+    super.lastPrice = null,
+    super.lastVisiblePrice = null,
+    super.legendSymbol = null,
+    super.linecap = null,
+    super.lineWidth = null,
+    super.linkedTo = null,
+    super.marker = null,
+    super.navigatorOptions = null,
+    super.negativeColor = null,
+    super.onPoint = null,
+    super.opacity = null,
+    super.point = null,
+    super.pointInterval = null,
+    super.pointIntervalUnit = null,
+    super.pointPlacement = null,
+    super.pointRange = null,
+    super.pointStart = null,
+    super.relativeXValue = null,
+    super.selected = null,
+    super.showCheckbox = null,
+    super.showInLegend = null,
+    super.showInNavigator = null,
+    super.skipKeyboardNavigation = null,
+    super.softThreshold = null,
+    super.stacking = null,
+    super.step = null,
+    super.stickyTracking = null,
+    super.threshold = null,
+    super.tooltip = null,
+    super.turboThreshold = null,
+    super.visible = null,
+    super.zIndex = null,
+    super.zoneAxis = null,
+    super.zones = null
+  }) : super();
   ScatterSeriesJitterOptions? jitter;
-    /*
-  ScatterSeriesJitterOptions get jitter { 
-    if (this._jitter == null) {
-      this._jitter = ScatterSeriesJitterOptions();
-    }
-    return this._jitter!;
-  }
-
-  void set jitter (ScatterSeriesJitterOptions v) {
-    this._jitter = v;
-  }
-    */
     
-  // NOTE: states skipped - type Generic is ignored in gen
+  // NOTE: states skipped - type Generic is ignored in gen 
 
 
   //////////////////////////////////////////////////////////////////////////////
@@ -66,10 +113,10 @@ class ScatterSeriesOptions extends LineSeriesOptions {
 
     
     if (this.jitter != null) {  
-      buffer.writeAll(["\"jitter\":", this.jitter?.toJSON(), ","], "");
+      buffer.writeAll(["\"jitter\":",this.jitter?.toJSON(), ","], "");
     }
 
-    // NOTE: skip serialization of states (type Generic is ignored)} 
+    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
   }
 
 }

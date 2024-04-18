@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,66 +24,93 @@ import 'OptionFragment.dart';
  */
 class HistogramSeriesOptions extends ColumnSeriesOptions {
   HistogramSeriesOptions( {
-    this.baseSeries = null,
+    super.accessibility = null,
+    super.allAreas = null,
+    super.allowPointSelect = null,
+    super.animationLimit = null,
     this.binsNumber = null,
-    this.binWidth = null
+    this.binWidth = null,
+    super.boostBlending = null,
+    super.boostThreshold = null,
+    super.borderColor = null,
+    super.borderWidth = null,
+    super.className = null,
+    super.clip = null,
+    super.color = null,
+    super.colorAxis = null,
+    super.colorIndex = null,
+    super.colorKey = null,
+    super.compare = null,
+    super.compareStart = null,
+    super.connectEnds = null,
+    super.connectNulls = null,
+    super.connectors = null,
+    super.crisp = null,
+    super.cropThreshold = null,
+    super.cumulative = null,
+    super.cursor = null,
+    super.dashStyle = null,
+    super.dataGrouping = null,
+    super.dataLabels = null,
+    super.dataSorting = null,
+    super.description = null,
+    super.dragDrop = null,
+    super.enableMouseTracking = null,
+    super.events = null,
+    super.findNearestPointBy = null,
+    super.gapSize = null,
+    super.gapUnit = null,
+    super.getExtremesFromAll = null,
+    super.includeInDataExport = null,
+    super.joinBy = null,
+    super.keys = null,
+    super.label = null,
+    super.lastPrice = null,
+    super.lastVisiblePrice = null,
+    super.legendSymbol = null,
+    super.linecap = null,
+    super.lineWidth = null,
+    super.linkedTo = null,
+    super.marker = null,
+    super.maxPointWidth = null,
+    super.minPointLength = null,
+    super.navigatorOptions = null,
+    super.negativeColor = null,
+    super.onPoint = null,
+    super.opacity = null,
+    super.point = null,
+    super.pointInterval = null,
+    super.pointIntervalUnit = null,
+    super.pointPadding = null,
+    super.pointPlacement = null,
+    super.pointRange = null,
+    super.pointStart = null,
+    super.pointWidth = null,
+    super.relativeXValue = null,
+    super.selected = null,
+    super.showCheckbox = null,
+    super.showInLegend = null,
+    super.showInNavigator = null,
+    super.skipKeyboardNavigation = null,
+    super.softThreshold = null,
+    super.stacking = null,
+    super.step = null,
+    super.stickyTracking = null,
+    super.threshold = null,
+    super.tooltip = null,
+    super.turboThreshold = null,
+    super.visible = null,
+    super.zIndex = null,
+    super.zoneAxis = null,
+    super.zones = null
   }) : super();
-  String? baseSeries;
-    /*
-  String get baseSeries { 
-    if (this._baseSeries == null) {
-      this._baseSeries = "";
-    }
-    return this._baseSeries!;
-  }
+  // NOTE: baseSeries skipped - type string is ignored in gen 
 
-  void set baseSeries (String v) {
-    this._baseSeries = v;
-  }
-    */
-    
-  /**
-   * A preferable number of bins. It is a suggestion, so a histogram may
-   * have a different number of bins. By default it is set to the square
-   * root of the base series' data length. Available options are:
-   * `square-root`, `sturges`, `rice`. You can also define a function
-   * which takes a `baseSeries` as a parameter and should return a
-   * positive integer.  
-      */
   String? binsNumber;
-    /*
-  String get binsNumber { 
-    if (this._binsNumber == null) {
-      this._binsNumber = "";
-    }
-    return this._binsNumber!;
-  }
-
-  void set binsNumber (String v) {
-    this._binsNumber = v;
-  }
-    */
     
-  /**
-   * Width of each bin. By default the bin's width is calculated as
-   * `(max - min) / number of bins`. This option takes precedence over
-   * [binsNumber](#plotOptions.histogram.binsNumber).  
-      */
   double? binWidth;
-    /*
-  double get binWidth { 
-    if (this._binWidth == null) {
-      this._binWidth = 0;
-    }
-    return this._binWidth!;
-  }
-
-  void set binWidth (double v) {
-    this._binWidth = v;
-  }
-    */
     
-  // NOTE: states skipped - type Generic is ignored in gen
+  // NOTE: states skipped - type Generic is ignored in gen 
 
 
   //////////////////////////////////////////////////////////////////////////////
@@ -93,19 +120,17 @@ class HistogramSeriesOptions extends ColumnSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.baseSeries != null) {  
-      buffer.writeAll(["\"baseSeries\":\`", this.baseSeries, "\`,"], "");
-    }
+    // NOTE: skip serialization of baseSeries (type string is ignored) ignore type: true
 
     if (this.binsNumber != null) {  
-      buffer.writeAll(["\"binsNumber\":\`", this.binsNumber, "\`,"], "");
+      buffer.writeAll(["\"binsNumber\":\`",this.binsNumber, "\`,"], "");
     }
 
     if (this.binWidth != null) {  
-      buffer.writeAll(["\"binWidth\":", this.binWidth, ","], "");
+      buffer.writeAll(["\"binWidth\":",this.binWidth, ","], "");
     }
 
-    // NOTE: skip serialization of states (type Generic is ignored)} 
+    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
   }
 
 }

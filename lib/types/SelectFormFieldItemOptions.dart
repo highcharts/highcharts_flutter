@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,53 +22,13 @@ import 'OptionFragment.dart';
  * SelectFormFieldItemOptions 
  */
 class SelectFormFieldItemOptions extends OptionFragment {
-  SelectFormFieldItemOptions( {
-    this.iconsURLPrefix = null,
-    this.name = null,
-    this.iconURL = null
-  }) : super();
-  String? iconsURLPrefix;
-    /*
-  String get iconsURLPrefix { 
-    if (this._iconsURLPrefix == null) {
-      this._iconsURLPrefix = "";
-    }
-    return this._iconsURLPrefix!;
-  }
+  SelectFormFieldItemOptions( ) : super();
+  // NOTE: iconsURLPrefix skipped - type string is ignored in gen 
 
-  void set iconsURLPrefix (String v) {
-    this._iconsURLPrefix = v;
-  }
-    */
-    
-  String? name;
-    /*
-  String get name { 
-    if (this._name == null) {
-      this._name = "";
-    }
-    return this._name!;
-  }
+  // NOTE: name skipped - type string is ignored in gen 
 
-  void set name (String v) {
-    this._name = v;
-  }
-    */
-    
-  String? iconURL;
-    /*
-  String get iconURL { 
-    if (this._iconURL == null) {
-      this._iconURL = "";
-    }
-    return this._iconURL!;
-  }
+  // NOTE: iconURL skipped - type string is ignored in gen 
 
-  void set iconURL (String v) {
-    this._iconURL = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -77,17 +37,11 @@ class SelectFormFieldItemOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.iconsURLPrefix != null) {  
-      buffer.writeAll(["\"iconsURLPrefix\":\`", this.iconsURLPrefix, "\`,"], "");
-    }
+    // NOTE: skip serialization of iconsURLPrefix (type string is ignored) ignore type: true
 
-    if (this.name != null) {  
-      buffer.writeAll(["\"name\":\`", this.name, "\`,"], "");
-    }
+    // NOTE: skip serialization of name (type string is ignored) ignore type: true
 
-    if (this.iconURL != null) {  
-      buffer.writeAll(["\"iconURL\":\`", this.iconURL, "\`,"], "");
-    }
+    // NOTE: skip serialization of iconURL (type string is ignored) ignore type: true
   }
 
 }

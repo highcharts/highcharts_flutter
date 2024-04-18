@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,21 +24,12 @@ import 'OptionFragment.dart';
  */
 class LastVisiblePriceOptions extends OptionFragment {
   LastVisiblePriceOptions( {
-    this.enabled = null
+    this.enabled = null,
+    this.label = null
   }) : super();
   bool? enabled;
-    /*
-  bool get enabled { 
-    if (this._enabled == null) {
-      this._enabled = false;
-    }
-    return this._enabled!;
-  }
-
-  void set enabled (bool v) {
-    this._enabled = v;
-  }
-    */
+    
+  LastVisiblePriceLabelOptions? label;
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -49,10 +40,12 @@ class LastVisiblePriceOptions extends OptionFragment {
 
     
     if (this.enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
+      buffer.writeAll(["\"enabled\":",this.enabled, ","], "");
     }
 
-    // NOTE: skip serialization of label (type LastVisiblePriceLabelOptions is ignored)} 
+    if (this.label != null) {  
+      buffer.writeAll(["\"label\":",this.label?.toJSON(), ","], "");
+    }
   }
 
 }

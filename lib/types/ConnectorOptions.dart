@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -34,7 +34,7 @@ class ConnectorOptions extends ComponentConnectorOptions {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of columnAssignment (type ColumnAssignmentOptions is ignored)} 
+    // NOTE: skip serialization of columnAssignment (type ColumnAssignmentOptions is ignored) ignore type: true
   }
 
 }

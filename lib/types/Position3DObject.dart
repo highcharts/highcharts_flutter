@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,23 +23,9 @@ import 'OptionFragment.dart';
  * Position3DObject 
  */
 class Position3DObject extends PositionObject {
-  Position3DObject( {
-    this.z = null
-  }) : super();
-  double? z;
-    /*
-  double get z { 
-    if (this._z == null) {
-      this._z = 0;
-    }
-    return this._z!;
-  }
+  Position3DObject( ) : super();
+  // NOTE: z skipped - type number is ignored in gen 
 
-  void set z (double v) {
-    this._z = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -48,11 +34,9 @@ class Position3DObject extends PositionObject {
     super.toJSONInner(buffer);
 
     
-    if (this.z != null) {  
-      buffer.writeAll(["\"z\":", this.z, ","], "");
-    }
+    // NOTE: skip serialization of z (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of matrix (type number[] is ignored)} 
+    // NOTE: skip serialization of matrix (type number[] is ignored) ignore type: true
   }
 
 }

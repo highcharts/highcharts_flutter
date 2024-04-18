@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,97 +24,28 @@ import 'OptionFragment.dart';
  */
 class StockToolsGuiOptions extends OptionFragment {
   StockToolsGuiOptions( {
+    this.buttons = null,
     this.className = null,
+    this.definitions = null,
     this.enabled = null,
     this.iconsURL = null,
-    this.placed = null,
-    this.toolbarClassName = null,
-    this.visible = null
+    this.toolbarClassName = null
   }) : super();
+  List<String>? buttons; // String
   String? className;
-    /*
-  String get className { 
-    if (this._className == null) {
-      this._className = "";
-    }
-    return this._className!;
-  }
-
-  void set className (String v) {
-    this._className = v;
-  }
-    */
+    
+  StockToolsGuiDefinitionsOptions? definitions;
     
   bool? enabled;
-    /*
-  bool get enabled { 
-    if (this._enabled == null) {
-      this._enabled = false;
-    }
-    return this._enabled!;
-  }
-
-  void set enabled (bool v) {
-    this._enabled = v;
-  }
-    */
     
   String? iconsURL;
-    /*
-  String get iconsURL { 
-    if (this._iconsURL == null) {
-      this._iconsURL = "";
-    }
-    return this._iconsURL!;
-  }
-
-  void set iconsURL (String v) {
-    this._iconsURL = v;
-  }
-    */
     
-  bool? placed;
-    /*
-  bool get placed { 
-    if (this._placed == null) {
-      this._placed = false;
-    }
-    return this._placed!;
-  }
+  // NOTE: placed skipped - type boolean is ignored in gen 
 
-  void set placed (bool v) {
-    this._placed = v;
-  }
-    */
-    
   String? toolbarClassName;
-    /*
-  String get toolbarClassName { 
-    if (this._toolbarClassName == null) {
-      this._toolbarClassName = "";
-    }
-    return this._toolbarClassName!;
-  }
-
-  void set toolbarClassName (String v) {
-    this._toolbarClassName = v;
-  }
-    */
     
-  bool? visible;
-    /*
-  bool get visible { 
-    if (this._visible == null) {
-      this._visible = false;
-    }
-    return this._visible!;
-  }
+  // NOTE: visible skipped - type boolean is ignored in gen 
 
-  void set visible (bool v) {
-    this._visible = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -123,33 +54,37 @@ class StockToolsGuiOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of buttons (type string[] is ignored)} 
+    if (this.buttons != null) {  
+     StringBuffer arrData = StringBuffer();
 
-    if (this.className != null) {  
-      buffer.writeAll(["\"className\":\`", this.className, "\`,"], "");
+      arrData.writeAll(this.buttons!, ",");
+      buffer.writeAll(["\"buttons\": [", arrData , "],"], "");   
+        
     }
 
-    // NOTE: skip serialization of definitions (type StockToolsGuiDefinitionsOptions is ignored)} 
+    if (this.className != null) {  
+      buffer.writeAll(["\"className\":\`",this.className, "\`,"], "");
+    }
+
+    if (this.definitions != null) {  
+      buffer.writeAll(["\"definitions\":",this.definitions?.toJSON(), ","], "");
+    }
 
     if (this.enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
+      buffer.writeAll(["\"enabled\":",this.enabled, ","], "");
     }
 
     if (this.iconsURL != null) {  
-      buffer.writeAll(["\"iconsURL\":\`", this.iconsURL, "\`,"], "");
+      buffer.writeAll(["\"iconsURL\":\`",this.iconsURL, "\`,"], "");
     }
 
-    if (this.placed != null) {  
-      buffer.writeAll(["\"placed\":", this.placed, ","], "");
-    }
+    // NOTE: skip serialization of placed (type boolean is ignored) ignore type: true
 
     if (this.toolbarClassName != null) {  
-      buffer.writeAll(["\"toolbarClassName\":\`", this.toolbarClassName, "\`,"], "");
+      buffer.writeAll(["\"toolbarClassName\":\`",this.toolbarClassName, "\`,"], "");
     }
 
-    if (this.visible != null) {  
-      buffer.writeAll(["\"visible\":", this.visible, ","], "");
-    }
+    // NOTE: skip serialization of visible (type boolean is ignored) ignore type: true
   }
 
 }

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -37,15 +37,15 @@ class GeoJSONGeometryMultiPointRegistry extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of mLineString (type LineString is ignored)} 
+    // NOTE: skip serialization of mLineString (type LineString is ignored) ignore type: true
 
-    // NOTE: skip serialization of mMultiPoint (type MultiPoint is ignored)} 
+    // NOTE: skip serialization of mMultiPoint (type MultiPoint is ignored) ignore type: true
 
-    // NOTE: skip serialization of mPolygon (type Polygon is ignored)} 
+    // NOTE: skip serialization of mPolygon (type Polygon is ignored) ignore type: true
 
-    // NOTE: skip serialization of mMultiLineString (type MultiLineString is ignored)} 
+    // NOTE: skip serialization of mMultiLineString (type MultiLineString is ignored) ignore type: true
 
-    // NOTE: skip serialization of mMultiPolygon (type MultiPolygon is ignored)} 
+    // NOTE: skip serialization of mMultiPolygon (type MultiPolygon is ignored) ignore type: true
   }
 
 }

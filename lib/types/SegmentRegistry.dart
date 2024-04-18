@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -33,25 +33,25 @@ class SegmentRegistry extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of mArc (type Arc is ignored)} 
+    // NOTE: skip serialization of mArc (type Arc is ignored) ignore type: true
 
-    // NOTE: skip serialization of mClose (type Close is ignored)} 
+    // NOTE: skip serialization of mClose (type Close is ignored) ignore type: true
 
-    // NOTE: skip serialization of mCurveTo (type CurveTo is ignored)} 
+    // NOTE: skip serialization of mCurveTo (type CurveTo is ignored) ignore type: true
 
-    // NOTE: skip serialization of mCurveSmoothTo (type CurveSmoothTo is ignored)} 
+    // NOTE: skip serialization of mCurveSmoothTo (type CurveSmoothTo is ignored) ignore type: true
 
-    // NOTE: skip serialization of mHorizontalLineTo (type HorizontalLineTo is ignored)} 
+    // NOTE: skip serialization of mHorizontalLineTo (type HorizontalLineTo is ignored) ignore type: true
 
-    // NOTE: skip serialization of mLineTo (type LineTo is ignored)} 
+    // NOTE: skip serialization of mLineTo (type LineTo is ignored) ignore type: true
 
-    // NOTE: skip serialization of mMoveTo (type MoveTo is ignored)} 
+    // NOTE: skip serialization of mMoveTo (type MoveTo is ignored) ignore type: true
 
-    // NOTE: skip serialization of mQuadSmoothTo (type QuadSmoothTo is ignored)} 
+    // NOTE: skip serialization of mQuadSmoothTo (type QuadSmoothTo is ignored) ignore type: true
 
-    // NOTE: skip serialization of mQuadTo (type QuadTo is ignored)} 
+    // NOTE: skip serialization of mQuadTo (type QuadTo is ignored) ignore type: true
 
-    // NOTE: skip serialization of mVerticalLineTo (type VerticalLineTo is ignored)} 
+    // NOTE: skip serialization of mVerticalLineTo (type VerticalLineTo is ignored) ignore type: true
   }
 
 }

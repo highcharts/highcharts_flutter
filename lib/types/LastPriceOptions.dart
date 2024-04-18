@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,21 +24,16 @@ import 'OptionFragment.dart';
  */
 class LastPriceOptions extends AxisCrosshairOptions {
   LastPriceOptions( {
-    this.enabled = null
+    super.className = null,
+    super.color = null,
+    super.dashStyle = null,
+    this.enabled = null,
+    super.label = null,
+    super.snap = null,
+    super.width = null,
+    super.zIndex = null
   }) : super();
   bool? enabled;
-    /*
-  bool get enabled { 
-    if (this._enabled == null) {
-      this._enabled = false;
-    }
-    return this._enabled!;
-  }
-
-  void set enabled (bool v) {
-    this._enabled = v;
-  }
-    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -49,7 +44,7 @@ class LastPriceOptions extends AxisCrosshairOptions {
 
     
     if (this.enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
+      buffer.writeAll(["\"enabled\":",this.enabled, ","], "");
     }
   }
 

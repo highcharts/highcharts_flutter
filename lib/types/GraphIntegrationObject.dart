@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -32,15 +32,15 @@ class GraphIntegrationObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of barycenter (type Function is ignored)} 
+    // NOTE: skip serialization of barycenter (type Function is ignored) ignore type: 1
 
-    // NOTE: skip serialization of getK (type Function is ignored)} 
+    // NOTE: skip serialization of getK (type Function is ignored) ignore type: 1
 
-    // NOTE: skip serialization of integrate (type Function is ignored)} 
+    // NOTE: skip serialization of integrate (type Function is ignored) ignore type: 1
 
-    // NOTE: skip serialization of repulsive (type Function is ignored)} 
+    // NOTE: skip serialization of repulsive (type Function is ignored) ignore type: 1
 
-    // NOTE: skip serialization of repulsiveForceFunction (type Function is ignored)} 
+    // NOTE: skip serialization of repulsiveForceFunction (type Function is ignored) ignore type: 1
   }
 
 }

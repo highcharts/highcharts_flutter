@@ -1,0 +1,22 @@
+[
+  {
+    "type": "missing_mapping",
+    "path": "xAxis.categories"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "yAxis.title"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "yAxis.title"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "series.tooltip"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "series.tooltip"
+  }
+]

@@ -12,11 +12,12 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
 import 'ChartLike.dart';
+import 'CallbackFunction.dart';
 import 'OptionFragment.dart';
 
 /** 
@@ -33,17 +34,17 @@ class Chart extends ChartLike {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of callbacks (type CallbackFunction[] is ignored)} 
+    // NOTE: skip serialization of callbacks (type CallbackFunction[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of collectionsWithInit (type Generic is ignored)} 
+    // NOTE: skip serialization of collectionsWithInit (type Generic is ignored) ignore type: true
 
-    // NOTE: skip serialization of collectionsWithUpdate (type string[] is ignored)} 
+    // NOTE: skip serialization of collectionsWithUpdate (type string[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of propsRequireDirtyBox (type string[] is ignored)} 
+    // NOTE: skip serialization of propsRequireDirtyBox (type string[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of propsRequireReflow (type string[] is ignored)} 
+    // NOTE: skip serialization of propsRequireReflow (type string[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of propsRequireUpdateSeries (type string[] is ignored)} 
+    // NOTE: skip serialization of propsRequireUpdateSeries (type string[] is ignored) ignore type: true
   }
 
 }

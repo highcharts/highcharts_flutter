@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,68 +22,15 @@ import 'OptionFragment.dart';
  * OffsetObject 
  */
 class OffsetObject extends OptionFragment {
-  OffsetObject( {
-    this.height = null,
-    this.left = null,
-    this.top = null,
-    this.width = null
-  }) : super();
-  double? height;
-    /*
-  double get height { 
-    if (this._height == null) {
-      this._height = 0;
-    }
-    return this._height!;
-  }
+  OffsetObject( ) : super();
+  // NOTE: height skipped - type number is ignored in gen 
 
-  void set height (double v) {
-    this._height = v;
-  }
-    */
-    
-  double? left;
-    /*
-  double get left { 
-    if (this._left == null) {
-      this._left = 0;
-    }
-    return this._left!;
-  }
+  // NOTE: left skipped - type number is ignored in gen 
 
-  void set left (double v) {
-    this._left = v;
-  }
-    */
-    
-  double? top;
-    /*
-  double get top { 
-    if (this._top == null) {
-      this._top = 0;
-    }
-    return this._top!;
-  }
+  // NOTE: top skipped - type number is ignored in gen 
 
-  void set top (double v) {
-    this._top = v;
-  }
-    */
-    
-  double? width;
-    /*
-  double get width { 
-    if (this._width == null) {
-      this._width = 0;
-    }
-    return this._width!;
-  }
+  // NOTE: width skipped - type number is ignored in gen 
 
-  void set width (double v) {
-    this._width = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -92,21 +39,13 @@ class OffsetObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.height != null) {  
-      buffer.writeAll(["\"height\":", this.height, ","], "");
-    }
+    // NOTE: skip serialization of height (type number is ignored) ignore type: true
 
-    if (this.left != null) {  
-      buffer.writeAll(["\"left\":", this.left, ","], "");
-    }
+    // NOTE: skip serialization of left (type number is ignored) ignore type: true
 
-    if (this.top != null) {  
-      buffer.writeAll(["\"top\":", this.top, ","], "");
-    }
+    // NOTE: skip serialization of top (type number is ignored) ignore type: true
 
-    if (this.width != null) {  
-      buffer.writeAll(["\"width\":", this.width, ","], "");
-    }
+    // NOTE: skip serialization of width (type number is ignored) ignore type: true
   }
 
 }

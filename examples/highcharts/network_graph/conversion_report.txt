@@ -1,0 +1,14 @@
+[
+  {
+    "type": "missing_mapping",
+    "path": "plotOptions.networkgraph.keys"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "series.accessibility"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "series.dataLabels.style"
+  }
+]

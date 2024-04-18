@@ -12,36 +12,24 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
 import 'AxisComposition.dart';
 import 'Chart.dart';
+import 'DataClassOptions.dart';
 import 'Options.dart';
+import 'GradientColorStop.dart';
 import 'OptionFragment.dart';
 
 /** 
  * ColorAxisLike 
  */
 class ColorAxisLike extends AxisComposition {
-  ColorAxisLike( {
-    this.index = null
-  }) : super();
-  double? index;
-    /*
-  double get index { 
-    if (this._index == null) {
-      this._index = 0;
-    }
-    return this._index!;
-  }
+  ColorAxisLike( ) : super();
+  // NOTE: index skipped - type number is ignored in gen 
 
-  void set index (double v) {
-    this._index = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -50,17 +38,15 @@ class ColorAxisLike extends AxisComposition {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of chart (type Chart is ignored)} 
+    // NOTE: skip serialization of chart (type Chart is ignored) ignore type: true
 
-    // NOTE: skip serialization of dataClasses (type DataClassOptions[] is ignored)} 
+    // NOTE: skip serialization of dataClasses (type DataClassOptions[] is ignored) ignore type: true
 
-    if (this.index != null) {  
-      buffer.writeAll(["\"index\":", this.index, ","], "");
-    }
+    // NOTE: skip serialization of index (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of options (type Options is ignored)} 
+    // NOTE: skip serialization of options (type Options is ignored) ignore type: true
 
-    // NOTE: skip serialization of stops (type GradientColorStop[] is ignored)} 
+    // NOTE: skip serialization of stops (type GradientColorStop[] is ignored) ignore type: true
   }
 
 }

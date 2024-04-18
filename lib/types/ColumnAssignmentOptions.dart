@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,23 +22,9 @@ import 'OptionFragment.dart';
  * ColumnAssignmentOptions 
  */
 class ColumnAssignmentOptions extends OptionFragment {
-  ColumnAssignmentOptions( {
-    this.seriesId = null
-  }) : super();
-  String? seriesId;
-    /*
-  String get seriesId { 
-    if (this._seriesId == null) {
-      this._seriesId = "";
-    }
-    return this._seriesId!;
-  }
+  ColumnAssignmentOptions( ) : super();
+  // NOTE: seriesId skipped - type string is ignored in gen 
 
-  void set seriesId (String v) {
-    this._seriesId = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -47,11 +33,9 @@ class ColumnAssignmentOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.seriesId != null) {  
-      buffer.writeAll(["\"seriesId\":\`", this.seriesId, "\`,"], "");
-    }
+    // NOTE: skip serialization of seriesId (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of data (type Generic is ignored)} 
+    // NOTE: skip serialization of data (type Generic is ignored) ignore type: true
   }
 
 }

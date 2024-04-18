@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,23 +22,9 @@ import 'OptionFragment.dart';
  * FetchURLOptions 
  */
 class FetchURLOptions extends OptionFragment {
-  FetchURLOptions( {
-    this.onlyColumnNames = null
-  }) : super();
-  bool? onlyColumnNames;
-    /*
-  bool get onlyColumnNames { 
-    if (this._onlyColumnNames == null) {
-      this._onlyColumnNames = false;
-    }
-    return this._onlyColumnNames!;
-  }
+  FetchURLOptions( ) : super();
+  // NOTE: onlyColumnNames skipped - type boolean is ignored in gen 
 
-  void set onlyColumnNames (bool v) {
-    this._onlyColumnNames = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -47,9 +33,7 @@ class FetchURLOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.onlyColumnNames != null) {  
-      buffer.writeAll(["\"onlyColumnNames\":", this.onlyColumnNames, ","], "");
-    }
+    // NOTE: skip serialization of onlyColumnNames (type boolean is ignored) ignore type: true
   }
 
 }

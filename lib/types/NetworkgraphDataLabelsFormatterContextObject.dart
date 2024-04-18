@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,38 +23,11 @@ import 'OptionFragment.dart';
  * NetworkgraphDataLabelsFormatterContextObject 
  */
 class NetworkgraphDataLabelsFormatterContextObject extends OptionFragment {
-  NetworkgraphDataLabelsFormatterContextObject( {
-    this.color = null,
-    this.key = null
-  }) : super();
-  String? color;
-    /*
-  String get color { 
-    if (this._color == null) {
-      this._color = "";
-    }
-    return this._color!;
-  }
+  NetworkgraphDataLabelsFormatterContextObject( ) : super();
+  // NOTE: color skipped - type string is ignored in gen 
 
-  void set color (String v) {
-    this._color = v;
-  }
-    */
-    
-  String? key;
-    /*
-  String get key { 
-    if (this._key == null) {
-      this._key = "";
-    }
-    return this._key!;
-  }
+  // NOTE: key skipped - type string is ignored in gen 
 
-  void set key (String v) {
-    this._key = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -63,15 +36,11 @@ class NetworkgraphDataLabelsFormatterContextObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.color != null) {  
-      buffer.writeAll(["\"color\":\`", this.color, "\`,"], "");
-    }
+    // NOTE: skip serialization of color (type string is ignored) ignore type: true
 
-    if (this.key != null) {  
-      buffer.writeAll(["\"key\":\`", this.key, "\`,"], "");
-    }
+    // NOTE: skip serialization of key (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of point (type NetworkgraphPoint is ignored)} 
+    // NOTE: skip serialization of point (type NetworkgraphPoint is ignored) ignore type: true
   }
 
 }

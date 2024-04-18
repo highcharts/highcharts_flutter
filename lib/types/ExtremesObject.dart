@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,98 +22,19 @@ import 'OptionFragment.dart';
  * ExtremesObject 
  */
 class ExtremesObject extends OptionFragment {
-  ExtremesObject( {
-    this.dataMax = null,
-    this.dataMin = null,
-    this.max = null,
-    this.min = null,
-    this.userMax = null,
-    this.userMin = null
-  }) : super();
-  double? dataMax;
-    /*
-  double get dataMax { 
-    if (this._dataMax == null) {
-      this._dataMax = 0;
-    }
-    return this._dataMax!;
-  }
+  ExtremesObject( ) : super();
+  // NOTE: dataMax skipped - type number is ignored in gen 
 
-  void set dataMax (double v) {
-    this._dataMax = v;
-  }
-    */
-    
-  double? dataMin;
-    /*
-  double get dataMin { 
-    if (this._dataMin == null) {
-      this._dataMin = 0;
-    }
-    return this._dataMin!;
-  }
+  // NOTE: dataMin skipped - type number is ignored in gen 
 
-  void set dataMin (double v) {
-    this._dataMin = v;
-  }
-    */
-    
-  double? max;
-    /*
-  double get max { 
-    if (this._max == null) {
-      this._max = 0;
-    }
-    return this._max!;
-  }
+  // NOTE: max skipped - type number is ignored in gen 
 
-  void set max (double v) {
-    this._max = v;
-  }
-    */
-    
-  double? min;
-    /*
-  double get min { 
-    if (this._min == null) {
-      this._min = 0;
-    }
-    return this._min!;
-  }
+  // NOTE: min skipped - type number is ignored in gen 
 
-  void set min (double v) {
-    this._min = v;
-  }
-    */
-    
-  double? userMax;
-    /*
-  double get userMax { 
-    if (this._userMax == null) {
-      this._userMax = 0;
-    }
-    return this._userMax!;
-  }
+  // NOTE: userMax skipped - type number is ignored in gen 
 
-  void set userMax (double v) {
-    this._userMax = v;
-  }
-    */
-    
-  double? userMin;
-    /*
-  double get userMin { 
-    if (this._userMin == null) {
-      this._userMin = 0;
-    }
-    return this._userMin!;
-  }
+  // NOTE: userMin skipped - type number is ignored in gen 
 
-  void set userMin (double v) {
-    this._userMin = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -122,53 +43,29 @@ class ExtremesObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.dataMax != null) {  
-      buffer.writeAll(["\"dataMax\":", this.dataMax, ","], "");
-    }
+    // NOTE: skip serialization of dataMax (type number is ignored) ignore type: true
 
-    if (this.dataMin != null) {  
-      buffer.writeAll(["\"dataMin\":", this.dataMin, ","], "");
-    }
+    // NOTE: skip serialization of dataMin (type number is ignored) ignore type: true
 
-    if (this.max != null) {  
-      buffer.writeAll(["\"max\":", this.max, ","], "");
-    }
+    // NOTE: skip serialization of max (type number is ignored) ignore type: true
 
-    if (this.min != null) {  
-      buffer.writeAll(["\"min\":", this.min, ","], "");
-    }
+    // NOTE: skip serialization of min (type number is ignored) ignore type: true
 
-    if (this.userMax != null) {  
-      buffer.writeAll(["\"userMax\":", this.userMax, ","], "");
-    }
+    // NOTE: skip serialization of userMax (type number is ignored) ignore type: true
 
-    if (this.userMin != null) {  
-      buffer.writeAll(["\"userMin\":", this.userMin, ","], "");
-    }
+    // NOTE: skip serialization of userMin (type number is ignored) ignore type: true
 
-    if (this.dataMax != null) {  
-      buffer.writeAll(["\"dataMax\":", this.dataMax, ","], "");
-    }
+    // NOTE: skip serialization of dataMax (type number is ignored) ignore type: true
 
-    if (this.dataMin != null) {  
-      buffer.writeAll(["\"dataMin\":", this.dataMin, ","], "");
-    }
+    // NOTE: skip serialization of dataMin (type number is ignored) ignore type: true
 
-    if (this.max != null) {  
-      buffer.writeAll(["\"max\":", this.max, ","], "");
-    }
+    // NOTE: skip serialization of max (type number is ignored) ignore type: true
 
-    if (this.min != null) {  
-      buffer.writeAll(["\"min\":", this.min, ","], "");
-    }
+    // NOTE: skip serialization of min (type number is ignored) ignore type: true
 
-    if (this.userMax != null) {  
-      buffer.writeAll(["\"userMax\":", this.userMax, ","], "");
-    }
+    // NOTE: skip serialization of userMax (type number is ignored) ignore type: true
 
-    if (this.userMin != null) {  
-      buffer.writeAll(["\"userMin\":", this.userMin, ","], "");
-    }
+    // NOTE: skip serialization of userMin (type number is ignored) ignore type: true
   }
 
 }

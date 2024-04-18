@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,23 +22,9 @@ import 'OptionFragment.dart';
  * CellResponsiveOptions 
  */
 class CellResponsiveOptions extends OptionFragment {
-  CellResponsiveOptions( {
-    this.width = null
-  }) : super();
-  String? width;
-    /*
-  String get width { 
-    if (this._width == null) {
-      this._width = "";
-    }
-    return this._width!;
-  }
+  CellResponsiveOptions( ) : super();
+  // NOTE: width skipped - type string is ignored in gen 
 
-  void set width (String v) {
-    this._width = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -47,9 +33,7 @@ class CellResponsiveOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.width != null) {  
-      buffer.writeAll(["\"width\":\`", this.width, "\`,"], "");
-    }
+    // NOTE: skip serialization of width (type string is ignored) ignore type: true
   }
 
 }

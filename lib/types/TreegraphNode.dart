@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,98 +24,19 @@ import 'OptionFragment.dart';
  * TreegraphNode 
  */
 class TreegraphNode extends OptionFragment {
-  TreegraphNode( {
-    this.column = null,
-    this.relativeXPosition = null,
-    this.xPosition = null,
-    this.yPosition = null,
-    this.nodeSizeX = null,
-    this.nodeSizeY = null
-  }) : super();
-  double? column;
-    /*
-  double get column { 
-    if (this._column == null) {
-      this._column = 0;
-    }
-    return this._column!;
-  }
+  TreegraphNode( ) : super();
+  // NOTE: column skipped - type number is ignored in gen 
 
-  void set column (double v) {
-    this._column = v;
-  }
-    */
-    
-  double? relativeXPosition;
-    /*
-  double get relativeXPosition { 
-    if (this._relativeXPosition == null) {
-      this._relativeXPosition = 0;
-    }
-    return this._relativeXPosition!;
-  }
+  // NOTE: relativeXPosition skipped - type number is ignored in gen 
 
-  void set relativeXPosition (double v) {
-    this._relativeXPosition = v;
-  }
-    */
-    
-  double? xPosition;
-    /*
-  double get xPosition { 
-    if (this._xPosition == null) {
-      this._xPosition = 0;
-    }
-    return this._xPosition!;
-  }
+  // NOTE: xPosition skipped - type number is ignored in gen 
 
-  void set xPosition (double v) {
-    this._xPosition = v;
-  }
-    */
-    
-  double? yPosition;
-    /*
-  double get yPosition { 
-    if (this._yPosition == null) {
-      this._yPosition = 0;
-    }
-    return this._yPosition!;
-  }
+  // NOTE: yPosition skipped - type number is ignored in gen 
 
-  void set yPosition (double v) {
-    this._yPosition = v;
-  }
-    */
-    
-  double? nodeSizeX;
-    /*
-  double get nodeSizeX { 
-    if (this._nodeSizeX == null) {
-      this._nodeSizeX = 0;
-    }
-    return this._nodeSizeX!;
-  }
+  // NOTE: nodeSizeX skipped - type number is ignored in gen 
 
-  void set nodeSizeX (double v) {
-    this._nodeSizeX = v;
-  }
-    */
-    
-  double? nodeSizeY;
-    /*
-  double get nodeSizeY { 
-    if (this._nodeSizeY == null) {
-      this._nodeSizeY = 0;
-    }
-    return this._nodeSizeY!;
-  }
+  // NOTE: nodeSizeY skipped - type number is ignored in gen 
 
-  void set nodeSizeY (double v) {
-    this._nodeSizeY = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -124,37 +45,25 @@ class TreegraphNode extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of point (type TreegraphPoint is ignored)} 
+    // NOTE: skip serialization of point (type TreegraphPoint is ignored) ignore type: true
 
-    // NOTE: skip serialization of ancestor (type TreegraphNode is ignored)} 
+    // NOTE: skip serialization of ancestor (type TreegraphNode is ignored) ignore type: true
 
-    if (this.column != null) {  
-      buffer.writeAll(["\"column\":", this.column, ","], "");
-    }
+    // NOTE: skip serialization of column (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of parentNode (type TreegraphNode is ignored)} 
+    // NOTE: skip serialization of parentNode (type TreegraphNode is ignored) ignore type: true
 
-    if (this.relativeXPosition != null) {  
-      buffer.writeAll(["\"relativeXPosition\":", this.relativeXPosition, ","], "");
-    }
+    // NOTE: skip serialization of relativeXPosition (type number is ignored) ignore type: true
 
-    if (this.xPosition != null) {  
-      buffer.writeAll(["\"xPosition\":", this.xPosition, ","], "");
-    }
+    // NOTE: skip serialization of xPosition (type number is ignored) ignore type: true
 
-    if (this.yPosition != null) {  
-      buffer.writeAll(["\"yPosition\":", this.yPosition, ","], "");
-    }
+    // NOTE: skip serialization of yPosition (type number is ignored) ignore type: true
 
-    if (this.nodeSizeX != null) {  
-      buffer.writeAll(["\"nodeSizeX\":", this.nodeSizeX, ","], "");
-    }
+    // NOTE: skip serialization of nodeSizeX (type number is ignored) ignore type: true
 
-    if (this.nodeSizeY != null) {  
-      buffer.writeAll(["\"nodeSizeY\":", this.nodeSizeY, ","], "");
-    }
+    // NOTE: skip serialization of nodeSizeY (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of series (type TreegraphSeries is ignored)} 
+    // NOTE: skip serialization of series (type TreegraphSeries is ignored) ignore type: true
   }
 
 }

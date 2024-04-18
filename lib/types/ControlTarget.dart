@@ -12,11 +12,12 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
 import 'Annotation.dart';
+import 'ControlPoint.dart';
 import 'ControlTargetOptions.dart';
 import 'OptionFragment.dart';
 
@@ -34,15 +35,15 @@ class ControlTarget extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of annotation (type Annotation is ignored)} 
+    // NOTE: skip serialization of annotation (type Annotation is ignored) ignore type: true
 
-    // NOTE: skip serialization of chart (type AnnotationChart is ignored)} 
+    // NOTE: skip serialization of chart (type AnnotationChart is ignored) ignore type: true
 
-    // NOTE: skip serialization of controlPoints (type ControlPoint[] is ignored)} 
+    // NOTE: skip serialization of controlPoints (type ControlPoint[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of options (type ControlTargetOptions is ignored)} 
+    // NOTE: skip serialization of options (type ControlTargetOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of points (type AnnotationPointType[] is ignored)} 
+    // NOTE: skip serialization of points (type AnnotationPointType[] is ignored) ignore type: true
   }
 
 }

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,67 +24,18 @@ import 'OptionFragment.dart';
  */
 class PlotBoxTransform extends SVGAttributes {
   PlotBoxTransform( {
-    this.scaleX = null,
-    this.scaleY = null,
-    this.translateX = null,
-    this.translateY = null
+    super.dashstyle = null,
+    super.stroke = null,
+    super.width = null
   }) : super();
-  double? scaleX;
-    /*
-  double get scaleX { 
-    if (this._scaleX == null) {
-      this._scaleX = 0;
-    }
-    return this._scaleX!;
-  }
+  // NOTE: scaleX skipped - type number is ignored in gen 
 
-  void set scaleX (double v) {
-    this._scaleX = v;
-  }
-    */
-    
-  double? scaleY;
-    /*
-  double get scaleY { 
-    if (this._scaleY == null) {
-      this._scaleY = 0;
-    }
-    return this._scaleY!;
-  }
+  // NOTE: scaleY skipped - type number is ignored in gen 
 
-  void set scaleY (double v) {
-    this._scaleY = v;
-  }
-    */
-    
-  double? translateX;
-    /*
-  double get translateX { 
-    if (this._translateX == null) {
-      this._translateX = 0;
-    }
-    return this._translateX!;
-  }
+  // NOTE: translateX skipped - type number is ignored in gen 
 
-  void set translateX (double v) {
-    this._translateX = v;
-  }
-    */
-    
-  double? translateY;
-    /*
-  double get translateY { 
-    if (this._translateY == null) {
-      this._translateY = 0;
-    }
-    return this._translateY!;
-  }
+  // NOTE: translateY skipped - type number is ignored in gen 
 
-  void set translateY (double v) {
-    this._translateY = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -93,21 +44,13 @@ class PlotBoxTransform extends SVGAttributes {
     super.toJSONInner(buffer);
 
     
-    if (this.scaleX != null) {  
-      buffer.writeAll(["\"scaleX\":", this.scaleX, ","], "");
-    }
+    // NOTE: skip serialization of scaleX (type number is ignored) ignore type: true
 
-    if (this.scaleY != null) {  
-      buffer.writeAll(["\"scaleY\":", this.scaleY, ","], "");
-    }
+    // NOTE: skip serialization of scaleY (type number is ignored) ignore type: true
 
-    if (this.translateX != null) {  
-      buffer.writeAll(["\"translateX\":", this.translateX, ","], "");
-    }
+    // NOTE: skip serialization of translateX (type number is ignored) ignore type: true
 
-    if (this.translateY != null) {  
-      buffer.writeAll(["\"translateY\":", this.translateY, ","], "");
-    }
+    // NOTE: skip serialization of translateY (type number is ignored) ignore type: true
   }
 
 }

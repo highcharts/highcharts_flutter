@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,34 +24,97 @@ import 'OptionFragment.dart';
  */
 class DependencyWheelSeriesOptions extends SankeySeriesOptions {
   DependencyWheelSeriesOptions( {
-    this.startAngle = null
+    super.accessibility = null,
+    super.allAreas = null,
+    super.allowPointSelect = null,
+    super.animationLimit = null,
+    super.boostBlending = null,
+    super.boostThreshold = null,
+    super.borderColor = null,
+    super.borderWidth = null,
+    this.center = null,
+    super.className = null,
+    super.clip = null,
+    super.color = null,
+    super.colorAxis = null,
+    super.colorIndex = null,
+    super.colorKey = null,
+    super.compare = null,
+    super.compareStart = null,
+    super.connectEnds = null,
+    super.connectNulls = null,
+    super.connectors = null,
+    super.crisp = null,
+    super.cropThreshold = null,
+    super.cumulative = null,
+    super.cursor = null,
+    super.curveFactor = null,
+    super.dashStyle = null,
+    super.dataGrouping = null,
+    super.dataLabels = null,
+    super.dataSorting = null,
+    super.description = null,
+    super.dragDrop = null,
+    super.enableMouseTracking = null,
+    super.events = null,
+    super.findNearestPointBy = null,
+    super.gapSize = null,
+    super.gapUnit = null,
+    super.getExtremesFromAll = null,
+    super.includeInDataExport = null,
+    super.joinBy = null,
+    super.keys = null,
+    super.label = null,
+    super.lastPrice = null,
+    super.lastVisiblePrice = null,
+    super.legendSymbol = null,
+    super.levels = null,
+    super.linecap = null,
+    super.lineWidth = null,
+    super.link = null,
+    super.linkedTo = null,
+    super.linkOpacity = null,
+    super.marker = null,
+    super.maxPointWidth = null,
+    super.minLinkWidth = null,
+    super.minPointLength = null,
+    super.navigatorOptions = null,
+    super.negativeColor = null,
+    super.nodePadding = null,
+    super.nodeWidth = null,
+    super.onPoint = null,
+    super.opacity = null,
+    super.point = null,
+    super.pointInterval = null,
+    super.pointIntervalUnit = null,
+    super.pointPadding = null,
+    super.pointPlacement = null,
+    super.pointRange = null,
+    super.pointStart = null,
+    super.pointWidth = null,
+    super.relativeXValue = null,
+    super.selected = null,
+    super.showCheckbox = null,
+    super.showInLegend = null,
+    super.showInNavigator = null,
+    super.skipKeyboardNavigation = null,
+    super.softThreshold = null,
+    super.stacking = null,
+    this.startAngle = null,
+    super.step = null,
+    super.stickyTracking = null,
+    super.threshold = null,
+    super.tooltip = null,
+    super.turboThreshold = null,
+    super.visible = null,
+    super.zIndex = null,
+    super.zoneAxis = null,
+    super.zones = null
   }) : super();
-  /**
-   * The center of the wheel relative to the plot area. Can be
-   * percentages or pixel values. The default behaviour is to
-   * center the wheel inside the plot area. 
-   * 
-   * Defaults to '[null, null]'. 
-      */
   List<double>? center; // double
-  /**
-   * The start angle of the dependency wheel, in degrees where 0 is up.  
-      */
   double? startAngle;
-    /*
-  double get startAngle { 
-    if (this._startAngle == null) {
-      this._startAngle = 0;
-    }
-    return this._startAngle!;
-  }
-
-  void set startAngle (double v) {
-    this._startAngle = v;
-  }
-    */
     
-  // NOTE: states skipped - type Generic is ignored in gen
+  // NOTE: states skipped - type Generic is ignored in gen 
 
 
   //////////////////////////////////////////////////////////////////////////////
@@ -61,13 +124,19 @@ class DependencyWheelSeriesOptions extends SankeySeriesOptions {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of center (type number)[] is ignored)} 
+    if (this.center != null) {  
+     StringBuffer arrData = StringBuffer();
 
-    if (this.startAngle != null) {  
-      buffer.writeAll(["\"startAngle\":", this.startAngle, ","], "");
+      arrData.writeAll(this.center!, ",");
+      buffer.writeAll(["\"center\": [", arrData , "],"], "");   
+        
     }
 
-    // NOTE: skip serialization of states (type Generic is ignored)} 
+    if (this.startAngle != null) {  
+      buffer.writeAll(["\"startAngle\":",this.startAngle, ","], "");
+    }
+
+    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
   }
 
 }

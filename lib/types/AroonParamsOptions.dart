@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,21 +24,10 @@ import 'OptionFragment.dart';
  */
 class AroonParamsOptions extends SMAParamsOptions {
   AroonParamsOptions( {
+    super.index = null,
     this.period = null
   }) : super();
   double? period;
-    /*
-  double get period { 
-    if (this._period == null) {
-      this._period = 0;
-    }
-    return this._period!;
-  }
-
-  void set period (double v) {
-    this._period = v;
-  }
-    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -49,7 +38,7 @@ class AroonParamsOptions extends SMAParamsOptions {
 
     
     if (this.period != null) {  
-      buffer.writeAll(["\"period\":", this.period, ","], "");
+      buffer.writeAll(["\"period\":",this.period, ","], "");
     }
   }
 

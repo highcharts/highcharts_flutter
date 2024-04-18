@@ -12,153 +12,36 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
+import 'NodeObject.dart';
 import 'OptionFragment.dart';
 
 /** 
  * NodeObject 
  */
 class NodeObject extends OptionFragment {
-  NodeObject( {
-    this.childrenTotal = null,
-    this.i = null,
-    this.id = null,
-    this.isLeaf = null,
-    this.levelDynamic = null,
-    this.level = null,
-    this.name = null,
-    this.val = null,
-    this.visible = null
-  }) : super();
-  double? childrenTotal;
-    /*
-  double get childrenTotal { 
-    if (this._childrenTotal == null) {
-      this._childrenTotal = 0;
-    }
-    return this._childrenTotal!;
-  }
+  NodeObject( ) : super();
+  // NOTE: childrenTotal skipped - type number is ignored in gen 
 
-  void set childrenTotal (double v) {
-    this._childrenTotal = v;
-  }
-    */
-    
-  double? i;
-    /*
-  double get i { 
-    if (this._i == null) {
-      this._i = 0;
-    }
-    return this._i!;
-  }
+  // NOTE: i skipped - type number is ignored in gen 
 
-  void set i (double v) {
-    this._i = v;
-  }
-    */
-    
-  String? id;
-    /*
-  String get id { 
-    if (this._id == null) {
-      this._id = "";
-    }
-    return this._id!;
-  }
+  // NOTE: id skipped - type string is ignored in gen 
 
-  void set id (String v) {
-    this._id = v;
-  }
-    */
-    
-  bool? isLeaf;
-    /*
-  bool get isLeaf { 
-    if (this._isLeaf == null) {
-      this._isLeaf = false;
-    }
-    return this._isLeaf!;
-  }
+  // NOTE: isLeaf skipped - type boolean is ignored in gen 
 
-  void set isLeaf (bool v) {
-    this._isLeaf = v;
-  }
-    */
-    
-  double? levelDynamic;
-    /*
-  double get levelDynamic { 
-    if (this._levelDynamic == null) {
-      this._levelDynamic = 0;
-    }
-    return this._levelDynamic!;
-  }
+  // NOTE: levelDynamic skipped - type number is ignored in gen 
 
-  void set levelDynamic (double v) {
-    this._levelDynamic = v;
-  }
-    */
-    
-  double? level;
-    /*
-  double get level { 
-    if (this._level == null) {
-      this._level = 0;
-    }
-    return this._level!;
-  }
+  // NOTE: level skipped - type number is ignored in gen 
 
-  void set level (double v) {
-    this._level = v;
-  }
-    */
-    
-  String? name;
-    /*
-  String get name { 
-    if (this._name == null) {
-      this._name = "";
-    }
-    return this._name!;
-  }
+  // NOTE: name skipped - type string is ignored in gen 
 
-  void set name (String v) {
-    this._name = v;
-  }
-    */
-    
-  double? val;
-    /*
-  double get val { 
-    if (this._val == null) {
-      this._val = 0;
-    }
-    return this._val!;
-  }
+  // NOTE: val skipped - type number is ignored in gen 
 
-  void set val (double v) {
-    this._val = v;
-  }
-    */
-    
-  bool? visible;
-    /*
-  bool get visible { 
-    if (this._visible == null) {
-      this._visible = false;
-    }
-    return this._visible!;
-  }
+  // NOTE: visible skipped - type boolean is ignored in gen 
 
-  void set visible (bool v) {
-    this._visible = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -167,43 +50,25 @@ class NodeObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of children (type NodeObject[] is ignored)} 
+    // NOTE: skip serialization of children (type NodeObject[] is ignored) ignore type: true
 
-    if (this.childrenTotal != null) {  
-      buffer.writeAll(["\"childrenTotal\":", this.childrenTotal, ","], "");
-    }
+    // NOTE: skip serialization of childrenTotal (type number is ignored) ignore type: true
 
-    if (this.i != null) {  
-      buffer.writeAll(["\"i\":", this.i, ","], "");
-    }
+    // NOTE: skip serialization of i (type number is ignored) ignore type: true
 
-    if (this.id != null) {  
-      buffer.writeAll(["\"id\":\`", this.id, "\`,"], "");
-    }
+    // NOTE: skip serialization of id (type string is ignored) ignore type: true
 
-    if (this.isLeaf != null) {  
-      buffer.writeAll(["\"isLeaf\":", this.isLeaf, ","], "");
-    }
+    // NOTE: skip serialization of isLeaf (type boolean is ignored) ignore type: true
 
-    if (this.levelDynamic != null) {  
-      buffer.writeAll(["\"levelDynamic\":", this.levelDynamic, ","], "");
-    }
+    // NOTE: skip serialization of levelDynamic (type number is ignored) ignore type: true
 
-    if (this.level != null) {  
-      buffer.writeAll(["\"level\":", this.level, ","], "");
-    }
+    // NOTE: skip serialization of level (type number is ignored) ignore type: true
 
-    if (this.name != null) {  
-      buffer.writeAll(["\"name\":\`", this.name, "\`,"], "");
-    }
+    // NOTE: skip serialization of name (type string is ignored) ignore type: true
 
-    if (this.val != null) {  
-      buffer.writeAll(["\"val\":", this.val, ","], "");
-    }
+    // NOTE: skip serialization of val (type number is ignored) ignore type: true
 
-    if (this.visible != null) {  
-      buffer.writeAll(["\"visible\":", this.visible, ","], "");
-    }
+    // NOTE: skip serialization of visible (type boolean is ignored) ignore type: true
   }
 
 }

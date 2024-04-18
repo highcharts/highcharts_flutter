@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,68 +24,15 @@ import 'OptionFragment.dart';
  * DataGridOptions 
  */
 class DataGridOptions extends OptionFragment {
-  DataGridOptions( {
-    this.cellHeight = null,
-    this.defaultHeight = null,
-    this.editable = null,
-    this.resizableColumns = null
-  }) : super();
-  double? cellHeight;
-    /*
-  double get cellHeight { 
-    if (this._cellHeight == null) {
-      this._cellHeight = 0;
-    }
-    return this._cellHeight!;
-  }
+  DataGridOptions( ) : super();
+  // NOTE: cellHeight skipped - type number is ignored in gen 
 
-  void set cellHeight (double v) {
-    this._cellHeight = v;
-  }
-    */
-    
-  double? defaultHeight;
-    /*
-  double get defaultHeight { 
-    if (this._defaultHeight == null) {
-      this._defaultHeight = 0;
-    }
-    return this._defaultHeight!;
-  }
+  // NOTE: defaultHeight skipped - type number is ignored in gen 
 
-  void set defaultHeight (double v) {
-    this._defaultHeight = v;
-  }
-    */
-    
-  bool? editable;
-    /*
-  bool get editable { 
-    if (this._editable == null) {
-      this._editable = false;
-    }
-    return this._editable!;
-  }
+  // NOTE: editable skipped - type boolean is ignored in gen 
 
-  void set editable (bool v) {
-    this._editable = v;
-  }
-    */
-    
-  bool? resizableColumns;
-    /*
-  bool get resizableColumns { 
-    if (this._resizableColumns == null) {
-      this._resizableColumns = false;
-    }
-    return this._resizableColumns!;
-  }
+  // NOTE: resizableColumns skipped - type boolean is ignored in gen 
 
-  void set resizableColumns (bool v) {
-    this._resizableColumns = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -94,29 +41,21 @@ class DataGridOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.cellHeight != null) {  
-      buffer.writeAll(["\"cellHeight\":", this.cellHeight, ","], "");
-    }
+    // NOTE: skip serialization of cellHeight (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of columnHeaders (type ColumnHeaderOptions is ignored)} 
+    // NOTE: skip serialization of columnHeaders (type ColumnHeaderOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of columns (type Generic is ignored)} 
+    // NOTE: skip serialization of columns (type Generic is ignored) ignore type: true
 
-    // NOTE: skip serialization of dataTable (type DataTable is ignored)} 
+    // NOTE: skip serialization of dataTable (type DataTable is ignored) ignore type: true
 
-    if (this.defaultHeight != null) {  
-      buffer.writeAll(["\"defaultHeight\":", this.defaultHeight, ","], "");
-    }
+    // NOTE: skip serialization of defaultHeight (type number is ignored) ignore type: true
 
-    if (this.editable != null) {  
-      buffer.writeAll(["\"editable\":", this.editable, ","], "");
-    }
+    // NOTE: skip serialization of editable (type boolean is ignored) ignore type: true
 
-    if (this.resizableColumns != null) {  
-      buffer.writeAll(["\"resizableColumns\":", this.resizableColumns, ","], "");
-    }
+    // NOTE: skip serialization of resizableColumns (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of events (type DataGridEvents is ignored)} 
+    // NOTE: skip serialization of events (type DataGridEvents is ignored) ignore type: true
   }
 
 }

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,68 +22,15 @@ import 'OptionFragment.dart';
  * Theme 
  */
 class Theme extends OptionFragment {
-  Theme( {
-    this.credits = null,
-    this.maxZoom = null,
-    this.minZoom = null,
-    this.url = null
-  }) : super();
-  String? credits;
-    /*
-  String get credits { 
-    if (this._credits == null) {
-      this._credits = "";
-    }
-    return this._credits!;
-  }
+  Theme( ) : super();
+  // NOTE: credits skipped - type string is ignored in gen 
 
-  void set credits (String v) {
-    this._credits = v;
-  }
-    */
-    
-  double? maxZoom;
-    /*
-  double get maxZoom { 
-    if (this._maxZoom == null) {
-      this._maxZoom = 0;
-    }
-    return this._maxZoom!;
-  }
+  // NOTE: maxZoom skipped - type number is ignored in gen 
 
-  void set maxZoom (double v) {
-    this._maxZoom = v;
-  }
-    */
-    
-  double? minZoom;
-    /*
-  double get minZoom { 
-    if (this._minZoom == null) {
-      this._minZoom = 0;
-    }
-    return this._minZoom!;
-  }
+  // NOTE: minZoom skipped - type number is ignored in gen 
 
-  void set minZoom (double v) {
-    this._minZoom = v;
-  }
-    */
-    
-  String? url;
-    /*
-  String get url { 
-    if (this._url == null) {
-      this._url = "";
-    }
-    return this._url!;
-  }
+  // NOTE: url skipped - type string is ignored in gen 
 
-  void set url (String v) {
-    this._url = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -92,21 +39,13 @@ class Theme extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.credits != null) {  
-      buffer.writeAll(["\"credits\":\`", this.credits, "\`,"], "");
-    }
+    // NOTE: skip serialization of credits (type string is ignored) ignore type: true
 
-    if (this.maxZoom != null) {  
-      buffer.writeAll(["\"maxZoom\":", this.maxZoom, ","], "");
-    }
+    // NOTE: skip serialization of maxZoom (type number is ignored) ignore type: true
 
-    if (this.minZoom != null) {  
-      buffer.writeAll(["\"minZoom\":", this.minZoom, ","], "");
-    }
+    // NOTE: skip serialization of minZoom (type number is ignored) ignore type: true
 
-    if (this.url != null) {  
-      buffer.writeAll(["\"url\":\`", this.url, "\`,"], "");
-    }
+    // NOTE: skip serialization of url (type string is ignored) ignore type: true
   }
 
 }

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,38 +23,11 @@ import 'OptionFragment.dart';
  * AnnotationEventObject 
  */
 class AnnotationEventObject extends PointerEvent {
-  AnnotationEventObject( {
-    this.prevChartX = null,
-    this.prevChartY = null
-  }) : super();
-  double? prevChartX;
-    /*
-  double get prevChartX { 
-    if (this._prevChartX == null) {
-      this._prevChartX = 0;
-    }
-    return this._prevChartX!;
-  }
+  AnnotationEventObject( ) : super();
+  // NOTE: prevChartX skipped - type number is ignored in gen 
 
-  void set prevChartX (double v) {
-    this._prevChartX = v;
-  }
-    */
-    
-  double? prevChartY;
-    /*
-  double get prevChartY { 
-    if (this._prevChartY == null) {
-      this._prevChartY = 0;
-    }
-    return this._prevChartY!;
-  }
+  // NOTE: prevChartY skipped - type number is ignored in gen 
 
-  void set prevChartY (double v) {
-    this._prevChartY = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -63,13 +36,9 @@ class AnnotationEventObject extends PointerEvent {
     super.toJSONInner(buffer);
 
     
-    if (this.prevChartX != null) {  
-      buffer.writeAll(["\"prevChartX\":", this.prevChartX, ","], "");
-    }
+    // NOTE: skip serialization of prevChartX (type number is ignored) ignore type: true
 
-    if (this.prevChartY != null) {  
-      buffer.writeAll(["\"prevChartY\":", this.prevChartY, ","], "");
-    }
+    // NOTE: skip serialization of prevChartY (type number is ignored) ignore type: true
   }
 
 }

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -34,9 +34,9 @@ class DragNodesChart extends Chart {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of graphLayoutsLookup (type ReingoldFruchtermanLayout[] is ignored)} 
+    // NOTE: skip serialization of graphLayoutsLookup (type ReingoldFruchtermanLayout[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of hoverPoint (type DragNodesPoint is ignored)} 
+    // NOTE: skip serialization of hoverPoint (type DragNodesPoint is ignored) ignore type: true
   }
 
 }

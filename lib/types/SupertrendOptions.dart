@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -25,68 +25,92 @@ import 'OptionFragment.dart';
  */
 class SupertrendOptions extends SMAOptions {
   SupertrendOptions( {
+    super.accessibility = null,
+    super.allAreas = null,
+    super.allowPointSelect = null,
+    super.animationLimit = null,
+    super.boostBlending = null,
+    super.boostThreshold = null,
+    super.borderColor = null,
+    super.borderWidth = null,
+    this.changeTrendLine = null,
+    super.className = null,
+    super.clip = null,
+    super.color = null,
+    super.colorAxis = null,
+    super.colorIndex = null,
+    super.colorKey = null,
+    super.compare = null,
+    super.compareStart = null,
+    super.compareToMain = null,
+    super.connectEnds = null,
+    super.connectNulls = null,
+    super.connectors = null,
+    super.crisp = null,
+    super.cropThreshold = null,
+    super.cumulative = null,
+    super.cursor = null,
+    super.dashStyle = null,
+    super.dataGrouping = null,
+    super.dataLabels = null,
+    super.dataSorting = null,
+    super.description = null,
+    super.dragDrop = null,
+    super.enableMouseTracking = null,
+    super.events = null,
     this.fallingTrendColor = null,
-    this.risingTrendColor = null
+    super.findNearestPointBy = null,
+    super.gapSize = null,
+    super.gapUnit = null,
+    super.getExtremesFromAll = null,
+    super.includeInDataExport = null,
+    super.joinBy = null,
+    super.keys = null,
+    super.label = null,
+    super.lastPrice = null,
+    super.lastVisiblePrice = null,
+    super.legendSymbol = null,
+    super.linecap = null,
+    super.lineWidth = null,
+    super.linkedTo = null,
+    super.marker = null,
+    super.navigatorOptions = null,
+    super.negativeColor = null,
+    super.onPoint = null,
+    super.opacity = null,
+    super.params = null,
+    super.point = null,
+    super.pointInterval = null,
+    super.pointIntervalUnit = null,
+    super.pointPlacement = null,
+    super.pointRange = null,
+    super.pointStart = null,
+    super.relativeXValue = null,
+    this.risingTrendColor = null,
+    super.selected = null,
+    super.showCheckbox = null,
+    super.showInLegend = null,
+    super.showInNavigator = null,
+    super.skipKeyboardNavigation = null,
+    super.softThreshold = null,
+    super.stacking = null,
+    super.step = null,
+    super.stickyTracking = null,
+    super.threshold = null,
+    super.tooltip = null,
+    super.turboThreshold = null,
+    super.visible = null,
+    super.zIndex = null,
+    super.zoneAxis = null,
+    super.zones = null
   }) : super();
-  /**
-   * The styles for the Supertrend line that intersect main series.  
-      */
   Map<String, String>? changeTrendLine;
-    /*
-  Map<String, String> get changeTrendLine { 
-    if (this._changeTrendLine == null) {
-      this._changeTrendLine = Map<String, String>();
-    }
-    return this._changeTrendLine!;
-  }
-
-  void set changeTrendLine (Map<String, String> v) {
-    this._changeTrendLine = v;
-  }
-    */
     
-  /**
-   * Color of the Supertrend series line that is above the main series. 
-   * 
-   * Defaults to '#f21313'. 
-      */
   String? fallingTrendColor;
-    /*
-  String get fallingTrendColor { 
-    if (this._fallingTrendColor == null) {
-      this._fallingTrendColor = "";
-    }
-    return this._fallingTrendColor!;
-  }
-
-  void set fallingTrendColor (String v) {
-    this._fallingTrendColor = v;
-  }
-    */
     
-  /**
-   * Paramters used in calculation of regression series' points.  
-      */
   /** NOTE: extparams is skipped here for now, as it overrides the base type. */
 
-  /**
-   * Color of the Supertrend series line that is beneath the main series. 
-   * 
-   * Defaults to '#06b535'. 
-      */
   String? risingTrendColor;
-    /*
-  String get risingTrendColor { 
-    if (this._risingTrendColor == null) {
-      this._risingTrendColor = "";
-    }
-    return this._risingTrendColor!;
-  }
-
-  void set risingTrendColor (String v) {
-    this._risingTrendColor = v;
-  }
-    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -97,17 +121,17 @@ class SupertrendOptions extends SMAOptions {
 
     
     if (this.changeTrendLine != null) {  
-      buffer.writeAll(["\"changeTrendLine\":", this.changeTrendLine, ","], "");
+      buffer.writeAll(["\"changeTrendLine\":",this.changeTrendLine, ","], "");
     }
 
     if (this.fallingTrendColor != null) {  
-      buffer.writeAll(["\"fallingTrendColor\":\`", this.fallingTrendColor, "\`,"], "");
+      buffer.writeAll(["\"fallingTrendColor\":\`",this.fallingTrendColor, "\`,"], "");
     }
 
-    // NOTE: skip serialization of params (type SupertrendParamsOptions is ignored)} 
+    // NOTE: skip serialization of params (type SupertrendParamsOptions is ignored) ignore type: false
 
     if (this.risingTrendColor != null) {  
-      buffer.writeAll(["\"risingTrendColor\":\`", this.risingTrendColor, "\`,"], "");
+      buffer.writeAll(["\"risingTrendColor\":\`",this.risingTrendColor, "\`,"], "");
     }
   }
 

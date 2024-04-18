@@ -12,124 +12,134 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
-import 'OptionFragment.dart';
+import 'SankeySeriesOptions.dart';
+import 'Series.dart';
+import 'PointOptions.dart';
 
-/** 
- * SankeySeries 
- */
-class SankeySeries extends OptionFragment {
-  SankeySeries( {
-    this.forceDL = null,
-    this.invertible = null,
-    this.isCartesian = null,
-    this.noSharedTooltip = null,
-    this.orderNodes = null
-  }) : super();
-  bool? forceDL;
-    /*
-  bool get forceDL { 
-    if (this._forceDL == null) {
-      this._forceDL = false;
-    }
-    return this._forceDL!;
-  }
+class SankeySeries extends Series {
 
-  void set forceDL (bool v) {
-    this._forceDL = v;
-  }
-    */
-    
-  bool? invertible;
-    /*
-  bool get invertible { 
-    if (this._invertible == null) {
-      this._invertible = false;
-    }
-    return this._invertible!;
-  }
+  String? name;
+  SankeySeriesOptions? options;
+  List<PointOptions>? points;
+  List<List<double>>? data;
 
-  void set invertible (bool v) {
-    this._invertible = v;
-  }
-    */
-    
-  bool? isCartesian;
-    /*
-  bool get isCartesian { 
-    if (this._isCartesian == null) {
-      this._isCartesian = false;
-    }
-    return this._isCartesian!;
-  }
+  SankeySeries({
+    this.name = null,
+    this.options = null,
+    this.points = null,
+    this.data = null
+  });
 
-  void set isCartesian (bool v) {
-    this._isCartesian = v;
-  }
-    */
-    
-  bool? noSharedTooltip;
-    /*
-  bool get noSharedTooltip { 
-    if (this._noSharedTooltip == null) {
-      this._noSharedTooltip = false;
-    }
-    return this._noSharedTooltip!;
-  }
-
-  void set noSharedTooltip (bool v) {
-    this._noSharedTooltip = v;
-  }
-    */
-    
-  bool? orderNodes;
-    /*
-  bool get orderNodes { 
-    if (this._orderNodes == null) {
-      this._orderNodes = false;
-    }
-    return this._orderNodes!;
-  }
-
-  void set orderNodes (bool v) {
-    this._orderNodes = v;
-  }
-    */
-    
-
-  //////////////////////////////////////////////////////////////////////////////
   
   @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    if (this.forceDL != null) {  
-      buffer.writeAll(["\"forceDL\":", this.forceDL, ","], "");
+
+    if (this.name != null) {
+      buffer.writeAll(["\"name\": \"", this.name!, "\","], "");
     }
 
-    if (this.invertible != null) {  
-      buffer.writeAll(["\"invertible\":", this.invertible, ","], "");
+    buffer.write("\"type\": \"sankey\",");
+
+    if (this.data != null && this.points == null) {
+      // Serialize as a 2d array
+
+      StringBuffer seriesData = StringBuffer();
+
+      for (var point in this.data!) {
+        seriesData.writeAll(["["], "");
+        for (var item in point) {
+          seriesData.writeAll([item, ","]);
+        }
+        seriesData.writeAll(["],"], "");
+      }
+
+      buffer.writeAll(["\"data\": [", seriesData, "],"], "");   
+
+
+    } else if (this.points != null) {
+      // Go through the points and write them
+      StringBuffer seriesData = StringBuffer();
+
+      for (var point in this.points!) {
+        seriesData.writeAll(["{"], "");
+        point.toJSONInner(seriesData); 
+        seriesData.writeAll(["},"], "");
+      }
+
+      buffer.writeAll(["\"data\": [", seriesData, "],"], "");
     }
 
-    if (this.isCartesian != null) {  
-      buffer.writeAll(["\"isCartesian\":", this.isCartesian, ","], "");
+
+
+    
+    if (this.options?.curveFactor != null) {  
+      buffer.writeAll(["\"curveFactor\":",this.options?.curveFactor, ","], "");
     }
 
-    if (this.noSharedTooltip != null) {  
-      buffer.writeAll(["\"noSharedTooltip\":", this.noSharedTooltip, ","], "");
+    // NOTE: skip serialization of dataLabels (type SankeyDataLabelOptions is ignored) ignore type: false
+
+    // NOTE: skip serialization of height (type number is ignored) ignore type: true
+
+    // NOTE: skip serialization of inactiveOtherPoints (type boolean is ignored) ignore type: true
+
+    if (this.options?.levels != null) {  
+     StringBuffer arrData = StringBuffer();
+
+      for (var item in this.options!.levels!) {
+          arrData.write("{");
+          item.toJSONInner(arrData);
+          arrData.write("}");
+      }
+      buffer.writeAll(["\"levels\": [", arrData , "],"], "");   
+        
     }
 
-    if (this.orderNodes != null) {  
-      buffer.writeAll(["\"orderNodes\":", this.orderNodes, ","], "");
+    // NOTE: skip serialization of linkColorMode (type string is ignored) ignore type: true
+
+    if (this.options?.linkOpacity != null) {  
+      buffer.writeAll(["\"linkOpacity\":",this.options?.linkOpacity, ","], "");
     }
 
-    // NOTE: skip serialization of pointArrayMap (type string[] is ignored)} 
+    // NOTE: skip serialization of mass (type undefined is ignored) ignore type: 1
 
-    // NOTE: skip serialization of pointClass (type typeof SankeyPoint is ignored)} 
+    if (this.options?.minLinkWidth != null) {  
+      buffer.writeAll(["\"minLinkWidth\":",this.options?.minLinkWidth, ","], "");
+    }
+
+    // NOTE: skip serialization of nodeAlignment (type string is ignored) ignore type: true
+
+    if (this.options?.nodePadding != null) {  
+      buffer.writeAll(["\"nodePadding\":",this.options?.nodePadding, ","], "");
+    }
+
+    // NOTE: skip serialization of nodeDistance (type string is ignored) ignore type: true
+
+    // NOTE: skip serialization of nodes (type SankeySeriesNodeOptions[] is ignored) ignore type: true
+
+    if (this.options?.nodeWidth != null) {  
+      buffer.writeAll(["\"nodeWidth\":\`",this.options?.nodeWidth, "\`,"], "");
+    }
+
+    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
+
+    // NOTE: skip serialization of tooltip (type SankeySeriesTooltipOptions is ignored) ignore type: false
+
+    // NOTE: skip serialization of width (type number is ignored) ignore type: true
+
+    // NOTE: skip serialization of linkColor (type string is ignored) ignore type: true
+
+    // NOTE: skip serialization of linkLineWidth (type number is ignored) ignore type: true
+
+    if (this.options?.link != null) {  
+      buffer.writeAll(["\"link\":",this.options?.link?.toJSON(), ","], "");
+    }
   }
 
 }

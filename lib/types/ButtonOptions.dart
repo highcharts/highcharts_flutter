@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,68 +24,15 @@ import 'OptionFragment.dart';
  * ButtonOptions 
  */
 class ButtonOptions extends ItemOptions {
-  ButtonOptions( {
-    this.text = null,
-    this.className = null,
-    this.icon = null,
-    this.isDisabled = null
-  }) : super();
-  String? text;
-    /*
-  String get text { 
-    if (this._text == null) {
-      this._text = "";
-    }
-    return this._text!;
-  }
+  ButtonOptions( ) : super();
+  // NOTE: text skipped - type string is ignored in gen 
 
-  void set text (String v) {
-    this._text = v;
-  }
-    */
-    
-  String? className;
-    /*
-  String get className { 
-    if (this._className == null) {
-      this._className = "";
-    }
-    return this._className!;
-  }
+  // NOTE: className skipped - type string is ignored in gen 
 
-  void set className (String v) {
-    this._className = v;
-  }
-    */
-    
-  String? icon;
-    /*
-  String get icon { 
-    if (this._icon == null) {
-      this._icon = "";
-    }
-    return this._icon!;
-  }
+  // NOTE: icon skipped - type string is ignored in gen 
 
-  void set icon (String v) {
-    this._icon = v;
-  }
-    */
-    
-  bool? isDisabled;
-    /*
-  bool get isDisabled { 
-    if (this._isDisabled == null) {
-      this._isDisabled = false;
-    }
-    return this._isDisabled!;
-  }
+  // NOTE: isDisabled skipped - type boolean is ignored in gen 
 
-  void set isDisabled (bool v) {
-    this._isDisabled = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -94,33 +41,23 @@ class ButtonOptions extends ItemOptions {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of type (type "button" is ignored)} 
+    // NOTE: skip serialization of type (type "button" is ignored) ignore type: true
 
-    if (this.text != null) {  
-      buffer.writeAll(["\"text\":\`", this.text, "\`,"], "");
-    }
+    // NOTE: skip serialization of text (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of events (type { update?: Function; click?: Function; } is ignored)} 
+    // NOTE: skip serialization of events (type { update?: Function; click?: Function; } is ignored) ignore type: true
 
-    // NOTE: skip serialization of callback (type Function is ignored)} 
+    // NOTE: skip serialization of callback (type Function is ignored) ignore type: 1
 
-    if (this.text != null) {  
-      buffer.writeAll(["\"text\":\`", this.text, "\`,"], "");
-    }
+    // NOTE: skip serialization of text (type string is ignored) ignore type: true
 
-    if (this.className != null) {  
-      buffer.writeAll(["\"className\":\`", this.className, "\`,"], "");
-    }
+    // NOTE: skip serialization of className (type string is ignored) ignore type: true
 
-    if (this.icon != null) {  
-      buffer.writeAll(["\"icon\":\`", this.icon, "\`,"], "");
-    }
+    // NOTE: skip serialization of icon (type string is ignored) ignore type: true
 
-    if (this.isDisabled != null) {  
-      buffer.writeAll(["\"isDisabled\":", this.isDisabled, ","], "");
-    }
+    // NOTE: skip serialization of isDisabled (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of style (type CSSObject is ignored)} 
+    // NOTE: skip serialization of style (type CSSObject is ignored) ignore type: true
   }
 
 }

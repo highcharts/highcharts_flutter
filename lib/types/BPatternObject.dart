@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,53 +23,13 @@ import 'OptionFragment.dart';
  * BPatternObject 
  */
 class BPatternObject extends BBoxObject {
-  BPatternObject( {
-    this.aspectHeight = null,
-    this.aspectRatio = null,
-    this.aspectWidth = null
-  }) : super();
-  double? aspectHeight;
-    /*
-  double get aspectHeight { 
-    if (this._aspectHeight == null) {
-      this._aspectHeight = 0;
-    }
-    return this._aspectHeight!;
-  }
+  BPatternObject( ) : super();
+  // NOTE: aspectHeight skipped - type number is ignored in gen 
 
-  void set aspectHeight (double v) {
-    this._aspectHeight = v;
-  }
-    */
-    
-  double? aspectRatio;
-    /*
-  double get aspectRatio { 
-    if (this._aspectRatio == null) {
-      this._aspectRatio = 0;
-    }
-    return this._aspectRatio!;
-  }
+  // NOTE: aspectRatio skipped - type number is ignored in gen 
 
-  void set aspectRatio (double v) {
-    this._aspectRatio = v;
-  }
-    */
-    
-  double? aspectWidth;
-    /*
-  double get aspectWidth { 
-    if (this._aspectWidth == null) {
-      this._aspectWidth = 0;
-    }
-    return this._aspectWidth!;
-  }
+  // NOTE: aspectWidth skipped - type number is ignored in gen 
 
-  void set aspectWidth (double v) {
-    this._aspectWidth = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -78,17 +38,11 @@ class BPatternObject extends BBoxObject {
     super.toJSONInner(buffer);
 
     
-    if (this.aspectHeight != null) {  
-      buffer.writeAll(["\"aspectHeight\":", this.aspectHeight, ","], "");
-    }
+    // NOTE: skip serialization of aspectHeight (type number is ignored) ignore type: true
 
-    if (this.aspectRatio != null) {  
-      buffer.writeAll(["\"aspectRatio\":", this.aspectRatio, ","], "");
-    }
+    // NOTE: skip serialization of aspectRatio (type number is ignored) ignore type: true
 
-    if (this.aspectWidth != null) {  
-      buffer.writeAll(["\"aspectWidth\":", this.aspectWidth, ","], "");
-    }
+    // NOTE: skip serialization of aspectWidth (type number is ignored) ignore type: true
   }
 
 }

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -32,9 +32,9 @@ class ExtremesCache extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of globalExtremes (type PropExtremesCache is ignored)} 
+    // NOTE: skip serialization of globalExtremes (type PropExtremesCache is ignored) ignore type: true
 
-    // NOTE: skip serialization of seriesExtremes (type PropExtremesCache[] is ignored)} 
+    // NOTE: skip serialization of seriesExtremes (type PropExtremesCache[] is ignored) ignore type: true
   }
 
 }

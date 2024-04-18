@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,22 +24,29 @@ import 'OptionFragment.dart';
  */
 class TypeLabelOptions extends ControllableLabelOptions {
   TypeLabelOptions( {
-    this.offset = null
+    super.accessibility = null,
+    super.align = null,
+    super.allowOverlap = null,
+    super.backgroundColor = null,
+    super.borderColor = null,
+    super.borderRadius = null,
+    super.borderWidth = null,
+    super.crop = null,
+    super.distance = null,
+    super.format = null,
+    super.includeInDataExport = null,
+    super.overflow = null,
+    super.padding = null,
+    super.shape = null,
+    super.style = null,
+    super.text = null,
+    super.useHTML = null,
+    super.verticalAlign = null,
+    super.x = null,
+    super.y = null
   }) : super();
-  double? offset;
-    /*
-  double get offset { 
-    if (this._offset == null) {
-      this._offset = 0;
-    }
-    return this._offset!;
-  }
+  // NOTE: offset skipped - type number is ignored in gen 
 
-  void set offset (double v) {
-    this._offset = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -48,9 +55,7 @@ class TypeLabelOptions extends ControllableLabelOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.offset != null) {  
-      buffer.writeAll(["\"offset\":", this.offset, ","], "");
-    }
+    // NOTE: skip serialization of offset (type number is ignored) ignore type: true
   }
 
 }

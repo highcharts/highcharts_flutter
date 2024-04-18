@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,51 +24,14 @@ import 'OptionFragment.dart';
  */
 class PriceEnvelopesParamsOptions extends SMAParamsOptions {
   PriceEnvelopesParamsOptions( {
-    this.topBand = null,
-    this.bottomBand = null,
+    super.index = null,
     this.period = null
   }) : super();
-  double? topBand;
-    /*
-  double get topBand { 
-    if (this._topBand == null) {
-      this._topBand = 0;
-    }
-    return this._topBand!;
-  }
+  // NOTE: topBand skipped - type number is ignored in gen 
 
-  void set topBand (double v) {
-    this._topBand = v;
-  }
-    */
-    
-  double? bottomBand;
-    /*
-  double get bottomBand { 
-    if (this._bottomBand == null) {
-      this._bottomBand = 0;
-    }
-    return this._bottomBand!;
-  }
+  // NOTE: bottomBand skipped - type number is ignored in gen 
 
-  void set bottomBand (double v) {
-    this._bottomBand = v;
-  }
-    */
-    
   double? period;
-    /*
-  double get period { 
-    if (this._period == null) {
-      this._period = 0;
-    }
-    return this._period!;
-  }
-
-  void set period (double v) {
-    this._period = v;
-  }
-    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -78,16 +41,12 @@ class PriceEnvelopesParamsOptions extends SMAParamsOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.topBand != null) {  
-      buffer.writeAll(["\"topBand\":", this.topBand, ","], "");
-    }
+    // NOTE: skip serialization of topBand (type number is ignored) ignore type: true
 
-    if (this.bottomBand != null) {  
-      buffer.writeAll(["\"bottomBand\":", this.bottomBand, ","], "");
-    }
+    // NOTE: skip serialization of bottomBand (type number is ignored) ignore type: true
 
     if (this.period != null) {  
-      buffer.writeAll(["\"period\":", this.period, ","], "");
+      buffer.writeAll(["\"period\":",this.period, ","], "");
     }
   }
 

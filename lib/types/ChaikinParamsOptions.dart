@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,22 +24,11 @@ import 'OptionFragment.dart';
  */
 class ChaikinParamsOptions extends EMAParamsOptions {
   ChaikinParamsOptions( {
-    this.volumeSeriesID = null
+    super.index = null,
+    super.period = null
   }) : super();
-  String? volumeSeriesID;
-    /*
-  String get volumeSeriesID { 
-    if (this._volumeSeriesID == null) {
-      this._volumeSeriesID = "";
-    }
-    return this._volumeSeriesID!;
-  }
+  // NOTE: volumeSeriesID skipped - type string is ignored in gen 
 
-  void set volumeSeriesID (String v) {
-    this._volumeSeriesID = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -48,11 +37,9 @@ class ChaikinParamsOptions extends EMAParamsOptions {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of periods (type number[] is ignored)} 
+    // NOTE: skip serialization of periods (type number[] is ignored) ignore type: true
 
-    if (this.volumeSeriesID != null) {  
-      buffer.writeAll(["\"volumeSeriesID\":\`", this.volumeSeriesID, "\`,"], "");
-    }
+    // NOTE: skip serialization of volumeSeriesID (type string is ignored) ignore type: true
   }
 
 }

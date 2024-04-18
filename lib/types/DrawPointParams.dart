@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -26,53 +26,13 @@ import 'OptionFragment.dart';
  * DrawPointParams 
  */
 class DrawPointParams extends OptionFragment {
-  DrawPointParams( {
-    this.imageUrl = null,
-    this.isNew = null,
-    this.shapeType = null
-  }) : super();
-  String? imageUrl;
-    /*
-  String get imageUrl { 
-    if (this._imageUrl == null) {
-      this._imageUrl = "";
-    }
-    return this._imageUrl!;
-  }
+  DrawPointParams( ) : super();
+  // NOTE: imageUrl skipped - type string is ignored in gen 
 
-  void set imageUrl (String v) {
-    this._imageUrl = v;
-  }
-    */
-    
-  bool? isNew;
-    /*
-  bool get isNew { 
-    if (this._isNew == null) {
-      this._isNew = false;
-    }
-    return this._isNew!;
-  }
+  // NOTE: isNew skipped - type boolean is ignored in gen 
 
-  void set isNew (bool v) {
-    this._isNew = v;
-  }
-    */
-    
-  String? shapeType;
-    /*
-  String get shapeType { 
-    if (this._shapeType == null) {
-      this._shapeType = "";
-    }
-    return this._shapeType!;
-  }
+  // NOTE: shapeType skipped - type string is ignored in gen 
 
-  void set shapeType (String v) {
-    this._shapeType = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -81,33 +41,27 @@ class DrawPointParams extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of animatableAttribs (type SVGAttributes is ignored)} 
+    // NOTE: skip serialization of animatableAttribs (type SVGAttributes is ignored) ignore type: true
 
-    // NOTE: skip serialization of attribs (type SVGAttributes is ignored)} 
+    // NOTE: skip serialization of attribs (type SVGAttributes is ignored) ignore type: true
 
-    // NOTE: skip serialization of css (type CSSObject is ignored)} 
+    // NOTE: skip serialization of css (type CSSObject is ignored) ignore type: true
 
-    // NOTE: skip serialization of group (type SVGElement is ignored)} 
+    // NOTE: skip serialization of group (type SVGElement is ignored) ignore type: true
 
-    // NOTE: skip serialization of onComplete (type Function is ignored)} 
+    // NOTE: skip serialization of onComplete (type Function is ignored) ignore type: 1
 
-    if (this.imageUrl != null) {  
-      buffer.writeAll(["\"imageUrl\":\`", this.imageUrl, "\`,"], "");
-    }
+    // NOTE: skip serialization of imageUrl (type string is ignored) ignore type: true
 
-    if (this.isNew != null) {  
-      buffer.writeAll(["\"isNew\":", this.isNew, ","], "");
-    }
+    // NOTE: skip serialization of isNew (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of renderer (type SVGRenderer is ignored)} 
+    // NOTE: skip serialization of renderer (type SVGRenderer is ignored) ignore type: true
 
-    // NOTE: skip serialization of shadow (type Generic is ignored)} 
+    // NOTE: skip serialization of shadow (type Generic is ignored) ignore type: true
 
-    // NOTE: skip serialization of shapeArgs (type SVGAttributes is ignored)} 
+    // NOTE: skip serialization of shapeArgs (type SVGAttributes is ignored) ignore type: true
 
-    if (this.shapeType != null) {  
-      buffer.writeAll(["\"shapeType\":\`", this.shapeType, "\`,"], "");
-    }
+    // NOTE: skip serialization of shapeType (type string is ignored) ignore type: true
   }
 
 }

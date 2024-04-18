@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,68 +23,15 @@ import 'OptionFragment.dart';
  * MarkerClusterZonesOptions 
  */
 class MarkerClusterZonesOptions extends OptionFragment {
-  MarkerClusterZonesOptions( {
-    this.className = null,
-    this.from = null,
-    this.to = null,
-    this.zoneIndex = null
-  }) : super();
-  String? className;
-    /*
-  String get className { 
-    if (this._className == null) {
-      this._className = "";
-    }
-    return this._className!;
-  }
+  MarkerClusterZonesOptions( ) : super();
+  // NOTE: className skipped - type string is ignored in gen 
 
-  void set className (String v) {
-    this._className = v;
-  }
-    */
-    
-  double? from;
-    /*
-  double get from { 
-    if (this._from == null) {
-      this._from = 0;
-    }
-    return this._from!;
-  }
+  // NOTE: from skipped - type number is ignored in gen 
 
-  void set from (double v) {
-    this._from = v;
-  }
-    */
-    
-  double? to;
-    /*
-  double get to { 
-    if (this._to == null) {
-      this._to = 0;
-    }
-    return this._to!;
-  }
+  // NOTE: to skipped - type number is ignored in gen 
 
-  void set to (double v) {
-    this._to = v;
-  }
-    */
-    
-  double? zoneIndex;
-    /*
-  double get zoneIndex { 
-    if (this._zoneIndex == null) {
-      this._zoneIndex = 0;
-    }
-    return this._zoneIndex!;
-  }
+  // NOTE: zoneIndex skipped - type number is ignored in gen 
 
-  void set zoneIndex (double v) {
-    this._zoneIndex = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -93,23 +40,15 @@ class MarkerClusterZonesOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.className != null) {  
-      buffer.writeAll(["\"className\":\`", this.className, "\`,"], "");
-    }
+    // NOTE: skip serialization of className (type string is ignored) ignore type: true
 
-    if (this.from != null) {  
-      buffer.writeAll(["\"from\":", this.from, ","], "");
-    }
+    // NOTE: skip serialization of from (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of marker (type PointMarkerOptions is ignored)} 
+    // NOTE: skip serialization of marker (type PointMarkerOptions is ignored) ignore type: true
 
-    if (this.to != null) {  
-      buffer.writeAll(["\"to\":", this.to, ","], "");
-    }
+    // NOTE: skip serialization of to (type number is ignored) ignore type: true
 
-    if (this.zoneIndex != null) {  
-      buffer.writeAll(["\"zoneIndex\":", this.zoneIndex, ","], "");
-    }
+    // NOTE: skip serialization of zoneIndex (type number is ignored) ignore type: true
   }
 
 }

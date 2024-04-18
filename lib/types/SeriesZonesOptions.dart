@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,113 +22,21 @@ import 'OptionFragment.dart';
  * SeriesZonesOptions 
  */
 class SeriesZonesOptions extends OptionFragment {
-  SeriesZonesOptions( {
-    this.borderColor = null,
-    this.borderWidth = null,
-    this.color = null,
-    this.className = null,
-    this.dashStyle = null,
-    this.fillColor = null,
-    this.value = null
-  }) : super();
-  String? borderColor;
-    /*
-  String get borderColor { 
-    if (this._borderColor == null) {
-      this._borderColor = "";
-    }
-    return this._borderColor!;
-  }
+  SeriesZonesOptions( ) : super();
+  // NOTE: borderColor skipped - type string is ignored in gen 
 
-  void set borderColor (String v) {
-    this._borderColor = v;
-  }
-    */
-    
-  double? borderWidth;
-    /*
-  double get borderWidth { 
-    if (this._borderWidth == null) {
-      this._borderWidth = 0;
-    }
-    return this._borderWidth!;
-  }
+  // NOTE: borderWidth skipped - type number is ignored in gen 
 
-  void set borderWidth (double v) {
-    this._borderWidth = v;
-  }
-    */
-    
-  String? color;
-    /*
-  String get color { 
-    if (this._color == null) {
-      this._color = "";
-    }
-    return this._color!;
-  }
+  // NOTE: color skipped - type string is ignored in gen 
 
-  void set color (String v) {
-    this._color = v;
-  }
-    */
-    
-  String? className;
-    /*
-  String get className { 
-    if (this._className == null) {
-      this._className = "";
-    }
-    return this._className!;
-  }
+  // NOTE: className skipped - type string is ignored in gen 
 
-  void set className (String v) {
-    this._className = v;
-  }
-    */
-    
-  String? dashStyle;
-    /*
-  String get dashStyle { 
-    if (this._dashStyle == null) {
-      this._dashStyle = "";
-    }
-    return this._dashStyle!;
-  }
+  // NOTE: dashStyle skipped - type string is ignored in gen 
 
-  void set dashStyle (String v) {
-    this._dashStyle = v;
-  }
-    */
-    
-  String? fillColor;
-    /*
-  String get fillColor { 
-    if (this._fillColor == null) {
-      this._fillColor = "";
-    }
-    return this._fillColor!;
-  }
+  // NOTE: fillColor skipped - type string is ignored in gen 
 
-  void set fillColor (String v) {
-    this._fillColor = v;
-  }
-    */
-    
-  double? value;
-    /*
-  double get value { 
-    if (this._value == null) {
-      this._value = 0;
-    }
-    return this._value!;
-  }
+  // NOTE: value skipped - type number is ignored in gen 
 
-  void set value (double v) {
-    this._value = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -137,37 +45,21 @@ class SeriesZonesOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.borderColor != null) {  
-      buffer.writeAll(["\"borderColor\":\`", this.borderColor, "\`,"], "");
-    }
+    // NOTE: skip serialization of borderColor (type string is ignored) ignore type: true
 
-    if (this.borderWidth != null) {  
-      buffer.writeAll(["\"borderWidth\":", this.borderWidth, ","], "");
-    }
+    // NOTE: skip serialization of borderWidth (type number is ignored) ignore type: true
 
-    if (this.color != null) {  
-      buffer.writeAll(["\"color\":\`", this.color, "\`,"], "");
-    }
+    // NOTE: skip serialization of color (type string is ignored) ignore type: true
 
-    if (this.className != null) {  
-      buffer.writeAll(["\"className\":\`", this.className, "\`,"], "");
-    }
+    // NOTE: skip serialization of className (type string is ignored) ignore type: true
 
-    if (this.color != null) {  
-      buffer.writeAll(["\"color\":\`", this.color, "\`,"], "");
-    }
+    // NOTE: skip serialization of color (type string is ignored) ignore type: true
 
-    if (this.dashStyle != null) {  
-      buffer.writeAll(["\"dashStyle\":\`", this.dashStyle, "\`,"], "");
-    }
+    // NOTE: skip serialization of dashStyle (type string is ignored) ignore type: true
 
-    if (this.fillColor != null) {  
-      buffer.writeAll(["\"fillColor\":\`", this.fillColor, "\`,"], "");
-    }
+    // NOTE: skip serialization of fillColor (type string is ignored) ignore type: true
 
-    if (this.value != null) {  
-      buffer.writeAll(["\"value\":", this.value, ","], "");
-    }
+    // NOTE: skip serialization of value (type number is ignored) ignore type: true
   }
 
 }

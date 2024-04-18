@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,134 +24,110 @@ import 'OptionFragment.dart';
  */
 class ArcDiagramSeriesOptions extends SankeySeriesOptions {
   ArcDiagramSeriesOptions( {
-    this.equalNodes = null,
+    super.accessibility = null,
+    super.allAreas = null,
+    super.allowPointSelect = null,
+    super.animationLimit = null,
+    super.boostBlending = null,
+    super.boostThreshold = null,
+    super.borderColor = null,
+    super.borderWidth = null,
     this.centeredLinks = null,
-    this.linkRadius = null,
+    super.className = null,
+    super.clip = null,
+    super.color = null,
+    super.colorAxis = null,
+    super.colorIndex = null,
+    super.colorKey = null,
+    super.compare = null,
+    super.compareStart = null,
+    super.connectEnds = null,
+    super.connectNulls = null,
+    super.connectors = null,
+    super.crisp = null,
+    super.cropThreshold = null,
+    super.cumulative = null,
+    super.cursor = null,
+    super.curveFactor = null,
+    super.dashStyle = null,
+    super.dataGrouping = null,
+    super.dataLabels = null,
+    super.dataSorting = null,
+    super.description = null,
+    super.dragDrop = null,
+    super.enableMouseTracking = null,
+    this.equalNodes = null,
+    super.events = null,
+    super.findNearestPointBy = null,
+    super.gapSize = null,
+    super.gapUnit = null,
+    super.getExtremesFromAll = null,
+    super.includeInDataExport = null,
+    super.joinBy = null,
+    super.keys = null,
+    super.label = null,
+    super.lastPrice = null,
+    super.lastVisiblePrice = null,
+    super.legendSymbol = null,
+    super.levels = null,
+    super.linecap = null,
+    super.lineWidth = null,
+    super.link = null,
+    super.linkedTo = null,
+    super.linkOpacity = null,
+    super.marker = null,
+    super.maxPointWidth = null,
+    super.minLinkWidth = null,
+    super.minPointLength = null,
+    super.navigatorOptions = null,
+    super.negativeColor = null,
+    super.nodePadding = null,
+    super.nodeWidth = null,
+    super.onPoint = null,
+    super.opacity = null,
+    super.point = null,
+    super.pointInterval = null,
+    super.pointIntervalUnit = null,
+    super.pointPadding = null,
+    super.pointPlacement = null,
+    super.pointRange = null,
+    super.pointStart = null,
+    super.pointWidth = null,
+    super.relativeXValue = null,
     this.reversed = null,
-    this.scale = null,
-    this.offset = null,
-    this.linkWeight = null
+    super.selected = null,
+    super.showCheckbox = null,
+    super.showInLegend = null,
+    super.showInNavigator = null,
+    super.skipKeyboardNavigation = null,
+    super.softThreshold = null,
+    super.stacking = null,
+    super.step = null,
+    super.stickyTracking = null,
+    super.threshold = null,
+    super.tooltip = null,
+    super.turboThreshold = null,
+    super.visible = null,
+    super.zIndex = null,
+    super.zoneAxis = null,
+    super.zones = null
   }) : super();
-  // NOTE: states skipped - type Generic is ignored in gen
+  // NOTE: states skipped - type Generic is ignored in gen 
 
-  /**
-   * Whether nodes with different values should have the same size. If set
-   * to true, all nodes are calculated based on the `nodePadding` and
-   * current `plotArea`. It is possible to override it using the
-   * `marker.radius` option. 
-   * 
-   * Defaults to 'false'. 
-      */
   bool? equalNodes;
-    /*
-  bool get equalNodes { 
-    if (this._equalNodes == null) {
-      this._equalNodes = false;
-    }
-    return this._equalNodes!;
-  }
-
-  void set equalNodes (bool v) {
-    this._equalNodes = v;
-  }
-    */
     
-  /**
-   * The option to center links rather than position them one after
-   * another 
-   * 
-   * Defaults to 'false'. 
-      */
   bool? centeredLinks;
-    /*
-  bool get centeredLinks { 
-    if (this._centeredLinks == null) {
-      this._centeredLinks = false;
-    }
-    return this._centeredLinks!;
-  }
-
-  void set centeredLinks (bool v) {
-    this._centeredLinks = v;
-  }
-    */
     
-  double? linkRadius;
-    /*
-  double get linkRadius { 
-    if (this._linkRadius == null) {
-      this._linkRadius = 0;
-    }
-    return this._linkRadius!;
-  }
+  // NOTE: linkRadius skipped - type number is ignored in gen 
 
-  void set linkRadius (double v) {
-    this._linkRadius = v;
-  }
-    */
-    
-  /**
-   * Whether the series should be placed on the other side of the
-   * `plotArea`. 
-   * 
-   * Defaults to 'false'. 
-      */
   bool? reversed;
-    /*
-  bool get reversed { 
-    if (this._reversed == null) {
-      this._reversed = false;
-    }
-    return this._reversed!;
-  }
-
-  void set reversed (bool v) {
-    this._reversed = v;
-  }
-    */
     
-  double? scale;
-    /*
-  double get scale { 
-    if (this._scale == null) {
-      this._scale = 0;
-    }
-    return this._scale!;
-  }
+  // NOTE: scale skipped - type number is ignored in gen 
 
-  void set scale (double v) {
-    this._scale = v;
-  }
-    */
-    
-  String? offset;
-    /*
-  String get offset { 
-    if (this._offset == null) {
-      this._offset = "";
-    }
-    return this._offset!;
-  }
+  // NOTE: offset skipped - type string is ignored in gen 
 
-  void set offset (String v) {
-    this._offset = v;
-  }
-    */
-    
-  double? linkWeight;
-    /*
-  double get linkWeight { 
-    if (this._linkWeight == null) {
-      this._linkWeight = 0;
-    }
-    return this._linkWeight!;
-  }
+  // NOTE: linkWeight skipped - type number is ignored in gen 
 
-  void set linkWeight (double v) {
-    this._linkWeight = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -160,35 +136,27 @@ class ArcDiagramSeriesOptions extends SankeySeriesOptions {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of states (type Generic is ignored)} 
+    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
 
     if (this.equalNodes != null) {  
-      buffer.writeAll(["\"equalNodes\":", this.equalNodes, ","], "");
+      buffer.writeAll(["\"equalNodes\":",this.equalNodes, ","], "");
     }
 
     if (this.centeredLinks != null) {  
-      buffer.writeAll(["\"centeredLinks\":", this.centeredLinks, ","], "");
+      buffer.writeAll(["\"centeredLinks\":",this.centeredLinks, ","], "");
     }
 
-    if (this.linkRadius != null) {  
-      buffer.writeAll(["\"linkRadius\":", this.linkRadius, ","], "");
-    }
+    // NOTE: skip serialization of linkRadius (type number is ignored) ignore type: true
 
     if (this.reversed != null) {  
-      buffer.writeAll(["\"reversed\":", this.reversed, ","], "");
+      buffer.writeAll(["\"reversed\":",this.reversed, ","], "");
     }
 
-    if (this.scale != null) {  
-      buffer.writeAll(["\"scale\":", this.scale, ","], "");
-    }
+    // NOTE: skip serialization of scale (type number is ignored) ignore type: true
 
-    if (this.offset != null) {  
-      buffer.writeAll(["\"offset\":\`", this.offset, "\`,"], "");
-    }
+    // NOTE: skip serialization of offset (type string is ignored) ignore type: true
 
-    if (this.linkWeight != null) {  
-      buffer.writeAll(["\"linkWeight\":", this.linkWeight, ","], "");
-    }
+    // NOTE: skip serialization of linkWeight (type number is ignored) ignore type: true
   }
 
 }

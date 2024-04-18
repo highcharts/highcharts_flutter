@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,157 +24,40 @@ import 'OptionFragment.dart';
  */
 class SankeyPointOptions extends ColumnPointOptions {
   SankeyPointOptions( {
-    this.column = null,
-    this.from = null,
-    this.height = null,
-    this.level = null,
-    this.linkColorMode = null,
-    this.offset = null,
-    this.offsetHorizontal = null,
-    this.offsetVertical = null,
-    this.to = null,
-    this.width = null
+    super.accessibility = null,
+    super.borderColor = null,
+    super.className = null,
+    super.color = null,
+    super.colorIndex = null,
+    super.connectors = null,
+    super.dataLabels = null,
+    super.dragDrop = null,
+    super.events = null,
+    super.keys = null,
+    super.marker = null,
+    super.selected = null,
+    super.visible = null
   }) : super();
-  double? column;
-    /*
-  double get column { 
-    if (this._column == null) {
-      this._column = 0;
-    }
-    return this._column!;
-  }
+  // NOTE: column skipped - type number is ignored in gen 
 
-  void set column (double v) {
-    this._column = v;
-  }
-    */
-    
-  String? from;
-    /*
-  String get from { 
-    if (this._from == null) {
-      this._from = "";
-    }
-    return this._from!;
-  }
+  // NOTE: from skipped - type string is ignored in gen 
 
-  void set from (String v) {
-    this._from = v;
-  }
-    */
-    
-  double? height;
-    /*
-  double get height { 
-    if (this._height == null) {
-      this._height = 0;
-    }
-    return this._height!;
-  }
+  // NOTE: height skipped - type number is ignored in gen 
 
-  void set height (double v) {
-    this._height = v;
-  }
-    */
-    
-  double? level;
-    /*
-  double get level { 
-    if (this._level == null) {
-      this._level = 0;
-    }
-    return this._level!;
-  }
+  // NOTE: level skipped - type number is ignored in gen 
 
-  void set level (double v) {
-    this._level = v;
-  }
-    */
-    
-  String? linkColorMode;
-    /*
-  String get linkColorMode { 
-    if (this._linkColorMode == null) {
-      this._linkColorMode = "";
-    }
-    return this._linkColorMode!;
-  }
+  // NOTE: linkColorMode skipped - type string is ignored in gen 
 
-  void set linkColorMode (String v) {
-    this._linkColorMode = v;
-  }
-    */
-    
-  String? offset;
-    /*
-  String get offset { 
-    if (this._offset == null) {
-      this._offset = "";
-    }
-    return this._offset!;
-  }
+  // NOTE: offset skipped - type string is ignored in gen 
 
-  void set offset (String v) {
-    this._offset = v;
-  }
-    */
-    
-  String? offsetHorizontal;
-    /*
-  String get offsetHorizontal { 
-    if (this._offsetHorizontal == null) {
-      this._offsetHorizontal = "";
-    }
-    return this._offsetHorizontal!;
-  }
+  // NOTE: offsetHorizontal skipped - type string is ignored in gen 
 
-  void set offsetHorizontal (String v) {
-    this._offsetHorizontal = v;
-  }
-    */
-    
-  String? offsetVertical;
-    /*
-  String get offsetVertical { 
-    if (this._offsetVertical == null) {
-      this._offsetVertical = "";
-    }
-    return this._offsetVertical!;
-  }
+  // NOTE: offsetVertical skipped - type string is ignored in gen 
 
-  void set offsetVertical (String v) {
-    this._offsetVertical = v;
-  }
-    */
-    
-  String? to;
-    /*
-  String get to { 
-    if (this._to == null) {
-      this._to = "";
-    }
-    return this._to!;
-  }
+  // NOTE: to skipped - type string is ignored in gen 
 
-  void set to (String v) {
-    this._to = v;
-  }
-    */
-    
-  double? width;
-    /*
-  double get width { 
-    if (this._width == null) {
-      this._width = 0;
-    }
-    return this._width!;
-  }
+  // NOTE: width skipped - type number is ignored in gen 
 
-  void set width (double v) {
-    this._width = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -183,45 +66,25 @@ class SankeyPointOptions extends ColumnPointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.column != null) {  
-      buffer.writeAll(["\"column\":", this.column, ","], "");
-    }
+    // NOTE: skip serialization of column (type number is ignored) ignore type: true
 
-    if (this.from != null) {  
-      buffer.writeAll(["\"from\":\`", this.from, "\`,"], "");
-    }
+    // NOTE: skip serialization of from (type string is ignored) ignore type: true
 
-    if (this.height != null) {  
-      buffer.writeAll(["\"height\":", this.height, ","], "");
-    }
+    // NOTE: skip serialization of height (type number is ignored) ignore type: true
 
-    if (this.level != null) {  
-      buffer.writeAll(["\"level\":", this.level, ","], "");
-    }
+    // NOTE: skip serialization of level (type number is ignored) ignore type: true
 
-    if (this.linkColorMode != null) {  
-      buffer.writeAll(["\"linkColorMode\":\`", this.linkColorMode, "\`,"], "");
-    }
+    // NOTE: skip serialization of linkColorMode (type string is ignored) ignore type: true
 
-    if (this.offset != null) {  
-      buffer.writeAll(["\"offset\":\`", this.offset, "\`,"], "");
-    }
+    // NOTE: skip serialization of offset (type string is ignored) ignore type: true
 
-    if (this.offsetHorizontal != null) {  
-      buffer.writeAll(["\"offsetHorizontal\":\`", this.offsetHorizontal, "\`,"], "");
-    }
+    // NOTE: skip serialization of offsetHorizontal (type string is ignored) ignore type: true
 
-    if (this.offsetVertical != null) {  
-      buffer.writeAll(["\"offsetVertical\":\`", this.offsetVertical, "\`,"], "");
-    }
+    // NOTE: skip serialization of offsetVertical (type string is ignored) ignore type: true
 
-    if (this.to != null) {  
-      buffer.writeAll(["\"to\":\`", this.to, "\`,"], "");
-    }
+    // NOTE: skip serialization of to (type string is ignored) ignore type: true
 
-    if (this.width != null) {  
-      buffer.writeAll(["\"width\":", this.width, ","], "");
-    }
+    // NOTE: skip serialization of width (type number is ignored) ignore type: true
   }
 
 }

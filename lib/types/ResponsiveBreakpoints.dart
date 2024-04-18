@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,53 +22,13 @@ import 'OptionFragment.dart';
  * ResponsiveBreakpoints 
  */
 class ResponsiveBreakpoints extends OptionFragment {
-  ResponsiveBreakpoints( {
-    this.small = null,
-    this.medium = null,
-    this.large = null
-  }) : super();
-  double? small;
-    /*
-  double get small { 
-    if (this._small == null) {
-      this._small = 0;
-    }
-    return this._small!;
-  }
+  ResponsiveBreakpoints( ) : super();
+  // NOTE: small skipped - type number is ignored in gen 
 
-  void set small (double v) {
-    this._small = v;
-  }
-    */
-    
-  double? medium;
-    /*
-  double get medium { 
-    if (this._medium == null) {
-      this._medium = 0;
-    }
-    return this._medium!;
-  }
+  // NOTE: medium skipped - type number is ignored in gen 
 
-  void set medium (double v) {
-    this._medium = v;
-  }
-    */
-    
-  double? large;
-    /*
-  double get large { 
-    if (this._large == null) {
-      this._large = 0;
-    }
-    return this._large!;
-  }
+  // NOTE: large skipped - type number is ignored in gen 
 
-  void set large (double v) {
-    this._large = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -77,17 +37,11 @@ class ResponsiveBreakpoints extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.small != null) {  
-      buffer.writeAll(["\"small\":", this.small, ","], "");
-    }
+    // NOTE: skip serialization of small (type number is ignored) ignore type: true
 
-    if (this.medium != null) {  
-      buffer.writeAll(["\"medium\":", this.medium, ","], "");
-    }
+    // NOTE: skip serialization of medium (type number is ignored) ignore type: true
 
-    if (this.large != null) {  
-      buffer.writeAll(["\"large\":", this.large, ","], "");
-    }
+    // NOTE: skip serialization of large (type number is ignored) ignore type: true
   }
 
 }

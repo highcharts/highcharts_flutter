@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,53 +22,13 @@ import 'OptionFragment.dart';
  * A11yBracketStatementObject 
  */
 class A11yBracketStatementObject extends OptionFragment {
-  A11yBracketStatementObject( {
-    this.begin = null,
-    this.end = null,
-    this.statement = null
-  }) : super();
-  double? begin;
-    /*
-  double get begin { 
-    if (this._begin == null) {
-      this._begin = 0;
-    }
-    return this._begin!;
-  }
+  A11yBracketStatementObject( ) : super();
+  // NOTE: begin skipped - type number is ignored in gen 
 
-  void set begin (double v) {
-    this._begin = v;
-  }
-    */
-    
-  double? end;
-    /*
-  double get end { 
-    if (this._end == null) {
-      this._end = 0;
-    }
-    return this._end!;
-  }
+  // NOTE: end skipped - type number is ignored in gen 
 
-  void set end (double v) {
-    this._end = v;
-  }
-    */
-    
-  String? statement;
-    /*
-  String get statement { 
-    if (this._statement == null) {
-      this._statement = "";
-    }
-    return this._statement!;
-  }
+  // NOTE: statement skipped - type string is ignored in gen 
 
-  void set statement (String v) {
-    this._statement = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -77,17 +37,11 @@ class A11yBracketStatementObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.begin != null) {  
-      buffer.writeAll(["\"begin\":", this.begin, ","], "");
-    }
+    // NOTE: skip serialization of begin (type number is ignored) ignore type: true
 
-    if (this.end != null) {  
-      buffer.writeAll(["\"end\":", this.end, ","], "");
-    }
+    // NOTE: skip serialization of end (type number is ignored) ignore type: true
 
-    if (this.statement != null) {  
-      buffer.writeAll(["\"statement\":\`", this.statement, "\`,"], "");
-    }
+    // NOTE: skip serialization of statement (type string is ignored) ignore type: true
   }
 
 }

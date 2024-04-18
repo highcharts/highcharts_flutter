@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,68 +22,15 @@ import 'OptionFragment.dart';
  * LangAccessibilityRangeSelectorOptions 
  */
 class LangAccessibilityRangeSelectorOptions extends OptionFragment {
-  LangAccessibilityRangeSelectorOptions( {
-    this.dropdownLabel = null,
-    this.maxInputLabel = null,
-    this.minInputLabel = null,
-    this.clickButtonAnnouncement = null
-  }) : super();
-  String? dropdownLabel;
-    /*
-  String get dropdownLabel { 
-    if (this._dropdownLabel == null) {
-      this._dropdownLabel = "";
-    }
-    return this._dropdownLabel!;
-  }
+  LangAccessibilityRangeSelectorOptions( ) : super();
+  // NOTE: dropdownLabel skipped - type string is ignored in gen 
 
-  void set dropdownLabel (String v) {
-    this._dropdownLabel = v;
-  }
-    */
-    
-  String? maxInputLabel;
-    /*
-  String get maxInputLabel { 
-    if (this._maxInputLabel == null) {
-      this._maxInputLabel = "";
-    }
-    return this._maxInputLabel!;
-  }
+  // NOTE: maxInputLabel skipped - type string is ignored in gen 
 
-  void set maxInputLabel (String v) {
-    this._maxInputLabel = v;
-  }
-    */
-    
-  String? minInputLabel;
-    /*
-  String get minInputLabel { 
-    if (this._minInputLabel == null) {
-      this._minInputLabel = "";
-    }
-    return this._minInputLabel!;
-  }
+  // NOTE: minInputLabel skipped - type string is ignored in gen 
 
-  void set minInputLabel (String v) {
-    this._minInputLabel = v;
-  }
-    */
-    
-  String? clickButtonAnnouncement;
-    /*
-  String get clickButtonAnnouncement { 
-    if (this._clickButtonAnnouncement == null) {
-      this._clickButtonAnnouncement = "";
-    }
-    return this._clickButtonAnnouncement!;
-  }
+  // NOTE: clickButtonAnnouncement skipped - type string is ignored in gen 
 
-  void set clickButtonAnnouncement (String v) {
-    this._clickButtonAnnouncement = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -92,21 +39,13 @@ class LangAccessibilityRangeSelectorOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.dropdownLabel != null) {  
-      buffer.writeAll(["\"dropdownLabel\":\`", this.dropdownLabel, "\`,"], "");
-    }
+    // NOTE: skip serialization of dropdownLabel (type string is ignored) ignore type: true
 
-    if (this.maxInputLabel != null) {  
-      buffer.writeAll(["\"maxInputLabel\":\`", this.maxInputLabel, "\`,"], "");
-    }
+    // NOTE: skip serialization of maxInputLabel (type string is ignored) ignore type: true
 
-    if (this.minInputLabel != null) {  
-      buffer.writeAll(["\"minInputLabel\":\`", this.minInputLabel, "\`,"], "");
-    }
+    // NOTE: skip serialization of minInputLabel (type string is ignored) ignore type: true
 
-    if (this.clickButtonAnnouncement != null) {  
-      buffer.writeAll(["\"clickButtonAnnouncement\":\`", this.clickButtonAnnouncement, "\`,"], "");
-    }
+    // NOTE: skip serialization of clickButtonAnnouncement (type string is ignored) ignore type: true
   }
 
 }

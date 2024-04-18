@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,53 +22,13 @@ import 'OptionFragment.dart';
  * LinkedValueToOptions 
  */
 class LinkedValueToOptions extends OptionFragment {
-  LinkedValueToOptions( {
-    this.enabled = null,
-    this.pointIndex = null,
-    this.seriesIndex = null
-  }) : super();
-  bool? enabled;
-    /*
-  bool get enabled { 
-    if (this._enabled == null) {
-      this._enabled = false;
-    }
-    return this._enabled!;
-  }
+  LinkedValueToOptions( ) : super();
+  // NOTE: enabled skipped - type boolean is ignored in gen 
 
-  void set enabled (bool v) {
-    this._enabled = v;
-  }
-    */
-    
-  double? pointIndex;
-    /*
-  double get pointIndex { 
-    if (this._pointIndex == null) {
-      this._pointIndex = 0;
-    }
-    return this._pointIndex!;
-  }
+  // NOTE: pointIndex skipped - type number is ignored in gen 
 
-  void set pointIndex (double v) {
-    this._pointIndex = v;
-  }
-    */
-    
-  double? seriesIndex;
-    /*
-  double get seriesIndex { 
-    if (this._seriesIndex == null) {
-      this._seriesIndex = 0;
-    }
-    return this._seriesIndex!;
-  }
+  // NOTE: seriesIndex skipped - type number is ignored in gen 
 
-  void set seriesIndex (double v) {
-    this._seriesIndex = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -77,17 +37,11 @@ class LinkedValueToOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
-    }
+    // NOTE: skip serialization of enabled (type boolean is ignored) ignore type: true
 
-    if (this.pointIndex != null) {  
-      buffer.writeAll(["\"pointIndex\":", this.pointIndex, ","], "");
-    }
+    // NOTE: skip serialization of pointIndex (type number is ignored) ignore type: true
 
-    if (this.seriesIndex != null) {  
-      buffer.writeAll(["\"seriesIndex\":", this.seriesIndex, ","], "");
-    }
+    // NOTE: skip serialization of seriesIndex (type number is ignored) ignore type: true
   }
 
 }

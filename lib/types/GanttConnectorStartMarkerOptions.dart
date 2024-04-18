@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,22 +24,20 @@ import 'OptionFragment.dart';
  */
 class GanttConnectorStartMarkerOptions extends ConnectorsStartMarkerOptions {
   GanttConnectorStartMarkerOptions( {
-    this.fill = null
+    super.align = null,
+    super.color = null,
+    super.enabled = null,
+    super.height = null,
+    super.inside = null,
+    super.lineColor = null,
+    super.lineWidth = null,
+    super.radius = null,
+    super.symbol = null,
+    super.verticalAlign = null,
+    super.width = null
   }) : super();
-  String? fill;
-    /*
-  String get fill { 
-    if (this._fill == null) {
-      this._fill = "";
-    }
-    return this._fill!;
-  }
+  // NOTE: fill skipped - type string is ignored in gen 
 
-  void set fill (String v) {
-    this._fill = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -48,9 +46,7 @@ class GanttConnectorStartMarkerOptions extends ConnectorsStartMarkerOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.fill != null) {  
-      buffer.writeAll(["\"fill\":\`", this.fill, "\`,"], "");
-    }
+    // NOTE: skip serialization of fill (type string is ignored) ignore type: true
   }
 
 }

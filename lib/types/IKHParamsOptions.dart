@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,37 +24,13 @@ import 'OptionFragment.dart';
  */
 class IKHParamsOptions extends SMAParamsOptions {
   IKHParamsOptions( {
-    this.periodTenkan = null,
-    this.periodSenkouSpanB = null
+    super.index = null,
+    super.period = null
   }) : super();
-  double? periodTenkan;
-    /*
-  double get periodTenkan { 
-    if (this._periodTenkan == null) {
-      this._periodTenkan = 0;
-    }
-    return this._periodTenkan!;
-  }
+  // NOTE: periodTenkan skipped - type number is ignored in gen 
 
-  void set periodTenkan (double v) {
-    this._periodTenkan = v;
-  }
-    */
-    
-  double? periodSenkouSpanB;
-    /*
-  double get periodSenkouSpanB { 
-    if (this._periodSenkouSpanB == null) {
-      this._periodSenkouSpanB = 0;
-    }
-    return this._periodSenkouSpanB!;
-  }
+  // NOTE: periodSenkouSpanB skipped - type number is ignored in gen 
 
-  void set periodSenkouSpanB (double v) {
-    this._periodSenkouSpanB = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -63,13 +39,9 @@ class IKHParamsOptions extends SMAParamsOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.periodTenkan != null) {  
-      buffer.writeAll(["\"periodTenkan\":", this.periodTenkan, ","], "");
-    }
+    // NOTE: skip serialization of periodTenkan (type number is ignored) ignore type: true
 
-    if (this.periodSenkouSpanB != null) {  
-      buffer.writeAll(["\"periodSenkouSpanB\":", this.periodSenkouSpanB, ","], "");
-    }
+    // NOTE: skip serialization of periodSenkouSpanB (type number is ignored) ignore type: true
   }
 
 }

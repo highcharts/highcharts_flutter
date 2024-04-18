@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,83 +22,17 @@ import 'OptionFragment.dart';
  * AxisBreakOptions 
  */
 class AxisBreakOptions extends OptionFragment {
-  AxisBreakOptions( {
-    this.breakSize = null,
-    this.from = null,
-    this.inclusive = null,
-    this.repeat = null,
-    this.to = null
-  }) : super();
-  double? breakSize;
-    /*
-  double get breakSize { 
-    if (this._breakSize == null) {
-      this._breakSize = 0;
-    }
-    return this._breakSize!;
-  }
+  AxisBreakOptions( ) : super();
+  // NOTE: breakSize skipped - type number is ignored in gen 
 
-  void set breakSize (double v) {
-    this._breakSize = v;
-  }
-    */
-    
-  double? from;
-    /*
-  double get from { 
-    if (this._from == null) {
-      this._from = 0;
-    }
-    return this._from!;
-  }
+  // NOTE: from skipped - type number is ignored in gen 
 
-  void set from (double v) {
-    this._from = v;
-  }
-    */
-    
-  bool? inclusive;
-    /*
-  bool get inclusive { 
-    if (this._inclusive == null) {
-      this._inclusive = false;
-    }
-    return this._inclusive!;
-  }
+  // NOTE: inclusive skipped - type boolean is ignored in gen 
 
-  void set inclusive (bool v) {
-    this._inclusive = v;
-  }
-    */
-    
-  double? repeat;
-    /*
-  double get repeat { 
-    if (this._repeat == null) {
-      this._repeat = 0;
-    }
-    return this._repeat!;
-  }
+  // NOTE: repeat skipped - type number is ignored in gen 
 
-  void set repeat (double v) {
-    this._repeat = v;
-  }
-    */
-    
-  double? to;
-    /*
-  double get to { 
-    if (this._to == null) {
-      this._to = 0;
-    }
-    return this._to!;
-  }
+  // NOTE: to skipped - type number is ignored in gen 
 
-  void set to (double v) {
-    this._to = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -107,25 +41,15 @@ class AxisBreakOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.breakSize != null) {  
-      buffer.writeAll(["\"breakSize\":", this.breakSize, ","], "");
-    }
+    // NOTE: skip serialization of breakSize (type number is ignored) ignore type: true
 
-    if (this.from != null) {  
-      buffer.writeAll(["\"from\":", this.from, ","], "");
-    }
+    // NOTE: skip serialization of from (type number is ignored) ignore type: true
 
-    if (this.inclusive != null) {  
-      buffer.writeAll(["\"inclusive\":", this.inclusive, ","], "");
-    }
+    // NOTE: skip serialization of inclusive (type boolean is ignored) ignore type: true
 
-    if (this.repeat != null) {  
-      buffer.writeAll(["\"repeat\":", this.repeat, ","], "");
-    }
+    // NOTE: skip serialization of repeat (type number is ignored) ignore type: true
 
-    if (this.to != null) {  
-      buffer.writeAll(["\"to\":", this.to, ","], "");
-    }
+    // NOTE: skip serialization of to (type number is ignored) ignore type: true
   }
 
 }

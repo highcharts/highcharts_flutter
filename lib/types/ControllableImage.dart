@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -33,11 +33,11 @@ class ControllableImage extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of collections (type "shapes" is ignored)} 
+    // NOTE: skip serialization of collections (type "shapes" is ignored) ignore type: true
 
-    // NOTE: skip serialization of itemType (type "shape" is ignored)} 
+    // NOTE: skip serialization of itemType (type "shape" is ignored) ignore type: true
 
-    // NOTE: skip serialization of options (type ControllableShapeOptions is ignored)} 
+    // NOTE: skip serialization of options (type ControllableShapeOptions is ignored) ignore type: true
   }
 
 }

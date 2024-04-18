@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -33,9 +33,9 @@ class LabelConnectorPositionObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of breakAt (type PositionObject is ignored)} 
+    // NOTE: skip serialization of breakAt (type PositionObject is ignored) ignore type: true
 
-    // NOTE: skip serialization of touchingSliceAt (type PositionObject is ignored)} 
+    // NOTE: skip serialization of touchingSliceAt (type PositionObject is ignored) ignore type: true
   }
 
 }

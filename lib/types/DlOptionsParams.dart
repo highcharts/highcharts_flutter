@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -36,13 +36,13 @@ class DlOptionsParams extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of level (type SunburstSeriesOptions is ignored)} 
+    // NOTE: skip serialization of level (type SunburstSeriesOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of optionsPoint (type SunburstPointOptions is ignored)} 
+    // NOTE: skip serialization of optionsPoint (type SunburstPointOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of point (type SunburstPoint is ignored)} 
+    // NOTE: skip serialization of point (type SunburstPoint is ignored) ignore type: true
 
-    // NOTE: skip serialization of shapeArgs (type NodeValuesObject is ignored)} 
+    // NOTE: skip serialization of shapeArgs (type NodeValuesObject is ignored) ignore type: true
   }
 
 }

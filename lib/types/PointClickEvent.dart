@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -34,7 +34,7 @@ class PointClickEvent extends PointerEvent {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of point (type Point is ignored)} 
+    // NOTE: skip serialization of point (type Point is ignored) ignore type: true
   }
 
 }

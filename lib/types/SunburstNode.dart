@@ -12,11 +12,12 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
 import 'SunburstSeries.dart';
+import 'SunburstNode.dart';
 import 'OptionFragment.dart';
 
 /** 
@@ -33,9 +34,9 @@ class SunburstNode extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of series (type SunburstSeries is ignored)} 
+    // NOTE: skip serialization of series (type SunburstSeries is ignored) ignore type: true
 
-    // NOTE: skip serialization of children (type SunburstNode[] is ignored)} 
+    // NOTE: skip serialization of children (type SunburstNode[] is ignored) ignore type: true
   }
 
 }

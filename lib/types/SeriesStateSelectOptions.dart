@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,23 +23,9 @@ import 'OptionFragment.dart';
  * SeriesStateSelectOptions 
  */
 class SeriesStateSelectOptions extends StateSelectOptions {
-  SeriesStateSelectOptions( {
-    this.brightness = null
-  }) : super();
-  double? brightness;
-    /*
-  double get brightness { 
-    if (this._brightness == null) {
-      this._brightness = 0;
-    }
-    return this._brightness!;
-  }
+  SeriesStateSelectOptions( ) : super();
+  // NOTE: brightness skipped - type number is ignored in gen 
 
-  void set brightness (double v) {
-    this._brightness = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -48,9 +34,7 @@ class SeriesStateSelectOptions extends StateSelectOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.brightness != null) {  
-      buffer.writeAll(["\"brightness\":", this.brightness, ","], "");
-    }
+    // NOTE: skip serialization of brightness (type number is ignored) ignore type: true
   }
 
 }

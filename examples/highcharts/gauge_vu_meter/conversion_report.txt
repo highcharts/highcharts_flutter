@@ -1,0 +1,46 @@
+[
+  {
+    "path": "chart.plotBackgroundColor",
+    "parentType": "string",
+    "memberName": "linearGradient",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "path": "chart.plotBackgroundColor",
+    "parentType": "string",
+    "memberName": "stops",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "pane"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "yAxis.labels"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "yAxis.plotBands"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "yAxis.title"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "yAxis.labels"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "yAxis.plotBands"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "yAxis.title"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "plotOptions.gauge.dataLabels"
+  }
+]

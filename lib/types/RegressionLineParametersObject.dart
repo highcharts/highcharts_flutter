@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,38 +22,11 @@ import 'OptionFragment.dart';
  * RegressionLineParametersObject 
  */
 class RegressionLineParametersObject extends OptionFragment {
-  RegressionLineParametersObject( {
-    this.slope = null,
-    this.intercept = null
-  }) : super();
-  double? slope;
-    /*
-  double get slope { 
-    if (this._slope == null) {
-      this._slope = 0;
-    }
-    return this._slope!;
-  }
+  RegressionLineParametersObject( ) : super();
+  // NOTE: slope skipped - type number is ignored in gen 
 
-  void set slope (double v) {
-    this._slope = v;
-  }
-    */
-    
-  double? intercept;
-    /*
-  double get intercept { 
-    if (this._intercept == null) {
-      this._intercept = 0;
-    }
-    return this._intercept!;
-  }
+  // NOTE: intercept skipped - type number is ignored in gen 
 
-  void set intercept (double v) {
-    this._intercept = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -62,13 +35,9 @@ class RegressionLineParametersObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.slope != null) {  
-      buffer.writeAll(["\"slope\":", this.slope, ","], "");
-    }
+    // NOTE: skip serialization of slope (type number is ignored) ignore type: true
 
-    if (this.intercept != null) {  
-      buffer.writeAll(["\"intercept\":", this.intercept, ","], "");
-    }
+    // NOTE: skip serialization of intercept (type number is ignored) ignore type: true
   }
 
 }

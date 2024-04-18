@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,83 +22,17 @@ import 'OptionFragment.dart';
  * TreePointOptionsObject 
  */
 class TreePointOptionsObject extends OptionFragment {
-  TreePointOptionsObject( {
-    this.end = null,
-    this.id = null,
-    this.milestone = null,
-    this.parent = null,
-    this.start = null
-  }) : super();
-  double? end;
-    /*
-  double get end { 
-    if (this._end == null) {
-      this._end = 0;
-    }
-    return this._end!;
-  }
+  TreePointOptionsObject( ) : super();
+  // NOTE: end skipped - type number is ignored in gen 
 
-  void set end (double v) {
-    this._end = v;
-  }
-    */
-    
-  String? id;
-    /*
-  String get id { 
-    if (this._id == null) {
-      this._id = "";
-    }
-    return this._id!;
-  }
+  // NOTE: id skipped - type string is ignored in gen 
 
-  void set id (String v) {
-    this._id = v;
-  }
-    */
-    
-  bool? milestone;
-    /*
-  bool get milestone { 
-    if (this._milestone == null) {
-      this._milestone = false;
-    }
-    return this._milestone!;
-  }
+  // NOTE: milestone skipped - type boolean is ignored in gen 
 
-  void set milestone (bool v) {
-    this._milestone = v;
-  }
-    */
-    
-  String? parent;
-    /*
-  String get parent { 
-    if (this._parent == null) {
-      this._parent = "";
-    }
-    return this._parent!;
-  }
+  // NOTE: parent skipped - type string is ignored in gen 
 
-  void set parent (String v) {
-    this._parent = v;
-  }
-    */
-    
-  double? start;
-    /*
-  double get start { 
-    if (this._start == null) {
-      this._start = 0;
-    }
-    return this._start!;
-  }
+  // NOTE: start skipped - type number is ignored in gen 
 
-  void set start (double v) {
-    this._start = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -107,25 +41,15 @@ class TreePointOptionsObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.end != null) {  
-      buffer.writeAll(["\"end\":", this.end, ","], "");
-    }
+    // NOTE: skip serialization of end (type number is ignored) ignore type: true
 
-    if (this.id != null) {  
-      buffer.writeAll(["\"id\":\`", this.id, "\`,"], "");
-    }
+    // NOTE: skip serialization of id (type string is ignored) ignore type: true
 
-    if (this.milestone != null) {  
-      buffer.writeAll(["\"milestone\":", this.milestone, ","], "");
-    }
+    // NOTE: skip serialization of milestone (type boolean is ignored) ignore type: true
 
-    if (this.parent != null) {  
-      buffer.writeAll(["\"parent\":\`", this.parent, "\`,"], "");
-    }
+    // NOTE: skip serialization of parent (type string is ignored) ignore type: true
 
-    if (this.start != null) {  
-      buffer.writeAll(["\"start\":", this.start, ","], "");
-    }
+    // NOTE: skip serialization of start (type number is ignored) ignore type: true
   }
 
 }

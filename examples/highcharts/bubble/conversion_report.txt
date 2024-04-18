@@ -1,0 +1,34 @@
+[
+  {
+    "type": "missing_mapping",
+    "path": "xAxis.title"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "xAxis.labels"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "xAxis.plotLines"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "xAxis.accessibility"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "yAxis.title"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "yAxis.labels"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "yAxis.plotLines"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "yAxis.accessibility"
+  }
+]

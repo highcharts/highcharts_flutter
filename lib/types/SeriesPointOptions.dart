@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,8 +23,11 @@ import 'OptionFragment.dart';
  * SeriesPointOptions 
  */
 class SeriesPointOptions extends OptionFragment {
-  SeriesPointOptions( ) : super();
-  
+  SeriesPointOptions( {
+    this.events = null
+  }) : super();
+  PointEventsOptions? events;
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,7 +36,9 @@ class SeriesPointOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of events (type PointEventsOptions is ignored)} 
+    if (this.events != null) {  
+      buffer.writeAll(["\"events\":",this.events?.toJSON(), ","], "");
+    }
   }
 
 }

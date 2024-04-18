@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,38 +22,11 @@ import 'OptionFragment.dart';
  * MapLonLatObject 
  */
 class MapLonLatObject extends OptionFragment {
-  MapLonLatObject( {
-    this.lat = null,
-    this.lon = null
-  }) : super();
-  double? lat;
-    /*
-  double get lat { 
-    if (this._lat == null) {
-      this._lat = 0;
-    }
-    return this._lat!;
-  }
+  MapLonLatObject( ) : super();
+  // NOTE: lat skipped - type number is ignored in gen 
 
-  void set lat (double v) {
-    this._lat = v;
-  }
-    */
-    
-  double? lon;
-    /*
-  double get lon { 
-    if (this._lon == null) {
-      this._lon = 0;
-    }
-    return this._lon!;
-  }
+  // NOTE: lon skipped - type number is ignored in gen 
 
-  void set lon (double v) {
-    this._lon = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -62,13 +35,9 @@ class MapLonLatObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.lat != null) {  
-      buffer.writeAll(["\"lat\":", this.lat, ","], "");
-    }
+    // NOTE: skip serialization of lat (type number is ignored) ignore type: true
 
-    if (this.lon != null) {  
-      buffer.writeAll(["\"lon\":", this.lon, ","], "");
-    }
+    // NOTE: skip serialization of lon (type number is ignored) ignore type: true
   }
 
 }

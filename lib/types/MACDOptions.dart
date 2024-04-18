@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -26,114 +26,102 @@ import 'OptionFragment.dart';
  */
 class MACDOptions extends SMAOptions {
   MACDOptions( {
-    this.threshold = null,
+    super.accessibility = null,
+    super.allAreas = null,
+    super.allowPointSelect = null,
+    super.animationLimit = null,
+    super.boostBlending = null,
+    super.boostThreshold = null,
+    super.borderColor = null,
+    super.borderWidth = null,
+    super.className = null,
+    super.clip = null,
+    super.color = null,
+    super.colorAxis = null,
+    super.colorIndex = null,
+    super.colorKey = null,
+    super.compare = null,
+    super.compareStart = null,
+    super.compareToMain = null,
+    super.connectEnds = null,
+    super.connectNulls = null,
+    super.connectors = null,
+    super.crisp = null,
+    super.cropThreshold = null,
+    super.cumulative = null,
+    super.cursor = null,
+    super.dashStyle = null,
+    super.dataGrouping = null,
+    super.dataLabels = null,
+    super.dataSorting = null,
+    super.description = null,
+    super.dragDrop = null,
+    super.enableMouseTracking = null,
+    super.events = null,
+    super.findNearestPointBy = null,
+    super.gapSize = null,
+    super.gapUnit = null,
+    super.getExtremesFromAll = null,
     this.groupPadding = null,
+    super.includeInDataExport = null,
+    super.joinBy = null,
+    super.keys = null,
+    super.label = null,
+    super.lastPrice = null,
+    super.lastVisiblePrice = null,
+    super.legendSymbol = null,
+    super.linecap = null,
+    super.lineWidth = null,
+    super.linkedTo = null,
+    this.macdLine = null,
+    super.marker = null,
+    this.minPointLength = null,
+    super.navigatorOptions = null,
+    super.negativeColor = null,
+    super.onPoint = null,
+    super.opacity = null,
+    super.params = null,
+    super.point = null,
+    super.pointInterval = null,
+    super.pointIntervalUnit = null,
     this.pointPadding = null,
-    this.minPointLength = null
+    super.pointPlacement = null,
+    super.pointRange = null,
+    super.pointStart = null,
+    super.relativeXValue = null,
+    super.selected = null,
+    super.showCheckbox = null,
+    super.showInLegend = null,
+    super.showInNavigator = null,
+    this.signalLine = null,
+    super.skipKeyboardNavigation = null,
+    super.softThreshold = null,
+    super.stacking = null,
+    super.step = null,
+    super.stickyTracking = null,
+    this.threshold = null,
+    super.tooltip = null,
+    super.turboThreshold = null,
+    super.visible = null,
+    super.zIndex = null,
+    super.zoneAxis = null,
+    super.zones = null
   }) : super();
-  /**
-   * Paramters used in calculation of regression series' points.  
-      */
   /** NOTE: extparams is skipped here for now, as it overrides the base type. */
 
-  // NOTE: states skipped - type Generic is ignored in gen
+  // NOTE: states skipped - type Generic is ignored in gen 
 
-  /**
-   * The threshold, also called zero level or base level. For line type
-   * series this is only used in conjunction with
-   * [negativeColor](#plotOptions.series.negativeColor). 
-   * 
-   * Defaults to '0'. 
-      */
   double? threshold;
-    /*
-  double get threshold { 
-    if (this._threshold == null) {
-      this._threshold = 0;
-    }
-    return this._threshold!;
-  }
-
-  void set threshold (double v) {
-    this._threshold = v;
-  }
-    */
     
   double? groupPadding;
-    /*
-  double get groupPadding { 
-    if (this._groupPadding == null) {
-      this._groupPadding = 0;
-    }
-    return this._groupPadding!;
-  }
-
-  void set groupPadding (double v) {
-    this._groupPadding = v;
-  }
-    */
     
   double? pointPadding;
-    /*
-  double get pointPadding { 
-    if (this._pointPadding == null) {
-      this._pointPadding = 0;
-    }
-    return this._pointPadding!;
-  }
-
-  void set pointPadding (double v) {
-    this._pointPadding = v;
-  }
-    */
     
   double? minPointLength;
-    /*
-  double get minPointLength { 
-    if (this._minPointLength == null) {
-      this._minPointLength = 0;
-    }
-    return this._minPointLength!;
-  }
-
-  void set minPointLength (double v) {
-    this._minPointLength = v;
-  }
-    */
     
-  /**
-   * The styles for signal line  
-      */
   MACDLineOptions? signalLine;
-    /*
-  MACDLineOptions get signalLine { 
-    if (this._signalLine == null) {
-      this._signalLine = MACDLineOptions();
-    }
-    return this._signalLine!;
-  }
-
-  void set signalLine (MACDLineOptions v) {
-    this._signalLine = v;
-  }
-    */
     
-  /**
-   * The styles for macd line  
-      */
   MACDLineOptions? macdLine;
-    /*
-  MACDLineOptions get macdLine { 
-    if (this._macdLine == null) {
-      this._macdLine = MACDLineOptions();
-    }
-    return this._macdLine!;
-  }
-
-  void set macdLine (MACDLineOptions v) {
-    this._macdLine = v;
-  }
-    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -143,32 +131,32 @@ class MACDOptions extends SMAOptions {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of params (type MACDParamsOptions is ignored)} 
+    // NOTE: skip serialization of params (type MACDParamsOptions is ignored) ignore type: false
 
-    // NOTE: skip serialization of states (type Generic is ignored)} 
+    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
 
     if (this.threshold != null) {  
-      buffer.writeAll(["\"threshold\":", this.threshold, ","], "");
+      buffer.writeAll(["\"threshold\":",this.threshold, ","], "");
     }
 
     if (this.groupPadding != null) {  
-      buffer.writeAll(["\"groupPadding\":", this.groupPadding, ","], "");
+      buffer.writeAll(["\"groupPadding\":",this.groupPadding, ","], "");
     }
 
     if (this.pointPadding != null) {  
-      buffer.writeAll(["\"pointPadding\":", this.pointPadding, ","], "");
+      buffer.writeAll(["\"pointPadding\":",this.pointPadding, ","], "");
     }
 
     if (this.minPointLength != null) {  
-      buffer.writeAll(["\"minPointLength\":", this.minPointLength, ","], "");
+      buffer.writeAll(["\"minPointLength\":",this.minPointLength, ","], "");
     }
 
     if (this.signalLine != null) {  
-      buffer.writeAll(["\"signalLine\":", this.signalLine?.toJSON(), ","], "");
+      buffer.writeAll(["\"signalLine\":",this.signalLine?.toJSON(), ","], "");
     }
 
     if (this.macdLine != null) {  
-      buffer.writeAll(["\"macdLine\":", this.macdLine?.toJSON(), ","], "");
+      buffer.writeAll(["\"macdLine\":",this.macdLine?.toJSON(), ","], "");
     }
   }
 

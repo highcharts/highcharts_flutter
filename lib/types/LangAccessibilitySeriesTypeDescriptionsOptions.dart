@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,143 +22,25 @@ import 'OptionFragment.dart';
  * LangAccessibilitySeriesTypeDescriptionsOptions 
  */
 class LangAccessibilitySeriesTypeDescriptionsOptions extends OptionFragment {
-  LangAccessibilitySeriesTypeDescriptionsOptions( {
-    this.arearange = null,
-    this.areasplinerange = null,
-    this.boxplot = null,
-    this.bubble = null,
-    this.columnrange = null,
-    this.errorbar = null,
-    this.funnel = null,
-    this.pyramid = null,
-    this.waterfall = null
-  }) : super();
-  String? arearange;
-    /*
-  String get arearange { 
-    if (this._arearange == null) {
-      this._arearange = "";
-    }
-    return this._arearange!;
-  }
+  LangAccessibilitySeriesTypeDescriptionsOptions( ) : super();
+  // NOTE: arearange skipped - type string is ignored in gen 
 
-  void set arearange (String v) {
-    this._arearange = v;
-  }
-    */
-    
-  String? areasplinerange;
-    /*
-  String get areasplinerange { 
-    if (this._areasplinerange == null) {
-      this._areasplinerange = "";
-    }
-    return this._areasplinerange!;
-  }
+  // NOTE: areasplinerange skipped - type string is ignored in gen 
 
-  void set areasplinerange (String v) {
-    this._areasplinerange = v;
-  }
-    */
-    
-  String? boxplot;
-    /*
-  String get boxplot { 
-    if (this._boxplot == null) {
-      this._boxplot = "";
-    }
-    return this._boxplot!;
-  }
+  // NOTE: boxplot skipped - type string is ignored in gen 
 
-  void set boxplot (String v) {
-    this._boxplot = v;
-  }
-    */
-    
-  String? bubble;
-    /*
-  String get bubble { 
-    if (this._bubble == null) {
-      this._bubble = "";
-    }
-    return this._bubble!;
-  }
+  // NOTE: bubble skipped - type string is ignored in gen 
 
-  void set bubble (String v) {
-    this._bubble = v;
-  }
-    */
-    
-  String? columnrange;
-    /*
-  String get columnrange { 
-    if (this._columnrange == null) {
-      this._columnrange = "";
-    }
-    return this._columnrange!;
-  }
+  // NOTE: columnrange skipped - type string is ignored in gen 
 
-  void set columnrange (String v) {
-    this._columnrange = v;
-  }
-    */
-    
-  String? errorbar;
-    /*
-  String get errorbar { 
-    if (this._errorbar == null) {
-      this._errorbar = "";
-    }
-    return this._errorbar!;
-  }
+  // NOTE: errorbar skipped - type string is ignored in gen 
 
-  void set errorbar (String v) {
-    this._errorbar = v;
-  }
-    */
-    
-  String? funnel;
-    /*
-  String get funnel { 
-    if (this._funnel == null) {
-      this._funnel = "";
-    }
-    return this._funnel!;
-  }
+  // NOTE: funnel skipped - type string is ignored in gen 
 
-  void set funnel (String v) {
-    this._funnel = v;
-  }
-    */
-    
-  String? pyramid;
-    /*
-  String get pyramid { 
-    if (this._pyramid == null) {
-      this._pyramid = "";
-    }
-    return this._pyramid!;
-  }
+  // NOTE: pyramid skipped - type string is ignored in gen 
 
-  void set pyramid (String v) {
-    this._pyramid = v;
-  }
-    */
-    
-  String? waterfall;
-    /*
-  String get waterfall { 
-    if (this._waterfall == null) {
-      this._waterfall = "";
-    }
-    return this._waterfall!;
-  }
+  // NOTE: waterfall skipped - type string is ignored in gen 
 
-  void set waterfall (String v) {
-    this._waterfall = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -167,41 +49,23 @@ class LangAccessibilitySeriesTypeDescriptionsOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.arearange != null) {  
-      buffer.writeAll(["\"arearange\":\`", this.arearange, "\`,"], "");
-    }
+    // NOTE: skip serialization of arearange (type string is ignored) ignore type: true
 
-    if (this.areasplinerange != null) {  
-      buffer.writeAll(["\"areasplinerange\":\`", this.areasplinerange, "\`,"], "");
-    }
+    // NOTE: skip serialization of areasplinerange (type string is ignored) ignore type: true
 
-    if (this.boxplot != null) {  
-      buffer.writeAll(["\"boxplot\":\`", this.boxplot, "\`,"], "");
-    }
+    // NOTE: skip serialization of boxplot (type string is ignored) ignore type: true
 
-    if (this.bubble != null) {  
-      buffer.writeAll(["\"bubble\":\`", this.bubble, "\`,"], "");
-    }
+    // NOTE: skip serialization of bubble (type string is ignored) ignore type: true
 
-    if (this.columnrange != null) {  
-      buffer.writeAll(["\"columnrange\":\`", this.columnrange, "\`,"], "");
-    }
+    // NOTE: skip serialization of columnrange (type string is ignored) ignore type: true
 
-    if (this.errorbar != null) {  
-      buffer.writeAll(["\"errorbar\":\`", this.errorbar, "\`,"], "");
-    }
+    // NOTE: skip serialization of errorbar (type string is ignored) ignore type: true
 
-    if (this.funnel != null) {  
-      buffer.writeAll(["\"funnel\":\`", this.funnel, "\`,"], "");
-    }
+    // NOTE: skip serialization of funnel (type string is ignored) ignore type: true
 
-    if (this.pyramid != null) {  
-      buffer.writeAll(["\"pyramid\":\`", this.pyramid, "\`,"], "");
-    }
+    // NOTE: skip serialization of pyramid (type string is ignored) ignore type: true
 
-    if (this.waterfall != null) {  
-      buffer.writeAll(["\"waterfall\":\`", this.waterfall, "\`,"], "");
-    }
+    // NOTE: skip serialization of waterfall (type string is ignored) ignore type: true
   }
 
 }

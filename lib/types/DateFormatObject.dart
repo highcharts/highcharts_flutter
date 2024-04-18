@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,23 +22,9 @@ import 'OptionFragment.dart';
  * DateFormatObject 
  */
 class DateFormatObject extends OptionFragment {
-  DateFormatObject( {
-    this.alternative = null
-  }) : super();
-  String? alternative;
-    /*
-  String get alternative { 
-    if (this._alternative == null) {
-      this._alternative = "";
-    }
-    return this._alternative!;
-  }
+  DateFormatObject( ) : super();
+  // NOTE: alternative skipped - type string is ignored in gen 
 
-  void set alternative (String v) {
-    this._alternative = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -47,11 +33,9 @@ class DateFormatObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.alternative != null) {  
-      buffer.writeAll(["\"alternative\":\`", this.alternative, "\`,"], "");
-    }
+    // NOTE: skip serialization of alternative (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of regex (type RegExp is ignored)} 
+    // NOTE: skip serialization of regex (type RegExp is ignored) ignore type: true
   }
 
 }

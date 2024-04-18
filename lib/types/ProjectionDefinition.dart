@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,38 +24,11 @@ import 'OptionFragment.dart';
  * ProjectionDefinition 
  */
 class ProjectionDefinition extends Projector {
-  ProjectionDefinition( {
-    this.antimeridianCutting = null,
-    this.maxLatitude = null
-  }) : super();
-  bool? antimeridianCutting;
-    /*
-  bool get antimeridianCutting { 
-    if (this._antimeridianCutting == null) {
-      this._antimeridianCutting = false;
-    }
-    return this._antimeridianCutting!;
-  }
+  ProjectionDefinition( ) : super();
+  // NOTE: antimeridianCutting skipped - type boolean is ignored in gen 
 
-  void set antimeridianCutting (bool v) {
-    this._antimeridianCutting = v;
-  }
-    */
-    
-  double? maxLatitude;
-    /*
-  double get maxLatitude { 
-    if (this._maxLatitude == null) {
-      this._maxLatitude = 0;
-    }
-    return this._maxLatitude!;
-  }
+  // NOTE: maxLatitude skipped - type number is ignored in gen 
 
-  void set maxLatitude (double v) {
-    this._maxLatitude = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -64,15 +37,11 @@ class ProjectionDefinition extends Projector {
     super.toJSONInner(buffer);
 
     
-    if (this.antimeridianCutting != null) {  
-      buffer.writeAll(["\"antimeridianCutting\":", this.antimeridianCutting, ","], "");
-    }
+    // NOTE: skip serialization of antimeridianCutting (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of bounds (type MapBounds is ignored)} 
+    // NOTE: skip serialization of bounds (type MapBounds is ignored) ignore type: true
 
-    if (this.maxLatitude != null) {  
-      buffer.writeAll(["\"maxLatitude\":", this.maxLatitude, ","], "");
-    }
+    // NOTE: skip serialization of maxLatitude (type number is ignored) ignore type: true
   }
 
 }

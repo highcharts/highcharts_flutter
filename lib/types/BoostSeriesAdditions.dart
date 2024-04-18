@@ -12,11 +12,12 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
 import 'BoostTargetAdditions.dart';
+import 'BoostAlteredObject.dart';
 import 'OptionFragment.dart';
 
 /** 
@@ -33,7 +34,7 @@ class BoostSeriesAdditions extends BoostTargetAdditions {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of altered (type BoostAlteredObject[] is ignored)} 
+    // NOTE: skip serialization of altered (type BoostAlteredObject[] is ignored) ignore type: true
   }
 
 }

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,23 +23,9 @@ import 'OptionFragment.dart';
  * BBoxObjectWithCenter 
  */
 class BBoxObjectWithCenter extends BBoxObject {
-  BBoxObjectWithCenter( {
-    this.centerX = null
-  }) : super();
-  double? centerX;
-    /*
-  double get centerX { 
-    if (this._centerX == null) {
-      this._centerX = 0;
-    }
-    return this._centerX!;
-  }
+  BBoxObjectWithCenter( ) : super();
+  // NOTE: centerX skipped - type number is ignored in gen 
 
-  void set centerX (double v) {
-    this._centerX = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -48,9 +34,7 @@ class BBoxObjectWithCenter extends BBoxObject {
     super.toJSONInner(buffer);
 
     
-    if (this.centerX != null) {  
-      buffer.writeAll(["\"centerX\":", this.centerX, ","], "");
-    }
+    // NOTE: skip serialization of centerX (type number is ignored) ignore type: true
   }
 
 }

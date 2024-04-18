@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -25,22 +25,35 @@ import 'OptionFragment.dart';
  */
 class SankeyDataLabelOptions extends DataLabelOptions {
   SankeyDataLabelOptions( {
-    this.nodeFormat = null
+    super.align = null,
+    super.allowOverlap = null,
+    super.backgroundColor = null,
+    super.borderColor = null,
+    super.borderRadius = null,
+    super.borderWidth = null,
+    super.className = null,
+    super.color = null,
+    super.crop = null,
+    super.defer = null,
+    super.enabled = null,
+    super.filter = null,
+    super.format = null,
+    super.inside = null,
+    super.nullFormat = null,
+    super.overflow = null,
+    super.padding = null,
+    super.rotation = null,
+    super.shape = null,
+    super.style = null,
+    super.textPath = null,
+    super.useHTML = null,
+    super.verticalAlign = null,
+    super.x = null,
+    super.y = null,
+    super.zIndex = null
   }) : super();
-  String? nodeFormat;
-    /*
-  String get nodeFormat { 
-    if (this._nodeFormat == null) {
-      this._nodeFormat = "";
-    }
-    return this._nodeFormat!;
-  }
+  // NOTE: nodeFormat skipped - type string is ignored in gen 
 
-  void set nodeFormat (String v) {
-    this._nodeFormat = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -49,11 +62,9 @@ class SankeyDataLabelOptions extends DataLabelOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.nodeFormat != null) {  
-      buffer.writeAll(["\"nodeFormat\":\`", this.nodeFormat, "\`,"], "");
-    }
+    // NOTE: skip serialization of nodeFormat (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of linkTextPath (type DataLabelTextPathOptions is ignored)} 
+    // NOTE: skip serialization of linkTextPath (type DataLabelTextPathOptions is ignored) ignore type: true
   }
 
 }

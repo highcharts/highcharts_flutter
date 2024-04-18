@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,68 +23,15 @@ import 'OptionFragment.dart';
  * AjaxSettingsObject 
  */
 class AjaxSettingsObject extends OptionFragment {
-  AjaxSettingsObject( {
-    this.dataType = null,
-    this.responseType = null,
-    this.type = null,
-    this.url = null
-  }) : super();
-  String? dataType;
-    /*
-  String get dataType { 
-    if (this._dataType == null) {
-      this._dataType = "";
-    }
-    return this._dataType!;
-  }
+  AjaxSettingsObject( ) : super();
+  // NOTE: dataType skipped - type string is ignored in gen 
 
-  void set dataType (String v) {
-    this._dataType = v;
-  }
-    */
-    
-  String? responseType;
-    /*
-  String get responseType { 
-    if (this._responseType == null) {
-      this._responseType = "";
-    }
-    return this._responseType!;
-  }
+  // NOTE: responseType skipped - type string is ignored in gen 
 
-  void set responseType (String v) {
-    this._responseType = v;
-  }
-    */
-    
-  String? type;
-    /*
-  String get type { 
-    if (this._type == null) {
-      this._type = "";
-    }
-    return this._type!;
-  }
+  // NOTE: type skipped - type string is ignored in gen 
 
-  void set type (String v) {
-    this._type = v;
-  }
-    */
-    
-  String? url;
-    /*
-  String get url { 
-    if (this._url == null) {
-      this._url = "";
-    }
-    return this._url!;
-  }
+  // NOTE: url skipped - type string is ignored in gen 
 
-  void set url (String v) {
-    this._url = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -93,25 +40,17 @@ class AjaxSettingsObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of data (type JSON is ignored)} 
+    // NOTE: skip serialization of data (type JSON is ignored) ignore type: true
 
-    if (this.dataType != null) {  
-      buffer.writeAll(["\"dataType\":\`", this.dataType, "\`,"], "");
-    }
+    // NOTE: skip serialization of dataType (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of headers (type Generic is ignored)} 
+    // NOTE: skip serialization of headers (type Generic is ignored) ignore type: true
 
-    if (this.responseType != null) {  
-      buffer.writeAll(["\"responseType\":\`", this.responseType, "\`,"], "");
-    }
+    // NOTE: skip serialization of responseType (type string is ignored) ignore type: true
 
-    if (this.type != null) {  
-      buffer.writeAll(["\"type\":\`", this.type, "\`,"], "");
-    }
+    // NOTE: skip serialization of type (type string is ignored) ignore type: true
 
-    if (this.url != null) {  
-      buffer.writeAll(["\"url\":\`", this.url, "\`,"], "");
-    }
+    // NOTE: skip serialization of url (type string is ignored) ignore type: true
   }
 
 }

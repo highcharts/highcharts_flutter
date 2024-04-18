@@ -12,10 +12,12 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
+import 'ClusterAndNoiseObject.dart';
+import 'GroupMapObject.dart';
 import 'MarkerClusterPointsStateObject.dart';
 import 'OptionFragment.dart';
 
@@ -23,68 +25,15 @@ import 'OptionFragment.dart';
  * MarkerClusterInfoObject 
  */
 class MarkerClusterInfoObject extends OptionFragment {
-  MarkerClusterInfoObject( {
-    this.initMinX = null,
-    this.initMaxX = null,
-    this.initMinY = null,
-    this.initMaxY = null
-  }) : super();
-  double? initMinX;
-    /*
-  double get initMinX { 
-    if (this._initMinX == null) {
-      this._initMinX = 0;
-    }
-    return this._initMinX!;
-  }
+  MarkerClusterInfoObject( ) : super();
+  // NOTE: initMinX skipped - type number is ignored in gen 
 
-  void set initMinX (double v) {
-    this._initMinX = v;
-  }
-    */
-    
-  double? initMaxX;
-    /*
-  double get initMaxX { 
-    if (this._initMaxX == null) {
-      this._initMaxX = 0;
-    }
-    return this._initMaxX!;
-  }
+  // NOTE: initMaxX skipped - type number is ignored in gen 
 
-  void set initMaxX (double v) {
-    this._initMaxX = v;
-  }
-    */
-    
-  double? initMinY;
-    /*
-  double get initMinY { 
-    if (this._initMinY == null) {
-      this._initMinY = 0;
-    }
-    return this._initMinY!;
-  }
+  // NOTE: initMinY skipped - type number is ignored in gen 
 
-  void set initMinY (double v) {
-    this._initMinY = v;
-  }
-    */
-    
-  double? initMaxY;
-    /*
-  double get initMaxY { 
-    if (this._initMaxY == null) {
-      this._initMaxY = 0;
-    }
-    return this._initMaxY!;
-  }
+  // NOTE: initMaxY skipped - type number is ignored in gen 
 
-  void set initMaxY (double v) {
-    this._initMaxY = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -93,33 +42,25 @@ class MarkerClusterInfoObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of clusters (type ClusterAndNoiseObject[] is ignored)} 
+    // NOTE: skip serialization of clusters (type ClusterAndNoiseObject[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of noise (type ClusterAndNoiseObject[] is ignored)} 
+    // NOTE: skip serialization of noise (type ClusterAndNoiseObject[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of groupedXData (type number[] is ignored)} 
+    // NOTE: skip serialization of groupedXData (type number[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of groupedYData (type number[] is ignored)} 
+    // NOTE: skip serialization of groupedYData (type number[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of groupMap (type GroupMapObject[] is ignored)} 
+    // NOTE: skip serialization of groupMap (type GroupMapObject[] is ignored) ignore type: true
 
-    if (this.initMinX != null) {  
-      buffer.writeAll(["\"initMinX\":", this.initMinX, ","], "");
-    }
+    // NOTE: skip serialization of initMinX (type number is ignored) ignore type: true
 
-    if (this.initMaxX != null) {  
-      buffer.writeAll(["\"initMaxX\":", this.initMaxX, ","], "");
-    }
+    // NOTE: skip serialization of initMaxX (type number is ignored) ignore type: true
 
-    if (this.initMinY != null) {  
-      buffer.writeAll(["\"initMinY\":", this.initMinY, ","], "");
-    }
+    // NOTE: skip serialization of initMinY (type number is ignored) ignore type: true
 
-    if (this.initMaxY != null) {  
-      buffer.writeAll(["\"initMaxY\":", this.initMaxY, ","], "");
-    }
+    // NOTE: skip serialization of initMaxY (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of pointsState (type MarkerClusterPointsStateObject is ignored)} 
+    // NOTE: skip serialization of pointsState (type MarkerClusterPointsStateObject is ignored) ignore type: true
   }
 
 }

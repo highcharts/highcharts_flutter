@@ -12,10 +12,11 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
+import 'RangeSelectorButtonOptions.dart';
 import 'OptionFragment.dart';
 
 /** 
@@ -32,9 +33,9 @@ class RangeSelector extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of defaultButtons (type RangeSelectorButtonOptions[] is ignored)} 
+    // NOTE: skip serialization of defaultButtons (type RangeSelectorButtonOptions[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of inputTypeFormats (type Generic is ignored)} 
+    // NOTE: skip serialization of inputTypeFormats (type Generic is ignored) ignore type: true
   }
 
 }

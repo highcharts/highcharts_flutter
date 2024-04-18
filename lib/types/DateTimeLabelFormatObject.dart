@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,70 +22,17 @@ import 'OptionFragment.dart';
  * DateTimeLabelFormatObject 
  */
 class DateTimeLabelFormatObject extends OptionFragment {
-  DateTimeLabelFormatObject( {
-    this.from = null,
-    this.list = null,
-    this.main = null,
-    this.range = null,
-    this.to = null
-  }) : super();
-  String? from;
-    /*
-  String get from { 
-    if (this._from == null) {
-      this._from = "";
-    }
-    return this._from!;
-  }
+  DateTimeLabelFormatObject( ) : super();
+  // NOTE: from skipped - type string is ignored in gen 
 
-  void set from (String v) {
-    this._from = v;
-  }
-    */
-    
-  List<String>? list; // String
-  String? main;
-    /*
-  String get main { 
-    if (this._main == null) {
-      this._main = "";
-    }
-    return this._main!;
-  }
+  // NOTE: list skipped - type string is ignored in gen 
 
-  void set main (String v) {
-    this._main = v;
-  }
-    */
-    
-  bool? range;
-    /*
-  bool get range { 
-    if (this._range == null) {
-      this._range = false;
-    }
-    return this._range!;
-  }
+  // NOTE: main skipped - type string is ignored in gen 
 
-  void set range (bool v) {
-    this._range = v;
-  }
-    */
-    
-  String? to;
-    /*
-  String get to { 
-    if (this._to == null) {
-      this._to = "";
-    }
-    return this._to!;
-  }
+  // NOTE: range skipped - type boolean is ignored in gen 
 
-  void set to (String v) {
-    this._to = v;
-  }
-    */
-    
+  // NOTE: to skipped - type string is ignored in gen 
+
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -94,23 +41,15 @@ class DateTimeLabelFormatObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.from != null) {  
-      buffer.writeAll(["\"from\":\`", this.from, "\`,"], "");
-    }
+    // NOTE: skip serialization of from (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of list (type string is ignored)} 
+    // NOTE: skip serialization of list (type string is ignored) ignore type: true
 
-    if (this.main != null) {  
-      buffer.writeAll(["\"main\":\`", this.main, "\`,"], "");
-    }
+    // NOTE: skip serialization of main (type string is ignored) ignore type: true
 
-    if (this.range != null) {  
-      buffer.writeAll(["\"range\":", this.range, ","], "");
-    }
+    // NOTE: skip serialization of range (type boolean is ignored) ignore type: true
 
-    if (this.to != null) {  
-      buffer.writeAll(["\"to\":\`", this.to, "\`,"], "");
-    }
+    // NOTE: skip serialization of to (type string is ignored) ignore type: true
   }
 
 }

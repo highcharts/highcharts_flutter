@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,53 +23,13 @@ import 'OptionFragment.dart';
  * MarkerClusterPointsState 
  */
 class MarkerClusterPointsState extends OptionFragment {
-  MarkerClusterPointsState( {
-    this.x = null,
-    this.y = null,
-    this.id = null
-  }) : super();
-  double? x;
-    /*
-  double get x { 
-    if (this._x == null) {
-      this._x = 0;
-    }
-    return this._x!;
-  }
+  MarkerClusterPointsState( ) : super();
+  // NOTE: x skipped - type number is ignored in gen 
 
-  void set x (double v) {
-    this._x = v;
-  }
-    */
-    
-  double? y;
-    /*
-  double get y { 
-    if (this._y == null) {
-      this._y = 0;
-    }
-    return this._y!;
-  }
+  // NOTE: y skipped - type number is ignored in gen 
 
-  void set y (double v) {
-    this._y = v;
-  }
-    */
-    
-  String? id;
-    /*
-  String get id { 
-    if (this._id == null) {
-      this._id = "";
-    }
-    return this._id!;
-  }
+  // NOTE: id skipped - type string is ignored in gen 
 
-  void set id (String v) {
-    this._id = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -78,21 +38,15 @@ class MarkerClusterPointsState extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.x != null) {  
-      buffer.writeAll(["\"x\":", this.x, ","], "");
-    }
+    // NOTE: skip serialization of x (type number is ignored) ignore type: true
 
-    if (this.y != null) {  
-      buffer.writeAll(["\"y\":", this.y, ","], "");
-    }
+    // NOTE: skip serialization of y (type number is ignored) ignore type: true
 
-    if (this.id != null) {  
-      buffer.writeAll(["\"id\":\`", this.id, "\`,"], "");
-    }
+    // NOTE: skip serialization of id (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of parentsId (type string[] is ignored)} 
+    // NOTE: skip serialization of parentsId (type string[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of point (type Point is ignored)} 
+    // NOTE: skip serialization of point (type Point is ignored) ignore type: true
   }
 
 }

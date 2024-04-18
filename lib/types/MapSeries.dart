@@ -12,50 +12,88 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
-import 'OptionFragment.dart';
+import 'MapSeriesOptions.dart';
+import 'Series.dart';
+import 'PointOptions.dart';
 
-/** 
- * MapSeries 
- */
-class MapSeries extends OptionFragment {
-  MapSeries( {
-    this.preserveAspectRatio = null
-  }) : super();
-  bool? preserveAspectRatio;
-    /*
-  bool get preserveAspectRatio { 
-    if (this._preserveAspectRatio == null) {
-      this._preserveAspectRatio = false;
-    }
-    return this._preserveAspectRatio!;
-  }
+class MapSeries extends Series {
 
-  void set preserveAspectRatio (bool v) {
-    this._preserveAspectRatio = v;
-  }
-    */
-    
+  String? name;
+  MapSeriesOptions? options;
+  List<PointOptions>? points;
+  List<List<double>>? data;
 
-  //////////////////////////////////////////////////////////////////////////////
+  MapSeries({
+    this.name = null,
+    this.options = null,
+    this.points = null,
+    this.data = null
+  });
+
   
   @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of pointArrayMap (type string[] is ignored)} 
 
-    // NOTE: skip serialization of pointClass (type typeof MapPoint is ignored)} 
-
-    if (this.preserveAspectRatio != null) {  
-      buffer.writeAll(["\"preserveAspectRatio\":", this.preserveAspectRatio, ","], "");
+    if (this.name != null) {
+      buffer.writeAll(["\"name\": \"", this.name!, "\","], "");
     }
 
-    // NOTE: skip serialization of trackerGroups (type string[] is ignored)} 
+    buffer.write("\"type\": \"map\",");
+
+    if (this.data != null && this.points == null) {
+      // Serialize as a 2d array
+
+      StringBuffer seriesData = StringBuffer();
+
+      for (var point in this.data!) {
+        seriesData.writeAll(["["], "");
+        for (var item in point) {
+          seriesData.writeAll([item, ","]);
+        }
+        seriesData.writeAll(["],"], "");
+      }
+
+      buffer.writeAll(["\"data\": [", seriesData, "],"], "");   
+
+
+    } else if (this.points != null) {
+      // Go through the points and write them
+      StringBuffer seriesData = StringBuffer();
+
+      for (var point in this.points!) {
+        seriesData.writeAll(["{"], "");
+        point.toJSONInner(seriesData); 
+        seriesData.writeAll(["},"], "");
+      }
+
+      buffer.writeAll(["\"data\": [", seriesData, "],"], "");
+    }
+
+
+
+    
+    if (this.options?.affectsMapView != null) {  
+      buffer.writeAll(["\"affectsMapView\":",this.options?.affectsMapView, ","], "");
+    }
+
+    // NOTE: skip serialization of data (type MapPointOptions)[] is ignored) ignore type: true
+
+    if (this.options?.nullColor != null) {  
+      buffer.writeAll(["\"nullColor\":\`",this.options?.nullColor, "\`,"], "");
+    }
+
+    if (this.options?.nullInteraction != null) {  
+      buffer.writeAll(["\"nullInteraction\":",this.options?.nullInteraction, ","], "");
+    }
+
+    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
   }
 
 }

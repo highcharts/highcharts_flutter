@@ -12,11 +12,12 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
 import 'Array.dart';
+import 'PolygonPointObject.dart';
 import 'OptionFragment.dart';
 
 /** 
@@ -33,7 +34,7 @@ class PolygonObject extends Array {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of axes (type PolygonPointObject[] is ignored)} 
+    // NOTE: skip serialization of axes (type PolygonPointObject[] is ignored) ignore type: true
   }
 
 }

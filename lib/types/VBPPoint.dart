@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,83 +23,17 @@ import 'OptionFragment.dart';
  * VBPPoint 
  */
 class VBPPoint extends OptionFragment {
-  VBPPoint( {
-    this.barX = null,
-    this.pointWidth = null,
-    this.volumeAll = null,
-    this.volumeNeg = null,
-    this.volumePos = null
-  }) : super();
-  double? barX;
-    /*
-  double get barX { 
-    if (this._barX == null) {
-      this._barX = 0;
-    }
-    return this._barX!;
-  }
+  VBPPoint( ) : super();
+  // NOTE: barX skipped - type number is ignored in gen 
 
-  void set barX (double v) {
-    this._barX = v;
-  }
-    */
-    
-  double? pointWidth;
-    /*
-  double get pointWidth { 
-    if (this._pointWidth == null) {
-      this._pointWidth = 0;
-    }
-    return this._pointWidth!;
-  }
+  // NOTE: pointWidth skipped - type number is ignored in gen 
 
-  void set pointWidth (double v) {
-    this._pointWidth = v;
-  }
-    */
-    
-  double? volumeAll;
-    /*
-  double get volumeAll { 
-    if (this._volumeAll == null) {
-      this._volumeAll = 0;
-    }
-    return this._volumeAll!;
-  }
+  // NOTE: volumeAll skipped - type number is ignored in gen 
 
-  void set volumeAll (double v) {
-    this._volumeAll = v;
-  }
-    */
-    
-  double? volumeNeg;
-    /*
-  double get volumeNeg { 
-    if (this._volumeNeg == null) {
-      this._volumeNeg = 0;
-    }
-    return this._volumeNeg!;
-  }
+  // NOTE: volumeNeg skipped - type number is ignored in gen 
 
-  void set volumeNeg (double v) {
-    this._volumeNeg = v;
-  }
-    */
-    
-  double? volumePos;
-    /*
-  double get volumePos { 
-    if (this._volumePos == null) {
-      this._volumePos = 0;
-    }
-    return this._volumePos!;
-  }
+  // NOTE: volumePos skipped - type number is ignored in gen 
 
-  void set volumePos (double v) {
-    this._volumePos = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -108,29 +42,19 @@ class VBPPoint extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.barX != null) {  
-      buffer.writeAll(["\"barX\":", this.barX, ","], "");
-    }
+    // NOTE: skip serialization of barX (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of negativeGraphic (type unknown is ignored)} 
+    // NOTE: skip serialization of negativeGraphic (type unknown is ignored) ignore type: 1
 
-    if (this.pointWidth != null) {  
-      buffer.writeAll(["\"pointWidth\":", this.pointWidth, ","], "");
-    }
+    // NOTE: skip serialization of pointWidth (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of series (type VBPIndicator is ignored)} 
+    // NOTE: skip serialization of series (type VBPIndicator is ignored) ignore type: true
 
-    if (this.volumeAll != null) {  
-      buffer.writeAll(["\"volumeAll\":", this.volumeAll, ","], "");
-    }
+    // NOTE: skip serialization of volumeAll (type number is ignored) ignore type: true
 
-    if (this.volumeNeg != null) {  
-      buffer.writeAll(["\"volumeNeg\":", this.volumeNeg, ","], "");
-    }
+    // NOTE: skip serialization of volumeNeg (type number is ignored) ignore type: true
 
-    if (this.volumePos != null) {  
-      buffer.writeAll(["\"volumePos\":", this.volumePos, ","], "");
-    }
+    // NOTE: skip serialization of volumePos (type number is ignored) ignore type: true
   }
 
 }

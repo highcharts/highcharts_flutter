@@ -12,11 +12,12 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
 import 'ColumnSeriesOptions.dart';
+import 'WordcloudPointOptions.dart';
 import 'WordcloudSeriesRotationOptions.dart';
 import 'CSSObject.dart';
 import 'OptionFragment.dart';
@@ -26,152 +27,105 @@ import 'OptionFragment.dart';
  */
 class WordcloudSeriesOptions extends ColumnSeriesOptions {
   WordcloudSeriesOptions( {
-    this.allowExtendPlayingField = null,
+    super.accessibility = null,
+    super.allAreas = null,
+    super.allowPointSelect = null,
+    super.animationLimit = null,
+    super.boostBlending = null,
+    super.boostThreshold = null,
+    super.borderColor = null,
+    super.borderWidth = null,
+    super.className = null,
+    super.clip = null,
+    super.color = null,
+    super.colorAxis = null,
+    super.colorIndex = null,
+    super.colorKey = null,
+    super.compare = null,
+    super.compareStart = null,
+    super.connectEnds = null,
+    super.connectNulls = null,
+    super.connectors = null,
+    super.crisp = null,
+    super.cropThreshold = null,
+    super.cumulative = null,
+    super.cursor = null,
+    super.dashStyle = null,
+    super.dataGrouping = null,
+    super.dataLabels = null,
+    super.dataSorting = null,
+    super.description = null,
+    super.dragDrop = null,
+    super.enableMouseTracking = null,
+    super.events = null,
+    super.findNearestPointBy = null,
+    super.gapSize = null,
+    super.gapUnit = null,
+    super.getExtremesFromAll = null,
+    super.includeInDataExport = null,
+    super.joinBy = null,
+    super.keys = null,
+    super.label = null,
+    super.lastPrice = null,
+    super.lastVisiblePrice = null,
+    super.legendSymbol = null,
+    super.linecap = null,
+    super.lineWidth = null,
+    super.linkedTo = null,
+    super.marker = null,
     this.maxFontSize = null,
+    super.maxPointWidth = null,
     this.minFontSize = null,
+    super.minPointLength = null,
+    super.navigatorOptions = null,
+    super.negativeColor = null,
+    super.onPoint = null,
+    super.opacity = null,
     this.placementStrategy = null,
-    this.spiral = null
+    super.point = null,
+    super.pointInterval = null,
+    super.pointIntervalUnit = null,
+    super.pointPadding = null,
+    super.pointPlacement = null,
+    super.pointRange = null,
+    super.pointStart = null,
+    super.pointWidth = null,
+    super.relativeXValue = null,
+    this.rotation = null,
+    super.selected = null,
+    super.showCheckbox = null,
+    super.showInLegend = null,
+    super.showInNavigator = null,
+    super.skipKeyboardNavigation = null,
+    super.softThreshold = null,
+    this.spiral = null,
+    super.stacking = null,
+    super.step = null,
+    super.stickyTracking = null,
+    this.style = null,
+    super.threshold = null,
+    super.tooltip = null,
+    super.turboThreshold = null,
+    super.visible = null,
+    super.zIndex = null,
+    super.zoneAxis = null,
+    super.zones = null
   }) : super();
-  bool? allowExtendPlayingField;
-    /*
-  bool get allowExtendPlayingField { 
-    if (this._allowExtendPlayingField == null) {
-      this._allowExtendPlayingField = false;
-    }
-    return this._allowExtendPlayingField!;
-  }
+  // NOTE: allowExtendPlayingField skipped - type boolean is ignored in gen 
 
-  void set allowExtendPlayingField (bool v) {
-    this._allowExtendPlayingField = v;
-  }
-    */
-    
-  /**
-   * The word with the largest weight will have a font size equal to this
-   * value. The font size of a word is the ratio between its weight and
-   * the largest occuring weight, multiplied with the value of
-   * maxFontSize. 
-   * 
-   * Defaults to '25'. 
-      */
   double? maxFontSize;
-    /*
-  double get maxFontSize { 
-    if (this._maxFontSize == null) {
-      this._maxFontSize = 0;
-    }
-    return this._maxFontSize!;
-  }
-
-  void set maxFontSize (double v) {
-    this._maxFontSize = v;
-  }
-    */
     
-  /**
-   * A threshold determining the minimum font size that can be applied to
-   * a word. 
-   * 
-   * Defaults to '1'. 
-      */
   double? minFontSize;
-    /*
-  double get minFontSize { 
-    if (this._minFontSize == null) {
-      this._minFontSize = 0;
-    }
-    return this._minFontSize!;
-  }
-
-  void set minFontSize (double v) {
-    this._minFontSize = v;
-  }
-    */
     
-  /**
-   * This option decides which algorithm is used for placement, and
-   * rotation of a word. The choice of algorith is therefore a crucial
-   * part of the resulting layout of the wordcloud. It is possible for
-   * users to add their own custom placement strategies for use in word
-   * cloud. Read more about it in our
-   * [documentation](https://www.highcharts.com/docs/chart-and-series-types/word-cloud-series#custom-placement-strategies) 
-   * 
-   * Defaults to 'center'. 
-      */
   String? placementStrategy;
-    /*
-  String get placementStrategy { 
-    if (this._placementStrategy == null) {
-      this._placementStrategy = "";
-    }
-    return this._placementStrategy!;
-  }
-
-  void set placementStrategy (String v) {
-    this._placementStrategy = v;
-  }
-    */
     
-  /**
-   * Rotation options for the words in the wordcloud.  
-      */
   WordcloudSeriesRotationOptions? rotation;
-    /*
-  WordcloudSeriesRotationOptions get rotation { 
-    if (this._rotation == null) {
-      this._rotation = WordcloudSeriesRotationOptions();
-    }
-    return this._rotation!;
-  }
-
-  void set rotation (WordcloudSeriesRotationOptions v) {
-    this._rotation = v;
-  }
-    */
     
-  /**
-   * Spiral used for placing a word after the initial position
-   * experienced a collision with either another word or the borders.
-   * It is possible for users to add their own custom spiralling
-   * algorithms for use in word cloud. Read more about it in our
-   * [documentation](https://www.highcharts.com/docs/chart-and-series-types/word-cloud-series#custom-spiralling-algorithm) 
-   * 
-   * Defaults to 'rectangular'. 
-      */
   String? spiral;
-    /*
-  String get spiral { 
-    if (this._spiral == null) {
-      this._spiral = "";
-    }
-    return this._spiral!;
-  }
-
-  void set spiral (String v) {
-    this._spiral = v;
-  }
-    */
     
-  // NOTE: states skipped - type Generic is ignored in gen
+  // NOTE: states skipped - type Generic is ignored in gen 
 
-  /**
-   * CSS styles for the words. 
-   * 
-   * Defaults to '{"fontFamily":"sans-serif", "fontWeight": "900"}'. 
-      */
   CSSObject? style;
-    /*
-  CSSObject get style { 
-    if (this._style == null) {
-      this._style = CSSObject();
-    }
-    return this._style!;
-  }
-
-  void set style (CSSObject v) {
-    this._style = v;
-  }
-    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -181,36 +135,34 @@ class WordcloudSeriesOptions extends ColumnSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.allowExtendPlayingField != null) {  
-      buffer.writeAll(["\"allowExtendPlayingField\":", this.allowExtendPlayingField, ","], "");
-    }
+    // NOTE: skip serialization of allowExtendPlayingField (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of data (type WordcloudPointOptions)[] is ignored)} 
+    // NOTE: skip serialization of data (type WordcloudPointOptions)[] is ignored) ignore type: true
 
     if (this.maxFontSize != null) {  
-      buffer.writeAll(["\"maxFontSize\":", this.maxFontSize, ","], "");
+      buffer.writeAll(["\"maxFontSize\":",this.maxFontSize, ","], "");
     }
 
     if (this.minFontSize != null) {  
-      buffer.writeAll(["\"minFontSize\":", this.minFontSize, ","], "");
+      buffer.writeAll(["\"minFontSize\":",this.minFontSize, ","], "");
     }
 
     if (this.placementStrategy != null) {  
-      buffer.writeAll(["\"placementStrategy\":\`", this.placementStrategy, "\`,"], "");
+      buffer.writeAll(["\"placementStrategy\":\`",this.placementStrategy, "\`,"], "");
     }
 
     if (this.rotation != null) {  
-      buffer.writeAll(["\"rotation\":", this.rotation?.toJSON(), ","], "");
+      buffer.writeAll(["\"rotation\":",this.rotation?.toJSON(), ","], "");
     }
 
     if (this.spiral != null) {  
-      buffer.writeAll(["\"spiral\":\`", this.spiral, "\`,"], "");
+      buffer.writeAll(["\"spiral\":\`",this.spiral, "\`,"], "");
     }
 
-    // NOTE: skip serialization of states (type Generic is ignored)} 
+    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
 
     if (this.style != null) {  
-      buffer.writeAll(["\"style\":", this.style?.toJSON(), ","], "");
+      buffer.writeAll(["\"style\":",this.style?.toJSON(), ","], "");
     }
   }
 

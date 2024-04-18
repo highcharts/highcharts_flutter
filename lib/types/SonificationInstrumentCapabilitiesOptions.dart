@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,53 +22,13 @@ import 'OptionFragment.dart';
  * SonificationInstrumentCapabilitiesOptions 
  */
 class SonificationInstrumentCapabilitiesOptions extends OptionFragment {
-  SonificationInstrumentCapabilitiesOptions( {
-    this.filters = null,
-    this.tremolo = null,
-    this.pan = null
-  }) : super();
-  bool? filters;
-    /*
-  bool get filters { 
-    if (this._filters == null) {
-      this._filters = false;
-    }
-    return this._filters!;
-  }
+  SonificationInstrumentCapabilitiesOptions( ) : super();
+  // NOTE: filters skipped - type boolean is ignored in gen 
 
-  void set filters (bool v) {
-    this._filters = v;
-  }
-    */
-    
-  bool? tremolo;
-    /*
-  bool get tremolo { 
-    if (this._tremolo == null) {
-      this._tremolo = false;
-    }
-    return this._tremolo!;
-  }
+  // NOTE: tremolo skipped - type boolean is ignored in gen 
 
-  void set tremolo (bool v) {
-    this._tremolo = v;
-  }
-    */
-    
-  bool? pan;
-    /*
-  bool get pan { 
-    if (this._pan == null) {
-      this._pan = false;
-    }
-    return this._pan!;
-  }
+  // NOTE: pan skipped - type boolean is ignored in gen 
 
-  void set pan (bool v) {
-    this._pan = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -77,17 +37,11 @@ class SonificationInstrumentCapabilitiesOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.filters != null) {  
-      buffer.writeAll(["\"filters\":", this.filters, ","], "");
-    }
+    // NOTE: skip serialization of filters (type boolean is ignored) ignore type: true
 
-    if (this.tremolo != null) {  
-      buffer.writeAll(["\"tremolo\":", this.tremolo, ","], "");
-    }
+    // NOTE: skip serialization of tremolo (type boolean is ignored) ignore type: true
 
-    if (this.pan != null) {  
-      buffer.writeAll(["\"pan\":", this.pan, ","], "");
-    }
+    // NOTE: skip serialization of pan (type boolean is ignored) ignore type: true
   }
 
 }

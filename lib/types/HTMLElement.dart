@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -33,9 +33,9 @@ class HTMLElement extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of element (type HTMLElement is ignored)} 
+    // NOTE: skip serialization of element (type HTMLElement is ignored) ignore type: true
 
-    // NOTE: skip serialization of parentNode (type HTMLElement is ignored)} 
+    // NOTE: skip serialization of parentNode (type HTMLElement is ignored) ignore type: true
   }
 
 }

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,38 +23,11 @@ import 'OptionFragment.dart';
  * SunburstSeriesLevelsColorVariationOptions 
  */
 class SunburstSeriesLevelsColorVariationOptions extends TreemapSeriesLevelsColorVariationOptions {
-  SunburstSeriesLevelsColorVariationOptions( {
-    this.key = null,
-    this.to = null
-  }) : super();
-  String? key;
-    /*
-  String get key { 
-    if (this._key == null) {
-      this._key = "";
-    }
-    return this._key!;
-  }
+  SunburstSeriesLevelsColorVariationOptions( ) : super();
+  // NOTE: key skipped - type string is ignored in gen 
 
-  void set key (String v) {
-    this._key = v;
-  }
-    */
-    
-  double? to;
-    /*
-  double get to { 
-    if (this._to == null) {
-      this._to = 0;
-    }
-    return this._to!;
-  }
+  // NOTE: to skipped - type number is ignored in gen 
 
-  void set to (double v) {
-    this._to = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -63,13 +36,9 @@ class SunburstSeriesLevelsColorVariationOptions extends TreemapSeriesLevelsColor
     super.toJSONInner(buffer);
 
     
-    if (this.key != null) {  
-      buffer.writeAll(["\"key\":\`", this.key, "\`,"], "");
-    }
+    // NOTE: skip serialization of key (type string is ignored) ignore type: true
 
-    if (this.to != null) {  
-      buffer.writeAll(["\"to\":", this.to, ","], "");
-    }
+    // NOTE: skip serialization of to (type number is ignored) ignore type: true
   }
 
 }

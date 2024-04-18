@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,23 +22,9 @@ import 'OptionFragment.dart';
  * DataValueCountObject 
  */
 class DataValueCountObject extends OptionFragment {
-  DataValueCountObject( {
-    this.global = null
-  }) : super();
-  double? global;
-    /*
-  double get global { 
-    if (this._global == null) {
-      this._global = 0;
-    }
-    return this._global!;
-  }
+  DataValueCountObject( ) : super();
+  // NOTE: global skipped - type number is ignored in gen 
 
-  void set global (double v) {
-    this._global = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -47,17 +33,15 @@ class DataValueCountObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.global != null) {  
-      buffer.writeAll(["\"global\":", this.global, ","], "");
-    }
+    // NOTE: skip serialization of global (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of globalPointArrayMap (type string[] is ignored)} 
+    // NOTE: skip serialization of globalPointArrayMap (type string[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of individual (type number[] is ignored)} 
+    // NOTE: skip serialization of individual (type number[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of seriesBuilders (type SeriesBuilder[] is ignored)} 
+    // NOTE: skip serialization of seriesBuilders (type SeriesBuilder[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of xColumns (type number[] is ignored)} 
+    // NOTE: skip serialization of xColumns (type number[] is ignored) ignore type: true
   }
 
 }

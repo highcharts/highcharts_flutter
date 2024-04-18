@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,53 +22,13 @@ import 'OptionFragment.dart';
  * ColumnRangePoint 
  */
 class ColumnRangePoint extends OptionFragment {
-  ColumnRangePoint( {
-    this.barX = null,
-    this.pointWidth = null,
-    this.shapeType = null
-  }) : super();
-  double? barX;
-    /*
-  double get barX { 
-    if (this._barX == null) {
-      this._barX = 0;
-    }
-    return this._barX!;
-  }
+  ColumnRangePoint( ) : super();
+  // NOTE: barX skipped - type number is ignored in gen 
 
-  void set barX (double v) {
-    this._barX = v;
-  }
-    */
-    
-  double? pointWidth;
-    /*
-  double get pointWidth { 
-    if (this._pointWidth == null) {
-      this._pointWidth = 0;
-    }
-    return this._pointWidth!;
-  }
+  // NOTE: pointWidth skipped - type number is ignored in gen 
 
-  void set pointWidth (double v) {
-    this._pointWidth = v;
-  }
-    */
-    
-  String? shapeType;
-    /*
-  String get shapeType { 
-    if (this._shapeType == null) {
-      this._shapeType = "";
-    }
-    return this._shapeType!;
-  }
+  // NOTE: shapeType skipped - type string is ignored in gen 
 
-  void set shapeType (String v) {
-    this._shapeType = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -77,17 +37,11 @@ class ColumnRangePoint extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.barX != null) {  
-      buffer.writeAll(["\"barX\":", this.barX, ","], "");
-    }
+    // NOTE: skip serialization of barX (type number is ignored) ignore type: true
 
-    if (this.pointWidth != null) {  
-      buffer.writeAll(["\"pointWidth\":", this.pointWidth, ","], "");
-    }
+    // NOTE: skip serialization of pointWidth (type number is ignored) ignore type: true
 
-    if (this.shapeType != null) {  
-      buffer.writeAll(["\"shapeType\":\`", this.shapeType, "\`,"], "");
-    }
+    // NOTE: skip serialization of shapeType (type string is ignored) ignore type: true
   }
 
 }

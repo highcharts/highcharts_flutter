@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,8 +23,19 @@ import 'OptionFragment.dart';
  * ItemPointMarkerOptions 
  */
 class ItemPointMarkerOptions extends PointMarkerOptions {
-  ItemPointMarkerOptions( ) : super();
-  
+  ItemPointMarkerOptions( {
+    super.enabled = null,
+    super.enabledThreshold = null,
+    super.fillColor = null,
+    super.height = null,
+    super.lineColor = null,
+    super.lineWidth = null,
+    super.radius = null,
+    super.symbol = null,
+    super.width = null
+  }) : super();
+  // NOTE: radius skipped - type undefined is ignored in gen 
+
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,7 +44,7 @@ class ItemPointMarkerOptions extends PointMarkerOptions {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of radius (type undefined is ignored)} 
+    // NOTE: skip serialization of radius (type undefined is ignored) ignore type: 1
   }
 
 }

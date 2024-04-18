@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -25,57 +25,14 @@ import 'OptionFragment.dart';
  */
 class ControlTargetOptions extends OptionFragment {
   ControlTargetOptions( {
-    this.x = null,
-    this.y = null
+    this.controlPointOptions = null
   }) : super();
-  /**
-   * Options for annotation's control points. Each control point
-   * inherits options from controlPointOptions object.
-   * Options from the controlPointOptions can be overwritten
-   * by options in a specific control point.  
-      */
   ControlPointOptionsObject? controlPointOptions;
-    /*
-  ControlPointOptionsObject get controlPointOptions { 
-    if (this._controlPointOptions == null) {
-      this._controlPointOptions = ControlPointOptionsObject();
-    }
-    return this._controlPointOptions!;
-  }
-
-  void set controlPointOptions (ControlPointOptionsObject v) {
-    this._controlPointOptions = v;
-  }
-    */
     
-  double? x;
-    /*
-  double get x { 
-    if (this._x == null) {
-      this._x = 0;
-    }
-    return this._x!;
-  }
+  // NOTE: x skipped - type number is ignored in gen 
 
-  void set x (double v) {
-    this._x = v;
-  }
-    */
-    
-  double? y;
-    /*
-  double get y { 
-    if (this._y == null) {
-      this._y = 0;
-    }
-    return this._y!;
-  }
+  // NOTE: y skipped - type number is ignored in gen 
 
-  void set y (double v) {
-    this._y = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -85,22 +42,18 @@ class ControlTargetOptions extends OptionFragment {
 
     
     if (this.controlPointOptions != null) {  
-      buffer.writeAll(["\"controlPointOptions\":", this.controlPointOptions?.toJSON(), ","], "");
+      buffer.writeAll(["\"controlPointOptions\":",this.controlPointOptions?.toJSON(), ","], "");
     }
 
-    // NOTE: skip serialization of controlPoints (type ControlPointOptionsObject[] is ignored)} 
+    // NOTE: skip serialization of controlPoints (type ControlPointOptionsObject[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of point (type MockPointOptions is ignored)} 
+    // NOTE: skip serialization of point (type MockPointOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of points (type MockPointOptions)[] is ignored)} 
+    // NOTE: skip serialization of points (type MockPointOptions)[] is ignored) ignore type: true
 
-    if (this.x != null) {  
-      buffer.writeAll(["\"x\":", this.x, ","], "");
-    }
+    // NOTE: skip serialization of x (type number is ignored) ignore type: true
 
-    if (this.y != null) {  
-      buffer.writeAll(["\"y\":", this.y, ","], "");
-    }
+    // NOTE: skip serialization of y (type number is ignored) ignore type: true
   }
 
 }

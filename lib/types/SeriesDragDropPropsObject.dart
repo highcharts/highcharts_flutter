@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,68 +24,15 @@ import 'OptionFragment.dart';
  * SeriesDragDropPropsObject 
  */
 class SeriesDragDropPropsObject extends OptionFragment {
-  SeriesDragDropPropsObject( {
-    this.axis = null,
-    this.move = null,
-    this.optionName = null,
-    this.resize = null
-  }) : super();
-  String? axis;
-    /*
-  String get axis { 
-    if (this._axis == null) {
-      this._axis = "";
-    }
-    return this._axis!;
-  }
+  SeriesDragDropPropsObject( ) : super();
+  // NOTE: axis skipped - type string is ignored in gen 
 
-  void set axis (String v) {
-    this._axis = v;
-  }
-    */
-    
-  bool? move;
-    /*
-  bool get move { 
-    if (this._move == null) {
-      this._move = false;
-    }
-    return this._move!;
-  }
+  // NOTE: move skipped - type boolean is ignored in gen 
 
-  void set move (bool v) {
-    this._move = v;
-  }
-    */
-    
-  String? optionName;
-    /*
-  String get optionName { 
-    if (this._optionName == null) {
-      this._optionName = "";
-    }
-    return this._optionName!;
-  }
+  // NOTE: optionName skipped - type string is ignored in gen 
 
-  void set optionName (String v) {
-    this._optionName = v;
-  }
-    */
-    
-  bool? resize;
-    /*
-  bool get resize { 
-    if (this._resize == null) {
-      this._resize = false;
-    }
-    return this._resize!;
-  }
+  // NOTE: resize skipped - type boolean is ignored in gen 
 
-  void set resize (bool v) {
-    this._resize = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -94,29 +41,21 @@ class SeriesDragDropPropsObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.axis != null) {  
-      buffer.writeAll(["\"axis\":\`", this.axis, "\`,"], "");
-    }
+    // NOTE: skip serialization of axis (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of beforeResize (type Function is ignored)} 
+    // NOTE: skip serialization of beforeResize (type Function is ignored) ignore type: 1
 
-    // NOTE: skip serialization of handleOptions (type DragDropHandleOptions is ignored)} 
+    // NOTE: skip serialization of handleOptions (type DragDropHandleOptions is ignored) ignore type: true
 
-    if (this.move != null) {  
-      buffer.writeAll(["\"move\":", this.move, ","], "");
-    }
+    // NOTE: skip serialization of move (type boolean is ignored) ignore type: true
 
-    if (this.optionName != null) {  
-      buffer.writeAll(["\"optionName\":\`", this.optionName, "\`,"], "");
-    }
+    // NOTE: skip serialization of optionName (type string is ignored) ignore type: true
 
-    if (this.resize != null) {  
-      buffer.writeAll(["\"resize\":", this.resize, ","], "");
-    }
+    // NOTE: skip serialization of resize (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of resizeSide (type SeriesDragDropPropsResizeSideFunction is ignored)} 
+    // NOTE: skip serialization of resizeSide (type SeriesDragDropPropsResizeSideFunction is ignored) ignore type: true
 
-    // NOTE: skip serialization of validateIndividualDrag (type Function is ignored)} 
+    // NOTE: skip serialization of validateIndividualDrag (type Function is ignored) ignore type: 1
   }
 
 }

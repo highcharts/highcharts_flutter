@@ -1,0 +1,11 @@
+[
+  {
+    "type": "missing_mapping",
+    "path": "xAxis.categories"
+  },
+  {
+    "type": "mixed_type",
+    "path": "plotOptions.column.borderRadius",
+    "msg": "Path is set as a basic type, but flutter wants a BorderRadiusOptionsObject"
+  }
+]

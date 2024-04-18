@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,70 +24,17 @@ import 'OptionFragment.dart';
  * TopoJSON 
  */
 class TopoJSON extends OptionFragment {
-  TopoJSON( {
-    this.arcs = null,
-    this.copyright = null,
-    this.copyrightShort = null,
-    this.copyrightUrl = null,
-    this.title = null
-  }) : super();
-  List<double>? arcs; // double
-  String? copyright;
-    /*
-  String get copyright { 
-    if (this._copyright == null) {
-      this._copyright = "";
-    }
-    return this._copyright!;
-  }
+  TopoJSON( ) : super();
+  // NOTE: arcs skipped - type number is ignored in gen 
 
-  void set copyright (String v) {
-    this._copyright = v;
-  }
-    */
-    
-  String? copyrightShort;
-    /*
-  String get copyrightShort { 
-    if (this._copyrightShort == null) {
-      this._copyrightShort = "";
-    }
-    return this._copyrightShort!;
-  }
+  // NOTE: copyright skipped - type string is ignored in gen 
 
-  void set copyrightShort (String v) {
-    this._copyrightShort = v;
-  }
-    */
-    
-  String? copyrightUrl;
-    /*
-  String get copyrightUrl { 
-    if (this._copyrightUrl == null) {
-      this._copyrightUrl = "";
-    }
-    return this._copyrightUrl!;
-  }
+  // NOTE: copyrightShort skipped - type string is ignored in gen 
 
-  void set copyrightUrl (String v) {
-    this._copyrightUrl = v;
-  }
-    */
-    
-  String? title;
-    /*
-  String get title { 
-    if (this._title == null) {
-      this._title = "";
-    }
-    return this._title!;
-  }
+  // NOTE: copyrightUrl skipped - type string is ignored in gen 
 
-  void set title (String v) {
-    this._title = v;
-  }
-    */
-    
+  // NOTE: title skipped - type string is ignored in gen 
+
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -96,29 +43,21 @@ class TopoJSON extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of arcs (type number is ignored)} 
+    // NOTE: skip serialization of arcs (type number is ignored) ignore type: true
 
-    if (this.copyright != null) {  
-      buffer.writeAll(["\"copyright\":\`", this.copyright, "\`,"], "");
-    }
+    // NOTE: skip serialization of copyright (type string is ignored) ignore type: true
 
-    if (this.copyrightShort != null) {  
-      buffer.writeAll(["\"copyrightShort\":\`", this.copyrightShort, "\`,"], "");
-    }
+    // NOTE: skip serialization of copyrightShort (type string is ignored) ignore type: true
 
-    if (this.copyrightUrl != null) {  
-      buffer.writeAll(["\"copyrightUrl\":\`", this.copyrightUrl, "\`,"], "");
-    }
+    // NOTE: skip serialization of copyrightUrl (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of objects (type TopoJSONObjects is ignored)} 
+    // NOTE: skip serialization of objects (type TopoJSONObjects is ignored) ignore type: true
 
-    if (this.title != null) {  
-      buffer.writeAll(["\"title\":\`", this.title, "\`,"], "");
-    }
+    // NOTE: skip serialization of title (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of transform (type TopoJSONTransform is ignored)} 
+    // NOTE: skip serialization of transform (type TopoJSONTransform is ignored) ignore type: true
 
-    // NOTE: skip serialization of type (type "Topology" is ignored)} 
+    // NOTE: skip serialization of type (type "Topology" is ignored) ignore type: true
   }
 
 }

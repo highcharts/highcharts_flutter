@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,83 +22,17 @@ import 'OptionFragment.dart';
  * KDPointSearchObjectLike 
  */
 class KDPointSearchObjectLike extends OptionFragment {
-  KDPointSearchObjectLike( {
-    this.clientX = null,
-    this.plotY = null,
-    this.lat = null,
-    this.lon = null,
-    this.plotX = null
-  }) : super();
-  double? clientX;
-    /*
-  double get clientX { 
-    if (this._clientX == null) {
-      this._clientX = 0;
-    }
-    return this._clientX!;
-  }
+  KDPointSearchObjectLike( ) : super();
+  // NOTE: clientX skipped - type number is ignored in gen 
 
-  void set clientX (double v) {
-    this._clientX = v;
-  }
-    */
-    
-  double? plotY;
-    /*
-  double get plotY { 
-    if (this._plotY == null) {
-      this._plotY = 0;
-    }
-    return this._plotY!;
-  }
+  // NOTE: plotY skipped - type number is ignored in gen 
 
-  void set plotY (double v) {
-    this._plotY = v;
-  }
-    */
-    
-  double? lat;
-    /*
-  double get lat { 
-    if (this._lat == null) {
-      this._lat = 0;
-    }
-    return this._lat!;
-  }
+  // NOTE: lat skipped - type number is ignored in gen 
 
-  void set lat (double v) {
-    this._lat = v;
-  }
-    */
-    
-  double? lon;
-    /*
-  double get lon { 
-    if (this._lon == null) {
-      this._lon = 0;
-    }
-    return this._lon!;
-  }
+  // NOTE: lon skipped - type number is ignored in gen 
 
-  void set lon (double v) {
-    this._lon = v;
-  }
-    */
-    
-  double? plotX;
-    /*
-  double get plotX { 
-    if (this._plotX == null) {
-      this._plotX = 0;
-    }
-    return this._plotX!;
-  }
+  // NOTE: plotX skipped - type number is ignored in gen 
 
-  void set plotX (double v) {
-    this._plotX = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -107,29 +41,17 @@ class KDPointSearchObjectLike extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.clientX != null) {  
-      buffer.writeAll(["\"clientX\":", this.clientX, ","], "");
-    }
+    // NOTE: skip serialization of clientX (type number is ignored) ignore type: true
 
-    if (this.plotY != null) {  
-      buffer.writeAll(["\"plotY\":", this.plotY, ","], "");
-    }
+    // NOTE: skip serialization of plotY (type number is ignored) ignore type: true
 
-    if (this.lat != null) {  
-      buffer.writeAll(["\"lat\":", this.lat, ","], "");
-    }
+    // NOTE: skip serialization of lat (type number is ignored) ignore type: true
 
-    if (this.lon != null) {  
-      buffer.writeAll(["\"lon\":", this.lon, ","], "");
-    }
+    // NOTE: skip serialization of lon (type number is ignored) ignore type: true
 
-    if (this.plotX != null) {  
-      buffer.writeAll(["\"plotX\":", this.plotX, ","], "");
-    }
+    // NOTE: skip serialization of plotX (type number is ignored) ignore type: true
 
-    if (this.plotY != null) {  
-      buffer.writeAll(["\"plotY\":", this.plotY, ","], "");
-    }
+    // NOTE: skip serialization of plotY (type number is ignored) ignore type: true
   }
 
 }

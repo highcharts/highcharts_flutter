@@ -12,91 +12,78 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
-import 'ColumnMetricsObject.dart';
-import 'OptionFragment.dart';
+import 'XRangeSeriesOptions.dart';
+import 'Series.dart';
+import 'PointOptions.dart';
 
-/** 
- * XRangeSeries 
- */
-class XRangeSeries extends OptionFragment {
-  XRangeSeries( {
-    this.getExtremesFromAll = null,
-    this.requireSorting = null,
-    this.type = null
-  }) : super();
-  bool? getExtremesFromAll;
-    /*
-  bool get getExtremesFromAll { 
-    if (this._getExtremesFromAll == null) {
-      this._getExtremesFromAll = false;
-    }
-    return this._getExtremesFromAll!;
-  }
+class XRangeSeries extends Series {
 
-  void set getExtremesFromAll (bool v) {
-    this._getExtremesFromAll = v;
-  }
-    */
-    
-  bool? requireSorting;
-    /*
-  bool get requireSorting { 
-    if (this._requireSorting == null) {
-      this._requireSorting = false;
-    }
-    return this._requireSorting!;
-  }
+  String? name;
+  XRangeSeriesOptions? options;
+  List<PointOptions>? points;
+  List<List<double>>? data;
 
-  void set requireSorting (bool v) {
-    this._requireSorting = v;
-  }
-    */
-    
-  String? type;
-    /*
-  String get type { 
-    if (this._type == null) {
-      this._type = "";
-    }
-    return this._type!;
-  }
+  XRangeSeries({
+    this.name = null,
+    this.options = null,
+    this.points = null,
+    this.data = null
+  });
 
-  void set type (String v) {
-    this._type = v;
-  }
-    */
-    
-
-  //////////////////////////////////////////////////////////////////////////////
   
   @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of pointClass (type typeof XRangePoint is ignored)} 
 
-    // NOTE: skip serialization of columnMetrics (type ColumnMetricsObject is ignored)} 
-
-    if (this.getExtremesFromAll != null) {  
-      buffer.writeAll(["\"getExtremesFromAll\":", this.getExtremesFromAll, ","], "");
+    if (this.name != null) {
+      buffer.writeAll(["\"name\": \"", this.name!, "\","], "");
     }
 
-    // NOTE: skip serialization of parallelArrays (type string[] is ignored)} 
+    buffer.write("\"type\": \"xrange\",");
 
-    if (this.requireSorting != null) {  
-      buffer.writeAll(["\"requireSorting\":", this.requireSorting, ","], "");
+    if (this.data != null && this.points == null) {
+      // Serialize as a 2d array
+
+      StringBuffer seriesData = StringBuffer();
+
+      for (var point in this.data!) {
+        seriesData.writeAll(["["], "");
+        for (var item in point) {
+          seriesData.writeAll([item, ","]);
+        }
+        seriesData.writeAll(["],"], "");
+      }
+
+      buffer.writeAll(["\"data\": [", seriesData, "],"], "");   
+
+
+    } else if (this.points != null) {
+      // Go through the points and write them
+      StringBuffer seriesData = StringBuffer();
+
+      for (var point in this.points!) {
+        seriesData.writeAll(["{"], "");
+        point.toJSONInner(seriesData); 
+        seriesData.writeAll(["},"], "");
+      }
+
+      buffer.writeAll(["\"data\": [", seriesData, "],"], "");
     }
 
-    if (this.type != null) {  
-      buffer.writeAll(["\"type\":\`", this.type, "\`,"], "");
+
+
+    
+    if (this.options?.partialFill != null) {  
+      buffer.writeAll(["\"partialFill\":",this.options?.partialFill?.toJSON(), ","], "");
     }
 
-    // NOTE: skip serialization of x2Data (type number[] is ignored)} 
+    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
   }
 
 }

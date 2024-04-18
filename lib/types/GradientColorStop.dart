@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,9 +23,9 @@ import 'OptionFragment.dart';
  */
 class GradientColorStop extends OptionFragment {
   GradientColorStop( ) : super();
-  // NOTE: 0 skipped - type number is ignored in gen
+  // NOTE: 0 skipped - type number is ignored in gen 
 
-  // NOTE: 1 skipped - type string is ignored in gen
+  // NOTE: 1 skipped - type string is ignored in gen 
 
 
   //////////////////////////////////////////////////////////////////////////////
@@ -35,11 +35,11 @@ class GradientColorStop extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of 0 (type number is ignored)} 
+    // NOTE: skip serialization of 0 (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of 1 (type string is ignored)} 
+    // NOTE: skip serialization of 1 (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of color (type Color is ignored)} 
+    // NOTE: skip serialization of color (type Color is ignored) ignore type: true
   }
 
 }

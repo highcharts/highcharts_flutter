@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,68 +22,15 @@ import 'OptionFragment.dart';
  * DrilldownActiveDataLabelStyleOptions 
  */
 class DrilldownActiveDataLabelStyleOptions extends OptionFragment {
-  DrilldownActiveDataLabelStyleOptions( {
-    this.color = null,
-    this.cursor = null,
-    this.fontWeight = null,
-    this.textDecoration = null
-  }) : super();
-  String? color;
-    /*
-  String get color { 
-    if (this._color == null) {
-      this._color = "";
-    }
-    return this._color!;
-  }
+  DrilldownActiveDataLabelStyleOptions( ) : super();
+  // NOTE: color skipped - type string is ignored in gen 
 
-  void set color (String v) {
-    this._color = v;
-  }
-    */
-    
-  String? cursor;
-    /*
-  String get cursor { 
-    if (this._cursor == null) {
-      this._cursor = "";
-    }
-    return this._cursor!;
-  }
+  // NOTE: cursor skipped - type string is ignored in gen 
 
-  void set cursor (String v) {
-    this._cursor = v;
-  }
-    */
-    
-  String? fontWeight;
-    /*
-  String get fontWeight { 
-    if (this._fontWeight == null) {
-      this._fontWeight = "";
-    }
-    return this._fontWeight!;
-  }
+  // NOTE: fontWeight skipped - type string is ignored in gen 
 
-  void set fontWeight (String v) {
-    this._fontWeight = v;
-  }
-    */
-    
-  String? textDecoration;
-    /*
-  String get textDecoration { 
-    if (this._textDecoration == null) {
-      this._textDecoration = "";
-    }
-    return this._textDecoration!;
-  }
+  // NOTE: textDecoration skipped - type string is ignored in gen 
 
-  void set textDecoration (String v) {
-    this._textDecoration = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -92,21 +39,13 @@ class DrilldownActiveDataLabelStyleOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.color != null) {  
-      buffer.writeAll(["\"color\":\`", this.color, "\`,"], "");
-    }
+    // NOTE: skip serialization of color (type string is ignored) ignore type: true
 
-    if (this.cursor != null) {  
-      buffer.writeAll(["\"cursor\":\`", this.cursor, "\`,"], "");
-    }
+    // NOTE: skip serialization of cursor (type string is ignored) ignore type: true
 
-    if (this.fontWeight != null) {  
-      buffer.writeAll(["\"fontWeight\":\`", this.fontWeight, "\`,"], "");
-    }
+    // NOTE: skip serialization of fontWeight (type string is ignored) ignore type: true
 
-    if (this.textDecoration != null) {  
-      buffer.writeAll(["\"textDecoration\":\`", this.textDecoration, "\`,"], "");
-    }
+    // NOTE: skip serialization of textDecoration (type string is ignored) ignore type: true
   }
 
 }

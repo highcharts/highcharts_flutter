@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,52 +24,15 @@ import 'OptionFragment.dart';
  */
 class KlingerParamsOptions extends SMAParamsOptions {
   KlingerParamsOptions( {
-    this.fastAvgPeriod = null,
-    this.slowAvgPeriod = null,
-    this.signalPeriod = null
+    super.index = null,
+    super.period = null
   }) : super();
-  double? fastAvgPeriod;
-    /*
-  double get fastAvgPeriod { 
-    if (this._fastAvgPeriod == null) {
-      this._fastAvgPeriod = 0;
-    }
-    return this._fastAvgPeriod!;
-  }
+  // NOTE: fastAvgPeriod skipped - type number is ignored in gen 
 
-  void set fastAvgPeriod (double v) {
-    this._fastAvgPeriod = v;
-  }
-    */
-    
-  double? slowAvgPeriod;
-    /*
-  double get slowAvgPeriod { 
-    if (this._slowAvgPeriod == null) {
-      this._slowAvgPeriod = 0;
-    }
-    return this._slowAvgPeriod!;
-  }
+  // NOTE: slowAvgPeriod skipped - type number is ignored in gen 
 
-  void set slowAvgPeriod (double v) {
-    this._slowAvgPeriod = v;
-  }
-    */
-    
-  double? signalPeriod;
-    /*
-  double get signalPeriod { 
-    if (this._signalPeriod == null) {
-      this._signalPeriod = 0;
-    }
-    return this._signalPeriod!;
-  }
+  // NOTE: signalPeriod skipped - type number is ignored in gen 
 
-  void set signalPeriod (double v) {
-    this._signalPeriod = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -78,17 +41,11 @@ class KlingerParamsOptions extends SMAParamsOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.fastAvgPeriod != null) {  
-      buffer.writeAll(["\"fastAvgPeriod\":", this.fastAvgPeriod, ","], "");
-    }
+    // NOTE: skip serialization of fastAvgPeriod (type number is ignored) ignore type: true
 
-    if (this.slowAvgPeriod != null) {  
-      buffer.writeAll(["\"slowAvgPeriod\":", this.slowAvgPeriod, ","], "");
-    }
+    // NOTE: skip serialization of slowAvgPeriod (type number is ignored) ignore type: true
 
-    if (this.signalPeriod != null) {  
-      buffer.writeAll(["\"signalPeriod\":", this.signalPeriod, ","], "");
-    }
+    // NOTE: skip serialization of signalPeriod (type number is ignored) ignore type: true
   }
 
 }

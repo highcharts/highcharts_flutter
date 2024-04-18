@@ -12,33 +12,20 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
+import 'Series.dart';
 import 'OptionFragment.dart';
 
 /** 
  * Stack3DDictionaryObject 
  */
 class Stack3DDictionaryObject extends OptionFragment {
-  Stack3DDictionaryObject( {
-    this.position = null
-  }) : super();
-  double? position;
-    /*
-  double get position { 
-    if (this._position == null) {
-      this._position = 0;
-    }
-    return this._position!;
-  }
+  Stack3DDictionaryObject( ) : super();
+  // NOTE: position skipped - type number is ignored in gen 
 
-  void set position (double v) {
-    this._position = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -47,11 +34,9 @@ class Stack3DDictionaryObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.position != null) {  
-      buffer.writeAll(["\"position\":", this.position, ","], "");
-    }
+    // NOTE: skip serialization of position (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of series (type Series[] is ignored)} 
+    // NOTE: skip serialization of series (type Series[] is ignored) ignore type: true
   }
 
 }

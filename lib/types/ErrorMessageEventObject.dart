@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,38 +23,11 @@ import 'OptionFragment.dart';
  * ErrorMessageEventObject 
  */
 class ErrorMessageEventObject extends OptionFragment {
-  ErrorMessageEventObject( {
-    this.code = null,
-    this.message = null
-  }) : super();
-  double? code;
-    /*
-  double get code { 
-    if (this._code == null) {
-      this._code = 0;
-    }
-    return this._code!;
-  }
+  ErrorMessageEventObject( ) : super();
+  // NOTE: code skipped - type number is ignored in gen 
 
-  void set code (double v) {
-    this._code = v;
-  }
-    */
-    
-  String? message;
-    /*
-  String get message { 
-    if (this._message == null) {
-      this._message = "";
-    }
-    return this._message!;
-  }
+  // NOTE: message skipped - type string is ignored in gen 
 
-  void set message (String v) {
-    this._message = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -63,17 +36,13 @@ class ErrorMessageEventObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of chart (type Chart is ignored)} 
+    // NOTE: skip serialization of chart (type Chart is ignored) ignore type: true
 
-    if (this.code != null) {  
-      buffer.writeAll(["\"code\":", this.code, ","], "");
-    }
+    // NOTE: skip serialization of code (type number is ignored) ignore type: true
 
-    if (this.message != null) {  
-      buffer.writeAll(["\"message\":\`", this.message, "\`,"], "");
-    }
+    // NOTE: skip serialization of message (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of params (type Generic is ignored)} 
+    // NOTE: skip serialization of params (type Generic is ignored) ignore type: true
   }
 
 }

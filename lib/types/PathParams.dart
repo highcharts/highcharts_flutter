@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,143 +22,25 @@ import 'OptionFragment.dart';
  * PathParams 
  */
 class PathParams extends OptionFragment {
-  PathParams( {
-    this.x1 = null,
-    this.y1 = null,
-    this.x2 = null,
-    this.y2 = null,
-    this.offset = null,
-    this.radius = null,
-    this.width = null,
-    this.inverted = null,
-    this.parentVisible = null
-  }) : super();
-  double? x1;
-    /*
-  double get x1 { 
-    if (this._x1 == null) {
-      this._x1 = 0;
-    }
-    return this._x1!;
-  }
+  PathParams( ) : super();
+  // NOTE: x1 skipped - type number is ignored in gen 
 
-  void set x1 (double v) {
-    this._x1 = v;
-  }
-    */
-    
-  double? y1;
-    /*
-  double get y1 { 
-    if (this._y1 == null) {
-      this._y1 = 0;
-    }
-    return this._y1!;
-  }
+  // NOTE: y1 skipped - type number is ignored in gen 
 
-  void set y1 (double v) {
-    this._y1 = v;
-  }
-    */
-    
-  double? x2;
-    /*
-  double get x2 { 
-    if (this._x2 == null) {
-      this._x2 = 0;
-    }
-    return this._x2!;
-  }
+  // NOTE: x2 skipped - type number is ignored in gen 
 
-  void set x2 (double v) {
-    this._x2 = v;
-  }
-    */
-    
-  double? y2;
-    /*
-  double get y2 { 
-    if (this._y2 == null) {
-      this._y2 = 0;
-    }
-    return this._y2!;
-  }
+  // NOTE: y2 skipped - type number is ignored in gen 
 
-  void set y2 (double v) {
-    this._y2 = v;
-  }
-    */
-    
-  double? offset;
-    /*
-  double get offset { 
-    if (this._offset == null) {
-      this._offset = 0;
-    }
-    return this._offset!;
-  }
+  // NOTE: offset skipped - type number is ignored in gen 
 
-  void set offset (double v) {
-    this._offset = v;
-  }
-    */
-    
-  double? radius;
-    /*
-  double get radius { 
-    if (this._radius == null) {
-      this._radius = 0;
-    }
-    return this._radius!;
-  }
+  // NOTE: radius skipped - type number is ignored in gen 
 
-  void set radius (double v) {
-    this._radius = v;
-  }
-    */
-    
-  double? width;
-    /*
-  double get width { 
-    if (this._width == null) {
-      this._width = 0;
-    }
-    return this._width!;
-  }
+  // NOTE: width skipped - type number is ignored in gen 
 
-  void set width (double v) {
-    this._width = v;
-  }
-    */
-    
-  bool? inverted;
-    /*
-  bool get inverted { 
-    if (this._inverted == null) {
-      this._inverted = false;
-    }
-    return this._inverted!;
-  }
+  // NOTE: inverted skipped - type boolean is ignored in gen 
 
-  void set inverted (bool v) {
-    this._inverted = v;
-  }
-    */
-    
-  bool? parentVisible;
-    /*
-  bool get parentVisible { 
-    if (this._parentVisible == null) {
-      this._parentVisible = false;
-    }
-    return this._parentVisible!;
-  }
+  // NOTE: parentVisible skipped - type boolean is ignored in gen 
 
-  void set parentVisible (bool v) {
-    this._parentVisible = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -167,41 +49,23 @@ class PathParams extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.x1 != null) {  
-      buffer.writeAll(["\"x1\":", this.x1, ","], "");
-    }
+    // NOTE: skip serialization of x1 (type number is ignored) ignore type: true
 
-    if (this.y1 != null) {  
-      buffer.writeAll(["\"y1\":", this.y1, ","], "");
-    }
+    // NOTE: skip serialization of y1 (type number is ignored) ignore type: true
 
-    if (this.x2 != null) {  
-      buffer.writeAll(["\"x2\":", this.x2, ","], "");
-    }
+    // NOTE: skip serialization of x2 (type number is ignored) ignore type: true
 
-    if (this.y2 != null) {  
-      buffer.writeAll(["\"y2\":", this.y2, ","], "");
-    }
+    // NOTE: skip serialization of y2 (type number is ignored) ignore type: true
 
-    if (this.offset != null) {  
-      buffer.writeAll(["\"offset\":", this.offset, ","], "");
-    }
+    // NOTE: skip serialization of offset (type number is ignored) ignore type: true
 
-    if (this.radius != null) {  
-      buffer.writeAll(["\"radius\":", this.radius, ","], "");
-    }
+    // NOTE: skip serialization of radius (type number is ignored) ignore type: true
 
-    if (this.width != null) {  
-      buffer.writeAll(["\"width\":", this.width, ","], "");
-    }
+    // NOTE: skip serialization of width (type number is ignored) ignore type: true
 
-    if (this.inverted != null) {  
-      buffer.writeAll(["\"inverted\":", this.inverted, ","], "");
-    }
+    // NOTE: skip serialization of inverted (type boolean is ignored) ignore type: true
 
-    if (this.parentVisible != null) {  
-      buffer.writeAll(["\"parentVisible\":", this.parentVisible, ","], "");
-    }
+    // NOTE: skip serialization of parentVisible (type boolean is ignored) ignore type: true
   }
 
 }

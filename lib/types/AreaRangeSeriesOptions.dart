@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -26,42 +26,89 @@ import 'OptionFragment.dart';
  */
 class AreaRangeSeriesOptions extends AreaSeriesOptions {
   AreaRangeSeriesOptions( {
-    this.trackByArea = null
+    super.accessibility = null,
+    super.allAreas = null,
+    super.allowPointSelect = null,
+    super.animationLimit = null,
+    super.boostBlending = null,
+    super.boostThreshold = null,
+    super.borderColor = null,
+    super.borderWidth = null,
+    super.className = null,
+    super.clip = null,
+    super.color = null,
+    super.colorAxis = null,
+    super.colorIndex = null,
+    super.colorKey = null,
+    super.compare = null,
+    super.compareStart = null,
+    super.connectEnds = null,
+    super.connectNulls = null,
+    super.connectors = null,
+    super.crisp = null,
+    super.cropThreshold = null,
+    super.cumulative = null,
+    super.cursor = null,
+    super.dashStyle = null,
+    super.dataGrouping = null,
+    super.dataLabels = null,
+    super.dataSorting = null,
+    super.description = null,
+    super.dragDrop = null,
+    super.enableMouseTracking = null,
+    super.events = null,
+    super.fillColor = null,
+    super.fillOpacity = null,
+    super.findNearestPointBy = null,
+    super.gapSize = null,
+    super.gapUnit = null,
+    super.getExtremesFromAll = null,
+    super.includeInDataExport = null,
+    super.joinBy = null,
+    super.keys = null,
+    super.label = null,
+    super.lastPrice = null,
+    super.lastVisiblePrice = null,
+    super.legendSymbol = null,
+    super.linecap = null,
+    super.lineWidth = null,
+    super.linkedTo = null,
+    super.marker = null,
+    super.navigatorOptions = null,
+    super.negativeColor = null,
+    super.negativeFillColor = null,
+    super.onPoint = null,
+    super.opacity = null,
+    super.point = null,
+    super.pointInterval = null,
+    super.pointIntervalUnit = null,
+    super.pointPlacement = null,
+    super.pointRange = null,
+    super.pointStart = null,
+    super.relativeXValue = null,
+    super.selected = null,
+    super.showCheckbox = null,
+    super.showInLegend = null,
+    super.showInNavigator = null,
+    super.skipKeyboardNavigation = null,
+    super.softThreshold = null,
+    super.stacking = null,
+    super.step = null,
+    super.stickyTracking = null,
+    super.threshold = null,
+    super.tooltip = null,
+    this.trackByArea = null,
+    super.turboThreshold = null,
+    super.visible = null,
+    super.zIndex = null,
+    super.zoneAxis = null,
+    super.zones = null
   }) : super();
-  /**
-   * Options for the series data labels, appearing next to each data
-   * point.
-   * 
-   * Since v6.2.0, multiple data labels can be applied to each single
-   * point by defining them as an array of configs.
-   * 
-   * In styled mode, the data labels can be styled with the
-   * `.highcharts-data-label-box` and `.highcharts-data-label` class names
-   * ([see example](https://www.highcharts.com/samples/highcharts/css/series-datalabels)).  
-      */
   /** NOTE: extextdataLabels is skipped here for now, as it overrides the base type. */
 
-  // NOTE: states skipped - type Generic is ignored in gen
+  // NOTE: states skipped - type Generic is ignored in gen 
 
-  /**
-   * Whether the whole area or just the line should respond to mouseover
-   * tooltips and other mouse or touch events. 
-   * 
-   * Defaults to 'false'. 
-      */
   bool? trackByArea;
-    /*
-  bool get trackByArea { 
-    if (this._trackByArea == null) {
-      this._trackByArea = false;
-    }
-    return this._trackByArea!;
-  }
-
-  void set trackByArea (bool v) {
-    this._trackByArea = v;
-  }
-    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -71,15 +118,15 @@ class AreaRangeSeriesOptions extends AreaSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of dataLabels (type AreaRangeDataLabelOptions[] is ignored)} 
+    // NOTE: skip serialization of dataLabels (type AreaRangeDataLabelOptions[] is ignored) ignore type: false
 
-    // NOTE: skip serialization of states (type Generic is ignored)} 
+    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
 
     if (this.trackByArea != null) {  
-      buffer.writeAll(["\"trackByArea\":", this.trackByArea, ","], "");
+      buffer.writeAll(["\"trackByArea\":",this.trackByArea, ","], "");
     }
 
-    // NOTE: skip serialization of lowMarker (type PointMarkerOptions is ignored)} 
+    // NOTE: skip serialization of lowMarker (type PointMarkerOptions is ignored) ignore type: true
   }
 
 }

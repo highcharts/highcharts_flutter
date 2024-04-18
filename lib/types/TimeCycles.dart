@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,68 +23,15 @@ import 'OptionFragment.dart';
  * TimeCycles 
  */
 class TimeCycles extends OptionFragment {
-  TimeCycles( {
-    this.startX = null,
-    this.pixelInterval = null,
-    this.numberOfCircles = null,
-    this.y = null
-  }) : super();
-  double? startX;
-    /*
-  double get startX { 
-    if (this._startX == null) {
-      this._startX = 0;
-    }
-    return this._startX!;
-  }
+  TimeCycles( ) : super();
+  // NOTE: startX skipped - type number is ignored in gen 
 
-  void set startX (double v) {
-    this._startX = v;
-  }
-    */
-    
-  double? pixelInterval;
-    /*
-  double get pixelInterval { 
-    if (this._pixelInterval == null) {
-      this._pixelInterval = 0;
-    }
-    return this._pixelInterval!;
-  }
+  // NOTE: pixelInterval skipped - type number is ignored in gen 
 
-  void set pixelInterval (double v) {
-    this._pixelInterval = v;
-  }
-    */
-    
-  double? numberOfCircles;
-    /*
-  double get numberOfCircles { 
-    if (this._numberOfCircles == null) {
-      this._numberOfCircles = 0;
-    }
-    return this._numberOfCircles!;
-  }
+  // NOTE: numberOfCircles skipped - type number is ignored in gen 
 
-  void set numberOfCircles (double v) {
-    this._numberOfCircles = v;
-  }
-    */
-    
-  double? y;
-    /*
-  double get y { 
-    if (this._y == null) {
-      this._y = 0;
-    }
-    return this._y!;
-  }
+  // NOTE: y skipped - type number is ignored in gen 
 
-  void set y (double v) {
-    this._y = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -93,23 +40,15 @@ class TimeCycles extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of defaultOptions (type AnnotationOptions is ignored)} 
+    // NOTE: skip serialization of defaultOptions (type AnnotationOptions is ignored) ignore type: true
 
-    if (this.startX != null) {  
-      buffer.writeAll(["\"startX\":", this.startX, ","], "");
-    }
+    // NOTE: skip serialization of startX (type number is ignored) ignore type: true
 
-    if (this.pixelInterval != null) {  
-      buffer.writeAll(["\"pixelInterval\":", this.pixelInterval, ","], "");
-    }
+    // NOTE: skip serialization of pixelInterval (type number is ignored) ignore type: true
 
-    if (this.numberOfCircles != null) {  
-      buffer.writeAll(["\"numberOfCircles\":", this.numberOfCircles, ","], "");
-    }
+    // NOTE: skip serialization of numberOfCircles (type number is ignored) ignore type: true
 
-    if (this.y != null) {  
-      buffer.writeAll(["\"y\":", this.y, ","], "");
-    }
+    // NOTE: skip serialization of y (type number is ignored) ignore type: true
   }
 
 }

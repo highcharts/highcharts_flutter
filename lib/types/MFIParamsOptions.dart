@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,37 +24,13 @@ import 'OptionFragment.dart';
  */
 class MFIParamsOptions extends SMAParamsOptions {
   MFIParamsOptions( {
-    this.volumeSeriesID = null,
-    this.decimals = null
+    super.index = null,
+    super.period = null
   }) : super();
-  String? volumeSeriesID;
-    /*
-  String get volumeSeriesID { 
-    if (this._volumeSeriesID == null) {
-      this._volumeSeriesID = "";
-    }
-    return this._volumeSeriesID!;
-  }
+  // NOTE: volumeSeriesID skipped - type string is ignored in gen 
 
-  void set volumeSeriesID (String v) {
-    this._volumeSeriesID = v;
-  }
-    */
-    
-  double? decimals;
-    /*
-  double get decimals { 
-    if (this._decimals == null) {
-      this._decimals = 0;
-    }
-    return this._decimals!;
-  }
+  // NOTE: decimals skipped - type number is ignored in gen 
 
-  void set decimals (double v) {
-    this._decimals = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -63,13 +39,9 @@ class MFIParamsOptions extends SMAParamsOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.volumeSeriesID != null) {  
-      buffer.writeAll(["\"volumeSeriesID\":\`", this.volumeSeriesID, "\`,"], "");
-    }
+    // NOTE: skip serialization of volumeSeriesID (type string is ignored) ignore type: true
 
-    if (this.decimals != null) {  
-      buffer.writeAll(["\"decimals\":", this.decimals, ","], "");
-    }
+    // NOTE: skip serialization of decimals (type number is ignored) ignore type: true
   }
 
 }

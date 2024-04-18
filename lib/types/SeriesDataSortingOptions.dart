@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -28,46 +28,10 @@ class SeriesDataSortingOptions extends OptionFragment {
     this.sortKey = null
   }) : super();
   bool? enabled;
-    /*
-  bool get enabled { 
-    if (this._enabled == null) {
-      this._enabled = false;
-    }
-    return this._enabled!;
-  }
-
-  void set enabled (bool v) {
-    this._enabled = v;
-  }
-    */
     
   bool? matchByName;
-    /*
-  bool get matchByName { 
-    if (this._matchByName == null) {
-      this._matchByName = false;
-    }
-    return this._matchByName!;
-  }
-
-  void set matchByName (bool v) {
-    this._matchByName = v;
-  }
-    */
     
   String? sortKey;
-    /*
-  String get sortKey { 
-    if (this._sortKey == null) {
-      this._sortKey = "";
-    }
-    return this._sortKey!;
-  }
-
-  void set sortKey (String v) {
-    this._sortKey = v;
-  }
-    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -78,15 +42,15 @@ class SeriesDataSortingOptions extends OptionFragment {
 
     
     if (this.enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
+      buffer.writeAll(["\"enabled\":",this.enabled, ","], "");
     }
 
     if (this.matchByName != null) {  
-      buffer.writeAll(["\"matchByName\":", this.matchByName, ","], "");
+      buffer.writeAll(["\"matchByName\":",this.matchByName, ","], "");
     }
 
     if (this.sortKey != null) {  
-      buffer.writeAll(["\"sortKey\":\`", this.sortKey, "\`,"], "");
+      buffer.writeAll(["\"sortKey\":\`",this.sortKey, "\`,"], "");
     }
   }
 

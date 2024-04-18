@@ -12,11 +12,12 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
 import 'Chart.dart';
+import 'WaterfallAxis.dart';
 import 'OptionFragment.dart';
 
 /** 
@@ -33,7 +34,7 @@ class WaterfallChart extends Chart {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of axes (type WaterfallAxis[] is ignored)} 
+    // NOTE: skip serialization of axes (type WaterfallAxis[] is ignored) ignore type: true
   }
 
 }

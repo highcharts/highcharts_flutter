@@ -12,12 +12,13 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
 import 'Series.dart';
 import 'DragNodesChart.dart';
+import 'DragNodesPoint.dart';
 import 'DragNodesSeriesOptions.dart';
 import 'OptionFragment.dart';
 
@@ -25,23 +26,9 @@ import 'OptionFragment.dart';
  * DragNodesSeries 
  */
 class DragNodesSeries extends Series {
-  DragNodesSeries( {
-    this.hasDraggableNodes = null
-  }) : super();
-  bool? hasDraggableNodes;
-    /*
-  bool get hasDraggableNodes { 
-    if (this._hasDraggableNodes == null) {
-      this._hasDraggableNodes = false;
-    }
-    return this._hasDraggableNodes!;
-  }
+  DragNodesSeries( ) : super();
+  // NOTE: hasDraggableNodes skipped - type boolean is ignored in gen 
 
-  void set hasDraggableNodes (bool v) {
-    this._hasDraggableNodes = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -50,19 +37,17 @@ class DragNodesSeries extends Series {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of chart (type DragNodesChart is ignored)} 
+    // NOTE: skip serialization of chart (type DragNodesChart is ignored) ignore type: true
 
-    // NOTE: skip serialization of data (type DragNodesPoint[] is ignored)} 
+    // NOTE: skip serialization of data (type DragNodesPoint[] is ignored) ignore type: true
 
-    if (this.hasDraggableNodes != null) {  
-      buffer.writeAll(["\"hasDraggableNodes\":", this.hasDraggableNodes, ","], "");
-    }
+    // NOTE: skip serialization of hasDraggableNodes (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of layout (type ReingoldFruchtermanLayout is ignored)} 
+    // NOTE: skip serialization of layout (type ReingoldFruchtermanLayout is ignored) ignore type: true
 
-    // NOTE: skip serialization of options (type DragNodesSeriesOptions is ignored)} 
+    // NOTE: skip serialization of options (type DragNodesSeriesOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of points (type DragNodesPoint[] is ignored)} 
+    // NOTE: skip serialization of points (type DragNodesPoint[] is ignored) ignore type: true
   }
 
 }

@@ -12,67 +12,133 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
-import 'SVGElement.dart';
-import 'OptionFragment.dart';
+import 'FlagsSeriesOptions.dart';
+import 'Series.dart';
+import 'PointOptions.dart';
 
-/** 
- * FlagsSeries 
- */
-class FlagsSeries extends OptionFragment {
-  FlagsSeries( {
-    this.allowDG = null,
-    this.takeOrdinalPosition = null
-  }) : super();
-  bool? allowDG;
-    /*
-  bool get allowDG { 
-    if (this._allowDG == null) {
-      this._allowDG = false;
-    }
-    return this._allowDG!;
-  }
+class FlagsSeries extends Series {
 
-  void set allowDG (bool v) {
-    this._allowDG = v;
-  }
-    */
-    
-  bool? takeOrdinalPosition;
-    /*
-  bool get takeOrdinalPosition { 
-    if (this._takeOrdinalPosition == null) {
-      this._takeOrdinalPosition = false;
-    }
-    return this._takeOrdinalPosition!;
-  }
+  String? name;
+  FlagsSeriesOptions? options;
+  List<PointOptions>? points;
+  List<List<double>>? data;
 
-  void set takeOrdinalPosition (bool v) {
-    this._takeOrdinalPosition = v;
-  }
-    */
-    
+  FlagsSeries({
+    this.name = null,
+    this.options = null,
+    this.points = null,
+    this.data = null
+  });
 
-  //////////////////////////////////////////////////////////////////////////////
   
   @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    if (this.allowDG != null) {  
-      buffer.writeAll(["\"allowDG\":", this.allowDG, ","], "");
+
+    if (this.name != null) {
+      buffer.writeAll(["\"name\": \"", this.name!, "\","], "");
     }
 
-    // NOTE: skip serialization of group (type SVGElement is ignored)} 
+    buffer.write("\"type\": \"flags\",");
 
-    // NOTE: skip serialization of pointClass (type typeof FlagsPoint is ignored)} 
+    if (this.data != null && this.points == null) {
+      // Serialize as a 2d array
 
-    if (this.takeOrdinalPosition != null) {  
-      buffer.writeAll(["\"takeOrdinalPosition\":", this.takeOrdinalPosition, ","], "");
+      StringBuffer seriesData = StringBuffer();
+
+      for (var point in this.data!) {
+        seriesData.writeAll(["["], "");
+        for (var item in point) {
+          seriesData.writeAll([item, ","]);
+        }
+        seriesData.writeAll(["],"], "");
+      }
+
+      buffer.writeAll(["\"data\": [", seriesData, "],"], "");   
+
+
+    } else if (this.points != null) {
+      // Go through the points and write them
+      StringBuffer seriesData = StringBuffer();
+
+      for (var point in this.points!) {
+        seriesData.writeAll(["{"], "");
+        point.toJSONInner(seriesData); 
+        seriesData.writeAll(["},"], "");
+      }
+
+      buffer.writeAll(["\"data\": [", seriesData, "],"], "");
+    }
+
+
+
+    
+    if (this.options?.allowOverlapX != null) {  
+      buffer.writeAll(["\"allowOverlapX\":",this.options?.allowOverlapX, ","], "");
+    }
+
+    if (this.options?.fillColor != null) {  
+      buffer.writeAll(["\"fillColor\":\`",this.options?.fillColor, "\`,"], "");
+    }
+
+    if (this.options?.height != null) {  
+      buffer.writeAll(["\"height\":",this.options?.height, ","], "");
+    }
+
+    if (this.options?.lineColor != null) {  
+      buffer.writeAll(["\"lineColor\":\`",this.options?.lineColor, "\`,"], "");
+    }
+
+    if (this.options?.lineWidth != null) {  
+      buffer.writeAll(["\"lineWidth\":",this.options?.lineWidth, ","], "");
+    }
+
+    if (this.options?.onKey != null) {  
+      buffer.writeAll(["\"onKey\":\`",this.options?.onKey, "\`,"], "");
+    }
+
+    if (this.options?.onSeries != null) {  
+      buffer.writeAll(["\"onSeries\":\`",this.options?.onSeries, "\`,"], "");
+    }
+
+    if (this.options?.shape != null) {  
+      buffer.writeAll(["\"shape\":\`",this.options?.shape, "\`,"], "");
+    }
+
+    if (this.options?.stackDistance != null) {  
+      buffer.writeAll(["\"stackDistance\":",this.options?.stackDistance, ","], "");
+    }
+
+    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
+
+    if (this.options?.style != null) {  
+      buffer.writeAll(["\"style\":",this.options?.style?.toJSON(), ","], "");
+    }
+
+    if (this.options?.textAlign != null) {  
+      buffer.writeAll(["\"textAlign\":\`",this.options?.textAlign, "\`,"], "");
+    }
+
+    if (this.options?.title != null) {  
+      buffer.writeAll(["\"title\":\`",this.options?.title, "\`,"], "");
+    }
+
+    if (this.options?.useHTML != null) {  
+      buffer.writeAll(["\"useHTML\":",this.options?.useHTML, ","], "");
+    }
+
+    if (this.options?.width != null) {  
+      buffer.writeAll(["\"width\":",this.options?.width, ","], "");
+    }
+
+    if (this.options?.y != null) {  
+      buffer.writeAll(["\"y\":",this.options?.y, ","], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,98 +23,19 @@ import 'OptionFragment.dart';
  * PointStateSelectOptions 
  */
 class PointStateSelectOptions extends StateSelectOptions {
-  PointStateSelectOptions( {
-    this.enabled = null,
-    this.fillColor = null,
-    this.lineColor = null,
-    this.lineWidth = null,
-    this.opacity = null,
-    this.radius = null
-  }) : super();
-  bool? enabled;
-    /*
-  bool get enabled { 
-    if (this._enabled == null) {
-      this._enabled = false;
-    }
-    return this._enabled!;
-  }
+  PointStateSelectOptions( ) : super();
+  // NOTE: enabled skipped - type boolean is ignored in gen 
 
-  void set enabled (bool v) {
-    this._enabled = v;
-  }
-    */
-    
-  String? fillColor;
-    /*
-  String get fillColor { 
-    if (this._fillColor == null) {
-      this._fillColor = "";
-    }
-    return this._fillColor!;
-  }
+  // NOTE: fillColor skipped - type string is ignored in gen 
 
-  void set fillColor (String v) {
-    this._fillColor = v;
-  }
-    */
-    
-  String? lineColor;
-    /*
-  String get lineColor { 
-    if (this._lineColor == null) {
-      this._lineColor = "";
-    }
-    return this._lineColor!;
-  }
+  // NOTE: lineColor skipped - type string is ignored in gen 
 
-  void set lineColor (String v) {
-    this._lineColor = v;
-  }
-    */
-    
-  double? lineWidth;
-    /*
-  double get lineWidth { 
-    if (this._lineWidth == null) {
-      this._lineWidth = 0;
-    }
-    return this._lineWidth!;
-  }
+  // NOTE: lineWidth skipped - type number is ignored in gen 
 
-  void set lineWidth (double v) {
-    this._lineWidth = v;
-  }
-    */
-    
-  double? opacity;
-    /*
-  double get opacity { 
-    if (this._opacity == null) {
-      this._opacity = 0;
-    }
-    return this._opacity!;
-  }
+  // NOTE: opacity skipped - type number is ignored in gen 
 
-  void set opacity (double v) {
-    this._opacity = v;
-  }
-    */
-    
-  double? radius;
-    /*
-  double get radius { 
-    if (this._radius == null) {
-      this._radius = 0;
-    }
-    return this._radius!;
-  }
+  // NOTE: radius skipped - type number is ignored in gen 
 
-  void set radius (double v) {
-    this._radius = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -123,29 +44,17 @@ class PointStateSelectOptions extends StateSelectOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
-    }
+    // NOTE: skip serialization of enabled (type boolean is ignored) ignore type: true
 
-    if (this.fillColor != null) {  
-      buffer.writeAll(["\"fillColor\":\`", this.fillColor, "\`,"], "");
-    }
+    // NOTE: skip serialization of fillColor (type string is ignored) ignore type: true
 
-    if (this.lineColor != null) {  
-      buffer.writeAll(["\"lineColor\":\`", this.lineColor, "\`,"], "");
-    }
+    // NOTE: skip serialization of lineColor (type string is ignored) ignore type: true
 
-    if (this.lineWidth != null) {  
-      buffer.writeAll(["\"lineWidth\":", this.lineWidth, ","], "");
-    }
+    // NOTE: skip serialization of lineWidth (type number is ignored) ignore type: true
 
-    if (this.opacity != null) {  
-      buffer.writeAll(["\"opacity\":", this.opacity, ","], "");
-    }
+    // NOTE: skip serialization of opacity (type number is ignored) ignore type: true
 
-    if (this.radius != null) {  
-      buffer.writeAll(["\"radius\":", this.radius, ","], "");
-    }
+    // NOTE: skip serialization of radius (type number is ignored) ignore type: true
   }
 
 }

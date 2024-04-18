@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -26,113 +26,21 @@ import 'OptionFragment.dart';
  * LegendItemObject 
  */
 class LegendItemObject extends DataClassesOptions {
-  LegendItemObject( {
-    this.name = null,
-    this.visible = null,
-    this.labelHeight = null,
-    this.labelWidth = null,
-    this.pageIx = null,
-    this.x = null,
-    this.y = null
-  }) : super();
-  String? name;
-    /*
-  String get name { 
-    if (this._name == null) {
-      this._name = "";
-    }
-    return this._name!;
-  }
+  LegendItemObject( ) : super();
+  // NOTE: name skipped - type string is ignored in gen 
 
-  void set name (String v) {
-    this._name = v;
-  }
-    */
-    
-  bool? visible;
-    /*
-  bool get visible { 
-    if (this._visible == null) {
-      this._visible = false;
-    }
-    return this._visible!;
-  }
+  // NOTE: visible skipped - type boolean is ignored in gen 
 
-  void set visible (bool v) {
-    this._visible = v;
-  }
-    */
-    
-  double? labelHeight;
-    /*
-  double get labelHeight { 
-    if (this._labelHeight == null) {
-      this._labelHeight = 0;
-    }
-    return this._labelHeight!;
-  }
+  // NOTE: labelHeight skipped - type number is ignored in gen 
 
-  void set labelHeight (double v) {
-    this._labelHeight = v;
-  }
-    */
-    
-  double? labelWidth;
-    /*
-  double get labelWidth { 
-    if (this._labelWidth == null) {
-      this._labelWidth = 0;
-    }
-    return this._labelWidth!;
-  }
+  // NOTE: labelWidth skipped - type number is ignored in gen 
 
-  void set labelWidth (double v) {
-    this._labelWidth = v;
-  }
-    */
-    
-  double? pageIx;
-    /*
-  double get pageIx { 
-    if (this._pageIx == null) {
-      this._pageIx = 0;
-    }
-    return this._pageIx!;
-  }
+  // NOTE: pageIx skipped - type number is ignored in gen 
 
-  void set pageIx (double v) {
-    this._pageIx = v;
-  }
-    */
-    
-  double? x;
-    /*
-  double get x { 
-    if (this._x == null) {
-      this._x = 0;
-    }
-    return this._x!;
-  }
+  // NOTE: x skipped - type number is ignored in gen 
 
-  void set x (double v) {
-    this._x = v;
-  }
-    */
-    
-  double? y;
-    /*
-  double get y { 
-    if (this._y == null) {
-      this._y = 0;
-    }
-    return this._y!;
-  }
+  // NOTE: y skipped - type number is ignored in gen 
 
-  void set y (double v) {
-    this._y = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -141,53 +49,39 @@ class LegendItemObject extends DataClassesOptions {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of chart (type Chart is ignored)} 
+    // NOTE: skip serialization of chart (type Chart is ignored) ignore type: true
 
-    if (this.name != null) {  
-      buffer.writeAll(["\"name\":\`", this.name, "\`,"], "");
-    }
+    // NOTE: skip serialization of name (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of options (type object is ignored)} 
+    // NOTE: skip serialization of options (type object is ignored) ignore type: 1
 
-    if (this.visible != null) {  
-      buffer.writeAll(["\"visible\":", this.visible, ","], "");
-    }
+    // NOTE: skip serialization of visible (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of isDataClass (type true is ignored)} 
+    // NOTE: skip serialization of isDataClass (type true is ignored) ignore type: 1
 
-    // NOTE: skip serialization of setVisible (type Function is ignored)} 
+    // NOTE: skip serialization of setVisible (type Function is ignored) ignore type: 1
 
-    // NOTE: skip serialization of area (type SVGElement is ignored)} 
+    // NOTE: skip serialization of area (type SVGElement is ignored) ignore type: true
 
-    // NOTE: skip serialization of group (type SVGElement is ignored)} 
+    // NOTE: skip serialization of group (type SVGElement is ignored) ignore type: true
 
-    // NOTE: skip serialization of label (type LegendItemObject is ignored)} 
+    // NOTE: skip serialization of label (type LegendItemObject is ignored) ignore type: true
 
-    if (this.labelHeight != null) {  
-      buffer.writeAll(["\"labelHeight\":", this.labelHeight, ","], "");
-    }
+    // NOTE: skip serialization of labelHeight (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of labels (type LegendItemObject)[] is ignored)} 
+    // NOTE: skip serialization of labels (type LegendItemObject)[] is ignored) ignore type: true
 
-    if (this.labelWidth != null) {  
-      buffer.writeAll(["\"labelWidth\":", this.labelWidth, ","], "");
-    }
+    // NOTE: skip serialization of labelWidth (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of line (type SVGElement is ignored)} 
+    // NOTE: skip serialization of line (type SVGElement is ignored) ignore type: true
 
-    if (this.pageIx != null) {  
-      buffer.writeAll(["\"pageIx\":", this.pageIx, ","], "");
-    }
+    // NOTE: skip serialization of pageIx (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of symbol (type SVGElement is ignored)} 
+    // NOTE: skip serialization of symbol (type SVGElement is ignored) ignore type: true
 
-    if (this.x != null) {  
-      buffer.writeAll(["\"x\":", this.x, ","], "");
-    }
+    // NOTE: skip serialization of x (type number is ignored) ignore type: true
 
-    if (this.y != null) {  
-      buffer.writeAll(["\"y\":", this.y, ","], "");
-    }
+    // NOTE: skip serialization of y (type number is ignored) ignore type: true
   }
 
 }

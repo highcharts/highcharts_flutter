@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -33,13 +33,13 @@ class ScreenReaderSectionObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of afterInserted (type Function is ignored)} 
+    // NOTE: skip serialization of afterInserted (type Function is ignored) ignore type: 1
 
-    // NOTE: skip serialization of element (type HTMLElement is ignored)} 
+    // NOTE: skip serialization of element (type HTMLElement is ignored) ignore type: true
 
-    // NOTE: skip serialization of buildContent (type Function is ignored)} 
+    // NOTE: skip serialization of buildContent (type Function is ignored) ignore type: 1
 
-    // NOTE: skip serialization of insertIntoDOM (type Function is ignored)} 
+    // NOTE: skip serialization of insertIntoDOM (type Function is ignored) ignore type: 1
   }
 
 }

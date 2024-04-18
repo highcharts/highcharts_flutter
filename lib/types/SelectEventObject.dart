@@ -12,124 +12,33 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
 import 'Event.dart';
+import 'SelectDataObject.dart';
 import 'OptionFragment.dart';
 
 /** 
  * SelectEventObject 
  */
 class SelectEventObject extends OptionFragment {
-  SelectEventObject( {
-    this.animation = null,
-    this.height = null,
-    this.resetSelection = null,
-    this.trigger = null,
-    this.width = null,
-    this.x = null,
-    this.y = null
-  }) : super();
-  bool? animation;
-    /*
-  bool get animation { 
-    if (this._animation == null) {
-      this._animation = false;
-    }
-    return this._animation!;
-  }
+  SelectEventObject( ) : super();
+  // NOTE: animation skipped - type boolean is ignored in gen 
 
-  void set animation (bool v) {
-    this._animation = v;
-  }
-    */
-    
-  double? height;
-    /*
-  double get height { 
-    if (this._height == null) {
-      this._height = 0;
-    }
-    return this._height!;
-  }
+  // NOTE: height skipped - type number is ignored in gen 
 
-  void set height (double v) {
-    this._height = v;
-  }
-    */
-    
-  bool? resetSelection;
-    /*
-  bool get resetSelection { 
-    if (this._resetSelection == null) {
-      this._resetSelection = false;
-    }
-    return this._resetSelection!;
-  }
+  // NOTE: resetSelection skipped - type boolean is ignored in gen 
 
-  void set resetSelection (bool v) {
-    this._resetSelection = v;
-  }
-    */
-    
-  String? trigger;
-    /*
-  String get trigger { 
-    if (this._trigger == null) {
-      this._trigger = "";
-    }
-    return this._trigger!;
-  }
+  // NOTE: trigger skipped - type string is ignored in gen 
 
-  void set trigger (String v) {
-    this._trigger = v;
-  }
-    */
-    
-  double? width;
-    /*
-  double get width { 
-    if (this._width == null) {
-      this._width = 0;
-    }
-    return this._width!;
-  }
+  // NOTE: width skipped - type number is ignored in gen 
 
-  void set width (double v) {
-    this._width = v;
-  }
-    */
-    
-  double? x;
-    /*
-  double get x { 
-    if (this._x == null) {
-      this._x = 0;
-    }
-    return this._x!;
-  }
+  // NOTE: x skipped - type number is ignored in gen 
 
-  void set x (double v) {
-    this._x = v;
-  }
-    */
-    
-  double? y;
-    /*
-  double get y { 
-    if (this._y == null) {
-      this._y = 0;
-    }
-    return this._y!;
-  }
+  // NOTE: y skipped - type number is ignored in gen 
 
-  void set y (double v) {
-    this._y = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -138,39 +47,25 @@ class SelectEventObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.animation != null) {  
-      buffer.writeAll(["\"animation\":", this.animation, ","], "");
-    }
+    // NOTE: skip serialization of animation (type boolean is ignored) ignore type: true
 
-    if (this.height != null) {  
-      buffer.writeAll(["\"height\":", this.height, ","], "");
-    }
+    // NOTE: skip serialization of height (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of originalEvent (type Event is ignored)} 
+    // NOTE: skip serialization of originalEvent (type Event is ignored) ignore type: 1
 
-    if (this.resetSelection != null) {  
-      buffer.writeAll(["\"resetSelection\":", this.resetSelection, ","], "");
-    }
+    // NOTE: skip serialization of resetSelection (type boolean is ignored) ignore type: true
 
-    if (this.trigger != null) {  
-      buffer.writeAll(["\"trigger\":\`", this.trigger, "\`,"], "");
-    }
+    // NOTE: skip serialization of trigger (type string is ignored) ignore type: true
 
-    if (this.width != null) {  
-      buffer.writeAll(["\"width\":", this.width, ","], "");
-    }
+    // NOTE: skip serialization of width (type number is ignored) ignore type: true
 
-    if (this.x != null) {  
-      buffer.writeAll(["\"x\":", this.x, ","], "");
-    }
+    // NOTE: skip serialization of x (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of xAxis (type SelectDataObject[] is ignored)} 
+    // NOTE: skip serialization of xAxis (type SelectDataObject[] is ignored) ignore type: true
 
-    if (this.y != null) {  
-      buffer.writeAll(["\"y\":", this.y, ","], "");
-    }
+    // NOTE: skip serialization of y (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of yAxis (type SelectDataObject[] is ignored)} 
+    // NOTE: skip serialization of yAxis (type SelectDataObject[] is ignored) ignore type: true
   }
 
 }

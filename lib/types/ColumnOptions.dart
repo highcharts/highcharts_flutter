@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,68 +22,15 @@ import 'OptionFragment.dart';
  * ColumnOptions 
  */
 class ColumnOptions extends OptionFragment {
-  ColumnOptions( {
-    this.cellFormat = null,
-    this.editable = null,
-    this.headerFormat = null,
-    this.show = null
-  }) : super();
-  String? cellFormat;
-    /*
-  String get cellFormat { 
-    if (this._cellFormat == null) {
-      this._cellFormat = "";
-    }
-    return this._cellFormat!;
-  }
+  ColumnOptions( ) : super();
+  // NOTE: cellFormat skipped - type string is ignored in gen 
 
-  void set cellFormat (String v) {
-    this._cellFormat = v;
-  }
-    */
-    
-  bool? editable;
-    /*
-  bool get editable { 
-    if (this._editable == null) {
-      this._editable = false;
-    }
-    return this._editable!;
-  }
+  // NOTE: editable skipped - type boolean is ignored in gen 
 
-  void set editable (bool v) {
-    this._editable = v;
-  }
-    */
-    
-  String? headerFormat;
-    /*
-  String get headerFormat { 
-    if (this._headerFormat == null) {
-      this._headerFormat = "";
-    }
-    return this._headerFormat!;
-  }
+  // NOTE: headerFormat skipped - type string is ignored in gen 
 
-  void set headerFormat (String v) {
-    this._headerFormat = v;
-  }
-    */
-    
-  bool? show;
-    /*
-  bool get show { 
-    if (this._show == null) {
-      this._show = false;
-    }
-    return this._show!;
-  }
+  // NOTE: show skipped - type boolean is ignored in gen 
 
-  void set show (bool v) {
-    this._show = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -92,21 +39,13 @@ class ColumnOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.cellFormat != null) {  
-      buffer.writeAll(["\"cellFormat\":\`", this.cellFormat, "\`,"], "");
-    }
+    // NOTE: skip serialization of cellFormat (type string is ignored) ignore type: true
 
-    if (this.editable != null) {  
-      buffer.writeAll(["\"editable\":", this.editable, ","], "");
-    }
+    // NOTE: skip serialization of editable (type boolean is ignored) ignore type: true
 
-    if (this.headerFormat != null) {  
-      buffer.writeAll(["\"headerFormat\":\`", this.headerFormat, "\`,"], "");
-    }
+    // NOTE: skip serialization of headerFormat (type string is ignored) ignore type: true
 
-    if (this.show != null) {  
-      buffer.writeAll(["\"show\":", this.show, ","], "");
-    }
+    // NOTE: skip serialization of show (type boolean is ignored) ignore type: true
   }
 
 }

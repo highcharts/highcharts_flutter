@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,38 +22,11 @@ import 'OptionFragment.dart';
  * PropExtremes 
  */
 class PropExtremes extends OptionFragment {
-  PropExtremes( {
-    this.max = null,
-    this.min = null
-  }) : super();
-  double? max;
-    /*
-  double get max { 
-    if (this._max == null) {
-      this._max = 0;
-    }
-    return this._max!;
-  }
+  PropExtremes( ) : super();
+  // NOTE: max skipped - type number is ignored in gen 
 
-  void set max (double v) {
-    this._max = v;
-  }
-    */
-    
-  double? min;
-    /*
-  double get min { 
-    if (this._min == null) {
-      this._min = 0;
-    }
-    return this._min!;
-  }
+  // NOTE: min skipped - type number is ignored in gen 
 
-  void set min (double v) {
-    this._min = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -62,13 +35,9 @@ class PropExtremes extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.max != null) {  
-      buffer.writeAll(["\"max\":", this.max, ","], "");
-    }
+    // NOTE: skip serialization of max (type number is ignored) ignore type: true
 
-    if (this.min != null) {  
-      buffer.writeAll(["\"min\":", this.min, ","], "");
-    }
+    // NOTE: skip serialization of min (type number is ignored) ignore type: true
   }
 
 }

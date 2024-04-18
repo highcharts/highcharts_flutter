@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,98 +23,19 @@ import 'OptionFragment.dart';
  * BBoxObject 
  */
 class BBoxObject extends PositionObject {
-  BBoxObject( {
-    this.height = null,
-    this.width = null,
-    this.x = null,
-    this.y = null,
-    this.bottomWidth = null,
-    this.topWidth = null
-  }) : super();
-  double? height;
-    /*
-  double get height { 
-    if (this._height == null) {
-      this._height = 0;
-    }
-    return this._height!;
-  }
+  BBoxObject( ) : super();
+  // NOTE: height skipped - type number is ignored in gen 
 
-  void set height (double v) {
-    this._height = v;
-  }
-    */
-    
-  double? width;
-    /*
-  double get width { 
-    if (this._width == null) {
-      this._width = 0;
-    }
-    return this._width!;
-  }
+  // NOTE: width skipped - type number is ignored in gen 
 
-  void set width (double v) {
-    this._width = v;
-  }
-    */
-    
-  double? x;
-    /*
-  double get x { 
-    if (this._x == null) {
-      this._x = 0;
-    }
-    return this._x!;
-  }
+  // NOTE: x skipped - type number is ignored in gen 
 
-  void set x (double v) {
-    this._x = v;
-  }
-    */
-    
-  double? y;
-    /*
-  double get y { 
-    if (this._y == null) {
-      this._y = 0;
-    }
-    return this._y!;
-  }
+  // NOTE: y skipped - type number is ignored in gen 
 
-  void set y (double v) {
-    this._y = v;
-  }
-    */
-    
-  double? bottomWidth;
-    /*
-  double get bottomWidth { 
-    if (this._bottomWidth == null) {
-      this._bottomWidth = 0;
-    }
-    return this._bottomWidth!;
-  }
+  // NOTE: bottomWidth skipped - type number is ignored in gen 
 
-  void set bottomWidth (double v) {
-    this._bottomWidth = v;
-  }
-    */
-    
-  double? topWidth;
-    /*
-  double get topWidth { 
-    if (this._topWidth == null) {
-      this._topWidth = 0;
-    }
-    return this._topWidth!;
-  }
+  // NOTE: topWidth skipped - type number is ignored in gen 
 
-  void set topWidth (double v) {
-    this._topWidth = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -123,29 +44,17 @@ class BBoxObject extends PositionObject {
     super.toJSONInner(buffer);
 
     
-    if (this.height != null) {  
-      buffer.writeAll(["\"height\":", this.height, ","], "");
-    }
+    // NOTE: skip serialization of height (type number is ignored) ignore type: true
 
-    if (this.width != null) {  
-      buffer.writeAll(["\"width\":", this.width, ","], "");
-    }
+    // NOTE: skip serialization of width (type number is ignored) ignore type: true
 
-    if (this.x != null) {  
-      buffer.writeAll(["\"x\":", this.x, ","], "");
-    }
+    // NOTE: skip serialization of x (type number is ignored) ignore type: true
 
-    if (this.y != null) {  
-      buffer.writeAll(["\"y\":", this.y, ","], "");
-    }
+    // NOTE: skip serialization of y (type number is ignored) ignore type: true
 
-    if (this.bottomWidth != null) {  
-      buffer.writeAll(["\"bottomWidth\":", this.bottomWidth, ","], "");
-    }
+    // NOTE: skip serialization of bottomWidth (type number is ignored) ignore type: true
 
-    if (this.topWidth != null) {  
-      buffer.writeAll(["\"topWidth\":", this.topWidth, ","], "");
-    }
+    // NOTE: skip serialization of topWidth (type number is ignored) ignore type: true
   }
 
 }

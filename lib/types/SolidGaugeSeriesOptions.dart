@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,137 +24,100 @@ import 'OptionFragment.dart';
  */
 class SolidGaugeSeriesOptions extends GaugeSeriesOptions {
   SolidGaugeSeriesOptions( {
+    super.accessibility = null,
+    super.allAreas = null,
+    super.allowPointSelect = null,
+    super.animationLimit = null,
+    super.boostBlending = null,
+    super.boostThreshold = null,
+    super.borderColor = null,
+    super.borderWidth = null,
+    super.className = null,
+    super.clip = null,
+    super.color = null,
+    super.colorAxis = null,
+    super.colorIndex = null,
+    super.colorKey = null,
+    super.compare = null,
+    super.compareStart = null,
+    super.connectEnds = null,
+    super.connectNulls = null,
+    super.connectors = null,
+    super.crisp = null,
+    super.cropThreshold = null,
+    super.cumulative = null,
+    super.cursor = null,
+    super.dashStyle = null,
+    super.dataGrouping = null,
+    super.dataLabels = null,
+    super.dataSorting = null,
+    super.description = null,
+    super.dial = null,
+    super.dragDrop = null,
+    super.enableMouseTracking = null,
+    super.events = null,
+    super.findNearestPointBy = null,
+    super.gapSize = null,
+    super.gapUnit = null,
+    super.getExtremesFromAll = null,
+    super.includeInDataExport = null,
     this.innerRadius = null,
+    super.joinBy = null,
+    super.keys = null,
+    super.label = null,
+    super.lastPrice = null,
+    super.lastVisiblePrice = null,
+    super.legendSymbol = null,
     this.linecap = null,
+    super.lineWidth = null,
+    super.linkedTo = null,
+    super.marker = null,
+    super.navigatorOptions = null,
+    super.negativeColor = null,
+    super.onPoint = null,
+    super.opacity = null,
     this.overshoot = null,
+    super.pivot = null,
+    super.point = null,
+    super.pointInterval = null,
+    super.pointIntervalUnit = null,
+    super.pointPlacement = null,
+    super.pointRange = null,
+    super.pointStart = null,
     this.radius = null,
+    super.relativeXValue = null,
     this.rounded = null,
-    this.threshold = null
+    super.selected = null,
+    super.showCheckbox = null,
+    super.showInLegend = null,
+    super.showInNavigator = null,
+    super.skipKeyboardNavigation = null,
+    super.softThreshold = null,
+    super.stacking = null,
+    super.step = null,
+    super.stickyTracking = null,
+    this.threshold = null,
+    super.tooltip = null,
+    super.turboThreshold = null,
+    super.visible = null,
+    super.wrap = null,
+    super.zIndex = null,
+    super.zoneAxis = null,
+    super.zones = null
   }) : super();
-  /**
-   * The inner radius for points in a solid gauge. Can be given only in
-   * percentage, either as a number or a string like `"50%"`. 
-   * 
-   * Defaults to '"60%"'. 
-      */
   String? innerRadius;
-    /*
-  String get innerRadius { 
-    if (this._innerRadius == null) {
-      this._innerRadius = "";
-    }
-    return this._innerRadius!;
-  }
-
-  void set innerRadius (String v) {
-    this._innerRadius = v;
-  }
-    */
     
-  /**
-   * The line cap used for line ends and line joins on the graph. 
-   * 
-   * Defaults to 'round'. 
-      */
   String? linecap;
-    /*
-  String get linecap { 
-    if (this._linecap == null) {
-      this._linecap = "";
-    }
-    return this._linecap!;
-  }
-
-  void set linecap (String v) {
-    this._linecap = v;
-  }
-    */
     
-  /**
-   * Allow the dial to overshoot the end of the perimeter axis by
-   * this many degrees. Say if the gauge axis goes from 0 to 60, a
-   * value of 100, or 1000, will show 5 degrees beyond the end of the
-   * axis when this option is set to 5.  
-      */
   double? overshoot;
-    /*
-  double get overshoot { 
-    if (this._overshoot == null) {
-      this._overshoot = 0;
-    }
-    return this._overshoot!;
-  }
-
-  void set overshoot (double v) {
-    this._overshoot = v;
-  }
-    */
     
-  /**
-   * The outer radius for points in a solid gauge. Can be given only in
-   * percentage, either as a number or a string like `"100%"`. 
-   * 
-   * Defaults to '"100%"'. 
-      */
   String? radius;
-    /*
-  String get radius { 
-    if (this._radius == null) {
-      this._radius = "";
-    }
-    return this._radius!;
-  }
-
-  void set radius (String v) {
-    this._radius = v;
-  }
-    */
     
-  /**
-   * Whether to draw rounded edges on the gauge. This options adds the radius
-   * of the rounding to the ends of the arc, so it extends past the actual
-   * values. When `borderRadius` is set, it takes precedence over `rounded`. A
-   * `borderRadius` of 50% behaves like `rounded`, except the shape is not
-   * extended past its value. 
-   * 
-   * Defaults to 'false'. 
-      */
   bool? rounded;
-    /*
-  bool get rounded { 
-    if (this._rounded == null) {
-      this._rounded = false;
-    }
-    return this._rounded!;
-  }
-
-  void set rounded (bool v) {
-    this._rounded = v;
-  }
-    */
     
-  // NOTE: states skipped - type Generic is ignored in gen
+  // NOTE: states skipped - type Generic is ignored in gen 
 
-  /**
-   * The threshold, also called zero level or base level. For line type
-   * series this is only used in conjunction with
-   * [negativeColor](#plotOptions.series.negativeColor). 
-   * 
-   * Defaults to '0'. 
-      */
   double? threshold;
-    /*
-  double get threshold { 
-    if (this._threshold == null) {
-      this._threshold = 0;
-    }
-    return this._threshold!;
-  }
-
-  void set threshold (double v) {
-    this._threshold = v;
-  }
-    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -165,29 +128,29 @@ class SolidGaugeSeriesOptions extends GaugeSeriesOptions {
 
     
     if (this.innerRadius != null) {  
-      buffer.writeAll(["\"innerRadius\":\`", this.innerRadius, "\`,"], "");
+      buffer.writeAll(["\"innerRadius\":\`",this.innerRadius, "\`,"], "");
     }
 
     if (this.linecap != null) {  
-      buffer.writeAll(["\"linecap\":\`", this.linecap, "\`,"], "");
+      buffer.writeAll(["\"linecap\":\`",this.linecap, "\`,"], "");
     }
 
     if (this.overshoot != null) {  
-      buffer.writeAll(["\"overshoot\":", this.overshoot, ","], "");
+      buffer.writeAll(["\"overshoot\":",this.overshoot, ","], "");
     }
 
     if (this.radius != null) {  
-      buffer.writeAll(["\"radius\":\`", this.radius, "\`,"], "");
+      buffer.writeAll(["\"radius\":\`",this.radius, "\`,"], "");
     }
 
     if (this.rounded != null) {  
-      buffer.writeAll(["\"rounded\":", this.rounded, ","], "");
+      buffer.writeAll(["\"rounded\":",this.rounded, ","], "");
     }
 
-    // NOTE: skip serialization of states (type Generic is ignored)} 
+    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
 
     if (this.threshold != null) {  
-      buffer.writeAll(["\"threshold\":", this.threshold, ","], "");
+      buffer.writeAll(["\"threshold\":",this.threshold, ","], "");
     }
   }
 

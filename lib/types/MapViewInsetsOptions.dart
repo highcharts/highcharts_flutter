@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -27,21 +27,25 @@ import 'OptionFragment.dart';
  */
 class MapViewInsetsOptions extends MapViewInsetOptions {
   MapViewInsetsOptions( {
-    this.id = null
+    super.borderColor = null,
+    this.borderPath = null,
+    super.borderWidth = null,
+    this.field = null,
+    this.geoBounds = null,
+    this.id = null,
+    this.projection = null,
+    super.relativeTo = null,
+    super.units = null
   }) : super();
+  MultiLineString? borderPath;
+    
+  Polygon? field;
+    
+  Polygon? geoBounds;
+    
   String? id;
-    /*
-  String get id { 
-    if (this._id == null) {
-      this._id = "";
-    }
-    return this._id!;
-  }
-
-  void set id (String v) {
-    this._id = v;
-  }
-    */
+    
+  ProjectionOptions? projection;
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -51,19 +55,27 @@ class MapViewInsetsOptions extends MapViewInsetOptions {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of borderPath (type MultiLineString is ignored)} 
-
-    // NOTE: skip serialization of center (type LonLatArray is ignored)} 
-
-    // NOTE: skip serialization of field (type Polygon is ignored)} 
-
-    // NOTE: skip serialization of geoBounds (type Polygon is ignored)} 
-
-    if (this.id != null) {  
-      buffer.writeAll(["\"id\":\`", this.id, "\`,"], "");
+    if (this.borderPath != null) {  
+      buffer.writeAll(["\"borderPath\":",this.borderPath?.toJSON(), ","], "");
     }
 
-    // NOTE: skip serialization of projection (type ProjectionOptions is ignored)} 
+    // NOTE: skip serialization of center (type LonLatArray is ignored) ignore type: 1
+
+    if (this.field != null) {  
+      buffer.writeAll(["\"field\":",this.field?.toJSON(), ","], "");
+    }
+
+    if (this.geoBounds != null) {  
+      buffer.writeAll(["\"geoBounds\":",this.geoBounds?.toJSON(), ","], "");
+    }
+
+    if (this.id != null) {  
+      buffer.writeAll(["\"id\":\`",this.id, "\`,"], "");
+    }
+
+    if (this.projection != null) {  
+      buffer.writeAll(["\"projection\":",this.projection?.toJSON(), ","], "");
+    }
   }
 
 }

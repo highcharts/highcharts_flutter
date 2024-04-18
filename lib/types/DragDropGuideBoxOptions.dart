@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,98 +22,19 @@ import 'OptionFragment.dart';
  * DragDropGuideBoxOptions 
  */
 class DragDropGuideBoxOptions extends OptionFragment {
-  DragDropGuideBoxOptions( {
-    this.className = null,
-    this.color = null,
-    this.cursor = null,
-    this.lineColor = null,
-    this.lineWidth = null,
-    this.zIndex = null
-  }) : super();
-  String? className;
-    /*
-  String get className { 
-    if (this._className == null) {
-      this._className = "";
-    }
-    return this._className!;
-  }
+  DragDropGuideBoxOptions( ) : super();
+  // NOTE: className skipped - type string is ignored in gen 
 
-  void set className (String v) {
-    this._className = v;
-  }
-    */
-    
-  String? color;
-    /*
-  String get color { 
-    if (this._color == null) {
-      this._color = "";
-    }
-    return this._color!;
-  }
+  // NOTE: color skipped - type string is ignored in gen 
 
-  void set color (String v) {
-    this._color = v;
-  }
-    */
-    
-  String? cursor;
-    /*
-  String get cursor { 
-    if (this._cursor == null) {
-      this._cursor = "";
-    }
-    return this._cursor!;
-  }
+  // NOTE: cursor skipped - type string is ignored in gen 
 
-  void set cursor (String v) {
-    this._cursor = v;
-  }
-    */
-    
-  String? lineColor;
-    /*
-  String get lineColor { 
-    if (this._lineColor == null) {
-      this._lineColor = "";
-    }
-    return this._lineColor!;
-  }
+  // NOTE: lineColor skipped - type string is ignored in gen 
 
-  void set lineColor (String v) {
-    this._lineColor = v;
-  }
-    */
-    
-  double? lineWidth;
-    /*
-  double get lineWidth { 
-    if (this._lineWidth == null) {
-      this._lineWidth = 0;
-    }
-    return this._lineWidth!;
-  }
+  // NOTE: lineWidth skipped - type number is ignored in gen 
 
-  void set lineWidth (double v) {
-    this._lineWidth = v;
-  }
-    */
-    
-  double? zIndex;
-    /*
-  double get zIndex { 
-    if (this._zIndex == null) {
-      this._zIndex = 0;
-    }
-    return this._zIndex!;
-  }
+  // NOTE: zIndex skipped - type number is ignored in gen 
 
-  void set zIndex (double v) {
-    this._zIndex = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -122,29 +43,17 @@ class DragDropGuideBoxOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.className != null) {  
-      buffer.writeAll(["\"className\":\`", this.className, "\`,"], "");
-    }
+    // NOTE: skip serialization of className (type string is ignored) ignore type: true
 
-    if (this.color != null) {  
-      buffer.writeAll(["\"color\":\`", this.color, "\`,"], "");
-    }
+    // NOTE: skip serialization of color (type string is ignored) ignore type: true
 
-    if (this.cursor != null) {  
-      buffer.writeAll(["\"cursor\":\`", this.cursor, "\`,"], "");
-    }
+    // NOTE: skip serialization of cursor (type string is ignored) ignore type: true
 
-    if (this.lineColor != null) {  
-      buffer.writeAll(["\"lineColor\":\`", this.lineColor, "\`,"], "");
-    }
+    // NOTE: skip serialization of lineColor (type string is ignored) ignore type: true
 
-    if (this.lineWidth != null) {  
-      buffer.writeAll(["\"lineWidth\":", this.lineWidth, ","], "");
-    }
+    // NOTE: skip serialization of lineWidth (type number is ignored) ignore type: true
 
-    if (this.zIndex != null) {  
-      buffer.writeAll(["\"zIndex\":", this.zIndex, ","], "");
-    }
+    // NOTE: skip serialization of zIndex (type number is ignored) ignore type: true
   }
 
 }

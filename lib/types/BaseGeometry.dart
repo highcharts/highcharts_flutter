@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -32,9 +32,9 @@ class BaseGeometry extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of arcs (type number[][][] is ignored)} 
+    // NOTE: skip serialization of arcs (type number[][][] is ignored) ignore type: true
 
-    // NOTE: skip serialization of properties (type Generic is ignored)} 
+    // NOTE: skip serialization of properties (type Generic is ignored) ignore type: true
   }
 
 }

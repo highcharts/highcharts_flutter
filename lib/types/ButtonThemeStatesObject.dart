@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -33,11 +33,11 @@ class ButtonThemeStatesObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of disabled (type SVGAttributes is ignored)} 
+    // NOTE: skip serialization of disabled (type SVGAttributes is ignored) ignore type: true
 
-    // NOTE: skip serialization of hover (type SVGAttributes is ignored)} 
+    // NOTE: skip serialization of hover (type SVGAttributes is ignored) ignore type: true
 
-    // NOTE: skip serialization of select (type SVGAttributes is ignored)} 
+    // NOTE: skip serialization of select (type SVGAttributes is ignored) ignore type: true
   }
 
 }

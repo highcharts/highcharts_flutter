@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -32,19 +32,19 @@ class DataGridNamespace extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of win (type Window & typeof globalThis is ignored)} 
+    // NOTE: skip serialization of win (type Window & typeof globalThis is ignored) ignore type: true
 
-    // NOTE: skip serialization of DataGrid (type typeof DataGrid is ignored)} 
+    // NOTE: skip serialization of DataGrid (type typeof DataGrid is ignored) ignore type: true
 
-    // NOTE: skip serialization of DataCursor (type typeof DataCursor is ignored)} 
+    // NOTE: skip serialization of DataCursor (type typeof DataCursor is ignored) ignore type: true
 
-    // NOTE: skip serialization of DataModifier (type typeof DataModifier is ignored)} 
+    // NOTE: skip serialization of DataModifier (type typeof DataModifier is ignored) ignore type: true
 
-    // NOTE: skip serialization of DataConnector (type typeof DataConnector is ignored)} 
+    // NOTE: skip serialization of DataConnector (type typeof DataConnector is ignored) ignore type: true
 
-    // NOTE: skip serialization of DataPool (type typeof DataPool is ignored)} 
+    // NOTE: skip serialization of DataPool (type typeof DataPool is ignored) ignore type: true
 
-    // NOTE: skip serialization of DataTable (type typeof DataTable is ignored)} 
+    // NOTE: skip serialization of DataTable (type typeof DataTable is ignored) ignore type: true
   }
 
 }

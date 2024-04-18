@@ -1,0 +1,10 @@
+[
+  {
+    "type": "missing_mapping",
+    "path": "xAxis.labels"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "yAxis.title"
+  }
+]

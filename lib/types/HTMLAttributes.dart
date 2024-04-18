@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,413 +22,61 @@ import 'OptionFragment.dart';
  * HTMLAttributes 
  */
 class HTMLAttributes extends OptionFragment {
-  HTMLAttributes( {
-    this.aria_expanded = null,
-    this.aria_label = null,
-    this.aria_live = null,
-    this.aria_atomic = null,
-    this.checked = null,
-    this.kw_class /** WARN: class is rewritten as it's a keyword */ = null,
-    this.className = null,
-    this.colspan = null,
-    this.defaultChecked = null,
-    this.disabled = null,
-    this.href = null,
-    this.htmlFor = null,
-    this.id = null,
-    this.name = null,
-    this.placeholder = null,
-    this.scope = null,
-    this.textContent = null,
-    this.title = null,
-    this.type = null,
-    this.rel = null,
-    this.role = null,
-    this.src = null,
-    this.rowspan = null,
-    this.summary = null,
-    this.tabindex = null,
-    this.valign = null,
-    this.value = null
-  }) : super();
-  bool? aria_expanded;
-    /*
-  bool get aria_expanded { 
-    if (this._aria_expanded == null) {
-      this._aria_expanded = false;
-    }
-    return this._aria_expanded!;
-  }
+  HTMLAttributes( ) : super();
+  // NOTE: aria-expanded skipped - type boolean is ignored in gen 
 
-  void set aria_expanded (bool v) {
-    this._aria_expanded = v;
-  }
-    */
-    
-  String? aria_label;
-    /*
-  String get aria_label { 
-    if (this._aria_label == null) {
-      this._aria_label = "";
-    }
-    return this._aria_label!;
-  }
+  // NOTE: aria-label skipped - type string is ignored in gen 
 
-  void set aria_label (String v) {
-    this._aria_label = v;
-  }
-    */
-    
-  String? aria_live;
-    /*
-  String get aria_live { 
-    if (this._aria_live == null) {
-      this._aria_live = "";
-    }
-    return this._aria_live!;
-  }
+  // NOTE: aria-live skipped - type string is ignored in gen 
 
-  void set aria_live (String v) {
-    this._aria_live = v;
-  }
-    */
-    
-  bool? aria_atomic;
-    /*
-  bool get aria_atomic { 
-    if (this._aria_atomic == null) {
-      this._aria_atomic = false;
-    }
-    return this._aria_atomic!;
-  }
+  // NOTE: aria-atomic skipped - type boolean is ignored in gen 
 
-  void set aria_atomic (bool v) {
-    this._aria_atomic = v;
-  }
-    */
-    
-  bool? checked;
-    /*
-  bool get checked { 
-    if (this._checked == null) {
-      this._checked = false;
-    }
-    return this._checked!;
-  }
+  // NOTE: checked skipped - type boolean is ignored in gen 
 
-  void set checked (bool v) {
-    this._checked = v;
-  }
-    */
-    
-  String? kw_class /** WARN: class is rewritten as it's a keyword */;
-    /*
-  String get kw_class /** WARN: class is rewritten as it's a keyword */ { 
-    if (this._kw_class /** WARN: class is rewritten as it's a keyword */ == null) {
-      this._kw_class /** WARN: class is rewritten as it's a keyword */ = "";
-    }
-    return this._kw_class /** WARN: class is rewritten as it's a keyword */!;
-  }
+  // NOTE: class skipped - type string is ignored in gen 
 
-  void set kw_class /** WARN: class is rewritten as it's a keyword */ (String v) {
-    this._kw_class /** WARN: class is rewritten as it's a keyword */ = v;
-  }
-    */
-    
-  String? className;
-    /*
-  String get className { 
-    if (this._className == null) {
-      this._className = "";
-    }
-    return this._className!;
-  }
+  // NOTE: className skipped - type string is ignored in gen 
 
-  void set className (String v) {
-    this._className = v;
-  }
-    */
-    
-  double? colspan;
-    /*
-  double get colspan { 
-    if (this._colspan == null) {
-      this._colspan = 0;
-    }
-    return this._colspan!;
-  }
+  // NOTE: colspan skipped - type number is ignored in gen 
 
-  void set colspan (double v) {
-    this._colspan = v;
-  }
-    */
-    
-  bool? defaultChecked;
-    /*
-  bool get defaultChecked { 
-    if (this._defaultChecked == null) {
-      this._defaultChecked = false;
-    }
-    return this._defaultChecked!;
-  }
+  // NOTE: defaultChecked skipped - type boolean is ignored in gen 
 
-  void set defaultChecked (bool v) {
-    this._defaultChecked = v;
-  }
-    */
-    
-  bool? disabled;
-    /*
-  bool get disabled { 
-    if (this._disabled == null) {
-      this._disabled = false;
-    }
-    return this._disabled!;
-  }
+  // NOTE: disabled skipped - type boolean is ignored in gen 
 
-  void set disabled (bool v) {
-    this._disabled = v;
-  }
-    */
-    
-  String? href;
-    /*
-  String get href { 
-    if (this._href == null) {
-      this._href = "";
-    }
-    return this._href!;
-  }
+  // NOTE: href skipped - type string is ignored in gen 
 
-  void set href (String v) {
-    this._href = v;
-  }
-    */
-    
-  String? htmlFor;
-    /*
-  String get htmlFor { 
-    if (this._htmlFor == null) {
-      this._htmlFor = "";
-    }
-    return this._htmlFor!;
-  }
+  // NOTE: htmlFor skipped - type string is ignored in gen 
 
-  void set htmlFor (String v) {
-    this._htmlFor = v;
-  }
-    */
-    
-  String? id;
-    /*
-  String get id { 
-    if (this._id == null) {
-      this._id = "";
-    }
-    return this._id!;
-  }
+  // NOTE: id skipped - type string is ignored in gen 
 
-  void set id (String v) {
-    this._id = v;
-  }
-    */
-    
-  String? name;
-    /*
-  String get name { 
-    if (this._name == null) {
-      this._name = "";
-    }
-    return this._name!;
-  }
+  // NOTE: name skipped - type string is ignored in gen 
 
-  void set name (String v) {
-    this._name = v;
-  }
-    */
-    
-  String? placeholder;
-    /*
-  String get placeholder { 
-    if (this._placeholder == null) {
-      this._placeholder = "";
-    }
-    return this._placeholder!;
-  }
+  // NOTE: placeholder skipped - type string is ignored in gen 
 
-  void set placeholder (String v) {
-    this._placeholder = v;
-  }
-    */
-    
-  String? scope;
-    /*
-  String get scope { 
-    if (this._scope == null) {
-      this._scope = "";
-    }
-    return this._scope!;
-  }
+  // NOTE: scope skipped - type string is ignored in gen 
 
-  void set scope (String v) {
-    this._scope = v;
-  }
-    */
-    
-  String? textContent;
-    /*
-  String get textContent { 
-    if (this._textContent == null) {
-      this._textContent = "";
-    }
-    return this._textContent!;
-  }
+  // NOTE: textContent skipped - type string is ignored in gen 
 
-  void set textContent (String v) {
-    this._textContent = v;
-  }
-    */
-    
-  String? title;
-    /*
-  String get title { 
-    if (this._title == null) {
-      this._title = "";
-    }
-    return this._title!;
-  }
+  // NOTE: title skipped - type string is ignored in gen 
 
-  void set title (String v) {
-    this._title = v;
-  }
-    */
-    
-  String? type;
-    /*
-  String get type { 
-    if (this._type == null) {
-      this._type = "";
-    }
-    return this._type!;
-  }
+  // NOTE: type skipped - type string is ignored in gen 
 
-  void set type (String v) {
-    this._type = v;
-  }
-    */
-    
-  String? rel;
-    /*
-  String get rel { 
-    if (this._rel == null) {
-      this._rel = "";
-    }
-    return this._rel!;
-  }
+  // NOTE: rel skipped - type string is ignored in gen 
 
-  void set rel (String v) {
-    this._rel = v;
-  }
-    */
-    
-  String? role;
-    /*
-  String get role { 
-    if (this._role == null) {
-      this._role = "";
-    }
-    return this._role!;
-  }
+  // NOTE: role skipped - type string is ignored in gen 
 
-  void set role (String v) {
-    this._role = v;
-  }
-    */
-    
-  String? src;
-    /*
-  String get src { 
-    if (this._src == null) {
-      this._src = "";
-    }
-    return this._src!;
-  }
+  // NOTE: src skipped - type string is ignored in gen 
 
-  void set src (String v) {
-    this._src = v;
-  }
-    */
-    
-  double? rowspan;
-    /*
-  double get rowspan { 
-    if (this._rowspan == null) {
-      this._rowspan = 0;
-    }
-    return this._rowspan!;
-  }
+  // NOTE: rowspan skipped - type number is ignored in gen 
 
-  void set rowspan (double v) {
-    this._rowspan = v;
-  }
-    */
-    
-  String? summary;
-    /*
-  String get summary { 
-    if (this._summary == null) {
-      this._summary = "";
-    }
-    return this._summary!;
-  }
+  // NOTE: summary skipped - type string is ignored in gen 
 
-  void set summary (String v) {
-    this._summary = v;
-  }
-    */
-    
-  double? tabindex;
-    /*
-  double get tabindex { 
-    if (this._tabindex == null) {
-      this._tabindex = 0;
-    }
-    return this._tabindex!;
-  }
+  // NOTE: tabindex skipped - type number is ignored in gen 
 
-  void set tabindex (double v) {
-    this._tabindex = v;
-  }
-    */
-    
-  String? valign;
-    /*
-  String get valign { 
-    if (this._valign == null) {
-      this._valign = "";
-    }
-    return this._valign!;
-  }
+  // NOTE: valign skipped - type string is ignored in gen 
 
-  void set valign (String v) {
-    this._valign = v;
-  }
-    */
-    
-  String? value;
-    /*
-  String get value { 
-    if (this._value == null) {
-      this._value = "";
-    }
-    return this._value!;
-  }
+  // NOTE: value skipped - type string is ignored in gen 
 
-  void set value (String v) {
-    this._value = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -437,117 +85,63 @@ class HTMLAttributes extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.aria_expanded != null) {  
-      buffer.writeAll(["\"aria-expanded\":", this.aria_expanded, ","], "");
-    }
+    // NOTE: skip serialization of aria_expanded (type boolean is ignored) ignore type: true
 
-    if (this.aria_label != null) {  
-      buffer.writeAll(["\"aria-label\":\`", this.aria_label, "\`,"], "");
-    }
+    // NOTE: skip serialization of aria_label (type string is ignored) ignore type: true
 
-    if (this.aria_live != null) {  
-      buffer.writeAll(["\"aria-live\":\`", this.aria_live, "\`,"], "");
-    }
+    // NOTE: skip serialization of aria_live (type string is ignored) ignore type: true
 
-    if (this.aria_atomic != null) {  
-      buffer.writeAll(["\"aria-atomic\":", this.aria_atomic, ","], "");
-    }
+    // NOTE: skip serialization of aria_atomic (type boolean is ignored) ignore type: true
 
-    if (this.checked != null) {  
-      buffer.writeAll(["\"checked\":", this.checked, ","], "");
-    }
+    // NOTE: skip serialization of checked (type boolean is ignored) ignore type: true
 
-    if (this.kw_class /** WARN: class is rewritten as it's a keyword */ != null) {  
-      buffer.writeAll(["\"class\":\`", this.kw_class /** WARN: class is rewritten as it's a keyword */, "\`,"], "");
-    }
+    // NOTE: skip serialization of kw_class /** WARN: class is rewritten as it's a keyword */ (type string is ignored) ignore type: true
 
-    if (this.className != null) {  
-      buffer.writeAll(["\"className\":\`", this.className, "\`,"], "");
-    }
+    // NOTE: skip serialization of className (type string is ignored) ignore type: true
 
-    if (this.colspan != null) {  
-      buffer.writeAll(["\"colspan\":", this.colspan, ","], "");
-    }
+    // NOTE: skip serialization of colspan (type number is ignored) ignore type: true
 
-    if (this.defaultChecked != null) {  
-      buffer.writeAll(["\"defaultChecked\":", this.defaultChecked, ","], "");
-    }
+    // NOTE: skip serialization of defaultChecked (type boolean is ignored) ignore type: true
 
-    if (this.disabled != null) {  
-      buffer.writeAll(["\"disabled\":", this.disabled, ","], "");
-    }
+    // NOTE: skip serialization of disabled (type boolean is ignored) ignore type: true
 
-    if (this.href != null) {  
-      buffer.writeAll(["\"href\":\`", this.href, "\`,"], "");
-    }
+    // NOTE: skip serialization of href (type string is ignored) ignore type: true
 
-    if (this.htmlFor != null) {  
-      buffer.writeAll(["\"htmlFor\":\`", this.htmlFor, "\`,"], "");
-    }
+    // NOTE: skip serialization of htmlFor (type string is ignored) ignore type: true
 
-    if (this.id != null) {  
-      buffer.writeAll(["\"id\":\`", this.id, "\`,"], "");
-    }
+    // NOTE: skip serialization of id (type string is ignored) ignore type: true
 
-    if (this.name != null) {  
-      buffer.writeAll(["\"name\":\`", this.name, "\`,"], "");
-    }
+    // NOTE: skip serialization of name (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of onclick (type any is ignored)} 
+    // NOTE: skip serialization of onclick (type any is ignored) ignore type: 1
 
-    // NOTE: skip serialization of onload (type any is ignored)} 
+    // NOTE: skip serialization of onload (type any is ignored) ignore type: 1
 
-    if (this.placeholder != null) {  
-      buffer.writeAll(["\"placeholder\":\`", this.placeholder, "\`,"], "");
-    }
+    // NOTE: skip serialization of placeholder (type string is ignored) ignore type: true
 
-    if (this.scope != null) {  
-      buffer.writeAll(["\"scope\":\`", this.scope, "\`,"], "");
-    }
+    // NOTE: skip serialization of scope (type string is ignored) ignore type: true
 
-    if (this.textContent != null) {  
-      buffer.writeAll(["\"textContent\":\`", this.textContent, "\`,"], "");
-    }
+    // NOTE: skip serialization of textContent (type string is ignored) ignore type: true
 
-    if (this.title != null) {  
-      buffer.writeAll(["\"title\":\`", this.title, "\`,"], "");
-    }
+    // NOTE: skip serialization of title (type string is ignored) ignore type: true
 
-    if (this.type != null) {  
-      buffer.writeAll(["\"type\":\`", this.type, "\`,"], "");
-    }
+    // NOTE: skip serialization of type (type string is ignored) ignore type: true
 
-    if (this.rel != null) {  
-      buffer.writeAll(["\"rel\":\`", this.rel, "\`,"], "");
-    }
+    // NOTE: skip serialization of rel (type string is ignored) ignore type: true
 
-    if (this.role != null) {  
-      buffer.writeAll(["\"role\":\`", this.role, "\`,"], "");
-    }
+    // NOTE: skip serialization of role (type string is ignored) ignore type: true
 
-    if (this.src != null) {  
-      buffer.writeAll(["\"src\":\`", this.src, "\`,"], "");
-    }
+    // NOTE: skip serialization of src (type string is ignored) ignore type: true
 
-    if (this.rowspan != null) {  
-      buffer.writeAll(["\"rowspan\":", this.rowspan, ","], "");
-    }
+    // NOTE: skip serialization of rowspan (type number is ignored) ignore type: true
 
-    if (this.summary != null) {  
-      buffer.writeAll(["\"summary\":\`", this.summary, "\`,"], "");
-    }
+    // NOTE: skip serialization of summary (type string is ignored) ignore type: true
 
-    if (this.tabindex != null) {  
-      buffer.writeAll(["\"tabindex\":", this.tabindex, ","], "");
-    }
+    // NOTE: skip serialization of tabindex (type number is ignored) ignore type: true
 
-    if (this.valign != null) {  
-      buffer.writeAll(["\"valign\":\`", this.valign, "\`,"], "");
-    }
+    // NOTE: skip serialization of valign (type string is ignored) ignore type: true
 
-    if (this.value != null) {  
-      buffer.writeAll(["\"value\":\`", this.value, "\`,"], "");
-    }
+    // NOTE: skip serialization of value (type string is ignored) ignore type: true
   }
 
 }

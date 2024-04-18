@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -33,9 +33,9 @@ class TextPathObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of path (type SVGElement is ignored)} 
+    // NOTE: skip serialization of path (type SVGElement is ignored) ignore type: true
 
-    // NOTE: skip serialization of undo (type Function is ignored)} 
+    // NOTE: skip serialization of undo (type Function is ignored) ignore type: 1
   }
 
 }

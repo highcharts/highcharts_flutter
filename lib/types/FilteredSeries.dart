@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,38 +23,11 @@ import 'OptionFragment.dart';
  * FilteredSeries 
  */
 class FilteredSeries extends OptionFragment {
-  FilteredSeries( {
-    this.indicatorFullName = null,
-    this.indicatorType = null
-  }) : super();
-  String? indicatorFullName;
-    /*
-  String get indicatorFullName { 
-    if (this._indicatorFullName == null) {
-      this._indicatorFullName = "";
-    }
-    return this._indicatorFullName!;
-  }
+  FilteredSeries( ) : super();
+  // NOTE: indicatorFullName skipped - type string is ignored in gen 
 
-  void set indicatorFullName (String v) {
-    this._indicatorFullName = v;
-  }
-    */
-    
-  String? indicatorType;
-    /*
-  String get indicatorType { 
-    if (this._indicatorType == null) {
-      this._indicatorType = "";
-    }
-    return this._indicatorType!;
-  }
+  // NOTE: indicatorType skipped - type string is ignored in gen 
 
-  void set indicatorType (String v) {
-    this._indicatorType = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -63,15 +36,11 @@ class FilteredSeries extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.indicatorFullName != null) {  
-      buffer.writeAll(["\"indicatorFullName\":\`", this.indicatorFullName, "\`,"], "");
-    }
+    // NOTE: skip serialization of indicatorFullName (type string is ignored) ignore type: true
 
-    if (this.indicatorType != null) {  
-      buffer.writeAll(["\"indicatorType\":\`", this.indicatorType, "\`,"], "");
-    }
+    // NOTE: skip serialization of indicatorType (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of series (type SMAIndicator is ignored)} 
+    // NOTE: skip serialization of series (type SMAIndicator is ignored) ignore type: true
   }
 
 }

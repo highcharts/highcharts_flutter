@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,53 +22,13 @@ import 'OptionFragment.dart';
  * AxisBreakBorderObject 
  */
 class AxisBreakBorderObject extends OptionFragment {
-  AxisBreakBorderObject( {
-    this.move = null,
-    this.size = null,
-    this.value = null
-  }) : super();
-  String? move;
-    /*
-  String get move { 
-    if (this._move == null) {
-      this._move = "";
-    }
-    return this._move!;
-  }
+  AxisBreakBorderObject( ) : super();
+  // NOTE: move skipped - type string is ignored in gen 
 
-  void set move (String v) {
-    this._move = v;
-  }
-    */
-    
-  double? size;
-    /*
-  double get size { 
-    if (this._size == null) {
-      this._size = 0;
-    }
-    return this._size!;
-  }
+  // NOTE: size skipped - type number is ignored in gen 
 
-  void set size (double v) {
-    this._size = v;
-  }
-    */
-    
-  double? value;
-    /*
-  double get value { 
-    if (this._value == null) {
-      this._value = 0;
-    }
-    return this._value!;
-  }
+  // NOTE: value skipped - type number is ignored in gen 
 
-  void set value (double v) {
-    this._value = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -77,17 +37,11 @@ class AxisBreakBorderObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.move != null) {  
-      buffer.writeAll(["\"move\":\`", this.move, "\`,"], "");
-    }
+    // NOTE: skip serialization of move (type string is ignored) ignore type: true
 
-    if (this.size != null) {  
-      buffer.writeAll(["\"size\":", this.size, ","], "");
-    }
+    // NOTE: skip serialization of size (type number is ignored) ignore type: true
 
-    if (this.value != null) {  
-      buffer.writeAll(["\"value\":", this.value, ","], "");
-    }
+    // NOTE: skip serialization of value (type number is ignored) ignore type: true
   }
 
 }

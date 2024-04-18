@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -27,98 +27,19 @@ import 'OptionFragment.dart';
  * AxisLabelFormatterContextObject 
  */
 class AxisLabelFormatterContextObject extends OptionFragment {
-  AxisLabelFormatterContextObject( {
-    this.dateTimeLabelFormat = null,
-    this.isFirst = null,
-    this.isLast = null,
-    this.pos = null,
-    this.text = null,
-    this.value = null
-  }) : super();
-  String? dateTimeLabelFormat;
-    /*
-  String get dateTimeLabelFormat { 
-    if (this._dateTimeLabelFormat == null) {
-      this._dateTimeLabelFormat = "";
-    }
-    return this._dateTimeLabelFormat!;
-  }
+  AxisLabelFormatterContextObject( ) : super();
+  // NOTE: dateTimeLabelFormat skipped - type string is ignored in gen 
 
-  void set dateTimeLabelFormat (String v) {
-    this._dateTimeLabelFormat = v;
-  }
-    */
-    
-  bool? isFirst;
-    /*
-  bool get isFirst { 
-    if (this._isFirst == null) {
-      this._isFirst = false;
-    }
-    return this._isFirst!;
-  }
+  // NOTE: isFirst skipped - type boolean is ignored in gen 
 
-  void set isFirst (bool v) {
-    this._isFirst = v;
-  }
-    */
-    
-  bool? isLast;
-    /*
-  bool get isLast { 
-    if (this._isLast == null) {
-      this._isLast = false;
-    }
-    return this._isLast!;
-  }
+  // NOTE: isLast skipped - type boolean is ignored in gen 
 
-  void set isLast (bool v) {
-    this._isLast = v;
-  }
-    */
-    
-  double? pos;
-    /*
-  double get pos { 
-    if (this._pos == null) {
-      this._pos = 0;
-    }
-    return this._pos!;
-  }
+  // NOTE: pos skipped - type number is ignored in gen 
 
-  void set pos (double v) {
-    this._pos = v;
-  }
-    */
-    
-  String? text;
-    /*
-  String get text { 
-    if (this._text == null) {
-      this._text = "";
-    }
-    return this._text!;
-  }
+  // NOTE: text skipped - type string is ignored in gen 
 
-  void set text (String v) {
-    this._text = v;
-  }
-    */
-    
-  String? value;
-    /*
-  String get value { 
-    if (this._value == null) {
-      this._value = "";
-    }
-    return this._value!;
-  }
+  // NOTE: value skipped - type string is ignored in gen 
 
-  void set value (String v) {
-    this._value = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -127,39 +48,27 @@ class AxisLabelFormatterContextObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of tickPositionInfo (type TimeTicksInfoObject is ignored)} 
+    // NOTE: skip serialization of tickPositionInfo (type TimeTicksInfoObject is ignored) ignore type: true
 
-    // NOTE: skip serialization of axis (type Axis is ignored)} 
+    // NOTE: skip serialization of axis (type Axis is ignored) ignore type: true
 
-    // NOTE: skip serialization of chart (type Chart is ignored)} 
+    // NOTE: skip serialization of chart (type Chart is ignored) ignore type: true
 
-    if (this.dateTimeLabelFormat != null) {  
-      buffer.writeAll(["\"dateTimeLabelFormat\":\`", this.dateTimeLabelFormat, "\`,"], "");
-    }
+    // NOTE: skip serialization of dateTimeLabelFormat (type string is ignored) ignore type: true
 
-    if (this.isFirst != null) {  
-      buffer.writeAll(["\"isFirst\":", this.isFirst, ","], "");
-    }
+    // NOTE: skip serialization of isFirst (type boolean is ignored) ignore type: true
 
-    if (this.isLast != null) {  
-      buffer.writeAll(["\"isLast\":", this.isLast, ","], "");
-    }
+    // NOTE: skip serialization of isLast (type boolean is ignored) ignore type: true
 
-    if (this.pos != null) {  
-      buffer.writeAll(["\"pos\":", this.pos, ","], "");
-    }
+    // NOTE: skip serialization of pos (type number is ignored) ignore type: true
 
-    if (this.text != null) {  
-      buffer.writeAll(["\"text\":\`", this.text, "\`,"], "");
-    }
+    // NOTE: skip serialization of text (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of tick (type Tick is ignored)} 
+    // NOTE: skip serialization of tick (type Tick is ignored) ignore type: true
 
-    if (this.value != null) {  
-      buffer.writeAll(["\"value\":\`", this.value, "\`,"], "");
-    }
+    // NOTE: skip serialization of value (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of point (type Point is ignored)} 
+    // NOTE: skip serialization of point (type Point is ignored) ignore type: true
   }
 
 }

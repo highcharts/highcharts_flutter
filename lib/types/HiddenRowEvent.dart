@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,10 +22,9 @@ import 'OptionFragment.dart';
  * HiddenRowEvent 
  */
 class HiddenRowEvent extends OptionFragment {
-  HiddenRowEvent( {
-    this.hiddenRows = null
-  }) : super();
-  List<double>? hiddenRows; // double
+  HiddenRowEvent( ) : super();
+  // NOTE: hiddenRows skipped - type number is ignored in gen 
+
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -34,11 +33,11 @@ class HiddenRowEvent extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of type (type "afterSetHiddenRows" is ignored)} 
+    // NOTE: skip serialization of type (type "afterSetHiddenRows" is ignored) ignore type: true
 
-    // NOTE: skip serialization of detail (type AnyRecord is ignored)} 
+    // NOTE: skip serialization of detail (type AnyRecord is ignored) ignore type: 1
 
-    // NOTE: skip serialization of hiddenRows (type number is ignored)} 
+    // NOTE: skip serialization of hiddenRows (type number is ignored) ignore type: true
   }
 
 }

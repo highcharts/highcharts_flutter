@@ -12,66 +12,105 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
-import 'OptionFragment.dart';
+import 'BubbleSeriesOptions.dart';
+import 'Series.dart';
+import 'PointOptions.dart';
 
-/** 
- * BubbleSeries 
- */
-class BubbleSeries extends OptionFragment {
-  BubbleSeries( {
-    this.bubblePadding = null,
-    this.specialGroup = null
-  }) : super();
-  bool? bubblePadding;
-    /*
-  bool get bubblePadding { 
-    if (this._bubblePadding == null) {
-      this._bubblePadding = false;
-    }
-    return this._bubblePadding!;
-  }
+class BubbleSeries extends Series {
 
-  void set bubblePadding (bool v) {
-    this._bubblePadding = v;
-  }
-    */
-    
-  String? specialGroup;
-    /*
-  String get specialGroup { 
-    if (this._specialGroup == null) {
-      this._specialGroup = "";
-    }
-    return this._specialGroup!;
-  }
+  String? name;
+  BubbleSeriesOptions? options;
+  List<PointOptions>? points;
+  List<List<double>>? data;
 
-  void set specialGroup (String v) {
-    this._specialGroup = v;
-  }
-    */
-    
+  BubbleSeries({
+    this.name = null,
+    this.options = null,
+    this.points = null,
+    this.data = null
+  });
 
-  //////////////////////////////////////////////////////////////////////////////
   
   @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    if (this.bubblePadding != null) {  
-      buffer.writeAll(["\"bubblePadding\":", this.bubblePadding, ","], "");
+
+    if (this.name != null) {
+      buffer.writeAll(["\"name\": \"", this.name!, "\","], "");
     }
 
-    // NOTE: skip serialization of isBubble (type true is ignored)} 
+    buffer.write("\"type\": \"bubble\",");
 
-    // NOTE: skip serialization of pointClass (type typeof BubblePoint is ignored)} 
+    if (this.data != null && this.points == null) {
+      // Serialize as a 2d array
 
-    if (this.specialGroup != null) {  
-      buffer.writeAll(["\"specialGroup\":\`", this.specialGroup, "\`,"], "");
+      StringBuffer seriesData = StringBuffer();
+
+      for (var point in this.data!) {
+        seriesData.writeAll(["["], "");
+        for (var item in point) {
+          seriesData.writeAll([item, ","]);
+        }
+        seriesData.writeAll(["],"], "");
+      }
+
+      buffer.writeAll(["\"data\": [", seriesData, "],"], "");   
+
+
+    } else if (this.points != null) {
+      // Go through the points and write them
+      StringBuffer seriesData = StringBuffer();
+
+      for (var point in this.points!) {
+        seriesData.writeAll(["{"], "");
+        point.toJSONInner(seriesData); 
+        seriesData.writeAll(["},"], "");
+      }
+
+      buffer.writeAll(["\"data\": [", seriesData, "],"], "");
+    }
+
+
+
+    
+    if (this.options?.displayNegative != null) {  
+      buffer.writeAll(["\"displayNegative\":",this.options?.displayNegative, ","], "");
+    }
+
+    // NOTE: skip serialization of marker (type BubblePointMarkerOptions is ignored) ignore type: false
+
+    if (this.options?.minSize != null) {  
+      buffer.writeAll(["\"minSize\":\`",this.options?.minSize, "\`,"], "");
+    }
+
+    if (this.options?.maxSize != null) {  
+      buffer.writeAll(["\"maxSize\":\`",this.options?.maxSize, "\`,"], "");
+    }
+
+    if (this.options?.sizeBy != null) {  
+      buffer.writeAll(["\"sizeBy\":\`",this.options?.sizeBy, "\`,"], "");
+    }
+
+    if (this.options?.sizeByAbsoluteValue != null) {  
+      buffer.writeAll(["\"sizeByAbsoluteValue\":",this.options?.sizeByAbsoluteValue, ","], "");
+    }
+
+    if (this.options?.zMax != null) {  
+      buffer.writeAll(["\"zMax\":",this.options?.zMax, ","], "");
+    }
+
+    if (this.options?.zMin != null) {  
+      buffer.writeAll(["\"zMin\":",this.options?.zMin, ","], "");
+    }
+
+    if (this.options?.zThreshold != null) {  
+      buffer.writeAll(["\"zThreshold\":",this.options?.zThreshold, ","], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -20,6 +20,7 @@
 
 // Options
 import 'types/OptionFragment.dart';
+import 'types/Series.dart';
 import 'types/AccessibilityOptions.dart';
 import 'types/AnnotationOptions.dart';
 import 'types/BoostOptions.dart';
@@ -33,7 +34,7 @@ import 'types/LegendOptions.dart';
 import 'types/LoadingOptions.dart';
 import 'types/NavigationOptions.dart';
 import 'types/NavigatorOptions.dart';
-import 'types/StockProductSeries.dart';
+import 'types/StockPlotOptions.dart';
 import 'types/RangeSelectorOptions.dart';
 import 'types/ScrollbarOptions.dart';
 import 'types/StockToolsOptions.dart';
@@ -41,9 +42,9 @@ import 'types/SubtitleOptions.dart';
 import 'types/TimeOptions.dart';
 import 'types/TitleOptions.dart';
 import 'types/TooltipOptions.dart';
+import 'types/XAxisOptions.dart';
+import 'types/YAxisOptions.dart';
 import 'types/AxisOptions.dart';
-
-
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -136,515 +137,130 @@ class StockOptions extends OptionFragment {
   * @see: https://api.highcharts.com/stock/accessibility
   */
   AccessibilityOptions? accessibility;
-
-      /*
-  AccessibilityOptions get accessibility { 
-    if (this._accessibility == null) {
-      this._accessibility = AccessibilityOptions();
-    }
-    return this._accessibility!;
-  }
-
-  void set accessibility (AccessibilityOptions v) {
-    this._accessibility = v;
-    // notifyListeners();
-  }
-
-      */
-
   
   /** 
   * @see: https://api.highcharts.com/stock/annotations
   */
   AnnotationOptions? annotations;
-
-      /*
-  AnnotationOptions get annotations { 
-    if (this._annotations == null) {
-      this._annotations = AnnotationOptions();
-    }
-    return this._annotations!;
-  }
-
-  void set annotations (AnnotationOptions v) {
-    this._annotations = v;
-    // notifyListeners();
-  }
-
-      */
-
   
   /** 
   * @see: https://api.highcharts.com/stock/boost
   */
   BoostOptions? boost;
-
-      /*
-  BoostOptions get boost { 
-    if (this._boost == null) {
-      this._boost = BoostOptions();
-    }
-    return this._boost!;
-  }
-
-  void set boost (BoostOptions v) {
-    this._boost = v;
-    // notifyListeners();
-  }
-
-      */
-
   
   /** 
   * @see: https://api.highcharts.com/stock/caption
   */
   CaptionOptions? caption;
-
-      /*
-  CaptionOptions get caption { 
-    if (this._caption == null) {
-      this._caption = CaptionOptions();
-    }
-    return this._caption!;
-  }
-
-  void set caption (CaptionOptions v) {
-    this._caption = v;
-    // notifyListeners();
-  }
-
-      */
-
   
   /** 
   * @see: https://api.highcharts.com/stock/chart
   */
   ChartOptions? chart;
-
-      /*
-  ChartOptions get chart { 
-    if (this._chart == null) {
-      this._chart = ChartOptions();
-    }
-    return this._chart!;
-  }
-
-  void set chart (ChartOptions v) {
-    this._chart = v;
-    // notifyListeners();
-  }
-
-      */
-
   
   /** 
   * @see: https://api.highcharts.com/stock/colorAxis
   */
   ColorAxisOptions? colorAxis;
-
-      /*
-  ColorAxisOptions get colorAxis { 
-    if (this._colorAxis == null) {
-      this._colorAxis = ColorAxisOptions();
-    }
-    return this._colorAxis!;
-  }
-
-  void set colorAxis (ColorAxisOptions v) {
-    this._colorAxis = v;
-    // notifyListeners();
-  }
-
-      */
-
   
   /** 
   * @see: https://api.highcharts.com/stock/credits
   */
   CreditsOptions? credits;
-
-      /*
-  CreditsOptions get credits { 
-    if (this._credits == null) {
-      this._credits = CreditsOptions();
-    }
-    return this._credits!;
-  }
-
-  void set credits (CreditsOptions v) {
-    this._credits = v;
-    // notifyListeners();
-  }
-
-      */
-
   
   /** 
   * @see: https://api.highcharts.com/stock/data
   */
   DataOptions? data;
-
-      /*
-  DataOptions get data { 
-    if (this._data == null) {
-      this._data = DataOptions();
-    }
-    return this._data!;
-  }
-
-  void set data (DataOptions v) {
-    this._data = v;
-    // notifyListeners();
-  }
-
-      */
-
   
   /** 
   * @see: https://api.highcharts.com/stock/exporting
   */
   ExportingOptions? exporting;
-
-      /*
-  ExportingOptions get exporting { 
-    if (this._exporting == null) {
-      this._exporting = ExportingOptions();
-    }
-    return this._exporting!;
-  }
-
-  void set exporting (ExportingOptions v) {
-    this._exporting = v;
-    // notifyListeners();
-  }
-
-      */
-
   
   /** 
   * @see: https://api.highcharts.com/stock/legend
   */
   LegendOptions? legend;
-
-      /*
-  LegendOptions get legend { 
-    if (this._legend == null) {
-      this._legend = LegendOptions();
-    }
-    return this._legend!;
-  }
-
-  void set legend (LegendOptions v) {
-    this._legend = v;
-    // notifyListeners();
-  }
-
-      */
-
   
   /** 
   * @see: https://api.highcharts.com/stock/loading
   */
   LoadingOptions? loading;
-
-      /*
-  LoadingOptions get loading { 
-    if (this._loading == null) {
-      this._loading = LoadingOptions();
-    }
-    return this._loading!;
-  }
-
-  void set loading (LoadingOptions v) {
-    this._loading = v;
-    // notifyListeners();
-  }
-
-      */
-
   
   /** 
   * @see: https://api.highcharts.com/stock/navigation
   */
   NavigationOptions? navigation;
-
-      /*
-  NavigationOptions get navigation { 
-    if (this._navigation == null) {
-      this._navigation = NavigationOptions();
-    }
-    return this._navigation!;
-  }
-
-  void set navigation (NavigationOptions v) {
-    this._navigation = v;
-    // notifyListeners();
-  }
-
-      */
-
   
   /** 
   * @see: https://api.highcharts.com/stock/navigator
   */
   NavigatorOptions? navigator;
-
-      /*
-  NavigatorOptions get navigator { 
-    if (this._navigator == null) {
-      this._navigator = NavigatorOptions();
-    }
-    return this._navigator!;
-  }
-
-  void set navigator (NavigatorOptions v) {
-    this._navigator = v;
-    // notifyListeners();
-  }
-
-      */
-
   
   /** 
   * @see: https://api.highcharts.com/stock/plotOptions
   */
-  StockProductSeries? plotOptions;
-
-      /*
-  StockProductSeries get plotOptions { 
-    if (this._plotOptions == null) {
-      this._plotOptions = StockProductSeries();
-    }
-    return this._plotOptions!;
-  }
-
-  void set plotOptions (StockProductSeries v) {
-    this._plotOptions = v;
-    // notifyListeners();
-  }
-
-      */
-
+  StockPlotOptions? plotOptions;
   
   /** 
   * @see: https://api.highcharts.com/stock/rangeSelector
   */
   RangeSelectorOptions? rangeSelector;
-
-      /*
-  RangeSelectorOptions get rangeSelector { 
-    if (this._rangeSelector == null) {
-      this._rangeSelector = RangeSelectorOptions();
-    }
-    return this._rangeSelector!;
-  }
-
-  void set rangeSelector (RangeSelectorOptions v) {
-    this._rangeSelector = v;
-    // notifyListeners();
-  }
-
-      */
-
   
   /** 
   * @see: https://api.highcharts.com/stock/scrollbar
   */
   ScrollbarOptions? scrollbar;
-
-      /*
-  ScrollbarOptions get scrollbar { 
-    if (this._scrollbar == null) {
-      this._scrollbar = ScrollbarOptions();
-    }
-    return this._scrollbar!;
-  }
-
-  void set scrollbar (ScrollbarOptions v) {
-    this._scrollbar = v;
-    // notifyListeners();
-  }
-
-      */
-
   
   /** 
   * @see: https://api.highcharts.com/stock/stockTools
   */
   StockToolsOptions? stockTools;
-
-      /*
-  StockToolsOptions get stockTools { 
-    if (this._stockTools == null) {
-      this._stockTools = StockToolsOptions();
-    }
-    return this._stockTools!;
-  }
-
-  void set stockTools (StockToolsOptions v) {
-    this._stockTools = v;
-    // notifyListeners();
-  }
-
-      */
-
   
   /** 
   * @see: https://api.highcharts.com/stock/subtitle
   */
   SubtitleOptions? subtitle;
-
-      /*
-  SubtitleOptions get subtitle { 
-    if (this._subtitle == null) {
-      this._subtitle = SubtitleOptions();
-    }
-    return this._subtitle!;
-  }
-
-  void set subtitle (SubtitleOptions v) {
-    this._subtitle = v;
-    // notifyListeners();
-  }
-
-      */
-
   
   /** 
   * @see: https://api.highcharts.com/stock/time
   */
   TimeOptions? time;
-
-      /*
-  TimeOptions get time { 
-    if (this._time == null) {
-      this._time = TimeOptions();
-    }
-    return this._time!;
-  }
-
-  void set time (TimeOptions v) {
-    this._time = v;
-    // notifyListeners();
-  }
-
-      */
-
   
   /** 
   * @see: https://api.highcharts.com/stock/title
   */
   TitleOptions? title;
-
-      /*
-  TitleOptions get title { 
-    if (this._title == null) {
-      this._title = TitleOptions();
-    }
-    return this._title!;
-  }
-
-  void set title (TitleOptions v) {
-    this._title = v;
-    // notifyListeners();
-  }
-
-      */
-
   
   /** 
   * @see: https://api.highcharts.com/stock/tooltip
   */
   TooltipOptions? tooltip;
-
-      /*
-  TooltipOptions get tooltip { 
-    if (this._tooltip == null) {
-      this._tooltip = TooltipOptions();
-    }
-    return this._tooltip!;
-  }
-
-  void set tooltip (TooltipOptions v) {
-    this._tooltip = v;
-    // notifyListeners();
-  }
-
-      */
-
   
   /** 
   * @see: https://api.highcharts.com/stock/xAxis
   */
-  AxisOptions? xAxis;
-
-      /*
-  AxisOptions get xAxis { 
-    if (this._xAxis == null) {
-      this._xAxis = AxisOptions();
-    }
-    return this._xAxis!;
-  }
-
-  void set xAxis (AxisOptions v) {
-    this._xAxis = v;
-    // notifyListeners();
-  }
-
-      */
-
+  List<XAxisOptions>? xAxis;
   
   /** 
   * @see: https://api.highcharts.com/stock/yAxis
   */
-  AxisOptions? yAxis;
-
-      /*
-  AxisOptions get yAxis { 
-    if (this._yAxis == null) {
-      this._yAxis = AxisOptions();
-    }
-    return this._yAxis!;
-  }
-
-  void set yAxis (AxisOptions v) {
-    this._yAxis = v;
-    // notifyListeners();
-  }
-
-      */
-
+  List<YAxisOptions>? yAxis;
   
   /** 
   * @see: https://api.highcharts.com/stock/zAxis
   */
-  AxisOptions? zAxis;
-
-      /*
-  AxisOptions get zAxis { 
-    if (this._zAxis == null) {
-      this._zAxis = AxisOptions();
-    }
-    return this._zAxis!;
-  }
-
-  void set zAxis (AxisOptions v) {
-    this._zAxis = v;
-    // notifyListeners();
-  }
-
-      */
-
+  List<AxisOptions>? zAxis;
   
 
-
-  // TODO: Generate series list based on allowed series.
-  List<dynamic> series = [];
+  var series = <Series>[];
 
   //////////////////////////////////////////////////////////////////////////////
 
   /** Constructor */
   StockOptions({
+    this.series = const [],
     this.accessibility = null,
     this.annotations = null,
     this.boost = null,
@@ -680,7 +296,7 @@ class StockOptions extends OptionFragment {
     // This is like the ugliest thing ever, but we can't solve it with 
     // inheritance without duplicating a lot of code and increasing complexity
     // of the generator significantly
-    for (var i = 0; i < this.series.length; ++i) {
+    /** for (var i = 0; i < this.series.length; ++i) {
       if (!(this.series[i] is ABandsOptions ||
       this.series[i] is ADOptions ||
       this.series[i] is AOOptions ||
@@ -755,7 +371,7 @@ class StockOptions extends OptionFragment {
       this.series[i] is ZigzagOptions )) {
         throw ArgumentError.value(this.series[i]);
       }
-    }
+    } */
 
     // Serialize the series
     StringBuffer seriesData = StringBuffer();
@@ -768,99 +384,123 @@ class StockOptions extends OptionFragment {
     buffer.writeAll(["\"series\": [", seriesData, "],"], "");
   
     if (this.accessibility != null) {  
-      buffer.writeAll(["\"accessibility\":", this.accessibility?.toJSON(), ","], "");
+      buffer.writeAll(["\"accessibility\":",this.accessibility?.toJSON(), ","], "");
     }
 
     if (this.annotations != null) {  
-      buffer.writeAll(["\"annotations\":", this.annotations?.toJSON(), ","], "");
+      buffer.writeAll(["\"annotations\":",this.annotations?.toJSON(), ","], "");
     }
 
     if (this.boost != null) {  
-      buffer.writeAll(["\"boost\":", this.boost?.toJSON(), ","], "");
+      buffer.writeAll(["\"boost\":",this.boost?.toJSON(), ","], "");
     }
 
     if (this.caption != null) {  
-      buffer.writeAll(["\"caption\":", this.caption?.toJSON(), ","], "");
+      buffer.writeAll(["\"caption\":",this.caption?.toJSON(), ","], "");
     }
 
     if (this.chart != null) {  
-      buffer.writeAll(["\"chart\":", this.chart?.toJSON(), ","], "");
+      buffer.writeAll(["\"chart\":",this.chart?.toJSON(), ","], "");
     }
 
     if (this.colorAxis != null) {  
-      buffer.writeAll(["\"colorAxis\":", this.colorAxis?.toJSON(), ","], "");
+      buffer.writeAll(["\"colorAxis\":",this.colorAxis?.toJSON(), ","], "");
     }
 
     if (this.credits != null) {  
-      buffer.writeAll(["\"credits\":", this.credits?.toJSON(), ","], "");
+      buffer.writeAll(["\"credits\":",this.credits?.toJSON(), ","], "");
     }
 
     if (this.data != null) {  
-      buffer.writeAll(["\"data\":", this.data?.toJSON(), ","], "");
+      buffer.writeAll(["\"data\":",this.data?.toJSON(), ","], "");
     }
 
     if (this.exporting != null) {  
-      buffer.writeAll(["\"exporting\":", this.exporting?.toJSON(), ","], "");
+      buffer.writeAll(["\"exporting\":",this.exporting?.toJSON(), ","], "");
     }
 
     if (this.legend != null) {  
-      buffer.writeAll(["\"legend\":", this.legend?.toJSON(), ","], "");
+      buffer.writeAll(["\"legend\":",this.legend?.toJSON(), ","], "");
     }
 
     if (this.loading != null) {  
-      buffer.writeAll(["\"loading\":", this.loading?.toJSON(), ","], "");
+      buffer.writeAll(["\"loading\":",this.loading?.toJSON(), ","], "");
     }
 
     if (this.navigation != null) {  
-      buffer.writeAll(["\"navigation\":", this.navigation?.toJSON(), ","], "");
+      buffer.writeAll(["\"navigation\":",this.navigation?.toJSON(), ","], "");
     }
 
     if (this.navigator != null) {  
-      buffer.writeAll(["\"navigator\":", this.navigator?.toJSON(), ","], "");
+      buffer.writeAll(["\"navigator\":",this.navigator?.toJSON(), ","], "");
     }
 
     if (this.plotOptions != null) {  
-      buffer.writeAll(["\"plotOptions\":", this.plotOptions?.toJSON(), ","], "");
+      buffer.writeAll(["\"plotOptions\":",this.plotOptions?.toJSON(), ","], "");
     }
 
     if (this.rangeSelector != null) {  
-      buffer.writeAll(["\"rangeSelector\":", this.rangeSelector?.toJSON(), ","], "");
+      buffer.writeAll(["\"rangeSelector\":",this.rangeSelector?.toJSON(), ","], "");
     }
 
     if (this.scrollbar != null) {  
-      buffer.writeAll(["\"scrollbar\":", this.scrollbar?.toJSON(), ","], "");
+      buffer.writeAll(["\"scrollbar\":",this.scrollbar?.toJSON(), ","], "");
     }
 
     if (this.stockTools != null) {  
-      buffer.writeAll(["\"stockTools\":", this.stockTools?.toJSON(), ","], "");
+      buffer.writeAll(["\"stockTools\":",this.stockTools?.toJSON(), ","], "");
     }
 
     if (this.subtitle != null) {  
-      buffer.writeAll(["\"subtitle\":", this.subtitle?.toJSON(), ","], "");
+      buffer.writeAll(["\"subtitle\":",this.subtitle?.toJSON(), ","], "");
     }
 
     if (this.time != null) {  
-      buffer.writeAll(["\"time\":", this.time?.toJSON(), ","], "");
+      buffer.writeAll(["\"time\":",this.time?.toJSON(), ","], "");
     }
 
     if (this.title != null) {  
-      buffer.writeAll(["\"title\":", this.title?.toJSON(), ","], "");
+      buffer.writeAll(["\"title\":",this.title?.toJSON(), ","], "");
     }
 
     if (this.tooltip != null) {  
-      buffer.writeAll(["\"tooltip\":", this.tooltip?.toJSON(), ","], "");
+      buffer.writeAll(["\"tooltip\":",this.tooltip?.toJSON(), ","], "");
     }
 
     if (this.xAxis != null) {  
-      buffer.writeAll(["\"xAxis\":", this.xAxis?.toJSON(), ","], "");
+     StringBuffer arrData = StringBuffer();
+
+      for (var item in this.xAxis!) {
+          arrData.write("{");
+          item.toJSONInner(arrData);
+          arrData.write("}");
+      }
+      buffer.writeAll(["\"xAxis\": [", arrData , "],"], "");   
+        
     }
 
     if (this.yAxis != null) {  
-      buffer.writeAll(["\"yAxis\":", this.yAxis?.toJSON(), ","], "");
+     StringBuffer arrData = StringBuffer();
+
+      for (var item in this.yAxis!) {
+          arrData.write("{");
+          item.toJSONInner(arrData);
+          arrData.write("}");
+      }
+      buffer.writeAll(["\"yAxis\": [", arrData , "],"], "");   
+        
     }
 
     if (this.zAxis != null) {  
-      buffer.writeAll(["\"zAxis\":", this.zAxis?.toJSON(), ","], "");
+     StringBuffer arrData = StringBuffer();
+
+      for (var item in this.zAxis!) {
+          arrData.write("{");
+          item.toJSONInner(arrData);
+          arrData.write("}");
+      }
+      buffer.writeAll(["\"zAxis\": [", arrData , "],"], "");   
+        
     }
   }
 

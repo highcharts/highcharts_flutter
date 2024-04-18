@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -35,11 +35,11 @@ class DataConnectorOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of dataModifier (type SortModifierOptions is ignored)} 
+    // NOTE: skip serialization of dataModifier (type SortModifierOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of dataTable (type DataTableOptions is ignored)} 
+    // NOTE: skip serialization of dataTable (type DataTableOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of metadata (type Metadata is ignored)} 
+    // NOTE: skip serialization of metadata (type Metadata is ignored) ignore type: true
   }
 
 }

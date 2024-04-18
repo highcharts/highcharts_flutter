@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -25,7 +25,19 @@ import 'OptionFragment.dart';
  * DefaultOptions 
  */
 class DefaultOptions extends Options {
-  DefaultOptions( ) : super();
+  DefaultOptions( {
+    super.approximation = null,
+    super.enableSimulation = null,
+    super.friction = null,
+    super.gravitationalConstant = null,
+    super.initialPositionRadius = null,
+    super.integration = null,
+    super.linkLength = null,
+    super.maxIterations = null,
+    super.maxSpeed = null,
+    super.theta = null,
+    super.type = null
+  }) : super();
   
 
   //////////////////////////////////////////////////////////////////////////////
@@ -35,9 +47,9 @@ class DefaultOptions extends Options {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of xAxis (type Generic is ignored)} 
+    // NOTE: skip serialization of xAxis (type Generic is ignored) ignore type: true
 
-    // NOTE: skip serialization of yAxis (type Generic is ignored)} 
+    // NOTE: skip serialization of yAxis (type Generic is ignored) ignore type: true
   }
 
 }

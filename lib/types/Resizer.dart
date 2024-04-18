@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -32,13 +32,13 @@ class Resizer extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of mouseDownSnapX (type Function is ignored)} 
+    // NOTE: skip serialization of mouseDownSnapX (type Function is ignored) ignore type: 1
 
-    // NOTE: skip serialization of mouseDownSnapY (type Function is ignored)} 
+    // NOTE: skip serialization of mouseDownSnapY (type Function is ignored) ignore type: 1
 
-    // NOTE: skip serialization of mouseMoveSnap (type Function is ignored)} 
+    // NOTE: skip serialization of mouseMoveSnap (type Function is ignored) ignore type: 1
 
-    // NOTE: skip serialization of mouseUpSnap (type Function is ignored)} 
+    // NOTE: skip serialization of mouseUpSnap (type Function is ignored) ignore type: 1
   }
 
 }

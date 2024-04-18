@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,83 +22,17 @@ import 'OptionFragment.dart';
  * ColorAxisDataClassesOptions 
  */
 class ColorAxisDataClassesOptions extends OptionFragment {
-  ColorAxisDataClassesOptions( {
-    this.color = null,
-    this.colorIndex = null,
-    this.from = null,
-    this.name = null,
-    this.to = null
-  }) : super();
-  String? color;
-    /*
-  String get color { 
-    if (this._color == null) {
-      this._color = "";
-    }
-    return this._color!;
-  }
+  ColorAxisDataClassesOptions( ) : super();
+  // NOTE: color skipped - type string is ignored in gen 
 
-  void set color (String v) {
-    this._color = v;
-  }
-    */
-    
-  double? colorIndex;
-    /*
-  double get colorIndex { 
-    if (this._colorIndex == null) {
-      this._colorIndex = 0;
-    }
-    return this._colorIndex!;
-  }
+  // NOTE: colorIndex skipped - type number is ignored in gen 
 
-  void set colorIndex (double v) {
-    this._colorIndex = v;
-  }
-    */
-    
-  double? from;
-    /*
-  double get from { 
-    if (this._from == null) {
-      this._from = 0;
-    }
-    return this._from!;
-  }
+  // NOTE: from skipped - type number is ignored in gen 
 
-  void set from (double v) {
-    this._from = v;
-  }
-    */
-    
-  String? name;
-    /*
-  String get name { 
-    if (this._name == null) {
-      this._name = "";
-    }
-    return this._name!;
-  }
+  // NOTE: name skipped - type string is ignored in gen 
 
-  void set name (String v) {
-    this._name = v;
-  }
-    */
-    
-  double? to;
-    /*
-  double get to { 
-    if (this._to == null) {
-      this._to = 0;
-    }
-    return this._to!;
-  }
+  // NOTE: to skipped - type number is ignored in gen 
 
-  void set to (double v) {
-    this._to = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -107,25 +41,15 @@ class ColorAxisDataClassesOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.color != null) {  
-      buffer.writeAll(["\"color\":\`", this.color, "\`,"], "");
-    }
+    // NOTE: skip serialization of color (type string is ignored) ignore type: true
 
-    if (this.colorIndex != null) {  
-      buffer.writeAll(["\"colorIndex\":", this.colorIndex, ","], "");
-    }
+    // NOTE: skip serialization of colorIndex (type number is ignored) ignore type: true
 
-    if (this.from != null) {  
-      buffer.writeAll(["\"from\":", this.from, ","], "");
-    }
+    // NOTE: skip serialization of from (type number is ignored) ignore type: true
 
-    if (this.name != null) {  
-      buffer.writeAll(["\"name\":\`", this.name, "\`,"], "");
-    }
+    // NOTE: skip serialization of name (type string is ignored) ignore type: true
 
-    if (this.to != null) {  
-      buffer.writeAll(["\"to\":", this.to, ","], "");
-    }
+    // NOTE: skip serialization of to (type number is ignored) ignore type: true
   }
 
 }

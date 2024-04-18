@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,158 +22,27 @@ import 'OptionFragment.dart';
  * LangAccessibilityAxisOptions 
  */
 class LangAccessibilityAxisOptions extends OptionFragment {
-  LangAccessibilityAxisOptions( {
-    this.rangeCategories = null,
-    this.rangeFromTo = null,
-    this.timeRangeDays = null,
-    this.timeRangeHours = null,
-    this.timeRangeMinutes = null,
-    this.timeRangeSeconds = null,
-    this.xAxisDescriptionPlural = null,
-    this.xAxisDescriptionSingular = null,
-    this.yAxisDescriptionPlural = null,
-    this.yAxisDescriptionSingular = null
-  }) : super();
-  String? rangeCategories;
-    /*
-  String get rangeCategories { 
-    if (this._rangeCategories == null) {
-      this._rangeCategories = "";
-    }
-    return this._rangeCategories!;
-  }
+  LangAccessibilityAxisOptions( ) : super();
+  // NOTE: rangeCategories skipped - type string is ignored in gen 
 
-  void set rangeCategories (String v) {
-    this._rangeCategories = v;
-  }
-    */
-    
-  String? rangeFromTo;
-    /*
-  String get rangeFromTo { 
-    if (this._rangeFromTo == null) {
-      this._rangeFromTo = "";
-    }
-    return this._rangeFromTo!;
-  }
+  // NOTE: rangeFromTo skipped - type string is ignored in gen 
 
-  void set rangeFromTo (String v) {
-    this._rangeFromTo = v;
-  }
-    */
-    
-  String? timeRangeDays;
-    /*
-  String get timeRangeDays { 
-    if (this._timeRangeDays == null) {
-      this._timeRangeDays = "";
-    }
-    return this._timeRangeDays!;
-  }
+  // NOTE: timeRangeDays skipped - type string is ignored in gen 
 
-  void set timeRangeDays (String v) {
-    this._timeRangeDays = v;
-  }
-    */
-    
-  String? timeRangeHours;
-    /*
-  String get timeRangeHours { 
-    if (this._timeRangeHours == null) {
-      this._timeRangeHours = "";
-    }
-    return this._timeRangeHours!;
-  }
+  // NOTE: timeRangeHours skipped - type string is ignored in gen 
 
-  void set timeRangeHours (String v) {
-    this._timeRangeHours = v;
-  }
-    */
-    
-  String? timeRangeMinutes;
-    /*
-  String get timeRangeMinutes { 
-    if (this._timeRangeMinutes == null) {
-      this._timeRangeMinutes = "";
-    }
-    return this._timeRangeMinutes!;
-  }
+  // NOTE: timeRangeMinutes skipped - type string is ignored in gen 
 
-  void set timeRangeMinutes (String v) {
-    this._timeRangeMinutes = v;
-  }
-    */
-    
-  String? timeRangeSeconds;
-    /*
-  String get timeRangeSeconds { 
-    if (this._timeRangeSeconds == null) {
-      this._timeRangeSeconds = "";
-    }
-    return this._timeRangeSeconds!;
-  }
+  // NOTE: timeRangeSeconds skipped - type string is ignored in gen 
 
-  void set timeRangeSeconds (String v) {
-    this._timeRangeSeconds = v;
-  }
-    */
-    
-  String? xAxisDescriptionPlural;
-    /*
-  String get xAxisDescriptionPlural { 
-    if (this._xAxisDescriptionPlural == null) {
-      this._xAxisDescriptionPlural = "";
-    }
-    return this._xAxisDescriptionPlural!;
-  }
+  // NOTE: xAxisDescriptionPlural skipped - type string is ignored in gen 
 
-  void set xAxisDescriptionPlural (String v) {
-    this._xAxisDescriptionPlural = v;
-  }
-    */
-    
-  String? xAxisDescriptionSingular;
-    /*
-  String get xAxisDescriptionSingular { 
-    if (this._xAxisDescriptionSingular == null) {
-      this._xAxisDescriptionSingular = "";
-    }
-    return this._xAxisDescriptionSingular!;
-  }
+  // NOTE: xAxisDescriptionSingular skipped - type string is ignored in gen 
 
-  void set xAxisDescriptionSingular (String v) {
-    this._xAxisDescriptionSingular = v;
-  }
-    */
-    
-  String? yAxisDescriptionPlural;
-    /*
-  String get yAxisDescriptionPlural { 
-    if (this._yAxisDescriptionPlural == null) {
-      this._yAxisDescriptionPlural = "";
-    }
-    return this._yAxisDescriptionPlural!;
-  }
+  // NOTE: yAxisDescriptionPlural skipped - type string is ignored in gen 
 
-  void set yAxisDescriptionPlural (String v) {
-    this._yAxisDescriptionPlural = v;
-  }
-    */
-    
-  String? yAxisDescriptionSingular;
-    /*
-  String get yAxisDescriptionSingular { 
-    if (this._yAxisDescriptionSingular == null) {
-      this._yAxisDescriptionSingular = "";
-    }
-    return this._yAxisDescriptionSingular!;
-  }
+  // NOTE: yAxisDescriptionSingular skipped - type string is ignored in gen 
 
-  void set yAxisDescriptionSingular (String v) {
-    this._yAxisDescriptionSingular = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -182,45 +51,25 @@ class LangAccessibilityAxisOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.rangeCategories != null) {  
-      buffer.writeAll(["\"rangeCategories\":\`", this.rangeCategories, "\`,"], "");
-    }
+    // NOTE: skip serialization of rangeCategories (type string is ignored) ignore type: true
 
-    if (this.rangeFromTo != null) {  
-      buffer.writeAll(["\"rangeFromTo\":\`", this.rangeFromTo, "\`,"], "");
-    }
+    // NOTE: skip serialization of rangeFromTo (type string is ignored) ignore type: true
 
-    if (this.timeRangeDays != null) {  
-      buffer.writeAll(["\"timeRangeDays\":\`", this.timeRangeDays, "\`,"], "");
-    }
+    // NOTE: skip serialization of timeRangeDays (type string is ignored) ignore type: true
 
-    if (this.timeRangeHours != null) {  
-      buffer.writeAll(["\"timeRangeHours\":\`", this.timeRangeHours, "\`,"], "");
-    }
+    // NOTE: skip serialization of timeRangeHours (type string is ignored) ignore type: true
 
-    if (this.timeRangeMinutes != null) {  
-      buffer.writeAll(["\"timeRangeMinutes\":\`", this.timeRangeMinutes, "\`,"], "");
-    }
+    // NOTE: skip serialization of timeRangeMinutes (type string is ignored) ignore type: true
 
-    if (this.timeRangeSeconds != null) {  
-      buffer.writeAll(["\"timeRangeSeconds\":\`", this.timeRangeSeconds, "\`,"], "");
-    }
+    // NOTE: skip serialization of timeRangeSeconds (type string is ignored) ignore type: true
 
-    if (this.xAxisDescriptionPlural != null) {  
-      buffer.writeAll(["\"xAxisDescriptionPlural\":\`", this.xAxisDescriptionPlural, "\`,"], "");
-    }
+    // NOTE: skip serialization of xAxisDescriptionPlural (type string is ignored) ignore type: true
 
-    if (this.xAxisDescriptionSingular != null) {  
-      buffer.writeAll(["\"xAxisDescriptionSingular\":\`", this.xAxisDescriptionSingular, "\`,"], "");
-    }
+    // NOTE: skip serialization of xAxisDescriptionSingular (type string is ignored) ignore type: true
 
-    if (this.yAxisDescriptionPlural != null) {  
-      buffer.writeAll(["\"yAxisDescriptionPlural\":\`", this.yAxisDescriptionPlural, "\`,"], "");
-    }
+    // NOTE: skip serialization of yAxisDescriptionPlural (type string is ignored) ignore type: true
 
-    if (this.yAxisDescriptionSingular != null) {  
-      buffer.writeAll(["\"yAxisDescriptionSingular\":\`", this.yAxisDescriptionSingular, "\`,"], "");
-    }
+    // NOTE: skip serialization of yAxisDescriptionSingular (type string is ignored) ignore type: true
   }
 
 }

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -33,13 +33,13 @@ class PointStatesOptions extends StatesOptions {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of hover (type "states">> is ignored)} 
+    // NOTE: skip serialization of hover (type "states">> is ignored) ignore type: true
 
-    // NOTE: skip serialization of inactive (type "states">> is ignored)} 
+    // NOTE: skip serialization of inactive (type "states">> is ignored) ignore type: true
 
-    // NOTE: skip serialization of normal (type "states">> is ignored)} 
+    // NOTE: skip serialization of normal (type "states">> is ignored) ignore type: true
 
-    // NOTE: skip serialization of select (type "states">> is ignored)} 
+    // NOTE: skip serialization of select (type "states">> is ignored) ignore type: true
   }
 
 }

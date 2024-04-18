@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,98 +22,19 @@ import 'OptionFragment.dart';
  * ShadowOptionsObject 
  */
 class ShadowOptionsObject extends OptionFragment {
-  ShadowOptionsObject( {
-    this.color = null,
-    this.filterUnits = null,
-    this.offsetX = null,
-    this.offsetY = null,
-    this.opacity = null,
-    this.width = null
-  }) : super();
-  String? color;
-    /*
-  String get color { 
-    if (this._color == null) {
-      this._color = "";
-    }
-    return this._color!;
-  }
+  ShadowOptionsObject( ) : super();
+  // NOTE: color skipped - type string is ignored in gen 
 
-  void set color (String v) {
-    this._color = v;
-  }
-    */
-    
-  String? filterUnits;
-    /*
-  String get filterUnits { 
-    if (this._filterUnits == null) {
-      this._filterUnits = "";
-    }
-    return this._filterUnits!;
-  }
+  // NOTE: filterUnits skipped - type string is ignored in gen 
 
-  void set filterUnits (String v) {
-    this._filterUnits = v;
-  }
-    */
-    
-  double? offsetX;
-    /*
-  double get offsetX { 
-    if (this._offsetX == null) {
-      this._offsetX = 0;
-    }
-    return this._offsetX!;
-  }
+  // NOTE: offsetX skipped - type number is ignored in gen 
 
-  void set offsetX (double v) {
-    this._offsetX = v;
-  }
-    */
-    
-  double? offsetY;
-    /*
-  double get offsetY { 
-    if (this._offsetY == null) {
-      this._offsetY = 0;
-    }
-    return this._offsetY!;
-  }
+  // NOTE: offsetY skipped - type number is ignored in gen 
 
-  void set offsetY (double v) {
-    this._offsetY = v;
-  }
-    */
-    
-  double? opacity;
-    /*
-  double get opacity { 
-    if (this._opacity == null) {
-      this._opacity = 0;
-    }
-    return this._opacity!;
-  }
+  // NOTE: opacity skipped - type number is ignored in gen 
 
-  void set opacity (double v) {
-    this._opacity = v;
-  }
-    */
-    
-  double? width;
-    /*
-  double get width { 
-    if (this._width == null) {
-      this._width = 0;
-    }
-    return this._width!;
-  }
+  // NOTE: width skipped - type number is ignored in gen 
 
-  void set width (double v) {
-    this._width = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -122,29 +43,17 @@ class ShadowOptionsObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.color != null) {  
-      buffer.writeAll(["\"color\":\`", this.color, "\`,"], "");
-    }
+    // NOTE: skip serialization of color (type string is ignored) ignore type: true
 
-    if (this.filterUnits != null) {  
-      buffer.writeAll(["\"filterUnits\":\`", this.filterUnits, "\`,"], "");
-    }
+    // NOTE: skip serialization of filterUnits (type string is ignored) ignore type: true
 
-    if (this.offsetX != null) {  
-      buffer.writeAll(["\"offsetX\":", this.offsetX, ","], "");
-    }
+    // NOTE: skip serialization of offsetX (type number is ignored) ignore type: true
 
-    if (this.offsetY != null) {  
-      buffer.writeAll(["\"offsetY\":", this.offsetY, ","], "");
-    }
+    // NOTE: skip serialization of offsetY (type number is ignored) ignore type: true
 
-    if (this.opacity != null) {  
-      buffer.writeAll(["\"opacity\":", this.opacity, ","], "");
-    }
+    // NOTE: skip serialization of opacity (type number is ignored) ignore type: true
 
-    if (this.width != null) {  
-      buffer.writeAll(["\"width\":", this.width, ","], "");
-    }
+    // NOTE: skip serialization of width (type number is ignored) ignore type: true
   }
 
 }

@@ -12,31 +12,118 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
-import 'OptionFragment.dart';
+import 'SunburstSeriesOptions.dart';
+import 'Series.dart';
+import 'PointOptions.dart';
 
-/** 
- * SunburstSeries 
- */
-class SunburstSeries extends OptionFragment {
-  SunburstSeries( ) : super();
-  
+class SunburstSeries extends Series {
 
-  //////////////////////////////////////////////////////////////////////////////
+  String? name;
+  SunburstSeriesOptions? options;
+  List<PointOptions>? points;
+  List<List<double>>? data;
+
+  SunburstSeries({
+    this.name = null,
+    this.options = null,
+    this.points = null,
+    this.data = null
+  });
+
   
   @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of pointClass (type typeof SunburstPoint is ignored)} 
 
-    // NOTE: skip serialization of utils (type Generic is ignored)} 
+    if (this.name != null) {
+      buffer.writeAll(["\"name\": \"", this.name!, "\","], "");
+    }
 
-    // NOTE: skip serialization of NodeClass (type typeof SunburstNode is ignored)} 
+    buffer.write("\"type\": \"sunburst\",");
+
+    if (this.data != null && this.points == null) {
+      // Serialize as a 2d array
+
+      StringBuffer seriesData = StringBuffer();
+
+      for (var point in this.data!) {
+        seriesData.writeAll(["["], "");
+        for (var item in point) {
+          seriesData.writeAll([item, ","]);
+        }
+        seriesData.writeAll(["],"], "");
+      }
+
+      buffer.writeAll(["\"data\": [", seriesData, "],"], "");   
+
+
+    } else if (this.points != null) {
+      // Go through the points and write them
+      StringBuffer seriesData = StringBuffer();
+
+      for (var point in this.points!) {
+        seriesData.writeAll(["{"], "");
+        point.toJSONInner(seriesData); 
+        seriesData.writeAll(["},"], "");
+      }
+
+      buffer.writeAll(["\"data\": [", seriesData, "],"], "");
+    }
+
+
+
+    
+    if (this.options?.center != null) {  
+     StringBuffer arrData = StringBuffer();
+
+      arrData.writeAll(this.options!.center!, ",");
+      buffer.writeAll(["\"center\": [", arrData , "],"], "");   
+        
+    }
+
+    if (this.options?.dataLabels != null) {  
+     StringBuffer arrData = StringBuffer();
+
+      for (var item in this.options!.dataLabels!) {
+          arrData.write("{");
+          item.toJSONInner(arrData);
+          arrData.write("}");
+      }
+      buffer.writeAll(["\"dataLabels\": [", arrData , "],"], "");   
+        
+    }
+
+    if (this.options?.endAngle != null) {  
+      buffer.writeAll(["\"endAngle\":",this.options?.endAngle, ","], "");
+    }
+
+    // NOTE: skip serialization of levels (type SunburstSeriesLevelOptions[] is ignored) ignore type: false
+
+    if (this.options?.levelSize != null) {  
+      buffer.writeAll(["\"levelSize\":",this.options?.levelSize?.toJSON(), ","], "");
+    }
+
+    // NOTE: skip serialization of mapIdToNode (type Generic is ignored) ignore type: true
+
+    if (this.options?.rootId != null) {  
+      buffer.writeAll(["\"rootId\":\`",this.options?.rootId, "\`,"], "");
+    }
+
+    if (this.options?.slicedOffset != null) {  
+      buffer.writeAll(["\"slicedOffset\":",this.options?.slicedOffset, ","], "");
+    }
+
+    if (this.options?.startAngle != null) {  
+      buffer.writeAll(["\"startAngle\":",this.options?.startAngle, ","], "");
+    }
+
+    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
   }
 
 }

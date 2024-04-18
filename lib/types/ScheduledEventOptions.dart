@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,173 +22,29 @@ import 'OptionFragment.dart';
  * ScheduledEventOptions 
  */
 class ScheduledEventOptions extends OptionFragment {
-  ScheduledEventOptions( {
-    this.note = null,
-    this.frequency = null,
-    this.noteDuration = null,
-    this.tremoloDepth = null,
-    this.tremoloSpeed = null,
-    this.pan = null,
-    this.volume = null,
-    this.lowpassFreq = null,
-    this.lowpassResonance = null,
-    this.highpassFreq = null,
-    this.highpassResonance = null
-  }) : super();
-  String? note;
-    /*
-  String get note { 
-    if (this._note == null) {
-      this._note = "";
-    }
-    return this._note!;
-  }
+  ScheduledEventOptions( ) : super();
+  // NOTE: note skipped - type string is ignored in gen 
 
-  void set note (String v) {
-    this._note = v;
-  }
-    */
-    
-  double? frequency;
-    /*
-  double get frequency { 
-    if (this._frequency == null) {
-      this._frequency = 0;
-    }
-    return this._frequency!;
-  }
+  // NOTE: frequency skipped - type number is ignored in gen 
 
-  void set frequency (double v) {
-    this._frequency = v;
-  }
-    */
-    
-  double? noteDuration;
-    /*
-  double get noteDuration { 
-    if (this._noteDuration == null) {
-      this._noteDuration = 0;
-    }
-    return this._noteDuration!;
-  }
+  // NOTE: noteDuration skipped - type number is ignored in gen 
 
-  void set noteDuration (double v) {
-    this._noteDuration = v;
-  }
-    */
-    
-  double? tremoloDepth;
-    /*
-  double get tremoloDepth { 
-    if (this._tremoloDepth == null) {
-      this._tremoloDepth = 0;
-    }
-    return this._tremoloDepth!;
-  }
+  // NOTE: tremoloDepth skipped - type number is ignored in gen 
 
-  void set tremoloDepth (double v) {
-    this._tremoloDepth = v;
-  }
-    */
-    
-  double? tremoloSpeed;
-    /*
-  double get tremoloSpeed { 
-    if (this._tremoloSpeed == null) {
-      this._tremoloSpeed = 0;
-    }
-    return this._tremoloSpeed!;
-  }
+  // NOTE: tremoloSpeed skipped - type number is ignored in gen 
 
-  void set tremoloSpeed (double v) {
-    this._tremoloSpeed = v;
-  }
-    */
-    
-  double? pan;
-    /*
-  double get pan { 
-    if (this._pan == null) {
-      this._pan = 0;
-    }
-    return this._pan!;
-  }
+  // NOTE: pan skipped - type number is ignored in gen 
 
-  void set pan (double v) {
-    this._pan = v;
-  }
-    */
-    
-  double? volume;
-    /*
-  double get volume { 
-    if (this._volume == null) {
-      this._volume = 0;
-    }
-    return this._volume!;
-  }
+  // NOTE: volume skipped - type number is ignored in gen 
 
-  void set volume (double v) {
-    this._volume = v;
-  }
-    */
-    
-  double? lowpassFreq;
-    /*
-  double get lowpassFreq { 
-    if (this._lowpassFreq == null) {
-      this._lowpassFreq = 0;
-    }
-    return this._lowpassFreq!;
-  }
+  // NOTE: lowpassFreq skipped - type number is ignored in gen 
 
-  void set lowpassFreq (double v) {
-    this._lowpassFreq = v;
-  }
-    */
-    
-  double? lowpassResonance;
-    /*
-  double get lowpassResonance { 
-    if (this._lowpassResonance == null) {
-      this._lowpassResonance = 0;
-    }
-    return this._lowpassResonance!;
-  }
+  // NOTE: lowpassResonance skipped - type number is ignored in gen 
 
-  void set lowpassResonance (double v) {
-    this._lowpassResonance = v;
-  }
-    */
-    
-  double? highpassFreq;
-    /*
-  double get highpassFreq { 
-    if (this._highpassFreq == null) {
-      this._highpassFreq = 0;
-    }
-    return this._highpassFreq!;
-  }
+  // NOTE: highpassFreq skipped - type number is ignored in gen 
 
-  void set highpassFreq (double v) {
-    this._highpassFreq = v;
-  }
-    */
-    
-  double? highpassResonance;
-    /*
-  double get highpassResonance { 
-    if (this._highpassResonance == null) {
-      this._highpassResonance = 0;
-    }
-    return this._highpassResonance!;
-  }
+  // NOTE: highpassResonance skipped - type number is ignored in gen 
 
-  void set highpassResonance (double v) {
-    this._highpassResonance = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -197,49 +53,27 @@ class ScheduledEventOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.note != null) {  
-      buffer.writeAll(["\"note\":\`", this.note, "\`,"], "");
-    }
+    // NOTE: skip serialization of note (type string is ignored) ignore type: true
 
-    if (this.frequency != null) {  
-      buffer.writeAll(["\"frequency\":", this.frequency, ","], "");
-    }
+    // NOTE: skip serialization of frequency (type number is ignored) ignore type: true
 
-    if (this.noteDuration != null) {  
-      buffer.writeAll(["\"noteDuration\":", this.noteDuration, ","], "");
-    }
+    // NOTE: skip serialization of noteDuration (type number is ignored) ignore type: true
 
-    if (this.tremoloDepth != null) {  
-      buffer.writeAll(["\"tremoloDepth\":", this.tremoloDepth, ","], "");
-    }
+    // NOTE: skip serialization of tremoloDepth (type number is ignored) ignore type: true
 
-    if (this.tremoloSpeed != null) {  
-      buffer.writeAll(["\"tremoloSpeed\":", this.tremoloSpeed, ","], "");
-    }
+    // NOTE: skip serialization of tremoloSpeed (type number is ignored) ignore type: true
 
-    if (this.pan != null) {  
-      buffer.writeAll(["\"pan\":", this.pan, ","], "");
-    }
+    // NOTE: skip serialization of pan (type number is ignored) ignore type: true
 
-    if (this.volume != null) {  
-      buffer.writeAll(["\"volume\":", this.volume, ","], "");
-    }
+    // NOTE: skip serialization of volume (type number is ignored) ignore type: true
 
-    if (this.lowpassFreq != null) {  
-      buffer.writeAll(["\"lowpassFreq\":", this.lowpassFreq, ","], "");
-    }
+    // NOTE: skip serialization of lowpassFreq (type number is ignored) ignore type: true
 
-    if (this.lowpassResonance != null) {  
-      buffer.writeAll(["\"lowpassResonance\":", this.lowpassResonance, ","], "");
-    }
+    // NOTE: skip serialization of lowpassResonance (type number is ignored) ignore type: true
 
-    if (this.highpassFreq != null) {  
-      buffer.writeAll(["\"highpassFreq\":", this.highpassFreq, ","], "");
-    }
+    // NOTE: skip serialization of highpassFreq (type number is ignored) ignore type: true
 
-    if (this.highpassResonance != null) {  
-      buffer.writeAll(["\"highpassResonance\":", this.highpassResonance, ","], "");
-    }
+    // NOTE: skip serialization of highpassResonance (type number is ignored) ignore type: true
   }
 
 }

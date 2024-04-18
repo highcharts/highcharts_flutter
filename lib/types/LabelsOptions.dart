@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,98 +23,19 @@ import 'OptionFragment.dart';
  * LabelsOptions 
  */
 class LabelsOptions extends OptionFragment {
-  LabelsOptions( {
-    this.align = null,
-    this.allowOverlap = null,
-    this.className = null,
-    this.format = null,
-    this.x = null,
-    this.y = null
-  }) : super();
-  String? align;
-    /*
-  String get align { 
-    if (this._align == null) {
-      this._align = "";
-    }
-    return this._align!;
-  }
+  LabelsOptions( ) : super();
+  // NOTE: align skipped - type string is ignored in gen 
 
-  void set align (String v) {
-    this._align = v;
-  }
-    */
-    
-  bool? allowOverlap;
-    /*
-  bool get allowOverlap { 
-    if (this._allowOverlap == null) {
-      this._allowOverlap = false;
-    }
-    return this._allowOverlap!;
-  }
+  // NOTE: allowOverlap skipped - type boolean is ignored in gen 
 
-  void set allowOverlap (bool v) {
-    this._allowOverlap = v;
-  }
-    */
-    
-  String? className;
-    /*
-  String get className { 
-    if (this._className == null) {
-      this._className = "";
-    }
-    return this._className!;
-  }
+  // NOTE: className skipped - type string is ignored in gen 
 
-  void set className (String v) {
-    this._className = v;
-  }
-    */
-    
-  String? format;
-    /*
-  String get format { 
-    if (this._format == null) {
-      this._format = "";
-    }
-    return this._format!;
-  }
+  // NOTE: format skipped - type string is ignored in gen 
 
-  void set format (String v) {
-    this._format = v;
-  }
-    */
-    
-  double? x;
-    /*
-  double get x { 
-    if (this._x == null) {
-      this._x = 0;
-    }
-    return this._x!;
-  }
+  // NOTE: x skipped - type number is ignored in gen 
 
-  void set x (double v) {
-    this._x = v;
-  }
-    */
-    
-  double? y;
-    /*
-  double get y { 
-    if (this._y == null) {
-      this._y = 0;
-    }
-    return this._y!;
-  }
+  // NOTE: y skipped - type number is ignored in gen 
 
-  void set y (double v) {
-    this._y = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -123,31 +44,19 @@ class LabelsOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.align != null) {  
-      buffer.writeAll(["\"align\":\`", this.align, "\`,"], "");
-    }
+    // NOTE: skip serialization of align (type string is ignored) ignore type: true
 
-    if (this.allowOverlap != null) {  
-      buffer.writeAll(["\"allowOverlap\":", this.allowOverlap, ","], "");
-    }
+    // NOTE: skip serialization of allowOverlap (type boolean is ignored) ignore type: true
 
-    if (this.className != null) {  
-      buffer.writeAll(["\"className\":\`", this.className, "\`,"], "");
-    }
+    // NOTE: skip serialization of className (type string is ignored) ignore type: true
 
-    if (this.format != null) {  
-      buffer.writeAll(["\"format\":\`", this.format, "\`,"], "");
-    }
+    // NOTE: skip serialization of format (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of style (type CSSObject is ignored)} 
+    // NOTE: skip serialization of style (type CSSObject is ignored) ignore type: true
 
-    if (this.x != null) {  
-      buffer.writeAll(["\"x\":", this.x, ","], "");
-    }
+    // NOTE: skip serialization of x (type number is ignored) ignore type: true
 
-    if (this.y != null) {  
-      buffer.writeAll(["\"y\":", this.y, ","], "");
-    }
+    // NOTE: skip serialization of y (type number is ignored) ignore type: true
   }
 
 }

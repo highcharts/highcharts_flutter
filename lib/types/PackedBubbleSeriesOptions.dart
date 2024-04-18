@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -27,52 +27,95 @@ import 'OptionFragment.dart';
  */
 class PackedBubbleSeriesOptions extends BubbleSeriesOptions {
   PackedBubbleSeriesOptions( {
-    this.draggable = null,
-    this.minSize = null,
-    this.useSimulation = null
+    super.accessibility = null,
+    super.allAreas = null,
+    super.allowPointSelect = null,
+    super.animationLimit = null,
+    super.boostBlending = null,
+    super.boostThreshold = null,
+    super.borderColor = null,
+    super.borderWidth = null,
+    super.className = null,
+    super.clip = null,
+    super.color = null,
+    super.colorAxis = null,
+    super.colorIndex = null,
+    super.colorKey = null,
+    super.compare = null,
+    super.compareStart = null,
+    super.connectEnds = null,
+    super.connectNulls = null,
+    super.connectors = null,
+    super.crisp = null,
+    super.cropThreshold = null,
+    super.cumulative = null,
+    super.cursor = null,
+    super.dashStyle = null,
+    super.dataGrouping = null,
+    super.dataLabels = null,
+    super.dataSorting = null,
+    super.description = null,
+    super.displayNegative = null,
+    super.dragDrop = null,
+    super.enableMouseTracking = null,
+    super.events = null,
+    super.findNearestPointBy = null,
+    super.gapSize = null,
+    super.gapUnit = null,
+    super.getExtremesFromAll = null,
+    super.includeInDataExport = null,
+    super.jitter = null,
+    super.joinBy = null,
+    super.keys = null,
+    super.label = null,
+    super.lastPrice = null,
+    super.lastVisiblePrice = null,
+    super.legendSymbol = null,
+    super.linecap = null,
+    super.lineWidth = null,
+    super.linkedTo = null,
+    super.marker = null,
+    super.maxSize = null,
+    super.minSize = null,
+    super.navigatorOptions = null,
+    super.negativeColor = null,
+    super.onPoint = null,
+    super.opacity = null,
+    super.point = null,
+    super.pointInterval = null,
+    super.pointIntervalUnit = null,
+    super.pointPlacement = null,
+    super.pointRange = null,
+    super.pointStart = null,
+    super.relativeXValue = null,
+    super.selected = null,
+    super.showCheckbox = null,
+    super.showInLegend = null,
+    super.showInNavigator = null,
+    super.sizeBy = null,
+    super.sizeByAbsoluteValue = null,
+    super.skipKeyboardNavigation = null,
+    super.softThreshold = null,
+    super.stacking = null,
+    super.step = null,
+    super.stickyTracking = null,
+    super.threshold = null,
+    super.tooltip = null,
+    super.turboThreshold = null,
+    super.visible = null,
+    super.zIndex = null,
+    super.zMax = null,
+    super.zMin = null,
+    super.zoneAxis = null,
+    super.zones = null,
+    super.zThreshold = null
   }) : super();
-  bool? draggable;
-    /*
-  bool get draggable { 
-    if (this._draggable == null) {
-      this._draggable = false;
-    }
-    return this._draggable!;
-  }
+  // NOTE: draggable skipped - type boolean is ignored in gen 
 
-  void set draggable (bool v) {
-    this._draggable = v;
-  }
-    */
-    
-  String? minSize;
-    /*
-  String get minSize { 
-    if (this._minSize == null) {
-      this._minSize = "";
-    }
-    return this._minSize!;
-  }
+  // NOTE: minSize skipped - type string is ignored in gen 
 
-  void set minSize (String v) {
-    this._minSize = v;
-  }
-    */
-    
-  bool? useSimulation;
-    /*
-  bool get useSimulation { 
-    if (this._useSimulation == null) {
-      this._useSimulation = false;
-    }
-    return this._useSimulation!;
-  }
+  // NOTE: useSimulation skipped - type boolean is ignored in gen 
 
-  void set useSimulation (bool v) {
-    this._useSimulation = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -81,25 +124,19 @@ class PackedBubbleSeriesOptions extends BubbleSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of parentNode (type PackedBubbleParentNodeOptions is ignored)} 
+    // NOTE: skip serialization of parentNode (type PackedBubbleParentNodeOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of dataLabels (type PackedBubbleDataLabelOptions is ignored)} 
+    // NOTE: skip serialization of dataLabels (type PackedBubbleDataLabelOptions is ignored) ignore type: true
 
-    if (this.draggable != null) {  
-      buffer.writeAll(["\"draggable\":", this.draggable, ","], "");
-    }
+    // NOTE: skip serialization of draggable (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of layoutAlgorithm (type Options is ignored)} 
+    // NOTE: skip serialization of layoutAlgorithm (type Options is ignored) ignore type: true
 
-    if (this.minSize != null) {  
-      buffer.writeAll(["\"minSize\":\`", this.minSize, "\`,"], "");
-    }
+    // NOTE: skip serialization of minSize (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of states (type Generic is ignored)} 
+    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
 
-    if (this.useSimulation != null) {  
-      buffer.writeAll(["\"useSimulation\":", this.useSimulation, ","], "");
-    }
+    // NOTE: skip serialization of useSimulation (type boolean is ignored) ignore type: true
   }
 
 }

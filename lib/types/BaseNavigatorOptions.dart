@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -26,83 +26,17 @@ import 'OptionFragment.dart';
  * BaseNavigatorOptions 
  */
 class BaseNavigatorOptions extends OptionFragment {
-  BaseNavigatorOptions( {
-    this.maskFill = null,
-    this.maskInside = null,
-    this.height = null,
-    this.outlineColor = null,
-    this.outlineWidth = null
-  }) : super();
-  String? maskFill;
-    /*
-  String get maskFill { 
-    if (this._maskFill == null) {
-      this._maskFill = "";
-    }
-    return this._maskFill!;
-  }
+  BaseNavigatorOptions( ) : super();
+  // NOTE: maskFill skipped - type string is ignored in gen 
 
-  void set maskFill (String v) {
-    this._maskFill = v;
-  }
-    */
-    
-  bool? maskInside;
-    /*
-  bool get maskInside { 
-    if (this._maskInside == null) {
-      this._maskInside = false;
-    }
-    return this._maskInside!;
-  }
+  // NOTE: maskInside skipped - type boolean is ignored in gen 
 
-  void set maskInside (bool v) {
-    this._maskInside = v;
-  }
-    */
-    
-  double? height;
-    /*
-  double get height { 
-    if (this._height == null) {
-      this._height = 0;
-    }
-    return this._height!;
-  }
+  // NOTE: height skipped - type number is ignored in gen 
 
-  void set height (double v) {
-    this._height = v;
-  }
-    */
-    
-  String? outlineColor;
-    /*
-  String get outlineColor { 
-    if (this._outlineColor == null) {
-      this._outlineColor = "";
-    }
-    return this._outlineColor!;
-  }
+  // NOTE: outlineColor skipped - type string is ignored in gen 
 
-  void set outlineColor (String v) {
-    this._outlineColor = v;
-  }
-    */
-    
-  double? outlineWidth;
-    /*
-  double get outlineWidth { 
-    if (this._outlineWidth == null) {
-      this._outlineWidth = 0;
-    }
-    return this._outlineWidth!;
-  }
+  // NOTE: outlineWidth skipped - type number is ignored in gen 
 
-  void set outlineWidth (double v) {
-    this._outlineWidth = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -111,33 +45,23 @@ class BaseNavigatorOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.maskFill != null) {  
-      buffer.writeAll(["\"maskFill\":\`", this.maskFill, "\`,"], "");
-    }
+    // NOTE: skip serialization of maskFill (type string is ignored) ignore type: true
 
-    if (this.maskInside != null) {  
-      buffer.writeAll(["\"maskInside\":", this.maskInside, ","], "");
-    }
+    // NOTE: skip serialization of maskInside (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of handles (type NavigatorHandlesOptions is ignored)} 
+    // NOTE: skip serialization of handles (type NavigatorHandlesOptions is ignored) ignore type: true
 
-    if (this.height != null) {  
-      buffer.writeAll(["\"height\":", this.height, ","], "");
-    }
+    // NOTE: skip serialization of height (type number is ignored) ignore type: true
 
-    if (this.outlineColor != null) {  
-      buffer.writeAll(["\"outlineColor\":\`", this.outlineColor, "\`,"], "");
-    }
+    // NOTE: skip serialization of outlineColor (type string is ignored) ignore type: true
 
-    if (this.outlineWidth != null) {  
-      buffer.writeAll(["\"outlineWidth\":", this.outlineWidth, ","], "");
-    }
+    // NOTE: skip serialization of outlineWidth (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of series (type SeriesOptions is ignored)} 
+    // NOTE: skip serialization of series (type SeriesOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of xAxis (type Generic is ignored)} 
+    // NOTE: skip serialization of xAxis (type Generic is ignored) ignore type: true
 
-    // NOTE: skip serialization of yAxis (type Generic is ignored)} 
+    // NOTE: skip serialization of yAxis (type Generic is ignored) ignore type: true
   }
 
 }

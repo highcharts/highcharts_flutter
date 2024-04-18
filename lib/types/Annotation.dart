@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -34,9 +34,9 @@ class Annotation extends ControlTarget {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of defaultOptions (type AnnotationOptions is ignored)} 
+    // NOTE: skip serialization of defaultOptions (type AnnotationOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of nonDOMEvents (type string[] is ignored)} 
+    // NOTE: skip serialization of nonDOMEvents (type string[] is ignored) ignore type: true
   }
 
 }

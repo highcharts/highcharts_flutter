@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,23 +22,9 @@ import 'OptionFragment.dart';
  * CurrentObject 
  */
 class CurrentObject extends OptionFragment {
-  CurrentObject( {
-    this.ruleIds = null
-  }) : super();
-  String? ruleIds;
-    /*
-  String get ruleIds { 
-    if (this._ruleIds == null) {
-      this._ruleIds = "";
-    }
-    return this._ruleIds!;
-  }
+  CurrentObject( ) : super();
+  // NOTE: ruleIds skipped - type string is ignored in gen 
 
-  void set ruleIds (String v) {
-    this._ruleIds = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -47,13 +33,11 @@ class CurrentObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of mergedOptions (type Generic is ignored)} 
+    // NOTE: skip serialization of mergedOptions (type Generic is ignored) ignore type: true
 
-    if (this.ruleIds != null) {  
-      buffer.writeAll(["\"ruleIds\":\`", this.ruleIds, "\`,"], "");
-    }
+    // NOTE: skip serialization of ruleIds (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of undoOptions (type Generic is ignored)} 
+    // NOTE: skip serialization of undoOptions (type Generic is ignored) ignore type: true
   }
 
 }

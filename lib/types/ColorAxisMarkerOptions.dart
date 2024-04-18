@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -26,33 +26,11 @@ class ColorAxisMarkerOptions extends OptionFragment {
     this.color = null,
     this.width = null
   }) : super();
-  String? color;
-    /*
-  String get color { 
-    if (this._color == null) {
-      this._color = "";
-    }
-    return this._color!;
-  }
+  // NOTE: animation skipped - type Generic is ignored in gen 
 
-  void set color (String v) {
-    this._color = v;
-  }
-    */
+  String? color;
     
   double? width;
-    /*
-  double get width { 
-    if (this._width == null) {
-      this._width = 0;
-    }
-    return this._width!;
-  }
-
-  void set width (double v) {
-    this._width = v;
-  }
-    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -62,14 +40,14 @@ class ColorAxisMarkerOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of animation (type Generic is ignored)} 
+    // NOTE: skip serialization of animation (type Generic is ignored) ignore type: true
 
     if (this.color != null) {  
-      buffer.writeAll(["\"color\":\`", this.color, "\`,"], "");
+      buffer.writeAll(["\"color\":\`",this.color, "\`,"], "");
     }
 
     if (this.width != null) {  
-      buffer.writeAll(["\"width\":", this.width, ","], "");
+      buffer.writeAll(["\"width\":",this.width, ","], "");
     }
   }
 

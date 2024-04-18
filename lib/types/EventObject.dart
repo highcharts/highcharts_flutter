@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -26,23 +26,9 @@ import 'OptionFragment.dart';
  * EventObject 
  */
 class EventObject extends OptionFragment {
-  EventObject( {
-    this.category = null
-  }) : super();
-  double? category;
-    /*
-  double get category { 
-    if (this._category == null) {
-      this._category = 0;
-    }
-    return this._category!;
-  }
+  EventObject( ) : super();
+  // NOTE: category skipped - type number is ignored in gen 
 
-  void set category (double v) {
-    this._category = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -51,23 +37,21 @@ class EventObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.category != null) {  
-      buffer.writeAll(["\"category\":", this.category, ","], "");
-    }
+    // NOTE: skip serialization of category (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of originalEvent (type Event is ignored)} 
+    // NOTE: skip serialization of originalEvent (type Event is ignored) ignore type: 1
 
-    // NOTE: skip serialization of point (type Point is ignored)} 
+    // NOTE: skip serialization of point (type Point is ignored) ignore type: true
 
-    // NOTE: skip serialization of points (type Point)[] is ignored)} 
+    // NOTE: skip serialization of points (type Point)[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of preventDefault (type Function is ignored)} 
+    // NOTE: skip serialization of preventDefault (type Function is ignored) ignore type: 1
 
-    // NOTE: skip serialization of seriesOptions (type SeriesOptions is ignored)} 
+    // NOTE: skip serialization of seriesOptions (type SeriesOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of target (type Chart is ignored)} 
+    // NOTE: skip serialization of target (type Chart is ignored) ignore type: true
 
-    // NOTE: skip serialization of type (type "drilldown" is ignored)} 
+    // NOTE: skip serialization of type (type "drilldown" is ignored) ignore type: true
   }
 
 }

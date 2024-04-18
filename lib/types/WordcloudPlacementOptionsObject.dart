@@ -12,10 +12,11 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
+import 'WordcloudPoint.dart';
 import 'WordcloudFieldObject.dart';
 import 'WordcloudSeriesRotationOptions.dart';
 import 'OptionFragment.dart';
@@ -34,13 +35,13 @@ class WordcloudPlacementOptionsObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of data (type WordcloudPoint[] is ignored)} 
+    // NOTE: skip serialization of data (type WordcloudPoint[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of field (type WordcloudFieldObject is ignored)} 
+    // NOTE: skip serialization of field (type WordcloudFieldObject is ignored) ignore type: true
 
-    // NOTE: skip serialization of placed (type WordcloudPoint[] is ignored)} 
+    // NOTE: skip serialization of placed (type WordcloudPoint[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of rotation (type WordcloudSeriesRotationOptions is ignored)} 
+    // NOTE: skip serialization of rotation (type WordcloudSeriesRotationOptions is ignored) ignore type: true
   }
 
 }

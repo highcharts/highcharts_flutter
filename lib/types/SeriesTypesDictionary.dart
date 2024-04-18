@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -32,7 +32,7 @@ class SeriesTypesDictionary extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of flags (type typeof FlagsSeries is ignored)} 
+    // NOTE: skip serialization of flags (type typeof FlagsSeries is ignored) ignore type: true
   }
 
 }

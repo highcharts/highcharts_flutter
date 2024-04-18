@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -25,37 +25,24 @@ import 'OptionFragment.dart';
  */
 class Funnel3DPointOptions extends ColumnPointOptions {
   Funnel3DPointOptions( {
-    this.gradientForSides = null,
-    this.y = null
+    super.accessibility = null,
+    super.borderColor = null,
+    super.className = null,
+    super.color = null,
+    super.colorIndex = null,
+    super.connectors = null,
+    super.dataLabels = null,
+    super.dragDrop = null,
+    super.events = null,
+    super.keys = null,
+    super.marker = null,
+    super.selected = null,
+    super.visible = null
   }) : super();
-  bool? gradientForSides;
-    /*
-  bool get gradientForSides { 
-    if (this._gradientForSides == null) {
-      this._gradientForSides = false;
-    }
-    return this._gradientForSides!;
-  }
+  // NOTE: gradientForSides skipped - type boolean is ignored in gen 
 
-  void set gradientForSides (bool v) {
-    this._gradientForSides = v;
-  }
-    */
-    
-  double? y;
-    /*
-  double get y { 
-    if (this._y == null) {
-      this._y = 0;
-    }
-    return this._y!;
-  }
+  // NOTE: y skipped - type number is ignored in gen 
 
-  void set y (double v) {
-    this._y = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -64,15 +51,11 @@ class Funnel3DPointOptions extends ColumnPointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.gradientForSides != null) {  
-      buffer.writeAll(["\"gradientForSides\":", this.gradientForSides, ","], "");
-    }
+    // NOTE: skip serialization of gradientForSides (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of dlBox (type BBoxObject is ignored)} 
+    // NOTE: skip serialization of dlBox (type BBoxObject is ignored) ignore type: true
 
-    if (this.y != null) {  
-      buffer.writeAll(["\"y\":", this.y, ","], "");
-    }
+    // NOTE: skip serialization of y (type number is ignored) ignore type: true
   }
 
 }

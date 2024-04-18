@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,38 +22,11 @@ import 'OptionFragment.dart';
  * Intersection 
  */
 class Intersection extends OptionFragment {
-  Intersection( {
-    this.i = null,
-    this.lat = null
-  }) : super();
-  double? i;
-    /*
-  double get i { 
-    if (this._i == null) {
-      this._i = 0;
-    }
-    return this._i!;
-  }
+  Intersection( ) : super();
+  // NOTE: i skipped - type number is ignored in gen 
 
-  void set i (double v) {
-    this._i = v;
-  }
-    */
-    
-  double? lat;
-    /*
-  double get lat { 
-    if (this._lat == null) {
-      this._lat = 0;
-    }
-    return this._lat!;
-  }
+  // NOTE: lat skipped - type number is ignored in gen 
 
-  void set lat (double v) {
-    this._lat = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -62,19 +35,15 @@ class Intersection extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.i != null) {  
-      buffer.writeAll(["\"i\":", this.i, ","], "");
-    }
+    // NOTE: skip serialization of i (type number is ignored) ignore type: true
 
-    if (this.lat != null) {  
-      buffer.writeAll(["\"lat\":", this.lat, ","], "");
-    }
+    // NOTE: skip serialization of lat (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of direction (type -1 is ignored)} 
+    // NOTE: skip serialization of direction (type -1 is ignored) ignore type: true
 
-    // NOTE: skip serialization of previousLonLat (type LonLatArray is ignored)} 
+    // NOTE: skip serialization of previousLonLat (type LonLatArray is ignored) ignore type: 1
 
-    // NOTE: skip serialization of lonLat (type LonLatArray is ignored)} 
+    // NOTE: skip serialization of lonLat (type LonLatArray is ignored) ignore type: 1
   }
 
 }

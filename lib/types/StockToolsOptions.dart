@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,23 +23,10 @@ import 'OptionFragment.dart';
  * StockToolsOptions 
  */
 class StockToolsOptions extends OptionFragment {
-  StockToolsOptions( ) : super();
-  /**
-   * Definitions of buttons in Stock Tools GUI.  
-      */
+  StockToolsOptions( {
+    this.gui = null
+  }) : super();
   StockToolsGuiOptions? gui;
-    /*
-  StockToolsGuiOptions get gui { 
-    if (this._gui == null) {
-      this._gui = StockToolsGuiOptions();
-    }
-    return this._gui!;
-  }
-
-  void set gui (StockToolsGuiOptions v) {
-    this._gui = v;
-  }
-    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -50,7 +37,7 @@ class StockToolsOptions extends OptionFragment {
 
     
     if (this.gui != null) {  
-      buffer.writeAll(["\"gui\":", this.gui?.toJSON(), ","], "");
+      buffer.writeAll(["\"gui\":",this.gui?.toJSON(), ","], "");
     }
   }
 

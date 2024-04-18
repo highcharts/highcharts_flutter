@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,128 +22,23 @@ import 'OptionFragment.dart';
  * TreeGridAxisLabelIconOptions 
  */
 class TreeGridAxisLabelIconOptions extends OptionFragment {
-  TreeGridAxisLabelIconOptions( {
-    this.height = null,
-    this.lineColor = null,
-    this.lineWidth = null,
-    this.padding = null,
-    this.type = null,
-    this.width = null,
-    this.x = null,
-    this.y = null
-  }) : super();
-  double? height;
-    /*
-  double get height { 
-    if (this._height == null) {
-      this._height = 0;
-    }
-    return this._height!;
-  }
+  TreeGridAxisLabelIconOptions( ) : super();
+  // NOTE: height skipped - type number is ignored in gen 
 
-  void set height (double v) {
-    this._height = v;
-  }
-    */
-    
-  String? lineColor;
-    /*
-  String get lineColor { 
-    if (this._lineColor == null) {
-      this._lineColor = "";
-    }
-    return this._lineColor!;
-  }
+  // NOTE: lineColor skipped - type string is ignored in gen 
 
-  void set lineColor (String v) {
-    this._lineColor = v;
-  }
-    */
-    
-  double? lineWidth;
-    /*
-  double get lineWidth { 
-    if (this._lineWidth == null) {
-      this._lineWidth = 0;
-    }
-    return this._lineWidth!;
-  }
+  // NOTE: lineWidth skipped - type number is ignored in gen 
 
-  void set lineWidth (double v) {
-    this._lineWidth = v;
-  }
-    */
-    
-  double? padding;
-    /*
-  double get padding { 
-    if (this._padding == null) {
-      this._padding = 0;
-    }
-    return this._padding!;
-  }
+  // NOTE: padding skipped - type number is ignored in gen 
 
-  void set padding (double v) {
-    this._padding = v;
-  }
-    */
-    
-  double? type;
-    /*
-  double get type { 
-    if (this._type == null) {
-      this._type = 0;
-    }
-    return this._type!;
-  }
+  // NOTE: type skipped - type number is ignored in gen 
 
-  void set type (double v) {
-    this._type = v;
-  }
-    */
-    
-  double? width;
-    /*
-  double get width { 
-    if (this._width == null) {
-      this._width = 0;
-    }
-    return this._width!;
-  }
+  // NOTE: width skipped - type number is ignored in gen 
 
-  void set width (double v) {
-    this._width = v;
-  }
-    */
-    
-  double? x;
-    /*
-  double get x { 
-    if (this._x == null) {
-      this._x = 0;
-    }
-    return this._x!;
-  }
+  // NOTE: x skipped - type number is ignored in gen 
 
-  void set x (double v) {
-    this._x = v;
-  }
-    */
-    
-  double? y;
-    /*
-  double get y { 
-    if (this._y == null) {
-      this._y = 0;
-    }
-    return this._y!;
-  }
+  // NOTE: y skipped - type number is ignored in gen 
 
-  void set y (double v) {
-    this._y = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -152,37 +47,21 @@ class TreeGridAxisLabelIconOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.height != null) {  
-      buffer.writeAll(["\"height\":", this.height, ","], "");
-    }
+    // NOTE: skip serialization of height (type number is ignored) ignore type: true
 
-    if (this.lineColor != null) {  
-      buffer.writeAll(["\"lineColor\":\`", this.lineColor, "\`,"], "");
-    }
+    // NOTE: skip serialization of lineColor (type string is ignored) ignore type: true
 
-    if (this.lineWidth != null) {  
-      buffer.writeAll(["\"lineWidth\":", this.lineWidth, ","], "");
-    }
+    // NOTE: skip serialization of lineWidth (type number is ignored) ignore type: true
 
-    if (this.padding != null) {  
-      buffer.writeAll(["\"padding\":", this.padding, ","], "");
-    }
+    // NOTE: skip serialization of padding (type number is ignored) ignore type: true
 
-    if (this.type != null) {  
-      buffer.writeAll(["\"type\":", this.type, ","], "");
-    }
+    // NOTE: skip serialization of type (type number is ignored) ignore type: true
 
-    if (this.width != null) {  
-      buffer.writeAll(["\"width\":", this.width, ","], "");
-    }
+    // NOTE: skip serialization of width (type number is ignored) ignore type: true
 
-    if (this.x != null) {  
-      buffer.writeAll(["\"x\":", this.x, ","], "");
-    }
+    // NOTE: skip serialization of x (type number is ignored) ignore type: true
 
-    if (this.y != null) {  
-      buffer.writeAll(["\"y\":", this.y, ","], "");
-    }
+    // NOTE: skip serialization of y (type number is ignored) ignore type: true
   }
 
 }

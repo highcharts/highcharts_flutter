@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,67 +24,41 @@ import 'OptionFragment.dart';
  */
 class AreaRangeDataLabelOptions extends DataLabelOptions {
   AreaRangeDataLabelOptions( {
-    this.xHigh = null,
-    this.xLow = null,
-    this.yHigh = null,
-    this.yLow = null
+    super.align = null,
+    super.allowOverlap = null,
+    super.backgroundColor = null,
+    super.borderColor = null,
+    super.borderRadius = null,
+    super.borderWidth = null,
+    super.className = null,
+    super.color = null,
+    super.crop = null,
+    super.defer = null,
+    super.enabled = null,
+    super.filter = null,
+    super.format = null,
+    super.inside = null,
+    super.nullFormat = null,
+    super.overflow = null,
+    super.padding = null,
+    super.rotation = null,
+    super.shape = null,
+    super.style = null,
+    super.textPath = null,
+    super.useHTML = null,
+    super.verticalAlign = null,
+    super.x = null,
+    super.y = null,
+    super.zIndex = null
   }) : super();
-  double? xHigh;
-    /*
-  double get xHigh { 
-    if (this._xHigh == null) {
-      this._xHigh = 0;
-    }
-    return this._xHigh!;
-  }
+  // NOTE: xHigh skipped - type number is ignored in gen 
 
-  void set xHigh (double v) {
-    this._xHigh = v;
-  }
-    */
-    
-  double? xLow;
-    /*
-  double get xLow { 
-    if (this._xLow == null) {
-      this._xLow = 0;
-    }
-    return this._xLow!;
-  }
+  // NOTE: xLow skipped - type number is ignored in gen 
 
-  void set xLow (double v) {
-    this._xLow = v;
-  }
-    */
-    
-  double? yHigh;
-    /*
-  double get yHigh { 
-    if (this._yHigh == null) {
-      this._yHigh = 0;
-    }
-    return this._yHigh!;
-  }
+  // NOTE: yHigh skipped - type number is ignored in gen 
 
-  void set yHigh (double v) {
-    this._yHigh = v;
-  }
-    */
-    
-  double? yLow;
-    /*
-  double get yLow { 
-    if (this._yLow == null) {
-      this._yLow = 0;
-    }
-    return this._yLow!;
-  }
+  // NOTE: yLow skipped - type number is ignored in gen 
 
-  void set yLow (double v) {
-    this._yLow = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -93,21 +67,13 @@ class AreaRangeDataLabelOptions extends DataLabelOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.xHigh != null) {  
-      buffer.writeAll(["\"xHigh\":", this.xHigh, ","], "");
-    }
+    // NOTE: skip serialization of xHigh (type number is ignored) ignore type: true
 
-    if (this.xLow != null) {  
-      buffer.writeAll(["\"xLow\":", this.xLow, ","], "");
-    }
+    // NOTE: skip serialization of xLow (type number is ignored) ignore type: true
 
-    if (this.yHigh != null) {  
-      buffer.writeAll(["\"yHigh\":", this.yHigh, ","], "");
-    }
+    // NOTE: skip serialization of yHigh (type number is ignored) ignore type: true
 
-    if (this.yLow != null) {  
-      buffer.writeAll(["\"yLow\":", this.yLow, ","], "");
-    }
+    // NOTE: skip serialization of yLow (type number is ignored) ignore type: true
   }
 
 }

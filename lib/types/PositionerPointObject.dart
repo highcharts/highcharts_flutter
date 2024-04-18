@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,38 +22,11 @@ import 'OptionFragment.dart';
  * PositionerPointObject 
  */
 class PositionerPointObject extends OptionFragment {
-  PositionerPointObject( {
-    this.plotX = null,
-    this.plotY = null
-  }) : super();
-  double? plotX;
-    /*
-  double get plotX { 
-    if (this._plotX == null) {
-      this._plotX = 0;
-    }
-    return this._plotX!;
-  }
+  PositionerPointObject( ) : super();
+  // NOTE: plotX skipped - type number is ignored in gen 
 
-  void set plotX (double v) {
-    this._plotX = v;
-  }
-    */
-    
-  double? plotY;
-    /*
-  double get plotY { 
-    if (this._plotY == null) {
-      this._plotY = 0;
-    }
-    return this._plotY!;
-  }
+  // NOTE: plotY skipped - type number is ignored in gen 
 
-  void set plotY (double v) {
-    this._plotY = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -62,15 +35,11 @@ class PositionerPointObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of isHeader (type true is ignored)} 
+    // NOTE: skip serialization of isHeader (type true is ignored) ignore type: 1
 
-    if (this.plotX != null) {  
-      buffer.writeAll(["\"plotX\":", this.plotX, ","], "");
-    }
+    // NOTE: skip serialization of plotX (type number is ignored) ignore type: true
 
-    if (this.plotY != null) {  
-      buffer.writeAll(["\"plotY\":", this.plotY, ","], "");
-    }
+    // NOTE: skip serialization of plotY (type number is ignored) ignore type: true
   }
 
 }

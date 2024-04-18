@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -37,27 +37,27 @@ class AxisTypeRegistry extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of mStackingAxis (type StackingAxis is ignored)} 
+    // NOTE: skip serialization of mStackingAxis (type StackingAxis is ignored) ignore type: true
 
-    // NOTE: skip serialization of mAxis (type Axis is ignored)} 
+    // NOTE: skip serialization of mAxis (type Axis is ignored) ignore type: true
 
-    // NOTE: skip serialization of RadialAxis (type AxisComposition is ignored)} 
+    // NOTE: skip serialization of RadialAxis (type AxisComposition is ignored) ignore type: true
 
-    // NOTE: skip serialization of BrokenAxis (type Composition is ignored)} 
+    // NOTE: skip serialization of BrokenAxis (type Composition is ignored) ignore type: true
 
-    // NOTE: skip serialization of DateTimeAxis (type Composition is ignored)} 
+    // NOTE: skip serialization of DateTimeAxis (type Composition is ignored) ignore type: true
 
-    // NOTE: skip serialization of GridAxis (type GridAxisComposition is ignored)} 
+    // NOTE: skip serialization of GridAxis (type GridAxisComposition is ignored) ignore type: true
 
-    // NOTE: skip serialization of LogarithmicAxis (type Composition is ignored)} 
+    // NOTE: skip serialization of LogarithmicAxis (type Composition is ignored) ignore type: true
 
-    // NOTE: skip serialization of OrdinalAxis (type Composition is ignored)} 
+    // NOTE: skip serialization of OrdinalAxis (type Composition is ignored) ignore type: true
 
-    // NOTE: skip serialization of TreeGridAxis (type TreeGridAxisComposition is ignored)} 
+    // NOTE: skip serialization of TreeGridAxis (type TreeGridAxisComposition is ignored) ignore type: true
 
-    // NOTE: skip serialization of mWaterfallAxis (type WaterfallAxis is ignored)} 
+    // NOTE: skip serialization of mWaterfallAxis (type WaterfallAxis is ignored) ignore type: true
 
-    // NOTE: skip serialization of mZAxis (type ZAxis is ignored)} 
+    // NOTE: skip serialization of mZAxis (type ZAxis is ignored) ignore type: true
   }
 
 }

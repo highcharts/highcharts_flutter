@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,53 +23,13 @@ import 'OptionFragment.dart';
  * CellEvent 
  */
 class CellEvent extends DataEvent {
-  CellEvent( {
-    this.type = null,
-    this.columnName = null,
-    this.rowIndex = null
-  }) : super();
-  String? type;
-    /*
-  String get type { 
-    if (this._type == null) {
-      this._type = "";
-    }
-    return this._type!;
-  }
+  CellEvent( ) : super();
+  // NOTE: type skipped - type string is ignored in gen 
 
-  void set type (String v) {
-    this._type = v;
-  }
-    */
-    
-  String? columnName;
-    /*
-  String get columnName { 
-    if (this._columnName == null) {
-      this._columnName = "";
-    }
-    return this._columnName!;
-  }
+  // NOTE: columnName skipped - type string is ignored in gen 
 
-  void set columnName (String v) {
-    this._columnName = v;
-  }
-    */
-    
-  double? rowIndex;
-    /*
-  double get rowIndex { 
-    if (this._rowIndex == null) {
-      this._rowIndex = 0;
-    }
-    return this._rowIndex!;
-  }
+  // NOTE: rowIndex skipped - type number is ignored in gen 
 
-  void set rowIndex (double v) {
-    this._rowIndex = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -78,19 +38,13 @@ class CellEvent extends DataEvent {
     super.toJSONInner(buffer);
 
     
-    if (this.type != null) {  
-      buffer.writeAll(["\"type\":\`", this.type, "\`,"], "");
-    }
+    // NOTE: skip serialization of type (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of cellValue (type CellType is ignored)} 
+    // NOTE: skip serialization of cellValue (type CellType is ignored) ignore type: true
 
-    if (this.columnName != null) {  
-      buffer.writeAll(["\"columnName\":\`", this.columnName, "\`,"], "");
-    }
+    // NOTE: skip serialization of columnName (type string is ignored) ignore type: true
 
-    if (this.rowIndex != null) {  
-      buffer.writeAll(["\"rowIndex\":", this.rowIndex, ","], "");
-    }
+    // NOTE: skip serialization of rowIndex (type number is ignored) ignore type: true
   }
 
 }

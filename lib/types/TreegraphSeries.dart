@@ -12,50 +12,108 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
-import 'OptionFragment.dart';
+import 'TreegraphSeriesOptions.dart';
+import 'Series.dart';
+import 'PointOptions.dart';
 
-/** 
- * TreegraphSeries 
- */
-class TreegraphSeries extends OptionFragment {
-  TreegraphSeries( {
-    this.inverted = null
-  }) : super();
-  bool? inverted;
-    /*
-  bool get inverted { 
-    if (this._inverted == null) {
-      this._inverted = false;
-    }
-    return this._inverted!;
-  }
+class TreegraphSeries extends Series {
 
-  void set inverted (bool v) {
-    this._inverted = v;
-  }
-    */
-    
+  String? name;
+  TreegraphSeriesOptions? options;
+  List<PointOptions>? points;
+  List<List<double>>? data;
 
-  //////////////////////////////////////////////////////////////////////////////
+  TreegraphSeries({
+    this.name = null,
+    this.options = null,
+    this.points = null,
+    this.data = null
+  });
+
   
   @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    if (this.inverted != null) {  
-      buffer.writeAll(["\"inverted\":", this.inverted, ","], "");
+
+    if (this.name != null) {
+      buffer.writeAll(["\"name\": \"", this.name!, "\","], "");
     }
 
-    // NOTE: skip serialization of pointClass (type typeof TreegraphPoint is ignored)} 
+    buffer.write("\"type\": \"treegraph\",");
 
-    // NOTE: skip serialization of NodeClass (type typeof TreegraphNode is ignored)} 
+    if (this.data != null && this.points == null) {
+      // Serialize as a 2d array
 
-    // NOTE: skip serialization of LinkClass (type typeof LinkPoint is ignored)} 
+      StringBuffer seriesData = StringBuffer();
+
+      for (var point in this.data!) {
+        seriesData.writeAll(["["], "");
+        for (var item in point) {
+          seriesData.writeAll([item, ","]);
+        }
+        seriesData.writeAll(["],"], "");
+      }
+
+      buffer.writeAll(["\"data\": [", seriesData, "],"], "");   
+
+
+    } else if (this.points != null) {
+      // Go through the points and write them
+      StringBuffer seriesData = StringBuffer();
+
+      for (var point in this.points!) {
+        seriesData.writeAll(["{"], "");
+        point.toJSONInner(seriesData); 
+        seriesData.writeAll(["},"], "");
+      }
+
+      buffer.writeAll(["\"data\": [", seriesData, "],"], "");
+    }
+
+
+
+    
+    if (this.options?.dataLabels != null) {  
+     StringBuffer arrData = StringBuffer();
+
+      for (var item in this.options!.dataLabels!) {
+          arrData.write("{");
+          item.toJSONInner(arrData);
+          arrData.write("}");
+      }
+      buffer.writeAll(["\"dataLabels\": [", arrData , "],"], "");   
+        
+    }
+
+    if (this.options?.collapseButton != null) {  
+      buffer.writeAll(["\"collapseButton\":",this.options?.collapseButton?.toJSON(), ","], "");
+    }
+
+    if (this.options?.fillSpace != null) {  
+      buffer.writeAll(["\"fillSpace\":",this.options?.fillSpace, ","], "");
+    }
+
+    if (this.options?.link != null) {  
+      buffer.writeAll(["\"link\":",this.options?.link?.toJSON(), ","], "");
+    }
+
+    // NOTE: skip serialization of nodeDistance (type string is ignored) ignore type: true
+
+    // NOTE: skip serialization of nodeWidth (type string is ignored) ignore type: true
+
+    if (this.options?.reversed != null) {  
+      buffer.writeAll(["\"reversed\":",this.options?.reversed, ","], "");
+    }
+
+    if (this.options?.marker != null) {  
+      buffer.writeAll(["\"marker\":",this.options?.marker?.toJSON(), ","], "");
+    }
   }
 
 }

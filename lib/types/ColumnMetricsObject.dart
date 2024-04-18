@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,68 +22,15 @@ import 'OptionFragment.dart';
  * ColumnMetricsObject 
  */
 class ColumnMetricsObject extends OptionFragment {
-  ColumnMetricsObject( {
-    this.offset = null,
-    this.width = null,
-    this.paddedWidth = null,
-    this.columnCount = null
-  }) : super();
-  double? offset;
-    /*
-  double get offset { 
-    if (this._offset == null) {
-      this._offset = 0;
-    }
-    return this._offset!;
-  }
+  ColumnMetricsObject( ) : super();
+  // NOTE: offset skipped - type number is ignored in gen 
 
-  void set offset (double v) {
-    this._offset = v;
-  }
-    */
-    
-  double? width;
-    /*
-  double get width { 
-    if (this._width == null) {
-      this._width = 0;
-    }
-    return this._width!;
-  }
+  // NOTE: width skipped - type number is ignored in gen 
 
-  void set width (double v) {
-    this._width = v;
-  }
-    */
-    
-  double? paddedWidth;
-    /*
-  double get paddedWidth { 
-    if (this._paddedWidth == null) {
-      this._paddedWidth = 0;
-    }
-    return this._paddedWidth!;
-  }
+  // NOTE: paddedWidth skipped - type number is ignored in gen 
 
-  void set paddedWidth (double v) {
-    this._paddedWidth = v;
-  }
-    */
-    
-  double? columnCount;
-    /*
-  double get columnCount { 
-    if (this._columnCount == null) {
-      this._columnCount = 0;
-    }
-    return this._columnCount!;
-  }
+  // NOTE: columnCount skipped - type number is ignored in gen 
 
-  void set columnCount (double v) {
-    this._columnCount = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -92,21 +39,13 @@ class ColumnMetricsObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.offset != null) {  
-      buffer.writeAll(["\"offset\":", this.offset, ","], "");
-    }
+    // NOTE: skip serialization of offset (type number is ignored) ignore type: true
 
-    if (this.width != null) {  
-      buffer.writeAll(["\"width\":", this.width, ","], "");
-    }
+    // NOTE: skip serialization of width (type number is ignored) ignore type: true
 
-    if (this.paddedWidth != null) {  
-      buffer.writeAll(["\"paddedWidth\":", this.paddedWidth, ","], "");
-    }
+    // NOTE: skip serialization of paddedWidth (type number is ignored) ignore type: true
 
-    if (this.columnCount != null) {  
-      buffer.writeAll(["\"columnCount\":", this.columnCount, ","], "");
-    }
+    // NOTE: skip serialization of columnCount (type number is ignored) ignore type: true
   }
 
 }

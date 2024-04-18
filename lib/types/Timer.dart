@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,38 +23,11 @@ import 'OptionFragment.dart';
  * Timer 
  */
 class Timer extends OptionFragment {
-  Timer( {
-    this.prop = null,
-    this.stopped = null
-  }) : super();
-  String? prop;
-    /*
-  String get prop { 
-    if (this._prop == null) {
-      this._prop = "";
-    }
-    return this._prop!;
-  }
+  Timer( ) : super();
+  // NOTE: prop skipped - type string is ignored in gen 
 
-  void set prop (String v) {
-    this._prop = v;
-  }
-    */
-    
-  bool? stopped;
-    /*
-  bool get stopped { 
-    if (this._stopped == null) {
-      this._stopped = false;
-    }
-    return this._stopped!;
-  }
+  // NOTE: stopped skipped - type boolean is ignored in gen 
 
-  void set stopped (bool v) {
-    this._stopped = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -63,15 +36,11 @@ class Timer extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of elem (type SVGElement is ignored)} 
+    // NOTE: skip serialization of elem (type SVGElement is ignored) ignore type: true
 
-    if (this.prop != null) {  
-      buffer.writeAll(["\"prop\":\`", this.prop, "\`,"], "");
-    }
+    // NOTE: skip serialization of prop (type string is ignored) ignore type: true
 
-    if (this.stopped != null) {  
-      buffer.writeAll(["\"stopped\":", this.stopped, ","], "");
-    }
+    // NOTE: skip serialization of stopped (type boolean is ignored) ignore type: true
   }
 
 }

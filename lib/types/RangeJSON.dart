@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,53 +22,13 @@ import 'OptionFragment.dart';
  * RangeJSON 
  */
 class RangeJSON extends OptionFragment {
-  RangeJSON( {
-    this.firstRow = null,
-    this.lastRow = null,
-    this.state = null
-  }) : super();
-  double? firstRow;
-    /*
-  double get firstRow { 
-    if (this._firstRow == null) {
-      this._firstRow = 0;
-    }
-    return this._firstRow!;
-  }
+  RangeJSON( ) : super();
+  // NOTE: firstRow skipped - type number is ignored in gen 
 
-  void set firstRow (double v) {
-    this._firstRow = v;
-  }
-    */
-    
-  double? lastRow;
-    /*
-  double get lastRow { 
-    if (this._lastRow == null) {
-      this._lastRow = 0;
-    }
-    return this._lastRow!;
-  }
+  // NOTE: lastRow skipped - type number is ignored in gen 
 
-  void set lastRow (double v) {
-    this._lastRow = v;
-  }
-    */
-    
-  String? state;
-    /*
-  String get state { 
-    if (this._state == null) {
-      this._state = "";
-    }
-    return this._state!;
-  }
+  // NOTE: state skipped - type string is ignored in gen 
 
-  void set state (String v) {
-    this._state = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -77,21 +37,15 @@ class RangeJSON extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of columns (type string[] is ignored)} 
+    // NOTE: skip serialization of columns (type string[] is ignored) ignore type: true
 
-    if (this.firstRow != null) {  
-      buffer.writeAll(["\"firstRow\":", this.firstRow, ","], "");
-    }
+    // NOTE: skip serialization of firstRow (type number is ignored) ignore type: true
 
-    if (this.lastRow != null) {  
-      buffer.writeAll(["\"lastRow\":", this.lastRow, ","], "");
-    }
+    // NOTE: skip serialization of lastRow (type number is ignored) ignore type: true
 
-    if (this.state != null) {  
-      buffer.writeAll(["\"state\":\`", this.state, "\`,"], "");
-    }
+    // NOTE: skip serialization of state (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of type (type "range" is ignored)} 
+    // NOTE: skip serialization of type (type "range" is ignored) ignore type: true
   }
 
 }

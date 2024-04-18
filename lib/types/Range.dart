@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,113 +22,21 @@ import 'OptionFragment.dart';
  * Range 
  */
 class Range extends OptionFragment {
-  Range( {
-    this.firstRow = null,
-    this.lastRow = null,
-    this.state = null,
-    this.beginColumn = null,
-    this.beginRow = null,
-    this.endColumn = null,
-    this.endRow = null
-  }) : super();
-  double? firstRow;
-    /*
-  double get firstRow { 
-    if (this._firstRow == null) {
-      this._firstRow = 0;
-    }
-    return this._firstRow!;
-  }
+  Range( ) : super();
+  // NOTE: firstRow skipped - type number is ignored in gen 
 
-  void set firstRow (double v) {
-    this._firstRow = v;
-  }
-    */
-    
-  double? lastRow;
-    /*
-  double get lastRow { 
-    if (this._lastRow == null) {
-      this._lastRow = 0;
-    }
-    return this._lastRow!;
-  }
+  // NOTE: lastRow skipped - type number is ignored in gen 
 
-  void set lastRow (double v) {
-    this._lastRow = v;
-  }
-    */
-    
-  String? state;
-    /*
-  String get state { 
-    if (this._state == null) {
-      this._state = "";
-    }
-    return this._state!;
-  }
+  // NOTE: state skipped - type string is ignored in gen 
 
-  void set state (String v) {
-    this._state = v;
-  }
-    */
-    
-  double? beginColumn;
-    /*
-  double get beginColumn { 
-    if (this._beginColumn == null) {
-      this._beginColumn = 0;
-    }
-    return this._beginColumn!;
-  }
+  // NOTE: beginColumn skipped - type number is ignored in gen 
 
-  void set beginColumn (double v) {
-    this._beginColumn = v;
-  }
-    */
-    
-  double? beginRow;
-    /*
-  double get beginRow { 
-    if (this._beginRow == null) {
-      this._beginRow = 0;
-    }
-    return this._beginRow!;
-  }
+  // NOTE: beginRow skipped - type number is ignored in gen 
 
-  void set beginRow (double v) {
-    this._beginRow = v;
-  }
-    */
-    
-  double? endColumn;
-    /*
-  double get endColumn { 
-    if (this._endColumn == null) {
-      this._endColumn = 0;
-    }
-    return this._endColumn!;
-  }
+  // NOTE: endColumn skipped - type number is ignored in gen 
 
-  void set endColumn (double v) {
-    this._endColumn = v;
-  }
-    */
-    
-  double? endRow;
-    /*
-  double get endRow { 
-    if (this._endRow == null) {
-      this._endRow = 0;
-    }
-    return this._endRow!;
-  }
+  // NOTE: endRow skipped - type number is ignored in gen 
 
-  void set endRow (double v) {
-    this._endRow = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -137,47 +45,33 @@ class Range extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of type (type "range" is ignored)} 
+    // NOTE: skip serialization of type (type "range" is ignored) ignore type: true
 
-    // NOTE: skip serialization of columns (type string[] is ignored)} 
+    // NOTE: skip serialization of columns (type string[] is ignored) ignore type: true
 
-    if (this.firstRow != null) {  
-      buffer.writeAll(["\"firstRow\":", this.firstRow, ","], "");
-    }
+    // NOTE: skip serialization of firstRow (type number is ignored) ignore type: true
 
-    if (this.lastRow != null) {  
-      buffer.writeAll(["\"lastRow\":", this.lastRow, ","], "");
-    }
+    // NOTE: skip serialization of lastRow (type number is ignored) ignore type: true
 
-    if (this.state != null) {  
-      buffer.writeAll(["\"state\":\`", this.state, "\`,"], "");
-    }
+    // NOTE: skip serialization of state (type string is ignored) ignore type: true
 
-    if (this.beginColumn != null) {  
-      buffer.writeAll(["\"beginColumn\":", this.beginColumn, ","], "");
-    }
+    // NOTE: skip serialization of beginColumn (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of beginColumnRelative (type true is ignored)} 
+    // NOTE: skip serialization of beginColumnRelative (type true is ignored) ignore type: 1
 
-    if (this.beginRow != null) {  
-      buffer.writeAll(["\"beginRow\":", this.beginRow, ","], "");
-    }
+    // NOTE: skip serialization of beginRow (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of beginRowRelative (type true is ignored)} 
+    // NOTE: skip serialization of beginRowRelative (type true is ignored) ignore type: 1
 
-    if (this.endColumn != null) {  
-      buffer.writeAll(["\"endColumn\":", this.endColumn, ","], "");
-    }
+    // NOTE: skip serialization of endColumn (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of endColumnRelative (type true is ignored)} 
+    // NOTE: skip serialization of endColumnRelative (type true is ignored) ignore type: 1
 
-    if (this.endRow != null) {  
-      buffer.writeAll(["\"endRow\":", this.endRow, ","], "");
-    }
+    // NOTE: skip serialization of endRow (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of endRowRelative (type true is ignored)} 
+    // NOTE: skip serialization of endRowRelative (type true is ignored) ignore type: 1
 
-    // NOTE: skip serialization of type (type "range" is ignored)} 
+    // NOTE: skip serialization of type (type "range" is ignored) ignore type: true
   }
 
 }

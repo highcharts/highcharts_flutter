@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,38 +24,11 @@ import 'OptionFragment.dart';
  * SVGCuboid 
  */
 class SVGCuboid extends SVGPath3D {
-  SVGCuboid( {
-    this.isFront = null,
-    this.isTop = null
-  }) : super();
-  double? isFront;
-    /*
-  double get isFront { 
-    if (this._isFront == null) {
-      this._isFront = 0;
-    }
-    return this._isFront!;
-  }
+  SVGCuboid( ) : super();
+  // NOTE: isFront skipped - type number is ignored in gen 
 
-  void set isFront (double v) {
-    this._isFront = v;
-  }
-    */
-    
-  double? isTop;
-    /*
-  double get isTop { 
-    if (this._isTop == null) {
-      this._isTop = 0;
-    }
-    return this._isTop!;
-  }
+  // NOTE: isTop skipped - type number is ignored in gen 
 
-  void set isTop (double v) {
-    this._isTop = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -64,23 +37,19 @@ class SVGCuboid extends SVGPath3D {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of front (type SVGPath is ignored)} 
+    // NOTE: skip serialization of front (type SVGPath is ignored) ignore type: true
 
-    if (this.isFront != null) {  
-      buffer.writeAll(["\"isFront\":", this.isFront, ","], "");
-    }
+    // NOTE: skip serialization of isFront (type number is ignored) ignore type: true
 
-    if (this.isTop != null) {  
-      buffer.writeAll(["\"isTop\":", this.isTop, ","], "");
-    }
+    // NOTE: skip serialization of isTop (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of side (type SVGPath is ignored)} 
+    // NOTE: skip serialization of side (type SVGPath is ignored) ignore type: true
 
-    // NOTE: skip serialization of top (type SVGPath is ignored)} 
+    // NOTE: skip serialization of top (type SVGPath is ignored) ignore type: true
 
-    // NOTE: skip serialization of zIndexes (type Generic is ignored)} 
+    // NOTE: skip serialization of zIndexes (type Generic is ignored) ignore type: true
 
-    // NOTE: skip serialization of forcedSides (type string[] is ignored)} 
+    // NOTE: skip serialization of forcedSides (type string[] is ignored) ignore type: true
   }
 
 }

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,7 +23,21 @@ import 'OptionFragment.dart';
  * MapLinePointOptions 
  */
 class MapLinePointOptions extends MapPointOptions {
-  MapLinePointOptions( ) : super();
+  MapLinePointOptions( {
+    super.accessibility = null,
+    super.borderColor = null,
+    super.className = null,
+    super.color = null,
+    super.colorIndex = null,
+    super.connectors = null,
+    super.dataLabels = null,
+    super.dragDrop = null,
+    super.events = null,
+    super.keys = null,
+    super.marker = null,
+    super.selected = null,
+    super.visible = null
+  }) : super();
   
 
   //////////////////////////////////////////////////////////////////////////////

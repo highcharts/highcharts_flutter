@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,68 +22,15 @@ import 'OptionFragment.dart';
  * MarkerClusterSplitDataObject 
  */
 class MarkerClusterSplitDataObject extends OptionFragment {
-  MarkerClusterSplitDataObject( {
-    this.dataIndex = null,
-    this.x = null,
-    this.y = null,
-    this.parentStateId = null
-  }) : super();
-  double? dataIndex;
-    /*
-  double get dataIndex { 
-    if (this._dataIndex == null) {
-      this._dataIndex = 0;
-    }
-    return this._dataIndex!;
-  }
+  MarkerClusterSplitDataObject( ) : super();
+  // NOTE: dataIndex skipped - type number is ignored in gen 
 
-  void set dataIndex (double v) {
-    this._dataIndex = v;
-  }
-    */
-    
-  double? x;
-    /*
-  double get x { 
-    if (this._x == null) {
-      this._x = 0;
-    }
-    return this._x!;
-  }
+  // NOTE: x skipped - type number is ignored in gen 
 
-  void set x (double v) {
-    this._x = v;
-  }
-    */
-    
-  double? y;
-    /*
-  double get y { 
-    if (this._y == null) {
-      this._y = 0;
-    }
-    return this._y!;
-  }
+  // NOTE: y skipped - type number is ignored in gen 
 
-  void set y (double v) {
-    this._y = v;
-  }
-    */
-    
-  String? parentStateId;
-    /*
-  String get parentStateId { 
-    if (this._parentStateId == null) {
-      this._parentStateId = "";
-    }
-    return this._parentStateId!;
-  }
+  // NOTE: parentStateId skipped - type string is ignored in gen 
 
-  void set parentStateId (String v) {
-    this._parentStateId = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -92,23 +39,15 @@ class MarkerClusterSplitDataObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.dataIndex != null) {  
-      buffer.writeAll(["\"dataIndex\":", this.dataIndex, ","], "");
-    }
+    // NOTE: skip serialization of dataIndex (type number is ignored) ignore type: true
 
-    if (this.x != null) {  
-      buffer.writeAll(["\"x\":", this.x, ","], "");
-    }
+    // NOTE: skip serialization of x (type number is ignored) ignore type: true
 
-    if (this.y != null) {  
-      buffer.writeAll(["\"y\":", this.y, ","], "");
-    }
+    // NOTE: skip serialization of y (type number is ignored) ignore type: true
 
-    if (this.parentStateId != null) {  
-      buffer.writeAll(["\"parentStateId\":\`", this.parentStateId, "\`,"], "");
-    }
+    // NOTE: skip serialization of parentStateId (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of options (type PointShortOptions is ignored)} 
+    // NOTE: skip serialization of options (type PointShortOptions is ignored) ignore type: 1
   }
 
 }

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,158 +23,27 @@ import 'OptionFragment.dart';
  * PlotBandLabelOptions 
  */
 class PlotBandLabelOptions extends OptionFragment {
-  PlotBandLabelOptions( {
-    this.align = null,
-    this.className = null,
-    this.clip = null,
-    this.rotation = null,
-    this.text = null,
-    this.textAlign = null,
-    this.useHTML = null,
-    this.verticalAlign = null,
-    this.x = null,
-    this.y = null
-  }) : super();
-  String? align;
-    /*
-  String get align { 
-    if (this._align == null) {
-      this._align = "";
-    }
-    return this._align!;
-  }
+  PlotBandLabelOptions( ) : super();
+  // NOTE: align skipped - type string is ignored in gen 
 
-  void set align (String v) {
-    this._align = v;
-  }
-    */
-    
-  String? className;
-    /*
-  String get className { 
-    if (this._className == null) {
-      this._className = "";
-    }
-    return this._className!;
-  }
+  // NOTE: className skipped - type string is ignored in gen 
 
-  void set className (String v) {
-    this._className = v;
-  }
-    */
-    
-  bool? clip;
-    /*
-  bool get clip { 
-    if (this._clip == null) {
-      this._clip = false;
-    }
-    return this._clip!;
-  }
+  // NOTE: clip skipped - type boolean is ignored in gen 
 
-  void set clip (bool v) {
-    this._clip = v;
-  }
-    */
-    
-  double? rotation;
-    /*
-  double get rotation { 
-    if (this._rotation == null) {
-      this._rotation = 0;
-    }
-    return this._rotation!;
-  }
+  // NOTE: rotation skipped - type number is ignored in gen 
 
-  void set rotation (double v) {
-    this._rotation = v;
-  }
-    */
-    
-  String? text;
-    /*
-  String get text { 
-    if (this._text == null) {
-      this._text = "";
-    }
-    return this._text!;
-  }
+  // NOTE: text skipped - type string is ignored in gen 
 
-  void set text (String v) {
-    this._text = v;
-  }
-    */
-    
-  String? textAlign;
-    /*
-  String get textAlign { 
-    if (this._textAlign == null) {
-      this._textAlign = "";
-    }
-    return this._textAlign!;
-  }
+  // NOTE: textAlign skipped - type string is ignored in gen 
 
-  void set textAlign (String v) {
-    this._textAlign = v;
-  }
-    */
-    
-  bool? useHTML;
-    /*
-  bool get useHTML { 
-    if (this._useHTML == null) {
-      this._useHTML = false;
-    }
-    return this._useHTML!;
-  }
+  // NOTE: useHTML skipped - type boolean is ignored in gen 
 
-  void set useHTML (bool v) {
-    this._useHTML = v;
-  }
-    */
-    
-  String? verticalAlign;
-    /*
-  String get verticalAlign { 
-    if (this._verticalAlign == null) {
-      this._verticalAlign = "";
-    }
-    return this._verticalAlign!;
-  }
+  // NOTE: verticalAlign skipped - type string is ignored in gen 
 
-  void set verticalAlign (String v) {
-    this._verticalAlign = v;
-  }
-    */
-    
-  double? x;
-    /*
-  double get x { 
-    if (this._x == null) {
-      this._x = 0;
-    }
-    return this._x!;
-  }
+  // NOTE: x skipped - type number is ignored in gen 
 
-  void set x (double v) {
-    this._x = v;
-  }
-    */
-    
-  double? y;
-    /*
-  double get y { 
-    if (this._y == null) {
-      this._y = 0;
-    }
-    return this._y!;
-  }
+  // NOTE: y skipped - type number is ignored in gen 
 
-  void set y (double v) {
-    this._y = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -183,47 +52,27 @@ class PlotBandLabelOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.align != null) {  
-      buffer.writeAll(["\"align\":\`", this.align, "\`,"], "");
-    }
+    // NOTE: skip serialization of align (type string is ignored) ignore type: true
 
-    if (this.className != null) {  
-      buffer.writeAll(["\"className\":\`", this.className, "\`,"], "");
-    }
+    // NOTE: skip serialization of className (type string is ignored) ignore type: true
 
-    if (this.clip != null) {  
-      buffer.writeAll(["\"clip\":", this.clip, ","], "");
-    }
+    // NOTE: skip serialization of clip (type boolean is ignored) ignore type: true
 
-    if (this.rotation != null) {  
-      buffer.writeAll(["\"rotation\":", this.rotation, ","], "");
-    }
+    // NOTE: skip serialization of rotation (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of style (type CSSObject is ignored)} 
+    // NOTE: skip serialization of style (type CSSObject is ignored) ignore type: true
 
-    if (this.text != null) {  
-      buffer.writeAll(["\"text\":\`", this.text, "\`,"], "");
-    }
+    // NOTE: skip serialization of text (type string is ignored) ignore type: true
 
-    if (this.textAlign != null) {  
-      buffer.writeAll(["\"textAlign\":\`", this.textAlign, "\`,"], "");
-    }
+    // NOTE: skip serialization of textAlign (type string is ignored) ignore type: true
 
-    if (this.useHTML != null) {  
-      buffer.writeAll(["\"useHTML\":", this.useHTML, ","], "");
-    }
+    // NOTE: skip serialization of useHTML (type boolean is ignored) ignore type: true
 
-    if (this.verticalAlign != null) {  
-      buffer.writeAll(["\"verticalAlign\":\`", this.verticalAlign, "\`,"], "");
-    }
+    // NOTE: skip serialization of verticalAlign (type string is ignored) ignore type: true
 
-    if (this.x != null) {  
-      buffer.writeAll(["\"x\":", this.x, ","], "");
-    }
+    // NOTE: skip serialization of x (type number is ignored) ignore type: true
 
-    if (this.y != null) {  
-      buffer.writeAll(["\"y\":", this.y, ","], "");
-    }
+    // NOTE: skip serialization of y (type number is ignored) ignore type: true
   }
 
 }

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -37,128 +37,23 @@ import 'OptionFragment.dart';
  * LangAccessibilityOptions 
  */
 class LangAccessibilityOptions extends OptionFragment {
-  LangAccessibilityOptions( {
-    this.chartContainerLabel = null,
-    this.credits = null,
-    this.defaultChartTitle = null,
-    this.drillUpButton = null,
-    this.graphicContainerLabel = null,
-    this.svgContainerLabel = null,
-    this.svgContainerTitle = null,
-    this.thousandsSep = null
-  }) : super();
-  String? chartContainerLabel;
-    /*
-  String get chartContainerLabel { 
-    if (this._chartContainerLabel == null) {
-      this._chartContainerLabel = "";
-    }
-    return this._chartContainerLabel!;
-  }
+  LangAccessibilityOptions( ) : super();
+  // NOTE: chartContainerLabel skipped - type string is ignored in gen 
 
-  void set chartContainerLabel (String v) {
-    this._chartContainerLabel = v;
-  }
-    */
-    
-  String? credits;
-    /*
-  String get credits { 
-    if (this._credits == null) {
-      this._credits = "";
-    }
-    return this._credits!;
-  }
+  // NOTE: credits skipped - type string is ignored in gen 
 
-  void set credits (String v) {
-    this._credits = v;
-  }
-    */
-    
-  String? defaultChartTitle;
-    /*
-  String get defaultChartTitle { 
-    if (this._defaultChartTitle == null) {
-      this._defaultChartTitle = "";
-    }
-    return this._defaultChartTitle!;
-  }
+  // NOTE: defaultChartTitle skipped - type string is ignored in gen 
 
-  void set defaultChartTitle (String v) {
-    this._defaultChartTitle = v;
-  }
-    */
-    
-  String? drillUpButton;
-    /*
-  String get drillUpButton { 
-    if (this._drillUpButton == null) {
-      this._drillUpButton = "";
-    }
-    return this._drillUpButton!;
-  }
+  // NOTE: drillUpButton skipped - type string is ignored in gen 
 
-  void set drillUpButton (String v) {
-    this._drillUpButton = v;
-  }
-    */
-    
-  String? graphicContainerLabel;
-    /*
-  String get graphicContainerLabel { 
-    if (this._graphicContainerLabel == null) {
-      this._graphicContainerLabel = "";
-    }
-    return this._graphicContainerLabel!;
-  }
+  // NOTE: graphicContainerLabel skipped - type string is ignored in gen 
 
-  void set graphicContainerLabel (String v) {
-    this._graphicContainerLabel = v;
-  }
-    */
-    
-  String? svgContainerLabel;
-    /*
-  String get svgContainerLabel { 
-    if (this._svgContainerLabel == null) {
-      this._svgContainerLabel = "";
-    }
-    return this._svgContainerLabel!;
-  }
+  // NOTE: svgContainerLabel skipped - type string is ignored in gen 
 
-  void set svgContainerLabel (String v) {
-    this._svgContainerLabel = v;
-  }
-    */
-    
-  String? svgContainerTitle;
-    /*
-  String get svgContainerTitle { 
-    if (this._svgContainerTitle == null) {
-      this._svgContainerTitle = "";
-    }
-    return this._svgContainerTitle!;
-  }
+  // NOTE: svgContainerTitle skipped - type string is ignored in gen 
 
-  void set svgContainerTitle (String v) {
-    this._svgContainerTitle = v;
-  }
-    */
-    
-  String? thousandsSep;
-    /*
-  String get thousandsSep { 
-    if (this._thousandsSep == null) {
-      this._thousandsSep = "";
-    }
-    return this._thousandsSep!;
-  }
+  // NOTE: thousandsSep skipped - type string is ignored in gen 
 
-  void set thousandsSep (String v) {
-    this._thousandsSep = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -167,67 +62,51 @@ class LangAccessibilityOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of announceNewData (type LangAccessibilityAnnounceNewDataOptions is ignored)} 
+    // NOTE: skip serialization of announceNewData (type LangAccessibilityAnnounceNewDataOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of axis (type LangAccessibilityAxisOptions is ignored)} 
+    // NOTE: skip serialization of axis (type LangAccessibilityAxisOptions is ignored) ignore type: true
 
-    if (this.chartContainerLabel != null) {  
-      buffer.writeAll(["\"chartContainerLabel\":\`", this.chartContainerLabel, "\`,"], "");
-    }
+    // NOTE: skip serialization of chartContainerLabel (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of chartTypes (type LangAccessibilityChartTypesOptions is ignored)} 
+    // NOTE: skip serialization of chartTypes (type LangAccessibilityChartTypesOptions is ignored) ignore type: true
 
-    if (this.credits != null) {  
-      buffer.writeAll(["\"credits\":\`", this.credits, "\`,"], "");
-    }
+    // NOTE: skip serialization of credits (type string is ignored) ignore type: true
 
-    if (this.defaultChartTitle != null) {  
-      buffer.writeAll(["\"defaultChartTitle\":\`", this.defaultChartTitle, "\`,"], "");
-    }
+    // NOTE: skip serialization of defaultChartTitle (type string is ignored) ignore type: true
 
-    if (this.drillUpButton != null) {  
-      buffer.writeAll(["\"drillUpButton\":\`", this.drillUpButton, "\`,"], "");
-    }
+    // NOTE: skip serialization of drillUpButton (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of exporting (type LangAccessibilityExportingOptions is ignored)} 
+    // NOTE: skip serialization of exporting (type LangAccessibilityExportingOptions is ignored) ignore type: true
 
-    if (this.graphicContainerLabel != null) {  
-      buffer.writeAll(["\"graphicContainerLabel\":\`", this.graphicContainerLabel, "\`,"], "");
-    }
+    // NOTE: skip serialization of graphicContainerLabel (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of legend (type LangAccessibilityLegendOptions is ignored)} 
+    // NOTE: skip serialization of legend (type LangAccessibilityLegendOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of navigator (type LangAccessibilityNavigatorOptions is ignored)} 
+    // NOTE: skip serialization of navigator (type LangAccessibilityNavigatorOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of rangeSelector (type LangAccessibilityRangeSelectorOptions is ignored)} 
+    // NOTE: skip serialization of rangeSelector (type LangAccessibilityRangeSelectorOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of screenReaderSection (type LangAccessibilityScreenReaderSectionOptions is ignored)} 
+    // NOTE: skip serialization of screenReaderSection (type LangAccessibilityScreenReaderSectionOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of series (type LangAccessibilitySeriesOptions is ignored)} 
+    // NOTE: skip serialization of series (type LangAccessibilitySeriesOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of seriesTypeDescriptions (type LangAccessibilitySeriesTypeDescriptionsOptions is ignored)} 
+    // NOTE: skip serialization of seriesTypeDescriptions (type LangAccessibilitySeriesTypeDescriptionsOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of sonification (type LangAccessibilitySonificationOptions is ignored)} 
+    // NOTE: skip serialization of sonification (type LangAccessibilitySonificationOptions is ignored) ignore type: true
 
-    if (this.svgContainerLabel != null) {  
-      buffer.writeAll(["\"svgContainerLabel\":\`", this.svgContainerLabel, "\`,"], "");
-    }
+    // NOTE: skip serialization of svgContainerLabel (type string is ignored) ignore type: true
 
-    if (this.svgContainerTitle != null) {  
-      buffer.writeAll(["\"svgContainerTitle\":\`", this.svgContainerTitle, "\`,"], "");
-    }
+    // NOTE: skip serialization of svgContainerTitle (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of table (type LangAccessibilityTableOptions is ignored)} 
+    // NOTE: skip serialization of table (type LangAccessibilityTableOptions is ignored) ignore type: true
 
-    if (this.thousandsSep != null) {  
-      buffer.writeAll(["\"thousandsSep\":\`", this.thousandsSep, "\`,"], "");
-    }
+    // NOTE: skip serialization of thousandsSep (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of zoom (type LangAccessibilityZoomOptions is ignored)} 
+    // NOTE: skip serialization of zoom (type LangAccessibilityZoomOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of contextMenu (type LangAccessibilityOptionsContextMenu is ignored)} 
+    // NOTE: skip serialization of contextMenu (type LangAccessibilityOptionsContextMenu is ignored) ignore type: true
 
-    // NOTE: skip serialization of editMode (type LangAccessibilityOptionsEditMode is ignored)} 
+    // NOTE: skip serialization of editMode (type LangAccessibilityOptionsEditMode is ignored) ignore type: true
   }
 
 }

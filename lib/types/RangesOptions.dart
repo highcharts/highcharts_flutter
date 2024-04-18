@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,68 +23,15 @@ import 'OptionFragment.dart';
  * RangesOptions 
  */
 class RangesOptions extends OptionFragment {
-  RangesOptions( {
-    this.autoRanges = null,
-    this.borderColor = null,
-    this.color = null,
-    this.connectorColor = null
-  }) : super();
-  bool? autoRanges;
-    /*
-  bool get autoRanges { 
-    if (this._autoRanges == null) {
-      this._autoRanges = false;
-    }
-    return this._autoRanges!;
-  }
+  RangesOptions( ) : super();
+  // NOTE: autoRanges skipped - type boolean is ignored in gen 
 
-  void set autoRanges (bool v) {
-    this._autoRanges = v;
-  }
-    */
-    
-  String? borderColor;
-    /*
-  String get borderColor { 
-    if (this._borderColor == null) {
-      this._borderColor = "";
-    }
-    return this._borderColor!;
-  }
+  // NOTE: borderColor skipped - type string is ignored in gen 
 
-  void set borderColor (String v) {
-    this._borderColor = v;
-  }
-    */
-    
-  String? color;
-    /*
-  String get color { 
-    if (this._color == null) {
-      this._color = "";
-    }
-    return this._color!;
-  }
+  // NOTE: color skipped - type string is ignored in gen 
 
-  void set color (String v) {
-    this._color = v;
-  }
-    */
-    
-  String? connectorColor;
-    /*
-  String get connectorColor { 
-    if (this._connectorColor == null) {
-      this._connectorColor = "";
-    }
-    return this._connectorColor!;
-  }
+  // NOTE: connectorColor skipped - type string is ignored in gen 
 
-  void set connectorColor (String v) {
-    this._connectorColor = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -93,29 +40,21 @@ class RangesOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.autoRanges != null) {  
-      buffer.writeAll(["\"autoRanges\":", this.autoRanges, ","], "");
-    }
+    // NOTE: skip serialization of autoRanges (type boolean is ignored) ignore type: true
 
-    if (this.borderColor != null) {  
-      buffer.writeAll(["\"borderColor\":\`", this.borderColor, "\`,"], "");
-    }
+    // NOTE: skip serialization of borderColor (type string is ignored) ignore type: true
 
-    if (this.color != null) {  
-      buffer.writeAll(["\"color\":\`", this.color, "\`,"], "");
-    }
+    // NOTE: skip serialization of color (type string is ignored) ignore type: true
 
-    if (this.connectorColor != null) {  
-      buffer.writeAll(["\"connectorColor\":\`", this.connectorColor, "\`,"], "");
-    }
+    // NOTE: skip serialization of connectorColor (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of bubbleAttribs (type SVGAttributes is ignored)} 
+    // NOTE: skip serialization of bubbleAttribs (type SVGAttributes is ignored) ignore type: true
 
-    // NOTE: skip serialization of connectorAttribs (type SVGAttributes is ignored)} 
+    // NOTE: skip serialization of connectorAttribs (type SVGAttributes is ignored) ignore type: true
 
-    // NOTE: skip serialization of labelAttribs (type SVGAttributes is ignored)} 
+    // NOTE: skip serialization of labelAttribs (type SVGAttributes is ignored) ignore type: true
 
-    // NOTE: skip serialization of value (type any is ignored)} 
+    // NOTE: skip serialization of value (type any is ignored) ignore type: 1
   }
 
 }

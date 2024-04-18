@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,53 +22,13 @@ import 'OptionFragment.dart';
  * PulseOscOptions 
  */
 class PulseOscOptions extends OptionFragment {
-  PulseOscOptions( {
-    this.detune = null,
-    this.pulseWidth = null,
-    this.frequency = null
-  }) : super();
-  double? detune;
-    /*
-  double get detune { 
-    if (this._detune == null) {
-      this._detune = 0;
-    }
-    return this._detune!;
-  }
+  PulseOscOptions( ) : super();
+  // NOTE: detune skipped - type number is ignored in gen 
 
-  void set detune (double v) {
-    this._detune = v;
-  }
-    */
-    
-  double? pulseWidth;
-    /*
-  double get pulseWidth { 
-    if (this._pulseWidth == null) {
-      this._pulseWidth = 0;
-    }
-    return this._pulseWidth!;
-  }
+  // NOTE: pulseWidth skipped - type number is ignored in gen 
 
-  void set pulseWidth (double v) {
-    this._pulseWidth = v;
-  }
-    */
-    
-  double? frequency;
-    /*
-  double get frequency { 
-    if (this._frequency == null) {
-      this._frequency = 0;
-    }
-    return this._frequency!;
-  }
+  // NOTE: frequency skipped - type number is ignored in gen 
 
-  void set frequency (double v) {
-    this._frequency = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -77,17 +37,11 @@ class PulseOscOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.detune != null) {  
-      buffer.writeAll(["\"detune\":", this.detune, ","], "");
-    }
+    // NOTE: skip serialization of detune (type number is ignored) ignore type: true
 
-    if (this.pulseWidth != null) {  
-      buffer.writeAll(["\"pulseWidth\":", this.pulseWidth, ","], "");
-    }
+    // NOTE: skip serialization of pulseWidth (type number is ignored) ignore type: true
 
-    if (this.frequency != null) {  
-      buffer.writeAll(["\"frequency\":", this.frequency, ","], "");
-    }
+    // NOTE: skip serialization of frequency (type number is ignored) ignore type: true
   }
 
 }

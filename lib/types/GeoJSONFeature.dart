@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -33,11 +33,11 @@ class GeoJSONFeature extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of geometry (type GeoJSONGeometryPoint is ignored)} 
+    // NOTE: skip serialization of geometry (type GeoJSONGeometryPoint is ignored) ignore type: true
 
-    // NOTE: skip serialization of properties (type Generic is ignored)} 
+    // NOTE: skip serialization of properties (type Generic is ignored) ignore type: true
 
-    // NOTE: skip serialization of type (type "Feature" is ignored)} 
+    // NOTE: skip serialization of type (type "Feature" is ignored) ignore type: true
   }
 
 }

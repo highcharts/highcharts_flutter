@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,8 +24,53 @@ import 'OptionFragment.dart';
  * StockToolsGuiDefinitionsOptions 
  */
 class StockToolsGuiDefinitionsOptions extends OptionFragment {
-  StockToolsGuiDefinitionsOptions( ) : super();
-  
+  StockToolsGuiDefinitionsOptions( {
+    this.advanced = null,
+    this.crookedLines = null,
+    this.currentPriceIndicator = null,
+    this.flags = null,
+    this.fullScreen = null,
+    this.indicators = null,
+    this.lines = null,
+    this.measure = null,
+    this.saveChart = null,
+    this.separator = null,
+    this.simpleShapes = null,
+    this.toggleAnnotations = null,
+    this.typeChange = null,
+    this.verticalLabels = null,
+    this.zoomChange = null
+  }) : super();
+  StockToolsGuiDefinitionsButtonsOptions? advanced;
+    
+  StockToolsGuiDefinitionsButtonsOptions? crookedLines;
+    
+  StockToolsGuiDefinitionsButtonOptions? currentPriceIndicator;
+    
+  StockToolsGuiDefinitionsButtonsOptions? flags;
+    
+  StockToolsGuiDefinitionsButtonOptions? fullScreen;
+    
+  StockToolsGuiDefinitionsButtonOptions? indicators;
+    
+  StockToolsGuiDefinitionsButtonsOptions? lines;
+    
+  StockToolsGuiDefinitionsButtonsOptions? measure;
+    
+  StockToolsGuiDefinitionsButtonOptions? separator;
+    
+  StockToolsGuiDefinitionsButtonOptions? toggleAnnotations;
+    
+  StockToolsGuiDefinitionsButtonOptions? saveChart;
+    
+  StockToolsGuiDefinitionsButtonsOptions? simpleShapes;
+    
+  StockToolsGuiDefinitionsButtonsOptions? typeChange;
+    
+  StockToolsGuiDefinitionsButtonsOptions? verticalLabels;
+    
+  StockToolsGuiDefinitionsButtonsOptions? zoomChange;
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -34,35 +79,65 @@ class StockToolsGuiDefinitionsOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of advanced (type StockToolsGuiDefinitionsButtonsOptions is ignored)} 
+    if (this.advanced != null) {  
+      buffer.writeAll(["\"advanced\":",this.advanced?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of crookedLines (type StockToolsGuiDefinitionsButtonsOptions is ignored)} 
+    if (this.crookedLines != null) {  
+      buffer.writeAll(["\"crookedLines\":",this.crookedLines?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of currentPriceIndicator (type StockToolsGuiDefinitionsButtonOptions is ignored)} 
+    if (this.currentPriceIndicator != null) {  
+      buffer.writeAll(["\"currentPriceIndicator\":",this.currentPriceIndicator?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of flags (type StockToolsGuiDefinitionsButtonsOptions is ignored)} 
+    if (this.flags != null) {  
+      buffer.writeAll(["\"flags\":",this.flags?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of fullScreen (type StockToolsGuiDefinitionsButtonOptions is ignored)} 
+    if (this.fullScreen != null) {  
+      buffer.writeAll(["\"fullScreen\":",this.fullScreen?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of indicators (type StockToolsGuiDefinitionsButtonOptions is ignored)} 
+    if (this.indicators != null) {  
+      buffer.writeAll(["\"indicators\":",this.indicators?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of lines (type StockToolsGuiDefinitionsButtonsOptions is ignored)} 
+    if (this.lines != null) {  
+      buffer.writeAll(["\"lines\":",this.lines?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of measure (type StockToolsGuiDefinitionsButtonsOptions is ignored)} 
+    if (this.measure != null) {  
+      buffer.writeAll(["\"measure\":",this.measure?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of separator (type StockToolsGuiDefinitionsButtonOptions is ignored)} 
+    if (this.separator != null) {  
+      buffer.writeAll(["\"separator\":",this.separator?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of toggleAnnotations (type StockToolsGuiDefinitionsButtonOptions is ignored)} 
+    if (this.toggleAnnotations != null) {  
+      buffer.writeAll(["\"toggleAnnotations\":",this.toggleAnnotations?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of saveChart (type StockToolsGuiDefinitionsButtonOptions is ignored)} 
+    if (this.saveChart != null) {  
+      buffer.writeAll(["\"saveChart\":",this.saveChart?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of simpleShapes (type StockToolsGuiDefinitionsButtonsOptions is ignored)} 
+    if (this.simpleShapes != null) {  
+      buffer.writeAll(["\"simpleShapes\":",this.simpleShapes?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of typeChange (type StockToolsGuiDefinitionsButtonsOptions is ignored)} 
+    if (this.typeChange != null) {  
+      buffer.writeAll(["\"typeChange\":",this.typeChange?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of verticalLabels (type StockToolsGuiDefinitionsButtonsOptions is ignored)} 
+    if (this.verticalLabels != null) {  
+      buffer.writeAll(["\"verticalLabels\":",this.verticalLabels?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of zoomChange (type StockToolsGuiDefinitionsButtonsOptions is ignored)} 
+    if (this.zoomChange != null) {  
+      buffer.writeAll(["\"zoomChange\":",this.zoomChange?.toJSON(), ","], "");
+    }
   }
 
 }

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,53 +22,13 @@ import 'OptionFragment.dart';
  * BorderRadiusOptionsObject 
  */
 class BorderRadiusOptionsObject extends OptionFragment {
-  BorderRadiusOptionsObject( {
-    this.radius = null,
-    this.scope = null,
-    this.where = null
-  }) : super();
-  String? radius;
-    /*
-  String get radius { 
-    if (this._radius == null) {
-      this._radius = "";
-    }
-    return this._radius!;
-  }
+  BorderRadiusOptionsObject( ) : super();
+  // NOTE: radius skipped - type string is ignored in gen 
 
-  void set radius (String v) {
-    this._radius = v;
-  }
-    */
-    
-  String? scope;
-    /*
-  String get scope { 
-    if (this._scope == null) {
-      this._scope = "";
-    }
-    return this._scope!;
-  }
+  // NOTE: scope skipped - type string is ignored in gen 
 
-  void set scope (String v) {
-    this._scope = v;
-  }
-    */
-    
-  String? where;
-    /*
-  String get where { 
-    if (this._where == null) {
-      this._where = "";
-    }
-    return this._where!;
-  }
+  // NOTE: where skipped - type string is ignored in gen 
 
-  void set where (String v) {
-    this._where = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -77,17 +37,11 @@ class BorderRadiusOptionsObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.radius != null) {  
-      buffer.writeAll(["\"radius\":\`", this.radius, "\`,"], "");
-    }
+    // NOTE: skip serialization of radius (type string is ignored) ignore type: true
 
-    if (this.scope != null) {  
-      buffer.writeAll(["\"scope\":\`", this.scope, "\`,"], "");
-    }
+    // NOTE: skip serialization of scope (type string is ignored) ignore type: true
 
-    if (this.where != null) {  
-      buffer.writeAll(["\"where\":\`", this.where, "\`,"], "");
-    }
+    // NOTE: skip serialization of where (type string is ignored) ignore type: true
   }
 
 }

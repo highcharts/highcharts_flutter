@@ -12,46 +12,74 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
-import 'OptionFragment.dart';
+import 'BarSeriesOptions.dart';
+import 'Series.dart';
+import 'PointOptions.dart';
 
-/** 
- * BarSeries 
- */
-class BarSeries extends OptionFragment {
-  BarSeries( {
-    this.inverted = null
-  }) : super();
-  bool? inverted;
-    /*
-  bool get inverted { 
-    if (this._inverted == null) {
-      this._inverted = false;
-    }
-    return this._inverted!;
-  }
+class BarSeries extends Series {
 
-  void set inverted (bool v) {
-    this._inverted = v;
-  }
-    */
-    
+  String? name;
+  BarSeriesOptions? options;
+  List<PointOptions>? points;
+  List<List<double>>? data;
 
-  //////////////////////////////////////////////////////////////////////////////
+  BarSeries({
+    this.name = null,
+    this.options = null,
+    this.points = null,
+    this.data = null
+  });
+
   
   @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    if (this.inverted != null) {  
-      buffer.writeAll(["\"inverted\":", this.inverted, ","], "");
+
+    if (this.name != null) {
+      buffer.writeAll(["\"name\": \"", this.name!, "\","], "");
     }
 
-    // NOTE: skip serialization of pointClass (type typeof BarPoint is ignored)} 
+    buffer.write("\"type\": \"bar\",");
+
+    if (this.data != null && this.points == null) {
+      // Serialize as a 2d array
+
+      StringBuffer seriesData = StringBuffer();
+
+      for (var point in this.data!) {
+        seriesData.writeAll(["["], "");
+        for (var item in point) {
+          seriesData.writeAll([item, ","]);
+        }
+        seriesData.writeAll(["],"], "");
+      }
+
+      buffer.writeAll(["\"data\": [", seriesData, "],"], "");   
+
+
+    } else if (this.points != null) {
+      // Go through the points and write them
+      StringBuffer seriesData = StringBuffer();
+
+      for (var point in this.points!) {
+        seriesData.writeAll(["{"], "");
+        point.toJSONInner(seriesData); 
+        seriesData.writeAll(["},"], "");
+      }
+
+      buffer.writeAll(["\"data\": [", seriesData, "],"], "");
+    }
+
+
+
+    
+    
   }
 
 }

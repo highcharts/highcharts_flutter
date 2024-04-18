@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -33,7 +33,7 @@ class SankeyDataLabelFormatterContext extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of point (type SankeyPoint is ignored)} 
+    // NOTE: skip serialization of point (type SankeyPoint is ignored) ignore type: true
   }
 
 }

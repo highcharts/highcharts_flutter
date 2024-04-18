@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,23 +23,9 @@ import 'OptionFragment.dart';
  * MockSeries 
  */
 class MockSeries extends OptionFragment {
-  MockSeries( {
-    this.visible = null
-  }) : super();
-  bool? visible;
-    /*
-  bool get visible { 
-    if (this._visible == null) {
-      this._visible = false;
-    }
-    return this._visible!;
-  }
+  MockSeries( ) : super();
+  // NOTE: visible skipped - type boolean is ignored in gen 
 
-  void set visible (bool v) {
-    this._visible = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -48,15 +34,13 @@ class MockSeries extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of chart (type AnnotationChart is ignored)} 
+    // NOTE: skip serialization of chart (type AnnotationChart is ignored) ignore type: true
 
-    // NOTE: skip serialization of xAxis (type Axis is ignored)} 
+    // NOTE: skip serialization of xAxis (type Axis is ignored) ignore type: true
 
-    // NOTE: skip serialization of yAxis (type Axis is ignored)} 
+    // NOTE: skip serialization of yAxis (type Axis is ignored) ignore type: true
 
-    if (this.visible != null) {  
-      buffer.writeAll(["\"visible\":", this.visible, ","], "");
-    }
+    // NOTE: skip serialization of visible (type boolean is ignored) ignore type: true
   }
 
 }

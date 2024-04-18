@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,22 +24,22 @@ import 'OptionFragment.dart';
  */
 class CylinderPointOptions extends ColumnPointOptions {
   CylinderPointOptions( {
-    this.shapeType = null
+    super.accessibility = null,
+    super.borderColor = null,
+    super.className = null,
+    super.color = null,
+    super.colorIndex = null,
+    super.connectors = null,
+    super.dataLabels = null,
+    super.dragDrop = null,
+    super.events = null,
+    super.keys = null,
+    super.marker = null,
+    super.selected = null,
+    super.visible = null
   }) : super();
-  String? shapeType;
-    /*
-  String get shapeType { 
-    if (this._shapeType == null) {
-      this._shapeType = "";
-    }
-    return this._shapeType!;
-  }
+  // NOTE: shapeType skipped - type string is ignored in gen 
 
-  void set shapeType (String v) {
-    this._shapeType = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -48,9 +48,7 @@ class CylinderPointOptions extends ColumnPointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.shapeType != null) {  
-      buffer.writeAll(["\"shapeType\":\`", this.shapeType, "\`,"], "");
-    }
+    // NOTE: skip serialization of shapeType (type string is ignored) ignore type: true
   }
 
 }

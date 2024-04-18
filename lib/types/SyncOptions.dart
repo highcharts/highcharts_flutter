@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -35,23 +35,23 @@ class SyncOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of extremes (type OptionsEntry is ignored)} 
+    // NOTE: skip serialization of extremes (type OptionsEntry is ignored) ignore type: true
 
-    // NOTE: skip serialization of highlight (type HighlightSyncOptions is ignored)} 
+    // NOTE: skip serialization of highlight (type HighlightSyncOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of visibility (type OptionsEntry is ignored)} 
+    // NOTE: skip serialization of visibility (type OptionsEntry is ignored) ignore type: true
 
-    // NOTE: skip serialization of extremes (type OptionsEntry is ignored)} 
+    // NOTE: skip serialization of extremes (type OptionsEntry is ignored) ignore type: true
 
-    // NOTE: skip serialization of highlight (type HighlightSyncOptions is ignored)} 
+    // NOTE: skip serialization of highlight (type HighlightSyncOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of visibility (type OptionsEntry is ignored)} 
+    // NOTE: skip serialization of visibility (type OptionsEntry is ignored) ignore type: true
 
-    // NOTE: skip serialization of extremes (type OptionsEntry is ignored)} 
+    // NOTE: skip serialization of extremes (type OptionsEntry is ignored) ignore type: true
 
-    // NOTE: skip serialization of crossfilter (type CrossfilterSyncOptions is ignored)} 
+    // NOTE: skip serialization of crossfilter (type CrossfilterSyncOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of extremes (type OptionsEntry is ignored)} 
+    // NOTE: skip serialization of extremes (type OptionsEntry is ignored) ignore type: true
   }
 
 }

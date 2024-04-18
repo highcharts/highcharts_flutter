@@ -12,10 +12,11 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
+import 'TreemapNode.dart';
 import 'TreemapSeries.dart';
 import 'TreemapPoint.dart';
 import 'OptionFragment.dart';
@@ -24,83 +25,17 @@ import 'OptionFragment.dart';
  * TreemapNode 
  */
 class TreemapNode extends OptionFragment {
-  TreemapNode( {
-    this.height = null,
-    this.i = null,
-    this.id = null,
-    this.level = null,
-    this.val = null
-  }) : super();
-  double? height;
-    /*
-  double get height { 
-    if (this._height == null) {
-      this._height = 0;
-    }
-    return this._height!;
-  }
+  TreemapNode( ) : super();
+  // NOTE: height skipped - type number is ignored in gen 
 
-  void set height (double v) {
-    this._height = v;
-  }
-    */
-    
-  double? i;
-    /*
-  double get i { 
-    if (this._i == null) {
-      this._i = 0;
-    }
-    return this._i!;
-  }
+  // NOTE: i skipped - type number is ignored in gen 
 
-  void set i (double v) {
-    this._i = v;
-  }
-    */
-    
-  String? id;
-    /*
-  String get id { 
-    if (this._id == null) {
-      this._id = "";
-    }
-    return this._id!;
-  }
+  // NOTE: id skipped - type string is ignored in gen 
 
-  void set id (String v) {
-    this._id = v;
-  }
-    */
-    
-  double? level;
-    /*
-  double get level { 
-    if (this._level == null) {
-      this._level = 0;
-    }
-    return this._level!;
-  }
+  // NOTE: level skipped - type number is ignored in gen 
 
-  void set level (double v) {
-    this._level = v;
-  }
-    */
-    
-  double? val;
-    /*
-  double get val { 
-    if (this._val == null) {
-      this._val = 0;
-    }
-    return this._val!;
-  }
+  // NOTE: val skipped - type number is ignored in gen 
 
-  void set val (double v) {
-    this._val = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -109,31 +44,21 @@ class TreemapNode extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.height != null) {  
-      buffer.writeAll(["\"height\":", this.height, ","], "");
-    }
+    // NOTE: skip serialization of height (type number is ignored) ignore type: true
 
-    if (this.i != null) {  
-      buffer.writeAll(["\"i\":", this.i, ","], "");
-    }
+    // NOTE: skip serialization of i (type number is ignored) ignore type: true
 
-    if (this.id != null) {  
-      buffer.writeAll(["\"id\":\`", this.id, "\`,"], "");
-    }
+    // NOTE: skip serialization of id (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of children (type TreemapNode[] is ignored)} 
+    // NOTE: skip serialization of children (type TreemapNode[] is ignored) ignore type: true
 
-    if (this.level != null) {  
-      buffer.writeAll(["\"level\":", this.level, ","], "");
-    }
+    // NOTE: skip serialization of level (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of series (type TreemapSeries is ignored)} 
+    // NOTE: skip serialization of series (type TreemapSeries is ignored) ignore type: true
 
-    if (this.val != null) {  
-      buffer.writeAll(["\"val\":", this.val, ","], "");
-    }
+    // NOTE: skip serialization of val (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of point (type TreemapPoint is ignored)} 
+    // NOTE: skip serialization of point (type TreemapPoint is ignored) ignore type: true
   }
 
 }

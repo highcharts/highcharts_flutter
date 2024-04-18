@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,91 +24,97 @@ import 'OptionFragment.dart';
  */
 class WindbarbSeriesOptions extends ColumnSeriesOptions {
   WindbarbSeriesOptions( {
+    super.accessibility = null,
+    super.allAreas = null,
+    super.allowPointSelect = null,
+    super.animationLimit = null,
+    super.boostBlending = null,
+    super.boostThreshold = null,
+    super.borderColor = null,
+    super.borderWidth = null,
+    super.className = null,
+    super.clip = null,
+    super.color = null,
+    super.colorAxis = null,
+    super.colorIndex = null,
+    super.colorKey = null,
+    super.compare = null,
+    super.compareStart = null,
+    super.connectEnds = null,
+    super.connectNulls = null,
+    super.connectors = null,
+    super.crisp = null,
+    super.cropThreshold = null,
+    super.cumulative = null,
+    super.cursor = null,
+    super.dashStyle = null,
+    super.dataGrouping = null,
+    super.dataLabels = null,
+    super.dataSorting = null,
+    super.description = null,
+    super.dragDrop = null,
+    super.enableMouseTracking = null,
+    super.events = null,
+    super.findNearestPointBy = null,
+    super.gapSize = null,
+    super.gapUnit = null,
+    super.getExtremesFromAll = null,
+    super.includeInDataExport = null,
+    super.joinBy = null,
+    super.keys = null,
+    super.label = null,
+    super.lastPrice = null,
+    super.lastVisiblePrice = null,
+    super.legendSymbol = null,
+    super.linecap = null,
+    super.lineWidth = null,
+    super.linkedTo = null,
+    super.marker = null,
+    super.maxPointWidth = null,
+    super.minPointLength = null,
+    super.navigatorOptions = null,
+    super.negativeColor = null,
+    super.onPoint = null,
     this.onSeries = null,
+    super.opacity = null,
+    super.point = null,
+    super.pointInterval = null,
+    super.pointIntervalUnit = null,
+    super.pointPadding = null,
+    super.pointPlacement = null,
+    super.pointRange = null,
+    super.pointStart = null,
+    super.pointWidth = null,
+    super.relativeXValue = null,
+    super.selected = null,
+    super.showCheckbox = null,
+    super.showInLegend = null,
+    super.showInNavigator = null,
+    super.skipKeyboardNavigation = null,
+    super.softThreshold = null,
+    super.stacking = null,
+    super.step = null,
+    super.stickyTracking = null,
+    super.threshold = null,
+    super.tooltip = null,
+    super.turboThreshold = null,
     this.vectorLength = null,
+    super.visible = null,
     this.xOffset = null,
-    this.yOffset = null
+    this.yOffset = null,
+    super.zIndex = null,
+    super.zoneAxis = null,
+    super.zones = null
   }) : super();
-  /**
-   * The id of another series in the chart that the wind barbs are
-   * projected on. When `null`, the wind symbols are drawn on the X axis,
-   * but offset up or down by the `yOffset` setting.  
-      */
   String? onSeries;
-    /*
-  String get onSeries { 
-    if (this._onSeries == null) {
-      this._onSeries = "";
-    }
-    return this._onSeries!;
-  }
-
-  void set onSeries (String v) {
-    this._onSeries = v;
-  }
-    */
     
-  // NOTE: states skipped - type Generic is ignored in gen
+  // NOTE: states skipped - type Generic is ignored in gen 
 
-  /**
-   * Pixel length of the stems. 
-   * 
-   * Defaults to '20'. 
-      */
   double? vectorLength;
-    /*
-  double get vectorLength { 
-    if (this._vectorLength == null) {
-      this._vectorLength = 0;
-    }
-    return this._vectorLength!;
-  }
-
-  void set vectorLength (double v) {
-    this._vectorLength = v;
-  }
-    */
     
-  /**
-   * Horizontal offset from the cartesian position, in pixels. When the
-   * chart is inverted, this option allows translation like
-   * [yOffset](#plotOptions.windbarb.yOffset) in non inverted charts.  
-      */
   double? xOffset;
-    /*
-  double get xOffset { 
-    if (this._xOffset == null) {
-      this._xOffset = 0;
-    }
-    return this._xOffset!;
-  }
-
-  void set xOffset (double v) {
-    this._xOffset = v;
-  }
-    */
     
-  /**
-   * Vertical offset from the cartesian position, in pixels. The default
-   * value makes sure the symbols don't overlap the X axis when `onSeries`
-   * is `null`, and that they don't overlap the linked series when
-   * `onSeries` is given. 
-   * 
-   * Defaults to '-20'. 
-      */
   double? yOffset;
-    /*
-  double get yOffset { 
-    if (this._yOffset == null) {
-      this._yOffset = 0;
-    }
-    return this._yOffset!;
-  }
-
-  void set yOffset (double v) {
-    this._yOffset = v;
-  }
-    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -119,21 +125,21 @@ class WindbarbSeriesOptions extends ColumnSeriesOptions {
 
     
     if (this.onSeries != null) {  
-      buffer.writeAll(["\"onSeries\":\`", this.onSeries, "\`,"], "");
+      buffer.writeAll(["\"onSeries\":\`",this.onSeries, "\`,"], "");
     }
 
-    // NOTE: skip serialization of states (type Generic is ignored)} 
+    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
 
     if (this.vectorLength != null) {  
-      buffer.writeAll(["\"vectorLength\":", this.vectorLength, ","], "");
+      buffer.writeAll(["\"vectorLength\":",this.vectorLength, ","], "");
     }
 
     if (this.xOffset != null) {  
-      buffer.writeAll(["\"xOffset\":", this.xOffset, ","], "");
+      buffer.writeAll(["\"xOffset\":",this.xOffset, ","], "");
     }
 
     if (this.yOffset != null) {  
-      buffer.writeAll(["\"yOffset\":", this.yOffset, ","], "");
+      buffer.writeAll(["\"yOffset\":",this.yOffset, ","], "");
     }
   }
 

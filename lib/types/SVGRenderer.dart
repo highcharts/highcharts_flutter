@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,23 +24,9 @@ import 'OptionFragment.dart';
  * SVGRenderer 
  */
 class SVGRenderer extends SVGRendererLike {
-  SVGRenderer( {
-    this.SVG_NS = null
-  }) : super();
-  String? SVG_NS;
-    /*
-  String get SVG_NS { 
-    if (this._SVG_NS == null) {
-      this._SVG_NS = "";
-    }
-    return this._SVG_NS!;
-  }
+  SVGRenderer( ) : super();
+  // NOTE: SVG_NS skipped - type string is ignored in gen 
 
-  void set SVG_NS (String v) {
-    this._SVG_NS = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -49,17 +35,15 @@ class SVGRenderer extends SVGRendererLike {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of Element (type typeof SVGElement is ignored)} 
+    // NOTE: skip serialization of Element (type typeof SVGElement is ignored) ignore type: true
 
-    if (this.SVG_NS != null) {  
-      buffer.writeAll(["\"SVG_NS\":\`", this.SVG_NS, "\`,"], "");
-    }
+    // NOTE: skip serialization of SVG_NS (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of escapes (type Generic is ignored)} 
+    // NOTE: skip serialization of escapes (type Generic is ignored) ignore type: true
 
-    // NOTE: skip serialization of symbols (type SymbolTypeRegistry is ignored)} 
+    // NOTE: skip serialization of symbols (type SymbolTypeRegistry is ignored) ignore type: true
 
-    // NOTE: skip serialization of draw (type Function is ignored)} 
+    // NOTE: skip serialization of draw (type Function is ignored) ignore type: 1
   }
 
 }

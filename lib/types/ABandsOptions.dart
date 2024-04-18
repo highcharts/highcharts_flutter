@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -25,59 +25,91 @@ import 'OptionFragment.dart';
  */
 class ABandsOptions extends SMAOptions {
   ABandsOptions( {
-    this.lineWidth = null
+    super.accessibility = null,
+    super.allAreas = null,
+    super.allowPointSelect = null,
+    super.animationLimit = null,
+    super.boostBlending = null,
+    super.boostThreshold = null,
+    super.borderColor = null,
+    super.borderWidth = null,
+    this.bottomLine = null,
+    super.className = null,
+    super.clip = null,
+    super.color = null,
+    super.colorAxis = null,
+    super.colorIndex = null,
+    super.colorKey = null,
+    super.compare = null,
+    super.compareStart = null,
+    super.compareToMain = null,
+    super.connectEnds = null,
+    super.connectNulls = null,
+    super.connectors = null,
+    super.crisp = null,
+    super.cropThreshold = null,
+    super.cumulative = null,
+    super.cursor = null,
+    super.dashStyle = null,
+    super.dataGrouping = null,
+    super.dataLabels = null,
+    super.dataSorting = null,
+    super.description = null,
+    super.dragDrop = null,
+    super.enableMouseTracking = null,
+    super.events = null,
+    super.findNearestPointBy = null,
+    super.gapSize = null,
+    super.gapUnit = null,
+    super.getExtremesFromAll = null,
+    super.includeInDataExport = null,
+    super.joinBy = null,
+    super.keys = null,
+    super.label = null,
+    super.lastPrice = null,
+    super.lastVisiblePrice = null,
+    super.legendSymbol = null,
+    super.linecap = null,
+    this.lineWidth = null,
+    super.linkedTo = null,
+    super.marker = null,
+    super.navigatorOptions = null,
+    super.negativeColor = null,
+    super.onPoint = null,
+    super.opacity = null,
+    super.params = null,
+    super.point = null,
+    super.pointInterval = null,
+    super.pointIntervalUnit = null,
+    super.pointPlacement = null,
+    super.pointRange = null,
+    super.pointStart = null,
+    super.relativeXValue = null,
+    super.selected = null,
+    super.showCheckbox = null,
+    super.showInLegend = null,
+    super.showInNavigator = null,
+    super.skipKeyboardNavigation = null,
+    super.softThreshold = null,
+    super.stacking = null,
+    super.step = null,
+    super.stickyTracking = null,
+    super.threshold = null,
+    super.tooltip = null,
+    this.topLine = null,
+    super.turboThreshold = null,
+    super.visible = null,
+    super.zIndex = null,
+    super.zoneAxis = null,
+    super.zones = null
   }) : super();
   Map<String, String>? bottomLine;
-    /*
-  Map<String, String> get bottomLine { 
-    if (this._bottomLine == null) {
-      this._bottomLine = Map<String, String>();
-    }
-    return this._bottomLine!;
-  }
-
-  void set bottomLine (Map<String, String> v) {
-    this._bottomLine = v;
-  }
-    */
     
-  /**
-   * Pixel width of the graph line. 
-   * 
-   * Defaults to '1'. 
-      */
   double? lineWidth;
-    /*
-  double get lineWidth { 
-    if (this._lineWidth == null) {
-      this._lineWidth = 0;
-    }
-    return this._lineWidth!;
-  }
-
-  void set lineWidth (double v) {
-    this._lineWidth = v;
-  }
-    */
     
-  /**
-   * Paramters used in calculation of regression series' points.  
-      */
   /** NOTE: extparams is skipped here for now, as it overrides the base type. */
 
   Map<String, String>? topLine;
-    /*
-  Map<String, String> get topLine { 
-    if (this._topLine == null) {
-      this._topLine = Map<String, String>();
-    }
-    return this._topLine!;
-  }
-
-  void set topLine (Map<String, String> v) {
-    this._topLine = v;
-  }
-    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -88,17 +120,17 @@ class ABandsOptions extends SMAOptions {
 
     
     if (this.bottomLine != null) {  
-      buffer.writeAll(["\"bottomLine\":", this.bottomLine, ","], "");
+      buffer.writeAll(["\"bottomLine\":",this.bottomLine, ","], "");
     }
 
     if (this.lineWidth != null) {  
-      buffer.writeAll(["\"lineWidth\":", this.lineWidth, ","], "");
+      buffer.writeAll(["\"lineWidth\":",this.lineWidth, ","], "");
     }
 
-    // NOTE: skip serialization of params (type ABandsParamsOptions is ignored)} 
+    // NOTE: skip serialization of params (type ABandsParamsOptions is ignored) ignore type: false
 
     if (this.topLine != null) {  
-      buffer.writeAll(["\"topLine\":", this.topLine, ","], "");
+      buffer.writeAll(["\"topLine\":",this.topLine, ","], "");
     }
   }
 

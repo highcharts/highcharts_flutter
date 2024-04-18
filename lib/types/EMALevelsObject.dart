@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,68 +22,15 @@ import 'OptionFragment.dart';
  * EMALevelsObject 
  */
 class EMALevelsObject extends OptionFragment {
-  EMALevelsObject( {
-    this.level1 = null,
-    this.level2 = null,
-    this.level3 = null,
-    this.prevLevel3 = null
-  }) : super();
-  double? level1;
-    /*
-  double get level1 { 
-    if (this._level1 == null) {
-      this._level1 = 0;
-    }
-    return this._level1!;
-  }
+  EMALevelsObject( ) : super();
+  // NOTE: level1 skipped - type number is ignored in gen 
 
-  void set level1 (double v) {
-    this._level1 = v;
-  }
-    */
-    
-  double? level2;
-    /*
-  double get level2 { 
-    if (this._level2 == null) {
-      this._level2 = 0;
-    }
-    return this._level2!;
-  }
+  // NOTE: level2 skipped - type number is ignored in gen 
 
-  void set level2 (double v) {
-    this._level2 = v;
-  }
-    */
-    
-  double? level3;
-    /*
-  double get level3 { 
-    if (this._level3 == null) {
-      this._level3 = 0;
-    }
-    return this._level3!;
-  }
+  // NOTE: level3 skipped - type number is ignored in gen 
 
-  void set level3 (double v) {
-    this._level3 = v;
-  }
-    */
-    
-  double? prevLevel3;
-    /*
-  double get prevLevel3 { 
-    if (this._prevLevel3 == null) {
-      this._prevLevel3 = 0;
-    }
-    return this._prevLevel3!;
-  }
+  // NOTE: prevLevel3 skipped - type number is ignored in gen 
 
-  void set prevLevel3 (double v) {
-    this._prevLevel3 = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -92,21 +39,13 @@ class EMALevelsObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.level1 != null) {  
-      buffer.writeAll(["\"level1\":", this.level1, ","], "");
-    }
+    // NOTE: skip serialization of level1 (type number is ignored) ignore type: true
 
-    if (this.level2 != null) {  
-      buffer.writeAll(["\"level2\":", this.level2, ","], "");
-    }
+    // NOTE: skip serialization of level2 (type number is ignored) ignore type: true
 
-    if (this.level3 != null) {  
-      buffer.writeAll(["\"level3\":", this.level3, ","], "");
-    }
+    // NOTE: skip serialization of level3 (type number is ignored) ignore type: true
 
-    if (this.prevLevel3 != null) {  
-      buffer.writeAll(["\"prevLevel3\":", this.prevLevel3, ","], "");
-    }
+    // NOTE: skip serialization of prevLevel3 (type number is ignored) ignore type: true
   }
 
 }

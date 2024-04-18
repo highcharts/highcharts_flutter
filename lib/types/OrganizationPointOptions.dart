@@ -12,12 +12,13 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
 import 'SankeyPointOptions.dart';
 import 'OrganizationLinkOptions.dart';
+import 'OrganizationDataLabelOptions.dart';
 import 'OptionFragment.dart';
 
 /** 
@@ -25,82 +26,30 @@ import 'OptionFragment.dart';
  */
 class OrganizationPointOptions extends SankeyPointOptions {
   OrganizationPointOptions( {
-    this.linkColor = null,
-    this.linkOpacity = null,
-    this.linkLineWidth = null,
-    this.borderRadius = null,
-    this.offset = null
+    super.accessibility = null,
+    super.borderColor = null,
+    super.className = null,
+    super.color = null,
+    super.colorIndex = null,
+    super.connectors = null,
+    super.dataLabels = null,
+    super.dragDrop = null,
+    super.events = null,
+    super.keys = null,
+    super.marker = null,
+    super.selected = null,
+    super.visible = null
   }) : super();
-  String? linkColor;
-    /*
-  String get linkColor { 
-    if (this._linkColor == null) {
-      this._linkColor = "";
-    }
-    return this._linkColor!;
-  }
+  // NOTE: linkColor skipped - type string is ignored in gen 
 
-  void set linkColor (String v) {
-    this._linkColor = v;
-  }
-    */
-    
-  double? linkOpacity;
-    /*
-  double get linkOpacity { 
-    if (this._linkOpacity == null) {
-      this._linkOpacity = 0;
-    }
-    return this._linkOpacity!;
-  }
+  // NOTE: linkOpacity skipped - type number is ignored in gen 
 
-  void set linkOpacity (double v) {
-    this._linkOpacity = v;
-  }
-    */
-    
-  double? linkLineWidth;
-    /*
-  double get linkLineWidth { 
-    if (this._linkLineWidth == null) {
-      this._linkLineWidth = 0;
-    }
-    return this._linkLineWidth!;
-  }
+  // NOTE: linkLineWidth skipped - type number is ignored in gen 
 
-  void set linkLineWidth (double v) {
-    this._linkLineWidth = v;
-  }
-    */
-    
-  double? borderRadius;
-    /*
-  double get borderRadius { 
-    if (this._borderRadius == null) {
-      this._borderRadius = 0;
-    }
-    return this._borderRadius!;
-  }
+  // NOTE: borderRadius skipped - type number is ignored in gen 
 
-  void set borderRadius (double v) {
-    this._borderRadius = v;
-  }
-    */
-    
-  String? offset;
-    /*
-  String get offset { 
-    if (this._offset == null) {
-      this._offset = "";
-    }
-    return this._offset!;
-  }
+  // NOTE: offset skipped - type string is ignored in gen 
 
-  void set offset (String v) {
-    this._offset = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -109,29 +58,19 @@ class OrganizationPointOptions extends SankeyPointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.linkColor != null) {  
-      buffer.writeAll(["\"linkColor\":\`", this.linkColor, "\`,"], "");
-    }
+    // NOTE: skip serialization of linkColor (type string is ignored) ignore type: true
 
-    if (this.linkOpacity != null) {  
-      buffer.writeAll(["\"linkOpacity\":", this.linkOpacity, ","], "");
-    }
+    // NOTE: skip serialization of linkOpacity (type number is ignored) ignore type: true
 
-    if (this.linkLineWidth != null) {  
-      buffer.writeAll(["\"linkLineWidth\":", this.linkLineWidth, ","], "");
-    }
+    // NOTE: skip serialization of linkLineWidth (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of link (type OrganizationLinkOptions is ignored)} 
+    // NOTE: skip serialization of link (type OrganizationLinkOptions is ignored) ignore type: true
 
-    if (this.borderRadius != null) {  
-      buffer.writeAll(["\"borderRadius\":", this.borderRadius, ","], "");
-    }
+    // NOTE: skip serialization of borderRadius (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of dataLabels (type OrganizationDataLabelOptions[] is ignored)} 
+    // NOTE: skip serialization of dataLabels (type OrganizationDataLabelOptions[] is ignored) ignore type: true
 
-    if (this.offset != null) {  
-      buffer.writeAll(["\"offset\":\`", this.offset, "\`,"], "");
-    }
+    // NOTE: skip serialization of offset (type string is ignored) ignore type: true
   }
 
 }

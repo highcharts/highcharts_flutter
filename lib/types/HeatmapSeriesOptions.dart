@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -25,120 +25,99 @@ import 'OptionFragment.dart';
  */
 class HeatmapSeriesOptions extends ScatterSeriesOptions {
   HeatmapSeriesOptions( {
+    super.accessibility = null,
+    super.allAreas = null,
+    super.allowPointSelect = null,
+    super.animationLimit = null,
+    super.boostBlending = null,
+    super.boostThreshold = null,
+    super.borderColor = null,
+    super.borderWidth = null,
+    super.className = null,
+    super.clip = null,
+    super.color = null,
+    super.colorAxis = null,
+    super.colorIndex = null,
+    super.colorKey = null,
     this.colsize = null,
+    super.compare = null,
+    super.compareStart = null,
+    super.connectEnds = null,
+    super.connectNulls = null,
+    super.connectors = null,
+    super.crisp = null,
+    super.cropThreshold = null,
+    super.cumulative = null,
+    super.cursor = null,
+    super.dashStyle = null,
+    super.dataGrouping = null,
+    super.dataLabels = null,
+    super.dataSorting = null,
+    super.description = null,
+    super.dragDrop = null,
+    super.enableMouseTracking = null,
+    super.events = null,
+    super.findNearestPointBy = null,
+    super.gapSize = null,
+    super.gapUnit = null,
+    super.getExtremesFromAll = null,
+    super.includeInDataExport = null,
     this.interpolation = null,
+    super.jitter = null,
+    super.joinBy = null,
+    super.keys = null,
+    super.label = null,
+    super.lastPrice = null,
+    super.lastVisiblePrice = null,
+    super.legendSymbol = null,
+    super.linecap = null,
+    super.lineWidth = null,
+    super.linkedTo = null,
+    super.marker = null,
+    super.navigatorOptions = null,
+    super.negativeColor = null,
     this.nullColor = null,
+    super.onPoint = null,
+    super.opacity = null,
+    super.point = null,
+    super.pointInterval = null,
+    super.pointIntervalUnit = null,
     this.pointPadding = null,
-    this.rowsize = null
+    super.pointPlacement = null,
+    super.pointRange = null,
+    super.pointStart = null,
+    super.relativeXValue = null,
+    this.rowsize = null,
+    super.selected = null,
+    super.showCheckbox = null,
+    super.showInLegend = null,
+    super.showInNavigator = null,
+    super.skipKeyboardNavigation = null,
+    super.softThreshold = null,
+    super.stacking = null,
+    super.step = null,
+    super.stickyTracking = null,
+    super.threshold = null,
+    super.tooltip = null,
+    super.turboThreshold = null,
+    super.visible = null,
+    super.zIndex = null,
+    super.zoneAxis = null,
+    super.zones = null
   }) : super();
-  /**
-   * The column size - how many X axis units each column in the heatmap
-   * should span. 
-   * 
-   * Defaults to '1'. 
-      */
   double? colsize;
-    /*
-  double get colsize { 
-    if (this._colsize == null) {
-      this._colsize = 0;
-    }
-    return this._colsize!;
-  }
-
-  void set colsize (double v) {
-    this._colsize = v;
-  }
-    */
     
-  /**
-   * Make the heatmap render its data points as an interpolated image.  
-      */
   bool? interpolation;
-    /*
-  bool get interpolation { 
-    if (this._interpolation == null) {
-      this._interpolation = false;
-    }
-    return this._interpolation!;
-  }
-
-  void set interpolation (bool v) {
-    this._interpolation = v;
-  }
-    */
     
-  /**
-   * Options for the point markers of line and scatter-like series. Properties
-   * like `fillColor`, `lineColor` and `lineWidth` define the visual
-   * appearance of the markers. The `symbol` option defines the shape. Other
-   * series types, like column series, don't have markers, but have visual
-   * options on the series level instead.
-   * 
-   * In styled mode, the markers can be styled with the `.highcharts-point`,
-   * `.highcharts-point-hover` and `.highcharts-point-select` class names.  
-      */
   /** NOTE: extmarker is skipped here for now, as it overrides the base type. */
 
-  /**
-   * The color applied to null points. In styled mode, a general CSS class
-   * is applied instead. 
-   * 
-   * Defaults to '#f7f7f7'. 
-      */
   String? nullColor;
-    /*
-  String get nullColor { 
-    if (this._nullColor == null) {
-      this._nullColor = "";
-    }
-    return this._nullColor!;
-  }
-
-  void set nullColor (String v) {
-    this._nullColor = v;
-  }
-    */
     
-  /**
-   * Padding between the points in the heatmap. 
-   * 
-   * Defaults to '0'. 
-      */
   double? pointPadding;
-    /*
-  double get pointPadding { 
-    if (this._pointPadding == null) {
-      this._pointPadding = 0;
-    }
-    return this._pointPadding!;
-  }
-
-  void set pointPadding (double v) {
-    this._pointPadding = v;
-  }
-    */
     
-  /**
-   * The row size - how many Y axis units each heatmap row should span. 
-   * 
-   * Defaults to '1'. 
-      */
   double? rowsize;
-    /*
-  double get rowsize { 
-    if (this._rowsize == null) {
-      this._rowsize = 0;
-    }
-    return this._rowsize!;
-  }
-
-  void set rowsize (double v) {
-    this._rowsize = v;
-  }
-    */
     
-  // NOTE: states skipped - type Generic is ignored in gen
+  // NOTE: states skipped - type Generic is ignored in gen 
 
 
   //////////////////////////////////////////////////////////////////////////////
@@ -149,28 +128,28 @@ class HeatmapSeriesOptions extends ScatterSeriesOptions {
 
     
     if (this.colsize != null) {  
-      buffer.writeAll(["\"colsize\":", this.colsize, ","], "");
+      buffer.writeAll(["\"colsize\":",this.colsize, ","], "");
     }
 
     if (this.interpolation != null) {  
-      buffer.writeAll(["\"interpolation\":", this.interpolation, ","], "");
+      buffer.writeAll(["\"interpolation\":",this.interpolation, ","], "");
     }
 
-    // NOTE: skip serialization of marker (type HeatmapPointMarkerOptions is ignored)} 
+    // NOTE: skip serialization of marker (type HeatmapPointMarkerOptions is ignored) ignore type: false
 
     if (this.nullColor != null) {  
-      buffer.writeAll(["\"nullColor\":\`", this.nullColor, "\`,"], "");
+      buffer.writeAll(["\"nullColor\":\`",this.nullColor, "\`,"], "");
     }
 
     if (this.pointPadding != null) {  
-      buffer.writeAll(["\"pointPadding\":", this.pointPadding, ","], "");
+      buffer.writeAll(["\"pointPadding\":",this.pointPadding, ","], "");
     }
 
     if (this.rowsize != null) {  
-      buffer.writeAll(["\"rowsize\":", this.rowsize, ","], "");
+      buffer.writeAll(["\"rowsize\":",this.rowsize, ","], "");
     }
 
-    // NOTE: skip serialization of states (type Generic is ignored)} 
+    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
   }
 
 }

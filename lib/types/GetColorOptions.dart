@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,83 +23,17 @@ import 'OptionFragment.dart';
  * GetColorOptions 
  */
 class GetColorOptions extends OptionFragment {
-  GetColorOptions( {
-    this.colorIndex = null,
-    this.index = null,
-    this.parentColor = null,
-    this.parentColorIndex = null,
-    this.siblings = null
-  }) : super();
-  double? colorIndex;
-    /*
-  double get colorIndex { 
-    if (this._colorIndex == null) {
-      this._colorIndex = 0;
-    }
-    return this._colorIndex!;
-  }
+  GetColorOptions( ) : super();
+  // NOTE: colorIndex skipped - type number is ignored in gen 
 
-  void set colorIndex (double v) {
-    this._colorIndex = v;
-  }
-    */
-    
-  double? index;
-    /*
-  double get index { 
-    if (this._index == null) {
-      this._index = 0;
-    }
-    return this._index!;
-  }
+  // NOTE: index skipped - type number is ignored in gen 
 
-  void set index (double v) {
-    this._index = v;
-  }
-    */
-    
-  String? parentColor;
-    /*
-  String get parentColor { 
-    if (this._parentColor == null) {
-      this._parentColor = "";
-    }
-    return this._parentColor!;
-  }
+  // NOTE: parentColor skipped - type string is ignored in gen 
 
-  void set parentColor (String v) {
-    this._parentColor = v;
-  }
-    */
-    
-  double? parentColorIndex;
-    /*
-  double get parentColorIndex { 
-    if (this._parentColorIndex == null) {
-      this._parentColorIndex = 0;
-    }
-    return this._parentColorIndex!;
-  }
+  // NOTE: parentColorIndex skipped - type number is ignored in gen 
 
-  void set parentColorIndex (double v) {
-    this._parentColorIndex = v;
-  }
-    */
-    
-  double? siblings;
-    /*
-  double get siblings { 
-    if (this._siblings == null) {
-      this._siblings = 0;
-    }
-    return this._siblings!;
-  }
+  // NOTE: siblings skipped - type number is ignored in gen 
 
-  void set siblings (double v) {
-    this._siblings = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -108,31 +42,21 @@ class GetColorOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.colorIndex != null) {  
-      buffer.writeAll(["\"colorIndex\":", this.colorIndex, ","], "");
-    }
+    // NOTE: skip serialization of colorIndex (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of colors (type ColorType[] is ignored)} 
+    // NOTE: skip serialization of colors (type ColorType[] is ignored) ignore type: true
 
-    if (this.index != null) {  
-      buffer.writeAll(["\"index\":", this.index, ","], "");
-    }
+    // NOTE: skip serialization of index (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of mapOptionsToLevel (type any is ignored)} 
+    // NOTE: skip serialization of mapOptionsToLevel (type any is ignored) ignore type: 1
 
-    if (this.parentColor != null) {  
-      buffer.writeAll(["\"parentColor\":\`", this.parentColor, "\`,"], "");
-    }
+    // NOTE: skip serialization of parentColor (type string is ignored) ignore type: true
 
-    if (this.parentColorIndex != null) {  
-      buffer.writeAll(["\"parentColorIndex\":", this.parentColorIndex, ","], "");
-    }
+    // NOTE: skip serialization of parentColorIndex (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of series (type Series is ignored)} 
+    // NOTE: skip serialization of series (type Series is ignored) ignore type: true
 
-    if (this.siblings != null) {  
-      buffer.writeAll(["\"siblings\":", this.siblings, ","], "");
-    }
+    // NOTE: skip serialization of siblings (type number is ignored) ignore type: true
   }
 
 }

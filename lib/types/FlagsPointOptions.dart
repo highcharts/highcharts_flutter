@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,112 +24,34 @@ import 'OptionFragment.dart';
  */
 class FlagsPointOptions extends ColumnPointOptions {
   FlagsPointOptions( {
-    this.fillColor = null,
-    this.labelrank = null,
-    this.selected = null,
-    this.shape = null,
-    this.text = null,
-    this.title = null,
-    this.x = null
+    super.accessibility = null,
+    super.borderColor = null,
+    super.className = null,
+    super.color = null,
+    super.colorIndex = null,
+    super.connectors = null,
+    super.dataLabels = null,
+    super.dragDrop = null,
+    super.events = null,
+    super.keys = null,
+    super.marker = null,
+    super.selected = null,
+    super.visible = null
   }) : super();
-  String? fillColor;
-    /*
-  String get fillColor { 
-    if (this._fillColor == null) {
-      this._fillColor = "";
-    }
-    return this._fillColor!;
-  }
+  // NOTE: fillColor skipped - type string is ignored in gen 
 
-  void set fillColor (String v) {
-    this._fillColor = v;
-  }
-    */
-    
-  double? labelrank;
-    /*
-  double get labelrank { 
-    if (this._labelrank == null) {
-      this._labelrank = 0;
-    }
-    return this._labelrank!;
-  }
+  // NOTE: labelrank skipped - type number is ignored in gen 
 
-  void set labelrank (double v) {
-    this._labelrank = v;
-  }
-    */
-    
-  bool? selected;
-    /*
-  bool get selected { 
-    if (this._selected == null) {
-      this._selected = false;
-    }
-    return this._selected!;
-  }
+  // NOTE: selected skipped - type boolean is ignored in gen 
 
-  void set selected (bool v) {
-    this._selected = v;
-  }
-    */
-    
-  String? shape;
-    /*
-  String get shape { 
-    if (this._shape == null) {
-      this._shape = "";
-    }
-    return this._shape!;
-  }
+  // NOTE: shape skipped - type string is ignored in gen 
 
-  void set shape (String v) {
-    this._shape = v;
-  }
-    */
-    
-  String? text;
-    /*
-  String get text { 
-    if (this._text == null) {
-      this._text = "";
-    }
-    return this._text!;
-  }
+  // NOTE: text skipped - type string is ignored in gen 
 
-  void set text (String v) {
-    this._text = v;
-  }
-    */
-    
-  String? title;
-    /*
-  String get title { 
-    if (this._title == null) {
-      this._title = "";
-    }
-    return this._title!;
-  }
+  // NOTE: title skipped - type string is ignored in gen 
 
-  void set title (String v) {
-    this._title = v;
-  }
-    */
-    
-  double? x;
-    /*
-  double get x { 
-    if (this._x == null) {
-      this._x = 0;
-    }
-    return this._x!;
-  }
+  // NOTE: x skipped - type number is ignored in gen 
 
-  void set x (double v) {
-    this._x = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -138,33 +60,19 @@ class FlagsPointOptions extends ColumnPointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.fillColor != null) {  
-      buffer.writeAll(["\"fillColor\":\`", this.fillColor, "\`,"], "");
-    }
+    // NOTE: skip serialization of fillColor (type string is ignored) ignore type: true
 
-    if (this.labelrank != null) {  
-      buffer.writeAll(["\"labelrank\":", this.labelrank, ","], "");
-    }
+    // NOTE: skip serialization of labelrank (type number is ignored) ignore type: true
 
-    if (this.selected != null) {  
-      buffer.writeAll(["\"selected\":", this.selected, ","], "");
-    }
+    // NOTE: skip serialization of selected (type boolean is ignored) ignore type: true
 
-    if (this.shape != null) {  
-      buffer.writeAll(["\"shape\":\`", this.shape, "\`,"], "");
-    }
+    // NOTE: skip serialization of shape (type string is ignored) ignore type: true
 
-    if (this.text != null) {  
-      buffer.writeAll(["\"text\":\`", this.text, "\`,"], "");
-    }
+    // NOTE: skip serialization of text (type string is ignored) ignore type: true
 
-    if (this.title != null) {  
-      buffer.writeAll(["\"title\":\`", this.title, "\`,"], "");
-    }
+    // NOTE: skip serialization of title (type string is ignored) ignore type: true
 
-    if (this.x != null) {  
-      buffer.writeAll(["\"x\":", this.x, ","], "");
-    }
+    // NOTE: skip serialization of x (type number is ignored) ignore type: true
   }
 
 }

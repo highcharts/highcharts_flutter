@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,10 +22,9 @@ import 'OptionFragment.dart';
  * OptionsBindings 
  */
 class OptionsBindings extends OptionFragment {
-  OptionsBindings( {
-    this.skipRedraw = null
-  }) : super();
-  List<String>? skipRedraw; // String
+  OptionsBindings( ) : super();
+  // NOTE: skipRedraw skipped - type string is ignored in gen 
+
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -34,11 +33,11 @@ class OptionsBindings extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of keyMap (type Generic is ignored)} 
+    // NOTE: skip serialization of keyMap (type Generic is ignored) ignore type: true
 
-    // NOTE: skip serialization of typeMap (type Generic is ignored)} 
+    // NOTE: skip serialization of typeMap (type Generic is ignored) ignore type: true
 
-    // NOTE: skip serialization of skipRedraw (type string is ignored)} 
+    // NOTE: skip serialization of skipRedraw (type string is ignored) ignore type: true
   }
 
 }

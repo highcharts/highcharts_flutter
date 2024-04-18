@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -26,53 +26,13 @@ import 'OptionFragment.dart';
  * LabelIconObject 
  */
 class LabelIconObject extends OptionFragment {
-  LabelIconObject( {
-    this.collapsed = null,
-    this.color = null,
-    this.show = null
-  }) : super();
-  bool? collapsed;
-    /*
-  bool get collapsed { 
-    if (this._collapsed == null) {
-      this._collapsed = false;
-    }
-    return this._collapsed!;
-  }
+  LabelIconObject( ) : super();
+  // NOTE: collapsed skipped - type boolean is ignored in gen 
 
-  void set collapsed (bool v) {
-    this._collapsed = v;
-  }
-    */
-    
-  String? color;
-    /*
-  String get color { 
-    if (this._color == null) {
-      this._color = "";
-    }
-    return this._color!;
-  }
+  // NOTE: color skipped - type string is ignored in gen 
 
-  void set color (String v) {
-    this._color = v;
-  }
-    */
-    
-  bool? show;
-    /*
-  bool get show { 
-    if (this._show == null) {
-      this._show = false;
-    }
-    return this._show!;
-  }
+  // NOTE: show skipped - type boolean is ignored in gen 
 
-  void set show (bool v) {
-    this._show = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -81,25 +41,19 @@ class LabelIconObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.collapsed != null) {  
-      buffer.writeAll(["\"collapsed\":", this.collapsed, ","], "");
-    }
+    // NOTE: skip serialization of collapsed (type boolean is ignored) ignore type: true
 
-    if (this.color != null) {  
-      buffer.writeAll(["\"color\":\`", this.color, "\`,"], "");
-    }
+    // NOTE: skip serialization of color (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of group (type SVGElement is ignored)} 
+    // NOTE: skip serialization of group (type SVGElement is ignored) ignore type: true
 
-    // NOTE: skip serialization of options (type TreeGridAxisLabelIconOptions is ignored)} 
+    // NOTE: skip serialization of options (type TreeGridAxisLabelIconOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of renderer (type SVGRenderer is ignored)} 
+    // NOTE: skip serialization of renderer (type SVGRenderer is ignored) ignore type: true
 
-    if (this.show != null) {  
-      buffer.writeAll(["\"show\":", this.show, ","], "");
-    }
+    // NOTE: skip serialization of show (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of xy (type PositionObject is ignored)} 
+    // NOTE: skip serialization of xy (type PositionObject is ignored) ignore type: true
   }
 
 }

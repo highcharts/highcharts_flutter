@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,53 +22,13 @@ import 'OptionFragment.dart';
  * LangAccessibilityLegendOptions 
  */
 class LangAccessibilityLegendOptions extends OptionFragment {
-  LangAccessibilityLegendOptions( {
-    this.legendItem = null,
-    this.legendLabel = null,
-    this.legendLabelNoTitle = null
-  }) : super();
-  String? legendItem;
-    /*
-  String get legendItem { 
-    if (this._legendItem == null) {
-      this._legendItem = "";
-    }
-    return this._legendItem!;
-  }
+  LangAccessibilityLegendOptions( ) : super();
+  // NOTE: legendItem skipped - type string is ignored in gen 
 
-  void set legendItem (String v) {
-    this._legendItem = v;
-  }
-    */
-    
-  String? legendLabel;
-    /*
-  String get legendLabel { 
-    if (this._legendLabel == null) {
-      this._legendLabel = "";
-    }
-    return this._legendLabel!;
-  }
+  // NOTE: legendLabel skipped - type string is ignored in gen 
 
-  void set legendLabel (String v) {
-    this._legendLabel = v;
-  }
-    */
-    
-  String? legendLabelNoTitle;
-    /*
-  String get legendLabelNoTitle { 
-    if (this._legendLabelNoTitle == null) {
-      this._legendLabelNoTitle = "";
-    }
-    return this._legendLabelNoTitle!;
-  }
+  // NOTE: legendLabelNoTitle skipped - type string is ignored in gen 
 
-  void set legendLabelNoTitle (String v) {
-    this._legendLabelNoTitle = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -77,17 +37,11 @@ class LangAccessibilityLegendOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.legendItem != null) {  
-      buffer.writeAll(["\"legendItem\":\`", this.legendItem, "\`,"], "");
-    }
+    // NOTE: skip serialization of legendItem (type string is ignored) ignore type: true
 
-    if (this.legendLabel != null) {  
-      buffer.writeAll(["\"legendLabel\":\`", this.legendLabel, "\`,"], "");
-    }
+    // NOTE: skip serialization of legendLabel (type string is ignored) ignore type: true
 
-    if (this.legendLabelNoTitle != null) {  
-      buffer.writeAll(["\"legendLabelNoTitle\":\`", this.legendLabelNoTitle, "\`,"], "");
-    }
+    // NOTE: skip serialization of legendLabelNoTitle (type string is ignored) ignore type: true
   }
 
 }

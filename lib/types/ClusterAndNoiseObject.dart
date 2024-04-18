@@ -12,10 +12,11 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
+import 'MarkerClusterSplitDataObject.dart';
 import 'Point.dart';
 import 'MarkerClusterZonesOptions.dart';
 import 'OptionFragment.dart';
@@ -24,98 +25,19 @@ import 'OptionFragment.dart';
  * ClusterAndNoiseObject 
  */
 class ClusterAndNoiseObject extends OptionFragment {
-  ClusterAndNoiseObject( {
-    this.id = null,
-    this.index = null,
-    this.stateId = null,
-    this.x = null,
-    this.y = null,
-    this.clusterZoneClassName = null
-  }) : super();
-  String? id;
-    /*
-  String get id { 
-    if (this._id == null) {
-      this._id = "";
-    }
-    return this._id!;
-  }
+  ClusterAndNoiseObject( ) : super();
+  // NOTE: id skipped - type string is ignored in gen 
 
-  void set id (String v) {
-    this._id = v;
-  }
-    */
-    
-  double? index;
-    /*
-  double get index { 
-    if (this._index == null) {
-      this._index = 0;
-    }
-    return this._index!;
-  }
+  // NOTE: index skipped - type number is ignored in gen 
 
-  void set index (double v) {
-    this._index = v;
-  }
-    */
-    
-  String? stateId;
-    /*
-  String get stateId { 
-    if (this._stateId == null) {
-      this._stateId = "";
-    }
-    return this._stateId!;
-  }
+  // NOTE: stateId skipped - type string is ignored in gen 
 
-  void set stateId (String v) {
-    this._stateId = v;
-  }
-    */
-    
-  double? x;
-    /*
-  double get x { 
-    if (this._x == null) {
-      this._x = 0;
-    }
-    return this._x!;
-  }
+  // NOTE: x skipped - type number is ignored in gen 
 
-  void set x (double v) {
-    this._x = v;
-  }
-    */
-    
-  double? y;
-    /*
-  double get y { 
-    if (this._y == null) {
-      this._y = 0;
-    }
-    return this._y!;
-  }
+  // NOTE: y skipped - type number is ignored in gen 
 
-  void set y (double v) {
-    this._y = v;
-  }
-    */
-    
-  String? clusterZoneClassName;
-    /*
-  String get clusterZoneClassName { 
-    if (this._clusterZoneClassName == null) {
-      this._clusterZoneClassName = "";
-    }
-    return this._clusterZoneClassName!;
-  }
+  // NOTE: clusterZoneClassName skipped - type string is ignored in gen 
 
-  void set clusterZoneClassName (String v) {
-    this._clusterZoneClassName = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -124,39 +46,27 @@ class ClusterAndNoiseObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of data (type MarkerClusterSplitDataObject[] is ignored)} 
+    // NOTE: skip serialization of data (type MarkerClusterSplitDataObject[] is ignored) ignore type: true
 
-    if (this.id != null) {  
-      buffer.writeAll(["\"id\":\`", this.id, "\`,"], "");
-    }
+    // NOTE: skip serialization of id (type string is ignored) ignore type: true
 
-    if (this.index != null) {  
-      buffer.writeAll(["\"index\":", this.index, ","], "");
-    }
+    // NOTE: skip serialization of index (type number is ignored) ignore type: true
 
-    if (this.stateId != null) {  
-      buffer.writeAll(["\"stateId\":\`", this.stateId, "\`,"], "");
-    }
+    // NOTE: skip serialization of stateId (type string is ignored) ignore type: true
 
-    if (this.x != null) {  
-      buffer.writeAll(["\"x\":", this.x, ","], "");
-    }
+    // NOTE: skip serialization of x (type number is ignored) ignore type: true
 
-    if (this.y != null) {  
-      buffer.writeAll(["\"y\":", this.y, ","], "");
-    }
+    // NOTE: skip serialization of y (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of point (type Point is ignored)} 
+    // NOTE: skip serialization of point (type Point is ignored) ignore type: true
 
-    // NOTE: skip serialization of clusterZone (type MarkerClusterZonesOptions is ignored)} 
+    // NOTE: skip serialization of clusterZone (type MarkerClusterZonesOptions is ignored) ignore type: true
 
-    if (this.clusterZoneClassName != null) {  
-      buffer.writeAll(["\"clusterZoneClassName\":\`", this.clusterZoneClassName, "\`,"], "");
-    }
+    // NOTE: skip serialization of clusterZoneClassName (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of pointsOutside (type MarkerClusterSplitDataObject[] is ignored)} 
+    // NOTE: skip serialization of pointsOutside (type MarkerClusterSplitDataObject[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of pointsInside (type MarkerClusterSplitDataObject[] is ignored)} 
+    // NOTE: skip serialization of pointsInside (type MarkerClusterSplitDataObject[] is ignored) ignore type: true
   }
 
 }

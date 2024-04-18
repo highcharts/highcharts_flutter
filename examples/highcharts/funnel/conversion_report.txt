@@ -1,0 +1,36 @@
+[
+  {
+    "path": "plotOptions.series.dataLabels",
+    "parentType": "DataLabelOptions",
+    "memberName": "softConnector",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "path": "plotOptions.series",
+    "parentType": "SeriesOptions",
+    "memberName": "center",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "path": "plotOptions.series",
+    "parentType": "SeriesOptions",
+    "memberName": "neckWidth",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "path": "plotOptions.series",
+    "parentType": "SeriesOptions",
+    "memberName": "neckHeight",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "path": "plotOptions.series",
+    "parentType": "SeriesOptions",
+    "memberName": "width",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "responsive"
+  }
+]

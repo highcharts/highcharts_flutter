@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -32,13 +32,13 @@ class ControlPoints extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of label (type Generic is ignored)} 
+    // NOTE: skip serialization of label (type Generic is ignored) ignore type: true
 
-    // NOTE: skip serialization of rectangle (type Generic is ignored)} 
+    // NOTE: skip serialization of rectangle (type Generic is ignored) ignore type: true
 
-    // NOTE: skip serialization of ellipse (type Generic is ignored)} 
+    // NOTE: skip serialization of ellipse (type Generic is ignored) ignore type: true
 
-    // NOTE: skip serialization of circle (type Generic is ignored)} 
+    // NOTE: skip serialization of circle (type Generic is ignored) ignore type: true
   }
 
 }

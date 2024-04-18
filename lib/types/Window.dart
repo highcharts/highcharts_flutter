@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -35,29 +35,29 @@ class Window extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of opera (type unknown is ignored)} 
+    // NOTE: skip serialization of opera (type unknown is ignored) ignore type: 1
 
-    // NOTE: skip serialization of webkitAudioContext (type { new (contextOptions?: AudioContextOptions): AudioContext; prototype: AudioContext; } is ignored)} 
+    // NOTE: skip serialization of webkitAudioContext (type { new (contextOptions?: AudioContextOptions): AudioContext; prototype: AudioContext; } is ignored) ignore type: true
 
-    // NOTE: skip serialization of webkitURL (type MediaSource): string; revokeObjectURL(url: string): void; } is ignored)} 
+    // NOTE: skip serialization of webkitURL (type MediaSource): string; revokeObjectURL(url: string): void; } is ignored) ignore type: true
 
-    // NOTE: skip serialization of MSPointerEvent (type Generic is ignored)} 
+    // NOTE: skip serialization of MSPointerEvent (type Generic is ignored) ignore type: true
 
-    // NOTE: skip serialization of MSBlobBuilder (type Generic is ignored)} 
+    // NOTE: skip serialization of MSBlobBuilder (type Generic is ignored) ignore type: true
 
-    // NOTE: skip serialization of canvg (type CanvgNamespace is ignored)} 
+    // NOTE: skip serialization of canvg (type CanvgNamespace is ignored) ignore type: true
 
-    // NOTE: skip serialization of mjspdf (type jspdf is ignored)} 
+    // NOTE: skip serialization of mjspdf (type jspdf is ignored) ignore type: true
 
-    // NOTE: skip serialization of svg2pdf (type Function is ignored)} 
+    // NOTE: skip serialization of svg2pdf (type Function is ignored) ignore type: 1
 
-    // NOTE: skip serialization of mDashboards (type Dashboards is ignored)} 
+    // NOTE: skip serialization of mDashboards (type Dashboards is ignored) ignore type: true
 
-    // NOTE: skip serialization of Highcharts (type typeof import("/home/cvasseng/WorkGit/highcharts/node_modules/highcharts/highcharts") is ignored)} 
+    // NOTE: skip serialization of Highcharts (type typeof import("/home/cvasseng/WorkGit/highcharts/node_modules/highcharts/highcharts") is ignored) ignore type: true
 
-    // NOTE: skip serialization of DataGrid (type any is ignored)} 
+    // NOTE: skip serialization of DataGrid (type any is ignored) ignore type: 1
 
-    // NOTE: skip serialization of DataGrid (type any is ignored)} 
+    // NOTE: skip serialization of DataGrid (type any is ignored) ignore type: 1
   }
 
 }

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,7 +23,7 @@ import 'OptionFragment.dart';
  */
 class JsPDFEvent extends OptionFragment {
   JsPDFEvent( ) : super();
-  // NOTE: 0 skipped - type string is ignored in gen
+  // NOTE: 0 skipped - type string is ignored in gen 
 
 
   //////////////////////////////////////////////////////////////////////////////
@@ -33,7 +33,7 @@ class JsPDFEvent extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of 0 (type string is ignored)} 
+    // NOTE: skip serialization of 0 (type string is ignored) ignore type: true
   }
 
 }

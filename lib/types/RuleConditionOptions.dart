@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,68 +22,15 @@ import 'OptionFragment.dart';
  * RuleConditionOptions 
  */
 class RuleConditionOptions extends OptionFragment {
-  RuleConditionOptions( {
-    this.maxHeight = null,
-    this.maxWidth = null,
-    this.minHeight = null,
-    this.minWidth = null
-  }) : super();
-  double? maxHeight;
-    /*
-  double get maxHeight { 
-    if (this._maxHeight == null) {
-      this._maxHeight = 0;
-    }
-    return this._maxHeight!;
-  }
+  RuleConditionOptions( ) : super();
+  // NOTE: maxHeight skipped - type number is ignored in gen 
 
-  void set maxHeight (double v) {
-    this._maxHeight = v;
-  }
-    */
-    
-  double? maxWidth;
-    /*
-  double get maxWidth { 
-    if (this._maxWidth == null) {
-      this._maxWidth = 0;
-    }
-    return this._maxWidth!;
-  }
+  // NOTE: maxWidth skipped - type number is ignored in gen 
 
-  void set maxWidth (double v) {
-    this._maxWidth = v;
-  }
-    */
-    
-  double? minHeight;
-    /*
-  double get minHeight { 
-    if (this._minHeight == null) {
-      this._minHeight = 0;
-    }
-    return this._minHeight!;
-  }
+  // NOTE: minHeight skipped - type number is ignored in gen 
 
-  void set minHeight (double v) {
-    this._minHeight = v;
-  }
-    */
-    
-  double? minWidth;
-    /*
-  double get minWidth { 
-    if (this._minWidth == null) {
-      this._minWidth = 0;
-    }
-    return this._minWidth!;
-  }
+  // NOTE: minWidth skipped - type number is ignored in gen 
 
-  void set minWidth (double v) {
-    this._minWidth = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -92,21 +39,13 @@ class RuleConditionOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.maxHeight != null) {  
-      buffer.writeAll(["\"maxHeight\":", this.maxHeight, ","], "");
-    }
+    // NOTE: skip serialization of maxHeight (type number is ignored) ignore type: true
 
-    if (this.maxWidth != null) {  
-      buffer.writeAll(["\"maxWidth\":", this.maxWidth, ","], "");
-    }
+    // NOTE: skip serialization of maxWidth (type number is ignored) ignore type: true
 
-    if (this.minHeight != null) {  
-      buffer.writeAll(["\"minHeight\":", this.minHeight, ","], "");
-    }
+    // NOTE: skip serialization of minHeight (type number is ignored) ignore type: true
 
-    if (this.minWidth != null) {  
-      buffer.writeAll(["\"minWidth\":", this.minWidth, ","], "");
-    }
+    // NOTE: skip serialization of minWidth (type number is ignored) ignore type: true
   }
 
 }

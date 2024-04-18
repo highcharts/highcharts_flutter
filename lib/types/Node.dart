@@ -12,10 +12,11 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
+import 'Node.dart';
 import 'CSSObject.dart';
 import 'OptionFragment.dart';
 
@@ -23,38 +24,11 @@ import 'OptionFragment.dart';
  * Node 
  */
 class Node extends OptionFragment {
-  Node( {
-    this.tagName = null,
-    this.textContent = null
-  }) : super();
-  String? tagName;
-    /*
-  String get tagName { 
-    if (this._tagName == null) {
-      this._tagName = "";
-    }
-    return this._tagName!;
-  }
+  Node( ) : super();
+  // NOTE: tagName skipped - type string is ignored in gen 
 
-  void set tagName (String v) {
-    this._tagName = v;
-  }
-    */
-    
-  String? textContent;
-    /*
-  String get textContent { 
-    if (this._textContent == null) {
-      this._textContent = "";
-    }
-    return this._textContent!;
-  }
+  // NOTE: textContent skipped - type string is ignored in gen 
 
-  void set textContent (String v) {
-    this._textContent = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -63,19 +37,15 @@ class Node extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of attributes (type HTMLAttributes & SVGAttributes is ignored)} 
+    // NOTE: skip serialization of attributes (type HTMLAttributes & SVGAttributes is ignored) ignore type: true
 
-    // NOTE: skip serialization of children (type Node[] is ignored)} 
+    // NOTE: skip serialization of children (type Node[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of style (type CSSObject is ignored)} 
+    // NOTE: skip serialization of style (type CSSObject is ignored) ignore type: true
 
-    if (this.tagName != null) {  
-      buffer.writeAll(["\"tagName\":\`", this.tagName, "\`,"], "");
-    }
+    // NOTE: skip serialization of tagName (type string is ignored) ignore type: true
 
-    if (this.textContent != null) {  
-      buffer.writeAll(["\"textContent\":\`", this.textContent, "\`,"], "");
-    }
+    // NOTE: skip serialization of textContent (type string is ignored) ignore type: true
   }
 
 }

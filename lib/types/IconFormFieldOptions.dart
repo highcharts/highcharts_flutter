@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,38 +22,11 @@ import 'OptionFragment.dart';
  * IconFormFieldOptions 
  */
 class IconFormFieldOptions extends OptionFragment {
-  IconFormFieldOptions( {
-    this.className = null,
-    this.icon = null
-  }) : super();
-  String? className;
-    /*
-  String get className { 
-    if (this._className == null) {
-      this._className = "";
-    }
-    return this._className!;
-  }
+  IconFormFieldOptions( ) : super();
+  // NOTE: className skipped - type string is ignored in gen 
 
-  void set className (String v) {
-    this._className = v;
-  }
-    */
-    
-  String? icon;
-    /*
-  String get icon { 
-    if (this._icon == null) {
-      this._icon = "";
-    }
-    return this._icon!;
-  }
+  // NOTE: icon skipped - type string is ignored in gen 
 
-  void set icon (String v) {
-    this._icon = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -62,21 +35,17 @@ class IconFormFieldOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.className != null) {  
-      buffer.writeAll(["\"className\":\`", this.className, "\`,"], "");
-    }
+    // NOTE: skip serialization of className (type string is ignored) ignore type: true
 
-    if (this.icon != null) {  
-      buffer.writeAll(["\"icon\":\`", this.icon, "\`,"], "");
-    }
+    // NOTE: skip serialization of icon (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of click (type Function is ignored)} 
+    // NOTE: skip serialization of click (type Function is ignored) ignore type: 1
 
-    // NOTE: skip serialization of mousedown (type Function is ignored)} 
+    // NOTE: skip serialization of mousedown (type Function is ignored) ignore type: 1
 
-    // NOTE: skip serialization of item (type MenuItem is ignored)} 
+    // NOTE: skip serialization of item (type MenuItem is ignored) ignore type: true
 
-    // NOTE: skip serialization of callback (type Function is ignored)} 
+    // NOTE: skip serialization of callback (type Function is ignored) ignore type: 1
   }
 
 }

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,83 +23,17 @@ import 'OptionFragment.dart';
  * NestedHeaderFormFieldOptions 
  */
 class NestedHeaderFormFieldOptions extends OptionFragment {
-  NestedHeaderFormFieldOptions( {
-    this.name = null,
-    this.showToggle = null,
-    this.isEnabled = null,
-    this.isNested = null,
-    this.iconsURLPrefix = null
-  }) : super();
-  String? name;
-    /*
-  String get name { 
-    if (this._name == null) {
-      this._name = "";
-    }
-    return this._name!;
-  }
+  NestedHeaderFormFieldOptions( ) : super();
+  // NOTE: name skipped - type string is ignored in gen 
 
-  void set name (String v) {
-    this._name = v;
-  }
-    */
-    
-  bool? showToggle;
-    /*
-  bool get showToggle { 
-    if (this._showToggle == null) {
-      this._showToggle = false;
-    }
-    return this._showToggle!;
-  }
+  // NOTE: showToggle skipped - type boolean is ignored in gen 
 
-  void set showToggle (bool v) {
-    this._showToggle = v;
-  }
-    */
-    
-  bool? isEnabled;
-    /*
-  bool get isEnabled { 
-    if (this._isEnabled == null) {
-      this._isEnabled = false;
-    }
-    return this._isEnabled!;
-  }
+  // NOTE: isEnabled skipped - type boolean is ignored in gen 
 
-  void set isEnabled (bool v) {
-    this._isEnabled = v;
-  }
-    */
-    
-  bool? isNested;
-    /*
-  bool get isNested { 
-    if (this._isNested == null) {
-      this._isNested = false;
-    }
-    return this._isNested!;
-  }
+  // NOTE: isNested skipped - type boolean is ignored in gen 
 
-  void set isNested (bool v) {
-    this._isNested = v;
-  }
-    */
-    
-  String? iconsURLPrefix;
-    /*
-  String get iconsURLPrefix { 
-    if (this._iconsURLPrefix == null) {
-      this._iconsURLPrefix = "";
-    }
-    return this._iconsURLPrefix!;
-  }
+  // NOTE: iconsURLPrefix skipped - type string is ignored in gen 
 
-  void set iconsURLPrefix (String v) {
-    this._iconsURLPrefix = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -108,27 +42,17 @@ class NestedHeaderFormFieldOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.name != null) {  
-      buffer.writeAll(["\"name\":\`", this.name, "\`,"], "");
-    }
+    // NOTE: skip serialization of name (type string is ignored) ignore type: true
 
-    if (this.showToggle != null) {  
-      buffer.writeAll(["\"showToggle\":", this.showToggle, ","], "");
-    }
+    // NOTE: skip serialization of showToggle (type boolean is ignored) ignore type: true
 
-    if (this.isEnabled != null) {  
-      buffer.writeAll(["\"isEnabled\":", this.isEnabled, ","], "");
-    }
+    // NOTE: skip serialization of isEnabled (type boolean is ignored) ignore type: true
 
-    if (this.isNested != null) {  
-      buffer.writeAll(["\"isNested\":", this.isNested, ","], "");
-    }
+    // NOTE: skip serialization of isNested (type boolean is ignored) ignore type: true
 
-    if (this.iconsURLPrefix != null) {  
-      buffer.writeAll(["\"iconsURLPrefix\":\`", this.iconsURLPrefix, "\`,"], "");
-    }
+    // NOTE: skip serialization of iconsURLPrefix (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of lang (type LangOptions is ignored)} 
+    // NOTE: skip serialization of lang (type LangOptions is ignored) ignore type: true
   }
 
 }

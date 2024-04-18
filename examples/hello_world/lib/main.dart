@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/Highcharts.dart';
-import 'package:highcharts_flutter/types/LineSeriesOptions.dart';
+import 'package:highcharts_flutter/types/LineSeries.dart';
 
 import 'package:highcharts_flutter/types/TitleOptions.dart';
 import 'package:highcharts_flutter/types/DataOptions.dart';
@@ -41,12 +41,15 @@ class _MyHomePageState extends State<MyHomePage> {
     final HighchartsChart chart = HighchartsChart(
       HighchartsOptions(
         data: DataOptions(
-          csvURL: 'https://demo-live-data.highcharts.com/time-data.csv',
-          enablePolling: true
         ),
         title: TitleOptions(
-          text: 'Live refresh of external CSV data'
-        )
+          text: 'Hello world!'
+        ),
+        series: [
+          LineSeries(
+            data: [[0, 5], [1, 10]]
+          )
+        ]
       )
     );
 

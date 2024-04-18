@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -25,97 +25,45 @@ import 'OptionFragment.dart';
  */
 class PieDataLabelOptions extends DataLabelOptions {
   PieDataLabelOptions( {
-    this.alignTo = null,
-    this.connectorColor = null,
-    this.connectorPadding = null,
-    this.connectorWidth = null,
-    this.crookDistance = null,
-    this.softConnector = null
+    super.align = null,
+    super.allowOverlap = null,
+    super.backgroundColor = null,
+    super.borderColor = null,
+    super.borderRadius = null,
+    super.borderWidth = null,
+    super.className = null,
+    super.color = null,
+    super.crop = null,
+    super.defer = null,
+    super.enabled = null,
+    super.filter = null,
+    super.format = null,
+    super.inside = null,
+    super.nullFormat = null,
+    super.overflow = null,
+    super.padding = null,
+    super.rotation = null,
+    super.shape = null,
+    super.style = null,
+    super.textPath = null,
+    super.useHTML = null,
+    super.verticalAlign = null,
+    super.x = null,
+    super.y = null,
+    super.zIndex = null
   }) : super();
-  String? alignTo;
-    /*
-  String get alignTo { 
-    if (this._alignTo == null) {
-      this._alignTo = "";
-    }
-    return this._alignTo!;
-  }
+  // NOTE: alignTo skipped - type string is ignored in gen 
 
-  void set alignTo (String v) {
-    this._alignTo = v;
-  }
-    */
-    
-  String? connectorColor;
-    /*
-  String get connectorColor { 
-    if (this._connectorColor == null) {
-      this._connectorColor = "";
-    }
-    return this._connectorColor!;
-  }
+  // NOTE: connectorColor skipped - type string is ignored in gen 
 
-  void set connectorColor (String v) {
-    this._connectorColor = v;
-  }
-    */
-    
-  double? connectorPadding;
-    /*
-  double get connectorPadding { 
-    if (this._connectorPadding == null) {
-      this._connectorPadding = 0;
-    }
-    return this._connectorPadding!;
-  }
+  // NOTE: connectorPadding skipped - type number is ignored in gen 
 
-  void set connectorPadding (double v) {
-    this._connectorPadding = v;
-  }
-    */
-    
-  double? connectorWidth;
-    /*
-  double get connectorWidth { 
-    if (this._connectorWidth == null) {
-      this._connectorWidth = 0;
-    }
-    return this._connectorWidth!;
-  }
+  // NOTE: connectorWidth skipped - type number is ignored in gen 
 
-  void set connectorWidth (double v) {
-    this._connectorWidth = v;
-  }
-    */
-    
-  String? crookDistance;
-    /*
-  String get crookDistance { 
-    if (this._crookDistance == null) {
-      this._crookDistance = "";
-    }
-    return this._crookDistance!;
-  }
+  // NOTE: crookDistance skipped - type string is ignored in gen 
 
-  void set crookDistance (String v) {
-    this._crookDistance = v;
-  }
-    */
-    
-  bool? softConnector;
-    /*
-  bool get softConnector { 
-    if (this._softConnector == null) {
-      this._softConnector = false;
-    }
-    return this._softConnector!;
-  }
+  // NOTE: softConnector skipped - type boolean is ignored in gen 
 
-  void set softConnector (bool v) {
-    this._softConnector = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -124,31 +72,19 @@ class PieDataLabelOptions extends DataLabelOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.alignTo != null) {  
-      buffer.writeAll(["\"alignTo\":\`", this.alignTo, "\`,"], "");
-    }
+    // NOTE: skip serialization of alignTo (type string is ignored) ignore type: true
 
-    if (this.connectorColor != null) {  
-      buffer.writeAll(["\"connectorColor\":\`", this.connectorColor, "\`,"], "");
-    }
+    // NOTE: skip serialization of connectorColor (type string is ignored) ignore type: true
 
-    if (this.connectorPadding != null) {  
-      buffer.writeAll(["\"connectorPadding\":", this.connectorPadding, ","], "");
-    }
+    // NOTE: skip serialization of connectorPadding (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of connectorShape (type ConnectorShapeFunction is ignored)} 
+    // NOTE: skip serialization of connectorShape (type ConnectorShapeFunction is ignored) ignore type: true
 
-    if (this.connectorWidth != null) {  
-      buffer.writeAll(["\"connectorWidth\":", this.connectorWidth, ","], "");
-    }
+    // NOTE: skip serialization of connectorWidth (type number is ignored) ignore type: true
 
-    if (this.crookDistance != null) {  
-      buffer.writeAll(["\"crookDistance\":\`", this.crookDistance, "\`,"], "");
-    }
+    // NOTE: skip serialization of crookDistance (type string is ignored) ignore type: true
 
-    if (this.softConnector != null) {  
-      buffer.writeAll(["\"softConnector\":", this.softConnector, ","], "");
-    }
+    // NOTE: skip serialization of softConnector (type boolean is ignored) ignore type: true
   }
 
 }

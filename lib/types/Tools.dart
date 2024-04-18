@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -35,15 +35,15 @@ class Tools extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of addComponentBtn (type AddComponentBtn is ignored)} 
+    // NOTE: skip serialization of addComponentBtn (type AddComponentBtn is ignored) ignore type: true
 
-    // NOTE: skip serialization of rwdButtons (type RwdButtons is ignored)} 
+    // NOTE: skip serialization of rwdButtons (type RwdButtons is ignored) ignore type: true
 
-    // NOTE: skip serialization of contextMenu (type EditContextMenu is ignored)} 
+    // NOTE: skip serialization of contextMenu (type EditContextMenu is ignored) ignore type: true
 
-    // NOTE: skip serialization of contextButtonElement (type HTMLElement is ignored)} 
+    // NOTE: skip serialization of contextButtonElement (type HTMLElement is ignored) ignore type: true
 
-    // NOTE: skip serialization of container (type HTMLElement is ignored)} 
+    // NOTE: skip serialization of container (type HTMLElement is ignored) ignore type: true
   }
 
 }

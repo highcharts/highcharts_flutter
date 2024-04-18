@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -34,13 +34,13 @@ class ExportDataSeries extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of chart (type Chart is ignored)} 
+    // NOTE: skip serialization of chart (type Chart is ignored) ignore type: true
 
-    // NOTE: skip serialization of options (type SeriesOptions is ignored)} 
+    // NOTE: skip serialization of options (type SeriesOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of pointArrayMap (type string[] is ignored)} 
+    // NOTE: skip serialization of pointArrayMap (type string[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of index (type Number is ignored)} 
+    // NOTE: skip serialization of index (type Number is ignored) ignore type: true
   }
 
 }

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,38 +22,11 @@ import 'OptionFragment.dart';
  * DataExtremesObject 
  */
 class DataExtremesObject extends OptionFragment {
-  DataExtremesObject( {
-    this.dataMin = null,
-    this.dataMax = null
-  }) : super();
-  double? dataMin;
-    /*
-  double get dataMin { 
-    if (this._dataMin == null) {
-      this._dataMin = 0;
-    }
-    return this._dataMin!;
-  }
+  DataExtremesObject( ) : super();
+  // NOTE: dataMin skipped - type number is ignored in gen 
 
-  void set dataMin (double v) {
-    this._dataMin = v;
-  }
-    */
-    
-  double? dataMax;
-    /*
-  double get dataMax { 
-    if (this._dataMax == null) {
-      this._dataMax = 0;
-    }
-    return this._dataMax!;
-  }
+  // NOTE: dataMax skipped - type number is ignored in gen 
 
-  void set dataMax (double v) {
-    this._dataMax = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -62,15 +35,11 @@ class DataExtremesObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of activeYData (type number[] is ignored)} 
+    // NOTE: skip serialization of activeYData (type number[] is ignored) ignore type: true
 
-    if (this.dataMin != null) {  
-      buffer.writeAll(["\"dataMin\":", this.dataMin, ","], "");
-    }
+    // NOTE: skip serialization of dataMin (type number is ignored) ignore type: true
 
-    if (this.dataMax != null) {  
-      buffer.writeAll(["\"dataMax\":", this.dataMax, ","], "");
-    }
+    // NOTE: skip serialization of dataMax (type number is ignored) ignore type: true
   }
 
 }

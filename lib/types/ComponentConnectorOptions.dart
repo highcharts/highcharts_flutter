@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,38 +22,11 @@ import 'OptionFragment.dart';
  * ComponentConnectorOptions 
  */
 class ComponentConnectorOptions extends OptionFragment {
-  ComponentConnectorOptions( {
-    this.allowSave = null,
-    this.id = null
-  }) : super();
-  bool? allowSave;
-    /*
-  bool get allowSave { 
-    if (this._allowSave == null) {
-      this._allowSave = false;
-    }
-    return this._allowSave!;
-  }
+  ComponentConnectorOptions( ) : super();
+  // NOTE: allowSave skipped - type boolean is ignored in gen 
 
-  void set allowSave (bool v) {
-    this._allowSave = v;
-  }
-    */
-    
-  String? id;
-    /*
-  String get id { 
-    if (this._id == null) {
-      this._id = "";
-    }
-    return this._id!;
-  }
+  // NOTE: id skipped - type string is ignored in gen 
 
-  void set id (String v) {
-    this._id = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -62,13 +35,9 @@ class ComponentConnectorOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.allowSave != null) {  
-      buffer.writeAll(["\"allowSave\":", this.allowSave, ","], "");
-    }
+    // NOTE: skip serialization of allowSave (type boolean is ignored) ignore type: true
 
-    if (this.id != null) {  
-      buffer.writeAll(["\"id\":\`", this.id, "\`,"], "");
-    }
+    // NOTE: skip serialization of id (type string is ignored) ignore type: true
   }
 
 }

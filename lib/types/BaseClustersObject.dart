@@ -12,10 +12,11 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
+import 'ClusterAndNoiseObject.dart';
 import 'OptionFragment.dart';
 
 /** 
@@ -32,9 +33,9 @@ class BaseClustersObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of clusters (type ClusterAndNoiseObject[] is ignored)} 
+    // NOTE: skip serialization of clusters (type ClusterAndNoiseObject[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of noise (type ClusterAndNoiseObject[] is ignored)} 
+    // NOTE: skip serialization of noise (type ClusterAndNoiseObject[] is ignored) ignore type: true
   }
 
 }

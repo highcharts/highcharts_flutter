@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,83 +22,17 @@ import 'OptionFragment.dart';
  * EllipseShapeSVGOptions 
  */
 class EllipseShapeSVGOptions extends OptionFragment {
-  EllipseShapeSVGOptions( {
-    this.cx = null,
-    this.cy = null,
-    this.rx = null,
-    this.ry = null,
-    this.angle = null
-  }) : super();
-  double? cx;
-    /*
-  double get cx { 
-    if (this._cx == null) {
-      this._cx = 0;
-    }
-    return this._cx!;
-  }
+  EllipseShapeSVGOptions( ) : super();
+  // NOTE: cx skipped - type number is ignored in gen 
 
-  void set cx (double v) {
-    this._cx = v;
-  }
-    */
-    
-  double? cy;
-    /*
-  double get cy { 
-    if (this._cy == null) {
-      this._cy = 0;
-    }
-    return this._cy!;
-  }
+  // NOTE: cy skipped - type number is ignored in gen 
 
-  void set cy (double v) {
-    this._cy = v;
-  }
-    */
-    
-  double? rx;
-    /*
-  double get rx { 
-    if (this._rx == null) {
-      this._rx = 0;
-    }
-    return this._rx!;
-  }
+  // NOTE: rx skipped - type number is ignored in gen 
 
-  void set rx (double v) {
-    this._rx = v;
-  }
-    */
-    
-  double? ry;
-    /*
-  double get ry { 
-    if (this._ry == null) {
-      this._ry = 0;
-    }
-    return this._ry!;
-  }
+  // NOTE: ry skipped - type number is ignored in gen 
 
-  void set ry (double v) {
-    this._ry = v;
-  }
-    */
-    
-  double? angle;
-    /*
-  double get angle { 
-    if (this._angle == null) {
-      this._angle = 0;
-    }
-    return this._angle!;
-  }
+  // NOTE: angle skipped - type number is ignored in gen 
 
-  void set angle (double v) {
-    this._angle = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -107,25 +41,15 @@ class EllipseShapeSVGOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.cx != null) {  
-      buffer.writeAll(["\"cx\":", this.cx, ","], "");
-    }
+    // NOTE: skip serialization of cx (type number is ignored) ignore type: true
 
-    if (this.cy != null) {  
-      buffer.writeAll(["\"cy\":", this.cy, ","], "");
-    }
+    // NOTE: skip serialization of cy (type number is ignored) ignore type: true
 
-    if (this.rx != null) {  
-      buffer.writeAll(["\"rx\":", this.rx, ","], "");
-    }
+    // NOTE: skip serialization of rx (type number is ignored) ignore type: true
 
-    if (this.ry != null) {  
-      buffer.writeAll(["\"ry\":", this.ry, ","], "");
-    }
+    // NOTE: skip serialization of ry (type number is ignored) ignore type: true
 
-    if (this.angle != null) {  
-      buffer.writeAll(["\"angle\":", this.angle, ","], "");
-    }
+    // NOTE: skip serialization of angle (type number is ignored) ignore type: true
   }
 
 }

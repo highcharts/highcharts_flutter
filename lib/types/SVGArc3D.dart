@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,83 +23,17 @@ import 'OptionFragment.dart';
  * SVGArc3D 
  */
 class SVGArc3D extends OptionFragment {
-  SVGArc3D( {
-    this.zInn = null,
-    this.zOut = null,
-    this.zSide1 = null,
-    this.zSide2 = null,
-    this.zTop = null
-  }) : super();
-  double? zInn;
-    /*
-  double get zInn { 
-    if (this._zInn == null) {
-      this._zInn = 0;
-    }
-    return this._zInn!;
-  }
+  SVGArc3D( ) : super();
+  // NOTE: zInn skipped - type number is ignored in gen 
 
-  void set zInn (double v) {
-    this._zInn = v;
-  }
-    */
-    
-  double? zOut;
-    /*
-  double get zOut { 
-    if (this._zOut == null) {
-      this._zOut = 0;
-    }
-    return this._zOut!;
-  }
+  // NOTE: zOut skipped - type number is ignored in gen 
 
-  void set zOut (double v) {
-    this._zOut = v;
-  }
-    */
-    
-  double? zSide1;
-    /*
-  double get zSide1 { 
-    if (this._zSide1 == null) {
-      this._zSide1 = 0;
-    }
-    return this._zSide1!;
-  }
+  // NOTE: zSide1 skipped - type number is ignored in gen 
 
-  void set zSide1 (double v) {
-    this._zSide1 = v;
-  }
-    */
-    
-  double? zSide2;
-    /*
-  double get zSide2 { 
-    if (this._zSide2 == null) {
-      this._zSide2 = 0;
-    }
-    return this._zSide2!;
-  }
+  // NOTE: zSide2 skipped - type number is ignored in gen 
 
-  void set zSide2 (double v) {
-    this._zSide2 = v;
-  }
-    */
-    
-  double? zTop;
-    /*
-  double get zTop { 
-    if (this._zTop == null) {
-      this._zTop = 0;
-    }
-    return this._zTop!;
-  }
+  // NOTE: zTop skipped - type number is ignored in gen 
 
-  void set zTop (double v) {
-    this._zTop = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -108,35 +42,25 @@ class SVGArc3D extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of out (type SVGPath is ignored)} 
+    // NOTE: skip serialization of out (type SVGPath is ignored) ignore type: true
 
-    // NOTE: skip serialization of inn (type SVGPath is ignored)} 
+    // NOTE: skip serialization of inn (type SVGPath is ignored) ignore type: true
 
-    // NOTE: skip serialization of side1 (type SVGPath is ignored)} 
+    // NOTE: skip serialization of side1 (type SVGPath is ignored) ignore type: true
 
-    // NOTE: skip serialization of side2 (type SVGPath is ignored)} 
+    // NOTE: skip serialization of side2 (type SVGPath is ignored) ignore type: true
 
-    // NOTE: skip serialization of top (type SVGPath is ignored)} 
+    // NOTE: skip serialization of top (type SVGPath is ignored) ignore type: true
 
-    if (this.zInn != null) {  
-      buffer.writeAll(["\"zInn\":", this.zInn, ","], "");
-    }
+    // NOTE: skip serialization of zInn (type number is ignored) ignore type: true
 
-    if (this.zOut != null) {  
-      buffer.writeAll(["\"zOut\":", this.zOut, ","], "");
-    }
+    // NOTE: skip serialization of zOut (type number is ignored) ignore type: true
 
-    if (this.zSide1 != null) {  
-      buffer.writeAll(["\"zSide1\":", this.zSide1, ","], "");
-    }
+    // NOTE: skip serialization of zSide1 (type number is ignored) ignore type: true
 
-    if (this.zSide2 != null) {  
-      buffer.writeAll(["\"zSide2\":", this.zSide2, ","], "");
-    }
+    // NOTE: skip serialization of zSide2 (type number is ignored) ignore type: true
 
-    if (this.zTop != null) {  
-      buffer.writeAll(["\"zTop\":", this.zTop, ","], "");
-    }
+    // NOTE: skip serialization of zTop (type number is ignored) ignore type: true
   }
 
 }

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,38 +23,11 @@ import 'OptionFragment.dart';
  * MSPointerEvent 
  */
 class MSPointerEvent extends OptionFragment {
-  MSPointerEvent( {
-    this.MSPOINTER_TYPE_TOUCH = null,
-    this.pointerId = null
-  }) : super();
-  String? MSPOINTER_TYPE_TOUCH;
-    /*
-  String get MSPOINTER_TYPE_TOUCH { 
-    if (this._MSPOINTER_TYPE_TOUCH == null) {
-      this._MSPOINTER_TYPE_TOUCH = "";
-    }
-    return this._MSPOINTER_TYPE_TOUCH!;
-  }
+  MSPointerEvent( ) : super();
+  // NOTE: MSPOINTER_TYPE_TOUCH skipped - type string is ignored in gen 
 
-  void set MSPOINTER_TYPE_TOUCH (String v) {
-    this._MSPOINTER_TYPE_TOUCH = v;
-  }
-    */
-    
-  double? pointerId;
-    /*
-  double get pointerId { 
-    if (this._pointerId == null) {
-      this._pointerId = 0;
-    }
-    return this._pointerId!;
-  }
+  // NOTE: pointerId skipped - type number is ignored in gen 
 
-  void set pointerId (double v) {
-    this._pointerId = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -63,19 +36,15 @@ class MSPointerEvent extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.MSPOINTER_TYPE_TOUCH != null) {  
-      buffer.writeAll(["\"MSPOINTER_TYPE_TOUCH\":\`", this.MSPOINTER_TYPE_TOUCH, "\`,"], "");
-    }
+    // NOTE: skip serialization of MSPOINTER_TYPE_TOUCH (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of currentTarget (type EventTarget is ignored)} 
+    // NOTE: skip serialization of currentTarget (type EventTarget is ignored) ignore type: true
 
-    if (this.pointerId != null) {  
-      buffer.writeAll(["\"pointerId\":", this.pointerId, ","], "");
-    }
+    // NOTE: skip serialization of pointerId (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of pointerType (type undefined is ignored)} 
+    // NOTE: skip serialization of pointerType (type undefined is ignored) ignore type: 1
 
-    // NOTE: skip serialization of toElement (type Element is ignored)} 
+    // NOTE: skip serialization of toElement (type Element is ignored) ignore type: true
   }
 
 }

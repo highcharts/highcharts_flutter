@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,38 +22,11 @@ import 'OptionFragment.dart';
  * NavigationBindingsOptions 
  */
 class NavigationBindingsOptions extends OptionFragment {
-  NavigationBindingsOptions( {
-    this.noDataState = null,
-    this.className = null
-  }) : super();
-  String? noDataState;
-    /*
-  String get noDataState { 
-    if (this._noDataState == null) {
-      this._noDataState = "";
-    }
-    return this._noDataState!;
-  }
+  NavigationBindingsOptions( ) : super();
+  // NOTE: noDataState skipped - type string is ignored in gen 
 
-  void set noDataState (String v) {
-    this._noDataState = v;
-  }
-    */
-    
-  String? className;
-    /*
-  String get className { 
-    if (this._className == null) {
-      this._className = "";
-    }
-    return this._className!;
-  }
+  // NOTE: className skipped - type string is ignored in gen 
 
-  void set className (String v) {
-    this._className = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -62,21 +35,17 @@ class NavigationBindingsOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.noDataState != null) {  
-      buffer.writeAll(["\"noDataState\":\`", this.noDataState, "\`,"], "");
-    }
+    // NOTE: skip serialization of noDataState (type string is ignored) ignore type: true
 
-    if (this.className != null) {  
-      buffer.writeAll(["\"className\":\`", this.className, "\`,"], "");
-    }
+    // NOTE: skip serialization of className (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of end (type Function is ignored)} 
+    // NOTE: skip serialization of end (type Function is ignored) ignore type: 1
 
-    // NOTE: skip serialization of init (type Function is ignored)} 
+    // NOTE: skip serialization of init (type Function is ignored) ignore type: 1
 
-    // NOTE: skip serialization of start (type Function is ignored)} 
+    // NOTE: skip serialization of start (type Function is ignored) ignore type: 1
 
-    // NOTE: skip serialization of steps (type Function[] is ignored)} 
+    // NOTE: skip serialization of steps (type Function[] is ignored) ignore type: true
   }
 
 }

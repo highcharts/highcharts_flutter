@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,53 +22,13 @@ import 'OptionFragment.dart';
  * DashboardsPlugin 
  */
 class DashboardsPlugin extends OptionFragment {
-  DashboardsPlugin( {
-    this.maxRevision = null,
-    this.minRevision = null,
-    this.name = null
-  }) : super();
-  double? maxRevision;
-    /*
-  double get maxRevision { 
-    if (this._maxRevision == null) {
-      this._maxRevision = 0;
-    }
-    return this._maxRevision!;
-  }
+  DashboardsPlugin( ) : super();
+  // NOTE: maxRevision skipped - type number is ignored in gen 
 
-  void set maxRevision (double v) {
-    this._maxRevision = v;
-  }
-    */
-    
-  double? minRevision;
-    /*
-  double get minRevision { 
-    if (this._minRevision == null) {
-      this._minRevision = 0;
-    }
-    return this._minRevision!;
-  }
+  // NOTE: minRevision skipped - type number is ignored in gen 
 
-  void set minRevision (double v) {
-    this._minRevision = v;
-  }
-    */
-    
-  String? name;
-    /*
-  String get name { 
-    if (this._name == null) {
-      this._name = "";
-    }
-    return this._name!;
-  }
+  // NOTE: name skipped - type string is ignored in gen 
 
-  void set name (String v) {
-    this._name = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -77,19 +37,13 @@ class DashboardsPlugin extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of custom (type T is ignored)} 
+    // NOTE: skip serialization of custom (type T is ignored) ignore type: 1
 
-    if (this.maxRevision != null) {  
-      buffer.writeAll(["\"maxRevision\":", this.maxRevision, ","], "");
-    }
+    // NOTE: skip serialization of maxRevision (type number is ignored) ignore type: true
 
-    if (this.minRevision != null) {  
-      buffer.writeAll(["\"minRevision\":", this.minRevision, ","], "");
-    }
+    // NOTE: skip serialization of minRevision (type number is ignored) ignore type: true
 
-    if (this.name != null) {  
-      buffer.writeAll(["\"name\":\`", this.name, "\`,"], "");
-    }
+    // NOTE: skip serialization of name (type string is ignored) ignore type: true
   }
 
 }

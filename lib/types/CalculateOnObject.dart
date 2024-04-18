@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,38 +22,11 @@ import 'OptionFragment.dart';
  * CalculateOnObject 
  */
 class CalculateOnObject extends OptionFragment {
-  CalculateOnObject( {
-    this.chart = null,
-    this.xAxis = null
-  }) : super();
-  String? chart;
-    /*
-  String get chart { 
-    if (this._chart == null) {
-      this._chart = "";
-    }
-    return this._chart!;
-  }
+  CalculateOnObject( ) : super();
+  // NOTE: chart skipped - type string is ignored in gen 
 
-  void set chart (String v) {
-    this._chart = v;
-  }
-    */
-    
-  String? xAxis;
-    /*
-  String get xAxis { 
-    if (this._xAxis == null) {
-      this._xAxis = "";
-    }
-    return this._xAxis!;
-  }
+  // NOTE: xAxis skipped - type string is ignored in gen 
 
-  void set xAxis (String v) {
-    this._xAxis = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -62,13 +35,9 @@ class CalculateOnObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.chart != null) {  
-      buffer.writeAll(["\"chart\":\`", this.chart, "\`,"], "");
-    }
+    // NOTE: skip serialization of chart (type string is ignored) ignore type: true
 
-    if (this.xAxis != null) {  
-      buffer.writeAll(["\"xAxis\":\`", this.xAxis, "\`,"], "");
-    }
+    // NOTE: skip serialization of xAxis (type string is ignored) ignore type: true
   }
 
 }

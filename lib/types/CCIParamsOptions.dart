@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,7 +23,10 @@ import 'OptionFragment.dart';
  * CCIParamsOptions 
  */
 class CCIParamsOptions extends SMAParamsOptions {
-  CCIParamsOptions( ) : super();
+  CCIParamsOptions( {
+    super.index = null,
+    super.period = null
+  }) : super();
   
 
   //////////////////////////////////////////////////////////////////////////////

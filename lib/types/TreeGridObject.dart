@@ -12,10 +12,11 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
+import 'GridNode.dart';
 import 'TreeNode.dart';
 import 'OptionFragment.dart';
 
@@ -33,15 +34,15 @@ class TreeGridObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of categories (type string[] is ignored)} 
+    // NOTE: skip serialization of categories (type string[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of mapOfIdToNode (type Generic is ignored)} 
+    // NOTE: skip serialization of mapOfIdToNode (type Generic is ignored) ignore type: true
 
-    // NOTE: skip serialization of mapOfPosToGridNode (type Generic is ignored)} 
+    // NOTE: skip serialization of mapOfPosToGridNode (type Generic is ignored) ignore type: true
 
-    // NOTE: skip serialization of collapsedNodes (type GridNode[] is ignored)} 
+    // NOTE: skip serialization of collapsedNodes (type GridNode[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of tree (type TreeNode is ignored)} 
+    // NOTE: skip serialization of tree (type TreeNode is ignored) ignore type: true
   }
 
 }

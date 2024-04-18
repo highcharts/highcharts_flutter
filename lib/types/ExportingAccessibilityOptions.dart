@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -26,18 +26,6 @@ class ExportingAccessibilityOptions extends OptionFragment {
     this.enabled = null
   }) : super();
   bool? enabled;
-    /*
-  bool get enabled { 
-    if (this._enabled == null) {
-      this._enabled = false;
-    }
-    return this._enabled!;
-  }
-
-  void set enabled (bool v) {
-    this._enabled = v;
-  }
-    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -48,7 +36,7 @@ class ExportingAccessibilityOptions extends OptionFragment {
 
     
     if (this.enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
+      buffer.writeAll(["\"enabled\":",this.enabled, ","], "");
     }
   }
 

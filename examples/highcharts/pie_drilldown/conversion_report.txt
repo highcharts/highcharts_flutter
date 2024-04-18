@@ -1,0 +1,11 @@
+[
+  {
+    "type": "mixed_type",
+    "path": "plotOptions.series.borderRadius",
+    "msg": "Path is set as a basic type, but flutter wants a BorderRadiusOptionsObject"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "drilldown"
+  }
+]

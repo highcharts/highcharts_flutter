@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,93 +24,93 @@ import 'OptionFragment.dart';
  */
 class ColumnSeriesOptions extends LineSeriesOptions {
   ColumnSeriesOptions( {
+    super.accessibility = null,
+    super.allAreas = null,
+    super.allowPointSelect = null,
+    super.animationLimit = null,
+    super.boostBlending = null,
+    super.boostThreshold = null,
+    super.borderColor = null,
+    super.borderWidth = null,
+    super.className = null,
+    super.clip = null,
+    super.color = null,
+    super.colorAxis = null,
+    super.colorIndex = null,
+    super.colorKey = null,
+    super.compare = null,
+    super.compareStart = null,
+    super.connectEnds = null,
+    super.connectNulls = null,
+    super.connectors = null,
+    super.crisp = null,
+    super.cropThreshold = null,
+    super.cumulative = null,
+    super.cursor = null,
+    super.dashStyle = null,
+    super.dataGrouping = null,
+    super.dataLabels = null,
+    super.dataSorting = null,
+    super.description = null,
+    super.dragDrop = null,
+    super.enableMouseTracking = null,
+    super.events = null,
+    super.findNearestPointBy = null,
+    super.gapSize = null,
+    super.gapUnit = null,
+    super.getExtremesFromAll = null,
+    super.includeInDataExport = null,
+    super.joinBy = null,
+    super.keys = null,
+    super.label = null,
+    super.lastPrice = null,
+    super.lastVisiblePrice = null,
+    super.legendSymbol = null,
+    super.linecap = null,
+    super.lineWidth = null,
+    super.linkedTo = null,
+    super.marker = null,
     this.maxPointWidth = null,
     this.minPointLength = null,
+    super.navigatorOptions = null,
+    super.negativeColor = null,
+    super.onPoint = null,
+    super.opacity = null,
+    super.point = null,
+    super.pointInterval = null,
+    super.pointIntervalUnit = null,
     this.pointPadding = null,
-    this.pointWidth = null
+    super.pointPlacement = null,
+    super.pointRange = null,
+    super.pointStart = null,
+    this.pointWidth = null,
+    super.relativeXValue = null,
+    super.selected = null,
+    super.showCheckbox = null,
+    super.showInLegend = null,
+    super.showInNavigator = null,
+    super.skipKeyboardNavigation = null,
+    super.softThreshold = null,
+    super.stacking = null,
+    super.step = null,
+    super.stickyTracking = null,
+    super.threshold = null,
+    super.tooltip = null,
+    super.turboThreshold = null,
+    super.visible = null,
+    super.zIndex = null,
+    super.zoneAxis = null,
+    super.zones = null
   }) : super();
-  /**
-   * The maximum allowed pixel width for a column, translated to the
-   * height of a bar in a bar chart. This prevents the columns from
-   * becoming too wide when there is a small number of points in the
-   * chart.  
-      */
   double? maxPointWidth;
-    /*
-  double get maxPointWidth { 
-    if (this._maxPointWidth == null) {
-      this._maxPointWidth = 0;
-    }
-    return this._maxPointWidth!;
-  }
-
-  void set maxPointWidth (double v) {
-    this._maxPointWidth = v;
-  }
-    */
     
-  /**
-   * The minimal height for a column or width for a bar. By default,
-   * 0 values are not shown. To visualize a 0 (or close to zero) point,
-   * set the minimal point length to a pixel value like 3\. In stacked
-   * column charts, minPointLength might not be respected for tightly
-   * packed values.  
-      */
   double? minPointLength;
-    /*
-  double get minPointLength { 
-    if (this._minPointLength == null) {
-      this._minPointLength = 0;
-    }
-    return this._minPointLength!;
-  }
-
-  void set minPointLength (double v) {
-    this._minPointLength = v;
-  }
-    */
     
-  /**
-   * Padding between each column or bar, in x axis units. 
-   * 
-   * Defaults to '0.1'. 
-      */
   double? pointPadding;
-    /*
-  double get pointPadding { 
-    if (this._pointPadding == null) {
-      this._pointPadding = 0;
-    }
-    return this._pointPadding!;
-  }
-
-  void set pointPadding (double v) {
-    this._pointPadding = v;
-  }
-    */
     
-  /**
-   * A pixel value specifying a fixed width for each column or bar point.
-   * When set to `undefined`, the width is calculated from the
-   * `pointPadding` and `groupPadding`. The width effects the dimension
-   * that is not based on the point value. For column series it is the
-   * hoizontal length and for bar series it is the vertical length.  
-      */
   double? pointWidth;
-    /*
-  double get pointWidth { 
-    if (this._pointWidth == null) {
-      this._pointWidth = 0;
-    }
-    return this._pointWidth!;
-  }
-
-  void set pointWidth (double v) {
-    this._pointWidth = v;
-  }
-    */
     
-  // NOTE: states skipped - type Generic is ignored in gen
+  // NOTE: states skipped - type Generic is ignored in gen 
 
 
   //////////////////////////////////////////////////////////////////////////////
@@ -121,22 +121,22 @@ class ColumnSeriesOptions extends LineSeriesOptions {
 
     
     if (this.maxPointWidth != null) {  
-      buffer.writeAll(["\"maxPointWidth\":", this.maxPointWidth, ","], "");
+      buffer.writeAll(["\"maxPointWidth\":",this.maxPointWidth, ","], "");
     }
 
     if (this.minPointLength != null) {  
-      buffer.writeAll(["\"minPointLength\":", this.minPointLength, ","], "");
+      buffer.writeAll(["\"minPointLength\":",this.minPointLength, ","], "");
     }
 
     if (this.pointPadding != null) {  
-      buffer.writeAll(["\"pointPadding\":", this.pointPadding, ","], "");
+      buffer.writeAll(["\"pointPadding\":",this.pointPadding, ","], "");
     }
 
     if (this.pointWidth != null) {  
-      buffer.writeAll(["\"pointWidth\":", this.pointWidth, ","], "");
+      buffer.writeAll(["\"pointWidth\":",this.pointWidth, ","], "");
     }
 
-    // NOTE: skip serialization of states (type Generic is ignored)} 
+    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
   }
 
 }

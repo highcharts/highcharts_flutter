@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,23 +22,9 @@ import 'OptionFragment.dart';
  * Function 
  */
 class Function extends OptionFragment {
-  Function( {
-    this.name = null
-  }) : super();
-  String? name;
-    /*
-  String get name { 
-    if (this._name == null) {
-      this._name = "";
-    }
-    return this._name!;
-  }
+  Function( ) : super();
+  // NOTE: name skipped - type string is ignored in gen 
 
-  void set name (String v) {
-    this._name = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -47,13 +33,11 @@ class Function extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of args (type Arguments is ignored)} 
+    // NOTE: skip serialization of args (type Arguments is ignored) ignore type: true
 
-    if (this.name != null) {  
-      buffer.writeAll(["\"name\":\`", this.name, "\`,"], "");
-    }
+    // NOTE: skip serialization of name (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of type (type "function" is ignored)} 
+    // NOTE: skip serialization of type (type "function" is ignored) ignore type: true
   }
 
 }

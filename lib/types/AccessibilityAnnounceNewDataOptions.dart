@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -28,46 +28,10 @@ class AccessibilityAnnounceNewDataOptions extends OptionFragment {
     this.minAnnounceInterval = null
   }) : super();
   bool? enabled;
-    /*
-  bool get enabled { 
-    if (this._enabled == null) {
-      this._enabled = false;
-    }
-    return this._enabled!;
-  }
-
-  void set enabled (bool v) {
-    this._enabled = v;
-  }
-    */
     
   bool? interruptUser;
-    /*
-  bool get interruptUser { 
-    if (this._interruptUser == null) {
-      this._interruptUser = false;
-    }
-    return this._interruptUser!;
-  }
-
-  void set interruptUser (bool v) {
-    this._interruptUser = v;
-  }
-    */
     
   double? minAnnounceInterval;
-    /*
-  double get minAnnounceInterval { 
-    if (this._minAnnounceInterval == null) {
-      this._minAnnounceInterval = 0;
-    }
-    return this._minAnnounceInterval!;
-  }
-
-  void set minAnnounceInterval (double v) {
-    this._minAnnounceInterval = v;
-  }
-    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -78,15 +42,15 @@ class AccessibilityAnnounceNewDataOptions extends OptionFragment {
 
     
     if (this.enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
+      buffer.writeAll(["\"enabled\":",this.enabled, ","], "");
     }
 
     if (this.interruptUser != null) {  
-      buffer.writeAll(["\"interruptUser\":", this.interruptUser, ","], "");
+      buffer.writeAll(["\"interruptUser\":",this.interruptUser, ","], "");
     }
 
     if (this.minAnnounceInterval != null) {  
-      buffer.writeAll(["\"minAnnounceInterval\":", this.minAnnounceInterval, ","], "");
+      buffer.writeAll(["\"minAnnounceInterval\":",this.minAnnounceInterval, ","], "");
     }
   }
 

@@ -12,70 +12,77 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
-import 'BoxPlotSeries.dart';
-import 'ErrorBarSeries.dart';
-import 'OptionFragment.dart';
+import 'ErrorBarSeriesOptions.dart';
+import 'Series.dart';
+import 'PointOptions.dart';
 
-/** 
- * ErrorBarSeries 
- */
-class ErrorBarSeries extends BoxPlotSeries {
-  ErrorBarSeries( {
-    this.doQuartiles = null,
-    this.pointValKey = null
-  }) : super();
-  bool? doQuartiles;
-    /*
-  bool get doQuartiles { 
-    if (this._doQuartiles == null) {
-      this._doQuartiles = false;
-    }
-    return this._doQuartiles!;
-  }
+class ErrorBarSeries extends Series {
 
-  void set doQuartiles (bool v) {
-    this._doQuartiles = v;
-  }
-    */
-    
-  String? pointValKey;
-    /*
-  String get pointValKey { 
-    if (this._pointValKey == null) {
-      this._pointValKey = "";
-    }
-    return this._pointValKey!;
-  }
+  String? name;
+  ErrorBarSeriesOptions? options;
+  List<PointOptions>? points;
+  List<List<double>>? data;
 
-  void set pointValKey (String v) {
-    this._pointValKey = v;
-  }
-    */
-    
+  ErrorBarSeries({
+    this.name = null,
+    this.options = null,
+    this.points = null,
+    this.data = null
+  });
 
-  //////////////////////////////////////////////////////////////////////////////
   
   @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of pointClass (type typeof ErrorBarPoint is ignored)} 
 
-    if (this.doQuartiles != null) {  
-      buffer.writeAll(["\"doQuartiles\":", this.doQuartiles, ","], "");
+    if (this.name != null) {
+      buffer.writeAll(["\"name\": \"", this.name!, "\","], "");
     }
 
-    // NOTE: skip serialization of linkedParent (type ErrorBarSeries is ignored)} 
+    buffer.write("\"type\": \"errorbar\",");
 
-    // NOTE: skip serialization of pointArrayMap (type string[] is ignored)} 
+    if (this.data != null && this.points == null) {
+      // Serialize as a 2d array
 
-    if (this.pointValKey != null) {  
-      buffer.writeAll(["\"pointValKey\":\`", this.pointValKey, "\`,"], "");
+      StringBuffer seriesData = StringBuffer();
+
+      for (var point in this.data!) {
+        seriesData.writeAll(["["], "");
+        for (var item in point) {
+          seriesData.writeAll([item, ","]);
+        }
+        seriesData.writeAll(["],"], "");
+      }
+
+      buffer.writeAll(["\"data\": [", seriesData, "],"], "");   
+
+
+    } else if (this.points != null) {
+      // Go through the points and write them
+      StringBuffer seriesData = StringBuffer();
+
+      for (var point in this.points!) {
+        seriesData.writeAll(["{"], "");
+        point.toJSONInner(seriesData); 
+        seriesData.writeAll(["},"], "");
+      }
+
+      buffer.writeAll(["\"data\": [", seriesData, "],"], "");
+    }
+
+
+
+    
+    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
+
+    if (this.options?.whiskerWidth != null) {  
+      buffer.writeAll(["\"whiskerWidth\":",this.options?.whiskerWidth, ","], "");
     }
   }
 

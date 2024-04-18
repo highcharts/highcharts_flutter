@@ -12,11 +12,12 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
 import 'Series.dart';
+import 'AnnotationPoint.dart';
 import 'OptionFragment.dart';
 
 /** 
@@ -33,9 +34,9 @@ class AnnotationSeries extends Series {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of chart (type AnnotationChart is ignored)} 
+    // NOTE: skip serialization of chart (type AnnotationChart is ignored) ignore type: true
 
-    // NOTE: skip serialization of points (type AnnotationPoint[] is ignored)} 
+    // NOTE: skip serialization of points (type AnnotationPoint[] is ignored) ignore type: true
   }
 
 }

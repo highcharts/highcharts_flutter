@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -25,23 +25,9 @@ import 'OptionFragment.dart';
  * PointDragEventObject 
  */
 class PointDragEventObject extends OptionFragment {
-  PointDragEventObject( {
-    this.newPointId = null
-  }) : super();
-  String? newPointId;
-    /*
-  String get newPointId { 
-    if (this._newPointId == null) {
-      this._newPointId = "";
-    }
-    return this._newPointId!;
-  }
+  PointDragEventObject( ) : super();
+  // NOTE: newPointId skipped - type string is ignored in gen 
 
-  void set newPointId (String v) {
-    this._newPointId = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -50,21 +36,19 @@ class PointDragEventObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of newPoint (type PointDragDropObject is ignored)} 
+    // NOTE: skip serialization of newPoint (type PointDragDropObject is ignored) ignore type: true
 
-    if (this.newPointId != null) {  
-      buffer.writeAll(["\"newPointId\":\`", this.newPointId, "\`,"], "");
-    }
+    // NOTE: skip serialization of newPointId (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of newPoints (type Generic is ignored)} 
+    // NOTE: skip serialization of newPoints (type Generic is ignored) ignore type: true
 
-    // NOTE: skip serialization of origin (type DragDropPositionObject is ignored)} 
+    // NOTE: skip serialization of origin (type DragDropPositionObject is ignored) ignore type: true
 
-    // NOTE: skip serialization of preventDefault (type Function is ignored)} 
+    // NOTE: skip serialization of preventDefault (type Function is ignored) ignore type: 1
 
-    // NOTE: skip serialization of target (type Point is ignored)} 
+    // NOTE: skip serialization of target (type Point is ignored) ignore type: true
 
-    // NOTE: skip serialization of type (type "drag" is ignored)} 
+    // NOTE: skip serialization of type (type "drag" is ignored) ignore type: true
   }
 
 }

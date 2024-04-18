@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,113 +23,21 @@ import 'OptionFragment.dart';
  * AxisResizeOptions 
  */
 class AxisResizeOptions extends OptionFragment {
-  AxisResizeOptions( {
-    this.cursor = null,
-    this.enabled = null,
-    this.lineColor = null,
-    this.lineDashStyle = null,
-    this.lineWidth = null,
-    this.x = null,
-    this.y = null
-  }) : super();
-  String? cursor;
-    /*
-  String get cursor { 
-    if (this._cursor == null) {
-      this._cursor = "";
-    }
-    return this._cursor!;
-  }
+  AxisResizeOptions( ) : super();
+  // NOTE: cursor skipped - type string is ignored in gen 
 
-  void set cursor (String v) {
-    this._cursor = v;
-  }
-    */
-    
-  bool? enabled;
-    /*
-  bool get enabled { 
-    if (this._enabled == null) {
-      this._enabled = false;
-    }
-    return this._enabled!;
-  }
+  // NOTE: enabled skipped - type boolean is ignored in gen 
 
-  void set enabled (bool v) {
-    this._enabled = v;
-  }
-    */
-    
-  String? lineColor;
-    /*
-  String get lineColor { 
-    if (this._lineColor == null) {
-      this._lineColor = "";
-    }
-    return this._lineColor!;
-  }
+  // NOTE: lineColor skipped - type string is ignored in gen 
 
-  void set lineColor (String v) {
-    this._lineColor = v;
-  }
-    */
-    
-  String? lineDashStyle;
-    /*
-  String get lineDashStyle { 
-    if (this._lineDashStyle == null) {
-      this._lineDashStyle = "";
-    }
-    return this._lineDashStyle!;
-  }
+  // NOTE: lineDashStyle skipped - type string is ignored in gen 
 
-  void set lineDashStyle (String v) {
-    this._lineDashStyle = v;
-  }
-    */
-    
-  double? lineWidth;
-    /*
-  double get lineWidth { 
-    if (this._lineWidth == null) {
-      this._lineWidth = 0;
-    }
-    return this._lineWidth!;
-  }
+  // NOTE: lineWidth skipped - type number is ignored in gen 
 
-  void set lineWidth (double v) {
-    this._lineWidth = v;
-  }
-    */
-    
-  double? x;
-    /*
-  double get x { 
-    if (this._x == null) {
-      this._x = 0;
-    }
-    return this._x!;
-  }
+  // NOTE: x skipped - type number is ignored in gen 
 
-  void set x (double v) {
-    this._x = v;
-  }
-    */
-    
-  double? y;
-    /*
-  double get y { 
-    if (this._y == null) {
-      this._y = 0;
-    }
-    return this._y!;
-  }
+  // NOTE: y skipped - type number is ignored in gen 
 
-  void set y (double v) {
-    this._y = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -138,35 +46,21 @@ class AxisResizeOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of controlledAxis (type AxisResizeControlledAxisOptions is ignored)} 
+    // NOTE: skip serialization of controlledAxis (type AxisResizeControlledAxisOptions is ignored) ignore type: true
 
-    if (this.cursor != null) {  
-      buffer.writeAll(["\"cursor\":\`", this.cursor, "\`,"], "");
-    }
+    // NOTE: skip serialization of cursor (type string is ignored) ignore type: true
 
-    if (this.enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
-    }
+    // NOTE: skip serialization of enabled (type boolean is ignored) ignore type: true
 
-    if (this.lineColor != null) {  
-      buffer.writeAll(["\"lineColor\":\`", this.lineColor, "\`,"], "");
-    }
+    // NOTE: skip serialization of lineColor (type string is ignored) ignore type: true
 
-    if (this.lineDashStyle != null) {  
-      buffer.writeAll(["\"lineDashStyle\":\`", this.lineDashStyle, "\`,"], "");
-    }
+    // NOTE: skip serialization of lineDashStyle (type string is ignored) ignore type: true
 
-    if (this.lineWidth != null) {  
-      buffer.writeAll(["\"lineWidth\":", this.lineWidth, ","], "");
-    }
+    // NOTE: skip serialization of lineWidth (type number is ignored) ignore type: true
 
-    if (this.x != null) {  
-      buffer.writeAll(["\"x\":", this.x, ","], "");
-    }
+    // NOTE: skip serialization of x (type number is ignored) ignore type: true
 
-    if (this.y != null) {  
-      buffer.writeAll(["\"y\":", this.y, ","], "");
-    }
+    // NOTE: skip serialization of y (type number is ignored) ignore type: true
   }
 
 }

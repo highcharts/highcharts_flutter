@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -25,52 +25,26 @@ import 'OptionFragment.dart';
  */
 class TimelinePointOptions extends LinePointOptions {
   TimelinePointOptions( {
-    this.isNull = null,
-    this.radius = null,
-    this.visible = null
+    super.accessibility = null,
+    super.borderColor = null,
+    super.className = null,
+    super.color = null,
+    super.colorIndex = null,
+    super.connectors = null,
+    super.dataLabels = null,
+    super.dragDrop = null,
+    super.events = null,
+    super.keys = null,
+    super.marker = null,
+    super.selected = null,
+    super.visible = null
   }) : super();
-  bool? isNull;
-    /*
-  bool get isNull { 
-    if (this._isNull == null) {
-      this._isNull = false;
-    }
-    return this._isNull!;
-  }
+  // NOTE: isNull skipped - type boolean is ignored in gen 
 
-  void set isNull (bool v) {
-    this._isNull = v;
-  }
-    */
-    
-  double? radius;
-    /*
-  double get radius { 
-    if (this._radius == null) {
-      this._radius = 0;
-    }
-    return this._radius!;
-  }
+  // NOTE: radius skipped - type number is ignored in gen 
 
-  void set radius (double v) {
-    this._radius = v;
-  }
-    */
-    
-  bool? visible;
-    /*
-  bool get visible { 
-    if (this._visible == null) {
-      this._visible = false;
-    }
-    return this._visible!;
-  }
+  // NOTE: visible skipped - type boolean is ignored in gen 
 
-  void set visible (bool v) {
-    this._visible = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -79,19 +53,13 @@ class TimelinePointOptions extends LinePointOptions {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of dataLabels (type TimelineDataLabelOptions is ignored)} 
+    // NOTE: skip serialization of dataLabels (type TimelineDataLabelOptions is ignored) ignore type: true
 
-    if (this.isNull != null) {  
-      buffer.writeAll(["\"isNull\":", this.isNull, ","], "");
-    }
+    // NOTE: skip serialization of isNull (type boolean is ignored) ignore type: true
 
-    if (this.radius != null) {  
-      buffer.writeAll(["\"radius\":", this.radius, ","], "");
-    }
+    // NOTE: skip serialization of radius (type number is ignored) ignore type: true
 
-    if (this.visible != null) {  
-      buffer.writeAll(["\"visible\":", this.visible, ","], "");
-    }
+    // NOTE: skip serialization of visible (type boolean is ignored) ignore type: true
   }
 
 }

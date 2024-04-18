@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,37 +24,24 @@ import 'OptionFragment.dart';
  */
 class AreaRangePointOptions extends AreaPointOptions {
   AreaRangePointOptions( {
-    this.high = null,
-    this.low = null
+    super.accessibility = null,
+    super.borderColor = null,
+    super.className = null,
+    super.color = null,
+    super.colorIndex = null,
+    super.connectors = null,
+    super.dataLabels = null,
+    super.dragDrop = null,
+    super.events = null,
+    super.keys = null,
+    super.marker = null,
+    super.selected = null,
+    super.visible = null
   }) : super();
-  double? high;
-    /*
-  double get high { 
-    if (this._high == null) {
-      this._high = 0;
-    }
-    return this._high!;
-  }
+  // NOTE: high skipped - type number is ignored in gen 
 
-  void set high (double v) {
-    this._high = v;
-  }
-    */
-    
-  double? low;
-    /*
-  double get low { 
-    if (this._low == null) {
-      this._low = 0;
-    }
-    return this._low!;
-  }
+  // NOTE: low skipped - type number is ignored in gen 
 
-  void set low (double v) {
-    this._low = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -63,13 +50,9 @@ class AreaRangePointOptions extends AreaPointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.high != null) {  
-      buffer.writeAll(["\"high\":", this.high, ","], "");
-    }
+    // NOTE: skip serialization of high (type number is ignored) ignore type: true
 
-    if (this.low != null) {  
-      buffer.writeAll(["\"low\":", this.low, ","], "");
-    }
+    // NOTE: skip serialization of low (type number is ignored) ignore type: true
   }
 
 }

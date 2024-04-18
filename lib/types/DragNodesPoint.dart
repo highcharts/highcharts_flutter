@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,38 +24,11 @@ import 'OptionFragment.dart';
  * DragNodesPoint 
  */
 class DragNodesPoint extends Point {
-  DragNodesPoint( {
-    this.hasDragged = null,
-    this.inDragMode = null
-  }) : super();
-  bool? hasDragged;
-    /*
-  bool get hasDragged { 
-    if (this._hasDragged == null) {
-      this._hasDragged = false;
-    }
-    return this._hasDragged!;
-  }
+  DragNodesPoint( ) : super();
+  // NOTE: hasDragged skipped - type boolean is ignored in gen 
 
-  void set hasDragged (bool v) {
-    this._hasDragged = v;
-  }
-    */
-    
-  bool? inDragMode;
-    /*
-  bool get inDragMode { 
-    if (this._inDragMode == null) {
-      this._inDragMode = false;
-    }
-    return this._inDragMode!;
-  }
+  // NOTE: inDragMode skipped - type boolean is ignored in gen 
 
-  void set inDragMode (bool v) {
-    this._inDragMode = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -64,17 +37,13 @@ class DragNodesPoint extends Point {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of fixedPosition (type Generic is ignored)} 
+    // NOTE: skip serialization of fixedPosition (type Generic is ignored) ignore type: true
 
-    if (this.hasDragged != null) {  
-      buffer.writeAll(["\"hasDragged\":", this.hasDragged, ","], "");
-    }
+    // NOTE: skip serialization of hasDragged (type boolean is ignored) ignore type: true
 
-    if (this.inDragMode != null) {  
-      buffer.writeAll(["\"inDragMode\":", this.inDragMode, ","], "");
-    }
+    // NOTE: skip serialization of inDragMode (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of series (type DragNodesSeries is ignored)} 
+    // NOTE: skip serialization of series (type DragNodesSeries is ignored) ignore type: true
   }
 
 }

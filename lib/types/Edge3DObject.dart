@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -33,7 +33,7 @@ class Edge3DObject extends Position3DObject {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of xDir (type Position3DObject is ignored)} 
+    // NOTE: skip serialization of xDir (type Position3DObject is ignored) ignore type: true
   }
 
 }

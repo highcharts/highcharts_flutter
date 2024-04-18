@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,38 +22,11 @@ import 'OptionFragment.dart';
  * BoostAlteredObject 
  */
 class BoostAlteredObject extends OptionFragment {
-  BoostAlteredObject( {
-    this.own = null,
-    this.prop = null
-  }) : super();
-  bool? own;
-    /*
-  bool get own { 
-    if (this._own == null) {
-      this._own = false;
-    }
-    return this._own!;
-  }
+  BoostAlteredObject( ) : super();
+  // NOTE: own skipped - type boolean is ignored in gen 
 
-  void set own (bool v) {
-    this._own = v;
-  }
-    */
-    
-  String? prop;
-    /*
-  String get prop { 
-    if (this._prop == null) {
-      this._prop = "";
-    }
-    return this._prop!;
-  }
+  // NOTE: prop skipped - type string is ignored in gen 
 
-  void set prop (String v) {
-    this._prop = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -62,17 +35,13 @@ class BoostAlteredObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.own != null) {  
-      buffer.writeAll(["\"own\":", this.own, ","], "");
-    }
+    // NOTE: skip serialization of own (type boolean is ignored) ignore type: true
 
-    if (this.prop != null) {  
-      buffer.writeAll(["\"prop\":\`", this.prop, "\`,"], "");
-    }
+    // NOTE: skip serialization of prop (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of val (type unknown is ignored)} 
+    // NOTE: skip serialization of val (type unknown is ignored) ignore type: 1
 
-    // NOTE: skip serialization of value (type unknown is ignored)} 
+    // NOTE: skip serialization of value (type unknown is ignored) ignore type: 1
   }
 
 }

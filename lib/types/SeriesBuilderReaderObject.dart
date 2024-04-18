@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,38 +22,11 @@ import 'OptionFragment.dart';
  * SeriesBuilderReaderObject 
  */
 class SeriesBuilderReaderObject extends OptionFragment {
-  SeriesBuilderReaderObject( {
-    this.columnIndex = null,
-    this.configName = null
-  }) : super();
-  double? columnIndex;
-    /*
-  double get columnIndex { 
-    if (this._columnIndex == null) {
-      this._columnIndex = 0;
-    }
-    return this._columnIndex!;
-  }
+  SeriesBuilderReaderObject( ) : super();
+  // NOTE: columnIndex skipped - type number is ignored in gen 
 
-  void set columnIndex (double v) {
-    this._columnIndex = v;
-  }
-    */
-    
-  String? configName;
-    /*
-  String get configName { 
-    if (this._configName == null) {
-      this._configName = "";
-    }
-    return this._configName!;
-  }
+  // NOTE: configName skipped - type string is ignored in gen 
 
-  void set configName (String v) {
-    this._configName = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -62,13 +35,9 @@ class SeriesBuilderReaderObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.columnIndex != null) {  
-      buffer.writeAll(["\"columnIndex\":", this.columnIndex, ","], "");
-    }
+    // NOTE: skip serialization of columnIndex (type number is ignored) ignore type: true
 
-    if (this.configName != null) {  
-      buffer.writeAll(["\"configName\":\`", this.configName, "\`,"], "");
-    }
+    // NOTE: skip serialization of configName (type string is ignored) ignore type: true
   }
 
 }

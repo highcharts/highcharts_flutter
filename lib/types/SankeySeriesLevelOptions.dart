@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,98 +23,19 @@ import 'OptionFragment.dart';
  * SankeySeriesLevelOptions 
  */
 class SankeySeriesLevelOptions extends OptionFragment {
-  SankeySeriesLevelOptions( {
-    this.borderColor = null,
-    this.borderWidth = null,
-    this.color = null,
-    this.colorByPoint = null,
-    this.level = null,
-    this.linkOpacity = null
-  }) : super();
-  String? borderColor;
-    /*
-  String get borderColor { 
-    if (this._borderColor == null) {
-      this._borderColor = "";
-    }
-    return this._borderColor!;
-  }
+  SankeySeriesLevelOptions( ) : super();
+  // NOTE: borderColor skipped - type string is ignored in gen 
 
-  void set borderColor (String v) {
-    this._borderColor = v;
-  }
-    */
-    
-  double? borderWidth;
-    /*
-  double get borderWidth { 
-    if (this._borderWidth == null) {
-      this._borderWidth = 0;
-    }
-    return this._borderWidth!;
-  }
+  // NOTE: borderWidth skipped - type number is ignored in gen 
 
-  void set borderWidth (double v) {
-    this._borderWidth = v;
-  }
-    */
-    
-  String? color;
-    /*
-  String get color { 
-    if (this._color == null) {
-      this._color = "";
-    }
-    return this._color!;
-  }
+  // NOTE: color skipped - type string is ignored in gen 
 
-  void set color (String v) {
-    this._color = v;
-  }
-    */
-    
-  bool? colorByPoint;
-    /*
-  bool get colorByPoint { 
-    if (this._colorByPoint == null) {
-      this._colorByPoint = false;
-    }
-    return this._colorByPoint!;
-  }
+  // NOTE: colorByPoint skipped - type boolean is ignored in gen 
 
-  void set colorByPoint (bool v) {
-    this._colorByPoint = v;
-  }
-    */
-    
-  double? level;
-    /*
-  double get level { 
-    if (this._level == null) {
-      this._level = 0;
-    }
-    return this._level!;
-  }
+  // NOTE: level skipped - type number is ignored in gen 
 
-  void set level (double v) {
-    this._level = v;
-  }
-    */
-    
-  double? linkOpacity;
-    /*
-  double get linkOpacity { 
-    if (this._linkOpacity == null) {
-      this._linkOpacity = 0;
-    }
-    return this._linkOpacity!;
-  }
+  // NOTE: linkOpacity skipped - type number is ignored in gen 
 
-  void set linkOpacity (double v) {
-    this._linkOpacity = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -123,33 +44,21 @@ class SankeySeriesLevelOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.borderColor != null) {  
-      buffer.writeAll(["\"borderColor\":\`", this.borderColor, "\`,"], "");
-    }
+    // NOTE: skip serialization of borderColor (type string is ignored) ignore type: true
 
-    if (this.borderWidth != null) {  
-      buffer.writeAll(["\"borderWidth\":", this.borderWidth, ","], "");
-    }
+    // NOTE: skip serialization of borderWidth (type number is ignored) ignore type: true
 
-    if (this.color != null) {  
-      buffer.writeAll(["\"color\":\`", this.color, "\`,"], "");
-    }
+    // NOTE: skip serialization of color (type string is ignored) ignore type: true
 
-    if (this.colorByPoint != null) {  
-      buffer.writeAll(["\"colorByPoint\":", this.colorByPoint, ","], "");
-    }
+    // NOTE: skip serialization of colorByPoint (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of dataLabels (type SankeyDataLabelOptions is ignored)} 
+    // NOTE: skip serialization of dataLabels (type SankeyDataLabelOptions is ignored) ignore type: true
 
-    if (this.level != null) {  
-      buffer.writeAll(["\"level\":", this.level, ","], "");
-    }
+    // NOTE: skip serialization of level (type number is ignored) ignore type: true
 
-    if (this.linkOpacity != null) {  
-      buffer.writeAll(["\"linkOpacity\":", this.linkOpacity, ","], "");
-    }
+    // NOTE: skip serialization of linkOpacity (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of states (type Generic is ignored)} 
+    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
   }
 
 }

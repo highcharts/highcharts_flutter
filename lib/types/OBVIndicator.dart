@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -32,9 +32,9 @@ class OBVIndicator extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of nameComponents (type string[] is ignored)} 
+    // NOTE: skip serialization of nameComponents (type string[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of pointClass (type typeof OBVPoint is ignored)} 
+    // NOTE: skip serialization of pointClass (type typeof OBVPoint is ignored) ignore type: true
   }
 
 }

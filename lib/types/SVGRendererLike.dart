@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,23 +22,9 @@ import 'OptionFragment.dart';
  * SVGRendererLike 
  */
 class SVGRendererLike extends OptionFragment {
-  SVGRendererLike( {
-    this.idCounter = null
-  }) : super();
-  double? idCounter;
-    /*
-  double get idCounter { 
-    if (this._idCounter == null) {
-      this._idCounter = 0;
-    }
-    return this._idCounter!;
-  }
+  SVGRendererLike( ) : super();
+  // NOTE: idCounter skipped - type number is ignored in gen 
 
-  void set idCounter (double v) {
-    this._idCounter = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -47,15 +33,13 @@ class SVGRendererLike extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of Element3D (type typeof SVGElement3D is ignored)} 
+    // NOTE: skip serialization of Element3D (type typeof SVGElement3D is ignored) ignore type: true
 
-    // NOTE: skip serialization of defIds (type string[] is ignored)} 
+    // NOTE: skip serialization of defIds (type string[] is ignored) ignore type: true
 
-    if (this.idCounter != null) {  
-      buffer.writeAll(["\"idCounter\":", this.idCounter, ","], "");
-    }
+    // NOTE: skip serialization of idCounter (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of patternElements (type Generic is ignored)} 
+    // NOTE: skip serialization of patternElements (type Generic is ignored) ignore type: true
   }
 
 }

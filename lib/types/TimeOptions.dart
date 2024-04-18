@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -27,77 +27,15 @@ class TimeOptions extends OptionFragment {
     this.timezoneOffset = null,
     this.useUTC = null
   }) : super();
-  // NOTE: Date skipped - type any is ignored in gen
+  // NOTE: Date skipped - type any is ignored in gen 
 
-  // NOTE: getTimezoneOffset skipped - type Function is ignored in gen
+  // NOTE: getTimezoneOffset skipped - type Function is ignored in gen 
 
-  /**
-   * Requires [moment.js](https://momentjs.com/). If the timezone option
-   * is specified, it creates a default
-   * [getTimezoneOffset](#time.getTimezoneOffset) function that looks
-   * up the specified timezone in moment.js. If moment.js is not included,
-   * this throws a Highcharts error in the console, but does not crash the
-   * chart. 
-   * 
-   * Defaults to 'undefined'. 
-      */
   String? timezone;
-    /*
-  String get timezone { 
-    if (this._timezone == null) {
-      this._timezone = "";
-    }
-    return this._timezone!;
-  }
-
-  void set timezone (String v) {
-    this._timezone = v;
-  }
-    */
     
-  /**
-   * The timezone offset in minutes. Positive values are west, negative
-   * values are east of UTC, as in the ECMAScript
-   * [getTimezoneOffset](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset)
-   * method. Use this to display UTC based data in a predefined time zone.  
-      */
   double? timezoneOffset;
-    /*
-  double get timezoneOffset { 
-    if (this._timezoneOffset == null) {
-      this._timezoneOffset = 0;
-    }
-    return this._timezoneOffset!;
-  }
-
-  void set timezoneOffset (double v) {
-    this._timezoneOffset = v;
-  }
-    */
     
-  /**
-   * Whether to use UTC time for axis scaling, tickmark placement and
-   * time display in `Highcharts.dateFormat`. Advantages of using UTC
-   * is that the time displays equally regardless of the user agent's
-   * time zone settings. Local time can be used when the data is loaded
-   * in real time or when correct Daylight Saving Time transitions are
-   * required. 
-   * 
-   * Defaults to 'true'. 
-      */
   bool? useUTC;
-    /*
-  bool get useUTC { 
-    if (this._useUTC == null) {
-      this._useUTC = false;
-    }
-    return this._useUTC!;
-  }
-
-  void set useUTC (bool v) {
-    this._useUTC = v;
-  }
-    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -107,20 +45,20 @@ class TimeOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of Date (type any is ignored)} 
+    // NOTE: skip serialization of Date (type any is ignored) ignore type: 1
 
-    // NOTE: skip serialization of getTimezoneOffset (type Function is ignored)} 
+    // NOTE: skip serialization of getTimezoneOffset (type Function is ignored) ignore type: 1
 
     if (this.timezone != null) {  
-      buffer.writeAll(["\"timezone\":\`", this.timezone, "\`,"], "");
+      buffer.writeAll(["\"timezone\":\`",this.timezone, "\`,"], "");
     }
 
     if (this.timezoneOffset != null) {  
-      buffer.writeAll(["\"timezoneOffset\":", this.timezoneOffset, ","], "");
+      buffer.writeAll(["\"timezoneOffset\":",this.timezoneOffset, ","], "");
     }
 
     if (this.useUTC != null) {  
-      buffer.writeAll(["\"useUTC\":", this.useUTC, ","], "");
+      buffer.writeAll(["\"useUTC\":",this.useUTC, ","], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,38 +22,11 @@ import 'OptionFragment.dart';
  * Document 
  */
 class Document extends OptionFragment {
-  Document( {
-    this.msHidden = null,
-    this.webkitHidden = null
-  }) : super();
-  bool? msHidden;
-    /*
-  bool get msHidden { 
-    if (this._msHidden == null) {
-      this._msHidden = false;
-    }
-    return this._msHidden!;
-  }
+  Document( ) : super();
+  // NOTE: msHidden skipped - type boolean is ignored in gen 
 
-  void set msHidden (bool v) {
-    this._msHidden = v;
-  }
-    */
-    
-  bool? webkitHidden;
-    /*
-  bool get webkitHidden { 
-    if (this._webkitHidden == null) {
-      this._webkitHidden = false;
-    }
-    return this._webkitHidden!;
-  }
+  // NOTE: webkitHidden skipped - type boolean is ignored in gen 
 
-  void set webkitHidden (bool v) {
-    this._webkitHidden = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -62,19 +35,15 @@ class Document extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of mozCancelFullScreen (type Function is ignored)} 
+    // NOTE: skip serialization of mozCancelFullScreen (type Function is ignored) ignore type: 1
 
-    // NOTE: skip serialization of msExitFullscreen (type Function is ignored)} 
+    // NOTE: skip serialization of msExitFullscreen (type Function is ignored) ignore type: 1
 
-    if (this.msHidden != null) {  
-      buffer.writeAll(["\"msHidden\":", this.msHidden, ","], "");
-    }
+    // NOTE: skip serialization of msHidden (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of webkitExitFullscreen (type Function is ignored)} 
+    // NOTE: skip serialization of webkitExitFullscreen (type Function is ignored) ignore type: 1
 
-    if (this.webkitHidden != null) {  
-      buffer.writeAll(["\"webkitHidden\":", this.webkitHidden, ","], "");
-    }
+    // NOTE: skip serialization of webkitHidden (type boolean is ignored) ignore type: true
   }
 
 }

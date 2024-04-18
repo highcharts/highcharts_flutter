@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,52 +24,15 @@ import 'OptionFragment.dart';
  */
 class ZigzagParamsOptions extends SMAParamsOptions {
   ZigzagParamsOptions( {
-    this.lowIndex = null,
-    this.highIndex = null,
-    this.deviation = null
+    super.index = null,
+    super.period = null
   }) : super();
-  double? lowIndex;
-    /*
-  double get lowIndex { 
-    if (this._lowIndex == null) {
-      this._lowIndex = 0;
-    }
-    return this._lowIndex!;
-  }
+  // NOTE: lowIndex skipped - type number is ignored in gen 
 
-  void set lowIndex (double v) {
-    this._lowIndex = v;
-  }
-    */
-    
-  double? highIndex;
-    /*
-  double get highIndex { 
-    if (this._highIndex == null) {
-      this._highIndex = 0;
-    }
-    return this._highIndex!;
-  }
+  // NOTE: highIndex skipped - type number is ignored in gen 
 
-  void set highIndex (double v) {
-    this._highIndex = v;
-  }
-    */
-    
-  double? deviation;
-    /*
-  double get deviation { 
-    if (this._deviation == null) {
-      this._deviation = 0;
-    }
-    return this._deviation!;
-  }
+  // NOTE: deviation skipped - type number is ignored in gen 
 
-  void set deviation (double v) {
-    this._deviation = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -78,17 +41,11 @@ class ZigzagParamsOptions extends SMAParamsOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.lowIndex != null) {  
-      buffer.writeAll(["\"lowIndex\":", this.lowIndex, ","], "");
-    }
+    // NOTE: skip serialization of lowIndex (type number is ignored) ignore type: true
 
-    if (this.highIndex != null) {  
-      buffer.writeAll(["\"highIndex\":", this.highIndex, ","], "");
-    }
+    // NOTE: skip serialization of highIndex (type number is ignored) ignore type: true
 
-    if (this.deviation != null) {  
-      buffer.writeAll(["\"deviation\":", this.deviation, ","], "");
-    }
+    // NOTE: skip serialization of deviation (type number is ignored) ignore type: true
   }
 
 }

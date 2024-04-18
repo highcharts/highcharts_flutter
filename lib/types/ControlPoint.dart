@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,98 +22,19 @@ import 'OptionFragment.dart';
  * ControlPoint 
  */
 class ControlPoint extends OptionFragment {
-  ControlPoint( {
-    this.chartCenterX = null,
-    this.chartCenterY = null,
-    this.chartX = null,
-    this.chartY = null,
-    this.plotX = null,
-    this.plotY = null
-  }) : super();
-  double? chartCenterX;
-    /*
-  double get chartCenterX { 
-    if (this._chartCenterX == null) {
-      this._chartCenterX = 0;
-    }
-    return this._chartCenterX!;
-  }
+  ControlPoint( ) : super();
+  // NOTE: chartCenterX skipped - type number is ignored in gen 
 
-  void set chartCenterX (double v) {
-    this._chartCenterX = v;
-  }
-    */
-    
-  double? chartCenterY;
-    /*
-  double get chartCenterY { 
-    if (this._chartCenterY == null) {
-      this._chartCenterY = 0;
-    }
-    return this._chartCenterY!;
-  }
+  // NOTE: chartCenterY skipped - type number is ignored in gen 
 
-  void set chartCenterY (double v) {
-    this._chartCenterY = v;
-  }
-    */
-    
-  double? chartX;
-    /*
-  double get chartX { 
-    if (this._chartX == null) {
-      this._chartX = 0;
-    }
-    return this._chartX!;
-  }
+  // NOTE: chartX skipped - type number is ignored in gen 
 
-  void set chartX (double v) {
-    this._chartX = v;
-  }
-    */
-    
-  double? chartY;
-    /*
-  double get chartY { 
-    if (this._chartY == null) {
-      this._chartY = 0;
-    }
-    return this._chartY!;
-  }
+  // NOTE: chartY skipped - type number is ignored in gen 
 
-  void set chartY (double v) {
-    this._chartY = v;
-  }
-    */
-    
-  double? plotX;
-    /*
-  double get plotX { 
-    if (this._plotX == null) {
-      this._plotX = 0;
-    }
-    return this._plotX!;
-  }
+  // NOTE: plotX skipped - type number is ignored in gen 
 
-  void set plotX (double v) {
-    this._plotX = v;
-  }
-    */
-    
-  double? plotY;
-    /*
-  double get plotY { 
-    if (this._plotY == null) {
-      this._plotY = 0;
-    }
-    return this._plotY!;
-  }
+  // NOTE: plotY skipped - type number is ignored in gen 
 
-  void set plotY (double v) {
-    this._plotY = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -122,29 +43,17 @@ class ControlPoint extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.chartCenterX != null) {  
-      buffer.writeAll(["\"chartCenterX\":", this.chartCenterX, ","], "");
-    }
+    // NOTE: skip serialization of chartCenterX (type number is ignored) ignore type: true
 
-    if (this.chartCenterY != null) {  
-      buffer.writeAll(["\"chartCenterY\":", this.chartCenterY, ","], "");
-    }
+    // NOTE: skip serialization of chartCenterY (type number is ignored) ignore type: true
 
-    if (this.chartX != null) {  
-      buffer.writeAll(["\"chartX\":", this.chartX, ","], "");
-    }
+    // NOTE: skip serialization of chartX (type number is ignored) ignore type: true
 
-    if (this.chartY != null) {  
-      buffer.writeAll(["\"chartY\":", this.chartY, ","], "");
-    }
+    // NOTE: skip serialization of chartY (type number is ignored) ignore type: true
 
-    if (this.plotX != null) {  
-      buffer.writeAll(["\"plotX\":", this.plotX, ","], "");
-    }
+    // NOTE: skip serialization of plotX (type number is ignored) ignore type: true
 
-    if (this.plotY != null) {  
-      buffer.writeAll(["\"plotY\":", this.plotY, ","], "");
-    }
+    // NOTE: skip serialization of plotY (type number is ignored) ignore type: true
   }
 
 }

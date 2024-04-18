@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,38 +22,11 @@ import 'OptionFragment.dart';
  * EventOptions 
  */
 class EventOptions extends OptionFragment {
-  EventOptions( {
-    this.order = null,
-    this.passive = null
-  }) : super();
-  double? order;
-    /*
-  double get order { 
-    if (this._order == null) {
-      this._order = 0;
-    }
-    return this._order!;
-  }
+  EventOptions( ) : super();
+  // NOTE: order skipped - type number is ignored in gen 
 
-  void set order (double v) {
-    this._order = v;
-  }
-    */
-    
-  bool? passive;
-    /*
-  bool get passive { 
-    if (this._passive == null) {
-      this._passive = false;
-    }
-    return this._passive!;
-  }
+  // NOTE: passive skipped - type boolean is ignored in gen 
 
-  void set passive (bool v) {
-    this._passive = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -62,13 +35,9 @@ class EventOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.order != null) {  
-      buffer.writeAll(["\"order\":", this.order, ","], "");
-    }
+    // NOTE: skip serialization of order (type number is ignored) ignore type: true
 
-    if (this.passive != null) {  
-      buffer.writeAll(["\"passive\":", this.passive, ","], "");
-    }
+    // NOTE: skip serialization of passive (type boolean is ignored) ignore type: true
   }
 
 }

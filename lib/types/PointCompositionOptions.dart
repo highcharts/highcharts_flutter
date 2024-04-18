@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,82 +24,30 @@ import 'OptionFragment.dart';
  */
 class PointCompositionOptions extends PointOptions {
   PointCompositionOptions( {
-    this.id = null,
-    this.level = null,
-    this.mass = null,
-    this.outgoing = null,
-    this.weight = null
+    super.accessibility = null,
+    super.borderColor = null,
+    super.className = null,
+    super.color = null,
+    super.colorIndex = null,
+    super.connectors = null,
+    super.dataLabels = null,
+    super.dragDrop = null,
+    super.events = null,
+    super.keys = null,
+    super.marker = null,
+    super.selected = null,
+    super.visible = null
   }) : super();
-  String? id;
-    /*
-  String get id { 
-    if (this._id == null) {
-      this._id = "";
-    }
-    return this._id!;
-  }
+  // NOTE: id skipped - type string is ignored in gen 
 
-  void set id (String v) {
-    this._id = v;
-  }
-    */
-    
-  double? level;
-    /*
-  double get level { 
-    if (this._level == null) {
-      this._level = 0;
-    }
-    return this._level!;
-  }
+  // NOTE: level skipped - type number is ignored in gen 
 
-  void set level (double v) {
-    this._level = v;
-  }
-    */
-    
-  double? mass;
-    /*
-  double get mass { 
-    if (this._mass == null) {
-      this._mass = 0;
-    }
-    return this._mass!;
-  }
+  // NOTE: mass skipped - type number is ignored in gen 
 
-  void set mass (double v) {
-    this._mass = v;
-  }
-    */
-    
-  bool? outgoing;
-    /*
-  bool get outgoing { 
-    if (this._outgoing == null) {
-      this._outgoing = false;
-    }
-    return this._outgoing!;
-  }
+  // NOTE: outgoing skipped - type boolean is ignored in gen 
 
-  void set outgoing (bool v) {
-    this._outgoing = v;
-  }
-    */
-    
-  double? weight;
-    /*
-  double get weight { 
-    if (this._weight == null) {
-      this._weight = 0;
-    }
-    return this._weight!;
-  }
+  // NOTE: weight skipped - type number is ignored in gen 
 
-  void set weight (double v) {
-    this._weight = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -108,25 +56,15 @@ class PointCompositionOptions extends PointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.id != null) {  
-      buffer.writeAll(["\"id\":\`", this.id, "\`,"], "");
-    }
+    // NOTE: skip serialization of id (type string is ignored) ignore type: true
 
-    if (this.level != null) {  
-      buffer.writeAll(["\"level\":", this.level, ","], "");
-    }
+    // NOTE: skip serialization of level (type number is ignored) ignore type: true
 
-    if (this.mass != null) {  
-      buffer.writeAll(["\"mass\":", this.mass, ","], "");
-    }
+    // NOTE: skip serialization of mass (type number is ignored) ignore type: true
 
-    if (this.outgoing != null) {  
-      buffer.writeAll(["\"outgoing\":", this.outgoing, ","], "");
-    }
+    // NOTE: skip serialization of outgoing (type boolean is ignored) ignore type: true
 
-    if (this.weight != null) {  
-      buffer.writeAll(["\"weight\":", this.weight, ","], "");
-    }
+    // NOTE: skip serialization of weight (type number is ignored) ignore type: true
   }
 
 }

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,83 +22,17 @@ import 'OptionFragment.dart';
  * SidebarLangOptions 
  */
 class SidebarLangOptions extends OptionFragment {
-  SidebarLangOptions( {
-    this.HTML = null,
-    this.layout = null,
-    this.Highcharts = null,
-    this.DataGrid = null,
-    this.KPI = null
-  }) : super();
-  String? HTML;
-    /*
-  String get HTML { 
-    if (this._HTML == null) {
-      this._HTML = "";
-    }
-    return this._HTML!;
-  }
+  SidebarLangOptions( ) : super();
+  // NOTE: HTML skipped - type string is ignored in gen 
 
-  void set HTML (String v) {
-    this._HTML = v;
-  }
-    */
-    
-  String? layout;
-    /*
-  String get layout { 
-    if (this._layout == null) {
-      this._layout = "";
-    }
-    return this._layout!;
-  }
+  // NOTE: layout skipped - type string is ignored in gen 
 
-  void set layout (String v) {
-    this._layout = v;
-  }
-    */
-    
-  String? Highcharts;
-    /*
-  String get Highcharts { 
-    if (this._Highcharts == null) {
-      this._Highcharts = "";
-    }
-    return this._Highcharts!;
-  }
+  // NOTE: Highcharts skipped - type string is ignored in gen 
 
-  void set Highcharts (String v) {
-    this._Highcharts = v;
-  }
-    */
-    
-  String? DataGrid;
-    /*
-  String get DataGrid { 
-    if (this._DataGrid == null) {
-      this._DataGrid = "";
-    }
-    return this._DataGrid!;
-  }
+  // NOTE: DataGrid skipped - type string is ignored in gen 
 
-  void set DataGrid (String v) {
-    this._DataGrid = v;
-  }
-    */
-    
-  String? KPI;
-    /*
-  String get KPI { 
-    if (this._KPI == null) {
-      this._KPI = "";
-    }
-    return this._KPI!;
-  }
+  // NOTE: KPI skipped - type string is ignored in gen 
 
-  void set KPI (String v) {
-    this._KPI = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -107,25 +41,15 @@ class SidebarLangOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.HTML != null) {  
-      buffer.writeAll(["\"HTML\":\`", this.HTML, "\`,"], "");
-    }
+    // NOTE: skip serialization of HTML (type string is ignored) ignore type: true
 
-    if (this.layout != null) {  
-      buffer.writeAll(["\"layout\":\`", this.layout, "\`,"], "");
-    }
+    // NOTE: skip serialization of layout (type string is ignored) ignore type: true
 
-    if (this.Highcharts != null) {  
-      buffer.writeAll(["\"Highcharts\":\`", this.Highcharts, "\`,"], "");
-    }
+    // NOTE: skip serialization of Highcharts (type string is ignored) ignore type: true
 
-    if (this.DataGrid != null) {  
-      buffer.writeAll(["\"DataGrid\":\`", this.DataGrid, "\`,"], "");
-    }
+    // NOTE: skip serialization of DataGrid (type string is ignored) ignore type: true
 
-    if (this.KPI != null) {  
-      buffer.writeAll(["\"KPI\":\`", this.KPI, "\`,"], "");
-    }
+    // NOTE: skip serialization of KPI (type string is ignored) ignore type: true
   }
 
 }

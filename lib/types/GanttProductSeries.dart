@@ -12,10 +12,11 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
+import 'SeriesOptions.dart';
 import 'GanttSeriesOptions.dart';
 import 'XRangeSeriesOptions.dart';
 import 'OptionFragment.dart';
@@ -24,8 +25,17 @@ import 'OptionFragment.dart';
  * GanttProductSeries 
  */
 class GanttProductSeries extends OptionFragment {
-  GanttProductSeries( ) : super();
-  
+  GanttProductSeries( {
+    this.gantt = null,
+    this.series = null,
+    this.xrange = null
+  }) : super();
+  SeriesOptions? series;
+    
+  GanttSeriesOptions? gantt;
+    
+  XRangeSeriesOptions? xrange;
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -34,9 +44,17 @@ class GanttProductSeries extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of gantt (type GanttSeriesOptions is ignored)} 
+    if (this.series != null) {  
+      buffer.writeAll(["\"series\":",this.series?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of xrange (type XRangeSeriesOptions is ignored)} 
+    if (this.gantt != null) {  
+      buffer.writeAll(["\"gantt\":",this.gantt?.toJSON(), ","], "");
+    }
+
+    if (this.xrange != null) {  
+      buffer.writeAll(["\"xrange\":",this.xrange?.toJSON(), ","], "");
+    }
   }
 
 }

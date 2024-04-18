@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -25,37 +25,37 @@ import 'OptionFragment.dart';
  */
 class PackedBubbleDataLabelOptions extends DataLabelOptions {
   PackedBubbleDataLabelOptions( {
-    this.format = null,
-    this.parentNodeFormat = null
+    super.align = null,
+    super.allowOverlap = null,
+    super.backgroundColor = null,
+    super.borderColor = null,
+    super.borderRadius = null,
+    super.borderWidth = null,
+    super.className = null,
+    super.color = null,
+    super.crop = null,
+    super.defer = null,
+    super.enabled = null,
+    super.filter = null,
+    super.format = null,
+    super.inside = null,
+    super.nullFormat = null,
+    super.overflow = null,
+    super.padding = null,
+    super.rotation = null,
+    super.shape = null,
+    super.style = null,
+    super.textPath = null,
+    super.useHTML = null,
+    super.verticalAlign = null,
+    super.x = null,
+    super.y = null,
+    super.zIndex = null
   }) : super();
-  String? format;
-    /*
-  String get format { 
-    if (this._format == null) {
-      this._format = "";
-    }
-    return this._format!;
-  }
+  // NOTE: format skipped - type string is ignored in gen 
 
-  void set format (String v) {
-    this._format = v;
-  }
-    */
-    
-  String? parentNodeFormat;
-    /*
-  String get parentNodeFormat { 
-    if (this._parentNodeFormat == null) {
-      this._parentNodeFormat = "";
-    }
-    return this._parentNodeFormat!;
-  }
+  // NOTE: parentNodeFormat skipped - type string is ignored in gen 
 
-  void set parentNodeFormat (String v) {
-    this._parentNodeFormat = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -64,17 +64,13 @@ class PackedBubbleDataLabelOptions extends DataLabelOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.format != null) {  
-      buffer.writeAll(["\"format\":\`", this.format, "\`,"], "");
-    }
+    // NOTE: skip serialization of format (type string is ignored) ignore type: true
 
-    if (this.parentNodeFormat != null) {  
-      buffer.writeAll(["\"parentNodeFormat\":\`", this.parentNodeFormat, "\`,"], "");
-    }
+    // NOTE: skip serialization of parentNodeFormat (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of parentNodeTextPath (type DataLabelTextPathOptions is ignored)} 
+    // NOTE: skip serialization of parentNodeTextPath (type DataLabelTextPathOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of textPath (type DataLabelTextPathOptions is ignored)} 
+    // NOTE: skip serialization of textPath (type DataLabelTextPathOptions is ignored) ignore type: true
   }
 
 }

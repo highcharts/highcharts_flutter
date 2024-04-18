@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,67 +24,17 @@ import 'OptionFragment.dart';
  */
 class PSARParamsOptions extends SMAParamsOptions {
   PSARParamsOptions( {
-    this.initialAccelerationFactor = null,
-    this.maxAccelerationFactor = null,
-    this.increment = null,
-    this.decimals = null
+    super.index = null,
+    super.period = null
   }) : super();
-  double? initialAccelerationFactor;
-    /*
-  double get initialAccelerationFactor { 
-    if (this._initialAccelerationFactor == null) {
-      this._initialAccelerationFactor = 0;
-    }
-    return this._initialAccelerationFactor!;
-  }
+  // NOTE: initialAccelerationFactor skipped - type number is ignored in gen 
 
-  void set initialAccelerationFactor (double v) {
-    this._initialAccelerationFactor = v;
-  }
-    */
-    
-  double? maxAccelerationFactor;
-    /*
-  double get maxAccelerationFactor { 
-    if (this._maxAccelerationFactor == null) {
-      this._maxAccelerationFactor = 0;
-    }
-    return this._maxAccelerationFactor!;
-  }
+  // NOTE: maxAccelerationFactor skipped - type number is ignored in gen 
 
-  void set maxAccelerationFactor (double v) {
-    this._maxAccelerationFactor = v;
-  }
-    */
-    
-  double? increment;
-    /*
-  double get increment { 
-    if (this._increment == null) {
-      this._increment = 0;
-    }
-    return this._increment!;
-  }
+  // NOTE: increment skipped - type number is ignored in gen 
 
-  void set increment (double v) {
-    this._increment = v;
-  }
-    */
-    
-  double? decimals;
-    /*
-  double get decimals { 
-    if (this._decimals == null) {
-      this._decimals = 0;
-    }
-    return this._decimals!;
-  }
+  // NOTE: decimals skipped - type number is ignored in gen 
 
-  void set decimals (double v) {
-    this._decimals = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -93,21 +43,13 @@ class PSARParamsOptions extends SMAParamsOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.initialAccelerationFactor != null) {  
-      buffer.writeAll(["\"initialAccelerationFactor\":", this.initialAccelerationFactor, ","], "");
-    }
+    // NOTE: skip serialization of initialAccelerationFactor (type number is ignored) ignore type: true
 
-    if (this.maxAccelerationFactor != null) {  
-      buffer.writeAll(["\"maxAccelerationFactor\":", this.maxAccelerationFactor, ","], "");
-    }
+    // NOTE: skip serialization of maxAccelerationFactor (type number is ignored) ignore type: true
 
-    if (this.increment != null) {  
-      buffer.writeAll(["\"increment\":", this.increment, ","], "");
-    }
+    // NOTE: skip serialization of increment (type number is ignored) ignore type: true
 
-    if (this.decimals != null) {  
-      buffer.writeAll(["\"decimals\":", this.decimals, ","], "");
-    }
+    // NOTE: skip serialization of decimals (type number is ignored) ignore type: true
   }
 
 }

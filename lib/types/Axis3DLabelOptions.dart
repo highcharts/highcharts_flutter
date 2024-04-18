@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,37 +24,31 @@ import 'OptionFragment.dart';
  */
 class Axis3DLabelOptions extends AxisLabelOptions {
   Axis3DLabelOptions( {
-    this.position3d = null,
-    this.skew3d = null
+    super.align = null,
+    super.allowOverlap = null,
+    super.autoRotation = null,
+    super.autoRotationLimit = null,
+    super.distance = null,
+    super.enabled = null,
+    super.format = null,
+    super.indentation = null,
+    super.overflow = null,
+    super.padding = null,
+    super.position3d = null,
+    super.reserveSpace = null,
+    super.skew3d = null,
+    super.staggerLines = null,
+    super.step = null,
+    super.style = null,
+    super.useHTML = null,
+    super.x = null,
+    super.y = null,
+    super.zIndex = null
   }) : super();
-  String? position3d;
-    /*
-  String get position3d { 
-    if (this._position3d == null) {
-      this._position3d = "";
-    }
-    return this._position3d!;
-  }
+  // NOTE: position3d skipped - type string is ignored in gen 
 
-  void set position3d (String v) {
-    this._position3d = v;
-  }
-    */
-    
-  bool? skew3d;
-    /*
-  bool get skew3d { 
-    if (this._skew3d == null) {
-      this._skew3d = false;
-    }
-    return this._skew3d!;
-  }
+  // NOTE: skew3d skipped - type boolean is ignored in gen 
 
-  void set skew3d (bool v) {
-    this._skew3d = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -63,13 +57,9 @@ class Axis3DLabelOptions extends AxisLabelOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.position3d != null) {  
-      buffer.writeAll(["\"position3d\":\`", this.position3d, "\`,"], "");
-    }
+    // NOTE: skip serialization of position3d (type string is ignored) ignore type: true
 
-    if (this.skew3d != null) {  
-      buffer.writeAll(["\"skew3d\":", this.skew3d, ","], "");
-    }
+    // NOTE: skip serialization of skew3d (type boolean is ignored) ignore type: true
   }
 
 }

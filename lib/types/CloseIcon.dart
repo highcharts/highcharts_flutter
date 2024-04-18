@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,23 +22,9 @@ import 'OptionFragment.dart';
  * CloseIcon 
  */
 class CloseIcon extends OptionFragment {
-  CloseIcon( {
-    this.icon = null
-  }) : super();
-  String? icon;
-    /*
-  String get icon { 
-    if (this._icon == null) {
-      this._icon = "";
-    }
-    return this._icon!;
-  }
+  CloseIcon( ) : super();
+  // NOTE: icon skipped - type string is ignored in gen 
 
-  void set icon (String v) {
-    this._icon = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -47,9 +33,7 @@ class CloseIcon extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.icon != null) {  
-      buffer.writeAll(["\"icon\":\`", this.icon, "\`,"], "");
-    }
+    // NOTE: skip serialization of icon (type string is ignored) ignore type: true
   }
 
 }

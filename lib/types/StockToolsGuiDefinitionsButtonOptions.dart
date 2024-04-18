@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,36 +23,11 @@ import 'OptionFragment.dart';
  */
 class StockToolsGuiDefinitionsButtonOptions extends OptionFragment {
   StockToolsGuiDefinitionsButtonOptions( {
-    this.elementType = null,
     this.symbol = null
   }) : super();
-  String? elementType;
-    /*
-  String get elementType { 
-    if (this._elementType == null) {
-      this._elementType = "";
-    }
-    return this._elementType!;
-  }
+  // NOTE: elementType skipped - type string is ignored in gen 
 
-  void set elementType (String v) {
-    this._elementType = v;
-  }
-    */
-    
   String? symbol;
-    /*
-  String get symbol { 
-    if (this._symbol == null) {
-      this._symbol = "";
-    }
-    return this._symbol!;
-  }
-
-  void set symbol (String v) {
-    this._symbol = v;
-  }
-    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -62,12 +37,10 @@ class StockToolsGuiDefinitionsButtonOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.elementType != null) {  
-      buffer.writeAll(["\"elementType\":\`", this.elementType, "\`,"], "");
-    }
+    // NOTE: skip serialization of elementType (type string is ignored) ignore type: true
 
     if (this.symbol != null) {  
-      buffer.writeAll(["\"symbol\":\`", this.symbol, "\`,"], "");
+      buffer.writeAll(["\"symbol\":\`",this.symbol, "\`,"], "");
     }
   }
 

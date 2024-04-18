@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,38 +22,11 @@ import 'OptionFragment.dart';
  * AnimationOptions 
  */
 class AnimationOptions extends OptionFragment {
-  AnimationOptions( {
-    this.defer = null,
-    this.duration = null
-  }) : super();
-  double? defer;
-    /*
-  double get defer { 
-    if (this._defer == null) {
-      this._defer = 0;
-    }
-    return this._defer!;
-  }
+  AnimationOptions( ) : super();
+  // NOTE: defer skipped - type number is ignored in gen 
 
-  void set defer (double v) {
-    this._defer = v;
-  }
-    */
-    
-  double? duration;
-    /*
-  double get duration { 
-    if (this._duration == null) {
-      this._duration = 0;
-    }
-    return this._duration!;
-  }
+  // NOTE: duration skipped - type number is ignored in gen 
 
-  void set duration (double v) {
-    this._duration = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -62,19 +35,15 @@ class AnimationOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of complete (type Function is ignored)} 
+    // NOTE: skip serialization of complete (type Function is ignored) ignore type: 1
 
-    // NOTE: skip serialization of curAnim (type Generic is ignored)} 
+    // NOTE: skip serialization of curAnim (type Generic is ignored) ignore type: true
 
-    if (this.defer != null) {  
-      buffer.writeAll(["\"defer\":", this.defer, ","], "");
-    }
+    // NOTE: skip serialization of defer (type number is ignored) ignore type: true
 
-    if (this.duration != null) {  
-      buffer.writeAll(["\"duration\":", this.duration, ","], "");
-    }
+    // NOTE: skip serialization of duration (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of easing (type Function is ignored)} 
+    // NOTE: skip serialization of easing (type Function is ignored) ignore type: 1
   }
 
 }

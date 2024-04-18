@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -32,11 +32,11 @@ class Popup extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of annotations (type { addForm: (this: Popup, chart: AnnotationChart, options: AnnotationOptions, callback: Function, isInit?: boolean) => void; addToolbar: (this: Popup, chart: AnnotationChart, options: AnnotationOptions, callback: Function) => void; } is ignored)} 
+    // NOTE: skip serialization of annotations (type { addForm: (this: Popup, chart: AnnotationChart, options: AnnotationOptions, callback: Function, isInit?: boolean) => void; addToolbar: (this: Popup, chart: AnnotationChart, options: AnnotationOptions, callback: Function) => void; } is ignored) ignore type: true
 
-    // NOTE: skip serialization of indicators (type { addForm: (this: Popup, chart: AnnotationChart, _options: AnnotationOptions, callback: Function) => void; getAmount: (this: Chart) => number; } is ignored)} 
+    // NOTE: skip serialization of indicators (type { addForm: (this: Popup, chart: AnnotationChart, _options: AnnotationOptions, callback: Function) => void; getAmount: (this: Chart) => number; } is ignored) ignore type: true
 
-    // NOTE: skip serialization of tabs (type { init: (this: Popup, chart: AnnotationChart) => void; } is ignored)} 
+    // NOTE: skip serialization of tabs (type { init: (this: Popup, chart: AnnotationChart) => void; } is ignored) ignore type: true
   }
 
 }

@@ -1,0 +1,18 @@
+[
+  {
+    "type": "missing_mapping",
+    "path": "xAxis.dateTimeLabelFormats"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "xAxis.title"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "yAxis.title"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "colors"
+  }
+]

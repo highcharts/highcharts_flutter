@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -36,21 +36,21 @@ class ComponentsObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of container (type ContainerComponent is ignored)} 
+    // NOTE: skip serialization of container (type ContainerComponent is ignored) ignore type: true
 
-    // NOTE: skip serialization of infoRegions (type InfoRegionsComponent is ignored)} 
+    // NOTE: skip serialization of infoRegions (type InfoRegionsComponent is ignored) ignore type: true
 
-    // NOTE: skip serialization of legend (type LegendComponent is ignored)} 
+    // NOTE: skip serialization of legend (type LegendComponent is ignored) ignore type: true
 
-    // NOTE: skip serialization of chartMenu (type MenuComponent is ignored)} 
+    // NOTE: skip serialization of chartMenu (type MenuComponent is ignored) ignore type: true
 
-    // NOTE: skip serialization of rangeSelector (type RangeSelectorComponent is ignored)} 
+    // NOTE: skip serialization of rangeSelector (type RangeSelectorComponent is ignored) ignore type: true
 
-    // NOTE: skip serialization of series (type SeriesComponent is ignored)} 
+    // NOTE: skip serialization of series (type SeriesComponent is ignored) ignore type: true
 
-    // NOTE: skip serialization of zoom (type ZoomComponent is ignored)} 
+    // NOTE: skip serialization of zoom (type ZoomComponent is ignored) ignore type: true
 
-    // NOTE: skip serialization of navigator (type NavigatorComponent is ignored)} 
+    // NOTE: skip serialization of navigator (type NavigatorComponent is ignored) ignore type: true
   }
 
 }

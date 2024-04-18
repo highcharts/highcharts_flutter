@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,7 +23,12 @@ import 'OptionFragment.dart';
  * TreegraphLinkOptions 
  */
 class TreegraphLinkOptions extends OrganizationLinkOptions {
-  TreegraphLinkOptions( ) : super();
+  TreegraphLinkOptions( {
+    super.color = null,
+    super.lineWidth = null,
+    super.radius = null,
+    super.type = null
+  }) : super();
   
 
   //////////////////////////////////////////////////////////////////////////////

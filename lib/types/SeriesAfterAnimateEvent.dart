@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -33,9 +33,9 @@ class SeriesAfterAnimateEvent extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of target (type Series is ignored)} 
+    // NOTE: skip serialization of target (type Series is ignored) ignore type: true
 
-    // NOTE: skip serialization of type (type "afterAnimate" is ignored)} 
+    // NOTE: skip serialization of type (type "afterAnimate" is ignored) ignore type: true
   }
 
 }

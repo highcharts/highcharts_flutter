@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -25,37 +25,24 @@ import 'OptionFragment.dart';
  */
 class BulletPointOptions extends ColumnPointOptions {
   BulletPointOptions( {
-    this.borderColor = null,
-    this.target = null
+    super.accessibility = null,
+    super.borderColor = null,
+    super.className = null,
+    super.color = null,
+    super.colorIndex = null,
+    super.connectors = null,
+    super.dataLabels = null,
+    super.dragDrop = null,
+    super.events = null,
+    super.keys = null,
+    super.marker = null,
+    super.selected = null,
+    super.visible = null
   }) : super();
-  String? borderColor;
-    /*
-  String get borderColor { 
-    if (this._borderColor == null) {
-      this._borderColor = "";
-    }
-    return this._borderColor!;
-  }
+  // NOTE: borderColor skipped - type string is ignored in gen 
 
-  void set borderColor (String v) {
-    this._borderColor = v;
-  }
-    */
-    
-  double? target;
-    /*
-  double get target { 
-    if (this._target == null) {
-      this._target = 0;
-    }
-    return this._target!;
-  }
+  // NOTE: target skipped - type number is ignored in gen 
 
-  void set target (double v) {
-    this._target = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -64,15 +51,11 @@ class BulletPointOptions extends ColumnPointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.borderColor != null) {  
-      buffer.writeAll(["\"borderColor\":\`", this.borderColor, "\`,"], "");
-    }
+    // NOTE: skip serialization of borderColor (type string is ignored) ignore type: true
 
-    if (this.target != null) {  
-      buffer.writeAll(["\"target\":", this.target, ","], "");
-    }
+    // NOTE: skip serialization of target (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of targetOptions (type BulletTargetOptions is ignored)} 
+    // NOTE: skip serialization of targetOptions (type BulletTargetOptions is ignored) ignore type: true
   }
 
 }

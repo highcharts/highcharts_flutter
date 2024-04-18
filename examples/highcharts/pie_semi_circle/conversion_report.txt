@@ -1,0 +1,18 @@
+[
+  {
+    "type": "missing_mapping",
+    "path": "plotOptions.pie.dataLabels.style"
+  },
+  {
+    "path": "plotOptions.pie",
+    "parentType": "PieSeriesOptions",
+    "memberName": "center",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "path": "series",
+    "parentType": "LineSeriesOptions",
+    "memberName": "innerSize",
+    "msg": "The member is not present in the Flutter integration API"
+  }
+]

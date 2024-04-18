@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,22 +24,11 @@ import 'OptionFragment.dart';
  */
 class ABandsParamsOptions extends SMAParamsOptions {
   ABandsParamsOptions( {
-    this.factor = null
+    super.index = null,
+    super.period = null
   }) : super();
-  double? factor;
-    /*
-  double get factor { 
-    if (this._factor == null) {
-      this._factor = 0;
-    }
-    return this._factor!;
-  }
+  // NOTE: factor skipped - type number is ignored in gen 
 
-  void set factor (double v) {
-    this._factor = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -48,9 +37,7 @@ class ABandsParamsOptions extends SMAParamsOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.factor != null) {  
-      buffer.writeAll(["\"factor\":", this.factor, ","], "");
-    }
+    // NOTE: skip serialization of factor (type number is ignored) ignore type: true
   }
 
 }

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,23 +22,9 @@ import 'OptionFragment.dart';
  * PostProcessDataEvent 
  */
 class PostProcessDataEvent extends OptionFragment {
-  PostProcessDataEvent( {
-    this.hasExtremesChanged = null
-  }) : super();
-  bool? hasExtremesChanged;
-    /*
-  bool get hasExtremesChanged { 
-    if (this._hasExtremesChanged == null) {
-      this._hasExtremesChanged = false;
-    }
-    return this._hasExtremesChanged!;
-  }
+  PostProcessDataEvent( ) : super();
+  // NOTE: hasExtremesChanged skipped - type boolean is ignored in gen 
 
-  void set hasExtremesChanged (bool v) {
-    this._hasExtremesChanged = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -47,9 +33,7 @@ class PostProcessDataEvent extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.hasExtremesChanged != null) {  
-      buffer.writeAll(["\"hasExtremesChanged\":", this.hasExtremesChanged, ","], "");
-    }
+    // NOTE: skip serialization of hasExtremesChanged (type boolean is ignored) ignore type: true
   }
 
 }

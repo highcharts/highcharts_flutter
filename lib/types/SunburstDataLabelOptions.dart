@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,37 +24,37 @@ import 'OptionFragment.dart';
  */
 class SunburstDataLabelOptions extends DataLabelOptions {
   SunburstDataLabelOptions( {
-    this.allowOverlap = null,
-    this.rotationMode = null
+    super.align = null,
+    super.allowOverlap = null,
+    super.backgroundColor = null,
+    super.borderColor = null,
+    super.borderRadius = null,
+    super.borderWidth = null,
+    super.className = null,
+    super.color = null,
+    super.crop = null,
+    super.defer = null,
+    super.enabled = null,
+    super.filter = null,
+    super.format = null,
+    super.inside = null,
+    super.nullFormat = null,
+    super.overflow = null,
+    super.padding = null,
+    super.rotation = null,
+    super.shape = null,
+    super.style = null,
+    super.textPath = null,
+    super.useHTML = null,
+    super.verticalAlign = null,
+    super.x = null,
+    super.y = null,
+    super.zIndex = null
   }) : super();
-  bool? allowOverlap;
-    /*
-  bool get allowOverlap { 
-    if (this._allowOverlap == null) {
-      this._allowOverlap = false;
-    }
-    return this._allowOverlap!;
-  }
+  // NOTE: allowOverlap skipped - type boolean is ignored in gen 
 
-  void set allowOverlap (bool v) {
-    this._allowOverlap = v;
-  }
-    */
-    
-  String? rotationMode;
-    /*
-  String get rotationMode { 
-    if (this._rotationMode == null) {
-      this._rotationMode = "";
-    }
-    return this._rotationMode!;
-  }
+  // NOTE: rotationMode skipped - type string is ignored in gen 
 
-  void set rotationMode (String v) {
-    this._rotationMode = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -63,13 +63,9 @@ class SunburstDataLabelOptions extends DataLabelOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.allowOverlap != null) {  
-      buffer.writeAll(["\"allowOverlap\":", this.allowOverlap, ","], "");
-    }
+    // NOTE: skip serialization of allowOverlap (type boolean is ignored) ignore type: true
 
-    if (this.rotationMode != null) {  
-      buffer.writeAll(["\"rotationMode\":\`", this.rotationMode, "\`,"], "");
-    }
+    // NOTE: skip serialization of rotationMode (type string is ignored) ignore type: true
   }
 
 }

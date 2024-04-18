@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,97 +24,25 @@ import 'OptionFragment.dart';
  */
 class WGLDebugOptions extends BoostDebugOptions {
   WGLDebugOptions( {
-    this.timeBufferCopy = null,
-    this.timeKDTree = null,
-    this.timeRendering = null,
-    this.timeSeriesProcessing = null,
-    this.timeSetup = null,
-    this.showSkipSummary = null
+    super.showSkipSummary = null,
+    super.timeBufferCopy = null,
+    super.timeKDTree = null,
+    super.timeRendering = null,
+    super.timeSeriesProcessing = null,
+    super.timeSetup = null
   }) : super();
-  bool? timeBufferCopy;
-    /*
-  bool get timeBufferCopy { 
-    if (this._timeBufferCopy == null) {
-      this._timeBufferCopy = false;
-    }
-    return this._timeBufferCopy!;
-  }
+  // NOTE: timeBufferCopy skipped - type boolean is ignored in gen 
 
-  void set timeBufferCopy (bool v) {
-    this._timeBufferCopy = v;
-  }
-    */
-    
-  bool? timeKDTree;
-    /*
-  bool get timeKDTree { 
-    if (this._timeKDTree == null) {
-      this._timeKDTree = false;
-    }
-    return this._timeKDTree!;
-  }
+  // NOTE: timeKDTree skipped - type boolean is ignored in gen 
 
-  void set timeKDTree (bool v) {
-    this._timeKDTree = v;
-  }
-    */
-    
-  bool? timeRendering;
-    /*
-  bool get timeRendering { 
-    if (this._timeRendering == null) {
-      this._timeRendering = false;
-    }
-    return this._timeRendering!;
-  }
+  // NOTE: timeRendering skipped - type boolean is ignored in gen 
 
-  void set timeRendering (bool v) {
-    this._timeRendering = v;
-  }
-    */
-    
-  bool? timeSeriesProcessing;
-    /*
-  bool get timeSeriesProcessing { 
-    if (this._timeSeriesProcessing == null) {
-      this._timeSeriesProcessing = false;
-    }
-    return this._timeSeriesProcessing!;
-  }
+  // NOTE: timeSeriesProcessing skipped - type boolean is ignored in gen 
 
-  void set timeSeriesProcessing (bool v) {
-    this._timeSeriesProcessing = v;
-  }
-    */
-    
-  bool? timeSetup;
-    /*
-  bool get timeSetup { 
-    if (this._timeSetup == null) {
-      this._timeSetup = false;
-    }
-    return this._timeSetup!;
-  }
+  // NOTE: timeSetup skipped - type boolean is ignored in gen 
 
-  void set timeSetup (bool v) {
-    this._timeSetup = v;
-  }
-    */
-    
-  bool? showSkipSummary;
-    /*
-  bool get showSkipSummary { 
-    if (this._showSkipSummary == null) {
-      this._showSkipSummary = false;
-    }
-    return this._showSkipSummary!;
-  }
+  // NOTE: showSkipSummary skipped - type boolean is ignored in gen 
 
-  void set showSkipSummary (bool v) {
-    this._showSkipSummary = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -123,29 +51,17 @@ class WGLDebugOptions extends BoostDebugOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.timeBufferCopy != null) {  
-      buffer.writeAll(["\"timeBufferCopy\":", this.timeBufferCopy, ","], "");
-    }
+    // NOTE: skip serialization of timeBufferCopy (type boolean is ignored) ignore type: true
 
-    if (this.timeKDTree != null) {  
-      buffer.writeAll(["\"timeKDTree\":", this.timeKDTree, ","], "");
-    }
+    // NOTE: skip serialization of timeKDTree (type boolean is ignored) ignore type: true
 
-    if (this.timeRendering != null) {  
-      buffer.writeAll(["\"timeRendering\":", this.timeRendering, ","], "");
-    }
+    // NOTE: skip serialization of timeRendering (type boolean is ignored) ignore type: true
 
-    if (this.timeSeriesProcessing != null) {  
-      buffer.writeAll(["\"timeSeriesProcessing\":", this.timeSeriesProcessing, ","], "");
-    }
+    // NOTE: skip serialization of timeSeriesProcessing (type boolean is ignored) ignore type: true
 
-    if (this.timeSetup != null) {  
-      buffer.writeAll(["\"timeSetup\":", this.timeSetup, ","], "");
-    }
+    // NOTE: skip serialization of timeSetup (type boolean is ignored) ignore type: true
 
-    if (this.showSkipSummary != null) {  
-      buffer.writeAll(["\"showSkipSummary\":", this.showSkipSummary, ","], "");
-    }
+    // NOTE: skip serialization of showSkipSummary (type boolean is ignored) ignore type: true
   }
 
 }

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,68 +22,15 @@ import 'OptionFragment.dart';
  * CanvasRenderingContext2D 
  */
 class CanvasRenderingContext2D extends OptionFragment {
-  CanvasRenderingContext2D( {
-    this.FUNC_MIN = null,
-    this.mozImageSmoothingEnabled = null,
-    this.msImageSmoothingEnabled = null,
-    this.webkitImageSmoothingEnabled = null
-  }) : super();
-  double? FUNC_MIN;
-    /*
-  double get FUNC_MIN { 
-    if (this._FUNC_MIN == null) {
-      this._FUNC_MIN = 0;
-    }
-    return this._FUNC_MIN!;
-  }
+  CanvasRenderingContext2D( ) : super();
+  // NOTE: FUNC_MIN skipped - type number is ignored in gen 
 
-  void set FUNC_MIN (double v) {
-    this._FUNC_MIN = v;
-  }
-    */
-    
-  bool? mozImageSmoothingEnabled;
-    /*
-  bool get mozImageSmoothingEnabled { 
-    if (this._mozImageSmoothingEnabled == null) {
-      this._mozImageSmoothingEnabled = false;
-    }
-    return this._mozImageSmoothingEnabled!;
-  }
+  // NOTE: mozImageSmoothingEnabled skipped - type boolean is ignored in gen 
 
-  void set mozImageSmoothingEnabled (bool v) {
-    this._mozImageSmoothingEnabled = v;
-  }
-    */
-    
-  bool? msImageSmoothingEnabled;
-    /*
-  bool get msImageSmoothingEnabled { 
-    if (this._msImageSmoothingEnabled == null) {
-      this._msImageSmoothingEnabled = false;
-    }
-    return this._msImageSmoothingEnabled!;
-  }
+  // NOTE: msImageSmoothingEnabled skipped - type boolean is ignored in gen 
 
-  void set msImageSmoothingEnabled (bool v) {
-    this._msImageSmoothingEnabled = v;
-  }
-    */
-    
-  bool? webkitImageSmoothingEnabled;
-    /*
-  bool get webkitImageSmoothingEnabled { 
-    if (this._webkitImageSmoothingEnabled == null) {
-      this._webkitImageSmoothingEnabled = false;
-    }
-    return this._webkitImageSmoothingEnabled!;
-  }
+  // NOTE: webkitImageSmoothingEnabled skipped - type boolean is ignored in gen 
 
-  void set webkitImageSmoothingEnabled (bool v) {
-    this._webkitImageSmoothingEnabled = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -92,21 +39,13 @@ class CanvasRenderingContext2D extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.FUNC_MIN != null) {  
-      buffer.writeAll(["\"FUNC_MIN\":", this.FUNC_MIN, ","], "");
-    }
+    // NOTE: skip serialization of FUNC_MIN (type number is ignored) ignore type: true
 
-    if (this.mozImageSmoothingEnabled != null) {  
-      buffer.writeAll(["\"mozImageSmoothingEnabled\":", this.mozImageSmoothingEnabled, ","], "");
-    }
+    // NOTE: skip serialization of mozImageSmoothingEnabled (type boolean is ignored) ignore type: true
 
-    if (this.msImageSmoothingEnabled != null) {  
-      buffer.writeAll(["\"msImageSmoothingEnabled\":", this.msImageSmoothingEnabled, ","], "");
-    }
+    // NOTE: skip serialization of msImageSmoothingEnabled (type boolean is ignored) ignore type: true
 
-    if (this.webkitImageSmoothingEnabled != null) {  
-      buffer.writeAll(["\"webkitImageSmoothingEnabled\":", this.webkitImageSmoothingEnabled, ","], "");
-    }
+    // NOTE: skip serialization of webkitImageSmoothingEnabled (type boolean is ignored) ignore type: true
   }
 
 }

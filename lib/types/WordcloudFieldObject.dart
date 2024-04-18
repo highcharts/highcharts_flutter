@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,38 +23,11 @@ import 'OptionFragment.dart';
  * WordcloudFieldObject 
  */
 class WordcloudFieldObject extends PolygonBoxObject {
-  WordcloudFieldObject( {
-    this.ratioX = null,
-    this.ratioY = null
-  }) : super();
-  double? ratioX;
-    /*
-  double get ratioX { 
-    if (this._ratioX == null) {
-      this._ratioX = 0;
-    }
-    return this._ratioX!;
-  }
+  WordcloudFieldObject( ) : super();
+  // NOTE: ratioX skipped - type number is ignored in gen 
 
-  void set ratioX (double v) {
-    this._ratioX = v;
-  }
-    */
-    
-  double? ratioY;
-    /*
-  double get ratioY { 
-    if (this._ratioY == null) {
-      this._ratioY = 0;
-    }
-    return this._ratioY!;
-  }
+  // NOTE: ratioY skipped - type number is ignored in gen 
 
-  void set ratioY (double v) {
-    this._ratioY = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -63,13 +36,9 @@ class WordcloudFieldObject extends PolygonBoxObject {
     super.toJSONInner(buffer);
 
     
-    if (this.ratioX != null) {  
-      buffer.writeAll(["\"ratioX\":", this.ratioX, ","], "");
-    }
+    // NOTE: skip serialization of ratioX (type number is ignored) ignore type: true
 
-    if (this.ratioY != null) {  
-      buffer.writeAll(["\"ratioY\":", this.ratioY, ","], "");
-    }
+    // NOTE: skip serialization of ratioY (type number is ignored) ignore type: true
   }
 
 }

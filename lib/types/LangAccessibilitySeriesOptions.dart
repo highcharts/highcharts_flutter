@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,83 +23,17 @@ import 'OptionFragment.dart';
  * LangAccessibilitySeriesOptions 
  */
 class LangAccessibilitySeriesOptions extends OptionFragment {
-  LangAccessibilitySeriesOptions( {
-    this.description = null,
-    this.nullPointValue = null,
-    this.pointAnnotationsDescription = null,
-    this.xAxisDescription = null,
-    this.yAxisDescription = null
-  }) : super();
-  String? description;
-    /*
-  String get description { 
-    if (this._description == null) {
-      this._description = "";
-    }
-    return this._description!;
-  }
+  LangAccessibilitySeriesOptions( ) : super();
+  // NOTE: description skipped - type string is ignored in gen 
 
-  void set description (String v) {
-    this._description = v;
-  }
-    */
-    
-  String? nullPointValue;
-    /*
-  String get nullPointValue { 
-    if (this._nullPointValue == null) {
-      this._nullPointValue = "";
-    }
-    return this._nullPointValue!;
-  }
+  // NOTE: nullPointValue skipped - type string is ignored in gen 
 
-  void set nullPointValue (String v) {
-    this._nullPointValue = v;
-  }
-    */
-    
-  String? pointAnnotationsDescription;
-    /*
-  String get pointAnnotationsDescription { 
-    if (this._pointAnnotationsDescription == null) {
-      this._pointAnnotationsDescription = "";
-    }
-    return this._pointAnnotationsDescription!;
-  }
+  // NOTE: pointAnnotationsDescription skipped - type string is ignored in gen 
 
-  void set pointAnnotationsDescription (String v) {
-    this._pointAnnotationsDescription = v;
-  }
-    */
-    
-  String? xAxisDescription;
-    /*
-  String get xAxisDescription { 
-    if (this._xAxisDescription == null) {
-      this._xAxisDescription = "";
-    }
-    return this._xAxisDescription!;
-  }
+  // NOTE: xAxisDescription skipped - type string is ignored in gen 
 
-  void set xAxisDescription (String v) {
-    this._xAxisDescription = v;
-  }
-    */
-    
-  String? yAxisDescription;
-    /*
-  String get yAxisDescription { 
-    if (this._yAxisDescription == null) {
-      this._yAxisDescription = "";
-    }
-    return this._yAxisDescription!;
-  }
+  // NOTE: yAxisDescription skipped - type string is ignored in gen 
 
-  void set yAxisDescription (String v) {
-    this._yAxisDescription = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -108,27 +42,17 @@ class LangAccessibilitySeriesOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.description != null) {  
-      buffer.writeAll(["\"description\":\`", this.description, "\`,"], "");
-    }
+    // NOTE: skip serialization of description (type string is ignored) ignore type: true
 
-    if (this.nullPointValue != null) {  
-      buffer.writeAll(["\"nullPointValue\":\`", this.nullPointValue, "\`,"], "");
-    }
+    // NOTE: skip serialization of nullPointValue (type string is ignored) ignore type: true
 
-    if (this.pointAnnotationsDescription != null) {  
-      buffer.writeAll(["\"pointAnnotationsDescription\":\`", this.pointAnnotationsDescription, "\`,"], "");
-    }
+    // NOTE: skip serialization of pointAnnotationsDescription (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of summary (type LangAccessibilitySeriesSummaryOptions is ignored)} 
+    // NOTE: skip serialization of summary (type LangAccessibilitySeriesSummaryOptions is ignored) ignore type: true
 
-    if (this.xAxisDescription != null) {  
-      buffer.writeAll(["\"xAxisDescription\":\`", this.xAxisDescription, "\`,"], "");
-    }
+    // NOTE: skip serialization of xAxisDescription (type string is ignored) ignore type: true
 
-    if (this.yAxisDescription != null) {  
-      buffer.writeAll(["\"yAxisDescription\":\`", this.yAxisDescription, "\`,"], "");
-    }
+    // NOTE: skip serialization of yAxisDescription (type string is ignored) ignore type: true
   }
 
 }

@@ -12,80 +12,27 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
-import 'DragDropPositionObject.dart';
 import 'Point.dart';
+import 'DragDropPositionObject.dart';
 import 'OptionFragment.dart';
 
 /** 
  * DragDropDataObject 
  */
 class DragDropDataObject extends OptionFragment {
-  DragDropDataObject( {
-    this.draggedPastSensitivity = null,
-    this.isDragging = null,
-    this.isHoveringHandle = null,
-    this.updateProp = null
-  }) : super();
-  bool? draggedPastSensitivity;
-    /*
-  bool get draggedPastSensitivity { 
-    if (this._draggedPastSensitivity == null) {
-      this._draggedPastSensitivity = false;
-    }
-    return this._draggedPastSensitivity!;
-  }
+  DragDropDataObject( ) : super();
+  // NOTE: draggedPastSensitivity skipped - type boolean is ignored in gen 
 
-  void set draggedPastSensitivity (bool v) {
-    this._draggedPastSensitivity = v;
-  }
-    */
-    
-  bool? isDragging;
-    /*
-  bool get isDragging { 
-    if (this._isDragging == null) {
-      this._isDragging = false;
-    }
-    return this._isDragging!;
-  }
+  // NOTE: isDragging skipped - type boolean is ignored in gen 
 
-  void set isDragging (bool v) {
-    this._isDragging = v;
-  }
-    */
-    
-  String? isHoveringHandle;
-    /*
-  String get isHoveringHandle { 
-    if (this._isHoveringHandle == null) {
-      this._isHoveringHandle = "";
-    }
-    return this._isHoveringHandle!;
-  }
+  // NOTE: isHoveringHandle skipped - type string is ignored in gen 
 
-  void set isHoveringHandle (String v) {
-    this._isHoveringHandle = v;
-  }
-    */
-    
-  String? updateProp;
-    /*
-  String get updateProp { 
-    if (this._updateProp == null) {
-      this._updateProp = "";
-    }
-    return this._updateProp!;
-  }
+  // NOTE: updateProp skipped - type string is ignored in gen 
 
-  void set updateProp (String v) {
-    this._updateProp = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -94,29 +41,21 @@ class DragDropDataObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.draggedPastSensitivity != null) {  
-      buffer.writeAll(["\"draggedPastSensitivity\":", this.draggedPastSensitivity, ","], "");
-    }
+    // NOTE: skip serialization of draggedPastSensitivity (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of groupedPoints (type Point[] is ignored)} 
+    // NOTE: skip serialization of groupedPoints (type Point[] is ignored) ignore type: true
 
-    if (this.isDragging != null) {  
-      buffer.writeAll(["\"isDragging\":", this.isDragging, ","], "");
-    }
+    // NOTE: skip serialization of isDragging (type boolean is ignored) ignore type: true
 
-    if (this.isHoveringHandle != null) {  
-      buffer.writeAll(["\"isHoveringHandle\":\`", this.isHoveringHandle, "\`,"], "");
-    }
+    // NOTE: skip serialization of isHoveringHandle (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of newPoints (type Generic is ignored)} 
+    // NOTE: skip serialization of newPoints (type Generic is ignored) ignore type: true
 
-    // NOTE: skip serialization of origin (type DragDropPositionObject is ignored)} 
+    // NOTE: skip serialization of origin (type DragDropPositionObject is ignored) ignore type: true
 
-    // NOTE: skip serialization of point (type Point is ignored)} 
+    // NOTE: skip serialization of point (type Point is ignored) ignore type: true
 
-    if (this.updateProp != null) {  
-      buffer.writeAll(["\"updateProp\":\`", this.updateProp, "\`,"], "");
-    }
+    // NOTE: skip serialization of updateProp (type string is ignored) ignore type: true
   }
 
 }

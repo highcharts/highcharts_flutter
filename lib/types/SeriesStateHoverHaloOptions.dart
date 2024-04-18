@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,68 +23,15 @@ import 'OptionFragment.dart';
  * SeriesStateHoverHaloOptions 
  */
 class SeriesStateHoverHaloOptions extends OptionFragment {
-  SeriesStateHoverHaloOptions( {
-    this.brightness = null,
-    this.opacity = null,
-    this.size = null,
-    this.enabled = null
-  }) : super();
-  double? brightness;
-    /*
-  double get brightness { 
-    if (this._brightness == null) {
-      this._brightness = 0;
-    }
-    return this._brightness!;
-  }
+  SeriesStateHoverHaloOptions( ) : super();
+  // NOTE: brightness skipped - type number is ignored in gen 
 
-  void set brightness (double v) {
-    this._brightness = v;
-  }
-    */
-    
-  double? opacity;
-    /*
-  double get opacity { 
-    if (this._opacity == null) {
-      this._opacity = 0;
-    }
-    return this._opacity!;
-  }
+  // NOTE: opacity skipped - type number is ignored in gen 
 
-  void set opacity (double v) {
-    this._opacity = v;
-  }
-    */
-    
-  double? size;
-    /*
-  double get size { 
-    if (this._size == null) {
-      this._size = 0;
-    }
-    return this._size!;
-  }
+  // NOTE: size skipped - type number is ignored in gen 
 
-  void set size (double v) {
-    this._size = v;
-  }
-    */
-    
-  bool? enabled;
-    /*
-  bool get enabled { 
-    if (this._enabled == null) {
-      this._enabled = false;
-    }
-    return this._enabled!;
-  }
+  // NOTE: enabled skipped - type boolean is ignored in gen 
 
-  void set enabled (bool v) {
-    this._enabled = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -93,23 +40,15 @@ class SeriesStateHoverHaloOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of attributes (type SVGAttributes is ignored)} 
+    // NOTE: skip serialization of attributes (type SVGAttributes is ignored) ignore type: true
 
-    if (this.brightness != null) {  
-      buffer.writeAll(["\"brightness\":", this.brightness, ","], "");
-    }
+    // NOTE: skip serialization of brightness (type number is ignored) ignore type: true
 
-    if (this.opacity != null) {  
-      buffer.writeAll(["\"opacity\":", this.opacity, ","], "");
-    }
+    // NOTE: skip serialization of opacity (type number is ignored) ignore type: true
 
-    if (this.size != null) {  
-      buffer.writeAll(["\"size\":", this.size, ","], "");
-    }
+    // NOTE: skip serialization of size (type number is ignored) ignore type: true
 
-    if (this.enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
-    }
+    // NOTE: skip serialization of enabled (type boolean is ignored) ignore type: true
   }
 
 }

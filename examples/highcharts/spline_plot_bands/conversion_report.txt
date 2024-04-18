@@ -1,0 +1,28 @@
+[
+  {
+    "type": "missing_mapping",
+    "path": "xAxis.labels"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "yAxis.title"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "yAxis.alternateGridColor"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "yAxis.plotBands"
+  },
+  {
+    "path": "plotOptions.spline.states",
+    "parentType": "Generic",
+    "memberName": "hover",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "plotOptions.spline.marker"
+  }
+]

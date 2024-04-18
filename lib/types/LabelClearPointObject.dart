@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,23 +24,9 @@ import 'OptionFragment.dart';
  * LabelClearPointObject 
  */
 class LabelClearPointObject extends PositionObject {
-  LabelClearPointObject( {
-    this.weight = null
-  }) : super();
-  double? weight;
-    /*
-  double get weight { 
-    if (this._weight == null) {
-      this._weight = 0;
-    }
-    return this._weight!;
-  }
+  LabelClearPointObject( ) : super();
+  // NOTE: weight skipped - type number is ignored in gen 
 
-  void set weight (double v) {
-    this._weight = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -49,11 +35,9 @@ class LabelClearPointObject extends PositionObject {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of connectorPoint (type ControlPoint is ignored)} 
+    // NOTE: skip serialization of connectorPoint (type ControlPoint is ignored) ignore type: true
 
-    if (this.weight != null) {  
-      buffer.writeAll(["\"weight\":", this.weight, ","], "");
-    }
+    // NOTE: skip serialization of weight (type number is ignored) ignore type: true
   }
 
 }

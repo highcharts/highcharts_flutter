@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,53 +23,13 @@ import 'OptionFragment.dart';
  * EventArgsObject 
  */
 class EventArgsObject extends OptionFragment {
-  EventArgsObject( {
-    this.chartX = null,
-    this.chartY = null,
-    this.shared = null
-  }) : super();
-  double? chartX;
-    /*
-  double get chartX { 
-    if (this._chartX == null) {
-      this._chartX = 0;
-    }
-    return this._chartX!;
-  }
+  EventArgsObject( ) : super();
+  // NOTE: chartX skipped - type number is ignored in gen 
 
-  void set chartX (double v) {
-    this._chartX = v;
-  }
-    */
-    
-  double? chartY;
-    /*
-  double get chartY { 
-    if (this._chartY == null) {
-      this._chartY = 0;
-    }
-    return this._chartY!;
-  }
+  // NOTE: chartY skipped - type number is ignored in gen 
 
-  void set chartY (double v) {
-    this._chartY = v;
-  }
-    */
-    
-  bool? shared;
-    /*
-  bool get shared { 
-    if (this._shared == null) {
-      this._shared = false;
-    }
-    return this._shared!;
-  }
+  // NOTE: shared skipped - type boolean is ignored in gen 
 
-  void set shared (bool v) {
-    this._shared = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -78,21 +38,15 @@ class EventArgsObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.chartX != null) {  
-      buffer.writeAll(["\"chartX\":", this.chartX, ","], "");
-    }
+    // NOTE: skip serialization of chartX (type number is ignored) ignore type: true
 
-    if (this.chartY != null) {  
-      buffer.writeAll(["\"chartY\":", this.chartY, ","], "");
-    }
+    // NOTE: skip serialization of chartY (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of filter (type Function is ignored)} 
+    // NOTE: skip serialization of filter (type Function is ignored) ignore type: 1
 
-    // NOTE: skip serialization of hoverPoint (type Point is ignored)} 
+    // NOTE: skip serialization of hoverPoint (type Point is ignored) ignore type: true
 
-    if (this.shared != null) {  
-      buffer.writeAll(["\"shared\":", this.shared, ","], "");
-    }
+    // NOTE: skip serialization of shared (type boolean is ignored) ignore type: true
   }
 
 }

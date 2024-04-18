@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,68 +22,15 @@ import 'OptionFragment.dart';
  * PolygonBoxObject 
  */
 class PolygonBoxObject extends OptionFragment {
-  PolygonBoxObject( {
-    this.bottom = null,
-    this.left = null,
-    this.right = null,
-    this.top = null
-  }) : super();
-  double? bottom;
-    /*
-  double get bottom { 
-    if (this._bottom == null) {
-      this._bottom = 0;
-    }
-    return this._bottom!;
-  }
+  PolygonBoxObject( ) : super();
+  // NOTE: bottom skipped - type number is ignored in gen 
 
-  void set bottom (double v) {
-    this._bottom = v;
-  }
-    */
-    
-  double? left;
-    /*
-  double get left { 
-    if (this._left == null) {
-      this._left = 0;
-    }
-    return this._left!;
-  }
+  // NOTE: left skipped - type number is ignored in gen 
 
-  void set left (double v) {
-    this._left = v;
-  }
-    */
-    
-  double? right;
-    /*
-  double get right { 
-    if (this._right == null) {
-      this._right = 0;
-    }
-    return this._right!;
-  }
+  // NOTE: right skipped - type number is ignored in gen 
 
-  void set right (double v) {
-    this._right = v;
-  }
-    */
-    
-  double? top;
-    /*
-  double get top { 
-    if (this._top == null) {
-      this._top = 0;
-    }
-    return this._top!;
-  }
+  // NOTE: top skipped - type number is ignored in gen 
 
-  void set top (double v) {
-    this._top = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -92,21 +39,13 @@ class PolygonBoxObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.bottom != null) {  
-      buffer.writeAll(["\"bottom\":", this.bottom, ","], "");
-    }
+    // NOTE: skip serialization of bottom (type number is ignored) ignore type: true
 
-    if (this.left != null) {  
-      buffer.writeAll(["\"left\":", this.left, ","], "");
-    }
+    // NOTE: skip serialization of left (type number is ignored) ignore type: true
 
-    if (this.right != null) {  
-      buffer.writeAll(["\"right\":", this.right, ","], "");
-    }
+    // NOTE: skip serialization of right (type number is ignored) ignore type: true
 
-    if (this.top != null) {  
-      buffer.writeAll(["\"top\":", this.top, ","], "");
-    }
+    // NOTE: skip serialization of top (type number is ignored) ignore type: true
   }
 
 }

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,7 +24,19 @@ import 'OptionFragment.dart';
  * MeasureOptions 
  */
 class MeasureOptions extends AnnotationOptions {
-  MeasureOptions( ) : super();
+  MeasureOptions( {
+    super.controlPointOptions = null,
+    super.crop = null,
+    super.draggable = null,
+    super.events = null,
+    super.id = null,
+    super.labelOptions = null,
+    super.labels = null,
+    super.shapeOptions = null,
+    super.shapes = null,
+    super.visible = null,
+    super.zIndex = null
+  }) : super();
   
 
   //////////////////////////////////////////////////////////////////////////////
@@ -34,7 +46,7 @@ class MeasureOptions extends AnnotationOptions {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of typeOptions (type MeasureTypeOptions is ignored)} 
+    // NOTE: skip serialization of typeOptions (type MeasureTypeOptions is ignored) ignore type: true
   }
 
 }

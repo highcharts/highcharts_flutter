@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,53 +23,13 @@ import 'OptionFragment.dart';
  * SupertrendLinkedParentPointObject 
  */
 class SupertrendLinkedParentPointObject extends LinePoint {
-  SupertrendLinkedParentPointObject( {
-    this.close = null,
-    this.index = null,
-    this.x = null
-  }) : super();
-  double? close;
-    /*
-  double get close { 
-    if (this._close == null) {
-      this._close = 0;
-    }
-    return this._close!;
-  }
+  SupertrendLinkedParentPointObject( ) : super();
+  // NOTE: close skipped - type number is ignored in gen 
 
-  void set close (double v) {
-    this._close = v;
-  }
-    */
-    
-  double? index;
-    /*
-  double get index { 
-    if (this._index == null) {
-      this._index = 0;
-    }
-    return this._index!;
-  }
+  // NOTE: index skipped - type number is ignored in gen 
 
-  void set index (double v) {
-    this._index = v;
-  }
-    */
-    
-  double? x;
-    /*
-  double get x { 
-    if (this._x == null) {
-      this._x = 0;
-    }
-    return this._x!;
-  }
+  // NOTE: x skipped - type number is ignored in gen 
 
-  void set x (double v) {
-    this._x = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -78,17 +38,11 @@ class SupertrendLinkedParentPointObject extends LinePoint {
     super.toJSONInner(buffer);
 
     
-    if (this.close != null) {  
-      buffer.writeAll(["\"close\":", this.close, ","], "");
-    }
+    // NOTE: skip serialization of close (type number is ignored) ignore type: true
 
-    if (this.index != null) {  
-      buffer.writeAll(["\"index\":", this.index, ","], "");
-    }
+    // NOTE: skip serialization of index (type number is ignored) ignore type: true
 
-    if (this.x != null) {  
-      buffer.writeAll(["\"x\":", this.x, ","], "");
-    }
+    // NOTE: skip serialization of x (type number is ignored) ignore type: true
   }
 
 }

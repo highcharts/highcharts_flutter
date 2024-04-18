@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,68 +22,15 @@ import 'OptionFragment.dart';
  * SetRangeEvent 
  */
 class SetRangeEvent extends OptionFragment {
-  SetRangeEvent( {
-    this.min = null,
-    this.max = null,
-    this.redraw = null,
-    this.animation = null
-  }) : super();
-  double? min;
-    /*
-  double get min { 
-    if (this._min == null) {
-      this._min = 0;
-    }
-    return this._min!;
-  }
+  SetRangeEvent( ) : super();
+  // NOTE: min skipped - type number is ignored in gen 
 
-  void set min (double v) {
-    this._min = v;
-  }
-    */
-    
-  double? max;
-    /*
-  double get max { 
-    if (this._max == null) {
-      this._max = 0;
-    }
-    return this._max!;
-  }
+  // NOTE: max skipped - type number is ignored in gen 
 
-  void set max (double v) {
-    this._max = v;
-  }
-    */
-    
-  bool? redraw;
-    /*
-  bool get redraw { 
-    if (this._redraw == null) {
-      this._redraw = false;
-    }
-    return this._redraw!;
-  }
+  // NOTE: redraw skipped - type boolean is ignored in gen 
 
-  void set redraw (bool v) {
-    this._redraw = v;
-  }
-    */
-    
-  bool? animation;
-    /*
-  bool get animation { 
-    if (this._animation == null) {
-      this._animation = false;
-    }
-    return this._animation!;
-  }
+  // NOTE: animation skipped - type boolean is ignored in gen 
 
-  void set animation (bool v) {
-    this._animation = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -92,23 +39,15 @@ class SetRangeEvent extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.min != null) {  
-      buffer.writeAll(["\"min\":", this.min, ","], "");
-    }
+    // NOTE: skip serialization of min (type number is ignored) ignore type: true
 
-    if (this.max != null) {  
-      buffer.writeAll(["\"max\":", this.max, ","], "");
-    }
+    // NOTE: skip serialization of max (type number is ignored) ignore type: true
 
-    if (this.redraw != null) {  
-      buffer.writeAll(["\"redraw\":", this.redraw, ","], "");
-    }
+    // NOTE: skip serialization of redraw (type boolean is ignored) ignore type: true
 
-    if (this.animation != null) {  
-      buffer.writeAll(["\"animation\":", this.animation, ","], "");
-    }
+    // NOTE: skip serialization of animation (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of eventArguments (type "navigator"; triggerOp: string; DOMEvent: any; } is ignored)} 
+    // NOTE: skip serialization of eventArguments (type "navigator"; triggerOp: string; DOMEvent: any; } is ignored) ignore type: true
   }
 
 }

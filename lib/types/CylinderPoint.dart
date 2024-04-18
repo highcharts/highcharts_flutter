@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,23 +22,9 @@ import 'OptionFragment.dart';
  * CylinderPoint 
  */
 class CylinderPoint extends OptionFragment {
-  CylinderPoint( {
-    this.shapeType = null
-  }) : super();
-  String? shapeType;
-    /*
-  String get shapeType { 
-    if (this._shapeType == null) {
-      this._shapeType = "";
-    }
-    return this._shapeType!;
-  }
+  CylinderPoint( ) : super();
+  // NOTE: shapeType skipped - type string is ignored in gen 
 
-  void set shapeType (String v) {
-    this._shapeType = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -47,9 +33,7 @@ class CylinderPoint extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.shapeType != null) {  
-      buffer.writeAll(["\"shapeType\":\`", this.shapeType, "\`,"], "");
-    }
+    // NOTE: skip serialization of shapeType (type string is ignored) ignore type: true
   }
 
 }

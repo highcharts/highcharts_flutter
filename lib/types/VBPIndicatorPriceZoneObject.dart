@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,113 +22,21 @@ import 'OptionFragment.dart';
  * VBPIndicatorPriceZoneObject 
  */
 class VBPIndicatorPriceZoneObject extends OptionFragment {
-  VBPIndicatorPriceZoneObject( {
-    this.end = null,
-    this.index = null,
-    this.negativeVolumeData = null,
-    this.positiveVolumeData = null,
-    this.start = null,
-    this.wholeVolumeData = null,
-    this.x = null
-  }) : super();
-  double? end;
-    /*
-  double get end { 
-    if (this._end == null) {
-      this._end = 0;
-    }
-    return this._end!;
-  }
+  VBPIndicatorPriceZoneObject( ) : super();
+  // NOTE: end skipped - type number is ignored in gen 
 
-  void set end (double v) {
-    this._end = v;
-  }
-    */
-    
-  double? index;
-    /*
-  double get index { 
-    if (this._index == null) {
-      this._index = 0;
-    }
-    return this._index!;
-  }
+  // NOTE: index skipped - type number is ignored in gen 
 
-  void set index (double v) {
-    this._index = v;
-  }
-    */
-    
-  double? negativeVolumeData;
-    /*
-  double get negativeVolumeData { 
-    if (this._negativeVolumeData == null) {
-      this._negativeVolumeData = 0;
-    }
-    return this._negativeVolumeData!;
-  }
+  // NOTE: negativeVolumeData skipped - type number is ignored in gen 
 
-  void set negativeVolumeData (double v) {
-    this._negativeVolumeData = v;
-  }
-    */
-    
-  double? positiveVolumeData;
-    /*
-  double get positiveVolumeData { 
-    if (this._positiveVolumeData == null) {
-      this._positiveVolumeData = 0;
-    }
-    return this._positiveVolumeData!;
-  }
+  // NOTE: positiveVolumeData skipped - type number is ignored in gen 
 
-  void set positiveVolumeData (double v) {
-    this._positiveVolumeData = v;
-  }
-    */
-    
-  double? start;
-    /*
-  double get start { 
-    if (this._start == null) {
-      this._start = 0;
-    }
-    return this._start!;
-  }
+  // NOTE: start skipped - type number is ignored in gen 
 
-  void set start (double v) {
-    this._start = v;
-  }
-    */
-    
-  double? wholeVolumeData;
-    /*
-  double get wholeVolumeData { 
-    if (this._wholeVolumeData == null) {
-      this._wholeVolumeData = 0;
-    }
-    return this._wholeVolumeData!;
-  }
+  // NOTE: wholeVolumeData skipped - type number is ignored in gen 
 
-  void set wholeVolumeData (double v) {
-    this._wholeVolumeData = v;
-  }
-    */
-    
-  double? x;
-    /*
-  double get x { 
-    if (this._x == null) {
-      this._x = 0;
-    }
-    return this._x!;
-  }
+  // NOTE: x skipped - type number is ignored in gen 
 
-  void set x (double v) {
-    this._x = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -137,33 +45,19 @@ class VBPIndicatorPriceZoneObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.end != null) {  
-      buffer.writeAll(["\"end\":", this.end, ","], "");
-    }
+    // NOTE: skip serialization of end (type number is ignored) ignore type: true
 
-    if (this.index != null) {  
-      buffer.writeAll(["\"index\":", this.index, ","], "");
-    }
+    // NOTE: skip serialization of index (type number is ignored) ignore type: true
 
-    if (this.negativeVolumeData != null) {  
-      buffer.writeAll(["\"negativeVolumeData\":", this.negativeVolumeData, ","], "");
-    }
+    // NOTE: skip serialization of negativeVolumeData (type number is ignored) ignore type: true
 
-    if (this.positiveVolumeData != null) {  
-      buffer.writeAll(["\"positiveVolumeData\":", this.positiveVolumeData, ","], "");
-    }
+    // NOTE: skip serialization of positiveVolumeData (type number is ignored) ignore type: true
 
-    if (this.start != null) {  
-      buffer.writeAll(["\"start\":", this.start, ","], "");
-    }
+    // NOTE: skip serialization of start (type number is ignored) ignore type: true
 
-    if (this.wholeVolumeData != null) {  
-      buffer.writeAll(["\"wholeVolumeData\":", this.wholeVolumeData, ","], "");
-    }
+    // NOTE: skip serialization of wholeVolumeData (type number is ignored) ignore type: true
 
-    if (this.x != null) {  
-      buffer.writeAll(["\"x\":", this.x, ","], "");
-    }
+    // NOTE: skip serialization of x (type number is ignored) ignore type: true
   }
 
 }

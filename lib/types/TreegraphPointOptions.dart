@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -26,22 +26,22 @@ import 'OptionFragment.dart';
  */
 class TreegraphPointOptions extends TreemapPointOptions {
   TreegraphPointOptions( {
-    this.borderRadius = null
+    super.accessibility = null,
+    super.borderColor = null,
+    super.className = null,
+    super.color = null,
+    super.colorIndex = null,
+    super.connectors = null,
+    super.dataLabels = null,
+    super.dragDrop = null,
+    super.events = null,
+    super.keys = null,
+    super.marker = null,
+    super.selected = null,
+    super.visible = null
   }) : super();
-  double? borderRadius;
-    /*
-  double get borderRadius { 
-    if (this._borderRadius == null) {
-      this._borderRadius = 0;
-    }
-    return this._borderRadius!;
-  }
+  // NOTE: borderRadius skipped - type number is ignored in gen 
 
-  void set borderRadius (double v) {
-    this._borderRadius = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -50,13 +50,11 @@ class TreegraphPointOptions extends TreemapPointOptions {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of collapseButton (type CollapseButtonOptions is ignored)} 
+    // NOTE: skip serialization of collapseButton (type CollapseButtonOptions is ignored) ignore type: true
 
-    if (this.borderRadius != null) {  
-      buffer.writeAll(["\"borderRadius\":", this.borderRadius, ","], "");
-    }
+    // NOTE: skip serialization of borderRadius (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of link (type TreegraphLinkOptions is ignored)} 
+    // NOTE: skip serialization of link (type TreegraphLinkOptions is ignored) ignore type: true
   }
 
 }

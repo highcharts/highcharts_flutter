@@ -1,0 +1,30 @@
+[
+  {
+    "type": "missing_mapping",
+    "path": "xAxis.categories"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "xAxis.accessibility"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "yAxis.title"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "yAxis.labels"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "plotOptions.spline.marker"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "series.marker"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "series.marker"
+  }
+]

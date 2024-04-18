@@ -12,11 +12,12 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
 import 'LinePointOptions.dart';
+import 'PieDataLabelOptions.dart';
 import 'OptionFragment.dart';
 
 /** 
@@ -24,37 +25,24 @@ import 'OptionFragment.dart';
  */
 class PiePointOptions extends LinePointOptions {
   PiePointOptions( {
-    this.sliced = null,
-    this.visible = null
+    super.accessibility = null,
+    super.borderColor = null,
+    super.className = null,
+    super.color = null,
+    super.colorIndex = null,
+    super.connectors = null,
+    super.dataLabels = null,
+    super.dragDrop = null,
+    super.events = null,
+    super.keys = null,
+    super.marker = null,
+    super.selected = null,
+    super.visible = null
   }) : super();
-  bool? sliced;
-    /*
-  bool get sliced { 
-    if (this._sliced == null) {
-      this._sliced = false;
-    }
-    return this._sliced!;
-  }
+  // NOTE: sliced skipped - type boolean is ignored in gen 
 
-  void set sliced (bool v) {
-    this._sliced = v;
-  }
-    */
-    
-  bool? visible;
-    /*
-  bool get visible { 
-    if (this._visible == null) {
-      this._visible = false;
-    }
-    return this._visible!;
-  }
+  // NOTE: visible skipped - type boolean is ignored in gen 
 
-  void set visible (bool v) {
-    this._visible = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -63,15 +51,11 @@ class PiePointOptions extends LinePointOptions {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of dataLabels (type PieDataLabelOptions[] is ignored)} 
+    // NOTE: skip serialization of dataLabels (type PieDataLabelOptions[] is ignored) ignore type: true
 
-    if (this.sliced != null) {  
-      buffer.writeAll(["\"sliced\":", this.sliced, ","], "");
-    }
+    // NOTE: skip serialization of sliced (type boolean is ignored) ignore type: true
 
-    if (this.visible != null) {  
-      buffer.writeAll(["\"visible\":", this.visible, ","], "");
-    }
+    // NOTE: skip serialization of visible (type boolean is ignored) ignore type: true
   }
 
 }

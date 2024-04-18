@@ -1,0 +1,42 @@
+[
+  {
+    "type": "missing_mapping",
+    "path": "colors"
+  },
+  {
+    "path": "series.data",
+    "parentType": "TimelinePointOptions",
+    "memberName": "description",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "path": "series.data",
+    "parentType": "TimelinePointOptions",
+    "memberName": "description",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "path": "series.data",
+    "parentType": "TimelinePointOptions",
+    "memberName": "description",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "path": "series.data",
+    "parentType": "TimelinePointOptions",
+    "memberName": "description",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "path": "series.data",
+    "parentType": "TimelinePointOptions",
+    "memberName": "description",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "path": "series.data",
+    "parentType": "TimelinePointOptions",
+    "memberName": "description",
+    "msg": "The member is not present in the Flutter integration API"
+  }
+]

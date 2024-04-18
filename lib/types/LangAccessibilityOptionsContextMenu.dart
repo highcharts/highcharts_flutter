@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,23 +22,9 @@ import 'OptionFragment.dart';
  * LangAccessibilityOptionsContextMenu 
  */
 class LangAccessibilityOptionsContextMenu extends OptionFragment {
-  LangAccessibilityOptionsContextMenu( {
-    this.button = null
-  }) : super();
-  String? button;
-    /*
-  String get button { 
-    if (this._button == null) {
-      this._button = "";
-    }
-    return this._button!;
-  }
+  LangAccessibilityOptionsContextMenu( ) : super();
+  // NOTE: button skipped - type string is ignored in gen 
 
-  void set button (String v) {
-    this._button = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -47,9 +33,7 @@ class LangAccessibilityOptionsContextMenu extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.button != null) {  
-      buffer.writeAll(["\"button\":\`", this.button, "\`,"], "");
-    }
+    // NOTE: skip serialization of button (type string is ignored) ignore type: true
   }
 
 }

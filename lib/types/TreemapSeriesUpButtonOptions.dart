@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -25,37 +25,14 @@ import 'OptionFragment.dart';
  */
 class TreemapSeriesUpButtonOptions extends OptionFragment {
   TreemapSeriesUpButtonOptions( {
-    this.relativeTo = null,
-    this.text = null
+    this.position = null
   }) : super();
-  String? relativeTo;
-    /*
-  String get relativeTo { 
-    if (this._relativeTo == null) {
-      this._relativeTo = "";
-    }
-    return this._relativeTo!;
-  }
-
-  void set relativeTo (String v) {
-    this._relativeTo = v;
-  }
-    */
+  TreemapSeriesUpButtonPositionOptions? position;
     
-  String? text;
-    /*
-  String get text { 
-    if (this._text == null) {
-      this._text = "";
-    }
-    return this._text!;
-  }
+  // NOTE: relativeTo skipped - type string is ignored in gen 
 
-  void set text (String v) {
-    this._text = v;
-  }
-    */
-    
+  // NOTE: text skipped - type string is ignored in gen 
+
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -64,17 +41,15 @@ class TreemapSeriesUpButtonOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of position (type TreemapSeriesUpButtonPositionOptions is ignored)} 
-
-    if (this.relativeTo != null) {  
-      buffer.writeAll(["\"relativeTo\":\`", this.relativeTo, "\`,"], "");
+    if (this.position != null) {  
+      buffer.writeAll(["\"position\":",this.position?.toJSON(), ","], "");
     }
 
-    if (this.text != null) {  
-      buffer.writeAll(["\"text\":\`", this.text, "\`,"], "");
-    }
+    // NOTE: skip serialization of relativeTo (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of theme (type ButtonThemeObject is ignored)} 
+    // NOTE: skip serialization of text (type string is ignored) ignore type: true
+
+    // NOTE: skip serialization of theme (type ButtonThemeObject is ignored) ignore type: true
   }
 
 }

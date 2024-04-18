@@ -1,0 +1,15 @@
+[
+  {
+    "type": "missing_mapping",
+    "path": "series.dataLabels"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "series.tooltip"
+  },
+  {
+    "type": "mixed_type",
+    "path": "series.borderRadius",
+    "msg": "Path is set as a basic type, but flutter wants a BorderRadiusOptionsObject"
+  }
+]

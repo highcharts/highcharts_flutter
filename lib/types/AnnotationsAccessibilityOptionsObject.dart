@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -26,18 +26,6 @@ class AnnotationsAccessibilityOptionsObject extends OptionFragment {
     this.description = null
   }) : super();
   String? description;
-    /*
-  String get description { 
-    if (this._description == null) {
-      this._description = "";
-    }
-    return this._description!;
-  }
-
-  void set description (String v) {
-    this._description = v;
-  }
-    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -48,7 +36,7 @@ class AnnotationsAccessibilityOptionsObject extends OptionFragment {
 
     
     if (this.description != null) {  
-      buffer.writeAll(["\"description\":\`", this.description, "\`,"], "");
+      buffer.writeAll(["\"description\":\`",this.description, "\`,"], "");
     }
   }
 

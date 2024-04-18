@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,38 +22,11 @@ import 'OptionFragment.dart';
  * CropDataObject 
  */
 class CropDataObject extends OptionFragment {
-  CropDataObject( {
-    this.end = null,
-    this.start = null
-  }) : super();
-  double? end;
-    /*
-  double get end { 
-    if (this._end == null) {
-      this._end = 0;
-    }
-    return this._end!;
-  }
+  CropDataObject( ) : super();
+  // NOTE: end skipped - type number is ignored in gen 
 
-  void set end (double v) {
-    this._end = v;
-  }
-    */
-    
-  double? start;
-    /*
-  double get start { 
-    if (this._start == null) {
-      this._start = 0;
-    }
-    return this._start!;
-  }
+  // NOTE: start skipped - type number is ignored in gen 
 
-  void set start (double v) {
-    this._start = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -62,17 +35,13 @@ class CropDataObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.end != null) {  
-      buffer.writeAll(["\"end\":", this.end, ","], "");
-    }
+    // NOTE: skip serialization of end (type number is ignored) ignore type: true
 
-    if (this.start != null) {  
-      buffer.writeAll(["\"start\":", this.start, ","], "");
-    }
+    // NOTE: skip serialization of start (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of xData (type number[] is ignored)} 
+    // NOTE: skip serialization of xData (type number[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of yData (type number[][] is ignored)} 
+    // NOTE: skip serialization of yData (type number[][] is ignored) ignore type: true
   }
 
 }

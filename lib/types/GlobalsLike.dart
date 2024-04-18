@@ -12,11 +12,12 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
 import 'DefaultOptions.dart';
+import 'Chart.dart';
 import 'Document.dart';
 import 'Navigator.dart';
 import 'SeriesTypeRegistry.dart';
@@ -27,233 +28,37 @@ import 'OptionFragment.dart';
  * GlobalsLike 
  */
 class GlobalsLike extends OptionFragment {
-  GlobalsLike( {
-    this.SVG_NS = null,
-    this.chartCount = null,
-    this.deg2rad = null,
-    this.hasBidiBug = null,
-    this.isChrome = null,
-    this.isFirefox = null,
-    this.isMS = null,
-    this.isSafari = null,
-    this.isTouchDevice = null,
-    this.isWebKit = null,
-    this.product = null,
-    this.supportsPassiveEvents = null,
-    this.svg = null,
-    this.userAgent = null,
-    this.version = null
-  }) : super();
-  String? SVG_NS;
-    /*
-  String get SVG_NS { 
-    if (this._SVG_NS == null) {
-      this._SVG_NS = "";
-    }
-    return this._SVG_NS!;
-  }
+  GlobalsLike( ) : super();
+  // NOTE: SVG_NS skipped - type string is ignored in gen 
 
-  void set SVG_NS (String v) {
-    this._SVG_NS = v;
-  }
-    */
-    
-  double? chartCount;
-    /*
-  double get chartCount { 
-    if (this._chartCount == null) {
-      this._chartCount = 0;
-    }
-    return this._chartCount!;
-  }
+  // NOTE: chartCount skipped - type number is ignored in gen 
 
-  void set chartCount (double v) {
-    this._chartCount = v;
-  }
-    */
-    
-  double? deg2rad;
-    /*
-  double get deg2rad { 
-    if (this._deg2rad == null) {
-      this._deg2rad = 0;
-    }
-    return this._deg2rad!;
-  }
+  // NOTE: deg2rad skipped - type number is ignored in gen 
 
-  void set deg2rad (double v) {
-    this._deg2rad = v;
-  }
-    */
-    
-  bool? hasBidiBug;
-    /*
-  bool get hasBidiBug { 
-    if (this._hasBidiBug == null) {
-      this._hasBidiBug = false;
-    }
-    return this._hasBidiBug!;
-  }
+  // NOTE: hasBidiBug skipped - type boolean is ignored in gen 
 
-  void set hasBidiBug (bool v) {
-    this._hasBidiBug = v;
-  }
-    */
-    
-  bool? isChrome;
-    /*
-  bool get isChrome { 
-    if (this._isChrome == null) {
-      this._isChrome = false;
-    }
-    return this._isChrome!;
-  }
+  // NOTE: isChrome skipped - type boolean is ignored in gen 
 
-  void set isChrome (bool v) {
-    this._isChrome = v;
-  }
-    */
-    
-  bool? isFirefox;
-    /*
-  bool get isFirefox { 
-    if (this._isFirefox == null) {
-      this._isFirefox = false;
-    }
-    return this._isFirefox!;
-  }
+  // NOTE: isFirefox skipped - type boolean is ignored in gen 
 
-  void set isFirefox (bool v) {
-    this._isFirefox = v;
-  }
-    */
-    
-  bool? isMS;
-    /*
-  bool get isMS { 
-    if (this._isMS == null) {
-      this._isMS = false;
-    }
-    return this._isMS!;
-  }
+  // NOTE: isMS skipped - type boolean is ignored in gen 
 
-  void set isMS (bool v) {
-    this._isMS = v;
-  }
-    */
-    
-  bool? isSafari;
-    /*
-  bool get isSafari { 
-    if (this._isSafari == null) {
-      this._isSafari = false;
-    }
-    return this._isSafari!;
-  }
+  // NOTE: isSafari skipped - type boolean is ignored in gen 
 
-  void set isSafari (bool v) {
-    this._isSafari = v;
-  }
-    */
-    
-  bool? isTouchDevice;
-    /*
-  bool get isTouchDevice { 
-    if (this._isTouchDevice == null) {
-      this._isTouchDevice = false;
-    }
-    return this._isTouchDevice!;
-  }
+  // NOTE: isTouchDevice skipped - type boolean is ignored in gen 
 
-  void set isTouchDevice (bool v) {
-    this._isTouchDevice = v;
-  }
-    */
-    
-  bool? isWebKit;
-    /*
-  bool get isWebKit { 
-    if (this._isWebKit == null) {
-      this._isWebKit = false;
-    }
-    return this._isWebKit!;
-  }
+  // NOTE: isWebKit skipped - type boolean is ignored in gen 
 
-  void set isWebKit (bool v) {
-    this._isWebKit = v;
-  }
-    */
-    
-  String? product;
-    /*
-  String get product { 
-    if (this._product == null) {
-      this._product = "";
-    }
-    return this._product!;
-  }
+  // NOTE: product skipped - type string is ignored in gen 
 
-  void set product (String v) {
-    this._product = v;
-  }
-    */
-    
-  bool? supportsPassiveEvents;
-    /*
-  bool get supportsPassiveEvents { 
-    if (this._supportsPassiveEvents == null) {
-      this._supportsPassiveEvents = false;
-    }
-    return this._supportsPassiveEvents!;
-  }
+  // NOTE: supportsPassiveEvents skipped - type boolean is ignored in gen 
 
-  void set supportsPassiveEvents (bool v) {
-    this._supportsPassiveEvents = v;
-  }
-    */
-    
-  bool? svg;
-    /*
-  bool get svg { 
-    if (this._svg == null) {
-      this._svg = false;
-    }
-    return this._svg!;
-  }
+  // NOTE: svg skipped - type boolean is ignored in gen 
 
-  void set svg (bool v) {
-    this._svg = v;
-  }
-    */
-    
-  String? userAgent;
-    /*
-  String get userAgent { 
-    if (this._userAgent == null) {
-      this._userAgent = "";
-    }
-    return this._userAgent!;
-  }
+  // NOTE: userAgent skipped - type string is ignored in gen 
 
-  void set userAgent (String v) {
-    this._userAgent = v;
-  }
-    */
-    
-  String? version;
-    /*
-  String get version { 
-    if (this._version == null) {
-      this._version = "";
-    }
-    return this._version!;
-  }
+  // NOTE: version skipped - type string is ignored in gen 
 
-  void set version (String v) {
-    this._version = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -262,91 +67,61 @@ class GlobalsLike extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of defaultOptions (type DefaultOptions is ignored)} 
+    // NOTE: skip serialization of defaultOptions (type DefaultOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of time (type Time is ignored)} 
+    // NOTE: skip serialization of time (type Time is ignored) ignore type: true
 
-    if (this.SVG_NS != null) {  
-      buffer.writeAll(["\"SVG_NS\":\`", this.SVG_NS, "\`,"], "");
-    }
+    // NOTE: skip serialization of SVG_NS (type string is ignored) ignore type: true
 
-    if (this.chartCount != null) {  
-      buffer.writeAll(["\"chartCount\":", this.chartCount, ","], "");
-    }
+    // NOTE: skip serialization of chartCount (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of charts (type Chart[] is ignored)} 
+    // NOTE: skip serialization of charts (type Chart[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of composed (type unknown[] is ignored)} 
+    // NOTE: skip serialization of composed (type unknown[] is ignored) ignore type: 1
 
-    // NOTE: skip serialization of dateFormats (type Generic is ignored)} 
+    // NOTE: skip serialization of dateFormats (type Generic is ignored) ignore type: true
 
-    if (this.deg2rad != null) {  
-      buffer.writeAll(["\"deg2rad\":", this.deg2rad, ","], "");
-    }
+    // NOTE: skip serialization of deg2rad (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of doc (type Document is ignored)} 
+    // NOTE: skip serialization of doc (type Document is ignored) ignore type: true
 
-    if (this.hasBidiBug != null) {  
-      buffer.writeAll(["\"hasBidiBug\":", this.hasBidiBug, ","], "");
-    }
+    // NOTE: skip serialization of hasBidiBug (type boolean is ignored) ignore type: true
 
-    if (this.isChrome != null) {  
-      buffer.writeAll(["\"isChrome\":", this.isChrome, ","], "");
-    }
+    // NOTE: skip serialization of isChrome (type boolean is ignored) ignore type: true
 
-    if (this.isFirefox != null) {  
-      buffer.writeAll(["\"isFirefox\":", this.isFirefox, ","], "");
-    }
+    // NOTE: skip serialization of isFirefox (type boolean is ignored) ignore type: true
 
-    if (this.isMS != null) {  
-      buffer.writeAll(["\"isMS\":", this.isMS, ","], "");
-    }
+    // NOTE: skip serialization of isMS (type boolean is ignored) ignore type: true
 
-    if (this.isSafari != null) {  
-      buffer.writeAll(["\"isSafari\":", this.isSafari, ","], "");
-    }
+    // NOTE: skip serialization of isSafari (type boolean is ignored) ignore type: true
 
-    if (this.isTouchDevice != null) {  
-      buffer.writeAll(["\"isTouchDevice\":", this.isTouchDevice, ","], "");
-    }
+    // NOTE: skip serialization of isTouchDevice (type boolean is ignored) ignore type: true
 
-    if (this.isWebKit != null) {  
-      buffer.writeAll(["\"isWebKit\":", this.isWebKit, ","], "");
-    }
+    // NOTE: skip serialization of isWebKit (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of marginNames (type readonly string[] is ignored)} 
+    // NOTE: skip serialization of marginNames (type readonly string[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of nav (type Navigator is ignored)} 
+    // NOTE: skip serialization of nav (type Navigator is ignored) ignore type: true
 
-    if (this.product != null) {  
-      buffer.writeAll(["\"product\":\`", this.product, "\`,"], "");
-    }
+    // NOTE: skip serialization of product (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of seriesTypes (type SeriesTypeRegistry is ignored)} 
+    // NOTE: skip serialization of seriesTypes (type SeriesTypeRegistry is ignored) ignore type: true
 
-    if (this.supportsPassiveEvents != null) {  
-      buffer.writeAll(["\"supportsPassiveEvents\":", this.supportsPassiveEvents, ","], "");
-    }
+    // NOTE: skip serialization of supportsPassiveEvents (type boolean is ignored) ignore type: true
 
-    if (this.svg != null) {  
-      buffer.writeAll(["\"svg\":", this.svg, ","], "");
-    }
+    // NOTE: skip serialization of svg (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of symbolSizes (type Generic is ignored)} 
+    // NOTE: skip serialization of symbolSizes (type Generic is ignored) ignore type: true
 
-    // NOTE: skip serialization of theme (type Generic is ignored)} 
+    // NOTE: skip serialization of theme (type Generic is ignored) ignore type: true
 
-    if (this.userAgent != null) {  
-      buffer.writeAll(["\"userAgent\":\`", this.userAgent, "\`,"], "");
-    }
+    // NOTE: skip serialization of userAgent (type string is ignored) ignore type: true
 
-    if (this.version != null) {  
-      buffer.writeAll(["\"version\":\`", this.version, "\`,"], "");
-    }
+    // NOTE: skip serialization of version (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of win (type Window & typeof globalThis is ignored)} 
+    // NOTE: skip serialization of win (type Window & typeof globalThis is ignored) ignore type: true
 
-    // NOTE: skip serialization of navigators (type StandaloneNavigator[] is ignored)} 
+    // NOTE: skip serialization of navigators (type StandaloneNavigator[] is ignored) ignore type: true
   }
 
 }

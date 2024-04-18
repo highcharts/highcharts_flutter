@@ -12,139 +12,35 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
 import 'Point.dart';
+import 'AxisCoordinateObject.dart';
 import 'OptionFragment.dart';
 
 /** 
  * PointerEvent 
  */
 class PointerEvent extends OptionFragment {
-  PointerEvent( {
-    this.accumulate = null,
-    this.chartX = null,
-    this.chartY = null,
-    this.lat = null,
-    this.lon = null,
-    this.activeAnnotation = null,
-    this.deltaY = null,
-    this.wheelDelta = null
-  }) : super();
-  bool? accumulate;
-    /*
-  bool get accumulate { 
-    if (this._accumulate == null) {
-      this._accumulate = false;
-    }
-    return this._accumulate!;
-  }
+  PointerEvent( ) : super();
+  // NOTE: accumulate skipped - type boolean is ignored in gen 
 
-  void set accumulate (bool v) {
-    this._accumulate = v;
-  }
-    */
-    
-  double? chartX;
-    /*
-  double get chartX { 
-    if (this._chartX == null) {
-      this._chartX = 0;
-    }
-    return this._chartX!;
-  }
+  // NOTE: chartX skipped - type number is ignored in gen 
 
-  void set chartX (double v) {
-    this._chartX = v;
-  }
-    */
-    
-  double? chartY;
-    /*
-  double get chartY { 
-    if (this._chartY == null) {
-      this._chartY = 0;
-    }
-    return this._chartY!;
-  }
+  // NOTE: chartY skipped - type number is ignored in gen 
 
-  void set chartY (double v) {
-    this._chartY = v;
-  }
-    */
-    
-  double? lat;
-    /*
-  double get lat { 
-    if (this._lat == null) {
-      this._lat = 0;
-    }
-    return this._lat!;
-  }
+  // NOTE: lat skipped - type number is ignored in gen 
 
-  void set lat (double v) {
-    this._lat = v;
-  }
-    */
-    
-  double? lon;
-    /*
-  double get lon { 
-    if (this._lon == null) {
-      this._lon = 0;
-    }
-    return this._lon!;
-  }
+  // NOTE: lon skipped - type number is ignored in gen 
 
-  void set lon (double v) {
-    this._lon = v;
-  }
-    */
-    
-  bool? activeAnnotation;
-    /*
-  bool get activeAnnotation { 
-    if (this._activeAnnotation == null) {
-      this._activeAnnotation = false;
-    }
-    return this._activeAnnotation!;
-  }
+  // NOTE: activeAnnotation skipped - type boolean is ignored in gen 
 
-  void set activeAnnotation (bool v) {
-    this._activeAnnotation = v;
-  }
-    */
-    
-  double? deltaY;
-    /*
-  double get deltaY { 
-    if (this._deltaY == null) {
-      this._deltaY = 0;
-    }
-    return this._deltaY!;
-  }
+  // NOTE: deltaY skipped - type number is ignored in gen 
 
-  void set deltaY (double v) {
-    this._deltaY = v;
-  }
-    */
-    
-  double? wheelDelta;
-    /*
-  double get wheelDelta { 
-    if (this._wheelDelta == null) {
-      this._wheelDelta = 0;
-    }
-    return this._wheelDelta!;
-  }
+  // NOTE: wheelDelta skipped - type number is ignored in gen 
 
-  void set wheelDelta (double v) {
-    this._wheelDelta = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -153,45 +49,29 @@ class PointerEvent extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.accumulate != null) {  
-      buffer.writeAll(["\"accumulate\":", this.accumulate, ","], "");
-    }
+    // NOTE: skip serialization of accumulate (type boolean is ignored) ignore type: true
 
-    if (this.chartX != null) {  
-      buffer.writeAll(["\"chartX\":", this.chartX, ","], "");
-    }
+    // NOTE: skip serialization of chartX (type number is ignored) ignore type: true
 
-    if (this.chartY != null) {  
-      buffer.writeAll(["\"chartY\":", this.chartY, ","], "");
-    }
+    // NOTE: skip serialization of chartY (type number is ignored) ignore type: true
 
-    if (this.lat != null) {  
-      buffer.writeAll(["\"lat\":", this.lat, ","], "");
-    }
+    // NOTE: skip serialization of lat (type number is ignored) ignore type: true
 
-    if (this.lon != null) {  
-      buffer.writeAll(["\"lon\":", this.lon, ","], "");
-    }
+    // NOTE: skip serialization of lon (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of point (type Point is ignored)} 
+    // NOTE: skip serialization of point (type Point is ignored) ignore type: true
 
-    // NOTE: skip serialization of touches (type Touch[] is ignored)} 
+    // NOTE: skip serialization of touches (type Touch[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of xAxis (type AxisCoordinateObject[] is ignored)} 
+    // NOTE: skip serialization of xAxis (type AxisCoordinateObject[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of yAxis (type AxisCoordinateObject[] is ignored)} 
+    // NOTE: skip serialization of yAxis (type AxisCoordinateObject[] is ignored) ignore type: true
 
-    if (this.activeAnnotation != null) {  
-      buffer.writeAll(["\"activeAnnotation\":", this.activeAnnotation, ","], "");
-    }
+    // NOTE: skip serialization of activeAnnotation (type boolean is ignored) ignore type: true
 
-    if (this.deltaY != null) {  
-      buffer.writeAll(["\"deltaY\":", this.deltaY, ","], "");
-    }
+    // NOTE: skip serialization of deltaY (type number is ignored) ignore type: true
 
-    if (this.wheelDelta != null) {  
-      buffer.writeAll(["\"wheelDelta\":", this.wheelDelta, ","], "");
-    }
+    // NOTE: skip serialization of wheelDelta (type number is ignored) ignore type: true
   }
 
 }

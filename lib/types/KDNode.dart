@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -34,11 +34,11 @@ class KDNode extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of left (type KDNode is ignored)} 
+    // NOTE: skip serialization of left (type KDNode is ignored) ignore type: true
 
-    // NOTE: skip serialization of point (type Point is ignored)} 
+    // NOTE: skip serialization of point (type Point is ignored) ignore type: true
 
-    // NOTE: skip serialization of right (type KDNode is ignored)} 
+    // NOTE: skip serialization of right (type KDNode is ignored) ignore type: true
   }
 
 }

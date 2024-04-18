@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,38 +23,11 @@ import 'OptionFragment.dart';
  * FrameOptions 
  */
 class FrameOptions extends OptionFragment {
-  FrameOptions( {
-    this.size = null,
-    this.visible = null
-  }) : super();
-  double? size;
-    /*
-  double get size { 
-    if (this._size == null) {
-      this._size = 0;
-    }
-    return this._size!;
-  }
+  FrameOptions( ) : super();
+  // NOTE: size skipped - type number is ignored in gen 
 
-  void set size (double v) {
-    this._size = v;
-  }
-    */
-    
-  String? visible;
-    /*
-  String get visible { 
-    if (this._visible == null) {
-      this._visible = "";
-    }
-    return this._visible!;
-  }
+  // NOTE: visible skipped - type string is ignored in gen 
 
-  void set visible (String v) {
-    this._visible = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -63,25 +36,21 @@ class FrameOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of back (type FrameSideOptions is ignored)} 
+    // NOTE: skip serialization of back (type FrameSideOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of bottom (type FrameSideOptions is ignored)} 
+    // NOTE: skip serialization of bottom (type FrameSideOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of front (type FrameSideOptions is ignored)} 
+    // NOTE: skip serialization of front (type FrameSideOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of left (type FrameSideOptions is ignored)} 
+    // NOTE: skip serialization of left (type FrameSideOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of right (type FrameSideOptions is ignored)} 
+    // NOTE: skip serialization of right (type FrameSideOptions is ignored) ignore type: true
 
-    if (this.size != null) {  
-      buffer.writeAll(["\"size\":", this.size, ","], "");
-    }
+    // NOTE: skip serialization of size (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of top (type FrameSideOptions is ignored)} 
+    // NOTE: skip serialization of top (type FrameSideOptions is ignored) ignore type: true
 
-    if (this.visible != null) {  
-      buffer.writeAll(["\"visible\":\`", this.visible, "\`,"], "");
-    }
+    // NOTE: skip serialization of visible (type string is ignored) ignore type: true
   }
 
 }

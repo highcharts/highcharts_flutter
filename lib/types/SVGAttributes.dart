@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -25,1387 +25,194 @@ import 'OptionFragment.dart';
  */
 class SVGAttributes extends OptionFragment {
   SVGAttributes( {
-    this.align = null,
-    this.alignment_baseline = null,
-    this.alphaCorrection = null,
-    this.anchorX = null,
-    this.anchorY = null,
-    this.animator = null,
-    this.aria_expanded = null,
-    this.aria_hidden = null,
-    this.aria_label = null,
-    this.kw_class /** WARN: class is rewritten as it's a keyword */ = null,
-    this.clip_path = null,
-    this.clockwise = null,
-    this.cursor = null,
-    this.cx = null,
-    this.cy = null,
     this.dashstyle = null,
-    this.depth = null,
-    this.display = null,
-    this.dominant_baseline = null,
-    this.dx = null,
-    this.dy = null,
-    this.end = null,
-    this.fill = null,
-    this.fill_opacity = null,
-    this.filter = null,
-    this.filterUnits = null,
-    this.flood_color = null,
-    this.flood_opacity = null,
-    this.height = null,
-    this.href = null,
-    this.id = null,
-    this.kw_in /** WARN: in is rewritten as it's a keyword */ = null,
-    this.innerR = null,
-    this.inverted = null,
-    this.longArc = null,
-    this.markerHeight = null,
-    this.markerWidth = null,
-    this.offset = null,
-    this.opacity = null,
-    this.open = null,
-    this.padding = null,
-    this.patternContentUnits = null,
-    this.patternTransform = null,
-    this.preserveAspectRatio = null,
-    this.r = null,
-    this.refX = null,
-    this.refY = null,
-    this.rx = null,
-    this.ry = null,
-    this.role = null,
-    this.rotation = null,
-    this.rotationOriginX = null,
-    this.rotationOriginY = null,
-    this.scaleX = null,
-    this.scaleY = null,
-    this.slope = null,
-    this.start = null,
-    this.stdDeviation = null,
     this.stroke = null,
-    this.stroke_linecap = null,
-    this.stroke_linejoin = null,
-    this.stroke_opacity = null,
-    this.stroke_width = null,
-    this.strokeWidth = null,
-    this.stop_color = null,
-    this.stop_opacity = null,
-    this.tabindex = null,
-    this.tableValues = null,
-    this.text = null,
-    this.text_align = null,
-    this.text_anchor = null,
-    this.title = null,
-    this.transform = null,
-    this.translateX = null,
-    this.translateY = null,
-    this.type = null,
-    this.version = null,
-    this.viewBox = null,
-    this.visibility = null,
-    this.width = null,
-    this.x = null,
-    this.x1 = null,
-    this.x2 = null,
-    this.xmlns = null,
-    this.y = null,
-    this.y1 = null,
-    this.y2 = null,
-    this.z = null,
-    this.zIndex = null,
-    this.borderRadius = null,
-    this.brBoxHeight = null,
-    this.brBoxY = null
+    this.width = null
   }) : super();
-  String? align;
-    /*
-  String get align { 
-    if (this._align == null) {
-      this._align = "";
-    }
-    return this._align!;
-  }
+  // NOTE: align skipped - type string is ignored in gen 
 
-  void set align (String v) {
-    this._align = v;
-  }
-    */
-    
-  String? alignment_baseline;
-    /*
-  String get alignment_baseline { 
-    if (this._alignment_baseline == null) {
-      this._alignment_baseline = "";
-    }
-    return this._alignment_baseline!;
-  }
+  // NOTE: alignment-baseline skipped - type string is ignored in gen 
 
-  void set alignment_baseline (String v) {
-    this._alignment_baseline = v;
-  }
-    */
-    
-  double? alphaCorrection;
-    /*
-  double get alphaCorrection { 
-    if (this._alphaCorrection == null) {
-      this._alphaCorrection = 0;
-    }
-    return this._alphaCorrection!;
-  }
+  // NOTE: alphaCorrection skipped - type number is ignored in gen 
 
-  void set alphaCorrection (double v) {
-    this._alphaCorrection = v;
-  }
-    */
-    
-  double? anchorX;
-    /*
-  double get anchorX { 
-    if (this._anchorX == null) {
-      this._anchorX = 0;
-    }
-    return this._anchorX!;
-  }
+  // NOTE: anchorX skipped - type number is ignored in gen 
 
-  void set anchorX (double v) {
-    this._anchorX = v;
-  }
-    */
-    
-  double? anchorY;
-    /*
-  double get anchorY { 
-    if (this._anchorY == null) {
-      this._anchorY = 0;
-    }
-    return this._anchorY!;
-  }
+  // NOTE: anchorY skipped - type number is ignored in gen 
 
-  void set anchorY (double v) {
-    this._anchorY = v;
-  }
-    */
-    
-  double? animator;
-    /*
-  double get animator { 
-    if (this._animator == null) {
-      this._animator = 0;
-    }
-    return this._animator!;
-  }
+  // NOTE: animator skipped - type number is ignored in gen 
 
-  void set animator (double v) {
-    this._animator = v;
-  }
-    */
-    
-  bool? aria_expanded;
-    /*
-  bool get aria_expanded { 
-    if (this._aria_expanded == null) {
-      this._aria_expanded = false;
-    }
-    return this._aria_expanded!;
-  }
+  // NOTE: aria-expanded skipped - type boolean is ignored in gen 
 
-  void set aria_expanded (bool v) {
-    this._aria_expanded = v;
-  }
-    */
-    
-  bool? aria_hidden;
-    /*
-  bool get aria_hidden { 
-    if (this._aria_hidden == null) {
-      this._aria_hidden = false;
-    }
-    return this._aria_hidden!;
-  }
+  // NOTE: aria-hidden skipped - type boolean is ignored in gen 
 
-  void set aria_hidden (bool v) {
-    this._aria_hidden = v;
-  }
-    */
-    
-  String? aria_label;
-    /*
-  String get aria_label { 
-    if (this._aria_label == null) {
-      this._aria_label = "";
-    }
-    return this._aria_label!;
-  }
+  // NOTE: aria-label skipped - type string is ignored in gen 
 
-  void set aria_label (String v) {
-    this._aria_label = v;
-  }
-    */
-    
-  String? kw_class /** WARN: class is rewritten as it's a keyword */;
-    /*
-  String get kw_class /** WARN: class is rewritten as it's a keyword */ { 
-    if (this._kw_class /** WARN: class is rewritten as it's a keyword */ == null) {
-      this._kw_class /** WARN: class is rewritten as it's a keyword */ = "";
-    }
-    return this._kw_class /** WARN: class is rewritten as it's a keyword */!;
-  }
+  // NOTE: class skipped - type string is ignored in gen 
 
-  void set kw_class /** WARN: class is rewritten as it's a keyword */ (String v) {
-    this._kw_class /** WARN: class is rewritten as it's a keyword */ = v;
-  }
-    */
-    
-  String? clip_path;
-    /*
-  String get clip_path { 
-    if (this._clip_path == null) {
-      this._clip_path = "";
-    }
-    return this._clip_path!;
-  }
+  // NOTE: clip-path skipped - type string is ignored in gen 
 
-  void set clip_path (String v) {
-    this._clip_path = v;
-  }
-    */
-    
-  double? clockwise;
-    /*
-  double get clockwise { 
-    if (this._clockwise == null) {
-      this._clockwise = 0;
-    }
-    return this._clockwise!;
-  }
+  // NOTE: clockwise skipped - type number is ignored in gen 
 
-  void set clockwise (double v) {
-    this._clockwise = v;
-  }
-    */
-    
-  String? cursor;
-    /*
-  String get cursor { 
-    if (this._cursor == null) {
-      this._cursor = "";
-    }
-    return this._cursor!;
-  }
+  // NOTE: cursor skipped - type string is ignored in gen 
 
-  void set cursor (String v) {
-    this._cursor = v;
-  }
-    */
-    
-  double? cx;
-    /*
-  double get cx { 
-    if (this._cx == null) {
-      this._cx = 0;
-    }
-    return this._cx!;
-  }
+  // NOTE: cx skipped - type number is ignored in gen 
 
-  void set cx (double v) {
-    this._cx = v;
-  }
-    */
-    
-  double? cy;
-    /*
-  double get cy { 
-    if (this._cy == null) {
-      this._cy = 0;
-    }
-    return this._cy!;
-  }
+  // NOTE: cy skipped - type number is ignored in gen 
 
-  void set cy (double v) {
-    this._cy = v;
-  }
-    */
-    
   String? dashstyle;
-    /*
-  String get dashstyle { 
-    if (this._dashstyle == null) {
-      this._dashstyle = "";
-    }
-    return this._dashstyle!;
-  }
-
-  void set dashstyle (String v) {
-    this._dashstyle = v;
-  }
-    */
     
-  double? depth;
-    /*
-  double get depth { 
-    if (this._depth == null) {
-      this._depth = 0;
-    }
-    return this._depth!;
-  }
+  // NOTE: depth skipped - type number is ignored in gen 
 
-  void set depth (double v) {
-    this._depth = v;
-  }
-    */
-    
-  String? display;
-    /*
-  String get display { 
-    if (this._display == null) {
-      this._display = "";
-    }
-    return this._display!;
-  }
+  // NOTE: display skipped - type string is ignored in gen 
 
-  void set display (String v) {
-    this._display = v;
-  }
-    */
-    
-  String? dominant_baseline;
-    /*
-  String get dominant_baseline { 
-    if (this._dominant_baseline == null) {
-      this._dominant_baseline = "";
-    }
-    return this._dominant_baseline!;
-  }
+  // NOTE: dominant-baseline skipped - type string is ignored in gen 
 
-  void set dominant_baseline (String v) {
-    this._dominant_baseline = v;
-  }
-    */
-    
-  double? dx;
-    /*
-  double get dx { 
-    if (this._dx == null) {
-      this._dx = 0;
-    }
-    return this._dx!;
-  }
+  // NOTE: dx skipped - type number is ignored in gen 
 
-  void set dx (double v) {
-    this._dx = v;
-  }
-    */
-    
-  double? dy;
-    /*
-  double get dy { 
-    if (this._dy == null) {
-      this._dy = 0;
-    }
-    return this._dy!;
-  }
+  // NOTE: dy skipped - type number is ignored in gen 
 
-  void set dy (double v) {
-    this._dy = v;
-  }
-    */
-    
-  double? end;
-    /*
-  double get end { 
-    if (this._end == null) {
-      this._end = 0;
-    }
-    return this._end!;
-  }
+  // NOTE: end skipped - type number is ignored in gen 
 
-  void set end (double v) {
-    this._end = v;
-  }
-    */
-    
-  String? fill;
-    /*
-  String get fill { 
-    if (this._fill == null) {
-      this._fill = "";
-    }
-    return this._fill!;
-  }
+  // NOTE: fill skipped - type string is ignored in gen 
 
-  void set fill (String v) {
-    this._fill = v;
-  }
-    */
-    
-  double? fill_opacity;
-    /*
-  double get fill_opacity { 
-    if (this._fill_opacity == null) {
-      this._fill_opacity = 0;
-    }
-    return this._fill_opacity!;
-  }
+  // NOTE: fill-opacity skipped - type number is ignored in gen 
 
-  void set fill_opacity (double v) {
-    this._fill_opacity = v;
-  }
-    */
-    
-  String? filter;
-    /*
-  String get filter { 
-    if (this._filter == null) {
-      this._filter = "";
-    }
-    return this._filter!;
-  }
+  // NOTE: filter skipped - type string is ignored in gen 
 
-  void set filter (String v) {
-    this._filter = v;
-  }
-    */
-    
-  String? filterUnits;
-    /*
-  String get filterUnits { 
-    if (this._filterUnits == null) {
-      this._filterUnits = "";
-    }
-    return this._filterUnits!;
-  }
+  // NOTE: filterUnits skipped - type string is ignored in gen 
 
-  void set filterUnits (String v) {
-    this._filterUnits = v;
-  }
-    */
-    
-  String? flood_color;
-    /*
-  String get flood_color { 
-    if (this._flood_color == null) {
-      this._flood_color = "";
-    }
-    return this._flood_color!;
-  }
+  // NOTE: flood-color skipped - type string is ignored in gen 
 
-  void set flood_color (String v) {
-    this._flood_color = v;
-  }
-    */
-    
-  double? flood_opacity;
-    /*
-  double get flood_opacity { 
-    if (this._flood_opacity == null) {
-      this._flood_opacity = 0;
-    }
-    return this._flood_opacity!;
-  }
+  // NOTE: flood-opacity skipped - type number is ignored in gen 
 
-  void set flood_opacity (double v) {
-    this._flood_opacity = v;
-  }
-    */
-    
-  double? height;
-    /*
-  double get height { 
-    if (this._height == null) {
-      this._height = 0;
-    }
-    return this._height!;
-  }
+  // NOTE: height skipped - type number is ignored in gen 
 
-  void set height (double v) {
-    this._height = v;
-  }
-    */
-    
-  String? href;
-    /*
-  String get href { 
-    if (this._href == null) {
-      this._href = "";
-    }
-    return this._href!;
-  }
+  // NOTE: href skipped - type string is ignored in gen 
 
-  void set href (String v) {
-    this._href = v;
-  }
-    */
-    
-  String? id;
-    /*
-  String get id { 
-    if (this._id == null) {
-      this._id = "";
-    }
-    return this._id!;
-  }
+  // NOTE: id skipped - type string is ignored in gen 
 
-  void set id (String v) {
-    this._id = v;
-  }
-    */
-    
-  String? kw_in /** WARN: in is rewritten as it's a keyword */;
-    /*
-  String get kw_in /** WARN: in is rewritten as it's a keyword */ { 
-    if (this._kw_in /** WARN: in is rewritten as it's a keyword */ == null) {
-      this._kw_in /** WARN: in is rewritten as it's a keyword */ = "";
-    }
-    return this._kw_in /** WARN: in is rewritten as it's a keyword */!;
-  }
+  // NOTE: in skipped - type string is ignored in gen 
 
-  void set kw_in /** WARN: in is rewritten as it's a keyword */ (String v) {
-    this._kw_in /** WARN: in is rewritten as it's a keyword */ = v;
-  }
-    */
-    
-  double? innerR;
-    /*
-  double get innerR { 
-    if (this._innerR == null) {
-      this._innerR = 0;
-    }
-    return this._innerR!;
-  }
+  // NOTE: innerR skipped - type number is ignored in gen 
 
-  void set innerR (double v) {
-    this._innerR = v;
-  }
-    */
-    
-  bool? inverted;
-    /*
-  bool get inverted { 
-    if (this._inverted == null) {
-      this._inverted = false;
-    }
-    return this._inverted!;
-  }
+  // NOTE: inverted skipped - type boolean is ignored in gen 
 
-  void set inverted (bool v) {
-    this._inverted = v;
-  }
-    */
-    
-  double? longArc;
-    /*
-  double get longArc { 
-    if (this._longArc == null) {
-      this._longArc = 0;
-    }
-    return this._longArc!;
-  }
+  // NOTE: longArc skipped - type number is ignored in gen 
 
-  void set longArc (double v) {
-    this._longArc = v;
-  }
-    */
-    
-  double? markerHeight;
-    /*
-  double get markerHeight { 
-    if (this._markerHeight == null) {
-      this._markerHeight = 0;
-    }
-    return this._markerHeight!;
-  }
+  // NOTE: markerHeight skipped - type number is ignored in gen 
 
-  void set markerHeight (double v) {
-    this._markerHeight = v;
-  }
-    */
-    
-  double? markerWidth;
-    /*
-  double get markerWidth { 
-    if (this._markerWidth == null) {
-      this._markerWidth = 0;
-    }
-    return this._markerWidth!;
-  }
+  // NOTE: markerWidth skipped - type number is ignored in gen 
 
-  void set markerWidth (double v) {
-    this._markerWidth = v;
-  }
-    */
-    
-  double? offset;
-    /*
-  double get offset { 
-    if (this._offset == null) {
-      this._offset = 0;
-    }
-    return this._offset!;
-  }
+  // NOTE: offset skipped - type number is ignored in gen 
 
-  void set offset (double v) {
-    this._offset = v;
-  }
-    */
-    
-  double? opacity;
-    /*
-  double get opacity { 
-    if (this._opacity == null) {
-      this._opacity = 0;
-    }
-    return this._opacity!;
-  }
+  // NOTE: opacity skipped - type number is ignored in gen 
 
-  void set opacity (double v) {
-    this._opacity = v;
-  }
-    */
-    
-  bool? open;
-    /*
-  bool get open { 
-    if (this._open == null) {
-      this._open = false;
-    }
-    return this._open!;
-  }
+  // NOTE: open skipped - type boolean is ignored in gen 
 
-  void set open (bool v) {
-    this._open = v;
-  }
-    */
-    
-  double? padding;
-    /*
-  double get padding { 
-    if (this._padding == null) {
-      this._padding = 0;
-    }
-    return this._padding!;
-  }
+  // NOTE: padding skipped - type number is ignored in gen 
 
-  void set padding (double v) {
-    this._padding = v;
-  }
-    */
-    
-  String? patternContentUnits;
-    /*
-  String get patternContentUnits { 
-    if (this._patternContentUnits == null) {
-      this._patternContentUnits = "";
-    }
-    return this._patternContentUnits!;
-  }
+  // NOTE: patternContentUnits skipped - type string is ignored in gen 
 
-  void set patternContentUnits (String v) {
-    this._patternContentUnits = v;
-  }
-    */
-    
-  String? patternTransform;
-    /*
-  String get patternTransform { 
-    if (this._patternTransform == null) {
-      this._patternTransform = "";
-    }
-    return this._patternTransform!;
-  }
+  // NOTE: patternTransform skipped - type string is ignored in gen 
 
-  void set patternTransform (String v) {
-    this._patternTransform = v;
-  }
-    */
-    
-  String? preserveAspectRatio;
-    /*
-  String get preserveAspectRatio { 
-    if (this._preserveAspectRatio == null) {
-      this._preserveAspectRatio = "";
-    }
-    return this._preserveAspectRatio!;
-  }
+  // NOTE: preserveAspectRatio skipped - type string is ignored in gen 
 
-  void set preserveAspectRatio (String v) {
-    this._preserveAspectRatio = v;
-  }
-    */
-    
-  double? r;
-    /*
-  double get r { 
-    if (this._r == null) {
-      this._r = 0;
-    }
-    return this._r!;
-  }
+  // NOTE: r skipped - type number is ignored in gen 
 
-  void set r (double v) {
-    this._r = v;
-  }
-    */
-    
-  double? refX;
-    /*
-  double get refX { 
-    if (this._refX == null) {
-      this._refX = 0;
-    }
-    return this._refX!;
-  }
+  // NOTE: refX skipped - type number is ignored in gen 
 
-  void set refX (double v) {
-    this._refX = v;
-  }
-    */
-    
-  double? refY;
-    /*
-  double get refY { 
-    if (this._refY == null) {
-      this._refY = 0;
-    }
-    return this._refY!;
-  }
+  // NOTE: refY skipped - type number is ignored in gen 
 
-  void set refY (double v) {
-    this._refY = v;
-  }
-    */
-    
-  double? rx;
-    /*
-  double get rx { 
-    if (this._rx == null) {
-      this._rx = 0;
-    }
-    return this._rx!;
-  }
+  // NOTE: rx skipped - type number is ignored in gen 
 
-  void set rx (double v) {
-    this._rx = v;
-  }
-    */
-    
-  double? ry;
-    /*
-  double get ry { 
-    if (this._ry == null) {
-      this._ry = 0;
-    }
-    return this._ry!;
-  }
+  // NOTE: ry skipped - type number is ignored in gen 
 
-  void set ry (double v) {
-    this._ry = v;
-  }
-    */
-    
-  String? role;
-    /*
-  String get role { 
-    if (this._role == null) {
-      this._role = "";
-    }
-    return this._role!;
-  }
+  // NOTE: role skipped - type string is ignored in gen 
 
-  void set role (String v) {
-    this._role = v;
-  }
-    */
-    
-  double? rotation;
-    /*
-  double get rotation { 
-    if (this._rotation == null) {
-      this._rotation = 0;
-    }
-    return this._rotation!;
-  }
+  // NOTE: rotation skipped - type number is ignored in gen 
 
-  void set rotation (double v) {
-    this._rotation = v;
-  }
-    */
-    
-  double? rotationOriginX;
-    /*
-  double get rotationOriginX { 
-    if (this._rotationOriginX == null) {
-      this._rotationOriginX = 0;
-    }
-    return this._rotationOriginX!;
-  }
+  // NOTE: rotationOriginX skipped - type number is ignored in gen 
 
-  void set rotationOriginX (double v) {
-    this._rotationOriginX = v;
-  }
-    */
-    
-  double? rotationOriginY;
-    /*
-  double get rotationOriginY { 
-    if (this._rotationOriginY == null) {
-      this._rotationOriginY = 0;
-    }
-    return this._rotationOriginY!;
-  }
+  // NOTE: rotationOriginY skipped - type number is ignored in gen 
 
-  void set rotationOriginY (double v) {
-    this._rotationOriginY = v;
-  }
-    */
-    
-  double? scaleX;
-    /*
-  double get scaleX { 
-    if (this._scaleX == null) {
-      this._scaleX = 0;
-    }
-    return this._scaleX!;
-  }
+  // NOTE: scaleX skipped - type number is ignored in gen 
 
-  void set scaleX (double v) {
-    this._scaleX = v;
-  }
-    */
-    
-  double? scaleY;
-    /*
-  double get scaleY { 
-    if (this._scaleY == null) {
-      this._scaleY = 0;
-    }
-    return this._scaleY!;
-  }
+  // NOTE: scaleY skipped - type number is ignored in gen 
 
-  void set scaleY (double v) {
-    this._scaleY = v;
-  }
-    */
-    
-  double? slope;
-    /*
-  double get slope { 
-    if (this._slope == null) {
-      this._slope = 0;
-    }
-    return this._slope!;
-  }
+  // NOTE: slope skipped - type number is ignored in gen 
 
-  void set slope (double v) {
-    this._slope = v;
-  }
-    */
-    
-  double? start;
-    /*
-  double get start { 
-    if (this._start == null) {
-      this._start = 0;
-    }
-    return this._start!;
-  }
+  // NOTE: start skipped - type number is ignored in gen 
 
-  void set start (double v) {
-    this._start = v;
-  }
-    */
-    
-  double? stdDeviation;
-    /*
-  double get stdDeviation { 
-    if (this._stdDeviation == null) {
-      this._stdDeviation = 0;
-    }
-    return this._stdDeviation!;
-  }
+  // NOTE: stdDeviation skipped - type number is ignored in gen 
 
-  void set stdDeviation (double v) {
-    this._stdDeviation = v;
-  }
-    */
-    
   String? stroke;
-    /*
-  String get stroke { 
-    if (this._stroke == null) {
-      this._stroke = "";
-    }
-    return this._stroke!;
-  }
-
-  void set stroke (String v) {
-    this._stroke = v;
-  }
-    */
     
-  String? stroke_linecap;
-    /*
-  String get stroke_linecap { 
-    if (this._stroke_linecap == null) {
-      this._stroke_linecap = "";
-    }
-    return this._stroke_linecap!;
-  }
+  // NOTE: stroke-linecap skipped - type string is ignored in gen 
 
-  void set stroke_linecap (String v) {
-    this._stroke_linecap = v;
-  }
-    */
-    
-  String? stroke_linejoin;
-    /*
-  String get stroke_linejoin { 
-    if (this._stroke_linejoin == null) {
-      this._stroke_linejoin = "";
-    }
-    return this._stroke_linejoin!;
-  }
+  // NOTE: stroke-linejoin skipped - type string is ignored in gen 
 
-  void set stroke_linejoin (String v) {
-    this._stroke_linejoin = v;
-  }
-    */
-    
-  double? stroke_opacity;
-    /*
-  double get stroke_opacity { 
-    if (this._stroke_opacity == null) {
-      this._stroke_opacity = 0;
-    }
-    return this._stroke_opacity!;
-  }
+  // NOTE: stroke-opacity skipped - type number is ignored in gen 
 
-  void set stroke_opacity (double v) {
-    this._stroke_opacity = v;
-  }
-    */
-    
-  double? stroke_width;
-    /*
-  double get stroke_width { 
-    if (this._stroke_width == null) {
-      this._stroke_width = 0;
-    }
-    return this._stroke_width!;
-  }
+  // NOTE: stroke-width skipped - type number is ignored in gen 
 
-  void set stroke_width (double v) {
-    this._stroke_width = v;
-  }
-    */
-    
-  double? strokeWidth;
-    /*
-  double get strokeWidth { 
-    if (this._strokeWidth == null) {
-      this._strokeWidth = 0;
-    }
-    return this._strokeWidth!;
-  }
+  // NOTE: strokeWidth skipped - type number is ignored in gen 
 
-  void set strokeWidth (double v) {
-    this._strokeWidth = v;
-  }
-    */
-    
-  String? stop_color;
-    /*
-  String get stop_color { 
-    if (this._stop_color == null) {
-      this._stop_color = "";
-    }
-    return this._stop_color!;
-  }
+  // NOTE: stop-color skipped - type string is ignored in gen 
 
-  void set stop_color (String v) {
-    this._stop_color = v;
-  }
-    */
-    
-  double? stop_opacity;
-    /*
-  double get stop_opacity { 
-    if (this._stop_opacity == null) {
-      this._stop_opacity = 0;
-    }
-    return this._stop_opacity!;
-  }
+  // NOTE: stop-opacity skipped - type number is ignored in gen 
 
-  void set stop_opacity (double v) {
-    this._stop_opacity = v;
-  }
-    */
-    
-  double? tabindex;
-    /*
-  double get tabindex { 
-    if (this._tabindex == null) {
-      this._tabindex = 0;
-    }
-    return this._tabindex!;
-  }
+  // NOTE: tabindex skipped - type number is ignored in gen 
 
-  void set tabindex (double v) {
-    this._tabindex = v;
-  }
-    */
-    
-  String? tableValues;
-    /*
-  String get tableValues { 
-    if (this._tableValues == null) {
-      this._tableValues = "";
-    }
-    return this._tableValues!;
-  }
+  // NOTE: tableValues skipped - type string is ignored in gen 
 
-  void set tableValues (String v) {
-    this._tableValues = v;
-  }
-    */
-    
-  String? text;
-    /*
-  String get text { 
-    if (this._text == null) {
-      this._text = "";
-    }
-    return this._text!;
-  }
+  // NOTE: text skipped - type string is ignored in gen 
 
-  void set text (String v) {
-    this._text = v;
-  }
-    */
-    
-  String? text_align;
-    /*
-  String get text_align { 
-    if (this._text_align == null) {
-      this._text_align = "";
-    }
-    return this._text_align!;
-  }
+  // NOTE: text-align skipped - type string is ignored in gen 
 
-  void set text_align (String v) {
-    this._text_align = v;
-  }
-    */
-    
-  String? text_anchor;
-    /*
-  String get text_anchor { 
-    if (this._text_anchor == null) {
-      this._text_anchor = "";
-    }
-    return this._text_anchor!;
-  }
+  // NOTE: text-anchor skipped - type string is ignored in gen 
 
-  void set text_anchor (String v) {
-    this._text_anchor = v;
-  }
-    */
-    
-  String? title;
-    /*
-  String get title { 
-    if (this._title == null) {
-      this._title = "";
-    }
-    return this._title!;
-  }
+  // NOTE: title skipped - type string is ignored in gen 
 
-  void set title (String v) {
-    this._title = v;
-  }
-    */
-    
-  String? transform;
-    /*
-  String get transform { 
-    if (this._transform == null) {
-      this._transform = "";
-    }
-    return this._transform!;
-  }
+  // NOTE: transform skipped - type string is ignored in gen 
 
-  void set transform (String v) {
-    this._transform = v;
-  }
-    */
-    
-  double? translateX;
-    /*
-  double get translateX { 
-    if (this._translateX == null) {
-      this._translateX = 0;
-    }
-    return this._translateX!;
-  }
+  // NOTE: translateX skipped - type number is ignored in gen 
 
-  void set translateX (double v) {
-    this._translateX = v;
-  }
-    */
-    
-  double? translateY;
-    /*
-  double get translateY { 
-    if (this._translateY == null) {
-      this._translateY = 0;
-    }
-    return this._translateY!;
-  }
+  // NOTE: translateY skipped - type number is ignored in gen 
 
-  void set translateY (double v) {
-    this._translateY = v;
-  }
-    */
-    
-  String? type;
-    /*
-  String get type { 
-    if (this._type == null) {
-      this._type = "";
-    }
-    return this._type!;
-  }
+  // NOTE: type skipped - type string is ignored in gen 
 
-  void set type (String v) {
-    this._type = v;
-  }
-    */
-    
-  String? version;
-    /*
-  String get version { 
-    if (this._version == null) {
-      this._version = "";
-    }
-    return this._version!;
-  }
+  // NOTE: version skipped - type string is ignored in gen 
 
-  void set version (String v) {
-    this._version = v;
-  }
-    */
-    
-  String? viewBox;
-    /*
-  String get viewBox { 
-    if (this._viewBox == null) {
-      this._viewBox = "";
-    }
-    return this._viewBox!;
-  }
+  // NOTE: viewBox skipped - type string is ignored in gen 
 
-  void set viewBox (String v) {
-    this._viewBox = v;
-  }
-    */
-    
-  String? visibility;
-    /*
-  String get visibility { 
-    if (this._visibility == null) {
-      this._visibility = "";
-    }
-    return this._visibility!;
-  }
+  // NOTE: visibility skipped - type string is ignored in gen 
 
-  void set visibility (String v) {
-    this._visibility = v;
-  }
-    */
-    
   double? width;
-    /*
-  double get width { 
-    if (this._width == null) {
-      this._width = 0;
-    }
-    return this._width!;
-  }
-
-  void set width (double v) {
-    this._width = v;
-  }
-    */
     
-  double? x;
-    /*
-  double get x { 
-    if (this._x == null) {
-      this._x = 0;
-    }
-    return this._x!;
-  }
+  // NOTE: x skipped - type number is ignored in gen 
 
-  void set x (double v) {
-    this._x = v;
-  }
-    */
-    
-  double? x1;
-    /*
-  double get x1 { 
-    if (this._x1 == null) {
-      this._x1 = 0;
-    }
-    return this._x1!;
-  }
+  // NOTE: x1 skipped - type number is ignored in gen 
 
-  void set x1 (double v) {
-    this._x1 = v;
-  }
-    */
-    
-  double? x2;
-    /*
-  double get x2 { 
-    if (this._x2 == null) {
-      this._x2 = 0;
-    }
-    return this._x2!;
-  }
+  // NOTE: x2 skipped - type number is ignored in gen 
 
-  void set x2 (double v) {
-    this._x2 = v;
-  }
-    */
-    
-  String? xmlns;
-    /*
-  String get xmlns { 
-    if (this._xmlns == null) {
-      this._xmlns = "";
-    }
-    return this._xmlns!;
-  }
+  // NOTE: xmlns skipped - type string is ignored in gen 
 
-  void set xmlns (String v) {
-    this._xmlns = v;
-  }
-    */
-    
-  double? y;
-    /*
-  double get y { 
-    if (this._y == null) {
-      this._y = 0;
-    }
-    return this._y!;
-  }
+  // NOTE: y skipped - type number is ignored in gen 
 
-  void set y (double v) {
-    this._y = v;
-  }
-    */
-    
-  double? y1;
-    /*
-  double get y1 { 
-    if (this._y1 == null) {
-      this._y1 = 0;
-    }
-    return this._y1!;
-  }
+  // NOTE: y1 skipped - type number is ignored in gen 
 
-  void set y1 (double v) {
-    this._y1 = v;
-  }
-    */
-    
-  double? y2;
-    /*
-  double get y2 { 
-    if (this._y2 == null) {
-      this._y2 = 0;
-    }
-    return this._y2!;
-  }
+  // NOTE: y2 skipped - type number is ignored in gen 
 
-  void set y2 (double v) {
-    this._y2 = v;
-  }
-    */
-    
-  double? z;
-    /*
-  double get z { 
-    if (this._z == null) {
-      this._z = 0;
-    }
-    return this._z!;
-  }
+  // NOTE: z skipped - type number is ignored in gen 
 
-  void set z (double v) {
-    this._z = v;
-  }
-    */
-    
-  double? zIndex;
-    /*
-  double get zIndex { 
-    if (this._zIndex == null) {
-      this._zIndex = 0;
-    }
-    return this._zIndex!;
-  }
+  // NOTE: zIndex skipped - type number is ignored in gen 
 
-  void set zIndex (double v) {
-    this._zIndex = v;
-  }
-    */
-    
-  String? borderRadius;
-    /*
-  String get borderRadius { 
-    if (this._borderRadius == null) {
-      this._borderRadius = "";
-    }
-    return this._borderRadius!;
-  }
+  // NOTE: borderRadius skipped - type string is ignored in gen 
 
-  void set borderRadius (String v) {
-    this._borderRadius = v;
-  }
-    */
-    
-  double? brBoxHeight;
-    /*
-  double get brBoxHeight { 
-    if (this._brBoxHeight == null) {
-      this._brBoxHeight = 0;
-    }
-    return this._brBoxHeight!;
-  }
+  // NOTE: brBoxHeight skipped - type number is ignored in gen 
 
-  void set brBoxHeight (double v) {
-    this._brBoxHeight = v;
-  }
-    */
-    
-  double? brBoxY;
-    /*
-  double get brBoxY { 
-    if (this._brBoxY == null) {
-      this._brBoxY = 0;
-    }
-    return this._brBoxY!;
-  }
+  // NOTE: brBoxY skipped - type number is ignored in gen 
 
-  void set brBoxY (double v) {
-    this._brBoxY = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -1414,389 +221,211 @@ class SVGAttributes extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.align != null) {  
-      buffer.writeAll(["\"align\":\`", this.align, "\`,"], "");
-    }
+    // NOTE: skip serialization of align (type string is ignored) ignore type: true
 
-    if (this.alignment_baseline != null) {  
-      buffer.writeAll(["\"alignment-baseline\":\`", this.alignment_baseline, "\`,"], "");
-    }
+    // NOTE: skip serialization of alignment_baseline (type string is ignored) ignore type: true
 
-    if (this.alphaCorrection != null) {  
-      buffer.writeAll(["\"alphaCorrection\":", this.alphaCorrection, ","], "");
-    }
+    // NOTE: skip serialization of alphaCorrection (type number is ignored) ignore type: true
 
-    if (this.anchorX != null) {  
-      buffer.writeAll(["\"anchorX\":", this.anchorX, ","], "");
-    }
+    // NOTE: skip serialization of anchorX (type number is ignored) ignore type: true
 
-    if (this.anchorY != null) {  
-      buffer.writeAll(["\"anchorY\":", this.anchorY, ","], "");
-    }
+    // NOTE: skip serialization of anchorY (type number is ignored) ignore type: true
 
-    if (this.animator != null) {  
-      buffer.writeAll(["\"animator\":", this.animator, ","], "");
-    }
+    // NOTE: skip serialization of animator (type number is ignored) ignore type: true
 
-    if (this.aria_expanded != null) {  
-      buffer.writeAll(["\"aria-expanded\":", this.aria_expanded, ","], "");
-    }
+    // NOTE: skip serialization of aria_expanded (type boolean is ignored) ignore type: true
 
-    if (this.aria_hidden != null) {  
-      buffer.writeAll(["\"aria-hidden\":", this.aria_hidden, ","], "");
-    }
+    // NOTE: skip serialization of aria_hidden (type boolean is ignored) ignore type: true
 
-    if (this.aria_label != null) {  
-      buffer.writeAll(["\"aria-label\":\`", this.aria_label, "\`,"], "");
-    }
+    // NOTE: skip serialization of aria_label (type string is ignored) ignore type: true
 
-    if (this.kw_class /** WARN: class is rewritten as it's a keyword */ != null) {  
-      buffer.writeAll(["\"class\":\`", this.kw_class /** WARN: class is rewritten as it's a keyword */, "\`,"], "");
-    }
+    // NOTE: skip serialization of kw_class /** WARN: class is rewritten as it's a keyword */ (type string is ignored) ignore type: true
 
-    if (this.clip_path != null) {  
-      buffer.writeAll(["\"clip-path\":\`", this.clip_path, "\`,"], "");
-    }
+    // NOTE: skip serialization of clip_path (type string is ignored) ignore type: true
 
-    if (this.clockwise != null) {  
-      buffer.writeAll(["\"clockwise\":", this.clockwise, ","], "");
-    }
+    // NOTE: skip serialization of clockwise (type number is ignored) ignore type: true
 
-    if (this.cursor != null) {  
-      buffer.writeAll(["\"cursor\":\`", this.cursor, "\`,"], "");
-    }
+    // NOTE: skip serialization of cursor (type string is ignored) ignore type: true
 
-    if (this.cx != null) {  
-      buffer.writeAll(["\"cx\":", this.cx, ","], "");
-    }
+    // NOTE: skip serialization of cx (type number is ignored) ignore type: true
 
-    if (this.cy != null) {  
-      buffer.writeAll(["\"cy\":", this.cy, ","], "");
-    }
+    // NOTE: skip serialization of cy (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of d (type SVGPath is ignored)} 
+    // NOTE: skip serialization of d (type SVGPath is ignored) ignore type: true
 
     if (this.dashstyle != null) {  
-      buffer.writeAll(["\"dashstyle\":\`", this.dashstyle, "\`,"], "");
+      buffer.writeAll(["\"dashstyle\":\`",this.dashstyle, "\`,"], "");
     }
 
-    if (this.depth != null) {  
-      buffer.writeAll(["\"depth\":", this.depth, ","], "");
-    }
+    // NOTE: skip serialization of depth (type number is ignored) ignore type: true
 
-    if (this.display != null) {  
-      buffer.writeAll(["\"display\":\`", this.display, "\`,"], "");
-    }
+    // NOTE: skip serialization of display (type string is ignored) ignore type: true
 
-    if (this.dominant_baseline != null) {  
-      buffer.writeAll(["\"dominant-baseline\":\`", this.dominant_baseline, "\`,"], "");
-    }
+    // NOTE: skip serialization of dominant_baseline (type string is ignored) ignore type: true
 
-    if (this.dx != null) {  
-      buffer.writeAll(["\"dx\":", this.dx, ","], "");
-    }
+    // NOTE: skip serialization of dx (type number is ignored) ignore type: true
 
-    if (this.dy != null) {  
-      buffer.writeAll(["\"dy\":", this.dy, ","], "");
-    }
+    // NOTE: skip serialization of dy (type number is ignored) ignore type: true
 
-    if (this.end != null) {  
-      buffer.writeAll(["\"end\":", this.end, ","], "");
-    }
+    // NOTE: skip serialization of end (type number is ignored) ignore type: true
 
-    if (this.fill != null) {  
-      buffer.writeAll(["\"fill\":\`", this.fill, "\`,"], "");
-    }
+    // NOTE: skip serialization of fill (type string is ignored) ignore type: true
 
-    if (this.fill_opacity != null) {  
-      buffer.writeAll(["\"fill-opacity\":", this.fill_opacity, ","], "");
-    }
+    // NOTE: skip serialization of fill_opacity (type number is ignored) ignore type: true
 
-    if (this.filter != null) {  
-      buffer.writeAll(["\"filter\":\`", this.filter, "\`,"], "");
-    }
+    // NOTE: skip serialization of filter (type string is ignored) ignore type: true
 
-    if (this.filterUnits != null) {  
-      buffer.writeAll(["\"filterUnits\":\`", this.filterUnits, "\`,"], "");
-    }
+    // NOTE: skip serialization of filterUnits (type string is ignored) ignore type: true
 
-    if (this.flood_color != null) {  
-      buffer.writeAll(["\"flood-color\":\`", this.flood_color, "\`,"], "");
-    }
+    // NOTE: skip serialization of flood_color (type string is ignored) ignore type: true
 
-    if (this.flood_opacity != null) {  
-      buffer.writeAll(["\"flood-opacity\":", this.flood_opacity, ","], "");
-    }
+    // NOTE: skip serialization of flood_opacity (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of gradientUnits (type "userSpaceOnUse" is ignored)} 
+    // NOTE: skip serialization of gradientUnits (type "userSpaceOnUse" is ignored) ignore type: true
 
-    if (this.height != null) {  
-      buffer.writeAll(["\"height\":", this.height, ","], "");
-    }
+    // NOTE: skip serialization of height (type number is ignored) ignore type: true
 
-    if (this.href != null) {  
-      buffer.writeAll(["\"href\":\`", this.href, "\`,"], "");
-    }
+    // NOTE: skip serialization of href (type string is ignored) ignore type: true
 
-    if (this.id != null) {  
-      buffer.writeAll(["\"id\":\`", this.id, "\`,"], "");
-    }
+    // NOTE: skip serialization of id (type string is ignored) ignore type: true
 
-    if (this.kw_in /** WARN: in is rewritten as it's a keyword */ != null) {  
-      buffer.writeAll(["\"in\":\`", this.kw_in /** WARN: in is rewritten as it's a keyword */, "\`,"], "");
-    }
+    // NOTE: skip serialization of kw_in /** WARN: in is rewritten as it's a keyword */ (type string is ignored) ignore type: true
 
-    if (this.innerR != null) {  
-      buffer.writeAll(["\"innerR\":", this.innerR, ","], "");
-    }
+    // NOTE: skip serialization of innerR (type number is ignored) ignore type: true
 
-    if (this.inverted != null) {  
-      buffer.writeAll(["\"inverted\":", this.inverted, ","], "");
-    }
+    // NOTE: skip serialization of inverted (type boolean is ignored) ignore type: true
 
-    if (this.longArc != null) {  
-      buffer.writeAll(["\"longArc\":", this.longArc, ","], "");
-    }
+    // NOTE: skip serialization of longArc (type number is ignored) ignore type: true
 
-    if (this.markerHeight != null) {  
-      buffer.writeAll(["\"markerHeight\":", this.markerHeight, ","], "");
-    }
+    // NOTE: skip serialization of markerHeight (type number is ignored) ignore type: true
 
-    if (this.markerWidth != null) {  
-      buffer.writeAll(["\"markerWidth\":", this.markerWidth, ","], "");
-    }
+    // NOTE: skip serialization of markerWidth (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of matrix (type number[] is ignored)} 
+    // NOTE: skip serialization of matrix (type number[] is ignored) ignore type: true
 
-    if (this.offset != null) {  
-      buffer.writeAll(["\"offset\":", this.offset, ","], "");
-    }
+    // NOTE: skip serialization of offset (type number is ignored) ignore type: true
 
-    if (this.opacity != null) {  
-      buffer.writeAll(["\"opacity\":", this.opacity, ","], "");
-    }
+    // NOTE: skip serialization of opacity (type number is ignored) ignore type: true
 
-    if (this.open != null) {  
-      buffer.writeAll(["\"open\":", this.open, ","], "");
-    }
+    // NOTE: skip serialization of open (type boolean is ignored) ignore type: true
 
-    if (this.padding != null) {  
-      buffer.writeAll(["\"padding\":", this.padding, ","], "");
-    }
+    // NOTE: skip serialization of padding (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of paddingLeft (type "unset" is ignored)} 
+    // NOTE: skip serialization of paddingLeft (type "unset" is ignored) ignore type: true
 
-    // NOTE: skip serialization of paddingRight (type "unset" is ignored)} 
+    // NOTE: skip serialization of paddingRight (type "unset" is ignored) ignore type: true
 
-    if (this.patternContentUnits != null) {  
-      buffer.writeAll(["\"patternContentUnits\":\`", this.patternContentUnits, "\`,"], "");
-    }
+    // NOTE: skip serialization of patternContentUnits (type string is ignored) ignore type: true
 
-    if (this.patternTransform != null) {  
-      buffer.writeAll(["\"patternTransform\":\`", this.patternTransform, "\`,"], "");
-    }
+    // NOTE: skip serialization of patternTransform (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of patternUnits (type "userSpaceOnUse" is ignored)} 
+    // NOTE: skip serialization of patternUnits (type "userSpaceOnUse" is ignored) ignore type: true
 
-    if (this.preserveAspectRatio != null) {  
-      buffer.writeAll(["\"preserveAspectRatio\":\`", this.preserveAspectRatio, "\`,"], "");
-    }
+    // NOTE: skip serialization of preserveAspectRatio (type string is ignored) ignore type: true
 
-    if (this.r != null) {  
-      buffer.writeAll(["\"r\":", this.r, ","], "");
-    }
+    // NOTE: skip serialization of r (type number is ignored) ignore type: true
 
-    if (this.refX != null) {  
-      buffer.writeAll(["\"refX\":", this.refX, ","], "");
-    }
+    // NOTE: skip serialization of refX (type number is ignored) ignore type: true
 
-    if (this.refY != null) {  
-      buffer.writeAll(["\"refY\":", this.refY, ","], "");
-    }
+    // NOTE: skip serialization of refY (type number is ignored) ignore type: true
 
-    if (this.rx != null) {  
-      buffer.writeAll(["\"rx\":", this.rx, ","], "");
-    }
+    // NOTE: skip serialization of rx (type number is ignored) ignore type: true
 
-    if (this.ry != null) {  
-      buffer.writeAll(["\"ry\":", this.ry, ","], "");
-    }
+    // NOTE: skip serialization of ry (type number is ignored) ignore type: true
 
-    if (this.role != null) {  
-      buffer.writeAll(["\"role\":\`", this.role, "\`,"], "");
-    }
+    // NOTE: skip serialization of role (type string is ignored) ignore type: true
 
-    if (this.rotation != null) {  
-      buffer.writeAll(["\"rotation\":", this.rotation, ","], "");
-    }
+    // NOTE: skip serialization of rotation (type number is ignored) ignore type: true
 
-    if (this.rotationOriginX != null) {  
-      buffer.writeAll(["\"rotationOriginX\":", this.rotationOriginX, ","], "");
-    }
+    // NOTE: skip serialization of rotationOriginX (type number is ignored) ignore type: true
 
-    if (this.rotationOriginY != null) {  
-      buffer.writeAll(["\"rotationOriginY\":", this.rotationOriginY, ","], "");
-    }
+    // NOTE: skip serialization of rotationOriginY (type number is ignored) ignore type: true
 
-    if (this.scaleX != null) {  
-      buffer.writeAll(["\"scaleX\":", this.scaleX, ","], "");
-    }
+    // NOTE: skip serialization of scaleX (type number is ignored) ignore type: true
 
-    if (this.scaleY != null) {  
-      buffer.writeAll(["\"scaleY\":", this.scaleY, ","], "");
-    }
+    // NOTE: skip serialization of scaleY (type number is ignored) ignore type: true
 
-    if (this.slope != null) {  
-      buffer.writeAll(["\"slope\":", this.slope, ","], "");
-    }
+    // NOTE: skip serialization of slope (type number is ignored) ignore type: true
 
-    if (this.start != null) {  
-      buffer.writeAll(["\"start\":", this.start, ","], "");
-    }
+    // NOTE: skip serialization of start (type number is ignored) ignore type: true
 
-    if (this.stdDeviation != null) {  
-      buffer.writeAll(["\"stdDeviation\":", this.stdDeviation, ","], "");
-    }
+    // NOTE: skip serialization of stdDeviation (type number is ignored) ignore type: true
 
     if (this.stroke != null) {  
-      buffer.writeAll(["\"stroke\":\`", this.stroke, "\`,"], "");
+      buffer.writeAll(["\"stroke\":\`",this.stroke, "\`,"], "");
     }
 
-    if (this.stroke_linecap != null) {  
-      buffer.writeAll(["\"stroke-linecap\":\`", this.stroke_linecap, "\`,"], "");
-    }
+    // NOTE: skip serialization of stroke_linecap (type string is ignored) ignore type: true
 
-    if (this.stroke_linejoin != null) {  
-      buffer.writeAll(["\"stroke-linejoin\":\`", this.stroke_linejoin, "\`,"], "");
-    }
+    // NOTE: skip serialization of stroke_linejoin (type string is ignored) ignore type: true
 
-    if (this.stroke_opacity != null) {  
-      buffer.writeAll(["\"stroke-opacity\":", this.stroke_opacity, ","], "");
-    }
+    // NOTE: skip serialization of stroke_opacity (type number is ignored) ignore type: true
 
-    if (this.stroke_width != null) {  
-      buffer.writeAll(["\"stroke-width\":", this.stroke_width, ","], "");
-    }
+    // NOTE: skip serialization of stroke_width (type number is ignored) ignore type: true
 
-    if (this.strokeWidth != null) {  
-      buffer.writeAll(["\"strokeWidth\":", this.strokeWidth, ","], "");
-    }
+    // NOTE: skip serialization of strokeWidth (type number is ignored) ignore type: true
 
-    if (this.stop_color != null) {  
-      buffer.writeAll(["\"stop-color\":\`", this.stop_color, "\`,"], "");
-    }
+    // NOTE: skip serialization of stop_color (type string is ignored) ignore type: true
 
-    if (this.stop_opacity != null) {  
-      buffer.writeAll(["\"stop-opacity\":", this.stop_opacity, ","], "");
-    }
+    // NOTE: skip serialization of stop_opacity (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of style (type CSSObject is ignored)} 
+    // NOTE: skip serialization of style (type CSSObject is ignored) ignore type: true
 
-    // NOTE: skip serialization of sweep_flag (type 1 is ignored)} 
+    // NOTE: skip serialization of sweep_flag (type 1 is ignored) ignore type: true
 
-    if (this.tabindex != null) {  
-      buffer.writeAll(["\"tabindex\":", this.tabindex, ","], "");
-    }
+    // NOTE: skip serialization of tabindex (type number is ignored) ignore type: true
 
-    if (this.tableValues != null) {  
-      buffer.writeAll(["\"tableValues\":\`", this.tableValues, "\`,"], "");
-    }
+    // NOTE: skip serialization of tableValues (type string is ignored) ignore type: true
 
-    if (this.text != null) {  
-      buffer.writeAll(["\"text\":\`", this.text, "\`,"], "");
-    }
+    // NOTE: skip serialization of text (type string is ignored) ignore type: true
 
-    if (this.text_align != null) {  
-      buffer.writeAll(["\"text-align\":\`", this.text_align, "\`,"], "");
-    }
+    // NOTE: skip serialization of text_align (type string is ignored) ignore type: true
 
-    if (this.text_anchor != null) {  
-      buffer.writeAll(["\"text-anchor\":\`", this.text_anchor, "\`,"], "");
-    }
+    // NOTE: skip serialization of text_anchor (type string is ignored) ignore type: true
 
-    if (this.title != null) {  
-      buffer.writeAll(["\"title\":\`", this.title, "\`,"], "");
-    }
+    // NOTE: skip serialization of title (type string is ignored) ignore type: true
 
-    if (this.transform != null) {  
-      buffer.writeAll(["\"transform\":\`", this.transform, "\`,"], "");
-    }
+    // NOTE: skip serialization of transform (type string is ignored) ignore type: true
 
-    if (this.translateX != null) {  
-      buffer.writeAll(["\"translateX\":", this.translateX, ","], "");
-    }
+    // NOTE: skip serialization of translateX (type number is ignored) ignore type: true
 
-    if (this.translateY != null) {  
-      buffer.writeAll(["\"translateY\":", this.translateY, ","], "");
-    }
+    // NOTE: skip serialization of translateY (type number is ignored) ignore type: true
 
-    if (this.type != null) {  
-      buffer.writeAll(["\"type\":\`", this.type, "\`,"], "");
-    }
+    // NOTE: skip serialization of type (type string is ignored) ignore type: true
 
-    if (this.version != null) {  
-      buffer.writeAll(["\"version\":\`", this.version, "\`,"], "");
-    }
+    // NOTE: skip serialization of version (type string is ignored) ignore type: true
 
-    if (this.viewBox != null) {  
-      buffer.writeAll(["\"viewBox\":\`", this.viewBox, "\`,"], "");
-    }
+    // NOTE: skip serialization of viewBox (type string is ignored) ignore type: true
 
-    if (this.visibility != null) {  
-      buffer.writeAll(["\"visibility\":\`", this.visibility, "\`,"], "");
-    }
+    // NOTE: skip serialization of visibility (type string is ignored) ignore type: true
 
     if (this.width != null) {  
-      buffer.writeAll(["\"width\":", this.width, ","], "");
+      buffer.writeAll(["\"width\":",this.width, ","], "");
     }
 
-    if (this.x != null) {  
-      buffer.writeAll(["\"x\":", this.x, ","], "");
-    }
+    // NOTE: skip serialization of x (type number is ignored) ignore type: true
 
-    if (this.x1 != null) {  
-      buffer.writeAll(["\"x1\":", this.x1, ","], "");
-    }
+    // NOTE: skip serialization of x1 (type number is ignored) ignore type: true
 
-    if (this.x2 != null) {  
-      buffer.writeAll(["\"x2\":", this.x2, ","], "");
-    }
+    // NOTE: skip serialization of x2 (type number is ignored) ignore type: true
 
-    if (this.xmlns != null) {  
-      buffer.writeAll(["\"xmlns\":\`", this.xmlns, "\`,"], "");
-    }
+    // NOTE: skip serialization of xmlns (type string is ignored) ignore type: true
 
-    if (this.y != null) {  
-      buffer.writeAll(["\"y\":", this.y, ","], "");
-    }
+    // NOTE: skip serialization of y (type number is ignored) ignore type: true
 
-    if (this.y1 != null) {  
-      buffer.writeAll(["\"y1\":", this.y1, ","], "");
-    }
+    // NOTE: skip serialization of y1 (type number is ignored) ignore type: true
 
-    if (this.y2 != null) {  
-      buffer.writeAll(["\"y2\":", this.y2, ","], "");
-    }
+    // NOTE: skip serialization of y2 (type number is ignored) ignore type: true
 
-    if (this.z != null) {  
-      buffer.writeAll(["\"z\":", this.z, ","], "");
-    }
+    // NOTE: skip serialization of z (type number is ignored) ignore type: true
 
-    if (this.zIndex != null) {  
-      buffer.writeAll(["\"zIndex\":", this.zIndex, ","], "");
-    }
+    // NOTE: skip serialization of zIndex (type number is ignored) ignore type: true
 
-    if (this.borderRadius != null) {  
-      buffer.writeAll(["\"borderRadius\":\`", this.borderRadius, "\`,"], "");
-    }
+    // NOTE: skip serialization of borderRadius (type string is ignored) ignore type: true
 
-    if (this.brBoxHeight != null) {  
-      buffer.writeAll(["\"brBoxHeight\":", this.brBoxHeight, ","], "");
-    }
+    // NOTE: skip serialization of brBoxHeight (type number is ignored) ignore type: true
 
-    if (this.brBoxY != null) {  
-      buffer.writeAll(["\"brBoxY\":", this.brBoxY, ","], "");
-    }
+    // NOTE: skip serialization of brBoxY (type number is ignored) ignore type: true
   }
 
 }

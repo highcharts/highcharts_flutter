@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,98 +24,100 @@ import 'OptionFragment.dart';
  */
 class DumbbellSeriesOptions extends AreaRangeSeriesOptions {
   DumbbellSeriesOptions( {
+    super.accessibility = null,
+    super.allAreas = null,
+    super.allowPointSelect = null,
+    super.animationLimit = null,
+    super.boostBlending = null,
+    super.boostThreshold = null,
+    super.borderColor = null,
+    super.borderWidth = null,
+    super.className = null,
+    super.clip = null,
+    super.color = null,
+    super.colorAxis = null,
+    super.colorIndex = null,
+    super.colorKey = null,
+    super.compare = null,
+    super.compareStart = null,
+    super.connectEnds = null,
+    super.connectNulls = null,
     this.connectorColor = null,
+    super.connectors = null,
     this.connectorWidth = null,
+    super.crisp = null,
+    super.cropThreshold = null,
+    super.cumulative = null,
+    super.cursor = null,
+    super.dashStyle = null,
+    super.dataGrouping = null,
+    super.dataLabels = null,
+    super.dataSorting = null,
+    super.description = null,
+    super.dragDrop = null,
+    super.enableMouseTracking = null,
+    super.events = null,
+    super.fillColor = null,
+    super.fillOpacity = null,
+    super.findNearestPointBy = null,
+    super.gapSize = null,
+    super.gapUnit = null,
+    super.getExtremesFromAll = null,
     this.groupPadding = null,
+    super.includeInDataExport = null,
+    super.joinBy = null,
+    super.keys = null,
+    super.label = null,
+    super.lastPrice = null,
+    super.lastVisiblePrice = null,
+    super.legendSymbol = null,
+    super.linecap = null,
+    super.lineWidth = null,
+    super.linkedTo = null,
+    this.lowColor = null,
+    super.marker = null,
+    super.navigatorOptions = null,
+    super.negativeColor = null,
+    super.negativeFillColor = null,
+    super.onPoint = null,
+    super.opacity = null,
+    super.point = null,
+    super.pointInterval = null,
+    super.pointIntervalUnit = null,
     this.pointPadding = null,
-    this.lowColor = null
+    super.pointPlacement = null,
+    super.pointRange = null,
+    super.pointStart = null,
+    super.relativeXValue = null,
+    super.selected = null,
+    super.showCheckbox = null,
+    super.showInLegend = null,
+    super.showInNavigator = null,
+    super.skipKeyboardNavigation = null,
+    super.softThreshold = null,
+    super.stacking = null,
+    super.step = null,
+    super.stickyTracking = null,
+    super.threshold = null,
+    super.tooltip = null,
+    super.trackByArea = null,
+    super.turboThreshold = null,
+    super.visible = null,
+    super.zIndex = null,
+    super.zoneAxis = null,
+    super.zones = null
   }) : super();
-  // NOTE: states skipped - type Generic is ignored in gen
+  // NOTE: states skipped - type Generic is ignored in gen 
 
-  /**
-   * Color of the line that connects the dumbbell point's values.
-   * By default it is the series' color.  
-      */
   String? connectorColor;
-    /*
-  String get connectorColor { 
-    if (this._connectorColor == null) {
-      this._connectorColor = "";
-    }
-    return this._connectorColor!;
-  }
-
-  void set connectorColor (String v) {
-    this._connectorColor = v;
-  }
-    */
     
-  /**
-   * Pixel width of the line that connects the dumbbell point's
-   * values. 
-   * 
-   * Defaults to '1'. 
-      */
   double? connectorWidth;
-    /*
-  double get connectorWidth { 
-    if (this._connectorWidth == null) {
-      this._connectorWidth = 0;
-    }
-    return this._connectorWidth!;
-  }
-
-  void set connectorWidth (double v) {
-    this._connectorWidth = v;
-  }
-    */
     
   double? groupPadding;
-    /*
-  double get groupPadding { 
-    if (this._groupPadding == null) {
-      this._groupPadding = 0;
-    }
-    return this._groupPadding!;
-  }
-
-  void set groupPadding (double v) {
-    this._groupPadding = v;
-  }
-    */
     
   double? pointPadding;
-    /*
-  double get pointPadding { 
-    if (this._pointPadding == null) {
-      this._pointPadding = 0;
-    }
-    return this._pointPadding!;
-  }
-
-  void set pointPadding (double v) {
-    this._pointPadding = v;
-  }
-    */
     
-  /**
-   * Color of the start markers in a dumbbell graph. 
-   * 
-   * Defaults to '#333333'. 
-      */
   String? lowColor;
-    /*
-  String get lowColor { 
-    if (this._lowColor == null) {
-      this._lowColor = "";
-    }
-    return this._lowColor!;
-  }
-
-  void set lowColor (String v) {
-    this._lowColor = v;
-  }
-    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -125,26 +127,26 @@ class DumbbellSeriesOptions extends AreaRangeSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of states (type Generic is ignored)} 
+    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
 
     if (this.connectorColor != null) {  
-      buffer.writeAll(["\"connectorColor\":\`", this.connectorColor, "\`,"], "");
+      buffer.writeAll(["\"connectorColor\":\`",this.connectorColor, "\`,"], "");
     }
 
     if (this.connectorWidth != null) {  
-      buffer.writeAll(["\"connectorWidth\":", this.connectorWidth, ","], "");
+      buffer.writeAll(["\"connectorWidth\":",this.connectorWidth, ","], "");
     }
 
     if (this.groupPadding != null) {  
-      buffer.writeAll(["\"groupPadding\":", this.groupPadding, ","], "");
+      buffer.writeAll(["\"groupPadding\":",this.groupPadding, ","], "");
     }
 
     if (this.pointPadding != null) {  
-      buffer.writeAll(["\"pointPadding\":", this.pointPadding, ","], "");
+      buffer.writeAll(["\"pointPadding\":",this.pointPadding, ","], "");
     }
 
     if (this.lowColor != null) {  
-      buffer.writeAll(["\"lowColor\":\`", this.lowColor, "\`,"], "");
+      buffer.writeAll(["\"lowColor\":\`",this.lowColor, "\`,"], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,23 +23,9 @@ import 'OptionFragment.dart';
  * PointUnselectEvent 
  */
 class PointUnselectEvent extends Event {
-  PointUnselectEvent( {
-    this.accumulate = null
-  }) : super();
-  bool? accumulate;
-    /*
-  bool get accumulate { 
-    if (this._accumulate == null) {
-      this._accumulate = false;
-    }
-    return this._accumulate!;
-  }
+  PointUnselectEvent( ) : super();
+  // NOTE: accumulate skipped - type boolean is ignored in gen 
 
-  void set accumulate (bool v) {
-    this._accumulate = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -48,9 +34,7 @@ class PointUnselectEvent extends Event {
     super.toJSONInner(buffer);
 
     
-    if (this.accumulate != null) {  
-      buffer.writeAll(["\"accumulate\":", this.accumulate, ","], "");
-    }
+    // NOTE: skip serialization of accumulate (type boolean is ignored) ignore type: true
   }
 
 }

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -34,11 +34,11 @@ class HoverDataObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of hoverPoint (type Point is ignored)} 
+    // NOTE: skip serialization of hoverPoint (type Point is ignored) ignore type: true
 
-    // NOTE: skip serialization of hoverPoints (type Point[] is ignored)} 
+    // NOTE: skip serialization of hoverPoints (type Point[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of hoverSeries (type Series is ignored)} 
+    // NOTE: skip serialization of hoverSeries (type Series is ignored) ignore type: true
   }
 
 }

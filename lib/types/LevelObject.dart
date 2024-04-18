@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -26,68 +26,15 @@ import 'OptionFragment.dart';
  * LevelObject 
  */
 class LevelObject extends OptionFragment {
-  LevelObject( {
-    this.color = null,
-    this.colorIndex = null,
-    this.levelNumber = null,
-    this.pointIndex = null
-  }) : super();
-  String? color;
-    /*
-  String get color { 
-    if (this._color == null) {
-      this._color = "";
-    }
-    return this._color!;
-  }
+  LevelObject( ) : super();
+  // NOTE: color skipped - type string is ignored in gen 
 
-  void set color (String v) {
-    this._color = v;
-  }
-    */
-    
-  double? colorIndex;
-    /*
-  double get colorIndex { 
-    if (this._colorIndex == null) {
-      this._colorIndex = 0;
-    }
-    return this._colorIndex!;
-  }
+  // NOTE: colorIndex skipped - type number is ignored in gen 
 
-  void set colorIndex (double v) {
-    this._colorIndex = v;
-  }
-    */
-    
-  double? levelNumber;
-    /*
-  double get levelNumber { 
-    if (this._levelNumber == null) {
-      this._levelNumber = 0;
-    }
-    return this._levelNumber!;
-  }
+  // NOTE: levelNumber skipped - type number is ignored in gen 
 
-  void set levelNumber (double v) {
-    this._levelNumber = v;
-  }
-    */
-    
-  double? pointIndex;
-    /*
-  double get pointIndex { 
-    if (this._pointIndex == null) {
-      this._pointIndex = 0;
-    }
-    return this._pointIndex!;
-  }
+  // NOTE: pointIndex skipped - type number is ignored in gen 
 
-  void set pointIndex (double v) {
-    this._pointIndex = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -96,43 +43,35 @@ class LevelObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of bBox (type Generic is ignored)} 
+    // NOTE: skip serialization of bBox (type Generic is ignored) ignore type: true
 
-    if (this.color != null) {  
-      buffer.writeAll(["\"color\":\`", this.color, "\`,"], "");
-    }
+    // NOTE: skip serialization of color (type string is ignored) ignore type: true
 
-    if (this.colorIndex != null) {  
-      buffer.writeAll(["\"colorIndex\":", this.colorIndex, ","], "");
-    }
+    // NOTE: skip serialization of colorIndex (type number is ignored) ignore type: true
 
-    if (this.levelNumber != null) {  
-      buffer.writeAll(["\"levelNumber\":", this.levelNumber, ","], "");
-    }
+    // NOTE: skip serialization of levelNumber (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of levelSeries (type Series[] is ignored)} 
+    // NOTE: skip serialization of levelSeries (type Series[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of levelSeriesOptions (type SeriesOptions[] is ignored)} 
+    // NOTE: skip serialization of levelSeriesOptions (type SeriesOptions[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of lowerSeries (type Series is ignored)} 
+    // NOTE: skip serialization of lowerSeries (type Series is ignored) ignore type: true
 
-    // NOTE: skip serialization of lowerSeriesOptions (type SeriesOptions is ignored)} 
+    // NOTE: skip serialization of lowerSeriesOptions (type SeriesOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of oldExtremes (type Generic is ignored)} 
+    // NOTE: skip serialization of oldExtremes (type Generic is ignored) ignore type: true
 
-    if (this.pointIndex != null) {  
-      buffer.writeAll(["\"pointIndex\":", this.pointIndex, ","], "");
-    }
+    // NOTE: skip serialization of pointIndex (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of pointOptions (type PointShortOptions is ignored)} 
+    // NOTE: skip serialization of pointOptions (type PointShortOptions is ignored) ignore type: 1
 
-    // NOTE: skip serialization of seriesOptions (type SeriesOptions is ignored)} 
+    // NOTE: skip serialization of seriesOptions (type SeriesOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of seriesPurgedOptions (type SeriesOptions is ignored)} 
+    // NOTE: skip serialization of seriesPurgedOptions (type SeriesOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of shapeArgs (type SVGAttributes is ignored)} 
+    // NOTE: skip serialization of shapeArgs (type SVGAttributes is ignored) ignore type: true
 
-    // NOTE: skip serialization of resetZoomButton (type SVGElement is ignored)} 
+    // NOTE: skip serialization of resetZoomButton (type SVGElement is ignored) ignore type: true
   }
 
 }

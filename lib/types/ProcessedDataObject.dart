@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,53 +22,13 @@ import 'OptionFragment.dart';
  * ProcessedDataObject 
  */
 class ProcessedDataObject extends OptionFragment {
-  ProcessedDataObject( {
-    this.cropped = null,
-    this.cropStart = null,
-    this.closestPointRange = null
-  }) : super();
-  bool? cropped;
-    /*
-  bool get cropped { 
-    if (this._cropped == null) {
-      this._cropped = false;
-    }
-    return this._cropped!;
-  }
+  ProcessedDataObject( ) : super();
+  // NOTE: cropped skipped - type boolean is ignored in gen 
 
-  void set cropped (bool v) {
-    this._cropped = v;
-  }
-    */
-    
-  double? cropStart;
-    /*
-  double get cropStart { 
-    if (this._cropStart == null) {
-      this._cropStart = 0;
-    }
-    return this._cropStart!;
-  }
+  // NOTE: cropStart skipped - type number is ignored in gen 
 
-  void set cropStart (double v) {
-    this._cropStart = v;
-  }
-    */
-    
-  double? closestPointRange;
-    /*
-  double get closestPointRange { 
-    if (this._closestPointRange == null) {
-      this._closestPointRange = 0;
-    }
-    return this._closestPointRange!;
-  }
+  // NOTE: closestPointRange skipped - type number is ignored in gen 
 
-  void set closestPointRange (double v) {
-    this._closestPointRange = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -77,21 +37,15 @@ class ProcessedDataObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of xData (type number[] is ignored)} 
+    // NOTE: skip serialization of xData (type number[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of yData (type number[][] is ignored)} 
+    // NOTE: skip serialization of yData (type number[][] is ignored) ignore type: true
 
-    if (this.cropped != null) {  
-      buffer.writeAll(["\"cropped\":", this.cropped, ","], "");
-    }
+    // NOTE: skip serialization of cropped (type boolean is ignored) ignore type: true
 
-    if (this.cropStart != null) {  
-      buffer.writeAll(["\"cropStart\":", this.cropStart, ","], "");
-    }
+    // NOTE: skip serialization of cropStart (type number is ignored) ignore type: true
 
-    if (this.closestPointRange != null) {  
-      buffer.writeAll(["\"closestPointRange\":", this.closestPointRange, ","], "");
-    }
+    // NOTE: skip serialization of closestPointRange (type number is ignored) ignore type: true
   }
 
 }

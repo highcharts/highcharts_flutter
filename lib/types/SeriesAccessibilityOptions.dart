@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -28,63 +28,21 @@ class SeriesAccessibilityOptions extends OptionFragment {
     this.description = null,
     this.descriptionFormat = null,
     this.enabled = null,
-    this.exposeAsGroupOnly = null
+    this.exposeAsGroupOnly = null,
+    this.keyboardNavigation = null,
+    this.point = null
   }) : super();
   String? description;
-    /*
-  String get description { 
-    if (this._description == null) {
-      this._description = "";
-    }
-    return this._description!;
-  }
-
-  void set description (String v) {
-    this._description = v;
-  }
-    */
     
   String? descriptionFormat;
-    /*
-  String get descriptionFormat { 
-    if (this._descriptionFormat == null) {
-      this._descriptionFormat = "";
-    }
-    return this._descriptionFormat!;
-  }
-
-  void set descriptionFormat (String v) {
-    this._descriptionFormat = v;
-  }
-    */
     
   bool? enabled;
-    /*
-  bool get enabled { 
-    if (this._enabled == null) {
-      this._enabled = false;
-    }
-    return this._enabled!;
-  }
-
-  void set enabled (bool v) {
-    this._enabled = v;
-  }
-    */
     
   bool? exposeAsGroupOnly;
-    /*
-  bool get exposeAsGroupOnly { 
-    if (this._exposeAsGroupOnly == null) {
-      this._exposeAsGroupOnly = false;
-    }
-    return this._exposeAsGroupOnly!;
-  }
-
-  void set exposeAsGroupOnly (bool v) {
-    this._exposeAsGroupOnly = v;
-  }
-    */
+    
+  SeriesAccessibilityKeyboardNavigationOptions? keyboardNavigation;
+    
+  AccessibilityPointOptions? point;
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -95,24 +53,28 @@ class SeriesAccessibilityOptions extends OptionFragment {
 
     
     if (this.description != null) {  
-      buffer.writeAll(["\"description\":\`", this.description, "\`,"], "");
+      buffer.writeAll(["\"description\":\`",this.description, "\`,"], "");
     }
 
     if (this.descriptionFormat != null) {  
-      buffer.writeAll(["\"descriptionFormat\":\`", this.descriptionFormat, "\`,"], "");
+      buffer.writeAll(["\"descriptionFormat\":\`",this.descriptionFormat, "\`,"], "");
     }
 
     if (this.enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
+      buffer.writeAll(["\"enabled\":",this.enabled, ","], "");
     }
 
     if (this.exposeAsGroupOnly != null) {  
-      buffer.writeAll(["\"exposeAsGroupOnly\":", this.exposeAsGroupOnly, ","], "");
+      buffer.writeAll(["\"exposeAsGroupOnly\":",this.exposeAsGroupOnly, ","], "");
     }
 
-    // NOTE: skip serialization of keyboardNavigation (type SeriesAccessibilityKeyboardNavigationOptions is ignored)} 
+    if (this.keyboardNavigation != null) {  
+      buffer.writeAll(["\"keyboardNavigation\":",this.keyboardNavigation?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of point (type AccessibilityPointOptions is ignored)} 
+    if (this.point != null) {  
+      buffer.writeAll(["\"point\":",this.point?.toJSON(), ","], "");
+    }
   }
 
 }

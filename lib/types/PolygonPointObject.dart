@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,9 +24,9 @@ import 'OptionFragment.dart';
  */
 class PolygonPointObject extends Array {
   PolygonPointObject( ) : super();
-  // NOTE: 0 skipped - type number is ignored in gen
+  // NOTE: 0 skipped - type number is ignored in gen 
 
-  // NOTE: 1 skipped - type number is ignored in gen
+  // NOTE: 1 skipped - type number is ignored in gen 
 
 
   //////////////////////////////////////////////////////////////////////////////
@@ -36,9 +36,9 @@ class PolygonPointObject extends Array {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of 0 (type number is ignored)} 
+    // NOTE: skip serialization of 0 (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of 1 (type number is ignored)} 
+    // NOTE: skip serialization of 1 (type number is ignored) ignore type: true
   }
 
 }

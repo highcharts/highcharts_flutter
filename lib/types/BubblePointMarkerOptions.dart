@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,22 +24,18 @@ import 'OptionFragment.dart';
  */
 class BubblePointMarkerOptions extends PointMarkerOptions {
   BubblePointMarkerOptions( {
-    this.fillOpacity = null
+    super.enabled = null,
+    super.enabledThreshold = null,
+    super.fillColor = null,
+    super.height = null,
+    super.lineColor = null,
+    super.lineWidth = null,
+    super.radius = null,
+    super.symbol = null,
+    super.width = null
   }) : super();
-  double? fillOpacity;
-    /*
-  double get fillOpacity { 
-    if (this._fillOpacity == null) {
-      this._fillOpacity = 0;
-    }
-    return this._fillOpacity!;
-  }
+  // NOTE: fillOpacity skipped - type number is ignored in gen 
 
-  void set fillOpacity (double v) {
-    this._fillOpacity = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -48,9 +44,7 @@ class BubblePointMarkerOptions extends PointMarkerOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.fillOpacity != null) {  
-      buffer.writeAll(["\"fillOpacity\":", this.fillOpacity, ","], "");
-    }
+    // NOTE: skip serialization of fillOpacity (type number is ignored) ignore type: true
   }
 
 }

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,83 +23,17 @@ import 'OptionFragment.dart';
  * NavigationBindingsAttractionObject 
  */
 class NavigationBindingsAttractionObject extends OptionFragment {
-  NavigationBindingsAttractionObject( {
-    this.x = null,
-    this.y = null,
-    this.below = null,
-    this.xAxis = null,
-    this.yAxis = null
-  }) : super();
-  double? x;
-    /*
-  double get x { 
-    if (this._x == null) {
-      this._x = 0;
-    }
-    return this._x!;
-  }
+  NavigationBindingsAttractionObject( ) : super();
+  // NOTE: x skipped - type number is ignored in gen 
 
-  void set x (double v) {
-    this._x = v;
-  }
-    */
-    
-  double? y;
-    /*
-  double get y { 
-    if (this._y == null) {
-      this._y = 0;
-    }
-    return this._y!;
-  }
+  // NOTE: y skipped - type number is ignored in gen 
 
-  void set y (double v) {
-    this._y = v;
-  }
-    */
-    
-  bool? below;
-    /*
-  bool get below { 
-    if (this._below == null) {
-      this._below = false;
-    }
-    return this._below!;
-  }
+  // NOTE: below skipped - type boolean is ignored in gen 
 
-  void set below (bool v) {
-    this._below = v;
-  }
-    */
-    
-  double? xAxis;
-    /*
-  double get xAxis { 
-    if (this._xAxis == null) {
-      this._xAxis = 0;
-    }
-    return this._xAxis!;
-  }
+  // NOTE: xAxis skipped - type number is ignored in gen 
 
-  void set xAxis (double v) {
-    this._xAxis = v;
-  }
-    */
-    
-  double? yAxis;
-    /*
-  double get yAxis { 
-    if (this._yAxis == null) {
-      this._yAxis = 0;
-    }
-    return this._yAxis!;
-  }
+  // NOTE: yAxis skipped - type number is ignored in gen 
 
-  void set yAxis (double v) {
-    this._yAxis = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -108,27 +42,17 @@ class NavigationBindingsAttractionObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.x != null) {  
-      buffer.writeAll(["\"x\":", this.x, ","], "");
-    }
+    // NOTE: skip serialization of x (type number is ignored) ignore type: true
 
-    if (this.y != null) {  
-      buffer.writeAll(["\"y\":", this.y, ","], "");
-    }
+    // NOTE: skip serialization of y (type number is ignored) ignore type: true
 
-    if (this.below != null) {  
-      buffer.writeAll(["\"below\":", this.below, ","], "");
-    }
+    // NOTE: skip serialization of below (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of series (type Series is ignored)} 
+    // NOTE: skip serialization of series (type Series is ignored) ignore type: true
 
-    if (this.xAxis != null) {  
-      buffer.writeAll(["\"xAxis\":", this.xAxis, ","], "");
-    }
+    // NOTE: skip serialization of xAxis (type number is ignored) ignore type: true
 
-    if (this.yAxis != null) {  
-      buffer.writeAll(["\"yAxis\":", this.yAxis, ","], "");
-    }
+    // NOTE: skip serialization of yAxis (type number is ignored) ignore type: true
   }
 
 }

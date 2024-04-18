@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,23 +23,9 @@ import 'OptionFragment.dart';
  * PictorialPathOptions 
  */
 class PictorialPathOptions extends OptionFragment {
-  PictorialPathOptions( {
-    this.max = null
-  }) : super();
-  double? max;
-    /*
-  double get max { 
-    if (this._max == null) {
-      this._max = 0;
-    }
-    return this._max!;
-  }
+  PictorialPathOptions( ) : super();
+  // NOTE: max skipped - type number is ignored in gen 
 
-  void set max (double v) {
-    this._max = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -48,11 +34,9 @@ class PictorialPathOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of definition (type SVGPath is ignored)} 
+    // NOTE: skip serialization of definition (type SVGPath is ignored) ignore type: true
 
-    if (this.max != null) {  
-      buffer.writeAll(["\"max\":", this.max, ","], "");
-    }
+    // NOTE: skip serialization of max (type number is ignored) ignore type: true
   }
 
 }

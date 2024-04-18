@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,38 +23,11 @@ import 'OptionFragment.dart';
  * FrameSideObject 
  */
 class FrameSideObject extends FrameSideOptions {
-  FrameSideObject( {
-    this.frontFacing = null,
-    this.size = null
-  }) : super();
-  bool? frontFacing;
-    /*
-  bool get frontFacing { 
-    if (this._frontFacing == null) {
-      this._frontFacing = false;
-    }
-    return this._frontFacing!;
-  }
+  FrameSideObject( ) : super();
+  // NOTE: frontFacing skipped - type boolean is ignored in gen 
 
-  void set frontFacing (bool v) {
-    this._frontFacing = v;
-  }
-    */
-    
-  double? size;
-    /*
-  double get size { 
-    if (this._size == null) {
-      this._size = 0;
-    }
-    return this._size!;
-  }
+  // NOTE: size skipped - type number is ignored in gen 
 
-  void set size (double v) {
-    this._size = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -63,13 +36,9 @@ class FrameSideObject extends FrameSideOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.frontFacing != null) {  
-      buffer.writeAll(["\"frontFacing\":", this.frontFacing, ","], "");
-    }
+    // NOTE: skip serialization of frontFacing (type boolean is ignored) ignore type: true
 
-    if (this.size != null) {  
-      buffer.writeAll(["\"size\":", this.size, ","], "");
-    }
+    // NOTE: skip serialization of size (type number is ignored) ignore type: true
   }
 
 }

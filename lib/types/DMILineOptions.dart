@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,8 +23,11 @@ import 'OptionFragment.dart';
  * DMILineOptions 
  */
 class DMILineOptions extends OptionFragment {
-  DMILineOptions( ) : super();
-  
+  DMILineOptions( {
+    this.styles = null
+  }) : super();
+  CSSObject? styles;
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -33,7 +36,9 @@ class DMILineOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of styles (type CSSObject is ignored)} 
+    if (this.styles != null) {  
+      buffer.writeAll(["\"styles\":",this.styles?.toJSON(), ","], "");
+    }
   }
 
 }

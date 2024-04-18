@@ -12,168 +12,38 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
+import 'GridNode.dart';
 import 'OptionFragment.dart';
 
 /** 
  * GridNode 
  */
 class GridNode extends OptionFragment {
-  GridNode( {
-    this.collapsed = null,
-    this.collapseEnd = null,
-    this.collapseStart = null,
-    this.depth = null,
-    this.descendants = null,
-    this.id = null,
-    this.height = null,
-    this.name = null,
-    this.pos = null,
-    this.tickmarkOffset = null
-  }) : super();
-  bool? collapsed;
-    /*
-  bool get collapsed { 
-    if (this._collapsed == null) {
-      this._collapsed = false;
-    }
-    return this._collapsed!;
-  }
+  GridNode( ) : super();
+  // NOTE: collapsed skipped - type boolean is ignored in gen 
 
-  void set collapsed (bool v) {
-    this._collapsed = v;
-  }
-    */
-    
-  double? collapseEnd;
-    /*
-  double get collapseEnd { 
-    if (this._collapseEnd == null) {
-      this._collapseEnd = 0;
-    }
-    return this._collapseEnd!;
-  }
+  // NOTE: collapseEnd skipped - type number is ignored in gen 
 
-  void set collapseEnd (double v) {
-    this._collapseEnd = v;
-  }
-    */
-    
-  double? collapseStart;
-    /*
-  double get collapseStart { 
-    if (this._collapseStart == null) {
-      this._collapseStart = 0;
-    }
-    return this._collapseStart!;
-  }
+  // NOTE: collapseStart skipped - type number is ignored in gen 
 
-  void set collapseStart (double v) {
-    this._collapseStart = v;
-  }
-    */
-    
-  double? depth;
-    /*
-  double get depth { 
-    if (this._depth == null) {
-      this._depth = 0;
-    }
-    return this._depth!;
-  }
+  // NOTE: depth skipped - type number is ignored in gen 
 
-  void set depth (double v) {
-    this._depth = v;
-  }
-    */
-    
-  double? descendants;
-    /*
-  double get descendants { 
-    if (this._descendants == null) {
-      this._descendants = 0;
-    }
-    return this._descendants!;
-  }
+  // NOTE: descendants skipped - type number is ignored in gen 
 
-  void set descendants (double v) {
-    this._descendants = v;
-  }
-    */
-    
-  String? id;
-    /*
-  String get id { 
-    if (this._id == null) {
-      this._id = "";
-    }
-    return this._id!;
-  }
+  // NOTE: id skipped - type string is ignored in gen 
 
-  void set id (String v) {
-    this._id = v;
-  }
-    */
-    
-  double? height;
-    /*
-  double get height { 
-    if (this._height == null) {
-      this._height = 0;
-    }
-    return this._height!;
-  }
+  // NOTE: height skipped - type number is ignored in gen 
 
-  void set height (double v) {
-    this._height = v;
-  }
-    */
-    
-  String? name;
-    /*
-  String get name { 
-    if (this._name == null) {
-      this._name = "";
-    }
-    return this._name!;
-  }
+  // NOTE: name skipped - type string is ignored in gen 
 
-  void set name (String v) {
-    this._name = v;
-  }
-    */
-    
-  double? pos;
-    /*
-  double get pos { 
-    if (this._pos == null) {
-      this._pos = 0;
-    }
-    return this._pos!;
-  }
+  // NOTE: pos skipped - type number is ignored in gen 
 
-  void set pos (double v) {
-    this._pos = v;
-  }
-    */
-    
-  double? tickmarkOffset;
-    /*
-  double get tickmarkOffset { 
-    if (this._tickmarkOffset == null) {
-      this._tickmarkOffset = 0;
-    }
-    return this._tickmarkOffset!;
-  }
+  // NOTE: tickmarkOffset skipped - type number is ignored in gen 
 
-  void set tickmarkOffset (double v) {
-    this._tickmarkOffset = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -182,47 +52,27 @@ class GridNode extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of children (type GridNode[] is ignored)} 
+    // NOTE: skip serialization of children (type GridNode[] is ignored) ignore type: true
 
-    if (this.collapsed != null) {  
-      buffer.writeAll(["\"collapsed\":", this.collapsed, ","], "");
-    }
+    // NOTE: skip serialization of collapsed (type boolean is ignored) ignore type: true
 
-    if (this.collapseEnd != null) {  
-      buffer.writeAll(["\"collapseEnd\":", this.collapseEnd, ","], "");
-    }
+    // NOTE: skip serialization of collapseEnd (type number is ignored) ignore type: true
 
-    if (this.collapseStart != null) {  
-      buffer.writeAll(["\"collapseStart\":", this.collapseStart, ","], "");
-    }
+    // NOTE: skip serialization of collapseStart (type number is ignored) ignore type: true
 
-    if (this.depth != null) {  
-      buffer.writeAll(["\"depth\":", this.depth, ","], "");
-    }
+    // NOTE: skip serialization of depth (type number is ignored) ignore type: true
 
-    if (this.descendants != null) {  
-      buffer.writeAll(["\"descendants\":", this.descendants, ","], "");
-    }
+    // NOTE: skip serialization of descendants (type number is ignored) ignore type: true
 
-    if (this.id != null) {  
-      buffer.writeAll(["\"id\":\`", this.id, "\`,"], "");
-    }
+    // NOTE: skip serialization of id (type string is ignored) ignore type: true
 
-    if (this.height != null) {  
-      buffer.writeAll(["\"height\":", this.height, ","], "");
-    }
+    // NOTE: skip serialization of height (type number is ignored) ignore type: true
 
-    if (this.name != null) {  
-      buffer.writeAll(["\"name\":\`", this.name, "\`,"], "");
-    }
+    // NOTE: skip serialization of name (type string is ignored) ignore type: true
 
-    if (this.pos != null) {  
-      buffer.writeAll(["\"pos\":", this.pos, ","], "");
-    }
+    // NOTE: skip serialization of pos (type number is ignored) ignore type: true
 
-    if (this.tickmarkOffset != null) {  
-      buffer.writeAll(["\"tickmarkOffset\":", this.tickmarkOffset, ","], "");
-    }
+    // NOTE: skip serialization of tickmarkOffset (type number is ignored) ignore type: true
   }
 
 }

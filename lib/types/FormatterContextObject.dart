@@ -12,63 +12,24 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
+import 'FormatterContextObject.dart';
 import 'OptionFragment.dart';
 
 /** 
  * FormatterContextObject 
  */
 class FormatterContextObject extends OptionFragment {
-  FormatterContextObject( {
-    this.center = null,
-    this.radius = null,
-    this.value = null
-  }) : super();
-  double? center;
-    /*
-  double get center { 
-    if (this._center == null) {
-      this._center = 0;
-    }
-    return this._center!;
-  }
+  FormatterContextObject( ) : super();
+  // NOTE: center skipped - type number is ignored in gen 
 
-  void set center (double v) {
-    this._center = v;
-  }
-    */
-    
-  double? radius;
-    /*
-  double get radius { 
-    if (this._radius == null) {
-      this._radius = 0;
-    }
-    return this._radius!;
-  }
+  // NOTE: radius skipped - type number is ignored in gen 
 
-  void set radius (double v) {
-    this._radius = v;
-  }
-    */
-    
-  double? value;
-    /*
-  double get value { 
-    if (this._value == null) {
-      this._value = 0;
-    }
-    return this._value!;
-  }
+  // NOTE: value skipped - type number is ignored in gen 
 
-  void set value (double v) {
-    this._value = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -77,19 +38,13 @@ class FormatterContextObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of points (type FormatterContextObject[] is ignored)} 
+    // NOTE: skip serialization of points (type FormatterContextObject[] is ignored) ignore type: true
 
-    if (this.center != null) {  
-      buffer.writeAll(["\"center\":", this.center, ","], "");
-    }
+    // NOTE: skip serialization of center (type number is ignored) ignore type: true
 
-    if (this.radius != null) {  
-      buffer.writeAll(["\"radius\":", this.radius, ","], "");
-    }
+    // NOTE: skip serialization of radius (type number is ignored) ignore type: true
 
-    if (this.value != null) {  
-      buffer.writeAll(["\"value\":", this.value, ","], "");
-    }
+    // NOTE: skip serialization of value (type number is ignored) ignore type: true
   }
 
 }

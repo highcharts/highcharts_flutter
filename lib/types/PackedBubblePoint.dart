@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,23 +23,9 @@ import 'OptionFragment.dart';
  * PackedBubblePoint 
  */
 class PackedBubblePoint extends NetworkgraphPoint {
-  PackedBubblePoint( {
-    this.className = null
-  }) : super();
-  String? className;
-    /*
-  String get className { 
-    if (this._className == null) {
-      this._className = "";
-    }
-    return this._className!;
-  }
+  PackedBubblePoint( ) : super();
+  // NOTE: className skipped - type string is ignored in gen 
 
-  void set className (String v) {
-    this._className = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -48,17 +34,15 @@ class PackedBubblePoint extends NetworkgraphPoint {
     super.toJSONInner(buffer);
 
     
-    if (this.className != null) {  
-      buffer.writeAll(["\"className\":\`", this.className, "\`,"], "");
-    }
+    // NOTE: skip serialization of className (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of fromNode (type NetworkgraphPoint is ignored)} 
+    // NOTE: skip serialization of fromNode (type NetworkgraphPoint is ignored) ignore type: true
 
-    // NOTE: skip serialization of linksFrom (type NetworkgraphPoint[] is ignored)} 
+    // NOTE: skip serialization of linksFrom (type NetworkgraphPoint[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of linksTo (type NetworkgraphPoint[] is ignored)} 
+    // NOTE: skip serialization of linksTo (type NetworkgraphPoint[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of toNode (type NetworkgraphPoint is ignored)} 
+    // NOTE: skip serialization of toNode (type NetworkgraphPoint is ignored) ignore type: true
   }
 
 }

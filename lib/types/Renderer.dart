@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -34,9 +34,9 @@ class Renderer extends SVGRenderer {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of plotBox (type BBoxObject is ignored)} 
+    // NOTE: skip serialization of plotBox (type BBoxObject is ignored) ignore type: true
 
-    // NOTE: skip serialization of spacingBox (type BBoxObject is ignored)} 
+    // NOTE: skip serialization of spacingBox (type BBoxObject is ignored) ignore type: true
   }
 
 }

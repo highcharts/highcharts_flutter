@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,53 +23,13 @@ import 'OptionFragment.dart';
  * TypeDescFormatContextObject 
  */
 class TypeDescFormatContextObject extends OptionFragment {
-  TypeDescFormatContextObject( {
-    this.mapTitle = null,
-    this.numSeries = null,
-    this.numPoints = null
-  }) : super();
-  String? mapTitle;
-    /*
-  String get mapTitle { 
-    if (this._mapTitle == null) {
-      this._mapTitle = "";
-    }
-    return this._mapTitle!;
-  }
+  TypeDescFormatContextObject( ) : super();
+  // NOTE: mapTitle skipped - type string is ignored in gen 
 
-  void set mapTitle (String v) {
-    this._mapTitle = v;
-  }
-    */
-    
-  double? numSeries;
-    /*
-  double get numSeries { 
-    if (this._numSeries == null) {
-      this._numSeries = 0;
-    }
-    return this._numSeries!;
-  }
+  // NOTE: numSeries skipped - type number is ignored in gen 
 
-  void set numSeries (double v) {
-    this._numSeries = v;
-  }
-    */
-    
-  double? numPoints;
-    /*
-  double get numPoints { 
-    if (this._numPoints == null) {
-      this._numPoints = 0;
-    }
-    return this._numPoints!;
-  }
+  // NOTE: numPoints skipped - type number is ignored in gen 
 
-  void set numPoints (double v) {
-    this._numPoints = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -78,19 +38,13 @@ class TypeDescFormatContextObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of chart (type Chart is ignored)} 
+    // NOTE: skip serialization of chart (type Chart is ignored) ignore type: true
 
-    if (this.mapTitle != null) {  
-      buffer.writeAll(["\"mapTitle\":\`", this.mapTitle, "\`,"], "");
-    }
+    // NOTE: skip serialization of mapTitle (type string is ignored) ignore type: true
 
-    if (this.numSeries != null) {  
-      buffer.writeAll(["\"numSeries\":", this.numSeries, ","], "");
-    }
+    // NOTE: skip serialization of numSeries (type number is ignored) ignore type: true
 
-    if (this.numPoints != null) {  
-      buffer.writeAll(["\"numPoints\":", this.numPoints, ","], "");
-    }
+    // NOTE: skip serialization of numPoints (type number is ignored) ignore type: true
   }
 
 }

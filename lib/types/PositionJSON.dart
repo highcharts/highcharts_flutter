@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,53 +22,13 @@ import 'OptionFragment.dart';
  * PositionJSON 
  */
 class PositionJSON extends OptionFragment {
-  PositionJSON( {
-    this.column = null,
-    this.row = null,
-    this.state = null
-  }) : super();
-  String? column;
-    /*
-  String get column { 
-    if (this._column == null) {
-      this._column = "";
-    }
-    return this._column!;
-  }
+  PositionJSON( ) : super();
+  // NOTE: column skipped - type string is ignored in gen 
 
-  void set column (String v) {
-    this._column = v;
-  }
-    */
-    
-  double? row;
-    /*
-  double get row { 
-    if (this._row == null) {
-      this._row = 0;
-    }
-    return this._row!;
-  }
+  // NOTE: row skipped - type number is ignored in gen 
 
-  void set row (double v) {
-    this._row = v;
-  }
-    */
-    
-  String? state;
-    /*
-  String get state { 
-    if (this._state == null) {
-      this._state = "";
-    }
-    return this._state!;
-  }
+  // NOTE: state skipped - type string is ignored in gen 
 
-  void set state (String v) {
-    this._state = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -77,19 +37,13 @@ class PositionJSON extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.column != null) {  
-      buffer.writeAll(["\"column\":\`", this.column, "\`,"], "");
-    }
+    // NOTE: skip serialization of column (type string is ignored) ignore type: true
 
-    if (this.row != null) {  
-      buffer.writeAll(["\"row\":", this.row, ","], "");
-    }
+    // NOTE: skip serialization of row (type number is ignored) ignore type: true
 
-    if (this.state != null) {  
-      buffer.writeAll(["\"state\":\`", this.state, "\`,"], "");
-    }
+    // NOTE: skip serialization of state (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of type (type "position" is ignored)} 
+    // NOTE: skip serialization of type (type "position" is ignored) ignore type: true
   }
 
 }

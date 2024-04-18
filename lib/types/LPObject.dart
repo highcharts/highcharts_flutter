@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,113 +22,21 @@ import 'OptionFragment.dart';
  * LPObject 
  */
 class LPObject extends OptionFragment {
-  LPObject( {
-    this.lH = null,
-    this.lR = null,
-    this.lW = null,
-    this.nH = null,
-    this.nR = null,
-    this.nW = null,
-    this.total = null
-  }) : super();
-  double? lH;
-    /*
-  double get lH { 
-    if (this._lH == null) {
-      this._lH = 0;
-    }
-    return this._lH!;
-  }
+  LPObject( ) : super();
+  // NOTE: lH skipped - type number is ignored in gen 
 
-  void set lH (double v) {
-    this._lH = v;
-  }
-    */
-    
-  double? lR;
-    /*
-  double get lR { 
-    if (this._lR == null) {
-      this._lR = 0;
-    }
-    return this._lR!;
-  }
+  // NOTE: lR skipped - type number is ignored in gen 
 
-  void set lR (double v) {
-    this._lR = v;
-  }
-    */
-    
-  double? lW;
-    /*
-  double get lW { 
-    if (this._lW == null) {
-      this._lW = 0;
-    }
-    return this._lW!;
-  }
+  // NOTE: lW skipped - type number is ignored in gen 
 
-  void set lW (double v) {
-    this._lW = v;
-  }
-    */
-    
-  double? nH;
-    /*
-  double get nH { 
-    if (this._nH == null) {
-      this._nH = 0;
-    }
-    return this._nH!;
-  }
+  // NOTE: nH skipped - type number is ignored in gen 
 
-  void set nH (double v) {
-    this._nH = v;
-  }
-    */
-    
-  double? nR;
-    /*
-  double get nR { 
-    if (this._nR == null) {
-      this._nR = 0;
-    }
-    return this._nR!;
-  }
+  // NOTE: nR skipped - type number is ignored in gen 
 
-  void set nR (double v) {
-    this._nR = v;
-  }
-    */
-    
-  double? nW;
-    /*
-  double get nW { 
-    if (this._nW == null) {
-      this._nW = 0;
-    }
-    return this._nW!;
-  }
+  // NOTE: nW skipped - type number is ignored in gen 
 
-  void set nW (double v) {
-    this._nW = v;
-  }
-    */
-    
-  double? total;
-    /*
-  double get total { 
-    if (this._total == null) {
-      this._total = 0;
-    }
-    return this._total!;
-  }
+  // NOTE: total skipped - type number is ignored in gen 
 
-  void set total (double v) {
-    this._total = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -137,33 +45,19 @@ class LPObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.lH != null) {  
-      buffer.writeAll(["\"lH\":", this.lH, ","], "");
-    }
+    // NOTE: skip serialization of lH (type number is ignored) ignore type: true
 
-    if (this.lR != null) {  
-      buffer.writeAll(["\"lR\":", this.lR, ","], "");
-    }
+    // NOTE: skip serialization of lR (type number is ignored) ignore type: true
 
-    if (this.lW != null) {  
-      buffer.writeAll(["\"lW\":", this.lW, ","], "");
-    }
+    // NOTE: skip serialization of lW (type number is ignored) ignore type: true
 
-    if (this.nH != null) {  
-      buffer.writeAll(["\"nH\":", this.nH, ","], "");
-    }
+    // NOTE: skip serialization of nH (type number is ignored) ignore type: true
 
-    if (this.nR != null) {  
-      buffer.writeAll(["\"nR\":", this.nR, ","], "");
-    }
+    // NOTE: skip serialization of nR (type number is ignored) ignore type: true
 
-    if (this.nW != null) {  
-      buffer.writeAll(["\"nW\":", this.nW, ","], "");
-    }
+    // NOTE: skip serialization of nW (type number is ignored) ignore type: true
 
-    if (this.total != null) {  
-      buffer.writeAll(["\"total\":", this.total, ","], "");
-    }
+    // NOTE: skip serialization of total (type number is ignored) ignore type: true
   }
 
 }

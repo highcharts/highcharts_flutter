@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,33 +24,99 @@ import 'OptionFragment.dart';
  */
 class ErrorBarSeriesOptions extends BoxPlotSeriesOptions {
   ErrorBarSeriesOptions( {
-    this.whiskerWidth = null
+    super.accessibility = null,
+    super.allAreas = null,
+    super.allowPointSelect = null,
+    super.animationLimit = null,
+    super.boostBlending = null,
+    super.boostThreshold = null,
+    super.borderColor = null,
+    super.borderWidth = null,
+    super.boxDashStyle = null,
+    super.className = null,
+    super.clip = null,
+    super.color = null,
+    super.colorAxis = null,
+    super.colorIndex = null,
+    super.colorKey = null,
+    super.compare = null,
+    super.compareStart = null,
+    super.connectEnds = null,
+    super.connectNulls = null,
+    super.connectors = null,
+    super.crisp = null,
+    super.cropThreshold = null,
+    super.cumulative = null,
+    super.cursor = null,
+    super.dashStyle = null,
+    super.dataGrouping = null,
+    super.dataLabels = null,
+    super.dataSorting = null,
+    super.description = null,
+    super.dragDrop = null,
+    super.enableMouseTracking = null,
+    super.events = null,
+    super.fillColor = null,
+    super.findNearestPointBy = null,
+    super.gapSize = null,
+    super.gapUnit = null,
+    super.getExtremesFromAll = null,
+    super.includeInDataExport = null,
+    super.joinBy = null,
+    super.keys = null,
+    super.label = null,
+    super.lastPrice = null,
+    super.lastVisiblePrice = null,
+    super.legendSymbol = null,
+    super.linecap = null,
+    super.lineWidth = null,
+    super.linkedTo = null,
+    super.marker = null,
+    super.maxPointWidth = null,
+    super.medianColor = null,
+    super.medianDashStyle = null,
+    super.medianWidth = null,
+    super.minPointLength = null,
+    super.navigatorOptions = null,
+    super.negativeColor = null,
+    super.onPoint = null,
+    super.opacity = null,
+    super.point = null,
+    super.pointInterval = null,
+    super.pointIntervalUnit = null,
+    super.pointPadding = null,
+    super.pointPlacement = null,
+    super.pointRange = null,
+    super.pointStart = null,
+    super.pointWidth = null,
+    super.relativeXValue = null,
+    super.selected = null,
+    super.showCheckbox = null,
+    super.showInLegend = null,
+    super.showInNavigator = null,
+    super.skipKeyboardNavigation = null,
+    super.softThreshold = null,
+    super.stacking = null,
+    super.stemColor = null,
+    super.stemDashStyle = null,
+    super.stemWidth = null,
+    super.step = null,
+    super.stickyTracking = null,
+    super.threshold = null,
+    super.tooltip = null,
+    super.turboThreshold = null,
+    super.visible = null,
+    super.whiskerColor = null,
+    super.whiskerDashStyle = null,
+    super.whiskerLength = null,
+    this.whiskerWidth = null,
+    super.zIndex = null,
+    super.zoneAxis = null,
+    super.zones = null
   }) : super();
-  // NOTE: states skipped - type Generic is ignored in gen
+  // NOTE: states skipped - type Generic is ignored in gen 
 
-  /**
-   * The line width of the whiskers, the horizontal lines marking low and
-   * high values. When `undefined`, the general
-   * [lineWidth](#plotOptions.boxplot.lineWidth) applies.
-   * 
-   * In styled mode, the whisker stroke width can be set with the
-   * `.highcharts-boxplot-whisker` class. 
-   * 
-   * Defaults to '2'. 
-      */
   double? whiskerWidth;
-    /*
-  double get whiskerWidth { 
-    if (this._whiskerWidth == null) {
-      this._whiskerWidth = 0;
-    }
-    return this._whiskerWidth!;
-  }
-
-  void set whiskerWidth (double v) {
-    this._whiskerWidth = v;
-  }
-    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -60,10 +126,10 @@ class ErrorBarSeriesOptions extends BoxPlotSeriesOptions {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of states (type Generic is ignored)} 
+    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
 
     if (this.whiskerWidth != null) {  
-      buffer.writeAll(["\"whiskerWidth\":", this.whiskerWidth, ","], "");
+      buffer.writeAll(["\"whiskerWidth\":",this.whiskerWidth, ","], "");
     }
   }
 

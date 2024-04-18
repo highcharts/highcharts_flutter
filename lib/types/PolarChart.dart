@@ -12,11 +12,12 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
 import 'Chart.dart';
+import 'AxisComposition.dart';
 import 'OptionFragment.dart';
 
 /** 
@@ -33,9 +34,9 @@ class PolarChart extends Chart {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of axes (type AxisComposition[] is ignored)} 
+    // NOTE: skip serialization of axes (type AxisComposition[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of series (type PolarSeriesComposition[] is ignored)} 
+    // NOTE: skip serialization of series (type PolarSeriesComposition[] is ignored) ignore type: true
   }
 
 }

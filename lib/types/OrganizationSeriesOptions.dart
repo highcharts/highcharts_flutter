@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -20,6 +20,7 @@ import 'SankeySeriesOptions.dart';
 import 'OrganizationDataLabelOptions.dart';
 import 'OrganizationSeriesLevelOptions.dart';
 import 'OrganizationLinkOptions.dart';
+import 'OrganizationSeriesNodeOptions.dart';
 import 'OptionFragment.dart';
 
 /** 
@@ -27,182 +28,115 @@ import 'OptionFragment.dart';
  */
 class OrganizationSeriesOptions extends SankeySeriesOptions {
   OrganizationSeriesOptions( {
+    super.accessibility = null,
+    super.allAreas = null,
+    super.allowPointSelect = null,
+    super.animationLimit = null,
+    super.boostBlending = null,
+    super.boostThreshold = null,
+    super.borderColor = null,
+    super.borderWidth = null,
+    super.className = null,
+    super.clip = null,
+    super.color = null,
+    super.colorAxis = null,
+    super.colorIndex = null,
+    super.colorKey = null,
+    super.compare = null,
+    super.compareStart = null,
+    super.connectEnds = null,
+    super.connectNulls = null,
+    super.connectors = null,
+    super.crisp = null,
+    super.cropThreshold = null,
+    super.cumulative = null,
+    super.cursor = null,
+    super.curveFactor = null,
+    super.dashStyle = null,
+    super.dataGrouping = null,
+    super.dataLabels = null,
+    super.dataSorting = null,
+    super.description = null,
+    super.dragDrop = null,
+    super.enableMouseTracking = null,
+    super.events = null,
+    super.findNearestPointBy = null,
+    super.gapSize = null,
+    super.gapUnit = null,
+    super.getExtremesFromAll = null,
     this.hangingIndent = null,
     this.hangingIndentTranslation = null,
-    this.hangingSide = null,
-    this.linkColor = null,
-    this.linkLineWidth = null,
-    this.linkRadius = null,
-    this.minNodeLength = null
+    super.includeInDataExport = null,
+    super.joinBy = null,
+    super.keys = null,
+    super.label = null,
+    super.lastPrice = null,
+    super.lastVisiblePrice = null,
+    super.legendSymbol = null,
+    super.levels = null,
+    super.linecap = null,
+    super.lineWidth = null,
+    this.link = null,
+    super.linkedTo = null,
+    super.linkOpacity = null,
+    super.marker = null,
+    super.maxPointWidth = null,
+    super.minLinkWidth = null,
+    this.minNodeLength = null,
+    super.minPointLength = null,
+    super.navigatorOptions = null,
+    super.negativeColor = null,
+    super.nodePadding = null,
+    super.nodeWidth = null,
+    super.onPoint = null,
+    super.opacity = null,
+    super.point = null,
+    super.pointInterval = null,
+    super.pointIntervalUnit = null,
+    super.pointPadding = null,
+    super.pointPlacement = null,
+    super.pointRange = null,
+    super.pointStart = null,
+    super.pointWidth = null,
+    super.relativeXValue = null,
+    super.selected = null,
+    super.showCheckbox = null,
+    super.showInLegend = null,
+    super.showInNavigator = null,
+    super.skipKeyboardNavigation = null,
+    super.softThreshold = null,
+    super.stacking = null,
+    super.step = null,
+    super.stickyTracking = null,
+    super.threshold = null,
+    super.tooltip = null,
+    super.turboThreshold = null,
+    super.visible = null,
+    super.zIndex = null,
+    super.zoneAxis = null,
+    super.zones = null
   }) : super();
-  /**
-   * Options for the series data labels, appearing next to each data
-   * point.
-   * 
-   * Since v6.2.0, multiple data labels can be applied to each single
-   * point by defining them as an array of configs.
-   * 
-   * In styled mode, the data labels can be styled with the
-   * `.highcharts-data-label-box` and `.highcharts-data-label` class names
-   * ([see example](https://www.highcharts.com/samples/highcharts/css/series-datalabels)).  
-      */
   /** NOTE: extextextdataLabels is skipped here for now, as it overrides the base type. */
 
-  /**
-   * The indentation in pixels of hanging nodes, nodes which parent has
-   * [layout](#series.organization.nodes.layout) set to `hanging`. 
-   * 
-   * Defaults to '20'. 
-      */
   double? hangingIndent;
-    /*
-  double get hangingIndent { 
-    if (this._hangingIndent == null) {
-      this._hangingIndent = 0;
-    }
-    return this._hangingIndent!;
-  }
-
-  void set hangingIndent (double v) {
-    this._hangingIndent = v;
-  }
-    */
     
-  /**
-   * Defines the indentation of a `hanging` layout parent's children.
-   * Possible options:
-   * 
-   * - `inherit` (default): Only the first child adds the indentation,
-   * children of a child with indentation inherit the indentation.
-   * - `cumulative`: All children of a child with indentation add its
-   * own indent. The option may cause overlapping of nodes.
-   * Then use `shrink` option:
-   * - `shrink`: Nodes shrink by the
-   * [hangingIndent](#plotOptions.organization.hangingIndent)
-   * value until they reach the
-   * [minNodeLength](#plotOptions.organization.minNodeLength). 
-   * 
-   * Defaults to 'inherit'. 
-      */
   String? hangingIndentTranslation;
-    /*
-  String get hangingIndentTranslation { 
-    if (this._hangingIndentTranslation == null) {
-      this._hangingIndentTranslation = "";
-    }
-    return this._hangingIndentTranslation!;
-  }
-
-  void set hangingIndentTranslation (String v) {
-    this._hangingIndentTranslation = v;
-  }
-    */
     
-  String? hangingSide;
-    /*
-  String get hangingSide { 
-    if (this._hangingSide == null) {
-      this._hangingSide = "";
-    }
-    return this._hangingSide!;
-  }
+  // NOTE: hangingSide skipped - type string is ignored in gen 
 
-  void set hangingSide (String v) {
-    this._hangingSide = v;
-  }
-    */
-    
-  /**
-   * Set options on specific levels. Takes precedence over series options,
-   * but not node and link options.  
-      */
   /** NOTE: extlevels is skipped here for now, as it overrides the base type. */
 
-  /**
-   * Link Styling options  
-      */
   OrganizationLinkOptions? link;
-    /*
-  OrganizationLinkOptions get link { 
-    if (this._link == null) {
-      this._link = OrganizationLinkOptions();
-    }
-    return this._link!;
-  }
-
-  void set link (OrganizationLinkOptions v) {
-    this._link = v;
-  }
-    */
     
-  String? linkColor;
-    /*
-  String get linkColor { 
-    if (this._linkColor == null) {
-      this._linkColor = "";
-    }
-    return this._linkColor!;
-  }
+  // NOTE: linkColor skipped - type string is ignored in gen 
 
-  void set linkColor (String v) {
-    this._linkColor = v;
-  }
-    */
-    
-  double? linkLineWidth;
-    /*
-  double get linkLineWidth { 
-    if (this._linkLineWidth == null) {
-      this._linkLineWidth = 0;
-    }
-    return this._linkLineWidth!;
-  }
+  // NOTE: linkLineWidth skipped - type number is ignored in gen 
 
-  void set linkLineWidth (double v) {
-    this._linkLineWidth = v;
-  }
-    */
-    
-  double? linkRadius;
-    /*
-  double get linkRadius { 
-    if (this._linkRadius == null) {
-      this._linkRadius = 0;
-    }
-    return this._linkRadius!;
-  }
+  // NOTE: linkRadius skipped - type number is ignored in gen 
 
-  void set linkRadius (double v) {
-    this._linkRadius = v;
-  }
-    */
-    
-  /**
-   * In a horizontal chart, the minimum width of the **hanging** nodes
-   * only, in pixels. In a vertical chart, the minimum height of the
-   * **haning** nodes only, in pixels too.
-   * 
-   * Note: Used only when
-   * [hangingIndentTranslation](#plotOptions.organization.hangingIndentTranslation)
-   * is set to `shrink`. 
-   * 
-   * Defaults to '10'. 
-      */
   double? minNodeLength;
-    /*
-  double get minNodeLength { 
-    if (this._minNodeLength == null) {
-      this._minNodeLength = 0;
-    }
-    return this._minNodeLength!;
-  }
-
-  void set minNodeLength (double v) {
-    this._minNodeLength = v;
-  }
-    */
     
-  // NOTE: states skipped - type Generic is ignored in gen
+  // NOTE: states skipped - type Generic is ignored in gen 
 
 
   //////////////////////////////////////////////////////////////////////////////
@@ -212,45 +146,37 @@ class OrganizationSeriesOptions extends SankeySeriesOptions {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of dataLabels (type OrganizationDataLabelOptions is ignored)} 
+    // NOTE: skip serialization of dataLabels (type OrganizationDataLabelOptions is ignored) ignore type: false
 
     if (this.hangingIndent != null) {  
-      buffer.writeAll(["\"hangingIndent\":", this.hangingIndent, ","], "");
+      buffer.writeAll(["\"hangingIndent\":",this.hangingIndent, ","], "");
     }
 
     if (this.hangingIndentTranslation != null) {  
-      buffer.writeAll(["\"hangingIndentTranslation\":\`", this.hangingIndentTranslation, "\`,"], "");
+      buffer.writeAll(["\"hangingIndentTranslation\":\`",this.hangingIndentTranslation, "\`,"], "");
     }
 
-    if (this.hangingSide != null) {  
-      buffer.writeAll(["\"hangingSide\":\`", this.hangingSide, "\`,"], "");
-    }
+    // NOTE: skip serialization of hangingSide (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of levels (type OrganizationSeriesLevelOptions[] is ignored)} 
+    // NOTE: skip serialization of levels (type OrganizationSeriesLevelOptions[] is ignored) ignore type: false
 
     if (this.link != null) {  
-      buffer.writeAll(["\"link\":", this.link?.toJSON(), ","], "");
+      buffer.writeAll(["\"link\":",this.link?.toJSON(), ","], "");
     }
 
-    if (this.linkColor != null) {  
-      buffer.writeAll(["\"linkColor\":\`", this.linkColor, "\`,"], "");
-    }
+    // NOTE: skip serialization of linkColor (type string is ignored) ignore type: true
 
-    if (this.linkLineWidth != null) {  
-      buffer.writeAll(["\"linkLineWidth\":", this.linkLineWidth, ","], "");
-    }
+    // NOTE: skip serialization of linkLineWidth (type number is ignored) ignore type: true
 
-    if (this.linkRadius != null) {  
-      buffer.writeAll(["\"linkRadius\":", this.linkRadius, ","], "");
-    }
+    // NOTE: skip serialization of linkRadius (type number is ignored) ignore type: true
 
     if (this.minNodeLength != null) {  
-      buffer.writeAll(["\"minNodeLength\":", this.minNodeLength, ","], "");
+      buffer.writeAll(["\"minNodeLength\":",this.minNodeLength, ","], "");
     }
 
-    // NOTE: skip serialization of nodes (type OrganizationSeriesNodeOptions[] is ignored)} 
+    // NOTE: skip serialization of nodes (type OrganizationSeriesNodeOptions[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of states (type Generic is ignored)} 
+    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
   }
 
 }

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,53 +23,13 @@ import 'OptionFragment.dart';
  * SeriesStateInactiveOptions 
  */
 class SeriesStateInactiveOptions extends StateInactiveOptions {
-  SeriesStateInactiveOptions( {
-    this.enabled = null,
-    this.brightness = null,
-    this.linkOpacity = null
-  }) : super();
-  bool? enabled;
-    /*
-  bool get enabled { 
-    if (this._enabled == null) {
-      this._enabled = false;
-    }
-    return this._enabled!;
-  }
+  SeriesStateInactiveOptions( ) : super();
+  // NOTE: enabled skipped - type boolean is ignored in gen 
 
-  void set enabled (bool v) {
-    this._enabled = v;
-  }
-    */
-    
-  double? brightness;
-    /*
-  double get brightness { 
-    if (this._brightness == null) {
-      this._brightness = 0;
-    }
-    return this._brightness!;
-  }
+  // NOTE: brightness skipped - type number is ignored in gen 
 
-  void set brightness (double v) {
-    this._brightness = v;
-  }
-    */
-    
-  double? linkOpacity;
-    /*
-  double get linkOpacity { 
-    if (this._linkOpacity == null) {
-      this._linkOpacity = 0;
-    }
-    return this._linkOpacity!;
-  }
+  // NOTE: linkOpacity skipped - type number is ignored in gen 
 
-  void set linkOpacity (double v) {
-    this._linkOpacity = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -78,19 +38,13 @@ class SeriesStateInactiveOptions extends StateInactiveOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
-    }
+    // NOTE: skip serialization of enabled (type boolean is ignored) ignore type: true
 
-    if (this.brightness != null) {  
-      buffer.writeAll(["\"brightness\":", this.brightness, ","], "");
-    }
+    // NOTE: skip serialization of brightness (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of animation (type Generic is ignored)} 
+    // NOTE: skip serialization of animation (type Generic is ignored) ignore type: true
 
-    if (this.linkOpacity != null) {  
-      buffer.writeAll(["\"linkOpacity\":", this.linkOpacity, ","], "");
-    }
+    // NOTE: skip serialization of linkOpacity (type number is ignored) ignore type: true
   }
 
 }

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -35,17 +35,17 @@ class BoostTargetAdditions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of canvas (type HTMLCanvasElement is ignored)} 
+    // NOTE: skip serialization of canvas (type HTMLCanvasElement is ignored) ignore type: true
 
-    // NOTE: skip serialization of clipRect (type SVGElement is ignored)} 
+    // NOTE: skip serialization of clipRect (type SVGElement is ignored) ignore type: true
 
-    // NOTE: skip serialization of target (type SVGElement is ignored)} 
+    // NOTE: skip serialization of target (type SVGElement is ignored) ignore type: true
 
-    // NOTE: skip serialization of targetCtx (type CanvasRenderingContext2D is ignored)} 
+    // NOTE: skip serialization of targetCtx (type CanvasRenderingContext2D is ignored) ignore type: true
 
-    // NOTE: skip serialization of targetFo (type SVGElement is ignored)} 
+    // NOTE: skip serialization of targetFo (type SVGElement is ignored) ignore type: true
 
-    // NOTE: skip serialization of wgl (type WGLRenderer is ignored)} 
+    // NOTE: skip serialization of wgl (type WGLRenderer is ignored) ignore type: true
   }
 
 }

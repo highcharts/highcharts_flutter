@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,23 +23,9 @@ import 'OptionFragment.dart';
  * CircleObject 
  */
 class CircleObject extends PositionObject {
-  CircleObject( {
-    this.r = null
-  }) : super();
-  double? r;
-    /*
-  double get r { 
-    if (this._r == null) {
-      this._r = 0;
-    }
-    return this._r!;
-  }
+  CircleObject( ) : super();
+  // NOTE: r skipped - type number is ignored in gen 
 
-  void set r (double v) {
-    this._r = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -48,9 +34,7 @@ class CircleObject extends PositionObject {
     super.toJSONInner(buffer);
 
     
-    if (this.r != null) {  
-      buffer.writeAll(["\"r\":", this.r, ","], "");
-    }
+    // NOTE: skip serialization of r (type number is ignored) ignore type: true
   }
 
 }

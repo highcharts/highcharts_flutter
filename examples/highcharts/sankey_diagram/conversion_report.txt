@@ -1,0 +1,6 @@
+[
+  {
+    "type": "missing_mapping",
+    "path": "series.keys"
+  }
+]

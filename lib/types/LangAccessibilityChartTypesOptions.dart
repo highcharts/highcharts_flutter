@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,338 +22,51 @@ import 'OptionFragment.dart';
  * LangAccessibilityChartTypesOptions 
  */
 class LangAccessibilityChartTypesOptions extends OptionFragment {
-  LangAccessibilityChartTypesOptions( {
-    this.barMultiple = null,
-    this.barSingle = null,
-    this.boxplotMultiple = null,
-    this.boxplotSingle = null,
-    this.bubbleSingle = null,
-    this.bubbleMultiple = null,
-    this.columnMultiple = null,
-    this.columnSingle = null,
-    this.combinationChart = null,
-    this.defaultMultiple = null,
-    this.defaultSingle = null,
-    this.emptyChart = null,
-    this.lineMultiple = null,
-    this.lineSingle = null,
-    this.mapTypeDescription = null,
-    this.pieMultiple = null,
-    this.pieSingle = null,
-    this.scatterMultiple = null,
-    this.scatterSingle = null,
-    this.splineMultiple = null,
-    this.splineSingle = null,
-    this.unknownMap = null
-  }) : super();
-  String? barMultiple;
-    /*
-  String get barMultiple { 
-    if (this._barMultiple == null) {
-      this._barMultiple = "";
-    }
-    return this._barMultiple!;
-  }
+  LangAccessibilityChartTypesOptions( ) : super();
+  // NOTE: barMultiple skipped - type string is ignored in gen 
 
-  void set barMultiple (String v) {
-    this._barMultiple = v;
-  }
-    */
-    
-  String? barSingle;
-    /*
-  String get barSingle { 
-    if (this._barSingle == null) {
-      this._barSingle = "";
-    }
-    return this._barSingle!;
-  }
+  // NOTE: barSingle skipped - type string is ignored in gen 
 
-  void set barSingle (String v) {
-    this._barSingle = v;
-  }
-    */
-    
-  String? boxplotMultiple;
-    /*
-  String get boxplotMultiple { 
-    if (this._boxplotMultiple == null) {
-      this._boxplotMultiple = "";
-    }
-    return this._boxplotMultiple!;
-  }
+  // NOTE: boxplotMultiple skipped - type string is ignored in gen 
 
-  void set boxplotMultiple (String v) {
-    this._boxplotMultiple = v;
-  }
-    */
-    
-  String? boxplotSingle;
-    /*
-  String get boxplotSingle { 
-    if (this._boxplotSingle == null) {
-      this._boxplotSingle = "";
-    }
-    return this._boxplotSingle!;
-  }
+  // NOTE: boxplotSingle skipped - type string is ignored in gen 
 
-  void set boxplotSingle (String v) {
-    this._boxplotSingle = v;
-  }
-    */
-    
-  String? bubbleSingle;
-    /*
-  String get bubbleSingle { 
-    if (this._bubbleSingle == null) {
-      this._bubbleSingle = "";
-    }
-    return this._bubbleSingle!;
-  }
+  // NOTE: bubbleSingle skipped - type string is ignored in gen 
 
-  void set bubbleSingle (String v) {
-    this._bubbleSingle = v;
-  }
-    */
-    
-  String? bubbleMultiple;
-    /*
-  String get bubbleMultiple { 
-    if (this._bubbleMultiple == null) {
-      this._bubbleMultiple = "";
-    }
-    return this._bubbleMultiple!;
-  }
+  // NOTE: bubbleMultiple skipped - type string is ignored in gen 
 
-  void set bubbleMultiple (String v) {
-    this._bubbleMultiple = v;
-  }
-    */
-    
-  String? columnMultiple;
-    /*
-  String get columnMultiple { 
-    if (this._columnMultiple == null) {
-      this._columnMultiple = "";
-    }
-    return this._columnMultiple!;
-  }
+  // NOTE: columnMultiple skipped - type string is ignored in gen 
 
-  void set columnMultiple (String v) {
-    this._columnMultiple = v;
-  }
-    */
-    
-  String? columnSingle;
-    /*
-  String get columnSingle { 
-    if (this._columnSingle == null) {
-      this._columnSingle = "";
-    }
-    return this._columnSingle!;
-  }
+  // NOTE: columnSingle skipped - type string is ignored in gen 
 
-  void set columnSingle (String v) {
-    this._columnSingle = v;
-  }
-    */
-    
-  String? combinationChart;
-    /*
-  String get combinationChart { 
-    if (this._combinationChart == null) {
-      this._combinationChart = "";
-    }
-    return this._combinationChart!;
-  }
+  // NOTE: combinationChart skipped - type string is ignored in gen 
 
-  void set combinationChart (String v) {
-    this._combinationChart = v;
-  }
-    */
-    
-  String? defaultMultiple;
-    /*
-  String get defaultMultiple { 
-    if (this._defaultMultiple == null) {
-      this._defaultMultiple = "";
-    }
-    return this._defaultMultiple!;
-  }
+  // NOTE: defaultMultiple skipped - type string is ignored in gen 
 
-  void set defaultMultiple (String v) {
-    this._defaultMultiple = v;
-  }
-    */
-    
-  String? defaultSingle;
-    /*
-  String get defaultSingle { 
-    if (this._defaultSingle == null) {
-      this._defaultSingle = "";
-    }
-    return this._defaultSingle!;
-  }
+  // NOTE: defaultSingle skipped - type string is ignored in gen 
 
-  void set defaultSingle (String v) {
-    this._defaultSingle = v;
-  }
-    */
-    
-  String? emptyChart;
-    /*
-  String get emptyChart { 
-    if (this._emptyChart == null) {
-      this._emptyChart = "";
-    }
-    return this._emptyChart!;
-  }
+  // NOTE: emptyChart skipped - type string is ignored in gen 
 
-  void set emptyChart (String v) {
-    this._emptyChart = v;
-  }
-    */
-    
-  String? lineMultiple;
-    /*
-  String get lineMultiple { 
-    if (this._lineMultiple == null) {
-      this._lineMultiple = "";
-    }
-    return this._lineMultiple!;
-  }
+  // NOTE: lineMultiple skipped - type string is ignored in gen 
 
-  void set lineMultiple (String v) {
-    this._lineMultiple = v;
-  }
-    */
-    
-  String? lineSingle;
-    /*
-  String get lineSingle { 
-    if (this._lineSingle == null) {
-      this._lineSingle = "";
-    }
-    return this._lineSingle!;
-  }
+  // NOTE: lineSingle skipped - type string is ignored in gen 
 
-  void set lineSingle (String v) {
-    this._lineSingle = v;
-  }
-    */
-    
-  String? mapTypeDescription;
-    /*
-  String get mapTypeDescription { 
-    if (this._mapTypeDescription == null) {
-      this._mapTypeDescription = "";
-    }
-    return this._mapTypeDescription!;
-  }
+  // NOTE: mapTypeDescription skipped - type string is ignored in gen 
 
-  void set mapTypeDescription (String v) {
-    this._mapTypeDescription = v;
-  }
-    */
-    
-  String? pieMultiple;
-    /*
-  String get pieMultiple { 
-    if (this._pieMultiple == null) {
-      this._pieMultiple = "";
-    }
-    return this._pieMultiple!;
-  }
+  // NOTE: pieMultiple skipped - type string is ignored in gen 
 
-  void set pieMultiple (String v) {
-    this._pieMultiple = v;
-  }
-    */
-    
-  String? pieSingle;
-    /*
-  String get pieSingle { 
-    if (this._pieSingle == null) {
-      this._pieSingle = "";
-    }
-    return this._pieSingle!;
-  }
+  // NOTE: pieSingle skipped - type string is ignored in gen 
 
-  void set pieSingle (String v) {
-    this._pieSingle = v;
-  }
-    */
-    
-  String? scatterMultiple;
-    /*
-  String get scatterMultiple { 
-    if (this._scatterMultiple == null) {
-      this._scatterMultiple = "";
-    }
-    return this._scatterMultiple!;
-  }
+  // NOTE: scatterMultiple skipped - type string is ignored in gen 
 
-  void set scatterMultiple (String v) {
-    this._scatterMultiple = v;
-  }
-    */
-    
-  String? scatterSingle;
-    /*
-  String get scatterSingle { 
-    if (this._scatterSingle == null) {
-      this._scatterSingle = "";
-    }
-    return this._scatterSingle!;
-  }
+  // NOTE: scatterSingle skipped - type string is ignored in gen 
 
-  void set scatterSingle (String v) {
-    this._scatterSingle = v;
-  }
-    */
-    
-  String? splineMultiple;
-    /*
-  String get splineMultiple { 
-    if (this._splineMultiple == null) {
-      this._splineMultiple = "";
-    }
-    return this._splineMultiple!;
-  }
+  // NOTE: splineMultiple skipped - type string is ignored in gen 
 
-  void set splineMultiple (String v) {
-    this._splineMultiple = v;
-  }
-    */
-    
-  String? splineSingle;
-    /*
-  String get splineSingle { 
-    if (this._splineSingle == null) {
-      this._splineSingle = "";
-    }
-    return this._splineSingle!;
-  }
+  // NOTE: splineSingle skipped - type string is ignored in gen 
 
-  void set splineSingle (String v) {
-    this._splineSingle = v;
-  }
-    */
-    
-  String? unknownMap;
-    /*
-  String get unknownMap { 
-    if (this._unknownMap == null) {
-      this._unknownMap = "";
-    }
-    return this._unknownMap!;
-  }
+  // NOTE: unknownMap skipped - type string is ignored in gen 
 
-  void set unknownMap (String v) {
-    this._unknownMap = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -362,93 +75,49 @@ class LangAccessibilityChartTypesOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.barMultiple != null) {  
-      buffer.writeAll(["\"barMultiple\":\`", this.barMultiple, "\`,"], "");
-    }
+    // NOTE: skip serialization of barMultiple (type string is ignored) ignore type: true
 
-    if (this.barSingle != null) {  
-      buffer.writeAll(["\"barSingle\":\`", this.barSingle, "\`,"], "");
-    }
+    // NOTE: skip serialization of barSingle (type string is ignored) ignore type: true
 
-    if (this.boxplotMultiple != null) {  
-      buffer.writeAll(["\"boxplotMultiple\":\`", this.boxplotMultiple, "\`,"], "");
-    }
+    // NOTE: skip serialization of boxplotMultiple (type string is ignored) ignore type: true
 
-    if (this.boxplotSingle != null) {  
-      buffer.writeAll(["\"boxplotSingle\":\`", this.boxplotSingle, "\`,"], "");
-    }
+    // NOTE: skip serialization of boxplotSingle (type string is ignored) ignore type: true
 
-    if (this.bubbleSingle != null) {  
-      buffer.writeAll(["\"bubbleSingle\":\`", this.bubbleSingle, "\`,"], "");
-    }
+    // NOTE: skip serialization of bubbleSingle (type string is ignored) ignore type: true
 
-    if (this.bubbleMultiple != null) {  
-      buffer.writeAll(["\"bubbleMultiple\":\`", this.bubbleMultiple, "\`,"], "");
-    }
+    // NOTE: skip serialization of bubbleMultiple (type string is ignored) ignore type: true
 
-    if (this.columnMultiple != null) {  
-      buffer.writeAll(["\"columnMultiple\":\`", this.columnMultiple, "\`,"], "");
-    }
+    // NOTE: skip serialization of columnMultiple (type string is ignored) ignore type: true
 
-    if (this.columnSingle != null) {  
-      buffer.writeAll(["\"columnSingle\":\`", this.columnSingle, "\`,"], "");
-    }
+    // NOTE: skip serialization of columnSingle (type string is ignored) ignore type: true
 
-    if (this.combinationChart != null) {  
-      buffer.writeAll(["\"combinationChart\":\`", this.combinationChart, "\`,"], "");
-    }
+    // NOTE: skip serialization of combinationChart (type string is ignored) ignore type: true
 
-    if (this.defaultMultiple != null) {  
-      buffer.writeAll(["\"defaultMultiple\":\`", this.defaultMultiple, "\`,"], "");
-    }
+    // NOTE: skip serialization of defaultMultiple (type string is ignored) ignore type: true
 
-    if (this.defaultSingle != null) {  
-      buffer.writeAll(["\"defaultSingle\":\`", this.defaultSingle, "\`,"], "");
-    }
+    // NOTE: skip serialization of defaultSingle (type string is ignored) ignore type: true
 
-    if (this.emptyChart != null) {  
-      buffer.writeAll(["\"emptyChart\":\`", this.emptyChart, "\`,"], "");
-    }
+    // NOTE: skip serialization of emptyChart (type string is ignored) ignore type: true
 
-    if (this.lineMultiple != null) {  
-      buffer.writeAll(["\"lineMultiple\":\`", this.lineMultiple, "\`,"], "");
-    }
+    // NOTE: skip serialization of lineMultiple (type string is ignored) ignore type: true
 
-    if (this.lineSingle != null) {  
-      buffer.writeAll(["\"lineSingle\":\`", this.lineSingle, "\`,"], "");
-    }
+    // NOTE: skip serialization of lineSingle (type string is ignored) ignore type: true
 
-    if (this.mapTypeDescription != null) {  
-      buffer.writeAll(["\"mapTypeDescription\":\`", this.mapTypeDescription, "\`,"], "");
-    }
+    // NOTE: skip serialization of mapTypeDescription (type string is ignored) ignore type: true
 
-    if (this.pieMultiple != null) {  
-      buffer.writeAll(["\"pieMultiple\":\`", this.pieMultiple, "\`,"], "");
-    }
+    // NOTE: skip serialization of pieMultiple (type string is ignored) ignore type: true
 
-    if (this.pieSingle != null) {  
-      buffer.writeAll(["\"pieSingle\":\`", this.pieSingle, "\`,"], "");
-    }
+    // NOTE: skip serialization of pieSingle (type string is ignored) ignore type: true
 
-    if (this.scatterMultiple != null) {  
-      buffer.writeAll(["\"scatterMultiple\":\`", this.scatterMultiple, "\`,"], "");
-    }
+    // NOTE: skip serialization of scatterMultiple (type string is ignored) ignore type: true
 
-    if (this.scatterSingle != null) {  
-      buffer.writeAll(["\"scatterSingle\":\`", this.scatterSingle, "\`,"], "");
-    }
+    // NOTE: skip serialization of scatterSingle (type string is ignored) ignore type: true
 
-    if (this.splineMultiple != null) {  
-      buffer.writeAll(["\"splineMultiple\":\`", this.splineMultiple, "\`,"], "");
-    }
+    // NOTE: skip serialization of splineMultiple (type string is ignored) ignore type: true
 
-    if (this.splineSingle != null) {  
-      buffer.writeAll(["\"splineSingle\":\`", this.splineSingle, "\`,"], "");
-    }
+    // NOTE: skip serialization of splineSingle (type string is ignored) ignore type: true
 
-    if (this.unknownMap != null) {  
-      buffer.writeAll(["\"unknownMap\":\`", this.unknownMap, "\`,"], "");
-    }
+    // NOTE: skip serialization of unknownMap (type string is ignored) ignore type: true
   }
 
 }

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,128 +23,23 @@ import 'OptionFragment.dart';
  * WGLSeriesObject 
  */
 class WGLSeriesObject extends OptionFragment {
-  WGLSeriesObject( {
-    this.drawMode = null,
-    this.hasMarkers = null,
-    this.markerFrom = null,
-    this.markerTo = null,
-    this.showMarkers = null,
-    this.skipTranslation = null,
-    this.zMax = null,
-    this.zMin = null
-  }) : super();
-  String? drawMode;
-    /*
-  String get drawMode { 
-    if (this._drawMode == null) {
-      this._drawMode = "";
-    }
-    return this._drawMode!;
-  }
+  WGLSeriesObject( ) : super();
+  // NOTE: drawMode skipped - type string is ignored in gen 
 
-  void set drawMode (String v) {
-    this._drawMode = v;
-  }
-    */
-    
-  bool? hasMarkers;
-    /*
-  bool get hasMarkers { 
-    if (this._hasMarkers == null) {
-      this._hasMarkers = false;
-    }
-    return this._hasMarkers!;
-  }
+  // NOTE: hasMarkers skipped - type boolean is ignored in gen 
 
-  void set hasMarkers (bool v) {
-    this._hasMarkers = v;
-  }
-    */
-    
-  double? markerFrom;
-    /*
-  double get markerFrom { 
-    if (this._markerFrom == null) {
-      this._markerFrom = 0;
-    }
-    return this._markerFrom!;
-  }
+  // NOTE: markerFrom skipped - type number is ignored in gen 
 
-  void set markerFrom (double v) {
-    this._markerFrom = v;
-  }
-    */
-    
-  double? markerTo;
-    /*
-  double get markerTo { 
-    if (this._markerTo == null) {
-      this._markerTo = 0;
-    }
-    return this._markerTo!;
-  }
+  // NOTE: markerTo skipped - type number is ignored in gen 
 
-  void set markerTo (double v) {
-    this._markerTo = v;
-  }
-    */
-    
-  bool? showMarkers;
-    /*
-  bool get showMarkers { 
-    if (this._showMarkers == null) {
-      this._showMarkers = false;
-    }
-    return this._showMarkers!;
-  }
+  // NOTE: showMarkers skipped - type boolean is ignored in gen 
 
-  void set showMarkers (bool v) {
-    this._showMarkers = v;
-  }
-    */
-    
-  bool? skipTranslation;
-    /*
-  bool get skipTranslation { 
-    if (this._skipTranslation == null) {
-      this._skipTranslation = false;
-    }
-    return this._skipTranslation!;
-  }
+  // NOTE: skipTranslation skipped - type boolean is ignored in gen 
 
-  void set skipTranslation (bool v) {
-    this._skipTranslation = v;
-  }
-    */
-    
-  double? zMax;
-    /*
-  double get zMax { 
-    if (this._zMax == null) {
-      this._zMax = 0;
-    }
-    return this._zMax!;
-  }
+  // NOTE: zMax skipped - type number is ignored in gen 
 
-  void set zMax (double v) {
-    this._zMax = v;
-  }
-    */
-    
-  double? zMin;
-    /*
-  double get zMin { 
-    if (this._zMin == null) {
-      this._zMin = 0;
-    }
-    return this._zMin!;
-  }
+  // NOTE: zMin skipped - type number is ignored in gen 
 
-  void set zMin (double v) {
-    this._zMin = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -153,43 +48,27 @@ class WGLSeriesObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of colorData (type number[] is ignored)} 
+    // NOTE: skip serialization of colorData (type number[] is ignored) ignore type: true
 
-    if (this.drawMode != null) {  
-      buffer.writeAll(["\"drawMode\":\`", this.drawMode, "\`,"], "");
-    }
+    // NOTE: skip serialization of drawMode (type string is ignored) ignore type: true
 
-    if (this.hasMarkers != null) {  
-      buffer.writeAll(["\"hasMarkers\":", this.hasMarkers, ","], "");
-    }
+    // NOTE: skip serialization of hasMarkers (type boolean is ignored) ignore type: true
 
-    if (this.markerFrom != null) {  
-      buffer.writeAll(["\"markerFrom\":", this.markerFrom, ","], "");
-    }
+    // NOTE: skip serialization of markerFrom (type number is ignored) ignore type: true
 
-    if (this.markerTo != null) {  
-      buffer.writeAll(["\"markerTo\":", this.markerTo, ","], "");
-    }
+    // NOTE: skip serialization of markerTo (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of segments (type Generic is ignored)} 
+    // NOTE: skip serialization of segments (type Generic is ignored) ignore type: true
 
-    // NOTE: skip serialization of series (type Series is ignored)} 
+    // NOTE: skip serialization of series (type Series is ignored) ignore type: true
 
-    if (this.showMarkers != null) {  
-      buffer.writeAll(["\"showMarkers\":", this.showMarkers, ","], "");
-    }
+    // NOTE: skip serialization of showMarkers (type boolean is ignored) ignore type: true
 
-    if (this.skipTranslation != null) {  
-      buffer.writeAll(["\"skipTranslation\":", this.skipTranslation, ","], "");
-    }
+    // NOTE: skip serialization of skipTranslation (type boolean is ignored) ignore type: true
 
-    if (this.zMax != null) {  
-      buffer.writeAll(["\"zMax\":", this.zMax, ","], "");
-    }
+    // NOTE: skip serialization of zMax (type number is ignored) ignore type: true
 
-    if (this.zMin != null) {  
-      buffer.writeAll(["\"zMin\":", this.zMin, ","], "");
-    }
+    // NOTE: skip serialization of zMin (type number is ignored) ignore type: true
   }
 
 }

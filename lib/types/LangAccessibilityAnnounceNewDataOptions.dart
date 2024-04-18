@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,83 +22,17 @@ import 'OptionFragment.dart';
  * LangAccessibilityAnnounceNewDataOptions 
  */
 class LangAccessibilityAnnounceNewDataOptions extends OptionFragment {
-  LangAccessibilityAnnounceNewDataOptions( {
-    this.newDataAnnounce = null,
-    this.newSeriesAnnounceSingle = null,
-    this.newPointAnnounceSingle = null,
-    this.newSeriesAnnounceMultiple = null,
-    this.newPointAnnounceMultiple = null
-  }) : super();
-  String? newDataAnnounce;
-    /*
-  String get newDataAnnounce { 
-    if (this._newDataAnnounce == null) {
-      this._newDataAnnounce = "";
-    }
-    return this._newDataAnnounce!;
-  }
+  LangAccessibilityAnnounceNewDataOptions( ) : super();
+  // NOTE: newDataAnnounce skipped - type string is ignored in gen 
 
-  void set newDataAnnounce (String v) {
-    this._newDataAnnounce = v;
-  }
-    */
-    
-  String? newSeriesAnnounceSingle;
-    /*
-  String get newSeriesAnnounceSingle { 
-    if (this._newSeriesAnnounceSingle == null) {
-      this._newSeriesAnnounceSingle = "";
-    }
-    return this._newSeriesAnnounceSingle!;
-  }
+  // NOTE: newSeriesAnnounceSingle skipped - type string is ignored in gen 
 
-  void set newSeriesAnnounceSingle (String v) {
-    this._newSeriesAnnounceSingle = v;
-  }
-    */
-    
-  String? newPointAnnounceSingle;
-    /*
-  String get newPointAnnounceSingle { 
-    if (this._newPointAnnounceSingle == null) {
-      this._newPointAnnounceSingle = "";
-    }
-    return this._newPointAnnounceSingle!;
-  }
+  // NOTE: newPointAnnounceSingle skipped - type string is ignored in gen 
 
-  void set newPointAnnounceSingle (String v) {
-    this._newPointAnnounceSingle = v;
-  }
-    */
-    
-  String? newSeriesAnnounceMultiple;
-    /*
-  String get newSeriesAnnounceMultiple { 
-    if (this._newSeriesAnnounceMultiple == null) {
-      this._newSeriesAnnounceMultiple = "";
-    }
-    return this._newSeriesAnnounceMultiple!;
-  }
+  // NOTE: newSeriesAnnounceMultiple skipped - type string is ignored in gen 
 
-  void set newSeriesAnnounceMultiple (String v) {
-    this._newSeriesAnnounceMultiple = v;
-  }
-    */
-    
-  String? newPointAnnounceMultiple;
-    /*
-  String get newPointAnnounceMultiple { 
-    if (this._newPointAnnounceMultiple == null) {
-      this._newPointAnnounceMultiple = "";
-    }
-    return this._newPointAnnounceMultiple!;
-  }
+  // NOTE: newPointAnnounceMultiple skipped - type string is ignored in gen 
 
-  void set newPointAnnounceMultiple (String v) {
-    this._newPointAnnounceMultiple = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -107,25 +41,15 @@ class LangAccessibilityAnnounceNewDataOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.newDataAnnounce != null) {  
-      buffer.writeAll(["\"newDataAnnounce\":\`", this.newDataAnnounce, "\`,"], "");
-    }
+    // NOTE: skip serialization of newDataAnnounce (type string is ignored) ignore type: true
 
-    if (this.newSeriesAnnounceSingle != null) {  
-      buffer.writeAll(["\"newSeriesAnnounceSingle\":\`", this.newSeriesAnnounceSingle, "\`,"], "");
-    }
+    // NOTE: skip serialization of newSeriesAnnounceSingle (type string is ignored) ignore type: true
 
-    if (this.newPointAnnounceSingle != null) {  
-      buffer.writeAll(["\"newPointAnnounceSingle\":\`", this.newPointAnnounceSingle, "\`,"], "");
-    }
+    // NOTE: skip serialization of newPointAnnounceSingle (type string is ignored) ignore type: true
 
-    if (this.newSeriesAnnounceMultiple != null) {  
-      buffer.writeAll(["\"newSeriesAnnounceMultiple\":\`", this.newSeriesAnnounceMultiple, "\`,"], "");
-    }
+    // NOTE: skip serialization of newSeriesAnnounceMultiple (type string is ignored) ignore type: true
 
-    if (this.newPointAnnounceMultiple != null) {  
-      buffer.writeAll(["\"newPointAnnounceMultiple\":\`", this.newPointAnnounceMultiple, "\`,"], "");
-    }
+    // NOTE: skip serialization of newPointAnnounceMultiple (type string is ignored) ignore type: true
   }
 
 }

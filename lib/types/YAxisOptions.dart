@@ -12,11 +12,12 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
 import 'AxisOptions.dart';
+import 'GradientColorStop.dart';
 import 'OptionFragment.dart';
 
 /** 
@@ -24,66 +25,105 @@ import 'OptionFragment.dart';
  */
 class YAxisOptions extends AxisOptions {
   YAxisOptions( {
+    super.accessibility = null,
+    super.alignTicks = null,
+    super.allowDecimals = null,
+    super.alternateGridColor = null,
+    super.angle = null,
+    super.breaks = null,
+    super.categories = null,
+    super.ceiling = null,
+    super.className = null,
+    super.crosshair = null,
+    super.crossing = null,
+    super.currentDateIndicator = null,
+    super.endOnTick = null,
+    super.events = null,
+    super.floor = null,
+    super.grid = null,
+    super.gridLineColor = null,
+    super.gridLineDashStyle = null,
+    super.gridLineInterpolation = null,
+    super.gridLineWidth = null,
+    super.gridZIndex = null,
+    super.height = null,
+    super.id = null,
+    super.labels = null,
+    super.left = null,
+    super.lineColor = null,
+    super.lineWidth = null,
+    super.linkedTo = null,
+    super.margin = null,
+    super.max = null,
     this.maxColor = null,
+    super.maxPadding = null,
+    super.maxRange = null,
+    super.maxZoom = null,
+    super.min = null,
     this.minColor = null,
+    super.minorGridLineColor = null,
+    super.minorGridLineDashStyle = null,
+    super.minorGridLineWidth = null,
+    super.minorTickColor = null,
+    super.minorTickLength = null,
+    super.minorTickPosition = null,
+    super.minorTicks = null,
+    super.minorTicksPerMajor = null,
+    super.minorTickWidth = null,
+    super.minPadding = null,
+    super.minRange = null,
+    super.minTickInterval = null,
+    super.offset = null,
+    super.opposite = null,
+    super.ordinal = null,
+    super.overscroll = null,
+    super.pane = null,
+    super.panningEnabled = null,
+    super.plotBands = null,
+    super.plotLines = null,
+    super.range = null,
+    super.reversed = null,
+    super.reversedStacks = null,
+    super.scrollbar = null,
+    super.showEmpty = null,
+    super.showFirstLabel = null,
+    super.showLastLabel = null,
+    super.softMax = null,
+    super.softMin = null,
+    super.stackLabels = null,
+    super.stackShadow = null,
+    super.startOfWeek = null,
+    super.startOnTick = null,
     this.staticScale = null,
-    this.tooltipValueFormat = null
+    this.stops = null,
+    super.tickAmount = null,
+    super.tickColor = null,
+    super.tickInterval = null,
+    super.tickLength = null,
+    super.tickmarkPlacement = null,
+    super.tickPixelInterval = null,
+    super.tickPosition = null,
+    super.tickPositions = null,
+    super.tickWidth = null,
+    super.title = null,
+    this.tooltipValueFormat = null,
+    super.top = null,
+    super.type = null,
+    super.uniqueNames = null,
+    super.units = null,
+    super.visible = null,
+    super.width = null,
+    super.zIndex = null,
+    super.zoomEnabled = null
   }) : super();
   String? maxColor;
-    /*
-  String get maxColor { 
-    if (this._maxColor == null) {
-      this._maxColor = "";
-    }
-    return this._maxColor!;
-  }
-
-  void set maxColor (String v) {
-    this._maxColor = v;
-  }
-    */
     
   String? minColor;
-    /*
-  String get minColor { 
-    if (this._minColor == null) {
-      this._minColor = "";
-    }
-    return this._minColor!;
-  }
-
-  void set minColor (String v) {
-    this._minColor = v;
-  }
-    */
     
   double? staticScale;
-    /*
-  double get staticScale { 
-    if (this._staticScale == null) {
-      this._staticScale = 0;
-    }
-    return this._staticScale!;
-  }
-
-  void set staticScale (double v) {
-    this._staticScale = v;
-  }
-    */
     
+  List<GradientColorStop>? stops; // GradientColorStop
   String? tooltipValueFormat;
-    /*
-  String get tooltipValueFormat { 
-    if (this._tooltipValueFormat == null) {
-      this._tooltipValueFormat = "";
-    }
-    return this._tooltipValueFormat!;
-  }
-
-  void set tooltipValueFormat (String v) {
-    this._tooltipValueFormat = v;
-  }
-    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -94,21 +134,31 @@ class YAxisOptions extends AxisOptions {
 
     
     if (this.maxColor != null) {  
-      buffer.writeAll(["\"maxColor\":\`", this.maxColor, "\`,"], "");
+      buffer.writeAll(["\"maxColor\":\`",this.maxColor, "\`,"], "");
     }
 
     if (this.minColor != null) {  
-      buffer.writeAll(["\"minColor\":\`", this.minColor, "\`,"], "");
+      buffer.writeAll(["\"minColor\":\`",this.minColor, "\`,"], "");
     }
 
     if (this.staticScale != null) {  
-      buffer.writeAll(["\"staticScale\":", this.staticScale, ","], "");
+      buffer.writeAll(["\"staticScale\":",this.staticScale, ","], "");
     }
 
-    // NOTE: skip serialization of stops (type GradientColorStop[] is ignored)} 
+    if (this.stops != null) {  
+     StringBuffer arrData = StringBuffer();
+
+      for (var item in this.stops!) {
+          arrData.write("{");
+          item.toJSONInner(arrData);
+          arrData.write("}");
+      }
+      buffer.writeAll(["\"stops\": [", arrData , "],"], "");   
+        
+    }
 
     if (this.tooltipValueFormat != null) {  
-      buffer.writeAll(["\"tooltipValueFormat\":\`", this.tooltipValueFormat, "\`,"], "");
+      buffer.writeAll(["\"tooltipValueFormat\":\`",this.tooltipValueFormat, "\`,"], "");
     }
   }
 

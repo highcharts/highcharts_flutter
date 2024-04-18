@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -28,46 +28,10 @@ class DataLabelFilterOptions extends OptionFragment {
     this.value = null
   }) : super();
   String? operator;
-    /*
-  String get operator { 
-    if (this._operator == null) {
-      this._operator = "";
-    }
-    return this._operator!;
-  }
-
-  void set operator (String v) {
-    this._operator = v;
-  }
-    */
     
   String? property;
-    /*
-  String get property { 
-    if (this._property == null) {
-      this._property = "";
-    }
-    return this._property!;
-  }
-
-  void set property (String v) {
-    this._property = v;
-  }
-    */
     
   double? value;
-    /*
-  double get value { 
-    if (this._value == null) {
-      this._value = 0;
-    }
-    return this._value!;
-  }
-
-  void set value (double v) {
-    this._value = v;
-  }
-    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -78,15 +42,15 @@ class DataLabelFilterOptions extends OptionFragment {
 
     
     if (this.operator != null) {  
-      buffer.writeAll(["\"operator\":\`", this.operator, "\`,"], "");
+      buffer.writeAll(["\"operator\":\`",this.operator, "\`,"], "");
     }
 
     if (this.property != null) {  
-      buffer.writeAll(["\"property\":\`", this.property, "\`,"], "");
+      buffer.writeAll(["\"property\":\`",this.property, "\`,"], "");
     }
 
     if (this.value != null) {  
-      buffer.writeAll(["\"value\":", this.value, ","], "");
+      buffer.writeAll(["\"value\":",this.value, ","], "");
     }
   }
 

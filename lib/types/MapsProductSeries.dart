@@ -12,10 +12,11 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
+import 'SeriesOptions.dart';
 import 'FlowMapSeriesOptions.dart';
 import 'HeatmapSeriesOptions.dart';
 import 'MapSeriesOptions.dart';
@@ -31,54 +32,40 @@ import 'OptionFragment.dart';
  * MapsProductSeries 
  */
 class MapsProductSeries extends OptionFragment {
-  MapsProductSeries( ) : super();
-  /**
-   * A `geoheatmap` series is a variety of heatmap series, composed into
-   * the map projection, where the units are expressed in the latitude
-   * and longitude, and individual values contained in a matrix are
-   * represented as colors.
-   * 
-   * In TypeScript the [type](series.geoheatmap.type) option must always be set.
-   * 
-   * Configuration options for the series are given in three levels:
-   * 1. Options for all series in a chart are defined in the
-   *    [plotOptions.series](plotOptions.series) object.
-   * 2. Options for all `geoheatmap` series are defined in
-   *    [plotOptions.geoheatmap](plotOptions.geoheatmap).
-   * 3. Options for one single series are given in
-   *    [the series instance array](series.geoheatmap).
-   * 
-   * ```
-   * Highcharts.chart('container', {
-   *     plotOptions: {
-   *         series: {
-   *             // general options for all series
-   *         },
-   *         geoheatmap: {
-   *             // shared options for all geoheatmap series
-   *         }
-   *     },
-   *     series: [{
-   *         // specific options for this series instance
-   *         type: 'geoheatmap'
-   *     }]
-   * });
-   * ```
-   *               
-      */
+  MapsProductSeries( {
+    this.flowmap = null,
+    this.geoheatmap = null,
+    this.heatmap = null,
+    this.map = null,
+    this.mapbubble = null,
+    this.mapline = null,
+    this.mappoint = null,
+    this.pie = null,
+    this.series = null,
+    this.tiledwebmap = null,
+    this.tilemap = null
+  }) : super();
+  SeriesOptions? series;
+    
+  FlowMapSeriesOptions? flowmap;
+    
   ? geoheatmap;
-    /*
-   get geoheatmap { 
-    if (this._geoheatmap == null) {
-      this._geoheatmap = ();
-    }
-    return this._geoheatmap!;
-  }
-
-  void set geoheatmap ( v) {
-    this._geoheatmap = v;
-  }
-    */
+    
+  HeatmapSeriesOptions? heatmap;
+    
+  MapSeriesOptions? map;
+    
+  MapBubbleSeriesOptions? mapbubble;
+    
+  MapLineSeriesOptions? mapline;
+    
+  MapPointSeriesOptions? mappoint;
+    
+  PieSeriesOptions? pie;
+    
+  TiledWebMapSeriesOptions? tiledwebmap;
+    
+  TilemapSeriesOptions? tilemap;
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -88,27 +75,49 @@ class MapsProductSeries extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of flowmap (type FlowMapSeriesOptions is ignored)} 
-
-    if (this.geoheatmap != null) {  
-      buffer.writeAll(["\"geoheatmap\":", this.geoheatmap?.toJSON(), ","], "");
+    if (this.series != null) {  
+      buffer.writeAll(["\"series\":",this.series?.toJSON(), ","], "");
     }
 
-    // NOTE: skip serialization of heatmap (type HeatmapSeriesOptions is ignored)} 
+    if (this.flowmap != null) {  
+      buffer.writeAll(["\"flowmap\":",this.flowmap?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of map (type MapSeriesOptions is ignored)} 
+    if (this.geoheatmap != null) {  
+      buffer.writeAll(["\"geoheatmap\":",this.geoheatmap?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of mapbubble (type MapBubbleSeriesOptions is ignored)} 
+    if (this.heatmap != null) {  
+      buffer.writeAll(["\"heatmap\":",this.heatmap?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of mapline (type MapLineSeriesOptions is ignored)} 
+    if (this.map != null) {  
+      buffer.writeAll(["\"map\":",this.map?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of mappoint (type MapPointSeriesOptions is ignored)} 
+    if (this.mapbubble != null) {  
+      buffer.writeAll(["\"mapbubble\":",this.mapbubble?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of pie (type PieSeriesOptions is ignored)} 
+    if (this.mapline != null) {  
+      buffer.writeAll(["\"mapline\":",this.mapline?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of tiledwebmap (type TiledWebMapSeriesOptions is ignored)} 
+    if (this.mappoint != null) {  
+      buffer.writeAll(["\"mappoint\":",this.mappoint?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of tilemap (type TilemapSeriesOptions is ignored)} 
+    if (this.pie != null) {  
+      buffer.writeAll(["\"pie\":",this.pie?.toJSON(), ","], "");
+    }
+
+    if (this.tiledwebmap != null) {  
+      buffer.writeAll(["\"tiledwebmap\":",this.tiledwebmap?.toJSON(), ","], "");
+    }
+
+    if (this.tilemap != null) {  
+      buffer.writeAll(["\"tilemap\":",this.tilemap?.toJSON(), ","], "");
+    }
   }
 
 }

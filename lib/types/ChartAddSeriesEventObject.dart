@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -34,13 +34,13 @@ class ChartAddSeriesEventObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of options (type SeriesOptions is ignored)} 
+    // NOTE: skip serialization of options (type SeriesOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of preventDefault (type Function is ignored)} 
+    // NOTE: skip serialization of preventDefault (type Function is ignored) ignore type: 1
 
-    // NOTE: skip serialization of target (type Chart is ignored)} 
+    // NOTE: skip serialization of target (type Chart is ignored) ignore type: true
 
-    // NOTE: skip serialization of type (type "addSeries" is ignored)} 
+    // NOTE: skip serialization of type (type "addSeries" is ignored) ignore type: true
   }
 
 }

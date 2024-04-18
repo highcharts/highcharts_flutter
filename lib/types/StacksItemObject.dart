@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,128 +22,23 @@ import 'OptionFragment.dart';
  * StacksItemObject 
  */
 class StacksItemObject extends OptionFragment {
-  StacksItemObject( {
-    this.absoluteNeg = null,
-    this.absolutePos = null,
-    this.connectorThreshold = null,
-    this.negTotal = null,
-    this.posTotal = null,
-    this.stackTotal = null,
-    this.stateIndex = null,
-    this.threshold = null
-  }) : super();
-  double? absoluteNeg;
-    /*
-  double get absoluteNeg { 
-    if (this._absoluteNeg == null) {
-      this._absoluteNeg = 0;
-    }
-    return this._absoluteNeg!;
-  }
+  StacksItemObject( ) : super();
+  // NOTE: absoluteNeg skipped - type number is ignored in gen 
 
-  void set absoluteNeg (double v) {
-    this._absoluteNeg = v;
-  }
-    */
-    
-  double? absolutePos;
-    /*
-  double get absolutePos { 
-    if (this._absolutePos == null) {
-      this._absolutePos = 0;
-    }
-    return this._absolutePos!;
-  }
+  // NOTE: absolutePos skipped - type number is ignored in gen 
 
-  void set absolutePos (double v) {
-    this._absolutePos = v;
-  }
-    */
-    
-  double? connectorThreshold;
-    /*
-  double get connectorThreshold { 
-    if (this._connectorThreshold == null) {
-      this._connectorThreshold = 0;
-    }
-    return this._connectorThreshold!;
-  }
+  // NOTE: connectorThreshold skipped - type number is ignored in gen 
 
-  void set connectorThreshold (double v) {
-    this._connectorThreshold = v;
-  }
-    */
-    
-  double? negTotal;
-    /*
-  double get negTotal { 
-    if (this._negTotal == null) {
-      this._negTotal = 0;
-    }
-    return this._negTotal!;
-  }
+  // NOTE: negTotal skipped - type number is ignored in gen 
 
-  void set negTotal (double v) {
-    this._negTotal = v;
-  }
-    */
-    
-  double? posTotal;
-    /*
-  double get posTotal { 
-    if (this._posTotal == null) {
-      this._posTotal = 0;
-    }
-    return this._posTotal!;
-  }
+  // NOTE: posTotal skipped - type number is ignored in gen 
 
-  void set posTotal (double v) {
-    this._posTotal = v;
-  }
-    */
-    
-  double? stackTotal;
-    /*
-  double get stackTotal { 
-    if (this._stackTotal == null) {
-      this._stackTotal = 0;
-    }
-    return this._stackTotal!;
-  }
+  // NOTE: stackTotal skipped - type number is ignored in gen 
 
-  void set stackTotal (double v) {
-    this._stackTotal = v;
-  }
-    */
-    
-  double? stateIndex;
-    /*
-  double get stateIndex { 
-    if (this._stateIndex == null) {
-      this._stateIndex = 0;
-    }
-    return this._stateIndex!;
-  }
+  // NOTE: stateIndex skipped - type number is ignored in gen 
 
-  void set stateIndex (double v) {
-    this._stateIndex = v;
-  }
-    */
-    
-  double? threshold;
-    /*
-  double get threshold { 
-    if (this._threshold == null) {
-      this._threshold = 0;
-    }
-    return this._threshold!;
-  }
+  // NOTE: threshold skipped - type number is ignored in gen 
 
-  void set threshold (double v) {
-    this._threshold = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -152,41 +47,25 @@ class StacksItemObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.absoluteNeg != null) {  
-      buffer.writeAll(["\"absoluteNeg\":", this.absoluteNeg, ","], "");
-    }
+    // NOTE: skip serialization of absoluteNeg (type number is ignored) ignore type: true
 
-    if (this.absolutePos != null) {  
-      buffer.writeAll(["\"absolutePos\":", this.absolutePos, ","], "");
-    }
+    // NOTE: skip serialization of absolutePos (type number is ignored) ignore type: true
 
-    if (this.connectorThreshold != null) {  
-      buffer.writeAll(["\"connectorThreshold\":", this.connectorThreshold, ","], "");
-    }
+    // NOTE: skip serialization of connectorThreshold (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of label (type SVGLabel is ignored)} 
+    // NOTE: skip serialization of label (type SVGLabel is ignored) ignore type: true
 
-    if (this.negTotal != null) {  
-      buffer.writeAll(["\"negTotal\":", this.negTotal, ","], "");
-    }
+    // NOTE: skip serialization of negTotal (type number is ignored) ignore type: true
 
-    if (this.posTotal != null) {  
-      buffer.writeAll(["\"posTotal\":", this.posTotal, ","], "");
-    }
+    // NOTE: skip serialization of posTotal (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of stackState (type number[] is ignored)} 
+    // NOTE: skip serialization of stackState (type number[] is ignored) ignore type: true
 
-    if (this.stackTotal != null) {  
-      buffer.writeAll(["\"stackTotal\":", this.stackTotal, ","], "");
-    }
+    // NOTE: skip serialization of stackTotal (type number is ignored) ignore type: true
 
-    if (this.stateIndex != null) {  
-      buffer.writeAll(["\"stateIndex\":", this.stateIndex, ","], "");
-    }
+    // NOTE: skip serialization of stateIndex (type number is ignored) ignore type: true
 
-    if (this.threshold != null) {  
-      buffer.writeAll(["\"threshold\":", this.threshold, ","], "");
-    }
+    // NOTE: skip serialization of threshold (type number is ignored) ignore type: true
   }
 
 }

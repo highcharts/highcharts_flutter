@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,23 +22,9 @@ import 'OptionFragment.dart';
  * StacksObject 
  */
 class StacksObject extends OptionFragment {
-  StacksObject( {
-    this.changed = null
-  }) : super();
-  bool? changed;
-    /*
-  bool get changed { 
-    if (this._changed == null) {
-      this._changed = false;
-    }
-    return this._changed!;
-  }
+  StacksObject( ) : super();
+  // NOTE: changed skipped - type boolean is ignored in gen 
 
-  void set changed (bool v) {
-    this._changed = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -47,13 +33,11 @@ class StacksObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.changed != null) {  
-      buffer.writeAll(["\"changed\":", this.changed, ","], "");
-    }
+    // NOTE: skip serialization of changed (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of alreadyChanged (type string[] is ignored)} 
+    // NOTE: skip serialization of alreadyChanged (type string[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of waterfall (type Generic is ignored)} 
+    // NOTE: skip serialization of waterfall (type Generic is ignored) ignore type: true
   }
 
 }

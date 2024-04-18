@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -20,44 +20,18 @@ import 'BreadcrumbsOptions.dart';
 import 'CSSObject.dart';
 import 'DrilldownActiveDataLabelStyleOptions.dart';
 import 'DrilldownDrillUpButtonOptions.dart';
+import 'SeriesOptions.dart';
 import 'OptionFragment.dart';
 
 /** 
  * DrilldownOptions 
  */
 class DrilldownOptions extends OptionFragment {
-  DrilldownOptions( {
-    this.allowPointDrilldown = null,
-    this.mapZooming = null
-  }) : super();
-  bool? allowPointDrilldown;
-    /*
-  bool get allowPointDrilldown { 
-    if (this._allowPointDrilldown == null) {
-      this._allowPointDrilldown = false;
-    }
-    return this._allowPointDrilldown!;
-  }
+  DrilldownOptions( ) : super();
+  // NOTE: allowPointDrilldown skipped - type boolean is ignored in gen 
 
-  void set allowPointDrilldown (bool v) {
-    this._allowPointDrilldown = v;
-  }
-    */
-    
-  bool? mapZooming;
-    /*
-  bool get mapZooming { 
-    if (this._mapZooming == null) {
-      this._mapZooming = false;
-    }
-    return this._mapZooming!;
-  }
+  // NOTE: mapZooming skipped - type boolean is ignored in gen 
 
-  void set mapZooming (bool v) {
-    this._mapZooming = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -66,27 +40,23 @@ class DrilldownOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of breadcrumbs (type BreadcrumbsOptions is ignored)} 
+    // NOTE: skip serialization of breadcrumbs (type BreadcrumbsOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of activeAxisLabelStyle (type CSSObject is ignored)} 
+    // NOTE: skip serialization of activeAxisLabelStyle (type CSSObject is ignored) ignore type: true
 
-    // NOTE: skip serialization of activeDataLabelStyle (type DrilldownActiveDataLabelStyleOptions is ignored)} 
+    // NOTE: skip serialization of activeDataLabelStyle (type DrilldownActiveDataLabelStyleOptions is ignored) ignore type: true
 
-    if (this.allowPointDrilldown != null) {  
-      buffer.writeAll(["\"allowPointDrilldown\":", this.allowPointDrilldown, ","], "");
-    }
+    // NOTE: skip serialization of allowPointDrilldown (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of animation (type Generic is ignored)} 
+    // NOTE: skip serialization of animation (type Generic is ignored) ignore type: true
 
-    // NOTE: skip serialization of breadcrumbs (type BreadcrumbsOptions is ignored)} 
+    // NOTE: skip serialization of breadcrumbs (type BreadcrumbsOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of drillUpButton (type DrilldownDrillUpButtonOptions is ignored)} 
+    // NOTE: skip serialization of drillUpButton (type DrilldownDrillUpButtonOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of series (type SeriesOptions[] is ignored)} 
+    // NOTE: skip serialization of series (type SeriesOptions[] is ignored) ignore type: true
 
-    if (this.mapZooming != null) {  
-      buffer.writeAll(["\"mapZooming\":", this.mapZooming, ","], "");
-    }
+    // NOTE: skip serialization of mapZooming (type boolean is ignored) ignore type: true
   }
 
 }

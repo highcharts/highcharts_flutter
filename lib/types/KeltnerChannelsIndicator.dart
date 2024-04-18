@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,38 +22,11 @@ import 'OptionFragment.dart';
  * KeltnerChannelsIndicator 
  */
 class KeltnerChannelsIndicator extends OptionFragment {
-  KeltnerChannelsIndicator( {
-    this.nameBase = null,
-    this.pointValKey = null
-  }) : super();
-  String? nameBase;
-    /*
-  String get nameBase { 
-    if (this._nameBase == null) {
-      this._nameBase = "";
-    }
-    return this._nameBase!;
-  }
+  KeltnerChannelsIndicator( ) : super();
+  // NOTE: nameBase skipped - type string is ignored in gen 
 
-  void set nameBase (String v) {
-    this._nameBase = v;
-  }
-    */
-    
-  String? pointValKey;
-    /*
-  String get pointValKey { 
-    if (this._pointValKey == null) {
-      this._pointValKey = "";
-    }
-    return this._pointValKey!;
-  }
+  // NOTE: pointValKey skipped - type string is ignored in gen 
 
-  void set pointValKey (String v) {
-    this._pointValKey = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -62,19 +35,15 @@ class KeltnerChannelsIndicator extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.nameBase != null) {  
-      buffer.writeAll(["\"nameBase\":\`", this.nameBase, "\`,"], "");
-    }
+    // NOTE: skip serialization of nameBase (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of nameComponents (type string[] is ignored)} 
+    // NOTE: skip serialization of nameComponents (type string[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of pointArrayMap (type (keyof KeltnerChannelsPoint)[] is ignored)} 
+    // NOTE: skip serialization of pointArrayMap (type (keyof KeltnerChannelsPoint)[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of pointClass (type typeof KeltnerChannelsPoint is ignored)} 
+    // NOTE: skip serialization of pointClass (type typeof KeltnerChannelsPoint is ignored) ignore type: true
 
-    if (this.pointValKey != null) {  
-      buffer.writeAll(["\"pointValKey\":\`", this.pointValKey, "\`,"], "");
-    }
+    // NOTE: skip serialization of pointValKey (type string is ignored) ignore type: true
   }
 
 }

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,37 +24,14 @@ import 'OptionFragment.dart';
  */
 class TranslationAttributes extends SVGAttributes {
   TranslationAttributes( {
-    this.translateX = null,
-    this.translateY = null
+    super.dashstyle = null,
+    super.stroke = null,
+    super.width = null
   }) : super();
-  double? translateX;
-    /*
-  double get translateX { 
-    if (this._translateX == null) {
-      this._translateX = 0;
-    }
-    return this._translateX!;
-  }
+  // NOTE: translateX skipped - type number is ignored in gen 
 
-  void set translateX (double v) {
-    this._translateX = v;
-  }
-    */
-    
-  double? translateY;
-    /*
-  double get translateY { 
-    if (this._translateY == null) {
-      this._translateY = 0;
-    }
-    return this._translateY!;
-  }
+  // NOTE: translateY skipped - type number is ignored in gen 
 
-  void set translateY (double v) {
-    this._translateY = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -63,13 +40,9 @@ class TranslationAttributes extends SVGAttributes {
     super.toJSONInner(buffer);
 
     
-    if (this.translateX != null) {  
-      buffer.writeAll(["\"translateX\":", this.translateX, ","], "");
-    }
+    // NOTE: skip serialization of translateX (type number is ignored) ignore type: true
 
-    if (this.translateY != null) {  
-      buffer.writeAll(["\"translateY\":", this.translateY, ","], "");
-    }
+    // NOTE: skip serialization of translateY (type number is ignored) ignore type: true
   }
 
 }

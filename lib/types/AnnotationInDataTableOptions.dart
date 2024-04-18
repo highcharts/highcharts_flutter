@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -27,32 +27,8 @@ class AnnotationInDataTableOptions extends OptionFragment {
     this.join = null
   }) : super();
   String? itemDelimiter;
-    /*
-  String get itemDelimiter { 
-    if (this._itemDelimiter == null) {
-      this._itemDelimiter = "";
-    }
-    return this._itemDelimiter!;
-  }
-
-  void set itemDelimiter (String v) {
-    this._itemDelimiter = v;
-  }
-    */
     
   bool? join;
-    /*
-  bool get join { 
-    if (this._join == null) {
-      this._join = false;
-    }
-    return this._join!;
-  }
-
-  void set join (bool v) {
-    this._join = v;
-  }
-    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -63,11 +39,11 @@ class AnnotationInDataTableOptions extends OptionFragment {
 
     
     if (this.itemDelimiter != null) {  
-      buffer.writeAll(["\"itemDelimiter\":\`", this.itemDelimiter, "\`,"], "");
+      buffer.writeAll(["\"itemDelimiter\":\`",this.itemDelimiter, "\`,"], "");
     }
 
     if (this.join != null) {  
-      buffer.writeAll(["\"join\":", this.join, ","], "");
+      buffer.writeAll(["\"join\":",this.join, ","], "");
     }
   }
 

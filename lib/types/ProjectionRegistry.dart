@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -32,15 +32,15 @@ class ProjectionRegistry extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of EqualEarth (type typeof EqualEarth is ignored)} 
+    // NOTE: skip serialization of EqualEarth (type typeof EqualEarth is ignored) ignore type: true
 
-    // NOTE: skip serialization of LambertConformalConic (type typeof LambertConformalConic is ignored)} 
+    // NOTE: skip serialization of LambertConformalConic (type typeof LambertConformalConic is ignored) ignore type: true
 
-    // NOTE: skip serialization of Miller (type typeof Miller is ignored)} 
+    // NOTE: skip serialization of Miller (type typeof Miller is ignored) ignore type: true
 
-    // NOTE: skip serialization of Orthographic (type typeof Orthographic is ignored)} 
+    // NOTE: skip serialization of Orthographic (type typeof Orthographic is ignored) ignore type: true
 
-    // NOTE: skip serialization of WebMercator (type typeof WebMercator is ignored)} 
+    // NOTE: skip serialization of WebMercator (type typeof WebMercator is ignored) ignore type: true
   }
 
 }

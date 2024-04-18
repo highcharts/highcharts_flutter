@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,76 +24,90 @@ import 'OptionFragment.dart';
  */
 class AreaSeriesOptions extends LineSeriesOptions {
   AreaSeriesOptions( {
+    super.accessibility = null,
+    super.allAreas = null,
+    super.allowPointSelect = null,
+    super.animationLimit = null,
+    super.boostBlending = null,
+    super.boostThreshold = null,
+    super.borderColor = null,
+    super.borderWidth = null,
+    super.className = null,
+    super.clip = null,
+    super.color = null,
+    super.colorAxis = null,
+    super.colorIndex = null,
+    super.colorKey = null,
+    super.compare = null,
+    super.compareStart = null,
+    super.connectEnds = null,
+    super.connectNulls = null,
+    super.connectors = null,
+    super.crisp = null,
+    super.cropThreshold = null,
+    super.cumulative = null,
+    super.cursor = null,
+    super.dashStyle = null,
+    super.dataGrouping = null,
+    super.dataLabels = null,
+    super.dataSorting = null,
+    super.description = null,
+    super.dragDrop = null,
+    super.enableMouseTracking = null,
+    super.events = null,
     this.fillColor = null,
     this.fillOpacity = null,
-    this.negativeFillColor = null
+    super.findNearestPointBy = null,
+    super.gapSize = null,
+    super.gapUnit = null,
+    super.getExtremesFromAll = null,
+    super.includeInDataExport = null,
+    super.joinBy = null,
+    super.keys = null,
+    super.label = null,
+    super.lastPrice = null,
+    super.lastVisiblePrice = null,
+    super.legendSymbol = null,
+    super.linecap = null,
+    super.lineWidth = null,
+    super.linkedTo = null,
+    super.marker = null,
+    super.navigatorOptions = null,
+    super.negativeColor = null,
+    this.negativeFillColor = null,
+    super.onPoint = null,
+    super.opacity = null,
+    super.point = null,
+    super.pointInterval = null,
+    super.pointIntervalUnit = null,
+    super.pointPlacement = null,
+    super.pointRange = null,
+    super.pointStart = null,
+    super.relativeXValue = null,
+    super.selected = null,
+    super.showCheckbox = null,
+    super.showInLegend = null,
+    super.showInNavigator = null,
+    super.skipKeyboardNavigation = null,
+    super.softThreshold = null,
+    super.stacking = null,
+    super.step = null,
+    super.stickyTracking = null,
+    super.threshold = null,
+    super.tooltip = null,
+    super.turboThreshold = null,
+    super.visible = null,
+    super.zIndex = null,
+    super.zoneAxis = null,
+    super.zones = null
   }) : super();
-  /**
-   * Fill color or gradient for the area. When `null`, the series' `color`
-   * is used with the series' `fillOpacity`.
-   * 
-   * In styled mode, the fill color can be set with the `.highcharts-area`
-   * class name.  
-      */
   String? fillColor;
-    /*
-  String get fillColor { 
-    if (this._fillColor == null) {
-      this._fillColor = "";
-    }
-    return this._fillColor!;
-  }
-
-  void set fillColor (String v) {
-    this._fillColor = v;
-  }
-    */
     
-  /**
-   * Fill opacity for the area. When you set an explicit `fillColor`,
-   * the `fillOpacity` is not applied. Instead, you should define the
-   * opacity in the `fillColor` with an rgba color definition. The
-   * `fillOpacity` setting, also the default setting, overrides the alpha
-   * component of the `color` setting.
-   * 
-   * In styled mode, the fill opacity can be set with the
-   * `.highcharts-area` class name.  
-      */
   double? fillOpacity;
-    /*
-  double get fillOpacity { 
-    if (this._fillOpacity == null) {
-      this._fillOpacity = 0;
-    }
-    return this._fillOpacity!;
-  }
-
-  void set fillOpacity (double v) {
-    this._fillOpacity = v;
-  }
-    */
     
-  /**
-   * A separate color for the negative part of the area.
-   * 
-   * In styled mode, a negative color is set with the
-   * `.highcharts-negative` class name.  
-      */
   String? negativeFillColor;
-    /*
-  String get negativeFillColor { 
-    if (this._negativeFillColor == null) {
-      this._negativeFillColor = "";
-    }
-    return this._negativeFillColor!;
-  }
-
-  void set negativeFillColor (String v) {
-    this._negativeFillColor = v;
-  }
-    */
     
-  // NOTE: states skipped - type Generic is ignored in gen
+  // NOTE: states skipped - type Generic is ignored in gen 
 
 
   //////////////////////////////////////////////////////////////////////////////
@@ -104,18 +118,18 @@ class AreaSeriesOptions extends LineSeriesOptions {
 
     
     if (this.fillColor != null) {  
-      buffer.writeAll(["\"fillColor\":\`", this.fillColor, "\`,"], "");
+      buffer.writeAll(["\"fillColor\":\`",this.fillColor, "\`,"], "");
     }
 
     if (this.fillOpacity != null) {  
-      buffer.writeAll(["\"fillOpacity\":", this.fillOpacity, ","], "");
+      buffer.writeAll(["\"fillOpacity\":",this.fillOpacity, ","], "");
     }
 
     if (this.negativeFillColor != null) {  
-      buffer.writeAll(["\"negativeFillColor\":\`", this.negativeFillColor, "\`,"], "");
+      buffer.writeAll(["\"negativeFillColor\":\`",this.negativeFillColor, "\`,"], "");
     }
 
-    // NOTE: skip serialization of states (type Generic is ignored)} 
+    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
   }
 
 }

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -34,15 +34,15 @@ class CylinderPathsObject extends SVGPath3D {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of back (type SVGPath is ignored)} 
+    // NOTE: skip serialization of back (type SVGPath is ignored) ignore type: true
 
-    // NOTE: skip serialization of bottom (type SVGPath is ignored)} 
+    // NOTE: skip serialization of bottom (type SVGPath is ignored) ignore type: true
 
-    // NOTE: skip serialization of front (type SVGPath is ignored)} 
+    // NOTE: skip serialization of front (type SVGPath is ignored) ignore type: true
 
-    // NOTE: skip serialization of top (type SVGPath is ignored)} 
+    // NOTE: skip serialization of top (type SVGPath is ignored) ignore type: true
 
-    // NOTE: skip serialization of zIndexes (type Generic is ignored)} 
+    // NOTE: skip serialization of zIndexes (type Generic is ignored) ignore type: true
   }
 
 }

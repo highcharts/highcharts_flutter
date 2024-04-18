@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,70 +24,43 @@ import 'OptionFragment.dart';
  */
 class TimelineDataLabelOptions extends DataLabelOptions {
   TimelineDataLabelOptions( {
-    this.alternate = null,
-    this.connectorColor = null,
-    this.connectorWidth = null,
-    super.distance = null,
-    this.width = null
+    super.align = null,
+    super.allowOverlap = null,
+    super.backgroundColor = null,
+    super.borderColor = null,
+    super.borderRadius = null,
+    super.borderWidth = null,
+    super.className = null,
+    super.color = null,
+    super.crop = null,
+    super.defer = null,
+    super.enabled = null,
+    super.filter = null,
+    super.format = null,
+    super.inside = null,
+    super.nullFormat = null,
+    super.overflow = null,
+    super.padding = null,
+    super.rotation = null,
+    super.shape = null,
+    super.style = null,
+    super.textPath = null,
+    super.useHTML = null,
+    super.verticalAlign = null,
+    super.x = null,
+    super.y = null,
+    super.zIndex = null
   }) : super();
-  bool? alternate;
-    /*
-  bool get alternate { 
-    if (this._alternate == null) {
-      this._alternate = false;
-    }
-    return this._alternate!;
-  }
+  // NOTE: alternate skipped - type boolean is ignored in gen 
 
-  void set alternate (bool v) {
-    this._alternate = v;
-  }
-    */
-    
-  String? connectorColor;
-    /*
-  String get connectorColor { 
-    if (this._connectorColor == null) {
-      this._connectorColor = "";
-    }
-    return this._connectorColor!;
-  }
+  // NOTE: connectorColor skipped - type string is ignored in gen 
 
-  void set connectorColor (String v) {
-    this._connectorColor = v;
-  }
-    */
-    
-  double? connectorWidth;
-    /*
-  double get connectorWidth { 
-    if (this._connectorWidth == null) {
-      this._connectorWidth = 0;
-    }
-    return this._connectorWidth!;
-  }
+  // NOTE: connectorWidth skipped - type number is ignored in gen 
 
-  void set connectorWidth (double v) {
-    this._connectorWidth = v;
-  }
-    */
-    
-  /** NOTE: extdistance is skipped here for now, as it overrides the base type. */
+  // NOTE: distance skipped - type number is ignored in gen 
 
-  double? width;
-    /*
-  double get width { 
-    if (this._width == null) {
-      this._width = 0;
-    }
-    return this._width!;
-  }
+  // NOTE: width skipped - type number is ignored in gen 
 
-  void set width (double v) {
-    this._width = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -96,23 +69,15 @@ class TimelineDataLabelOptions extends DataLabelOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.alternate != null) {  
-      buffer.writeAll(["\"alternate\":", this.alternate, ","], "");
-    }
+    // NOTE: skip serialization of alternate (type boolean is ignored) ignore type: true
 
-    if (this.connectorColor != null) {  
-      buffer.writeAll(["\"connectorColor\":\`", this.connectorColor, "\`,"], "");
-    }
+    // NOTE: skip serialization of connectorColor (type string is ignored) ignore type: true
 
-    if (this.connectorWidth != null) {  
-      buffer.writeAll(["\"connectorWidth\":", this.connectorWidth, ","], "");
-    }
+    // NOTE: skip serialization of connectorWidth (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of distance (type number is ignored)} 
+    // NOTE: skip serialization of distance (type number is ignored) ignore type: true
 
-    if (this.width != null) {  
-      buffer.writeAll(["\"width\":", this.width, ","], "");
-    }
+    // NOTE: skip serialization of width (type number is ignored) ignore type: true
   }
 
 }

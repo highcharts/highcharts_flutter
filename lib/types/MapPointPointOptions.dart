@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -25,67 +25,28 @@ import 'OptionFragment.dart';
  */
 class MapPointPointOptions extends ScatterPointOptions {
   MapPointPointOptions( {
-    this.lat = null,
-    this.lon = null,
-    this.x = null,
-    this.y = null
+    super.accessibility = null,
+    super.borderColor = null,
+    super.className = null,
+    super.color = null,
+    super.colorIndex = null,
+    super.connectors = null,
+    super.dataLabels = null,
+    super.dragDrop = null,
+    super.events = null,
+    super.keys = null,
+    super.marker = null,
+    super.selected = null,
+    super.visible = null
   }) : super();
-  double? lat;
-    /*
-  double get lat { 
-    if (this._lat == null) {
-      this._lat = 0;
-    }
-    return this._lat!;
-  }
+  // NOTE: lat skipped - type number is ignored in gen 
 
-  void set lat (double v) {
-    this._lat = v;
-  }
-    */
-    
-  double? lon;
-    /*
-  double get lon { 
-    if (this._lon == null) {
-      this._lon = 0;
-    }
-    return this._lon!;
-  }
+  // NOTE: lon skipped - type number is ignored in gen 
 
-  void set lon (double v) {
-    this._lon = v;
-  }
-    */
-    
-  double? x;
-    /*
-  double get x { 
-    if (this._x == null) {
-      this._x = 0;
-    }
-    return this._x!;
-  }
+  // NOTE: x skipped - type number is ignored in gen 
 
-  void set x (double v) {
-    this._x = v;
-  }
-    */
-    
-  double? y;
-    /*
-  double get y { 
-    if (this._y == null) {
-      this._y = 0;
-    }
-    return this._y!;
-  }
+  // NOTE: y skipped - type number is ignored in gen 
 
-  void set y (double v) {
-    this._y = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -94,25 +55,17 @@ class MapPointPointOptions extends ScatterPointOptions {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of geometry (type GeoJSONGeometryPoint is ignored)} 
+    // NOTE: skip serialization of geometry (type GeoJSONGeometryPoint is ignored) ignore type: true
 
-    if (this.lat != null) {  
-      buffer.writeAll(["\"lat\":", this.lat, ","], "");
-    }
+    // NOTE: skip serialization of lat (type number is ignored) ignore type: true
 
-    if (this.lon != null) {  
-      buffer.writeAll(["\"lon\":", this.lon, ","], "");
-    }
+    // NOTE: skip serialization of lon (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of type (type "Point" is ignored)} 
+    // NOTE: skip serialization of type (type "Point" is ignored) ignore type: true
 
-    if (this.x != null) {  
-      buffer.writeAll(["\"x\":", this.x, ","], "");
-    }
+    // NOTE: skip serialization of x (type number is ignored) ignore type: true
 
-    if (this.y != null) {  
-      buffer.writeAll(["\"y\":", this.y, ","], "");
-    }
+    // NOTE: skip serialization of y (type number is ignored) ignore type: true
   }
 
 }

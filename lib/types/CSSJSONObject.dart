@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,38 +23,11 @@ import 'OptionFragment.dart';
  * CSSJSONObject 
  */
 class CSSJSONObject extends CSSObject {
-  CSSJSONObject( {
-    this.fill = null,
-    this.stroke = null
-  }) : super();
-  String? fill;
-    /*
-  String get fill { 
-    if (this._fill == null) {
-      this._fill = "";
-    }
-    return this._fill!;
-  }
+  CSSJSONObject( ) : super();
+  // NOTE: fill skipped - type string is ignored in gen 
 
-  void set fill (String v) {
-    this._fill = v;
-  }
-    */
-    
-  String? stroke;
-    /*
-  String get stroke { 
-    if (this._stroke == null) {
-      this._stroke = "";
-    }
-    return this._stroke!;
-  }
+  // NOTE: stroke skipped - type string is ignored in gen 
 
-  void set stroke (String v) {
-    this._stroke = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -63,13 +36,9 @@ class CSSJSONObject extends CSSObject {
     super.toJSONInner(buffer);
 
     
-    if (this.fill != null) {  
-      buffer.writeAll(["\"fill\":\`", this.fill, "\`,"], "");
-    }
+    // NOTE: skip serialization of fill (type string is ignored) ignore type: true
 
-    if (this.stroke != null) {  
-      buffer.writeAll(["\"stroke\":\`", this.stroke, "\`,"], "");
-    }
+    // NOTE: skip serialization of stroke (type string is ignored) ignore type: true
   }
 
 }

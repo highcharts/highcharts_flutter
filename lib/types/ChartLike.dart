@@ -12,10 +12,11 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
+import 'ColorAxis.dart';
 import 'Legend.dart';
 import 'RangeSelector.dart';
 import 'Point.dart';
@@ -30,8 +31,10 @@ import 'Pathfinder.dart';
 import 'BoostChartAdditions.dart';
 import 'DragDropDataObject.dart';
 import 'DragHandlesObject.dart';
+import 'LevelObject.dart';
 import 'InfoObject.dart';
 import 'BBoxObject.dart';
+import 'LabelIntersectBoxObject.dart';
 import 'Toolbar.dart';
 import 'OptionFragment.dart';
 
@@ -39,563 +42,81 @@ import 'OptionFragment.dart';
  * ChartLike 
  */
 class ChartLike extends OptionFragment {
-  ChartLike( {
-    this.marginRight = null,
-    this.polar = null,
-    this.breadcrumbsBottomMargin = null,
-    this.breadcrumbsTopMargin = null,
-    this.extraBottomMargin = null,
-    this.extraTopMargin = null,
-    this.fixedRange = null,
-    this.runTrackerClick = null,
-    this.cancelClick = null,
-    this.mouseDownX = null,
-    this.mouseDownY = null,
-    this.mouseIsDown = null,
-    this.isPrinting = null,
-    this.openMenu = null,
-    this.mapCredits = null,
-    this.mapCreditsFull = null,
-    this.highContrastModeActive = null,
-    this.a11yDirty = null,
-    this.inverted = null,
-    this.scale3d = null,
-    this.redrawTrigger = null,
-    this.initiatedScale = null,
-    this.boosted = null,
-    this.hasDataDef = null,
-    this.liveDataURL = null,
-    this.activeResizer = null,
-    this.hasAddedDragDropEvents = null,
-    this.hasDraggedAnnotation = null,
-    this.isDragDropAnimating = null,
-    this.ascendingOrderInTable = null,
-    this.isDataTableVisible = null,
-    this.hasParallelCoordinates = null,
-    this.scrollablePixelsX = null,
-    this.scrollablePixelsY = null,
-    this.labelSeriesMaxSum = null,
-    this.seriesLabelTimer = null,
-    this.angular = null
-  }) : super();
-  double? marginRight;
-    /*
-  double get marginRight { 
-    if (this._marginRight == null) {
-      this._marginRight = 0;
-    }
-    return this._marginRight!;
-  }
+  ChartLike( ) : super();
+  // NOTE: marginRight skipped - type number is ignored in gen 
 
-  void set marginRight (double v) {
-    this._marginRight = v;
-  }
-    */
-    
-  bool? polar;
-    /*
-  bool get polar { 
-    if (this._polar == null) {
-      this._polar = false;
-    }
-    return this._polar!;
-  }
+  // NOTE: polar skipped - type boolean is ignored in gen 
 
-  void set polar (bool v) {
-    this._polar = v;
-  }
-    */
-    
-  bool? breadcrumbsBottomMargin;
-    /*
-  bool get breadcrumbsBottomMargin { 
-    if (this._breadcrumbsBottomMargin == null) {
-      this._breadcrumbsBottomMargin = false;
-    }
-    return this._breadcrumbsBottomMargin!;
-  }
+  // NOTE: breadcrumbsBottomMargin skipped - type boolean is ignored in gen 
 
-  void set breadcrumbsBottomMargin (bool v) {
-    this._breadcrumbsBottomMargin = v;
-  }
-    */
-    
-  bool? breadcrumbsTopMargin;
-    /*
-  bool get breadcrumbsTopMargin { 
-    if (this._breadcrumbsTopMargin == null) {
-      this._breadcrumbsTopMargin = false;
-    }
-    return this._breadcrumbsTopMargin!;
-  }
+  // NOTE: breadcrumbsTopMargin skipped - type boolean is ignored in gen 
 
-  void set breadcrumbsTopMargin (bool v) {
-    this._breadcrumbsTopMargin = v;
-  }
-    */
-    
-  bool? extraBottomMargin;
-    /*
-  bool get extraBottomMargin { 
-    if (this._extraBottomMargin == null) {
-      this._extraBottomMargin = false;
-    }
-    return this._extraBottomMargin!;
-  }
+  // NOTE: extraBottomMargin skipped - type boolean is ignored in gen 
 
-  void set extraBottomMargin (bool v) {
-    this._extraBottomMargin = v;
-  }
-    */
-    
-  bool? extraTopMargin;
-    /*
-  bool get extraTopMargin { 
-    if (this._extraTopMargin == null) {
-      this._extraTopMargin = false;
-    }
-    return this._extraTopMargin!;
-  }
+  // NOTE: extraTopMargin skipped - type boolean is ignored in gen 
 
-  void set extraTopMargin (bool v) {
-    this._extraTopMargin = v;
-  }
-    */
-    
-  double? fixedRange;
-    /*
-  double get fixedRange { 
-    if (this._fixedRange == null) {
-      this._fixedRange = 0;
-    }
-    return this._fixedRange!;
-  }
+  // NOTE: fixedRange skipped - type number is ignored in gen 
 
-  void set fixedRange (double v) {
-    this._fixedRange = v;
-  }
-    */
-    
-  bool? runTrackerClick;
-    /*
-  bool get runTrackerClick { 
-    if (this._runTrackerClick == null) {
-      this._runTrackerClick = false;
-    }
-    return this._runTrackerClick!;
-  }
+  // NOTE: runTrackerClick skipped - type boolean is ignored in gen 
 
-  void set runTrackerClick (bool v) {
-    this._runTrackerClick = v;
-  }
-    */
-    
-  bool? cancelClick;
-    /*
-  bool get cancelClick { 
-    if (this._cancelClick == null) {
-      this._cancelClick = false;
-    }
-    return this._cancelClick!;
-  }
+  // NOTE: cancelClick skipped - type boolean is ignored in gen 
 
-  void set cancelClick (bool v) {
-    this._cancelClick = v;
-  }
-    */
-    
-  double? mouseDownX;
-    /*
-  double get mouseDownX { 
-    if (this._mouseDownX == null) {
-      this._mouseDownX = 0;
-    }
-    return this._mouseDownX!;
-  }
+  // NOTE: mouseDownX skipped - type number is ignored in gen 
 
-  void set mouseDownX (double v) {
-    this._mouseDownX = v;
-  }
-    */
-    
-  double? mouseDownY;
-    /*
-  double get mouseDownY { 
-    if (this._mouseDownY == null) {
-      this._mouseDownY = 0;
-    }
-    return this._mouseDownY!;
-  }
+  // NOTE: mouseDownY skipped - type number is ignored in gen 
 
-  void set mouseDownY (double v) {
-    this._mouseDownY = v;
-  }
-    */
-    
-  String? mouseIsDown;
-    /*
-  String get mouseIsDown { 
-    if (this._mouseIsDown == null) {
-      this._mouseIsDown = "";
-    }
-    return this._mouseIsDown!;
-  }
+  // NOTE: mouseIsDown skipped - type string is ignored in gen 
 
-  void set mouseIsDown (String v) {
-    this._mouseIsDown = v;
-  }
-    */
-    
-  bool? isPrinting;
-    /*
-  bool get isPrinting { 
-    if (this._isPrinting == null) {
-      this._isPrinting = false;
-    }
-    return this._isPrinting!;
-  }
+  // NOTE: isPrinting skipped - type boolean is ignored in gen 
 
-  void set isPrinting (bool v) {
-    this._isPrinting = v;
-  }
-    */
-    
-  bool? openMenu;
-    /*
-  bool get openMenu { 
-    if (this._openMenu == null) {
-      this._openMenu = false;
-    }
-    return this._openMenu!;
-  }
+  // NOTE: openMenu skipped - type boolean is ignored in gen 
 
-  void set openMenu (bool v) {
-    this._openMenu = v;
-  }
-    */
-    
-  String? mapCredits;
-    /*
-  String get mapCredits { 
-    if (this._mapCredits == null) {
-      this._mapCredits = "";
-    }
-    return this._mapCredits!;
-  }
+  // NOTE: mapCredits skipped - type string is ignored in gen 
 
-  void set mapCredits (String v) {
-    this._mapCredits = v;
-  }
-    */
-    
-  String? mapCreditsFull;
-    /*
-  String get mapCreditsFull { 
-    if (this._mapCreditsFull == null) {
-      this._mapCreditsFull = "";
-    }
-    return this._mapCreditsFull!;
-  }
+  // NOTE: mapCreditsFull skipped - type string is ignored in gen 
 
-  void set mapCreditsFull (String v) {
-    this._mapCreditsFull = v;
-  }
-    */
-    
-  bool? highContrastModeActive;
-    /*
-  bool get highContrastModeActive { 
-    if (this._highContrastModeActive == null) {
-      this._highContrastModeActive = false;
-    }
-    return this._highContrastModeActive!;
-  }
+  // NOTE: highContrastModeActive skipped - type boolean is ignored in gen 
 
-  void set highContrastModeActive (bool v) {
-    this._highContrastModeActive = v;
-  }
-    */
-    
-  bool? a11yDirty;
-    /*
-  bool get a11yDirty { 
-    if (this._a11yDirty == null) {
-      this._a11yDirty = false;
-    }
-    return this._a11yDirty!;
-  }
+  // NOTE: a11yDirty skipped - type boolean is ignored in gen 
 
-  void set a11yDirty (bool v) {
-    this._a11yDirty = v;
-  }
-    */
-    
-  bool? inverted;
-    /*
-  bool get inverted { 
-    if (this._inverted == null) {
-      this._inverted = false;
-    }
-    return this._inverted!;
-  }
+  // NOTE: inverted skipped - type boolean is ignored in gen 
 
-  void set inverted (bool v) {
-    this._inverted = v;
-  }
-    */
-    
-  double? scale3d;
-    /*
-  double get scale3d { 
-    if (this._scale3d == null) {
-      this._scale3d = 0;
-    }
-    return this._scale3d!;
-  }
+  // NOTE: scale3d skipped - type number is ignored in gen 
 
-  void set scale3d (double v) {
-    this._scale3d = v;
-  }
-    */
-    
-  String? redrawTrigger;
-    /*
-  String get redrawTrigger { 
-    if (this._redrawTrigger == null) {
-      this._redrawTrigger = "";
-    }
-    return this._redrawTrigger!;
-  }
+  // NOTE: redrawTrigger skipped - type string is ignored in gen 
 
-  void set redrawTrigger (String v) {
-    this._redrawTrigger = v;
-  }
-    */
-    
-  bool? initiatedScale;
-    /*
-  bool get initiatedScale { 
-    if (this._initiatedScale == null) {
-      this._initiatedScale = false;
-    }
-    return this._initiatedScale!;
-  }
+  // NOTE: initiatedScale skipped - type boolean is ignored in gen 
 
-  void set initiatedScale (bool v) {
-    this._initiatedScale = v;
-  }
-    */
-    
-  bool? boosted;
-    /*
-  bool get boosted { 
-    if (this._boosted == null) {
-      this._boosted = false;
-    }
-    return this._boosted!;
-  }
+  // NOTE: boosted skipped - type boolean is ignored in gen 
 
-  void set boosted (bool v) {
-    this._boosted = v;
-  }
-    */
-    
-  bool? hasDataDef;
-    /*
-  bool get hasDataDef { 
-    if (this._hasDataDef == null) {
-      this._hasDataDef = false;
-    }
-    return this._hasDataDef!;
-  }
+  // NOTE: hasDataDef skipped - type boolean is ignored in gen 
 
-  void set hasDataDef (bool v) {
-    this._hasDataDef = v;
-  }
-    */
-    
-  String? liveDataURL;
-    /*
-  String get liveDataURL { 
-    if (this._liveDataURL == null) {
-      this._liveDataURL = "";
-    }
-    return this._liveDataURL!;
-  }
+  // NOTE: liveDataURL skipped - type string is ignored in gen 
 
-  void set liveDataURL (String v) {
-    this._liveDataURL = v;
-  }
-    */
-    
-  bool? activeResizer;
-    /*
-  bool get activeResizer { 
-    if (this._activeResizer == null) {
-      this._activeResizer = false;
-    }
-    return this._activeResizer!;
-  }
+  // NOTE: activeResizer skipped - type boolean is ignored in gen 
 
-  void set activeResizer (bool v) {
-    this._activeResizer = v;
-  }
-    */
-    
-  bool? hasAddedDragDropEvents;
-    /*
-  bool get hasAddedDragDropEvents { 
-    if (this._hasAddedDragDropEvents == null) {
-      this._hasAddedDragDropEvents = false;
-    }
-    return this._hasAddedDragDropEvents!;
-  }
+  // NOTE: hasAddedDragDropEvents skipped - type boolean is ignored in gen 
 
-  void set hasAddedDragDropEvents (bool v) {
-    this._hasAddedDragDropEvents = v;
-  }
-    */
-    
-  bool? hasDraggedAnnotation;
-    /*
-  bool get hasDraggedAnnotation { 
-    if (this._hasDraggedAnnotation == null) {
-      this._hasDraggedAnnotation = false;
-    }
-    return this._hasDraggedAnnotation!;
-  }
+  // NOTE: hasDraggedAnnotation skipped - type boolean is ignored in gen 
 
-  void set hasDraggedAnnotation (bool v) {
-    this._hasDraggedAnnotation = v;
-  }
-    */
-    
-  bool? isDragDropAnimating;
-    /*
-  bool get isDragDropAnimating { 
-    if (this._isDragDropAnimating == null) {
-      this._isDragDropAnimating = false;
-    }
-    return this._isDragDropAnimating!;
-  }
+  // NOTE: isDragDropAnimating skipped - type boolean is ignored in gen 
 
-  void set isDragDropAnimating (bool v) {
-    this._isDragDropAnimating = v;
-  }
-    */
-    
-  bool? ascendingOrderInTable;
-    /*
-  bool get ascendingOrderInTable { 
-    if (this._ascendingOrderInTable == null) {
-      this._ascendingOrderInTable = false;
-    }
-    return this._ascendingOrderInTable!;
-  }
+  // NOTE: ascendingOrderInTable skipped - type boolean is ignored in gen 
 
-  void set ascendingOrderInTable (bool v) {
-    this._ascendingOrderInTable = v;
-  }
-    */
-    
-  bool? isDataTableVisible;
-    /*
-  bool get isDataTableVisible { 
-    if (this._isDataTableVisible == null) {
-      this._isDataTableVisible = false;
-    }
-    return this._isDataTableVisible!;
-  }
+  // NOTE: isDataTableVisible skipped - type boolean is ignored in gen 
 
-  void set isDataTableVisible (bool v) {
-    this._isDataTableVisible = v;
-  }
-    */
-    
-  bool? hasParallelCoordinates;
-    /*
-  bool get hasParallelCoordinates { 
-    if (this._hasParallelCoordinates == null) {
-      this._hasParallelCoordinates = false;
-    }
-    return this._hasParallelCoordinates!;
-  }
+  // NOTE: hasParallelCoordinates skipped - type boolean is ignored in gen 
 
-  void set hasParallelCoordinates (bool v) {
-    this._hasParallelCoordinates = v;
-  }
-    */
-    
-  double? scrollablePixelsX;
-    /*
-  double get scrollablePixelsX { 
-    if (this._scrollablePixelsX == null) {
-      this._scrollablePixelsX = 0;
-    }
-    return this._scrollablePixelsX!;
-  }
+  // NOTE: scrollablePixelsX skipped - type number is ignored in gen 
 
-  void set scrollablePixelsX (double v) {
-    this._scrollablePixelsX = v;
-  }
-    */
-    
-  double? scrollablePixelsY;
-    /*
-  double get scrollablePixelsY { 
-    if (this._scrollablePixelsY == null) {
-      this._scrollablePixelsY = 0;
-    }
-    return this._scrollablePixelsY!;
-  }
+  // NOTE: scrollablePixelsY skipped - type number is ignored in gen 
 
-  void set scrollablePixelsY (double v) {
-    this._scrollablePixelsY = v;
-  }
-    */
-    
-  double? labelSeriesMaxSum;
-    /*
-  double get labelSeriesMaxSum { 
-    if (this._labelSeriesMaxSum == null) {
-      this._labelSeriesMaxSum = 0;
-    }
-    return this._labelSeriesMaxSum!;
-  }
+  // NOTE: labelSeriesMaxSum skipped - type number is ignored in gen 
 
-  void set labelSeriesMaxSum (double v) {
-    this._labelSeriesMaxSum = v;
-  }
-    */
-    
-  double? seriesLabelTimer;
-    /*
-  double get seriesLabelTimer { 
-    if (this._seriesLabelTimer == null) {
-      this._seriesLabelTimer = 0;
-    }
-    return this._seriesLabelTimer!;
-  }
+  // NOTE: seriesLabelTimer skipped - type number is ignored in gen 
 
-  void set seriesLabelTimer (double v) {
-    this._seriesLabelTimer = v;
-  }
-    */
-    
-  bool? angular;
-    /*
-  bool get angular { 
-    if (this._angular == null) {
-      this._angular = false;
-    }
-    return this._angular!;
-  }
+  // NOTE: angular skipped - type boolean is ignored in gen 
 
-  void set angular (bool v) {
-    this._angular = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -604,285 +125,205 @@ class ChartLike extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.marginRight != null) {  
-      buffer.writeAll(["\"marginRight\":", this.marginRight, ","], "");
-    }
+    // NOTE: skip serialization of marginRight (type number is ignored) ignore type: true
 
-    if (this.polar != null) {  
-      buffer.writeAll(["\"polar\":", this.polar, ","], "");
-    }
+    // NOTE: skip serialization of polar (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of bubbleZExtremes (type BubbleZExtremes is ignored)} 
+    // NOTE: skip serialization of bubbleZExtremes (type BubbleZExtremes is ignored) ignore type: true
 
-    if (this.breadcrumbsBottomMargin != null) {  
-      buffer.writeAll(["\"breadcrumbsBottomMargin\":", this.breadcrumbsBottomMargin, ","], "");
-    }
+    // NOTE: skip serialization of breadcrumbsBottomMargin (type boolean is ignored) ignore type: true
 
-    if (this.breadcrumbsTopMargin != null) {  
-      buffer.writeAll(["\"breadcrumbsTopMargin\":", this.breadcrumbsTopMargin, ","], "");
-    }
+    // NOTE: skip serialization of breadcrumbsTopMargin (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of breadcrumbs (type Breadcrumbs is ignored)} 
+    // NOTE: skip serialization of breadcrumbs (type Breadcrumbs is ignored) ignore type: true
 
-    // NOTE: skip serialization of tooltip (type Tooltip is ignored)} 
+    // NOTE: skip serialization of tooltip (type Tooltip is ignored) ignore type: true
 
-    // NOTE: skip serialization of colorAxis (type ColorAxis[] is ignored)} 
+    // NOTE: skip serialization of colorAxis (type ColorAxis[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of legend (type Legend is ignored)} 
+    // NOTE: skip serialization of legend (type Legend is ignored) ignore type: true
 
-    if (this.extraBottomMargin != null) {  
-      buffer.writeAll(["\"extraBottomMargin\":", this.extraBottomMargin, ","], "");
-    }
+    // NOTE: skip serialization of extraBottomMargin (type boolean is ignored) ignore type: true
 
-    if (this.extraTopMargin != null) {  
-      buffer.writeAll(["\"extraTopMargin\":", this.extraTopMargin, ","], "");
-    }
+    // NOTE: skip serialization of extraTopMargin (type boolean is ignored) ignore type: true
 
-    if (this.fixedRange != null) {  
-      buffer.writeAll(["\"fixedRange\":", this.fixedRange, ","], "");
-    }
+    // NOTE: skip serialization of fixedRange (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of rangeSelector (type RangeSelector is ignored)} 
+    // NOTE: skip serialization of rangeSelector (type RangeSelector is ignored) ignore type: true
 
-    if (this.runTrackerClick != null) {  
-      buffer.writeAll(["\"runTrackerClick\":", this.runTrackerClick, ","], "");
-    }
+    // NOTE: skip serialization of runTrackerClick (type boolean is ignored) ignore type: true
 
-    if (this.cancelClick != null) {  
-      buffer.writeAll(["\"cancelClick\":", this.cancelClick, ","], "");
-    }
+    // NOTE: skip serialization of cancelClick (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of hoverPoint (type Point is ignored)} 
+    // NOTE: skip serialization of hoverPoint (type Point is ignored) ignore type: true
 
-    // NOTE: skip serialization of hoverPoints (type Point[] is ignored)} 
+    // NOTE: skip serialization of hoverPoints (type Point[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of hoverSeries (type Series is ignored)} 
+    // NOTE: skip serialization of hoverSeries (type Series is ignored) ignore type: true
 
-    if (this.mouseDownX != null) {  
-      buffer.writeAll(["\"mouseDownX\":", this.mouseDownX, ","], "");
-    }
+    // NOTE: skip serialization of mouseDownX (type number is ignored) ignore type: true
 
-    if (this.mouseDownY != null) {  
-      buffer.writeAll(["\"mouseDownY\":", this.mouseDownY, ","], "");
-    }
+    // NOTE: skip serialization of mouseDownY (type number is ignored) ignore type: true
 
-    if (this.mouseIsDown != null) {  
-      buffer.writeAll(["\"mouseIsDown\":\`", this.mouseIsDown, "\`,"], "");
-    }
+    // NOTE: skip serialization of mouseIsDown (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of pointer (type Pointer is ignored)} 
+    // NOTE: skip serialization of pointer (type Pointer is ignored) ignore type: true
 
-    // NOTE: skip serialization of resetZoomButton (type SVGElement is ignored)} 
+    // NOTE: skip serialization of resetZoomButton (type SVGElement is ignored) ignore type: true
 
-    // NOTE: skip serialization of focusElement (type SVGElement is ignored)} 
+    // NOTE: skip serialization of focusElement (type SVGElement is ignored) ignore type: true
 
-    // NOTE: skip serialization of navigation (type Additions is ignored)} 
+    // NOTE: skip serialization of navigation (type Additions is ignored) ignore type: true
 
-    // NOTE: skip serialization of fullscreen (type Fullscreen is ignored)} 
+    // NOTE: skip serialization of fullscreen (type Fullscreen is ignored) ignore type: true
 
-    // NOTE: skip serialization of exportContextMenu (type DivElement is ignored)} 
+    // NOTE: skip serialization of exportContextMenu (type DivElement is ignored) ignore type: true
 
-    // NOTE: skip serialization of exportDivElements (type DivElement[] is ignored)} 
+    // NOTE: skip serialization of exportDivElements (type DivElement[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of exporting (type ChartAdditions is ignored)} 
+    // NOTE: skip serialization of exporting (type ChartAdditions is ignored) ignore type: true
 
-    // NOTE: skip serialization of exportingGroup (type SVGElement is ignored)} 
+    // NOTE: skip serialization of exportingGroup (type SVGElement is ignored) ignore type: true
 
-    // NOTE: skip serialization of exportSVGElements (type SVGElement[] is ignored)} 
+    // NOTE: skip serialization of exportSVGElements (type SVGElement[] is ignored) ignore type: true
 
-    if (this.isPrinting != null) {  
-      buffer.writeAll(["\"isPrinting\":", this.isPrinting, ","], "");
-    }
+    // NOTE: skip serialization of isPrinting (type boolean is ignored) ignore type: true
 
-    if (this.openMenu != null) {  
-      buffer.writeAll(["\"openMenu\":", this.openMenu, ","], "");
-    }
+    // NOTE: skip serialization of openMenu (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of navigationBindings (type NavigationBindings is ignored)} 
+    // NOTE: skip serialization of navigationBindings (type NavigationBindings is ignored) ignore type: true
 
-    // NOTE: skip serialization of announcerContainer (type HTMLElement is ignored)} 
+    // NOTE: skip serialization of announcerContainer (type HTMLElement is ignored) ignore type: true
 
-    // NOTE: skip serialization of navigator (type Navigator is ignored)} 
+    // NOTE: skip serialization of navigator (type Navigator is ignored) ignore type: true
 
-    // NOTE: skip serialization of scrollbar (type Scrollbar is ignored)} 
+    // NOTE: skip serialization of scrollbar (type Scrollbar is ignored) ignore type: true
 
-    // NOTE: skip serialization of scroller (type Navigator is ignored)} 
+    // NOTE: skip serialization of scroller (type Navigator is ignored) ignore type: true
 
-    // NOTE: skip serialization of highlightedPoint (type Point is ignored)} 
+    // NOTE: skip serialization of highlightedPoint (type Point is ignored) ignore type: true
 
-    if (this.mapCredits != null) {  
-      buffer.writeAll(["\"mapCredits\":\`", this.mapCredits, "\`,"], "");
-    }
+    // NOTE: skip serialization of mapCredits (type string is ignored) ignore type: true
 
-    if (this.mapCreditsFull != null) {  
-      buffer.writeAll(["\"mapCreditsFull\":\`", this.mapCreditsFull, "\`,"], "");
-    }
+    // NOTE: skip serialization of mapCreditsFull (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of mapTransforms (type any is ignored)} 
+    // NOTE: skip serialization of mapTransforms (type any is ignored) ignore type: 1
 
-    // NOTE: skip serialization of mapNavigation (type MapNavigation is ignored)} 
+    // NOTE: skip serialization of mapNavigation (type MapNavigation is ignored) ignore type: true
 
-    // NOTE: skip serialization of mapView (type MapView is ignored)} 
+    // NOTE: skip serialization of mapView (type MapView is ignored) ignore type: true
 
-    if (this.highContrastModeActive != null) {  
-      buffer.writeAll(["\"highContrastModeActive\":", this.highContrastModeActive, ","], "");
-    }
+    // NOTE: skip serialization of highContrastModeActive (type boolean is ignored) ignore type: true
 
-    if (this.a11yDirty != null) {  
-      buffer.writeAll(["\"a11yDirty\":", this.a11yDirty, ","], "");
-    }
+    // NOTE: skip serialization of a11yDirty (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of accessibility (type Accessibility is ignored)} 
+    // NOTE: skip serialization of accessibility (type Accessibility is ignored) ignore type: true
 
-    // NOTE: skip serialization of types (type string[] is ignored)} 
+    // NOTE: skip serialization of types (type string[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of hoverPane (type Pane is ignored)} 
+    // NOTE: skip serialization of hoverPane (type Pane is ignored) ignore type: true
 
-    // NOTE: skip serialization of pane (type Pane[] is ignored)} 
+    // NOTE: skip serialization of pane (type Pane[] is ignored) ignore type: true
 
-    if (this.inverted != null) {  
-      buffer.writeAll(["\"inverted\":", this.inverted, ","], "");
-    }
+    // NOTE: skip serialization of inverted (type boolean is ignored) ignore type: true
 
-    if (this.scale3d != null) {  
-      buffer.writeAll(["\"scale3d\":", this.scale3d, ","], "");
-    }
+    // NOTE: skip serialization of scale3d (type number is ignored) ignore type: true
 
-    if (this.marginRight != null) {  
-      buffer.writeAll(["\"marginRight\":", this.marginRight, ","], "");
-    }
+    // NOTE: skip serialization of marginRight (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of pathfinder (type Pathfinder is ignored)} 
+    // NOTE: skip serialization of pathfinder (type Pathfinder is ignored) ignore type: true
 
-    if (this.redrawTrigger != null) {  
-      buffer.writeAll(["\"redrawTrigger\":\`", this.redrawTrigger, "\`,"], "");
-    }
+    // NOTE: skip serialization of redrawTrigger (type string is ignored) ignore type: true
 
-    if (this.initiatedScale != null) {  
-      buffer.writeAll(["\"initiatedScale\":", this.initiatedScale, ","], "");
-    }
+    // NOTE: skip serialization of initiatedScale (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of zAxis (type ZAxis[] is ignored)} 
+    // NOTE: skip serialization of zAxis (type ZAxis[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of chart3d (type Additions is ignored)} 
+    // NOTE: skip serialization of chart3d (type Additions is ignored) ignore type: true
 
-    // NOTE: skip serialization of frameShapes (type Generic is ignored)} 
+    // NOTE: skip serialization of frameShapes (type Generic is ignored) ignore type: true
 
-    // NOTE: skip serialization of p_labelPanes (type Generic is ignored)} 
+    // NOTE: skip serialization of p_labelPanes (type Generic is ignored) ignore type: true
 
-    if (this.fixedRange != null) {  
-      buffer.writeAll(["\"fixedRange\":", this.fixedRange, ","], "");
-    }
+    // NOTE: skip serialization of fixedRange (type number is ignored) ignore type: true
 
-    if (this.boosted != null) {  
-      buffer.writeAll(["\"boosted\":", this.boosted, ","], "");
-    }
+    // NOTE: skip serialization of boosted (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of boost (type BoostChartAdditions is ignored)} 
+    // NOTE: skip serialization of boost (type BoostChartAdditions is ignored) ignore type: true
 
-    // NOTE: skip serialization of data (type Data is ignored)} 
+    // NOTE: skip serialization of data (type Data is ignored) ignore type: true
 
-    if (this.hasDataDef != null) {  
-      buffer.writeAll(["\"hasDataDef\":", this.hasDataDef, ","], "");
-    }
+    // NOTE: skip serialization of hasDataDef (type boolean is ignored) ignore type: true
 
-    if (this.liveDataURL != null) {  
-      buffer.writeAll(["\"liveDataURL\":\`", this.liveDataURL, "\`,"], "");
-    }
+    // NOTE: skip serialization of liveDataURL (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of errorElements (type SVGElement[] is ignored)} 
+    // NOTE: skip serialization of errorElements (type SVGElement[] is ignored) ignore type: true
 
-    if (this.activeResizer != null) {  
-      buffer.writeAll(["\"activeResizer\":", this.activeResizer, ","], "");
-    }
+    // NOTE: skip serialization of activeResizer (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of dragDropData (type DragDropDataObject is ignored)} 
+    // NOTE: skip serialization of dragDropData (type DragDropDataObject is ignored) ignore type: true
 
-    // NOTE: skip serialization of dragHandles (type DragHandlesObject is ignored)} 
+    // NOTE: skip serialization of dragHandles (type DragHandlesObject is ignored) ignore type: true
 
-    // NOTE: skip serialization of dragGuideBox (type SVGElement is ignored)} 
+    // NOTE: skip serialization of dragGuideBox (type SVGElement is ignored) ignore type: true
 
-    if (this.hasAddedDragDropEvents != null) {  
-      buffer.writeAll(["\"hasAddedDragDropEvents\":", this.hasAddedDragDropEvents, ","], "");
-    }
+    // NOTE: skip serialization of hasAddedDragDropEvents (type boolean is ignored) ignore type: true
 
-    if (this.hasDraggedAnnotation != null) {  
-      buffer.writeAll(["\"hasDraggedAnnotation\":", this.hasDraggedAnnotation, ","], "");
-    }
+    // NOTE: skip serialization of hasDraggedAnnotation (type boolean is ignored) ignore type: true
 
-    if (this.isDragDropAnimating != null) {  
-      buffer.writeAll(["\"isDragDropAnimating\":", this.isDragDropAnimating, ","], "");
-    }
+    // NOTE: skip serialization of isDragDropAnimating (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of unbindDragDropMouseUp (type Function is ignored)} 
+    // NOTE: skip serialization of unbindDragDropMouseUp (type Function is ignored) ignore type: 1
 
-    // NOTE: skip serialization of ddDupes (type string[] is ignored)} 
+    // NOTE: skip serialization of ddDupes (type string[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of drilldownLevels (type LevelObject[] is ignored)} 
+    // NOTE: skip serialization of drilldownLevels (type LevelObject[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of drillUpButton (type SVGElement is ignored)} 
+    // NOTE: skip serialization of drillUpButton (type SVGElement is ignored) ignore type: true
 
-    if (this.ascendingOrderInTable != null) {  
-      buffer.writeAll(["\"ascendingOrderInTable\":", this.ascendingOrderInTable, ","], "");
-    }
+    // NOTE: skip serialization of ascendingOrderInTable (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of dataTableDiv (type HTMLDivElement is ignored)} 
+    // NOTE: skip serialization of dataTableDiv (type HTMLDivElement is ignored) ignore type: true
 
-    if (this.isDataTableVisible != null) {  
-      buffer.writeAll(["\"isDataTableVisible\":", this.isDataTableVisible, ","], "");
-    }
+    // NOTE: skip serialization of isDataTableVisible (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of noDataLabel (type SVGElement is ignored)} 
+    // NOTE: skip serialization of noDataLabel (type SVGElement is ignored) ignore type: true
 
-    // NOTE: skip serialization of unbindGetSVG (type Function is ignored)} 
+    // NOTE: skip serialization of unbindGetSVG (type Function is ignored) ignore type: 1
 
-    if (this.hasParallelCoordinates != null) {  
-      buffer.writeAll(["\"hasParallelCoordinates\":", this.hasParallelCoordinates, ","], "");
-    }
+    // NOTE: skip serialization of hasParallelCoordinates (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of parallelInfo (type InfoObject is ignored)} 
+    // NOTE: skip serialization of parallelInfo (type InfoObject is ignored) ignore type: true
 
-    if (this.scrollablePixelsX != null) {  
-      buffer.writeAll(["\"scrollablePixelsX\":", this.scrollablePixelsX, ","], "");
-    }
+    // NOTE: skip serialization of scrollablePixelsX (type number is ignored) ignore type: true
 
-    if (this.scrollablePixelsY != null) {  
-      buffer.writeAll(["\"scrollablePixelsY\":", this.scrollablePixelsY, ","], "");
-    }
+    // NOTE: skip serialization of scrollablePixelsY (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of scrollablePlotBox (type BBoxObject is ignored)} 
+    // NOTE: skip serialization of scrollablePlotBox (type BBoxObject is ignored) ignore type: true
 
-    // NOTE: skip serialization of scrollablePlotArea (type ScrollablePlotArea is ignored)} 
+    // NOTE: skip serialization of scrollablePlotArea (type ScrollablePlotArea is ignored) ignore type: true
 
-    // NOTE: skip serialization of boxesToAvoid (type LabelIntersectBoxObject[] is ignored)} 
+    // NOTE: skip serialization of boxesToAvoid (type LabelIntersectBoxObject[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of labelSeries (type Series[] is ignored)} 
+    // NOTE: skip serialization of labelSeries (type Series[] is ignored) ignore type: true
 
-    if (this.labelSeriesMaxSum != null) {  
-      buffer.writeAll(["\"labelSeriesMaxSum\":", this.labelSeriesMaxSum, ","], "");
-    }
+    // NOTE: skip serialization of labelSeriesMaxSum (type number is ignored) ignore type: true
 
-    if (this.seriesLabelTimer != null) {  
-      buffer.writeAll(["\"seriesLabelTimer\":", this.seriesLabelTimer, ","], "");
-    }
+    // NOTE: skip serialization of seriesLabelTimer (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of sonification (type Sonification is ignored)} 
+    // NOTE: skip serialization of sonification (type Sonification is ignored) ignore type: true
 
-    // NOTE: skip serialization of columnGroup (type SVGElement is ignored)} 
+    // NOTE: skip serialization of columnGroup (type SVGElement is ignored) ignore type: true
 
-    // NOTE: skip serialization of graphLayoutsLookup (type ReingoldFruchtermanLayout[] is ignored)} 
+    // NOTE: skip serialization of graphLayoutsLookup (type ReingoldFruchtermanLayout[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of allDataPoints (type Data[] is ignored)} 
+    // NOTE: skip serialization of allDataPoints (type Data[] is ignored) ignore type: true
 
-    if (this.angular != null) {  
-      buffer.writeAll(["\"angular\":", this.angular, ","], "");
-    }
+    // NOTE: skip serialization of angular (type boolean is ignored) ignore type: true
 
-    if (this.polar != null) {  
-      buffer.writeAll(["\"polar\":", this.polar, ","], "");
-    }
+    // NOTE: skip serialization of polar (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of stockTools (type Toolbar is ignored)} 
+    // NOTE: skip serialization of stockTools (type Toolbar is ignored) ignore type: true
   }
 
 }

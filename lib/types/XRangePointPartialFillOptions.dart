@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,113 +22,21 @@ import 'OptionFragment.dart';
  * XRangePointPartialFillOptions 
  */
 class XRangePointPartialFillOptions extends OptionFragment {
-  XRangePointPartialFillOptions( {
-    this.amount = null,
-    this.fill = null,
-    this.height = null,
-    this.width = null,
-    this.r = null,
-    this.x = null,
-    this.y = null
-  }) : super();
-  double? amount;
-    /*
-  double get amount { 
-    if (this._amount == null) {
-      this._amount = 0;
-    }
-    return this._amount!;
-  }
+  XRangePointPartialFillOptions( ) : super();
+  // NOTE: amount skipped - type number is ignored in gen 
 
-  void set amount (double v) {
-    this._amount = v;
-  }
-    */
-    
-  String? fill;
-    /*
-  String get fill { 
-    if (this._fill == null) {
-      this._fill = "";
-    }
-    return this._fill!;
-  }
+  // NOTE: fill skipped - type string is ignored in gen 
 
-  void set fill (String v) {
-    this._fill = v;
-  }
-    */
-    
-  double? height;
-    /*
-  double get height { 
-    if (this._height == null) {
-      this._height = 0;
-    }
-    return this._height!;
-  }
+  // NOTE: height skipped - type number is ignored in gen 
 
-  void set height (double v) {
-    this._height = v;
-  }
-    */
-    
-  double? width;
-    /*
-  double get width { 
-    if (this._width == null) {
-      this._width = 0;
-    }
-    return this._width!;
-  }
+  // NOTE: width skipped - type number is ignored in gen 
 
-  void set width (double v) {
-    this._width = v;
-  }
-    */
-    
-  double? r;
-    /*
-  double get r { 
-    if (this._r == null) {
-      this._r = 0;
-    }
-    return this._r!;
-  }
+  // NOTE: r skipped - type number is ignored in gen 
 
-  void set r (double v) {
-    this._r = v;
-  }
-    */
-    
-  double? x;
-    /*
-  double get x { 
-    if (this._x == null) {
-      this._x = 0;
-    }
-    return this._x!;
-  }
+  // NOTE: x skipped - type number is ignored in gen 
 
-  void set x (double v) {
-    this._x = v;
-  }
-    */
-    
-  double? y;
-    /*
-  double get y { 
-    if (this._y == null) {
-      this._y = 0;
-    }
-    return this._y!;
-  }
+  // NOTE: y skipped - type number is ignored in gen 
 
-  void set y (double v) {
-    this._y = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -137,33 +45,19 @@ class XRangePointPartialFillOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.amount != null) {  
-      buffer.writeAll(["\"amount\":", this.amount, ","], "");
-    }
+    // NOTE: skip serialization of amount (type number is ignored) ignore type: true
 
-    if (this.fill != null) {  
-      buffer.writeAll(["\"fill\":\`", this.fill, "\`,"], "");
-    }
+    // NOTE: skip serialization of fill (type string is ignored) ignore type: true
 
-    if (this.height != null) {  
-      buffer.writeAll(["\"height\":", this.height, ","], "");
-    }
+    // NOTE: skip serialization of height (type number is ignored) ignore type: true
 
-    if (this.width != null) {  
-      buffer.writeAll(["\"width\":", this.width, ","], "");
-    }
+    // NOTE: skip serialization of width (type number is ignored) ignore type: true
 
-    if (this.r != null) {  
-      buffer.writeAll(["\"r\":", this.r, ","], "");
-    }
+    // NOTE: skip serialization of r (type number is ignored) ignore type: true
 
-    if (this.x != null) {  
-      buffer.writeAll(["\"x\":", this.x, ","], "");
-    }
+    // NOTE: skip serialization of x (type number is ignored) ignore type: true
 
-    if (this.y != null) {  
-      buffer.writeAll(["\"y\":", this.y, ","], "");
-    }
+    // NOTE: skip serialization of y (type number is ignored) ignore type: true
   }
 
 }

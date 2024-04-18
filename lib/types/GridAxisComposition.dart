@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -34,9 +34,9 @@ class GridAxisComposition extends Axis {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of grid (type GridAxisAdditions is ignored)} 
+    // NOTE: skip serialization of grid (type GridAxisAdditions is ignored) ignore type: true
 
-    // NOTE: skip serialization of linkedParent (type GridAxisComposition is ignored)} 
+    // NOTE: skip serialization of linkedParent (type GridAxisComposition is ignored) ignore type: true
   }
 
 }

@@ -12,10 +12,11 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
+import 'SeriesOptions.dart';
 import 'ArcDiagramSeriesOptions.dart';
 import 'AreaSeriesOptions.dart';
 import 'AreaRangeSeriesOptions.dart';
@@ -75,8 +76,170 @@ import 'OptionFragment.dart';
  * HighchartsProductSeries 
  */
 class HighchartsProductSeries extends OptionFragment {
-  HighchartsProductSeries( ) : super();
-  
+  HighchartsProductSeries( {
+    this.arcdiagram = null,
+    this.area = null,
+    this.arearange = null,
+    this.areaspline = null,
+    this.areasplinerange = null,
+    this.bar = null,
+    this.bellcurve = null,
+    this.boxplot = null,
+    this.bubble = null,
+    this.bullet = null,
+    this.column = null,
+    this.columnpyramid = null,
+    this.columnrange = null,
+    this.cylinder = null,
+    this.dependencywheel = null,
+    this.dumbbell = null,
+    this.errorbar = null,
+    this.funnel = null,
+    this.funnel3d = null,
+    this.gauge = null,
+    this.heatmap = null,
+    this.histogram = null,
+    this.item = null,
+    this.line = null,
+    this.lollipop = null,
+    this.networkgraph = null,
+    this.organization = null,
+    this.packedbubble = null,
+    this.pareto = null,
+    this.pictorial = null,
+    this.pie = null,
+    this.polygon = null,
+    this.pyramid = null,
+    this.pyramid3d = null,
+    this.sankey = null,
+    this.scatter = null,
+    this.scatter3d = null,
+    this.series = null,
+    this.solidgauge = null,
+    this.spline = null,
+    this.streamgraph = null,
+    this.sunburst = null,
+    this.tilemap = null,
+    this.timeline = null,
+    this.treegraph = null,
+    this.treemap = null,
+    this.variablepie = null,
+    this.variwide = null,
+    this.vector = null,
+    this.venn = null,
+    this.waterfall = null,
+    this.windbarb = null,
+    this.wordcloud = null,
+    this.xrange = null
+  }) : super();
+  SeriesOptions? series;
+    
+  ArcDiagramSeriesOptions? arcdiagram;
+    
+  AreaSeriesOptions? area;
+    
+  AreaRangeSeriesOptions? arearange;
+    
+  AreaSplineSeriesOptions? areaspline;
+    
+  AreaSplineRangeSeriesOptions? areasplinerange;
+    
+  BarSeriesOptions? bar;
+    
+  BellcurveSeriesOptions? bellcurve;
+    
+  BoxPlotSeriesOptions? boxplot;
+    
+  BubbleSeriesOptions? bubble;
+    
+  BulletSeriesOptions? bullet;
+    
+  ColumnSeriesOptions? column;
+    
+  ColumnPyramidSeriesOptions? columnpyramid;
+    
+  ColumnRangeSeriesOptions? columnrange;
+    
+  CylinderSeriesOptions? cylinder;
+    
+  DependencyWheelSeriesOptions? dependencywheel;
+    
+  DumbbellSeriesOptions? dumbbell;
+    
+  ErrorBarSeriesOptions? errorbar;
+    
+  FunnelSeriesOptions? funnel;
+    
+  Funnel3DSeriesOptions? funnel3d;
+    
+  GaugeSeriesOptions? gauge;
+    
+  HeatmapSeriesOptions? heatmap;
+    
+  HistogramSeriesOptions? histogram;
+    
+  ItemSeriesOptions? item;
+    
+  LineSeriesOptions? line;
+    
+  LollipopSeriesOptions? lollipop;
+    
+  NetworkgraphSeriesOptions? networkgraph;
+    
+  OrganizationSeriesOptions? organization;
+    
+  PackedBubblePointOptions? packedbubble;
+    
+  ParetoSeriesOptions? pareto;
+    
+  PictorialSeriesOptions? pictorial;
+    
+  PieSeriesOptions? pie;
+    
+  PolygonSeriesOptions? polygon;
+    
+  PyramidSeriesOptions? pyramid;
+    
+  Pyramid3DSeriesOptions? pyramid3d;
+    
+  SankeySeriesOptions? sankey;
+    
+  ScatterSeriesOptions? scatter;
+    
+  Scatter3DSeriesOptions? scatter3d;
+    
+  SolidGaugeSeriesOptions? solidgauge;
+    
+  SplineSeriesOptions? spline;
+    
+  StreamgraphSeriesOptions? streamgraph;
+    
+  SunburstSeriesOptions? sunburst;
+    
+  TilemapSeriesOptions? tilemap;
+    
+  TimelineSeriesOptions? timeline;
+    
+  TreegraphSeriesOptions? treegraph;
+    
+  TreemapSeriesOptions? treemap;
+    
+  VariablePieSeriesOptions? variablepie;
+    
+  VariwideSeriesOptions? variwide;
+    
+  VectorSeriesOptions? vector;
+    
+  VennSeriesOptions? venn;
+    
+  WaterfallSeriesOptions? waterfall;
+    
+  WindbarbSeriesOptions? windbarb;
+    
+  WordcloudSeriesOptions? wordcloud;
+    
+  XRangeSeriesOptions? xrange;
+    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -85,111 +248,221 @@ class HighchartsProductSeries extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of arcdiagram (type ArcDiagramSeriesOptions is ignored)} 
+    if (this.series != null) {  
+      buffer.writeAll(["\"series\":",this.series?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of area (type AreaSeriesOptions is ignored)} 
+    if (this.arcdiagram != null) {  
+      buffer.writeAll(["\"arcdiagram\":",this.arcdiagram?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of arearange (type AreaRangeSeriesOptions is ignored)} 
+    if (this.area != null) {  
+      buffer.writeAll(["\"area\":",this.area?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of areaspline (type AreaSplineSeriesOptions is ignored)} 
+    if (this.arearange != null) {  
+      buffer.writeAll(["\"arearange\":",this.arearange?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of areasplinerange (type AreaSplineRangeSeriesOptions is ignored)} 
+    if (this.areaspline != null) {  
+      buffer.writeAll(["\"areaspline\":",this.areaspline?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of bar (type BarSeriesOptions is ignored)} 
+    if (this.areasplinerange != null) {  
+      buffer.writeAll(["\"areasplinerange\":",this.areasplinerange?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of bellcurve (type BellcurveSeriesOptions is ignored)} 
+    if (this.bar != null) {  
+      buffer.writeAll(["\"bar\":",this.bar?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of boxplot (type BoxPlotSeriesOptions is ignored)} 
+    if (this.bellcurve != null) {  
+      buffer.writeAll(["\"bellcurve\":",this.bellcurve?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of bubble (type BubbleSeriesOptions is ignored)} 
+    if (this.boxplot != null) {  
+      buffer.writeAll(["\"boxplot\":",this.boxplot?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of bullet (type BulletSeriesOptions is ignored)} 
+    if (this.bubble != null) {  
+      buffer.writeAll(["\"bubble\":",this.bubble?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of column (type ColumnSeriesOptions is ignored)} 
+    if (this.bullet != null) {  
+      buffer.writeAll(["\"bullet\":",this.bullet?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of columnpyramid (type ColumnPyramidSeriesOptions is ignored)} 
+    if (this.column != null) {  
+      buffer.writeAll(["\"column\":",this.column?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of columnrange (type ColumnRangeSeriesOptions is ignored)} 
+    if (this.columnpyramid != null) {  
+      buffer.writeAll(["\"columnpyramid\":",this.columnpyramid?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of cylinder (type CylinderSeriesOptions is ignored)} 
+    if (this.columnrange != null) {  
+      buffer.writeAll(["\"columnrange\":",this.columnrange?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of dependencywheel (type DependencyWheelSeriesOptions is ignored)} 
+    if (this.cylinder != null) {  
+      buffer.writeAll(["\"cylinder\":",this.cylinder?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of dumbbell (type DumbbellSeriesOptions is ignored)} 
+    if (this.dependencywheel != null) {  
+      buffer.writeAll(["\"dependencywheel\":",this.dependencywheel?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of errorbar (type ErrorBarSeriesOptions is ignored)} 
+    if (this.dumbbell != null) {  
+      buffer.writeAll(["\"dumbbell\":",this.dumbbell?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of funnel (type FunnelSeriesOptions is ignored)} 
+    if (this.errorbar != null) {  
+      buffer.writeAll(["\"errorbar\":",this.errorbar?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of funnel3d (type Funnel3DSeriesOptions is ignored)} 
+    if (this.funnel != null) {  
+      buffer.writeAll(["\"funnel\":",this.funnel?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of gauge (type GaugeSeriesOptions is ignored)} 
+    if (this.funnel3d != null) {  
+      buffer.writeAll(["\"funnel3d\":",this.funnel3d?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of heatmap (type HeatmapSeriesOptions is ignored)} 
+    if (this.gauge != null) {  
+      buffer.writeAll(["\"gauge\":",this.gauge?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of histogram (type HistogramSeriesOptions is ignored)} 
+    if (this.heatmap != null) {  
+      buffer.writeAll(["\"heatmap\":",this.heatmap?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of item (type ItemSeriesOptions is ignored)} 
+    if (this.histogram != null) {  
+      buffer.writeAll(["\"histogram\":",this.histogram?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of line (type LineSeriesOptions is ignored)} 
+    if (this.item != null) {  
+      buffer.writeAll(["\"item\":",this.item?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of lollipop (type LollipopSeriesOptions is ignored)} 
+    if (this.line != null) {  
+      buffer.writeAll(["\"line\":",this.line?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of networkgraph (type NetworkgraphSeriesOptions is ignored)} 
+    if (this.lollipop != null) {  
+      buffer.writeAll(["\"lollipop\":",this.lollipop?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of organization (type OrganizationSeriesOptions is ignored)} 
+    if (this.networkgraph != null) {  
+      buffer.writeAll(["\"networkgraph\":",this.networkgraph?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of packedbubble (type PackedBubblePointOptions is ignored)} 
+    if (this.organization != null) {  
+      buffer.writeAll(["\"organization\":",this.organization?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of pareto (type ParetoSeriesOptions is ignored)} 
+    if (this.packedbubble != null) {  
+      buffer.writeAll(["\"packedbubble\":",this.packedbubble?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of pictorial (type PictorialSeriesOptions is ignored)} 
+    if (this.pareto != null) {  
+      buffer.writeAll(["\"pareto\":",this.pareto?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of pie (type PieSeriesOptions is ignored)} 
+    if (this.pictorial != null) {  
+      buffer.writeAll(["\"pictorial\":",this.pictorial?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of polygon (type PolygonSeriesOptions is ignored)} 
+    if (this.pie != null) {  
+      buffer.writeAll(["\"pie\":",this.pie?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of pyramid (type PyramidSeriesOptions is ignored)} 
+    if (this.polygon != null) {  
+      buffer.writeAll(["\"polygon\":",this.polygon?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of pyramid3d (type Pyramid3DSeriesOptions is ignored)} 
+    if (this.pyramid != null) {  
+      buffer.writeAll(["\"pyramid\":",this.pyramid?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of sankey (type SankeySeriesOptions is ignored)} 
+    if (this.pyramid3d != null) {  
+      buffer.writeAll(["\"pyramid3d\":",this.pyramid3d?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of scatter (type ScatterSeriesOptions is ignored)} 
+    if (this.sankey != null) {  
+      buffer.writeAll(["\"sankey\":",this.sankey?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of scatter3d (type Scatter3DSeriesOptions is ignored)} 
+    if (this.scatter != null) {  
+      buffer.writeAll(["\"scatter\":",this.scatter?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of solidgauge (type SolidGaugeSeriesOptions is ignored)} 
+    if (this.scatter3d != null) {  
+      buffer.writeAll(["\"scatter3d\":",this.scatter3d?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of spline (type SplineSeriesOptions is ignored)} 
+    if (this.solidgauge != null) {  
+      buffer.writeAll(["\"solidgauge\":",this.solidgauge?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of streamgraph (type StreamgraphSeriesOptions is ignored)} 
+    if (this.spline != null) {  
+      buffer.writeAll(["\"spline\":",this.spline?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of sunburst (type SunburstSeriesOptions is ignored)} 
+    if (this.streamgraph != null) {  
+      buffer.writeAll(["\"streamgraph\":",this.streamgraph?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of tilemap (type TilemapSeriesOptions is ignored)} 
+    if (this.sunburst != null) {  
+      buffer.writeAll(["\"sunburst\":",this.sunburst?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of timeline (type TimelineSeriesOptions is ignored)} 
+    if (this.tilemap != null) {  
+      buffer.writeAll(["\"tilemap\":",this.tilemap?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of treegraph (type TreegraphSeriesOptions is ignored)} 
+    if (this.timeline != null) {  
+      buffer.writeAll(["\"timeline\":",this.timeline?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of treemap (type TreemapSeriesOptions is ignored)} 
+    if (this.treegraph != null) {  
+      buffer.writeAll(["\"treegraph\":",this.treegraph?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of variablepie (type VariablePieSeriesOptions is ignored)} 
+    if (this.treemap != null) {  
+      buffer.writeAll(["\"treemap\":",this.treemap?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of variwide (type VariwideSeriesOptions is ignored)} 
+    if (this.variablepie != null) {  
+      buffer.writeAll(["\"variablepie\":",this.variablepie?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of vector (type VectorSeriesOptions is ignored)} 
+    if (this.variwide != null) {  
+      buffer.writeAll(["\"variwide\":",this.variwide?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of venn (type VennSeriesOptions is ignored)} 
+    if (this.vector != null) {  
+      buffer.writeAll(["\"vector\":",this.vector?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of waterfall (type WaterfallSeriesOptions is ignored)} 
+    if (this.venn != null) {  
+      buffer.writeAll(["\"venn\":",this.venn?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of windbarb (type WindbarbSeriesOptions is ignored)} 
+    if (this.waterfall != null) {  
+      buffer.writeAll(["\"waterfall\":",this.waterfall?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of wordcloud (type WordcloudSeriesOptions is ignored)} 
+    if (this.windbarb != null) {  
+      buffer.writeAll(["\"windbarb\":",this.windbarb?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of xrange (type XRangeSeriesOptions is ignored)} 
+    if (this.wordcloud != null) {  
+      buffer.writeAll(["\"wordcloud\":",this.wordcloud?.toJSON(), ","], "");
+    }
+
+    if (this.xrange != null) {  
+      buffer.writeAll(["\"xrange\":",this.xrange?.toJSON(), ","], "");
+    }
   }
 
 }

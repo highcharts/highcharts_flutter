@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,83 +22,17 @@ import 'OptionFragment.dart';
  * SpeakerOptions 
  */
 class SpeakerOptions extends OptionFragment {
-  SpeakerOptions( {
-    this.name = null,
-    this.language = null,
-    this.pitch = null,
-    this.rate = null,
-    this.volume = null
-  }) : super();
-  String? name;
-    /*
-  String get name { 
-    if (this._name == null) {
-      this._name = "";
-    }
-    return this._name!;
-  }
+  SpeakerOptions( ) : super();
+  // NOTE: name skipped - type string is ignored in gen 
 
-  void set name (String v) {
-    this._name = v;
-  }
-    */
-    
-  String? language;
-    /*
-  String get language { 
-    if (this._language == null) {
-      this._language = "";
-    }
-    return this._language!;
-  }
+  // NOTE: language skipped - type string is ignored in gen 
 
-  void set language (String v) {
-    this._language = v;
-  }
-    */
-    
-  double? pitch;
-    /*
-  double get pitch { 
-    if (this._pitch == null) {
-      this._pitch = 0;
-    }
-    return this._pitch!;
-  }
+  // NOTE: pitch skipped - type number is ignored in gen 
 
-  void set pitch (double v) {
-    this._pitch = v;
-  }
-    */
-    
-  double? rate;
-    /*
-  double get rate { 
-    if (this._rate == null) {
-      this._rate = 0;
-    }
-    return this._rate!;
-  }
+  // NOTE: rate skipped - type number is ignored in gen 
 
-  void set rate (double v) {
-    this._rate = v;
-  }
-    */
-    
-  double? volume;
-    /*
-  double get volume { 
-    if (this._volume == null) {
-      this._volume = 0;
-    }
-    return this._volume!;
-  }
+  // NOTE: volume skipped - type number is ignored in gen 
 
-  void set volume (double v) {
-    this._volume = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -107,25 +41,15 @@ class SpeakerOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.name != null) {  
-      buffer.writeAll(["\"name\":\`", this.name, "\`,"], "");
-    }
+    // NOTE: skip serialization of name (type string is ignored) ignore type: true
 
-    if (this.language != null) {  
-      buffer.writeAll(["\"language\":\`", this.language, "\`,"], "");
-    }
+    // NOTE: skip serialization of language (type string is ignored) ignore type: true
 
-    if (this.pitch != null) {  
-      buffer.writeAll(["\"pitch\":", this.pitch, ","], "");
-    }
+    // NOTE: skip serialization of pitch (type number is ignored) ignore type: true
 
-    if (this.rate != null) {  
-      buffer.writeAll(["\"rate\":", this.rate, ","], "");
-    }
+    // NOTE: skip serialization of rate (type number is ignored) ignore type: true
 
-    if (this.volume != null) {  
-      buffer.writeAll(["\"volume\":", this.volume, ","], "");
-    }
+    // NOTE: skip serialization of volume (type number is ignored) ignore type: true
   }
 
 }

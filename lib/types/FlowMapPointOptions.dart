@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -26,112 +26,34 @@ import 'OptionFragment.dart';
  */
 class FlowMapPointOptions extends MapLinePointOptions {
   FlowMapPointOptions( {
-    this.curveFactor = null,
-    this.fillColor = null,
-    this.fillOpacity = null,
-    this.growTowards = null,
-    this.opacity = null,
-    this.weight = null,
-    this.lineWidth = null
+    super.accessibility = null,
+    super.borderColor = null,
+    super.className = null,
+    super.color = null,
+    super.colorIndex = null,
+    super.connectors = null,
+    super.dataLabels = null,
+    super.dragDrop = null,
+    super.events = null,
+    super.keys = null,
+    super.marker = null,
+    super.selected = null,
+    super.visible = null
   }) : super();
-  double? curveFactor;
-    /*
-  double get curveFactor { 
-    if (this._curveFactor == null) {
-      this._curveFactor = 0;
-    }
-    return this._curveFactor!;
-  }
+  // NOTE: curveFactor skipped - type number is ignored in gen 
 
-  void set curveFactor (double v) {
-    this._curveFactor = v;
-  }
-    */
-    
-  String? fillColor;
-    /*
-  String get fillColor { 
-    if (this._fillColor == null) {
-      this._fillColor = "";
-    }
-    return this._fillColor!;
-  }
+  // NOTE: fillColor skipped - type string is ignored in gen 
 
-  void set fillColor (String v) {
-    this._fillColor = v;
-  }
-    */
-    
-  double? fillOpacity;
-    /*
-  double get fillOpacity { 
-    if (this._fillOpacity == null) {
-      this._fillOpacity = 0;
-    }
-    return this._fillOpacity!;
-  }
+  // NOTE: fillOpacity skipped - type number is ignored in gen 
 
-  void set fillOpacity (double v) {
-    this._fillOpacity = v;
-  }
-    */
-    
-  bool? growTowards;
-    /*
-  bool get growTowards { 
-    if (this._growTowards == null) {
-      this._growTowards = false;
-    }
-    return this._growTowards!;
-  }
+  // NOTE: growTowards skipped - type boolean is ignored in gen 
 
-  void set growTowards (bool v) {
-    this._growTowards = v;
-  }
-    */
-    
-  double? opacity;
-    /*
-  double get opacity { 
-    if (this._opacity == null) {
-      this._opacity = 0;
-    }
-    return this._opacity!;
-  }
+  // NOTE: opacity skipped - type number is ignored in gen 
 
-  void set opacity (double v) {
-    this._opacity = v;
-  }
-    */
-    
-  double? weight;
-    /*
-  double get weight { 
-    if (this._weight == null) {
-      this._weight = 0;
-    }
-    return this._weight!;
-  }
+  // NOTE: weight skipped - type number is ignored in gen 
 
-  void set weight (double v) {
-    this._weight = v;
-  }
-    */
-    
-  double? lineWidth;
-    /*
-  double get lineWidth { 
-    if (this._lineWidth == null) {
-      this._lineWidth = 0;
-    }
-    return this._lineWidth!;
-  }
+  // NOTE: lineWidth skipped - type number is ignored in gen 
 
-  void set lineWidth (double v) {
-    this._lineWidth = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -140,39 +62,25 @@ class FlowMapPointOptions extends MapLinePointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.curveFactor != null) {  
-      buffer.writeAll(["\"curveFactor\":", this.curveFactor, ","], "");
-    }
+    // NOTE: skip serialization of curveFactor (type number is ignored) ignore type: true
 
-    if (this.fillColor != null) {  
-      buffer.writeAll(["\"fillColor\":\`", this.fillColor, "\`,"], "");
-    }
+    // NOTE: skip serialization of fillColor (type string is ignored) ignore type: true
 
-    if (this.fillOpacity != null) {  
-      buffer.writeAll(["\"fillOpacity\":", this.fillOpacity, ","], "");
-    }
+    // NOTE: skip serialization of fillOpacity (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of from (type MapLonLatObject is ignored)} 
+    // NOTE: skip serialization of from (type MapLonLatObject is ignored) ignore type: true
 
-    if (this.growTowards != null) {  
-      buffer.writeAll(["\"growTowards\":", this.growTowards, ","], "");
-    }
+    // NOTE: skip serialization of growTowards (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of markerEnd (type MarkerEndOptions is ignored)} 
+    // NOTE: skip serialization of markerEnd (type MarkerEndOptions is ignored) ignore type: true
 
-    if (this.opacity != null) {  
-      buffer.writeAll(["\"opacity\":", this.opacity, ","], "");
-    }
+    // NOTE: skip serialization of opacity (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of to (type MapLonLatObject is ignored)} 
+    // NOTE: skip serialization of to (type MapLonLatObject is ignored) ignore type: true
 
-    if (this.weight != null) {  
-      buffer.writeAll(["\"weight\":", this.weight, ","], "");
-    }
+    // NOTE: skip serialization of weight (type number is ignored) ignore type: true
 
-    if (this.lineWidth != null) {  
-      buffer.writeAll(["\"lineWidth\":", this.lineWidth, ","], "");
-    }
+    // NOTE: skip serialization of lineWidth (type number is ignored) ignore type: true
   }
 
 }

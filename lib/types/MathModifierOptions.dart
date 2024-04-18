@@ -12,34 +12,21 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
 import 'DataModifierOptions.dart';
+import 'MathModifierColumnFormulaOptions.dart';
 import 'OptionFragment.dart';
 
 /** 
  * MathModifierOptions 
  */
 class MathModifierOptions extends DataModifierOptions {
-  MathModifierOptions( {
-    this.alternativeSeparators = null
-  }) : super();
-  bool? alternativeSeparators;
-    /*
-  bool get alternativeSeparators { 
-    if (this._alternativeSeparators == null) {
-      this._alternativeSeparators = false;
-    }
-    return this._alternativeSeparators!;
-  }
+  MathModifierOptions( ) : super();
+  // NOTE: alternativeSeparators skipped - type boolean is ignored in gen 
 
-  void set alternativeSeparators (bool v) {
-    this._alternativeSeparators = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -48,15 +35,13 @@ class MathModifierOptions extends DataModifierOptions {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of type (type "Math" is ignored)} 
+    // NOTE: skip serialization of type (type "Math" is ignored) ignore type: true
 
-    if (this.alternativeSeparators != null) {  
-      buffer.writeAll(["\"alternativeSeparators\":", this.alternativeSeparators, ","], "");
-    }
+    // NOTE: skip serialization of alternativeSeparators (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of columnFormulas (type MathModifierColumnFormulaOptions[] is ignored)} 
+    // NOTE: skip serialization of columnFormulas (type MathModifierColumnFormulaOptions[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of formulaColumns (type string[] is ignored)} 
+    // NOTE: skip serialization of formulaColumns (type string[] is ignored) ignore type: true
   }
 
 }

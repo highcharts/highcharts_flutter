@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -29,106 +29,27 @@ class CurrentDateIndicatorOptions extends OptionFragment {
     this.color = null,
     this.dashStyle = null,
     this.id = null,
+    this.label = null,
     this.width = null,
     this.zIndex = null
   }) : super();
   bool? acrossPanes;
-    /*
-  bool get acrossPanes { 
-    if (this._acrossPanes == null) {
-      this._acrossPanes = false;
-    }
-    return this._acrossPanes!;
-  }
-
-  void set acrossPanes (bool v) {
-    this._acrossPanes = v;
-  }
-    */
     
   String? className;
-    /*
-  String get className { 
-    if (this._className == null) {
-      this._className = "";
-    }
-    return this._className!;
-  }
-
-  void set className (String v) {
-    this._className = v;
-  }
-    */
     
   String? color;
-    /*
-  String get color { 
-    if (this._color == null) {
-      this._color = "";
-    }
-    return this._color!;
-  }
-
-  void set color (String v) {
-    this._color = v;
-  }
-    */
     
   String? dashStyle;
-    /*
-  String get dashStyle { 
-    if (this._dashStyle == null) {
-      this._dashStyle = "";
-    }
-    return this._dashStyle!;
-  }
-
-  void set dashStyle (String v) {
-    this._dashStyle = v;
-  }
-    */
     
-  String? id;
-    /*
-  String get id { 
-    if (this._id == null) {
-      this._id = "";
-    }
-    return this._id!;
-  }
+  // NOTE: events skipped - type any is ignored in gen 
 
-  void set id (String v) {
-    this._id = v;
-  }
-    */
+  String? id;
+    
+  CurrentDateIndicatorLabelOptions? label;
     
   double? width;
-    /*
-  double get width { 
-    if (this._width == null) {
-      this._width = 0;
-    }
-    return this._width!;
-  }
-
-  void set width (double v) {
-    this._width = v;
-  }
-    */
     
   double? zIndex;
-    /*
-  double get zIndex { 
-    if (this._zIndex == null) {
-      this._zIndex = 0;
-    }
-    return this._zIndex!;
-  }
-
-  void set zIndex (double v) {
-    this._zIndex = v;
-  }
-    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -139,35 +60,37 @@ class CurrentDateIndicatorOptions extends OptionFragment {
 
     
     if (this.acrossPanes != null) {  
-      buffer.writeAll(["\"acrossPanes\":", this.acrossPanes, ","], "");
+      buffer.writeAll(["\"acrossPanes\":",this.acrossPanes, ","], "");
     }
 
     if (this.className != null) {  
-      buffer.writeAll(["\"className\":\`", this.className, "\`,"], "");
+      buffer.writeAll(["\"className\":\`",this.className, "\`,"], "");
     }
 
     if (this.color != null) {  
-      buffer.writeAll(["\"color\":\`", this.color, "\`,"], "");
+      buffer.writeAll(["\"color\":\`",this.color, "\`,"], "");
     }
 
     if (this.dashStyle != null) {  
-      buffer.writeAll(["\"dashStyle\":\`", this.dashStyle, "\`,"], "");
+      buffer.writeAll(["\"dashStyle\":\`",this.dashStyle, "\`,"], "");
     }
 
-    // NOTE: skip serialization of events (type any is ignored)} 
+    // NOTE: skip serialization of events (type any is ignored) ignore type: 1
 
     if (this.id != null) {  
-      buffer.writeAll(["\"id\":\`", this.id, "\`,"], "");
+      buffer.writeAll(["\"id\":\`",this.id, "\`,"], "");
     }
 
-    // NOTE: skip serialization of label (type CurrentDateIndicatorLabelOptions is ignored)} 
+    if (this.label != null) {  
+      buffer.writeAll(["\"label\":",this.label?.toJSON(), ","], "");
+    }
 
     if (this.width != null) {  
-      buffer.writeAll(["\"width\":", this.width, ","], "");
+      buffer.writeAll(["\"width\":",this.width, ","], "");
     }
 
     if (this.zIndex != null) {  
-      buffer.writeAll(["\"zIndex\":", this.zIndex, ","], "");
+      buffer.writeAll(["\"zIndex\":",this.zIndex, ","], "");
     }
   }
 

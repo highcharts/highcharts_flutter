@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,68 +22,15 @@ import 'OptionFragment.dart';
  * InputAttributes 
  */
 class InputAttributes extends OptionFragment {
-  InputAttributes( {
-    this.value = null,
-    this.type = null,
-    this.htmlFor = null,
-    this.labelClassName = null
-  }) : super();
-  String? value;
-    /*
-  String get value { 
-    if (this._value == null) {
-      this._value = "";
-    }
-    return this._value!;
-  }
+  InputAttributes( ) : super();
+  // NOTE: value skipped - type string is ignored in gen 
 
-  void set value (String v) {
-    this._value = v;
-  }
-    */
-    
-  String? type;
-    /*
-  String get type { 
-    if (this._type == null) {
-      this._type = "";
-    }
-    return this._type!;
-  }
+  // NOTE: type skipped - type string is ignored in gen 
 
-  void set type (String v) {
-    this._type = v;
-  }
-    */
-    
-  String? htmlFor;
-    /*
-  String get htmlFor { 
-    if (this._htmlFor == null) {
-      this._htmlFor = "";
-    }
-    return this._htmlFor!;
-  }
+  // NOTE: htmlFor skipped - type string is ignored in gen 
 
-  void set htmlFor (String v) {
-    this._htmlFor = v;
-  }
-    */
-    
-  String? labelClassName;
-    /*
-  String get labelClassName { 
-    if (this._labelClassName == null) {
-      this._labelClassName = "";
-    }
-    return this._labelClassName!;
-  }
+  // NOTE: labelClassName skipped - type string is ignored in gen 
 
-  void set labelClassName (String v) {
-    this._labelClassName = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -92,21 +39,13 @@ class InputAttributes extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.value != null) {  
-      buffer.writeAll(["\"value\":\`", this.value, "\`,"], "");
-    }
+    // NOTE: skip serialization of value (type string is ignored) ignore type: true
 
-    if (this.type != null) {  
-      buffer.writeAll(["\"type\":\`", this.type, "\`,"], "");
-    }
+    // NOTE: skip serialization of type (type string is ignored) ignore type: true
 
-    if (this.htmlFor != null) {  
-      buffer.writeAll(["\"htmlFor\":\`", this.htmlFor, "\`,"], "");
-    }
+    // NOTE: skip serialization of htmlFor (type string is ignored) ignore type: true
 
-    if (this.labelClassName != null) {  
-      buffer.writeAll(["\"labelClassName\":\`", this.labelClassName, "\`,"], "");
-    }
+    // NOTE: skip serialization of labelClassName (type string is ignored) ignore type: true
   }
 
 }

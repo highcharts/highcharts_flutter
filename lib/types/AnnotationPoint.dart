@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,23 +23,9 @@ import 'OptionFragment.dart';
  * AnnotationPoint 
  */
 class AnnotationPoint extends OptionFragment {
-  AnnotationPoint( {
-    this.command = null
-  }) : super();
-  String? command;
-    /*
-  String get command { 
-    if (this._command == null) {
-      this._command = "";
-    }
-    return this._command!;
-  }
+  AnnotationPoint( ) : super();
+  // NOTE: command skipped - type string is ignored in gen 
 
-  void set command (String v) {
-    this._command = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -48,13 +34,11 @@ class AnnotationPoint extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.command != null) {  
-      buffer.writeAll(["\"command\":\`", this.command, "\`,"], "");
-    }
+    // NOTE: skip serialization of command (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of mock (type undefined is ignored)} 
+    // NOTE: skip serialization of mock (type undefined is ignored) ignore type: 1
 
-    // NOTE: skip serialization of series (type AnnotationSeries is ignored)} 
+    // NOTE: skip serialization of series (type AnnotationSeries is ignored) ignore type: true
   }
 
 }

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,23 +22,9 @@ import 'OptionFragment.dart';
  * ContextDetails 
  */
 class ContextDetails extends OptionFragment {
-  ContextDetails( {
-    this.side = null
-  }) : super();
-  String? side;
-    /*
-  String get side { 
-    if (this._side == null) {
-      this._side = "";
-    }
-    return this._side!;
-  }
+  ContextDetails( ) : super();
+  // NOTE: side skipped - type string is ignored in gen 
 
-  void set side (String v) {
-    this._side = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -47,11 +33,9 @@ class ContextDetails extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of cell (type Cell is ignored)} 
+    // NOTE: skip serialization of cell (type Cell is ignored) ignore type: true
 
-    if (this.side != null) {  
-      buffer.writeAll(["\"side\":\`", this.side, "\`,"], "");
-    }
+    // NOTE: skip serialization of side (type string is ignored) ignore type: true
   }
 
 }

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,8 +22,10 @@ import 'OptionFragment.dart';
  * StockToolsGuiDefinitionsButtonsOptions 
  */
 class StockToolsGuiDefinitionsButtonsOptions extends OptionFragment {
-  StockToolsGuiDefinitionsButtonsOptions( ) : super();
-  
+  StockToolsGuiDefinitionsButtonsOptions( {
+    this.items = null
+  }) : super();
+  List<String>? items; // String
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -32,7 +34,13 @@ class StockToolsGuiDefinitionsButtonsOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of items (type string[] is ignored)} 
+    if (this.items != null) {  
+     StringBuffer arrData = StringBuffer();
+
+      arrData.writeAll(this.items!, ",");
+      buffer.writeAll(["\"items\": [", arrData , "],"], "");   
+        
+    }
   }
 
 }

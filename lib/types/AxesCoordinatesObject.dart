@@ -12,10 +12,11 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
+import 'AxisCoordinateObject.dart';
 import 'OptionFragment.dart';
 
 /** 
@@ -32,9 +33,9 @@ class AxesCoordinatesObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of xAxis (type AxisCoordinateObject[] is ignored)} 
+    // NOTE: skip serialization of xAxis (type AxisCoordinateObject[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of yAxis (type AxisCoordinateObject[] is ignored)} 
+    // NOTE: skip serialization of yAxis (type AxisCoordinateObject[] is ignored) ignore type: true
   }
 
 }

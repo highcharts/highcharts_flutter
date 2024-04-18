@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,23 +23,9 @@ import 'OptionFragment.dart';
  * PointGroupItem 
  */
 class PointGroupItem extends OptionFragment {
-  PointGroupItem( {
-    this.time = null
-  }) : super();
-  double? time;
-    /*
-  double get time { 
-    if (this._time == null) {
-      this._time = 0;
-    }
-    return this._time!;
-  }
+  PointGroupItem( ) : super();
+  // NOTE: time skipped - type number is ignored in gen 
 
-  void set time (double v) {
-    this._time = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -48,11 +34,9 @@ class PointGroupItem extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of point (type Point is ignored)} 
+    // NOTE: skip serialization of point (type Point is ignored) ignore type: true
 
-    if (this.time != null) {  
-      buffer.writeAll(["\"time\":", this.time, ","], "");
-    }
+    // NOTE: skip serialization of time (type number is ignored) ignore type: true
   }
 
 }

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,126 +24,26 @@ import 'OptionFragment.dart';
  */
 class ControllableOptions extends ControlTargetOptions {
   ControllableOptions( {
-    this.className = null,
-    this.id = null,
-    this.markerEnd = null,
-    this.markerStart = null,
+    super.controlPointOptions = null,
     this.r = null,
-    this.rx = null,
     this.ry = null,
     this.type = null
   }) : super();
-  String? className;
-    /*
-  String get className { 
-    if (this._className == null) {
-      this._className = "";
-    }
-    return this._className!;
-  }
+  // NOTE: className skipped - type string is ignored in gen 
 
-  void set className (String v) {
-    this._className = v;
-  }
-    */
-    
-  String? id;
-    /*
-  String get id { 
-    if (this._id == null) {
-      this._id = "";
-    }
-    return this._id!;
-  }
+  // NOTE: id skipped - type string is ignored in gen 
 
-  void set id (String v) {
-    this._id = v;
-  }
-    */
-    
-  String? markerEnd;
-    /*
-  String get markerEnd { 
-    if (this._markerEnd == null) {
-      this._markerEnd = "";
-    }
-    return this._markerEnd!;
-  }
+  // NOTE: markerEnd skipped - type string is ignored in gen 
 
-  void set markerEnd (String v) {
-    this._markerEnd = v;
-  }
-    */
-    
-  String? markerStart;
-    /*
-  String get markerStart { 
-    if (this._markerStart == null) {
-      this._markerStart = "";
-    }
-    return this._markerStart!;
-  }
+  // NOTE: markerStart skipped - type string is ignored in gen 
 
-  void set markerStart (String v) {
-    this._markerStart = v;
-  }
-    */
-    
   double? r;
-    /*
-  double get r { 
-    if (this._r == null) {
-      this._r = 0;
-    }
-    return this._r!;
-  }
-
-  void set r (double v) {
-    this._r = v;
-  }
-    */
     
-  double? rx;
-    /*
-  double get rx { 
-    if (this._rx == null) {
-      this._rx = 0;
-    }
-    return this._rx!;
-  }
+  // NOTE: rx skipped - type number is ignored in gen 
 
-  void set rx (double v) {
-    this._rx = v;
-  }
-    */
-    
   double? ry;
-    /*
-  double get ry { 
-    if (this._ry == null) {
-      this._ry = 0;
-    }
-    return this._ry!;
-  }
-
-  void set ry (double v) {
-    this._ry = v;
-  }
-    */
     
   String? type;
-    /*
-  String get type { 
-    if (this._type == null) {
-      this._type = "";
-    }
-    return this._type!;
-  }
-
-  void set type (String v) {
-    this._type = v;
-  }
-    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -153,36 +53,26 @@ class ControllableOptions extends ControlTargetOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.className != null) {  
-      buffer.writeAll(["\"className\":\`", this.className, "\`,"], "");
-    }
+    // NOTE: skip serialization of className (type string is ignored) ignore type: true
 
-    if (this.id != null) {  
-      buffer.writeAll(["\"id\":\`", this.id, "\`,"], "");
-    }
+    // NOTE: skip serialization of id (type string is ignored) ignore type: true
 
-    if (this.markerEnd != null) {  
-      buffer.writeAll(["\"markerEnd\":\`", this.markerEnd, "\`,"], "");
-    }
+    // NOTE: skip serialization of markerEnd (type string is ignored) ignore type: true
 
-    if (this.markerStart != null) {  
-      buffer.writeAll(["\"markerStart\":\`", this.markerStart, "\`,"], "");
-    }
+    // NOTE: skip serialization of markerStart (type string is ignored) ignore type: true
 
     if (this.r != null) {  
-      buffer.writeAll(["\"r\":", this.r, ","], "");
+      buffer.writeAll(["\"r\":",this.r, ","], "");
     }
 
-    if (this.rx != null) {  
-      buffer.writeAll(["\"rx\":", this.rx, ","], "");
-    }
+    // NOTE: skip serialization of rx (type number is ignored) ignore type: true
 
     if (this.ry != null) {  
-      buffer.writeAll(["\"ry\":", this.ry, ","], "");
+      buffer.writeAll(["\"ry\":",this.ry, ","], "");
     }
 
     if (this.type != null) {  
-      buffer.writeAll(["\"type\":\`", this.type, "\`,"], "");
+      buffer.writeAll(["\"type\":\`",this.type, "\`,"], "");
     }
   }
 

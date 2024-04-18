@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -29,60 +29,12 @@ class PdfFontOptions extends OptionFragment {
     this.normal = null
   }) : super();
   String? bold;
-    /*
-  String get bold { 
-    if (this._bold == null) {
-      this._bold = "";
-    }
-    return this._bold!;
-  }
-
-  void set bold (String v) {
-    this._bold = v;
-  }
-    */
     
   String? bolditalic;
-    /*
-  String get bolditalic { 
-    if (this._bolditalic == null) {
-      this._bolditalic = "";
-    }
-    return this._bolditalic!;
-  }
-
-  void set bolditalic (String v) {
-    this._bolditalic = v;
-  }
-    */
     
   String? italic;
-    /*
-  String get italic { 
-    if (this._italic == null) {
-      this._italic = "";
-    }
-    return this._italic!;
-  }
-
-  void set italic (String v) {
-    this._italic = v;
-  }
-    */
     
   String? normal;
-    /*
-  String get normal { 
-    if (this._normal == null) {
-      this._normal = "";
-    }
-    return this._normal!;
-  }
-
-  void set normal (String v) {
-    this._normal = v;
-  }
-    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -93,19 +45,19 @@ class PdfFontOptions extends OptionFragment {
 
     
     if (this.bold != null) {  
-      buffer.writeAll(["\"bold\":\`", this.bold, "\`,"], "");
+      buffer.writeAll(["\"bold\":\`",this.bold, "\`,"], "");
     }
 
     if (this.bolditalic != null) {  
-      buffer.writeAll(["\"bolditalic\":\`", this.bolditalic, "\`,"], "");
+      buffer.writeAll(["\"bolditalic\":\`",this.bolditalic, "\`,"], "");
     }
 
     if (this.italic != null) {  
-      buffer.writeAll(["\"italic\":\`", this.italic, "\`,"], "");
+      buffer.writeAll(["\"italic\":\`",this.italic, "\`,"], "");
     }
 
     if (this.normal != null) {  
-      buffer.writeAll(["\"normal\":\`", this.normal, "\`,"], "");
+      buffer.writeAll(["\"normal\":\`",this.normal, "\`,"], "");
     }
   }
 

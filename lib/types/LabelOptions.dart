@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,52 +24,33 @@ import 'OptionFragment.dart';
  */
 class LabelOptions extends ControllableLabelOptions {
   LabelOptions( {
-    this.backgroundColor = null,
-    this.borderWidth = null,
-    this.y = null
+    super.accessibility = null,
+    super.align = null,
+    super.allowOverlap = null,
+    super.backgroundColor = null,
+    super.borderColor = null,
+    super.borderRadius = null,
+    super.borderWidth = null,
+    super.crop = null,
+    super.distance = null,
+    super.format = null,
+    super.includeInDataExport = null,
+    super.overflow = null,
+    super.padding = null,
+    super.shape = null,
+    super.style = null,
+    super.text = null,
+    super.useHTML = null,
+    super.verticalAlign = null,
+    super.x = null,
+    super.y = null
   }) : super();
-  String? backgroundColor;
-    /*
-  String get backgroundColor { 
-    if (this._backgroundColor == null) {
-      this._backgroundColor = "";
-    }
-    return this._backgroundColor!;
-  }
+  // NOTE: backgroundColor skipped - type string is ignored in gen 
 
-  void set backgroundColor (String v) {
-    this._backgroundColor = v;
-  }
-    */
-    
-  double? borderWidth;
-    /*
-  double get borderWidth { 
-    if (this._borderWidth == null) {
-      this._borderWidth = 0;
-    }
-    return this._borderWidth!;
-  }
+  // NOTE: borderWidth skipped - type number is ignored in gen 
 
-  void set borderWidth (double v) {
-    this._borderWidth = v;
-  }
-    */
-    
-  double? y;
-    /*
-  double get y { 
-    if (this._y == null) {
-      this._y = 0;
-    }
-    return this._y!;
-  }
+  // NOTE: y skipped - type number is ignored in gen 
 
-  void set y (double v) {
-    this._y = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -78,17 +59,11 @@ class LabelOptions extends ControllableLabelOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.backgroundColor != null) {  
-      buffer.writeAll(["\"backgroundColor\":\`", this.backgroundColor, "\`,"], "");
-    }
+    // NOTE: skip serialization of backgroundColor (type string is ignored) ignore type: true
 
-    if (this.borderWidth != null) {  
-      buffer.writeAll(["\"borderWidth\":", this.borderWidth, ","], "");
-    }
+    // NOTE: skip serialization of borderWidth (type number is ignored) ignore type: true
 
-    if (this.y != null) {  
-      buffer.writeAll(["\"y\":", this.y, ","], "");
-    }
+    // NOTE: skip serialization of y (type number is ignored) ignore type: true
   }
 
 }

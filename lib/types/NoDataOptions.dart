@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -25,23 +25,9 @@ import 'OptionFragment.dart';
  * NoDataOptions 
  */
 class NoDataOptions extends OptionFragment {
-  NoDataOptions( {
-    this.useHTML = null
-  }) : super();
-  bool? useHTML;
-    /*
-  bool get useHTML { 
-    if (this._useHTML == null) {
-      this._useHTML = false;
-    }
-    return this._useHTML!;
-  }
+  NoDataOptions( ) : super();
+  // NOTE: useHTML skipped - type boolean is ignored in gen 
 
-  void set useHTML (bool v) {
-    this._useHTML = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -50,15 +36,13 @@ class NoDataOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of attr (type SVGAttributes is ignored)} 
+    // NOTE: skip serialization of attr (type SVGAttributes is ignored) ignore type: true
 
-    if (this.useHTML != null) {  
-      buffer.writeAll(["\"useHTML\":", this.useHTML, ","], "");
-    }
+    // NOTE: skip serialization of useHTML (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of position (type AlignObject is ignored)} 
+    // NOTE: skip serialization of position (type AlignObject is ignored) ignore type: true
 
-    // NOTE: skip serialization of style (type CSSObject is ignored)} 
+    // NOTE: skip serialization of style (type CSSObject is ignored) ignore type: true
   }
 
 }

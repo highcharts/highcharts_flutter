@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,7 +23,10 @@ import 'OptionFragment.dart';
  * StochasticParamsOptions 
  */
 class StochasticParamsOptions extends SMAParamsOptions {
-  StochasticParamsOptions( ) : super();
+  StochasticParamsOptions( {
+    super.index = null,
+    super.period = null
+  }) : super();
   
 
   //////////////////////////////////////////////////////////////////////////////
@@ -33,7 +36,7 @@ class StochasticParamsOptions extends SMAParamsOptions {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of periods (type number[] is ignored)} 
+    // NOTE: skip serialization of periods (type number[] is ignored) ignore type: true
   }
 
 }

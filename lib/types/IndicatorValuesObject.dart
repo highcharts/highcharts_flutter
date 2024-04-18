@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -32,11 +32,11 @@ class IndicatorValuesObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of values (type ExtractArrayType<TLinkedSeries["yData"]>)[][] is ignored)} 
+    // NOTE: skip serialization of values (type ExtractArrayType<TLinkedSeries["yData"]>)[][] is ignored) ignore type: true
 
-    // NOTE: skip serialization of xData (type NonNullable<TLinkedSeries["xData"]> is ignored)} 
+    // NOTE: skip serialization of xData (type NonNullable<TLinkedSeries["xData"]> is ignored) ignore type: true
 
-    // NOTE: skip serialization of yData (type NonNullable<TLinkedSeries["yData"]> is ignored)} 
+    // NOTE: skip serialization of yData (type NonNullable<TLinkedSeries["yData"]> is ignored) ignore type: true
   }
 
 }

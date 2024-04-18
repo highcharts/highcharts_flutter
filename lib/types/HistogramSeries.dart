@@ -12,30 +12,84 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
-import 'SVGElement.dart';
-import 'OptionFragment.dart';
+import 'HistogramSeriesOptions.dart';
+import 'Series.dart';
+import 'PointOptions.dart';
 
-/** 
- * HistogramSeries 
- */
-class HistogramSeries extends OptionFragment {
-  HistogramSeries( ) : super();
-  
+class HistogramSeries extends Series {
 
-  //////////////////////////////////////////////////////////////////////////////
+  String? name;
+  HistogramSeriesOptions? options;
+  List<PointOptions>? points;
+  List<List<double>>? data;
+
+  HistogramSeries({
+    this.name = null,
+    this.options = null,
+    this.points = null,
+    this.data = null
+  });
+
   
   @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of group (type SVGElement is ignored)} 
 
-    // NOTE: skip serialization of pointClass (type typeof HistogramPoint is ignored)} 
+    if (this.name != null) {
+      buffer.writeAll(["\"name\": \"", this.name!, "\","], "");
+    }
+
+    buffer.write("\"type\": \"histogram\",");
+
+    if (this.data != null && this.points == null) {
+      // Serialize as a 2d array
+
+      StringBuffer seriesData = StringBuffer();
+
+      for (var point in this.data!) {
+        seriesData.writeAll(["["], "");
+        for (var item in point) {
+          seriesData.writeAll([item, ","]);
+        }
+        seriesData.writeAll(["],"], "");
+      }
+
+      buffer.writeAll(["\"data\": [", seriesData, "],"], "");   
+
+
+    } else if (this.points != null) {
+      // Go through the points and write them
+      StringBuffer seriesData = StringBuffer();
+
+      for (var point in this.points!) {
+        seriesData.writeAll(["{"], "");
+        point.toJSONInner(seriesData); 
+        seriesData.writeAll(["},"], "");
+      }
+
+      buffer.writeAll(["\"data\": [", seriesData, "],"], "");
+    }
+
+
+
+    
+    // NOTE: skip serialization of baseSeries (type string is ignored) ignore type: true
+
+    if (this.options?.binsNumber != null) {  
+      buffer.writeAll(["\"binsNumber\":\`",this.options?.binsNumber, "\`,"], "");
+    }
+
+    if (this.options?.binWidth != null) {  
+      buffer.writeAll(["\"binWidth\":",this.options?.binWidth, ","], "");
+    }
+
+    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
   }
 
 }

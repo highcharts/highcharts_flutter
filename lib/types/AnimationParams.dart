@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -26,68 +26,15 @@ import 'OptionFragment.dart';
  * AnimationParams 
  */
 class AnimationParams extends OptionFragment {
-  AnimationParams( {
-    this.idPreviousRoot = null,
-    this.idRoot = null,
-    this.innerR = null,
-    this.visible = null
-  }) : super();
-  String? idPreviousRoot;
-    /*
-  String get idPreviousRoot { 
-    if (this._idPreviousRoot == null) {
-      this._idPreviousRoot = "";
-    }
-    return this._idPreviousRoot!;
-  }
+  AnimationParams( ) : super();
+  // NOTE: idPreviousRoot skipped - type string is ignored in gen 
 
-  void set idPreviousRoot (String v) {
-    this._idPreviousRoot = v;
-  }
-    */
-    
-  String? idRoot;
-    /*
-  String get idRoot { 
-    if (this._idRoot == null) {
-      this._idRoot = "";
-    }
-    return this._idRoot!;
-  }
+  // NOTE: idRoot skipped - type string is ignored in gen 
 
-  void set idRoot (String v) {
-    this._idRoot = v;
-  }
-    */
-    
-  double? innerR;
-    /*
-  double get innerR { 
-    if (this._innerR == null) {
-      this._innerR = 0;
-    }
-    return this._innerR!;
-  }
+  // NOTE: innerR skipped - type number is ignored in gen 
 
-  void set innerR (double v) {
-    this._innerR = v;
-  }
-    */
-    
-  bool? visible;
-    /*
-  bool get visible { 
-    if (this._visible == null) {
-      this._visible = false;
-    }
-    return this._visible!;
-  }
+  // NOTE: visible skipped - type boolean is ignored in gen 
 
-  void set visible (bool v) {
-    this._visible = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -96,33 +43,25 @@ class AnimationParams extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of center (type PositionObject is ignored)} 
+    // NOTE: skip serialization of center (type PositionObject is ignored) ignore type: true
 
-    if (this.idPreviousRoot != null) {  
-      buffer.writeAll(["\"idPreviousRoot\":\`", this.idPreviousRoot, "\`,"], "");
-    }
+    // NOTE: skip serialization of idPreviousRoot (type string is ignored) ignore type: true
 
-    if (this.idRoot != null) {  
-      buffer.writeAll(["\"idRoot\":\`", this.idRoot, "\`,"], "");
-    }
+    // NOTE: skip serialization of idRoot (type string is ignored) ignore type: true
 
-    if (this.innerR != null) {  
-      buffer.writeAll(["\"innerR\":", this.innerR, ","], "");
-    }
+    // NOTE: skip serialization of innerR (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of point (type SunburstPoint is ignored)} 
+    // NOTE: skip serialization of point (type SunburstPoint is ignored) ignore type: true
 
-    // NOTE: skip serialization of radians (type RadianAngles is ignored)} 
+    // NOTE: skip serialization of radians (type RadianAngles is ignored) ignore type: true
 
-    // NOTE: skip serialization of shapeExisting (type NodeValuesObject is ignored)} 
+    // NOTE: skip serialization of shapeExisting (type NodeValuesObject is ignored) ignore type: true
 
-    // NOTE: skip serialization of shapePreviousRoot (type NodeValuesObject is ignored)} 
+    // NOTE: skip serialization of shapePreviousRoot (type NodeValuesObject is ignored) ignore type: true
 
-    // NOTE: skip serialization of shapeRoot (type NodeValuesObject is ignored)} 
+    // NOTE: skip serialization of shapeRoot (type NodeValuesObject is ignored) ignore type: true
 
-    if (this.visible != null) {  
-      buffer.writeAll(["\"visible\":", this.visible, ","], "");
-    }
+    // NOTE: skip serialization of visible (type boolean is ignored) ignore type: true
   }
 
 }

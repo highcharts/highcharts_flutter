@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,143 +23,25 @@ import 'OptionFragment.dart';
  * OscOptions 
  */
 class OscOptions extends OptionFragment {
-  OscOptions( {
-    this.detune = null,
-    this.freqMultiplier = null,
-    this.fixedFrequency = null,
-    this.fmOscillator = null,
-    this.pulseWidth = null,
-    this.type = null,
-    this.vmOscillator = null,
-    this.volume = null,
-    this.volumePitchTrackingMultiplier = null
-  }) : super();
-  double? detune;
-    /*
-  double get detune { 
-    if (this._detune == null) {
-      this._detune = 0;
-    }
-    return this._detune!;
-  }
+  OscOptions( ) : super();
+  // NOTE: detune skipped - type number is ignored in gen 
 
-  void set detune (double v) {
-    this._detune = v;
-  }
-    */
-    
-  double? freqMultiplier;
-    /*
-  double get freqMultiplier { 
-    if (this._freqMultiplier == null) {
-      this._freqMultiplier = 0;
-    }
-    return this._freqMultiplier!;
-  }
+  // NOTE: freqMultiplier skipped - type number is ignored in gen 
 
-  void set freqMultiplier (double v) {
-    this._freqMultiplier = v;
-  }
-    */
-    
-  double? fixedFrequency;
-    /*
-  double get fixedFrequency { 
-    if (this._fixedFrequency == null) {
-      this._fixedFrequency = 0;
-    }
-    return this._fixedFrequency!;
-  }
+  // NOTE: fixedFrequency skipped - type number is ignored in gen 
 
-  void set fixedFrequency (double v) {
-    this._fixedFrequency = v;
-  }
-    */
-    
-  double? fmOscillator;
-    /*
-  double get fmOscillator { 
-    if (this._fmOscillator == null) {
-      this._fmOscillator = 0;
-    }
-    return this._fmOscillator!;
-  }
+  // NOTE: fmOscillator skipped - type number is ignored in gen 
 
-  void set fmOscillator (double v) {
-    this._fmOscillator = v;
-  }
-    */
-    
-  double? pulseWidth;
-    /*
-  double get pulseWidth { 
-    if (this._pulseWidth == null) {
-      this._pulseWidth = 0;
-    }
-    return this._pulseWidth!;
-  }
+  // NOTE: pulseWidth skipped - type number is ignored in gen 
 
-  void set pulseWidth (double v) {
-    this._pulseWidth = v;
-  }
-    */
-    
-  String? type;
-    /*
-  String get type { 
-    if (this._type == null) {
-      this._type = "";
-    }
-    return this._type!;
-  }
+  // NOTE: type skipped - type string is ignored in gen 
 
-  void set type (String v) {
-    this._type = v;
-  }
-    */
-    
-  double? vmOscillator;
-    /*
-  double get vmOscillator { 
-    if (this._vmOscillator == null) {
-      this._vmOscillator = 0;
-    }
-    return this._vmOscillator!;
-  }
+  // NOTE: vmOscillator skipped - type number is ignored in gen 
 
-  void set vmOscillator (double v) {
-    this._vmOscillator = v;
-  }
-    */
-    
-  double? volume;
-    /*
-  double get volume { 
-    if (this._volume == null) {
-      this._volume = 0;
-    }
-    return this._volume!;
-  }
+  // NOTE: volume skipped - type number is ignored in gen 
 
-  void set volume (double v) {
-    this._volume = v;
-  }
-    */
-    
-  double? volumePitchTrackingMultiplier;
-    /*
-  double get volumePitchTrackingMultiplier { 
-    if (this._volumePitchTrackingMultiplier == null) {
-      this._volumePitchTrackingMultiplier = 0;
-    }
-    return this._volumePitchTrackingMultiplier!;
-  }
+  // NOTE: volumePitchTrackingMultiplier skipped - type number is ignored in gen 
 
-  void set volumePitchTrackingMultiplier (double v) {
-    this._volumePitchTrackingMultiplier = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -168,49 +50,31 @@ class OscOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of attackEnvelope (type Envelope is ignored)} 
+    // NOTE: skip serialization of attackEnvelope (type Envelope is ignored) ignore type: true
 
-    if (this.detune != null) {  
-      buffer.writeAll(["\"detune\":", this.detune, ","], "");
-    }
+    // NOTE: skip serialization of detune (type number is ignored) ignore type: true
 
-    if (this.freqMultiplier != null) {  
-      buffer.writeAll(["\"freqMultiplier\":", this.freqMultiplier, ","], "");
-    }
+    // NOTE: skip serialization of freqMultiplier (type number is ignored) ignore type: true
 
-    if (this.fixedFrequency != null) {  
-      buffer.writeAll(["\"fixedFrequency\":", this.fixedFrequency, ","], "");
-    }
+    // NOTE: skip serialization of fixedFrequency (type number is ignored) ignore type: true
 
-    if (this.fmOscillator != null) {  
-      buffer.writeAll(["\"fmOscillator\":", this.fmOscillator, ","], "");
-    }
+    // NOTE: skip serialization of fmOscillator (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of highpass (type FilterOptions is ignored)} 
+    // NOTE: skip serialization of highpass (type FilterOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of lowpass (type FilterOptions is ignored)} 
+    // NOTE: skip serialization of lowpass (type FilterOptions is ignored) ignore type: true
 
-    if (this.pulseWidth != null) {  
-      buffer.writeAll(["\"pulseWidth\":", this.pulseWidth, ","], "");
-    }
+    // NOTE: skip serialization of pulseWidth (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of releaseEnvelope (type Envelope is ignored)} 
+    // NOTE: skip serialization of releaseEnvelope (type Envelope is ignored) ignore type: true
 
-    if (this.type != null) {  
-      buffer.writeAll(["\"type\":\`", this.type, "\`,"], "");
-    }
+    // NOTE: skip serialization of type (type string is ignored) ignore type: true
 
-    if (this.vmOscillator != null) {  
-      buffer.writeAll(["\"vmOscillator\":", this.vmOscillator, ","], "");
-    }
+    // NOTE: skip serialization of vmOscillator (type number is ignored) ignore type: true
 
-    if (this.volume != null) {  
-      buffer.writeAll(["\"volume\":", this.volume, ","], "");
-    }
+    // NOTE: skip serialization of volume (type number is ignored) ignore type: true
 
-    if (this.volumePitchTrackingMultiplier != null) {  
-      buffer.writeAll(["\"volumePitchTrackingMultiplier\":", this.volumePitchTrackingMultiplier, ","], "");
-    }
+    // NOTE: skip serialization of volumePitchTrackingMultiplier (type number is ignored) ignore type: true
   }
 
 }

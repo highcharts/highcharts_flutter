@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,37 +24,20 @@ import 'OptionFragment.dart';
  */
 class MarkerClusterMarkerOptions extends PointMarkerOptions {
   MarkerClusterMarkerOptions( {
-    this.lineWidth = null,
-    this.radius = null
+    super.enabled = null,
+    super.enabledThreshold = null,
+    super.fillColor = null,
+    super.height = null,
+    super.lineColor = null,
+    super.lineWidth = null,
+    super.radius = null,
+    super.symbol = null,
+    super.width = null
   }) : super();
-  double? lineWidth;
-    /*
-  double get lineWidth { 
-    if (this._lineWidth == null) {
-      this._lineWidth = 0;
-    }
-    return this._lineWidth!;
-  }
+  // NOTE: lineWidth skipped - type number is ignored in gen 
 
-  void set lineWidth (double v) {
-    this._lineWidth = v;
-  }
-    */
-    
-  double? radius;
-    /*
-  double get radius { 
-    if (this._radius == null) {
-      this._radius = 0;
-    }
-    return this._radius!;
-  }
+  // NOTE: radius skipped - type number is ignored in gen 
 
-  void set radius (double v) {
-    this._radius = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -63,13 +46,9 @@ class MarkerClusterMarkerOptions extends PointMarkerOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.lineWidth != null) {  
-      buffer.writeAll(["\"lineWidth\":", this.lineWidth, ","], "");
-    }
+    // NOTE: skip serialization of lineWidth (type number is ignored) ignore type: true
 
-    if (this.radius != null) {  
-      buffer.writeAll(["\"radius\":", this.radius, ","], "");
-    }
+    // NOTE: skip serialization of radius (type number is ignored) ignore type: true
   }
 
 }

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,38 +22,11 @@ import 'OptionFragment.dart';
  * SelectionEvent 
  */
 class SelectionEvent extends OptionFragment {
-  SelectionEvent( {
-    this.type = null,
-    this.reset = null
-  }) : super();
-  String? type;
-    /*
-  String get type { 
-    if (this._type == null) {
-      this._type = "";
-    }
-    return this._type!;
-  }
+  SelectionEvent( ) : super();
+  // NOTE: type skipped - type string is ignored in gen 
 
-  void set type (String v) {
-    this._type = v;
-  }
-    */
-    
-  bool? reset;
-    /*
-  bool get reset { 
-    if (this._reset == null) {
-      this._reset = false;
-    }
-    return this._reset!;
-  }
+  // NOTE: reset skipped - type boolean is ignored in gen 
 
-  void set reset (bool v) {
-    this._reset = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -62,17 +35,13 @@ class SelectionEvent extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.type != null) {  
-      buffer.writeAll(["\"type\":\`", this.type, "\`,"], "");
-    }
+    // NOTE: skip serialization of type (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of detail (type AnyRecord is ignored)} 
+    // NOTE: skip serialization of detail (type AnyRecord is ignored) ignore type: 1
 
-    if (this.reset != null) {  
-      buffer.writeAll(["\"reset\":", this.reset, ","], "");
-    }
+    // NOTE: skip serialization of reset (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of selection (type Generic is ignored)} 
+    // NOTE: skip serialization of selection (type Generic is ignored) ignore type: true
   }
 
 }

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -25,21 +25,15 @@ import 'OptionFragment.dart';
  */
 class ChartResetZoomButtonOptions extends OptionFragment {
   ChartResetZoomButtonOptions( {
-    this.relativeTo = null
+    this.position = null,
+    this.relativeTo = null,
+    this.theme = null
   }) : super();
+  AlignObject? position;
+    
   String? relativeTo;
-    /*
-  String get relativeTo { 
-    if (this._relativeTo == null) {
-      this._relativeTo = "";
-    }
-    return this._relativeTo!;
-  }
-
-  void set relativeTo (String v) {
-    this._relativeTo = v;
-  }
-    */
+    
+  SVGAttributes? theme;
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -49,13 +43,17 @@ class ChartResetZoomButtonOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of position (type AlignObject is ignored)} 
-
-    if (this.relativeTo != null) {  
-      buffer.writeAll(["\"relativeTo\":\`", this.relativeTo, "\`,"], "");
+    if (this.position != null) {  
+      buffer.writeAll(["\"position\":",this.position?.toJSON(), ","], "");
     }
 
-    // NOTE: skip serialization of theme (type SVGAttributes is ignored)} 
+    if (this.relativeTo != null) {  
+      buffer.writeAll(["\"relativeTo\":\`",this.relativeTo, "\`,"], "");
+    }
+
+    if (this.theme != null) {  
+      buffer.writeAll(["\"theme\":",this.theme?.toJSON(), ","], "");
+    }
   }
 
 }

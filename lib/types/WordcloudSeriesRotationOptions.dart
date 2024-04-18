@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -28,46 +28,10 @@ class WordcloudSeriesRotationOptions extends OptionFragment {
     this.to = null
   }) : super();
   double? from;
-    /*
-  double get from { 
-    if (this._from == null) {
-      this._from = 0;
-    }
-    return this._from!;
-  }
-
-  void set from (double v) {
-    this._from = v;
-  }
-    */
     
   double? orientations;
-    /*
-  double get orientations { 
-    if (this._orientations == null) {
-      this._orientations = 0;
-    }
-    return this._orientations!;
-  }
-
-  void set orientations (double v) {
-    this._orientations = v;
-  }
-    */
     
   double? to;
-    /*
-  double get to { 
-    if (this._to == null) {
-      this._to = 0;
-    }
-    return this._to!;
-  }
-
-  void set to (double v) {
-    this._to = v;
-  }
-    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -78,15 +42,15 @@ class WordcloudSeriesRotationOptions extends OptionFragment {
 
     
     if (this.from != null) {  
-      buffer.writeAll(["\"from\":", this.from, ","], "");
+      buffer.writeAll(["\"from\":",this.from, ","], "");
     }
 
     if (this.orientations != null) {  
-      buffer.writeAll(["\"orientations\":", this.orientations, ","], "");
+      buffer.writeAll(["\"orientations\":",this.orientations, ","], "");
     }
 
     if (this.to != null) {  
-      buffer.writeAll(["\"to\":", this.to, ","], "");
+      buffer.writeAll(["\"to\":",this.to, ","], "");
     }
   }
 

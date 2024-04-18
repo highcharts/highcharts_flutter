@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -36,13 +36,13 @@ class StatesOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of hover (type StateHoverOptions is ignored)} 
+    // NOTE: skip serialization of hover (type StateHoverOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of inactive (type StateInactiveOptions is ignored)} 
+    // NOTE: skip serialization of inactive (type StateInactiveOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of normal (type StateNormalOptions is ignored)} 
+    // NOTE: skip serialization of normal (type StateNormalOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of select (type StateSelectOptions is ignored)} 
+    // NOTE: skip serialization of select (type StateSelectOptions is ignored) ignore type: true
   }
 
 }

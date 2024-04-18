@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,68 +22,15 @@ import 'OptionFragment.dart';
  * MathModifierColumnFormulaOptions 
  */
 class MathModifierColumnFormulaOptions extends OptionFragment {
-  MathModifierColumnFormulaOptions( {
-    this.column = null,
-    this.formula = null,
-    this.rowEnd = null,
-    this.rowStart = null
-  }) : super();
-  String? column;
-    /*
-  String get column { 
-    if (this._column == null) {
-      this._column = "";
-    }
-    return this._column!;
-  }
+  MathModifierColumnFormulaOptions( ) : super();
+  // NOTE: column skipped - type string is ignored in gen 
 
-  void set column (String v) {
-    this._column = v;
-  }
-    */
-    
-  String? formula;
-    /*
-  String get formula { 
-    if (this._formula == null) {
-      this._formula = "";
-    }
-    return this._formula!;
-  }
+  // NOTE: formula skipped - type string is ignored in gen 
 
-  void set formula (String v) {
-    this._formula = v;
-  }
-    */
-    
-  double? rowEnd;
-    /*
-  double get rowEnd { 
-    if (this._rowEnd == null) {
-      this._rowEnd = 0;
-    }
-    return this._rowEnd!;
-  }
+  // NOTE: rowEnd skipped - type number is ignored in gen 
 
-  void set rowEnd (double v) {
-    this._rowEnd = v;
-  }
-    */
-    
-  double? rowStart;
-    /*
-  double get rowStart { 
-    if (this._rowStart == null) {
-      this._rowStart = 0;
-    }
-    return this._rowStart!;
-  }
+  // NOTE: rowStart skipped - type number is ignored in gen 
 
-  void set rowStart (double v) {
-    this._rowStart = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -92,21 +39,13 @@ class MathModifierColumnFormulaOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.column != null) {  
-      buffer.writeAll(["\"column\":\`", this.column, "\`,"], "");
-    }
+    // NOTE: skip serialization of column (type string is ignored) ignore type: true
 
-    if (this.formula != null) {  
-      buffer.writeAll(["\"formula\":\`", this.formula, "\`,"], "");
-    }
+    // NOTE: skip serialization of formula (type string is ignored) ignore type: true
 
-    if (this.rowEnd != null) {  
-      buffer.writeAll(["\"rowEnd\":", this.rowEnd, ","], "");
-    }
+    // NOTE: skip serialization of rowEnd (type number is ignored) ignore type: true
 
-    if (this.rowStart != null) {  
-      buffer.writeAll(["\"rowStart\":", this.rowStart, ","], "");
-    }
+    // NOTE: skip serialization of rowStart (type number is ignored) ignore type: true
   }
 
 }

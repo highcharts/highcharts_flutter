@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,53 +22,13 @@ import 'OptionFragment.dart';
  * FilterOptions 
  */
 class FilterOptions extends OptionFragment {
-  FilterOptions( {
-    this.frequency = null,
-    this.frequencyPitchTrackingMultiplier = null,
-    this.Q = null
-  }) : super();
-  double? frequency;
-    /*
-  double get frequency { 
-    if (this._frequency == null) {
-      this._frequency = 0;
-    }
-    return this._frequency!;
-  }
+  FilterOptions( ) : super();
+  // NOTE: frequency skipped - type number is ignored in gen 
 
-  void set frequency (double v) {
-    this._frequency = v;
-  }
-    */
-    
-  double? frequencyPitchTrackingMultiplier;
-    /*
-  double get frequencyPitchTrackingMultiplier { 
-    if (this._frequencyPitchTrackingMultiplier == null) {
-      this._frequencyPitchTrackingMultiplier = 0;
-    }
-    return this._frequencyPitchTrackingMultiplier!;
-  }
+  // NOTE: frequencyPitchTrackingMultiplier skipped - type number is ignored in gen 
 
-  void set frequencyPitchTrackingMultiplier (double v) {
-    this._frequencyPitchTrackingMultiplier = v;
-  }
-    */
-    
-  double? Q;
-    /*
-  double get Q { 
-    if (this._Q == null) {
-      this._Q = 0;
-    }
-    return this._Q!;
-  }
+  // NOTE: Q skipped - type number is ignored in gen 
 
-  void set Q (double v) {
-    this._Q = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -77,17 +37,11 @@ class FilterOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.frequency != null) {  
-      buffer.writeAll(["\"frequency\":", this.frequency, ","], "");
-    }
+    // NOTE: skip serialization of frequency (type number is ignored) ignore type: true
 
-    if (this.frequencyPitchTrackingMultiplier != null) {  
-      buffer.writeAll(["\"frequencyPitchTrackingMultiplier\":", this.frequencyPitchTrackingMultiplier, ","], "");
-    }
+    // NOTE: skip serialization of frequencyPitchTrackingMultiplier (type number is ignored) ignore type: true
 
-    if (this.Q != null) {  
-      buffer.writeAll(["\"Q\":", this.Q, ","], "");
-    }
+    // NOTE: skip serialization of Q (type number is ignored) ignore type: true
   }
 
 }

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,53 +22,13 @@ import 'OptionFragment.dart';
  * TimeNormalizedObject 
  */
 class TimeNormalizedObject extends OptionFragment {
-  TimeNormalizedObject( {
-    this.count = null,
-    this.unitName = null,
-    this.unitRange = null
-  }) : super();
-  double? count;
-    /*
-  double get count { 
-    if (this._count == null) {
-      this._count = 0;
-    }
-    return this._count!;
-  }
+  TimeNormalizedObject( ) : super();
+  // NOTE: count skipped - type number is ignored in gen 
 
-  void set count (double v) {
-    this._count = v;
-  }
-    */
-    
-  String? unitName;
-    /*
-  String get unitName { 
-    if (this._unitName == null) {
-      this._unitName = "";
-    }
-    return this._unitName!;
-  }
+  // NOTE: unitName skipped - type string is ignored in gen 
 
-  void set unitName (String v) {
-    this._unitName = v;
-  }
-    */
-    
-  double? unitRange;
-    /*
-  double get unitRange { 
-    if (this._unitRange == null) {
-      this._unitRange = 0;
-    }
-    return this._unitRange!;
-  }
+  // NOTE: unitRange skipped - type number is ignored in gen 
 
-  void set unitRange (double v) {
-    this._unitRange = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -77,17 +37,11 @@ class TimeNormalizedObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.count != null) {  
-      buffer.writeAll(["\"count\":", this.count, ","], "");
-    }
+    // NOTE: skip serialization of count (type number is ignored) ignore type: true
 
-    if (this.unitName != null) {  
-      buffer.writeAll(["\"unitName\":\`", this.unitName, "\`,"], "");
-    }
+    // NOTE: skip serialization of unitName (type string is ignored) ignore type: true
 
-    if (this.unitRange != null) {  
-      buffer.writeAll(["\"unitRange\":", this.unitRange, ","], "");
-    }
+    // NOTE: skip serialization of unitRange (type number is ignored) ignore type: true
   }
 
 }

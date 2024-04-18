@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,38 +22,11 @@ import 'OptionFragment.dart';
  * TimeTicksInfoObject 
  */
 class TimeTicksInfoObject extends OptionFragment {
-  TimeTicksInfoObject( {
-    this.totalRange = null,
-    this.gapSize = null
-  }) : super();
-  double? totalRange;
-    /*
-  double get totalRange { 
-    if (this._totalRange == null) {
-      this._totalRange = 0;
-    }
-    return this._totalRange!;
-  }
+  TimeTicksInfoObject( ) : super();
+  // NOTE: totalRange skipped - type number is ignored in gen 
 
-  void set totalRange (double v) {
-    this._totalRange = v;
-  }
-    */
-    
-  double? gapSize;
-    /*
-  double get gapSize { 
-    if (this._gapSize == null) {
-      this._gapSize = 0;
-    }
-    return this._gapSize!;
-  }
+  // NOTE: gapSize skipped - type number is ignored in gen 
 
-  void set gapSize (double v) {
-    this._gapSize = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -62,17 +35,13 @@ class TimeTicksInfoObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of higherRanks (type Generic is ignored)} 
+    // NOTE: skip serialization of higherRanks (type Generic is ignored) ignore type: true
 
-    if (this.totalRange != null) {  
-      buffer.writeAll(["\"totalRange\":", this.totalRange, ","], "");
-    }
+    // NOTE: skip serialization of totalRange (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of segmentStarts (type number[] is ignored)} 
+    // NOTE: skip serialization of segmentStarts (type number[] is ignored) ignore type: true
 
-    if (this.gapSize != null) {  
-      buffer.writeAll(["\"gapSize\":", this.gapSize, ","], "");
-    }
+    // NOTE: skip serialization of gapSize (type number is ignored) ignore type: true
   }
 
 }

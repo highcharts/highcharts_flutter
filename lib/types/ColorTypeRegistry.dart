@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,23 +24,9 @@ import 'OptionFragment.dart';
  * ColorTypeRegistry 
  */
 class ColorTypeRegistry extends OptionFragment {
-  ColorTypeRegistry( {
-    this.ColorString = null
-  }) : super();
-  String? ColorString;
-    /*
-  String get ColorString { 
-    if (this._ColorString == null) {
-      this._ColorString = "";
-    }
-    return this._ColorString!;
-  }
+  ColorTypeRegistry( ) : super();
+  // NOTE: ColorString skipped - type string is ignored in gen 
 
-  void set ColorString (String v) {
-    this._ColorString = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -49,13 +35,11 @@ class ColorTypeRegistry extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.ColorString != null) {  
-      buffer.writeAll(["\"ColorString\":\`", this.ColorString, "\`,"], "");
-    }
+    // NOTE: skip serialization of ColorString (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of mGradientColor (type GradientColor is ignored)} 
+    // NOTE: skip serialization of mGradientColor (type GradientColor is ignored) ignore type: true
 
-    // NOTE: skip serialization of PatternFill (type PatternObject is ignored)} 
+    // NOTE: skip serialization of PatternFill (type PatternObject is ignored) ignore type: true
   }
 
 }

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,82 +24,30 @@ import 'OptionFragment.dart';
  */
 class BoxPlotPointOptions extends ColumnPointOptions {
   BoxPlotPointOptions( {
-    this.high = null,
-    this.low = null,
-    this.median = null,
-    this.q1 = null,
-    this.q3 = null
+    super.accessibility = null,
+    super.borderColor = null,
+    super.className = null,
+    super.color = null,
+    super.colorIndex = null,
+    super.connectors = null,
+    super.dataLabels = null,
+    super.dragDrop = null,
+    super.events = null,
+    super.keys = null,
+    super.marker = null,
+    super.selected = null,
+    super.visible = null
   }) : super();
-  double? high;
-    /*
-  double get high { 
-    if (this._high == null) {
-      this._high = 0;
-    }
-    return this._high!;
-  }
+  // NOTE: high skipped - type number is ignored in gen 
 
-  void set high (double v) {
-    this._high = v;
-  }
-    */
-    
-  double? low;
-    /*
-  double get low { 
-    if (this._low == null) {
-      this._low = 0;
-    }
-    return this._low!;
-  }
+  // NOTE: low skipped - type number is ignored in gen 
 
-  void set low (double v) {
-    this._low = v;
-  }
-    */
-    
-  double? median;
-    /*
-  double get median { 
-    if (this._median == null) {
-      this._median = 0;
-    }
-    return this._median!;
-  }
+  // NOTE: median skipped - type number is ignored in gen 
 
-  void set median (double v) {
-    this._median = v;
-  }
-    */
-    
-  double? q1;
-    /*
-  double get q1 { 
-    if (this._q1 == null) {
-      this._q1 = 0;
-    }
-    return this._q1!;
-  }
+  // NOTE: q1 skipped - type number is ignored in gen 
 
-  void set q1 (double v) {
-    this._q1 = v;
-  }
-    */
-    
-  double? q3;
-    /*
-  double get q3 { 
-    if (this._q3 == null) {
-      this._q3 = 0;
-    }
-    return this._q3!;
-  }
+  // NOTE: q3 skipped - type number is ignored in gen 
 
-  void set q3 (double v) {
-    this._q3 = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -108,25 +56,15 @@ class BoxPlotPointOptions extends ColumnPointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.high != null) {  
-      buffer.writeAll(["\"high\":", this.high, ","], "");
-    }
+    // NOTE: skip serialization of high (type number is ignored) ignore type: true
 
-    if (this.low != null) {  
-      buffer.writeAll(["\"low\":", this.low, ","], "");
-    }
+    // NOTE: skip serialization of low (type number is ignored) ignore type: true
 
-    if (this.median != null) {  
-      buffer.writeAll(["\"median\":", this.median, ","], "");
-    }
+    // NOTE: skip serialization of median (type number is ignored) ignore type: true
 
-    if (this.q1 != null) {  
-      buffer.writeAll(["\"q1\":", this.q1, ","], "");
-    }
+    // NOTE: skip serialization of q1 (type number is ignored) ignore type: true
 
-    if (this.q3 != null) {  
-      buffer.writeAll(["\"q3\":", this.q3, ","], "");
-    }
+    // NOTE: skip serialization of q3 (type number is ignored) ignore type: true
   }
 
 }

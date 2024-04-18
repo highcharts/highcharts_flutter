@@ -12,11 +12,12 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
 import 'LineSeries.dart';
+import 'SupertrendLinkedParentPointObject.dart';
 import 'OptionFragment.dart';
 
 /** 
@@ -33,13 +34,13 @@ class SupertrendLinkedParentObject extends LineSeries {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of data (type SupertrendLinkedParentPointObject[] is ignored)} 
+    // NOTE: skip serialization of data (type SupertrendLinkedParentPointObject[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of points (type SupertrendLinkedParentPointObject[] is ignored)} 
+    // NOTE: skip serialization of points (type SupertrendLinkedParentPointObject[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of xData (type number[] is ignored)} 
+    // NOTE: skip serialization of xData (type number[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of yData (type number[][] is ignored)} 
+    // NOTE: skip serialization of yData (type number[][] is ignored) ignore type: true
   }
 
 }

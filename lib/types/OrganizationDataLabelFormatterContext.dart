@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -34,9 +34,9 @@ class OrganizationDataLabelFormatterContext extends SankeyDataLabelFormatterCont
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of point (type OrganizationPoint is ignored)} 
+    // NOTE: skip serialization of point (type OrganizationPoint is ignored) ignore type: true
 
-    // NOTE: skip serialization of series (type OrganizationSeries is ignored)} 
+    // NOTE: skip serialization of series (type OrganizationSeries is ignored) ignore type: true
   }
 
 }

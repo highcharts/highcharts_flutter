@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,98 +22,19 @@ import 'OptionFragment.dart';
  * ElementStylesJSON 
  */
 class ElementStylesJSON extends OptionFragment {
-  ElementStylesJSON( {
-    this.borderLeft = null,
-    this.borderRight = null,
-    this.borderTop = null,
-    this.borderBottom = null,
-    this.minWidth = null,
-    this.minHeight = null
-  }) : super();
-  double? borderLeft;
-    /*
-  double get borderLeft { 
-    if (this._borderLeft == null) {
-      this._borderLeft = 0;
-    }
-    return this._borderLeft!;
-  }
+  ElementStylesJSON( ) : super();
+  // NOTE: borderLeft skipped - type number is ignored in gen 
 
-  void set borderLeft (double v) {
-    this._borderLeft = v;
-  }
-    */
-    
-  double? borderRight;
-    /*
-  double get borderRight { 
-    if (this._borderRight == null) {
-      this._borderRight = 0;
-    }
-    return this._borderRight!;
-  }
+  // NOTE: borderRight skipped - type number is ignored in gen 
 
-  void set borderRight (double v) {
-    this._borderRight = v;
-  }
-    */
-    
-  double? borderTop;
-    /*
-  double get borderTop { 
-    if (this._borderTop == null) {
-      this._borderTop = 0;
-    }
-    return this._borderTop!;
-  }
+  // NOTE: borderTop skipped - type number is ignored in gen 
 
-  void set borderTop (double v) {
-    this._borderTop = v;
-  }
-    */
-    
-  double? borderBottom;
-    /*
-  double get borderBottom { 
-    if (this._borderBottom == null) {
-      this._borderBottom = 0;
-    }
-    return this._borderBottom!;
-  }
+  // NOTE: borderBottom skipped - type number is ignored in gen 
 
-  void set borderBottom (double v) {
-    this._borderBottom = v;
-  }
-    */
-    
-  double? minWidth;
-    /*
-  double get minWidth { 
-    if (this._minWidth == null) {
-      this._minWidth = 0;
-    }
-    return this._minWidth!;
-  }
+  // NOTE: minWidth skipped - type number is ignored in gen 
 
-  void set minWidth (double v) {
-    this._minWidth = v;
-  }
-    */
-    
-  double? minHeight;
-    /*
-  double get minHeight { 
-    if (this._minHeight == null) {
-      this._minHeight = 0;
-    }
-    return this._minHeight!;
-  }
+  // NOTE: minHeight skipped - type number is ignored in gen 
 
-  void set minHeight (double v) {
-    this._minHeight = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -122,29 +43,17 @@ class ElementStylesJSON extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.borderLeft != null) {  
-      buffer.writeAll(["\"borderLeft\":", this.borderLeft, ","], "");
-    }
+    // NOTE: skip serialization of borderLeft (type number is ignored) ignore type: true
 
-    if (this.borderRight != null) {  
-      buffer.writeAll(["\"borderRight\":", this.borderRight, ","], "");
-    }
+    // NOTE: skip serialization of borderRight (type number is ignored) ignore type: true
 
-    if (this.borderTop != null) {  
-      buffer.writeAll(["\"borderTop\":", this.borderTop, ","], "");
-    }
+    // NOTE: skip serialization of borderTop (type number is ignored) ignore type: true
 
-    if (this.borderBottom != null) {  
-      buffer.writeAll(["\"borderBottom\":", this.borderBottom, ","], "");
-    }
+    // NOTE: skip serialization of borderBottom (type number is ignored) ignore type: true
 
-    if (this.minWidth != null) {  
-      buffer.writeAll(["\"minWidth\":", this.minWidth, ","], "");
-    }
+    // NOTE: skip serialization of minWidth (type number is ignored) ignore type: true
 
-    if (this.minHeight != null) {  
-      buffer.writeAll(["\"minHeight\":", this.minHeight, ","], "");
-    }
+    // NOTE: skip serialization of minHeight (type number is ignored) ignore type: true
   }
 
 }

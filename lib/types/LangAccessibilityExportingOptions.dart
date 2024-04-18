@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,53 +22,13 @@ import 'OptionFragment.dart';
  * LangAccessibilityExportingOptions 
  */
 class LangAccessibilityExportingOptions extends OptionFragment {
-  LangAccessibilityExportingOptions( {
-    this.chartMenuLabel = null,
-    this.exportRegionLabel = null,
-    this.menuButtonLabel = null
-  }) : super();
-  String? chartMenuLabel;
-    /*
-  String get chartMenuLabel { 
-    if (this._chartMenuLabel == null) {
-      this._chartMenuLabel = "";
-    }
-    return this._chartMenuLabel!;
-  }
+  LangAccessibilityExportingOptions( ) : super();
+  // NOTE: chartMenuLabel skipped - type string is ignored in gen 
 
-  void set chartMenuLabel (String v) {
-    this._chartMenuLabel = v;
-  }
-    */
-    
-  String? exportRegionLabel;
-    /*
-  String get exportRegionLabel { 
-    if (this._exportRegionLabel == null) {
-      this._exportRegionLabel = "";
-    }
-    return this._exportRegionLabel!;
-  }
+  // NOTE: exportRegionLabel skipped - type string is ignored in gen 
 
-  void set exportRegionLabel (String v) {
-    this._exportRegionLabel = v;
-  }
-    */
-    
-  String? menuButtonLabel;
-    /*
-  String get menuButtonLabel { 
-    if (this._menuButtonLabel == null) {
-      this._menuButtonLabel = "";
-    }
-    return this._menuButtonLabel!;
-  }
+  // NOTE: menuButtonLabel skipped - type string is ignored in gen 
 
-  void set menuButtonLabel (String v) {
-    this._menuButtonLabel = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -77,17 +37,11 @@ class LangAccessibilityExportingOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.chartMenuLabel != null) {  
-      buffer.writeAll(["\"chartMenuLabel\":\`", this.chartMenuLabel, "\`,"], "");
-    }
+    // NOTE: skip serialization of chartMenuLabel (type string is ignored) ignore type: true
 
-    if (this.exportRegionLabel != null) {  
-      buffer.writeAll(["\"exportRegionLabel\":\`", this.exportRegionLabel, "\`,"], "");
-    }
+    // NOTE: skip serialization of exportRegionLabel (type string is ignored) ignore type: true
 
-    if (this.menuButtonLabel != null) {  
-      buffer.writeAll(["\"menuButtonLabel\":\`", this.menuButtonLabel, "\`,"], "");
-    }
+    // NOTE: skip serialization of menuButtonLabel (type string is ignored) ignore type: true
   }
 
 }

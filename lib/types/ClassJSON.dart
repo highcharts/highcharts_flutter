@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -25,12 +25,11 @@ import 'OptionFragment.dart';
  * ClassJSON 
  */
 class ClassJSON extends OptionFragment {
-  ClassJSON( {
-    this.elements = null,
-    this.events = null
-  }) : super();
-  List<String>? elements; // String
-  List<String>? events; // String
+  ClassJSON( ) : super();
+  // NOTE: elements skipped - type string is ignored in gen 
+
+  // NOTE: events skipped - type string is ignored in gen 
+
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -39,17 +38,17 @@ class ClassJSON extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of elements (type string is ignored)} 
+    // NOTE: skip serialization of elements (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of events (type string is ignored)} 
+    // NOTE: skip serialization of events (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of options (type HTMLComponentOptionsJSON is ignored)} 
+    // NOTE: skip serialization of options (type HTMLComponentOptionsJSON is ignored) ignore type: true
 
-    // NOTE: skip serialization of options (type ComponentJSONOptions is ignored)} 
+    // NOTE: skip serialization of options (type ComponentJSONOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of options (type OptionsJSON is ignored)} 
+    // NOTE: skip serialization of options (type OptionsJSON is ignored) ignore type: true
 
-    // NOTE: skip serialization of options (type ComponentJSONOptions is ignored)} 
+    // NOTE: skip serialization of options (type ComponentJSONOptions is ignored) ignore type: true
   }
 
 }

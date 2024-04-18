@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,98 +23,19 @@ import 'OptionFragment.dart';
  * PolarPoint 
  */
 class PolarPoint extends Point {
-  PolarPoint( {
-    this.plotX = null,
-    this.plotY = null,
-    this.polarPlotX = null,
-    this.polarPlotY = null,
-    this.rectPlotX = null,
-    this.rectPlotY = null
-  }) : super();
-  double? plotX;
-    /*
-  double get plotX { 
-    if (this._plotX == null) {
-      this._plotX = 0;
-    }
-    return this._plotX!;
-  }
+  PolarPoint( ) : super();
+  // NOTE: plotX skipped - type number is ignored in gen 
 
-  void set plotX (double v) {
-    this._plotX = v;
-  }
-    */
-    
-  double? plotY;
-    /*
-  double get plotY { 
-    if (this._plotY == null) {
-      this._plotY = 0;
-    }
-    return this._plotY!;
-  }
+  // NOTE: plotY skipped - type number is ignored in gen 
 
-  void set plotY (double v) {
-    this._plotY = v;
-  }
-    */
-    
-  double? polarPlotX;
-    /*
-  double get polarPlotX { 
-    if (this._polarPlotX == null) {
-      this._polarPlotX = 0;
-    }
-    return this._polarPlotX!;
-  }
+  // NOTE: polarPlotX skipped - type number is ignored in gen 
 
-  void set polarPlotX (double v) {
-    this._polarPlotX = v;
-  }
-    */
-    
-  double? polarPlotY;
-    /*
-  double get polarPlotY { 
-    if (this._polarPlotY == null) {
-      this._polarPlotY = 0;
-    }
-    return this._polarPlotY!;
-  }
+  // NOTE: polarPlotY skipped - type number is ignored in gen 
 
-  void set polarPlotY (double v) {
-    this._polarPlotY = v;
-  }
-    */
-    
-  double? rectPlotX;
-    /*
-  double get rectPlotX { 
-    if (this._rectPlotX == null) {
-      this._rectPlotX = 0;
-    }
-    return this._rectPlotX!;
-  }
+  // NOTE: rectPlotX skipped - type number is ignored in gen 
 
-  void set rectPlotX (double v) {
-    this._rectPlotX = v;
-  }
-    */
-    
-  double? rectPlotY;
-    /*
-  double get rectPlotY { 
-    if (this._rectPlotY == null) {
-      this._rectPlotY = 0;
-    }
-    return this._rectPlotY!;
-  }
+  // NOTE: rectPlotY skipped - type number is ignored in gen 
 
-  void set rectPlotY (double v) {
-    this._rectPlotY = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -123,31 +44,19 @@ class PolarPoint extends Point {
     super.toJSONInner(buffer);
 
     
-    if (this.plotX != null) {  
-      buffer.writeAll(["\"plotX\":", this.plotX, ","], "");
-    }
+    // NOTE: skip serialization of plotX (type number is ignored) ignore type: true
 
-    if (this.plotY != null) {  
-      buffer.writeAll(["\"plotY\":", this.plotY, ","], "");
-    }
+    // NOTE: skip serialization of plotY (type number is ignored) ignore type: true
 
-    if (this.polarPlotX != null) {  
-      buffer.writeAll(["\"polarPlotX\":", this.polarPlotX, ","], "");
-    }
+    // NOTE: skip serialization of polarPlotX (type number is ignored) ignore type: true
 
-    if (this.polarPlotY != null) {  
-      buffer.writeAll(["\"polarPlotY\":", this.polarPlotY, ","], "");
-    }
+    // NOTE: skip serialization of polarPlotY (type number is ignored) ignore type: true
 
-    if (this.rectPlotX != null) {  
-      buffer.writeAll(["\"rectPlotX\":", this.rectPlotX, ","], "");
-    }
+    // NOTE: skip serialization of rectPlotX (type number is ignored) ignore type: true
 
-    if (this.rectPlotY != null) {  
-      buffer.writeAll(["\"rectPlotY\":", this.rectPlotY, ","], "");
-    }
+    // NOTE: skip serialization of rectPlotY (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of series (type PolarSeriesComposition is ignored)} 
+    // NOTE: skip serialization of series (type PolarSeriesComposition is ignored) ignore type: true
   }
 
 }

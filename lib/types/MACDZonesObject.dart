@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,23 +23,9 @@ import 'OptionFragment.dart';
  * MACDZonesObject 
  */
 class MACDZonesObject extends OptionFragment {
-  MACDZonesObject( {
-    this.startIndex = null
-  }) : super();
-  double? startIndex;
-    /*
-  double get startIndex { 
-    if (this._startIndex == null) {
-      this._startIndex = 0;
-    }
-    return this._startIndex!;
-  }
+  MACDZonesObject( ) : super();
+  // NOTE: startIndex skipped - type number is ignored in gen 
 
-  void set startIndex (double v) {
-    this._startIndex = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -48,11 +34,9 @@ class MACDZonesObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.startIndex != null) {  
-      buffer.writeAll(["\"startIndex\":", this.startIndex, ","], "");
-    }
+    // NOTE: skip serialization of startIndex (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of zones (type ZoneObject is ignored)} 
+    // NOTE: skip serialization of zones (type ZoneObject is ignored) ignore type: true
   }
 
 }

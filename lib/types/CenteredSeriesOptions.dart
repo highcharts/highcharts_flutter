@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,67 +24,83 @@ import 'OptionFragment.dart';
  */
 class CenteredSeriesOptions extends SeriesOptions {
   CenteredSeriesOptions( {
-    this.innerSize = null,
-    this.size = null,
-    this.slicedOffset = null,
-    this.thickness = null
+    super.accessibility = null,
+    super.allowPointSelect = null,
+    super.boostBlending = null,
+    super.boostThreshold = null,
+    super.borderColor = null,
+    super.borderWidth = null,
+    super.className = null,
+    super.clip = null,
+    super.color = null,
+    super.colorIndex = null,
+    super.colorKey = null,
+    super.compare = null,
+    super.compareStart = null,
+    super.connectEnds = null,
+    super.connectNulls = null,
+    super.connectors = null,
+    super.crisp = null,
+    super.cropThreshold = null,
+    super.cumulative = null,
+    super.cursor = null,
+    super.dashStyle = null,
+    super.dataGrouping = null,
+    super.dataLabels = null,
+    super.dataSorting = null,
+    super.dragDrop = null,
+    super.enableMouseTracking = null,
+    super.events = null,
+    super.findNearestPointBy = null,
+    super.gapSize = null,
+    super.gapUnit = null,
+    super.getExtremesFromAll = null,
+    super.includeInDataExport = null,
+    super.joinBy = null,
+    super.keys = null,
+    super.label = null,
+    super.lastPrice = null,
+    super.lastVisiblePrice = null,
+    super.legendSymbol = null,
+    super.linecap = null,
+    super.lineWidth = null,
+    super.linkedTo = null,
+    super.marker = null,
+    super.navigatorOptions = null,
+    super.negativeColor = null,
+    super.onPoint = null,
+    super.opacity = null,
+    super.point = null,
+    super.pointInterval = null,
+    super.pointIntervalUnit = null,
+    super.pointPlacement = null,
+    super.pointRange = null,
+    super.pointStart = null,
+    super.relativeXValue = null,
+    super.selected = null,
+    super.showCheckbox = null,
+    super.showInLegend = null,
+    super.showInNavigator = null,
+    super.softThreshold = null,
+    super.stacking = null,
+    super.step = null,
+    super.stickyTracking = null,
+    super.threshold = null,
+    super.tooltip = null,
+    super.turboThreshold = null,
+    super.visible = null,
+    super.zIndex = null,
+    super.zoneAxis = null,
+    super.zones = null
   }) : super();
-  String? innerSize;
-    /*
-  String get innerSize { 
-    if (this._innerSize == null) {
-      this._innerSize = "";
-    }
-    return this._innerSize!;
-  }
+  // NOTE: innerSize skipped - type string is ignored in gen 
 
-  void set innerSize (String v) {
-    this._innerSize = v;
-  }
-    */
-    
-  String? size;
-    /*
-  String get size { 
-    if (this._size == null) {
-      this._size = "";
-    }
-    return this._size!;
-  }
+  // NOTE: size skipped - type string is ignored in gen 
 
-  void set size (String v) {
-    this._size = v;
-  }
-    */
-    
-  double? slicedOffset;
-    /*
-  double get slicedOffset { 
-    if (this._slicedOffset == null) {
-      this._slicedOffset = 0;
-    }
-    return this._slicedOffset!;
-  }
+  // NOTE: slicedOffset skipped - type number is ignored in gen 
 
-  void set slicedOffset (double v) {
-    this._slicedOffset = v;
-  }
-    */
-    
-  double? thickness;
-    /*
-  double get thickness { 
-    if (this._thickness == null) {
-      this._thickness = 0;
-    }
-    return this._thickness!;
-  }
+  // NOTE: thickness skipped - type number is ignored in gen 
 
-  void set thickness (double v) {
-    this._thickness = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -93,23 +109,15 @@ class CenteredSeriesOptions extends SeriesOptions {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of center (type number)[] is ignored)} 
+    // NOTE: skip serialization of center (type number)[] is ignored) ignore type: true
 
-    if (this.innerSize != null) {  
-      buffer.writeAll(["\"innerSize\":\`", this.innerSize, "\`,"], "");
-    }
+    // NOTE: skip serialization of innerSize (type string is ignored) ignore type: true
 
-    if (this.size != null) {  
-      buffer.writeAll(["\"size\":\`", this.size, "\`,"], "");
-    }
+    // NOTE: skip serialization of size (type string is ignored) ignore type: true
 
-    if (this.slicedOffset != null) {  
-      buffer.writeAll(["\"slicedOffset\":", this.slicedOffset, ","], "");
-    }
+    // NOTE: skip serialization of slicedOffset (type number is ignored) ignore type: true
 
-    if (this.thickness != null) {  
-      buffer.writeAll(["\"thickness\":", this.thickness, ","], "");
-    }
+    // NOTE: skip serialization of thickness (type number is ignored) ignore type: true
   }
 
 }

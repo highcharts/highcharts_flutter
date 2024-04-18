@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -33,7 +33,7 @@ class Arc extends ArcArray {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of params (type ArcParams is ignored)} 
+    // NOTE: skip serialization of params (type ArcParams is ignored) ignore type: true
   }
 
 }

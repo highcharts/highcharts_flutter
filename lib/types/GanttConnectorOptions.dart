@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -25,8 +25,19 @@ import 'OptionFragment.dart';
  * GanttConnectorOptions 
  */
 class GanttConnectorOptions extends ConnectorsOptions {
-  GanttConnectorOptions( ) : super();
-  
+  GanttConnectorOptions( {
+    super.algorithmMargin = null,
+    super.dashStyle = null,
+    super.enabled = null,
+    super.endMarker = null,
+    super.lineColor = null,
+    super.lineWidth = null,
+    super.marker = null,
+    super.startMarker = null,
+    super.type = null
+  }) : super();
+  /** NOTE: extstartMarker is skipped here for now, as it overrides the base type. */
+
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -35,9 +46,9 @@ class GanttConnectorOptions extends ConnectorsOptions {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of animation (type GanttAnimationOptions is ignored)} 
+    // NOTE: skip serialization of animation (type GanttAnimationOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of startMarker (type GanttConnectorStartMarkerOptions is ignored)} 
+    // NOTE: skip serialization of startMarker (type GanttConnectorStartMarkerOptions is ignored) ignore type: false
   }
 
 }

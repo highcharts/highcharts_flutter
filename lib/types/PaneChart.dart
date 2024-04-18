@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -33,9 +33,9 @@ class PaneChart extends Chart {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of hoverPane (type Pane is ignored)} 
+    // NOTE: skip serialization of hoverPane (type Pane is ignored) ignore type: true
 
-    // NOTE: skip serialization of pane (type Pane[] is ignored)} 
+    // NOTE: skip serialization of pane (type Pane[] is ignored) ignore type: true
   }
 
 }

@@ -12,12 +12,13 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
 import 'LinearGradientColor.dart';
 import 'RadialGradientColor.dart';
+import 'GradientColorStop.dart';
 import 'OptionFragment.dart';
 
 /** 
@@ -34,11 +35,11 @@ class GradientColor extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of linearGradient (type LinearGradientColor is ignored)} 
+    // NOTE: skip serialization of linearGradient (type LinearGradientColor is ignored) ignore type: true
 
-    // NOTE: skip serialization of radialGradient (type RadialGradientColor is ignored)} 
+    // NOTE: skip serialization of radialGradient (type RadialGradientColor is ignored) ignore type: true
 
-    // NOTE: skip serialization of stops (type GradientColorStop[] is ignored)} 
+    // NOTE: skip serialization of stops (type GradientColorStop[] is ignored) ignore type: true
   }
 
 }

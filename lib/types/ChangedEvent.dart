@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,53 +23,13 @@ import 'OptionFragment.dart';
  * ChangedEvent 
  */
 class ChangedEvent extends OptionFragment {
-  ChangedEvent( {
-    this.from = null,
-    this.to = null,
-    this.DOMType = null
-  }) : super();
-  double? from;
-    /*
-  double get from { 
-    if (this._from == null) {
-      this._from = 0;
-    }
-    return this._from!;
-  }
+  ChangedEvent( ) : super();
+  // NOTE: from skipped - type number is ignored in gen 
 
-  void set from (double v) {
-    this._from = v;
-  }
-    */
-    
-  double? to;
-    /*
-  double get to { 
-    if (this._to == null) {
-      this._to = 0;
-    }
-    return this._to!;
-  }
+  // NOTE: to skipped - type number is ignored in gen 
 
-  void set to (double v) {
-    this._to = v;
-  }
-    */
-    
-  String? DOMType;
-    /*
-  String get DOMType { 
-    if (this._DOMType == null) {
-      this._DOMType = "";
-    }
-    return this._DOMType!;
-  }
+  // NOTE: DOMType skipped - type string is ignored in gen 
 
-  void set DOMType (String v) {
-    this._DOMType = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -78,21 +38,15 @@ class ChangedEvent extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.from != null) {  
-      buffer.writeAll(["\"from\":", this.from, ","], "");
-    }
+    // NOTE: skip serialization of from (type number is ignored) ignore type: true
 
-    if (this.to != null) {  
-      buffer.writeAll(["\"to\":", this.to, ","], "");
-    }
+    // NOTE: skip serialization of to (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of trigger (type "scrollbar" is ignored)} 
+    // NOTE: skip serialization of trigger (type "scrollbar" is ignored) ignore type: true
 
-    if (this.DOMType != null) {  
-      buffer.writeAll(["\"DOMType\":\`", this.DOMType, "\`,"], "");
-    }
+    // NOTE: skip serialization of DOMType (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of DOMEvent (type Event is ignored)} 
+    // NOTE: skip serialization of DOMEvent (type Event is ignored) ignore type: 1
   }
 
 }

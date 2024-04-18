@@ -12,11 +12,12 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
 import 'SeriesOptions.dart';
+import 'PointCompositionOptions.dart';
 import 'OptionFragment.dart';
 
 /** 
@@ -24,37 +25,79 @@ import 'OptionFragment.dart';
  */
 class SeriesCompositionOptions extends SeriesOptions {
   SeriesCompositionOptions( {
-    this.nullColor = null,
-    this.mass = null
+    super.accessibility = null,
+    super.allowPointSelect = null,
+    super.boostBlending = null,
+    super.boostThreshold = null,
+    super.borderColor = null,
+    super.borderWidth = null,
+    super.className = null,
+    super.clip = null,
+    super.color = null,
+    super.colorIndex = null,
+    super.colorKey = null,
+    super.compare = null,
+    super.compareStart = null,
+    super.connectEnds = null,
+    super.connectNulls = null,
+    super.connectors = null,
+    super.crisp = null,
+    super.cropThreshold = null,
+    super.cumulative = null,
+    super.cursor = null,
+    super.dashStyle = null,
+    super.dataGrouping = null,
+    super.dataLabels = null,
+    super.dataSorting = null,
+    super.dragDrop = null,
+    super.enableMouseTracking = null,
+    super.events = null,
+    super.findNearestPointBy = null,
+    super.gapSize = null,
+    super.gapUnit = null,
+    super.getExtremesFromAll = null,
+    super.includeInDataExport = null,
+    super.joinBy = null,
+    super.keys = null,
+    super.label = null,
+    super.lastPrice = null,
+    super.lastVisiblePrice = null,
+    super.legendSymbol = null,
+    super.linecap = null,
+    super.lineWidth = null,
+    super.linkedTo = null,
+    super.marker = null,
+    super.navigatorOptions = null,
+    super.negativeColor = null,
+    super.onPoint = null,
+    super.opacity = null,
+    super.point = null,
+    super.pointInterval = null,
+    super.pointIntervalUnit = null,
+    super.pointPlacement = null,
+    super.pointRange = null,
+    super.pointStart = null,
+    super.relativeXValue = null,
+    super.selected = null,
+    super.showCheckbox = null,
+    super.showInLegend = null,
+    super.showInNavigator = null,
+    super.softThreshold = null,
+    super.stacking = null,
+    super.step = null,
+    super.stickyTracking = null,
+    super.threshold = null,
+    super.tooltip = null,
+    super.turboThreshold = null,
+    super.visible = null,
+    super.zIndex = null,
+    super.zoneAxis = null,
+    super.zones = null
   }) : super();
-  String? nullColor;
-    /*
-  String get nullColor { 
-    if (this._nullColor == null) {
-      this._nullColor = "";
-    }
-    return this._nullColor!;
-  }
+  // NOTE: nullColor skipped - type string is ignored in gen 
 
-  void set nullColor (String v) {
-    this._nullColor = v;
-  }
-    */
-    
-  double? mass;
-    /*
-  double get mass { 
-    if (this._mass == null) {
-      this._mass = 0;
-    }
-    return this._mass!;
-  }
+  // NOTE: mass skipped - type number is ignored in gen 
 
-  void set mass (double v) {
-    this._mass = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -63,15 +106,11 @@ class SeriesCompositionOptions extends SeriesOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.nullColor != null) {  
-      buffer.writeAll(["\"nullColor\":\`", this.nullColor, "\`,"], "");
-    }
+    // NOTE: skip serialization of nullColor (type string is ignored) ignore type: true
 
-    if (this.mass != null) {  
-      buffer.writeAll(["\"mass\":", this.mass, ","], "");
-    }
+    // NOTE: skip serialization of mass (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of nodes (type PointCompositionOptions[] is ignored)} 
+    // NOTE: skip serialization of nodes (type PointCompositionOptions[] is ignored) ignore type: true
   }
 
 }

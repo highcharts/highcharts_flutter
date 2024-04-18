@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -34,9 +34,9 @@ class IntersectionObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of center (type PositionObject is ignored)} 
+    // NOTE: skip serialization of center (type PositionObject is ignored) ignore type: true
 
-    // NOTE: skip serialization of d (type SVGPath is ignored)} 
+    // NOTE: skip serialization of d (type SVGPath is ignored) ignore type: true
   }
 
 }

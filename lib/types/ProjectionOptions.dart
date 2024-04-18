@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -27,20 +27,10 @@ class ProjectionOptions extends OptionFragment {
     this.parallels = null
   }) : super();
   String? name;
-    /*
-  String get name { 
-    if (this._name == null) {
-      this._name = "";
-    }
-    return this._name!;
-  }
-
-  void set name (String v) {
-    this._name = v;
-  }
-    */
     
   List<double>? parallels; // double
+  // NOTE: rotation skipped - type ProjectionRotationOption is ignored in gen 
+
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -49,15 +39,21 @@ class ProjectionOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of projectedBounds (type "world" is ignored)} 
+    // NOTE: skip serialization of projectedBounds (type "world" is ignored) ignore type: true
 
     if (this.name != null) {  
-      buffer.writeAll(["\"name\":\`", this.name, "\`,"], "");
+      buffer.writeAll(["\"name\":\`",this.name, "\`,"], "");
     }
 
-    // NOTE: skip serialization of parallels (type number is ignored)} 
+    if (this.parallels != null) {  
+     StringBuffer arrData = StringBuffer();
 
-    // NOTE: skip serialization of rotation (type ProjectionRotationOption is ignored)} 
+      arrData.writeAll(this.parallels!, ",");
+      buffer.writeAll(["\"parallels\": [", arrData , "],"], "");   
+        
+    }
+
+    // NOTE: skip serialization of rotation (type ProjectionRotationOption is ignored) ignore type: 1
   }
 
 }

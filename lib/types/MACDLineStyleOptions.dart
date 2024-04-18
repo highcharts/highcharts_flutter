@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -27,18 +27,6 @@ class MACDLineStyleOptions extends CSSObject {
     this.lineColor = null
   }) : super();
   String? lineColor;
-    /*
-  String get lineColor { 
-    if (this._lineColor == null) {
-      this._lineColor = "";
-    }
-    return this._lineColor!;
-  }
-
-  void set lineColor (String v) {
-    this._lineColor = v;
-  }
-    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -49,7 +37,7 @@ class MACDLineStyleOptions extends CSSObject {
 
     
     if (this.lineColor != null) {  
-      buffer.writeAll(["\"lineColor\":\`", this.lineColor, "\`,"], "");
+      buffer.writeAll(["\"lineColor\":\`",this.lineColor, "\`,"], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,38 +22,11 @@ import 'OptionFragment.dart';
  * PaddingObject 
  */
 class PaddingObject extends OptionFragment {
-  PaddingObject( {
-    this.xPad = null,
-    this.yPad = null
-  }) : super();
-  double? xPad;
-    /*
-  double get xPad { 
-    if (this._xPad == null) {
-      this._xPad = 0;
-    }
-    return this._xPad!;
-  }
+  PaddingObject( ) : super();
+  // NOTE: xPad skipped - type number is ignored in gen 
 
-  void set xPad (double v) {
-    this._xPad = v;
-  }
-    */
-    
-  double? yPad;
-    /*
-  double get yPad { 
-    if (this._yPad == null) {
-      this._yPad = 0;
-    }
-    return this._yPad!;
-  }
+  // NOTE: yPad skipped - type number is ignored in gen 
 
-  void set yPad (double v) {
-    this._yPad = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -62,13 +35,9 @@ class PaddingObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.xPad != null) {  
-      buffer.writeAll(["\"xPad\":", this.xPad, ","], "");
-    }
+    // NOTE: skip serialization of xPad (type number is ignored) ignore type: true
 
-    if (this.yPad != null) {  
-      buffer.writeAll(["\"yPad\":", this.yPad, ","], "");
-    }
+    // NOTE: skip serialization of yPad (type number is ignored) ignore type: true
   }
 
 }

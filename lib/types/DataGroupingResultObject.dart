@@ -12,10 +12,11 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
+import 'DataGroupingInfoObject.dart';
 import 'OptionFragment.dart';
 
 /** 
@@ -32,11 +33,11 @@ class DataGroupingResultObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of groupedXData (type number[] is ignored)} 
+    // NOTE: skip serialization of groupedXData (type number[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of groupedYData (type number[][] is ignored)} 
+    // NOTE: skip serialization of groupedYData (type number[][] is ignored) ignore type: true
 
-    // NOTE: skip serialization of groupMap (type DataGroupingInfoObject[] is ignored)} 
+    // NOTE: skip serialization of groupMap (type DataGroupingInfoObject[] is ignored) ignore type: true
   }
 
 }

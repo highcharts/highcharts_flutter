@@ -1,0 +1,28 @@
+[
+  {
+    "path": "chart.options3d.frame",
+    "parentType": "FrameOptions",
+    "memberName": "side",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "path": "plotOptions.scatter",
+    "parentType": "ScatterSeriesOptions",
+    "memberName": "width",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "path": "plotOptions.scatter",
+    "parentType": "ScatterSeriesOptions",
+    "memberName": "height",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "yAxis.title"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "series.accessibility"
+  }
+]

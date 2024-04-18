@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,158 +22,27 @@ import 'OptionFragment.dart';
  * GeoJSONTransform 
  */
 class GeoJSONTransform extends OptionFragment {
-  GeoJSONTransform( {
-    this.crs = null,
-    this.jsonmarginX = null,
-    this.jsonmarginY = null,
-    this.jsonres = null,
-    this.rotation = null,
-    this.scale = null,
-    this.xoffset = null,
-    this.xpan = null,
-    this.yoffset = null,
-    this.ypan = null
-  }) : super();
-  String? crs;
-    /*
-  String get crs { 
-    if (this._crs == null) {
-      this._crs = "";
-    }
-    return this._crs!;
-  }
+  GeoJSONTransform( ) : super();
+  // NOTE: crs skipped - type string is ignored in gen 
 
-  void set crs (String v) {
-    this._crs = v;
-  }
-    */
-    
-  double? jsonmarginX;
-    /*
-  double get jsonmarginX { 
-    if (this._jsonmarginX == null) {
-      this._jsonmarginX = 0;
-    }
-    return this._jsonmarginX!;
-  }
+  // NOTE: jsonmarginX skipped - type number is ignored in gen 
 
-  void set jsonmarginX (double v) {
-    this._jsonmarginX = v;
-  }
-    */
-    
-  double? jsonmarginY;
-    /*
-  double get jsonmarginY { 
-    if (this._jsonmarginY == null) {
-      this._jsonmarginY = 0;
-    }
-    return this._jsonmarginY!;
-  }
+  // NOTE: jsonmarginY skipped - type number is ignored in gen 
 
-  void set jsonmarginY (double v) {
-    this._jsonmarginY = v;
-  }
-    */
-    
-  double? jsonres;
-    /*
-  double get jsonres { 
-    if (this._jsonres == null) {
-      this._jsonres = 0;
-    }
-    return this._jsonres!;
-  }
+  // NOTE: jsonres skipped - type number is ignored in gen 
 
-  void set jsonres (double v) {
-    this._jsonres = v;
-  }
-    */
-    
-  double? rotation;
-    /*
-  double get rotation { 
-    if (this._rotation == null) {
-      this._rotation = 0;
-    }
-    return this._rotation!;
-  }
+  // NOTE: rotation skipped - type number is ignored in gen 
 
-  void set rotation (double v) {
-    this._rotation = v;
-  }
-    */
-    
-  double? scale;
-    /*
-  double get scale { 
-    if (this._scale == null) {
-      this._scale = 0;
-    }
-    return this._scale!;
-  }
+  // NOTE: scale skipped - type number is ignored in gen 
 
-  void set scale (double v) {
-    this._scale = v;
-  }
-    */
-    
-  double? xoffset;
-    /*
-  double get xoffset { 
-    if (this._xoffset == null) {
-      this._xoffset = 0;
-    }
-    return this._xoffset!;
-  }
+  // NOTE: xoffset skipped - type number is ignored in gen 
 
-  void set xoffset (double v) {
-    this._xoffset = v;
-  }
-    */
-    
-  double? xpan;
-    /*
-  double get xpan { 
-    if (this._xpan == null) {
-      this._xpan = 0;
-    }
-    return this._xpan!;
-  }
+  // NOTE: xpan skipped - type number is ignored in gen 
 
-  void set xpan (double v) {
-    this._xpan = v;
-  }
-    */
-    
-  double? yoffset;
-    /*
-  double get yoffset { 
-    if (this._yoffset == null) {
-      this._yoffset = 0;
-    }
-    return this._yoffset!;
-  }
+  // NOTE: yoffset skipped - type number is ignored in gen 
 
-  void set yoffset (double v) {
-    this._yoffset = v;
-  }
-    */
-    
-  double? ypan;
-    /*
-  double get ypan { 
-    if (this._ypan == null) {
-      this._ypan = 0;
-    }
-    return this._ypan!;
-  }
+  // NOTE: ypan skipped - type number is ignored in gen 
 
-  void set ypan (double v) {
-    this._ypan = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -182,47 +51,27 @@ class GeoJSONTransform extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.crs != null) {  
-      buffer.writeAll(["\"crs\":\`", this.crs, "\`,"], "");
-    }
+    // NOTE: skip serialization of crs (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of hitZone (type AnyRecord is ignored)} 
+    // NOTE: skip serialization of hitZone (type AnyRecord is ignored) ignore type: 1
 
-    if (this.jsonmarginX != null) {  
-      buffer.writeAll(["\"jsonmarginX\":", this.jsonmarginX, ","], "");
-    }
+    // NOTE: skip serialization of jsonmarginX (type number is ignored) ignore type: true
 
-    if (this.jsonmarginY != null) {  
-      buffer.writeAll(["\"jsonmarginY\":", this.jsonmarginY, ","], "");
-    }
+    // NOTE: skip serialization of jsonmarginY (type number is ignored) ignore type: true
 
-    if (this.jsonres != null) {  
-      buffer.writeAll(["\"jsonres\":", this.jsonres, ","], "");
-    }
+    // NOTE: skip serialization of jsonres (type number is ignored) ignore type: true
 
-    if (this.rotation != null) {  
-      buffer.writeAll(["\"rotation\":", this.rotation, ","], "");
-    }
+    // NOTE: skip serialization of rotation (type number is ignored) ignore type: true
 
-    if (this.scale != null) {  
-      buffer.writeAll(["\"scale\":", this.scale, ","], "");
-    }
+    // NOTE: skip serialization of scale (type number is ignored) ignore type: true
 
-    if (this.xoffset != null) {  
-      buffer.writeAll(["\"xoffset\":", this.xoffset, ","], "");
-    }
+    // NOTE: skip serialization of xoffset (type number is ignored) ignore type: true
 
-    if (this.xpan != null) {  
-      buffer.writeAll(["\"xpan\":", this.xpan, ","], "");
-    }
+    // NOTE: skip serialization of xpan (type number is ignored) ignore type: true
 
-    if (this.yoffset != null) {  
-      buffer.writeAll(["\"yoffset\":", this.yoffset, ","], "");
-    }
+    // NOTE: skip serialization of yoffset (type number is ignored) ignore type: true
 
-    if (this.ypan != null) {  
-      buffer.writeAll(["\"ypan\":", this.ypan, ","], "");
-    }
+    // NOTE: skip serialization of ypan (type number is ignored) ignore type: true
   }
 
 }

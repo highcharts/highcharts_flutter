@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,38 +22,11 @@ import 'OptionFragment.dart';
  * XRangePointLabelObject 
  */
 class XRangePointLabelObject extends OptionFragment {
-  XRangePointLabelObject( {
-    this.x2 = null,
-    this.yCategory = null
-  }) : super();
-  double? x2;
-    /*
-  double get x2 { 
-    if (this._x2 == null) {
-      this._x2 = 0;
-    }
-    return this._x2!;
-  }
+  XRangePointLabelObject( ) : super();
+  // NOTE: x2 skipped - type number is ignored in gen 
 
-  void set x2 (double v) {
-    this._x2 = v;
-  }
-    */
-    
-  String? yCategory;
-    /*
-  String get yCategory { 
-    if (this._yCategory == null) {
-      this._yCategory = "";
-    }
-    return this._yCategory!;
-  }
+  // NOTE: yCategory skipped - type string is ignored in gen 
 
-  void set yCategory (String v) {
-    this._yCategory = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -62,13 +35,9 @@ class XRangePointLabelObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.x2 != null) {  
-      buffer.writeAll(["\"x2\":", this.x2, ","], "");
-    }
+    // NOTE: skip serialization of x2 (type number is ignored) ignore type: true
 
-    if (this.yCategory != null) {  
-      buffer.writeAll(["\"yCategory\":\`", this.yCategory, "\`,"], "");
-    }
+    // NOTE: skip serialization of yCategory (type string is ignored) ignore type: true
   }
 
 }

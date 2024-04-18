@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,68 +22,15 @@ import 'OptionFragment.dart';
  * TilesItem 
  */
 class TilesItem extends OptionFragment {
-  TilesItem( {
-    this.isActive = null,
-    this.howManyTiles = null,
-    this.actualTilesCount = null,
-    this.loaded = null
-  }) : super();
-  bool? isActive;
-    /*
-  bool get isActive { 
-    if (this._isActive == null) {
-      this._isActive = false;
-    }
-    return this._isActive!;
-  }
+  TilesItem( ) : super();
+  // NOTE: isActive skipped - type boolean is ignored in gen 
 
-  void set isActive (bool v) {
-    this._isActive = v;
-  }
-    */
-    
-  double? howManyTiles;
-    /*
-  double get howManyTiles { 
-    if (this._howManyTiles == null) {
-      this._howManyTiles = 0;
-    }
-    return this._howManyTiles!;
-  }
+  // NOTE: howManyTiles skipped - type number is ignored in gen 
 
-  void set howManyTiles (double v) {
-    this._howManyTiles = v;
-  }
-    */
-    
-  double? actualTilesCount;
-    /*
-  double get actualTilesCount { 
-    if (this._actualTilesCount == null) {
-      this._actualTilesCount = 0;
-    }
-    return this._actualTilesCount!;
-  }
+  // NOTE: actualTilesCount skipped - type number is ignored in gen 
 
-  void set actualTilesCount (double v) {
-    this._actualTilesCount = v;
-  }
-    */
-    
-  bool? loaded;
-    /*
-  bool get loaded { 
-    if (this._loaded == null) {
-      this._loaded = false;
-    }
-    return this._loaded!;
-  }
+  // NOTE: loaded skipped - type boolean is ignored in gen 
 
-  void set loaded (bool v) {
-    this._loaded = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -92,23 +39,15 @@ class TilesItem extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of tiles (type Generic is ignored)} 
+    // NOTE: skip serialization of tiles (type Generic is ignored) ignore type: true
 
-    if (this.isActive != null) {  
-      buffer.writeAll(["\"isActive\":", this.isActive, ","], "");
-    }
+    // NOTE: skip serialization of isActive (type boolean is ignored) ignore type: true
 
-    if (this.howManyTiles != null) {  
-      buffer.writeAll(["\"howManyTiles\":", this.howManyTiles, ","], "");
-    }
+    // NOTE: skip serialization of howManyTiles (type number is ignored) ignore type: true
 
-    if (this.actualTilesCount != null) {  
-      buffer.writeAll(["\"actualTilesCount\":", this.actualTilesCount, ","], "");
-    }
+    // NOTE: skip serialization of actualTilesCount (type number is ignored) ignore type: true
 
-    if (this.loaded != null) {  
-      buffer.writeAll(["\"loaded\":", this.loaded, ","], "");
-    }
+    // NOTE: skip serialization of loaded (type boolean is ignored) ignore type: true
   }
 
 }

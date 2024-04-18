@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,38 +22,11 @@ import 'OptionFragment.dart';
  * LangAccessibilitySonificationOptions 
  */
 class LangAccessibilitySonificationOptions extends OptionFragment {
-  LangAccessibilitySonificationOptions( {
-    this.playAsSoundButtonText = null,
-    this.playAsSoundClickAnnouncement = null
-  }) : super();
-  String? playAsSoundButtonText;
-    /*
-  String get playAsSoundButtonText { 
-    if (this._playAsSoundButtonText == null) {
-      this._playAsSoundButtonText = "";
-    }
-    return this._playAsSoundButtonText!;
-  }
+  LangAccessibilitySonificationOptions( ) : super();
+  // NOTE: playAsSoundButtonText skipped - type string is ignored in gen 
 
-  void set playAsSoundButtonText (String v) {
-    this._playAsSoundButtonText = v;
-  }
-    */
-    
-  String? playAsSoundClickAnnouncement;
-    /*
-  String get playAsSoundClickAnnouncement { 
-    if (this._playAsSoundClickAnnouncement == null) {
-      this._playAsSoundClickAnnouncement = "";
-    }
-    return this._playAsSoundClickAnnouncement!;
-  }
+  // NOTE: playAsSoundClickAnnouncement skipped - type string is ignored in gen 
 
-  void set playAsSoundClickAnnouncement (String v) {
-    this._playAsSoundClickAnnouncement = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -62,13 +35,9 @@ class LangAccessibilitySonificationOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.playAsSoundButtonText != null) {  
-      buffer.writeAll(["\"playAsSoundButtonText\":\`", this.playAsSoundButtonText, "\`,"], "");
-    }
+    // NOTE: skip serialization of playAsSoundButtonText (type string is ignored) ignore type: true
 
-    if (this.playAsSoundClickAnnouncement != null) {  
-      buffer.writeAll(["\"playAsSoundClickAnnouncement\":\`", this.playAsSoundClickAnnouncement, "\`,"], "");
-    }
+    // NOTE: skip serialization of playAsSoundClickAnnouncement (type string is ignored) ignore type: true
   }
 
 }

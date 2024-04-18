@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,53 +24,13 @@ import 'OptionFragment.dart';
  * LoadEvent 
  */
 class LoadEvent extends Event {
-  LoadEvent( {
-    this.type = null,
-    this.csv = null,
-    this.url = null
-  }) : super();
-  String? type;
-    /*
-  String get type { 
-    if (this._type == null) {
-      this._type = "";
-    }
-    return this._type!;
-  }
+  LoadEvent( ) : super();
+  // NOTE: type skipped - type string is ignored in gen 
 
-  void set type (String v) {
-    this._type = v;
-  }
-    */
-    
-  String? csv;
-    /*
-  String get csv { 
-    if (this._csv == null) {
-      this._csv = "";
-    }
-    return this._csv!;
-  }
+  // NOTE: csv skipped - type string is ignored in gen 
 
-  void set csv (String v) {
-    this._csv = v;
-  }
-    */
-    
-  String? url;
-    /*
-  String get url { 
-    if (this._url == null) {
-      this._url = "";
-    }
-    return this._url!;
-  }
+  // NOTE: url skipped - type string is ignored in gen 
 
-  void set url (String v) {
-    this._url = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -79,21 +39,15 @@ class LoadEvent extends Event {
     super.toJSONInner(buffer);
 
     
-    if (this.type != null) {  
-      buffer.writeAll(["\"type\":\`", this.type, "\`,"], "");
-    }
+    // NOTE: skip serialization of type (type string is ignored) ignore type: true
 
-    if (this.csv != null) {  
-      buffer.writeAll(["\"csv\":\`", this.csv, "\`,"], "");
-    }
+    // NOTE: skip serialization of csv (type string is ignored) ignore type: true
 
-    if (this.url != null) {  
-      buffer.writeAll(["\"url\":\`", this.url, "\`,"], "");
-    }
+    // NOTE: skip serialization of url (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of tableElement (type HTMLElement is ignored)} 
+    // NOTE: skip serialization of tableElement (type HTMLElement is ignored) ignore type: true
 
-    // NOTE: skip serialization of data (type Data is ignored)} 
+    // NOTE: skip serialization of data (type Data is ignored) ignore type: true
   }
 
 }

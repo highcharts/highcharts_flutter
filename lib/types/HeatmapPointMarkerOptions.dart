@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,22 +24,18 @@ import 'OptionFragment.dart';
  */
 class HeatmapPointMarkerOptions extends PointMarkerOptions {
   HeatmapPointMarkerOptions( {
-    this.r = null
+    super.enabled = null,
+    super.enabledThreshold = null,
+    super.fillColor = null,
+    super.height = null,
+    super.lineColor = null,
+    super.lineWidth = null,
+    super.radius = null,
+    super.symbol = null,
+    super.width = null
   }) : super();
-  double? r;
-    /*
-  double get r { 
-    if (this._r == null) {
-      this._r = 0;
-    }
-    return this._r!;
-  }
+  // NOTE: r skipped - type number is ignored in gen 
 
-  void set r (double v) {
-    this._r = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -48,9 +44,7 @@ class HeatmapPointMarkerOptions extends PointMarkerOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.r != null) {  
-      buffer.writeAll(["\"r\":", this.r, ","], "");
-    }
+    // NOTE: skip serialization of r (type number is ignored) ignore type: true
   }
 
 }

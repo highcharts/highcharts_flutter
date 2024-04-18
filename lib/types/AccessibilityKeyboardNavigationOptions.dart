@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -26,35 +26,19 @@ import 'OptionFragment.dart';
 class AccessibilityKeyboardNavigationOptions extends OptionFragment {
   AccessibilityKeyboardNavigationOptions( {
     this.enabled = null,
+    this.focusBorder = null,
+    this.order = null,
+    this.seriesNavigation = null,
     this.wrapAround = null
   }) : super();
   bool? enabled;
-    /*
-  bool get enabled { 
-    if (this._enabled == null) {
-      this._enabled = false;
-    }
-    return this._enabled!;
-  }
-
-  void set enabled (bool v) {
-    this._enabled = v;
-  }
-    */
+    
+  AccessibilityKeyboardNavigationFocusBorderOptions? focusBorder;
+    
+  List<String>? order; // String
+  AccessibilityKeyboardNavigationSeriesNavigationOptions? seriesNavigation;
     
   bool? wrapAround;
-    /*
-  bool get wrapAround { 
-    if (this._wrapAround == null) {
-      this._wrapAround = false;
-    }
-    return this._wrapAround!;
-  }
-
-  void set wrapAround (bool v) {
-    this._wrapAround = v;
-  }
-    */
     
 
   //////////////////////////////////////////////////////////////////////////////
@@ -65,17 +49,27 @@ class AccessibilityKeyboardNavigationOptions extends OptionFragment {
 
     
     if (this.enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
+      buffer.writeAll(["\"enabled\":",this.enabled, ","], "");
     }
 
-    // NOTE: skip serialization of focusBorder (type AccessibilityKeyboardNavigationFocusBorderOptions is ignored)} 
+    if (this.focusBorder != null) {  
+      buffer.writeAll(["\"focusBorder\":",this.focusBorder?.toJSON(), ","], "");
+    }
 
-    // NOTE: skip serialization of order (type string[] is ignored)} 
+    if (this.order != null) {  
+     StringBuffer arrData = StringBuffer();
 
-    // NOTE: skip serialization of seriesNavigation (type AccessibilityKeyboardNavigationSeriesNavigationOptions is ignored)} 
+      arrData.writeAll(this.order!, ",");
+      buffer.writeAll(["\"order\": [", arrData , "],"], "");   
+        
+    }
+
+    if (this.seriesNavigation != null) {  
+      buffer.writeAll(["\"seriesNavigation\":",this.seriesNavigation?.toJSON(), ","], "");
+    }
 
     if (this.wrapAround != null) {  
-      buffer.writeAll(["\"wrapAround\":", this.wrapAround, ","], "");
+      buffer.writeAll(["\"wrapAround\":",this.wrapAround, ","], "");
     }
   }
 

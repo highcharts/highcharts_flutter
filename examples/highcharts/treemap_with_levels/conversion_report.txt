@@ -1,0 +1,25 @@
+[
+  {
+    "path": "series",
+    "parentType": "LineSeriesOptions",
+    "memberName": "layoutAlgorithm",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "path": "series",
+    "parentType": "LineSeriesOptions",
+    "memberName": "alternateStartingDirection",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "mixed_type",
+    "path": "series.borderRadius",
+    "msg": "Path is set as a basic type, but flutter wants a BorderRadiusOptionsObject"
+  },
+  {
+    "path": "series",
+    "parentType": "LineSeriesOptions",
+    "memberName": "levels",
+    "msg": "The member is not present in the Flutter integration API"
+  }
+]

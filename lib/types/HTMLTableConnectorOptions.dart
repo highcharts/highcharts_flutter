@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,23 +23,9 @@ import 'OptionFragment.dart';
  * HTMLTableConnectorOptions 
  */
 class HTMLTableConnectorOptions extends DataConnectorOptions {
-  HTMLTableConnectorOptions( {
-    this.table = null
-  }) : super();
-  String? table;
-    /*
-  String get table { 
-    if (this._table == null) {
-      this._table = "";
-    }
-    return this._table!;
-  }
+  HTMLTableConnectorOptions( ) : super();
+  // NOTE: table skipped - type string is ignored in gen 
 
-  void set table (String v) {
-    this._table = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -48,9 +34,7 @@ class HTMLTableConnectorOptions extends DataConnectorOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.table != null) {  
-      buffer.writeAll(["\"table\":\`", this.table, "\`,"], "");
-    }
+    // NOTE: skip serialization of table (type string is ignored) ignore type: true
   }
 
 }

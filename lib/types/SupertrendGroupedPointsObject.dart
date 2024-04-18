@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -32,11 +32,11 @@ class SupertrendGroupedPointsObject extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of bottom (type SupertrendPoint[] is ignored)} 
+    // NOTE: skip serialization of bottom (type SupertrendPoint[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of intersect (type SupertrendPoint[] is ignored)} 
+    // NOTE: skip serialization of intersect (type SupertrendPoint[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of top (type SupertrendPoint[] is ignored)} 
+    // NOTE: skip serialization of top (type SupertrendPoint[] is ignored) ignore type: true
   }
 
 }

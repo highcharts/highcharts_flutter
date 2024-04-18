@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -33,9 +33,9 @@ class GeoJSONGeometryPoint extends BaseGeometry {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of type (type "Point" is ignored)} 
+    // NOTE: skip serialization of type (type "Point" is ignored) ignore type: true
 
-    // NOTE: skip serialization of coordinates (type LonLatArray is ignored)} 
+    // NOTE: skip serialization of coordinates (type LonLatArray is ignored) ignore type: 1
   }
 
 }

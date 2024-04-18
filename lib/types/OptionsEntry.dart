@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,23 +22,9 @@ import 'OptionFragment.dart';
  * OptionsEntry 
  */
 class OptionsEntry extends OptionFragment {
-  OptionsEntry( {
-    this.enabled = null
-  }) : super();
-  bool? enabled;
-    /*
-  bool get enabled { 
-    if (this._enabled == null) {
-      this._enabled = false;
-    }
-    return this._enabled!;
-  }
+  OptionsEntry( ) : super();
+  // NOTE: enabled skipped - type boolean is ignored in gen 
 
-  void set enabled (bool v) {
-    this._enabled = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -47,13 +33,11 @@ class OptionsEntry extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.enabled != null) {  
-      buffer.writeAll(["\"enabled\":", this.enabled, ","], "");
-    }
+    // NOTE: skip serialization of enabled (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of emitter (type EmitterFunction is ignored)} 
+    // NOTE: skip serialization of emitter (type EmitterFunction is ignored) ignore type: true
 
-    // NOTE: skip serialization of handler (type Function is ignored)} 
+    // NOTE: skip serialization of handler (type Function is ignored) ignore type: 1
   }
 
 }

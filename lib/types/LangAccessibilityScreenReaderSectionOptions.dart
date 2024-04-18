@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,53 +23,13 @@ import 'OptionFragment.dart';
  * LangAccessibilityScreenReaderSectionOptions 
  */
 class LangAccessibilityScreenReaderSectionOptions extends OptionFragment {
-  LangAccessibilityScreenReaderSectionOptions( {
-    this.afterRegionLabel = null,
-    this.beforeRegionLabel = null,
-    this.endOfChartMarker = null
-  }) : super();
-  String? afterRegionLabel;
-    /*
-  String get afterRegionLabel { 
-    if (this._afterRegionLabel == null) {
-      this._afterRegionLabel = "";
-    }
-    return this._afterRegionLabel!;
-  }
+  LangAccessibilityScreenReaderSectionOptions( ) : super();
+  // NOTE: afterRegionLabel skipped - type string is ignored in gen 
 
-  void set afterRegionLabel (String v) {
-    this._afterRegionLabel = v;
-  }
-    */
-    
-  String? beforeRegionLabel;
-    /*
-  String get beforeRegionLabel { 
-    if (this._beforeRegionLabel == null) {
-      this._beforeRegionLabel = "";
-    }
-    return this._beforeRegionLabel!;
-  }
+  // NOTE: beforeRegionLabel skipped - type string is ignored in gen 
 
-  void set beforeRegionLabel (String v) {
-    this._beforeRegionLabel = v;
-  }
-    */
-    
-  String? endOfChartMarker;
-    /*
-  String get endOfChartMarker { 
-    if (this._endOfChartMarker == null) {
-      this._endOfChartMarker = "";
-    }
-    return this._endOfChartMarker!;
-  }
+  // NOTE: endOfChartMarker skipped - type string is ignored in gen 
 
-  void set endOfChartMarker (String v) {
-    this._endOfChartMarker = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -78,19 +38,13 @@ class LangAccessibilityScreenReaderSectionOptions extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.afterRegionLabel != null) {  
-      buffer.writeAll(["\"afterRegionLabel\":\`", this.afterRegionLabel, "\`,"], "");
-    }
+    // NOTE: skip serialization of afterRegionLabel (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of annotations (type LangAccessibilityAnnotationOptions is ignored)} 
+    // NOTE: skip serialization of annotations (type LangAccessibilityAnnotationOptions is ignored) ignore type: true
 
-    if (this.beforeRegionLabel != null) {  
-      buffer.writeAll(["\"beforeRegionLabel\":\`", this.beforeRegionLabel, "\`,"], "");
-    }
+    // NOTE: skip serialization of beforeRegionLabel (type string is ignored) ignore type: true
 
-    if (this.endOfChartMarker != null) {  
-      buffer.writeAll(["\"endOfChartMarker\":\`", this.endOfChartMarker, "\`,"], "");
-    }
+    // NOTE: skip serialization of endOfChartMarker (type string is ignored) ignore type: true
   }
 
 }

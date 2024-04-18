@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -22,98 +22,19 @@ import 'OptionFragment.dart';
  * ColorAttribsType 
  */
 class ColorAttribsType extends OptionFragment {
-  ColorAttribsType( {
-    this.dashstyle = null,
-    this.fill = null,
-    this.stroke = null,
-    this.stroke_linecap = null,
-    this.stroke_linejoin = null,
-    this.stroke_width = null
-  }) : super();
-  String? dashstyle;
-    /*
-  String get dashstyle { 
-    if (this._dashstyle == null) {
-      this._dashstyle = "";
-    }
-    return this._dashstyle!;
-  }
+  ColorAttribsType( ) : super();
+  // NOTE: dashstyle skipped - type string is ignored in gen 
 
-  void set dashstyle (String v) {
-    this._dashstyle = v;
-  }
-    */
-    
-  String? fill;
-    /*
-  String get fill { 
-    if (this._fill == null) {
-      this._fill = "";
-    }
-    return this._fill!;
-  }
+  // NOTE: fill skipped - type string is ignored in gen 
 
-  void set fill (String v) {
-    this._fill = v;
-  }
-    */
-    
-  String? stroke;
-    /*
-  String get stroke { 
-    if (this._stroke == null) {
-      this._stroke = "";
-    }
-    return this._stroke!;
-  }
+  // NOTE: stroke skipped - type string is ignored in gen 
 
-  void set stroke (String v) {
-    this._stroke = v;
-  }
-    */
-    
-  String? stroke_linecap;
-    /*
-  String get stroke_linecap { 
-    if (this._stroke_linecap == null) {
-      this._stroke_linecap = "";
-    }
-    return this._stroke_linecap!;
-  }
+  // NOTE: stroke-linecap skipped - type string is ignored in gen 
 
-  void set stroke_linecap (String v) {
-    this._stroke_linecap = v;
-  }
-    */
-    
-  String? stroke_linejoin;
-    /*
-  String get stroke_linejoin { 
-    if (this._stroke_linejoin == null) {
-      this._stroke_linejoin = "";
-    }
-    return this._stroke_linejoin!;
-  }
+  // NOTE: stroke-linejoin skipped - type string is ignored in gen 
 
-  void set stroke_linejoin (String v) {
-    this._stroke_linejoin = v;
-  }
-    */
-    
-  double? stroke_width;
-    /*
-  double get stroke_width { 
-    if (this._stroke_width == null) {
-      this._stroke_width = 0;
-    }
-    return this._stroke_width!;
-  }
+  // NOTE: stroke-width skipped - type number is ignored in gen 
 
-  void set stroke_width (double v) {
-    this._stroke_width = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -122,29 +43,17 @@ class ColorAttribsType extends OptionFragment {
     super.toJSONInner(buffer);
 
     
-    if (this.dashstyle != null) {  
-      buffer.writeAll(["\"dashstyle\":\`", this.dashstyle, "\`,"], "");
-    }
+    // NOTE: skip serialization of dashstyle (type string is ignored) ignore type: true
 
-    if (this.fill != null) {  
-      buffer.writeAll(["\"fill\":\`", this.fill, "\`,"], "");
-    }
+    // NOTE: skip serialization of fill (type string is ignored) ignore type: true
 
-    if (this.stroke != null) {  
-      buffer.writeAll(["\"stroke\":\`", this.stroke, "\`,"], "");
-    }
+    // NOTE: skip serialization of stroke (type string is ignored) ignore type: true
 
-    if (this.stroke_linecap != null) {  
-      buffer.writeAll(["\"stroke-linecap\":\`", this.stroke_linecap, "\`,"], "");
-    }
+    // NOTE: skip serialization of stroke_linecap (type string is ignored) ignore type: true
 
-    if (this.stroke_linejoin != null) {  
-      buffer.writeAll(["\"stroke-linejoin\":\`", this.stroke_linejoin, "\`,"], "");
-    }
+    // NOTE: skip serialization of stroke_linejoin (type string is ignored) ignore type: true
 
-    if (this.stroke_width != null) {  
-      buffer.writeAll(["\"stroke-width\":", this.stroke_width, ","], "");
-    }
+    // NOTE: skip serialization of stroke_width (type number is ignored) ignore type: true
   }
 
 }

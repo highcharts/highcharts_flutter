@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,38 +23,11 @@ import 'OptionFragment.dart';
  * GeometryObject 
  */
 class GeometryObject extends PositionObject {
-  GeometryObject( {
-    this.angle = null,
-    this.r = null
-  }) : super();
-  double? angle;
-    /*
-  double get angle { 
-    if (this._angle == null) {
-      this._angle = 0;
-    }
-    return this._angle!;
-  }
+  GeometryObject( ) : super();
+  // NOTE: angle skipped - type number is ignored in gen 
 
-  void set angle (double v) {
-    this._angle = v;
-  }
-    */
-    
-  double? r;
-    /*
-  double get r { 
-    if (this._r == null) {
-      this._r = 0;
-    }
-    return this._r!;
-  }
+  // NOTE: r skipped - type number is ignored in gen 
 
-  void set r (double v) {
-    this._r = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -63,17 +36,11 @@ class GeometryObject extends PositionObject {
     super.toJSONInner(buffer);
 
     
-    if (this.angle != null) {  
-      buffer.writeAll(["\"angle\":", this.angle, ","], "");
-    }
+    // NOTE: skip serialization of angle (type number is ignored) ignore type: true
 
-    if (this.r != null) {  
-      buffer.writeAll(["\"r\":", this.r, ","], "");
-    }
+    // NOTE: skip serialization of r (type number is ignored) ignore type: true
 
-    if (this.angle != null) {  
-      buffer.writeAll(["\"angle\":", this.angle, ","], "");
-    }
+    // NOTE: skip serialization of angle (type number is ignored) ignore type: true
   }
 
 }

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -23,53 +23,13 @@ import 'OptionFragment.dart';
  * RowObject 
  */
 class RowObject extends Record {
-  RowObject( {
-    this.colCount = null,
-    this.rowLength = null,
-    this.rowRadius = null
-  }) : super();
-  double? colCount;
-    /*
-  double get colCount { 
-    if (this._colCount == null) {
-      this._colCount = 0;
-    }
-    return this._colCount!;
-  }
+  RowObject( ) : super();
+  // NOTE: colCount skipped - type number is ignored in gen 
 
-  void set colCount (double v) {
-    this._colCount = v;
-  }
-    */
-    
-  double? rowLength;
-    /*
-  double get rowLength { 
-    if (this._rowLength == null) {
-      this._rowLength = 0;
-    }
-    return this._rowLength!;
-  }
+  // NOTE: rowLength skipped - type number is ignored in gen 
 
-  void set rowLength (double v) {
-    this._rowLength = v;
-  }
-    */
-    
-  double? rowRadius;
-    /*
-  double get rowRadius { 
-    if (this._rowRadius == null) {
-      this._rowRadius = 0;
-    }
-    return this._rowRadius!;
-  }
+  // NOTE: rowRadius skipped - type number is ignored in gen 
 
-  void set rowRadius (double v) {
-    this._rowRadius = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -78,17 +38,11 @@ class RowObject extends Record {
     super.toJSONInner(buffer);
 
     
-    if (this.colCount != null) {  
-      buffer.writeAll(["\"colCount\":", this.colCount, ","], "");
-    }
+    // NOTE: skip serialization of colCount (type number is ignored) ignore type: true
 
-    if (this.rowLength != null) {  
-      buffer.writeAll(["\"rowLength\":", this.rowLength, ","], "");
-    }
+    // NOTE: skip serialization of rowLength (type number is ignored) ignore type: true
 
-    if (this.rowRadius != null) {  
-      buffer.writeAll(["\"rowRadius\":", this.rowRadius, ","], "");
-    }
+    // NOTE: skip serialization of rowRadius (type number is ignored) ignore type: true
   }
 
 }

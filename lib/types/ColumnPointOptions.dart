@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,37 +24,24 @@ import 'OptionFragment.dart';
  */
 class ColumnPointOptions extends LinePointOptions {
   ColumnPointOptions( {
-    this.dashStyle = null,
-    this.pointWidth = null
+    super.accessibility = null,
+    super.borderColor = null,
+    super.className = null,
+    super.color = null,
+    super.colorIndex = null,
+    super.connectors = null,
+    super.dataLabels = null,
+    super.dragDrop = null,
+    super.events = null,
+    super.keys = null,
+    super.marker = null,
+    super.selected = null,
+    super.visible = null
   }) : super();
-  String? dashStyle;
-    /*
-  String get dashStyle { 
-    if (this._dashStyle == null) {
-      this._dashStyle = "";
-    }
-    return this._dashStyle!;
-  }
+  // NOTE: dashStyle skipped - type string is ignored in gen 
 
-  void set dashStyle (String v) {
-    this._dashStyle = v;
-  }
-    */
-    
-  double? pointWidth;
-    /*
-  double get pointWidth { 
-    if (this._pointWidth == null) {
-      this._pointWidth = 0;
-    }
-    return this._pointWidth!;
-  }
+  // NOTE: pointWidth skipped - type number is ignored in gen 
 
-  void set pointWidth (double v) {
-    this._pointWidth = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -63,13 +50,9 @@ class ColumnPointOptions extends LinePointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.dashStyle != null) {  
-      buffer.writeAll(["\"dashStyle\":\`", this.dashStyle, "\`,"], "");
-    }
+    // NOTE: skip serialization of dashStyle (type string is ignored) ignore type: true
 
-    if (this.pointWidth != null) {  
-      buffer.writeAll(["\"pointWidth\":", this.pointWidth, ","], "");
-    }
+    // NOTE: skip serialization of pointWidth (type number is ignored) ignore type: true
   }
 
 }

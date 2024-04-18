@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-09
+ * Build stamp: 2024-04-18
  *
  */ 
 
@@ -24,22 +24,22 @@ import 'OptionFragment.dart';
  */
 class BubblePointOptions extends ScatterPointOptions {
   BubblePointOptions( {
-    this.z = null
+    super.accessibility = null,
+    super.borderColor = null,
+    super.className = null,
+    super.color = null,
+    super.colorIndex = null,
+    super.connectors = null,
+    super.dataLabels = null,
+    super.dragDrop = null,
+    super.events = null,
+    super.keys = null,
+    super.marker = null,
+    super.selected = null,
+    super.visible = null
   }) : super();
-  double? z;
-    /*
-  double get z { 
-    if (this._z == null) {
-      this._z = 0;
-    }
-    return this._z!;
-  }
+  // NOTE: z skipped - type number is ignored in gen 
 
-  void set z (double v) {
-    this._z = v;
-  }
-    */
-    
 
   //////////////////////////////////////////////////////////////////////////////
   
@@ -48,9 +48,7 @@ class BubblePointOptions extends ScatterPointOptions {
     super.toJSONInner(buffer);
 
     
-    if (this.z != null) {  
-      buffer.writeAll(["\"z\":", this.z, ","], "");
-    }
+    // NOTE: skip serialization of z (type number is ignored) ignore type: true
   }
 
 }
