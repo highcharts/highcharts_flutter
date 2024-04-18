@@ -83,7 +83,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 plotOptions: HighchartsPlotOptions(
                   column: ColumnSeriesOptions(
-                      grouping: false,
                       shadow: false,
                       borderWidth: 0,
                   ),
@@ -121,7 +120,6 @@ class _MyHomePageState extends State<MyHomePage> {
                     ],
                       pointPadding: 0.3,
                       pointPlacement: 0.2,
-                      yAxis: 1,
                   ),
                   ColumnSeries(
                       name: "Profit Optimized",
@@ -133,7 +131,6 @@ class _MyHomePageState extends State<MyHomePage> {
                     ],
                       pointPadding: 0.4,
                       pointPlacement: 0.2,
-                      yAxis: 1,
                   ),
                 ],
               )

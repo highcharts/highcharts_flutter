@@ -84,8 +84,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 series: [ 
                   ColumnSeries(
                       name: "Population",
-                      colorByPoint: true,
-                      groupPadding: 0,
                     data: [ 
                     ],
                   ),

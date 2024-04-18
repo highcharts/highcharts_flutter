@@ -88,7 +88,6 @@ class _MyHomePageState extends State<MyHomePage> {
                   pie: PieSeriesOptions(
                     dataLabels: PieDataLabelOptions[](
                         enabled: true,
-                        distance: -50,
                     ),
                       startAngle: -90,
                       endAngle: 90,
@@ -97,7 +96,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 series: [ 
                   LineSeries(
-                      type: "pie",
                       name: "Browser share",
                     data: [ 
                     ],

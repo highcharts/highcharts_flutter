@@ -1,5 +1,14 @@
 [
   {
+    "type": "missing_mapping",
+    "path": "series.type",
+    "member": {
+      "name": "type",
+      "type": "string",
+      "optional": true
+    }
+  },
+  {
     "path": "series",
     "parentType": "LineSeriesOptions",
     "memberName": "layoutAlgorithm",
@@ -15,6 +24,15 @@
     "type": "mixed_type",
     "path": "series.borderRadius",
     "msg": "Path is set as a basic type, but flutter wants a BorderRadiusOptionsObject"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "series.dataLabels.style.textOutline",
+    "member": {
+      "name": "textOutline",
+      "type": "string",
+      "optional": true
+    }
   },
   {
     "path": "series",

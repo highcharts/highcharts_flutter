@@ -24,5 +24,15 @@
   {
     "type": "missing_mapping",
     "path": "plotOptions.spline.marker"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "navigation.menuItemStyle.fontSize",
+    "member": {
+      "name": "fontSize",
+      "type": "string",
+      "optional": true,
+      "originalType": "string | number"
+    }
   }
 ]

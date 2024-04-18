@@ -105,7 +105,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 series: [ 
                   ColumnSeries(
                       name: "Browsers",
-                      colorByPoint: true,
                     data: [ 
                     ],
                   ),

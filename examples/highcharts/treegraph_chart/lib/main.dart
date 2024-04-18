@@ -67,16 +67,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 series: [ 
                   LineSeries(
-                      type: "treegraph",
                       clip: false,
                     data: [ 
                     ],
                     dataLabels: DataLabelOptions[](
                         align: "left",
                       style: CSSObject(
-                          color: "#000000",
-                          textOutline: "3px #ffffff",
-                          whiteSpace: "nowrap",
                       ),
                         x: 24,
                         crop: false,

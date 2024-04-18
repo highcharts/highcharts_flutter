@@ -164,7 +164,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 ],
                 navigation: NavigationOptions(
                   menuItemStyle: CSSObject(
-                      fontSize: "10px",
                   ),
                 ),
               )

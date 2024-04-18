@@ -72,7 +72,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 ],
                 series: [ 
                   LineSeries(
-                      type: "line",
                       name: "Regression Line",
                     data: [ 
                       [0,1.11], 
@@ -83,7 +82,6 @@ class _MyHomePageState extends State<MyHomePage> {
                       enableMouseTracking: false,
                   ),
                   LineSeries(
-                      type: "scatter",
                       name: "Observations",
                     data: [ 
                       [1], 

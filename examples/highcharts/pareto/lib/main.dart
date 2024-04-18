@@ -85,15 +85,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 ],
                 series: [ 
                   ColumnSeries(
-                      type: "pareto",
                       name: "Pareto",
-                      yAxis: 1,
                       zIndex: 10,
-                      baseSeries: 1,
                   ),
                   ColumnSeries(
                       name: "Complaints",
-                      type: "column",
                       zIndex: 2,
                     data: [ 
                       [755], 

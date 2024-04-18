@@ -68,7 +68,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 ],
                 series: [ 
                   LineSeries(
-                      type: "pie",
                       allowPointSelect: true,
                     data: [ 
                     ],

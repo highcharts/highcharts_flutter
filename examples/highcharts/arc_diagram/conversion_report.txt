@@ -8,6 +8,15 @@
     "path": "series.keys"
   },
   {
+    "type": "missing_mapping",
+    "path": "series.type",
+    "member": {
+      "name": "type",
+      "type": "string",
+      "optional": true
+    }
+  },
+  {
     "path": "series",
     "parentType": "LineSeriesOptions",
     "memberName": "linkWeight",

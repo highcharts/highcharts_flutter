@@ -113,7 +113,6 @@ class _MyHomePageState extends State<MyHomePage> {
                   BubbleSeries(
                     data: [ 
                     ],
-                      colorByPoint: true,
                   ),
                 ],
               )

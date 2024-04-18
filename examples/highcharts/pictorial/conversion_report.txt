@@ -10,6 +10,15 @@
     "msg": "The member is not present in the Flutter integration API"
   },
   {
+    "type": "missing_mapping",
+    "path": "plotOptions.series.groupPadding",
+    "member": {
+      "name": "groupPadding",
+      "type": "number",
+      "optional": true
+    }
+  },
+  {
     "path": "plotOptions.series",
     "parentType": "SeriesOptions",
     "memberName": "paths",

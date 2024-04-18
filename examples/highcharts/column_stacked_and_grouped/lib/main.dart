@@ -88,7 +88,6 @@ class _MyHomePageState extends State<MyHomePage> {
                       [133], 
                       [124], 
                     ],
-                      stack: "Europe",
                   ),
                   ColumnSeries(
                       name: "Germany",
@@ -97,7 +96,6 @@ class _MyHomePageState extends State<MyHomePage> {
                       [98], 
                       [65], 
                     ],
-                      stack: "Europe",
                   ),
                   ColumnSeries(
                       name: "United States",
@@ -106,7 +104,6 @@ class _MyHomePageState extends State<MyHomePage> {
                       [122], 
                       [95], 
                     ],
-                      stack: "North America",
                   ),
                   ColumnSeries(
                       name: "Canada",
@@ -115,7 +112,6 @@ class _MyHomePageState extends State<MyHomePage> {
                       [72], 
                       [80], 
                     ],
-                      stack: "North America",
                   ),
                 ],
               )

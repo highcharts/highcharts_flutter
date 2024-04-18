@@ -65,9 +65,6 @@ class _MyHomePageState extends State<MyHomePage> {
               HighchartsOptions(
                 chart: ChartOptions(
                   options3d: Options(
-                      enabled: true,
-                      alpha: 45,
-                      beta: 0,
                   ),
                 ),
                 title: TitleOptions(
@@ -99,7 +96,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 series: [ 
                   PieSeries(
-                      type: "pie",
                       name: "Share",
                     data: [ 
                     ],

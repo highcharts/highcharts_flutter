@@ -1,5 +1,95 @@
 [
   {
+    "type": "missing_mapping",
+    "path": "chart.options3d.enabled",
+    "member": {
+      "name": "enabled",
+      "type": "boolean",
+      "optional": true
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "chart.options3d.alpha",
+    "member": {
+      "name": "alpha",
+      "type": "number",
+      "optional": true
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "chart.options3d.beta",
+    "member": {
+      "name": "beta",
+      "type": "number",
+      "optional": true
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "chart.options3d.depth",
+    "member": {
+      "name": "depth",
+      "type": "number",
+      "optional": true
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "chart.options3d.viewDistance",
+    "member": {
+      "name": "viewDistance",
+      "type": "number",
+      "optional": true
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "chart.options3d.fitToPlot",
+    "member": {
+      "name": "fitToPlot",
+      "type": "boolean",
+      "optional": true
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "chart.options3d.frame.bottom.size",
+    "member": {
+      "name": "size",
+      "type": "number",
+      "optional": true
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "chart.options3d.frame.bottom.color",
+    "member": {
+      "name": "color",
+      "type": "string",
+      "optional": true
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "chart.options3d.frame.back.size",
+    "member": {
+      "name": "size",
+      "type": "number",
+      "optional": true
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "chart.options3d.frame.back.color",
+    "member": {
+      "name": "color",
+      "type": "string",
+      "optional": true
+    }
+  },
+  {
     "path": "chart.options3d.frame",
     "parentType": "FrameOptions",
     "memberName": "side",
@@ -19,7 +109,25 @@
   },
   {
     "type": "missing_mapping",
+    "path": "plotOptions.scatter.depth",
+    "member": {
+      "name": "depth",
+      "type": "number",
+      "optional": true
+    }
+  },
+  {
+    "type": "missing_mapping",
     "path": "yAxis.title"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "series.colorByPoint",
+    "member": {
+      "name": "colorByPoint",
+      "type": "boolean",
+      "optional": true
+    }
   },
   {
     "type": "missing_mapping",

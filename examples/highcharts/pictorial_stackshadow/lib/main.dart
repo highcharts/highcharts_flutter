@@ -110,7 +110,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 plotOptions: HighchartsPlotOptions(
                   series: SeriesOptions(
-                      groupPadding: 0,
                     dataLabels: DataLabelOptions[](
                         enabled: true,
                         align: "center",

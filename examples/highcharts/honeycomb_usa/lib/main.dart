@@ -83,7 +83,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 title: TitleOptions(
                     text: "U.S. states by population in 2016",
                   style: CSSObject(
-                      fontSize: "1em",
                   ),
                 ),
                 subtitle: SubtitleOptions(
@@ -102,27 +101,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 colorAxis: ColorAxisOptions(
                   dataClasses: [ 
                     ColorAxisDataClassesOptions[]( 
-                        from: 0,
-                        to: 1000000,
-                        color: "#F9EDB3",
-                        name: "< 1M",
                     ),
                     ColorAxisDataClassesOptions[]( 
-                        from: 1000000,
-                        to: 5000000,
-                        color: "#FFC428",
-                        name: "1M - 5M",
                     ),
                     ColorAxisDataClassesOptions[]( 
-                        from: 5000000,
-                        to: 20000000,
-                        color: "#FF7987",
-                        name: "5M - 20M",
                     ),
                     ColorAxisDataClassesOptions[]( 
-                        from: 20000000,
-                        color: "#FF2371",
-                        name: "> 20M",
                     ),
                   ],
                 ),
@@ -137,7 +121,6 @@ class _MyHomePageState extends State<MyHomePage> {
                         format: "{point.hc-a2}",
                         color: "#000000",
                       style: CSSObject(
-                          textOutline: false,
                       ),
                     ),
                   ),

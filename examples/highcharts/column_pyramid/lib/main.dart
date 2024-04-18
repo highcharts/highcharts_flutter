@@ -78,7 +78,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 series: [ 
                   ColumnPyramidSeries(
                       name: "Height",
-                      colorByPoint: true,
                     data: [ 
                     ],
                       showInLegend: false,

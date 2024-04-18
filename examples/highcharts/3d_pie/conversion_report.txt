@@ -1,1 +1,38 @@
-[]
+[
+  {
+    "type": "missing_mapping",
+    "path": "chart.options3d.enabled",
+    "member": {
+      "name": "enabled",
+      "type": "boolean",
+      "optional": true
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "chart.options3d.alpha",
+    "member": {
+      "name": "alpha",
+      "type": "number",
+      "optional": true
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "chart.options3d.beta",
+    "member": {
+      "name": "beta",
+      "type": "number",
+      "optional": true
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "series.type",
+    "member": {
+      "name": "type",
+      "type": "string",
+      "optional": true
+    }
+  }
+]

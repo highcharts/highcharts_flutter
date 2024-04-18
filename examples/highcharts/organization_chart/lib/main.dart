@@ -75,11 +75,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 series: [ 
                   LineSeries(
-                      type: "organization",
                       name: "Highsoft",
                     data: [ 
                     ],
-                      colorByPoint: false,
                       color: "#007ad0",
                     dataLabels: DataLabelOptions[](
                         color: "white",

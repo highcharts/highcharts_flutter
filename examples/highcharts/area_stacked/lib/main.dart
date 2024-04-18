@@ -82,7 +82,6 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   area: AreaSeriesOptions(
                       stacking: "normal",
-                      lineColor: "#666666",
                       lineWidth: 1,
                   ),
                 ),

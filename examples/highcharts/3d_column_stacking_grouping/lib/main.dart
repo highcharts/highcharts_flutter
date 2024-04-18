@@ -62,11 +62,6 @@ class _MyHomePageState extends State<MyHomePage> {
               HighchartsOptions(
                 chart: ChartOptions(
                   options3d: Options(
-                      enabled: true,
-                      alpha: 15,
-                      beta: 15,
-                      viewDistance: 25,
-                      depth: 40,
                   ),
                 ),
                 title: TitleOptions(
@@ -93,7 +88,6 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   column: ColumnSeriesOptions(
                       stacking: "normal",
-                      depth: 40,
                   ),
                 ),
                 series: [ 
@@ -106,7 +100,6 @@ class _MyHomePageState extends State<MyHomePage> {
                       [582], 
                       [571], 
                     ],
-                      stack: "Asia",
                   ),
                   ColumnSeries(
                       name: "Germany",
@@ -117,7 +110,6 @@ class _MyHomePageState extends State<MyHomePage> {
                       [612], 
                       [572], 
                     ],
-                      stack: "Europe",
                   ),
                   ColumnSeries(
                       name: "Saudi Arabia",
@@ -128,7 +120,6 @@ class _MyHomePageState extends State<MyHomePage> {
                       [367], 
                       [363], 
                     ],
-                      stack: "Asia",
                   ),
                   ColumnSeries(
                       name: "France",
@@ -139,7 +130,6 @@ class _MyHomePageState extends State<MyHomePage> {
                       [571], 
                       [533], 
                     ],
-                      stack: "Europe",
                   ),
                 ],
               )

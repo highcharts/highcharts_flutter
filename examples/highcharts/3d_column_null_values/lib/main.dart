@@ -62,10 +62,6 @@ class _MyHomePageState extends State<MyHomePage> {
               HighchartsOptions(
                 chart: ChartOptions(
                   options3d: Options(
-                      enabled: true,
-                      alpha: 10,
-                      beta: 25,
-                      depth: 70,
                   ),
                 ),
                 title: TitleOptions(
@@ -78,7 +74,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 plotOptions: HighchartsPlotOptions(
                   column: ColumnSeriesOptions(
-                      depth: 25,
                   ),
                 ),
                 xAxis: [ 

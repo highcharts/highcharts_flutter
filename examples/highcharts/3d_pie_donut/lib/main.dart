@@ -61,8 +61,6 @@ class _MyHomePageState extends State<MyHomePage> {
               HighchartsOptions(
                 chart: ChartOptions(
                   options3d: Options(
-                      enabled: true,
-                      alpha: 45,
                   ),
                 ),
                 title: TitleOptions(

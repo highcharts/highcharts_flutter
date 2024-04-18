@@ -1,10 +1,73 @@
 [
   {
     "type": "missing_mapping",
+    "path": "chart.options3d.enabled",
+    "member": {
+      "name": "enabled",
+      "type": "boolean",
+      "optional": true
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "chart.options3d.alpha",
+    "member": {
+      "name": "alpha",
+      "type": "number",
+      "optional": true
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "chart.options3d.beta",
+    "member": {
+      "name": "beta",
+      "type": "number",
+      "optional": true
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "chart.options3d.depth",
+    "member": {
+      "name": "depth",
+      "type": "number",
+      "optional": true
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "chart.options3d.viewDistance",
+    "member": {
+      "name": "viewDistance",
+      "type": "number",
+      "optional": true
+    }
+  },
+  {
+    "type": "missing_mapping",
     "path": "xAxis.title"
   },
   {
     "type": "missing_mapping",
     "path": "yAxis.title"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "plotOptions.series.depth",
+    "member": {
+      "name": "depth",
+      "type": "number",
+      "optional": true
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "plotOptions.series.colorByPoint",
+    "member": {
+      "name": "colorByPoint",
+      "type": "boolean",
+      "optional": true
+    }
   }
 ]

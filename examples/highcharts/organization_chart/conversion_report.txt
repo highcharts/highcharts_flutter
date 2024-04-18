@@ -1,6 +1,15 @@
 [
   {
     "type": "missing_mapping",
+    "path": "series.type",
+    "member": {
+      "name": "type",
+      "type": "string",
+      "optional": true
+    }
+  },
+  {
+    "type": "missing_mapping",
     "path": "series.keys"
   },
   {
@@ -14,6 +23,15 @@
     "parentType": "LineSeriesOptions",
     "memberName": "nodes",
     "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "series.colorByPoint",
+    "member": {
+      "name": "colorByPoint",
+      "type": "boolean",
+      "optional": true
+    }
   },
   {
     "path": "series",

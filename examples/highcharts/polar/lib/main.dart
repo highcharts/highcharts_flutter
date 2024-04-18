@@ -88,12 +88,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   column: ColumnSeriesOptions(
                       pointPadding: 0,
-                      groupPadding: 0,
                   ),
                 ),
                 series: [ 
                   LineSeries(
-                      type: "column",
                       name: "Column",
                     data: [ 
                       [8], 
@@ -108,7 +106,6 @@ class _MyHomePageState extends State<MyHomePage> {
                       pointPlacement: "between",
                   ),
                   LineSeries(
-                      type: "line",
                       name: "Line",
                     data: [ 
                       [1], 
@@ -122,7 +119,6 @@ class _MyHomePageState extends State<MyHomePage> {
                     ],
                   ),
                   LineSeries(
-                      type: "area",
                       name: "Area",
                     data: [ 
                       [1], 

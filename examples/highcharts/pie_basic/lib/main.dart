@@ -96,7 +96,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 series: [ 
                   PieSeries(
                       name: "Brands",
-                      colorByPoint: true,
                     data: [ 
                     ],
                   ),

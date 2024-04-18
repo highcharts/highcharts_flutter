@@ -15,5 +15,14 @@
   {
     "type": "missing_mapping",
     "path": "yAxis.title"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "series.colorByPoint",
+    "member": {
+      "name": "colorByPoint",
+      "type": "boolean",
+      "optional": true
+    }
   }
 ]

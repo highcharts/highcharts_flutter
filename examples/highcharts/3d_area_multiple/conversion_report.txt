@@ -1,6 +1,42 @@
 [
   {
     "type": "missing_mapping",
+    "path": "chart.options3d.enabled",
+    "member": {
+      "name": "enabled",
+      "type": "boolean",
+      "optional": true
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "chart.options3d.alpha",
+    "member": {
+      "name": "alpha",
+      "type": "number",
+      "optional": true
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "chart.options3d.beta",
+    "member": {
+      "name": "beta",
+      "type": "number",
+      "optional": true
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "chart.options3d.depth",
+    "member": {
+      "name": "depth",
+      "type": "number",
+      "optional": true
+    }
+  },
+  {
+    "type": "missing_mapping",
     "path": "lang"
   },
   {
@@ -13,6 +49,15 @@
   },
   {
     "type": "missing_mapping",
+    "path": "plotOptions.area.depth",
+    "member": {
+      "name": "depth",
+      "type": "number",
+      "optional": true
+    }
+  },
+  {
+    "type": "missing_mapping",
     "path": "plotOptions.area.marker"
   },
   {
@@ -20,5 +65,52 @@
     "parentType": "Generic",
     "memberName": "inactive",
     "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "series.lineColor",
+    "member": {
+      "name": "lineColor",
+      "type": "string",
+      "optional": true
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "series.xAxis",
+    "member": {
+      "name": "xAxis",
+      "type": "string",
+      "optional": true,
+      "originalType": "string | number"
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "series.lineColor",
+    "member": {
+      "name": "lineColor",
+      "type": "string",
+      "optional": true
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "series.xAxis",
+    "member": {
+      "name": "xAxis",
+      "type": "string",
+      "optional": true,
+      "originalType": "string | number"
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "series.lineColor",
+    "member": {
+      "name": "lineColor",
+      "type": "string",
+      "optional": true
+    }
   }
 ]

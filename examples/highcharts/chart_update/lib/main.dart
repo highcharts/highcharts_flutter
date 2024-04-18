@@ -71,10 +71,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 ],
                 series: [ 
                   LineSeries(
-                      type: "column",
                       name: "Unemployed",
                      borderRadius: BorderRadiusOptionsObject(),
-                      colorByPoint: true,
                     data: [ 
                       [5412], 
                       [4977], 

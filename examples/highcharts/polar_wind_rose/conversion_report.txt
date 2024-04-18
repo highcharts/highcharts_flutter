@@ -10,5 +10,14 @@
   {
     "type": "missing_mapping",
     "path": "yAxis.labels"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "plotOptions.series.groupPadding",
+    "member": {
+      "name": "groupPadding",
+      "type": "number",
+      "optional": true
+    }
   }
 ]

@@ -5,6 +5,15 @@
   },
   {
     "type": "missing_mapping",
+    "path": "plotOptions.area.lineColor",
+    "member": {
+      "name": "lineColor",
+      "type": "string",
+      "optional": true
+    }
+  },
+  {
+    "type": "missing_mapping",
     "path": "plotOptions.area.marker"
   }
 ]

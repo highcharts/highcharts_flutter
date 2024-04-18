@@ -5,6 +5,15 @@
   },
   {
     "type": "missing_mapping",
+    "path": "series.colorByPoint",
+    "member": {
+      "name": "colorByPoint",
+      "type": "boolean",
+      "optional": true
+    }
+  },
+  {
+    "type": "missing_mapping",
     "path": "drilldown"
   }
 ]

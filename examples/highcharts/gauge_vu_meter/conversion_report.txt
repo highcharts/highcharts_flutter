@@ -42,5 +42,25 @@
   {
     "type": "missing_mapping",
     "path": "plotOptions.gauge.dataLabels"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "series.yAxis",
+    "member": {
+      "name": "yAxis",
+      "type": "string",
+      "optional": true,
+      "originalType": "string | number"
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "series.yAxis",
+    "member": {
+      "name": "yAxis",
+      "type": "string",
+      "optional": true,
+      "originalType": "string | number"
+    }
   }
 ]

@@ -1,1 +1,156 @@
-[]
+[
+  {
+    "type": "missing_mapping",
+    "path": "title.style.fontSize",
+    "member": {
+      "name": "fontSize",
+      "type": "string",
+      "optional": true,
+      "originalType": "string | number"
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "colorAxis.dataClasses.from",
+    "member": {
+      "name": "from",
+      "type": "number",
+      "optional": true
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "colorAxis.dataClasses.to",
+    "member": {
+      "name": "to",
+      "type": "number",
+      "optional": true
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "colorAxis.dataClasses.color",
+    "member": {
+      "name": "color",
+      "type": "string",
+      "optional": true
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "colorAxis.dataClasses.name",
+    "member": {
+      "name": "name",
+      "type": "string",
+      "optional": true
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "colorAxis.dataClasses.from",
+    "member": {
+      "name": "from",
+      "type": "number",
+      "optional": true
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "colorAxis.dataClasses.to",
+    "member": {
+      "name": "to",
+      "type": "number",
+      "optional": true
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "colorAxis.dataClasses.color",
+    "member": {
+      "name": "color",
+      "type": "string",
+      "optional": true
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "colorAxis.dataClasses.name",
+    "member": {
+      "name": "name",
+      "type": "string",
+      "optional": true
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "colorAxis.dataClasses.from",
+    "member": {
+      "name": "from",
+      "type": "number",
+      "optional": true
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "colorAxis.dataClasses.to",
+    "member": {
+      "name": "to",
+      "type": "number",
+      "optional": true
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "colorAxis.dataClasses.color",
+    "member": {
+      "name": "color",
+      "type": "string",
+      "optional": true
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "colorAxis.dataClasses.name",
+    "member": {
+      "name": "name",
+      "type": "string",
+      "optional": true
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "colorAxis.dataClasses.from",
+    "member": {
+      "name": "from",
+      "type": "number",
+      "optional": true
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "colorAxis.dataClasses.color",
+    "member": {
+      "name": "color",
+      "type": "string",
+      "optional": true
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "colorAxis.dataClasses.name",
+    "member": {
+      "name": "name",
+      "type": "string",
+      "optional": true
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "plotOptions.series.dataLabels.style.textOutline",
+    "member": {
+      "name": "textOutline",
+      "type": "string",
+      "optional": true
+    }
+  }
+]

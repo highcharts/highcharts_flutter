@@ -60,14 +60,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 chart: ChartOptions(
                     backgroundColor: "white",
                   style: CSSObject(
-                      fontSize: "12px",
                   ),
                 ),
                 title: TitleOptions(
                     text: "Highcharts export server overview",
                   style: CSSObject(
-                      color: "black",
-                      fontSize: "16px",
                   ),
                     align: "left",
                 ),

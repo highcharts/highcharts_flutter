@@ -64,11 +64,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 chart: ChartOptions(
                     renderTo: "container",
                   options3d: Options(
-                      enabled: true,
-                      alpha: 15,
-                      beta: 15,
-                      depth: 50,
-                      viewDistance: 25,
                   ),
                 ),
                 xAxis: [ 
@@ -96,7 +91,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 plotOptions: HighchartsPlotOptions(
                   column: ColumnSeriesOptions(
-                      depth: 25,
                   ),
                 ),
                 series: [ 
@@ -113,7 +107,6 @@ class _MyHomePageState extends State<MyHomePage> {
                       [416], 
                       [395], 
                     ],
-                      colorByPoint: true,
                   ),
                 ],
               )

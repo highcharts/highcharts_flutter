@@ -13,10 +13,39 @@
   },
   {
     "type": "missing_mapping",
-    "path": "series.tooltip"
+    "path": "plotOptions.column.grouping",
+    "member": {
+      "name": "grouping",
+      "type": "boolean",
+      "optional": true
+    }
   },
   {
     "type": "missing_mapping",
     "path": "series.tooltip"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "series.yAxis",
+    "member": {
+      "name": "yAxis",
+      "type": "string",
+      "optional": true,
+      "originalType": "string | number"
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "series.tooltip"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "series.yAxis",
+    "member": {
+      "name": "yAxis",
+      "type": "string",
+      "optional": true,
+      "originalType": "string | number"
+    }
   }
 ]

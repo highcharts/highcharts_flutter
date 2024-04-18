@@ -1,6 +1,15 @@
 [
   {
     "type": "missing_mapping",
+    "path": "series.type",
+    "member": {
+      "name": "type",
+      "type": "string",
+      "optional": true
+    }
+  },
+  {
+    "type": "missing_mapping",
     "path": "series.marker"
   },
   {
@@ -8,6 +17,15 @@
     "parentType": "Generic",
     "memberName": "hover",
     "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "series.type",
+    "member": {
+      "name": "type",
+      "type": "string",
+      "optional": true
+    }
   },
   {
     "type": "missing_mapping",

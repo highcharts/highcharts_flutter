@@ -83,9 +83,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   NetworkgraphSeries(
                     dataLabels: NetworkgraphDataLabelsOptionsObject(
                         enabled: true,
-                        linkFormat: "",
                     ),
-                      id: "lang-tree",
                     data: [ 
                     ],
                   ),

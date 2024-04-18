@@ -1,1 +1,11 @@
-[]
+[
+  {
+    "type": "missing_mapping",
+    "path": "plotOptions.pie.dataLabels.connectorColor",
+    "member": {
+      "name": "connectorColor",
+      "type": "string",
+      "optional": true
+    }
+  }
+]

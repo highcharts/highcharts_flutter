@@ -105,7 +105,6 @@ class _MyHomePageState extends State<MyHomePage> {
                   series: SeriesOptions(
                       stacking: "normal",
                       shadow: false,
-                      groupPadding: 0,
                       pointPlacement: "on",
                   ),
                 ),

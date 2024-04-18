@@ -9,6 +9,24 @@
   },
   {
     "type": "missing_mapping",
+    "path": "series.dataLabels.linkFormat",
+    "member": {
+      "name": "linkFormat",
+      "type": "string",
+      "optional": true
+    }
+  },
+  {
+    "type": "missing_mapping",
     "path": "series.dataLabels.style"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "series.id",
+    "member": {
+      "name": "id",
+      "type": "string",
+      "optional": true
+    }
   }
 ]

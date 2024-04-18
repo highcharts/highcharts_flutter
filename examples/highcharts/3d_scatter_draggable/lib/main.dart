@@ -71,20 +71,10 @@ class _MyHomePageState extends State<MyHomePage> {
                     margin: 100,
                     animation: false,
                   options3d: Options(
-                      enabled: true,
-                      alpha: 10,
-                      beta: 30,
-                      depth: 250,
-                      viewDistance: 5,
-                      fitToPlot: false,
                     frame: FrameOptions(
                       bottom: FrameSideOptions(
-                          size: 1,
-                          color: "rgba(0,0,0,0.02)",
                       ),
                       back: FrameSideOptions(
-                          size: 1,
-                          color: "rgba(0,0,0,0.04)",
                       ),
                     ),
                   ),
@@ -97,7 +87,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 plotOptions: HighchartsPlotOptions(
                   scatter: ScatterSeriesOptions(
-                      depth: 10,
                   ),
                 ),
                 yAxis: [ 
@@ -124,7 +113,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 series: [ 
                   Scatter3DSeries(
                       name: "Data",
-                      colorByPoint: true,
                     data: [ 
                       [1,6,5], 
                       [8,7,9], 

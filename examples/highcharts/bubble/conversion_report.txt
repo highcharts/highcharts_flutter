@@ -30,5 +30,14 @@
   {
     "type": "missing_mapping",
     "path": "yAxis.accessibility"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "series.colorByPoint",
+    "member": {
+      "name": "colorByPoint",
+      "type": "boolean",
+      "optional": true
+    }
   }
 ]

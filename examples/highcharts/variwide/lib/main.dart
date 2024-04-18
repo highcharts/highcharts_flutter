@@ -83,7 +83,6 @@ class _MyHomePageState extends State<MyHomePage> {
                     data: [ 
                     ],
                      borderRadius: BorderRadiusOptionsObject(),
-                      colorByPoint: true,
                   ),
                 ],
                 yAxis: [ 

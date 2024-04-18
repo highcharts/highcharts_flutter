@@ -89,22 +89,16 @@ class _MyHomePageState extends State<MyHomePage> {
                   TimelineSeries(
                     data: [ 
                       TimelinePointOptions[]( 
-                          name: "2000: Orbiting of an asteroid",
                       ),
                       TimelinePointOptions[]( 
-                          name: "2005: Landing on Titan.",
                       ),
                       TimelinePointOptions[]( 
-                          name: "2011: Orbit of Mercury",
                       ),
                       TimelinePointOptions[]( 
-                          name: "2015: Food eaten in space",
                       ),
                       TimelinePointOptions[]( 
-                          name: "2019: Black hole photograph",
                       ),
                       TimelinePointOptions[]( 
-                          name: "2020: Private spaceflight",
                       ),
                     ],
                   ),

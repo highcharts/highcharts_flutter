@@ -4,6 +4,34 @@
     "path": "series.keys"
   },
   {
+    "type": "missing_mapping",
+    "path": "series.type",
+    "member": {
+      "name": "type",
+      "type": "string",
+      "optional": true
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "series.dataLabels.style.textOutline",
+    "member": {
+      "name": "textOutline",
+      "type": "string",
+      "optional": true
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "series.dataLabels.distance",
+    "member": {
+      "name": "distance",
+      "type": "string",
+      "optional": true,
+      "originalType": "string | number"
+    }
+  },
+  {
     "path": "series",
     "parentType": "LineSeriesOptions",
     "memberName": "size",

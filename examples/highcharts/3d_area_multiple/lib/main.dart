@@ -65,10 +65,6 @@ class _MyHomePageState extends State<MyHomePage> {
               HighchartsOptions(
                 chart: ChartOptions(
                   options3d: Options(
-                      enabled: true,
-                      alpha: 15,
-                      beta: 30,
-                      depth: 200,
                   ),
                 ),
                 title: TitleOptions(
@@ -100,7 +96,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 ],
                 plotOptions: HighchartsPlotOptions(
                   area: AreaSeriesOptions(
-                      depth: 100,
                     states: Generic(
                     ),
                   ),
@@ -111,15 +106,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 series: [ 
                   AreaSeries(
                       name: "Tatra Mountains visible from Rusinowa polana",
-                      lineColor: "rgb(180,90,50)",
                       color: "rgb(200,110,50)",
                       fillColor: "rgb(200,110,50)",
                     data: [ 
                     ],
                   ),
                   AreaSeries(
-                      xAxis: 1,
-                      lineColor: "rgb(120,160,180)",
                       color: "rgb(140,180,200)",
                       fillColor: "rgb(140,180,200)",
                       name: "Dachstein panorama seen from Krippenstein",
@@ -127,8 +119,6 @@ class _MyHomePageState extends State<MyHomePage> {
                     ],
                   ),
                   AreaSeries(
-                      xAxis: 2,
-                      lineColor: "rgb(200, 190, 140)",
                       color: "rgb(200, 190, 140)",
                       fillColor: "rgb(230, 220, 180)",
                       name: "Panorama from Col Des Mines",

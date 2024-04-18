@@ -72,17 +72,14 @@ class _MyHomePageState extends State<MyHomePage> {
                   LineSeries(
                     data: [ 
                     ],
-                      type: "dependencywheel",
                       name: "Dependency wheel series",
                     dataLabels: DataLabelOptions[](
                         color: "#333",
                       style: CSSObject(
-                          textOutline: "none",
                       ),
                       textPath: DataLabelTextPathOptions(
                           enabled: true,
                       ),
-                        distance: 10,
                     ),
                   ),
                 ],

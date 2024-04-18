@@ -69,7 +69,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 series: [ 
                   LineSeries(
-                      type: "arcdiagram",
                       name: "Train connections",
                     dataLabels: DataLabelOptions[](
                         rotation: 90,

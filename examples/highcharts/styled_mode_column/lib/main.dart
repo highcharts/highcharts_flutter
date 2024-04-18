@@ -106,7 +106,6 @@ class _MyHomePageState extends State<MyHomePage> {
                       [24.9], 
                       [21.2], 
                     ],
-                      yAxis: 1,
                   ),
                 ],
               )

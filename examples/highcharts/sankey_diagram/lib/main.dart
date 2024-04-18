@@ -69,7 +69,6 @@ class _MyHomePageState extends State<MyHomePage> {
                   LineSeries(
                     data: [ 
                     ],
-                      type: "sankey",
                       name: "Sankey demo series",
                   ),
                 ],

@@ -1,6 +1,16 @@
 [
   {
     "type": "missing_mapping",
+    "path": "plotOptions.pie.dataLabels.distance",
+    "member": {
+      "name": "distance",
+      "type": "string",
+      "optional": true,
+      "originalType": "string | number"
+    }
+  },
+  {
+    "type": "missing_mapping",
     "path": "plotOptions.pie.dataLabels.style"
   },
   {
@@ -8,6 +18,15 @@
     "parentType": "PieSeriesOptions",
     "memberName": "center",
     "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "series.type",
+    "member": {
+      "name": "type",
+      "type": "string",
+      "optional": true
+    }
   },
   {
     "path": "series",

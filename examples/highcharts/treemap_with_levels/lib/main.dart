@@ -62,13 +62,11 @@ class _MyHomePageState extends State<MyHomePage> {
               HighchartsOptions(
                 series: [ 
                   LineSeries(
-                      type: "treemap",
                       borderColor: "#fff",
                      borderRadius: BorderRadiusOptionsObject(),
                       borderWidth: 2,
                     dataLabels: DataLabelOptions[](
                       style: CSSObject(
-                          textOutline: "none",
                       ),
                     ),
                     data: [ 

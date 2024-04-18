@@ -6,5 +6,45 @@
   {
     "type": "missing_mapping",
     "path": "yAxis.title"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "series.stack",
+    "member": {
+      "name": "stack",
+      "type": "string",
+      "optional": true,
+      "originalType": "string | number"
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "series.stack",
+    "member": {
+      "name": "stack",
+      "type": "string",
+      "optional": true,
+      "originalType": "string | number"
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "series.stack",
+    "member": {
+      "name": "stack",
+      "type": "string",
+      "optional": true,
+      "originalType": "string | number"
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "series.stack",
+    "member": {
+      "name": "stack",
+      "type": "string",
+      "optional": true,
+      "originalType": "string | number"
+    }
   }
 ]

@@ -107,14 +107,12 @@ class _MyHomePageState extends State<MyHomePage> {
                     data: [ 
                       [-20], 
                     ],
-                      yAxis: 0,
                   ),
                   GaugeSeries(
                       name: "Channel B",
                     data: [ 
                       [-20], 
                     ],
-                      yAxis: 1,
                   ),
                 ],
                 xAxis: [ 

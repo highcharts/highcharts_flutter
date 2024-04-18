@@ -97,7 +97,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 series: [ 
                   PieSeries(
                       name: "Browsers",
-                      colorByPoint: true,
                     data: [ 
                     ],
                   ),

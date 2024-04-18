@@ -65,7 +65,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 series: [ 
                   LineSeries(
-                      type: "venn",
                     data: [ 
                     ],
                   ),

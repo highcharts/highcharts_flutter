@@ -8,8 +8,26 @@
     "path": "xAxis.categories"
   },
   {
+    "type": "missing_mapping",
+    "path": "series.type",
+    "member": {
+      "name": "type",
+      "type": "string",
+      "optional": true
+    }
+  },
+  {
     "type": "mixed_type",
     "path": "series.borderRadius",
     "msg": "Path is set as a basic type, but flutter wants a BorderRadiusOptionsObject"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "series.colorByPoint",
+    "member": {
+      "name": "colorByPoint",
+      "type": "boolean",
+      "optional": true
+    }
   }
 ]

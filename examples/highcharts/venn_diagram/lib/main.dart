@@ -64,7 +64,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 series: [ 
                   LineSeries(
-                      type: "venn",
                       name: "The Unattainable Triangle",
                     data: [ 
                     ],

@@ -94,7 +94,6 @@ class _MyHomePageState extends State<MyHomePage> {
                       stacking: "normal",
                       borderWidth: 0,
                       pointPadding: 0,
-                      groupPadding: 0.15,
                   ),
                 ),
                 series: [ 
