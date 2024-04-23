@@ -1,7 +1,10 @@
 [
   {
-    "type": "missing_mapping",
-    "path": "xAxis.categories"
+    "type": "",
+    "path": "xAxis",
+    "parentType": "XAxisOptions",
+    "memberName": "0",
+    "msg": "The member is not present in the Flutter integration API"
   },
   {
     "type": "missing_mapping",
@@ -15,5 +18,12 @@
   {
     "type": "missing_mapping",
     "path": "series.keys"
+  },
+  {
+    "type": "",
+    "path": "yAxis",
+    "parentType": "YAxisOptions",
+    "memberName": "0",
+    "msg": "The member is not present in the Flutter integration API"
   }
 ]

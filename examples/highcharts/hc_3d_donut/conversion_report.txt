@@ -1,0 +1,34 @@
+[
+  {
+    "type": "missing_mapping",
+    "path": "chart.options3d.enabled",
+    "member": {
+      "name": "enabled",
+      "type": "boolean",
+      "optional": true
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "chart.options3d.alpha",
+    "member": {
+      "name": "alpha",
+      "type": "number",
+      "optional": true
+    }
+  },
+  {
+    "type": "",
+    "path": "xAxis",
+    "parentType": "XAxisOptions",
+    "memberName": "0",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "",
+    "path": "yAxis",
+    "parentType": "YAxisOptions",
+    "memberName": "0",
+    "msg": "The member is not present in the Flutter integration API"
+  }
+]

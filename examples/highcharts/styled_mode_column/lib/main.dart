@@ -75,11 +75,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 ],
                 yAxis: [ 
                   YAxisOptions( 
-                      className: "highcharts-color-0",
-                  ),
-                  YAxisOptions( 
-                      className: "highcharts-color-1",
-                      opposite: true,
                   ),
                 ],
                 plotOptions: HighchartsPlotOptions(

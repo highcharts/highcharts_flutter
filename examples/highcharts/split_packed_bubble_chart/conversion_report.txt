@@ -1,0 +1,55 @@
+[
+  {
+    "type": "",
+    "path": "plotOptions.packedbubble",
+    "parentType": "PackedBubblePointOptions",
+    "memberName": "minSize",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "",
+    "path": "plotOptions.packedbubble",
+    "parentType": "PackedBubblePointOptions",
+    "memberName": "maxSize",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "",
+    "path": "plotOptions.packedbubble",
+    "parentType": "PackedBubblePointOptions",
+    "memberName": "zMin",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "",
+    "path": "plotOptions.packedbubble",
+    "parentType": "PackedBubblePointOptions",
+    "memberName": "zMax",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "",
+    "path": "plotOptions.packedbubble",
+    "parentType": "PackedBubblePointOptions",
+    "memberName": "layoutAlgorithm",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "plotOptions.packedbubble.dataLabels"
+  },
+  {
+    "type": "",
+    "path": "xAxis",
+    "parentType": "XAxisOptions",
+    "memberName": "0",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "",
+    "path": "yAxis",
+    "parentType": "YAxisOptions",
+    "memberName": "0",
+    "msg": "The member is not present in the Flutter integration API"
+  }
+]

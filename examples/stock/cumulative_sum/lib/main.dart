@@ -86,8 +86,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 xAxis: [ 
                   XAxisOptions( 
-                      minRange: 259200000,
-                      max: 1672963200000,
                   ),
                 ],
                 series: [ 

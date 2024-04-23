@@ -1,6 +1,0 @@
-[
-  {
-    "type": "missing_mapping",
-    "path": "yAxis.title"
-  }
-]

@@ -67,7 +67,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 xAxis: [ 
                   XAxisOptions( 
-                      type: "category",
                   ),
                 ],
                 caption: CaptionOptions(

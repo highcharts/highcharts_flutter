@@ -1,51 +1,17 @@
 [
   {
-    "type": "missing_mapping",
-    "path": "plotOptions.series.dataLabels.distance",
-    "member": {
-      "name": "distance",
-      "type": "string",
-      "optional": true,
-      "originalType": "string | number"
-    }
+    "type": "",
+    "path": "plotOptions.series.dataLabels",
+    "parentType": "DataLabelOptions",
+    "memberName": "0",
+    "msg": "The member is not present in the Flutter integration API"
   },
   {
-    "type": "missing_mapping",
-    "path": "plotOptions.series.dataLabels.distance",
-    "member": {
-      "name": "distance",
-      "type": "string",
-      "optional": true,
-      "originalType": "string | number"
-    }
-  },
-  {
-    "type": "missing_mapping",
-    "path": "plotOptions.series.dataLabels.style.fontSize",
-    "member": {
-      "name": "fontSize",
-      "type": "string",
-      "optional": true,
-      "originalType": "string | number"
-    }
-  },
-  {
-    "type": "missing_mapping",
-    "path": "plotOptions.series.dataLabels.style.textOutline",
-    "member": {
-      "name": "textOutline",
-      "type": "string",
-      "optional": true
-    }
-  },
-  {
-    "type": "missing_mapping",
-    "path": "plotOptions.series.dataLabels.style.opacity",
-    "member": {
-      "name": "opacity",
-      "type": "number",
-      "optional": true
-    }
+    "type": "",
+    "path": "plotOptions.series.dataLabels",
+    "parentType": "DataLabelOptions",
+    "memberName": "1",
+    "msg": "The member is not present in the Flutter integration API"
   },
   {
     "type": "missing_mapping",
@@ -55,5 +21,19 @@
       "type": "boolean",
       "optional": true
     }
+  },
+  {
+    "type": "",
+    "path": "xAxis",
+    "parentType": "XAxisOptions",
+    "memberName": "0",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "",
+    "path": "yAxis",
+    "parentType": "YAxisOptions",
+    "memberName": "0",
+    "msg": "The member is not present in the Flutter integration API"
   }
 ]

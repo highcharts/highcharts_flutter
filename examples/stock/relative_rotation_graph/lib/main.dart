@@ -6,14 +6,9 @@
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/Highcharts.dart';
 import 'package:highcharts_flutter/types/ChartOptions.dart';
-import 'package:highcharts_flutter/types/number[].dart';
 import 'package:highcharts_flutter/types/CSSObject.dart';
 import 'package:highcharts_flutter/types/LegendOptions.dart';
 import 'package:highcharts_flutter/types/AnnotationOptions.dart';
-import 'package:highcharts_flutter/types/ControllableShapeOptions.dart';
-import 'package:highcharts_flutter/types/ControllableShapeOptions[].dart';
-import 'package:highcharts_flutter/types/ControllableLabelOptions.dart';
-import 'package:highcharts_flutter/types/ControllableLabelOptions[].dart';
 import 'package:highcharts_flutter/types/TitleOptions.dart';
 import 'package:highcharts_flutter/types/HighchartsPlotOptions.dart';
 import 'package:highcharts_flutter/types/SeriesOptions.dart';
@@ -76,10 +71,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     plotBorderColor: "#ffffff",
                     backgroundColor: "#f7f7f8",
                   spacing: [ 
-                    10, 
-                    85, 
-                    15, 
-                    20, 
+                    10,85,15,20, 
                   ],
                   style: CSSObject(
                   ),
@@ -90,51 +82,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 annotations: [ 
                   AnnotationOptions( 
-                      draggable: false,
-                    shapeOptions: ControllableShapeOptions(
-                        type: "path",
-                        strokeWidth: 0,
-                    ),
-                    shapes: [ 
-                      ControllableShapeOptions[]( 
-                      ),
-                      ControllableShapeOptions[]( 
-                      ),
-                      ControllableShapeOptions[]( 
-                      ),
-                      ControllableShapeOptions[]( 
-                      ),
-                    ],
-                    labelOptions: ControllableLabelOptions(
-                        backgroundColor: "transparent",
-                        borderWidth: 0,
-                        y: 0,
-                        padding: 10,
-                      style: CSSObject(
-                      ),
-                    ),
-                    labels: [ 
-                      ControllableLabelOptions[]( 
-                          text: "LAGGING",
-                        style: CSSObject(
-                        ),
-                      ),
-                      ControllableLabelOptions[]( 
-                          text: "IMPROVING",
-                        style: CSSObject(
-                        ),
-                      ),
-                      ControllableLabelOptions[]( 
-                          text: "LEADING",
-                        style: CSSObject(
-                        ),
-                      ),
-                      ControllableLabelOptions[]( 
-                          text: "WEAKENING",
-                        style: CSSObject(
-                        ),
-                      ),
-                    ],
                   ),
                 ],
                 title: TitleOptions(
@@ -155,18 +102,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 xAxis: [ 
                   XAxisOptions( 
-                      min: 96,
-                      max: 104,
-                      tickWidth: 0,
-                      lineWidth: 0,
-                      gridLineWidth: 1,
                   ),
                 ],
                 yAxis: [ 
                   YAxisOptions( 
-                      min: 96,
-                      max: 104,
-                      gridLineWidth: 1,
                   ),
                 ],
                 series: [ 

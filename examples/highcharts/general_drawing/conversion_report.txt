@@ -1,0 +1,45 @@
+[
+  {
+    "type": "missing_mapping",
+    "path": "chart.style.fontSize",
+    "member": {
+      "name": "fontSize",
+      "type": "string",
+      "optional": true,
+      "originalType": "string | number"
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "title.style.color",
+    "member": {
+      "name": "color",
+      "type": "string",
+      "optional": true
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "title.style.fontSize",
+    "member": {
+      "name": "fontSize",
+      "type": "string",
+      "optional": true,
+      "originalType": "string | number"
+    }
+  },
+  {
+    "type": "",
+    "path": "xAxis",
+    "parentType": "XAxisOptions",
+    "memberName": "0",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "",
+    "path": "yAxis",
+    "parentType": "YAxisOptions",
+    "memberName": "0",
+    "msg": "The member is not present in the Flutter integration API"
+  }
+]

@@ -11,9 +11,7 @@ import 'package:highcharts_flutter/types/TooltipOptions.dart';
 import 'package:highcharts_flutter/types/SubtitleOptions.dart';
 import 'package:highcharts_flutter/types/HighchartsPlotOptions.dart';
 import 'package:highcharts_flutter/types/SeriesOptions.dart';
-import 'package:highcharts_flutter/types/DataLabelOptions[].dart';
-import 'package:highcharts_flutter/types/CSSObject.dart';
-import 'package:highcharts_flutter/types/DataLabelFilterOptions.dart';
+import 'package:highcharts_flutter/types/DataLabelOptions.dart';
 import 'package:highcharts_flutter/types/PieSeriesOptions.dart';
 import 'package:highcharts_flutter/types/PieSeries.dart';
 import 'package:highcharts_flutter/types/XAxisOptions.dart';
@@ -76,19 +74,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       allowPointSelect: true,
                       cursor: "pointer",
                     dataLabels: [ 
-                      DataLabelOptions[]( 
-                          enabled: true,
-                      ),
-                      DataLabelOptions[]( 
-                          enabled: true,
-                          format: "{point.percentage:.1f}%",
-                        style: CSSObject(
-                        ),
-                        filter: DataLabelFilterOptions(
-                            operator: ">",
-                            property: "percentage",
-                            value: 10,
-                        ),
+                      DataLabelOptions( 
                       ),
                     ],
                   ),

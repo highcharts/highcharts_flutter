@@ -1,5 +1,6 @@
 [
   {
+    "type": "",
     "path": "plotOptions.series",
     "parentType": "SeriesOptions",
     "memberName": "nodeWidth",
@@ -19,12 +20,14 @@
     "path": "series.keys"
   },
   {
+    "type": "",
     "path": "series",
     "parentType": "LineSeriesOptions",
     "memberName": "levels",
     "msg": "The member is not present in the Flutter integration API"
   },
   {
+    "type": "",
     "path": "series",
     "parentType": "LineSeriesOptions",
     "memberName": "nodes",
@@ -48,5 +51,19 @@
       "optional": true,
       "originalType": "string | 0"
     }
+  },
+  {
+    "type": "",
+    "path": "xAxis",
+    "parentType": "XAxisOptions",
+    "memberName": "0",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "",
+    "path": "yAxis",
+    "parentType": "YAxisOptions",
+    "memberName": "0",
+    "msg": "The member is not present in the Flutter integration API"
   }
 ]

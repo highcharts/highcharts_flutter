@@ -1,0 +1,37 @@
+[
+  {
+    "type": "",
+    "path": "rangeSelector.buttons",
+    "parentType": "RangeSelectorButtonOptions",
+    "memberName": "0",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "",
+    "path": "rangeSelector.buttons",
+    "parentType": "RangeSelectorButtonOptions",
+    "memberName": "1",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "",
+    "path": "rangeSelector.buttons",
+    "parentType": "RangeSelectorButtonOptions",
+    "memberName": "2",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "",
+    "path": "xAxis",
+    "parentType": "XAxisOptions",
+    "memberName": "0",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "",
+    "path": "yAxis",
+    "parentType": "YAxisOptions",
+    "memberName": "0",
+    "msg": "The member is not present in the Flutter integration API"
+  }
+]

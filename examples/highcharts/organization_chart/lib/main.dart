@@ -11,7 +11,7 @@ import 'package:highcharts_flutter/types/AccessibilityOptions.dart';
 import 'package:highcharts_flutter/types/AccessibilityPointOptions.dart';
 import 'package:highcharts_flutter/types/LineSeriesOptions.dart';
 import 'package:highcharts_flutter/types/LineSeries.dart';
-import 'package:highcharts_flutter/types/DataLabelOptions[].dart';
+import 'package:highcharts_flutter/types/DataLabelOptions.dart';
 import 'package:highcharts_flutter/types/TooltipOptions.dart';
 import 'package:highcharts_flutter/types/ExportingOptions.dart';
 import 'package:highcharts_flutter/types/XAxisOptions.dart';
@@ -78,9 +78,11 @@ class _MyHomePageState extends State<MyHomePage> {
                     data: [ 
                     ],
                       color: "#007ad0",
-                    dataLabels: DataLabelOptions[](
-                        color: "white",
-                    ),
+                    dataLabels: [ 
+                      DataLabelOptions( 
+                          color: "white",
+                      ),
+                    ],
                       borderColor: "white",
                   ),
                 ],

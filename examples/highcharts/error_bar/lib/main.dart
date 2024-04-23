@@ -69,9 +69,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 yAxis: [ 
                   YAxisOptions( 
                   ),
-                  YAxisOptions( 
-                      opposite: true,
-                  ),
                 ],
                 tooltip: TooltipOptions(
                     shared: true,

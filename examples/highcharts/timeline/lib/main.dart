@@ -15,7 +15,7 @@ import 'package:highcharts_flutter/types/TitleOptions.dart';
 import 'package:highcharts_flutter/types/SubtitleOptions.dart';
 import 'package:highcharts_flutter/types/TimelineSeriesOptions.dart';
 import 'package:highcharts_flutter/types/TimelineSeries.dart';
-import 'package:highcharts_flutter/types/TimelinePointOptions[].dart';
+import 'package:highcharts_flutter/types/TimelinePointOptions.dart';
 
 void main() {
   runApp(const MyApp());
@@ -70,12 +70,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 xAxis: [ 
                   XAxisOptions( 
-                      visible: false,
                   ),
                 ],
                 yAxis: [ 
                   YAxisOptions( 
-                      visible: false,
                   ),
                 ],
                 title: TitleOptions(
@@ -87,17 +85,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 series: [ 
                   TimelineSeries(
                     data: [ 
-                      TimelinePointOptions[]( 
-                      ),
-                      TimelinePointOptions[]( 
-                      ),
-                      TimelinePointOptions[]( 
-                      ),
-                      TimelinePointOptions[]( 
-                      ),
-                      TimelinePointOptions[]( 
-                      ),
-                      TimelinePointOptions[]( 
+                      TimelinePointOptions( 
                       ),
                     ],
                   ),

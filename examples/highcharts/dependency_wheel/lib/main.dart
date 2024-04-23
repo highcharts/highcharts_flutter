@@ -10,7 +10,7 @@ import 'package:highcharts_flutter/types/AccessibilityOptions.dart';
 import 'package:highcharts_flutter/types/AccessibilityPointOptions.dart';
 import 'package:highcharts_flutter/types/LineSeriesOptions.dart';
 import 'package:highcharts_flutter/types/LineSeries.dart';
-import 'package:highcharts_flutter/types/DataLabelOptions[].dart';
+import 'package:highcharts_flutter/types/DataLabelOptions.dart';
 import 'package:highcharts_flutter/types/CSSObject.dart';
 import 'package:highcharts_flutter/types/DataLabelTextPathOptions.dart';
 import 'package:highcharts_flutter/types/XAxisOptions.dart';
@@ -72,14 +72,16 @@ class _MyHomePageState extends State<MyHomePage> {
                     data: [ 
                     ],
                       name: "Dependency wheel series",
-                    dataLabels: DataLabelOptions[](
-                        color: "#333",
-                      style: CSSObject(
+                    dataLabels: [ 
+                      DataLabelOptions( 
+                          color: "#333",
+                        style: CSSObject(
+                        ),
+                        textPath: DataLabelTextPathOptions(
+                            enabled: true,
+                        ),
                       ),
-                      textPath: DataLabelTextPathOptions(
-                          enabled: true,
-                      ),
-                    ),
+                    ],
                   ),
                 ],
                 xAxis: [ 

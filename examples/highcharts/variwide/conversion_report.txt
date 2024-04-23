@@ -1,5 +1,12 @@
 [
   {
+    "type": "",
+    "path": "xAxis",
+    "parentType": "XAxisOptions",
+    "memberName": "0",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
     "type": "missing_mapping",
     "path": "series.dataLabels"
   },
@@ -20,5 +27,12 @@
       "type": "boolean",
       "optional": true
     }
+  },
+  {
+    "type": "",
+    "path": "yAxis",
+    "parentType": "YAxisOptions",
+    "memberName": "0",
+    "msg": "The member is not present in the Flutter integration API"
   }
 ]

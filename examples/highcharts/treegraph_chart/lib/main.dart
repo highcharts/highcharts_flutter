@@ -9,7 +9,7 @@ import 'package:highcharts_flutter/types/ChartOptions.dart';
 import 'package:highcharts_flutter/types/TitleOptions.dart';
 import 'package:highcharts_flutter/types/LineSeriesOptions.dart';
 import 'package:highcharts_flutter/types/LineSeries.dart';
-import 'package:highcharts_flutter/types/DataLabelOptions[].dart';
+import 'package:highcharts_flutter/types/DataLabelOptions.dart';
 import 'package:highcharts_flutter/types/CSSObject.dart';
 import 'package:highcharts_flutter/types/XAxisOptions.dart';
 import 'package:highcharts_flutter/types/YAxisOptions.dart';
@@ -70,14 +70,16 @@ class _MyHomePageState extends State<MyHomePage> {
                       clip: false,
                     data: [ 
                     ],
-                    dataLabels: DataLabelOptions[](
-                        align: "left",
-                      style: CSSObject(
+                    dataLabels: [ 
+                      DataLabelOptions( 
+                          align: "left",
+                        style: CSSObject(
+                        ),
+                          x: 24,
+                          crop: false,
+                          overflow: "none",
                       ),
-                        x: 24,
-                        crop: false,
-                        overflow: "none",
-                    ),
+                    ],
                   ),
                 ],
                 xAxis: [ 

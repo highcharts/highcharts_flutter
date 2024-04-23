@@ -1,0 +1,60 @@
+[
+  {
+    "type": "missing_mapping",
+    "path": "series.type",
+    "member": {
+      "name": "type",
+      "type": "string",
+      "optional": true
+    }
+  },
+  {
+    "type": "",
+    "path": "series",
+    "parentType": "LineSeriesOptions",
+    "memberName": "layoutAlgorithm",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "",
+    "path": "series",
+    "parentType": "LineSeriesOptions",
+    "memberName": "alternateStartingDirection",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "mixed_type",
+    "path": "series.borderRadius",
+    "msg": "Path is set as a basic type, but flutter wants a BorderRadiusOptionsObject"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "series.dataLabels.style.textOutline",
+    "member": {
+      "name": "textOutline",
+      "type": "string",
+      "optional": true
+    }
+  },
+  {
+    "type": "",
+    "path": "series",
+    "parentType": "LineSeriesOptions",
+    "memberName": "levels",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "",
+    "path": "xAxis",
+    "parentType": "XAxisOptions",
+    "memberName": "0",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "",
+    "path": "yAxis",
+    "parentType": "YAxisOptions",
+    "memberName": "0",
+    "msg": "The member is not present in the Flutter integration API"
+  }
+]

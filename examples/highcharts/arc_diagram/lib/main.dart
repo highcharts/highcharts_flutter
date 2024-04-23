@@ -10,7 +10,7 @@ import 'package:highcharts_flutter/types/AccessibilityOptions.dart';
 import 'package:highcharts_flutter/types/AccessibilityPointOptions.dart';
 import 'package:highcharts_flutter/types/LineSeriesOptions.dart';
 import 'package:highcharts_flutter/types/LineSeries.dart';
-import 'package:highcharts_flutter/types/DataLabelOptions[].dart';
+import 'package:highcharts_flutter/types/DataLabelOptions.dart';
 import 'package:highcharts_flutter/types/XAxisOptions.dart';
 import 'package:highcharts_flutter/types/YAxisOptions.dart';
 
@@ -69,13 +69,15 @@ class _MyHomePageState extends State<MyHomePage> {
                 series: [ 
                   LineSeries(
                       name: "Train connections",
-                    dataLabels: DataLabelOptions[](
-                        rotation: 90,
-                        y: 30,
-                        verticalAlign: "top",
-                        color: "black",
-                        padding: 0,
-                    ),
+                    dataLabels: [ 
+                      DataLabelOptions( 
+                          rotation: 90,
+                          y: 30,
+                          verticalAlign: "top",
+                          color: "black",
+                          padding: 0,
+                      ),
+                    ],
                     data: [ 
                     ],
                   ),
