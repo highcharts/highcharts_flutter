@@ -5,7 +5,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/Highcharts.dart';
-import 'package:highcharts_flutter/types/LineSeriesOptions.dart';
 import 'package:highcharts_flutter/types/TitleOptions.dart';
 import 'package:highcharts_flutter/types/AccessibilityOptions.dart';
 import 'package:highcharts_flutter/types/AccessibilityPointOptions.dart';
@@ -73,8 +72,9 @@ class _MyHomePageState extends State<MyHomePage> {
                     dataLabels: DataLabelOptions[](
                         rotation: 90,
                         y: 30,
-                        align: "left",
+                        verticalAlign: "top",
                         color: "black",
+                        padding: 0,
                     ),
                     data: [ 
                     ],

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -53,11 +53,17 @@ class HistogramSeries extends Series {
       StringBuffer seriesData = StringBuffer();
 
       for (var point in this.data!) {
-        seriesData.writeAll(["["], "");
-        for (var item in point) {
-          seriesData.writeAll([item, ","]);
+        if (point.length > 1) {
+          seriesData.writeAll(["["], "");
         }
-        seriesData.writeAll(["],"], "");
+
+        seriesData.writeAll(point, ",");
+
+        if (point.length > 1) {
+          seriesData.writeAll(["],"], "");
+        } else {
+          seriesData.write(",");
+        }
       }
 
       buffer.writeAll(["\"data\": [", seriesData, "],"], "");   
@@ -82,7 +88,7 @@ class HistogramSeries extends Series {
     // NOTE: skip serialization of baseSeries (type string is ignored) ignore type: true
 
     if (this.options?.binsNumber != null) {  
-      buffer.writeAll(["\"binsNumber\":\`",this.options?.binsNumber, "\`,"], "");
+      buffer.writeAll(["\"binsNumber\":\'",this.options?.binsNumber, "\',"], "");
     }
 
     if (this.options?.binWidth != null) {  

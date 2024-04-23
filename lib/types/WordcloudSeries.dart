@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -53,11 +53,17 @@ class WordcloudSeries extends Series {
       StringBuffer seriesData = StringBuffer();
 
       for (var point in this.data!) {
-        seriesData.writeAll(["["], "");
-        for (var item in point) {
-          seriesData.writeAll([item, ","]);
+        if (point.length > 1) {
+          seriesData.writeAll(["["], "");
         }
-        seriesData.writeAll(["],"], "");
+
+        seriesData.writeAll(point, ",");
+
+        if (point.length > 1) {
+          seriesData.writeAll(["],"], "");
+        } else {
+          seriesData.write(",");
+        }
       }
 
       buffer.writeAll(["\"data\": [", seriesData, "],"], "");   
@@ -92,7 +98,7 @@ class WordcloudSeries extends Series {
     }
 
     if (this.options?.placementStrategy != null) {  
-      buffer.writeAll(["\"placementStrategy\":\`",this.options?.placementStrategy, "\`,"], "");
+      buffer.writeAll(["\"placementStrategy\":\'",this.options?.placementStrategy, "\',"], "");
     }
 
     if (this.options?.rotation != null) {  
@@ -100,7 +106,7 @@ class WordcloudSeries extends Series {
     }
 
     if (this.options?.spiral != null) {  
-      buffer.writeAll(["\"spiral\":\`",this.options?.spiral, "\`,"], "");
+      buffer.writeAll(["\"spiral\":\'",this.options?.spiral, "\',"], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored) ignore type: true

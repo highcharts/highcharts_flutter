@@ -6,7 +6,6 @@
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/Highcharts.dart';
 import 'package:highcharts_flutter/types/LineSeriesOptions.dart';
-import 'package:highcharts_flutter/types/LineSeriesOptions.dart';
 import 'package:highcharts_flutter/types/LineSeries.dart';
 import 'package:highcharts_flutter/types/BorderRadiusOptionsObject.dart';
 import 'package:highcharts_flutter/types/DataLabelOptions[].dart';

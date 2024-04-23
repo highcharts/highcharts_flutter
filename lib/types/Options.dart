@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -551,7 +551,7 @@ class Options extends OptionFragment {
     // NOTE: skip serialization of enabled (type boolean is ignored) ignore type: true
 
     if (this.type != null) {  
-      buffer.writeAll(["\"type\":\`",this.type, "\`,"], "");
+      buffer.writeAll(["\"type\":\'",this.type, "\',"], "");
     }
 
     // NOTE: skip serialization of snap (type SnapOptions is ignored) ignore type: true
@@ -583,7 +583,7 @@ class Options extends OptionFragment {
     // NOTE: skip serialization of name (type string is ignored) ignore type: true
 
     if (this.type != null) {  
-      buffer.writeAll(["\"type\":\`",this.type, "\`,"], "");
+      buffer.writeAll(["\"type\":\'",this.type, "\',"], "");
     }
 
     // NOTE: skip serialization of nestedOptions (type NestedOptions[] is ignored) ignore type: true
@@ -625,7 +625,7 @@ class Options extends OptionFragment {
     // NOTE: skip serialization of className (type string is ignored) ignore type: true
 
     if (this.type != null) {  
-      buffer.writeAll(["\"type\":\`",this.type, "\`,"], "");
+      buffer.writeAll(["\"type\":\'",this.type, "\',"], "");
     }
 
     // NOTE: skip serialization of navigationBindings (type AnyRecord[] is ignored) ignore type: true
@@ -841,7 +841,7 @@ class Options extends OptionFragment {
     // NOTE: skip serialization of splitSeries (type boolean is ignored) ignore type: true
 
     if (this.approximation != null) {  
-      buffer.writeAll(["\"approximation\":\`",this.approximation, "\`,"], "");
+      buffer.writeAll(["\"approximation\":\'",this.approximation, "\',"], "");
     }
 
     // NOTE: skip serialization of attractiveForce (type Function is ignored) ignore type: 1
@@ -865,7 +865,7 @@ class Options extends OptionFragment {
     // NOTE: skip serialization of initialPositions (type Function is ignored) ignore type: 1
 
     if (this.integration != null) {  
-      buffer.writeAll(["\"integration\":\`",this.integration, "\`,"], "");
+      buffer.writeAll(["\"integration\":\'",this.integration, "\',"], "");
     }
 
     if (this.linkLength != null) {  
@@ -887,7 +887,7 @@ class Options extends OptionFragment {
     }
 
     if (this.type != null) {  
-      buffer.writeAll(["\"type\":\`",this.type, "\`,"], "");
+      buffer.writeAll(["\"type\":\'",this.type, "\',"], "");
     }
 
     // NOTE: skip serialization of stockTools (type StockToolsOptions is ignored) ignore type: true

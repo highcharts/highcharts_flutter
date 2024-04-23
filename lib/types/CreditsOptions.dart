@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -60,15 +60,15 @@ class CreditsOptions extends OptionFragment {
     }
 
     if (this.href != null) {  
-      buffer.writeAll(["\"href\":\`",this.href, "\`,"], "");
+      buffer.writeAll(["\"href\":\'",this.href, "\',"], "");
     }
 
     if (this.mapText != null) {  
-      buffer.writeAll(["\"mapText\":\`",this.mapText, "\`,"], "");
+      buffer.writeAll(["\"mapText\":\'",this.mapText, "\',"], "");
     }
 
     if (this.mapTextFull != null) {  
-      buffer.writeAll(["\"mapTextFull\":\`",this.mapTextFull, "\`,"], "");
+      buffer.writeAll(["\"mapTextFull\":\'",this.mapTextFull, "\',"], "");
     }
 
     if (this.position != null) {  
@@ -80,7 +80,7 @@ class CreditsOptions extends OptionFragment {
     }
 
     if (this.text != null) {  
-      buffer.writeAll(["\"text\":\`",this.text, "\`,"], "");
+      buffer.writeAll(["\"text\":\'",this.text, "\',"], "");
     }
   }
 

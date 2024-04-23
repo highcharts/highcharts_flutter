@@ -5,7 +5,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/Highcharts.dart';
-import 'package:highcharts_flutter/types/LineSeriesOptions.dart';
 import 'package:highcharts_flutter/types/ChartOptions.dart';
 import 'package:highcharts_flutter/types/TitleOptions.dart';
 import 'package:highcharts_flutter/types/SubtitleOptions.dart';
@@ -16,6 +15,8 @@ import 'package:highcharts_flutter/types/HighchartsPlotOptions.dart';
 import 'package:highcharts_flutter/types/SeriesOptions.dart';
 import 'package:highcharts_flutter/types/BorderRadiusOptionsObject.dart';
 import 'package:highcharts_flutter/types/DataLabelOptions[].dart';
+import 'package:highcharts_flutter/types/DataLabelFilterOptions.dart';
+import 'package:highcharts_flutter/types/CSSObject.dart';
 import 'package:highcharts_flutter/types/TooltipOptions.dart';
 import 'package:highcharts_flutter/types/PieSeriesOptions.dart';
 import 'package:highcharts_flutter/types/PieSeries.dart';
@@ -84,10 +85,23 @@ class _MyHomePageState extends State<MyHomePage> {
                 plotOptions: HighchartsPlotOptions(
                   series: SeriesOptions(
                      borderRadius: BorderRadiusOptionsObject(),
-                    dataLabels: DataLabelOptions[](
-                        enabled: true,
-                        format: "{point.name}: {point.y:.1f}%",
-                    ),
+                    dataLabels: [ 
+                      DataLabelOptions[]( 
+                          enabled: true,
+                          format: "{point.name}",
+                      ),
+                      DataLabelOptions[]( 
+                          enabled: true,
+                        filter: DataLabelFilterOptions(
+                            property: "percentage",
+                            operator: ">",
+                            value: 5,
+                        ),
+                          format: "{point.y:.1f}%",
+                        style: CSSObject(
+                        ),
+                      ),
+                    ],
                   ),
                 ),
                 tooltip: TooltipOptions(

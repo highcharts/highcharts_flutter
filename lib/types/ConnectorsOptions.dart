@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -69,7 +69,7 @@ class ConnectorsOptions extends OptionFragment {
     }
 
     if (this.dashStyle != null) {  
-      buffer.writeAll(["\"dashStyle\":\`",this.dashStyle, "\`,"], "");
+      buffer.writeAll(["\"dashStyle\":\'",this.dashStyle, "\',"], "");
     }
 
     if (this.enabled != null) {  
@@ -81,7 +81,7 @@ class ConnectorsOptions extends OptionFragment {
     }
 
     if (this.lineColor != null) {  
-      buffer.writeAll(["\"lineColor\":\`",this.lineColor, "\`,"], "");
+      buffer.writeAll(["\"lineColor\":\'",this.lineColor, "\',"], "");
     }
 
     if (this.lineWidth != null) {  
@@ -99,7 +99,7 @@ class ConnectorsOptions extends OptionFragment {
     }
 
     if (this.type != null) {  
-      buffer.writeAll(["\"type\":\`",this.type, "\`,"], "");
+      buffer.writeAll(["\"type\":\'",this.type, "\',"], "");
     }
   }
 

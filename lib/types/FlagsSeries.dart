@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -53,11 +53,17 @@ class FlagsSeries extends Series {
       StringBuffer seriesData = StringBuffer();
 
       for (var point in this.data!) {
-        seriesData.writeAll(["["], "");
-        for (var item in point) {
-          seriesData.writeAll([item, ","]);
+        if (point.length > 1) {
+          seriesData.writeAll(["["], "");
         }
-        seriesData.writeAll(["],"], "");
+
+        seriesData.writeAll(point, ",");
+
+        if (point.length > 1) {
+          seriesData.writeAll(["],"], "");
+        } else {
+          seriesData.write(",");
+        }
       }
 
       buffer.writeAll(["\"data\": [", seriesData, "],"], "");   
@@ -84,7 +90,7 @@ class FlagsSeries extends Series {
     }
 
     if (this.options?.fillColor != null) {  
-      buffer.writeAll(["\"fillColor\":\`",this.options?.fillColor, "\`,"], "");
+      buffer.writeAll(["\"fillColor\":\'",this.options?.fillColor, "\',"], "");
     }
 
     if (this.options?.height != null) {  
@@ -92,7 +98,7 @@ class FlagsSeries extends Series {
     }
 
     if (this.options?.lineColor != null) {  
-      buffer.writeAll(["\"lineColor\":\`",this.options?.lineColor, "\`,"], "");
+      buffer.writeAll(["\"lineColor\":\'",this.options?.lineColor, "\',"], "");
     }
 
     if (this.options?.lineWidth != null) {  
@@ -100,15 +106,15 @@ class FlagsSeries extends Series {
     }
 
     if (this.options?.onKey != null) {  
-      buffer.writeAll(["\"onKey\":\`",this.options?.onKey, "\`,"], "");
+      buffer.writeAll(["\"onKey\":\'",this.options?.onKey, "\',"], "");
     }
 
     if (this.options?.onSeries != null) {  
-      buffer.writeAll(["\"onSeries\":\`",this.options?.onSeries, "\`,"], "");
+      buffer.writeAll(["\"onSeries\":\'",this.options?.onSeries, "\',"], "");
     }
 
     if (this.options?.shape != null) {  
-      buffer.writeAll(["\"shape\":\`",this.options?.shape, "\`,"], "");
+      buffer.writeAll(["\"shape\":\'",this.options?.shape, "\',"], "");
     }
 
     if (this.options?.stackDistance != null) {  
@@ -122,11 +128,11 @@ class FlagsSeries extends Series {
     }
 
     if (this.options?.textAlign != null) {  
-      buffer.writeAll(["\"textAlign\":\`",this.options?.textAlign, "\`,"], "");
+      buffer.writeAll(["\"textAlign\":\'",this.options?.textAlign, "\',"], "");
     }
 
     if (this.options?.title != null) {  
-      buffer.writeAll(["\"title\":\`",this.options?.title, "\`,"], "");
+      buffer.writeAll(["\"title\":\'",this.options?.title, "\',"], "");
     }
 
     if (this.options?.useHTML != null) {  

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -45,7 +45,7 @@ class StackShadowOptions extends OptionFragment {
 
     
     if (this.borderColor != null) {  
-      buffer.writeAll(["\"borderColor\":\`",this.borderColor, "\`,"], "");
+      buffer.writeAll(["\"borderColor\":\'",this.borderColor, "\',"], "");
     }
 
     if (this.borderWidth != null) {  
@@ -53,7 +53,7 @@ class StackShadowOptions extends OptionFragment {
     }
 
     if (this.color != null) {  
-      buffer.writeAll(["\"color\":\`",this.color, "\`,"], "");
+      buffer.writeAll(["\"color\":\'",this.color, "\',"], "");
     }
 
     if (this.enabled != null) {  

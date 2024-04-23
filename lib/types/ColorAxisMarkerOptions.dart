@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -43,7 +43,7 @@ class ColorAxisMarkerOptions extends OptionFragment {
     // NOTE: skip serialization of animation (type Generic is ignored) ignore type: true
 
     if (this.color != null) {  
-      buffer.writeAll(["\"color\":\`",this.color, "\`,"], "");
+      buffer.writeAll(["\"color\":\'",this.color, "\',"], "");
     }
 
     if (this.width != null) {  

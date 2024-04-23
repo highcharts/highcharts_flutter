@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -53,11 +53,17 @@ class LineSeries extends Series {
       StringBuffer seriesData = StringBuffer();
 
       for (var point in this.data!) {
-        seriesData.writeAll(["["], "");
-        for (var item in point) {
-          seriesData.writeAll([item, ","]);
+        if (point.length > 1) {
+          seriesData.writeAll(["["], "");
         }
-        seriesData.writeAll(["],"], "");
+
+        seriesData.writeAll(point, ",");
+
+        if (point.length > 1) {
+          seriesData.writeAll(["],"], "");
+        } else {
+          seriesData.write(",");
+        }
       }
 
       buffer.writeAll(["\"data\": [", seriesData, "],"], "");   
@@ -94,7 +100,7 @@ class LineSeries extends Series {
     }
 
     if (this.options?.borderColor != null) {  
-      buffer.writeAll(["\"borderColor\":\`",this.options?.borderColor, "\`,"], "");
+      buffer.writeAll(["\"borderColor\":\'",this.options?.borderColor, "\',"], "");
     }
 
     if (this.options?.borderWidth != null) {  
@@ -122,11 +128,11 @@ class LineSeries extends Series {
     }
 
     if (this.options?.description != null) {  
-      buffer.writeAll(["\"description\":\`",this.options?.description, "\`,"], "");
+      buffer.writeAll(["\"description\":\'",this.options?.description, "\',"], "");
     }
 
     if (this.options?.linkedTo != null) {  
-      buffer.writeAll(["\"linkedTo\":\`",this.options?.linkedTo, "\`,"], "");
+      buffer.writeAll(["\"linkedTo\":\'",this.options?.linkedTo, "\',"], "");
     }
 
     // NOTE: skip serialization of pointDescriptionFormatter (type Function is ignored) ignore type: 1

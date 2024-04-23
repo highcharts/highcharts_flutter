@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -78,7 +78,7 @@ class NavigationOptions extends OptionFragment {
     }
 
     if (this.bindingsClassName != null) {  
-      buffer.writeAll(["\"bindingsClassName\":\`",this.bindingsClassName, "\`,"], "");
+      buffer.writeAll(["\"bindingsClassName\":\'",this.bindingsClassName, "\',"], "");
     }
 
     if (this.events != null) {  
@@ -86,7 +86,7 @@ class NavigationOptions extends OptionFragment {
     }
 
     if (this.iconsURL != null) {  
-      buffer.writeAll(["\"iconsURL\":\`",this.iconsURL, "\`,"], "");
+      buffer.writeAll(["\"iconsURL\":\'",this.iconsURL, "\',"], "");
     }
 
     // NOTE: skip serialization of annotationsOptions (type Generic is ignored) ignore type: true
@@ -96,7 +96,7 @@ class NavigationOptions extends OptionFragment {
     }
 
     if (this.bindingsClassName != null) {  
-      buffer.writeAll(["\"bindingsClassName\":\`",this.bindingsClassName, "\`,"], "");
+      buffer.writeAll(["\"bindingsClassName\":\'",this.bindingsClassName, "\',"], "");
     }
 
     if (this.events != null) {  
@@ -104,11 +104,11 @@ class NavigationOptions extends OptionFragment {
     }
 
     if (this.iconsURL != null) {  
-      buffer.writeAll(["\"iconsURL\":\`",this.iconsURL, "\`,"], "");
+      buffer.writeAll(["\"iconsURL\":\'",this.iconsURL, "\',"], "");
     }
 
     if (this.bindingsClassName != null) {  
-      buffer.writeAll(["\"bindingsClassName\":\`",this.bindingsClassName, "\`,"], "");
+      buffer.writeAll(["\"bindingsClassName\":\'",this.bindingsClassName, "\',"], "");
     }
 
     if (this.buttonOptions != null) {  

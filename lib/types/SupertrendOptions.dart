@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -125,13 +125,13 @@ class SupertrendOptions extends SMAOptions {
     }
 
     if (this.fallingTrendColor != null) {  
-      buffer.writeAll(["\"fallingTrendColor\":\`",this.fallingTrendColor, "\`,"], "");
+      buffer.writeAll(["\"fallingTrendColor\":\'",this.fallingTrendColor, "\',"], "");
     }
 
     // NOTE: skip serialization of params (type SupertrendParamsOptions is ignored) ignore type: false
 
     if (this.risingTrendColor != null) {  
-      buffer.writeAll(["\"risingTrendColor\":\`",this.risingTrendColor, "\`,"], "");
+      buffer.writeAll(["\"risingTrendColor\":\'",this.risingTrendColor, "\',"], "");
     }
   }
 

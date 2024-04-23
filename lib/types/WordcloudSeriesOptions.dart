@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -148,7 +148,7 @@ class WordcloudSeriesOptions extends ColumnSeriesOptions {
     }
 
     if (this.placementStrategy != null) {  
-      buffer.writeAll(["\"placementStrategy\":\`",this.placementStrategy, "\`,"], "");
+      buffer.writeAll(["\"placementStrategy\":\'",this.placementStrategy, "\',"], "");
     }
 
     if (this.rotation != null) {  
@@ -156,7 +156,7 @@ class WordcloudSeriesOptions extends ColumnSeriesOptions {
     }
 
     if (this.spiral != null) {  
-      buffer.writeAll(["\"spiral\":\`",this.spiral, "\`,"], "");
+      buffer.writeAll(["\"spiral\":\'",this.spiral, "\',"], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored) ignore type: true

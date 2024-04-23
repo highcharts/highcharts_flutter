@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -42,7 +42,7 @@ class ProjectionOptions extends OptionFragment {
     // NOTE: skip serialization of projectedBounds (type "world" is ignored) ignore type: true
 
     if (this.name != null) {  
-      buffer.writeAll(["\"name\":\`",this.name, "\`,"], "");
+      buffer.writeAll(["\"name\":\'",this.name, "\',"], "");
     }
 
     if (this.parallels != null) {  

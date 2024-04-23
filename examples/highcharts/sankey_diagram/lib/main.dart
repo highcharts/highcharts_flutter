@@ -5,10 +5,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/Highcharts.dart';
-import 'package:highcharts_flutter/types/LineSeriesOptions.dart';
 import 'package:highcharts_flutter/types/TitleOptions.dart';
+import 'package:highcharts_flutter/types/SubtitleOptions.dart';
 import 'package:highcharts_flutter/types/AccessibilityOptions.dart';
 import 'package:highcharts_flutter/types/AccessibilityPointOptions.dart';
+import 'package:highcharts_flutter/types/TooltipOptions.dart';
 import 'package:highcharts_flutter/types/LineSeriesOptions.dart';
 import 'package:highcharts_flutter/types/LineSeries.dart';
 import 'package:highcharts_flutter/types/XAxisOptions.dart';
@@ -58,12 +59,20 @@ class _MyHomePageState extends State<MyHomePage> {
             HighchartsChart(
               HighchartsOptions(
                 title: TitleOptions(
-                    text: "Highcharts Sankey Diagram",
+                    text: "Estimated US Energy Consumption in 2017",
+                ),
+                subtitle: SubtitleOptions(
+                    text: "Source: <a href='https://www.llnl.gov/'> Lawrence Livermore National Laboratory</a>",
                 ),
                 accessibility: AccessibilityOptions(
                   point: AccessibilityPointOptions(
                       valueDescriptionFormat: "{index}. {point.from} to {point.to}, {point.weight}.",
                   ),
+                ),
+                tooltip: TooltipOptions(
+                  headerFormat: string(
+                  ),
+                    pointFormat: "{point.fromNode.name} → {point.toNode.name}: {point.weight:.2f} quads",
                 ),
                 series: [ 
                   LineSeries(

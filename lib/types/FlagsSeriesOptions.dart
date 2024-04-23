@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -162,7 +162,7 @@ class FlagsSeriesOptions extends ColumnSeriesOptions {
     }
 
     if (this.fillColor != null) {  
-      buffer.writeAll(["\"fillColor\":\`",this.fillColor, "\`,"], "");
+      buffer.writeAll(["\"fillColor\":\'",this.fillColor, "\',"], "");
     }
 
     if (this.height != null) {  
@@ -170,7 +170,7 @@ class FlagsSeriesOptions extends ColumnSeriesOptions {
     }
 
     if (this.lineColor != null) {  
-      buffer.writeAll(["\"lineColor\":\`",this.lineColor, "\`,"], "");
+      buffer.writeAll(["\"lineColor\":\'",this.lineColor, "\',"], "");
     }
 
     if (this.lineWidth != null) {  
@@ -178,15 +178,15 @@ class FlagsSeriesOptions extends ColumnSeriesOptions {
     }
 
     if (this.onKey != null) {  
-      buffer.writeAll(["\"onKey\":\`",this.onKey, "\`,"], "");
+      buffer.writeAll(["\"onKey\":\'",this.onKey, "\',"], "");
     }
 
     if (this.onSeries != null) {  
-      buffer.writeAll(["\"onSeries\":\`",this.onSeries, "\`,"], "");
+      buffer.writeAll(["\"onSeries\":\'",this.onSeries, "\',"], "");
     }
 
     if (this.shape != null) {  
-      buffer.writeAll(["\"shape\":\`",this.shape, "\`,"], "");
+      buffer.writeAll(["\"shape\":\'",this.shape, "\',"], "");
     }
 
     if (this.stackDistance != null) {  
@@ -200,11 +200,11 @@ class FlagsSeriesOptions extends ColumnSeriesOptions {
     }
 
     if (this.textAlign != null) {  
-      buffer.writeAll(["\"textAlign\":\`",this.textAlign, "\`,"], "");
+      buffer.writeAll(["\"textAlign\":\'",this.textAlign, "\',"], "");
     }
 
     if (this.title != null) {  
-      buffer.writeAll(["\"title\":\`",this.title, "\`,"], "");
+      buffer.writeAll(["\"title\":\'",this.title, "\',"], "");
     }
 
     if (this.useHTML != null) {  

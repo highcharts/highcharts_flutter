@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -64,7 +64,7 @@ class TitleOptions extends OptionFragment {
 
     
     if (this.align != null) {  
-      buffer.writeAll(["\"align\":\`",this.align, "\`,"], "");
+      buffer.writeAll(["\"align\":\'",this.align, "\',"], "");
     }
 
     if (this.floating != null) {  
@@ -80,7 +80,7 @@ class TitleOptions extends OptionFragment {
     }
 
     if (this.text != null) {  
-      buffer.writeAll(["\"text\":\`",this.text, "\`,"], "");
+      buffer.writeAll(["\"text\":\'",this.text, "\',"], "");
     }
 
     if (this.useHTML != null) {  
@@ -88,7 +88,7 @@ class TitleOptions extends OptionFragment {
     }
 
     if (this.verticalAlign != null) {  
-      buffer.writeAll(["\"verticalAlign\":\`",this.verticalAlign, "\`,"], "");
+      buffer.writeAll(["\"verticalAlign\":\'",this.verticalAlign, "\',"], "");
     }
 
     if (this.widthAdjust != null) {  

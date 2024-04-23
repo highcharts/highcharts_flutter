@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -48,25 +48,25 @@ class ProviderOptions extends OptionFragment {
 
     
     if (this.apiKey != null) {  
-      buffer.writeAll(["\"apiKey\":\`",this.apiKey, "\`,"], "");
+      buffer.writeAll(["\"apiKey\":\'",this.apiKey, "\',"], "");
     }
 
     // NOTE: skip serialization of onload (type Function is ignored) ignore type: 1
 
     if (this.subdomain != null) {  
-      buffer.writeAll(["\"subdomain\":\`",this.subdomain, "\`,"], "");
+      buffer.writeAll(["\"subdomain\":\'",this.subdomain, "\',"], "");
     }
 
     if (this.theme != null) {  
-      buffer.writeAll(["\"theme\":\`",this.theme, "\`,"], "");
+      buffer.writeAll(["\"theme\":\'",this.theme, "\',"], "");
     }
 
     if (this.type != null) {  
-      buffer.writeAll(["\"type\":\`",this.type, "\`,"], "");
+      buffer.writeAll(["\"type\":\'",this.type, "\',"], "");
     }
 
     if (this.url != null) {  
-      buffer.writeAll(["\"url\":\`",this.url, "\`,"], "");
+      buffer.writeAll(["\"url\":\'",this.url, "\',"], "");
     }
   }
 

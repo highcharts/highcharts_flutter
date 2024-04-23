@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -65,7 +65,7 @@ class NetworkgraphDataLabelsOptionsObject extends DataLabelOptions {
 
     
     if (this.format != null) {  
-      buffer.writeAll(["\"format\":\`",this.format, "\`,"], "");
+      buffer.writeAll(["\"format\":\'",this.format, "\',"], "");
     }
 
     // NOTE: skip serialization of linkFormat (type string is ignored) ignore type: true

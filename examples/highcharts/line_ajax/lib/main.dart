@@ -5,7 +5,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/Highcharts.dart';
-import 'package:highcharts_flutter/types/LineSeriesOptions.dart';
 import 'package:highcharts_flutter/types/ChartOptions.dart';
 import 'package:highcharts_flutter/types/ScrollablePlotAreaOptions.dart';
 import 'package:highcharts_flutter/types/DataOptions.dart';
@@ -71,7 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
                 data: DataOptions(
-                    csvURL: "https://cdn.jsdelivr.net/gh/highcharts/highcharts@v7.0.0/samples/data/analytics.csv",
+                    csvURL: "https://www.highcharts.com/samples/data/analytics.csv",
                 ),
                 title: TitleOptions(
                     text: "Daily sessions at www.highcharts.com",

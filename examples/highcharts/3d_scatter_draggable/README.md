@@ -1,6 +1,6 @@
 # 3D scatter chart demo
 
-**Highcharts demo**
+**Highcharts demo**,**Dynamic**
 Chart demonstrating a 3D scatter plot, where the chart can be rotated to
         inspect points from different angles. Each point has an x, y, and z
         coordinate value.

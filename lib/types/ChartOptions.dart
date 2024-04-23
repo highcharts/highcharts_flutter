@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -213,11 +213,11 @@ class ChartOptions extends OptionFragment {
     // NOTE: skip serialization of axisLayoutRuns (type number is ignored) ignore type: true
 
     if (this.backgroundColor != null) {  
-      buffer.writeAll(["\"backgroundColor\":\`",this.backgroundColor, "\`,"], "");
+      buffer.writeAll(["\"backgroundColor\":\'",this.backgroundColor, "\',"], "");
     }
 
     if (this.borderColor != null) {  
-      buffer.writeAll(["\"borderColor\":\`",this.borderColor, "\`,"], "");
+      buffer.writeAll(["\"borderColor\":\'",this.borderColor, "\',"], "");
     }
 
     if (this.borderRadius != null) {  
@@ -229,7 +229,7 @@ class ChartOptions extends OptionFragment {
     }
 
     if (this.className != null) {  
-      buffer.writeAll(["\"className\":\`",this.className, "\`,"], "");
+      buffer.writeAll(["\"className\":\'",this.className, "\',"], "");
     }
 
     if (this.colorCount != null) {  
@@ -247,7 +247,7 @@ class ChartOptions extends OptionFragment {
     }
 
     if (this.height != null) {  
-      buffer.writeAll(["\"height\":\`",this.height, "\`,"], "");
+      buffer.writeAll(["\"height\":\'",this.height, "\',"], "");
     }
 
     if (this.ignoreHiddenSeries != null) {  
@@ -297,7 +297,7 @@ class ChartOptions extends OptionFragment {
     }
 
     if (this.panKey != null) {  
-      buffer.writeAll(["\"panKey\":\`",this.panKey, "\`,"], "");
+      buffer.writeAll(["\"panKey\":\'",this.panKey, "\',"], "");
     }
 
     if (this.panning != null) {  
@@ -305,19 +305,19 @@ class ChartOptions extends OptionFragment {
     }
 
     if (this.pinchType != null) {  
-      buffer.writeAll(["\"pinchType\":\`",this.pinchType, "\`,"], "");
+      buffer.writeAll(["\"pinchType\":\'",this.pinchType, "\',"], "");
     }
 
     if (this.plotBackgroundColor != null) {  
-      buffer.writeAll(["\"plotBackgroundColor\":\`",this.plotBackgroundColor, "\`,"], "");
+      buffer.writeAll(["\"plotBackgroundColor\":\'",this.plotBackgroundColor, "\',"], "");
     }
 
     if (this.plotBackgroundImage != null) {  
-      buffer.writeAll(["\"plotBackgroundImage\":\`",this.plotBackgroundImage, "\`,"], "");
+      buffer.writeAll(["\"plotBackgroundImage\":\'",this.plotBackgroundImage, "\',"], "");
     }
 
     if (this.plotBorderColor != null) {  
-      buffer.writeAll(["\"plotBorderColor\":\`",this.plotBorderColor, "\`,"], "");
+      buffer.writeAll(["\"plotBorderColor\":\'",this.plotBorderColor, "\',"], "");
     }
 
     if (this.plotBorderWidth != null) {  
@@ -331,7 +331,7 @@ class ChartOptions extends OptionFragment {
     }
 
     if (this.renderTo != null) {  
-      buffer.writeAll(["\"renderTo\":\`",this.renderTo, "\`,"], "");
+      buffer.writeAll(["\"renderTo\":\'",this.renderTo, "\',"], "");
     }
 
     if (this.resetZoomButton != null) {  
@@ -341,7 +341,7 @@ class ChartOptions extends OptionFragment {
     // NOTE: skip serialization of shadow (type Generic is ignored) ignore type: true
 
     if (this.selectionMarkerFill != null) {  
-      buffer.writeAll(["\"selectionMarkerFill\":\`",this.selectionMarkerFill, "\`,"], "");
+      buffer.writeAll(["\"selectionMarkerFill\":\'",this.selectionMarkerFill, "\',"], "");
     }
 
     // NOTE: skip serialization of seriesGroupShadow (type Generic is ignored) ignore type: true
@@ -383,7 +383,7 @@ class ChartOptions extends OptionFragment {
     }
 
     if (this.type != null) {  
-      buffer.writeAll(["\"type\":\`",this.type, "\`,"], "");
+      buffer.writeAll(["\"type\":\'",this.type, "\',"], "");
     }
 
     if (this.width != null) {  
@@ -395,7 +395,7 @@ class ChartOptions extends OptionFragment {
     // NOTE: skip serialization of zooming (type Generic is ignored) ignore type: true
 
     if (this.zoomType != null) {  
-      buffer.writeAll(["\"zoomType\":\`",this.zoomType, "\`,"], "");
+      buffer.writeAll(["\"zoomType\":\'",this.zoomType, "\',"], "");
     }
 
     // NOTE: skip serialization of forExport (type boolean is ignored) ignore type: true
@@ -421,7 +421,7 @@ class ChartOptions extends OptionFragment {
     }
 
     if (this.zoomKey != null) {  
-      buffer.writeAll(["\"zoomKey\":\`",this.zoomKey, "\`,"], "");
+      buffer.writeAll(["\"zoomKey\":\'",this.zoomKey, "\',"], "");
     }
 
     if (this.scrollablePlotArea != null) {  

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -123,7 +123,7 @@ class HistogramSeriesOptions extends ColumnSeriesOptions {
     // NOTE: skip serialization of baseSeries (type string is ignored) ignore type: true
 
     if (this.binsNumber != null) {  
-      buffer.writeAll(["\"binsNumber\":\`",this.binsNumber, "\`,"], "");
+      buffer.writeAll(["\"binsNumber\":\'",this.binsNumber, "\',"], "");
     }
 
     if (this.binWidth != null) {  

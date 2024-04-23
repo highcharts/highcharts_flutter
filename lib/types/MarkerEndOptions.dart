@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -45,7 +45,7 @@ class MarkerEndOptions extends OptionFragment {
 
     
     if (this.markerType != null) {  
-      buffer.writeAll(["\"markerType\":\`",this.markerType, "\`,"], "");
+      buffer.writeAll(["\"markerType\":\'",this.markerType, "\',"], "");
     }
 
     if (this.enabled != null) {  
@@ -53,11 +53,11 @@ class MarkerEndOptions extends OptionFragment {
     }
 
     if (this.width != null) {  
-      buffer.writeAll(["\"width\":\`",this.width, "\`,"], "");
+      buffer.writeAll(["\"width\":\'",this.width, "\',"], "");
     }
 
     if (this.height != null) {  
-      buffer.writeAll(["\"height\":\`",this.height, "\`,"], "");
+      buffer.writeAll(["\"height\":\'",this.height, "\',"], "");
     }
   }
 

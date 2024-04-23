@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -53,11 +53,17 @@ class BubbleSeries extends Series {
       StringBuffer seriesData = StringBuffer();
 
       for (var point in this.data!) {
-        seriesData.writeAll(["["], "");
-        for (var item in point) {
-          seriesData.writeAll([item, ","]);
+        if (point.length > 1) {
+          seriesData.writeAll(["["], "");
         }
-        seriesData.writeAll(["],"], "");
+
+        seriesData.writeAll(point, ",");
+
+        if (point.length > 1) {
+          seriesData.writeAll(["],"], "");
+        } else {
+          seriesData.write(",");
+        }
       }
 
       buffer.writeAll(["\"data\": [", seriesData, "],"], "");   
@@ -86,15 +92,15 @@ class BubbleSeries extends Series {
     // NOTE: skip serialization of marker (type BubblePointMarkerOptions is ignored) ignore type: false
 
     if (this.options?.minSize != null) {  
-      buffer.writeAll(["\"minSize\":\`",this.options?.minSize, "\`,"], "");
+      buffer.writeAll(["\"minSize\":\'",this.options?.minSize, "\',"], "");
     }
 
     if (this.options?.maxSize != null) {  
-      buffer.writeAll(["\"maxSize\":\`",this.options?.maxSize, "\`,"], "");
+      buffer.writeAll(["\"maxSize\":\'",this.options?.maxSize, "\',"], "");
     }
 
     if (this.options?.sizeBy != null) {  
-      buffer.writeAll(["\"sizeBy\":\`",this.options?.sizeBy, "\`,"], "");
+      buffer.writeAll(["\"sizeBy\":\'",this.options?.sizeBy, "\',"], "");
     }
 
     if (this.options?.sizeByAbsoluteValue != null) {  

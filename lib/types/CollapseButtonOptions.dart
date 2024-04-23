@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -79,7 +79,7 @@ class CollapseButtonOptions extends OptionFragment {
     }
 
     if (this.shape != null) {  
-      buffer.writeAll(["\"shape\":\`",this.shape, "\`,"], "");
+      buffer.writeAll(["\"shape\":\'",this.shape, "\',"], "");
     }
 
     // NOTE: skip serialization of lineColor (type string is ignored) ignore type: true

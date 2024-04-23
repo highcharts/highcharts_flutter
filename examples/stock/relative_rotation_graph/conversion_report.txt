@@ -1,0 +1,144 @@
+[
+  {
+    "type": "missing_mapping",
+    "path": "chart.style.fontFamily",
+    "member": {
+      "name": "fontFamily",
+      "type": "string",
+      "optional": true
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "annotations.shapes.points"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "annotations.shapes.points"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "annotations.shapes.points"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "annotations.shapes.points"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "annotations.labelOptions.style.fontSize",
+    "member": {
+      "name": "fontSize",
+      "type": "string",
+      "optional": true,
+      "originalType": "string | number"
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "annotations.labelOptions.style.fontWeight",
+    "member": {
+      "name": "fontWeight",
+      "type": "string",
+      "optional": true
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "annotations.labelOptions.style.textOutline",
+    "member": {
+      "name": "textOutline",
+      "type": "string",
+      "optional": true
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "annotations.labels.style.color",
+    "member": {
+      "name": "color",
+      "type": "string",
+      "optional": true
+    }
+  },
+  {
+    "path": "annotations.labels",
+    "parentType": "ControllableLabelOptions",
+    "memberName": "point",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "annotations.labels.style.color",
+    "member": {
+      "name": "color",
+      "type": "string",
+      "optional": true
+    }
+  },
+  {
+    "path": "annotations.labels",
+    "parentType": "ControllableLabelOptions",
+    "memberName": "point",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "annotations.labels.style.color",
+    "member": {
+      "name": "color",
+      "type": "string",
+      "optional": true
+    }
+  },
+  {
+    "path": "annotations.labels",
+    "parentType": "ControllableLabelOptions",
+    "memberName": "point",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "annotations.labels.style.color",
+    "member": {
+      "name": "color",
+      "type": "string",
+      "optional": true
+    }
+  },
+  {
+    "path": "annotations.labels",
+    "parentType": "ControllableLabelOptions",
+    "memberName": "point",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "xAxis.plotLines"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "xAxis.title"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "yAxis.plotLines"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "yAxis.title"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "navigation.buttonOptions.theme.fill",
+    "member": {
+      "name": "fill",
+      "type": "string",
+      "optional": true
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "responsive"
+  }
+]

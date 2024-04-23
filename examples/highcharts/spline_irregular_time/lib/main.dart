@@ -5,7 +5,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/Highcharts.dart';
-import 'package:highcharts_flutter/types/LineSeriesOptions.dart';
 import 'package:highcharts_flutter/types/ChartOptions.dart';
 import 'package:highcharts_flutter/types/TitleOptions.dart';
 import 'package:highcharts_flutter/types/SubtitleOptions.dart';
@@ -63,9 +62,11 @@ class _MyHomePageState extends State<MyHomePage> {
               HighchartsOptions(
                 title: TitleOptions(
                     text: "Snow depth at Vikjafjellet, Norway",
+                    align: "left",
                 ),
                 subtitle: SubtitleOptions(
                     text: "Irregular time data in Highcharts JS",
+                    align: "left",
                 ),
                 xAxis: [ 
                   XAxisOptions( 
@@ -84,8 +85,13 @@ class _MyHomePageState extends State<MyHomePage> {
                 plotOptions: HighchartsPlotOptions(
                   series: SeriesOptions(
                     marker: PointMarkerOptions(
+                        symbol: "circle",
+                        fillColor: "#FFFFFF",
                         enabled: true,
                         radius: 2.5,
+                        lineWidth: 1,
+                      lineColor: string(
+                      ),
                     ),
                   ),
                 ),

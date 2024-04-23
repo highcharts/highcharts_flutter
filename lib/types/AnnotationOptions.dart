@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -88,7 +88,7 @@ class AnnotationOptions extends ControlTargetOptions {
     }
 
     if (this.draggable != null) {  
-      buffer.writeAll(["\"draggable\":\`",this.draggable, "\`,"], "");
+      buffer.writeAll(["\"draggable\":\'",this.draggable, "\',"], "");
     }
 
     if (this.events != null) {  
@@ -96,7 +96,7 @@ class AnnotationOptions extends ControlTargetOptions {
     }
 
     if (this.id != null) {  
-      buffer.writeAll(["\"id\":\`",this.id, "\`,"], "");
+      buffer.writeAll(["\"id\":\'",this.id, "\',"], "");
     }
 
     // NOTE: skip serialization of itemType (type string is ignored) ignore type: true

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -53,11 +53,17 @@ class SolidGaugeSeries extends Series {
       StringBuffer seriesData = StringBuffer();
 
       for (var point in this.data!) {
-        seriesData.writeAll(["["], "");
-        for (var item in point) {
-          seriesData.writeAll([item, ","]);
+        if (point.length > 1) {
+          seriesData.writeAll(["["], "");
         }
-        seriesData.writeAll(["],"], "");
+
+        seriesData.writeAll(point, ",");
+
+        if (point.length > 1) {
+          seriesData.writeAll(["],"], "");
+        } else {
+          seriesData.write(",");
+        }
       }
 
       buffer.writeAll(["\"data\": [", seriesData, "],"], "");   
@@ -80,11 +86,11 @@ class SolidGaugeSeries extends Series {
 
     
     if (this.options?.innerRadius != null) {  
-      buffer.writeAll(["\"innerRadius\":\`",this.options?.innerRadius, "\`,"], "");
+      buffer.writeAll(["\"innerRadius\":\'",this.options?.innerRadius, "\',"], "");
     }
 
     if (this.options?.linecap != null) {  
-      buffer.writeAll(["\"linecap\":\`",this.options?.linecap, "\`,"], "");
+      buffer.writeAll(["\"linecap\":\'",this.options?.linecap, "\',"], "");
     }
 
     if (this.options?.overshoot != null) {  
@@ -92,7 +98,7 @@ class SolidGaugeSeries extends Series {
     }
 
     if (this.options?.radius != null) {  
-      buffer.writeAll(["\"radius\":\`",this.options?.radius, "\`,"], "");
+      buffer.writeAll(["\"radius\":\'",this.options?.radius, "\',"], "");
     }
 
     if (this.options?.rounded != null) {  

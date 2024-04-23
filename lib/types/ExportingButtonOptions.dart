@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -103,11 +103,11 @@ class ExportingButtonOptions extends OptionFragment {
 
     
     if (this.p_titleKey != null) {  
-      buffer.writeAll(["\"_titleKey\":\`",this.p_titleKey, "\`,"], "");
+      buffer.writeAll(["\"_titleKey\":\'",this.p_titleKey, "\',"], "");
     }
 
     if (this.align != null) {  
-      buffer.writeAll(["\"align\":\`",this.align, "\`,"], "");
+      buffer.writeAll(["\"align\":\'",this.align, "\',"], "");
     }
 
     if (this.buttonSpacing != null) {  
@@ -115,7 +115,7 @@ class ExportingButtonOptions extends OptionFragment {
     }
 
     if (this.className != null) {  
-      buffer.writeAll(["\"className\":\`",this.className, "\`,"], "");
+      buffer.writeAll(["\"className\":\'",this.className, "\',"], "");
     }
 
     if (this.enabled != null) {  
@@ -127,7 +127,7 @@ class ExportingButtonOptions extends OptionFragment {
     }
 
     if (this.menuClassName != null) {  
-      buffer.writeAll(["\"menuClassName\":\`",this.menuClassName, "\`,"], "");
+      buffer.writeAll(["\"menuClassName\":\'",this.menuClassName, "\',"], "");
     }
 
     if (this.menuItems != null) {  
@@ -141,11 +141,11 @@ class ExportingButtonOptions extends OptionFragment {
     // NOTE: skip serialization of onclick (type Function is ignored) ignore type: 1
 
     if (this.symbol != null) {  
-      buffer.writeAll(["\"symbol\":\`",this.symbol, "\`,"], "");
+      buffer.writeAll(["\"symbol\":\'",this.symbol, "\',"], "");
     }
 
     if (this.symbolFill != null) {  
-      buffer.writeAll(["\"symbolFill\":\`",this.symbolFill, "\`,"], "");
+      buffer.writeAll(["\"symbolFill\":\'",this.symbolFill, "\',"], "");
     }
 
     if (this.symbolSize != null) {  
@@ -153,7 +153,7 @@ class ExportingButtonOptions extends OptionFragment {
     }
 
     if (this.symbolStroke != null) {  
-      buffer.writeAll(["\"symbolStroke\":\`",this.symbolStroke, "\`,"], "");
+      buffer.writeAll(["\"symbolStroke\":\'",this.symbolStroke, "\',"], "");
     }
 
     if (this.symbolStrokeWidth != null) {  
@@ -169,7 +169,7 @@ class ExportingButtonOptions extends OptionFragment {
     }
 
     if (this.text != null) {  
-      buffer.writeAll(["\"text\":\`",this.text, "\`,"], "");
+      buffer.writeAll(["\"text\":\'",this.text, "\',"], "");
     }
 
     if (this.theme != null) {  
@@ -177,7 +177,7 @@ class ExportingButtonOptions extends OptionFragment {
     }
 
     if (this.titleKey != null) {  
-      buffer.writeAll(["\"titleKey\":\`",this.titleKey, "\`,"], "");
+      buffer.writeAll(["\"titleKey\":\'",this.titleKey, "\',"], "");
     }
 
     if (this.useHTML != null) {  
@@ -185,7 +185,7 @@ class ExportingButtonOptions extends OptionFragment {
     }
 
     if (this.verticalAlign != null) {  
-      buffer.writeAll(["\"verticalAlign\":\`",this.verticalAlign, "\`,"], "");
+      buffer.writeAll(["\"verticalAlign\":\'",this.verticalAlign, "\',"], "");
     }
 
     if (this.width != null) {  

@@ -1,0 +1,59 @@
+[
+  {
+    "type": "missing_mapping",
+    "path": "plotOptions.series.dataLabels.distance",
+    "member": {
+      "name": "distance",
+      "type": "string",
+      "optional": true,
+      "originalType": "string | number"
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "plotOptions.series.dataLabels.distance",
+    "member": {
+      "name": "distance",
+      "type": "string",
+      "optional": true,
+      "originalType": "string | number"
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "plotOptions.series.dataLabels.style.fontSize",
+    "member": {
+      "name": "fontSize",
+      "type": "string",
+      "optional": true,
+      "originalType": "string | number"
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "plotOptions.series.dataLabels.style.textOutline",
+    "member": {
+      "name": "textOutline",
+      "type": "string",
+      "optional": true
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "plotOptions.series.dataLabels.style.opacity",
+    "member": {
+      "name": "opacity",
+      "type": "number",
+      "optional": true
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "series.colorByPoint",
+    "member": {
+      "name": "colorByPoint",
+      "type": "boolean",
+      "optional": true
+    }
+  }
+]

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -130,7 +130,7 @@ class DumbbellSeriesOptions extends AreaRangeSeriesOptions {
     // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
 
     if (this.connectorColor != null) {  
-      buffer.writeAll(["\"connectorColor\":\`",this.connectorColor, "\`,"], "");
+      buffer.writeAll(["\"connectorColor\":\'",this.connectorColor, "\',"], "");
     }
 
     if (this.connectorWidth != null) {  
@@ -146,7 +146,7 @@ class DumbbellSeriesOptions extends AreaRangeSeriesOptions {
     }
 
     if (this.lowColor != null) {  
-      buffer.writeAll(["\"lowColor\":\`",this.lowColor, "\`,"], "");
+      buffer.writeAll(["\"lowColor\":\'",this.lowColor, "\',"], "");
     }
   }
 

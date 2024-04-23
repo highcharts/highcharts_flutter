@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -60,11 +60,11 @@ class GaugeSeriesDialOptions extends OptionFragment {
 
     
     if (this.backgroundColor != null) {  
-      buffer.writeAll(["\"backgroundColor\":\`",this.backgroundColor, "\`,"], "");
+      buffer.writeAll(["\"backgroundColor\":\'",this.backgroundColor, "\',"], "");
     }
 
     if (this.baseLength != null) {  
-      buffer.writeAll(["\"baseLength\":\`",this.baseLength, "\`,"], "");
+      buffer.writeAll(["\"baseLength\":\'",this.baseLength, "\',"], "");
     }
 
     if (this.baseWidth != null) {  
@@ -72,7 +72,7 @@ class GaugeSeriesDialOptions extends OptionFragment {
     }
 
     if (this.borderColor != null) {  
-      buffer.writeAll(["\"borderColor\":\`",this.borderColor, "\`,"], "");
+      buffer.writeAll(["\"borderColor\":\'",this.borderColor, "\',"], "");
     }
 
     if (this.borderWidth != null) {  
@@ -92,11 +92,11 @@ class GaugeSeriesDialOptions extends OptionFragment {
     }
 
     if (this.radius != null) {  
-      buffer.writeAll(["\"radius\":\`",this.radius, "\`,"], "");
+      buffer.writeAll(["\"radius\":\'",this.radius, "\',"], "");
     }
 
     if (this.rearLength != null) {  
-      buffer.writeAll(["\"rearLength\":\`",this.rearLength, "\`,"], "");
+      buffer.writeAll(["\"rearLength\":\'",this.rearLength, "\',"], "");
     }
 
     if (this.topWidth != null) {  

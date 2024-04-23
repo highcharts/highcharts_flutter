@@ -5,9 +5,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/Highcharts.dart';
-import 'package:highcharts_flutter/types/LineSeriesOptions.dart';
 import 'package:highcharts_flutter/types/ChartOptions.dart';
-import 'package:highcharts_flutter/types/string.dart';
 import 'package:highcharts_flutter/types/TitleOptions.dart';
 import 'package:highcharts_flutter/types/ExportingOptions.dart';
 import 'package:highcharts_flutter/types/TooltipOptions.dart';
@@ -63,8 +61,6 @@ class _MyHomePageState extends State<MyHomePage> {
               HighchartsOptions(
                 chart: ChartOptions(
                     plotBorderWidth: 1,
-                  plotBackgroundColor: string(
-                  ),
                   plotBackgroundImage: string(
                   ),
                     height: 200,

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -141,11 +141,11 @@ class TooltipOptions extends OptionFragment {
     }
 
     if (this.backgroundColor != null) {  
-      buffer.writeAll(["\"backgroundColor\":\`",this.backgroundColor, "\`,"], "");
+      buffer.writeAll(["\"backgroundColor\":\'",this.backgroundColor, "\',"], "");
     }
 
     if (this.borderColor != null) {  
-      buffer.writeAll(["\"borderColor\":\`",this.borderColor, "\`,"], "");
+      buffer.writeAll(["\"borderColor\":\'",this.borderColor, "\',"], "");
     }
 
     if (this.borderRadius != null) {  
@@ -157,7 +157,7 @@ class TooltipOptions extends OptionFragment {
     }
 
     if (this.className != null) {  
-      buffer.writeAll(["\"className\":\`",this.className, "\`,"], "");
+      buffer.writeAll(["\"className\":\'",this.className, "\',"], "");
     }
 
     if (this.changeDecimals != null) {  
@@ -185,19 +185,19 @@ class TooltipOptions extends OptionFragment {
     }
 
     if (this.footerFormat != null) {  
-      buffer.writeAll(["\"footerFormat\":\`",this.footerFormat, "\`,"], "");
+      buffer.writeAll(["\"footerFormat\":\'",this.footerFormat, "\',"], "");
     }
 
     if (this.format != null) {  
-      buffer.writeAll(["\"format\":\`",this.format, "\`,"], "");
+      buffer.writeAll(["\"format\":\'",this.format, "\',"], "");
     }
 
     if (this.headerFormat != null) {  
-      buffer.writeAll(["\"headerFormat\":\`",this.headerFormat, "\`,"], "");
+      buffer.writeAll(["\"headerFormat\":\'",this.headerFormat, "\',"], "");
     }
 
     if (this.headerShape != null) {  
-      buffer.writeAll(["\"headerShape\":\`",this.headerShape, "\`,"], "");
+      buffer.writeAll(["\"headerShape\":\'",this.headerShape, "\',"], "");
     }
 
     if (this.hideDelay != null) {  
@@ -205,7 +205,7 @@ class TooltipOptions extends OptionFragment {
     }
 
     if (this.nullFormat != null) {  
-      buffer.writeAll(["\"nullFormat\":\`",this.nullFormat, "\`,"], "");
+      buffer.writeAll(["\"nullFormat\":\'",this.nullFormat, "\',"], "");
     }
 
     if (this.outside != null) {  
@@ -217,13 +217,13 @@ class TooltipOptions extends OptionFragment {
     }
 
     if (this.pointFormat != null) {  
-      buffer.writeAll(["\"pointFormat\":\`",this.pointFormat, "\`,"], "");
+      buffer.writeAll(["\"pointFormat\":\'",this.pointFormat, "\',"], "");
     }
 
     // NOTE: skip serialization of shadow (type Generic is ignored) ignore type: true
 
     if (this.shape != null) {  
-      buffer.writeAll(["\"shape\":\`",this.shape, "\`,"], "");
+      buffer.writeAll(["\"shape\":\'",this.shape, "\',"], "");
     }
 
     if (this.shared != null) {  
@@ -257,19 +257,19 @@ class TooltipOptions extends OptionFragment {
     }
 
     if (this.valuePrefix != null) {  
-      buffer.writeAll(["\"valuePrefix\":\`",this.valuePrefix, "\`,"], "");
+      buffer.writeAll(["\"valuePrefix\":\'",this.valuePrefix, "\',"], "");
     }
 
     if (this.valueSuffix != null) {  
-      buffer.writeAll(["\"valueSuffix\":\`",this.valueSuffix, "\`,"], "");
+      buffer.writeAll(["\"valueSuffix\":\'",this.valueSuffix, "\',"], "");
     }
 
     if (this.xDateFormat != null) {  
-      buffer.writeAll(["\"xDateFormat\":\`",this.xDateFormat, "\`,"], "");
+      buffer.writeAll(["\"xDateFormat\":\'",this.xDateFormat, "\',"], "");
     }
 
     if (this.clusterFormat != null) {  
-      buffer.writeAll(["\"clusterFormat\":\`",this.clusterFormat, "\`,"], "");
+      buffer.writeAll(["\"clusterFormat\":\'",this.clusterFormat, "\',"], "");
     }
   }
 

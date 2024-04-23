@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -53,11 +53,17 @@ class AOSeries extends Series {
       StringBuffer seriesData = StringBuffer();
 
       for (var point in this.data!) {
-        seriesData.writeAll(["["], "");
-        for (var item in point) {
-          seriesData.writeAll([item, ","]);
+        if (point.length > 1) {
+          seriesData.writeAll(["["], "");
         }
-        seriesData.writeAll(["],"], "");
+
+        seriesData.writeAll(point, ",");
+
+        if (point.length > 1) {
+          seriesData.writeAll(["],"], "");
+        } else {
+          seriesData.write(",");
+        }
       }
 
       buffer.writeAll(["\"data\": [", seriesData, "],"], "");   
@@ -80,7 +86,7 @@ class AOSeries extends Series {
 
     
     if (this.options?.greaterBarColor != null) {  
-      buffer.writeAll(["\"greaterBarColor\":\`",this.options?.greaterBarColor, "\`,"], "");
+      buffer.writeAll(["\"greaterBarColor\":\'",this.options?.greaterBarColor, "\',"], "");
     }
 
     if (this.options?.groupPadding != null) {  
@@ -88,7 +94,7 @@ class AOSeries extends Series {
     }
 
     if (this.options?.lowerBarColor != null) {  
-      buffer.writeAll(["\"lowerBarColor\":\`",this.options?.lowerBarColor, "\`,"], "");
+      buffer.writeAll(["\"lowerBarColor\":\'",this.options?.lowerBarColor, "\',"], "");
     }
 
     if (this.options?.pointPadding != null) {  

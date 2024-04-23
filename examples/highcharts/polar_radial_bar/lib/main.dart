@@ -5,7 +5,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/Highcharts.dart';
-import 'package:highcharts_flutter/types/LineSeriesOptions.dart';
 import 'package:highcharts_flutter/types/ChartOptions.dart';
 import 'package:highcharts_flutter/types/TitleOptions.dart';
 import 'package:highcharts_flutter/types/SubtitleOptions.dart';
@@ -14,6 +13,7 @@ import 'package:highcharts_flutter/types/XAxisOptions.dart';
 import 'package:highcharts_flutter/types/YAxisOptions.dart';
 import 'package:highcharts_flutter/types/HighchartsPlotOptions.dart';
 import 'package:highcharts_flutter/types/ColumnSeriesOptions.dart';
+import 'package:highcharts_flutter/types/BorderRadiusOptionsObject.dart';
 import 'package:highcharts_flutter/types/ColumnSeries.dart';
 
 void main() {
@@ -78,6 +78,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   XAxisOptions( 
                       tickInterval: 1,
                       lineWidth: 0,
+                      gridLineWidth: 0,
                   ),
                 ],
                 yAxis: [ 
@@ -87,6 +88,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       reversedStacks: false,
                       endOnTick: true,
                       showLastLabel: true,
+                      gridLineWidth: 0,
                   ),
                 ],
                 plotOptions: HighchartsPlotOptions(
@@ -94,6 +96,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       stacking: "normal",
                       borderWidth: 0,
                       pointPadding: 0,
+                     borderRadius: BorderRadiusOptionsObject(),
                   ),
                 ),
                 series: [ 

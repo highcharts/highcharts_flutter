@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -45,11 +45,11 @@ class TreemapSeriesUpButtonPositionOptions extends OptionFragment {
 
     
     if (this.align != null) {  
-      buffer.writeAll(["\"align\":\`",this.align, "\`,"], "");
+      buffer.writeAll(["\"align\":\'",this.align, "\',"], "");
     }
 
     if (this.verticalAlign != null) {  
-      buffer.writeAll(["\"verticalAlign\":\`",this.verticalAlign, "\`,"], "");
+      buffer.writeAll(["\"verticalAlign\":\'",this.verticalAlign, "\',"], "");
     }
 
     if (this.x != null) {  

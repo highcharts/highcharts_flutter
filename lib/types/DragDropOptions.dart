@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -108,7 +108,7 @@ class DragDropOptions extends OptionFragment {
     }
 
     if (this.groupBy != null) {  
-      buffer.writeAll(["\"groupBy\":\`",this.groupBy, "\`,"], "");
+      buffer.writeAll(["\"groupBy\":\'",this.groupBy, "\',"], "");
     }
 
     if (this.guideBox != null) {  

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -42,7 +42,7 @@ class RangeSelectorPositionOptions extends OptionFragment {
 
     
     if (this.align != null) {  
-      buffer.writeAll(["\"align\":\`",this.align, "\`,"], "");
+      buffer.writeAll(["\"align\":\'",this.align, "\',"], "");
     }
 
     if (this.x != null) {  

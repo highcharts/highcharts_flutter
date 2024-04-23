@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -134,11 +134,11 @@ class YAxisOptions extends AxisOptions {
 
     
     if (this.maxColor != null) {  
-      buffer.writeAll(["\"maxColor\":\`",this.maxColor, "\`,"], "");
+      buffer.writeAll(["\"maxColor\":\'",this.maxColor, "\',"], "");
     }
 
     if (this.minColor != null) {  
-      buffer.writeAll(["\"minColor\":\`",this.minColor, "\`,"], "");
+      buffer.writeAll(["\"minColor\":\'",this.minColor, "\',"], "");
     }
 
     if (this.staticScale != null) {  
@@ -158,7 +158,7 @@ class YAxisOptions extends AxisOptions {
     }
 
     if (this.tooltipValueFormat != null) {  
-      buffer.writeAll(["\"tooltipValueFormat\":\`",this.tooltipValueFormat, "\`,"], "");
+      buffer.writeAll(["\"tooltipValueFormat\":\'",this.tooltipValueFormat, "\',"], "");
     }
   }
 

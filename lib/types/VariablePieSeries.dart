@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -53,11 +53,17 @@ class VariablePieSeries extends Series {
       StringBuffer seriesData = StringBuffer();
 
       for (var point in this.data!) {
-        seriesData.writeAll(["["], "");
-        for (var item in point) {
-          seriesData.writeAll([item, ","]);
+        if (point.length > 1) {
+          seriesData.writeAll(["["], "");
         }
-        seriesData.writeAll(["],"], "");
+
+        seriesData.writeAll(point, ",");
+
+        if (point.length > 1) {
+          seriesData.writeAll(["],"], "");
+        } else {
+          seriesData.write(",");
+        }
       }
 
       buffer.writeAll(["\"data\": [", seriesData, "],"], "");   
@@ -80,15 +86,15 @@ class VariablePieSeries extends Series {
 
     
     if (this.options?.maxPointSize != null) {  
-      buffer.writeAll(["\"maxPointSize\":\`",this.options?.maxPointSize, "\`,"], "");
+      buffer.writeAll(["\"maxPointSize\":\'",this.options?.maxPointSize, "\',"], "");
     }
 
     if (this.options?.minPointSize != null) {  
-      buffer.writeAll(["\"minPointSize\":\`",this.options?.minPointSize, "\`,"], "");
+      buffer.writeAll(["\"minPointSize\":\'",this.options?.minPointSize, "\',"], "");
     }
 
     if (this.options?.sizeBy != null) {  
-      buffer.writeAll(["\"sizeBy\":\`",this.options?.sizeBy, "\`,"], "");
+      buffer.writeAll(["\"sizeBy\":\'",this.options?.sizeBy, "\',"], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored) ignore type: true

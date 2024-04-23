@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -114,7 +114,7 @@ class PointOptions extends OptionFragment {
     }
 
     if (this.borderColor != null) {  
-      buffer.writeAll(["\"borderColor\":\`",this.borderColor, "\`,"], "");
+      buffer.writeAll(["\"borderColor\":\'",this.borderColor, "\',"], "");
     }
 
     if (this.dataLabels != null) {  
@@ -134,11 +134,11 @@ class PointOptions extends OptionFragment {
     // NOTE: skip serialization of value (type number is ignored) ignore type: true
 
     if (this.className != null) {  
-      buffer.writeAll(["\"className\":\`",this.className, "\`,"], "");
+      buffer.writeAll(["\"className\":\'",this.className, "\',"], "");
     }
 
     if (this.color != null) {  
-      buffer.writeAll(["\"color\":\`",this.color, "\`,"], "");
+      buffer.writeAll(["\"color\":\'",this.color, "\',"], "");
     }
 
     if (this.colorIndex != null) {  

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -254,7 +254,7 @@ class SVGAttributes extends OptionFragment {
     // NOTE: skip serialization of d (type SVGPath is ignored) ignore type: true
 
     if (this.dashstyle != null) {  
-      buffer.writeAll(["\"dashstyle\":\`",this.dashstyle, "\`,"], "");
+      buffer.writeAll(["\"dashstyle\":\'",this.dashstyle, "\',"], "");
     }
 
     // NOTE: skip serialization of depth (type number is ignored) ignore type: true
@@ -352,7 +352,7 @@ class SVGAttributes extends OptionFragment {
     // NOTE: skip serialization of stdDeviation (type number is ignored) ignore type: true
 
     if (this.stroke != null) {  
-      buffer.writeAll(["\"stroke\":\`",this.stroke, "\`,"], "");
+      buffer.writeAll(["\"stroke\":\'",this.stroke, "\',"], "");
     }
 
     // NOTE: skip serialization of stroke_linecap (type string is ignored) ignore type: true

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -51,7 +51,7 @@ class BulletTargetOptions extends OptionFragment {
 
     
     if (this.borderColor != null) {  
-      buffer.writeAll(["\"borderColor\":\`",this.borderColor, "\`,"], "");
+      buffer.writeAll(["\"borderColor\":\'",this.borderColor, "\',"], "");
     }
 
     if (this.borderRadius != null) {  
@@ -63,7 +63,7 @@ class BulletTargetOptions extends OptionFragment {
     }
 
     if (this.color != null) {  
-      buffer.writeAll(["\"color\":\`",this.color, "\`,"], "");
+      buffer.writeAll(["\"color\":\'",this.color, "\',"], "");
     }
 
     if (this.height != null) {  
@@ -71,7 +71,7 @@ class BulletTargetOptions extends OptionFragment {
     }
 
     if (this.width != null) {  
-      buffer.writeAll(["\"width\":\`",this.width, "\`,"], "");
+      buffer.writeAll(["\"width\":\'",this.width, "\',"], "");
     }
   }
 

@@ -1,0 +1,98 @@
+[
+  {
+    "type": "missing_mapping",
+    "path": "xAxis.categories"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "yAxis.labels"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "yAxis.title"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "yAxis.title"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "yAxis.labels"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "series.type",
+    "member": {
+      "name": "type",
+      "type": "string",
+      "optional": true
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "series.yAxis",
+    "member": {
+      "name": "yAxis",
+      "type": "string",
+      "optional": true,
+      "originalType": "string | number"
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "series.tooltip"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "series.type",
+    "member": {
+      "name": "type",
+      "type": "string",
+      "optional": true
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "series.yAxis",
+    "member": {
+      "name": "yAxis",
+      "type": "string",
+      "optional": true,
+      "originalType": "string | number"
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "series.tooltip"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "series.type",
+    "member": {
+      "name": "type",
+      "type": "string",
+      "optional": true
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "series.zones"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "series.tooltip"
+  },
+  {
+    "type": "missing_mapping",
+    "path": "series.type",
+    "member": {
+      "name": "type",
+      "type": "string",
+      "optional": true
+    }
+  },
+  {
+    "type": "missing_mapping",
+    "path": "series.tooltip"
+  }
+]

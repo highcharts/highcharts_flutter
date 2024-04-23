@@ -1,6 +1,6 @@
 # Spline with inverted axes demo
 
-**Highcharts demo**
+**Highcharts demo**,**Axes**
 Spline charts are smoothed line charts, and this example
         shows an inverted spline chart. Inverting the chart means the
         X-axis is positioned as the vertical axis, and the Y-axis is

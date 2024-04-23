@@ -5,9 +5,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/Highcharts.dart';
-import 'package:highcharts_flutter/types/LineSeriesOptions.dart';
 import 'package:highcharts_flutter/types/ChartOptions.dart';
 import 'package:highcharts_flutter/types/TitleOptions.dart';
+import 'package:highcharts_flutter/types/SubtitleOptions.dart';
 import 'package:highcharts_flutter/types/XAxisOptions.dart';
 import 'package:highcharts_flutter/types/YAxisOptions.dart';
 import 'package:highcharts_flutter/types/TooltipOptions.dart';
@@ -59,16 +59,19 @@ class _MyHomePageState extends State<MyHomePage> {
             HighchartsChart(
               HighchartsOptions(
                 title: TitleOptions(
-                    text: "UEFA CL most assists by season",
+                    text: "Domestic passenger transport by mode of transport, Norway",
+                    align: "left",
+                ),
+                subtitle: SubtitleOptions(
+                    text: "Source: <a href=\"https://www.ssb.no/transport-og-reiseliv/landtransport/statistikk/innenlandsk-transport\">SSB</a>",
+                    align: "left",
                 ),
                 xAxis: [ 
                   XAxisOptions( 
                     categories: [ 
-                      "2021/22", 
-                      "2020/21", 
-                      "2019/20", 
-                      "2018/19", 
-                      "2017/18", 
+                      "2019", 
+                      "2020", 
+                      "2021", 
                     ],
                   ),
                 ],
@@ -88,33 +91,35 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 series: [ 
                   ColumnSeries(
-                      name: "Kevin De Bruyne",
+                      name: "Road",
                     data: [ 
-                      [4], 
-                      [4], 
-                      [2], 
-                      [4], 
-                      [4], 
+                      [434], 
+                      [290], 
+                      [307], 
                     ],
                   ),
                   ColumnSeries(
-                      name: "Joshua Kimmich",
+                      name: "Rail",
                     data: [ 
-                      [0], 
-                      [4], 
-                      [3], 
-                      [2], 
-                      [3], 
+                      [272], 
+                      [153], 
+                      [156], 
                     ],
                   ),
                   ColumnSeries(
-                      name: "Sadio Mané",
+                      name: "Air",
                     data: [ 
-                      [1], 
-                      [2], 
-                      [2], 
-                      [1], 
-                      [2], 
+                      [13], 
+                      [7], 
+                      [8], 
+                    ],
+                  ),
+                  ColumnSeries(
+                      name: "Sea",
+                    data: [ 
+                      [55], 
+                      [35], 
+                      [41], 
                     ],
                   ),
                 ],

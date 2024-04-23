@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -53,11 +53,17 @@ class DumbbellSeries extends Series {
       StringBuffer seriesData = StringBuffer();
 
       for (var point in this.data!) {
-        seriesData.writeAll(["["], "");
-        for (var item in point) {
-          seriesData.writeAll([item, ","]);
+        if (point.length > 1) {
+          seriesData.writeAll(["["], "");
         }
-        seriesData.writeAll(["],"], "");
+
+        seriesData.writeAll(point, ",");
+
+        if (point.length > 1) {
+          seriesData.writeAll(["],"], "");
+        } else {
+          seriesData.write(",");
+        }
       }
 
       buffer.writeAll(["\"data\": [", seriesData, "],"], "");   
@@ -82,7 +88,7 @@ class DumbbellSeries extends Series {
     // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
 
     if (this.options?.connectorColor != null) {  
-      buffer.writeAll(["\"connectorColor\":\`",this.options?.connectorColor, "\`,"], "");
+      buffer.writeAll(["\"connectorColor\":\'",this.options?.connectorColor, "\',"], "");
     }
 
     if (this.options?.connectorWidth != null) {  
@@ -98,7 +104,7 @@ class DumbbellSeries extends Series {
     }
 
     if (this.options?.lowColor != null) {  
-      buffer.writeAll(["\"lowColor\":\`",this.options?.lowColor, "\`,"], "");
+      buffer.writeAll(["\"lowColor\":\'",this.options?.lowColor, "\',"], "");
     }
   }
 

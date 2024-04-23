@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -45,19 +45,19 @@ class PdfFontOptions extends OptionFragment {
 
     
     if (this.bold != null) {  
-      buffer.writeAll(["\"bold\":\`",this.bold, "\`,"], "");
+      buffer.writeAll(["\"bold\":\'",this.bold, "\',"], "");
     }
 
     if (this.bolditalic != null) {  
-      buffer.writeAll(["\"bolditalic\":\`",this.bolditalic, "\`,"], "");
+      buffer.writeAll(["\"bolditalic\":\'",this.bolditalic, "\',"], "");
     }
 
     if (this.italic != null) {  
-      buffer.writeAll(["\"italic\":\`",this.italic, "\`,"], "");
+      buffer.writeAll(["\"italic\":\'",this.italic, "\',"], "");
     }
 
     if (this.normal != null) {  
-      buffer.writeAll(["\"normal\":\`",this.normal, "\`,"], "");
+      buffer.writeAll(["\"normal\":\'",this.normal, "\',"], "");
     }
   }
 

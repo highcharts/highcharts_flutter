@@ -5,7 +5,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/Highcharts.dart';
-import 'package:highcharts_flutter/types/LineSeriesOptions.dart';
 import 'package:highcharts_flutter/types/ChartOptions.dart';
 import 'package:highcharts_flutter/types/TitleOptions.dart';
 import 'package:highcharts_flutter/types/XAxisOptions.dart';
@@ -61,6 +60,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 title: TitleOptions(
                     text: "Mobile vendor market share, 2021",
+                    align: "left",
                 ),
                 xAxis: [ 
                   XAxisOptions( 

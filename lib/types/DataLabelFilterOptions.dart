@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -42,11 +42,11 @@ class DataLabelFilterOptions extends OptionFragment {
 
     
     if (this.operator != null) {  
-      buffer.writeAll(["\"operator\":\`",this.operator, "\`,"], "");
+      buffer.writeAll(["\"operator\":\'",this.operator, "\',"], "");
     }
 
     if (this.property != null) {  
-      buffer.writeAll(["\"property\":\`",this.property, "\`,"], "");
+      buffer.writeAll(["\"property\":\'",this.property, "\',"], "");
     }
 
     if (this.value != null) {  

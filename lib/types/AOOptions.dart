@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -125,7 +125,7 @@ class AOOptions extends SMAOptions {
 
     
     if (this.greaterBarColor != null) {  
-      buffer.writeAll(["\"greaterBarColor\":\`",this.greaterBarColor, "\`,"], "");
+      buffer.writeAll(["\"greaterBarColor\":\'",this.greaterBarColor, "\',"], "");
     }
 
     if (this.groupPadding != null) {  
@@ -133,7 +133,7 @@ class AOOptions extends SMAOptions {
     }
 
     if (this.lowerBarColor != null) {  
-      buffer.writeAll(["\"lowerBarColor\":\`",this.lowerBarColor, "\`,"], "");
+      buffer.writeAll(["\"lowerBarColor\":\'",this.lowerBarColor, "\',"], "");
     }
 
     if (this.pointPadding != null) {  

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -78,7 +78,7 @@ class AccessibilityOptions extends OptionFragment {
     // NOTE: skip serialization of customComponents (type AnyRecord is ignored) ignore type: 1
 
     if (this.description != null) {  
-      buffer.writeAll(["\"description\":\`",this.description, "\`,"], "");
+      buffer.writeAll(["\"description\":\'",this.description, "\',"], "");
     }
 
     if (this.enabled != null) {  
@@ -94,11 +94,11 @@ class AccessibilityOptions extends OptionFragment {
     }
 
     if (this.landmarkVerbosity != null) {  
-      buffer.writeAll(["\"landmarkVerbosity\":\`",this.landmarkVerbosity, "\`,"], "");
+      buffer.writeAll(["\"landmarkVerbosity\":\'",this.landmarkVerbosity, "\',"], "");
     }
 
     if (this.linkedDescription != null) {  
-      buffer.writeAll(["\"linkedDescription\":\`",this.linkedDescription, "\`,"], "");
+      buffer.writeAll(["\"linkedDescription\":\'",this.linkedDescription, "\',"], "");
     }
 
     if (this.point != null) {  
@@ -114,7 +114,7 @@ class AccessibilityOptions extends OptionFragment {
     }
 
     if (this.typeDescription != null) {  
-      buffer.writeAll(["\"typeDescription\":\`",this.typeDescription, "\`,"], "");
+      buffer.writeAll(["\"typeDescription\":\'",this.typeDescription, "\',"], "");
     }
   }
 

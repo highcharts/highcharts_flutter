@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -53,11 +53,17 @@ class BoxPlotSeries extends Series {
       StringBuffer seriesData = StringBuffer();
 
       for (var point in this.data!) {
-        seriesData.writeAll(["["], "");
-        for (var item in point) {
-          seriesData.writeAll([item, ","]);
+        if (point.length > 1) {
+          seriesData.writeAll(["["], "");
         }
-        seriesData.writeAll(["],"], "");
+
+        seriesData.writeAll(point, ",");
+
+        if (point.length > 1) {
+          seriesData.writeAll(["],"], "");
+        } else {
+          seriesData.write(",");
+        }
       }
 
       buffer.writeAll(["\"data\": [", seriesData, "],"], "");   
@@ -80,11 +86,11 @@ class BoxPlotSeries extends Series {
 
     
     if (this.options?.boxDashStyle != null) {  
-      buffer.writeAll(["\"boxDashStyle\":\`",this.options?.boxDashStyle, "\`,"], "");
+      buffer.writeAll(["\"boxDashStyle\":\'",this.options?.boxDashStyle, "\',"], "");
     }
 
     if (this.options?.fillColor != null) {  
-      buffer.writeAll(["\"fillColor\":\`",this.options?.fillColor, "\`,"], "");
+      buffer.writeAll(["\"fillColor\":\'",this.options?.fillColor, "\',"], "");
     }
 
     if (this.options?.medianColor != null) {  
@@ -92,7 +98,7 @@ class BoxPlotSeries extends Series {
     }
 
     if (this.options?.medianDashStyle != null) {  
-      buffer.writeAll(["\"medianDashStyle\":\`",this.options?.medianDashStyle, "\`,"], "");
+      buffer.writeAll(["\"medianDashStyle\":\'",this.options?.medianDashStyle, "\',"], "");
     }
 
     if (this.options?.medianWidth != null) {  
@@ -102,11 +108,11 @@ class BoxPlotSeries extends Series {
     // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
 
     if (this.options?.stemColor != null) {  
-      buffer.writeAll(["\"stemColor\":\`",this.options?.stemColor, "\`,"], "");
+      buffer.writeAll(["\"stemColor\":\'",this.options?.stemColor, "\',"], "");
     }
 
     if (this.options?.stemDashStyle != null) {  
-      buffer.writeAll(["\"stemDashStyle\":\`",this.options?.stemDashStyle, "\`,"], "");
+      buffer.writeAll(["\"stemDashStyle\":\'",this.options?.stemDashStyle, "\',"], "");
     }
 
     if (this.options?.stemWidth != null) {  
@@ -114,15 +120,15 @@ class BoxPlotSeries extends Series {
     }
 
     if (this.options?.whiskerColor != null) {  
-      buffer.writeAll(["\"whiskerColor\":\`",this.options?.whiskerColor, "\`,"], "");
+      buffer.writeAll(["\"whiskerColor\":\'",this.options?.whiskerColor, "\',"], "");
     }
 
     if (this.options?.whiskerDashStyle != null) {  
-      buffer.writeAll(["\"whiskerDashStyle\":\`",this.options?.whiskerDashStyle, "\`,"], "");
+      buffer.writeAll(["\"whiskerDashStyle\":\'",this.options?.whiskerDashStyle, "\',"], "");
     }
 
     if (this.options?.whiskerLength != null) {  
-      buffer.writeAll(["\"whiskerLength\":\`",this.options?.whiskerLength, "\`,"], "");
+      buffer.writeAll(["\"whiskerLength\":\'",this.options?.whiskerLength, "\',"], "");
     }
 
     if (this.options?.whiskerWidth != null) {  

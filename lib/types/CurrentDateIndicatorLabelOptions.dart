@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -63,7 +63,7 @@ class CurrentDateIndicatorLabelOptions extends OptionFragment {
 
     
     if (this.align != null) {  
-      buffer.writeAll(["\"align\":\`",this.align, "\`,"], "");
+      buffer.writeAll(["\"align\":\'",this.align, "\',"], "");
     }
 
     // NOTE: skip serialization of format (type string is ignored) ignore type: true
@@ -77,11 +77,11 @@ class CurrentDateIndicatorLabelOptions extends OptionFragment {
     }
 
     if (this.text != null) {  
-      buffer.writeAll(["\"text\":\`",this.text, "\`,"], "");
+      buffer.writeAll(["\"text\":\'",this.text, "\',"], "");
     }
 
     if (this.textAlign != null) {  
-      buffer.writeAll(["\"textAlign\":\`",this.textAlign, "\`,"], "");
+      buffer.writeAll(["\"textAlign\":\'",this.textAlign, "\',"], "");
     }
 
     if (this.useHTML != null) {  
@@ -89,7 +89,7 @@ class CurrentDateIndicatorLabelOptions extends OptionFragment {
     }
 
     if (this.verticalAlign != null) {  
-      buffer.writeAll(["\"verticalAlign\":\`",this.verticalAlign, "\`,"], "");
+      buffer.writeAll(["\"verticalAlign\":\'",this.verticalAlign, "\',"], "");
     }
 
     if (this.x != null) {  

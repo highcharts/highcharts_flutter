@@ -4,17 +4,14 @@
  */
 
 import 'package:flutter/material.dart';
-import 'package:highcharts_flutter/Highcharts.dart';
-import 'package:highcharts_flutter/types/LineSeriesOptions.dart';
+import 'package:highcharts_flutter/Maps.dart';
 import 'package:highcharts_flutter/types/ChartOptions.dart';
-import 'package:highcharts_flutter/types/string.dart';
-import 'package:highcharts_flutter/types/number.dart';
 import 'package:highcharts_flutter/types/Generic.dart';
 import 'package:highcharts_flutter/types/TitleOptions.dart';
 import 'package:highcharts_flutter/types/TooltipOptions.dart';
 import 'package:highcharts_flutter/types/AccessibilityOptions.dart';
 import 'package:highcharts_flutter/types/AccessibilityPointOptions.dart';
-import 'package:highcharts_flutter/types/HighchartsPlotOptions.dart';
+import 'package:highcharts_flutter/types/MapsPlotOptions.dart';
 import 'package:highcharts_flutter/types/PieSeriesOptions.dart';
 import 'package:highcharts_flutter/types/PieDataLabelOptions[].dart';
 import 'package:highcharts_flutter/types/PieSeries.dart';
@@ -62,8 +59,8 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            HighchartsChart(
-              HighchartsOptions(
+            MapsChart(
+              MapsOptions(
                 chart: ChartOptions(
                   plotBackgroundColor: string(
                   ),
@@ -72,7 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     plotShadow: false,
                 ),
                 title: TitleOptions(
-                    text: "Browser market shares in April, 2022",
+                    text: "Registered private vehicles in Norway, by type of fuel, 2020",
                     align: "left",
                 ),
                 tooltip: TooltipOptions(
@@ -83,13 +80,13 @@ class _MyHomePageState extends State<MyHomePage> {
                       valueSuffix: "%",
                   ),
                 ),
-                plotOptions: HighchartsPlotOptions(
+                plotOptions: MapsPlotOptions(
                   pie: PieSeriesOptions(
                       allowPointSelect: true,
                       cursor: "pointer",
                     dataLabels: PieDataLabelOptions[](
                         enabled: true,
-                        format: "<b>{point.name}</b>: {point.percentage:.1f} %",
+                        format: "<span style=\"font-size: 1.2em\"><b>{point.name}</b></span><br><span style=\"opacity: 0.6\">{point.percentage:.1f} %</span>",
                     ),
                   ),
                 ),

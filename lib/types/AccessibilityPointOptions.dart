@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -54,7 +54,7 @@ class AccessibilityPointOptions extends OptionFragment {
 
     
     if (this.dateFormat != null) {  
-      buffer.writeAll(["\"dateFormat\":\`",this.dateFormat, "\`,"], "");
+      buffer.writeAll(["\"dateFormat\":\'",this.dateFormat, "\',"], "");
     }
 
     if (this.describeNull != null) {  
@@ -62,7 +62,7 @@ class AccessibilityPointOptions extends OptionFragment {
     }
 
     if (this.descriptionFormat != null) {  
-      buffer.writeAll(["\"descriptionFormat\":\`",this.descriptionFormat, "\`,"], "");
+      buffer.writeAll(["\"descriptionFormat\":\'",this.descriptionFormat, "\',"], "");
     }
 
     if (this.valueDecimals != null) {  
@@ -70,15 +70,15 @@ class AccessibilityPointOptions extends OptionFragment {
     }
 
     if (this.valueDescriptionFormat != null) {  
-      buffer.writeAll(["\"valueDescriptionFormat\":\`",this.valueDescriptionFormat, "\`,"], "");
+      buffer.writeAll(["\"valueDescriptionFormat\":\'",this.valueDescriptionFormat, "\',"], "");
     }
 
     if (this.valuePrefix != null) {  
-      buffer.writeAll(["\"valuePrefix\":\`",this.valuePrefix, "\`,"], "");
+      buffer.writeAll(["\"valuePrefix\":\'",this.valuePrefix, "\',"], "");
     }
 
     if (this.valueSuffix != null) {  
-      buffer.writeAll(["\"valueSuffix\":\`",this.valueSuffix, "\`,"], "");
+      buffer.writeAll(["\"valueSuffix\":\'",this.valueSuffix, "\',"], "");
     }
   }
 

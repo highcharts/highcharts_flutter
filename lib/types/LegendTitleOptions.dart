@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -46,7 +46,7 @@ class LegendTitleOptions extends OptionFragment {
     }
 
     if (this.text != null) {  
-      buffer.writeAll(["\"text\":\`",this.text, "\`,"], "");
+      buffer.writeAll(["\"text\":\'",this.text, "\',"], "");
     }
 
     // NOTE: skip serialization of width (type number is ignored) ignore type: true

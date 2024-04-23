@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -53,11 +53,17 @@ class OrganizationSeries extends Series {
       StringBuffer seriesData = StringBuffer();
 
       for (var point in this.data!) {
-        seriesData.writeAll(["["], "");
-        for (var item in point) {
-          seriesData.writeAll([item, ","]);
+        if (point.length > 1) {
+          seriesData.writeAll(["["], "");
         }
-        seriesData.writeAll(["],"], "");
+
+        seriesData.writeAll(point, ",");
+
+        if (point.length > 1) {
+          seriesData.writeAll(["],"], "");
+        } else {
+          seriesData.write(",");
+        }
       }
 
       buffer.writeAll(["\"data\": [", seriesData, "],"], "");   
@@ -86,7 +92,7 @@ class OrganizationSeries extends Series {
     }
 
     if (this.options?.hangingIndentTranslation != null) {  
-      buffer.writeAll(["\"hangingIndentTranslation\":\`",this.options?.hangingIndentTranslation, "\`,"], "");
+      buffer.writeAll(["\"hangingIndentTranslation\":\'",this.options?.hangingIndentTranslation, "\',"], "");
     }
 
     // NOTE: skip serialization of hangingSide (type string is ignored) ignore type: true

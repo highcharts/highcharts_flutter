@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -128,11 +128,11 @@ class SolidGaugeSeriesOptions extends GaugeSeriesOptions {
 
     
     if (this.innerRadius != null) {  
-      buffer.writeAll(["\"innerRadius\":\`",this.innerRadius, "\`,"], "");
+      buffer.writeAll(["\"innerRadius\":\'",this.innerRadius, "\',"], "");
     }
 
     if (this.linecap != null) {  
-      buffer.writeAll(["\"linecap\":\`",this.linecap, "\`,"], "");
+      buffer.writeAll(["\"linecap\":\'",this.linecap, "\',"], "");
     }
 
     if (this.overshoot != null) {  
@@ -140,7 +140,7 @@ class SolidGaugeSeriesOptions extends GaugeSeriesOptions {
     }
 
     if (this.radius != null) {  
-      buffer.writeAll(["\"radius\":\`",this.radius, "\`,"], "");
+      buffer.writeAll(["\"radius\":\'",this.radius, "\',"], "");
     }
 
     if (this.rounded != null) {  

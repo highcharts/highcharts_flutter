@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -150,11 +150,11 @@ class BoxPlotSeriesOptions extends ColumnSeriesOptions {
 
     
     if (this.boxDashStyle != null) {  
-      buffer.writeAll(["\"boxDashStyle\":\`",this.boxDashStyle, "\`,"], "");
+      buffer.writeAll(["\"boxDashStyle\":\'",this.boxDashStyle, "\',"], "");
     }
 
     if (this.fillColor != null) {  
-      buffer.writeAll(["\"fillColor\":\`",this.fillColor, "\`,"], "");
+      buffer.writeAll(["\"fillColor\":\'",this.fillColor, "\',"], "");
     }
 
     if (this.medianColor != null) {  
@@ -162,7 +162,7 @@ class BoxPlotSeriesOptions extends ColumnSeriesOptions {
     }
 
     if (this.medianDashStyle != null) {  
-      buffer.writeAll(["\"medianDashStyle\":\`",this.medianDashStyle, "\`,"], "");
+      buffer.writeAll(["\"medianDashStyle\":\'",this.medianDashStyle, "\',"], "");
     }
 
     if (this.medianWidth != null) {  
@@ -172,11 +172,11 @@ class BoxPlotSeriesOptions extends ColumnSeriesOptions {
     // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
 
     if (this.stemColor != null) {  
-      buffer.writeAll(["\"stemColor\":\`",this.stemColor, "\`,"], "");
+      buffer.writeAll(["\"stemColor\":\'",this.stemColor, "\',"], "");
     }
 
     if (this.stemDashStyle != null) {  
-      buffer.writeAll(["\"stemDashStyle\":\`",this.stemDashStyle, "\`,"], "");
+      buffer.writeAll(["\"stemDashStyle\":\'",this.stemDashStyle, "\',"], "");
     }
 
     if (this.stemWidth != null) {  
@@ -184,15 +184,15 @@ class BoxPlotSeriesOptions extends ColumnSeriesOptions {
     }
 
     if (this.whiskerColor != null) {  
-      buffer.writeAll(["\"whiskerColor\":\`",this.whiskerColor, "\`,"], "");
+      buffer.writeAll(["\"whiskerColor\":\'",this.whiskerColor, "\',"], "");
     }
 
     if (this.whiskerDashStyle != null) {  
-      buffer.writeAll(["\"whiskerDashStyle\":\`",this.whiskerDashStyle, "\`,"], "");
+      buffer.writeAll(["\"whiskerDashStyle\":\'",this.whiskerDashStyle, "\',"], "");
     }
 
     if (this.whiskerLength != null) {  
-      buffer.writeAll(["\"whiskerLength\":\`",this.whiskerLength, "\`,"], "");
+      buffer.writeAll(["\"whiskerLength\":\'",this.whiskerLength, "\',"], "");
     }
 
     if (this.whiskerWidth != null) {  

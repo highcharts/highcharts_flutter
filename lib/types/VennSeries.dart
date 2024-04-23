@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -53,11 +53,17 @@ class VennSeries extends Series {
       StringBuffer seriesData = StringBuffer();
 
       for (var point in this.data!) {
-        seriesData.writeAll(["["], "");
-        for (var item in point) {
-          seriesData.writeAll([item, ","]);
+        if (point.length > 1) {
+          seriesData.writeAll(["["], "");
         }
-        seriesData.writeAll(["],"], "");
+
+        seriesData.writeAll(point, ",");
+
+        if (point.length > 1) {
+          seriesData.writeAll(["],"], "");
+        } else {
+          seriesData.write(",");
+        }
       }
 
       buffer.writeAll(["\"data\": [", seriesData, "],"], "");   
@@ -80,7 +86,7 @@ class VennSeries extends Series {
 
     
     if (this.options?.borderDashStyle != null) {  
-      buffer.writeAll(["\"borderDashStyle\":\`",this.options?.borderDashStyle, "\`,"], "");
+      buffer.writeAll(["\"borderDashStyle\":\'",this.options?.borderDashStyle, "\',"], "");
     }
 
     if (this.options?.brighten != null) {  

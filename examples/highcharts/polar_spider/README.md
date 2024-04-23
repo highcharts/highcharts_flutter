@@ -1,6 +1,6 @@
 # Spiderweb demo
 
-**Highcharts demo**
+**Highcharts demo**,**Polar**
 A spiderweb chart or radar chart is a variant of the polar chart.
         Spiderweb charts are commonly used to compare multivariate data sets,
         like this demo using six variables of comparison.

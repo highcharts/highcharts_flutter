@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -39,7 +39,7 @@ class SunburstSeriesLevelSizeOptions extends OptionFragment {
 
     
     if (this.unit != null) {  
-      buffer.writeAll(["\"unit\":\`",this.unit, "\`,"], "");
+      buffer.writeAll(["\"unit\":\'",this.unit, "\',"], "");
     }
 
     if (this.value != null) {  

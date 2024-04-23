@@ -1,6 +1,6 @@
 # Polar (radar) chart demo
 
-**Highcharts demo**
+**Highcharts demo**,**Polar**
 A polar chart showing different series types on a radial axis. Polar
         charts, also known as a radar charts, are often used to compare
         multivariate data sets. A polar chart in Highcharts is simply a

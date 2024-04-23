@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -39,11 +39,11 @@ class IKHSenkouSpanOptions extends OptionFragment {
 
     
     if (this.color != null) {  
-      buffer.writeAll(["\"color\":\`",this.color, "\`,"], "");
+      buffer.writeAll(["\"color\":\'",this.color, "\',"], "");
     }
 
     if (this.negativeColor != null) {  
-      buffer.writeAll(["\"negativeColor\":\`",this.negativeColor, "\`,"], "");
+      buffer.writeAll(["\"negativeColor\":\'",this.negativeColor, "\',"], "");
     }
 
     // NOTE: skip serialization of styles (type CSSObject & { fill: ColorType; } is ignored) ignore type: true

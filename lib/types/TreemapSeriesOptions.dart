@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -127,11 +127,11 @@ class TreemapSeriesOptions extends OptionFragment {
     }
 
     if (this.layoutAlgorithm != null) {  
-      buffer.writeAll(["\"layoutAlgorithm\":\`",this.layoutAlgorithm, "\`,"], "");
+      buffer.writeAll(["\"layoutAlgorithm\":\'",this.layoutAlgorithm, "\',"], "");
     }
 
     if (this.layoutStartingDirection != null) {  
-      buffer.writeAll(["\"layoutStartingDirection\":\`",this.layoutStartingDirection, "\`,"], "");
+      buffer.writeAll(["\"layoutStartingDirection\":\'",this.layoutStartingDirection, "\',"], "");
     }
 
     if (this.levelIsConstant != null) {  

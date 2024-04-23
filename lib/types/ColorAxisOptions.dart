@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -147,7 +147,7 @@ class ColorAxisOptions extends AxisOptions {
 
     
     if (this.dataClassColor != null) {  
-      buffer.writeAll(["\"dataClassColor\":\`",this.dataClassColor, "\`,"], "");
+      buffer.writeAll(["\"dataClassColor\":\'",this.dataClassColor, "\',"], "");
     }
 
     if (this.dataClasses != null) {  
@@ -163,7 +163,7 @@ class ColorAxisOptions extends AxisOptions {
     }
 
     if (this.layout != null) {  
-      buffer.writeAll(["\"layout\":\`",this.layout, "\`,"], "");
+      buffer.writeAll(["\"layout\":\'",this.layout, "\',"], "");
     }
 
     // NOTE: skip serialization of legend (type LegendOptions is ignored) ignore type: true
@@ -173,11 +173,11 @@ class ColorAxisOptions extends AxisOptions {
     }
 
     if (this.maxColor != null) {  
-      buffer.writeAll(["\"maxColor\":\`",this.maxColor, "\`,"], "");
+      buffer.writeAll(["\"maxColor\":\'",this.maxColor, "\',"], "");
     }
 
     if (this.minColor != null) {  
-      buffer.writeAll(["\"minColor\":\`",this.minColor, "\`,"], "");
+      buffer.writeAll(["\"minColor\":\'",this.minColor, "\',"], "");
     }
 
     if (this.showInLegend != null) {  

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -120,13 +120,13 @@ class CandlestickSeriesOptions extends OHLCSeriesOptions {
 
     
     if (this.lineColor != null) {  
-      buffer.writeAll(["\"lineColor\":\`",this.lineColor, "\`,"], "");
+      buffer.writeAll(["\"lineColor\":\'",this.lineColor, "\',"], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
 
     if (this.upLineColor != null) {  
-      buffer.writeAll(["\"upLineColor\":\`",this.upLineColor, "\`,"], "");
+      buffer.writeAll(["\"upLineColor\":\'",this.upLineColor, "\',"], "");
     }
   }
 

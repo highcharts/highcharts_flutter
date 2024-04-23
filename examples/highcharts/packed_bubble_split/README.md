@@ -1,6 +1,6 @@
 # Split Packed bubble chart demo
 
-**Highcharts demo**
+**Highcharts demo**,**Animation**
 This chart shows how packed bubble charts can be grouped by series,
         creating a hierarchy.
 

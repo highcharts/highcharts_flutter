@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -93,11 +93,11 @@ class BreadcrumbsOptions extends OptionFragment {
     }
 
     if (this.format != null) {  
-      buffer.writeAll(["\"format\":\`",this.format, "\`,"], "");
+      buffer.writeAll(["\"format\":\'",this.format, "\',"], "");
     }
 
     if (this.relativeTo != null) {  
-      buffer.writeAll(["\"relativeTo\":\`",this.relativeTo, "\`,"], "");
+      buffer.writeAll(["\"relativeTo\":\'",this.relativeTo, "\',"], "");
     }
 
     if (this.rtl != null) {  

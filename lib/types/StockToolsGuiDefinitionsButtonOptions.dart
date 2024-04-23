@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -40,7 +40,7 @@ class StockToolsGuiDefinitionsButtonOptions extends OptionFragment {
     // NOTE: skip serialization of elementType (type string is ignored) ignore type: true
 
     if (this.symbol != null) {  
-      buffer.writeAll(["\"symbol\":\`",this.symbol, "\`,"], "");
+      buffer.writeAll(["\"symbol\":\'",this.symbol, "\',"], "");
     }
   }
 

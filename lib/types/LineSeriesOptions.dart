@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -153,7 +153,7 @@ class LineSeriesOptions extends SeriesOptions {
     }
 
     if (this.borderColor != null) {  
-      buffer.writeAll(["\"borderColor\":\`",this.borderColor, "\`,"], "");
+      buffer.writeAll(["\"borderColor\":\'",this.borderColor, "\',"], "");
     }
 
     if (this.borderWidth != null) {  
@@ -181,11 +181,11 @@ class LineSeriesOptions extends SeriesOptions {
     }
 
     if (this.description != null) {  
-      buffer.writeAll(["\"description\":\`",this.description, "\`,"], "");
+      buffer.writeAll(["\"description\":\'",this.description, "\',"], "");
     }
 
     if (this.linkedTo != null) {  
-      buffer.writeAll(["\"linkedTo\":\`",this.linkedTo, "\`,"], "");
+      buffer.writeAll(["\"linkedTo\":\'",this.linkedTo, "\',"], "");
     }
 
     // NOTE: skip serialization of pointDescriptionFormatter (type Function is ignored) ignore type: 1

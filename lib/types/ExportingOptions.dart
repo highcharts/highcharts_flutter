@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -137,13 +137,13 @@ class ExportingOptions extends OptionFragment {
     }
 
     if (this.filename != null) {  
-      buffer.writeAll(["\"filename\":\`",this.filename, "\`,"], "");
+      buffer.writeAll(["\"filename\":\'",this.filename, "\',"], "");
     }
 
     // NOTE: skip serialization of fetchOptions (type RequestInit is ignored) ignore type: 1
 
     if (this.libURL != null) {  
-      buffer.writeAll(["\"libURL\":\`",this.libURL, "\`,"], "");
+      buffer.writeAll(["\"libURL\":\'",this.libURL, "\',"], "");
     }
 
     if (this.menuItemDefinitions != null) {  
@@ -171,11 +171,11 @@ class ExportingOptions extends OptionFragment {
     }
 
     if (this.type != null) {  
-      buffer.writeAll(["\"type\":\`",this.type, "\`,"], "");
+      buffer.writeAll(["\"type\":\'",this.type, "\',"], "");
     }
 
     if (this.url != null) {  
-      buffer.writeAll(["\"url\":\`",this.url, "\`,"], "");
+      buffer.writeAll(["\"url\":\'",this.url, "\',"], "");
     }
 
     if (this.useMultiLevelHeaders != null) {  
@@ -199,7 +199,7 @@ class ExportingOptions extends OptionFragment {
     }
 
     if (this.tableCaption != null) {  
-      buffer.writeAll(["\"tableCaption\":\`",this.tableCaption, "\`,"], "");
+      buffer.writeAll(["\"tableCaption\":\'",this.tableCaption, "\',"], "");
     }
 
     // NOTE: skip serialization of showExportInProgress (type boolean is ignored) ignore type: true
@@ -213,7 +213,7 @@ class ExportingOptions extends OptionFragment {
     }
 
     if (this.tableCaption != null) {  
-      buffer.writeAll(["\"tableCaption\":\`",this.tableCaption, "\`,"], "");
+      buffer.writeAll(["\"tableCaption\":\'",this.tableCaption, "\',"], "");
     }
 
     if (this.useMultiLevelHeaders != null) {  

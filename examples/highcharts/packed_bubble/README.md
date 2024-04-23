@@ -1,6 +1,6 @@
 # Packed bubble chart demo
 
-**Highcharts demo**
+**Highcharts demo**,**Animation**
 Packed bubble charts are visualizations where the size and optionally
         the color of the bubbles are used to visualize the data. The positioning
         of the bubbles is not significant, but is optimized for compactness.

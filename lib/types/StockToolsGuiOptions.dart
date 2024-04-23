@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -63,7 +63,7 @@ class StockToolsGuiOptions extends OptionFragment {
     }
 
     if (this.className != null) {  
-      buffer.writeAll(["\"className\":\`",this.className, "\`,"], "");
+      buffer.writeAll(["\"className\":\'",this.className, "\',"], "");
     }
 
     if (this.definitions != null) {  
@@ -75,13 +75,13 @@ class StockToolsGuiOptions extends OptionFragment {
     }
 
     if (this.iconsURL != null) {  
-      buffer.writeAll(["\"iconsURL\":\`",this.iconsURL, "\`,"], "");
+      buffer.writeAll(["\"iconsURL\":\'",this.iconsURL, "\',"], "");
     }
 
     // NOTE: skip serialization of placed (type boolean is ignored) ignore type: true
 
     if (this.toolbarClassName != null) {  
-      buffer.writeAll(["\"toolbarClassName\":\`",this.toolbarClassName, "\`,"], "");
+      buffer.writeAll(["\"toolbarClassName\":\'",this.toolbarClassName, "\',"], "");
     }
 
     // NOTE: skip serialization of visible (type boolean is ignored) ignore type: true

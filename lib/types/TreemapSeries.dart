@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -53,11 +53,17 @@ class TreemapSeries extends Series {
       StringBuffer seriesData = StringBuffer();
 
       for (var point in this.data!) {
-        seriesData.writeAll(["["], "");
-        for (var item in point) {
-          seriesData.writeAll([item, ","]);
+        if (point.length > 1) {
+          seriesData.writeAll(["["], "");
         }
-        seriesData.writeAll(["],"], "");
+
+        seriesData.writeAll(point, ",");
+
+        if (point.length > 1) {
+          seriesData.writeAll(["],"], "");
+        } else {
+          seriesData.write(",");
+        }
       }
 
       buffer.writeAll(["\"data\": [", seriesData, "],"], "");   
@@ -124,11 +130,11 @@ class TreemapSeries extends Series {
     }
 
     if (this.options?.layoutAlgorithm != null) {  
-      buffer.writeAll(["\"layoutAlgorithm\":\`",this.options?.layoutAlgorithm, "\`,"], "");
+      buffer.writeAll(["\"layoutAlgorithm\":\'",this.options?.layoutAlgorithm, "\',"], "");
     }
 
     if (this.options?.layoutStartingDirection != null) {  
-      buffer.writeAll(["\"layoutStartingDirection\":\`",this.options?.layoutStartingDirection, "\`,"], "");
+      buffer.writeAll(["\"layoutStartingDirection\":\'",this.options?.layoutStartingDirection, "\',"], "");
     }
 
     if (this.options?.levelIsConstant != null) {  

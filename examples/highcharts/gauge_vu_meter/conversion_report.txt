@@ -1,17 +1,5 @@
 [
   {
-    "path": "chart.plotBackgroundColor",
-    "parentType": "string",
-    "memberName": "linearGradient",
-    "msg": "The member is not present in the Flutter integration API"
-  },
-  {
-    "path": "chart.plotBackgroundColor",
-    "parentType": "string",
-    "memberName": "stops",
-    "msg": "The member is not present in the Flutter integration API"
-  },
-  {
     "type": "missing_mapping",
     "path": "pane"
   },

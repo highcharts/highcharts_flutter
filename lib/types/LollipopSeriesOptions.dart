@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -125,7 +125,7 @@ class LollipopSeriesOptions extends ScatterSeriesOptions {
 
     
     if (this.connectorColor != null) {  
-      buffer.writeAll(["\"connectorColor\":\`",this.connectorColor, "\`,"], "");
+      buffer.writeAll(["\"connectorColor\":\'",this.connectorColor, "\',"], "");
     }
 
     if (this.connectorWidth != null) {  
@@ -137,7 +137,7 @@ class LollipopSeriesOptions extends ScatterSeriesOptions {
     }
 
     if (this.lowColor != null) {  
-      buffer.writeAll(["\"lowColor\":\`",this.lowColor, "\`,"], "");
+      buffer.writeAll(["\"lowColor\":\'",this.lowColor, "\',"], "");
     }
 
     if (this.pointPadding != null) {  

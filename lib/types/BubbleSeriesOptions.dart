@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -141,15 +141,15 @@ class BubbleSeriesOptions extends ScatterSeriesOptions {
     // NOTE: skip serialization of marker (type BubblePointMarkerOptions is ignored) ignore type: false
 
     if (this.minSize != null) {  
-      buffer.writeAll(["\"minSize\":\`",this.minSize, "\`,"], "");
+      buffer.writeAll(["\"minSize\":\'",this.minSize, "\',"], "");
     }
 
     if (this.maxSize != null) {  
-      buffer.writeAll(["\"maxSize\":\`",this.maxSize, "\`,"], "");
+      buffer.writeAll(["\"maxSize\":\'",this.maxSize, "\',"], "");
     }
 
     if (this.sizeBy != null) {  
-      buffer.writeAll(["\"sizeBy\":\`",this.sizeBy, "\`,"], "");
+      buffer.writeAll(["\"sizeBy\":\'",this.sizeBy, "\',"], "");
     }
 
     if (this.sizeByAbsoluteValue != null) {  

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -71,7 +71,7 @@ class ControlPointOptionsObject extends OptionFragment {
     }
 
     if (this.symbol != null) {  
-      buffer.writeAll(["\"symbol\":\`",this.symbol, "\`,"], "");
+      buffer.writeAll(["\"symbol\":\'",this.symbol, "\',"], "");
     }
 
     if (this.visible != null) {  

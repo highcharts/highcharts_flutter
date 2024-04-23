@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -45,7 +45,7 @@ class AccessibilityKeyboardNavigationSeriesNavigationOptions extends OptionFragm
 
     
     if (this.mode != null) {  
-      buffer.writeAll(["\"mode\":\`",this.mode, "\`,"], "");
+      buffer.writeAll(["\"mode\":\'",this.mode, "\',"], "");
     }
 
     if (this.pointNavigationEnabledThreshold != null) {  

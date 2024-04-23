@@ -17,15 +17,16 @@
   },
   {
     "type": "missing_mapping",
-    "path": "yAxis.crosshair"
-  },
-  {
-    "type": "missing_mapping",
     "path": "plotOptions.column.groupPadding",
     "member": {
       "name": "groupPadding",
       "type": "number",
       "optional": true
     }
+  },
+  {
+    "type": "mixed_type",
+    "path": "plotOptions.column.borderRadius",
+    "msg": "Path is set as a basic type, but flutter wants a BorderRadiusOptionsObject"
   }
 ]

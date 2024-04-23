@@ -1,6 +1,6 @@
 # Column with drilldown demo
 
-**Highcharts demo**
+**Highcharts demo**,**Dynamic**
 Chart showing browser market shares. Clicking on individual columns
         brings up more detailed data. This chart makes use of the drilldown
         feature in Highcharts to easily switch between datasets.

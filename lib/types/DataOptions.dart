@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -102,17 +102,17 @@ class DataOptions extends OptionFragment {
     // NOTE: skip serialization of columns (type DataValueType[][] is ignored) ignore type: 1
 
     if (this.columnsURL != null) {  
-      buffer.writeAll(["\"columnsURL\":\`",this.columnsURL, "\`,"], "");
+      buffer.writeAll(["\"columnsURL\":\'",this.columnsURL, "\',"], "");
     }
 
     // NOTE: skip serialization of columnTypes (type "date")[] is ignored) ignore type: true
 
     if (this.csv != null) {  
-      buffer.writeAll(["\"csv\":\`",this.csv, "\`,"], "");
+      buffer.writeAll(["\"csv\":\'",this.csv, "\',"], "");
     }
 
     if (this.csvURL != null) {  
-      buffer.writeAll(["\"csvURL\":\`",this.csvURL, "\`,"], "");
+      buffer.writeAll(["\"csvURL\":\'",this.csvURL, "\',"], "");
     }
 
     if (this.dataRefreshRate != null) {  
@@ -120,13 +120,13 @@ class DataOptions extends OptionFragment {
     }
 
     if (this.dateFormat != null) {  
-      buffer.writeAll(["\"dateFormat\":\`",this.dateFormat, "\`,"], "");
+      buffer.writeAll(["\"dateFormat\":\'",this.dateFormat, "\',"], "");
     }
 
     // NOTE: skip serialization of dateFormats (type undefined is ignored) ignore type: 1
 
     if (this.decimalPoint != null) {  
-      buffer.writeAll(["\"decimalPoint\":\`",this.decimalPoint, "\`,"], "");
+      buffer.writeAll(["\"decimalPoint\":\'",this.decimalPoint, "\',"], "");
     }
 
     if (this.enablePolling != null) {  
@@ -148,29 +148,29 @@ class DataOptions extends OptionFragment {
     }
 
     if (this.googleAPIKey != null) {  
-      buffer.writeAll(["\"googleAPIKey\":\`",this.googleAPIKey, "\`,"], "");
+      buffer.writeAll(["\"googleAPIKey\":\'",this.googleAPIKey, "\',"], "");
     }
 
     if (this.googleSpreadsheetKey != null) {  
-      buffer.writeAll(["\"googleSpreadsheetKey\":\`",this.googleSpreadsheetKey, "\`,"], "");
+      buffer.writeAll(["\"googleSpreadsheetKey\":\'",this.googleSpreadsheetKey, "\',"], "");
     }
 
     if (this.googleSpreadsheetRange != null) {  
-      buffer.writeAll(["\"googleSpreadsheetRange\":\`",this.googleSpreadsheetRange, "\`,"], "");
+      buffer.writeAll(["\"googleSpreadsheetRange\":\'",this.googleSpreadsheetRange, "\',"], "");
     }
 
     if (this.itemDelimiter != null) {  
-      buffer.writeAll(["\"itemDelimiter\":\`",this.itemDelimiter, "\`,"], "");
+      buffer.writeAll(["\"itemDelimiter\":\'",this.itemDelimiter, "\',"], "");
     }
 
     if (this.lineDelimiter != null) {  
-      buffer.writeAll(["\"lineDelimiter\":\`",this.lineDelimiter, "\`,"], "");
+      buffer.writeAll(["\"lineDelimiter\":\'",this.lineDelimiter, "\',"], "");
     }
 
     // NOTE: skip serialization of rows (type DataValueType[][] is ignored) ignore type: 1
 
     if (this.rowsURL != null) {  
-      buffer.writeAll(["\"rowsURL\":\`",this.rowsURL, "\`,"], "");
+      buffer.writeAll(["\"rowsURL\":\'",this.rowsURL, "\',"], "");
     }
 
     if (this.seriesMapping != null) {  

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -109,7 +109,7 @@ class ControllableLabelOptions extends OptionFragment {
     }
 
     if (this.align != null) {  
-      buffer.writeAll(["\"align\":\`",this.align, "\`,"], "");
+      buffer.writeAll(["\"align\":\'",this.align, "\',"], "");
     }
 
     if (this.allowOverlap != null) {  
@@ -117,13 +117,13 @@ class ControllableLabelOptions extends OptionFragment {
     }
 
     if (this.backgroundColor != null) {  
-      buffer.writeAll(["\"backgroundColor\":\`",this.backgroundColor, "\`,"], "");
+      buffer.writeAll(["\"backgroundColor\":\'",this.backgroundColor, "\',"], "");
     }
 
     // NOTE: skip serialization of color (type string is ignored) ignore type: true
 
     if (this.borderColor != null) {  
-      buffer.writeAll(["\"borderColor\":\`",this.borderColor, "\`,"], "");
+      buffer.writeAll(["\"borderColor\":\'",this.borderColor, "\',"], "");
     }
 
     if (this.borderRadius != null) {  
@@ -145,7 +145,7 @@ class ControllableLabelOptions extends OptionFragment {
     }
 
     if (this.format != null) {  
-      buffer.writeAll(["\"format\":\`",this.format, "\`,"], "");
+      buffer.writeAll(["\"format\":\'",this.format, "\',"], "");
     }
 
     if (this.includeInDataExport != null) {  
@@ -153,7 +153,7 @@ class ControllableLabelOptions extends OptionFragment {
     }
 
     if (this.overflow != null) {  
-      buffer.writeAll(["\"overflow\":\`",this.overflow, "\`,"], "");
+      buffer.writeAll(["\"overflow\":\'",this.overflow, "\',"], "");
     }
 
     if (this.padding != null) {  
@@ -163,7 +163,7 @@ class ControllableLabelOptions extends OptionFragment {
     // NOTE: skip serialization of shadow (type Generic is ignored) ignore type: true
 
     if (this.shape != null) {  
-      buffer.writeAll(["\"shape\":\`",this.shape, "\`,"], "");
+      buffer.writeAll(["\"shape\":\'",this.shape, "\',"], "");
     }
 
     if (this.style != null) {  
@@ -171,7 +171,7 @@ class ControllableLabelOptions extends OptionFragment {
     }
 
     if (this.text != null) {  
-      buffer.writeAll(["\"text\":\`",this.text, "\`,"], "");
+      buffer.writeAll(["\"text\":\'",this.text, "\',"], "");
     }
 
     if (this.useHTML != null) {  
@@ -179,7 +179,7 @@ class ControllableLabelOptions extends OptionFragment {
     }
 
     if (this.verticalAlign != null) {  
-      buffer.writeAll(["\"verticalAlign\":\`",this.verticalAlign, "\`,"], "");
+      buffer.writeAll(["\"verticalAlign\":\'",this.verticalAlign, "\',"], "");
     }
 
     if (this.x != null) {  

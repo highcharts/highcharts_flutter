@@ -5,7 +5,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/Highcharts.dart';
-import 'package:highcharts_flutter/types/LineSeriesOptions.dart';
 import 'package:highcharts_flutter/types/ChartOptions.dart';
 import 'package:highcharts_flutter/types/Options.dart';
 import 'package:highcharts_flutter/types/TitleOptions.dart';
@@ -69,6 +68,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 title: TitleOptions(
                     text: "Visual comparison of Mountains Panorama",
+                    align: "left",
                 ),
                 accessibility: AccessibilityOptions(
                     description: "The chart is showing the shapes of three mountain ranges as three area line series laid out in 3D behind each other.",

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -64,15 +64,15 @@ class AxisCrosshairLabelOptions extends OptionFragment {
 
     
     if (this.align != null) {  
-      buffer.writeAll(["\"align\":\`",this.align, "\`,"], "");
+      buffer.writeAll(["\"align\":\'",this.align, "\',"], "");
     }
 
     if (this.backgroundColor != null) {  
-      buffer.writeAll(["\"backgroundColor\":\`",this.backgroundColor, "\`,"], "");
+      buffer.writeAll(["\"backgroundColor\":\'",this.backgroundColor, "\',"], "");
     }
 
     if (this.borderColor != null) {  
-      buffer.writeAll(["\"borderColor\":\`",this.borderColor, "\`,"], "");
+      buffer.writeAll(["\"borderColor\":\'",this.borderColor, "\',"], "");
     }
 
     if (this.borderRadius != null) {  
@@ -88,7 +88,7 @@ class AxisCrosshairLabelOptions extends OptionFragment {
     }
 
     if (this.format != null) {  
-      buffer.writeAll(["\"format\":\`",this.format, "\`,"], "");
+      buffer.writeAll(["\"format\":\'",this.format, "\',"], "");
     }
 
     if (this.padding != null) {  
@@ -96,7 +96,7 @@ class AxisCrosshairLabelOptions extends OptionFragment {
     }
 
     if (this.shape != null) {  
-      buffer.writeAll(["\"shape\":\`",this.shape, "\`,"], "");
+      buffer.writeAll(["\"shape\":\'",this.shape, "\',"], "");
     }
 
     if (this.style != null) {  

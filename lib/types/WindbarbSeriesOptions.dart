@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -125,7 +125,7 @@ class WindbarbSeriesOptions extends ColumnSeriesOptions {
 
     
     if (this.onSeries != null) {  
-      buffer.writeAll(["\"onSeries\":\`",this.onSeries, "\`,"], "");
+      buffer.writeAll(["\"onSeries\":\'",this.onSeries, "\',"], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored) ignore type: true

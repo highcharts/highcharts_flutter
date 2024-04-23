@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -53,11 +53,17 @@ class SupertrendSeries extends Series {
       StringBuffer seriesData = StringBuffer();
 
       for (var point in this.data!) {
-        seriesData.writeAll(["["], "");
-        for (var item in point) {
-          seriesData.writeAll([item, ","]);
+        if (point.length > 1) {
+          seriesData.writeAll(["["], "");
         }
-        seriesData.writeAll(["],"], "");
+
+        seriesData.writeAll(point, ",");
+
+        if (point.length > 1) {
+          seriesData.writeAll(["],"], "");
+        } else {
+          seriesData.write(",");
+        }
       }
 
       buffer.writeAll(["\"data\": [", seriesData, "],"], "");   
@@ -84,13 +90,13 @@ class SupertrendSeries extends Series {
     }
 
     if (this.options?.fallingTrendColor != null) {  
-      buffer.writeAll(["\"fallingTrendColor\":\`",this.options?.fallingTrendColor, "\`,"], "");
+      buffer.writeAll(["\"fallingTrendColor\":\'",this.options?.fallingTrendColor, "\',"], "");
     }
 
     // NOTE: skip serialization of params (type SupertrendParamsOptions is ignored) ignore type: false
 
     if (this.options?.risingTrendColor != null) {  
-      buffer.writeAll(["\"risingTrendColor\":\`",this.options?.risingTrendColor, "\`,"], "");
+      buffer.writeAll(["\"risingTrendColor\":\'",this.options?.risingTrendColor, "\',"], "");
     }
   }
 

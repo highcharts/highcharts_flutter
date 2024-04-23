@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -57,19 +57,19 @@ class ExportingCsvOptions extends OptionFragment {
     // NOTE: skip serialization of columnHeaderFormatter (type Function is ignored) ignore type: 1
 
     if (this.dateFormat != null) {  
-      buffer.writeAll(["\"dateFormat\":\`",this.dateFormat, "\`,"], "");
+      buffer.writeAll(["\"dateFormat\":\'",this.dateFormat, "\',"], "");
     }
 
     if (this.decimalPoint != null) {  
-      buffer.writeAll(["\"decimalPoint\":\`",this.decimalPoint, "\`,"], "");
+      buffer.writeAll(["\"decimalPoint\":\'",this.decimalPoint, "\',"], "");
     }
 
     if (this.itemDelimiter != null) {  
-      buffer.writeAll(["\"itemDelimiter\":\`",this.itemDelimiter, "\`,"], "");
+      buffer.writeAll(["\"itemDelimiter\":\'",this.itemDelimiter, "\',"], "");
     }
 
     if (this.lineDelimiter != null) {  
-      buffer.writeAll(["\"lineDelimiter\":\`",this.lineDelimiter, "\`,"], "");
+      buffer.writeAll(["\"lineDelimiter\":\'",this.lineDelimiter, "\',"], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -72,7 +72,7 @@ class PointMarkerOptions extends OptionFragment {
     }
 
     if (this.fillColor != null) {  
-      buffer.writeAll(["\"fillColor\":\`",this.fillColor, "\`,"], "");
+      buffer.writeAll(["\"fillColor\":\'",this.fillColor, "\',"], "");
     }
 
     if (this.height != null) {  
@@ -80,7 +80,7 @@ class PointMarkerOptions extends OptionFragment {
     }
 
     if (this.lineColor != null) {  
-      buffer.writeAll(["\"lineColor\":\`",this.lineColor, "\`,"], "");
+      buffer.writeAll(["\"lineColor\":\'",this.lineColor, "\',"], "");
     }
 
     if (this.lineWidth != null) {  
@@ -96,7 +96,7 @@ class PointMarkerOptions extends OptionFragment {
     // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
 
     if (this.symbol != null) {  
-      buffer.writeAll(["\"symbol\":\`",this.symbol, "\`,"], "");
+      buffer.writeAll(["\"symbol\":\'",this.symbol, "\',"], "");
     }
 
     if (this.width != null) {  

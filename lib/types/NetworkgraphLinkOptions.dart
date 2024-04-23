@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -45,11 +45,11 @@ class NetworkgraphLinkOptions extends OptionFragment {
 
     
     if (this.color != null) {  
-      buffer.writeAll(["\"color\":\`",this.color, "\`,"], "");
+      buffer.writeAll(["\"color\":\'",this.color, "\',"], "");
     }
 
     if (this.dashStyle != null) {  
-      buffer.writeAll(["\"dashStyle\":\`",this.dashStyle, "\`,"], "");
+      buffer.writeAll(["\"dashStyle\":\'",this.dashStyle, "\',"], "");
     }
 
     if (this.opacity != null) {  

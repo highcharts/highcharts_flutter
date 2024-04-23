@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -39,7 +39,7 @@ class PointAccessibilityOptionsObject extends OptionFragment {
 
     
     if (this.description != null) {  
-      buffer.writeAll(["\"description\":\`",this.description, "\`,"], "");
+      buffer.writeAll(["\"description\":\'",this.description, "\',"], "");
     }
 
     if (this.enabled != null) {  

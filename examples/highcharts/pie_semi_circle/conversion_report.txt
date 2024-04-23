@@ -1,6 +1,16 @@
 [
   {
     "type": "missing_mapping",
+    "path": "title.style.fontSize",
+    "member": {
+      "name": "fontSize",
+      "type": "string",
+      "optional": true,
+      "originalType": "string | number"
+    }
+  },
+  {
+    "type": "missing_mapping",
     "path": "plotOptions.pie.dataLabels.distance",
     "member": {
       "name": "distance",

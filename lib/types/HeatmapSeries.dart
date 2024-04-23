@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -53,11 +53,17 @@ class HeatmapSeries extends Series {
       StringBuffer seriesData = StringBuffer();
 
       for (var point in this.data!) {
-        seriesData.writeAll(["["], "");
-        for (var item in point) {
-          seriesData.writeAll([item, ","]);
+        if (point.length > 1) {
+          seriesData.writeAll(["["], "");
         }
-        seriesData.writeAll(["],"], "");
+
+        seriesData.writeAll(point, ",");
+
+        if (point.length > 1) {
+          seriesData.writeAll(["],"], "");
+        } else {
+          seriesData.write(",");
+        }
       }
 
       buffer.writeAll(["\"data\": [", seriesData, "],"], "");   
@@ -90,7 +96,7 @@ class HeatmapSeries extends Series {
     // NOTE: skip serialization of marker (type HeatmapPointMarkerOptions is ignored) ignore type: false
 
     if (this.options?.nullColor != null) {  
-      buffer.writeAll(["\"nullColor\":\`",this.options?.nullColor, "\`,"], "");
+      buffer.writeAll(["\"nullColor\":\'",this.options?.nullColor, "\',"], "");
     }
 
     if (this.options?.pointPadding != null) {  

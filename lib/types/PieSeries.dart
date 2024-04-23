@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -53,11 +53,17 @@ class PieSeries extends Series {
       StringBuffer seriesData = StringBuffer();
 
       for (var point in this.data!) {
-        seriesData.writeAll(["["], "");
-        for (var item in point) {
-          seriesData.writeAll([item, ","]);
+        if (point.length > 1) {
+          seriesData.writeAll(["["], "");
         }
-        seriesData.writeAll(["],"], "");
+
+        seriesData.writeAll(point, ",");
+
+        if (point.length > 1) {
+          seriesData.writeAll(["],"], "");
+        } else {
+          seriesData.write(",");
+        }
       }
 
       buffer.writeAll(["\"data\": [", seriesData, "],"], "");   
@@ -88,7 +94,7 @@ class PieSeries extends Series {
     // NOTE: skip serialization of dataLabels (type PieDataLabelOptions[] is ignored) ignore type: false
 
     if (this.options?.fillColor != null) {  
-      buffer.writeAll(["\"fillColor\":\`",this.options?.fillColor, "\`,"], "");
+      buffer.writeAll(["\"fillColor\":\'",this.options?.fillColor, "\',"], "");
     }
 
     if (this.options?.ignoreHiddenPoint != null) {  
@@ -98,15 +104,15 @@ class PieSeries extends Series {
     // NOTE: skip serialization of inactiveOtherPoints (type boolean is ignored) ignore type: true
 
     if (this.options?.innerSize != null) {  
-      buffer.writeAll(["\"innerSize\":\`",this.options?.innerSize, "\`,"], "");
+      buffer.writeAll(["\"innerSize\":\'",this.options?.innerSize, "\',"], "");
     }
 
     if (this.options?.minSize != null) {  
-      buffer.writeAll(["\"minSize\":\`",this.options?.minSize, "\`,"], "");
+      buffer.writeAll(["\"minSize\":\'",this.options?.minSize, "\',"], "");
     }
 
     if (this.options?.size != null) {  
-      buffer.writeAll(["\"size\":\`",this.options?.size, "\`,"], "");
+      buffer.writeAll(["\"size\":\'",this.options?.size, "\',"], "");
     }
 
     if (this.options?.slicedOffset != null) {  

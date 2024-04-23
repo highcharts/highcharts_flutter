@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -329,7 +329,7 @@ class AxisOptions extends OptionFragment {
     }
 
     if (this.alternateGridColor != null) {  
-      buffer.writeAll(["\"alternateGridColor\":\`",this.alternateGridColor, "\`,"], "");
+      buffer.writeAll(["\"alternateGridColor\":\'",this.alternateGridColor, "\',"], "");
     }
 
     if (this.categories != null) {  
@@ -345,7 +345,7 @@ class AxisOptions extends OptionFragment {
     }
 
     if (this.className != null) {  
-      buffer.writeAll(["\"className\":\`",this.className, "\`,"], "");
+      buffer.writeAll(["\"className\":\'",this.className, "\',"], "");
     }
 
     if (this.crosshair != null) {  
@@ -369,11 +369,11 @@ class AxisOptions extends OptionFragment {
     }
 
     if (this.gridLineColor != null) {  
-      buffer.writeAll(["\"gridLineColor\":\`",this.gridLineColor, "\`,"], "");
+      buffer.writeAll(["\"gridLineColor\":\'",this.gridLineColor, "\',"], "");
     }
 
     if (this.gridLineDashStyle != null) {  
-      buffer.writeAll(["\"gridLineDashStyle\":\`",this.gridLineDashStyle, "\`,"], "");
+      buffer.writeAll(["\"gridLineDashStyle\":\'",this.gridLineDashStyle, "\',"], "");
     }
 
     if (this.gridLineWidth != null) {  
@@ -385,11 +385,11 @@ class AxisOptions extends OptionFragment {
     }
 
     if (this.height != null) {  
-      buffer.writeAll(["\"height\":\`",this.height, "\`,"], "");
+      buffer.writeAll(["\"height\":\'",this.height, "\',"], "");
     }
 
     if (this.id != null) {  
-      buffer.writeAll(["\"id\":\`",this.id, "\`,"], "");
+      buffer.writeAll(["\"id\":\'",this.id, "\',"], "");
     }
 
     if (this.labels != null) {  
@@ -397,11 +397,11 @@ class AxisOptions extends OptionFragment {
     }
 
     if (this.left != null) {  
-      buffer.writeAll(["\"left\":\`",this.left, "\`,"], "");
+      buffer.writeAll(["\"left\":\'",this.left, "\',"], "");
     }
 
     if (this.lineColor != null) {  
-      buffer.writeAll(["\"lineColor\":\`",this.lineColor, "\`,"], "");
+      buffer.writeAll(["\"lineColor\":\'",this.lineColor, "\',"], "");
     }
 
     if (this.lineWidth != null) {  
@@ -437,11 +437,11 @@ class AxisOptions extends OptionFragment {
     }
 
     if (this.minorGridLineColor != null) {  
-      buffer.writeAll(["\"minorGridLineColor\":\`",this.minorGridLineColor, "\`,"], "");
+      buffer.writeAll(["\"minorGridLineColor\":\'",this.minorGridLineColor, "\',"], "");
     }
 
     if (this.minorGridLineDashStyle != null) {  
-      buffer.writeAll(["\"minorGridLineDashStyle\":\`",this.minorGridLineDashStyle, "\`,"], "");
+      buffer.writeAll(["\"minorGridLineDashStyle\":\'",this.minorGridLineDashStyle, "\',"], "");
     }
 
     if (this.minorGridLineWidth != null) {  
@@ -449,7 +449,7 @@ class AxisOptions extends OptionFragment {
     }
 
     if (this.minorTickColor != null) {  
-      buffer.writeAll(["\"minorTickColor\":\`",this.minorTickColor, "\`,"], "");
+      buffer.writeAll(["\"minorTickColor\":\'",this.minorTickColor, "\',"], "");
     }
 
     // NOTE: skip serialization of minorTickInterval (type "auto" is ignored) ignore type: true
@@ -459,7 +459,7 @@ class AxisOptions extends OptionFragment {
     }
 
     if (this.minorTickPosition != null) {  
-      buffer.writeAll(["\"minorTickPosition\":\`",this.minorTickPosition, "\`,"], "");
+      buffer.writeAll(["\"minorTickPosition\":\'",this.minorTickPosition, "\',"], "");
     }
 
     if (this.minorTicks != null) {  
@@ -499,7 +499,7 @@ class AxisOptions extends OptionFragment {
     }
 
     if (this.overscroll != null) {  
-      buffer.writeAll(["\"overscroll\":\`",this.overscroll, "\`,"], "");
+      buffer.writeAll(["\"overscroll\":\'",this.overscroll, "\',"], "");
     }
 
     if (this.pane != null) {  
@@ -557,7 +557,7 @@ class AxisOptions extends OptionFragment {
     }
 
     if (this.tickColor != null) {  
-      buffer.writeAll(["\"tickColor\":\`",this.tickColor, "\`,"], "");
+      buffer.writeAll(["\"tickColor\":\'",this.tickColor, "\',"], "");
     }
 
     if (this.tickInterval != null) {  
@@ -569,7 +569,7 @@ class AxisOptions extends OptionFragment {
     }
 
     if (this.tickmarkPlacement != null) {  
-      buffer.writeAll(["\"tickmarkPlacement\":\`",this.tickmarkPlacement, "\`,"], "");
+      buffer.writeAll(["\"tickmarkPlacement\":\'",this.tickmarkPlacement, "\',"], "");
     }
 
     if (this.tickPixelInterval != null) {  
@@ -577,7 +577,7 @@ class AxisOptions extends OptionFragment {
     }
 
     if (this.tickPosition != null) {  
-      buffer.writeAll(["\"tickPosition\":\`",this.tickPosition, "\`,"], "");
+      buffer.writeAll(["\"tickPosition\":\'",this.tickPosition, "\',"], "");
     }
 
     if (this.tickPositions != null) {  
@@ -601,11 +601,11 @@ class AxisOptions extends OptionFragment {
     }
 
     if (this.top != null) {  
-      buffer.writeAll(["\"top\":\`",this.top, "\`,"], "");
+      buffer.writeAll(["\"top\":\'",this.top, "\',"], "");
     }
 
     if (this.type != null) {  
-      buffer.writeAll(["\"type\":\`",this.type, "\`,"], "");
+      buffer.writeAll(["\"type\":\'",this.type, "\',"], "");
     }
 
     if (this.uniqueNames != null) {  
@@ -617,7 +617,7 @@ class AxisOptions extends OptionFragment {
     }
 
     if (this.width != null) {  
-      buffer.writeAll(["\"width\":\`",this.width, "\`,"], "");
+      buffer.writeAll(["\"width\":\'",this.width, "\',"], "");
     }
 
     if (this.zIndex != null) {  
@@ -673,7 +673,7 @@ class AxisOptions extends OptionFragment {
     }
 
     if (this.gridLineInterpolation != null) {  
-      buffer.writeAll(["\"gridLineInterpolation\":\`",this.gridLineInterpolation, "\`,"], "");
+      buffer.writeAll(["\"gridLineInterpolation\":\'",this.gridLineInterpolation, "\',"], "");
     }
 
     if (this.breaks != null) {  
@@ -715,7 +715,7 @@ class AxisOptions extends OptionFragment {
     }
 
     if (this.tooltipValueFormat != null) {  
-      buffer.writeAll(["\"tooltipValueFormat\":\`",this.tooltipValueFormat, "\`,"], "");
+      buffer.writeAll(["\"tooltipValueFormat\":\'",this.tooltipValueFormat, "\',"], "");
     }
 
     if (this.stackShadow != null) {  

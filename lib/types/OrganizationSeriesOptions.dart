@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -153,7 +153,7 @@ class OrganizationSeriesOptions extends SankeySeriesOptions {
     }
 
     if (this.hangingIndentTranslation != null) {  
-      buffer.writeAll(["\"hangingIndentTranslation\":\`",this.hangingIndentTranslation, "\`,"], "");
+      buffer.writeAll(["\"hangingIndentTranslation\":\'",this.hangingIndentTranslation, "\',"], "");
     }
 
     // NOTE: skip serialization of hangingSide (type string is ignored) ignore type: true

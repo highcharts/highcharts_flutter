@@ -1,6 +1,6 @@
 # Radial bar chart demo
 
-**Highcharts demo**
+**Highcharts demo**,**Polar**
 A polar bar chart is similar to a bar chart, but the y-axis is circular.
         In this demo we see the total Winter Olympics medals earned for the top 5
         countries.

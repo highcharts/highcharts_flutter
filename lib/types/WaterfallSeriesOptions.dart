@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -116,7 +116,7 @@ class WaterfallSeriesOptions extends ColumnSeriesOptions {
 
     
     if (this.upColor != null) {  
-      buffer.writeAll(["\"upColor\":\`",this.upColor, "\`,"], "");
+      buffer.writeAll(["\"upColor\":\'",this.upColor, "\',"], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored) ignore type: true

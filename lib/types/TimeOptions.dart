@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -50,7 +50,7 @@ class TimeOptions extends OptionFragment {
     // NOTE: skip serialization of getTimezoneOffset (type Function is ignored) ignore type: 1
 
     if (this.timezone != null) {  
-      buffer.writeAll(["\"timezone\":\`",this.timezone, "\`,"], "");
+      buffer.writeAll(["\"timezone\":\'",this.timezone, "\',"], "");
     }
 
     if (this.timezoneOffset != null) {  

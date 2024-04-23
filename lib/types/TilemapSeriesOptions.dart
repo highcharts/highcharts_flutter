@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -118,7 +118,7 @@ class TilemapSeriesOptions extends HeatmapSeriesOptions {
     // NOTE: skip serialization of state (type Generic is ignored) ignore type: true
 
     if (this.tileShape != null) {  
-      buffer.writeAll(["\"tileShape\":\`",this.tileShape, "\`,"], "");
+      buffer.writeAll(["\"tileShape\":\'",this.tileShape, "\',"], "");
     }
   }
 

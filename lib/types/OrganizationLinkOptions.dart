@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -53,7 +53,7 @@ class OrganizationLinkOptions extends OptionFragment {
     // NOTE: skip serialization of curveFactor (type number is ignored) ignore type: true
 
     if (this.color != null) {  
-      buffer.writeAll(["\"color\":\`",this.color, "\`,"], "");
+      buffer.writeAll(["\"color\":\'",this.color, "\',"], "");
     }
 
     if (this.lineWidth != null) {  
@@ -61,7 +61,7 @@ class OrganizationLinkOptions extends OptionFragment {
     }
 
     if (this.type != null) {  
-      buffer.writeAll(["\"type\":\`",this.type, "\`,"], "");
+      buffer.writeAll(["\"type\":\'",this.type, "\',"], "");
     }
 
     if (this.radius != null) {  

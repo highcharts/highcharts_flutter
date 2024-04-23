@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -135,7 +135,7 @@ class ItemSeriesOptions extends PieSeriesOptions {
     }
 
     if (this.layout != null) {  
-      buffer.writeAll(["\"layout\":\`",this.layout, "\`,"], "");
+      buffer.writeAll(["\"layout\":\'",this.layout, "\',"], "");
     }
 
     // NOTE: skip serialization of marker (type ItemPointMarkerOptions is ignored) ignore type: false

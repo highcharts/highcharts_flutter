@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -65,7 +65,7 @@ class DataGroupingOptions extends OptionFragment {
 
     
     if (this.anchor != null) {  
-      buffer.writeAll(["\"anchor\":\`",this.anchor, "\`,"], "");
+      buffer.writeAll(["\"anchor\":\'",this.anchor, "\',"], "");
     }
 
     // NOTE: skip serialization of approximation (type keyof ApproximationTypeRegistry is ignored) ignore type: true
@@ -79,7 +79,7 @@ class DataGroupingOptions extends OptionFragment {
     }
 
     if (this.firstAnchor != null) {  
-      buffer.writeAll(["\"firstAnchor\":\`",this.firstAnchor, "\`,"], "");
+      buffer.writeAll(["\"firstAnchor\":\'",this.firstAnchor, "\',"], "");
     }
 
     if (this.forced != null) {  
@@ -95,7 +95,7 @@ class DataGroupingOptions extends OptionFragment {
     }
 
     if (this.lastAnchor != null) {  
-      buffer.writeAll(["\"lastAnchor\":\`",this.lastAnchor, "\`,"], "");
+      buffer.writeAll(["\"lastAnchor\":\'",this.lastAnchor, "\',"], "");
     }
 
     if (this.smoothed != null) {  

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -139,19 +139,19 @@ class FunnelSeriesOptions extends PieSeriesOptions {
 
     
     if (this.width != null) {  
-      buffer.writeAll(["\"width\":\`",this.width, "\`,"], "");
+      buffer.writeAll(["\"width\":\'",this.width, "\',"], "");
     }
 
     if (this.neckWidth != null) {  
-      buffer.writeAll(["\"neckWidth\":\`",this.neckWidth, "\`,"], "");
+      buffer.writeAll(["\"neckWidth\":\'",this.neckWidth, "\',"], "");
     }
 
     if (this.height != null) {  
-      buffer.writeAll(["\"height\":\`",this.height, "\`,"], "");
+      buffer.writeAll(["\"height\":\'",this.height, "\',"], "");
     }
 
     if (this.neckHeight != null) {  
-      buffer.writeAll(["\"neckHeight\":\`",this.neckHeight, "\`,"], "");
+      buffer.writeAll(["\"neckHeight\":\'",this.neckHeight, "\',"], "");
     }
 
     if (this.reversed != null) {  

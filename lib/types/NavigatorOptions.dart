@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -62,7 +62,7 @@ class NavigatorOptions extends OptionFragment {
     }
 
     if (this.baseSeries != null) {  
-      buffer.writeAll(["\"baseSeries\":\`",this.baseSeries, "\`,"], "");
+      buffer.writeAll(["\"baseSeries\":\'",this.baseSeries, "\',"], "");
     }
 
     if (this.enabled != null) {  

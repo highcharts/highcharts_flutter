@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -66,11 +66,11 @@ class ConnectorsEndMarkerOptions extends OptionFragment {
 
     
     if (this.align != null) {  
-      buffer.writeAll(["\"align\":\`",this.align, "\`,"], "");
+      buffer.writeAll(["\"align\":\'",this.align, "\',"], "");
     }
 
     if (this.color != null) {  
-      buffer.writeAll(["\"color\":\`",this.color, "\`,"], "");
+      buffer.writeAll(["\"color\":\'",this.color, "\',"], "");
     }
 
     if (this.enabled != null) {  
@@ -86,7 +86,7 @@ class ConnectorsEndMarkerOptions extends OptionFragment {
     }
 
     if (this.lineColor != null) {  
-      buffer.writeAll(["\"lineColor\":\`",this.lineColor, "\`,"], "");
+      buffer.writeAll(["\"lineColor\":\'",this.lineColor, "\',"], "");
     }
 
     if (this.lineWidth != null) {  
@@ -98,11 +98,11 @@ class ConnectorsEndMarkerOptions extends OptionFragment {
     }
 
     if (this.symbol != null) {  
-      buffer.writeAll(["\"symbol\":\`",this.symbol, "\`,"], "");
+      buffer.writeAll(["\"symbol\":\'",this.symbol, "\',"], "");
     }
 
     if (this.verticalAlign != null) {  
-      buffer.writeAll(["\"verticalAlign\":\`",this.verticalAlign, "\`,"], "");
+      buffer.writeAll(["\"verticalAlign\":\'",this.verticalAlign, "\',"], "");
     }
 
     if (this.width != null) {  

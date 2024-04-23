@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -51,7 +51,7 @@ class MapSeriesOptions extends OptionFragment {
     // NOTE: skip serialization of data (type MapPointOptions)[] is ignored) ignore type: true
 
     if (this.nullColor != null) {  
-      buffer.writeAll(["\"nullColor\":\`",this.nullColor, "\`,"], "");
+      buffer.writeAll(["\"nullColor\":\'",this.nullColor, "\',"], "");
     }
 
     if (this.nullInteraction != null) {  

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -110,11 +110,11 @@ class ScrollbarOptions extends OptionFragment {
 
     
     if (this.barBackgroundColor != null) {  
-      buffer.writeAll(["\"barBackgroundColor\":\`",this.barBackgroundColor, "\`,"], "");
+      buffer.writeAll(["\"barBackgroundColor\":\'",this.barBackgroundColor, "\',"], "");
     }
 
     if (this.barBorderColor != null) {  
-      buffer.writeAll(["\"barBorderColor\":\`",this.barBorderColor, "\`,"], "");
+      buffer.writeAll(["\"barBorderColor\":\'",this.barBorderColor, "\',"], "");
     }
 
     if (this.barBorderRadius != null) {  
@@ -126,15 +126,15 @@ class ScrollbarOptions extends OptionFragment {
     }
 
     if (this.buttonArrowColor != null) {  
-      buffer.writeAll(["\"buttonArrowColor\":\`",this.buttonArrowColor, "\`,"], "");
+      buffer.writeAll(["\"buttonArrowColor\":\'",this.buttonArrowColor, "\',"], "");
     }
 
     if (this.buttonBackgroundColor != null) {  
-      buffer.writeAll(["\"buttonBackgroundColor\":\`",this.buttonBackgroundColor, "\`,"], "");
+      buffer.writeAll(["\"buttonBackgroundColor\":\'",this.buttonBackgroundColor, "\',"], "");
     }
 
     if (this.buttonBorderColor != null) {  
-      buffer.writeAll(["\"buttonBorderColor\":\`",this.buttonBorderColor, "\`,"], "");
+      buffer.writeAll(["\"buttonBorderColor\":\'",this.buttonBorderColor, "\',"], "");
     }
 
     if (this.buttonBorderRadius != null) {  
@@ -176,7 +176,7 @@ class ScrollbarOptions extends OptionFragment {
     }
 
     if (this.rifleColor != null) {  
-      buffer.writeAll(["\"rifleColor\":\`",this.rifleColor, "\`,"], "");
+      buffer.writeAll(["\"rifleColor\":\'",this.rifleColor, "\',"], "");
     }
 
     if (this.showFull != null) {  
@@ -188,11 +188,11 @@ class ScrollbarOptions extends OptionFragment {
     // NOTE: skip serialization of step (type number is ignored) ignore type: true
 
     if (this.trackBackgroundColor != null) {  
-      buffer.writeAll(["\"trackBackgroundColor\":\`",this.trackBackgroundColor, "\`,"], "");
+      buffer.writeAll(["\"trackBackgroundColor\":\'",this.trackBackgroundColor, "\',"], "");
     }
 
     if (this.trackBorderColor != null) {  
-      buffer.writeAll(["\"trackBorderColor\":\`",this.trackBorderColor, "\`,"], "");
+      buffer.writeAll(["\"trackBorderColor\":\'",this.trackBorderColor, "\',"], "");
     }
 
     if (this.trackBorderRadius != null) {  

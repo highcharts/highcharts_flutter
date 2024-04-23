@@ -5,7 +5,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/Highcharts.dart';
-import 'package:highcharts_flutter/types/LineSeriesOptions.dart';
 import 'package:highcharts_flutter/types/ChartOptions.dart';
 import 'package:highcharts_flutter/types/TitleOptions.dart';
 import 'package:highcharts_flutter/types/SubtitleOptions.dart';
@@ -61,10 +60,12 @@ class _MyHomePageState extends State<MyHomePage> {
             HighchartsChart(
               HighchartsOptions(
                 title: TitleOptions(
-                    text: "Monthly Average Rainfall",
+                    text: "Corn vs wheat estimated production for 2020",
+                    align: "left",
                 ),
                 subtitle: SubtitleOptions(
-                    text: "Source: WorldClimate.com",
+                    text: "Source: <a target=\"_blank\" href=\"https://www.indexmundi.com/agriculture/?commodity=corn\">indexmundi</a>",
+                    align: "left",
                 ),
                 xAxis: [ 
                   XAxisOptions( 
@@ -77,11 +78,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ],
                 tooltip: TooltipOptions(
-                    headerFormat: "<span style=\"font-size:10px\">{point.key}</span><table>",
-                    pointFormat: "<tr><td style=\"color:{series.color};padding:0\">{series.name}: </td><td style=\"padding:0\"><b>{point.y:.1f} mm</b></td></tr>",
-                    footerFormat: "</table>",
-                    shared: true,
-                    useHTML: true,
+                    valueSuffix: " (1000 MT)",
                 ),
                 plotOptions: HighchartsPlotOptions(
                   column: ColumnSeriesOptions(
@@ -91,71 +88,25 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 series: [ 
                   ColumnSeries(
-                      name: "Tokyo",
+                      name: "Corn",
                     data: [ 
-                      [49.9], 
-                      [71.5], 
-                      [106.4], 
-                      [129.2], 
-                      [144], 
-                      [176], 
-                      [135.6], 
-                      [148.5], 
-                      [216.4], 
-                      [194.1], 
-                      [95.6], 
-                      [54.4], 
+                      [406292], 
+                      [260000], 
+                      [107000], 
+                      [68300], 
+                      [27500], 
+                      [14500], 
                     ],
                   ),
                   ColumnSeries(
-                      name: "New York",
+                      name: "Wheat",
                     data: [ 
-                      [83.6], 
-                      [78.8], 
-                      [98.5], 
-                      [93.4], 
-                      [106], 
-                      [84.5], 
-                      [105], 
-                      [104.3], 
-                      [91.2], 
-                      [83.5], 
-                      [106.6], 
-                      [92.3], 
-                    ],
-                  ),
-                  ColumnSeries(
-                      name: "London",
-                    data: [ 
-                      [48.9], 
-                      [38.8], 
-                      [39.3], 
-                      [41.4], 
-                      [47], 
-                      [48.3], 
-                      [59], 
-                      [59.6], 
-                      [52.4], 
-                      [65.2], 
-                      [59.3], 
-                      [51.2], 
-                    ],
-                  ),
-                  ColumnSeries(
-                      name: "Berlin",
-                    data: [ 
-                      [42.4], 
-                      [33.2], 
-                      [34.5], 
-                      [39.7], 
-                      [52.6], 
-                      [75.5], 
-                      [57.4], 
-                      [60.4], 
-                      [47.6], 
-                      [39.1], 
-                      [46.8], 
-                      [51.1], 
+                      [51086], 
+                      [136000], 
+                      [5500], 
+                      [141000], 
+                      [107180], 
+                      [77000], 
                     ],
                   ),
                 ],

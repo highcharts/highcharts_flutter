@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -158,7 +158,7 @@ class PieSeriesOptions extends LineSeriesOptions {
     // NOTE: skip serialization of dataLabels (type PieDataLabelOptions[] is ignored) ignore type: false
 
     if (this.fillColor != null) {  
-      buffer.writeAll(["\"fillColor\":\`",this.fillColor, "\`,"], "");
+      buffer.writeAll(["\"fillColor\":\'",this.fillColor, "\',"], "");
     }
 
     if (this.ignoreHiddenPoint != null) {  
@@ -168,15 +168,15 @@ class PieSeriesOptions extends LineSeriesOptions {
     // NOTE: skip serialization of inactiveOtherPoints (type boolean is ignored) ignore type: true
 
     if (this.innerSize != null) {  
-      buffer.writeAll(["\"innerSize\":\`",this.innerSize, "\`,"], "");
+      buffer.writeAll(["\"innerSize\":\'",this.innerSize, "\',"], "");
     }
 
     if (this.minSize != null) {  
-      buffer.writeAll(["\"minSize\":\`",this.minSize, "\`,"], "");
+      buffer.writeAll(["\"minSize\":\'",this.minSize, "\',"], "");
     }
 
     if (this.size != null) {  
-      buffer.writeAll(["\"size\":\`",this.size, "\`,"], "");
+      buffer.writeAll(["\"size\":\'",this.size, "\',"], "");
     }
 
     if (this.slicedOffset != null) {  

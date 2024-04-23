@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -51,7 +51,7 @@ class LegendNavigationOptions extends OptionFragment {
 
     
     if (this.activeColor != null) {  
-      buffer.writeAll(["\"activeColor\":\`",this.activeColor, "\`,"], "");
+      buffer.writeAll(["\"activeColor\":\'",this.activeColor, "\',"], "");
     }
 
     // NOTE: skip serialization of animation (type Generic is ignored) ignore type: true
@@ -65,7 +65,7 @@ class LegendNavigationOptions extends OptionFragment {
     }
 
     if (this.inactiveColor != null) {  
-      buffer.writeAll(["\"inactiveColor\":\`",this.inactiveColor, "\`,"], "");
+      buffer.writeAll(["\"inactiveColor\":\'",this.inactiveColor, "\',"], "");
     }
 
     if (this.style != null) {  

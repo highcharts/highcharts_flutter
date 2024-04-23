@@ -5,7 +5,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/Highcharts.dart';
-import 'package:highcharts_flutter/types/LineSeriesOptions.dart';
 import 'package:highcharts_flutter/types/DataOptions.dart';
 import 'package:highcharts_flutter/types/HTMLTableElement.dart';
 import 'package:highcharts_flutter/types/ChartOptions.dart';

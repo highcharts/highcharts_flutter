@@ -1,6 +1,6 @@
 # With data labels demo
 
-**Highcharts demo**
+**Highcharts demo**,**Annotations**
 This chart shows how data labels can be added to the data series. This
         can increase readability and comprehension for small datasets.
 

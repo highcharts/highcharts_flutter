@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -47,7 +47,7 @@ class MapViewInsetOptions extends OptionFragment {
 
     
     if (this.borderColor != null) {  
-      buffer.writeAll(["\"borderColor\":\`",this.borderColor, "\`,"], "");
+      buffer.writeAll(["\"borderColor\":\'",this.borderColor, "\',"], "");
     }
 
     if (this.borderWidth != null) {  
@@ -57,11 +57,11 @@ class MapViewInsetOptions extends OptionFragment {
     // NOTE: skip serialization of padding (type MapViewPaddingType is ignored) ignore type: 1
 
     if (this.relativeTo != null) {  
-      buffer.writeAll(["\"relativeTo\":\`",this.relativeTo, "\`,"], "");
+      buffer.writeAll(["\"relativeTo\":\'",this.relativeTo, "\',"], "");
     }
 
     if (this.units != null) {  
-      buffer.writeAll(["\"units\":\`",this.units, "\`,"], "");
+      buffer.writeAll(["\"units\":\'",this.units, "\',"], "");
     }
   }
 

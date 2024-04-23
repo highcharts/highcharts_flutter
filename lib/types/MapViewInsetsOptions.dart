@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -70,7 +70,7 @@ class MapViewInsetsOptions extends MapViewInsetOptions {
     }
 
     if (this.id != null) {  
-      buffer.writeAll(["\"id\":\`",this.id, "\`,"], "");
+      buffer.writeAll(["\"id\":\'",this.id, "\',"], "");
     }
 
     if (this.projection != null) {  

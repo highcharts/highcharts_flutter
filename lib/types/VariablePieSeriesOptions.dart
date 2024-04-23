@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -134,15 +134,15 @@ class VariablePieSeriesOptions extends PieSeriesOptions {
 
     
     if (this.maxPointSize != null) {  
-      buffer.writeAll(["\"maxPointSize\":\`",this.maxPointSize, "\`,"], "");
+      buffer.writeAll(["\"maxPointSize\":\'",this.maxPointSize, "\',"], "");
     }
 
     if (this.minPointSize != null) {  
-      buffer.writeAll(["\"minPointSize\":\`",this.minPointSize, "\`,"], "");
+      buffer.writeAll(["\"minPointSize\":\'",this.minPointSize, "\',"], "");
     }
 
     if (this.sizeBy != null) {  
-      buffer.writeAll(["\"sizeBy\":\`",this.sizeBy, "\`,"], "");
+      buffer.writeAll(["\"sizeBy\":\'",this.sizeBy, "\',"], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored) ignore type: true

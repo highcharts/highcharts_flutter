@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -66,11 +66,11 @@ class MapNavigationButtonOptions extends OptionFragment {
 
     
     if (this.align != null) {  
-      buffer.writeAll(["\"align\":\`",this.align, "\`,"], "");
+      buffer.writeAll(["\"align\":\'",this.align, "\',"], "");
     }
 
     if (this.alignTo != null) {  
-      buffer.writeAll(["\"alignTo\":\`",this.alignTo, "\`,"], "");
+      buffer.writeAll(["\"alignTo\":\'",this.alignTo, "\',"], "");
     }
 
     if (this.height != null) {  
@@ -94,7 +94,7 @@ class MapNavigationButtonOptions extends OptionFragment {
     }
 
     if (this.verticalAlign != null) {  
-      buffer.writeAll(["\"verticalAlign\":\`",this.verticalAlign, "\`,"], "");
+      buffer.writeAll(["\"verticalAlign\":\'",this.verticalAlign, "\',"], "");
     }
 
     if (this.width != null) {  

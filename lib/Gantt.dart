@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -358,26 +358,33 @@ const String kLocalExamplePage = '''
 <body>
 
 <script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/maps/highmaps.js"></script>
+<script src="https://code.highcharts.com/highcharts-more.js"></script>
+<script src="https://code.highcharts.com/highcharts-3d.js"></script>
 <script src="https://code.highcharts.com/modules/series-label.js"></script>
 <script src="https://code.highcharts.com/modules/data.js"></script>
+<script src="https://code.highcharts.com/modules/stock.js"></script>
+<script src="https://code.highcharts.com/modules/gantt.js"></script>
+<script src="https://code.highcharts.com/modules/sankey.js"></script>
 <script src="https://code.highcharts.com/modules/accessibility.js"></script>
 
 <div id="container"></div>
+
+</body>
 
 <script>
 // TODO: resolve proper constructor.
 let chart = Highcharts.chart('container', {});
 
-function UpdateChart (data) {
+function UpdateChart (data, constr) {
   // update is not always reliable. In cases where it's not, it's a Highcharts
   // bug. But for testing we're currently just recreating everything.
   // chart.update(data);
-  chart = Highcharts.chart('container', data);
+  chart = Highcharts[constr || 'chart']('container', data);
 }
 
 </script>
 
-</body>
 </html>
 ''';
 
@@ -405,7 +412,7 @@ class _GanttChart extends State<GanttChart> {
 
   void refresh () {
     if (controller != null) {
-      controller.runJavaScript('''UpdateChart(${widget.options.toJSON()})''');
+      controller.runJavaScript('''UpdateChart(${widget.options.toJSON()}, 'ganttChart')''');
       print(widget.options.toJSON());
     }
   }

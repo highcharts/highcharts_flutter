@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -93,7 +93,7 @@ class StackLabelOptions extends OptionFragment {
     // NOTE: skip serialization of animation (type Generic is ignored) ignore type: true
 
     if (this.align != null) {  
-      buffer.writeAll(["\"align\":\`",this.align, "\`,"], "");
+      buffer.writeAll(["\"align\":\'",this.align, "\',"], "");
     }
 
     if (this.allowOverlap != null) {  
@@ -101,11 +101,11 @@ class StackLabelOptions extends OptionFragment {
     }
 
     if (this.backgroundColor != null) {  
-      buffer.writeAll(["\"backgroundColor\":\`",this.backgroundColor, "\`,"], "");
+      buffer.writeAll(["\"backgroundColor\":\'",this.backgroundColor, "\',"], "");
     }
 
     if (this.borderColor != null) {  
-      buffer.writeAll(["\"borderColor\":\`",this.borderColor, "\`,"], "");
+      buffer.writeAll(["\"borderColor\":\'",this.borderColor, "\',"], "");
     }
 
     if (this.borderRadius != null) {  
@@ -125,11 +125,11 @@ class StackLabelOptions extends OptionFragment {
     }
 
     if (this.format != null) {  
-      buffer.writeAll(["\"format\":\`",this.format, "\`,"], "");
+      buffer.writeAll(["\"format\":\'",this.format, "\',"], "");
     }
 
     if (this.overflow != null) {  
-      buffer.writeAll(["\"overflow\":\`",this.overflow, "\`,"], "");
+      buffer.writeAll(["\"overflow\":\'",this.overflow, "\',"], "");
     }
 
     // NOTE: skip serialization of padding (type number is ignored) ignore type: true
@@ -145,7 +145,7 @@ class StackLabelOptions extends OptionFragment {
     }
 
     if (this.textAlign != null) {  
-      buffer.writeAll(["\"textAlign\":\`",this.textAlign, "\`,"], "");
+      buffer.writeAll(["\"textAlign\":\'",this.textAlign, "\',"], "");
     }
 
     if (this.useHTML != null) {  
@@ -153,7 +153,7 @@ class StackLabelOptions extends OptionFragment {
     }
 
     if (this.verticalAlign != null) {  
-      buffer.writeAll(["\"verticalAlign\":\`",this.verticalAlign, "\`,"], "");
+      buffer.writeAll(["\"verticalAlign\":\'",this.verticalAlign, "\',"], "");
     }
 
     if (this.x != null) {  

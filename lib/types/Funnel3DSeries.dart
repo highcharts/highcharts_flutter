@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -53,11 +53,17 @@ class Funnel3DSeries extends Series {
       StringBuffer seriesData = StringBuffer();
 
       for (var point in this.data!) {
-        seriesData.writeAll(["["], "");
-        for (var item in point) {
-          seriesData.writeAll([item, ","]);
+        if (point.length > 1) {
+          seriesData.writeAll(["["], "");
         }
-        seriesData.writeAll(["],"], "");
+
+        seriesData.writeAll(point, ",");
+
+        if (point.length > 1) {
+          seriesData.writeAll(["],"], "");
+        } else {
+          seriesData.write(",");
+        }
       }
 
       buffer.writeAll(["\"data\": [", seriesData, "],"], "");   
@@ -88,17 +94,17 @@ class Funnel3DSeries extends Series {
     }
 
     if (this.options?.height != null) {  
-      buffer.writeAll(["\"height\":\`",this.options?.height, "\`,"], "");
+      buffer.writeAll(["\"height\":\'",this.options?.height, "\',"], "");
     }
 
     // NOTE: skip serialization of ignoreHiddenPoint (type boolean is ignored) ignore type: true
 
     if (this.options?.neckHeight != null) {  
-      buffer.writeAll(["\"neckHeight\":\`",this.options?.neckHeight, "\`,"], "");
+      buffer.writeAll(["\"neckHeight\":\'",this.options?.neckHeight, "\',"], "");
     }
 
     if (this.options?.neckWidth != null) {  
-      buffer.writeAll(["\"neckWidth\":\`",this.options?.neckWidth, "\`,"], "");
+      buffer.writeAll(["\"neckWidth\":\'",this.options?.neckWidth, "\',"], "");
     }
 
     if (this.options?.reversed != null) {  
@@ -108,7 +114,7 @@ class Funnel3DSeries extends Series {
     // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
 
     if (this.options?.width != null) {  
-      buffer.writeAll(["\"width\":\`",this.options?.width, "\`,"], "");
+      buffer.writeAll(["\"width\":\'",this.options?.width, "\',"], "");
     }
   }
 

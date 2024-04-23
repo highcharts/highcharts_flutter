@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -337,7 +337,7 @@ class SeriesOptions extends OptionFragment {
     // NOTE: skip serialization of stack (type string is ignored) ignore type: true
 
     if (this.stacking != null) {  
-      buffer.writeAll(["\"stacking\":\`",this.stacking, "\`,"], "");
+      buffer.writeAll(["\"stacking\":\'",this.stacking, "\',"], "");
     }
 
     if (this.dataLabels != null) {  
@@ -353,7 +353,7 @@ class SeriesOptions extends OptionFragment {
     }
 
     if (this.borderColor != null) {  
-      buffer.writeAll(["\"borderColor\":\`",this.borderColor, "\`,"], "");
+      buffer.writeAll(["\"borderColor\":\'",this.borderColor, "\',"], "");
     }
 
     // NOTE: skip serialization of borderDashStyle (type string is ignored) ignore type: true
@@ -383,7 +383,7 @@ class SeriesOptions extends OptionFragment {
     // NOTE: skip serialization of tooltip (type Generic is ignored) ignore type: true
 
     if (this.colorKey != null) {  
-      buffer.writeAll(["\"colorKey\":\`",this.colorKey, "\`,"], "");
+      buffer.writeAll(["\"colorKey\":\'",this.colorKey, "\',"], "");
     }
 
     // NOTE: skip serialization of legendIndex (type number is ignored) ignore type: true
@@ -409,7 +409,7 @@ class SeriesOptions extends OptionFragment {
     // NOTE: skip serialization of animation (type Generic is ignored) ignore type: true
 
     if (this.className != null) {  
-      buffer.writeAll(["\"className\":\`",this.className, "\`,"], "");
+      buffer.writeAll(["\"className\":\'",this.className, "\',"], "");
     }
 
     if (this.clip != null) {  
@@ -417,7 +417,7 @@ class SeriesOptions extends OptionFragment {
     }
 
     if (this.color != null) {  
-      buffer.writeAll(["\"color\":\`",this.color, "\`,"], "");
+      buffer.writeAll(["\"color\":\'",this.color, "\',"], "");
     }
 
     // NOTE: skip serialization of colorByPoint (type boolean is ignored) ignore type: true
@@ -437,11 +437,11 @@ class SeriesOptions extends OptionFragment {
     }
 
     if (this.cursor != null) {  
-      buffer.writeAll(["\"cursor\":\`",this.cursor, "\`,"], "");
+      buffer.writeAll(["\"cursor\":\'",this.cursor, "\',"], "");
     }
 
     if (this.dashStyle != null) {  
-      buffer.writeAll(["\"dashStyle\":\`",this.dashStyle, "\`,"], "");
+      buffer.writeAll(["\"dashStyle\":\'",this.dashStyle, "\',"], "");
     }
 
     // NOTE: skip serialization of data (type PointShortOptions)[] is ignored) ignore type: true
@@ -459,7 +459,7 @@ class SeriesOptions extends OptionFragment {
     }
 
     if (this.findNearestPointBy != null) {  
-      buffer.writeAll(["\"findNearestPointBy\":\`",this.findNearestPointBy, "\`,"], "");
+      buffer.writeAll(["\"findNearestPointBy\":\'",this.findNearestPointBy, "\',"], "");
     }
 
     if (this.getExtremesFromAll != null) {  
@@ -493,7 +493,7 @@ class SeriesOptions extends OptionFragment {
     }
 
     if (this.linecap != null) {  
-      buffer.writeAll(["\"linecap\":\`",this.linecap, "\`,"], "");
+      buffer.writeAll(["\"linecap\":\'",this.linecap, "\',"], "");
     }
 
     // NOTE: skip serialization of lineColor (type string is ignored) ignore type: true
@@ -503,7 +503,7 @@ class SeriesOptions extends OptionFragment {
     }
 
     if (this.linkedTo != null) {  
-      buffer.writeAll(["\"linkedTo\":\`",this.linkedTo, "\`,"], "");
+      buffer.writeAll(["\"linkedTo\":\'",this.linkedTo, "\',"], "");
     }
 
     if (this.marker != null) {  
@@ -513,7 +513,7 @@ class SeriesOptions extends OptionFragment {
     // NOTE: skip serialization of name (type string is ignored) ignore type: true
 
     if (this.negativeColor != null) {  
-      buffer.writeAll(["\"negativeColor\":\`",this.negativeColor, "\`,"], "");
+      buffer.writeAll(["\"negativeColor\":\'",this.negativeColor, "\',"], "");
     }
 
     if (this.opacity != null) {  
@@ -525,7 +525,7 @@ class SeriesOptions extends OptionFragment {
     }
 
     if (this.pointPlacement != null) {  
-      buffer.writeAll(["\"pointPlacement\":\`",this.pointPlacement, "\`,"], "");
+      buffer.writeAll(["\"pointPlacement\":\'",this.pointPlacement, "\',"], "");
     }
 
     if (this.pointStart != null) {  
@@ -547,7 +547,7 @@ class SeriesOptions extends OptionFragment {
     // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
 
     if (this.step != null) {  
-      buffer.writeAll(["\"step\":\`",this.step, "\`,"], "");
+      buffer.writeAll(["\"step\":\'",this.step, "\',"], "");
     }
 
     if (this.stickyTracking != null) {  
@@ -573,7 +573,7 @@ class SeriesOptions extends OptionFragment {
     }
 
     if (this.zoneAxis != null) {  
-      buffer.writeAll(["\"zoneAxis\":\`",this.zoneAxis, "\`,"], "");
+      buffer.writeAll(["\"zoneAxis\":\'",this.zoneAxis, "\',"], "");
     }
 
     if (this.zones != null) {  
@@ -589,7 +589,7 @@ class SeriesOptions extends OptionFragment {
     }
 
     if (this.legendSymbol != null) {  
-      buffer.writeAll(["\"legendSymbol\":\`",this.legendSymbol, "\`,"], "");
+      buffer.writeAll(["\"legendSymbol\":\'",this.legendSymbol, "\',"], "");
     }
 
     if (this.softThreshold != null) {  
@@ -625,7 +625,7 @@ class SeriesOptions extends OptionFragment {
     }
 
     if (this.gapUnit != null) {  
-      buffer.writeAll(["\"gapUnit\":\`",this.gapUnit, "\`,"], "");
+      buffer.writeAll(["\"gapUnit\":\'",this.gapUnit, "\',"], "");
     }
 
     if (this.pointInterval != null) {  
@@ -633,7 +633,7 @@ class SeriesOptions extends OptionFragment {
     }
 
     if (this.pointIntervalUnit != null) {  
-      buffer.writeAll(["\"pointIntervalUnit\":\`",this.pointIntervalUnit, "\`,"], "");
+      buffer.writeAll(["\"pointIntervalUnit\":\'",this.pointIntervalUnit, "\',"], "");
     }
 
     // NOTE: skip serialization of onSeries (type string is ignored) ignore type: true
@@ -645,7 +645,7 @@ class SeriesOptions extends OptionFragment {
     // NOTE: skip serialization of dataAsColumns (type boolean is ignored) ignore type: true
 
     if (this.boostBlending != null) {  
-      buffer.writeAll(["\"boostBlending\":\`",this.boostBlending, "\`,"], "");
+      buffer.writeAll(["\"boostBlending\":\'",this.boostBlending, "\',"], "");
     }
 
     if (this.boostThreshold != null) {  
@@ -705,7 +705,7 @@ class SeriesOptions extends OptionFragment {
     // NOTE: skip serialization of inactiveOtherPoints (type boolean is ignored) ignore type: true
 
     if (this.compare != null) {  
-      buffer.writeAll(["\"compare\":\`",this.compare, "\`,"], "");
+      buffer.writeAll(["\"compare\":\'",this.compare, "\',"], "");
     }
 
     // NOTE: skip serialization of compareBase (type 100 is ignored) ignore type: true

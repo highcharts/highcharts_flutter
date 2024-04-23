@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -142,17 +142,17 @@ class Funnel3DSeriesOptions extends ColumnSeriesOptions {
     }
 
     if (this.height != null) {  
-      buffer.writeAll(["\"height\":\`",this.height, "\`,"], "");
+      buffer.writeAll(["\"height\":\'",this.height, "\',"], "");
     }
 
     // NOTE: skip serialization of ignoreHiddenPoint (type boolean is ignored) ignore type: true
 
     if (this.neckHeight != null) {  
-      buffer.writeAll(["\"neckHeight\":\`",this.neckHeight, "\`,"], "");
+      buffer.writeAll(["\"neckHeight\":\'",this.neckHeight, "\',"], "");
     }
 
     if (this.neckWidth != null) {  
-      buffer.writeAll(["\"neckWidth\":\`",this.neckWidth, "\`,"], "");
+      buffer.writeAll(["\"neckWidth\":\'",this.neckWidth, "\',"], "");
     }
 
     if (this.reversed != null) {  
@@ -162,7 +162,7 @@ class Funnel3DSeriesOptions extends ColumnSeriesOptions {
     // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
 
     if (this.width != null) {  
-      buffer.writeAll(["\"width\":\`",this.width, "\`,"], "");
+      buffer.writeAll(["\"width\":\'",this.width, "\',"], "");
     }
   }
 

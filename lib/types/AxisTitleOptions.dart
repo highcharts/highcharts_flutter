@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -76,7 +76,7 @@ class AxisTitleOptions extends OptionFragment {
 
     
     if (this.align != null) {  
-      buffer.writeAll(["\"align\":\`",this.align, "\`,"], "");
+      buffer.writeAll(["\"align\":\'",this.align, "\',"], "");
     }
 
     if (this.enabled != null) {  
@@ -104,11 +104,11 @@ class AxisTitleOptions extends OptionFragment {
     }
 
     if (this.text != null) {  
-      buffer.writeAll(["\"text\":\`",this.text, "\`,"], "");
+      buffer.writeAll(["\"text\":\'",this.text, "\',"], "");
     }
 
     if (this.textAlign != null) {  
-      buffer.writeAll(["\"textAlign\":\`",this.textAlign, "\`,"], "");
+      buffer.writeAll(["\"textAlign\":\'",this.textAlign, "\',"], "");
     }
 
     if (this.useHTML != null) {  
@@ -124,7 +124,7 @@ class AxisTitleOptions extends OptionFragment {
     }
 
     if (this.position3d != null) {  
-      buffer.writeAll(["\"position3d\":\`",this.position3d, "\`,"], "");
+      buffer.writeAll(["\"position3d\":\'",this.position3d, "\',"], "");
     }
 
     if (this.skew3d != null) {  

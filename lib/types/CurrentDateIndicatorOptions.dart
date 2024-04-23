@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -64,21 +64,21 @@ class CurrentDateIndicatorOptions extends OptionFragment {
     }
 
     if (this.className != null) {  
-      buffer.writeAll(["\"className\":\`",this.className, "\`,"], "");
+      buffer.writeAll(["\"className\":\'",this.className, "\',"], "");
     }
 
     if (this.color != null) {  
-      buffer.writeAll(["\"color\":\`",this.color, "\`,"], "");
+      buffer.writeAll(["\"color\":\'",this.color, "\',"], "");
     }
 
     if (this.dashStyle != null) {  
-      buffer.writeAll(["\"dashStyle\":\`",this.dashStyle, "\`,"], "");
+      buffer.writeAll(["\"dashStyle\":\'",this.dashStyle, "\',"], "");
     }
 
     // NOTE: skip serialization of events (type any is ignored) ignore type: 1
 
     if (this.id != null) {  
-      buffer.writeAll(["\"id\":\`",this.id, "\`,"], "");
+      buffer.writeAll(["\"id\":\'",this.id, "\',"], "");
     }
 
     if (this.label != null) {  

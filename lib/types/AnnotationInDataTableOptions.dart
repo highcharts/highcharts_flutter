@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -39,7 +39,7 @@ class AnnotationInDataTableOptions extends OptionFragment {
 
     
     if (this.itemDelimiter != null) {  
-      buffer.writeAll(["\"itemDelimiter\":\`",this.itemDelimiter, "\`,"], "");
+      buffer.writeAll(["\"itemDelimiter\":\'",this.itemDelimiter, "\',"], "");
     }
 
     if (this.join != null) {  

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -42,15 +42,15 @@ class AccessibilityScreenReaderSectionOptions extends OptionFragment {
 
     
     if (this.afterChartFormat != null) {  
-      buffer.writeAll(["\"afterChartFormat\":\`",this.afterChartFormat, "\`,"], "");
+      buffer.writeAll(["\"afterChartFormat\":\'",this.afterChartFormat, "\',"], "");
     }
 
     if (this.axisRangeDateFormat != null) {  
-      buffer.writeAll(["\"axisRangeDateFormat\":\`",this.axisRangeDateFormat, "\`,"], "");
+      buffer.writeAll(["\"axisRangeDateFormat\":\'",this.axisRangeDateFormat, "\',"], "");
     }
 
     if (this.beforeChartFormat != null) {  
-      buffer.writeAll(["\"beforeChartFormat\":\`",this.beforeChartFormat, "\`,"], "");
+      buffer.writeAll(["\"beforeChartFormat\":\'",this.beforeChartFormat, "\',"], "");
     }
   }
 

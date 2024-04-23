@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -42,7 +42,7 @@ class AxisAccessibilityOptions extends OptionFragment {
 
     
     if (this.description != null) {  
-      buffer.writeAll(["\"description\":\`",this.description, "\`,"], "");
+      buffer.writeAll(["\"description\":\'",this.description, "\',"], "");
     }
 
     if (this.enabled != null) {  
@@ -50,7 +50,7 @@ class AxisAccessibilityOptions extends OptionFragment {
     }
 
     if (this.rangeDescription != null) {  
-      buffer.writeAll(["\"rangeDescription\":\`",this.rangeDescription, "\`,"], "");
+      buffer.writeAll(["\"rangeDescription\":\'",this.rangeDescription, "\',"], "");
     }
   }
 

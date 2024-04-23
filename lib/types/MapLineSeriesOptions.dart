@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -42,7 +42,7 @@ class MapLineSeriesOptions extends MapSeriesOptions {
 
     
     if (this.fillColor != null) {  
-      buffer.writeAll(["\"fillColor\":\`",this.fillColor, "\`,"], "");
+      buffer.writeAll(["\"fillColor\":\'",this.fillColor, "\',"], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored) ignore type: true

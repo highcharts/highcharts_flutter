@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -95,7 +95,7 @@ class AxisLabelOptions extends OptionFragment {
 
     
     if (this.align != null) {  
-      buffer.writeAll(["\"align\":\`",this.align, "\`,"], "");
+      buffer.writeAll(["\"align\":\'",this.align, "\',"], "");
     }
 
     if (this.allowOverlap != null) {  
@@ -123,7 +123,7 @@ class AxisLabelOptions extends OptionFragment {
     }
 
     if (this.format != null) {  
-      buffer.writeAll(["\"format\":\`",this.format, "\`,"], "");
+      buffer.writeAll(["\"format\":\'",this.format, "\',"], "");
     }
 
     if (this.indentation != null) {  
@@ -131,7 +131,7 @@ class AxisLabelOptions extends OptionFragment {
     }
 
     if (this.overflow != null) {  
-      buffer.writeAll(["\"overflow\":\`",this.overflow, "\`,"], "");
+      buffer.writeAll(["\"overflow\":\'",this.overflow, "\',"], "");
     }
 
     if (this.padding != null) {  
@@ -173,7 +173,7 @@ class AxisLabelOptions extends OptionFragment {
     }
 
     if (this.position3d != null) {  
-      buffer.writeAll(["\"position3d\":\`",this.position3d, "\`,"], "");
+      buffer.writeAll(["\"position3d\":\'",this.position3d, "\',"], "");
     }
 
     if (this.skew3d != null) {  

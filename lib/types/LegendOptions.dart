@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -166,7 +166,7 @@ class LegendOptions extends OptionFragment {
 
     
     if (this.align != null) {  
-      buffer.writeAll(["\"align\":\`",this.align, "\`,"], "");
+      buffer.writeAll(["\"align\":\'",this.align, "\',"], "");
     }
 
     if (this.alignColumns != null) {  
@@ -174,11 +174,11 @@ class LegendOptions extends OptionFragment {
     }
 
     if (this.backgroundColor != null) {  
-      buffer.writeAll(["\"backgroundColor\":\`",this.backgroundColor, "\`,"], "");
+      buffer.writeAll(["\"backgroundColor\":\'",this.backgroundColor, "\',"], "");
     }
 
     if (this.borderColor != null) {  
-      buffer.writeAll(["\"borderColor\":\`",this.borderColor, "\`,"], "");
+      buffer.writeAll(["\"borderColor\":\'",this.borderColor, "\',"], "");
     }
 
     if (this.borderRadius != null) {  
@@ -190,7 +190,7 @@ class LegendOptions extends OptionFragment {
     }
 
     if (this.className != null) {  
-      buffer.writeAll(["\"className\":\`",this.className, "\`,"], "");
+      buffer.writeAll(["\"className\":\'",this.className, "\',"], "");
     }
 
     if (this.enabled != null) {  
@@ -234,11 +234,11 @@ class LegendOptions extends OptionFragment {
     }
 
     if (this.layout != null) {  
-      buffer.writeAll(["\"layout\":\`",this.layout, "\`,"], "");
+      buffer.writeAll(["\"layout\":\'",this.layout, "\',"], "");
     }
 
     if (this.labelFormat != null) {  
-      buffer.writeAll(["\"labelFormat\":\`",this.labelFormat, "\`,"], "");
+      buffer.writeAll(["\"labelFormat\":\'",this.labelFormat, "\',"], "");
     }
 
     if (this.lineHeight != null) {  
@@ -308,15 +308,15 @@ class LegendOptions extends OptionFragment {
     }
 
     if (this.valueSuffix != null) {  
-      buffer.writeAll(["\"valueSuffix\":\`",this.valueSuffix, "\`,"], "");
+      buffer.writeAll(["\"valueSuffix\":\'",this.valueSuffix, "\',"], "");
     }
 
     if (this.verticalAlign != null) {  
-      buffer.writeAll(["\"verticalAlign\":\`",this.verticalAlign, "\`,"], "");
+      buffer.writeAll(["\"verticalAlign\":\'",this.verticalAlign, "\',"], "");
     }
 
     if (this.width != null) {  
-      buffer.writeAll(["\"width\":\`",this.width, "\`,"], "");
+      buffer.writeAll(["\"width\":\'",this.width, "\',"], "");
     }
 
     if (this.x != null) {  

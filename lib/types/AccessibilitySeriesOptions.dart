@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -42,7 +42,7 @@ class AccessibilitySeriesOptions extends OptionFragment {
 
     
     if (this.descriptionFormat != null) {  
-      buffer.writeAll(["\"descriptionFormat\":\`",this.descriptionFormat, "\`,"], "");
+      buffer.writeAll(["\"descriptionFormat\":\'",this.descriptionFormat, "\',"], "");
     }
 
     if (this.describeSingleSeries != null) {  

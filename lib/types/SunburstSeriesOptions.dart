@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -106,7 +106,7 @@ class SunburstSeriesOptions extends TreemapSeriesOptions {
     // NOTE: skip serialization of mapIdToNode (type Generic is ignored) ignore type: true
 
     if (this.rootId != null) {  
-      buffer.writeAll(["\"rootId\":\`",this.rootId, "\`,"], "");
+      buffer.writeAll(["\"rootId\":\'",this.rootId, "\',"], "");
     }
 
     if (this.slicedOffset != null) {  

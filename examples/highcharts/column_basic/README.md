@@ -1,11 +1,11 @@
 # Basic column demo
 
 **Highcharts demo**
-A basic column chart comparing emissions by pollutant.
-        Oil and gas extraction has the overall highest amount of
-        emissions, followed by manufacturing industries and mining.
+A basic column chart comparing estimated corn and wheat production
+        in some countries.
+
         The chart is making use of the axis crosshair feature, to highlight
-        years as they are hovered over.
+        the hovered country.
 
 Original author: Torstein Hønsi
 

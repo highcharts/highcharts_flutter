@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -138,7 +138,7 @@ class HeatmapSeriesOptions extends ScatterSeriesOptions {
     // NOTE: skip serialization of marker (type HeatmapPointMarkerOptions is ignored) ignore type: false
 
     if (this.nullColor != null) {  
-      buffer.writeAll(["\"nullColor\":\`",this.nullColor, "\`,"], "");
+      buffer.writeAll(["\"nullColor\":\'",this.nullColor, "\',"], "");
     }
 
     if (this.pointPadding != null) {  

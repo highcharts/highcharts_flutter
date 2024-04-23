@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -133,7 +133,7 @@ class RangeSelectorOptions extends OptionFragment {
     }
 
     if (this.dropdown != null) {  
-      buffer.writeAll(["\"dropdown\":\`",this.dropdown, "\`,"], "");
+      buffer.writeAll(["\"dropdown\":\'",this.dropdown, "\',"], "");
     }
 
     if (this.enabled != null) {  
@@ -149,7 +149,7 @@ class RangeSelectorOptions extends OptionFragment {
     }
 
     if (this.inputBoxBorderColor != null) {  
-      buffer.writeAll(["\"inputBoxBorderColor\":\`",this.inputBoxBorderColor, "\`,"], "");
+      buffer.writeAll(["\"inputBoxBorderColor\":\'",this.inputBoxBorderColor, "\',"], "");
     }
 
     if (this.inputBoxHeight != null) {  
@@ -161,11 +161,11 @@ class RangeSelectorOptions extends OptionFragment {
     }
 
     if (this.inputDateFormat != null) {  
-      buffer.writeAll(["\"inputDateFormat\":\`",this.inputDateFormat, "\`,"], "");
+      buffer.writeAll(["\"inputDateFormat\":\'",this.inputDateFormat, "\',"], "");
     }
 
     if (this.inputEditDateFormat != null) {  
-      buffer.writeAll(["\"inputEditDateFormat\":\`",this.inputEditDateFormat, "\`,"], "");
+      buffer.writeAll(["\"inputEditDateFormat\":\'",this.inputEditDateFormat, "\',"], "");
     }
 
     if (this.inputEnabled != null) {  
@@ -193,7 +193,7 @@ class RangeSelectorOptions extends OptionFragment {
     }
 
     if (this.verticalAlign != null) {  
-      buffer.writeAll(["\"verticalAlign\":\`",this.verticalAlign, "\`,"], "");
+      buffer.writeAll(["\"verticalAlign\":\'",this.verticalAlign, "\',"], "");
     }
 
     if (this.x != null) {  

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -118,7 +118,7 @@ class AreaSeriesOptions extends LineSeriesOptions {
 
     
     if (this.fillColor != null) {  
-      buffer.writeAll(["\"fillColor\":\`",this.fillColor, "\`,"], "");
+      buffer.writeAll(["\"fillColor\":\'",this.fillColor, "\',"], "");
     }
 
     if (this.fillOpacity != null) {  
@@ -126,7 +126,7 @@ class AreaSeriesOptions extends LineSeriesOptions {
     }
 
     if (this.negativeFillColor != null) {  
-      buffer.writeAll(["\"negativeFillColor\":\`",this.negativeFillColor, "\`,"], "");
+      buffer.writeAll(["\"negativeFillColor\":\'",this.negativeFillColor, "\',"], "");
     }
 
     // NOTE: skip serialization of states (type Generic is ignored) ignore type: true

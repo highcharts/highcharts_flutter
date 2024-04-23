@@ -5,10 +5,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/Highcharts.dart';
-import 'package:highcharts_flutter/types/LineSeriesOptions.dart';
 import 'package:highcharts_flutter/types/ChartOptions.dart';
-import 'package:highcharts_flutter/types/string.dart';
-import 'package:highcharts_flutter/types/number.dart';
 import 'package:highcharts_flutter/types/Generic.dart';
 import 'package:highcharts_flutter/types/TitleOptions.dart';
 import 'package:highcharts_flutter/types/TooltipOptions.dart';

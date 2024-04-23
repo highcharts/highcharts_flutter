@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-18
+ * Build stamp: 2024-04-19
  *
  */ 
 
@@ -66,7 +66,7 @@ class ControllableShapeOptions extends ControllableOptions {
     // NOTE: skip serialization of d (type SVGPath is ignored) ignore type: true
 
     if (this.fill != null) {  
-      buffer.writeAll(["\"fill\":\`",this.fill, "\`,"], "");
+      buffer.writeAll(["\"fill\":\'",this.fill, "\',"], "");
     }
 
     if (this.height != null) {  
@@ -82,11 +82,11 @@ class ControllableShapeOptions extends ControllableOptions {
     }
 
     if (this.src != null) {  
-      buffer.writeAll(["\"src\":\`",this.src, "\`,"], "");
+      buffer.writeAll(["\"src\":\'",this.src, "\',"], "");
     }
 
     if (this.stroke != null) {  
-      buffer.writeAll(["\"stroke\":\`",this.stroke, "\`,"], "");
+      buffer.writeAll(["\"stroke\":\'",this.stroke, "\',"], "");
     }
 
     if (this.strokeWidth != null) {  
@@ -94,7 +94,7 @@ class ControllableShapeOptions extends ControllableOptions {
     }
 
     if (this.type != null) {  
-      buffer.writeAll(["\"type\":\`",this.type, "\`,"], "");
+      buffer.writeAll(["\"type\":\'",this.type, "\',"], "");
     }
 
     if (this.width != null) {  
