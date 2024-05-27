@@ -1,39 +1,19 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# Highcharts Flutter
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
+This is the official Highcharts Flutter integration. It's currently in a beta preview state. 
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
+Examples of usage can be found in `examples/`.
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+`examples/hello_world` is a good place to start.
 
-## Features
+Targets must be initialized by creating a Flutter projects before running samples. This is done with `flutter create .` from the specific demo folder. After doing this, the demo can be ran with `flutter run`.
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+## Known major issues
 
-## Getting started
+- There are a few missing options from the main API, we're working on getting these in.
+- Currently, Highcharts dependencies are pulled from our CDN at runtime: this will change to a bundling approach.
+- We're currently going through demos and verifying and fixing them: not all of them currently compiles. This is mostly the case for more advanced demos, e.g. demos based on tree or hierarchical data structures. The majority of the more basic demos work.
+- There might be a naming change, specifically we're considering prefixing all Highcharts types with `Highcharts*` to follow standard Flutter/Dart naming conventions.
+- Gantt and Maps will be available in the next preview update.
+- There are issues with compiling for IOS: We are working on getting these resolved ASAP.
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
-
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
-```dart
-const like = 'sample';
-```
-
-## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
