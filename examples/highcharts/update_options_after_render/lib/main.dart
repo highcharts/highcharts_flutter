@@ -8,8 +8,8 @@ import 'package:highcharts_flutter/Highcharts.dart';
 import 'package:highcharts_flutter/types/TitleOptions.dart';
 import 'package:highcharts_flutter/types/SubtitleOptions.dart';
 import 'package:highcharts_flutter/types/XAxisOptions.dart';
-import 'package:highcharts_flutter/types/LineSeriesOptions.dart';
-import 'package:highcharts_flutter/types/LineSeries.dart';
+import 'package:highcharts_flutter/types/ColumnSeriesOptions.dart';
+import 'package:highcharts_flutter/types/ColumnSeries.dart';
 import 'package:highcharts_flutter/types/BorderRadiusOptionsObject.dart';
 import 'package:highcharts_flutter/types/YAxisOptions.dart';
 
@@ -57,20 +57,21 @@ class _MyHomePageState extends State<MyHomePage> {
             HighchartsChart(
               HighchartsOptions(
                 title: TitleOptions(
-                    text: "Unemployment rates in engineering and ICT subjects, 2021",
-                    align: "left",
+                    text: "Unemployment rates in engineering and ICT subjects, 2021", 
+                    align: "left", 
                 ),
                 subtitle: SubtitleOptions(
-                    text: "Chart option: Plain | Source: <a href=\"https://www.nav.no/no/nav-og-samfunn/statistikk/arbeidssokere-og-stillinger-statistikk/helt-ledige\"target=\"_blank\">NAV</a>",
-                    align: "left",
+                    text: "Chart option: Plain | Source: <a href=\"https://www.nav.no/no/nav-og-samfunn/statistikk/arbeidssokere-og-stillinger-statistikk/helt-ledige\"target=\"_blank\">NAV</a>", 
+                    align: "left", 
                 ),
                 xAxis: [ 
                   XAxisOptions( 
                   ),
                 ],
                 series: [ 
-                  LineSeries(
-                      name: "Unemployed",
+                  ColumnSeries( 
+                //options: ColumnSeriesOptions()
+                      name: "Unemployed", 
                      borderRadius: BorderRadiusOptionsObject(),
                     data: [ 
                       [5412], 
@@ -86,7 +87,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       [2899], 
                       [2887], 
                     ],
-                      showInLegend: false,
+                      showInLegend: false, 
                   ),
                 ],
                 yAxis: [ 

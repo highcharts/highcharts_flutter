@@ -60,12 +60,15 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             HighchartsChart(
               HighchartsOptions(
+                chart: ChartOptions(
+                    type: "timeline", 
+                ),
                 accessibility: AccessibilityOptions(
                   screenReaderSection: AccessibilityScreenReaderSectionOptions(
-                      beforeChartFormat: "<h5>{chartTitle}</h5><div>{typeDescription}</div><div>{chartSubtitle}</div><div>{chartLongdesc}</div><div>{viewTableButton}</div>",
+                      beforeChartFormat: "<h5>{chartTitle}</h5><div>{typeDescription}</div><div>{chartSubtitle}</div><div>{chartLongdesc}</div><div>{viewTableButton}</div>", 
                   ),
                   point: AccessibilityPointOptions(
-                      valueDescriptionFormat: "{index}. {point.label}. {point.description}.",
+                      valueDescriptionFormat: "{index}. {point.label}. {point.description}.", 
                   ),
                 ),
                 xAxis: [ 
@@ -77,16 +80,18 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ],
                 title: TitleOptions(
-                    text: "Timeline of Space Exploration",
+                    text: "Timeline of Space Exploration", 
                 ),
                 subtitle: SubtitleOptions(
-                    text: "Info source: <a href=\"https://en.wikipedia.org/wiki/Timeline_of_space_exploration\">www.wikipedia.org</a>",
+                    text: "Info source: <a href=\"https://en.wikipedia.org/wiki/Timeline_of_space_exploration\">www.wikipedia.org</a>", 
                 ),
                 series: [ 
-                  TimelineSeries(
+                  TimelineSeries( 
+                //options: TimelineSeriesOptions()
                     data: [ 
-                      TimelinePointOptions( 
-                      ),
+                    [
+                      false, false, false, false, false, false
+                    ],
                     ],
                   ),
                 ],

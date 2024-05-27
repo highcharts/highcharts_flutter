@@ -61,14 +61,15 @@ class _MyHomePageState extends State<MyHomePage> {
             HighchartsChart(
               HighchartsOptions(
                 chart: ChartOptions(
+                    type: "cylinder", 
                   options3d: Options(
                   ),
                 ),
                 title: TitleOptions(
-                    text: "Number of confirmed COVID-19",
+                    text: "Number of confirmed COVID-19", 
                 ),
                 subtitle: SubtitleOptions(
-                    text: "Source: <a href=\"https://www.fhi.no/en/id/infectious-diseases/coronavirus/daily-reports/daily-reports-COVID19/\"target=\"_blank\">FHI</a>",
+                    text: "Source: <a href=\"https://www.fhi.no/en/id/infectious-diseases/coronavirus/daily-reports/daily-reports-COVID19/\"target=\"_blank\">FHI</a>", 
                 ),
                 xAxis: [ 
                   XAxisOptions( 
@@ -79,14 +80,15 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ],
                 tooltip: TooltipOptions(
-                    headerFormat: "<b>Age: {point.x}</b><br>",
+                    headerFormat: "<b>Age: {point.x}</b><br>", 
                 ),
                 plotOptions: HighchartsPlotOptions(
                   series: SeriesOptions(
                   ),
                 ),
                 series: [ 
-                  CylinderSeries(
+                  CylinderSeries( 
+                //options: CylinderSeriesOptions()
                     data: [ 
                       [95321], 
                       [169339], 
@@ -99,8 +101,8 @@ class _MyHomePageState extends State<MyHomePage> {
                       [7065], 
                       [3283], 
                     ],
-                      name: "Cases",
-                      showInLegend: false,
+                      name: "Cases", 
+                      showInLegend: false, 
                   ),
                 ],
               )

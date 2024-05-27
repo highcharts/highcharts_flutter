@@ -13,8 +13,11 @@ import 'package:highcharts_flutter/types/YAxisOptions.dart';
 import 'package:highcharts_flutter/types/HighchartsPlotOptions.dart';
 import 'package:highcharts_flutter/types/SeriesOptions.dart';
 import 'package:highcharts_flutter/types/ColumnSeriesOptions.dart';
+import 'package:highcharts_flutter/types/ColumnSeries.dart';
 import 'package:highcharts_flutter/types/LineSeriesOptions.dart';
 import 'package:highcharts_flutter/types/LineSeries.dart';
+import 'package:highcharts_flutter/types/AreaSeriesOptions.dart';
+import 'package:highcharts_flutter/types/AreaSeries.dart';
 
 void main() {
   runApp(const MyApp());
@@ -60,13 +63,13 @@ class _MyHomePageState extends State<MyHomePage> {
             HighchartsChart(
               HighchartsOptions(
                 chart: ChartOptions(
-                    polar: true,
+                    polar: true, 
                 ),
                 title: TitleOptions(
-                    text: "Highcharts Polar Chart",
+                    text: "Highcharts Polar Chart", 
                 ),
                 subtitle: SubtitleOptions(
-                    text: "Also known as Radar Chart",
+                    text: "Also known as Radar Chart", 
                 ),
                 xAxis: [ 
                   XAxisOptions( 
@@ -78,16 +81,17 @@ class _MyHomePageState extends State<MyHomePage> {
                 ],
                 plotOptions: HighchartsPlotOptions(
                   series: SeriesOptions(
-                      pointStart: 0,
-                      pointInterval: 45,
+                      pointStart: 0, 
+                      pointInterval: 45, 
                   ),
                   column: ColumnSeriesOptions(
-                      pointPadding: 0,
+                      pointPadding: 0, 
                   ),
                 ),
                 series: [ 
-                  LineSeries(
-                      name: "Column",
+                  ColumnSeries( 
+                //options: ColumnSeriesOptions()
+                      name: "Column", 
                     data: [ 
                       [8], 
                       [7], 
@@ -98,10 +102,11 @@ class _MyHomePageState extends State<MyHomePage> {
                       [2], 
                       [1], 
                     ],
-                      pointPlacement: "between",
+                      pointPlacement: "between", 
                   ),
-                  LineSeries(
-                      name: "Line",
+                  LineSeries( 
+                //options: LineSeriesOptions()
+                      name: "Line", 
                     data: [ 
                       [1], 
                       [2], 
@@ -113,8 +118,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       [8], 
                     ],
                   ),
-                  LineSeries(
-                      name: "Area",
+                  AreaSeries( 
+                //options: AreaSeriesOptions()
+                      name: "Area", 
                     data: [ 
                       [1], 
                       [8], 

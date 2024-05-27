@@ -61,7 +61,8 @@ class _MyHomePageState extends State<MyHomePage> {
             HighchartsChart(
               HighchartsOptions(
                 chart: ChartOptions(
-                    renderTo: "container",
+                    renderTo: "container", 
+                    type: "column", 
                   options3d: Options(
                   ),
                 ),
@@ -74,26 +75,27 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ],
                 tooltip: TooltipOptions(
-                    headerFormat: "<b>{point.key}</b><br>",
-                    pointFormat: "Cars sold: {point.y}",
+                    headerFormat: "<b>{point.key}</b><br>", 
+                    pointFormat: "Cars sold: {point.y}", 
                 ),
                 title: TitleOptions(
-                    text: "Sold passenger cars in Norway by brand, January 2021",
-                    align: "left",
+                    text: "Sold passenger cars in Norway by brand, January 2021", 
+                    align: "left", 
                 ),
                 subtitle: SubtitleOptions(
-                    text: "Source: <a href=\"https://ofv.no/registreringsstatistikk\"target=\"_blank\">OFV</a>",
-                    align: "left",
+                    text: "Source: <a href=\"https://ofv.no/registreringsstatistikk\"target=\"_blank\">OFV</a>", 
+                    align: "left", 
                 ),
                 legend: LegendOptions(
-                    enabled: false,
+                    enabled: false, 
                 ),
                 plotOptions: HighchartsPlotOptions(
                   column: ColumnSeriesOptions(
                   ),
                 ),
                 series: [ 
-                  ColumnSeries(
+                  ColumnSeries( 
+                //options: ColumnSeriesOptions()
                     data: [ 
                       [1318], 
                       [1073], 

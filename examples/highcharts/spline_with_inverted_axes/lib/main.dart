@@ -60,15 +60,16 @@ class _MyHomePageState extends State<MyHomePage> {
             HighchartsChart(
               HighchartsOptions(
                 chart: ChartOptions(
-                    inverted: true,
+                    type: "spline", 
+                    inverted: true, 
                 ),
                 title: TitleOptions(
-                    text: "Atmosphere Temperature by Altitude",
-                    align: "left",
+                    text: "Atmosphere Temperature by Altitude", 
+                    align: "left", 
                 ),
                 subtitle: SubtitleOptions(
-                    text: "According to the Standard Atmosphere Model",
-                    align: "left",
+                    text: "According to the Standard Atmosphere Model", 
+                    align: "left", 
                 ),
                 xAxis: [ 
                   XAxisOptions( 
@@ -79,19 +80,20 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ],
                 legend: LegendOptions(
-                    enabled: false,
+                    enabled: false, 
                 ),
                 tooltip: TooltipOptions(
-                    headerFormat: "<b>{series.name}</b><br/>",
-                    pointFormat: "{point.x} km: {point.y}°C",
+                    headerFormat: "<b>{series.name}</b><br/>", 
+                    pointFormat: "{point.x} km: {point.y}°C", 
                 ),
                 plotOptions: HighchartsPlotOptions(
                   spline: SplineSeriesOptions(
                   ),
                 ),
                 series: [ 
-                  SplineSeries(
-                      name: "Temperature",
+                  SplineSeries( 
+                //options: SplineSeriesOptions()
+                      name: "Temperature", 
                     data: [ 
                       [0,15], 
                       [10,-50], 

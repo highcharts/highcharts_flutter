@@ -64,20 +64,23 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             HighchartsChart(
               HighchartsOptions(
+                chart: ChartOptions(
+                    type: "pictorial", 
+                ),
                 title: TitleOptions(
-                    text: "Composition of the human body",
+                    text: "Composition of the human body", 
                 ),
                 accessibility: AccessibilityOptions(
                   screenReaderSection: AccessibilityScreenReaderSectionOptions(
-                      beforeChartFormat: "<{headingTagName}>{chartTitle}</{headingTagName}><p>{typeDescription}</p><p>{chartLongdesc}</p>",
+                      beforeChartFormat: "<{headingTagName}>{chartTitle}</{headingTagName}><p>{typeDescription}</p><p>{chartLongdesc}</p>", 
                   ),
                   point: AccessibilityPointOptions(
-                      valueDescriptionFormat: "{value}.",
+                      valueDescriptionFormat: "{value}.", 
                   ),
                   series: AccessibilitySeriesOptions(
-                      descriptionFormat: "",
+                      descriptionFormat: "", 
                   ),
-                    landmarkVerbosity: "one",
+                    landmarkVerbosity: "one", 
                 ),
                 xAxis: [ 
                   XAxisOptions( 
@@ -88,60 +91,65 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ],
                 legend: LegendOptions(
-                    itemMarginTop: 15,
-                    itemMarginBottom: 15,
-                    layout: "vertical",
-                    padding: 0,
-                    verticalAlign: "middle",
-                    align: "center",
-                    margin: 0,
+                    itemMarginTop: 15, 
+                    itemMarginBottom: 15, 
+                    layout: "vertical", 
+                    padding: 0, 
+                    verticalAlign: "middle", 
+                    align: "center", 
+                    margin: 0, 
                 ),
                 tooltip: TooltipOptions(
-                    headerFormat: "",
+                    headerFormat: "", 
                 ),
                 plotOptions: HighchartsPlotOptions(
                   series: SeriesOptions(
                     dataLabels: [ 
                       DataLabelOptions( 
-                          enabled: true,
-                          align: "center",
-                          format: "{y} %",
+                          enabled: true, 
+                          align: "center", 
+                          format: "{y} %", 
                       ),
                     ],
-                      stacking: "normal",
+                      stacking: "normal", 
                   ),
                 ),
                 series: [ 
-                  PictorialSeries(
-                      name: "Other",
+                  PictorialSeries( 
+                //options: PictorialSeriesOptions()
+                      name: "Other", 
                     data: [ 
                       [25], 
                       [25], 
                     ],
                   ),
-                  PictorialSeries(
-                      name: "Essential Fat",
+                  PictorialSeries( 
+                //options: PictorialSeriesOptions()
+                      name: "Essential Fat", 
                     data: [ 
                       [12], 
                       [3], 
                     ],
                   ),
-                  PictorialSeries(
-                      name: "Non-Essential Fat",
+                  PictorialSeries( 
+                //options: PictorialSeriesOptions()
+                      name: "Non-Essential Fat", 
                     data: [ 
                       [15], 
                       [12], 
                     ],
                   ),
-                  PictorialSeries(
-                      name: "Muscle Tissue",
+                  PictorialSeries( 
+                //options: PictorialSeriesOptions()
+                      name: "Muscle Tissue", 
                     data: [ 
                       [36], 
                       [45], 
                     ],
                   ),
-                  PictorialSeries(
-                      name: "Bone",
+                  PictorialSeries( 
+                //options: PictorialSeriesOptions()
+                      name: "Bone", 
                     data: [ 
                       [12], 
                       [15], 

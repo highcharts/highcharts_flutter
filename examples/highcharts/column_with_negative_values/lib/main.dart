@@ -58,15 +58,18 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             HighchartsChart(
               HighchartsOptions(
+                chart: ChartOptions(
+                    type: "column", 
+                ),
                 title: TitleOptions(
-                    text: "Column chart with negative values",
+                    text: "Column chart with negative values", 
                 ),
                 xAxis: [ 
                   XAxisOptions( 
                   ),
                 ],
                 credits: CreditsOptions(
-                    enabled: false,
+                    enabled: false, 
                 ),
                 plotOptions: HighchartsPlotOptions(
                   column: ColumnSeriesOptions(
@@ -74,8 +77,9 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
                 series: [ 
-                  ColumnSeries(
-                      name: "John",
+                  ColumnSeries( 
+                //options: ColumnSeriesOptions()
+                      name: "John", 
                     data: [ 
                       [5], 
                       [3], 
@@ -84,8 +88,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       [2], 
                     ],
                   ),
-                  ColumnSeries(
-                      name: "Jane",
+                  ColumnSeries( 
+                //options: ColumnSeriesOptions()
+                      name: "Jane", 
                     data: [ 
                       [2], 
                       [-2], 
@@ -94,8 +99,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       [1], 
                     ],
                   ),
-                  ColumnSeries(
-                      name: "Joe",
+                  ColumnSeries( 
+                //options: ColumnSeriesOptions()
+                      name: "Joe", 
                     data: [ 
                       [3], 
                       [4], 

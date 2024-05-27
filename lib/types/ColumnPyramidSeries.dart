@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-19
+ * Build stamp: 2024-05-23
  *
  */ 
 
@@ -25,7 +25,7 @@ class ColumnPyramidSeries extends Series {
   String? name;
   ColumnPyramidSeriesOptions? options;
   List<PointOptions>? points;
-  List<List<double>>? data;
+  List<List<dynamic>>? data;
 
   ColumnPyramidSeries({
     this.name = null,
@@ -57,7 +57,14 @@ class ColumnPyramidSeries extends Series {
           seriesData.writeAll(["["], "");
         }
 
-        seriesData.writeAll(point, ",");
+          for (var sub in point) {
+            if (sub is String) {
+              seriesData.writeAll(["\"", sub, "\","], "");
+            } else {
+              seriesData.writeAll([sub], ",");
+            }
+
+          }
 
         if (point.length > 1) {
           seriesData.writeAll(["],"], "");

@@ -63,35 +63,38 @@ class _MyHomePageState extends State<MyHomePage> {
             HighchartsChart(
               HighchartsOptions(
                 chart: ChartOptions(
+                    type: "funnel3d", 
                   options3d: Options(
                   ),
                 ),
                 title: TitleOptions(
-                    text: "Highcharts Funnel3D Chart",
+                    text: "Highcharts Funnel3D Chart", 
                 ),
                 accessibility: AccessibilityOptions(
                   screenReaderSection: AccessibilityScreenReaderSectionOptions(
-                      beforeChartFormat: "<{headingTagName}>{chartTitle}</{headingTagName}><div>{typeDescription}</div><div>{chartSubtitle}</div><div>{chartLongdesc}</div>",
+                      beforeChartFormat: "<{headingTagName}>{chartTitle}</{headingTagName}><div>{typeDescription}</div><div>{chartSubtitle}</div><div>{chartLongdesc}</div>", 
                   ),
                 ),
                 plotOptions: HighchartsPlotOptions(
                   series: SeriesOptions(
                     dataLabels: [ 
                       DataLabelOptions( 
-                          enabled: true,
-                          format: "<b>{point.name}</b> ({point.y:,.0f})",
-                          allowOverlap: true,
-                          y: 10,
+                          enabled: true, 
+                          format: "<b>{point.name}</b> ({point.y:,.0f})", 
+                          allowOverlap: true, 
+                          y: 10, 
                       ),
                     ],
                   ),
                 ),
                 series: [ 
-                  Funnel3DSeries(
-                      name: "Unique users",
+                  Funnel3DSeries( 
+                //options: Funnel3DSeriesOptions()
+                      name: "Unique users", 
                     data: [ 
-                      Funnel3DPointOptions)( 
-                      ),
+                    [
+                      false, false, false, false, false
+                    ],
                     ],
                   ),
                 ],

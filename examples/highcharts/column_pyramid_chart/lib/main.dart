@@ -56,8 +56,11 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             HighchartsChart(
               HighchartsOptions(
+                chart: ChartOptions(
+                    type: "columnpyramid", 
+                ),
                 title: TitleOptions(
-                    text: "The 5 highest pyramids in the World",
+                    text: "The 5 highest pyramids in the World", 
                 ),
                 xAxis: [ 
                   XAxisOptions( 
@@ -68,14 +71,90 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ],
                 tooltip: TooltipOptions(
-                    valueSuffix: " m",
+                    valueSuffix: " m", 
                 ),
                 series: [ 
-                  ColumnPyramidSeries(
-                      name: "Height",
+                  ColumnPyramidSeries( 
+                //options: ColumnPyramidSeriesOptions()
+                      name: "Height", 
                     data: [ 
+                    [
+                      "Pyramid of Khufu", 138.8
                     ],
-                      showInLegend: false,
+                    [
+                      "Pyramid of Khafre", 136.4
+                    ],
+                    [
+                      "Red Pyramid", 104
+                    ],
+                    [
+                      "Bent Pyramid", 101.1
+                    ],
+                    [
+                      "Pyramid of the Sun", 75
+                    ],
+                    [
+                      "Pyramid of Khufu", 138.8
+                    ],
+                    [
+                      "Pyramid of Khafre", 136.4
+                    ],
+                    [
+                      "Red Pyramid", 104
+                    ],
+                    [
+                      "Bent Pyramid", 101.1
+                    ],
+                    [
+                      "Pyramid of the Sun", 75
+                    ],
+                    [
+                      "Pyramid of Khufu", 138.8
+                    ],
+                    [
+                      "Pyramid of Khafre", 136.4
+                    ],
+                    [
+                      "Red Pyramid", 104
+                    ],
+                    [
+                      "Bent Pyramid", 101.1
+                    ],
+                    [
+                      "Pyramid of the Sun", 75
+                    ],
+                    [
+                      "Pyramid of Khufu", 138.8
+                    ],
+                    [
+                      "Pyramid of Khafre", 136.4
+                    ],
+                    [
+                      "Red Pyramid", 104
+                    ],
+                    [
+                      "Bent Pyramid", 101.1
+                    ],
+                    [
+                      "Pyramid of the Sun", 75
+                    ],
+                    [
+                      "Pyramid of Khufu", 138.8
+                    ],
+                    [
+                      "Pyramid of Khafre", 136.4
+                    ],
+                    [
+                      "Red Pyramid", 104
+                    ],
+                    [
+                      "Bent Pyramid", 101.1
+                    ],
+                    [
+                      "Pyramid of the Sun", 75
+                    ],
+                    ],
+                      showInLegend: false, 
                   ),
                 ],
               )

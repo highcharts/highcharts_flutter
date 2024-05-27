@@ -60,17 +60,18 @@ class _MyHomePageState extends State<MyHomePage> {
             HighchartsChart(
               HighchartsOptions(
                 chart: ChartOptions(
-                    inverted: true,
+                    type: "areaspline", 
+                    inverted: true, 
                 ),
                 title: TitleOptions(
-                    text: "MSIS atmospheric composition by height",
-                    align: "left",
+                    text: "MSIS atmospheric composition by height", 
+                    align: "left", 
                 ),
                 subtitle: SubtitleOptions(
                     text: "Source:\
             <a href=\"https://en.wikipedia.org/wiki/Atmosphere_of_Earth\"\
-                target=\"_blank\">Wikipedia.org</a>",
-                    align: "left",
+                target=\"_blank\">Wikipedia.org</a>", 
+                    align: "left", 
                 ),
                 xAxis: [ 
                   XAxisOptions( 
@@ -81,28 +82,29 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ],
                 tooltip: TooltipOptions(
-                    shared: true,
-                    headerFormat: "<table>",
+                    shared: true, 
+                    headerFormat: "<table>", 
                     pointFormat: "<tr>\
             <td><span style=\"color:{series.color};\">⬤</span></td>\
             <td>{series.name}</td>\
             <td style=\"text-align: right\"><b>{point.y} %</b></td>\
-        </tr>",
-                    footerFormat: "</table>",
-                    useHTML: true,
+        </tr>", 
+                    footerFormat: "</table>", 
+                    useHTML: true, 
                 ),
                 plotOptions: HighchartsPlotOptions(
                   areaspline: AreaSplineSeriesOptions(
-                      stacking: "percent",
-                      pointInterval: 100,
-                      lineWidth: 1,
+                      stacking: "percent", 
+                      pointInterval: 100, 
+                      lineWidth: 1, 
                     states: Generic(
                     ),
                   ),
                 ),
                 series: [ 
-                  AreaSplineSeries(
-                      name: "N2",
+                  AreaSplineSeries( 
+                //options: AreaSplineSeriesOptions()
+                      name: "N2", 
                     data: [ 
                       [78], 
                       [76], 
@@ -117,8 +119,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       [0], 
                     ],
                   ),
-                  AreaSplineSeries(
-                      name: "O2",
+                  AreaSplineSeries( 
+                //options: AreaSplineSeriesOptions()
+                      name: "O2", 
                     data: [ 
                       [21], 
                       [20], 
@@ -133,8 +136,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       [0], 
                     ],
                   ),
-                  AreaSplineSeries(
-                      name: "O",
+                  AreaSplineSeries( 
+                //options: AreaSplineSeriesOptions()
+                      name: "O", 
                     data: [ 
                       [0], 
                       [3], 
@@ -149,8 +153,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       [0], 
                     ],
                   ),
-                  AreaSplineSeries(
-                      name: "Ar",
+                  AreaSplineSeries( 
+                //options: AreaSplineSeriesOptions()
+                      name: "Ar", 
                     data: [ 
                       [1], 
                       [1], 
@@ -165,8 +170,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       [0], 
                     ],
                   ),
-                  AreaSplineSeries(
-                      name: "He",
+                  AreaSplineSeries( 
+                //options: AreaSplineSeriesOptions()
+                      name: "He", 
                     data: [ 
                       [0], 
                       [0], 
@@ -181,8 +187,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       [62], 
                     ],
                   ),
-                  AreaSplineSeries(
-                      name: "H",
+                  AreaSplineSeries( 
+                //options: AreaSplineSeriesOptions()
+                      name: "H", 
                     data: [ 
                       [0], 
                       [0], 

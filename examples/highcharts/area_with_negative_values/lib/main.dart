@@ -57,13 +57,16 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             HighchartsChart(
               HighchartsOptions(
+                chart: ChartOptions(
+                    type: "area", 
+                ),
                 title: TitleOptions(
-                    text: "Production, consumption and trade surplus of electrical power",
-                    align: "left",
+                    text: "Production, consumption and trade surplus of electrical power", 
+                    align: "left", 
                 ),
                 subtitle: SubtitleOptions(
-                    text: "Source: <a href=\"https://www.ssb.no/energi-og-industri/energi/statistikk/elektrisitet/artikler/lavere-kraftproduksjon\" target=\"_blank\">SSB</a>",
-                    align: "left",
+                    text: "Source: <a href=\"https://www.ssb.no/energi-og-industri/energi/statistikk/elektrisitet/artikler/lavere-kraftproduksjon\" target=\"_blank\">SSB</a>", 
+                    align: "left", 
                 ),
                 xAxis: [ 
                   XAxisOptions( 
@@ -74,11 +77,12 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ],
                 credits: CreditsOptions(
-                    enabled: false,
+                    enabled: false, 
                 ),
                 series: [ 
-                  AreaSeries(
-                      name: "Total production",
+                  AreaSeries( 
+                //options: AreaSeriesOptions()
+                      name: "Total production", 
                     data: [ 
                       [37.8], 
                       [29.3], 
@@ -93,8 +97,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       [32.7], 
                     ],
                   ),
-                  AreaSeries(
-                      name: "Gross consumption",
+                  AreaSeries( 
+                //options: AreaSeriesOptions()
+                      name: "Gross consumption", 
                     data: [ 
                       [39.9], 
                       [29.9], 
@@ -109,8 +114,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       [27.5], 
                     ],
                   ),
-                  AreaSeries(
-                      name: "Trade surplus",
+                  AreaSeries( 
+                //options: AreaSeriesOptions()
+                      name: "Trade surplus", 
                     data: [ 
                       [-2.2], 
                       [-0.6], 

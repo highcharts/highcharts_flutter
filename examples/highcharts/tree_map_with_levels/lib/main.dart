@@ -5,11 +5,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/Highcharts.dart';
-import 'package:highcharts_flutter/types/LineSeriesOptions.dart';
-import 'package:highcharts_flutter/types/LineSeries.dart';
-import 'package:highcharts_flutter/types/BorderRadiusOptionsObject.dart';
-import 'package:highcharts_flutter/types/DataLabelOptions.dart';
-import 'package:highcharts_flutter/types/CSSObject.dart';
+import 'package:highcharts_flutter/types/TreemapSeriesOptions.dart';
+import 'package:highcharts_flutter/types/TreemapSeries.dart';
+import 'package:highcharts_flutter/types/TreemapSeriesLevelsOptions.dart';
+import 'package:highcharts_flutter/types/TreemapPointOptions.dart';
 import 'package:highcharts_flutter/types/TitleOptions.dart';
 import 'package:highcharts_flutter/types/SubtitleOptions.dart';
 import 'package:highcharts_flutter/types/TooltipOptions.dart';
@@ -60,31 +59,33 @@ class _MyHomePageState extends State<MyHomePage> {
             HighchartsChart(
               HighchartsOptions(
                 series: [ 
-                  LineSeries(
-                      borderColor: "#fff",
-                     borderRadius: BorderRadiusOptionsObject(),
-                      borderWidth: 2,
-                    dataLabels: [ 
-                      DataLabelOptions( 
-                        style: CSSObject(
-                        ),
+                  TreemapSeries( 
+                //options: TreemapSeriesOptions()
+                      layoutAlgorithm: "stripes", 
+                      alternateStartingDirection: true, 
+                      borderRadius: 6, 
+                    levels: [ 
+                      TreemapSeriesLevelsOptions( 
                       ),
                     ],
                     data: [ 
+                    [
+                      false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false
+                    ],
                     ],
                   ),
                 ],
                 title: TitleOptions(
-                    text: "Norwegian regions and counties by area",
-                    align: "left",
+                    text: "Norwegian regions and counties by area", 
+                    align: "left", 
                 ),
                 subtitle: SubtitleOptions(
-                    text: "Source: <a href=\"https://snl.no/Norge\" target=\"_blank\">SNL</a>",
-                    align: "left",
+                    text: "Source: <a href=\"https://snl.no/Norge\" target=\"_blank\">SNL</a>", 
+                    align: "left", 
                 ),
                 tooltip: TooltipOptions(
-                    useHTML: true,
-                    pointFormat: "The area of <b>{point.name}</b> is <b>{point.value} km<sup>2</sup></b>",
+                    useHTML: true, 
+                    pointFormat: "The area of <b>{point.name}</b> is <b>{point.value} km<sup>2</sup></b>", 
                 ),
                 xAxis: [ 
                   XAxisOptions( 

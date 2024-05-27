@@ -64,28 +64,29 @@ class _MyHomePageState extends State<MyHomePage> {
                 chart: ChartOptions(
                 ),
                 accessibility: AccessibilityOptions(
-                    enabled: false,
+                    enabled: false, 
                 ),
                 time: TimeOptions(
-                    useUTC: false,
+                    useUTC: false, 
                 ),
                 rangeSelector: RangeSelectorOptions(
                   buttons: [ 
                     RangeSelectorButtonOptions( 
                     ),
                   ],
-                    inputEnabled: false,
-                    selected: 0,
+                    inputEnabled: false, 
+                    selected: 0, 
                 ),
                 title: TitleOptions(
-                    text: "Live random data",
+                    text: "Live random data", 
                 ),
                 exporting: ExportingOptions(
-                    enabled: false,
+                    enabled: false, 
                 ),
                 series: [ 
-                  LineSeries(
-                      name: "Random data",
+                  LineSeries( 
+                //options: LineSeriesOptions()
+                      name: "Random data", 
                     data: [ 
                       [1713524254953,0], 
                       [1713524255953,39], 

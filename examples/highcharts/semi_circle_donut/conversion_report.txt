@@ -41,13 +41,6 @@
   },
   {
     "type": "",
-    "path": "series",
-    "parentType": "LineSeriesOptions",
-    "memberName": "innerSize",
-    "msg": "The member is not present in the Flutter integration API"
-  },
-  {
-    "type": "",
     "path": "xAxis",
     "parentType": "XAxisOptions",
     "memberName": "0",

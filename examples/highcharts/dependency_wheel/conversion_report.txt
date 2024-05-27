@@ -14,27 +14,12 @@
   },
   {
     "type": "missing_mapping",
-    "path": "series.dataLabels.style.textOutline",
-    "member": {
-      "name": "textOutline",
-      "type": "string",
-      "optional": true
-    }
-  },
-  {
-    "type": "missing_mapping",
-    "path": "series.dataLabels.distance",
-    "member": {
-      "name": "distance",
-      "type": "string",
-      "optional": true,
-      "originalType": "string | number"
-    }
+    "path": "series.dataLabels"
   },
   {
     "type": "",
     "path": "series",
-    "parentType": "LineSeriesOptions",
+    "parentType": "DependencyWheelSeriesOptions",
     "memberName": "size",
     "msg": "The member is not present in the Flutter integration API"
   },

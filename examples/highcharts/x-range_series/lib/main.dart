@@ -57,12 +57,15 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             HighchartsChart(
               HighchartsOptions(
+                chart: ChartOptions(
+                    type: "xrange", 
+                ),
                 title: TitleOptions(
-                    text: "Highcharts X-range",
+                    text: "Highcharts X-range", 
                 ),
                 accessibility: AccessibilityOptions(
                   point: AccessibilityPointOptions(
-                      descriptionFormat: "{add index 1}. {yCategory}, {x:%A %e %B %Y} to {x2:%A %e %B %Y}.",
+                      descriptionFormat: "{add index 1}. {yCategory}, {x:%A %e %B %Y} to {x2:%A %e %B %Y}.", 
                   ),
                 ),
                 xAxis: [ 
@@ -74,11 +77,62 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ],
                 series: [ 
-                  XRangeSeries(
-                      name: "Project 1",
-                      borderColor: "gray",
-                      pointWidth: 20,
+                  XRangeSeries( 
+                //options: XRangeSeriesOptions()
+                      name: "Project 1", 
+                      borderColor: "gray", 
+                      pointWidth: 20, 
                     data: [ 
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
                     ],
                   ),
                 ],

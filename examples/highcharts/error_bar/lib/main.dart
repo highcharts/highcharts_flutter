@@ -10,8 +10,12 @@ import 'package:highcharts_flutter/types/TitleOptions.dart';
 import 'package:highcharts_flutter/types/XAxisOptions.dart';
 import 'package:highcharts_flutter/types/YAxisOptions.dart';
 import 'package:highcharts_flutter/types/TooltipOptions.dart';
-import 'package:highcharts_flutter/types/LineSeriesOptions.dart';
-import 'package:highcharts_flutter/types/LineSeries.dart';
+import 'package:highcharts_flutter/types/ColumnSeriesOptions.dart';
+import 'package:highcharts_flutter/types/ColumnSeries.dart';
+import 'package:highcharts_flutter/types/ErrorBarSeriesOptions.dart';
+import 'package:highcharts_flutter/types/ErrorBarSeries.dart';
+import 'package:highcharts_flutter/types/SplineSeriesOptions.dart';
+import 'package:highcharts_flutter/types/SplineSeries.dart';
 
 void main() {
   runApp(const MyApp());
@@ -57,10 +61,10 @@ class _MyHomePageState extends State<MyHomePage> {
             HighchartsChart(
               HighchartsOptions(
                 chart: ChartOptions(
-                    zoomType: "xy",
+                    zoomType: "xy", 
                 ),
                 title: TitleOptions(
-                    text: "Temperature vs Rainfall",
+                    text: "Temperature vs Rainfall", 
                 ),
                 xAxis: [ 
                   XAxisOptions( 
@@ -71,12 +75,13 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ],
                 tooltip: TooltipOptions(
-                    shared: true,
+                    shared: true, 
                 ),
                 series: [ 
-                  LineSeries(
-                      name: "Rainfall",
-                      color: "#6b8abc",
+                  ColumnSeries( 
+                //options: ColumnSeriesOptions()
+                      name: "Rainfall", 
+                      color: "#6b8abc", 
                     data: [ 
                       [49.9], 
                       [71.5], 
@@ -92,8 +97,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       [54.4], 
                     ],
                   ),
-                  LineSeries(
-                      name: "Rainfall error",
+                  ErrorBarSeries( 
+                //options: ErrorBarSeriesOptions()
+                      name: "Rainfall error", 
                     data: [ 
                       [48,51], 
                       [68,73], 
@@ -109,10 +115,11 @@ class _MyHomePageState extends State<MyHomePage> {
                       [52,56], 
                     ],
                   ),
-                  LineSeries(
-                      name: "Temperature",
-                      color: "#DF8500",
-                      lineWidth: 2,
+                  SplineSeries( 
+                //options: SplineSeriesOptions()
+                      name: "Temperature", 
+                      color: "#DF8500", 
+                      lineWidth: 2, 
                     data: [ 
                       [7], 
                       [6.9], 
@@ -128,8 +135,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       [9.6], 
                     ],
                   ),
-                  LineSeries(
-                      name: "Temperature error",
+                  ErrorBarSeries( 
+                //options: ErrorBarSeriesOptions()
+                      name: "Temperature error", 
                     data: [ 
                       [6,8], 
                       [5.9,7.6], 

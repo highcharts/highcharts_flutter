@@ -57,9 +57,9 @@ class _MyHomePageState extends State<MyHomePage> {
             HighchartsChart(
               HighchartsOptions(
                 title: TitleOptions(
-                    text: "Helsinki Average Monthly Temperature",
-                    align: "left",
-                    margin: 25,
+                    text: "Helsinki Average Monthly Temperature", 
+                    align: "left", 
+                    margin: 25, 
                 ),
                 yAxis: [ 
                   YAxisOptions( 
@@ -70,14 +70,15 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ],
                 legend: LegendOptions(
-                    enabled: false,
+                    enabled: false, 
                 ),
                 tooltip: TooltipOptions(
-                    valueSuffix: "°C",
+                    valueSuffix: "°C", 
                 ),
                 series: [ 
-                  LineSeries(
-                      name: "Helsinki",
+                  LineSeries( 
+                //options: LineSeriesOptions()
+                      name: "Helsinki", 
                     data: [ 
                       [-5], 
                       [-6], 
@@ -92,7 +93,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       [0], 
                       [-4], 
                     ],
-                      color: "#2F2D2E",
+                      color: "#2F2D2E", 
                   ),
                 ],
               )

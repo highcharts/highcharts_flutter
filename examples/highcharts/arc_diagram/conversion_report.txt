@@ -17,25 +17,25 @@
     }
   },
   {
-    "type": "",
-    "path": "series",
-    "parentType": "LineSeriesOptions",
-    "memberName": "linkWeight",
-    "msg": "The member is not present in the Flutter integration API"
+    "type": "missing_mapping",
+    "path": "series.linkWeight",
+    "member": {
+      "name": "linkWeight",
+      "type": "number",
+      "optional": true
+    }
   },
   {
-    "type": "",
-    "path": "series",
-    "parentType": "LineSeriesOptions",
-    "memberName": "centeredLinks",
-    "msg": "The member is not present in the Flutter integration API"
+    "type": "missing_mapping",
+    "path": "series.dataLabels"
   },
   {
-    "type": "",
-    "path": "series",
-    "parentType": "LineSeriesOptions",
-    "memberName": "offset",
-    "msg": "The member is not present in the Flutter integration API"
+    "type": "missing_mapping",
+    "path": "series.offset",
+    "member": {
+      "name": "offset",
+      "type": "string"
+    }
   },
   {
     "type": "",

@@ -61,22 +61,25 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             HighchartsChart(
               HighchartsOptions(
+                chart: ChartOptions(
+                    type: "lowmedhigh", 
+                ),
                 title: TitleOptions(
-                    text: "Monthly earnings, by level of education in Norway",
-                    align: "left",
+                    text: "Monthly earnings, by level of education in Norway", 
+                    align: "left", 
                 ),
                 subtitle: SubtitleOptions(
-                    text: "Source: <a href=\"https://www.ssb.no/en/statbank/table/11420/\" target=\"_blank\">SSB</a>",
-                    align: "left",
+                    text: "Source: <a href=\"https://www.ssb.no/en/statbank/table/11420/\" target=\"_blank\">SSB</a>", 
+                    align: "left", 
                 ),
                 accessibility: AccessibilityOptions(
                   point: AccessibilityPointOptions(
-                      descriptionFormat: "{#unless isNull}{category}, low {low}, median {median}, high {high}{/unless}",
+                      descriptionFormat: "{#unless isNull}{category}, low {low}, median {median}, high {high}{/unless}", 
                   ),
                   series: AccessibilitySeriesOptions(
-                      descriptionFormat: "{series.name}, series {seriesNumber} of {chart.series.length} with {series.points.length} data points.",
+                      descriptionFormat: "{series.name}, series {seriesNumber} of {chart.series.length} with {series.points.length} data points.", 
                   ),
-                    typeDescription: "Low, median, high. Each data point has a low, median and high value, depicted vertically as small ticks.",
+                    typeDescription: "Low, median, high. Each data point has a low, median and high value, depicted vertically as small ticks.", 
                 ),
                 xAxis: [ 
                   XAxisOptions( 
@@ -87,17 +90,18 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ],
                 tooltip: TooltipOptions(
-                    shared: true,
-                    stickOnContact: true,
+                    shared: true, 
+                    stickOnContact: true, 
                 ),
                 plotOptions: HighchartsPlotOptions(
                   series: SeriesOptions(
-                      stickyTracking: true,
+                      stickyTracking: true, 
                   ),
                 ),
                 series: [ 
-                  undefined(
-                      name: "Scientific research and development",
+                  undefined( 
+                //options: undefinedOptions()
+                      name: "Scientific research and development", 
                     data: [ 
                       [46240,56720,69540], 
                       [46360,55050,67710], 
@@ -108,8 +112,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       [50500,63020,78630], 
                     ],
                   ),
-                  undefined(
-                      name: "Hospital activities",
+                  undefined( 
+                //options: undefinedOptions()
+                      name: "Hospital activities", 
                     data: [ 
                       [43310,53510,71450], 
                       [44280,53440,66040], 
@@ -120,11 +125,54 @@ class _MyHomePageState extends State<MyHomePage> {
                       [51100,63050,78280], 
                     ],
                   ),
-                  undefined(
-                      name: "Fire service activities",
+                  undefined( 
+                //options: undefinedOptions()
+                      name: "Fire service activities", 
                     data: [ 
+                    [
+                      false, false, false
+                    ],
+                    [
+                      37380, 44560, 51450
+                    ],
+                    [
+                      38020, 47080, 55230
+                    ],
+                    [
+                      false, false, false
+                    ],
+                    [
+                      37360, 44940, 50230
+                    ],
+                    [
+                      40560, 46800, 55880
+                    ],
+                    [
+                      42390, 47450, 57400
+                    ],
                       [37380,44560,51450], 
                       [38020,47080,55230], 
+                    [
+                      false, false, false
+                    ],
+                    [
+                      37380, 44560, 51450
+                    ],
+                    [
+                      38020, 47080, 55230
+                    ],
+                    [
+                      false, false, false
+                    ],
+                    [
+                      37360, 44940, 50230
+                    ],
+                    [
+                      40560, 46800, 55880
+                    ],
+                    [
+                      42390, 47450, 57400
+                    ],
                       [37360,44940,50230], 
                       [40560,46800,55880], 
                       [42390,47450,57400], 

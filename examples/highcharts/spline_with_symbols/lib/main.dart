@@ -59,11 +59,14 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             HighchartsChart(
               HighchartsOptions(
+                chart: ChartOptions(
+                    type: "spline", 
+                ),
                 title: TitleOptions(
-                    text: "Monthly Average Temperature",
+                    text: "Monthly Average Temperature", 
                 ),
                 subtitle: SubtitleOptions(
-                    text: "Source: <a href=\"https://en.wikipedia.org/wiki/List_of_cities_by_average_temperature\" target=\"_blank\">Wikipedia.com</a>",
+                    text: "Source: <a href=\"https://en.wikipedia.org/wiki/List_of_cities_by_average_temperature\" target=\"_blank\">Wikipedia.com</a>", 
                 ),
                 xAxis: [ 
                   XAxisOptions( 
@@ -74,16 +77,17 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ],
                 tooltip: TooltipOptions(
-                    crosshairs: true,
-                    shared: true,
+                    crosshairs: true, 
+                    shared: true, 
                 ),
                 plotOptions: HighchartsPlotOptions(
                   spline: SplineSeriesOptions(
                   ),
                 ),
                 series: [ 
-                  SplineSeries(
-                      name: "Tokyo",
+                  SplineSeries( 
+                //options: SplineSeriesOptions()
+                      name: "Tokyo", 
                     data: [ 
                       [5.2], 
                       [5.7], 
@@ -92,15 +96,86 @@ class _MyHomePageState extends State<MyHomePage> {
                       [18.2], 
                       [21.4], 
                       [25], 
+                    [
+                      5.2, 
+                    ],
+                    [
+                      5.7, 
+                    ],
+                    [
+                      8.7, 
+                    ],
+                    [
+                      13.9, 
+                    ],
+                    [
+                      18.2, 
+                    ],
+                    [
+                      21.4, 
+                    ],
+                    [
+                      25, 
+                    ],
+                    [
+                    ],
+                    [
+                      22.8, 
+                    ],
+                    [
+                      17.5, 
+                    ],
+                    [
+                      12.1, 
+                    ],
+                    [
+                      7.6, 
+                    ],
                       [22.8], 
                       [17.5], 
                       [12.1], 
                       [7.6], 
                     ],
                   ),
-                  SplineSeries(
-                      name: "Bergen",
+                  SplineSeries( 
+                //options: SplineSeriesOptions()
+                      name: "Bergen", 
                     data: [ 
+                    [
+                    ],
+                    [
+                      1.6, 
+                    ],
+                    [
+                      3.3, 
+                    ],
+                    [
+                      5.9, 
+                    ],
+                    [
+                      10.5, 
+                    ],
+                    [
+                      13.5, 
+                    ],
+                    [
+                      14.5, 
+                    ],
+                    [
+                      14.4, 
+                    ],
+                    [
+                      11.5, 
+                    ],
+                    [
+                      8.7, 
+                    ],
+                    [
+                      4.7, 
+                    ],
+                    [
+                      2.6, 
+                    ],
                       [1.6], 
                       [3.3], 
                       [5.9], 

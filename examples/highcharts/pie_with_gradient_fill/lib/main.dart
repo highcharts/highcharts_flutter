@@ -66,36 +66,70 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   plotBorderWidth: number(
                   ),
-                    plotShadow: false,
+                    plotShadow: false, 
+                    type: "pie", 
                 ),
                 title: TitleOptions(
-                    text: "Registered private vehicles in Norway, by type of fuel, 2020",
-                    align: "left",
+                    text: "Registered private vehicles in Norway, by type of fuel, 2020", 
+                    align: "left", 
                 ),
                 tooltip: TooltipOptions(
-                    pointFormat: "{series.name}: <b>{point.percentage:.1f}%</b>",
+                    pointFormat: "{series.name}: <b>{point.percentage:.1f}%</b>", 
                 ),
                 accessibility: AccessibilityOptions(
                   point: AccessibilityPointOptions(
-                      valueSuffix: "%",
+                      valueSuffix: "%", 
                   ),
                 ),
                 plotOptions: MapsPlotOptions(
                   pie: PieSeriesOptions(
-                      allowPointSelect: true,
-                      cursor: "pointer",
+                      allowPointSelect: true, 
+                      cursor: "pointer", 
                     dataLabels: [ 
                       PieDataLabelOptions( 
-                          enabled: true,
-                          format: "<span style=\"font-size: 1.2em\"><b>{point.name}</b></span><br><span style=\"opacity: 0.6\">{point.percentage:.1f} %</span>",
+                          enabled: true, 
+                          format: "<span style=\"font-size: 1.2em\"><b>{point.name}</b></span><br><span style=\"opacity: 0.6\">{point.percentage:.1f} %</span>", 
                       ),
                     ],
                   ),
                 ),
                 series: [ 
-                  PieSeries(
-                      name: "Share",
+                  PieSeries( 
+                //options: PieSeriesOptions()
+                      name: "Share", 
                     data: [ 
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
                     ],
                   ),
                 ],

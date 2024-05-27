@@ -59,15 +59,16 @@ class _MyHomePageState extends State<MyHomePage> {
             HighchartsChart(
               HighchartsOptions(
                 chart: ChartOptions(
-                    styledMode: true,
+                    type: "column", 
+                    styledMode: true, 
                 ),
                 title: TitleOptions(
-                    text: "Average weight and BMI in some countries, women",
-                    align: "left",
+                    text: "Average weight and BMI in some countries, women", 
+                    align: "left", 
                 ),
                 subtitle: SubtitleOptions(
-                    text: "Source: <a href=\"https://www.worlddata.info/average-bodyheight.php\"target=\"_blank\">WorldData</a>",
-                    align: "left",
+                    text: "Source: <a href=\"https://www.worlddata.info/average-bodyheight.php\"target=\"_blank\">WorldData</a>", 
+                    align: "left", 
                 ),
                 xAxis: [ 
                   XAxisOptions( 
@@ -83,8 +84,9 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
                 series: [ 
-                  ColumnSeries(
-                      name: "Weight",
+                  ColumnSeries( 
+                //options: ColumnSeriesOptions()
+                      name: "Weight", 
                     data: [ 
                       [92.5], 
                       [73.1], 
@@ -92,8 +94,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       [49], 
                     ],
                   ),
-                  ColumnSeries(
-                      name: "BMI",
+                  ColumnSeries( 
+                //options: ColumnSeriesOptions()
+                      name: "BMI", 
                     data: [ 
                       [33.7], 
                       [27.1], 

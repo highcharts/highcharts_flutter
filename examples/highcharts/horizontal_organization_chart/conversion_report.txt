@@ -21,16 +21,121 @@
   },
   {
     "type": "",
-    "path": "series",
-    "parentType": "LineSeriesOptions",
-    "memberName": "levels",
+    "path": "series.levels",
+    "parentType": "OrganizationSeriesLevelOptions",
+    "memberName": "0",
     "msg": "The member is not present in the Flutter integration API"
   },
   {
     "type": "",
-    "path": "series",
-    "parentType": "LineSeriesOptions",
-    "memberName": "nodes",
+    "path": "series.levels",
+    "parentType": "OrganizationSeriesLevelOptions",
+    "memberName": "1",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "",
+    "path": "series.levels",
+    "parentType": "OrganizationSeriesLevelOptions",
+    "memberName": "2",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "",
+    "path": "series.levels",
+    "parentType": "OrganizationSeriesLevelOptions",
+    "memberName": "3",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "",
+    "path": "series.nodes",
+    "parentType": "OrganizationSeriesNodeOptions",
+    "memberName": "0",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "",
+    "path": "series.nodes",
+    "parentType": "OrganizationSeriesNodeOptions",
+    "memberName": "1",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "",
+    "path": "series.nodes",
+    "parentType": "OrganizationSeriesNodeOptions",
+    "memberName": "2",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "",
+    "path": "series.nodes",
+    "parentType": "OrganizationSeriesNodeOptions",
+    "memberName": "3",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "",
+    "path": "series.nodes",
+    "parentType": "OrganizationSeriesNodeOptions",
+    "memberName": "4",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "",
+    "path": "series.nodes",
+    "parentType": "OrganizationSeriesNodeOptions",
+    "memberName": "5",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "",
+    "path": "series.nodes",
+    "parentType": "OrganizationSeriesNodeOptions",
+    "memberName": "6",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "",
+    "path": "series.nodes",
+    "parentType": "OrganizationSeriesNodeOptions",
+    "memberName": "7",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "",
+    "path": "series.nodes",
+    "parentType": "OrganizationSeriesNodeOptions",
+    "memberName": "8",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "",
+    "path": "series.nodes",
+    "parentType": "OrganizationSeriesNodeOptions",
+    "memberName": "9",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "",
+    "path": "series.nodes",
+    "parentType": "OrganizationSeriesNodeOptions",
+    "memberName": "10",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "",
+    "path": "series.nodes",
+    "parentType": "OrganizationSeriesNodeOptions",
+    "memberName": "11",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "",
+    "path": "series.nodes",
+    "parentType": "OrganizationSeriesNodeOptions",
+    "memberName": "12",
     "msg": "The member is not present in the Flutter integration API"
   },
   {

@@ -66,39 +66,40 @@ class _MyHomePageState extends State<MyHomePage> {
             HighchartsChart(
               HighchartsOptions(
                 chart: ChartOptions(
-                    height: "90%",
-                    plotBorderWidth: 10,
-                    plotBorderColor: "#ffffff",
-                    backgroundColor: "#f7f7f8",
+                    type: "scatter", 
+                    height: "90%", 
+                    plotBorderWidth: 10, 
+                    plotBorderColor: "#ffffff", 
+                    backgroundColor: "#f7f7f8", 
                   spacing: [ 
                     10,85,15,20, 
                   ],
                   style: CSSObject(
                   ),
-                    className: "rounded-plot-border",
+                    className: "rounded-plot-border", 
                 ),
                 legend: LegendOptions(
-                    enabled: false,
+                    enabled: false, 
                 ),
                 annotations: [ 
                   AnnotationOptions( 
                   ),
                 ],
                 title: TitleOptions(
-                    text: "Relative Rotation Graph®️",
+                    text: "Relative Rotation Graph®️", 
                 ),
                 plotOptions: HighchartsPlotOptions(
                   series: SeriesOptions(
-                      lineWidth: 2,
+                      lineWidth: 2, 
                     marker: PointMarkerOptions(
-                        enabled: true,
-                        radius: 3,
-                        symbol: "circle",
+                        enabled: true, 
+                        radius: 3, 
+                        symbol: "circle", 
                     ),
                   ),
                 ),
                 tooltip: TooltipOptions(
-                    pointFormat: "RS-Ratio®️: <b>{point.x}</b></br>RS-Momentum®️: <b>{point.y}</b>",
+                    pointFormat: "RS-Ratio®️: <b>{point.x}</b></br>RS-Momentum®️: <b>{point.y}</b>", 
                 ),
                 xAxis: [ 
                   XAxisOptions( 
@@ -109,9 +110,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ],
                 series: [ 
-                  ScatterSeries(
-                      name: "Stock 1",
-                      color: "#9a5c00",
+                  ScatterSeries( 
+                //options: ScatterSeriesOptions()
+                      name: "Stock 1", 
+                      color: "#9a5c00", 
                     data: [ 
                       [102,102], 
                       [102.25,101.5], 
@@ -123,9 +125,10 @@ class _MyHomePageState extends State<MyHomePage> {
                       [101.375,98], 
                     ],
                   ),
-                  ScatterSeries(
-                      name: "Stock 2",
-                      color: "#004bb3",
+                  ScatterSeries( 
+                //options: ScatterSeriesOptions()
+                      name: "Stock 2", 
+                      color: "#004bb3", 
                     data: [ 
                       [101.8,98.3], 
                       [101.4,97.5], 
@@ -138,9 +141,10 @@ class _MyHomePageState extends State<MyHomePage> {
                       [100,102.5], 
                     ],
                   ),
-                  ScatterSeries(
-                      name: "Stock 3",
-                      color: "#008224",
+                  ScatterSeries( 
+                //options: ScatterSeriesOptions()
+                      name: "Stock 3", 
+                      color: "#008224", 
                     data: [ 
                       [98,96.5], 
                       [97.2,97], 
@@ -161,9 +165,10 @@ class _MyHomePageState extends State<MyHomePage> {
                       [100.4,103.5], 
                     ],
                   ),
-                  ScatterSeries(
-                      name: "Stock 4",
-                      color: "#008224",
+                  ScatterSeries( 
+                //options: ScatterSeriesOptions()
+                      name: "Stock 4", 
+                      color: "#008224", 
                     data: [ 
                       [98.5,98.5], 
                       [98.7,99], 
@@ -180,7 +185,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   buttonOptions: ExportingButtonOptions(
                     theme: ButtonThemeObject(
                     ),
-                      y: -7,
+                      y: -7, 
                   ),
                 ),
               )

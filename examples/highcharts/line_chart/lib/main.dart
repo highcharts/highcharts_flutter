@@ -60,12 +60,12 @@ class _MyHomePageState extends State<MyHomePage> {
             HighchartsChart(
               HighchartsOptions(
                 title: TitleOptions(
-                    text: "U.S Solar Employment Growth",
-                    align: "left",
+                    text: "U.S Solar Employment Growth", 
+                    align: "left", 
                 ),
                 subtitle: SubtitleOptions(
-                    text: "By Job Category. Source: <a href=\"https://irecusa.org/programs/solar-jobs-census/\" target=\"_blank\">IREC</a>.",
-                    align: "left",
+                    text: "By Job Category. Source: <a href=\"https://irecusa.org/programs/solar-jobs-census/\" target=\"_blank\">IREC</a>.", 
+                    align: "left", 
                 ),
                 yAxis: [ 
                   YAxisOptions( 
@@ -76,21 +76,22 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ],
                 legend: LegendOptions(
-                    layout: "vertical",
-                    align: "right",
-                    verticalAlign: "middle",
+                    layout: "vertical", 
+                    align: "right", 
+                    verticalAlign: "middle", 
                 ),
                 plotOptions: HighchartsPlotOptions(
                   series: SeriesOptions(
                     label: SeriesLabelOptions(
-                        connectorAllowed: false,
+                        connectorAllowed: false, 
                     ),
-                      pointStart: 2010,
+                      pointStart: 2010, 
                   ),
                 ),
                 series: [ 
-                  LineSeries(
-                      name: "Installation & Developers",
+                  LineSeries( 
+                //options: LineSeriesOptions()
+                      name: "Installation & Developers", 
                     data: [ 
                       [43934], 
                       [48656], 
@@ -105,8 +106,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       [154610], 
                     ],
                   ),
-                  LineSeries(
-                      name: "Manufacturing",
+                  LineSeries( 
+                //options: LineSeriesOptions()
+                      name: "Manufacturing", 
                     data: [ 
                       [24916], 
                       [37941], 
@@ -121,8 +123,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       [31050], 
                     ],
                   ),
-                  LineSeries(
-                      name: "Sales & Distribution",
+                  LineSeries( 
+                //options: LineSeriesOptions()
+                      name: "Sales & Distribution", 
                     data: [ 
                       [11744], 
                       [30000], 
@@ -137,16 +140,218 @@ class _MyHomePageState extends State<MyHomePage> {
                       [25663], 
                     ],
                   ),
-                  LineSeries(
-                      name: "Operations & Maintenance",
+                  LineSeries( 
+                //options: LineSeriesOptions()
+                      name: "Operations & Maintenance", 
                     data: [ 
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                      11164, 
+                    ],
+                    [
+                      11218, 
+                    ],
+                    [
+                      10077, 
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                      11164, 
+                    ],
+                    [
+                      11218, 
+                    ],
+                    [
+                      10077, 
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                      11164, 
+                    ],
+                    [
+                      11218, 
+                    ],
+                    [
+                      10077, 
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                      11164, 
+                    ],
+                    [
+                      11218, 
+                    ],
+                    [
+                      10077, 
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                      11164, 
+                    ],
+                    [
+                      11218, 
+                    ],
+                    [
+                      10077, 
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                      11164, 
+                    ],
+                    [
+                      11218, 
+                    ],
+                    [
+                      10077, 
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                      11164, 
+                    ],
+                    [
+                      11218, 
+                    ],
+                    [
+                      10077, 
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                      11164, 
+                    ],
+                    [
+                      11218, 
+                    ],
+                    [
+                      10077, 
+                    ],
                       [11164], 
                       [11218], 
                       [10077], 
                     ],
                   ),
-                  LineSeries(
-                      name: "Other",
+                  LineSeries( 
+                //options: LineSeriesOptions()
+                      name: "Other", 
                     data: [ 
                       [21908], 
                       [5548], 

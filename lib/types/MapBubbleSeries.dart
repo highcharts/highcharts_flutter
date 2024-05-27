@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-04-19
+ * Build stamp: 2024-05-23
  *
  */ 
 
@@ -25,7 +25,7 @@ class MapBubbleSeries extends Series {
   String? name;
   MapBubbleSeriesOptions? options;
   List<PointOptions>? points;
-  List<List<double>>? data;
+  List<List<dynamic>>? data;
 
   MapBubbleSeries({
     this.name = null,
@@ -57,7 +57,14 @@ class MapBubbleSeries extends Series {
           seriesData.writeAll(["["], "");
         }
 
-        seriesData.writeAll(point, ",");
+          for (var sub in point) {
+            if (sub is String) {
+              seriesData.writeAll(["\"", sub, "\","], "");
+            } else {
+              seriesData.writeAll([sub], ",");
+            }
+
+          }
 
         if (point.length > 1) {
           seriesData.writeAll(["],"], "");

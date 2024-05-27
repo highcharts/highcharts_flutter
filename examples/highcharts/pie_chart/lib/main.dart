@@ -60,19 +60,22 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             HighchartsChart(
               HighchartsOptions(
+                chart: ChartOptions(
+                    type: "pie", 
+                ),
                 title: TitleOptions(
-                    text: "Egg Yolk Composition",
+                    text: "Egg Yolk Composition", 
                 ),
                 tooltip: TooltipOptions(
-                    valueSuffix: "%",
+                    valueSuffix: "%", 
                 ),
                 subtitle: SubtitleOptions(
-                    text: "Source:<a href=\"https://www.mdpi.com/2072-6643/11/3/684/htm\" target=\"_default\">MDPI</a>",
+                    text: "Source:<a href=\"https://www.mdpi.com/2072-6643/11/3/684/htm\" target=\"_default\">MDPI</a>", 
                 ),
                 plotOptions: HighchartsPlotOptions(
                   series: SeriesOptions(
-                      allowPointSelect: true,
-                      cursor: "pointer",
+                      allowPointSelect: true, 
+                      cursor: "pointer", 
                     dataLabels: [ 
                       DataLabelOptions( 
                       ),
@@ -80,9 +83,60 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
                 series: [ 
-                  PieSeries(
-                      name: "Percentage",
+                  PieSeries( 
+                //options: PieSeriesOptions()
+                      name: "Percentage", 
                     data: [ 
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
                     ],
                   ),
                 ],

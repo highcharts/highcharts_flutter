@@ -15,8 +15,7 @@ import 'package:highcharts_flutter/types/AccessibilityPointOptions.dart';
 import 'package:highcharts_flutter/types/HighchartsPlotOptions.dart';
 import 'package:highcharts_flutter/types/PieSeriesOptions.dart';
 import 'package:highcharts_flutter/types/PieDataLabelOptions.dart';
-import 'package:highcharts_flutter/types/LineSeriesOptions.dart';
-import 'package:highcharts_flutter/types/LineSeries.dart';
+import 'package:highcharts_flutter/types/PieSeries.dart';
 import 'package:highcharts_flutter/types/XAxisOptions.dart';
 import 'package:highcharts_flutter/types/YAxisOptions.dart';
 
@@ -66,41 +65,151 @@ class _MyHomePageState extends State<MyHomePage> {
                 chart: ChartOptions(
                   plotBackgroundColor: string(
                   ),
-                    plotBorderWidth: 0,
-                    plotShadow: false,
+                    plotBorderWidth: 0, 
+                    plotShadow: false, 
                 ),
                 title: TitleOptions(
-                    text: "Browser<br>shares<br>January<br>2022",
-                    align: "center",
-                    verticalAlign: "middle",
-                    y: 60,
+                    text: "Browser<br>shares<br>January<br>2022", 
+                    align: "center", 
+                    verticalAlign: "middle", 
+                    y: 60, 
                   style: CSSObject(
                   ),
                 ),
                 tooltip: TooltipOptions(
-                    pointFormat: "{series.name}: <b>{point.percentage:.1f}%</b>",
+                    pointFormat: "{series.name}: <b>{point.percentage:.1f}%</b>", 
                 ),
                 accessibility: AccessibilityOptions(
                   point: AccessibilityPointOptions(
-                      valueSuffix: "%",
+                      valueSuffix: "%", 
                   ),
                 ),
                 plotOptions: HighchartsPlotOptions(
                   pie: PieSeriesOptions(
                     dataLabels: [ 
                       PieDataLabelOptions( 
-                          enabled: true,
+                          enabled: true, 
                       ),
                     ],
-                      startAngle: -90,
-                      endAngle: 90,
-                      size: "110%",
+                      startAngle: -90, 
+                      endAngle: 90, 
+                      size: "110%", 
                   ),
                 ),
                 series: [ 
-                  LineSeries(
-                      name: "Browser share",
+                  PieSeries( 
+                //options: PieSeriesOptions()
+                      name: "Browser share", 
+                      innerSize: "50%", 
                     data: [ 
+                    [
+                      "Chrome", 73.86
+                    ],
+                    [
+                      "Edge", 11.97
+                    ],
+                    [
+                      "Firefox", 5.52
+                    ],
+                    [
+                      "Safari", 2.98
+                    ],
+                    [
+                      "Internet Explorer", 1.9
+                    ],
+                    [
+                      "Other", 3.77
+                    ],
+                    [
+                      "Chrome", 73.86
+                    ],
+                    [
+                      "Edge", 11.97
+                    ],
+                    [
+                      "Firefox", 5.52
+                    ],
+                    [
+                      "Safari", 2.98
+                    ],
+                    [
+                      "Internet Explorer", 1.9
+                    ],
+                    [
+                      "Other", 3.77
+                    ],
+                    [
+                      "Chrome", 73.86
+                    ],
+                    [
+                      "Edge", 11.97
+                    ],
+                    [
+                      "Firefox", 5.52
+                    ],
+                    [
+                      "Safari", 2.98
+                    ],
+                    [
+                      "Internet Explorer", 1.9
+                    ],
+                    [
+                      "Other", 3.77
+                    ],
+                    [
+                      "Chrome", 73.86
+                    ],
+                    [
+                      "Edge", 11.97
+                    ],
+                    [
+                      "Firefox", 5.52
+                    ],
+                    [
+                      "Safari", 2.98
+                    ],
+                    [
+                      "Internet Explorer", 1.9
+                    ],
+                    [
+                      "Other", 3.77
+                    ],
+                    [
+                      "Chrome", 73.86
+                    ],
+                    [
+                      "Edge", 11.97
+                    ],
+                    [
+                      "Firefox", 5.52
+                    ],
+                    [
+                      "Safari", 2.98
+                    ],
+                    [
+                      "Internet Explorer", 1.9
+                    ],
+                    [
+                      "Other", 3.77
+                    ],
+                    [
+                      "Chrome", 73.86
+                    ],
+                    [
+                      "Edge", 11.97
+                    ],
+                    [
+                      "Firefox", 5.52
+                    ],
+                    [
+                      "Safari", 2.98
+                    ],
+                    [
+                      "Internet Explorer", 1.9
+                    ],
+                    [
+                      "Other", 3.77
+                    ],
                     ],
                   ),
                 ],

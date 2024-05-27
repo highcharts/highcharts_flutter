@@ -61,39 +61,93 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             HighchartsChart(
               HighchartsOptions(
+                chart: ChartOptions(
+                    type: "pie", 
+                ),
                 title: TitleOptions(
-                    text: "Departamental Strength of the Company",
-                    align: "left",
+                    text: "Departamental Strength of the Company", 
+                    align: "left", 
                 ),
                 subtitle: SubtitleOptions(
-                    text: "Custom animation of pie series",
-                    align: "left",
+                    text: "Custom animation of pie series", 
+                    align: "left", 
                 ),
                 tooltip: TooltipOptions(
-                    pointFormat: "{series.name}: <b>{point.percentage:.1f}%</b>",
+                    pointFormat: "{series.name}: <b>{point.percentage:.1f}%</b>", 
                 ),
                 accessibility: AccessibilityOptions(
                   point: AccessibilityPointOptions(
-                      valueSuffix: "%",
+                      valueSuffix: "%", 
                   ),
                 ),
                 plotOptions: HighchartsPlotOptions(
                   pie: PieSeriesOptions(
-                      allowPointSelect: true,
-                      borderWidth: 2,
-                      cursor: "pointer",
+                      allowPointSelect: true, 
+                      borderWidth: 2, 
+                      cursor: "pointer", 
                     dataLabels: [ 
                       PieDataLabelOptions( 
-                          enabled: true,
-                          format: "<b>{point.name}</b><br>{point.percentage}%",
+                          enabled: true, 
+                          format: "<b>{point.name}</b><br>{point.percentage}%", 
                       ),
                     ],
                   ),
                 ),
                 series: [ 
-                  PieSeries(
-                      enableMouseTracking: false,
+                  PieSeries( 
+                //options: PieSeriesOptions()
+                      enableMouseTracking: false, 
                     data: [ 
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
                     ],
                   ),
                 ],

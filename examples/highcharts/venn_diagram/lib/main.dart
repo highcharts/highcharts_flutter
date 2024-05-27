@@ -7,8 +7,9 @@ import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/Highcharts.dart';
 import 'package:highcharts_flutter/types/AccessibilityOptions.dart';
 import 'package:highcharts_flutter/types/AccessibilityPointOptions.dart';
-import 'package:highcharts_flutter/types/LineSeriesOptions.dart';
-import 'package:highcharts_flutter/types/LineSeries.dart';
+import 'package:highcharts_flutter/types/VennSeriesOptions.dart';
+import 'package:highcharts_flutter/types/VennSeries.dart';
+import 'package:highcharts_flutter/types/VennPointOptions.dart';
 import 'package:highcharts_flutter/types/TitleOptions.dart';
 import 'package:highcharts_flutter/types/XAxisOptions.dart';
 import 'package:highcharts_flutter/types/YAxisOptions.dart';
@@ -58,18 +59,22 @@ class _MyHomePageState extends State<MyHomePage> {
               HighchartsOptions(
                 accessibility: AccessibilityOptions(
                   point: AccessibilityPointOptions(
-                      descriptionFormat: "{add index 1}. Intersection: {sets}. {#if (gt sets.length 1)}{name}. {/if}Value {value}",
+                      descriptionFormat: "{add index 1}. Intersection: {sets}. {#if (gt sets.length 1)}{name}. {/if}Value {value}", 
                   ),
                 ),
                 series: [ 
-                  LineSeries(
-                      name: "The Unattainable Triangle",
+                  VennSeries( 
+                //options: VennSeriesOptions()
+                      name: "The Unattainable Triangle", 
                     data: [ 
+                    [
+                      false, false, false, false, false, false, false
+                    ],
                     ],
                   ),
                 ],
                 title: TitleOptions(
-                    text: "The Unattainable Triangle",
+                    text: "The Unattainable Triangle", 
                 ),
                 xAxis: [ 
                   XAxisOptions( 

@@ -63,17 +63,20 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             HighchartsChart(
               HighchartsOptions(
+                chart: ChartOptions(
+                    type: "column", 
+                ),
                 title: TitleOptions(
-                    align: "left",
-                    text: "Browser market shares. January, 2022",
+                    align: "left", 
+                    text: "Browser market shares. January, 2022", 
                 ),
                 subtitle: SubtitleOptions(
-                    align: "left",
-                    text: "Click the columns to view versions. Source: <a href=\"http://statcounter.com\" target=\"_blank\">statcounter.com</a>",
+                    align: "left", 
+                    text: "Click the columns to view versions. Source: <a href=\"http://statcounter.com\" target=\"_blank\">statcounter.com</a>", 
                 ),
                 accessibility: AccessibilityOptions(
                   announceNewData: AccessibilityAnnounceNewDataOptions(
-                      enabled: true,
+                      enabled: true, 
                   ),
                 ),
                 xAxis: [ 
@@ -85,27 +88,126 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ],
                 legend: LegendOptions(
-                    enabled: false,
+                    enabled: false, 
                 ),
                 plotOptions: HighchartsPlotOptions(
                   series: SeriesOptions(
-                      borderWidth: 0,
+                      borderWidth: 0, 
                     dataLabels: [ 
                       DataLabelOptions( 
-                          enabled: true,
-                          format: "{point.y:.1f}%",
+                          enabled: true, 
+                          format: "{point.y:.1f}%", 
                       ),
                     ],
                   ),
                 ),
                 tooltip: TooltipOptions(
-                    headerFormat: "<span style=\"font-size:11px\">{series.name}</span><br>",
-                    pointFormat: "<span style=\"color:{point.color}\">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>",
+                    headerFormat: "<span style=\"font-size:11px\">{series.name}</span><br>", 
+                    pointFormat: "<span style=\"color:{point.color}\">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>", 
                 ),
                 series: [ 
-                  ColumnSeries(
-                      name: "Browsers",
+                  ColumnSeries( 
+                //options: ColumnSeriesOptions()
+                      name: "Browsers", 
                     data: [ 
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
                     ],
                   ),
                 ],

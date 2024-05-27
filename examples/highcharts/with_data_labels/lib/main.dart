@@ -58,11 +58,14 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             HighchartsChart(
               HighchartsOptions(
+                chart: ChartOptions(
+                    type: "line", 
+                ),
                 title: TitleOptions(
-                    text: "Monthly Average Temperature",
+                    text: "Monthly Average Temperature", 
                 ),
                 subtitle: SubtitleOptions(
-                    text: "Source: <a href=\"https://en.wikipedia.org/wiki/List_of_cities_by_average_temperature\" target=\"_blank\">Wikipedia.com</a>",
+                    text: "Source: <a href=\"https://en.wikipedia.org/wiki/List_of_cities_by_average_temperature\" target=\"_blank\">Wikipedia.com</a>", 
                 ),
                 xAxis: [ 
                   XAxisOptions( 
@@ -76,15 +79,16 @@ class _MyHomePageState extends State<MyHomePage> {
                   line: LineSeriesOptions(
                     dataLabels: [ 
                       DataLabelOptions( 
-                          enabled: true,
+                          enabled: true, 
                       ),
                     ],
-                      enableMouseTracking: false,
+                      enableMouseTracking: false, 
                   ),
                 ),
                 series: [ 
-                  LineSeries(
-                      name: "Reggane",
+                  LineSeries( 
+                //options: LineSeriesOptions()
+                      name: "Reggane", 
                     data: [ 
                       [16], 
                       [18.2], 
@@ -100,8 +104,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       [17.8], 
                     ],
                   ),
-                  LineSeries(
-                      name: "Tallinn",
+                  LineSeries( 
+                //options: LineSeriesOptions()
+                      name: "Tallinn", 
                     data: [ 
                       [-2.9], 
                       [-3.6], 

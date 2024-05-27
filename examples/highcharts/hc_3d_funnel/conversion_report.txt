@@ -65,41 +65,6 @@
   },
   {
     "type": "",
-    "path": "series.data",
-    "parentType": "Funnel3DPointOptions)",
-    "memberName": "0",
-    "msg": "The member is not present in the Flutter integration API"
-  },
-  {
-    "type": "",
-    "path": "series.data",
-    "parentType": "Funnel3DPointOptions)",
-    "memberName": "1",
-    "msg": "The member is not present in the Flutter integration API"
-  },
-  {
-    "type": "",
-    "path": "series.data",
-    "parentType": "Funnel3DPointOptions)",
-    "memberName": "2",
-    "msg": "The member is not present in the Flutter integration API"
-  },
-  {
-    "type": "",
-    "path": "series.data",
-    "parentType": "Funnel3DPointOptions)",
-    "memberName": "3",
-    "msg": "The member is not present in the Flutter integration API"
-  },
-  {
-    "type": "",
-    "path": "series.data",
-    "parentType": "Funnel3DPointOptions)",
-    "memberName": "4",
-    "msg": "The member is not present in the Flutter integration API"
-  },
-  {
-    "type": "",
     "path": "xAxis",
     "parentType": "XAxisOptions",
     "memberName": "0",

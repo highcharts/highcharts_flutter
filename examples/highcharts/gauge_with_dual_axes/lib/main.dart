@@ -57,24 +57,26 @@ class _MyHomePageState extends State<MyHomePage> {
             HighchartsChart(
               HighchartsOptions(
                 chart: ChartOptions(
-                    alignTicks: false,
+                    type: "gauge", 
+                    alignTicks: false, 
                   plotBackgroundColor: string(
                   ),
                   plotBackgroundImage: string(
                   ),
-                    plotBorderWidth: 0,
-                    plotShadow: false,
+                    plotBorderWidth: 0, 
+                    plotShadow: false, 
                 ),
                 title: TitleOptions(
-                    text: "Speedometer with dual axes",
+                    text: "Speedometer with dual axes", 
                 ),
                 yAxis: [ 
                   YAxisOptions( 
                   ),
                 ],
                 series: [ 
-                  GaugeSeries(
-                      name: "Speed",
+                  GaugeSeries( 
+                //options: GaugeSeriesOptions()
+                      name: "Speed", 
                     data: [ 
                       [80], 
                     ],

@@ -63,18 +63,19 @@ class _MyHomePageState extends State<MyHomePage> {
             HighchartsChart(
               HighchartsOptions(
                 chart: ChartOptions(
+                    type: "spline", 
                   scrollablePlotArea: ScrollablePlotAreaOptions(
-                      minWidth: 600,
-                      scrollPositionX: 1,
+                      minWidth: 600, 
+                      scrollPositionX: 1, 
                   ),
                 ),
                 title: TitleOptions(
-                    text: "Wind speed during a day",
-                    align: "left",
+                    text: "Wind speed during a day", 
+                    align: "left", 
                 ),
                 subtitle: SubtitleOptions(
-                    text: "15th & 16th of April, 2020 at two locations in Vik i Sogn, Norway",
-                    align: "left",
+                    text: "15th & 16th of April, 2020 at two locations in Vik i Sogn, Norway", 
+                    align: "left", 
                 ),
                 xAxis: [ 
                   XAxisOptions( 
@@ -85,20 +86,21 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ],
                 tooltip: TooltipOptions(
-                    valueSuffix: " m/s",
+                    valueSuffix: " m/s", 
                 ),
                 plotOptions: HighchartsPlotOptions(
                   spline: SplineSeriesOptions(
-                      lineWidth: 4,
+                      lineWidth: 4, 
                     states: Generic(
                     ),
-                      pointInterval: 3600000,
-                      pointStart: 1586908800000,
+                      pointInterval: 3600000, 
+                      pointStart: 1586908800000, 
                   ),
                 ),
                 series: [ 
-                  SplineSeries(
-                      name: "Hestavollane",
+                  SplineSeries( 
+                //options: SplineSeriesOptions()
+                      name: "Hestavollane", 
                     data: [ 
                       [5.4], 
                       [5.2], 
@@ -127,8 +129,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       [4.2], 
                     ],
                   ),
-                  SplineSeries(
-                      name: "Vik",
+                  SplineSeries( 
+                //options: SplineSeriesOptions()
+                      name: "Vik", 
                     data: [ 
                       [0.2], 
                       [0.1], 

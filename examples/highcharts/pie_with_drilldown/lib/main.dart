@@ -64,20 +64,23 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             HighchartsChart(
               HighchartsOptions(
+                chart: ChartOptions(
+                    type: "pie", 
+                ),
                 title: TitleOptions(
-                    text: "Browser market shares. January, 2022",
-                    align: "left",
+                    text: "Browser market shares. January, 2022", 
+                    align: "left", 
                 ),
                 subtitle: SubtitleOptions(
-                    text: "Click the slices to view versions. Source: <a href=\"http://statcounter.com\" target=\"_blank\">statcounter.com</a>",
-                    align: "left",
+                    text: "Click the slices to view versions. Source: <a href=\"http://statcounter.com\" target=\"_blank\">statcounter.com</a>", 
+                    align: "left", 
                 ),
                 accessibility: AccessibilityOptions(
                   announceNewData: AccessibilityAnnounceNewDataOptions(
-                      enabled: true,
+                      enabled: true, 
                   ),
                   point: AccessibilityPointOptions(
-                      valueSuffix: "%",
+                      valueSuffix: "%", 
                   ),
                 ),
                 plotOptions: HighchartsPlotOptions(
@@ -90,13 +93,64 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
                 tooltip: TooltipOptions(
-                    headerFormat: "<span style=\"font-size:11px\">{series.name}</span><br>",
-                    pointFormat: "<span style=\"color:{point.color}\">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>",
+                    headerFormat: "<span style=\"font-size:11px\">{series.name}</span><br>", 
+                    pointFormat: "<span style=\"color:{point.color}\">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>", 
                 ),
                 series: [ 
-                  PieSeries(
-                      name: "Browsers",
+                  PieSeries( 
+                //options: PieSeriesOptions()
+                      name: "Browsers", 
                     data: [ 
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
                     ],
                   ),
                 ],

@@ -66,36 +66,110 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   plotBorderWidth: number(
                   ),
-                    plotShadow: false,
+                    plotShadow: false, 
+                    type: "pie", 
                 ),
                 title: TitleOptions(
-                    text: "Browser market shares in March, 2022",
-                    align: "left",
+                    text: "Browser market shares in March, 2022", 
+                    align: "left", 
                 ),
                 tooltip: TooltipOptions(
-                    pointFormat: "{series.name}: <b>{point.percentage:.1f}%</b>",
+                    pointFormat: "{series.name}: <b>{point.percentage:.1f}%</b>", 
                 ),
                 accessibility: AccessibilityOptions(
                   point: AccessibilityPointOptions(
-                      valueSuffix: "%",
+                      valueSuffix: "%", 
                   ),
                 ),
                 plotOptions: HighchartsPlotOptions(
                   pie: PieSeriesOptions(
-                      allowPointSelect: true,
-                      cursor: "pointer",
+                      allowPointSelect: true, 
+                      cursor: "pointer", 
                     dataLabels: [ 
                       PieDataLabelOptions( 
-                          enabled: false,
+                          enabled: false, 
                       ),
                     ],
-                      showInLegend: true,
+                      showInLegend: true, 
                   ),
                 ),
                 series: [ 
-                  PieSeries(
-                      name: "Brands",
+                  PieSeries( 
+                //options: PieSeriesOptions()
+                      name: "Brands", 
                     data: [ 
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
                     ],
                   ),
                 ],

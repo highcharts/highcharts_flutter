@@ -60,17 +60,18 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ],
                 credits: CreditsOptions(
-                    enabled: false,
+                    enabled: false, 
                 ),
                 series: [ 
-                  LineSeries(
-                      name: "Speed",
+                  LineSeries( 
+                //options: LineSeriesOptions()
+                      name: "Speed", 
                     data: [ 
                       [80], 
                     ],
                     dataLabels: [ 
                       DataLabelOptions( 
-                          format: "<div style=\"text-align:center\"><span style=\"font-size:25px\">{y}</span><br/><span style=\"font-size:12px;opacity:0.4\">km/h</span></div>",
+                          format: "<div style=\"text-align:center\"><span style=\"font-size:25px\">{y}</span><br/><span style=\"font-size:12px;opacity:0.4\">km/h</span></div>", 
                       ),
                     ],
                   ),

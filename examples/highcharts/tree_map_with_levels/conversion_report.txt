@@ -1,46 +1,37 @@
 [
   {
-    "type": "missing_mapping",
-    "path": "series.type",
-    "member": {
-      "name": "type",
-      "type": "string",
-      "optional": true
-    }
-  },
-  {
     "type": "",
     "path": "series",
-    "parentType": "LineSeriesOptions",
-    "memberName": "layoutAlgorithm",
+    "parentType": "TreemapSeriesOptions",
+    "memberName": "type",
     "msg": "The member is not present in the Flutter integration API"
   },
   {
     "type": "",
     "path": "series",
-    "parentType": "LineSeriesOptions",
-    "memberName": "alternateStartingDirection",
+    "parentType": "TreemapSeriesOptions",
+    "memberName": "borderColor",
     "msg": "The member is not present in the Flutter integration API"
-  },
-  {
-    "type": "mixed_type",
-    "path": "series.borderRadius",
-    "msg": "Path is set as a basic type, but flutter wants a BorderRadiusOptionsObject"
-  },
-  {
-    "type": "missing_mapping",
-    "path": "series.dataLabels.style.textOutline",
-    "member": {
-      "name": "textOutline",
-      "type": "string",
-      "optional": true
-    }
   },
   {
     "type": "",
     "path": "series",
-    "parentType": "LineSeriesOptions",
-    "memberName": "levels",
+    "parentType": "TreemapSeriesOptions",
+    "memberName": "borderWidth",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "",
+    "path": "series",
+    "parentType": "TreemapSeriesOptions",
+    "memberName": "dataLabels",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "",
+    "path": "series.levels",
+    "parentType": "TreemapSeriesLevelsOptions",
+    "memberName": "0",
     "msg": "The member is not present in the Flutter integration API"
   },
   {

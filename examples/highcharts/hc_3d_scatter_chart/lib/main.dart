@@ -65,11 +65,12 @@ class _MyHomePageState extends State<MyHomePage> {
             HighchartsChart(
               HighchartsOptions(
                 chart: ChartOptions(
-                    renderTo: "container",
+                    renderTo: "container", 
                   margin: [ 
                     100, 
                   ],
-                    animation: false,
+                    type: "scatter3d", 
+                    animation: false, 
                   options3d: Options(
                     frame: FrameOptions(
                       bottom: FrameSideOptions(
@@ -80,10 +81,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
                 title: TitleOptions(
-                    text: "Draggable box",
+                    text: "Draggable box", 
                 ),
                 subtitle: SubtitleOptions(
-                    text: "Click and drag the plot area to rotate in space",
+                    text: "Click and drag the plot area to rotate in space", 
                 ),
                 plotOptions: HighchartsPlotOptions(
                   scatter: ScatterSeriesOptions(
@@ -99,17 +100,18 @@ class _MyHomePageState extends State<MyHomePage> {
                 ],
                 zAxis: [ 
                   AxisOptions( 
-                      min: 0,
-                      max: 10,
-                      showFirstLabel: false,
+                      min: 0, 
+                      max: 10, 
+                      showFirstLabel: false, 
                   ),
                 ],
                 legend: LegendOptions(
-                    enabled: false,
+                    enabled: false, 
                 ),
                 series: [ 
-                  Scatter3DSeries(
-                      name: "Data",
+                  Scatter3DSeries( 
+                //options: Scatter3DSeriesOptions()
+                      name: "Data", 
                     data: [ 
                       [1,6,5], 
                       [8,7,9], 

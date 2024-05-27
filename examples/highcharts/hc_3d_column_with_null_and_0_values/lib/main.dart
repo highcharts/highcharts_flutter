@@ -60,16 +60,17 @@ class _MyHomePageState extends State<MyHomePage> {
             HighchartsChart(
               HighchartsOptions(
                 chart: ChartOptions(
+                    type: "column", 
                   options3d: Options(
                   ),
                 ),
                 title: TitleOptions(
-                    text: "External trade in goods by country, Norway 2021",
-                    align: "left",
+                    text: "External trade in goods by country, Norway 2021", 
+                    align: "left", 
                 ),
                 subtitle: SubtitleOptions(
-                    text: "Source: <a href=\"https://www.ssb.no/en/statbank/table/08804/\"target=\"_blank\">SSB</a>",
-                    align: "left",
+                    text: "Source: <a href=\"https://www.ssb.no/en/statbank/table/08804/\"target=\"_blank\">SSB</a>", 
+                    align: "left", 
                 ),
                 plotOptions: HighchartsPlotOptions(
                   column: ColumnSeriesOptions(
@@ -84,11 +85,12 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ],
                 tooltip: TooltipOptions(
-                    valueSuffix: " MNOK",
+                    valueSuffix: " MNOK", 
                 ),
                 series: [ 
-                  ColumnSeries(
-                      name: "Total imports",
+                  ColumnSeries( 
+                //options: ColumnSeriesOptions()
+                      name: "Total imports", 
                     data: [ 
                       [16076], 
                       [112688], 
@@ -100,6 +102,41 @@ class _MyHomePageState extends State<MyHomePage> {
                       [95908], 
                       [11596], 
                       [53771], 
+                    [
+                      16076, 
+                    ],
+                    [
+                      112688, 
+                    ],
+                    [
+                      39452, 
+                    ],
+                    [
+                      0, 
+                    ],
+                    [
+                      94352, 
+                    ],
+                    [
+                      30495, 
+                    ],
+                    [
+                      21813, 
+                    ],
+                    [
+                      95908, 
+                    ],
+                    [
+                      11596, 
+                    ],
+                    [
+                      53771, 
+                    ],
+                    [
+                    ],
+                    [
+                      8270, 
+                    ],
                       [8270], 
                     ],
                   ),

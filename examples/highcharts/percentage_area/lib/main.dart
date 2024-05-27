@@ -61,18 +61,21 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             HighchartsChart(
               HighchartsOptions(
+                chart: ChartOptions(
+                    type: "area", 
+                ),
                 title: TitleOptions(
-                    useHTML: true,
-                    text: "Countries/regions with highest Gt CO<sub>2</sub>-emissions",
-                    align: "left",
+                    useHTML: true, 
+                    text: "Countries/regions with highest Gt CO<sub>2</sub>-emissions", 
+                    align: "left", 
                 ),
                 subtitle: SubtitleOptions(
-                    text: "Source: <a href=\"https://energiogklima.no/klimavakten/land-med-hoyest-utslipp/\"target=\"_blank\">Energi og Klima</a>",
-                    align: "left",
+                    text: "Source: <a href=\"https://energiogklima.no/klimavakten/land-med-hoyest-utslipp/\"target=\"_blank\">Energi og Klima</a>", 
+                    align: "left", 
                 ),
                 accessibility: AccessibilityOptions(
                   point: AccessibilityPointOptions(
-                      valueDescriptionFormat: "{index}. {point.category}, {point.y:,.1f} billions, {point.percentage:.1f}%.",
+                      valueDescriptionFormat: "{index}. {point.category}, {point.y:,.1f} billions, {point.percentage:.1f}%.", 
                   ),
                 ),
                 yAxis: [ 
@@ -80,20 +83,21 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ],
                 tooltip: TooltipOptions(
-                    pointFormat: "<span style=\"color:{series.color}\">{series.name}</span>: <b>{point.percentage:.1f}%</b> ({point.y:,.1f} billion Gt)<br/>",
-                    split: true,
+                    pointFormat: "<span style=\"color:{series.color}\">{series.name}</span>: <b>{point.percentage:.1f}%</b> ({point.y:,.1f} billion Gt)<br/>", 
+                    split: true, 
                 ),
                 plotOptions: HighchartsPlotOptions(
                   series: SeriesOptions(
-                      pointStart: 1990,
+                      pointStart: 1990, 
                   ),
                   area: AreaSeriesOptions(
-                      stacking: "percent",
+                      stacking: "percent", 
                   ),
                 ),
                 series: [ 
-                  AreaSeries(
-                      name: "China",
+                  AreaSeries( 
+                //options: AreaSeriesOptions()
+                      name: "China", 
                     data: [ 
                       [2.5], 
                       [2.6], 
@@ -129,8 +133,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       [10.9], 
                     ],
                   ),
-                  AreaSeries(
-                      name: "USA",
+                  AreaSeries( 
+                //options: AreaSeriesOptions()
+                      name: "USA", 
                     data: [ 
                       [5.1], 
                       [5.1], 
@@ -166,8 +171,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       [5], 
                     ],
                   ),
-                  AreaSeries(
-                      name: "EU",
+                  AreaSeries( 
+                //options: AreaSeriesOptions()
+                      name: "EU", 
                     data: [ 
                       [3.9], 
                       [3.8], 
@@ -203,8 +209,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       [2.7], 
                     ],
                   ),
-                  AreaSeries(
-                      name: "India",
+                  AreaSeries( 
+                //options: AreaSeriesOptions()
+                      name: "India", 
                     data: [ 
                       [0.6], 
                       [0.6], 

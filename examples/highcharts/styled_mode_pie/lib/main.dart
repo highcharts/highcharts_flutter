@@ -8,8 +8,8 @@ import 'package:highcharts_flutter/Highcharts.dart';
 import 'package:highcharts_flutter/types/ChartOptions.dart';
 import 'package:highcharts_flutter/types/TitleOptions.dart';
 import 'package:highcharts_flutter/types/XAxisOptions.dart';
-import 'package:highcharts_flutter/types/LineSeriesOptions.dart';
-import 'package:highcharts_flutter/types/LineSeries.dart';
+import 'package:highcharts_flutter/types/PieSeriesOptions.dart';
+import 'package:highcharts_flutter/types/PieSeries.dart';
 import 'package:highcharts_flutter/types/YAxisOptions.dart';
 
 void main() {
@@ -56,22 +56,386 @@ class _MyHomePageState extends State<MyHomePage> {
             HighchartsChart(
               HighchartsOptions(
                 chart: ChartOptions(
-                    styledMode: true,
+                    styledMode: true, 
                 ),
                 title: TitleOptions(
-                    text: "Mobile vendor market share, 2021",
-                    align: "left",
+                    text: "Mobile vendor market share, 2021", 
+                    align: "left", 
                 ),
                 xAxis: [ 
                   XAxisOptions( 
                   ),
                 ],
                 series: [ 
-                  LineSeries(
-                      allowPointSelect: true,
+                  PieSeries( 
+                //options: PieSeriesOptions()
+                      allowPointSelect: true, 
                     data: [ 
+                    [
+                      "Samsung", 27.79, true, true
                     ],
-                      showInLegend: true,
+                    [
+                      "Apple", 27.34, false
+                    ],
+                    [
+                      "Xiaomi", 10.87, false
+                    ],
+                    [
+                      "Huawei", 8.48, false
+                    ],
+                    [
+                      "Oppo", 5.38, false
+                    ],
+                    [
+                      "Vivo", 4.17, false
+                    ],
+                    [
+                      "Realme", 2.57, false
+                    ],
+                    [
+                      "Unknown", 2.45, false
+                    ],
+                    [
+                      "Motorola", 2.22, false
+                    ],
+                    [
+                      "LG", 1.53, false
+                    ],
+                    [
+                      "Other", 7.2, false
+                    ],
+                    [
+                      "Samsung", 27.79, true, true
+                    ],
+                    [
+                      "Apple", 27.34, false
+                    ],
+                    [
+                      "Xiaomi", 10.87, false
+                    ],
+                    [
+                      "Huawei", 8.48, false
+                    ],
+                    [
+                      "Oppo", 5.38, false
+                    ],
+                    [
+                      "Vivo", 4.17, false
+                    ],
+                    [
+                      "Realme", 2.57, false
+                    ],
+                    [
+                      "Unknown", 2.45, false
+                    ],
+                    [
+                      "Motorola", 2.22, false
+                    ],
+                    [
+                      "LG", 1.53, false
+                    ],
+                    [
+                      "Other", 7.2, false
+                    ],
+                    [
+                      "Samsung", 27.79, true, true
+                    ],
+                    [
+                      "Apple", 27.34, false
+                    ],
+                    [
+                      "Xiaomi", 10.87, false
+                    ],
+                    [
+                      "Huawei", 8.48, false
+                    ],
+                    [
+                      "Oppo", 5.38, false
+                    ],
+                    [
+                      "Vivo", 4.17, false
+                    ],
+                    [
+                      "Realme", 2.57, false
+                    ],
+                    [
+                      "Unknown", 2.45, false
+                    ],
+                    [
+                      "Motorola", 2.22, false
+                    ],
+                    [
+                      "LG", 1.53, false
+                    ],
+                    [
+                      "Other", 7.2, false
+                    ],
+                    [
+                      "Samsung", 27.79, true, true
+                    ],
+                    [
+                      "Apple", 27.34, false
+                    ],
+                    [
+                      "Xiaomi", 10.87, false
+                    ],
+                    [
+                      "Huawei", 8.48, false
+                    ],
+                    [
+                      "Oppo", 5.38, false
+                    ],
+                    [
+                      "Vivo", 4.17, false
+                    ],
+                    [
+                      "Realme", 2.57, false
+                    ],
+                    [
+                      "Unknown", 2.45, false
+                    ],
+                    [
+                      "Motorola", 2.22, false
+                    ],
+                    [
+                      "LG", 1.53, false
+                    ],
+                    [
+                      "Other", 7.2, false
+                    ],
+                    [
+                      "Samsung", 27.79, true, true
+                    ],
+                    [
+                      "Apple", 27.34, false
+                    ],
+                    [
+                      "Xiaomi", 10.87, false
+                    ],
+                    [
+                      "Huawei", 8.48, false
+                    ],
+                    [
+                      "Oppo", 5.38, false
+                    ],
+                    [
+                      "Vivo", 4.17, false
+                    ],
+                    [
+                      "Realme", 2.57, false
+                    ],
+                    [
+                      "Unknown", 2.45, false
+                    ],
+                    [
+                      "Motorola", 2.22, false
+                    ],
+                    [
+                      "LG", 1.53, false
+                    ],
+                    [
+                      "Other", 7.2, false
+                    ],
+                    [
+                      "Samsung", 27.79, true, true
+                    ],
+                    [
+                      "Apple", 27.34, false
+                    ],
+                    [
+                      "Xiaomi", 10.87, false
+                    ],
+                    [
+                      "Huawei", 8.48, false
+                    ],
+                    [
+                      "Oppo", 5.38, false
+                    ],
+                    [
+                      "Vivo", 4.17, false
+                    ],
+                    [
+                      "Realme", 2.57, false
+                    ],
+                    [
+                      "Unknown", 2.45, false
+                    ],
+                    [
+                      "Motorola", 2.22, false
+                    ],
+                    [
+                      "LG", 1.53, false
+                    ],
+                    [
+                      "Other", 7.2, false
+                    ],
+                    [
+                      "Samsung", 27.79, true, true
+                    ],
+                    [
+                      "Apple", 27.34, false
+                    ],
+                    [
+                      "Xiaomi", 10.87, false
+                    ],
+                    [
+                      "Huawei", 8.48, false
+                    ],
+                    [
+                      "Oppo", 5.38, false
+                    ],
+                    [
+                      "Vivo", 4.17, false
+                    ],
+                    [
+                      "Realme", 2.57, false
+                    ],
+                    [
+                      "Unknown", 2.45, false
+                    ],
+                    [
+                      "Motorola", 2.22, false
+                    ],
+                    [
+                      "LG", 1.53, false
+                    ],
+                    [
+                      "Other", 7.2, false
+                    ],
+                    [
+                      "Samsung", 27.79, true, true
+                    ],
+                    [
+                      "Apple", 27.34, false
+                    ],
+                    [
+                      "Xiaomi", 10.87, false
+                    ],
+                    [
+                      "Huawei", 8.48, false
+                    ],
+                    [
+                      "Oppo", 5.38, false
+                    ],
+                    [
+                      "Vivo", 4.17, false
+                    ],
+                    [
+                      "Realme", 2.57, false
+                    ],
+                    [
+                      "Unknown", 2.45, false
+                    ],
+                    [
+                      "Motorola", 2.22, false
+                    ],
+                    [
+                      "LG", 1.53, false
+                    ],
+                    [
+                      "Other", 7.2, false
+                    ],
+                    [
+                      "Samsung", 27.79, true, true
+                    ],
+                    [
+                      "Apple", 27.34, false
+                    ],
+                    [
+                      "Xiaomi", 10.87, false
+                    ],
+                    [
+                      "Huawei", 8.48, false
+                    ],
+                    [
+                      "Oppo", 5.38, false
+                    ],
+                    [
+                      "Vivo", 4.17, false
+                    ],
+                    [
+                      "Realme", 2.57, false
+                    ],
+                    [
+                      "Unknown", 2.45, false
+                    ],
+                    [
+                      "Motorola", 2.22, false
+                    ],
+                    [
+                      "LG", 1.53, false
+                    ],
+                    [
+                      "Other", 7.2, false
+                    ],
+                    [
+                      "Samsung", 27.79, true, true
+                    ],
+                    [
+                      "Apple", 27.34, false
+                    ],
+                    [
+                      "Xiaomi", 10.87, false
+                    ],
+                    [
+                      "Huawei", 8.48, false
+                    ],
+                    [
+                      "Oppo", 5.38, false
+                    ],
+                    [
+                      "Vivo", 4.17, false
+                    ],
+                    [
+                      "Realme", 2.57, false
+                    ],
+                    [
+                      "Unknown", 2.45, false
+                    ],
+                    [
+                      "Motorola", 2.22, false
+                    ],
+                    [
+                      "LG", 1.53, false
+                    ],
+                    [
+                      "Other", 7.2, false
+                    ],
+                    [
+                      "Samsung", 27.79, true, true
+                    ],
+                    [
+                      "Apple", 27.34, false
+                    ],
+                    [
+                      "Xiaomi", 10.87, false
+                    ],
+                    [
+                      "Huawei", 8.48, false
+                    ],
+                    [
+                      "Oppo", 5.38, false
+                    ],
+                    [
+                      "Vivo", 4.17, false
+                    ],
+                    [
+                      "Realme", 2.57, false
+                    ],
+                    [
+                      "Unknown", 2.45, false
+                    ],
+                    [
+                      "Motorola", 2.22, false
+                    ],
+                    [
+                      "LG", 1.53, false
+                    ],
+                    [
+                      "Other", 7.2, false
+                    ],
+                    ],
+                      showInLegend: true, 
                   ),
                 ],
                 yAxis: [ 

@@ -59,34 +59,38 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             HighchartsChart(
               HighchartsOptions(
+                chart: ChartOptions(
+                    type: "area", 
+                ),
                 title: TitleOptions(
-                    text: "Greenhouse gases from Norwegian economic activity",
-                    align: "left",
+                    text: "Greenhouse gases from Norwegian economic activity", 
+                    align: "left", 
                 ),
                 subtitle: SubtitleOptions(
-                    text: "Source: <a href=\"https://www.ssb.no/en/statbank/table/09288/\"target=\"_blank\">SSB</a>",
-                    align: "left",
+                    text: "Source: <a href=\"https://www.ssb.no/en/statbank/table/09288/\"target=\"_blank\">SSB</a>", 
+                    align: "left", 
                 ),
                 yAxis: [ 
                   YAxisOptions( 
                   ),
                 ],
                 tooltip: TooltipOptions(
-                    shared: true,
-                    headerFormat: "<span style=\"font-size:12px\"><b>{point.key}</b></span><br>",
+                    shared: true, 
+                    headerFormat: "<span style=\"font-size:12px\"><b>{point.key}</b></span><br>", 
                 ),
                 plotOptions: HighchartsPlotOptions(
                   series: SeriesOptions(
-                      pointStart: 2012,
+                      pointStart: 2012, 
                   ),
                   area: AreaSeriesOptions(
-                      stacking: "normal",
-                      lineWidth: 1,
+                      stacking: "normal", 
+                      lineWidth: 1, 
                   ),
                 ),
                 series: [ 
-                  AreaSeries(
-                      name: "Ocean transport",
+                  AreaSeries( 
+                //options: AreaSeriesOptions()
+                      name: "Ocean transport", 
                     data: [ 
                       [13234], 
                       [12729], 
@@ -99,8 +103,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       [16214], 
                     ],
                   ),
-                  AreaSeries(
-                      name: "Households",
+                  AreaSeries( 
+                //options: AreaSeriesOptions()
+                      name: "Households", 
                     data: [ 
                       [6685], 
                       [6535], 
@@ -113,8 +118,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       [5039], 
                     ],
                   ),
-                  AreaSeries(
-                      name: "Agriculture and hunting",
+                  AreaSeries( 
+                //options: AreaSeriesOptions()
+                      name: "Agriculture and hunting", 
                     data: [ 
                       [4752], 
                       [4820], 
@@ -127,8 +133,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       [4913], 
                     ],
                   ),
-                  AreaSeries(
-                      name: "Air transport",
+                  AreaSeries( 
+                //options: AreaSeriesOptions()
+                      name: "Air transport", 
                     data: [ 
                       [3164], 
                       [3541], 
@@ -141,8 +148,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       [1550], 
                     ],
                   ),
-                  AreaSeries(
-                      name: "Construction",
+                  AreaSeries( 
+                //options: AreaSeriesOptions()
+                      name: "Construction", 
                     data: [ 
                       [2019], 
                       [2189], 

@@ -10,6 +10,8 @@ import 'package:highcharts_flutter/types/TitleOptions.dart';
 import 'package:highcharts_flutter/types/TooltipOptions.dart';
 import 'package:highcharts_flutter/types/XAxisOptions.dart';
 import 'package:highcharts_flutter/types/YAxisOptions.dart';
+import 'package:highcharts_flutter/types/ParetoSeriesOptions.dart';
+import 'package:highcharts_flutter/types/ParetoSeries.dart';
 import 'package:highcharts_flutter/types/ColumnSeriesOptions.dart';
 import 'package:highcharts_flutter/types/ColumnSeries.dart';
 
@@ -57,13 +59,14 @@ class _MyHomePageState extends State<MyHomePage> {
             HighchartsChart(
               HighchartsOptions(
                 chart: ChartOptions(
-                    renderTo: "container",
+                    renderTo: "container", 
+                    type: "column", 
                 ),
                 title: TitleOptions(
-                    text: "Restaurants Complaints",
+                    text: "Restaurants Complaints", 
                 ),
                 tooltip: TooltipOptions(
-                    shared: true,
+                    shared: true, 
                 ),
                 xAxis: [ 
                   XAxisOptions( 
@@ -74,13 +77,15 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ],
                 series: [ 
-                  ColumnSeries(
-                      name: "Pareto",
-                      zIndex: 10,
+                  ParetoSeries( 
+                //options: ParetoSeriesOptions()
+                      name: "Pareto", 
+                      zIndex: 10, 
                   ),
-                  ColumnSeries(
-                      name: "Complaints",
-                      zIndex: 2,
+                  ColumnSeries( 
+                //options: ColumnSeriesOptions()
+                      name: "Complaints", 
+                      zIndex: 2, 
                     data: [ 
                       [755], 
                       [222], 

@@ -57,10 +57,10 @@ class _MyHomePageState extends State<MyHomePage> {
             HighchartsChart(
               HighchartsOptions(
                 chart: ChartOptions(
-                    marginTop: 40,
+                    marginTop: 40, 
                 ),
                 title: TitleOptions(
-                    text: "2017 YTD",
+                    text: "2017 YTD", 
                 ),
                 xAxis: [ 
                   XAxisOptions( 
@@ -71,13 +71,16 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ],
                 series: [ 
-                  LineSeries(
+                  LineSeries( 
+                //options: LineSeriesOptions()
                     data: [ 
+                    [
+                    ],
                     ],
                   ),
                 ],
                 tooltip: TooltipOptions(
-                    pointFormat: "<b>{point.y}</b> (with target at {point.target})",
+                    pointFormat: "<b>{point.y}</b> (with target at {point.target})", 
                 ),
               )
             )

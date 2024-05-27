@@ -60,13 +60,16 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             HighchartsChart(
               HighchartsOptions(
+                chart: ChartOptions(
+                    type: "spline", 
+                ),
                 title: TitleOptions(
-                    text: "Snow depth at Vikjafjellet, Norway",
-                    align: "left",
+                    text: "Snow depth at Vikjafjellet, Norway", 
+                    align: "left", 
                 ),
                 subtitle: SubtitleOptions(
-                    text: "Irregular time data in Highcharts JS",
-                    align: "left",
+                    text: "Irregular time data in Highcharts JS", 
+                    align: "left", 
                 ),
                 xAxis: [ 
                   XAxisOptions( 
@@ -77,25 +80,26 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ],
                 tooltip: TooltipOptions(
-                    headerFormat: "<b>{series.name}</b><br>",
-                    pointFormat: "{point.x:%e. %b}: {point.y:.2f} m",
+                    headerFormat: "<b>{series.name}</b><br>", 
+                    pointFormat: "{point.x:%e. %b}: {point.y:.2f} m", 
                 ),
                 plotOptions: HighchartsPlotOptions(
                   series: SeriesOptions(
                     marker: PointMarkerOptions(
-                        symbol: "circle",
-                        fillColor: "#FFFFFF",
-                        enabled: true,
-                        radius: 2.5,
-                        lineWidth: 1,
+                        symbol: "circle", 
+                        fillColor: "#FFFFFF", 
+                        enabled: true, 
+                        radius: 2.5, 
+                        lineWidth: 1, 
                       lineColor: string(
                       ),
                     ),
                   ),
                 ),
                 series: [ 
-                  SplineSeries(
-                      name: "Winter 2019-2020",
+                  SplineSeries( 
+                //options: SplineSeriesOptions()
+                      name: "Winter 2019-2020", 
                     data: [ 
                       [25574400000,0], 
                       [25833600000,0.12], 
@@ -175,8 +179,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       [46483200000,0], 
                     ],
                   ),
-                  SplineSeries(
-                      name: "Winter 2020-2021",
+                  SplineSeries( 
+                //options: SplineSeriesOptions()
+                      name: "Winter 2020-2021", 
                     data: [ 
                       [27388800000,0], 
                       [29289600000,0.35], 
@@ -222,8 +227,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       [44064000000,0], 
                     ],
                   ),
-                  SplineSeries(
-                      name: "Winter 2021-2022",
+                  SplineSeries( 
+                //options: SplineSeriesOptions()
+                      name: "Winter 2021-2022", 
                     data: [ 
                       [26611200000,0], 
                       [27216000000,0.1], 

@@ -66,19 +66,19 @@ class _MyHomePageState extends State<MyHomePage> {
               HighchartsOptions(
                 chart: ChartOptions(
                   scrollablePlotArea: ScrollablePlotAreaOptions(
-                      minWidth: 700,
+                      minWidth: 700, 
                   ),
                 ),
                 data: DataOptions(
-                    csvURL: "https://www.highcharts.com/samples/data/analytics.csv",
+                    csvURL: "https://www.highcharts.com/samples/data/analytics.csv", 
                 ),
                 title: TitleOptions(
-                    text: "Daily sessions at www.highcharts.com",
-                    align: "left",
+                    text: "Daily sessions at www.highcharts.com", 
+                    align: "left", 
                 ),
                 subtitle: SubtitleOptions(
-                    text: "Source: Google Analytics",
-                    align: "left",
+                    text: "Source: Google Analytics", 
+                    align: "left", 
                 ),
                 xAxis: [ 
                   XAxisOptions( 
@@ -89,30 +89,32 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ],
                 legend: LegendOptions(
-                    align: "left",
-                    verticalAlign: "top",
-                    borderWidth: 0,
+                    align: "left", 
+                    verticalAlign: "top", 
+                    borderWidth: 0, 
                 ),
                 tooltip: TooltipOptions(
-                    shared: true,
-                    crosshairs: true,
+                    shared: true, 
+                    crosshairs: true, 
                 ),
                 plotOptions: HighchartsPlotOptions(
                   series: SeriesOptions(
-                      cursor: "pointer",
-                      className: "popup-on-click",
+                      cursor: "pointer", 
+                      className: "popup-on-click", 
                     marker: PointMarkerOptions(
-                        lineWidth: 1,
+                        lineWidth: 1, 
                     ),
                   ),
                 ),
                 series: [ 
-                  LineSeries(
-                      name: "All sessions",
-                      lineWidth: 4,
+                  LineSeries( 
+                //options: LineSeriesOptions()
+                      name: "All sessions", 
+                      lineWidth: 4, 
                   ),
-                  LineSeries(
-                      name: "New users",
+                  LineSeries( 
+                //options: LineSeriesOptions()
+                      name: "New users", 
                   ),
                 ],
               )

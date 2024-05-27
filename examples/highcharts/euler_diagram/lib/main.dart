@@ -7,8 +7,9 @@ import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/Highcharts.dart';
 import 'package:highcharts_flutter/types/AccessibilityOptions.dart';
 import 'package:highcharts_flutter/types/AccessibilityPointOptions.dart';
-import 'package:highcharts_flutter/types/LineSeriesOptions.dart';
-import 'package:highcharts_flutter/types/LineSeries.dart';
+import 'package:highcharts_flutter/types/VennSeriesOptions.dart';
+import 'package:highcharts_flutter/types/VennSeries.dart';
+import 'package:highcharts_flutter/types/VennPointOptions.dart';
 import 'package:highcharts_flutter/types/TooltipOptions.dart';
 import 'package:highcharts_flutter/types/TitleOptions.dart';
 import 'package:highcharts_flutter/types/XAxisOptions.dart';
@@ -59,22 +60,26 @@ class _MyHomePageState extends State<MyHomePage> {
               HighchartsOptions(
                 accessibility: AccessibilityOptions(
                   point: AccessibilityPointOptions(
-                      valueDescriptionFormat: "{point.name}: {point.longDescription}.",
+                      valueDescriptionFormat: "{point.name}: {point.longDescription}.", 
                   ),
                 ),
                 series: [ 
-                  LineSeries(
+                  VennSeries( 
+                //options: VennSeriesOptions()
                     data: [ 
+                    [
+                      false, false, false
+                    ],
                     ],
                   ),
                 ],
                 tooltip: TooltipOptions(
-                    headerFormat: "<span style=\"color:{point.color}\">•</span> <span style=\"font-size: 14px\"> {point.point.name}</span><br/>",
-                    pointFormat: "{point.longDescription}<br><span style=\"font-size: 10px\">Source: Wikipedia</span>",
+                    headerFormat: "<span style=\"color:{point.color}\">•</span> <span style=\"font-size: 14px\"> {point.point.name}</span><br/>", 
+                    pointFormat: "{point.longDescription}<br><span style=\"font-size: 10px\">Source: Wikipedia</span>", 
                 ),
                 title: TitleOptions(
-                    text: "Relationship between Euler and Venn diagrams",
-                    align: "left",
+                    text: "Relationship between Euler and Venn diagrams", 
+                    align: "left", 
                 ),
                 xAxis: [ 
                   XAxisOptions( 

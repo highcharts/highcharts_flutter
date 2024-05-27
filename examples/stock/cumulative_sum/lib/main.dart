@@ -60,37 +60,38 @@ class _MyHomePageState extends State<MyHomePage> {
             StockChart(
               StockOptions(
                 title: TitleOptions(
-                    text: "Cumulative Sum",
-                    align: "left",
+                    text: "Cumulative Sum", 
+                    align: "left", 
                 ),
                 subtitle: SubtitleOptions(
-                    text: "Displays the sum of all the previous values and the current value (only within visible range)",
-                    align: "left",
+                    text: "Displays the sum of all the previous values and the current value (only within visible range)", 
+                    align: "left", 
                 ),
                 plotOptions: StockPlotOptions(
                   series: SeriesOptions(
-                      cumulative: true,
-                      pointStart: 1672531200000,
-                      pointIntervalUnit: "day",
+                      cumulative: true, 
+                      pointStart: 1672531200000, 
+                      pointIntervalUnit: "day", 
                   ),
                 ),
                 rangeSelector: RangeSelectorOptions(
-                    enabled: false,
+                    enabled: false, 
                 ),
                 tooltip: TooltipOptions(
-                    pointFormat: "<span style=\"color:{series.color}\">{series.name}</span>: <b>{point.y}</b> (\${point.cumulativeSum})<br/>",
-                    changeDecimals: 2,
-                    valueDecimals: 2,
-                    valuePrefix: "\$",
-                    valueSuffix: " USD",
+                    pointFormat: "<span style=\"color:{series.color}\">{series.name}</span>: <b>{point.y}</b> (\${point.cumulativeSum})<br/>", 
+                    changeDecimals: 2, 
+                    valueDecimals: 2, 
+                    valuePrefix: "\$", 
+                    valueSuffix: " USD", 
                 ),
                 xAxis: [ 
                   XAxisOptions( 
                   ),
                 ],
                 series: [ 
-                  LineSeries(
-                      name: "The Local Bakery",
+                  LineSeries( 
+                //options: LineSeriesOptions()
+                      name: "The Local Bakery", 
                     data: [ 
                       [678.78], 
                       [545.33], 
@@ -104,8 +105,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       [470.89], 
                     ],
                   ),
-                  LineSeries(
-                      name: "The Local Fishmarket",
+                  LineSeries( 
+                //options: LineSeriesOptions()
+                      name: "The Local Fishmarket", 
                     data: [ 
                       [1340.72], 
                       [982.43], 

@@ -57,9 +57,12 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             HighchartsChart(
               HighchartsOptions(
+                chart: ChartOptions(
+                    type: "column", 
+                ),
                 title: TitleOptions(
-                    text: "Olympic Games all-time medal table, grouped by continent",
-                    align: "left",
+                    text: "Olympic Games all-time medal table, grouped by continent", 
+                    align: "left", 
                 ),
                 xAxis: [ 
                   XAxisOptions( 
@@ -70,40 +73,44 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ],
                 tooltip: TooltipOptions(
-                    format: "<b>{key}</b><br/>{series.name}: {y}<br/>Total: {point.stackTotal}",
+                    format: "<b>{key}</b><br/>{series.name}: {y}<br/>Total: {point.stackTotal}", 
                 ),
                 plotOptions: HighchartsPlotOptions(
                   column: ColumnSeriesOptions(
-                      stacking: "normal",
+                      stacking: "normal", 
                   ),
                 ),
                 series: [ 
-                  ColumnSeries(
-                      name: "Norway",
+                  ColumnSeries( 
+                //options: ColumnSeriesOptions()
+                      name: "Norway", 
                     data: [ 
                       [148], 
                       [133], 
                       [124], 
                     ],
                   ),
-                  ColumnSeries(
-                      name: "Germany",
+                  ColumnSeries( 
+                //options: ColumnSeriesOptions()
+                      name: "Germany", 
                     data: [ 
                       [102], 
                       [98], 
                       [65], 
                     ],
                   ),
-                  ColumnSeries(
-                      name: "United States",
+                  ColumnSeries( 
+                //options: ColumnSeriesOptions()
+                      name: "United States", 
                     data: [ 
                       [113], 
                       [122], 
                       [95], 
                     ],
                   ),
-                  ColumnSeries(
-                      name: "Canada",
+                  ColumnSeries( 
+                //options: ColumnSeriesOptions()
+                      name: "Canada", 
                     data: [ 
                       [77], 
                       [72], 

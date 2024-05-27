@@ -57,18 +57,18 @@ class _MyHomePageState extends State<MyHomePage> {
             HighchartsChart(
               HighchartsOptions(
                 chart: ChartOptions(
-                    backgroundColor: "white",
+                    backgroundColor: "white", 
                   style: CSSObject(
                   ),
                 ),
                 title: TitleOptions(
-                    text: "Highcharts export server overview",
+                    text: "Highcharts export server overview", 
                   style: CSSObject(
                   ),
-                    align: "left",
+                    align: "left", 
                 ),
                 accessibility: AccessibilityOptions(
-                    typeDescription: "Flowchart",
+                    typeDescription: "Flowchart", 
                 ),
                 xAxis: [ 
                   XAxisOptions( 

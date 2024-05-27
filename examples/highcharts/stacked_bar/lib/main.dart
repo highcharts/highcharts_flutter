@@ -59,8 +59,11 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             HighchartsChart(
               HighchartsOptions(
+                chart: ChartOptions(
+                    type: "bar", 
+                ),
                 title: TitleOptions(
-                    text: "UEFA CL top scorers by season",
+                    text: "UEFA CL top scorers by season", 
                 ),
                 xAxis: [ 
                   XAxisOptions( 
@@ -71,21 +74,22 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ],
                 legend: LegendOptions(
-                    reversed: true,
+                    reversed: true, 
                 ),
                 plotOptions: HighchartsPlotOptions(
                   series: SeriesOptions(
-                      stacking: "normal",
+                      stacking: "normal", 
                     dataLabels: [ 
                       DataLabelOptions( 
-                          enabled: true,
+                          enabled: true, 
                       ),
                     ],
                   ),
                 ),
                 series: [ 
-                  BarSeries(
-                      name: "Cristiano Ronaldo",
+                  BarSeries( 
+                //options: BarSeriesOptions()
+                      name: "Cristiano Ronaldo", 
                     data: [ 
                       [4], 
                       [4], 
@@ -94,8 +98,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       [12], 
                     ],
                   ),
-                  BarSeries(
-                      name: "Lionel Messi",
+                  BarSeries( 
+                //options: BarSeriesOptions()
+                      name: "Lionel Messi", 
                     data: [ 
                       [5], 
                       [3], 
@@ -104,8 +109,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       [11], 
                     ],
                   ),
-                  BarSeries(
-                      name: "Robert Lewandowski",
+                  BarSeries( 
+                //options: BarSeriesOptions()
+                      name: "Robert Lewandowski", 
                     data: [ 
                       [5], 
                       [15], 

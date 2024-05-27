@@ -12,9 +12,114 @@
   },
   {
     "type": "",
-    "path": "series",
-    "parentType": "LineSeriesOptions",
-    "memberName": "nodes",
+    "path": "series.nodes",
+    "parentType": "SankeySeriesNodeOptions",
+    "memberName": "0",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "",
+    "path": "series.nodes",
+    "parentType": "SankeySeriesNodeOptions",
+    "memberName": "1",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "",
+    "path": "series.nodes",
+    "parentType": "SankeySeriesNodeOptions",
+    "memberName": "2",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "",
+    "path": "series.nodes",
+    "parentType": "SankeySeriesNodeOptions",
+    "memberName": "3",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "",
+    "path": "series.nodes",
+    "parentType": "SankeySeriesNodeOptions",
+    "memberName": "4",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "",
+    "path": "series.nodes",
+    "parentType": "SankeySeriesNodeOptions",
+    "memberName": "5",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "",
+    "path": "series.nodes",
+    "parentType": "SankeySeriesNodeOptions",
+    "memberName": "6",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "",
+    "path": "series.nodes",
+    "parentType": "SankeySeriesNodeOptions",
+    "memberName": "7",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "",
+    "path": "series.nodes",
+    "parentType": "SankeySeriesNodeOptions",
+    "memberName": "8",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "",
+    "path": "series.nodes",
+    "parentType": "SankeySeriesNodeOptions",
+    "memberName": "9",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "",
+    "path": "series.nodes",
+    "parentType": "SankeySeriesNodeOptions",
+    "memberName": "10",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "",
+    "path": "series.nodes",
+    "parentType": "SankeySeriesNodeOptions",
+    "memberName": "11",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "",
+    "path": "series.nodes",
+    "parentType": "SankeySeriesNodeOptions",
+    "memberName": "12",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "",
+    "path": "series.nodes",
+    "parentType": "SankeySeriesNodeOptions",
+    "memberName": "13",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "",
+    "path": "series.nodes",
+    "parentType": "SankeySeriesNodeOptions",
+    "memberName": "14",
+    "msg": "The member is not present in the Flutter integration API"
+  },
+  {
+    "type": "",
+    "path": "series.nodes",
+    "parentType": "SankeySeriesNodeOptions",
+    "memberName": "15",
     "msg": "The member is not present in the Flutter integration API"
   },
   {

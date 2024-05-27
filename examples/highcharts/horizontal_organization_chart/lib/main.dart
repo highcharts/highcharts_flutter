@@ -13,8 +13,10 @@ import 'package:highcharts_flutter/types/HighchartsPlotOptions.dart';
 import 'package:highcharts_flutter/types/SeriesOptions.dart';
 import 'package:highcharts_flutter/types/AccessibilityOptions.dart';
 import 'package:highcharts_flutter/types/AccessibilityPointOptions.dart';
-import 'package:highcharts_flutter/types/LineSeriesOptions.dart';
-import 'package:highcharts_flutter/types/LineSeries.dart';
+import 'package:highcharts_flutter/types/OrganizationSeriesOptions.dart';
+import 'package:highcharts_flutter/types/OrganizationSeries.dart';
+import 'package:highcharts_flutter/types/OrganizationSeriesLevelOptions.dart';
+import 'package:highcharts_flutter/types/OrganizationSeriesNodeOptions.dart';
 import 'package:highcharts_flutter/types/TooltipOptions.dart';
 import 'package:highcharts_flutter/types/CSSObject.dart';
 import 'package:highcharts_flutter/types/ExportingOptions.dart';
@@ -65,14 +67,14 @@ class _MyHomePageState extends State<MyHomePage> {
             HighchartsChart(
               HighchartsOptions(
                 chart: ChartOptions(
-                    height: 600,
-                    inverted: false,
+                    height: "600", 
+                    inverted: false, 
                 ),
                 title: TitleOptions(
-                    text: "Carnivora Phylogeny",
+                    text: "Carnivora Phylogeny", 
                 ),
                 subtitle: SubtitleOptions(
-                    text: "Tracing the Evolutionary Relationship of Carnivores",
+                    text: "Tracing the Evolutionary Relationship of Carnivores", 
                 ),
                 plotOptions: HighchartsPlotOptions(
                   series: SeriesOptions(
@@ -80,28 +82,469 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 accessibility: AccessibilityOptions(
                   point: AccessibilityPointOptions(
-                      descriptionFormat: "{toNode.name} {#if (eq toNode.level 1 )} is a distinct family within the order of {fromNode.id}. {toNode.custom.info}{/if}{#if (eq toNode.level 2 )} is a genus within the {fromNode.id}. {toNode.custom.info} {/if}{#if (eq toNode.level 3 )} is a species within the {fromNode.id}. {toNode.custom.info} {/if}",
+                      descriptionFormat: "{toNode.name} {#if (eq toNode.level 1 )} is a distinct family within the order of {fromNode.id}. {toNode.custom.info}{/if}{#if (eq toNode.level 2 )} is a genus within the {fromNode.id}. {toNode.custom.info} {/if}{#if (eq toNode.level 3 )} is a species within the {fromNode.id}. {toNode.custom.info} {/if}", 
                   ),
                 ),
                 series: [ 
-                  LineSeries(
-                      name: "Carnivora Phyologeny",
+                  OrganizationSeries( 
+                //options: OrganizationSeriesOptions()
+                      name: "Carnivora Phyologeny", 
                     data: [ 
+                    [
+                      "Carnivora", "Felidae"
                     ],
-                      borderColor: "black",
-                      borderWidth: 2,
+                    [
+                      "Carnivora", "Mustelidae"
+                    ],
+                    [
+                      "Carnivora", "Canidae"
+                    ],
+                    [
+                      "Felidae", "Panthera"
+                    ],
+                    [
+                      "Mustelidae", "Taxidea"
+                    ],
+                    [
+                      "Mustelidae", "Lutra"
+                    ],
+                    [
+                      "Panthera", "Panthera pardus"
+                    ],
+                    [
+                      "Taxidea", "Taxidea taxus"
+                    ],
+                    [
+                      "Lutra", "Lutra lutra"
+                    ],
+                    [
+                      "Canidae", "Canis"
+                    ],
+                    [
+                      "Canis", "Canis latrans"
+                    ],
+                    [
+                      "Canis", "Canis lupus"
+                    ],
+                    [
+                      "Carnivora", "Felidae"
+                    ],
+                    [
+                      "Carnivora", "Mustelidae"
+                    ],
+                    [
+                      "Carnivora", "Canidae"
+                    ],
+                    [
+                      "Felidae", "Panthera"
+                    ],
+                    [
+                      "Mustelidae", "Taxidea"
+                    ],
+                    [
+                      "Mustelidae", "Lutra"
+                    ],
+                    [
+                      "Panthera", "Panthera pardus"
+                    ],
+                    [
+                      "Taxidea", "Taxidea taxus"
+                    ],
+                    [
+                      "Lutra", "Lutra lutra"
+                    ],
+                    [
+                      "Canidae", "Canis"
+                    ],
+                    [
+                      "Canis", "Canis latrans"
+                    ],
+                    [
+                      "Canis", "Canis lupus"
+                    ],
+                    [
+                      "Carnivora", "Felidae"
+                    ],
+                    [
+                      "Carnivora", "Mustelidae"
+                    ],
+                    [
+                      "Carnivora", "Canidae"
+                    ],
+                    [
+                      "Felidae", "Panthera"
+                    ],
+                    [
+                      "Mustelidae", "Taxidea"
+                    ],
+                    [
+                      "Mustelidae", "Lutra"
+                    ],
+                    [
+                      "Panthera", "Panthera pardus"
+                    ],
+                    [
+                      "Taxidea", "Taxidea taxus"
+                    ],
+                    [
+                      "Lutra", "Lutra lutra"
+                    ],
+                    [
+                      "Canidae", "Canis"
+                    ],
+                    [
+                      "Canis", "Canis latrans"
+                    ],
+                    [
+                      "Canis", "Canis lupus"
+                    ],
+                    [
+                      "Carnivora", "Felidae"
+                    ],
+                    [
+                      "Carnivora", "Mustelidae"
+                    ],
+                    [
+                      "Carnivora", "Canidae"
+                    ],
+                    [
+                      "Felidae", "Panthera"
+                    ],
+                    [
+                      "Mustelidae", "Taxidea"
+                    ],
+                    [
+                      "Mustelidae", "Lutra"
+                    ],
+                    [
+                      "Panthera", "Panthera pardus"
+                    ],
+                    [
+                      "Taxidea", "Taxidea taxus"
+                    ],
+                    [
+                      "Lutra", "Lutra lutra"
+                    ],
+                    [
+                      "Canidae", "Canis"
+                    ],
+                    [
+                      "Canis", "Canis latrans"
+                    ],
+                    [
+                      "Canis", "Canis lupus"
+                    ],
+                    [
+                      "Carnivora", "Felidae"
+                    ],
+                    [
+                      "Carnivora", "Mustelidae"
+                    ],
+                    [
+                      "Carnivora", "Canidae"
+                    ],
+                    [
+                      "Felidae", "Panthera"
+                    ],
+                    [
+                      "Mustelidae", "Taxidea"
+                    ],
+                    [
+                      "Mustelidae", "Lutra"
+                    ],
+                    [
+                      "Panthera", "Panthera pardus"
+                    ],
+                    [
+                      "Taxidea", "Taxidea taxus"
+                    ],
+                    [
+                      "Lutra", "Lutra lutra"
+                    ],
+                    [
+                      "Canidae", "Canis"
+                    ],
+                    [
+                      "Canis", "Canis latrans"
+                    ],
+                    [
+                      "Canis", "Canis lupus"
+                    ],
+                    [
+                      "Carnivora", "Felidae"
+                    ],
+                    [
+                      "Carnivora", "Mustelidae"
+                    ],
+                    [
+                      "Carnivora", "Canidae"
+                    ],
+                    [
+                      "Felidae", "Panthera"
+                    ],
+                    [
+                      "Mustelidae", "Taxidea"
+                    ],
+                    [
+                      "Mustelidae", "Lutra"
+                    ],
+                    [
+                      "Panthera", "Panthera pardus"
+                    ],
+                    [
+                      "Taxidea", "Taxidea taxus"
+                    ],
+                    [
+                      "Lutra", "Lutra lutra"
+                    ],
+                    [
+                      "Canidae", "Canis"
+                    ],
+                    [
+                      "Canis", "Canis latrans"
+                    ],
+                    [
+                      "Canis", "Canis lupus"
+                    ],
+                    [
+                      "Carnivora", "Felidae"
+                    ],
+                    [
+                      "Carnivora", "Mustelidae"
+                    ],
+                    [
+                      "Carnivora", "Canidae"
+                    ],
+                    [
+                      "Felidae", "Panthera"
+                    ],
+                    [
+                      "Mustelidae", "Taxidea"
+                    ],
+                    [
+                      "Mustelidae", "Lutra"
+                    ],
+                    [
+                      "Panthera", "Panthera pardus"
+                    ],
+                    [
+                      "Taxidea", "Taxidea taxus"
+                    ],
+                    [
+                      "Lutra", "Lutra lutra"
+                    ],
+                    [
+                      "Canidae", "Canis"
+                    ],
+                    [
+                      "Canis", "Canis latrans"
+                    ],
+                    [
+                      "Canis", "Canis lupus"
+                    ],
+                    [
+                      "Carnivora", "Felidae"
+                    ],
+                    [
+                      "Carnivora", "Mustelidae"
+                    ],
+                    [
+                      "Carnivora", "Canidae"
+                    ],
+                    [
+                      "Felidae", "Panthera"
+                    ],
+                    [
+                      "Mustelidae", "Taxidea"
+                    ],
+                    [
+                      "Mustelidae", "Lutra"
+                    ],
+                    [
+                      "Panthera", "Panthera pardus"
+                    ],
+                    [
+                      "Taxidea", "Taxidea taxus"
+                    ],
+                    [
+                      "Lutra", "Lutra lutra"
+                    ],
+                    [
+                      "Canidae", "Canis"
+                    ],
+                    [
+                      "Canis", "Canis latrans"
+                    ],
+                    [
+                      "Canis", "Canis lupus"
+                    ],
+                    [
+                      "Carnivora", "Felidae"
+                    ],
+                    [
+                      "Carnivora", "Mustelidae"
+                    ],
+                    [
+                      "Carnivora", "Canidae"
+                    ],
+                    [
+                      "Felidae", "Panthera"
+                    ],
+                    [
+                      "Mustelidae", "Taxidea"
+                    ],
+                    [
+                      "Mustelidae", "Lutra"
+                    ],
+                    [
+                      "Panthera", "Panthera pardus"
+                    ],
+                    [
+                      "Taxidea", "Taxidea taxus"
+                    ],
+                    [
+                      "Lutra", "Lutra lutra"
+                    ],
+                    [
+                      "Canidae", "Canis"
+                    ],
+                    [
+                      "Canis", "Canis latrans"
+                    ],
+                    [
+                      "Canis", "Canis lupus"
+                    ],
+                    [
+                      "Carnivora", "Felidae"
+                    ],
+                    [
+                      "Carnivora", "Mustelidae"
+                    ],
+                    [
+                      "Carnivora", "Canidae"
+                    ],
+                    [
+                      "Felidae", "Panthera"
+                    ],
+                    [
+                      "Mustelidae", "Taxidea"
+                    ],
+                    [
+                      "Mustelidae", "Lutra"
+                    ],
+                    [
+                      "Panthera", "Panthera pardus"
+                    ],
+                    [
+                      "Taxidea", "Taxidea taxus"
+                    ],
+                    [
+                      "Lutra", "Lutra lutra"
+                    ],
+                    [
+                      "Canidae", "Canis"
+                    ],
+                    [
+                      "Canis", "Canis latrans"
+                    ],
+                    [
+                      "Canis", "Canis lupus"
+                    ],
+                    [
+                      "Carnivora", "Felidae"
+                    ],
+                    [
+                      "Carnivora", "Mustelidae"
+                    ],
+                    [
+                      "Carnivora", "Canidae"
+                    ],
+                    [
+                      "Felidae", "Panthera"
+                    ],
+                    [
+                      "Mustelidae", "Taxidea"
+                    ],
+                    [
+                      "Mustelidae", "Lutra"
+                    ],
+                    [
+                      "Panthera", "Panthera pardus"
+                    ],
+                    [
+                      "Taxidea", "Taxidea taxus"
+                    ],
+                    [
+                      "Lutra", "Lutra lutra"
+                    ],
+                    [
+                      "Canidae", "Canis"
+                    ],
+                    [
+                      "Canis", "Canis latrans"
+                    ],
+                    [
+                      "Canis", "Canis lupus"
+                    ],
+                    [
+                      "Carnivora", "Felidae"
+                    ],
+                    [
+                      "Carnivora", "Mustelidae"
+                    ],
+                    [
+                      "Carnivora", "Canidae"
+                    ],
+                    [
+                      "Felidae", "Panthera"
+                    ],
+                    [
+                      "Mustelidae", "Taxidea"
+                    ],
+                    [
+                      "Mustelidae", "Lutra"
+                    ],
+                    [
+                      "Panthera", "Panthera pardus"
+                    ],
+                    [
+                      "Taxidea", "Taxidea taxus"
+                    ],
+                    [
+                      "Lutra", "Lutra lutra"
+                    ],
+                    [
+                      "Canidae", "Canis"
+                    ],
+                    [
+                      "Canis", "Canis latrans"
+                    ],
+                    [
+                      "Canis", "Canis lupus"
+                    ],
+                    ],
+                    levels: [ 
+                      OrganizationSeriesLevelOptions( 
+                      ),
+                    ],
+                    nodes: [ 
+                      OrganizationSeriesNodeOptions( 
+                      ),
+                    ],
+                      borderColor: "black", 
+                      borderWidth: 2, 
                   ),
                 ],
                 tooltip: TooltipOptions(
-                    outside: true,
-                    format: "{point.custom.info}",
+                    outside: true, 
+                    format: "{point.custom.info}", 
                   style: CSSObject(
                   ),
                 ),
                 exporting: ExportingOptions(
-                    allowHTML: true,
-                    sourceWidth: 800,
-                    sourceHeight: 600,
+                    allowHTML: true, 
+                    sourceWidth: 800, 
+                    sourceHeight: 600, 
                 ),
                 xAxis: [ 
                   XAxisOptions( 

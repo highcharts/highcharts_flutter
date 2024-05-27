@@ -1,61 +1,39 @@
 [
   {
-    "type": "missing_mapping",
-    "path": "series.type",
-    "member": {
-      "name": "type",
-      "type": "string",
-      "optional": true
-    }
+    "type": "",
+    "path": "series",
+    "parentType": "TreegraphSeriesOptions",
+    "memberName": "type",
+    "msg": "The member is not present in the Flutter integration API"
   },
   {
-    "type": "missing_mapping",
-    "path": "series.keys"
+    "type": "",
+    "path": "series",
+    "parentType": "TreegraphSeriesOptions",
+    "memberName": "keys",
+    "msg": "The member is not present in the Flutter integration API"
   },
   {
-    "type": "missing_mapping",
-    "path": "series.marker"
+    "type": "",
+    "path": "series",
+    "parentType": "TreegraphSeriesOptions",
+    "memberName": "clip",
+    "msg": "The member is not present in the Flutter integration API"
   },
   {
     "type": "",
     "path": "series.dataLabels",
-    "parentType": "DataLabelOptions",
+    "parentType": "TreegraphDataLabelOptions",
     "memberName": "pointFormat",
     "msg": "The member is not present in the Flutter integration API"
   },
   {
     "type": "missing_mapping",
-    "path": "series.dataLabels.style.color",
-    "member": {
-      "name": "color",
-      "type": "string",
-      "optional": true
-    }
+    "path": "series.dataLabels.style"
   },
   {
     "type": "missing_mapping",
-    "path": "series.dataLabels.style.textOutline",
-    "member": {
-      "name": "textOutline",
-      "type": "string",
-      "optional": true
-    }
-  },
-  {
-    "type": "missing_mapping",
-    "path": "series.dataLabels.style.whiteSpace",
-    "member": {
-      "name": "whiteSpace",
-      "type": "string",
-      "optional": true
-    }
-  },
-  {
-    "type": "",
-    "path": "series",
-    "parentType": "LineSeriesOptions",
-    "memberName": "levels",
-    "msg": "The member is not present in the Flutter integration API"
+    "path": "series.levels"
   },
   {
     "type": "",

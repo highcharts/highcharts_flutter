@@ -57,16 +57,19 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             HighchartsChart(
               HighchartsOptions(
+                chart: ChartOptions(
+                    type: "column", 
+                ),
                 title: TitleOptions(
-                    text: "Born persons, by girls' name",
+                    text: "Born persons, by girls' name", 
                 ),
                 subtitle: SubtitleOptions(
-                    text: "Resize the frame or click buttons to change appearance",
+                    text: "Resize the frame or click buttons to change appearance", 
                 ),
                 legend: LegendOptions(
-                    align: "right",
-                    verticalAlign: "middle",
-                    layout: "vertical",
+                    align: "right", 
+                    verticalAlign: "middle", 
+                    layout: "vertical", 
                 ),
                 xAxis: [ 
                   XAxisOptions( 
@@ -77,24 +80,27 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ],
                 series: [ 
-                  ColumnSeries(
-                      name: "Ava",
+                  ColumnSeries( 
+                //options: ColumnSeriesOptions()
+                      name: "Ava", 
                     data: [ 
                       [38], 
                       [51], 
                       [34], 
                     ],
                   ),
-                  ColumnSeries(
-                      name: "Dina",
+                  ColumnSeries( 
+                //options: ColumnSeriesOptions()
+                      name: "Dina", 
                     data: [ 
                       [31], 
                       [26], 
                       [27], 
                     ],
                   ),
-                  ColumnSeries(
-                      name: "Malin",
+                  ColumnSeries( 
+                //options: ColumnSeriesOptions()
+                      name: "Malin", 
                     data: [ 
                       [38], 
                       [42], 

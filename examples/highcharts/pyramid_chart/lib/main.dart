@@ -59,27 +59,106 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             HighchartsChart(
               HighchartsOptions(
+                chart: ChartOptions(
+                    type: "pyramid", 
+                ),
                 title: TitleOptions(
-                    text: "Sales pyramid",
-                    x: -50,
+                    text: "Sales pyramid", 
+                    x: -50, 
                 ),
                 plotOptions: HighchartsPlotOptions(
                   series: SeriesOptions(
                     dataLabels: [ 
                       DataLabelOptions( 
-                          enabled: true,
-                          format: "<b>{point.name}</b> ({point.y:,.0f})",
+                          enabled: true, 
+                          format: "<b>{point.name}</b> ({point.y:,.0f})", 
                       ),
                     ],
                   ),
                 ),
                 legend: LegendOptions(
-                    enabled: false,
+                    enabled: false, 
                 ),
                 series: [ 
-                  PyramidSeries(
-                      name: "Unique users",
+                  PyramidSeries( 
+                //options: PyramidSeriesOptions()
+                      name: "Unique users", 
                     data: [ 
+                    [
+                      "Website visits", 15654
+                    ],
+                    [
+                      "Downloads", 4064
+                    ],
+                    [
+                      "Requested price list", 1987
+                    ],
+                    [
+                      "Invoice sent", 976
+                    ],
+                    [
+                      "Finalized", 846
+                    ],
+                    [
+                      "Website visits", 15654
+                    ],
+                    [
+                      "Downloads", 4064
+                    ],
+                    [
+                      "Requested price list", 1987
+                    ],
+                    [
+                      "Invoice sent", 976
+                    ],
+                    [
+                      "Finalized", 846
+                    ],
+                    [
+                      "Website visits", 15654
+                    ],
+                    [
+                      "Downloads", 4064
+                    ],
+                    [
+                      "Requested price list", 1987
+                    ],
+                    [
+                      "Invoice sent", 976
+                    ],
+                    [
+                      "Finalized", 846
+                    ],
+                    [
+                      "Website visits", 15654
+                    ],
+                    [
+                      "Downloads", 4064
+                    ],
+                    [
+                      "Requested price list", 1987
+                    ],
+                    [
+                      "Invoice sent", 976
+                    ],
+                    [
+                      "Finalized", 846
+                    ],
+                    [
+                      "Website visits", 15654
+                    ],
+                    [
+                      "Downloads", 4064
+                    ],
+                    [
+                      "Requested price list", 1987
+                    ],
+                    [
+                      "Invoice sent", 976
+                    ],
+                    [
+                      "Finalized", 846
+                    ],
                     ],
                   ),
                 ],

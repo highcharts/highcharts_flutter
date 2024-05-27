@@ -16,47 +16,5 @@
   {
     "type": "missing_mapping",
     "path": "colors"
-  },
-  {
-    "type": "",
-    "path": "series.data",
-    "parentType": "TimelinePointOptions",
-    "memberName": "0",
-    "msg": "The member is not present in the Flutter integration API"
-  },
-  {
-    "type": "",
-    "path": "series.data",
-    "parentType": "TimelinePointOptions",
-    "memberName": "1",
-    "msg": "The member is not present in the Flutter integration API"
-  },
-  {
-    "type": "",
-    "path": "series.data",
-    "parentType": "TimelinePointOptions",
-    "memberName": "2",
-    "msg": "The member is not present in the Flutter integration API"
-  },
-  {
-    "type": "",
-    "path": "series.data",
-    "parentType": "TimelinePointOptions",
-    "memberName": "3",
-    "msg": "The member is not present in the Flutter integration API"
-  },
-  {
-    "type": "",
-    "path": "series.data",
-    "parentType": "TimelinePointOptions",
-    "memberName": "4",
-    "msg": "The member is not present in the Flutter integration API"
-  },
-  {
-    "type": "",
-    "path": "series.data",
-    "parentType": "TimelinePointOptions",
-    "memberName": "5",
-    "msg": "The member is not present in the Flutter integration API"
   }
 ]

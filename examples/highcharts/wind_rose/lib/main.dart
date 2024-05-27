@@ -62,27 +62,28 @@ class _MyHomePageState extends State<MyHomePage> {
             HighchartsChart(
               HighchartsOptions(
                 data: DataOptions(
-                    table: "freq",
-                    startRow: 1,
-                    endRow: 17,
-                    endColumn: 7,
+                    table: "freq", 
+                    startRow: 1, 
+                    endRow: 17, 
+                    endColumn: 7, 
                 ),
                 chart: ChartOptions(
-                    polar: true,
+                    polar: true, 
+                    type: "column", 
                 ),
                 title: TitleOptions(
-                    text: "Wind rose for South Shore Met Station, Oregon",
-                    align: "left",
+                    text: "Wind rose for South Shore Met Station, Oregon", 
+                    align: "left", 
                 ),
                 subtitle: SubtitleOptions(
-                    text: "Source: or.water.usgs.gov",
-                    align: "left",
+                    text: "Source: or.water.usgs.gov", 
+                    align: "left", 
                 ),
                 legend: LegendOptions(
-                    align: "right",
-                    verticalAlign: "top",
-                    y: 100,
-                    layout: "vertical",
+                    align: "right", 
+                    verticalAlign: "top", 
+                    y: 100, 
+                    layout: "vertical", 
                 ),
                 xAxis: [ 
                   XAxisOptions( 
@@ -93,13 +94,13 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ],
                 tooltip: TooltipOptions(
-                    valueSuffix: "%",
+                    valueSuffix: "%", 
                 ),
                 plotOptions: HighchartsPlotOptions(
                   series: SeriesOptions(
-                      stacking: "normal",
-                      shadow: false,
-                      pointPlacement: "on",
+                      stacking: "normal", 
+                      shadow: false, 
+                      pointPlacement: "on", 
                   ),
                 ),
               )

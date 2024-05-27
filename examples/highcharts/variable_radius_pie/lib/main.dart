@@ -57,22 +57,124 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             HighchartsChart(
               HighchartsOptions(
+                chart: ChartOptions(
+                    type: "variablepie", 
+                ),
                 title: TitleOptions(
-                    text: "Countries compared by population density and total area, 2022.",
-                    align: "left",
+                    text: "Countries compared by population density and total area, 2022.", 
+                    align: "left", 
                 ),
                 tooltip: TooltipOptions(
-                    headerFormat: "",
-                    pointFormat: "<span style=\"color:{point.color}\">●</span> <b> {point.name}</b><br/>Area (square km): <b>{point.y}</b><br/>Population density (people per square km): <b>{point.z}</b><br/>",
+                    headerFormat: "", 
+                    pointFormat: "<span style=\"color:{point.color}\">●</span> <b> {point.name}</b><br/>Area (square km): <b>{point.y}</b><br/>Population density (people per square km): <b>{point.z}</b><br/>", 
                 ),
                 series: [ 
-                  VariablePieSeries(
-                      minPointSize: 10,
-                      innerSize: "20%",
-                      zMin: 0,
-                      name: "countries",
+                  VariablePieSeries( 
+                //options: VariablePieSeriesOptions()
+                      minPointSize: "10", 
+                      innerSize: "20%", 
+                      zMin: 0, 
+                      name: "countries", 
                      borderRadius: BorderRadiusOptionsObject(),
                     data: [ 
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
+                    [
+                    ],
                     ],
                   ),
                 ],

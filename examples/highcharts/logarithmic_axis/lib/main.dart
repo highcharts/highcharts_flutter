@@ -56,7 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
             HighchartsChart(
               HighchartsOptions(
                 title: TitleOptions(
-                    text: "Logarithmic axis demo",
+                    text: "Logarithmic axis demo", 
                 ),
                 xAxis: [ 
                   XAxisOptions( 
@@ -67,11 +67,12 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ],
                 tooltip: TooltipOptions(
-                    headerFormat: "<b>{series.name}</b><br />",
-                    pointFormat: "x = {point.x}, y = {point.y}",
+                    headerFormat: "<b>{series.name}</b><br />", 
+                    pointFormat: "x = {point.x}, y = {point.y}", 
                 ),
                 series: [ 
-                  LineSeries(
+                  LineSeries( 
+                //options: LineSeriesOptions()
                     data: [ 
                       [1], 
                       [2], 
@@ -84,7 +85,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       [256], 
                       [512], 
                     ],
-                      pointStart: 1,
+                      pointStart: 1, 
                   ),
                 ],
               )

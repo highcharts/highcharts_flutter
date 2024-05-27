@@ -60,19 +60,20 @@ class _MyHomePageState extends State<MyHomePage> {
             HighchartsChart(
               HighchartsOptions(
                 chart: ChartOptions(
-                    plotBorderWidth: 1,
+                    type: "gauge", 
+                    plotBorderWidth: 1, 
                   plotBackgroundImage: string(
                   ),
-                    height: 200,
+                    height: "200", 
                 ),
                 title: TitleOptions(
-                    text: "VU meter",
+                    text: "VU meter", 
                 ),
                 exporting: ExportingOptions(
-                    enabled: false,
+                    enabled: false, 
                 ),
                 tooltip: TooltipOptions(
-                    enabled: false,
+                    enabled: false, 
                 ),
                 yAxis: [ 
                   YAxisOptions( 
@@ -81,19 +82,21 @@ class _MyHomePageState extends State<MyHomePage> {
                 plotOptions: HighchartsPlotOptions(
                   gauge: GaugeSeriesOptions(
                     dial: GaugeSeriesDialOptions(
-                        radius: "100%",
+                        radius: "100%", 
                     ),
                   ),
                 ),
                 series: [ 
-                  GaugeSeries(
-                      name: "Channel A",
+                  GaugeSeries( 
+                //options: GaugeSeriesOptions()
+                      name: "Channel A", 
                     data: [ 
                       [-20], 
                     ],
                   ),
-                  GaugeSeries(
-                      name: "Channel B",
+                  GaugeSeries( 
+                //options: GaugeSeriesOptions()
+                      name: "Channel B", 
                     data: [ 
                       [-20], 
                     ],

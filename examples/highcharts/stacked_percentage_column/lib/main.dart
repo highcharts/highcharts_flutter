@@ -58,13 +58,16 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             HighchartsChart(
               HighchartsOptions(
+                chart: ChartOptions(
+                    type: "column", 
+                ),
                 title: TitleOptions(
-                    text: "Domestic passenger transport by mode of transport, Norway",
-                    align: "left",
+                    text: "Domestic passenger transport by mode of transport, Norway", 
+                    align: "left", 
                 ),
                 subtitle: SubtitleOptions(
-                    text: "Source: <a href=\"https://www.ssb.no/transport-og-reiseliv/landtransport/statistikk/innenlandsk-transport\">SSB</a>",
-                    align: "left",
+                    text: "Source: <a href=\"https://www.ssb.no/transport-og-reiseliv/landtransport/statistikk/innenlandsk-transport\">SSB</a>", 
+                    align: "left", 
                 ),
                 xAxis: [ 
                   XAxisOptions( 
@@ -75,41 +78,45 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ],
                 tooltip: TooltipOptions(
-                    pointFormat: "<span style=\"color:{series.color}\">{series.name}</span>: <b>{point.y}</b> ({point.percentage:.0f}%)<br/>",
-                    shared: true,
+                    pointFormat: "<span style=\"color:{series.color}\">{series.name}</span>: <b>{point.y}</b> ({point.percentage:.0f}%)<br/>", 
+                    shared: true, 
                 ),
                 plotOptions: HighchartsPlotOptions(
                   column: ColumnSeriesOptions(
-                      stacking: "percent",
+                      stacking: "percent", 
                   ),
                 ),
                 series: [ 
-                  ColumnSeries(
-                      name: "Road",
+                  ColumnSeries( 
+                //options: ColumnSeriesOptions()
+                      name: "Road", 
                     data: [ 
                       [434], 
                       [290], 
                       [307], 
                     ],
                   ),
-                  ColumnSeries(
-                      name: "Rail",
+                  ColumnSeries( 
+                //options: ColumnSeriesOptions()
+                      name: "Rail", 
                     data: [ 
                       [272], 
                       [153], 
                       [156], 
                     ],
                   ),
-                  ColumnSeries(
-                      name: "Air",
+                  ColumnSeries( 
+                //options: ColumnSeriesOptions()
+                      name: "Air", 
                     data: [ 
                       [13], 
                       [7], 
                       [8], 
                     ],
                   ),
-                  ColumnSeries(
-                      name: "Sea",
+                  ColumnSeries( 
+                //options: ColumnSeriesOptions()
+                      name: "Sea", 
                     data: [ 
                       [55], 
                       [35], 

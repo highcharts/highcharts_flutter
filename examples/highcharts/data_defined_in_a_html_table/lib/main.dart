@@ -57,13 +57,16 @@ class _MyHomePageState extends State<MyHomePage> {
             HighchartsChart(
               HighchartsOptions(
                 data: DataOptions(
-                    table: "datatable",
+                    table: "datatable", 
+                ),
+                chart: ChartOptions(
+                    type: "column", 
                 ),
                 title: TitleOptions(
-                    text: "Live births in Norway",
+                    text: "Live births in Norway", 
                 ),
                 subtitle: SubtitleOptions(
-                    text: "Source: <a href=\"https://www.ssb.no/en/statbank/table/04231\" target=\"_blank\">SSB</a>",
+                    text: "Source: <a href=\"https://www.ssb.no/en/statbank/table/04231\" target=\"_blank\">SSB</a>", 
                 ),
                 xAxis: [ 
                   XAxisOptions( 

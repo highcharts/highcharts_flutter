@@ -60,12 +60,13 @@ class _MyHomePageState extends State<MyHomePage> {
             HighchartsChart(
               HighchartsOptions(
                 chart: ChartOptions(
+                    type: "column", 
                   options3d: Options(
                   ),
                 ),
                 title: TitleOptions(
-                    text: " Electricity production in countries, grouped by continent",
-                    align: "left",
+                    text: " Electricity production in countries, grouped by continent", 
+                    align: "left", 
                 ),
                 xAxis: [ 
                   XAxisOptions( 
@@ -76,20 +77,21 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ],
                 tooltip: TooltipOptions(
-                    headerFormat: "<b>{point.key}</b><br>",
-                    pointFormat: "<span style=\"color:{series.color}\">●</span> {series.name}: {point.y} / {point.stackTotal}",
+                    headerFormat: "<b>{point.key}</b><br>", 
+                    pointFormat: "<span style=\"color:{series.color}\">●</span> {series.name}: {point.y} / {point.stackTotal}", 
                 ),
                 plotOptions: HighchartsPlotOptions(
                   series: SeriesOptions(
-                      pointStart: 2016,
+                      pointStart: 2016, 
                   ),
                   column: ColumnSeriesOptions(
-                      stacking: "normal",
+                      stacking: "normal", 
                   ),
                 ),
                 series: [ 
-                  ColumnSeries(
-                      name: "South Korea",
+                  ColumnSeries( 
+                //options: ColumnSeriesOptions()
+                      name: "South Korea", 
                     data: [ 
                       [563], 
                       [567], 
@@ -98,8 +100,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       [571], 
                     ],
                   ),
-                  ColumnSeries(
-                      name: "Germany",
+                  ColumnSeries( 
+                //options: ColumnSeriesOptions()
+                      name: "Germany", 
                     data: [ 
                       [650], 
                       [654], 
@@ -108,8 +111,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       [572], 
                     ],
                   ),
-                  ColumnSeries(
-                      name: "Saudi Arabia",
+                  ColumnSeries( 
+                //options: ColumnSeriesOptions()
+                      name: "Saudi Arabia", 
                     data: [ 
                       [368], 
                       [378], 
@@ -118,8 +122,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       [363], 
                     ],
                   ),
-                  ColumnSeries(
-                      name: "France",
+                  ColumnSeries( 
+                //options: ColumnSeriesOptions()
+                      name: "France", 
                     data: [ 
                       [564], 
                       [562], 

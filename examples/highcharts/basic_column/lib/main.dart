@@ -58,13 +58,16 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             HighchartsChart(
               HighchartsOptions(
+                chart: ChartOptions(
+                    type: "column", 
+                ),
                 title: TitleOptions(
-                    text: "Corn vs wheat estimated production for 2020",
-                    align: "left",
+                    text: "Corn vs wheat estimated production for 2020", 
+                    align: "left", 
                 ),
                 subtitle: SubtitleOptions(
-                    text: "Source: <a target=\"_blank\" href=\"https://www.indexmundi.com/agriculture/?commodity=corn\">indexmundi</a>",
-                    align: "left",
+                    text: "Source: <a target=\"_blank\" href=\"https://www.indexmundi.com/agriculture/?commodity=corn\">indexmundi</a>", 
+                    align: "left", 
                 ),
                 xAxis: [ 
                   XAxisOptions( 
@@ -75,17 +78,18 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ],
                 tooltip: TooltipOptions(
-                    valueSuffix: " (1000 MT)",
+                    valueSuffix: " (1000 MT)", 
                 ),
                 plotOptions: HighchartsPlotOptions(
                   column: ColumnSeriesOptions(
-                      pointPadding: 0.2,
-                      borderWidth: 0,
+                      pointPadding: 0.2, 
+                      borderWidth: 0, 
                   ),
                 ),
                 series: [ 
-                  ColumnSeries(
-                      name: "Corn",
+                  ColumnSeries( 
+                //options: ColumnSeriesOptions()
+                      name: "Corn", 
                     data: [ 
                       [406292], 
                       [260000], 
@@ -95,8 +99,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       [14500], 
                     ],
                   ),
-                  ColumnSeries(
-                      name: "Wheat",
+                  ColumnSeries( 
+                //options: ColumnSeriesOptions()
+                      name: "Wheat", 
                     data: [ 
                       [51086], 
                       [136000], 

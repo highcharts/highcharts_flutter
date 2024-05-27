@@ -63,42 +63,146 @@ class _MyHomePageState extends State<MyHomePage> {
             HighchartsChart(
               HighchartsOptions(
                 chart: ChartOptions(
+                    type: "pie", 
                   options3d: Options(
                   ),
                 ),
                 title: TitleOptions(
-                    text: "Global smartphone shipments market share, Q1 2022",
-                    align: "left",
+                    text: "Global smartphone shipments market share, Q1 2022", 
+                    align: "left", 
                 ),
                 subtitle: SubtitleOptions(
-                    text: "Source: <a href=\"https://www.counterpointresearch.com/global-smartphone-share/\"target=\"_blank\">Counterpoint Research</a>",
-                    align: "left",
+                    text: "Source: <a href=\"https://www.counterpointresearch.com/global-smartphone-share/\"target=\"_blank\">Counterpoint Research</a>", 
+                    align: "left", 
                 ),
                 accessibility: AccessibilityOptions(
                   point: AccessibilityPointOptions(
-                      valueSuffix: "%",
+                      valueSuffix: "%", 
                   ),
                 ),
                 tooltip: TooltipOptions(
-                    pointFormat: "{series.name}: <b>{point.percentage:.1f}%</b>",
+                    pointFormat: "{series.name}: <b>{point.percentage:.1f}%</b>", 
                 ),
                 plotOptions: HighchartsPlotOptions(
                   pie: PieSeriesOptions(
-                      allowPointSelect: true,
-                      cursor: "pointer",
-                      depth: 35,
+                      allowPointSelect: true, 
+                      cursor: "pointer", 
+                      depth: 35, 
                     dataLabels: [ 
                       PieDataLabelOptions( 
-                          enabled: true,
-                          format: "{point.name}",
+                          enabled: true, 
+                          format: "{point.name}", 
                       ),
                     ],
                   ),
                 ),
                 series: [ 
-                  PieSeries(
-                      name: "Share",
+                  PieSeries( 
+                //options: PieSeriesOptions()
+                      name: "Share", 
                     data: [ 
+                    [
+                      "Samsung", 23
+                    ],
+                    [
+                      "Apple", 18
+                    ],
+                    [
+                    ],
+                    [
+                      "Oppo*", 9
+                    ],
+                    [
+                      "Vivo", 8
+                    ],
+                    [
+                      "Others", 30
+                    ],
+                    [
+                      "Samsung", 23
+                    ],
+                    [
+                      "Apple", 18
+                    ],
+                    [
+                    ],
+                    [
+                      "Oppo*", 9
+                    ],
+                    [
+                      "Vivo", 8
+                    ],
+                    [
+                      "Others", 30
+                    ],
+                    [
+                      "Samsung", 23
+                    ],
+                    [
+                      "Apple", 18
+                    ],
+                    [
+                    ],
+                    [
+                      "Oppo*", 9
+                    ],
+                    [
+                      "Vivo", 8
+                    ],
+                    [
+                      "Others", 30
+                    ],
+                    [
+                      "Samsung", 23
+                    ],
+                    [
+                      "Apple", 18
+                    ],
+                    [
+                    ],
+                    [
+                      "Oppo*", 9
+                    ],
+                    [
+                      "Vivo", 8
+                    ],
+                    [
+                      "Others", 30
+                    ],
+                    [
+                      "Samsung", 23
+                    ],
+                    [
+                      "Apple", 18
+                    ],
+                    [
+                    ],
+                    [
+                      "Oppo*", 9
+                    ],
+                    [
+                      "Vivo", 8
+                    ],
+                    [
+                      "Others", 30
+                    ],
+                    [
+                      "Samsung", 23
+                    ],
+                    [
+                      "Apple", 18
+                    ],
+                    [
+                    ],
+                    [
+                      "Oppo*", 9
+                    ],
+                    [
+                      "Vivo", 8
+                    ],
+                    [
+                      "Others", 30
+                    ],
                     ],
                   ),
                 ],

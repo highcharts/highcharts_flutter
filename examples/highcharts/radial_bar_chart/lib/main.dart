@@ -60,19 +60,20 @@ class _MyHomePageState extends State<MyHomePage> {
             HighchartsChart(
               HighchartsOptions(
                 chart: ChartOptions(
-                    inverted: true,
-                    polar: true,
+                    type: "column", 
+                    inverted: true, 
+                    polar: true, 
                 ),
                 title: TitleOptions(
-                    text: "Winter Olympic medals per existing country (TOP 5)",
-                    align: "left",
+                    text: "Winter Olympic medals per existing country (TOP 5)", 
+                    align: "left", 
                 ),
                 subtitle: SubtitleOptions(
-                    text: "Source: <a href=\"https://en.wikipedia.org/wiki/All-time_Olympic_Games_medal_table\"target=\"_blank\">Wikipedia</a>",
-                    align: "left",
+                    text: "Source: <a href=\"https://en.wikipedia.org/wiki/All-time_Olympic_Games_medal_table\"target=\"_blank\">Wikipedia</a>", 
+                    align: "left", 
                 ),
                 tooltip: TooltipOptions(
-                    outside: true,
+                    outside: true, 
                 ),
                 xAxis: [ 
                   XAxisOptions( 
@@ -84,15 +85,16 @@ class _MyHomePageState extends State<MyHomePage> {
                 ],
                 plotOptions: HighchartsPlotOptions(
                   column: ColumnSeriesOptions(
-                      stacking: "normal",
-                      borderWidth: 0,
-                      pointPadding: 0,
+                      stacking: "normal", 
+                      borderWidth: 0, 
+                      pointPadding: 0, 
                      borderRadius: BorderRadiusOptionsObject(),
                   ),
                 ),
                 series: [ 
-                  ColumnSeries(
-                      name: "Gold medals",
+                  ColumnSeries( 
+                //options: ColumnSeriesOptions()
+                      name: "Gold medals", 
                     data: [ 
                       [148], 
                       [113], 
@@ -101,8 +103,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       [77], 
                     ],
                   ),
-                  ColumnSeries(
-                      name: "Silver medals",
+                  ColumnSeries( 
+                //options: ColumnSeriesOptions()
+                      name: "Silver medals", 
                     data: [ 
                       [113], 
                       [122], 
@@ -111,8 +114,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       [72], 
                     ],
                   ),
-                  ColumnSeries(
-                      name: "Bronze medals",
+                  ColumnSeries( 
+                //options: ColumnSeriesOptions()
+                      name: "Bronze medals", 
                     data: [ 
                       [124], 
                       [95], 
