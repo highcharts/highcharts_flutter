@@ -11,7 +11,6 @@ import 'package:highcharts_flutter/types/SubtitleOptions.dart';
 import 'package:highcharts_flutter/types/XAxisOptions.dart';
 import 'package:highcharts_flutter/types/YAxisOptions.dart';
 import 'package:highcharts_flutter/types/TooltipOptions.dart';
-import 'package:highcharts_flutter/types/any.dart';
 import 'package:highcharts_flutter/types/HighchartsPlotOptions.dart';
 import 'package:highcharts_flutter/types/SplineSeriesOptions.dart';
 import 'package:highcharts_flutter/types/SplineSeries.dart';
@@ -77,7 +76,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ],
                 tooltip: TooltipOptions(
-                    crosshairs: true, 
+                    // crosshairs: true, 
                     shared: true, 
                 ),
                 plotOptions: HighchartsPlotOptions(

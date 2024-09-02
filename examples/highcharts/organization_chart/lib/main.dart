@@ -587,22 +587,22 @@ class _MyHomePageState extends State<MyHomePage> {
                       "CTO", "Market"
                     ],
                     ],
-                    levels: [ 
-                      OrganizationSeriesLevelOptions( 
-                      ),
-                    ],
-                    nodes: [ 
-                      OrganizationSeriesNodeOptions( 
-                      ),
-                    ],
-                      color: "#007ad0", 
-                    dataLabels: [ 
-                      OrganizationDataLabelOptions( 
-                          color: "white", 
-                      ),
-                    ],
-                      borderColor: "white", 
-                      nodeWidth: "auto", 
+                    // levels: [ 
+                    //   OrganizationSeriesLevelOptions( 
+                    //   ),
+                    // ],
+                    // nodes: [ 
+                    //   OrganizationSeriesNodeOptions( 
+                    //   ),
+                    // ],
+                    //   color: "#007ad0", 
+                    // dataLabels: [ 
+                    //   OrganizationDataLabelOptions( 
+                    //       color: "white", 
+                    //   ),
+                    // ],
+                    //   borderColor: "white", 
+                    //   nodeWidth: "auto", 
                   ),
                 ],
                 tooltip: TooltipOptions(

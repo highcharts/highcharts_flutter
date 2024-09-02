@@ -154,7 +154,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       "Pyramid of the Sun", 75
                     ],
                     ],
-                      showInLegend: false, 
+                    //   showInLegend: false, 
                   ),
                 ],
               )

@@ -6,7 +6,6 @@
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/Highcharts.dart';
 import 'package:highcharts_flutter/types/ChartOptions.dart';
-import 'package:highcharts_flutter/types/Generic.dart';
 import 'package:highcharts_flutter/types/TitleOptions.dart';
 import 'package:highcharts_flutter/types/CSSObject.dart';
 import 'package:highcharts_flutter/types/TooltipOptions.dart';
@@ -63,10 +62,9 @@ class _MyHomePageState extends State<MyHomePage> {
             HighchartsChart(
               HighchartsOptions(
                 chart: ChartOptions(
-                  plotBackgroundColor: string(
-                  ),
+                //   plotBackgroundColor: String,
                     plotBorderWidth: 0, 
-                    plotShadow: false, 
+                    // plotShadow: false, 
                 ),
                 title: TitleOptions(
                     text: "Browser<br>shares<br>January<br>2022", 
@@ -100,7 +98,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   PieSeries( 
                 //options: PieSeriesOptions()
                       name: "Browser share", 
-                      innerSize: "50%", 
+                    //   innerSize: "50%", 
                     data: [ 
                     [
                       "Chrome", 73.86

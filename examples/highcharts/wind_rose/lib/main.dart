@@ -6,7 +6,6 @@
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/Highcharts.dart';
 import 'package:highcharts_flutter/types/DataOptions.dart';
-import 'package:highcharts_flutter/types/HTMLTableElement.dart';
 import 'package:highcharts_flutter/types/ChartOptions.dart';
 import 'package:highcharts_flutter/types/TitleOptions.dart';
 import 'package:highcharts_flutter/types/SubtitleOptions.dart';
@@ -16,7 +15,6 @@ import 'package:highcharts_flutter/types/YAxisOptions.dart';
 import 'package:highcharts_flutter/types/TooltipOptions.dart';
 import 'package:highcharts_flutter/types/HighchartsPlotOptions.dart';
 import 'package:highcharts_flutter/types/SeriesOptions.dart';
-import 'package:highcharts_flutter/types/Generic.dart';
 
 void main() {
   runApp(const MyApp());
@@ -62,7 +60,7 @@ class _MyHomePageState extends State<MyHomePage> {
             HighchartsChart(
               HighchartsOptions(
                 data: DataOptions(
-                    table: "freq", 
+                    // table: "freq", 
                     startRow: 1, 
                     endRow: 17, 
                     endColumn: 7, 
@@ -99,7 +97,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 plotOptions: HighchartsPlotOptions(
                   series: SeriesOptions(
                       stacking: "normal", 
-                      shadow: false, 
+                    //   shadow: false, 
                       pointPlacement: "on", 
                   ),
                 ),

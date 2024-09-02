@@ -61,13 +61,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 series: [ 
                   TreemapSeries( 
                 //options: TreemapSeriesOptions()
-                      layoutAlgorithm: "stripes", 
-                      alternateStartingDirection: true, 
-                      borderRadius: 6, 
-                    levels: [ 
-                      TreemapSeriesLevelsOptions( 
-                      ),
-                    ],
+                    //   layoutAlgorithm: "stripes", 
+                    //   alternateStartingDirection: true, 
+                    //   borderRadius: 6, 
+                    // levels: TreemapSeriesLevelsOptions( 
+                    // ),
                     data: [ 
                     [
                       false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false

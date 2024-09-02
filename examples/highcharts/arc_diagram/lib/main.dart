@@ -69,7 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ArcDiagramSeries( 
                 //options: ArcDiagramSeriesOptions()
                       name: "Train connections", 
-                      centeredLinks: true, 
+                    //   centeredLinks: true, 
                     data: [ 
                     [
                       "Hamburg", "Stuttgart", 1

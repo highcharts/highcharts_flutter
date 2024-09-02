@@ -80,12 +80,12 @@ class _MyHomePageState extends State<MyHomePage> {
                   ParetoSeries( 
                 //options: ParetoSeriesOptions()
                       name: "Pareto", 
-                      zIndex: 10, 
+                    //   zIndex: 10, 
                   ),
                   ColumnSeries( 
                 //options: ColumnSeriesOptions()
                       name: "Complaints", 
-                      zIndex: 2, 
+                    //   zIndex: 2, 
                     data: [ 
                       [755], 
                       [222], 

@@ -87,7 +87,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 plotOptions: HighchartsPlotOptions(
                   columnrange: ColumnRangeSeriesOptions(
-                     borderRadius: BorderRadiusOptionsObject(),
+                    //  borderRadius: BorderRadiusOptionsObject(),
                   ),
                 ),
                 legend: LegendOptions(

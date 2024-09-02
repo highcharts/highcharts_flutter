@@ -80,7 +80,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ],
                 plotOptions: HighchartsPlotOptions(
                   column: ColumnSeriesOptions(
-                     borderRadius: BorderRadiusOptionsObject(),
+                    //  borderRadius: BorderRadiusOptionsObject(),
                   ),
                 ),
                 series: [ 

@@ -98,7 +98,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       [17000], 
                       [10000], 
                     ],
-                      pointPlacement: "on", 
+                    //   pointPlacement: "on", 
                   ),
                   LineSeries( 
                 //options: LineSeriesOptions()
@@ -111,7 +111,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       [26000], 
                       [14000], 
                     ],
-                      pointPlacement: "on", 
+                    //   pointPlacement: "on", 
                   ),
                 ],
               )

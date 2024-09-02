@@ -6,7 +6,6 @@
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/Highcharts.dart';
 import 'package:highcharts_flutter/types/ChartOptions.dart';
-import 'package:highcharts_flutter/types/Generic.dart';
 import 'package:highcharts_flutter/types/TitleOptions.dart';
 import 'package:highcharts_flutter/types/YAxisOptions.dart';
 import 'package:highcharts_flutter/types/GaugeSeriesOptions.dart';
@@ -59,12 +58,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 chart: ChartOptions(
                     type: "gauge", 
                     alignTicks: false, 
-                  plotBackgroundColor: string(
-                  ),
-                  plotBackgroundImage: string(
-                  ),
+                //   plotBackgroundColor: String,
+                //   plotBackgroundImage: String,
                     plotBorderWidth: 0, 
-                    plotShadow: false, 
+                    // plotShadow: false, 
                 ),
                 title: TitleOptions(
                     text: "Speedometer with dual axes", 

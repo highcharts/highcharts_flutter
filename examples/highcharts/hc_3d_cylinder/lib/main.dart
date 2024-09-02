@@ -102,7 +102,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       [3283], 
                     ],
                       name: "Cases", 
-                      showInLegend: false, 
+                    //   showInLegend: false, 
                   ),
                 ],
               )

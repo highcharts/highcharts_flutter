@@ -14,7 +14,6 @@ import 'package:highcharts_flutter/types/YAxisOptions.dart';
 import 'package:highcharts_flutter/types/TooltipOptions.dart';
 import 'package:highcharts_flutter/types/HighchartsPlotOptions.dart';
 import 'package:highcharts_flutter/types/SplineSeriesOptions.dart';
-import 'package:highcharts_flutter/types/Generic.dart';
 import 'package:highcharts_flutter/types/SplineSeries.dart';
 import 'package:highcharts_flutter/types/NavigationOptions.dart';
 import 'package:highcharts_flutter/types/CSSObject.dart';
@@ -90,9 +89,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 plotOptions: HighchartsPlotOptions(
                   spline: SplineSeriesOptions(
-                      lineWidth: 4, 
-                    states: Generic(
-                    ),
+                      lineWidth: 4,
                       pointInterval: 3600000, 
                       pointStart: 1586908800000, 
                   ),

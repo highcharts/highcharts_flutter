@@ -267,9 +267,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       "South Schleswig Voters' Association", 1, "#000099", "SSW"
                     ],
                     ],
-                      size: "170%", 
-                      startAngle: -100, 
-                      endAngle: 100, 
+                    //   size: "170%", 
+                    //   startAngle: -100, 
+                    //   endAngle: 100, 
                   ),
                 ],
                 xAxis: [ 

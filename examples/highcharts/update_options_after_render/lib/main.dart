@@ -72,7 +72,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ColumnSeries( 
                 //options: ColumnSeriesOptions()
                       name: "Unemployed", 
-                     borderRadius: BorderRadiusOptionsObject(),
+                    //  borderRadius: BorderRadiusOptionsObject(),
                     data: [ 
                       [5412], 
                       [4977], 
@@ -87,7 +87,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       [2899], 
                       [2887], 
                     ],
-                      showInLegend: false, 
+                    //   showInLegend: false, 
                   ),
                 ],
                 yAxis: [ 

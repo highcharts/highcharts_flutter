@@ -15,7 +15,7 @@ import 'package:highcharts_flutter/types/SeriesOptions.dart';
 import 'package:highcharts_flutter/types/DataLabelOptions.dart';
 import 'package:highcharts_flutter/types/Funnel3DSeriesOptions.dart';
 import 'package:highcharts_flutter/types/Funnel3DSeries.dart';
-import 'package:highcharts_flutter/types/Funnel3DPointOptions).dart';
+import 'package:highcharts_flutter/types/Funnel3DPointOptions.dart';
 import 'package:highcharts_flutter/types/XAxisOptions.dart';
 import 'package:highcharts_flutter/types/YAxisOptions.dart';
 

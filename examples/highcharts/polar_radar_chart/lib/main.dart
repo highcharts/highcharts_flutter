@@ -102,7 +102,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       [2], 
                       [1], 
                     ],
-                      pointPlacement: "between", 
+                    //   pointPlacement: "between", 
                   ),
                   LineSeries( 
                 //options: LineSeriesOptions()

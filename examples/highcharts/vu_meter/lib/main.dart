@@ -62,8 +62,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 chart: ChartOptions(
                     type: "gauge", 
                     plotBorderWidth: 1, 
-                  plotBackgroundImage: string(
-                  ),
+                //   plotBackgroundImage: String,
                     height: "200", 
                 ),
                 title: TitleOptions(

@@ -85,7 +85,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       [256], 
                       [512], 
                     ],
-                      pointStart: 1, 
+                    //   pointStart: 1, 
                   ),
                 ],
               )

@@ -88,7 +88,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       stacking: "normal", 
                       borderWidth: 0, 
                       pointPadding: 0, 
-                     borderRadius: BorderRadiusOptionsObject(),
+                    //  borderRadius: BorderRadiusOptionsObject(),
                   ),
                 ),
                 series: [ 

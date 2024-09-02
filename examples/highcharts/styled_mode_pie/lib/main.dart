@@ -69,7 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 series: [ 
                   PieSeries( 
                 //options: PieSeriesOptions()
-                      allowPointSelect: true, 
+                    //   allowPointSelect: true, 
                     data: [ 
                     [
                       "Samsung", 27.79, true, true
@@ -435,7 +435,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       "Other", 7.2, false
                     ],
                     ],
-                      showInLegend: true, 
+                    //   showInLegend: true, 
                   ),
                 ],
                 yAxis: [ 

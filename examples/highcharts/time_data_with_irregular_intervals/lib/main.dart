@@ -91,8 +91,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         enabled: true, 
                         radius: 2.5, 
                         lineWidth: 1, 
-                      lineColor: string(
-                      ),
+                    //   lineColor: String,
                     ),
                   ),
                 ),

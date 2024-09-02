@@ -81,7 +81,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ColumnSeries( 
                 //options: ColumnSeriesOptions()
                       name: "Rainfall", 
-                      color: "#6b8abc", 
+                    //   color: "#6b8abc", 
                     data: [ 
                       [49.9], 
                       [71.5], 
@@ -118,8 +118,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   SplineSeries( 
                 //options: SplineSeriesOptions()
                       name: "Temperature", 
-                      color: "#DF8500", 
-                      lineWidth: 2, 
+                    //   color: "#DF8500", 
+                    //   lineWidth: 2, 
                     data: [ 
                       [7], 
                       [6.9], 

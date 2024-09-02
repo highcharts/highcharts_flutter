@@ -96,14 +96,12 @@ class _MyHomePageState extends State<MyHomePage> {
                   YAxisOptions( 
                   ),
                 ],
-                colorAxis: [ 
-                  ColorAxisOptions( 
+                colorAxis: ColorAxisOptions( 
                     dataClasses: [ 
-                      ColorAxisDataClassesOptions( 
-                      ),
+                        ColorAxisDataClassesOptions( 
+                        ),
                     ],
-                  ),
-                ],
+                ),
                 tooltip: TooltipOptions(
                     headerFormat: "", 
                     pointFormat: "The population of <b> {point.name}</b> is <b>{point.value}</b>", 

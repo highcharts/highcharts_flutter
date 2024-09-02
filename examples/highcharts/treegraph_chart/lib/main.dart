@@ -46198,20 +46198,18 @@ class _MyHomePageState extends State<MyHomePage> {
                       "South Slavic", "Rusyn", 6
                     ],
                     ],
-                    marker: PointMarkerOptions(
-                        symbol: "circle", 
-                        radius: 6, 
-                        fillColor: "#ffffff", 
-                        lineWidth: 3, 
-                    ),
-                    dataLabels: [ 
-                      TreegraphDataLabelOptions( 
-                          align: "left", 
-                          x: 24, 
-                          crop: false, 
-                          overflow: "none", 
-                      ),
-                    ],
+                    // marker: PointMarkerOptions(
+                    //     symbol: "circle", 
+                    //     radius: 6, 
+                    //     fillColor: "#ffffff", 
+                    //     lineWidth: 3, 
+                    // ),
+                    // dataLabels: TreegraphDataLabelOptions( 
+                    //     align: "left", 
+                    //     x: 24, 
+                    //     crop: false, 
+                    //     overflow: "none", 
+                    // ),
                   ),
                 ],
                 xAxis: [ 

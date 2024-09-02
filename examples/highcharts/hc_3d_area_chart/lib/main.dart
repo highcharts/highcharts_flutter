@@ -15,7 +15,6 @@ import 'package:highcharts_flutter/types/YAxisOptions.dart';
 import 'package:highcharts_flutter/types/XAxisOptions.dart';
 import 'package:highcharts_flutter/types/HighchartsPlotOptions.dart';
 import 'package:highcharts_flutter/types/AreaSeriesOptions.dart';
-import 'package:highcharts_flutter/types/Generic.dart';
 import 'package:highcharts_flutter/types/TooltipOptions.dart';
 import 'package:highcharts_flutter/types/AreaSeries.dart';
 
@@ -89,8 +88,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 ],
                 plotOptions: HighchartsPlotOptions(
                   area: AreaSeriesOptions(
-                    states: Generic(
-                    ),
                   ),
                 ),
                 tooltip: TooltipOptions(
@@ -100,8 +97,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   AreaSeries( 
                 //options: AreaSeriesOptions()
                       name: "Tatra Mountains visible from Rusinowa polana", 
-                      color: "rgb(200,110,50)", 
-                      fillColor: "rgb(200,110,50)", 
+                    //   color: "rgb(200,110,50)", 
+                    //   fillColor: "rgb(200,110,50)", 
                     data: [ 
                     [
                       "Murań", 1890
@@ -3374,8 +3371,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   AreaSeries( 
                 //options: AreaSeriesOptions()
-                      color: "rgb(140,180,200)", 
-                      fillColor: "rgb(140,180,200)", 
+                    //   color: "rgb(140,180,200)", 
+                    //   fillColor: "rgb(140,180,200)", 
                       name: "Dachstein panorama seen from Krippenstein", 
                     data: [ 
                     [
@@ -4834,8 +4831,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   AreaSeries( 
                 //options: AreaSeriesOptions()
-                      color: "rgb(200, 190, 140)", 
-                      fillColor: "rgb(230, 220, 180)", 
+                    //   color: "rgb(200, 190, 140)", 
+                    //   fillColor: "rgb(230, 220, 180)", 
                       name: "Panorama from Col Des Mines", 
                     data: [ 
                     [

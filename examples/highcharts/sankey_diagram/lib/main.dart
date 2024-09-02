@@ -71,17 +71,14 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
                 tooltip: TooltipOptions(
-                  headerFormat: string(
-                  ),
+                //   headerFormat: String,
                     pointFormat: "{point.fromNode.name} → {point.toNode.name}: {point.weight:.2f} quads", 
                 ),
                 series: [ 
                   SankeySeries( 
                 //options: SankeySeriesOptions()
-                    nodes: [ 
-                      SankeySeriesNodeOptions( 
-                      ),
-                    ],
+                    // nodes: SankeySeriesNodeOptions( 
+                    // ),
                     data: [ 
                     [
                       "Solar", "Electricity & Heat", 0.48

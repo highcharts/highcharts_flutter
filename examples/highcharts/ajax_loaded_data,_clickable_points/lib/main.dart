@@ -93,8 +93,8 @@ class _MyHomePageState extends State<MyHomePage> {
                     borderWidth: 0, 
                 ),
                 tooltip: TooltipOptions(
-                    shared: true, 
-                    crosshairs: true, 
+                    // shared: true, 
+                    // crosshairs: true, 
                 ),
                 plotOptions: HighchartsPlotOptions(
                   series: SeriesOptions(
@@ -109,7 +109,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   LineSeries( 
                 //options: LineSeriesOptions()
                       name: "All sessions", 
-                      lineWidth: 4, 
+                    //   lineWidth: 4, 
                   ),
                   LineSeries( 
                 //options: LineSeriesOptions()
