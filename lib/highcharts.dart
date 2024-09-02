@@ -256,7 +256,7 @@ class HighchartsOptions extends OptionFragment {
     // This is like the ugliest thing ever, but we can't solve it with 
     // inheritance without duplicating a lot of code and increasing complexity
     // of the generator significantly
-    /** for (var i = 0; i < this.series.length; ++i) {
+    /* for (var i = 0; i < this.series.length; ++i) {
       if (!(this.series[i] is ArcDiagramSeriesOptions ||
       this.series[i] is AreaSeriesOptions ||
       this.series[i] is AreaRangeSeriesOptions ||
