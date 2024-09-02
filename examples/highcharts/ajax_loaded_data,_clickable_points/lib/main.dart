@@ -14,7 +14,6 @@ import 'package:highcharts_flutter/types/XAxisOptions.dart';
 import 'package:highcharts_flutter/types/YAxisOptions.dart';
 import 'package:highcharts_flutter/types/LegendOptions.dart';
 import 'package:highcharts_flutter/types/TooltipOptions.dart';
-import 'package:highcharts_flutter/types/any.dart';
 import 'package:highcharts_flutter/types/HighchartsPlotOptions.dart';
 import 'package:highcharts_flutter/types/SeriesOptions.dart';
 import 'package:highcharts_flutter/types/PointMarkerOptions.dart';

@@ -18,7 +18,6 @@
 
 import 'Chart.dart';
 import 'MapPoint.dart';
-import 'MapPointer.dart';
 import 'OptionFragment.dart';
 
 /** 

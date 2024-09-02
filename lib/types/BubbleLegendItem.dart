@@ -17,7 +17,6 @@
  */ 
 
 import 'LegendItem.dart';
-import 'LegendItemObject.dart';
 import 'OptionFragment.dart';
 
 /** 

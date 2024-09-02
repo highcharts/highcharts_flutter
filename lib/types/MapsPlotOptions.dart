@@ -16,17 +16,18 @@
  *
  */ 
 
-import 'SeriesOptions.dart';
 import 'FlowMapSeriesOptions.dart';
+import 'GeoHeatmapSeriesOptions.dart';
 import 'HeatmapSeriesOptions.dart';
 import 'MapSeriesOptions.dart';
 import 'MapBubbleSeriesOptions.dart';
 import 'MapLineSeriesOptions.dart';
 import 'MapPointSeriesOptions.dart';
 import 'PieSeriesOptions.dart';
+import 'OptionFragment.dart';
+import 'SeriesOptions.dart';
 import 'TiledWebMapSeriesOptions.dart';
 import 'TilemapSeriesOptions.dart';
-import 'OptionFragment.dart';
 
 /** 
  * MapsPlotOptions 
@@ -49,7 +50,7 @@ class MapsPlotOptions extends OptionFragment {
     
   FlowMapSeriesOptions? flowmap;
     
-  ? geoheatmap;
+  GeoHeatmapSeriesOptions? geoheatmap;
     
   HeatmapSeriesOptions? heatmap;
     

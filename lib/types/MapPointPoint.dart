@@ -16,14 +16,14 @@
  *
  */ 
 
-import 'ScatterPoint.dart';
 import 'MapBounds.dart';
 import 'OptionFragment.dart';
+import 'Point.dart';
 
 /** 
  * MapPointPoint 
  */
-class MapPointPoint extends ScatterPoint {
+class MapPointPoint extends Point {
   MapPointPoint( ) : super();
   
 

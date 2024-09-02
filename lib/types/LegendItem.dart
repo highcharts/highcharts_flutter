@@ -17,8 +17,6 @@
  */ 
 
 import 'Chart.dart';
-import 'CheckBoxElement.dart';
-import 'LegendItemObject.dart';
 import 'OptionFragment.dart';
 
 /** 

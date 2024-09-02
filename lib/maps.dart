@@ -49,7 +49,6 @@ import 'types/AxisOptions.dart';
 
 // Series
 import 'types/FlowMapSeriesOptions.dart';
-import 'types/.dart';
 import 'types/HeatmapSeriesOptions.dart';
 import 'types/MapSeriesOptions.dart';
 import 'types/MapBubbleSeriesOptions.dart';

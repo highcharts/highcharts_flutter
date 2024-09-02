@@ -16,17 +16,18 @@
  *
  */ 
 
-import 'SeriesOptions.dart';
 import 'FlowMapSeriesOptions.dart';
 import 'HeatmapSeriesOptions.dart';
-import 'MapSeriesOptions.dart';
+import 'GeoHeatmapSeriesOptions.dart';
 import 'MapBubbleSeriesOptions.dart';
 import 'MapLineSeriesOptions.dart';
 import 'MapPointSeriesOptions.dart';
+import 'MapSeriesOptions.dart';
+import 'OptionFragment.dart';
 import 'PieSeriesOptions.dart';
+import 'SeriesOptions.dart';
 import 'TiledWebMapSeriesOptions.dart';
 import 'TilemapSeriesOptions.dart';
-import 'OptionFragment.dart';
 
 /** 
  * MapsProductSeries 
@@ -45,77 +46,78 @@ class MapsProductSeries extends OptionFragment {
     this.tiledwebmap = null,
     this.tilemap = null
   }) : super();
-  SeriesOptions? series;
-    
+
   FlowMapSeriesOptions? flowmap;
-    
-  ? geoheatmap;
-    
+
+  GeoHeatmapSeriesOptions? geoheatmap;
+
   HeatmapSeriesOptions? heatmap;
-    
+
   MapSeriesOptions? map;
-    
+
   MapBubbleSeriesOptions? mapbubble;
-    
+
   MapLineSeriesOptions? mapline;
-    
+
   MapPointSeriesOptions? mappoint;
-    
+
   PieSeriesOptions? pie;
-    
+
+  SeriesOptions? series;
+
   TiledWebMapSeriesOptions? tiledwebmap;
-    
+
   TilemapSeriesOptions? tilemap;
-    
+
 
   //////////////////////////////////////////////////////////////////////////////
-  
+
   @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
-    
-    if (this.series != null) {  
+
+    if (this.series != null) {
       buffer.writeAll(["\"series\":",this.series?.toJSON(), ","], "");
     }
 
-    if (this.flowmap != null) {  
+    if (this.flowmap != null) {
       buffer.writeAll(["\"flowmap\":",this.flowmap?.toJSON(), ","], "");
     }
 
-    if (this.geoheatmap != null) {  
+    if (this.geoheatmap != null) {
       buffer.writeAll(["\"geoheatmap\":",this.geoheatmap?.toJSON(), ","], "");
     }
 
-    if (this.heatmap != null) {  
+    if (this.heatmap != null) {
       buffer.writeAll(["\"heatmap\":",this.heatmap?.toJSON(), ","], "");
     }
 
-    if (this.map != null) {  
+    if (this.map != null) {
       buffer.writeAll(["\"map\":",this.map?.toJSON(), ","], "");
     }
 
-    if (this.mapbubble != null) {  
+    if (this.mapbubble != null) {
       buffer.writeAll(["\"mapbubble\":",this.mapbubble?.toJSON(), ","], "");
     }
 
-    if (this.mapline != null) {  
+    if (this.mapline != null) {
       buffer.writeAll(["\"mapline\":",this.mapline?.toJSON(), ","], "");
     }
 
-    if (this.mappoint != null) {  
+    if (this.mappoint != null) {
       buffer.writeAll(["\"mappoint\":",this.mappoint?.toJSON(), ","], "");
     }
 
-    if (this.pie != null) {  
+    if (this.pie != null) {
       buffer.writeAll(["\"pie\":",this.pie?.toJSON(), ","], "");
     }
 
-    if (this.tiledwebmap != null) {  
+    if (this.tiledwebmap != null) {
       buffer.writeAll(["\"tiledwebmap\":",this.tiledwebmap?.toJSON(), ","], "");
     }
 
-    if (this.tilemap != null) {  
+    if (this.tilemap != null) {
       buffer.writeAll(["\"tilemap\":",this.tilemap?.toJSON(), ","], "");
     }
   }

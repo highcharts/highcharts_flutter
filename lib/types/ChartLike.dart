@@ -22,7 +22,6 @@ import 'RangeSelector.dart';
 import 'Point.dart';
 import 'Series.dart';
 import 'SVGElement.dart';
-import 'DivElement.dart';
 import 'ChartAdditions.dart';
 import 'NavigationBindings.dart';
 import 'HTMLElement.dart';
