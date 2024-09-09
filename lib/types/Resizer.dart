@@ -12,33 +12,45 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * Resizer 
+ * Resizer
  */
 class Resizer extends OptionFragment {
-  Resizer( ) : super();
-  
+
+  Resizer();
+
+  // NOTE: mouseDownSnapX skipped - type Function is ignored in gen 
+
+  // NOTE: mouseDownSnapY skipped - type Function is ignored in gen 
+
+  // NOTE: mouseMoveSnap skipped - type Function is ignored in gen 
+
+  // NOTE: mouseUpSnap skipped - type Function is ignored in gen 
+
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of mouseDownSnapX (type Function is ignored) ignore type: 1
 
-    // NOTE: skip serialization of mouseDownSnapY (type Function is ignored) ignore type: 1
+    // NOTE: skip serialization of mouseDownSnapX (type Function ignored, skipped: true)
 
-    // NOTE: skip serialization of mouseMoveSnap (type Function is ignored) ignore type: 1
+    // NOTE: skip serialization of mouseDownSnapY (type Function ignored, skipped: true)
 
-    // NOTE: skip serialization of mouseUpSnap (type Function is ignored) ignore type: 1
+    // NOTE: skip serialization of mouseMoveSnap (type Function ignored, skipped: true)
+
+    // NOTE: skip serialization of mouseUpSnap (type Function ignored, skipped: true)
+
   }
+
 
 }

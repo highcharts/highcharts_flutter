@@ -12,29 +12,43 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'GeoJSONGeometryMultiPointRegistry.dart';
 import 'GeoJSONGeometryPoint.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * GeoJSONGeometryRegistry 
+ * GeoJSONGeometryRegistry
  */
 class GeoJSONGeometryRegistry extends GeoJSONGeometryMultiPointRegistry {
-  GeoJSONGeometryRegistry( ) : super();
-  
+
+  GeoJSONGeometryRegistry({
+    super.mLineString = null,
+    super.mMultiLineString = null,
+    super.mMultiPoint = null,
+    super.mMultiPolygon = null,
+    this.Point = null,
+    super.mPolygon = null
+  });
+
+  GeoJSONGeometryPoint? Point;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of Point (type GeoJSONGeometryPoint is ignored) ignore type: true
+
+    
+    if (this.Point != null) {
+        buffer.writeAll(["\"Point\":",this.Point?.toJSON(), ","], "");
+    }
   }
+
 
 }

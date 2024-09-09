@@ -12,32 +12,46 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'GeoJSONGeometryPoint.dart';
 import 'OptionFragment.dart';
 
 /** 
- * GeoJSONFeature 
+ * GeoJSONFeature
  */
 class GeoJSONFeature extends OptionFragment {
-  GeoJSONFeature( ) : super();
-  
+
+  GeoJSONFeature({
+    this.geometry = null,
+    this.properties = null
+  });
+
+  GeoJSONGeometryPoint? geometry;
+    
+  Map<String, String>? properties;
+    
+  // NOTE: type skipped - type "Feature" is ignored in gen 
+
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of geometry (type GeoJSONGeometryPoint is ignored) ignore type: true
 
-    // NOTE: skip serialization of properties (type Generic is ignored) ignore type: true
+    
+    if (this.geometry != null) {
+        buffer.writeAll(["\"geometry\":",this.geometry?.toJSON(), ","], "");
+    }
+    // NOTE: skip serialization of properties (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of type (type "Feature" is ignored) ignore type: true
+    // NOTE: skip serialization of type (type "Feature" ignored, skipped: true)
+
   }
+
 
 }

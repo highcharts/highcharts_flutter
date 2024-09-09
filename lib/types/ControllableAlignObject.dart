@@ -12,38 +12,49 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'AlignObject.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * ControllableAlignObject 
+ * ControllableAlignObject
  */
 class ControllableAlignObject extends AlignObject {
-  ControllableAlignObject( {
+
+  ControllableAlignObject({
     super.align = null,
+    super.alignByTranslate = null,
+    this.height = null,
     super.verticalAlign = null,
+    this.width = null,
     super.x = null,
     super.y = null
-  }) : super();
-  // NOTE: height skipped - type number is ignored in gen 
+  });
 
-  // NOTE: width skipped - type number is ignored in gen 
-
+  double? height;
+    
+  double? width;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of height (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of width (type number is ignored) ignore type: true
+    
+    if (this.height != null) {
+        buffer.writeAll(["\"height\":",this.height, ","], "");
+    }
+    
+    if (this.width != null) {
+        buffer.writeAll(["\"width\":",this.width, ","], "");
+    }
   }
+
 
 }

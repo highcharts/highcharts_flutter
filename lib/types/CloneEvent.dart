@@ -12,31 +12,41 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
-import 'DataEvent.dart';
 import 'OptionFragment.dart';
 
 /** 
- * CloneEvent 
+ * CloneEvent
  */
-class CloneEvent extends DataEvent {
-  CloneEvent( ) : super();
-  // NOTE: type skipped - type string is ignored in gen 
+class CloneEvent extends OptionFragment {
+
+  CloneEvent({
+    this.type = null
+  });
+
+  String? type;
+    
+  // NOTE: tableClone skipped - type DataTable is ignored in gen 
 
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of type (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of tableClone (type DataTable is ignored) ignore type: true
+    
+    if (this.type != null) {
+        buffer.writeAll(["\"type\":\'",this.type, "\',"], "");
+    }
+    // NOTE: skip serialization of tableClone (type DataTable ignored, skipped: true)
+
   }
+
 
 }

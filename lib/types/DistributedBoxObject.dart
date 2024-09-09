@@ -12,37 +12,62 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'BoxObject.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * DistributedBoxObject 
+ * DistributedBoxObject
  */
 class DistributedBoxObject extends BoxObject {
-  DistributedBoxObject( ) : super();
-  // NOTE: pos skipped - type number is ignored in gen 
 
-  // NOTE: anchorX skipped - type number is ignored in gen 
+  DistributedBoxObject({
+    super.align = null,
+    this.anchorX = null,
+    super.anchorY = null,
+    super.boxWidth = null,
+    super.isHeader = null,
+    this.plotX = null,
+    super.point = null,
+    this.pos = null,
+    super.rank = null,
+    super.size = null,
+    super.target = null,
+    super.targets = null,
+    super.tt = null,
+    super.x = null
+  });
 
-  // NOTE: plotX skipped - type number is ignored in gen 
-
+  double? pos;
+    
+  double? anchorX;
+    
+  double? plotX;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of pos (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of anchorX (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of plotX (type number is ignored) ignore type: true
+    
+    if (this.pos != null) {
+        buffer.writeAll(["\"pos\":",this.pos, ","], "");
+    }
+    
+    if (this.anchorX != null) {
+        buffer.writeAll(["\"anchorX\":",this.anchorX, ","], "");
+    }
+    
+    if (this.plotX != null) {
+        buffer.writeAll(["\"plotX\":",this.plotX, ","], "");
+    }
   }
+
 
 }

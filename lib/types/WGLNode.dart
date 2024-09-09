@@ -12,28 +12,37 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * WGLNode 
+ * WGLNode
  */
 class WGLNode extends OptionFragment {
-  WGLNode( ) : super();
-  // NOTE: levelDynamic skipped - type number is ignored in gen 
 
+  WGLNode({
+    this.levelDynamic = null
+  });
+
+  double? levelDynamic;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of levelDynamic (type number is ignored) ignore type: true
+
+    
+    if (this.levelDynamic != null) {
+        buffer.writeAll(["\"levelDynamic\":",this.levelDynamic, ","], "");
+    }
   }
+
 
 }

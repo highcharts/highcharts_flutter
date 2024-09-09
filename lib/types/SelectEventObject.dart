@@ -12,60 +12,94 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
-import 'Event.dart';
+ */
 import 'SelectDataObject.dart';
 import 'OptionFragment.dart';
 
 /** 
- * SelectEventObject 
+ * SelectEventObject
  */
 class SelectEventObject extends OptionFragment {
-  SelectEventObject( ) : super();
+
+  SelectEventObject({
+    this.height = null,
+    this.resetSelection = null,
+    this.trigger = null,
+    this.width = null,
+    this.x = null,
+    this.xAxis = null,
+    this.y = null,
+    this.yAxis = null
+  });
+
   // NOTE: animation skipped - type boolean is ignored in gen 
 
-  // NOTE: height skipped - type number is ignored in gen 
+  double? height;
+    
+  // NOTE: originalEvent skipped - type Event is ignored in gen 
 
-  // NOTE: resetSelection skipped - type boolean is ignored in gen 
-
-  // NOTE: trigger skipped - type string is ignored in gen 
-
-  // NOTE: width skipped - type number is ignored in gen 
-
-  // NOTE: x skipped - type number is ignored in gen 
-
-  // NOTE: y skipped - type number is ignored in gen 
-
+  bool? resetSelection;
+    
+  String? trigger;
+    
+  double? width;
+    
+  double? x;
+    
+  SelectDataObject? xAxis;
+    
+  double? y;
+    
+  SelectDataObject? yAxis;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of animation (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of height (type number is ignored) ignore type: true
+    // NOTE: skip serialization of animation (type boolean ignored, skipped: true)
 
-    // NOTE: skip serialization of originalEvent (type Event is ignored) ignore type: 1
+    
+    if (this.height != null) {
+        buffer.writeAll(["\"height\":",this.height, ","], "");
+    }
+    // NOTE: skip serialization of originalEvent (type Event ignored, skipped: true)
 
-    // NOTE: skip serialization of resetSelection (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of trigger (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of width (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of x (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of xAxis (type SelectDataObject[] is ignored) ignore type: true
-
-    // NOTE: skip serialization of y (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of yAxis (type SelectDataObject[] is ignored) ignore type: true
+    
+    if (this.resetSelection != null) {
+        buffer.writeAll(["\"resetSelection\":",this.resetSelection, ","], "");
+    }
+    
+    if (this.trigger != null) {
+        buffer.writeAll(["\"trigger\":\'",this.trigger, "\',"], "");
+    }
+    
+    if (this.width != null) {
+        buffer.writeAll(["\"width\":",this.width, ","], "");
+    }
+    
+    if (this.x != null) {
+        buffer.writeAll(["\"x\":",this.x, ","], "");
+    }
+    
+    if (this.xAxis != null) {
+        buffer.writeAll(["\"xAxis\":",this.xAxis, ","], "");
+    }
+    
+    if (this.y != null) {
+        buffer.writeAll(["\"y\":",this.y, ","], "");
+    }
+    
+    if (this.yAxis != null) {
+        buffer.writeAll(["\"yAxis\":",this.yAxis, ","], "");
+    }
   }
+
 
 }

@@ -12,40 +12,63 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'Node.dart';
 import 'CSSObject.dart';
 import 'OptionFragment.dart';
 
 /** 
- * Node 
+ * Node
  */
 class Node extends OptionFragment {
-  Node( ) : super();
-  // NOTE: tagName skipped - type string is ignored in gen 
 
-  // NOTE: textContent skipped - type string is ignored in gen 
+  Node({
+    this.children = null,
+    this.style = null,
+    this.tagName = null,
+    this.textContent = null
+  });
 
+  // NOTE: attributes skipped - type HTMLAttributes & SVGAttributes is ignored in gen 
+
+  Node? children;
+    
+  CSSObject? style;
+    
+  String? tagName;
+    
+  String? textContent;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of attributes (type HTMLAttributes & SVGAttributes is ignored) ignore type: true
 
-    // NOTE: skip serialization of children (type Node[] is ignored) ignore type: true
+    // NOTE: skip serialization of attributes (type HTMLAttributes & SVGAttributes ignored, skipped: true)
 
-    // NOTE: skip serialization of style (type CSSObject is ignored) ignore type: true
-
-    // NOTE: skip serialization of tagName (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of textContent (type string is ignored) ignore type: true
+    
+    if (this.children != null) {
+        buffer.writeAll(["\"children\":",this.children, ","], "");
+    }
+    
+    if (this.style != null) {
+        buffer.writeAll(["\"style\":",this.style?.toJSON(), ","], "");
+    }
+    
+    if (this.tagName != null) {
+        buffer.writeAll(["\"tagName\":\'",this.tagName, "\',"], "");
+    }
+    
+    if (this.textContent != null) {
+        buffer.writeAll(["\"textContent\":\'",this.textContent, "\',"], "");
+    }
   }
+
 
 }

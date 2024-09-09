@@ -12,40 +12,58 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * ColumnOptions 
+ * ColumnOptions
  */
 class ColumnOptions extends OptionFragment {
-  ColumnOptions( ) : super();
-  // NOTE: cellFormat skipped - type string is ignored in gen 
 
-  // NOTE: editable skipped - type boolean is ignored in gen 
+  ColumnOptions({
+    this.cellFormat = null,
+    this.editable = null,
+    this.headerFormat = null,
+    this.show = null
+  });
 
-  // NOTE: headerFormat skipped - type string is ignored in gen 
-
-  // NOTE: show skipped - type boolean is ignored in gen 
-
+  String? cellFormat;
+    
+  bool? editable;
+    
+  String? headerFormat;
+    
+  bool? show;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of cellFormat (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of editable (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of headerFormat (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of show (type boolean is ignored) ignore type: true
+    
+    if (this.cellFormat != null) {
+        buffer.writeAll(["\"cellFormat\":\'",this.cellFormat, "\',"], "");
+    }
+    
+    if (this.editable != null) {
+        buffer.writeAll(["\"editable\":",this.editable, ","], "");
+    }
+    
+    if (this.headerFormat != null) {
+        buffer.writeAll(["\"headerFormat\":\'",this.headerFormat, "\',"], "");
+    }
+    
+    if (this.show != null) {
+        buffer.writeAll(["\"show\":",this.show, ","], "");
+    }
   }
+
 
 }

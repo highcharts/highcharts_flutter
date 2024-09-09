@@ -12,32 +12,94 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
-import 'SVGElement.dart';
-import 'OptionFragment.dart';
-
-/** 
- * GeoHeatmapSeries 
  */
-class GeoHeatmapSeries extends OptionFragment {
-  GeoHeatmapSeries( ) : super();
-  
+import 'GeoHeatmapSeriesOptions.dart';
+import 'Series.dart';
+import 'PointOptions.dart';
 
-  //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+class GeoHeatmapSeries extends Series {
+
+  String? name;
+  GeoHeatmapSeriesOptions? options;
+  List<PointOptions>? points;
+  List<List<dynamic>>? data;
+
+  GeoHeatmapSeries({
+    this.name = null,
+    this.options = null,
+    this.points = null,
+    this.data = null
+  });
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of pointClass (type typeof GeoHeatmapPoint is ignored) ignore type: true
 
-    // NOTE: skip serialization of pointArrayMap (type string[] is ignored) ignore type: true
+    if (this.name != null) {
+      buffer.writeAll(["\"name\": \"", this.name!, "\","], "");
+    }
 
-    // NOTE: skip serialization of image (type SVGElement is ignored) ignore type: true
+    buffer.write("\"type\": \"geoheatmap\",");
+
+    if (this.data != null && this.points == null) {
+      // Serialize as a 2d array
+
+      StringBuffer seriesData = StringBuffer();
+
+      for (var point in this.data!) {
+        if (point.length > 1) {
+          seriesData.writeAll(["["], "");
+        }
+        for (var sub in point) {
+          if (sub is String) {
+            seriesData.writeAll(["\"", sub, "\","], "");
+          } else {
+            seriesData.writeAll([sub], ",");
+          }
+        }
+        if (point.length > 1) {
+          seriesData.writeAll(["],"], "");
+        } else {
+          seriesData.write(",");
+        }
+      }
+
+      buffer.writeAll(["\"data\": [", seriesData, "],"], "");   
+
+
+    } else if (this.points != null) {
+      // Go through the points and write them
+      StringBuffer seriesData = StringBuffer();
+
+      for (var point in this.points!) {
+        seriesData.writeAll(["{"], "");
+        point.toJSONInner(seriesData); 
+        seriesData.writeAll(["},"], "");
+      }
+
+      buffer.writeAll(["\"data\": [", seriesData, "],"], "");
+    }
+
+
+
+    
+
+    
+    if (this.options?.colsize != null) {
+        buffer.writeAll(["\"colsize\":",this.options?.colsize, ","], "");
+    }
+    
+    if (this.options?.rowsize != null) {
+        buffer.writeAll(["\"rowsize\":",this.options?.rowsize, ","], "");
+    }
+    
+    if (this.options?.interpolation != null) {
+        buffer.writeAll(["\"interpolation\":",this.options?.interpolation?.toJSON(), ","], "");
+    }
   }
 
 }

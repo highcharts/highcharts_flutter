@@ -12,28 +12,37 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * Stack3DDictionary 
+ * Stack3DDictionary
  */
 class Stack3DDictionary extends OptionFragment {
-  Stack3DDictionary( ) : super();
-  // NOTE: totalStacks skipped - type number is ignored in gen 
 
+  Stack3DDictionary({
+    this.totalStacks = null
+  });
+
+  double? totalStacks;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of totalStacks (type number is ignored) ignore type: true
+
+    
+    if (this.totalStacks != null) {
+        buffer.writeAll(["\"totalStacks\":",this.totalStacks, ","], "");
+    }
   }
+
 
 }

@@ -4,7 +4,7 @@
  */
 
 import 'package:flutter/material.dart';
-import 'package:highcharts_flutter/Highcharts.dart';
+import 'package:highcharts_flutter/highcharts.dart';
 import 'package:highcharts_flutter/types/ChartOptions.dart';
 import 'package:highcharts_flutter/types/TitleOptions.dart';
 import 'package:highcharts_flutter/types/TreegraphSeriesOptions.dart';
@@ -46198,18 +46198,20 @@ class _MyHomePageState extends State<MyHomePage> {
                       "South Slavic", "Rusyn", 6
                     ],
                     ],
-                    // marker: PointMarkerOptions(
-                    //     symbol: "circle", 
-                    //     radius: 6, 
-                    //     fillColor: "#ffffff", 
-                    //     lineWidth: 3, 
-                    // ),
-                    // dataLabels: TreegraphDataLabelOptions( 
-                    //     align: "left", 
-                    //     x: 24, 
-                    //     crop: false, 
-                    //     overflow: "none", 
-                    // ),
+                    marker: PointMarkerOptions(
+                        symbol: "circle", 
+                        radius: 6, 
+                        fillColor: "#ffffff", 
+                        lineWidth: 3, 
+                    ),
+                    dataLabels: [ 
+                      TreegraphDataLabelOptions( 
+                          align: "left", 
+                          x: 24, 
+                          crop: false, 
+                          overflow: "none", 
+                      ),
+                    ],
                   ),
                 ],
                 xAxis: [ 

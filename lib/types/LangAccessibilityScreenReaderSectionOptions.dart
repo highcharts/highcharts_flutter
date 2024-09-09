@@ -12,39 +12,59 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'LangAccessibilityAnnotationOptions.dart';
 import 'OptionFragment.dart';
 
+
 /** 
- * LangAccessibilityScreenReaderSectionOptions 
+ * LangAccessibilityScreenReaderSectionOptions
  */
 class LangAccessibilityScreenReaderSectionOptions extends OptionFragment {
-  LangAccessibilityScreenReaderSectionOptions( ) : super();
-  // NOTE: afterRegionLabel skipped - type string is ignored in gen 
 
-  // NOTE: beforeRegionLabel skipped - type string is ignored in gen 
+  LangAccessibilityScreenReaderSectionOptions({
+    this.afterRegionLabel = null,
+    this.annotations = null,
+    this.beforeRegionLabel = null,
+    this.endOfChartMarker = null
+  });
 
-  // NOTE: endOfChartMarker skipped - type string is ignored in gen 
-
+  String? afterRegionLabel;
+    
+  LangAccessibilityAnnotationOptions? annotations;
+    
+  String? beforeRegionLabel;
+    
+  String? endOfChartMarker;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of afterRegionLabel (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of annotations (type LangAccessibilityAnnotationOptions is ignored) ignore type: true
-
-    // NOTE: skip serialization of beforeRegionLabel (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of endOfChartMarker (type string is ignored) ignore type: true
+    
+    if (this.afterRegionLabel != null) {
+        buffer.writeAll(["\"afterRegionLabel\":\'",this.afterRegionLabel, "\',"], "");
+    }
+    
+    if (this.annotations != null) {
+        buffer.writeAll(["\"annotations\":",this.annotations?.toJSON(), ","], "");
+    }
+    
+    if (this.beforeRegionLabel != null) {
+        buffer.writeAll(["\"beforeRegionLabel\":\'",this.beforeRegionLabel, "\',"], "");
+    }
+    
+    if (this.endOfChartMarker != null) {
+        buffer.writeAll(["\"endOfChartMarker\":\'",this.endOfChartMarker, "\',"], "");
+    }
   }
+
 
 }

@@ -12,30 +12,41 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'Series.dart';
 import 'OptionFragment.dart';
 
 /** 
- * SeriesAfterAnimateEvent 
+ * SeriesAfterAnimateEvent
  */
 class SeriesAfterAnimateEvent extends OptionFragment {
-  SeriesAfterAnimateEvent( ) : super();
-  
+
+  SeriesAfterAnimateEvent({
+    this.target = null
+  });
+
+  Series? target;
+    
+  // NOTE: type skipped - type "afterAnimate" is ignored in gen 
+
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of target (type Series is ignored) ignore type: true
 
-    // NOTE: skip serialization of type (type "afterAnimate" is ignored) ignore type: true
+    
+    if (this.target != null) {
+        buffer.writeAll(["\"target\":",this.target?.toJSON(), ","], "");
+    }
+    // NOTE: skip serialization of type (type "afterAnimate" ignored, skipped: true)
+
   }
+
 
 }

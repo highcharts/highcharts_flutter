@@ -12,10 +12,9 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'AOOptions.dart';
 import 'Series.dart';
 import 'PointOptions.dart';
@@ -34,8 +33,7 @@ class AOSeries extends Series {
     this.data = null
   });
 
-  
-  @override
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
@@ -56,16 +54,13 @@ class AOSeries extends Series {
         if (point.length > 1) {
           seriesData.writeAll(["["], "");
         }
-
-          for (var sub in point) {
-            if (sub is String) {
-              seriesData.writeAll(["\"", sub, "\","], "");
-            } else {
-              seriesData.writeAll([sub], ",");
-            }
-
+        for (var sub in point) {
+          if (sub is String) {
+            seriesData.writeAll(["\"", sub, "\","], "");
+          } else {
+            seriesData.writeAll([sub], ",");
           }
-
+        }
         if (point.length > 1) {
           seriesData.writeAll(["],"], "");
         } else {
@@ -92,26 +87,28 @@ class AOSeries extends Series {
 
 
     
-    if (this.options?.greaterBarColor != null) {  
-      buffer.writeAll(["\"greaterBarColor\":\'",this.options?.greaterBarColor, "\',"], "");
+
+    
+    if (this.options?.greaterBarColor != null) {
+        buffer.writeAll(["\"greaterBarColor\":\'",this.options?.greaterBarColor, "\',"], "");
     }
-
-    if (this.options?.groupPadding != null) {  
-      buffer.writeAll(["\"groupPadding\":",this.options?.groupPadding, ","], "");
+    
+    if (this.options?.groupPadding != null) {
+        buffer.writeAll(["\"groupPadding\":",this.options?.groupPadding, ","], "");
     }
-
-    if (this.options?.lowerBarColor != null) {  
-      buffer.writeAll(["\"lowerBarColor\":\'",this.options?.lowerBarColor, "\',"], "");
+    
+    if (this.options?.lowerBarColor != null) {
+        buffer.writeAll(["\"lowerBarColor\":\'",this.options?.lowerBarColor, "\',"], "");
     }
-
-    if (this.options?.pointPadding != null) {  
-      buffer.writeAll(["\"pointPadding\":",this.options?.pointPadding, ","], "");
+    
+    if (this.options?.pointPadding != null) {
+        buffer.writeAll(["\"pointPadding\":",this.options?.pointPadding, ","], "");
     }
+    // NOTE: skip serialization of states (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
-
-    if (this.options?.threshold != null) {  
-      buffer.writeAll(["\"threshold\":",this.options?.threshold, ","], "");
+    
+    if (this.options?.threshold != null) {
+        buffer.writeAll(["\"threshold\":",this.options?.threshold, ","], "");
     }
   }
 

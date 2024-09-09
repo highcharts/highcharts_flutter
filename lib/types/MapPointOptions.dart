@@ -12,81 +12,127 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'ScatterPointOptions.dart';
 import 'DataLabelOptions.dart';
 import 'SVGPath.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * MapPointOptions 
+ * MapPointOptions
  */
 class MapPointOptions extends ScatterPointOptions {
-  MapPointOptions( {
+
+  MapPointOptions({
     super.accessibility = null,
     super.borderColor = null,
     super.className = null,
-    super.color = null,
+    super.collapsed = null,
+    this.color = null,
     super.colorIndex = null,
     super.connectors = null,
     super.dataLabels = null,
     super.dragDrop = null,
+    this.drilldown = null,
     super.events = null,
+    this.id = null,
+    super.index = null,
     super.keys = null,
+    this.labelrank = null,
+    super.lat = null,
+    super.legendIndex = null,
+    super.lon = null,
     super.marker = null,
+    this.middleX = null,
+    this.middleY = null,
+    this.name = null,
+    this.path = null,
     super.selected = null,
-    super.visible = null
-  }) : super();
-  // NOTE: color skipped - type string is ignored in gen 
+    super.seriesIndex = null,
+    this.value = null,
+    super.visible = null,
+    super.x = null,
+    super.y = null
+  });
 
-  // NOTE: drilldown skipped - type string is ignored in gen 
+  String? color;
+    
+  /** NOTE: extdataLabels is skipped here for now, as it overrides the base type. */
 
-  // NOTE: id skipped - type string is ignored in gen 
+  String? drilldown;
+    
+  // NOTE: geometry skipped - type GeoJSONGeometryMultiPoint is ignored in gen 
 
-  // NOTE: labelrank skipped - type number is ignored in gen 
+  String? id;
+    
+  double? labelrank;
+    
+  double? middleX;
+    
+  double? middleY;
+    
+  String? name;
+    
+  SVGPath? path;
+    
+  // NOTE: properties skipped - type AnyRecord is ignored in gen 
 
-  // NOTE: middleX skipped - type number is ignored in gen 
-
-  // NOTE: middleY skipped - type number is ignored in gen 
-
-  // NOTE: name skipped - type string is ignored in gen 
-
-  // NOTE: value skipped - type number is ignored in gen 
-
+  double? value;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of color (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of dataLabels (type DataLabelOptions is ignored) ignore type: true
+    
+    if (this.color != null) {
+        buffer.writeAll(["\"color\":\'",this.color, "\',"], "");
+    }
+    // NOTE: skip serialization of dataLabels (type DataLabelOptions ignored, skipped: false)
 
-    // NOTE: skip serialization of drilldown (type string is ignored) ignore type: true
+    
+    if (this.drilldown != null) {
+        buffer.writeAll(["\"drilldown\":\'",this.drilldown, "\',"], "");
+    }
+    // NOTE: skip serialization of geometry (type GeoJSONGeometryMultiPoint ignored, skipped: true)
 
-    // NOTE: skip serialization of geometry (type GeoJSONGeometryMultiPoint is ignored) ignore type: 1
+    
+    if (this.id != null) {
+        buffer.writeAll(["\"id\":\'",this.id, "\',"], "");
+    }
+    
+    if (this.labelrank != null) {
+        buffer.writeAll(["\"labelrank\":",this.labelrank, ","], "");
+    }
+    
+    if (this.middleX != null) {
+        buffer.writeAll(["\"middleX\":",this.middleX, ","], "");
+    }
+    
+    if (this.middleY != null) {
+        buffer.writeAll(["\"middleY\":",this.middleY, ","], "");
+    }
+    
+    if (this.name != null) {
+        buffer.writeAll(["\"name\":\'",this.name, "\',"], "");
+    }
+    
+    if (this.path != null) {
+        buffer.writeAll(["\"path\":",this.path?.toJSON(), ","], "");
+    }
+    // NOTE: skip serialization of properties (type AnyRecord ignored, skipped: true)
 
-    // NOTE: skip serialization of id (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of labelrank (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of middleX (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of middleY (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of name (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of path (type SVGPath is ignored) ignore type: true
-
-    // NOTE: skip serialization of properties (type AnyRecord is ignored) ignore type: 1
-
-    // NOTE: skip serialization of value (type number is ignored) ignore type: true
+    
+    if (this.value != null) {
+        buffer.writeAll(["\"value\":",this.value, ","], "");
+    }
   }
+
 
 }

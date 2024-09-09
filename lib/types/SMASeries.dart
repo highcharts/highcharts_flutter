@@ -12,10 +12,9 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'SMAOptions.dart';
 import 'Series.dart';
 import 'PointOptions.dart';
@@ -34,8 +33,7 @@ class SMASeries extends Series {
     this.data = null
   });
 
-  
-  @override
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
@@ -56,16 +54,13 @@ class SMASeries extends Series {
         if (point.length > 1) {
           seriesData.writeAll(["["], "");
         }
-
-          for (var sub in point) {
-            if (sub is String) {
-              seriesData.writeAll(["\"", sub, "\","], "");
-            } else {
-              seriesData.writeAll([sub], ",");
-            }
-
+        for (var sub in point) {
+          if (sub is String) {
+            seriesData.writeAll(["\"", sub, "\","], "");
+          } else {
+            seriesData.writeAll([sub], ",");
           }
-
+        }
         if (point.length > 1) {
           seriesData.writeAll(["],"], "");
         } else {
@@ -92,14 +87,18 @@ class SMASeries extends Series {
 
 
     
-    if (this.options?.compareToMain != null) {  
-      buffer.writeAll(["\"compareToMain\":",this.options?.compareToMain, ","], "");
+
+    
+    if (this.options?.compareToMain != null) {
+        buffer.writeAll(["\"compareToMain\":",this.options?.compareToMain, ","], "");
     }
-
-    // NOTE: skip serialization of data (type number[][] is ignored) ignore type: true
-
-    if (this.options?.params != null) {  
-      buffer.writeAll(["\"params\":",this.options?.params?.toJSON(), ","], "");
+    
+    if (this.options?.data != null) {
+        buffer.writeAll(["\"data\":",this.options?.data, ","], "");
+    }
+    
+    if (this.options?.params != null) {
+        buffer.writeAll(["\"params\":",this.options?.params?.toJSON(), ","], "");
     }
   }
 

@@ -12,32 +12,51 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'DataGroupingInfoObject.dart';
 import 'OptionFragment.dart';
 
 /** 
- * DataGroupingResultObject 
+ * DataGroupingResultObject
  */
 class DataGroupingResultObject extends OptionFragment {
-  DataGroupingResultObject( ) : super();
-  
+
+  DataGroupingResultObject({
+    this.groupedXData = null,
+    this.groupedYData = null,
+    this.groupMap = null
+  });
+
+  double? groupedXData;
+    
+  double? groupedYData;
+    
+  DataGroupingInfoObject? groupMap;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of groupedXData (type number[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of groupedYData (type number[][] is ignored) ignore type: true
-
-    // NOTE: skip serialization of groupMap (type DataGroupingInfoObject[] is ignored) ignore type: true
+    
+    if (this.groupedXData != null) {
+        buffer.writeAll(["\"groupedXData\":",this.groupedXData, ","], "");
+    }
+    
+    if (this.groupedYData != null) {
+        buffer.writeAll(["\"groupedYData\":",this.groupedYData, ","], "");
+    }
+    
+    if (this.groupMap != null) {
+        buffer.writeAll(["\"groupMap\":",this.groupMap, ","], "");
+    }
   }
+
 
 }

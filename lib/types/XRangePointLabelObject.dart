@@ -12,32 +12,44 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * XRangePointLabelObject 
+ * XRangePointLabelObject
  */
 class XRangePointLabelObject extends OptionFragment {
-  XRangePointLabelObject( ) : super();
-  // NOTE: x2 skipped - type number is ignored in gen 
 
-  // NOTE: yCategory skipped - type string is ignored in gen 
+  XRangePointLabelObject({
+    this.x2 = null,
+    this.yCategory = null
+  });
 
+  double? x2;
+    
+  String? yCategory;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of x2 (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of yCategory (type string is ignored) ignore type: true
+    
+    if (this.x2 != null) {
+        buffer.writeAll(["\"x2\":",this.x2, ","], "");
+    }
+    
+    if (this.yCategory != null) {
+        buffer.writeAll(["\"yCategory\":\'",this.yCategory, "\',"], "");
+    }
   }
+
 
 }

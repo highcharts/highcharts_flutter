@@ -12,10 +12,9 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'VariablePieSeriesOptions.dart';
 import 'Series.dart';
 import 'PointOptions.dart';
@@ -34,8 +33,7 @@ class VariablePieSeries extends Series {
     this.data = null
   });
 
-  
-  @override
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
@@ -56,16 +54,13 @@ class VariablePieSeries extends Series {
         if (point.length > 1) {
           seriesData.writeAll(["["], "");
         }
-
-          for (var sub in point) {
-            if (sub is String) {
-              seriesData.writeAll(["\"", sub, "\","], "");
-            } else {
-              seriesData.writeAll([sub], ",");
-            }
-
+        for (var sub in point) {
+          if (sub is String) {
+            seriesData.writeAll(["\"", sub, "\","], "");
+          } else {
+            seriesData.writeAll([sub], ",");
           }
-
+        }
         if (point.length > 1) {
           seriesData.writeAll(["],"], "");
         } else {
@@ -92,26 +87,32 @@ class VariablePieSeries extends Series {
 
 
     
-    if (this.options?.maxPointSize != null) {  
-      buffer.writeAll(["\"maxPointSize\":\'",this.options?.maxPointSize, "\',"], "");
+
+    // NOTE: skip serialization of data (type VariablePiePointOptions)[] ignored, skipped: false)
+
+    
+    if (this.options?.maxPointSize != null) {
+        buffer.writeAll(["\"maxPointSize\":\'",this.options?.maxPointSize, "\',"], "");
     }
-
-    if (this.options?.minPointSize != null) {  
-      buffer.writeAll(["\"minPointSize\":\'",this.options?.minPointSize, "\',"], "");
+    
+    if (this.options?.minPointSize != null) {
+        buffer.writeAll(["\"minPointSize\":\'",this.options?.minPointSize, "\',"], "");
     }
-
-    if (this.options?.sizeBy != null) {  
-      buffer.writeAll(["\"sizeBy\":\'",this.options?.sizeBy, "\',"], "");
+    
+    if (this.options?.sizeBy != null) {
+        buffer.writeAll(["\"sizeBy\":\'",this.options?.sizeBy, "\',"], "");
     }
+    // NOTE: skip serialization of states (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
+    // NOTE: skip serialization of tooltip (type Generic ignored, skipped: true)
 
-    if (this.options?.zMax != null) {  
-      buffer.writeAll(["\"zMax\":",this.options?.zMax, ","], "");
+    
+    if (this.options?.zMax != null) {
+        buffer.writeAll(["\"zMax\":",this.options?.zMax, ","], "");
     }
-
-    if (this.options?.zMin != null) {  
-      buffer.writeAll(["\"zMin\":",this.options?.zMin, ","], "");
+    
+    if (this.options?.zMin != null) {
+        buffer.writeAll(["\"zMin\":",this.options?.zMin, ","], "");
     }
   }
 

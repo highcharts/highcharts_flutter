@@ -12,28 +12,37 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * PointConnectOptionsObject 
+ * PointConnectOptionsObject
  */
 class PointConnectOptionsObject extends OptionFragment {
-  PointConnectOptionsObject( ) : super();
-  // NOTE: to skipped - type string is ignored in gen 
 
+  PointConnectOptionsObject({
+    this.to = null
+  });
+
+  String? to;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of to (type string is ignored) ignore type: true
+
+    
+    if (this.to != null) {
+        buffer.writeAll(["\"to\":\'",this.to, "\',"], "");
+    }
   }
+
 
 }

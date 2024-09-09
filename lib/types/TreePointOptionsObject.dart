@@ -12,44 +12,65 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * TreePointOptionsObject 
+ * TreePointOptionsObject
  */
 class TreePointOptionsObject extends OptionFragment {
-  TreePointOptionsObject( ) : super();
-  // NOTE: end skipped - type number is ignored in gen 
 
-  // NOTE: id skipped - type string is ignored in gen 
+  TreePointOptionsObject({
+    this.end = null,
+    this.id = null,
+    this.milestone = null,
+    this.parent = null,
+    this.start = null
+  });
 
-  // NOTE: milestone skipped - type boolean is ignored in gen 
-
-  // NOTE: parent skipped - type string is ignored in gen 
-
-  // NOTE: start skipped - type number is ignored in gen 
-
+  double? end;
+    
+  String? id;
+    
+  bool? milestone;
+    
+  String? parent;
+    
+  double? start;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of end (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of id (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of milestone (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of parent (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of start (type number is ignored) ignore type: true
+    
+    if (this.end != null) {
+        buffer.writeAll(["\"end\":",this.end, ","], "");
+    }
+    
+    if (this.id != null) {
+        buffer.writeAll(["\"id\":\'",this.id, "\',"], "");
+    }
+    
+    if (this.milestone != null) {
+        buffer.writeAll(["\"milestone\":",this.milestone, ","], "");
+    }
+    
+    if (this.parent != null) {
+        buffer.writeAll(["\"parent\":\'",this.parent, "\',"], "");
+    }
+    
+    if (this.start != null) {
+        buffer.writeAll(["\"start\":",this.start, ","], "");
+    }
   }
+
 
 }

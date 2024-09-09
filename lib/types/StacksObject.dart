@@ -12,32 +12,49 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * StacksObject 
+ * StacksObject
  */
 class StacksObject extends OptionFragment {
-  StacksObject( ) : super();
-  // NOTE: changed skipped - type boolean is ignored in gen 
 
+  StacksObject({
+    this.alreadyChanged = null,
+    this.changed = null,
+    this.waterfall = null
+  });
+
+  bool? changed;
+    
+  String? alreadyChanged;
+    
+  Map<String, String>? waterfall;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of changed (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of alreadyChanged (type string[] is ignored) ignore type: true
+    
+    if (this.changed != null) {
+        buffer.writeAll(["\"changed\":",this.changed, ","], "");
+    }
+    
+    if (this.alreadyChanged != null) {
+        buffer.writeAll(["\"alreadyChanged\":",this.alreadyChanged, ","], "");
+    }
+    // NOTE: skip serialization of waterfall (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of waterfall (type Generic is ignored) ignore type: true
   }
+
 
 }

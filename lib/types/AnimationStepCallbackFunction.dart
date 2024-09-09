@@ -12,27 +12,29 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * AnimationStepCallbackFunction 
+ * AnimationStepCallbackFunction
  */
 class AnimationStepCallbackFunction extends OptionFragment {
-  AnimationStepCallbackFunction( ) : super();
-  
+
+  AnimationStepCallbackFunction();
+
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    
+
   }
+
 
 }

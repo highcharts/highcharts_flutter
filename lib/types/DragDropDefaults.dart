@@ -12,47 +12,60 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'DragDropOptions.dart';
 import 'DragDropHandleOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * DragDropDefaults 
+ * DragDropDefaults
  */
 class DragDropDefaults extends DragDropOptions {
-  DragDropDefaults( {
+
+  DragDropDefaults({
     super.draggableX = null,
     super.draggableY = null,
+    this.dragHandle = null,
     super.dragMaxX = null,
     super.dragMaxY = null,
     super.dragMinX = null,
     super.dragMinY = null,
     super.dragPrecisionX = null,
     super.dragPrecisionY = null,
-    super.dragSensitivity = null,
+    this.dragSensitivity = null,
     super.groupBy = null,
-    super.guideBox = null,
+    this.guideBox = null,
     super.liveRedraw = null
-  }) : super();
-  // NOTE: dragSensitivity skipped - type number is ignored in gen 
+  });
 
+  double? dragSensitivity;
+    
+  DragDropHandleOptions? dragHandle;
+    
+  Map<String, String>? guideBox;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of dragSensitivity (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of dragHandle (type DragDropHandleOptions is ignored) ignore type: true
+    
+    if (this.dragSensitivity != null) {
+        buffer.writeAll(["\"dragSensitivity\":",this.dragSensitivity, ","], "");
+    }
+    
+    if (this.dragHandle != null) {
+        buffer.writeAll(["\"dragHandle\":",this.dragHandle?.toJSON(), ","], "");
+    }
+    // NOTE: skip serialization of guideBox (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of guideBox (type Generic is ignored) ignore type: true
   }
+
 
 }

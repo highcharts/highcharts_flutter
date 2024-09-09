@@ -12,36 +12,51 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * TimeNormalizedObject 
+ * TimeNormalizedObject
  */
 class TimeNormalizedObject extends OptionFragment {
-  TimeNormalizedObject( ) : super();
-  // NOTE: count skipped - type number is ignored in gen 
 
-  // NOTE: unitName skipped - type string is ignored in gen 
+  TimeNormalizedObject({
+    this.count = null,
+    this.unitName = null,
+    this.unitRange = null
+  });
 
-  // NOTE: unitRange skipped - type number is ignored in gen 
-
+  double? count;
+    
+  String? unitName;
+    
+  double? unitRange;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of count (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of unitName (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of unitRange (type number is ignored) ignore type: true
+    
+    if (this.count != null) {
+        buffer.writeAll(["\"count\":",this.count, ","], "");
+    }
+    
+    if (this.unitName != null) {
+        buffer.writeAll(["\"unitName\":\'",this.unitName, "\',"], "");
+    }
+    
+    if (this.unitRange != null) {
+        buffer.writeAll(["\"unitRange\":",this.unitRange, ","], "");
+    }
   }
+
 
 }

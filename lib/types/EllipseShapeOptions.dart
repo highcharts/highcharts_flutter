@@ -12,49 +12,72 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'ControllableShapeOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * EllipseShapeOptions 
+ * EllipseShapeOptions
  */
 class EllipseShapeOptions extends ControllableShapeOptions {
-  EllipseShapeOptions( {
+
+  EllipseShapeOptions({
+    super.className = null,
     super.controlPointOptions = null,
+    super.controlPoints = null,
+    super.d = null,
     super.fill = null,
     super.height = null,
+    super.id = null,
+    super.markerEnd = null,
+    super.markerStart = null,
+    super.point = null,
+    super.points = null,
     super.r = null,
-    super.ry = null,
+    super.rx = null,
+    this.ry = null,
     super.snap = null,
     super.src = null,
     super.stroke = null,
     super.strokeWidth = null,
     super.type = null,
-    super.width = null
-  }) : super();
-  // NOTE: yAxis skipped - type number is ignored in gen 
+    super.width = null,
+    super.x = null,
+    this.xAxis = null,
+    super.y = null,
+    this.yAxis = null
+  });
 
-  // NOTE: xAxis skipped - type number is ignored in gen 
-
-  // NOTE: ry skipped - type number is ignored in gen 
-
+  double? yAxis;
+    
+  double? xAxis;
+    
+  double? ry;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of yAxis (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of xAxis (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of ry (type number is ignored) ignore type: true
+    
+    if (this.yAxis != null) {
+        buffer.writeAll(["\"yAxis\":",this.yAxis, ","], "");
+    }
+    
+    if (this.xAxis != null) {
+        buffer.writeAll(["\"xAxis\":",this.xAxis, ","], "");
+    }
+    
+    if (this.ry != null) {
+        buffer.writeAll(["\"ry\":",this.ry, ","], "");
+    }
   }
+
 
 }

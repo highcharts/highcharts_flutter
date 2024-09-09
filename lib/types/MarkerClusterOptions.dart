@@ -12,10 +12,9 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'DataLabelOptions.dart';
 import 'MarkerClusterEventsOptions.dart';
 import 'MarkerClusterLayoutAlgorithmOptions.dart';
@@ -23,48 +22,96 @@ import 'MarkerClusterMarkerOptions.dart';
 import 'MarkerClusterZonesOptions.dart';
 import 'OptionFragment.dart';
 
+
 /** 
- * MarkerClusterOptions 
+ * MarkerClusterOptions
  */
 class MarkerClusterOptions extends OptionFragment {
-  MarkerClusterOptions( ) : super();
-  // NOTE: allowOverlap skipped - type boolean is ignored in gen 
 
-  // NOTE: drillToCluster skipped - type boolean is ignored in gen 
+  MarkerClusterOptions({
+    this.allowOverlap = null,
+    this.dataLabels = null,
+    this.drillToCluster = null,
+    this.enabled = null,
+    this.events = null,
+    this.layoutAlgorithm = null,
+    this.marker = null,
+    this.minimumClusterSize = null,
+    this.zones = null
+  });
 
-  // NOTE: enabled skipped - type boolean is ignored in gen 
+  bool? allowOverlap;
+    
+  // NOTE: animation skipped - type Generic is ignored in gen 
 
-  // NOTE: minimumClusterSize skipped - type number is ignored in gen 
+  DataLabelOptions? dataLabels;
+    
+  bool? drillToCluster;
+    
+  bool? enabled;
+    
+  MarkerClusterEventsOptions? events;
+    
+  MarkerClusterLayoutAlgorithmOptions? layoutAlgorithm;
+    
+  MarkerClusterMarkerOptions? marker;
+    
+  double? minimumClusterSize;
+    
+  // NOTE: states skipped - type Generic is ignored in gen 
 
+  MarkerClusterZonesOptions? zones;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of allowOverlap (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of animation (type Generic is ignored) ignore type: true
+    
+    if (this.allowOverlap != null) {
+        buffer.writeAll(["\"allowOverlap\":",this.allowOverlap, ","], "");
+    }
+    // NOTE: skip serialization of animation (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of dataLabels (type DataLabelOptions is ignored) ignore type: true
+    
+    if (this.dataLabels != null) {
+        buffer.writeAll(["\"dataLabels\":",this.dataLabels?.toJSON(), ","], "");
+    }
+    
+    if (this.drillToCluster != null) {
+        buffer.writeAll(["\"drillToCluster\":",this.drillToCluster, ","], "");
+    }
+    
+    if (this.enabled != null) {
+        buffer.writeAll(["\"enabled\":",this.enabled, ","], "");
+    }
+    
+    if (this.events != null) {
+        buffer.writeAll(["\"events\":",this.events?.toJSON(), ","], "");
+    }
+    
+    if (this.layoutAlgorithm != null) {
+        buffer.writeAll(["\"layoutAlgorithm\":",this.layoutAlgorithm?.toJSON(), ","], "");
+    }
+    
+    if (this.marker != null) {
+        buffer.writeAll(["\"marker\":",this.marker?.toJSON(), ","], "");
+    }
+    
+    if (this.minimumClusterSize != null) {
+        buffer.writeAll(["\"minimumClusterSize\":",this.minimumClusterSize, ","], "");
+    }
+    // NOTE: skip serialization of states (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of drillToCluster (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of enabled (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of events (type MarkerClusterEventsOptions is ignored) ignore type: true
-
-    // NOTE: skip serialization of layoutAlgorithm (type MarkerClusterLayoutAlgorithmOptions is ignored) ignore type: true
-
-    // NOTE: skip serialization of marker (type MarkerClusterMarkerOptions is ignored) ignore type: true
-
-    // NOTE: skip serialization of minimumClusterSize (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
-
-    // NOTE: skip serialization of zones (type MarkerClusterZonesOptions[] is ignored) ignore type: true
+    
+    if (this.zones != null) {
+        buffer.writeAll(["\"zones\":",this.zones, ","], "");
+    }
   }
+
 
 }

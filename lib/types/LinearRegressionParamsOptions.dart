@@ -12,32 +12,39 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'SMAParamsOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * LinearRegressionParamsOptions 
+ * LinearRegressionParamsOptions
  */
 class LinearRegressionParamsOptions extends SMAParamsOptions {
-  LinearRegressionParamsOptions( {
-    super.index = null,
-    super.period = null
-  }) : super();
-  // NOTE: xAxisUnit skipped - type number is ignored in gen 
 
+  LinearRegressionParamsOptions({
+    super.index = null,
+    super.period = null,
+    this.xAxisUnit = null
+  });
+
+  double? xAxisUnit;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of xAxisUnit (type number is ignored) ignore type: true
+
+    
+    if (this.xAxisUnit != null) {
+        buffer.writeAll(["\"xAxisUnit\":",this.xAxisUnit, ","], "");
+    }
   }
+
 
 }

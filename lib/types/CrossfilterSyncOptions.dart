@@ -12,28 +12,37 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * CrossfilterSyncOptions 
+ * CrossfilterSyncOptions
  */
 class CrossfilterSyncOptions extends OptionFragment {
-  CrossfilterSyncOptions( ) : super();
-  // NOTE: affectNavigator skipped - type boolean is ignored in gen 
 
+  CrossfilterSyncOptions({
+    this.affectNavigator = null
+  });
+
+  bool? affectNavigator;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of affectNavigator (type boolean is ignored) ignore type: true
+
+    
+    if (this.affectNavigator != null) {
+        buffer.writeAll(["\"affectNavigator\":",this.affectNavigator, ","], "");
+    }
   }
+
 
 }

@@ -12,44 +12,65 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * AnnotationTypePointsOptions 
+ * AnnotationTypePointsOptions
  */
 class AnnotationTypePointsOptions extends OptionFragment {
-  AnnotationTypePointsOptions( ) : super();
-  // NOTE: controlPoint skipped - type number is ignored in gen 
 
-  // NOTE: x skipped - type number is ignored in gen 
+  AnnotationTypePointsOptions({
+    this.controlPoint = null,
+    this.x = null,
+    this.xAxis = null,
+    this.y = null,
+    this.yAxis = null
+  });
 
-  // NOTE: xAxis skipped - type number is ignored in gen 
-
-  // NOTE: y skipped - type number is ignored in gen 
-
-  // NOTE: yAxis skipped - type number is ignored in gen 
-
+  double? controlPoint;
+    
+  double? x;
+    
+  double? xAxis;
+    
+  double? y;
+    
+  double? yAxis;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of controlPoint (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of x (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of xAxis (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of y (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of yAxis (type number is ignored) ignore type: true
+    
+    if (this.controlPoint != null) {
+        buffer.writeAll(["\"controlPoint\":",this.controlPoint, ","], "");
+    }
+    
+    if (this.x != null) {
+        buffer.writeAll(["\"x\":",this.x, ","], "");
+    }
+    
+    if (this.xAxis != null) {
+        buffer.writeAll(["\"xAxis\":",this.xAxis, ","], "");
+    }
+    
+    if (this.y != null) {
+        buffer.writeAll(["\"y\":",this.y, ","], "");
+    }
+    
+    if (this.yAxis != null) {
+        buffer.writeAll(["\"yAxis\":",this.yAxis, ","], "");
+    }
   }
+
 
 }

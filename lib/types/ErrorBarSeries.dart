@@ -12,10 +12,9 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'ErrorBarSeriesOptions.dart';
 import 'Series.dart';
 import 'PointOptions.dart';
@@ -34,8 +33,7 @@ class ErrorBarSeries extends Series {
     this.data = null
   });
 
-  
-  @override
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
@@ -56,16 +54,13 @@ class ErrorBarSeries extends Series {
         if (point.length > 1) {
           seriesData.writeAll(["["], "");
         }
-
-          for (var sub in point) {
-            if (sub is String) {
-              seriesData.writeAll(["\"", sub, "\","], "");
-            } else {
-              seriesData.writeAll([sub], ",");
-            }
-
+        for (var sub in point) {
+          if (sub is String) {
+            seriesData.writeAll(["\"", sub, "\","], "");
+          } else {
+            seriesData.writeAll([sub], ",");
           }
-
+        }
         if (point.length > 1) {
           seriesData.writeAll(["],"], "");
         } else {
@@ -92,10 +87,28 @@ class ErrorBarSeries extends Series {
 
 
     
-    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
 
-    if (this.options?.whiskerWidth != null) {  
-      buffer.writeAll(["\"whiskerWidth\":",this.options?.whiskerWidth, ","], "");
+    
+    if (this.options?.color != null) {
+        buffer.writeAll(["\"color\":\'",this.options?.color, "\',"], "");
+    }
+    // NOTE: skip serialization of data (type ErrorBarPointOptions)[] ignored, skipped: false)
+
+    
+    if (this.options?.grouping != null) {
+        buffer.writeAll(["\"grouping\":",this.options?.grouping, ","], "");
+    }
+    
+    if (this.options?.linkedTo != null) {
+        buffer.writeAll(["\"linkedTo\":\'",this.options?.linkedTo, "\',"], "");
+    }
+    // NOTE: skip serialization of states (type Generic ignored, skipped: true)
+
+    // NOTE: skip serialization of tooltip (type Generic ignored, skipped: true)
+
+    
+    if (this.options?.whiskerWidth != null) {
+        buffer.writeAll(["\"whiskerWidth\":",this.options?.whiskerWidth, ","], "");
     }
   }
 

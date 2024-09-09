@@ -12,38 +12,55 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * DashboardsPlugin 
+ * DashboardsPlugin
  */
 class DashboardsPlugin extends OptionFragment {
-  DashboardsPlugin( ) : super();
-  // NOTE: maxRevision skipped - type number is ignored in gen 
 
-  // NOTE: minRevision skipped - type number is ignored in gen 
+  DashboardsPlugin({
+    this.maxRevision = null,
+    this.minRevision = null,
+    this.name = null
+  });
 
-  // NOTE: name skipped - type string is ignored in gen 
+  // NOTE: custom skipped - type T is ignored in gen 
 
+  double? maxRevision;
+    
+  double? minRevision;
+    
+  String? name;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of custom (type T is ignored) ignore type: 1
 
-    // NOTE: skip serialization of maxRevision (type number is ignored) ignore type: true
+    // NOTE: skip serialization of custom (type T ignored, skipped: true)
 
-    // NOTE: skip serialization of minRevision (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of name (type string is ignored) ignore type: true
+    
+    if (this.maxRevision != null) {
+        buffer.writeAll(["\"maxRevision\":",this.maxRevision, ","], "");
+    }
+    
+    if (this.minRevision != null) {
+        buffer.writeAll(["\"minRevision\":",this.minRevision, ","], "");
+    }
+    
+    if (this.name != null) {
+        buffer.writeAll(["\"name\":\'",this.name, "\',"], "");
+    }
   }
+
 
 }

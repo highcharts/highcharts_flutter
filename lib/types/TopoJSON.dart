@@ -12,52 +12,85 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'TopoJSONObjects.dart';
 import 'TopoJSONTransform.dart';
 import 'OptionFragment.dart';
 
 /** 
- * TopoJSON 
+ * TopoJSON
  */
 class TopoJSON extends OptionFragment {
-  TopoJSON( ) : super();
-  // NOTE: arcs skipped - type number is ignored in gen 
 
-  // NOTE: copyright skipped - type string is ignored in gen 
+  TopoJSON({
+    this.arcs = null,
+    this.copyright = null,
+    this.copyrightShort = null,
+    this.copyrightUrl = null,
+    this.objects = null,
+    this.title = null,
+    this.transform = null
+  });
 
-  // NOTE: copyrightShort skipped - type string is ignored in gen 
-
-  // NOTE: copyrightUrl skipped - type string is ignored in gen 
-
-  // NOTE: title skipped - type string is ignored in gen 
+  List<double>? arcs; // double
+  String? copyright;
+    
+  String? copyrightShort;
+    
+  String? copyrightUrl;
+    
+  TopoJSONObjects? objects;
+    
+  String? title;
+    
+  TopoJSONTransform? transform;
+    
+  // NOTE: type skipped - type "Topology" is ignored in gen 
 
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of arcs (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of copyright (type string is ignored) ignore type: true
+    
+    if (this.arcs != null) {
+      StringBuffer arrData = StringBuffer();
+      arrData.writeAll(this.arcs!, ",");
+      buffer.writeAll(["\"arcs\": [", arrData , "],"], "");
+    }
+    
+    if (this.copyright != null) {
+        buffer.writeAll(["\"copyright\":\'",this.copyright, "\',"], "");
+    }
+    
+    if (this.copyrightShort != null) {
+        buffer.writeAll(["\"copyrightShort\":\'",this.copyrightShort, "\',"], "");
+    }
+    
+    if (this.copyrightUrl != null) {
+        buffer.writeAll(["\"copyrightUrl\":\'",this.copyrightUrl, "\',"], "");
+    }
+    
+    if (this.objects != null) {
+        buffer.writeAll(["\"objects\":",this.objects?.toJSON(), ","], "");
+    }
+    
+    if (this.title != null) {
+        buffer.writeAll(["\"title\":\'",this.title, "\',"], "");
+    }
+    
+    if (this.transform != null) {
+        buffer.writeAll(["\"transform\":",this.transform?.toJSON(), ","], "");
+    }
+    // NOTE: skip serialization of type (type "Topology" ignored, skipped: true)
 
-    // NOTE: skip serialization of copyrightShort (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of copyrightUrl (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of objects (type TopoJSONObjects is ignored) ignore type: true
-
-    // NOTE: skip serialization of title (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of transform (type TopoJSONTransform is ignored) ignore type: true
-
-    // NOTE: skip serialization of type (type "Topology" is ignored) ignore type: true
   }
+
 
 }

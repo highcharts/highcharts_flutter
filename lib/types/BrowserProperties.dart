@@ -12,36 +12,51 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * BrowserProperties 
+ * BrowserProperties
  */
 class BrowserProperties extends OptionFragment {
-  BrowserProperties( ) : super();
-  // NOTE: fullscreenChange skipped - type string is ignored in gen 
 
-  // NOTE: requestFullscreen skipped - type string is ignored in gen 
+  BrowserProperties({
+    this.exitFullscreen = null,
+    this.fullscreenChange = null,
+    this.requestFullscreen = null
+  });
 
-  // NOTE: exitFullscreen skipped - type string is ignored in gen 
-
+  String? fullscreenChange;
+    
+  String? requestFullscreen;
+    
+  String? exitFullscreen;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of fullscreenChange (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of requestFullscreen (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of exitFullscreen (type string is ignored) ignore type: true
+    
+    if (this.fullscreenChange != null) {
+        buffer.writeAll(["\"fullscreenChange\":\'",this.fullscreenChange, "\',"], "");
+    }
+    
+    if (this.requestFullscreen != null) {
+        buffer.writeAll(["\"requestFullscreen\":\'",this.requestFullscreen, "\',"], "");
+    }
+    
+    if (this.exitFullscreen != null) {
+        buffer.writeAll(["\"exitFullscreen\":\'",this.exitFullscreen, "\',"], "");
+    }
   }
+
 
 }

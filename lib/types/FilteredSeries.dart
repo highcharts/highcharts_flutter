@@ -12,35 +12,51 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'SMAIndicator.dart';
 import 'OptionFragment.dart';
 
 /** 
- * FilteredSeries 
+ * FilteredSeries
  */
 class FilteredSeries extends OptionFragment {
-  FilteredSeries( ) : super();
-  // NOTE: indicatorFullName skipped - type string is ignored in gen 
 
-  // NOTE: indicatorType skipped - type string is ignored in gen 
+  FilteredSeries({
+    this.indicatorFullName = null,
+    this.indicatorType = null,
+    this.series = null
+  });
 
+  String? indicatorFullName;
+    
+  String? indicatorType;
+    
+  SMAIndicator? series;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of indicatorFullName (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of indicatorType (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of series (type SMAIndicator is ignored) ignore type: true
+    
+    if (this.indicatorFullName != null) {
+        buffer.writeAll(["\"indicatorFullName\":\'",this.indicatorFullName, "\',"], "");
+    }
+    
+    if (this.indicatorType != null) {
+        buffer.writeAll(["\"indicatorType\":\'",this.indicatorType, "\',"], "");
+    }
+    
+    if (this.series != null) {
+        buffer.writeAll(["\"series\":",this.series?.toJSON(), ","], "");
+    }
   }
+
 
 }

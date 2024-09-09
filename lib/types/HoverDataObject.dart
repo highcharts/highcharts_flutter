@@ -12,33 +12,52 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'Point.dart';
 import 'Series.dart';
 import 'OptionFragment.dart';
 
 /** 
- * HoverDataObject 
+ * HoverDataObject
  */
 class HoverDataObject extends OptionFragment {
-  HoverDataObject( ) : super();
-  
+
+  HoverDataObject({
+    this.hoverPoint = null,
+    this.hoverPoints = null,
+    this.hoverSeries = null
+  });
+
+  Point? hoverPoint;
+    
+  Point? hoverPoints;
+    
+  Series? hoverSeries;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of hoverPoint (type Point is ignored) ignore type: true
 
-    // NOTE: skip serialization of hoverPoints (type Point[] is ignored) ignore type: true
-
-    // NOTE: skip serialization of hoverSeries (type Series is ignored) ignore type: true
+    
+    if (this.hoverPoint != null) {
+        buffer.writeAll(["\"hoverPoint\":",this.hoverPoint?.toJSON(), ","], "");
+    }
+    
+    if (this.hoverPoints != null) {
+        buffer.writeAll(["\"hoverPoints\":",this.hoverPoints, ","], "");
+    }
+    
+    if (this.hoverSeries != null) {
+        buffer.writeAll(["\"hoverSeries\":",this.hoverSeries?.toJSON(), ","], "");
+    }
   }
+
 
 }

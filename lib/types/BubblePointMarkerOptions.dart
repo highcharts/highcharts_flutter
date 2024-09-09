@@ -12,39 +12,47 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'PointMarkerOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * BubblePointMarkerOptions 
+ * BubblePointMarkerOptions
  */
 class BubblePointMarkerOptions extends PointMarkerOptions {
-  BubblePointMarkerOptions( {
+
+  BubblePointMarkerOptions({
     super.enabled = null,
     super.enabledThreshold = null,
     super.fillColor = null,
+    this.fillOpacity = null,
     super.height = null,
     super.lineColor = null,
     super.lineWidth = null,
     super.radius = null,
+    super.radiusPlus = null,
     super.symbol = null,
     super.width = null
-  }) : super();
-  // NOTE: fillOpacity skipped - type number is ignored in gen 
+  });
 
+  double? fillOpacity;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of fillOpacity (type number is ignored) ignore type: true
+
+    
+    if (this.fillOpacity != null) {
+        buffer.writeAll(["\"fillOpacity\":",this.fillOpacity, ","], "");
+    }
   }
+
 
 }

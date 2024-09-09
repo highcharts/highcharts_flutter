@@ -12,45 +12,71 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'Axis.dart';
-import 'PointerEvent.dart';
 import 'SelectEventObject.dart';
 import 'OptionFragment.dart';
 
 /** 
- * ChartTransformParams 
+ * ChartTransformParams
  */
 class ChartTransformParams extends OptionFragment {
-  ChartTransformParams( ) : super();
-  // NOTE: reset skipped - type boolean is ignored in gen 
 
-  // NOTE: trigger skipped - type string is ignored in gen 
+  ChartTransformParams({
+    this.axes = null,
+    this.reset = null,
+    this.selection = null,
+    this.trigger = null
+  });
 
+  Axis? axes;
+    
+  // NOTE: event skipped - type PointerEvent is ignored in gen 
+
+  // NOTE: to skipped - type Generic is ignored in gen 
+
+  bool? reset;
+    
+  SelectEventObject? selection;
+    
+  // NOTE: from skipped - type Generic is ignored in gen 
+
+  String? trigger;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of axes (type Axis[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of event (type PointerEvent is ignored) ignore type: true
+    
+    if (this.axes != null) {
+        buffer.writeAll(["\"axes\":",this.axes, ","], "");
+    }
+    // NOTE: skip serialization of event (type PointerEvent ignored, skipped: true)
 
-    // NOTE: skip serialization of to (type Generic is ignored) ignore type: true
+    // NOTE: skip serialization of to (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of reset (type boolean is ignored) ignore type: true
+    
+    if (this.reset != null) {
+        buffer.writeAll(["\"reset\":",this.reset, ","], "");
+    }
+    
+    if (this.selection != null) {
+        buffer.writeAll(["\"selection\":",this.selection?.toJSON(), ","], "");
+    }
+    // NOTE: skip serialization of from (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of selection (type SelectEventObject is ignored) ignore type: true
-
-    // NOTE: skip serialization of from (type Generic is ignored) ignore type: true
-
-    // NOTE: skip serialization of trigger (type string is ignored) ignore type: true
+    
+    if (this.trigger != null) {
+        buffer.writeAll(["\"trigger\":\'",this.trigger, "\',"], "");
+    }
   }
+
 
 }

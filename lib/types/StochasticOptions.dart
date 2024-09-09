@@ -12,36 +12,44 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'SMAOptions.dart';
 import 'DataGroupingOptions.dart';
 import 'PointMarkerOptions.dart';
 import 'StochasticParamsOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * StochasticOptions 
+ * StochasticOptions
  */
 class StochasticOptions extends SMAOptions {
-  StochasticOptions( {
+
+  StochasticOptions({
     super.accessibility = null,
     super.allAreas = null,
     super.allowPointSelect = null,
     super.animationLimit = null,
+    super.baseSeries = null,
     super.boostBlending = null,
     super.boostThreshold = null,
     super.borderColor = null,
+    super.borderDashStyle = null,
+    super.borderRadius = null,
     super.borderWidth = null,
+    super.centerInCategory = null,
     super.className = null,
     super.clip = null,
+    super.cluster = null,
     super.color = null,
     super.colorAxis = null,
+    super.colorByPoint = null,
     super.colorIndex = null,
     super.colorKey = null,
+    super.colors = null,
     super.compare = null,
+    super.compareBase = null,
     super.compareStart = null,
     super.compareToMain = null,
     super.connectEnds = null,
@@ -50,33 +58,56 @@ class StochasticOptions extends SMAOptions {
     super.crisp = null,
     super.cropThreshold = null,
     super.cumulative = null,
+    super.cumulativeStart = null,
     super.cursor = null,
     super.dashStyle = null,
+    super.data = null,
+    super.dataAsColumns = null,
     this.dataGrouping = null,
     super.dataLabels = null,
     super.dataSorting = null,
+    super.depth = null,
     super.description = null,
     super.dragDrop = null,
+    super.drilldown = null,
+    super.edgeColor = null,
+    super.edgeWidth = null,
     super.enableMouseTracking = null,
     super.events = null,
+    super.fillColor = null,
+    super.fillOpacity = null,
     super.findNearestPointBy = null,
     super.gapSize = null,
     super.gapUnit = null,
     super.getExtremesFromAll = null,
+    super.grouping = null,
+    super.groupPadding = null,
+    super.groupZPadding = null,
+    super.id = null,
+    super.inactiveOtherPoints = null,
     super.includeInDataExport = null,
+    super.index = null,
+    super.isInternal = null,
     super.joinBy = null,
+    super.kdNow = null,
     super.keys = null,
     super.label = null,
     super.lastPrice = null,
     super.lastVisiblePrice = null,
+    super.legendIndex = null,
     super.legendSymbol = null,
+    super.legendType = null,
     super.linecap = null,
+    super.lineColor = null,
     super.lineWidth = null,
     super.linkedTo = null,
     this.marker = null,
+    super.name = null,
     super.navigatorOptions = null,
     super.negativeColor = null,
+    super.negativeFillColor = null,
     super.onPoint = null,
+    super.onSeries = null,
     super.opacity = null,
     super.params = null,
     super.point = null,
@@ -85,6 +116,7 @@ class StochasticOptions extends SMAOptions {
     super.pointPlacement = null,
     super.pointRange = null,
     super.pointStart = null,
+    super.pointValKey = null,
     super.relativeXValue = null,
     super.selected = null,
     super.showCheckbox = null,
@@ -93,46 +125,89 @@ class StochasticOptions extends SMAOptions {
     super.skipKeyboardNavigation = null,
     this.smoothedLine = null,
     super.softThreshold = null,
+    super.stack = null,
     super.stacking = null,
+    super.startFromThreshold = null,
+    super.states = null,
     super.step = null,
     super.stickyTracking = null,
+    super.supportingColor = null,
     super.threshold = null,
     super.tooltip = null,
+    super.trackByArea = null,
     super.turboThreshold = null,
+    super.type = null,
+    super.useOhlcData = null,
     super.visible = null,
+    super.xAxis = null,
+    super.xData = null,
+    super.yAxis = null,
+    super.yData = null,
     super.zIndex = null,
     super.zoneAxis = null,
     super.zones = null
-  }) : super();
+  });
+
+  /**
+   * Data grouping is the concept of sampling the data values into larger
+   * blocks in order to ease readability and increase performance of the
+   * JavaScript charts. Highcharts Stock by default applies data grouping when
+   * the points become closer than a certain pixel value, determined by
+   * the `groupPixelWidth` option.
+   * 
+   * If data grouping is applied, the grouping information of grouped
+   * points can be read from the [Point.dataGroup](/class-reference/Highcharts.Point#dataGroup). If point options other than
+   * the data itself are set, for example `name` or `color` or custom properties,
+   * the grouping logic doesn't know how to group it. In this case the options of
+   * the first point instance are copied over to the group point. This can be
+   * altered through a custom `approximation` callback function.  
+   */
   DataGroupingOptions? dataGrouping;
     
+  /**
+   * Options for the point markers of line and scatter-like series. Properties
+   * like `fillColor`, `lineColor` and `lineWidth` define the visual
+   * appearance of the markers. The `symbol` option defines the shape. Other
+   * series types, like column series, don't have markers, but have visual
+   * options on the series level instead.
+   * 
+   * In styled mode, the markers can be styled with the `.highcharts-point`,
+   * `.highcharts-point-hover` and `.highcharts-point-select` class names.  
+   */
   PointMarkerOptions? marker;
     
+  /**
+   * Parameters used in calculation of regression series' points.  
+   */
   /** NOTE: extparams is skipped here for now, as it overrides the base type. */
 
+  /**
+   * Smoothed line options.  
+   */
   Map<String, String>? smoothedLine;
     
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    if (this.dataGrouping != null) {  
-      buffer.writeAll(["\"dataGrouping\":",this.dataGrouping?.toJSON(), ","], "");
-    }
 
-    if (this.marker != null) {  
-      buffer.writeAll(["\"marker\":",this.marker?.toJSON(), ","], "");
+    
+    if (this.dataGrouping != null) {
+        buffer.writeAll(["\"dataGrouping\":",this.dataGrouping?.toJSON(), ","], "");
     }
-
-    // NOTE: skip serialization of params (type StochasticParamsOptions is ignored) ignore type: false
-
-    if (this.smoothedLine != null) {  
-      buffer.writeAll(["\"smoothedLine\":",this.smoothedLine, ","], "");
+    
+    if (this.marker != null) {
+        buffer.writeAll(["\"marker\":",this.marker?.toJSON(), ","], "");
     }
+    // NOTE: skip serialization of params (type StochasticParamsOptions ignored, skipped: false)
+
+    // NOTE: skip serialization of smoothedLine (type Generic ignored, skipped: true)
+
   }
+
 
 }

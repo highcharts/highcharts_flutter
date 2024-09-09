@@ -12,32 +12,44 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * AddComponentBtn 
+ * AddComponentBtn
  */
 class AddComponentBtn extends OptionFragment {
-  AddComponentBtn( ) : super();
-  // NOTE: enabled skipped - type boolean is ignored in gen 
 
-  // NOTE: icon skipped - type string is ignored in gen 
+  AddComponentBtn({
+    this.enabled = null,
+    this.icon = null
+  });
 
+  bool? enabled;
+    
+  String? icon;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of enabled (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of icon (type string is ignored) ignore type: true
+    
+    if (this.enabled != null) {
+        buffer.writeAll(["\"enabled\":",this.enabled, ","], "");
+    }
+    
+    if (this.icon != null) {
+        buffer.writeAll(["\"icon\":\'",this.icon, "\',"], "");
+    }
   }
+
 
 }

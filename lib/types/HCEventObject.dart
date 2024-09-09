@@ -12,28 +12,37 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * HCEventObject 
+ * HCEventObject
  */
 class HCEventObject extends OptionFragment {
-  HCEventObject( ) : super();
-  // NOTE: order skipped - type number is ignored in gen 
 
+  HCEventObject({
+    this.order = null
+  });
+
+  double? order;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of order (type number is ignored) ignore type: true
+
+    
+    if (this.order != null) {
+        buffer.writeAll(["\"order\":",this.order, ","], "");
+    }
   }
+
 
 }

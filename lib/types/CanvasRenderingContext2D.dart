@@ -12,40 +12,58 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * CanvasRenderingContext2D 
+ * CanvasRenderingContext2D
  */
 class CanvasRenderingContext2D extends OptionFragment {
-  CanvasRenderingContext2D( ) : super();
-  // NOTE: FUNC_MIN skipped - type number is ignored in gen 
 
-  // NOTE: mozImageSmoothingEnabled skipped - type boolean is ignored in gen 
+  CanvasRenderingContext2D({
+    this.FUNC_MIN = null,
+    this.mozImageSmoothingEnabled = null,
+    this.msImageSmoothingEnabled = null,
+    this.webkitImageSmoothingEnabled = null
+  });
 
-  // NOTE: msImageSmoothingEnabled skipped - type boolean is ignored in gen 
-
-  // NOTE: webkitImageSmoothingEnabled skipped - type boolean is ignored in gen 
-
+  double? FUNC_MIN;
+    
+  bool? mozImageSmoothingEnabled;
+    
+  bool? msImageSmoothingEnabled;
+    
+  bool? webkitImageSmoothingEnabled;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of FUNC_MIN (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of mozImageSmoothingEnabled (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of msImageSmoothingEnabled (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of webkitImageSmoothingEnabled (type boolean is ignored) ignore type: true
+    
+    if (this.FUNC_MIN != null) {
+        buffer.writeAll(["\"FUNC_MIN\":",this.FUNC_MIN, ","], "");
+    }
+    
+    if (this.mozImageSmoothingEnabled != null) {
+        buffer.writeAll(["\"mozImageSmoothingEnabled\":",this.mozImageSmoothingEnabled, ","], "");
+    }
+    
+    if (this.msImageSmoothingEnabled != null) {
+        buffer.writeAll(["\"msImageSmoothingEnabled\":",this.msImageSmoothingEnabled, ","], "");
+    }
+    
+    if (this.webkitImageSmoothingEnabled != null) {
+        buffer.writeAll(["\"webkitImageSmoothingEnabled\":",this.webkitImageSmoothingEnabled, ","], "");
+    }
   }
+
 
 }

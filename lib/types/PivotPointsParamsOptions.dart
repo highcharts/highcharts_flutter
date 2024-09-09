@@ -12,32 +12,39 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'SMAParamsOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * PivotPointsParamsOptions 
+ * PivotPointsParamsOptions
  */
 class PivotPointsParamsOptions extends SMAParamsOptions {
-  PivotPointsParamsOptions( {
+
+  PivotPointsParamsOptions({
+    this.algorithm = null,
     super.index = null,
     super.period = null
-  }) : super();
-  // NOTE: algorithm skipped - type string is ignored in gen 
+  });
 
+  String? algorithm;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of algorithm (type string is ignored) ignore type: true
+
+    
+    if (this.algorithm != null) {
+        buffer.writeAll(["\"algorithm\":\'",this.algorithm, "\',"], "");
+    }
   }
+
 
 }

@@ -12,42 +12,73 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * PriceEnvelopesIndicator 
+ * PriceEnvelopesIndicator
  */
 class PriceEnvelopesIndicator extends OptionFragment {
-  PriceEnvelopesIndicator( ) : super();
-  // NOTE: nameBase skipped - type string is ignored in gen 
 
-  // NOTE: pointValKey skipped - type string is ignored in gen 
+  PriceEnvelopesIndicator({
+    this.linesApiNames = null,
+    this.nameBase = null,
+    this.nameComponents = null,
+    this.parallelArrays = null,
+    this.pointValKey = null
+  });
 
+  String? linesApiNames;
+    
+  String? nameComponents;
+    
+  String? nameBase;
+    
+  String? parallelArrays;
+    
+  // NOTE: pointArrayMap skipped - type (keyof PriceEnvelopesPoint)[] is ignored in gen 
+
+  // NOTE: pointClass skipped - type typeof PriceEnvelopesPoint is ignored in gen 
+
+  String? pointValKey;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of linesApiNames (type string[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of nameComponents (type string[] is ignored) ignore type: true
+    
+    if (this.linesApiNames != null) {
+        buffer.writeAll(["\"linesApiNames\":",this.linesApiNames, ","], "");
+    }
+    
+    if (this.nameComponents != null) {
+        buffer.writeAll(["\"nameComponents\":",this.nameComponents, ","], "");
+    }
+    
+    if (this.nameBase != null) {
+        buffer.writeAll(["\"nameBase\":\'",this.nameBase, "\',"], "");
+    }
+    
+    if (this.parallelArrays != null) {
+        buffer.writeAll(["\"parallelArrays\":",this.parallelArrays, ","], "");
+    }
+    // NOTE: skip serialization of pointArrayMap (type (keyof PriceEnvelopesPoint)[] ignored, skipped: true)
 
-    // NOTE: skip serialization of nameBase (type string is ignored) ignore type: true
+    // NOTE: skip serialization of pointClass (type typeof PriceEnvelopesPoint ignored, skipped: true)
 
-    // NOTE: skip serialization of parallelArrays (type string[] is ignored) ignore type: true
-
-    // NOTE: skip serialization of pointArrayMap (type (keyof PriceEnvelopesPoint)[] is ignored) ignore type: true
-
-    // NOTE: skip serialization of pointClass (type typeof PriceEnvelopesPoint is ignored) ignore type: true
-
-    // NOTE: skip serialization of pointValKey (type string is ignored) ignore type: true
+    
+    if (this.pointValKey != null) {
+        buffer.writeAll(["\"pointValKey\":\'",this.pointValKey, "\',"], "");
+    }
   }
+
 
 }

@@ -12,33 +12,45 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * DataConnectorTypes 
+ * DataConnectorTypes
  */
 class DataConnectorTypes extends OptionFragment {
-  DataConnectorTypes( ) : super();
-  
+
+  DataConnectorTypes();
+
+  // NOTE: CSV skipped - type typeof CSVConnector is ignored in gen 
+
+  // NOTE: GoogleSheets skipped - type typeof GoogleSheetsConnector is ignored in gen 
+
+  // NOTE: HTMLTable skipped - type typeof HTMLTableConnector is ignored in gen 
+
+  // NOTE: JSON skipped - type typeof JSONConnector is ignored in gen 
+
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of CSV (type typeof CSVConnector is ignored) ignore type: true
 
-    // NOTE: skip serialization of GoogleSheets (type typeof GoogleSheetsConnector is ignored) ignore type: true
+    // NOTE: skip serialization of CSV (type typeof CSVConnector ignored, skipped: true)
 
-    // NOTE: skip serialization of HTMLTable (type typeof HTMLTableConnector is ignored) ignore type: true
+    // NOTE: skip serialization of GoogleSheets (type typeof GoogleSheetsConnector ignored, skipped: true)
 
-    // NOTE: skip serialization of JSON (type typeof JSONConnector is ignored) ignore type: true
+    // NOTE: skip serialization of HTMLTable (type typeof HTMLTableConnector ignored, skipped: true)
+
+    // NOTE: skip serialization of JSON (type typeof JSONConnector ignored, skipped: true)
+
   }
+
 
 }

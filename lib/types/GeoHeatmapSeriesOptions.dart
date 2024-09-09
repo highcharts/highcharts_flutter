@@ -12,40 +12,78 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'MapSeriesOptions.dart';
 import 'InterpolationObject.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * GeoHeatmapSeriesOptions 
+ * GeoHeatmapSeriesOptions
  */
 class GeoHeatmapSeriesOptions extends MapSeriesOptions {
-  GeoHeatmapSeriesOptions( {
+
+  GeoHeatmapSeriesOptions({
     super.affectsMapView = null,
+    super.colorKey = null,
+    this.colsize = null,
+    super.data = null,
+    super.dataLabels = null,
+    this.interpolation = null,
+    super.legendSymbol = null,
+    super.linecap = null,
+    super.marker = null,
     super.nullColor = null,
-    super.nullInteraction = null
-  }) : super();
-  // NOTE: colsize skipped - type number is ignored in gen 
+    super.nullInteraction = null,
+    this.rowsize = null,
+    super.turboThreshold = null
+  });
 
-  // NOTE: rowsize skipped - type number is ignored in gen 
-
+  /**
+   * The column size - how many longitude units each column in the
+   * geoheatmap should span. 
+   * 
+   * Defaults to '1'. 
+   */
+  double? colsize;
+    
+  /**
+   * The rowsize size - how many latitude units each row in the
+   * geoheatmap should span. 
+   * 
+   * Defaults to '1'. 
+   */
+  double? rowsize;
+    
+  /**
+   * Make the geoheatmap render its data points as an interpolated
+   * image. It can be used to show a Temperature Map-like charts.  
+   */
+  InterpolationObject? interpolation;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of colsize (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of rowsize (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of interpolation (type InterpolationObject is ignored) ignore type: true
+    
+    if (this.colsize != null) {
+        buffer.writeAll(["\"colsize\":",this.colsize, ","], "");
+    }
+    
+    if (this.rowsize != null) {
+        buffer.writeAll(["\"rowsize\":",this.rowsize, ","], "");
+    }
+    
+    if (this.interpolation != null) {
+        buffer.writeAll(["\"interpolation\":",this.interpolation?.toJSON(), ","], "");
+    }
   }
+
 
 }

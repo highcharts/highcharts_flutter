@@ -12,32 +12,44 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * CallbackJSON 
+ * CallbackJSON
  */
 class CallbackJSON extends OptionFragment {
-  CallbackJSON( ) : super();
-  // NOTE: type skipped - type string is ignored in gen 
 
-  // NOTE: func skipped - type string is ignored in gen 
+  CallbackJSON({
+    this.func = null,
+    this.type = null
+  });
 
+  String? type;
+    
+  String? func;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of type (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of func (type string is ignored) ignore type: true
+    
+    if (this.type != null) {
+        buffer.writeAll(["\"type\":\'",this.type, "\',"], "");
+    }
+    
+    if (this.func != null) {
+        buffer.writeAll(["\"func\":\'",this.func, "\',"], "");
+    }
   }
+
 
 }

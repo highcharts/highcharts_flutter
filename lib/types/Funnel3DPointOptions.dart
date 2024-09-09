@@ -12,50 +12,79 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'ColumnPointOptions.dart';
 import 'BBoxObject.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * Funnel3DPointOptions 
+ * Funnel3DPointOptions
  */
 class Funnel3DPointOptions extends ColumnPointOptions {
-  Funnel3DPointOptions( {
+
+  Funnel3DPointOptions({
     super.accessibility = null,
     super.borderColor = null,
     super.className = null,
+    super.collapsed = null,
     super.color = null,
     super.colorIndex = null,
     super.connectors = null,
+    super.dashStyle = null,
     super.dataLabels = null,
+    this.dlBox = null,
     super.dragDrop = null,
+    super.drilldown = null,
     super.events = null,
+    this.gradientForSides = null,
+    super.id = null,
+    super.index = null,
     super.keys = null,
+    super.labelrank = null,
+    super.lat = null,
+    super.legendIndex = null,
+    super.lon = null,
     super.marker = null,
+    super.name = null,
+    super.pointWidth = null,
     super.selected = null,
-    super.visible = null
-  }) : super();
-  // NOTE: gradientForSides skipped - type boolean is ignored in gen 
+    super.seriesIndex = null,
+    super.value = null,
+    super.visible = null,
+    super.x = null,
+    this.y = null
+  });
 
-  // NOTE: y skipped - type number is ignored in gen 
-
+  BBoxObject? dlBox;
+    
+  bool? gradientForSides;
+    
+  double? y;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of gradientForSides (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of dlBox (type BBoxObject is ignored) ignore type: true
-
-    // NOTE: skip serialization of y (type number is ignored) ignore type: true
+    
+    if (this.dlBox != null) {
+        buffer.writeAll(["\"dlBox\":",this.dlBox?.toJSON(), ","], "");
+    }
+    
+    if (this.gradientForSides != null) {
+        buffer.writeAll(["\"gradientForSides\":",this.gradientForSides, ","], "");
+    }
+    
+    if (this.y != null) {
+        buffer.writeAll(["\"y\":",this.y, ","], "");
+    }
   }
+
 
 }

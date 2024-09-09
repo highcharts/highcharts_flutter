@@ -12,40 +12,56 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * NavigationBindingsOptions 
+ * NavigationBindingsOptions
  */
 class NavigationBindingsOptions extends OptionFragment {
-  NavigationBindingsOptions( ) : super();
-  // NOTE: noDataState skipped - type string is ignored in gen 
 
-  // NOTE: className skipped - type string is ignored in gen 
+  NavigationBindingsOptions({
+    this.className = null,
+    this.noDataState = null
+  });
+
+  String? noDataState;
+    
+  String? className;
+    
+  // NOTE: end skipped - type Function is ignored in gen 
+
+  // NOTE: init skipped - type Function is ignored in gen 
+
+  // NOTE: start skipped - type Function is ignored in gen 
 
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of noDataState (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of className (type string is ignored) ignore type: true
+    
+    if (this.noDataState != null) {
+        buffer.writeAll(["\"noDataState\":\'",this.noDataState, "\',"], "");
+    }
+    
+    if (this.className != null) {
+        buffer.writeAll(["\"className\":\'",this.className, "\',"], "");
+    }
+    // NOTE: skip serialization of end (type Function ignored, skipped: true)
 
-    // NOTE: skip serialization of end (type Function is ignored) ignore type: 1
+    // NOTE: skip serialization of init (type Function ignored, skipped: true)
 
-    // NOTE: skip serialization of init (type Function is ignored) ignore type: 1
+    // NOTE: skip serialization of start (type Function ignored, skipped: true)
 
-    // NOTE: skip serialization of start (type Function is ignored) ignore type: 1
-
-    // NOTE: skip serialization of steps (type Function[] is ignored) ignore type: true
   }
+
 
 }

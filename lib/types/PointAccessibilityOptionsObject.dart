@@ -12,39 +12,50 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * PointAccessibilityOptionsObject 
+ * PointAccessibilityOptionsObject
  */
 class PointAccessibilityOptionsObject extends OptionFragment {
-  PointAccessibilityOptionsObject( {
+
+  PointAccessibilityOptionsObject({
     this.description = null,
     this.enabled = null
-  }) : super();
+  });
+
+  /**
+   * Provide a description of the series, announced to screen readers.  
+   */
   String? description;
     
+  /**
+   * Enable/disable accessibility functionality for a specific series.  
+   */
   bool? enabled;
     
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    if (this.description != null) {  
-      buffer.writeAll(["\"description\":\'",this.description, "\',"], "");
-    }
 
-    if (this.enabled != null) {  
-      buffer.writeAll(["\"enabled\":",this.enabled, ","], "");
+    
+    if (this.description != null) {
+        buffer.writeAll(["\"description\":\'",this.description, "\',"], "");
+    }
+    
+    if (this.enabled != null) {
+        buffer.writeAll(["\"enabled\":",this.enabled, ","], "");
     }
   }
+
 
 }

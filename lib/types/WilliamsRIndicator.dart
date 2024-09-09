@@ -12,30 +12,41 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * WilliamsRIndicator 
+ * WilliamsRIndicator
  */
 class WilliamsRIndicator extends OptionFragment {
-  WilliamsRIndicator( ) : super();
-  // NOTE: nameBase skipped - type string is ignored in gen 
+
+  WilliamsRIndicator({
+    this.nameBase = null
+  });
+
+  String? nameBase;
+    
+  // NOTE: pointClass skipped - type typeof WilliamsRPoint is ignored in gen 
 
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of nameBase (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of pointClass (type typeof WilliamsRPoint is ignored) ignore type: true
+    
+    if (this.nameBase != null) {
+        buffer.writeAll(["\"nameBase\":\'",this.nameBase, "\',"], "");
+    }
+    // NOTE: skip serialization of pointClass (type typeof WilliamsRPoint ignored, skipped: true)
+
   }
+
 
 }

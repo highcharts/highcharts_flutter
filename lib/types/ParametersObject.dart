@@ -12,34 +12,48 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * ParametersObject 
+ * ParametersObject
  */
 class ParametersObject extends OptionFragment {
-  ParametersObject( ) : super();
-  // NOTE: category skipped - type string is ignored in gen 
 
-  // NOTE: tickmarkOffset skipped - type number is ignored in gen 
+  ParametersObject({
+    this.category = null,
+    this.tickmarkOffset = null
+  });
 
+  String? category;
+    
+  // NOTE: options skipped - type AnyRecord is ignored in gen 
+
+  double? tickmarkOffset;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of category (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of options (type AnyRecord is ignored) ignore type: 1
+    
+    if (this.category != null) {
+        buffer.writeAll(["\"category\":\'",this.category, "\',"], "");
+    }
+    // NOTE: skip serialization of options (type AnyRecord ignored, skipped: true)
 
-    // NOTE: skip serialization of tickmarkOffset (type number is ignored) ignore type: true
+    
+    if (this.tickmarkOffset != null) {
+        buffer.writeAll(["\"tickmarkOffset\":",this.tickmarkOffset, ","], "");
+    }
   }
+
 
 }

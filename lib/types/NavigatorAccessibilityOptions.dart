@@ -12,28 +12,42 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * NavigatorAccessibilityOptions 
+ * NavigatorAccessibilityOptions
  */
 class NavigatorAccessibilityOptions extends OptionFragment {
-  NavigatorAccessibilityOptions( ) : super();
-  // NOTE: enabled skipped - type boolean is ignored in gen 
 
+  NavigatorAccessibilityOptions({
+    this.enabled = null
+  });
+
+  /**
+   * Enable accessibility support for the navigator. 
+   * 
+   * Defaults to 'true'. 
+   */
+  bool? enabled;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of enabled (type boolean is ignored) ignore type: true
+
+    
+    if (this.enabled != null) {
+        buffer.writeAll(["\"enabled\":",this.enabled, ","], "");
+    }
   }
+
 
 }

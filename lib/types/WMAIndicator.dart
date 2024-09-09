@@ -12,27 +12,33 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * WMAIndicator 
+ * WMAIndicator
  */
 class WMAIndicator extends OptionFragment {
-  WMAIndicator( ) : super();
-  
+
+  WMAIndicator();
+
+  // NOTE: pointClass skipped - type typeof WMAPoint is ignored in gen 
+
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of pointClass (type typeof WMAPoint is ignored) ignore type: true
+
+    // NOTE: skip serialization of pointClass (type typeof WMAPoint ignored, skipped: true)
+
   }
+
 
 }

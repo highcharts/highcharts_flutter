@@ -12,21 +12,23 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * FocusBorderStyleObject 
+ * FocusBorderStyleObject
  */
 class FocusBorderStyleObject extends OptionFragment {
-  FocusBorderStyleObject( {
+
+  FocusBorderStyleObject({
     this.borderRadius = null,
     this.color = null,
     this.lineWidth = null
-  }) : super();
+  });
+
   double? borderRadius;
     
   String? color;
@@ -35,23 +37,26 @@ class FocusBorderStyleObject extends OptionFragment {
     
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    if (this.borderRadius != null) {  
-      buffer.writeAll(["\"borderRadius\":",this.borderRadius, ","], "");
-    }
 
-    if (this.color != null) {  
-      buffer.writeAll(["\"color\":\'",this.color, "\',"], "");
+    
+    if (this.borderRadius != null) {
+        buffer.writeAll(["\"borderRadius\":",this.borderRadius, ","], "");
     }
-
-    if (this.lineWidth != null) {  
-      buffer.writeAll(["\"lineWidth\":",this.lineWidth, ","], "");
+    
+    if (this.color != null) {
+        buffer.writeAll(["\"color\":\'",this.color, "\',"], "");
+    }
+    
+    if (this.lineWidth != null) {
+        buffer.writeAll(["\"lineWidth\":",this.lineWidth, ","], "");
     }
   }
+
 
 }

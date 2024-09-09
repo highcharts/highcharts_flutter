@@ -12,29 +12,37 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
-import 'Event.dart';
+ */
 import 'PositionObject.dart';
 import 'OptionFragment.dart';
 
 /** 
- * AfterGetPositionEvent 
+ * AfterGetPositionEvent
  */
-class AfterGetPositionEvent extends Event {
-  AfterGetPositionEvent( ) : super();
-  
+class AfterGetPositionEvent extends OptionFragment {
+
+  AfterGetPositionEvent({
+    this.pos = null
+  });
+
+  PositionObject? pos;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of pos (type PositionObject is ignored) ignore type: true
+
+    
+    if (this.pos != null) {
+        buffer.writeAll(["\"pos\":",this.pos?.toJSON(), ","], "");
+    }
   }
+
 
 }

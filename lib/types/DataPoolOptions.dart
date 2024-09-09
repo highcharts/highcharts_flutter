@@ -12,27 +12,33 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * DataPoolOptions 
+ * DataPoolOptions
  */
 class DataPoolOptions extends OptionFragment {
-  DataPoolOptions( ) : super();
-  
+
+  DataPoolOptions();
+
+  // NOTE: connectors skipped - type Generic is ignored in gen 
+
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of connectors (type Generic is ignored) ignore type: true
+
+    // NOTE: skip serialization of connectors (type Generic ignored, skipped: true)
+
   }
+
 
 }

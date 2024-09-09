@@ -12,33 +12,44 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'ExportingButtonOptions.dart';
 import 'OptionFragment.dart';
 
+
 /** 
- * ExportingButtonsOptions 
+ * ExportingButtonsOptions
  */
 class ExportingButtonsOptions extends OptionFragment {
-  ExportingButtonsOptions( {
+
+  ExportingButtonsOptions({
     this.contextButton = null
-  }) : super();
+  });
+
+  /**
+   * Options for the export button.
+   * 
+   * In styled mode, export button styles can be applied with the
+   * `.highcharts-contextbutton` class.  
+   */
   ExportingButtonOptions? contextButton;
     
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    if (this.contextButton != null) {  
-      buffer.writeAll(["\"contextButton\":",this.contextButton?.toJSON(), ","], "");
+
+    
+    if (this.contextButton != null) {
+        buffer.writeAll(["\"contextButton\":",this.contextButton?.toJSON(), ","], "");
     }
   }
+
 
 }

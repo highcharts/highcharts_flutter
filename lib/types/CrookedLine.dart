@@ -12,28 +12,37 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'AnnotationOptions.dart';
 import 'OptionFragment.dart';
 
 /** 
- * CrookedLine 
+ * CrookedLine
  */
 class CrookedLine extends OptionFragment {
-  CrookedLine( ) : super();
-  
+
+  CrookedLine({
+    this.defaultOptions = null
+  });
+
+  AnnotationOptions? defaultOptions;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of defaultOptions (type AnnotationOptions is ignored) ignore type: true
+
+    
+    if (this.defaultOptions != null) {
+        buffer.writeAll(["\"defaultOptions\":",this.defaultOptions?.toJSON(), ","], "");
+    }
   }
+
 
 }

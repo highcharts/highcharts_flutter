@@ -12,35 +12,53 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'SeriesOptions.dart';
 import 'Chart.dart';
 import 'OptionFragment.dart';
 
 /** 
- * ChartAddSeriesEventObject 
+ * ChartAddSeriesEventObject
  */
 class ChartAddSeriesEventObject extends OptionFragment {
-  ChartAddSeriesEventObject( ) : super();
-  
+
+  ChartAddSeriesEventObject({
+    this.options = null,
+    this.target = null
+  });
+
+  SeriesOptions? options;
+    
+  // NOTE: preventDefault skipped - type Function is ignored in gen 
+
+  Chart? target;
+    
+  // NOTE: type skipped - type "addSeries" is ignored in gen 
+
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of options (type SeriesOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of preventDefault (type Function is ignored) ignore type: 1
+    
+    if (this.options != null) {
+        buffer.writeAll(["\"options\":",this.options?.toJSON(), ","], "");
+    }
+    // NOTE: skip serialization of preventDefault (type Function ignored, skipped: true)
 
-    // NOTE: skip serialization of target (type Chart is ignored) ignore type: true
+    
+    if (this.target != null) {
+        buffer.writeAll(["\"target\":",this.target?.toJSON(), ","], "");
+    }
+    // NOTE: skip serialization of type (type "addSeries" ignored, skipped: true)
 
-    // NOTE: skip serialization of type (type "addSeries" is ignored) ignore type: true
   }
+
 
 }

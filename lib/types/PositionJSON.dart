@@ -12,38 +12,55 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * PositionJSON 
+ * PositionJSON
  */
 class PositionJSON extends OptionFragment {
-  PositionJSON( ) : super();
-  // NOTE: column skipped - type string is ignored in gen 
 
-  // NOTE: row skipped - type number is ignored in gen 
+  PositionJSON({
+    this.column = null,
+    this.row = null,
+    this.state = null
+  });
 
-  // NOTE: state skipped - type string is ignored in gen 
+  String? column;
+    
+  double? row;
+    
+  String? state;
+    
+  // NOTE: type skipped - type "position" is ignored in gen 
 
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of column (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of row (type number is ignored) ignore type: true
+    
+    if (this.column != null) {
+        buffer.writeAll(["\"column\":\'",this.column, "\',"], "");
+    }
+    
+    if (this.row != null) {
+        buffer.writeAll(["\"row\":",this.row, ","], "");
+    }
+    
+    if (this.state != null) {
+        buffer.writeAll(["\"state\":\'",this.state, "\',"], "");
+    }
+    // NOTE: skip serialization of type (type "position" ignored, skipped: true)
 
-    // NOTE: skip serialization of state (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of type (type "position" is ignored) ignore type: true
   }
+
 
 }

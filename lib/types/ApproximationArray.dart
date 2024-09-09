@@ -12,29 +12,37 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'Array.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * ApproximationArray 
+ * ApproximationArray
  */
 class ApproximationArray extends Array {
-  ApproximationArray( ) : super();
-  // NOTE: hasNulls skipped - type boolean is ignored in gen 
 
+  ApproximationArray({
+    this.hasNulls = null
+  });
+
+  bool? hasNulls;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of hasNulls (type boolean is ignored) ignore type: true
+
+    
+    if (this.hasNulls != null) {
+        buffer.writeAll(["\"hasNulls\":",this.hasNulls, ","], "");
+    }
   }
+
 
 }

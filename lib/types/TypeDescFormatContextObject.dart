@@ -12,39 +12,58 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'Chart.dart';
 import 'OptionFragment.dart';
 
 /** 
- * TypeDescFormatContextObject 
+ * TypeDescFormatContextObject
  */
 class TypeDescFormatContextObject extends OptionFragment {
-  TypeDescFormatContextObject( ) : super();
-  // NOTE: mapTitle skipped - type string is ignored in gen 
 
-  // NOTE: numSeries skipped - type number is ignored in gen 
+  TypeDescFormatContextObject({
+    this.chart = null,
+    this.mapTitle = null,
+    this.numPoints = null,
+    this.numSeries = null
+  });
 
-  // NOTE: numPoints skipped - type number is ignored in gen 
-
+  Chart? chart;
+    
+  String? mapTitle;
+    
+  double? numSeries;
+    
+  double? numPoints;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of chart (type Chart is ignored) ignore type: true
 
-    // NOTE: skip serialization of mapTitle (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of numSeries (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of numPoints (type number is ignored) ignore type: true
+    
+    if (this.chart != null) {
+        buffer.writeAll(["\"chart\":",this.chart?.toJSON(), ","], "");
+    }
+    
+    if (this.mapTitle != null) {
+        buffer.writeAll(["\"mapTitle\":\'",this.mapTitle, "\',"], "");
+    }
+    
+    if (this.numSeries != null) {
+        buffer.writeAll(["\"numSeries\":",this.numSeries, ","], "");
+    }
+    
+    if (this.numPoints != null) {
+        buffer.writeAll(["\"numPoints\":",this.numPoints, ","], "");
+    }
   }
+
 
 }

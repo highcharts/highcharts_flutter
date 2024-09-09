@@ -12,19 +12,20 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'DataLabelOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * AreaRangeDataLabelOptions 
+ * AreaRangeDataLabelOptions
  */
 class AreaRangeDataLabelOptions extends DataLabelOptions {
-  AreaRangeDataLabelOptions( {
+
+  AreaRangeDataLabelOptions({
     super.align = null,
+    super.alignTo = null,
     super.allowOverlap = null,
     super.backgroundColor = null,
     super.borderColor = null,
@@ -32,13 +33,17 @@ class AreaRangeDataLabelOptions extends DataLabelOptions {
     super.borderWidth = null,
     super.className = null,
     super.color = null,
+    super.connectorColor = null,
     super.crop = null,
     super.defer = null,
+    super.distance = null,
     super.enabled = null,
     super.filter = null,
     super.format = null,
     super.inside = null,
+    super.labelrank = null,
     super.nullFormat = null,
+    super.outside3dPlot = null,
     super.overflow = null,
     super.padding = null,
     super.rotation = null,
@@ -48,32 +53,48 @@ class AreaRangeDataLabelOptions extends DataLabelOptions {
     super.useHTML = null,
     super.verticalAlign = null,
     super.x = null,
+    this.xHigh = null,
+    this.xLow = null,
     super.y = null,
+    this.yHigh = null,
+    this.yLow = null,
     super.zIndex = null
-  }) : super();
-  // NOTE: xHigh skipped - type number is ignored in gen 
+  });
 
-  // NOTE: xLow skipped - type number is ignored in gen 
-
-  // NOTE: yHigh skipped - type number is ignored in gen 
-
-  // NOTE: yLow skipped - type number is ignored in gen 
-
+  double? xHigh;
+    
+  double? xLow;
+    
+  double? yHigh;
+    
+  double? yLow;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of xHigh (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of xLow (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of yHigh (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of yLow (type number is ignored) ignore type: true
+    
+    if (this.xHigh != null) {
+        buffer.writeAll(["\"xHigh\":",this.xHigh, ","], "");
+    }
+    
+    if (this.xLow != null) {
+        buffer.writeAll(["\"xLow\":",this.xLow, ","], "");
+    }
+    
+    if (this.yHigh != null) {
+        buffer.writeAll(["\"yHigh\":",this.yHigh, ","], "");
+    }
+    
+    if (this.yLow != null) {
+        buffer.writeAll(["\"yLow\":",this.yLow, ","], "");
+    }
   }
+
 
 }

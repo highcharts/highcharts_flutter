@@ -12,29 +12,40 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * ObstacleSegment 
+ * ObstacleSegment
  */
 class ObstacleSegment extends OptionFragment {
-  ObstacleSegment( ) : super();
-  
+
+  ObstacleSegment({
+    this.end = null,
+    this.start = null
+  });
+
+  Map<String, String>? end;
+    
+  Map<String, String>? start;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of end (type Generic is ignored) ignore type: true
 
-    // NOTE: skip serialization of start (type Generic is ignored) ignore type: true
+    // NOTE: skip serialization of end (type Generic ignored, skipped: true)
+
+    // NOTE: skip serialization of start (type Generic ignored, skipped: true)
+
   }
+
 
 }

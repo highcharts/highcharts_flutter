@@ -12,47 +12,80 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'LangOptions.dart';
 import 'OptionFragment.dart';
 
+
 /** 
- * NestedHeaderFormFieldOptions 
+ * NestedHeaderFormFieldOptions
  */
 class NestedHeaderFormFieldOptions extends OptionFragment {
-  NestedHeaderFormFieldOptions( ) : super();
-  // NOTE: name skipped - type string is ignored in gen 
 
-  // NOTE: showToggle skipped - type boolean is ignored in gen 
+  NestedHeaderFormFieldOptions({
+    this.iconsURLPrefix = null,
+    this.isEnabled = null,
+    this.isNested = null,
+    this.isStandalone = null,
+    this.lang = null,
+    this.name = null,
+    this.showToggle = null
+  });
 
-  // NOTE: isEnabled skipped - type boolean is ignored in gen 
-
-  // NOTE: isNested skipped - type boolean is ignored in gen 
-
-  // NOTE: iconsURLPrefix skipped - type string is ignored in gen 
-
+  String? name;
+    
+  bool? showToggle;
+    
+  bool? isStandalone;
+    
+  bool? isEnabled;
+    
+  bool? isNested;
+    
+  String? iconsURLPrefix;
+    
+  LangOptions? lang;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of name (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of showToggle (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of isEnabled (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of isNested (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of iconsURLPrefix (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of lang (type LangOptions is ignored) ignore type: true
+    
+    if (this.name != null) {
+        buffer.writeAll(["\"name\":\'",this.name, "\',"], "");
+    }
+    
+    if (this.showToggle != null) {
+        buffer.writeAll(["\"showToggle\":",this.showToggle, ","], "");
+    }
+    
+    if (this.isStandalone != null) {
+        buffer.writeAll(["\"isStandalone\":",this.isStandalone, ","], "");
+    }
+    
+    if (this.isEnabled != null) {
+        buffer.writeAll(["\"isEnabled\":",this.isEnabled, ","], "");
+    }
+    
+    if (this.isNested != null) {
+        buffer.writeAll(["\"isNested\":",this.isNested, ","], "");
+    }
+    
+    if (this.iconsURLPrefix != null) {
+        buffer.writeAll(["\"iconsURLPrefix\":\'",this.iconsURLPrefix, "\',"], "");
+    }
+    
+    if (this.lang != null) {
+        buffer.writeAll(["\"lang\":",this.lang?.toJSON(), ","], "");
+    }
   }
+
 
 }

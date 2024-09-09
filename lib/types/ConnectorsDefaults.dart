@@ -12,28 +12,37 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'ConnectorsOptions.dart';
 import 'OptionFragment.dart';
 
 /** 
- * ConnectorsDefaults 
+ * ConnectorsDefaults
  */
 class ConnectorsDefaults extends OptionFragment {
-  ConnectorsDefaults( ) : super();
-  
+
+  ConnectorsDefaults({
+    this.connectors = null
+  });
+
+  ConnectorsOptions? connectors;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of connectors (type ConnectorsOptions is ignored) ignore type: true
+
+    
+    if (this.connectors != null) {
+        buffer.writeAll(["\"connectors\":",this.connectors?.toJSON(), ","], "");
+    }
   }
+
 
 }

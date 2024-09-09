@@ -12,30 +12,41 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * ROCIndicator 
+ * ROCIndicator
  */
 class ROCIndicator extends OptionFragment {
-  ROCIndicator( ) : super();
-  // NOTE: nameBase skipped - type string is ignored in gen 
+
+  ROCIndicator({
+    this.nameBase = null
+  });
+
+  String? nameBase;
+    
+  // NOTE: pointClass skipped - type typeof ROCPoint is ignored in gen 
 
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of nameBase (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of pointClass (type typeof ROCPoint is ignored) ignore type: true
+    
+    if (this.nameBase != null) {
+        buffer.writeAll(["\"nameBase\":\'",this.nameBase, "\',"], "");
+    }
+    // NOTE: skip serialization of pointClass (type typeof ROCPoint ignored, skipped: true)
+
   }
+
 
 }

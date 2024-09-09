@@ -12,10 +12,9 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'BubbleSeriesOptions.dart';
 import 'Series.dart';
 import 'PointOptions.dart';
@@ -34,8 +33,7 @@ class BubbleSeries extends Series {
     this.data = null
   });
 
-  
-  @override
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
@@ -56,16 +54,13 @@ class BubbleSeries extends Series {
         if (point.length > 1) {
           seriesData.writeAll(["["], "");
         }
-
-          for (var sub in point) {
-            if (sub is String) {
-              seriesData.writeAll(["\"", sub, "\","], "");
-            } else {
-              seriesData.writeAll([sub], ",");
-            }
-
+        for (var sub in point) {
+          if (sub is String) {
+            seriesData.writeAll(["\"", sub, "\","], "");
+          } else {
+            seriesData.writeAll([sub], ",");
           }
-
+        }
         if (point.length > 1) {
           seriesData.writeAll(["],"], "");
         } else {
@@ -92,38 +87,40 @@ class BubbleSeries extends Series {
 
 
     
-    if (this.options?.displayNegative != null) {  
-      buffer.writeAll(["\"displayNegative\":",this.options?.displayNegative, ","], "");
+
+    
+    if (this.options?.displayNegative != null) {
+        buffer.writeAll(["\"displayNegative\":",this.options?.displayNegative, ","], "");
     }
+    // NOTE: skip serialization of marker (type BubblePointMarkerOptions ignored, skipped: false)
 
-    // NOTE: skip serialization of marker (type BubblePointMarkerOptions is ignored) ignore type: false
-
-    if (this.options?.minSize != null) {  
-      buffer.writeAll(["\"minSize\":\'",this.options?.minSize, "\',"], "");
+    
+    if (this.options?.minSize != null) {
+        buffer.writeAll(["\"minSize\":\'",this.options?.minSize, "\',"], "");
     }
-
-    if (this.options?.maxSize != null) {  
-      buffer.writeAll(["\"maxSize\":\'",this.options?.maxSize, "\',"], "");
+    
+    if (this.options?.maxSize != null) {
+        buffer.writeAll(["\"maxSize\":\'",this.options?.maxSize, "\',"], "");
     }
-
-    if (this.options?.sizeBy != null) {  
-      buffer.writeAll(["\"sizeBy\":\'",this.options?.sizeBy, "\',"], "");
+    
+    if (this.options?.sizeBy != null) {
+        buffer.writeAll(["\"sizeBy\":\'",this.options?.sizeBy, "\',"], "");
     }
-
-    if (this.options?.sizeByAbsoluteValue != null) {  
-      buffer.writeAll(["\"sizeByAbsoluteValue\":",this.options?.sizeByAbsoluteValue, ","], "");
+    
+    if (this.options?.sizeByAbsoluteValue != null) {
+        buffer.writeAll(["\"sizeByAbsoluteValue\":",this.options?.sizeByAbsoluteValue, ","], "");
     }
-
-    if (this.options?.zMax != null) {  
-      buffer.writeAll(["\"zMax\":",this.options?.zMax, ","], "");
+    
+    if (this.options?.zMax != null) {
+        buffer.writeAll(["\"zMax\":",this.options?.zMax, ","], "");
     }
-
-    if (this.options?.zMin != null) {  
-      buffer.writeAll(["\"zMin\":",this.options?.zMin, ","], "");
+    
+    if (this.options?.zMin != null) {
+        buffer.writeAll(["\"zMin\":",this.options?.zMin, ","], "");
     }
-
-    if (this.options?.zThreshold != null) {  
-      buffer.writeAll(["\"zThreshold\":",this.options?.zThreshold, ","], "");
+    
+    if (this.options?.zThreshold != null) {
+        buffer.writeAll(["\"zThreshold\":",this.options?.zThreshold, ","], "");
     }
   }
 

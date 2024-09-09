@@ -12,39 +12,56 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * ChartPanningOptions 
+ * ChartPanningOptions
  */
 class ChartPanningOptions extends OptionFragment {
-  ChartPanningOptions( {
+
+  ChartPanningOptions({
     this.enabled = null,
     this.type = null
-  }) : super();
+  });
+
+  /**
+   * Decides in what dimensions the user can pan the chart. Can be
+   * one of `x`, `y`, or `xy`.
+   * 
+   * When this option is set to `y` or `xy`, [yAxis.startOnTick](#yAxis.startOnTick)
+   * and [yAxis.endOnTick](#yAxis.endOnTick) are overwritten to `false`. 
+   * 
+   * Defaults to 'x'. 
+   */
   String? type;
     
+  /**
+   * Enable or disable chart panning.  
+   */
   bool? enabled;
     
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    if (this.type != null) {  
-      buffer.writeAll(["\"type\":\'",this.type, "\',"], "");
-    }
 
-    if (this.enabled != null) {  
-      buffer.writeAll(["\"enabled\":",this.enabled, ","], "");
+    
+    if (this.type != null) {
+        buffer.writeAll(["\"type\":\'",this.type, "\',"], "");
+    }
+    
+    if (this.enabled != null) {
+        buffer.writeAll(["\"enabled\":",this.enabled, ","], "");
     }
   }
+
 
 }

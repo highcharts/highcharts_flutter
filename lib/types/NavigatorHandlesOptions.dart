@@ -12,54 +12,89 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * NavigatorHandlesOptions 
+ * NavigatorHandlesOptions
  */
 class NavigatorHandlesOptions extends OptionFragment {
-  NavigatorHandlesOptions( ) : super();
-  // NOTE: backgroundColor skipped - type string is ignored in gen 
 
-  // NOTE: borderColor skipped - type string is ignored in gen 
+  NavigatorHandlesOptions({
+    this.backgroundColor = null,
+    this.borderColor = null,
+    this.borderRadius = null,
+    this.enabled = null,
+    this.height = null,
+    this.inverted = null,
+    this.lineWidth = null,
+    this.width = null
+  });
 
-  // NOTE: enabled skipped - type boolean is ignored in gen 
+  String? backgroundColor;
+    
+  String? borderColor;
+    
+  String? borderRadius;
+  bool? enabled;
+    
+  double? height;
+    
+  bool? inverted;
+    
+  double? lineWidth;
+    
+  // NOTE: symbols skipped - type (keyof SymbolTypeRegistry)[] is ignored in gen 
 
-  // NOTE: height skipped - type number is ignored in gen 
-
-  // NOTE: inverted skipped - type boolean is ignored in gen 
-
-  // NOTE: lineWidth skipped - type number is ignored in gen 
-
-  // NOTE: width skipped - type number is ignored in gen 
-
+  double? width;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of backgroundColor (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of borderColor (type string is ignored) ignore type: true
+    
+    if (this.backgroundColor != null) {
+        buffer.writeAll(["\"backgroundColor\":\'",this.backgroundColor, "\',"], "");
+    }
+    
+    if (this.borderColor != null) {
+        buffer.writeAll(["\"borderColor\":\'",this.borderColor, "\',"], "");
+    }
+    
+    if (this.borderRadius != null) {
+        buffer.writeAll(["\"borderRadius\":",this.borderRadius, ","], "");
+    }
+    
+    if (this.enabled != null) {
+        buffer.writeAll(["\"enabled\":",this.enabled, ","], "");
+    }
+    
+    if (this.height != null) {
+        buffer.writeAll(["\"height\":",this.height, ","], "");
+    }
+    
+    if (this.inverted != null) {
+        buffer.writeAll(["\"inverted\":",this.inverted, ","], "");
+    }
+    
+    if (this.lineWidth != null) {
+        buffer.writeAll(["\"lineWidth\":",this.lineWidth, ","], "");
+    }
+    // NOTE: skip serialization of symbols (type (keyof SymbolTypeRegistry)[] ignored, skipped: true)
 
-    // NOTE: skip serialization of enabled (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of height (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of inverted (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of lineWidth (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of symbols (type (keyof SymbolTypeRegistry)[] is ignored) ignore type: true
-
-    // NOTE: skip serialization of width (type number is ignored) ignore type: true
+    
+    if (this.width != null) {
+        buffer.writeAll(["\"width\":",this.width, ","], "");
+    }
   }
+
 
 }

@@ -12,35 +12,51 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'BBoxObject.dart';
 import 'OptionFragment.dart';
 
 /** 
- * AdjustStackPositionProps 
+ * AdjustStackPositionProps
  */
 class AdjustStackPositionProps extends OptionFragment {
-  AdjustStackPositionProps( ) : super();
-  // NOTE: verticalAlign skipped - type string is ignored in gen 
 
-  // NOTE: textAlign skipped - type string is ignored in gen 
+  AdjustStackPositionProps({
+    this.labelBox = null,
+    this.textAlign = null,
+    this.verticalAlign = null
+  });
 
+  BBoxObject? labelBox;
+    
+  String? verticalAlign;
+    
+  String? textAlign;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of labelBox (type BBoxObject is ignored) ignore type: true
 
-    // NOTE: skip serialization of verticalAlign (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of textAlign (type string is ignored) ignore type: true
+    
+    if (this.labelBox != null) {
+        buffer.writeAll(["\"labelBox\":",this.labelBox?.toJSON(), ","], "");
+    }
+    
+    if (this.verticalAlign != null) {
+        buffer.writeAll(["\"verticalAlign\":\'",this.verticalAlign, "\',"], "");
+    }
+    
+    if (this.textAlign != null) {
+        buffer.writeAll(["\"textAlign\":\'",this.textAlign, "\',"], "");
+    }
   }
+
 
 }

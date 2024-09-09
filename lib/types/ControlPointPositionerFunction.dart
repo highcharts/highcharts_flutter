@@ -12,27 +12,29 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * ControlPointPositionerFunction 
+ * ControlPointPositionerFunction
  */
 class ControlPointPositionerFunction extends OptionFragment {
-  ControlPointPositionerFunction( ) : super();
-  
+
+  ControlPointPositionerFunction();
+
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    
+
   }
+
 
 }

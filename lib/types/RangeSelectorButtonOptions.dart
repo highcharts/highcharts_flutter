@@ -12,70 +12,113 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'DataGroupingOptions.dart';
 import 'RangeSelectorButtonsEventsOptions.dart';
 import 'OptionFragment.dart';
 
+
 /** 
- * RangeSelectorButtonOptions 
+ * RangeSelectorButtonOptions
  */
 class RangeSelectorButtonOptions extends OptionFragment {
-  RangeSelectorButtonOptions( ) : super();
-  // NOTE: count skipped - type number is ignored in gen 
 
-  // NOTE: title skipped - type string is ignored in gen 
+  RangeSelectorButtonOptions({
+    this.count = null,
+    this.dataGrouping = null,
+    this.events = null,
+    this.offsetMax = null,
+    this.offsetMin = null,
+    this.preserveDataGrouping = null,
+    this.text = null,
+    this.title = null,
+    this.type = null
+  });
 
-  // NOTE: offsetMax skipped - type number is ignored in gen 
-
-  // NOTE: offsetMin skipped - type number is ignored in gen 
-
-  // NOTE: preserveDataGrouping skipped - type boolean is ignored in gen 
-
-  // NOTE: text skipped - type string is ignored in gen 
-
-  // NOTE: type skipped - type string is ignored in gen 
-
-  // NOTE: _offsetMax skipped - type number is ignored in gen 
-
-  // NOTE: _offsetMin skipped - type number is ignored in gen 
-
-  // NOTE: _range skipped - type number is ignored in gen 
-
+  double? count;
+    
+  DataGroupingOptions? dataGrouping;
+    
+  String? title;
+    
+  RangeSelectorButtonsEventsOptions? events;
+    
+  double? offsetMax;
+    
+  double? offsetMin;
+    
+  bool? preserveDataGrouping;
+    
+  String? text;
+    
+  String? type;
+    
+  double? p_offsetMax;
+    
+  double? p_offsetMin;
+    
+  double? p_range;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of count (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of dataGrouping (type DataGroupingOptions is ignored) ignore type: true
-
-    // NOTE: skip serialization of title (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of events (type RangeSelectorButtonsEventsOptions is ignored) ignore type: true
-
-    // NOTE: skip serialization of offsetMax (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of offsetMin (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of preserveDataGrouping (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of text (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of type (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of p_offsetMax (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of p_offsetMin (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of p_range (type number is ignored) ignore type: true
+    
+    if (this.count != null) {
+        buffer.writeAll(["\"count\":",this.count, ","], "");
+    }
+    
+    if (this.dataGrouping != null) {
+        buffer.writeAll(["\"dataGrouping\":",this.dataGrouping?.toJSON(), ","], "");
+    }
+    
+    if (this.title != null) {
+        buffer.writeAll(["\"title\":\'",this.title, "\',"], "");
+    }
+    
+    if (this.events != null) {
+        buffer.writeAll(["\"events\":",this.events?.toJSON(), ","], "");
+    }
+    
+    if (this.offsetMax != null) {
+        buffer.writeAll(["\"offsetMax\":",this.offsetMax, ","], "");
+    }
+    
+    if (this.offsetMin != null) {
+        buffer.writeAll(["\"offsetMin\":",this.offsetMin, ","], "");
+    }
+    
+    if (this.preserveDataGrouping != null) {
+        buffer.writeAll(["\"preserveDataGrouping\":",this.preserveDataGrouping, ","], "");
+    }
+    
+    if (this.text != null) {
+        buffer.writeAll(["\"text\":\'",this.text, "\',"], "");
+    }
+    
+    if (this.type != null) {
+        buffer.writeAll(["\"type\":\'",this.type, "\',"], "");
+    }
+    
+    if (this.p_offsetMax != null) {
+        buffer.writeAll(["\"_offsetMax\":",this.p_offsetMax, ","], "");
+    }
+    
+    if (this.p_offsetMin != null) {
+        buffer.writeAll(["\"_offsetMin\":",this.p_offsetMin, ","], "");
+    }
+    
+    if (this.p_range != null) {
+        buffer.writeAll(["\"_range\":",this.p_range, ","], "");
+    }
   }
+
 
 }

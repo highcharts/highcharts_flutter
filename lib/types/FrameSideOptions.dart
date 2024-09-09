@@ -12,34 +12,48 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * FrameSideOptions 
+ * FrameSideOptions
  */
 class FrameSideOptions extends OptionFragment {
-  FrameSideOptions( ) : super();
-  // NOTE: color skipped - type string is ignored in gen 
 
-  // NOTE: size skipped - type number is ignored in gen 
+  FrameSideOptions({
+    this.color = null,
+    this.size = null
+  });
+
+  String? color;
+    
+  double? size;
+    
+  // NOTE: visible skipped - type "default" is ignored in gen 
 
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of color (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of size (type number is ignored) ignore type: true
+    
+    if (this.color != null) {
+        buffer.writeAll(["\"color\":\'",this.color, "\',"], "");
+    }
+    
+    if (this.size != null) {
+        buffer.writeAll(["\"size\":",this.size, ","], "");
+    }
+    // NOTE: skip serialization of visible (type "default" ignored, skipped: true)
 
-    // NOTE: skip serialization of visible (type "default" is ignored) ignore type: true
   }
+
 
 }

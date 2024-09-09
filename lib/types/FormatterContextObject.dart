@@ -12,39 +12,58 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'FormatterContextObject.dart';
 import 'OptionFragment.dart';
 
 /** 
- * FormatterContextObject 
+ * FormatterContextObject
  */
 class FormatterContextObject extends OptionFragment {
-  FormatterContextObject( ) : super();
-  // NOTE: center skipped - type number is ignored in gen 
 
-  // NOTE: radius skipped - type number is ignored in gen 
+  FormatterContextObject({
+    this.center = null,
+    this.points = null,
+    this.radius = null,
+    this.value = null
+  });
 
-  // NOTE: value skipped - type number is ignored in gen 
-
+  FormatterContextObject? points;
+    
+  double? center;
+    
+  double? radius;
+    
+  double? value;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of points (type FormatterContextObject[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of center (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of radius (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of value (type number is ignored) ignore type: true
+    
+    if (this.points != null) {
+        buffer.writeAll(["\"points\":",this.points, ","], "");
+    }
+    
+    if (this.center != null) {
+        buffer.writeAll(["\"center\":",this.center, ","], "");
+    }
+    
+    if (this.radius != null) {
+        buffer.writeAll(["\"radius\":",this.radius, ","], "");
+    }
+    
+    if (this.value != null) {
+        buffer.writeAll(["\"value\":",this.value, ","], "");
+    }
   }
+
 
 }

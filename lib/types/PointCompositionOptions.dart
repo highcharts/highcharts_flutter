@@ -12,59 +12,90 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'PointOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * PointCompositionOptions 
+ * PointCompositionOptions
  */
 class PointCompositionOptions extends PointOptions {
-  PointCompositionOptions( {
+
+  PointCompositionOptions({
     super.accessibility = null,
     super.borderColor = null,
     super.className = null,
+    super.collapsed = null,
     super.color = null,
     super.colorIndex = null,
     super.connectors = null,
     super.dataLabels = null,
     super.dragDrop = null,
+    super.drilldown = null,
     super.events = null,
+    this.id = null,
+    super.index = null,
     super.keys = null,
+    super.labelrank = null,
+    super.lat = null,
+    super.legendIndex = null,
+    this.level = null,
+    super.lon = null,
     super.marker = null,
+    this.mass = null,
+    super.name = null,
+    this.outgoing = null,
     super.selected = null,
-    super.visible = null
-  }) : super();
-  // NOTE: id skipped - type string is ignored in gen 
+    super.seriesIndex = null,
+    super.value = null,
+    super.visible = null,
+    this.weight = null,
+    super.x = null,
+    super.y = null
+  });
 
-  // NOTE: level skipped - type number is ignored in gen 
-
-  // NOTE: mass skipped - type number is ignored in gen 
-
-  // NOTE: outgoing skipped - type boolean is ignored in gen 
-
-  // NOTE: weight skipped - type number is ignored in gen 
-
+  String? id;
+    
+  double? level;
+    
+  double? mass;
+    
+  bool? outgoing;
+    
+  double? weight;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of id (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of level (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of mass (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of outgoing (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of weight (type number is ignored) ignore type: true
+    
+    if (this.id != null) {
+        buffer.writeAll(["\"id\":\'",this.id, "\',"], "");
+    }
+    
+    if (this.level != null) {
+        buffer.writeAll(["\"level\":",this.level, ","], "");
+    }
+    
+    if (this.mass != null) {
+        buffer.writeAll(["\"mass\":",this.mass, ","], "");
+    }
+    
+    if (this.outgoing != null) {
+        buffer.writeAll(["\"outgoing\":",this.outgoing, ","], "");
+    }
+    
+    if (this.weight != null) {
+        buffer.writeAll(["\"weight\":",this.weight, ","], "");
+    }
   }
+
 
 }

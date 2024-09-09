@@ -12,32 +12,44 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * A11yFormatTokenObject 
+ * A11yFormatTokenObject
  */
 class A11yFormatTokenObject extends OptionFragment {
-  A11yFormatTokenObject( ) : super();
-  // NOTE: type skipped - type string is ignored in gen 
 
-  // NOTE: value skipped - type string is ignored in gen 
+  A11yFormatTokenObject({
+    this.type = null,
+    this.value = null
+  });
 
+  String? type;
+    
+  String? value;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of type (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of value (type string is ignored) ignore type: true
+    
+    if (this.type != null) {
+        buffer.writeAll(["\"type\":\'",this.type, "\',"], "");
+    }
+    
+    if (this.value != null) {
+        buffer.writeAll(["\"value\":\'",this.value, "\',"], "");
+    }
   }
+
 
 }

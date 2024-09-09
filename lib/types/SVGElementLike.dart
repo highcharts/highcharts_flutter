@@ -12,11 +12,11 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'DataLabelOptions.dart';
+import 'TextPathObject.dart';
 import 'SVGElement.dart';
 import 'SVGAttributes.dart';
 import 'Position3DObject.dart';
@@ -25,55 +25,142 @@ import 'LabelPositionObject.dart';
 import 'OptionFragment.dart';
 
 /** 
- * SVGElementLike 
+ * SVGElementLike
  */
 class SVGElementLike extends OptionFragment {
-  SVGElementLike( ) : super();
-  // NOTE: survive skipped - type boolean is ignored in gen 
 
-  // NOTE: pathType skipped - type string is ignored in gen 
+  SVGElementLike({
+    this.absoluteBox = null,
+    this.attribs = null,
+    this.backLower = null,
+    this.connector = null,
+    this.dataLabelPosition = null,
+    this.finishedOnAdd = null,
+    this.focusBorder = null,
+    this.fontLower = null,
+    this.lowerGroup = null,
+    this.options = null,
+    this.parts = null,
+    this.pathType = null,
+    this.rightLower = null,
+    this.survive = null,
+    this.textPath = null,
+    this.upperGroup = null,
+    this.vertexes = null
+  });
 
-  // NOTE: finishedOnAdd skipped - type boolean is ignored in gen 
-
+  DataLabelOptions? options;
+    
+  bool? survive;
+    
+  TextPathObject? textPath;
+    
+  SVGElement? focusBorder;
+    
+  SVGAttributes? attribs;
+    
+  String? parts;
+    
+  String? pathType;
+    
+  Position3DObject? vertexes;
+    
+  BBoxObject? absoluteBox;
+    
+  bool? finishedOnAdd;
+    
+  SVGElement? lowerGroup;
+    
+  SVGElement? upperGroup;
+    
+  SVGElement? fontLower;
+    
+  SVGElement? backLower;
+    
+  SVGElement? rightLower;
+    
+  SVGElement? connector;
+    
+  LabelPositionObject? dataLabelPosition;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of options (type DataLabelOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of survive (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of focusBorder (type SVGElement is ignored) ignore type: true
-
-    // NOTE: skip serialization of attribs (type SVGAttributes is ignored) ignore type: true
-
-    // NOTE: skip serialization of parts (type string[] is ignored) ignore type: true
-
-    // NOTE: skip serialization of pathType (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of vertexes (type Position3DObject[] is ignored) ignore type: true
-
-    // NOTE: skip serialization of absoluteBox (type BBoxObject is ignored) ignore type: true
-
-    // NOTE: skip serialization of finishedOnAdd (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of lowerGroup (type SVGElement is ignored) ignore type: true
-
-    // NOTE: skip serialization of upperGroup (type SVGElement is ignored) ignore type: true
-
-    // NOTE: skip serialization of fontLower (type SVGElement is ignored) ignore type: true
-
-    // NOTE: skip serialization of backLower (type SVGElement is ignored) ignore type: true
-
-    // NOTE: skip serialization of rightLower (type SVGElement is ignored) ignore type: true
-
-    // NOTE: skip serialization of connector (type SVGElement is ignored) ignore type: true
-
-    // NOTE: skip serialization of dataLabelPosition (type LabelPositionObject is ignored) ignore type: true
+    
+    if (this.options != null) {
+        buffer.writeAll(["\"options\":",this.options?.toJSON(), ","], "");
+    }
+    
+    if (this.survive != null) {
+        buffer.writeAll(["\"survive\":",this.survive, ","], "");
+    }
+    
+    if (this.textPath != null) {
+        buffer.writeAll(["\"textPath\":",this.textPath?.toJSON(), ","], "");
+    }
+    
+    if (this.focusBorder != null) {
+        buffer.writeAll(["\"focusBorder\":",this.focusBorder?.toJSON(), ","], "");
+    }
+    
+    if (this.attribs != null) {
+        buffer.writeAll(["\"attribs\":",this.attribs?.toJSON(), ","], "");
+    }
+    
+    if (this.parts != null) {
+        buffer.writeAll(["\"parts\":",this.parts, ","], "");
+    }
+    
+    if (this.pathType != null) {
+        buffer.writeAll(["\"pathType\":\'",this.pathType, "\',"], "");
+    }
+    
+    if (this.vertexes != null) {
+        buffer.writeAll(["\"vertexes\":",this.vertexes, ","], "");
+    }
+    
+    if (this.absoluteBox != null) {
+        buffer.writeAll(["\"absoluteBox\":",this.absoluteBox?.toJSON(), ","], "");
+    }
+    
+    if (this.finishedOnAdd != null) {
+        buffer.writeAll(["\"finishedOnAdd\":",this.finishedOnAdd, ","], "");
+    }
+    
+    if (this.lowerGroup != null) {
+        buffer.writeAll(["\"lowerGroup\":",this.lowerGroup?.toJSON(), ","], "");
+    }
+    
+    if (this.upperGroup != null) {
+        buffer.writeAll(["\"upperGroup\":",this.upperGroup?.toJSON(), ","], "");
+    }
+    
+    if (this.fontLower != null) {
+        buffer.writeAll(["\"fontLower\":",this.fontLower?.toJSON(), ","], "");
+    }
+    
+    if (this.backLower != null) {
+        buffer.writeAll(["\"backLower\":",this.backLower?.toJSON(), ","], "");
+    }
+    
+    if (this.rightLower != null) {
+        buffer.writeAll(["\"rightLower\":",this.rightLower?.toJSON(), ","], "");
+    }
+    
+    if (this.connector != null) {
+        buffer.writeAll(["\"connector\":",this.connector?.toJSON(), ","], "");
+    }
+    
+    if (this.dataLabelPosition != null) {
+        buffer.writeAll(["\"dataLabelPosition\":",this.dataLabelPosition?.toJSON(), ","], "");
+    }
   }
+
 
 }

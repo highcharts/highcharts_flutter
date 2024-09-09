@@ -12,30 +12,44 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'HTMLElement.dart';
 import 'OptionFragment.dart';
 
 /** 
- * HTMLElement 
+ * HTMLElement
  */
 class HTMLElement extends OptionFragment {
-  HTMLElement( ) : super();
-  
+
+  HTMLElement({
+    this.element = null,
+    this.parentNode = null
+  });
+
+  HTMLElement? element;
+    
+  HTMLElement? parentNode;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of element (type HTMLElement is ignored) ignore type: true
 
-    // NOTE: skip serialization of parentNode (type HTMLElement is ignored) ignore type: true
+    
+    if (this.element != null) {
+        buffer.writeAll(["\"element\":",this.element?.toJSON(), ","], "");
+    }
+    
+    if (this.parentNode != null) {
+        buffer.writeAll(["\"parentNode\":",this.parentNode?.toJSON(), ","], "");
+    }
   }
+
 
 }

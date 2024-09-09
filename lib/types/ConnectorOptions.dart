@@ -12,29 +12,61 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
-import 'ComponentConnectorOptions.dart';
+ */
 import 'ColumnAssignmentOptions.dart';
 import 'OptionFragment.dart';
 
+
 /** 
- * ConnectorOptions 
+ * ConnectorOptions
  */
-class ConnectorOptions extends ComponentConnectorOptions {
-  ConnectorOptions( ) : super();
-  
+class ConnectorOptions extends OptionFragment {
+
+  ConnectorOptions({
+    this.allowSave = null,
+    this.columnAssignment = null,
+    this.id = null
+  });
+
+  bool? allowSave;
+    
+  String? id;
+    
+  // NOTE: presentationModifier skipped - type DataModifier is ignored in gen 
+
+  List<ColumnAssignmentOptions>? columnAssignment; // ColumnAssignmentOptions
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of columnAssignment (type ColumnAssignmentOptions is ignored) ignore type: true
+
+    
+    if (this.allowSave != null) {
+        buffer.writeAll(["\"allowSave\":",this.allowSave, ","], "");
+    }
+    
+    if (this.id != null) {
+        buffer.writeAll(["\"id\":\'",this.id, "\',"], "");
+    }
+    // NOTE: skip serialization of presentationModifier (type DataModifier ignored, skipped: true)
+
+    
+    if (this.columnAssignment != null) {
+      StringBuffer arrData = StringBuffer();
+      for (var item in this.columnAssignment!) {
+          arrData.write("{");
+          item.toJSONInner(arrData);
+          arrData.write("}");
+      }
+      buffer.writeAll(["\"columnAssignment\": [", arrData , "],"], "");
+    }
   }
+
 
 }

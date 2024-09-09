@@ -12,29 +12,44 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * AxisResizeControlledAxisOptions 
+ * AxisResizeControlledAxisOptions
  */
 class AxisResizeControlledAxisOptions extends OptionFragment {
-  AxisResizeControlledAxisOptions( ) : super();
-  
+
+  AxisResizeControlledAxisOptions({
+    this.next = null,
+    this.prev = null
+  });
+
+  double? next;
+    
+  double? prev;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of next (type number)[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of prev (type number)[] is ignored) ignore type: true
+    
+    if (this.next != null) {
+        buffer.writeAll(["\"next\":",this.next, ","], "");
+    }
+    
+    if (this.prev != null) {
+        buffer.writeAll(["\"prev\":",this.prev, ","], "");
+    }
   }
+
 
 }

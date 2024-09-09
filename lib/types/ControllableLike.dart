@@ -12,30 +12,44 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'SVGElement.dart';
 import 'OptionFragment.dart';
 
 /** 
- * ControllableLike 
+ * ControllableLike
  */
 class ControllableLike extends OptionFragment {
-  ControllableLike( ) : super();
-  
+
+  ControllableLike({
+    this.markerEnd = null,
+    this.markerStart = null
+  });
+
+  SVGElement? markerEnd;
+    
+  SVGElement? markerStart;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of markerEnd (type SVGElement is ignored) ignore type: true
 
-    // NOTE: skip serialization of markerStart (type SVGElement is ignored) ignore type: true
+    
+    if (this.markerEnd != null) {
+        buffer.writeAll(["\"markerEnd\":",this.markerEnd?.toJSON(), ","], "");
+    }
+    
+    if (this.markerStart != null) {
+        buffer.writeAll(["\"markerStart\":",this.markerStart?.toJSON(), ","], "");
+    }
   }
+
 
 }

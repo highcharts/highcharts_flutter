@@ -12,36 +12,62 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * MACDIndicator 
+ * MACDIndicator
  */
 class MACDIndicator extends OptionFragment {
-  MACDIndicator( ) : super();
-  // NOTE: pointValKey skipped - type string is ignored in gen 
 
+  MACDIndicator({
+    this.nameComponents = null,
+    this.parallelArrays = null,
+    this.pointArrayMap = null,
+    this.pointValKey = null
+  });
+
+  String? nameComponents;
+    
+  String? parallelArrays;
+    
+  String? pointArrayMap;
+    
+  // NOTE: pointClass skipped - type typeof MACDPoint is ignored in gen 
+
+  String? pointValKey;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of nameComponents (type string[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of parallelArrays (type string[] is ignored) ignore type: true
+    
+    if (this.nameComponents != null) {
+        buffer.writeAll(["\"nameComponents\":",this.nameComponents, ","], "");
+    }
+    
+    if (this.parallelArrays != null) {
+        buffer.writeAll(["\"parallelArrays\":",this.parallelArrays, ","], "");
+    }
+    
+    if (this.pointArrayMap != null) {
+        buffer.writeAll(["\"pointArrayMap\":",this.pointArrayMap, ","], "");
+    }
+    // NOTE: skip serialization of pointClass (type typeof MACDPoint ignored, skipped: true)
 
-    // NOTE: skip serialization of pointArrayMap (type string[] is ignored) ignore type: true
-
-    // NOTE: skip serialization of pointClass (type typeof MACDPoint is ignored) ignore type: true
-
-    // NOTE: skip serialization of pointValKey (type string is ignored) ignore type: true
+    
+    if (this.pointValKey != null) {
+        buffer.writeAll(["\"pointValKey\":\'",this.pointValKey, "\',"], "");
+    }
   }
+
 
 }

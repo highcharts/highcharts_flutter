@@ -12,32 +12,62 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'SVGElementLike.dart';
 import 'SVGElement.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * SVGElement 
+ * SVGElement
  */
 class SVGElement extends SVGElementLike {
-  SVGElement( ) : super();
-  // NOTE: cutHeight skipped - type number is ignored in gen 
 
+  SVGElement({
+    super.absoluteBox = null,
+    super.attribs = null,
+    super.backLower = null,
+    super.connector = null,
+    this.cutHeight = null,
+    super.dataLabelPosition = null,
+    super.finishedOnAdd = null,
+    super.focusBorder = null,
+    super.fontLower = null,
+    super.lowerGroup = null,
+    super.options = null,
+    this.parentNode = null,
+    super.parts = null,
+    super.pathType = null,
+    super.rightLower = null,
+    super.survive = null,
+    super.textPath = null,
+    super.upperGroup = null,
+    super.vertexes = null
+  });
+
+  double? cutHeight;
+    
+  SVGElement? parentNode;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of cutHeight (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of parentNode (type SVGElement is ignored) ignore type: true
+    
+    if (this.cutHeight != null) {
+        buffer.writeAll(["\"cutHeight\":",this.cutHeight, ","], "");
+    }
+    
+    if (this.parentNode != null) {
+        buffer.writeAll(["\"parentNode\":",this.parentNode?.toJSON(), ","], "");
+    }
   }
+
 
 }

@@ -12,33 +12,41 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'CSSObject.dart';
 import 'OptionFragment.dart';
 
+
 /** 
- * KlingerSignalOptions 
+ * KlingerSignalOptions
  */
 class KlingerSignalOptions extends OptionFragment {
-  KlingerSignalOptions( {
+
+  KlingerSignalOptions({
     this.styles = null
-  }) : super();
+  });
+
+  /**
+   * Styles for a signal line.  
+   */
   CSSObject? styles;
     
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    if (this.styles != null) {  
-      buffer.writeAll(["\"styles\":",this.styles?.toJSON(), ","], "");
+
+    
+    if (this.styles != null) {
+        buffer.writeAll(["\"styles\":",this.styles?.toJSON(), ","], "");
     }
   }
+
 
 }

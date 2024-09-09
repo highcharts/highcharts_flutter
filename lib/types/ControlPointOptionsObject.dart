@@ -12,32 +12,36 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'ControlPointEventsOptionsObject.dart';
 import 'CSSObject.dart';
 import 'OptionFragment.dart';
 
 /** 
- * ControlPointOptionsObject 
+ * ControlPointOptionsObject
  */
 class ControlPointOptionsObject extends OptionFragment {
-  ControlPointOptionsObject( {
+
+  ControlPointOptionsObject({
     this.events = null,
     this.height = null,
+    this.index = null,
     this.style = null,
     this.symbol = null,
     this.visible = null,
     this.width = null
-  }) : super();
+  });
+
+  // NOTE: draggable skipped - type undefined is ignored in gen 
+
   ControlPointEventsOptionsObject? events;
     
   double? height;
     
-  // NOTE: index skipped - type number is ignored in gen 
-
+  double? index;
+    
   CSSObject? style;
     
   String? symbol;
@@ -48,39 +52,44 @@ class ControlPointOptionsObject extends OptionFragment {
     
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of draggable (type undefined is ignored) ignore type: 1
 
-    if (this.events != null) {  
-      buffer.writeAll(["\"events\":",this.events?.toJSON(), ","], "");
+    // NOTE: skip serialization of draggable (type undefined ignored, skipped: true)
+
+    
+    if (this.events != null) {
+        buffer.writeAll(["\"events\":",this.events?.toJSON(), ","], "");
     }
-
-    if (this.height != null) {  
-      buffer.writeAll(["\"height\":",this.height, ","], "");
+    
+    if (this.height != null) {
+        buffer.writeAll(["\"height\":",this.height, ","], "");
     }
-
-    // NOTE: skip serialization of index (type number is ignored) ignore type: true
-
-    if (this.style != null) {  
-      buffer.writeAll(["\"style\":",this.style?.toJSON(), ","], "");
+    
+    if (this.index != null) {
+        buffer.writeAll(["\"index\":",this.index, ","], "");
     }
-
-    if (this.symbol != null) {  
-      buffer.writeAll(["\"symbol\":\'",this.symbol, "\',"], "");
+    
+    if (this.style != null) {
+        buffer.writeAll(["\"style\":",this.style?.toJSON(), ","], "");
     }
-
-    if (this.visible != null) {  
-      buffer.writeAll(["\"visible\":",this.visible, ","], "");
+    
+    if (this.symbol != null) {
+        buffer.writeAll(["\"symbol\":\'",this.symbol, "\',"], "");
     }
-
-    if (this.width != null) {  
-      buffer.writeAll(["\"width\":",this.width, ","], "");
+    
+    if (this.visible != null) {
+        buffer.writeAll(["\"visible\":",this.visible, ","], "");
+    }
+    
+    if (this.width != null) {
+        buffer.writeAll(["\"width\":",this.width, ","], "");
     }
   }
+
 
 }

@@ -12,10 +12,9 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'FlowMapSeriesOptions.dart';
 import 'Series.dart';
 import 'PointOptions.dart';
@@ -34,8 +33,7 @@ class FlowMapSeries extends Series {
     this.data = null
   });
 
-  
-  @override
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
@@ -56,16 +54,13 @@ class FlowMapSeries extends Series {
         if (point.length > 1) {
           seriesData.writeAll(["["], "");
         }
-
-          for (var sub in point) {
-            if (sub is String) {
-              seriesData.writeAll(["\"", sub, "\","], "");
-            } else {
-              seriesData.writeAll([sub], ",");
-            }
-
+        for (var sub in point) {
+          if (sub is String) {
+            seriesData.writeAll(["\"", sub, "\","], "");
+          } else {
+            seriesData.writeAll([sub], ",");
           }
-
+        }
         if (point.length > 1) {
           seriesData.writeAll(["],"], "");
         } else {
@@ -92,34 +87,38 @@ class FlowMapSeries extends Series {
 
 
     
-    // NOTE: skip serialization of growTowards (type boolean is ignored) ignore type: true
 
-    if (this.options?.markerEnd != null) {  
-      buffer.writeAll(["\"markerEnd\":",this.options?.markerEnd?.toJSON(), ","], "");
+    
+    if (this.options?.growTowards != null) {
+        buffer.writeAll(["\"growTowards\":",this.options?.growTowards, ","], "");
     }
-
-    if (this.options?.maxWidth != null) {  
-      buffer.writeAll(["\"maxWidth\":",this.options?.maxWidth, ","], "");
+    
+    if (this.options?.markerEnd != null) {
+        buffer.writeAll(["\"markerEnd\":",this.options?.markerEnd?.toJSON(), ","], "");
     }
-
-    if (this.options?.minWidth != null) {  
-      buffer.writeAll(["\"minWidth\":",this.options?.minWidth, ","], "");
+    
+    if (this.options?.maxWidth != null) {
+        buffer.writeAll(["\"maxWidth\":",this.options?.maxWidth, ","], "");
     }
-
-    if (this.options?.weight != null) {  
-      buffer.writeAll(["\"weight\":",this.options?.weight, ","], "");
+    
+    if (this.options?.minWidth != null) {
+        buffer.writeAll(["\"minWidth\":",this.options?.minWidth, ","], "");
     }
-
-    if (this.options?.curveFactor != null) {  
-      buffer.writeAll(["\"curveFactor\":",this.options?.curveFactor, ","], "");
+    
+    if (this.options?.weight != null) {
+        buffer.writeAll(["\"weight\":",this.options?.weight, ","], "");
     }
-
-    if (this.options?.width != null) {  
-      buffer.writeAll(["\"width\":",this.options?.width, ","], "");
+    
+    if (this.options?.curveFactor != null) {
+        buffer.writeAll(["\"curveFactor\":",this.options?.curveFactor, ","], "");
     }
-
-    if (this.options?.lineWidth != null) {  
-      buffer.writeAll(["\"lineWidth\":",this.options?.lineWidth, ","], "");
+    
+    if (this.options?.width != null) {
+        buffer.writeAll(["\"width\":",this.options?.width, ","], "");
+    }
+    
+    if (this.options?.lineWidth != null) {
+        buffer.writeAll(["\"lineWidth\":",this.options?.lineWidth, ","], "");
     }
   }
 

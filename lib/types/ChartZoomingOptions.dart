@@ -12,46 +12,74 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'ChartResetZoomButtonOptions.dart';
 import 'MouseWheelZoomOptions.dart';
 import 'OptionFragment.dart';
 
+
 /** 
- * ChartZoomingOptions 
+ * ChartZoomingOptions
  */
 class ChartZoomingOptions extends OptionFragment {
-  ChartZoomingOptions( ) : super();
-  // NOTE: key skipped - type string is ignored in gen 
 
-  // NOTE: pinchType skipped - type string is ignored in gen 
+  ChartZoomingOptions({
+    this.key = null,
+    this.mouseWheel = null,
+    this.pinchType = null,
+    this.resetButton = null,
+    this.singleTouch = null,
+    this.type = null
+  });
 
-  // NOTE: singleTouch skipped - type boolean is ignored in gen 
-
-  // NOTE: type skipped - type string is ignored in gen 
-
+  String? key;
+    
+  String? pinchType;
+    
+  ChartResetZoomButtonOptions? resetButton;
+    
+  bool? singleTouch;
+    
+  String? type;
+    
+  MouseWheelZoomOptions? mouseWheel;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of key (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of pinchType (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of resetButton (type ChartResetZoomButtonOptions is ignored) ignore type: true
-
-    // NOTE: skip serialization of singleTouch (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of type (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of mouseWheel (type MouseWheelZoomOptions is ignored) ignore type: true
+    
+    if (this.key != null) {
+        buffer.writeAll(["\"key\":\'",this.key, "\',"], "");
+    }
+    
+    if (this.pinchType != null) {
+        buffer.writeAll(["\"pinchType\":\'",this.pinchType, "\',"], "");
+    }
+    
+    if (this.resetButton != null) {
+        buffer.writeAll(["\"resetButton\":",this.resetButton?.toJSON(), ","], "");
+    }
+    
+    if (this.singleTouch != null) {
+        buffer.writeAll(["\"singleTouch\":",this.singleTouch, ","], "");
+    }
+    
+    if (this.type != null) {
+        buffer.writeAll(["\"type\":\'",this.type, "\',"], "");
+    }
+    
+    if (this.mouseWheel != null) {
+        buffer.writeAll(["\"mouseWheel\":",this.mouseWheel?.toJSON(), ","], "");
+    }
   }
+
 
 }

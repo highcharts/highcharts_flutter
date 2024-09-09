@@ -12,40 +12,54 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'TextPathAttributes.dart';
 import 'OptionFragment.dart';
 
+
 /** 
- * DataLabelTextPathOptions 
+ * DataLabelTextPathOptions
  */
 class DataLabelTextPathOptions extends OptionFragment {
-  DataLabelTextPathOptions( {
+
+  DataLabelTextPathOptions({
     this.attributes = null,
     this.enabled = null
-  }) : super();
+  });
+
+  /**
+   * Presentation attributes for the text path.  
+   */
   TextPathAttributes? attributes;
     
+  /**
+   * Enable or disable `textPath` option for link's or marker's data
+   * labels. 
+   * 
+   * Defaults to 'false'. 
+   */
   bool? enabled;
     
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    if (this.attributes != null) {  
-      buffer.writeAll(["\"attributes\":",this.attributes?.toJSON(), ","], "");
-    }
 
-    if (this.enabled != null) {  
-      buffer.writeAll(["\"enabled\":",this.enabled, ","], "");
+    
+    if (this.attributes != null) {
+        buffer.writeAll(["\"attributes\":",this.attributes?.toJSON(), ","], "");
+    }
+    
+    if (this.enabled != null) {
+        buffer.writeAll(["\"enabled\":",this.enabled, ","], "");
     }
   }
+
 
 }

@@ -12,28 +12,37 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'SVGElement.dart';
 import 'OptionFragment.dart';
 
 /** 
- * ChartComposition 
+ * ChartComposition
  */
 class ChartComposition extends OptionFragment {
-  ChartComposition( ) : super();
-  
+
+  ChartComposition({
+    this.focusElement = null
+  });
+
+  SVGElement? focusElement;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of focusElement (type SVGElement is ignored) ignore type: true
+
+    
+    if (this.focusElement != null) {
+        buffer.writeAll(["\"focusElement\":",this.focusElement?.toJSON(), ","], "");
+    }
   }
+
 
 }

@@ -12,61 +12,93 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * OrganizationLinkOptions 
+ * OrganizationLinkOptions
  */
 class OrganizationLinkOptions extends OptionFragment {
-  OrganizationLinkOptions( {
+
+  OrganizationLinkOptions({
     this.color = null,
+    this.curveFactor = null,
     this.lineWidth = null,
+    this.linkOpacity = null,
     this.radius = null,
     this.type = null
-  }) : super();
-  // NOTE: linkOpacity skipped - type number is ignored in gen 
+  });
 
-  // NOTE: curveFactor skipped - type number is ignored in gen 
-
+  double? linkOpacity;
+    
+  double? curveFactor;
+    
+  /**
+   * The color of the links between nodes. 
+   * 
+   * Defaults to '#666666'. 
+   */
   String? color;
     
+  /**
+   * The line width of the links connecting nodes, in pixels. 
+   * 
+   * Defaults to '1'. 
+   */
   double? lineWidth;
     
+  /**
+   * Type of the link shape. 
+   * 
+   * Defaults to ''default''. 
+   */
   String? type;
     
+  /**
+   * Radius for the rounded corners of the links between nodes.
+   * Works for `default` link type. 
+   * 
+   * Defaults to '10'. 
+   */
   double? radius;
     
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of linkOpacity (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of curveFactor (type number is ignored) ignore type: true
-
-    if (this.color != null) {  
-      buffer.writeAll(["\"color\":\'",this.color, "\',"], "");
+    
+    if (this.linkOpacity != null) {
+        buffer.writeAll(["\"linkOpacity\":",this.linkOpacity, ","], "");
     }
-
-    if (this.lineWidth != null) {  
-      buffer.writeAll(["\"lineWidth\":",this.lineWidth, ","], "");
+    
+    if (this.curveFactor != null) {
+        buffer.writeAll(["\"curveFactor\":",this.curveFactor, ","], "");
     }
-
-    if (this.type != null) {  
-      buffer.writeAll(["\"type\":\'",this.type, "\',"], "");
+    
+    if (this.color != null) {
+        buffer.writeAll(["\"color\":\'",this.color, "\',"], "");
     }
-
-    if (this.radius != null) {  
-      buffer.writeAll(["\"radius\":",this.radius, ","], "");
+    
+    if (this.lineWidth != null) {
+        buffer.writeAll(["\"lineWidth\":",this.lineWidth, ","], "");
+    }
+    
+    if (this.type != null) {
+        buffer.writeAll(["\"type\":\'",this.type, "\',"], "");
+    }
+    
+    if (this.radius != null) {
+        buffer.writeAll(["\"radius\":",this.radius, ","], "");
     }
   }
+
 
 }

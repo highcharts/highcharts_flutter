@@ -12,41 +12,59 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * IKHSenkouSpanOptions 
+ * IKHSenkouSpanOptions
  */
 class IKHSenkouSpanOptions extends OptionFragment {
-  IKHSenkouSpanOptions( {
+
+  IKHSenkouSpanOptions({
     this.color = null,
-    this.negativeColor = null
-  }) : super();
+    this.negativeColor = null,
+    this.styles = null
+  });
+
+  /**
+   * Color of the area between Senkou Span A and B,
+   * when Senkou Span A is above Senkou Span B. Note that if
+   * a `style.fill` is defined, the `color` takes precedence and
+   * the `style.fill` is ignored.  
+   */
   String? color;
     
+  /**
+   * Color of the area between Senkou Span A and B,
+   * when Senkou Span A is under Senkou Span B.  
+   */
   String? negativeColor;
+    
+  var styles;
     
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    if (this.color != null) {  
-      buffer.writeAll(["\"color\":\'",this.color, "\',"], "");
-    }
 
-    if (this.negativeColor != null) {  
-      buffer.writeAll(["\"negativeColor\":\'",this.negativeColor, "\',"], "");
+    
+    if (this.color != null) {
+        buffer.writeAll(["\"color\":\'",this.color, "\',"], "");
     }
+    
+    if (this.negativeColor != null) {
+        buffer.writeAll(["\"negativeColor\":\'",this.negativeColor, "\',"], "");
+    }
+    // NOTE: skip serialization of styles (type CSSObject & { fill: ColorType; } ignored, skipped: true)
 
-    // NOTE: skip serialization of styles (type CSSObject & { fill: ColorType; } is ignored) ignore type: true
   }
+
 
 }

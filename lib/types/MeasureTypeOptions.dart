@@ -12,48 +12,85 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'AnnotationTypeOptions.dart';
 import 'ControllableShapeOptions.dart';
 import 'MeasureTypeCrosshairOptions.dart';
 import 'MeasureTypeLabelOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * MeasureTypeOptions 
+ * MeasureTypeOptions
  */
 class MeasureTypeOptions extends AnnotationTypeOptions {
-  MeasureTypeOptions( ) : super();
-  // NOTE: selectType skipped - type string is ignored in gen 
 
-  // NOTE: xAxis skipped - type number is ignored in gen 
+  MeasureTypeOptions({
+    this.background = null,
+    this.crosshairX = null,
+    this.crosshairY = null,
+    super.height = null,
+    this.label = null,
+    super.point = null,
+    super.points = null,
+    this.selectType = null,
+    this.xAxis = null,
+    this.yAxis = null
+  });
 
-  // NOTE: yAxis skipped - type number is ignored in gen 
-
+  ControllableShapeOptions? background;
+    
+  MeasureTypeCrosshairOptions? crosshairX;
+    
+  MeasureTypeCrosshairOptions? crosshairY;
+    
+  MeasureTypeLabelOptions? label;
+    
+  String? selectType;
+    
+  double? xAxis;
+    
+  double? yAxis;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of background (type ControllableShapeOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of crosshairX (type MeasureTypeCrosshairOptions is ignored) ignore type: true
-
-    // NOTE: skip serialization of crosshairY (type MeasureTypeCrosshairOptions is ignored) ignore type: true
-
-    // NOTE: skip serialization of label (type MeasureTypeLabelOptions is ignored) ignore type: true
-
-    // NOTE: skip serialization of selectType (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of xAxis (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of yAxis (type number is ignored) ignore type: true
+    
+    if (this.background != null) {
+        buffer.writeAll(["\"background\":",this.background?.toJSON(), ","], "");
+    }
+    
+    if (this.crosshairX != null) {
+        buffer.writeAll(["\"crosshairX\":",this.crosshairX?.toJSON(), ","], "");
+    }
+    
+    if (this.crosshairY != null) {
+        buffer.writeAll(["\"crosshairY\":",this.crosshairY?.toJSON(), ","], "");
+    }
+    
+    if (this.label != null) {
+        buffer.writeAll(["\"label\":",this.label?.toJSON(), ","], "");
+    }
+    
+    if (this.selectType != null) {
+        buffer.writeAll(["\"selectType\":\'",this.selectType, "\',"], "");
+    }
+    
+    if (this.xAxis != null) {
+        buffer.writeAll(["\"xAxis\":",this.xAxis, ","], "");
+    }
+    
+    if (this.yAxis != null) {
+        buffer.writeAll(["\"yAxis\":",this.yAxis, ","], "");
+    }
   }
+
 
 }

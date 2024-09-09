@@ -12,27 +12,33 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * RSIIndicator 
+ * RSIIndicator
  */
 class RSIIndicator extends OptionFragment {
-  RSIIndicator( ) : super();
-  
+
+  RSIIndicator();
+
+  // NOTE: pointClass skipped - type typeof RSIPoint is ignored in gen 
+
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of pointClass (type typeof RSIPoint is ignored) ignore type: true
+
+    // NOTE: skip serialization of pointClass (type typeof RSIPoint ignored, skipped: true)
+
   }
+
 
 }

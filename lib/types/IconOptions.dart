@@ -12,33 +12,53 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'ItemOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * IconOptions 
+ * IconOptions
  */
 class IconOptions extends ItemOptions {
-  IconOptions( ) : super();
-  // NOTE: icon skipped - type string is ignored in gen 
+
+  IconOptions({
+    super.className = null,
+    super.events = null,
+    this.icon = null,
+    super.id = null,
+    super.langKey = null,
+    super.name = null,
+    super.style = null,
+    super.text = null,
+    super.type = null
+  });
+
+  // NOTE: type skipped - type "icon" is ignored in gen 
+
+  String? icon;
+    
+  /** NOTE: extevents is skipped here for now, as it overrides the base type. */
 
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of type (type "icon" is ignored) ignore type: true
 
-    // NOTE: skip serialization of icon (type string is ignored) ignore type: true
+    // NOTE: skip serialization of type (type "icon" ignored, skipped: true)
 
-    // NOTE: skip serialization of events (type { update?: Function; onmousedown?: Function; click?: Function; } is ignored) ignore type: true
+    
+    if (this.icon != null) {
+        buffer.writeAll(["\"icon\":\'",this.icon, "\',"], "");
+    }
+    // NOTE: skip serialization of events (type { update?: Function; onmousedown?: Function; click?: Function; } ignored, skipped: true)
+
   }
+
 
 }

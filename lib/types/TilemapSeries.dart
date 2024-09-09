@@ -12,10 +12,9 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'TilemapSeriesOptions.dart';
 import 'Series.dart';
 import 'PointOptions.dart';
@@ -34,8 +33,7 @@ class TilemapSeries extends Series {
     this.data = null
   });
 
-  
-  @override
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
@@ -56,16 +54,13 @@ class TilemapSeries extends Series {
         if (point.length > 1) {
           seriesData.writeAll(["["], "");
         }
-
-          for (var sub in point) {
-            if (sub is String) {
-              seriesData.writeAll(["\"", sub, "\","], "");
-            } else {
-              seriesData.writeAll([sub], ",");
-            }
-
+        for (var sub in point) {
+          if (sub is String) {
+            seriesData.writeAll(["\"", sub, "\","], "");
+          } else {
+            seriesData.writeAll([sub], ",");
           }
-
+        }
         if (point.length > 1) {
           seriesData.writeAll(["],"], "");
         } else {
@@ -92,10 +87,30 @@ class TilemapSeries extends Series {
 
 
     
-    // NOTE: skip serialization of state (type Generic is ignored) ignore type: true
 
-    if (this.options?.tileShape != null) {  
-      buffer.writeAll(["\"tileShape\":\'",this.options?.tileShape, "\',"], "");
+    // NOTE: skip serialization of data (type TilemapPointOptions)[] ignored, skipped: false)
+
+    
+    if (this.options?.colsize != null) {
+        buffer.writeAll(["\"colsize\":",this.options?.colsize, ","], "");
+    }
+    // NOTE: skip serialization of marker (type PointMarkerOptions ignored, skipped: false)
+
+    
+    if (this.options?.pointPadding != null) {
+        buffer.writeAll(["\"pointPadding\":",this.options?.pointPadding, ","], "");
+    }
+    
+    if (this.options?.rowsize != null) {
+        buffer.writeAll(["\"rowsize\":",this.options?.rowsize, ","], "");
+    }
+    // NOTE: skip serialization of state (type Generic ignored, skipped: true)
+
+    // NOTE: skip serialization of states (type TilemapSeriesStatesOptions ignored, skipped: false)
+
+    
+    if (this.options?.tileShape != null) {
+        buffer.writeAll(["\"tileShape\":\'",this.options?.tileShape, "\',"], "");
     }
   }
 

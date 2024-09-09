@@ -12,10 +12,9 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'BellcurveSeriesOptions.dart';
 import 'Series.dart';
 import 'PointOptions.dart';
@@ -34,8 +33,7 @@ class BellcurveSeries extends Series {
     this.data = null
   });
 
-  
-  @override
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
@@ -56,16 +54,13 @@ class BellcurveSeries extends Series {
         if (point.length > 1) {
           seriesData.writeAll(["["], "");
         }
-
-          for (var sub in point) {
-            if (sub is String) {
-              seriesData.writeAll(["\"", sub, "\","], "");
-            } else {
-              seriesData.writeAll([sub], ",");
-            }
-
+        for (var sub in point) {
+          if (sub is String) {
+            seriesData.writeAll(["\"", sub, "\","], "");
+          } else {
+            seriesData.writeAll([sub], ",");
           }
-
+        }
         if (point.length > 1) {
           seriesData.writeAll(["],"], "");
         } else {
@@ -92,19 +87,39 @@ class BellcurveSeries extends Series {
 
 
     
-    // NOTE: skip serialization of baseSeries (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of data (type undefined is ignored) ignore type: 1
-
-    if (this.options?.intervals != null) {  
-      buffer.writeAll(["\"intervals\":",this.options?.intervals, ","], "");
+    
+    if (this.options?.baseSeries != null) {
+        buffer.writeAll(["\"baseSeries\":\'",this.options?.baseSeries, "\',"], "");
     }
+    // NOTE: skip serialization of data (type undefined ignored, skipped: true)
 
-    if (this.options?.pointsInInterval != null) {  
-      buffer.writeAll(["\"pointsInInterval\":",this.options?.pointsInInterval, ","], "");
+    
+    if (this.options?.intervals != null) {
+        buffer.writeAll(["\"intervals\":",this.options?.intervals, ","], "");
     }
+    
+    if (this.options?.pointsInInterval != null) {
+        buffer.writeAll(["\"pointsInInterval\":",this.options?.pointsInInterval, ","], "");
+    }
+    // NOTE: skip serialization of states (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
+    
+    if (this.options?.marker != null) {
+        buffer.writeAll(["\"marker\":",this.options?.marker?.toJSON(), ","], "");
+    }
+    
+    if (this.options?.fillOpacity != null) {
+        buffer.writeAll(["\"fillOpacity\":",this.options?.fillOpacity, ","], "");
+    }
+    
+    if (this.options?.fillColor != null) {
+        buffer.writeAll(["\"fillColor\":\'",this.options?.fillColor, "\',"], "");
+    }
+    
+    if (this.options?.color != null) {
+        buffer.writeAll(["\"color\":\'",this.options?.color, "\',"], "");
+    }
   }
 
 }

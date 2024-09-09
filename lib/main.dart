@@ -2,6 +2,8 @@ library highcharts;
 
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
+import 'package:webview_flutter_android/webview_flutter_android.dart';
+import 'package:webview_flutter_wkwebview/webview_flutter_wkwebview.dart';
 
 // void main() => runApp(const MaterialApp(home: ChartView()));
 
@@ -95,7 +97,23 @@ class _ChartViewState extends State<ChartView> {
     super.initState();
 
     // #docregion webview_controller
-    controller = WebViewController()
+    PlatformWebViewControllerCreationParams params;
+
+    if (WebViewPlatform.instance is WebKitWebViewPlatform) {
+      params = WebKitWebViewControllerCreationParams();
+    } else if (WebViewPlatform.instance is AndroidWebViewPlatform) {
+      params = AndroidWebViewControllerCreationParams();
+    } else {
+      params = const PlatformWebViewControllerCreationParams();
+    }
+
+    controller = WebViewController.fromPlatformCreationParams(params);
+
+    if (controller.platform is WebKitWebViewController) {
+      (controller.platform as WebKitWebViewController).setInspectable(true);
+    }
+
+    controller
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
       ..setBackgroundColor(const Color(0x00000000))
       ..setNavigationDelegate(
@@ -115,6 +133,7 @@ class _ChartViewState extends State<ChartView> {
         ),
       )
       ..loadHtmlString(kLocalExamplePage);
+
     // #enddocregion webview_controller
   }
 

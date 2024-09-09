@@ -12,30 +12,41 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * AddComponentDetails 
+ * AddComponentDetails
  */
 class AddComponentDetails extends OptionFragment {
-  AddComponentDetails( ) : super();
-  // NOTE: text skipped - type string is ignored in gen 
+
+  AddComponentDetails({
+    this.text = null
+  });
+
+  String? text;
+    
+  // NOTE: onDrop skipped - type Function is ignored in gen 
 
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of text (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of onDrop (type Function is ignored) ignore type: 1
+    
+    if (this.text != null) {
+        buffer.writeAll(["\"text\":\'",this.text, "\',"], "");
+    }
+    // NOTE: skip serialization of onDrop (type Function ignored, skipped: true)
+
   }
+
 
 }

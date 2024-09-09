@@ -12,28 +12,37 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'DataGridRowEvents.dart';
 import 'OptionFragment.dart';
 
 /** 
- * DataGridEvents 
+ * DataGridEvents
  */
 class DataGridEvents extends OptionFragment {
-  DataGridEvents( ) : super();
-  
+
+  DataGridEvents({
+    this.row = null
+  });
+
+  DataGridRowEvents? row;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of row (type DataGridRowEvents is ignored) ignore type: true
+
+    
+    if (this.row != null) {
+        buffer.writeAll(["\"row\":",this.row?.toJSON(), ","], "");
+    }
   }
+
 
 }

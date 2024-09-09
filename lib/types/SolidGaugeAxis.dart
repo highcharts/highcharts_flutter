@@ -12,43 +12,66 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
-import 'ColorAxisLike.dart';
 import 'OptionFragment.dart';
 
 /** 
- * SolidGaugeAxis 
+ * SolidGaugeAxis
  */
-class SolidGaugeAxis extends ColorAxisLike {
-  SolidGaugeAxis( ) : super();
-  // NOTE: coll skipped - type string is ignored in gen 
+class SolidGaugeAxis extends OptionFragment {
 
-  // NOTE: max skipped - type number is ignored in gen 
+  SolidGaugeAxis({
+    this.center = null,
+    this.coll = null,
+    this.max = null,
+    this.min = null
+  });
 
-  // NOTE: min skipped - type number is ignored in gen 
+  double? center;
+    
+  String? coll;
+    
+  double? max;
+    
+  double? min;
+    
+  // NOTE: options skipped - type Options & RadialAxisOptions is ignored in gen 
+
+  // NOTE: pane skipped - type Pane is ignored in gen 
 
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of center (type number[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of coll (type string is ignored) ignore type: true
+    
+    if (this.center != null) {
+        buffer.writeAll(["\"center\":",this.center, ","], "");
+    }
+    
+    if (this.coll != null) {
+        buffer.writeAll(["\"coll\":\'",this.coll, "\',"], "");
+    }
+    
+    if (this.max != null) {
+        buffer.writeAll(["\"max\":",this.max, ","], "");
+    }
+    
+    if (this.min != null) {
+        buffer.writeAll(["\"min\":",this.min, ","], "");
+    }
+    // NOTE: skip serialization of options (type Options & RadialAxisOptions ignored, skipped: true)
 
-    // NOTE: skip serialization of max (type number is ignored) ignore type: true
+    // NOTE: skip serialization of pane (type Pane ignored, skipped: true)
 
-    // NOTE: skip serialization of min (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of options (type ColorAxisLike.Options & RadialAxis.Options is ignored) ignore type: true
-
-    // NOTE: skip serialization of pane (type Pane is ignored) ignore type: true
   }
+
 
 }

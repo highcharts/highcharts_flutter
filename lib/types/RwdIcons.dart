@@ -12,36 +12,51 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * RwdIcons 
+ * RwdIcons
  */
 class RwdIcons extends OptionFragment {
-  RwdIcons( ) : super();
-  // NOTE: small skipped - type string is ignored in gen 
 
-  // NOTE: medium skipped - type string is ignored in gen 
+  RwdIcons({
+    this.large = null,
+    this.medium = null,
+    this.small = null
+  });
 
-  // NOTE: large skipped - type string is ignored in gen 
-
+  String? small;
+    
+  String? medium;
+    
+  String? large;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of small (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of medium (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of large (type string is ignored) ignore type: true
+    
+    if (this.small != null) {
+        buffer.writeAll(["\"small\":\'",this.small, "\',"], "");
+    }
+    
+    if (this.medium != null) {
+        buffer.writeAll(["\"medium\":\'",this.medium, "\',"], "");
+    }
+    
+    if (this.large != null) {
+        buffer.writeAll(["\"large\":\'",this.large, "\',"], "");
+    }
   }
+
 
 }

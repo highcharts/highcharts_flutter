@@ -12,30 +12,44 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'BBoxObject.dart';
 import 'OptionFragment.dart';
 
 /** 
- * Anchor 
+ * Anchor
  */
 class Anchor extends OptionFragment {
-  Anchor( ) : super();
-  
+
+  Anchor({
+    this.absolutePosition = null,
+    this.relativePosition = null
+  });
+
+  BBoxObject? absolutePosition;
+    
+  BBoxObject? relativePosition;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of absolutePosition (type BBoxObject is ignored) ignore type: true
 
-    // NOTE: skip serialization of relativePosition (type BBoxObject is ignored) ignore type: true
+    
+    if (this.absolutePosition != null) {
+        buffer.writeAll(["\"absolutePosition\":",this.absolutePosition?.toJSON(), ","], "");
+    }
+    
+    if (this.relativePosition != null) {
+        buffer.writeAll(["\"relativePosition\":",this.relativePosition?.toJSON(), ","], "");
+    }
   }
+
 
 }

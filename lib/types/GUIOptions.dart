@@ -12,33 +12,49 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'Options.dart';
 import 'OptionFragment.dart';
 
+
 /** 
- * GUIOptions 
+ * GUIOptions
  */
 class GUIOptions extends OptionFragment {
-  GUIOptions( ) : super();
-  // NOTE: enabled skipped - type boolean is ignored in gen 
 
+  GUIOptions({
+    this.enabled = null,
+    this.layouts = null
+  });
+
+  bool? enabled;
+    
+  // NOTE: layoutOptions skipped - type Generic is ignored in gen 
+
+  Options? layouts;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of enabled (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of layoutOptions (type Generic is ignored) ignore type: true
+    
+    if (this.enabled != null) {
+        buffer.writeAll(["\"enabled\":",this.enabled, ","], "");
+    }
+    // NOTE: skip serialization of layoutOptions (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of layouts (type Options[] is ignored) ignore type: true
+    
+    if (this.layouts != null) {
+        buffer.writeAll(["\"layouts\":",this.layouts, ","], "");
+    }
   }
+
 
 }

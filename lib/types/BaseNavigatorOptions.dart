@@ -12,56 +12,93 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'NavigatorHandlesOptions.dart';
 import 'SeriesOptions.dart';
 import 'AxisOptions.dart';
 import 'YAxisOptions.dart';
 import 'OptionFragment.dart';
 
+
 /** 
- * BaseNavigatorOptions 
+ * BaseNavigatorOptions
  */
 class BaseNavigatorOptions extends OptionFragment {
-  BaseNavigatorOptions( ) : super();
-  // NOTE: maskFill skipped - type string is ignored in gen 
 
-  // NOTE: maskInside skipped - type boolean is ignored in gen 
+  BaseNavigatorOptions({
+    this.handles = null,
+    this.height = null,
+    this.maskFill = null,
+    this.maskInside = null,
+    this.outlineColor = null,
+    this.outlineWidth = null,
+    this.series = null,
+    this.xAxis = null,
+    this.yAxis = null
+  });
 
-  // NOTE: height skipped - type number is ignored in gen 
-
-  // NOTE: outlineColor skipped - type string is ignored in gen 
-
-  // NOTE: outlineWidth skipped - type number is ignored in gen 
-
+  String? maskFill;
+    
+  bool? maskInside;
+    
+  NavigatorHandlesOptions? handles;
+    
+  double? height;
+    
+  String? outlineColor;
+    
+  double? outlineWidth;
+    
+  SeriesOptions? series;
+    
+  AxisOptions? xAxis;
+    
+  YAxisOptions? yAxis;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of maskFill (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of maskInside (type boolean is ignored) ignore type: true
+    
+    if (this.maskFill != null) {
+        buffer.writeAll(["\"maskFill\":\'",this.maskFill, "\',"], "");
+    }
+    
+    if (this.maskInside != null) {
+        buffer.writeAll(["\"maskInside\":",this.maskInside, ","], "");
+    }
+    
+    if (this.handles != null) {
+        buffer.writeAll(["\"handles\":",this.handles?.toJSON(), ","], "");
+    }
+    
+    if (this.height != null) {
+        buffer.writeAll(["\"height\":",this.height, ","], "");
+    }
+    
+    if (this.outlineColor != null) {
+        buffer.writeAll(["\"outlineColor\":\'",this.outlineColor, "\',"], "");
+    }
+    
+    if (this.outlineWidth != null) {
+        buffer.writeAll(["\"outlineWidth\":",this.outlineWidth, ","], "");
+    }
+    
+    if (this.series != null) {
+        buffer.writeAll(["\"series\":",this.series?.toJSON(), ","], "");
+    }
+    // NOTE: skip serialization of xAxis (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of handles (type NavigatorHandlesOptions is ignored) ignore type: true
+    // NOTE: skip serialization of yAxis (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of height (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of outlineColor (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of outlineWidth (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of series (type SeriesOptions is ignored) ignore type: true
-
-    // NOTE: skip serialization of xAxis (type Generic is ignored) ignore type: true
-
-    // NOTE: skip serialization of yAxis (type Generic is ignored) ignore type: true
   }
+
 
 }

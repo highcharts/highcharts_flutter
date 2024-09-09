@@ -12,35 +12,51 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'NetworkgraphPoint.dart';
 import 'OptionFragment.dart';
 
 /** 
- * NetworkgraphDataLabelsFormatterContextObject 
+ * NetworkgraphDataLabelsFormatterContextObject
  */
 class NetworkgraphDataLabelsFormatterContextObject extends OptionFragment {
-  NetworkgraphDataLabelsFormatterContextObject( ) : super();
-  // NOTE: color skipped - type string is ignored in gen 
 
-  // NOTE: key skipped - type string is ignored in gen 
+  NetworkgraphDataLabelsFormatterContextObject({
+    this.color = null,
+    this.key = null,
+    this.point = null
+  });
 
+  String? color;
+    
+  String? key;
+    
+  NetworkgraphPoint? point;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of color (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of key (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of point (type NetworkgraphPoint is ignored) ignore type: true
+    
+    if (this.color != null) {
+        buffer.writeAll(["\"color\":\'",this.color, "\',"], "");
+    }
+    
+    if (this.key != null) {
+        buffer.writeAll(["\"key\":\'",this.key, "\',"], "");
+    }
+    
+    if (this.point != null) {
+        buffer.writeAll(["\"point\":",this.point?.toJSON(), ","], "");
+    }
   }
+
 
 }

@@ -12,31 +12,45 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'PositionObject.dart';
 import 'SVGPath.dart';
 import 'OptionFragment.dart';
 
 /** 
- * IntersectionObject 
+ * IntersectionObject
  */
 class IntersectionObject extends OptionFragment {
-  IntersectionObject( ) : super();
-  
+
+  IntersectionObject({
+    this.center = null,
+    this.d = null
+  });
+
+  PositionObject? center;
+    
+  SVGPath? d;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of center (type PositionObject is ignored) ignore type: true
 
-    // NOTE: skip serialization of d (type SVGPath is ignored) ignore type: true
+    
+    if (this.center != null) {
+        buffer.writeAll(["\"center\":",this.center?.toJSON(), ","], "");
+    }
+    
+    if (this.d != null) {
+        buffer.writeAll(["\"d\":",this.d?.toJSON(), ","], "");
+    }
   }
+
 
 }

@@ -12,34 +12,52 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * IKHIndicator 
+ * IKHIndicator
  */
 class IKHIndicator extends OptionFragment {
-  IKHIndicator( ) : super();
-  // NOTE: pointValKey skipped - type string is ignored in gen 
+
+  IKHIndicator({
+    this.nameComponents = null,
+    this.pointValKey = null
+  });
+
+  // NOTE: pointClass skipped - type typeof IKHPoint is ignored in gen 
+
+  String? nameComponents;
+    
+  String? pointValKey;
+    
+  // NOTE: pointArrayMap skipped - type (keyof IKHPoint)[] is ignored in gen 
 
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of pointClass (type typeof IKHPoint is ignored) ignore type: true
 
-    // NOTE: skip serialization of nameComponents (type string[] is ignored) ignore type: true
+    // NOTE: skip serialization of pointClass (type typeof IKHPoint ignored, skipped: true)
 
-    // NOTE: skip serialization of pointValKey (type string is ignored) ignore type: true
+    
+    if (this.nameComponents != null) {
+        buffer.writeAll(["\"nameComponents\":",this.nameComponents, ","], "");
+    }
+    
+    if (this.pointValKey != null) {
+        buffer.writeAll(["\"pointValKey\":\'",this.pointValKey, "\',"], "");
+    }
+    // NOTE: skip serialization of pointArrayMap (type (keyof IKHPoint)[] ignored, skipped: true)
 
-    // NOTE: skip serialization of pointArrayMap (type (keyof IKHPoint)[] is ignored) ignore type: true
   }
+
 
 }

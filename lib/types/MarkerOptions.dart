@@ -12,34 +12,48 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * MarkerOptions 
+ * MarkerOptions
  */
 class MarkerOptions extends OptionFragment {
-  MarkerOptions( ) : super();
-  // NOTE: color skipped - type string is ignored in gen 
 
-  // NOTE: width skipped - type number is ignored in gen 
+  MarkerOptions({
+    this.color = null,
+    this.width = null
+  });
 
+  // NOTE: animation skipped - type Generic is ignored in gen 
+
+  String? color;
+    
+  double? width;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of animation (type Generic is ignored) ignore type: true
 
-    // NOTE: skip serialization of color (type string is ignored) ignore type: true
+    // NOTE: skip serialization of animation (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of width (type number is ignored) ignore type: true
+    
+    if (this.color != null) {
+        buffer.writeAll(["\"color\":\'",this.color, "\',"], "");
+    }
+    
+    if (this.width != null) {
+        buffer.writeAll(["\"width\":",this.width, ","], "");
+    }
   }
+
 
 }

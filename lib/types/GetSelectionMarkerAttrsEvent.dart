@@ -12,33 +12,49 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'SVGAttributes.dart';
 import 'OptionFragment.dart';
 
 /** 
- * GetSelectionMarkerAttrsEvent 
+ * GetSelectionMarkerAttrsEvent
  */
 class GetSelectionMarkerAttrsEvent extends OptionFragment {
-  GetSelectionMarkerAttrsEvent( ) : super();
-  // NOTE: shapeType skipped - type string is ignored in gen 
 
+  GetSelectionMarkerAttrsEvent({
+    this.args = null,
+    this.attrs = null,
+    this.shapeType = null
+  });
+
+  Map<String, String>? args;
+    
+  SVGAttributes? attrs;
+    
+  String? shapeType;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of args (type Generic is ignored) ignore type: true
 
-    // NOTE: skip serialization of attrs (type SVGAttributes is ignored) ignore type: true
+    // NOTE: skip serialization of args (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of shapeType (type string is ignored) ignore type: true
+    
+    if (this.attrs != null) {
+        buffer.writeAll(["\"attrs\":",this.attrs?.toJSON(), ","], "");
+    }
+    
+    if (this.shapeType != null) {
+        buffer.writeAll(["\"shapeType\":\'",this.shapeType, "\',"], "");
+    }
   }
+
 
 }

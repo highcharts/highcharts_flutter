@@ -12,30 +12,42 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'RangeSelectorButtonOptions.dart';
 import 'OptionFragment.dart';
 
 /** 
- * RangeSelector 
+ * RangeSelector
  */
 class RangeSelector extends OptionFragment {
-  RangeSelector( ) : super();
-  
+
+  RangeSelector({
+    this.defaultButtons = null,
+    this.inputTypeFormats = null
+  });
+
+  RangeSelectorButtonOptions? defaultButtons;
+    
+  Map<String, String>? inputTypeFormats;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of defaultButtons (type RangeSelectorButtonOptions[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of inputTypeFormats (type Generic is ignored) ignore type: true
+    
+    if (this.defaultButtons != null) {
+        buffer.writeAll(["\"defaultButtons\":",this.defaultButtons, ","], "");
+    }
+    // NOTE: skip serialization of inputTypeFormats (type Generic ignored, skipped: true)
+
   }
+
 
 }

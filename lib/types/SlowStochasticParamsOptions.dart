@@ -12,31 +12,33 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'StochasticParamsOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * SlowStochasticParamsOptions 
+ * SlowStochasticParamsOptions
  */
 class SlowStochasticParamsOptions extends StochasticParamsOptions {
-  SlowStochasticParamsOptions( {
+
+  SlowStochasticParamsOptions({
     super.index = null,
-    super.period = null
-  }) : super();
-  
+    super.period = null,
+    super.periods = null
+  });
+
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    
+
   }
+
 
 }

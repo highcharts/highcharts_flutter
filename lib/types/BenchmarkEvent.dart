@@ -12,31 +12,44 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
-import 'DataEvent.dart';
 import 'OptionFragment.dart';
 
 /** 
- * BenchmarkEvent 
+ * BenchmarkEvent
  */
-class BenchmarkEvent extends DataEvent {
-  BenchmarkEvent( ) : super();
-  // NOTE: type skipped - type string is ignored in gen 
+class BenchmarkEvent extends OptionFragment {
 
+  BenchmarkEvent({
+    this.results = null,
+    this.type = null
+  });
+
+  String? type;
+    
+  double? results;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of type (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of results (type number[] is ignored) ignore type: true
+    
+    if (this.type != null) {
+        buffer.writeAll(["\"type\":\'",this.type, "\',"], "");
+    }
+    
+    if (this.results != null) {
+        buffer.writeAll(["\"results\":",this.results, ","], "");
+    }
   }
+
 
 }

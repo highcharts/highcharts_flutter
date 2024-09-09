@@ -12,40 +12,58 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * LangAccessibilityRangeSelectorOptions 
+ * LangAccessibilityRangeSelectorOptions
  */
 class LangAccessibilityRangeSelectorOptions extends OptionFragment {
-  LangAccessibilityRangeSelectorOptions( ) : super();
-  // NOTE: dropdownLabel skipped - type string is ignored in gen 
 
-  // NOTE: maxInputLabel skipped - type string is ignored in gen 
+  LangAccessibilityRangeSelectorOptions({
+    this.clickButtonAnnouncement = null,
+    this.dropdownLabel = null,
+    this.maxInputLabel = null,
+    this.minInputLabel = null
+  });
 
-  // NOTE: minInputLabel skipped - type string is ignored in gen 
-
-  // NOTE: clickButtonAnnouncement skipped - type string is ignored in gen 
-
+  String? dropdownLabel;
+    
+  String? maxInputLabel;
+    
+  String? minInputLabel;
+    
+  String? clickButtonAnnouncement;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of dropdownLabel (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of maxInputLabel (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of minInputLabel (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of clickButtonAnnouncement (type string is ignored) ignore type: true
+    
+    if (this.dropdownLabel != null) {
+        buffer.writeAll(["\"dropdownLabel\":\'",this.dropdownLabel, "\',"], "");
+    }
+    
+    if (this.maxInputLabel != null) {
+        buffer.writeAll(["\"maxInputLabel\":\'",this.maxInputLabel, "\',"], "");
+    }
+    
+    if (this.minInputLabel != null) {
+        buffer.writeAll(["\"minInputLabel\":\'",this.minInputLabel, "\',"], "");
+    }
+    
+    if (this.clickButtonAnnouncement != null) {
+        buffer.writeAll(["\"clickButtonAnnouncement\":\'",this.clickButtonAnnouncement, "\',"], "");
+    }
   }
+
 
 }

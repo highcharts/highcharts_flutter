@@ -12,43 +12,65 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'AnnotationOptions.dart';
 import 'OptionFragment.dart';
 
 /** 
- * TimeCycles 
+ * TimeCycles
  */
 class TimeCycles extends OptionFragment {
-  TimeCycles( ) : super();
-  // NOTE: startX skipped - type number is ignored in gen 
 
-  // NOTE: pixelInterval skipped - type number is ignored in gen 
+  TimeCycles({
+    this.defaultOptions = null,
+    this.numberOfCircles = null,
+    this.pixelInterval = null,
+    this.startX = null,
+    this.y = null
+  });
 
-  // NOTE: numberOfCircles skipped - type number is ignored in gen 
-
-  // NOTE: y skipped - type number is ignored in gen 
-
+  AnnotationOptions? defaultOptions;
+    
+  double? startX;
+    
+  double? pixelInterval;
+    
+  double? numberOfCircles;
+    
+  double? y;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of defaultOptions (type AnnotationOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of startX (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of pixelInterval (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of numberOfCircles (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of y (type number is ignored) ignore type: true
+    
+    if (this.defaultOptions != null) {
+        buffer.writeAll(["\"defaultOptions\":",this.defaultOptions?.toJSON(), ","], "");
+    }
+    
+    if (this.startX != null) {
+        buffer.writeAll(["\"startX\":",this.startX, ","], "");
+    }
+    
+    if (this.pixelInterval != null) {
+        buffer.writeAll(["\"pixelInterval\":",this.pixelInterval, ","], "");
+    }
+    
+    if (this.numberOfCircles != null) {
+        buffer.writeAll(["\"numberOfCircles\":",this.numberOfCircles, ","], "");
+    }
+    
+    if (this.y != null) {
+        buffer.writeAll(["\"y\":",this.y, ","], "");
+    }
   }
+
 
 }

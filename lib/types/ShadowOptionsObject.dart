@@ -12,48 +12,72 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * ShadowOptionsObject 
+ * ShadowOptionsObject
  */
 class ShadowOptionsObject extends OptionFragment {
-  ShadowOptionsObject( ) : super();
-  // NOTE: color skipped - type string is ignored in gen 
 
-  // NOTE: filterUnits skipped - type string is ignored in gen 
+  ShadowOptionsObject({
+    this.color = null,
+    this.filterUnits = null,
+    this.offsetX = null,
+    this.offsetY = null,
+    this.opacity = null,
+    this.width = null
+  });
 
-  // NOTE: offsetX skipped - type number is ignored in gen 
-
-  // NOTE: offsetY skipped - type number is ignored in gen 
-
-  // NOTE: opacity skipped - type number is ignored in gen 
-
-  // NOTE: width skipped - type number is ignored in gen 
-
+  String? color;
+    
+  String? filterUnits;
+    
+  double? offsetX;
+    
+  double? offsetY;
+    
+  double? opacity;
+    
+  double? width;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of color (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of filterUnits (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of offsetX (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of offsetY (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of opacity (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of width (type number is ignored) ignore type: true
+    
+    if (this.color != null) {
+        buffer.writeAll(["\"color\":\'",this.color, "\',"], "");
+    }
+    
+    if (this.filterUnits != null) {
+        buffer.writeAll(["\"filterUnits\":\'",this.filterUnits, "\',"], "");
+    }
+    
+    if (this.offsetX != null) {
+        buffer.writeAll(["\"offsetX\":",this.offsetX, ","], "");
+    }
+    
+    if (this.offsetY != null) {
+        buffer.writeAll(["\"offsetY\":",this.offsetY, ","], "");
+    }
+    
+    if (this.opacity != null) {
+        buffer.writeAll(["\"opacity\":",this.opacity, ","], "");
+    }
+    
+    if (this.width != null) {
+        buffer.writeAll(["\"width\":",this.width, ","], "");
+    }
   }
+
 
 }

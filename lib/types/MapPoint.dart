@@ -12,28 +12,37 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * MapPoint 
+ * MapPoint
  */
 class MapPoint extends OptionFragment {
-  MapPoint( ) : super();
-  // NOTE: value skipped - type number is ignored in gen 
 
+  MapPoint({
+    this.value = null
+  });
+
+  double? value;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of value (type number is ignored) ignore type: true
+
+    
+    if (this.value != null) {
+        buffer.writeAll(["\"value\":",this.value, ","], "");
+    }
   }
+
 
 }

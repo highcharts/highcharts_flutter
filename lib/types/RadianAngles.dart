@@ -12,32 +12,44 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * RadianAngles 
+ * RadianAngles
  */
 class RadianAngles extends OptionFragment {
-  RadianAngles( ) : super();
-  // NOTE: end skipped - type number is ignored in gen 
 
-  // NOTE: start skipped - type number is ignored in gen 
+  RadianAngles({
+    this.end = null,
+    this.start = null
+  });
 
+  double? end;
+    
+  double? start;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of end (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of start (type number is ignored) ignore type: true
+    
+    if (this.end != null) {
+        buffer.writeAll(["\"end\":",this.end, ","], "");
+    }
+    
+    if (this.start != null) {
+        buffer.writeAll(["\"start\":",this.start, ","], "");
+    }
   }
+
 
 }

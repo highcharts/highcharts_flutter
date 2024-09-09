@@ -12,28 +12,38 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'PopupOptions.dart';
 import 'OptionFragment.dart';
 
+
 /** 
- * LangNavigationOptions 
+ * LangNavigationOptions
  */
 class LangNavigationOptions extends OptionFragment {
-  LangNavigationOptions( ) : super();
-  
+
+  LangNavigationOptions({
+    this.popup = null
+  });
+
+  PopupOptions? popup;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of popup (type PopupOptions is ignored) ignore type: true
+
+    
+    if (this.popup != null) {
+        buffer.writeAll(["\"popup\":",this.popup?.toJSON(), ","], "");
+    }
   }
+
 
 }

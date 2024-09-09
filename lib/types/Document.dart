@@ -12,38 +12,56 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * Document 
+ * Document
  */
 class Document extends OptionFragment {
-  Document( ) : super();
-  // NOTE: msHidden skipped - type boolean is ignored in gen 
 
-  // NOTE: webkitHidden skipped - type boolean is ignored in gen 
+  Document({
+    this.msHidden = null,
+    this.webkitHidden = null
+  });
 
+  // NOTE: mozCancelFullScreen skipped - type Function is ignored in gen 
+
+  // NOTE: msExitFullscreen skipped - type Function is ignored in gen 
+
+  bool? msHidden;
+    
+  // NOTE: webkitExitFullscreen skipped - type Function is ignored in gen 
+
+  bool? webkitHidden;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of mozCancelFullScreen (type Function is ignored) ignore type: 1
 
-    // NOTE: skip serialization of msExitFullscreen (type Function is ignored) ignore type: 1
+    // NOTE: skip serialization of mozCancelFullScreen (type Function ignored, skipped: true)
 
-    // NOTE: skip serialization of msHidden (type boolean is ignored) ignore type: true
+    // NOTE: skip serialization of msExitFullscreen (type Function ignored, skipped: true)
 
-    // NOTE: skip serialization of webkitExitFullscreen (type Function is ignored) ignore type: 1
+    
+    if (this.msHidden != null) {
+        buffer.writeAll(["\"msHidden\":",this.msHidden, ","], "");
+    }
+    // NOTE: skip serialization of webkitExitFullscreen (type Function ignored, skipped: true)
 
-    // NOTE: skip serialization of webkitHidden (type boolean is ignored) ignore type: true
+    
+    if (this.webkitHidden != null) {
+        buffer.writeAll(["\"webkitHidden\":",this.webkitHidden, ","], "");
+    }
   }
+
 
 }

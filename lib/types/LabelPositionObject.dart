@@ -12,57 +12,100 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'SVGAttributes.dart';
 import 'LabelConnectorPositionObject.dart';
 import 'PositionObject.dart';
 import 'OptionFragment.dart';
 
 /** 
- * LabelPositionObject 
+ * LabelPositionObject
  */
 class LabelPositionObject extends OptionFragment {
-  LabelPositionObject( ) : super();
-  // NOTE: alignment skipped - type string is ignored in gen 
 
-  // NOTE: bottom skipped - type number is ignored in gen 
+  LabelPositionObject({
+    this.alignment = null,
+    this.attribs = null,
+    this.bottom = null,
+    this.computed = null,
+    this.connectorPosition = null,
+    this.distance = null,
+    this.natural = null,
+    this.posAttribs = null,
+    this.sideOverflow = null,
+    this.top = null
+  });
 
-  // NOTE: distance skipped - type number is ignored in gen 
-
-  // NOTE: sideOverflow skipped - type number is ignored in gen 
-
-  // NOTE: top skipped - type number is ignored in gen 
-
+  String? alignment;
+    
+  SVGAttributes? attribs;
+    
+  double? bottom;
+    
+  LabelConnectorPositionObject? connectorPosition;
+    
+  Map<String, String>? computed;
+    
+  double? distance;
+    
+  PositionObject? natural;
+    
+  SVGAttributes? posAttribs;
+    
+  double? sideOverflow;
+    
+  double? top;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of alignment (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of attribs (type SVGAttributes is ignored) ignore type: true
+    
+    if (this.alignment != null) {
+        buffer.writeAll(["\"alignment\":\'",this.alignment, "\',"], "");
+    }
+    
+    if (this.attribs != null) {
+        buffer.writeAll(["\"attribs\":",this.attribs?.toJSON(), ","], "");
+    }
+    
+    if (this.bottom != null) {
+        buffer.writeAll(["\"bottom\":",this.bottom, ","], "");
+    }
+    
+    if (this.connectorPosition != null) {
+        buffer.writeAll(["\"connectorPosition\":",this.connectorPosition?.toJSON(), ","], "");
+    }
+    // NOTE: skip serialization of computed (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of bottom (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of connectorPosition (type LabelConnectorPositionObject is ignored) ignore type: true
-
-    // NOTE: skip serialization of computed (type Generic is ignored) ignore type: true
-
-    // NOTE: skip serialization of distance (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of natural (type PositionObject is ignored) ignore type: true
-
-    // NOTE: skip serialization of posAttribs (type SVGAttributes is ignored) ignore type: true
-
-    // NOTE: skip serialization of sideOverflow (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of top (type number is ignored) ignore type: true
+    
+    if (this.distance != null) {
+        buffer.writeAll(["\"distance\":",this.distance, ","], "");
+    }
+    
+    if (this.natural != null) {
+        buffer.writeAll(["\"natural\":",this.natural?.toJSON(), ","], "");
+    }
+    
+    if (this.posAttribs != null) {
+        buffer.writeAll(["\"posAttribs\":",this.posAttribs?.toJSON(), ","], "");
+    }
+    
+    if (this.sideOverflow != null) {
+        buffer.writeAll(["\"sideOverflow\":",this.sideOverflow, ","], "");
+    }
+    
+    if (this.top != null) {
+        buffer.writeAll(["\"top\":",this.top, ","], "");
+    }
   }
+
 
 }

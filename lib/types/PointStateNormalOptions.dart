@@ -12,31 +12,43 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'StateNormalOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * PointStateNormalOptions 
+ * PointStateNormalOptions
  */
 class PointStateNormalOptions extends StateNormalOptions {
-  PointStateNormalOptions( ) : super();
-  // NOTE: opacity skipped - type number is ignored in gen 
 
+  PointStateNormalOptions({
+    super.color = null,
+    super.dashStyle = null,
+    this.opacity = null
+  });
+
+  // NOTE: animation skipped - type Generic is ignored in gen 
+
+  double? opacity;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of animation (type Generic is ignored) ignore type: true
 
-    // NOTE: skip serialization of opacity (type number is ignored) ignore type: true
+    // NOTE: skip serialization of animation (type Generic ignored, skipped: true)
+
+    
+    if (this.opacity != null) {
+        buffer.writeAll(["\"opacity\":",this.opacity, ","], "");
+    }
   }
+
 
 }

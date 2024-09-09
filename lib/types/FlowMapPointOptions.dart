@@ -12,75 +12,131 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'MapLinePointOptions.dart';
 import 'MapLonLatObject.dart';
 import 'MarkerEndOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * FlowMapPointOptions 
+ * FlowMapPointOptions
  */
 class FlowMapPointOptions extends MapLinePointOptions {
-  FlowMapPointOptions( {
+
+  FlowMapPointOptions({
     super.accessibility = null,
     super.borderColor = null,
     super.className = null,
+    super.collapsed = null,
     super.color = null,
     super.colorIndex = null,
     super.connectors = null,
+    this.curveFactor = null,
     super.dataLabels = null,
     super.dragDrop = null,
+    super.drilldown = null,
     super.events = null,
+    this.fillColor = null,
+    this.fillOpacity = null,
+    this.from = null,
+    this.growTowards = null,
+    super.id = null,
+    super.index = null,
     super.keys = null,
+    super.labelrank = null,
+    super.lat = null,
+    super.legendIndex = null,
+    this.lineWidth = null,
+    super.lon = null,
     super.marker = null,
+    this.markerEnd = null,
+    super.middleX = null,
+    super.middleY = null,
+    super.name = null,
+    this.opacity = null,
+    super.path = null,
     super.selected = null,
-    super.visible = null
-  }) : super();
-  // NOTE: curveFactor skipped - type number is ignored in gen 
+    super.seriesIndex = null,
+    this.to = null,
+    super.value = null,
+    super.visible = null,
+    this.weight = null,
+    super.x = null,
+    super.y = null
+  });
 
-  // NOTE: fillColor skipped - type string is ignored in gen 
-
-  // NOTE: fillOpacity skipped - type number is ignored in gen 
-
-  // NOTE: growTowards skipped - type boolean is ignored in gen 
-
-  // NOTE: opacity skipped - type number is ignored in gen 
-
-  // NOTE: weight skipped - type number is ignored in gen 
-
-  // NOTE: lineWidth skipped - type number is ignored in gen 
-
+  double? curveFactor;
+    
+  String? fillColor;
+    
+  double? fillOpacity;
+    
+  MapLonLatObject? from;
+    
+  bool? growTowards;
+    
+  MarkerEndOptions? markerEnd;
+    
+  double? opacity;
+    
+  MapLonLatObject? to;
+    
+  double? weight;
+    
+  double? lineWidth;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of curveFactor (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of fillColor (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of fillOpacity (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of from (type MapLonLatObject is ignored) ignore type: true
-
-    // NOTE: skip serialization of growTowards (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of markerEnd (type MarkerEndOptions is ignored) ignore type: true
-
-    // NOTE: skip serialization of opacity (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of to (type MapLonLatObject is ignored) ignore type: true
-
-    // NOTE: skip serialization of weight (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of lineWidth (type number is ignored) ignore type: true
+    
+    if (this.curveFactor != null) {
+        buffer.writeAll(["\"curveFactor\":",this.curveFactor, ","], "");
+    }
+    
+    if (this.fillColor != null) {
+        buffer.writeAll(["\"fillColor\":\'",this.fillColor, "\',"], "");
+    }
+    
+    if (this.fillOpacity != null) {
+        buffer.writeAll(["\"fillOpacity\":",this.fillOpacity, ","], "");
+    }
+    
+    if (this.from != null) {
+        buffer.writeAll(["\"from\":",this.from?.toJSON(), ","], "");
+    }
+    
+    if (this.growTowards != null) {
+        buffer.writeAll(["\"growTowards\":",this.growTowards, ","], "");
+    }
+    
+    if (this.markerEnd != null) {
+        buffer.writeAll(["\"markerEnd\":",this.markerEnd?.toJSON(), ","], "");
+    }
+    
+    if (this.opacity != null) {
+        buffer.writeAll(["\"opacity\":",this.opacity, ","], "");
+    }
+    
+    if (this.to != null) {
+        buffer.writeAll(["\"to\":",this.to?.toJSON(), ","], "");
+    }
+    
+    if (this.weight != null) {
+        buffer.writeAll(["\"weight\":",this.weight, ","], "");
+    }
+    
+    if (this.lineWidth != null) {
+        buffer.writeAll(["\"lineWidth\":",this.lineWidth, ","], "");
+    }
   }
+
 
 }

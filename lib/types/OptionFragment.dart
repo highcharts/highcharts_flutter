@@ -12,16 +12,13 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'package:provider/provider.dart';
 
 abstract class OptionFragment /* with ChangeNotifier */ {
-  void toJSONInner(StringBuffer buffer) {
-
-  }
+  void toJSONInner(StringBuffer buffer) {}
 
   /** Serializes the data to a JSON string */
   String toJSON() {
@@ -29,7 +26,6 @@ abstract class OptionFragment /* with ChangeNotifier */ {
     buffer.writeln("{");
 
     this.toJSONInner(buffer);
-    toJSONInner(buffer);
 
     buffer.writeln("}");
     return buffer.toString();

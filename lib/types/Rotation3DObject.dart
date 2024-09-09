@@ -12,40 +12,58 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * Rotation3DObject 
+ * Rotation3DObject
  */
 class Rotation3DObject extends OptionFragment {
-  Rotation3DObject( ) : super();
-  // NOTE: cosA skipped - type number is ignored in gen 
 
-  // NOTE: cosB skipped - type number is ignored in gen 
+  Rotation3DObject({
+    this.cosA = null,
+    this.cosB = null,
+    this.sinA = null,
+    this.sinB = null
+  });
 
-  // NOTE: sinA skipped - type number is ignored in gen 
-
-  // NOTE: sinB skipped - type number is ignored in gen 
-
+  double? cosA;
+    
+  double? cosB;
+    
+  double? sinA;
+    
+  double? sinB;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of cosA (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of cosB (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of sinA (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of sinB (type number is ignored) ignore type: true
+    
+    if (this.cosA != null) {
+        buffer.writeAll(["\"cosA\":",this.cosA, ","], "");
+    }
+    
+    if (this.cosB != null) {
+        buffer.writeAll(["\"cosB\":",this.cosB, ","], "");
+    }
+    
+    if (this.sinA != null) {
+        buffer.writeAll(["\"sinA\":",this.sinA, ","], "");
+    }
+    
+    if (this.sinB != null) {
+        buffer.writeAll(["\"sinB\":",this.sinB, ","], "");
+    }
   }
+
 
 }

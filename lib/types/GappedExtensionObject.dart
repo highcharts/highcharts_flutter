@@ -12,28 +12,37 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'GappedExtensionOptions.dart';
 import 'OptionFragment.dart';
 
 /** 
- * GappedExtensionObject 
+ * GappedExtensionObject
  */
 class GappedExtensionObject extends OptionFragment {
-  GappedExtensionObject( ) : super();
-  
+
+  GappedExtensionObject({
+    this.options = null
+  });
+
+  GappedExtensionOptions? options;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of options (type GappedExtensionOptions is ignored) ignore type: true
+
+    
+    if (this.options != null) {
+        buffer.writeAll(["\"options\":",this.options?.toJSON(), ","], "");
+    }
   }
+
 
 }

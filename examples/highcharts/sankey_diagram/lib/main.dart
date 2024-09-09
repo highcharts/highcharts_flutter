@@ -4,7 +4,7 @@
  */
 
 import 'package:flutter/material.dart';
-import 'package:highcharts_flutter/Highcharts.dart';
+import 'package:highcharts_flutter/highcharts.dart';
 import 'package:highcharts_flutter/types/TitleOptions.dart';
 import 'package:highcharts_flutter/types/SubtitleOptions.dart';
 import 'package:highcharts_flutter/types/AccessibilityOptions.dart';
@@ -71,14 +71,16 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
                 tooltip: TooltipOptions(
-                //   headerFormat: String,
+                  headerFormat: '',
                     pointFormat: "{point.fromNode.name} → {point.toNode.name}: {point.weight:.2f} quads", 
                 ),
                 series: [ 
                   SankeySeries( 
                 //options: SankeySeriesOptions()
-                    // nodes: SankeySeriesNodeOptions( 
-                    // ),
+                    nodes: [ 
+                      SankeySeriesNodeOptions( 
+                      ),
+                    ],
                     data: [ 
                     [
                       "Solar", "Electricity & Heat", 0.48

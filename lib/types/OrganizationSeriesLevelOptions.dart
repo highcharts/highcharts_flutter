@@ -12,42 +12,70 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'SankeySeriesLevelOptions.dart';
 import 'OrganizationLinkOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * OrganizationSeriesLevelOptions 
+ * OrganizationSeriesLevelOptions
  */
 class OrganizationSeriesLevelOptions extends SankeySeriesLevelOptions {
-  OrganizationSeriesLevelOptions( ) : super();
-  // NOTE: borderRadius skipped - type number is ignored in gen 
 
-  // NOTE: linkColor skipped - type string is ignored in gen 
+  OrganizationSeriesLevelOptions({
+    super.borderColor = null,
+    this.borderRadius = null,
+    super.borderWidth = null,
+    super.color = null,
+    super.colorByPoint = null,
+    super.dataLabels = null,
+    super.level = null,
+    this.link = null,
+    this.linkColor = null,
+    this.linkLineWidth = null,
+    super.linkOpacity = null
+  });
 
-  // NOTE: linkLineWidth skipped - type number is ignored in gen 
+  double? borderRadius;
+    
+  String? linkColor;
+    
+  double? linkLineWidth;
+    
+  OrganizationLinkOptions? link;
+    
+  // NOTE: states skipped - type Generic is ignored in gen 
 
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of borderRadius (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of linkColor (type string is ignored) ignore type: true
+    
+    if (this.borderRadius != null) {
+        buffer.writeAll(["\"borderRadius\":",this.borderRadius, ","], "");
+    }
+    
+    if (this.linkColor != null) {
+        buffer.writeAll(["\"linkColor\":\'",this.linkColor, "\',"], "");
+    }
+    
+    if (this.linkLineWidth != null) {
+        buffer.writeAll(["\"linkLineWidth\":",this.linkLineWidth, ","], "");
+    }
+    
+    if (this.link != null) {
+        buffer.writeAll(["\"link\":",this.link?.toJSON(), ","], "");
+    }
+    // NOTE: skip serialization of states (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of linkLineWidth (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of link (type OrganizationLinkOptions is ignored) ignore type: true
-
-    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
   }
+
 
 }

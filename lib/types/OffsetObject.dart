@@ -12,40 +12,58 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * OffsetObject 
+ * OffsetObject
  */
 class OffsetObject extends OptionFragment {
-  OffsetObject( ) : super();
-  // NOTE: height skipped - type number is ignored in gen 
 
-  // NOTE: left skipped - type number is ignored in gen 
+  OffsetObject({
+    this.height = null,
+    this.left = null,
+    this.top = null,
+    this.width = null
+  });
 
-  // NOTE: top skipped - type number is ignored in gen 
-
-  // NOTE: width skipped - type number is ignored in gen 
-
+  double? height;
+    
+  double? left;
+    
+  double? top;
+    
+  double? width;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of height (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of left (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of top (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of width (type number is ignored) ignore type: true
+    
+    if (this.height != null) {
+        buffer.writeAll(["\"height\":",this.height, ","], "");
+    }
+    
+    if (this.left != null) {
+        buffer.writeAll(["\"left\":",this.left, ","], "");
+    }
+    
+    if (this.top != null) {
+        buffer.writeAll(["\"top\":",this.top, ","], "");
+    }
+    
+    if (this.width != null) {
+        buffer.writeAll(["\"width\":",this.width, ","], "");
+    }
   }
+
 
 }

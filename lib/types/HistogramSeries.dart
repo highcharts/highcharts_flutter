@@ -12,10 +12,9 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'HistogramSeriesOptions.dart';
 import 'Series.dart';
 import 'PointOptions.dart';
@@ -34,8 +33,7 @@ class HistogramSeries extends Series {
     this.data = null
   });
 
-  
-  @override
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
@@ -56,16 +54,13 @@ class HistogramSeries extends Series {
         if (point.length > 1) {
           seriesData.writeAll(["["], "");
         }
-
-          for (var sub in point) {
-            if (sub is String) {
-              seriesData.writeAll(["\"", sub, "\","], "");
-            } else {
-              seriesData.writeAll([sub], ",");
-            }
-
+        for (var sub in point) {
+          if (sub is String) {
+            seriesData.writeAll(["\"", sub, "\","], "");
+          } else {
+            seriesData.writeAll([sub], ",");
           }
-
+        }
         if (point.length > 1) {
           seriesData.writeAll(["],"], "");
         } else {
@@ -92,17 +87,39 @@ class HistogramSeries extends Series {
 
 
     
-    // NOTE: skip serialization of baseSeries (type string is ignored) ignore type: true
 
-    if (this.options?.binsNumber != null) {  
-      buffer.writeAll(["\"binsNumber\":\'",this.options?.binsNumber, "\',"], "");
+    
+    if (this.options?.baseSeries != null) {
+        buffer.writeAll(["\"baseSeries\":\'",this.options?.baseSeries, "\',"], "");
     }
+    // NOTE: skip serialization of binsNumber (type Function ignored, skipped: true)
 
-    if (this.options?.binWidth != null) {  
-      buffer.writeAll(["\"binWidth\":",this.options?.binWidth, ","], "");
+    
+    if (this.options?.binWidth != null) {
+        buffer.writeAll(["\"binWidth\":",this.options?.binWidth, ","], "");
     }
+    // NOTE: skip serialization of data (type undefined ignored, skipped: true)
 
-    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
+    
+    if (this.options?.grouping != null) {
+        buffer.writeAll(["\"grouping\":",this.options?.grouping, ","], "");
+    }
+    
+    if (this.options?.groupPadding != null) {
+        buffer.writeAll(["\"groupPadding\":",this.options?.groupPadding, ","], "");
+    }
+    
+    if (this.options?.pointPadding != null) {
+        buffer.writeAll(["\"pointPadding\":",this.options?.pointPadding, ","], "");
+    }
+    
+    if (this.options?.pointPlacement != null) {
+        buffer.writeAll(["\"pointPlacement\":\'",this.options?.pointPlacement, "\',"], "");
+    }
+    // NOTE: skip serialization of states (type Generic ignored, skipped: true)
+
+    // NOTE: skip serialization of tooltip (type Generic ignored, skipped: true)
+
   }
 
 }

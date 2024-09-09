@@ -12,10 +12,9 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'StochasticOptions.dart';
 import 'Series.dart';
 import 'PointOptions.dart';
@@ -34,8 +33,7 @@ class StochasticSeries extends Series {
     this.data = null
   });
 
-  
-  @override
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
@@ -56,16 +54,13 @@ class StochasticSeries extends Series {
         if (point.length > 1) {
           seriesData.writeAll(["["], "");
         }
-
-          for (var sub in point) {
-            if (sub is String) {
-              seriesData.writeAll(["\"", sub, "\","], "");
-            } else {
-              seriesData.writeAll([sub], ",");
-            }
-
+        for (var sub in point) {
+          if (sub is String) {
+            seriesData.writeAll(["\"", sub, "\","], "");
+          } else {
+            seriesData.writeAll([sub], ",");
           }
-
+        }
         if (point.length > 1) {
           seriesData.writeAll(["],"], "");
         } else {
@@ -92,19 +87,19 @@ class StochasticSeries extends Series {
 
 
     
-    if (this.options?.dataGrouping != null) {  
-      buffer.writeAll(["\"dataGrouping\":",this.options?.dataGrouping?.toJSON(), ","], "");
-    }
 
-    if (this.options?.marker != null) {  
-      buffer.writeAll(["\"marker\":",this.options?.marker?.toJSON(), ","], "");
+    
+    if (this.options?.dataGrouping != null) {
+        buffer.writeAll(["\"dataGrouping\":",this.options?.dataGrouping?.toJSON(), ","], "");
     }
-
-    // NOTE: skip serialization of params (type StochasticParamsOptions is ignored) ignore type: false
-
-    if (this.options?.smoothedLine != null) {  
-      buffer.writeAll(["\"smoothedLine\":",this.options?.smoothedLine, ","], "");
+    
+    if (this.options?.marker != null) {
+        buffer.writeAll(["\"marker\":",this.options?.marker?.toJSON(), ","], "");
     }
+    // NOTE: skip serialization of params (type StochasticParamsOptions ignored, skipped: false)
+
+    // NOTE: skip serialization of smoothedLine (type Generic ignored, skipped: true)
+
   }
 
 }

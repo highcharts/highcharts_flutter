@@ -12,40 +12,58 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * DrilldownActiveDataLabelStyleOptions 
+ * DrilldownActiveDataLabelStyleOptions
  */
 class DrilldownActiveDataLabelStyleOptions extends OptionFragment {
-  DrilldownActiveDataLabelStyleOptions( ) : super();
-  // NOTE: color skipped - type string is ignored in gen 
 
-  // NOTE: cursor skipped - type string is ignored in gen 
+  DrilldownActiveDataLabelStyleOptions({
+    this.color = null,
+    this.cursor = null,
+    this.fontWeight = null,
+    this.textDecoration = null
+  });
 
-  // NOTE: fontWeight skipped - type string is ignored in gen 
-
-  // NOTE: textDecoration skipped - type string is ignored in gen 
-
+  String? color;
+    
+  String? cursor;
+    
+  String? fontWeight;
+    
+  String? textDecoration;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of color (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of cursor (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of fontWeight (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of textDecoration (type string is ignored) ignore type: true
+    
+    if (this.color != null) {
+        buffer.writeAll(["\"color\":\'",this.color, "\',"], "");
+    }
+    
+    if (this.cursor != null) {
+        buffer.writeAll(["\"cursor\":\'",this.cursor, "\',"], "");
+    }
+    
+    if (this.fontWeight != null) {
+        buffer.writeAll(["\"fontWeight\":\'",this.fontWeight, "\',"], "");
+    }
+    
+    if (this.textDecoration != null) {
+        buffer.writeAll(["\"textDecoration\":\'",this.textDecoration, "\',"], "");
+    }
   }
+
 
 }

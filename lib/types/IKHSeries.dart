@@ -12,10 +12,9 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'IKHOptions.dart';
 import 'Series.dart';
 import 'PointOptions.dart';
@@ -34,8 +33,7 @@ class IKHSeries extends Series {
     this.data = null
   });
 
-  
-  @override
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
@@ -56,16 +54,13 @@ class IKHSeries extends Series {
         if (point.length > 1) {
           seriesData.writeAll(["["], "");
         }
-
-          for (var sub in point) {
-            if (sub is String) {
-              seriesData.writeAll(["\"", sub, "\","], "");
-            } else {
-              seriesData.writeAll([sub], ",");
-            }
-
+        for (var sub in point) {
+          if (sub is String) {
+            seriesData.writeAll(["\"", sub, "\","], "");
+          } else {
+            seriesData.writeAll([sub], ",");
           }
-
+        }
         if (point.length > 1) {
           seriesData.writeAll(["],"], "");
         } else {
@@ -92,39 +87,31 @@ class IKHSeries extends Series {
 
 
     
-    if (this.options?.chikouLine != null) {  
-      buffer.writeAll(["\"chikouLine\":",this.options?.chikouLine, ","], "");
-    }
 
-    if (this.options?.gapSize != null) {  
-      buffer.writeAll(["\"gapSize\":",this.options?.gapSize, ","], "");
-    }
+    // NOTE: skip serialization of chikouLine (type Generic ignored, skipped: true)
 
-    if (this.options?.kijunLine != null) {  
-      buffer.writeAll(["\"kijunLine\":",this.options?.kijunLine, ","], "");
+    
+    if (this.options?.gapSize != null) {
+        buffer.writeAll(["\"gapSize\":",this.options?.gapSize, ","], "");
     }
+    // NOTE: skip serialization of kijunLine (type Generic ignored, skipped: true)
 
-    if (this.options?.marker != null) {  
-      buffer.writeAll(["\"marker\":",this.options?.marker?.toJSON(), ","], "");
+    
+    if (this.options?.marker != null) {
+        buffer.writeAll(["\"marker\":",this.options?.marker?.toJSON(), ","], "");
     }
+    // NOTE: skip serialization of params (type IKHParamsOptions ignored, skipped: false)
 
-    // NOTE: skip serialization of params (type IKHParamsOptions is ignored) ignore type: false
-
-    if (this.options?.senkouSpan != null) {  
-      buffer.writeAll(["\"senkouSpan\":",this.options?.senkouSpan?.toJSON(), ","], "");
+    
+    if (this.options?.senkouSpan != null) {
+        buffer.writeAll(["\"senkouSpan\":",this.options?.senkouSpan?.toJSON(), ","], "");
     }
+    // NOTE: skip serialization of senkouSpanA (type Generic ignored, skipped: true)
 
-    if (this.options?.senkouSpanA != null) {  
-      buffer.writeAll(["\"senkouSpanA\":",this.options?.senkouSpanA, ","], "");
-    }
+    // NOTE: skip serialization of senkouSpanB (type Generic ignored, skipped: true)
 
-    if (this.options?.senkouSpanB != null) {  
-      buffer.writeAll(["\"senkouSpanB\":",this.options?.senkouSpanB, ","], "");
-    }
+    // NOTE: skip serialization of tenkanLine (type Generic ignored, skipped: true)
 
-    if (this.options?.tenkanLine != null) {  
-      buffer.writeAll(["\"tenkanLine\":",this.options?.tenkanLine, ","], "");
-    }
   }
 
 }

@@ -12,32 +12,52 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * OptionsEntry 
+ * OptionsEntry
  */
 class OptionsEntry extends OptionFragment {
-  OptionsEntry( ) : super();
-  // NOTE: enabled skipped - type boolean is ignored in gen 
+
+  OptionsEntry({
+    this.enabled = null,
+    this.group = null
+  });
+
+  bool? enabled;
+    
+  // NOTE: emitter skipped - type EmitterFunction is ignored in gen 
+
+  String? group;
+    
+  // NOTE: handler skipped - type Function is ignored in gen 
 
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of enabled (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of emitter (type EmitterFunction is ignored) ignore type: true
+    
+    if (this.enabled != null) {
+        buffer.writeAll(["\"enabled\":",this.enabled, ","], "");
+    }
+    // NOTE: skip serialization of emitter (type EmitterFunction ignored, skipped: true)
 
-    // NOTE: skip serialization of handler (type Function is ignored) ignore type: 1
+    
+    if (this.group != null) {
+        buffer.writeAll(["\"group\":\'",this.group, "\',"], "");
+    }
+    // NOTE: skip serialization of handler (type Function ignored, skipped: true)
+
   }
+
 
 }

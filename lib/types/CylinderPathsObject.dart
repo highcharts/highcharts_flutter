@@ -12,37 +12,65 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'SVGPath3D.dart';
 import 'SVGPath.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * CylinderPathsObject 
+ * CylinderPathsObject
  */
 class CylinderPathsObject extends SVGPath3D {
-  CylinderPathsObject( ) : super();
-  
+
+  CylinderPathsObject({
+    this.back = null,
+    this.bottom = null,
+    this.front = null,
+    super.side = null,
+    this.top = null,
+    this.zIndexes = null
+  });
+
+  SVGPath? back;
+    
+  SVGPath? bottom;
+    
+  SVGPath? front;
+    
+  SVGPath? top;
+    
+  Map<String, String>? zIndexes;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of back (type SVGPath is ignored) ignore type: true
 
-    // NOTE: skip serialization of bottom (type SVGPath is ignored) ignore type: true
+    
+    if (this.back != null) {
+        buffer.writeAll(["\"back\":",this.back?.toJSON(), ","], "");
+    }
+    
+    if (this.bottom != null) {
+        buffer.writeAll(["\"bottom\":",this.bottom?.toJSON(), ","], "");
+    }
+    
+    if (this.front != null) {
+        buffer.writeAll(["\"front\":",this.front?.toJSON(), ","], "");
+    }
+    
+    if (this.top != null) {
+        buffer.writeAll(["\"top\":",this.top?.toJSON(), ","], "");
+    }
+    // NOTE: skip serialization of zIndexes (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of front (type SVGPath is ignored) ignore type: true
-
-    // NOTE: skip serialization of top (type SVGPath is ignored) ignore type: true
-
-    // NOTE: skip serialization of zIndexes (type Generic is ignored) ignore type: true
   }
+
 
 }

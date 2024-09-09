@@ -12,10 +12,9 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'LangAccessibilityAnnounceNewDataOptions.dart';
 import 'LangAccessibilityAxisOptions.dart';
 import 'LangAccessibilityChartTypesOptions.dart';
@@ -33,80 +32,186 @@ import 'LangAccessibilityOptionsContextMenu.dart';
 import 'LangAccessibilityOptionsEditMode.dart';
 import 'OptionFragment.dart';
 
+
 /** 
- * LangAccessibilityOptions 
+ * LangAccessibilityOptions
  */
 class LangAccessibilityOptions extends OptionFragment {
-  LangAccessibilityOptions( ) : super();
-  // NOTE: chartContainerLabel skipped - type string is ignored in gen 
 
-  // NOTE: credits skipped - type string is ignored in gen 
+  LangAccessibilityOptions({
+    this.announceNewData = null,
+    this.axis = null,
+    this.chartContainerLabel = null,
+    this.chartTypes = null,
+    this.contextMenu = null,
+    this.credits = null,
+    this.defaultChartTitle = null,
+    this.drillUpButton = null,
+    this.editMode = null,
+    this.exporting = null,
+    this.graphicContainerLabel = null,
+    this.legend = null,
+    this.navigator = null,
+    this.rangeSelector = null,
+    this.screenReaderSection = null,
+    this.series = null,
+    this.seriesTypeDescriptions = null,
+    this.sonification = null,
+    this.svgContainerLabel = null,
+    this.svgContainerTitle = null,
+    this.table = null,
+    this.thousandsSep = null,
+    this.zoom = null
+  });
 
-  // NOTE: defaultChartTitle skipped - type string is ignored in gen 
-
-  // NOTE: drillUpButton skipped - type string is ignored in gen 
-
-  // NOTE: graphicContainerLabel skipped - type string is ignored in gen 
-
-  // NOTE: svgContainerLabel skipped - type string is ignored in gen 
-
-  // NOTE: svgContainerTitle skipped - type string is ignored in gen 
-
-  // NOTE: thousandsSep skipped - type string is ignored in gen 
-
+  LangAccessibilityAnnounceNewDataOptions? announceNewData;
+    
+  LangAccessibilityAxisOptions? axis;
+    
+  String? chartContainerLabel;
+    
+  LangAccessibilityChartTypesOptions? chartTypes;
+    
+  String? credits;
+    
+  String? defaultChartTitle;
+    
+  String? drillUpButton;
+    
+  LangAccessibilityExportingOptions? exporting;
+    
+  String? graphicContainerLabel;
+    
+  LangAccessibilityLegendOptions? legend;
+    
+  LangAccessibilityNavigatorOptions? navigator;
+    
+  LangAccessibilityRangeSelectorOptions? rangeSelector;
+    
+  LangAccessibilityScreenReaderSectionOptions? screenReaderSection;
+    
+  LangAccessibilitySeriesOptions? series;
+    
+  LangAccessibilitySeriesTypeDescriptionsOptions? seriesTypeDescriptions;
+    
+  LangAccessibilitySonificationOptions? sonification;
+    
+  String? svgContainerLabel;
+    
+  String? svgContainerTitle;
+    
+  LangAccessibilityTableOptions? table;
+    
+  String? thousandsSep;
+    
+  LangAccessibilityZoomOptions? zoom;
+    
+  LangAccessibilityOptionsContextMenu? contextMenu;
+    
+  LangAccessibilityOptionsEditMode? editMode;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of announceNewData (type LangAccessibilityAnnounceNewDataOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of axis (type LangAccessibilityAxisOptions is ignored) ignore type: true
-
-    // NOTE: skip serialization of chartContainerLabel (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of chartTypes (type LangAccessibilityChartTypesOptions is ignored) ignore type: true
-
-    // NOTE: skip serialization of credits (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of defaultChartTitle (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of drillUpButton (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of exporting (type LangAccessibilityExportingOptions is ignored) ignore type: true
-
-    // NOTE: skip serialization of graphicContainerLabel (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of legend (type LangAccessibilityLegendOptions is ignored) ignore type: true
-
-    // NOTE: skip serialization of navigator (type LangAccessibilityNavigatorOptions is ignored) ignore type: true
-
-    // NOTE: skip serialization of rangeSelector (type LangAccessibilityRangeSelectorOptions is ignored) ignore type: true
-
-    // NOTE: skip serialization of screenReaderSection (type LangAccessibilityScreenReaderSectionOptions is ignored) ignore type: true
-
-    // NOTE: skip serialization of series (type LangAccessibilitySeriesOptions is ignored) ignore type: true
-
-    // NOTE: skip serialization of seriesTypeDescriptions (type LangAccessibilitySeriesTypeDescriptionsOptions is ignored) ignore type: true
-
-    // NOTE: skip serialization of sonification (type LangAccessibilitySonificationOptions is ignored) ignore type: true
-
-    // NOTE: skip serialization of svgContainerLabel (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of svgContainerTitle (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of table (type LangAccessibilityTableOptions is ignored) ignore type: true
-
-    // NOTE: skip serialization of thousandsSep (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of zoom (type LangAccessibilityZoomOptions is ignored) ignore type: true
-
-    // NOTE: skip serialization of contextMenu (type LangAccessibilityOptionsContextMenu is ignored) ignore type: true
-
-    // NOTE: skip serialization of editMode (type LangAccessibilityOptionsEditMode is ignored) ignore type: true
+    
+    if (this.announceNewData != null) {
+        buffer.writeAll(["\"announceNewData\":",this.announceNewData?.toJSON(), ","], "");
+    }
+    
+    if (this.axis != null) {
+        buffer.writeAll(["\"axis\":",this.axis?.toJSON(), ","], "");
+    }
+    
+    if (this.chartContainerLabel != null) {
+        buffer.writeAll(["\"chartContainerLabel\":\'",this.chartContainerLabel, "\',"], "");
+    }
+    
+    if (this.chartTypes != null) {
+        buffer.writeAll(["\"chartTypes\":",this.chartTypes?.toJSON(), ","], "");
+    }
+    
+    if (this.credits != null) {
+        buffer.writeAll(["\"credits\":\'",this.credits, "\',"], "");
+    }
+    
+    if (this.defaultChartTitle != null) {
+        buffer.writeAll(["\"defaultChartTitle\":\'",this.defaultChartTitle, "\',"], "");
+    }
+    
+    if (this.drillUpButton != null) {
+        buffer.writeAll(["\"drillUpButton\":\'",this.drillUpButton, "\',"], "");
+    }
+    
+    if (this.exporting != null) {
+        buffer.writeAll(["\"exporting\":",this.exporting?.toJSON(), ","], "");
+    }
+    
+    if (this.graphicContainerLabel != null) {
+        buffer.writeAll(["\"graphicContainerLabel\":\'",this.graphicContainerLabel, "\',"], "");
+    }
+    
+    if (this.legend != null) {
+        buffer.writeAll(["\"legend\":",this.legend?.toJSON(), ","], "");
+    }
+    
+    if (this.navigator != null) {
+        buffer.writeAll(["\"navigator\":",this.navigator?.toJSON(), ","], "");
+    }
+    
+    if (this.rangeSelector != null) {
+        buffer.writeAll(["\"rangeSelector\":",this.rangeSelector?.toJSON(), ","], "");
+    }
+    
+    if (this.screenReaderSection != null) {
+        buffer.writeAll(["\"screenReaderSection\":",this.screenReaderSection?.toJSON(), ","], "");
+    }
+    
+    if (this.series != null) {
+        buffer.writeAll(["\"series\":",this.series?.toJSON(), ","], "");
+    }
+    
+    if (this.seriesTypeDescriptions != null) {
+        buffer.writeAll(["\"seriesTypeDescriptions\":",this.seriesTypeDescriptions?.toJSON(), ","], "");
+    }
+    
+    if (this.sonification != null) {
+        buffer.writeAll(["\"sonification\":",this.sonification?.toJSON(), ","], "");
+    }
+    
+    if (this.svgContainerLabel != null) {
+        buffer.writeAll(["\"svgContainerLabel\":\'",this.svgContainerLabel, "\',"], "");
+    }
+    
+    if (this.svgContainerTitle != null) {
+        buffer.writeAll(["\"svgContainerTitle\":\'",this.svgContainerTitle, "\',"], "");
+    }
+    
+    if (this.table != null) {
+        buffer.writeAll(["\"table\":",this.table?.toJSON(), ","], "");
+    }
+    
+    if (this.thousandsSep != null) {
+        buffer.writeAll(["\"thousandsSep\":\'",this.thousandsSep, "\',"], "");
+    }
+    
+    if (this.zoom != null) {
+        buffer.writeAll(["\"zoom\":",this.zoom?.toJSON(), ","], "");
+    }
+    
+    if (this.contextMenu != null) {
+        buffer.writeAll(["\"contextMenu\":",this.contextMenu?.toJSON(), ","], "");
+    }
+    
+    if (this.editMode != null) {
+        buffer.writeAll(["\"editMode\":",this.editMode?.toJSON(), ","], "");
+    }
   }
+
 
 }

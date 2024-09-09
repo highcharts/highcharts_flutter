@@ -12,30 +12,42 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * NavigationBindingsResizerObject 
+ * NavigationBindingsResizerObject
  */
 class NavigationBindingsResizerObject extends OptionFragment {
-  NavigationBindingsResizerObject( ) : super();
-  // NOTE: enabled skipped - type boolean is ignored in gen 
 
+  NavigationBindingsResizerObject({
+    this.controlledAxis = null,
+    this.enabled = null
+  });
+
+  Map<String, String>? controlledAxis;
+    
+  bool? enabled;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of controlledAxis (type Generic is ignored) ignore type: true
 
-    // NOTE: skip serialization of enabled (type boolean is ignored) ignore type: true
+    // NOTE: skip serialization of controlledAxis (type Generic ignored, skipped: true)
+
+    
+    if (this.enabled != null) {
+        buffer.writeAll(["\"enabled\":",this.enabled, ","], "");
+    }
   }
+
 
 }

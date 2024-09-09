@@ -12,36 +12,51 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * LangAccessibilityNavigatorOptions 
+ * LangAccessibilityNavigatorOptions
  */
 class LangAccessibilityNavigatorOptions extends OptionFragment {
-  LangAccessibilityNavigatorOptions( ) : super();
-  // NOTE: handleLabel skipped - type string is ignored in gen 
 
-  // NOTE: groupLabel skipped - type string is ignored in gen 
+  LangAccessibilityNavigatorOptions({
+    this.changeAnnouncement = null,
+    this.groupLabel = null,
+    this.handleLabel = null
+  });
 
-  // NOTE: changeAnnouncement skipped - type string is ignored in gen 
-
+  String? handleLabel;
+    
+  String? groupLabel;
+    
+  String? changeAnnouncement;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of handleLabel (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of groupLabel (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of changeAnnouncement (type string is ignored) ignore type: true
+    
+    if (this.handleLabel != null) {
+        buffer.writeAll(["\"handleLabel\":\'",this.handleLabel, "\',"], "");
+    }
+    
+    if (this.groupLabel != null) {
+        buffer.writeAll(["\"groupLabel\":\'",this.groupLabel, "\',"], "");
+    }
+    
+    if (this.changeAnnouncement != null) {
+        buffer.writeAll(["\"changeAnnouncement\":\'",this.changeAnnouncement, "\',"], "");
+    }
   }
+
 
 }

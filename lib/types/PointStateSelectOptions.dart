@@ -12,49 +12,78 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'StateSelectOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * PointStateSelectOptions 
+ * PointStateSelectOptions
  */
 class PointStateSelectOptions extends StateSelectOptions {
-  PointStateSelectOptions( ) : super();
-  // NOTE: enabled skipped - type boolean is ignored in gen 
 
-  // NOTE: fillColor skipped - type string is ignored in gen 
+  PointStateSelectOptions({
+    super.color = null,
+    super.dashStyle = null,
+    this.enabled = null,
+    this.fillColor = null,
+    super.height = null,
+    super.heightPlus = null,
+    this.lineColor = null,
+    this.lineWidth = null,
+    this.opacity = null,
+    this.radius = null,
+    super.width = null,
+    super.widthPlus = null
+  });
 
-  // NOTE: lineColor skipped - type string is ignored in gen 
-
-  // NOTE: lineWidth skipped - type number is ignored in gen 
-
-  // NOTE: opacity skipped - type number is ignored in gen 
-
-  // NOTE: radius skipped - type number is ignored in gen 
-
+  bool? enabled;
+    
+  String? fillColor;
+    
+  String? lineColor;
+    
+  double? lineWidth;
+    
+  double? opacity;
+    
+  double? radius;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of enabled (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of fillColor (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of lineColor (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of lineWidth (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of opacity (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of radius (type number is ignored) ignore type: true
+    
+    if (this.enabled != null) {
+        buffer.writeAll(["\"enabled\":",this.enabled, ","], "");
+    }
+    
+    if (this.fillColor != null) {
+        buffer.writeAll(["\"fillColor\":\'",this.fillColor, "\',"], "");
+    }
+    
+    if (this.lineColor != null) {
+        buffer.writeAll(["\"lineColor\":\'",this.lineColor, "\',"], "");
+    }
+    
+    if (this.lineWidth != null) {
+        buffer.writeAll(["\"lineWidth\":",this.lineWidth, ","], "");
+    }
+    
+    if (this.opacity != null) {
+        buffer.writeAll(["\"opacity\":",this.opacity, ","], "");
+    }
+    
+    if (this.radius != null) {
+        buffer.writeAll(["\"radius\":",this.radius, ","], "");
+    }
   }
+
 
 }

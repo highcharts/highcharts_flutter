@@ -12,32 +12,44 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * MapLonLatObject 
+ * MapLonLatObject
  */
 class MapLonLatObject extends OptionFragment {
-  MapLonLatObject( ) : super();
-  // NOTE: lat skipped - type number is ignored in gen 
 
-  // NOTE: lon skipped - type number is ignored in gen 
+  MapLonLatObject({
+    this.lat = null,
+    this.lon = null
+  });
 
+  double? lat;
+    
+  double? lon;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of lat (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of lon (type number is ignored) ignore type: true
+    
+    if (this.lat != null) {
+        buffer.writeAll(["\"lat\":",this.lat, ","], "");
+    }
+    
+    if (this.lon != null) {
+        buffer.writeAll(["\"lon\":",this.lon, ","], "");
+    }
   }
+
 
 }

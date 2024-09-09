@@ -12,36 +12,51 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * PulseOscOptions 
+ * PulseOscOptions
  */
 class PulseOscOptions extends OptionFragment {
-  PulseOscOptions( ) : super();
-  // NOTE: detune skipped - type number is ignored in gen 
 
-  // NOTE: pulseWidth skipped - type number is ignored in gen 
+  PulseOscOptions({
+    this.detune = null,
+    this.frequency = null,
+    this.pulseWidth = null
+  });
 
-  // NOTE: frequency skipped - type number is ignored in gen 
-
+  double? detune;
+    
+  double? pulseWidth;
+    
+  double? frequency;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of detune (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of pulseWidth (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of frequency (type number is ignored) ignore type: true
+    
+    if (this.detune != null) {
+        buffer.writeAll(["\"detune\":",this.detune, ","], "");
+    }
+    
+    if (this.pulseWidth != null) {
+        buffer.writeAll(["\"pulseWidth\":",this.pulseWidth, ","], "");
+    }
+    
+    if (this.frequency != null) {
+        buffer.writeAll(["\"frequency\":",this.frequency, ","], "");
+    }
   }
+
 
 }

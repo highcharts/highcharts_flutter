@@ -12,29 +12,37 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * ElementsFocusEventRemovers 
+ * ElementsFocusEventRemovers
  */
 class ElementsFocusEventRemovers extends OptionFragment {
-  ElementsFocusEventRemovers( ) : super();
-  
+
+  ElementsFocusEventRemovers();
+
+  // NOTE: element skipped - type DOMElementType is ignored in gen 
+
+  // NOTE: remover skipped - type Function is ignored in gen 
+
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of element (type DOMElementType is ignored) ignore type: true
 
-    // NOTE: skip serialization of remover (type Function is ignored) ignore type: 1
+    // NOTE: skip serialization of element (type DOMElementType ignored, skipped: true)
+
+    // NOTE: skip serialization of remover (type Function ignored, skipped: true)
+
   }
+
 
 }

@@ -12,31 +12,45 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'SVGPath.dart';
 import 'OptionFragment.dart';
 
+
 /** 
- * PictorialPathOptions 
+ * PictorialPathOptions
  */
 class PictorialPathOptions extends OptionFragment {
-  PictorialPathOptions( ) : super();
-  // NOTE: max skipped - type number is ignored in gen 
 
+  PictorialPathOptions({
+    this.definition = null,
+    this.max = null
+  });
+
+  SVGPath? definition;
+    
+  double? max;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of definition (type SVGPath is ignored) ignore type: true
 
-    // NOTE: skip serialization of max (type number is ignored) ignore type: true
+    
+    if (this.definition != null) {
+        buffer.writeAll(["\"definition\":",this.definition?.toJSON(), ","], "");
+    }
+    
+    if (this.max != null) {
+        buffer.writeAll(["\"max\":",this.max, ","], "");
+    }
   }
+
 
 }

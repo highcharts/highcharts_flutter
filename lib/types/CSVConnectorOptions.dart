@@ -12,53 +12,82 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'DataConnectorOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * CSVConnectorOptions 
+ * CSVConnectorOptions
  */
 class CSVConnectorOptions extends DataConnectorOptions {
-  CSVConnectorOptions( ) : super();
-  // NOTE: csv skipped - type string is ignored in gen 
 
-  // NOTE: csvURL skipped - type string is ignored in gen 
+  CSVConnectorOptions({
+    this.csv = null,
+    this.csvURL = null,
+    super.dataModifier = null,
+    this.dataRefreshRate = null,
+    super.dataTable = null,
+    this.decimalPoint = null,
+    this.enablePolling = null,
+    this.firstRowAsNames = null,
+    this.itemDelimiter = null,
+    super.metadata = null
+  });
 
-  // NOTE: decimalPoint skipped - type string is ignored in gen 
-
-  // NOTE: dataRefreshRate skipped - type number is ignored in gen 
-
-  // NOTE: enablePolling skipped - type boolean is ignored in gen 
-
-  // NOTE: firstRowAsNames skipped - type boolean is ignored in gen 
-
-  // NOTE: itemDelimiter skipped - type string is ignored in gen 
-
+  String? csv;
+    
+  String? csvURL;
+    
+  String? decimalPoint;
+    
+  double? dataRefreshRate;
+    
+  bool? enablePolling;
+    
+  bool? firstRowAsNames;
+    
+  String? itemDelimiter;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of csv (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of csvURL (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of decimalPoint (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of dataRefreshRate (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of enablePolling (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of firstRowAsNames (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of itemDelimiter (type string is ignored) ignore type: true
+    
+    if (this.csv != null) {
+        buffer.writeAll(["\"csv\":\'",this.csv, "\',"], "");
+    }
+    
+    if (this.csvURL != null) {
+        buffer.writeAll(["\"csvURL\":\'",this.csvURL, "\',"], "");
+    }
+    
+    if (this.decimalPoint != null) {
+        buffer.writeAll(["\"decimalPoint\":\'",this.decimalPoint, "\',"], "");
+    }
+    
+    if (this.dataRefreshRate != null) {
+        buffer.writeAll(["\"dataRefreshRate\":",this.dataRefreshRate, ","], "");
+    }
+    
+    if (this.enablePolling != null) {
+        buffer.writeAll(["\"enablePolling\":",this.enablePolling, ","], "");
+    }
+    
+    if (this.firstRowAsNames != null) {
+        buffer.writeAll(["\"firstRowAsNames\":",this.firstRowAsNames, ","], "");
+    }
+    
+    if (this.itemDelimiter != null) {
+        buffer.writeAll(["\"itemDelimiter\":\'",this.itemDelimiter, "\',"], "");
+    }
   }
+
 
 }

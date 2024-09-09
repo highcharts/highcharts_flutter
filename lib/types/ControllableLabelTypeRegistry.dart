@@ -12,27 +12,33 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * ControllableLabelTypeRegistry 
+ * ControllableLabelTypeRegistry
  */
 class ControllableLabelTypeRegistry extends OptionFragment {
-  ControllableLabelTypeRegistry( ) : super();
-  
+
+  ControllableLabelTypeRegistry();
+
+  // NOTE: label skipped - type typeof ControllableLabel is ignored in gen 
+
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of label (type typeof ControllableLabel is ignored) ignore type: true
+
+    // NOTE: skip serialization of label (type typeof ControllableLabel ignored, skipped: true)
+
   }
+
 
 }

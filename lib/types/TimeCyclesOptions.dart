@@ -12,32 +12,44 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * TimeCyclesOptions 
+ * TimeCyclesOptions
  */
 class TimeCyclesOptions extends OptionFragment {
-  TimeCyclesOptions( ) : super();
-  // NOTE: xAxis skipped - type number is ignored in gen 
 
-  // NOTE: yAxis skipped - type number is ignored in gen 
+  TimeCyclesOptions({
+    this.xAxis = null,
+    this.yAxis = null
+  });
 
+  double? xAxis;
+    
+  double? yAxis;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of xAxis (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of yAxis (type number is ignored) ignore type: true
+    
+    if (this.xAxis != null) {
+        buffer.writeAll(["\"xAxis\":",this.xAxis, ","], "");
+    }
+    
+    if (this.yAxis != null) {
+        buffer.writeAll(["\"yAxis\":",this.yAxis, ","], "");
+    }
   }
+
 
 }

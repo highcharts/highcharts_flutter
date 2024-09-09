@@ -4,7 +4,7 @@
  */
 
 import 'package:flutter/material.dart';
-import 'package:highcharts_flutter/Highcharts.dart';
+import 'package:highcharts_flutter/highcharts.dart';
 import 'package:highcharts_flutter/types/ChartOptions.dart';
 import 'package:highcharts_flutter/types/ScrollablePlotAreaOptions.dart';
 import 'package:highcharts_flutter/types/DataOptions.dart';
@@ -14,6 +14,7 @@ import 'package:highcharts_flutter/types/XAxisOptions.dart';
 import 'package:highcharts_flutter/types/YAxisOptions.dart';
 import 'package:highcharts_flutter/types/LegendOptions.dart';
 import 'package:highcharts_flutter/types/TooltipOptions.dart';
+import 'package:highcharts_flutter/types/any.dart';
 import 'package:highcharts_flutter/types/HighchartsPlotOptions.dart';
 import 'package:highcharts_flutter/types/SeriesOptions.dart';
 import 'package:highcharts_flutter/types/PointMarkerOptions.dart';
@@ -93,8 +94,8 @@ class _MyHomePageState extends State<MyHomePage> {
                     borderWidth: 0, 
                 ),
                 tooltip: TooltipOptions(
-                    // shared: true, 
-                    // crosshairs: true, 
+                    shared: true, 
+                    crosshairs: true, 
                 ),
                 plotOptions: HighchartsPlotOptions(
                   series: SeriesOptions(
@@ -109,7 +110,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   LineSeries( 
                 //options: LineSeriesOptions()
                       name: "All sessions", 
-                    //   lineWidth: 4, 
+                      lineWidth: 4, 
                   ),
                   LineSeries( 
                 //options: LineSeriesOptions()

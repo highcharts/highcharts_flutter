@@ -12,47 +12,72 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'Axis.dart';
 import 'OptionFragment.dart';
 
 /** 
- * StackBoxProps 
+ * StackBoxProps
  */
 class StackBoxProps extends OptionFragment {
-  StackBoxProps( ) : super();
-  // NOTE: xOffset skipped - type number is ignored in gen 
 
-  // NOTE: width skipped - type number is ignored in gen 
+  StackBoxProps({
+    this.boxBottom = null,
+    this.boxTop = null,
+    this.defaultX = null,
+    this.width = null,
+    this.xAxis = null,
+    this.xOffset = null
+  });
 
-  // NOTE: boxBottom skipped - type number is ignored in gen 
-
-  // NOTE: boxTop skipped - type number is ignored in gen 
-
-  // NOTE: defaultX skipped - type number is ignored in gen 
-
+  double? xOffset;
+    
+  double? width;
+    
+  double? boxBottom;
+    
+  double? boxTop;
+    
+  double? defaultX;
+    
+  Axis? xAxis;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of xOffset (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of width (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of boxBottom (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of boxTop (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of defaultX (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of xAxis (type Axis is ignored) ignore type: true
+    
+    if (this.xOffset != null) {
+        buffer.writeAll(["\"xOffset\":",this.xOffset, ","], "");
+    }
+    
+    if (this.width != null) {
+        buffer.writeAll(["\"width\":",this.width, ","], "");
+    }
+    
+    if (this.boxBottom != null) {
+        buffer.writeAll(["\"boxBottom\":",this.boxBottom, ","], "");
+    }
+    
+    if (this.boxTop != null) {
+        buffer.writeAll(["\"boxTop\":",this.boxTop, ","], "");
+    }
+    
+    if (this.defaultX != null) {
+        buffer.writeAll(["\"defaultX\":",this.defaultX, ","], "");
+    }
+    
+    if (this.xAxis != null) {
+        buffer.writeAll(["\"xAxis\":",this.xAxis?.toJSON(), ","], "");
+    }
   }
+
 
 }

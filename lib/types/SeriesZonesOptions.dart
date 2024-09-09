@@ -12,54 +12,83 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * SeriesZonesOptions 
+ * SeriesZonesOptions
  */
 class SeriesZonesOptions extends OptionFragment {
-  SeriesZonesOptions( ) : super();
-  // NOTE: borderColor skipped - type string is ignored in gen 
 
-  // NOTE: borderWidth skipped - type number is ignored in gen 
+  SeriesZonesOptions({
+    this.borderColor = null,
+    this.borderWidth = null,
+    this.className = null,
+    this.color = null,
+    this.dashStyle = null,
+    this.fillColor = null,
+    this.value = null
+  });
 
-  // NOTE: color skipped - type string is ignored in gen 
-
-  // NOTE: className skipped - type string is ignored in gen 
-
-  // NOTE: dashStyle skipped - type string is ignored in gen 
-
-  // NOTE: fillColor skipped - type string is ignored in gen 
-
-  // NOTE: value skipped - type number is ignored in gen 
-
+  String? borderColor;
+    
+  double? borderWidth;
+    
+  String? color;
+    
+  String? className;
+    
+  String? dashStyle;
+    
+  String? fillColor;
+    
+  double? value;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of borderColor (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of borderWidth (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of color (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of className (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of color (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of dashStyle (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of fillColor (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of value (type number is ignored) ignore type: true
+    
+    if (this.borderColor != null) {
+        buffer.writeAll(["\"borderColor\":\'",this.borderColor, "\',"], "");
+    }
+    
+    if (this.borderWidth != null) {
+        buffer.writeAll(["\"borderWidth\":",this.borderWidth, ","], "");
+    }
+    
+    if (this.color != null) {
+        buffer.writeAll(["\"color\":\'",this.color, "\',"], "");
+    }
+    
+    if (this.className != null) {
+        buffer.writeAll(["\"className\":\'",this.className, "\',"], "");
+    }
+    
+    if (this.color != null) {
+        buffer.writeAll(["\"color\":\'",this.color, "\',"], "");
+    }
+    
+    if (this.dashStyle != null) {
+        buffer.writeAll(["\"dashStyle\":\'",this.dashStyle, "\',"], "");
+    }
+    
+    if (this.fillColor != null) {
+        buffer.writeAll(["\"fillColor\":\'",this.fillColor, "\',"], "");
+    }
+    
+    if (this.value != null) {
+        buffer.writeAll(["\"value\":",this.value, ","], "");
+    }
   }
+
 
 }

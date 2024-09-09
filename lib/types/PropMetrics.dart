@@ -12,28 +12,35 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
-import 'ExtremesCache.dart';
 import 'OptionFragment.dart';
 
 /** 
- * PropMetrics 
+ * PropMetrics
  */
-class PropMetrics extends ExtremesCache {
-  PropMetrics( ) : super();
-  
+class PropMetrics extends OptionFragment {
+
+  PropMetrics({
+    this.seriesTimeProps = null
+  });
+
+  Map<String, String>? seriesTimeProps;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of seriesTimeProps (type Generic is ignored) ignore type: true
+
+    // NOTE: skip serialization of seriesTimeProps (type Generic ignored, skipped: true)
+
   }
+
 
 }

@@ -12,10 +12,9 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'OrganizationSeriesOptions.dart';
 import 'Series.dart';
 import 'PointOptions.dart';
@@ -34,8 +33,7 @@ class OrganizationSeries extends Series {
     this.data = null
   });
 
-  
-  @override
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
@@ -56,16 +54,13 @@ class OrganizationSeries extends Series {
         if (point.length > 1) {
           seriesData.writeAll(["["], "");
         }
-
-          for (var sub in point) {
-            if (sub is String) {
-              seriesData.writeAll(["\"", sub, "\","], "");
-            } else {
-              seriesData.writeAll([sub], ",");
-            }
-
+        for (var sub in point) {
+          if (sub is String) {
+            seriesData.writeAll(["\"", sub, "\","], "");
+          } else {
+            seriesData.writeAll([sub], ",");
           }
-
+        }
         if (point.length > 1) {
           seriesData.writeAll(["],"], "");
         } else {
@@ -92,37 +87,47 @@ class OrganizationSeries extends Series {
 
 
     
-    // NOTE: skip serialization of dataLabels (type OrganizationDataLabelOptions is ignored) ignore type: false
 
-    if (this.options?.hangingIndent != null) {  
-      buffer.writeAll(["\"hangingIndent\":",this.options?.hangingIndent, ","], "");
+    // NOTE: skip serialization of dataLabels (type OrganizationDataLabelOptions ignored, skipped: false)
+
+    
+    if (this.options?.hangingIndent != null) {
+        buffer.writeAll(["\"hangingIndent\":",this.options?.hangingIndent, ","], "");
     }
-
-    if (this.options?.hangingIndentTranslation != null) {  
-      buffer.writeAll(["\"hangingIndentTranslation\":\'",this.options?.hangingIndentTranslation, "\',"], "");
+    
+    if (this.options?.hangingIndentTranslation != null) {
+        buffer.writeAll(["\"hangingIndentTranslation\":\'",this.options?.hangingIndentTranslation, "\',"], "");
     }
-
-    // NOTE: skip serialization of hangingSide (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of levels (type OrganizationSeriesLevelOptions[] is ignored) ignore type: false
-
-    if (this.options?.link != null) {  
-      buffer.writeAll(["\"link\":",this.options?.link?.toJSON(), ","], "");
+    
+    if (this.options?.hangingSide != null) {
+        buffer.writeAll(["\"hangingSide\":\'",this.options?.hangingSide, "\',"], "");
     }
+    // NOTE: skip serialization of levels (type OrganizationSeriesLevelOptions[] ignored, skipped: false)
 
-    // NOTE: skip serialization of linkColor (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of linkLineWidth (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of linkRadius (type number is ignored) ignore type: true
-
-    if (this.options?.minNodeLength != null) {  
-      buffer.writeAll(["\"minNodeLength\":",this.options?.minNodeLength, ","], "");
+    
+    if (this.options?.link != null) {
+        buffer.writeAll(["\"link\":",this.options?.link?.toJSON(), ","], "");
     }
+    
+    if (this.options?.linkColor != null) {
+        buffer.writeAll(["\"linkColor\":\'",this.options?.linkColor, "\',"], "");
+    }
+    
+    if (this.options?.linkLineWidth != null) {
+        buffer.writeAll(["\"linkLineWidth\":",this.options?.linkLineWidth, ","], "");
+    }
+    
+    if (this.options?.linkRadius != null) {
+        buffer.writeAll(["\"linkRadius\":",this.options?.linkRadius, ","], "");
+    }
+    
+    if (this.options?.minNodeLength != null) {
+        buffer.writeAll(["\"minNodeLength\":",this.options?.minNodeLength, ","], "");
+    }
+    // NOTE: skip serialization of nodes (type OrganizationSeriesNodeOptions[] ignored, skipped: false)
 
-    // NOTE: skip serialization of nodes (type OrganizationSeriesNodeOptions[] is ignored) ignore type: true
+    // NOTE: skip serialization of states (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
   }
 
 }

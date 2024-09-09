@@ -12,30 +12,40 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'BaseGeometry.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * MultiLineString 
+ * MultiLineString
  */
 class MultiLineString extends BaseGeometry {
-  MultiLineString( ) : super();
-  
+
+  MultiLineString({
+    super.arcs = null,
+    super.properties = null
+  });
+
+  // NOTE: type skipped - type "MultiLineString" is ignored in gen 
+
+  // NOTE: coordinates skipped - type LonLatArray is ignored in gen 
+
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of type (type "MultiLineString" is ignored) ignore type: true
 
-    // NOTE: skip serialization of coordinates (type LonLatArray is ignored) ignore type: 1
+    // NOTE: skip serialization of type (type "MultiLineString" ignored, skipped: true)
+
+    // NOTE: skip serialization of coordinates (type LonLatArray ignored, skipped: true)
+
   }
+
 
 }

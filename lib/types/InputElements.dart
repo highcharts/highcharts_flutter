@@ -12,32 +12,48 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'SVGElement.dart';
 import 'OptionFragment.dart';
 
 /** 
- * InputElements 
+ * InputElements
  */
 class InputElements extends OptionFragment {
-  InputElements( ) : super();
-  
+
+  InputElements({
+    this.dateBox = null,
+    this.label = null
+  });
+
+  SVGElement? dateBox;
+    
+  // NOTE: input skipped - type HTMLInputElement is ignored in gen 
+
+  SVGElement? label;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of dateBox (type SVGElement is ignored) ignore type: true
 
-    // NOTE: skip serialization of input (type HTMLInputElement is ignored) ignore type: true
+    
+    if (this.dateBox != null) {
+        buffer.writeAll(["\"dateBox\":",this.dateBox?.toJSON(), ","], "");
+    }
+    // NOTE: skip serialization of input (type HTMLInputElement ignored, skipped: true)
 
-    // NOTE: skip serialization of label (type SVGElement is ignored) ignore type: true
+    
+    if (this.label != null) {
+        buffer.writeAll(["\"label\":",this.label?.toJSON(), ","], "");
+    }
   }
+
 
 }

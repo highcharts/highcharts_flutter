@@ -12,34 +12,55 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * ColumnOrderEvent 
+ * ColumnOrderEvent
  */
 class ColumnOrderEvent extends OptionFragment {
-  ColumnOrderEvent( ) : super();
-  // NOTE: type skipped - type string is ignored in gen 
 
+  ColumnOrderEvent({
+    this.newColumnOrder = null,
+    this.oldColumnOrder = null,
+    this.type = null
+  });
+
+  String? type;
+    
+  // NOTE: detail skipped - type AnyRecord is ignored in gen 
+
+  String? newColumnOrder;
+    
+  String? oldColumnOrder;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of type (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of detail (type AnyRecord is ignored) ignore type: 1
+    
+    if (this.type != null) {
+        buffer.writeAll(["\"type\":\'",this.type, "\',"], "");
+    }
+    // NOTE: skip serialization of detail (type AnyRecord ignored, skipped: true)
 
-    // NOTE: skip serialization of newColumnOrder (type string[] is ignored) ignore type: true
-
-    // NOTE: skip serialization of oldColumnOrder (type string[] is ignored) ignore type: true
+    
+    if (this.newColumnOrder != null) {
+        buffer.writeAll(["\"newColumnOrder\":",this.newColumnOrder, ","], "");
+    }
+    
+    if (this.oldColumnOrder != null) {
+        buffer.writeAll(["\"oldColumnOrder\":",this.oldColumnOrder, ","], "");
+    }
   }
+
 
 }

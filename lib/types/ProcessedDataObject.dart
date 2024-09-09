@@ -12,40 +12,65 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * ProcessedDataObject 
+ * ProcessedDataObject
  */
 class ProcessedDataObject extends OptionFragment {
-  ProcessedDataObject( ) : super();
-  // NOTE: cropped skipped - type boolean is ignored in gen 
 
-  // NOTE: cropStart skipped - type number is ignored in gen 
+  ProcessedDataObject({
+    this.closestPointRange = null,
+    this.cropped = null,
+    this.cropStart = null,
+    this.xData = null,
+    this.yData = null
+  });
 
-  // NOTE: closestPointRange skipped - type number is ignored in gen 
-
+  double? xData;
+    
+  double? yData;
+    
+  bool? cropped;
+    
+  double? cropStart;
+    
+  double? closestPointRange;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of xData (type number[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of yData (type number[][] is ignored) ignore type: true
-
-    // NOTE: skip serialization of cropped (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of cropStart (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of closestPointRange (type number is ignored) ignore type: true
+    
+    if (this.xData != null) {
+        buffer.writeAll(["\"xData\":",this.xData, ","], "");
+    }
+    
+    if (this.yData != null) {
+        buffer.writeAll(["\"yData\":",this.yData, ","], "");
+    }
+    
+    if (this.cropped != null) {
+        buffer.writeAll(["\"cropped\":",this.cropped, ","], "");
+    }
+    
+    if (this.cropStart != null) {
+        buffer.writeAll(["\"cropStart\":",this.cropStart, ","], "");
+    }
+    
+    if (this.closestPointRange != null) {
+        buffer.writeAll(["\"closestPointRange\":",this.closestPointRange, ","], "");
+    }
   }
+
 
 }

@@ -12,10 +12,9 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'Pyramid3DSeriesOptions.dart';
 import 'Series.dart';
 import 'PointOptions.dart';
@@ -34,8 +33,7 @@ class Pyramid3DSeries extends Series {
     this.data = null
   });
 
-  
-  @override
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
@@ -56,16 +54,13 @@ class Pyramid3DSeries extends Series {
         if (point.length > 1) {
           seriesData.writeAll(["["], "");
         }
-
-          for (var sub in point) {
-            if (sub is String) {
-              seriesData.writeAll(["\"", sub, "\","], "");
-            } else {
-              seriesData.writeAll([sub], ",");
-            }
-
+        for (var sub in point) {
+          if (sub is String) {
+            seriesData.writeAll(["\"", sub, "\","], "");
+          } else {
+            seriesData.writeAll([sub], ",");
           }
-
+        }
         if (point.length > 1) {
           seriesData.writeAll(["],"], "");
         } else {
@@ -92,7 +87,19 @@ class Pyramid3DSeries extends Series {
 
 
     
-    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
+
+    // NOTE: skip serialization of data (type Pyramid3DPointOptions)[] ignored, skipped: false)
+
+    // NOTE: skip serialization of neckWidth (type number ignored, skipped: false)
+
+    // NOTE: skip serialization of neckHeight (type number ignored, skipped: false)
+
+    
+    if (this.options?.reversed != null) {
+        buffer.writeAll(["\"reversed\":",this.options?.reversed, ","], "");
+    }
+    // NOTE: skip serialization of states (type Generic ignored, skipped: true)
+
   }
 
 }

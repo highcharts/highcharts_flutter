@@ -12,32 +12,44 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * TextAnchorCorrectionObject 
+ * TextAnchorCorrectionObject
  */
 class TextAnchorCorrectionObject extends OptionFragment {
-  TextAnchorCorrectionObject( ) : super();
-  // NOTE: x skipped - type number is ignored in gen 
 
-  // NOTE: y skipped - type number is ignored in gen 
+  TextAnchorCorrectionObject({
+    this.x = null,
+    this.y = null
+  });
 
+  double? x;
+    
+  double? y;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of x (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of y (type number is ignored) ignore type: true
+    
+    if (this.x != null) {
+        buffer.writeAll(["\"x\":",this.x, ","], "");
+    }
+    
+    if (this.y != null) {
+        buffer.writeAll(["\"y\":",this.y, ","], "");
+    }
   }
+
 
 }

@@ -12,40 +12,58 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * Theme 
+ * Theme
  */
 class Theme extends OptionFragment {
-  Theme( ) : super();
-  // NOTE: credits skipped - type string is ignored in gen 
 
-  // NOTE: maxZoom skipped - type number is ignored in gen 
+  Theme({
+    this.credits = null,
+    this.maxZoom = null,
+    this.minZoom = null,
+    this.url = null
+  });
 
-  // NOTE: minZoom skipped - type number is ignored in gen 
-
-  // NOTE: url skipped - type string is ignored in gen 
-
+  String? credits;
+    
+  double? maxZoom;
+    
+  double? minZoom;
+    
+  String? url;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of credits (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of maxZoom (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of minZoom (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of url (type string is ignored) ignore type: true
+    
+    if (this.credits != null) {
+        buffer.writeAll(["\"credits\":\'",this.credits, "\',"], "");
+    }
+    
+    if (this.maxZoom != null) {
+        buffer.writeAll(["\"maxZoom\":",this.maxZoom, ","], "");
+    }
+    
+    if (this.minZoom != null) {
+        buffer.writeAll(["\"minZoom\":",this.minZoom, ","], "");
+    }
+    
+    if (this.url != null) {
+        buffer.writeAll(["\"url\":\'",this.url, "\',"], "");
+    }
   }
+
 
 }

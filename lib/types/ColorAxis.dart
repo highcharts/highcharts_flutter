@@ -12,28 +12,29 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
-import 'ColorAxisLike.dart';
 import 'OptionFragment.dart';
 
 /** 
- * ColorAxis 
+ * ColorAxis
  */
-class ColorAxis extends ColorAxisLike {
-  ColorAxis( ) : super();
-  
+class ColorAxis extends OptionFragment {
+
+  ColorAxis();
+
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    
+
   }
+
 
 }

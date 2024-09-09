@@ -12,33 +12,42 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'PieSeriesOptions.dart';
-import 'OptionFragment.dart';
+import 'VariablePiePointOptions.dart';
+
 
 /** 
- * VariablePieSeriesOptions 
+ * VariablePieSeriesOptions
  */
 class VariablePieSeriesOptions extends PieSeriesOptions {
-  VariablePieSeriesOptions( {
+
+  VariablePieSeriesOptions({
     super.accessibility = null,
     super.allAreas = null,
     super.allowPointSelect = null,
     super.animationLimit = null,
+    super.baseSeries = null,
     super.boostBlending = null,
     super.boostThreshold = null,
     super.borderColor = null,
+    super.borderDashStyle = null,
+    super.borderRadius = null,
     super.borderWidth = null,
+    super.centerInCategory = null,
     super.className = null,
     super.clip = null,
+    super.cluster = null,
     super.color = null,
     super.colorAxis = null,
+    super.colorByPoint = null,
     super.colorIndex = null,
     super.colorKey = null,
+    super.colors = null,
     super.compare = null,
+    super.compareBase = null,
     super.compareStart = null,
     super.connectEnds = null,
     super.connectNulls = null,
@@ -46,41 +55,62 @@ class VariablePieSeriesOptions extends PieSeriesOptions {
     super.crisp = null,
     super.cropThreshold = null,
     super.cumulative = null,
+    super.cumulativeStart = null,
     super.cursor = null,
     super.dashStyle = null,
+    super.data = null,
+    super.dataAsColumns = null,
     super.dataGrouping = null,
     super.dataLabels = null,
     super.dataSorting = null,
     super.depth = null,
     super.description = null,
     super.dragDrop = null,
+    super.drilldown = null,
+    super.edgeColor = null,
+    super.edgeWidth = null,
     super.enableMouseTracking = null,
     super.endAngle = null,
     super.events = null,
     super.fillColor = null,
+    super.fillOpacity = null,
     super.findNearestPointBy = null,
     super.gapSize = null,
     super.gapUnit = null,
     super.getExtremesFromAll = null,
+    super.grouping = null,
+    super.groupPadding = null,
+    super.groupZPadding = null,
+    super.id = null,
     super.ignoreHiddenPoint = null,
+    super.inactiveOtherPoints = null,
     super.includeInDataExport = null,
+    super.index = null,
     super.innerSize = null,
+    super.isInternal = null,
     super.joinBy = null,
+    super.kdNow = null,
     super.keys = null,
     super.label = null,
     super.lastPrice = null,
     super.lastVisiblePrice = null,
+    super.legendIndex = null,
     super.legendSymbol = null,
+    super.legendType = null,
     super.linecap = null,
+    super.lineColor = null,
     super.lineWidth = null,
     super.linkedTo = null,
     super.marker = null,
     this.maxPointSize = null,
     this.minPointSize = null,
     super.minSize = null,
+    super.name = null,
     super.navigatorOptions = null,
     super.negativeColor = null,
+    super.negativeFillColor = null,
     super.onPoint = null,
+    super.onSeries = null,
     super.opacity = null,
     super.point = null,
     super.pointInterval = null,
@@ -88,6 +118,7 @@ class VariablePieSeriesOptions extends PieSeriesOptions {
     super.pointPlacement = null,
     super.pointRange = null,
     super.pointStart = null,
+    super.pointValKey = null,
     super.relativeXValue = null,
     super.selected = null,
     super.showCheckbox = null,
@@ -98,62 +129,115 @@ class VariablePieSeriesOptions extends PieSeriesOptions {
     super.skipKeyboardNavigation = null,
     super.slicedOffset = null,
     super.softThreshold = null,
+    super.stack = null,
     super.stacking = null,
     super.startAngle = null,
+    super.startFromThreshold = null,
+    super.states = null,
     super.step = null,
     super.stickyTracking = null,
+    super.supportingColor = null,
     super.thickness = null,
     super.threshold = null,
     super.tooltip = null,
+    super.trackByArea = null,
     super.turboThreshold = null,
+    super.type = null,
+    super.useOhlcData = null,
     super.visible = null,
+    super.xAxis = null,
+    super.xData = null,
+    super.yAxis = null,
+    super.yData = null,
     super.zIndex = null,
     this.zMax = null,
     this.zMin = null,
     super.zoneAxis = null,
     super.zones = null
-  }) : super();
+  });
+
+  /** NOTE: extdata is skipped here for now, as it overrides the base type. */
+
+  /**
+   * The maximum size of the points' radius related to chart's `plotArea`.
+   * If a number is set, it applies in pixels. 
+   * 
+   * Defaults to '100%'. 
+   */
   String? maxPointSize;
     
+  /**
+   * The minimum size of the points' radius related to chart's `plotArea`.
+   * If a number is set, it applies in pixels. 
+   * 
+   * Defaults to '10%'. 
+   */
   String? minPointSize;
     
+  /**
+   * Whether the pie slice's value should be represented by the area or
+   * the radius of the slice. Can be either `area` or `radius`. The
+   * default, `area`, corresponds best to the human perception of the size
+   * of each pie slice. 
+   * 
+   * Defaults to 'area'. 
+   */
   String? sizeBy;
     
   // NOTE: states skipped - type Generic is ignored in gen 
 
+  // NOTE: tooltip skipped - type Generic is ignored in gen 
+
+  /**
+   * The maximum possible z value for the point's radius calculation. If
+   * the point's Z value is bigger than zMax, the slice will be drawn
+   * according to the zMax value  
+   */
   double? zMax;
     
+  /**
+   * The minimum possible z value for the point's radius calculation. If
+   * the point's Z value is smaller than zMin, the slice will be drawn
+   * according to the zMin value.  
+   */
   double? zMin;
     
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    if (this.maxPointSize != null) {  
-      buffer.writeAll(["\"maxPointSize\":\'",this.maxPointSize, "\',"], "");
+
+    // NOTE: skip serialization of data (type VariablePiePointOptions)[] ignored, skipped: false)
+
+    
+    if (this.maxPointSize != null) {
+        buffer.writeAll(["\"maxPointSize\":\'",this.maxPointSize, "\',"], "");
     }
-
-    if (this.minPointSize != null) {  
-      buffer.writeAll(["\"minPointSize\":\'",this.minPointSize, "\',"], "");
+    
+    if (this.minPointSize != null) {
+        buffer.writeAll(["\"minPointSize\":\'",this.minPointSize, "\',"], "");
     }
-
-    if (this.sizeBy != null) {  
-      buffer.writeAll(["\"sizeBy\":\'",this.sizeBy, "\',"], "");
+    
+    if (this.sizeBy != null) {
+        buffer.writeAll(["\"sizeBy\":\'",this.sizeBy, "\',"], "");
     }
+    // NOTE: skip serialization of states (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
+    // NOTE: skip serialization of tooltip (type Generic ignored, skipped: true)
 
-    if (this.zMax != null) {  
-      buffer.writeAll(["\"zMax\":",this.zMax, ","], "");
+    
+    if (this.zMax != null) {
+        buffer.writeAll(["\"zMax\":",this.zMax, ","], "");
     }
-
-    if (this.zMin != null) {  
-      buffer.writeAll(["\"zMin\":",this.zMin, ","], "");
+    
+    if (this.zMin != null) {
+        buffer.writeAll(["\"zMin\":",this.zMin, ","], "");
     }
   }
+
 
 }

@@ -12,32 +12,40 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * SeriesAccessibilityKeyboardNavigationOptions 
+ * SeriesAccessibilityKeyboardNavigationOptions
  */
 class SeriesAccessibilityKeyboardNavigationOptions extends OptionFragment {
-  SeriesAccessibilityKeyboardNavigationOptions( {
+
+  SeriesAccessibilityKeyboardNavigationOptions({
     this.enabled = null
-  }) : super();
+  });
+
+  /**
+   * Enable/disable keyboard navigation support for a specific series.  
+   */
   bool? enabled;
     
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    if (this.enabled != null) {  
-      buffer.writeAll(["\"enabled\":",this.enabled, ","], "");
+
+    
+    if (this.enabled != null) {
+        buffer.writeAll(["\"enabled\":",this.enabled, ","], "");
     }
   }
+
 
 }

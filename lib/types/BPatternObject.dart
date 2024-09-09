@@ -12,37 +12,59 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'BBoxObject.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * BPatternObject 
+ * BPatternObject
  */
 class BPatternObject extends BBoxObject {
-  BPatternObject( ) : super();
-  // NOTE: aspectHeight skipped - type number is ignored in gen 
 
-  // NOTE: aspectRatio skipped - type number is ignored in gen 
+  BPatternObject({
+    super.alignment = null,
+    this.aspectHeight = null,
+    this.aspectRatio = null,
+    this.aspectWidth = null,
+    super.bottomWidth = null,
+    super.height = null,
+    super.polygon = null,
+    super.topWidth = null,
+    super.width = null,
+    super.x = null,
+    super.y = null
+  });
 
-  // NOTE: aspectWidth skipped - type number is ignored in gen 
-
+  double? aspectHeight;
+    
+  double? aspectRatio;
+    
+  double? aspectWidth;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of aspectHeight (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of aspectRatio (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of aspectWidth (type number is ignored) ignore type: true
+    
+    if (this.aspectHeight != null) {
+        buffer.writeAll(["\"aspectHeight\":",this.aspectHeight, ","], "");
+    }
+    
+    if (this.aspectRatio != null) {
+        buffer.writeAll(["\"aspectRatio\":",this.aspectRatio, ","], "");
+    }
+    
+    if (this.aspectWidth != null) {
+        buffer.writeAll(["\"aspectWidth\":",this.aspectWidth, ","], "");
+    }
   }
+
 
 }

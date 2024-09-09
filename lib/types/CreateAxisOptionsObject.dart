@@ -12,32 +12,45 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * CreateAxisOptionsObject 
+ * CreateAxisOptionsObject
  */
 class CreateAxisOptionsObject extends OptionFragment {
-  CreateAxisOptionsObject( ) : super();
-  // NOTE: redraw skipped - type boolean is ignored in gen 
 
+  CreateAxisOptionsObject({
+    this.redraw = null
+  });
+
+  // NOTE: animation skipped - type Generic is ignored in gen 
+
+  // NOTE: axis skipped - type Generic is ignored in gen 
+
+  bool? redraw;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of animation (type Generic is ignored) ignore type: true
 
-    // NOTE: skip serialization of axis (type Generic is ignored) ignore type: true
+    // NOTE: skip serialization of animation (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of redraw (type boolean is ignored) ignore type: true
+    // NOTE: skip serialization of axis (type Generic ignored, skipped: true)
+
+    
+    if (this.redraw != null) {
+        buffer.writeAll(["\"redraw\":",this.redraw, ","], "");
+    }
   }
+
 
 }

@@ -12,27 +12,33 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * jspdf 
+ * jspdf
  */
 class jspdf extends OptionFragment {
-  jspdf( ) : super();
-  
+
+  jspdf();
+
+  // NOTE: jsPDF skipped - type typeof jsPDF is ignored in gen 
+
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of jsPDF (type typeof jsPDF is ignored) ignore type: true
+
+    // NOTE: skip serialization of jsPDF (type typeof jsPDF ignored, skipped: true)
+
   }
+
 
 }

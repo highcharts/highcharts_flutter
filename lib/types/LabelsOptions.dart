@@ -12,51 +12,80 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'CSSObject.dart';
 import 'OptionFragment.dart';
 
+
 /** 
- * LabelsOptions 
+ * LabelsOptions
  */
 class LabelsOptions extends OptionFragment {
-  LabelsOptions( ) : super();
-  // NOTE: align skipped - type string is ignored in gen 
 
-  // NOTE: allowOverlap skipped - type boolean is ignored in gen 
+  LabelsOptions({
+    this.align = null,
+    this.allowOverlap = null,
+    this.className = null,
+    this.format = null,
+    this.style = null,
+    this.x = null,
+    this.y = null
+  });
 
-  // NOTE: className skipped - type string is ignored in gen 
-
-  // NOTE: format skipped - type string is ignored in gen 
-
-  // NOTE: x skipped - type number is ignored in gen 
-
-  // NOTE: y skipped - type number is ignored in gen 
-
+  String? align;
+    
+  bool? allowOverlap;
+    
+  String? className;
+    
+  String? format;
+    
+  CSSObject? style;
+    
+  double? x;
+    
+  double? y;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of align (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of allowOverlap (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of className (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of format (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of style (type CSSObject is ignored) ignore type: true
-
-    // NOTE: skip serialization of x (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of y (type number is ignored) ignore type: true
+    
+    if (this.align != null) {
+        buffer.writeAll(["\"align\":\'",this.align, "\',"], "");
+    }
+    
+    if (this.allowOverlap != null) {
+        buffer.writeAll(["\"allowOverlap\":",this.allowOverlap, ","], "");
+    }
+    
+    if (this.className != null) {
+        buffer.writeAll(["\"className\":\'",this.className, "\',"], "");
+    }
+    
+    if (this.format != null) {
+        buffer.writeAll(["\"format\":\'",this.format, "\',"], "");
+    }
+    
+    if (this.style != null) {
+        buffer.writeAll(["\"style\":",this.style?.toJSON(), ","], "");
+    }
+    
+    if (this.x != null) {
+        buffer.writeAll(["\"x\":",this.x, ","], "");
+    }
+    
+    if (this.y != null) {
+        buffer.writeAll(["\"y\":",this.y, ","], "");
+    }
   }
+
 
 }

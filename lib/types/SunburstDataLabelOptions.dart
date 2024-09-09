@@ -12,36 +12,42 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'DataLabelOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * SunburstDataLabelOptions 
+ * SunburstDataLabelOptions
  */
 class SunburstDataLabelOptions extends DataLabelOptions {
-  SunburstDataLabelOptions( {
+
+  SunburstDataLabelOptions({
     super.align = null,
-    super.allowOverlap = null,
+    super.alignTo = null,
+    this.allowOverlap = null,
     super.backgroundColor = null,
     super.borderColor = null,
     super.borderRadius = null,
     super.borderWidth = null,
     super.className = null,
     super.color = null,
+    super.connectorColor = null,
     super.crop = null,
     super.defer = null,
+    super.distance = null,
     super.enabled = null,
     super.filter = null,
     super.format = null,
     super.inside = null,
+    super.labelrank = null,
     super.nullFormat = null,
+    super.outside3dPlot = null,
     super.overflow = null,
     super.padding = null,
     super.rotation = null,
+    this.rotationMode = null,
     super.shape = null,
     super.style = null,
     super.textPath = null,
@@ -50,22 +56,30 @@ class SunburstDataLabelOptions extends DataLabelOptions {
     super.x = null,
     super.y = null,
     super.zIndex = null
-  }) : super();
-  // NOTE: allowOverlap skipped - type boolean is ignored in gen 
+  });
 
-  // NOTE: rotationMode skipped - type string is ignored in gen 
-
+  bool? allowOverlap;
+    
+  String? rotationMode;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of allowOverlap (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of rotationMode (type string is ignored) ignore type: true
+    
+    if (this.allowOverlap != null) {
+        buffer.writeAll(["\"allowOverlap\":",this.allowOverlap, ","], "");
+    }
+    
+    if (this.rotationMode != null) {
+        buffer.writeAll(["\"rotationMode\":\'",this.rotationMode, "\',"], "");
+    }
   }
+
 
 }

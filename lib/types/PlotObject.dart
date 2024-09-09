@@ -12,29 +12,41 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'PositionObject.dart';
 import 'NodeValuesObject.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * PlotObject 
+ * PlotObject
  */
 class PlotObject extends PositionObject {
-  PlotObject( ) : super();
-  
+
+  PlotObject({
+    super.alignment = null,
+    this.parent = null,
+    super.x = null,
+    super.y = null
+  });
+
+  NodeValuesObject? parent;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of parent (type NodeValuesObject is ignored) ignore type: true
+
+    
+    if (this.parent != null) {
+        buffer.writeAll(["\"parent\":",this.parent?.toJSON(), ","], "");
+    }
   }
+
 
 }

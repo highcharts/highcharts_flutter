@@ -12,42 +12,62 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
-import 'Event.dart';
+ */
 import 'HTMLElement.dart';
 import 'OptionFragment.dart';
 
 /** 
- * LoadEvent 
+ * LoadEvent
  */
-class LoadEvent extends Event {
-  LoadEvent( ) : super();
-  // NOTE: type skipped - type string is ignored in gen 
+class LoadEvent extends OptionFragment {
 
-  // NOTE: csv skipped - type string is ignored in gen 
+  LoadEvent({
+    this.csv = null,
+    this.tableElement = null,
+    this.type = null,
+    this.url = null
+  });
 
-  // NOTE: url skipped - type string is ignored in gen 
+  String? type;
+    
+  String? csv;
+    
+  String? url;
+    
+  HTMLElement? tableElement;
+    
+  // NOTE: data skipped - type Data is ignored in gen 
 
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of type (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of csv (type string is ignored) ignore type: true
+    
+    if (this.type != null) {
+        buffer.writeAll(["\"type\":\'",this.type, "\',"], "");
+    }
+    
+    if (this.csv != null) {
+        buffer.writeAll(["\"csv\":\'",this.csv, "\',"], "");
+    }
+    
+    if (this.url != null) {
+        buffer.writeAll(["\"url\":\'",this.url, "\',"], "");
+    }
+    
+    if (this.tableElement != null) {
+        buffer.writeAll(["\"tableElement\":",this.tableElement?.toJSON(), ","], "");
+    }
+    // NOTE: skip serialization of data (type Data ignored, skipped: true)
 
-    // NOTE: skip serialization of url (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of tableElement (type HTMLElement is ignored) ignore type: true
-
-    // NOTE: skip serialization of data (type Data is ignored) ignore type: true
   }
+
 
 }

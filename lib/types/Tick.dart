@@ -12,28 +12,31 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'TickLike.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * Tick 
+ * Tick
  */
 class Tick extends TickLike {
-  Tick( ) : super();
-  
+
+  Tick({
+    super.slotWidth = null
+  });
+
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    
+
   }
+
 
 }

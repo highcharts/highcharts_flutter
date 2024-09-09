@@ -12,41 +12,59 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
-import 'Event.dart';
 import 'OptionFragment.dart';
 
 /** 
- * ChangedEvent 
+ * ChangedEvent
  */
 class ChangedEvent extends OptionFragment {
-  ChangedEvent( ) : super();
-  // NOTE: from skipped - type number is ignored in gen 
 
-  // NOTE: to skipped - type number is ignored in gen 
+  ChangedEvent({
+    this.DOMType = null,
+    this.from = null,
+    this.to = null
+  });
 
-  // NOTE: DOMType skipped - type string is ignored in gen 
+  double? from;
+    
+  double? to;
+    
+  // NOTE: trigger skipped - type "scrollbar" is ignored in gen 
+
+  String? DOMType;
+    
+  // NOTE: DOMEvent skipped - type Event is ignored in gen 
 
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of from (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of to (type number is ignored) ignore type: true
+    
+    if (this.from != null) {
+        buffer.writeAll(["\"from\":",this.from, ","], "");
+    }
+    
+    if (this.to != null) {
+        buffer.writeAll(["\"to\":",this.to, ","], "");
+    }
+    // NOTE: skip serialization of trigger (type "scrollbar" ignored, skipped: true)
 
-    // NOTE: skip serialization of trigger (type "scrollbar" is ignored) ignore type: true
+    
+    if (this.DOMType != null) {
+        buffer.writeAll(["\"DOMType\":\'",this.DOMType, "\',"], "");
+    }
+    // NOTE: skip serialization of DOMEvent (type Event ignored, skipped: true)
 
-    // NOTE: skip serialization of DOMType (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of DOMEvent (type Event is ignored) ignore type: 1
   }
+
 
 }

@@ -15,5 +15,5 @@ Targets must be initialized by creating a Flutter projects before running sample
 - We're currently going through demos and verifying and fixing them: not all of them currently compiles. This is mostly the case for more advanced demos, e.g. demos based on tree or hierarchical data structures. The majority of the more basic demos work.
 - There might be a naming change, specifically we're considering prefixing all Highcharts types with `Highcharts*` to follow standard Flutter/Dart naming conventions.
 - Gantt and Maps will be available in the next preview update.
-- There are issues with compiling for IOS: We are working on getting these resolved ASAP.
+- There's an issue with IOS not always compiling properly - we're working on fixing this.
 

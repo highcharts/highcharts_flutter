@@ -12,38 +12,58 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
-import 'DataEvent.dart';
+ */
 import 'ColumnCollection.dart';
 import 'OptionFragment.dart';
 
 /** 
- * ColumnEvent 
+ * ColumnEvent
  */
-class ColumnEvent extends DataEvent {
-  ColumnEvent( ) : super();
-  // NOTE: type skipped - type string is ignored in gen 
+class ColumnEvent extends OptionFragment {
 
-  // NOTE: rowIndex skipped - type number is ignored in gen 
+  ColumnEvent({
+    this.columnNames = null,
+    this.columns = null,
+    this.rowIndex = null,
+    this.type = null
+  });
 
+  String? type;
+    
+  ColumnCollection? columns;
+    
+  String? columnNames;
+    
+  double? rowIndex;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of type (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of columns (type ColumnCollection is ignored) ignore type: true
-
-    // NOTE: skip serialization of columnNames (type string[] is ignored) ignore type: true
-
-    // NOTE: skip serialization of rowIndex (type number is ignored) ignore type: true
+    
+    if (this.type != null) {
+        buffer.writeAll(["\"type\":\'",this.type, "\',"], "");
+    }
+    
+    if (this.columns != null) {
+        buffer.writeAll(["\"columns\":",this.columns?.toJSON(), ","], "");
+    }
+    
+    if (this.columnNames != null) {
+        buffer.writeAll(["\"columnNames\":",this.columnNames, ","], "");
+    }
+    
+    if (this.rowIndex != null) {
+        buffer.writeAll(["\"rowIndex\":",this.rowIndex, ","], "");
+    }
   }
+
 
 }

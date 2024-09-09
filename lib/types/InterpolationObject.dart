@@ -12,32 +12,58 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * InterpolationObject 
+ * InterpolationObject
  */
 class InterpolationObject extends OptionFragment {
-  InterpolationObject( ) : super();
-  // NOTE: enabled skipped - type boolean is ignored in gen 
 
-  // NOTE: blur skipped - type number is ignored in gen 
+  InterpolationObject({
+    this.blur = null,
+    this.enabled = null
+  });
 
+  /**
+   * Enable or disable the interpolation of the geoheatmap series.  
+   */
+  bool? enabled;
+    
+  /**
+   * Represents how much blur should be added to the interpolated
+   * image. Works best in the range of 0-1, all higher values
+   * would need a lot more performance of the machine to calculate
+   * more detailed interpolation.
+   * 
+   *  * **Note:** Useful, if the data is spread into wide range of
+   *  longitude and latitude values. 
+   * 
+   * Defaults to '1'. 
+   */
+  double? blur;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of enabled (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of blur (type number is ignored) ignore type: true
+    
+    if (this.enabled != null) {
+        buffer.writeAll(["\"enabled\":",this.enabled, ","], "");
+    }
+    
+    if (this.blur != null) {
+        buffer.writeAll(["\"blur\":",this.blur, ","], "");
+    }
   }
+
 
 }

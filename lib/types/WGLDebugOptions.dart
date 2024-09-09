@@ -12,56 +12,72 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'BoostDebugOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * WGLDebugOptions 
+ * WGLDebugOptions
  */
 class WGLDebugOptions extends BoostDebugOptions {
-  WGLDebugOptions( {
-    super.showSkipSummary = null,
-    super.timeBufferCopy = null,
-    super.timeKDTree = null,
-    super.timeRendering = null,
-    super.timeSeriesProcessing = null,
-    super.timeSetup = null
-  }) : super();
-  // NOTE: timeBufferCopy skipped - type boolean is ignored in gen 
 
-  // NOTE: timeKDTree skipped - type boolean is ignored in gen 
+  WGLDebugOptions({
+    this.showSkipSummary = null,
+    this.timeBufferCopy = null,
+    this.timeKDTree = null,
+    this.timeRendering = null,
+    this.timeSeriesProcessing = null,
+    this.timeSetup = null
+  });
 
-  // NOTE: timeRendering skipped - type boolean is ignored in gen 
-
-  // NOTE: timeSeriesProcessing skipped - type boolean is ignored in gen 
-
-  // NOTE: timeSetup skipped - type boolean is ignored in gen 
-
-  // NOTE: showSkipSummary skipped - type boolean is ignored in gen 
-
+  bool? timeBufferCopy;
+    
+  bool? timeKDTree;
+    
+  bool? timeRendering;
+    
+  bool? timeSeriesProcessing;
+    
+  bool? timeSetup;
+    
+  bool? showSkipSummary;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of timeBufferCopy (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of timeKDTree (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of timeRendering (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of timeSeriesProcessing (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of timeSetup (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of showSkipSummary (type boolean is ignored) ignore type: true
+    
+    if (this.timeBufferCopy != null) {
+        buffer.writeAll(["\"timeBufferCopy\":",this.timeBufferCopy, ","], "");
+    }
+    
+    if (this.timeKDTree != null) {
+        buffer.writeAll(["\"timeKDTree\":",this.timeKDTree, ","], "");
+    }
+    
+    if (this.timeRendering != null) {
+        buffer.writeAll(["\"timeRendering\":",this.timeRendering, ","], "");
+    }
+    
+    if (this.timeSeriesProcessing != null) {
+        buffer.writeAll(["\"timeSeriesProcessing\":",this.timeSeriesProcessing, ","], "");
+    }
+    
+    if (this.timeSetup != null) {
+        buffer.writeAll(["\"timeSetup\":",this.timeSetup, ","], "");
+    }
+    
+    if (this.showSkipSummary != null) {
+        buffer.writeAll(["\"showSkipSummary\":",this.showSkipSummary, ","], "");
+    }
   }
+
 
 }

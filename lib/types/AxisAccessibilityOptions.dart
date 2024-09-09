@@ -12,46 +12,64 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * AxisAccessibilityOptions 
+ * AxisAccessibilityOptions
  */
 class AxisAccessibilityOptions extends OptionFragment {
-  AxisAccessibilityOptions( {
+
+  AxisAccessibilityOptions({
     this.description = null,
     this.enabled = null,
     this.rangeDescription = null
-  }) : super();
+  });
+
+  /**
+   * Description for an axis to expose to screen reader users.  
+   */
   String? description;
     
+  /**
+   * Enable axis accessibility features, including axis information in the
+   * screen reader information region. If this is disabled on the xAxis, the
+   * x values are not exposed to screen readers for the individual data points
+   * by default.  
+   */
   bool? enabled;
     
+  /**
+   * Range description for an axis. Overrides the default range description.
+   * Set to empty to disable range description for this axis.  
+   */
   String? rangeDescription;
     
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    if (this.description != null) {  
-      buffer.writeAll(["\"description\":\'",this.description, "\',"], "");
-    }
 
-    if (this.enabled != null) {  
-      buffer.writeAll(["\"enabled\":",this.enabled, ","], "");
+    
+    if (this.description != null) {
+        buffer.writeAll(["\"description\":\'",this.description, "\',"], "");
     }
-
-    if (this.rangeDescription != null) {  
-      buffer.writeAll(["\"rangeDescription\":\'",this.rangeDescription, "\',"], "");
+    
+    if (this.enabled != null) {
+        buffer.writeAll(["\"enabled\":",this.enabled, ","], "");
+    }
+    
+    if (this.rangeDescription != null) {
+        buffer.writeAll(["\"rangeDescription\":\'",this.rangeDescription, "\',"], "");
     }
   }
+
 
 }

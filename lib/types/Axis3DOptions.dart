@@ -12,20 +12,20 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'AxisOptions.dart';
 import 'Axis3DLabelOptions.dart';
 import 'Axis3DTitleOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * Axis3DOptions 
+ * Axis3DOptions
  */
 class Axis3DOptions extends AxisOptions {
-  Axis3DOptions( {
+
+  Axis3DOptions({
     super.accessibility = null,
     super.alignTicks = null,
     super.allowDecimals = null,
@@ -38,6 +38,7 @@ class Axis3DOptions extends AxisOptions {
     super.crosshair = null,
     super.crossing = null,
     super.currentDateIndicator = null,
+    super.description = null,
     super.endOnTick = null,
     super.events = null,
     super.floor = null,
@@ -49,6 +50,9 @@ class Axis3DOptions extends AxisOptions {
     super.gridZIndex = null,
     super.height = null,
     super.id = null,
+    super.internalKey = null,
+    super.isInternal = null,
+    super.keepOrdinalPadding = null,
     super.labels = null,
     super.left = null,
     super.lineColor = null,
@@ -87,6 +91,7 @@ class Axis3DOptions extends AxisOptions {
     super.showEmpty = null,
     super.showFirstLabel = null,
     super.showLastLabel = null,
+    super.side = null,
     super.softMax = null,
     super.softMin = null,
     super.stackLabels = null,
@@ -113,19 +118,26 @@ class Axis3DOptions extends AxisOptions {
     super.width = null,
     super.zIndex = null,
     super.zoomEnabled = null
-  }) : super();
-  
+  });
+
+  /** NOTE: extlabels is skipped here for now, as it overrides the base type. */
+
+  /** NOTE: exttitle is skipped here for now, as it overrides the base type. */
+
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of labels (type Axis3DLabelOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of title (type Axis3DTitleOptions is ignored) ignore type: true
+    // NOTE: skip serialization of labels (type Axis3DLabelOptions ignored, skipped: false)
+
+    // NOTE: skip serialization of title (type Axis3DTitleOptions ignored, skipped: false)
+
   }
+
 
 }

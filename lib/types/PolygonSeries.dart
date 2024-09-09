@@ -12,10 +12,9 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'PolygonSeriesOptions.dart';
 import 'Series.dart';
 import 'PointOptions.dart';
@@ -34,8 +33,7 @@ class PolygonSeries extends Series {
     this.data = null
   });
 
-  
-  @override
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
@@ -56,16 +54,13 @@ class PolygonSeries extends Series {
         if (point.length > 1) {
           seriesData.writeAll(["["], "");
         }
-
-          for (var sub in point) {
-            if (sub is String) {
-              seriesData.writeAll(["\"", sub, "\","], "");
-            } else {
-              seriesData.writeAll([sub], ",");
-            }
-
+        for (var sub in point) {
+          if (sub is String) {
+            seriesData.writeAll(["\"", sub, "\","], "");
+          } else {
+            seriesData.writeAll([sub], ",");
           }
-
+        }
         if (point.length > 1) {
           seriesData.writeAll(["],"], "");
         } else {
@@ -92,13 +87,35 @@ class PolygonSeries extends Series {
 
 
     
-    // NOTE: skip serialization of fillColor (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
-
-    if (this.options?.trackByArea != null) {  
-      buffer.writeAll(["\"trackByArea\":",this.options?.trackByArea, ","], "");
+    
+    if (this.options?.data != null) {
+        buffer.writeAll(["\"data\":",this.options?.data, ","], "");
     }
+    
+    if (this.options?.fillColor != null) {
+        buffer.writeAll(["\"fillColor\":\'",this.options?.fillColor, "\',"], "");
+    }
+    
+    if (this.options?.legendSymbol != null) {
+        buffer.writeAll(["\"legendSymbol\":\'",this.options?.legendSymbol, "\',"], "");
+    }
+    
+    if (this.options?.marker != null) {
+        buffer.writeAll(["\"marker\":",this.options?.marker?.toJSON(), ","], "");
+    }
+    // NOTE: skip serialization of states (type Generic ignored, skipped: true)
+
+    
+    if (this.options?.stickyTracking != null) {
+        buffer.writeAll(["\"stickyTracking\":",this.options?.stickyTracking, ","], "");
+    }
+    
+    if (this.options?.trackByArea != null) {
+        buffer.writeAll(["\"trackByArea\":",this.options?.trackByArea, ","], "");
+    }
+    // NOTE: skip serialization of tooltip (type Generic ignored, skipped: true)
+
   }
 
 }

@@ -12,28 +12,37 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'SankeyPoint.dart';
 import 'OptionFragment.dart';
 
 /** 
- * SankeyDataLabelFormatterContext 
+ * SankeyDataLabelFormatterContext
  */
 class SankeyDataLabelFormatterContext extends OptionFragment {
-  SankeyDataLabelFormatterContext( ) : super();
-  
+
+  SankeyDataLabelFormatterContext({
+    this.point = null
+  });
+
+  SankeyPoint? point;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of point (type SankeyPoint is ignored) ignore type: true
+
+    
+    if (this.point != null) {
+        buffer.writeAll(["\"point\":",this.point?.toJSON(), ","], "");
+    }
   }
+
 
 }

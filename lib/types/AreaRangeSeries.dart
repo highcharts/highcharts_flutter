@@ -12,10 +12,9 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'AreaRangeSeriesOptions.dart';
 import 'Series.dart';
 import 'PointOptions.dart';
@@ -34,8 +33,7 @@ class AreaRangeSeries extends Series {
     this.data = null
   });
 
-  
-  @override
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
@@ -56,16 +54,13 @@ class AreaRangeSeries extends Series {
         if (point.length > 1) {
           seriesData.writeAll(["["], "");
         }
-
-          for (var sub in point) {
-            if (sub is String) {
-              seriesData.writeAll(["\"", sub, "\","], "");
-            } else {
-              seriesData.writeAll([sub], ",");
-            }
-
+        for (var sub in point) {
+          if (sub is String) {
+            seriesData.writeAll(["\"", sub, "\","], "");
+          } else {
+            seriesData.writeAll([sub], ",");
           }
-
+        }
         if (point.length > 1) {
           seriesData.writeAll(["],"], "");
         } else {
@@ -92,15 +87,33 @@ class AreaRangeSeries extends Series {
 
 
     
-    // NOTE: skip serialization of dataLabels (type AreaRangeDataLabelOptions[] is ignored) ignore type: false
 
-    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
+    // NOTE: skip serialization of dataLabels (type AreaRangeDataLabelOptions[] ignored, skipped: false)
 
-    if (this.options?.trackByArea != null) {  
-      buffer.writeAll(["\"trackByArea\":",this.options?.trackByArea, ","], "");
+    // NOTE: skip serialization of states (type Generic ignored, skipped: true)
+
+    
+    if (this.options?.trackByArea != null) {
+        buffer.writeAll(["\"trackByArea\":",this.options?.trackByArea, ","], "");
     }
+    
+    if (this.options?.lowMarker != null) {
+        buffer.writeAll(["\"lowMarker\":",this.options?.lowMarker?.toJSON(), ","], "");
+    }
+    
+    if (this.options?.fillOpacity != null) {
+        buffer.writeAll(["\"fillOpacity\":",this.options?.fillOpacity, ","], "");
+    }
+    
+    if (this.options?.fillColor != null) {
+        buffer.writeAll(["\"fillColor\":\'",this.options?.fillColor, "\',"], "");
+    }
+    // NOTE: skip serialization of data (type AreaRangePointOptions)[] ignored, skipped: false)
 
-    // NOTE: skip serialization of lowMarker (type PointMarkerOptions is ignored) ignore type: true
+    
+    if (this.options?.color != null) {
+        buffer.writeAll(["\"color\":\'",this.options?.color, "\',"], "");
+    }
   }
 
 }

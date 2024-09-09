@@ -12,52 +12,108 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
+import 'SankeyDataLabelOptions.dart';
 import 'OptionFragment.dart';
 
+
 /** 
- * SankeySeriesNodeOptions 
+ * SankeySeriesNodeOptions
  */
 class SankeySeriesNodeOptions extends OptionFragment {
-  SankeySeriesNodeOptions( ) : super();
-  // NOTE: color skipped - type string is ignored in gen 
 
-  // NOTE: colorIndex skipped - type number is ignored in gen 
+  SankeySeriesNodeOptions({
+    this.color = null,
+    this.colorIndex = null,
+    this.column = null,
+    this.dataLabels = null,
+    this.height = null,
+    this.id = null,
+    this.level = null,
+    this.name = null,
+    this.offset = null,
+    this.offsetHorizontal = null,
+    this.offsetVertical = null
+  });
 
-  // NOTE: column skipped - type number is ignored in gen 
-
-  // NOTE: id skipped - type string is ignored in gen 
-
-  // NOTE: level skipped - type number is ignored in gen 
-
-  // NOTE: name skipped - type string is ignored in gen 
-
-  // NOTE: offset skipped - type string is ignored in gen 
-
+  String? color;
+    
+  double? colorIndex;
+    
+  double? column;
+    
+  SankeyDataLabelOptions? dataLabels;
+    
+  double? height;
+    
+  String? id;
+    
+  double? level;
+    
+  String? name;
+    
+  String? offset;
+    
+  String? offsetHorizontal;
+    
+  String? offsetVertical;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of color (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of colorIndex (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of column (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of id (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of level (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of name (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of offset (type string is ignored) ignore type: true
+    
+    if (this.color != null) {
+        buffer.writeAll(["\"color\":\'",this.color, "\',"], "");
+    }
+    
+    if (this.colorIndex != null) {
+        buffer.writeAll(["\"colorIndex\":",this.colorIndex, ","], "");
+    }
+    
+    if (this.column != null) {
+        buffer.writeAll(["\"column\":",this.column, ","], "");
+    }
+    
+    if (this.dataLabels != null) {
+        buffer.writeAll(["\"dataLabels\":",this.dataLabels?.toJSON(), ","], "");
+    }
+    
+    if (this.height != null) {
+        buffer.writeAll(["\"height\":",this.height, ","], "");
+    }
+    
+    if (this.id != null) {
+        buffer.writeAll(["\"id\":\'",this.id, "\',"], "");
+    }
+    
+    if (this.level != null) {
+        buffer.writeAll(["\"level\":",this.level, ","], "");
+    }
+    
+    if (this.name != null) {
+        buffer.writeAll(["\"name\":\'",this.name, "\',"], "");
+    }
+    
+    if (this.offset != null) {
+        buffer.writeAll(["\"offset\":\'",this.offset, "\',"], "");
+    }
+    
+    if (this.offsetHorizontal != null) {
+        buffer.writeAll(["\"offsetHorizontal\":\'",this.offsetHorizontal, "\',"], "");
+    }
+    
+    if (this.offsetVertical != null) {
+        buffer.writeAll(["\"offsetVertical\":\'",this.offsetVertical, "\',"], "");
+    }
   }
+
 
 }

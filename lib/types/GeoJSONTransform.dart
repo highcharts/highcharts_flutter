@@ -12,66 +12,104 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * GeoJSONTransform 
+ * GeoJSONTransform
  */
 class GeoJSONTransform extends OptionFragment {
-  GeoJSONTransform( ) : super();
-  // NOTE: crs skipped - type string is ignored in gen 
 
-  // NOTE: jsonmarginX skipped - type number is ignored in gen 
+  GeoJSONTransform({
+    this.crs = null,
+    this.jsonmarginX = null,
+    this.jsonmarginY = null,
+    this.jsonres = null,
+    this.rotation = null,
+    this.scale = null,
+    this.xoffset = null,
+    this.xpan = null,
+    this.yoffset = null,
+    this.ypan = null
+  });
 
-  // NOTE: jsonmarginY skipped - type number is ignored in gen 
+  String? crs;
+    
+  // NOTE: hitZone skipped - type AnyRecord is ignored in gen 
 
-  // NOTE: jsonres skipped - type number is ignored in gen 
-
-  // NOTE: rotation skipped - type number is ignored in gen 
-
-  // NOTE: scale skipped - type number is ignored in gen 
-
-  // NOTE: xoffset skipped - type number is ignored in gen 
-
-  // NOTE: xpan skipped - type number is ignored in gen 
-
-  // NOTE: yoffset skipped - type number is ignored in gen 
-
-  // NOTE: ypan skipped - type number is ignored in gen 
-
+  double? jsonmarginX;
+    
+  double? jsonmarginY;
+    
+  double? jsonres;
+    
+  double? rotation;
+    
+  double? scale;
+    
+  double? xoffset;
+    
+  double? xpan;
+    
+  double? yoffset;
+    
+  double? ypan;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of crs (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of hitZone (type AnyRecord is ignored) ignore type: 1
+    
+    if (this.crs != null) {
+        buffer.writeAll(["\"crs\":\'",this.crs, "\',"], "");
+    }
+    // NOTE: skip serialization of hitZone (type AnyRecord ignored, skipped: true)
 
-    // NOTE: skip serialization of jsonmarginX (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of jsonmarginY (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of jsonres (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of rotation (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of scale (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of xoffset (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of xpan (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of yoffset (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of ypan (type number is ignored) ignore type: true
+    
+    if (this.jsonmarginX != null) {
+        buffer.writeAll(["\"jsonmarginX\":",this.jsonmarginX, ","], "");
+    }
+    
+    if (this.jsonmarginY != null) {
+        buffer.writeAll(["\"jsonmarginY\":",this.jsonmarginY, ","], "");
+    }
+    
+    if (this.jsonres != null) {
+        buffer.writeAll(["\"jsonres\":",this.jsonres, ","], "");
+    }
+    
+    if (this.rotation != null) {
+        buffer.writeAll(["\"rotation\":",this.rotation, ","], "");
+    }
+    
+    if (this.scale != null) {
+        buffer.writeAll(["\"scale\":",this.scale, ","], "");
+    }
+    
+    if (this.xoffset != null) {
+        buffer.writeAll(["\"xoffset\":",this.xoffset, ","], "");
+    }
+    
+    if (this.xpan != null) {
+        buffer.writeAll(["\"xpan\":",this.xpan, ","], "");
+    }
+    
+    if (this.yoffset != null) {
+        buffer.writeAll(["\"yoffset\":",this.yoffset, ","], "");
+    }
+    
+    if (this.ypan != null) {
+        buffer.writeAll(["\"ypan\":",this.ypan, ","], "");
+    }
   }
+
 
 }

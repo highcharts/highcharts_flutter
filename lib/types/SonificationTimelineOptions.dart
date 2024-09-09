@@ -12,36 +12,51 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * SonificationTimelineOptions 
+ * SonificationTimelineOptions
  */
 class SonificationTimelineOptions extends OptionFragment {
-  SonificationTimelineOptions( ) : super();
-  // NOTE: showTooltip skipped - type boolean is ignored in gen 
 
-  // NOTE: showCrosshair skipped - type boolean is ignored in gen 
+  SonificationTimelineOptions({
+    this.showCrosshair = null,
+    this.showTooltip = null,
+    this.skipThreshold = null
+  });
 
-  // NOTE: skipThreshold skipped - type number is ignored in gen 
-
+  bool? showTooltip;
+    
+  bool? showCrosshair;
+    
+  double? skipThreshold;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of showTooltip (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of showCrosshair (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of skipThreshold (type number is ignored) ignore type: true
+    
+    if (this.showTooltip != null) {
+        buffer.writeAll(["\"showTooltip\":",this.showTooltip, ","], "");
+    }
+    
+    if (this.showCrosshair != null) {
+        buffer.writeAll(["\"showCrosshair\":",this.showCrosshair, ","], "");
+    }
+    
+    if (this.skipThreshold != null) {
+        buffer.writeAll(["\"skipThreshold\":",this.skipThreshold, ","], "");
+    }
   }
+
 
 }

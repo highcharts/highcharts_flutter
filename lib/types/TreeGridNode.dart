@@ -12,36 +12,57 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'TreeNode.dart';
 import 'PointOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * TreeGridNode 
+ * TreeGridNode
  */
 class TreeGridNode extends TreeNode {
-  TreeGridNode( ) : super();
-  // NOTE: pos skipped - type number is ignored in gen 
 
-  // NOTE: seriesIndex skipped - type number is ignored in gen 
+  TreeGridNode({
+    super.children = null,
+    super.data = null,
+    super.depth = null,
+    super.descendants = null,
+    super.height = null,
+    super.id = null,
+    super.level = null,
+    super.parent = null,
+    this.pos = null,
+    this.seriesIndex = null
+  });
 
+  /** NOTE: extdata is skipped here for now, as it overrides the base type. */
+
+  double? pos;
+    
+  double? seriesIndex;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of data (type PointOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of pos (type number is ignored) ignore type: true
+    // NOTE: skip serialization of data (type PointOptions ignored, skipped: false)
 
-    // NOTE: skip serialization of seriesIndex (type number is ignored) ignore type: true
+    
+    if (this.pos != null) {
+        buffer.writeAll(["\"pos\":",this.pos, ","], "");
+    }
+    
+    if (this.seriesIndex != null) {
+        buffer.writeAll(["\"seriesIndex\":",this.seriesIndex, ","], "");
+    }
   }
+
 
 }

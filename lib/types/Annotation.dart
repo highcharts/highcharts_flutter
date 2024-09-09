@@ -12,31 +12,44 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
-import 'ControlTarget.dart';
+ */
 import 'AnnotationOptions.dart';
 import 'OptionFragment.dart';
 
 /** 
- * Annotation 
+ * Annotation
  */
-class Annotation extends ControlTarget {
-  Annotation( ) : super();
-  
+class Annotation extends OptionFragment {
+
+  Annotation({
+    this.defaultOptions = null,
+    this.nonDOMEvents = null
+  });
+
+  AnnotationOptions? defaultOptions;
+    
+  String? nonDOMEvents;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of defaultOptions (type AnnotationOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of nonDOMEvents (type string[] is ignored) ignore type: true
+    
+    if (this.defaultOptions != null) {
+        buffer.writeAll(["\"defaultOptions\":",this.defaultOptions?.toJSON(), ","], "");
+    }
+    
+    if (this.nonDOMEvents != null) {
+        buffer.writeAll(["\"nonDOMEvents\":",this.nonDOMEvents, ","], "");
+    }
   }
+
 
 }

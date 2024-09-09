@@ -12,28 +12,37 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * LangAccessibilityOptionsContextMenu 
+ * LangAccessibilityOptionsContextMenu
  */
 class LangAccessibilityOptionsContextMenu extends OptionFragment {
-  LangAccessibilityOptionsContextMenu( ) : super();
-  // NOTE: button skipped - type string is ignored in gen 
 
+  LangAccessibilityOptionsContextMenu({
+    this.button = null
+  });
+
+  String? button;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of button (type string is ignored) ignore type: true
+
+    
+    if (this.button != null) {
+        buffer.writeAll(["\"button\":\'",this.button, "\',"], "");
+    }
   }
+
 
 }

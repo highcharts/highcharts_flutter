@@ -12,10 +12,9 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'ArcDiagramSeriesOptions.dart';
 import 'Series.dart';
 import 'PointOptions.dart';
@@ -34,8 +33,7 @@ class ArcDiagramSeries extends Series {
     this.data = null
   });
 
-  
-  @override
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
@@ -56,16 +54,13 @@ class ArcDiagramSeries extends Series {
         if (point.length > 1) {
           seriesData.writeAll(["["], "");
         }
-
-          for (var sub in point) {
-            if (sub is String) {
-              seriesData.writeAll(["\"", sub, "\","], "");
-            } else {
-              seriesData.writeAll([sub], ",");
-            }
-
+        for (var sub in point) {
+          if (sub is String) {
+            seriesData.writeAll(["\"", sub, "\","], "");
+          } else {
+            seriesData.writeAll([sub], ",");
           }
-
+        }
         if (point.length > 1) {
           seriesData.writeAll(["],"], "");
         } else {
@@ -92,27 +87,47 @@ class ArcDiagramSeries extends Series {
 
 
     
-    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
 
-    if (this.options?.equalNodes != null) {  
-      buffer.writeAll(["\"equalNodes\":",this.options?.equalNodes, ","], "");
+    
+    if (this.options?.centeredLinks != null) {
+        buffer.writeAll(["\"centeredLinks\":",this.options?.centeredLinks, ","], "");
     }
+    // NOTE: skip serialization of data (type ArcDiagramPointOptions[] ignored, skipped: false)
 
-    if (this.options?.centeredLinks != null) {  
-      buffer.writeAll(["\"centeredLinks\":",this.options?.centeredLinks, ","], "");
+    // NOTE: skip serialization of dataLabels (type Generic ignored, skipped: true)
+
+    
+    if (this.options?.equalNodes != null) {
+        buffer.writeAll(["\"equalNodes\":",this.options?.equalNodes, ","], "");
     }
-
-    // NOTE: skip serialization of linkRadius (type number is ignored) ignore type: true
-
-    if (this.options?.reversed != null) {  
-      buffer.writeAll(["\"reversed\":",this.options?.reversed, ","], "");
+    
+    if (this.options?.linkRadius != null) {
+        buffer.writeAll(["\"linkRadius\":",this.options?.linkRadius, ","], "");
     }
+    
+    if (this.options?.linkWeight != null) {
+        buffer.writeAll(["\"linkWeight\":",this.options?.linkWeight, ","], "");
+    }
+    
+    if (this.options?.marker != null) {
+        buffer.writeAll(["\"marker\":",this.options?.marker?.toJSON(), ","], "");
+    }
+    // NOTE: skip serialization of nodes (type ArcDiagramSeriesNodeOptions[] ignored, skipped: false)
 
-    // NOTE: skip serialization of scale (type number is ignored) ignore type: true
+    
+    if (this.options?.offset != null) {
+        buffer.writeAll(["\"offset\":\'",this.options?.offset, "\',"], "");
+    }
+    
+    if (this.options?.reversed != null) {
+        buffer.writeAll(["\"reversed\":",this.options?.reversed, ","], "");
+    }
+    
+    if (this.options?.scale != null) {
+        buffer.writeAll(["\"scale\":",this.options?.scale, ","], "");
+    }
+    // NOTE: skip serialization of states (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of offset (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of linkWeight (type number is ignored) ignore type: true
   }
 
 }

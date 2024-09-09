@@ -12,30 +12,40 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'BaseGeometry.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * MultiPoint 
+ * MultiPoint
  */
 class MultiPoint extends BaseGeometry {
-  MultiPoint( ) : super();
-  
+
+  MultiPoint({
+    super.arcs = null,
+    super.properties = null
+  });
+
+  // NOTE: type skipped - type "MultiPoint" is ignored in gen 
+
+  // NOTE: coordinates skipped - type LonLatArray is ignored in gen 
+
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of type (type "MultiPoint" is ignored) ignore type: true
 
-    // NOTE: skip serialization of coordinates (type LonLatArray is ignored) ignore type: 1
+    // NOTE: skip serialization of type (type "MultiPoint" ignored, skipped: true)
+
+    // NOTE: skip serialization of coordinates (type LonLatArray ignored, skipped: true)
+
   }
+
 
 }

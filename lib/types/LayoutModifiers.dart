@@ -12,40 +12,58 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * LayoutModifiers 
+ * LayoutModifiers
  */
 class LayoutModifiers extends OptionFragment {
-  LayoutModifiers( ) : super();
-  // NOTE: ax skipped - type number is ignored in gen 
 
-  // NOTE: bx skipped - type number is ignored in gen 
+  LayoutModifiers({
+    this.ax = null,
+    this.ay = null,
+    this.bx = null,
+    this.by = null
+  });
 
-  // NOTE: ay skipped - type number is ignored in gen 
-
-  // NOTE: by skipped - type number is ignored in gen 
-
+  double? ax;
+    
+  double? bx;
+    
+  double? ay;
+    
+  double? by;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of ax (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of bx (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of ay (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of by (type number is ignored) ignore type: true
+    
+    if (this.ax != null) {
+        buffer.writeAll(["\"ax\":",this.ax, ","], "");
+    }
+    
+    if (this.bx != null) {
+        buffer.writeAll(["\"bx\":",this.bx, ","], "");
+    }
+    
+    if (this.ay != null) {
+        buffer.writeAll(["\"ay\":",this.ay, ","], "");
+    }
+    
+    if (this.by != null) {
+        buffer.writeAll(["\"by\":",this.by, ","], "");
+    }
   }
+
 
 }

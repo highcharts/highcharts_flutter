@@ -12,41 +12,77 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'SVGElement.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * TileItem 
+ * TileItem
  */
 class TileItem extends SVGElement {
-  TileItem( ) : super();
-  // NOTE: posX skipped - type number is ignored in gen 
 
-  // NOTE: posY skipped - type number is ignored in gen 
+  TileItem({
+    super.absoluteBox = null,
+    super.attribs = null,
+    super.backLower = null,
+    super.connector = null,
+    super.cutHeight = null,
+    super.dataLabelPosition = null,
+    super.finishedOnAdd = null,
+    super.focusBorder = null,
+    super.fontLower = null,
+    this.isActive = null,
+    super.lowerGroup = null,
+    super.options = null,
+    this.originalURL = null,
+    super.parentNode = null,
+    super.parts = null,
+    super.pathType = null,
+    this.posX = null,
+    this.posY = null,
+    super.rightLower = null,
+    super.survive = null,
+    super.textPath = null,
+    super.upperGroup = null,
+    super.vertexes = null
+  });
 
-  // NOTE: originalURL skipped - type string is ignored in gen 
-
-  // NOTE: isActive skipped - type boolean is ignored in gen 
-
+  double? posX;
+    
+  double? posY;
+    
+  String? originalURL;
+    
+  bool? isActive;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of posX (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of posY (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of originalURL (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of isActive (type boolean is ignored) ignore type: true
+    
+    if (this.posX != null) {
+        buffer.writeAll(["\"posX\":",this.posX, ","], "");
+    }
+    
+    if (this.posY != null) {
+        buffer.writeAll(["\"posY\":",this.posY, ","], "");
+    }
+    
+    if (this.originalURL != null) {
+        buffer.writeAll(["\"originalURL\":\'",this.originalURL, "\',"], "");
+    }
+    
+    if (this.isActive != null) {
+        buffer.writeAll(["\"isActive\":",this.isActive, ","], "");
+    }
   }
+
 
 }

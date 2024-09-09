@@ -12,28 +12,37 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'MACDGappedExtensionOptions.dart';
 import 'OptionFragment.dart';
 
 /** 
- * MACDGappedExtensionObject 
+ * MACDGappedExtensionObject
  */
 class MACDGappedExtensionObject extends OptionFragment {
-  MACDGappedExtensionObject( ) : super();
-  
+
+  MACDGappedExtensionObject({
+    this.options = null
+  });
+
+  MACDGappedExtensionOptions? options;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of options (type MACDGappedExtensionOptions is ignored) ignore type: true
+
+    
+    if (this.options != null) {
+        buffer.writeAll(["\"options\":",this.options?.toJSON(), ","], "");
+    }
   }
+
 
 }

@@ -4,7 +4,7 @@
  */
 
 import 'package:flutter/material.dart';
-import 'package:highcharts_flutter/Highcharts.dart';
+import 'package:highcharts_flutter/highcharts.dart';
 import 'package:highcharts_flutter/types/ChartOptions.dart';
 import 'package:highcharts_flutter/types/AccessibilityOptions.dart';
 import 'package:highcharts_flutter/types/TitleOptions.dart';
@@ -87,7 +87,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 plotOptions: HighchartsPlotOptions(
                   columnrange: ColumnRangeSeriesOptions(
-                    //  borderRadius: BorderRadiusOptionsObject(),
+                     borderRadius: BorderRadiusOptionsObject(),
                   ),
                 ),
                 legend: LegendOptions(

@@ -12,10 +12,9 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'TimelineSeriesOptions.dart';
 import 'Series.dart';
 import 'PointOptions.dart';
@@ -34,8 +33,7 @@ class TimelineSeries extends Series {
     this.data = null
   });
 
-  
-  @override
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
@@ -56,16 +54,13 @@ class TimelineSeries extends Series {
         if (point.length > 1) {
           seriesData.writeAll(["["], "");
         }
-
-          for (var sub in point) {
-            if (sub is String) {
-              seriesData.writeAll(["\"", sub, "\","], "");
-            } else {
-              seriesData.writeAll([sub], ",");
-            }
-
+        for (var sub in point) {
+          if (sub is String) {
+            seriesData.writeAll(["\"", sub, "\","], "");
+          } else {
+            seriesData.writeAll([sub], ",");
           }
-
+        }
         if (point.length > 1) {
           seriesData.writeAll(["],"], "");
         } else {
@@ -92,19 +87,61 @@ class TimelineSeries extends Series {
 
 
     
-    // NOTE: skip serialization of data (type TimelinePointOptions[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of dataLabels (type TimelineDataLabelOptions is ignored) ignore type: false
-
-    if (this.options?.ignoreHiddenPoint != null) {  
-      buffer.writeAll(["\"ignoreHiddenPoint\":",this.options?.ignoreHiddenPoint, ","], "");
+    
+    if (this.options?.colorByPoint != null) {
+        buffer.writeAll(["\"colorByPoint\":",this.options?.colorByPoint, ","], "");
     }
+    
+    if (this.options?.colorKey != null) {
+        buffer.writeAll(["\"colorKey\":\'",this.options?.colorKey, "\',"], "");
+    }
+    
+    if (this.options?.data != null) {
+        buffer.writeAll(["\"data\":",this.options?.data, ","], "");
+    }
+    // NOTE: skip serialization of dataLabels (type TimelineDataLabelOptions ignored, skipped: false)
 
-    // NOTE: skip serialization of radius (type number is ignored) ignore type: true
+    
+    if (this.options?.ignoreHiddenPoint != null) {
+        buffer.writeAll(["\"ignoreHiddenPoint\":",this.options?.ignoreHiddenPoint, ","], "");
+    }
+    
+    if (this.options?.legendSymbol != null) {
+        buffer.writeAll(["\"legendSymbol\":\'",this.options?.legendSymbol, "\',"], "");
+    }
+    
+    if (this.options?.legendType != null) {
+        buffer.writeAll(["\"legendType\":\'",this.options?.legendType, "\',"], "");
+    }
+    
+    if (this.options?.lineWidth != null) {
+        buffer.writeAll(["\"lineWidth\":",this.options?.lineWidth, ","], "");
+    }
+    
+    if (this.options?.marker != null) {
+        buffer.writeAll(["\"marker\":",this.options?.marker?.toJSON(), ","], "");
+    }
+    
+    if (this.options?.radius != null) {
+        buffer.writeAll(["\"radius\":",this.options?.radius, ","], "");
+    }
+    
+    if (this.options?.radiusPlus != null) {
+        buffer.writeAll(["\"radiusPlus\":",this.options?.radiusPlus, ","], "");
+    }
+    
+    if (this.options?.showInLegend != null) {
+        buffer.writeAll(["\"showInLegend\":",this.options?.showInLegend, ","], "");
+    }
+    // NOTE: skip serialization of states (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of radiusPlus (type number is ignored) ignore type: true
+    
+    if (this.options?.stickyTracking != null) {
+        buffer.writeAll(["\"stickyTracking\":",this.options?.stickyTracking, ","], "");
+    }
+    // NOTE: skip serialization of tooltip (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
   }
 
 }

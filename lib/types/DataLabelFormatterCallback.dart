@@ -12,27 +12,29 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * DataLabelFormatterCallback 
+ * DataLabelFormatterCallback
  */
 class DataLabelFormatterCallback extends OptionFragment {
-  DataLabelFormatterCallback( ) : super();
-  
+
+  DataLabelFormatterCallback();
+
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    
+
   }
+
 
 }

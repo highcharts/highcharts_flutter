@@ -12,34 +12,48 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * MockLabelConfigObject 
+ * MockLabelConfigObject
  */
 class MockLabelConfigObject extends OptionFragment {
-  MockLabelConfigObject( ) : super();
-  // NOTE: x skipped - type number is ignored in gen 
 
-  // NOTE: y skipped - type number is ignored in gen 
+  MockLabelConfigObject({
+    this.x = null,
+    this.y = null
+  });
+
+  double? x;
+    
+  double? y;
+    
+  // NOTE: point skipped - type MockPoint is ignored in gen 
 
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of x (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of y (type number is ignored) ignore type: true
+    
+    if (this.x != null) {
+        buffer.writeAll(["\"x\":",this.x, ","], "");
+    }
+    
+    if (this.y != null) {
+        buffer.writeAll(["\"y\":",this.y, ","], "");
+    }
+    // NOTE: skip serialization of point (type MockPoint ignored, skipped: true)
 
-    // NOTE: skip serialization of point (type MockPoint is ignored) ignore type: true
   }
+
 
 }

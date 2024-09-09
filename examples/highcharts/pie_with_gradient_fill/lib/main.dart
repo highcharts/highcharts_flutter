@@ -62,10 +62,8 @@ class _MyHomePageState extends State<MyHomePage> {
             MapsChart(
               MapsOptions(
                 chart: ChartOptions(
-                  plotBackgroundColor: string(
-                  ),
-                  plotBorderWidth: number(
-                  ),
+                  plotBackgroundColor: '',
+                  plotBorderWidth: 0,
                     plotShadow: false, 
                     type: "pie", 
                 ),

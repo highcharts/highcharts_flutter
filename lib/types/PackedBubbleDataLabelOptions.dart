@@ -12,20 +12,21 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'DataLabelOptions.dart';
 import 'DataLabelTextPathOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * PackedBubbleDataLabelOptions 
+ * PackedBubbleDataLabelOptions
  */
 class PackedBubbleDataLabelOptions extends DataLabelOptions {
-  PackedBubbleDataLabelOptions( {
+
+  PackedBubbleDataLabelOptions({
     super.align = null,
+    super.alignTo = null,
     super.allowOverlap = null,
     super.backgroundColor = null,
     super.borderColor = null,
@@ -33,44 +34,66 @@ class PackedBubbleDataLabelOptions extends DataLabelOptions {
     super.borderWidth = null,
     super.className = null,
     super.color = null,
+    super.connectorColor = null,
     super.crop = null,
     super.defer = null,
+    super.distance = null,
     super.enabled = null,
     super.filter = null,
-    super.format = null,
+    this.format = null,
     super.inside = null,
+    super.labelrank = null,
     super.nullFormat = null,
+    super.outside3dPlot = null,
     super.overflow = null,
     super.padding = null,
+    this.parentNodeFormat = null,
+    this.parentNodeTextPath = null,
     super.rotation = null,
     super.shape = null,
     super.style = null,
-    super.textPath = null,
+    this.textPath = null,
     super.useHTML = null,
     super.verticalAlign = null,
     super.x = null,
     super.y = null,
     super.zIndex = null
-  }) : super();
-  // NOTE: format skipped - type string is ignored in gen 
+  });
 
-  // NOTE: parentNodeFormat skipped - type string is ignored in gen 
-
+  String? format;
+    
+  String? parentNodeFormat;
+    
+  DataLabelTextPathOptions? parentNodeTextPath;
+    
+  DataLabelTextPathOptions? textPath;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of format (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of parentNodeFormat (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of parentNodeTextPath (type DataLabelTextPathOptions is ignored) ignore type: true
-
-    // NOTE: skip serialization of textPath (type DataLabelTextPathOptions is ignored) ignore type: true
+    
+    if (this.format != null) {
+        buffer.writeAll(["\"format\":\'",this.format, "\',"], "");
+    }
+    
+    if (this.parentNodeFormat != null) {
+        buffer.writeAll(["\"parentNodeFormat\":\'",this.parentNodeFormat, "\',"], "");
+    }
+    
+    if (this.parentNodeTextPath != null) {
+        buffer.writeAll(["\"parentNodeTextPath\":",this.parentNodeTextPath?.toJSON(), ","], "");
+    }
+    
+    if (this.textPath != null) {
+        buffer.writeAll(["\"textPath\":",this.textPath?.toJSON(), ","], "");
+    }
   }
+
 
 }

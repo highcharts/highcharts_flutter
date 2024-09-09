@@ -12,19 +12,20 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'StockToolsGuiDefinitionsButtonsOptions.dart';
 import 'StockToolsGuiDefinitionsButtonOptions.dart';
 import 'OptionFragment.dart';
 
+
 /** 
- * StockToolsGuiDefinitionsOptions 
+ * StockToolsGuiDefinitionsOptions
  */
 class StockToolsGuiDefinitionsOptions extends OptionFragment {
-  StockToolsGuiDefinitionsOptions( {
+
+  StockToolsGuiDefinitionsOptions({
     this.advanced = null,
     this.crookedLines = null,
     this.currentPriceIndicator = null,
@@ -40,7 +41,8 @@ class StockToolsGuiDefinitionsOptions extends OptionFragment {
     this.typeChange = null,
     this.verticalLabels = null,
     this.zoomChange = null
-  }) : super();
+  });
+
   StockToolsGuiDefinitionsButtonsOptions? advanced;
     
   StockToolsGuiDefinitionsButtonsOptions? crookedLines;
@@ -73,71 +75,74 @@ class StockToolsGuiDefinitionsOptions extends OptionFragment {
     
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    if (this.advanced != null) {  
-      buffer.writeAll(["\"advanced\":",this.advanced?.toJSON(), ","], "");
-    }
 
-    if (this.crookedLines != null) {  
-      buffer.writeAll(["\"crookedLines\":",this.crookedLines?.toJSON(), ","], "");
+    
+    if (this.advanced != null) {
+        buffer.writeAll(["\"advanced\":",this.advanced?.toJSON(), ","], "");
     }
-
-    if (this.currentPriceIndicator != null) {  
-      buffer.writeAll(["\"currentPriceIndicator\":",this.currentPriceIndicator?.toJSON(), ","], "");
+    
+    if (this.crookedLines != null) {
+        buffer.writeAll(["\"crookedLines\":",this.crookedLines?.toJSON(), ","], "");
     }
-
-    if (this.flags != null) {  
-      buffer.writeAll(["\"flags\":",this.flags?.toJSON(), ","], "");
+    
+    if (this.currentPriceIndicator != null) {
+        buffer.writeAll(["\"currentPriceIndicator\":",this.currentPriceIndicator?.toJSON(), ","], "");
     }
-
-    if (this.fullScreen != null) {  
-      buffer.writeAll(["\"fullScreen\":",this.fullScreen?.toJSON(), ","], "");
+    
+    if (this.flags != null) {
+        buffer.writeAll(["\"flags\":",this.flags?.toJSON(), ","], "");
     }
-
-    if (this.indicators != null) {  
-      buffer.writeAll(["\"indicators\":",this.indicators?.toJSON(), ","], "");
+    
+    if (this.fullScreen != null) {
+        buffer.writeAll(["\"fullScreen\":",this.fullScreen?.toJSON(), ","], "");
     }
-
-    if (this.lines != null) {  
-      buffer.writeAll(["\"lines\":",this.lines?.toJSON(), ","], "");
+    
+    if (this.indicators != null) {
+        buffer.writeAll(["\"indicators\":",this.indicators?.toJSON(), ","], "");
     }
-
-    if (this.measure != null) {  
-      buffer.writeAll(["\"measure\":",this.measure?.toJSON(), ","], "");
+    
+    if (this.lines != null) {
+        buffer.writeAll(["\"lines\":",this.lines?.toJSON(), ","], "");
     }
-
-    if (this.separator != null) {  
-      buffer.writeAll(["\"separator\":",this.separator?.toJSON(), ","], "");
+    
+    if (this.measure != null) {
+        buffer.writeAll(["\"measure\":",this.measure?.toJSON(), ","], "");
     }
-
-    if (this.toggleAnnotations != null) {  
-      buffer.writeAll(["\"toggleAnnotations\":",this.toggleAnnotations?.toJSON(), ","], "");
+    
+    if (this.separator != null) {
+        buffer.writeAll(["\"separator\":",this.separator?.toJSON(), ","], "");
     }
-
-    if (this.saveChart != null) {  
-      buffer.writeAll(["\"saveChart\":",this.saveChart?.toJSON(), ","], "");
+    
+    if (this.toggleAnnotations != null) {
+        buffer.writeAll(["\"toggleAnnotations\":",this.toggleAnnotations?.toJSON(), ","], "");
     }
-
-    if (this.simpleShapes != null) {  
-      buffer.writeAll(["\"simpleShapes\":",this.simpleShapes?.toJSON(), ","], "");
+    
+    if (this.saveChart != null) {
+        buffer.writeAll(["\"saveChart\":",this.saveChart?.toJSON(), ","], "");
     }
-
-    if (this.typeChange != null) {  
-      buffer.writeAll(["\"typeChange\":",this.typeChange?.toJSON(), ","], "");
+    
+    if (this.simpleShapes != null) {
+        buffer.writeAll(["\"simpleShapes\":",this.simpleShapes?.toJSON(), ","], "");
     }
-
-    if (this.verticalLabels != null) {  
-      buffer.writeAll(["\"verticalLabels\":",this.verticalLabels?.toJSON(), ","], "");
+    
+    if (this.typeChange != null) {
+        buffer.writeAll(["\"typeChange\":",this.typeChange?.toJSON(), ","], "");
     }
-
-    if (this.zoomChange != null) {  
-      buffer.writeAll(["\"zoomChange\":",this.zoomChange?.toJSON(), ","], "");
+    
+    if (this.verticalLabels != null) {
+        buffer.writeAll(["\"verticalLabels\":",this.verticalLabels?.toJSON(), ","], "");
+    }
+    
+    if (this.zoomChange != null) {
+        buffer.writeAll(["\"zoomChange\":",this.zoomChange?.toJSON(), ","], "");
     }
   }
+
 
 }

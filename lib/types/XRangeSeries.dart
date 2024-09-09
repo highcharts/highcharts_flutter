@@ -12,10 +12,9 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'XRangeSeriesOptions.dart';
 import 'Series.dart';
 import 'PointOptions.dart';
@@ -34,8 +33,7 @@ class XRangeSeries extends Series {
     this.data = null
   });
 
-  
-  @override
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
@@ -56,16 +54,13 @@ class XRangeSeries extends Series {
         if (point.length > 1) {
           seriesData.writeAll(["["], "");
         }
-
-          for (var sub in point) {
-            if (sub is String) {
-              seriesData.writeAll(["\"", sub, "\","], "");
-            } else {
-              seriesData.writeAll([sub], ",");
-            }
-
+        for (var sub in point) {
+          if (sub is String) {
+            seriesData.writeAll(["\"", sub, "\","], "");
+          } else {
+            seriesData.writeAll([sub], ",");
           }
-
+        }
         if (point.length > 1) {
           seriesData.writeAll(["],"], "");
         } else {
@@ -92,11 +87,31 @@ class XRangeSeries extends Series {
 
 
     
-    if (this.options?.partialFill != null) {  
-      buffer.writeAll(["\"partialFill\":",this.options?.partialFill?.toJSON(), ","], "");
-    }
 
-    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
+    // NOTE: skip serialization of borderRadius (type number ignored, skipped: false)
+
+    
+    if (this.options?.colorByPoint != null) {
+        buffer.writeAll(["\"colorByPoint\":",this.options?.colorByPoint, ","], "");
+    }
+    
+    if (this.options?.data != null) {
+        buffer.writeAll(["\"data\":",this.options?.data, ","], "");
+    }
+    // NOTE: skip serialization of dataLabels (type Generic ignored, skipped: true)
+
+    
+    if (this.options?.partialFill != null) {
+        buffer.writeAll(["\"partialFill\":",this.options?.partialFill?.toJSON(), ","], "");
+    }
+    
+    if (this.options?.pointRange != null) {
+        buffer.writeAll(["\"pointRange\":",this.options?.pointRange, ","], "");
+    }
+    // NOTE: skip serialization of states (type Generic ignored, skipped: true)
+
+    // NOTE: skip serialization of tooltip (type Generic ignored, skipped: true)
+
   }
 
 }

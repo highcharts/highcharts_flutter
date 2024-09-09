@@ -12,18 +12,18 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'AxisCrosshairOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * LastPriceOptions 
+ * LastPriceOptions
  */
 class LastPriceOptions extends AxisCrosshairOptions {
-  LastPriceOptions( {
+
+  LastPriceOptions({
     super.className = null,
     super.color = null,
     super.dashStyle = null,
@@ -32,20 +32,29 @@ class LastPriceOptions extends AxisCrosshairOptions {
     super.snap = null,
     super.width = null,
     super.zIndex = null
-  }) : super();
+  });
+
+  /**
+   * Enable or disable the indicator. 
+   * 
+   * Defaults to 'false'. 
+   */
   bool? enabled;
     
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    if (this.enabled != null) {  
-      buffer.writeAll(["\"enabled\":",this.enabled, ","], "");
+
+    
+    if (this.enabled != null) {
+        buffer.writeAll(["\"enabled\":",this.enabled, ","], "");
     }
   }
+
 
 }

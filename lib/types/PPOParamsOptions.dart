@@ -12,31 +12,39 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'EMAParamsOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * PPOParamsOptions 
+ * PPOParamsOptions
  */
 class PPOParamsOptions extends EMAParamsOptions {
-  PPOParamsOptions( {
+
+  PPOParamsOptions({
     super.index = null,
-    super.period = null
-  }) : super();
-  
+    super.period = null,
+    this.periods = null
+  });
+
+  double? periods;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of periods (type number[] is ignored) ignore type: true
+
+    
+    if (this.periods != null) {
+        buffer.writeAll(["\"periods\":",this.periods, ","], "");
+    }
   }
+
 
 }

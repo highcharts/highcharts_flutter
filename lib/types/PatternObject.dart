@@ -12,33 +12,45 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
-import 'PatternOptionsObject.dart';
 import 'OptionFragment.dart';
 
 /** 
- * PatternObject 
+ * PatternObject
  */
 class PatternObject extends OptionFragment {
-  PatternObject( ) : super();
-  // NOTE: patternIndex skipped - type number is ignored in gen 
 
+  PatternObject({
+    this.patternIndex = null
+  });
+
+  // NOTE: animation skipped - type Generic is ignored in gen 
+
+  // NOTE: pattern skipped - type PatternOptionsObject is ignored in gen 
+
+  double? patternIndex;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of animation (type Generic is ignored) ignore type: true
 
-    // NOTE: skip serialization of pattern (type PatternOptionsObject is ignored) ignore type: true
+    // NOTE: skip serialization of animation (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of patternIndex (type number is ignored) ignore type: true
+    // NOTE: skip serialization of pattern (type PatternOptionsObject ignored, skipped: true)
+
+    
+    if (this.patternIndex != null) {
+        buffer.writeAll(["\"patternIndex\":",this.patternIndex, ","], "");
+    }
   }
+
 
 }

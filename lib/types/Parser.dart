@@ -12,27 +12,37 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * Parser 
+ * Parser
  */
 class Parser extends OptionFragment {
-  Parser( ) : super();
-  
+
+  Parser({
+    this.regex = null
+  });
+
+  RegExp? regex;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of regex (type RegExp is ignored) ignore type: true
+
+    
+    if (this.regex != null) {
+        buffer.writeAll(["\"regex\":",this.regex, ","], "");
+    }
   }
+
 
 }

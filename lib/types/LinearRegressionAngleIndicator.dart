@@ -12,30 +12,41 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * LinearRegressionAngleIndicator 
+ * LinearRegressionAngleIndicator
  */
 class LinearRegressionAngleIndicator extends OptionFragment {
-  LinearRegressionAngleIndicator( ) : super();
-  // NOTE: nameBase skipped - type string is ignored in gen 
 
+  LinearRegressionAngleIndicator({
+    this.nameBase = null
+  });
+
+  // NOTE: pointClass skipped - type typeof LinearRegressionAnglePoint is ignored in gen 
+
+  String? nameBase;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of pointClass (type typeof LinearRegressionAnglePoint is ignored) ignore type: true
 
-    // NOTE: skip serialization of nameBase (type string is ignored) ignore type: true
+    // NOTE: skip serialization of pointClass (type typeof LinearRegressionAnglePoint ignored, skipped: true)
+
+    
+    if (this.nameBase != null) {
+        buffer.writeAll(["\"nameBase\":\'",this.nameBase, "\',"], "");
+    }
   }
+
 
 }

@@ -12,27 +12,29 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * SetTreeValuesBeforeCallbackFunction 
+ * SetTreeValuesBeforeCallbackFunction
  */
 class SetTreeValuesBeforeCallbackFunction extends OptionFragment {
-  SetTreeValuesBeforeCallbackFunction( ) : super();
-  
+
+  SetTreeValuesBeforeCallbackFunction();
+
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    
+
   }
+
 
 }

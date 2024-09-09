@@ -12,40 +12,58 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * Obstacle 
+ * Obstacle
  */
 class Obstacle extends OptionFragment {
-  Obstacle( ) : super();
-  // NOTE: xMax skipped - type number is ignored in gen 
 
-  // NOTE: xMin skipped - type number is ignored in gen 
+  Obstacle({
+    this.xMax = null,
+    this.xMin = null,
+    this.yMax = null,
+    this.yMin = null
+  });
 
-  // NOTE: yMax skipped - type number is ignored in gen 
-
-  // NOTE: yMin skipped - type number is ignored in gen 
-
+  double? xMax;
+    
+  double? xMin;
+    
+  double? yMax;
+    
+  double? yMin;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of xMax (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of xMin (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of yMax (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of yMin (type number is ignored) ignore type: true
+    
+    if (this.xMax != null) {
+        buffer.writeAll(["\"xMax\":",this.xMax, ","], "");
+    }
+    
+    if (this.xMin != null) {
+        buffer.writeAll(["\"xMin\":",this.xMin, ","], "");
+    }
+    
+    if (this.yMax != null) {
+        buffer.writeAll(["\"yMax\":",this.yMax, ","], "");
+    }
+    
+    if (this.yMin != null) {
+        buffer.writeAll(["\"yMin\":",this.yMin, ","], "");
+    }
   }
+
 
 }

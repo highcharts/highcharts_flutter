@@ -4,7 +4,7 @@
  */
 
 import 'package:flutter/material.dart';
-import 'package:highcharts_flutter/Highcharts.dart';
+import 'package:highcharts_flutter/highcharts.dart';
 import 'package:highcharts_flutter/types/ChartOptions.dart';
 import 'package:highcharts_flutter/types/TitleOptions.dart';
 import 'package:highcharts_flutter/types/SubtitleOptions.dart';
@@ -102,7 +102,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       [2], 
                       [1], 
                     ],
-                    //   pointPlacement: "between", 
+                      pointPlacement: "between", 
                   ),
                   LineSeries( 
                 //options: LineSeriesOptions()

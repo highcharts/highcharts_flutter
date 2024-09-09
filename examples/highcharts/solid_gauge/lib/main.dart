@@ -4,7 +4,7 @@
  */
 
 import 'package:flutter/material.dart';
-import 'package:highcharts_flutter/Highcharts.dart';
+import 'package:highcharts_flutter/highcharts.dart';
 import 'package:highcharts_flutter/types/YAxisOptions.dart';
 import 'package:highcharts_flutter/types/CreditsOptions.dart';
 import 'package:highcharts_flutter/types/LineSeriesOptions.dart';
@@ -69,9 +69,11 @@ class _MyHomePageState extends State<MyHomePage> {
                     data: [ 
                       [80], 
                     ],
-                    // dataLabels: DataLabelOptions( 
-                    //     format: "<div style=\"text-align:center\"><span style=\"font-size:25px\">{y}</span><br/><span style=\"font-size:12px;opacity:0.4\">km/h</span></div>", 
-                    // ),
+                    dataLabels: [ 
+                      DataLabelOptions( 
+                          format: "<div style=\"text-align:center\"><span style=\"font-size:25px\">{y}</span><br/><span style=\"font-size:12px;opacity:0.4\">km/h</span></div>", 
+                      ),
+                    ],
                   ),
                 ],
                 xAxis: [ 

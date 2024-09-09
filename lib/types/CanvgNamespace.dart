@@ -12,28 +12,37 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'Canvg.dart';
 import 'OptionFragment.dart';
 
 /** 
- * CanvgNamespace 
+ * CanvgNamespace
  */
 class CanvgNamespace extends OptionFragment {
-  CanvgNamespace( ) : super();
-  
+
+  CanvgNamespace({
+    this.mCanvg = null
+  });
+
+  Canvg? mCanvg;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of mCanvg (type Canvg is ignored) ignore type: true
+
+    
+    if (this.mCanvg != null) {
+        buffer.writeAll(["\"Canvg\":",this.mCanvg?.toJSON(), ","], "");
+    }
   }
+
 
 }

@@ -12,44 +12,80 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'SVGPath3D.dart';
 import 'SVGPath.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * SVGCuboid 
+ * SVGCuboid
  */
 class SVGCuboid extends SVGPath3D {
-  SVGCuboid( ) : super();
-  // NOTE: isFront skipped - type number is ignored in gen 
 
-  // NOTE: isTop skipped - type number is ignored in gen 
+  SVGCuboid({
+    super.back = null,
+    super.bottom = null,
+    this.forcedSides = null,
+    this.front = null,
+    this.isFront = null,
+    this.isTop = null,
+    this.side = null,
+    this.top = null,
+    this.zIndexes = null
+  });
 
+  SVGPath? front;
+    
+  double? isFront;
+    
+  double? isTop;
+    
+  SVGPath? side;
+    
+  SVGPath? top;
+    
+  Map<String, String>? zIndexes;
+    
+  String? forcedSides;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of front (type SVGPath is ignored) ignore type: true
 
-    // NOTE: skip serialization of isFront (type number is ignored) ignore type: true
+    
+    if (this.front != null) {
+        buffer.writeAll(["\"front\":",this.front?.toJSON(), ","], "");
+    }
+    
+    if (this.isFront != null) {
+        buffer.writeAll(["\"isFront\":",this.isFront, ","], "");
+    }
+    
+    if (this.isTop != null) {
+        buffer.writeAll(["\"isTop\":",this.isTop, ","], "");
+    }
+    
+    if (this.side != null) {
+        buffer.writeAll(["\"side\":",this.side?.toJSON(), ","], "");
+    }
+    
+    if (this.top != null) {
+        buffer.writeAll(["\"top\":",this.top?.toJSON(), ","], "");
+    }
+    // NOTE: skip serialization of zIndexes (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of isTop (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of side (type SVGPath is ignored) ignore type: true
-
-    // NOTE: skip serialization of top (type SVGPath is ignored) ignore type: true
-
-    // NOTE: skip serialization of zIndexes (type Generic is ignored) ignore type: true
-
-    // NOTE: skip serialization of forcedSides (type string[] is ignored) ignore type: true
+    
+    if (this.forcedSides != null) {
+        buffer.writeAll(["\"forcedSides\":",this.forcedSides, ","], "");
+    }
   }
+
 
 }

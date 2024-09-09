@@ -12,32 +12,39 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'SMAParamsOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * SupertrendParamsOptions 
+ * SupertrendParamsOptions
  */
 class SupertrendParamsOptions extends SMAParamsOptions {
-  SupertrendParamsOptions( {
-    super.index = null,
-    super.period = null
-  }) : super();
-  // NOTE: multiplier skipped - type number is ignored in gen 
 
+  SupertrendParamsOptions({
+    super.index = null,
+    this.multiplier = null,
+    super.period = null
+  });
+
+  double? multiplier;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of multiplier (type number is ignored) ignore type: true
+
+    
+    if (this.multiplier != null) {
+        buffer.writeAll(["\"multiplier\":",this.multiplier, ","], "");
+    }
   }
+
 
 }

@@ -12,52 +12,79 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * ExportOptions 
+ * ExportOptions
  */
 class ExportOptions extends OptionFragment {
-  ExportOptions( ) : super();
-  // NOTE: decimalPoint skipped - type string is ignored in gen 
 
-  // NOTE: exportIDColumn skipped - type boolean is ignored in gen 
+  ExportOptions({
+    this.decimalPoint = null,
+    this.exportIDColumn = null,
+    this.tableCaption = null,
+    this.useLocalDecimalPoint = null,
+    this.useMultiLevelHeaders = null,
+    this.usePresentationOrder = null,
+    this.useRowspanHeaders = null
+  });
 
-  // NOTE: tableCaption skipped - type string is ignored in gen 
-
-  // NOTE: useLocalDecimalPoint skipped - type boolean is ignored in gen 
-
-  // NOTE: useMultiLevelHeaders skipped - type boolean is ignored in gen 
-
-  // NOTE: useRowspanHeaders skipped - type boolean is ignored in gen 
-
-  // NOTE: usePresentationOrder skipped - type boolean is ignored in gen 
-
+  String? decimalPoint;
+    
+  bool? exportIDColumn;
+    
+  String? tableCaption;
+    
+  bool? useLocalDecimalPoint;
+    
+  bool? useMultiLevelHeaders;
+    
+  bool? useRowspanHeaders;
+    
+  bool? usePresentationOrder;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of decimalPoint (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of exportIDColumn (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of tableCaption (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of useLocalDecimalPoint (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of useMultiLevelHeaders (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of useRowspanHeaders (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of usePresentationOrder (type boolean is ignored) ignore type: true
+    
+    if (this.decimalPoint != null) {
+        buffer.writeAll(["\"decimalPoint\":\'",this.decimalPoint, "\',"], "");
+    }
+    
+    if (this.exportIDColumn != null) {
+        buffer.writeAll(["\"exportIDColumn\":",this.exportIDColumn, ","], "");
+    }
+    
+    if (this.tableCaption != null) {
+        buffer.writeAll(["\"tableCaption\":\'",this.tableCaption, "\',"], "");
+    }
+    
+    if (this.useLocalDecimalPoint != null) {
+        buffer.writeAll(["\"useLocalDecimalPoint\":",this.useLocalDecimalPoint, ","], "");
+    }
+    
+    if (this.useMultiLevelHeaders != null) {
+        buffer.writeAll(["\"useMultiLevelHeaders\":",this.useMultiLevelHeaders, ","], "");
+    }
+    
+    if (this.useRowspanHeaders != null) {
+        buffer.writeAll(["\"useRowspanHeaders\":",this.useRowspanHeaders, ","], "");
+    }
+    
+    if (this.usePresentationOrder != null) {
+        buffer.writeAll(["\"usePresentationOrder\":",this.usePresentationOrder, ","], "");
+    }
   }
+
 
 }

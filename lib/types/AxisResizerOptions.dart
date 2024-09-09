@@ -12,35 +12,52 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'AxisResizeOptions.dart';
 import 'OptionFragment.dart';
 
+
 /** 
- * AxisResizerOptions 
+ * AxisResizerOptions
  */
 class AxisResizerOptions extends OptionFragment {
-  AxisResizerOptions( ) : super();
-  // NOTE: maxLength skipped - type string is ignored in gen 
 
-  // NOTE: minLength skipped - type string is ignored in gen 
+  AxisResizerOptions({
+    this.maxLength = null,
+    this.minLength = null,
+    this.resize = null
+  });
 
+  String? maxLength;
+    
+  String? minLength;
+    
+  AxisResizeOptions? resize;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of maxLength (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of minLength (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of resize (type AxisResizeOptions is ignored) ignore type: true
+    
+    if (this.maxLength != null) {
+        buffer.writeAll(["\"maxLength\":\'",this.maxLength, "\',"], "");
+    }
+    
+    if (this.minLength != null) {
+        buffer.writeAll(["\"minLength\":\'",this.minLength, "\',"], "");
+    }
+    
+    if (this.resize != null) {
+        buffer.writeAll(["\"resize\":",this.resize?.toJSON(), ","], "");
+    }
   }
+
 
 }

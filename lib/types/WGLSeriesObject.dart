@@ -12,63 +12,105 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'Series.dart';
 import 'OptionFragment.dart';
 
 /** 
- * WGLSeriesObject 
+ * WGLSeriesObject
  */
 class WGLSeriesObject extends OptionFragment {
-  WGLSeriesObject( ) : super();
-  // NOTE: drawMode skipped - type string is ignored in gen 
 
-  // NOTE: hasMarkers skipped - type boolean is ignored in gen 
+  WGLSeriesObject({
+    this.colorData = null,
+    this.drawMode = null,
+    this.hasMarkers = null,
+    this.markerFrom = null,
+    this.markerTo = null,
+    this.segments = null,
+    this.series = null,
+    this.showMarkers = null,
+    this.skipTranslation = null,
+    this.zMax = null,
+    this.zMin = null
+  });
 
-  // NOTE: markerFrom skipped - type number is ignored in gen 
-
-  // NOTE: markerTo skipped - type number is ignored in gen 
-
-  // NOTE: showMarkers skipped - type boolean is ignored in gen 
-
-  // NOTE: skipTranslation skipped - type boolean is ignored in gen 
-
-  // NOTE: zMax skipped - type number is ignored in gen 
-
-  // NOTE: zMin skipped - type number is ignored in gen 
-
+  double? colorData;
+    
+  String? drawMode;
+    
+  bool? hasMarkers;
+    
+  double? markerFrom;
+    
+  double? markerTo;
+    
+  Map<String, String>? segments;
+    
+  Series? series;
+    
+  bool? showMarkers;
+    
+  bool? skipTranslation;
+    
+  double? zMax;
+    
+  double? zMin;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of colorData (type number[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of drawMode (type string is ignored) ignore type: true
+    
+    if (this.colorData != null) {
+        buffer.writeAll(["\"colorData\":",this.colorData, ","], "");
+    }
+    
+    if (this.drawMode != null) {
+        buffer.writeAll(["\"drawMode\":\'",this.drawMode, "\',"], "");
+    }
+    
+    if (this.hasMarkers != null) {
+        buffer.writeAll(["\"hasMarkers\":",this.hasMarkers, ","], "");
+    }
+    
+    if (this.markerFrom != null) {
+        buffer.writeAll(["\"markerFrom\":",this.markerFrom, ","], "");
+    }
+    
+    if (this.markerTo != null) {
+        buffer.writeAll(["\"markerTo\":",this.markerTo, ","], "");
+    }
+    // NOTE: skip serialization of segments (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of hasMarkers (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of markerFrom (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of markerTo (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of segments (type Generic is ignored) ignore type: true
-
-    // NOTE: skip serialization of series (type Series is ignored) ignore type: true
-
-    // NOTE: skip serialization of showMarkers (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of skipTranslation (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of zMax (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of zMin (type number is ignored) ignore type: true
+    
+    if (this.series != null) {
+        buffer.writeAll(["\"series\":",this.series?.toJSON(), ","], "");
+    }
+    
+    if (this.showMarkers != null) {
+        buffer.writeAll(["\"showMarkers\":",this.showMarkers, ","], "");
+    }
+    
+    if (this.skipTranslation != null) {
+        buffer.writeAll(["\"skipTranslation\":",this.skipTranslation, ","], "");
+    }
+    
+    if (this.zMax != null) {
+        buffer.writeAll(["\"zMax\":",this.zMax, ","], "");
+    }
+    
+    if (this.zMin != null) {
+        buffer.writeAll(["\"zMin\":",this.zMin, ","], "");
+    }
   }
+
 
 }

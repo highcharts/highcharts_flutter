@@ -12,36 +12,51 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * FilterOptions 
+ * FilterOptions
  */
 class FilterOptions extends OptionFragment {
-  FilterOptions( ) : super();
-  // NOTE: frequency skipped - type number is ignored in gen 
 
-  // NOTE: frequencyPitchTrackingMultiplier skipped - type number is ignored in gen 
+  FilterOptions({
+    this.frequency = null,
+    this.frequencyPitchTrackingMultiplier = null,
+    this.Q = null
+  });
 
-  // NOTE: Q skipped - type number is ignored in gen 
-
+  double? frequency;
+    
+  double? frequencyPitchTrackingMultiplier;
+    
+  double? Q;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of frequency (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of frequencyPitchTrackingMultiplier (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of Q (type number is ignored) ignore type: true
+    
+    if (this.frequency != null) {
+        buffer.writeAll(["\"frequency\":",this.frequency, ","], "");
+    }
+    
+    if (this.frequencyPitchTrackingMultiplier != null) {
+        buffer.writeAll(["\"frequencyPitchTrackingMultiplier\":",this.frequencyPitchTrackingMultiplier, ","], "");
+    }
+    
+    if (this.Q != null) {
+        buffer.writeAll(["\"Q\":",this.Q, ","], "");
+    }
   }
+
 
 }

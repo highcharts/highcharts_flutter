@@ -12,39 +12,58 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
-import 'DataEvent.dart';
 import 'OptionFragment.dart';
 
 /** 
- * ErrorEvent 
+ * ErrorEvent
  */
-class ErrorEvent extends DataEvent {
-  ErrorEvent( ) : super();
-  // NOTE: csv skipped - type string is ignored in gen 
+class ErrorEvent extends OptionFragment {
+
+  ErrorEvent({
+    this.csv = null,
+    this.error = null
+  });
+
+  // NOTE: type skipped - type "error" is ignored in gen 
+
+  // NOTE: table skipped - type DataTable is ignored in gen 
+
+  Error? error;
+    
+  String? csv;
+    
+  // NOTE: data skipped - type Data is ignored in gen 
 
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of type (type "error" is ignored) ignore type: true
 
-    // NOTE: skip serialization of table (type DataTable is ignored) ignore type: true
+    // NOTE: skip serialization of type (type "error" ignored, skipped: true)
 
-    // NOTE: skip serialization of type (type "loadError" is ignored) ignore type: true
+    // NOTE: skip serialization of table (type DataTable ignored, skipped: true)
 
-    // NOTE: skip serialization of error (type Error is ignored) ignore type: true
+    // NOTE: skip serialization of type (type "loadError" ignored, skipped: true)
 
-    // NOTE: skip serialization of csv (type string is ignored) ignore type: true
+    
+    if (this.error != null) {
+        buffer.writeAll(["\"error\":",this.error, ","], "");
+    }
+    
+    if (this.csv != null) {
+        buffer.writeAll(["\"csv\":\'",this.csv, "\',"], "");
+    }
+    // NOTE: skip serialization of data (type Data ignored, skipped: true)
 
-    // NOTE: skip serialization of data (type Data is ignored) ignore type: true
   }
+
 
 }

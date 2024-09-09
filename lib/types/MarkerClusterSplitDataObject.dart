@@ -12,42 +12,62 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * MarkerClusterSplitDataObject 
+ * MarkerClusterSplitDataObject
  */
 class MarkerClusterSplitDataObject extends OptionFragment {
-  MarkerClusterSplitDataObject( ) : super();
-  // NOTE: dataIndex skipped - type number is ignored in gen 
 
-  // NOTE: x skipped - type number is ignored in gen 
+  MarkerClusterSplitDataObject({
+    this.dataIndex = null,
+    this.parentStateId = null,
+    this.x = null,
+    this.y = null
+  });
 
-  // NOTE: y skipped - type number is ignored in gen 
-
-  // NOTE: parentStateId skipped - type string is ignored in gen 
+  double? dataIndex;
+    
+  double? x;
+    
+  double? y;
+    
+  String? parentStateId;
+    
+  // NOTE: options skipped - type PointShortOptions is ignored in gen 
 
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of dataIndex (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of x (type number is ignored) ignore type: true
+    
+    if (this.dataIndex != null) {
+        buffer.writeAll(["\"dataIndex\":",this.dataIndex, ","], "");
+    }
+    
+    if (this.x != null) {
+        buffer.writeAll(["\"x\":",this.x, ","], "");
+    }
+    
+    if (this.y != null) {
+        buffer.writeAll(["\"y\":",this.y, ","], "");
+    }
+    
+    if (this.parentStateId != null) {
+        buffer.writeAll(["\"parentStateId\":\'",this.parentStateId, "\',"], "");
+    }
+    // NOTE: skip serialization of options (type PointShortOptions ignored, skipped: true)
 
-    // NOTE: skip serialization of y (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of parentStateId (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of options (type PointShortOptions is ignored) ignore type: 1
   }
+
 
 }

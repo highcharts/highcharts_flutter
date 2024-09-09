@@ -12,31 +12,44 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'Point.dart';
 import 'OptionFragment.dart';
 
 /** 
- * PointGroupItem 
+ * PointGroupItem
  */
 class PointGroupItem extends OptionFragment {
-  PointGroupItem( ) : super();
-  // NOTE: time skipped - type number is ignored in gen 
 
+  PointGroupItem({
+    this.point = null,
+    this.time = null
+  });
+
+  Point? point;
+    
+  double? time;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of point (type Point is ignored) ignore type: true
 
-    // NOTE: skip serialization of time (type number is ignored) ignore type: true
+    
+    if (this.point != null) {
+        buffer.writeAll(["\"point\":",this.point?.toJSON(), ","], "");
+    }
+    
+    if (this.time != null) {
+        buffer.writeAll(["\"time\":",this.time, ","], "");
+    }
   }
+
 
 }

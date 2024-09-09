@@ -12,31 +12,32 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'SMAParamsOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * MomentumParamsOptions 
+ * MomentumParamsOptions
  */
 class MomentumParamsOptions extends SMAParamsOptions {
-  MomentumParamsOptions( {
+
+  MomentumParamsOptions({
     super.index = null,
     super.period = null
-  }) : super();
-  
+  });
+
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    
+
   }
+
 
 }

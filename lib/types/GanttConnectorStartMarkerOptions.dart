@@ -12,21 +12,22 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'ConnectorsStartMarkerOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * GanttConnectorStartMarkerOptions 
+ * GanttConnectorStartMarkerOptions
  */
 class GanttConnectorStartMarkerOptions extends ConnectorsStartMarkerOptions {
-  GanttConnectorStartMarkerOptions( {
+
+  GanttConnectorStartMarkerOptions({
     super.align = null,
     super.color = null,
     super.enabled = null,
+    this.fill = null,
     super.height = null,
     super.inside = null,
     super.lineColor = null,
@@ -35,18 +36,24 @@ class GanttConnectorStartMarkerOptions extends ConnectorsStartMarkerOptions {
     super.symbol = null,
     super.verticalAlign = null,
     super.width = null
-  }) : super();
-  // NOTE: fill skipped - type string is ignored in gen 
+  });
 
+  String? fill;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of fill (type string is ignored) ignore type: true
+
+    
+    if (this.fill != null) {
+        buffer.writeAll(["\"fill\":\'",this.fill, "\',"], "");
+    }
   }
+
 
 }

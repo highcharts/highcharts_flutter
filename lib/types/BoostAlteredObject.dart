@@ -12,36 +12,52 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * BoostAlteredObject 
+ * BoostAlteredObject
  */
 class BoostAlteredObject extends OptionFragment {
-  BoostAlteredObject( ) : super();
-  // NOTE: own skipped - type boolean is ignored in gen 
 
-  // NOTE: prop skipped - type string is ignored in gen 
+  BoostAlteredObject({
+    this.own = null,
+    this.prop = null
+  });
+
+  bool? own;
+    
+  String? prop;
+    
+  // NOTE: val skipped - type unknown is ignored in gen 
+
+  // NOTE: value skipped - type unknown is ignored in gen 
 
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of own (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of prop (type string is ignored) ignore type: true
+    
+    if (this.own != null) {
+        buffer.writeAll(["\"own\":",this.own, ","], "");
+    }
+    
+    if (this.prop != null) {
+        buffer.writeAll(["\"prop\":\'",this.prop, "\',"], "");
+    }
+    // NOTE: skip serialization of val (type unknown ignored, skipped: true)
 
-    // NOTE: skip serialization of val (type unknown is ignored) ignore type: 1
+    // NOTE: skip serialization of value (type unknown ignored, skipped: true)
 
-    // NOTE: skip serialization of value (type unknown is ignored) ignore type: 1
   }
+
 
 }

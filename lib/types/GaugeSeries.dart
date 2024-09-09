@@ -12,10 +12,9 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'GaugeSeriesOptions.dart';
 import 'Series.dart';
 import 'PointOptions.dart';
@@ -34,8 +33,7 @@ class GaugeSeries extends Series {
     this.data = null
   });
 
-  
-  @override
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
@@ -56,16 +54,13 @@ class GaugeSeries extends Series {
         if (point.length > 1) {
           seriesData.writeAll(["["], "");
         }
-
-          for (var sub in point) {
-            if (sub is String) {
-              seriesData.writeAll(["\"", sub, "\","], "");
-            } else {
-              seriesData.writeAll([sub], ",");
-            }
-
+        for (var sub in point) {
+          if (sub is String) {
+            seriesData.writeAll(["\"", sub, "\","], "");
+          } else {
+            seriesData.writeAll([sub], ",");
           }
-
+        }
         if (point.length > 1) {
           seriesData.writeAll(["],"], "");
         } else {
@@ -92,22 +87,24 @@ class GaugeSeries extends Series {
 
 
     
-    if (this.options?.dial != null) {  
-      buffer.writeAll(["\"dial\":",this.options?.dial?.toJSON(), ","], "");
+
+    
+    if (this.options?.dial != null) {
+        buffer.writeAll(["\"dial\":",this.options?.dial?.toJSON(), ","], "");
     }
-
-    if (this.options?.overshoot != null) {  
-      buffer.writeAll(["\"overshoot\":",this.options?.overshoot, ","], "");
+    
+    if (this.options?.overshoot != null) {
+        buffer.writeAll(["\"overshoot\":",this.options?.overshoot, ","], "");
     }
-
-    if (this.options?.pivot != null) {  
-      buffer.writeAll(["\"pivot\":",this.options?.pivot?.toJSON(), ","], "");
+    
+    if (this.options?.pivot != null) {
+        buffer.writeAll(["\"pivot\":",this.options?.pivot?.toJSON(), ","], "");
     }
+    // NOTE: skip serialization of states (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
-
-    if (this.options?.wrap != null) {  
-      buffer.writeAll(["\"wrap\":",this.options?.wrap, ","], "");
+    
+    if (this.options?.wrap != null) {
+        buffer.writeAll(["\"wrap\":",this.options?.wrap, ","], "");
     }
   }
 

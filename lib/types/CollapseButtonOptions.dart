@@ -12,20 +12,23 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'CSSObject.dart';
 import 'OptionFragment.dart';
 
+
 /** 
- * CollapseButtonOptions 
+ * CollapseButtonOptions
  */
 class CollapseButtonOptions extends OptionFragment {
-  CollapseButtonOptions( {
+
+  CollapseButtonOptions({
     this.enabled = null,
+    this.fillColor = null,
     this.height = null,
+    this.lineColor = null,
     this.lineWidth = null,
     this.onlyOnHover = null,
     this.shape = null,
@@ -33,76 +36,128 @@ class CollapseButtonOptions extends OptionFragment {
     this.width = null,
     this.x = null,
     this.y = null
-  }) : super();
-  bool? enabled;
-    
-  // NOTE: fillColor skipped - type string is ignored in gen 
+  });
 
-  double? height;
+  String? lineColor;
     
-  bool? onlyOnHover;
-    
-  String? shape;
-    
-  // NOTE: lineColor skipped - type string is ignored in gen 
-
+  /**
+   * The line width of the button in pixels 
+   * 
+   * Defaults to '1'. 
+   */
   double? lineWidth;
     
+  /**
+   * Whether the button should be visible. 
+   * 
+   * Defaults to 'true'. 
+   */
+  bool? enabled;
+    
+  String? fillColor;
+    
+  /**
+   * Height of the button. 
+   * 
+   * Defaults to '18'. 
+   */
+  double? height;
+    
+  /**
+   * Whether the button should be visible only when the node is
+   * hovered. When set to true, the button is hidden for nodes,
+   * which are not collapsed, and shown for the collapsed ones. 
+   * 
+   * Defaults to 'true'. 
+   */
+  bool? onlyOnHover;
+    
+  /**
+   * The symbol of the collapse button. 
+   * 
+   * Defaults to 'circle'. 
+   */
+  String? shape;
+    
+  /**
+   * CSS styles for the collapse button.
+   * 
+   * In styled mode, the collapse button style is given in the
+   * `.highcharts-collapse-button` class.  
+   */
   CSSObject? style;
     
+  /**
+   * Width of the button. 
+   * 
+   * Defaults to '18'. 
+   */
   double? width;
     
+  /**
+   * Offset of the button in the x direction.  
+   */
   double? x;
     
+  /**
+   * Offset of the button in the y direction.  
+   */
   double? y;
     
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    if (this.enabled != null) {  
-      buffer.writeAll(["\"enabled\":",this.enabled, ","], "");
+
+    
+    if (this.lineColor != null) {
+        buffer.writeAll(["\"lineColor\":\'",this.lineColor, "\',"], "");
     }
-
-    // NOTE: skip serialization of fillColor (type string is ignored) ignore type: true
-
-    if (this.height != null) {  
-      buffer.writeAll(["\"height\":",this.height, ","], "");
+    
+    if (this.lineWidth != null) {
+        buffer.writeAll(["\"lineWidth\":",this.lineWidth, ","], "");
     }
-
-    if (this.onlyOnHover != null) {  
-      buffer.writeAll(["\"onlyOnHover\":",this.onlyOnHover, ","], "");
+    
+    if (this.enabled != null) {
+        buffer.writeAll(["\"enabled\":",this.enabled, ","], "");
     }
-
-    if (this.shape != null) {  
-      buffer.writeAll(["\"shape\":\'",this.shape, "\',"], "");
+    
+    if (this.fillColor != null) {
+        buffer.writeAll(["\"fillColor\":\'",this.fillColor, "\',"], "");
     }
-
-    // NOTE: skip serialization of lineColor (type string is ignored) ignore type: true
-
-    if (this.lineWidth != null) {  
-      buffer.writeAll(["\"lineWidth\":",this.lineWidth, ","], "");
+    
+    if (this.height != null) {
+        buffer.writeAll(["\"height\":",this.height, ","], "");
     }
-
-    if (this.style != null) {  
-      buffer.writeAll(["\"style\":",this.style?.toJSON(), ","], "");
+    
+    if (this.onlyOnHover != null) {
+        buffer.writeAll(["\"onlyOnHover\":",this.onlyOnHover, ","], "");
     }
-
-    if (this.width != null) {  
-      buffer.writeAll(["\"width\":",this.width, ","], "");
+    
+    if (this.shape != null) {
+        buffer.writeAll(["\"shape\":\'",this.shape, "\',"], "");
     }
-
-    if (this.x != null) {  
-      buffer.writeAll(["\"x\":",this.x, ","], "");
+    
+    if (this.style != null) {
+        buffer.writeAll(["\"style\":",this.style?.toJSON(), ","], "");
     }
-
-    if (this.y != null) {  
-      buffer.writeAll(["\"y\":",this.y, ","], "");
+    
+    if (this.width != null) {
+        buffer.writeAll(["\"width\":",this.width, ","], "");
+    }
+    
+    if (this.x != null) {
+        buffer.writeAll(["\"x\":",this.x, ","], "");
+    }
+    
+    if (this.y != null) {
+        buffer.writeAll(["\"y\":",this.y, ","], "");
     }
   }
+
 
 }

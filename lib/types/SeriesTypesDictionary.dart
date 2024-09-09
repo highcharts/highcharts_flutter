@@ -12,27 +12,33 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * SeriesTypesDictionary 
+ * SeriesTypesDictionary
  */
 class SeriesTypesDictionary extends OptionFragment {
-  SeriesTypesDictionary( ) : super();
-  
+
+  SeriesTypesDictionary();
+
+  // NOTE: flags skipped - type typeof FlagsSeries is ignored in gen 
+
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of flags (type typeof FlagsSeries is ignored) ignore type: true
+
+    // NOTE: skip serialization of flags (type typeof FlagsSeries ignored, skipped: true)
+
   }
+
 
 }

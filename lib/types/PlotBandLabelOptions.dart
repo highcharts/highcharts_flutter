@@ -12,67 +12,122 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'CSSObject.dart';
 import 'OptionFragment.dart';
 
+
 /** 
- * PlotBandLabelOptions 
+ * PlotBandLabelOptions
  */
 class PlotBandLabelOptions extends OptionFragment {
-  PlotBandLabelOptions( ) : super();
-  // NOTE: align skipped - type string is ignored in gen 
 
-  // NOTE: className skipped - type string is ignored in gen 
+  PlotBandLabelOptions({
+    this.align = null,
+    this.allowOverlap = null,
+    this.className = null,
+    this.clip = null,
+    this.inside = null,
+    this.rotation = null,
+    this.style = null,
+    this.text = null,
+    this.textAlign = null,
+    this.useHTML = null,
+    this.verticalAlign = null,
+    this.x = null,
+    this.y = null
+  });
 
-  // NOTE: clip skipped - type boolean is ignored in gen 
-
-  // NOTE: rotation skipped - type number is ignored in gen 
-
-  // NOTE: text skipped - type string is ignored in gen 
-
-  // NOTE: textAlign skipped - type string is ignored in gen 
-
-  // NOTE: useHTML skipped - type boolean is ignored in gen 
-
-  // NOTE: verticalAlign skipped - type string is ignored in gen 
-
-  // NOTE: x skipped - type number is ignored in gen 
-
-  // NOTE: y skipped - type number is ignored in gen 
-
+  String? align;
+    
+  bool? allowOverlap;
+    
+  String? className;
+    
+  bool? clip;
+    
+  bool? inside;
+    
+  double? rotation;
+    
+  CSSObject? style;
+    
+  String? text;
+    
+  String? textAlign;
+    
+  bool? useHTML;
+    
+  String? verticalAlign;
+    
+  double? x;
+    
+  double? y;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of align (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of className (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of clip (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of rotation (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of style (type CSSObject is ignored) ignore type: true
-
-    // NOTE: skip serialization of text (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of textAlign (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of useHTML (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of verticalAlign (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of x (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of y (type number is ignored) ignore type: true
+    
+    if (this.align != null) {
+        buffer.writeAll(["\"align\":\'",this.align, "\',"], "");
+    }
+    
+    if (this.allowOverlap != null) {
+        buffer.writeAll(["\"allowOverlap\":",this.allowOverlap, ","], "");
+    }
+    
+    if (this.className != null) {
+        buffer.writeAll(["\"className\":\'",this.className, "\',"], "");
+    }
+    
+    if (this.clip != null) {
+        buffer.writeAll(["\"clip\":",this.clip, ","], "");
+    }
+    
+    if (this.inside != null) {
+        buffer.writeAll(["\"inside\":",this.inside, ","], "");
+    }
+    
+    if (this.rotation != null) {
+        buffer.writeAll(["\"rotation\":",this.rotation, ","], "");
+    }
+    
+    if (this.style != null) {
+        buffer.writeAll(["\"style\":",this.style?.toJSON(), ","], "");
+    }
+    
+    if (this.text != null) {
+        buffer.writeAll(["\"text\":\'",this.text, "\',"], "");
+    }
+    
+    if (this.textAlign != null) {
+        buffer.writeAll(["\"textAlign\":\'",this.textAlign, "\',"], "");
+    }
+    
+    if (this.useHTML != null) {
+        buffer.writeAll(["\"useHTML\":",this.useHTML, ","], "");
+    }
+    
+    if (this.verticalAlign != null) {
+        buffer.writeAll(["\"verticalAlign\":\'",this.verticalAlign, "\',"], "");
+    }
+    
+    if (this.x != null) {
+        buffer.writeAll(["\"x\":",this.x, ","], "");
+    }
+    
+    if (this.y != null) {
+        buffer.writeAll(["\"y\":",this.y, ","], "");
+    }
   }
+
 
 }

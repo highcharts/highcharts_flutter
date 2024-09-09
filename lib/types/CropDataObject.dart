@@ -12,36 +12,58 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * CropDataObject 
+ * CropDataObject
  */
 class CropDataObject extends OptionFragment {
-  CropDataObject( ) : super();
-  // NOTE: end skipped - type number is ignored in gen 
 
-  // NOTE: start skipped - type number is ignored in gen 
+  CropDataObject({
+    this.end = null,
+    this.start = null,
+    this.xData = null,
+    this.yData = null
+  });
 
+  double? end;
+    
+  double? start;
+    
+  double? xData;
+    
+  double? yData;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of end (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of start (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of xData (type number[] is ignored) ignore type: true
-
-    // NOTE: skip serialization of yData (type number[][] is ignored) ignore type: true
+    
+    if (this.end != null) {
+        buffer.writeAll(["\"end\":",this.end, ","], "");
+    }
+    
+    if (this.start != null) {
+        buffer.writeAll(["\"start\":",this.start, ","], "");
+    }
+    
+    if (this.xData != null) {
+        buffer.writeAll(["\"xData\":",this.xData, ","], "");
+    }
+    
+    if (this.yData != null) {
+        buffer.writeAll(["\"yData\":",this.yData, ","], "");
+    }
   }
+
 
 }

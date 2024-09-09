@@ -12,36 +12,51 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * LangAccessibilityExportingOptions 
+ * LangAccessibilityExportingOptions
  */
 class LangAccessibilityExportingOptions extends OptionFragment {
-  LangAccessibilityExportingOptions( ) : super();
-  // NOTE: chartMenuLabel skipped - type string is ignored in gen 
 
-  // NOTE: exportRegionLabel skipped - type string is ignored in gen 
+  LangAccessibilityExportingOptions({
+    this.chartMenuLabel = null,
+    this.exportRegionLabel = null,
+    this.menuButtonLabel = null
+  });
 
-  // NOTE: menuButtonLabel skipped - type string is ignored in gen 
-
+  String? chartMenuLabel;
+    
+  String? exportRegionLabel;
+    
+  String? menuButtonLabel;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of chartMenuLabel (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of exportRegionLabel (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of menuButtonLabel (type string is ignored) ignore type: true
+    
+    if (this.chartMenuLabel != null) {
+        buffer.writeAll(["\"chartMenuLabel\":\'",this.chartMenuLabel, "\',"], "");
+    }
+    
+    if (this.exportRegionLabel != null) {
+        buffer.writeAll(["\"exportRegionLabel\":\'",this.exportRegionLabel, "\',"], "");
+    }
+    
+    if (this.menuButtonLabel != null) {
+        buffer.writeAll(["\"menuButtonLabel\":\'",this.menuButtonLabel, "\',"], "");
+    }
   }
+
 
 }

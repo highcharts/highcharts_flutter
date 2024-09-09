@@ -12,36 +12,51 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * ExportDataLangOptions 
+ * ExportDataLangOptions
  */
 class ExportDataLangOptions extends OptionFragment {
-  ExportDataLangOptions( ) : super();
-  // NOTE: annotationHeader skipped - type string is ignored in gen 
 
-  // NOTE: categoryHeader skipped - type string is ignored in gen 
+  ExportDataLangOptions({
+    this.annotationHeader = null,
+    this.categoryDatetimeHeader = null,
+    this.categoryHeader = null
+  });
 
-  // NOTE: categoryDatetimeHeader skipped - type string is ignored in gen 
-
+  String? annotationHeader;
+    
+  String? categoryHeader;
+    
+  String? categoryDatetimeHeader;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of annotationHeader (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of categoryHeader (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of categoryDatetimeHeader (type string is ignored) ignore type: true
+    
+    if (this.annotationHeader != null) {
+        buffer.writeAll(["\"annotationHeader\":\'",this.annotationHeader, "\',"], "");
+    }
+    
+    if (this.categoryHeader != null) {
+        buffer.writeAll(["\"categoryHeader\":\'",this.categoryHeader, "\',"], "");
+    }
+    
+    if (this.categoryDatetimeHeader != null) {
+        buffer.writeAll(["\"categoryDatetimeHeader\":\'",this.categoryDatetimeHeader, "\',"], "");
+    }
   }
+
 
 }

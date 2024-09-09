@@ -12,29 +12,37 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'Array.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * NelderMeadPointArray 
+ * NelderMeadPointArray
  */
 class NelderMeadPointArray extends Array {
-  NelderMeadPointArray( ) : super();
-  // NOTE: fx skipped - type number is ignored in gen 
 
+  NelderMeadPointArray({
+    this.fx = null
+  });
+
+  double? fx;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of fx (type number is ignored) ignore type: true
+
+    
+    if (this.fx != null) {
+        buffer.writeAll(["\"fx\":",this.fx, ","], "");
+    }
   }
+
 
 }

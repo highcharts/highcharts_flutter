@@ -12,28 +12,32 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'NavigationBindingsLike.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * NavigationBindings 
+ * NavigationBindings
  */
 class NavigationBindings extends NavigationBindingsLike {
-  NavigationBindings( ) : super();
-  
+
+  NavigationBindings({
+    super.toggledAnnotations = null,
+    super.verticalCounter = null
+  });
+
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    
+
   }
+
 
 }

@@ -12,64 +12,109 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'BBoxObject.dart';
 import 'SunburstSeriesLevelOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * NodeValuesObject 
+ * NodeValuesObject
  */
 class NodeValuesObject extends BBoxObject {
-  NodeValuesObject( ) : super();
-  // NOTE: direction skipped - type number is ignored in gen 
 
-  // NOTE: val skipped - type number is ignored in gen 
+  NodeValuesObject({
+    super.alignment = null,
+    this.borderRadius = null,
+    super.bottomWidth = null,
+    this.color = null,
+    this.direction = null,
+    super.height = null,
+    this.index = null,
+    this.innerR = null,
+    this.mapOptionsToLevel = null,
+    super.polygon = null,
+    this.r = null,
+    this.radius = null,
+    this.siblings = null,
+    super.topWidth = null,
+    this.val = null,
+    super.width = null,
+    super.x = null,
+    super.y = null
+  });
 
-  // NOTE: color skipped - type string is ignored in gen 
-
-  // NOTE: borderRadius skipped - type string is ignored in gen 
-
-  // NOTE: index skipped - type number is ignored in gen 
-
-  // NOTE: innerR skipped - type number is ignored in gen 
-
-  // NOTE: r skipped - type number is ignored in gen 
-
-  // NOTE: radius skipped - type number is ignored in gen 
-
-  // NOTE: siblings skipped - type number is ignored in gen 
-
+  double? direction;
+    
+  double? val;
+    
+  String? color;
+    
+  SunburstSeriesLevelOptions? mapOptionsToLevel;
+    
+  String? borderRadius;
+    
+  double? index;
+    
+  double? innerR;
+    
+  double? r;
+    
+  double? radius;
+    
+  double? siblings;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of direction (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of val (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of color (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of mapOptionsToLevel (type SunburstSeriesLevelOptions[] is ignored) ignore type: true
-
-    // NOTE: skip serialization of borderRadius (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of index (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of innerR (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of r (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of radius (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of siblings (type number is ignored) ignore type: true
+    
+    if (this.direction != null) {
+        buffer.writeAll(["\"direction\":",this.direction, ","], "");
+    }
+    
+    if (this.val != null) {
+        buffer.writeAll(["\"val\":",this.val, ","], "");
+    }
+    
+    if (this.color != null) {
+        buffer.writeAll(["\"color\":\'",this.color, "\',"], "");
+    }
+    
+    if (this.mapOptionsToLevel != null) {
+        buffer.writeAll(["\"mapOptionsToLevel\":",this.mapOptionsToLevel, ","], "");
+    }
+    
+    if (this.borderRadius != null) {
+        buffer.writeAll(["\"borderRadius\":\'",this.borderRadius, "\',"], "");
+    }
+    
+    if (this.index != null) {
+        buffer.writeAll(["\"index\":",this.index, ","], "");
+    }
+    
+    if (this.innerR != null) {
+        buffer.writeAll(["\"innerR\":",this.innerR, ","], "");
+    }
+    
+    if (this.r != null) {
+        buffer.writeAll(["\"r\":",this.r, ","], "");
+    }
+    
+    if (this.radius != null) {
+        buffer.writeAll(["\"radius\":",this.radius, ","], "");
+    }
+    
+    if (this.siblings != null) {
+        buffer.writeAll(["\"siblings\":",this.siblings, ","], "");
+    }
   }
+
 
 }

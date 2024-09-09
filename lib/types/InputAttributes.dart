@@ -12,40 +12,58 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * InputAttributes 
+ * InputAttributes
  */
 class InputAttributes extends OptionFragment {
-  InputAttributes( ) : super();
-  // NOTE: value skipped - type string is ignored in gen 
 
-  // NOTE: type skipped - type string is ignored in gen 
+  InputAttributes({
+    this.htmlFor = null,
+    this.labelClassName = null,
+    this.type = null,
+    this.value = null
+  });
 
-  // NOTE: htmlFor skipped - type string is ignored in gen 
-
-  // NOTE: labelClassName skipped - type string is ignored in gen 
-
+  String? value;
+    
+  String? type;
+    
+  String? htmlFor;
+    
+  String? labelClassName;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of value (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of type (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of htmlFor (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of labelClassName (type string is ignored) ignore type: true
+    
+    if (this.value != null) {
+        buffer.writeAll(["\"value\":\'",this.value, "\',"], "");
+    }
+    
+    if (this.type != null) {
+        buffer.writeAll(["\"type\":\'",this.type, "\',"], "");
+    }
+    
+    if (this.htmlFor != null) {
+        buffer.writeAll(["\"htmlFor\":\'",this.htmlFor, "\',"], "");
+    }
+    
+    if (this.labelClassName != null) {
+        buffer.writeAll(["\"labelClassName\":\'",this.labelClassName, "\',"], "");
+    }
   }
+
 
 }

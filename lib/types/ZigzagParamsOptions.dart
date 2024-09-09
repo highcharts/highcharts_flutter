@@ -12,40 +12,53 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'SMAParamsOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * ZigzagParamsOptions 
+ * ZigzagParamsOptions
  */
 class ZigzagParamsOptions extends SMAParamsOptions {
-  ZigzagParamsOptions( {
+
+  ZigzagParamsOptions({
+    this.deviation = null,
+    this.highIndex = null,
     super.index = null,
+    this.lowIndex = null,
     super.period = null
-  }) : super();
-  // NOTE: lowIndex skipped - type number is ignored in gen 
+  });
 
-  // NOTE: highIndex skipped - type number is ignored in gen 
-
-  // NOTE: deviation skipped - type number is ignored in gen 
-
+  double? lowIndex;
+    
+  double? highIndex;
+    
+  double? deviation;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of lowIndex (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of highIndex (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of deviation (type number is ignored) ignore type: true
+    
+    if (this.lowIndex != null) {
+        buffer.writeAll(["\"lowIndex\":",this.lowIndex, ","], "");
+    }
+    
+    if (this.highIndex != null) {
+        buffer.writeAll(["\"highIndex\":",this.highIndex, ","], "");
+    }
+    
+    if (this.deviation != null) {
+        buffer.writeAll(["\"deviation\":",this.deviation, ","], "");
+    }
   }
+
 
 }

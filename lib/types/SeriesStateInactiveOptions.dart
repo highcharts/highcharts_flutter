@@ -12,39 +12,61 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'StateInactiveOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * SeriesStateInactiveOptions 
+ * SeriesStateInactiveOptions
  */
 class SeriesStateInactiveOptions extends StateInactiveOptions {
-  SeriesStateInactiveOptions( ) : super();
-  // NOTE: enabled skipped - type boolean is ignored in gen 
 
-  // NOTE: brightness skipped - type number is ignored in gen 
+  SeriesStateInactiveOptions({
+    this.brightness = null,
+    super.color = null,
+    super.dashStyle = null,
+    this.enabled = null,
+    super.height = null,
+    super.heightPlus = null,
+    this.linkOpacity = null,
+    super.width = null,
+    super.widthPlus = null
+  });
 
-  // NOTE: linkOpacity skipped - type number is ignored in gen 
+  bool? enabled;
+    
+  double? brightness;
+    
+  // NOTE: animation skipped - type Generic is ignored in gen 
 
+  double? linkOpacity;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of enabled (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of brightness (type number is ignored) ignore type: true
+    
+    if (this.enabled != null) {
+        buffer.writeAll(["\"enabled\":",this.enabled, ","], "");
+    }
+    
+    if (this.brightness != null) {
+        buffer.writeAll(["\"brightness\":",this.brightness, ","], "");
+    }
+    // NOTE: skip serialization of animation (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of animation (type Generic is ignored) ignore type: true
-
-    // NOTE: skip serialization of linkOpacity (type number is ignored) ignore type: true
+    
+    if (this.linkOpacity != null) {
+        buffer.writeAll(["\"linkOpacity\":",this.linkOpacity, ","], "");
+    }
   }
+
 
 }

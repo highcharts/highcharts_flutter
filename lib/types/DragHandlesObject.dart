@@ -12,31 +12,44 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'SVGElement.dart';
 import 'OptionFragment.dart';
 
 /** 
- * DragHandlesObject 
+ * DragHandlesObject
  */
 class DragHandlesObject extends OptionFragment {
-  DragHandlesObject( ) : super();
-  // NOTE: point skipped - type string is ignored in gen 
 
+  DragHandlesObject({
+    this.group = null,
+    this.point = null
+  });
+
+  SVGElement? group;
+    
+  String? point;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of group (type SVGElement is ignored) ignore type: true
 
-    // NOTE: skip serialization of point (type string is ignored) ignore type: true
+    
+    if (this.group != null) {
+        buffer.writeAll(["\"group\":",this.group?.toJSON(), ","], "");
+    }
+    
+    if (this.point != null) {
+        buffer.writeAll(["\"point\":\'",this.point, "\',"], "");
+    }
   }
+
 
 }

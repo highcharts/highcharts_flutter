@@ -4,7 +4,7 @@
  */
 
 import 'package:flutter/material.dart';
-import 'package:highcharts_flutter/Stock.dart';
+import 'package:highcharts_flutter/stock.dart';
 import 'package:highcharts_flutter/types/ChartOptions.dart';
 import 'package:highcharts_flutter/types/ChartEventsOptions.dart';
 import 'package:highcharts_flutter/types/AccessibilityOptions.dart';

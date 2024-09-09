@@ -12,31 +12,47 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'StateInactiveOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * PointStateInactiveOptions 
+ * PointStateInactiveOptions
  */
 class PointStateInactiveOptions extends StateInactiveOptions {
-  PointStateInactiveOptions( ) : super();
-  // NOTE: opacity skipped - type number is ignored in gen 
+
+  PointStateInactiveOptions({
+    super.color = null,
+    super.dashStyle = null,
+    super.height = null,
+    super.heightPlus = null,
+    this.opacity = null,
+    super.width = null,
+    super.widthPlus = null
+  });
+
+  double? opacity;
+    
+  // NOTE: animation skipped - type Generic is ignored in gen 
 
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of opacity (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of animation (type Generic is ignored) ignore type: true
+    
+    if (this.opacity != null) {
+        buffer.writeAll(["\"opacity\":",this.opacity, ","], "");
+    }
+    // NOTE: skip serialization of animation (type Generic ignored, skipped: true)
+
   }
+
 
 }

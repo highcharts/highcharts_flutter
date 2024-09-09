@@ -12,31 +12,45 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'AnnotationOptions.dart';
 import 'Options.dart';
 import 'OptionFragment.dart';
 
 /** 
- * Fibonacci 
+ * Fibonacci
  */
 class Fibonacci extends OptionFragment {
-  Fibonacci( ) : super();
-  
+
+  Fibonacci({
+    this.defaultOptions = null,
+    this.options = null
+  });
+
+  AnnotationOptions? defaultOptions;
+    
+  Options? options;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of defaultOptions (type AnnotationOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of options (type Options is ignored) ignore type: true
+    
+    if (this.defaultOptions != null) {
+        buffer.writeAll(["\"defaultOptions\":",this.defaultOptions?.toJSON(), ","], "");
+    }
+    
+    if (this.options != null) {
+        buffer.writeAll(["\"options\":",this.options?.toJSON(), ","], "");
+    }
   }
+
 
 }

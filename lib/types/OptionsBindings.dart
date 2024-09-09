@@ -12,32 +12,48 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * OptionsBindings 
+ * OptionsBindings
  */
 class OptionsBindings extends OptionFragment {
-  OptionsBindings( ) : super();
-  // NOTE: skipRedraw skipped - type string is ignored in gen 
 
+  OptionsBindings({
+    this.keyMap = null,
+    this.skipRedraw = null,
+    this.typeMap = null
+  });
+
+  Map<String, String>? keyMap;
+    
+  Map<String, String>? typeMap;
+    
+  List<String>? skipRedraw; // String
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of keyMap (type Generic is ignored) ignore type: true
 
-    // NOTE: skip serialization of typeMap (type Generic is ignored) ignore type: true
+    // NOTE: skip serialization of keyMap (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of skipRedraw (type string is ignored) ignore type: true
+    // NOTE: skip serialization of typeMap (type Generic ignored, skipped: true)
+
+    
+    if (this.skipRedraw != null) {
+      StringBuffer arrData = StringBuffer();
+      arrData.writeAll(this.skipRedraw!, ",");
+      buffer.writeAll(["\"skipRedraw\": [", arrData , "],"], "");
+    }
   }
+
 
 }

@@ -12,50 +12,77 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * MarkerClusterPreventCollisionObject 
+ * MarkerClusterPreventCollisionObject
  */
 class MarkerClusterPreventCollisionObject extends OptionFragment {
-  MarkerClusterPreventCollisionObject( ) : super();
-  // NOTE: x skipped - type number is ignored in gen 
 
-  // NOTE: y skipped - type number is ignored in gen 
+  MarkerClusterPreventCollisionObject({
+    this.clusterRadius = null,
+    this.defaultRadius = null,
+    this.gridSize = null,
+    this.groupedData = null,
+    this.key = null,
+    this.x = null,
+    this.y = null
+  });
 
-  // NOTE: key skipped - type string is ignored in gen 
-
-  // NOTE: gridSize skipped - type number is ignored in gen 
-
-  // NOTE: defaultRadius skipped - type number is ignored in gen 
-
-  // NOTE: clusterRadius skipped - type number is ignored in gen 
-
+  double? x;
+    
+  double? y;
+    
+  String? key;
+    
+  Map<String, String>? groupedData;
+    
+  double? gridSize;
+    
+  double? defaultRadius;
+    
+  double? clusterRadius;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of x (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of y (type number is ignored) ignore type: true
+    
+    if (this.x != null) {
+        buffer.writeAll(["\"x\":",this.x, ","], "");
+    }
+    
+    if (this.y != null) {
+        buffer.writeAll(["\"y\":",this.y, ","], "");
+    }
+    
+    if (this.key != null) {
+        buffer.writeAll(["\"key\":\'",this.key, "\',"], "");
+    }
+    // NOTE: skip serialization of groupedData (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of key (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of groupedData (type Generic is ignored) ignore type: true
-
-    // NOTE: skip serialization of gridSize (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of defaultRadius (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of clusterRadius (type number is ignored) ignore type: true
+    
+    if (this.gridSize != null) {
+        buffer.writeAll(["\"gridSize\":",this.gridSize, ","], "");
+    }
+    
+    if (this.defaultRadius != null) {
+        buffer.writeAll(["\"defaultRadius\":",this.defaultRadius, ","], "");
+    }
+    
+    if (this.clusterRadius != null) {
+        buffer.writeAll(["\"clusterRadius\":",this.clusterRadius, ","], "");
+    }
   }
+
 
 }

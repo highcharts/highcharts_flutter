@@ -12,36 +12,51 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * FontMetricsObject 
+ * FontMetricsObject
  */
 class FontMetricsObject extends OptionFragment {
-  FontMetricsObject( ) : super();
-  // NOTE: b skipped - type number is ignored in gen 
 
-  // NOTE: f skipped - type number is ignored in gen 
+  FontMetricsObject({
+    this.b = null,
+    this.f = null,
+    this.h = null
+  });
 
-  // NOTE: h skipped - type number is ignored in gen 
-
+  double? b;
+    
+  double? f;
+    
+  double? h;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of b (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of f (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of h (type number is ignored) ignore type: true
+    
+    if (this.b != null) {
+        buffer.writeAll(["\"b\":",this.b, ","], "");
+    }
+    
+    if (this.f != null) {
+        buffer.writeAll(["\"f\":",this.f, ","], "");
+    }
+    
+    if (this.h != null) {
+        buffer.writeAll(["\"h\":",this.h, ","], "");
+    }
   }
+
 
 }

@@ -12,28 +12,31 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'LegendLike.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * Legend 
+ * Legend
  */
 class Legend extends LegendLike {
-  Legend( ) : super();
-  
+
+  Legend({
+    super.bubbleLegend = null
+  });
+
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    
+
   }
+
 
 }

@@ -12,28 +12,29 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'Array.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * Row 
+ * Row
  */
 class Row extends Array {
-  Row( ) : super();
-  
+
+  Row();
+
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    
+
   }
+
 
 }

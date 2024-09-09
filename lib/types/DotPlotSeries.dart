@@ -12,30 +12,41 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'SVGAttributes.dart';
 import 'OptionFragment.dart';
 
 /** 
- * DotPlotSeries 
+ * DotPlotSeries
  */
 class DotPlotSeries extends OptionFragment {
-  DotPlotSeries( ) : super();
-  
+
+  DotPlotSeries({
+    this.pointAttr = null
+  });
+
+  SVGAttributes? pointAttr;
+    
+  // NOTE: pointClass skipped - type typeof DotPlotPoint is ignored in gen 
+
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of pointAttr (type SVGAttributes is ignored) ignore type: true
 
-    // NOTE: skip serialization of pointClass (type typeof DotPlotPoint is ignored) ignore type: true
+    
+    if (this.pointAttr != null) {
+        buffer.writeAll(["\"pointAttr\":",this.pointAttr?.toJSON(), ","], "");
+    }
+    // NOTE: skip serialization of pointClass (type typeof DotPlotPoint ignored, skipped: true)
+
   }
+
 
 }

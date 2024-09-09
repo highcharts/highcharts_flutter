@@ -12,36 +12,46 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'SMAParamsOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * VBPParamsOptions 
+ * VBPParamsOptions
  */
 class VBPParamsOptions extends SMAParamsOptions {
-  VBPParamsOptions( {
+
+  VBPParamsOptions({
     super.index = null,
-    super.period = null
-  }) : super();
-  // NOTE: ranges skipped - type number is ignored in gen 
+    super.period = null,
+    this.ranges = null,
+    this.volumeSeriesID = null
+  });
 
-  // NOTE: volumeSeriesID skipped - type string is ignored in gen 
-
+  double? ranges;
+    
+  String? volumeSeriesID;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of ranges (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of volumeSeriesID (type string is ignored) ignore type: true
+    
+    if (this.ranges != null) {
+        buffer.writeAll(["\"ranges\":",this.ranges, ","], "");
+    }
+    
+    if (this.volumeSeriesID != null) {
+        buffer.writeAll(["\"volumeSeriesID\":\'",this.volumeSeriesID, "\',"], "");
+    }
   }
+
 
 }

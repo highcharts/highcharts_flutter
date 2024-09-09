@@ -12,19 +12,19 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'AxisOptions.dart';
 import 'TreeGridAxisLabelOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * TreeGridAxisOptions 
+ * TreeGridAxisOptions
  */
 class TreeGridAxisOptions extends AxisOptions {
-  TreeGridAxisOptions( {
+
+  TreeGridAxisOptions({
     super.accessibility = null,
     super.alignTicks = null,
     super.allowDecimals = null,
@@ -37,6 +37,7 @@ class TreeGridAxisOptions extends AxisOptions {
     super.crosshair = null,
     super.crossing = null,
     super.currentDateIndicator = null,
+    super.description = null,
     super.endOnTick = null,
     super.events = null,
     super.floor = null,
@@ -48,6 +49,9 @@ class TreeGridAxisOptions extends AxisOptions {
     super.gridZIndex = null,
     super.height = null,
     super.id = null,
+    super.internalKey = null,
+    super.isInternal = null,
+    super.keepOrdinalPadding = null,
     super.labels = null,
     super.left = null,
     super.lineColor = null,
@@ -86,6 +90,7 @@ class TreeGridAxisOptions extends AxisOptions {
     super.showEmpty = null,
     super.showFirstLabel = null,
     super.showLastLabel = null,
+    super.side = null,
     super.softMax = null,
     super.softMin = null,
     super.stackLabels = null,
@@ -112,17 +117,22 @@ class TreeGridAxisOptions extends AxisOptions {
     super.width = null,
     super.zIndex = null,
     super.zoomEnabled = null
-  }) : super();
-  
+  });
+
+  /** NOTE: extlabels is skipped here for now, as it overrides the base type. */
+
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of labels (type TreeGridAxisLabelOptions is ignored) ignore type: true
+
+    // NOTE: skip serialization of labels (type TreeGridAxisLabelOptions ignored, skipped: false)
+
   }
+
 
 }

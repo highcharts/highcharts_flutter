@@ -12,32 +12,51 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'SVGAttributes.dart';
 import 'OptionFragment.dart';
 
 /** 
- * ButtonThemeStatesObject 
+ * ButtonThemeStatesObject
  */
 class ButtonThemeStatesObject extends OptionFragment {
-  ButtonThemeStatesObject( ) : super();
-  
+
+  ButtonThemeStatesObject({
+    this.disabled = null,
+    this.hover = null,
+    this.select = null
+  });
+
+  SVGAttributes? disabled;
+    
+  SVGAttributes? hover;
+    
+  SVGAttributes? select;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of disabled (type SVGAttributes is ignored) ignore type: true
 
-    // NOTE: skip serialization of hover (type SVGAttributes is ignored) ignore type: true
-
-    // NOTE: skip serialization of select (type SVGAttributes is ignored) ignore type: true
+    
+    if (this.disabled != null) {
+        buffer.writeAll(["\"disabled\":",this.disabled?.toJSON(), ","], "");
+    }
+    
+    if (this.hover != null) {
+        buffer.writeAll(["\"hover\":",this.hover?.toJSON(), ","], "");
+    }
+    
+    if (this.select != null) {
+        buffer.writeAll(["\"select\":",this.select?.toJSON(), ","], "");
+    }
   }
+
 
 }

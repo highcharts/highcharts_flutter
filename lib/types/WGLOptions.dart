@@ -12,60 +12,85 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'BoostOptions.dart';
 import 'WGLDebugOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * WGLOptions 
+ * WGLOptions
  */
 class WGLOptions extends BoostOptions {
-  WGLOptions( {
+
+  WGLOptions({
     super.allowForce = null,
     super.debug = null,
     super.enabled = null,
+    this.fillColor = null,
+    this.lineWidth = null,
     super.pixelRatio = null,
+    this.pointSize = null,
     super.seriesThreshold = null,
-    super.useGPUTranslations = null,
-    super.usePreallocated = null
-  }) : super();
-  // NOTE: fillColor skipped - type string is ignored in gen 
+    super.timeRendering = null,
+    super.timeSeriesProcessing = null,
+    super.timeSetup = null,
+    this.useAlpha = null,
+    this.useGPUTranslations = null,
+    this.usePreallocated = null
+  });
 
-  // NOTE: lineWidth skipped - type number is ignored in gen 
+  /** NOTE: extdebug is skipped here for now, as it overrides the base type. */
 
-  // NOTE: pointSize skipped - type number is ignored in gen 
-
-  // NOTE: useAlpha skipped - type boolean is ignored in gen 
-
-  // NOTE: useGPUTranslations skipped - type boolean is ignored in gen 
-
-  // NOTE: usePreallocated skipped - type boolean is ignored in gen 
-
+  String? fillColor;
+    
+  double? lineWidth;
+    
+  double? pointSize;
+    
+  bool? useAlpha;
+    
+  bool? useGPUTranslations;
+    
+  bool? usePreallocated;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of debug (type WGLDebugOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of fillColor (type string is ignored) ignore type: true
+    // NOTE: skip serialization of debug (type WGLDebugOptions ignored, skipped: false)
 
-    // NOTE: skip serialization of lineWidth (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of pointSize (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of useAlpha (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of useGPUTranslations (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of usePreallocated (type boolean is ignored) ignore type: true
+    
+    if (this.fillColor != null) {
+        buffer.writeAll(["\"fillColor\":\'",this.fillColor, "\',"], "");
+    }
+    
+    if (this.lineWidth != null) {
+        buffer.writeAll(["\"lineWidth\":",this.lineWidth, ","], "");
+    }
+    
+    if (this.pointSize != null) {
+        buffer.writeAll(["\"pointSize\":",this.pointSize, ","], "");
+    }
+    
+    if (this.useAlpha != null) {
+        buffer.writeAll(["\"useAlpha\":",this.useAlpha, ","], "");
+    }
+    
+    if (this.useGPUTranslations != null) {
+        buffer.writeAll(["\"useGPUTranslations\":",this.useGPUTranslations, ","], "");
+    }
+    
+    if (this.usePreallocated != null) {
+        buffer.writeAll(["\"usePreallocated\":",this.usePreallocated, ","], "");
+    }
   }
+
 
 }

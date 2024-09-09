@@ -12,55 +12,89 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'ScatterPointOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * TreemapPointOptions 
+ * TreemapPointOptions
  */
 class TreemapPointOptions extends ScatterPointOptions {
-  TreemapPointOptions( {
+
+  TreemapPointOptions({
     super.accessibility = null,
     super.borderColor = null,
     super.className = null,
+    super.collapsed = null,
     super.color = null,
     super.colorIndex = null,
+    this.colorValue = null,
     super.connectors = null,
     super.dataLabels = null,
     super.dragDrop = null,
+    super.drilldown = null,
     super.events = null,
+    super.id = null,
+    super.index = null,
     super.keys = null,
+    super.labelrank = null,
+    super.lat = null,
+    super.legendIndex = null,
+    super.lon = null,
     super.marker = null,
+    this.name = null,
+    this.parent = null,
     super.selected = null,
-    super.visible = null
-  }) : super();
-  // NOTE: name skipped - type string is ignored in gen 
+    super.seriesIndex = null,
+    this.value = null,
+    super.visible = null,
+    this.width = null,
+    super.x = null,
+    super.y = null
+  });
 
-  // NOTE: parent skipped - type string is ignored in gen 
-
-  // NOTE: value skipped - type number is ignored in gen 
-
-  // NOTE: width skipped - type number is ignored in gen 
-
+  double? colorValue;
+    
+  String? name;
+    
+  String? parent;
+    
+  double? value;
+    
+  double? width;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of name (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of parent (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of value (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of width (type number is ignored) ignore type: true
+    
+    if (this.colorValue != null) {
+        buffer.writeAll(["\"colorValue\":",this.colorValue, ","], "");
+    }
+    
+    if (this.name != null) {
+        buffer.writeAll(["\"name\":\'",this.name, "\',"], "");
+    }
+    
+    if (this.parent != null) {
+        buffer.writeAll(["\"parent\":\'",this.parent, "\',"], "");
+    }
+    
+    if (this.value != null) {
+        buffer.writeAll(["\"value\":",this.value, ","], "");
+    }
+    
+    if (this.width != null) {
+        buffer.writeAll(["\"width\":",this.width, ","], "");
+    }
   }
+
 
 }

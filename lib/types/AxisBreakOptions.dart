@@ -12,44 +12,65 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * AxisBreakOptions 
+ * AxisBreakOptions
  */
 class AxisBreakOptions extends OptionFragment {
-  AxisBreakOptions( ) : super();
-  // NOTE: breakSize skipped - type number is ignored in gen 
 
-  // NOTE: from skipped - type number is ignored in gen 
+  AxisBreakOptions({
+    this.breakSize = null,
+    this.from = null,
+    this.inclusive = null,
+    this.repeat = null,
+    this.to = null
+  });
 
-  // NOTE: inclusive skipped - type boolean is ignored in gen 
-
-  // NOTE: repeat skipped - type number is ignored in gen 
-
-  // NOTE: to skipped - type number is ignored in gen 
-
+  double? breakSize;
+    
+  double? from;
+    
+  bool? inclusive;
+    
+  double? repeat;
+    
+  double? to;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of breakSize (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of from (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of inclusive (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of repeat (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of to (type number is ignored) ignore type: true
+    
+    if (this.breakSize != null) {
+        buffer.writeAll(["\"breakSize\":",this.breakSize, ","], "");
+    }
+    
+    if (this.from != null) {
+        buffer.writeAll(["\"from\":",this.from, ","], "");
+    }
+    
+    if (this.inclusive != null) {
+        buffer.writeAll(["\"inclusive\":",this.inclusive, ","], "");
+    }
+    
+    if (this.repeat != null) {
+        buffer.writeAll(["\"repeat\":",this.repeat, ","], "");
+    }
+    
+    if (this.to != null) {
+        buffer.writeAll(["\"to\":",this.to, ","], "");
+    }
   }
+
 
 }

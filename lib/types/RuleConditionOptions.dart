@@ -12,40 +12,58 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * RuleConditionOptions 
+ * RuleConditionOptions
  */
 class RuleConditionOptions extends OptionFragment {
-  RuleConditionOptions( ) : super();
-  // NOTE: maxHeight skipped - type number is ignored in gen 
 
-  // NOTE: maxWidth skipped - type number is ignored in gen 
+  RuleConditionOptions({
+    this.maxHeight = null,
+    this.maxWidth = null,
+    this.minHeight = null,
+    this.minWidth = null
+  });
 
-  // NOTE: minHeight skipped - type number is ignored in gen 
-
-  // NOTE: minWidth skipped - type number is ignored in gen 
-
+  double? maxHeight;
+    
+  double? maxWidth;
+    
+  double? minHeight;
+    
+  double? minWidth;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of maxHeight (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of maxWidth (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of minHeight (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of minWidth (type number is ignored) ignore type: true
+    
+    if (this.maxHeight != null) {
+        buffer.writeAll(["\"maxHeight\":",this.maxHeight, ","], "");
+    }
+    
+    if (this.maxWidth != null) {
+        buffer.writeAll(["\"maxWidth\":",this.maxWidth, ","], "");
+    }
+    
+    if (this.minHeight != null) {
+        buffer.writeAll(["\"minHeight\":",this.minHeight, ","], "");
+    }
+    
+    if (this.minWidth != null) {
+        buffer.writeAll(["\"minWidth\":",this.minWidth, ","], "");
+    }
   }
+
 
 }

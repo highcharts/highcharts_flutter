@@ -4,7 +4,7 @@
  */
 
 import 'package:flutter/material.dart';
-import 'package:highcharts_flutter/Highcharts.dart';
+import 'package:highcharts_flutter/highcharts.dart';
 import 'package:highcharts_flutter/types/ChartOptions.dart';
 import 'package:highcharts_flutter/types/CSSObject.dart';
 import 'package:highcharts_flutter/types/LegendOptions.dart';
@@ -81,8 +81,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 legend: LegendOptions(
                     enabled: false, 
                 ),
-                annotations: AnnotationOptions( 
-                ),
+                annotations: [ 
+                  AnnotationOptions( 
+                  ),
+                ],
                 title: TitleOptions(
                     text: "Relative Rotation Graph®️", 
                 ),
@@ -111,7 +113,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ScatterSeries( 
                 //options: ScatterSeriesOptions()
                       name: "Stock 1", 
-                    //   color: "#9a5c00", 
+                      color: "#9a5c00", 
                     data: [ 
                       [102,102], 
                       [102.25,101.5], 
@@ -126,7 +128,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ScatterSeries( 
                 //options: ScatterSeriesOptions()
                       name: "Stock 2", 
-                    //   color: "#004bb3", 
+                      color: "#004bb3", 
                     data: [ 
                       [101.8,98.3], 
                       [101.4,97.5], 
@@ -142,7 +144,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ScatterSeries( 
                 //options: ScatterSeriesOptions()
                       name: "Stock 3", 
-                    //   color: "#008224", 
+                      color: "#008224", 
                     data: [ 
                       [98,96.5], 
                       [97.2,97], 
@@ -166,7 +168,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ScatterSeries( 
                 //options: ScatterSeriesOptions()
                       name: "Stock 4", 
-                    //   color: "#008224", 
+                      color: "#008224", 
                     data: [ 
                       [98.5,98.5], 
                       [98.7,99], 

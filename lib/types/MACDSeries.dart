@@ -12,10 +12,9 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'MACDOptions.dart';
 import 'Series.dart';
 import 'PointOptions.dart';
@@ -34,8 +33,7 @@ class MACDSeries extends Series {
     this.data = null
   });
 
-  
-  @override
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
@@ -56,16 +54,13 @@ class MACDSeries extends Series {
         if (point.length > 1) {
           seriesData.writeAll(["["], "");
         }
-
-          for (var sub in point) {
-            if (sub is String) {
-              seriesData.writeAll(["\"", sub, "\","], "");
-            } else {
-              seriesData.writeAll([sub], ",");
-            }
-
+        for (var sub in point) {
+          if (sub is String) {
+            seriesData.writeAll(["\"", sub, "\","], "");
+          } else {
+            seriesData.writeAll([sub], ",");
           }
-
+        }
         if (point.length > 1) {
           seriesData.writeAll(["],"], "");
         } else {
@@ -92,32 +87,34 @@ class MACDSeries extends Series {
 
 
     
-    // NOTE: skip serialization of params (type MACDParamsOptions is ignored) ignore type: false
 
-    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
+    // NOTE: skip serialization of params (type MACDParamsOptions ignored, skipped: false)
 
-    if (this.options?.threshold != null) {  
-      buffer.writeAll(["\"threshold\":",this.options?.threshold, ","], "");
+    // NOTE: skip serialization of states (type Generic ignored, skipped: true)
+
+    
+    if (this.options?.threshold != null) {
+        buffer.writeAll(["\"threshold\":",this.options?.threshold, ","], "");
     }
-
-    if (this.options?.groupPadding != null) {  
-      buffer.writeAll(["\"groupPadding\":",this.options?.groupPadding, ","], "");
+    
+    if (this.options?.groupPadding != null) {
+        buffer.writeAll(["\"groupPadding\":",this.options?.groupPadding, ","], "");
     }
-
-    if (this.options?.pointPadding != null) {  
-      buffer.writeAll(["\"pointPadding\":",this.options?.pointPadding, ","], "");
+    
+    if (this.options?.pointPadding != null) {
+        buffer.writeAll(["\"pointPadding\":",this.options?.pointPadding, ","], "");
     }
-
-    if (this.options?.minPointLength != null) {  
-      buffer.writeAll(["\"minPointLength\":",this.options?.minPointLength, ","], "");
+    
+    if (this.options?.minPointLength != null) {
+        buffer.writeAll(["\"minPointLength\":",this.options?.minPointLength, ","], "");
     }
-
-    if (this.options?.signalLine != null) {  
-      buffer.writeAll(["\"signalLine\":",this.options?.signalLine?.toJSON(), ","], "");
+    
+    if (this.options?.signalLine != null) {
+        buffer.writeAll(["\"signalLine\":",this.options?.signalLine?.toJSON(), ","], "");
     }
-
-    if (this.options?.macdLine != null) {  
-      buffer.writeAll(["\"macdLine\":",this.options?.macdLine?.toJSON(), ","], "");
+    
+    if (this.options?.macdLine != null) {
+        buffer.writeAll(["\"macdLine\":",this.options?.macdLine?.toJSON(), ","], "");
     }
   }
 

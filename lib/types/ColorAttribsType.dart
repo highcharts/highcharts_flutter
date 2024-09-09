@@ -12,48 +12,72 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * ColorAttribsType 
+ * ColorAttribsType
  */
 class ColorAttribsType extends OptionFragment {
-  ColorAttribsType( ) : super();
-  // NOTE: dashstyle skipped - type string is ignored in gen 
 
-  // NOTE: fill skipped - type string is ignored in gen 
+  ColorAttribsType({
+    this.dashstyle = null,
+    this.fill = null,
+    this.stroke = null,
+    this.stroke_linecap = null,
+    this.stroke_linejoin = null,
+    this.stroke_width = null
+  });
 
-  // NOTE: stroke skipped - type string is ignored in gen 
-
-  // NOTE: stroke-linecap skipped - type string is ignored in gen 
-
-  // NOTE: stroke-linejoin skipped - type string is ignored in gen 
-
-  // NOTE: stroke-width skipped - type number is ignored in gen 
-
+  String? dashstyle;
+    
+  String? fill;
+    
+  String? stroke;
+    
+  String? stroke_linecap;
+    
+  String? stroke_linejoin;
+    
+  double? stroke_width;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of dashstyle (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of fill (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of stroke (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of stroke_linecap (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of stroke_linejoin (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of stroke_width (type number is ignored) ignore type: true
+    
+    if (this.dashstyle != null) {
+        buffer.writeAll(["\"dashstyle\":\'",this.dashstyle, "\',"], "");
+    }
+    
+    if (this.fill != null) {
+        buffer.writeAll(["\"fill\":\'",this.fill, "\',"], "");
+    }
+    
+    if (this.stroke != null) {
+        buffer.writeAll(["\"stroke\":\'",this.stroke, "\',"], "");
+    }
+    
+    if (this.stroke_linecap != null) {
+        buffer.writeAll(["\"stroke-linecap\":\'",this.stroke_linecap, "\',"], "");
+    }
+    
+    if (this.stroke_linejoin != null) {
+        buffer.writeAll(["\"stroke-linejoin\":\'",this.stroke_linejoin, "\',"], "");
+    }
+    
+    if (this.stroke_width != null) {
+        buffer.writeAll(["\"stroke-width\":",this.stroke_width, ","], "");
+    }
   }
+
 
 }

@@ -12,28 +12,37 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'ChartComposition.dart';
 import 'OptionFragment.dart';
 
 /** 
- * MenuComponent 
+ * MenuComponent
  */
 class MenuComponent extends OptionFragment {
-  MenuComponent( ) : super();
-  
+
+  MenuComponent({
+    this.chart = null
+  });
+
+  ChartComposition? chart;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of chart (type ChartComposition is ignored) ignore type: true
+
+    
+    if (this.chart != null) {
+        buffer.writeAll(["\"chart\":",this.chart?.toJSON(), ","], "");
+    }
   }
+
 
 }

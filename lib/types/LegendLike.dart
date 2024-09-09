@@ -12,28 +12,37 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'BubbleLegendItem.dart';
 import 'OptionFragment.dart';
 
 /** 
- * LegendLike 
+ * LegendLike
  */
 class LegendLike extends OptionFragment {
-  LegendLike( ) : super();
-  
+
+  LegendLike({
+    this.bubbleLegend = null
+  });
+
+  BubbleLegendItem? bubbleLegend;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of bubbleLegend (type BubbleLegendItem is ignored) ignore type: true
+
+    
+    if (this.bubbleLegend != null) {
+        buffer.writeAll(["\"bubbleLegend\":",this.bubbleLegend?.toJSON(), ","], "");
+    }
   }
+
 
 }

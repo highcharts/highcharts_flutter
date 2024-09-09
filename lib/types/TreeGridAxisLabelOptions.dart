@@ -12,19 +12,19 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'AxisLabelOptions.dart';
 import 'TreeGridAxisLabelIconOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * TreeGridAxisLabelOptions 
+ * TreeGridAxisLabelOptions
  */
 class TreeGridAxisLabelOptions extends AxisLabelOptions {
-  TreeGridAxisLabelOptions( {
+
+  TreeGridAxisLabelOptions({
     super.align = null,
     super.allowOverlap = null,
     super.autoRotation = null,
@@ -33,6 +33,7 @@ class TreeGridAxisLabelOptions extends AxisLabelOptions {
     super.enabled = null,
     super.format = null,
     super.indentation = null,
+    this.levels = null,
     super.overflow = null,
     super.padding = null,
     super.position3d = null,
@@ -41,24 +42,35 @@ class TreeGridAxisLabelOptions extends AxisLabelOptions {
     super.staggerLines = null,
     super.step = null,
     super.style = null,
+    this.symbol = null,
     super.useHTML = null,
     super.x = null,
     super.y = null,
     super.zIndex = null
-  }) : super();
-  // NOTE: levels skipped - type number is ignored in gen 
+  });
 
+  double? levels;
+    
+  TreeGridAxisLabelIconOptions? symbol;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of levels (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of symbol (type TreeGridAxisLabelIconOptions is ignored) ignore type: true
+    
+    if (this.levels != null) {
+        buffer.writeAll(["\"levels\":",this.levels, ","], "");
+    }
+    
+    if (this.symbol != null) {
+        buffer.writeAll(["\"symbol\":",this.symbol?.toJSON(), ","], "");
+    }
   }
+
 
 }

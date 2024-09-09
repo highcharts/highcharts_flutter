@@ -12,34 +12,52 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'GradientColor.dart';
 import 'PatternObject.dart';
 import 'OptionFragment.dart';
 
 /** 
- * ColorTypeRegistry 
+ * ColorTypeRegistry
  */
 class ColorTypeRegistry extends OptionFragment {
-  ColorTypeRegistry( ) : super();
-  // NOTE: ColorString skipped - type string is ignored in gen 
 
+  ColorTypeRegistry({
+    this.ColorString = null,
+    this.mGradientColor = null,
+    this.PatternFill = null
+  });
+
+  String? ColorString;
+    
+  GradientColor? mGradientColor;
+    
+  PatternObject? PatternFill;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of ColorString (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of mGradientColor (type GradientColor is ignored) ignore type: true
-
-    // NOTE: skip serialization of PatternFill (type PatternObject is ignored) ignore type: true
+    
+    if (this.ColorString != null) {
+        buffer.writeAll(["\"ColorString\":\'",this.ColorString, "\',"], "");
+    }
+    
+    if (this.mGradientColor != null) {
+        buffer.writeAll(["\"GradientColor\":",this.mGradientColor?.toJSON(), ","], "");
+    }
+    
+    if (this.PatternFill != null) {
+        buffer.writeAll(["\"PatternFill\":",this.PatternFill?.toJSON(), ","], "");
+    }
   }
+
 
 }

@@ -12,49 +12,84 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'SVGAttributes.dart';
 import 'OptionFragment.dart';
 
+
 /** 
- * RangesOptions 
+ * RangesOptions
  */
 class RangesOptions extends OptionFragment {
-  RangesOptions( ) : super();
-  // NOTE: autoRanges skipped - type boolean is ignored in gen 
 
-  // NOTE: borderColor skipped - type string is ignored in gen 
+  RangesOptions({
+    this.autoRanges = null,
+    this.borderColor = null,
+    this.bubbleAttribs = null,
+    this.color = null,
+    this.connectorAttribs = null,
+    this.connectorColor = null,
+    this.labelAttribs = null
+  });
 
-  // NOTE: color skipped - type string is ignored in gen 
-
-  // NOTE: connectorColor skipped - type string is ignored in gen 
+  bool? autoRanges;
+    
+  String? borderColor;
+    
+  String? color;
+    
+  String? connectorColor;
+    
+  SVGAttributes? bubbleAttribs;
+    
+  SVGAttributes? connectorAttribs;
+    
+  SVGAttributes? labelAttribs;
+    
+  // NOTE: value skipped - type any is ignored in gen 
 
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of autoRanges (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of borderColor (type string is ignored) ignore type: true
+    
+    if (this.autoRanges != null) {
+        buffer.writeAll(["\"autoRanges\":",this.autoRanges, ","], "");
+    }
+    
+    if (this.borderColor != null) {
+        buffer.writeAll(["\"borderColor\":\'",this.borderColor, "\',"], "");
+    }
+    
+    if (this.color != null) {
+        buffer.writeAll(["\"color\":\'",this.color, "\',"], "");
+    }
+    
+    if (this.connectorColor != null) {
+        buffer.writeAll(["\"connectorColor\":\'",this.connectorColor, "\',"], "");
+    }
+    
+    if (this.bubbleAttribs != null) {
+        buffer.writeAll(["\"bubbleAttribs\":",this.bubbleAttribs?.toJSON(), ","], "");
+    }
+    
+    if (this.connectorAttribs != null) {
+        buffer.writeAll(["\"connectorAttribs\":",this.connectorAttribs?.toJSON(), ","], "");
+    }
+    
+    if (this.labelAttribs != null) {
+        buffer.writeAll(["\"labelAttribs\":",this.labelAttribs?.toJSON(), ","], "");
+    }
+    // NOTE: skip serialization of value (type any ignored, skipped: true)
 
-    // NOTE: skip serialization of color (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of connectorColor (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of bubbleAttribs (type SVGAttributes is ignored) ignore type: true
-
-    // NOTE: skip serialization of connectorAttribs (type SVGAttributes is ignored) ignore type: true
-
-    // NOTE: skip serialization of labelAttribs (type SVGAttributes is ignored) ignore type: true
-
-    // NOTE: skip serialization of value (type any is ignored) ignore type: 1
   }
+
 
 }

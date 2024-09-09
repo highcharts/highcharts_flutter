@@ -12,69 +12,103 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'DataConnectorOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * GoogleSheetsConnectorOptions 
+ * GoogleSheetsConnectorOptions
  */
 class GoogleSheetsConnectorOptions extends DataConnectorOptions {
-  GoogleSheetsConnectorOptions( ) : super();
-  // NOTE: dataRefreshRate skipped - type number is ignored in gen 
 
-  // NOTE: enablePolling skipped - type boolean is ignored in gen 
+  GoogleSheetsConnectorOptions({
+    super.dataModifier = null,
+    this.dataRefreshRate = null,
+    super.dataTable = null,
+    this.enablePolling = null,
+    this.endColumn = null,
+    this.endRow = null,
+    this.firstRowAsNames = null,
+    this.googleAPIKey = null,
+    this.googleSpreadsheetKey = null,
+    this.googleSpreadsheetRange = null,
+    super.metadata = null,
+    this.startColumn = null,
+    this.startRow = null
+  });
 
-  // NOTE: endColumn skipped - type number is ignored in gen 
-
-  // NOTE: endRow skipped - type number is ignored in gen 
-
-  // NOTE: firstRowAsNames skipped - type boolean is ignored in gen 
-
-  // NOTE: googleAPIKey skipped - type string is ignored in gen 
-
-  // NOTE: googleSpreadsheetKey skipped - type string is ignored in gen 
-
-  // NOTE: googleSpreadsheetRange skipped - type string is ignored in gen 
-
-  // NOTE: startColumn skipped - type number is ignored in gen 
-
-  // NOTE: startRow skipped - type number is ignored in gen 
-
-  // NOTE: worksheet skipped - type number is ignored in gen 
-
+  double? dataRefreshRate;
+    
+  bool? enablePolling;
+    
+  double? endColumn;
+    
+  double? endRow;
+    
+  bool? firstRowAsNames;
+    
+  String? googleAPIKey;
+    
+  String? googleSpreadsheetKey;
+    
+  String? googleSpreadsheetRange;
+    
+  double? startColumn;
+    
+  double? startRow;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of dataRefreshRate (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of enablePolling (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of endColumn (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of endRow (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of firstRowAsNames (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of googleAPIKey (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of googleSpreadsheetKey (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of googleSpreadsheetRange (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of startColumn (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of startRow (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of worksheet (type number is ignored) ignore type: true
+    
+    if (this.dataRefreshRate != null) {
+        buffer.writeAll(["\"dataRefreshRate\":",this.dataRefreshRate, ","], "");
+    }
+    
+    if (this.enablePolling != null) {
+        buffer.writeAll(["\"enablePolling\":",this.enablePolling, ","], "");
+    }
+    
+    if (this.endColumn != null) {
+        buffer.writeAll(["\"endColumn\":",this.endColumn, ","], "");
+    }
+    
+    if (this.endRow != null) {
+        buffer.writeAll(["\"endRow\":",this.endRow, ","], "");
+    }
+    
+    if (this.firstRowAsNames != null) {
+        buffer.writeAll(["\"firstRowAsNames\":",this.firstRowAsNames, ","], "");
+    }
+    
+    if (this.googleAPIKey != null) {
+        buffer.writeAll(["\"googleAPIKey\":\'",this.googleAPIKey, "\',"], "");
+    }
+    
+    if (this.googleSpreadsheetKey != null) {
+        buffer.writeAll(["\"googleSpreadsheetKey\":\'",this.googleSpreadsheetKey, "\',"], "");
+    }
+    
+    if (this.googleSpreadsheetRange != null) {
+        buffer.writeAll(["\"googleSpreadsheetRange\":\'",this.googleSpreadsheetRange, "\',"], "");
+    }
+    
+    if (this.startColumn != null) {
+        buffer.writeAll(["\"startColumn\":",this.startColumn, ","], "");
+    }
+    
+    if (this.startRow != null) {
+        buffer.writeAll(["\"startRow\":",this.startRow, ","], "");
+    }
   }
+
 
 }

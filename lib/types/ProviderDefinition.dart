@@ -12,41 +12,65 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'Themes.dart';
 import 'OptionFragment.dart';
 
 /** 
- * ProviderDefinition 
+ * ProviderDefinition
  */
 class ProviderDefinition extends OptionFragment {
-  ProviderDefinition( ) : super();
-  // NOTE: defaultCredits skipped - type string is ignored in gen 
 
-  // NOTE: initialProjectionName skipped - type string is ignored in gen 
+  ProviderDefinition({
+    this.defaultCredits = null,
+    this.initialProjectionName = null,
+    this.requiresApiKey = null,
+    this.subdomains = null,
+    this.themes = null
+  });
 
-  // NOTE: requiresApiKey skipped - type boolean is ignored in gen 
-
+  String? defaultCredits;
+    
+  String? initialProjectionName;
+    
+  bool? requiresApiKey;
+    
+  String? subdomains;
+    
+  Themes? themes;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of defaultCredits (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of initialProjectionName (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of requiresApiKey (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of subdomains (type string[] is ignored) ignore type: true
-
-    // NOTE: skip serialization of themes (type Themes is ignored) ignore type: true
+    
+    if (this.defaultCredits != null) {
+        buffer.writeAll(["\"defaultCredits\":\'",this.defaultCredits, "\',"], "");
+    }
+    
+    if (this.initialProjectionName != null) {
+        buffer.writeAll(["\"initialProjectionName\":\'",this.initialProjectionName, "\',"], "");
+    }
+    
+    if (this.requiresApiKey != null) {
+        buffer.writeAll(["\"requiresApiKey\":",this.requiresApiKey, ","], "");
+    }
+    
+    if (this.subdomains != null) {
+        buffer.writeAll(["\"subdomains\":",this.subdomains, ","], "");
+    }
+    
+    if (this.themes != null) {
+        buffer.writeAll(["\"themes\":",this.themes?.toJSON(), ","], "");
+    }
   }
+
 
 }

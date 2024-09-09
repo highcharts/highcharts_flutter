@@ -12,32 +12,41 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * AnnotationsAccessibilityOptionsObject 
+ * AnnotationsAccessibilityOptionsObject
  */
 class AnnotationsAccessibilityOptionsObject extends OptionFragment {
-  AnnotationsAccessibilityOptionsObject( {
+
+  AnnotationsAccessibilityOptionsObject({
     this.description = null
-  }) : super();
+  });
+
+  /**
+   * Description of an annotation label for screen readers and other assistive
+   * technology.  
+   */
   String? description;
     
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    if (this.description != null) {  
-      buffer.writeAll(["\"description\":\'",this.description, "\',"], "");
+
+    
+    if (this.description != null) {
+        buffer.writeAll(["\"description\":\'",this.description, "\',"], "");
     }
   }
+
 
 }

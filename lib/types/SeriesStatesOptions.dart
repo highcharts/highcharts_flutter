@@ -12,34 +12,51 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'StatesOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * SeriesStatesOptions 
+ * SeriesStatesOptions
  */
 class SeriesStatesOptions extends StatesOptions {
-  SeriesStatesOptions( ) : super();
-  
+
+  SeriesStatesOptions({
+    super.active = null,
+    super.hover = null,
+    super.inactive = null,
+    super.normal = null,
+    super.select = null
+  });
+
+  // NOTE: hover skipped - type "states">> is ignored in gen 
+
+  // NOTE: inactive skipped - type "states">> is ignored in gen 
+
+  // NOTE: normal skipped - type "states">> is ignored in gen 
+
+  // NOTE: select skipped - type "states">> is ignored in gen 
+
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of hover (type "states">> is ignored) ignore type: true
 
-    // NOTE: skip serialization of inactive (type "states">> is ignored) ignore type: true
+    // NOTE: skip serialization of hover (type "states">> ignored, skipped: true)
 
-    // NOTE: skip serialization of normal (type "states">> is ignored) ignore type: true
+    // NOTE: skip serialization of inactive (type "states">> ignored, skipped: true)
 
-    // NOTE: skip serialization of select (type "states">> is ignored) ignore type: true
+    // NOTE: skip serialization of normal (type "states">> ignored, skipped: true)
+
+    // NOTE: skip serialization of select (type "states">> ignored, skipped: true)
+
   }
+
 
 }

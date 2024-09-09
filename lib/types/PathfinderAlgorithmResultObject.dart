@@ -12,31 +12,45 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'ObstacleSegment.dart';
 import 'SVGPath.dart';
 import 'OptionFragment.dart';
 
 /** 
- * PathfinderAlgorithmResultObject 
+ * PathfinderAlgorithmResultObject
  */
 class PathfinderAlgorithmResultObject extends OptionFragment {
-  PathfinderAlgorithmResultObject( ) : super();
-  
+
+  PathfinderAlgorithmResultObject({
+    this.obstacles = null,
+    this.path = null
+  });
+
+  ObstacleSegment? obstacles;
+    
+  SVGPath? path;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of obstacles (type ObstacleSegment[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of path (type SVGPath is ignored) ignore type: true
+    
+    if (this.obstacles != null) {
+        buffer.writeAll(["\"obstacles\":",this.obstacles, ","], "");
+    }
+    
+    if (this.path != null) {
+        buffer.writeAll(["\"path\":",this.path?.toJSON(), ","], "");
+    }
   }
+
 
 }

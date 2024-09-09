@@ -12,39 +12,50 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * ScatterSeriesJitterOptions 
+ * ScatterSeriesJitterOptions
  */
 class ScatterSeriesJitterOptions extends OptionFragment {
-  ScatterSeriesJitterOptions( {
+
+  ScatterSeriesJitterOptions({
     this.x = null,
     this.y = null
-  }) : super();
+  });
+
+  /**
+   * The maximal X offset for the random jitter effect.  
+   */
   double? x;
     
+  /**
+   * The maximal Y offset for the random jitter effect.  
+   */
   double? y;
     
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    if (this.x != null) {  
-      buffer.writeAll(["\"x\":",this.x, ","], "");
-    }
 
-    if (this.y != null) {  
-      buffer.writeAll(["\"y\":",this.y, ","], "");
+    
+    if (this.x != null) {
+        buffer.writeAll(["\"x\":",this.x, ","], "");
+    }
+    
+    if (this.y != null) {
+        buffer.writeAll(["\"y\":",this.y, ","], "");
     }
   }
+
 
 }

@@ -12,51 +12,79 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'PolarConnector.dart';
 import 'OptionFragment.dart';
 
 /** 
- * PolarConnector 
+ * PolarConnector
  */
 class PolarConnector extends OptionFragment {
-  PolarConnector( ) : super();
-  // NOTE: leftContX skipped - type number is ignored in gen 
 
-  // NOTE: leftContY skipped - type number is ignored in gen 
+  PolarConnector({
+    this.leftContX = null,
+    this.leftContY = null,
+    this.plotX = null,
+    this.plotY = null,
+    this.prevPointCont = null,
+    this.rightContX = null,
+    this.rightContY = null
+  });
 
-  // NOTE: plotX skipped - type number is ignored in gen 
-
-  // NOTE: plotY skipped - type number is ignored in gen 
-
-  // NOTE: rightContX skipped - type number is ignored in gen 
-
-  // NOTE: rightContY skipped - type number is ignored in gen 
-
+  double? leftContX;
+    
+  double? leftContY;
+    
+  double? plotX;
+    
+  double? plotY;
+    
+  PolarConnector? prevPointCont;
+    
+  double? rightContX;
+    
+  double? rightContY;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of leftContX (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of leftContY (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of plotX (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of plotY (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of prevPointCont (type PolarConnector is ignored) ignore type: true
-
-    // NOTE: skip serialization of rightContX (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of rightContY (type number is ignored) ignore type: true
+    
+    if (this.leftContX != null) {
+        buffer.writeAll(["\"leftContX\":",this.leftContX, ","], "");
+    }
+    
+    if (this.leftContY != null) {
+        buffer.writeAll(["\"leftContY\":",this.leftContY, ","], "");
+    }
+    
+    if (this.plotX != null) {
+        buffer.writeAll(["\"plotX\":",this.plotX, ","], "");
+    }
+    
+    if (this.plotY != null) {
+        buffer.writeAll(["\"plotY\":",this.plotY, ","], "");
+    }
+    
+    if (this.prevPointCont != null) {
+        buffer.writeAll(["\"prevPointCont\":",this.prevPointCont?.toJSON(), ","], "");
+    }
+    
+    if (this.rightContX != null) {
+        buffer.writeAll(["\"rightContX\":",this.rightContX, ","], "");
+    }
+    
+    if (this.rightContY != null) {
+        buffer.writeAll(["\"rightContY\":",this.rightContY, ","], "");
+    }
   }
+
 
 }

@@ -12,27 +12,35 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * Pathfinder 
+ * Pathfinder
  */
 class Pathfinder extends OptionFragment {
-  Pathfinder( ) : super();
-  
+
+  Pathfinder({
+    this.algorithms = null
+  });
+
+  Map<String, String>? algorithms;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of algorithms (type Generic is ignored) ignore type: true
+
+    // NOTE: skip serialization of algorithms (type Generic ignored, skipped: true)
+
   }
+
 
 }

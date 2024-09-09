@@ -12,28 +12,37 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'WordcloudFieldObject.dart';
 import 'OptionFragment.dart';
 
 /** 
- * WordcloudSpiralParamsObject 
+ * WordcloudSpiralParamsObject
  */
 class WordcloudSpiralParamsObject extends OptionFragment {
-  WordcloudSpiralParamsObject( ) : super();
-  
+
+  WordcloudSpiralParamsObject({
+    this.field = null
+  });
+
+  WordcloudFieldObject? field;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of field (type WordcloudFieldObject is ignored) ignore type: true
+
+    
+    if (this.field != null) {
+        buffer.writeAll(["\"field\":",this.field?.toJSON(), ","], "");
+    }
   }
+
 
 }

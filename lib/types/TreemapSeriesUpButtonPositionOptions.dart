@@ -12,53 +12,78 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * TreemapSeriesUpButtonPositionOptions 
+ * TreemapSeriesUpButtonPositionOptions
  */
 class TreemapSeriesUpButtonPositionOptions extends OptionFragment {
-  TreemapSeriesUpButtonPositionOptions( {
+
+  TreemapSeriesUpButtonPositionOptions({
     this.align = null,
     this.verticalAlign = null,
     this.x = null,
     this.y = null
-  }) : super();
+  });
+
+  /**
+   * Horizontal alignment of the button. 
+   * 
+   * Defaults to 'right'. 
+   */
   String? align;
     
+  /**
+   * Vertical alignment of the button. 
+   * 
+   * Defaults to 'top'. 
+   */
   String? verticalAlign;
     
+  /**
+   * Horizontal offset of the button. 
+   * 
+   * Defaults to '-10'. 
+   */
   double? x;
     
+  /**
+   * Vertical offset of the button. 
+   * 
+   * Defaults to '10'. 
+   */
   double? y;
     
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    if (this.align != null) {  
-      buffer.writeAll(["\"align\":\'",this.align, "\',"], "");
-    }
 
-    if (this.verticalAlign != null) {  
-      buffer.writeAll(["\"verticalAlign\":\'",this.verticalAlign, "\',"], "");
+    
+    if (this.align != null) {
+        buffer.writeAll(["\"align\":\'",this.align, "\',"], "");
     }
-
-    if (this.x != null) {  
-      buffer.writeAll(["\"x\":",this.x, ","], "");
+    
+    if (this.verticalAlign != null) {
+        buffer.writeAll(["\"verticalAlign\":\'",this.verticalAlign, "\',"], "");
     }
-
-    if (this.y != null) {  
-      buffer.writeAll(["\"y\":",this.y, ","], "");
+    
+    if (this.x != null) {
+        buffer.writeAll(["\"x\":",this.x, ","], "");
+    }
+    
+    if (this.y != null) {
+        buffer.writeAll(["\"y\":",this.y, ","], "");
     }
   }
+
 
 }

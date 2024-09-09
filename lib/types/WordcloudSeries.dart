@@ -12,10 +12,9 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'WordcloudSeriesOptions.dart';
 import 'Series.dart';
 import 'PointOptions.dart';
@@ -34,8 +33,7 @@ class WordcloudSeries extends Series {
     this.data = null
   });
 
-  
-  @override
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
@@ -56,16 +54,13 @@ class WordcloudSeries extends Series {
         if (point.length > 1) {
           seriesData.writeAll(["["], "");
         }
-
-          for (var sub in point) {
-            if (sub is String) {
-              seriesData.writeAll(["\"", sub, "\","], "");
-            } else {
-              seriesData.writeAll([sub], ",");
-            }
-
+        for (var sub in point) {
+          if (sub is String) {
+            seriesData.writeAll(["\"", sub, "\","], "");
+          } else {
+            seriesData.writeAll([sub], ",");
           }
-
+        }
         if (point.length > 1) {
           seriesData.writeAll(["],"], "");
         } else {
@@ -92,35 +87,61 @@ class WordcloudSeries extends Series {
 
 
     
-    // NOTE: skip serialization of allowExtendPlayingField (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of data (type WordcloudPointOptions)[] is ignored) ignore type: true
-
-    if (this.options?.maxFontSize != null) {  
-      buffer.writeAll(["\"maxFontSize\":",this.options?.maxFontSize, ","], "");
+    
+    if (this.options?.allowExtendPlayingField != null) {
+        buffer.writeAll(["\"allowExtendPlayingField\":",this.options?.allowExtendPlayingField, ","], "");
     }
+    // NOTE: skip serialization of animation (type WordcloudSeriesAnimationOptions ignored, skipped: true)
 
-    if (this.options?.minFontSize != null) {  
-      buffer.writeAll(["\"minFontSize\":",this.options?.minFontSize, ","], "");
+    
+    if (this.options?.borderWidth != null) {
+        buffer.writeAll(["\"borderWidth\":",this.options?.borderWidth, ","], "");
     }
-
-    if (this.options?.placementStrategy != null) {  
-      buffer.writeAll(["\"placementStrategy\":\'",this.options?.placementStrategy, "\',"], "");
+    
+    if (this.options?.clip != null) {
+        buffer.writeAll(["\"clip\":",this.options?.clip, ","], "");
     }
-
-    if (this.options?.rotation != null) {  
-      buffer.writeAll(["\"rotation\":",this.options?.rotation?.toJSON(), ","], "");
+    
+    if (this.options?.colorByPoint != null) {
+        buffer.writeAll(["\"colorByPoint\":",this.options?.colorByPoint, ","], "");
     }
-
-    if (this.options?.spiral != null) {  
-      buffer.writeAll(["\"spiral\":\'",this.options?.spiral, "\',"], "");
+    
+    if (this.options?.data != null) {
+        buffer.writeAll(["\"data\":",this.options?.data, ","], "");
     }
-
-    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
-
-    if (this.options?.style != null) {  
-      buffer.writeAll(["\"style\":",this.options?.style?.toJSON(), ","], "");
+    
+    if (this.options?.maxFontSize != null) {
+        buffer.writeAll(["\"maxFontSize\":",this.options?.maxFontSize, ","], "");
     }
+    
+    if (this.options?.minFontSize != null) {
+        buffer.writeAll(["\"minFontSize\":",this.options?.minFontSize, ","], "");
+    }
+    
+    if (this.options?.placementStrategy != null) {
+        buffer.writeAll(["\"placementStrategy\":\'",this.options?.placementStrategy, "\',"], "");
+    }
+    
+    if (this.options?.rotation != null) {
+        buffer.writeAll(["\"rotation\":",this.options?.rotation?.toJSON(), ","], "");
+    }
+    
+    if (this.options?.showInLegend != null) {
+        buffer.writeAll(["\"showInLegend\":",this.options?.showInLegend, ","], "");
+    }
+    
+    if (this.options?.spiral != null) {
+        buffer.writeAll(["\"spiral\":\'",this.options?.spiral, "\',"], "");
+    }
+    // NOTE: skip serialization of states (type Generic ignored, skipped: true)
+
+    
+    if (this.options?.style != null) {
+        buffer.writeAll(["\"style\":",this.options?.style?.toJSON(), ","], "");
+    }
+    // NOTE: skip serialization of tooltip (type Generic ignored, skipped: true)
+
   }
 
 }

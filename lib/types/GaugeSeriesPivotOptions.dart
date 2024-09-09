@@ -12,53 +12,80 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * GaugeSeriesPivotOptions 
+ * GaugeSeriesPivotOptions
  */
 class GaugeSeriesPivotOptions extends OptionFragment {
-  GaugeSeriesPivotOptions( {
+
+  GaugeSeriesPivotOptions({
     this.backgroundColor = null,
     this.borderColor = null,
     this.borderWidth = null,
     this.radius = null
-  }) : super();
+  });
+
+  /**
+   * The background color or fill of the pivot. 
+   * 
+   * Defaults to '#000000'. 
+   */
   String? backgroundColor;
     
+  /**
+   * The border or stroke color of the pivot. In able to change
+   * this, the borderWidth must also be set to something other
+   * than the default 0. 
+   * 
+   * Defaults to '#cccccc'. 
+   */
   String? borderColor;
     
+  /**
+   * The border or stroke width of the pivot. 
+   * 
+   * Defaults to '0'. 
+   */
   double? borderWidth;
     
+  /**
+   * The pixel radius of the pivot. 
+   * 
+   * Defaults to '5'. 
+   */
   double? radius;
     
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    if (this.backgroundColor != null) {  
-      buffer.writeAll(["\"backgroundColor\":\'",this.backgroundColor, "\',"], "");
-    }
 
-    if (this.borderColor != null) {  
-      buffer.writeAll(["\"borderColor\":\'",this.borderColor, "\',"], "");
+    
+    if (this.backgroundColor != null) {
+        buffer.writeAll(["\"backgroundColor\":\'",this.backgroundColor, "\',"], "");
     }
-
-    if (this.borderWidth != null) {  
-      buffer.writeAll(["\"borderWidth\":",this.borderWidth, ","], "");
+    
+    if (this.borderColor != null) {
+        buffer.writeAll(["\"borderColor\":\'",this.borderColor, "\',"], "");
     }
-
-    if (this.radius != null) {  
-      buffer.writeAll(["\"radius\":",this.radius, ","], "");
+    
+    if (this.borderWidth != null) {
+        buffer.writeAll(["\"borderWidth\":",this.borderWidth, ","], "");
+    }
+    
+    if (this.radius != null) {
+        buffer.writeAll(["\"radius\":",this.radius, ","], "");
     }
   }
+
 
 }

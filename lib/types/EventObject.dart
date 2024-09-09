@@ -12,46 +12,79 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
-import 'Event.dart';
+ */
 import 'Point.dart';
 import 'SeriesOptions.dart';
 import 'Chart.dart';
 import 'OptionFragment.dart';
 
 /** 
- * EventObject 
+ * EventObject
  */
 class EventObject extends OptionFragment {
-  EventObject( ) : super();
-  // NOTE: category skipped - type number is ignored in gen 
+
+  EventObject({
+    this.category = null,
+    this.point = null,
+    this.points = null,
+    this.seriesOptions = null,
+    this.target = null
+  });
+
+  double? category;
+    
+  // NOTE: originalEvent skipped - type Event is ignored in gen 
+
+  Point? point;
+    
+  Point? points;
+    
+  // NOTE: preventDefault skipped - type Function is ignored in gen 
+
+  SeriesOptions? seriesOptions;
+    
+  Chart? target;
+    
+  // NOTE: type skipped - type "drilldown" is ignored in gen 
 
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of category (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of originalEvent (type Event is ignored) ignore type: 1
+    
+    if (this.category != null) {
+        buffer.writeAll(["\"category\":",this.category, ","], "");
+    }
+    // NOTE: skip serialization of originalEvent (type Event ignored, skipped: true)
 
-    // NOTE: skip serialization of point (type Point is ignored) ignore type: true
+    
+    if (this.point != null) {
+        buffer.writeAll(["\"point\":",this.point?.toJSON(), ","], "");
+    }
+    
+    if (this.points != null) {
+        buffer.writeAll(["\"points\":",this.points, ","], "");
+    }
+    // NOTE: skip serialization of preventDefault (type Function ignored, skipped: true)
 
-    // NOTE: skip serialization of points (type Point)[] is ignored) ignore type: true
+    
+    if (this.seriesOptions != null) {
+        buffer.writeAll(["\"seriesOptions\":",this.seriesOptions?.toJSON(), ","], "");
+    }
+    
+    if (this.target != null) {
+        buffer.writeAll(["\"target\":",this.target?.toJSON(), ","], "");
+    }
+    // NOTE: skip serialization of type (type "drilldown" ignored, skipped: true)
 
-    // NOTE: skip serialization of preventDefault (type Function is ignored) ignore type: 1
-
-    // NOTE: skip serialization of seriesOptions (type SeriesOptions is ignored) ignore type: true
-
-    // NOTE: skip serialization of target (type Chart is ignored) ignore type: true
-
-    // NOTE: skip serialization of type (type "drilldown" is ignored) ignore type: true
   }
+
 
 }

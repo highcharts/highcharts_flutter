@@ -12,62 +12,101 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * FormFieldOptions 
+ * FormFieldOptions
  */
 class FormFieldOptions extends OptionFragment {
-  FormFieldOptions( ) : super();
-  // NOTE: iconsURLPrefix skipped - type string is ignored in gen 
 
-  // NOTE: icon skipped - type string is ignored in gen 
+  FormFieldOptions({
+    this.className = null,
+    this.enabledOnOffLabels = null,
+    this.icon = null,
+    this.iconsURLPrefix = null,
+    this.id = null,
+    this.name = null,
+    this.propertyPath = null,
+    this.title = null,
+    this.value = null
+  });
 
-  // NOTE: id skipped - type string is ignored in gen 
+  String? propertyPath;
+    
+  String? iconsURLPrefix;
+    
+  String? icon;
+    
+  String? id;
+    
+  String? name;
+    
+  // NOTE: callback skipped - type Function is ignored in gen 
 
-  // NOTE: name skipped - type string is ignored in gen 
+  String? title;
+    
+  // NOTE: onchange skipped - type Function is ignored in gen 
 
-  // NOTE: title skipped - type string is ignored in gen 
-
-  // NOTE: value skipped - type string is ignored in gen 
-
-  // NOTE: className skipped - type string is ignored in gen 
-
-  // NOTE: enabledOnOffLabels skipped - type boolean is ignored in gen 
-
+  String? value;
+    
+  String? className;
+    
+  bool? enabledOnOffLabels;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of propertyPath (type string[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of iconsURLPrefix (type string is ignored) ignore type: true
+    
+    if (this.propertyPath != null) {
+        buffer.writeAll(["\"propertyPath\":",this.propertyPath, ","], "");
+    }
+    
+    if (this.iconsURLPrefix != null) {
+        buffer.writeAll(["\"iconsURLPrefix\":\'",this.iconsURLPrefix, "\',"], "");
+    }
+    
+    if (this.icon != null) {
+        buffer.writeAll(["\"icon\":\'",this.icon, "\',"], "");
+    }
+    
+    if (this.id != null) {
+        buffer.writeAll(["\"id\":\'",this.id, "\',"], "");
+    }
+    
+    if (this.name != null) {
+        buffer.writeAll(["\"name\":\'",this.name, "\',"], "");
+    }
+    // NOTE: skip serialization of callback (type Function ignored, skipped: true)
 
-    // NOTE: skip serialization of icon (type string is ignored) ignore type: true
+    
+    if (this.title != null) {
+        buffer.writeAll(["\"title\":\'",this.title, "\',"], "");
+    }
+    // NOTE: skip serialization of onchange (type Function ignored, skipped: true)
 
-    // NOTE: skip serialization of id (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of name (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of callback (type Function is ignored) ignore type: 1
-
-    // NOTE: skip serialization of title (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of onchange (type Function is ignored) ignore type: 1
-
-    // NOTE: skip serialization of value (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of className (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of enabledOnOffLabels (type boolean is ignored) ignore type: true
+    
+    if (this.value != null) {
+        buffer.writeAll(["\"value\":\'",this.value, "\',"], "");
+    }
+    
+    if (this.className != null) {
+        buffer.writeAll(["\"className\":\'",this.className, "\',"], "");
+    }
+    
+    if (this.enabledOnOffLabels != null) {
+        buffer.writeAll(["\"enabledOnOffLabels\":",this.enabledOnOffLabels, ","], "");
+    }
   }
+
 
 }

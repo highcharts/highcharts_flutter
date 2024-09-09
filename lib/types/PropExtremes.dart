@@ -12,32 +12,44 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * PropExtremes 
+ * PropExtremes
  */
 class PropExtremes extends OptionFragment {
-  PropExtremes( ) : super();
-  // NOTE: max skipped - type number is ignored in gen 
 
-  // NOTE: min skipped - type number is ignored in gen 
+  PropExtremes({
+    this.max = null,
+    this.min = null
+  });
 
+  double? max;
+    
+  double? min;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of max (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of min (type number is ignored) ignore type: true
+    
+    if (this.max != null) {
+        buffer.writeAll(["\"max\":",this.max, ","], "");
+    }
+    
+    if (this.min != null) {
+        buffer.writeAll(["\"min\":",this.min, ","], "");
+    }
   }
+
 
 }

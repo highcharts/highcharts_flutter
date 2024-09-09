@@ -12,45 +12,70 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'BBoxObject.dart';
 import 'OptionFragment.dart';
 
 /** 
- * DragDropPositionObject 
+ * DragDropPositionObject
  */
 class DragDropPositionObject extends OptionFragment {
-  DragDropPositionObject( ) : super();
-  // NOTE: chartX skipped - type number is ignored in gen 
 
-  // NOTE: chartY skipped - type number is ignored in gen 
+  DragDropPositionObject({
+    this.chartX = null,
+    this.chartY = null,
+    this.guideBox = null,
+    this.points = null,
+    this.prevdX = null,
+    this.prevdY = null
+  });
 
-  // NOTE: prevdX skipped - type number is ignored in gen 
-
-  // NOTE: prevdY skipped - type number is ignored in gen 
-
+  double? chartX;
+    
+  double? chartY;
+    
+  BBoxObject? guideBox;
+    
+  Map<String, String>? points;
+    
+  double? prevdX;
+    
+  double? prevdY;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of chartX (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of chartY (type number is ignored) ignore type: true
+    
+    if (this.chartX != null) {
+        buffer.writeAll(["\"chartX\":",this.chartX, ","], "");
+    }
+    
+    if (this.chartY != null) {
+        buffer.writeAll(["\"chartY\":",this.chartY, ","], "");
+    }
+    
+    if (this.guideBox != null) {
+        buffer.writeAll(["\"guideBox\":",this.guideBox?.toJSON(), ","], "");
+    }
+    // NOTE: skip serialization of points (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of guideBox (type BBoxObject is ignored) ignore type: true
-
-    // NOTE: skip serialization of points (type Generic is ignored) ignore type: true
-
-    // NOTE: skip serialization of prevdX (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of prevdY (type number is ignored) ignore type: true
+    
+    if (this.prevdX != null) {
+        buffer.writeAll(["\"prevdX\":",this.prevdX, ","], "");
+    }
+    
+    if (this.prevdY != null) {
+        buffer.writeAll(["\"prevdY\":",this.prevdY, ","], "");
+    }
   }
+
 
 }

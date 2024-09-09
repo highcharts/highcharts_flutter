@@ -12,10 +12,9 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'VBPOptions.dart';
 import 'Series.dart';
 import 'PointOptions.dart';
@@ -34,8 +33,7 @@ class VBPSeries extends Series {
     this.data = null
   });
 
-  
-  @override
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
@@ -56,16 +54,13 @@ class VBPSeries extends Series {
         if (point.length > 1) {
           seriesData.writeAll(["["], "");
         }
-
-          for (var sub in point) {
-            if (sub is String) {
-              seriesData.writeAll(["\"", sub, "\","], "");
-            } else {
-              seriesData.writeAll([sub], ",");
-            }
-
+        for (var sub in point) {
+          if (sub is String) {
+            seriesData.writeAll(["\"", sub, "\","], "");
+          } else {
+            seriesData.writeAll([sub], ",");
           }
-
+        }
         if (point.length > 1) {
           seriesData.writeAll(["],"], "");
         } else {
@@ -92,40 +87,42 @@ class VBPSeries extends Series {
 
 
     
-    if (this.options?.animationLimit != null) {  
-      buffer.writeAll(["\"animationLimit\":",this.options?.animationLimit, ","], "");
+
+    
+    if (this.options?.animationLimit != null) {
+        buffer.writeAll(["\"animationLimit\":",this.options?.animationLimit, ","], "");
     }
-
-    if (this.options?.crisp != null) {  
-      buffer.writeAll(["\"crisp\":",this.options?.crisp, ","], "");
+    
+    if (this.options?.crisp != null) {
+        buffer.writeAll(["\"crisp\":",this.options?.crisp, ","], "");
     }
-
-    if (this.options?.dataGrouping != null) {  
-      buffer.writeAll(["\"dataGrouping\":",this.options?.dataGrouping?.toJSON(), ","], "");
+    
+    if (this.options?.dataGrouping != null) {
+        buffer.writeAll(["\"dataGrouping\":",this.options?.dataGrouping?.toJSON(), ","], "");
     }
+    // NOTE: skip serialization of dataLabels (type DataLabelOptions ignored, skipped: false)
 
-    // NOTE: skip serialization of dataLabels (type DataLabelOptions is ignored) ignore type: false
-
-    if (this.options?.enableMouseTracking != null) {  
-      buffer.writeAll(["\"enableMouseTracking\":",this.options?.enableMouseTracking, ","], "");
+    
+    if (this.options?.enableMouseTracking != null) {
+        buffer.writeAll(["\"enableMouseTracking\":",this.options?.enableMouseTracking, ","], "");
     }
+    // NOTE: skip serialization of params (type VBPParamsOptions ignored, skipped: false)
 
-    // NOTE: skip serialization of params (type VBPParamsOptions is ignored) ignore type: false
-
-    if (this.options?.pointPadding != null) {  
-      buffer.writeAll(["\"pointPadding\":",this.options?.pointPadding, ","], "");
+    
+    if (this.options?.pointPadding != null) {
+        buffer.writeAll(["\"pointPadding\":",this.options?.pointPadding, ","], "");
     }
-
-    if (this.options?.volumeDivision != null) {  
-      buffer.writeAll(["\"volumeDivision\":",this.options?.volumeDivision?.toJSON(), ","], "");
+    
+    if (this.options?.volumeDivision != null) {
+        buffer.writeAll(["\"volumeDivision\":",this.options?.volumeDivision?.toJSON(), ","], "");
     }
-
-    if (this.options?.zIndex != null) {  
-      buffer.writeAll(["\"zIndex\":",this.options?.zIndex, ","], "");
+    
+    if (this.options?.zIndex != null) {
+        buffer.writeAll(["\"zIndex\":",this.options?.zIndex, ","], "");
     }
-
-    if (this.options?.zoneLines != null) {  
-      buffer.writeAll(["\"zoneLines\":",this.options?.zoneLines?.toJSON(), ","], "");
+    
+    if (this.options?.zoneLines != null) {
+        buffer.writeAll(["\"zoneLines\":",this.options?.zoneLines?.toJSON(), ","], "");
     }
   }
 

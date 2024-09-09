@@ -12,55 +12,102 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'ClusterAndNoiseObject.dart';
 import 'GroupMapObject.dart';
 import 'MarkerClusterPointsStateObject.dart';
 import 'OptionFragment.dart';
 
 /** 
- * MarkerClusterInfoObject 
+ * MarkerClusterInfoObject
  */
 class MarkerClusterInfoObject extends OptionFragment {
-  MarkerClusterInfoObject( ) : super();
-  // NOTE: initMinX skipped - type number is ignored in gen 
 
-  // NOTE: initMaxX skipped - type number is ignored in gen 
+  MarkerClusterInfoObject({
+    this.clusters = null,
+    this.groupedXData = null,
+    this.groupedYData = null,
+    this.groupMap = null,
+    this.initMaxX = null,
+    this.initMaxY = null,
+    this.initMinX = null,
+    this.initMinY = null,
+    this.noise = null,
+    this.pointsState = null
+  });
 
-  // NOTE: initMinY skipped - type number is ignored in gen 
-
-  // NOTE: initMaxY skipped - type number is ignored in gen 
-
+  ClusterAndNoiseObject? clusters;
+    
+  ClusterAndNoiseObject? noise;
+    
+  double? groupedXData;
+    
+  double? groupedYData;
+    
+  GroupMapObject? groupMap;
+    
+  double? initMinX;
+    
+  double? initMaxX;
+    
+  double? initMinY;
+    
+  double? initMaxY;
+    
+  MarkerClusterPointsStateObject? pointsState;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of clusters (type ClusterAndNoiseObject[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of noise (type ClusterAndNoiseObject[] is ignored) ignore type: true
-
-    // NOTE: skip serialization of groupedXData (type number[] is ignored) ignore type: true
-
-    // NOTE: skip serialization of groupedYData (type number[] is ignored) ignore type: true
-
-    // NOTE: skip serialization of groupMap (type GroupMapObject[] is ignored) ignore type: true
-
-    // NOTE: skip serialization of initMinX (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of initMaxX (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of initMinY (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of initMaxY (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of pointsState (type MarkerClusterPointsStateObject is ignored) ignore type: true
+    
+    if (this.clusters != null) {
+        buffer.writeAll(["\"clusters\":",this.clusters, ","], "");
+    }
+    
+    if (this.noise != null) {
+        buffer.writeAll(["\"noise\":",this.noise, ","], "");
+    }
+    
+    if (this.groupedXData != null) {
+        buffer.writeAll(["\"groupedXData\":",this.groupedXData, ","], "");
+    }
+    
+    if (this.groupedYData != null) {
+        buffer.writeAll(["\"groupedYData\":",this.groupedYData, ","], "");
+    }
+    
+    if (this.groupMap != null) {
+        buffer.writeAll(["\"groupMap\":",this.groupMap, ","], "");
+    }
+    
+    if (this.initMinX != null) {
+        buffer.writeAll(["\"initMinX\":",this.initMinX, ","], "");
+    }
+    
+    if (this.initMaxX != null) {
+        buffer.writeAll(["\"initMaxX\":",this.initMaxX, ","], "");
+    }
+    
+    if (this.initMinY != null) {
+        buffer.writeAll(["\"initMinY\":",this.initMinY, ","], "");
+    }
+    
+    if (this.initMaxY != null) {
+        buffer.writeAll(["\"initMaxY\":",this.initMaxY, ","], "");
+    }
+    
+    if (this.pointsState != null) {
+        buffer.writeAll(["\"pointsState\":",this.pointsState?.toJSON(), ","], "");
+    }
   }
+
 
 }

@@ -12,29 +12,42 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * BaseGeometry 
+ * BaseGeometry
  */
 class BaseGeometry extends OptionFragment {
-  BaseGeometry( ) : super();
-  
+
+  BaseGeometry({
+    this.arcs = null,
+    this.properties = null
+  });
+
+  double? arcs;
+    
+  Map<String, String>? properties;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of arcs (type number[][][] is ignored) ignore type: true
 
-    // NOTE: skip serialization of properties (type Generic is ignored) ignore type: true
+    
+    if (this.arcs != null) {
+        buffer.writeAll(["\"arcs\":",this.arcs, ","], "");
+    }
+    // NOTE: skip serialization of properties (type Generic ignored, skipped: true)
+
   }
+
 
 }

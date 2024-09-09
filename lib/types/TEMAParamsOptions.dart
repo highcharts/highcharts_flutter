@@ -12,31 +12,32 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'EMAParamsOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * TEMAParamsOptions 
+ * TEMAParamsOptions
  */
 class TEMAParamsOptions extends EMAParamsOptions {
-  TEMAParamsOptions( {
+
+  TEMAParamsOptions({
     super.index = null,
     super.period = null
-  }) : super();
-  
+  });
+
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    
+
   }
+
 
 }

@@ -12,31 +12,44 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'HTMLElement.dart';
 import 'OptionFragment.dart';
 
 /** 
- * ResizePointer 
+ * ResizePointer
  */
 class ResizePointer extends OptionFragment {
-  ResizePointer( ) : super();
-  // NOTE: isVisible skipped - type boolean is ignored in gen 
 
+  ResizePointer({
+    this.element = null,
+    this.isVisible = null
+  });
+
+  bool? isVisible;
+    
+  HTMLElement? element;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of isVisible (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of element (type HTMLElement is ignored) ignore type: true
+    
+    if (this.isVisible != null) {
+        buffer.writeAll(["\"isVisible\":",this.isVisible, ","], "");
+    }
+    
+    if (this.element != null) {
+        buffer.writeAll(["\"element\":",this.element?.toJSON(), ","], "");
+    }
   }
+
 
 }

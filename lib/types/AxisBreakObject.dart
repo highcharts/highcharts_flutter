@@ -12,40 +12,58 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * AxisBreakObject 
+ * AxisBreakObject
  */
 class AxisBreakObject extends OptionFragment {
-  AxisBreakObject( ) : super();
-  // NOTE: from skipped - type number is ignored in gen 
 
-  // NOTE: len skipped - type number is ignored in gen 
+  AxisBreakObject({
+    this.from = null,
+    this.len = null,
+    this.showPoints = null,
+    this.to = null
+  });
 
-  // NOTE: to skipped - type number is ignored in gen 
-
-  // NOTE: showPoints skipped - type boolean is ignored in gen 
-
+  double? from;
+    
+  double? len;
+    
+  double? to;
+    
+  bool? showPoints;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of from (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of len (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of to (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of showPoints (type boolean is ignored) ignore type: true
+    
+    if (this.from != null) {
+        buffer.writeAll(["\"from\":",this.from, ","], "");
+    }
+    
+    if (this.len != null) {
+        buffer.writeAll(["\"len\":",this.len, ","], "");
+    }
+    
+    if (this.to != null) {
+        buffer.writeAll(["\"to\":",this.to, ","], "");
+    }
+    
+    if (this.showPoints != null) {
+        buffer.writeAll(["\"showPoints\":",this.showPoints, ","], "");
+    }
   }
+
 
 }

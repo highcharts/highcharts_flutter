@@ -12,36 +12,51 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * SelectFormFieldItemOptions 
+ * SelectFormFieldItemOptions
  */
 class SelectFormFieldItemOptions extends OptionFragment {
-  SelectFormFieldItemOptions( ) : super();
-  // NOTE: iconsURLPrefix skipped - type string is ignored in gen 
 
-  // NOTE: name skipped - type string is ignored in gen 
+  SelectFormFieldItemOptions({
+    this.iconsURLPrefix = null,
+    this.iconURL = null,
+    this.name = null
+  });
 
-  // NOTE: iconURL skipped - type string is ignored in gen 
-
+  String? iconsURLPrefix;
+    
+  String? name;
+    
+  String? iconURL;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of iconsURLPrefix (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of name (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of iconURL (type string is ignored) ignore type: true
+    
+    if (this.iconsURLPrefix != null) {
+        buffer.writeAll(["\"iconsURLPrefix\":\'",this.iconsURLPrefix, "\',"], "");
+    }
+    
+    if (this.name != null) {
+        buffer.writeAll(["\"name\":\'",this.name, "\',"], "");
+    }
+    
+    if (this.iconURL != null) {
+        buffer.writeAll(["\"iconURL\":\'",this.iconURL, "\',"], "");
+    }
   }
+
 
 }

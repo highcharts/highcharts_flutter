@@ -12,31 +12,45 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'CSSObject.dart';
 import 'OptionFragment.dart';
 
+
 /** 
- * LabelsItemsOptions 
+ * LabelsItemsOptions
  */
 class LabelsItemsOptions extends OptionFragment {
-  LabelsItemsOptions( ) : super();
-  // NOTE: html skipped - type string is ignored in gen 
 
+  LabelsItemsOptions({
+    this.html = null,
+    this.style = null
+  });
+
+  String? html;
+    
+  CSSObject? style;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of html (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of style (type CSSObject is ignored) ignore type: true
+    
+    if (this.html != null) {
+        buffer.writeAll(["\"html\":\'",this.html, "\',"], "");
+    }
+    
+    if (this.style != null) {
+        buffer.writeAll(["\"style\":",this.style?.toJSON(), ","], "");
+    }
   }
+
 
 }

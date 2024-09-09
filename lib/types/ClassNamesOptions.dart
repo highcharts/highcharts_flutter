@@ -12,348 +12,604 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * ClassNamesOptions 
+ * ClassNamesOptions
  */
 class ClassNamesOptions extends OptionFragment {
-  ClassNamesOptions( ) : super();
-  // NOTE: accordionContainer skipped - type string is ignored in gen 
 
-  // NOTE: accordionContent skipped - type string is ignored in gen 
-
-  // NOTE: accordionHeader skipped - type string is ignored in gen 
-
-  // NOTE: accordionHeaderBtn skipped - type string is ignored in gen 
-
-  // NOTE: accordionHeaderIcon skipped - type string is ignored in gen 
-
-  // NOTE: accordionMenu skipped - type string is ignored in gen 
-
-  // NOTE: accordionMenuButton skipped - type string is ignored in gen 
-
-  // NOTE: accordionMenuButtonsContainer skipped - type string is ignored in gen 
-
-  // NOTE: accordionNestedWrapper skipped - type string is ignored in gen 
-
-  // NOTE: button skipped - type string is ignored in gen 
-
-  // NOTE: cellEditHighlight skipped - type string is ignored in gen 
-
-  // NOTE: collapsableContentHeader skipped - type string is ignored in gen 
-
-  // NOTE: confirmationPopup skipped - type string is ignored in gen 
-
-  // NOTE: contextDetectionPointer skipped - type string is ignored in gen 
-
-  // NOTE: contextMenu skipped - type string is ignored in gen 
-
-  // NOTE: contextMenuBtn skipped - type string is ignored in gen 
-
-  // NOTE: contextMenuBtnText skipped - type string is ignored in gen 
-
-  // NOTE: contextMenuItem skipped - type string is ignored in gen 
-
-  // NOTE: currentEditedElement skipped - type string is ignored in gen 
-
-  // NOTE: customSelect skipped - type string is ignored in gen 
-
-  // NOTE: customSelectButton skipped - type string is ignored in gen 
-
-  // NOTE: dashboardCellEditHighlightActive skipped - type string is ignored in gen 
-
-  // NOTE: dragMock skipped - type string is ignored in gen 
-
-  // NOTE: dropPointer skipped - type string is ignored in gen 
-
-  // NOTE: dropdown skipped - type string is ignored in gen 
-
-  // NOTE: dropdownButton skipped - type string is ignored in gen 
-
-  // NOTE: dropdownButtonContent skipped - type string is ignored in gen 
-
-  // NOTE: dropdownContent skipped - type string is ignored in gen 
-
-  // NOTE: dropdownIcon skipped - type string is ignored in gen 
-
-  // NOTE: editGridItems skipped - type string is ignored in gen 
-
-  // NOTE: editModeEnabled skipped - type string is ignored in gen 
-
-  // NOTE: editOverlay skipped - type string is ignored in gen 
-
-  // NOTE: editOverlayActive skipped - type string is ignored in gen 
-
-  // NOTE: editSidebar skipped - type string is ignored in gen 
-
-  // NOTE: editSidebarHide skipped - type string is ignored in gen 
-
-  // NOTE: editSidebarMenuItem skipped - type string is ignored in gen 
-
-  // NOTE: editSidebarRight skipped - type string is ignored in gen 
-
-  // NOTE: editSidebarRightShow skipped - type string is ignored in gen 
-
-  // NOTE: editSidebarShow skipped - type string is ignored in gen 
-
-  // NOTE: editSidebarTabBtn skipped - type string is ignored in gen 
-
-  // NOTE: editSidebarTabBtnWrapper skipped - type string is ignored in gen 
-
-  // NOTE: editSidebarTitle skipped - type string is ignored in gen 
-
-  // NOTE: editSidebarWrapper skipped - type string is ignored in gen 
-
-  // NOTE: editToolbar skipped - type string is ignored in gen 
-
-  // NOTE: editToolbarCell skipped - type string is ignored in gen 
-
-  // NOTE: editToolbarCellOutline skipped - type string is ignored in gen 
-
-  // NOTE: editToolbarItem skipped - type string is ignored in gen 
-
-  // NOTE: editToolbarRow skipped - type string is ignored in gen 
-
-  // NOTE: editToolbarRowOutline skipped - type string is ignored in gen 
-
-  // NOTE: editTools skipped - type string is ignored in gen 
-
-  // NOTE: editToolsBtn skipped - type string is ignored in gen 
-
-  // NOTE: hiddenElement skipped - type string is ignored in gen 
-
-  // NOTE: icon skipped - type string is ignored in gen 
-
-  // NOTE: labelText skipped - type string is ignored in gen 
-
-  // NOTE: maskElement skipped - type string is ignored in gen 
-
-  // NOTE: menu skipped - type string is ignored in gen 
-
-  // NOTE: menuDestroy skipped - type string is ignored in gen 
-
-  // NOTE: menuHorizontalSeparator skipped - type string is ignored in gen 
-
-  // NOTE: menuItem skipped - type string is ignored in gen 
-
-  // NOTE: menuVerticalSeparator skipped - type string is ignored in gen 
-
-  // NOTE: popupCloseButton skipped - type string is ignored in gen 
-
-  // NOTE: popupCancelBtn skipped - type string is ignored in gen 
-
-  // NOTE: popupConfirmBtn skipped - type string is ignored in gen 
-
-  // NOTE: popupButtonContainer skipped - type string is ignored in gen 
-
-  // NOTE: popupContentContainer skipped - type string is ignored in gen 
-
-  // NOTE: resizePointer skipped - type string is ignored in gen 
-
-  // NOTE: resizeSnap skipped - type string is ignored in gen 
-
-  // NOTE: resizeSnapX skipped - type string is ignored in gen 
-
-  // NOTE: resizeSnapY skipped - type string is ignored in gen 
-
-  // NOTE: resizerMenuBtnActive skipped - type string is ignored in gen 
-
-  // NOTE: collapsedElement skipped - type string is ignored in gen 
-
-  // NOTE: rowContextHighlight skipped - type string is ignored in gen 
-
-  // NOTE: separator skipped - type string is ignored in gen 
-
-  // NOTE: sidebarCloseButton skipped - type string is ignored in gen 
-
-  // NOTE: sidebarNavButton skipped - type string is ignored in gen 
-
-  // NOTE: toggleContainer skipped - type string is ignored in gen 
-
-  // NOTE: toggleLabels skipped - type string is ignored in gen 
-
-  // NOTE: toggleSlider skipped - type string is ignored in gen 
-
-  // NOTE: toggleWrapper skipped - type string is ignored in gen 
-
-  // NOTE: toggleWrapperColored skipped - type string is ignored in gen 
-
-  // NOTE: viewFullscreen skipped - type string is ignored in gen 
-
+  ClassNamesOptions({
+    this.accordionContainer = null,
+    this.accordionContent = null,
+    this.accordionHeader = null,
+    this.accordionHeaderBtn = null,
+    this.accordionHeaderIcon = null,
+    this.accordionMenu = null,
+    this.accordionMenuButton = null,
+    this.accordionMenuButtonsContainer = null,
+    this.accordionNestedWrapper = null,
+    this.button = null,
+    this.cellEditHighlight = null,
+    this.collapsableContentHeader = null,
+    this.collapsedElement = null,
+    this.confirmationPopup = null,
+    this.contextDetectionPointer = null,
+    this.contextMenu = null,
+    this.contextMenuBtn = null,
+    this.contextMenuBtnText = null,
+    this.contextMenuItem = null,
+    this.currentEditedElement = null,
+    this.customSelect = null,
+    this.customSelectButton = null,
+    this.dashboardCellEditHighlightActive = null,
+    this.dragMock = null,
+    this.dropdown = null,
+    this.dropdownButton = null,
+    this.dropdownButtonContent = null,
+    this.dropdownContent = null,
+    this.dropdownIcon = null,
+    this.dropPointer = null,
+    this.editGridItems = null,
+    this.editModeEnabled = null,
+    this.editOverlay = null,
+    this.editOverlayActive = null,
+    this.editSidebar = null,
+    this.editSidebarHide = null,
+    this.editSidebarMenuItem = null,
+    this.editSidebarRight = null,
+    this.editSidebarRightShow = null,
+    this.editSidebarShow = null,
+    this.editSidebarTabBtn = null,
+    this.editSidebarTabBtnWrapper = null,
+    this.editSidebarTitle = null,
+    this.editSidebarWrapper = null,
+    this.editToolbar = null,
+    this.editToolbarCell = null,
+    this.editToolbarCellOutline = null,
+    this.editToolbarItem = null,
+    this.editToolbarRow = null,
+    this.editToolbarRowOutline = null,
+    this.editTools = null,
+    this.editToolsBtn = null,
+    this.hiddenElement = null,
+    this.icon = null,
+    this.labelText = null,
+    this.maskElement = null,
+    this.menu = null,
+    this.menuDestroy = null,
+    this.menuHorizontalSeparator = null,
+    this.menuItem = null,
+    this.menuVerticalSeparator = null,
+    this.popupButtonContainer = null,
+    this.popupCancelBtn = null,
+    this.popupCloseButton = null,
+    this.popupConfirmBtn = null,
+    this.popupContentContainer = null,
+    this.resizePointer = null,
+    this.resizerMenuBtnActive = null,
+    this.resizeSnap = null,
+    this.resizeSnapX = null,
+    this.resizeSnapY = null,
+    this.rowContextHighlight = null,
+    this.separator = null,
+    this.sidebarCloseButton = null,
+    this.sidebarNavButton = null,
+    this.standaloneElement = null,
+    this.toggleContainer = null,
+    this.toggleLabels = null,
+    this.toggleSlider = null,
+    this.toggleWrapper = null,
+    this.toggleWrapperColored = null,
+    this.viewFullscreen = null
+  });
+
+  String? accordionContainer;
+    
+  String? accordionContent;
+    
+  String? accordionHeader;
+    
+  String? accordionHeaderBtn;
+    
+  String? accordionHeaderIcon;
+    
+  String? accordionMenu;
+    
+  String? accordionMenuButton;
+    
+  String? accordionMenuButtonsContainer;
+    
+  String? accordionNestedWrapper;
+    
+  String? button;
+    
+  String? cellEditHighlight;
+    
+  String? collapsableContentHeader;
+    
+  String? confirmationPopup;
+    
+  String? contextDetectionPointer;
+    
+  String? contextMenu;
+    
+  String? contextMenuBtn;
+    
+  String? contextMenuBtnText;
+    
+  String? contextMenuItem;
+    
+  String? currentEditedElement;
+    
+  String? customSelect;
+    
+  String? customSelectButton;
+    
+  String? dashboardCellEditHighlightActive;
+    
+  String? dragMock;
+    
+  String? dropPointer;
+    
+  String? dropdown;
+    
+  String? dropdownButton;
+    
+  String? dropdownButtonContent;
+    
+  String? dropdownContent;
+    
+  String? dropdownIcon;
+    
+  String? editGridItems;
+    
+  String? editModeEnabled;
+    
+  String? editOverlay;
+    
+  String? editOverlayActive;
+    
+  String? editSidebar;
+    
+  String? editSidebarHide;
+    
+  String? editSidebarMenuItem;
+    
+  String? editSidebarRight;
+    
+  String? editSidebarRightShow;
+    
+  String? editSidebarShow;
+    
+  String? editSidebarTabBtn;
+    
+  String? editSidebarTabBtnWrapper;
+    
+  String? editSidebarTitle;
+    
+  String? editSidebarWrapper;
+    
+  String? editToolbar;
+    
+  String? editToolbarCell;
+    
+  String? editToolbarCellOutline;
+    
+  String? editToolbarItem;
+    
+  String? editToolbarRow;
+    
+  String? editToolbarRowOutline;
+    
+  String? editTools;
+    
+  String? editToolsBtn;
+    
+  String? hiddenElement;
+    
+  String? icon;
+    
+  String? labelText;
+    
+  String? maskElement;
+    
+  String? menu;
+    
+  String? menuDestroy;
+    
+  String? menuHorizontalSeparator;
+    
+  String? menuItem;
+    
+  String? menuVerticalSeparator;
+    
+  String? popupCloseButton;
+    
+  String? popupCancelBtn;
+    
+  String? popupConfirmBtn;
+    
+  String? popupButtonContainer;
+    
+  String? popupContentContainer;
+    
+  String? resizePointer;
+    
+  String? resizeSnap;
+    
+  String? resizeSnapX;
+    
+  String? resizeSnapY;
+    
+  String? resizerMenuBtnActive;
+    
+  String? collapsedElement;
+    
+  String? rowContextHighlight;
+    
+  String? separator;
+    
+  String? sidebarCloseButton;
+    
+  String? sidebarNavButton;
+    
+  String? standaloneElement;
+    
+  String? toggleContainer;
+    
+  String? toggleLabels;
+    
+  String? toggleSlider;
+    
+  String? toggleWrapper;
+    
+  String? toggleWrapperColored;
+    
+  String? viewFullscreen;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of accordionContainer (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of accordionContent (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of accordionHeader (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of accordionHeaderBtn (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of accordionHeaderIcon (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of accordionMenu (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of accordionMenuButton (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of accordionMenuButtonsContainer (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of accordionNestedWrapper (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of button (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of cellEditHighlight (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of collapsableContentHeader (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of confirmationPopup (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of contextDetectionPointer (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of contextMenu (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of contextMenuBtn (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of contextMenuBtnText (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of contextMenuItem (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of currentEditedElement (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of customSelect (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of customSelectButton (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of dashboardCellEditHighlightActive (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of dragMock (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of dropPointer (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of dropdown (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of dropdownButton (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of dropdownButtonContent (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of dropdownContent (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of dropdownIcon (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of editGridItems (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of editModeEnabled (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of editOverlay (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of editOverlayActive (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of editSidebar (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of editSidebarHide (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of editSidebarMenuItem (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of editSidebarRight (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of editSidebarRightShow (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of editSidebarShow (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of editSidebarTabBtn (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of editSidebarTabBtnWrapper (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of editSidebarTitle (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of editSidebarWrapper (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of editToolbar (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of editToolbarCell (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of editToolbarCellOutline (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of editToolbarItem (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of editToolbarRow (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of editToolbarRowOutline (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of editTools (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of editToolsBtn (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of hiddenElement (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of icon (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of labelText (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of maskElement (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of menu (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of menuDestroy (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of menuHorizontalSeparator (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of menuItem (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of menuVerticalSeparator (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of popupCloseButton (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of popupCancelBtn (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of popupConfirmBtn (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of popupButtonContainer (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of popupContentContainer (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of resizePointer (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of resizeSnap (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of resizeSnapX (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of resizeSnapY (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of resizerMenuBtnActive (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of collapsedElement (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of rowContextHighlight (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of separator (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of sidebarCloseButton (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of sidebarNavButton (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of toggleContainer (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of toggleLabels (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of toggleSlider (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of toggleWrapper (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of toggleWrapperColored (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of viewFullscreen (type string is ignored) ignore type: true
+    
+    if (this.accordionContainer != null) {
+        buffer.writeAll(["\"accordionContainer\":\'",this.accordionContainer, "\',"], "");
+    }
+    
+    if (this.accordionContent != null) {
+        buffer.writeAll(["\"accordionContent\":\'",this.accordionContent, "\',"], "");
+    }
+    
+    if (this.accordionHeader != null) {
+        buffer.writeAll(["\"accordionHeader\":\'",this.accordionHeader, "\',"], "");
+    }
+    
+    if (this.accordionHeaderBtn != null) {
+        buffer.writeAll(["\"accordionHeaderBtn\":\'",this.accordionHeaderBtn, "\',"], "");
+    }
+    
+    if (this.accordionHeaderIcon != null) {
+        buffer.writeAll(["\"accordionHeaderIcon\":\'",this.accordionHeaderIcon, "\',"], "");
+    }
+    
+    if (this.accordionMenu != null) {
+        buffer.writeAll(["\"accordionMenu\":\'",this.accordionMenu, "\',"], "");
+    }
+    
+    if (this.accordionMenuButton != null) {
+        buffer.writeAll(["\"accordionMenuButton\":\'",this.accordionMenuButton, "\',"], "");
+    }
+    
+    if (this.accordionMenuButtonsContainer != null) {
+        buffer.writeAll(["\"accordionMenuButtonsContainer\":\'",this.accordionMenuButtonsContainer, "\',"], "");
+    }
+    
+    if (this.accordionNestedWrapper != null) {
+        buffer.writeAll(["\"accordionNestedWrapper\":\'",this.accordionNestedWrapper, "\',"], "");
+    }
+    
+    if (this.button != null) {
+        buffer.writeAll(["\"button\":\'",this.button, "\',"], "");
+    }
+    
+    if (this.cellEditHighlight != null) {
+        buffer.writeAll(["\"cellEditHighlight\":\'",this.cellEditHighlight, "\',"], "");
+    }
+    
+    if (this.collapsableContentHeader != null) {
+        buffer.writeAll(["\"collapsableContentHeader\":\'",this.collapsableContentHeader, "\',"], "");
+    }
+    
+    if (this.confirmationPopup != null) {
+        buffer.writeAll(["\"confirmationPopup\":\'",this.confirmationPopup, "\',"], "");
+    }
+    
+    if (this.contextDetectionPointer != null) {
+        buffer.writeAll(["\"contextDetectionPointer\":\'",this.contextDetectionPointer, "\',"], "");
+    }
+    
+    if (this.contextMenu != null) {
+        buffer.writeAll(["\"contextMenu\":\'",this.contextMenu, "\',"], "");
+    }
+    
+    if (this.contextMenuBtn != null) {
+        buffer.writeAll(["\"contextMenuBtn\":\'",this.contextMenuBtn, "\',"], "");
+    }
+    
+    if (this.contextMenuBtnText != null) {
+        buffer.writeAll(["\"contextMenuBtnText\":\'",this.contextMenuBtnText, "\',"], "");
+    }
+    
+    if (this.contextMenuItem != null) {
+        buffer.writeAll(["\"contextMenuItem\":\'",this.contextMenuItem, "\',"], "");
+    }
+    
+    if (this.currentEditedElement != null) {
+        buffer.writeAll(["\"currentEditedElement\":\'",this.currentEditedElement, "\',"], "");
+    }
+    
+    if (this.customSelect != null) {
+        buffer.writeAll(["\"customSelect\":\'",this.customSelect, "\',"], "");
+    }
+    
+    if (this.customSelectButton != null) {
+        buffer.writeAll(["\"customSelectButton\":\'",this.customSelectButton, "\',"], "");
+    }
+    
+    if (this.dashboardCellEditHighlightActive != null) {
+        buffer.writeAll(["\"dashboardCellEditHighlightActive\":\'",this.dashboardCellEditHighlightActive, "\',"], "");
+    }
+    
+    if (this.dragMock != null) {
+        buffer.writeAll(["\"dragMock\":\'",this.dragMock, "\',"], "");
+    }
+    
+    if (this.dropPointer != null) {
+        buffer.writeAll(["\"dropPointer\":\'",this.dropPointer, "\',"], "");
+    }
+    
+    if (this.dropdown != null) {
+        buffer.writeAll(["\"dropdown\":\'",this.dropdown, "\',"], "");
+    }
+    
+    if (this.dropdownButton != null) {
+        buffer.writeAll(["\"dropdownButton\":\'",this.dropdownButton, "\',"], "");
+    }
+    
+    if (this.dropdownButtonContent != null) {
+        buffer.writeAll(["\"dropdownButtonContent\":\'",this.dropdownButtonContent, "\',"], "");
+    }
+    
+    if (this.dropdownContent != null) {
+        buffer.writeAll(["\"dropdownContent\":\'",this.dropdownContent, "\',"], "");
+    }
+    
+    if (this.dropdownIcon != null) {
+        buffer.writeAll(["\"dropdownIcon\":\'",this.dropdownIcon, "\',"], "");
+    }
+    
+    if (this.editGridItems != null) {
+        buffer.writeAll(["\"editGridItems\":\'",this.editGridItems, "\',"], "");
+    }
+    
+    if (this.editModeEnabled != null) {
+        buffer.writeAll(["\"editModeEnabled\":\'",this.editModeEnabled, "\',"], "");
+    }
+    
+    if (this.editOverlay != null) {
+        buffer.writeAll(["\"editOverlay\":\'",this.editOverlay, "\',"], "");
+    }
+    
+    if (this.editOverlayActive != null) {
+        buffer.writeAll(["\"editOverlayActive\":\'",this.editOverlayActive, "\',"], "");
+    }
+    
+    if (this.editSidebar != null) {
+        buffer.writeAll(["\"editSidebar\":\'",this.editSidebar, "\',"], "");
+    }
+    
+    if (this.editSidebarHide != null) {
+        buffer.writeAll(["\"editSidebarHide\":\'",this.editSidebarHide, "\',"], "");
+    }
+    
+    if (this.editSidebarMenuItem != null) {
+        buffer.writeAll(["\"editSidebarMenuItem\":\'",this.editSidebarMenuItem, "\',"], "");
+    }
+    
+    if (this.editSidebarRight != null) {
+        buffer.writeAll(["\"editSidebarRight\":\'",this.editSidebarRight, "\',"], "");
+    }
+    
+    if (this.editSidebarRightShow != null) {
+        buffer.writeAll(["\"editSidebarRightShow\":\'",this.editSidebarRightShow, "\',"], "");
+    }
+    
+    if (this.editSidebarShow != null) {
+        buffer.writeAll(["\"editSidebarShow\":\'",this.editSidebarShow, "\',"], "");
+    }
+    
+    if (this.editSidebarTabBtn != null) {
+        buffer.writeAll(["\"editSidebarTabBtn\":\'",this.editSidebarTabBtn, "\',"], "");
+    }
+    
+    if (this.editSidebarTabBtnWrapper != null) {
+        buffer.writeAll(["\"editSidebarTabBtnWrapper\":\'",this.editSidebarTabBtnWrapper, "\',"], "");
+    }
+    
+    if (this.editSidebarTitle != null) {
+        buffer.writeAll(["\"editSidebarTitle\":\'",this.editSidebarTitle, "\',"], "");
+    }
+    
+    if (this.editSidebarWrapper != null) {
+        buffer.writeAll(["\"editSidebarWrapper\":\'",this.editSidebarWrapper, "\',"], "");
+    }
+    
+    if (this.editToolbar != null) {
+        buffer.writeAll(["\"editToolbar\":\'",this.editToolbar, "\',"], "");
+    }
+    
+    if (this.editToolbarCell != null) {
+        buffer.writeAll(["\"editToolbarCell\":\'",this.editToolbarCell, "\',"], "");
+    }
+    
+    if (this.editToolbarCellOutline != null) {
+        buffer.writeAll(["\"editToolbarCellOutline\":\'",this.editToolbarCellOutline, "\',"], "");
+    }
+    
+    if (this.editToolbarItem != null) {
+        buffer.writeAll(["\"editToolbarItem\":\'",this.editToolbarItem, "\',"], "");
+    }
+    
+    if (this.editToolbarRow != null) {
+        buffer.writeAll(["\"editToolbarRow\":\'",this.editToolbarRow, "\',"], "");
+    }
+    
+    if (this.editToolbarRowOutline != null) {
+        buffer.writeAll(["\"editToolbarRowOutline\":\'",this.editToolbarRowOutline, "\',"], "");
+    }
+    
+    if (this.editTools != null) {
+        buffer.writeAll(["\"editTools\":\'",this.editTools, "\',"], "");
+    }
+    
+    if (this.editToolsBtn != null) {
+        buffer.writeAll(["\"editToolsBtn\":\'",this.editToolsBtn, "\',"], "");
+    }
+    
+    if (this.hiddenElement != null) {
+        buffer.writeAll(["\"hiddenElement\":\'",this.hiddenElement, "\',"], "");
+    }
+    
+    if (this.icon != null) {
+        buffer.writeAll(["\"icon\":\'",this.icon, "\',"], "");
+    }
+    
+    if (this.labelText != null) {
+        buffer.writeAll(["\"labelText\":\'",this.labelText, "\',"], "");
+    }
+    
+    if (this.maskElement != null) {
+        buffer.writeAll(["\"maskElement\":\'",this.maskElement, "\',"], "");
+    }
+    
+    if (this.menu != null) {
+        buffer.writeAll(["\"menu\":\'",this.menu, "\',"], "");
+    }
+    
+    if (this.menuDestroy != null) {
+        buffer.writeAll(["\"menuDestroy\":\'",this.menuDestroy, "\',"], "");
+    }
+    
+    if (this.menuHorizontalSeparator != null) {
+        buffer.writeAll(["\"menuHorizontalSeparator\":\'",this.menuHorizontalSeparator, "\',"], "");
+    }
+    
+    if (this.menuItem != null) {
+        buffer.writeAll(["\"menuItem\":\'",this.menuItem, "\',"], "");
+    }
+    
+    if (this.menuVerticalSeparator != null) {
+        buffer.writeAll(["\"menuVerticalSeparator\":\'",this.menuVerticalSeparator, "\',"], "");
+    }
+    
+    if (this.popupCloseButton != null) {
+        buffer.writeAll(["\"popupCloseButton\":\'",this.popupCloseButton, "\',"], "");
+    }
+    
+    if (this.popupCancelBtn != null) {
+        buffer.writeAll(["\"popupCancelBtn\":\'",this.popupCancelBtn, "\',"], "");
+    }
+    
+    if (this.popupConfirmBtn != null) {
+        buffer.writeAll(["\"popupConfirmBtn\":\'",this.popupConfirmBtn, "\',"], "");
+    }
+    
+    if (this.popupButtonContainer != null) {
+        buffer.writeAll(["\"popupButtonContainer\":\'",this.popupButtonContainer, "\',"], "");
+    }
+    
+    if (this.popupContentContainer != null) {
+        buffer.writeAll(["\"popupContentContainer\":\'",this.popupContentContainer, "\',"], "");
+    }
+    
+    if (this.resizePointer != null) {
+        buffer.writeAll(["\"resizePointer\":\'",this.resizePointer, "\',"], "");
+    }
+    
+    if (this.resizeSnap != null) {
+        buffer.writeAll(["\"resizeSnap\":\'",this.resizeSnap, "\',"], "");
+    }
+    
+    if (this.resizeSnapX != null) {
+        buffer.writeAll(["\"resizeSnapX\":\'",this.resizeSnapX, "\',"], "");
+    }
+    
+    if (this.resizeSnapY != null) {
+        buffer.writeAll(["\"resizeSnapY\":\'",this.resizeSnapY, "\',"], "");
+    }
+    
+    if (this.resizerMenuBtnActive != null) {
+        buffer.writeAll(["\"resizerMenuBtnActive\":\'",this.resizerMenuBtnActive, "\',"], "");
+    }
+    
+    if (this.collapsedElement != null) {
+        buffer.writeAll(["\"collapsedElement\":\'",this.collapsedElement, "\',"], "");
+    }
+    
+    if (this.rowContextHighlight != null) {
+        buffer.writeAll(["\"rowContextHighlight\":\'",this.rowContextHighlight, "\',"], "");
+    }
+    
+    if (this.separator != null) {
+        buffer.writeAll(["\"separator\":\'",this.separator, "\',"], "");
+    }
+    
+    if (this.sidebarCloseButton != null) {
+        buffer.writeAll(["\"sidebarCloseButton\":\'",this.sidebarCloseButton, "\',"], "");
+    }
+    
+    if (this.sidebarNavButton != null) {
+        buffer.writeAll(["\"sidebarNavButton\":\'",this.sidebarNavButton, "\',"], "");
+    }
+    
+    if (this.standaloneElement != null) {
+        buffer.writeAll(["\"standaloneElement\":\'",this.standaloneElement, "\',"], "");
+    }
+    
+    if (this.toggleContainer != null) {
+        buffer.writeAll(["\"toggleContainer\":\'",this.toggleContainer, "\',"], "");
+    }
+    
+    if (this.toggleLabels != null) {
+        buffer.writeAll(["\"toggleLabels\":\'",this.toggleLabels, "\',"], "");
+    }
+    
+    if (this.toggleSlider != null) {
+        buffer.writeAll(["\"toggleSlider\":\'",this.toggleSlider, "\',"], "");
+    }
+    
+    if (this.toggleWrapper != null) {
+        buffer.writeAll(["\"toggleWrapper\":\'",this.toggleWrapper, "\',"], "");
+    }
+    
+    if (this.toggleWrapperColored != null) {
+        buffer.writeAll(["\"toggleWrapperColored\":\'",this.toggleWrapperColored, "\',"], "");
+    }
+    
+    if (this.viewFullscreen != null) {
+        buffer.writeAll(["\"viewFullscreen\":\'",this.viewFullscreen, "\',"], "");
+    }
   }
+
 
 }

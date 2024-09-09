@@ -12,40 +12,58 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * StackItemIndicatorObject 
+ * StackItemIndicatorObject
  */
 class StackItemIndicatorObject extends OptionFragment {
-  StackItemIndicatorObject( ) : super();
-  // NOTE: index skipped - type number is ignored in gen 
 
-  // NOTE: key skipped - type string is ignored in gen 
+  StackItemIndicatorObject({
+    this.index = null,
+    this.key = null,
+    this.stackKey = null,
+    this.x = null
+  });
 
-  // NOTE: stackKey skipped - type string is ignored in gen 
-
-  // NOTE: x skipped - type number is ignored in gen 
-
+  double? index;
+    
+  String? key;
+    
+  String? stackKey;
+    
+  double? x;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of index (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of key (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of stackKey (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of x (type number is ignored) ignore type: true
+    
+    if (this.index != null) {
+        buffer.writeAll(["\"index\":",this.index, ","], "");
+    }
+    
+    if (this.key != null) {
+        buffer.writeAll(["\"key\":\'",this.key, "\',"], "");
+    }
+    
+    if (this.stackKey != null) {
+        buffer.writeAll(["\"stackKey\":\'",this.stackKey, "\',"], "");
+    }
+    
+    if (this.x != null) {
+        buffer.writeAll(["\"x\":",this.x, ","], "");
+    }
   }
+
 
 }

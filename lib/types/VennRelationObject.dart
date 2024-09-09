@@ -12,34 +12,54 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'VennPropsObject.dart';
 import 'CircleObject.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * VennRelationObject 
+ * VennRelationObject
  */
 class VennRelationObject extends VennPropsObject {
-  VennRelationObject( ) : super();
-  // NOTE: value skipped - type number is ignored in gen 
 
+  VennRelationObject({
+    this.circle = null,
+    super.overlapping = null,
+    this.sets = null,
+    super.totalOverlap = null,
+    this.value = null
+  });
+
+  CircleObject? circle;
+    
+  String? sets;
+    
+  double? value;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of circle (type CircleObject is ignored) ignore type: true
 
-    // NOTE: skip serialization of sets (type string[] is ignored) ignore type: true
-
-    // NOTE: skip serialization of value (type number is ignored) ignore type: true
+    
+    if (this.circle != null) {
+        buffer.writeAll(["\"circle\":",this.circle?.toJSON(), ","], "");
+    }
+    
+    if (this.sets != null) {
+        buffer.writeAll(["\"sets\":",this.sets, ","], "");
+    }
+    
+    if (this.value != null) {
+        buffer.writeAll(["\"value\":",this.value, ","], "");
+    }
   }
+
 
 }

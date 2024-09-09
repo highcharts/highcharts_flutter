@@ -12,47 +12,72 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'MarkerClusterSplitDataObject.dart';
 import 'OptionFragment.dart';
 
 /** 
- * KmeansClusterObject 
+ * KmeansClusterObject
  */
 class KmeansClusterObject extends OptionFragment {
-  KmeansClusterObject( ) : super();
-  // NOTE: posX skipped - type number is ignored in gen 
 
-  // NOTE: posY skipped - type number is ignored in gen 
+  KmeansClusterObject({
+    this.oldX = null,
+    this.oldY = null,
+    this.points = null,
+    this.posX = null,
+    this.posY = null,
+    this.startPointsLen = null
+  });
 
-  // NOTE: oldX skipped - type number is ignored in gen 
-
-  // NOTE: oldY skipped - type number is ignored in gen 
-
-  // NOTE: startPointsLen skipped - type number is ignored in gen 
-
+  double? posX;
+    
+  double? posY;
+    
+  double? oldX;
+    
+  double? oldY;
+    
+  double? startPointsLen;
+    
+  MarkerClusterSplitDataObject? points;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of posX (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of posY (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of oldX (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of oldY (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of startPointsLen (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of points (type MarkerClusterSplitDataObject[] is ignored) ignore type: true
+    
+    if (this.posX != null) {
+        buffer.writeAll(["\"posX\":",this.posX, ","], "");
+    }
+    
+    if (this.posY != null) {
+        buffer.writeAll(["\"posY\":",this.posY, ","], "");
+    }
+    
+    if (this.oldX != null) {
+        buffer.writeAll(["\"oldX\":",this.oldX, ","], "");
+    }
+    
+    if (this.oldY != null) {
+        buffer.writeAll(["\"oldY\":",this.oldY, ","], "");
+    }
+    
+    if (this.startPointsLen != null) {
+        buffer.writeAll(["\"startPointsLen\":",this.startPointsLen, ","], "");
+    }
+    
+    if (this.points != null) {
+        buffer.writeAll(["\"points\":",this.points, ","], "");
+    }
   }
+
 
 }

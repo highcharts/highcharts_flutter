@@ -12,28 +12,37 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'IKHGapSizeOptions.dart';
 import 'OptionFragment.dart';
 
 /** 
- * IKHGapExtensionObject 
+ * IKHGapExtensionObject
  */
 class IKHGapExtensionObject extends OptionFragment {
-  IKHGapExtensionObject( ) : super();
-  
+
+  IKHGapExtensionObject({
+    this.options = null
+  });
+
+  IKHGapSizeOptions? options;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of options (type IKHGapSizeOptions is ignored) ignore type: true
+
+    
+    if (this.options != null) {
+        buffer.writeAll(["\"options\":",this.options?.toJSON(), ","], "");
+    }
   }
+
 
 }

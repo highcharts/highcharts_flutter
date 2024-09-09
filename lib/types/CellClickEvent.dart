@@ -12,30 +12,41 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'HTMLElement.dart';
 import 'OptionFragment.dart';
 
 /** 
- * CellClickEvent 
+ * CellClickEvent
  */
 class CellClickEvent extends OptionFragment {
-  CellClickEvent( ) : super();
-  
+
+  CellClickEvent({
+    this.input = null
+  });
+
+  // NOTE: type skipped - type "cellClick" is ignored in gen 
+
+  HTMLElement? input;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of type (type "cellClick" is ignored) ignore type: true
 
-    // NOTE: skip serialization of input (type HTMLElement is ignored) ignore type: true
+    // NOTE: skip serialization of type (type "cellClick" ignored, skipped: true)
+
+    
+    if (this.input != null) {
+        buffer.writeAll(["\"input\":",this.input?.toJSON(), ","], "");
+    }
   }
+
 
 }

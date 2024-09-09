@@ -12,60 +12,88 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * ScrollablePlotAreaOptions 
+ * ScrollablePlotAreaOptions
  */
 class ScrollablePlotAreaOptions extends OptionFragment {
-  ScrollablePlotAreaOptions( {
+
+  ScrollablePlotAreaOptions({
     this.minHeight = null,
     this.minWidth = null,
     this.opacity = null,
     this.scrollPositionX = null,
     this.scrollPositionY = null
-  }) : super();
+  });
+
+  /**
+   * The minimum height for the plot area. If it gets smaller than this, the plot
+   * area will become scrollable.  
+   */
   double? minHeight;
     
+  /**
+   * The minimum width for the plot area. If it gets smaller than this, the plot
+   * area will become scrollable.  
+   */
   double? minWidth;
     
+  /**
+   * The opacity of mask applied on one of the sides of the plot
+   * area. 
+   * 
+   * Defaults to '0.85'. 
+   */
   double? opacity;
     
+  /**
+   * The initial scrolling position of the scrollable plot area. Ranges from 0 to
+   * 1, where 0 aligns the plot area to the left and 1 aligns it to the right.
+   * Typically we would use 1 if the chart has right aligned Y axes.  
+   */
   double? scrollPositionX;
     
+  /**
+   * The initial scrolling position of the scrollable plot area. Ranges from 0 to
+   * 1, where 0 aligns the plot area to the top and 1 aligns it to the bottom.  
+   */
   double? scrollPositionY;
     
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    if (this.minHeight != null) {  
-      buffer.writeAll(["\"minHeight\":",this.minHeight, ","], "");
-    }
 
-    if (this.minWidth != null) {  
-      buffer.writeAll(["\"minWidth\":",this.minWidth, ","], "");
+    
+    if (this.minHeight != null) {
+        buffer.writeAll(["\"minHeight\":",this.minHeight, ","], "");
     }
-
-    if (this.opacity != null) {  
-      buffer.writeAll(["\"opacity\":",this.opacity, ","], "");
+    
+    if (this.minWidth != null) {
+        buffer.writeAll(["\"minWidth\":",this.minWidth, ","], "");
     }
-
-    if (this.scrollPositionX != null) {  
-      buffer.writeAll(["\"scrollPositionX\":",this.scrollPositionX, ","], "");
+    
+    if (this.opacity != null) {
+        buffer.writeAll(["\"opacity\":",this.opacity, ","], "");
     }
-
-    if (this.scrollPositionY != null) {  
-      buffer.writeAll(["\"scrollPositionY\":",this.scrollPositionY, ","], "");
+    
+    if (this.scrollPositionX != null) {
+        buffer.writeAll(["\"scrollPositionX\":",this.scrollPositionX, ","], "");
+    }
+    
+    if (this.scrollPositionY != null) {
+        buffer.writeAll(["\"scrollPositionY\":",this.scrollPositionY, ","], "");
     }
   }
+
 
 }

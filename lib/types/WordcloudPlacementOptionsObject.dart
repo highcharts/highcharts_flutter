@@ -12,36 +12,60 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'WordcloudPoint.dart';
 import 'WordcloudFieldObject.dart';
 import 'WordcloudSeriesRotationOptions.dart';
 import 'OptionFragment.dart';
 
 /** 
- * WordcloudPlacementOptionsObject 
+ * WordcloudPlacementOptionsObject
  */
 class WordcloudPlacementOptionsObject extends OptionFragment {
-  WordcloudPlacementOptionsObject( ) : super();
-  
+
+  WordcloudPlacementOptionsObject({
+    this.data = null,
+    this.field = null,
+    this.placed = null,
+    this.rotation = null
+  });
+
+  WordcloudPoint? data;
+    
+  WordcloudFieldObject? field;
+    
+  WordcloudPoint? placed;
+    
+  WordcloudSeriesRotationOptions? rotation;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of data (type WordcloudPoint[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of field (type WordcloudFieldObject is ignored) ignore type: true
-
-    // NOTE: skip serialization of placed (type WordcloudPoint[] is ignored) ignore type: true
-
-    // NOTE: skip serialization of rotation (type WordcloudSeriesRotationOptions is ignored) ignore type: true
+    
+    if (this.data != null) {
+        buffer.writeAll(["\"data\":",this.data, ","], "");
+    }
+    
+    if (this.field != null) {
+        buffer.writeAll(["\"field\":",this.field?.toJSON(), ","], "");
+    }
+    
+    if (this.placed != null) {
+        buffer.writeAll(["\"placed\":",this.placed, ","], "");
+    }
+    
+    if (this.rotation != null) {
+        buffer.writeAll(["\"rotation\":",this.rotation?.toJSON(), ","], "");
+    }
   }
+
 
 }

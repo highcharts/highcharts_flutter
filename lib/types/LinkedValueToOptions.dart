@@ -12,36 +12,51 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * LinkedValueToOptions 
+ * LinkedValueToOptions
  */
 class LinkedValueToOptions extends OptionFragment {
-  LinkedValueToOptions( ) : super();
-  // NOTE: enabled skipped - type boolean is ignored in gen 
 
-  // NOTE: pointIndex skipped - type number is ignored in gen 
+  LinkedValueToOptions({
+    this.enabled = null,
+    this.pointIndex = null,
+    this.seriesIndex = null
+  });
 
-  // NOTE: seriesIndex skipped - type number is ignored in gen 
-
+  bool? enabled;
+    
+  double? pointIndex;
+    
+  double? seriesIndex;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of enabled (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of pointIndex (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of seriesIndex (type number is ignored) ignore type: true
+    
+    if (this.enabled != null) {
+        buffer.writeAll(["\"enabled\":",this.enabled, ","], "");
+    }
+    
+    if (this.pointIndex != null) {
+        buffer.writeAll(["\"pointIndex\":",this.pointIndex, ","], "");
+    }
+    
+    if (this.seriesIndex != null) {
+        buffer.writeAll(["\"seriesIndex\":",this.seriesIndex, ","], "");
+    }
   }
+
 
 }

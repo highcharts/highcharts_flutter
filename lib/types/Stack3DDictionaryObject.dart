@@ -12,31 +12,44 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'Series.dart';
 import 'OptionFragment.dart';
 
 /** 
- * Stack3DDictionaryObject 
+ * Stack3DDictionaryObject
  */
 class Stack3DDictionaryObject extends OptionFragment {
-  Stack3DDictionaryObject( ) : super();
-  // NOTE: position skipped - type number is ignored in gen 
 
+  Stack3DDictionaryObject({
+    this.position = null,
+    this.series = null
+  });
+
+  double? position;
+    
+  Series? series;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of position (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of series (type Series[] is ignored) ignore type: true
+    
+    if (this.position != null) {
+        buffer.writeAll(["\"position\":",this.position, ","], "");
+    }
+    
+    if (this.series != null) {
+        buffer.writeAll(["\"series\":",this.series, ","], "");
+    }
   }
+
 
 }

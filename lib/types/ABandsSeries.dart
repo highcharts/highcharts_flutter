@@ -12,10 +12,9 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'ABandsOptions.dart';
 import 'Series.dart';
 import 'PointOptions.dart';
@@ -34,8 +33,7 @@ class ABandsSeries extends Series {
     this.data = null
   });
 
-  
-  @override
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
@@ -56,16 +54,13 @@ class ABandsSeries extends Series {
         if (point.length > 1) {
           seriesData.writeAll(["["], "");
         }
-
-          for (var sub in point) {
-            if (sub is String) {
-              seriesData.writeAll(["\"", sub, "\","], "");
-            } else {
-              seriesData.writeAll([sub], ",");
-            }
-
+        for (var sub in point) {
+          if (sub is String) {
+            seriesData.writeAll(["\"", sub, "\","], "");
+          } else {
+            seriesData.writeAll([sub], ",");
           }
-
+        }
         if (point.length > 1) {
           seriesData.writeAll(["],"], "");
         } else {
@@ -92,19 +87,17 @@ class ABandsSeries extends Series {
 
 
     
-    if (this.options?.bottomLine != null) {  
-      buffer.writeAll(["\"bottomLine\":",this.options?.bottomLine, ","], "");
-    }
 
-    if (this.options?.lineWidth != null) {  
-      buffer.writeAll(["\"lineWidth\":",this.options?.lineWidth, ","], "");
-    }
+    // NOTE: skip serialization of bottomLine (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of params (type ABandsParamsOptions is ignored) ignore type: false
-
-    if (this.options?.topLine != null) {  
-      buffer.writeAll(["\"topLine\":",this.options?.topLine, ","], "");
+    
+    if (this.options?.lineWidth != null) {
+        buffer.writeAll(["\"lineWidth\":",this.options?.lineWidth, ","], "");
     }
+    // NOTE: skip serialization of params (type ABandsParamsOptions ignored, skipped: false)
+
+    // NOTE: skip serialization of topLine (type Generic ignored, skipped: true)
+
   }
 
 }

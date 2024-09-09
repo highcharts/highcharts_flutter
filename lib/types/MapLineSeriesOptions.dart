@@ -12,40 +12,85 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'MapSeriesOptions.dart';
-import 'OptionFragment.dart';
+import 'MapLinePointOptions.dart';
+
 
 /** 
- * MapLineSeriesOptions 
+ * MapLineSeriesOptions
  */
 class MapLineSeriesOptions extends MapSeriesOptions {
-  MapLineSeriesOptions( {
+
+  MapLineSeriesOptions({
     super.affectsMapView = null,
+    super.colorKey = null,
+    super.data = null,
+    super.dataLabels = null,
     this.fillColor = null,
+    this.legendSymbol = null,
+    super.linecap = null,
+    this.lineWidth = null,
+    super.marker = null,
     super.nullColor = null,
-    super.nullInteraction = null
-  }) : super();
+    super.nullInteraction = null,
+    super.turboThreshold = null
+  });
+
+  /** NOTE: extdata is skipped here for now, as it overrides the base type. */
+
+  /**
+   * Fill color for the map line shapes 
+   * 
+   * Defaults to 'none'. 
+   */
   String? fillColor;
+    
+  /**
+   * What type of legend symbol to render for this series. Can be one of
+   * `areaMarker`, `lineMarker` or `rectangle`. 
+   * 
+   * Defaults to 'rectangle'. 
+   */
+  String? legendSymbol;
+    
+  /**
+   * Pixel width of the graph line. 
+   * 
+   * Defaults to '2'. 
+   */
+  double? lineWidth;
     
   // NOTE: states skipped - type Generic is ignored in gen 
 
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    if (this.fillColor != null) {  
-      buffer.writeAll(["\"fillColor\":\'",this.fillColor, "\',"], "");
-    }
 
-    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
+    // NOTE: skip serialization of data (type MapLinePointOptions)[] ignored, skipped: false)
+
+    
+    if (this.fillColor != null) {
+        buffer.writeAll(["\"fillColor\":\'",this.fillColor, "\',"], "");
+    }
+    
+    if (this.legendSymbol != null) {
+        buffer.writeAll(["\"legendSymbol\":\'",this.legendSymbol, "\',"], "");
+    }
+    
+    if (this.lineWidth != null) {
+        buffer.writeAll(["\"lineWidth\":",this.lineWidth, ","], "");
+    }
+    // NOTE: skip serialization of states (type Generic ignored, skipped: true)
+
   }
+
 
 }

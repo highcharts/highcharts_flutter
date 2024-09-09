@@ -12,27 +12,33 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * HeikinAshiPoint 
+ * HeikinAshiPoint
  */
 class HeikinAshiPoint extends OptionFragment {
-  HeikinAshiPoint( ) : super();
-  
+
+  HeikinAshiPoint();
+
+  // NOTE: series skipped - type HeikinAshiSeries is ignored in gen 
+
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of series (type HeikinAshiSeries is ignored) ignore type: true
+
+    // NOTE: skip serialization of series (type HeikinAshiSeries ignored, skipped: true)
+
   }
+
 
 }

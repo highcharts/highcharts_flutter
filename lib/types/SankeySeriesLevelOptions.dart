@@ -12,53 +12,84 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'SankeyDataLabelOptions.dart';
 import 'OptionFragment.dart';
 
+
 /** 
- * SankeySeriesLevelOptions 
+ * SankeySeriesLevelOptions
  */
 class SankeySeriesLevelOptions extends OptionFragment {
-  SankeySeriesLevelOptions( ) : super();
-  // NOTE: borderColor skipped - type string is ignored in gen 
 
-  // NOTE: borderWidth skipped - type number is ignored in gen 
+  SankeySeriesLevelOptions({
+    this.borderColor = null,
+    this.borderWidth = null,
+    this.color = null,
+    this.colorByPoint = null,
+    this.dataLabels = null,
+    this.level = null,
+    this.linkOpacity = null
+  });
 
-  // NOTE: color skipped - type string is ignored in gen 
-
-  // NOTE: colorByPoint skipped - type boolean is ignored in gen 
-
-  // NOTE: level skipped - type number is ignored in gen 
-
-  // NOTE: linkOpacity skipped - type number is ignored in gen 
+  String? borderColor;
+    
+  double? borderWidth;
+    
+  String? color;
+    
+  bool? colorByPoint;
+    
+  SankeyDataLabelOptions? dataLabels;
+    
+  double? level;
+    
+  double? linkOpacity;
+    
+  // NOTE: states skipped - type Generic is ignored in gen 
 
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of borderColor (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of borderWidth (type number is ignored) ignore type: true
+    
+    if (this.borderColor != null) {
+        buffer.writeAll(["\"borderColor\":\'",this.borderColor, "\',"], "");
+    }
+    
+    if (this.borderWidth != null) {
+        buffer.writeAll(["\"borderWidth\":",this.borderWidth, ","], "");
+    }
+    
+    if (this.color != null) {
+        buffer.writeAll(["\"color\":\'",this.color, "\',"], "");
+    }
+    
+    if (this.colorByPoint != null) {
+        buffer.writeAll(["\"colorByPoint\":",this.colorByPoint, ","], "");
+    }
+    
+    if (this.dataLabels != null) {
+        buffer.writeAll(["\"dataLabels\":",this.dataLabels?.toJSON(), ","], "");
+    }
+    
+    if (this.level != null) {
+        buffer.writeAll(["\"level\":",this.level, ","], "");
+    }
+    
+    if (this.linkOpacity != null) {
+        buffer.writeAll(["\"linkOpacity\":",this.linkOpacity, ","], "");
+    }
+    // NOTE: skip serialization of states (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of color (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of colorByPoint (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of dataLabels (type SankeyDataLabelOptions is ignored) ignore type: true
-
-    // NOTE: skip serialization of level (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of linkOpacity (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
   }
+
 
 }

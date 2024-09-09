@@ -12,28 +12,42 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'Position3DObject.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * Edge3DObject 
+ * Edge3DObject
  */
 class Edge3DObject extends Position3DObject {
-  Edge3DObject( ) : super();
-  
+
+  Edge3DObject({
+    super.alignment = null,
+    super.matrix = null,
+    super.x = null,
+    this.xDir = null,
+    super.y = null,
+    super.z = null
+  });
+
+  Position3DObject? xDir;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of xDir (type Position3DObject is ignored) ignore type: true
+
+    
+    if (this.xDir != null) {
+        buffer.writeAll(["\"xDir\":",this.xDir?.toJSON(), ","], "");
+    }
   }
+
 
 }

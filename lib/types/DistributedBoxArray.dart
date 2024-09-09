@@ -12,29 +12,37 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'Array.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * DistributedBoxArray 
+ * DistributedBoxArray
  */
 class DistributedBoxArray extends Array {
-  DistributedBoxArray( ) : super();
-  // NOTE: reducedLen skipped - type number is ignored in gen 
 
+  DistributedBoxArray({
+    this.reducedLen = null
+  });
+
+  double? reducedLen;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of reducedLen (type number is ignored) ignore type: true
+
+    
+    if (this.reducedLen != null) {
+        buffer.writeAll(["\"reducedLen\":",this.reducedLen, ","], "");
+    }
   }
+
 
 }

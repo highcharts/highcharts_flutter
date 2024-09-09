@@ -12,27 +12,35 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * PiePoint 
+ * PiePoint
  */
 class PiePoint extends OptionFragment {
-  PiePoint( ) : super();
-  
+
+  PiePoint({
+    this.connectorShapes = null
+  });
+
+  Map<String, String>? connectorShapes;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of connectorShapes (type Generic is ignored) ignore type: true
+
+    // NOTE: skip serialization of connectorShapes (type Generic ignored, skipped: true)
+
   }
+
 
 }

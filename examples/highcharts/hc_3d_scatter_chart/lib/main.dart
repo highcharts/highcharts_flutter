@@ -4,8 +4,9 @@
  */
 
 import 'package:flutter/material.dart';
-import 'package:highcharts_flutter/Highcharts.dart';
+import 'package:highcharts_flutter/highcharts.dart';
 import 'package:highcharts_flutter/types/ChartOptions.dart';
+import 'package:highcharts_flutter/types/Generic.dart';
 import 'package:highcharts_flutter/types/Options.dart';
 import 'package:highcharts_flutter/types/FrameOptions.dart';
 import 'package:highcharts_flutter/types/FrameSideOptions.dart';
@@ -69,14 +70,14 @@ class _MyHomePageState extends State<MyHomePage> {
                     100, 
                   ],
                     type: "scatter3d", 
-                    // animation: false, 
+                    animation: false, 
                   options3d: Options(
-                    // frame: FrameOptions(
-                    //   bottom: FrameSideOptions(
-                    //   ),
-                    //   back: FrameSideOptions(
-                    //   ),
-                    // ),
+                    frame: FrameOptions(
+                      bottom: FrameSideOptions(
+                      ),
+                      back: FrameSideOptions(
+                      ),
+                    ),
                   ),
                 ),
                 title: TitleOptions(

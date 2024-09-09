@@ -12,20 +12,21 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'DataLabelOptions.dart';
 import 'DataLabelTextPathOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * SankeyDataLabelOptions 
+ * SankeyDataLabelOptions
  */
 class SankeyDataLabelOptions extends DataLabelOptions {
-  SankeyDataLabelOptions( {
+
+  SankeyDataLabelOptions({
     super.align = null,
+    super.alignTo = null,
     super.allowOverlap = null,
     super.backgroundColor = null,
     super.borderColor = null,
@@ -33,13 +34,19 @@ class SankeyDataLabelOptions extends DataLabelOptions {
     super.borderWidth = null,
     super.className = null,
     super.color = null,
+    super.connectorColor = null,
     super.crop = null,
     super.defer = null,
+    super.distance = null,
     super.enabled = null,
     super.filter = null,
     super.format = null,
     super.inside = null,
+    super.labelrank = null,
+    this.linkTextPath = null,
+    this.nodeFormat = null,
     super.nullFormat = null,
+    super.outside3dPlot = null,
     super.overflow = null,
     super.padding = null,
     super.rotation = null,
@@ -51,20 +58,30 @@ class SankeyDataLabelOptions extends DataLabelOptions {
     super.x = null,
     super.y = null,
     super.zIndex = null
-  }) : super();
-  // NOTE: nodeFormat skipped - type string is ignored in gen 
+  });
 
+  String? nodeFormat;
+    
+  DataLabelTextPathOptions? linkTextPath;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of nodeFormat (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of linkTextPath (type DataLabelTextPathOptions is ignored) ignore type: true
+    
+    if (this.nodeFormat != null) {
+        buffer.writeAll(["\"nodeFormat\":\'",this.nodeFormat, "\',"], "");
+    }
+    
+    if (this.linkTextPath != null) {
+        buffer.writeAll(["\"linkTextPath\":",this.linkTextPath?.toJSON(), ","], "");
+    }
   }
+
 
 }

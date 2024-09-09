@@ -12,53 +12,88 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'TreemapNode.dart';
 import 'TreemapSeries.dart';
 import 'TreemapPoint.dart';
 import 'OptionFragment.dart';
 
 /** 
- * TreemapNode 
+ * TreemapNode
  */
 class TreemapNode extends OptionFragment {
-  TreemapNode( ) : super();
-  // NOTE: height skipped - type number is ignored in gen 
 
-  // NOTE: i skipped - type number is ignored in gen 
+  TreemapNode({
+    this.children = null,
+    this.height = null,
+    this.i = null,
+    this.id = null,
+    this.level = null,
+    this.point = null,
+    this.series = null,
+    this.val = null
+  });
 
-  // NOTE: id skipped - type string is ignored in gen 
-
-  // NOTE: level skipped - type number is ignored in gen 
-
-  // NOTE: val skipped - type number is ignored in gen 
-
+  double? height;
+    
+  double? i;
+    
+  String? id;
+    
+  TreemapNode? children;
+    
+  double? level;
+    
+  TreemapSeries? series;
+    
+  double? val;
+    
+  TreemapPoint? point;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of height (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of i (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of id (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of children (type TreemapNode[] is ignored) ignore type: true
-
-    // NOTE: skip serialization of level (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of series (type TreemapSeries is ignored) ignore type: true
-
-    // NOTE: skip serialization of val (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of point (type TreemapPoint is ignored) ignore type: true
+    
+    if (this.height != null) {
+        buffer.writeAll(["\"height\":",this.height, ","], "");
+    }
+    
+    if (this.i != null) {
+        buffer.writeAll(["\"i\":",this.i, ","], "");
+    }
+    
+    if (this.id != null) {
+        buffer.writeAll(["\"id\":\'",this.id, "\',"], "");
+    }
+    
+    if (this.children != null) {
+        buffer.writeAll(["\"children\":",this.children, ","], "");
+    }
+    
+    if (this.level != null) {
+        buffer.writeAll(["\"level\":",this.level, ","], "");
+    }
+    
+    if (this.series != null) {
+        buffer.writeAll(["\"series\":",this.series?.toJSON(), ","], "");
+    }
+    
+    if (this.val != null) {
+        buffer.writeAll(["\"val\":",this.val, ","], "");
+    }
+    
+    if (this.point != null) {
+        buffer.writeAll(["\"point\":",this.point?.toJSON(), ","], "");
+    }
   }
+
 
 }

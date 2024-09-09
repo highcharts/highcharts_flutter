@@ -12,46 +12,66 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'SMAParamsOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * MACDParamsOptions 
+ * MACDParamsOptions
  */
 class MACDParamsOptions extends SMAParamsOptions {
-  MACDParamsOptions( {
+
+  MACDParamsOptions({
     super.index = null,
-    this.period = null
-  }) : super();
+    this.longPeriod = null,
+    this.period = null,
+    this.shortPeriod = null,
+    this.signalPeriod = null
+  });
+
+  /**
+   * The base period for indicator calculations. This is the number of
+   * data points which are taken into account for the indicator
+   * calculations. 
+   * 
+   * Defaults to '14'. 
+   */
   double? period;
     
-  // NOTE: shortPeriod skipped - type number is ignored in gen 
-
-  // NOTE: longPeriod skipped - type number is ignored in gen 
-
-  // NOTE: signalPeriod skipped - type number is ignored in gen 
-
+  double? shortPeriod;
+    
+  double? longPeriod;
+    
+  double? signalPeriod;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    if (this.period != null) {  
-      buffer.writeAll(["\"period\":",this.period, ","], "");
+
+    
+    if (this.period != null) {
+        buffer.writeAll(["\"period\":",this.period, ","], "");
     }
-
-    // NOTE: skip serialization of shortPeriod (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of longPeriod (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of signalPeriod (type number is ignored) ignore type: true
+    
+    if (this.shortPeriod != null) {
+        buffer.writeAll(["\"shortPeriod\":",this.shortPeriod, ","], "");
+    }
+    
+    if (this.longPeriod != null) {
+        buffer.writeAll(["\"longPeriod\":",this.longPeriod, ","], "");
+    }
+    
+    if (this.signalPeriod != null) {
+        buffer.writeAll(["\"signalPeriod\":",this.signalPeriod, ","], "");
+    }
   }
+
 
 }

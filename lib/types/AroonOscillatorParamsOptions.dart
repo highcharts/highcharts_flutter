@@ -12,31 +12,32 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-09
  *
- */ 
-
+ */
 import 'AroonParamsOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * AroonOscillatorParamsOptions 
+ * AroonOscillatorParamsOptions
  */
 class AroonOscillatorParamsOptions extends AroonParamsOptions {
-  AroonOscillatorParamsOptions( {
+
+  AroonOscillatorParamsOptions({
     super.index = null,
     super.period = null
-  }) : super();
-  
+  });
+
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    
+
   }
+
 
 }
