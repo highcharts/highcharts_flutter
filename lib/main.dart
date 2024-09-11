@@ -83,14 +83,41 @@ Highcharts.chart('container', {
 ''';
 
 class ChartView extends StatefulWidget {
-  const ChartView({super.key});
+  ChartView(this.options, { super.key });
+
+  _ChartViewState? state;
+
+  dynamic options;
+
+  void refresh () {
+    state!.controller.runJavaScript('UpdateChart(${options.toJSON()}, \'chart\')');
+    print(options.toJSON());
+  }
 
   @override
-  State<ChartView> createState() => _ChartViewState();
+  _ChartViewState createState() {
+    state = _ChartViewState();
+    return state!;
+  }
+
 }
 
 class _ChartViewState extends State<ChartView> {
+
   late final WebViewController controller;
+
+  late final WebViewWidget view;
+
+  // #docregion webview_widget
+  @override
+  Widget build(BuildContext context) {
+    widget.state = this;
+    return Container(
+        child: view,
+        height: 400,
+    );
+  }
+  // #enddocregion webview_widget
 
   @override
   void initState() {
@@ -134,16 +161,8 @@ class _ChartViewState extends State<ChartView> {
       )
       ..loadHtmlString(kLocalExamplePage);
 
+    view = WebViewWidget(controller: controller);
     // #enddocregion webview_controller
   }
 
-  // #docregion webview_widget
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 400,
-      child:  WebViewWidget(controller: controller)
-    );
-  }
-  // #enddocregion webview_widget
 }

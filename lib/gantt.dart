@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-09-09
+ * Build stamp: 2024-09-11
  *
  */
 ////////////////////////////////////////////////////////////////////////////////
@@ -202,7 +202,7 @@ class GanttOptions extends OptionFragment {
     // This is like the ugliest thing ever, but we can't solve it with 
     // inheritance without duplicating a lot of code and increasing complexity
     // of the generator significantly
-    /** for (var i = 0; i < this.series.length; ++i) {
+    /* for (var i = 0; i < this.series.length; ++i) {
       if (!(this.series[i] is GanttSeriesOptions ||
       this.series[i] is XRangeSeriesOptions )) {
         throw ArgumentError.value(this.series[i]);
@@ -336,15 +336,11 @@ const String kLocalExamplePage = '''
 
 <title>Load file or HTML string example</title>
 <style>
-  html, body {
-    width: 100%'
+  html, body, #container {
+    background: transparent;
     height: 100%;
     margin: 0;
-  }
-
-  #container {
     width: 100%;
-    height: 100%;
   }
 </style>
 </head>
@@ -375,37 +371,44 @@ function UpdateChart (data, constr) {
 ////////////////////////////////////////////////////////////////////////////////
 
 class GanttChart extends StatefulWidget {
-  // const GanttChart({ super.key });
-  VoidCallback? _refreshRequest;
+
+  GanttChart(this.options, { super.key });
+
   GanttOptions options;
 
-  GanttChart(this.options);
+  _GanttChart? state;
 
   void refresh () {
-    if (_refreshRequest != null) {
-      _refreshRequest!();
-    }
+    state!.controller.runJavaScript('UpdateChart(${options.toJSON()}, \'ganttChart\')');
+    print(options.toJSON());
   }
 
   @override
-  State<GanttChart> createState() => _GanttChart();
+  _GanttChart createState() {
+    state = _GanttChart();
+    return state!;
+  }
+
 }
 
 class _GanttChart extends State<GanttChart> {
+
   late final WebViewController controller;
 
-  void refresh () {
-    if (controller != null) {
-      controller.runJavaScript('UpdateChart(${widget.options.toJSON()}, \'ganttChart\')');
-      print(widget.options.toJSON());
-    }
+  late final WebViewWidget view;
+
+  @override
+  Widget build(BuildContext context) {
+    widget.state = this;
+    return Container(
+        child: view,
+        height: 400,
+    );
   }
 
   @override
   void initState() {
     super.initState();
-
-    widget._refreshRequest = refresh;
 
     PlatformWebViewControllerCreationParams params;
 
@@ -432,18 +435,12 @@ class _GanttChart extends State<GanttChart> {
             return NavigationDecision.navigate;
           },
           onPageFinished: (String url) {
-            refresh();
+            widget.refresh();
           }
         )
       )
       ..loadHtmlString(kLocalExamplePage);
-  }
 
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-        height: 400,
-        child: WebViewWidget(controller: controller)
-    );
+      view = WebViewWidget(controller: controller);
   }
 }
