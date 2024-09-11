@@ -12,50 +12,87 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'RectangleObject.dart';
 import 'XRangePointPartialFillOptions.dart';
 import 'OptionFragment.dart';
 
 /** 
- * XRangePoint 
+ * XRangePoint
  */
 class XRangePoint extends OptionFragment {
-  XRangePoint( ) : super();
-  // NOTE: len skipped - type number is ignored in gen 
 
-  // NOTE: shapeType skipped - type string is ignored in gen 
+  XRangePoint({
+    this.clipRectArgs = null,
+    this.len = null,
+    this.partialFill = null,
+    this.partShapeArgs = null,
+    this.shapeType = null,
+    this.tooltipDateKeys = null,
+    this.x2 = null,
+    this.yCategory = null
+  });
 
-  // NOTE: x2 skipped - type number is ignored in gen 
-
-  // NOTE: yCategory skipped - type string is ignored in gen 
-
+  RectangleObject? clipRectArgs;
+    
+  double? len;
+    
+  XRangePointPartialFillOptions? partialFill;
+    
+  XRangePointPartialFillOptions? partShapeArgs;
+    
+  String? shapeType;
+    
+  String? tooltipDateKeys;
+    
+  double? x2;
+    
+  String? yCategory;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of clipRectArgs (type RectangleObject is ignored) ignore type: true
 
-    // NOTE: skip serialization of len (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of partialFill (type XRangePointPartialFillOptions is ignored) ignore type: true
-
-    // NOTE: skip serialization of partShapeArgs (type XRangePointPartialFillOptions is ignored) ignore type: true
-
-    // NOTE: skip serialization of shapeType (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of tooltipDateKeys (type string[] is ignored) ignore type: true
-
-    // NOTE: skip serialization of x2 (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of yCategory (type string is ignored) ignore type: true
+    
+    if (this.clipRectArgs != null) {
+        buffer.writeAll(["\"clipRectArgs\":",this.clipRectArgs?.toJSON(), ","], "");
+    }
+    
+    if (this.len != null) {
+        buffer.writeAll(["\"len\":",this.len, ","], "");
+    }
+    
+    if (this.partialFill != null) {
+        buffer.writeAll(["\"partialFill\":",this.partialFill?.toJSON(), ","], "");
+    }
+    
+    if (this.partShapeArgs != null) {
+        buffer.writeAll(["\"partShapeArgs\":",this.partShapeArgs?.toJSON(), ","], "");
+    }
+    
+    if (this.shapeType != null) {
+        buffer.writeAll(["\"shapeType\":\'",this.shapeType, "\',"], "");
+    }
+    
+    if (this.tooltipDateKeys != null) {
+        buffer.writeAll(["\"tooltipDateKeys\":",this.tooltipDateKeys, ","], "");
+    }
+    
+    if (this.x2 != null) {
+        buffer.writeAll(["\"x2\":",this.x2, ","], "");
+    }
+    
+    if (this.yCategory != null) {
+        buffer.writeAll(["\"yCategory\":\'",this.yCategory, "\',"], "");
+    }
   }
+
 
 }

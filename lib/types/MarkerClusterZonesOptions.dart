@@ -12,43 +12,66 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'PointMarkerOptions.dart';
 import 'OptionFragment.dart';
 
+
 /** 
- * MarkerClusterZonesOptions 
+ * MarkerClusterZonesOptions
  */
 class MarkerClusterZonesOptions extends OptionFragment {
-  MarkerClusterZonesOptions( ) : super();
-  // NOTE: className skipped - type string is ignored in gen 
 
-  // NOTE: from skipped - type number is ignored in gen 
+  MarkerClusterZonesOptions({
+    this.className = null,
+    this.from = null,
+    this.marker = null,
+    this.to = null,
+    this.zoneIndex = null
+  });
 
-  // NOTE: to skipped - type number is ignored in gen 
-
-  // NOTE: zoneIndex skipped - type number is ignored in gen 
-
+  String? className;
+    
+  double? from;
+    
+  PointMarkerOptions? marker;
+    
+  double? to;
+    
+  double? zoneIndex;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of className (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of from (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of marker (type PointMarkerOptions is ignored) ignore type: true
-
-    // NOTE: skip serialization of to (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of zoneIndex (type number is ignored) ignore type: true
+    
+    if (this.className != null) {
+        buffer.writeAll(["\"className\":\'",this.className, "\',"], "");
+    }
+    
+    if (this.from != null) {
+        buffer.writeAll(["\"from\":",this.from, ","], "");
+    }
+    
+    if (this.marker != null) {
+        buffer.writeAll(["\"marker\":",this.marker?.toJSON(), ","], "");
+    }
+    
+    if (this.to != null) {
+        buffer.writeAll(["\"to\":",this.to, ","], "");
+    }
+    
+    if (this.zoneIndex != null) {
+        buffer.writeAll(["\"zoneIndex\":",this.zoneIndex, ","], "");
+    }
   }
+
 
 }

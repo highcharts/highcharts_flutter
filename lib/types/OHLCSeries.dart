@@ -12,10 +12,9 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'OHLCSeriesOptions.dart';
 import 'Series.dart';
 import 'PointOptions.dart';
@@ -34,8 +33,7 @@ class OHLCSeries extends Series {
     this.data = null
   });
 
-  
-  @override
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
@@ -56,16 +54,13 @@ class OHLCSeries extends Series {
         if (point.length > 1) {
           seriesData.writeAll(["["], "");
         }
-
-          for (var sub in point) {
-            if (sub is String) {
-              seriesData.writeAll(["\"", sub, "\","], "");
-            } else {
-              seriesData.writeAll([sub], ",");
-            }
-
+        for (var sub in point) {
+          if (sub is String) {
+            seriesData.writeAll(["\"", sub, "\","], "");
+          } else {
+            seriesData.writeAll([sub], ",");
           }
-
+        }
         if (point.length > 1) {
           seriesData.writeAll(["],"], "");
         } else {
@@ -92,11 +87,19 @@ class OHLCSeries extends Series {
 
 
     
-    if (this.options?.upColor != null) {  
-      buffer.writeAll(["\"upColor\":\'",this.options?.upColor, "\',"], "");
-    }
 
-    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
+    // NOTE: skip serialization of data (type OHLCPointOptions)[] ignored, skipped: false)
+
+    
+    if (this.options?.pointValKey != null) {
+        buffer.writeAll(["\"pointValKey\":\'",this.options?.pointValKey, "\',"], "");
+    }
+    // NOTE: skip serialization of states (type Generic ignored, skipped: true)
+
+    
+    if (this.options?.upColor != null) {
+        buffer.writeAll(["\"upColor\":\'",this.options?.upColor, "\',"], "");
+    }
   }
 
 }

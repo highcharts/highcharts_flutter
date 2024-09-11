@@ -12,19 +12,18 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'AxisOptions.dart';
-import 'GradientColorStop.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * YAxisOptions 
+ * YAxisOptions
  */
 class YAxisOptions extends AxisOptions {
-  YAxisOptions( {
+
+  YAxisOptions({
     super.accessibility = null,
     super.alignTicks = null,
     super.allowDecimals = null,
@@ -37,6 +36,7 @@ class YAxisOptions extends AxisOptions {
     super.crosshair = null,
     super.crossing = null,
     super.currentDateIndicator = null,
+    super.description = null,
     super.endOnTick = null,
     super.events = null,
     super.floor = null,
@@ -48,6 +48,9 @@ class YAxisOptions extends AxisOptions {
     super.gridZIndex = null,
     super.height = null,
     super.id = null,
+    super.internalKey = null,
+    super.isInternal = null,
+    super.keepOrdinalPadding = null,
     super.labels = null,
     super.left = null,
     super.lineColor = null,
@@ -88,6 +91,7 @@ class YAxisOptions extends AxisOptions {
     super.showEmpty = null,
     super.showFirstLabel = null,
     super.showLastLabel = null,
+    super.side = null,
     super.softMax = null,
     super.softMin = null,
     super.stackLabels = null,
@@ -95,7 +99,6 @@ class YAxisOptions extends AxisOptions {
     super.startOfWeek = null,
     super.startOnTick = null,
     this.staticScale = null,
-    this.stops = null,
     super.tickAmount = null,
     super.tickColor = null,
     super.tickInterval = null,
@@ -115,51 +118,82 @@ class YAxisOptions extends AxisOptions {
     super.width = null,
     super.zIndex = null,
     super.zoomEnabled = null
-  }) : super();
+  });
+
+  /**
+   * Solid gauge only. Unless [stops](#yAxis.stops) are set, the color
+   * to represent the maximum value of the Y axis. 
+   * 
+   * Defaults to '#003399'. 
+   */
   String? maxColor;
     
+  /**
+   * Solid gauge only. Unless [stops](#yAxis.stops) are set, the color
+   * to represent the minimum value of the Y axis. 
+   * 
+   * Defaults to '#e6ebf5'. 
+   */
   String? minColor;
     
+  /**
+   * For vertical axes only. Setting the static scale ensures that each tick unit
+   * is translated into a fixed pixel height. For example, setting the static
+   * scale to 24 results in each Y axis category taking up 24 pixels, and the
+   * height of the chart adjusts. Adding or removing items will make the chart
+   * resize. 
+   * 
+   * Defaults to '50'. 
+   */
   double? staticScale;
     
-  List<GradientColorStop>? stops; // GradientColorStop
+  /**
+   * Parallel coordinates only. Format that will be used for point.y
+   * and available in [tooltip.pointFormat](#tooltip.pointFormat) as
+   * `{point.formattedValue}`. If not set, `{point.formattedValue}`
+   * will use other options, in this order:
+   * 
+   * 1. [yAxis.labels.format](#yAxis.labels.format) will be used if
+   *    set
+   * 
+   * 2. If yAxis is a category, then category name will be displayed
+   * 
+   * 3. If yAxis is a datetime, then value will use the same format as
+   *    yAxis labels
+   * 
+   * 4. If yAxis is linear/logarithmic type, then simple value will be
+   *    used 
+   * 
+   * Defaults to 'undefined'. 
+   */
   String? tooltipValueFormat;
     
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    if (this.maxColor != null) {  
-      buffer.writeAll(["\"maxColor\":\'",this.maxColor, "\',"], "");
+
+    
+    if (this.maxColor != null) {
+        buffer.writeAll(["\"maxColor\":\'",this.maxColor, "\',"], "");
     }
-
-    if (this.minColor != null) {  
-      buffer.writeAll(["\"minColor\":\'",this.minColor, "\',"], "");
+    
+    if (this.minColor != null) {
+        buffer.writeAll(["\"minColor\":\'",this.minColor, "\',"], "");
     }
-
-    if (this.staticScale != null) {  
-      buffer.writeAll(["\"staticScale\":",this.staticScale, ","], "");
+    
+    if (this.staticScale != null) {
+        buffer.writeAll(["\"staticScale\":",this.staticScale, ","], "");
     }
-
-    if (this.stops != null) {  
-     StringBuffer arrData = StringBuffer();
-
-      for (var item in this.stops!) {
-          arrData.write("{");
-          item.toJSONInner(arrData);
-          arrData.write("}");
-      }
-      buffer.writeAll(["\"stops\": [", arrData , "],"], "");   
-        
-    }
-
-    if (this.tooltipValueFormat != null) {  
-      buffer.writeAll(["\"tooltipValueFormat\":\'",this.tooltipValueFormat, "\',"], "");
+    
+    if (this.tooltipValueFormat != null) {
+        buffer.writeAll(["\"tooltipValueFormat\":\'",this.tooltipValueFormat, "\',"], "");
     }
   }
+
 
 }

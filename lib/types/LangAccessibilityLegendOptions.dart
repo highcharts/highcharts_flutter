@@ -12,36 +12,51 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * LangAccessibilityLegendOptions 
+ * LangAccessibilityLegendOptions
  */
 class LangAccessibilityLegendOptions extends OptionFragment {
-  LangAccessibilityLegendOptions( ) : super();
-  // NOTE: legendItem skipped - type string is ignored in gen 
 
-  // NOTE: legendLabel skipped - type string is ignored in gen 
+  LangAccessibilityLegendOptions({
+    this.legendItem = null,
+    this.legendLabel = null,
+    this.legendLabelNoTitle = null
+  });
 
-  // NOTE: legendLabelNoTitle skipped - type string is ignored in gen 
-
+  String? legendItem;
+    
+  String? legendLabel;
+    
+  String? legendLabelNoTitle;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of legendItem (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of legendLabel (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of legendLabelNoTitle (type string is ignored) ignore type: true
+    
+    if (this.legendItem != null) {
+        buffer.writeAll(["\"legendItem\":\'",this.legendItem, "\',"], "");
+    }
+    
+    if (this.legendLabel != null) {
+        buffer.writeAll(["\"legendLabel\":\'",this.legendLabel, "\',"], "");
+    }
+    
+    if (this.legendLabelNoTitle != null) {
+        buffer.writeAll(["\"legendLabelNoTitle\":\'",this.legendLabelNoTitle, "\',"], "");
+    }
   }
+
 
 }

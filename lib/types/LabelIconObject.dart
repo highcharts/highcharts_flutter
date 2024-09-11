@@ -12,10 +12,9 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'SVGElement.dart';
 import 'TreeGridAxisLabelIconOptions.dart';
 import 'SVGRenderer.dart';
@@ -23,37 +22,72 @@ import 'PositionObject.dart';
 import 'OptionFragment.dart';
 
 /** 
- * LabelIconObject 
+ * LabelIconObject
  */
 class LabelIconObject extends OptionFragment {
-  LabelIconObject( ) : super();
-  // NOTE: collapsed skipped - type boolean is ignored in gen 
 
-  // NOTE: color skipped - type string is ignored in gen 
+  LabelIconObject({
+    this.collapsed = null,
+    this.color = null,
+    this.group = null,
+    this.options = null,
+    this.renderer = null,
+    this.show = null,
+    this.xy = null
+  });
 
-  // NOTE: show skipped - type boolean is ignored in gen 
-
+  bool? collapsed;
+    
+  String? color;
+    
+  SVGElement? group;
+    
+  TreeGridAxisLabelIconOptions? options;
+    
+  SVGRenderer? renderer;
+    
+  bool? show;
+    
+  PositionObject? xy;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of collapsed (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of color (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of group (type SVGElement is ignored) ignore type: true
-
-    // NOTE: skip serialization of options (type TreeGridAxisLabelIconOptions is ignored) ignore type: true
-
-    // NOTE: skip serialization of renderer (type SVGRenderer is ignored) ignore type: true
-
-    // NOTE: skip serialization of show (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of xy (type PositionObject is ignored) ignore type: true
+    
+    if (this.collapsed != null) {
+        buffer.writeAll(["\"collapsed\":",this.collapsed, ","], "");
+    }
+    
+    if (this.color != null) {
+        buffer.writeAll(["\"color\":\'",this.color, "\',"], "");
+    }
+    
+    if (this.group != null) {
+        buffer.writeAll(["\"group\":",this.group?.toJSON(), ","], "");
+    }
+    
+    if (this.options != null) {
+        buffer.writeAll(["\"options\":",this.options?.toJSON(), ","], "");
+    }
+    
+    if (this.renderer != null) {
+        buffer.writeAll(["\"renderer\":",this.renderer?.toJSON(), ","], "");
+    }
+    
+    if (this.show != null) {
+        buffer.writeAll(["\"show\":",this.show, ","], "");
+    }
+    
+    if (this.xy != null) {
+        buffer.writeAll(["\"xy\":",this.xy?.toJSON(), ","], "");
+    }
   }
+
 
 }

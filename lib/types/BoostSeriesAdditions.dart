@@ -12,29 +12,37 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
-import 'BoostTargetAdditions.dart';
+ */
 import 'BoostAlteredObject.dart';
 import 'OptionFragment.dart';
 
 /** 
- * BoostSeriesAdditions 
+ * BoostSeriesAdditions
  */
-class BoostSeriesAdditions extends BoostTargetAdditions {
-  BoostSeriesAdditions( ) : super();
-  
+class BoostSeriesAdditions extends OptionFragment {
+
+  BoostSeriesAdditions({
+    this.altered = null
+  });
+
+  BoostAlteredObject? altered;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of altered (type BoostAlteredObject[] is ignored) ignore type: true
+
+    
+    if (this.altered != null) {
+        buffer.writeAll(["\"altered\":",this.altered, ","], "");
+    }
   }
+
 
 }

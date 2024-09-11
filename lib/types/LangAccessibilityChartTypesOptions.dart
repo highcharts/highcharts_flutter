@@ -12,112 +12,184 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * LangAccessibilityChartTypesOptions 
+ * LangAccessibilityChartTypesOptions
  */
 class LangAccessibilityChartTypesOptions extends OptionFragment {
-  LangAccessibilityChartTypesOptions( ) : super();
-  // NOTE: barMultiple skipped - type string is ignored in gen 
 
-  // NOTE: barSingle skipped - type string is ignored in gen 
+  LangAccessibilityChartTypesOptions({
+    this.barMultiple = null,
+    this.barSingle = null,
+    this.boxplotMultiple = null,
+    this.boxplotSingle = null,
+    this.bubbleMultiple = null,
+    this.bubbleSingle = null,
+    this.columnMultiple = null,
+    this.columnSingle = null,
+    this.combinationChart = null,
+    this.defaultMultiple = null,
+    this.defaultSingle = null,
+    this.emptyChart = null,
+    this.lineMultiple = null,
+    this.lineSingle = null,
+    this.mapTypeDescription = null,
+    this.pieMultiple = null,
+    this.pieSingle = null,
+    this.scatterMultiple = null,
+    this.scatterSingle = null,
+    this.splineMultiple = null,
+    this.splineSingle = null,
+    this.unknownMap = null
+  });
 
-  // NOTE: boxplotMultiple skipped - type string is ignored in gen 
-
-  // NOTE: boxplotSingle skipped - type string is ignored in gen 
-
-  // NOTE: bubbleSingle skipped - type string is ignored in gen 
-
-  // NOTE: bubbleMultiple skipped - type string is ignored in gen 
-
-  // NOTE: columnMultiple skipped - type string is ignored in gen 
-
-  // NOTE: columnSingle skipped - type string is ignored in gen 
-
-  // NOTE: combinationChart skipped - type string is ignored in gen 
-
-  // NOTE: defaultMultiple skipped - type string is ignored in gen 
-
-  // NOTE: defaultSingle skipped - type string is ignored in gen 
-
-  // NOTE: emptyChart skipped - type string is ignored in gen 
-
-  // NOTE: lineMultiple skipped - type string is ignored in gen 
-
-  // NOTE: lineSingle skipped - type string is ignored in gen 
-
-  // NOTE: mapTypeDescription skipped - type string is ignored in gen 
-
-  // NOTE: pieMultiple skipped - type string is ignored in gen 
-
-  // NOTE: pieSingle skipped - type string is ignored in gen 
-
-  // NOTE: scatterMultiple skipped - type string is ignored in gen 
-
-  // NOTE: scatterSingle skipped - type string is ignored in gen 
-
-  // NOTE: splineMultiple skipped - type string is ignored in gen 
-
-  // NOTE: splineSingle skipped - type string is ignored in gen 
-
-  // NOTE: unknownMap skipped - type string is ignored in gen 
-
+  String? barMultiple;
+    
+  String? barSingle;
+    
+  String? boxplotMultiple;
+    
+  String? boxplotSingle;
+    
+  String? bubbleSingle;
+    
+  String? bubbleMultiple;
+    
+  String? columnMultiple;
+    
+  String? columnSingle;
+    
+  String? combinationChart;
+    
+  String? defaultMultiple;
+    
+  String? defaultSingle;
+    
+  String? emptyChart;
+    
+  String? lineMultiple;
+    
+  String? lineSingle;
+    
+  String? mapTypeDescription;
+    
+  String? pieMultiple;
+    
+  String? pieSingle;
+    
+  String? scatterMultiple;
+    
+  String? scatterSingle;
+    
+  String? splineMultiple;
+    
+  String? splineSingle;
+    
+  String? unknownMap;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of barMultiple (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of barSingle (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of boxplotMultiple (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of boxplotSingle (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of bubbleSingle (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of bubbleMultiple (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of columnMultiple (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of columnSingle (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of combinationChart (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of defaultMultiple (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of defaultSingle (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of emptyChart (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of lineMultiple (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of lineSingle (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of mapTypeDescription (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of pieMultiple (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of pieSingle (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of scatterMultiple (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of scatterSingle (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of splineMultiple (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of splineSingle (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of unknownMap (type string is ignored) ignore type: true
+    
+    if (this.barMultiple != null) {
+        buffer.writeAll(["\"barMultiple\":\'",this.barMultiple, "\',"], "");
+    }
+    
+    if (this.barSingle != null) {
+        buffer.writeAll(["\"barSingle\":\'",this.barSingle, "\',"], "");
+    }
+    
+    if (this.boxplotMultiple != null) {
+        buffer.writeAll(["\"boxplotMultiple\":\'",this.boxplotMultiple, "\',"], "");
+    }
+    
+    if (this.boxplotSingle != null) {
+        buffer.writeAll(["\"boxplotSingle\":\'",this.boxplotSingle, "\',"], "");
+    }
+    
+    if (this.bubbleSingle != null) {
+        buffer.writeAll(["\"bubbleSingle\":\'",this.bubbleSingle, "\',"], "");
+    }
+    
+    if (this.bubbleMultiple != null) {
+        buffer.writeAll(["\"bubbleMultiple\":\'",this.bubbleMultiple, "\',"], "");
+    }
+    
+    if (this.columnMultiple != null) {
+        buffer.writeAll(["\"columnMultiple\":\'",this.columnMultiple, "\',"], "");
+    }
+    
+    if (this.columnSingle != null) {
+        buffer.writeAll(["\"columnSingle\":\'",this.columnSingle, "\',"], "");
+    }
+    
+    if (this.combinationChart != null) {
+        buffer.writeAll(["\"combinationChart\":\'",this.combinationChart, "\',"], "");
+    }
+    
+    if (this.defaultMultiple != null) {
+        buffer.writeAll(["\"defaultMultiple\":\'",this.defaultMultiple, "\',"], "");
+    }
+    
+    if (this.defaultSingle != null) {
+        buffer.writeAll(["\"defaultSingle\":\'",this.defaultSingle, "\',"], "");
+    }
+    
+    if (this.emptyChart != null) {
+        buffer.writeAll(["\"emptyChart\":\'",this.emptyChart, "\',"], "");
+    }
+    
+    if (this.lineMultiple != null) {
+        buffer.writeAll(["\"lineMultiple\":\'",this.lineMultiple, "\',"], "");
+    }
+    
+    if (this.lineSingle != null) {
+        buffer.writeAll(["\"lineSingle\":\'",this.lineSingle, "\',"], "");
+    }
+    
+    if (this.mapTypeDescription != null) {
+        buffer.writeAll(["\"mapTypeDescription\":\'",this.mapTypeDescription, "\',"], "");
+    }
+    
+    if (this.pieMultiple != null) {
+        buffer.writeAll(["\"pieMultiple\":\'",this.pieMultiple, "\',"], "");
+    }
+    
+    if (this.pieSingle != null) {
+        buffer.writeAll(["\"pieSingle\":\'",this.pieSingle, "\',"], "");
+    }
+    
+    if (this.scatterMultiple != null) {
+        buffer.writeAll(["\"scatterMultiple\":\'",this.scatterMultiple, "\',"], "");
+    }
+    
+    if (this.scatterSingle != null) {
+        buffer.writeAll(["\"scatterSingle\":\'",this.scatterSingle, "\',"], "");
+    }
+    
+    if (this.splineMultiple != null) {
+        buffer.writeAll(["\"splineMultiple\":\'",this.splineMultiple, "\',"], "");
+    }
+    
+    if (this.splineSingle != null) {
+        buffer.writeAll(["\"splineSingle\":\'",this.splineSingle, "\',"], "");
+    }
+    
+    if (this.unknownMap != null) {
+        buffer.writeAll(["\"unknownMap\":\'",this.unknownMap, "\',"], "");
+    }
   }
+
 
 }

@@ -12,36 +12,51 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * A11yBracketStatementObject 
+ * A11yBracketStatementObject
  */
 class A11yBracketStatementObject extends OptionFragment {
-  A11yBracketStatementObject( ) : super();
-  // NOTE: begin skipped - type number is ignored in gen 
 
-  // NOTE: end skipped - type number is ignored in gen 
+  A11yBracketStatementObject({
+    this.begin = null,
+    this.end = null,
+    this.statement = null
+  });
 
-  // NOTE: statement skipped - type string is ignored in gen 
-
+  double? begin;
+    
+  double? end;
+    
+  String? statement;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of begin (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of end (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of statement (type string is ignored) ignore type: true
+    
+    if (this.begin != null) {
+        buffer.writeAll(["\"begin\":",this.begin, ","], "");
+    }
+    
+    if (this.end != null) {
+        buffer.writeAll(["\"end\":",this.end, ","], "");
+    }
+    
+    if (this.statement != null) {
+        buffer.writeAll(["\"statement\":\'",this.statement, "\',"], "");
+    }
   }
+
 
 }

@@ -12,28 +12,37 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * Funnel3DPoint 
+ * Funnel3DPoint
  */
 class Funnel3DPoint extends OptionFragment {
-  Funnel3DPoint( ) : super();
-  // NOTE: shapeType skipped - type string is ignored in gen 
 
+  Funnel3DPoint({
+    this.shapeType = null
+  });
+
+  String? shapeType;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of shapeType (type string is ignored) ignore type: true
+
+    
+    if (this.shapeType != null) {
+        buffer.writeAll(["\"shapeType\":\'",this.shapeType, "\',"], "");
+    }
   }
+
 
 }

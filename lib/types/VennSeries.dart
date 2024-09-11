@@ -12,10 +12,9 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'VennSeriesOptions.dart';
 import 'Series.dart';
 import 'PointOptions.dart';
@@ -34,8 +33,7 @@ class VennSeries extends Series {
     this.data = null
   });
 
-  
-  @override
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
@@ -56,16 +54,13 @@ class VennSeries extends Series {
         if (point.length > 1) {
           seriesData.writeAll(["["], "");
         }
-
-          for (var sub in point) {
-            if (sub is String) {
-              seriesData.writeAll(["\"", sub, "\","], "");
-            } else {
-              seriesData.writeAll([sub], ",");
-            }
-
+        for (var sub in point) {
+          if (sub is String) {
+            seriesData.writeAll(["\"", sub, "\","], "");
+          } else {
+            seriesData.writeAll([sub], ",");
           }
-
+        }
         if (point.length > 1) {
           seriesData.writeAll(["],"], "");
         } else {
@@ -92,19 +87,69 @@ class VennSeries extends Series {
 
 
     
-    if (this.options?.borderDashStyle != null) {  
-      buffer.writeAll(["\"borderDashStyle\":\'",this.options?.borderDashStyle, "\',"], "");
+
+    
+    if (this.options?.borderColor != null) {
+        buffer.writeAll(["\"borderColor\":\'",this.options?.borderColor, "\',"], "");
     }
-
-    if (this.options?.brighten != null) {  
-      buffer.writeAll(["\"brighten\":",this.options?.brighten, ","], "");
+    
+    if (this.options?.borderDashStyle != null) {
+        buffer.writeAll(["\"borderDashStyle\":\'",this.options?.borderDashStyle, "\',"], "");
     }
+    
+    if (this.options?.borderWidth != null) {
+        buffer.writeAll(["\"borderWidth\":",this.options?.borderWidth, ","], "");
+    }
+    
+    if (this.options?.brighten != null) {
+        buffer.writeAll(["\"brighten\":",this.options?.brighten, ","], "");
+    }
+    
+    if (this.options?.brightness != null) {
+        buffer.writeAll(["\"brightness\":",this.options?.brightness, ","], "");
+    }
+    
+    if (this.options?.clip != null) {
+        buffer.writeAll(["\"clip\":",this.options?.clip, ","], "");
+    }
+    
+    if (this.options?.colorByPoint != null) {
+        buffer.writeAll(["\"colorByPoint\":",this.options?.colorByPoint, ","], "");
+    }
+    
+    if (this.options?.data != null) {
+        buffer.writeAll(["\"data\":",this.options?.data, ","], "");
+    }
+    // NOTE: skip serialization of dataLabels (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of brightness (type number is ignored) ignore type: true
+    
+    if (this.options?.inactiveOtherPoints != null) {
+        buffer.writeAll(["\"inactiveOtherPoints\":",this.options?.inactiveOtherPoints, ","], "");
+    }
+    
+    if (this.options?.legendSymbol != null) {
+        buffer.writeAll(["\"legendSymbol\":\'",this.options?.legendSymbol, "\',"], "");
+    }
+    
+    if (this.options?.legendType != null) {
+        buffer.writeAll(["\"legendType\":\'",this.options?.legendType, "\',"], "");
+    }
+    
+    if (this.options?.marker != null) {
+        buffer.writeAll(["\"marker\":",this.options?.marker?.toJSON(), ","], "");
+    }
+    
+    if (this.options?.opacity != null) {
+        buffer.writeAll(["\"opacity\":",this.options?.opacity, ","], "");
+    }
+    
+    if (this.options?.showInLegend != null) {
+        buffer.writeAll(["\"showInLegend\":",this.options?.showInLegend, ","], "");
+    }
+    // NOTE: skip serialization of states (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of data (type VennPointOptions[] is ignored) ignore type: true
+    // NOTE: skip serialization of tooltip (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
   }
 
 }

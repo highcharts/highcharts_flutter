@@ -12,42 +12,59 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'SMAParamsOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * PriceEnvelopesParamsOptions 
+ * PriceEnvelopesParamsOptions
  */
 class PriceEnvelopesParamsOptions extends SMAParamsOptions {
-  PriceEnvelopesParamsOptions( {
+
+  PriceEnvelopesParamsOptions({
+    this.bottomBand = null,
     super.index = null,
-    this.period = null
-  }) : super();
-  // NOTE: topBand skipped - type number is ignored in gen 
+    this.period = null,
+    this.topBand = null
+  });
 
-  // NOTE: bottomBand skipped - type number is ignored in gen 
-
+  double? topBand;
+    
+  double? bottomBand;
+    
+  /**
+   * The base period for indicator calculations. This is the number of
+   * data points which are taken into account for the indicator
+   * calculations. 
+   * 
+   * Defaults to '14'. 
+   */
   double? period;
     
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of topBand (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of bottomBand (type number is ignored) ignore type: true
-
-    if (this.period != null) {  
-      buffer.writeAll(["\"period\":",this.period, ","], "");
+    
+    if (this.topBand != null) {
+        buffer.writeAll(["\"topBand\":",this.topBand, ","], "");
+    }
+    
+    if (this.bottomBand != null) {
+        buffer.writeAll(["\"bottomBand\":",this.bottomBand, ","], "");
+    }
+    
+    if (this.period != null) {
+        buffer.writeAll(["\"period\":",this.period, ","], "");
     }
   }
+
 
 }

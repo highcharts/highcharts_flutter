@@ -12,35 +12,52 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'HTMLElement.dart';
 import 'OptionFragment.dart';
 
 /** 
- * PointHoverEvent 
+ * PointHoverEvent
  */
 class PointHoverEvent extends OptionFragment {
-  PointHoverEvent( ) : super();
-  // NOTE: type skipped - type string is ignored in gen 
 
+  PointHoverEvent({
+    this.hoverRow = null,
+    this.type = null
+  });
+
+  String? type;
+    
+  // NOTE: detail skipped - type AnyRecord is ignored in gen 
+
+  // NOTE: hoverPoint skipped - type Generic is ignored in gen 
+
+  HTMLElement? hoverRow;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of type (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of detail (type AnyRecord is ignored) ignore type: 1
+    
+    if (this.type != null) {
+        buffer.writeAll(["\"type\":\'",this.type, "\',"], "");
+    }
+    // NOTE: skip serialization of detail (type AnyRecord ignored, skipped: true)
 
-    // NOTE: skip serialization of hoverPoint (type Generic is ignored) ignore type: true
+    // NOTE: skip serialization of hoverPoint (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of hoverRow (type HTMLElement is ignored) ignore type: true
+    
+    if (this.hoverRow != null) {
+        buffer.writeAll(["\"hoverRow\":",this.hoverRow?.toJSON(), ","], "");
+    }
   }
+
 
 }

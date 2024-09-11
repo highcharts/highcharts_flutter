@@ -12,32 +12,48 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'PositionObject.dart';
 import 'ControlPoint.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * LabelClearPointObject 
+ * LabelClearPointObject
  */
 class LabelClearPointObject extends PositionObject {
-  LabelClearPointObject( ) : super();
-  // NOTE: weight skipped - type number is ignored in gen 
 
+  LabelClearPointObject({
+    super.alignment = null,
+    this.connectorPoint = null,
+    this.weight = null,
+    super.x = null,
+    super.y = null
+  });
+
+  ControlPoint? connectorPoint;
+    
+  double? weight;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of connectorPoint (type ControlPoint is ignored) ignore type: true
 
-    // NOTE: skip serialization of weight (type number is ignored) ignore type: true
+    
+    if (this.connectorPoint != null) {
+        buffer.writeAll(["\"connectorPoint\":",this.connectorPoint?.toJSON(), ","], "");
+    }
+    
+    if (this.weight != null) {
+        buffer.writeAll(["\"weight\":",this.weight, ","], "");
+    }
   }
+
 
 }

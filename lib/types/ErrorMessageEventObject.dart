@@ -12,37 +12,56 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'Chart.dart';
 import 'OptionFragment.dart';
 
 /** 
- * ErrorMessageEventObject 
+ * ErrorMessageEventObject
  */
 class ErrorMessageEventObject extends OptionFragment {
-  ErrorMessageEventObject( ) : super();
-  // NOTE: code skipped - type number is ignored in gen 
 
-  // NOTE: message skipped - type string is ignored in gen 
+  ErrorMessageEventObject({
+    this.chart = null,
+    this.code = null,
+    this.message = null,
+    this.params = null
+  });
 
+  Chart? chart;
+    
+  double? code;
+    
+  String? message;
+    
+  Map<String, String>? params;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of chart (type Chart is ignored) ignore type: true
 
-    // NOTE: skip serialization of code (type number is ignored) ignore type: true
+    
+    if (this.chart != null) {
+        buffer.writeAll(["\"chart\":",this.chart?.toJSON(), ","], "");
+    }
+    
+    if (this.code != null) {
+        buffer.writeAll(["\"code\":",this.code, ","], "");
+    }
+    
+    if (this.message != null) {
+        buffer.writeAll(["\"message\":\'",this.message, "\',"], "");
+    }
+    // NOTE: skip serialization of params (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of message (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of params (type Generic is ignored) ignore type: true
   }
+
 
 }

@@ -12,56 +12,86 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * TreeGridAxisLabelIconOptions 
+ * TreeGridAxisLabelIconOptions
  */
 class TreeGridAxisLabelIconOptions extends OptionFragment {
-  TreeGridAxisLabelIconOptions( ) : super();
-  // NOTE: height skipped - type number is ignored in gen 
 
-  // NOTE: lineColor skipped - type string is ignored in gen 
+  TreeGridAxisLabelIconOptions({
+    this.height = null,
+    this.lineColor = null,
+    this.lineWidth = null,
+    this.padding = null,
+    this.type = null,
+    this.width = null,
+    this.x = null,
+    this.y = null
+  });
 
-  // NOTE: lineWidth skipped - type number is ignored in gen 
-
-  // NOTE: padding skipped - type number is ignored in gen 
-
-  // NOTE: type skipped - type number is ignored in gen 
-
-  // NOTE: width skipped - type number is ignored in gen 
-
-  // NOTE: x skipped - type number is ignored in gen 
-
-  // NOTE: y skipped - type number is ignored in gen 
-
+  double? height;
+    
+  String? lineColor;
+    
+  double? lineWidth;
+    
+  double? padding;
+    
+  double? type;
+    
+  double? width;
+    
+  double? x;
+    
+  double? y;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of height (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of lineColor (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of lineWidth (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of padding (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of type (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of width (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of x (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of y (type number is ignored) ignore type: true
+    
+    if (this.height != null) {
+        buffer.writeAll(["\"height\":",this.height, ","], "");
+    }
+    
+    if (this.lineColor != null) {
+        buffer.writeAll(["\"lineColor\":\'",this.lineColor, "\',"], "");
+    }
+    
+    if (this.lineWidth != null) {
+        buffer.writeAll(["\"lineWidth\":",this.lineWidth, ","], "");
+    }
+    
+    if (this.padding != null) {
+        buffer.writeAll(["\"padding\":",this.padding, ","], "");
+    }
+    
+    if (this.type != null) {
+        buffer.writeAll(["\"type\":",this.type, ","], "");
+    }
+    
+    if (this.width != null) {
+        buffer.writeAll(["\"width\":",this.width, ","], "");
+    }
+    
+    if (this.x != null) {
+        buffer.writeAll(["\"x\":",this.x, ","], "");
+    }
+    
+    if (this.y != null) {
+        buffer.writeAll(["\"y\":",this.y, ","], "");
+    }
   }
+
 
 }

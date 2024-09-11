@@ -12,30 +12,41 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * CancelButton 
+ * CancelButton
  */
 class CancelButton extends OptionFragment {
-  CancelButton( ) : super();
-  // NOTE: value skipped - type string is ignored in gen 
+
+  CancelButton({
+    this.value = null
+  });
+
+  String? value;
+    
+  // NOTE: callback skipped - type Function is ignored in gen 
 
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of value (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of callback (type Function is ignored) ignore type: 1
+    
+    if (this.value != null) {
+        buffer.writeAll(["\"value\":\'",this.value, "\',"], "");
+    }
+    // NOTE: skip serialization of callback (type Function ignored, skipped: true)
+
   }
+
 
 }

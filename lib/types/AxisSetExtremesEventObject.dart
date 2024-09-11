@@ -12,60 +12,99 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'RangeSelectorButtonOptions.dart';
 import 'SVGElement.dart';
 import 'OptionFragment.dart';
 
 /** 
- * AxisSetExtremesEventObject 
+ * AxisSetExtremesEventObject
  */
 class AxisSetExtremesEventObject extends OptionFragment {
-  AxisSetExtremesEventObject( ) : super();
-  // NOTE: max skipped - type number is ignored in gen 
 
-  // NOTE: min skipped - type number is ignored in gen 
+  AxisSetExtremesEventObject({
+    this.max = null,
+    this.min = null,
+    this.move = null,
+    this.rangeSelectorButton = null,
+    this.scale = null,
+    this.target = null,
+    this.trigger = null,
+    this.triggerOp = null
+  });
 
-  // NOTE: move skipped - type number is ignored in gen 
+  // NOTE: DOMEvent skipped - type any is ignored in gen 
 
-  // NOTE: scale skipped - type number is ignored in gen 
+  double? max;
+    
+  double? min;
+    
+  double? move;
+    
+  // NOTE: preventDefault skipped - type Function is ignored in gen 
 
-  // NOTE: trigger skipped - type string is ignored in gen 
-
-  // NOTE: triggerOp skipped - type string is ignored in gen 
+  RangeSelectorButtonOptions? rangeSelectorButton;
+    
+  double? scale;
+    
+  SVGElement? target;
+    
+  String? trigger;
+    
+  String? triggerOp;
+    
+  // NOTE: type skipped - type "setExtremes" is ignored in gen 
 
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of DOMEvent (type any is ignored) ignore type: 1
 
-    // NOTE: skip serialization of max (type number is ignored) ignore type: true
+    // NOTE: skip serialization of DOMEvent (type any ignored, skipped: true)
 
-    // NOTE: skip serialization of min (type number is ignored) ignore type: true
+    
+    if (this.max != null) {
+        buffer.writeAll(["\"max\":",this.max, ","], "");
+    }
+    
+    if (this.min != null) {
+        buffer.writeAll(["\"min\":",this.min, ","], "");
+    }
+    
+    if (this.move != null) {
+        buffer.writeAll(["\"move\":",this.move, ","], "");
+    }
+    // NOTE: skip serialization of preventDefault (type Function ignored, skipped: true)
 
-    // NOTE: skip serialization of move (type number is ignored) ignore type: true
+    
+    if (this.rangeSelectorButton != null) {
+        buffer.writeAll(["\"rangeSelectorButton\":",this.rangeSelectorButton?.toJSON(), ","], "");
+    }
+    
+    if (this.scale != null) {
+        buffer.writeAll(["\"scale\":",this.scale, ","], "");
+    }
+    
+    if (this.target != null) {
+        buffer.writeAll(["\"target\":",this.target?.toJSON(), ","], "");
+    }
+    
+    if (this.trigger != null) {
+        buffer.writeAll(["\"trigger\":\'",this.trigger, "\',"], "");
+    }
+    
+    if (this.triggerOp != null) {
+        buffer.writeAll(["\"triggerOp\":\'",this.triggerOp, "\',"], "");
+    }
+    // NOTE: skip serialization of type (type "setExtremes" ignored, skipped: true)
 
-    // NOTE: skip serialization of preventDefault (type Function is ignored) ignore type: 1
-
-    // NOTE: skip serialization of rangeSelectorButton (type RangeSelectorButtonOptions is ignored) ignore type: true
-
-    // NOTE: skip serialization of scale (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of target (type SVGElement is ignored) ignore type: true
-
-    // NOTE: skip serialization of trigger (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of triggerOp (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of type (type "setExtremes" is ignored) ignore type: true
   }
+
 
 }

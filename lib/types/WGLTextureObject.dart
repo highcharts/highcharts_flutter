@@ -12,33 +12,48 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'HTMLCanvasElement.dart';
 import 'OptionFragment.dart';
 
 /** 
- * WGLTextureObject 
+ * WGLTextureObject
  */
 class WGLTextureObject extends OptionFragment {
-  WGLTextureObject( ) : super();
-  // NOTE: isReady skipped - type boolean is ignored in gen 
+
+  WGLTextureObject({
+    this.isReady = null,
+    this.texture = null
+  });
+
+  bool? isReady;
+    
+  HTMLCanvasElement? texture;
+    
+  // NOTE: handle skipped - type WebGLTexture is ignored in gen 
 
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of isReady (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of texture (type HTMLCanvasElement is ignored) ignore type: true
+    
+    if (this.isReady != null) {
+        buffer.writeAll(["\"isReady\":",this.isReady, ","], "");
+    }
+    
+    if (this.texture != null) {
+        buffer.writeAll(["\"texture\":",this.texture?.toJSON(), ","], "");
+    }
+    // NOTE: skip serialization of handle (type WebGLTexture ignored, skipped: true)
 
-    // NOTE: skip serialization of handle (type WebGLTexture is ignored) ignore type: true
   }
+
 
 }

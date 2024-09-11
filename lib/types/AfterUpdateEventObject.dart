@@ -12,33 +12,48 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'Options.dart';
 import 'OptionFragment.dart';
 
 /** 
- * AfterUpdateEventObject 
+ * AfterUpdateEventObject
  */
 class AfterUpdateEventObject extends OptionFragment {
-  AfterUpdateEventObject( ) : super();
-  // NOTE: redraw skipped - type boolean is ignored in gen 
 
+  AfterUpdateEventObject({
+    this.options = null,
+    this.redraw = null
+  });
+
+  // NOTE: animation skipped - type Generic is ignored in gen 
+
+  Options? options;
+    
+  bool? redraw;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of animation (type Generic is ignored) ignore type: true
 
-    // NOTE: skip serialization of options (type Options is ignored) ignore type: true
+    // NOTE: skip serialization of animation (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of redraw (type boolean is ignored) ignore type: true
+    
+    if (this.options != null) {
+        buffer.writeAll(["\"options\":",this.options?.toJSON(), ","], "");
+    }
+    
+    if (this.redraw != null) {
+        buffer.writeAll(["\"redraw\":",this.redraw, ","], "");
+    }
   }
+
 
 }

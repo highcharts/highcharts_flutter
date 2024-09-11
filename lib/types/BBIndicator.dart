@@ -12,36 +12,59 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * BBIndicator 
+ * BBIndicator
  */
 class BBIndicator extends OptionFragment {
-  BBIndicator( ) : super();
-  // NOTE: pointValKey skipped - type string is ignored in gen 
 
+  BBIndicator({
+    this.linesApiNames = null,
+    this.nameComponents = null,
+    this.pointValKey = null
+  });
+
+  String? linesApiNames;
+    
+  String? nameComponents;
+    
+  // NOTE: pointArrayMap skipped - type (keyof BBPoint)[] is ignored in gen 
+
+  // NOTE: pointClass skipped - type typeof BBPoint is ignored in gen 
+
+  String? pointValKey;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of linesApiNames (type string[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of nameComponents (type string[] is ignored) ignore type: true
+    
+    if (this.linesApiNames != null) {
+        buffer.writeAll(["\"linesApiNames\":",this.linesApiNames, ","], "");
+    }
+    
+    if (this.nameComponents != null) {
+        buffer.writeAll(["\"nameComponents\":",this.nameComponents, ","], "");
+    }
+    // NOTE: skip serialization of pointArrayMap (type (keyof BBPoint)[] ignored, skipped: true)
 
-    // NOTE: skip serialization of pointArrayMap (type (keyof BBPoint)[] is ignored) ignore type: true
+    // NOTE: skip serialization of pointClass (type typeof BBPoint ignored, skipped: true)
 
-    // NOTE: skip serialization of pointClass (type typeof BBPoint is ignored) ignore type: true
-
-    // NOTE: skip serialization of pointValKey (type string is ignored) ignore type: true
+    
+    if (this.pointValKey != null) {
+        buffer.writeAll(["\"pointValKey\":\'",this.pointValKey, "\',"], "");
+    }
   }
+
 
 }

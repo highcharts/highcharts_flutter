@@ -12,32 +12,42 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * DataTableOptions 
+ * DataTableOptions
  */
 class DataTableOptions extends OptionFragment {
-  DataTableOptions( ) : super();
-  // NOTE: id skipped - type string is ignored in gen 
 
+  DataTableOptions({
+    this.columns = null,
+    this.id = null
+  });
+
+  Map<String, String>? columns;
+    
+  String? id;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of aliases (type Generic is ignored) ignore type: true
 
-    // NOTE: skip serialization of columns (type Generic is ignored) ignore type: true
+    // NOTE: skip serialization of columns (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of id (type string is ignored) ignore type: true
+    
+    if (this.id != null) {
+        buffer.writeAll(["\"id\":\'",this.id, "\',"], "");
+    }
   }
+
 
 }

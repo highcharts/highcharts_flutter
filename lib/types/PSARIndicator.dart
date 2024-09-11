@@ -12,29 +12,41 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * PSARIndicator 
+ * PSARIndicator
  */
 class PSARIndicator extends OptionFragment {
-  PSARIndicator( ) : super();
-  
+
+  PSARIndicator({
+    this.nameComponents = null
+  });
+
+  // NOTE: pointClass skipped - type typeof PSARPoint is ignored in gen 
+
+  String? nameComponents;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of pointClass (type typeof PSARPoint is ignored) ignore type: true
 
-    // NOTE: skip serialization of nameComponents (type string[] is ignored) ignore type: true
+    // NOTE: skip serialization of pointClass (type typeof PSARPoint ignored, skipped: true)
+
+    
+    if (this.nameComponents != null) {
+        buffer.writeAll(["\"nameComponents\":",this.nameComponents, ","], "");
+    }
   }
+
 
 }

@@ -12,44 +12,66 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * DateTimeLabelFormatObject 
+ * DateTimeLabelFormatObject
  */
 class DateTimeLabelFormatObject extends OptionFragment {
-  DateTimeLabelFormatObject( ) : super();
-  // NOTE: from skipped - type string is ignored in gen 
 
-  // NOTE: list skipped - type string is ignored in gen 
+  DateTimeLabelFormatObject({
+    this.from = null,
+    this.list = null,
+    this.main = null,
+    this.range = null,
+    this.to = null
+  });
 
-  // NOTE: main skipped - type string is ignored in gen 
-
-  // NOTE: range skipped - type boolean is ignored in gen 
-
-  // NOTE: to skipped - type string is ignored in gen 
-
+  String? from;
+    
+  List<String>? list; // String
+  String? main;
+    
+  bool? range;
+    
+  String? to;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of from (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of list (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of main (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of range (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of to (type string is ignored) ignore type: true
+    
+    if (this.from != null) {
+        buffer.writeAll(["\"from\":\'",this.from, "\',"], "");
+    }
+    
+    if (this.list != null) {
+      StringBuffer arrData = StringBuffer();
+      arrData.writeAll(this.list!, ",");
+      buffer.writeAll(["\"list\": [", arrData , "],"], "");
+    }
+    
+    if (this.main != null) {
+        buffer.writeAll(["\"main\":\'",this.main, "\',"], "");
+    }
+    
+    if (this.range != null) {
+        buffer.writeAll(["\"range\":",this.range, ","], "");
+    }
+    
+    if (this.to != null) {
+        buffer.writeAll(["\"to\":\'",this.to, "\',"], "");
+    }
   }
+
 
 }

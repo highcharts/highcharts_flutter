@@ -12,28 +12,37 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * LangAccessibilityOptionsEditMode 
+ * LangAccessibilityOptionsEditMode
  */
 class LangAccessibilityOptionsEditMode extends OptionFragment {
-  LangAccessibilityOptionsEditMode( ) : super();
-  // NOTE: editMode skipped - type string is ignored in gen 
 
+  LangAccessibilityOptionsEditMode({
+    this.editMode = null
+  });
+
+  String? editMode;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of editMode (type string is ignored) ignore type: true
+
+    
+    if (this.editMode != null) {
+        buffer.writeAll(["\"editMode\":\'",this.editMode, "\',"], "");
+    }
   }
+
 
 }

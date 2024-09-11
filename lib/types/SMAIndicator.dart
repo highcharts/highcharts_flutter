@@ -12,46 +12,76 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
-import 'IndicatorLike.dart';
+ */
 import 'CalculateOnObject.dart';
 import 'OptionFragment.dart';
 
 /** 
- * SMAIndicator 
+ * SMAIndicator
  */
-class SMAIndicator extends IndicatorLike {
-  SMAIndicator( ) : super();
-  // NOTE: hasDerivedData skipped - type boolean is ignored in gen 
+class SMAIndicator extends OptionFragment {
 
-  // NOTE: useCommonDataGrouping skipped - type boolean is ignored in gen 
+  SMAIndicator({
+    this.calculateOn = null,
+    this.hasDerivedData = null,
+    this.nameComponents = null,
+    this.nameSuffixes = null,
+    this.updateAllPoints = null,
+    this.useCommonDataGrouping = null
+  });
 
-  // NOTE: updateAllPoints skipped - type boolean is ignored in gen 
+  CalculateOnObject? calculateOn;
+    
+  bool? hasDerivedData;
+    
+  String? nameComponents;
+    
+  String? nameSuffixes;
+    
+  // NOTE: pointClass skipped - type typeof SMAPoint is ignored in gen 
 
+  bool? useCommonDataGrouping;
+    
+  bool? updateAllPoints;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of calculateOn (type CalculateOnObject is ignored) ignore type: true
 
-    // NOTE: skip serialization of hasDerivedData (type boolean is ignored) ignore type: true
+    
+    if (this.calculateOn != null) {
+        buffer.writeAll(["\"calculateOn\":",this.calculateOn?.toJSON(), ","], "");
+    }
+    
+    if (this.hasDerivedData != null) {
+        buffer.writeAll(["\"hasDerivedData\":",this.hasDerivedData, ","], "");
+    }
+    
+    if (this.nameComponents != null) {
+        buffer.writeAll(["\"nameComponents\":",this.nameComponents, ","], "");
+    }
+    
+    if (this.nameSuffixes != null) {
+        buffer.writeAll(["\"nameSuffixes\":",this.nameSuffixes, ","], "");
+    }
+    // NOTE: skip serialization of pointClass (type typeof SMAPoint ignored, skipped: true)
 
-    // NOTE: skip serialization of nameComponents (type string[] is ignored) ignore type: true
-
-    // NOTE: skip serialization of nameSuffixes (type string[] is ignored) ignore type: true
-
-    // NOTE: skip serialization of pointClass (type typeof SMAPoint is ignored) ignore type: true
-
-    // NOTE: skip serialization of useCommonDataGrouping (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of updateAllPoints (type boolean is ignored) ignore type: true
+    
+    if (this.useCommonDataGrouping != null) {
+        buffer.writeAll(["\"useCommonDataGrouping\":",this.useCommonDataGrouping, ","], "");
+    }
+    
+    if (this.updateAllPoints != null) {
+        buffer.writeAll(["\"updateAllPoints\":",this.updateAllPoints, ","], "");
+    }
   }
+
 
 }

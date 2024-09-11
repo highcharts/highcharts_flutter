@@ -12,39 +12,58 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'HTMLElement.dart';
 import 'OptionFragment.dart';
 
 /** 
- * DropPointer 
+ * DropPointer
  */
 class DropPointer extends OptionFragment {
-  DropPointer( ) : super();
-  // NOTE: isVisible skipped - type boolean is ignored in gen 
 
-  // NOTE: align skipped - type string is ignored in gen 
+  DropPointer({
+    this.align = null,
+    this.element = null,
+    this.isVisible = null,
+    this.nested = null
+  });
 
-  // NOTE: nested skipped - type boolean is ignored in gen 
-
+  bool? isVisible;
+    
+  HTMLElement? element;
+    
+  String? align;
+    
+  bool? nested;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of isVisible (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of element (type HTMLElement is ignored) ignore type: true
-
-    // NOTE: skip serialization of align (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of nested (type boolean is ignored) ignore type: true
+    
+    if (this.isVisible != null) {
+        buffer.writeAll(["\"isVisible\":",this.isVisible, ","], "");
+    }
+    
+    if (this.element != null) {
+        buffer.writeAll(["\"element\":",this.element?.toJSON(), ","], "");
+    }
+    
+    if (this.align != null) {
+        buffer.writeAll(["\"align\":\'",this.align, "\',"], "");
+    }
+    
+    if (this.nested != null) {
+        buffer.writeAll(["\"nested\":",this.nested, ","], "");
+    }
   }
+
 
 }

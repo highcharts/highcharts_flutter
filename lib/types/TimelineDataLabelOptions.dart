@@ -12,33 +12,40 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'DataLabelOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * TimelineDataLabelOptions 
+ * TimelineDataLabelOptions
  */
 class TimelineDataLabelOptions extends DataLabelOptions {
-  TimelineDataLabelOptions( {
+
+  TimelineDataLabelOptions({
     super.align = null,
+    super.alignTo = null,
     super.allowOverlap = null,
+    this.alternate = null,
     super.backgroundColor = null,
     super.borderColor = null,
     super.borderRadius = null,
     super.borderWidth = null,
     super.className = null,
     super.color = null,
+    this.connectorColor = null,
+    this.connectorWidth = null,
     super.crop = null,
     super.defer = null,
+    super.distance = null,
     super.enabled = null,
     super.filter = null,
     super.format = null,
     super.inside = null,
+    super.labelrank = null,
     super.nullFormat = null,
+    super.outside3dPlot = null,
     super.overflow = null,
     super.padding = null,
     super.rotation = null,
@@ -47,37 +54,50 @@ class TimelineDataLabelOptions extends DataLabelOptions {
     super.textPath = null,
     super.useHTML = null,
     super.verticalAlign = null,
+    this.width = null,
     super.x = null,
     super.y = null,
     super.zIndex = null
-  }) : super();
-  // NOTE: alternate skipped - type boolean is ignored in gen 
+  });
 
-  // NOTE: connectorColor skipped - type string is ignored in gen 
+  bool? alternate;
+    
+  String? connectorColor;
+    
+  double? connectorWidth;
+    
+  /** NOTE: extdistance is skipped here for now, as it overrides the base type. */
 
-  // NOTE: connectorWidth skipped - type number is ignored in gen 
-
-  // NOTE: distance skipped - type number is ignored in gen 
-
-  // NOTE: width skipped - type number is ignored in gen 
-
+  double? width;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of alternate (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of connectorColor (type string is ignored) ignore type: true
+    
+    if (this.alternate != null) {
+        buffer.writeAll(["\"alternate\":",this.alternate, ","], "");
+    }
+    
+    if (this.connectorColor != null) {
+        buffer.writeAll(["\"connectorColor\":\'",this.connectorColor, "\',"], "");
+    }
+    
+    if (this.connectorWidth != null) {
+        buffer.writeAll(["\"connectorWidth\":",this.connectorWidth, ","], "");
+    }
+    // NOTE: skip serialization of distance (type number ignored, skipped: false)
 
-    // NOTE: skip serialization of connectorWidth (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of distance (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of width (type number is ignored) ignore type: true
+    
+    if (this.width != null) {
+        buffer.writeAll(["\"width\":",this.width, ","], "");
+    }
   }
+
 
 }

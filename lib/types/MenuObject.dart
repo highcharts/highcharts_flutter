@@ -12,36 +12,51 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * MenuObject 
+ * MenuObject
  */
 class MenuObject extends OptionFragment {
-  MenuObject( ) : super();
-  // NOTE: separator skipped - type boolean is ignored in gen 
 
-  // NOTE: text skipped - type string is ignored in gen 
+  MenuObject({
+    this.separator = null,
+    this.text = null,
+    this.textKey = null
+  });
 
-  // NOTE: textKey skipped - type string is ignored in gen 
-
+  bool? separator;
+    
+  String? text;
+    
+  String? textKey;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of separator (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of text (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of textKey (type string is ignored) ignore type: true
+    
+    if (this.separator != null) {
+        buffer.writeAll(["\"separator\":",this.separator, ","], "");
+    }
+    
+    if (this.text != null) {
+        buffer.writeAll(["\"text\":\'",this.text, "\',"], "");
+    }
+    
+    if (this.textKey != null) {
+        buffer.writeAll(["\"textKey\":\'",this.textKey, "\',"], "");
+    }
   }
+
 
 }

@@ -12,37 +12,59 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'Options.dart';
 import 'OptionFragment.dart';
 
+
 /** 
- * NestedOptions 
+ * NestedOptions
  */
 class NestedOptions extends OptionFragment {
-  NestedOptions( ) : super();
-  // NOTE: name skipped - type string is ignored in gen 
 
-  // NOTE: showToggle skipped - type boolean is ignored in gen 
+  NestedOptions({
+    this.name = null,
+    this.options = null,
+    this.propertyPath = null,
+    this.showToggle = null
+  });
 
+  String? name;
+    
+  bool? showToggle;
+    
+  String? propertyPath;
+    
+  Options? options;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of name (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of showToggle (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of propertyPath (type string[] is ignored) ignore type: true
-
-    // NOTE: skip serialization of options (type Options[] is ignored) ignore type: true
+    
+    if (this.name != null) {
+        buffer.writeAll(["\"name\":\'",this.name, "\',"], "");
+    }
+    
+    if (this.showToggle != null) {
+        buffer.writeAll(["\"showToggle\":",this.showToggle, ","], "");
+    }
+    
+    if (this.propertyPath != null) {
+        buffer.writeAll(["\"propertyPath\":",this.propertyPath, ","], "");
+    }
+    
+    if (this.options != null) {
+        buffer.writeAll(["\"options\":",this.options, ","], "");
+    }
   }
+
 
 }

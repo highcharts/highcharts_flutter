@@ -4,7 +4,7 @@
  */
 
 import 'package:flutter/material.dart';
-import 'package:highcharts_flutter/Highcharts.dart';
+import 'package:highcharts_flutter/highcharts.dart';
 import 'package:highcharts_flutter/types/ChartOptions.dart';
 import 'package:highcharts_flutter/types/Options.dart';
 import 'package:highcharts_flutter/types/TitleOptions.dart';
@@ -15,7 +15,7 @@ import 'package:highcharts_flutter/types/SeriesOptions.dart';
 import 'package:highcharts_flutter/types/DataLabelOptions.dart';
 import 'package:highcharts_flutter/types/Funnel3DSeriesOptions.dart';
 import 'package:highcharts_flutter/types/Funnel3DSeries.dart';
-import 'package:highcharts_flutter/types/Funnel3DPointOptions.dart';
+import 'package:highcharts_flutter/types/Funnel3DPointOptions).dart';
 import 'package:highcharts_flutter/types/XAxisOptions.dart';
 import 'package:highcharts_flutter/types/YAxisOptions.dart';
 

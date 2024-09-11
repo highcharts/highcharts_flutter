@@ -12,35 +12,49 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * ControllableShapeTypeRegistry 
+ * ControllableShapeTypeRegistry
  */
 class ControllableShapeTypeRegistry extends OptionFragment {
-  ControllableShapeTypeRegistry( ) : super();
-  
+
+  ControllableShapeTypeRegistry();
+
+  // NOTE: path skipped - type typeof ControllablePath is ignored in gen 
+
+  // NOTE: ellipse skipped - type typeof ControllableEllipse is ignored in gen 
+
+  // NOTE: rect skipped - type typeof ControllableRect is ignored in gen 
+
+  // NOTE: circle skipped - type typeof ControllableCircle is ignored in gen 
+
+  // NOTE: image skipped - type typeof ControllableImage is ignored in gen 
+
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of path (type typeof ControllablePath is ignored) ignore type: true
 
-    // NOTE: skip serialization of ellipse (type typeof ControllableEllipse is ignored) ignore type: true
+    // NOTE: skip serialization of path (type typeof ControllablePath ignored, skipped: true)
 
-    // NOTE: skip serialization of rect (type typeof ControllableRect is ignored) ignore type: true
+    // NOTE: skip serialization of ellipse (type typeof ControllableEllipse ignored, skipped: true)
 
-    // NOTE: skip serialization of circle (type typeof ControllableCircle is ignored) ignore type: true
+    // NOTE: skip serialization of rect (type typeof ControllableRect ignored, skipped: true)
 
-    // NOTE: skip serialization of image (type typeof ControllableImage is ignored) ignore type: true
+    // NOTE: skip serialization of circle (type typeof ControllableCircle ignored, skipped: true)
+
+    // NOTE: skip serialization of image (type typeof ControllableImage ignored, skipped: true)
+
   }
+
 
 }

@@ -12,40 +12,50 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'LastVisiblePriceLabelOptions.dart';
 import 'OptionFragment.dart';
 
+
 /** 
- * LastVisiblePriceOptions 
+ * LastVisiblePriceOptions
  */
 class LastVisiblePriceOptions extends OptionFragment {
-  LastVisiblePriceOptions( {
+
+  LastVisiblePriceOptions({
     this.enabled = null,
     this.label = null
-  }) : super();
+  });
+
+  /**
+   * Enable or disable the indicator. 
+   * 
+   * Defaults to 'false'. 
+   */
   bool? enabled;
     
   LastVisiblePriceLabelOptions? label;
     
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    if (this.enabled != null) {  
-      buffer.writeAll(["\"enabled\":",this.enabled, ","], "");
-    }
 
-    if (this.label != null) {  
-      buffer.writeAll(["\"label\":",this.label?.toJSON(), ","], "");
+    
+    if (this.enabled != null) {
+        buffer.writeAll(["\"enabled\":",this.enabled, ","], "");
+    }
+    
+    if (this.label != null) {
+        buffer.writeAll(["\"label\":",this.label?.toJSON(), ","], "");
     }
   }
+
 
 }

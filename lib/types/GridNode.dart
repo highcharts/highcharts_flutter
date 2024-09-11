@@ -12,67 +12,107 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'GridNode.dart';
 import 'OptionFragment.dart';
 
 /** 
- * GridNode 
+ * GridNode
  */
 class GridNode extends OptionFragment {
-  GridNode( ) : super();
-  // NOTE: collapsed skipped - type boolean is ignored in gen 
 
-  // NOTE: collapseEnd skipped - type number is ignored in gen 
+  GridNode({
+    this.children = null,
+    this.collapsed = null,
+    this.collapseEnd = null,
+    this.collapseStart = null,
+    this.depth = null,
+    this.descendants = null,
+    this.height = null,
+    this.id = null,
+    this.name = null,
+    this.pos = null,
+    this.tickmarkOffset = null
+  });
 
-  // NOTE: collapseStart skipped - type number is ignored in gen 
-
-  // NOTE: depth skipped - type number is ignored in gen 
-
-  // NOTE: descendants skipped - type number is ignored in gen 
-
-  // NOTE: id skipped - type string is ignored in gen 
-
-  // NOTE: height skipped - type number is ignored in gen 
-
-  // NOTE: name skipped - type string is ignored in gen 
-
-  // NOTE: pos skipped - type number is ignored in gen 
-
-  // NOTE: tickmarkOffset skipped - type number is ignored in gen 
-
+  GridNode? children;
+    
+  bool? collapsed;
+    
+  double? collapseEnd;
+    
+  double? collapseStart;
+    
+  double? depth;
+    
+  double? descendants;
+    
+  String? id;
+    
+  double? height;
+    
+  String? name;
+    
+  double? pos;
+    
+  double? tickmarkOffset;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of children (type GridNode[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of collapsed (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of collapseEnd (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of collapseStart (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of depth (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of descendants (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of id (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of height (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of name (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of pos (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of tickmarkOffset (type number is ignored) ignore type: true
+    
+    if (this.children != null) {
+        buffer.writeAll(["\"children\":",this.children, ","], "");
+    }
+    
+    if (this.collapsed != null) {
+        buffer.writeAll(["\"collapsed\":",this.collapsed, ","], "");
+    }
+    
+    if (this.collapseEnd != null) {
+        buffer.writeAll(["\"collapseEnd\":",this.collapseEnd, ","], "");
+    }
+    
+    if (this.collapseStart != null) {
+        buffer.writeAll(["\"collapseStart\":",this.collapseStart, ","], "");
+    }
+    
+    if (this.depth != null) {
+        buffer.writeAll(["\"depth\":",this.depth, ","], "");
+    }
+    
+    if (this.descendants != null) {
+        buffer.writeAll(["\"descendants\":",this.descendants, ","], "");
+    }
+    
+    if (this.id != null) {
+        buffer.writeAll(["\"id\":\'",this.id, "\',"], "");
+    }
+    
+    if (this.height != null) {
+        buffer.writeAll(["\"height\":",this.height, ","], "");
+    }
+    
+    if (this.name != null) {
+        buffer.writeAll(["\"name\":\'",this.name, "\',"], "");
+    }
+    
+    if (this.pos != null) {
+        buffer.writeAll(["\"pos\":",this.pos, ","], "");
+    }
+    
+    if (this.tickmarkOffset != null) {
+        buffer.writeAll(["\"tickmarkOffset\":",this.tickmarkOffset, ","], "");
+    }
   }
+
 
 }

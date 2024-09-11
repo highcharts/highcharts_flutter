@@ -12,28 +12,35 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'KDPointSearchObjectLike.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * KDPointSearchObject 
+ * KDPointSearchObject
  */
 class KDPointSearchObject extends KDPointSearchObjectLike {
-  KDPointSearchObject( ) : super();
-  
+
+  KDPointSearchObject({
+    super.clientX = null,
+    super.lat = null,
+    super.lon = null,
+    super.plotX = null,
+    super.plotY = null
+  });
+
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    
+
   }
+
 
 }

@@ -12,28 +12,39 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'BaseNavigatorOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * StandaloneNavigatorOptions 
+ * StandaloneNavigatorOptions
  */
 class StandaloneNavigatorOptions extends BaseNavigatorOptions {
-  StandaloneNavigatorOptions( ) : super();
-  
+
+  StandaloneNavigatorOptions({
+    super.handles = null,
+    super.height = null,
+    super.maskFill = null,
+    super.maskInside = null,
+    super.outlineColor = null,
+    super.outlineWidth = null,
+    super.series = null,
+    super.xAxis = null,
+    super.yAxis = null
+  });
+
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    
+
   }
+
 
 }

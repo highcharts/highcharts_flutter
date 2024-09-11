@@ -12,10 +12,9 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'SVGAttributes.dart';
 import 'CSSObject.dart';
 import 'SVGElement.dart';
@@ -23,45 +22,94 @@ import 'SVGRenderer.dart';
 import 'OptionFragment.dart';
 
 /** 
- * DrawPointParams 
+ * DrawPointParams
  */
 class DrawPointParams extends OptionFragment {
-  DrawPointParams( ) : super();
-  // NOTE: imageUrl skipped - type string is ignored in gen 
 
-  // NOTE: isNew skipped - type boolean is ignored in gen 
+  DrawPointParams({
+    this.animatableAttribs = null,
+    this.attribs = null,
+    this.css = null,
+    this.group = null,
+    this.imageUrl = null,
+    this.isNew = null,
+    this.renderer = null,
+    this.shapeArgs = null,
+    this.shapeType = null
+  });
 
-  // NOTE: shapeType skipped - type string is ignored in gen 
+  SVGAttributes? animatableAttribs;
+    
+  SVGAttributes? attribs;
+    
+  CSSObject? css;
+    
+  SVGElement? group;
+    
+  // NOTE: onComplete skipped - type Function is ignored in gen 
 
+  String? imageUrl;
+    
+  bool? isNew;
+    
+  SVGRenderer? renderer;
+    
+  // NOTE: shadow skipped - type Generic is ignored in gen 
+
+  SVGAttributes? shapeArgs;
+    
+  String? shapeType;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of animatableAttribs (type SVGAttributes is ignored) ignore type: true
 
-    // NOTE: skip serialization of attribs (type SVGAttributes is ignored) ignore type: true
+    
+    if (this.animatableAttribs != null) {
+        buffer.writeAll(["\"animatableAttribs\":",this.animatableAttribs?.toJSON(), ","], "");
+    }
+    
+    if (this.attribs != null) {
+        buffer.writeAll(["\"attribs\":",this.attribs?.toJSON(), ","], "");
+    }
+    
+    if (this.css != null) {
+        buffer.writeAll(["\"css\":",this.css?.toJSON(), ","], "");
+    }
+    
+    if (this.group != null) {
+        buffer.writeAll(["\"group\":",this.group?.toJSON(), ","], "");
+    }
+    // NOTE: skip serialization of onComplete (type Function ignored, skipped: true)
 
-    // NOTE: skip serialization of css (type CSSObject is ignored) ignore type: true
+    
+    if (this.imageUrl != null) {
+        buffer.writeAll(["\"imageUrl\":\'",this.imageUrl, "\',"], "");
+    }
+    
+    if (this.isNew != null) {
+        buffer.writeAll(["\"isNew\":",this.isNew, ","], "");
+    }
+    
+    if (this.renderer != null) {
+        buffer.writeAll(["\"renderer\":",this.renderer?.toJSON(), ","], "");
+    }
+    // NOTE: skip serialization of shadow (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of group (type SVGElement is ignored) ignore type: true
-
-    // NOTE: skip serialization of onComplete (type Function is ignored) ignore type: 1
-
-    // NOTE: skip serialization of imageUrl (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of isNew (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of renderer (type SVGRenderer is ignored) ignore type: true
-
-    // NOTE: skip serialization of shadow (type Generic is ignored) ignore type: true
-
-    // NOTE: skip serialization of shapeArgs (type SVGAttributes is ignored) ignore type: true
-
-    // NOTE: skip serialization of shapeType (type string is ignored) ignore type: true
+    
+    if (this.shapeArgs != null) {
+        buffer.writeAll(["\"shapeArgs\":",this.shapeArgs?.toJSON(), ","], "");
+    }
+    
+    if (this.shapeType != null) {
+        buffer.writeAll(["\"shapeType\":\'",this.shapeType, "\',"], "");
+    }
   }
+
 
 }

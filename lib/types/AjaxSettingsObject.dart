@@ -12,45 +12,67 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
-import 'JSON.dart';
 import 'OptionFragment.dart';
 
 /** 
- * AjaxSettingsObject 
+ * AjaxSettingsObject
  */
 class AjaxSettingsObject extends OptionFragment {
-  AjaxSettingsObject( ) : super();
-  // NOTE: dataType skipped - type string is ignored in gen 
 
-  // NOTE: responseType skipped - type string is ignored in gen 
+  AjaxSettingsObject({
+    this.dataType = null,
+    this.headers = null,
+    this.responseType = null,
+    this.type = null,
+    this.url = null
+  });
 
-  // NOTE: type skipped - type string is ignored in gen 
+  // NOTE: data skipped - type JSON is ignored in gen 
 
-  // NOTE: url skipped - type string is ignored in gen 
-
+  String? dataType;
+    
+  Map<String, String>? headers;
+    
+  String? responseType;
+    
+  String? type;
+    
+  String? url;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of data (type JSON is ignored) ignore type: true
 
-    // NOTE: skip serialization of dataType (type string is ignored) ignore type: true
+    // NOTE: skip serialization of data (type JSON ignored, skipped: true)
 
-    // NOTE: skip serialization of headers (type Generic is ignored) ignore type: true
+    
+    if (this.dataType != null) {
+        buffer.writeAll(["\"dataType\":\'",this.dataType, "\',"], "");
+    }
+    // NOTE: skip serialization of headers (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of responseType (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of type (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of url (type string is ignored) ignore type: true
+    
+    if (this.responseType != null) {
+        buffer.writeAll(["\"responseType\":\'",this.responseType, "\',"], "");
+    }
+    
+    if (this.type != null) {
+        buffer.writeAll(["\"type\":\'",this.type, "\',"], "");
+    }
+    
+    if (this.url != null) {
+        buffer.writeAll(["\"url\":\'",this.url, "\',"], "");
+    }
   }
+
 
 }

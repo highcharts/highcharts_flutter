@@ -12,36 +12,46 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'SMAParamsOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * MFIParamsOptions 
+ * MFIParamsOptions
  */
 class MFIParamsOptions extends SMAParamsOptions {
-  MFIParamsOptions( {
+
+  MFIParamsOptions({
+    this.decimals = null,
     super.index = null,
-    super.period = null
-  }) : super();
-  // NOTE: volumeSeriesID skipped - type string is ignored in gen 
+    super.period = null,
+    this.volumeSeriesID = null
+  });
 
-  // NOTE: decimals skipped - type number is ignored in gen 
-
+  String? volumeSeriesID;
+    
+  double? decimals;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of volumeSeriesID (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of decimals (type number is ignored) ignore type: true
+    
+    if (this.volumeSeriesID != null) {
+        buffer.writeAll(["\"volumeSeriesID\":\'",this.volumeSeriesID, "\',"], "");
+    }
+    
+    if (this.decimals != null) {
+        buffer.writeAll(["\"decimals\":",this.decimals, ","], "");
+    }
   }
+
 
 }

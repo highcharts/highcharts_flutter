@@ -12,10 +12,9 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'FunnelSeriesOptions.dart';
 import 'Series.dart';
 import 'PointOptions.dart';
@@ -34,8 +33,7 @@ class FunnelSeries extends Series {
     this.data = null
   });
 
-  
-  @override
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
@@ -56,16 +54,13 @@ class FunnelSeries extends Series {
         if (point.length > 1) {
           seriesData.writeAll(["["], "");
         }
-
-          for (var sub in point) {
-            if (sub is String) {
-              seriesData.writeAll(["\"", sub, "\","], "");
-            } else {
-              seriesData.writeAll([sub], ",");
-            }
-
+        for (var sub in point) {
+          if (sub is String) {
+            seriesData.writeAll(["\"", sub, "\","], "");
+          } else {
+            seriesData.writeAll([sub], ",");
           }
-
+        }
         if (point.length > 1) {
           seriesData.writeAll(["],"], "");
         } else {
@@ -92,31 +87,39 @@ class FunnelSeries extends Series {
 
 
     
-    if (this.options?.width != null) {  
-      buffer.writeAll(["\"width\":\'",this.options?.width, "\',"], "");
+
+    // NOTE: skip serialization of animation (type boolean ignored, skipped: true)
+
+    // NOTE: skip serialization of borderRadius (type number ignored, skipped: false)
+
+    // NOTE: skip serialization of data (type FunnelPointOptions)[] ignored, skipped: false)
+
+    // NOTE: skip serialization of dataLabels (type FunnelDataLabelOptions ignored, skipped: false)
+
+    
+    if (this.options?.height != null) {
+        buffer.writeAll(["\"height\":\'",this.options?.height, "\',"], "");
     }
-
-    if (this.options?.neckWidth != null) {  
-      buffer.writeAll(["\"neckWidth\":\'",this.options?.neckWidth, "\',"], "");
+    
+    if (this.options?.neckHeight != null) {
+        buffer.writeAll(["\"neckHeight\":\'",this.options?.neckHeight, "\',"], "");
     }
-
-    if (this.options?.height != null) {  
-      buffer.writeAll(["\"height\":\'",this.options?.height, "\',"], "");
+    
+    if (this.options?.neckWidth != null) {
+        buffer.writeAll(["\"neckWidth\":\'",this.options?.neckWidth, "\',"], "");
     }
-
-    if (this.options?.neckHeight != null) {  
-      buffer.writeAll(["\"neckHeight\":\'",this.options?.neckHeight, "\',"], "");
+    
+    if (this.options?.reversed != null) {
+        buffer.writeAll(["\"reversed\":",this.options?.reversed, ","], "");
     }
+    // NOTE: skip serialization of size (type undefined ignored, skipped: true)
 
-    if (this.options?.reversed != null) {  
-      buffer.writeAll(["\"reversed\":",this.options?.reversed, ","], "");
+    // NOTE: skip serialization of states (type Generic ignored, skipped: true)
+
+    
+    if (this.options?.width != null) {
+        buffer.writeAll(["\"width\":\'",this.options?.width, "\',"], "");
     }
-
-    // NOTE: skip serialization of size (type undefined is ignored) ignore type: 1
-
-    // NOTE: skip serialization of dataLabels (type FunnelDataLabelOptions is ignored) ignore type: false
-
-    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
   }
 
 }

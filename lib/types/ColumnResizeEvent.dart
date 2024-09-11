@@ -12,39 +12,55 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
-import 'DataEvent.dart';
 import 'OptionFragment.dart';
 
 /** 
- * ColumnResizeEvent 
+ * ColumnResizeEvent
  */
-class ColumnResizeEvent extends DataEvent {
-  ColumnResizeEvent( ) : super();
-  // NOTE: width skipped - type number is ignored in gen 
+class ColumnResizeEvent extends OptionFragment {
 
-  // NOTE: index skipped - type number is ignored in gen 
+  ColumnResizeEvent({
+    this.index = null,
+    this.name = null,
+    this.width = null
+  });
 
-  // NOTE: name skipped - type string is ignored in gen 
+  // NOTE: type skipped - type "afterResizeColumn" is ignored in gen 
 
+  double? width;
+    
+  double? index;
+    
+  String? name;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of type (type "afterResizeColumn" is ignored) ignore type: true
 
-    // NOTE: skip serialization of width (type number is ignored) ignore type: true
+    // NOTE: skip serialization of type (type "afterResizeColumn" ignored, skipped: true)
 
-    // NOTE: skip serialization of index (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of name (type string is ignored) ignore type: true
+    
+    if (this.width != null) {
+        buffer.writeAll(["\"width\":",this.width, ","], "");
+    }
+    
+    if (this.index != null) {
+        buffer.writeAll(["\"index\":",this.index, ","], "");
+    }
+    
+    if (this.name != null) {
+        buffer.writeAll(["\"name\":\'",this.name, "\',"], "");
+    }
   }
+
 
 }

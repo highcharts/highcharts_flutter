@@ -12,32 +12,44 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * AxisPositions 
+ * AxisPositions
  */
 class AxisPositions extends OptionFragment {
-  AxisPositions( ) : super();
-  // NOTE: top skipped - type string is ignored in gen 
 
-  // NOTE: height skipped - type string is ignored in gen 
+  AxisPositions({
+    this.height = null,
+    this.top = null
+  });
 
+  String? top;
+    
+  String? height;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of top (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of height (type string is ignored) ignore type: true
+    
+    if (this.top != null) {
+        buffer.writeAll(["\"top\":\'",this.top, "\',"], "");
+    }
+    
+    if (this.height != null) {
+        buffer.writeAll(["\"height\":\'",this.height, "\',"], "");
+    }
   }
+
 
 }

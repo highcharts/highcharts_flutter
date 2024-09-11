@@ -12,26 +12,28 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'ControllableLabelOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * LabelOptions 
+ * LabelOptions
  */
 class LabelOptions extends ControllableLabelOptions {
-  LabelOptions( {
+
+  LabelOptions({
     super.accessibility = null,
     super.align = null,
     super.allowOverlap = null,
-    super.backgroundColor = null,
+    this.backgroundColor = null,
     super.borderColor = null,
     super.borderRadius = null,
-    super.borderWidth = null,
+    this.borderWidth = null,
+    super.color = null,
     super.crop = null,
+    super.dashStyle = null,
     super.distance = null,
     super.format = null,
     super.includeInDataExport = null,
@@ -43,27 +45,39 @@ class LabelOptions extends ControllableLabelOptions {
     super.useHTML = null,
     super.verticalAlign = null,
     super.x = null,
-    super.y = null
-  }) : super();
-  // NOTE: backgroundColor skipped - type string is ignored in gen 
+    super.xAxis = null,
+    this.y = null,
+    super.yAxis = null
+  });
 
-  // NOTE: borderWidth skipped - type number is ignored in gen 
-
-  // NOTE: y skipped - type number is ignored in gen 
-
+  String? backgroundColor;
+    
+  double? borderWidth;
+    
+  double? y;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of backgroundColor (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of borderWidth (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of y (type number is ignored) ignore type: true
+    
+    if (this.backgroundColor != null) {
+        buffer.writeAll(["\"backgroundColor\":\'",this.backgroundColor, "\',"], "");
+    }
+    
+    if (this.borderWidth != null) {
+        buffer.writeAll(["\"borderWidth\":",this.borderWidth, ","], "");
+    }
+    
+    if (this.y != null) {
+        buffer.writeAll(["\"y\":",this.y, ","], "");
+    }
   }
+
 
 }

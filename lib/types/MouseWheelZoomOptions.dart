@@ -12,36 +12,51 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * MouseWheelZoomOptions 
+ * MouseWheelZoomOptions
  */
 class MouseWheelZoomOptions extends OptionFragment {
-  MouseWheelZoomOptions( ) : super();
-  // NOTE: enabled skipped - type boolean is ignored in gen 
 
-  // NOTE: sensitivity skipped - type number is ignored in gen 
+  MouseWheelZoomOptions({
+    this.enabled = null,
+    this.sensitivity = null,
+    this.type = null
+  });
 
-  // NOTE: type skipped - type string is ignored in gen 
-
+  bool? enabled;
+    
+  double? sensitivity;
+    
+  String? type;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of enabled (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of sensitivity (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of type (type string is ignored) ignore type: true
+    
+    if (this.enabled != null) {
+        buffer.writeAll(["\"enabled\":",this.enabled, ","], "");
+    }
+    
+    if (this.sensitivity != null) {
+        buffer.writeAll(["\"sensitivity\":",this.sensitivity, ","], "");
+    }
+    
+    if (this.type != null) {
+        buffer.writeAll(["\"type\":\'",this.type, "\',"], "");
+    }
   }
+
 
 }

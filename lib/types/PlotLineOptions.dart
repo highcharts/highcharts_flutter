@@ -12,84 +12,141 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'PlotLineLabelOptions.dart';
 import 'Point.dart';
 import 'OptionFragment.dart';
 
+
 /** 
- * PlotLineOptions 
+ * PlotLineOptions
  */
 class PlotLineOptions extends OptionFragment {
-  PlotLineOptions( ) : super();
-  // NOTE: acrossPanes skipped - type boolean is ignored in gen 
 
-  // NOTE: className skipped - type string is ignored in gen 
+  PlotLineOptions({
+    this.acrossPanes = null,
+    this.chartX = null,
+    this.chartY = null,
+    this.className = null,
+    this.color = null,
+    this.dashStyle = null,
+    this.id = null,
+    this.isCrosshair = null,
+    this.label = null,
+    this.point = null,
+    this.reverse = null,
+    this.translatedValue = null,
+    this.value = null,
+    this.width = null,
+    this.zIndex = null
+  });
 
-  // NOTE: color skipped - type string is ignored in gen 
+  bool? acrossPanes;
+    
+  String? className;
+    
+  String? color;
+    
+  String? dashStyle;
+    
+  // NOTE: events skipped - type any is ignored in gen 
 
-  // NOTE: dashStyle skipped - type string is ignored in gen 
-
-  // NOTE: id skipped - type string is ignored in gen 
-
-  // NOTE: translatedValue skipped - type number is ignored in gen 
-
-  // NOTE: value skipped - type number is ignored in gen 
-
-  // NOTE: width skipped - type number is ignored in gen 
-
-  // NOTE: zIndex skipped - type number is ignored in gen 
-
-  // NOTE: chartX skipped - type number is ignored in gen 
-
-  // NOTE: chartY skipped - type number is ignored in gen 
-
-  // NOTE: isCrosshair skipped - type boolean is ignored in gen 
-
-  // NOTE: reverse skipped - type boolean is ignored in gen 
-
+  String? id;
+    
+  PlotLineLabelOptions? label;
+    
+  double? translatedValue;
+    
+  double? value;
+    
+  double? width;
+    
+  double? zIndex;
+    
+  double? chartX;
+    
+  double? chartY;
+    
+  bool? isCrosshair;
+    
+  Point? point;
+    
+  bool? reverse;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of acrossPanes (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of className (type string is ignored) ignore type: true
+    
+    if (this.acrossPanes != null) {
+        buffer.writeAll(["\"acrossPanes\":",this.acrossPanes, ","], "");
+    }
+    
+    if (this.className != null) {
+        buffer.writeAll(["\"className\":\'",this.className, "\',"], "");
+    }
+    
+    if (this.color != null) {
+        buffer.writeAll(["\"color\":\'",this.color, "\',"], "");
+    }
+    
+    if (this.dashStyle != null) {
+        buffer.writeAll(["\"dashStyle\":\'",this.dashStyle, "\',"], "");
+    }
+    // NOTE: skip serialization of events (type any ignored, skipped: true)
 
-    // NOTE: skip serialization of color (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of dashStyle (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of events (type any is ignored) ignore type: 1
-
-    // NOTE: skip serialization of id (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of label (type PlotLineLabelOptions is ignored) ignore type: true
-
-    // NOTE: skip serialization of translatedValue (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of value (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of width (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of zIndex (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of chartX (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of chartY (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of isCrosshair (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of point (type Point is ignored) ignore type: true
-
-    // NOTE: skip serialization of reverse (type boolean is ignored) ignore type: true
+    
+    if (this.id != null) {
+        buffer.writeAll(["\"id\":\'",this.id, "\',"], "");
+    }
+    
+    if (this.label != null) {
+        buffer.writeAll(["\"label\":",this.label?.toJSON(), ","], "");
+    }
+    
+    if (this.translatedValue != null) {
+        buffer.writeAll(["\"translatedValue\":",this.translatedValue, ","], "");
+    }
+    
+    if (this.value != null) {
+        buffer.writeAll(["\"value\":",this.value, ","], "");
+    }
+    
+    if (this.width != null) {
+        buffer.writeAll(["\"width\":",this.width, ","], "");
+    }
+    
+    if (this.zIndex != null) {
+        buffer.writeAll(["\"zIndex\":",this.zIndex, ","], "");
+    }
+    
+    if (this.chartX != null) {
+        buffer.writeAll(["\"chartX\":",this.chartX, ","], "");
+    }
+    
+    if (this.chartY != null) {
+        buffer.writeAll(["\"chartY\":",this.chartY, ","], "");
+    }
+    
+    if (this.isCrosshair != null) {
+        buffer.writeAll(["\"isCrosshair\":",this.isCrosshair, ","], "");
+    }
+    
+    if (this.point != null) {
+        buffer.writeAll(["\"point\":",this.point?.toJSON(), ","], "");
+    }
+    
+    if (this.reverse != null) {
+        buffer.writeAll(["\"reverse\":",this.reverse, ","], "");
+    }
   }
+
 
 }

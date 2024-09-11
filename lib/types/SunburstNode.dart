@@ -12,31 +12,45 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'SunburstSeries.dart';
 import 'SunburstNode.dart';
 import 'OptionFragment.dart';
 
 /** 
- * SunburstNode 
+ * SunburstNode
  */
 class SunburstNode extends OptionFragment {
-  SunburstNode( ) : super();
-  
+
+  SunburstNode({
+    this.children = null,
+    this.series = null
+  });
+
+  SunburstSeries? series;
+    
+  SunburstNode? children;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of series (type SunburstSeries is ignored) ignore type: true
 
-    // NOTE: skip serialization of children (type SunburstNode[] is ignored) ignore type: true
+    
+    if (this.series != null) {
+        buffer.writeAll(["\"series\":",this.series?.toJSON(), ","], "");
+    }
+    
+    if (this.children != null) {
+        buffer.writeAll(["\"children\":",this.children, ","], "");
+    }
   }
+
 
 }

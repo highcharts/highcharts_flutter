@@ -12,36 +12,51 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * AxisBreakBorderObject 
+ * AxisBreakBorderObject
  */
 class AxisBreakBorderObject extends OptionFragment {
-  AxisBreakBorderObject( ) : super();
-  // NOTE: move skipped - type string is ignored in gen 
 
-  // NOTE: size skipped - type number is ignored in gen 
+  AxisBreakBorderObject({
+    this.move = null,
+    this.size = null,
+    this.value = null
+  });
 
-  // NOTE: value skipped - type number is ignored in gen 
-
+  String? move;
+    
+  double? size;
+    
+  double? value;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of move (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of size (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of value (type number is ignored) ignore type: true
+    
+    if (this.move != null) {
+        buffer.writeAll(["\"move\":\'",this.move, "\',"], "");
+    }
+    
+    if (this.size != null) {
+        buffer.writeAll(["\"size\":",this.size, ","], "");
+    }
+    
+    if (this.value != null) {
+        buffer.writeAll(["\"value\":",this.value, ","], "");
+    }
   }
+
 
 }

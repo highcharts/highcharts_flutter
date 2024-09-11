@@ -12,60 +12,100 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * PaneBackgroundOptions 
+ * PaneBackgroundOptions
  */
 class PaneBackgroundOptions extends OptionFragment {
-  PaneBackgroundOptions( ) : super();
-  // NOTE: backgroundColor skipped - type string is ignored in gen 
 
-  // NOTE: borderColor skipped - type string is ignored in gen 
+  PaneBackgroundOptions({
+    this.backgroundColor = null,
+    this.borderColor = null,
+    this.borderRadius = null,
+    this.borderWidth = null,
+    this.className = null,
+    this.from = null,
+    this.innerRadius = null,
+    this.outerRadius = null,
+    this.shape = null,
+    this.to = null
+  });
 
-  // NOTE: borderWidth skipped - type number is ignored in gen 
-
-  // NOTE: className skipped - type string is ignored in gen 
-
-  // NOTE: from skipped - type number is ignored in gen 
-
-  // NOTE: innerRadius skipped - type string is ignored in gen 
-
-  // NOTE: outerRadius skipped - type string is ignored in gen 
-
-  // NOTE: shape skipped - type string is ignored in gen 
-
-  // NOTE: to skipped - type number is ignored in gen 
-
+  String? backgroundColor;
+    
+  String? borderColor;
+    
+  String? borderRadius;
+    
+  double? borderWidth;
+    
+  String? className;
+    
+  double? from;
+    
+  String? innerRadius;
+    
+  String? outerRadius;
+    
+  String? shape;
+    
+  double? to;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of backgroundColor (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of borderColor (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of borderWidth (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of className (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of from (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of innerRadius (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of outerRadius (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of shape (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of to (type number is ignored) ignore type: true
+    
+    if (this.backgroundColor != null) {
+        buffer.writeAll(["\"backgroundColor\":\'",this.backgroundColor, "\',"], "");
+    }
+    
+    if (this.borderColor != null) {
+        buffer.writeAll(["\"borderColor\":\'",this.borderColor, "\',"], "");
+    }
+    
+    if (this.borderRadius != null) {
+        buffer.writeAll(["\"borderRadius\":\'",this.borderRadius, "\',"], "");
+    }
+    
+    if (this.borderWidth != null) {
+        buffer.writeAll(["\"borderWidth\":",this.borderWidth, ","], "");
+    }
+    
+    if (this.className != null) {
+        buffer.writeAll(["\"className\":\'",this.className, "\',"], "");
+    }
+    
+    if (this.from != null) {
+        buffer.writeAll(["\"from\":",this.from, ","], "");
+    }
+    
+    if (this.innerRadius != null) {
+        buffer.writeAll(["\"innerRadius\":\'",this.innerRadius, "\',"], "");
+    }
+    
+    if (this.outerRadius != null) {
+        buffer.writeAll(["\"outerRadius\":\'",this.outerRadius, "\',"], "");
+    }
+    
+    if (this.shape != null) {
+        buffer.writeAll(["\"shape\":\'",this.shape, "\',"], "");
+    }
+    
+    if (this.to != null) {
+        buffer.writeAll(["\"to\":",this.to, ","], "");
+    }
   }
+
 
 }

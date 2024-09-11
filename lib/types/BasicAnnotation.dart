@@ -12,31 +12,44 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'AnnotationOptions.dart';
 import 'OptionFragment.dart';
 
 /** 
- * BasicAnnotation 
+ * BasicAnnotation
  */
 class BasicAnnotation extends OptionFragment {
-  BasicAnnotation( ) : super();
-  // NOTE: basicType skipped - type string is ignored in gen 
 
+  BasicAnnotation({
+    this.basicType = null,
+    this.defaultOptions = null
+  });
+
+  String? basicType;
+    
+  AnnotationOptions? defaultOptions;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of basicType (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of defaultOptions (type AnnotationOptions is ignored) ignore type: true
+    
+    if (this.basicType != null) {
+        buffer.writeAll(["\"basicType\":\'",this.basicType, "\',"], "");
+    }
+    
+    if (this.defaultOptions != null) {
+        buffer.writeAll(["\"defaultOptions\":",this.defaultOptions?.toJSON(), ","], "");
+    }
   }
+
 
 }

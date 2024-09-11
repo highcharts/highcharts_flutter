@@ -12,33 +12,45 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
-import 'ConfirmButton.dart';
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * ContentOptions 
+ * ContentOptions
  */
 class ContentOptions extends OptionFragment {
-  ContentOptions( ) : super();
-  // NOTE: text skipped - type string is ignored in gen 
 
+  ContentOptions({
+    this.text = null
+  });
+
+  // NOTE: confirmButton skipped - type ConfirmButton is ignored in gen 
+
+  // NOTE: cancelButton skipped - type ConfirmButton is ignored in gen 
+
+  String? text;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of confirmButton (type ConfirmButton is ignored) ignore type: true
 
-    // NOTE: skip serialization of cancelButton (type ConfirmButton is ignored) ignore type: true
+    // NOTE: skip serialization of confirmButton (type ConfirmButton ignored, skipped: true)
 
-    // NOTE: skip serialization of text (type string is ignored) ignore type: true
+    // NOTE: skip serialization of cancelButton (type ConfirmButton ignored, skipped: true)
+
+    
+    if (this.text != null) {
+        buffer.writeAll(["\"text\":\'",this.text, "\',"], "");
+    }
   }
+
 
 }

@@ -12,43 +12,53 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'PointMarkerOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * MarkerClusterMarkerOptions 
+ * MarkerClusterMarkerOptions
  */
 class MarkerClusterMarkerOptions extends PointMarkerOptions {
-  MarkerClusterMarkerOptions( {
+
+  MarkerClusterMarkerOptions({
     super.enabled = null,
     super.enabledThreshold = null,
     super.fillColor = null,
+    super.fillOpacity = null,
     super.height = null,
     super.lineColor = null,
-    super.lineWidth = null,
-    super.radius = null,
+    this.lineWidth = null,
+    this.radius = null,
+    super.radiusPlus = null,
     super.symbol = null,
     super.width = null
-  }) : super();
-  // NOTE: lineWidth skipped - type number is ignored in gen 
+  });
 
-  // NOTE: radius skipped - type number is ignored in gen 
-
+  double? lineWidth;
+    
+  double? radius;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of lineWidth (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of radius (type number is ignored) ignore type: true
+    
+    if (this.lineWidth != null) {
+        buffer.writeAll(["\"lineWidth\":",this.lineWidth, ","], "");
+    }
+    
+    if (this.radius != null) {
+        buffer.writeAll(["\"radius\":",this.radius, ","], "");
+    }
   }
+
 
 }

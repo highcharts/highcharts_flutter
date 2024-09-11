@@ -12,31 +12,51 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'SVGRenderer.dart';
 import 'BBoxObject.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * Renderer 
+ * Renderer
  */
 class Renderer extends SVGRenderer {
-  Renderer( ) : super();
-  
+
+  Renderer({
+    super.defIds = null,
+    super.escapes = null,
+    super.idCounter = null,
+    super.patternElements = null,
+    this.plotBox = null,
+    this.spacingBox = null,
+    super.SVG_NS = null,
+    super.symbols = null
+  });
+
+  BBoxObject? plotBox;
+    
+  BBoxObject? spacingBox;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of plotBox (type BBoxObject is ignored) ignore type: true
 
-    // NOTE: skip serialization of spacingBox (type BBoxObject is ignored) ignore type: true
+    
+    if (this.plotBox != null) {
+        buffer.writeAll(["\"plotBox\":",this.plotBox?.toJSON(), ","], "");
+    }
+    
+    if (this.spacingBox != null) {
+        buffer.writeAll(["\"spacingBox\":",this.spacingBox?.toJSON(), ","], "");
+    }
   }
+
 
 }

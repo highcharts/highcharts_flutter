@@ -12,35 +12,51 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'PositionObject.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * GeometryObject 
+ * GeometryObject
  */
 class GeometryObject extends PositionObject {
-  GeometryObject( ) : super();
-  // NOTE: angle skipped - type number is ignored in gen 
 
-  // NOTE: r skipped - type number is ignored in gen 
+  GeometryObject({
+    super.alignment = null,
+    this.angle = null,
+    this.r = null,
+    super.x = null,
+    super.y = null
+  });
 
+  double? angle;
+    
+  double? r;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of angle (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of r (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of angle (type number is ignored) ignore type: true
+    
+    if (this.angle != null) {
+        buffer.writeAll(["\"angle\":",this.angle, ","], "");
+    }
+    
+    if (this.r != null) {
+        buffer.writeAll(["\"r\":",this.r, ","], "");
+    }
+    
+    if (this.angle != null) {
+        buffer.writeAll(["\"angle\":",this.angle, ","], "");
+    }
   }
+
 
 }

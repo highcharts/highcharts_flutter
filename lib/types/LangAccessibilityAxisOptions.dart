@@ -12,64 +12,100 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * LangAccessibilityAxisOptions 
+ * LangAccessibilityAxisOptions
  */
 class LangAccessibilityAxisOptions extends OptionFragment {
-  LangAccessibilityAxisOptions( ) : super();
-  // NOTE: rangeCategories skipped - type string is ignored in gen 
 
-  // NOTE: rangeFromTo skipped - type string is ignored in gen 
+  LangAccessibilityAxisOptions({
+    this.rangeCategories = null,
+    this.rangeFromTo = null,
+    this.timeRangeDays = null,
+    this.timeRangeHours = null,
+    this.timeRangeMinutes = null,
+    this.timeRangeSeconds = null,
+    this.xAxisDescriptionPlural = null,
+    this.xAxisDescriptionSingular = null,
+    this.yAxisDescriptionPlural = null,
+    this.yAxisDescriptionSingular = null
+  });
 
-  // NOTE: timeRangeDays skipped - type string is ignored in gen 
-
-  // NOTE: timeRangeHours skipped - type string is ignored in gen 
-
-  // NOTE: timeRangeMinutes skipped - type string is ignored in gen 
-
-  // NOTE: timeRangeSeconds skipped - type string is ignored in gen 
-
-  // NOTE: xAxisDescriptionPlural skipped - type string is ignored in gen 
-
-  // NOTE: xAxisDescriptionSingular skipped - type string is ignored in gen 
-
-  // NOTE: yAxisDescriptionPlural skipped - type string is ignored in gen 
-
-  // NOTE: yAxisDescriptionSingular skipped - type string is ignored in gen 
-
+  String? rangeCategories;
+    
+  String? rangeFromTo;
+    
+  String? timeRangeDays;
+    
+  String? timeRangeHours;
+    
+  String? timeRangeMinutes;
+    
+  String? timeRangeSeconds;
+    
+  String? xAxisDescriptionPlural;
+    
+  String? xAxisDescriptionSingular;
+    
+  String? yAxisDescriptionPlural;
+    
+  String? yAxisDescriptionSingular;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of rangeCategories (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of rangeFromTo (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of timeRangeDays (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of timeRangeHours (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of timeRangeMinutes (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of timeRangeSeconds (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of xAxisDescriptionPlural (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of xAxisDescriptionSingular (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of yAxisDescriptionPlural (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of yAxisDescriptionSingular (type string is ignored) ignore type: true
+    
+    if (this.rangeCategories != null) {
+        buffer.writeAll(["\"rangeCategories\":\'",this.rangeCategories, "\',"], "");
+    }
+    
+    if (this.rangeFromTo != null) {
+        buffer.writeAll(["\"rangeFromTo\":\'",this.rangeFromTo, "\',"], "");
+    }
+    
+    if (this.timeRangeDays != null) {
+        buffer.writeAll(["\"timeRangeDays\":\'",this.timeRangeDays, "\',"], "");
+    }
+    
+    if (this.timeRangeHours != null) {
+        buffer.writeAll(["\"timeRangeHours\":\'",this.timeRangeHours, "\',"], "");
+    }
+    
+    if (this.timeRangeMinutes != null) {
+        buffer.writeAll(["\"timeRangeMinutes\":\'",this.timeRangeMinutes, "\',"], "");
+    }
+    
+    if (this.timeRangeSeconds != null) {
+        buffer.writeAll(["\"timeRangeSeconds\":\'",this.timeRangeSeconds, "\',"], "");
+    }
+    
+    if (this.xAxisDescriptionPlural != null) {
+        buffer.writeAll(["\"xAxisDescriptionPlural\":\'",this.xAxisDescriptionPlural, "\',"], "");
+    }
+    
+    if (this.xAxisDescriptionSingular != null) {
+        buffer.writeAll(["\"xAxisDescriptionSingular\":\'",this.xAxisDescriptionSingular, "\',"], "");
+    }
+    
+    if (this.yAxisDescriptionPlural != null) {
+        buffer.writeAll(["\"yAxisDescriptionPlural\":\'",this.yAxisDescriptionPlural, "\',"], "");
+    }
+    
+    if (this.yAxisDescriptionSingular != null) {
+        buffer.writeAll(["\"yAxisDescriptionSingular\":\'",this.yAxisDescriptionSingular, "\',"], "");
+    }
   }
+
 
 }

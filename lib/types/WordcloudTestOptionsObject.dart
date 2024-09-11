@@ -12,40 +12,64 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'WordcloudFieldObject.dart';
 import 'WordcloudPoint.dart';
-import 'PolygonObject.dart';
 import 'PolygonBoxObject.dart';
 import 'OptionFragment.dart';
 
 /** 
- * WordcloudTestOptionsObject 
+ * WordcloudTestOptionsObject
  */
 class WordcloudTestOptionsObject extends OptionFragment {
-  WordcloudTestOptionsObject( ) : super();
-  // NOTE: rotation skipped - type number is ignored in gen 
 
+  WordcloudTestOptionsObject({
+    this.field = null,
+    this.placed = null,
+    this.rectangle = null,
+    this.rotation = null
+  });
+
+  WordcloudFieldObject? field;
+    
+  WordcloudPoint? placed;
+    
+  // NOTE: polygon skipped - type PolygonObject is ignored in gen 
+
+  PolygonBoxObject? rectangle;
+    
+  double? rotation;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of field (type WordcloudFieldObject is ignored) ignore type: true
 
-    // NOTE: skip serialization of placed (type WordcloudPoint[] is ignored) ignore type: true
+    
+    if (this.field != null) {
+        buffer.writeAll(["\"field\":",this.field?.toJSON(), ","], "");
+    }
+    
+    if (this.placed != null) {
+        buffer.writeAll(["\"placed\":",this.placed, ","], "");
+    }
+    // NOTE: skip serialization of polygon (type PolygonObject ignored, skipped: true)
 
-    // NOTE: skip serialization of polygon (type PolygonObject is ignored) ignore type: true
-
-    // NOTE: skip serialization of rectangle (type PolygonBoxObject is ignored) ignore type: true
-
-    // NOTE: skip serialization of rotation (type number is ignored) ignore type: true
+    
+    if (this.rectangle != null) {
+        buffer.writeAll(["\"rectangle\":",this.rectangle?.toJSON(), ","], "");
+    }
+    
+    if (this.rotation != null) {
+        buffer.writeAll(["\"rotation\":",this.rotation, ","], "");
+    }
   }
+
 
 }

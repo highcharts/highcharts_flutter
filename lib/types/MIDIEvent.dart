@@ -12,36 +12,52 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * MIDIEvent 
+ * MIDIEvent
  */
 class MIDIEvent extends OptionFragment {
-  MIDIEvent( ) : super();
-  // NOTE: timeMS skipped - type number is ignored in gen 
 
-  // NOTE: type skipped - type string is ignored in gen 
+  MIDIEvent({
+    this.data = null,
+    this.timeMS = null,
+    this.type = null
+  });
 
-  // NOTE: data skipped - type number is ignored in gen 
-
+  double? timeMS;
+    
+  String? type;
+    
+  List<double>? data; // double
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of timeMS (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of type (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of data (type number is ignored) ignore type: true
+    
+    if (this.timeMS != null) {
+        buffer.writeAll(["\"timeMS\":",this.timeMS, ","], "");
+    }
+    
+    if (this.type != null) {
+        buffer.writeAll(["\"type\":\'",this.type, "\',"], "");
+    }
+    
+    if (this.data != null) {
+      StringBuffer arrData = StringBuffer();
+      arrData.writeAll(this.data!, ",");
+      buffer.writeAll(["\"data\": [", arrData , "],"], "");
+    }
   }
+
 
 }

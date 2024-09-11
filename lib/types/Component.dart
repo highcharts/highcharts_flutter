@@ -12,28 +12,37 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * Component 
+ * Component
  */
 class Component extends OptionFragment {
-  Component( ) : super();
-  // NOTE: type skipped - type string is ignored in gen 
 
+  Component({
+    this.type = null
+  });
+
+  String? type;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of type (type string is ignored) ignore type: true
+
+    
+    if (this.type != null) {
+        buffer.writeAll(["\"type\":\'",this.type, "\',"], "");
+    }
   }
+
 
 }

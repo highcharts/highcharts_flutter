@@ -12,28 +12,37 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * FetchURLOptions 
+ * FetchURLOptions
  */
 class FetchURLOptions extends OptionFragment {
-  FetchURLOptions( ) : super();
-  // NOTE: onlyColumnNames skipped - type boolean is ignored in gen 
 
+  FetchURLOptions({
+    this.onlyColumnNames = null
+  });
+
+  bool? onlyColumnNames;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of onlyColumnNames (type boolean is ignored) ignore type: true
+
+    
+    if (this.onlyColumnNames != null) {
+        buffer.writeAll(["\"onlyColumnNames\":",this.onlyColumnNames, ","], "");
+    }
   }
+
 
 }

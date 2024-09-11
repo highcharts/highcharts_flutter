@@ -12,31 +12,44 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'PositionObject.dart';
 import 'OptionFragment.dart';
 
 /** 
- * VennLabelValuesObject 
+ * VennLabelValuesObject
  */
 class VennLabelValuesObject extends OptionFragment {
-  VennLabelValuesObject( ) : super();
-  // NOTE: width skipped - type number is ignored in gen 
 
+  VennLabelValuesObject({
+    this.position = null,
+    this.width = null
+  });
+
+  PositionObject? position;
+    
+  double? width;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of position (type PositionObject is ignored) ignore type: true
 
-    // NOTE: skip serialization of width (type number is ignored) ignore type: true
+    
+    if (this.position != null) {
+        buffer.writeAll(["\"position\":",this.position?.toJSON(), ","], "");
+    }
+    
+    if (this.width != null) {
+        buffer.writeAll(["\"width\":",this.width, ","], "");
+    }
   }
+
 
 }

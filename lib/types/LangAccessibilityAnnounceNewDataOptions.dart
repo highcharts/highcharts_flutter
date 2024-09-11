@@ -12,44 +12,65 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * LangAccessibilityAnnounceNewDataOptions 
+ * LangAccessibilityAnnounceNewDataOptions
  */
 class LangAccessibilityAnnounceNewDataOptions extends OptionFragment {
-  LangAccessibilityAnnounceNewDataOptions( ) : super();
-  // NOTE: newDataAnnounce skipped - type string is ignored in gen 
 
-  // NOTE: newSeriesAnnounceSingle skipped - type string is ignored in gen 
+  LangAccessibilityAnnounceNewDataOptions({
+    this.newDataAnnounce = null,
+    this.newPointAnnounceMultiple = null,
+    this.newPointAnnounceSingle = null,
+    this.newSeriesAnnounceMultiple = null,
+    this.newSeriesAnnounceSingle = null
+  });
 
-  // NOTE: newPointAnnounceSingle skipped - type string is ignored in gen 
-
-  // NOTE: newSeriesAnnounceMultiple skipped - type string is ignored in gen 
-
-  // NOTE: newPointAnnounceMultiple skipped - type string is ignored in gen 
-
+  String? newDataAnnounce;
+    
+  String? newSeriesAnnounceSingle;
+    
+  String? newPointAnnounceSingle;
+    
+  String? newSeriesAnnounceMultiple;
+    
+  String? newPointAnnounceMultiple;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of newDataAnnounce (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of newSeriesAnnounceSingle (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of newPointAnnounceSingle (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of newSeriesAnnounceMultiple (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of newPointAnnounceMultiple (type string is ignored) ignore type: true
+    
+    if (this.newDataAnnounce != null) {
+        buffer.writeAll(["\"newDataAnnounce\":\'",this.newDataAnnounce, "\',"], "");
+    }
+    
+    if (this.newSeriesAnnounceSingle != null) {
+        buffer.writeAll(["\"newSeriesAnnounceSingle\":\'",this.newSeriesAnnounceSingle, "\',"], "");
+    }
+    
+    if (this.newPointAnnounceSingle != null) {
+        buffer.writeAll(["\"newPointAnnounceSingle\":\'",this.newPointAnnounceSingle, "\',"], "");
+    }
+    
+    if (this.newSeriesAnnounceMultiple != null) {
+        buffer.writeAll(["\"newSeriesAnnounceMultiple\":\'",this.newSeriesAnnounceMultiple, "\',"], "");
+    }
+    
+    if (this.newPointAnnounceMultiple != null) {
+        buffer.writeAll(["\"newPointAnnounceMultiple\":\'",this.newPointAnnounceMultiple, "\',"], "");
+    }
   }
+
 
 }

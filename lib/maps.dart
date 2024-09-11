@@ -12,10 +12,9 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 ////////////////////////////////////////////////////////////////////////////////
 
 // Options
@@ -49,6 +48,7 @@ import 'types/AxisOptions.dart';
 
 // Series
 import 'types/FlowMapSeriesOptions.dart';
+import 'types/GeoHeatmapSeriesOptions.dart';
 import 'types/HeatmapSeriesOptions.dart';
 import 'types/MapSeriesOptions.dart';
 import 'types/MapBubbleSeriesOptions.dart';
@@ -63,7 +63,6 @@ import 'types/TilemapSeriesOptions.dart';
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import 'package:webview_flutter_android/webview_flutter_android.dart';
-// Import for iOS features.
 import 'package:webview_flutter_wkwebview/webview_flutter_wkwebview.dart';
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -216,8 +215,7 @@ class MapsOptions extends OptionFragment {
     this.yAxis = null,
     this.zAxis = null
   });
-  
-  @override
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
@@ -226,9 +224,9 @@ class MapsOptions extends OptionFragment {
     // This is like the ugliest thing ever, but we can't solve it with 
     // inheritance without duplicating a lot of code and increasing complexity
     // of the generator significantly
-    /** for (var i = 0; i < this.series.length; ++i) {
+    /* for (var i = 0; i < this.series.length; ++i) {
       if (!(this.series[i] is FlowMapSeriesOptions ||
-      this.series[i] is  ||
+      this.series[i] is GeoHeatmapSeriesOptions ||
       this.series[i] is HeatmapSeriesOptions ||
       this.series[i] is MapSeriesOptions ||
       this.series[i] is MapBubbleSeriesOptions ||
@@ -251,120 +249,116 @@ class MapsOptions extends OptionFragment {
 
     buffer.writeAll(["\"series\": [", seriesData, "],"], "");
   
-    if (this.accessibility != null) {  
-      buffer.writeAll(["\"accessibility\":",this.accessibility?.toJSON(), ","], "");
+
+    
+    if (this.accessibility != null) {
+        buffer.writeAll(["\"accessibility\":",this.accessibility?.toJSON(), ","], "");
     }
-
-    if (this.annotations != null) {  
-      buffer.writeAll(["\"annotations\":",this.annotations?.toJSON(), ","], "");
+    
+    if (this.annotations != null) {
+        buffer.writeAll(["\"annotations\":",this.annotations?.toJSON(), ","], "");
     }
-
-    if (this.boost != null) {  
-      buffer.writeAll(["\"boost\":",this.boost?.toJSON(), ","], "");
+    
+    if (this.boost != null) {
+        buffer.writeAll(["\"boost\":",this.boost?.toJSON(), ","], "");
     }
-
-    if (this.caption != null) {  
-      buffer.writeAll(["\"caption\":",this.caption?.toJSON(), ","], "");
+    
+    if (this.caption != null) {
+        buffer.writeAll(["\"caption\":",this.caption?.toJSON(), ","], "");
     }
-
-    if (this.chart != null) {  
-      buffer.writeAll(["\"chart\":",this.chart?.toJSON(), ","], "");
+    
+    if (this.chart != null) {
+        buffer.writeAll(["\"chart\":",this.chart?.toJSON(), ","], "");
     }
-
-    if (this.colorAxis != null) {  
-      buffer.writeAll(["\"colorAxis\":",this.colorAxis?.toJSON(), ","], "");
+    
+    if (this.colorAxis != null) {
+        buffer.writeAll(["\"colorAxis\":",this.colorAxis?.toJSON(), ","], "");
     }
-
-    if (this.credits != null) {  
-      buffer.writeAll(["\"credits\":",this.credits?.toJSON(), ","], "");
+    
+    if (this.credits != null) {
+        buffer.writeAll(["\"credits\":",this.credits?.toJSON(), ","], "");
     }
-
-    if (this.data != null) {  
-      buffer.writeAll(["\"data\":",this.data?.toJSON(), ","], "");
+    
+    if (this.data != null) {
+        buffer.writeAll(["\"data\":",this.data?.toJSON(), ","], "");
     }
-
-    if (this.exporting != null) {  
-      buffer.writeAll(["\"exporting\":",this.exporting?.toJSON(), ","], "");
+    
+    if (this.exporting != null) {
+        buffer.writeAll(["\"exporting\":",this.exporting?.toJSON(), ","], "");
     }
-
-    if (this.legend != null) {  
-      buffer.writeAll(["\"legend\":",this.legend?.toJSON(), ","], "");
+    
+    if (this.legend != null) {
+        buffer.writeAll(["\"legend\":",this.legend?.toJSON(), ","], "");
     }
-
-    if (this.loading != null) {  
-      buffer.writeAll(["\"loading\":",this.loading?.toJSON(), ","], "");
+    
+    if (this.loading != null) {
+        buffer.writeAll(["\"loading\":",this.loading?.toJSON(), ","], "");
     }
-
-    if (this.mapNavigation != null) {  
-      buffer.writeAll(["\"mapNavigation\":",this.mapNavigation?.toJSON(), ","], "");
+    
+    if (this.mapNavigation != null) {
+        buffer.writeAll(["\"mapNavigation\":",this.mapNavigation?.toJSON(), ","], "");
     }
-
-    if (this.mapView != null) {  
-      buffer.writeAll(["\"mapView\":",this.mapView?.toJSON(), ","], "");
+    
+    if (this.mapView != null) {
+        buffer.writeAll(["\"mapView\":",this.mapView?.toJSON(), ","], "");
     }
-
-    if (this.navigation != null) {  
-      buffer.writeAll(["\"navigation\":",this.navigation?.toJSON(), ","], "");
+    
+    if (this.navigation != null) {
+        buffer.writeAll(["\"navigation\":",this.navigation?.toJSON(), ","], "");
     }
-
-    if (this.plotOptions != null) {  
-      buffer.writeAll(["\"plotOptions\":",this.plotOptions?.toJSON(), ","], "");
+    
+    if (this.plotOptions != null) {
+        buffer.writeAll(["\"plotOptions\":",this.plotOptions?.toJSON(), ","], "");
     }
-
-    if (this.scrollbar != null) {  
-      buffer.writeAll(["\"scrollbar\":",this.scrollbar?.toJSON(), ","], "");
+    
+    if (this.scrollbar != null) {
+        buffer.writeAll(["\"scrollbar\":",this.scrollbar?.toJSON(), ","], "");
     }
-
-    if (this.subtitle != null) {  
-      buffer.writeAll(["\"subtitle\":",this.subtitle?.toJSON(), ","], "");
+    
+    if (this.subtitle != null) {
+        buffer.writeAll(["\"subtitle\":",this.subtitle?.toJSON(), ","], "");
     }
-
-    if (this.time != null) {  
-      buffer.writeAll(["\"time\":",this.time?.toJSON(), ","], "");
+    
+    if (this.time != null) {
+        buffer.writeAll(["\"time\":",this.time?.toJSON(), ","], "");
     }
-
-    if (this.title != null) {  
-      buffer.writeAll(["\"title\":",this.title?.toJSON(), ","], "");
+    
+    if (this.title != null) {
+        buffer.writeAll(["\"title\":",this.title?.toJSON(), ","], "");
     }
-
-    if (this.tooltip != null) {  
-      buffer.writeAll(["\"tooltip\":",this.tooltip?.toJSON(), ","], "");
+    
+    if (this.tooltip != null) {
+        buffer.writeAll(["\"tooltip\":",this.tooltip?.toJSON(), ","], "");
     }
-
-    if (this.xAxis != null) {  
-     StringBuffer arrData = StringBuffer();
-
+    
+    if (this.xAxis != null) {
+      StringBuffer arrData = StringBuffer();
       for (var item in this.xAxis!) {
           arrData.write("{");
           item.toJSONInner(arrData);
           arrData.write("}");
       }
-      buffer.writeAll(["\"xAxis\": [", arrData , "],"], "");   
-        
+      buffer.writeAll(["\"xAxis\": [", arrData , "],"], "");
     }
-
-    if (this.yAxis != null) {  
-     StringBuffer arrData = StringBuffer();
-
+    
+    if (this.yAxis != null) {
+      StringBuffer arrData = StringBuffer();
       for (var item in this.yAxis!) {
           arrData.write("{");
           item.toJSONInner(arrData);
           arrData.write("}");
       }
-      buffer.writeAll(["\"yAxis\": [", arrData , "],"], "");   
-        
+      buffer.writeAll(["\"yAxis\": [", arrData , "],"], "");
     }
-
-    if (this.zAxis != null) {  
-     StringBuffer arrData = StringBuffer();
-
+    
+    if (this.zAxis != null) {
+      StringBuffer arrData = StringBuffer();
       for (var item in this.zAxis!) {
           arrData.write("{");
           item.toJSONInner(arrData);
           arrData.write("}");
       }
-      buffer.writeAll(["\"zAxis\": [", arrData , "],"], "");   
-        
+      buffer.writeAll(["\"zAxis\": [", arrData , "],"], "");
     }
   }
 
@@ -380,20 +374,15 @@ const String kLocalExamplePage = '''
 
 <title>Load file or HTML string example</title>
 <style>
-  html, body {
-    width: 100%'
+  html, body, #container {
+    background: transparent;
     height: 100%;
     margin: 0;
-  }
-
-  #container {
     width: 100%;
-    height: 100%;
   }
 </style>
 </head>
 <body>
-
 
 <script src="https://code.highcharts.com/highcharts.js" type="text/javascript"></script><script src="https://code.highcharts.com/maps/highmaps.js" type="text/javascript"></script><script src="https://code.highcharts.com/highcharts-more.js" type="text/javascript"></script><script src="https://code.highcharts.com/highcharts-3d.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/stock.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/gantt.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/exporting.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/export-data.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/parallel-coordinates.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/accessibility.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/annotations-advanced.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/boost-canvas.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/boost.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/data.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/draggable-points.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/static-scale.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/broken-axis.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/heatmap.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/tilemap.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/timeline.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/treemap.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/item-series.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/drilldown.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/histogram-bellcurve.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/bullet.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/funnel.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/funnel3d.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/pyramid3d.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/networkgraph.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/pareto.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/pattern-fill.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/price-indicator.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/sankey.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/arc-diagram.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/dependency-wheel.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/series-label.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/solid-gauge.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/sonification.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/stock-tools.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/streamgraph.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/sunburst.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/variable-pie.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/variwide.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/vector.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/venn.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/windbarb.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/wordcloud.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/xrange.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/no-data-to-display.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/drag-panes.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/debugger.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/heikinashi.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/dumbbell.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/lollipop.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/cylinder.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/hollowcandlestick.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/organization.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/dotplot.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/marker-clusters.js" type="text/javascript"></script>
 
@@ -420,61 +409,76 @@ function UpdateChart (data, constr) {
 ////////////////////////////////////////////////////////////////////////////////
 
 class MapsChart extends StatefulWidget {
-  // const MapsChart({ super.key });
-  VoidCallback? _refreshRequest;
+
+  MapsChart(this.options, { super.key });
+
   MapsOptions options;
 
-  MapsChart(this.options);
+  _MapsChart? state;
 
   void refresh () {
-    if (_refreshRequest != null) {
-      _refreshRequest!();
-    }
+    state!.controller.runJavaScript('UpdateChart(${options.toJSON()}, \'map\')');
+    print(options.toJSON());
   }
 
   @override
-  State<MapsChart> createState() => _MapsChart();
+  _MapsChart createState() {
+    state = _MapsChart();
+    return state!;
+  }
+
 }
 
 class _MapsChart extends State<MapsChart> {
+
   late final WebViewController controller;
 
-  void refresh () {
-    if (controller != null) {
-      controller.runJavaScript('''UpdateChart(${widget.options.toJSON()}, 'map')''');
-      print(widget.options.toJSON());
-    }
+  late final WebViewWidget view;
+
+  @override
+  Widget build(BuildContext context) {
+    widget.state = this;
+    return Container(
+        child: view,
+        height: 400,
+    );
   }
 
   @override
   void initState() {
     super.initState();
 
-    widget._refreshRequest = refresh;
-    controller = WebViewController()
+    PlatformWebViewControllerCreationParams params;
+
+    if (WebViewPlatform.instance is WebKitWebViewPlatform) {
+      params = WebKitWebViewControllerCreationParams();
+    } else if (WebViewPlatform.instance is AndroidWebViewPlatform) {
+      params = AndroidWebViewControllerCreationParams();
+    } else {
+      params = const PlatformWebViewControllerCreationParams();
+    }
+
+    controller = WebViewController.fromPlatformCreationParams(params);
+
+    if (controller.platform is WebKitWebViewController) {
+      (controller.platform as WebKitWebViewController).setInspectable(true);
+    }
+
+    controller
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
       ..setBackgroundColor(const Color(0x00000000))
       ..setNavigationDelegate(
         NavigationDelegate(
-          onProgress: (int progress) {},
-          onPageStarted: (String url) {},
-          onPageFinished: (String url) {
-            refresh();
-          },
-          onWebResourceError: (WebResourceError error) {},
           onNavigationRequest: (NavigationRequest request) {
-            return NavigationDecision.prevent;
+            return NavigationDecision.navigate;
           },
-        ),
+          onPageFinished: (String url) {
+            widget.refresh();
+          }
+        )
       )
       ..loadHtmlString(kLocalExamplePage);
-  }
 
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 400,
-      child:  WebViewWidget(controller: controller)
-    );
+      view = WebViewWidget(controller: controller);
   }
 }

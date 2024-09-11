@@ -12,36 +12,49 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * StockToolsGuiDefinitionsButtonOptions 
+ * StockToolsGuiDefinitionsButtonOptions
  */
 class StockToolsGuiDefinitionsButtonOptions extends OptionFragment {
-  StockToolsGuiDefinitionsButtonOptions( {
-    this.symbol = null
-  }) : super();
-  // NOTE: elementType skipped - type string is ignored in gen 
 
+  StockToolsGuiDefinitionsButtonOptions({
+    this.elementType = null,
+    this.symbol = null
+  });
+
+  String? elementType;
+    
+  /**
+   * A predefined background symbol for the button. 
+   * 
+   * Defaults to 'current-price-show.svg'. 
+   */
   String? symbol;
     
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of elementType (type string is ignored) ignore type: true
 
-    if (this.symbol != null) {  
-      buffer.writeAll(["\"symbol\":\'",this.symbol, "\',"], "");
+    
+    if (this.elementType != null) {
+        buffer.writeAll(["\"elementType\":\'",this.elementType, "\',"], "");
+    }
+    
+    if (this.symbol != null) {
+        buffer.writeAll(["\"symbol\":\'",this.symbol, "\',"], "");
     }
   }
+
 
 }

@@ -12,27 +12,29 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * PopupFieldsTree 
+ * PopupFieldsTree
  */
 class PopupFieldsTree extends OptionFragment {
-  PopupFieldsTree( ) : super();
-  
+
+  PopupFieldsTree();
+
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    
+
   }
+
 
 }

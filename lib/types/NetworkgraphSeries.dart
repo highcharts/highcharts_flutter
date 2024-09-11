@@ -12,10 +12,9 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'NetworkgraphSeriesOptions.dart';
 import 'Series.dart';
 import 'PointOptions.dart';
@@ -34,8 +33,7 @@ class NetworkgraphSeries extends Series {
     this.data = null
   });
 
-  
-  @override
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
@@ -56,16 +54,13 @@ class NetworkgraphSeries extends Series {
         if (point.length > 1) {
           seriesData.writeAll(["["], "");
         }
-
-          for (var sub in point) {
-            if (sub is String) {
-              seriesData.writeAll(["\"", sub, "\","], "");
-            } else {
-              seriesData.writeAll([sub], ",");
-            }
-
+        for (var sub in point) {
+          if (sub is String) {
+            seriesData.writeAll(["\"", sub, "\","], "");
+          } else {
+            seriesData.writeAll([sub], ",");
           }
-
+        }
         if (point.length > 1) {
           seriesData.writeAll(["],"], "");
         } else {
@@ -92,27 +87,49 @@ class NetworkgraphSeries extends Series {
 
 
     
-    // NOTE: skip serialization of dataLabels (type NetworkgraphDataLabelsOptionsObject is ignored) ignore type: false
 
-    if (this.options?.draggable != null) {  
-      buffer.writeAll(["\"draggable\":",this.options?.draggable, ","], "");
+    
+    if (this.options?.data != null) {
+        buffer.writeAll(["\"data\":",this.options?.data, ","], "");
     }
+    // NOTE: skip serialization of dataLabels (type NetworkgraphDataLabelsOptions ignored, skipped: false)
 
-    // NOTE: skip serialization of events (type NetworkgraphEventsOptions is ignored) ignore type: false
-
-    // NOTE: skip serialization of inactiveOtherPoints (type boolean is ignored) ignore type: true
-
-    if (this.options?.layoutAlgorithm != null) {  
-      buffer.writeAll(["\"layoutAlgorithm\":",this.options?.layoutAlgorithm?.toJSON(), ","], "");
+    
+    if (this.options?.draggable != null) {
+        buffer.writeAll(["\"draggable\":",this.options?.draggable, ","], "");
     }
+    // NOTE: skip serialization of events (type NetworkgraphEventsOptions ignored, skipped: false)
 
-    if (this.options?.link != null) {  
-      buffer.writeAll(["\"link\":",this.options?.link?.toJSON(), ","], "");
+    
+    if (this.options?.inactiveOtherPoints != null) {
+        buffer.writeAll(["\"inactiveOtherPoints\":",this.options?.inactiveOtherPoints, ","], "");
     }
+    
+    if (this.options?.layoutAlgorithm != null) {
+        buffer.writeAll(["\"layoutAlgorithm\":",this.options?.layoutAlgorithm?.toJSON(), ","], "");
+    }
+    
+    if (this.options?.link != null) {
+        buffer.writeAll(["\"link\":",this.options?.link?.toJSON(), ","], "");
+    }
+    
+    if (this.options?.marker != null) {
+        buffer.writeAll(["\"marker\":",this.options?.marker?.toJSON(), ","], "");
+    }
+    
+    if (this.options?.nodes != null) {
+        buffer.writeAll(["\"nodes\":",this.options?.nodes, ","], "");
+    }
+    // NOTE: skip serialization of states (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of nodes (type NetworkgraphPointOptions[] is ignored) ignore type: true
-
-    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
+    
+    if (this.options?.showInLegend != null) {
+        buffer.writeAll(["\"showInLegend\":",this.options?.showInLegend, ","], "");
+    }
+    
+    if (this.options?.stickyTracking != null) {
+        buffer.writeAll(["\"stickyTracking\":",this.options?.stickyTracking, ","], "");
+    }
   }
 
 }

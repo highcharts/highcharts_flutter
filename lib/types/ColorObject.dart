@@ -12,32 +12,44 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * ColorObject 
+ * ColorObject
  */
 class ColorObject extends OptionFragment {
-  ColorObject( ) : super();
-  // NOTE: color skipped - type string is ignored in gen 
 
-  // NOTE: colorIndex skipped - type number is ignored in gen 
+  ColorObject({
+    this.color = null,
+    this.colorIndex = null
+  });
 
+  String? color;
+    
+  double? colorIndex;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of color (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of colorIndex (type number is ignored) ignore type: true
+    
+    if (this.color != null) {
+        buffer.writeAll(["\"color\":\'",this.color, "\',"], "");
+    }
+    
+    if (this.colorIndex != null) {
+        buffer.writeAll(["\"colorIndex\":",this.colorIndex, ","], "");
+    }
   }
+
 
 }

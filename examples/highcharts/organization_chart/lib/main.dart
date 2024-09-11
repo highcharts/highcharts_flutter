@@ -4,7 +4,7 @@
  */
 
 import 'package:flutter/material.dart';
-import 'package:highcharts_flutter/Highcharts.dart';
+import 'package:highcharts_flutter/highcharts.dart';
 import 'package:highcharts_flutter/types/ChartOptions.dart';
 import 'package:highcharts_flutter/types/TitleOptions.dart';
 import 'package:highcharts_flutter/types/AccessibilityOptions.dart';
@@ -587,22 +587,22 @@ class _MyHomePageState extends State<MyHomePage> {
                       "CTO", "Market"
                     ],
                     ],
-                    // levels: [ 
-                    //   OrganizationSeriesLevelOptions( 
-                    //   ),
-                    // ],
-                    // nodes: [ 
-                    //   OrganizationSeriesNodeOptions( 
-                    //   ),
-                    // ],
-                    //   color: "#007ad0", 
-                    // dataLabels: [ 
-                    //   OrganizationDataLabelOptions( 
-                    //       color: "white", 
-                    //   ),
-                    // ],
-                    //   borderColor: "white", 
-                    //   nodeWidth: "auto", 
+                    levels: [ 
+                      OrganizationSeriesLevelOptions( 
+                      ),
+                    ],
+                    nodes: [ 
+                      OrganizationSeriesNodeOptions( 
+                      ),
+                    ],
+                      color: "#007ad0", 
+                    dataLabels: [ 
+                      OrganizationDataLabelOptions( 
+                          color: "white", 
+                      ),
+                    ],
+                      borderColor: "white", 
+                      nodeWidth: "auto", 
                   ),
                 ],
                 tooltip: TooltipOptions(

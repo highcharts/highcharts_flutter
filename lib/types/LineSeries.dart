@@ -12,10 +12,9 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'LineSeriesOptions.dart';
 import 'Series.dart';
 import 'PointOptions.dart';
@@ -34,8 +33,7 @@ class LineSeries extends Series {
     this.data = null
   });
 
-  
-  @override
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
@@ -56,16 +54,13 @@ class LineSeries extends Series {
         if (point.length > 1) {
           seriesData.writeAll(["["], "");
         }
-
-          for (var sub in point) {
-            if (sub is String) {
-              seriesData.writeAll(["\"", sub, "\","], "");
-            } else {
-              seriesData.writeAll([sub], ",");
-            }
-
+        for (var sub in point) {
+          if (sub is String) {
+            seriesData.writeAll(["\"", sub, "\","], "");
+          } else {
+            seriesData.writeAll([sub], ",");
           }
-
+        }
         if (point.length > 1) {
           seriesData.writeAll(["],"], "");
         } else {
@@ -92,69 +87,75 @@ class LineSeries extends Series {
 
 
     
-    if (this.options?.allAreas != null) {  
-      buffer.writeAll(["\"allAreas\":",this.options?.allAreas, ","], "");
+
+    
+    if (this.options?.allAreas != null) {
+        buffer.writeAll(["\"allAreas\":",this.options?.allAreas, ","], "");
     }
+    // NOTE: skip serialization of animation (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of animation (type Generic is ignored) ignore type: true
-
-    if (this.options?.animationLimit != null) {  
-      buffer.writeAll(["\"animationLimit\":",this.options?.animationLimit, ","], "");
+    
+    if (this.options?.animationLimit != null) {
+        buffer.writeAll(["\"animationLimit\":",this.options?.animationLimit, ","], "");
     }
-
-    if (this.options?.boostThreshold != null) {  
-      buffer.writeAll(["\"boostThreshold\":",this.options?.boostThreshold, ","], "");
+    
+    if (this.options?.boostThreshold != null) {
+        buffer.writeAll(["\"boostThreshold\":",this.options?.boostThreshold, ","], "");
     }
-
-    if (this.options?.borderColor != null) {  
-      buffer.writeAll(["\"borderColor\":\'",this.options?.borderColor, "\',"], "");
+    
+    if (this.options?.borderColor != null) {
+        buffer.writeAll(["\"borderColor\":\'",this.options?.borderColor, "\',"], "");
     }
-
-    if (this.options?.borderWidth != null) {  
-      buffer.writeAll(["\"borderWidth\":",this.options?.borderWidth, ","], "");
+    
+    if (this.options?.borderWidth != null) {
+        buffer.writeAll(["\"borderWidth\":",this.options?.borderWidth, ","], "");
     }
-
-    if (this.options?.colorAxis != null) {  
-      buffer.writeAll(["\"colorAxis\":",this.options?.colorAxis, ","], "");
+    
+    if (this.options?.colorAxis != null) {
+        buffer.writeAll(["\"colorAxis\":",this.options?.colorAxis, ","], "");
     }
-
-    if (this.options?.connectEnds != null) {  
-      buffer.writeAll(["\"connectEnds\":",this.options?.connectEnds, ","], "");
+    
+    if (this.options?.connectEnds != null) {
+        buffer.writeAll(["\"connectEnds\":",this.options?.connectEnds, ","], "");
     }
-
-    if (this.options?.dataLabels != null) {  
-     StringBuffer arrData = StringBuffer();
-
+    
+    if (this.options?.dataLabels != null) {
+      StringBuffer arrData = StringBuffer();
       for (var item in this.options!.dataLabels!) {
           arrData.write("{");
           item.toJSONInner(arrData);
           arrData.write("}");
       }
-      buffer.writeAll(["\"dataLabels\": [", arrData , "],"], "");   
-        
+      buffer.writeAll(["\"dataLabels\": [", arrData , "],"], "");
     }
-
-    if (this.options?.description != null) {  
-      buffer.writeAll(["\"description\":\'",this.options?.description, "\',"], "");
+    
+    if (this.options?.description != null) {
+        buffer.writeAll(["\"description\":\'",this.options?.description, "\',"], "");
     }
-
-    if (this.options?.linkedTo != null) {  
-      buffer.writeAll(["\"linkedTo\":\'",this.options?.linkedTo, "\',"], "");
+    
+    if (this.options?.linkedTo != null) {
+        buffer.writeAll(["\"linkedTo\":\'",this.options?.linkedTo, "\',"], "");
     }
+    // NOTE: skip serialization of pointDescriptionFormatter (type Function ignored, skipped: true)
 
-    // NOTE: skip serialization of pointDescriptionFormatter (type Function is ignored) ignore type: 1
-
-    if (this.options?.pointStart != null) {  
-      buffer.writeAll(["\"pointStart\":",this.options?.pointStart, ","], "");
+    
+    if (this.options?.pointStart != null) {
+        buffer.writeAll(["\"pointStart\":",this.options?.pointStart, ","], "");
     }
-
-    if (this.options?.skipKeyboardNavigation != null) {  
-      buffer.writeAll(["\"skipKeyboardNavigation\":",this.options?.skipKeyboardNavigation, ","], "");
+    
+    if (this.options?.skipKeyboardNavigation != null) {
+        buffer.writeAll(["\"skipKeyboardNavigation\":",this.options?.skipKeyboardNavigation, ","], "");
     }
+    // NOTE: skip serialization of states (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
-
-    // NOTE: skip serialization of supportingColor (type string is ignored) ignore type: true
+    
+    if (this.options?.supportingColor != null) {
+        buffer.writeAll(["\"supportingColor\":\'",this.options?.supportingColor, "\',"], "");
+    }
+    
+    if (this.options?.useOhlcData != null) {
+        buffer.writeAll(["\"useOhlcData\":",this.options?.useOhlcData, ","], "");
+    }
   }
 
 }

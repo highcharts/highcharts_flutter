@@ -12,33 +12,51 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'SeriesOptions.dart';
 import 'OptionFragment.dart';
 
 /** 
- * SeriesMeta 
+ * SeriesMeta
  */
 class SeriesMeta extends OptionFragment {
-  SeriesMeta( ) : super();
-  // NOTE: id skipped - type string is ignored in gen 
 
+  SeriesMeta({
+    this.id = null,
+    this.options = null,
+    this.pointArrayMap = null
+  });
+
+  String? id;
+    
+  String? pointArrayMap;
+    
+  SeriesOptions? options;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of id (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of pointArrayMap (type string[] is ignored) ignore type: true
-
-    // NOTE: skip serialization of options (type SeriesOptions is ignored) ignore type: true
+    
+    if (this.id != null) {
+        buffer.writeAll(["\"id\":\'",this.id, "\',"], "");
+    }
+    
+    if (this.pointArrayMap != null) {
+        buffer.writeAll(["\"pointArrayMap\":",this.pointArrayMap, ","], "");
+    }
+    
+    if (this.options != null) {
+        buffer.writeAll(["\"options\":",this.options?.toJSON(), ","], "");
+    }
   }
+
 
 }

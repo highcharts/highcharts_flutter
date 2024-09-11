@@ -12,28 +12,32 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'StateNormalOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * SeriesStateNormalOptions 
+ * SeriesStateNormalOptions
  */
 class SeriesStateNormalOptions extends StateNormalOptions {
-  SeriesStateNormalOptions( ) : super();
-  
+
+  SeriesStateNormalOptions({
+    super.color = null,
+    super.dashStyle = null
+  });
+
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    
+
   }
+
 
 }

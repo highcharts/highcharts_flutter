@@ -12,57 +12,88 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * MapViewInsetOptions 
+ * MapViewInsetOptions
  */
 class MapViewInsetOptions extends OptionFragment {
-  MapViewInsetOptions( {
+
+  MapViewInsetOptions({
     this.borderColor = null,
     this.borderWidth = null,
     this.relativeTo = null,
     this.units = null
-  }) : super();
+  });
+
+  /**
+   * The border color of the insets. 
+   * 
+   * Defaults to '#cccccc'. 
+   */
   String? borderColor;
     
+  /**
+   * The pixel border width of the insets. 
+   * 
+   * Defaults to '1'. 
+   */
   double? borderWidth;
     
   // NOTE: padding skipped - type MapViewPaddingType is ignored in gen 
 
+  /**
+   * What coordinate system the `field` and `borderPath` should relate to.
+   * If `plotBox`, they will be fixed to the plot box and responsively
+   * move in relation to the main map. If `mapBoundingBox`, they will be
+   * fixed to the map bounding box, which is constant and centered in
+   * different chart sizes and ratios. 
+   * 
+   * Defaults to 'mapBoundingBox'. 
+   */
   String? relativeTo;
     
+  /**
+   * What units to use for the `field` and `borderPath` geometries. If
+   * `percent` (default), they relate to the box given in `relativeTo`. If
+   * `pixels`, they are absolute values. 
+   * 
+   * Defaults to 'percent'. 
+   */
   String? units;
     
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    if (this.borderColor != null) {  
-      buffer.writeAll(["\"borderColor\":\'",this.borderColor, "\',"], "");
+
+    
+    if (this.borderColor != null) {
+        buffer.writeAll(["\"borderColor\":\'",this.borderColor, "\',"], "");
     }
-
-    if (this.borderWidth != null) {  
-      buffer.writeAll(["\"borderWidth\":",this.borderWidth, ","], "");
+    
+    if (this.borderWidth != null) {
+        buffer.writeAll(["\"borderWidth\":",this.borderWidth, ","], "");
     }
+    // NOTE: skip serialization of padding (type MapViewPaddingType ignored, skipped: true)
 
-    // NOTE: skip serialization of padding (type MapViewPaddingType is ignored) ignore type: 1
-
-    if (this.relativeTo != null) {  
-      buffer.writeAll(["\"relativeTo\":\'",this.relativeTo, "\',"], "");
+    
+    if (this.relativeTo != null) {
+        buffer.writeAll(["\"relativeTo\":\'",this.relativeTo, "\',"], "");
     }
-
-    if (this.units != null) {  
-      buffer.writeAll(["\"units\":\'",this.units, "\',"], "");
+    
+    if (this.units != null) {
+        buffer.writeAll(["\"units\":\'",this.units, "\',"], "");
     }
   }
+
 
 }

@@ -12,43 +12,53 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * ColorAxisMarkerOptions 
+ * ColorAxisMarkerOptions
  */
 class ColorAxisMarkerOptions extends OptionFragment {
-  ColorAxisMarkerOptions( {
+
+  ColorAxisMarkerOptions({
     this.color = null,
     this.width = null
-  }) : super();
+  });
+
   // NOTE: animation skipped - type Generic is ignored in gen 
 
+  /**
+   * The color of the marker. 
+   * 
+   * Defaults to '#999999'. 
+   */
   String? color;
     
   double? width;
     
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of animation (type Generic is ignored) ignore type: true
 
-    if (this.color != null) {  
-      buffer.writeAll(["\"color\":\'",this.color, "\',"], "");
+    // NOTE: skip serialization of animation (type Generic ignored, skipped: true)
+
+    
+    if (this.color != null) {
+        buffer.writeAll(["\"color\":\'",this.color, "\',"], "");
     }
-
-    if (this.width != null) {  
-      buffer.writeAll(["\"width\":",this.width, ","], "");
+    
+    if (this.width != null) {
+        buffer.writeAll(["\"width\":",this.width, ","], "");
     }
   }
+
 
 }

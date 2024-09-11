@@ -12,50 +12,55 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
+import 'TreemapSeriesLevelOptions.dart';
+import 'CollapseButtonOptions.dart';
 
-import 'TreegraphSeriesOptions.dart';
-import 'OptionFragment.dart';
 
 /** 
- * TreegraphSeriesLevelOptions 
+ * TreegraphSeriesLevelOptions
  */
-class TreegraphSeriesLevelOptions extends TreegraphSeriesOptions {
-  TreegraphSeriesLevelOptions( {
-    super.allowDrillToNode = null,
-    super.allowTraversingTree = null,
-    super.alternateStartingDirection = null,
+class TreegraphSeriesLevelOptions extends TreemapSeriesLevelOptions {
+
+  TreegraphSeriesLevelOptions({
+    super.borderColor = null,
+    super.borderDashStyle = null,
     super.borderRadius = null,
-    super.breadcrumbs = null,
-    super.collapseButton = null,
-    super.colors = null,
+    super.borderWidth = null,
+    this.collapseButton = null,
+    this.collapsed = null,
+    super.color = null,
+    super.colorVariation = null,
     super.dataLabels = null,
-    super.fillSpace = null,
-    super.ignoreHiddenPoint = null,
-    super.interactByLeaf = null,
     super.layoutAlgorithm = null,
     super.layoutStartingDirection = null,
-    super.levelIsConstant = null,
-    super.levels = null,
-    super.link = null,
-    super.marker = null,
-    super.reversed = null,
-    super.sortIndex = null,
-    super.traverseUpButton = null
-  }) : super();
-  // NOTE: collapsed skipped - type boolean is ignored in gen 
+    super.level = null
+  });
 
+  CollapseButtonOptions? collapseButton;
+    
+  bool? collapsed;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of collapsed (type boolean is ignored) ignore type: true
+
+    
+    if (this.collapseButton != null) {
+        buffer.writeAll(["\"collapseButton\":",this.collapseButton?.toJSON(), ","], "");
+    }
+    
+    if (this.collapsed != null) {
+        buffer.writeAll(["\"collapsed\":",this.collapsed, ","], "");
+    }
   }
+
 
 }

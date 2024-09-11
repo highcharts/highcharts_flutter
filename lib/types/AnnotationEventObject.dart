@@ -12,33 +12,44 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
-import 'PointerEvent.dart';
 import 'OptionFragment.dart';
 
 /** 
- * AnnotationEventObject 
+ * AnnotationEventObject
  */
-class AnnotationEventObject extends PointerEvent {
-  AnnotationEventObject( ) : super();
-  // NOTE: prevChartX skipped - type number is ignored in gen 
+class AnnotationEventObject extends OptionFragment {
 
-  // NOTE: prevChartY skipped - type number is ignored in gen 
+  AnnotationEventObject({
+    this.prevChartX = null,
+    this.prevChartY = null
+  });
 
+  double? prevChartX;
+    
+  double? prevChartY;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of prevChartX (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of prevChartY (type number is ignored) ignore type: true
+    
+    if (this.prevChartX != null) {
+        buffer.writeAll(["\"prevChartX\":",this.prevChartX, ","], "");
+    }
+    
+    if (this.prevChartY != null) {
+        buffer.writeAll(["\"prevChartY\":",this.prevChartY, ","], "");
+    }
   }
+
 
 }

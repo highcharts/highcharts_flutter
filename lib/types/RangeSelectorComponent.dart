@@ -12,28 +12,37 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'ChartComposition.dart';
 import 'OptionFragment.dart';
 
 /** 
- * RangeSelectorComponent 
+ * RangeSelectorComponent
  */
 class RangeSelectorComponent extends OptionFragment {
-  RangeSelectorComponent( ) : super();
-  
+
+  RangeSelectorComponent({
+    this.chart = null
+  });
+
+  ChartComposition? chart;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of chart (type ChartComposition is ignored) ignore type: true
+
+    
+    if (this.chart != null) {
+        buffer.writeAll(["\"chart\":",this.chart?.toJSON(), ","], "");
+    }
   }
+
 
 }

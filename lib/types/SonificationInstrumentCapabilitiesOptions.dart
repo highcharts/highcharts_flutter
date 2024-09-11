@@ -12,36 +12,51 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * SonificationInstrumentCapabilitiesOptions 
+ * SonificationInstrumentCapabilitiesOptions
  */
 class SonificationInstrumentCapabilitiesOptions extends OptionFragment {
-  SonificationInstrumentCapabilitiesOptions( ) : super();
-  // NOTE: filters skipped - type boolean is ignored in gen 
 
-  // NOTE: tremolo skipped - type boolean is ignored in gen 
+  SonificationInstrumentCapabilitiesOptions({
+    this.filters = null,
+    this.pan = null,
+    this.tremolo = null
+  });
 
-  // NOTE: pan skipped - type boolean is ignored in gen 
-
+  bool? filters;
+    
+  bool? tremolo;
+    
+  bool? pan;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of filters (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of tremolo (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of pan (type boolean is ignored) ignore type: true
+    
+    if (this.filters != null) {
+        buffer.writeAll(["\"filters\":",this.filters, ","], "");
+    }
+    
+    if (this.tremolo != null) {
+        buffer.writeAll(["\"tremolo\":",this.tremolo, ","], "");
+    }
+    
+    if (this.pan != null) {
+        buffer.writeAll(["\"pan\":",this.pan, ","], "");
+    }
   }
+
 
 }

@@ -12,17 +12,18 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * ConnectorsStartMarkerOptions 
+ * ConnectorsStartMarkerOptions
  */
 class ConnectorsStartMarkerOptions extends OptionFragment {
-  ConnectorsStartMarkerOptions( {
+
+  ConnectorsStartMarkerOptions({
     this.align = null,
     this.color = null,
     this.enabled = null,
@@ -34,80 +35,133 @@ class ConnectorsStartMarkerOptions extends OptionFragment {
     this.symbol = null,
     this.verticalAlign = null,
     this.width = null
-  }) : super();
+  });
+
+  /**
+   * Horizontal alignment of the markers relative to the points. 
+   * 
+   * Defaults to 'center'. 
+   */
   String? align;
     
+  /**
+   * Set the color of the connector markers. By default this is the
+   * same as the connector color.  
+   */
   String? color;
     
+  /**
+   * Enable markers for the connectors.  
+   */
   bool? enabled;
     
+  /**
+   * Set the height of the connector markers. If not supplied, this
+   * is inferred from the marker radius.  
+   */
   double? height;
     
+  /**
+   * Whether or not to draw the markers inside the points.  
+   */
   bool? inside;
     
+  /**
+   * Set the line/border color of the connector markers. By default
+   * this is the same as the marker color.  
+   */
   String? lineColor;
     
+  /**
+   * Set the line/border width of the pathfinder markers. 
+   * 
+   * Defaults to '1'. 
+   */
   double? lineWidth;
     
+  /**
+   * Set the radius of the connector markers. The default is
+   * automatically computed based on the algorithmMargin setting.
+   * 
+   * Setting marker.width and marker.height will override this
+   * setting.  
+   */
   double? radius;
     
+  /**
+   * Set the symbol of the connector start markers. 
+   * 
+   * Defaults to 'diamond'. 
+   */
   String? symbol;
     
+  /**
+   * Vertical alignment of the markers relative to the points. 
+   * 
+   * Defaults to 'middle'. 
+   */
   String? verticalAlign;
     
+  /**
+   * Set the width of the connector markers. If not supplied, this
+   * is inferred from the marker radius.  
+   */
   double? width;
     
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    if (this.align != null) {  
-      buffer.writeAll(["\"align\":\'",this.align, "\',"], "");
-    }
 
-    if (this.color != null) {  
-      buffer.writeAll(["\"color\":\'",this.color, "\',"], "");
+    
+    if (this.align != null) {
+        buffer.writeAll(["\"align\":\'",this.align, "\',"], "");
     }
-
-    if (this.enabled != null) {  
-      buffer.writeAll(["\"enabled\":",this.enabled, ","], "");
+    
+    if (this.color != null) {
+        buffer.writeAll(["\"color\":\'",this.color, "\',"], "");
     }
-
-    if (this.height != null) {  
-      buffer.writeAll(["\"height\":",this.height, ","], "");
+    
+    if (this.enabled != null) {
+        buffer.writeAll(["\"enabled\":",this.enabled, ","], "");
     }
-
-    if (this.inside != null) {  
-      buffer.writeAll(["\"inside\":",this.inside, ","], "");
+    
+    if (this.height != null) {
+        buffer.writeAll(["\"height\":",this.height, ","], "");
     }
-
-    if (this.lineColor != null) {  
-      buffer.writeAll(["\"lineColor\":\'",this.lineColor, "\',"], "");
+    
+    if (this.inside != null) {
+        buffer.writeAll(["\"inside\":",this.inside, ","], "");
     }
-
-    if (this.lineWidth != null) {  
-      buffer.writeAll(["\"lineWidth\":",this.lineWidth, ","], "");
+    
+    if (this.lineColor != null) {
+        buffer.writeAll(["\"lineColor\":\'",this.lineColor, "\',"], "");
     }
-
-    if (this.radius != null) {  
-      buffer.writeAll(["\"radius\":",this.radius, ","], "");
+    
+    if (this.lineWidth != null) {
+        buffer.writeAll(["\"lineWidth\":",this.lineWidth, ","], "");
     }
-
-    if (this.symbol != null) {  
-      buffer.writeAll(["\"symbol\":\'",this.symbol, "\',"], "");
+    
+    if (this.radius != null) {
+        buffer.writeAll(["\"radius\":",this.radius, ","], "");
     }
-
-    if (this.verticalAlign != null) {  
-      buffer.writeAll(["\"verticalAlign\":\'",this.verticalAlign, "\',"], "");
+    
+    if (this.symbol != null) {
+        buffer.writeAll(["\"symbol\":\'",this.symbol, "\',"], "");
     }
-
-    if (this.width != null) {  
-      buffer.writeAll(["\"width\":",this.width, ","], "");
+    
+    if (this.verticalAlign != null) {
+        buffer.writeAll(["\"verticalAlign\":\'",this.verticalAlign, "\',"], "");
+    }
+    
+    if (this.width != null) {
+        buffer.writeAll(["\"width\":",this.width, ","], "");
     }
   }
+
 
 }

@@ -12,32 +12,44 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * SeriesBuilderReaderObject 
+ * SeriesBuilderReaderObject
  */
 class SeriesBuilderReaderObject extends OptionFragment {
-  SeriesBuilderReaderObject( ) : super();
-  // NOTE: columnIndex skipped - type number is ignored in gen 
 
-  // NOTE: configName skipped - type string is ignored in gen 
+  SeriesBuilderReaderObject({
+    this.columnIndex = null,
+    this.configName = null
+  });
 
+  double? columnIndex;
+    
+  String? configName;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of columnIndex (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of configName (type string is ignored) ignore type: true
+    
+    if (this.columnIndex != null) {
+        buffer.writeAll(["\"columnIndex\":",this.columnIndex, ","], "");
+    }
+    
+    if (this.configName != null) {
+        buffer.writeAll(["\"configName\":\'",this.configName, "\',"], "");
+    }
   }
+
 
 }

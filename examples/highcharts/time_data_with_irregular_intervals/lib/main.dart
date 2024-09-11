@@ -4,7 +4,7 @@
  */
 
 import 'package:flutter/material.dart';
-import 'package:highcharts_flutter/Highcharts.dart';
+import 'package:highcharts_flutter/highcharts.dart';
 import 'package:highcharts_flutter/types/ChartOptions.dart';
 import 'package:highcharts_flutter/types/TitleOptions.dart';
 import 'package:highcharts_flutter/types/SubtitleOptions.dart';
@@ -91,7 +91,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         enabled: true, 
                         radius: 2.5, 
                         lineWidth: 1, 
-                    //   lineColor: String,
+                      lineColor: '',
                     ),
                   ),
                 ),

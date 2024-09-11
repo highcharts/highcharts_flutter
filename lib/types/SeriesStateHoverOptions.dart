@@ -12,113 +12,193 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'SeriesStateHoverHaloOptions.dart';
 import 'OptionFragment.dart';
 
+
 /** 
- * SeriesStateHoverOptions 
+ * SeriesStateHoverOptions
  */
 class SeriesStateHoverOptions extends OptionFragment {
-  SeriesStateHoverOptions( ) : super();
-  // NOTE: brightness skipped - type number is ignored in gen 
 
-  // NOTE: borderColor skipped - type string is ignored in gen 
+  SeriesStateHoverOptions({
+    this.borderColor = null,
+    this.borderDashStyle = null,
+    this.borderRadius = null,
+    this.borderWidth = null,
+    this.brightness = null,
+    this.color = null,
+    this.connectorWidthPlus = null,
+    this.dashStyle = null,
+    this.enabled = null,
+    this.fillColor = null,
+    this.halo = null,
+    this.lineColor = null,
+    this.lineWidth = null,
+    this.lineWidthPlus = null,
+    this.opacity = null,
+    this.radius = null,
+    this.radiusPlus = null,
+    this.shape = null
+  });
 
-  // NOTE: borderDashStyle skipped - type string is ignored in gen 
+  double? brightness;
+    
+  String? borderColor;
+    
+  String? borderDashStyle;
+    
+  double? borderRadius;
+    
+  double? borderWidth;
+    
+  String? color;
+    
+  String? dashStyle;
+    
+  String? fillColor;
+    
+  String? lineColor;
+    
+  String? shape;
+    
+  // NOTE: animation skipped - type Generic is ignored in gen 
 
-  // NOTE: borderRadius skipped - type number is ignored in gen 
-
-  // NOTE: borderWidth skipped - type number is ignored in gen 
-
-  // NOTE: color skipped - type string is ignored in gen 
-
-  // NOTE: dashStyle skipped - type string is ignored in gen 
-
-  // NOTE: enabled skipped - type boolean is ignored in gen 
-
-  // NOTE: lineWidth skipped - type number is ignored in gen 
-
-  // NOTE: lineWidthPlus skipped - type number is ignored in gen 
-
-  // NOTE: radius skipped - type number is ignored in gen 
-
-  // NOTE: radiusPlus skipped - type number is ignored in gen 
-
-  // NOTE: opacity skipped - type number is ignored in gen 
-
-  // NOTE: fillColor skipped - type string is ignored in gen 
-
-  // NOTE: lineColor skipped - type string is ignored in gen 
-
-  // NOTE: shape skipped - type string is ignored in gen 
-
-  // NOTE: connectorWidthPlus skipped - type number is ignored in gen 
-
+  bool? enabled;
+    
+  SeriesStateHoverHaloOptions? halo;
+    
+  double? lineWidth;
+    
+  double? lineWidthPlus;
+    
+  double? radius;
+    
+  double? radiusPlus;
+    
+  double? opacity;
+    
+  double? connectorWidthPlus;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of brightness (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of borderColor (type string is ignored) ignore type: true
+    
+    if (this.brightness != null) {
+        buffer.writeAll(["\"brightness\":",this.brightness, ","], "");
+    }
+    
+    if (this.borderColor != null) {
+        buffer.writeAll(["\"borderColor\":\'",this.borderColor, "\',"], "");
+    }
+    
+    if (this.borderDashStyle != null) {
+        buffer.writeAll(["\"borderDashStyle\":\'",this.borderDashStyle, "\',"], "");
+    }
+    
+    if (this.borderRadius != null) {
+        buffer.writeAll(["\"borderRadius\":",this.borderRadius, ","], "");
+    }
+    
+    if (this.borderWidth != null) {
+        buffer.writeAll(["\"borderWidth\":",this.borderWidth, ","], "");
+    }
+    
+    if (this.brightness != null) {
+        buffer.writeAll(["\"brightness\":",this.brightness, ","], "");
+    }
+    
+    if (this.color != null) {
+        buffer.writeAll(["\"color\":\'",this.color, "\',"], "");
+    }
+    
+    if (this.dashStyle != null) {
+        buffer.writeAll(["\"dashStyle\":\'",this.dashStyle, "\',"], "");
+    }
+    
+    if (this.fillColor != null) {
+        buffer.writeAll(["\"fillColor\":\'",this.fillColor, "\',"], "");
+    }
+    
+    if (this.lineColor != null) {
+        buffer.writeAll(["\"lineColor\":\'",this.lineColor, "\',"], "");
+    }
+    
+    if (this.shape != null) {
+        buffer.writeAll(["\"shape\":\'",this.shape, "\',"], "");
+    }
+    // NOTE: skip serialization of animation (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of borderDashStyle (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of borderRadius (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of borderWidth (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of brightness (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of color (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of dashStyle (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of animation (type Generic is ignored) ignore type: true
-
-    // NOTE: skip serialization of brightness (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of enabled (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of halo (type SeriesStateHoverHaloOptions is ignored) ignore type: true
-
-    // NOTE: skip serialization of lineWidth (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of lineWidthPlus (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of radius (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of radiusPlus (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of opacity (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of brightness (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of color (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of fillColor (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of lineColor (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of shape (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of brightness (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of connectorWidthPlus (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of connectorWidthPlus (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of borderColor (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of color (type string is ignored) ignore type: true
+    
+    if (this.brightness != null) {
+        buffer.writeAll(["\"brightness\":",this.brightness, ","], "");
+    }
+    
+    if (this.enabled != null) {
+        buffer.writeAll(["\"enabled\":",this.enabled, ","], "");
+    }
+    
+    if (this.halo != null) {
+        buffer.writeAll(["\"halo\":",this.halo?.toJSON(), ","], "");
+    }
+    
+    if (this.lineWidth != null) {
+        buffer.writeAll(["\"lineWidth\":",this.lineWidth, ","], "");
+    }
+    
+    if (this.lineWidthPlus != null) {
+        buffer.writeAll(["\"lineWidthPlus\":",this.lineWidthPlus, ","], "");
+    }
+    
+    if (this.radius != null) {
+        buffer.writeAll(["\"radius\":",this.radius, ","], "");
+    }
+    
+    if (this.radiusPlus != null) {
+        buffer.writeAll(["\"radiusPlus\":",this.radiusPlus, ","], "");
+    }
+    
+    if (this.opacity != null) {
+        buffer.writeAll(["\"opacity\":",this.opacity, ","], "");
+    }
+    
+    if (this.brightness != null) {
+        buffer.writeAll(["\"brightness\":",this.brightness, ","], "");
+    }
+    
+    if (this.color != null) {
+        buffer.writeAll(["\"color\":\'",this.color, "\',"], "");
+    }
+    
+    if (this.brightness != null) {
+        buffer.writeAll(["\"brightness\":",this.brightness, ","], "");
+    }
+    
+    if (this.connectorWidthPlus != null) {
+        buffer.writeAll(["\"connectorWidthPlus\":",this.connectorWidthPlus, ","], "");
+    }
+    
+    if (this.connectorWidthPlus != null) {
+        buffer.writeAll(["\"connectorWidthPlus\":",this.connectorWidthPlus, ","], "");
+    }
+    
+    if (this.borderColor != null) {
+        buffer.writeAll(["\"borderColor\":\'",this.borderColor, "\',"], "");
+    }
+    
+    if (this.color != null) {
+        buffer.writeAll(["\"color\":\'",this.color, "\',"], "");
+    }
   }
+
 
 }

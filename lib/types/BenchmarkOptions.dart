@@ -12,28 +12,37 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * BenchmarkOptions 
+ * BenchmarkOptions
  */
 class BenchmarkOptions extends OptionFragment {
-  BenchmarkOptions( ) : super();
-  // NOTE: iterations skipped - type number is ignored in gen 
 
+  BenchmarkOptions({
+    this.iterations = null
+  });
+
+  double? iterations;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of iterations (type number is ignored) ignore type: true
+
+    
+    if (this.iterations != null) {
+        buffer.writeAll(["\"iterations\":",this.iterations, ","], "");
+    }
   }
+
 
 }

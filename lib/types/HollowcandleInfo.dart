@@ -12,32 +12,44 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * HollowcandleInfo 
+ * HollowcandleInfo
  */
 class HollowcandleInfo extends OptionFragment {
-  HollowcandleInfo( ) : super();
-  // NOTE: isBullish skipped - type boolean is ignored in gen 
 
-  // NOTE: trendDirection skipped - type string is ignored in gen 
+  HollowcandleInfo({
+    this.isBullish = null,
+    this.trendDirection = null
+  });
 
+  bool? isBullish;
+    
+  String? trendDirection;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of isBullish (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of trendDirection (type string is ignored) ignore type: true
+    
+    if (this.isBullish != null) {
+        buffer.writeAll(["\"isBullish\":",this.isBullish, ","], "");
+    }
+    
+    if (this.trendDirection != null) {
+        buffer.writeAll(["\"trendDirection\":\'",this.trendDirection, "\',"], "");
+    }
   }
+
 
 }

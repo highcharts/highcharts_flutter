@@ -12,40 +12,58 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * LabelIntersectBoxObject 
+ * LabelIntersectBoxObject
  */
 class LabelIntersectBoxObject extends OptionFragment {
-  LabelIntersectBoxObject( ) : super();
-  // NOTE: bottom skipped - type number is ignored in gen 
 
-  // NOTE: left skipped - type number is ignored in gen 
+  LabelIntersectBoxObject({
+    this.bottom = null,
+    this.left = null,
+    this.right = null,
+    this.top = null
+  });
 
-  // NOTE: right skipped - type number is ignored in gen 
-
-  // NOTE: top skipped - type number is ignored in gen 
-
+  double? bottom;
+    
+  double? left;
+    
+  double? right;
+    
+  double? top;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of bottom (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of left (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of right (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of top (type number is ignored) ignore type: true
+    
+    if (this.bottom != null) {
+        buffer.writeAll(["\"bottom\":",this.bottom, ","], "");
+    }
+    
+    if (this.left != null) {
+        buffer.writeAll(["\"left\":",this.left, ","], "");
+    }
+    
+    if (this.right != null) {
+        buffer.writeAll(["\"right\":",this.right, ","], "");
+    }
+    
+    if (this.top != null) {
+        buffer.writeAll(["\"top\":",this.top, ","], "");
+    }
   }
+
 
 }

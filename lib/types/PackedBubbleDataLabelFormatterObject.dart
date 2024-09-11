@@ -12,28 +12,37 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'PackedBubblePoint.dart';
 import 'OptionFragment.dart';
 
 /** 
- * PackedBubbleDataLabelFormatterObject 
+ * PackedBubbleDataLabelFormatterObject
  */
 class PackedBubbleDataLabelFormatterObject extends OptionFragment {
-  PackedBubbleDataLabelFormatterObject( ) : super();
-  
+
+  PackedBubbleDataLabelFormatterObject({
+    this.point = null
+  });
+
+  PackedBubblePoint? point;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of point (type PackedBubblePoint is ignored) ignore type: true
+
+    
+    if (this.point != null) {
+        buffer.writeAll(["\"point\":",this.point?.toJSON(), ","], "");
+    }
   }
+
 
 }

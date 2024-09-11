@@ -12,29 +12,40 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'Point.dart';
 import 'WGLNode.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * WGLPoint 
+ * WGLPoint
  */
 class WGLPoint extends Point {
-  WGLPoint( ) : super();
-  
+
+  WGLPoint({
+    super.hcEvents = null,
+    this.node = null,
+    super.options = null
+  });
+
+  WGLNode? node;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of node (type WGLNode is ignored) ignore type: true
+
+    
+    if (this.node != null) {
+        buffer.writeAll(["\"node\":",this.node?.toJSON(), ","], "");
+    }
   }
+
 
 }

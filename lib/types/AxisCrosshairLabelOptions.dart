@@ -12,18 +12,19 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'CSSObject.dart';
 import 'OptionFragment.dart';
 
+
 /** 
- * AxisCrosshairLabelOptions 
+ * AxisCrosshairLabelOptions
  */
 class AxisCrosshairLabelOptions extends OptionFragment {
-  AxisCrosshairLabelOptions( {
+
+  AxisCrosshairLabelOptions({
     this.align = null,
     this.backgroundColor = null,
     this.borderColor = null,
@@ -34,74 +35,124 @@ class AxisCrosshairLabelOptions extends OptionFragment {
     this.padding = null,
     this.shape = null,
     this.style = null
-  }) : super();
+  });
+
+  /**
+   * Alignment of the label compared to the axis. Defaults to `"left"` for
+   * right-side axes, `"right"` for left-side axes and `"center"` for
+   * horizontal axes.  
+   */
   String? align;
     
+  /**
+   * The background color for the label. Defaults to the related series
+   * color, or `#666666` if that is not available.  
+   */
   String? backgroundColor;
     
+  /**
+   * The border color for the crosshair label  
+   */
   String? borderColor;
     
+  /**
+   * The border corner radius of the crosshair label. 
+   * 
+   * Defaults to '3'. 
+   */
   double? borderRadius;
     
+  /**
+   * The border width for the crosshair label. 
+   * 
+   * Defaults to '0'. 
+   */
   double? borderWidth;
     
+  /**
+   * Flag to enable crosshair's label. 
+   * 
+   * Defaults to 'false'. 
+   */
   bool? enabled;
     
+  /**
+   * A format string for the crosshair label. Defaults to `{value}` for
+   * numeric axes and `{value:%b %d, %Y}` for datetime axes.  
+   */
   String? format;
     
+  /**
+   * Padding inside the crosshair label. 
+   * 
+   * Defaults to '8'. 
+   */
   double? padding;
     
+  /**
+   * The shape to use for the label box. 
+   * 
+   * Defaults to 'callout'. 
+   */
   String? shape;
     
+  /**
+   * Text styles for the crosshair label. 
+   * 
+   * Defaults to '{"color": "white", "fontWeight": "normal", "fontSize": "11px", "textAlign": "center"}'. 
+   */
   CSSObject? style;
     
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    if (this.align != null) {  
-      buffer.writeAll(["\"align\":\'",this.align, "\',"], "");
-    }
 
-    if (this.backgroundColor != null) {  
-      buffer.writeAll(["\"backgroundColor\":\'",this.backgroundColor, "\',"], "");
+    
+    if (this.align != null) {
+        buffer.writeAll(["\"align\":\'",this.align, "\',"], "");
     }
-
-    if (this.borderColor != null) {  
-      buffer.writeAll(["\"borderColor\":\'",this.borderColor, "\',"], "");
+    
+    if (this.backgroundColor != null) {
+        buffer.writeAll(["\"backgroundColor\":\'",this.backgroundColor, "\',"], "");
     }
-
-    if (this.borderRadius != null) {  
-      buffer.writeAll(["\"borderRadius\":",this.borderRadius, ","], "");
+    
+    if (this.borderColor != null) {
+        buffer.writeAll(["\"borderColor\":\'",this.borderColor, "\',"], "");
     }
-
-    if (this.borderWidth != null) {  
-      buffer.writeAll(["\"borderWidth\":",this.borderWidth, ","], "");
+    
+    if (this.borderRadius != null) {
+        buffer.writeAll(["\"borderRadius\":",this.borderRadius, ","], "");
     }
-
-    if (this.enabled != null) {  
-      buffer.writeAll(["\"enabled\":",this.enabled, ","], "");
+    
+    if (this.borderWidth != null) {
+        buffer.writeAll(["\"borderWidth\":",this.borderWidth, ","], "");
     }
-
-    if (this.format != null) {  
-      buffer.writeAll(["\"format\":\'",this.format, "\',"], "");
+    
+    if (this.enabled != null) {
+        buffer.writeAll(["\"enabled\":",this.enabled, ","], "");
     }
-
-    if (this.padding != null) {  
-      buffer.writeAll(["\"padding\":",this.padding, ","], "");
+    
+    if (this.format != null) {
+        buffer.writeAll(["\"format\":\'",this.format, "\',"], "");
     }
-
-    if (this.shape != null) {  
-      buffer.writeAll(["\"shape\":\'",this.shape, "\',"], "");
+    
+    if (this.padding != null) {
+        buffer.writeAll(["\"padding\":",this.padding, ","], "");
     }
-
-    if (this.style != null) {  
-      buffer.writeAll(["\"style\":",this.style?.toJSON(), ","], "");
+    
+    if (this.shape != null) {
+        buffer.writeAll(["\"shape\":\'",this.shape, "\',"], "");
+    }
+    
+    if (this.style != null) {
+        buffer.writeAll(["\"style\":",this.style?.toJSON(), ","], "");
     }
   }
+
 
 }

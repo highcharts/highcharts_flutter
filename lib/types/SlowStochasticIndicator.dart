@@ -12,30 +12,41 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * SlowStochasticIndicator 
+ * SlowStochasticIndicator
  */
 class SlowStochasticIndicator extends OptionFragment {
-  SlowStochasticIndicator( ) : super();
-  // NOTE: nameBase skipped - type string is ignored in gen 
 
+  SlowStochasticIndicator({
+    this.nameBase = null
+  });
+
+  // NOTE: pointClass skipped - type typeof SlowStochasticPoint is ignored in gen 
+
+  String? nameBase;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of pointClass (type typeof SlowStochasticPoint is ignored) ignore type: true
 
-    // NOTE: skip serialization of nameBase (type string is ignored) ignore type: true
+    // NOTE: skip serialization of pointClass (type typeof SlowStochasticPoint ignored, skipped: true)
+
+    
+    if (this.nameBase != null) {
+        buffer.writeAll(["\"nameBase\":\'",this.nameBase, "\',"], "");
+    }
   }
+
 
 }

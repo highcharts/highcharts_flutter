@@ -12,32 +12,44 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * NelderMeadCentroidObject 
+ * NelderMeadCentroidObject
  */
 class NelderMeadCentroidObject extends OptionFragment {
-  NelderMeadCentroidObject( ) : super();
-  // NOTE: i skipped - type number is ignored in gen 
 
-  // NOTE: sum skipped - type number is ignored in gen 
+  NelderMeadCentroidObject({
+    this.i = null,
+    this.sum = null
+  });
 
+  double? i;
+    
+  double? sum;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of i (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of sum (type number is ignored) ignore type: true
+    
+    if (this.i != null) {
+        buffer.writeAll(["\"i\":",this.i, ","], "");
+    }
+    
+    if (this.sum != null) {
+        buffer.writeAll(["\"sum\":",this.sum, ","], "");
+    }
   }
+
 
 }

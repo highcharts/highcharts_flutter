@@ -12,30 +12,44 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'PositionObject.dart';
 import 'OptionFragment.dart';
 
 /** 
- * LabelConnectorPositionObject 
+ * LabelConnectorPositionObject
  */
 class LabelConnectorPositionObject extends OptionFragment {
-  LabelConnectorPositionObject( ) : super();
-  
+
+  LabelConnectorPositionObject({
+    this.breakAt = null,
+    this.touchingSliceAt = null
+  });
+
+  PositionObject? breakAt;
+    
+  PositionObject? touchingSliceAt;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of breakAt (type PositionObject is ignored) ignore type: true
 
-    // NOTE: skip serialization of touchingSliceAt (type PositionObject is ignored) ignore type: true
+    
+    if (this.breakAt != null) {
+        buffer.writeAll(["\"breakAt\":",this.breakAt?.toJSON(), ","], "");
+    }
+    
+    if (this.touchingSliceAt != null) {
+        buffer.writeAll(["\"touchingSliceAt\":",this.touchingSliceAt?.toJSON(), ","], "");
+    }
   }
+
 
 }

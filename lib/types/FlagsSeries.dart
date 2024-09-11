@@ -12,10 +12,9 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'FlagsSeriesOptions.dart';
 import 'Series.dart';
 import 'PointOptions.dart';
@@ -34,8 +33,7 @@ class FlagsSeries extends Series {
     this.data = null
   });
 
-  
-  @override
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
@@ -56,16 +54,13 @@ class FlagsSeries extends Series {
         if (point.length > 1) {
           seriesData.writeAll(["["], "");
         }
-
-          for (var sub in point) {
-            if (sub is String) {
-              seriesData.writeAll(["\"", sub, "\","], "");
-            } else {
-              seriesData.writeAll([sub], ",");
-            }
-
+        for (var sub in point) {
+          if (sub is String) {
+            seriesData.writeAll(["\"", sub, "\","], "");
+          } else {
+            seriesData.writeAll([sub], ",");
           }
-
+        }
         if (point.length > 1) {
           seriesData.writeAll(["],"], "");
         } else {
@@ -92,67 +87,81 @@ class FlagsSeries extends Series {
 
 
     
-    if (this.options?.allowOverlapX != null) {  
-      buffer.writeAll(["\"allowOverlapX\":",this.options?.allowOverlapX, ","], "");
-    }
 
-    if (this.options?.fillColor != null) {  
-      buffer.writeAll(["\"fillColor\":\'",this.options?.fillColor, "\',"], "");
+    
+    if (this.options?.allowOverlapX != null) {
+        buffer.writeAll(["\"allowOverlapX\":",this.options?.allowOverlapX, ","], "");
     }
+    // NOTE: skip serialization of borderRadius (type number ignored, skipped: false)
 
-    if (this.options?.height != null) {  
-      buffer.writeAll(["\"height\":",this.options?.height, ","], "");
+    
+    if (this.options?.fillColor != null) {
+        buffer.writeAll(["\"fillColor\":\'",this.options?.fillColor, "\',"], "");
     }
-
-    if (this.options?.lineColor != null) {  
-      buffer.writeAll(["\"lineColor\":\'",this.options?.lineColor, "\',"], "");
+    
+    if (this.options?.height != null) {
+        buffer.writeAll(["\"height\":",this.options?.height, ","], "");
     }
-
-    if (this.options?.lineWidth != null) {  
-      buffer.writeAll(["\"lineWidth\":",this.options?.lineWidth, ","], "");
+    
+    if (this.options?.lineColor != null) {
+        buffer.writeAll(["\"lineColor\":\'",this.options?.lineColor, "\',"], "");
     }
-
-    if (this.options?.onKey != null) {  
-      buffer.writeAll(["\"onKey\":\'",this.options?.onKey, "\',"], "");
+    
+    if (this.options?.lineWidth != null) {
+        buffer.writeAll(["\"lineWidth\":",this.options?.lineWidth, ","], "");
     }
-
-    if (this.options?.onSeries != null) {  
-      buffer.writeAll(["\"onSeries\":\'",this.options?.onSeries, "\',"], "");
+    
+    if (this.options?.onKey != null) {
+        buffer.writeAll(["\"onKey\":\'",this.options?.onKey, "\',"], "");
     }
-
-    if (this.options?.shape != null) {  
-      buffer.writeAll(["\"shape\":\'",this.options?.shape, "\',"], "");
+    
+    if (this.options?.onSeries != null) {
+        buffer.writeAll(["\"onSeries\":\'",this.options?.onSeries, "\',"], "");
     }
-
-    if (this.options?.stackDistance != null) {  
-      buffer.writeAll(["\"stackDistance\":",this.options?.stackDistance, ","], "");
+    
+    if (this.options?.shape != null) {
+        buffer.writeAll(["\"shape\":\'",this.options?.shape, "\',"], "");
     }
-
-    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
-
-    if (this.options?.style != null) {  
-      buffer.writeAll(["\"style\":",this.options?.style?.toJSON(), ","], "");
+    
+    if (this.options?.stackDistance != null) {
+        buffer.writeAll(["\"stackDistance\":",this.options?.stackDistance, ","], "");
     }
+    // NOTE: skip serialization of states (type Generic ignored, skipped: true)
 
-    if (this.options?.textAlign != null) {  
-      buffer.writeAll(["\"textAlign\":\'",this.options?.textAlign, "\',"], "");
+    
+    if (this.options?.style != null) {
+        buffer.writeAll(["\"style\":",this.options?.style?.toJSON(), ","], "");
     }
+    
+    if (this.options?.textAlign != null) {
+        buffer.writeAll(["\"textAlign\":\'",this.options?.textAlign, "\',"], "");
+    }
+    
+    if (this.options?.title != null) {
+        buffer.writeAll(["\"title\":\'",this.options?.title, "\',"], "");
+    }
+    
+    if (this.options?.useHTML != null) {
+        buffer.writeAll(["\"useHTML\":",this.options?.useHTML, ","], "");
+    }
+    
+    if (this.options?.width != null) {
+        buffer.writeAll(["\"width\":",this.options?.width, ","], "");
+    }
+    
+    if (this.options?.y != null) {
+        buffer.writeAll(["\"y\":",this.options?.y, ","], "");
+    }
+    
+    if (this.options?.data != null) {
+        buffer.writeAll(["\"data\":",this.options?.data, ","], "");
+    }
+    
+    if (this.options?.threshold != null) {
+        buffer.writeAll(["\"threshold\":",this.options?.threshold, ","], "");
+    }
+    // NOTE: skip serialization of tooltip (type Generic ignored, skipped: true)
 
-    if (this.options?.title != null) {  
-      buffer.writeAll(["\"title\":\'",this.options?.title, "\',"], "");
-    }
-
-    if (this.options?.useHTML != null) {  
-      buffer.writeAll(["\"useHTML\":",this.options?.useHTML, ","], "");
-    }
-
-    if (this.options?.width != null) {  
-      buffer.writeAll(["\"width\":",this.options?.width, ","], "");
-    }
-
-    if (this.options?.y != null) {  
-      buffer.writeAll(["\"y\":",this.options?.y, ","], "");
-    }
   }
 
 }

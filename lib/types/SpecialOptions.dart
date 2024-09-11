@@ -12,27 +12,37 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * SpecialOptions 
+ * SpecialOptions
  */
 class SpecialOptions extends OptionFragment {
-  SpecialOptions( ) : super();
-  
+
+  SpecialOptions({
+    this.decimalRegex = null
+  });
+
+  RegExp? decimalRegex;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of decimalRegex (type RegExp is ignored) ignore type: true
+
+    
+    if (this.decimalRegex != null) {
+        buffer.writeAll(["\"decimalRegex\":",this.decimalRegex, ","], "");
+    }
   }
+
 
 }

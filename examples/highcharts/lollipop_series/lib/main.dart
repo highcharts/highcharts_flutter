@@ -4,7 +4,7 @@
  */
 
 import 'package:flutter/material.dart';
-import 'package:highcharts_flutter/Highcharts.dart';
+import 'package:highcharts_flutter/highcharts.dart';
 import 'package:highcharts_flutter/types/ChartOptions.dart';
 import 'package:highcharts_flutter/types/AccessibilityOptions.dart';
 import 'package:highcharts_flutter/types/AccessibilityPointOptions.dart';

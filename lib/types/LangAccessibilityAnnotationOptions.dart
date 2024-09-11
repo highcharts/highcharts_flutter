@@ -12,40 +12,58 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * LangAccessibilityAnnotationOptions 
+ * LangAccessibilityAnnotationOptions
  */
 class LangAccessibilityAnnotationOptions extends OptionFragment {
-  LangAccessibilityAnnotationOptions( ) : super();
-  // NOTE: heading skipped - type string is ignored in gen 
 
-  // NOTE: descriptionSinglePoint skipped - type string is ignored in gen 
+  LangAccessibilityAnnotationOptions({
+    this.descriptionMultiplePoints = null,
+    this.descriptionNoPoints = null,
+    this.descriptionSinglePoint = null,
+    this.heading = null
+  });
 
-  // NOTE: descriptionMultiplePoints skipped - type string is ignored in gen 
-
-  // NOTE: descriptionNoPoints skipped - type string is ignored in gen 
-
+  String? heading;
+    
+  String? descriptionSinglePoint;
+    
+  String? descriptionMultiplePoints;
+    
+  String? descriptionNoPoints;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of heading (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of descriptionSinglePoint (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of descriptionMultiplePoints (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of descriptionNoPoints (type string is ignored) ignore type: true
+    
+    if (this.heading != null) {
+        buffer.writeAll(["\"heading\":\'",this.heading, "\',"], "");
+    }
+    
+    if (this.descriptionSinglePoint != null) {
+        buffer.writeAll(["\"descriptionSinglePoint\":\'",this.descriptionSinglePoint, "\',"], "");
+    }
+    
+    if (this.descriptionMultiplePoints != null) {
+        buffer.writeAll(["\"descriptionMultiplePoints\":\'",this.descriptionMultiplePoints, "\',"], "");
+    }
+    
+    if (this.descriptionNoPoints != null) {
+        buffer.writeAll(["\"descriptionNoPoints\":\'",this.descriptionNoPoints, "\',"], "");
+    }
   }
+
 
 }

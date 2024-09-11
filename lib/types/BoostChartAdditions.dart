@@ -12,32 +12,51 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
-import 'BoostTargetAdditions.dart';
+ */
 import 'SVGElement.dart';
 import 'OptionFragment.dart';
 
 /** 
- * BoostChartAdditions 
+ * BoostChartAdditions
  */
-class BoostChartAdditions extends BoostTargetAdditions {
-  BoostChartAdditions( ) : super();
-  // NOTE: forceChartBoost skipped - type boolean is ignored in gen 
+class BoostChartAdditions extends OptionFragment {
 
+  BoostChartAdditions({
+    this.forceChartBoost = null,
+    this.lineWidthFilter = null,
+    this.markerGroup = null
+  });
+
+  bool? forceChartBoost;
+    
+  SVGElement? markerGroup;
+    
+  SVGElement? lineWidthFilter;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of forceChartBoost (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of markerGroup (type SVGElement is ignored) ignore type: true
+    
+    if (this.forceChartBoost != null) {
+        buffer.writeAll(["\"forceChartBoost\":",this.forceChartBoost, ","], "");
+    }
+    
+    if (this.markerGroup != null) {
+        buffer.writeAll(["\"markerGroup\":",this.markerGroup?.toJSON(), ","], "");
+    }
+    
+    if (this.lineWidthFilter != null) {
+        buffer.writeAll(["\"lineWidthFilter\":",this.lineWidthFilter?.toJSON(), ","], "");
+    }
   }
+
 
 }

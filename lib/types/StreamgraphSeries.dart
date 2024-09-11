@@ -12,10 +12,9 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'StreamgraphSeriesOptions.dart';
 import 'Series.dart';
 import 'PointOptions.dart';
@@ -34,8 +33,7 @@ class StreamgraphSeries extends Series {
     this.data = null
   });
 
-  
-  @override
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
@@ -56,16 +54,13 @@ class StreamgraphSeries extends Series {
         if (point.length > 1) {
           seriesData.writeAll(["["], "");
         }
-
-          for (var sub in point) {
-            if (sub is String) {
-              seriesData.writeAll(["\"", sub, "\","], "");
-            } else {
-              seriesData.writeAll([sub], ",");
-            }
-
+        for (var sub in point) {
+          if (sub is String) {
+            seriesData.writeAll(["\"", sub, "\","], "");
+          } else {
+            seriesData.writeAll([sub], ",");
           }
-
+        }
         if (point.length > 1) {
           seriesData.writeAll(["],"], "");
         } else {
@@ -92,11 +87,37 @@ class StreamgraphSeries extends Series {
 
 
     
-    if (this.options?.fillOpacity != null) {  
-      buffer.writeAll(["\"fillOpacity\":",this.options?.fillOpacity, ","], "");
-    }
 
-    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
+    
+    if (this.options?.color != null) {
+        buffer.writeAll(["\"color\":\'",this.options?.color, "\',"], "");
+    }
+    
+    if (this.options?.data != null) {
+        buffer.writeAll(["\"data\":",this.options?.data, ","], "");
+    }
+    
+    if (this.options?.fillColor != null) {
+        buffer.writeAll(["\"fillColor\":\'",this.options?.fillColor, "\',"], "");
+    }
+    
+    if (this.options?.fillOpacity != null) {
+        buffer.writeAll(["\"fillOpacity\":",this.options?.fillOpacity, ","], "");
+    }
+    
+    if (this.options?.stacking != null) {
+        buffer.writeAll(["\"stacking\":\'",this.options?.stacking, "\',"], "");
+    }
+    // NOTE: skip serialization of states (type Generic ignored, skipped: true)
+
+    
+    if (this.options?.marker != null) {
+        buffer.writeAll(["\"marker\":",this.options?.marker?.toJSON(), ","], "");
+    }
+    
+    if (this.options?.lineWidth != null) {
+        buffer.writeAll(["\"lineWidth\":",this.options?.lineWidth, ","], "");
+    }
   }
 
 }

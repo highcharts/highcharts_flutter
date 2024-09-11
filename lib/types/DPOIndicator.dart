@@ -12,28 +12,37 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * DPOIndicator 
+ * DPOIndicator
  */
 class DPOIndicator extends OptionFragment {
-  DPOIndicator( ) : super();
-  // NOTE: nameBase skipped - type string is ignored in gen 
 
+  DPOIndicator({
+    this.nameBase = null
+  });
+
+  String? nameBase;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of nameBase (type string is ignored) ignore type: true
+
+    
+    if (this.nameBase != null) {
+        buffer.writeAll(["\"nameBase\":\'",this.nameBase, "\',"], "");
+    }
   }
+
 
 }

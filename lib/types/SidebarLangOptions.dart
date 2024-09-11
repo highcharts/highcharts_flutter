@@ -12,44 +12,65 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * SidebarLangOptions 
+ * SidebarLangOptions
  */
 class SidebarLangOptions extends OptionFragment {
-  SidebarLangOptions( ) : super();
-  // NOTE: HTML skipped - type string is ignored in gen 
 
-  // NOTE: layout skipped - type string is ignored in gen 
+  SidebarLangOptions({
+    this.DataGrid = null,
+    this.Highcharts = null,
+    this.HTML = null,
+    this.KPI = null,
+    this.row = null
+  });
 
-  // NOTE: Highcharts skipped - type string is ignored in gen 
-
-  // NOTE: DataGrid skipped - type string is ignored in gen 
-
-  // NOTE: KPI skipped - type string is ignored in gen 
-
+  String? HTML;
+    
+  String? row;
+    
+  String? Highcharts;
+    
+  String? DataGrid;
+    
+  String? KPI;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of HTML (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of layout (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of Highcharts (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of DataGrid (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of KPI (type string is ignored) ignore type: true
+    
+    if (this.HTML != null) {
+        buffer.writeAll(["\"HTML\":\'",this.HTML, "\',"], "");
+    }
+    
+    if (this.row != null) {
+        buffer.writeAll(["\"row\":\'",this.row, "\',"], "");
+    }
+    
+    if (this.Highcharts != null) {
+        buffer.writeAll(["\"Highcharts\":\'",this.Highcharts, "\',"], "");
+    }
+    
+    if (this.DataGrid != null) {
+        buffer.writeAll(["\"DataGrid\":\'",this.DataGrid, "\',"], "");
+    }
+    
+    if (this.KPI != null) {
+        buffer.writeAll(["\"KPI\":\'",this.KPI, "\',"], "");
+    }
   }
+
 
 }

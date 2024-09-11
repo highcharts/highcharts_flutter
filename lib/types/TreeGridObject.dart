@@ -12,37 +12,62 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'GridNode.dart';
 import 'TreeNode.dart';
 import 'OptionFragment.dart';
 
 /** 
- * TreeGridObject 
+ * TreeGridObject
  */
 class TreeGridObject extends OptionFragment {
-  TreeGridObject( ) : super();
-  
+
+  TreeGridObject({
+    this.categories = null,
+    this.collapsedNodes = null,
+    this.mapOfIdToNode = null,
+    this.mapOfPosToGridNode = null,
+    this.tree = null
+  });
+
+  String? categories;
+    
+  Map<String, String>? mapOfIdToNode;
+    
+  Map<String, String>? mapOfPosToGridNode;
+    
+  GridNode? collapsedNodes;
+    
+  TreeNode? tree;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of categories (type string[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of mapOfIdToNode (type Generic is ignored) ignore type: true
+    
+    if (this.categories != null) {
+        buffer.writeAll(["\"categories\":",this.categories, ","], "");
+    }
+    // NOTE: skip serialization of mapOfIdToNode (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of mapOfPosToGridNode (type Generic is ignored) ignore type: true
+    // NOTE: skip serialization of mapOfPosToGridNode (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of collapsedNodes (type GridNode[] is ignored) ignore type: true
-
-    // NOTE: skip serialization of tree (type TreeNode is ignored) ignore type: true
+    
+    if (this.collapsedNodes != null) {
+        buffer.writeAll(["\"collapsedNodes\":",this.collapsedNodes, ","], "");
+    }
+    
+    if (this.tree != null) {
+        buffer.writeAll(["\"tree\":",this.tree?.toJSON(), ","], "");
+    }
   }
+
 
 }

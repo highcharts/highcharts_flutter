@@ -12,10 +12,9 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'SankeySeriesOptions.dart';
 import 'Series.dart';
 import 'PointOptions.dart';
@@ -34,8 +33,7 @@ class SankeySeries extends Series {
     this.data = null
   });
 
-  
-  @override
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
@@ -56,16 +54,13 @@ class SankeySeries extends Series {
         if (point.length > 1) {
           seriesData.writeAll(["["], "");
         }
-
-          for (var sub in point) {
-            if (sub is String) {
-              seriesData.writeAll(["\"", sub, "\","], "");
-            } else {
-              seriesData.writeAll([sub], ",");
-            }
-
+        for (var sub in point) {
+          if (sub is String) {
+            seriesData.writeAll(["\"", sub, "\","], "");
+          } else {
+            seriesData.writeAll([sub], ",");
           }
-
+        }
         if (point.length > 1) {
           seriesData.writeAll(["],"], "");
         } else {
@@ -92,66 +87,104 @@ class SankeySeries extends Series {
 
 
     
-    if (this.options?.curveFactor != null) {  
-      buffer.writeAll(["\"curveFactor\":",this.options?.curveFactor, ","], "");
+
+    
+    if (this.options?.borderWidth != null) {
+        buffer.writeAll(["\"borderWidth\":",this.options?.borderWidth, ","], "");
     }
+    
+    if (this.options?.colorByPoint != null) {
+        buffer.writeAll(["\"colorByPoint\":",this.options?.colorByPoint, ","], "");
+    }
+    
+    if (this.options?.curveFactor != null) {
+        buffer.writeAll(["\"curveFactor\":",this.options?.curveFactor, ","], "");
+    }
+    
+    if (this.options?.data != null) {
+        buffer.writeAll(["\"data\":",this.options?.data, ","], "");
+    }
+    // NOTE: skip serialization of dataLabels (type SankeyDataLabelOptions ignored, skipped: false)
 
-    // NOTE: skip serialization of dataLabels (type SankeyDataLabelOptions is ignored) ignore type: false
-
-    // NOTE: skip serialization of height (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of inactiveOtherPoints (type boolean is ignored) ignore type: true
-
-    if (this.options?.levels != null) {  
-     StringBuffer arrData = StringBuffer();
-
+    
+    if (this.options?.height != null) {
+        buffer.writeAll(["\"height\":",this.options?.height, ","], "");
+    }
+    
+    if (this.options?.inactiveOtherPoints != null) {
+        buffer.writeAll(["\"inactiveOtherPoints\":",this.options?.inactiveOtherPoints, ","], "");
+    }
+    
+    if (this.options?.levels != null) {
+      StringBuffer arrData = StringBuffer();
       for (var item in this.options!.levels!) {
           arrData.write("{");
           item.toJSONInner(arrData);
           arrData.write("}");
       }
-      buffer.writeAll(["\"levels\": [", arrData , "],"], "");   
-        
+      buffer.writeAll(["\"levels\": [", arrData , "],"], "");
     }
-
-    // NOTE: skip serialization of linkColorMode (type string is ignored) ignore type: true
-
-    if (this.options?.linkOpacity != null) {  
-      buffer.writeAll(["\"linkOpacity\":",this.options?.linkOpacity, ","], "");
+    
+    if (this.options?.linkColorMode != null) {
+        buffer.writeAll(["\"linkColorMode\":\'",this.options?.linkColorMode, "\',"], "");
     }
-
-    // NOTE: skip serialization of mass (type undefined is ignored) ignore type: 1
-
-    if (this.options?.minLinkWidth != null) {  
-      buffer.writeAll(["\"minLinkWidth\":",this.options?.minLinkWidth, ","], "");
+    
+    if (this.options?.linkOpacity != null) {
+        buffer.writeAll(["\"linkOpacity\":",this.options?.linkOpacity, ","], "");
     }
+    // NOTE: skip serialization of mass (type undefined ignored, skipped: true)
 
-    // NOTE: skip serialization of nodeAlignment (type string is ignored) ignore type: true
-
-    if (this.options?.nodePadding != null) {  
-      buffer.writeAll(["\"nodePadding\":",this.options?.nodePadding, ","], "");
+    
+    if (this.options?.minLinkWidth != null) {
+        buffer.writeAll(["\"minLinkWidth\":",this.options?.minLinkWidth, ","], "");
     }
-
-    // NOTE: skip serialization of nodeDistance (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of nodes (type SankeySeriesNodeOptions[] is ignored) ignore type: true
-
-    if (this.options?.nodeWidth != null) {  
-      buffer.writeAll(["\"nodeWidth\":\'",this.options?.nodeWidth, "\',"], "");
+    
+    if (this.options?.nodeAlignment != null) {
+        buffer.writeAll(["\"nodeAlignment\":\'",this.options?.nodeAlignment, "\',"], "");
     }
+    
+    if (this.options?.nodeDistance != null) {
+        buffer.writeAll(["\"nodeDistance\":\'",this.options?.nodeDistance, "\',"], "");
+    }
+    
+    if (this.options?.nodePadding != null) {
+        buffer.writeAll(["\"nodePadding\":",this.options?.nodePadding, ","], "");
+    }
+    
+    if (this.options?.nodes != null) {
+        buffer.writeAll(["\"nodes\":",this.options?.nodes, ","], "");
+    }
+    
+    if (this.options?.nodeWidth != null) {
+        buffer.writeAll(["\"nodeWidth\":\'",this.options?.nodeWidth, "\',"], "");
+    }
+    
+    if (this.options?.opacity != null) {
+        buffer.writeAll(["\"opacity\":",this.options?.opacity, ","], "");
+    }
+    
+    if (this.options?.showInLegend != null) {
+        buffer.writeAll(["\"showInLegend\":",this.options?.showInLegend, ","], "");
+    }
+    // NOTE: skip serialization of states (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
+    // NOTE: skip serialization of tooltip (type SankeySeriesTooltipOptions ignored, skipped: false)
 
-    // NOTE: skip serialization of tooltip (type SankeySeriesTooltipOptions is ignored) ignore type: false
-
-    // NOTE: skip serialization of width (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of linkColor (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of linkLineWidth (type number is ignored) ignore type: true
-
-    if (this.options?.link != null) {  
-      buffer.writeAll(["\"link\":",this.options?.link?.toJSON(), ","], "");
+    
+    if (this.options?.width != null) {
+        buffer.writeAll(["\"width\":",this.options?.width, ","], "");
+    }
+    
+    if (this.options?.linkColor != null) {
+        buffer.writeAll(["\"linkColor\":\'",this.options?.linkColor, "\',"], "");
+    }
+    
+    if (this.options?.linkLineWidth != null) {
+        buffer.writeAll(["\"linkLineWidth\":",this.options?.linkLineWidth, ","], "");
+    }
+    
+    if (this.options?.link != null) {
+        buffer.writeAll(["\"link\":",this.options?.link?.toJSON(), ","], "");
     }
   }
 

@@ -12,66 +12,120 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * Range 
+ * Range
  */
 class Range extends OptionFragment {
-  Range( ) : super();
-  // NOTE: firstRow skipped - type number is ignored in gen 
 
-  // NOTE: lastRow skipped - type number is ignored in gen 
+  Range({
+    this.beginColumn = null,
+    this.beginColumnRelative = null,
+    this.beginRow = null,
+    this.beginRowRelative = null,
+    this.columns = null,
+    this.endColumn = null,
+    this.endColumnRelative = null,
+    this.endRow = null,
+    this.endRowRelative = null,
+    this.firstRow = null,
+    this.lastRow = null,
+    this.state = null
+  });
 
-  // NOTE: state skipped - type string is ignored in gen 
+  // NOTE: type skipped - type "range" is ignored in gen 
 
-  // NOTE: beginColumn skipped - type number is ignored in gen 
-
-  // NOTE: beginRow skipped - type number is ignored in gen 
-
-  // NOTE: endColumn skipped - type number is ignored in gen 
-
-  // NOTE: endRow skipped - type number is ignored in gen 
-
+  String? columns;
+    
+  double? firstRow;
+    
+  double? lastRow;
+    
+  String? state;
+    
+  double? beginColumn;
+    
+  bool? beginColumnRelative;
+    
+  double? beginRow;
+    
+  bool? beginRowRelative;
+    
+  double? endColumn;
+    
+  bool? endColumnRelative;
+    
+  double? endRow;
+    
+  bool? endRowRelative;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of type (type "range" is ignored) ignore type: true
 
-    // NOTE: skip serialization of columns (type string[] is ignored) ignore type: true
+    // NOTE: skip serialization of type (type "range" ignored, skipped: true)
 
-    // NOTE: skip serialization of firstRow (type number is ignored) ignore type: true
+    
+    if (this.columns != null) {
+        buffer.writeAll(["\"columns\":",this.columns, ","], "");
+    }
+    
+    if (this.firstRow != null) {
+        buffer.writeAll(["\"firstRow\":",this.firstRow, ","], "");
+    }
+    
+    if (this.lastRow != null) {
+        buffer.writeAll(["\"lastRow\":",this.lastRow, ","], "");
+    }
+    
+    if (this.state != null) {
+        buffer.writeAll(["\"state\":\'",this.state, "\',"], "");
+    }
+    
+    if (this.beginColumn != null) {
+        buffer.writeAll(["\"beginColumn\":",this.beginColumn, ","], "");
+    }
+    
+    if (this.beginColumnRelative != null) {
+        buffer.writeAll(["\"beginColumnRelative\":",this.beginColumnRelative, ","], "");
+    }
+    
+    if (this.beginRow != null) {
+        buffer.writeAll(["\"beginRow\":",this.beginRow, ","], "");
+    }
+    
+    if (this.beginRowRelative != null) {
+        buffer.writeAll(["\"beginRowRelative\":",this.beginRowRelative, ","], "");
+    }
+    
+    if (this.endColumn != null) {
+        buffer.writeAll(["\"endColumn\":",this.endColumn, ","], "");
+    }
+    
+    if (this.endColumnRelative != null) {
+        buffer.writeAll(["\"endColumnRelative\":",this.endColumnRelative, ","], "");
+    }
+    
+    if (this.endRow != null) {
+        buffer.writeAll(["\"endRow\":",this.endRow, ","], "");
+    }
+    
+    if (this.endRowRelative != null) {
+        buffer.writeAll(["\"endRowRelative\":",this.endRowRelative, ","], "");
+    }
+    // NOTE: skip serialization of type (type "range" ignored, skipped: true)
 
-    // NOTE: skip serialization of lastRow (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of state (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of beginColumn (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of beginColumnRelative (type true is ignored) ignore type: 1
-
-    // NOTE: skip serialization of beginRow (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of beginRowRelative (type true is ignored) ignore type: 1
-
-    // NOTE: skip serialization of endColumn (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of endColumnRelative (type true is ignored) ignore type: 1
-
-    // NOTE: skip serialization of endRow (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of endRowRelative (type true is ignored) ignore type: 1
-
-    // NOTE: skip serialization of type (type "range" is ignored) ignore type: true
   }
+
 
 }

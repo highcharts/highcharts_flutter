@@ -12,28 +12,37 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'Options.dart';
 import 'OptionFragment.dart';
 
 /** 
- * Layout 
+ * Layout
  */
 class Layout extends OptionFragment {
-  Layout( ) : super();
-  
+
+  Layout({
+    this.options = null
+  });
+
+  Options? options;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of options (type Options is ignored) ignore type: true
+
+    
+    if (this.options != null) {
+        buffer.writeAll(["\"options\":",this.options?.toJSON(), ","], "");
+    }
   }
+
 
 }

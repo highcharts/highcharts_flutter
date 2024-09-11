@@ -12,41 +12,55 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'MapSeriesOptions.dart';
 import 'ProviderOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * TiledWebMapSeriesOptions 
+ * TiledWebMapSeriesOptions
  */
 class TiledWebMapSeriesOptions extends MapSeriesOptions {
-  TiledWebMapSeriesOptions( {
+
+  TiledWebMapSeriesOptions({
     super.affectsMapView = null,
+    super.colorKey = null,
+    super.data = null,
+    super.dataLabels = null,
+    super.legendSymbol = null,
+    super.linecap = null,
+    super.marker = null,
     super.nullColor = null,
     super.nullInteraction = null,
-    this.provider = null
-  }) : super();
+    this.provider = null,
+    super.turboThreshold = null
+  });
+
+  /**
+   * Provider options for the series.  
+   */
   ProviderOptions? provider;
     
   // NOTE: states skipped - type Generic is ignored in gen 
 
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    if (this.provider != null) {  
-      buffer.writeAll(["\"provider\":",this.provider?.toJSON(), ","], "");
-    }
 
-    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
+    
+    if (this.provider != null) {
+        buffer.writeAll(["\"provider\":",this.provider?.toJSON(), ","], "");
+    }
+    // NOTE: skip serialization of states (type Generic ignored, skipped: true)
+
   }
+
 
 }

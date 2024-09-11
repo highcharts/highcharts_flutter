@@ -12,61 +12,109 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'MarkerClusterSplitDataObject.dart';
 import 'Point.dart';
 import 'MarkerClusterZonesOptions.dart';
 import 'OptionFragment.dart';
 
 /** 
- * ClusterAndNoiseObject 
+ * ClusterAndNoiseObject
  */
 class ClusterAndNoiseObject extends OptionFragment {
-  ClusterAndNoiseObject( ) : super();
-  // NOTE: id skipped - type string is ignored in gen 
 
-  // NOTE: index skipped - type number is ignored in gen 
+  ClusterAndNoiseObject({
+    this.clusterZone = null,
+    this.clusterZoneClassName = null,
+    this.data = null,
+    this.id = null,
+    this.index = null,
+    this.point = null,
+    this.pointsInside = null,
+    this.pointsOutside = null,
+    this.stateId = null,
+    this.x = null,
+    this.y = null
+  });
 
-  // NOTE: stateId skipped - type string is ignored in gen 
-
-  // NOTE: x skipped - type number is ignored in gen 
-
-  // NOTE: y skipped - type number is ignored in gen 
-
-  // NOTE: clusterZoneClassName skipped - type string is ignored in gen 
-
+  MarkerClusterSplitDataObject? data;
+    
+  String? id;
+    
+  double? index;
+    
+  String? stateId;
+    
+  double? x;
+    
+  double? y;
+    
+  Point? point;
+    
+  MarkerClusterZonesOptions? clusterZone;
+    
+  String? clusterZoneClassName;
+    
+  MarkerClusterSplitDataObject? pointsOutside;
+    
+  MarkerClusterSplitDataObject? pointsInside;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of data (type MarkerClusterSplitDataObject[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of id (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of index (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of stateId (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of x (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of y (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of point (type Point is ignored) ignore type: true
-
-    // NOTE: skip serialization of clusterZone (type MarkerClusterZonesOptions is ignored) ignore type: true
-
-    // NOTE: skip serialization of clusterZoneClassName (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of pointsOutside (type MarkerClusterSplitDataObject[] is ignored) ignore type: true
-
-    // NOTE: skip serialization of pointsInside (type MarkerClusterSplitDataObject[] is ignored) ignore type: true
+    
+    if (this.data != null) {
+        buffer.writeAll(["\"data\":",this.data, ","], "");
+    }
+    
+    if (this.id != null) {
+        buffer.writeAll(["\"id\":\'",this.id, "\',"], "");
+    }
+    
+    if (this.index != null) {
+        buffer.writeAll(["\"index\":",this.index, ","], "");
+    }
+    
+    if (this.stateId != null) {
+        buffer.writeAll(["\"stateId\":\'",this.stateId, "\',"], "");
+    }
+    
+    if (this.x != null) {
+        buffer.writeAll(["\"x\":",this.x, ","], "");
+    }
+    
+    if (this.y != null) {
+        buffer.writeAll(["\"y\":",this.y, ","], "");
+    }
+    
+    if (this.point != null) {
+        buffer.writeAll(["\"point\":",this.point?.toJSON(), ","], "");
+    }
+    
+    if (this.clusterZone != null) {
+        buffer.writeAll(["\"clusterZone\":",this.clusterZone?.toJSON(), ","], "");
+    }
+    
+    if (this.clusterZoneClassName != null) {
+        buffer.writeAll(["\"clusterZoneClassName\":\'",this.clusterZoneClassName, "\',"], "");
+    }
+    
+    if (this.pointsOutside != null) {
+        buffer.writeAll(["\"pointsOutside\":",this.pointsOutside, ","], "");
+    }
+    
+    if (this.pointsInside != null) {
+        buffer.writeAll(["\"pointsInside\":",this.pointsInside, ","], "");
+    }
   }
+
 
 }

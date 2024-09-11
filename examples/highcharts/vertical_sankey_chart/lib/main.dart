@@ -4,7 +4,7 @@
  */
 
 import 'package:flutter/material.dart';
-import 'package:highcharts_flutter/Highcharts.dart';
+import 'package:highcharts_flutter/highcharts.dart';
 import 'package:highcharts_flutter/types/ChartOptions.dart';
 import 'package:highcharts_flutter/types/TitleOptions.dart';
 import 'package:highcharts_flutter/types/SubtitleOptions.dart';
@@ -12,6 +12,7 @@ import 'package:highcharts_flutter/types/AccessibilityOptions.dart';
 import 'package:highcharts_flutter/types/AccessibilityPointOptions.dart';
 import 'package:highcharts_flutter/types/HighchartsPlotOptions.dart';
 import 'package:highcharts_flutter/types/SankeySeriesOptions.dart';
+import 'package:highcharts_flutter/types/Generic.dart';
 import 'package:highcharts_flutter/types/SankeySeriesTooltipOptions.dart';
 import 'package:highcharts_flutter/types/TooltipOptions.dart';
 import 'package:highcharts_flutter/types/SankeySeries.dart';
@@ -82,7 +83,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 plotOptions: HighchartsPlotOptions(
                   sankey: SankeySeriesOptions(
-                    tooltip: TooltipOptions(
+                    states: Generic(
+                    ),
+                    tooltip: SankeySeriesTooltipOptions(
                     ),
                   ),
                 ),
@@ -93,13 +96,17 @@ class _MyHomePageState extends State<MyHomePage> {
                   SankeySeries( 
                 //options: SankeySeriesOptions()
                       name: "Energy consumed for water use in U.S.", 
-                    // dataLabels: SankeyDataLabelOptions( 
-                    // ),
-                    //  borderRadius: BorderRadiusOptionsObject(),
-                    //   nodeWidth: "50", 
-                    //   linkOpacity: 1, 
-                    // nodes: SankeySeriesNodeOptions( 
-                    // ),
+                    dataLabels: [ 
+                      SankeyDataLabelOptions( 
+                      ),
+                    ],
+                     borderRadius: BorderRadiusOptionsObject(),
+                      nodeWidth: "50", 
+                      linkOpacity: 1, 
+                    nodes: [ 
+                      SankeySeriesNodeOptions( 
+                      ),
+                    ],
                     data: [ 
                     [
                       "Total annual U.S. energy consumption", "All non-water related energy consumption", 51564

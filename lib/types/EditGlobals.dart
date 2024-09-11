@@ -12,31 +12,45 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'ClassNamesOptions.dart';
 import 'LangOptions.dart';
 import 'OptionFragment.dart';
 
 /** 
- * EditGlobals 
+ * EditGlobals
  */
 class EditGlobals extends OptionFragment {
-  EditGlobals( ) : super();
-  
+
+  EditGlobals({
+    this.classNames = null,
+    this.lang = null
+  });
+
+  ClassNamesOptions? classNames;
+    
+  LangOptions? lang;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of classNames (type ClassNamesOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of lang (type LangOptions is ignored) ignore type: true
+    
+    if (this.classNames != null) {
+        buffer.writeAll(["\"classNames\":",this.classNames?.toJSON(), ","], "");
+    }
+    
+    if (this.lang != null) {
+        buffer.writeAll(["\"lang\":",this.lang?.toJSON(), ","], "");
+    }
   }
+
 
 }

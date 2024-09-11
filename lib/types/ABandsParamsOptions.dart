@@ -12,32 +12,39 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'SMAParamsOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * ABandsParamsOptions 
+ * ABandsParamsOptions
  */
 class ABandsParamsOptions extends SMAParamsOptions {
-  ABandsParamsOptions( {
+
+  ABandsParamsOptions({
+    this.factor = null,
     super.index = null,
     super.period = null
-  }) : super();
-  // NOTE: factor skipped - type number is ignored in gen 
+  });
 
+  double? factor;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of factor (type number is ignored) ignore type: true
+
+    
+    if (this.factor != null) {
+        buffer.writeAll(["\"factor\":",this.factor, ","], "");
+    }
   }
+
 
 }

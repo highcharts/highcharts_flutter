@@ -12,44 +12,65 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * SpeakerOptions 
+ * SpeakerOptions
  */
 class SpeakerOptions extends OptionFragment {
-  SpeakerOptions( ) : super();
-  // NOTE: name skipped - type string is ignored in gen 
 
-  // NOTE: language skipped - type string is ignored in gen 
+  SpeakerOptions({
+    this.language = null,
+    this.name = null,
+    this.pitch = null,
+    this.rate = null,
+    this.volume = null
+  });
 
-  // NOTE: pitch skipped - type number is ignored in gen 
-
-  // NOTE: rate skipped - type number is ignored in gen 
-
-  // NOTE: volume skipped - type number is ignored in gen 
-
+  String? name;
+    
+  String? language;
+    
+  double? pitch;
+    
+  double? rate;
+    
+  double? volume;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of name (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of language (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of pitch (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of rate (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of volume (type number is ignored) ignore type: true
+    
+    if (this.name != null) {
+        buffer.writeAll(["\"name\":\'",this.name, "\',"], "");
+    }
+    
+    if (this.language != null) {
+        buffer.writeAll(["\"language\":\'",this.language, "\',"], "");
+    }
+    
+    if (this.pitch != null) {
+        buffer.writeAll(["\"pitch\":",this.pitch, ","], "");
+    }
+    
+    if (this.rate != null) {
+        buffer.writeAll(["\"rate\":",this.rate, ","], "");
+    }
+    
+    if (this.volume != null) {
+        buffer.writeAll(["\"volume\":",this.volume, ","], "");
+    }
   }
+
 
 }

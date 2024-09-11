@@ -12,32 +12,39 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'SMAParamsOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * RSIParamsOptions 
+ * RSIParamsOptions
  */
 class RSIParamsOptions extends SMAParamsOptions {
-  RSIParamsOptions( {
+
+  RSIParamsOptions({
+    this.decimals = null,
     super.index = null,
     super.period = null
-  }) : super();
-  // NOTE: decimals skipped - type number is ignored in gen 
+  });
 
+  double? decimals;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of decimals (type number is ignored) ignore type: true
+
+    
+    if (this.decimals != null) {
+        buffer.writeAll(["\"decimals\":",this.decimals, ","], "");
+    }
   }
+
 
 }

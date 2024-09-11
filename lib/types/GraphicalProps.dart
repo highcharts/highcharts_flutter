@@ -12,29 +12,44 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * GraphicalProps 
+ * GraphicalProps
  */
 class GraphicalProps extends OptionFragment {
-  GraphicalProps( ) : super();
-  
+
+  GraphicalProps({
+    this.plural = null,
+    this.singular = null
+  });
+
+  String? singular;
+    
+  String? plural;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of singular (type string[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of plural (type string[] is ignored) ignore type: true
+    
+    if (this.singular != null) {
+        buffer.writeAll(["\"singular\":",this.singular, ","], "");
+    }
+    
+    if (this.plural != null) {
+        buffer.writeAll(["\"plural\":",this.plural, ","], "");
+    }
   }
+
 
 }

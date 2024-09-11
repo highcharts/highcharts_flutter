@@ -12,28 +12,38 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'IndicatorAliases.dart';
 import 'OptionFragment.dart';
 
+
 /** 
- * PopupOptions 
+ * PopupOptions
  */
 class PopupOptions extends OptionFragment {
-  PopupOptions( ) : super();
-  
+
+  PopupOptions({
+    this.indicatorAliases = null
+  });
+
+  IndicatorAliases? indicatorAliases;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of indicatorAliases (type IndicatorAliases is ignored) ignore type: true
+
+    
+    if (this.indicatorAliases != null) {
+        buffer.writeAll(["\"indicatorAliases\":",this.indicatorAliases?.toJSON(), ","], "");
+    }
   }
+
 
 }

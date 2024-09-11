@@ -12,32 +12,44 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * LangAccessibilitySonificationOptions 
+ * LangAccessibilitySonificationOptions
  */
 class LangAccessibilitySonificationOptions extends OptionFragment {
-  LangAccessibilitySonificationOptions( ) : super();
-  // NOTE: playAsSoundButtonText skipped - type string is ignored in gen 
 
-  // NOTE: playAsSoundClickAnnouncement skipped - type string is ignored in gen 
+  LangAccessibilitySonificationOptions({
+    this.playAsSoundButtonText = null,
+    this.playAsSoundClickAnnouncement = null
+  });
 
+  String? playAsSoundButtonText;
+    
+  String? playAsSoundClickAnnouncement;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of playAsSoundButtonText (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of playAsSoundClickAnnouncement (type string is ignored) ignore type: true
+    
+    if (this.playAsSoundButtonText != null) {
+        buffer.writeAll(["\"playAsSoundButtonText\":\'",this.playAsSoundButtonText, "\',"], "");
+    }
+    
+    if (this.playAsSoundClickAnnouncement != null) {
+        buffer.writeAll(["\"playAsSoundClickAnnouncement\":\'",this.playAsSoundClickAnnouncement, "\',"], "");
+    }
   }
+
 
 }

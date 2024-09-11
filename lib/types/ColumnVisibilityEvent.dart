@@ -12,32 +12,46 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * ColumnVisibilityEvent 
+ * ColumnVisibilityEvent
  */
 class ColumnVisibilityEvent extends OptionFragment {
-  ColumnVisibilityEvent( ) : super();
-  // NOTE: type skipped - type string is ignored in gen 
 
+  ColumnVisibilityEvent({
+    this.type = null,
+    this.visibilityMap = null
+  });
+
+  String? type;
+    
+  // NOTE: detail skipped - type AnyRecord is ignored in gen 
+
+  Map<String, String>? visibilityMap;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of type (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of detail (type AnyRecord is ignored) ignore type: 1
+    
+    if (this.type != null) {
+        buffer.writeAll(["\"type\":\'",this.type, "\',"], "");
+    }
+    // NOTE: skip serialization of detail (type AnyRecord ignored, skipped: true)
 
-    // NOTE: skip serialization of visibilityMap (type Generic is ignored) ignore type: true
+    // NOTE: skip serialization of visibilityMap (type Generic ignored, skipped: true)
+
   }
+
 
 }

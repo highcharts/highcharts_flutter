@@ -4,7 +4,7 @@
  */
 
 import 'package:flutter/material.dart';
-import 'package:highcharts_flutter/Highcharts.dart';
+import 'package:highcharts_flutter/highcharts.dart';
 import 'package:highcharts_flutter/types/TreemapSeriesOptions.dart';
 import 'package:highcharts_flutter/types/TreemapSeries.dart';
 import 'package:highcharts_flutter/types/TreemapSeriesLevelsOptions.dart';
@@ -61,11 +61,13 @@ class _MyHomePageState extends State<MyHomePage> {
                 series: [ 
                   TreemapSeries( 
                 //options: TreemapSeriesOptions()
-                    //   layoutAlgorithm: "stripes", 
-                    //   alternateStartingDirection: true, 
-                    //   borderRadius: 6, 
-                    // levels: TreemapSeriesLevelsOptions( 
-                    // ),
+                      layoutAlgorithm: "stripes", 
+                      alternateStartingDirection: true, 
+                      borderRadius: 6, 
+                    levels: [ 
+                      TreemapSeriesLevelsOptions( 
+                      ),
+                    ],
                     data: [ 
                     [
                       false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false

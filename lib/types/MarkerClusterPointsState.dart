@@ -12,41 +12,65 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'Point.dart';
 import 'OptionFragment.dart';
 
 /** 
- * MarkerClusterPointsState 
+ * MarkerClusterPointsState
  */
 class MarkerClusterPointsState extends OptionFragment {
-  MarkerClusterPointsState( ) : super();
-  // NOTE: x skipped - type number is ignored in gen 
 
-  // NOTE: y skipped - type number is ignored in gen 
+  MarkerClusterPointsState({
+    this.id = null,
+    this.parentsId = null,
+    this.point = null,
+    this.x = null,
+    this.y = null
+  });
 
-  // NOTE: id skipped - type string is ignored in gen 
-
+  double? x;
+    
+  double? y;
+    
+  String? id;
+    
+  String? parentsId;
+    
+  Point? point;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of x (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of y (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of id (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of parentsId (type string[] is ignored) ignore type: true
-
-    // NOTE: skip serialization of point (type Point is ignored) ignore type: true
+    
+    if (this.x != null) {
+        buffer.writeAll(["\"x\":",this.x, ","], "");
+    }
+    
+    if (this.y != null) {
+        buffer.writeAll(["\"y\":",this.y, ","], "");
+    }
+    
+    if (this.id != null) {
+        buffer.writeAll(["\"id\":\'",this.id, "\',"], "");
+    }
+    
+    if (this.parentsId != null) {
+        buffer.writeAll(["\"parentsId\":",this.parentsId, ","], "");
+    }
+    
+    if (this.point != null) {
+        buffer.writeAll(["\"point\":",this.point?.toJSON(), ","], "");
+    }
   }
+
 
 }

@@ -12,36 +12,51 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * ColumnRangePoint 
+ * ColumnRangePoint
  */
 class ColumnRangePoint extends OptionFragment {
-  ColumnRangePoint( ) : super();
-  // NOTE: barX skipped - type number is ignored in gen 
 
-  // NOTE: pointWidth skipped - type number is ignored in gen 
+  ColumnRangePoint({
+    this.barX = null,
+    this.pointWidth = null,
+    this.shapeType = null
+  });
 
-  // NOTE: shapeType skipped - type string is ignored in gen 
-
+  double? barX;
+    
+  double? pointWidth;
+    
+  String? shapeType;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of barX (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of pointWidth (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of shapeType (type string is ignored) ignore type: true
+    
+    if (this.barX != null) {
+        buffer.writeAll(["\"barX\":",this.barX, ","], "");
+    }
+    
+    if (this.pointWidth != null) {
+        buffer.writeAll(["\"pointWidth\":",this.pointWidth, ","], "");
+    }
+    
+    if (this.shapeType != null) {
+        buffer.writeAll(["\"shapeType\":\'",this.shapeType, "\',"], "");
+    }
   }
+
 
 }

@@ -12,36 +12,46 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'SMAParamsOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * KeltnerChannelsParamsOptions 
+ * KeltnerChannelsParamsOptions
  */
 class KeltnerChannelsParamsOptions extends SMAParamsOptions {
-  KeltnerChannelsParamsOptions( {
+
+  KeltnerChannelsParamsOptions({
     super.index = null,
-    super.period = null
-  }) : super();
-  // NOTE: periodATR skipped - type number is ignored in gen 
+    this.multiplierATR = null,
+    super.period = null,
+    this.periodATR = null
+  });
 
-  // NOTE: multiplierATR skipped - type number is ignored in gen 
-
+  double? periodATR;
+    
+  double? multiplierATR;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of periodATR (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of multiplierATR (type number is ignored) ignore type: true
+    
+    if (this.periodATR != null) {
+        buffer.writeAll(["\"periodATR\":",this.periodATR, ","], "");
+    }
+    
+    if (this.multiplierATR != null) {
+        buffer.writeAll(["\"multiplierATR\":",this.multiplierATR, ","], "");
+    }
   }
+
 
 }

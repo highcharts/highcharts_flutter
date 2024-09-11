@@ -12,33 +12,45 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
-import 'AnnotationSeries.dart';
 import 'OptionFragment.dart';
 
 /** 
- * AnnotationPoint 
+ * AnnotationPoint
  */
 class AnnotationPoint extends OptionFragment {
-  AnnotationPoint( ) : super();
-  // NOTE: command skipped - type string is ignored in gen 
+
+  AnnotationPoint({
+    this.command = null
+  });
+
+  String? command;
+    
+  // NOTE: mock skipped - type undefined is ignored in gen 
+
+  // NOTE: series skipped - type AnnotationSeries is ignored in gen 
 
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of command (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of mock (type undefined is ignored) ignore type: 1
+    
+    if (this.command != null) {
+        buffer.writeAll(["\"command\":\'",this.command, "\',"], "");
+    }
+    // NOTE: skip serialization of mock (type undefined ignored, skipped: true)
 
-    // NOTE: skip serialization of series (type AnnotationSeries is ignored) ignore type: true
+    // NOTE: skip serialization of series (type AnnotationSeries ignored, skipped: true)
+
   }
+
 
 }

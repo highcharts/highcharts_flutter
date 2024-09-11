@@ -12,10 +12,9 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'AreaSeriesOptions.dart';
 import 'Series.dart';
 import 'PointOptions.dart';
@@ -34,8 +33,7 @@ class AreaSeries extends Series {
     this.data = null
   });
 
-  
-  @override
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
@@ -56,16 +54,13 @@ class AreaSeries extends Series {
         if (point.length > 1) {
           seriesData.writeAll(["["], "");
         }
-
-          for (var sub in point) {
-            if (sub is String) {
-              seriesData.writeAll(["\"", sub, "\","], "");
-            } else {
-              seriesData.writeAll([sub], ",");
-            }
-
+        for (var sub in point) {
+          if (sub is String) {
+            seriesData.writeAll(["\"", sub, "\","], "");
+          } else {
+            seriesData.writeAll([sub], ",");
           }
-
+        }
         if (point.length > 1) {
           seriesData.writeAll(["],"], "");
         } else {
@@ -92,19 +87,45 @@ class AreaSeries extends Series {
 
 
     
-    if (this.options?.fillColor != null) {  
-      buffer.writeAll(["\"fillColor\":\'",this.options?.fillColor, "\',"], "");
-    }
 
-    if (this.options?.fillOpacity != null) {  
-      buffer.writeAll(["\"fillOpacity\":",this.options?.fillOpacity, ","], "");
+    
+    if (this.options?.fillColor != null) {
+        buffer.writeAll(["\"fillColor\":\'",this.options?.fillColor, "\',"], "");
     }
-
-    if (this.options?.negativeFillColor != null) {  
-      buffer.writeAll(["\"negativeFillColor\":\'",this.options?.negativeFillColor, "\',"], "");
+    
+    if (this.options?.fillOpacity != null) {
+        buffer.writeAll(["\"fillOpacity\":",this.options?.fillOpacity, ","], "");
     }
+    
+    if (this.options?.negativeFillColor != null) {
+        buffer.writeAll(["\"negativeFillColor\":\'",this.options?.negativeFillColor, "\',"], "");
+    }
+    // NOTE: skip serialization of states (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
+    
+    if (this.options?.data != null) {
+        buffer.writeAll(["\"data\":",this.options?.data, ","], "");
+    }
+    
+    if (this.options?.legendSymbol != null) {
+        buffer.writeAll(["\"legendSymbol\":\'",this.options?.legendSymbol, "\',"], "");
+    }
+    
+    if (this.options?.threshold != null) {
+        buffer.writeAll(["\"threshold\":",this.options?.threshold, ","], "");
+    }
+    
+    if (this.options?.trackByArea != null) {
+        buffer.writeAll(["\"trackByArea\":",this.options?.trackByArea, ","], "");
+    }
+    
+    if (this.options?.lineColor != null) {
+        buffer.writeAll(["\"lineColor\":\'",this.options?.lineColor, "\',"], "");
+    }
+    
+    if (this.options?.color != null) {
+        buffer.writeAll(["\"color\":\'",this.options?.color, "\',"], "");
+    }
   }
 
 }

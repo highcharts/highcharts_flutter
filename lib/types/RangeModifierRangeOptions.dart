@@ -12,36 +12,51 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * RangeModifierRangeOptions 
+ * RangeModifierRangeOptions
  */
 class RangeModifierRangeOptions extends OptionFragment {
-  RangeModifierRangeOptions( ) : super();
-  // NOTE: column skipped - type string is ignored in gen 
 
-  // NOTE: maxValue skipped - type string is ignored in gen 
+  RangeModifierRangeOptions({
+    this.column = null,
+    this.maxValue = null,
+    this.minValue = null
+  });
 
-  // NOTE: minValue skipped - type string is ignored in gen 
-
+  String? column;
+    
+  String? maxValue;
+    
+  String? minValue;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of column (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of maxValue (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of minValue (type string is ignored) ignore type: true
+    
+    if (this.column != null) {
+        buffer.writeAll(["\"column\":\'",this.column, "\',"], "");
+    }
+    
+    if (this.maxValue != null) {
+        buffer.writeAll(["\"maxValue\":\'",this.maxValue, "\',"], "");
+    }
+    
+    if (this.minValue != null) {
+        buffer.writeAll(["\"minValue\":\'",this.minValue, "\',"], "");
+    }
   }
+
 
 }

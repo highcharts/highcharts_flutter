@@ -12,19 +12,20 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'SankeyDataLabelOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * OrganizationDataLabelOptions 
+ * OrganizationDataLabelOptions
  */
 class OrganizationDataLabelOptions extends SankeyDataLabelOptions {
-  OrganizationDataLabelOptions( {
+
+  OrganizationDataLabelOptions({
     super.align = null,
+    super.alignTo = null,
     super.allowOverlap = null,
     super.backgroundColor = null,
     super.borderColor = null,
@@ -32,13 +33,20 @@ class OrganizationDataLabelOptions extends SankeyDataLabelOptions {
     super.borderWidth = null,
     super.className = null,
     super.color = null,
+    super.connectorColor = null,
     super.crop = null,
     super.defer = null,
+    super.distance = null,
     super.enabled = null,
     super.filter = null,
     super.format = null,
     super.inside = null,
+    super.labelrank = null,
+    this.linkFormat = null,
+    super.linkTextPath = null,
+    super.nodeFormat = null,
     super.nullFormat = null,
+    super.outside3dPlot = null,
     super.overflow = null,
     super.padding = null,
     super.rotation = null,
@@ -50,18 +58,24 @@ class OrganizationDataLabelOptions extends SankeyDataLabelOptions {
     super.x = null,
     super.y = null,
     super.zIndex = null
-  }) : super();
-  // NOTE: linkFormat skipped - type string is ignored in gen 
+  });
 
+  String? linkFormat;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of linkFormat (type string is ignored) ignore type: true
+
+    
+    if (this.linkFormat != null) {
+        buffer.writeAll(["\"linkFormat\":\'",this.linkFormat, "\',"], "");
+    }
   }
+
 
 }

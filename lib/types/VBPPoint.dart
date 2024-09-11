@@ -12,49 +12,76 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'VBPIndicator.dart';
 import 'OptionFragment.dart';
 
 /** 
- * VBPPoint 
+ * VBPPoint
  */
 class VBPPoint extends OptionFragment {
-  VBPPoint( ) : super();
-  // NOTE: barX skipped - type number is ignored in gen 
 
-  // NOTE: pointWidth skipped - type number is ignored in gen 
+  VBPPoint({
+    this.barX = null,
+    this.pointWidth = null,
+    this.series = null,
+    this.volumeAll = null,
+    this.volumeNeg = null,
+    this.volumePos = null
+  });
 
-  // NOTE: volumeAll skipped - type number is ignored in gen 
+  double? barX;
+    
+  // NOTE: negativeGraphic skipped - type unknown is ignored in gen 
 
-  // NOTE: volumeNeg skipped - type number is ignored in gen 
-
-  // NOTE: volumePos skipped - type number is ignored in gen 
-
+  double? pointWidth;
+    
+  VBPIndicator? series;
+    
+  double? volumeAll;
+    
+  double? volumeNeg;
+    
+  double? volumePos;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of barX (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of negativeGraphic (type unknown is ignored) ignore type: 1
+    
+    if (this.barX != null) {
+        buffer.writeAll(["\"barX\":",this.barX, ","], "");
+    }
+    // NOTE: skip serialization of negativeGraphic (type unknown ignored, skipped: true)
 
-    // NOTE: skip serialization of pointWidth (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of series (type VBPIndicator is ignored) ignore type: true
-
-    // NOTE: skip serialization of volumeAll (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of volumeNeg (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of volumePos (type number is ignored) ignore type: true
+    
+    if (this.pointWidth != null) {
+        buffer.writeAll(["\"pointWidth\":",this.pointWidth, ","], "");
+    }
+    
+    if (this.series != null) {
+        buffer.writeAll(["\"series\":",this.series?.toJSON(), ","], "");
+    }
+    
+    if (this.volumeAll != null) {
+        buffer.writeAll(["\"volumeAll\":",this.volumeAll, ","], "");
+    }
+    
+    if (this.volumeNeg != null) {
+        buffer.writeAll(["\"volumeNeg\":",this.volumeNeg, ","], "");
+    }
+    
+    if (this.volumePos != null) {
+        buffer.writeAll(["\"volumePos\":",this.volumePos, ","], "");
+    }
   }
+
 
 }

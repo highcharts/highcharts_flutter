@@ -12,34 +12,46 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'EMAParamsOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * ChaikinParamsOptions 
+ * ChaikinParamsOptions
  */
 class ChaikinParamsOptions extends EMAParamsOptions {
-  ChaikinParamsOptions( {
-    super.index = null,
-    super.period = null
-  }) : super();
-  // NOTE: volumeSeriesID skipped - type string is ignored in gen 
 
+  ChaikinParamsOptions({
+    super.index = null,
+    super.period = null,
+    this.periods = null,
+    this.volumeSeriesID = null
+  });
+
+  double? periods;
+    
+  String? volumeSeriesID;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of periods (type number[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of volumeSeriesID (type string is ignored) ignore type: true
+    
+    if (this.periods != null) {
+        buffer.writeAll(["\"periods\":",this.periods, ","], "");
+    }
+    
+    if (this.volumeSeriesID != null) {
+        buffer.writeAll(["\"volumeSeriesID\":\'",this.volumeSeriesID, "\',"], "");
+    }
   }
+
 
 }

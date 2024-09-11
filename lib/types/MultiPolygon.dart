@@ -12,30 +12,40 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'BaseGeometry.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * MultiPolygon 
+ * MultiPolygon
  */
 class MultiPolygon extends BaseGeometry {
-  MultiPolygon( ) : super();
-  
+
+  MultiPolygon({
+    super.arcs = null,
+    super.properties = null
+  });
+
+  // NOTE: type skipped - type "MultiPolygon" is ignored in gen 
+
+  // NOTE: coordinates skipped - type LonLatArray is ignored in gen 
+
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of type (type "MultiPolygon" is ignored) ignore type: true
 
-    // NOTE: skip serialization of coordinates (type LonLatArray is ignored) ignore type: 1
+    // NOTE: skip serialization of type (type "MultiPolygon" ignored, skipped: true)
+
+    // NOTE: skip serialization of coordinates (type LonLatArray ignored, skipped: true)
+
   }
+
 
 }

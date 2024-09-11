@@ -12,51 +12,84 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'Series.dart';
 import 'OptionFragment.dart';
 
+
 /** 
- * GetColorOptions 
+ * GetColorOptions
  */
 class GetColorOptions extends OptionFragment {
-  GetColorOptions( ) : super();
-  // NOTE: colorIndex skipped - type number is ignored in gen 
 
-  // NOTE: index skipped - type number is ignored in gen 
+  GetColorOptions({
+    this.colorIndex = null,
+    this.colors = null,
+    this.index = null,
+    this.parentColor = null,
+    this.parentColorIndex = null,
+    this.series = null,
+    this.siblings = null
+  });
 
-  // NOTE: parentColor skipped - type string is ignored in gen 
+  double? colorIndex;
+    
+  String? colors;
+    
+  double? index;
+    
+  // NOTE: mapOptionsToLevel skipped - type any is ignored in gen 
 
-  // NOTE: parentColorIndex skipped - type number is ignored in gen 
-
-  // NOTE: siblings skipped - type number is ignored in gen 
-
+  String? parentColor;
+    
+  double? parentColorIndex;
+    
+  Series? series;
+    
+  double? siblings;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of colorIndex (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of colors (type ColorType[] is ignored) ignore type: true
+    
+    if (this.colorIndex != null) {
+        buffer.writeAll(["\"colorIndex\":",this.colorIndex, ","], "");
+    }
+    
+    if (this.colors != null) {
+        buffer.writeAll(["\"colors\":",this.colors, ","], "");
+    }
+    
+    if (this.index != null) {
+        buffer.writeAll(["\"index\":",this.index, ","], "");
+    }
+    // NOTE: skip serialization of mapOptionsToLevel (type any ignored, skipped: true)
 
-    // NOTE: skip serialization of index (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of mapOptionsToLevel (type any is ignored) ignore type: 1
-
-    // NOTE: skip serialization of parentColor (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of parentColorIndex (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of series (type Series is ignored) ignore type: true
-
-    // NOTE: skip serialization of siblings (type number is ignored) ignore type: true
+    
+    if (this.parentColor != null) {
+        buffer.writeAll(["\"parentColor\":\'",this.parentColor, "\',"], "");
+    }
+    
+    if (this.parentColorIndex != null) {
+        buffer.writeAll(["\"parentColorIndex\":",this.parentColorIndex, ","], "");
+    }
+    
+    if (this.series != null) {
+        buffer.writeAll(["\"series\":",this.series?.toJSON(), ","], "");
+    }
+    
+    if (this.siblings != null) {
+        buffer.writeAll(["\"siblings\":",this.siblings, ","], "");
+    }
   }
+
 
 }

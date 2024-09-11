@@ -12,36 +12,51 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * BorderRadiusOptionsObject 
+ * BorderRadiusOptionsObject
  */
 class BorderRadiusOptionsObject extends OptionFragment {
-  BorderRadiusOptionsObject( ) : super();
-  // NOTE: radius skipped - type string is ignored in gen 
 
-  // NOTE: scope skipped - type string is ignored in gen 
+  BorderRadiusOptionsObject({
+    this.radius = null,
+    this.scope = null,
+    this.where = null
+  });
 
-  // NOTE: where skipped - type string is ignored in gen 
-
+  String? radius;
+    
+  String? scope;
+    
+  String? where;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of radius (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of scope (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of where (type string is ignored) ignore type: true
+    
+    if (this.radius != null) {
+        buffer.writeAll(["\"radius\":\'",this.radius, "\',"], "");
+    }
+    
+    if (this.scope != null) {
+        buffer.writeAll(["\"scope\":\'",this.scope, "\',"], "");
+    }
+    
+    if (this.where != null) {
+        buffer.writeAll(["\"where\":\'",this.where, "\',"], "");
+    }
   }
+
 
 }

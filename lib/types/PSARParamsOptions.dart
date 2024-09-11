@@ -12,44 +12,60 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'SMAParamsOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * PSARParamsOptions 
+ * PSARParamsOptions
  */
 class PSARParamsOptions extends SMAParamsOptions {
-  PSARParamsOptions( {
+
+  PSARParamsOptions({
+    this.decimals = null,
+    this.increment = null,
     super.index = null,
+    this.initialAccelerationFactor = null,
+    this.maxAccelerationFactor = null,
     super.period = null
-  }) : super();
-  // NOTE: initialAccelerationFactor skipped - type number is ignored in gen 
+  });
 
-  // NOTE: maxAccelerationFactor skipped - type number is ignored in gen 
-
-  // NOTE: increment skipped - type number is ignored in gen 
-
-  // NOTE: decimals skipped - type number is ignored in gen 
-
+  double? initialAccelerationFactor;
+    
+  double? maxAccelerationFactor;
+    
+  double? increment;
+    
+  double? decimals;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of initialAccelerationFactor (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of maxAccelerationFactor (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of increment (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of decimals (type number is ignored) ignore type: true
+    
+    if (this.initialAccelerationFactor != null) {
+        buffer.writeAll(["\"initialAccelerationFactor\":",this.initialAccelerationFactor, ","], "");
+    }
+    
+    if (this.maxAccelerationFactor != null) {
+        buffer.writeAll(["\"maxAccelerationFactor\":",this.maxAccelerationFactor, ","], "");
+    }
+    
+    if (this.increment != null) {
+        buffer.writeAll(["\"increment\":",this.increment, ","], "");
+    }
+    
+    if (this.decimals != null) {
+        buffer.writeAll(["\"decimals\":",this.decimals, ","], "");
+    }
   }
+
 
 }

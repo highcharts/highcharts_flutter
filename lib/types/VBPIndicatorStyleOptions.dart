@@ -12,40 +12,50 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'CSSObject.dart';
 import 'OptionFragment.dart';
 
+
 /** 
- * VBPIndicatorStyleOptions 
+ * VBPIndicatorStyleOptions
  */
 class VBPIndicatorStyleOptions extends OptionFragment {
-  VBPIndicatorStyleOptions( {
+
+  VBPIndicatorStyleOptions({
     this.enabled = null,
     this.styles = null
-  }) : super();
+  });
+
+  /**
+   * Option to control if volume is divided. 
+   * 
+   * Defaults to 'true'. 
+   */
   bool? enabled;
     
   CSSObject? styles;
     
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    if (this.enabled != null) {  
-      buffer.writeAll(["\"enabled\":",this.enabled, ","], "");
-    }
 
-    if (this.styles != null) {  
-      buffer.writeAll(["\"styles\":",this.styles?.toJSON(), ","], "");
+    
+    if (this.enabled != null) {
+        buffer.writeAll(["\"enabled\":",this.enabled, ","], "");
+    }
+    
+    if (this.styles != null) {
+        buffer.writeAll(["\"styles\":",this.styles?.toJSON(), ","], "");
     }
   }
+
 
 }

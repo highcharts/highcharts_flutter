@@ -4,7 +4,7 @@
  */
 
 import 'package:flutter/material.dart';
-import 'package:highcharts_flutter/Highcharts.dart';
+import 'package:highcharts_flutter/highcharts.dart';
 import 'package:highcharts_flutter/types/TitleOptions.dart';
 import 'package:highcharts_flutter/types/AccessibilityOptions.dart';
 import 'package:highcharts_flutter/types/AccessibilityPointOptions.dart';
@@ -69,7 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ArcDiagramSeries( 
                 //options: ArcDiagramSeriesOptions()
                       name: "Train connections", 
-                    //   centeredLinks: true, 
+                      centeredLinks: true, 
                     data: [ 
                     [
                       "Hamburg", "Stuttgart", 1

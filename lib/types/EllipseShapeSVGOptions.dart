@@ -12,44 +12,65 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * EllipseShapeSVGOptions 
+ * EllipseShapeSVGOptions
  */
 class EllipseShapeSVGOptions extends OptionFragment {
-  EllipseShapeSVGOptions( ) : super();
-  // NOTE: cx skipped - type number is ignored in gen 
 
-  // NOTE: cy skipped - type number is ignored in gen 
+  EllipseShapeSVGOptions({
+    this.angle = null,
+    this.cx = null,
+    this.cy = null,
+    this.rx = null,
+    this.ry = null
+  });
 
-  // NOTE: rx skipped - type number is ignored in gen 
-
-  // NOTE: ry skipped - type number is ignored in gen 
-
-  // NOTE: angle skipped - type number is ignored in gen 
-
+  double? cx;
+    
+  double? cy;
+    
+  double? rx;
+    
+  double? ry;
+    
+  double? angle;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of cx (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of cy (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of rx (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of ry (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of angle (type number is ignored) ignore type: true
+    
+    if (this.cx != null) {
+        buffer.writeAll(["\"cx\":",this.cx, ","], "");
+    }
+    
+    if (this.cy != null) {
+        buffer.writeAll(["\"cy\":",this.cy, ","], "");
+    }
+    
+    if (this.rx != null) {
+        buffer.writeAll(["\"rx\":",this.rx, ","], "");
+    }
+    
+    if (this.ry != null) {
+        buffer.writeAll(["\"ry\":",this.ry, ","], "");
+    }
+    
+    if (this.angle != null) {
+        buffer.writeAll(["\"angle\":",this.angle, ","], "");
+    }
   }
+
 
 }

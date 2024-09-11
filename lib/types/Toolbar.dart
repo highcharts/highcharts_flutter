@@ -12,27 +12,35 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * Toolbar 
+ * Toolbar
  */
 class Toolbar extends OptionFragment {
-  Toolbar( ) : super();
-  
+
+  Toolbar({
+    this.classMapping = null
+  });
+
+  Map<String, String>? classMapping;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of classMapping (type Generic is ignored) ignore type: true
+
+    // NOTE: skip serialization of classMapping (type Generic ignored, skipped: true)
+
   }
+
 
 }

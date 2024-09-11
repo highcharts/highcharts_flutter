@@ -12,36 +12,51 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * LangAccessibilityZoomOptions 
+ * LangAccessibilityZoomOptions
  */
 class LangAccessibilityZoomOptions extends OptionFragment {
-  LangAccessibilityZoomOptions( ) : super();
-  // NOTE: mapZoomIn skipped - type string is ignored in gen 
 
-  // NOTE: mapZoomOut skipped - type string is ignored in gen 
+  LangAccessibilityZoomOptions({
+    this.mapZoomIn = null,
+    this.mapZoomOut = null,
+    this.resetZoomButton = null
+  });
 
-  // NOTE: resetZoomButton skipped - type string is ignored in gen 
-
+  String? mapZoomIn;
+    
+  String? mapZoomOut;
+    
+  String? resetZoomButton;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of mapZoomIn (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of mapZoomOut (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of resetZoomButton (type string is ignored) ignore type: true
+    
+    if (this.mapZoomIn != null) {
+        buffer.writeAll(["\"mapZoomIn\":\'",this.mapZoomIn, "\',"], "");
+    }
+    
+    if (this.mapZoomOut != null) {
+        buffer.writeAll(["\"mapZoomOut\":\'",this.mapZoomOut, "\',"], "");
+    }
+    
+    if (this.resetZoomButton != null) {
+        buffer.writeAll(["\"resetZoomButton\":\'",this.resetZoomButton, "\',"], "");
+    }
   }
+
 
 }

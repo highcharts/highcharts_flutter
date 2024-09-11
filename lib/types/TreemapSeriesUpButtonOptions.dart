@@ -12,44 +12,63 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'TreemapSeriesUpButtonPositionOptions.dart';
 import 'ButtonThemeObject.dart';
 import 'OptionFragment.dart';
 
+
 /** 
- * TreemapSeriesUpButtonOptions 
+ * TreemapSeriesUpButtonOptions
  */
 class TreemapSeriesUpButtonOptions extends OptionFragment {
-  TreemapSeriesUpButtonOptions( {
-    this.position = null
-  }) : super();
+
+  TreemapSeriesUpButtonOptions({
+    this.position = null,
+    this.relativeTo = null,
+    this.text = null,
+    this.theme = null
+  });
+
+  /**
+   * The position of the button.  
+   */
   TreemapSeriesUpButtonPositionOptions? position;
     
-  // NOTE: relativeTo skipped - type string is ignored in gen 
-
-  // NOTE: text skipped - type string is ignored in gen 
-
+  String? relativeTo;
+    
+  String? text;
+    
+  ButtonThemeObject? theme;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    if (this.position != null) {  
-      buffer.writeAll(["\"position\":",this.position?.toJSON(), ","], "");
+
+    
+    if (this.position != null) {
+        buffer.writeAll(["\"position\":",this.position?.toJSON(), ","], "");
     }
-
-    // NOTE: skip serialization of relativeTo (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of text (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of theme (type ButtonThemeObject is ignored) ignore type: true
+    
+    if (this.relativeTo != null) {
+        buffer.writeAll(["\"relativeTo\":\'",this.relativeTo, "\',"], "");
+    }
+    
+    if (this.text != null) {
+        buffer.writeAll(["\"text\":\'",this.text, "\',"], "");
+    }
+    
+    if (this.theme != null) {
+        buffer.writeAll(["\"theme\":",this.theme?.toJSON(), ","], "");
+    }
   }
+
 
 }

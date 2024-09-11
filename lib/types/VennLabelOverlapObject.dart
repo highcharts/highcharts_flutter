@@ -12,31 +12,44 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'PositionObject.dart';
 import 'OptionFragment.dart';
 
 /** 
- * VennLabelOverlapObject 
+ * VennLabelOverlapObject
  */
 class VennLabelOverlapObject extends OptionFragment {
-  VennLabelOverlapObject( ) : super();
-  // NOTE: loss skipped - type number is ignored in gen 
 
+  VennLabelOverlapObject({
+    this.coordinates = null,
+    this.loss = null
+  });
+
+  PositionObject? coordinates;
+    
+  double? loss;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of coordinates (type PositionObject is ignored) ignore type: true
 
-    // NOTE: skip serialization of loss (type number is ignored) ignore type: true
+    
+    if (this.coordinates != null) {
+        buffer.writeAll(["\"coordinates\":",this.coordinates?.toJSON(), ","], "");
+    }
+    
+    if (this.loss != null) {
+        buffer.writeAll(["\"loss\":",this.loss, ","], "");
+    }
   }
+
 
 }

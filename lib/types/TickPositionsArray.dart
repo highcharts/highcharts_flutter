@@ -12,29 +12,38 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'Array.dart';
 import 'TimeTicksInfoObject.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * TickPositionsArray 
+ * TickPositionsArray
  */
 class TickPositionsArray extends Array {
-  TickPositionsArray( ) : super();
-  
+
+  TickPositionsArray({
+    this.info = null
+  });
+
+  TimeTicksInfoObject? info;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of info (type TimeTicksInfoObject is ignored) ignore type: true
+
+    
+    if (this.info != null) {
+        buffer.writeAll(["\"info\":",this.info?.toJSON(), ","], "");
+    }
   }
+
 
 }

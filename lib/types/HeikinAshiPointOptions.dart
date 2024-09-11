@@ -12,42 +12,63 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'CandlestickPointOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * HeikinAshiPointOptions 
+ * HeikinAshiPointOptions
  */
 class HeikinAshiPointOptions extends CandlestickPointOptions {
-  HeikinAshiPointOptions( {
+
+  HeikinAshiPointOptions({
     super.accessibility = null,
     super.borderColor = null,
     super.className = null,
+    super.close = null,
+    super.collapsed = null,
     super.color = null,
     super.colorIndex = null,
     super.connectors = null,
+    super.dashStyle = null,
     super.dataLabels = null,
     super.dragDrop = null,
+    super.drilldown = null,
     super.events = null,
+    super.id = null,
+    super.index = null,
     super.keys = null,
+    super.labelrank = null,
+    super.lat = null,
+    super.legendIndex = null,
+    super.lineColor = null,
+    super.lon = null,
     super.marker = null,
+    super.name = null,
+    super.open = null,
+    super.pointWidth = null,
     super.selected = null,
-    super.visible = null
-  }) : super();
-  
+    super.seriesIndex = null,
+    super.upColor = null,
+    super.upLineColor = null,
+    super.value = null,
+    super.visible = null,
+    super.x = null,
+    super.y = null
+  });
+
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    
+
   }
+
 
 }

@@ -12,27 +12,29 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * AxisSetExtremesEventCallback 
+ * AxisSetExtremesEventCallback
  */
 class AxisSetExtremesEventCallback extends OptionFragment {
-  AxisSetExtremesEventCallback( ) : super();
-  
+
+  AxisSetExtremesEventCallback();
+
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    
+
   }
+
 
 }

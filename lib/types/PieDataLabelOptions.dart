@@ -12,20 +12,21 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'DataLabelOptions.dart';
 import 'ConnectorShapeFunction.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * PieDataLabelOptions 
+ * PieDataLabelOptions
  */
 class PieDataLabelOptions extends DataLabelOptions {
-  PieDataLabelOptions( {
+
+  PieDataLabelOptions({
     super.align = null,
+    super.alignTo = null,
     super.allowOverlap = null,
     super.backgroundColor = null,
     super.borderColor = null,
@@ -33,17 +34,26 @@ class PieDataLabelOptions extends DataLabelOptions {
     super.borderWidth = null,
     super.className = null,
     super.color = null,
+    this.connectorColor = null,
+    this.connectorPadding = null,
+    this.connectorShape = null,
+    this.connectorWidth = null,
+    this.crookDistance = null,
     super.crop = null,
     super.defer = null,
+    super.distance = null,
     super.enabled = null,
     super.filter = null,
     super.format = null,
     super.inside = null,
+    super.labelrank = null,
     super.nullFormat = null,
+    super.outside3dPlot = null,
     super.overflow = null,
     super.padding = null,
     super.rotation = null,
     super.shape = null,
+    this.softConnector = null,
     super.style = null,
     super.textPath = null,
     super.useHTML = null,
@@ -51,40 +61,54 @@ class PieDataLabelOptions extends DataLabelOptions {
     super.x = null,
     super.y = null,
     super.zIndex = null
-  }) : super();
-  // NOTE: alignTo skipped - type string is ignored in gen 
+  });
 
-  // NOTE: connectorColor skipped - type string is ignored in gen 
-
-  // NOTE: connectorPadding skipped - type number is ignored in gen 
-
-  // NOTE: connectorWidth skipped - type number is ignored in gen 
-
-  // NOTE: crookDistance skipped - type string is ignored in gen 
-
-  // NOTE: softConnector skipped - type boolean is ignored in gen 
-
+  String? connectorColor;
+    
+  double? connectorPadding;
+    
+  ConnectorShapeFunction? connectorShape;
+    
+  double? connectorWidth;
+    
+  String? crookDistance;
+    
+  bool? softConnector;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of alignTo (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of connectorColor (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of connectorPadding (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of connectorShape (type ConnectorShapeFunction is ignored) ignore type: true
-
-    // NOTE: skip serialization of connectorWidth (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of crookDistance (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of softConnector (type boolean is ignored) ignore type: true
+    
+    if (this.connectorColor != null) {
+        buffer.writeAll(["\"connectorColor\":\'",this.connectorColor, "\',"], "");
+    }
+    
+    if (this.connectorPadding != null) {
+        buffer.writeAll(["\"connectorPadding\":",this.connectorPadding, ","], "");
+    }
+    
+    if (this.connectorShape != null) {
+        buffer.writeAll(["\"connectorShape\":",this.connectorShape?.toJSON(), ","], "");
+    }
+    
+    if (this.connectorWidth != null) {
+        buffer.writeAll(["\"connectorWidth\":",this.connectorWidth, ","], "");
+    }
+    
+    if (this.crookDistance != null) {
+        buffer.writeAll(["\"crookDistance\":\'",this.crookDistance, "\',"], "");
+    }
+    
+    if (this.softConnector != null) {
+        buffer.writeAll(["\"softConnector\":",this.softConnector, ","], "");
+    }
   }
+
 
 }

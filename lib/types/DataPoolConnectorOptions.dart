@@ -12,32 +12,45 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * DataPoolConnectorOptions 
+ * DataPoolConnectorOptions
  */
 class DataPoolConnectorOptions extends OptionFragment {
-  DataPoolConnectorOptions( ) : super();
-  // NOTE: id skipped - type string is ignored in gen 
+
+  DataPoolConnectorOptions({
+    this.id = null
+  });
+
+  String? id;
+    
+  // NOTE: options skipped - type DataConnectorTypes[T]["prototype"]["options"] is ignored in gen 
+
+  // NOTE: type skipped - type T is ignored in gen 
 
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of id (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of options (type DataConnectorTypes[T]["prototype"]["options"] is ignored) ignore type: true
+    
+    if (this.id != null) {
+        buffer.writeAll(["\"id\":\'",this.id, "\',"], "");
+    }
+    // NOTE: skip serialization of options (type DataConnectorTypes[T]["prototype"]["options"] ignored, skipped: true)
 
-    // NOTE: skip serialization of type (type T is ignored) ignore type: 1
+    // NOTE: skip serialization of type (type T ignored, skipped: true)
+
   }
+
 
 }

@@ -12,32 +12,49 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * LastVisiblePriceLabelOptions 
+ * LastVisiblePriceLabelOptions
  */
 class LastVisiblePriceLabelOptions extends OptionFragment {
-  LastVisiblePriceLabelOptions( ) : super();
-  // NOTE: enabled skipped - type true is ignored in gen 
 
-  // NOTE: color skipped - type string is ignored in gen 
+  LastVisiblePriceLabelOptions({
+    this.color = null,
+    this.enabled = null
+  });
 
+  /**
+   * Flag to enable crosshair's label. 
+   * 
+   * Defaults to 'false'. 
+   */
+  bool? enabled;
+    
+  String? color;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of enabled (type true is ignored) ignore type: 1
 
-    // NOTE: skip serialization of color (type string is ignored) ignore type: true
+    
+    if (this.enabled != null) {
+        buffer.writeAll(["\"enabled\":",this.enabled, ","], "");
+    }
+    
+    if (this.color != null) {
+        buffer.writeAll(["\"color\":\'",this.color, "\',"], "");
+    }
   }
+
 
 }

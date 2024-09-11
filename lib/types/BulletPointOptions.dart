@@ -12,50 +12,79 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'ColumnPointOptions.dart';
 import 'BulletTargetOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * BulletPointOptions 
+ * BulletPointOptions
  */
 class BulletPointOptions extends ColumnPointOptions {
-  BulletPointOptions( {
+
+  BulletPointOptions({
     super.accessibility = null,
-    super.borderColor = null,
+    this.borderColor = null,
     super.className = null,
+    super.collapsed = null,
     super.color = null,
     super.colorIndex = null,
     super.connectors = null,
+    super.dashStyle = null,
     super.dataLabels = null,
     super.dragDrop = null,
+    super.drilldown = null,
     super.events = null,
+    super.id = null,
+    super.index = null,
     super.keys = null,
+    super.labelrank = null,
+    super.lat = null,
+    super.legendIndex = null,
+    super.lon = null,
     super.marker = null,
+    super.name = null,
+    super.pointWidth = null,
     super.selected = null,
-    super.visible = null
-  }) : super();
-  // NOTE: borderColor skipped - type string is ignored in gen 
+    super.seriesIndex = null,
+    this.target = null,
+    this.targetOptions = null,
+    super.value = null,
+    super.visible = null,
+    super.x = null,
+    super.y = null
+  });
 
-  // NOTE: target skipped - type number is ignored in gen 
-
+  String? borderColor;
+    
+  double? target;
+    
+  BulletTargetOptions? targetOptions;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of borderColor (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of target (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of targetOptions (type BulletTargetOptions is ignored) ignore type: true
+    
+    if (this.borderColor != null) {
+        buffer.writeAll(["\"borderColor\":\'",this.borderColor, "\',"], "");
+    }
+    
+    if (this.target != null) {
+        buffer.writeAll(["\"target\":",this.target, ","], "");
+    }
+    
+    if (this.targetOptions != null) {
+        buffer.writeAll(["\"targetOptions\":",this.targetOptions?.toJSON(), ","], "");
+    }
   }
+
 
 }

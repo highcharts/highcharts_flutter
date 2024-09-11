@@ -12,29 +12,40 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * MarkerClusterPointsStateObject 
+ * MarkerClusterPointsStateObject
  */
 class MarkerClusterPointsStateObject extends OptionFragment {
-  MarkerClusterPointsStateObject( ) : super();
-  
+
+  MarkerClusterPointsStateObject({
+    this.newState = null,
+    this.oldState = null
+  });
+
+  Map<String, String>? oldState;
+    
+  Map<String, String>? newState;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of oldState (type Generic is ignored) ignore type: true
 
-    // NOTE: skip serialization of newState (type Generic is ignored) ignore type: true
+    // NOTE: skip serialization of oldState (type Generic ignored, skipped: true)
+
+    // NOTE: skip serialization of newState (type Generic ignored, skipped: true)
+
   }
+
 
 }

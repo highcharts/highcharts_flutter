@@ -12,28 +12,37 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'GroupMapOptionsObject.dart';
 import 'OptionFragment.dart';
 
 /** 
- * GroupMapObject 
+ * GroupMapObject
  */
 class GroupMapObject extends OptionFragment {
-  GroupMapObject( ) : super();
-  
+
+  GroupMapObject({
+    this.options = null
+  });
+
+  GroupMapOptionsObject? options;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of options (type GroupMapOptionsObject is ignored) ignore type: true
+
+    
+    if (this.options != null) {
+        buffer.writeAll(["\"options\":",this.options?.toJSON(), ","], "");
+    }
   }
+
 
 }

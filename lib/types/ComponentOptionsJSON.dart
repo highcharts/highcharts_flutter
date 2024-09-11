@@ -12,63 +12,100 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
-import 'JSON.dart';
 import 'OptionFragment.dart';
 
 /** 
- * ComponentOptionsJSON 
+ * ComponentOptionsJSON
  */
 class ComponentOptionsJSON extends OptionFragment {
-  ComponentOptionsJSON( ) : super();
-  // NOTE: caption skipped - type string is ignored in gen 
 
-  // NOTE: className skipped - type string is ignored in gen 
+  ComponentOptionsJSON({
+    this.caption = null,
+    this.className = null,
+    this.id = null,
+    this.parentElement = null,
+    this.renderTo = null,
+    this.style = null,
+    this.title = null,
+    this.type = null
+  });
 
-  // NOTE: renderTo skipped - type string is ignored in gen 
+  String? caption;
+    
+  String? className;
+    
+  String? renderTo;
+    
+  // NOTE: editableOptions skipped - type Generic is ignored in gen 
 
-  // NOTE: id skipped - type string is ignored in gen 
+  // NOTE: editableOptionsBindings skipped - type Generic is ignored in gen 
 
-  // NOTE: parentElement skipped - type string is ignored in gen 
+  String? id;
+    
+  // NOTE: parentCell skipped - type JSON is ignored in gen 
 
-  // NOTE: title skipped - type string is ignored in gen 
+  String? parentElement;
+    
+  var style;
+    
+  // NOTE: sync skipped - type Generic is ignored in gen 
 
-  // NOTE: type skipped - type string is ignored in gen 
-
+  String? title;
+    
+  String? type;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of caption (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of className (type string is ignored) ignore type: true
+    
+    if (this.caption != null) {
+        buffer.writeAll(["\"caption\":\'",this.caption, "\',"], "");
+    }
+    
+    if (this.className != null) {
+        buffer.writeAll(["\"className\":\'",this.className, "\',"], "");
+    }
+    
+    if (this.renderTo != null) {
+        buffer.writeAll(["\"renderTo\":\'",this.renderTo, "\',"], "");
+    }
+    // NOTE: skip serialization of editableOptions (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of renderTo (type string is ignored) ignore type: true
+    // NOTE: skip serialization of editableOptionsBindings (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of editableOptions (type Generic is ignored) ignore type: true
+    
+    if (this.id != null) {
+        buffer.writeAll(["\"id\":\'",this.id, "\',"], "");
+    }
+    // NOTE: skip serialization of parentCell (type JSON ignored, skipped: true)
 
-    // NOTE: skip serialization of editableOptionsBindings (type Generic is ignored) ignore type: true
+    
+    if (this.parentElement != null) {
+        buffer.writeAll(["\"parentElement\":\'",this.parentElement, "\',"], "");
+    }
+    // NOTE: skip serialization of style (type {} ignored, skipped: true)
 
-    // NOTE: skip serialization of id (type string is ignored) ignore type: true
+    // NOTE: skip serialization of sync (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of parentCell (type JSON is ignored) ignore type: true
-
-    // NOTE: skip serialization of parentElement (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of style (type {} is ignored) ignore type: true
-
-    // NOTE: skip serialization of sync (type Generic is ignored) ignore type: true
-
-    // NOTE: skip serialization of title (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of type (type string is ignored) ignore type: true
+    
+    if (this.title != null) {
+        buffer.writeAll(["\"title\":\'",this.title, "\',"], "");
+    }
+    
+    if (this.type != null) {
+        buffer.writeAll(["\"type\":\'",this.type, "\',"], "");
+    }
   }
+
 
 }

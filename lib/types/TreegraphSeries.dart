@@ -12,10 +12,9 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'TreegraphSeriesOptions.dart';
 import 'Series.dart';
 import 'PointOptions.dart';
@@ -34,8 +33,7 @@ class TreegraphSeries extends Series {
     this.data = null
   });
 
-  
-  @override
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
@@ -56,16 +54,13 @@ class TreegraphSeries extends Series {
         if (point.length > 1) {
           seriesData.writeAll(["["], "");
         }
-
-          for (var sub in point) {
-            if (sub is String) {
-              seriesData.writeAll(["\"", sub, "\","], "");
-            } else {
-              seriesData.writeAll([sub], ",");
-            }
-
+        for (var sub in point) {
+          if (sub is String) {
+            seriesData.writeAll(["\"", sub, "\","], "");
+          } else {
+            seriesData.writeAll([sub], ",");
           }
-
+        }
         if (point.length > 1) {
           seriesData.writeAll(["],"], "");
         } else {
@@ -92,41 +87,39 @@ class TreegraphSeries extends Series {
 
 
     
-    if (this.options?.dataLabels != null) {  
-     StringBuffer arrData = StringBuffer();
 
-      for (var item in this.options!.dataLabels!) {
-          arrData.write("{");
-          item.toJSONInner(arrData);
-          arrData.write("}");
-      }
-      buffer.writeAll(["\"dataLabels\": [", arrData , "],"], "");   
-        
+    
+    if (this.options?.collapseButton != null) {
+        buffer.writeAll(["\"collapseButton\":",this.options?.collapseButton?.toJSON(), ","], "");
     }
+    // NOTE: skip serialization of dataLabels (type TreegraphDataLabelOptions[] ignored, skipped: false)
 
-    if (this.options?.collapseButton != null) {  
-      buffer.writeAll(["\"collapseButton\":",this.options?.collapseButton?.toJSON(), ","], "");
+    
+    if (this.options?.fillSpace != null) {
+        buffer.writeAll(["\"fillSpace\":",this.options?.fillSpace, ","], "");
     }
-
-    if (this.options?.fillSpace != null) {  
-      buffer.writeAll(["\"fillSpace\":",this.options?.fillSpace, ","], "");
+    
+    if (this.options?.link != null) {
+        buffer.writeAll(["\"link\":",this.options?.link?.toJSON(), ","], "");
     }
-
-    if (this.options?.link != null) {  
-      buffer.writeAll(["\"link\":",this.options?.link?.toJSON(), ","], "");
+    
+    if (this.options?.marker != null) {
+        buffer.writeAll(["\"marker\":",this.options?.marker?.toJSON(), ","], "");
     }
-
-    // NOTE: skip serialization of nodeDistance (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of nodeWidth (type string is ignored) ignore type: true
-
-    if (this.options?.reversed != null) {  
-      buffer.writeAll(["\"reversed\":",this.options?.reversed, ","], "");
+    
+    if (this.options?.nodeDistance != null) {
+        buffer.writeAll(["\"nodeDistance\":\'",this.options?.nodeDistance, "\',"], "");
     }
-
-    if (this.options?.marker != null) {  
-      buffer.writeAll(["\"marker\":",this.options?.marker?.toJSON(), ","], "");
+    
+    if (this.options?.nodeWidth != null) {
+        buffer.writeAll(["\"nodeWidth\":\'",this.options?.nodeWidth, "\',"], "");
     }
+    
+    if (this.options?.reversed != null) {
+        buffer.writeAll(["\"reversed\":",this.options?.reversed, ","], "");
+    }
+    // NOTE: skip serialization of tooltip (type Generic ignored, skipped: true)
+
   }
 
 }

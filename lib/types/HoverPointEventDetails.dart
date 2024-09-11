@@ -12,34 +12,48 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * HoverPointEventDetails 
+ * HoverPointEventDetails
  */
 class HoverPointEventDetails extends OptionFragment {
-  HoverPointEventDetails( ) : super();
-  // NOTE: isDataGrid skipped - type boolean is ignored in gen 
 
-  // NOTE: sender skipped - type string is ignored in gen 
+  HoverPointEventDetails({
+    this.isDataGrid = null,
+    this.sender = null
+  });
 
+  // NOTE: detail skipped - type AnyRecord is ignored in gen 
+
+  bool? isDataGrid;
+    
+  String? sender;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of detail (type AnyRecord is ignored) ignore type: 1
 
-    // NOTE: skip serialization of isDataGrid (type boolean is ignored) ignore type: true
+    // NOTE: skip serialization of detail (type AnyRecord ignored, skipped: true)
 
-    // NOTE: skip serialization of sender (type string is ignored) ignore type: true
+    
+    if (this.isDataGrid != null) {
+        buffer.writeAll(["\"isDataGrid\":",this.isDataGrid, ","], "");
+    }
+    
+    if (this.sender != null) {
+        buffer.writeAll(["\"sender\":\'",this.sender, "\',"], "");
+    }
   }
+
 
 }

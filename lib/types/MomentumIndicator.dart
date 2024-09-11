@@ -12,30 +12,41 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * MomentumIndicator 
+ * MomentumIndicator
  */
 class MomentumIndicator extends OptionFragment {
-  MomentumIndicator( ) : super();
-  // NOTE: nameBase skipped - type string is ignored in gen 
 
+  MomentumIndicator({
+    this.nameBase = null
+  });
+
+  // NOTE: pointClass skipped - type typeof MomentumPoint is ignored in gen 
+
+  String? nameBase;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of pointClass (type typeof MomentumPoint is ignored) ignore type: true
 
-    // NOTE: skip serialization of nameBase (type string is ignored) ignore type: true
+    // NOTE: skip serialization of pointClass (type typeof MomentumPoint ignored, skipped: true)
+
+    
+    if (this.nameBase != null) {
+        buffer.writeAll(["\"nameBase\":\'",this.nameBase, "\',"], "");
+    }
   }
+
 
 }

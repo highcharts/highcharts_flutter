@@ -12,33 +12,41 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'CSSObject.dart';
 import 'OptionFragment.dart';
 
+
 /** 
- * DMILineOptions 
+ * DMILineOptions
  */
 class DMILineOptions extends OptionFragment {
-  DMILineOptions( {
+
+  DMILineOptions({
     this.styles = null
-  }) : super();
+  });
+
+  /**
+   * Styles for the +DI line.  
+   */
   CSSObject? styles;
     
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    if (this.styles != null) {  
-      buffer.writeAll(["\"styles\":",this.styles?.toJSON(), ","], "");
+
+    
+    if (this.styles != null) {
+        buffer.writeAll(["\"styles\":",this.styles?.toJSON(), ","], "");
     }
   }
+
 
 }

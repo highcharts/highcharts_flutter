@@ -12,34 +12,51 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'LinearGradientColor.dart';
 import 'RadialGradientColor.dart';
-import 'GradientColorStop.dart';
 import 'OptionFragment.dart';
 
 /** 
- * GradientColor 
+ * GradientColor
  */
 class GradientColor extends OptionFragment {
-  GradientColor( ) : super();
-  
+
+  GradientColor({
+    this.linearGradient = null,
+    this.radialGradient = null,
+    this.stops = null
+  });
+
+  LinearGradientColor? linearGradient;
+    
+  RadialGradientColor? radialGradient;
+    
+  List<List<dynamic>>? stops;
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of linearGradient (type LinearGradientColor is ignored) ignore type: true
 
-    // NOTE: skip serialization of radialGradient (type RadialGradientColor is ignored) ignore type: true
-
-    // NOTE: skip serialization of stops (type GradientColorStop[] is ignored) ignore type: true
+    
+    if (this.linearGradient != null) {
+        buffer.writeAll(["\"linearGradient\":",this.linearGradient?.toJSON(), ","], "");
+    }
+    
+    if (this.radialGradient != null) {
+        buffer.writeAll(["\"radialGradient\":",this.radialGradient?.toJSON(), ","], "");
+    }
+    
+    if (this.stops != null) {
+        buffer.writeAll(["\"stops\":",this.stops, ","], "");
+    }
   }
+
 
 }

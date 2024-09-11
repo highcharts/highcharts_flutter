@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:highcharts_flutter/Highcharts.dart';
-import 'package:highcharts_flutter/types/LineSeries.dart';
 
-import 'package:highcharts_flutter/types/TitleOptions.dart';
+import 'package:highcharts_flutter/highcharts.dart';
+import 'package:highcharts_flutter/types/ChartOptions.dart';
 import 'package:highcharts_flutter/types/DataOptions.dart';
+import 'package:highcharts_flutter/types/LineSeries.dart';
+import 'package:highcharts_flutter/types/TitleOptions.dart';
 
 void main() {
   runApp(const MyApp());
@@ -40,6 +41,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
     final HighchartsChart chart = HighchartsChart(
       HighchartsOptions(
+        chart: ChartOptions(
+          backgroundColor: '#FFF0'
+        ),
         data: DataOptions(
         ),
         title: TitleOptions(

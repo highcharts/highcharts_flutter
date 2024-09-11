@@ -12,32 +12,52 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * EventOptions 
+ * EventOptions
  */
 class EventOptions extends OptionFragment {
-  EventOptions( ) : super();
-  // NOTE: order skipped - type number is ignored in gen 
 
-  // NOTE: passive skipped - type boolean is ignored in gen 
+  EventOptions({
+    this.order = null,
+    this.passive = null
+  });
 
+  double? order;
+    
+  bool? passive;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of order (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of passive (type boolean is ignored) ignore type: true
+    
+    if (this.order != null) {
+        buffer.writeAll(["\"order\":",this.order, ","], "");
+    }
+    
+    if (this.passive != null) {
+        buffer.writeAll(["\"passive\":",this.passive, ","], "");
+    }
+    
+    if (this.order != null) {
+        buffer.writeAll(["\"order\":",this.order, ","], "");
+    }
+    
+    if (this.passive != null) {
+        buffer.writeAll(["\"passive\":",this.passive, ","], "");
+    }
   }
+
 
 }

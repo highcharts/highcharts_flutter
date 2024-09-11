@@ -12,40 +12,58 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * ChartPositionObject 
+ * ChartPositionObject
  */
 class ChartPositionObject extends OptionFragment {
-  ChartPositionObject( ) : super();
-  // NOTE: left skipped - type number is ignored in gen 
 
-  // NOTE: scaleX skipped - type number is ignored in gen 
+  ChartPositionObject({
+    this.left = null,
+    this.scaleX = null,
+    this.scaleY = null,
+    this.top = null
+  });
 
-  // NOTE: scaleY skipped - type number is ignored in gen 
-
-  // NOTE: top skipped - type number is ignored in gen 
-
+  double? left;
+    
+  double? scaleX;
+    
+  double? scaleY;
+    
+  double? top;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of left (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of scaleX (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of scaleY (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of top (type number is ignored) ignore type: true
+    
+    if (this.left != null) {
+        buffer.writeAll(["\"left\":",this.left, ","], "");
+    }
+    
+    if (this.scaleX != null) {
+        buffer.writeAll(["\"scaleX\":",this.scaleX, ","], "");
+    }
+    
+    if (this.scaleY != null) {
+        buffer.writeAll(["\"scaleY\":",this.scaleY, ","], "");
+    }
+    
+    if (this.top != null) {
+        buffer.writeAll(["\"top\":",this.top, ","], "");
+    }
   }
+
 
 }

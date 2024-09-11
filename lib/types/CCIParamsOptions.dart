@@ -12,31 +12,32 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'SMAParamsOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * CCIParamsOptions 
+ * CCIParamsOptions
  */
 class CCIParamsOptions extends SMAParamsOptions {
-  CCIParamsOptions( {
+
+  CCIParamsOptions({
     super.index = null,
     super.period = null
-  }) : super();
-  
+  });
+
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    
+
   }
+
 
 }

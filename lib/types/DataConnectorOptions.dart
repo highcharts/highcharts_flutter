@@ -12,34 +12,54 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'SortModifierOptions.dart';
 import 'DataTableOptions.dart';
 import 'Metadata.dart';
 import 'OptionFragment.dart';
 
+
 /** 
- * DataConnectorOptions 
+ * DataConnectorOptions
  */
 class DataConnectorOptions extends OptionFragment {
-  DataConnectorOptions( ) : super();
-  
+
+  DataConnectorOptions({
+    this.dataModifier = null,
+    this.dataTable = null,
+    this.metadata = null
+  });
+
+  SortModifierOptions? dataModifier;
+    
+  DataTableOptions? dataTable;
+    
+  Metadata? metadata;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of dataModifier (type SortModifierOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of dataTable (type DataTableOptions is ignored) ignore type: true
-
-    // NOTE: skip serialization of metadata (type Metadata is ignored) ignore type: true
+    
+    if (this.dataModifier != null) {
+        buffer.writeAll(["\"dataModifier\":",this.dataModifier?.toJSON(), ","], "");
+    }
+    
+    if (this.dataTable != null) {
+        buffer.writeAll(["\"dataTable\":",this.dataTable?.toJSON(), ","], "");
+    }
+    
+    if (this.metadata != null) {
+        buffer.writeAll(["\"metadata\":",this.metadata?.toJSON(), ","], "");
+    }
   }
+
 
 }

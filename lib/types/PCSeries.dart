@@ -12,10 +12,9 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'PCOptions.dart';
 import 'Series.dart';
 import 'PointOptions.dart';
@@ -34,8 +33,7 @@ class PCSeries extends Series {
     this.data = null
   });
 
-  
-  @override
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
@@ -56,16 +54,13 @@ class PCSeries extends Series {
         if (point.length > 1) {
           seriesData.writeAll(["["], "");
         }
-
-          for (var sub in point) {
-            if (sub is String) {
-              seriesData.writeAll(["\"", sub, "\","], "");
-            } else {
-              seriesData.writeAll([sub], ",");
-            }
-
+        for (var sub in point) {
+          if (sub is String) {
+            seriesData.writeAll(["\"", sub, "\","], "");
+          } else {
+            seriesData.writeAll([sub], ",");
           }
-
+        }
         if (point.length > 1) {
           seriesData.writeAll(["],"], "");
         } else {
@@ -92,15 +87,13 @@ class PCSeries extends Series {
 
 
     
-    // NOTE: skip serialization of params (type PCParamsOptions is ignored) ignore type: false
 
-    if (this.options?.bottomLine != null) {  
-      buffer.writeAll(["\"bottomLine\":",this.options?.bottomLine, ","], "");
-    }
+    // NOTE: skip serialization of params (type PCParamsOptions ignored, skipped: false)
 
-    if (this.options?.topLine != null) {  
-      buffer.writeAll(["\"topLine\":",this.options?.topLine, ","], "");
-    }
+    // NOTE: skip serialization of bottomLine (type Generic ignored, skipped: true)
+
+    // NOTE: skip serialization of topLine (type Generic ignored, skipped: true)
+
   }
 
 }

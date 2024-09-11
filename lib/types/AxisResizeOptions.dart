@@ -12,55 +12,87 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'AxisResizeControlledAxisOptions.dart';
 import 'OptionFragment.dart';
 
+
 /** 
- * AxisResizeOptions 
+ * AxisResizeOptions
  */
 class AxisResizeOptions extends OptionFragment {
-  AxisResizeOptions( ) : super();
-  // NOTE: cursor skipped - type string is ignored in gen 
 
-  // NOTE: enabled skipped - type boolean is ignored in gen 
+  AxisResizeOptions({
+    this.controlledAxis = null,
+    this.cursor = null,
+    this.enabled = null,
+    this.lineColor = null,
+    this.lineDashStyle = null,
+    this.lineWidth = null,
+    this.x = null,
+    this.y = null
+  });
 
-  // NOTE: lineColor skipped - type string is ignored in gen 
-
-  // NOTE: lineDashStyle skipped - type string is ignored in gen 
-
-  // NOTE: lineWidth skipped - type number is ignored in gen 
-
-  // NOTE: x skipped - type number is ignored in gen 
-
-  // NOTE: y skipped - type number is ignored in gen 
-
+  AxisResizeControlledAxisOptions? controlledAxis;
+    
+  String? cursor;
+    
+  bool? enabled;
+    
+  String? lineColor;
+    
+  String? lineDashStyle;
+    
+  double? lineWidth;
+    
+  double? x;
+    
+  double? y;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of controlledAxis (type AxisResizeControlledAxisOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of cursor (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of enabled (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of lineColor (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of lineDashStyle (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of lineWidth (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of x (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of y (type number is ignored) ignore type: true
+    
+    if (this.controlledAxis != null) {
+        buffer.writeAll(["\"controlledAxis\":",this.controlledAxis?.toJSON(), ","], "");
+    }
+    
+    if (this.cursor != null) {
+        buffer.writeAll(["\"cursor\":\'",this.cursor, "\',"], "");
+    }
+    
+    if (this.enabled != null) {
+        buffer.writeAll(["\"enabled\":",this.enabled, ","], "");
+    }
+    
+    if (this.lineColor != null) {
+        buffer.writeAll(["\"lineColor\":\'",this.lineColor, "\',"], "");
+    }
+    
+    if (this.lineDashStyle != null) {
+        buffer.writeAll(["\"lineDashStyle\":\'",this.lineDashStyle, "\',"], "");
+    }
+    
+    if (this.lineWidth != null) {
+        buffer.writeAll(["\"lineWidth\":",this.lineWidth, ","], "");
+    }
+    
+    if (this.x != null) {
+        buffer.writeAll(["\"x\":",this.x, ","], "");
+    }
+    
+    if (this.y != null) {
+        buffer.writeAll(["\"y\":",this.y, ","], "");
+    }
   }
+
 
 }

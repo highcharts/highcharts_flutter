@@ -12,38 +12,61 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'Point.dart';
 import 'SVGElement.dart';
 import 'OptionFragment.dart';
 
 /** 
- * AxisPointBreakEventObject 
+ * AxisPointBreakEventObject
  */
 class AxisPointBreakEventObject extends OptionFragment {
-  AxisPointBreakEventObject( ) : super();
-  // NOTE: type skipped - type string is ignored in gen 
 
+  AxisPointBreakEventObject({
+    this.brk = null,
+    this.point = null,
+    this.target = null,
+    this.type = null
+  });
+
+  Map<String, String>? brk;
+    
+  Point? point;
+    
+  // NOTE: preventDefault skipped - type Function is ignored in gen 
+
+  SVGElement? target;
+    
+  String? type;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of brk (type Generic is ignored) ignore type: true
 
-    // NOTE: skip serialization of point (type Point is ignored) ignore type: true
+    // NOTE: skip serialization of brk (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of preventDefault (type Function is ignored) ignore type: 1
+    
+    if (this.point != null) {
+        buffer.writeAll(["\"point\":",this.point?.toJSON(), ","], "");
+    }
+    // NOTE: skip serialization of preventDefault (type Function ignored, skipped: true)
 
-    // NOTE: skip serialization of target (type SVGElement is ignored) ignore type: true
-
-    // NOTE: skip serialization of type (type string is ignored) ignore type: true
+    
+    if (this.target != null) {
+        buffer.writeAll(["\"target\":",this.target?.toJSON(), ","], "");
+    }
+    
+    if (this.type != null) {
+        buffer.writeAll(["\"type\":\'",this.type, "\',"], "");
+    }
   }
+
 
 }

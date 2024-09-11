@@ -12,48 +12,56 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'AxisTitleOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * Axis3DTitleOptions 
+ * Axis3DTitleOptions
  */
 class Axis3DTitleOptions extends AxisTitleOptions {
-  Axis3DTitleOptions( {
+
+  Axis3DTitleOptions({
     super.align = null,
     super.enabled = null,
     super.margin = null,
     super.offset = null,
-    super.position3d = null,
+    this.position3d = null,
     super.reserveSpace = null,
     super.rotation = null,
-    super.skew3d = null,
+    this.skew3d = null,
     super.style = null,
     super.text = null,
     super.textAlign = null,
     super.useHTML = null,
     super.x = null,
     super.y = null
-  }) : super();
-  // NOTE: position3d skipped - type string is ignored in gen 
+  });
 
-  // NOTE: skew3d skipped - type boolean is ignored in gen 
-
+  String? position3d;
+    
+  bool? skew3d;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of position3d (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of skew3d (type boolean is ignored) ignore type: true
+    
+    if (this.position3d != null) {
+        buffer.writeAll(["\"position3d\":\'",this.position3d, "\',"], "");
+    }
+    
+    if (this.skew3d != null) {
+        buffer.writeAll(["\"skew3d\":",this.skew3d, ","], "");
+    }
   }
+
 
 }

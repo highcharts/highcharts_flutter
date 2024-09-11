@@ -12,34 +12,49 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'HTMLElement.dart';
 import 'OptionFragment.dart';
 
 /** 
- * ScreenReaderSectionObject 
+ * ScreenReaderSectionObject
  */
 class ScreenReaderSectionObject extends OptionFragment {
-  ScreenReaderSectionObject( ) : super();
-  
+
+  ScreenReaderSectionObject({
+    this.element = null
+  });
+
+  // NOTE: afterInserted skipped - type Function is ignored in gen 
+
+  HTMLElement? element;
+    
+  // NOTE: buildContent skipped - type Function is ignored in gen 
+
+  // NOTE: insertIntoDOM skipped - type Function is ignored in gen 
+
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of afterInserted (type Function is ignored) ignore type: 1
 
-    // NOTE: skip serialization of element (type HTMLElement is ignored) ignore type: true
+    // NOTE: skip serialization of afterInserted (type Function ignored, skipped: true)
 
-    // NOTE: skip serialization of buildContent (type Function is ignored) ignore type: 1
+    
+    if (this.element != null) {
+        buffer.writeAll(["\"element\":",this.element?.toJSON(), ","], "");
+    }
+    // NOTE: skip serialization of buildContent (type Function ignored, skipped: true)
 
-    // NOTE: skip serialization of insertIntoDOM (type Function is ignored) ignore type: 1
+    // NOTE: skip serialization of insertIntoDOM (type Function ignored, skipped: true)
+
   }
+
 
 }

@@ -12,31 +12,45 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'HTMLElement.dart';
 import 'NavigationBindingsOptions.dart';
 import 'OptionFragment.dart';
 
 /** 
- * NavigationBindingsButtonEventsObject 
+ * NavigationBindingsButtonEventsObject
  */
 class NavigationBindingsButtonEventsObject extends OptionFragment {
-  NavigationBindingsButtonEventsObject( ) : super();
-  
+
+  NavigationBindingsButtonEventsObject({
+    this.button = null,
+    this.events = null
+  });
+
+  HTMLElement? button;
+    
+  NavigationBindingsOptions? events;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of button (type HTMLElement is ignored) ignore type: true
 
-    // NOTE: skip serialization of events (type NavigationBindingsOptions is ignored) ignore type: true
+    
+    if (this.button != null) {
+        buffer.writeAll(["\"button\":",this.button?.toJSON(), ","], "");
+    }
+    
+    if (this.events != null) {
+        buffer.writeAll(["\"events\":",this.events?.toJSON(), ","], "");
+    }
   }
+
 
 }

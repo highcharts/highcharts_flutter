@@ -12,27 +12,29 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * ObjectEachCallback 
+ * ObjectEachCallback
  */
 class ObjectEachCallback extends OptionFragment {
-  ObjectEachCallback( ) : super();
-  
+
+  ObjectEachCallback();
+
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    
+
   }
+
 
 }

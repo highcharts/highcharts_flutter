@@ -12,10 +12,9 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'SunburstSeriesOptions.dart';
 import 'Series.dart';
 import 'PointOptions.dart';
@@ -34,8 +33,7 @@ class SunburstSeries extends Series {
     this.data = null
   });
 
-  
-  @override
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
@@ -56,16 +54,13 @@ class SunburstSeries extends Series {
         if (point.length > 1) {
           seriesData.writeAll(["["], "");
         }
-
-          for (var sub in point) {
-            if (sub is String) {
-              seriesData.writeAll(["\"", sub, "\","], "");
-            } else {
-              seriesData.writeAll([sub], ",");
-            }
-
+        for (var sub in point) {
+          if (sub is String) {
+            seriesData.writeAll(["\"", sub, "\","], "");
+          } else {
+            seriesData.writeAll([sub], ",");
           }
-
+        }
         if (point.length > 1) {
           seriesData.writeAll(["],"], "");
         } else {
@@ -92,51 +87,75 @@ class SunburstSeries extends Series {
 
 
     
-    if (this.options?.center != null) {  
-     StringBuffer arrData = StringBuffer();
 
+    
+    if (this.options?.allowDrillToNode != null) {
+        buffer.writeAll(["\"allowDrillToNode\":",this.options?.allowDrillToNode, ","], "");
+    }
+    
+    if (this.options?.allowTraversingTree != null) {
+        buffer.writeAll(["\"allowTraversingTree\":",this.options?.allowTraversingTree, ","], "");
+    }
+    
+    if (this.options?.breadcrumbs != null) {
+        buffer.writeAll(["\"breadcrumbs\":",this.options?.breadcrumbs?.toJSON(), ","], "");
+    }
+    
+    if (this.options?.center != null) {
+      StringBuffer arrData = StringBuffer();
       arrData.writeAll(this.options!.center!, ",");
-      buffer.writeAll(["\"center\": [", arrData , "],"], "");   
-        
+      buffer.writeAll(["\"center\": [", arrData , "],"], "");
     }
-
-    if (this.options?.dataLabels != null) {  
-     StringBuffer arrData = StringBuffer();
-
-      for (var item in this.options!.dataLabels!) {
-          arrData.write("{");
-          item.toJSONInner(arrData);
-          arrData.write("}");
-      }
-      buffer.writeAll(["\"dataLabels\": [", arrData , "],"], "");   
-        
+    
+    if (this.options?.clip != null) {
+        buffer.writeAll(["\"clip\":",this.options?.clip, ","], "");
     }
-
-    if (this.options?.endAngle != null) {  
-      buffer.writeAll(["\"endAngle\":",this.options?.endAngle, ","], "");
+    
+    if (this.options?.colorByPoint != null) {
+        buffer.writeAll(["\"colorByPoint\":",this.options?.colorByPoint, ","], "");
     }
+    // NOTE: skip serialization of data (type SunburstPointOptions)[] ignored, skipped: false)
 
-    // NOTE: skip serialization of levels (type SunburstSeriesLevelOptions[] is ignored) ignore type: false
+    // NOTE: skip serialization of dataLabels (type SunburstDataLabelOptions[] ignored, skipped: false)
 
-    if (this.options?.levelSize != null) {  
-      buffer.writeAll(["\"levelSize\":",this.options?.levelSize?.toJSON(), ","], "");
+    
+    if (this.options?.endAngle != null) {
+        buffer.writeAll(["\"endAngle\":",this.options?.endAngle, ","], "");
     }
-
-    // NOTE: skip serialization of mapIdToNode (type Generic is ignored) ignore type: true
-
-    if (this.options?.rootId != null) {  
-      buffer.writeAll(["\"rootId\":\'",this.options?.rootId, "\',"], "");
+    
+    if (this.options?.levelIsConstant != null) {
+        buffer.writeAll(["\"levelIsConstant\":",this.options?.levelIsConstant, ","], "");
     }
+    // NOTE: skip serialization of levels (type SunburstSeriesLevelOptions[] ignored, skipped: false)
 
-    if (this.options?.slicedOffset != null) {  
-      buffer.writeAll(["\"slicedOffset\":",this.options?.slicedOffset, ","], "");
+    
+    if (this.options?.levelSize != null) {
+        buffer.writeAll(["\"levelSize\":",this.options?.levelSize?.toJSON(), ","], "");
     }
+    // NOTE: skip serialization of mapIdToNode (type Generic ignored, skipped: true)
 
-    if (this.options?.startAngle != null) {  
-      buffer.writeAll(["\"startAngle\":",this.options?.startAngle, ","], "");
+    
+    if (this.options?.rootId != null) {
+        buffer.writeAll(["\"rootId\":\'",this.options?.rootId, "\',"], "");
     }
+    
+    if (this.options?.slicedOffset != null) {
+        buffer.writeAll(["\"slicedOffset\":",this.options?.slicedOffset, ","], "");
+    }
+    
+    if (this.options?.startAngle != null) {
+        buffer.writeAll(["\"startAngle\":",this.options?.startAngle, ","], "");
+    }
+    // NOTE: skip serialization of states (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
+    
+    if (this.options?.traverseUpButton != null) {
+        buffer.writeAll(["\"traverseUpButton\":",this.options?.traverseUpButton?.toJSON(), ","], "");
+    }
+    
+    if (this.options?.opacity != null) {
+        buffer.writeAll(["\"opacity\":",this.options?.opacity, ","], "");
+    }
   }
 
 }

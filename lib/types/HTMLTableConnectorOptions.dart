@@ -12,29 +12,40 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'DataConnectorOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * HTMLTableConnectorOptions 
+ * HTMLTableConnectorOptions
  */
 class HTMLTableConnectorOptions extends DataConnectorOptions {
-  HTMLTableConnectorOptions( ) : super();
-  // NOTE: table skipped - type string is ignored in gen 
 
+  HTMLTableConnectorOptions({
+    super.dataModifier = null,
+    super.dataTable = null,
+    super.metadata = null,
+    this.table = null
+  });
+
+  String? table;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of table (type string is ignored) ignore type: true
+
+    
+    if (this.table != null) {
+        buffer.writeAll(["\"table\":\'",this.table, "\',"], "");
+    }
   }
+
 
 }

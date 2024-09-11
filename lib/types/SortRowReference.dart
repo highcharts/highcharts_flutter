@@ -12,31 +12,44 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'Row.dart';
 import 'OptionFragment.dart';
 
 /** 
- * SortRowReference 
+ * SortRowReference
  */
 class SortRowReference extends OptionFragment {
-  SortRowReference( ) : super();
-  // NOTE: index skipped - type number is ignored in gen 
 
+  SortRowReference({
+    this.index = null,
+    this.row = null
+  });
+
+  double? index;
+    
+  Row? row;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of index (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of row (type Row is ignored) ignore type: true
+    
+    if (this.index != null) {
+        buffer.writeAll(["\"index\":",this.index, ","], "");
+    }
+    
+    if (this.row != null) {
+        buffer.writeAll(["\"row\":",this.row?.toJSON(), ","], "");
+    }
   }
+
 
 }

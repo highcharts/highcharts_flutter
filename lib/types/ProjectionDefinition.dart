@@ -12,36 +12,52 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'Projector.dart';
 import 'MapBounds.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * ProjectionDefinition 
+ * ProjectionDefinition
  */
 class ProjectionDefinition extends Projector {
-  ProjectionDefinition( ) : super();
-  // NOTE: antimeridianCutting skipped - type boolean is ignored in gen 
 
-  // NOTE: maxLatitude skipped - type number is ignored in gen 
+  ProjectionDefinition({
+    this.antimeridianCutting = null,
+    this.bounds = null,
+    this.maxLatitude = null
+  });
 
+  bool? antimeridianCutting;
+    
+  MapBounds? bounds;
+    
+  double? maxLatitude;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of antimeridianCutting (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of bounds (type MapBounds is ignored) ignore type: true
-
-    // NOTE: skip serialization of maxLatitude (type number is ignored) ignore type: true
+    
+    if (this.antimeridianCutting != null) {
+        buffer.writeAll(["\"antimeridianCutting\":",this.antimeridianCutting, ","], "");
+    }
+    
+    if (this.bounds != null) {
+        buffer.writeAll(["\"bounds\":",this.bounds?.toJSON(), ","], "");
+    }
+    
+    if (this.maxLatitude != null) {
+        buffer.writeAll(["\"maxLatitude\":",this.maxLatitude, ","], "");
+    }
   }
+
 
 }

@@ -12,27 +12,33 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * Helper 
+ * Helper
  */
 class Helper extends OptionFragment {
-  Helper( ) : super();
-  
+
+  Helper();
+
+  // NOTE: $class skipped - type TJSON["$class"] is ignored in gen 
+
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of $class (type TJSON["$class"] is ignored) ignore type: true
+
+    // NOTE: skip serialization of $class (type TJSON["$class"] ignored, skipped: true)
+
   }
+
 
 }

@@ -12,27 +12,29 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * BreadcrumbsButtonsEventsOptions 
+ * BreadcrumbsButtonsEventsOptions
  */
 class BreadcrumbsButtonsEventsOptions extends OptionFragment {
-  BreadcrumbsButtonsEventsOptions( ) : super();
-  
+
+  BreadcrumbsButtonsEventsOptions();
+
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    
+
   }
+
 
 }

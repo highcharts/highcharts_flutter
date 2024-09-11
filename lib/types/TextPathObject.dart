@@ -12,30 +12,41 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'SVGElement.dart';
 import 'OptionFragment.dart';
 
 /** 
- * TextPathObject 
+ * TextPathObject
  */
 class TextPathObject extends OptionFragment {
-  TextPathObject( ) : super();
-  
+
+  TextPathObject({
+    this.path = null
+  });
+
+  SVGElement? path;
+    
+  // NOTE: undo skipped - type Function is ignored in gen 
+
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of path (type SVGElement is ignored) ignore type: true
 
-    // NOTE: skip serialization of undo (type Function is ignored) ignore type: 1
+    
+    if (this.path != null) {
+        buffer.writeAll(["\"path\":",this.path?.toJSON(), ","], "");
+    }
+    // NOTE: skip serialization of undo (type Function ignored, skipped: true)
+
   }
+
 
 }

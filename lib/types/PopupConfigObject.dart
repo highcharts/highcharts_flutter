@@ -12,36 +12,56 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'Annotation.dart';
 import 'AnnotationOptions.dart';
 import 'OptionFragment.dart';
 
 /** 
- * PopupConfigObject 
+ * PopupConfigObject
  */
 class PopupConfigObject extends OptionFragment {
-  PopupConfigObject( ) : super();
-  // NOTE: formType skipped - type string is ignored in gen 
 
+  PopupConfigObject({
+    this.annotation = null,
+    this.formType = null,
+    this.options = null
+  });
+
+  Annotation? annotation;
+    
+  String? formType;
+    
+  // NOTE: onSubmit skipped - type Function is ignored in gen 
+
+  AnnotationOptions? options;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of annotation (type Annotation is ignored) ignore type: true
 
-    // NOTE: skip serialization of formType (type string is ignored) ignore type: true
+    
+    if (this.annotation != null) {
+        buffer.writeAll(["\"annotation\":",this.annotation?.toJSON(), ","], "");
+    }
+    
+    if (this.formType != null) {
+        buffer.writeAll(["\"formType\":\'",this.formType, "\',"], "");
+    }
+    // NOTE: skip serialization of onSubmit (type Function ignored, skipped: true)
 
-    // NOTE: skip serialization of onSubmit (type Function is ignored) ignore type: 1
-
-    // NOTE: skip serialization of options (type AnnotationOptions is ignored) ignore type: true
+    
+    if (this.options != null) {
+        buffer.writeAll(["\"options\":",this.options?.toJSON(), ","], "");
+    }
   }
+
 
 }

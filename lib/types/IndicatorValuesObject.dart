@@ -12,31 +12,41 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * IndicatorValuesObject 
+ * IndicatorValuesObject
  */
 class IndicatorValuesObject extends OptionFragment {
-  IndicatorValuesObject( ) : super();
-  
+
+  IndicatorValuesObject();
+
+  // NOTE: values skipped - type ExtractArrayType<TLinkedSeries["yData"]>)[][] is ignored in gen 
+
+  // NOTE: xData skipped - type NonNullable<TLinkedSeries["xData"]> is ignored in gen 
+
+  // NOTE: yData skipped - type NonNullable<TLinkedSeries["yData"]> is ignored in gen 
+
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of values (type ExtractArrayType<TLinkedSeries["yData"]>)[][] is ignored) ignore type: true
 
-    // NOTE: skip serialization of xData (type NonNullable<TLinkedSeries["xData"]> is ignored) ignore type: true
+    // NOTE: skip serialization of values (type ExtractArrayType<TLinkedSeries["yData"]>)[][] ignored, skipped: true)
 
-    // NOTE: skip serialization of yData (type NonNullable<TLinkedSeries["yData"]> is ignored) ignore type: true
+    // NOTE: skip serialization of xData (type NonNullable<TLinkedSeries["xData"]> ignored, skipped: true)
+
+    // NOTE: skip serialization of yData (type NonNullable<TLinkedSeries["yData"]> ignored, skipped: true)
+
   }
+
 
 }

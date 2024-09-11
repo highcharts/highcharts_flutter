@@ -12,36 +12,55 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * PivotPointsIndicator 
+ * PivotPointsIndicator
  */
 class PivotPointsIndicator extends OptionFragment {
-  PivotPointsIndicator( ) : super();
-  // NOTE: nameBase skipped - type string is ignored in gen 
 
-  // NOTE: pointValKey skipped - type string is ignored in gen 
+  PivotPointsIndicator({
+    this.nameBase = null,
+    this.pointArrayMap = null,
+    this.pointValKey = null
+  });
 
+  String? nameBase;
+    
+  String? pointArrayMap;
+    
+  // NOTE: pointClass skipped - type typeof PivotPointsPoint is ignored in gen 
+
+  String? pointValKey;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of nameBase (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of pointArrayMap (type string[] is ignored) ignore type: true
+    
+    if (this.nameBase != null) {
+        buffer.writeAll(["\"nameBase\":\'",this.nameBase, "\',"], "");
+    }
+    
+    if (this.pointArrayMap != null) {
+        buffer.writeAll(["\"pointArrayMap\":",this.pointArrayMap, ","], "");
+    }
+    // NOTE: skip serialization of pointClass (type typeof PivotPointsPoint ignored, skipped: true)
 
-    // NOTE: skip serialization of pointClass (type typeof PivotPointsPoint is ignored) ignore type: true
-
-    // NOTE: skip serialization of pointValKey (type string is ignored) ignore type: true
+    
+    if (this.pointValKey != null) {
+        buffer.writeAll(["\"pointValKey\":\'",this.pointValKey, "\',"], "");
+    }
   }
+
 
 }

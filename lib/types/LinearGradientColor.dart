@@ -12,40 +12,58 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * LinearGradientColor 
+ * LinearGradientColor
  */
 class LinearGradientColor extends OptionFragment {
-  LinearGradientColor( ) : super();
-  // NOTE: x1 skipped - type number is ignored in gen 
 
-  // NOTE: x2 skipped - type number is ignored in gen 
+  LinearGradientColor({
+    this.x1 = null,
+    this.x2 = null,
+    this.y1 = null,
+    this.y2 = null
+  });
 
-  // NOTE: y1 skipped - type number is ignored in gen 
-
-  // NOTE: y2 skipped - type number is ignored in gen 
-
+  double? x1;
+    
+  double? x2;
+    
+  double? y1;
+    
+  double? y2;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of x1 (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of x2 (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of y1 (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of y2 (type number is ignored) ignore type: true
+    
+    if (this.x1 != null) {
+        buffer.writeAll(["\"x1\":",this.x1, ","], "");
+    }
+    
+    if (this.x2 != null) {
+        buffer.writeAll(["\"x2\":",this.x2, ","], "");
+    }
+    
+    if (this.y1 != null) {
+        buffer.writeAll(["\"y1\":",this.y1, ","], "");
+    }
+    
+    if (this.y2 != null) {
+        buffer.writeAll(["\"y2\":",this.y2, ","], "");
+    }
   }
+
 
 }

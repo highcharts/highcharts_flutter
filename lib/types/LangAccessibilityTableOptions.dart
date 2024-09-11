@@ -12,32 +12,44 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * LangAccessibilityTableOptions 
+ * LangAccessibilityTableOptions
  */
 class LangAccessibilityTableOptions extends OptionFragment {
-  LangAccessibilityTableOptions( ) : super();
-  // NOTE: tableSummary skipped - type string is ignored in gen 
 
-  // NOTE: viewAsDataTableButtonText skipped - type string is ignored in gen 
+  LangAccessibilityTableOptions({
+    this.tableSummary = null,
+    this.viewAsDataTableButtonText = null
+  });
 
+  String? tableSummary;
+    
+  String? viewAsDataTableButtonText;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of tableSummary (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of viewAsDataTableButtonText (type string is ignored) ignore type: true
+    
+    if (this.tableSummary != null) {
+        buffer.writeAll(["\"tableSummary\":\'",this.tableSummary, "\',"], "");
+    }
+    
+    if (this.viewAsDataTableButtonText != null) {
+        buffer.writeAll(["\"viewAsDataTableButtonText\":\'",this.viewAsDataTableButtonText, "\',"], "");
+    }
   }
+
 
 }

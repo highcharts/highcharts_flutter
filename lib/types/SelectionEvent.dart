@@ -12,36 +12,53 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * SelectionEvent 
+ * SelectionEvent
  */
 class SelectionEvent extends OptionFragment {
-  SelectionEvent( ) : super();
-  // NOTE: type skipped - type string is ignored in gen 
 
-  // NOTE: reset skipped - type boolean is ignored in gen 
+  SelectionEvent({
+    this.reset = null,
+    this.selection = null,
+    this.type = null
+  });
 
+  String? type;
+    
+  // NOTE: detail skipped - type AnyRecord is ignored in gen 
+
+  bool? reset;
+    
+  Map<String, String>? selection;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of type (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of detail (type AnyRecord is ignored) ignore type: 1
+    
+    if (this.type != null) {
+        buffer.writeAll(["\"type\":\'",this.type, "\',"], "");
+    }
+    // NOTE: skip serialization of detail (type AnyRecord ignored, skipped: true)
 
-    // NOTE: skip serialization of reset (type boolean is ignored) ignore type: true
+    
+    if (this.reset != null) {
+        buffer.writeAll(["\"reset\":",this.reset, ","], "");
+    }
+    // NOTE: skip serialization of selection (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of selection (type Generic is ignored) ignore type: true
   }
+
 
 }

@@ -12,48 +12,72 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * StateHoverOptions 
+ * StateHoverOptions
  */
 class StateHoverOptions extends OptionFragment {
-  StateHoverOptions( ) : super();
-  // NOTE: color skipped - type string is ignored in gen 
 
-  // NOTE: dashStyle skipped - type string is ignored in gen 
+  StateHoverOptions({
+    this.color = null,
+    this.dashStyle = null,
+    this.height = null,
+    this.heightPlus = null,
+    this.width = null,
+    this.widthPlus = null
+  });
 
-  // NOTE: height skipped - type number is ignored in gen 
-
-  // NOTE: heightPlus skipped - type number is ignored in gen 
-
-  // NOTE: width skipped - type number is ignored in gen 
-
-  // NOTE: widthPlus skipped - type number is ignored in gen 
-
+  String? color;
+    
+  String? dashStyle;
+    
+  double? height;
+    
+  double? heightPlus;
+    
+  double? width;
+    
+  double? widthPlus;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of color (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of dashStyle (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of height (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of heightPlus (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of width (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of widthPlus (type number is ignored) ignore type: true
+    
+    if (this.color != null) {
+        buffer.writeAll(["\"color\":\'",this.color, "\',"], "");
+    }
+    
+    if (this.dashStyle != null) {
+        buffer.writeAll(["\"dashStyle\":\'",this.dashStyle, "\',"], "");
+    }
+    
+    if (this.height != null) {
+        buffer.writeAll(["\"height\":",this.height, ","], "");
+    }
+    
+    if (this.heightPlus != null) {
+        buffer.writeAll(["\"heightPlus\":",this.heightPlus, ","], "");
+    }
+    
+    if (this.width != null) {
+        buffer.writeAll(["\"width\":",this.width, ","], "");
+    }
+    
+    if (this.widthPlus != null) {
+        buffer.writeAll(["\"widthPlus\":",this.widthPlus, ","], "");
+    }
   }
+
 
 }

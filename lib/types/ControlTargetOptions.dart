@@ -12,48 +12,80 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'ControlPointOptionsObject.dart';
 import 'MockPointOptions.dart';
 import 'OptionFragment.dart';
 
+
 /** 
- * ControlTargetOptions 
+ * ControlTargetOptions
  */
 class ControlTargetOptions extends OptionFragment {
-  ControlTargetOptions( {
-    this.controlPointOptions = null
-  }) : super();
+
+  ControlTargetOptions({
+    this.controlPointOptions = null,
+    this.controlPoints = null,
+    this.point = null,
+    this.points = null,
+    this.x = null,
+    this.y = null
+  });
+
+  /**
+   * Options for annotation's control points. Each control point
+   * inherits options from controlPointOptions object.
+   * Options from the controlPointOptions can be overwritten
+   * by options in a specific control point.  
+   */
   ControlPointOptionsObject? controlPointOptions;
     
-  // NOTE: x skipped - type number is ignored in gen 
-
-  // NOTE: y skipped - type number is ignored in gen 
-
+  ControlPointOptionsObject? controlPoints;
+    
+  MockPointOptions? point;
+    
+  MockPointOptions? points;
+    
+  double? x;
+    
+  double? y;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    if (this.controlPointOptions != null) {  
-      buffer.writeAll(["\"controlPointOptions\":",this.controlPointOptions?.toJSON(), ","], "");
+
+    
+    if (this.controlPointOptions != null) {
+        buffer.writeAll(["\"controlPointOptions\":",this.controlPointOptions?.toJSON(), ","], "");
     }
-
-    // NOTE: skip serialization of controlPoints (type ControlPointOptionsObject[] is ignored) ignore type: true
-
-    // NOTE: skip serialization of point (type MockPointOptions is ignored) ignore type: true
-
-    // NOTE: skip serialization of points (type MockPointOptions)[] is ignored) ignore type: true
-
-    // NOTE: skip serialization of x (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of y (type number is ignored) ignore type: true
+    
+    if (this.controlPoints != null) {
+        buffer.writeAll(["\"controlPoints\":",this.controlPoints, ","], "");
+    }
+    
+    if (this.point != null) {
+        buffer.writeAll(["\"point\":",this.point?.toJSON(), ","], "");
+    }
+    
+    if (this.points != null) {
+        buffer.writeAll(["\"points\":",this.points, ","], "");
+    }
+    
+    if (this.x != null) {
+        buffer.writeAll(["\"x\":",this.x, ","], "");
+    }
+    
+    if (this.y != null) {
+        buffer.writeAll(["\"y\":",this.y, ","], "");
+    }
   }
+
 
 }

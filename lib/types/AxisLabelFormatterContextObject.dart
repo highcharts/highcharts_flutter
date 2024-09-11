@@ -12,10 +12,9 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'TimeTicksInfoObject.dart';
 import 'Axis.dart';
 import 'Chart.dart';
@@ -24,51 +23,100 @@ import 'Point.dart';
 import 'OptionFragment.dart';
 
 /** 
- * AxisLabelFormatterContextObject 
+ * AxisLabelFormatterContextObject
  */
 class AxisLabelFormatterContextObject extends OptionFragment {
-  AxisLabelFormatterContextObject( ) : super();
-  // NOTE: dateTimeLabelFormat skipped - type string is ignored in gen 
 
-  // NOTE: isFirst skipped - type boolean is ignored in gen 
+  AxisLabelFormatterContextObject({
+    this.axis = null,
+    this.chart = null,
+    this.dateTimeLabelFormat = null,
+    this.isFirst = null,
+    this.isLast = null,
+    this.point = null,
+    this.pos = null,
+    this.text = null,
+    this.tick = null,
+    this.tickPositionInfo = null,
+    this.value = null
+  });
 
-  // NOTE: isLast skipped - type boolean is ignored in gen 
-
-  // NOTE: pos skipped - type number is ignored in gen 
-
-  // NOTE: text skipped - type string is ignored in gen 
-
-  // NOTE: value skipped - type string is ignored in gen 
-
+  TimeTicksInfoObject? tickPositionInfo;
+    
+  Axis? axis;
+    
+  Chart? chart;
+    
+  String? dateTimeLabelFormat;
+    
+  bool? isFirst;
+    
+  bool? isLast;
+    
+  double? pos;
+    
+  String? text;
+    
+  Tick? tick;
+    
+  String? value;
+    
+  Point? point;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of tickPositionInfo (type TimeTicksInfoObject is ignored) ignore type: true
 
-    // NOTE: skip serialization of axis (type Axis is ignored) ignore type: true
-
-    // NOTE: skip serialization of chart (type Chart is ignored) ignore type: true
-
-    // NOTE: skip serialization of dateTimeLabelFormat (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of isFirst (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of isLast (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of pos (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of text (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of tick (type Tick is ignored) ignore type: true
-
-    // NOTE: skip serialization of value (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of point (type Point is ignored) ignore type: true
+    
+    if (this.tickPositionInfo != null) {
+        buffer.writeAll(["\"tickPositionInfo\":",this.tickPositionInfo?.toJSON(), ","], "");
+    }
+    
+    if (this.axis != null) {
+        buffer.writeAll(["\"axis\":",this.axis?.toJSON(), ","], "");
+    }
+    
+    if (this.chart != null) {
+        buffer.writeAll(["\"chart\":",this.chart?.toJSON(), ","], "");
+    }
+    
+    if (this.dateTimeLabelFormat != null) {
+        buffer.writeAll(["\"dateTimeLabelFormat\":\'",this.dateTimeLabelFormat, "\',"], "");
+    }
+    
+    if (this.isFirst != null) {
+        buffer.writeAll(["\"isFirst\":",this.isFirst, ","], "");
+    }
+    
+    if (this.isLast != null) {
+        buffer.writeAll(["\"isLast\":",this.isLast, ","], "");
+    }
+    
+    if (this.pos != null) {
+        buffer.writeAll(["\"pos\":",this.pos, ","], "");
+    }
+    
+    if (this.text != null) {
+        buffer.writeAll(["\"text\":\'",this.text, "\',"], "");
+    }
+    
+    if (this.tick != null) {
+        buffer.writeAll(["\"tick\":",this.tick?.toJSON(), ","], "");
+    }
+    
+    if (this.value != null) {
+        buffer.writeAll(["\"value\":\'",this.value, "\',"], "");
+    }
+    
+    if (this.point != null) {
+        buffer.writeAll(["\"point\":",this.point?.toJSON(), ","], "");
+    }
   }
+
 
 }

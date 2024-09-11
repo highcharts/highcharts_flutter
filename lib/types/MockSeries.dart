@@ -12,35 +12,55 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'Axis.dart';
 import 'OptionFragment.dart';
 
 /** 
- * MockSeries 
+ * MockSeries
  */
 class MockSeries extends OptionFragment {
-  MockSeries( ) : super();
-  // NOTE: visible skipped - type boolean is ignored in gen 
 
+  MockSeries({
+    this.visible = null,
+    this.xAxis = null,
+    this.yAxis = null
+  });
+
+  // NOTE: chart skipped - type AnnotationChart is ignored in gen 
+
+  Axis? xAxis;
+    
+  Axis? yAxis;
+    
+  bool? visible;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of chart (type AnnotationChart is ignored) ignore type: true
 
-    // NOTE: skip serialization of xAxis (type Axis is ignored) ignore type: true
+    // NOTE: skip serialization of chart (type AnnotationChart ignored, skipped: true)
 
-    // NOTE: skip serialization of yAxis (type Axis is ignored) ignore type: true
-
-    // NOTE: skip serialization of visible (type boolean is ignored) ignore type: true
+    
+    if (this.xAxis != null) {
+        buffer.writeAll(["\"xAxis\":",this.xAxis?.toJSON(), ","], "");
+    }
+    
+    if (this.yAxis != null) {
+        buffer.writeAll(["\"yAxis\":",this.yAxis?.toJSON(), ","], "");
+    }
+    
+    if (this.visible != null) {
+        buffer.writeAll(["\"visible\":",this.visible, ","], "");
+    }
   }
+
 
 }

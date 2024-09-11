@@ -12,36 +12,51 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * PositionObject 
+ * PositionObject
  */
 class PositionObject extends OptionFragment {
-  PositionObject( ) : super();
-  // NOTE: x skipped - type number is ignored in gen 
 
-  // NOTE: y skipped - type number is ignored in gen 
+  PositionObject({
+    this.alignment = null,
+    this.x = null,
+    this.y = null
+  });
 
-  // NOTE: alignment skipped - type string is ignored in gen 
-
+  double? x;
+    
+  double? y;
+    
+  String? alignment;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of x (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of y (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of alignment (type string is ignored) ignore type: true
+    
+    if (this.x != null) {
+        buffer.writeAll(["\"x\":",this.x, ","], "");
+    }
+    
+    if (this.y != null) {
+        buffer.writeAll(["\"y\":",this.y, ","], "");
+    }
+    
+    if (this.alignment != null) {
+        buffer.writeAll(["\"alignment\":\'",this.alignment, "\',"], "");
+    }
   }
+
 
 }

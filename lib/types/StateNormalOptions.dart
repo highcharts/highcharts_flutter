@@ -12,32 +12,44 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * StateNormalOptions 
+ * StateNormalOptions
  */
 class StateNormalOptions extends OptionFragment {
-  StateNormalOptions( ) : super();
-  // NOTE: color skipped - type string is ignored in gen 
 
-  // NOTE: dashStyle skipped - type string is ignored in gen 
+  StateNormalOptions({
+    this.color = null,
+    this.dashStyle = null
+  });
 
+  String? color;
+    
+  String? dashStyle;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of color (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of dashStyle (type string is ignored) ignore type: true
+    
+    if (this.color != null) {
+        buffer.writeAll(["\"color\":\'",this.color, "\',"], "");
+    }
+    
+    if (this.dashStyle != null) {
+        buffer.writeAll(["\"dashStyle\":\'",this.dashStyle, "\',"], "");
+    }
   }
+
 
 }

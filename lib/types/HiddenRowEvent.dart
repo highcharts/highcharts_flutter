@@ -12,32 +12,46 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * HiddenRowEvent 
+ * HiddenRowEvent
  */
 class HiddenRowEvent extends OptionFragment {
-  HiddenRowEvent( ) : super();
-  // NOTE: hiddenRows skipped - type number is ignored in gen 
 
+  HiddenRowEvent({
+    this.hiddenRows = null
+  });
+
+  // NOTE: type skipped - type "afterSetHiddenRows" is ignored in gen 
+
+  // NOTE: detail skipped - type AnyRecord is ignored in gen 
+
+  List<double>? hiddenRows; // double
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of type (type "afterSetHiddenRows" is ignored) ignore type: true
 
-    // NOTE: skip serialization of detail (type AnyRecord is ignored) ignore type: 1
+    // NOTE: skip serialization of type (type "afterSetHiddenRows" ignored, skipped: true)
 
-    // NOTE: skip serialization of hiddenRows (type number is ignored) ignore type: true
+    // NOTE: skip serialization of detail (type AnyRecord ignored, skipped: true)
+
+    
+    if (this.hiddenRows != null) {
+      StringBuffer arrData = StringBuffer();
+      arrData.writeAll(this.hiddenRows!, ",");
+      buffer.writeAll(["\"hiddenRows\": [", arrData , "],"], "");
+    }
   }
+
 
 }

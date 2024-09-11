@@ -12,10 +12,9 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'Funnel3DSeriesOptions.dart';
 import 'Series.dart';
 import 'PointOptions.dart';
@@ -34,8 +33,7 @@ class Funnel3DSeries extends Series {
     this.data = null
   });
 
-  
-  @override
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
@@ -56,16 +54,13 @@ class Funnel3DSeries extends Series {
         if (point.length > 1) {
           seriesData.writeAll(["["], "");
         }
-
-          for (var sub in point) {
-            if (sub is String) {
-              seriesData.writeAll(["\"", sub, "\","], "");
-            } else {
-              seriesData.writeAll([sub], ",");
-            }
-
+        for (var sub in point) {
+          if (sub is String) {
+            seriesData.writeAll(["\"", sub, "\","], "");
+          } else {
+            seriesData.writeAll([sub], ",");
           }
-
+        }
         if (point.length > 1) {
           seriesData.writeAll(["],"], "");
         } else {
@@ -92,36 +87,60 @@ class Funnel3DSeries extends Series {
 
 
     
-    // NOTE: skip serialization of center (type number)[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of data (type Funnel3DPointOptions)[] is ignored) ignore type: true
+    // NOTE: skip serialization of animation (type boolean ignored, skipped: true)
 
-    if (this.options?.gradientForSides != null) {  
-      buffer.writeAll(["\"gradientForSides\":",this.options?.gradientForSides, ","], "");
+    
+    if (this.options?.center != null) {
+        buffer.writeAll(["\"center\":",this.options?.center, ","], "");
     }
-
-    if (this.options?.height != null) {  
-      buffer.writeAll(["\"height\":\'",this.options?.height, "\',"], "");
+    
+    if (this.options?.colorByPoint != null) {
+        buffer.writeAll(["\"colorByPoint\":",this.options?.colorByPoint, ","], "");
     }
-
-    // NOTE: skip serialization of ignoreHiddenPoint (type boolean is ignored) ignore type: true
-
-    if (this.options?.neckHeight != null) {  
-      buffer.writeAll(["\"neckHeight\":\'",this.options?.neckHeight, "\',"], "");
+    
+    if (this.options?.data != null) {
+        buffer.writeAll(["\"data\":",this.options?.data, ","], "");
     }
+    // NOTE: skip serialization of dataLabels (type Generic ignored, skipped: true)
 
-    if (this.options?.neckWidth != null) {  
-      buffer.writeAll(["\"neckWidth\":\'",this.options?.neckWidth, "\',"], "");
+    
+    if (this.options?.edgeWidth != null) {
+        buffer.writeAll(["\"edgeWidth\":",this.options?.edgeWidth, ","], "");
     }
-
-    if (this.options?.reversed != null) {  
-      buffer.writeAll(["\"reversed\":",this.options?.reversed, ","], "");
+    
+    if (this.options?.gradientForSides != null) {
+        buffer.writeAll(["\"gradientForSides\":",this.options?.gradientForSides, ","], "");
     }
+    
+    if (this.options?.height != null) {
+        buffer.writeAll(["\"height\":\'",this.options?.height, "\',"], "");
+    }
+    
+    if (this.options?.ignoreHiddenPoint != null) {
+        buffer.writeAll(["\"ignoreHiddenPoint\":",this.options?.ignoreHiddenPoint, ","], "");
+    }
+    
+    if (this.options?.neckHeight != null) {
+        buffer.writeAll(["\"neckHeight\":\'",this.options?.neckHeight, "\',"], "");
+    }
+    
+    if (this.options?.neckWidth != null) {
+        buffer.writeAll(["\"neckWidth\":\'",this.options?.neckWidth, "\',"], "");
+    }
+    
+    if (this.options?.reversed != null) {
+        buffer.writeAll(["\"reversed\":",this.options?.reversed, ","], "");
+    }
+    
+    if (this.options?.showInLegend != null) {
+        buffer.writeAll(["\"showInLegend\":",this.options?.showInLegend, ","], "");
+    }
+    // NOTE: skip serialization of states (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
-
-    if (this.options?.width != null) {  
-      buffer.writeAll(["\"width\":\'",this.options?.width, "\',"], "");
+    
+    if (this.options?.width != null) {
+        buffer.writeAll(["\"width\":\'",this.options?.width, "\',"], "");
     }
   }
 

@@ -12,32 +12,42 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * LegendAccessibilityKeyboardNavigationOptions 
+ * LegendAccessibilityKeyboardNavigationOptions
  */
 class LegendAccessibilityKeyboardNavigationOptions extends OptionFragment {
-  LegendAccessibilityKeyboardNavigationOptions( {
+
+  LegendAccessibilityKeyboardNavigationOptions({
     this.enabled = null
-  }) : super();
+  });
+
+  /**
+   * Enable keyboard navigation for the legend. 
+   * 
+   * Defaults to 'true'. 
+   */
   bool? enabled;
     
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    if (this.enabled != null) {  
-      buffer.writeAll(["\"enabled\":",this.enabled, ","], "");
+
+    
+    if (this.enabled != null) {
+        buffer.writeAll(["\"enabled\":",this.enabled, ","], "");
     }
   }
+
 
 }

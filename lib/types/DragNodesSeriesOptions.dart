@@ -12,30 +12,38 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'SeriesOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * DragNodesSeriesOptions 
+ * DragNodesSeriesOptions
  */
 class DragNodesSeriesOptions extends SeriesOptions {
-  DragNodesSeriesOptions( {
+
+  DragNodesSeriesOptions({
     super.accessibility = null,
     super.allowPointSelect = null,
+    super.baseSeries = null,
     super.boostBlending = null,
     super.boostThreshold = null,
     super.borderColor = null,
+    super.borderDashStyle = null,
+    super.borderRadius = null,
     super.borderWidth = null,
+    super.centerInCategory = null,
     super.className = null,
     super.clip = null,
+    super.cluster = null,
     super.color = null,
+    super.colorByPoint = null,
     super.colorIndex = null,
     super.colorKey = null,
+    super.colors = null,
     super.compare = null,
+    super.compareBase = null,
     super.compareStart = null,
     super.connectEnds = null,
     super.connectNulls = null,
@@ -43,32 +51,56 @@ class DragNodesSeriesOptions extends SeriesOptions {
     super.crisp = null,
     super.cropThreshold = null,
     super.cumulative = null,
+    super.cumulativeStart = null,
     super.cursor = null,
     super.dashStyle = null,
+    super.dataAsColumns = null,
     super.dataGrouping = null,
     super.dataLabels = null,
     super.dataSorting = null,
+    super.depth = null,
     super.dragDrop = null,
+    this.draggable = null,
+    super.drilldown = null,
+    super.edgeColor = null,
+    super.edgeWidth = null,
     super.enableMouseTracking = null,
     super.events = null,
+    super.fillColor = null,
+    super.fillOpacity = null,
     super.findNearestPointBy = null,
+    this.fixedDraggable = null,
     super.gapSize = null,
     super.gapUnit = null,
     super.getExtremesFromAll = null,
+    super.grouping = null,
+    super.groupPadding = null,
+    super.groupZPadding = null,
+    super.id = null,
+    super.inactiveOtherPoints = null,
     super.includeInDataExport = null,
+    super.index = null,
+    super.isInternal = null,
     super.joinBy = null,
+    super.kdNow = null,
     super.keys = null,
     super.label = null,
     super.lastPrice = null,
     super.lastVisiblePrice = null,
+    super.legendIndex = null,
     super.legendSymbol = null,
+    super.legendType = null,
     super.linecap = null,
+    super.lineColor = null,
     super.lineWidth = null,
     super.linkedTo = null,
     super.marker = null,
+    super.name = null,
     super.navigatorOptions = null,
     super.negativeColor = null,
+    super.negativeFillColor = null,
     super.onPoint = null,
+    super.onSeries = null,
     super.opacity = null,
     super.point = null,
     super.pointInterval = null,
@@ -76,38 +108,57 @@ class DragNodesSeriesOptions extends SeriesOptions {
     super.pointPlacement = null,
     super.pointRange = null,
     super.pointStart = null,
+    super.pointValKey = null,
     super.relativeXValue = null,
     super.selected = null,
     super.showCheckbox = null,
     super.showInLegend = null,
     super.showInNavigator = null,
     super.softThreshold = null,
+    super.stack = null,
     super.stacking = null,
+    super.startFromThreshold = null,
+    super.states = null,
     super.step = null,
     super.stickyTracking = null,
     super.threshold = null,
     super.tooltip = null,
+    super.trackByArea = null,
     super.turboThreshold = null,
+    super.type = null,
+    super.useOhlcData = null,
     super.visible = null,
+    super.xAxis = null,
+    super.xData = null,
+    super.yAxis = null,
+    super.yData = null,
     super.zIndex = null,
     super.zoneAxis = null,
     super.zones = null
-  }) : super();
-  // NOTE: draggable skipped - type boolean is ignored in gen 
+  });
 
-  // NOTE: fixedDraggable skipped - type boolean is ignored in gen 
-
+  bool? draggable;
+    
+  bool? fixedDraggable;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of draggable (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of fixedDraggable (type boolean is ignored) ignore type: true
+    
+    if (this.draggable != null) {
+        buffer.writeAll(["\"draggable\":",this.draggable, ","], "");
+    }
+    
+    if (this.fixedDraggable != null) {
+        buffer.writeAll(["\"fixedDraggable\":",this.fixedDraggable, ","], "");
+    }
   }
+
 
 }

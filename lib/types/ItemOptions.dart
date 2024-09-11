@@ -12,53 +12,85 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'CSSJSONObject.dart';
 import 'OptionFragment.dart';
 
+
 /** 
- * ItemOptions 
+ * ItemOptions
  */
 class ItemOptions extends OptionFragment {
-  ItemOptions( ) : super();
-  // NOTE: id skipped - type string is ignored in gen 
 
-  // NOTE: name skipped - type string is ignored in gen 
+  ItemOptions({
+    this.className = null,
+    this.events = null,
+    this.id = null,
+    this.langKey = null,
+    this.name = null,
+    this.style = null,
+    this.text = null,
+    this.type = null
+  });
 
-  // NOTE: type skipped - type string is ignored in gen 
-
-  // NOTE: className skipped - type string is ignored in gen 
-
-  // NOTE: text skipped - type string is ignored in gen 
-
-  // NOTE: langKey skipped - type string is ignored in gen 
-
+  String? id;
+    
+  String? name;
+    
+  String? type;
+    
+  String? className;
+    
+  String? text;
+    
+  String? langKey;
+    
+  CSSJSONObject? style;
+    
+  var events;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of id (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of name (type string is ignored) ignore type: true
+    
+    if (this.id != null) {
+        buffer.writeAll(["\"id\":\'",this.id, "\',"], "");
+    }
+    
+    if (this.name != null) {
+        buffer.writeAll(["\"name\":\'",this.name, "\',"], "");
+    }
+    
+    if (this.type != null) {
+        buffer.writeAll(["\"type\":\'",this.type, "\',"], "");
+    }
+    
+    if (this.className != null) {
+        buffer.writeAll(["\"className\":\'",this.className, "\',"], "");
+    }
+    
+    if (this.text != null) {
+        buffer.writeAll(["\"text\":\'",this.text, "\',"], "");
+    }
+    
+    if (this.langKey != null) {
+        buffer.writeAll(["\"langKey\":\'",this.langKey, "\',"], "");
+    }
+    
+    if (this.style != null) {
+        buffer.writeAll(["\"style\":",this.style?.toJSON(), ","], "");
+    }
+    // NOTE: skip serialization of events (type { update?: Function; } ignored, skipped: true)
 
-    // NOTE: skip serialization of type (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of className (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of text (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of langKey (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of style (type CSSJSONObject is ignored) ignore type: true
-
-    // NOTE: skip serialization of events (type { update?: Function; } is ignored) ignore type: true
   }
+
 
 }

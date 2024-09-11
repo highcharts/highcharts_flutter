@@ -12,28 +12,37 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * IKHGapSizeOptions 
+ * IKHGapSizeOptions
  */
 class IKHGapSizeOptions extends OptionFragment {
-  IKHGapSizeOptions( ) : super();
-  // NOTE: gapSize skipped - type number is ignored in gen 
 
+  IKHGapSizeOptions({
+    this.gapSize = null
+  });
+
+  double? gapSize;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of gapSize (type number is ignored) ignore type: true
+
+    
+    if (this.gapSize != null) {
+        buffer.writeAll(["\"gapSize\":",this.gapSize, ","], "");
+    }
   }
+
 
 }

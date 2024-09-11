@@ -12,35 +12,47 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
-import 'DataEvent.dart';
 import 'OptionFragment.dart';
 
 /** 
- * ModifierEvent 
+ * ModifierEvent
  */
-class ModifierEvent extends DataEvent {
-  ModifierEvent( ) : super();
-  // NOTE: type skipped - type string is ignored in gen 
+class ModifierEvent extends OptionFragment {
+
+  ModifierEvent({
+    this.type = null
+  });
+
+  String? type;
+    
+  // NOTE: modifier skipped - type DataModifier is ignored in gen 
 
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of type (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of modifier (type DataModifier is ignored) ignore type: true
+    
+    if (this.type != null) {
+        buffer.writeAll(["\"type\":\'",this.type, "\',"], "");
+    }
+    // NOTE: skip serialization of modifier (type DataModifier ignored, skipped: true)
 
-    // NOTE: skip serialization of type (type string is ignored) ignore type: true
+    
+    if (this.type != null) {
+        buffer.writeAll(["\"type\":\'",this.type, "\',"], "");
+    }
+    // NOTE: skip serialization of modifier (type DataModifier ignored, skipped: true)
 
-    // NOTE: skip serialization of modifier (type DataModifier is ignored) ignore type: true
   }
+
 
 }

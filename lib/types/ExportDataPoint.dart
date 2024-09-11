@@ -12,35 +12,48 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
-import 'ExportDataSeries.dart';
 import 'OptionFragment.dart';
 
 /** 
- * ExportDataPoint 
+ * ExportDataPoint
  */
 class ExportDataPoint extends OptionFragment {
-  ExportDataPoint( ) : super();
-  // NOTE: x skipped - type number is ignored in gen 
 
-  // NOTE: x2 skipped - type number is ignored in gen 
+  ExportDataPoint({
+    this.x = null,
+    this.x2 = null
+  });
 
+  // NOTE: series skipped - type ExportDataSeries is ignored in gen 
+
+  double? x;
+    
+  double? x2;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of series (type ExportDataSeries is ignored) ignore type: true
 
-    // NOTE: skip serialization of x (type number is ignored) ignore type: true
+    // NOTE: skip serialization of series (type ExportDataSeries ignored, skipped: true)
 
-    // NOTE: skip serialization of x2 (type number is ignored) ignore type: true
+    
+    if (this.x != null) {
+        buffer.writeAll(["\"x\":",this.x, ","], "");
+    }
+    
+    if (this.x2 != null) {
+        buffer.writeAll(["\"x2\":",this.x2, ","], "");
+    }
   }
+
 
 }

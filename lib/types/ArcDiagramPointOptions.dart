@@ -12,43 +12,76 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'SankeyPointOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * ArcDiagramPointOptions 
+ * ArcDiagramPointOptions
  */
 class ArcDiagramPointOptions extends SankeyPointOptions {
-  ArcDiagramPointOptions( {
+
+  ArcDiagramPointOptions({
     super.accessibility = null,
     super.borderColor = null,
     super.className = null,
+    super.collapsed = null,
     super.color = null,
     super.colorIndex = null,
+    super.column = null,
     super.connectors = null,
+    super.dashStyle = null,
     super.dataLabels = null,
     super.dragDrop = null,
+    super.drilldown = null,
     super.events = null,
+    super.from = null,
+    super.height = null,
+    super.id = null,
+    super.index = null,
     super.keys = null,
+    super.labelrank = null,
+    super.lat = null,
+    super.legendIndex = null,
+    super.level = null,
+    super.linkColorMode = null,
+    this.linkWeight = null,
+    super.lon = null,
     super.marker = null,
+    super.name = null,
+    super.offset = null,
+    super.offsetHorizontal = null,
+    super.offsetVertical = null,
+    super.pointWidth = null,
     super.selected = null,
-    super.visible = null
-  }) : super();
-  // NOTE: linkWeight skipped - type number is ignored in gen 
+    super.seriesIndex = null,
+    super.to = null,
+    super.value = null,
+    super.visible = null,
+    super.weight = null,
+    super.width = null,
+    super.x = null,
+    super.y = null
+  });
 
+  double? linkWeight;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of linkWeight (type number is ignored) ignore type: true
+
+    
+    if (this.linkWeight != null) {
+        buffer.writeAll(["\"linkWeight\":",this.linkWeight, ","], "");
+    }
   }
+
 
 }

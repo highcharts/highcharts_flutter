@@ -12,40 +12,58 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * MeasureTypeCrosshairOptions 
+ * MeasureTypeCrosshairOptions
  */
 class MeasureTypeCrosshairOptions extends OptionFragment {
-  MeasureTypeCrosshairOptions( ) : super();
-  // NOTE: dashStyle skipped - type string is ignored in gen 
 
-  // NOTE: enabled skipped - type boolean is ignored in gen 
+  MeasureTypeCrosshairOptions({
+    this.dashStyle = null,
+    this.enabled = null,
+    this.markerEnd = null,
+    this.zIndex = null
+  });
 
-  // NOTE: markerEnd skipped - type string is ignored in gen 
-
-  // NOTE: zIndex skipped - type number is ignored in gen 
-
+  String? dashStyle;
+    
+  bool? enabled;
+    
+  String? markerEnd;
+    
+  double? zIndex;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of dashStyle (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of enabled (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of markerEnd (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of zIndex (type number is ignored) ignore type: true
+    
+    if (this.dashStyle != null) {
+        buffer.writeAll(["\"dashStyle\":\'",this.dashStyle, "\',"], "");
+    }
+    
+    if (this.enabled != null) {
+        buffer.writeAll(["\"enabled\":",this.enabled, ","], "");
+    }
+    
+    if (this.markerEnd != null) {
+        buffer.writeAll(["\"markerEnd\":\'",this.markerEnd, "\',"], "");
+    }
+    
+    if (this.zIndex != null) {
+        buffer.writeAll(["\"zIndex\":",this.zIndex, ","], "");
+    }
   }
+
 
 }

@@ -12,46 +12,69 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * KDPointSearchObjectLike 
+ * KDPointSearchObjectLike
  */
 class KDPointSearchObjectLike extends OptionFragment {
-  KDPointSearchObjectLike( ) : super();
-  // NOTE: clientX skipped - type number is ignored in gen 
 
-  // NOTE: plotY skipped - type number is ignored in gen 
+  KDPointSearchObjectLike({
+    this.clientX = null,
+    this.lat = null,
+    this.lon = null,
+    this.plotX = null,
+    this.plotY = null
+  });
 
-  // NOTE: lat skipped - type number is ignored in gen 
-
-  // NOTE: lon skipped - type number is ignored in gen 
-
-  // NOTE: plotX skipped - type number is ignored in gen 
-
+  double? clientX;
+    
+  double? plotY;
+    
+  double? lat;
+    
+  double? lon;
+    
+  double? plotX;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of clientX (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of plotY (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of lat (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of lon (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of plotX (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of plotY (type number is ignored) ignore type: true
+    
+    if (this.clientX != null) {
+        buffer.writeAll(["\"clientX\":",this.clientX, ","], "");
+    }
+    
+    if (this.plotY != null) {
+        buffer.writeAll(["\"plotY\":",this.plotY, ","], "");
+    }
+    
+    if (this.lat != null) {
+        buffer.writeAll(["\"lat\":",this.lat, ","], "");
+    }
+    
+    if (this.lon != null) {
+        buffer.writeAll(["\"lon\":",this.lon, ","], "");
+    }
+    
+    if (this.plotX != null) {
+        buffer.writeAll(["\"plotX\":",this.plotX, ","], "");
+    }
+    
+    if (this.plotY != null) {
+        buffer.writeAll(["\"plotY\":",this.plotY, ","], "");
+    }
   }
+
 
 }

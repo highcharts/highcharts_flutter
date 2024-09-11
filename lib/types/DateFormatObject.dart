@@ -12,30 +12,44 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * DateFormatObject 
+ * DateFormatObject
  */
 class DateFormatObject extends OptionFragment {
-  DateFormatObject( ) : super();
-  // NOTE: alternative skipped - type string is ignored in gen 
 
+  DateFormatObject({
+    this.alternative = null,
+    this.regex = null
+  });
+
+  String? alternative;
+    
+  RegExp? regex;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of alternative (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of regex (type RegExp is ignored) ignore type: true
+    
+    if (this.alternative != null) {
+        buffer.writeAll(["\"alternative\":\'",this.alternative, "\',"], "");
+    }
+    
+    if (this.regex != null) {
+        buffer.writeAll(["\"regex\":",this.regex, ","], "");
+    }
   }
+
 
 }

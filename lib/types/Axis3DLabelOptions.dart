@@ -12,18 +12,18 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'AxisLabelOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * Axis3DLabelOptions 
+ * Axis3DLabelOptions
  */
 class Axis3DLabelOptions extends AxisLabelOptions {
-  Axis3DLabelOptions( {
+
+  Axis3DLabelOptions({
     super.align = null,
     super.allowOverlap = null,
     super.autoRotation = null,
@@ -34,9 +34,9 @@ class Axis3DLabelOptions extends AxisLabelOptions {
     super.indentation = null,
     super.overflow = null,
     super.padding = null,
-    super.position3d = null,
+    this.position3d = null,
     super.reserveSpace = null,
-    super.skew3d = null,
+    this.skew3d = null,
     super.staggerLines = null,
     super.step = null,
     super.style = null,
@@ -44,22 +44,30 @@ class Axis3DLabelOptions extends AxisLabelOptions {
     super.x = null,
     super.y = null,
     super.zIndex = null
-  }) : super();
-  // NOTE: position3d skipped - type string is ignored in gen 
+  });
 
-  // NOTE: skew3d skipped - type boolean is ignored in gen 
-
+  String? position3d;
+    
+  bool? skew3d;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of position3d (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of skew3d (type boolean is ignored) ignore type: true
+    
+    if (this.position3d != null) {
+        buffer.writeAll(["\"position3d\":\'",this.position3d, "\',"], "");
+    }
+    
+    if (this.skew3d != null) {
+        buffer.writeAll(["\"skew3d\":",this.skew3d, ","], "");
+    }
   }
+
 
 }

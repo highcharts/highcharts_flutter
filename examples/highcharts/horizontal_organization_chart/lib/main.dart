@@ -4,7 +4,8 @@
  */
 
 import 'package:flutter/material.dart';
-import 'package:highcharts_flutter/Highcharts.dart';
+import 'package:highcharts_flutter/highcharts.dart';
+import 'package:highcharts_flutter/types/0.dart';
 import 'package:highcharts_flutter/types/ChartOptions.dart';
 import 'package:highcharts_flutter/types/TitleOptions.dart';
 import 'package:highcharts_flutter/types/SubtitleOptions.dart';
@@ -522,16 +523,16 @@ class _MyHomePageState extends State<MyHomePage> {
                       "Canis", "Canis lupus"
                     ],
                     ],
-                    // levels: [ 
-                    //   OrganizationSeriesLevelOptions( 
-                    //   ),
-                    // ],
-                    // nodes: [ 
-                    //   OrganizationSeriesNodeOptions( 
-                    //   ),
-                    // ],
-                    //   borderColor: "black", 
-                    //   borderWidth: 2, 
+                    levels: [ 
+                      OrganizationSeriesLevelOptions( 
+                      ),
+                    ],
+                    nodes: [ 
+                      OrganizationSeriesNodeOptions( 
+                      ),
+                    ],
+                      borderColor: "black", 
+                      borderWidth: 2, 
                   ),
                 ],
                 tooltip: TooltipOptions(

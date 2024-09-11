@@ -12,28 +12,29 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
-import 'AxisComposition.dart';
 import 'OptionFragment.dart';
 
 /** 
- * Axis 
+ * Axis
  */
-class Axis extends AxisComposition {
-  Axis( ) : super();
-  
+class Axis extends OptionFragment {
+
+  Axis();
+
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    
+
   }
+
 
 }

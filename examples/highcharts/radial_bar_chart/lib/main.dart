@@ -4,7 +4,7 @@
  */
 
 import 'package:flutter/material.dart';
-import 'package:highcharts_flutter/Highcharts.dart';
+import 'package:highcharts_flutter/highcharts.dart';
 import 'package:highcharts_flutter/types/ChartOptions.dart';
 import 'package:highcharts_flutter/types/TitleOptions.dart';
 import 'package:highcharts_flutter/types/SubtitleOptions.dart';
@@ -88,7 +88,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       stacking: "normal", 
                       borderWidth: 0, 
                       pointPadding: 0, 
-                    //  borderRadius: BorderRadiusOptionsObject(),
+                     borderRadius: BorderRadiusOptionsObject(),
                   ),
                 ),
                 series: [ 

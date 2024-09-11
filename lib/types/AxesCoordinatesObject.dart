@@ -12,30 +12,44 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'AxisCoordinateObject.dart';
 import 'OptionFragment.dart';
 
 /** 
- * AxesCoordinatesObject 
+ * AxesCoordinatesObject
  */
 class AxesCoordinatesObject extends OptionFragment {
-  AxesCoordinatesObject( ) : super();
-  
+
+  AxesCoordinatesObject({
+    this.xAxis = null,
+    this.yAxis = null
+  });
+
+  AxisCoordinateObject? xAxis;
+    
+  AxisCoordinateObject? yAxis;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of xAxis (type AxisCoordinateObject[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of yAxis (type AxisCoordinateObject[] is ignored) ignore type: true
+    
+    if (this.xAxis != null) {
+        buffer.writeAll(["\"xAxis\":",this.xAxis, ","], "");
+    }
+    
+    if (this.yAxis != null) {
+        buffer.writeAll(["\"yAxis\":",this.yAxis, ","], "");
+    }
   }
+
 
 }

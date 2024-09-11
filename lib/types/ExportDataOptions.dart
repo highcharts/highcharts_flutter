@@ -12,31 +12,46 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'ExportingOptions.dart';
 import 'LangOptions.dart';
 import 'OptionFragment.dart';
 
+
 /** 
- * ExportDataOptions 
+ * ExportDataOptions
  */
 class ExportDataOptions extends OptionFragment {
-  ExportDataOptions( ) : super();
-  
+
+  ExportDataOptions({
+    this.exporting = null,
+    this.lang = null
+  });
+
+  ExportingOptions? exporting;
+    
+  LangOptions? lang;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of exporting (type ExportingOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of lang (type LangOptions is ignored) ignore type: true
+    
+    if (this.exporting != null) {
+        buffer.writeAll(["\"exporting\":",this.exporting?.toJSON(), ","], "");
+    }
+    
+    if (this.lang != null) {
+        buffer.writeAll(["\"lang\":",this.lang?.toJSON(), ","], "");
+    }
   }
+
 
 }

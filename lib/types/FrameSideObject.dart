@@ -12,33 +12,45 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'FrameSideOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * FrameSideObject 
+ * FrameSideObject
  */
 class FrameSideObject extends FrameSideOptions {
-  FrameSideObject( ) : super();
-  // NOTE: frontFacing skipped - type boolean is ignored in gen 
 
-  // NOTE: size skipped - type number is ignored in gen 
+  FrameSideObject({
+    super.color = null,
+    this.frontFacing = null,
+    this.size = null
+  });
 
+  bool? frontFacing;
+    
+  double? size;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of frontFacing (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of size (type number is ignored) ignore type: true
+    
+    if (this.frontFacing != null) {
+        buffer.writeAll(["\"frontFacing\":",this.frontFacing, ","], "");
+    }
+    
+    if (this.size != null) {
+        buffer.writeAll(["\"size\":",this.size, ","], "");
+    }
   }
+
 
 }

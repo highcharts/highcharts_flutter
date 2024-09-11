@@ -12,80 +12,153 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
-import 'DragNodesSeries.dart';
+ */
 import 'NetworkgraphPoint.dart';
 import 'OptionFragment.dart';
 
 /** 
- * PackedBubbleSeries 
+ * PackedBubbleSeries
  */
-class PackedBubbleSeries extends DragNodesSeries {
-  PackedBubbleSeries( ) : super();
-  // NOTE: bubblePadding skipped - type boolean is ignored in gen 
+class PackedBubbleSeries extends OptionFragment {
 
-  // NOTE: hasDraggableNodes skipped - type boolean is ignored in gen 
+  PackedBubbleSeries({
+    this.bubblePadding = null,
+    this.forces = null,
+    this.hasDraggableNodes = null,
+    this.isBubble = null,
+    this.isCartesian = null,
+    this.maxPxSize = null,
+    this.minPxSize = null,
+    this.nodes = null,
+    this.noSharedTooltip = null,
+    this.pointArrayMap = null,
+    this.pointValKey = null,
+    this.radii = null,
+    this.specialGroup = null,
+    this.trackerGroups = null,
+    this.yData = null,
+    this.zData = null,
+    this.zoneAxis = null
+  });
 
-  // NOTE: isCartesian skipped - type boolean is ignored in gen 
+  // NOTE: pointClass skipped - type typeof PackedBubblePoint is ignored in gen 
 
-  // NOTE: maxPxSize skipped - type number is ignored in gen 
-
-  // NOTE: minPxSize skipped - type number is ignored in gen 
-
-  // NOTE: noSharedTooltip skipped - type boolean is ignored in gen 
-
-  // NOTE: pointValKey skipped - type string is ignored in gen 
-
-  // NOTE: specialGroup skipped - type string is ignored in gen 
-
-  // NOTE: zoneAxis skipped - type string is ignored in gen 
-
+  bool? bubblePadding;
+    
+  String? forces;
+    
+  bool? hasDraggableNodes;
+    
+  bool? isBubble;
+    
+  bool? isCartesian;
+    
+  double? maxPxSize;
+    
+  double? minPxSize;
+    
+  NetworkgraphPoint? nodes;
+    
+  bool? noSharedTooltip;
+    
+  String? pointArrayMap;
+    
+  String? pointValKey;
+    
+  double? radii;
+    
+  String? specialGroup;
+    
+  String? trackerGroups;
+    
+  double? yData;
+    
+  double? zData;
+    
+  String? zoneAxis;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of pointClass (type typeof PackedBubblePoint is ignored) ignore type: true
 
-    // NOTE: skip serialization of bubblePadding (type boolean is ignored) ignore type: true
+    // NOTE: skip serialization of pointClass (type typeof PackedBubblePoint ignored, skipped: true)
 
-    // NOTE: skip serialization of forces (type string[] is ignored) ignore type: true
-
-    // NOTE: skip serialization of hasDraggableNodes (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of isBubble (type true is ignored) ignore type: 1
-
-    // NOTE: skip serialization of isCartesian (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of maxPxSize (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of minPxSize (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of nodes (type NetworkgraphPoint[] is ignored) ignore type: true
-
-    // NOTE: skip serialization of noSharedTooltip (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of pointArrayMap (type string[] is ignored) ignore type: true
-
-    // NOTE: skip serialization of pointValKey (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of radii (type number[] is ignored) ignore type: true
-
-    // NOTE: skip serialization of specialGroup (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of trackerGroups (type string[] is ignored) ignore type: true
-
-    // NOTE: skip serialization of yData (type number[] is ignored) ignore type: true
-
-    // NOTE: skip serialization of zData (type number[] is ignored) ignore type: true
-
-    // NOTE: skip serialization of zoneAxis (type string is ignored) ignore type: true
+    
+    if (this.bubblePadding != null) {
+        buffer.writeAll(["\"bubblePadding\":",this.bubblePadding, ","], "");
+    }
+    
+    if (this.forces != null) {
+        buffer.writeAll(["\"forces\":",this.forces, ","], "");
+    }
+    
+    if (this.hasDraggableNodes != null) {
+        buffer.writeAll(["\"hasDraggableNodes\":",this.hasDraggableNodes, ","], "");
+    }
+    
+    if (this.isBubble != null) {
+        buffer.writeAll(["\"isBubble\":",this.isBubble, ","], "");
+    }
+    
+    if (this.isCartesian != null) {
+        buffer.writeAll(["\"isCartesian\":",this.isCartesian, ","], "");
+    }
+    
+    if (this.maxPxSize != null) {
+        buffer.writeAll(["\"maxPxSize\":",this.maxPxSize, ","], "");
+    }
+    
+    if (this.minPxSize != null) {
+        buffer.writeAll(["\"minPxSize\":",this.minPxSize, ","], "");
+    }
+    
+    if (this.nodes != null) {
+        buffer.writeAll(["\"nodes\":",this.nodes, ","], "");
+    }
+    
+    if (this.noSharedTooltip != null) {
+        buffer.writeAll(["\"noSharedTooltip\":",this.noSharedTooltip, ","], "");
+    }
+    
+    if (this.pointArrayMap != null) {
+        buffer.writeAll(["\"pointArrayMap\":",this.pointArrayMap, ","], "");
+    }
+    
+    if (this.pointValKey != null) {
+        buffer.writeAll(["\"pointValKey\":\'",this.pointValKey, "\',"], "");
+    }
+    
+    if (this.radii != null) {
+        buffer.writeAll(["\"radii\":",this.radii, ","], "");
+    }
+    
+    if (this.specialGroup != null) {
+        buffer.writeAll(["\"specialGroup\":\'",this.specialGroup, "\',"], "");
+    }
+    
+    if (this.trackerGroups != null) {
+        buffer.writeAll(["\"trackerGroups\":",this.trackerGroups, ","], "");
+    }
+    
+    if (this.yData != null) {
+        buffer.writeAll(["\"yData\":",this.yData, ","], "");
+    }
+    
+    if (this.zData != null) {
+        buffer.writeAll(["\"zData\":",this.zData, ","], "");
+    }
+    
+    if (this.zoneAxis != null) {
+        buffer.writeAll(["\"zoneAxis\":\'",this.zoneAxis, "\',"], "");
+    }
   }
+
 
 }

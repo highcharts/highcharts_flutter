@@ -12,40 +12,72 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * SVGPath 
+ * SVGPath
  */
 class SVGPath extends OptionFragment {
-  SVGPath( ) : super();
-  // NOTE: isFlat skipped - type boolean is ignored in gen 
 
-  // NOTE: xMap skipped - type number is ignored in gen 
+  SVGPath({
+    this.hasStackedCliffs = null,
+    this.isArea = null,
+    this.isFlat = null,
+    this.xBounds = null,
+    this.xMap = null,
+    this.yBounds = null
+  });
 
-  // NOTE: isArea skipped - type boolean is ignored in gen 
-
+  bool? isFlat;
+    
+  double? xBounds;
+    
+  double? yBounds;
+    
+  double? xMap;
+    
+  bool? isArea;
+    
+  bool? hasStackedCliffs;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of isFlat (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of xBounds (type number[] is ignored) ignore type: true
-
-    // NOTE: skip serialization of yBounds (type number[] is ignored) ignore type: true
-
-    // NOTE: skip serialization of xMap (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of isArea (type boolean is ignored) ignore type: true
+    
+    if (this.isFlat != null) {
+        buffer.writeAll(["\"isFlat\":",this.isFlat, ","], "");
+    }
+    
+    if (this.xBounds != null) {
+        buffer.writeAll(["\"xBounds\":",this.xBounds, ","], "");
+    }
+    
+    if (this.yBounds != null) {
+        buffer.writeAll(["\"yBounds\":",this.yBounds, ","], "");
+    }
+    
+    if (this.xMap != null) {
+        buffer.writeAll(["\"xMap\":",this.xMap, ","], "");
+    }
+    
+    if (this.isArea != null) {
+        buffer.writeAll(["\"isArea\":",this.isArea, ","], "");
+    }
+    
+    if (this.hasStackedCliffs != null) {
+        buffer.writeAll(["\"hasStackedCliffs\":",this.hasStackedCliffs, ","], "");
+    }
   }
+
 
 }

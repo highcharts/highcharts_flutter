@@ -12,38 +12,59 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * ABandsIndicator 
+ * ABandsIndicator
  */
 class ABandsIndicator extends OptionFragment {
-  ABandsIndicator( ) : super();
-  // NOTE: nameBase skipped - type string is ignored in gen 
 
-  // NOTE: pointValKey skipped - type string is ignored in gen 
+  ABandsIndicator({
+    this.nameBase = null,
+    this.nameComponents = null,
+    this.pointValKey = null
+  });
+
+  String? nameBase;
+    
+  String? nameComponents;
+    
+  // NOTE: pointArrayMap skipped - type (keyof ABandsPoint)[] is ignored in gen 
+
+  String? pointValKey;
+    
+  // NOTE: pointClass skipped - type typeof ABandsPoint is ignored in gen 
 
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of nameBase (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of nameComponents (type string[] is ignored) ignore type: true
+    
+    if (this.nameBase != null) {
+        buffer.writeAll(["\"nameBase\":\'",this.nameBase, "\',"], "");
+    }
+    
+    if (this.nameComponents != null) {
+        buffer.writeAll(["\"nameComponents\":",this.nameComponents, ","], "");
+    }
+    // NOTE: skip serialization of pointArrayMap (type (keyof ABandsPoint)[] ignored, skipped: true)
 
-    // NOTE: skip serialization of pointArrayMap (type (keyof ABandsPoint)[] is ignored) ignore type: true
+    
+    if (this.pointValKey != null) {
+        buffer.writeAll(["\"pointValKey\":\'",this.pointValKey, "\',"], "");
+    }
+    // NOTE: skip serialization of pointClass (type typeof ABandsPoint ignored, skipped: true)
 
-    // NOTE: skip serialization of pointValKey (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of pointClass (type typeof ABandsPoint is ignored) ignore type: true
   }
+
 
 }

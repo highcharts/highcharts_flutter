@@ -12,32 +12,45 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'ControllableLabelOptions.dart';
 import 'OptionFragment.dart';
 
 /** 
- * ControllableLabel 
+ * ControllableLabel
  */
 class ControllableLabel extends OptionFragment {
-  ControllableLabel( ) : super();
-  
+
+  ControllableLabel({
+    this.options = null
+  });
+
+  // NOTE: collection skipped - type "labels" is ignored in gen 
+
+  // NOTE: itemType skipped - type "label" is ignored in gen 
+
+  ControllableLabelOptions? options;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of collection (type "labels" is ignored) ignore type: true
 
-    // NOTE: skip serialization of itemType (type "label" is ignored) ignore type: true
+    // NOTE: skip serialization of collection (type "labels" ignored, skipped: true)
 
-    // NOTE: skip serialization of options (type ControllableLabelOptions is ignored) ignore type: true
+    // NOTE: skip serialization of itemType (type "label" ignored, skipped: true)
+
+    
+    if (this.options != null) {
+        buffer.writeAll(["\"options\":",this.options?.toJSON(), ","], "");
+    }
   }
+
 
 }

@@ -12,62 +12,104 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * ComponentJSONOptions 
+ * ComponentJSONOptions
  */
 class ComponentJSONOptions extends OptionFragment {
-  ComponentJSONOptions( ) : super();
-  // NOTE: dataGridOptions skipped - type string is ignored in gen 
 
-  // NOTE: chartClassName skipped - type string is ignored in gen 
+  ComponentJSONOptions({
+    this.chartClassName = null,
+    this.chartID = null,
+    this.chartOptions = null,
+    this.dataGridOptions = null,
+    this.subtitle = null,
+    this.threshold = null,
+    this.thresholdColors = null,
+    this.title = null,
+    this.value = null,
+    this.valueFormat = null
+  });
 
-  // NOTE: chartID skipped - type string is ignored in gen 
+  String? dataGridOptions;
+    
+  String? chartClassName;
+    
+  String? chartID;
+    
+  String? title;
+    
+  String? chartOptions;
+    
+  double? threshold;
+    
+  String? thresholdColors;
+    
+  // NOTE: type skipped - type "KPI" is ignored in gen 
 
-  // NOTE: title skipped - type string is ignored in gen 
-
-  // NOTE: chartOptions skipped - type string is ignored in gen 
-
-  // NOTE: value skipped - type string is ignored in gen 
-
-  // NOTE: subtitle skipped - type string is ignored in gen 
-
-  // NOTE: valueFormat skipped - type string is ignored in gen 
-
+  String? value;
+    
+  String? subtitle;
+    
+  String? valueFormat;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of dataGridOptions (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of chartClassName (type string is ignored) ignore type: true
+    
+    if (this.dataGridOptions != null) {
+        buffer.writeAll(["\"dataGridOptions\":\'",this.dataGridOptions, "\',"], "");
+    }
+    
+    if (this.chartClassName != null) {
+        buffer.writeAll(["\"chartClassName\":\'",this.chartClassName, "\',"], "");
+    }
+    
+    if (this.chartID != null) {
+        buffer.writeAll(["\"chartID\":\'",this.chartID, "\',"], "");
+    }
+    
+    if (this.title != null) {
+        buffer.writeAll(["\"title\":\'",this.title, "\',"], "");
+    }
+    
+    if (this.chartOptions != null) {
+        buffer.writeAll(["\"chartOptions\":\'",this.chartOptions, "\',"], "");
+    }
+    
+    if (this.threshold != null) {
+        buffer.writeAll(["\"threshold\":",this.threshold, ","], "");
+    }
+    
+    if (this.thresholdColors != null) {
+        buffer.writeAll(["\"thresholdColors\":",this.thresholdColors, ","], "");
+    }
+    // NOTE: skip serialization of type (type "KPI" ignored, skipped: true)
 
-    // NOTE: skip serialization of chartID (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of title (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of chartOptions (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of threshold (type number[] is ignored) ignore type: true
-
-    // NOTE: skip serialization of thresholdColors (type string[] is ignored) ignore type: true
-
-    // NOTE: skip serialization of type (type "KPI" is ignored) ignore type: true
-
-    // NOTE: skip serialization of value (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of subtitle (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of valueFormat (type string is ignored) ignore type: true
+    
+    if (this.value != null) {
+        buffer.writeAll(["\"value\":\'",this.value, "\',"], "");
+    }
+    
+    if (this.subtitle != null) {
+        buffer.writeAll(["\"subtitle\":\'",this.subtitle, "\',"], "");
+    }
+    
+    if (this.valueFormat != null) {
+        buffer.writeAll(["\"valueFormat\":\'",this.valueFormat, "\',"], "");
+    }
   }
+
 
 }

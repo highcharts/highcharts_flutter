@@ -4,7 +4,7 @@
  */
 
 import 'package:flutter/material.dart';
-import 'package:highcharts_flutter/Highcharts.dart';
+import 'package:highcharts_flutter/highcharts.dart';
 import 'package:highcharts_flutter/types/ChartOptions.dart';
 import 'package:highcharts_flutter/types/TitleOptions.dart';
 import 'package:highcharts_flutter/types/SubtitleOptions.dart';
@@ -13,6 +13,7 @@ import 'package:highcharts_flutter/types/YAxisOptions.dart';
 import 'package:highcharts_flutter/types/TooltipOptions.dart';
 import 'package:highcharts_flutter/types/HighchartsPlotOptions.dart';
 import 'package:highcharts_flutter/types/AreaSplineSeriesOptions.dart';
+import 'package:highcharts_flutter/types/Generic.dart';
 import 'package:highcharts_flutter/types/AreaSplineSeries.dart';
 
 void main() {
@@ -67,9 +68,9 @@ class _MyHomePageState extends State<MyHomePage> {
                     align: "left", 
                 ),
                 subtitle: SubtitleOptions(
-                    text: '''Source:\
-            <a href=\"https://en.wikipedia.org/wiki/Atmosphere_of_Earth\"\
-                target=\"_blank\">Wikipedia.org</a>''', 
+                    text: '''Source:
+            <a href="https://en.wikipedia.org/wiki/Atmosphere_of_Earth"
+                target="_blank">Wikipedia.org</a>''', 
                     align: "left", 
                 ),
                 xAxis: [ 
@@ -87,7 +88,7 @@ class _MyHomePageState extends State<MyHomePage> {
             <td><span style=\"color:{series.color};\">⬤</span></td>\
             <td>{series.name}</td>\
             <td style=\"text-align: right\"><b>{point.y} %</b></td>\
-        </tr>''', 
+        </tr>''',
                     footerFormat: "</table>", 
                     useHTML: true, 
                 ),
@@ -95,7 +96,9 @@ class _MyHomePageState extends State<MyHomePage> {
                   areaspline: AreaSplineSeriesOptions(
                       stacking: "percent", 
                       pointInterval: 100, 
-                      lineWidth: 1,
+                      lineWidth: 1, 
+                    states: Generic(
+                    ),
                   ),
                 ),
                 series: [ 

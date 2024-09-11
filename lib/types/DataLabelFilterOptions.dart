@@ -12,46 +12,64 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * DataLabelFilterOptions 
+ * DataLabelFilterOptions
  */
 class DataLabelFilterOptions extends OptionFragment {
-  DataLabelFilterOptions( {
+
+  DataLabelFilterOptions({
     this.operator = null,
     this.property = null,
     this.value = null
-  }) : super();
+  });
+
+  /**
+   * The operator to compare by. Can be one of `>`, `<`, `>=`, `<=`,
+   * `==`, `===`, `!=` and `!==`.  
+   */
   String? operator;
     
+  /**
+   * The point property to filter by. Point options are passed
+   * directly to properties, additionally there are `y` value,
+   * `percentage` and others listed under {@link Highcharts.Point}
+   * members.  
+   */
   String? property;
     
+  /**
+   * The value to compare against.  
+   */
   double? value;
     
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    if (this.operator != null) {  
-      buffer.writeAll(["\"operator\":\'",this.operator, "\',"], "");
-    }
 
-    if (this.property != null) {  
-      buffer.writeAll(["\"property\":\'",this.property, "\',"], "");
+    
+    if (this.operator != null) {
+        buffer.writeAll(["\"operator\":\'",this.operator, "\',"], "");
     }
-
-    if (this.value != null) {  
-      buffer.writeAll(["\"value\":",this.value, ","], "");
+    
+    if (this.property != null) {
+        buffer.writeAll(["\"property\":\'",this.property, "\',"], "");
+    }
+    
+    if (this.value != null) {
+        buffer.writeAll(["\"value\":",this.value, ","], "");
     }
   }
+
 
 }

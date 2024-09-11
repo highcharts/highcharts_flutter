@@ -12,28 +12,37 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * PostProcessDataEvent 
+ * PostProcessDataEvent
  */
 class PostProcessDataEvent extends OptionFragment {
-  PostProcessDataEvent( ) : super();
-  // NOTE: hasExtremesChanged skipped - type boolean is ignored in gen 
 
+  PostProcessDataEvent({
+    this.hasExtremesChanged = null
+  });
+
+  bool? hasExtremesChanged;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of hasExtremesChanged (type boolean is ignored) ignore type: true
+
+    
+    if (this.hasExtremesChanged != null) {
+        buffer.writeAll(["\"hasExtremesChanged\":",this.hasExtremesChanged, ","], "");
+    }
   }
+
 
 }

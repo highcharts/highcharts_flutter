@@ -12,29 +12,40 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'PositionObject.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * LabelObject 
+ * LabelObject
  */
 class LabelObject extends PositionObject {
-  LabelObject( ) : super();
-  // NOTE: opacity skipped - type number is ignored in gen 
 
+  LabelObject({
+    super.alignment = null,
+    this.opacity = null,
+    super.x = null,
+    super.y = null
+  });
+
+  double? opacity;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of opacity (type number is ignored) ignore type: true
+
+    
+    if (this.opacity != null) {
+        buffer.writeAll(["\"opacity\":",this.opacity, ","], "");
+    }
   }
+
 
 }

@@ -12,62 +12,97 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * MatchObject 
+ * MatchObject
  */
 class MatchObject extends OptionFragment {
-  MatchObject( ) : super();
-  // NOTE: body skipped - type string is ignored in gen 
 
-  // NOTE: elseBody skipped - type string is ignored in gen 
+  MatchObject({
+    this.body = null,
+    this.elseBody = null,
+    this.expression = null,
+    this.find = null,
+    this.fn = null,
+    this.isBlock = null,
+    this.length = null,
+    this.start = null,
+    this.startInner = null
+  });
 
-  // NOTE: expression skipped - type string is ignored in gen 
+  String? body;
+    
+  // NOTE: ctx skipped - type any is ignored in gen 
 
-  // NOTE: find skipped - type string is ignored in gen 
-
-  // NOTE: fn skipped - type string is ignored in gen 
-
-  // NOTE: length skipped - type number is ignored in gen 
-
-  // NOTE: isBlock skipped - type boolean is ignored in gen 
-
-  // NOTE: start skipped - type number is ignored in gen 
-
-  // NOTE: startInner skipped - type number is ignored in gen 
-
+  String? elseBody;
+    
+  String? expression;
+    
+  String? find;
+    
+  String? fn;
+    
+  double? length;
+    
+  bool? isBlock;
+    
+  double? start;
+    
+  double? startInner;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of body (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of ctx (type any is ignored) ignore type: 1
+    
+    if (this.body != null) {
+        buffer.writeAll(["\"body\":\'",this.body, "\',"], "");
+    }
+    // NOTE: skip serialization of ctx (type any ignored, skipped: true)
 
-    // NOTE: skip serialization of elseBody (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of expression (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of find (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of fn (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of length (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of isBlock (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of start (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of startInner (type number is ignored) ignore type: true
+    
+    if (this.elseBody != null) {
+        buffer.writeAll(["\"elseBody\":\'",this.elseBody, "\',"], "");
+    }
+    
+    if (this.expression != null) {
+        buffer.writeAll(["\"expression\":\'",this.expression, "\',"], "");
+    }
+    
+    if (this.find != null) {
+        buffer.writeAll(["\"find\":\'",this.find, "\',"], "");
+    }
+    
+    if (this.fn != null) {
+        buffer.writeAll(["\"fn\":\'",this.fn, "\',"], "");
+    }
+    
+    if (this.length != null) {
+        buffer.writeAll(["\"length\":",this.length, ","], "");
+    }
+    
+    if (this.isBlock != null) {
+        buffer.writeAll(["\"isBlock\":",this.isBlock, ","], "");
+    }
+    
+    if (this.start != null) {
+        buffer.writeAll(["\"start\":",this.start, ","], "");
+    }
+    
+    if (this.startInner != null) {
+        buffer.writeAll(["\"startInner\":",this.startInner, ","], "");
+    }
   }
+
 
 }

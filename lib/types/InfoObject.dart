@@ -12,28 +12,37 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * InfoObject 
+ * InfoObject
  */
 class InfoObject extends OptionFragment {
-  InfoObject( ) : super();
-  // NOTE: counter skipped - type number is ignored in gen 
 
+  InfoObject({
+    this.counter = null
+  });
+
+  double? counter;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of counter (type number is ignored) ignore type: true
+
+    
+    if (this.counter != null) {
+        buffer.writeAll(["\"counter\":",this.counter, ","], "");
+    }
   }
+
 
 }

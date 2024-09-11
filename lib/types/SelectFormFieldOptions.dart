@@ -12,36 +12,59 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'FormFieldOptions.dart';
 import 'SelectFormFieldItemOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * SelectFormFieldOptions 
+ * SelectFormFieldOptions
  */
 class SelectFormFieldOptions extends FormFieldOptions {
-  SelectFormFieldOptions( ) : super();
-  // NOTE: title skipped - type string is ignored in gen 
 
-  // NOTE: value skipped - type string is ignored in gen 
+  SelectFormFieldOptions({
+    super.className = null,
+    super.enabledOnOffLabels = null,
+    super.icon = null,
+    super.iconsURLPrefix = null,
+    super.id = null,
+    super.name = null,
+    super.propertyPath = null,
+    this.selectOptions = null,
+    this.title = null,
+    this.value = null
+  });
 
+  String? title;
+    
+  String? value;
+    
+  SelectFormFieldItemOptions? selectOptions;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of title (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of value (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of selectOptions (type SelectFormFieldItemOptions[] is ignored) ignore type: true
+    
+    if (this.title != null) {
+        buffer.writeAll(["\"title\":\'",this.title, "\',"], "");
+    }
+    
+    if (this.value != null) {
+        buffer.writeAll(["\"value\":\'",this.value, "\',"], "");
+    }
+    
+    if (this.selectOptions != null) {
+        buffer.writeAll(["\"selectOptions\":",this.selectOptions, ","], "");
+    }
   }
+
 
 }

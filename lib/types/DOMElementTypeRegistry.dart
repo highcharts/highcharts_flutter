@@ -12,31 +12,45 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'HTMLElement.dart';
 import 'SVGElement.dart';
 import 'OptionFragment.dart';
 
 /** 
- * DOMElementTypeRegistry 
+ * DOMElementTypeRegistry
  */
 class DOMElementTypeRegistry extends OptionFragment {
-  DOMElementTypeRegistry( ) : super();
-  
+
+  DOMElementTypeRegistry({
+    this.HTMLDOMElement = null,
+    this.SVGDOMElement = null
+  });
+
+  HTMLElement? HTMLDOMElement;
+    
+  SVGElement? SVGDOMElement;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of HTMLDOMElement (type HTMLElement is ignored) ignore type: true
 
-    // NOTE: skip serialization of SVGDOMElement (type SVGElement is ignored) ignore type: true
+    
+    if (this.HTMLDOMElement != null) {
+        buffer.writeAll(["\"HTMLDOMElement\":",this.HTMLDOMElement?.toJSON(), ","], "");
+    }
+    
+    if (this.SVGDOMElement != null) {
+        buffer.writeAll(["\"SVGDOMElement\":",this.SVGDOMElement?.toJSON(), ","], "");
+    }
   }
+
 
 }

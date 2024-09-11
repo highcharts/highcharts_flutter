@@ -12,27 +12,33 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * Navigator 
+ * Navigator
  */
 class Navigator extends OptionFragment {
-  Navigator( ) : super();
-  
+
+  Navigator();
+
+  // NOTE: msSaveOrOpenBlob skipped - type Function is ignored in gen 
+
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of msSaveOrOpenBlob (type Function is ignored) ignore type: 1
+
+    // NOTE: skip serialization of msSaveOrOpenBlob (type Function ignored, skipped: true)
+
   }
+
 
 }

@@ -12,27 +12,29 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * DataParseDateCallbackFunction 
+ * DataParseDateCallbackFunction
  */
 class DataParseDateCallbackFunction extends OptionFragment {
-  DataParseDateCallbackFunction( ) : super();
-  
+
+  DataParseDateCallbackFunction();
+
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    
+
   }
+
 
 }

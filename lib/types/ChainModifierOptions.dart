@@ -12,33 +12,46 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'DataModifierOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * ChainModifierOptions 
+ * ChainModifierOptions
  */
 class ChainModifierOptions extends DataModifierOptions {
-  ChainModifierOptions( ) : super();
-  // NOTE: reverse skipped - type boolean is ignored in gen 
 
+  ChainModifierOptions({
+    this.reverse = null,
+    super.type = null
+  });
+
+  // NOTE: type skipped - type "Chain" is ignored in gen 
+
+  // NOTE: chain skipped - type Generic is ignored in gen 
+
+  bool? reverse;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of type (type "Chain" is ignored) ignore type: true
 
-    // NOTE: skip serialization of chain (type Generic is ignored) ignore type: true
+    // NOTE: skip serialization of type (type "Chain" ignored, skipped: true)
 
-    // NOTE: skip serialization of reverse (type boolean is ignored) ignore type: true
+    // NOTE: skip serialization of chain (type Generic ignored, skipped: true)
+
+    
+    if (this.reverse != null) {
+        buffer.writeAll(["\"reverse\":",this.reverse, ","], "");
+    }
   }
+
 
 }

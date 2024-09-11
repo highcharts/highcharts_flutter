@@ -12,29 +12,45 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'BBoxObject.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * RectangleObject 
+ * RectangleObject
  */
 class RectangleObject extends BBoxObject {
-  RectangleObject( ) : super();
-  // NOTE: strokeWidth skipped - type number is ignored in gen 
 
+  RectangleObject({
+    super.alignment = null,
+    super.bottomWidth = null,
+    super.height = null,
+    super.polygon = null,
+    this.strokeWidth = null,
+    super.topWidth = null,
+    super.width = null,
+    super.x = null,
+    super.y = null
+  });
+
+  double? strokeWidth;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of strokeWidth (type number is ignored) ignore type: true
+
+    
+    if (this.strokeWidth != null) {
+        buffer.writeAll(["\"strokeWidth\":",this.strokeWidth, ","], "");
+    }
   }
+
 
 }

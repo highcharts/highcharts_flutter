@@ -12,32 +12,44 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * IndicatorNameCouple 
+ * IndicatorNameCouple
  */
 class IndicatorNameCouple extends OptionFragment {
-  IndicatorNameCouple( ) : super();
-  // NOTE: indicatorFullName skipped - type string is ignored in gen 
 
-  // NOTE: indicatorType skipped - type string is ignored in gen 
+  IndicatorNameCouple({
+    this.indicatorFullName = null,
+    this.indicatorType = null
+  });
 
+  String? indicatorFullName;
+    
+  String? indicatorType;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of indicatorFullName (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of indicatorType (type string is ignored) ignore type: true
+    
+    if (this.indicatorFullName != null) {
+        buffer.writeAll(["\"indicatorFullName\":\'",this.indicatorFullName, "\',"], "");
+    }
+    
+    if (this.indicatorType != null) {
+        buffer.writeAll(["\"indicatorType\":\'",this.indicatorType, "\',"], "");
+    }
   }
+
 
 }

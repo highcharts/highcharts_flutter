@@ -12,34 +12,55 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * ZigzagIndicator 
+ * ZigzagIndicator
  */
 class ZigzagIndicator extends OptionFragment {
-  ZigzagIndicator( ) : super();
-  // NOTE: nameBase skipped - type string is ignored in gen 
+
+  ZigzagIndicator({
+    this.nameBase = null,
+    this.nameComponents = null,
+    this.nameSuffixes = null
+  });
+
+  String? nameComponents;
+    
+  String? nameSuffixes;
+    
+  String? nameBase;
+    
+  // NOTE: pointClass skipped - type typeof ZigzagPoint is ignored in gen 
 
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of nameComponents (type string[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of nameSuffixes (type string[] is ignored) ignore type: true
+    
+    if (this.nameComponents != null) {
+        buffer.writeAll(["\"nameComponents\":",this.nameComponents, ","], "");
+    }
+    
+    if (this.nameSuffixes != null) {
+        buffer.writeAll(["\"nameSuffixes\":",this.nameSuffixes, ","], "");
+    }
+    
+    if (this.nameBase != null) {
+        buffer.writeAll(["\"nameBase\":\'",this.nameBase, "\',"], "");
+    }
+    // NOTE: skip serialization of pointClass (type typeof ZigzagPoint ignored, skipped: true)
 
-    // NOTE: skip serialization of nameBase (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of pointClass (type typeof ZigzagPoint is ignored) ignore type: true
   }
+
 
 }

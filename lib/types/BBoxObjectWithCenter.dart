@@ -12,29 +12,45 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'BBoxObject.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * BBoxObjectWithCenter 
+ * BBoxObjectWithCenter
  */
 class BBoxObjectWithCenter extends BBoxObject {
-  BBoxObjectWithCenter( ) : super();
-  // NOTE: centerX skipped - type number is ignored in gen 
 
+  BBoxObjectWithCenter({
+    super.alignment = null,
+    super.bottomWidth = null,
+    this.centerX = null,
+    super.height = null,
+    super.polygon = null,
+    super.topWidth = null,
+    super.width = null,
+    super.x = null,
+    super.y = null
+  });
+
+  double? centerX;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of centerX (type number is ignored) ignore type: true
+
+    
+    if (this.centerX != null) {
+        buffer.writeAll(["\"centerX\":",this.centerX, ","], "");
+    }
   }
+
 
 }

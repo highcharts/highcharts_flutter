@@ -12,29 +12,41 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * PrintReverseInfoObject 
+ * PrintReverseInfoObject
  */
 class PrintReverseInfoObject extends OptionFragment {
-  PrintReverseInfoObject( ) : super();
-  
+
+  PrintReverseInfoObject({
+    this.origDisplay = null
+  });
+
+  // NOTE: childNodes skipped - type Generic is ignored in gen 
+
+  String? origDisplay;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of childNodes (type Generic is ignored) ignore type: true
 
-    // NOTE: skip serialization of origDisplay (type string[] is ignored) ignore type: true
+    // NOTE: skip serialization of childNodes (type Generic ignored, skipped: true)
+
+    
+    if (this.origDisplay != null) {
+        buffer.writeAll(["\"origDisplay\":",this.origDisplay, ","], "");
+    }
   }
+
 
 }

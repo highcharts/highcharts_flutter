@@ -12,37 +12,61 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'SVGAttributes.dart';
 import 'AlignObject.dart';
 import 'CSSObject.dart';
 import 'OptionFragment.dart';
 
+
 /** 
- * NoDataOptions 
+ * NoDataOptions
  */
 class NoDataOptions extends OptionFragment {
-  NoDataOptions( ) : super();
-  // NOTE: useHTML skipped - type boolean is ignored in gen 
 
+  NoDataOptions({
+    this.attr = null,
+    this.position = null,
+    this.style = null,
+    this.useHTML = null
+  });
+
+  SVGAttributes? attr;
+    
+  bool? useHTML;
+    
+  AlignObject? position;
+    
+  CSSObject? style;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of attr (type SVGAttributes is ignored) ignore type: true
 
-    // NOTE: skip serialization of useHTML (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of position (type AlignObject is ignored) ignore type: true
-
-    // NOTE: skip serialization of style (type CSSObject is ignored) ignore type: true
+    
+    if (this.attr != null) {
+        buffer.writeAll(["\"attr\":",this.attr?.toJSON(), ","], "");
+    }
+    
+    if (this.useHTML != null) {
+        buffer.writeAll(["\"useHTML\":",this.useHTML, ","], "");
+    }
+    
+    if (this.position != null) {
+        buffer.writeAll(["\"position\":",this.position?.toJSON(), ","], "");
+    }
+    
+    if (this.style != null) {
+        buffer.writeAll(["\"style\":",this.style?.toJSON(), ","], "");
+    }
   }
+
 
 }

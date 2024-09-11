@@ -12,42 +12,63 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * TilesItem 
+ * TilesItem
  */
 class TilesItem extends OptionFragment {
-  TilesItem( ) : super();
-  // NOTE: isActive skipped - type boolean is ignored in gen 
 
-  // NOTE: howManyTiles skipped - type number is ignored in gen 
+  TilesItem({
+    this.actualTilesCount = null,
+    this.howManyTiles = null,
+    this.isActive = null,
+    this.loaded = null,
+    this.tiles = null
+  });
 
-  // NOTE: actualTilesCount skipped - type number is ignored in gen 
-
-  // NOTE: loaded skipped - type boolean is ignored in gen 
-
+  Map<String, String>? tiles;
+    
+  bool? isActive;
+    
+  double? howManyTiles;
+    
+  double? actualTilesCount;
+    
+  bool? loaded;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of tiles (type Generic is ignored) ignore type: true
 
-    // NOTE: skip serialization of isActive (type boolean is ignored) ignore type: true
+    // NOTE: skip serialization of tiles (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of howManyTiles (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of actualTilesCount (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of loaded (type boolean is ignored) ignore type: true
+    
+    if (this.isActive != null) {
+        buffer.writeAll(["\"isActive\":",this.isActive, ","], "");
+    }
+    
+    if (this.howManyTiles != null) {
+        buffer.writeAll(["\"howManyTiles\":",this.howManyTiles, ","], "");
+    }
+    
+    if (this.actualTilesCount != null) {
+        buffer.writeAll(["\"actualTilesCount\":",this.actualTilesCount, ","], "");
+    }
+    
+    if (this.loaded != null) {
+        buffer.writeAll(["\"loaded\":",this.loaded, ","], "");
+    }
   }
+
 
 }

@@ -12,10 +12,9 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'BoxPlotSeriesOptions.dart';
 import 'Series.dart';
 import 'PointOptions.dart';
@@ -34,8 +33,7 @@ class BoxPlotSeries extends Series {
     this.data = null
   });
 
-  
-  @override
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
@@ -56,16 +54,13 @@ class BoxPlotSeries extends Series {
         if (point.length > 1) {
           seriesData.writeAll(["["], "");
         }
-
-          for (var sub in point) {
-            if (sub is String) {
-              seriesData.writeAll(["\"", sub, "\","], "");
-            } else {
-              seriesData.writeAll([sub], ",");
-            }
-
+        for (var sub in point) {
+          if (sub is String) {
+            seriesData.writeAll(["\"", sub, "\","], "");
+          } else {
+            seriesData.writeAll([sub], ",");
           }
-
+        }
         if (point.length > 1) {
           seriesData.writeAll(["],"], "");
         } else {
@@ -92,54 +87,74 @@ class BoxPlotSeries extends Series {
 
 
     
-    if (this.options?.boxDashStyle != null) {  
-      buffer.writeAll(["\"boxDashStyle\":\'",this.options?.boxDashStyle, "\',"], "");
+
+    
+    if (this.options?.boxDashStyle != null) {
+        buffer.writeAll(["\"boxDashStyle\":\'",this.options?.boxDashStyle, "\',"], "");
     }
-
-    if (this.options?.fillColor != null) {  
-      buffer.writeAll(["\"fillColor\":\'",this.options?.fillColor, "\',"], "");
+    
+    if (this.options?.fillColor != null) {
+        buffer.writeAll(["\"fillColor\":\'",this.options?.fillColor, "\',"], "");
     }
-
-    if (this.options?.medianColor != null) {  
-      buffer.writeAll(["\"medianColor\":",this.options?.medianColor?.toJSON(), ","], "");
+    
+    if (this.options?.medianColor != null) {
+        buffer.writeAll(["\"medianColor\":",this.options?.medianColor?.toJSON(), ","], "");
     }
-
-    if (this.options?.medianDashStyle != null) {  
-      buffer.writeAll(["\"medianDashStyle\":\'",this.options?.medianDashStyle, "\',"], "");
+    
+    if (this.options?.medianDashStyle != null) {
+        buffer.writeAll(["\"medianDashStyle\":\'",this.options?.medianDashStyle, "\',"], "");
     }
-
-    if (this.options?.medianWidth != null) {  
-      buffer.writeAll(["\"medianWidth\":",this.options?.medianWidth, ","], "");
+    
+    if (this.options?.medianWidth != null) {
+        buffer.writeAll(["\"medianWidth\":",this.options?.medianWidth, ","], "");
     }
+    // NOTE: skip serialization of states (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
-
-    if (this.options?.stemColor != null) {  
-      buffer.writeAll(["\"stemColor\":\'",this.options?.stemColor, "\',"], "");
+    
+    if (this.options?.stemColor != null) {
+        buffer.writeAll(["\"stemColor\":\'",this.options?.stemColor, "\',"], "");
     }
-
-    if (this.options?.stemDashStyle != null) {  
-      buffer.writeAll(["\"stemDashStyle\":\'",this.options?.stemDashStyle, "\',"], "");
+    
+    if (this.options?.stemDashStyle != null) {
+        buffer.writeAll(["\"stemDashStyle\":\'",this.options?.stemDashStyle, "\',"], "");
     }
-
-    if (this.options?.stemWidth != null) {  
-      buffer.writeAll(["\"stemWidth\":",this.options?.stemWidth, ","], "");
+    
+    if (this.options?.stemWidth != null) {
+        buffer.writeAll(["\"stemWidth\":",this.options?.stemWidth, ","], "");
     }
-
-    if (this.options?.whiskerColor != null) {  
-      buffer.writeAll(["\"whiskerColor\":\'",this.options?.whiskerColor, "\',"], "");
+    
+    if (this.options?.whiskerColor != null) {
+        buffer.writeAll(["\"whiskerColor\":\'",this.options?.whiskerColor, "\',"], "");
     }
-
-    if (this.options?.whiskerDashStyle != null) {  
-      buffer.writeAll(["\"whiskerDashStyle\":\'",this.options?.whiskerDashStyle, "\',"], "");
+    
+    if (this.options?.whiskerDashStyle != null) {
+        buffer.writeAll(["\"whiskerDashStyle\":\'",this.options?.whiskerDashStyle, "\',"], "");
     }
-
-    if (this.options?.whiskerLength != null) {  
-      buffer.writeAll(["\"whiskerLength\":\'",this.options?.whiskerLength, "\',"], "");
+    
+    if (this.options?.whiskerLength != null) {
+        buffer.writeAll(["\"whiskerLength\":\'",this.options?.whiskerLength, "\',"], "");
     }
+    
+    if (this.options?.whiskerWidth != null) {
+        buffer.writeAll(["\"whiskerWidth\":",this.options?.whiskerWidth, ","], "");
+    }
+    
+    if (this.options?.data != null) {
+        buffer.writeAll(["\"data\":",this.options?.data, ","], "");
+    }
+    
+    if (this.options?.colorKey != null) {
+        buffer.writeAll(["\"colorKey\":\'",this.options?.colorKey, "\',"], "");
+    }
+    
+    if (this.options?.lineWidth != null) {
+        buffer.writeAll(["\"lineWidth\":",this.options?.lineWidth, ","], "");
+    }
+    // NOTE: skip serialization of tooltip (type Generic ignored, skipped: true)
 
-    if (this.options?.whiskerWidth != null) {  
-      buffer.writeAll(["\"whiskerWidth\":",this.options?.whiskerWidth, ","], "");
+    
+    if (this.options?.threshold != null) {
+        buffer.writeAll(["\"threshold\":",this.options?.threshold, ","], "");
     }
   }
 

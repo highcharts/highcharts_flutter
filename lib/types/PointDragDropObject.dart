@@ -12,30 +12,42 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'Point.dart';
 import 'OptionFragment.dart';
 
 /** 
- * PointDragDropObject 
+ * PointDragDropObject
  */
 class PointDragDropObject extends OptionFragment {
-  PointDragDropObject( ) : super();
-  
+
+  PointDragDropObject({
+    this.newValues = null,
+    this.point = null
+  });
+
+  Map<String, String>? newValues;
+    
+  Point? point;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of newValues (type Generic is ignored) ignore type: true
 
-    // NOTE: skip serialization of point (type Point is ignored) ignore type: true
+    // NOTE: skip serialization of newValues (type Generic ignored, skipped: true)
+
+    
+    if (this.point != null) {
+        buffer.writeAll(["\"point\":",this.point?.toJSON(), ","], "");
+    }
   }
+
 
 }

@@ -12,10 +12,9 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'SolidGaugeSeriesOptions.dart';
 import 'Series.dart';
 import 'PointOptions.dart';
@@ -34,8 +33,7 @@ class SolidGaugeSeries extends Series {
     this.data = null
   });
 
-  
-  @override
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
@@ -56,16 +54,13 @@ class SolidGaugeSeries extends Series {
         if (point.length > 1) {
           seriesData.writeAll(["["], "");
         }
-
-          for (var sub in point) {
-            if (sub is String) {
-              seriesData.writeAll(["\"", sub, "\","], "");
-            } else {
-              seriesData.writeAll([sub], ",");
-            }
-
+        for (var sub in point) {
+          if (sub is String) {
+            seriesData.writeAll(["\"", sub, "\","], "");
+          } else {
+            seriesData.writeAll([sub], ",");
           }
-
+        }
         if (point.length > 1) {
           seriesData.writeAll(["],"], "");
         } else {
@@ -92,30 +87,42 @@ class SolidGaugeSeries extends Series {
 
 
     
-    if (this.options?.innerRadius != null) {  
-      buffer.writeAll(["\"innerRadius\":\'",this.options?.innerRadius, "\',"], "");
+
+    
+    if (this.options?.colorByPoint != null) {
+        buffer.writeAll(["\"colorByPoint\":",this.options?.colorByPoint, ","], "");
     }
-
-    if (this.options?.linecap != null) {  
-      buffer.writeAll(["\"linecap\":\'",this.options?.linecap, "\',"], "");
+    
+    if (this.options?.data != null) {
+        buffer.writeAll(["\"data\":",this.options?.data, ","], "");
     }
+    // NOTE: skip serialization of dataLabels (type Generic ignored, skipped: true)
 
-    if (this.options?.overshoot != null) {  
-      buffer.writeAll(["\"overshoot\":",this.options?.overshoot, ","], "");
+    
+    if (this.options?.innerRadius != null) {
+        buffer.writeAll(["\"innerRadius\":\'",this.options?.innerRadius, "\',"], "");
     }
-
-    if (this.options?.radius != null) {  
-      buffer.writeAll(["\"radius\":\'",this.options?.radius, "\',"], "");
+    
+    if (this.options?.linecap != null) {
+        buffer.writeAll(["\"linecap\":\'",this.options?.linecap, "\',"], "");
     }
-
-    if (this.options?.rounded != null) {  
-      buffer.writeAll(["\"rounded\":",this.options?.rounded, ","], "");
+    
+    if (this.options?.overshoot != null) {
+        buffer.writeAll(["\"overshoot\":",this.options?.overshoot, ","], "");
     }
+    
+    if (this.options?.radius != null) {
+        buffer.writeAll(["\"radius\":\'",this.options?.radius, "\',"], "");
+    }
+    
+    if (this.options?.rounded != null) {
+        buffer.writeAll(["\"rounded\":",this.options?.rounded, ","], "");
+    }
+    // NOTE: skip serialization of states (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
-
-    if (this.options?.threshold != null) {  
-      buffer.writeAll(["\"threshold\":",this.options?.threshold, ","], "");
+    
+    if (this.options?.threshold != null) {
+        buffer.writeAll(["\"threshold\":",this.options?.threshold, ","], "");
     }
   }
 

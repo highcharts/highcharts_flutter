@@ -12,42 +12,60 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * SetRangeEvent 
+ * SetRangeEvent
  */
 class SetRangeEvent extends OptionFragment {
-  SetRangeEvent( ) : super();
-  // NOTE: min skipped - type number is ignored in gen 
 
-  // NOTE: max skipped - type number is ignored in gen 
+  SetRangeEvent({
+    this.eventArguments = null,
+    this.max = null,
+    this.min = null,
+    this.redraw = null
+  });
 
-  // NOTE: redraw skipped - type boolean is ignored in gen 
-
+  double? min;
+    
+  double? max;
+    
+  bool? redraw;
+    
   // NOTE: animation skipped - type boolean is ignored in gen 
 
+  var eventArguments;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of min (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of max (type number is ignored) ignore type: true
+    
+    if (this.min != null) {
+        buffer.writeAll(["\"min\":",this.min, ","], "");
+    }
+    
+    if (this.max != null) {
+        buffer.writeAll(["\"max\":",this.max, ","], "");
+    }
+    
+    if (this.redraw != null) {
+        buffer.writeAll(["\"redraw\":",this.redraw, ","], "");
+    }
+    // NOTE: skip serialization of animation (type boolean ignored, skipped: true)
 
-    // NOTE: skip serialization of redraw (type boolean is ignored) ignore type: true
+    // NOTE: skip serialization of eventArguments (type "navigator"; triggerOp: string; DOMEvent: any; } ignored, skipped: true)
 
-    // NOTE: skip serialization of animation (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of eventArguments (type "navigator"; triggerOp: string; DOMEvent: any; } is ignored) ignore type: true
   }
+
 
 }

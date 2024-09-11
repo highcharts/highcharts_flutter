@@ -12,48 +12,79 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'ControlPointOptionsObject.dart';
 import 'ControllableLabelOptions.dart';
 import 'OptionFragment.dart';
 
+
 /** 
- * MockPointOptions 
+ * MockPointOptions
  */
 class MockPointOptions extends OptionFragment {
-  MockPointOptions( ) : super();
-  // NOTE: x skipped - type number is ignored in gen 
 
-  // NOTE: y skipped - type number is ignored in gen 
+  MockPointOptions({
+    this.command = null,
+    this.controlPoint = null,
+    this.label = null,
+    this.x = null,
+    this.y = null
+  });
 
-  // NOTE: command skipped - type string is ignored in gen 
+  ControlPointOptionsObject? controlPoint;
+    
+  ControllableLabelOptions? label;
+    
+  double? x;
+    
+  // NOTE: xAxis skipped - type AxisType is ignored in gen 
+
+  double? y;
+    
+  // NOTE: yAxis skipped - type AxisType is ignored in gen 
+
+  String? command;
+    
+  // NOTE: series skipped - type undefined is ignored in gen 
 
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of controlPoint (type ControlPointOptionsObject is ignored) ignore type: true
 
-    // NOTE: skip serialization of label (type ControllableLabelOptions is ignored) ignore type: true
+    
+    if (this.controlPoint != null) {
+        buffer.writeAll(["\"controlPoint\":",this.controlPoint?.toJSON(), ","], "");
+    }
+    
+    if (this.label != null) {
+        buffer.writeAll(["\"label\":",this.label?.toJSON(), ","], "");
+    }
+    
+    if (this.x != null) {
+        buffer.writeAll(["\"x\":",this.x, ","], "");
+    }
+    // NOTE: skip serialization of xAxis (type AxisType ignored, skipped: true)
 
-    // NOTE: skip serialization of x (type number is ignored) ignore type: true
+    
+    if (this.y != null) {
+        buffer.writeAll(["\"y\":",this.y, ","], "");
+    }
+    // NOTE: skip serialization of yAxis (type AxisType ignored, skipped: true)
 
-    // NOTE: skip serialization of xAxis (type AxisType is ignored) ignore type: 1
+    
+    if (this.command != null) {
+        buffer.writeAll(["\"command\":\'",this.command, "\',"], "");
+    }
+    // NOTE: skip serialization of series (type undefined ignored, skipped: true)
 
-    // NOTE: skip serialization of y (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of yAxis (type AxisType is ignored) ignore type: 1
-
-    // NOTE: skip serialization of command (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of series (type undefined is ignored) ignore type: 1
   }
+
 
 }

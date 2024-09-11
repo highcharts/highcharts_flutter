@@ -12,58 +12,90 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * PointStateHoverOptions 
+ * PointStateHoverOptions
  */
 class PointStateHoverOptions extends OptionFragment {
-  PointStateHoverOptions( ) : super();
-  // NOTE: radius skipped - type number is ignored in gen 
 
-  // NOTE: radiusPlus skipped - type number is ignored in gen 
+  PointStateHoverOptions({
+    this.enabled = null,
+    this.fillColor = null,
+    this.lineColor = null,
+    this.lineWidth = null,
+    this.lineWidthPlus = null,
+    this.opacity = null,
+    this.radius = null,
+    this.radiusPlus = null
+  });
 
-  // NOTE: enabled skipped - type boolean is ignored in gen 
+  double? radius;
+    
+  double? radiusPlus;
+    
+  // NOTE: animation skipped - type Generic is ignored in gen 
 
-  // NOTE: fillColor skipped - type string is ignored in gen 
-
-  // NOTE: lineColor skipped - type string is ignored in gen 
-
-  // NOTE: lineWidth skipped - type number is ignored in gen 
-
-  // NOTE: lineWidthPlus skipped - type number is ignored in gen 
-
-  // NOTE: opacity skipped - type number is ignored in gen 
-
+  bool? enabled;
+    
+  String? fillColor;
+    
+  String? lineColor;
+    
+  double? lineWidth;
+    
+  double? lineWidthPlus;
+    
+  double? opacity;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of radius (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of radiusPlus (type number is ignored) ignore type: true
+    
+    if (this.radius != null) {
+        buffer.writeAll(["\"radius\":",this.radius, ","], "");
+    }
+    
+    if (this.radiusPlus != null) {
+        buffer.writeAll(["\"radiusPlus\":",this.radiusPlus, ","], "");
+    }
+    // NOTE: skip serialization of animation (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of animation (type Generic is ignored) ignore type: true
-
-    // NOTE: skip serialization of enabled (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of fillColor (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of lineColor (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of lineWidth (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of lineWidthPlus (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of opacity (type number is ignored) ignore type: true
+    
+    if (this.enabled != null) {
+        buffer.writeAll(["\"enabled\":",this.enabled, ","], "");
+    }
+    
+    if (this.fillColor != null) {
+        buffer.writeAll(["\"fillColor\":\'",this.fillColor, "\',"], "");
+    }
+    
+    if (this.lineColor != null) {
+        buffer.writeAll(["\"lineColor\":\'",this.lineColor, "\',"], "");
+    }
+    
+    if (this.lineWidth != null) {
+        buffer.writeAll(["\"lineWidth\":",this.lineWidth, ","], "");
+    }
+    
+    if (this.lineWidthPlus != null) {
+        buffer.writeAll(["\"lineWidthPlus\":",this.lineWidthPlus, ","], "");
+    }
+    
+    if (this.opacity != null) {
+        buffer.writeAll(["\"opacity\":",this.opacity, ","], "");
+    }
   }
+
 
 }

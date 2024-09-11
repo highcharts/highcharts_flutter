@@ -12,47 +12,72 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'Series.dart';
 import 'OptionFragment.dart';
 
 /** 
- * NavigationBindingsAttractionObject 
+ * NavigationBindingsAttractionObject
  */
 class NavigationBindingsAttractionObject extends OptionFragment {
-  NavigationBindingsAttractionObject( ) : super();
-  // NOTE: x skipped - type number is ignored in gen 
 
-  // NOTE: y skipped - type number is ignored in gen 
+  NavigationBindingsAttractionObject({
+    this.below = null,
+    this.series = null,
+    this.x = null,
+    this.xAxis = null,
+    this.y = null,
+    this.yAxis = null
+  });
 
-  // NOTE: below skipped - type boolean is ignored in gen 
-
-  // NOTE: xAxis skipped - type number is ignored in gen 
-
-  // NOTE: yAxis skipped - type number is ignored in gen 
-
+  double? x;
+    
+  double? y;
+    
+  bool? below;
+    
+  Series? series;
+    
+  double? xAxis;
+    
+  double? yAxis;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of x (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of y (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of below (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of series (type Series is ignored) ignore type: true
-
-    // NOTE: skip serialization of xAxis (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of yAxis (type number is ignored) ignore type: true
+    
+    if (this.x != null) {
+        buffer.writeAll(["\"x\":",this.x, ","], "");
+    }
+    
+    if (this.y != null) {
+        buffer.writeAll(["\"y\":",this.y, ","], "");
+    }
+    
+    if (this.below != null) {
+        buffer.writeAll(["\"below\":",this.below, ","], "");
+    }
+    
+    if (this.series != null) {
+        buffer.writeAll(["\"series\":",this.series?.toJSON(), ","], "");
+    }
+    
+    if (this.xAxis != null) {
+        buffer.writeAll(["\"xAxis\":",this.xAxis, ","], "");
+    }
+    
+    if (this.yAxis != null) {
+        buffer.writeAll(["\"yAxis\":",this.yAxis, ","], "");
+    }
   }
+
 
 }

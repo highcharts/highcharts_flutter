@@ -12,40 +12,58 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * AlignOptions 
+ * AlignOptions
  */
 class AlignOptions extends OptionFragment {
-  AlignOptions( ) : super();
-  // NOTE: verticalAlign skipped - type string is ignored in gen 
 
-  // NOTE: align skipped - type string is ignored in gen 
+  AlignOptions({
+    this.align = null,
+    this.verticalAlign = null,
+    this.x = null,
+    this.y = null
+  });
 
-  // NOTE: x skipped - type number is ignored in gen 
-
-  // NOTE: y skipped - type number is ignored in gen 
-
+  String? verticalAlign;
+    
+  String? align;
+    
+  double? x;
+    
+  double? y;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of verticalAlign (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of align (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of x (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of y (type number is ignored) ignore type: true
+    
+    if (this.verticalAlign != null) {
+        buffer.writeAll(["\"verticalAlign\":\'",this.verticalAlign, "\',"], "");
+    }
+    
+    if (this.align != null) {
+        buffer.writeAll(["\"align\":\'",this.align, "\',"], "");
+    }
+    
+    if (this.x != null) {
+        buffer.writeAll(["\"x\":",this.x, ","], "");
+    }
+    
+    if (this.y != null) {
+        buffer.writeAll(["\"y\":",this.y, ","], "");
+    }
   }
+
 
 }

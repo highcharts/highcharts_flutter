@@ -12,33 +12,48 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'PolygonBoxObject.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * WordcloudFieldObject 
+ * WordcloudFieldObject
  */
 class WordcloudFieldObject extends PolygonBoxObject {
-  WordcloudFieldObject( ) : super();
-  // NOTE: ratioX skipped - type number is ignored in gen 
 
-  // NOTE: ratioY skipped - type number is ignored in gen 
+  WordcloudFieldObject({
+    super.bottom = null,
+    super.left = null,
+    this.ratioX = null,
+    this.ratioY = null,
+    super.right = null,
+    super.top = null
+  });
 
+  double? ratioX;
+    
+  double? ratioY;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of ratioX (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of ratioY (type number is ignored) ignore type: true
+    
+    if (this.ratioX != null) {
+        buffer.writeAll(["\"ratioX\":",this.ratioX, ","], "");
+    }
+    
+    if (this.ratioY != null) {
+        buffer.writeAll(["\"ratioY\":",this.ratioY, ","], "");
+    }
   }
+
 
 }

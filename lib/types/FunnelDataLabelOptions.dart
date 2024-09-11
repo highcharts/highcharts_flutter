@@ -12,19 +12,20 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'PieDataLabelOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * FunnelDataLabelOptions 
+ * FunnelDataLabelOptions
  */
 class FunnelDataLabelOptions extends PieDataLabelOptions {
-  FunnelDataLabelOptions( {
+
+  FunnelDataLabelOptions({
     super.align = null,
+    super.alignTo = null,
     super.allowOverlap = null,
     super.backgroundColor = null,
     super.borderColor = null,
@@ -32,18 +33,27 @@ class FunnelDataLabelOptions extends PieDataLabelOptions {
     super.borderWidth = null,
     super.className = null,
     super.color = null,
+    super.connectorColor = null,
+    super.connectorPadding = null,
+    super.connectorShape = null,
+    super.connectorWidth = null,
+    super.crookDistance = null,
     super.crop = null,
     super.defer = null,
+    super.distance = null,
     super.enabled = null,
     super.filter = null,
     super.format = null,
     super.inside = null,
+    super.labelrank = null,
     super.nullFormat = null,
+    super.outside3dPlot = null,
     super.overflow = null,
     super.padding = null,
     this.position = null,
     super.rotation = null,
     super.shape = null,
+    super.softConnector = null,
     super.style = null,
     super.textPath = null,
     super.useHTML = null,
@@ -51,20 +61,30 @@ class FunnelDataLabelOptions extends PieDataLabelOptions {
     super.x = null,
     super.y = null,
     super.zIndex = null
-  }) : super();
+  });
+
+  /**
+   * Aligns data labels relative to points. If `center` alignment is
+   * not possible, it defaults to `right`. 
+   * 
+   * Defaults to 'center'. 
+   */
   String? position;
     
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    if (this.position != null) {  
-      buffer.writeAll(["\"position\":\'",this.position, "\',"], "");
+
+    
+    if (this.position != null) {
+        buffer.writeAll(["\"position\":\'",this.position, "\',"], "");
     }
   }
+
 
 }

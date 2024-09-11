@@ -12,33 +12,41 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'StockToolsGuiOptions.dart';
 import 'OptionFragment.dart';
 
+
 /** 
- * StockToolsOptions 
+ * StockToolsOptions
  */
 class StockToolsOptions extends OptionFragment {
-  StockToolsOptions( {
+
+  StockToolsOptions({
     this.gui = null
-  }) : super();
+  });
+
+  /**
+   * Definitions of buttons in Stock Tools GUI.  
+   */
   StockToolsGuiOptions? gui;
     
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    if (this.gui != null) {  
-      buffer.writeAll(["\"gui\":",this.gui?.toJSON(), ","], "");
+
+    
+    if (this.gui != null) {
+        buffer.writeAll(["\"gui\":",this.gui?.toJSON(), ","], "");
     }
   }
+
 
 }

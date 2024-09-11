@@ -12,33 +12,41 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'AreaRangeSeriesOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * ColumnRangeSeriesOptions 
+ * ColumnRangeSeriesOptions
  */
 class ColumnRangeSeriesOptions extends AreaRangeSeriesOptions {
-  ColumnRangeSeriesOptions( {
+
+  ColumnRangeSeriesOptions({
     super.accessibility = null,
     super.allAreas = null,
     super.allowPointSelect = null,
     super.animationLimit = null,
+    super.baseSeries = null,
     super.boostBlending = null,
     super.boostThreshold = null,
     super.borderColor = null,
+    super.borderDashStyle = null,
+    super.borderRadius = null,
     super.borderWidth = null,
+    super.centerInCategory = null,
     super.className = null,
     super.clip = null,
+    super.cluster = null,
     super.color = null,
     super.colorAxis = null,
+    super.colorByPoint = null,
     super.colorIndex = null,
     super.colorKey = null,
+    super.colors = null,
     super.compare = null,
+    super.compareBase = null,
     super.compareStart = null,
     super.connectEnds = null,
     super.connectNulls = null,
@@ -46,13 +54,20 @@ class ColumnRangeSeriesOptions extends AreaRangeSeriesOptions {
     super.crisp = null,
     super.cropThreshold = null,
     super.cumulative = null,
+    super.cumulativeStart = null,
     super.cursor = null,
     super.dashStyle = null,
+    super.data = null,
+    super.dataAsColumns = null,
     super.dataGrouping = null,
     super.dataLabels = null,
     super.dataSorting = null,
+    super.depth = null,
     super.description = null,
     super.dragDrop = null,
+    super.drilldown = null,
+    super.edgeColor = null,
+    super.edgeWidth = null,
     super.enableMouseTracking = null,
     super.events = null,
     super.fillColor = null,
@@ -61,22 +76,36 @@ class ColumnRangeSeriesOptions extends AreaRangeSeriesOptions {
     super.gapSize = null,
     super.gapUnit = null,
     super.getExtremesFromAll = null,
+    super.grouping = null,
+    super.groupPadding = null,
+    super.groupZPadding = null,
+    super.id = null,
+    super.inactiveOtherPoints = null,
     super.includeInDataExport = null,
+    super.index = null,
+    super.isInternal = null,
     super.joinBy = null,
+    super.kdNow = null,
     super.keys = null,
     super.label = null,
     super.lastPrice = null,
     super.lastVisiblePrice = null,
+    super.legendIndex = null,
     super.legendSymbol = null,
+    super.legendType = null,
     super.linecap = null,
+    super.lineColor = null,
     super.lineWidth = null,
     super.linkedTo = null,
+    super.lowMarker = null,
     super.marker = null,
     this.minPointLength = null,
+    super.name = null,
     super.navigatorOptions = null,
     super.negativeColor = null,
     super.negativeFillColor = null,
     super.onPoint = null,
+    super.onSeries = null,
     super.opacity = null,
     super.point = null,
     super.pointInterval = null,
@@ -84,6 +113,7 @@ class ColumnRangeSeriesOptions extends AreaRangeSeriesOptions {
     super.pointPlacement = null,
     super.pointRange = null,
     super.pointStart = null,
+    super.pointValKey = null,
     super.relativeXValue = null,
     super.selected = null,
     super.showCheckbox = null,
@@ -91,35 +121,56 @@ class ColumnRangeSeriesOptions extends AreaRangeSeriesOptions {
     super.showInNavigator = null,
     super.skipKeyboardNavigation = null,
     super.softThreshold = null,
+    super.stack = null,
     super.stacking = null,
+    super.startFromThreshold = null,
+    super.states = null,
     super.step = null,
     super.stickyTracking = null,
+    super.supportingColor = null,
     super.threshold = null,
     super.tooltip = null,
     super.trackByArea = null,
     super.turboThreshold = null,
+    super.type = null,
+    super.useOhlcData = null,
     super.visible = null,
+    super.xAxis = null,
+    super.xData = null,
+    super.yAxis = null,
+    super.yData = null,
     super.zIndex = null,
     super.zoneAxis = null,
     super.zones = null
-  }) : super();
+  });
+
+  /**
+   * The minimal height for a column or width for a bar. By default,
+   * 0 values are not shown. To visualize a 0 (or close to zero) point,
+   * set the minimal point length to a pixel value like 3\. In stacked
+   * column charts, minPointLength might not be respected for tightly
+   * packed values.  
+   */
   double? minPointLength;
     
   // NOTE: states skipped - type Generic is ignored in gen 
 
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    if (this.minPointLength != null) {  
-      buffer.writeAll(["\"minPointLength\":",this.minPointLength, ","], "");
-    }
 
-    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
+    
+    if (this.minPointLength != null) {
+        buffer.writeAll(["\"minPointLength\":",this.minPointLength, ","], "");
+    }
+    // NOTE: skip serialization of states (type Generic ignored, skipped: true)
+
   }
+
 
 }

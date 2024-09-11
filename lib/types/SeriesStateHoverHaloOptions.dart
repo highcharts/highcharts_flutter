@@ -12,43 +12,66 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'SVGAttributes.dart';
 import 'OptionFragment.dart';
 
+
 /** 
- * SeriesStateHoverHaloOptions 
+ * SeriesStateHoverHaloOptions
  */
 class SeriesStateHoverHaloOptions extends OptionFragment {
-  SeriesStateHoverHaloOptions( ) : super();
-  // NOTE: brightness skipped - type number is ignored in gen 
 
-  // NOTE: opacity skipped - type number is ignored in gen 
+  SeriesStateHoverHaloOptions({
+    this.attributes = null,
+    this.brightness = null,
+    this.enabled = null,
+    this.opacity = null,
+    this.size = null
+  });
 
-  // NOTE: size skipped - type number is ignored in gen 
-
-  // NOTE: enabled skipped - type boolean is ignored in gen 
-
+  SVGAttributes? attributes;
+    
+  double? brightness;
+    
+  double? opacity;
+    
+  double? size;
+    
+  bool? enabled;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of attributes (type SVGAttributes is ignored) ignore type: true
 
-    // NOTE: skip serialization of brightness (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of opacity (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of size (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of enabled (type boolean is ignored) ignore type: true
+    
+    if (this.attributes != null) {
+        buffer.writeAll(["\"attributes\":",this.attributes?.toJSON(), ","], "");
+    }
+    
+    if (this.brightness != null) {
+        buffer.writeAll(["\"brightness\":",this.brightness, ","], "");
+    }
+    
+    if (this.opacity != null) {
+        buffer.writeAll(["\"opacity\":",this.opacity, ","], "");
+    }
+    
+    if (this.size != null) {
+        buffer.writeAll(["\"size\":",this.size, ","], "");
+    }
+    
+    if (this.enabled != null) {
+        buffer.writeAll(["\"enabled\":",this.enabled, ","], "");
+    }
   }
+
 
 }

@@ -12,32 +12,51 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'ChartClickEventAxisObject.dart';
 import 'OptionFragment.dart';
 
 /** 
- * ChartClickEventObject 
+ * ChartClickEventObject
  */
 class ChartClickEventObject extends OptionFragment {
-  ChartClickEventObject( ) : super();
-  
+
+  ChartClickEventObject({
+    this.xAxis = null,
+    this.yAxis = null,
+    this.zAxis = null
+  });
+
+  ChartClickEventAxisObject? xAxis;
+    
+  ChartClickEventAxisObject? yAxis;
+    
+  ChartClickEventAxisObject? zAxis;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of xAxis (type ChartClickEventAxisObject[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of yAxis (type ChartClickEventAxisObject[] is ignored) ignore type: true
-
-    // NOTE: skip serialization of zAxis (type ChartClickEventAxisObject[] is ignored) ignore type: true
+    
+    if (this.xAxis != null) {
+        buffer.writeAll(["\"xAxis\":",this.xAxis, ","], "");
+    }
+    
+    if (this.yAxis != null) {
+        buffer.writeAll(["\"yAxis\":",this.yAxis, ","], "");
+    }
+    
+    if (this.zAxis != null) {
+        buffer.writeAll(["\"zAxis\":",this.zAxis, ","], "");
+    }
   }
+
 
 }

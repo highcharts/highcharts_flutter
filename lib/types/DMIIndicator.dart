@@ -12,40 +12,66 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * DMIIndicator 
+ * DMIIndicator
  */
 class DMIIndicator extends OptionFragment {
-  DMIIndicator( ) : super();
-  // NOTE: nameBase skipped - type string is ignored in gen 
 
-  // NOTE: pointValKey skipped - type string is ignored in gen 
+  DMIIndicator({
+    this.linesApiNames = null,
+    this.nameBase = null,
+    this.parallelArrays = null,
+    this.pointValKey = null
+  });
+
+  String? nameBase;
+    
+  // NOTE: pointArrayMap skipped - type (keyof DMIPoint)[] is ignored in gen 
+
+  String? parallelArrays;
+    
+  String? pointValKey;
+    
+  String? linesApiNames;
+    
+  // NOTE: pointClass skipped - type typeof DMIPoint is ignored in gen 
 
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of nameBase (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of pointArrayMap (type (keyof DMIPoint)[] is ignored) ignore type: true
+    
+    if (this.nameBase != null) {
+        buffer.writeAll(["\"nameBase\":\'",this.nameBase, "\',"], "");
+    }
+    // NOTE: skip serialization of pointArrayMap (type (keyof DMIPoint)[] ignored, skipped: true)
 
-    // NOTE: skip serialization of parallelArrays (type string[] is ignored) ignore type: true
+    
+    if (this.parallelArrays != null) {
+        buffer.writeAll(["\"parallelArrays\":",this.parallelArrays, ","], "");
+    }
+    
+    if (this.pointValKey != null) {
+        buffer.writeAll(["\"pointValKey\":\'",this.pointValKey, "\',"], "");
+    }
+    
+    if (this.linesApiNames != null) {
+        buffer.writeAll(["\"linesApiNames\":",this.linesApiNames, ","], "");
+    }
+    // NOTE: skip serialization of pointClass (type typeof DMIPoint ignored, skipped: true)
 
-    // NOTE: skip serialization of pointValKey (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of linesApiNames (type string[] is ignored) ignore type: true
-
-    // NOTE: skip serialization of pointClass (type typeof DMIPoint is ignored) ignore type: true
   }
+
 
 }

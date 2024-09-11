@@ -12,47 +12,80 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'PointDragDropObject.dart';
 import 'DragDropPositionObject.dart';
 import 'Point.dart';
 import 'OptionFragment.dart';
 
 /** 
- * PointDropEventObject 
+ * PointDropEventObject
  */
 class PointDropEventObject extends OptionFragment {
-  PointDropEventObject( ) : super();
-  // NOTE: newPointId skipped - type string is ignored in gen 
 
-  // NOTE: numNewPoints skipped - type number is ignored in gen 
+  PointDropEventObject({
+    this.newPoint = null,
+    this.newPointId = null,
+    this.newPoints = null,
+    this.numNewPoints = null,
+    this.origin = null,
+    this.target = null
+  });
+
+  PointDragDropObject? newPoint;
+    
+  String? newPointId;
+    
+  Map<String, String>? newPoints;
+    
+  double? numNewPoints;
+    
+  DragDropPositionObject? origin;
+    
+  // NOTE: preventDefault skipped - type Function is ignored in gen 
+
+  Point? target;
+    
+  // NOTE: type skipped - type "drop" is ignored in gen 
 
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of newPoint (type PointDragDropObject is ignored) ignore type: true
 
-    // NOTE: skip serialization of newPointId (type string is ignored) ignore type: true
+    
+    if (this.newPoint != null) {
+        buffer.writeAll(["\"newPoint\":",this.newPoint?.toJSON(), ","], "");
+    }
+    
+    if (this.newPointId != null) {
+        buffer.writeAll(["\"newPointId\":\'",this.newPointId, "\',"], "");
+    }
+    // NOTE: skip serialization of newPoints (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of newPoints (type Generic is ignored) ignore type: true
+    
+    if (this.numNewPoints != null) {
+        buffer.writeAll(["\"numNewPoints\":",this.numNewPoints, ","], "");
+    }
+    
+    if (this.origin != null) {
+        buffer.writeAll(["\"origin\":",this.origin?.toJSON(), ","], "");
+    }
+    // NOTE: skip serialization of preventDefault (type Function ignored, skipped: true)
 
-    // NOTE: skip serialization of numNewPoints (type number is ignored) ignore type: true
+    
+    if (this.target != null) {
+        buffer.writeAll(["\"target\":",this.target?.toJSON(), ","], "");
+    }
+    // NOTE: skip serialization of type (type "drop" ignored, skipped: true)
 
-    // NOTE: skip serialization of origin (type DragDropPositionObject is ignored) ignore type: true
-
-    // NOTE: skip serialization of preventDefault (type Function is ignored) ignore type: 1
-
-    // NOTE: skip serialization of target (type Point is ignored) ignore type: true
-
-    // NOTE: skip serialization of type (type "drop" is ignored) ignore type: true
   }
+
 
 }

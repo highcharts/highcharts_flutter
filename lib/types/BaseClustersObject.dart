@@ -12,30 +12,44 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'ClusterAndNoiseObject.dart';
 import 'OptionFragment.dart';
 
 /** 
- * BaseClustersObject 
+ * BaseClustersObject
  */
 class BaseClustersObject extends OptionFragment {
-  BaseClustersObject( ) : super();
-  
+
+  BaseClustersObject({
+    this.clusters = null,
+    this.noise = null
+  });
+
+  ClusterAndNoiseObject? clusters;
+    
+  ClusterAndNoiseObject? noise;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of clusters (type ClusterAndNoiseObject[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of noise (type ClusterAndNoiseObject[] is ignored) ignore type: true
+    
+    if (this.clusters != null) {
+        buffer.writeAll(["\"clusters\":",this.clusters, ","], "");
+    }
+    
+    if (this.noise != null) {
+        buffer.writeAll(["\"noise\":",this.noise, ","], "");
+    }
   }
+
 
 }

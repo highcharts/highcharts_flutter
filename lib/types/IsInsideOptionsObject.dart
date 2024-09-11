@@ -12,50 +12,80 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'Axis.dart';
 import 'Series.dart';
 import 'OptionFragment.dart';
 
 /** 
- * IsInsideOptionsObject 
+ * IsInsideOptionsObject
  */
 class IsInsideOptionsObject extends OptionFragment {
-  IsInsideOptionsObject( ) : super();
-  // NOTE: ignoreX skipped - type boolean is ignored in gen 
 
-  // NOTE: ignoreY skipped - type boolean is ignored in gen 
+  IsInsideOptionsObject({
+    this.axis = null,
+    this.ignoreX = null,
+    this.ignoreY = null,
+    this.inverted = null,
+    this.paneCoordinates = null,
+    this.series = null,
+    this.visiblePlotOnly = null
+  });
 
-  // NOTE: inverted skipped - type boolean is ignored in gen 
-
-  // NOTE: paneCoordinates skipped - type boolean is ignored in gen 
-
-  // NOTE: visiblePlotOnly skipped - type boolean is ignored in gen 
-
+  Axis? axis;
+    
+  bool? ignoreX;
+    
+  bool? ignoreY;
+    
+  bool? inverted;
+    
+  bool? paneCoordinates;
+    
+  Series? series;
+    
+  bool? visiblePlotOnly;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of axis (type Axis is ignored) ignore type: true
 
-    // NOTE: skip serialization of ignoreX (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of ignoreY (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of inverted (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of paneCoordinates (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of series (type Series is ignored) ignore type: true
-
-    // NOTE: skip serialization of visiblePlotOnly (type boolean is ignored) ignore type: true
+    
+    if (this.axis != null) {
+        buffer.writeAll(["\"axis\":",this.axis?.toJSON(), ","], "");
+    }
+    
+    if (this.ignoreX != null) {
+        buffer.writeAll(["\"ignoreX\":",this.ignoreX, ","], "");
+    }
+    
+    if (this.ignoreY != null) {
+        buffer.writeAll(["\"ignoreY\":",this.ignoreY, ","], "");
+    }
+    
+    if (this.inverted != null) {
+        buffer.writeAll(["\"inverted\":",this.inverted, ","], "");
+    }
+    
+    if (this.paneCoordinates != null) {
+        buffer.writeAll(["\"paneCoordinates\":",this.paneCoordinates, ","], "");
+    }
+    
+    if (this.series != null) {
+        buffer.writeAll(["\"series\":",this.series?.toJSON(), ","], "");
+    }
+    
+    if (this.visiblePlotOnly != null) {
+        buffer.writeAll(["\"visiblePlotOnly\":",this.visiblePlotOnly, ","], "");
+    }
   }
+
 
 }

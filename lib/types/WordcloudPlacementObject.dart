@@ -12,29 +12,40 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'PositionObject.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * WordcloudPlacementObject 
+ * WordcloudPlacementObject
  */
 class WordcloudPlacementObject extends PositionObject {
-  WordcloudPlacementObject( ) : super();
-  // NOTE: rotation skipped - type number is ignored in gen 
 
+  WordcloudPlacementObject({
+    super.alignment = null,
+    this.rotation = null,
+    super.x = null,
+    super.y = null
+  });
+
+  double? rotation;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of rotation (type number is ignored) ignore type: true
+
+    
+    if (this.rotation != null) {
+        buffer.writeAll(["\"rotation\":",this.rotation, ","], "");
+    }
   }
+
 
 }

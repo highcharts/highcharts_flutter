@@ -12,35 +12,51 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'SVGElement.dart';
 import 'OptionFragment.dart';
 
 /** 
- * Timer 
+ * Timer
  */
 class Timer extends OptionFragment {
-  Timer( ) : super();
-  // NOTE: prop skipped - type string is ignored in gen 
 
-  // NOTE: stopped skipped - type boolean is ignored in gen 
+  Timer({
+    this.elem = null,
+    this.prop = null,
+    this.stopped = null
+  });
 
+  SVGElement? elem;
+    
+  String? prop;
+    
+  bool? stopped;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of elem (type SVGElement is ignored) ignore type: true
 
-    // NOTE: skip serialization of prop (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of stopped (type boolean is ignored) ignore type: true
+    
+    if (this.elem != null) {
+        buffer.writeAll(["\"elem\":",this.elem?.toJSON(), ","], "");
+    }
+    
+    if (this.prop != null) {
+        buffer.writeAll(["\"prop\":\'",this.prop, "\',"], "");
+    }
+    
+    if (this.stopped != null) {
+        buffer.writeAll(["\"stopped\":",this.stopped, ","], "");
+    }
   }
+
 
 }

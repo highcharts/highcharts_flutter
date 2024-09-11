@@ -12,40 +12,58 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * MathModifierColumnFormulaOptions 
+ * MathModifierColumnFormulaOptions
  */
 class MathModifierColumnFormulaOptions extends OptionFragment {
-  MathModifierColumnFormulaOptions( ) : super();
-  // NOTE: column skipped - type string is ignored in gen 
 
-  // NOTE: formula skipped - type string is ignored in gen 
+  MathModifierColumnFormulaOptions({
+    this.column = null,
+    this.formula = null,
+    this.rowEnd = null,
+    this.rowStart = null
+  });
 
-  // NOTE: rowEnd skipped - type number is ignored in gen 
-
-  // NOTE: rowStart skipped - type number is ignored in gen 
-
+  String? column;
+    
+  String? formula;
+    
+  double? rowEnd;
+    
+  double? rowStart;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of column (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of formula (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of rowEnd (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of rowStart (type number is ignored) ignore type: true
+    
+    if (this.column != null) {
+        buffer.writeAll(["\"column\":\'",this.column, "\',"], "");
+    }
+    
+    if (this.formula != null) {
+        buffer.writeAll(["\"formula\":\'",this.formula, "\',"], "");
+    }
+    
+    if (this.rowEnd != null) {
+        buffer.writeAll(["\"rowEnd\":",this.rowEnd, ","], "");
+    }
+    
+    if (this.rowStart != null) {
+        buffer.writeAll(["\"rowStart\":",this.rowStart, ","], "");
+    }
   }
+
 
 }

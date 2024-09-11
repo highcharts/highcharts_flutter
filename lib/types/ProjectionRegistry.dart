@@ -12,35 +12,49 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * ProjectionRegistry 
+ * ProjectionRegistry
  */
 class ProjectionRegistry extends OptionFragment {
-  ProjectionRegistry( ) : super();
-  
+
+  ProjectionRegistry();
+
+  // NOTE: EqualEarth skipped - type typeof EqualEarth is ignored in gen 
+
+  // NOTE: LambertConformalConic skipped - type typeof LambertConformalConic is ignored in gen 
+
+  // NOTE: Miller skipped - type typeof Miller is ignored in gen 
+
+  // NOTE: Orthographic skipped - type typeof Orthographic is ignored in gen 
+
+  // NOTE: WebMercator skipped - type typeof WebMercator is ignored in gen 
+
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of EqualEarth (type typeof EqualEarth is ignored) ignore type: true
 
-    // NOTE: skip serialization of LambertConformalConic (type typeof LambertConformalConic is ignored) ignore type: true
+    // NOTE: skip serialization of EqualEarth (type typeof EqualEarth ignored, skipped: true)
 
-    // NOTE: skip serialization of Miller (type typeof Miller is ignored) ignore type: true
+    // NOTE: skip serialization of LambertConformalConic (type typeof LambertConformalConic ignored, skipped: true)
 
-    // NOTE: skip serialization of Orthographic (type typeof Orthographic is ignored) ignore type: true
+    // NOTE: skip serialization of Miller (type typeof Miller ignored, skipped: true)
 
-    // NOTE: skip serialization of WebMercator (type typeof WebMercator is ignored) ignore type: true
+    // NOTE: skip serialization of Orthographic (type typeof Orthographic ignored, skipped: true)
+
+    // NOTE: skip serialization of WebMercator (type typeof WebMercator ignored, skipped: true)
+
   }
+
 
 }

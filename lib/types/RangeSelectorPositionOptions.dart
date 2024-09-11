@@ -12,46 +12,63 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * RangeSelectorPositionOptions 
+ * RangeSelectorPositionOptions
  */
 class RangeSelectorPositionOptions extends OptionFragment {
-  RangeSelectorPositionOptions( {
+
+  RangeSelectorPositionOptions({
     this.align = null,
     this.x = null,
     this.y = null
-  }) : super();
+  });
+
+  /**
+   * The alignment of the input box. Allowed properties are `left`,
+   * `center`, `right`. 
+   * 
+   * Defaults to 'left'. 
+   */
   String? align;
     
+  /**
+   * X offset of the button row.  
+   */
   double? x;
     
+  /**
+   * Y offset of the button row.  
+   */
   double? y;
     
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    if (this.align != null) {  
-      buffer.writeAll(["\"align\":\'",this.align, "\',"], "");
-    }
 
-    if (this.x != null) {  
-      buffer.writeAll(["\"x\":",this.x, ","], "");
+    
+    if (this.align != null) {
+        buffer.writeAll(["\"align\":\'",this.align, "\',"], "");
     }
-
-    if (this.y != null) {  
-      buffer.writeAll(["\"y\":",this.y, ","], "");
+    
+    if (this.x != null) {
+        buffer.writeAll(["\"x\":",this.x, ","], "");
+    }
+    
+    if (this.y != null) {
+        buffer.writeAll(["\"y\":",this.y, ","], "");
     }
   }
+
 
 }

@@ -12,53 +12,81 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * MarkerEndOptions 
+ * MarkerEndOptions
  */
 class MarkerEndOptions extends OptionFragment {
-  MarkerEndOptions( {
+
+  MarkerEndOptions({
     this.enabled = null,
     this.height = null,
     this.markerType = null,
     this.width = null
-  }) : super();
+  });
+
+  /**
+   * Change the shape of the `markerEnd`.
+   * Can be `arrow` or `mushroom`. 
+   * 
+   * Defaults to 'arrow'. 
+   */
   String? markerType;
     
+  /**
+   * Enable or disable the `markerEnd`. 
+   * 
+   * Defaults to 'true'. 
+   */
   bool? enabled;
     
+  /**
+   * Width of the `markerEnd`. Can be a number in pixels or a
+   * percentage based on the weight of the link. 
+   * 
+   * Defaults to '40%'. 
+   */
   String? width;
     
+  /**
+   * Height of the `markerEnd`. Can be a number in pixels or a
+   * percentage based on the weight of the link. 
+   * 
+   * Defaults to '40%'. 
+   */
   String? height;
     
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    if (this.markerType != null) {  
-      buffer.writeAll(["\"markerType\":\'",this.markerType, "\',"], "");
-    }
 
-    if (this.enabled != null) {  
-      buffer.writeAll(["\"enabled\":",this.enabled, ","], "");
+    
+    if (this.markerType != null) {
+        buffer.writeAll(["\"markerType\":\'",this.markerType, "\',"], "");
     }
-
-    if (this.width != null) {  
-      buffer.writeAll(["\"width\":\'",this.width, "\',"], "");
+    
+    if (this.enabled != null) {
+        buffer.writeAll(["\"enabled\":",this.enabled, ","], "");
     }
-
-    if (this.height != null) {  
-      buffer.writeAll(["\"height\":\'",this.height, "\',"], "");
+    
+    if (this.width != null) {
+        buffer.writeAll(["\"width\":\'",this.width, "\',"], "");
+    }
+    
+    if (this.height != null) {
+        buffer.writeAll(["\"height\":\'",this.height, "\',"], "");
     }
   }
+
 
 }

@@ -12,32 +12,44 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * SelectOptions 
+ * SelectOptions
  */
 class SelectOptions extends OptionFragment {
-  SelectOptions( ) : super();
-  // NOTE: name skipped - type string is ignored in gen 
 
-  // NOTE: iconURL skipped - type string is ignored in gen 
+  SelectOptions({
+    this.iconURL = null,
+    this.name = null
+  });
 
+  String? name;
+    
+  String? iconURL;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of name (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of iconURL (type string is ignored) ignore type: true
+    
+    if (this.name != null) {
+        buffer.writeAll(["\"name\":\'",this.name, "\',"], "");
+    }
+    
+    if (this.iconURL != null) {
+        buffer.writeAll(["\"iconURL\":\'",this.iconURL, "\',"], "");
+    }
   }
+
 
 }

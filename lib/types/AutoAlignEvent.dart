@@ -12,29 +12,37 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
-import 'Event.dart';
 import 'OptionFragment.dart';
 
 /** 
- * AutoAlignEvent 
+ * AutoAlignEvent
  */
-class AutoAlignEvent extends Event {
-  AutoAlignEvent( ) : super();
-  // NOTE: align skipped - type string is ignored in gen 
+class AutoAlignEvent extends OptionFragment {
 
+  AutoAlignEvent({
+    this.align = null
+  });
+
+  String? align;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of align (type string is ignored) ignore type: true
+
+    
+    if (this.align != null) {
+        buffer.writeAll(["\"align\":\'",this.align, "\',"], "");
+    }
   }
+
 
 }

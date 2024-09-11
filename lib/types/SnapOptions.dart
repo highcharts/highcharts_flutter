@@ -12,32 +12,44 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * SnapOptions 
+ * SnapOptions
  */
 class SnapOptions extends OptionFragment {
-  SnapOptions( ) : super();
-  // NOTE: width skipped - type number is ignored in gen 
 
-  // NOTE: height skipped - type number is ignored in gen 
+  SnapOptions({
+    this.height = null,
+    this.width = null
+  });
 
+  double? width;
+    
+  double? height;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of width (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of height (type number is ignored) ignore type: true
+    
+    if (this.width != null) {
+        buffer.writeAll(["\"width\":",this.width, ","], "");
+    }
+    
+    if (this.height != null) {
+        buffer.writeAll(["\"height\":",this.height, ","], "");
+    }
   }
+
 
 }

@@ -12,53 +12,76 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * NetworkgraphLinkOptions 
+ * NetworkgraphLinkOptions
  */
 class NetworkgraphLinkOptions extends OptionFragment {
-  NetworkgraphLinkOptions( {
+
+  NetworkgraphLinkOptions({
     this.color = null,
     this.dashStyle = null,
     this.opacity = null,
     this.width = null
-  }) : super();
+  });
+
+  /**
+   * Color of the link between two nodes. 
+   * 
+   * Defaults to 'rgba(100, 100, 100, 0.5)'. 
+   */
   String? color;
     
+  /**
+   * A name for the dash style to use for links.  
+   */
   String? dashStyle;
     
+  /**
+   * Opacity of the link between two nodes. 
+   * 
+   * Defaults to '1'. 
+   */
   double? opacity;
     
+  /**
+   * Width (px) of the link between two nodes. 
+   * 
+   * Defaults to '1'. 
+   */
   double? width;
     
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    if (this.color != null) {  
-      buffer.writeAll(["\"color\":\'",this.color, "\',"], "");
-    }
 
-    if (this.dashStyle != null) {  
-      buffer.writeAll(["\"dashStyle\":\'",this.dashStyle, "\',"], "");
+    
+    if (this.color != null) {
+        buffer.writeAll(["\"color\":\'",this.color, "\',"], "");
     }
-
-    if (this.opacity != null) {  
-      buffer.writeAll(["\"opacity\":",this.opacity, ","], "");
+    
+    if (this.dashStyle != null) {
+        buffer.writeAll(["\"dashStyle\":\'",this.dashStyle, "\',"], "");
     }
-
-    if (this.width != null) {  
-      buffer.writeAll(["\"width\":",this.width, ","], "");
+    
+    if (this.opacity != null) {
+        buffer.writeAll(["\"opacity\":",this.opacity, ","], "");
+    }
+    
+    if (this.width != null) {
+        buffer.writeAll(["\"width\":",this.width, ","], "");
     }
   }
+
 
 }

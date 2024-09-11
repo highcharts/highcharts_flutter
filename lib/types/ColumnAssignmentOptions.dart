@@ -12,30 +12,41 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * ColumnAssignmentOptions 
+ * ColumnAssignmentOptions
  */
 class ColumnAssignmentOptions extends OptionFragment {
-  ColumnAssignmentOptions( ) : super();
-  // NOTE: seriesId skipped - type string is ignored in gen 
+
+  ColumnAssignmentOptions({
+    this.seriesId = null
+  });
+
+  String? seriesId;
+    
+  // NOTE: data skipped - type Generic is ignored in gen 
 
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of seriesId (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of data (type Generic is ignored) ignore type: true
+    
+    if (this.seriesId != null) {
+        buffer.writeAll(["\"seriesId\":\'",this.seriesId, "\',"], "");
+    }
+    // NOTE: skip serialization of data (type Generic ignored, skipped: true)
+
   }
+
 
 }

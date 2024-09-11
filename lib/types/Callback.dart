@@ -12,31 +12,41 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'CallbackLike.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * Callback 
+ * Callback
  */
 class Callback extends CallbackLike {
-  Callback( ) : super();
-  // NOTE: type skipped - type string is ignored in gen 
+
+  Callback({
+    this.type = null
+  });
+
+  String? type;
+    
+  // NOTE: func skipped - type Function is ignored in gen 
 
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of type (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of func (type Function is ignored) ignore type: 1
+    
+    if (this.type != null) {
+        buffer.writeAll(["\"type\":\'",this.type, "\',"], "");
+    }
+    // NOTE: skip serialization of func (type Function ignored, skipped: true)
+
   }
+
 
 }

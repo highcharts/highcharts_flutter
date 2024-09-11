@@ -12,31 +12,44 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'RwdIcons.dart';
 import 'OptionFragment.dart';
 
 /** 
- * RwdButtons 
+ * RwdButtons
  */
 class RwdButtons extends OptionFragment {
-  RwdButtons( ) : super();
-  // NOTE: enabled skipped - type boolean is ignored in gen 
 
+  RwdButtons({
+    this.enabled = null,
+    this.icons = null
+  });
+
+  bool? enabled;
+    
+  RwdIcons? icons;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of enabled (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of icons (type RwdIcons is ignored) ignore type: true
+    
+    if (this.enabled != null) {
+        buffer.writeAll(["\"enabled\":",this.enabled, ","], "");
+    }
+    
+    if (this.icons != null) {
+        buffer.writeAll(["\"icons\":",this.icons?.toJSON(), ","], "");
+    }
   }
+
 
 }

@@ -12,40 +12,58 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * EMALevelsObject 
+ * EMALevelsObject
  */
 class EMALevelsObject extends OptionFragment {
-  EMALevelsObject( ) : super();
-  // NOTE: level1 skipped - type number is ignored in gen 
 
-  // NOTE: level2 skipped - type number is ignored in gen 
+  EMALevelsObject({
+    this.level1 = null,
+    this.level2 = null,
+    this.level3 = null,
+    this.prevLevel3 = null
+  });
 
-  // NOTE: level3 skipped - type number is ignored in gen 
-
-  // NOTE: prevLevel3 skipped - type number is ignored in gen 
-
+  double? level1;
+    
+  double? level2;
+    
+  double? level3;
+    
+  double? prevLevel3;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of level1 (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of level2 (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of level3 (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of prevLevel3 (type number is ignored) ignore type: true
+    
+    if (this.level1 != null) {
+        buffer.writeAll(["\"level1\":",this.level1, ","], "");
+    }
+    
+    if (this.level2 != null) {
+        buffer.writeAll(["\"level2\":",this.level2, ","], "");
+    }
+    
+    if (this.level3 != null) {
+        buffer.writeAll(["\"level3\":",this.level3, ","], "");
+    }
+    
+    if (this.prevLevel3 != null) {
+        buffer.writeAll(["\"prevLevel3\":",this.prevLevel3, ","], "");
+    }
   }
+
 
 }

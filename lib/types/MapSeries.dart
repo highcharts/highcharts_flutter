@@ -12,10 +12,9 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'MapSeriesOptions.dart';
 import 'Series.dart';
 import 'PointOptions.dart';
@@ -34,8 +33,7 @@ class MapSeries extends Series {
     this.data = null
   });
 
-  
-  @override
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
@@ -56,16 +54,13 @@ class MapSeries extends Series {
         if (point.length > 1) {
           seriesData.writeAll(["["], "");
         }
-
-          for (var sub in point) {
-            if (sub is String) {
-              seriesData.writeAll(["\"", sub, "\","], "");
-            } else {
-              seriesData.writeAll([sub], ",");
-            }
-
+        for (var sub in point) {
+          if (sub is String) {
+            seriesData.writeAll(["\"", sub, "\","], "");
+          } else {
+            seriesData.writeAll([sub], ",");
           }
-
+        }
         if (point.length > 1) {
           seriesData.writeAll(["],"], "");
         } else {
@@ -92,21 +87,57 @@ class MapSeries extends Series {
 
 
     
-    if (this.options?.affectsMapView != null) {  
-      buffer.writeAll(["\"affectsMapView\":",this.options?.affectsMapView, ","], "");
+
+    
+    if (this.options?.affectsMapView != null) {
+        buffer.writeAll(["\"affectsMapView\":",this.options?.affectsMapView, ","], "");
     }
-
-    // NOTE: skip serialization of data (type MapPointOptions)[] is ignored) ignore type: true
-
-    if (this.options?.nullColor != null) {  
-      buffer.writeAll(["\"nullColor\":\'",this.options?.nullColor, "\',"], "");
+    
+    if (this.options?.colorKey != null) {
+        buffer.writeAll(["\"colorKey\":\'",this.options?.colorKey, "\',"], "");
     }
-
-    if (this.options?.nullInteraction != null) {  
-      buffer.writeAll(["\"nullInteraction\":",this.options?.nullInteraction, ","], "");
+    
+    if (this.options?.data != null) {
+        buffer.writeAll(["\"data\":",this.options?.data, ","], "");
     }
+    
+    if (this.options?.dataLabels != null) {
+      StringBuffer arrData = StringBuffer();
+      for (var item in this.options!.dataLabels!) {
+          arrData.write("{");
+          item.toJSONInner(arrData);
+          arrData.write("}");
+      }
+      buffer.writeAll(["\"dataLabels\": [", arrData , "],"], "");
+    }
+    
+    if (this.options?.legendSymbol != null) {
+        buffer.writeAll(["\"legendSymbol\":\'",this.options?.legendSymbol, "\',"], "");
+    }
+    
+    if (this.options?.linecap != null) {
+        buffer.writeAll(["\"linecap\":\'",this.options?.linecap, "\',"], "");
+    }
+    
+    if (this.options?.marker != null) {
+        buffer.writeAll(["\"marker\":",this.options?.marker?.toJSON(), ","], "");
+    }
+    
+    if (this.options?.nullColor != null) {
+        buffer.writeAll(["\"nullColor\":\'",this.options?.nullColor, "\',"], "");
+    }
+    
+    if (this.options?.nullInteraction != null) {
+        buffer.writeAll(["\"nullInteraction\":",this.options?.nullInteraction, ","], "");
+    }
+    // NOTE: skip serialization of states (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
+    
+    if (this.options?.turboThreshold != null) {
+        buffer.writeAll(["\"turboThreshold\":",this.options?.turboThreshold, ","], "");
+    }
+    // NOTE: skip serialization of tooltip (type Generic ignored, skipped: true)
+
   }
 
 }

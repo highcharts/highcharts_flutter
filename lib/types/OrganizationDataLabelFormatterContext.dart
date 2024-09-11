@@ -12,31 +12,43 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'SankeyDataLabelFormatterContext.dart';
 import 'OrganizationSeries.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * OrganizationDataLabelFormatterContext 
+ * OrganizationDataLabelFormatterContext
  */
 class OrganizationDataLabelFormatterContext extends SankeyDataLabelFormatterContext {
-  OrganizationDataLabelFormatterContext( ) : super();
-  
+
+  OrganizationDataLabelFormatterContext({
+    super.point = null,
+    this.series = null
+  });
+
+  /** NOTE: extpoint is skipped here for now, as it overrides the base type. */
+
+  OrganizationSeries? series;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of point (type OrganizationPoint is ignored) ignore type: true
 
-    // NOTE: skip serialization of series (type OrganizationSeries is ignored) ignore type: true
+    // NOTE: skip serialization of point (type OrganizationPoint ignored, skipped: false)
+
+    
+    if (this.series != null) {
+        buffer.writeAll(["\"series\":",this.series?.toJSON(), ","], "");
+    }
   }
+
 
 }

@@ -12,40 +12,60 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * IconFormFieldOptions 
+ * IconFormFieldOptions
  */
 class IconFormFieldOptions extends OptionFragment {
-  IconFormFieldOptions( ) : super();
-  // NOTE: className skipped - type string is ignored in gen 
 
-  // NOTE: icon skipped - type string is ignored in gen 
+  IconFormFieldOptions({
+    this.className = null,
+    this.icon = null
+  });
+
+  String? className;
+    
+  String? icon;
+    
+  // NOTE: click skipped - type Function is ignored in gen 
+
+  // NOTE: mousedown skipped - type Function is ignored in gen 
+
+  // NOTE: item skipped - type MenuItem is ignored in gen 
+
+  // NOTE: callback skipped - type Function is ignored in gen 
 
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of className (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of icon (type string is ignored) ignore type: true
+    
+    if (this.className != null) {
+        buffer.writeAll(["\"className\":\'",this.className, "\',"], "");
+    }
+    
+    if (this.icon != null) {
+        buffer.writeAll(["\"icon\":\'",this.icon, "\',"], "");
+    }
+    // NOTE: skip serialization of click (type Function ignored, skipped: true)
 
-    // NOTE: skip serialization of click (type Function is ignored) ignore type: 1
+    // NOTE: skip serialization of mousedown (type Function ignored, skipped: true)
 
-    // NOTE: skip serialization of mousedown (type Function is ignored) ignore type: 1
+    // NOTE: skip serialization of item (type MenuItem ignored, skipped: true)
 
-    // NOTE: skip serialization of item (type MenuItem is ignored) ignore type: true
+    // NOTE: skip serialization of callback (type Function ignored, skipped: true)
 
-    // NOTE: skip serialization of callback (type Function is ignored) ignore type: 1
   }
+
 
 }

@@ -12,48 +12,72 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * DragDropGuideBoxOptions 
+ * DragDropGuideBoxOptions
  */
 class DragDropGuideBoxOptions extends OptionFragment {
-  DragDropGuideBoxOptions( ) : super();
-  // NOTE: className skipped - type string is ignored in gen 
 
-  // NOTE: color skipped - type string is ignored in gen 
+  DragDropGuideBoxOptions({
+    this.className = null,
+    this.color = null,
+    this.cursor = null,
+    this.lineColor = null,
+    this.lineWidth = null,
+    this.zIndex = null
+  });
 
-  // NOTE: cursor skipped - type string is ignored in gen 
-
-  // NOTE: lineColor skipped - type string is ignored in gen 
-
-  // NOTE: lineWidth skipped - type number is ignored in gen 
-
-  // NOTE: zIndex skipped - type number is ignored in gen 
-
+  String? className;
+    
+  String? color;
+    
+  String? cursor;
+    
+  String? lineColor;
+    
+  double? lineWidth;
+    
+  double? zIndex;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of className (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of color (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of cursor (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of lineColor (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of lineWidth (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of zIndex (type number is ignored) ignore type: true
+    
+    if (this.className != null) {
+        buffer.writeAll(["\"className\":\'",this.className, "\',"], "");
+    }
+    
+    if (this.color != null) {
+        buffer.writeAll(["\"color\":\'",this.color, "\',"], "");
+    }
+    
+    if (this.cursor != null) {
+        buffer.writeAll(["\"cursor\":\'",this.cursor, "\',"], "");
+    }
+    
+    if (this.lineColor != null) {
+        buffer.writeAll(["\"lineColor\":\'",this.lineColor, "\',"], "");
+    }
+    
+    if (this.lineWidth != null) {
+        buffer.writeAll(["\"lineWidth\":",this.lineWidth, ","], "");
+    }
+    
+    if (this.zIndex != null) {
+        buffer.writeAll(["\"zIndex\":",this.zIndex, ","], "");
+    }
   }
+
 
 }

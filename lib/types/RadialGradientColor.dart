@@ -12,36 +12,51 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * RadialGradientColor 
+ * RadialGradientColor
  */
 class RadialGradientColor extends OptionFragment {
-  RadialGradientColor( ) : super();
-  // NOTE: cx skipped - type number is ignored in gen 
 
-  // NOTE: cy skipped - type number is ignored in gen 
+  RadialGradientColor({
+    this.cx = null,
+    this.cy = null,
+    this.r = null
+  });
 
-  // NOTE: r skipped - type number is ignored in gen 
-
+  double? cx;
+    
+  double? cy;
+    
+  double? r;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of cx (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of cy (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of r (type number is ignored) ignore type: true
+    
+    if (this.cx != null) {
+        buffer.writeAll(["\"cx\":",this.cx, ","], "");
+    }
+    
+    if (this.cy != null) {
+        buffer.writeAll(["\"cy\":",this.cy, ","], "");
+    }
+    
+    if (this.r != null) {
+        buffer.writeAll(["\"r\":",this.r, ","], "");
+    }
   }
+
 
 }

@@ -12,33 +12,42 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'FunnelSeriesOptions.dart';
-import 'OptionFragment.dart';
+import 'PyramidPointOptions.dart';
+
 
 /** 
- * PyramidSeriesOptions 
+ * PyramidSeriesOptions
  */
 class PyramidSeriesOptions extends FunnelSeriesOptions {
-  PyramidSeriesOptions( {
+
+  PyramidSeriesOptions({
     super.accessibility = null,
     super.allAreas = null,
     super.allowPointSelect = null,
     super.animationLimit = null,
+    super.baseSeries = null,
     super.boostBlending = null,
     super.boostThreshold = null,
     super.borderColor = null,
+    super.borderDashStyle = null,
+    super.borderRadius = null,
     super.borderWidth = null,
+    super.centerInCategory = null,
     super.className = null,
     super.clip = null,
+    super.cluster = null,
     super.color = null,
     super.colorAxis = null,
+    super.colorByPoint = null,
     super.colorIndex = null,
     super.colorKey = null,
+    super.colors = null,
     super.compare = null,
+    super.compareBase = null,
     super.compareStart = null,
     super.connectEnds = null,
     super.connectNulls = null,
@@ -46,42 +55,63 @@ class PyramidSeriesOptions extends FunnelSeriesOptions {
     super.crisp = null,
     super.cropThreshold = null,
     super.cumulative = null,
+    super.cumulativeStart = null,
     super.cursor = null,
     super.dashStyle = null,
+    super.data = null,
+    super.dataAsColumns = null,
     super.dataGrouping = null,
     super.dataLabels = null,
     super.dataSorting = null,
     super.depth = null,
     super.description = null,
     super.dragDrop = null,
+    super.drilldown = null,
+    super.edgeColor = null,
+    super.edgeWidth = null,
     super.enableMouseTracking = null,
     super.endAngle = null,
     super.events = null,
     super.fillColor = null,
+    super.fillOpacity = null,
     super.findNearestPointBy = null,
     super.gapSize = null,
     super.gapUnit = null,
     super.getExtremesFromAll = null,
+    super.grouping = null,
+    super.groupPadding = null,
+    super.groupZPadding = null,
     super.height = null,
+    super.id = null,
     super.ignoreHiddenPoint = null,
+    super.inactiveOtherPoints = null,
     super.includeInDataExport = null,
+    super.index = null,
     super.innerSize = null,
+    super.isInternal = null,
     super.joinBy = null,
+    super.kdNow = null,
     super.keys = null,
     super.label = null,
     super.lastPrice = null,
     super.lastVisiblePrice = null,
+    super.legendIndex = null,
     super.legendSymbol = null,
+    super.legendType = null,
     super.linecap = null,
+    super.lineColor = null,
     super.lineWidth = null,
     super.linkedTo = null,
     super.marker = null,
     super.minSize = null,
+    super.name = null,
     super.navigatorOptions = null,
-    super.neckHeight = null,
-    super.neckWidth = null,
+    this.neckHeight = null,
+    this.neckWidth = null,
     super.negativeColor = null,
+    super.negativeFillColor = null,
     super.onPoint = null,
+    super.onSeries = null,
     super.opacity = null,
     super.point = null,
     super.pointInterval = null,
@@ -89,8 +119,9 @@ class PyramidSeriesOptions extends FunnelSeriesOptions {
     super.pointPlacement = null,
     super.pointRange = null,
     super.pointStart = null,
+    super.pointValKey = null,
     super.relativeXValue = null,
-    super.reversed = null,
+    this.reversed = null,
     super.selected = null,
     super.showCheckbox = null,
     super.showInLegend = null,
@@ -99,31 +130,86 @@ class PyramidSeriesOptions extends FunnelSeriesOptions {
     super.skipKeyboardNavigation = null,
     super.slicedOffset = null,
     super.softThreshold = null,
+    super.stack = null,
     super.stacking = null,
     super.startAngle = null,
+    super.startFromThreshold = null,
+    super.states = null,
     super.step = null,
     super.stickyTracking = null,
+    super.supportingColor = null,
     super.thickness = null,
     super.threshold = null,
     super.tooltip = null,
+    super.trackByArea = null,
     super.turboThreshold = null,
+    super.type = null,
+    super.useOhlcData = null,
     super.visible = null,
     super.width = null,
+    super.xAxis = null,
+    super.xData = null,
+    super.yAxis = null,
+    super.yData = null,
     super.zIndex = null,
     super.zoneAxis = null,
     super.zones = null
-  }) : super();
+  });
+
+  /** NOTE: extextdata is skipped here for now, as it overrides the base type. */
+
+  /**
+   * The height of the neck, the lower part of the funnel. A number
+   * defines pixel width, a percentage string defines a percentage of the
+   * plot area height. 
+   * 
+   * Defaults to '25%'. 
+   */
+  String? neckHeight;
+    
+  /**
+   * The width of the neck, the lower part of the funnel. A number defines
+   * pixel width, a percentage string defines a percentage of the plot
+   * area width. 
+   * 
+   * Defaults to '30%'. 
+   */
+  String? neckWidth;
+    
+  /**
+   * A reversed funnel has the widest area down. A reversed funnel with
+   * no neck width and neck height is a pyramid.  
+   */
+  bool? reversed;
+    
   // NOTE: states skipped - type Generic is ignored in gen 
 
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
+
+    // NOTE: skip serialization of data (type PyramidPointOptions)[] ignored, skipped: false)
+
+    
+    if (this.neckHeight != null) {
+        buffer.writeAll(["\"neckHeight\":\'",this.neckHeight, "\',"], "");
+    }
+    
+    if (this.neckWidth != null) {
+        buffer.writeAll(["\"neckWidth\":\'",this.neckWidth, "\',"], "");
+    }
+    
+    if (this.reversed != null) {
+        buffer.writeAll(["\"reversed\":",this.reversed, ","], "");
+    }
+    // NOTE: skip serialization of states (type Generic ignored, skipped: true)
+
   }
+
 
 }

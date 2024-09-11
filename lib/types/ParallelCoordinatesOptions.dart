@@ -12,31 +12,43 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'AxisOptions.dart';
 import 'OptionFragment.dart';
 
+
 /** 
- * ParallelCoordinatesOptions 
+ * ParallelCoordinatesOptions
  */
 class ParallelCoordinatesOptions extends OptionFragment {
-  ParallelCoordinatesOptions( ) : super();
-  // NOTE: parallelCoordinates skipped - type boolean is ignored in gen 
 
+  ParallelCoordinatesOptions({
+    this.parallelAxes = null,
+    this.parallelCoordinates = null
+  });
+
+  AxisOptions? parallelAxes;
+    
+  bool? parallelCoordinates;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of parallelAxes (type Generic is ignored) ignore type: true
 
-    // NOTE: skip serialization of parallelCoordinates (type boolean is ignored) ignore type: true
+    // NOTE: skip serialization of parallelAxes (type Generic ignored, skipped: true)
+
+    
+    if (this.parallelCoordinates != null) {
+        buffer.writeAll(["\"parallelCoordinates\":",this.parallelCoordinates, ","], "");
+    }
   }
+
 
 }

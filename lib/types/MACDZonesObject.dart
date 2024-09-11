@@ -12,31 +12,49 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'ZoneObject.dart';
 import 'OptionFragment.dart';
 
 /** 
- * MACDZonesObject 
+ * MACDZonesObject
  */
 class MACDZonesObject extends OptionFragment {
-  MACDZonesObject( ) : super();
-  // NOTE: startIndex skipped - type number is ignored in gen 
 
+  MACDZonesObject({
+    this.startIndex = null,
+    this.zones = null
+  });
+
+  double? startIndex;
+    
+  List<ZoneObject>? zones; // ZoneObject
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of startIndex (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of zones (type ZoneObject is ignored) ignore type: true
+    
+    if (this.startIndex != null) {
+        buffer.writeAll(["\"startIndex\":",this.startIndex, ","], "");
+    }
+    
+    if (this.zones != null) {
+      StringBuffer arrData = StringBuffer();
+      for (var item in this.zones!) {
+          arrData.write("{");
+          item.toJSONInner(arrData);
+          arrData.write("}");
+      }
+      buffer.writeAll(["\"zones\": [", arrData , "],"], "");
+    }
   }
+
 
 }

@@ -12,46 +12,75 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'EQOptions.dart';
 import 'OscOptions.dart';
 import 'OptionFragment.dart';
 
+
 /** 
- * SynthPatchOptions 
+ * SynthPatchOptions
  */
 class SynthPatchOptions extends OptionFragment {
-  SynthPatchOptions( ) : super();
-  // NOTE: masterVolume skipped - type number is ignored in gen 
 
-  // NOTE: noteGlideDuration skipped - type number is ignored in gen 
+  SynthPatchOptions({
+    this.eq = null,
+    this.masterVolume = null,
+    this.midiInstrument = null,
+    this.noteGlideDuration = null,
+    this.oscillators = null
+  });
 
-  // NOTE: midiInstrument skipped - type number is ignored in gen 
+  EQOptions? eq;
+    
+  // NOTE: masterAttackEnvelope skipped - type Envelope is ignored in gen 
 
+  // NOTE: masterReleaseEnvelope skipped - type Envelope is ignored in gen 
+
+  double? masterVolume;
+    
+  double? noteGlideDuration;
+    
+  OscOptions? oscillators;
+    
+  double? midiInstrument;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of eq (type EQOptions[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of masterAttackEnvelope (type Envelope is ignored) ignore type: true
+    
+    if (this.eq != null) {
+        buffer.writeAll(["\"eq\":",this.eq, ","], "");
+    }
+    // NOTE: skip serialization of masterAttackEnvelope (type Envelope ignored, skipped: true)
 
-    // NOTE: skip serialization of masterReleaseEnvelope (type Envelope is ignored) ignore type: true
+    // NOTE: skip serialization of masterReleaseEnvelope (type Envelope ignored, skipped: true)
 
-    // NOTE: skip serialization of masterVolume (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of noteGlideDuration (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of oscillators (type OscOptions[] is ignored) ignore type: true
-
-    // NOTE: skip serialization of midiInstrument (type number is ignored) ignore type: true
+    
+    if (this.masterVolume != null) {
+        buffer.writeAll(["\"masterVolume\":",this.masterVolume, ","], "");
+    }
+    
+    if (this.noteGlideDuration != null) {
+        buffer.writeAll(["\"noteGlideDuration\":",this.noteGlideDuration, ","], "");
+    }
+    
+    if (this.oscillators != null) {
+        buffer.writeAll(["\"oscillators\":",this.oscillators, ","], "");
+    }
+    
+    if (this.midiInstrument != null) {
+        buffer.writeAll(["\"midiInstrument\":",this.midiInstrument, ","], "");
+    }
   }
+
 
 }

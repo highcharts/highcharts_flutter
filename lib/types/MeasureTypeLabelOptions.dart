@@ -12,31 +12,45 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'CSSObject.dart';
 import 'OptionFragment.dart';
 
+
 /** 
- * MeasureTypeLabelOptions 
+ * MeasureTypeLabelOptions
  */
 class MeasureTypeLabelOptions extends OptionFragment {
-  MeasureTypeLabelOptions( ) : super();
-  // NOTE: enabled skipped - type boolean is ignored in gen 
 
+  MeasureTypeLabelOptions({
+    this.enabled = null,
+    this.style = null
+  });
+
+  bool? enabled;
+    
+  CSSObject? style;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of enabled (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of style (type CSSObject is ignored) ignore type: true
+    
+    if (this.enabled != null) {
+        buffer.writeAll(["\"enabled\":",this.enabled, ","], "");
+    }
+    
+    if (this.style != null) {
+        buffer.writeAll(["\"style\":",this.style?.toJSON(), ","], "");
+    }
   }
+
 
 }

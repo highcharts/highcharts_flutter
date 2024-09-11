@@ -12,38 +12,55 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * DataGroupingInfoObject 
+ * DataGroupingInfoObject
  */
 class DataGroupingInfoObject extends OptionFragment {
-  DataGroupingInfoObject( ) : super();
-  // NOTE: length skipped - type number is ignored in gen 
 
-  // NOTE: start skipped - type number is ignored in gen 
+  DataGroupingInfoObject({
+    this.groupStart = null,
+    this.length = null,
+    this.start = null
+  });
 
-  // NOTE: groupStart skipped - type number is ignored in gen 
+  double? length;
+    
+  // NOTE: options skipped - type PointShortOptions is ignored in gen 
 
+  double? start;
+    
+  double? groupStart;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of length (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of options (type PointShortOptions is ignored) ignore type: 1
+    
+    if (this.length != null) {
+        buffer.writeAll(["\"length\":",this.length, ","], "");
+    }
+    // NOTE: skip serialization of options (type PointShortOptions ignored, skipped: true)
 
-    // NOTE: skip serialization of start (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of groupStart (type number is ignored) ignore type: true
+    
+    if (this.start != null) {
+        buffer.writeAll(["\"start\":",this.start, ","], "");
+    }
+    
+    if (this.groupStart != null) {
+        buffer.writeAll(["\"groupStart\":",this.groupStart, ","], "");
+    }
   }
+
 
 }

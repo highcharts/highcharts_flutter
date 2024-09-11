@@ -12,38 +12,64 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'AddComponentBtn.dart';
 import 'RwdButtons.dart';
 import 'HTMLElement.dart';
 import 'OptionFragment.dart';
 
 /** 
- * Tools 
+ * Tools
  */
 class Tools extends OptionFragment {
-  Tools( ) : super();
-  
+
+  Tools({
+    this.addComponentBtn = null,
+    this.container = null,
+    this.contextButtonElement = null,
+    this.rwdButtons = null
+  });
+
+  AddComponentBtn? addComponentBtn;
+    
+  RwdButtons? rwdButtons;
+    
+  // NOTE: contextMenu skipped - type EditContextMenu is ignored in gen 
+
+  HTMLElement? contextButtonElement;
+    
+  HTMLElement? container;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of addComponentBtn (type AddComponentBtn is ignored) ignore type: true
 
-    // NOTE: skip serialization of rwdButtons (type RwdButtons is ignored) ignore type: true
+    
+    if (this.addComponentBtn != null) {
+        buffer.writeAll(["\"addComponentBtn\":",this.addComponentBtn?.toJSON(), ","], "");
+    }
+    
+    if (this.rwdButtons != null) {
+        buffer.writeAll(["\"rwdButtons\":",this.rwdButtons?.toJSON(), ","], "");
+    }
+    // NOTE: skip serialization of contextMenu (type EditContextMenu ignored, skipped: true)
 
-    // NOTE: skip serialization of contextMenu (type EditContextMenu is ignored) ignore type: true
-
-    // NOTE: skip serialization of contextButtonElement (type HTMLElement is ignored) ignore type: true
-
-    // NOTE: skip serialization of container (type HTMLElement is ignored) ignore type: true
+    
+    if (this.contextButtonElement != null) {
+        buffer.writeAll(["\"contextButtonElement\":",this.contextButtonElement?.toJSON(), ","], "");
+    }
+    
+    if (this.container != null) {
+        buffer.writeAll(["\"container\":",this.container?.toJSON(), ","], "");
+    }
   }
+
 
 }

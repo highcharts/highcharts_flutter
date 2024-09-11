@@ -12,27 +12,33 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * HTMLCanvasElement 
+ * HTMLCanvasElement
  */
 class HTMLCanvasElement extends OptionFragment {
-  HTMLCanvasElement( ) : super();
-  
+
+  HTMLCanvasElement();
+
+  // NOTE: msToBlob skipped - type Function is ignored in gen 
+
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of msToBlob (type Function is ignored) ignore type: 1
+
+    // NOTE: skip serialization of msToBlob (type Function ignored, skipped: true)
+
   }
+
 
 }

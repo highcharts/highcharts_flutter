@@ -12,27 +12,31 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
+import 'Callback.dart';
 
-import 'OptionFragment.dart';
 
 /** 
- * FormatterCallback 
+ * FormatterCallback
  */
-class FormatterCallback extends OptionFragment {
-  FormatterCallback( ) : super();
-  
+class FormatterCallback extends Callback {
+
+  FormatterCallback({
+    super.type = null
+  });
+
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    
+
   }
+
 
 }

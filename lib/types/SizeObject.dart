@@ -12,32 +12,44 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * SizeObject 
+ * SizeObject
  */
 class SizeObject extends OptionFragment {
-  SizeObject( ) : super();
-  // NOTE: height skipped - type number is ignored in gen 
 
-  // NOTE: width skipped - type number is ignored in gen 
+  SizeObject({
+    this.height = null,
+    this.width = null
+  });
 
+  double? height;
+    
+  double? width;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of height (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of width (type number is ignored) ignore type: true
+    
+    if (this.height != null) {
+        buffer.writeAll(["\"height\":",this.height, ","], "");
+    }
+    
+    if (this.width != null) {
+        buffer.writeAll(["\"width\":",this.width, ","], "");
+    }
   }
+
 
 }

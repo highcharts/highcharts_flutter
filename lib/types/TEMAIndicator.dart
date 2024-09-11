@@ -12,27 +12,33 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * TEMAIndicator 
+ * TEMAIndicator
  */
 class TEMAIndicator extends OptionFragment {
-  TEMAIndicator( ) : super();
-  
+
+  TEMAIndicator();
+
+  // NOTE: pointClass skipped - type typeof TEMAPoint is ignored in gen 
+
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of pointClass (type typeof TEMAPoint is ignored) ignore type: true
+
+    // NOTE: skip serialization of pointClass (type typeof TEMAPoint ignored, skipped: true)
+
   }
+
 
 }

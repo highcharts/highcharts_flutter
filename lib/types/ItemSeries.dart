@@ -12,10 +12,9 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'ItemSeriesOptions.dart';
 import 'Series.dart';
 import 'PointOptions.dart';
@@ -34,8 +33,7 @@ class ItemSeries extends Series {
     this.data = null
   });
 
-  
-  @override
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
@@ -56,16 +54,13 @@ class ItemSeries extends Series {
         if (point.length > 1) {
           seriesData.writeAll(["["], "");
         }
-
-          for (var sub in point) {
-            if (sub is String) {
-              seriesData.writeAll(["\"", sub, "\","], "");
-            } else {
-              seriesData.writeAll([sub], ",");
-            }
-
+        for (var sub in point) {
+          if (sub is String) {
+            seriesData.writeAll(["\"", sub, "\","], "");
+          } else {
+            seriesData.writeAll([sub], ",");
           }
-
+        }
         if (point.length > 1) {
           seriesData.writeAll(["],"], "");
         } else {
@@ -92,21 +87,47 @@ class ItemSeries extends Series {
 
 
     
-    if (this.options?.itemPadding != null) {  
-      buffer.writeAll(["\"itemPadding\":",this.options?.itemPadding, ","], "");
+
+    
+    if (this.options?.crisp != null) {
+        buffer.writeAll(["\"crisp\":",this.options?.crisp, ","], "");
     }
+    // NOTE: skip serialization of data (type ItemPointOptions)[] ignored, skipped: false)
 
-    if (this.options?.layout != null) {  
-      buffer.writeAll(["\"layout\":\'",this.options?.layout, "\',"], "");
+    
+    if (this.options?.endAngle != null) {
+        buffer.writeAll(["\"endAngle\":",this.options?.endAngle, ","], "");
     }
+    // NOTE: skip serialization of events (type ItemSeriesEventsOptions ignored, skipped: false)
 
-    // NOTE: skip serialization of marker (type ItemPointMarkerOptions is ignored) ignore type: false
-
-    if (this.options?.rows != null) {  
-      buffer.writeAll(["\"rows\":",this.options?.rows, ","], "");
+    
+    if (this.options?.innerSize != null) {
+        buffer.writeAll(["\"innerSize\":\'",this.options?.innerSize, "\',"], "");
     }
+    
+    if (this.options?.itemPadding != null) {
+        buffer.writeAll(["\"itemPadding\":",this.options?.itemPadding, ","], "");
+    }
+    
+    if (this.options?.layout != null) {
+        buffer.writeAll(["\"layout\":\'",this.options?.layout, "\',"], "");
+    }
+    // NOTE: skip serialization of marker (type ItemPointMarkerOptions ignored, skipped: false)
 
-    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
+    
+    if (this.options?.rows != null) {
+        buffer.writeAll(["\"rows\":",this.options?.rows, ","], "");
+    }
+    
+    if (this.options?.showInLegend != null) {
+        buffer.writeAll(["\"showInLegend\":",this.options?.showInLegend, ","], "");
+    }
+    
+    if (this.options?.startAngle != null) {
+        buffer.writeAll(["\"startAngle\":",this.options?.startAngle, ","], "");
+    }
+    // NOTE: skip serialization of states (type Generic ignored, skipped: true)
+
   }
 
 }

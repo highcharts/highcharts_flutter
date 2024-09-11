@@ -12,18 +12,18 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'ControllableLabelOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * TypeLabelOptions 
+ * TypeLabelOptions
  */
 class TypeLabelOptions extends ControllableLabelOptions {
-  TypeLabelOptions( {
+
+  TypeLabelOptions({
     super.accessibility = null,
     super.align = null,
     super.allowOverlap = null,
@@ -31,10 +31,13 @@ class TypeLabelOptions extends ControllableLabelOptions {
     super.borderColor = null,
     super.borderRadius = null,
     super.borderWidth = null,
+    super.color = null,
     super.crop = null,
+    super.dashStyle = null,
     super.distance = null,
     super.format = null,
     super.includeInDataExport = null,
+    this.offset = null,
     super.overflow = null,
     super.padding = null,
     super.shape = null,
@@ -43,19 +46,27 @@ class TypeLabelOptions extends ControllableLabelOptions {
     super.useHTML = null,
     super.verticalAlign = null,
     super.x = null,
-    super.y = null
-  }) : super();
-  // NOTE: offset skipped - type number is ignored in gen 
+    super.xAxis = null,
+    super.y = null,
+    super.yAxis = null
+  });
 
+  double? offset;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of offset (type number is ignored) ignore type: true
+
+    
+    if (this.offset != null) {
+        buffer.writeAll(["\"offset\":",this.offset, ","], "");
+    }
   }
+
 
 }

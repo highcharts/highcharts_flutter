@@ -12,28 +12,29 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'FxLike.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * Fx 
+ * Fx
  */
 class Fx extends FxLike {
-  Fx( ) : super();
-  
+
+  Fx();
+
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    
+
   }
+
 
 }

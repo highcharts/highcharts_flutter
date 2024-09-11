@@ -12,41 +12,69 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'SankeySeriesNodeOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * OrganizationSeriesNodeOptions 
+ * OrganizationSeriesNodeOptions
  */
 class OrganizationSeriesNodeOptions extends SankeySeriesNodeOptions {
-  OrganizationSeriesNodeOptions( ) : super();
-  // NOTE: description skipped - type string is ignored in gen 
 
-  // NOTE: image skipped - type string is ignored in gen 
+  OrganizationSeriesNodeOptions({
+    super.color = null,
+    super.colorIndex = null,
+    super.column = null,
+    super.dataLabels = null,
+    this.description = null,
+    super.height = null,
+    super.id = null,
+    this.image = null,
+    this.layout = null,
+    super.level = null,
+    super.name = null,
+    super.offset = null,
+    super.offsetHorizontal = null,
+    super.offsetVertical = null,
+    this.title = null
+  });
 
-  // NOTE: layout skipped - type string is ignored in gen 
-
-  // NOTE: title skipped - type string is ignored in gen 
-
+  String? description;
+    
+  String? image;
+    
+  String? layout;
+    
+  String? title;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of description (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of image (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of layout (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of title (type string is ignored) ignore type: true
+    
+    if (this.description != null) {
+        buffer.writeAll(["\"description\":\'",this.description, "\',"], "");
+    }
+    
+    if (this.image != null) {
+        buffer.writeAll(["\"image\":\'",this.image, "\',"], "");
+    }
+    
+    if (this.layout != null) {
+        buffer.writeAll(["\"layout\":\'",this.layout, "\',"], "");
+    }
+    
+    if (this.title != null) {
+        buffer.writeAll(["\"title\":\'",this.title, "\',"], "");
+    }
   }
+
 
 }

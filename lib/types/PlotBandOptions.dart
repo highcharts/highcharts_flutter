@@ -12,81 +12,133 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'PlotBandLabelOptions.dart';
 import 'OptionFragment.dart';
 
+
 /** 
- * PlotBandOptions 
+ * PlotBandOptions
  */
 class PlotBandOptions extends OptionFragment {
-  PlotBandOptions( ) : super();
-  // NOTE: acrossPanes skipped - type boolean is ignored in gen 
 
-  // NOTE: borderColor skipped - type string is ignored in gen 
+  PlotBandOptions({
+    this.acrossPanes = null,
+    this.borderColor = null,
+    this.borderWidth = null,
+    this.className = null,
+    this.color = null,
+    this.from = null,
+    this.id = null,
+    this.innerRadius = null,
+    this.label = null,
+    this.outerRadius = null,
+    this.shape = null,
+    this.thickness = null,
+    this.to = null,
+    this.zIndex = null
+  });
 
-  // NOTE: borderWidth skipped - type number is ignored in gen 
+  bool? acrossPanes;
+    
+  String? borderColor;
+    
+  double? borderWidth;
+    
+  String? className;
+    
+  String? color;
+    
+  // NOTE: events skipped - type any is ignored in gen 
 
-  // NOTE: className skipped - type string is ignored in gen 
-
-  // NOTE: color skipped - type string is ignored in gen 
-
-  // NOTE: from skipped - type number is ignored in gen 
-
-  // NOTE: id skipped - type string is ignored in gen 
-
-  // NOTE: to skipped - type number is ignored in gen 
-
-  // NOTE: zIndex skipped - type number is ignored in gen 
-
-  // NOTE: innerRadius skipped - type string is ignored in gen 
-
-  // NOTE: outerRadius skipped - type string is ignored in gen 
-
-  // NOTE: shape skipped - type string is ignored in gen 
-
-  // NOTE: thickness skipped - type string is ignored in gen 
-
+  double? from;
+    
+  String? id;
+    
+  PlotBandLabelOptions? label;
+    
+  double? to;
+    
+  double? zIndex;
+    
+  String? innerRadius;
+    
+  String? outerRadius;
+    
+  String? shape;
+    
+  String? thickness;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of acrossPanes (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of borderColor (type string is ignored) ignore type: true
+    
+    if (this.acrossPanes != null) {
+        buffer.writeAll(["\"acrossPanes\":",this.acrossPanes, ","], "");
+    }
+    
+    if (this.borderColor != null) {
+        buffer.writeAll(["\"borderColor\":\'",this.borderColor, "\',"], "");
+    }
+    
+    if (this.borderWidth != null) {
+        buffer.writeAll(["\"borderWidth\":",this.borderWidth, ","], "");
+    }
+    
+    if (this.className != null) {
+        buffer.writeAll(["\"className\":\'",this.className, "\',"], "");
+    }
+    
+    if (this.color != null) {
+        buffer.writeAll(["\"color\":\'",this.color, "\',"], "");
+    }
+    // NOTE: skip serialization of events (type any ignored, skipped: true)
 
-    // NOTE: skip serialization of borderWidth (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of className (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of color (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of events (type any is ignored) ignore type: 1
-
-    // NOTE: skip serialization of from (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of id (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of label (type PlotBandLabelOptions is ignored) ignore type: true
-
-    // NOTE: skip serialization of to (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of zIndex (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of innerRadius (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of outerRadius (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of shape (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of thickness (type string is ignored) ignore type: true
+    
+    if (this.from != null) {
+        buffer.writeAll(["\"from\":",this.from, ","], "");
+    }
+    
+    if (this.id != null) {
+        buffer.writeAll(["\"id\":\'",this.id, "\',"], "");
+    }
+    
+    if (this.label != null) {
+        buffer.writeAll(["\"label\":",this.label?.toJSON(), ","], "");
+    }
+    
+    if (this.to != null) {
+        buffer.writeAll(["\"to\":",this.to, ","], "");
+    }
+    
+    if (this.zIndex != null) {
+        buffer.writeAll(["\"zIndex\":",this.zIndex, ","], "");
+    }
+    
+    if (this.innerRadius != null) {
+        buffer.writeAll(["\"innerRadius\":\'",this.innerRadius, "\',"], "");
+    }
+    
+    if (this.outerRadius != null) {
+        buffer.writeAll(["\"outerRadius\":\'",this.outerRadius, "\',"], "");
+    }
+    
+    if (this.shape != null) {
+        buffer.writeAll(["\"shape\":\'",this.shape, "\',"], "");
+    }
+    
+    if (this.thickness != null) {
+        buffer.writeAll(["\"thickness\":\'",this.thickness, "\',"], "");
+    }
   }
+
 
 }

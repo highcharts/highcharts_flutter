@@ -12,10 +12,9 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'WindbarbSeriesOptions.dart';
 import 'Series.dart';
 import 'PointOptions.dart';
@@ -34,8 +33,7 @@ class WindbarbSeries extends Series {
     this.data = null
   });
 
-  
-  @override
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
@@ -56,16 +54,13 @@ class WindbarbSeries extends Series {
         if (point.length > 1) {
           seriesData.writeAll(["["], "");
         }
-
-          for (var sub in point) {
-            if (sub is String) {
-              seriesData.writeAll(["\"", sub, "\","], "");
-            } else {
-              seriesData.writeAll([sub], ",");
-            }
-
+        for (var sub in point) {
+          if (sub is String) {
+            seriesData.writeAll(["\"", sub, "\","], "");
+          } else {
+            seriesData.writeAll([sub], ",");
           }
-
+        }
         if (point.length > 1) {
           seriesData.writeAll(["],"], "");
         } else {
@@ -92,22 +87,40 @@ class WindbarbSeries extends Series {
 
 
     
-    if (this.options?.onSeries != null) {  
-      buffer.writeAll(["\"onSeries\":\'",this.options?.onSeries, "\',"], "");
+
+    
+    if (this.options?.colorKey != null) {
+        buffer.writeAll(["\"colorKey\":\'",this.options?.colorKey, "\',"], "");
     }
-
-    // NOTE: skip serialization of states (type Generic is ignored) ignore type: true
-
-    if (this.options?.vectorLength != null) {  
-      buffer.writeAll(["\"vectorLength\":",this.options?.vectorLength, ","], "");
+    
+    if (this.options?.data != null) {
+        buffer.writeAll(["\"data\":",this.options?.data, ","], "");
     }
+    // NOTE: skip serialization of dataGrouping (type WindbarbSeriesDataGroupingOptions ignored, skipped: false)
 
-    if (this.options?.xOffset != null) {  
-      buffer.writeAll(["\"xOffset\":",this.options?.xOffset, ","], "");
+    
+    if (this.options?.lineWidth != null) {
+        buffer.writeAll(["\"lineWidth\":",this.options?.lineWidth, ","], "");
     }
+    
+    if (this.options?.onSeries != null) {
+        buffer.writeAll(["\"onSeries\":\'",this.options?.onSeries, "\',"], "");
+    }
+    // NOTE: skip serialization of states (type Generic ignored, skipped: true)
 
-    if (this.options?.yOffset != null) {  
-      buffer.writeAll(["\"yOffset\":",this.options?.yOffset, ","], "");
+    // NOTE: skip serialization of tooltip (type Generic ignored, skipped: true)
+
+    
+    if (this.options?.vectorLength != null) {
+        buffer.writeAll(["\"vectorLength\":",this.options?.vectorLength, ","], "");
+    }
+    
+    if (this.options?.xOffset != null) {
+        buffer.writeAll(["\"xOffset\":",this.options?.xOffset, ","], "");
+    }
+    
+    if (this.options?.yOffset != null) {
+        buffer.writeAll(["\"yOffset\":",this.options?.yOffset, ","], "");
     }
   }
 

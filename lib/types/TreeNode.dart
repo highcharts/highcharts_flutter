@@ -12,54 +12,87 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'TreeNode.dart';
 import 'TreePointOptionsObject.dart';
 import 'OptionFragment.dart';
 
 /** 
- * TreeNode 
+ * TreeNode
  */
 class TreeNode extends OptionFragment {
-  TreeNode( ) : super();
-  // NOTE: depth skipped - type number is ignored in gen 
 
-  // NOTE: descendants skipped - type number is ignored in gen 
+  TreeNode({
+    this.children = null,
+    this.data = null,
+    this.depth = null,
+    this.descendants = null,
+    this.height = null,
+    this.id = null,
+    this.level = null,
+    this.parent = null
+  });
 
-  // NOTE: height skipped - type number is ignored in gen 
-
-  // NOTE: id skipped - type string is ignored in gen 
-
-  // NOTE: level skipped - type number is ignored in gen 
-
-  // NOTE: parent skipped - type string is ignored in gen 
-
+  TreeNode? children;
+    
+  TreePointOptionsObject? data;
+    
+  double? depth;
+    
+  double? descendants;
+    
+  double? height;
+    
+  String? id;
+    
+  double? level;
+    
+  String? parent;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of children (type TreeNode[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of data (type TreePointOptionsObject is ignored) ignore type: true
-
-    // NOTE: skip serialization of depth (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of descendants (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of height (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of id (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of level (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of parent (type string is ignored) ignore type: true
+    
+    if (this.children != null) {
+        buffer.writeAll(["\"children\":",this.children, ","], "");
+    }
+    
+    if (this.data != null) {
+        buffer.writeAll(["\"data\":",this.data?.toJSON(), ","], "");
+    }
+    
+    if (this.depth != null) {
+        buffer.writeAll(["\"depth\":",this.depth, ","], "");
+    }
+    
+    if (this.descendants != null) {
+        buffer.writeAll(["\"descendants\":",this.descendants, ","], "");
+    }
+    
+    if (this.height != null) {
+        buffer.writeAll(["\"height\":",this.height, ","], "");
+    }
+    
+    if (this.id != null) {
+        buffer.writeAll(["\"id\":\'",this.id, "\',"], "");
+    }
+    
+    if (this.level != null) {
+        buffer.writeAll(["\"level\":",this.level, ","], "");
+    }
+    
+    if (this.parent != null) {
+        buffer.writeAll(["\"parent\":\'",this.parent, "\',"], "");
+    }
   }
+
 
 }

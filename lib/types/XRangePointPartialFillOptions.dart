@@ -12,52 +12,83 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * XRangePointPartialFillOptions 
+ * XRangePointPartialFillOptions
  */
 class XRangePointPartialFillOptions extends OptionFragment {
-  XRangePointPartialFillOptions( ) : super();
-  // NOTE: amount skipped - type number is ignored in gen 
 
-  // NOTE: fill skipped - type string is ignored in gen 
+  XRangePointPartialFillOptions({
+    this.amount = null,
+    this.fill = null,
+    this.height = null,
+    this.r = null,
+    this.width = null,
+    this.x = null,
+    this.y = null
+  });
 
-  // NOTE: height skipped - type number is ignored in gen 
-
-  // NOTE: width skipped - type number is ignored in gen 
-
-  // NOTE: r skipped - type number is ignored in gen 
-
-  // NOTE: x skipped - type number is ignored in gen 
-
-  // NOTE: y skipped - type number is ignored in gen 
-
+  double? amount;
+    
+  /**
+   * The fill color to be used for partial fills. Defaults to a darker
+   * shade of the point color.  
+   */
+  String? fill;
+    
+  double? height;
+    
+  double? r;
+    
+  double? width;
+    
+  double? x;
+    
+  double? y;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of amount (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of fill (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of height (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of width (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of r (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of x (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of y (type number is ignored) ignore type: true
+    
+    if (this.amount != null) {
+        buffer.writeAll(["\"amount\":",this.amount, ","], "");
+    }
+    
+    if (this.fill != null) {
+        buffer.writeAll(["\"fill\":\'",this.fill, "\',"], "");
+    }
+    
+    if (this.height != null) {
+        buffer.writeAll(["\"height\":",this.height, ","], "");
+    }
+    
+    if (this.r != null) {
+        buffer.writeAll(["\"r\":",this.r, ","], "");
+    }
+    
+    if (this.width != null) {
+        buffer.writeAll(["\"width\":",this.width, ","], "");
+    }
+    
+    if (this.x != null) {
+        buffer.writeAll(["\"x\":",this.x, ","], "");
+    }
+    
+    if (this.y != null) {
+        buffer.writeAll(["\"y\":",this.y, ","], "");
+    }
   }
+
 
 }

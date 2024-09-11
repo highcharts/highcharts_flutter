@@ -12,53 +12,87 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'PaneBackgroundOptions.dart';
 import 'OptionFragment.dart';
 
+
 /** 
- * PaneOptions 
+ * PaneOptions
  */
 class PaneOptions extends OptionFragment {
-  PaneOptions( ) : super();
-  // NOTE: endAngle skipped - type number is ignored in gen 
 
-  // NOTE: id skipped - type string is ignored in gen 
+  PaneOptions({
+    this.background = null,
+    this.center = null,
+    this.endAngle = null,
+    this.id = null,
+    this.innerSize = null,
+    this.size = null,
+    this.startAngle = null,
+    this.zIndex = null
+  });
 
-  // NOTE: innerSize skipped - type string is ignored in gen 
-
-  // NOTE: size skipped - type string is ignored in gen 
-
-  // NOTE: startAngle skipped - type number is ignored in gen 
-
-  // NOTE: zIndex skipped - type number is ignored in gen 
-
+  PaneBackgroundOptions? background;
+    
+  double? center;
+    
+  double? endAngle;
+    
+  String? id;
+    
+  String? innerSize;
+    
+  String? size;
+    
+  double? startAngle;
+    
+  double? zIndex;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of background (type PaneBackgroundOptions[] is ignored) ignore type: true
 
-    // NOTE: skip serialization of center (type number)[] is ignored) ignore type: true
-
-    // NOTE: skip serialization of endAngle (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of id (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of innerSize (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of size (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of startAngle (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of zIndex (type number is ignored) ignore type: true
+    
+    if (this.background != null) {
+        buffer.writeAll(["\"background\":",this.background, ","], "");
+    }
+    
+    if (this.center != null) {
+        buffer.writeAll(["\"center\":",this.center, ","], "");
+    }
+    
+    if (this.endAngle != null) {
+        buffer.writeAll(["\"endAngle\":",this.endAngle, ","], "");
+    }
+    
+    if (this.id != null) {
+        buffer.writeAll(["\"id\":\'",this.id, "\',"], "");
+    }
+    
+    if (this.innerSize != null) {
+        buffer.writeAll(["\"innerSize\":\'",this.innerSize, "\',"], "");
+    }
+    
+    if (this.size != null) {
+        buffer.writeAll(["\"size\":\'",this.size, "\',"], "");
+    }
+    
+    if (this.startAngle != null) {
+        buffer.writeAll(["\"startAngle\":",this.startAngle, ","], "");
+    }
+    
+    if (this.zIndex != null) {
+        buffer.writeAll(["\"zIndex\":",this.zIndex, ","], "");
+    }
   }
+
 
 }

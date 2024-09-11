@@ -12,44 +12,65 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * ColorAxisDataClassesOptions 
+ * ColorAxisDataClassesOptions
  */
 class ColorAxisDataClassesOptions extends OptionFragment {
-  ColorAxisDataClassesOptions( ) : super();
-  // NOTE: color skipped - type string is ignored in gen 
 
-  // NOTE: colorIndex skipped - type number is ignored in gen 
+  ColorAxisDataClassesOptions({
+    this.color = null,
+    this.colorIndex = null,
+    this.from = null,
+    this.name = null,
+    this.to = null
+  });
 
-  // NOTE: from skipped - type number is ignored in gen 
-
-  // NOTE: name skipped - type string is ignored in gen 
-
-  // NOTE: to skipped - type number is ignored in gen 
-
+  String? color;
+    
+  double? colorIndex;
+    
+  double? from;
+    
+  String? name;
+    
+  double? to;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of color (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of colorIndex (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of from (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of name (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of to (type number is ignored) ignore type: true
+    
+    if (this.color != null) {
+        buffer.writeAll(["\"color\":\'",this.color, "\',"], "");
+    }
+    
+    if (this.colorIndex != null) {
+        buffer.writeAll(["\"colorIndex\":",this.colorIndex, ","], "");
+    }
+    
+    if (this.from != null) {
+        buffer.writeAll(["\"from\":",this.from, ","], "");
+    }
+    
+    if (this.name != null) {
+        buffer.writeAll(["\"name\":\'",this.name, "\',"], "");
+    }
+    
+    if (this.to != null) {
+        buffer.writeAll(["\"to\":",this.to, ","], "");
+    }
   }
+
 
 }

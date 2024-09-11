@@ -12,27 +12,29 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * RangeSelectorButtonsEventsOptions 
+ * RangeSelectorButtonsEventsOptions
  */
 class RangeSelectorButtonsEventsOptions extends OptionFragment {
-  RangeSelectorButtonsEventsOptions( ) : super();
-  
+
+  RangeSelectorButtonsEventsOptions();
+
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    
+
   }
+
 
 }

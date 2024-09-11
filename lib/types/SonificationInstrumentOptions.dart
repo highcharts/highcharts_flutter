@@ -12,34 +12,53 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'SynthPatchOptions.dart';
 import 'SonificationInstrumentCapabilitiesOptions.dart';
 import 'OptionFragment.dart';
 
+
 /** 
- * SonificationInstrumentOptions 
+ * SonificationInstrumentOptions
  */
 class SonificationInstrumentOptions extends OptionFragment {
-  SonificationInstrumentOptions( ) : super();
-  // NOTE: midiTrackName skipped - type string is ignored in gen 
 
+  SonificationInstrumentOptions({
+    this.capabilities = null,
+    this.midiTrackName = null,
+    this.synthPatch = null
+  });
+
+  SynthPatchOptions? synthPatch;
+    
+  SonificationInstrumentCapabilitiesOptions? capabilities;
+    
+  String? midiTrackName;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of synthPatch (type SynthPatchOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of capabilities (type SonificationInstrumentCapabilitiesOptions is ignored) ignore type: true
-
-    // NOTE: skip serialization of midiTrackName (type string is ignored) ignore type: true
+    
+    if (this.synthPatch != null) {
+        buffer.writeAll(["\"synthPatch\":",this.synthPatch?.toJSON(), ","], "");
+    }
+    
+    if (this.capabilities != null) {
+        buffer.writeAll(["\"capabilities\":",this.capabilities?.toJSON(), ","], "");
+    }
+    
+    if (this.midiTrackName != null) {
+        buffer.writeAll(["\"midiTrackName\":\'",this.midiTrackName, "\',"], "");
+    }
   }
+
 
 }

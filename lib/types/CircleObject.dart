@@ -12,29 +12,40 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'PositionObject.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * CircleObject 
+ * CircleObject
  */
 class CircleObject extends PositionObject {
-  CircleObject( ) : super();
-  // NOTE: r skipped - type number is ignored in gen 
 
+  CircleObject({
+    super.alignment = null,
+    this.r = null,
+    super.x = null,
+    super.y = null
+  });
+
+  double? r;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of r (type number is ignored) ignore type: true
+
+    
+    if (this.r != null) {
+        buffer.writeAll(["\"r\":",this.r, ","], "");
+    }
   }
+
 
 }

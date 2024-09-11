@@ -12,27 +12,33 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * ATRIndicator 
+ * ATRIndicator
  */
 class ATRIndicator extends OptionFragment {
-  ATRIndicator( ) : super();
-  
+
+  ATRIndicator();
+
+  // NOTE: pointClass skipped - type typeof ATRPoint is ignored in gen 
+
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of pointClass (type typeof ATRPoint is ignored) ignore type: true
+
+    // NOTE: skip serialization of pointClass (type typeof ATRPoint ignored, skipped: true)
+
   }
+
 
 }

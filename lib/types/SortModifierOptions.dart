@@ -12,39 +12,56 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'DataModifierOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * SortModifierOptions 
+ * SortModifierOptions
  */
 class SortModifierOptions extends DataModifierOptions {
-  SortModifierOptions( ) : super();
-  // NOTE: direction skipped - type string is ignored in gen 
 
-  // NOTE: orderByColumn skipped - type string is ignored in gen 
+  SortModifierOptions({
+    this.direction = null,
+    this.orderByColumn = null,
+    this.orderInColumn = null,
+    super.type = null
+  });
 
-  // NOTE: orderInColumn skipped - type string is ignored in gen 
+  // NOTE: type skipped - type "Sort" is ignored in gen 
 
+  String? direction;
+    
+  String? orderByColumn;
+    
+  String? orderInColumn;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of type (type "Sort" is ignored) ignore type: true
 
-    // NOTE: skip serialization of direction (type string is ignored) ignore type: true
+    // NOTE: skip serialization of type (type "Sort" ignored, skipped: true)
 
-    // NOTE: skip serialization of orderByColumn (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of orderInColumn (type string is ignored) ignore type: true
+    
+    if (this.direction != null) {
+        buffer.writeAll(["\"direction\":\'",this.direction, "\',"], "");
+    }
+    
+    if (this.orderByColumn != null) {
+        buffer.writeAll(["\"orderByColumn\":\'",this.orderByColumn, "\',"], "");
+    }
+    
+    if (this.orderInColumn != null) {
+        buffer.writeAll(["\"orderInColumn\":\'",this.orderInColumn, "\',"], "");
+    }
   }
+
 
 }

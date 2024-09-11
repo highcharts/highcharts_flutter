@@ -12,45 +12,87 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'FrameSideOptions.dart';
 import 'OptionFragment.dart';
 
+
 /** 
- * FrameOptions 
+ * FrameOptions
  */
 class FrameOptions extends OptionFragment {
-  FrameOptions( ) : super();
-  // NOTE: size skipped - type number is ignored in gen 
 
-  // NOTE: visible skipped - type string is ignored in gen 
+  FrameOptions({
+    this.back = null,
+    this.bottom = null,
+    this.front = null,
+    this.left = null,
+    this.right = null,
+    this.size = null,
+    this.top = null,
+    this.visible = null
+  });
 
+  FrameSideOptions? back;
+    
+  FrameSideOptions? bottom;
+    
+  FrameSideOptions? front;
+    
+  FrameSideOptions? left;
+    
+  FrameSideOptions? right;
+    
+  double? size;
+    
+  FrameSideOptions? top;
+    
+  String? visible;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of back (type FrameSideOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of bottom (type FrameSideOptions is ignored) ignore type: true
-
-    // NOTE: skip serialization of front (type FrameSideOptions is ignored) ignore type: true
-
-    // NOTE: skip serialization of left (type FrameSideOptions is ignored) ignore type: true
-
-    // NOTE: skip serialization of right (type FrameSideOptions is ignored) ignore type: true
-
-    // NOTE: skip serialization of size (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of top (type FrameSideOptions is ignored) ignore type: true
-
-    // NOTE: skip serialization of visible (type string is ignored) ignore type: true
+    
+    if (this.back != null) {
+        buffer.writeAll(["\"back\":",this.back?.toJSON(), ","], "");
+    }
+    
+    if (this.bottom != null) {
+        buffer.writeAll(["\"bottom\":",this.bottom?.toJSON(), ","], "");
+    }
+    
+    if (this.front != null) {
+        buffer.writeAll(["\"front\":",this.front?.toJSON(), ","], "");
+    }
+    
+    if (this.left != null) {
+        buffer.writeAll(["\"left\":",this.left?.toJSON(), ","], "");
+    }
+    
+    if (this.right != null) {
+        buffer.writeAll(["\"right\":",this.right?.toJSON(), ","], "");
+    }
+    
+    if (this.size != null) {
+        buffer.writeAll(["\"size\":",this.size, ","], "");
+    }
+    
+    if (this.top != null) {
+        buffer.writeAll(["\"top\":",this.top?.toJSON(), ","], "");
+    }
+    
+    if (this.visible != null) {
+        buffer.writeAll(["\"visible\":\'",this.visible, "\',"], "");
+    }
   }
+
 
 }

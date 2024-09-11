@@ -12,67 +12,104 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'ColumnPointOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * FlagsPointOptions 
+ * FlagsPointOptions
  */
 class FlagsPointOptions extends ColumnPointOptions {
-  FlagsPointOptions( {
+
+  FlagsPointOptions({
     super.accessibility = null,
     super.borderColor = null,
     super.className = null,
+    super.collapsed = null,
     super.color = null,
     super.colorIndex = null,
     super.connectors = null,
+    super.dashStyle = null,
     super.dataLabels = null,
     super.dragDrop = null,
+    super.drilldown = null,
     super.events = null,
+    this.fillColor = null,
+    super.id = null,
+    super.index = null,
     super.keys = null,
+    this.labelrank = null,
+    super.lat = null,
+    super.legendIndex = null,
+    super.lon = null,
     super.marker = null,
-    super.selected = null,
-    super.visible = null
-  }) : super();
-  // NOTE: fillColor skipped - type string is ignored in gen 
+    super.name = null,
+    super.pointWidth = null,
+    this.selected = null,
+    super.seriesIndex = null,
+    this.shape = null,
+    this.text = null,
+    this.title = null,
+    super.value = null,
+    super.visible = null,
+    this.x = null,
+    super.y = null
+  });
 
-  // NOTE: labelrank skipped - type number is ignored in gen 
-
-  // NOTE: selected skipped - type boolean is ignored in gen 
-
-  // NOTE: shape skipped - type string is ignored in gen 
-
-  // NOTE: text skipped - type string is ignored in gen 
-
-  // NOTE: title skipped - type string is ignored in gen 
-
-  // NOTE: x skipped - type number is ignored in gen 
-
+  String? fillColor;
+    
+  double? labelrank;
+    
+  bool? selected;
+    
+  String? shape;
+    
+  String? text;
+    
+  String? title;
+    
+  double? x;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of fillColor (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of labelrank (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of selected (type boolean is ignored) ignore type: true
-
-    // NOTE: skip serialization of shape (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of text (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of title (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of x (type number is ignored) ignore type: true
+    
+    if (this.fillColor != null) {
+        buffer.writeAll(["\"fillColor\":\'",this.fillColor, "\',"], "");
+    }
+    
+    if (this.labelrank != null) {
+        buffer.writeAll(["\"labelrank\":",this.labelrank, ","], "");
+    }
+    
+    if (this.selected != null) {
+        buffer.writeAll(["\"selected\":",this.selected, ","], "");
+    }
+    
+    if (this.shape != null) {
+        buffer.writeAll(["\"shape\":\'",this.shape, "\',"], "");
+    }
+    
+    if (this.text != null) {
+        buffer.writeAll(["\"text\":\'",this.text, "\',"], "");
+    }
+    
+    if (this.title != null) {
+        buffer.writeAll(["\"title\":\'",this.title, "\',"], "");
+    }
+    
+    if (this.x != null) {
+        buffer.writeAll(["\"x\":",this.x, ","], "");
+    }
   }
+
 
 }

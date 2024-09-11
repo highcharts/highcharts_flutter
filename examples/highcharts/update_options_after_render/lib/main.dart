@@ -4,7 +4,7 @@
  */
 
 import 'package:flutter/material.dart';
-import 'package:highcharts_flutter/Highcharts.dart';
+import 'package:highcharts_flutter/highcharts.dart';
 import 'package:highcharts_flutter/types/TitleOptions.dart';
 import 'package:highcharts_flutter/types/SubtitleOptions.dart';
 import 'package:highcharts_flutter/types/XAxisOptions.dart';
@@ -72,7 +72,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ColumnSeries( 
                 //options: ColumnSeriesOptions()
                       name: "Unemployed", 
-                    //  borderRadius: BorderRadiusOptionsObject(),
+                     borderRadius: BorderRadiusOptionsObject(),
                     data: [ 
                       [5412], 
                       [4977], 
@@ -87,7 +87,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       [2899], 
                       [2887], 
                     ],
-                    //   showInLegend: false, 
+                      showInLegend: false, 
                   ),
                 ],
                 yAxis: [ 

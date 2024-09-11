@@ -12,36 +12,51 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * EQOptions 
+ * EQOptions
  */
 class EQOptions extends OptionFragment {
-  EQOptions( ) : super();
-  // NOTE: frequency skipped - type number is ignored in gen 
 
-  // NOTE: gain skipped - type number is ignored in gen 
+  EQOptions({
+    this.frequency = null,
+    this.gain = null,
+    this.Q = null
+  });
 
-  // NOTE: Q skipped - type number is ignored in gen 
-
+  double? frequency;
+    
+  double? gain;
+    
+  double? Q;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of frequency (type number is ignored) ignore type: true
 
-    // NOTE: skip serialization of gain (type number is ignored) ignore type: true
-
-    // NOTE: skip serialization of Q (type number is ignored) ignore type: true
+    
+    if (this.frequency != null) {
+        buffer.writeAll(["\"frequency\":",this.frequency, ","], "");
+    }
+    
+    if (this.gain != null) {
+        buffer.writeAll(["\"gain\":",this.gain, ","], "");
+    }
+    
+    if (this.Q != null) {
+        buffer.writeAll(["\"Q\":",this.Q, ","], "");
+    }
   }
+
 
 }

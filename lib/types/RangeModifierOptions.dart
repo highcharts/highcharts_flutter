@@ -12,38 +12,57 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'DataModifierOptions.dart';
 import 'RangeModifierRangeOptions.dart';
-import 'OptionFragment.dart';
+
 
 /** 
- * RangeModifierOptions 
+ * RangeModifierOptions
  */
 class RangeModifierOptions extends DataModifierOptions {
-  RangeModifierOptions( ) : super();
-  // NOTE: additive skipped - type boolean is ignored in gen 
 
-  // NOTE: strict skipped - type boolean is ignored in gen 
+  RangeModifierOptions({
+    this.additive = null,
+    this.ranges = null,
+    this.strict = null,
+    super.type = null
+  });
 
+  // NOTE: type skipped - type "Range" is ignored in gen 
+
+  bool? additive;
+    
+  RangeModifierRangeOptions? ranges;
+    
+  bool? strict;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of type (type "Range" is ignored) ignore type: true
 
-    // NOTE: skip serialization of additive (type boolean is ignored) ignore type: true
+    // NOTE: skip serialization of type (type "Range" ignored, skipped: true)
 
-    // NOTE: skip serialization of ranges (type RangeModifierRangeOptions[] is ignored) ignore type: true
-
-    // NOTE: skip serialization of strict (type boolean is ignored) ignore type: true
+    
+    if (this.additive != null) {
+        buffer.writeAll(["\"additive\":",this.additive, ","], "");
+    }
+    
+    if (this.ranges != null) {
+        buffer.writeAll(["\"ranges\":",this.ranges, ","], "");
+    }
+    
+    if (this.strict != null) {
+        buffer.writeAll(["\"strict\":",this.strict, ","], "");
+    }
   }
+
 
 }

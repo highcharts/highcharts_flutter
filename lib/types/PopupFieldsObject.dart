@@ -12,43 +12,65 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'PopupFieldsTree.dart';
 import 'OptionFragment.dart';
 
 /** 
- * PopupFieldsObject 
+ * PopupFieldsObject
  */
 class PopupFieldsObject extends OptionFragment {
-  PopupFieldsObject( ) : super();
-  // NOTE: actionType skipped - type string is ignored in gen 
 
-  // NOTE: linkedTo skipped - type string is ignored in gen 
+  PopupFieldsObject({
+    this.actionType = null,
+    this.fields = null,
+    this.linkedTo = null,
+    this.seriesId = null,
+    this.type = null
+  });
 
-  // NOTE: seriesId skipped - type string is ignored in gen 
-
-  // NOTE: type skipped - type string is ignored in gen 
-
+  String? actionType;
+    
+  PopupFieldsTree? fields;
+    
+  String? linkedTo;
+    
+  String? seriesId;
+    
+  String? type;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of actionType (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of fields (type PopupFieldsTree is ignored) ignore type: true
-
-    // NOTE: skip serialization of linkedTo (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of seriesId (type string is ignored) ignore type: true
-
-    // NOTE: skip serialization of type (type string is ignored) ignore type: true
+    
+    if (this.actionType != null) {
+        buffer.writeAll(["\"actionType\":\'",this.actionType, "\',"], "");
+    }
+    
+    if (this.fields != null) {
+        buffer.writeAll(["\"fields\":",this.fields?.toJSON(), ","], "");
+    }
+    
+    if (this.linkedTo != null) {
+        buffer.writeAll(["\"linkedTo\":\'",this.linkedTo, "\',"], "");
+    }
+    
+    if (this.seriesId != null) {
+        buffer.writeAll(["\"seriesId\":\'",this.seriesId, "\',"], "");
+    }
+    
+    if (this.type != null) {
+        buffer.writeAll(["\"type\":\'",this.type, "\',"], "");
+    }
   }
+
 
 }

@@ -12,28 +12,37 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * WebGLRenderingContext 
+ * WebGLRenderingContext
  */
 class WebGLRenderingContext extends OptionFragment {
-  WebGLRenderingContext( ) : super();
-  // NOTE: FUNC_MIN skipped - type number is ignored in gen 
 
+  WebGLRenderingContext({
+    this.FUNC_MIN = null
+  });
+
+  double? FUNC_MIN;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of FUNC_MIN (type number is ignored) ignore type: true
+
+    
+    if (this.FUNC_MIN != null) {
+        buffer.writeAll(["\"FUNC_MIN\":",this.FUNC_MIN, ","], "");
+    }
   }
+
 
 }

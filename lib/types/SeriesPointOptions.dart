@@ -12,33 +12,41 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'PointEventsOptions.dart';
 import 'OptionFragment.dart';
 
+
 /** 
- * SeriesPointOptions 
+ * SeriesPointOptions
  */
 class SeriesPointOptions extends OptionFragment {
-  SeriesPointOptions( {
+
+  SeriesPointOptions({
     this.events = null
-  }) : super();
+  });
+
+  /**
+   * Events for each single point.  
+   */
   PointEventsOptions? events;
     
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    if (this.events != null) {  
-      buffer.writeAll(["\"events\":",this.events?.toJSON(), ","], "");
+
+    
+    if (this.events != null) {
+        buffer.writeAll(["\"events\":",this.events?.toJSON(), ","], "");
     }
   }
+
 
 }

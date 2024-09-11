@@ -12,27 +12,35 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * Metadata 
+ * Metadata
  */
 class Metadata extends OptionFragment {
-  Metadata( ) : super();
-  
+
+  Metadata({
+    this.columns = null
+  });
+
+  Map<String, String>? columns;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of columns (type Generic is ignored) ignore type: true
+
+    // NOTE: skip serialization of columns (type Generic ignored, skipped: true)
+
   }
+
 
 }

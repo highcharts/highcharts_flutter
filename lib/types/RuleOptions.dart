@@ -12,34 +12,52 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'Options.dart';
 import 'RuleConditionOptions.dart';
 import 'OptionFragment.dart';
 
+
 /** 
- * RuleOptions 
+ * RuleOptions
  */
 class RuleOptions extends OptionFragment {
-  RuleOptions( ) : super();
-  // NOTE: _id skipped - type string is ignored in gen 
 
+  RuleOptions({
+    this.chartOptions = null,
+    this.condition = null
+  });
+
+  String? p_id;
+    
+  Options? chartOptions;
+    
+  RuleConditionOptions? condition;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of p_id (type string is ignored) ignore type: true
 
-    // NOTE: skip serialization of chartOptions (type Options is ignored) ignore type: true
-
-    // NOTE: skip serialization of condition (type RuleConditionOptions is ignored) ignore type: true
+    
+    if (this.p_id != null) {
+        buffer.writeAll(["\"_id\":\'",this.p_id, "\',"], "");
+    }
+    
+    if (this.chartOptions != null) {
+        buffer.writeAll(["\"chartOptions\":",this.chartOptions?.toJSON(), ","], "");
+    }
+    
+    if (this.condition != null) {
+        buffer.writeAll(["\"condition\":",this.condition?.toJSON(), ","], "");
+    }
   }
+
 
 }

@@ -12,46 +12,63 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'OptionFragment.dart';
 
+
 /** 
- * SeriesDataSortingOptions 
+ * SeriesDataSortingOptions
  */
 class SeriesDataSortingOptions extends OptionFragment {
-  SeriesDataSortingOptions( {
+
+  SeriesDataSortingOptions({
     this.enabled = null,
     this.matchByName = null,
     this.sortKey = null
-  }) : super();
+  });
+
+  /**
+   * Enable or disable data sorting for the series. Use [xAxis.reversed](#xAxis.reversed) to change the sorting order.  
+   */
   bool? enabled;
     
+  /**
+   * Whether to allow matching points by name in an update. If this option
+   * is disabled, points will be matched by order.  
+   */
   bool? matchByName;
     
+  /**
+   * Determines what data value should be used to sort by. 
+   * 
+   * Defaults to 'y'. 
+   */
   String? sortKey;
     
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    if (this.enabled != null) {  
-      buffer.writeAll(["\"enabled\":",this.enabled, ","], "");
-    }
 
-    if (this.matchByName != null) {  
-      buffer.writeAll(["\"matchByName\":",this.matchByName, ","], "");
+    
+    if (this.enabled != null) {
+        buffer.writeAll(["\"enabled\":",this.enabled, ","], "");
     }
-
-    if (this.sortKey != null) {  
-      buffer.writeAll(["\"sortKey\":\'",this.sortKey, "\',"], "");
+    
+    if (this.matchByName != null) {
+        buffer.writeAll(["\"matchByName\":",this.matchByName, ","], "");
+    }
+    
+    if (this.sortKey != null) {
+        buffer.writeAll(["\"sortKey\":\'",this.sortKey, "\',"], "");
     }
   }
+
 
 }

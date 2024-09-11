@@ -12,33 +12,49 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'DrilldownDrillUpButtonPositionOptions.dart';
 import 'OptionFragment.dart';
 
+
 /** 
- * DrilldownDrillUpButtonOptions 
+ * DrilldownDrillUpButtonOptions
  */
 class DrilldownDrillUpButtonOptions extends OptionFragment {
-  DrilldownDrillUpButtonOptions( ) : super();
-  // NOTE: relativeTo skipped - type string is ignored in gen 
+
+  DrilldownDrillUpButtonOptions({
+    this.position = null,
+    this.relativeTo = null
+  });
+
+  DrilldownDrillUpButtonPositionOptions? position;
+    
+  String? relativeTo;
+    
+  // NOTE: theme skipped - type object is ignored in gen 
 
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of position (type DrilldownDrillUpButtonPositionOptions is ignored) ignore type: true
 
-    // NOTE: skip serialization of relativeTo (type string is ignored) ignore type: true
+    
+    if (this.position != null) {
+        buffer.writeAll(["\"position\":",this.position?.toJSON(), ","], "");
+    }
+    
+    if (this.relativeTo != null) {
+        buffer.writeAll(["\"relativeTo\":\'",this.relativeTo, "\',"], "");
+    }
+    // NOTE: skip serialization of theme (type object ignored, skipped: true)
 
-    // NOTE: skip serialization of theme (type object is ignored) ignore type: 1
   }
+
 
 }

@@ -12,28 +12,37 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * PathfinderAlgorithmFunction 
+ * PathfinderAlgorithmFunction
  */
 class PathfinderAlgorithmFunction extends OptionFragment {
-  PathfinderAlgorithmFunction( ) : super();
-  // NOTE: requiresObstacles skipped - type boolean is ignored in gen 
 
+  PathfinderAlgorithmFunction({
+    this.requiresObstacles = null
+  });
+
+  bool? requiresObstacles;
+    
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of requiresObstacles (type boolean is ignored) ignore type: true
+
+    
+    if (this.requiresObstacles != null) {
+        buffer.writeAll(["\"requiresObstacles\":",this.requiresObstacles, ","], "");
+    }
   }
+
 
 }

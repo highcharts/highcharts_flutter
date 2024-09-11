@@ -12,34 +12,48 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
+ */
 
 import 'OptionFragment.dart';
 
 /** 
- * NavigationBindingsLike 
+ * NavigationBindingsLike
  */
 class NavigationBindingsLike extends OptionFragment {
-  NavigationBindingsLike( ) : super();
-  // NOTE: toggledAnnotations skipped - type boolean is ignored in gen 
 
-  // NOTE: verticalCounter skipped - type number is ignored in gen 
+  NavigationBindingsLike({
+    this.toggledAnnotations = null,
+    this.verticalCounter = null
+  });
+
+  bool? toggledAnnotations;
+    
+  double? verticalCounter;
+    
+  // NOTE: utils skipped - type Generic is ignored in gen 
 
 
   //////////////////////////////////////////////////////////////////////////////
-  
-  @override
+
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
     
-    // NOTE: skip serialization of toggledAnnotations (type boolean is ignored) ignore type: true
 
-    // NOTE: skip serialization of verticalCounter (type number is ignored) ignore type: true
+    
+    if (this.toggledAnnotations != null) {
+        buffer.writeAll(["\"toggledAnnotations\":",this.toggledAnnotations, ","], "");
+    }
+    
+    if (this.verticalCounter != null) {
+        buffer.writeAll(["\"verticalCounter\":",this.verticalCounter, ","], "");
+    }
+    // NOTE: skip serialization of utils (type Generic ignored, skipped: true)
 
-    // NOTE: skip serialization of utils (type Generic is ignored) ignore type: true
   }
+
 
 }

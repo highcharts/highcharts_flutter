@@ -12,10 +12,9 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-05-23
+ * Build stamp: 2024-09-11
  *
- */ 
-
+ */
 import 'SupertrendOptions.dart';
 import 'Series.dart';
 import 'PointOptions.dart';
@@ -34,8 +33,7 @@ class SupertrendSeries extends Series {
     this.data = null
   });
 
-  
-  @override
+    @override
   void toJSONInner(StringBuffer buffer) {
     super.toJSONInner(buffer);
 
@@ -56,16 +54,13 @@ class SupertrendSeries extends Series {
         if (point.length > 1) {
           seriesData.writeAll(["["], "");
         }
-
-          for (var sub in point) {
-            if (sub is String) {
-              seriesData.writeAll(["\"", sub, "\","], "");
-            } else {
-              seriesData.writeAll([sub], ",");
-            }
-
+        for (var sub in point) {
+          if (sub is String) {
+            seriesData.writeAll(["\"", sub, "\","], "");
+          } else {
+            seriesData.writeAll([sub], ",");
           }
-
+        }
         if (point.length > 1) {
           seriesData.writeAll(["],"], "");
         } else {
@@ -92,18 +87,18 @@ class SupertrendSeries extends Series {
 
 
     
-    if (this.options?.changeTrendLine != null) {  
-      buffer.writeAll(["\"changeTrendLine\":",this.options?.changeTrendLine, ","], "");
+
+    // NOTE: skip serialization of changeTrendLine (type Generic ignored, skipped: true)
+
+    
+    if (this.options?.fallingTrendColor != null) {
+        buffer.writeAll(["\"fallingTrendColor\":\'",this.options?.fallingTrendColor, "\',"], "");
     }
+    // NOTE: skip serialization of params (type SupertrendParamsOptions ignored, skipped: false)
 
-    if (this.options?.fallingTrendColor != null) {  
-      buffer.writeAll(["\"fallingTrendColor\":\'",this.options?.fallingTrendColor, "\',"], "");
-    }
-
-    // NOTE: skip serialization of params (type SupertrendParamsOptions is ignored) ignore type: false
-
-    if (this.options?.risingTrendColor != null) {  
-      buffer.writeAll(["\"risingTrendColor\":\'",this.options?.risingTrendColor, "\',"], "");
+    
+    if (this.options?.risingTrendColor != null) {
+        buffer.writeAll(["\"risingTrendColor\":\'",this.options?.risingTrendColor, "\',"], "");
     }
   }
 
