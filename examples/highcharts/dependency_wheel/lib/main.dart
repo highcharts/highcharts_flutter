@@ -1,17 +1,10 @@
 
-/** 
+/**
  * Highcharts Demo
  */
 
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/highcharts.dart';
-import 'package:highcharts_flutter/types/TitleOptions.dart';
-import 'package:highcharts_flutter/types/AccessibilityOptions.dart';
-import 'package:highcharts_flutter/types/AccessibilityPointOptions.dart';
-import 'package:highcharts_flutter/types/DependencyWheelSeriesOptions.dart';
-import 'package:highcharts_flutter/types/DependencyWheelSeries.dart';
-import 'package:highcharts_flutter/types/XAxisOptions.dart';
-import 'package:highcharts_flutter/types/YAxisOptions.dart';
 
 void main() {
   runApp(const MyApp());
@@ -56,18 +49,18 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             HighchartsChart(
               HighchartsOptions(
-                title: TitleOptions(
-                    text: "Highcharts Dependency Wheel", 
+                title: HighchartsTitleOptions(
+                    text: "Highcharts Dependency Wheel",
                 ),
-                accessibility: AccessibilityOptions(
-                  point: AccessibilityPointOptions(
-                      valueDescriptionFormat: "{index}. From {point.from} to {point.to}: {point.weight}.", 
+                accessibility: HighchartsAccessibilityOptions(
+                  point: HighchartsAccessibilityPointOptions(
+                      valueDescriptionFormat: "{index}. From {point.from} to {point.to}: {point.weight}.",
                   ),
                 ),
-                series: [ 
-                  DependencyWheelSeries( 
-                //options: DependencyWheelSeriesOptions()
-                    data: [ 
+                series: [
+                  HighchartsDependencyWheelSeries(
+                    options: HighchartsDependencyWheelSeriesOptions(),
+                    data: [
                     [
                       "Brazil", "Portugal", 5
                     ],
@@ -6696,15 +6689,15 @@ class _MyHomePageState extends State<MyHomePage> {
                       "Japan", "Brazil", 1
                     ],
                     ],
-                      name: "Dependency wheel series", 
+                      name: "Dependency wheel series",
                   ),
                 ],
-                xAxis: [ 
-                  XAxisOptions( 
+                xAxis: [
+                  HighchartsXAxisOptions(
                   ),
                 ],
-                yAxis: [ 
-                  YAxisOptions( 
+                yAxis: [
+                  HighchartsYAxisOptions(
                   ),
                 ],
               )

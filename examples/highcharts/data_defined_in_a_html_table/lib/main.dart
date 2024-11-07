@@ -1,17 +1,10 @@
 
-/** 
+/**
  * Highcharts Demo
  */
 
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/highcharts.dart';
-import 'package:highcharts_flutter/types/DataOptions.dart';
-import 'package:highcharts_flutter/types/HTMLTableElement.dart';
-import 'package:highcharts_flutter/types/ChartOptions.dart';
-import 'package:highcharts_flutter/types/TitleOptions.dart';
-import 'package:highcharts_flutter/types/SubtitleOptions.dart';
-import 'package:highcharts_flutter/types/XAxisOptions.dart';
-import 'package:highcharts_flutter/types/YAxisOptions.dart';
 
 void main() {
   runApp(const MyApp());
@@ -56,24 +49,24 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             HighchartsChart(
               HighchartsOptions(
-                data: DataOptions(
-                    table: "datatable", 
+                data: HighchartsDataOptions(
+                    table: "datatable",
                 ),
-                chart: ChartOptions(
-                    type: "column", 
+                chart: HighchartsChartOptions(
+                    type: "column",
                 ),
-                title: TitleOptions(
-                    text: "Live births in Norway", 
+                title: HighchartsTitleOptions(
+                    text: "Live births in Norway",
                 ),
-                subtitle: SubtitleOptions(
-                    text: "Source: <a href=\"https://www.ssb.no/en/statbank/table/04231\" target=\"_blank\">SSB</a>", 
+                subtitle: HighchartsSubtitleOptions(
+                    text: "Source: <a href=\"https://www.ssb.no/en/statbank/table/04231\" target=\"_blank\">SSB</a>",
                 ),
-                xAxis: [ 
-                  XAxisOptions( 
+                xAxis: [
+                  HighchartsXAxisOptions(
                   ),
                 ],
-                yAxis: [ 
-                  YAxisOptions( 
+                yAxis: [
+                  HighchartsYAxisOptions(
                   ),
                 ],
               )

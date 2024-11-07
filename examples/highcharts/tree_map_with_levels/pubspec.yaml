@@ -1,7 +1,7 @@
 
 name: tree_map_with_levels
 description: Tree map with levels
-publish_to: 'none' 
+publish_to: 'none'
 
 version: 1.0.0+1
 

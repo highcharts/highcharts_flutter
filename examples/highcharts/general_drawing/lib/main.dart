@@ -1,17 +1,9 @@
-
-/** 
+/**
  * Highcharts Demo
  */
 
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/highcharts.dart';
-import 'package:highcharts_flutter/types/ChartOptions.dart';
-import 'package:highcharts_flutter/types/CSSObject.dart';
-import 'package:highcharts_flutter/types/ChartEventsOptions.dart';
-import 'package:highcharts_flutter/types/TitleOptions.dart';
-import 'package:highcharts_flutter/types/AccessibilityOptions.dart';
-import 'package:highcharts_flutter/types/XAxisOptions.dart';
-import 'package:highcharts_flutter/types/YAxisOptions.dart';
 
 void main() {
   runApp(const MyApp());
@@ -54,37 +46,29 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            HighchartsChart(
-              HighchartsOptions(
-                chart: ChartOptions(
-                    backgroundColor: "white", 
-                  style: CSSObject(
-                  ),
-                ),
-                title: TitleOptions(
-                    text: "Highcharts export server overview", 
-                  style: CSSObject(
-                  ),
-                    align: "left", 
-                ),
-                accessibility: AccessibilityOptions(
-                    typeDescription: "Flowchart", 
-                ),
-                xAxis: [ 
-                  XAxisOptions( 
-                  ),
-                ],
-                yAxis: [ 
-                  YAxisOptions( 
-                  ),
-                ],
-              )
-            )
+            HighchartsChart(HighchartsOptions(
+              chart: HighchartsChartOptions(
+                backgroundColor: "white",
+                style: {},
+              ),
+              title: HighchartsTitleOptions(
+                text: "Highcharts export server overview",
+                style: HighchartsTitleStyleOptions(),
+                align: "left",
+              ),
+              accessibility: HighchartsAccessibilityOptions(
+                typeDescription: "Flowchart",
+              ),
+              xAxis: [
+                HighchartsXAxisOptions(),
+              ],
+              yAxis: [
+                HighchartsYAxisOptions(),
+              ],
+            ))
           ],
         ),
       ),
     );
   }
 }
-
-

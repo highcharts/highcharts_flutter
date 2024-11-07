@@ -1,3 +1,13 @@
+## 0.0.3
+
+* Added implicit options exports.
+* Improved examples.
+* Improved options types.
+* Improved refresh.
+* Fixed file names.
+* Fixed menu issue.
+* Fixed series update.
+
 ## 0.0.2
 
 * Improved hello-world example.

@@ -1,16 +1,9 @@
-
-/** 
+/**
  * Highcharts Demo
  */
 
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/highcharts.dart';
-import 'package:highcharts_flutter/types/YAxisOptions.dart';
-import 'package:highcharts_flutter/types/CreditsOptions.dart';
-import 'package:highcharts_flutter/types/LineSeriesOptions.dart';
-import 'package:highcharts_flutter/types/LineSeries.dart';
-import 'package:highcharts_flutter/types/DataLabelOptions.dart';
-import 'package:highcharts_flutter/types/XAxisOptions.dart';
 
 void main() {
   runApp(const MyApp());
@@ -53,40 +46,30 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            HighchartsChart(
-              HighchartsOptions(
-                yAxis: [ 
-                  YAxisOptions( 
-                  ),
-                ],
-                credits: CreditsOptions(
-                    enabled: false, 
-                ),
-                series: [ 
-                  LineSeries( 
-                //options: LineSeriesOptions()
-                      name: "Speed", 
-                    data: [ 
-                      [80], 
-                    ],
-                    dataLabels: [ 
-                      DataLabelOptions( 
-                          format: "<div style=\"text-align:center\"><span style=\"font-size:25px\">{y}</span><br/><span style=\"font-size:12px;opacity:0.4\">km/h</span></div>", 
+            HighchartsChart(HighchartsOptions(
+              credits: HighchartsCreditsOptions(
+                enabled: false,
+              ),
+              series: [
+                HighchartsLineSeries(
+                  name: "Speed",
+                  options: HighchartsLineSeriesOptions(
+                    dataLabels: [
+                      HighchartsSeriesDataLabelsOptions(
+                        format:
+                            "<div style=\"text-align:center\"><span style=\"font-size:25px\">{y}</span><br/><span style=\"font-size:12px;opacity:0.4\">km/h</span></div>",
                       ),
                     ],
                   ),
-                ],
-                xAxis: [ 
-                  XAxisOptions( 
-                  ),
-                ],
-              )
-            )
+                  data: [
+                    [80],
+                  ],
+                ),
+              ],
+            ))
           ],
         ),
       ),
     );
   }
 }
-
-

@@ -1,20 +1,10 @@
 
-/** 
+/**
  * Highcharts Demo
  */
 
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/highcharts.dart';
-import 'package:highcharts_flutter/types/ChartOptions.dart';
-import 'package:highcharts_flutter/types/Options.dart';
-import 'package:highcharts_flutter/types/TitleOptions.dart';
-import 'package:highcharts_flutter/types/SubtitleOptions.dart';
-import 'package:highcharts_flutter/types/HighchartsPlotOptions.dart';
-import 'package:highcharts_flutter/types/ColumnSeriesOptions.dart';
-import 'package:highcharts_flutter/types/XAxisOptions.dart';
-import 'package:highcharts_flutter/types/YAxisOptions.dart';
-import 'package:highcharts_flutter/types/TooltipOptions.dart';
-import 'package:highcharts_flutter/types/ColumnSeries.dart';
 
 void main() {
   runApp(const MyApp());
@@ -59,85 +49,85 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             HighchartsChart(
               HighchartsOptions(
-                chart: ChartOptions(
-                    type: "column", 
-                  options3d: Options(
+                chart: HighchartsChartOptions(
+                    type: "column",
+                  options3d: HighchartsChart3DOptions(
                   ),
                 ),
-                title: TitleOptions(
-                    text: "External trade in goods by country, Norway 2021", 
-                    align: "left", 
+                title: HighchartsTitleOptions(
+                    text: "External trade in goods by country, Norway 2021",
+                    align: "left",
                 ),
-                subtitle: SubtitleOptions(
-                    text: "Source: <a href=\"https://www.ssb.no/en/statbank/table/08804/\"target=\"_blank\">SSB</a>", 
-                    align: "left", 
+                subtitle: HighchartsSubtitleOptions(
+                    text: "Source: <a href=\"https://www.ssb.no/en/statbank/table/08804/\"target=\"_blank\">SSB</a>",
+                    align: "left",
                 ),
                 plotOptions: HighchartsPlotOptions(
-                  column: ColumnSeriesOptions(
+                  column: HighchartsColumnSeriesOptions(
                   ),
                 ),
-                xAxis: [ 
-                  XAxisOptions( 
+                xAxis: [
+                  HighchartsXAxisOptions(
                   ),
                 ],
-                yAxis: [ 
-                  YAxisOptions( 
+                yAxis: [
+                  HighchartsYAxisOptions(
                   ),
                 ],
-                tooltip: TooltipOptions(
-                    valueSuffix: " MNOK", 
+                tooltip: HighchartsTooltipOptions(
+                    valueSuffix: " MNOK",
                 ),
-                series: [ 
-                  ColumnSeries( 
-                //options: ColumnSeriesOptions()
-                      name: "Total imports", 
-                    data: [ 
-                      [16076], 
-                      [112688], 
-                      [39452], 
-                      [0], 
-                      [94352], 
-                      [30495], 
-                      [21813], 
-                      [95908], 
-                      [11596], 
-                      [53771], 
+                series: [
+                  HighchartsColumnSeries(
+                    options: HighchartsColumnSeriesOptions(),
+                      name: "Total imports",
+                    data: [
+                      [16076],
+                      [112688],
+                      [39452],
+                      [0],
+                      [94352],
+                      [30495],
+                      [21813],
+                      [95908],
+                      [11596],
+                      [53771],
                     [
-                      16076, 
+                      16076,
                     ],
                     [
-                      112688, 
+                      112688,
                     ],
                     [
-                      39452, 
+                      39452,
                     ],
                     [
-                      0, 
+                      0,
                     ],
                     [
-                      94352, 
+                      94352,
                     ],
                     [
-                      30495, 
+                      30495,
                     ],
                     [
-                      21813, 
+                      21813,
                     ],
                     [
-                      95908, 
+                      95908,
                     ],
                     [
-                      11596, 
+                      11596,
                     ],
                     [
-                      53771, 
+                      53771,
                     ],
                     [
                     ],
                     [
-                      8270, 
+                      8270,
                     ],
-                      [8270], 
+                      [8270],
                     ],
                   ),
                 ],

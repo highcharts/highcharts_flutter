@@ -1,7 +1,7 @@
 
 name: time_data_with_irregular_intervals
 description: Time data with irregular intervals
-publish_to: 'none' 
+publish_to: 'none'
 
 version: 1.0.0+1
 

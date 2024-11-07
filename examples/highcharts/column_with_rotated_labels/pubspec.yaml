@@ -1,7 +1,7 @@
 
 name: column_with_rotated_labels
 description: Column with rotated labels
-publish_to: 'none' 
+publish_to: 'none'
 
 version: 1.0.0+1
 

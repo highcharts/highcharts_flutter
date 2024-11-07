@@ -1,7 +1,7 @@
 
 name: hc_3d_column_with_stacking_and_grouping
 description: 3D column with stacking and grouping
-publish_to: 'none' 
+publish_to: 'none'
 
 version: 1.0.0+1
 

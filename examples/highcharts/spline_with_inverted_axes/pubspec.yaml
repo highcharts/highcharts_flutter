@@ -1,7 +1,7 @@
 
 name: spline_with_inverted_axes
 description: Spline with inverted axes
-publish_to: 'none' 
+publish_to: 'none'
 
 version: 1.0.0+1
 

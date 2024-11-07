@@ -1,19 +1,10 @@
 
-/** 
+/**
  * Highcharts Demo
  */
 
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/highcharts.dart';
-import 'package:highcharts_flutter/types/ChartOptions.dart';
-import 'package:highcharts_flutter/types/TitleOptions.dart';
-import 'package:highcharts_flutter/types/SubtitleOptions.dart';
-import 'package:highcharts_flutter/types/XAxisOptions.dart';
-import 'package:highcharts_flutter/types/YAxisOptions.dart';
-import 'package:highcharts_flutter/types/TooltipOptions.dart';
-import 'package:highcharts_flutter/types/HighchartsPlotOptions.dart';
-import 'package:highcharts_flutter/types/ColumnSeriesOptions.dart';
-import 'package:highcharts_flutter/types/ColumnSeries.dart';
 
 void main() {
   runApp(const MyApp());
@@ -58,69 +49,57 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             HighchartsChart(
               HighchartsOptions(
-                chart: ChartOptions(
-                    type: "column", 
+                chart: HighchartsChartOptions(
+                    type: "column",
                 ),
-                title: TitleOptions(
-                    text: "Domestic passenger transport by mode of transport, Norway", 
-                    align: "left", 
+                title: HighchartsTitleOptions(
+                    text: "Domestic passenger transport by mode of transport, Norway",
+                    align: "left",
                 ),
-                subtitle: SubtitleOptions(
-                    text: "Source: <a href=\"https://www.ssb.no/transport-og-reiseliv/landtransport/statistikk/innenlandsk-transport\">SSB</a>", 
-                    align: "left", 
+                subtitle: HighchartsSubtitleOptions(
+                    text: "Source: <a href=\"https://www.ssb.no/transport-og-reiseliv/landtransport/statistikk/innenlandsk-transport\">SSB</a>",
+                    align: "left",
                 ),
-                xAxis: [ 
-                  XAxisOptions( 
-                  ),
-                ],
-                yAxis: [ 
-                  YAxisOptions( 
-                  ),
-                ],
-                tooltip: TooltipOptions(
-                    pointFormat: "<span style=\"color:{series.color}\">{series.name}</span>: <b>{point.y}</b> ({point.percentage:.0f}%)<br/>", 
-                    shared: true, 
+                tooltip: HighchartsTooltipOptions(
+                    pointFormat: "<span style=\"color:{series.color}\">{series.name}</span>: <b>{point.y}</b> ({point.percentage:.0f}%)<br/>",
+                    shared: true,
                 ),
                 plotOptions: HighchartsPlotOptions(
-                  column: ColumnSeriesOptions(
-                      stacking: "percent", 
+                  column: HighchartsColumnSeriesOptions(
+                    stacking: "percent",
                   ),
                 ),
-                series: [ 
-                  ColumnSeries( 
-                //options: ColumnSeriesOptions()
-                      name: "Road", 
-                    data: [ 
-                      [434], 
-                      [290], 
-                      [307], 
+                series: [
+                  HighchartsColumnSeries(
+                    name: "Road",
+                    data: [
+                      [434],
+                      [290],
+                      [307],
                     ],
                   ),
-                  ColumnSeries( 
-                //options: ColumnSeriesOptions()
-                      name: "Rail", 
-                    data: [ 
-                      [272], 
-                      [153], 
-                      [156], 
+                  HighchartsColumnSeries(
+                    name: "Rail",
+                    data: [
+                      [272],
+                      [153],
+                      [156],
                     ],
                   ),
-                  ColumnSeries( 
-                //options: ColumnSeriesOptions()
-                      name: "Air", 
-                    data: [ 
-                      [13], 
-                      [7], 
-                      [8], 
+                  HighchartsColumnSeries(
+                    name: "Air",
+                    data: [
+                      [13],
+                      [7],
+                      [8],
                     ],
                   ),
-                  ColumnSeries( 
-                //options: ColumnSeriesOptions()
-                      name: "Sea", 
-                    data: [ 
-                      [55], 
-                      [35], 
-                      [41], 
+                  HighchartsColumnSeries(
+                    name: "Sea",
+                    data: [
+                      [55],
+                      [35],
+                      [41],
                     ],
                   ),
                 ],

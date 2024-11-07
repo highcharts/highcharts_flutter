@@ -1,18 +1,10 @@
 
-/** 
+/**
  * Highcharts Demo
  */
 
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/highcharts.dart';
-import 'package:highcharts_flutter/types/ChartOptions.dart';
-import 'package:highcharts_flutter/types/TitleOptions.dart';
-import 'package:highcharts_flutter/types/SubtitleOptions.dart';
-import 'package:highcharts_flutter/types/LegendOptions.dart';
-import 'package:highcharts_flutter/types/XAxisOptions.dart';
-import 'package:highcharts_flutter/types/YAxisOptions.dart';
-import 'package:highcharts_flutter/types/ColumnSeriesOptions.dart';
-import 'package:highcharts_flutter/types/ColumnSeries.dart';
 
 void main() {
   runApp(const MyApp());
@@ -57,54 +49,43 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             HighchartsChart(
               HighchartsOptions(
-                chart: ChartOptions(
-                    type: "column", 
+                chart: HighchartsChartOptions(
+                  type: "column",
                 ),
-                title: TitleOptions(
-                    text: "Born persons, by girls' name", 
+                title: HighchartsTitleOptions(
+                  text: "Born persons, by girls' name",
                 ),
-                subtitle: SubtitleOptions(
-                    text: "Resize the frame or click buttons to change appearance", 
+                subtitle: HighchartsSubtitleOptions(
+                  text: "Resize the frame or click buttons to change appearance",
                 ),
-                legend: LegendOptions(
-                    align: "right", 
-                    verticalAlign: "middle", 
-                    layout: "vertical", 
+                legend: HighchartsLegendOptions(
+                  align: "right",
+                  verticalAlign: "middle",
+                  layout: "vertical",
                 ),
-                xAxis: [ 
-                  XAxisOptions( 
-                  ),
-                ],
-                yAxis: [ 
-                  YAxisOptions( 
-                  ),
-                ],
-                series: [ 
-                  ColumnSeries( 
-                //options: ColumnSeriesOptions()
-                      name: "Ava", 
-                    data: [ 
-                      [38], 
-                      [51], 
-                      [34], 
+                series: [
+                  HighchartsColumnSeries(
+                    name: "Ava",
+                    data: [
+                      [38],
+                      [51],
+                      [34],
                     ],
                   ),
-                  ColumnSeries( 
-                //options: ColumnSeriesOptions()
-                      name: "Dina", 
-                    data: [ 
-                      [31], 
-                      [26], 
-                      [27], 
+                  HighchartsColumnSeries(
+                    name: "Dina",
+                    data: [
+                      [31],
+                      [26],
+                      [27],
                     ],
                   ),
-                  ColumnSeries( 
-                //options: ColumnSeriesOptions()
-                      name: "Malin", 
-                    data: [ 
-                      [38], 
-                      [42], 
-                      [41], 
+                  HighchartsColumnSeries(
+                    name: "Malin",
+                    data: [
+                      [38],
+                      [42],
+                      [41],
                     ],
                   ),
                 ],

@@ -1,7 +1,7 @@
 
 name: hc_3d_column_with_null_and_0_values
 description: 3D column with null and 0 values
-publish_to: 'none' 
+publish_to: 'none'
 
 version: 1.0.0+1
 

@@ -1,7 +1,7 @@
 
 name: cumulative_sum
 description: Cumulative Sum
-publish_to: 'none' 
+publish_to: 'none'
 
 version: 1.0.0+1
 

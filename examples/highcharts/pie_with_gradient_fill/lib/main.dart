@@ -1,22 +1,9 @@
-
-/** 
+/**
  * Highcharts Demo
  */
 
 import 'package:flutter/material.dart';
-import 'package:highcharts_flutter/Maps.dart';
-import 'package:highcharts_flutter/types/ChartOptions.dart';
-import 'package:highcharts_flutter/types/Generic.dart';
-import 'package:highcharts_flutter/types/TitleOptions.dart';
-import 'package:highcharts_flutter/types/TooltipOptions.dart';
-import 'package:highcharts_flutter/types/AccessibilityOptions.dart';
-import 'package:highcharts_flutter/types/AccessibilityPointOptions.dart';
-import 'package:highcharts_flutter/types/MapsPlotOptions.dart';
-import 'package:highcharts_flutter/types/PieSeriesOptions.dart';
-import 'package:highcharts_flutter/types/PieDataLabelOptions.dart';
-import 'package:highcharts_flutter/types/PieSeries.dart';
-import 'package:highcharts_flutter/types/XAxisOptions.dart';
-import 'package:highcharts_flutter/types/YAxisOptions.dart';
+import 'package:highcharts_flutter/highcharts.dart';
 
 void main() {
   runApp(const MyApp());
@@ -59,87 +46,61 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            MapsChart(
-              MapsOptions(
-                chart: ChartOptions(
+            HighchartsChart(
+              HighchartsOptions(
+                chart: HighchartsChartOptions(
                   plotBackgroundColor: '',
                   plotBorderWidth: 0,
-                    plotShadow: false, 
-                    type: "pie", 
+                  type: "pie",
                 ),
-                title: TitleOptions(
-                    text: "Registered private vehicles in Norway, by type of fuel, 2020", 
-                    align: "left", 
+                title: HighchartsTitleOptions(
+                  text:
+                      "Registered private vehicles in Norway, by type of fuel, 2020",
+                  align: "left",
                 ),
-                tooltip: TooltipOptions(
-                    pointFormat: "{series.name}: <b>{point.percentage:.1f}%</b>", 
+                tooltip: HighchartsTooltipOptions(
+                  pointFormat: "{series.name}: <b>{point.percentage:.1f}%</b>",
                 ),
-                accessibility: AccessibilityOptions(
-                  point: AccessibilityPointOptions(
-                      valueSuffix: "%", 
+                accessibility: HighchartsAccessibilityOptions(
+                  point: HighchartsAccessibilityPointOptions(
+                    valueSuffix: "%",
                   ),
                 ),
-                plotOptions: MapsPlotOptions(
-                  pie: PieSeriesOptions(
-                      allowPointSelect: true, 
-                      cursor: "pointer", 
-                    dataLabels: [ 
-                      PieDataLabelOptions( 
-                          enabled: true, 
-                          format: "<span style=\"font-size: 1.2em\"><b>{point.name}</b></span><br><span style=\"opacity: 0.6\">{point.percentage:.1f} %</span>", 
-                      ),
-                    ],
+                plotOptions: HighchartsPlotOptions(
+                  pie: HighchartsPieSeriesOptions(
+                    allowPointSelect: true,
+                    cursor: "pointer",
+                    dataLabels: HighchartsPieSeriesDataLabelsOptions(
+                      enabled: true,
+                      format:
+                          "<span style=\"font-size: 1.2em\"><b>{point.name}</b></span><br><span style=\"opacity: 0.6\">{point.percentage:.1f} %</span>",
+                    ),
                   ),
                 ),
-                series: [ 
-                  PieSeries( 
-                //options: PieSeriesOptions()
-                      name: "Share", 
-                    data: [ 
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
+                series: [
+                  HighchartsPieSeries(
+                    name: "Share",
+                    data: [
+                      [],
+                      [],
+                      [],
+                      [],
+                      [],
+                      [],
+                      [],
+                      [],
+                      [],
+                      [],
+                      [],
+                      [],
+                      [],
+                      [],
+                      [],
+                      [],
                     ],
                   ),
                 ],
-                xAxis: [ 
-                  XAxisOptions( 
-                  ),
-                ],
-                yAxis: [ 
-                  YAxisOptions( 
-                  ),
-                ],
-              )
+              ),
             )
           ],
         ),
@@ -147,5 +108,3 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
-
-

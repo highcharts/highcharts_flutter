@@ -1,17 +1,9 @@
-
-/** 
+/**
  * Highcharts Demo
  */
 
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/highcharts.dart';
-import 'package:highcharts_flutter/types/ChartOptions.dart';
-import 'package:highcharts_flutter/types/TitleOptions.dart';
-import 'package:highcharts_flutter/types/XAxisOptions.dart';
-import 'package:highcharts_flutter/types/YAxisOptions.dart';
-import 'package:highcharts_flutter/types/TooltipOptions.dart';
-import 'package:highcharts_flutter/types/ColumnPyramidSeriesOptions.dart';
-import 'package:highcharts_flutter/types/ColumnPyramidSeries.dart';
 
 void main() {
   runApp(const MyApp());
@@ -54,116 +46,55 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            HighchartsChart(
-              HighchartsOptions(
-                chart: ChartOptions(
-                    type: "columnpyramid", 
-                ),
-                title: TitleOptions(
-                    text: "The 5 highest pyramids in the World", 
-                ),
-                xAxis: [ 
-                  XAxisOptions( 
+            HighchartsChart(HighchartsOptions(
+              chart: HighchartsChartOptions(
+                type: "columnpyramid",
+              ),
+              title: HighchartsTitleOptions(
+                text: "The 5 highest pyramids in the World",
+              ),
+              tooltip: HighchartsTooltipOptions(
+                valueSuffix: " m",
+              ),
+              series: [
+                HighchartsColumnPyramidSeries(
+                  name: "Height",
+                  options: HighchartsColumnPyramidSeriesOptions(
+                    showInLegend: false,
                   ),
-                ],
-                yAxis: [ 
-                  YAxisOptions( 
-                  ),
-                ],
-                tooltip: TooltipOptions(
-                    valueSuffix: " m", 
+                  data: [
+                    ["Pyramid of Khufu", 138.8],
+                    ["Pyramid of Khafre", 136.4],
+                    ["Red Pyramid", 104],
+                    ["Bent Pyramid", 101.1],
+                    ["Pyramid of the Sun", 75],
+                    ["Pyramid of Khufu", 138.8],
+                    ["Pyramid of Khafre", 136.4],
+                    ["Red Pyramid", 104],
+                    ["Bent Pyramid", 101.1],
+                    ["Pyramid of the Sun", 75],
+                    ["Pyramid of Khufu", 138.8],
+                    ["Pyramid of Khafre", 136.4],
+                    ["Red Pyramid", 104],
+                    ["Bent Pyramid", 101.1],
+                    ["Pyramid of the Sun", 75],
+                    ["Pyramid of Khufu", 138.8],
+                    ["Pyramid of Khafre", 136.4],
+                    ["Red Pyramid", 104],
+                    ["Bent Pyramid", 101.1],
+                    ["Pyramid of the Sun", 75],
+                    ["Pyramid of Khufu", 138.8],
+                    ["Pyramid of Khafre", 136.4],
+                    ["Red Pyramid", 104],
+                    ["Bent Pyramid", 101.1],
+                    ["Pyramid of the Sun", 75],
+                  ],
                 ),
-                series: [ 
-                  ColumnPyramidSeries( 
-                //options: ColumnPyramidSeriesOptions()
-                      name: "Height", 
-                    data: [ 
-                    [
-                      "Pyramid of Khufu", 138.8
-                    ],
-                    [
-                      "Pyramid of Khafre", 136.4
-                    ],
-                    [
-                      "Red Pyramid", 104
-                    ],
-                    [
-                      "Bent Pyramid", 101.1
-                    ],
-                    [
-                      "Pyramid of the Sun", 75
-                    ],
-                    [
-                      "Pyramid of Khufu", 138.8
-                    ],
-                    [
-                      "Pyramid of Khafre", 136.4
-                    ],
-                    [
-                      "Red Pyramid", 104
-                    ],
-                    [
-                      "Bent Pyramid", 101.1
-                    ],
-                    [
-                      "Pyramid of the Sun", 75
-                    ],
-                    [
-                      "Pyramid of Khufu", 138.8
-                    ],
-                    [
-                      "Pyramid of Khafre", 136.4
-                    ],
-                    [
-                      "Red Pyramid", 104
-                    ],
-                    [
-                      "Bent Pyramid", 101.1
-                    ],
-                    [
-                      "Pyramid of the Sun", 75
-                    ],
-                    [
-                      "Pyramid of Khufu", 138.8
-                    ],
-                    [
-                      "Pyramid of Khafre", 136.4
-                    ],
-                    [
-                      "Red Pyramid", 104
-                    ],
-                    [
-                      "Bent Pyramid", 101.1
-                    ],
-                    [
-                      "Pyramid of the Sun", 75
-                    ],
-                    [
-                      "Pyramid of Khufu", 138.8
-                    ],
-                    [
-                      "Pyramid of Khafre", 136.4
-                    ],
-                    [
-                      "Red Pyramid", 104
-                    ],
-                    [
-                      "Bent Pyramid", 101.1
-                    ],
-                    [
-                      "Pyramid of the Sun", 75
-                    ],
-                    ],
-                      showInLegend: false, 
-                  ),
-                ],
-              )
-            )
+              ],
+            ))
           ],
         ),
       ),
     );
   }
 }
-
-

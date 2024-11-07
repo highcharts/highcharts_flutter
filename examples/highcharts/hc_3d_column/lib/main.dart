@@ -1,21 +1,10 @@
 
-/** 
+/**
  * Highcharts Demo
  */
 
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/highcharts.dart';
-import 'package:highcharts_flutter/types/ChartOptions.dart';
-import 'package:highcharts_flutter/types/Options.dart';
-import 'package:highcharts_flutter/types/XAxisOptions.dart';
-import 'package:highcharts_flutter/types/YAxisOptions.dart';
-import 'package:highcharts_flutter/types/TooltipOptions.dart';
-import 'package:highcharts_flutter/types/TitleOptions.dart';
-import 'package:highcharts_flutter/types/SubtitleOptions.dart';
-import 'package:highcharts_flutter/types/LegendOptions.dart';
-import 'package:highcharts_flutter/types/HighchartsPlotOptions.dart';
-import 'package:highcharts_flutter/types/ColumnSeriesOptions.dart';
-import 'package:highcharts_flutter/types/ColumnSeries.dart';
 
 void main() {
   runApp(const MyApp());
@@ -60,53 +49,53 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             HighchartsChart(
               HighchartsOptions(
-                chart: ChartOptions(
-                    renderTo: "container", 
-                    type: "column", 
-                  options3d: Options(
+                chart: HighchartsChartOptions(
+                    renderTo: "container",
+                    type: "column",
+                  options3d: HighchartsChart3DOptions(
                   ),
                 ),
-                xAxis: [ 
-                  XAxisOptions( 
-                  ),
-                ],
-                yAxis: [ 
-                  YAxisOptions( 
+                xAxis: [
+                  HighchartsXAxisOptions(
                   ),
                 ],
-                tooltip: TooltipOptions(
-                    headerFormat: "<b>{point.key}</b><br>", 
-                    pointFormat: "Cars sold: {point.y}", 
+                yAxis: [
+                  HighchartsYAxisOptions(
+                  ),
+                ],
+                tooltip: HighchartsTooltipOptions(
+                    headerFormat: "<b>{point.key}</b><br>",
+                    pointFormat: "Cars sold: {point.y}",
                 ),
-                title: TitleOptions(
-                    text: "Sold passenger cars in Norway by brand, January 2021", 
-                    align: "left", 
+                title: HighchartsTitleOptions(
+                    text: "Sold passenger cars in Norway by brand, January 2021",
+                    align: "left",
                 ),
-                subtitle: SubtitleOptions(
-                    text: "Source: <a href=\"https://ofv.no/registreringsstatistikk\"target=\"_blank\">OFV</a>", 
-                    align: "left", 
+                subtitle: HighchartsSubtitleOptions(
+                    text: "Source: <a href=\"https://ofv.no/registreringsstatistikk\"target=\"_blank\">OFV</a>",
+                    align: "left",
                 ),
-                legend: LegendOptions(
-                    enabled: false, 
+                legend: HighchartsLegendOptions(
+                    enabled: false,
                 ),
                 plotOptions: HighchartsPlotOptions(
-                  column: ColumnSeriesOptions(
+                  column: HighchartsColumnSeriesOptions(
                   ),
                 ),
-                series: [ 
-                  ColumnSeries( 
-                //options: ColumnSeriesOptions()
-                    data: [ 
-                      [1318], 
-                      [1073], 
-                      [1060], 
-                      [813], 
-                      [775], 
-                      [745], 
-                      [537], 
-                      [444], 
-                      [416], 
-                      [395], 
+                series: [
+                  HighchartsColumnSeries(
+                    options: HighchartsColumnSeriesOptions(),
+                    data: [
+                      [1318],
+                      [1073],
+                      [1060],
+                      [813],
+                      [775],
+                      [745],
+                      [537],
+                      [444],
+                      [416],
+                      [395],
                     ],
                   ),
                 ],

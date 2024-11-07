@@ -1,21 +1,9 @@
-
-/** 
+/**
  * Highcharts Demo
  */
 
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/highcharts.dart';
-import 'package:highcharts_flutter/types/ChartOptions.dart';
-import 'package:highcharts_flutter/types/TitleOptions.dart';
-import 'package:highcharts_flutter/types/TooltipOptions.dart';
-import 'package:highcharts_flutter/types/SubtitleOptions.dart';
-import 'package:highcharts_flutter/types/HighchartsPlotOptions.dart';
-import 'package:highcharts_flutter/types/SeriesOptions.dart';
-import 'package:highcharts_flutter/types/DataLabelOptions.dart';
-import 'package:highcharts_flutter/types/PieSeriesOptions.dart';
-import 'package:highcharts_flutter/types/PieSeries.dart';
-import 'package:highcharts_flutter/types/XAxisOptions.dart';
-import 'package:highcharts_flutter/types/YAxisOptions.dart';
 
 void main() {
   runApp(const MyApp());
@@ -58,103 +46,69 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            HighchartsChart(
-              HighchartsOptions(
-                chart: ChartOptions(
-                    type: "pie", 
+            HighchartsChart(HighchartsOptions(
+              chart: HighchartsChartOptions(
+                type: "pie",
+              ),
+              title: HighchartsTitleOptions(
+                text: "Egg Yolk Composition",
+              ),
+              tooltip: HighchartsTooltipOptions(
+                valueSuffix: "%",
+              ),
+              subtitle: HighchartsSubtitleOptions(
+                text:
+                    "Source:<a href=\"https://www.mdpi.com/2072-6643/11/3/684/htm\" target=\"_default\">MDPI</a>",
+              ),
+              plotOptions: HighchartsPlotOptions(
+                series: HighchartsSeriesOptions(
+                  allowPointSelect: true,
+                  cursor: "pointer",
                 ),
-                title: TitleOptions(
-                    text: "Egg Yolk Composition", 
+              ),
+              series: [
+                HighchartsPieSeries(
+                  options: HighchartsPieSeriesOptions(),
+                  name: "Percentage",
+                  data: [
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                  ],
                 ),
-                tooltip: TooltipOptions(
-                    valueSuffix: "%", 
-                ),
-                subtitle: SubtitleOptions(
-                    text: "Source:<a href=\"https://www.mdpi.com/2072-6643/11/3/684/htm\" target=\"_default\">MDPI</a>", 
-                ),
-                plotOptions: HighchartsPlotOptions(
-                  series: SeriesOptions(
-                      allowPointSelect: true, 
-                      cursor: "pointer", 
-                    dataLabels: [ 
-                      DataLabelOptions( 
-                      ),
-                    ],
-                  ),
-                ),
-                series: [ 
-                  PieSeries( 
-                //options: PieSeriesOptions()
-                      name: "Percentage", 
-                    data: [ 
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    ],
-                  ),
-                ],
-                xAxis: [ 
-                  XAxisOptions( 
-                  ),
-                ],
-                yAxis: [ 
-                  YAxisOptions( 
-                  ),
-                ],
-              )
-            )
+              ],
+              xAxis: [
+                HighchartsXAxisOptions(),
+              ],
+              yAxis: [
+                HighchartsYAxisOptions(),
+              ],
+            ))
           ],
         ),
       ),
     );
   }
 }
-
-

@@ -1,20 +1,10 @@
 
-/** 
+/**
  * Highcharts Demo
  */
 
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/highcharts.dart';
-import 'package:highcharts_flutter/types/ChartOptions.dart';
-import 'package:highcharts_flutter/types/TitleOptions.dart';
-import 'package:highcharts_flutter/types/SubtitleOptions.dart';
-import 'package:highcharts_flutter/types/XAxisOptions.dart';
-import 'package:highcharts_flutter/types/YAxisOptions.dart';
-import 'package:highcharts_flutter/types/TooltipOptions.dart';
-import 'package:highcharts_flutter/types/any.dart';
-import 'package:highcharts_flutter/types/HighchartsPlotOptions.dart';
-import 'package:highcharts_flutter/types/SplineSeriesOptions.dart';
-import 'package:highcharts_flutter/types/SplineSeries.dart';
 
 void main() {
   runApp(const MyApp());
@@ -59,134 +49,120 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             HighchartsChart(
               HighchartsOptions(
-                chart: ChartOptions(
-                    type: "spline", 
+                chart: HighchartsChartOptions(
+                  type: "spline",
                 ),
-                title: TitleOptions(
-                    text: "Monthly Average Temperature", 
+                title: HighchartsTitleOptions(
+                  text: "Monthly Average Temperature",
                 ),
-                subtitle: SubtitleOptions(
-                    text: "Source: <a href=\"https://en.wikipedia.org/wiki/List_of_cities_by_average_temperature\" target=\"_blank\">Wikipedia.com</a>", 
+                subtitle: HighchartsSubtitleOptions(
+                  text: "Source: <a href=\"https://en.wikipedia.org/wiki/List_of_cities_by_average_temperature\" target=\"_blank\">Wikipedia.com</a>",
                 ),
-                xAxis: [ 
-                  XAxisOptions( 
-                  ),
-                ],
-                yAxis: [ 
-                  YAxisOptions( 
-                  ),
-                ],
-                tooltip: TooltipOptions(
-                    crosshairs: true, 
-                    shared: true, 
+                tooltip: HighchartsTooltipOptions(
+                  crosshairs: true,
+                  shared: true,
                 ),
-                plotOptions: HighchartsPlotOptions(
-                  spline: SplineSeriesOptions(
-                  ),
-                ),
-                series: [ 
-                  SplineSeries( 
-                //options: SplineSeriesOptions()
-                      name: "Tokyo", 
-                    data: [ 
-                      [5.2], 
-                      [5.7], 
-                      [8.7], 
-                      [13.9], 
-                      [18.2], 
-                      [21.4], 
-                      [25], 
+                series: [
+                  HighchartsSplineSeries(
+                    name: "Tokyo",
+                    data: [
+                      [5.2],
+                      [5.7],
+                      [8.7],
+                      [13.9],
+                      [18.2],
+                      [21.4],
+                      [25],
                     [
-                      5.2, 
+                      5.2,
                     ],
                     [
-                      5.7, 
+                      5.7,
                     ],
                     [
-                      8.7, 
+                      8.7,
                     ],
                     [
-                      13.9, 
+                      13.9,
                     ],
                     [
-                      18.2, 
+                      18.2,
                     ],
                     [
-                      21.4, 
+                      21.4,
                     ],
                     [
-                      25, 
+                      25,
                     ],
                     [
                     ],
                     [
-                      22.8, 
+                      22.8,
                     ],
                     [
-                      17.5, 
+                      17.5,
                     ],
                     [
-                      12.1, 
+                      12.1,
                     ],
                     [
-                      7.6, 
+                      7.6,
                     ],
-                      [22.8], 
-                      [17.5], 
-                      [12.1], 
-                      [7.6], 
+                      [22.8],
+                      [17.5],
+                      [12.1],
+                      [7.6],
                     ],
                   ),
-                  SplineSeries( 
-                //options: SplineSeriesOptions()
-                      name: "Bergen", 
-                    data: [ 
+                  HighchartsSplineSeries(
+                    name: "Bergen",
+                    data: [
                     [
                     ],
                     [
-                      1.6, 
+                      1.6,
                     ],
                     [
-                      3.3, 
+                      3.3,
                     ],
                     [
-                      5.9, 
+                      5.9,
                     ],
                     [
-                      10.5, 
+                      10.5,
                     ],
                     [
-                      13.5, 
+                      13.5,
                     ],
                     [
-                      14.5, 
+                      14.5,
                     ],
                     [
-                      14.4, 
+                      14.4,
                     ],
                     [
-                      11.5, 
+                      11.5,
                     ],
                     [
-                      8.7, 
+                      8.7,
                     ],
                     [
-                      4.7, 
+                      4.7,
                     ],
                     [
-                      2.6, 
+                      2.6,
                     ],
-                      [1.6], 
-                      [3.3], 
-                      [5.9], 
-                      [10.5], 
-                      [13.5], 
-                      [14.5], 
-                      [14.4], 
-                      [11.5], 
-                      [8.7], 
-                      [4.7], 
-                      [2.6], 
+                      [1.6],
+                      [3.3],
+                      [5.9],
+                      [10.5],
+                      [13.5],
+                      [14.5],
+                      [14.4],
+                      [11.5],
+                      [8.7],
+                      [4.7],
+                      [2.6],
                     ],
                   ),
                 ],

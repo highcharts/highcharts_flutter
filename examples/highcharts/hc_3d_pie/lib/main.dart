@@ -1,23 +1,9 @@
-
-/** 
+/**
  * Highcharts Demo
  */
 
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/highcharts.dart';
-import 'package:highcharts_flutter/types/ChartOptions.dart';
-import 'package:highcharts_flutter/types/Options.dart';
-import 'package:highcharts_flutter/types/TitleOptions.dart';
-import 'package:highcharts_flutter/types/SubtitleOptions.dart';
-import 'package:highcharts_flutter/types/AccessibilityOptions.dart';
-import 'package:highcharts_flutter/types/AccessibilityPointOptions.dart';
-import 'package:highcharts_flutter/types/TooltipOptions.dart';
-import 'package:highcharts_flutter/types/HighchartsPlotOptions.dart';
-import 'package:highcharts_flutter/types/PieSeriesOptions.dart';
-import 'package:highcharts_flutter/types/PieDataLabelOptions.dart';
-import 'package:highcharts_flutter/types/PieSeries.dart';
-import 'package:highcharts_flutter/types/XAxisOptions.dart';
-import 'package:highcharts_flutter/types/YAxisOptions.dart';
 
 void main() {
   runApp(const MyApp());
@@ -60,167 +46,86 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            HighchartsChart(
-              HighchartsOptions(
-                chart: ChartOptions(
-                    type: "pie", 
-                  options3d: Options(
+            HighchartsChart(HighchartsOptions(
+              chart: HighchartsChartOptions(
+                type: "pie",
+                options3d: HighchartsChart3DOptions(),
+              ),
+              title: HighchartsTitleOptions(
+                text: "Global smartphone shipments market share, Q1 2022",
+                align: "left",
+              ),
+              subtitle: HighchartsSubtitleOptions(
+                text:
+                    "Source: <a href=\"https://www.counterpointresearch.com/global-smartphone-share/\"target=\"_blank\">Counterpoint Research</a>",
+                align: "left",
+              ),
+              accessibility: HighchartsAccessibilityOptions(
+                point: HighchartsAccessibilityPointOptions(
+                  valueSuffix: "%",
+                ),
+              ),
+              tooltip: HighchartsTooltipOptions(
+                pointFormat: "{series.name}: <b>{point.percentage:.1f}%</b>",
+              ),
+              plotOptions: HighchartsPlotOptions(
+                pie: HighchartsPieSeriesOptions(
+                  allowPointSelect: true,
+                  cursor: "pointer",
+                  depth: 35,
+                  dataLabels: HighchartsPieSeriesDataLabelsOptions(
+                    enabled: true,
+                    format: "{point.name}",
                   ),
                 ),
-                title: TitleOptions(
-                    text: "Global smartphone shipments market share, Q1 2022", 
-                    align: "left", 
+              ),
+              series: [
+                HighchartsPieSeries(
+                  name: "Share",
+                  data: [
+                    ["Samsung", 23],
+                    ["Apple", 18],
+                    [],
+                    ["Oppo*", 9],
+                    ["Vivo", 8],
+                    ["Others", 30],
+                    ["Samsung", 23],
+                    ["Apple", 18],
+                    [],
+                    ["Oppo*", 9],
+                    ["Vivo", 8],
+                    ["Others", 30],
+                    ["Samsung", 23],
+                    ["Apple", 18],
+                    [],
+                    ["Oppo*", 9],
+                    ["Vivo", 8],
+                    ["Others", 30],
+                    ["Samsung", 23],
+                    ["Apple", 18],
+                    [],
+                    ["Oppo*", 9],
+                    ["Vivo", 8],
+                    ["Others", 30],
+                    ["Samsung", 23],
+                    ["Apple", 18],
+                    [],
+                    ["Oppo*", 9],
+                    ["Vivo", 8],
+                    ["Others", 30],
+                    ["Samsung", 23],
+                    ["Apple", 18],
+                    [],
+                    ["Oppo*", 9],
+                    ["Vivo", 8],
+                    ["Others", 30],
+                  ],
                 ),
-                subtitle: SubtitleOptions(
-                    text: "Source: <a href=\"https://www.counterpointresearch.com/global-smartphone-share/\"target=\"_blank\">Counterpoint Research</a>", 
-                    align: "left", 
-                ),
-                accessibility: AccessibilityOptions(
-                  point: AccessibilityPointOptions(
-                      valueSuffix: "%", 
-                  ),
-                ),
-                tooltip: TooltipOptions(
-                    pointFormat: "{series.name}: <b>{point.percentage:.1f}%</b>", 
-                ),
-                plotOptions: HighchartsPlotOptions(
-                  pie: PieSeriesOptions(
-                      allowPointSelect: true, 
-                      cursor: "pointer", 
-                      depth: 35, 
-                    dataLabels: [ 
-                      PieDataLabelOptions( 
-                          enabled: true, 
-                          format: "{point.name}", 
-                      ),
-                    ],
-                  ),
-                ),
-                series: [ 
-                  PieSeries( 
-                //options: PieSeriesOptions()
-                      name: "Share", 
-                    data: [ 
-                    [
-                      "Samsung", 23
-                    ],
-                    [
-                      "Apple", 18
-                    ],
-                    [
-                    ],
-                    [
-                      "Oppo*", 9
-                    ],
-                    [
-                      "Vivo", 8
-                    ],
-                    [
-                      "Others", 30
-                    ],
-                    [
-                      "Samsung", 23
-                    ],
-                    [
-                      "Apple", 18
-                    ],
-                    [
-                    ],
-                    [
-                      "Oppo*", 9
-                    ],
-                    [
-                      "Vivo", 8
-                    ],
-                    [
-                      "Others", 30
-                    ],
-                    [
-                      "Samsung", 23
-                    ],
-                    [
-                      "Apple", 18
-                    ],
-                    [
-                    ],
-                    [
-                      "Oppo*", 9
-                    ],
-                    [
-                      "Vivo", 8
-                    ],
-                    [
-                      "Others", 30
-                    ],
-                    [
-                      "Samsung", 23
-                    ],
-                    [
-                      "Apple", 18
-                    ],
-                    [
-                    ],
-                    [
-                      "Oppo*", 9
-                    ],
-                    [
-                      "Vivo", 8
-                    ],
-                    [
-                      "Others", 30
-                    ],
-                    [
-                      "Samsung", 23
-                    ],
-                    [
-                      "Apple", 18
-                    ],
-                    [
-                    ],
-                    [
-                      "Oppo*", 9
-                    ],
-                    [
-                      "Vivo", 8
-                    ],
-                    [
-                      "Others", 30
-                    ],
-                    [
-                      "Samsung", 23
-                    ],
-                    [
-                      "Apple", 18
-                    ],
-                    [
-                    ],
-                    [
-                      "Oppo*", 9
-                    ],
-                    [
-                      "Vivo", 8
-                    ],
-                    [
-                      "Others", 30
-                    ],
-                    ],
-                  ),
-                ],
-                xAxis: [ 
-                  XAxisOptions( 
-                  ),
-                ],
-                yAxis: [ 
-                  YAxisOptions( 
-                  ),
-                ],
-              )
-            )
+              ],
+            ))
           ],
         ),
       ),
     );
   }
 }
-
-

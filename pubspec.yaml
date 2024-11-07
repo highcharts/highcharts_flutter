@@ -12,8 +12,11 @@ dependencies:
     sdk: flutter
   provider: ^6.1.2
   webview_flutter: ^4.9.0
+  webview_flutter_android: ^3.16.9
+  webview_flutter_wkwebview: ^3.16.0
 
 dev_dependencies:
+  flutter_lints: ^3.0.2
   flutter_test:
     sdk: flutter
 

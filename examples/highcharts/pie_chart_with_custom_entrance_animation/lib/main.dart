@@ -1,22 +1,9 @@
-
-/** 
+/**
  * Highcharts Demo
  */
 
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/highcharts.dart';
-import 'package:highcharts_flutter/types/ChartOptions.dart';
-import 'package:highcharts_flutter/types/TitleOptions.dart';
-import 'package:highcharts_flutter/types/SubtitleOptions.dart';
-import 'package:highcharts_flutter/types/TooltipOptions.dart';
-import 'package:highcharts_flutter/types/AccessibilityOptions.dart';
-import 'package:highcharts_flutter/types/AccessibilityPointOptions.dart';
-import 'package:highcharts_flutter/types/HighchartsPlotOptions.dart';
-import 'package:highcharts_flutter/types/PieSeriesOptions.dart';
-import 'package:highcharts_flutter/types/PieDataLabelOptions.dart';
-import 'package:highcharts_flutter/types/PieSeries.dart';
-import 'package:highcharts_flutter/types/XAxisOptions.dart';
-import 'package:highcharts_flutter/types/YAxisOptions.dart';
 
 void main() {
   runApp(const MyApp());
@@ -59,113 +46,81 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            HighchartsChart(
-              HighchartsOptions(
-                chart: ChartOptions(
-                    type: "pie", 
+            HighchartsChart(HighchartsOptions(
+              chart: HighchartsChartOptions(
+                type: "pie",
+              ),
+              title: HighchartsTitleOptions(
+                text: "Departamental Strength of the Company",
+                align: "left",
+              ),
+              subtitle: HighchartsSubtitleOptions(
+                text: "Custom animation of pie series",
+                align: "left",
+              ),
+              tooltip: HighchartsTooltipOptions(
+                pointFormat: "{series.name}: <b>{point.percentage:.1f}%</b>",
+              ),
+              accessibility: HighchartsAccessibilityOptions(
+                point: HighchartsAccessibilityPointOptions(
+                  valueSuffix: "%",
                 ),
-                title: TitleOptions(
-                    text: "Departamental Strength of the Company", 
-                    align: "left", 
-                ),
-                subtitle: SubtitleOptions(
-                    text: "Custom animation of pie series", 
-                    align: "left", 
-                ),
-                tooltip: TooltipOptions(
-                    pointFormat: "{series.name}: <b>{point.percentage:.1f}%</b>", 
-                ),
-                accessibility: AccessibilityOptions(
-                  point: AccessibilityPointOptions(
-                      valueSuffix: "%", 
+              ),
+              plotOptions: HighchartsPlotOptions(
+                pie: HighchartsPieSeriesOptions(
+                  allowPointSelect: true,
+                  borderWidth: 2,
+                  cursor: "pointer",
+                  dataLabels: HighchartsPieSeriesDataLabelsOptions(
+                    enabled: true,
+                    format: "<b>{point.name}</b><br>{point.percentage}%",
                   ),
                 ),
-                plotOptions: HighchartsPlotOptions(
-                  pie: PieSeriesOptions(
-                      allowPointSelect: true, 
-                      borderWidth: 2, 
-                      cursor: "pointer", 
-                    dataLabels: [ 
-                      PieDataLabelOptions( 
-                          enabled: true, 
-                          format: "<b>{point.name}</b><br>{point.percentage}%", 
-                      ),
-                    ],
+              ),
+              series: [
+                HighchartsPieSeries(
+                  options: HighchartsPieSeriesOptions(
+                    enableMouseTracking: false,
                   ),
+                  data: [
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                  ],
                 ),
-                series: [ 
-                  PieSeries( 
-                //options: PieSeriesOptions()
-                      enableMouseTracking: false, 
-                    data: [ 
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    ],
-                  ),
-                ],
-                xAxis: [ 
-                  XAxisOptions( 
-                  ),
-                ],
-                yAxis: [ 
-                  YAxisOptions( 
-                  ),
-                ],
-              )
-            )
+              ],
+              xAxis: [
+                HighchartsXAxisOptions(),
+              ],
+              yAxis: [
+                HighchartsYAxisOptions(),
+              ],
+            ))
           ],
         ),
       ),
     );
   }
 }
-
-

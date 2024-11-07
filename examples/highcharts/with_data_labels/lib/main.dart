@@ -1,19 +1,9 @@
-
-/** 
+/**
  * Highcharts Demo
  */
 
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/highcharts.dart';
-import 'package:highcharts_flutter/types/ChartOptions.dart';
-import 'package:highcharts_flutter/types/TitleOptions.dart';
-import 'package:highcharts_flutter/types/SubtitleOptions.dart';
-import 'package:highcharts_flutter/types/XAxisOptions.dart';
-import 'package:highcharts_flutter/types/YAxisOptions.dart';
-import 'package:highcharts_flutter/types/HighchartsPlotOptions.dart';
-import 'package:highcharts_flutter/types/LineSeriesOptions.dart';
-import 'package:highcharts_flutter/types/DataLabelOptions.dart';
-import 'package:highcharts_flutter/types/LineSeries.dart';
 
 void main() {
   runApp(const MyApp());
@@ -56,80 +46,73 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            HighchartsChart(
-              HighchartsOptions(
-                chart: ChartOptions(
-                    type: "line", 
+            HighchartsChart(HighchartsOptions(
+              chart: HighchartsChartOptions(
+                type: "line",
+              ),
+              title: HighchartsTitleOptions(
+                text: "Monthly Average Temperature",
+              ),
+              subtitle: HighchartsSubtitleOptions(
+                text:
+                    "Source: <a href=\"https://en.wikipedia.org/wiki/List_of_cities_by_average_temperature\" target=\"_blank\">Wikipedia.com</a>",
+              ),
+              xAxis: [
+                HighchartsXAxisOptions(),
+              ],
+              yAxis: [
+                HighchartsYAxisOptions(),
+              ],
+              plotOptions: HighchartsPlotOptions(
+                line: HighchartsLineSeriesOptions(
+                  dataLabels: [
+                    HighchartsSeriesDataLabelsOptions(
+                      enabled: true,
+                    )
+                  ],
+                  enableMouseTracking: false,
                 ),
-                title: TitleOptions(
-                    text: "Monthly Average Temperature", 
+              ),
+              series: [
+                HighchartsLineSeries(
+                  name: "Reggane",
+                  data: [
+                    [16],
+                    [18.2],
+                    [23.1],
+                    [27.9],
+                    [32.2],
+                    [36.4],
+                    [39.8],
+                    [38.4],
+                    [35.5],
+                    [29.2],
+                    [22],
+                    [17.8],
+                  ],
                 ),
-                subtitle: SubtitleOptions(
-                    text: "Source: <a href=\"https://en.wikipedia.org/wiki/List_of_cities_by_average_temperature\" target=\"_blank\">Wikipedia.com</a>", 
+                HighchartsLineSeries(
+                  name: "Tallinn",
+                  data: [
+                    [-2.9],
+                    [-3.6],
+                    [-0.6],
+                    [4.8],
+                    [10.2],
+                    [14.5],
+                    [17.6],
+                    [16.5],
+                    [12],
+                    [6.5],
+                    [2],
+                    [-0.9],
+                  ],
                 ),
-                xAxis: [ 
-                  XAxisOptions( 
-                  ),
-                ],
-                yAxis: [ 
-                  YAxisOptions( 
-                  ),
-                ],
-                plotOptions: HighchartsPlotOptions(
-                  line: LineSeriesOptions(
-                    dataLabels: [ 
-                      DataLabelOptions( 
-                          enabled: true, 
-                      ),
-                    ],
-                      enableMouseTracking: false, 
-                  ),
-                ),
-                series: [ 
-                  LineSeries( 
-                //options: LineSeriesOptions()
-                      name: "Reggane", 
-                    data: [ 
-                      [16], 
-                      [18.2], 
-                      [23.1], 
-                      [27.9], 
-                      [32.2], 
-                      [36.4], 
-                      [39.8], 
-                      [38.4], 
-                      [35.5], 
-                      [29.2], 
-                      [22], 
-                      [17.8], 
-                    ],
-                  ),
-                  LineSeries( 
-                //options: LineSeriesOptions()
-                      name: "Tallinn", 
-                    data: [ 
-                      [-2.9], 
-                      [-3.6], 
-                      [-0.6], 
-                      [4.8], 
-                      [10.2], 
-                      [14.5], 
-                      [17.6], 
-                      [16.5], 
-                      [12], 
-                      [6.5], 
-                      [2], 
-                      [-0.9], 
-                    ],
-                  ),
-                ],
-              )
-            )
+              ],
+            ))
           ],
         ),
       ),
     );
   }
 }
-
-

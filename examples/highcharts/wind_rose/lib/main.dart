@@ -1,22 +1,10 @@
 
-/** 
+/**
  * Highcharts Demo
  */
 
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/highcharts.dart';
-import 'package:highcharts_flutter/types/DataOptions.dart';
-import 'package:highcharts_flutter/types/HTMLTableElement.dart';
-import 'package:highcharts_flutter/types/ChartOptions.dart';
-import 'package:highcharts_flutter/types/TitleOptions.dart';
-import 'package:highcharts_flutter/types/SubtitleOptions.dart';
-import 'package:highcharts_flutter/types/LegendOptions.dart';
-import 'package:highcharts_flutter/types/XAxisOptions.dart';
-import 'package:highcharts_flutter/types/YAxisOptions.dart';
-import 'package:highcharts_flutter/types/TooltipOptions.dart';
-import 'package:highcharts_flutter/types/HighchartsPlotOptions.dart';
-import 'package:highcharts_flutter/types/SeriesOptions.dart';
-import 'package:highcharts_flutter/types/Generic.dart';
 
 void main() {
   runApp(const MyApp());
@@ -61,46 +49,45 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             HighchartsChart(
               HighchartsOptions(
-                data: DataOptions(
-                    table: "freq", 
-                    startRow: 1, 
-                    endRow: 17, 
-                    endColumn: 7, 
+                data: HighchartsDataOptions(
+                    table: "freq",
+                    startRow: 1,
+                    endRow: 17,
+                    endColumn: 7,
                 ),
-                chart: ChartOptions(
-                    polar: true, 
-                    type: "column", 
+                chart: HighchartsChartOptions(
+                    polar: true,
+                    type: "column",
                 ),
-                title: TitleOptions(
-                    text: "Wind rose for South Shore Met Station, Oregon", 
-                    align: "left", 
+                title: HighchartsTitleOptions(
+                    text: "Wind rose for South Shore Met Station, Oregon",
+                    align: "left",
                 ),
-                subtitle: SubtitleOptions(
-                    text: "Source: or.water.usgs.gov", 
-                    align: "left", 
+                subtitle: HighchartsSubtitleOptions(
+                    text: "Source: or.water.usgs.gov",
+                    align: "left",
                 ),
-                legend: LegendOptions(
-                    align: "right", 
-                    verticalAlign: "top", 
-                    y: 100, 
-                    layout: "vertical", 
+                legend: HighchartsLegendOptions(
+                    align: "right",
+                    verticalAlign: "top",
+                    y: 100,
+                    layout: "vertical",
                 ),
-                xAxis: [ 
-                  XAxisOptions( 
+                xAxis: [
+                  HighchartsXAxisOptions(
                   ),
                 ],
-                yAxis: [ 
-                  YAxisOptions( 
+                yAxis: [
+                  HighchartsYAxisOptions(
                   ),
                 ],
-                tooltip: TooltipOptions(
-                    valueSuffix: "%", 
+                tooltip: HighchartsTooltipOptions(
+                    valueSuffix: "%",
                 ),
                 plotOptions: HighchartsPlotOptions(
-                  series: SeriesOptions(
-                      stacking: "normal", 
-                      shadow: false, 
-                      pointPlacement: "on", 
+                  series: HighchartsSeriesOptions(
+                      stacking: "normal",
+                      pointPlacement: "on",
                   ),
                 ),
               )

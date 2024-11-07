@@ -1,20 +1,10 @@
 
-/** 
+/**
  * Highcharts Demo
  */
 
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/highcharts.dart';
-import 'package:highcharts_flutter/types/ChartOptions.dart';
-import 'package:highcharts_flutter/types/TitleOptions.dart';
-import 'package:highcharts_flutter/types/SubtitleOptions.dart';
-import 'package:highcharts_flutter/types/TooltipOptions.dart';
-import 'package:highcharts_flutter/types/XAxisOptions.dart';
-import 'package:highcharts_flutter/types/YAxisOptions.dart';
-import 'package:highcharts_flutter/types/HighchartsPlotOptions.dart';
-import 'package:highcharts_flutter/types/ColumnSeriesOptions.dart';
-import 'package:highcharts_flutter/types/BorderRadiusOptionsObject.dart';
-import 'package:highcharts_flutter/types/ColumnSeries.dart';
 
 void main() {
   runApp(const MyApp());
@@ -59,70 +49,58 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             HighchartsChart(
               HighchartsOptions(
-                chart: ChartOptions(
-                    type: "column", 
-                    inverted: true, 
-                    polar: true, 
+                chart: HighchartsChartOptions(
+                  type: "column",
+                  inverted: true,
+                  polar: true,
                 ),
-                title: TitleOptions(
-                    text: "Winter Olympic medals per existing country (TOP 5)", 
-                    align: "left", 
+                title: HighchartsTitleOptions(
+                  text: "Winter Olympic medals per existing country (TOP 5)",
+                  align: "left",
                 ),
-                subtitle: SubtitleOptions(
-                    text: "Source: <a href=\"https://en.wikipedia.org/wiki/All-time_Olympic_Games_medal_table\"target=\"_blank\">Wikipedia</a>", 
-                    align: "left", 
+                subtitle: HighchartsSubtitleOptions(
+                  text: "Source: <a href=\"https://en.wikipedia.org/wiki/All-time_Olympic_Games_medal_table\"target=\"_blank\">Wikipedia</a>",
+                  align: "left",
                 ),
-                tooltip: TooltipOptions(
-                    outside: true, 
+                tooltip: HighchartsTooltipOptions(
+                  outside: true,
                 ),
-                xAxis: [ 
-                  XAxisOptions( 
-                  ),
-                ],
-                yAxis: [ 
-                  YAxisOptions( 
-                  ),
-                ],
                 plotOptions: HighchartsPlotOptions(
-                  column: ColumnSeriesOptions(
-                      stacking: "normal", 
-                      borderWidth: 0, 
-                      pointPadding: 0, 
-                     borderRadius: BorderRadiusOptionsObject(),
+                  column: HighchartsColumnSeriesOptions(
+                    stacking: "normal",
+                    borderWidth: 0,
+                    pointPadding: 0,
                   ),
                 ),
-                series: [ 
-                  ColumnSeries( 
-                //options: ColumnSeriesOptions()
-                      name: "Gold medals", 
-                    data: [ 
-                      [148], 
-                      [113], 
-                      [104], 
-                      [71], 
-                      [77], 
+                series: [
+                  HighchartsColumnSeries(
+                    name: "Gold medals",
+                    data: [
+                      [148],
+                      [113],
+                      [104],
+                      [71],
+                      [77],
                     ],
                   ),
-                  ColumnSeries( 
-                //options: ColumnSeriesOptions()
-                      name: "Silver medals", 
-                    data: [ 
-                      [113], 
-                      [122], 
-                      [98], 
-                      [88], 
-                      [72], 
+                  HighchartsColumnSeries(
+                    name: "Silver medals",
+                    data: [
+                      [113],
+                      [122],
+                      [98],
+                      [88],
+                      [72],
                     ],
                   ),
-                  ColumnSeries( 
-                //options: ColumnSeriesOptions()
-                      name: "Bronze medals", 
-                    data: [ 
-                      [124], 
-                      [95], 
-                      [65], 
-                      [91], 
-                      [76], 
+                  HighchartsColumnSeries(
+                    name: "Bronze medals",
+                    data: [
+                      [124],
+                      [95],
+                      [65],
+                      [91],
+                      [76],
                     ],
                   ),
                 ],

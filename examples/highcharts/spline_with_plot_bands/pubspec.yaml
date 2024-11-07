@@ -1,7 +1,7 @@
 
 name: spline_with_plot_bands
 description: Spline with plot bands
-publish_to: 'none' 
+publish_to: 'none'
 
 version: 1.0.0+1
 

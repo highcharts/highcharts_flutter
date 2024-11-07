@@ -1,18 +1,10 @@
 
-/** 
+/**
  * Highcharts Demo
  */
 
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/highcharts.dart';
-import 'package:highcharts_flutter/types/AccessibilityOptions.dart';
-import 'package:highcharts_flutter/types/AccessibilityPointOptions.dart';
-import 'package:highcharts_flutter/types/VennSeriesOptions.dart';
-import 'package:highcharts_flutter/types/VennSeries.dart';
-import 'package:highcharts_flutter/types/VennPointOptions.dart';
-import 'package:highcharts_flutter/types/TitleOptions.dart';
-import 'package:highcharts_flutter/types/XAxisOptions.dart';
-import 'package:highcharts_flutter/types/YAxisOptions.dart';
 
 void main() {
   runApp(const MyApp());
@@ -57,33 +49,24 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             HighchartsChart(
               HighchartsOptions(
-                accessibility: AccessibilityOptions(
-                  point: AccessibilityPointOptions(
-                      descriptionFormat: "{add index 1}. Intersection: {sets}. {#if (gt sets.length 1)}{name}. {/if}Value {value}", 
+                accessibility: HighchartsAccessibilityOptions(
+                  point: HighchartsAccessibilityPointOptions(
+                      descriptionFormat: "{add index 1}. Intersection: {sets}. {#if (gt sets.length 1)}{name}. {/if}Value {value}",
                   ),
                 ),
-                series: [ 
-                  VennSeries( 
-                //options: VennSeriesOptions()
-                      name: "The Unattainable Triangle", 
-                    data: [ 
+                series: [
+                  HighchartsVennSeries(
+                    name: "The Unattainable Triangle",
+                    data: [
                     [
                       false, false, false, false, false, false, false
                     ],
                     ],
                   ),
                 ],
-                title: TitleOptions(
-                    text: "The Unattainable Triangle", 
+                title: HighchartsTitleOptions(
+                    text: "The Unattainable Triangle",
                 ),
-                xAxis: [ 
-                  XAxisOptions( 
-                  ),
-                ],
-                yAxis: [ 
-                  YAxisOptions( 
-                  ),
-                ],
               )
             )
           ],

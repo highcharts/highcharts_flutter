@@ -1,0 +1,78 @@
+/**
+ * Highcharts Flutter Integration
+ * 
+ * Copyright (c), Highsoft AS 2023-2024
+ * 
+ * sales@highcharts.com
+ * support@highcharts.com
+ * 
+ * The use of this software requires a valid license.
+ * 
+ * See https://highcharts.com/license
+ * 
+ *
+ * Built for Highcharts v.xx.
+ * Build stamp: 2024-10-31
+ *
+ */
+
+
+/* *
+ *
+ *  Imports
+ *
+ * */
+
+
+import 'dart:convert';
+import 'highcharts_options_base.dart';
+
+
+/* *
+ *
+ *  Exports
+ *
+ * */
+
+
+
+
+/* *
+ *
+ *  Classes
+ *
+ * */
+
+
+/**
+ * CSS styles for the title. Use this for font styling, but use `align`,
+ * `x` and `y` for text alignment.
+ * 
+ * In styled mode, the title style is given in the `.highcharts-title`
+ * class.
+ */
+class HighchartsTitleStyleOptions extends HighchartsOptionsBase {
+
+  String? color;
+  String? fontWeight;
+
+
+  HighchartsTitleStyleOptions({
+    this.color,
+    this.fontWeight
+  });
+
+  @override
+  void toOptionsJSON(StringBuffer buffer) {
+    super.toOptionsJSON(buffer);
+
+
+    if (color != null) {
+      buffer.writeAll(['"color": ', jsonEncode(color), ','], "");
+    }
+    if (fontWeight != null) {
+      buffer.writeAll(['"fontWeight": ', jsonEncode(fontWeight), ','], "");
+    }
+  }
+
+}

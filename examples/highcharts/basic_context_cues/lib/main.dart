@@ -1,17 +1,9 @@
-
-/** 
+/**
  * Highcharts Demo
  */
 
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/highcharts.dart';
-import 'package:highcharts_flutter/types/TitleOptions.dart';
-import 'package:highcharts_flutter/types/YAxisOptions.dart';
-import 'package:highcharts_flutter/types/XAxisOptions.dart';
-import 'package:highcharts_flutter/types/LegendOptions.dart';
-import 'package:highcharts_flutter/types/TooltipOptions.dart';
-import 'package:highcharts_flutter/types/LineSeriesOptions.dart';
-import 'package:highcharts_flutter/types/LineSeries.dart';
 
 void main() {
   runApp(const MyApp());
@@ -56,47 +48,40 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             HighchartsChart(
               HighchartsOptions(
-                title: TitleOptions(
-                    text: "Helsinki Average Monthly Temperature", 
-                    align: "left", 
-                    margin: 25, 
+                title: HighchartsTitleOptions(
+                  text: "Helsinki Average Monthly Temperature",
+                  align: "left",
+                  margin: 25,
                 ),
-                yAxis: [ 
-                  YAxisOptions( 
-                  ),
-                ],
-                xAxis: [ 
-                  XAxisOptions( 
-                  ),
-                ],
-                legend: LegendOptions(
-                    enabled: false, 
+                legend: HighchartsLegendOptions(
+                  enabled: false,
                 ),
-                tooltip: TooltipOptions(
-                    valueSuffix: "°C", 
+                tooltip: HighchartsTooltipOptions(
+                  valueSuffix: "°C",
                 ),
-                series: [ 
-                  LineSeries( 
-                //options: LineSeriesOptions()
-                      name: "Helsinki", 
-                    data: [ 
-                      [-5], 
-                      [-6], 
-                      [-2], 
-                      [4], 
-                      [10], 
-                      [14], 
-                      [17], 
-                      [15], 
-                      [10], 
-                      [6], 
-                      [0], 
-                      [-4], 
+                series: [
+                  HighchartsLineSeries(
+                    name: "Helsinki",
+                    options: HighchartsLineSeriesOptions(
+                      color: "#2F2D2E",
+                    ),
+                    data: [
+                      [-5],
+                      [-6],
+                      [-2],
+                      [4],
+                      [10],
+                      [14],
+                      [17],
+                      [15],
+                      [10],
+                      [6],
+                      [0],
+                      [-4],
                     ],
-                      color: "#2F2D2E", 
                   ),
                 ],
-              )
+              ),
             )
           ],
         ),
@@ -104,5 +89,3 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
-
-

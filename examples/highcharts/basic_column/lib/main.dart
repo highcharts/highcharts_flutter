@@ -1,19 +1,10 @@
 
-/** 
+/**
  * Highcharts Demo
  */
 
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/highcharts.dart';
-import 'package:highcharts_flutter/types/ChartOptions.dart';
-import 'package:highcharts_flutter/types/TitleOptions.dart';
-import 'package:highcharts_flutter/types/SubtitleOptions.dart';
-import 'package:highcharts_flutter/types/XAxisOptions.dart';
-import 'package:highcharts_flutter/types/YAxisOptions.dart';
-import 'package:highcharts_flutter/types/TooltipOptions.dart';
-import 'package:highcharts_flutter/types/HighchartsPlotOptions.dart';
-import 'package:highcharts_flutter/types/ColumnSeriesOptions.dart';
-import 'package:highcharts_flutter/types/ColumnSeries.dart';
 
 void main() {
   runApp(const MyApp());
@@ -58,57 +49,57 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             HighchartsChart(
               HighchartsOptions(
-                chart: ChartOptions(
-                    type: "column", 
+                chart: HighchartsChartOptions(
+                    type: "column",
                 ),
-                title: TitleOptions(
-                    text: "Corn vs wheat estimated production for 2020", 
-                    align: "left", 
+                title: HighchartsTitleOptions(
+                    text: "Corn vs wheat estimated production for 2020",
+                    align: "left",
                 ),
-                subtitle: SubtitleOptions(
-                    text: "Source: <a target=\"_blank\" href=\"https://www.indexmundi.com/agriculture/?commodity=corn\">indexmundi</a>", 
-                    align: "left", 
+                subtitle: HighchartsSubtitleOptions(
+                    text: "Source: <a target=\"_blank\" href=\"https://www.indexmundi.com/agriculture/?commodity=corn\">indexmundi</a>",
+                    align: "left",
                 ),
-                xAxis: [ 
-                  XAxisOptions( 
+                xAxis: [
+                  HighchartsXAxisOptions(
                   ),
                 ],
-                yAxis: [ 
-                  YAxisOptions( 
+                yAxis: [
+                  HighchartsYAxisOptions(
                   ),
                 ],
-                tooltip: TooltipOptions(
-                    valueSuffix: " (1000 MT)", 
+                tooltip: HighchartsTooltipOptions(
+                    valueSuffix: " (1000 MT)",
                 ),
                 plotOptions: HighchartsPlotOptions(
-                  column: ColumnSeriesOptions(
-                      pointPadding: 0.2, 
-                      borderWidth: 0, 
+                  column: HighchartsColumnSeriesOptions(
+                      pointPadding: 0.2,
+                      borderWidth: 0,
                   ),
                 ),
-                series: [ 
-                  ColumnSeries( 
-                //options: ColumnSeriesOptions()
-                      name: "Corn", 
-                    data: [ 
-                      [406292], 
-                      [260000], 
-                      [107000], 
-                      [68300], 
-                      [27500], 
-                      [14500], 
+                series: [
+                  HighchartsColumnSeries(
+                    options: HighchartsColumnSeriesOptions(),
+                      name: "Corn",
+                    data: [
+                      [406292],
+                      [260000],
+                      [107000],
+                      [68300],
+                      [27500],
+                      [14500],
                     ],
                   ),
-                  ColumnSeries( 
-                //options: ColumnSeriesOptions()
-                      name: "Wheat", 
-                    data: [ 
-                      [51086], 
-                      [136000], 
-                      [5500], 
-                      [141000], 
-                      [107180], 
-                      [77000], 
+                  HighchartsColumnSeries(
+                    options: HighchartsColumnSeriesOptions(),
+                      name: "Wheat",
+                    data: [
+                      [51086],
+                      [136000],
+                      [5500],
+                      [141000],
+                      [107180],
+                      [77000],
                     ],
                   ),
                 ],

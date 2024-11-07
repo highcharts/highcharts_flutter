@@ -1,16 +1,9 @@
-
-/** 
+/**
  * Highcharts Demo
  */
 
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/highcharts.dart';
-import 'package:highcharts_flutter/types/TitleOptions.dart';
-import 'package:highcharts_flutter/types/XAxisOptions.dart';
-import 'package:highcharts_flutter/types/YAxisOptions.dart';
-import 'package:highcharts_flutter/types/TooltipOptions.dart';
-import 'package:highcharts_flutter/types/LineSeriesOptions.dart';
-import 'package:highcharts_flutter/types/LineSeries.dart';
 
 void main() {
   runApp(const MyApp());
@@ -53,48 +46,37 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            HighchartsChart(
-              HighchartsOptions(
-                title: TitleOptions(
-                    text: "Logarithmic axis demo", 
+            HighchartsChart(HighchartsOptions(
+              title: HighchartsTitleOptions(
+                text: "Logarithmic axis demo",
+              ),
+              tooltip: HighchartsTooltipOptions(
+                headerFormat: "<b>{series.name}</b><br />",
+                pointFormat: "x = {point.x}, y = {point.y}",
+              ),
+              series: [
+                HighchartsLineSeries(
+                  options: HighchartsLineSeriesOptions(
+                    pointStart: 1,
+                  ),
+                  data: [
+                    [1],
+                    [2],
+                    [4],
+                    [8],
+                    [16],
+                    [32],
+                    [64],
+                    [128],
+                    [256],
+                    [512],
+                  ],
                 ),
-                xAxis: [ 
-                  XAxisOptions( 
-                  ),
-                ],
-                yAxis: [ 
-                  YAxisOptions( 
-                  ),
-                ],
-                tooltip: TooltipOptions(
-                    headerFormat: "<b>{series.name}</b><br />", 
-                    pointFormat: "x = {point.x}, y = {point.y}", 
-                ),
-                series: [ 
-                  LineSeries( 
-                //options: LineSeriesOptions()
-                    data: [ 
-                      [1], 
-                      [2], 
-                      [4], 
-                      [8], 
-                      [16], 
-                      [32], 
-                      [64], 
-                      [128], 
-                      [256], 
-                      [512], 
-                    ],
-                      pointStart: 1, 
-                  ),
-                ],
-              )
-            )
+              ],
+            ))
           ],
         ),
       ),
     );
   }
 }
-
-

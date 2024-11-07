@@ -1,21 +1,10 @@
 
-/** 
+/**
  * Highcharts Demo
  */
 
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/highcharts.dart';
-import 'package:highcharts_flutter/types/ChartOptions.dart';
-import 'package:highcharts_flutter/types/AccessibilityOptions.dart';
-import 'package:highcharts_flutter/types/AccessibilityPointOptions.dart';
-import 'package:highcharts_flutter/types/LegendOptions.dart';
-import 'package:highcharts_flutter/types/SubtitleOptions.dart';
-import 'package:highcharts_flutter/types/TitleOptions.dart';
-import 'package:highcharts_flutter/types/TooltipOptions.dart';
-import 'package:highcharts_flutter/types/XAxisOptions.dart';
-import 'package:highcharts_flutter/types/YAxisOptions.dart';
-import 'package:highcharts_flutter/types/LollipopSeriesOptions.dart';
-import 'package:highcharts_flutter/types/LollipopSeries.dart';
 
 void main() {
   runApp(const MyApp());
@@ -60,39 +49,39 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             HighchartsChart(
               HighchartsOptions(
-                chart: ChartOptions(
-                    type: "lollipop", 
+                chart: HighchartsChartOptions(
+                    type: "lollipop",
                 ),
-                accessibility: AccessibilityOptions(
-                  point: AccessibilityPointOptions(
-                      valueDescriptionFormat: "{index}. {xDescription}, {point.y}.", 
+                accessibility: HighchartsAccessibilityOptions(
+                  point: HighchartsAccessibilityPointOptions(
+                      valueDescriptionFormat: "{index}. {xDescription}, {point.y}.",
                   ),
                 ),
-                legend: LegendOptions(
-                    enabled: false, 
+                legend: HighchartsLegendOptions(
+                    enabled: false,
                 ),
-                subtitle: SubtitleOptions(
-                    text: "2021", 
+                subtitle: HighchartsSubtitleOptions(
+                    text: "2021",
                 ),
-                title: TitleOptions(
-                    text: "Top 10 Countries by Population", 
+                title: HighchartsTitleOptions(
+                    text: "Top 10 Countries by Population",
                 ),
-                tooltip: TooltipOptions(
-                    shared: true, 
+                tooltip: HighchartsTooltipOptions(
+                    shared: true,
                 ),
-                xAxis: [ 
-                  XAxisOptions( 
-                  ),
-                ],
-                yAxis: [ 
-                  YAxisOptions( 
+                xAxis: [
+                  HighchartsXAxisOptions(
                   ),
                 ],
-                series: [ 
-                  LollipopSeries( 
-                //options: LollipopSeriesOptions()
-                      name: "Population", 
-                    data: [ 
+                yAxis: [
+                  HighchartsYAxisOptions(
+                  ),
+                ],
+                series: [
+                  HighchartsLollipopSeries(
+                    options: HighchartsLollipopSeriesOptions(),
+                      name: "Population",
+                    data: [
                     [
                     ],
                     [
