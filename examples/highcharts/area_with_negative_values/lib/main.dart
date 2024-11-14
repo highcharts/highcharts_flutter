@@ -1,18 +1,10 @@
 
-/** 
+/**
  * Highcharts Demo
  */
 
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/highcharts.dart';
-import 'package:highcharts_flutter/types/ChartOptions.dart';
-import 'package:highcharts_flutter/types/TitleOptions.dart';
-import 'package:highcharts_flutter/types/SubtitleOptions.dart';
-import 'package:highcharts_flutter/types/XAxisOptions.dart';
-import 'package:highcharts_flutter/types/YAxisOptions.dart';
-import 'package:highcharts_flutter/types/CreditsOptions.dart';
-import 'package:highcharts_flutter/types/AreaSeriesOptions.dart';
-import 'package:highcharts_flutter/types/AreaSeries.dart';
 
 void main() {
   runApp(const MyApp());
@@ -57,78 +49,78 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             HighchartsChart(
               HighchartsOptions(
-                chart: ChartOptions(
-                    type: "area", 
+                chart: HighchartsChartOptions(
+                    type: "area",
                 ),
-                title: TitleOptions(
-                    text: "Production, consumption and trade surplus of electrical power", 
-                    align: "left", 
+                title: HighchartsTitleOptions(
+                    text: "Production, consumption and trade surplus of electrical power",
+                    align: "left",
                 ),
-                subtitle: SubtitleOptions(
-                    text: "Source: <a href=\"https://www.ssb.no/energi-og-industri/energi/statistikk/elektrisitet/artikler/lavere-kraftproduksjon\" target=\"_blank\">SSB</a>", 
-                    align: "left", 
+                subtitle: HighchartsSubtitleOptions(
+                    text: "Source: <a href=\"https://www.ssb.no/energi-og-industri/energi/statistikk/elektrisitet/artikler/lavere-kraftproduksjon\" target=\"_blank\">SSB</a>",
+                    align: "left",
                 ),
-                xAxis: [ 
-                  XAxisOptions( 
+                xAxis: [
+                  HighchartsXAxisOptions(
                   ),
                 ],
-                yAxis: [ 
-                  YAxisOptions( 
+                yAxis: [
+                  HighchartsYAxisOptions(
                   ),
                 ],
-                credits: CreditsOptions(
-                    enabled: false, 
+                credits: HighchartsCreditsOptions(
+                    enabled: false,
                 ),
-                series: [ 
-                  AreaSeries( 
-                //options: AreaSeriesOptions()
-                      name: "Total production", 
-                    data: [ 
-                      [37.8], 
-                      [29.3], 
-                      [30.8], 
-                      [36.8], 
-                      [40.5], 
-                      [35.3], 
-                      [34.9], 
-                      [43.6], 
-                      [45.7], 
-                      [35.9], 
-                      [32.7], 
+                series: [
+                  HighchartsAreaSeries(
+                    options: HighchartsAreaSeriesOptions(),
+                      name: "Total production",
+                    data: [
+                      [37.8],
+                      [29.3],
+                      [30.8],
+                      [36.8],
+                      [40.5],
+                      [35.3],
+                      [34.9],
+                      [43.6],
+                      [45.7],
+                      [35.9],
+                      [32.7],
                     ],
                   ),
-                  AreaSeries( 
-                //options: AreaSeriesOptions()
-                      name: "Gross consumption", 
-                    data: [ 
-                      [39.9], 
-                      [29.9], 
-                      [26.7], 
-                      [38.1], 
-                      [39.3], 
-                      [30.2], 
-                      [27.5], 
-                      [36.7], 
-                      [42.7], 
-                      [31.4], 
-                      [27.5], 
+                  HighchartsAreaSeries(
+                    options: HighchartsAreaSeriesOptions(),
+                      name: "Gross consumption",
+                    data: [
+                      [39.9],
+                      [29.9],
+                      [26.7],
+                      [38.1],
+                      [39.3],
+                      [30.2],
+                      [27.5],
+                      [36.7],
+                      [42.7],
+                      [31.4],
+                      [27.5],
                     ],
                   ),
-                  AreaSeries( 
-                //options: AreaSeriesOptions()
-                      name: "Trade surplus", 
-                    data: [ 
-                      [-2.2], 
-                      [-0.6], 
-                      [4.1], 
-                      [-1.3], 
-                      [1.2], 
-                      [5.1], 
-                      [7.4], 
-                      [6.9], 
-                      [2.9], 
-                      [4.5], 
-                      [5.2], 
+                  HighchartsAreaSeries(
+                    options: HighchartsAreaSeriesOptions(),
+                      name: "Trade surplus",
+                    data: [
+                      [-2.2],
+                      [-0.6],
+                      [4.1],
+                      [-1.3],
+                      [1.2],
+                      [5.1],
+                      [7.4],
+                      [6.9],
+                      [2.9],
+                      [4.5],
+                      [5.2],
                     ],
                   ),
                 ],

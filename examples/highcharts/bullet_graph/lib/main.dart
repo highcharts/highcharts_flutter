@@ -1,17 +1,10 @@
 
-/** 
+/**
  * Highcharts Demo
  */
 
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/highcharts.dart';
-import 'package:highcharts_flutter/types/ChartOptions.dart';
-import 'package:highcharts_flutter/types/TitleOptions.dart';
-import 'package:highcharts_flutter/types/XAxisOptions.dart';
-import 'package:highcharts_flutter/types/YAxisOptions.dart';
-import 'package:highcharts_flutter/types/LineSeriesOptions.dart';
-import 'package:highcharts_flutter/types/LineSeries.dart';
-import 'package:highcharts_flutter/types/TooltipOptions.dart';
 
 void main() {
   runApp(const MyApp());
@@ -56,31 +49,31 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             HighchartsChart(
               HighchartsOptions(
-                chart: ChartOptions(
-                    marginTop: 40, 
+                chart: HighchartsChartOptions(
+                    marginTop: 40,
                 ),
-                title: TitleOptions(
-                    text: "2017 YTD", 
+                title: HighchartsTitleOptions(
+                    text: "2017 YTD",
                 ),
-                xAxis: [ 
-                  XAxisOptions( 
+                xAxis: [
+                  HighchartsXAxisOptions(
                   ),
                 ],
-                yAxis: [ 
-                  YAxisOptions( 
+                yAxis: [
+                  HighchartsYAxisOptions(
                   ),
                 ],
-                series: [ 
-                  LineSeries( 
-                //options: LineSeriesOptions()
-                    data: [ 
+                series: [
+                  HighchartsLineSeries(
+                    options: HighchartsLineSeriesOptions(),
+                    data: [
                     [
                     ],
                     ],
                   ),
                 ],
-                tooltip: TooltipOptions(
-                    pointFormat: "<b>{point.y}</b> (with target at {point.target})", 
+                tooltip: HighchartsTooltipOptions(
+                    pointFormat: "<b>{point.y}</b> (with target at {point.target})",
                 ),
               )
             )

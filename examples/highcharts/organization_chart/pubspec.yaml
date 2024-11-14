@@ -1,7 +1,7 @@
 
 name: organization_chart
 description: Organization chart
-publish_to: 'none' 
+publish_to: 'none'
 
 version: 1.0.0+1
 

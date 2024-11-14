@@ -1,25 +1,9 @@
-
-/** 
+/**
  * Highcharts Demo
  */
 
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/highcharts.dart';
-import 'package:highcharts_flutter/types/ChartOptions.dart';
-import 'package:highcharts_flutter/types/TitleOptions.dart';
-import 'package:highcharts_flutter/types/AccessibilityOptions.dart';
-import 'package:highcharts_flutter/types/AccessibilityScreenReaderSectionOptions.dart';
-import 'package:highcharts_flutter/types/AccessibilityPointOptions.dart';
-import 'package:highcharts_flutter/types/AccessibilitySeriesOptions.dart';
-import 'package:highcharts_flutter/types/XAxisOptions.dart';
-import 'package:highcharts_flutter/types/YAxisOptions.dart';
-import 'package:highcharts_flutter/types/LegendOptions.dart';
-import 'package:highcharts_flutter/types/TooltipOptions.dart';
-import 'package:highcharts_flutter/types/HighchartsPlotOptions.dart';
-import 'package:highcharts_flutter/types/SeriesOptions.dart';
-import 'package:highcharts_flutter/types/DataLabelOptions.dart';
-import 'package:highcharts_flutter/types/PictorialSeriesOptions.dart';
-import 'package:highcharts_flutter/types/PictorialSeries.dart';
 
 void main() {
   runApp(const MyApp());
@@ -62,107 +46,103 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            HighchartsChart(
-              HighchartsOptions(
-                chart: ChartOptions(
-                    type: "pictorial", 
+            HighchartsChart(HighchartsOptions(
+              chart: HighchartsChartOptions(
+                type: "pictorial",
+              ),
+              title: HighchartsTitleOptions(
+                text: "Composition of the human body",
+              ),
+              accessibility: HighchartsAccessibilityOptions(
+                screenReaderSection:
+                    HighchartsAccessibilityScreenReaderSectionOptions(
+                  beforeChartFormat:
+                      "<{headingTagName}>{chartTitle}</{headingTagName}><p>{typeDescription}</p><p>{chartLongdesc}</p>",
                 ),
-                title: TitleOptions(
-                    text: "Composition of the human body", 
+                point: HighchartsAccessibilityPointOptions(
+                  valueDescriptionFormat: "{value}.",
                 ),
-                accessibility: AccessibilityOptions(
-                  screenReaderSection: AccessibilityScreenReaderSectionOptions(
-                      beforeChartFormat: "<{headingTagName}>{chartTitle}</{headingTagName}><p>{typeDescription}</p><p>{chartLongdesc}</p>", 
-                  ),
-                  point: AccessibilityPointOptions(
-                      valueDescriptionFormat: "{value}.", 
-                  ),
-                  series: AccessibilitySeriesOptions(
-                      descriptionFormat: "", 
-                  ),
-                    landmarkVerbosity: "one", 
+                series: HighchartsAccessibilitySeriesOptions(
+                  descriptionFormat: "",
                 ),
-                xAxis: [ 
-                  XAxisOptions( 
-                  ),
-                ],
-                yAxis: [ 
-                  YAxisOptions( 
-                  ),
-                ],
-                legend: LegendOptions(
-                    itemMarginTop: 15, 
-                    itemMarginBottom: 15, 
-                    layout: "vertical", 
-                    padding: 0, 
-                    verticalAlign: "middle", 
-                    align: "center", 
-                    margin: 0, 
+                landmarkVerbosity: "one",
+              ),
+              xAxis: [
+                HighchartsXAxisOptions(),
+              ],
+              yAxis: [
+                HighchartsYAxisOptions(),
+              ],
+              legend: HighchartsLegendOptions(
+                itemMarginTop: 15,
+                itemMarginBottom: 15,
+                layout: "vertical",
+                padding: 0,
+                verticalAlign: "middle",
+                align: "center",
+                margin: 0,
+              ),
+              tooltip: HighchartsTooltipOptions(
+                headerFormat: "",
+              ),
+              plotOptions: HighchartsPlotOptions(
+                series: HighchartsSeriesOptions(
+                  dataLabels: [
+                    HighchartsSeriesDataLabelsOptions(
+                      enabled: true,
+                      align: "center",
+                      format: "{y} %",
+                    ),
+                  ],
+                  stacking: "normal",
                 ),
-                tooltip: TooltipOptions(
-                    headerFormat: "", 
+              ),
+              series: [
+                HighchartsPictorialSeries(
+                  options: HighchartsPictorialSeriesOptions(),
+                  name: "Other",
+                  data: [
+                    [25],
+                    [25],
+                  ],
                 ),
-                plotOptions: HighchartsPlotOptions(
-                  series: SeriesOptions(
-                    dataLabels: [ 
-                      DataLabelOptions( 
-                          enabled: true, 
-                          align: "center", 
-                          format: "{y} %", 
-                      ),
-                    ],
-                      stacking: "normal", 
-                  ),
+                HighchartsPictorialSeries(
+                  options: HighchartsPictorialSeriesOptions(),
+                  name: "Essential Fat",
+                  data: [
+                    [12],
+                    [3],
+                  ],
                 ),
-                series: [ 
-                  PictorialSeries( 
-                //options: PictorialSeriesOptions()
-                      name: "Other", 
-                    data: [ 
-                      [25], 
-                      [25], 
-                    ],
-                  ),
-                  PictorialSeries( 
-                //options: PictorialSeriesOptions()
-                      name: "Essential Fat", 
-                    data: [ 
-                      [12], 
-                      [3], 
-                    ],
-                  ),
-                  PictorialSeries( 
-                //options: PictorialSeriesOptions()
-                      name: "Non-Essential Fat", 
-                    data: [ 
-                      [15], 
-                      [12], 
-                    ],
-                  ),
-                  PictorialSeries( 
-                //options: PictorialSeriesOptions()
-                      name: "Muscle Tissue", 
-                    data: [ 
-                      [36], 
-                      [45], 
-                    ],
-                  ),
-                  PictorialSeries( 
-                //options: PictorialSeriesOptions()
-                      name: "Bone", 
-                    data: [ 
-                      [12], 
-                      [15], 
-                    ],
-                  ),
-                ],
-              )
-            )
+                HighchartsPictorialSeries(
+                  options: HighchartsPictorialSeriesOptions(),
+                  name: "Non-Essential Fat",
+                  data: [
+                    [15],
+                    [12],
+                  ],
+                ),
+                HighchartsPictorialSeries(
+                  options: HighchartsPictorialSeriesOptions(),
+                  name: "Muscle Tissue",
+                  data: [
+                    [36],
+                    [45],
+                  ],
+                ),
+                HighchartsPictorialSeries(
+                  options: HighchartsPictorialSeriesOptions(),
+                  name: "Bone",
+                  data: [
+                    [12],
+                    [15],
+                  ],
+                ),
+              ],
+            ))
           ],
         ),
       ),
     );
   }
 }
-
-

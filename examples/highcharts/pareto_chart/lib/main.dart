@@ -1,19 +1,9 @@
-
-/** 
+/**
  * Highcharts Demo
  */
 
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/highcharts.dart';
-import 'package:highcharts_flutter/types/ChartOptions.dart';
-import 'package:highcharts_flutter/types/TitleOptions.dart';
-import 'package:highcharts_flutter/types/TooltipOptions.dart';
-import 'package:highcharts_flutter/types/XAxisOptions.dart';
-import 'package:highcharts_flutter/types/YAxisOptions.dart';
-import 'package:highcharts_flutter/types/ParetoSeriesOptions.dart';
-import 'package:highcharts_flutter/types/ParetoSeries.dart';
-import 'package:highcharts_flutter/types/ColumnSeriesOptions.dart';
-import 'package:highcharts_flutter/types/ColumnSeries.dart';
 
 void main() {
   runApp(const MyApp());
@@ -56,55 +46,51 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            HighchartsChart(
-              HighchartsOptions(
-                chart: ChartOptions(
-                    renderTo: "container", 
-                    type: "column", 
+            HighchartsChart(HighchartsOptions(
+              chart: HighchartsChartOptions(
+                renderTo: "container",
+                type: "column",
+              ),
+              title: HighchartsTitleOptions(
+                text: "Restaurants Complaints",
+              ),
+              tooltip: HighchartsTooltipOptions(
+                shared: true,
+              ),
+              xAxis: [
+                HighchartsXAxisOptions(),
+              ],
+              yAxis: [
+                HighchartsYAxisOptions(),
+              ],
+              series: [
+                HighchartsParetoSeries(
+                  options: HighchartsParetoSeriesOptions(
+                    zIndex: 10,
+                  ),
+                  name: "Pareto",
                 ),
-                title: TitleOptions(
-                    text: "Restaurants Complaints", 
+                HighchartsColumnSeries(
+                  name: "Complaints",
+                  options: HighchartsColumnSeriesOptions(
+                    zIndex: 2,
+                  ),
+                  data: [
+                    [755],
+                    [222],
+                    [151],
+                    [86],
+                    [72],
+                    [51],
+                    [36],
+                    [10],
+                  ],
                 ),
-                tooltip: TooltipOptions(
-                    shared: true, 
-                ),
-                xAxis: [ 
-                  XAxisOptions( 
-                  ),
-                ],
-                yAxis: [ 
-                  YAxisOptions( 
-                  ),
-                ],
-                series: [ 
-                  ParetoSeries( 
-                //options: ParetoSeriesOptions()
-                      name: "Pareto", 
-                      zIndex: 10, 
-                  ),
-                  ColumnSeries( 
-                //options: ColumnSeriesOptions()
-                      name: "Complaints", 
-                      zIndex: 2, 
-                    data: [ 
-                      [755], 
-                      [222], 
-                      [151], 
-                      [86], 
-                      [72], 
-                      [51], 
-                      [36], 
-                      [10], 
-                    ],
-                  ),
-                ],
-              )
-            )
+              ],
+            ))
           ],
         ),
       ),
     );
   }
 }
-
-

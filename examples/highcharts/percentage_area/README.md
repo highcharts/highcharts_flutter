@@ -1,7 +1,7 @@
 # Percentage area demo
 
 **Highcharts demo**
-Chart demonstrating a percentage-stacked area chart, a variation of the 
+Chart demonstrating a percentage-stacked area chart, a variation of the
         stacked area chart where each data series is visualized as a running
         percentage of the total.
 

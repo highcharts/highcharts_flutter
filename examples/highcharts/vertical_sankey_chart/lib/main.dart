@@ -1,26 +1,10 @@
 
-/** 
+/**
  * Highcharts Demo
  */
 
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/highcharts.dart';
-import 'package:highcharts_flutter/types/ChartOptions.dart';
-import 'package:highcharts_flutter/types/TitleOptions.dart';
-import 'package:highcharts_flutter/types/SubtitleOptions.dart';
-import 'package:highcharts_flutter/types/AccessibilityOptions.dart';
-import 'package:highcharts_flutter/types/AccessibilityPointOptions.dart';
-import 'package:highcharts_flutter/types/HighchartsPlotOptions.dart';
-import 'package:highcharts_flutter/types/SankeySeriesOptions.dart';
-import 'package:highcharts_flutter/types/Generic.dart';
-import 'package:highcharts_flutter/types/SankeySeriesTooltipOptions.dart';
-import 'package:highcharts_flutter/types/TooltipOptions.dart';
-import 'package:highcharts_flutter/types/SankeySeries.dart';
-import 'package:highcharts_flutter/types/SankeyDataLabelOptions.dart';
-import 'package:highcharts_flutter/types/BorderRadiusOptionsObject.dart';
-import 'package:highcharts_flutter/types/SankeySeriesNodeOptions.dart';
-import 'package:highcharts_flutter/types/XAxisOptions.dart';
-import 'package:highcharts_flutter/types/YAxisOptions.dart';
 
 void main() {
   runApp(const MyApp());
@@ -65,49 +49,33 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             HighchartsChart(
               HighchartsOptions(
-                chart: ChartOptions(
-                    type: "sankey", 
-                    inverted: true, 
-                    height: "1000", 
+                chart: HighchartsChartOptions(
+                    type: "sankey",
+                    inverted: true,
+                    height: "1000",
                 ),
-                title: TitleOptions(
-                    text: "Evaluating the energy consumed for water use in the United States", 
+                title: HighchartsTitleOptions(
+                    text: "Evaluating the energy consumed for water use in the United States",
                 ),
-                subtitle: SubtitleOptions(
-                    text: "Data source: <a href=\"https://iopscience.iop.org/article/10.1088/1748-9326/7/3/034034/pdf\">The University of Texas at Austin</a>", 
+                subtitle: HighchartsSubtitleOptions(
+                    text: "Data source: <a href=\"https://iopscience.iop.org/article/10.1088/1748-9326/7/3/034034/pdf\">The University of Texas at Austin</a>",
                 ),
-                accessibility: AccessibilityOptions(
-                  point: AccessibilityPointOptions(
-                      valueDescriptionFormat: "{index}. {point.from} to {point.to}, {point.weight}.", 
+                accessibility: HighchartsAccessibilityOptions(
+                  point: HighchartsAccessibilityPointOptions(
+                      valueDescriptionFormat: "{index}. {point.from} to {point.to}, {point.weight}.",
                   ),
                 ),
-                plotOptions: HighchartsPlotOptions(
-                  sankey: SankeySeriesOptions(
-                    states: Generic(
+                tooltip: HighchartsTooltipOptions(
+                    valueSuffix: " quads",
+                ),
+                series: [
+                  HighchartsSankeySeries(
+                    name: "Energy consumed for water use in U.S.",
+                    options: HighchartsSankeySeriesOptions(
+                      nodeWidth: "50",
+                      linkOpacity: 1
                     ),
-                    tooltip: SankeySeriesTooltipOptions(
-                    ),
-                  ),
-                ),
-                tooltip: TooltipOptions(
-                    valueSuffix: " quads", 
-                ),
-                series: [ 
-                  SankeySeries( 
-                //options: SankeySeriesOptions()
-                      name: "Energy consumed for water use in U.S.", 
-                    dataLabels: [ 
-                      SankeyDataLabelOptions( 
-                      ),
-                    ],
-                     borderRadius: BorderRadiusOptionsObject(),
-                      nodeWidth: "50", 
-                      linkOpacity: 1, 
-                    nodes: [ 
-                      SankeySeriesNodeOptions( 
-                      ),
-                    ],
-                    data: [ 
+                    data: [
                     [
                       "Total annual U.S. energy consumption", "All non-water related energy consumption", 51564
                     ],
@@ -1838,15 +1806,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     ],
                     ],
                   ),
-                ],
-                xAxis: [ 
-                  XAxisOptions( 
-                  ),
-                ],
-                yAxis: [ 
-                  YAxisOptions( 
-                  ),
-                ],
+                ]
               )
             )
           ],

@@ -1,7 +1,7 @@
 
 name: hc_3d_pyramid
 description: 3D pyramid
-publish_to: 'none' 
+publish_to: 'none'
 
 version: 1.0.0+1
 

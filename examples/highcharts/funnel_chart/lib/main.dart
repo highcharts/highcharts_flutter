@@ -1,20 +1,9 @@
-
-/** 
+/**
  * Highcharts Demo
  */
 
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/highcharts.dart';
-import 'package:highcharts_flutter/types/ChartOptions.dart';
-import 'package:highcharts_flutter/types/TitleOptions.dart';
-import 'package:highcharts_flutter/types/HighchartsPlotOptions.dart';
-import 'package:highcharts_flutter/types/SeriesOptions.dart';
-import 'package:highcharts_flutter/types/DataLabelOptions.dart';
-import 'package:highcharts_flutter/types/LegendOptions.dart';
-import 'package:highcharts_flutter/types/FunnelSeriesOptions.dart';
-import 'package:highcharts_flutter/types/FunnelSeries.dart';
-import 'package:highcharts_flutter/types/XAxisOptions.dart';
-import 'package:highcharts_flutter/types/YAxisOptions.dart';
 
 void main() {
   runApp(const MyApp());
@@ -57,125 +46,69 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            HighchartsChart(
-              HighchartsOptions(
-                chart: ChartOptions(
-                    type: "funnel", 
+            HighchartsChart(HighchartsOptions(
+              chart: HighchartsChartOptions(
+                type: "funnel",
+              ),
+              title: HighchartsTitleOptions(
+                text: "Sales funnel",
+              ),
+              plotOptions: HighchartsPlotOptions(
+                series: HighchartsSeriesOptions(
+                  dataLabels: [
+                    HighchartsSeriesDataLabelsOptions(
+                      enabled: true,
+                      format: "<b>{point.name}</b> ({point.y:,.0f})",
+                    ),
+                  ],
                 ),
-                title: TitleOptions(
-                    text: "Sales funnel", 
+              ),
+              legend: HighchartsLegendOptions(
+                enabled: false,
+              ),
+              series: [
+                HighchartsFunnelSeries(
+                  options: HighchartsFunnelSeriesOptions(),
+                  name: "Unique users",
+                  data: [
+                    ["Website visits", 15654],
+                    ["Downloads", 4064],
+                    ["Requested price list", 1987],
+                    ["Invoice sent", 976],
+                    ["Finalized", 846],
+                    ["Website visits", 15654],
+                    ["Downloads", 4064],
+                    ["Requested price list", 1987],
+                    ["Invoice sent", 976],
+                    ["Finalized", 846],
+                    ["Website visits", 15654],
+                    ["Downloads", 4064],
+                    ["Requested price list", 1987],
+                    ["Invoice sent", 976],
+                    ["Finalized", 846],
+                    ["Website visits", 15654],
+                    ["Downloads", 4064],
+                    ["Requested price list", 1987],
+                    ["Invoice sent", 976],
+                    ["Finalized", 846],
+                    ["Website visits", 15654],
+                    ["Downloads", 4064],
+                    ["Requested price list", 1987],
+                    ["Invoice sent", 976],
+                    ["Finalized", 846],
+                  ],
                 ),
-                plotOptions: HighchartsPlotOptions(
-                  series: SeriesOptions(
-                    dataLabels: [ 
-                      DataLabelOptions( 
-                          enabled: true, 
-                          format: "<b>{point.name}</b> ({point.y:,.0f})", 
-                      ),
-                    ],
-                  ),
-                ),
-                legend: LegendOptions(
-                    enabled: false, 
-                ),
-                series: [ 
-                  FunnelSeries( 
-                //options: FunnelSeriesOptions()
-                      name: "Unique users", 
-                    data: [ 
-                    [
-                      "Website visits", 15654
-                    ],
-                    [
-                      "Downloads", 4064
-                    ],
-                    [
-                      "Requested price list", 1987
-                    ],
-                    [
-                      "Invoice sent", 976
-                    ],
-                    [
-                      "Finalized", 846
-                    ],
-                    [
-                      "Website visits", 15654
-                    ],
-                    [
-                      "Downloads", 4064
-                    ],
-                    [
-                      "Requested price list", 1987
-                    ],
-                    [
-                      "Invoice sent", 976
-                    ],
-                    [
-                      "Finalized", 846
-                    ],
-                    [
-                      "Website visits", 15654
-                    ],
-                    [
-                      "Downloads", 4064
-                    ],
-                    [
-                      "Requested price list", 1987
-                    ],
-                    [
-                      "Invoice sent", 976
-                    ],
-                    [
-                      "Finalized", 846
-                    ],
-                    [
-                      "Website visits", 15654
-                    ],
-                    [
-                      "Downloads", 4064
-                    ],
-                    [
-                      "Requested price list", 1987
-                    ],
-                    [
-                      "Invoice sent", 976
-                    ],
-                    [
-                      "Finalized", 846
-                    ],
-                    [
-                      "Website visits", 15654
-                    ],
-                    [
-                      "Downloads", 4064
-                    ],
-                    [
-                      "Requested price list", 1987
-                    ],
-                    [
-                      "Invoice sent", 976
-                    ],
-                    [
-                      "Finalized", 846
-                    ],
-                    ],
-                  ),
-                ],
-                xAxis: [ 
-                  XAxisOptions( 
-                  ),
-                ],
-                yAxis: [ 
-                  YAxisOptions( 
-                  ),
-                ],
-              )
-            )
+              ],
+              xAxis: [
+                HighchartsXAxisOptions(),
+              ],
+              yAxis: [
+                HighchartsYAxisOptions(),
+              ],
+            ))
           ],
         ),
       ),
     );
   }
 }
-
-

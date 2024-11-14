@@ -1,23 +1,9 @@
-
-/** 
+/**
  * Highcharts Demo
  */
 
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/highcharts.dart';
-import 'package:highcharts_flutter/types/ChartOptions.dart';
-import 'package:highcharts_flutter/types/Options.dart';
-import 'package:highcharts_flutter/types/TitleOptions.dart';
-import 'package:highcharts_flutter/types/AccessibilityOptions.dart';
-import 'package:highcharts_flutter/types/AccessibilityScreenReaderSectionOptions.dart';
-import 'package:highcharts_flutter/types/HighchartsPlotOptions.dart';
-import 'package:highcharts_flutter/types/SeriesOptions.dart';
-import 'package:highcharts_flutter/types/DataLabelOptions.dart';
-import 'package:highcharts_flutter/types/Funnel3DSeriesOptions.dart';
-import 'package:highcharts_flutter/types/Funnel3DSeries.dart';
-import 'package:highcharts_flutter/types/Funnel3DPointOptions).dart';
-import 'package:highcharts_flutter/types/XAxisOptions.dart';
-import 'package:highcharts_flutter/types/YAxisOptions.dart';
 
 void main() {
   runApp(const MyApp());
@@ -60,59 +46,52 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            HighchartsChart(
-              HighchartsOptions(
-                chart: ChartOptions(
-                    type: "funnel3d", 
-                  options3d: Options(
-                  ),
+            HighchartsChart(HighchartsOptions(
+              chart: HighchartsChartOptions(
+                type: "funnel3d",
+                options3d: HighchartsChart3DOptions(),
+              ),
+              title: HighchartsTitleOptions(
+                text: "Highcharts Funnel3D Chart",
+              ),
+              accessibility: HighchartsAccessibilityOptions(
+                screenReaderSection:
+                    HighchartsAccessibilityScreenReaderSectionOptions(
+                  beforeChartFormat:
+                      "<{headingTagName}>{chartTitle}</{headingTagName}><div>{typeDescription}</div><div>{chartSubtitle}</div><div>{chartLongdesc}</div>",
                 ),
-                title: TitleOptions(
-                    text: "Highcharts Funnel3D Chart", 
+              ),
+              plotOptions: HighchartsPlotOptions(
+                series: HighchartsSeriesOptions(
+                  dataLabels: [
+                    HighchartsSeriesDataLabelsOptions(
+                      enabled: true,
+                      format: "<b>{point.name}</b> ({point.y:,.0f})",
+                      allowOverlap: true,
+                      y: 10,
+                    ),
+                  ],
                 ),
-                accessibility: AccessibilityOptions(
-                  screenReaderSection: AccessibilityScreenReaderSectionOptions(
-                      beforeChartFormat: "<{headingTagName}>{chartTitle}</{headingTagName}><div>{typeDescription}</div><div>{chartSubtitle}</div><div>{chartLongdesc}</div>", 
-                  ),
+              ),
+              series: [
+                HighchartsFunnel3DSeries(
+                  options: HighchartsFunnel3DSeriesOptions(),
+                  name: "Unique users",
+                  data: [
+                    [false, false, false, false, false],
+                  ],
                 ),
-                plotOptions: HighchartsPlotOptions(
-                  series: SeriesOptions(
-                    dataLabels: [ 
-                      DataLabelOptions( 
-                          enabled: true, 
-                          format: "<b>{point.name}</b> ({point.y:,.0f})", 
-                          allowOverlap: true, 
-                          y: 10, 
-                      ),
-                    ],
-                  ),
-                ),
-                series: [ 
-                  Funnel3DSeries( 
-                //options: Funnel3DSeriesOptions()
-                      name: "Unique users", 
-                    data: [ 
-                    [
-                      false, false, false, false, false
-                    ],
-                    ],
-                  ),
-                ],
-                xAxis: [ 
-                  XAxisOptions( 
-                  ),
-                ],
-                yAxis: [ 
-                  YAxisOptions( 
-                  ),
-                ],
-              )
-            )
+              ],
+              xAxis: [
+                HighchartsXAxisOptions(),
+              ],
+              yAxis: [
+                HighchartsYAxisOptions(),
+              ],
+            ))
           ],
         ),
       ),
     );
   }
 }
-
-

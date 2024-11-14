@@ -1,19 +1,10 @@
 
-/** 
+/**
  * Highcharts Demo
  */
 
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/highcharts.dart';
-import 'package:highcharts_flutter/types/TreemapSeriesOptions.dart';
-import 'package:highcharts_flutter/types/TreemapSeries.dart';
-import 'package:highcharts_flutter/types/TreemapSeriesLevelsOptions.dart';
-import 'package:highcharts_flutter/types/TreemapPointOptions.dart';
-import 'package:highcharts_flutter/types/TitleOptions.dart';
-import 'package:highcharts_flutter/types/SubtitleOptions.dart';
-import 'package:highcharts_flutter/types/TooltipOptions.dart';
-import 'package:highcharts_flutter/types/XAxisOptions.dart';
-import 'package:highcharts_flutter/types/YAxisOptions.dart';
 
 void main() {
   runApp(const MyApp());
@@ -58,43 +49,36 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             HighchartsChart(
               HighchartsOptions(
-                series: [ 
-                  TreemapSeries( 
-                //options: TreemapSeriesOptions()
-                      layoutAlgorithm: "stripes", 
-                      alternateStartingDirection: true, 
-                      borderRadius: 6, 
-                    levels: [ 
-                      TreemapSeriesLevelsOptions( 
-                      ),
-                    ],
-                    data: [ 
+                series: [
+                  HighchartsTreemapSeries(
+                    options: HighchartsTreemapSeriesOptions(
+                      layoutAlgorithm: "stripes",
+                      alternateStartingDirection: true,
+                      borderRadius: 6,
+                      levels: [
+                        HighchartsTreemapSeriesLevelsOptions(
+                        ),
+                      ],
+                    ),
+                    data: [
                     [
                       false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false
                     ],
                     ],
                   ),
                 ],
-                title: TitleOptions(
-                    text: "Norwegian regions and counties by area", 
-                    align: "left", 
+                title: HighchartsTitleOptions(
+                    text: "Norwegian regions and counties by area",
+                    align: "left",
                 ),
-                subtitle: SubtitleOptions(
-                    text: "Source: <a href=\"https://snl.no/Norge\" target=\"_blank\">SNL</a>", 
-                    align: "left", 
+                subtitle: HighchartsSubtitleOptions(
+                    text: "Source: <a href=\"https://snl.no/Norge\" target=\"_blank\">SNL</a>",
+                    align: "left",
                 ),
-                tooltip: TooltipOptions(
-                    useHTML: true, 
-                    pointFormat: "The area of <b>{point.name}</b> is <b>{point.value} km<sup>2</sup></b>", 
+                tooltip: HighchartsTooltipOptions(
+                    useHTML: true,
+                    pointFormat: "The area of <b>{point.name}</b> is <b>{point.value} km<sup>2</sup></b>",
                 ),
-                xAxis: [ 
-                  XAxisOptions( 
-                  ),
-                ],
-                yAxis: [ 
-                  YAxisOptions( 
-                  ),
-                ],
               )
             )
           ],

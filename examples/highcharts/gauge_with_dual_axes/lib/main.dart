@@ -1,17 +1,9 @@
-
-/** 
+/**
  * Highcharts Demo
  */
 
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/highcharts.dart';
-import 'package:highcharts_flutter/types/ChartOptions.dart';
-import 'package:highcharts_flutter/types/Generic.dart';
-import 'package:highcharts_flutter/types/TitleOptions.dart';
-import 'package:highcharts_flutter/types/YAxisOptions.dart';
-import 'package:highcharts_flutter/types/GaugeSeriesOptions.dart';
-import 'package:highcharts_flutter/types/GaugeSeries.dart';
-import 'package:highcharts_flutter/types/XAxisOptions.dart';
 
 void main() {
   runApp(const MyApp());
@@ -54,43 +46,36 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            HighchartsChart(
-              HighchartsOptions(
-                chart: ChartOptions(
-                    type: "gauge", 
-                    alignTicks: false, 
-                  plotBackgroundColor: '',
-                  plotBackgroundImage: '',
-                    plotBorderWidth: 0, 
-                    plotShadow: false, 
+            HighchartsChart(HighchartsOptions(
+              chart: HighchartsChartOptions(
+                type: "gauge",
+                alignTicks: false,
+                plotBackgroundColor: '',
+                plotBackgroundImage: '',
+                plotBorderWidth: 0,
+              ),
+              title: HighchartsTitleOptions(
+                text: "Speedometer with dual axes",
+              ),
+              yAxis: [
+                HighchartsYAxisOptions(),
+              ],
+              series: [
+                HighchartsGaugeSeries(
+                  options: HighchartsGaugeSeriesOptions(),
+                  name: "Speed",
+                  data: [
+                    [80],
+                  ],
                 ),
-                title: TitleOptions(
-                    text: "Speedometer with dual axes", 
-                ),
-                yAxis: [ 
-                  YAxisOptions( 
-                  ),
-                ],
-                series: [ 
-                  GaugeSeries( 
-                //options: GaugeSeriesOptions()
-                      name: "Speed", 
-                    data: [ 
-                      [80], 
-                    ],
-                  ),
-                ],
-                xAxis: [ 
-                  XAxisOptions( 
-                  ),
-                ],
-              )
-            )
+              ],
+              xAxis: [
+                HighchartsXAxisOptions(),
+              ],
+            ))
           ],
         ),
       ),
     );
   }
 }
-
-

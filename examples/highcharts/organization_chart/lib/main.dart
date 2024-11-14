@@ -1,23 +1,9 @@
-
-/** 
+/**
  * Highcharts Demo
  */
 
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/highcharts.dart';
-import 'package:highcharts_flutter/types/ChartOptions.dart';
-import 'package:highcharts_flutter/types/TitleOptions.dart';
-import 'package:highcharts_flutter/types/AccessibilityOptions.dart';
-import 'package:highcharts_flutter/types/AccessibilityPointOptions.dart';
-import 'package:highcharts_flutter/types/OrganizationSeriesOptions.dart';
-import 'package:highcharts_flutter/types/OrganizationSeries.dart';
-import 'package:highcharts_flutter/types/OrganizationSeriesLevelOptions.dart';
-import 'package:highcharts_flutter/types/OrganizationSeriesNodeOptions.dart';
-import 'package:highcharts_flutter/types/OrganizationDataLabelOptions.dart';
-import 'package:highcharts_flutter/types/TooltipOptions.dart';
-import 'package:highcharts_flutter/types/ExportingOptions.dart';
-import 'package:highcharts_flutter/types/XAxisOptions.dart';
-import 'package:highcharts_flutter/types/YAxisOptions.dart';
 
 void main() {
   runApp(const MyApp());
@@ -60,574 +46,221 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            HighchartsChart(
-              HighchartsOptions(
-                chart: ChartOptions(
-                    height: "600", 
-                    inverted: true, 
+            HighchartsChart(HighchartsOptions(
+              chart: HighchartsChartOptions(
+                height: "600",
+                inverted: true,
+              ),
+              title: HighchartsTitleOptions(
+                text: "Highcharts Org Chart",
+              ),
+              accessibility: HighchartsAccessibilityOptions(
+                point: HighchartsAccessibilityPointOptions(
+                  descriptionFormat:
+                      "{add index 1}. {toNode.name}{#if (ne toNode.name toNode.id)}, {toNode.id}{/if}, reports to {fromNode.id}",
                 ),
-                title: TitleOptions(
-                    text: "Highcharts Org Chart", 
-                ),
-                accessibility: AccessibilityOptions(
-                  point: AccessibilityPointOptions(
-                      descriptionFormat: "{add index 1}. {toNode.name}{#if (ne toNode.name toNode.id)}, {toNode.id}{/if}, reports to {fromNode.id}", 
+              ),
+              series: [
+                HighchartsOrganizationSeries(
+                  options: HighchartsOrganizationSeriesOptions(
+                    levels: [
+                      HighchartsOrganizationSeriesLevelsOptions(),
+                    ],
+                    nodes: [
+                      HighchartsOrganizationSeriesNodesOptions(),
+                    ],
+                    color: "#007ad0",
+                    dataLabels: HighchartsOrganizationSeriesDataLabelsOptions(
+                      color: "white",
+                    ),
+                    borderColor: "white",
                   ),
+                  name: "Highsoft",
+                  data: [
+                    ["Shareholders", "Board"],
+                    ["Board", "CEO"],
+                    ["CEO", "CTO"],
+                    ["CEO", "CPO"],
+                    ["CEO", "CSO"],
+                    ["CEO", "HR"],
+                    ["CTO", "Product"],
+                    ["CTO", "Web"],
+                    ["CSO", "Sales"],
+                    ["HR", "Market"],
+                    ["CSO", "Market"],
+                    ["HR", "Market"],
+                    ["CTO", "Market"],
+                    ["Shareholders", "Board"],
+                    ["Board", "CEO"],
+                    ["CEO", "CTO"],
+                    ["CEO", "CPO"],
+                    ["CEO", "CSO"],
+                    ["CEO", "HR"],
+                    ["CTO", "Product"],
+                    ["CTO", "Web"],
+                    ["CSO", "Sales"],
+                    ["HR", "Market"],
+                    ["CSO", "Market"],
+                    ["HR", "Market"],
+                    ["CTO", "Market"],
+                    ["Shareholders", "Board"],
+                    ["Board", "CEO"],
+                    ["CEO", "CTO"],
+                    ["CEO", "CPO"],
+                    ["CEO", "CSO"],
+                    ["CEO", "HR"],
+                    ["CTO", "Product"],
+                    ["CTO", "Web"],
+                    ["CSO", "Sales"],
+                    ["HR", "Market"],
+                    ["CSO", "Market"],
+                    ["HR", "Market"],
+                    ["CTO", "Market"],
+                    ["Shareholders", "Board"],
+                    ["Board", "CEO"],
+                    ["CEO", "CTO"],
+                    ["CEO", "CPO"],
+                    ["CEO", "CSO"],
+                    ["CEO", "HR"],
+                    ["CTO", "Product"],
+                    ["CTO", "Web"],
+                    ["CSO", "Sales"],
+                    ["HR", "Market"],
+                    ["CSO", "Market"],
+                    ["HR", "Market"],
+                    ["CTO", "Market"],
+                    ["Shareholders", "Board"],
+                    ["Board", "CEO"],
+                    ["CEO", "CTO"],
+                    ["CEO", "CPO"],
+                    ["CEO", "CSO"],
+                    ["CEO", "HR"],
+                    ["CTO", "Product"],
+                    ["CTO", "Web"],
+                    ["CSO", "Sales"],
+                    ["HR", "Market"],
+                    ["CSO", "Market"],
+                    ["HR", "Market"],
+                    ["CTO", "Market"],
+                    ["Shareholders", "Board"],
+                    ["Board", "CEO"],
+                    ["CEO", "CTO"],
+                    ["CEO", "CPO"],
+                    ["CEO", "CSO"],
+                    ["CEO", "HR"],
+                    ["CTO", "Product"],
+                    ["CTO", "Web"],
+                    ["CSO", "Sales"],
+                    ["HR", "Market"],
+                    ["CSO", "Market"],
+                    ["HR", "Market"],
+                    ["CTO", "Market"],
+                    ["Shareholders", "Board"],
+                    ["Board", "CEO"],
+                    ["CEO", "CTO"],
+                    ["CEO", "CPO"],
+                    ["CEO", "CSO"],
+                    ["CEO", "HR"],
+                    ["CTO", "Product"],
+                    ["CTO", "Web"],
+                    ["CSO", "Sales"],
+                    ["HR", "Market"],
+                    ["CSO", "Market"],
+                    ["HR", "Market"],
+                    ["CTO", "Market"],
+                    ["Shareholders", "Board"],
+                    ["Board", "CEO"],
+                    ["CEO", "CTO"],
+                    ["CEO", "CPO"],
+                    ["CEO", "CSO"],
+                    ["CEO", "HR"],
+                    ["CTO", "Product"],
+                    ["CTO", "Web"],
+                    ["CSO", "Sales"],
+                    ["HR", "Market"],
+                    ["CSO", "Market"],
+                    ["HR", "Market"],
+                    ["CTO", "Market"],
+                    ["Shareholders", "Board"],
+                    ["Board", "CEO"],
+                    ["CEO", "CTO"],
+                    ["CEO", "CPO"],
+                    ["CEO", "CSO"],
+                    ["CEO", "HR"],
+                    ["CTO", "Product"],
+                    ["CTO", "Web"],
+                    ["CSO", "Sales"],
+                    ["HR", "Market"],
+                    ["CSO", "Market"],
+                    ["HR", "Market"],
+                    ["CTO", "Market"],
+                    ["Shareholders", "Board"],
+                    ["Board", "CEO"],
+                    ["CEO", "CTO"],
+                    ["CEO", "CPO"],
+                    ["CEO", "CSO"],
+                    ["CEO", "HR"],
+                    ["CTO", "Product"],
+                    ["CTO", "Web"],
+                    ["CSO", "Sales"],
+                    ["HR", "Market"],
+                    ["CSO", "Market"],
+                    ["HR", "Market"],
+                    ["CTO", "Market"],
+                    ["Shareholders", "Board"],
+                    ["Board", "CEO"],
+                    ["CEO", "CTO"],
+                    ["CEO", "CPO"],
+                    ["CEO", "CSO"],
+                    ["CEO", "HR"],
+                    ["CTO", "Product"],
+                    ["CTO", "Web"],
+                    ["CSO", "Sales"],
+                    ["HR", "Market"],
+                    ["CSO", "Market"],
+                    ["HR", "Market"],
+                    ["CTO", "Market"],
+                    ["Shareholders", "Board"],
+                    ["Board", "CEO"],
+                    ["CEO", "CTO"],
+                    ["CEO", "CPO"],
+                    ["CEO", "CSO"],
+                    ["CEO", "HR"],
+                    ["CTO", "Product"],
+                    ["CTO", "Web"],
+                    ["CSO", "Sales"],
+                    ["HR", "Market"],
+                    ["CSO", "Market"],
+                    ["HR", "Market"],
+                    ["CTO", "Market"],
+                    ["Shareholders", "Board"],
+                    ["Board", "CEO"],
+                    ["CEO", "CTO"],
+                    ["CEO", "CPO"],
+                    ["CEO", "CSO"],
+                    ["CEO", "HR"],
+                    ["CTO", "Product"],
+                    ["CTO", "Web"],
+                    ["CSO", "Sales"],
+                    ["HR", "Market"],
+                    ["CSO", "Market"],
+                    ["HR", "Market"],
+                    ["CTO", "Market"],
+                  ],
                 ),
-                series: [ 
-                  OrganizationSeries( 
-                //options: OrganizationSeriesOptions()
-                      name: "Highsoft", 
-                    data: [ 
-                    [
-                      "Shareholders", "Board"
-                    ],
-                    [
-                      "Board", "CEO"
-                    ],
-                    [
-                      "CEO", "CTO"
-                    ],
-                    [
-                      "CEO", "CPO"
-                    ],
-                    [
-                      "CEO", "CSO"
-                    ],
-                    [
-                      "CEO", "HR"
-                    ],
-                    [
-                      "CTO", "Product"
-                    ],
-                    [
-                      "CTO", "Web"
-                    ],
-                    [
-                      "CSO", "Sales"
-                    ],
-                    [
-                      "HR", "Market"
-                    ],
-                    [
-                      "CSO", "Market"
-                    ],
-                    [
-                      "HR", "Market"
-                    ],
-                    [
-                      "CTO", "Market"
-                    ],
-                    [
-                      "Shareholders", "Board"
-                    ],
-                    [
-                      "Board", "CEO"
-                    ],
-                    [
-                      "CEO", "CTO"
-                    ],
-                    [
-                      "CEO", "CPO"
-                    ],
-                    [
-                      "CEO", "CSO"
-                    ],
-                    [
-                      "CEO", "HR"
-                    ],
-                    [
-                      "CTO", "Product"
-                    ],
-                    [
-                      "CTO", "Web"
-                    ],
-                    [
-                      "CSO", "Sales"
-                    ],
-                    [
-                      "HR", "Market"
-                    ],
-                    [
-                      "CSO", "Market"
-                    ],
-                    [
-                      "HR", "Market"
-                    ],
-                    [
-                      "CTO", "Market"
-                    ],
-                    [
-                      "Shareholders", "Board"
-                    ],
-                    [
-                      "Board", "CEO"
-                    ],
-                    [
-                      "CEO", "CTO"
-                    ],
-                    [
-                      "CEO", "CPO"
-                    ],
-                    [
-                      "CEO", "CSO"
-                    ],
-                    [
-                      "CEO", "HR"
-                    ],
-                    [
-                      "CTO", "Product"
-                    ],
-                    [
-                      "CTO", "Web"
-                    ],
-                    [
-                      "CSO", "Sales"
-                    ],
-                    [
-                      "HR", "Market"
-                    ],
-                    [
-                      "CSO", "Market"
-                    ],
-                    [
-                      "HR", "Market"
-                    ],
-                    [
-                      "CTO", "Market"
-                    ],
-                    [
-                      "Shareholders", "Board"
-                    ],
-                    [
-                      "Board", "CEO"
-                    ],
-                    [
-                      "CEO", "CTO"
-                    ],
-                    [
-                      "CEO", "CPO"
-                    ],
-                    [
-                      "CEO", "CSO"
-                    ],
-                    [
-                      "CEO", "HR"
-                    ],
-                    [
-                      "CTO", "Product"
-                    ],
-                    [
-                      "CTO", "Web"
-                    ],
-                    [
-                      "CSO", "Sales"
-                    ],
-                    [
-                      "HR", "Market"
-                    ],
-                    [
-                      "CSO", "Market"
-                    ],
-                    [
-                      "HR", "Market"
-                    ],
-                    [
-                      "CTO", "Market"
-                    ],
-                    [
-                      "Shareholders", "Board"
-                    ],
-                    [
-                      "Board", "CEO"
-                    ],
-                    [
-                      "CEO", "CTO"
-                    ],
-                    [
-                      "CEO", "CPO"
-                    ],
-                    [
-                      "CEO", "CSO"
-                    ],
-                    [
-                      "CEO", "HR"
-                    ],
-                    [
-                      "CTO", "Product"
-                    ],
-                    [
-                      "CTO", "Web"
-                    ],
-                    [
-                      "CSO", "Sales"
-                    ],
-                    [
-                      "HR", "Market"
-                    ],
-                    [
-                      "CSO", "Market"
-                    ],
-                    [
-                      "HR", "Market"
-                    ],
-                    [
-                      "CTO", "Market"
-                    ],
-                    [
-                      "Shareholders", "Board"
-                    ],
-                    [
-                      "Board", "CEO"
-                    ],
-                    [
-                      "CEO", "CTO"
-                    ],
-                    [
-                      "CEO", "CPO"
-                    ],
-                    [
-                      "CEO", "CSO"
-                    ],
-                    [
-                      "CEO", "HR"
-                    ],
-                    [
-                      "CTO", "Product"
-                    ],
-                    [
-                      "CTO", "Web"
-                    ],
-                    [
-                      "CSO", "Sales"
-                    ],
-                    [
-                      "HR", "Market"
-                    ],
-                    [
-                      "CSO", "Market"
-                    ],
-                    [
-                      "HR", "Market"
-                    ],
-                    [
-                      "CTO", "Market"
-                    ],
-                    [
-                      "Shareholders", "Board"
-                    ],
-                    [
-                      "Board", "CEO"
-                    ],
-                    [
-                      "CEO", "CTO"
-                    ],
-                    [
-                      "CEO", "CPO"
-                    ],
-                    [
-                      "CEO", "CSO"
-                    ],
-                    [
-                      "CEO", "HR"
-                    ],
-                    [
-                      "CTO", "Product"
-                    ],
-                    [
-                      "CTO", "Web"
-                    ],
-                    [
-                      "CSO", "Sales"
-                    ],
-                    [
-                      "HR", "Market"
-                    ],
-                    [
-                      "CSO", "Market"
-                    ],
-                    [
-                      "HR", "Market"
-                    ],
-                    [
-                      "CTO", "Market"
-                    ],
-                    [
-                      "Shareholders", "Board"
-                    ],
-                    [
-                      "Board", "CEO"
-                    ],
-                    [
-                      "CEO", "CTO"
-                    ],
-                    [
-                      "CEO", "CPO"
-                    ],
-                    [
-                      "CEO", "CSO"
-                    ],
-                    [
-                      "CEO", "HR"
-                    ],
-                    [
-                      "CTO", "Product"
-                    ],
-                    [
-                      "CTO", "Web"
-                    ],
-                    [
-                      "CSO", "Sales"
-                    ],
-                    [
-                      "HR", "Market"
-                    ],
-                    [
-                      "CSO", "Market"
-                    ],
-                    [
-                      "HR", "Market"
-                    ],
-                    [
-                      "CTO", "Market"
-                    ],
-                    [
-                      "Shareholders", "Board"
-                    ],
-                    [
-                      "Board", "CEO"
-                    ],
-                    [
-                      "CEO", "CTO"
-                    ],
-                    [
-                      "CEO", "CPO"
-                    ],
-                    [
-                      "CEO", "CSO"
-                    ],
-                    [
-                      "CEO", "HR"
-                    ],
-                    [
-                      "CTO", "Product"
-                    ],
-                    [
-                      "CTO", "Web"
-                    ],
-                    [
-                      "CSO", "Sales"
-                    ],
-                    [
-                      "HR", "Market"
-                    ],
-                    [
-                      "CSO", "Market"
-                    ],
-                    [
-                      "HR", "Market"
-                    ],
-                    [
-                      "CTO", "Market"
-                    ],
-                    [
-                      "Shareholders", "Board"
-                    ],
-                    [
-                      "Board", "CEO"
-                    ],
-                    [
-                      "CEO", "CTO"
-                    ],
-                    [
-                      "CEO", "CPO"
-                    ],
-                    [
-                      "CEO", "CSO"
-                    ],
-                    [
-                      "CEO", "HR"
-                    ],
-                    [
-                      "CTO", "Product"
-                    ],
-                    [
-                      "CTO", "Web"
-                    ],
-                    [
-                      "CSO", "Sales"
-                    ],
-                    [
-                      "HR", "Market"
-                    ],
-                    [
-                      "CSO", "Market"
-                    ],
-                    [
-                      "HR", "Market"
-                    ],
-                    [
-                      "CTO", "Market"
-                    ],
-                    [
-                      "Shareholders", "Board"
-                    ],
-                    [
-                      "Board", "CEO"
-                    ],
-                    [
-                      "CEO", "CTO"
-                    ],
-                    [
-                      "CEO", "CPO"
-                    ],
-                    [
-                      "CEO", "CSO"
-                    ],
-                    [
-                      "CEO", "HR"
-                    ],
-                    [
-                      "CTO", "Product"
-                    ],
-                    [
-                      "CTO", "Web"
-                    ],
-                    [
-                      "CSO", "Sales"
-                    ],
-                    [
-                      "HR", "Market"
-                    ],
-                    [
-                      "CSO", "Market"
-                    ],
-                    [
-                      "HR", "Market"
-                    ],
-                    [
-                      "CTO", "Market"
-                    ],
-                    [
-                      "Shareholders", "Board"
-                    ],
-                    [
-                      "Board", "CEO"
-                    ],
-                    [
-                      "CEO", "CTO"
-                    ],
-                    [
-                      "CEO", "CPO"
-                    ],
-                    [
-                      "CEO", "CSO"
-                    ],
-                    [
-                      "CEO", "HR"
-                    ],
-                    [
-                      "CTO", "Product"
-                    ],
-                    [
-                      "CTO", "Web"
-                    ],
-                    [
-                      "CSO", "Sales"
-                    ],
-                    [
-                      "HR", "Market"
-                    ],
-                    [
-                      "CSO", "Market"
-                    ],
-                    [
-                      "HR", "Market"
-                    ],
-                    [
-                      "CTO", "Market"
-                    ],
-                    [
-                      "Shareholders", "Board"
-                    ],
-                    [
-                      "Board", "CEO"
-                    ],
-                    [
-                      "CEO", "CTO"
-                    ],
-                    [
-                      "CEO", "CPO"
-                    ],
-                    [
-                      "CEO", "CSO"
-                    ],
-                    [
-                      "CEO", "HR"
-                    ],
-                    [
-                      "CTO", "Product"
-                    ],
-                    [
-                      "CTO", "Web"
-                    ],
-                    [
-                      "CSO", "Sales"
-                    ],
-                    [
-                      "HR", "Market"
-                    ],
-                    [
-                      "CSO", "Market"
-                    ],
-                    [
-                      "HR", "Market"
-                    ],
-                    [
-                      "CTO", "Market"
-                    ],
-                    ],
-                    levels: [ 
-                      OrganizationSeriesLevelOptions( 
-                      ),
-                    ],
-                    nodes: [ 
-                      OrganizationSeriesNodeOptions( 
-                      ),
-                    ],
-                      color: "#007ad0", 
-                    dataLabels: [ 
-                      OrganizationDataLabelOptions( 
-                          color: "white", 
-                      ),
-                    ],
-                      borderColor: "white", 
-                      nodeWidth: "auto", 
-                  ),
-                ],
-                tooltip: TooltipOptions(
-                    outside: true, 
-                ),
-                exporting: ExportingOptions(
-                    allowHTML: true, 
-                    sourceWidth: 800, 
-                    sourceHeight: 600, 
-                ),
-                xAxis: [ 
-                  XAxisOptions( 
-                  ),
-                ],
-                yAxis: [ 
-                  YAxisOptions( 
-                  ),
-                ],
-              )
-            )
+              ],
+              tooltip: HighchartsTooltipOptions(
+                outside: true,
+              ),
+              exporting: HighchartsExportingOptions(
+                allowHTML: true,
+                sourceWidth: 800,
+                sourceHeight: 600,
+              ),
+            ))
           ],
         ),
       ),
     );
   }
 }
-
-

@@ -1,20 +1,9 @@
-
-/** 
+/**
  * Highcharts Demo
  */
 
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/highcharts.dart';
-import 'package:highcharts_flutter/types/ChartOptions.dart';
-import 'package:highcharts_flutter/types/TitleOptions.dart';
-import 'package:highcharts_flutter/types/XAxisOptions.dart';
-import 'package:highcharts_flutter/types/YAxisOptions.dart';
-import 'package:highcharts_flutter/types/LegendOptions.dart';
-import 'package:highcharts_flutter/types/HighchartsPlotOptions.dart';
-import 'package:highcharts_flutter/types/SeriesOptions.dart';
-import 'package:highcharts_flutter/types/DataLabelOptions.dart';
-import 'package:highcharts_flutter/types/BarSeriesOptions.dart';
-import 'package:highcharts_flutter/types/BarSeries.dart';
 
 void main() {
   runApp(const MyApp());
@@ -57,77 +46,62 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            HighchartsChart(
-              HighchartsOptions(
-                chart: ChartOptions(
-                    type: "bar", 
+            HighchartsChart(HighchartsOptions(
+              chart: HighchartsChartOptions(
+                type: "bar",
+              ),
+              title: HighchartsTitleOptions(
+                text: "UEFA CL top scorers by season",
+              ),
+              legend: HighchartsLegendOptions(
+                reversed: true,
+              ),
+              plotOptions: HighchartsPlotOptions(
+                series: HighchartsSeriesOptions(
+                  stacking: "normal",
+                  dataLabels: [
+                    HighchartsSeriesDataLabelsOptions(
+                      enabled: true,
+                    ),
+                  ],
                 ),
-                title: TitleOptions(
-                    text: "UEFA CL top scorers by season", 
+              ),
+              series: [
+                HighchartsBarSeries(
+                  name: "Cristiano Ronaldo",
+                  data: [
+                    [4],
+                    [4],
+                    [6],
+                    [15],
+                    [12],
+                  ],
                 ),
-                xAxis: [ 
-                  XAxisOptions( 
-                  ),
-                ],
-                yAxis: [ 
-                  YAxisOptions( 
-                  ),
-                ],
-                legend: LegendOptions(
-                    reversed: true, 
+                HighchartsBarSeries(
+                  name: "Lionel Messi",
+                  data: [
+                    [5],
+                    [3],
+                    [12],
+                    [6],
+                    [11],
+                  ],
                 ),
-                plotOptions: HighchartsPlotOptions(
-                  series: SeriesOptions(
-                      stacking: "normal", 
-                    dataLabels: [ 
-                      DataLabelOptions( 
-                          enabled: true, 
-                      ),
-                    ],
-                  ),
+                HighchartsBarSeries(
+                  name: "Robert Lewandowski",
+                  data: [
+                    [5],
+                    [15],
+                    [8],
+                    [5],
+                    [8],
+                  ],
                 ),
-                series: [ 
-                  BarSeries( 
-                //options: BarSeriesOptions()
-                      name: "Cristiano Ronaldo", 
-                    data: [ 
-                      [4], 
-                      [4], 
-                      [6], 
-                      [15], 
-                      [12], 
-                    ],
-                  ),
-                  BarSeries( 
-                //options: BarSeriesOptions()
-                      name: "Lionel Messi", 
-                    data: [ 
-                      [5], 
-                      [3], 
-                      [12], 
-                      [6], 
-                      [11], 
-                    ],
-                  ),
-                  BarSeries( 
-                //options: BarSeriesOptions()
-                      name: "Robert Lewandowski", 
-                    data: [ 
-                      [5], 
-                      [15], 
-                      [8], 
-                      [5], 
-                      [8], 
-                    ],
-                  ),
-                ],
-              )
-            )
+              ],
+            ))
           ],
         ),
       ),
     );
   }
 }
-
-

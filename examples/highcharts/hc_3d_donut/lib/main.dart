@@ -1,19 +1,10 @@
 
-/** 
+/**
  * Highcharts Demo
  */
 
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/highcharts.dart';
-import 'package:highcharts_flutter/types/ChartOptions.dart';
-import 'package:highcharts_flutter/types/Options.dart';
-import 'package:highcharts_flutter/types/TitleOptions.dart';
-import 'package:highcharts_flutter/types/SubtitleOptions.dart';
-import 'package:highcharts_flutter/types/HighchartsPlotOptions.dart';
-import 'package:highcharts_flutter/types/PieSeriesOptions.dart';
-import 'package:highcharts_flutter/types/PieSeries.dart';
-import 'package:highcharts_flutter/types/XAxisOptions.dart';
-import 'package:highcharts_flutter/types/YAxisOptions.dart';
 
 void main() {
   runApp(const MyApp());
@@ -58,30 +49,30 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             HighchartsChart(
               HighchartsOptions(
-                chart: ChartOptions(
-                    type: "pie", 
-                  options3d: Options(
+                chart: HighchartsChartOptions(
+                    type: "pie",
+                  options3d: HighchartsChart3DOptions(
                   ),
                 ),
-                title: TitleOptions(
-                    text: "Beijing 2022 gold medals by country", 
-                    align: "left", 
+                title: HighchartsTitleOptions(
+                    text: "Beijing 2022 gold medals by country",
+                    align: "left",
                 ),
-                subtitle: SubtitleOptions(
-                    text: "3D donut in Highcharts", 
-                    align: "left", 
+                subtitle: HighchartsSubtitleOptions(
+                    text: "3D donut in Highcharts",
+                    align: "left",
                 ),
                 plotOptions: HighchartsPlotOptions(
-                  pie: PieSeriesOptions(
-                      innerSize: "100", 
-                      depth: 45, 
+                  pie: HighchartsPieSeriesOptions(
+                      innerSize: "100",
+                      depth: 45,
                   ),
                 ),
-                series: [ 
-                  PieSeries( 
-                //options: PieSeriesOptions()
-                      name: "Medals", 
-                    data: [ 
+                series: [
+                  HighchartsPieSeries(
+                    options: HighchartsPieSeriesOptions(),
+                      name: "Medals",
+                    data: [
                     [
                       "Norway", 16
                     ],
@@ -328,12 +319,12 @@ class _MyHomePageState extends State<MyHomePage> {
                     ],
                   ),
                 ],
-                xAxis: [ 
-                  XAxisOptions( 
+                xAxis: [
+                  HighchartsXAxisOptions(
                   ),
                 ],
-                yAxis: [ 
-                  YAxisOptions( 
+                yAxis: [
+                  HighchartsYAxisOptions(
                   ),
                 ],
               )

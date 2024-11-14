@@ -1,18 +1,10 @@
 
-/** 
+/**
  * Highcharts Demo
  */
 
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/highcharts.dart';
-import 'package:highcharts_flutter/types/ChartOptions.dart';
-import 'package:highcharts_flutter/types/TitleOptions.dart';
-import 'package:highcharts_flutter/types/XAxisOptions.dart';
-import 'package:highcharts_flutter/types/YAxisOptions.dart';
-import 'package:highcharts_flutter/types/TooltipOptions.dart';
-import 'package:highcharts_flutter/types/HighchartsPlotOptions.dart';
-import 'package:highcharts_flutter/types/ColumnSeriesOptions.dart';
-import 'package:highcharts_flutter/types/ColumnSeries.dart';
 
 void main() {
   runApp(const MyApp());
@@ -57,64 +49,52 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             HighchartsChart(
               HighchartsOptions(
-                chart: ChartOptions(
-                    type: "column", 
+                chart: HighchartsChartOptions(
+                  type: "column",
                 ),
-                title: TitleOptions(
-                    text: "Olympic Games all-time medal table, grouped by continent", 
-                    align: "left", 
+                title: HighchartsTitleOptions(
+                  text: "Olympic Games all-time medal table, grouped by continent",
+                  align: "left",
                 ),
-                xAxis: [ 
-                  XAxisOptions( 
-                  ),
-                ],
-                yAxis: [ 
-                  YAxisOptions( 
-                  ),
-                ],
-                tooltip: TooltipOptions(
-                    format: "<b>{key}</b><br/>{series.name}: {y}<br/>Total: {point.stackTotal}", 
+                tooltip: HighchartsTooltipOptions(
+                    format: "<b>{key}</b><br/>{series.name}: {y}<br/>Total: {point.stackTotal}",
                 ),
                 plotOptions: HighchartsPlotOptions(
-                  column: ColumnSeriesOptions(
-                      stacking: "normal", 
+                  column: HighchartsColumnSeriesOptions(
+                    stacking: "normal",
                   ),
                 ),
-                series: [ 
-                  ColumnSeries( 
-                //options: ColumnSeriesOptions()
-                      name: "Norway", 
-                    data: [ 
-                      [148], 
-                      [133], 
-                      [124], 
+                series: [
+                  HighchartsColumnSeries(
+                    name: "Norway",
+                    data: [
+                      [148],
+                      [133],
+                      [124],
                     ],
                   ),
-                  ColumnSeries( 
-                //options: ColumnSeriesOptions()
-                      name: "Germany", 
-                    data: [ 
-                      [102], 
-                      [98], 
-                      [65], 
+                  HighchartsColumnSeries(
+                    name: "Germany",
+                    data: [
+                      [102],
+                      [98],
+                      [65],
                     ],
                   ),
-                  ColumnSeries( 
-                //options: ColumnSeriesOptions()
-                      name: "United States", 
-                    data: [ 
-                      [113], 
-                      [122], 
-                      [95], 
+                  HighchartsColumnSeries(
+                    name: "United States",
+                    data: [
+                      [113],
+                      [122],
+                      [95],
                     ],
                   ),
-                  ColumnSeries( 
-                //options: ColumnSeriesOptions()
-                      name: "Canada", 
-                    data: [ 
-                      [77], 
-                      [72], 
-                      [80], 
+                  HighchartsColumnSeries(
+                    name: "Canada",
+                    data: [
+                      [77],
+                      [72],
+                      [80],
                     ],
                   ),
                 ],

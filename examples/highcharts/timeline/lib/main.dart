@@ -1,21 +1,10 @@
 
-/** 
+/**
  * Highcharts Demo
  */
 
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/highcharts.dart';
-import 'package:highcharts_flutter/types/ChartOptions.dart';
-import 'package:highcharts_flutter/types/AccessibilityOptions.dart';
-import 'package:highcharts_flutter/types/AccessibilityScreenReaderSectionOptions.dart';
-import 'package:highcharts_flutter/types/AccessibilityPointOptions.dart';
-import 'package:highcharts_flutter/types/XAxisOptions.dart';
-import 'package:highcharts_flutter/types/YAxisOptions.dart';
-import 'package:highcharts_flutter/types/TitleOptions.dart';
-import 'package:highcharts_flutter/types/SubtitleOptions.dart';
-import 'package:highcharts_flutter/types/TimelineSeriesOptions.dart';
-import 'package:highcharts_flutter/types/TimelineSeries.dart';
-import 'package:highcharts_flutter/types/TimelinePointOptions.dart';
 
 void main() {
   runApp(const MyApp());
@@ -60,35 +49,26 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             HighchartsChart(
               HighchartsOptions(
-                chart: ChartOptions(
-                    type: "timeline", 
+                chart: HighchartsChartOptions(
+                    type: "timeline",
                 ),
-                accessibility: AccessibilityOptions(
-                  screenReaderSection: AccessibilityScreenReaderSectionOptions(
-                      beforeChartFormat: "<h5>{chartTitle}</h5><div>{typeDescription}</div><div>{chartSubtitle}</div><div>{chartLongdesc}</div><div>{viewTableButton}</div>", 
+                accessibility: HighchartsAccessibilityOptions(
+                  screenReaderSection: HighchartsAccessibilityScreenReaderSectionOptions(
+                      beforeChartFormat: "<h5>{chartTitle}</h5><div>{typeDescription}</div><div>{chartSubtitle}</div><div>{chartLongdesc}</div><div>{viewTableButton}</div>",
                   ),
-                  point: AccessibilityPointOptions(
-                      valueDescriptionFormat: "{index}. {point.label}. {point.description}.", 
+                  point: HighchartsAccessibilityPointOptions(
+                      valueDescriptionFormat: "{index}. {point.label}. {point.description}.",
                   ),
                 ),
-                xAxis: [ 
-                  XAxisOptions( 
-                  ),
-                ],
-                yAxis: [ 
-                  YAxisOptions( 
-                  ),
-                ],
-                title: TitleOptions(
-                    text: "Timeline of Space Exploration", 
+                title: HighchartsTitleOptions(
+                    text: "Timeline of Space Exploration",
                 ),
-                subtitle: SubtitleOptions(
-                    text: "Info source: <a href=\"https://en.wikipedia.org/wiki/Timeline_of_space_exploration\">www.wikipedia.org</a>", 
+                subtitle: HighchartsSubtitleOptions(
+                    text: "Info source: <a href=\"https://en.wikipedia.org/wiki/Timeline_of_space_exploration\">www.wikipedia.org</a>",
                 ),
-                series: [ 
-                  TimelineSeries( 
-                //options: TimelineSeriesOptions()
-                    data: [ 
+                series: [
+                  HighchartsTimelineSeries(
+                    data: [
                     [
                       false, false, false, false, false, false
                     ],

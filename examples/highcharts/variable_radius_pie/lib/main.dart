@@ -1,18 +1,10 @@
 
-/** 
+/**
  * Highcharts Demo
  */
 
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/highcharts.dart';
-import 'package:highcharts_flutter/types/ChartOptions.dart';
-import 'package:highcharts_flutter/types/TitleOptions.dart';
-import 'package:highcharts_flutter/types/TooltipOptions.dart';
-import 'package:highcharts_flutter/types/VariablePieSeriesOptions.dart';
-import 'package:highcharts_flutter/types/VariablePieSeries.dart';
-import 'package:highcharts_flutter/types/BorderRadiusOptionsObject.dart';
-import 'package:highcharts_flutter/types/XAxisOptions.dart';
-import 'package:highcharts_flutter/types/YAxisOptions.dart';
 
 void main() {
   runApp(const MyApp());
@@ -57,133 +49,125 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             HighchartsChart(
               HighchartsOptions(
-                chart: ChartOptions(
-                    type: "variablepie", 
+                chart: HighchartsChartOptions(
+                    type: "variablepie",
                 ),
-                title: TitleOptions(
-                    text: "Countries compared by population density and total area, 2022.", 
-                    align: "left", 
+                title: HighchartsTitleOptions(
+                    text: "Countries compared by population density and total area, 2022.",
+                    align: "left",
                 ),
-                tooltip: TooltipOptions(
-                    headerFormat: "", 
-                    pointFormat: "<span style=\"color:{point.color}\">●</span> <b> {point.name}</b><br/>Area (square km): <b>{point.y}</b><br/>Population density (people per square km): <b>{point.z}</b><br/>", 
+                tooltip: HighchartsTooltipOptions(
+                    headerFormat: "",
+                    pointFormat: "<span style=\"color:{point.color}\">●</span> <b> {point.name}</b><br/>Area (square km): <b>{point.y}</b><br/>Population density (people per square km): <b>{point.z}</b><br/>",
                 ),
-                series: [ 
-                  VariablePieSeries( 
-                //options: VariablePieSeriesOptions()
-                      minPointSize: "10", 
-                      innerSize: "20%", 
-                      zMin: 0, 
-                      name: "countries", 
-                     borderRadius: BorderRadiusOptionsObject(),
-                    data: [ 
-                    [
+                series: [
+                  HighchartsVariablePieSeries(
+                    name: "countries",
+                    options: HighchartsVariablePieSeriesOptions(
+                      minPointSize: "10",
+                      innerSize: "20%",
+                      zMin: 0,
+                    ),
+                    data: [
+                      [
+                      ],
+                      [
+                      ],
+                      [
+                      ],
+                      [
+                      ],
+                      [
+                      ],
+                      [
+                      ],
+                      [
+                      ],
+                      [
+                      ],
+                      [
+                      ],
+                      [
+                      ],
+                      [
+                      ],
+                      [
+                      ],
+                      [
+                      ],
+                      [
+                      ],
+                      [
+                      ],
+                      [
+                      ],
+                      [
+                      ],
+                      [
+                      ],
+                      [
+                      ],
+                      [
+                      ],
+                      [
+                      ],
+                      [
+                      ],
+                      [
+                      ],
+                      [
+                      ],
+                      [
+                      ],
+                      [
+                      ],
+                      [
+                      ],
+                      [
+                      ],
+                      [
+                      ],
+                      [
+                      ],
+                      [
+                      ],
+                      [
+                      ],
+                      [
+                      ],
+                      [
+                      ],
+                      [
+                      ],
+                      [
+                      ],
+                      [
+                      ],
+                      [
+                      ],
+                      [
+                      ],
+                      [
+                      ],
+                      [
+                      ],
+                      [
+                      ],
+                      [
+                      ],
+                      [
+                      ],
+                      [
+                      ],
+                      [
+                      ],
+                      [
+                      ],
+                      [
+                      ],
+                      [
+                      ],
                     ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    ],
-                  ),
-                ],
-                xAxis: [ 
-                  XAxisOptions( 
-                  ),
-                ],
-                yAxis: [ 
-                  YAxisOptions( 
                   ),
                 ],
               )

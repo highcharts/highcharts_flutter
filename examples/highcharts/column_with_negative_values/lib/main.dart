@@ -1,19 +1,10 @@
 
-/** 
+/**
  * Highcharts Demo
  */
 
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/highcharts.dart';
-import 'package:highcharts_flutter/types/ChartOptions.dart';
-import 'package:highcharts_flutter/types/TitleOptions.dart';
-import 'package:highcharts_flutter/types/XAxisOptions.dart';
-import 'package:highcharts_flutter/types/CreditsOptions.dart';
-import 'package:highcharts_flutter/types/HighchartsPlotOptions.dart';
-import 'package:highcharts_flutter/types/ColumnSeriesOptions.dart';
-import 'package:highcharts_flutter/types/BorderRadiusOptionsObject.dart';
-import 'package:highcharts_flutter/types/ColumnSeries.dart';
-import 'package:highcharts_flutter/types/YAxisOptions.dart';
 
 void main() {
   runApp(const MyApp());
@@ -58,61 +49,56 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             HighchartsChart(
               HighchartsOptions(
-                chart: ChartOptions(
-                    type: "column", 
+                chart: HighchartsChartOptions(
+                    type: "column",
                 ),
-                title: TitleOptions(
-                    text: "Column chart with negative values", 
+                title: HighchartsTitleOptions(
+                    text: "Column chart with negative values",
                 ),
-                xAxis: [ 
-                  XAxisOptions( 
+                xAxis: [
+                  HighchartsXAxisOptions(
                   ),
                 ],
-                credits: CreditsOptions(
-                    enabled: false, 
+                credits: HighchartsCreditsOptions(
+                    enabled: false,
                 ),
-                plotOptions: HighchartsPlotOptions(
-                  column: ColumnSeriesOptions(
-                     borderRadius: BorderRadiusOptionsObject(),
-                  ),
-                ),
-                series: [ 
-                  ColumnSeries( 
-                //options: ColumnSeriesOptions()
-                      name: "John", 
-                    data: [ 
-                      [5], 
-                      [3], 
-                      [4], 
-                      [7], 
-                      [2], 
+                series: [
+                  HighchartsColumnSeries(
+                    options: HighchartsColumnSeriesOptions(),
+                      name: "John",
+                    data: [
+                      [5],
+                      [3],
+                      [4],
+                      [7],
+                      [2],
                     ],
                   ),
-                  ColumnSeries( 
-                //options: ColumnSeriesOptions()
-                      name: "Jane", 
-                    data: [ 
-                      [2], 
-                      [-2], 
-                      [-3], 
-                      [2], 
-                      [1], 
+                  HighchartsColumnSeries(
+                    options: HighchartsColumnSeriesOptions(),
+                      name: "Jane",
+                    data: [
+                      [2],
+                      [-2],
+                      [-3],
+                      [2],
+                      [1],
                     ],
                   ),
-                  ColumnSeries( 
-                //options: ColumnSeriesOptions()
-                      name: "Joe", 
-                    data: [ 
-                      [3], 
-                      [4], 
-                      [4], 
-                      [-2], 
-                      [5], 
+                  HighchartsColumnSeries(
+                    options: HighchartsColumnSeriesOptions(),
+                      name: "Joe",
+                    data: [
+                      [3],
+                      [4],
+                      [4],
+                      [-2],
+                      [5],
                     ],
                   ),
                 ],
-                yAxis: [ 
-                  YAxisOptions( 
+                yAxis: [
+                  HighchartsYAxisOptions(
                   ),
                 ],
               )

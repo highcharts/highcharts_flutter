@@ -1,20 +1,10 @@
 
-/** 
+/**
  * Highcharts Demo
  */
 
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/highcharts.dart';
-import 'package:highcharts_flutter/types/ChartOptions.dart';
-import 'package:highcharts_flutter/types/TitleOptions.dart';
-import 'package:highcharts_flutter/types/SubtitleOptions.dart';
-import 'package:highcharts_flutter/types/XAxisOptions.dart';
-import 'package:highcharts_flutter/types/YAxisOptions.dart';
-import 'package:highcharts_flutter/types/LegendOptions.dart';
-import 'package:highcharts_flutter/types/TooltipOptions.dart';
-import 'package:highcharts_flutter/types/HighchartsPlotOptions.dart';
-import 'package:highcharts_flutter/types/SplineSeriesOptions.dart';
-import 'package:highcharts_flutter/types/SplineSeries.dart';
 
 void main() {
   runApp(const MyApp());
@@ -59,51 +49,38 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             HighchartsChart(
               HighchartsOptions(
-                chart: ChartOptions(
-                    type: "spline", 
-                    inverted: true, 
+                chart: HighchartsChartOptions(
+                  type: "spline",
+                  inverted: true,
                 ),
-                title: TitleOptions(
-                    text: "Atmosphere Temperature by Altitude", 
-                    align: "left", 
+                title: HighchartsTitleOptions(
+                  text: "Atmosphere Temperature by Altitude",
+                  align: "left",
                 ),
-                subtitle: SubtitleOptions(
-                    text: "According to the Standard Atmosphere Model", 
-                    align: "left", 
+                subtitle: HighchartsSubtitleOptions(
+                  text: "According to the Standard Atmosphere Model",
+                  align: "left",
                 ),
-                xAxis: [ 
-                  XAxisOptions( 
-                  ),
-                ],
-                yAxis: [ 
-                  YAxisOptions( 
-                  ),
-                ],
-                legend: LegendOptions(
-                    enabled: false, 
+                legend: HighchartsLegendOptions(
+                  enabled: false,
                 ),
-                tooltip: TooltipOptions(
-                    headerFormat: "<b>{series.name}</b><br/>", 
-                    pointFormat: "{point.x} km: {point.y}°C", 
+                tooltip: HighchartsTooltipOptions(
+                  headerFormat: "<b>{series.name}</b><br/>",
+                  pointFormat: "{point.x} km: {point.y}°C",
                 ),
-                plotOptions: HighchartsPlotOptions(
-                  spline: SplineSeriesOptions(
-                  ),
-                ),
-                series: [ 
-                  SplineSeries( 
-                //options: SplineSeriesOptions()
-                      name: "Temperature", 
-                    data: [ 
-                      [0,15], 
-                      [10,-50], 
-                      [20,-56.5], 
-                      [30,-46.5], 
-                      [40,-22.1], 
-                      [50,-2.5], 
-                      [60,-27.7], 
-                      [70,-55.7], 
-                      [80,-76.5], 
+                series: [
+                  HighchartsSplineSeries(
+                    name: "Temperature",
+                    data: [
+                      [0,15],
+                      [10,-50],
+                      [20,-56.5],
+                      [30,-46.5],
+                      [40,-22.1],
+                      [50,-2.5],
+                      [60,-27.7],
+                      [70,-55.7],
+                      [80,-76.5],
                     ],
                   ),
                 ],

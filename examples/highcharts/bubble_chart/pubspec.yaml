@@ -1,7 +1,7 @@
 
 name: bubble_chart
 description: Bubble chart
-publish_to: 'none' 
+publish_to: 'none'
 
 version: 1.0.0+1
 

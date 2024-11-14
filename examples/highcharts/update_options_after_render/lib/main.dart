@@ -1,17 +1,10 @@
 
-/** 
+/**
  * Highcharts Demo
  */
 
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/highcharts.dart';
-import 'package:highcharts_flutter/types/TitleOptions.dart';
-import 'package:highcharts_flutter/types/SubtitleOptions.dart';
-import 'package:highcharts_flutter/types/XAxisOptions.dart';
-import 'package:highcharts_flutter/types/ColumnSeriesOptions.dart';
-import 'package:highcharts_flutter/types/ColumnSeries.dart';
-import 'package:highcharts_flutter/types/BorderRadiusOptionsObject.dart';
-import 'package:highcharts_flutter/types/YAxisOptions.dart';
 
 void main() {
   runApp(const MyApp());
@@ -56,42 +49,34 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             HighchartsChart(
               HighchartsOptions(
-                title: TitleOptions(
-                    text: "Unemployment rates in engineering and ICT subjects, 2021", 
-                    align: "left", 
+                title: HighchartsTitleOptions(
+                    text: "Unemployment rates in engineering and ICT subjects, 2021",
+                    align: "left",
                 ),
-                subtitle: SubtitleOptions(
-                    text: "Chart option: Plain | Source: <a href=\"https://www.nav.no/no/nav-og-samfunn/statistikk/arbeidssokere-og-stillinger-statistikk/helt-ledige\"target=\"_blank\">NAV</a>", 
-                    align: "left", 
+                subtitle: HighchartsSubtitleOptions(
+                    text: "Chart option: Plain | Source: <a href=\"https://www.nav.no/no/nav-og-samfunn/statistikk/arbeidssokere-og-stillinger-statistikk/helt-ledige\"target=\"_blank\">NAV</a>",
+                    align: "left",
                 ),
-                xAxis: [ 
-                  XAxisOptions( 
-                  ),
-                ],
-                series: [ 
-                  ColumnSeries( 
-                //options: ColumnSeriesOptions()
-                      name: "Unemployed", 
-                     borderRadius: BorderRadiusOptionsObject(),
-                    data: [ 
-                      [5412], 
-                      [4977], 
-                      [4730], 
-                      [4437], 
-                      [3947], 
-                      [3707], 
-                      [4143], 
-                      [3609], 
-                      [3311], 
-                      [3072], 
-                      [2899], 
-                      [2887], 
+                series: [
+                  HighchartsColumnSeries(
+                    name: "Unemployed",
+                    options: HighchartsColumnSeriesOptions(
+                      showInLegend: false,
+                    ),
+                    data: [
+                      [5412],
+                      [4977],
+                      [4730],
+                      [4437],
+                      [3947],
+                      [3707],
+                      [4143],
+                      [3609],
+                      [3311],
+                      [3072],
+                      [2899],
+                      [2887],
                     ],
-                      showInLegend: false, 
-                  ),
-                ],
-                yAxis: [ 
-                  YAxisOptions( 
                   ),
                 ],
               )

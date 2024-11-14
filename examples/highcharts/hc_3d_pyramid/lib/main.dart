@@ -1,20 +1,9 @@
-
-/** 
+/**
  * Highcharts Demo
  */
 
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/highcharts.dart';
-import 'package:highcharts_flutter/types/ChartOptions.dart';
-import 'package:highcharts_flutter/types/Options.dart';
-import 'package:highcharts_flutter/types/TitleOptions.dart';
-import 'package:highcharts_flutter/types/HighchartsPlotOptions.dart';
-import 'package:highcharts_flutter/types/SeriesOptions.dart';
-import 'package:highcharts_flutter/types/DataLabelOptions.dart';
-import 'package:highcharts_flutter/types/Pyramid3DSeriesOptions.dart';
-import 'package:highcharts_flutter/types/Pyramid3DSeries.dart';
-import 'package:highcharts_flutter/types/XAxisOptions.dart';
-import 'package:highcharts_flutter/types/YAxisOptions.dart';
 
 void main() {
   runApp(const MyApp());
@@ -57,127 +46,70 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            HighchartsChart(
-              HighchartsOptions(
-                chart: ChartOptions(
-                    type: "pyramid3d", 
-                  options3d: Options(
-                  ),
+            HighchartsChart(HighchartsOptions(
+              chart: HighchartsChartOptions(
+                type: "pyramid3d",
+                options3d: HighchartsChart3DOptions(),
+              ),
+              title: HighchartsTitleOptions(
+                text: "Highcharts Pyramid3D Chart",
+              ),
+              plotOptions: HighchartsPlotOptions(
+                series: HighchartsSeriesOptions(
+                  dataLabels: [
+                    HighchartsSeriesDataLabelsOptions(
+                      enabled: true,
+                      format: "<b>{point.name}</b> ({point.y:,.0f})",
+                      allowOverlap: true,
+                      x: 10,
+                      y: -5,
+                    ),
+                  ],
                 ),
-                title: TitleOptions(
-                    text: "Highcharts Pyramid3D Chart", 
+              ),
+              series: [
+                HighchartsPyramid3DSeries(
+                  options: HighchartsPyramid3DSeriesOptions(),
+                  name: "Unique users",
+                  data: [
+                    ["Website visits", 15654],
+                    ["Downloads", 4064],
+                    ["Requested price list", 1987],
+                    ["Invoice sent", 976],
+                    ["Finalized", 846],
+                    ["Website visits", 15654],
+                    ["Downloads", 4064],
+                    ["Requested price list", 1987],
+                    ["Invoice sent", 976],
+                    ["Finalized", 846],
+                    ["Website visits", 15654],
+                    ["Downloads", 4064],
+                    ["Requested price list", 1987],
+                    ["Invoice sent", 976],
+                    ["Finalized", 846],
+                    ["Website visits", 15654],
+                    ["Downloads", 4064],
+                    ["Requested price list", 1987],
+                    ["Invoice sent", 976],
+                    ["Finalized", 846],
+                    ["Website visits", 15654],
+                    ["Downloads", 4064],
+                    ["Requested price list", 1987],
+                    ["Invoice sent", 976],
+                    ["Finalized", 846],
+                  ],
                 ),
-                plotOptions: HighchartsPlotOptions(
-                  series: SeriesOptions(
-                    dataLabels: [ 
-                      DataLabelOptions( 
-                          enabled: true, 
-                          format: "<b>{point.name}</b> ({point.y:,.0f})", 
-                          allowOverlap: true, 
-                          x: 10, 
-                          y: -5, 
-                      ),
-                    ],
-                  ),
-                ),
-                series: [ 
-                  Pyramid3DSeries( 
-                //options: Pyramid3DSeriesOptions()
-                      name: "Unique users", 
-                    data: [ 
-                    [
-                      "Website visits", 15654
-                    ],
-                    [
-                      "Downloads", 4064
-                    ],
-                    [
-                      "Requested price list", 1987
-                    ],
-                    [
-                      "Invoice sent", 976
-                    ],
-                    [
-                      "Finalized", 846
-                    ],
-                    [
-                      "Website visits", 15654
-                    ],
-                    [
-                      "Downloads", 4064
-                    ],
-                    [
-                      "Requested price list", 1987
-                    ],
-                    [
-                      "Invoice sent", 976
-                    ],
-                    [
-                      "Finalized", 846
-                    ],
-                    [
-                      "Website visits", 15654
-                    ],
-                    [
-                      "Downloads", 4064
-                    ],
-                    [
-                      "Requested price list", 1987
-                    ],
-                    [
-                      "Invoice sent", 976
-                    ],
-                    [
-                      "Finalized", 846
-                    ],
-                    [
-                      "Website visits", 15654
-                    ],
-                    [
-                      "Downloads", 4064
-                    ],
-                    [
-                      "Requested price list", 1987
-                    ],
-                    [
-                      "Invoice sent", 976
-                    ],
-                    [
-                      "Finalized", 846
-                    ],
-                    [
-                      "Website visits", 15654
-                    ],
-                    [
-                      "Downloads", 4064
-                    ],
-                    [
-                      "Requested price list", 1987
-                    ],
-                    [
-                      "Invoice sent", 976
-                    ],
-                    [
-                      "Finalized", 846
-                    ],
-                    ],
-                  ),
-                ],
-                xAxis: [ 
-                  XAxisOptions( 
-                  ),
-                ],
-                yAxis: [ 
-                  YAxisOptions( 
-                  ),
-                ],
-              )
-            )
+              ],
+              xAxis: [
+                HighchartsXAxisOptions(),
+              ],
+              yAxis: [
+                HighchartsYAxisOptions(),
+              ],
+            ))
           ],
         ),
       ),
     );
   }
 }
-
-

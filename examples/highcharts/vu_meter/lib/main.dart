@@ -1,20 +1,10 @@
 
-/** 
+/**
  * Highcharts Demo
  */
 
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/highcharts.dart';
-import 'package:highcharts_flutter/types/ChartOptions.dart';
-import 'package:highcharts_flutter/types/TitleOptions.dart';
-import 'package:highcharts_flutter/types/ExportingOptions.dart';
-import 'package:highcharts_flutter/types/TooltipOptions.dart';
-import 'package:highcharts_flutter/types/YAxisOptions.dart';
-import 'package:highcharts_flutter/types/HighchartsPlotOptions.dart';
-import 'package:highcharts_flutter/types/GaugeSeriesOptions.dart';
-import 'package:highcharts_flutter/types/GaugeSeriesDialOptions.dart';
-import 'package:highcharts_flutter/types/GaugeSeries.dart';
-import 'package:highcharts_flutter/types/XAxisOptions.dart';
 
 void main() {
   runApp(const MyApp());
@@ -59,50 +49,48 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             HighchartsChart(
               HighchartsOptions(
-                chart: ChartOptions(
-                    type: "gauge", 
-                    plotBorderWidth: 1, 
+                chart: HighchartsChartOptions(
+                    type: "gauge",
+                    plotBorderWidth: 1,
                   plotBackgroundImage: '',
-                    height: "200", 
+                    height: "200",
                 ),
-                title: TitleOptions(
-                    text: "VU meter", 
+                title: HighchartsTitleOptions(
+                    text: "VU meter",
                 ),
-                exporting: ExportingOptions(
-                    enabled: false, 
+                exporting: HighchartsExportingOptions(
+                    enabled: false,
                 ),
-                tooltip: TooltipOptions(
-                    enabled: false, 
+                tooltip: HighchartsTooltipOptions(
+                    enabled: false,
                 ),
-                yAxis: [ 
-                  YAxisOptions( 
-                  ),
-                ],
                 plotOptions: HighchartsPlotOptions(
-                  gauge: GaugeSeriesOptions(
-                    dial: GaugeSeriesDialOptions(
-                        radius: "100%", 
+                  gauge: HighchartsGaugeSeriesOptions(
+                    dial: HighchartsGaugeSeriesDialOptions(
+                        radius: "100%",
                     ),
                   ),
                 ),
-                series: [ 
-                  GaugeSeries( 
-                //options: GaugeSeriesOptions()
-                      name: "Channel A", 
-                    data: [ 
-                      [-20], 
+                series: [
+                  HighchartsGaugeSeries(
+                    name: "Channel A",
+                    data: [
+                      [-20],
                     ],
                   ),
-                  GaugeSeries( 
-                //options: GaugeSeriesOptions()
-                      name: "Channel B", 
-                    data: [ 
-                      [-20], 
+                  HighchartsGaugeSeries(
+                    name: "Channel B",
+                    data: [
+                      [-20],
                     ],
                   ),
                 ],
-                xAxis: [ 
-                  XAxisOptions( 
+                xAxis: [
+                  HighchartsXAxisOptions(
+                  ),
+                ],
+                yAxis: [
+                  HighchartsYAxisOptions(
                   ),
                 ],
               )

@@ -1,24 +1,9 @@
-
-/** 
+/**
  * Highcharts Demo
  */
 
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/highcharts.dart';
-import 'package:highcharts_flutter/types/ChartOptions.dart';
-import 'package:highcharts_flutter/types/TitleOptions.dart';
-import 'package:highcharts_flutter/types/SubtitleOptions.dart';
-import 'package:highcharts_flutter/types/AccessibilityOptions.dart';
-import 'package:highcharts_flutter/types/AccessibilityAnnounceNewDataOptions.dart';
-import 'package:highcharts_flutter/types/XAxisOptions.dart';
-import 'package:highcharts_flutter/types/YAxisOptions.dart';
-import 'package:highcharts_flutter/types/LegendOptions.dart';
-import 'package:highcharts_flutter/types/HighchartsPlotOptions.dart';
-import 'package:highcharts_flutter/types/SeriesOptions.dart';
-import 'package:highcharts_flutter/types/DataLabelOptions.dart';
-import 'package:highcharts_flutter/types/TooltipOptions.dart';
-import 'package:highcharts_flutter/types/ColumnSeriesOptions.dart';
-import 'package:highcharts_flutter/types/ColumnSeries.dart';
 
 void main() {
   runApp(const MyApp());
@@ -61,163 +46,111 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            HighchartsChart(
-              HighchartsOptions(
-                chart: ChartOptions(
-                    type: "column", 
+            HighchartsChart(HighchartsOptions(
+              chart: HighchartsChartOptions(
+                type: "column",
+              ),
+              title: HighchartsTitleOptions(
+                align: "left",
+                text: "Browser market shares. January, 2022",
+              ),
+              subtitle: HighchartsSubtitleOptions(
+                align: "left",
+                text:
+                    "Click the columns to view versions. Source: <a href=\"http://statcounter.com\" target=\"_blank\">statcounter.com</a>",
+              ),
+              accessibility: HighchartsAccessibilityOptions(
+                announceNewData: HighchartsAccessibilityAnnounceNewDataOptions(
+                  enabled: true,
                 ),
-                title: TitleOptions(
-                    align: "left", 
-                    text: "Browser market shares. January, 2022", 
+              ),
+              xAxis: [
+                HighchartsXAxisOptions(),
+              ],
+              yAxis: [
+                HighchartsYAxisOptions(),
+              ],
+              legend: HighchartsLegendOptions(
+                enabled: false,
+              ),
+              plotOptions: HighchartsPlotOptions(
+                series: HighchartsSeriesOptions(
+                  borderWidth: 0,
+                  dataLabels: [
+                    HighchartsSeriesDataLabelsOptions(
+                      enabled: true,
+                      format: "{point.y:.1f}%",
+                    ),
+                  ],
                 ),
-                subtitle: SubtitleOptions(
-                    align: "left", 
-                    text: "Click the columns to view versions. Source: <a href=\"http://statcounter.com\" target=\"_blank\">statcounter.com</a>", 
+              ),
+              tooltip: HighchartsTooltipOptions(
+                headerFormat:
+                    "<span style=\"font-size:11px\">{series.name}</span><br>",
+                pointFormat:
+                    "<span style=\"color:{point.color}\">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>",
+              ),
+              series: [
+                HighchartsColumnSeries(
+                  options: HighchartsColumnSeriesOptions(),
+                  name: "Browsers",
+                  data: [
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                  ],
                 ),
-                accessibility: AccessibilityOptions(
-                  announceNewData: AccessibilityAnnounceNewDataOptions(
-                      enabled: true, 
-                  ),
-                ),
-                xAxis: [ 
-                  XAxisOptions( 
-                  ),
-                ],
-                yAxis: [ 
-                  YAxisOptions( 
-                  ),
-                ],
-                legend: LegendOptions(
-                    enabled: false, 
-                ),
-                plotOptions: HighchartsPlotOptions(
-                  series: SeriesOptions(
-                      borderWidth: 0, 
-                    dataLabels: [ 
-                      DataLabelOptions( 
-                          enabled: true, 
-                          format: "{point.y:.1f}%", 
-                      ),
-                    ],
-                  ),
-                ),
-                tooltip: TooltipOptions(
-                    headerFormat: "<span style=\"font-size:11px\">{series.name}</span><br>", 
-                    pointFormat: "<span style=\"color:{point.color}\">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>", 
-                ),
-                series: [ 
-                  ColumnSeries( 
-                //options: ColumnSeriesOptions()
-                      name: "Browsers", 
-                    data: [ 
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    ],
-                  ),
-                ],
-              )
-            )
+              ],
+            ))
           ],
         ),
       ),
     );
   }
 }
-
-

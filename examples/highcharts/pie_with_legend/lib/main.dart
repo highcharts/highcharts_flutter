@@ -1,22 +1,9 @@
-
-/** 
+/**
  * Highcharts Demo
  */
 
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/highcharts.dart';
-import 'package:highcharts_flutter/types/ChartOptions.dart';
-import 'package:highcharts_flutter/types/Generic.dart';
-import 'package:highcharts_flutter/types/TitleOptions.dart';
-import 'package:highcharts_flutter/types/TooltipOptions.dart';
-import 'package:highcharts_flutter/types/AccessibilityOptions.dart';
-import 'package:highcharts_flutter/types/AccessibilityPointOptions.dart';
-import 'package:highcharts_flutter/types/HighchartsPlotOptions.dart';
-import 'package:highcharts_flutter/types/PieSeriesOptions.dart';
-import 'package:highcharts_flutter/types/PieDataLabelOptions.dart';
-import 'package:highcharts_flutter/types/PieSeries.dart';
-import 'package:highcharts_flutter/types/XAxisOptions.dart';
-import 'package:highcharts_flutter/types/YAxisOptions.dart';
 
 void main() {
   runApp(const MyApp());
@@ -59,133 +46,87 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            HighchartsChart(
-              HighchartsOptions(
-                chart: ChartOptions(
-                  plotBackgroundColor: '',
-                  plotBorderWidth: 0,
-                    plotShadow: false, 
-                    type: "pie", 
+            HighchartsChart(HighchartsOptions(
+              chart: HighchartsChartOptions(
+                plotBackgroundColor: '',
+                plotBorderWidth: 0,
+                type: "pie",
+              ),
+              title: HighchartsTitleOptions(
+                text: "Browser market shares in March, 2022",
+                align: "left",
+              ),
+              tooltip: HighchartsTooltipOptions(
+                pointFormat: "{series.name}: <b>{point.percentage:.1f}%</b>",
+              ),
+              accessibility: HighchartsAccessibilityOptions(
+                point: HighchartsAccessibilityPointOptions(
+                  valueSuffix: "%",
                 ),
-                title: TitleOptions(
-                    text: "Browser market shares in March, 2022", 
-                    align: "left", 
+              ),
+              plotOptions: HighchartsPlotOptions(
+                pie: HighchartsPieSeriesOptions(
+                  allowPointSelect: true,
+                  cursor: "pointer",
+                  dataLabels: HighchartsPieSeriesDataLabelsOptions(
+                    enabled: false,
+                  ),
+                  showInLegend: true,
                 ),
-                tooltip: TooltipOptions(
-                    pointFormat: "{series.name}: <b>{point.percentage:.1f}%</b>", 
+              ),
+              series: [
+                HighchartsPieSeries(
+                  name: "Brands",
+                  data: [
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                  ],
                 ),
-                accessibility: AccessibilityOptions(
-                  point: AccessibilityPointOptions(
-                      valueSuffix: "%", 
-                  ),
-                ),
-                plotOptions: HighchartsPlotOptions(
-                  pie: PieSeriesOptions(
-                      allowPointSelect: true, 
-                      cursor: "pointer", 
-                    dataLabels: [ 
-                      PieDataLabelOptions( 
-                          enabled: false, 
-                      ),
-                    ],
-                      showInLegend: true, 
-                  ),
-                ),
-                series: [ 
-                  PieSeries( 
-                //options: PieSeriesOptions()
-                      name: "Brands", 
-                    data: [ 
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    ],
-                  ),
-                ],
-                xAxis: [ 
-                  XAxisOptions( 
-                  ),
-                ],
-                yAxis: [ 
-                  YAxisOptions( 
-                  ),
-                ],
-              )
-            )
+              ],
+              xAxis: [
+                HighchartsXAxisOptions(),
+              ],
+              yAxis: [
+                HighchartsYAxisOptions(),
+              ],
+            ))
           ],
         ),
       ),
     );
   }
 }
-
-

@@ -1,7 +1,7 @@
 
 name: fixed_placement_columns
 description: Fixed placement columns
-publish_to: 'none' 
+publish_to: 'none'
 
 version: 1.0.0+1
 

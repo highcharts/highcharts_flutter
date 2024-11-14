@@ -1,4 +1,6 @@
-library highcharts;
+library highcharts_flutter;
+
+import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
@@ -36,7 +38,7 @@ const String kLocalExamplePage = '''
 <div id="container"></div>
 
 <script>
-Highcharts.chart('container', {
+const chart = Highcharts.chart('container', {
 
     title: {
         text: 'A little chart',
@@ -85,36 +87,37 @@ Highcharts.chart('container', {
 class ChartView extends StatefulWidget {
   ChartView(this.options, { super.key });
 
-  _ChartViewState? state;
+  final dynamic options;
 
-  dynamic options;
+  late final WebViewWidget webView;
+
+  late final WebViewController webViewController;
 
   void refresh () {
-    state!.controller.runJavaScript('UpdateChart(${options.toJSON()}, \'chart\')');
-    print(options.toJSON());
+    webViewController.runJavaScript('chart.update(${jsonEncode(options)})');
+    // print(jsonEncode(options));
   }
 
   @override
-  _ChartViewState createState() {
-    state = _ChartViewState();
-    return state!;
+  State<StatefulWidget> createState() {
+    return _ChartViewState();
   }
 
 }
 
 class _ChartViewState extends State<ChartView> {
 
-  late final WebViewController controller;
+  late final WebViewWidget webView;
 
-  late final WebViewWidget view;
+  late final WebViewController webViewController;
 
   // #docregion webview_widget
   @override
   Widget build(BuildContext context) {
-    widget.state = this;
-    return Container(
-        child: view,
-        height: 400,
+    widget.webView = webView;
+    widget.webViewController = webViewController;
+    return Expanded(
+        child: webView,
     );
   }
   // #enddocregion webview_widget
@@ -134,13 +137,13 @@ class _ChartViewState extends State<ChartView> {
       params = const PlatformWebViewControllerCreationParams();
     }
 
-    controller = WebViewController.fromPlatformCreationParams(params);
+    webViewController = WebViewController.fromPlatformCreationParams(params);
 
-    if (controller.platform is WebKitWebViewController) {
-      (controller.platform as WebKitWebViewController).setInspectable(true);
+    if (webViewController.platform is WebKitWebViewController) {
+      (webViewController.platform as WebKitWebViewController).setInspectable(true);
     }
 
-    controller
+    webViewController
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
       ..setBackgroundColor(const Color(0x00000000))
       ..setNavigationDelegate(
@@ -161,7 +164,7 @@ class _ChartViewState extends State<ChartView> {
       )
       ..loadHtmlString(kLocalExamplePage);
 
-    view = WebViewWidget(controller: controller);
+    webView = WebViewWidget(controller: webViewController);
     // #enddocregion webview_controller
   }
 

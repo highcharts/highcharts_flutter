@@ -1,19 +1,10 @@
 
-/** 
+/**
  * Highcharts Demo
  */
 
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/highcharts.dart';
-import 'package:highcharts_flutter/types/ChartOptions.dart';
-import 'package:highcharts_flutter/types/TitleOptions.dart';
-import 'package:highcharts_flutter/types/SubtitleOptions.dart';
-import 'package:highcharts_flutter/types/XAxisOptions.dart';
-import 'package:highcharts_flutter/types/YAxisOptions.dart';
-import 'package:highcharts_flutter/types/LegendOptions.dart';
-import 'package:highcharts_flutter/types/TooltipOptions.dart';
-import 'package:highcharts_flutter/types/ColumnSeriesOptions.dart';
-import 'package:highcharts_flutter/types/ColumnSeries.dart';
 
 void main() {
   runApp(const MyApp());
@@ -58,34 +49,34 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             HighchartsChart(
               HighchartsOptions(
-                chart: ChartOptions(
-                    type: "column", 
+                chart: HighchartsChartOptions(
+                    type: "column",
                 ),
-                title: TitleOptions(
-                    text: "World's largest cities per 2021", 
+                title: HighchartsTitleOptions(
+                    text: "World's largest cities per 2021",
                 ),
-                subtitle: SubtitleOptions(
-                    text: "Source: <a href=\"https://worldpopulationreview.com/world-cities\" target=\"_blank\">World Population Review</a>", 
+                subtitle: HighchartsSubtitleOptions(
+                    text: "Source: <a href=\"https://worldpopulationreview.com/world-cities\" target=\"_blank\">World Population Review</a>",
                 ),
-                xAxis: [ 
-                  XAxisOptions( 
+                xAxis: [
+                  HighchartsXAxisOptions(
                   ),
                 ],
-                yAxis: [ 
-                  YAxisOptions( 
+                yAxis: [
+                  HighchartsYAxisOptions(
                   ),
                 ],
-                legend: LegendOptions(
-                    enabled: false, 
+                legend: HighchartsLegendOptions(
+                    enabled: false,
                 ),
-                tooltip: TooltipOptions(
-                    pointFormat: "Population in 2021: <b>{point.y:.1f} millions</b>", 
+                tooltip: HighchartsTooltipOptions(
+                    pointFormat: "Population in 2021: <b>{point.y:.1f} millions</b>",
                 ),
-                series: [ 
-                  ColumnSeries( 
-                //options: ColumnSeriesOptions()
-                      name: "Population", 
-                    data: [ 
+                series: [
+                  HighchartsColumnSeries(
+                    options: HighchartsColumnSeriesOptions(),
+                      name: "Population",
+                    data: [
                     [
                       "Tokyo", 37.33
                     ],
