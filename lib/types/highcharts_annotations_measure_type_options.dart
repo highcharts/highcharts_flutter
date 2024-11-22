@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -87,31 +87,31 @@ class HighchartsAnnotationsMeasureTypeOptions extends HighchartsOptionsBase {
 
 
     if (background != null) {
-      buffer.writeAll(['"background": ', background?.toJSON(), ","], "");
+      buffer.writeAll(['"background":', background?.toJSON(), ","], "");
     }
     if (crosshairX != null) {
-      buffer.writeAll(['"crosshairX": ', crosshairX?.toJSON(), ","], "");
+      buffer.writeAll(['"crosshairX":', crosshairX?.toJSON(), ","], "");
     }
     if (crosshairY != null) {
-      buffer.writeAll(['"crosshairY": ', crosshairY?.toJSON(), ","], "");
+      buffer.writeAll(['"crosshairY":', crosshairY?.toJSON(), ","], "");
     }
     if (label != null) {
-      buffer.writeAll(['"label": ', label?.toJSON(), ","], "");
+      buffer.writeAll(['"label":', label?.toJSON(), ","], "");
     }
     if (selectType != null) {
-      buffer.writeAll(['"selectType": ', jsonEncode(selectType), ','], "");
+      buffer.writeAll(['"selectType":', jsonEncode(selectType), ','], "");
     }
     if (xAxis != null) {
-      buffer.writeAll(['"xAxis": ', xAxis, ','], "");
+      buffer.writeAll(['"xAxis":', xAxis, ','], "");
     }
     if (yAxis != null) {
-      buffer.writeAll(['"yAxis": ', yAxis, ','], "");
+      buffer.writeAll(['"yAxis":', yAxis, ','], "");
     }
     if (line != null) {
-      buffer.writeAll(['"line": ', line?.toJSON(), ","], "");
+      buffer.writeAll(['"line":', line?.toJSON(), ","], "");
     }
     if (points != null) {
-      buffer.write('"points": [');
+      buffer.write('"points":[');
       for (var item in points!) {
         buffer.writeAll([item.toJSON(), ","], "");
       }

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -66,13 +66,13 @@ class HighchartsXAxisAccessibilityOptions extends HighchartsOptionsBase {
 
 
     if (description != null) {
-      buffer.writeAll(['"description": ', jsonEncode(description), ','], "");
+      buffer.writeAll(['"description":', jsonEncode(description), ','], "");
     }
     if (enabled != null) {
-      buffer.writeAll(['"enabled": ', enabled, ','], "");
+      buffer.writeAll(['"enabled":', enabled, ','], "");
     }
     if (rangeDescription != null) {
-      buffer.writeAll(['"rangeDescription": ', jsonEncode(rangeDescription), ','], "");
+      buffer.writeAll(['"rangeDescription":', jsonEncode(rangeDescription), ','], "");
     }
   }
 

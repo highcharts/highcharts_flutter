@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -91,44 +91,44 @@ class HighchartsNavigationOptions extends HighchartsOptionsBase {
 
 
     if (annotationsOptions != null) {
-      buffer.writeAll(['"annotationsOptions": ', annotationsOptions?.toJSON(), ","], "");
+      buffer.writeAll(['"annotationsOptions":', annotationsOptions?.toJSON(), ","], "");
     }
     if (bindings != null) {
-      buffer.writeAll(['"bindings": ', bindings?.toJSON(), ","], "");
+      buffer.writeAll(['"bindings":', bindings?.toJSON(), ","], "");
     }
     if (bindingsClassName != null) {
-      buffer.writeAll(['"bindingsClassName": ', jsonEncode(bindingsClassName), ','], "");
+      buffer.writeAll(['"bindingsClassName":', jsonEncode(bindingsClassName), ','], "");
     }
     if (breadcrumbs != null) {
-      buffer.writeAll(['"breadcrumbs": ', breadcrumbs?.toJSON(), ","], "");
+      buffer.writeAll(['"breadcrumbs":', breadcrumbs?.toJSON(), ","], "");
     }
     if (buttonOptions != null) {
-      buffer.writeAll(['"buttonOptions": ', buttonOptions?.toJSON(), ","], "");
+      buffer.writeAll(['"buttonOptions":', buttonOptions?.toJSON(), ","], "");
     }
     if (events != null) {
-      buffer.writeAll(['"events": ', events?.toJSON(), ","], "");
+      buffer.writeAll(['"events":', events?.toJSON(), ","], "");
     }
     if (iconsURL != null) {
-      buffer.writeAll(['"iconsURL": ', jsonEncode(iconsURL), ','], "");
+      buffer.writeAll(['"iconsURL":', jsonEncode(iconsURL), ','], "");
     }
     if (menuItemHoverStyle != null) {
       buffer.write("{");
       for (var item in menuItemHoverStyle!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (menuItemStyle != null) {
       buffer.write("{");
       for (var item in menuItemStyle!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (menuStyle != null) {
       buffer.write("{");
       for (var item in menuStyle!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -114,28 +114,28 @@ class HighchartsXAxisDateTimeLabelFormatsOptions extends HighchartsOptionsBase {
 
 
     if (day != null) {
-      buffer.writeAll(['"day": ', day?.toJSON(), ","], "");
+      buffer.writeAll(['"day":', day?.toJSON(), ","], "");
     }
     if (hour != null) {
-      buffer.writeAll(['"hour": ', hour?.toJSON(), ","], "");
+      buffer.writeAll(['"hour":', hour?.toJSON(), ","], "");
     }
     if (millisecond != null) {
-      buffer.writeAll(['"millisecond": ', millisecond?.toJSON(), ","], "");
+      buffer.writeAll(['"millisecond":', millisecond?.toJSON(), ","], "");
     }
     if (minute != null) {
-      buffer.writeAll(['"minute": ', minute?.toJSON(), ","], "");
+      buffer.writeAll(['"minute":', minute?.toJSON(), ","], "");
     }
     if (month != null) {
-      buffer.writeAll(['"month": ', month?.toJSON(), ","], "");
+      buffer.writeAll(['"month":', month?.toJSON(), ","], "");
     }
     if (second != null) {
-      buffer.writeAll(['"second": ', second?.toJSON(), ","], "");
+      buffer.writeAll(['"second":', second?.toJSON(), ","], "");
     }
     if (week != null) {
-      buffer.writeAll(['"week": ', week?.toJSON(), ","], "");
+      buffer.writeAll(['"week":', week?.toJSON(), ","], "");
     }
     if (year != null) {
-      buffer.writeAll(['"year": ', year?.toJSON(), ","], "");
+      buffer.writeAll(['"year":', year?.toJSON(), ","], "");
     }
   }
 

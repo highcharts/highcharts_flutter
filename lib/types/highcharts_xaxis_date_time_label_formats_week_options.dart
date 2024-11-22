@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -61,14 +61,14 @@ class HighchartsXAxisDateTimeLabelFormatsWeekOptions extends HighchartsOptionsBa
 
 
     if (list != null) {
-      buffer.write('"list": [');
+      buffer.write('"list":[');
       for (var item in list!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (main != null) {
-      buffer.writeAll(['"main": ', jsonEncode(main), ','], "");
+      buffer.writeAll(['"main":', jsonEncode(main), ','], "");
     }
   }
 

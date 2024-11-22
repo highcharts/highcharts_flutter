@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -46,15 +46,15 @@ import 'highcharts_options_base.dart';
 
 class HighchartsLinearRegressionInterceptSeriesParamsOptions extends HighchartsOptionsBase {
 
-  double? xAxisUnit;
   double? index;
   double? period;
+  double? xAxisUnit;
 
 
   HighchartsLinearRegressionInterceptSeriesParamsOptions({
-    this.xAxisUnit,
     this.index,
-    this.period
+    this.period,
+    this.xAxisUnit
   });
 
   @override
@@ -62,14 +62,14 @@ class HighchartsLinearRegressionInterceptSeriesParamsOptions extends HighchartsO
     super.toOptionsJSON(buffer);
 
 
-    if (xAxisUnit != null) {
-      buffer.writeAll(['"xAxisUnit": ', xAxisUnit, ','], "");
-    }
     if (index != null) {
-      buffer.writeAll(['"index": ', index, ','], "");
+      buffer.writeAll(['"index":', index, ','], "");
     }
     if (period != null) {
-      buffer.writeAll(['"period": ', period, ','], "");
+      buffer.writeAll(['"period":', period, ','], "");
+    }
+    if (xAxisUnit != null) {
+      buffer.writeAll(['"xAxisUnit":', xAxisUnit, ','], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -68,10 +68,10 @@ class HighchartsAnnotationsMeasureOptions extends HighchartsOptionsBase {
 
 
     if (controlPointOptions != null) {
-      buffer.writeAll(['"controlPointOptions": ', controlPointOptions?.toJSON(), ","], "");
+      buffer.writeAll(['"controlPointOptions":', controlPointOptions?.toJSON(), ","], "");
     }
     if (typeOptions != null) {
-      buffer.writeAll(['"typeOptions": ', typeOptions?.toJSON(), ","], "");
+      buffer.writeAll(['"typeOptions":', typeOptions?.toJSON(), ","], "");
     }
   }
 

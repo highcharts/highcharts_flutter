@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -46,13 +46,13 @@ import 'highcharts_options_base.dart';
 
 class HighchartsGeoHeatmapSeriesTooltipOptions extends HighchartsOptionsBase {
 
-  String? pointFormat;
   bool? followPointer;
+  String? pointFormat;
 
 
   HighchartsGeoHeatmapSeriesTooltipOptions({
-    this.pointFormat,
-    this.followPointer
+    this.followPointer,
+    this.pointFormat
   });
 
   @override
@@ -60,11 +60,11 @@ class HighchartsGeoHeatmapSeriesTooltipOptions extends HighchartsOptionsBase {
     super.toOptionsJSON(buffer);
 
 
-    if (pointFormat != null) {
-      buffer.writeAll(['"pointFormat": ', jsonEncode(pointFormat), ','], "");
-    }
     if (followPointer != null) {
-      buffer.writeAll(['"followPointer": ', followPointer, ','], "");
+      buffer.writeAll(['"followPointer":', followPointer, ','], "");
+    }
+    if (pointFormat != null) {
+      buffer.writeAll(['"pointFormat":', jsonEncode(pointFormat), ','], "");
     }
   }
 

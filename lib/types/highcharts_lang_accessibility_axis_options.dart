@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -80,34 +80,34 @@ class HighchartsLangAccessibilityAxisOptions extends HighchartsOptionsBase {
 
 
     if (rangeCategories != null) {
-      buffer.writeAll(['"rangeCategories": ', jsonEncode(rangeCategories), ','], "");
+      buffer.writeAll(['"rangeCategories":', jsonEncode(rangeCategories), ','], "");
     }
     if (rangeFromTo != null) {
-      buffer.writeAll(['"rangeFromTo": ', jsonEncode(rangeFromTo), ','], "");
+      buffer.writeAll(['"rangeFromTo":', jsonEncode(rangeFromTo), ','], "");
     }
     if (timeRangeDays != null) {
-      buffer.writeAll(['"timeRangeDays": ', jsonEncode(timeRangeDays), ','], "");
+      buffer.writeAll(['"timeRangeDays":', jsonEncode(timeRangeDays), ','], "");
     }
     if (timeRangeHours != null) {
-      buffer.writeAll(['"timeRangeHours": ', jsonEncode(timeRangeHours), ','], "");
+      buffer.writeAll(['"timeRangeHours":', jsonEncode(timeRangeHours), ','], "");
     }
     if (timeRangeMinutes != null) {
-      buffer.writeAll(['"timeRangeMinutes": ', jsonEncode(timeRangeMinutes), ','], "");
+      buffer.writeAll(['"timeRangeMinutes":', jsonEncode(timeRangeMinutes), ','], "");
     }
     if (timeRangeSeconds != null) {
-      buffer.writeAll(['"timeRangeSeconds": ', jsonEncode(timeRangeSeconds), ','], "");
+      buffer.writeAll(['"timeRangeSeconds":', jsonEncode(timeRangeSeconds), ','], "");
     }
     if (xAxisDescriptionPlural != null) {
-      buffer.writeAll(['"xAxisDescriptionPlural": ', jsonEncode(xAxisDescriptionPlural), ','], "");
+      buffer.writeAll(['"xAxisDescriptionPlural":', jsonEncode(xAxisDescriptionPlural), ','], "");
     }
     if (xAxisDescriptionSingular != null) {
-      buffer.writeAll(['"xAxisDescriptionSingular": ', jsonEncode(xAxisDescriptionSingular), ','], "");
+      buffer.writeAll(['"xAxisDescriptionSingular":', jsonEncode(xAxisDescriptionSingular), ','], "");
     }
     if (yAxisDescriptionPlural != null) {
-      buffer.writeAll(['"yAxisDescriptionPlural": ', jsonEncode(yAxisDescriptionPlural), ','], "");
+      buffer.writeAll(['"yAxisDescriptionPlural":', jsonEncode(yAxisDescriptionPlural), ','], "");
     }
     if (yAxisDescriptionSingular != null) {
-      buffer.writeAll(['"yAxisDescriptionSingular": ', jsonEncode(yAxisDescriptionSingular), ','], "");
+      buffer.writeAll(['"yAxisDescriptionSingular":', jsonEncode(yAxisDescriptionSingular), ','], "");
     }
   }
 

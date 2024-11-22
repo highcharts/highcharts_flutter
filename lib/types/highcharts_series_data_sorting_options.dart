@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -66,13 +66,13 @@ class HighchartsSeriesDataSortingOptions extends HighchartsOptionsBase {
 
 
     if (enabled != null) {
-      buffer.writeAll(['"enabled": ', enabled, ','], "");
+      buffer.writeAll(['"enabled":', enabled, ','], "");
     }
     if (matchByName != null) {
-      buffer.writeAll(['"matchByName": ', matchByName, ','], "");
+      buffer.writeAll(['"matchByName":', matchByName, ','], "");
     }
     if (sortKey != null) {
-      buffer.writeAll(['"sortKey": ', jsonEncode(sortKey), ','], "");
+      buffer.writeAll(['"sortKey":', jsonEncode(sortKey), ','], "");
     }
   }
 

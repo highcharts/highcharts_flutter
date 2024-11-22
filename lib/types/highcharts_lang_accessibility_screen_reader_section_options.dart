@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -71,16 +71,16 @@ class HighchartsLangAccessibilityScreenReaderSectionOptions extends HighchartsOp
 
 
     if (afterRegionLabel != null) {
-      buffer.writeAll(['"afterRegionLabel": ', jsonEncode(afterRegionLabel), ','], "");
+      buffer.writeAll(['"afterRegionLabel":', jsonEncode(afterRegionLabel), ','], "");
     }
     if (annotations != null) {
-      buffer.writeAll(['"annotations": ', annotations?.toJSON(), ","], "");
+      buffer.writeAll(['"annotations":', annotations?.toJSON(), ","], "");
     }
     if (beforeRegionLabel != null) {
-      buffer.writeAll(['"beforeRegionLabel": ', jsonEncode(beforeRegionLabel), ','], "");
+      buffer.writeAll(['"beforeRegionLabel":', jsonEncode(beforeRegionLabel), ','], "");
     }
     if (endOfChartMarker != null) {
-      buffer.writeAll(['"endOfChartMarker": ', jsonEncode(endOfChartMarker), ','], "");
+      buffer.writeAll(['"endOfChartMarker":', jsonEncode(endOfChartMarker), ','], "");
     }
   }
 

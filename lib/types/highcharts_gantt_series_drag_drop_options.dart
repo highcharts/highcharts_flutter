@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -65,16 +65,16 @@ class HighchartsGanttSeriesDragDropOptions extends HighchartsOptionsBase {
 
 
     if (draggableEnd != null) {
-      buffer.writeAll(['"draggableEnd": ', draggableEnd, ','], "");
+      buffer.writeAll(['"draggableEnd":', draggableEnd, ','], "");
     }
     if (draggableStart != null) {
-      buffer.writeAll(['"draggableStart": ', draggableStart, ','], "");
+      buffer.writeAll(['"draggableStart":', draggableStart, ','], "");
     }
     if (draggableX1 != null) {
-      buffer.writeAll(['"draggableX1": ', draggableX1, ','], "");
+      buffer.writeAll(['"draggableX1":', draggableX1, ','], "");
     }
     if (draggableX2 != null) {
-      buffer.writeAll(['"draggableX2": ', draggableX2, ','], "");
+      buffer.writeAll(['"draggableX2":', draggableX2, ','], "");
     }
   }
 

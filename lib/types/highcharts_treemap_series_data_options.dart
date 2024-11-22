@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -26,11 +26,11 @@
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-import 'highcharts_treemap_series_data_marker_options.dart';
 import 'highcharts_treemap_series_data_accessibility_options.dart';
 import 'highcharts_treemap_series_data_data_labels_options.dart';
 import 'highcharts_treemap_series_data_drag_drop_options.dart';
 import 'highcharts_treemap_series_data_events_options.dart';
+import 'highcharts_treemap_series_data_marker_options.dart';
 
 
 /* *
@@ -40,11 +40,11 @@ import 'highcharts_treemap_series_data_events_options.dart';
  * */
 
 
-export 'highcharts_treemap_series_data_marker_options.dart';
 export 'highcharts_treemap_series_data_accessibility_options.dart';
 export 'highcharts_treemap_series_data_data_labels_options.dart';
 export 'highcharts_treemap_series_data_drag_drop_options.dart';
 export 'highcharts_treemap_series_data_events_options.dart';
+export 'highcharts_treemap_series_data_marker_options.dart';
 
 
 /* *
@@ -83,14 +83,11 @@ export 'highcharts_treemap_series_data_events_options.dart';
  */
 class HighchartsTreemapSeriesDataOptions extends HighchartsOptionsBase {
 
-  double? colorValue;
-  String? parent;
-  double? value;
-  String? color;
-  HighchartsTreemapSeriesDataMarkerOptions? marker;
   HighchartsTreemapSeriesDataAccessibilityOptions? accessibility;
   String? className;
+  String? color;
   double? colorIndex;
+  double? colorValue;
   Map<String, dynamic>? custom;
   List<HighchartsTreemapSeriesDataDataLabelsOptions>? dataLabels;
   String? description;
@@ -99,18 +96,18 @@ class HighchartsTreemapSeriesDataOptions extends HighchartsOptionsBase {
   HighchartsTreemapSeriesDataEventsOptions? events;
   String? id;
   double? labelrank;
+  HighchartsTreemapSeriesDataMarkerOptions? marker;
+  String? parent;
   bool? selected;
+  double? value;
 
 
   HighchartsTreemapSeriesDataOptions({
-    this.colorValue,
-    this.parent,
-    this.value,
-    this.color,
-    this.marker,
     this.accessibility,
     this.className,
+    this.color,
     this.colorIndex,
+    this.colorValue,
     this.custom,
     this.dataLabels,
     this.description,
@@ -119,7 +116,10 @@ class HighchartsTreemapSeriesDataOptions extends HighchartsOptionsBase {
     this.events,
     this.id,
     this.labelrank,
-    this.selected
+    this.marker,
+    this.parent,
+    this.selected,
+    this.value
   });
 
   @override
@@ -127,64 +127,64 @@ class HighchartsTreemapSeriesDataOptions extends HighchartsOptionsBase {
     super.toOptionsJSON(buffer);
 
 
-    if (colorValue != null) {
-      buffer.writeAll(['"colorValue": ', colorValue, ','], "");
-    }
-    if (parent != null) {
-      buffer.writeAll(['"parent": ', jsonEncode(parent), ','], "");
-    }
-    if (value != null) {
-      buffer.writeAll(['"value": ', value, ','], "");
-    }
-    if (color != null) {
-      buffer.writeAll(['"color": ', jsonEncode(color), ','], "");
-    }
-    if (marker != null) {
-      buffer.writeAll(['"marker": ', marker?.toJSON(), ","], "");
-    }
     if (accessibility != null) {
-      buffer.writeAll(['"accessibility": ', accessibility?.toJSON(), ","], "");
+      buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ","], "");
     }
     if (className != null) {
-      buffer.writeAll(['"className": ', jsonEncode(className), ','], "");
+      buffer.writeAll(['"className":', jsonEncode(className), ','], "");
+    }
+    if (color != null) {
+      buffer.writeAll(['"color":', jsonEncode(color), ','], "");
     }
     if (colorIndex != null) {
-      buffer.writeAll(['"colorIndex": ', colorIndex, ','], "");
+      buffer.writeAll(['"colorIndex":', colorIndex, ','], "");
+    }
+    if (colorValue != null) {
+      buffer.writeAll(['"colorValue":', colorValue, ','], "");
     }
     if (custom != null) {
       buffer.write("{");
       for (var item in custom!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (dataLabels != null) {
-      buffer.write('"dataLabels": [');
+      buffer.write('"dataLabels":[');
       for (var item in dataLabels!) {
         buffer.writeAll([item.toJSON(), ","], "");
       }
       buffer.write("],");
     }
     if (description != null) {
-      buffer.writeAll(['"description": ', jsonEncode(description), ','], "");
+      buffer.writeAll(['"description":', jsonEncode(description), ','], "");
     }
     if (dragDrop != null) {
-      buffer.writeAll(['"dragDrop": ', dragDrop?.toJSON(), ","], "");
+      buffer.writeAll(['"dragDrop":', dragDrop?.toJSON(), ","], "");
     }
     if (drilldown != null) {
-      buffer.writeAll(['"drilldown": ', jsonEncode(drilldown), ','], "");
+      buffer.writeAll(['"drilldown":', jsonEncode(drilldown), ','], "");
     }
     if (events != null) {
-      buffer.writeAll(['"events": ', events?.toJSON(), ","], "");
+      buffer.writeAll(['"events":', events?.toJSON(), ","], "");
     }
     if (id != null) {
-      buffer.writeAll(['"id": ', jsonEncode(id), ','], "");
+      buffer.writeAll(['"id":', jsonEncode(id), ','], "");
     }
     if (labelrank != null) {
-      buffer.writeAll(['"labelrank": ', labelrank, ','], "");
+      buffer.writeAll(['"labelrank":', labelrank, ','], "");
+    }
+    if (marker != null) {
+      buffer.writeAll(['"marker":', marker?.toJSON(), ","], "");
+    }
+    if (parent != null) {
+      buffer.writeAll(['"parent":', jsonEncode(parent), ','], "");
     }
     if (selected != null) {
-      buffer.writeAll(['"selected": ', selected, ','], "");
+      buffer.writeAll(['"selected":', selected, ','], "");
+    }
+    if (value != null) {
+      buffer.writeAll(['"value":', value, ','], "");
     }
   }
 

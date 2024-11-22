@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -61,10 +61,10 @@ class HighchartsVBPSeriesVolumeDivisionStylesOptions extends HighchartsOptionsBa
 
 
     if (negativeColor != null) {
-      buffer.writeAll(['"negativeColor": ', jsonEncode(negativeColor), ','], "");
+      buffer.writeAll(['"negativeColor":', jsonEncode(negativeColor), ','], "");
     }
     if (positiveColor != null) {
-      buffer.writeAll(['"positiveColor": ', jsonEncode(positiveColor), ','], "");
+      buffer.writeAll(['"positiveColor":', jsonEncode(positiveColor), ','], "");
     }
   }
 

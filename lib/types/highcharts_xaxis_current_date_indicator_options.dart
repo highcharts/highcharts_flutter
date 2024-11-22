@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -26,8 +26,8 @@
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-import 'highcharts_xaxis_current_date_indicator_label_options.dart';
 import 'highcharts_xaxis_plot_lines_events_options.dart';
+import 'highcharts_xaxis_current_date_indicator_label_options.dart';
 import 'highcharts_xaxis_plot_lines_labels_options.dart';
 
 
@@ -38,8 +38,8 @@ import 'highcharts_xaxis_plot_lines_labels_options.dart';
  * */
 
 
-export 'highcharts_xaxis_current_date_indicator_label_options.dart';
 export 'highcharts_xaxis_plot_lines_events_options.dart';
+export 'highcharts_xaxis_current_date_indicator_label_options.dart';
 export 'highcharts_xaxis_plot_lines_labels_options.dart';
 
 
@@ -57,24 +57,24 @@ export 'highcharts_xaxis_plot_lines_labels_options.dart';
  */
 class HighchartsXAxisCurrentDateIndicatorOptions extends HighchartsOptionsBase {
 
-  HighchartsXAxisCurrentDateIndicatorLabelOptions? label;
   String? className;
   String? color;
   String? dashStyle;
   HighchartsXAxisPlotLinesEventsOptions? events;
   String? id;
+  HighchartsXAxisCurrentDateIndicatorLabelOptions? label;
   HighchartsXAxisPlotLinesLabelsOptions? labels;
   double? width;
   double? zIndex;
 
 
   HighchartsXAxisCurrentDateIndicatorOptions({
-    this.label,
     this.className,
     this.color,
     this.dashStyle,
     this.events,
     this.id,
+    this.label,
     this.labels,
     this.width,
     this.zIndex
@@ -85,32 +85,32 @@ class HighchartsXAxisCurrentDateIndicatorOptions extends HighchartsOptionsBase {
     super.toOptionsJSON(buffer);
 
 
-    if (label != null) {
-      buffer.writeAll(['"label": ', label?.toJSON(), ","], "");
-    }
     if (className != null) {
-      buffer.writeAll(['"className": ', jsonEncode(className), ','], "");
+      buffer.writeAll(['"className":', jsonEncode(className), ','], "");
     }
     if (color != null) {
-      buffer.writeAll(['"color": ', jsonEncode(color), ','], "");
+      buffer.writeAll(['"color":', jsonEncode(color), ','], "");
     }
     if (dashStyle != null) {
-      buffer.writeAll(['"dashStyle": ', jsonEncode(dashStyle), ','], "");
+      buffer.writeAll(['"dashStyle":', jsonEncode(dashStyle), ','], "");
     }
     if (events != null) {
-      buffer.writeAll(['"events": ', events?.toJSON(), ","], "");
+      buffer.writeAll(['"events":', events?.toJSON(), ","], "");
     }
     if (id != null) {
-      buffer.writeAll(['"id": ', jsonEncode(id), ','], "");
+      buffer.writeAll(['"id":', jsonEncode(id), ','], "");
+    }
+    if (label != null) {
+      buffer.writeAll(['"label":', label?.toJSON(), ","], "");
     }
     if (labels != null) {
-      buffer.writeAll(['"labels": ', labels?.toJSON(), ","], "");
+      buffer.writeAll(['"labels":', labels?.toJSON(), ","], "");
     }
     if (width != null) {
-      buffer.writeAll(['"width": ', width, ','], "");
+      buffer.writeAll(['"width":', width, ','], "");
     }
     if (zIndex != null) {
-      buffer.writeAll(['"zIndex": ', zIndex, ','], "");
+      buffer.writeAll(['"zIndex":', zIndex, ','], "");
     }
   }
 

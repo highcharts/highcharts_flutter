@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -61,10 +61,10 @@ class HighchartsPivotPointsSeriesParamsOptions extends HighchartsOptionsBase {
 
 
     if (algorithm != null) {
-      buffer.writeAll(['"algorithm": ', jsonEncode(algorithm), ','], "");
+      buffer.writeAll(['"algorithm":', jsonEncode(algorithm), ','], "");
     }
     if (period != null) {
-      buffer.writeAll(['"period": ', period, ','], "");
+      buffer.writeAll(['"period":', period, ','], "");
     }
   }
 

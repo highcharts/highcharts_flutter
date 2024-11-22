@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -67,19 +67,19 @@ class HighchartsGanttSeriesConnectorsStartMarkerOptions extends HighchartsOption
 
 
     if (align != null) {
-      buffer.writeAll(['"align": ', jsonEncode(align), ','], "");
+      buffer.writeAll(['"align":', jsonEncode(align), ','], "");
     }
     if (enabled != null) {
-      buffer.writeAll(['"enabled": ', enabled, ','], "");
+      buffer.writeAll(['"enabled":', enabled, ','], "");
     }
     if (fill != null) {
-      buffer.writeAll(['"fill": ', jsonEncode(fill), ','], "");
+      buffer.writeAll(['"fill":', jsonEncode(fill), ','], "");
     }
     if (radius != null) {
-      buffer.writeAll(['"radius": ', radius, ','], "");
+      buffer.writeAll(['"radius":', radius, ','], "");
     }
     if (symbol != null) {
-      buffer.writeAll(['"symbol": ', jsonEncode(symbol), ','], "");
+      buffer.writeAll(['"symbol":', jsonEncode(symbol), ','], "");
     }
   }
 

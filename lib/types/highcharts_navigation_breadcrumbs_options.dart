@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -99,46 +99,46 @@ class HighchartsNavigationBreadcrumbsOptions extends HighchartsOptionsBase {
 
 
     if (buttonSpacing != null) {
-      buffer.writeAll(['"buttonSpacing": ', buttonSpacing, ','], "");
+      buffer.writeAll(['"buttonSpacing":', buttonSpacing, ','], "");
     }
     if (buttonTheme != null) {
-      buffer.writeAll(['"buttonTheme": ', buttonTheme?.toJSON(), ","], "");
+      buffer.writeAll(['"buttonTheme":', buttonTheme?.toJSON(), ","], "");
     }
     if (events != null) {
-      buffer.writeAll(['"events": ', events?.toJSON(), ","], "");
+      buffer.writeAll(['"events":', events?.toJSON(), ","], "");
     }
     if (floating != null) {
-      buffer.writeAll(['"floating": ', floating, ','], "");
+      buffer.writeAll(['"floating":', floating, ','], "");
     }
     if (format != null) {
-      buffer.writeAll(['"format": ', jsonEncode(format), ','], "");
+      buffer.writeAll(['"format":', jsonEncode(format), ','], "");
     }
     if (formatter != null) {
-      buffer.writeAll(['"formatter": ', jsonEncode(formatter), ','], "");
+      buffer.writeAll(['"formatter":', jsonEncode(formatter), ','], "");
     }
     if (position != null) {
-      buffer.writeAll(['"position": ', position?.toJSON(), ","], "");
+      buffer.writeAll(['"position":', position?.toJSON(), ","], "");
     }
     if (relativeTo != null) {
-      buffer.writeAll(['"relativeTo": ', jsonEncode(relativeTo), ','], "");
+      buffer.writeAll(['"relativeTo":', jsonEncode(relativeTo), ','], "");
     }
     if (rtl != null) {
-      buffer.writeAll(['"rtl": ', rtl, ','], "");
+      buffer.writeAll(['"rtl":', rtl, ','], "");
     }
     if (separator != null) {
-      buffer.writeAll(['"separator": ', separator?.toJSON(), ","], "");
+      buffer.writeAll(['"separator":', separator?.toJSON(), ","], "");
     }
     if (showFullPath != null) {
-      buffer.writeAll(['"showFullPath": ', showFullPath, ','], "");
+      buffer.writeAll(['"showFullPath":', showFullPath, ','], "");
     }
     if (style != null) {
-      buffer.writeAll(['"style": ', jsonEncode(style), ','], "");
+      buffer.writeAll(['"style":', jsonEncode(style), ','], "");
     }
     if (useHTML != null) {
-      buffer.writeAll(['"useHTML": ', useHTML, ','], "");
+      buffer.writeAll(['"useHTML":', useHTML, ','], "");
     }
     if (zIndex != null) {
-      buffer.writeAll(['"zIndex": ', zIndex, ','], "");
+      buffer.writeAll(['"zIndex":', zIndex, ','], "");
     }
   }
 

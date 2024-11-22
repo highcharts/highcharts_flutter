@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -53,15 +53,15 @@ export 'highcharts_networkgraph_series_states_inactive_animation_options.dart';
 class HighchartsNetworkgraphSeriesStatesInactiveOptions extends HighchartsOptionsBase {
 
   HighchartsNetworkgraphSeriesStatesInactiveAnimationOptions? animation;
-  double? linkOpacity;
   bool? enabled;
+  double? linkOpacity;
   double? opacity;
 
 
   HighchartsNetworkgraphSeriesStatesInactiveOptions({
     this.animation,
-    this.linkOpacity,
     this.enabled,
+    this.linkOpacity,
     this.opacity
   });
 
@@ -71,16 +71,16 @@ class HighchartsNetworkgraphSeriesStatesInactiveOptions extends HighchartsOption
 
 
     if (animation != null) {
-      buffer.writeAll(['"animation": ', animation?.toJSON(), ","], "");
-    }
-    if (linkOpacity != null) {
-      buffer.writeAll(['"linkOpacity": ', linkOpacity, ','], "");
+      buffer.writeAll(['"animation":', animation?.toJSON(), ","], "");
     }
     if (enabled != null) {
-      buffer.writeAll(['"enabled": ', enabled, ','], "");
+      buffer.writeAll(['"enabled":', enabled, ','], "");
+    }
+    if (linkOpacity != null) {
+      buffer.writeAll(['"linkOpacity":', linkOpacity, ','], "");
     }
     if (opacity != null) {
-      buffer.writeAll(['"opacity": ', opacity, ','], "");
+      buffer.writeAll(['"opacity":', opacity, ','], "");
     }
   }
 

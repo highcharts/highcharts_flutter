@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -70,10 +70,10 @@ class HighchartsXAxisTitleStyleOptions extends HighchartsOptionsBase {
 
 
     if (color != null) {
-      buffer.writeAll(['"color": ', jsonEncode(color), ','], "");
+      buffer.writeAll(['"color":', jsonEncode(color), ','], "");
     }
     if (fontSize != null) {
-      buffer.writeAll(['"fontSize": ', jsonEncode(fontSize), ','], "");
+      buffer.writeAll(['"fontSize":', jsonEncode(fontSize), ','], "");
     }
   }
 

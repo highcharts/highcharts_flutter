@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -76,29 +76,29 @@ class HighchartsStockToolsGuiOptions extends HighchartsOptionsBase {
 
 
     if (buttons != null) {
-      buffer.write('"buttons": [');
+      buffer.write('"buttons":[');
       for (var item in buttons!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (className != null) {
-      buffer.writeAll(['"className": ', jsonEncode(className), ','], "");
+      buffer.writeAll(['"className":', jsonEncode(className), ','], "");
     }
     if (definitions != null) {
-      buffer.writeAll(['"definitions": ', definitions?.toJSON(), ","], "");
+      buffer.writeAll(['"definitions":', definitions?.toJSON(), ","], "");
     }
     if (enabled != null) {
-      buffer.writeAll(['"enabled": ', enabled, ','], "");
+      buffer.writeAll(['"enabled":', enabled, ','], "");
     }
     if (iconsURL != null) {
-      buffer.writeAll(['"iconsURL": ', jsonEncode(iconsURL), ','], "");
+      buffer.writeAll(['"iconsURL":', jsonEncode(iconsURL), ','], "");
     }
     if (toolbarClassName != null) {
-      buffer.writeAll(['"toolbarClassName": ', jsonEncode(toolbarClassName), ','], "");
+      buffer.writeAll(['"toolbarClassName":', jsonEncode(toolbarClassName), ','], "");
     }
     if (visible != null) {
-      buffer.writeAll(['"visible": ', visible, ','], "");
+      buffer.writeAll(['"visible":', visible, ','], "");
     }
   }
 

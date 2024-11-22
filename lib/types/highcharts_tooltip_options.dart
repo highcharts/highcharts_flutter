@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -61,6 +61,7 @@ class HighchartsTooltipOptions extends HighchartsOptionsBase {
   String? borderColor;
   double? borderRadius;
   double? borderWidth;
+  double? changeDecimals;
   String? className;
   String? clusterFormat;
   bool? crosshairs;
@@ -94,7 +95,6 @@ class HighchartsTooltipOptions extends HighchartsOptionsBase {
   String? valuePrefix;
   String? valueSuffix;
   String? xDateFormat;
-  double? changeDecimals;
 
 
   HighchartsTooltipOptions({
@@ -103,6 +103,7 @@ class HighchartsTooltipOptions extends HighchartsOptionsBase {
     this.borderColor,
     this.borderRadius,
     this.borderWidth,
+    this.changeDecimals,
     this.className,
     this.clusterFormat,
     this.crosshairs,
@@ -135,8 +136,7 @@ class HighchartsTooltipOptions extends HighchartsOptionsBase {
     this.valueDecimals,
     this.valuePrefix,
     this.valueSuffix,
-    this.xDateFormat,
-    this.changeDecimals
+    this.xDateFormat
   });
 
   @override
@@ -145,125 +145,125 @@ class HighchartsTooltipOptions extends HighchartsOptionsBase {
 
 
     if (animation != null) {
-      buffer.writeAll(['"animation": ', animation?.toJSON(), ","], "");
+      buffer.writeAll(['"animation":', animation?.toJSON(), ","], "");
     }
     if (backgroundColor != null) {
-      buffer.writeAll(['"backgroundColor": ', jsonEncode(backgroundColor), ','], "");
+      buffer.writeAll(['"backgroundColor":', jsonEncode(backgroundColor), ','], "");
     }
     if (borderColor != null) {
-      buffer.writeAll(['"borderColor": ', jsonEncode(borderColor), ','], "");
+      buffer.writeAll(['"borderColor":', jsonEncode(borderColor), ','], "");
     }
     if (borderRadius != null) {
-      buffer.writeAll(['"borderRadius": ', borderRadius, ','], "");
+      buffer.writeAll(['"borderRadius":', borderRadius, ','], "");
     }
     if (borderWidth != null) {
-      buffer.writeAll(['"borderWidth": ', borderWidth, ','], "");
+      buffer.writeAll(['"borderWidth":', borderWidth, ','], "");
+    }
+    if (changeDecimals != null) {
+      buffer.writeAll(['"changeDecimals":', changeDecimals, ','], "");
     }
     if (className != null) {
-      buffer.writeAll(['"className": ', jsonEncode(className), ','], "");
+      buffer.writeAll(['"className":', jsonEncode(className), ','], "");
     }
     if (clusterFormat != null) {
-      buffer.writeAll(['"clusterFormat": ', jsonEncode(clusterFormat), ','], "");
+      buffer.writeAll(['"clusterFormat":', jsonEncode(clusterFormat), ','], "");
     }
     if (crosshairs != null) {
-      buffer.writeAll(['"crosshairs": ', crosshairs, ','], "");
+      buffer.writeAll(['"crosshairs":', crosshairs, ','], "");
     }
     if (dateTimeLabelFormats != null) {
-      buffer.writeAll(['"dateTimeLabelFormats": ', dateTimeLabelFormats?.toJSON(), ","], "");
+      buffer.writeAll(['"dateTimeLabelFormats":', dateTimeLabelFormats?.toJSON(), ","], "");
     }
     if (distance != null) {
-      buffer.writeAll(['"distance": ', distance, ','], "");
+      buffer.writeAll(['"distance":', distance, ','], "");
     }
     if (enabled != null) {
-      buffer.writeAll(['"enabled": ', enabled, ','], "");
+      buffer.writeAll(['"enabled":', enabled, ','], "");
     }
     if (followPointer != null) {
-      buffer.writeAll(['"followPointer": ', followPointer, ','], "");
+      buffer.writeAll(['"followPointer":', followPointer, ','], "");
     }
     if (followTouchMove != null) {
-      buffer.writeAll(['"followTouchMove": ', followTouchMove, ','], "");
+      buffer.writeAll(['"followTouchMove":', followTouchMove, ','], "");
     }
     if (footerFormat != null) {
-      buffer.writeAll(['"footerFormat": ', jsonEncode(footerFormat), ','], "");
+      buffer.writeAll(['"footerFormat":', jsonEncode(footerFormat), ','], "");
     }
     if (format != null) {
-      buffer.writeAll(['"format": ', jsonEncode(format), ','], "");
+      buffer.writeAll(['"format":', jsonEncode(format), ','], "");
     }
     if (formatter != null) {
-      buffer.writeAll(['"formatter": ', jsonEncode(formatter), ','], "");
+      buffer.writeAll(['"formatter":', jsonEncode(formatter), ','], "");
     }
     if (headerFormat != null) {
-      buffer.writeAll(['"headerFormat": ', jsonEncode(headerFormat), ','], "");
+      buffer.writeAll(['"headerFormat":', jsonEncode(headerFormat), ','], "");
     }
     if (headerShape != null) {
-      buffer.writeAll(['"headerShape": ', jsonEncode(headerShape), ','], "");
+      buffer.writeAll(['"headerShape":', jsonEncode(headerShape), ','], "");
     }
     if (hideDelay != null) {
-      buffer.writeAll(['"hideDelay": ', hideDelay, ','], "");
+      buffer.writeAll(['"hideDelay":', hideDelay, ','], "");
     }
     if (nullFormat != null) {
-      buffer.writeAll(['"nullFormat": ', jsonEncode(nullFormat), ','], "");
+      buffer.writeAll(['"nullFormat":', jsonEncode(nullFormat), ','], "");
     }
     if (nullFormatter != null) {
-      buffer.writeAll(['"nullFormatter": ', jsonEncode(nullFormatter), ','], "");
+      buffer.writeAll(['"nullFormatter":', jsonEncode(nullFormatter), ','], "");
     }
     if (outside != null) {
-      buffer.writeAll(['"outside": ', outside, ','], "");
+      buffer.writeAll(['"outside":', outside, ','], "");
     }
     if (padding != null) {
-      buffer.writeAll(['"padding": ', padding, ','], "");
+      buffer.writeAll(['"padding":', padding, ','], "");
     }
     if (pointFormat != null) {
-      buffer.writeAll(['"pointFormat": ', jsonEncode(pointFormat), ','], "");
+      buffer.writeAll(['"pointFormat":', jsonEncode(pointFormat), ','], "");
     }
     if (pointFormatter != null) {
-      buffer.writeAll(['"pointFormatter": ', jsonEncode(pointFormatter), ','], "");
+      buffer.writeAll(['"pointFormatter":', jsonEncode(pointFormatter), ','], "");
     }
     if (positioner != null) {
-      buffer.writeAll(['"positioner": ', jsonEncode(positioner), ','], "");
+      buffer.writeAll(['"positioner":', jsonEncode(positioner), ','], "");
     }
     if (shadow != null) {
       buffer.write("{");
       for (var item in shadow!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (shape != null) {
-      buffer.writeAll(['"shape": ', jsonEncode(shape), ','], "");
+      buffer.writeAll(['"shape":', jsonEncode(shape), ','], "");
     }
     if (shared != null) {
-      buffer.writeAll(['"shared": ', shared, ','], "");
+      buffer.writeAll(['"shared":', shared, ','], "");
     }
     if (snap != null) {
-      buffer.writeAll(['"snap": ', jsonEncode(snap), ','], "");
+      buffer.writeAll(['"snap":', jsonEncode(snap), ','], "");
     }
     if (split != null) {
-      buffer.writeAll(['"split": ', split, ','], "");
+      buffer.writeAll(['"split":', split, ','], "");
     }
     if (stickOnContact != null) {
-      buffer.writeAll(['"stickOnContact": ', stickOnContact, ','], "");
+      buffer.writeAll(['"stickOnContact":', stickOnContact, ','], "");
     }
     if (style != null) {
-      buffer.writeAll(['"style": ', style?.toJSON(), ","], "");
+      buffer.writeAll(['"style":', style?.toJSON(), ","], "");
     }
     if (useHTML != null) {
-      buffer.writeAll(['"useHTML": ', useHTML, ','], "");
+      buffer.writeAll(['"useHTML":', useHTML, ','], "");
     }
     if (valueDecimals != null) {
-      buffer.writeAll(['"valueDecimals": ', valueDecimals, ','], "");
+      buffer.writeAll(['"valueDecimals":', valueDecimals, ','], "");
     }
     if (valuePrefix != null) {
-      buffer.writeAll(['"valuePrefix": ', jsonEncode(valuePrefix), ','], "");
+      buffer.writeAll(['"valuePrefix":', jsonEncode(valuePrefix), ','], "");
     }
     if (valueSuffix != null) {
-      buffer.writeAll(['"valueSuffix": ', jsonEncode(valueSuffix), ','], "");
+      buffer.writeAll(['"valueSuffix":', jsonEncode(valueSuffix), ','], "");
     }
     if (xDateFormat != null) {
-      buffer.writeAll(['"xDateFormat": ', jsonEncode(xDateFormat), ','], "");
-    }
-    if (changeDecimals != null) {
-      buffer.writeAll(['"changeDecimals": ', changeDecimals, ','], "");
+      buffer.writeAll(['"xDateFormat":', jsonEncode(xDateFormat), ','], "");
     }
   }
 

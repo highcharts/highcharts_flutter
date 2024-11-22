@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -68,16 +68,16 @@ class HighchartsSonificationDefaultInstrumentPointGroupingOptions extends Highch
 
 
     if (algorithm != null) {
-      buffer.writeAll(['"algorithm": ', jsonEncode(algorithm), ','], "");
+      buffer.writeAll(['"algorithm":', jsonEncode(algorithm), ','], "");
     }
     if (enabled != null) {
-      buffer.writeAll(['"enabled": ', enabled, ','], "");
+      buffer.writeAll(['"enabled":', enabled, ','], "");
     }
     if (groupTimespan != null) {
-      buffer.writeAll(['"groupTimespan": ', groupTimespan, ','], "");
+      buffer.writeAll(['"groupTimespan":', groupTimespan, ','], "");
     }
     if (prop != null) {
-      buffer.writeAll(['"prop": ', jsonEncode(prop), ','], "");
+      buffer.writeAll(['"prop":', jsonEncode(prop), ','], "");
     }
   }
 

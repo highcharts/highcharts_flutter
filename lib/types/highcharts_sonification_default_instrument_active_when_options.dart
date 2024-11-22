@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -80,19 +80,19 @@ class HighchartsSonificationDefaultInstrumentActiveWhenOptions extends Highchart
 
 
     if (crossingDown != null) {
-      buffer.writeAll(['"crossingDown": ', crossingDown, ','], "");
+      buffer.writeAll(['"crossingDown":', crossingDown, ','], "");
     }
     if (crossingUp != null) {
-      buffer.writeAll(['"crossingUp": ', crossingUp, ','], "");
+      buffer.writeAll(['"crossingUp":', crossingUp, ','], "");
     }
     if (max != null) {
-      buffer.writeAll(['"max": ', max, ','], "");
+      buffer.writeAll(['"max":', max, ','], "");
     }
     if (min != null) {
-      buffer.writeAll(['"min": ', min, ','], "");
+      buffer.writeAll(['"min":', min, ','], "");
     }
     if (prop != null) {
-      buffer.writeAll(['"prop": ', jsonEncode(prop), ','], "");
+      buffer.writeAll(['"prop":', jsonEncode(prop), ','], "");
     }
   }
 

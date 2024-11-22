@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -66,13 +66,13 @@ class HighchartsLangAccessibilityLegendOptions extends HighchartsOptionsBase {
 
 
     if (legendItem != null) {
-      buffer.writeAll(['"legendItem": ', jsonEncode(legendItem), ','], "");
+      buffer.writeAll(['"legendItem":', jsonEncode(legendItem), ','], "");
     }
     if (legendLabel != null) {
-      buffer.writeAll(['"legendLabel": ', jsonEncode(legendLabel), ','], "");
+      buffer.writeAll(['"legendLabel":', jsonEncode(legendLabel), ','], "");
     }
     if (legendLabelNoTitle != null) {
-      buffer.writeAll(['"legendLabelNoTitle": ', jsonEncode(legendLabelNoTitle), ','], "");
+      buffer.writeAll(['"legendLabelNoTitle":', jsonEncode(legendLabelNoTitle), ','], "");
     }
   }
 

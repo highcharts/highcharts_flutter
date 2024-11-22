@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -80,28 +80,28 @@ class HighchartsTooltipDateTimeLabelFormatsOptions extends HighchartsOptionsBase
 
 
     if (day != null) {
-      buffer.writeAll(['"day": ', jsonEncode(day), ','], "");
+      buffer.writeAll(['"day":', jsonEncode(day), ','], "");
     }
     if (hour != null) {
-      buffer.writeAll(['"hour": ', jsonEncode(hour), ','], "");
+      buffer.writeAll(['"hour":', jsonEncode(hour), ','], "");
     }
     if (millisecond != null) {
-      buffer.writeAll(['"millisecond": ', jsonEncode(millisecond), ','], "");
+      buffer.writeAll(['"millisecond":', jsonEncode(millisecond), ','], "");
     }
     if (minute != null) {
-      buffer.writeAll(['"minute": ', jsonEncode(minute), ','], "");
+      buffer.writeAll(['"minute":', jsonEncode(minute), ','], "");
     }
     if (month != null) {
-      buffer.writeAll(['"month": ', jsonEncode(month), ','], "");
+      buffer.writeAll(['"month":', jsonEncode(month), ','], "");
     }
     if (second != null) {
-      buffer.writeAll(['"second": ', jsonEncode(second), ','], "");
+      buffer.writeAll(['"second":', jsonEncode(second), ','], "");
     }
     if (week != null) {
-      buffer.writeAll(['"week": ', jsonEncode(week), ','], "");
+      buffer.writeAll(['"week":', jsonEncode(week), ','], "");
     }
     if (year != null) {
-      buffer.writeAll(['"year": ', jsonEncode(year), ','], "");
+      buffer.writeAll(['"year":', jsonEncode(year), ','], "");
     }
   }
 

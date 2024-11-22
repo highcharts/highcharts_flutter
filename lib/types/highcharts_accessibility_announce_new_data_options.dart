@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -74,16 +74,16 @@ class HighchartsAccessibilityAnnounceNewDataOptions extends HighchartsOptionsBas
 
 
     if (announcementFormatter != null) {
-      buffer.writeAll(['"announcementFormatter": ', jsonEncode(announcementFormatter), ','], "");
+      buffer.writeAll(['"announcementFormatter":', jsonEncode(announcementFormatter), ','], "");
     }
     if (enabled != null) {
-      buffer.writeAll(['"enabled": ', enabled, ','], "");
+      buffer.writeAll(['"enabled":', enabled, ','], "");
     }
     if (interruptUser != null) {
-      buffer.writeAll(['"interruptUser": ', interruptUser, ','], "");
+      buffer.writeAll(['"interruptUser":', interruptUser, ','], "");
     }
     if (minAnnounceInterval != null) {
-      buffer.writeAll(['"minAnnounceInterval": ', minAnnounceInterval, ','], "");
+      buffer.writeAll(['"minAnnounceInterval":', minAnnounceInterval, ','], "");
     }
   }
 

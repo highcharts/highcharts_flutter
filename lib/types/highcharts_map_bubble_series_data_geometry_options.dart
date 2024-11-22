@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -72,10 +72,10 @@ class HighchartsMapBubbleSeriesDataGeometryOptions extends HighchartsOptionsBase
 
 
     if (coordinates != null) {
-      buffer.writeAll(['"coordinates": ', jsonEncode(coordinates), ','], "");
+      buffer.writeAll(['"coordinates":', jsonEncode(coordinates), ','], "");
     }
     if (type != null) {
-      buffer.writeAll(['"type": ', jsonEncode(type), ','], "");
+      buffer.writeAll(['"type":', jsonEncode(type), ','], "");
     }
   }
 

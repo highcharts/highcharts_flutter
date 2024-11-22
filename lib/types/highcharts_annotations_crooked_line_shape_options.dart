@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -83,47 +83,47 @@ class HighchartsAnnotationsCrookedLineShapeOptions extends HighchartsOptionsBase
 
 
     if (dashStyle != null) {
-      buffer.writeAll(['"dashStyle": ', jsonEncode(dashStyle), ','], "");
+      buffer.writeAll(['"dashStyle":', jsonEncode(dashStyle), ','], "");
     }
     if (fill != null) {
       buffer.write("{");
       for (var item in fill!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (height != null) {
-      buffer.writeAll(['"height": ', height, ','], "");
+      buffer.writeAll(['"height":', height, ','], "");
     }
     if (r != null) {
-      buffer.writeAll(['"r": ', r, ','], "");
+      buffer.writeAll(['"r":', r, ','], "");
     }
     if (ry != null) {
-      buffer.writeAll(['"ry": ', ry, ','], "");
+      buffer.writeAll(['"ry":', ry, ','], "");
     }
     if (snap != null) {
-      buffer.writeAll(['"snap": ', snap, ','], "");
+      buffer.writeAll(['"snap":', snap, ','], "");
     }
     if (src != null) {
-      buffer.writeAll(['"src": ', jsonEncode(src), ','], "");
+      buffer.writeAll(['"src":', jsonEncode(src), ','], "");
     }
     if (stroke != null) {
-      buffer.writeAll(['"stroke": ', jsonEncode(stroke), ','], "");
+      buffer.writeAll(['"stroke":', jsonEncode(stroke), ','], "");
     }
     if (strokeWidth != null) {
-      buffer.writeAll(['"strokeWidth": ', strokeWidth, ','], "");
+      buffer.writeAll(['"strokeWidth":', strokeWidth, ','], "");
     }
     if (type != null) {
-      buffer.writeAll(['"type": ', jsonEncode(type), ','], "");
+      buffer.writeAll(['"type":', jsonEncode(type), ','], "");
     }
     if (width != null) {
-      buffer.writeAll(['"width": ', width, ','], "");
+      buffer.writeAll(['"width":', width, ','], "");
     }
     if (xAxis != null) {
-      buffer.writeAll(['"xAxis": ', xAxis, ','], "");
+      buffer.writeAll(['"xAxis":', xAxis, ','], "");
     }
     if (yAxis != null) {
-      buffer.writeAll(['"yAxis": ', yAxis, ','], "");
+      buffer.writeAll(['"yAxis":', yAxis, ','], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -63,13 +63,13 @@ class HighchartsTimelineSeriesDataLabelsStyleOptions extends HighchartsOptionsBa
 
 
     if (fontSize != null) {
-      buffer.writeAll(['"fontSize": ', jsonEncode(fontSize), ','], "");
+      buffer.writeAll(['"fontSize":', jsonEncode(fontSize), ','], "");
     }
     if (fontWeight != null) {
-      buffer.writeAll(['"fontWeight": ', jsonEncode(fontWeight), ','], "");
+      buffer.writeAll(['"fontWeight":', jsonEncode(fontWeight), ','], "");
     }
     if (textOutline != null) {
-      buffer.writeAll(['"textOutline": ', jsonEncode(textOutline), ','], "");
+      buffer.writeAll(['"textOutline":', jsonEncode(textOutline), ','], "");
     }
   }
 

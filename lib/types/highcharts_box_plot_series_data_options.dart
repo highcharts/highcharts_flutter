@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -100,16 +100,8 @@ export 'highcharts_box_plot_series_data_events_options.dart';
  */
 class HighchartsBoxPlotSeriesDataOptions extends HighchartsOptionsBase {
 
-  String? boxDashStyle;
-  double? high;
-  double? low;
-  double? median;
-  String? medianDashStyle;
-  double? q1;
-  double? q3;
-  String? stemDashStyle;
-  String? whiskerDashStyle;
   HighchartsBoxPlotSeriesDataAccessibilityOptions? accessibility;
+  String? boxDashStyle;
   String? className;
   String? color;
   double? colorIndex;
@@ -119,24 +111,24 @@ class HighchartsBoxPlotSeriesDataOptions extends HighchartsOptionsBase {
   HighchartsBoxPlotSeriesDataDragDropOptions? dragDrop;
   String? drilldown;
   HighchartsBoxPlotSeriesDataEventsOptions? events;
+  double? high;
   String? id;
   double? labelrank;
+  double? low;
+  double? median;
+  String? medianDashStyle;
+  double? q1;
+  double? q3;
   bool? selected;
+  String? stemDashStyle;
+  String? whiskerDashStyle;
   double? x;
   double? y;
 
 
   HighchartsBoxPlotSeriesDataOptions({
-    this.boxDashStyle,
-    this.high,
-    this.low,
-    this.median,
-    this.medianDashStyle,
-    this.q1,
-    this.q3,
-    this.stemDashStyle,
-    this.whiskerDashStyle,
     this.accessibility,
+    this.boxDashStyle,
     this.className,
     this.color,
     this.colorIndex,
@@ -146,9 +138,17 @@ class HighchartsBoxPlotSeriesDataOptions extends HighchartsOptionsBase {
     this.dragDrop,
     this.drilldown,
     this.events,
+    this.high,
     this.id,
     this.labelrank,
+    this.low,
+    this.median,
+    this.medianDashStyle,
+    this.q1,
+    this.q3,
     this.selected,
+    this.stemDashStyle,
+    this.whiskerDashStyle,
     this.x,
     this.y
   });
@@ -158,85 +158,85 @@ class HighchartsBoxPlotSeriesDataOptions extends HighchartsOptionsBase {
     super.toOptionsJSON(buffer);
 
 
-    if (boxDashStyle != null) {
-      buffer.writeAll(['"boxDashStyle": ', jsonEncode(boxDashStyle), ','], "");
-    }
-    if (high != null) {
-      buffer.writeAll(['"high": ', high, ','], "");
-    }
-    if (low != null) {
-      buffer.writeAll(['"low": ', low, ','], "");
-    }
-    if (median != null) {
-      buffer.writeAll(['"median": ', median, ','], "");
-    }
-    if (medianDashStyle != null) {
-      buffer.writeAll(['"medianDashStyle": ', jsonEncode(medianDashStyle), ','], "");
-    }
-    if (q1 != null) {
-      buffer.writeAll(['"q1": ', q1, ','], "");
-    }
-    if (q3 != null) {
-      buffer.writeAll(['"q3": ', q3, ','], "");
-    }
-    if (stemDashStyle != null) {
-      buffer.writeAll(['"stemDashStyle": ', jsonEncode(stemDashStyle), ','], "");
-    }
-    if (whiskerDashStyle != null) {
-      buffer.writeAll(['"whiskerDashStyle": ', jsonEncode(whiskerDashStyle), ','], "");
-    }
     if (accessibility != null) {
-      buffer.writeAll(['"accessibility": ', accessibility?.toJSON(), ","], "");
+      buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ","], "");
+    }
+    if (boxDashStyle != null) {
+      buffer.writeAll(['"boxDashStyle":', jsonEncode(boxDashStyle), ','], "");
     }
     if (className != null) {
-      buffer.writeAll(['"className": ', jsonEncode(className), ','], "");
+      buffer.writeAll(['"className":', jsonEncode(className), ','], "");
     }
     if (color != null) {
-      buffer.writeAll(['"color": ', jsonEncode(color), ','], "");
+      buffer.writeAll(['"color":', jsonEncode(color), ','], "");
     }
     if (colorIndex != null) {
-      buffer.writeAll(['"colorIndex": ', colorIndex, ','], "");
+      buffer.writeAll(['"colorIndex":', colorIndex, ','], "");
     }
     if (custom != null) {
       buffer.write("{");
       for (var item in custom!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (dataLabels != null) {
-      buffer.write('"dataLabels": [');
+      buffer.write('"dataLabels":[');
       for (var item in dataLabels!) {
         buffer.writeAll([item.toJSON(), ","], "");
       }
       buffer.write("],");
     }
     if (description != null) {
-      buffer.writeAll(['"description": ', jsonEncode(description), ','], "");
+      buffer.writeAll(['"description":', jsonEncode(description), ','], "");
     }
     if (dragDrop != null) {
-      buffer.writeAll(['"dragDrop": ', dragDrop?.toJSON(), ","], "");
+      buffer.writeAll(['"dragDrop":', dragDrop?.toJSON(), ","], "");
     }
     if (drilldown != null) {
-      buffer.writeAll(['"drilldown": ', jsonEncode(drilldown), ','], "");
+      buffer.writeAll(['"drilldown":', jsonEncode(drilldown), ','], "");
     }
     if (events != null) {
-      buffer.writeAll(['"events": ', events?.toJSON(), ","], "");
+      buffer.writeAll(['"events":', events?.toJSON(), ","], "");
+    }
+    if (high != null) {
+      buffer.writeAll(['"high":', high, ','], "");
     }
     if (id != null) {
-      buffer.writeAll(['"id": ', jsonEncode(id), ','], "");
+      buffer.writeAll(['"id":', jsonEncode(id), ','], "");
     }
     if (labelrank != null) {
-      buffer.writeAll(['"labelrank": ', labelrank, ','], "");
+      buffer.writeAll(['"labelrank":', labelrank, ','], "");
+    }
+    if (low != null) {
+      buffer.writeAll(['"low":', low, ','], "");
+    }
+    if (median != null) {
+      buffer.writeAll(['"median":', median, ','], "");
+    }
+    if (medianDashStyle != null) {
+      buffer.writeAll(['"medianDashStyle":', jsonEncode(medianDashStyle), ','], "");
+    }
+    if (q1 != null) {
+      buffer.writeAll(['"q1":', q1, ','], "");
+    }
+    if (q3 != null) {
+      buffer.writeAll(['"q3":', q3, ','], "");
     }
     if (selected != null) {
-      buffer.writeAll(['"selected": ', selected, ','], "");
+      buffer.writeAll(['"selected":', selected, ','], "");
+    }
+    if (stemDashStyle != null) {
+      buffer.writeAll(['"stemDashStyle":', jsonEncode(stemDashStyle), ','], "");
+    }
+    if (whiskerDashStyle != null) {
+      buffer.writeAll(['"whiskerDashStyle":', jsonEncode(whiskerDashStyle), ','], "");
     }
     if (x != null) {
-      buffer.writeAll(['"x": ', x, ','], "");
+      buffer.writeAll(['"x":', x, ','], "");
     }
     if (y != null) {
-      buffer.writeAll(['"y": ', y, ','], "");
+      buffer.writeAll(['"y":', y, ','], "");
     }
   }
 

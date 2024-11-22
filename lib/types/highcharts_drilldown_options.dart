@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -66,8 +66,8 @@ class HighchartsDrilldownOptions extends HighchartsOptionsBase {
   dynamic animation;
   HighchartsDrilldownBreadcrumbsOptions? breadcrumbs;
   HighchartsDrilldownDrillUpButtonOptions? drillUpButton;
-  List<dynamic>? series;
   bool? mapZooming;
+  List<dynamic>? series;
 
 
   HighchartsDrilldownOptions({
@@ -77,8 +77,8 @@ class HighchartsDrilldownOptions extends HighchartsOptionsBase {
     this.animation,
     this.breadcrumbs,
     this.drillUpButton,
-    this.series,
-    this.mapZooming
+    this.mapZooming,
+    this.series
   });
 
   @override
@@ -89,34 +89,34 @@ class HighchartsDrilldownOptions extends HighchartsOptionsBase {
     if (activeAxisLabelStyle != null) {
       buffer.write("{");
       for (var item in activeAxisLabelStyle!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (activeDataLabelStyle != null) {
-      buffer.writeAll(['"activeDataLabelStyle": ', activeDataLabelStyle?.toJSON(), ","], "");
+      buffer.writeAll(['"activeDataLabelStyle":', activeDataLabelStyle?.toJSON(), ","], "");
     }
     if (allowPointDrilldown != null) {
-      buffer.writeAll(['"allowPointDrilldown": ', allowPointDrilldown, ','], "");
+      buffer.writeAll(['"allowPointDrilldown":', allowPointDrilldown, ','], "");
     }
     if (animation != null) {
-      buffer.writeAll(['"animation": ', jsonEncode(animation), ','], "");
+      buffer.writeAll(['"animation":', jsonEncode(animation), ','], "");
     }
     if (breadcrumbs != null) {
-      buffer.writeAll(['"breadcrumbs": ', breadcrumbs?.toJSON(), ","], "");
+      buffer.writeAll(['"breadcrumbs":', breadcrumbs?.toJSON(), ","], "");
     }
     if (drillUpButton != null) {
-      buffer.writeAll(['"drillUpButton": ', drillUpButton?.toJSON(), ","], "");
+      buffer.writeAll(['"drillUpButton":', drillUpButton?.toJSON(), ","], "");
+    }
+    if (mapZooming != null) {
+      buffer.writeAll(['"mapZooming":', mapZooming, ','], "");
     }
     if (series != null) {
-      buffer.write('"series": [');
+      buffer.write('"series":[');
       for (var item in series!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
-    }
-    if (mapZooming != null) {
-      buffer.writeAll(['"mapZooming": ', mapZooming, ','], "");
     }
   }
 

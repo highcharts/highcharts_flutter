@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -70,19 +70,19 @@ class HighchartsResponsiveRulesConditionOptions extends HighchartsOptionsBase {
 
 
     if (callback != null) {
-      buffer.writeAll(['"callback": ', jsonEncode(callback), ','], "");
+      buffer.writeAll(['"callback":', jsonEncode(callback), ','], "");
     }
     if (maxHeight != null) {
-      buffer.writeAll(['"maxHeight": ', maxHeight, ','], "");
+      buffer.writeAll(['"maxHeight":', maxHeight, ','], "");
     }
     if (maxWidth != null) {
-      buffer.writeAll(['"maxWidth": ', maxWidth, ','], "");
+      buffer.writeAll(['"maxWidth":', maxWidth, ','], "");
     }
     if (minHeight != null) {
-      buffer.writeAll(['"minHeight": ', minHeight, ','], "");
+      buffer.writeAll(['"minHeight":', minHeight, ','], "");
     }
     if (minWidth != null) {
-      buffer.writeAll(['"minWidth": ', minWidth, ','], "");
+      buffer.writeAll(['"minWidth":', minWidth, ','], "");
     }
   }
 

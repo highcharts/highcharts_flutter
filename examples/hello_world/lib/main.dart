@@ -39,14 +39,16 @@ class _MyHomePageState extends State<MyHomePage> {
         chart: HighchartsChartOptions(
           backgroundColor: '#FFF0'
         ),
-        data: HighchartsDataOptions(
-        ),
         title: HighchartsTitleOptions(
-          text: 'Hello world!'
+          text: 'Hello, World!'
         ),
         series: [
           HighchartsLineSeries(
-            data: [[0, 5], [1, 10]]
+            name: 'My First Series',
+            data: [[0, 5], [1, 10]],
+            options: HighchartsLineSeriesOptions(
+              color: '#C60'
+            )
           )
         ]
       )
@@ -60,8 +62,8 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            chart
+          children: [
+            Container(child: chart)
           ],
         ),
       ),

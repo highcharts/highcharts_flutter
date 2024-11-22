@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -59,7 +59,6 @@ export 'highcharts_xaxis_plot_lines_labels_options.dart';
  */
 class HighchartsXAxisPlotLinesOptions extends HighchartsOptionsBase {
 
-  bool? acrossPanes;
   String? className;
   String? color;
   String? dashStyle;
@@ -73,7 +72,6 @@ class HighchartsXAxisPlotLinesOptions extends HighchartsOptionsBase {
 
 
   HighchartsXAxisPlotLinesOptions({
-    this.acrossPanes,
     this.className,
     this.color,
     this.dashStyle,
@@ -91,38 +89,35 @@ class HighchartsXAxisPlotLinesOptions extends HighchartsOptionsBase {
     super.toOptionsJSON(buffer);
 
 
-    if (acrossPanes != null) {
-      buffer.writeAll(['"acrossPanes": ', acrossPanes, ','], "");
-    }
     if (className != null) {
-      buffer.writeAll(['"className": ', jsonEncode(className), ','], "");
+      buffer.writeAll(['"className":', jsonEncode(className), ','], "");
     }
     if (color != null) {
-      buffer.writeAll(['"color": ', jsonEncode(color), ','], "");
+      buffer.writeAll(['"color":', jsonEncode(color), ','], "");
     }
     if (dashStyle != null) {
-      buffer.writeAll(['"dashStyle": ', jsonEncode(dashStyle), ','], "");
+      buffer.writeAll(['"dashStyle":', jsonEncode(dashStyle), ','], "");
     }
     if (events != null) {
-      buffer.writeAll(['"events": ', events?.toJSON(), ","], "");
+      buffer.writeAll(['"events":', events?.toJSON(), ","], "");
     }
     if (id != null) {
-      buffer.writeAll(['"id": ', jsonEncode(id), ','], "");
+      buffer.writeAll(['"id":', jsonEncode(id), ','], "");
     }
     if (label != null) {
-      buffer.writeAll(['"label": ', label?.toJSON(), ","], "");
+      buffer.writeAll(['"label":', label?.toJSON(), ","], "");
     }
     if (labels != null) {
-      buffer.writeAll(['"labels": ', labels?.toJSON(), ","], "");
+      buffer.writeAll(['"labels":', labels?.toJSON(), ","], "");
     }
     if (value != null) {
-      buffer.writeAll(['"value": ', value, ','], "");
+      buffer.writeAll(['"value":', value, ','], "");
     }
     if (width != null) {
-      buffer.writeAll(['"width": ', width, ','], "");
+      buffer.writeAll(['"width":', width, ','], "");
     }
     if (zIndex != null) {
-      buffer.writeAll(['"zIndex": ', zIndex, ','], "");
+      buffer.writeAll(['"zIndex":', zIndex, ','], "");
     }
   }
 

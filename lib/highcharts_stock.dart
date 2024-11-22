@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -28,6 +28,7 @@ import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import 'package:webview_flutter_android/webview_flutter_android.dart';
 import 'package:webview_flutter_wkwebview/webview_flutter_wkwebview.dart';
+import '' if (dart.library.js_interop) 'package:webview_flutter_web/webview_flutter_web.dart';
 
 import 'types/highcharts_options.dart';
 
@@ -133,13 +134,23 @@ const String kHighchartsStockHTML = '''
     background: transparent;
     height: 100%;
     margin: 0;
+    overflow-x: hidden;
     width: 100%;
   }
 </style>
 </head>
 <body>
 
-<script src="https://code.highcharts.com/highcharts.js" type="text/javascript"></script><script src="https://code.highcharts.com/maps/highmaps.js" type="text/javascript"></script><script src="https://code.highcharts.com/highcharts-more.js" type="text/javascript"></script><script src="https://code.highcharts.com/highcharts-3d.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/stock.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/gantt.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/exporting.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/export-data.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/parallel-coordinates.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/accessibility.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/annotations-advanced.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/boost-canvas.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/boost.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/data.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/draggable-points.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/static-scale.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/broken-axis.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/heatmap.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/tilemap.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/timeline.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/treemap.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/item-series.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/drilldown.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/histogram-bellcurve.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/bullet.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/funnel.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/funnel3d.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/pyramid3d.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/networkgraph.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/pareto.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/pattern-fill.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/price-indicator.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/sankey.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/arc-diagram.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/dependency-wheel.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/series-label.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/solid-gauge.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/sonification.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/streamgraph.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/sunburst.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/variable-pie.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/variwide.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/vector.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/venn.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/windbarb.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/wordcloud.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/xrange.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/no-data-to-display.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/drag-panes.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/debugger.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/heikinashi.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/dumbbell.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/lollipop.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/cylinder.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/hollowcandlestick.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/organization.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/dotplot.js" type="text/javascript"></script><script src="https://code.highcharts.com/modules/marker-clusters.js" type="text/javascript"></script>
+<script src="https://code.highcharts.com/highcharts.js" type="text/javascript"></script>
+<script src="https://code.highcharts.com/modules/map.js" type="text/javascript"></script>
+<script src="https://code.highcharts.com/modules/stock.js" type="text/javascript"></script>
+<script src="https://code.highcharts.com/highcharts-more.js" type="text/javascript"></script>
+<script src="https://code.highcharts.com/modules/annotations.js" type="text/javascript"></script>
+<script src="https://code.highcharts.com/modules/broken-axis.js" type="text/javascript"></script>
+<script src="https://code.highcharts.com/modules/data.js" type="text/javascript"></script>
+<script src="https://code.highcharts.com/modules/exporting.js" type="text/javascript"></script>
+<script src="https://code.highcharts.com/modules/offline-exporting.js" type="text/javascript"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js" type="text/javascript"></script>
 
 <div id="container"></div>
 
@@ -151,6 +162,9 @@ const String kHighchartsStockHTML = '''
         chart: Highcharts.stock('container', {
             chart: {
                 backgroundColor: 'rgba(255,255,255,0)'
+            },
+            exporting: {
+                enabled: false
             }
         }),
         update: function (options, redraw) {
@@ -232,10 +246,10 @@ class _HighchartsStockState extends State<HighchartsStock> {
 
     PlatformWebViewControllerCreationParams params;
 
-    if (WebViewPlatform.instance is WebKitWebViewPlatform) {
-      params = WebKitWebViewControllerCreationParams();
-    } else if (WebViewPlatform.instance is AndroidWebViewPlatform) {
+    if (WebViewPlatform.instance is AndroidWebViewPlatform) {
       params = AndroidWebViewControllerCreationParams();
+    } else if (WebViewPlatform.instance is WebKitWebViewPlatform) {
+      params = WebKitWebViewControllerCreationParams();
     } else {
       params = const PlatformWebViewControllerCreationParams();
     }
@@ -246,33 +260,46 @@ class _HighchartsStockState extends State<HighchartsStock> {
       (webViewController.platform as WebKitWebViewController).setInspectable(true);
     }
 
-    webViewController
-      ..setJavaScriptMode(JavaScriptMode.unrestricted)
-      ..setBackgroundColor(const Color(0x00000000))
-      ..setNavigationDelegate(
-        NavigationDelegate(
-          onNavigationRequest: (NavigationRequest request) {
-            String url = request.url;
+    if (
+        webViewController.platform is AndroidWebViewController ||
+        webViewController.platform is WebKitWebViewController
+    ) {
+      webViewController
+        ..setJavaScriptMode(JavaScriptMode.unrestricted)
+        ..setBackgroundColor(const Color(0x00000000))
+        ..setNavigationDelegate(
+            NavigationDelegate(
+            onNavigationRequest: (NavigationRequest request) {
+                String url = request.url;
 
-            debugPrint(url);
+                debugPrint(url);
 
-            if (
-                url == 'about:blank' ||
-                url.startsWith('http://127.0.0.1')
-            ) {
-                return NavigationDecision.navigate;
+                if (
+                    url == 'about:blank' ||
+                    url.startsWith('http://127.0.0.1')
+                ) {
+                    return NavigationDecision.navigate;
+                }
+
+                return NavigationDecision.prevent;
+            },
+            onPageFinished: (String url) {
+                widget.refresh();
             }
-
-            return NavigationDecision.prevent;
-          },
-          onPageFinished: (String url) {
-            widget.refresh();
-          }
+            )
         )
-      )
-      ..loadHtmlString(kHighchartsStockHTML);
+        ..loadHtmlString(kHighchartsStockHTML);
+    } else {
+      String json = widget.options.toJSON();
+      debugPrint(json);
+      webViewController.loadHtmlString(
+        kHighchartsChartHTML +
+        '<script>HighchartsFlutter.update($json)</script>'
+      );
+    }
 
-      webView = WebViewWidget(controller: webViewController);
+    webView = WebViewWidget(controller: webViewController);
+
   }
 
 }

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -82,41 +82,41 @@ class HighchartsXAxisPlotBandsLabelOptions extends HighchartsOptionsBase {
 
 
     if (align != null) {
-      buffer.writeAll(['"align": ', jsonEncode(align), ','], "");
+      buffer.writeAll(['"align":', jsonEncode(align), ','], "");
     }
     if (allowOverlap != null) {
-      buffer.writeAll(['"allowOverlap": ', allowOverlap, ','], "");
+      buffer.writeAll(['"allowOverlap":', allowOverlap, ','], "");
     }
     if (inside != null) {
-      buffer.writeAll(['"inside": ', inside, ','], "");
+      buffer.writeAll(['"inside":', inside, ','], "");
     }
     if (rotation != null) {
-      buffer.writeAll(['"rotation": ', rotation, ','], "");
+      buffer.writeAll(['"rotation":', rotation, ','], "");
     }
     if (style != null) {
       buffer.write("{");
       for (var item in style!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (text != null) {
-      buffer.writeAll(['"text": ', jsonEncode(text), ','], "");
+      buffer.writeAll(['"text":', jsonEncode(text), ','], "");
     }
     if (textAlign != null) {
-      buffer.writeAll(['"textAlign": ', jsonEncode(textAlign), ','], "");
+      buffer.writeAll(['"textAlign":', jsonEncode(textAlign), ','], "");
     }
     if (useHTML != null) {
-      buffer.writeAll(['"useHTML": ', useHTML, ','], "");
+      buffer.writeAll(['"useHTML":', useHTML, ','], "");
     }
     if (verticalAlign != null) {
-      buffer.writeAll(['"verticalAlign": ', jsonEncode(verticalAlign), ','], "");
+      buffer.writeAll(['"verticalAlign":', jsonEncode(verticalAlign), ','], "");
     }
     if (x != null) {
-      buffer.writeAll(['"x": ', x, ','], "");
+      buffer.writeAll(['"x":', x, ','], "");
     }
     if (y != null) {
-      buffer.writeAll(['"y": ', y, ','], "");
+      buffer.writeAll(['"y":', y, ','], "");
     }
   }
 

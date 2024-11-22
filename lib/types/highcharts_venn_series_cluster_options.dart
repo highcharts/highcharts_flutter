@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -103,37 +103,37 @@ class HighchartsVennSeriesClusterOptions extends HighchartsOptionsBase {
 
 
     if (allowOverlap != null) {
-      buffer.writeAll(['"allowOverlap": ', allowOverlap, ','], "");
+      buffer.writeAll(['"allowOverlap":', allowOverlap, ','], "");
     }
     if (animation != null) {
-      buffer.writeAll(['"animation": ', jsonEncode(animation), ','], "");
+      buffer.writeAll(['"animation":', jsonEncode(animation), ','], "");
     }
     if (dataLabels != null) {
-      buffer.writeAll(['"dataLabels": ', dataLabels?.toJSON(), ","], "");
+      buffer.writeAll(['"dataLabels":', dataLabels?.toJSON(), ","], "");
     }
     if (drillToCluster != null) {
-      buffer.writeAll(['"drillToCluster": ', drillToCluster, ','], "");
+      buffer.writeAll(['"drillToCluster":', drillToCluster, ','], "");
     }
     if (enabled != null) {
-      buffer.writeAll(['"enabled": ', enabled, ','], "");
+      buffer.writeAll(['"enabled":', enabled, ','], "");
     }
     if (events != null) {
-      buffer.writeAll(['"events": ', events?.toJSON(), ","], "");
+      buffer.writeAll(['"events":', events?.toJSON(), ","], "");
     }
     if (layoutAlgorithm != null) {
-      buffer.writeAll(['"layoutAlgorithm": ', layoutAlgorithm?.toJSON(), ","], "");
+      buffer.writeAll(['"layoutAlgorithm":', layoutAlgorithm?.toJSON(), ","], "");
     }
     if (marker != null) {
-      buffer.writeAll(['"marker": ', marker?.toJSON(), ","], "");
+      buffer.writeAll(['"marker":', marker?.toJSON(), ","], "");
     }
     if (minimumClusterSize != null) {
-      buffer.writeAll(['"minimumClusterSize": ', minimumClusterSize, ','], "");
+      buffer.writeAll(['"minimumClusterSize":', minimumClusterSize, ','], "");
     }
     if (states != null) {
-      buffer.writeAll(['"states": ', states?.toJSON(), ","], "");
+      buffer.writeAll(['"states":', states?.toJSON(), ","], "");
     }
     if (zones != null) {
-      buffer.write('"zones": [');
+      buffer.write('"zones":[');
       for (var item in zones!) {
         buffer.writeAll([item.toJSON(), ","], "");
       }

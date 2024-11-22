@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -70,16 +70,16 @@ class HighchartsAccessibilitySeriesOptions extends HighchartsOptionsBase {
 
 
     if (describeSingleSeries != null) {
-      buffer.writeAll(['"describeSingleSeries": ', describeSingleSeries, ','], "");
+      buffer.writeAll(['"describeSingleSeries":', describeSingleSeries, ','], "");
     }
     if (descriptionFormat != null) {
-      buffer.writeAll(['"descriptionFormat": ', jsonEncode(descriptionFormat), ','], "");
+      buffer.writeAll(['"descriptionFormat":', jsonEncode(descriptionFormat), ','], "");
     }
     if (descriptionFormatter != null) {
-      buffer.writeAll(['"descriptionFormatter": ', jsonEncode(descriptionFormatter), ','], "");
+      buffer.writeAll(['"descriptionFormatter":', jsonEncode(descriptionFormatter), ','], "");
     }
     if (pointDescriptionEnabledThreshold != null) {
-      buffer.writeAll(['"pointDescriptionEnabledThreshold": ', pointDescriptionEnabledThreshold, ','], "");
+      buffer.writeAll(['"pointDescriptionEnabledThreshold":', pointDescriptionEnabledThreshold, ','], "");
     }
   }
 

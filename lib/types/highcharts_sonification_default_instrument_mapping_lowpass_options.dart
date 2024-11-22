@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -71,10 +71,10 @@ class HighchartsSonificationDefaultInstrumentMappingLowpassOptions extends Highc
 
 
     if (frequency != null) {
-      buffer.writeAll(['"frequency": ', frequency?.toJSON(), ","], "");
+      buffer.writeAll(['"frequency":', frequency?.toJSON(), ","], "");
     }
     if (resonance != null) {
-      buffer.writeAll(['"resonance": ', resonance?.toJSON(), ","], "");
+      buffer.writeAll(['"resonance":', resonance?.toJSON(), ","], "");
     }
   }
 

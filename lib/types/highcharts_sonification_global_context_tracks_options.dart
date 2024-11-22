@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -94,44 +94,44 @@ class HighchartsSonificationGlobalContextTracksOptions extends HighchartsOptions
 
 
     if (timeInterval != null) {
-      buffer.writeAll(['"timeInterval": ', timeInterval, ','], "");
+      buffer.writeAll(['"timeInterval":', timeInterval, ','], "");
     }
     if (valueInterval != null) {
-      buffer.writeAll(['"valueInterval": ', valueInterval, ','], "");
+      buffer.writeAll(['"valueInterval":', valueInterval, ','], "");
     }
     if (valueMapFunction != null) {
-      buffer.writeAll(['"valueMapFunction": ', jsonEncode(valueMapFunction), ','], "");
+      buffer.writeAll(['"valueMapFunction":', jsonEncode(valueMapFunction), ','], "");
     }
     if (valueProp != null) {
-      buffer.writeAll(['"valueProp": ', jsonEncode(valueProp), ','], "");
+      buffer.writeAll(['"valueProp":', jsonEncode(valueProp), ','], "");
     }
     if (mapping != null) {
-      buffer.writeAll(['"mapping": ', mapping?.toJSON(), ","], "");
+      buffer.writeAll(['"mapping":', mapping?.toJSON(), ","], "");
     }
     if (activeWhen != null) {
-      buffer.writeAll(['"activeWhen": ', activeWhen?.toJSON(), ","], "");
+      buffer.writeAll(['"activeWhen":', activeWhen?.toJSON(), ","], "");
     }
     if (instrument != null) {
       buffer.write("{");
       for (var item in instrument!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (midiName != null) {
-      buffer.writeAll(['"midiName": ', jsonEncode(midiName), ','], "");
+      buffer.writeAll(['"midiName":', jsonEncode(midiName), ','], "");
     }
     if (pointGrouping != null) {
-      buffer.writeAll(['"pointGrouping": ', pointGrouping?.toJSON(), ","], "");
+      buffer.writeAll(['"pointGrouping":', pointGrouping?.toJSON(), ","], "");
     }
     if (roundToMusicalNotes != null) {
-      buffer.writeAll(['"roundToMusicalNotes": ', roundToMusicalNotes, ','], "");
+      buffer.writeAll(['"roundToMusicalNotes":', roundToMusicalNotes, ','], "");
     }
     if (showPlayMarker != null) {
-      buffer.writeAll(['"showPlayMarker": ', showPlayMarker, ','], "");
+      buffer.writeAll(['"showPlayMarker":', showPlayMarker, ','], "");
     }
     if (type != null) {
-      buffer.writeAll(['"type": ', jsonEncode(type), ','], "");
+      buffer.writeAll(['"type":', jsonEncode(type), ','], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -91,31 +91,31 @@ class HighchartsStockToolsGuiDefinitionsLinesOptions extends HighchartsOptionsBa
 
 
     if (arrowInfinityLine != null) {
-      buffer.writeAll(['"arrowInfinityLine": ', arrowInfinityLine?.toJSON(), ","], "");
+      buffer.writeAll(['"arrowInfinityLine":', arrowInfinityLine?.toJSON(), ","], "");
     }
     if (arrowRay != null) {
-      buffer.writeAll(['"arrowRay": ', arrowRay?.toJSON(), ","], "");
+      buffer.writeAll(['"arrowRay":', arrowRay?.toJSON(), ","], "");
     }
     if (arrowSegment != null) {
-      buffer.writeAll(['"arrowSegment": ', arrowSegment?.toJSON(), ","], "");
+      buffer.writeAll(['"arrowSegment":', arrowSegment?.toJSON(), ","], "");
     }
     if (horizontalLine != null) {
-      buffer.writeAll(['"horizontalLine": ', horizontalLine?.toJSON(), ","], "");
+      buffer.writeAll(['"horizontalLine":', horizontalLine?.toJSON(), ","], "");
     }
     if (items != null) {
-      buffer.writeAll(['"items": ', jsonEncode(items), ','], "");
+      buffer.writeAll(['"items":', jsonEncode(items), ','], "");
     }
     if (line != null) {
-      buffer.writeAll(['"line": ', line?.toJSON(), ","], "");
+      buffer.writeAll(['"line":', line?.toJSON(), ","], "");
     }
     if (ray != null) {
-      buffer.writeAll(['"ray": ', ray?.toJSON(), ","], "");
+      buffer.writeAll(['"ray":', ray?.toJSON(), ","], "");
     }
     if (segment != null) {
-      buffer.writeAll(['"segment": ', segment?.toJSON(), ","], "");
+      buffer.writeAll(['"segment":', segment?.toJSON(), ","], "");
     }
     if (verticalLine != null) {
-      buffer.writeAll(['"verticalLine": ', verticalLine?.toJSON(), ","], "");
+      buffer.writeAll(['"verticalLine":', verticalLine?.toJSON(), ","], "");
     }
   }
 

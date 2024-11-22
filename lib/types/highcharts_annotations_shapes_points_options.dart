@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -58,11 +58,5 @@ class HighchartsAnnotationsShapesPointsOptions extends HighchartsOptionsBase {
 
   HighchartsAnnotationsShapesPointsOptions();
 
-  @override
-  void toOptionsJSON(StringBuffer buffer) {
-    super.toOptionsJSON(buffer);
-
-
-  }
 
 }

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -80,28 +80,28 @@ class HighchartsChart3DOptions extends HighchartsOptionsBase {
 
 
     if (alpha != null) {
-      buffer.writeAll(['"alpha": ', alpha, ','], "");
+      buffer.writeAll(['"alpha":', alpha, ','], "");
     }
     if (axisLabelPosition != null) {
-      buffer.writeAll(['"axisLabelPosition": ', jsonEncode(axisLabelPosition), ','], "");
+      buffer.writeAll(['"axisLabelPosition":', jsonEncode(axisLabelPosition), ','], "");
     }
     if (beta != null) {
-      buffer.writeAll(['"beta": ', beta, ','], "");
+      buffer.writeAll(['"beta":', beta, ','], "");
     }
     if (depth != null) {
-      buffer.writeAll(['"depth": ', depth, ','], "");
+      buffer.writeAll(['"depth":', depth, ','], "");
     }
     if (enabled != null) {
-      buffer.writeAll(['"enabled": ', enabled, ','], "");
+      buffer.writeAll(['"enabled":', enabled, ','], "");
     }
     if (fitToPlot != null) {
-      buffer.writeAll(['"fitToPlot": ', fitToPlot, ','], "");
+      buffer.writeAll(['"fitToPlot":', fitToPlot, ','], "");
     }
     if (frame != null) {
-      buffer.writeAll(['"frame": ', frame?.toJSON(), ","], "");
+      buffer.writeAll(['"frame":', frame?.toJSON(), ","], "");
     }
     if (viewDistance != null) {
-      buffer.writeAll(['"viewDistance": ', viewDistance, ','], "");
+      buffer.writeAll(['"viewDistance":', viewDistance, ','], "");
     }
   }
 

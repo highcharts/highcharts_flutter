@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -174,284 +174,284 @@ class HighchartsNavigationBindingsOptions extends HighchartsOptionsBase {
     if (circleAnnotation != null) {
       buffer.write("{");
       for (var item in circleAnnotation!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (ellipseAnnotation != null) {
-      buffer.writeAll(['"ellipseAnnotation": ', ellipseAnnotation?.toJSON(), ","], "");
+      buffer.writeAll(['"ellipseAnnotation":', ellipseAnnotation?.toJSON(), ","], "");
     }
     if (labelAnnotation != null) {
       buffer.write("{");
       for (var item in labelAnnotation!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (rectangleAnnotation != null) {
       buffer.write("{");
       for (var item in rectangleAnnotation!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (arrowInfinityLine != null) {
       buffer.write("{");
       for (var item in arrowInfinityLine!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (arrowRay != null) {
       buffer.write("{");
       for (var item in arrowRay!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (arrowSegment != null) {
       buffer.write("{");
       for (var item in arrowSegment!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (crooked3 != null) {
       buffer.write("{");
       for (var item in crooked3!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (crooked5 != null) {
       buffer.write("{");
       for (var item in crooked5!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (currentPriceIndicator != null) {
       buffer.write("{");
       for (var item in currentPriceIndicator!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (elliott3 != null) {
       buffer.write("{");
       for (var item in elliott3!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (elliott5 != null) {
       buffer.write("{");
       for (var item in elliott5!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (fibonacci != null) {
-      buffer.writeAll(['"fibonacci": ', fibonacci?.toJSON(), ","], "");
+      buffer.writeAll(['"fibonacci":', fibonacci?.toJSON(), ","], "");
     }
     if (fibonacciTimeZones != null) {
       buffer.write("{");
       for (var item in fibonacciTimeZones!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (flagCirclepin != null) {
       buffer.write("{");
       for (var item in flagCirclepin!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (flagDiamondpin != null) {
       buffer.write("{");
       for (var item in flagDiamondpin!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (flagSimplepin != null) {
       buffer.write("{");
       for (var item in flagSimplepin!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (flagSquarepin != null) {
       buffer.write("{");
       for (var item in flagSquarepin!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (fullScreen != null) {
-      buffer.writeAll(['"fullScreen": ', fullScreen?.toJSON(), ","], "");
+      buffer.writeAll(['"fullScreen":', fullScreen?.toJSON(), ","], "");
     }
     if (horizontalLine != null) {
       buffer.write("{");
       for (var item in horizontalLine!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (indicators != null) {
       buffer.write("{");
       for (var item in indicators!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (infinityLine != null) {
       buffer.write("{");
       for (var item in infinityLine!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (measureX != null) {
       buffer.write("{");
       for (var item in measureX!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (measureXY != null) {
       buffer.write("{");
       for (var item in measureXY!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (measureY != null) {
       buffer.write("{");
       for (var item in measureY!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (parallelChannel != null) {
       buffer.write("{");
       for (var item in parallelChannel!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (pitchfork != null) {
       buffer.write("{");
       for (var item in pitchfork!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (ray != null) {
       buffer.write("{");
       for (var item in ray!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (saveChart != null) {
-      buffer.writeAll(['"saveChart": ', saveChart?.toJSON(), ","], "");
+      buffer.writeAll(['"saveChart":', saveChart?.toJSON(), ","], "");
     }
     if (segment != null) {
       buffer.write("{");
       for (var item in segment!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (seriesTypeCandlestick != null) {
       buffer.write("{");
       for (var item in seriesTypeCandlestick!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (seriesTypeHLC != null) {
-      buffer.writeAll(['"seriesTypeHLC": ', seriesTypeHLC?.toJSON(), ","], "");
+      buffer.writeAll(['"seriesTypeHLC":', seriesTypeHLC?.toJSON(), ","], "");
     }
     if (seriesTypeHeikinAshi != null) {
       buffer.write("{");
       for (var item in seriesTypeHeikinAshi!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (seriesTypeHollowCandlestick != null) {
       buffer.write("{");
       for (var item in seriesTypeHollowCandlestick!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (seriesTypeLine != null) {
       buffer.write("{");
       for (var item in seriesTypeLine!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (seriesTypeOhlc != null) {
       buffer.write("{");
       for (var item in seriesTypeOhlc!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (timeCycles != null) {
-      buffer.writeAll(['"timeCycles": ', timeCycles?.toJSON(), ","], "");
+      buffer.writeAll(['"timeCycles":', timeCycles?.toJSON(), ","], "");
     }
     if (toggleAnnotations != null) {
       buffer.write("{");
       for (var item in toggleAnnotations!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (verticalArrow != null) {
       buffer.write("{");
       for (var item in verticalArrow!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (verticalCounter != null) {
       buffer.write("{");
       for (var item in verticalCounter!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (verticalLine != null) {
       buffer.write("{");
       for (var item in verticalLine!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (zoomX != null) {
       buffer.write("{");
       for (var item in zoomX!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (zoomXY != null) {
       buffer.write("{");
       for (var item in zoomXY!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (zoomY != null) {
       buffer.write("{");
       for (var item in zoomY!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }

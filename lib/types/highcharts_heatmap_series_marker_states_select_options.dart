@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -46,25 +46,25 @@ import 'highcharts_options_base.dart';
 
 class HighchartsHeatmapSeriesMarkerStatesSelectOptions extends HighchartsOptionsBase {
 
-  double? heightPlus;
-  double? widthPlus;
-  double? height;
-  double? width;
   bool? enabled;
   String? fillColor;
+  double? height;
+  double? heightPlus;
   String? lineColor;
   double? lineWidth;
+  double? width;
+  double? widthPlus;
 
 
   HighchartsHeatmapSeriesMarkerStatesSelectOptions({
-    this.heightPlus,
-    this.widthPlus,
-    this.height,
-    this.width,
     this.enabled,
     this.fillColor,
+    this.height,
+    this.heightPlus,
     this.lineColor,
-    this.lineWidth
+    this.lineWidth,
+    this.width,
+    this.widthPlus
   });
 
   @override
@@ -72,29 +72,29 @@ class HighchartsHeatmapSeriesMarkerStatesSelectOptions extends HighchartsOptions
     super.toOptionsJSON(buffer);
 
 
-    if (heightPlus != null) {
-      buffer.writeAll(['"heightPlus": ', heightPlus, ','], "");
-    }
-    if (widthPlus != null) {
-      buffer.writeAll(['"widthPlus": ', widthPlus, ','], "");
-    }
-    if (height != null) {
-      buffer.writeAll(['"height": ', height, ','], "");
-    }
-    if (width != null) {
-      buffer.writeAll(['"width": ', width, ','], "");
-    }
     if (enabled != null) {
-      buffer.writeAll(['"enabled": ', enabled, ','], "");
+      buffer.writeAll(['"enabled":', enabled, ','], "");
     }
     if (fillColor != null) {
-      buffer.writeAll(['"fillColor": ', jsonEncode(fillColor), ','], "");
+      buffer.writeAll(['"fillColor":', jsonEncode(fillColor), ','], "");
+    }
+    if (height != null) {
+      buffer.writeAll(['"height":', height, ','], "");
+    }
+    if (heightPlus != null) {
+      buffer.writeAll(['"heightPlus":', heightPlus, ','], "");
     }
     if (lineColor != null) {
-      buffer.writeAll(['"lineColor": ', jsonEncode(lineColor), ','], "");
+      buffer.writeAll(['"lineColor":', jsonEncode(lineColor), ','], "");
     }
     if (lineWidth != null) {
-      buffer.writeAll(['"lineWidth": ', lineWidth, ','], "");
+      buffer.writeAll(['"lineWidth":', lineWidth, ','], "");
+    }
+    if (width != null) {
+      buffer.writeAll(['"width":', width, ','], "");
+    }
+    if (widthPlus != null) {
+      buffer.writeAll(['"widthPlus":', widthPlus, ','], "");
     }
   }
 

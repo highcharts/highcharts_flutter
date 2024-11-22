@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -63,13 +63,13 @@ class HighchartsRSISeriesParamsOptions extends HighchartsOptionsBase {
 
 
     if (decimals != null) {
-      buffer.writeAll(['"decimals": ', decimals, ','], "");
+      buffer.writeAll(['"decimals":', decimals, ','], "");
     }
     if (index != null) {
-      buffer.writeAll(['"index": ', index, ','], "");
+      buffer.writeAll(['"index":', index, ','], "");
     }
     if (period != null) {
-      buffer.writeAll(['"period": ', period, ','], "");
+      buffer.writeAll(['"period":', period, ','], "");
     }
   }
 

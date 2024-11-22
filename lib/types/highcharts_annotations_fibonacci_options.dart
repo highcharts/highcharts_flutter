@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -27,8 +27,8 @@
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_annotations_fibonacci_label_options.dart';
-import 'highcharts_annotations_fibonacci_type_options.dart';
 import 'highcharts_annotations_crooked_line_shape_options.dart';
+import 'highcharts_annotations_fibonacci_type_options.dart';
 
 
 /* *
@@ -39,8 +39,8 @@ import 'highcharts_annotations_crooked_line_shape_options.dart';
 
 
 export 'highcharts_annotations_fibonacci_label_options.dart';
-export 'highcharts_annotations_fibonacci_type_options.dart';
 export 'highcharts_annotations_crooked_line_shape_options.dart';
+export 'highcharts_annotations_fibonacci_type_options.dart';
 
 
 /* *
@@ -55,17 +55,17 @@ export 'highcharts_annotations_crooked_line_shape_options.dart';
  */
 class HighchartsAnnotationsFibonacciOptions extends HighchartsOptionsBase {
 
-  HighchartsAnnotationsFibonacciLabelOptions? labelOptions;
-  HighchartsAnnotationsFibonacciTypeOptions? typeOptions;
   dynamic controlPointOptions;
+  HighchartsAnnotationsFibonacciLabelOptions? labelOptions;
   HighchartsAnnotationsCrookedLineShapeOptions? shapeOptions;
+  HighchartsAnnotationsFibonacciTypeOptions? typeOptions;
 
 
   HighchartsAnnotationsFibonacciOptions({
-    this.labelOptions,
-    this.typeOptions,
     this.controlPointOptions,
-    this.shapeOptions
+    this.labelOptions,
+    this.shapeOptions,
+    this.typeOptions
   });
 
   @override
@@ -73,17 +73,17 @@ class HighchartsAnnotationsFibonacciOptions extends HighchartsOptionsBase {
     super.toOptionsJSON(buffer);
 
 
-    if (labelOptions != null) {
-      buffer.writeAll(['"labelOptions": ', labelOptions?.toJSON(), ","], "");
-    }
-    if (typeOptions != null) {
-      buffer.writeAll(['"typeOptions": ', typeOptions?.toJSON(), ","], "");
-    }
     if (controlPointOptions != null) {
-      buffer.writeAll(['"controlPointOptions": ', jsonEncode(controlPointOptions), ','], "");
+      buffer.writeAll(['"controlPointOptions":', jsonEncode(controlPointOptions), ','], "");
+    }
+    if (labelOptions != null) {
+      buffer.writeAll(['"labelOptions":', labelOptions?.toJSON(), ","], "");
     }
     if (shapeOptions != null) {
-      buffer.writeAll(['"shapeOptions": ', shapeOptions?.toJSON(), ","], "");
+      buffer.writeAll(['"shapeOptions":', shapeOptions?.toJSON(), ","], "");
+    }
+    if (typeOptions != null) {
+      buffer.writeAll(['"typeOptions":', typeOptions?.toJSON(), ","], "");
     }
   }
 

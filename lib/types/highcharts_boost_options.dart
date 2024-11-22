@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -88,25 +88,25 @@ class HighchartsBoostOptions extends HighchartsOptionsBase {
 
 
     if (allowForce != null) {
-      buffer.writeAll(['"allowForce": ', allowForce, ','], "");
+      buffer.writeAll(['"allowForce":', allowForce, ','], "");
     }
     if (debug != null) {
-      buffer.writeAll(['"debug": ', debug?.toJSON(), ","], "");
+      buffer.writeAll(['"debug":', debug?.toJSON(), ","], "");
     }
     if (enabled != null) {
-      buffer.writeAll(['"enabled": ', enabled, ','], "");
+      buffer.writeAll(['"enabled":', enabled, ','], "");
     }
     if (pixelRatio != null) {
-      buffer.writeAll(['"pixelRatio": ', pixelRatio, ','], "");
+      buffer.writeAll(['"pixelRatio":', pixelRatio, ','], "");
     }
     if (seriesThreshold != null) {
-      buffer.writeAll(['"seriesThreshold": ', seriesThreshold, ','], "");
+      buffer.writeAll(['"seriesThreshold":', seriesThreshold, ','], "");
     }
     if (useGPUTranslations != null) {
-      buffer.writeAll(['"useGPUTranslations": ', useGPUTranslations, ','], "");
+      buffer.writeAll(['"useGPUTranslations":', useGPUTranslations, ','], "");
     }
     if (usePreallocated != null) {
-      buffer.writeAll(['"usePreallocated": ', usePreallocated, ','], "");
+      buffer.writeAll(['"usePreallocated":', usePreallocated, ','], "");
     }
   }
 

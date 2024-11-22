@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -65,14 +65,14 @@ class HighchartsYAxisResizeControlledAxisOptions extends HighchartsOptionsBase {
 
 
     if (next != null) {
-      buffer.write('"next": [');
+      buffer.write('"next":[');
       for (var item in next!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (prev != null) {
-      buffer.write('"prev": [');
+      buffer.write('"prev":[');
       for (var item in prev!) {
         buffer.writeAll([item, ","], "");
       }

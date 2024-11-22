@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -69,13 +69,13 @@ class HighchartsTreegraphSeriesCollapseButtonStyleOptions extends HighchartsOpti
 
 
     if (cursor != null) {
-      buffer.writeAll(['"cursor": ', jsonEncode(cursor), ','], "");
+      buffer.writeAll(['"cursor":', jsonEncode(cursor), ','], "");
     }
     if (fontSize != null) {
-      buffer.writeAll(['"fontSize": ', jsonEncode(fontSize), ','], "");
+      buffer.writeAll(['"fontSize":', jsonEncode(fontSize), ','], "");
     }
     if (fontWeight != null) {
-      buffer.writeAll(['"fontWeight": ', jsonEncode(fontWeight), ','], "");
+      buffer.writeAll(['"fontWeight":', jsonEncode(fontWeight), ','], "");
     }
   }
 

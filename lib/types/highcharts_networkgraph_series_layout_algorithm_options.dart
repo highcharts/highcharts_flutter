@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -85,46 +85,46 @@ class HighchartsNetworkgraphSeriesLayoutAlgorithmOptions extends HighchartsOptio
 
 
     if (approximation != null) {
-      buffer.writeAll(['"approximation": ', jsonEncode(approximation), ','], "");
+      buffer.writeAll(['"approximation":', jsonEncode(approximation), ','], "");
     }
     if (attractiveForce != null) {
-      buffer.writeAll(['"attractiveForce": ', jsonEncode(attractiveForce), ','], "");
+      buffer.writeAll(['"attractiveForce":', jsonEncode(attractiveForce), ','], "");
     }
     if (enableSimulation != null) {
-      buffer.writeAll(['"enableSimulation": ', enableSimulation, ','], "");
+      buffer.writeAll(['"enableSimulation":', enableSimulation, ','], "");
     }
     if (friction != null) {
-      buffer.writeAll(['"friction": ', friction, ','], "");
+      buffer.writeAll(['"friction":', friction, ','], "");
     }
     if (gravitationalConstant != null) {
-      buffer.writeAll(['"gravitationalConstant": ', gravitationalConstant, ','], "");
+      buffer.writeAll(['"gravitationalConstant":', gravitationalConstant, ','], "");
     }
     if (initialPositionRadius != null) {
-      buffer.writeAll(['"initialPositionRadius": ', initialPositionRadius, ','], "");
+      buffer.writeAll(['"initialPositionRadius":', initialPositionRadius, ','], "");
     }
     if (initialPositions != null) {
-      buffer.writeAll(['"initialPositions": ', jsonEncode(initialPositions), ','], "");
+      buffer.writeAll(['"initialPositions":', jsonEncode(initialPositions), ','], "");
     }
     if (integration != null) {
-      buffer.writeAll(['"integration": ', jsonEncode(integration), ','], "");
+      buffer.writeAll(['"integration":', jsonEncode(integration), ','], "");
     }
     if (linkLength != null) {
-      buffer.writeAll(['"linkLength": ', linkLength, ','], "");
+      buffer.writeAll(['"linkLength":', linkLength, ','], "");
     }
     if (maxIterations != null) {
-      buffer.writeAll(['"maxIterations": ', maxIterations, ','], "");
+      buffer.writeAll(['"maxIterations":', maxIterations, ','], "");
     }
     if (maxSpeed != null) {
-      buffer.writeAll(['"maxSpeed": ', maxSpeed, ','], "");
+      buffer.writeAll(['"maxSpeed":', maxSpeed, ','], "");
     }
     if (repulsiveForce != null) {
-      buffer.writeAll(['"repulsiveForce": ', jsonEncode(repulsiveForce), ','], "");
+      buffer.writeAll(['"repulsiveForce":', jsonEncode(repulsiveForce), ','], "");
     }
     if (theta != null) {
-      buffer.writeAll(['"theta": ', theta, ','], "");
+      buffer.writeAll(['"theta":', theta, ','], "");
     }
     if (type != null) {
-      buffer.writeAll(['"type": ', jsonEncode(type), ','], "");
+      buffer.writeAll(['"type":', jsonEncode(type), ','], "");
     }
   }
 

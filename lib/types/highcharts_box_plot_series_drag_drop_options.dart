@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -50,10 +50,6 @@ export 'highcharts_series_drag_drop_guide_box_options.dart';
 
 class HighchartsBoxPlotSeriesDragDropOptions extends HighchartsOptionsBase {
 
-  bool? draggableHigh;
-  bool? draggableLow;
-  bool? draggableQ1;
-  bool? draggableQ3;
   HighchartsBoxPlotSeriesDragDropDragHandleOptions? dragHandle;
   double? dragMaxX;
   double? dragMaxY;
@@ -62,6 +58,10 @@ class HighchartsBoxPlotSeriesDragDropOptions extends HighchartsOptionsBase {
   double? dragPrecisionX;
   double? dragPrecisionY;
   double? dragSensitivity;
+  bool? draggableHigh;
+  bool? draggableLow;
+  bool? draggableQ1;
+  bool? draggableQ3;
   bool? draggableX;
   bool? draggableY;
   String? groupBy;
@@ -70,10 +70,6 @@ class HighchartsBoxPlotSeriesDragDropOptions extends HighchartsOptionsBase {
 
 
   HighchartsBoxPlotSeriesDragDropOptions({
-    this.draggableHigh,
-    this.draggableLow,
-    this.draggableQ1,
-    this.draggableQ3,
     this.dragHandle,
     this.dragMaxX,
     this.dragMaxY,
@@ -82,6 +78,10 @@ class HighchartsBoxPlotSeriesDragDropOptions extends HighchartsOptionsBase {
     this.dragPrecisionX,
     this.dragPrecisionY,
     this.dragSensitivity,
+    this.draggableHigh,
+    this.draggableLow,
+    this.draggableQ1,
+    this.draggableQ3,
     this.draggableX,
     this.draggableY,
     this.groupBy,
@@ -94,56 +94,56 @@ class HighchartsBoxPlotSeriesDragDropOptions extends HighchartsOptionsBase {
     super.toOptionsJSON(buffer);
 
 
-    if (draggableHigh != null) {
-      buffer.writeAll(['"draggableHigh": ', draggableHigh, ','], "");
-    }
-    if (draggableLow != null) {
-      buffer.writeAll(['"draggableLow": ', draggableLow, ','], "");
-    }
-    if (draggableQ1 != null) {
-      buffer.writeAll(['"draggableQ1": ', draggableQ1, ','], "");
-    }
-    if (draggableQ3 != null) {
-      buffer.writeAll(['"draggableQ3": ', draggableQ3, ','], "");
-    }
     if (dragHandle != null) {
-      buffer.writeAll(['"dragHandle": ', dragHandle?.toJSON(), ","], "");
+      buffer.writeAll(['"dragHandle":', dragHandle?.toJSON(), ","], "");
     }
     if (dragMaxX != null) {
-      buffer.writeAll(['"dragMaxX": ', dragMaxX, ','], "");
+      buffer.writeAll(['"dragMaxX":', dragMaxX, ','], "");
     }
     if (dragMaxY != null) {
-      buffer.writeAll(['"dragMaxY": ', dragMaxY, ','], "");
+      buffer.writeAll(['"dragMaxY":', dragMaxY, ','], "");
     }
     if (dragMinX != null) {
-      buffer.writeAll(['"dragMinX": ', dragMinX, ','], "");
+      buffer.writeAll(['"dragMinX":', dragMinX, ','], "");
     }
     if (dragMinY != null) {
-      buffer.writeAll(['"dragMinY": ', dragMinY, ','], "");
+      buffer.writeAll(['"dragMinY":', dragMinY, ','], "");
     }
     if (dragPrecisionX != null) {
-      buffer.writeAll(['"dragPrecisionX": ', dragPrecisionX, ','], "");
+      buffer.writeAll(['"dragPrecisionX":', dragPrecisionX, ','], "");
     }
     if (dragPrecisionY != null) {
-      buffer.writeAll(['"dragPrecisionY": ', dragPrecisionY, ','], "");
+      buffer.writeAll(['"dragPrecisionY":', dragPrecisionY, ','], "");
     }
     if (dragSensitivity != null) {
-      buffer.writeAll(['"dragSensitivity": ', dragSensitivity, ','], "");
+      buffer.writeAll(['"dragSensitivity":', dragSensitivity, ','], "");
+    }
+    if (draggableHigh != null) {
+      buffer.writeAll(['"draggableHigh":', draggableHigh, ','], "");
+    }
+    if (draggableLow != null) {
+      buffer.writeAll(['"draggableLow":', draggableLow, ','], "");
+    }
+    if (draggableQ1 != null) {
+      buffer.writeAll(['"draggableQ1":', draggableQ1, ','], "");
+    }
+    if (draggableQ3 != null) {
+      buffer.writeAll(['"draggableQ3":', draggableQ3, ','], "");
     }
     if (draggableX != null) {
-      buffer.writeAll(['"draggableX": ', draggableX, ','], "");
+      buffer.writeAll(['"draggableX":', draggableX, ','], "");
     }
     if (draggableY != null) {
-      buffer.writeAll(['"draggableY": ', draggableY, ','], "");
+      buffer.writeAll(['"draggableY":', draggableY, ','], "");
     }
     if (groupBy != null) {
-      buffer.writeAll(['"groupBy": ', jsonEncode(groupBy), ','], "");
+      buffer.writeAll(['"groupBy":', jsonEncode(groupBy), ','], "");
     }
     if (guideBox != null) {
-      buffer.writeAll(['"guideBox": ', guideBox?.toJSON(), ","], "");
+      buffer.writeAll(['"guideBox":', guideBox?.toJSON(), ","], "");
     }
     if (liveRedraw != null) {
-      buffer.writeAll(['"liveRedraw": ', liveRedraw, ','], "");
+      buffer.writeAll(['"liveRedraw":', liveRedraw, ','], "");
     }
   }
 

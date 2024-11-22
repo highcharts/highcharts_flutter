@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -48,14 +48,14 @@ export 'highcharts_series_states_hover_animation_options.dart';
 
 class HighchartsFunnelSeriesStatesHoverOptions extends HighchartsOptionsBase {
 
-  double? brightness;
   HighchartsSeriesStatesHoverAnimationOptions? animation;
+  double? brightness;
   bool? enabled;
 
 
   HighchartsFunnelSeriesStatesHoverOptions({
-    this.brightness,
     this.animation,
+    this.brightness,
     this.enabled
   });
 
@@ -64,14 +64,14 @@ class HighchartsFunnelSeriesStatesHoverOptions extends HighchartsOptionsBase {
     super.toOptionsJSON(buffer);
 
 
-    if (brightness != null) {
-      buffer.writeAll(['"brightness": ', brightness, ','], "");
-    }
     if (animation != null) {
-      buffer.writeAll(['"animation": ', animation?.toJSON(), ","], "");
+      buffer.writeAll(['"animation":', animation?.toJSON(), ","], "");
+    }
+    if (brightness != null) {
+      buffer.writeAll(['"brightness":', brightness, ','], "");
     }
     if (enabled != null) {
-      buffer.writeAll(['"enabled": ', enabled, ','], "");
+      buffer.writeAll(['"enabled":', enabled, ','], "");
     }
   }
 

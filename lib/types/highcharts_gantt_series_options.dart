@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -98,35 +98,35 @@ export 'highcharts_gantt_series_tooltip_options.dart';
  */
 class HighchartsGanttSeriesOptions extends HighchartsOptionsBase {
 
-  dynamic events;
-  String? id;
-  double? index;
-  double? legendIndex;
+  double? borderRadius;
+  bool? colorByPoint;
   HighchartsGanttSeriesConnectorsOptions? connectors;
   HighchartsGanttSeriesDataLabelsOptions? dataLabels;
   HighchartsGanttSeriesDragDropOptions? dragDrop;
+  dynamic events;
   bool? grouping;
+  String? id;
+  double? index;
+  double? legendIndex;
   HighchartsGanttSeriesPartialFillOptions? partialFill;
-  HighchartsGanttSeriesTooltipOptions? tooltip;
-  double? borderRadius;
-  bool? colorByPoint;
   double? pointRange;
+  HighchartsGanttSeriesTooltipOptions? tooltip;
 
 
   HighchartsGanttSeriesOptions({
-    this.events,
-    this.id,
-    this.index,
-    this.legendIndex,
+    this.borderRadius,
+    this.colorByPoint,
     this.connectors,
     this.dataLabels,
     this.dragDrop,
+    this.events,
     this.grouping,
+    this.id,
+    this.index,
+    this.legendIndex,
     this.partialFill,
-    this.tooltip,
-    this.borderRadius,
-    this.colorByPoint,
-    this.pointRange
+    this.pointRange,
+    this.tooltip
   });
 
   @override
@@ -134,44 +134,44 @@ class HighchartsGanttSeriesOptions extends HighchartsOptionsBase {
     super.toOptionsJSON(buffer);
 
 
-    if (events != null) {
-      buffer.writeAll(['"events": ', jsonEncode(events), ','], "");
-    }
-    if (id != null) {
-      buffer.writeAll(['"id": ', jsonEncode(id), ','], "");
-    }
-    if (index != null) {
-      buffer.writeAll(['"index": ', index, ','], "");
-    }
-    if (legendIndex != null) {
-      buffer.writeAll(['"legendIndex": ', legendIndex, ','], "");
-    }
-    if (connectors != null) {
-      buffer.writeAll(['"connectors": ', connectors?.toJSON(), ","], "");
-    }
-    if (dataLabels != null) {
-      buffer.writeAll(['"dataLabels": ', dataLabels?.toJSON(), ","], "");
-    }
-    if (dragDrop != null) {
-      buffer.writeAll(['"dragDrop": ', dragDrop?.toJSON(), ","], "");
-    }
-    if (grouping != null) {
-      buffer.writeAll(['"grouping": ', grouping, ','], "");
-    }
-    if (partialFill != null) {
-      buffer.writeAll(['"partialFill": ', partialFill?.toJSON(), ","], "");
-    }
-    if (tooltip != null) {
-      buffer.writeAll(['"tooltip": ', tooltip?.toJSON(), ","], "");
-    }
     if (borderRadius != null) {
-      buffer.writeAll(['"borderRadius": ', borderRadius, ','], "");
+      buffer.writeAll(['"borderRadius":', borderRadius, ','], "");
     }
     if (colorByPoint != null) {
-      buffer.writeAll(['"colorByPoint": ', colorByPoint, ','], "");
+      buffer.writeAll(['"colorByPoint":', colorByPoint, ','], "");
+    }
+    if (connectors != null) {
+      buffer.writeAll(['"connectors":', connectors?.toJSON(), ","], "");
+    }
+    if (dataLabels != null) {
+      buffer.writeAll(['"dataLabels":', dataLabels?.toJSON(), ","], "");
+    }
+    if (dragDrop != null) {
+      buffer.writeAll(['"dragDrop":', dragDrop?.toJSON(), ","], "");
+    }
+    if (events != null) {
+      buffer.writeAll(['"events":', jsonEncode(events), ','], "");
+    }
+    if (grouping != null) {
+      buffer.writeAll(['"grouping":', grouping, ','], "");
+    }
+    if (id != null) {
+      buffer.writeAll(['"id":', jsonEncode(id), ','], "");
+    }
+    if (index != null) {
+      buffer.writeAll(['"index":', index, ','], "");
+    }
+    if (legendIndex != null) {
+      buffer.writeAll(['"legendIndex":', legendIndex, ','], "");
+    }
+    if (partialFill != null) {
+      buffer.writeAll(['"partialFill":', partialFill?.toJSON(), ","], "");
     }
     if (pointRange != null) {
-      buffer.writeAll(['"pointRange": ', pointRange, ','], "");
+      buffer.writeAll(['"pointRange":', pointRange, ','], "");
+    }
+    if (tooltip != null) {
+      buffer.writeAll(['"tooltip":', tooltip?.toJSON(), ","], "");
     }
   }
 

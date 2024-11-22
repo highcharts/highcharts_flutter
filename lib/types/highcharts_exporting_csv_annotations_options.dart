@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -64,10 +64,10 @@ class HighchartsExportingCsvAnnotationsOptions extends HighchartsOptionsBase {
 
 
     if (itemDelimiter != null) {
-      buffer.writeAll(['"itemDelimiter": ', jsonEncode(itemDelimiter), ','], "");
+      buffer.writeAll(['"itemDelimiter":', jsonEncode(itemDelimiter), ','], "");
     }
     if (join != null) {
-      buffer.writeAll(['"join": ', join, ','], "");
+      buffer.writeAll(['"join":', join, ','], "");
     }
   }
 

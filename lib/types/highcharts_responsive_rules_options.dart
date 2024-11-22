@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -67,10 +67,10 @@ class HighchartsResponsiveRulesOptions extends HighchartsOptionsBase {
 
 
     if (chartOptions != null) {
-      buffer.writeAll(['"chartOptions": ', jsonEncode(chartOptions), ','], "");
+      buffer.writeAll(['"chartOptions":', jsonEncode(chartOptions), ','], "");
     }
     if (condition != null) {
-      buffer.writeAll(['"condition": ', condition?.toJSON(), ","], "");
+      buffer.writeAll(['"condition":', condition?.toJSON(), ","], "");
     }
   }
 

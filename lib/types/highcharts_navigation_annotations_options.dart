@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -106,54 +106,54 @@ class HighchartsNavigationAnnotationsOptions extends HighchartsOptionsBase {
 
 
     if (animation != null) {
-      buffer.writeAll(['"animation": ', animation?.toJSON(), ","], "");
+      buffer.writeAll(['"animation":', animation?.toJSON(), ","], "");
     }
     if (controlPointOptions != null) {
-      buffer.writeAll(['"controlPointOptions": ', controlPointOptions?.toJSON(), ","], "");
+      buffer.writeAll(['"controlPointOptions":', controlPointOptions?.toJSON(), ","], "");
     }
     if (crop != null) {
-      buffer.writeAll(['"crop": ', crop, ','], "");
+      buffer.writeAll(['"crop":', crop, ','], "");
     }
     if (draggable != null) {
-      buffer.writeAll(['"draggable": ', jsonEncode(draggable), ','], "");
+      buffer.writeAll(['"draggable":', jsonEncode(draggable), ','], "");
     }
     if (events != null) {
-      buffer.writeAll(['"events": ', events?.toJSON(), ","], "");
+      buffer.writeAll(['"events":', events?.toJSON(), ","], "");
     }
     if (id != null) {
-      buffer.writeAll(['"id": ', jsonEncode(id), ','], "");
+      buffer.writeAll(['"id":', jsonEncode(id), ','], "");
     }
     if (labelOptions != null) {
-      buffer.writeAll(['"labelOptions": ', labelOptions?.toJSON(), ","], "");
+      buffer.writeAll(['"labelOptions":', labelOptions?.toJSON(), ","], "");
     }
     if (labels != null) {
-      buffer.write('"labels": [');
+      buffer.write('"labels":[');
       for (var item in labels!) {
         buffer.writeAll([item.toJSON(), ","], "");
       }
       buffer.write("],");
     }
     if (shapeOptions != null) {
-      buffer.writeAll(['"shapeOptions": ', shapeOptions?.toJSON(), ","], "");
+      buffer.writeAll(['"shapeOptions":', shapeOptions?.toJSON(), ","], "");
     }
     if (shapes != null) {
-      buffer.write('"shapes": [');
+      buffer.write('"shapes":[');
       for (var item in shapes!) {
         buffer.writeAll([item.toJSON(), ","], "");
       }
       buffer.write("],");
     }
     if (visible != null) {
-      buffer.writeAll(['"visible": ', visible, ','], "");
+      buffer.writeAll(['"visible":', visible, ','], "");
     }
     if (zIndex != null) {
-      buffer.writeAll(['"zIndex": ', zIndex, ','], "");
+      buffer.writeAll(['"zIndex":', zIndex, ','], "");
     }
     if (fibonacciTimeZones != null) {
-      buffer.writeAll(['"fibonacciTimeZones": ', fibonacciTimeZones?.toJSON(), ","], "");
+      buffer.writeAll(['"fibonacciTimeZones":', fibonacciTimeZones?.toJSON(), ","], "");
     }
     if (timeCycles != null) {
-      buffer.writeAll(['"timeCycles": ', timeCycles?.toJSON(), ","], "");
+      buffer.writeAll(['"timeCycles":', timeCycles?.toJSON(), ","], "");
     }
   }
 

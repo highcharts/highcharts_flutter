@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -64,10 +64,10 @@ class HighchartsSupertrendSeriesParamsOptions extends HighchartsOptionsBase {
 
 
     if (multiplier != null) {
-      buffer.writeAll(['"multiplier": ', multiplier, ','], "");
+      buffer.writeAll(['"multiplier":', multiplier, ','], "");
     }
     if (period != null) {
-      buffer.writeAll(['"period": ', period, ','], "");
+      buffer.writeAll(['"period":', period, ','], "");
     }
   }
 

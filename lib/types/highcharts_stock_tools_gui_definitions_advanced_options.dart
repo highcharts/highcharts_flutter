@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -79,22 +79,22 @@ class HighchartsStockToolsGuiDefinitionsAdvancedOptions extends HighchartsOption
 
 
     if (fibonacci != null) {
-      buffer.writeAll(['"fibonacci": ', fibonacci?.toJSON(), ","], "");
+      buffer.writeAll(['"fibonacci":', fibonacci?.toJSON(), ","], "");
     }
     if (fibonacciTimeZones != null) {
-      buffer.writeAll(['"fibonacciTimeZones": ', fibonacciTimeZones?.toJSON(), ","], "");
+      buffer.writeAll(['"fibonacciTimeZones":', fibonacciTimeZones?.toJSON(), ","], "");
     }
     if (items != null) {
-      buffer.writeAll(['"items": ', jsonEncode(items), ','], "");
+      buffer.writeAll(['"items":', jsonEncode(items), ','], "");
     }
     if (parallelChannel != null) {
-      buffer.writeAll(['"parallelChannel": ', parallelChannel?.toJSON(), ","], "");
+      buffer.writeAll(['"parallelChannel":', parallelChannel?.toJSON(), ","], "");
     }
     if (pitchfork != null) {
-      buffer.writeAll(['"pitchfork": ', pitchfork?.toJSON(), ","], "");
+      buffer.writeAll(['"pitchfork":', pitchfork?.toJSON(), ","], "");
     }
     if (timeCycles != null) {
-      buffer.writeAll(['"timeCycles": ', timeCycles?.toJSON(), ","], "");
+      buffer.writeAll(['"timeCycles":', timeCycles?.toJSON(), ","], "");
     }
   }
 

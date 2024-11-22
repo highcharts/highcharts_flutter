@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -74,22 +74,22 @@ class HighchartsLoadingOptions extends HighchartsOptionsBase {
 
 
     if (hideDuration != null) {
-      buffer.writeAll(['"hideDuration": ', hideDuration, ','], "");
+      buffer.writeAll(['"hideDuration":', hideDuration, ','], "");
     }
     if (labelStyle != null) {
       buffer.write("{");
       for (var item in labelStyle!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (showDuration != null) {
-      buffer.writeAll(['"showDuration": ', showDuration, ','], "");
+      buffer.writeAll(['"showDuration":', showDuration, ','], "");
     }
     if (style != null) {
       buffer.write("{");
       for (var item in style!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }

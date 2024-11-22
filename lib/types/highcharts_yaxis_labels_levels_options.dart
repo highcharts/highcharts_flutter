@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -65,12 +65,12 @@ class HighchartsYAxisLabelsLevelsOptions extends HighchartsOptionsBase {
 
 
     if (level != null) {
-      buffer.writeAll(['"level": ', level, ','], "");
+      buffer.writeAll(['"level":', level, ','], "");
     }
     if (style != null) {
       buffer.write("{");
       for (var item in style!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -69,13 +69,13 @@ class HighchartsChartParallelAxesTitleOptions extends HighchartsOptionsBase {
 
 
     if (reserveSpace != null) {
-      buffer.writeAll(['"reserveSpace": ', reserveSpace, ','], "");
+      buffer.writeAll(['"reserveSpace":', reserveSpace, ','], "");
     }
     if (text != null) {
-      buffer.writeAll(['"text": ', jsonEncode(text), ','], "");
+      buffer.writeAll(['"text":', jsonEncode(text), ','], "");
     }
     if (textAlign != null) {
-      buffer.writeAll(['"textAlign": ', jsonEncode(textAlign), ','], "");
+      buffer.writeAll(['"textAlign":', jsonEncode(textAlign), ','], "");
     }
   }
 

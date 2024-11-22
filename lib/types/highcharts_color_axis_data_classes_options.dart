@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -70,16 +70,16 @@ class HighchartsColorAxisDataClassesOptions extends HighchartsOptionsBase {
 
 
     if (color != null) {
-      buffer.writeAll(['"color": ', jsonEncode(color), ','], "");
+      buffer.writeAll(['"color":', jsonEncode(color), ','], "");
     }
     if (from != null) {
-      buffer.writeAll(['"from": ', from, ','], "");
+      buffer.writeAll(['"from":', from, ','], "");
     }
     if (name != null) {
-      buffer.writeAll(['"name": ', jsonEncode(name), ','], "");
+      buffer.writeAll(['"name":', jsonEncode(name), ','], "");
     }
     if (to != null) {
-      buffer.writeAll(['"to": ', to, ','], "");
+      buffer.writeAll(['"to":', to, ','], "");
     }
   }
 

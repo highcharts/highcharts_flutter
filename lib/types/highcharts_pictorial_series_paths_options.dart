@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -66,10 +66,10 @@ class HighchartsPictorialSeriesPathsOptions extends HighchartsOptionsBase {
 
 
     if (definition != null) {
-      buffer.writeAll(['"definition": ', jsonEncode(definition), ','], "");
+      buffer.writeAll(['"definition":', jsonEncode(definition), ','], "");
     }
     if (max != null) {
-      buffer.writeAll(['"max": ', jsonEncode(max), ','], "");
+      buffer.writeAll(['"max":', jsonEncode(max), ','], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -86,46 +86,46 @@ export 'highcharts_pyramid3dseries_data_events_options.dart';
  */
 class HighchartsPyramid3DSeriesDataOptions extends HighchartsOptionsBase {
 
-  bool? gradientForSides;
+  HighchartsPyramid3DSeriesDataAccessibilityOptions? accessibility;
   String? borderColor;
   double? borderWidth;
-  String? dashStyle;
-  double? pointWidth;
-  HighchartsPyramid3DSeriesDataAccessibilityOptions? accessibility;
   String? className;
   String? color;
   double? colorIndex;
   Map<String, dynamic>? custom;
+  String? dashStyle;
   List<HighchartsPyramid3DSeriesDataDataLabelsOptions>? dataLabels;
   String? description;
   HighchartsPyramid3DSeriesDataDragDropOptions? dragDrop;
   String? drilldown;
   HighchartsPyramid3DSeriesDataEventsOptions? events;
+  bool? gradientForSides;
   String? id;
   double? labelrank;
+  double? pointWidth;
   bool? selected;
   double? x;
   double? y;
 
 
   HighchartsPyramid3DSeriesDataOptions({
-    this.gradientForSides,
+    this.accessibility,
     this.borderColor,
     this.borderWidth,
-    this.dashStyle,
-    this.pointWidth,
-    this.accessibility,
     this.className,
     this.color,
     this.colorIndex,
     this.custom,
+    this.dashStyle,
     this.dataLabels,
     this.description,
     this.dragDrop,
     this.drilldown,
     this.events,
+    this.gradientForSides,
     this.id,
     this.labelrank,
+    this.pointWidth,
     this.selected,
     this.x,
     this.y
@@ -136,73 +136,73 @@ class HighchartsPyramid3DSeriesDataOptions extends HighchartsOptionsBase {
     super.toOptionsJSON(buffer);
 
 
-    if (gradientForSides != null) {
-      buffer.writeAll(['"gradientForSides": ', gradientForSides, ','], "");
+    if (accessibility != null) {
+      buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ","], "");
     }
     if (borderColor != null) {
-      buffer.writeAll(['"borderColor": ', jsonEncode(borderColor), ','], "");
+      buffer.writeAll(['"borderColor":', jsonEncode(borderColor), ','], "");
     }
     if (borderWidth != null) {
-      buffer.writeAll(['"borderWidth": ', borderWidth, ','], "");
-    }
-    if (dashStyle != null) {
-      buffer.writeAll(['"dashStyle": ', jsonEncode(dashStyle), ','], "");
-    }
-    if (pointWidth != null) {
-      buffer.writeAll(['"pointWidth": ', pointWidth, ','], "");
-    }
-    if (accessibility != null) {
-      buffer.writeAll(['"accessibility": ', accessibility?.toJSON(), ","], "");
+      buffer.writeAll(['"borderWidth":', borderWidth, ','], "");
     }
     if (className != null) {
-      buffer.writeAll(['"className": ', jsonEncode(className), ','], "");
+      buffer.writeAll(['"className":', jsonEncode(className), ','], "");
     }
     if (color != null) {
-      buffer.writeAll(['"color": ', jsonEncode(color), ','], "");
+      buffer.writeAll(['"color":', jsonEncode(color), ','], "");
     }
     if (colorIndex != null) {
-      buffer.writeAll(['"colorIndex": ', colorIndex, ','], "");
+      buffer.writeAll(['"colorIndex":', colorIndex, ','], "");
     }
     if (custom != null) {
       buffer.write("{");
       for (var item in custom!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
+    if (dashStyle != null) {
+      buffer.writeAll(['"dashStyle":', jsonEncode(dashStyle), ','], "");
+    }
     if (dataLabels != null) {
-      buffer.write('"dataLabels": [');
+      buffer.write('"dataLabels":[');
       for (var item in dataLabels!) {
         buffer.writeAll([item.toJSON(), ","], "");
       }
       buffer.write("],");
     }
     if (description != null) {
-      buffer.writeAll(['"description": ', jsonEncode(description), ','], "");
+      buffer.writeAll(['"description":', jsonEncode(description), ','], "");
     }
     if (dragDrop != null) {
-      buffer.writeAll(['"dragDrop": ', dragDrop?.toJSON(), ","], "");
+      buffer.writeAll(['"dragDrop":', dragDrop?.toJSON(), ","], "");
     }
     if (drilldown != null) {
-      buffer.writeAll(['"drilldown": ', jsonEncode(drilldown), ','], "");
+      buffer.writeAll(['"drilldown":', jsonEncode(drilldown), ','], "");
     }
     if (events != null) {
-      buffer.writeAll(['"events": ', events?.toJSON(), ","], "");
+      buffer.writeAll(['"events":', events?.toJSON(), ","], "");
+    }
+    if (gradientForSides != null) {
+      buffer.writeAll(['"gradientForSides":', gradientForSides, ','], "");
     }
     if (id != null) {
-      buffer.writeAll(['"id": ', jsonEncode(id), ','], "");
+      buffer.writeAll(['"id":', jsonEncode(id), ','], "");
     }
     if (labelrank != null) {
-      buffer.writeAll(['"labelrank": ', labelrank, ','], "");
+      buffer.writeAll(['"labelrank":', labelrank, ','], "");
+    }
+    if (pointWidth != null) {
+      buffer.writeAll(['"pointWidth":', pointWidth, ','], "");
     }
     if (selected != null) {
-      buffer.writeAll(['"selected": ', selected, ','], "");
+      buffer.writeAll(['"selected":', selected, ','], "");
     }
     if (x != null) {
-      buffer.writeAll(['"x": ', x, ','], "");
+      buffer.writeAll(['"x":', x, ','], "");
     }
     if (y != null) {
-      buffer.writeAll(['"y": ', y, ','], "");
+      buffer.writeAll(['"y":', y, ','], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -46,13 +46,13 @@ import 'highcharts_options_base.dart';
 
 class HighchartsADSeriesParamsOptions extends HighchartsOptionsBase {
 
-  String? volumeSeriesID;
   double? period;
+  String? volumeSeriesID;
 
 
   HighchartsADSeriesParamsOptions({
-    this.volumeSeriesID,
-    this.period
+    this.period,
+    this.volumeSeriesID
   });
 
   @override
@@ -60,11 +60,11 @@ class HighchartsADSeriesParamsOptions extends HighchartsOptionsBase {
     super.toOptionsJSON(buffer);
 
 
-    if (volumeSeriesID != null) {
-      buffer.writeAll(['"volumeSeriesID": ', jsonEncode(volumeSeriesID), ','], "");
-    }
     if (period != null) {
-      buffer.writeAll(['"period": ', period, ','], "");
+      buffer.writeAll(['"period":', period, ','], "");
+    }
+    if (volumeSeriesID != null) {
+      buffer.writeAll(['"volumeSeriesID":', jsonEncode(volumeSeriesID), ','], "");
     }
   }
 

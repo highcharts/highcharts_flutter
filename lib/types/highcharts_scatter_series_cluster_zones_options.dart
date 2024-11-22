@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -75,16 +75,16 @@ class HighchartsScatterSeriesClusterZonesOptions extends HighchartsOptionsBase {
 
 
     if (className != null) {
-      buffer.writeAll(['"className": ', jsonEncode(className), ','], "");
+      buffer.writeAll(['"className":', jsonEncode(className), ','], "");
     }
     if (from != null) {
-      buffer.writeAll(['"from": ', from, ','], "");
+      buffer.writeAll(['"from":', from, ','], "");
     }
     if (marker != null) {
-      buffer.writeAll(['"marker": ', marker?.toJSON(), ","], "");
+      buffer.writeAll(['"marker":', marker?.toJSON(), ","], "");
     }
     if (to != null) {
-      buffer.writeAll(['"to": ', to, ','], "");
+      buffer.writeAll(['"to":', to, ','], "");
     }
   }
 

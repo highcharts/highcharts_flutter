@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -118,37 +118,37 @@ class HighchartsSonificationDefaultInstrumentMappingOptions extends HighchartsOp
 
 
     if (frequency != null) {
-      buffer.writeAll(['"frequency": ', frequency?.toJSON(), ","], "");
+      buffer.writeAll(['"frequency":', frequency?.toJSON(), ","], "");
     }
     if (gapBetweenNotes != null) {
-      buffer.writeAll(['"gapBetweenNotes": ', gapBetweenNotes?.toJSON(), ","], "");
+      buffer.writeAll(['"gapBetweenNotes":', gapBetweenNotes?.toJSON(), ","], "");
     }
     if (highpass != null) {
-      buffer.writeAll(['"highpass": ', highpass?.toJSON(), ","], "");
+      buffer.writeAll(['"highpass":', highpass?.toJSON(), ","], "");
     }
     if (lowpass != null) {
-      buffer.writeAll(['"lowpass": ', lowpass?.toJSON(), ","], "");
+      buffer.writeAll(['"lowpass":', lowpass?.toJSON(), ","], "");
     }
     if (noteDuration != null) {
-      buffer.writeAll(['"noteDuration": ', noteDuration?.toJSON(), ","], "");
+      buffer.writeAll(['"noteDuration":', noteDuration?.toJSON(), ","], "");
     }
     if (pan != null) {
-      buffer.writeAll(['"pan": ', pan?.toJSON(), ","], "");
+      buffer.writeAll(['"pan":', pan?.toJSON(), ","], "");
     }
     if (pitch != null) {
-      buffer.writeAll(['"pitch": ', pitch?.toJSON(), ","], "");
+      buffer.writeAll(['"pitch":', pitch?.toJSON(), ","], "");
     }
     if (playDelay != null) {
-      buffer.writeAll(['"playDelay": ', playDelay?.toJSON(), ","], "");
+      buffer.writeAll(['"playDelay":', playDelay?.toJSON(), ","], "");
     }
     if (time != null) {
-      buffer.writeAll(['"time": ', time?.toJSON(), ","], "");
+      buffer.writeAll(['"time":', time?.toJSON(), ","], "");
     }
     if (tremolo != null) {
-      buffer.writeAll(['"tremolo": ', tremolo?.toJSON(), ","], "");
+      buffer.writeAll(['"tremolo":', tremolo?.toJSON(), ","], "");
     }
     if (volume != null) {
-      buffer.writeAll(['"volume": ', volume?.toJSON(), ","], "");
+      buffer.writeAll(['"volume":', volume?.toJSON(), ","], "");
     }
   }
 

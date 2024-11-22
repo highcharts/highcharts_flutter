@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -26,8 +26,8 @@
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-import 'highcharts_dumbbell_series_low_marker_symbol_options.dart';
 import 'highcharts_series_marker_states_options.dart';
+import 'highcharts_dumbbell_series_low_marker_symbol_options.dart';
 
 
 /* *
@@ -37,8 +37,8 @@ import 'highcharts_series_marker_states_options.dart';
  * */
 
 
-export 'highcharts_dumbbell_series_low_marker_symbol_options.dart';
 export 'highcharts_series_marker_states_options.dart';
+export 'highcharts_dumbbell_series_low_marker_symbol_options.dart';
 
 
 /* *
@@ -54,7 +54,6 @@ export 'highcharts_series_marker_states_options.dart';
  */
 class HighchartsDumbbellSeriesLowMarkerOptions extends HighchartsOptionsBase {
 
-  HighchartsDumbbellSeriesLowMarkerSymbolOptions? symbol;
   bool? enabled;
   double? enabledThreshold;
   String? fillColor;
@@ -63,11 +62,11 @@ class HighchartsDumbbellSeriesLowMarkerOptions extends HighchartsOptionsBase {
   double? lineWidth;
   double? radius;
   HighchartsSeriesMarkerStatesOptions? states;
+  HighchartsDumbbellSeriesLowMarkerSymbolOptions? symbol;
   double? width;
 
 
   HighchartsDumbbellSeriesLowMarkerOptions({
-    this.symbol,
     this.enabled,
     this.enabledThreshold,
     this.fillColor,
@@ -76,6 +75,7 @@ class HighchartsDumbbellSeriesLowMarkerOptions extends HighchartsOptionsBase {
     this.lineWidth,
     this.radius,
     this.states,
+    this.symbol,
     this.width
   });
 
@@ -84,35 +84,35 @@ class HighchartsDumbbellSeriesLowMarkerOptions extends HighchartsOptionsBase {
     super.toOptionsJSON(buffer);
 
 
-    if (symbol != null) {
-      buffer.writeAll(['"symbol": ', symbol?.toJSON(), ","], "");
-    }
     if (enabled != null) {
-      buffer.writeAll(['"enabled": ', enabled, ','], "");
+      buffer.writeAll(['"enabled":', enabled, ','], "");
     }
     if (enabledThreshold != null) {
-      buffer.writeAll(['"enabledThreshold": ', enabledThreshold, ','], "");
+      buffer.writeAll(['"enabledThreshold":', enabledThreshold, ','], "");
     }
     if (fillColor != null) {
-      buffer.writeAll(['"fillColor": ', jsonEncode(fillColor), ','], "");
+      buffer.writeAll(['"fillColor":', jsonEncode(fillColor), ','], "");
     }
     if (height != null) {
-      buffer.writeAll(['"height": ', height, ','], "");
+      buffer.writeAll(['"height":', height, ','], "");
     }
     if (lineColor != null) {
-      buffer.writeAll(['"lineColor": ', jsonEncode(lineColor), ','], "");
+      buffer.writeAll(['"lineColor":', jsonEncode(lineColor), ','], "");
     }
     if (lineWidth != null) {
-      buffer.writeAll(['"lineWidth": ', lineWidth, ','], "");
+      buffer.writeAll(['"lineWidth":', lineWidth, ','], "");
     }
     if (radius != null) {
-      buffer.writeAll(['"radius": ', radius, ','], "");
+      buffer.writeAll(['"radius":', radius, ','], "");
     }
     if (states != null) {
-      buffer.writeAll(['"states": ', states?.toJSON(), ","], "");
+      buffer.writeAll(['"states":', states?.toJSON(), ","], "");
+    }
+    if (symbol != null) {
+      buffer.writeAll(['"symbol":', symbol?.toJSON(), ","], "");
     }
     if (width != null) {
-      buffer.writeAll(['"width": ', width, ','], "");
+      buffer.writeAll(['"width":', width, ','], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -49,25 +49,25 @@ import 'highcharts_options_base.dart';
  */
 class HighchartsAnnotationsPitchforkTypeInnerBackgroundOptions extends HighchartsOptionsBase {
 
-  String? fill;
-  double? strokeWidth;
   String? dashStyle;
+  String? fill;
   double? ry;
   double? snap;
   String? src;
   String? stroke;
+  double? strokeWidth;
   double? xAxis;
   double? yAxis;
 
 
   HighchartsAnnotationsPitchforkTypeInnerBackgroundOptions({
-    this.fill,
-    this.strokeWidth,
     this.dashStyle,
+    this.fill,
     this.ry,
     this.snap,
     this.src,
     this.stroke,
+    this.strokeWidth,
     this.xAxis,
     this.yAxis
   });
@@ -77,32 +77,32 @@ class HighchartsAnnotationsPitchforkTypeInnerBackgroundOptions extends Highchart
     super.toOptionsJSON(buffer);
 
 
-    if (fill != null) {
-      buffer.writeAll(['"fill": ', jsonEncode(fill), ','], "");
-    }
-    if (strokeWidth != null) {
-      buffer.writeAll(['"strokeWidth": ', strokeWidth, ','], "");
-    }
     if (dashStyle != null) {
-      buffer.writeAll(['"dashStyle": ', jsonEncode(dashStyle), ','], "");
+      buffer.writeAll(['"dashStyle":', jsonEncode(dashStyle), ','], "");
+    }
+    if (fill != null) {
+      buffer.writeAll(['"fill":', jsonEncode(fill), ','], "");
     }
     if (ry != null) {
-      buffer.writeAll(['"ry": ', ry, ','], "");
+      buffer.writeAll(['"ry":', ry, ','], "");
     }
     if (snap != null) {
-      buffer.writeAll(['"snap": ', snap, ','], "");
+      buffer.writeAll(['"snap":', snap, ','], "");
     }
     if (src != null) {
-      buffer.writeAll(['"src": ', jsonEncode(src), ','], "");
+      buffer.writeAll(['"src":', jsonEncode(src), ','], "");
     }
     if (stroke != null) {
-      buffer.writeAll(['"stroke": ', jsonEncode(stroke), ','], "");
+      buffer.writeAll(['"stroke":', jsonEncode(stroke), ','], "");
+    }
+    if (strokeWidth != null) {
+      buffer.writeAll(['"strokeWidth":', strokeWidth, ','], "");
     }
     if (xAxis != null) {
-      buffer.writeAll(['"xAxis": ', xAxis, ','], "");
+      buffer.writeAll(['"xAxis":', xAxis, ','], "");
     }
     if (yAxis != null) {
-      buffer.writeAll(['"yAxis": ', yAxis, ','], "");
+      buffer.writeAll(['"yAxis":', yAxis, ','], "");
     }
   }
 

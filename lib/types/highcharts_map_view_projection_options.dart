@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -67,17 +67,17 @@ class HighchartsMapViewProjectionOptions extends HighchartsOptionsBase {
 
 
     if (name != null) {
-      buffer.writeAll(['"name": ', jsonEncode(name), ','], "");
+      buffer.writeAll(['"name":', jsonEncode(name), ','], "");
     }
     if (parallels != null) {
-      buffer.write('"parallels": [');
+      buffer.write('"parallels":[');
       for (var item in parallels!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (rotation != null) {
-      buffer.writeAll(['"rotation": ', jsonEncode(rotation), ','], "");
+      buffer.writeAll(['"rotation":', jsonEncode(rotation), ','], "");
     }
   }
 

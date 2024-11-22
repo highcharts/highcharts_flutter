@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -83,31 +83,31 @@ class HighchartsSunburstSeriesLevelsOptions extends HighchartsOptionsBase {
 
 
     if (borderColor != null) {
-      buffer.writeAll(['"borderColor": ', jsonEncode(borderColor), ','], "");
+      buffer.writeAll(['"borderColor":', jsonEncode(borderColor), ','], "");
     }
     if (borderDashStyle != null) {
-      buffer.writeAll(['"borderDashStyle": ', jsonEncode(borderDashStyle), ','], "");
+      buffer.writeAll(['"borderDashStyle":', jsonEncode(borderDashStyle), ','], "");
     }
     if (borderWidth != null) {
-      buffer.writeAll(['"borderWidth": ', borderWidth, ','], "");
+      buffer.writeAll(['"borderWidth":', borderWidth, ','], "");
     }
     if (color != null) {
-      buffer.writeAll(['"color": ', jsonEncode(color), ','], "");
+      buffer.writeAll(['"color":', jsonEncode(color), ','], "");
     }
     if (colorByPoint != null) {
-      buffer.writeAll(['"colorByPoint": ', colorByPoint, ','], "");
+      buffer.writeAll(['"colorByPoint":', colorByPoint, ','], "");
     }
     if (colorVariation != null) {
-      buffer.writeAll(['"colorVariation": ', colorVariation?.toJSON(), ","], "");
+      buffer.writeAll(['"colorVariation":', colorVariation?.toJSON(), ","], "");
     }
     if (dataLabels != null) {
-      buffer.writeAll(['"dataLabels": ', dataLabels?.toJSON(), ","], "");
+      buffer.writeAll(['"dataLabels":', dataLabels?.toJSON(), ","], "");
     }
     if (level != null) {
-      buffer.writeAll(['"level": ', level, ','], "");
+      buffer.writeAll(['"level":', level, ','], "");
     }
     if (levelSize != null) {
-      buffer.writeAll(['"levelSize": ', jsonEncode(levelSize), ','], "");
+      buffer.writeAll(['"levelSize":', jsonEncode(levelSize), ','], "");
     }
   }
 

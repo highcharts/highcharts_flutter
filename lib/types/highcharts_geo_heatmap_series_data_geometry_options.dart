@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -77,14 +77,14 @@ class HighchartsGeoHeatmapSeriesDataGeometryOptions extends HighchartsOptionsBas
 
 
     if (coordinates != null) {
-      buffer.write('"coordinates": [');
+      buffer.write('"coordinates":[');
       for (var item in coordinates!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (type != null) {
-      buffer.writeAll(['"type": ', jsonEncode(type), ','], "");
+      buffer.writeAll(['"type":', jsonEncode(type), ','], "");
     }
   }
 

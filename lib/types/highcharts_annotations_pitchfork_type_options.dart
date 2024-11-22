@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -27,8 +27,8 @@
 
 import 'highcharts_options_base.dart';
 import 'highcharts_annotations_pitchfork_type_inner_background_options.dart';
-import 'highcharts_annotations_pitchfork_type_outer_background_options.dart';
 import 'highcharts_annotations_crooked_line_type_line_options.dart';
+import 'highcharts_annotations_pitchfork_type_outer_background_options.dart';
 import 'highcharts_annotations_crooked_line_type_points_options.dart';
 
 
@@ -40,8 +40,8 @@ import 'highcharts_annotations_crooked_line_type_points_options.dart';
 
 
 export 'highcharts_annotations_pitchfork_type_inner_background_options.dart';
-export 'highcharts_annotations_pitchfork_type_outer_background_options.dart';
 export 'highcharts_annotations_crooked_line_type_line_options.dart';
+export 'highcharts_annotations_pitchfork_type_outer_background_options.dart';
 export 'highcharts_annotations_crooked_line_type_points_options.dart';
 
 
@@ -55,8 +55,8 @@ export 'highcharts_annotations_crooked_line_type_points_options.dart';
 class HighchartsAnnotationsPitchforkTypeOptions extends HighchartsOptionsBase {
 
   HighchartsAnnotationsPitchforkTypeInnerBackgroundOptions? innerBackground;
-  HighchartsAnnotationsPitchforkTypeOuterBackgroundOptions? outerBackground;
   HighchartsAnnotationsCrookedLineTypeLineOptions? line;
+  HighchartsAnnotationsPitchforkTypeOuterBackgroundOptions? outerBackground;
   List<HighchartsAnnotationsCrookedLineTypePointsOptions>? points;
   double? xAxis;
   double? yAxis;
@@ -64,8 +64,8 @@ class HighchartsAnnotationsPitchforkTypeOptions extends HighchartsOptionsBase {
 
   HighchartsAnnotationsPitchforkTypeOptions({
     this.innerBackground,
-    this.outerBackground,
     this.line,
+    this.outerBackground,
     this.points,
     this.xAxis,
     this.yAxis
@@ -77,26 +77,26 @@ class HighchartsAnnotationsPitchforkTypeOptions extends HighchartsOptionsBase {
 
 
     if (innerBackground != null) {
-      buffer.writeAll(['"innerBackground": ', innerBackground?.toJSON(), ","], "");
-    }
-    if (outerBackground != null) {
-      buffer.writeAll(['"outerBackground": ', outerBackground?.toJSON(), ","], "");
+      buffer.writeAll(['"innerBackground":', innerBackground?.toJSON(), ","], "");
     }
     if (line != null) {
-      buffer.writeAll(['"line": ', line?.toJSON(), ","], "");
+      buffer.writeAll(['"line":', line?.toJSON(), ","], "");
+    }
+    if (outerBackground != null) {
+      buffer.writeAll(['"outerBackground":', outerBackground?.toJSON(), ","], "");
     }
     if (points != null) {
-      buffer.write('"points": [');
+      buffer.write('"points":[');
       for (var item in points!) {
         buffer.writeAll([item.toJSON(), ","], "");
       }
       buffer.write("],");
     }
     if (xAxis != null) {
-      buffer.writeAll(['"xAxis": ', xAxis, ','], "");
+      buffer.writeAll(['"xAxis":', xAxis, ','], "");
     }
     if (yAxis != null) {
-      buffer.writeAll(['"yAxis": ', yAxis, ','], "");
+      buffer.writeAll(['"yAxis":', yAxis, ','], "");
     }
   }
 

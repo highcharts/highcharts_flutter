@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -91,21 +91,21 @@ export 'highcharts_map_point_series_data_labels_options.dart';
  */
 class HighchartsMapPointSeriesOptions extends HighchartsOptionsBase {
 
+  HighchartsMapPointSeriesDataLabelsOptions? dataLabels;
   String? id;
   double? index;
   double? legendIndex;
-  List<dynamic>? mapData;
-  HighchartsMapPointSeriesDataLabelsOptions? dataLabels;
   String? legendSymbol;
+  List<dynamic>? mapData;
 
 
   HighchartsMapPointSeriesOptions({
+    this.dataLabels,
     this.id,
     this.index,
     this.legendIndex,
-    this.mapData,
-    this.dataLabels,
-    this.legendSymbol
+    this.legendSymbol,
+    this.mapData
   });
 
   @override
@@ -113,27 +113,27 @@ class HighchartsMapPointSeriesOptions extends HighchartsOptionsBase {
     super.toOptionsJSON(buffer);
 
 
+    if (dataLabels != null) {
+      buffer.writeAll(['"dataLabels":', dataLabels?.toJSON(), ","], "");
+    }
     if (id != null) {
-      buffer.writeAll(['"id": ', jsonEncode(id), ','], "");
+      buffer.writeAll(['"id":', jsonEncode(id), ','], "");
     }
     if (index != null) {
-      buffer.writeAll(['"index": ', index, ','], "");
+      buffer.writeAll(['"index":', index, ','], "");
     }
     if (legendIndex != null) {
-      buffer.writeAll(['"legendIndex": ', legendIndex, ','], "");
+      buffer.writeAll(['"legendIndex":', legendIndex, ','], "");
+    }
+    if (legendSymbol != null) {
+      buffer.writeAll(['"legendSymbol":', jsonEncode(legendSymbol), ','], "");
     }
     if (mapData != null) {
-      buffer.write('"mapData": [');
+      buffer.write('"mapData":[');
       for (var item in mapData!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
-    }
-    if (dataLabels != null) {
-      buffer.writeAll(['"dataLabels": ', dataLabels?.toJSON(), ","], "");
-    }
-    if (legendSymbol != null) {
-      buffer.writeAll(['"legendSymbol": ', jsonEncode(legendSymbol), ','], "");
     }
   }
 

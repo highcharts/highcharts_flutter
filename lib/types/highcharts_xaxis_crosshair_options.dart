@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -59,20 +59,20 @@ class HighchartsXAxisCrosshairOptions extends HighchartsOptionsBase {
   String? className;
   String? color;
   String? dashStyle;
+  HighchartsXAxisCrosshairLabelOptions? label;
   bool? snap;
   double? width;
   double? zIndex;
-  HighchartsXAxisCrosshairLabelOptions? label;
 
 
   HighchartsXAxisCrosshairOptions({
     this.className,
     this.color,
     this.dashStyle,
+    this.label,
     this.snap,
     this.width,
-    this.zIndex,
-    this.label
+    this.zIndex
   });
 
   @override
@@ -81,25 +81,25 @@ class HighchartsXAxisCrosshairOptions extends HighchartsOptionsBase {
 
 
     if (className != null) {
-      buffer.writeAll(['"className": ', jsonEncode(className), ','], "");
+      buffer.writeAll(['"className":', jsonEncode(className), ','], "");
     }
     if (color != null) {
-      buffer.writeAll(['"color": ', jsonEncode(color), ','], "");
+      buffer.writeAll(['"color":', jsonEncode(color), ','], "");
     }
     if (dashStyle != null) {
-      buffer.writeAll(['"dashStyle": ', jsonEncode(dashStyle), ','], "");
-    }
-    if (snap != null) {
-      buffer.writeAll(['"snap": ', snap, ','], "");
-    }
-    if (width != null) {
-      buffer.writeAll(['"width": ', width, ','], "");
-    }
-    if (zIndex != null) {
-      buffer.writeAll(['"zIndex": ', zIndex, ','], "");
+      buffer.writeAll(['"dashStyle":', jsonEncode(dashStyle), ','], "");
     }
     if (label != null) {
-      buffer.writeAll(['"label": ', label?.toJSON(), ","], "");
+      buffer.writeAll(['"label":', label?.toJSON(), ","], "");
+    }
+    if (snap != null) {
+      buffer.writeAll(['"snap":', snap, ','], "");
+    }
+    if (width != null) {
+      buffer.writeAll(['"width":', width, ','], "");
+    }
+    if (zIndex != null) {
+      buffer.writeAll(['"zIndex":', zIndex, ','], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -26,16 +26,16 @@
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-import 'highcharts_wordcloud_series_animation_options.dart';
-import 'highcharts_wordcloud_series_rotation_options.dart';
-import 'highcharts_wordcloud_series_tooltip_options.dart';
-import 'highcharts_wordcloud_series_states_options.dart';
 import 'highcharts_series_accessibility_options.dart';
+import 'highcharts_wordcloud_series_animation_options.dart';
 import 'highcharts_series_events_options.dart';
 import 'highcharts_series_label_options.dart';
 import 'highcharts_series_on_point_options.dart';
 import 'highcharts_series_point_options.dart';
+import 'highcharts_wordcloud_series_rotation_options.dart';
 import 'highcharts_series_sonification_options.dart';
+import 'highcharts_wordcloud_series_states_options.dart';
+import 'highcharts_wordcloud_series_tooltip_options.dart';
 
 
 /* *
@@ -45,16 +45,16 @@ import 'highcharts_series_sonification_options.dart';
  * */
 
 
-export 'highcharts_wordcloud_series_animation_options.dart';
-export 'highcharts_wordcloud_series_rotation_options.dart';
-export 'highcharts_wordcloud_series_tooltip_options.dart';
-export 'highcharts_wordcloud_series_states_options.dart';
 export 'highcharts_series_accessibility_options.dart';
+export 'highcharts_wordcloud_series_animation_options.dart';
 export 'highcharts_series_events_options.dart';
 export 'highcharts_series_label_options.dart';
 export 'highcharts_series_on_point_options.dart';
 export 'highcharts_series_point_options.dart';
+export 'highcharts_wordcloud_series_rotation_options.dart';
 export 'highcharts_series_sonification_options.dart';
+export 'highcharts_wordcloud_series_states_options.dart';
+export 'highcharts_wordcloud_series_tooltip_options.dart';
 
 
 /* *
@@ -109,119 +109,119 @@ export 'highcharts_series_sonification_options.dart';
  */
 class HighchartsWordcloudSeriesOptions extends HighchartsOptionsBase {
 
-  String? id;
-  double? index;
-  double? legendIndex;
-  String? stack;
-  String? xAxis;
-  String? yAxis;
-  double? zIndex;
-  HighchartsWordcloudSeriesAnimationOptions? animation;
-  double? borderWidth;
-  bool? colorByPoint;
-  double? maxFontSize;
-  double? minFontSize;
-  String? placementStrategy;
-  HighchartsWordcloudSeriesRotationOptions? rotation;
-  bool? showInLegend;
-  String? spiral;
-  Map<String, String>? style;
-  HighchartsWordcloudSeriesTooltipOptions? tooltip;
-  String? borderColor;
-  Map<String, dynamic>? borderRadius;
-  bool? centerInCategory;
-  List<dynamic>? colors;
-  double? edgeWidth;
-  HighchartsWordcloudSeriesStatesOptions? states;
-  bool? stickyTracking;
   HighchartsSeriesAccessibilityOptions? accessibility;
   bool? allowPointSelect;
+  HighchartsWordcloudSeriesAnimationOptions? animation;
   double? animationLimit;
+  String? borderColor;
+  Map<String, dynamic>? borderRadius;
+  double? borderWidth;
+  bool? centerInCategory;
   String? className;
   String? color;
+  bool? colorByPoint;
   double? colorIndex;
   String? colorKey;
+  List<dynamic>? colors;
   String? cursor;
   Map<String, dynamic>? custom;
   String? dashStyle;
   String? description;
+  double? edgeWidth;
   bool? enableMouseTracking;
   HighchartsSeriesEventsOptions? events;
+  String? id;
   bool? inactiveOtherPoints;
   bool? includeInDataExport;
+  double? index;
   List<String>? keys;
   HighchartsSeriesLabelOptions? label;
+  double? legendIndex;
   String? legendSymbol;
   String? linkedTo;
+  double? maxFontSize;
+  double? minFontSize;
   HighchartsSeriesOnPointOptions? onPoint;
   double? opacity;
+  String? placementStrategy;
   HighchartsSeriesPointOptions? point;
   dynamic pointDescriptionFormat;
   dynamic pointDescriptionFormatter;
   bool? relativeXValue;
+  HighchartsWordcloudSeriesRotationOptions? rotation;
   bool? selected;
+  bool? showInLegend;
   bool? skipKeyboardNavigation;
   HighchartsSeriesSonificationOptions? sonification;
+  String? spiral;
+  String? stack;
+  HighchartsWordcloudSeriesStatesOptions? states;
+  bool? stickyTracking;
+  Map<String, String>? style;
+  HighchartsWordcloudSeriesTooltipOptions? tooltip;
   double? turboThreshold;
   bool? visible;
+  String? xAxis;
+  String? yAxis;
+  double? zIndex;
 
 
   HighchartsWordcloudSeriesOptions({
-    this.id,
-    this.index,
-    this.legendIndex,
-    this.stack,
-    this.xAxis,
-    this.yAxis,
-    this.zIndex,
-    this.animation,
-    this.borderWidth,
-    this.colorByPoint,
-    this.maxFontSize,
-    this.minFontSize,
-    this.placementStrategy,
-    this.rotation,
-    this.showInLegend,
-    this.spiral,
-    this.style,
-    this.tooltip,
-    this.borderColor,
-    this.borderRadius,
-    this.centerInCategory,
-    this.colors,
-    this.edgeWidth,
-    this.states,
-    this.stickyTracking,
     this.accessibility,
     this.allowPointSelect,
+    this.animation,
     this.animationLimit,
+    this.borderColor,
+    this.borderRadius,
+    this.borderWidth,
+    this.centerInCategory,
     this.className,
     this.color,
+    this.colorByPoint,
     this.colorIndex,
     this.colorKey,
+    this.colors,
     this.cursor,
     this.custom,
     this.dashStyle,
     this.description,
+    this.edgeWidth,
     this.enableMouseTracking,
     this.events,
+    this.id,
     this.inactiveOtherPoints,
     this.includeInDataExport,
+    this.index,
     this.keys,
     this.label,
+    this.legendIndex,
     this.legendSymbol,
     this.linkedTo,
+    this.maxFontSize,
+    this.minFontSize,
     this.onPoint,
     this.opacity,
+    this.placementStrategy,
     this.point,
     this.pointDescriptionFormat,
     this.pointDescriptionFormatter,
     this.relativeXValue,
+    this.rotation,
     this.selected,
+    this.showInLegend,
     this.skipKeyboardNavigation,
     this.sonification,
+    this.spiral,
+    this.stack,
+    this.states,
+    this.stickyTracking,
+    this.style,
+    this.tooltip,
     this.turboThreshold,
-    this.visible
+    this.visible,
+    this.xAxis,
+    this.yAxis,
+    this.zIndex
   });
 
   @override
@@ -229,190 +229,190 @@ class HighchartsWordcloudSeriesOptions extends HighchartsOptionsBase {
     super.toOptionsJSON(buffer);
 
 
-    if (id != null) {
-      buffer.writeAll(['"id": ', jsonEncode(id), ','], "");
+    if (accessibility != null) {
+      buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ","], "");
     }
-    if (index != null) {
-      buffer.writeAll(['"index": ', index, ','], "");
-    }
-    if (legendIndex != null) {
-      buffer.writeAll(['"legendIndex": ', legendIndex, ','], "");
-    }
-    if (stack != null) {
-      buffer.writeAll(['"stack": ', jsonEncode(stack), ','], "");
-    }
-    if (xAxis != null) {
-      buffer.writeAll(['"xAxis": ', jsonEncode(xAxis), ','], "");
-    }
-    if (yAxis != null) {
-      buffer.writeAll(['"yAxis": ', jsonEncode(yAxis), ','], "");
-    }
-    if (zIndex != null) {
-      buffer.writeAll(['"zIndex": ', zIndex, ','], "");
+    if (allowPointSelect != null) {
+      buffer.writeAll(['"allowPointSelect":', allowPointSelect, ','], "");
     }
     if (animation != null) {
-      buffer.writeAll(['"animation": ', animation?.toJSON(), ","], "");
+      buffer.writeAll(['"animation":', animation?.toJSON(), ","], "");
     }
-    if (borderWidth != null) {
-      buffer.writeAll(['"borderWidth": ', borderWidth, ','], "");
-    }
-    if (colorByPoint != null) {
-      buffer.writeAll(['"colorByPoint": ', colorByPoint, ','], "");
-    }
-    if (maxFontSize != null) {
-      buffer.writeAll(['"maxFontSize": ', maxFontSize, ','], "");
-    }
-    if (minFontSize != null) {
-      buffer.writeAll(['"minFontSize": ', minFontSize, ','], "");
-    }
-    if (placementStrategy != null) {
-      buffer.writeAll(['"placementStrategy": ', jsonEncode(placementStrategy), ','], "");
-    }
-    if (rotation != null) {
-      buffer.writeAll(['"rotation": ', rotation?.toJSON(), ","], "");
-    }
-    if (showInLegend != null) {
-      buffer.writeAll(['"showInLegend": ', showInLegend, ','], "");
-    }
-    if (spiral != null) {
-      buffer.writeAll(['"spiral": ', jsonEncode(spiral), ','], "");
-    }
-    if (style != null) {
-      buffer.write("{");
-      for (var item in style!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
-      }
-      buffer.write("}");
-    }
-    if (tooltip != null) {
-      buffer.writeAll(['"tooltip": ', tooltip?.toJSON(), ","], "");
+    if (animationLimit != null) {
+      buffer.writeAll(['"animationLimit":', animationLimit, ','], "");
     }
     if (borderColor != null) {
-      buffer.writeAll(['"borderColor": ', jsonEncode(borderColor), ','], "");
+      buffer.writeAll(['"borderColor":', jsonEncode(borderColor), ','], "");
     }
     if (borderRadius != null) {
       buffer.write("{");
       for (var item in borderRadius!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
+    if (borderWidth != null) {
+      buffer.writeAll(['"borderWidth":', borderWidth, ','], "");
+    }
     if (centerInCategory != null) {
-      buffer.writeAll(['"centerInCategory": ', centerInCategory, ','], "");
+      buffer.writeAll(['"centerInCategory":', centerInCategory, ','], "");
+    }
+    if (className != null) {
+      buffer.writeAll(['"className":', jsonEncode(className), ','], "");
+    }
+    if (color != null) {
+      buffer.writeAll(['"color":', jsonEncode(color), ','], "");
+    }
+    if (colorByPoint != null) {
+      buffer.writeAll(['"colorByPoint":', colorByPoint, ','], "");
+    }
+    if (colorIndex != null) {
+      buffer.writeAll(['"colorIndex":', colorIndex, ','], "");
+    }
+    if (colorKey != null) {
+      buffer.writeAll(['"colorKey":', jsonEncode(colorKey), ','], "");
     }
     if (colors != null) {
-      buffer.write('"colors": [');
+      buffer.write('"colors":[');
       for (var item in colors!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
-    if (edgeWidth != null) {
-      buffer.writeAll(['"edgeWidth": ', edgeWidth, ','], "");
-    }
-    if (states != null) {
-      buffer.writeAll(['"states": ', states?.toJSON(), ","], "");
-    }
-    if (stickyTracking != null) {
-      buffer.writeAll(['"stickyTracking": ', stickyTracking, ','], "");
-    }
-    if (accessibility != null) {
-      buffer.writeAll(['"accessibility": ', accessibility?.toJSON(), ","], "");
-    }
-    if (allowPointSelect != null) {
-      buffer.writeAll(['"allowPointSelect": ', allowPointSelect, ','], "");
-    }
-    if (animationLimit != null) {
-      buffer.writeAll(['"animationLimit": ', animationLimit, ','], "");
-    }
-    if (className != null) {
-      buffer.writeAll(['"className": ', jsonEncode(className), ','], "");
-    }
-    if (color != null) {
-      buffer.writeAll(['"color": ', jsonEncode(color), ','], "");
-    }
-    if (colorIndex != null) {
-      buffer.writeAll(['"colorIndex": ', colorIndex, ','], "");
-    }
-    if (colorKey != null) {
-      buffer.writeAll(['"colorKey": ', jsonEncode(colorKey), ','], "");
-    }
     if (cursor != null) {
-      buffer.writeAll(['"cursor": ', jsonEncode(cursor), ','], "");
+      buffer.writeAll(['"cursor":', jsonEncode(cursor), ','], "");
     }
     if (custom != null) {
       buffer.write("{");
       for (var item in custom!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (dashStyle != null) {
-      buffer.writeAll(['"dashStyle": ', jsonEncode(dashStyle), ','], "");
+      buffer.writeAll(['"dashStyle":', jsonEncode(dashStyle), ','], "");
     }
     if (description != null) {
-      buffer.writeAll(['"description": ', jsonEncode(description), ','], "");
+      buffer.writeAll(['"description":', jsonEncode(description), ','], "");
+    }
+    if (edgeWidth != null) {
+      buffer.writeAll(['"edgeWidth":', edgeWidth, ','], "");
     }
     if (enableMouseTracking != null) {
-      buffer.writeAll(['"enableMouseTracking": ', enableMouseTracking, ','], "");
+      buffer.writeAll(['"enableMouseTracking":', enableMouseTracking, ','], "");
     }
     if (events != null) {
-      buffer.writeAll(['"events": ', events?.toJSON(), ","], "");
+      buffer.writeAll(['"events":', events?.toJSON(), ","], "");
+    }
+    if (id != null) {
+      buffer.writeAll(['"id":', jsonEncode(id), ','], "");
     }
     if (inactiveOtherPoints != null) {
-      buffer.writeAll(['"inactiveOtherPoints": ', inactiveOtherPoints, ','], "");
+      buffer.writeAll(['"inactiveOtherPoints":', inactiveOtherPoints, ','], "");
     }
     if (includeInDataExport != null) {
-      buffer.writeAll(['"includeInDataExport": ', includeInDataExport, ','], "");
+      buffer.writeAll(['"includeInDataExport":', includeInDataExport, ','], "");
+    }
+    if (index != null) {
+      buffer.writeAll(['"index":', index, ','], "");
     }
     if (keys != null) {
-      buffer.write('"keys": [');
+      buffer.write('"keys":[');
       for (var item in keys!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (label != null) {
-      buffer.writeAll(['"label": ', label?.toJSON(), ","], "");
+      buffer.writeAll(['"label":', label?.toJSON(), ","], "");
+    }
+    if (legendIndex != null) {
+      buffer.writeAll(['"legendIndex":', legendIndex, ','], "");
     }
     if (legendSymbol != null) {
-      buffer.writeAll(['"legendSymbol": ', jsonEncode(legendSymbol), ','], "");
+      buffer.writeAll(['"legendSymbol":', jsonEncode(legendSymbol), ','], "");
     }
     if (linkedTo != null) {
-      buffer.writeAll(['"linkedTo": ', jsonEncode(linkedTo), ','], "");
+      buffer.writeAll(['"linkedTo":', jsonEncode(linkedTo), ','], "");
+    }
+    if (maxFontSize != null) {
+      buffer.writeAll(['"maxFontSize":', maxFontSize, ','], "");
+    }
+    if (minFontSize != null) {
+      buffer.writeAll(['"minFontSize":', minFontSize, ','], "");
     }
     if (onPoint != null) {
-      buffer.writeAll(['"onPoint": ', onPoint?.toJSON(), ","], "");
+      buffer.writeAll(['"onPoint":', onPoint?.toJSON(), ","], "");
     }
     if (opacity != null) {
-      buffer.writeAll(['"opacity": ', opacity, ','], "");
+      buffer.writeAll(['"opacity":', opacity, ','], "");
+    }
+    if (placementStrategy != null) {
+      buffer.writeAll(['"placementStrategy":', jsonEncode(placementStrategy), ','], "");
     }
     if (point != null) {
-      buffer.writeAll(['"point": ', point?.toJSON(), ","], "");
+      buffer.writeAll(['"point":', point?.toJSON(), ","], "");
     }
     if (pointDescriptionFormat != null) {
-      buffer.writeAll(['"pointDescriptionFormat": ', jsonEncode(pointDescriptionFormat), ','], "");
+      buffer.writeAll(['"pointDescriptionFormat":', jsonEncode(pointDescriptionFormat), ','], "");
     }
     if (pointDescriptionFormatter != null) {
-      buffer.writeAll(['"pointDescriptionFormatter": ', jsonEncode(pointDescriptionFormatter), ','], "");
+      buffer.writeAll(['"pointDescriptionFormatter":', jsonEncode(pointDescriptionFormatter), ','], "");
     }
     if (relativeXValue != null) {
-      buffer.writeAll(['"relativeXValue": ', relativeXValue, ','], "");
+      buffer.writeAll(['"relativeXValue":', relativeXValue, ','], "");
+    }
+    if (rotation != null) {
+      buffer.writeAll(['"rotation":', rotation?.toJSON(), ","], "");
     }
     if (selected != null) {
-      buffer.writeAll(['"selected": ', selected, ','], "");
+      buffer.writeAll(['"selected":', selected, ','], "");
+    }
+    if (showInLegend != null) {
+      buffer.writeAll(['"showInLegend":', showInLegend, ','], "");
     }
     if (skipKeyboardNavigation != null) {
-      buffer.writeAll(['"skipKeyboardNavigation": ', skipKeyboardNavigation, ','], "");
+      buffer.writeAll(['"skipKeyboardNavigation":', skipKeyboardNavigation, ','], "");
     }
     if (sonification != null) {
-      buffer.writeAll(['"sonification": ', sonification?.toJSON(), ","], "");
+      buffer.writeAll(['"sonification":', sonification?.toJSON(), ","], "");
+    }
+    if (spiral != null) {
+      buffer.writeAll(['"spiral":', jsonEncode(spiral), ','], "");
+    }
+    if (stack != null) {
+      buffer.writeAll(['"stack":', jsonEncode(stack), ','], "");
+    }
+    if (states != null) {
+      buffer.writeAll(['"states":', states?.toJSON(), ","], "");
+    }
+    if (stickyTracking != null) {
+      buffer.writeAll(['"stickyTracking":', stickyTracking, ','], "");
+    }
+    if (style != null) {
+      buffer.write("{");
+      for (var item in style!.entries) {
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
+      }
+      buffer.write("}");
+    }
+    if (tooltip != null) {
+      buffer.writeAll(['"tooltip":', tooltip?.toJSON(), ","], "");
     }
     if (turboThreshold != null) {
-      buffer.writeAll(['"turboThreshold": ', turboThreshold, ','], "");
+      buffer.writeAll(['"turboThreshold":', turboThreshold, ','], "");
     }
     if (visible != null) {
-      buffer.writeAll(['"visible": ', visible, ','], "");
+      buffer.writeAll(['"visible":', visible, ','], "");
+    }
+    if (xAxis != null) {
+      buffer.writeAll(['"xAxis":', jsonEncode(xAxis), ','], "");
+    }
+    if (yAxis != null) {
+      buffer.writeAll(['"yAxis":', jsonEncode(yAxis), ','], "");
+    }
+    if (zIndex != null) {
+      buffer.writeAll(['"zIndex":', zIndex, ','], "");
     }
   }
 

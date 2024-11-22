@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -53,9 +53,9 @@ export 'highcharts_arc_diagram_series_nodes_data_labels_options.dart';
  */
 class HighchartsArcDiagramSeriesNodesOptions extends HighchartsOptionsBase {
 
-  HighchartsArcDiagramSeriesNodesDataLabelsOptions? dataLabels;
   String? color;
   double? colorIndex;
+  HighchartsArcDiagramSeriesNodesDataLabelsOptions? dataLabels;
   double? height;
   String? id;
   String? offset;
@@ -64,9 +64,9 @@ class HighchartsArcDiagramSeriesNodesOptions extends HighchartsOptionsBase {
 
 
   HighchartsArcDiagramSeriesNodesOptions({
-    this.dataLabels,
     this.color,
     this.colorIndex,
+    this.dataLabels,
     this.height,
     this.id,
     this.offset,
@@ -79,29 +79,29 @@ class HighchartsArcDiagramSeriesNodesOptions extends HighchartsOptionsBase {
     super.toOptionsJSON(buffer);
 
 
-    if (dataLabels != null) {
-      buffer.writeAll(['"dataLabels": ', dataLabels?.toJSON(), ","], "");
-    }
     if (color != null) {
-      buffer.writeAll(['"color": ', jsonEncode(color), ','], "");
+      buffer.writeAll(['"color":', jsonEncode(color), ','], "");
     }
     if (colorIndex != null) {
-      buffer.writeAll(['"colorIndex": ', colorIndex, ','], "");
+      buffer.writeAll(['"colorIndex":', colorIndex, ','], "");
+    }
+    if (dataLabels != null) {
+      buffer.writeAll(['"dataLabels":', dataLabels?.toJSON(), ","], "");
     }
     if (height != null) {
-      buffer.writeAll(['"height": ', height, ','], "");
+      buffer.writeAll(['"height":', height, ','], "");
     }
     if (id != null) {
-      buffer.writeAll(['"id": ', jsonEncode(id), ','], "");
+      buffer.writeAll(['"id":', jsonEncode(id), ','], "");
     }
     if (offset != null) {
-      buffer.writeAll(['"offset": ', jsonEncode(offset), ','], "");
+      buffer.writeAll(['"offset":', jsonEncode(offset), ','], "");
     }
     if (offsetHorizontal != null) {
-      buffer.writeAll(['"offsetHorizontal": ', jsonEncode(offsetHorizontal), ','], "");
+      buffer.writeAll(['"offsetHorizontal":', jsonEncode(offsetHorizontal), ','], "");
     }
     if (offsetVertical != null) {
-      buffer.writeAll(['"offsetVertical": ', jsonEncode(offsetVertical), ','], "");
+      buffer.writeAll(['"offsetVertical":', jsonEncode(offsetVertical), ','], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -66,13 +66,13 @@ class HighchartsChart3DFrameFrontOptions extends HighchartsOptionsBase {
 
 
     if (color != null) {
-      buffer.writeAll(['"color": ', jsonEncode(color), ','], "");
+      buffer.writeAll(['"color":', jsonEncode(color), ','], "");
     }
     if (size != null) {
-      buffer.writeAll(['"size": ', size, ','], "");
+      buffer.writeAll(['"size":', size, ','], "");
     }
     if (visible != null) {
-      buffer.writeAll(['"visible": ', jsonEncode(visible), ','], "");
+      buffer.writeAll(['"visible":', jsonEncode(visible), ','], "");
     }
   }
 

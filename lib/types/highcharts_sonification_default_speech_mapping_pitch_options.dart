@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -72,22 +72,22 @@ class HighchartsSonificationDefaultSpeechMappingPitchOptions extends HighchartsO
 
 
     if (mapTo != null) {
-      buffer.writeAll(['"mapTo": ', jsonEncode(mapTo), ','], "");
+      buffer.writeAll(['"mapTo":', jsonEncode(mapTo), ','], "");
     }
     if (max != null) {
-      buffer.writeAll(['"max": ', jsonEncode(max), ','], "");
+      buffer.writeAll(['"max":', jsonEncode(max), ','], "");
     }
     if (min != null) {
-      buffer.writeAll(['"min": ', jsonEncode(min), ','], "");
+      buffer.writeAll(['"min":', jsonEncode(min), ','], "");
     }
     if (within != null) {
-      buffer.writeAll(['"within": ', jsonEncode(within), ','], "");
+      buffer.writeAll(['"within":', jsonEncode(within), ','], "");
     }
     if (mapFunction != null) {
-      buffer.writeAll(['"mapFunction": ', jsonEncode(mapFunction), ','], "");
+      buffer.writeAll(['"mapFunction":', jsonEncode(mapFunction), ','], "");
     }
     if (value != null) {
-      buffer.writeAll(['"value": ', value, ','], "");
+      buffer.writeAll(['"value":', value, ','], "");
     }
   }
 

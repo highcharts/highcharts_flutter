@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -61,10 +61,10 @@ class HighchartsNavigationAnnotationsFibonacciTimeZonesTypeOptionsPointsOptions 
 
 
     if (controlPoint != null) {
-      buffer.writeAll(['"controlPoint": ', controlPoint, ','], "");
+      buffer.writeAll(['"controlPoint":', controlPoint, ','], "");
     }
     if (x != null) {
-      buffer.writeAll(['"x": ', x, ','], "");
+      buffer.writeAll(['"x":', x, ','], "");
     }
   }
 

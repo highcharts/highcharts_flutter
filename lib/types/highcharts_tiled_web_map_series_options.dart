@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -96,22 +96,22 @@ class HighchartsTiledWebMapSeriesOptions extends HighchartsOptionsBase {
   String? id;
   double? index;
   double? legendIndex;
+  String? legendSymbol;
+  String? linecap;
   List<dynamic>? mapData;
   HighchartsTiledWebMapSeriesProviderOptions? provider;
   HighchartsTiledWebMapSeriesStatesOptions? states;
-  String? legendSymbol;
-  String? linecap;
 
 
   HighchartsTiledWebMapSeriesOptions({
     this.id,
     this.index,
     this.legendIndex,
+    this.legendSymbol,
+    this.linecap,
     this.mapData,
     this.provider,
-    this.states,
-    this.legendSymbol,
-    this.linecap
+    this.states
   });
 
   @override
@@ -120,32 +120,32 @@ class HighchartsTiledWebMapSeriesOptions extends HighchartsOptionsBase {
 
 
     if (id != null) {
-      buffer.writeAll(['"id": ', jsonEncode(id), ','], "");
+      buffer.writeAll(['"id":', jsonEncode(id), ','], "");
     }
     if (index != null) {
-      buffer.writeAll(['"index": ', index, ','], "");
+      buffer.writeAll(['"index":', index, ','], "");
     }
     if (legendIndex != null) {
-      buffer.writeAll(['"legendIndex": ', legendIndex, ','], "");
+      buffer.writeAll(['"legendIndex":', legendIndex, ','], "");
+    }
+    if (legendSymbol != null) {
+      buffer.writeAll(['"legendSymbol":', jsonEncode(legendSymbol), ','], "");
+    }
+    if (linecap != null) {
+      buffer.writeAll(['"linecap":', jsonEncode(linecap), ','], "");
     }
     if (mapData != null) {
-      buffer.write('"mapData": [');
+      buffer.write('"mapData":[');
       for (var item in mapData!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (provider != null) {
-      buffer.writeAll(['"provider": ', provider?.toJSON(), ","], "");
+      buffer.writeAll(['"provider":', provider?.toJSON(), ","], "");
     }
     if (states != null) {
-      buffer.writeAll(['"states": ', states?.toJSON(), ","], "");
-    }
-    if (legendSymbol != null) {
-      buffer.writeAll(['"legendSymbol": ', jsonEncode(legendSymbol), ','], "");
-    }
-    if (linecap != null) {
-      buffer.writeAll(['"linecap": ', jsonEncode(linecap), ','], "");
+      buffer.writeAll(['"states":', states?.toJSON(), ","], "");
     }
   }
 

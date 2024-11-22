@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -79,16 +79,16 @@ class HighchartsExportingPdfFontOptions extends HighchartsOptionsBase {
 
 
     if (bold != null) {
-      buffer.writeAll(['"bold": ', jsonEncode(bold), ','], "");
+      buffer.writeAll(['"bold":', jsonEncode(bold), ','], "");
     }
     if (bolditalic != null) {
-      buffer.writeAll(['"bolditalic": ', jsonEncode(bolditalic), ','], "");
+      buffer.writeAll(['"bolditalic":', jsonEncode(bolditalic), ','], "");
     }
     if (italic != null) {
-      buffer.writeAll(['"italic": ', jsonEncode(italic), ','], "");
+      buffer.writeAll(['"italic":', jsonEncode(italic), ','], "");
     }
     if (normal != null) {
-      buffer.writeAll(['"normal": ', jsonEncode(normal), ','], "");
+      buffer.writeAll(['"normal":', jsonEncode(normal), ','], "");
     }
   }
 

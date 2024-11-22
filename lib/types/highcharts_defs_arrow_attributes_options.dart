@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -67,19 +67,19 @@ class HighchartsDefsArrowAttributesOptions extends HighchartsOptionsBase {
 
 
     if (id != null) {
-      buffer.writeAll(['"id": ', jsonEncode(id), ','], "");
+      buffer.writeAll(['"id":', jsonEncode(id), ','], "");
     }
     if (markerHeight != null) {
-      buffer.writeAll(['"markerHeight": ', markerHeight, ','], "");
+      buffer.writeAll(['"markerHeight":', markerHeight, ','], "");
     }
     if (markerWidth != null) {
-      buffer.writeAll(['"markerWidth": ', markerWidth, ','], "");
+      buffer.writeAll(['"markerWidth":', markerWidth, ','], "");
     }
     if (refX != null) {
-      buffer.writeAll(['"refX": ', refX, ','], "");
+      buffer.writeAll(['"refX":', refX, ','], "");
     }
     if (refY != null) {
-      buffer.writeAll(['"refY": ', refY, ','], "");
+      buffer.writeAll(['"refY":', refY, ','], "");
     }
   }
 

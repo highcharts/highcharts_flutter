@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -50,13 +50,13 @@ import 'highcharts_options_base.dart';
  */
 class HighchartsAPOSeriesParamsOptions extends HighchartsOptionsBase {
 
-  List<double>? periods;
   double? index;
+  List<double>? periods;
 
 
   HighchartsAPOSeriesParamsOptions({
-    this.periods,
-    this.index
+    this.index,
+    this.periods
   });
 
   @override
@@ -64,15 +64,15 @@ class HighchartsAPOSeriesParamsOptions extends HighchartsOptionsBase {
     super.toOptionsJSON(buffer);
 
 
+    if (index != null) {
+      buffer.writeAll(['"index":', index, ','], "");
+    }
     if (periods != null) {
-      buffer.write('"periods": [');
+      buffer.write('"periods":[');
       for (var item in periods!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
-    }
-    if (index != null) {
-      buffer.writeAll(['"index": ', index, ','], "");
     }
   }
 

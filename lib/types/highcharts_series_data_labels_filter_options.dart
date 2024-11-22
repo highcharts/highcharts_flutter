@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -71,13 +71,13 @@ class HighchartsSeriesDataLabelsFilterOptions extends HighchartsOptionsBase {
 
 
     if (operator != null) {
-      buffer.writeAll(['"operator": ', jsonEncode(operator), ','], "");
+      buffer.writeAll(['"operator":', jsonEncode(operator), ','], "");
     }
     if (property != null) {
-      buffer.writeAll(['"property": ', jsonEncode(property), ','], "");
+      buffer.writeAll(['"property":', jsonEncode(property), ','], "");
     }
     if (value != null) {
-      buffer.writeAll(['"value": ', value, ','], "");
+      buffer.writeAll(['"value":', value, ','], "");
     }
   }
 

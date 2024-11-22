@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -71,16 +71,16 @@ class HighchartsAccessibilityKeyboardNavigationFocusBorderOptions extends Highch
 
 
     if (enabled != null) {
-      buffer.writeAll(['"enabled": ', enabled, ','], "");
+      buffer.writeAll(['"enabled":', enabled, ','], "");
     }
     if (hideBrowserFocusOutline != null) {
-      buffer.writeAll(['"hideBrowserFocusOutline": ', hideBrowserFocusOutline, ','], "");
+      buffer.writeAll(['"hideBrowserFocusOutline":', hideBrowserFocusOutline, ','], "");
     }
     if (margin != null) {
-      buffer.writeAll(['"margin": ', margin, ','], "");
+      buffer.writeAll(['"margin":', margin, ','], "");
     }
     if (style != null) {
-      buffer.writeAll(['"style": ', style?.toJSON(), ","], "");
+      buffer.writeAll(['"style":', style?.toJSON(), ","], "");
     }
   }
 

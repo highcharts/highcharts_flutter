@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -26,9 +26,9 @@
 
 
 import 'highcharts_options_base.dart';
-import 'highcharts_annotations_vertical_line_type_options.dart';
 import 'highcharts_annotations_crooked_line_label_options.dart';
 import 'highcharts_annotations_crooked_line_shape_options.dart';
+import 'highcharts_annotations_vertical_line_type_options.dart';
 
 
 /* *
@@ -38,9 +38,9 @@ import 'highcharts_annotations_crooked_line_shape_options.dart';
  * */
 
 
-export 'highcharts_annotations_vertical_line_type_options.dart';
 export 'highcharts_annotations_crooked_line_label_options.dart';
 export 'highcharts_annotations_crooked_line_shape_options.dart';
+export 'highcharts_annotations_vertical_line_type_options.dart';
 
 
 /* *
@@ -55,15 +55,15 @@ export 'highcharts_annotations_crooked_line_shape_options.dart';
  */
 class HighchartsAnnotationsVerticalLineOptions extends HighchartsOptionsBase {
 
-  HighchartsAnnotationsVerticalLineTypeOptions? typeOptions;
   HighchartsAnnotationsCrookedLineLabelOptions? labelOptions;
   HighchartsAnnotationsCrookedLineShapeOptions? shapeOptions;
+  HighchartsAnnotationsVerticalLineTypeOptions? typeOptions;
 
 
   HighchartsAnnotationsVerticalLineOptions({
-    this.typeOptions,
     this.labelOptions,
-    this.shapeOptions
+    this.shapeOptions,
+    this.typeOptions
   });
 
   @override
@@ -71,14 +71,14 @@ class HighchartsAnnotationsVerticalLineOptions extends HighchartsOptionsBase {
     super.toOptionsJSON(buffer);
 
 
-    if (typeOptions != null) {
-      buffer.writeAll(['"typeOptions": ', typeOptions?.toJSON(), ","], "");
-    }
     if (labelOptions != null) {
-      buffer.writeAll(['"labelOptions": ', labelOptions?.toJSON(), ","], "");
+      buffer.writeAll(['"labelOptions":', labelOptions?.toJSON(), ","], "");
     }
     if (shapeOptions != null) {
-      buffer.writeAll(['"shapeOptions": ', shapeOptions?.toJSON(), ","], "");
+      buffer.writeAll(['"shapeOptions":', shapeOptions?.toJSON(), ","], "");
+    }
+    if (typeOptions != null) {
+      buffer.writeAll(['"typeOptions":', typeOptions?.toJSON(), ","], "");
     }
   }
 

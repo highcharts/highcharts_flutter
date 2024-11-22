@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -69,16 +69,16 @@ class HighchartsXAxisPlotBandsEventsOptions extends HighchartsOptionsBase {
 
 
     if (click != null) {
-      buffer.writeAll(['"click": ', jsonEncode(click), ','], "");
+      buffer.writeAll(['"click":', jsonEncode(click), ','], "");
     }
     if (mousemove != null) {
-      buffer.writeAll(['"mousemove": ', jsonEncode(mousemove), ','], "");
+      buffer.writeAll(['"mousemove":', jsonEncode(mousemove), ','], "");
     }
     if (mouseout != null) {
-      buffer.writeAll(['"mouseout": ', jsonEncode(mouseout), ','], "");
+      buffer.writeAll(['"mouseout":', jsonEncode(mouseout), ','], "");
     }
     if (mouseover != null) {
-      buffer.writeAll(['"mouseover": ', jsonEncode(mouseover), ','], "");
+      buffer.writeAll(['"mouseover":', jsonEncode(mouseover), ','], "");
     }
   }
 

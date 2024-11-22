@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -82,37 +82,37 @@ class HighchartsNavigatorSeriesDataGroupingOptions extends HighchartsOptionsBase
 
 
     if (anchor != null) {
-      buffer.writeAll(['"anchor": ', jsonEncode(anchor), ','], "");
+      buffer.writeAll(['"anchor":', jsonEncode(anchor), ','], "");
     }
     if (approximation != null) {
-      buffer.writeAll(['"approximation": ', jsonEncode(approximation), ','], "");
+      buffer.writeAll(['"approximation":', jsonEncode(approximation), ','], "");
     }
     if (enabled != null) {
-      buffer.writeAll(['"enabled": ', enabled, ','], "");
+      buffer.writeAll(['"enabled":', enabled, ','], "");
     }
     if (firstAnchor != null) {
-      buffer.writeAll(['"firstAnchor": ', jsonEncode(firstAnchor), ','], "");
+      buffer.writeAll(['"firstAnchor":', jsonEncode(firstAnchor), ','], "");
     }
     if (groupPixelWidth != null) {
-      buffer.writeAll(['"groupPixelWidth": ', groupPixelWidth, ','], "");
+      buffer.writeAll(['"groupPixelWidth":', groupPixelWidth, ','], "");
     }
     if (lastAnchor != null) {
-      buffer.writeAll(['"lastAnchor": ', jsonEncode(lastAnchor), ','], "");
+      buffer.writeAll(['"lastAnchor":', jsonEncode(lastAnchor), ','], "");
     }
     if (dateTimeLabelFormats != null) {
-      buffer.writeAll(['"dateTimeLabelFormats": ', jsonEncode(dateTimeLabelFormats), ','], "");
+      buffer.writeAll(['"dateTimeLabelFormats":', jsonEncode(dateTimeLabelFormats), ','], "");
     }
     if (forced != null) {
-      buffer.writeAll(['"forced": ', forced, ','], "");
+      buffer.writeAll(['"forced":', forced, ','], "");
     }
     if (groupAll != null) {
-      buffer.writeAll(['"groupAll": ', groupAll, ','], "");
+      buffer.writeAll(['"groupAll":', groupAll, ','], "");
     }
     if (smoothed != null) {
-      buffer.writeAll(['"smoothed": ', smoothed, ','], "");
+      buffer.writeAll(['"smoothed":', smoothed, ','], "");
     }
     if (units != null) {
-      buffer.write('"units": [');
+      buffer.write('"units":[');
       for (var item in units!) {
         buffer.writeAll([item, ","], "");
       }

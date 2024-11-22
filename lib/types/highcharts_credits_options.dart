@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -56,21 +56,21 @@ class HighchartsCreditsOptions extends HighchartsOptionsBase {
 
   bool? enabled;
   String? href;
+  String? mapText;
+  String? mapTextFull;
   HighchartsCreditsPositionOptions? position;
   HighchartsCreditsStyleOptions? style;
   String? text;
-  String? mapText;
-  String? mapTextFull;
 
 
   HighchartsCreditsOptions({
     this.enabled,
     this.href,
+    this.mapText,
+    this.mapTextFull,
     this.position,
     this.style,
-    this.text,
-    this.mapText,
-    this.mapTextFull
+    this.text
   });
 
   @override
@@ -79,25 +79,25 @@ class HighchartsCreditsOptions extends HighchartsOptionsBase {
 
 
     if (enabled != null) {
-      buffer.writeAll(['"enabled": ', enabled, ','], "");
+      buffer.writeAll(['"enabled":', enabled, ','], "");
     }
     if (href != null) {
-      buffer.writeAll(['"href": ', jsonEncode(href), ','], "");
-    }
-    if (position != null) {
-      buffer.writeAll(['"position": ', position?.toJSON(), ","], "");
-    }
-    if (style != null) {
-      buffer.writeAll(['"style": ', style?.toJSON(), ","], "");
-    }
-    if (text != null) {
-      buffer.writeAll(['"text": ', jsonEncode(text), ','], "");
+      buffer.writeAll(['"href":', jsonEncode(href), ','], "");
     }
     if (mapText != null) {
-      buffer.writeAll(['"mapText": ', jsonEncode(mapText), ','], "");
+      buffer.writeAll(['"mapText":', jsonEncode(mapText), ','], "");
     }
     if (mapTextFull != null) {
-      buffer.writeAll(['"mapTextFull": ', jsonEncode(mapTextFull), ','], "");
+      buffer.writeAll(['"mapTextFull":', jsonEncode(mapTextFull), ','], "");
+    }
+    if (position != null) {
+      buffer.writeAll(['"position":', position?.toJSON(), ","], "");
+    }
+    if (style != null) {
+      buffer.writeAll(['"style":', style?.toJSON(), ","], "");
+    }
+    if (text != null) {
+      buffer.writeAll(['"text":', jsonEncode(text), ','], "");
     }
   }
 

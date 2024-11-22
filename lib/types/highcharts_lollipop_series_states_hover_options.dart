@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -77,25 +77,25 @@ class HighchartsLollipopSeriesStatesHoverOptions extends HighchartsOptionsBase {
 
 
     if (connectorWidthPlus != null) {
-      buffer.writeAll(['"connectorWidthPlus": ', connectorWidthPlus, ','], "");
+      buffer.writeAll(['"connectorWidthPlus":', connectorWidthPlus, ','], "");
     }
     if (animation != null) {
-      buffer.writeAll(['"animation": ', animation?.toJSON(), ","], "");
+      buffer.writeAll(['"animation":', animation?.toJSON(), ","], "");
     }
     if (enabled != null) {
-      buffer.writeAll(['"enabled": ', enabled, ','], "");
+      buffer.writeAll(['"enabled":', enabled, ','], "");
     }
     if (halo != null) {
-      buffer.writeAll(['"halo": ', halo?.toJSON(), ","], "");
+      buffer.writeAll(['"halo":', halo?.toJSON(), ","], "");
     }
     if (lineWidth != null) {
-      buffer.writeAll(['"lineWidth": ', lineWidth, ','], "");
+      buffer.writeAll(['"lineWidth":', lineWidth, ','], "");
     }
     if (lineWidthPlus != null) {
-      buffer.writeAll(['"lineWidthPlus": ', lineWidthPlus, ','], "");
+      buffer.writeAll(['"lineWidthPlus":', lineWidthPlus, ','], "");
     }
     if (marker != null) {
-      buffer.writeAll(['"marker": ', marker?.toJSON(), ","], "");
+      buffer.writeAll(['"marker":', marker?.toJSON(), ","], "");
     }
   }
 

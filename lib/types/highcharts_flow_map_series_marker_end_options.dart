@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -70,16 +70,16 @@ class HighchartsFlowMapSeriesMarkerEndOptions extends HighchartsOptionsBase {
 
 
     if (enabled != null) {
-      buffer.writeAll(['"enabled": ', enabled, ','], "");
+      buffer.writeAll(['"enabled":', enabled, ','], "");
     }
     if (height != null) {
-      buffer.writeAll(['"height": ', jsonEncode(height), ','], "");
+      buffer.writeAll(['"height":', jsonEncode(height), ','], "");
     }
     if (markerType != null) {
-      buffer.writeAll(['"markerType": ', jsonEncode(markerType), ','], "");
+      buffer.writeAll(['"markerType":', jsonEncode(markerType), ','], "");
     }
     if (width != null) {
-      buffer.writeAll(['"width": ', jsonEncode(width), ','], "");
+      buffer.writeAll(['"width":', jsonEncode(width), ','], "");
     }
   }
 

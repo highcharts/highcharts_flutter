@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -105,19 +105,19 @@ class HighchartsTimeOptions extends HighchartsOptionsBase {
 
 
     if (date != null) {
-      buffer.writeAll(['"Date": ', jsonEncode(date), ','], "");
+      buffer.writeAll(['"Date":', jsonEncode(date), ','], "");
     }
     if (getTimezoneOffset != null) {
-      buffer.writeAll(['"getTimezoneOffset": ', jsonEncode(getTimezoneOffset), ','], "");
+      buffer.writeAll(['"getTimezoneOffset":', jsonEncode(getTimezoneOffset), ','], "");
     }
     if (timezone != null) {
-      buffer.writeAll(['"timezone": ', jsonEncode(timezone), ','], "");
+      buffer.writeAll(['"timezone":', jsonEncode(timezone), ','], "");
     }
     if (timezoneOffset != null) {
-      buffer.writeAll(['"timezoneOffset": ', timezoneOffset, ','], "");
+      buffer.writeAll(['"timezoneOffset":', timezoneOffset, ','], "");
     }
     if (useUTC != null) {
-      buffer.writeAll(['"useUTC": ', useUTC, ','], "");
+      buffer.writeAll(['"useUTC":', useUTC, ','], "");
     }
   }
 

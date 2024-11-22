@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -66,13 +66,13 @@ class HighchartsWordcloudSeriesRotationOptions extends HighchartsOptionsBase {
 
 
     if (from != null) {
-      buffer.writeAll(['"from": ', from, ','], "");
+      buffer.writeAll(['"from":', from, ','], "");
     }
     if (orientations != null) {
-      buffer.writeAll(['"orientations": ', orientations, ','], "");
+      buffer.writeAll(['"orientations":', orientations, ','], "");
     }
     if (to != null) {
-      buffer.writeAll(['"to": ', to, ','], "");
+      buffer.writeAll(['"to":', to, ','], "");
     }
   }
 

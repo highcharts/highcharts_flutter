@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -68,16 +68,16 @@ class HighchartsNavigationEventsOptions extends HighchartsOptionsBase {
 
 
     if (closePopup != null) {
-      buffer.writeAll(['"closePopup": ', jsonEncode(closePopup), ','], "");
+      buffer.writeAll(['"closePopup":', jsonEncode(closePopup), ','], "");
     }
     if (deselectButton != null) {
-      buffer.writeAll(['"deselectButton": ', jsonEncode(deselectButton), ','], "");
+      buffer.writeAll(['"deselectButton":', jsonEncode(deselectButton), ','], "");
     }
     if (selectButton != null) {
-      buffer.writeAll(['"selectButton": ', jsonEncode(selectButton), ','], "");
+      buffer.writeAll(['"selectButton":', jsonEncode(selectButton), ','], "");
     }
     if (showPopup != null) {
-      buffer.writeAll(['"showPopup": ', jsonEncode(showPopup), ','], "");
+      buffer.writeAll(['"showPopup":', jsonEncode(showPopup), ','], "");
     }
   }
 

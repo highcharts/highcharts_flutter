@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -126,107 +126,107 @@ class HighchartsDataOptions extends HighchartsOptionsBase {
 
 
     if (beforeParse != null) {
-      buffer.writeAll(['"beforeParse": ', jsonEncode(beforeParse), ','], "");
+      buffer.writeAll(['"beforeParse":', jsonEncode(beforeParse), ','], "");
     }
     if (columnTypes != null) {
-      buffer.write('"columnTypes": [');
+      buffer.write('"columnTypes":[');
       for (var item in columnTypes!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (columns != null) {
-      buffer.write('"columns": [');
+      buffer.write('"columns":[');
       for (var item in columns!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (columnsURL != null) {
-      buffer.writeAll(['"columnsURL": ', jsonEncode(columnsURL), ','], "");
+      buffer.writeAll(['"columnsURL":', jsonEncode(columnsURL), ','], "");
     }
     if (complete != null) {
-      buffer.writeAll(['"complete": ', jsonEncode(complete), ','], "");
+      buffer.writeAll(['"complete":', jsonEncode(complete), ','], "");
     }
     if (csv != null) {
-      buffer.writeAll(['"csv": ', jsonEncode(csv), ','], "");
+      buffer.writeAll(['"csv":', jsonEncode(csv), ','], "");
     }
     if (csvURL != null) {
-      buffer.writeAll(['"csvURL": ', jsonEncode(csvURL), ','], "");
+      buffer.writeAll(['"csvURL":', jsonEncode(csvURL), ','], "");
     }
     if (dataRefreshRate != null) {
-      buffer.writeAll(['"dataRefreshRate": ', dataRefreshRate, ','], "");
+      buffer.writeAll(['"dataRefreshRate":', dataRefreshRate, ','], "");
     }
     if (dateFormat != null) {
-      buffer.writeAll(['"dateFormat": ', jsonEncode(dateFormat), ','], "");
+      buffer.writeAll(['"dateFormat":', jsonEncode(dateFormat), ','], "");
     }
     if (decimalPoint != null) {
-      buffer.writeAll(['"decimalPoint": ', jsonEncode(decimalPoint), ','], "");
+      buffer.writeAll(['"decimalPoint":', jsonEncode(decimalPoint), ','], "");
     }
     if (enablePolling != null) {
-      buffer.writeAll(['"enablePolling": ', enablePolling, ','], "");
+      buffer.writeAll(['"enablePolling":', enablePolling, ','], "");
     }
     if (endColumn != null) {
-      buffer.writeAll(['"endColumn": ', endColumn, ','], "");
+      buffer.writeAll(['"endColumn":', endColumn, ','], "");
     }
     if (endRow != null) {
-      buffer.writeAll(['"endRow": ', endRow, ','], "");
+      buffer.writeAll(['"endRow":', endRow, ','], "");
     }
     if (firstRowAsNames != null) {
-      buffer.writeAll(['"firstRowAsNames": ', firstRowAsNames, ','], "");
+      buffer.writeAll(['"firstRowAsNames":', firstRowAsNames, ','], "");
     }
     if (googleAPIKey != null) {
-      buffer.writeAll(['"googleAPIKey": ', jsonEncode(googleAPIKey), ','], "");
+      buffer.writeAll(['"googleAPIKey":', jsonEncode(googleAPIKey), ','], "");
     }
     if (googleSpreadsheetKey != null) {
-      buffer.writeAll(['"googleSpreadsheetKey": ', jsonEncode(googleSpreadsheetKey), ','], "");
+      buffer.writeAll(['"googleSpreadsheetKey":', jsonEncode(googleSpreadsheetKey), ','], "");
     }
     if (googleSpreadsheetRange != null) {
-      buffer.writeAll(['"googleSpreadsheetRange": ', jsonEncode(googleSpreadsheetRange), ','], "");
+      buffer.writeAll(['"googleSpreadsheetRange":', jsonEncode(googleSpreadsheetRange), ','], "");
     }
     if (googleSpreadsheetWorksheet != null) {
-      buffer.writeAll(['"googleSpreadsheetWorksheet": ', jsonEncode(googleSpreadsheetWorksheet), ','], "");
+      buffer.writeAll(['"googleSpreadsheetWorksheet":', jsonEncode(googleSpreadsheetWorksheet), ','], "");
     }
     if (itemDelimiter != null) {
-      buffer.writeAll(['"itemDelimiter": ', jsonEncode(itemDelimiter), ','], "");
+      buffer.writeAll(['"itemDelimiter":', jsonEncode(itemDelimiter), ','], "");
     }
     if (lineDelimiter != null) {
-      buffer.writeAll(['"lineDelimiter": ', jsonEncode(lineDelimiter), ','], "");
+      buffer.writeAll(['"lineDelimiter":', jsonEncode(lineDelimiter), ','], "");
     }
     if (parseDate != null) {
-      buffer.writeAll(['"parseDate": ', jsonEncode(parseDate), ','], "");
+      buffer.writeAll(['"parseDate":', jsonEncode(parseDate), ','], "");
     }
     if (parsed != null) {
-      buffer.writeAll(['"parsed": ', jsonEncode(parsed), ','], "");
+      buffer.writeAll(['"parsed":', jsonEncode(parsed), ','], "");
     }
     if (rows != null) {
-      buffer.write('"rows": [');
+      buffer.write('"rows":[');
       for (var item in rows!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (rowsURL != null) {
-      buffer.writeAll(['"rowsURL": ', jsonEncode(rowsURL), ','], "");
+      buffer.writeAll(['"rowsURL":', jsonEncode(rowsURL), ','], "");
     }
     if (seriesMapping != null) {
-      buffer.write('"seriesMapping": [');
+      buffer.write('"seriesMapping":[');
       for (var item in seriesMapping!) {
         buffer.writeAll([jsonEncode(item), ","], "");
       }
       buffer.write("],");
     }
     if (startColumn != null) {
-      buffer.writeAll(['"startColumn": ', startColumn, ','], "");
+      buffer.writeAll(['"startColumn":', startColumn, ','], "");
     }
     if (startRow != null) {
-      buffer.writeAll(['"startRow": ', startRow, ','], "");
+      buffer.writeAll(['"startRow":', startRow, ','], "");
     }
     if (switchRowsAndColumns != null) {
-      buffer.writeAll(['"switchRowsAndColumns": ', switchRowsAndColumns, ','], "");
+      buffer.writeAll(['"switchRowsAndColumns":', switchRowsAndColumns, ','], "");
     }
     if (table != null) {
-      buffer.writeAll(['"table": ', jsonEncode(table), ','], "");
+      buffer.writeAll(['"table":', jsonEncode(table), ','], "");
     }
   }
 

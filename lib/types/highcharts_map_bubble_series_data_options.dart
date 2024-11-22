@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -26,8 +26,8 @@
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-import 'highcharts_map_bubble_series_data_geometry_options.dart';
 import 'highcharts_map_bubble_series_data_events_options.dart';
+import 'highcharts_map_bubble_series_data_geometry_options.dart';
 
 
 /* *
@@ -37,8 +37,8 @@ import 'highcharts_map_bubble_series_data_events_options.dart';
  * */
 
 
-export 'highcharts_map_bubble_series_data_geometry_options.dart';
 export 'highcharts_map_bubble_series_data_events_options.dart';
+export 'highcharts_map_bubble_series_data_geometry_options.dart';
 
 
 /* *
@@ -79,23 +79,23 @@ export 'highcharts_map_bubble_series_data_events_options.dart';
  */
 class HighchartsMapBubbleSeriesDataOptions extends HighchartsOptionsBase {
 
-  double? z;
-  HighchartsMapBubbleSeriesDataGeometryOptions? geometry;
   String? color;
   dynamic dataLabels;
   String? drilldown;
   HighchartsMapBubbleSeriesDataEventsOptions? events;
+  HighchartsMapBubbleSeriesDataGeometryOptions? geometry;
   String? id;
+  double? z;
 
 
   HighchartsMapBubbleSeriesDataOptions({
-    this.z,
-    this.geometry,
     this.color,
     this.dataLabels,
     this.drilldown,
     this.events,
-    this.id
+    this.geometry,
+    this.id,
+    this.z
   });
 
   @override
@@ -103,26 +103,26 @@ class HighchartsMapBubbleSeriesDataOptions extends HighchartsOptionsBase {
     super.toOptionsJSON(buffer);
 
 
-    if (z != null) {
-      buffer.writeAll(['"z": ', z, ','], "");
-    }
-    if (geometry != null) {
-      buffer.writeAll(['"geometry": ', geometry?.toJSON(), ","], "");
-    }
     if (color != null) {
-      buffer.writeAll(['"color": ', jsonEncode(color), ','], "");
+      buffer.writeAll(['"color":', jsonEncode(color), ','], "");
     }
     if (dataLabels != null) {
-      buffer.writeAll(['"dataLabels": ', jsonEncode(dataLabels), ','], "");
+      buffer.writeAll(['"dataLabels":', jsonEncode(dataLabels), ','], "");
     }
     if (drilldown != null) {
-      buffer.writeAll(['"drilldown": ', jsonEncode(drilldown), ','], "");
+      buffer.writeAll(['"drilldown":', jsonEncode(drilldown), ','], "");
     }
     if (events != null) {
-      buffer.writeAll(['"events": ', events?.toJSON(), ","], "");
+      buffer.writeAll(['"events":', events?.toJSON(), ","], "");
+    }
+    if (geometry != null) {
+      buffer.writeAll(['"geometry":', geometry?.toJSON(), ","], "");
     }
     if (id != null) {
-      buffer.writeAll(['"id": ', jsonEncode(id), ','], "");
+      buffer.writeAll(['"id":', jsonEncode(id), ','], "");
+    }
+    if (z != null) {
+      buffer.writeAll(['"z":', z, ','], "");
     }
   }
 

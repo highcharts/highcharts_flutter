@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -83,31 +83,31 @@ class HighchartsMapNavigationOptions extends HighchartsOptionsBase {
 
 
     if (buttonOptions != null) {
-      buffer.writeAll(['"buttonOptions": ', buttonOptions?.toJSON(), ","], "");
+      buffer.writeAll(['"buttonOptions":', buttonOptions?.toJSON(), ","], "");
     }
     if (buttons != null) {
-      buffer.writeAll(['"buttons": ', buttons?.toJSON(), ","], "");
+      buffer.writeAll(['"buttons":', buttons?.toJSON(), ","], "");
     }
     if (enableButtons != null) {
-      buffer.writeAll(['"enableButtons": ', enableButtons, ','], "");
+      buffer.writeAll(['"enableButtons":', enableButtons, ','], "");
     }
     if (enableDoubleClickZoom != null) {
-      buffer.writeAll(['"enableDoubleClickZoom": ', enableDoubleClickZoom, ','], "");
+      buffer.writeAll(['"enableDoubleClickZoom":', enableDoubleClickZoom, ','], "");
     }
     if (enableDoubleClickZoomTo != null) {
-      buffer.writeAll(['"enableDoubleClickZoomTo": ', enableDoubleClickZoomTo, ','], "");
+      buffer.writeAll(['"enableDoubleClickZoomTo":', enableDoubleClickZoomTo, ','], "");
     }
     if (enableMouseWheelZoom != null) {
-      buffer.writeAll(['"enableMouseWheelZoom": ', enableMouseWheelZoom, ','], "");
+      buffer.writeAll(['"enableMouseWheelZoom":', enableMouseWheelZoom, ','], "");
     }
     if (enableTouchZoom != null) {
-      buffer.writeAll(['"enableTouchZoom": ', enableTouchZoom, ','], "");
+      buffer.writeAll(['"enableTouchZoom":', enableTouchZoom, ','], "");
     }
     if (enabled != null) {
-      buffer.writeAll(['"enabled": ', enabled, ','], "");
+      buffer.writeAll(['"enabled":', enabled, ','], "");
     }
     if (mouseWheelSensitivity != null) {
-      buffer.writeAll(['"mouseWheelSensitivity": ', mouseWheelSensitivity, ','], "");
+      buffer.writeAll(['"mouseWheelSensitivity":', mouseWheelSensitivity, ','], "");
     }
   }
 

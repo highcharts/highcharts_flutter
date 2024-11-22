@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -26,8 +26,8 @@
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-import 'highcharts_area_range_series_data_data_labels_options.dart';
 import 'highcharts_area_range_series_data_accessibility_options.dart';
+import 'highcharts_area_range_series_data_data_labels_options.dart';
 import 'highcharts_area_range_series_data_drag_drop_options.dart';
 import 'highcharts_area_range_series_data_events_options.dart';
 
@@ -39,8 +39,8 @@ import 'highcharts_area_range_series_data_events_options.dart';
  * */
 
 
-export 'highcharts_area_range_series_data_data_labels_options.dart';
 export 'highcharts_area_range_series_data_accessibility_options.dart';
+export 'highcharts_area_range_series_data_data_labels_options.dart';
 export 'highcharts_area_range_series_data_drag_drop_options.dart';
 export 'highcharts_area_range_series_data_events_options.dart';
 
@@ -94,39 +94,39 @@ export 'highcharts_area_range_series_data_events_options.dart';
  */
 class HighchartsAreaRangeSeriesDataOptions extends HighchartsOptionsBase {
 
-  HighchartsAreaRangeSeriesDataDataLabelsOptions? dataLabels;
-  double? high;
-  double? low;
   HighchartsAreaRangeSeriesDataAccessibilityOptions? accessibility;
   String? className;
   String? color;
   double? colorIndex;
   Map<String, dynamic>? custom;
+  HighchartsAreaRangeSeriesDataDataLabelsOptions? dataLabels;
   String? description;
   HighchartsAreaRangeSeriesDataDragDropOptions? dragDrop;
   String? drilldown;
   HighchartsAreaRangeSeriesDataEventsOptions? events;
+  double? high;
   String? id;
   double? labelrank;
+  double? low;
   bool? selected;
   double? x;
 
 
   HighchartsAreaRangeSeriesDataOptions({
-    this.dataLabels,
-    this.high,
-    this.low,
     this.accessibility,
     this.className,
     this.color,
     this.colorIndex,
     this.custom,
+    this.dataLabels,
     this.description,
     this.dragDrop,
     this.drilldown,
     this.events,
+    this.high,
     this.id,
     this.labelrank,
+    this.low,
     this.selected,
     this.x
   });
@@ -136,57 +136,57 @@ class HighchartsAreaRangeSeriesDataOptions extends HighchartsOptionsBase {
     super.toOptionsJSON(buffer);
 
 
-    if (dataLabels != null) {
-      buffer.writeAll(['"dataLabels": ', dataLabels?.toJSON(), ","], "");
-    }
-    if (high != null) {
-      buffer.writeAll(['"high": ', high, ','], "");
-    }
-    if (low != null) {
-      buffer.writeAll(['"low": ', low, ','], "");
-    }
     if (accessibility != null) {
-      buffer.writeAll(['"accessibility": ', accessibility?.toJSON(), ","], "");
+      buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ","], "");
     }
     if (className != null) {
-      buffer.writeAll(['"className": ', jsonEncode(className), ','], "");
+      buffer.writeAll(['"className":', jsonEncode(className), ','], "");
     }
     if (color != null) {
-      buffer.writeAll(['"color": ', jsonEncode(color), ','], "");
+      buffer.writeAll(['"color":', jsonEncode(color), ','], "");
     }
     if (colorIndex != null) {
-      buffer.writeAll(['"colorIndex": ', colorIndex, ','], "");
+      buffer.writeAll(['"colorIndex":', colorIndex, ','], "");
     }
     if (custom != null) {
       buffer.write("{");
       for (var item in custom!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
+    if (dataLabels != null) {
+      buffer.writeAll(['"dataLabels":', dataLabels?.toJSON(), ","], "");
+    }
     if (description != null) {
-      buffer.writeAll(['"description": ', jsonEncode(description), ','], "");
+      buffer.writeAll(['"description":', jsonEncode(description), ','], "");
     }
     if (dragDrop != null) {
-      buffer.writeAll(['"dragDrop": ', dragDrop?.toJSON(), ","], "");
+      buffer.writeAll(['"dragDrop":', dragDrop?.toJSON(), ","], "");
     }
     if (drilldown != null) {
-      buffer.writeAll(['"drilldown": ', jsonEncode(drilldown), ','], "");
+      buffer.writeAll(['"drilldown":', jsonEncode(drilldown), ','], "");
     }
     if (events != null) {
-      buffer.writeAll(['"events": ', events?.toJSON(), ","], "");
+      buffer.writeAll(['"events":', events?.toJSON(), ","], "");
+    }
+    if (high != null) {
+      buffer.writeAll(['"high":', high, ','], "");
     }
     if (id != null) {
-      buffer.writeAll(['"id": ', jsonEncode(id), ','], "");
+      buffer.writeAll(['"id":', jsonEncode(id), ','], "");
     }
     if (labelrank != null) {
-      buffer.writeAll(['"labelrank": ', labelrank, ','], "");
+      buffer.writeAll(['"labelrank":', labelrank, ','], "");
+    }
+    if (low != null) {
+      buffer.writeAll(['"low":', low, ','], "");
     }
     if (selected != null) {
-      buffer.writeAll(['"selected": ', selected, ','], "");
+      buffer.writeAll(['"selected":', selected, ','], "");
     }
     if (x != null) {
-      buffer.writeAll(['"x": ', x, ','], "");
+      buffer.writeAll(['"x":', x, ','], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -67,19 +67,19 @@ class HighchartsMapSeriesDataLabelsOptions extends HighchartsOptionsBase {
 
 
     if (crop != null) {
-      buffer.writeAll(['"crop": ', crop, ','], "");
+      buffer.writeAll(['"crop":', crop, ','], "");
     }
     if (inside != null) {
-      buffer.writeAll(['"inside": ', inside, ','], "");
+      buffer.writeAll(['"inside":', inside, ','], "");
     }
     if (overflow != null) {
-      buffer.writeAll(['"overflow": ', overflow, ','], "");
+      buffer.writeAll(['"overflow":', overflow, ','], "");
     }
     if (padding != null) {
-      buffer.writeAll(['"padding": ', padding, ','], "");
+      buffer.writeAll(['"padding":', padding, ','], "");
     }
     if (verticalAlign != null) {
-      buffer.writeAll(['"verticalAlign": ', jsonEncode(verticalAlign), ','], "");
+      buffer.writeAll(['"verticalAlign":', jsonEncode(verticalAlign), ','], "");
     }
   }
 

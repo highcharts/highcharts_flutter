@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -70,19 +70,19 @@ class HighchartsTiledWebMapSeriesProviderOptions extends HighchartsOptionsBase {
 
 
     if (apiKey != null) {
-      buffer.writeAll(['"apiKey": ', jsonEncode(apiKey), ','], "");
+      buffer.writeAll(['"apiKey":', jsonEncode(apiKey), ','], "");
     }
     if (subdomain != null) {
-      buffer.writeAll(['"subdomain": ', jsonEncode(subdomain), ','], "");
+      buffer.writeAll(['"subdomain":', jsonEncode(subdomain), ','], "");
     }
     if (theme != null) {
-      buffer.writeAll(['"theme": ', jsonEncode(theme), ','], "");
+      buffer.writeAll(['"theme":', jsonEncode(theme), ','], "");
     }
     if (type != null) {
-      buffer.writeAll(['"type": ', jsonEncode(type), ','], "");
+      buffer.writeAll(['"type":', jsonEncode(type), ','], "");
     }
     if (url != null) {
-      buffer.writeAll(['"url": ', jsonEncode(url), ','], "");
+      buffer.writeAll(['"url":', jsonEncode(url), ','], "");
     }
   }
 

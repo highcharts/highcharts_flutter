@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -59,7 +59,7 @@ class HighchartsGanttSeriesConnectorsAnimationOptions extends HighchartsOptionsB
 
 
     if (reversed != null) {
-      buffer.writeAll(['"reversed": ', reversed, ','], "");
+      buffer.writeAll(['"reversed":', reversed, ','], "");
     }
   }
 

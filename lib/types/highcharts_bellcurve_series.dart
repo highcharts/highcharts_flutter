@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -23,7 +23,7 @@
  *
  * */
 
-
+import 'dart:convert';
 import 'highcharts_series.dart';
 import 'highcharts_bellcurve_series_options.dart';
 
@@ -95,27 +95,24 @@ export 'highcharts_bellcurve_series_options.dart';
  */
 class HighchartsBellcurveSeries extends HighchartsSeries {
 
+  List<List<dynamic>>? data;
   String? name;
   HighchartsBellcurveSeriesOptions? options;
   List<dynamic>? points;
-  List<List<dynamic>>? data;
+  static const _type = "bellcurve";
 
   HighchartsBellcurveSeries({
+    this.data,
     this.name,
     this.options,
     this.points,
-    this.data
   });
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-    if (name != null) {
-      buffer.writeAll(['"name": "', name!, '",'], '');
-    }
-
-    buffer.write('"type": "bellcurve",');
+    buffer.writeAll(['"type": "', _type, '",'], '');
 
     if (data != null && points == null) {
       // Serialize as a 2d array
@@ -140,7 +137,7 @@ class HighchartsBellcurveSeries extends HighchartsSeries {
         }
       }
 
-      buffer.writeAll(['"data": [', seriesData, '],'], '');
+      buffer.writeAll(['"data":[', seriesData, '],'], '');
 
     } else if (points != null) {
       // Go through the points and write them
@@ -148,13 +145,20 @@ class HighchartsBellcurveSeries extends HighchartsSeries {
 
       for (var point in points!) {
         seriesData.writeAll(['{'], '');
-        point.toJSONInner(seriesData); 
+        point.toOptionsJSON(seriesData); 
         seriesData.writeAll(['},'], '');
       }
 
       buffer.writeAll(['"data": [', seriesData, '],'], '');
     }
 
+    if (options != null) {
+      options!.toOptionsJSON(buffer);
+    }
+
+    if (name != null) {
+      buffer.writeAll(['"name":', jsonEncode(name), ','], "");
+    }
   }
 
 }

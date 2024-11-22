@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -70,13 +70,13 @@ class HighchartsChartZoomingMouseWheelOptions extends HighchartsOptionsBase {
 
 
     if (enabled != null) {
-      buffer.writeAll(['"enabled": ', enabled, ','], "");
+      buffer.writeAll(['"enabled":', enabled, ','], "");
     }
     if (sensitivity != null) {
-      buffer.writeAll(['"sensitivity": ', sensitivity, ','], "");
+      buffer.writeAll(['"sensitivity":', sensitivity, ','], "");
     }
     if (type != null) {
-      buffer.writeAll(['"type": ', jsonEncode(type), ','], "");
+      buffer.writeAll(['"type":', jsonEncode(type), ','], "");
     }
   }
 

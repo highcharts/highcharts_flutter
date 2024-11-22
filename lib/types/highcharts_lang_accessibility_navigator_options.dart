@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -66,13 +66,13 @@ class HighchartsLangAccessibilityNavigatorOptions extends HighchartsOptionsBase 
 
 
     if (changeAnnouncement != null) {
-      buffer.writeAll(['"changeAnnouncement": ', jsonEncode(changeAnnouncement), ','], "");
+      buffer.writeAll(['"changeAnnouncement":', jsonEncode(changeAnnouncement), ','], "");
     }
     if (groupLabel != null) {
-      buffer.writeAll(['"groupLabel": ', jsonEncode(groupLabel), ','], "");
+      buffer.writeAll(['"groupLabel":', jsonEncode(groupLabel), ','], "");
     }
     if (handleLabel != null) {
-      buffer.writeAll(['"handleLabel": ', jsonEncode(handleLabel), ','], "");
+      buffer.writeAll(['"handleLabel":', jsonEncode(handleLabel), ','], "");
     }
   }
 

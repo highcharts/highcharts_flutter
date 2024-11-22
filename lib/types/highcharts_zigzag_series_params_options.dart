@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -63,13 +63,13 @@ class HighchartsZigzagSeriesParamsOptions extends HighchartsOptionsBase {
 
 
     if (deviation != null) {
-      buffer.writeAll(['"deviation": ', deviation, ','], "");
+      buffer.writeAll(['"deviation":', deviation, ','], "");
     }
     if (highIndex != null) {
-      buffer.writeAll(['"highIndex": ', highIndex, ','], "");
+      buffer.writeAll(['"highIndex":', highIndex, ','], "");
     }
     if (lowIndex != null) {
-      buffer.writeAll(['"lowIndex": ', lowIndex, ','], "");
+      buffer.writeAll(['"lowIndex":', lowIndex, ','], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -68,16 +68,16 @@ class HighchartsLangAccessibilityScreenReaderSectionAnnotationsOptions extends H
 
 
     if (descriptionMultiplePoints != null) {
-      buffer.writeAll(['"descriptionMultiplePoints": ', jsonEncode(descriptionMultiplePoints), ','], "");
+      buffer.writeAll(['"descriptionMultiplePoints":', jsonEncode(descriptionMultiplePoints), ','], "");
     }
     if (descriptionNoPoints != null) {
-      buffer.writeAll(['"descriptionNoPoints": ', jsonEncode(descriptionNoPoints), ','], "");
+      buffer.writeAll(['"descriptionNoPoints":', jsonEncode(descriptionNoPoints), ','], "");
     }
     if (descriptionSinglePoint != null) {
-      buffer.writeAll(['"descriptionSinglePoint": ', jsonEncode(descriptionSinglePoint), ','], "");
+      buffer.writeAll(['"descriptionSinglePoint":', jsonEncode(descriptionSinglePoint), ','], "");
     }
     if (heading != null) {
-      buffer.writeAll(['"heading": ', jsonEncode(heading), ','], "");
+      buffer.writeAll(['"heading":', jsonEncode(heading), ','], "");
     }
   }
 

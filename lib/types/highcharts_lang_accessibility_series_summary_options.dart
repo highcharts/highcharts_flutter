@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -122,76 +122,76 @@ class HighchartsLangAccessibilitySeriesSummaryOptions extends HighchartsOptionsB
 
 
     if (bar != null) {
-      buffer.writeAll(['"bar": ', jsonEncode(bar), ','], "");
+      buffer.writeAll(['"bar":', jsonEncode(bar), ','], "");
     }
     if (barCombination != null) {
-      buffer.writeAll(['"barCombination": ', jsonEncode(barCombination), ','], "");
+      buffer.writeAll(['"barCombination":', jsonEncode(barCombination), ','], "");
     }
     if (boxplot != null) {
-      buffer.writeAll(['"boxplot": ', jsonEncode(boxplot), ','], "");
+      buffer.writeAll(['"boxplot":', jsonEncode(boxplot), ','], "");
     }
     if (boxplotCombination != null) {
-      buffer.writeAll(['"boxplotCombination": ', jsonEncode(boxplotCombination), ','], "");
+      buffer.writeAll(['"boxplotCombination":', jsonEncode(boxplotCombination), ','], "");
     }
     if (bubble != null) {
-      buffer.writeAll(['"bubble": ', jsonEncode(bubble), ','], "");
+      buffer.writeAll(['"bubble":', jsonEncode(bubble), ','], "");
     }
     if (bubbleCombination != null) {
-      buffer.writeAll(['"bubbleCombination": ', jsonEncode(bubbleCombination), ','], "");
+      buffer.writeAll(['"bubbleCombination":', jsonEncode(bubbleCombination), ','], "");
     }
     if (column != null) {
-      buffer.writeAll(['"column": ', jsonEncode(column), ','], "");
+      buffer.writeAll(['"column":', jsonEncode(column), ','], "");
     }
     if (columnCombination != null) {
-      buffer.writeAll(['"columnCombination": ', jsonEncode(columnCombination), ','], "");
+      buffer.writeAll(['"columnCombination":', jsonEncode(columnCombination), ','], "");
     }
     if (defaultTo != null) {
-      buffer.writeAll(['"default": ', jsonEncode(defaultTo), ','], "");
+      buffer.writeAll(['"default":', jsonEncode(defaultTo), ','], "");
     }
     if (defaultCombination != null) {
-      buffer.writeAll(['"defaultCombination": ', jsonEncode(defaultCombination), ','], "");
+      buffer.writeAll(['"defaultCombination":', jsonEncode(defaultCombination), ','], "");
     }
     if (line != null) {
-      buffer.writeAll(['"line": ', jsonEncode(line), ','], "");
+      buffer.writeAll(['"line":', jsonEncode(line), ','], "");
     }
     if (lineCombination != null) {
-      buffer.writeAll(['"lineCombination": ', jsonEncode(lineCombination), ','], "");
+      buffer.writeAll(['"lineCombination":', jsonEncode(lineCombination), ','], "");
     }
     if (map != null) {
-      buffer.writeAll(['"map": ', jsonEncode(map), ','], "");
+      buffer.writeAll(['"map":', jsonEncode(map), ','], "");
     }
     if (mapCombination != null) {
-      buffer.writeAll(['"mapCombination": ', jsonEncode(mapCombination), ','], "");
+      buffer.writeAll(['"mapCombination":', jsonEncode(mapCombination), ','], "");
     }
     if (mapbubble != null) {
-      buffer.writeAll(['"mapbubble": ', jsonEncode(mapbubble), ','], "");
+      buffer.writeAll(['"mapbubble":', jsonEncode(mapbubble), ','], "");
     }
     if (mapbubbleCombination != null) {
-      buffer.writeAll(['"mapbubbleCombination": ', jsonEncode(mapbubbleCombination), ','], "");
+      buffer.writeAll(['"mapbubbleCombination":', jsonEncode(mapbubbleCombination), ','], "");
     }
     if (mapline != null) {
-      buffer.writeAll(['"mapline": ', jsonEncode(mapline), ','], "");
+      buffer.writeAll(['"mapline":', jsonEncode(mapline), ','], "");
     }
     if (maplineCombination != null) {
-      buffer.writeAll(['"maplineCombination": ', jsonEncode(maplineCombination), ','], "");
+      buffer.writeAll(['"maplineCombination":', jsonEncode(maplineCombination), ','], "");
     }
     if (pie != null) {
-      buffer.writeAll(['"pie": ', jsonEncode(pie), ','], "");
+      buffer.writeAll(['"pie":', jsonEncode(pie), ','], "");
     }
     if (pieCombination != null) {
-      buffer.writeAll(['"pieCombination": ', jsonEncode(pieCombination), ','], "");
+      buffer.writeAll(['"pieCombination":', jsonEncode(pieCombination), ','], "");
     }
     if (scatter != null) {
-      buffer.writeAll(['"scatter": ', jsonEncode(scatter), ','], "");
+      buffer.writeAll(['"scatter":', jsonEncode(scatter), ','], "");
     }
     if (scatterCombination != null) {
-      buffer.writeAll(['"scatterCombination": ', jsonEncode(scatterCombination), ','], "");
+      buffer.writeAll(['"scatterCombination":', jsonEncode(scatterCombination), ','], "");
     }
     if (spline != null) {
-      buffer.writeAll(['"spline": ', jsonEncode(spline), ','], "");
+      buffer.writeAll(['"spline":', jsonEncode(spline), ','], "");
     }
     if (splineCombination != null) {
-      buffer.writeAll(['"splineCombination": ', jsonEncode(splineCombination), ','], "");
+      buffer.writeAll(['"splineCombination":', jsonEncode(splineCombination), ','], "");
     }
   }
 

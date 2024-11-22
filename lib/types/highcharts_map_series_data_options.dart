@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -121,37 +121,37 @@ class HighchartsMapSeriesDataOptions extends HighchartsOptionsBase {
 
 
     if (color != null) {
-      buffer.writeAll(['"color": ', jsonEncode(color), ','], "");
+      buffer.writeAll(['"color":', jsonEncode(color), ','], "");
     }
     if (dataLabels != null) {
-      buffer.writeAll(['"dataLabels": ', jsonEncode(dataLabels), ','], "");
+      buffer.writeAll(['"dataLabels":', jsonEncode(dataLabels), ','], "");
     }
     if (drilldown != null) {
-      buffer.writeAll(['"drilldown": ', jsonEncode(drilldown), ','], "");
+      buffer.writeAll(['"drilldown":', jsonEncode(drilldown), ','], "");
     }
     if (events != null) {
-      buffer.writeAll(['"events": ', events?.toJSON(), ","], "");
+      buffer.writeAll(['"events":', events?.toJSON(), ","], "");
     }
     if (geometry != null) {
-      buffer.writeAll(['"geometry": ', geometry?.toJSON(), ","], "");
+      buffer.writeAll(['"geometry":', geometry?.toJSON(), ","], "");
     }
     if (id != null) {
-      buffer.writeAll(['"id": ', jsonEncode(id), ','], "");
+      buffer.writeAll(['"id":', jsonEncode(id), ','], "");
     }
     if (labelrank != null) {
-      buffer.writeAll(['"labelrank": ', labelrank, ','], "");
+      buffer.writeAll(['"labelrank":', labelrank, ','], "");
     }
     if (middleX != null) {
-      buffer.writeAll(['"middleX": ', middleX, ','], "");
+      buffer.writeAll(['"middleX":', middleX, ','], "");
     }
     if (middleY != null) {
-      buffer.writeAll(['"middleY": ', middleY, ','], "");
+      buffer.writeAll(['"middleY":', middleY, ','], "");
     }
     if (path != null) {
-      buffer.writeAll(['"path": ', jsonEncode(path), ','], "");
+      buffer.writeAll(['"path":', jsonEncode(path), ','], "");
     }
     if (value != null) {
-      buffer.writeAll(['"value": ', value, ','], "");
+      buffer.writeAll(['"value":', value, ','], "");
     }
   }
 

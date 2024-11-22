@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -100,43 +100,43 @@ class HighchartsAccessibilityOptions extends HighchartsOptionsBase {
 
 
     if (announceNewData != null) {
-      buffer.writeAll(['"announceNewData": ', announceNewData?.toJSON(), ","], "");
+      buffer.writeAll(['"announceNewData":', announceNewData?.toJSON(), ","], "");
     }
     if (customComponents != null) {
-      buffer.writeAll(['"customComponents": ', jsonEncode(customComponents), ','], "");
+      buffer.writeAll(['"customComponents":', jsonEncode(customComponents), ','], "");
     }
     if (description != null) {
-      buffer.writeAll(['"description": ', jsonEncode(description), ','], "");
+      buffer.writeAll(['"description":', jsonEncode(description), ','], "");
     }
     if (enabled != null) {
-      buffer.writeAll(['"enabled": ', enabled, ','], "");
+      buffer.writeAll(['"enabled":', enabled, ','], "");
     }
     if (highContrastMode != null) {
-      buffer.writeAll(['"highContrastMode": ', jsonEncode(highContrastMode), ','], "");
+      buffer.writeAll(['"highContrastMode":', jsonEncode(highContrastMode), ','], "");
     }
     if (highContrastTheme != null) {
-      buffer.writeAll(['"highContrastTheme": ', jsonEncode(highContrastTheme), ','], "");
+      buffer.writeAll(['"highContrastTheme":', jsonEncode(highContrastTheme), ','], "");
     }
     if (keyboardNavigation != null) {
-      buffer.writeAll(['"keyboardNavigation": ', keyboardNavigation?.toJSON(), ","], "");
+      buffer.writeAll(['"keyboardNavigation":', keyboardNavigation?.toJSON(), ","], "");
     }
     if (landmarkVerbosity != null) {
-      buffer.writeAll(['"landmarkVerbosity": ', jsonEncode(landmarkVerbosity), ','], "");
+      buffer.writeAll(['"landmarkVerbosity":', jsonEncode(landmarkVerbosity), ','], "");
     }
     if (linkedDescription != null) {
-      buffer.writeAll(['"linkedDescription": ', jsonEncode(linkedDescription), ','], "");
+      buffer.writeAll(['"linkedDescription":', jsonEncode(linkedDescription), ','], "");
     }
     if (point != null) {
-      buffer.writeAll(['"point": ', point?.toJSON(), ","], "");
+      buffer.writeAll(['"point":', point?.toJSON(), ","], "");
     }
     if (screenReaderSection != null) {
-      buffer.writeAll(['"screenReaderSection": ', screenReaderSection?.toJSON(), ","], "");
+      buffer.writeAll(['"screenReaderSection":', screenReaderSection?.toJSON(), ","], "");
     }
     if (series != null) {
-      buffer.writeAll(['"series": ', series?.toJSON(), ","], "");
+      buffer.writeAll(['"series":', series?.toJSON(), ","], "");
     }
     if (typeDescription != null) {
-      buffer.writeAll(['"typeDescription": ', jsonEncode(typeDescription), ','], "");
+      buffer.writeAll(['"typeDescription":', jsonEncode(typeDescription), ','], "");
     }
   }
 

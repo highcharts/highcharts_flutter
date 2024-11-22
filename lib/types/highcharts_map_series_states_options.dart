@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -61,7 +61,7 @@ class HighchartsMapSeriesStatesOptions extends HighchartsOptionsBase {
 
 
     if (normal != null) {
-      buffer.writeAll(['"normal": ', normal?.toJSON(), ","], "");
+      buffer.writeAll(['"normal":', normal?.toJSON(), ","], "");
     }
   }
 

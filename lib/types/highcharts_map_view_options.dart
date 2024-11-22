@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -86,32 +86,32 @@ class HighchartsMapViewOptions extends HighchartsOptionsBase {
 
 
     if (center != null) {
-      buffer.writeAll(['"center": ', jsonEncode(center), ','], "");
+      buffer.writeAll(['"center":', jsonEncode(center), ','], "");
     }
     if (fitToGeometry != null) {
-      buffer.writeAll(['"fitToGeometry": ', jsonEncode(fitToGeometry), ','], "");
+      buffer.writeAll(['"fitToGeometry":', jsonEncode(fitToGeometry), ','], "");
     }
     if (insetOptions != null) {
-      buffer.writeAll(['"insetOptions": ', insetOptions?.toJSON(), ","], "");
+      buffer.writeAll(['"insetOptions":', insetOptions?.toJSON(), ","], "");
     }
     if (insets != null) {
-      buffer.writeAll(['"insets": ', insets?.toJSON(), ","], "");
+      buffer.writeAll(['"insets":', insets?.toJSON(), ","], "");
     }
     if (maxZoom != null) {
-      buffer.writeAll(['"maxZoom": ', maxZoom, ','], "");
+      buffer.writeAll(['"maxZoom":', maxZoom, ','], "");
     }
     if (padding != null) {
-      buffer.write('"padding": [');
+      buffer.write('"padding":[');
       for (var item in padding!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (projection != null) {
-      buffer.writeAll(['"projection": ', projection?.toJSON(), ","], "");
+      buffer.writeAll(['"projection":', projection?.toJSON(), ","], "");
     }
     if (zoom != null) {
-      buffer.writeAll(['"zoom": ', zoom, ','], "");
+      buffer.writeAll(['"zoom":', zoom, ','], "");
     }
   }
 

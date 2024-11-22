@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -93,31 +93,31 @@ class HighchartsChart3DFrameOptions extends HighchartsOptionsBase {
 
 
     if (back != null) {
-      buffer.writeAll(['"back": ', back?.toJSON(), ","], "");
+      buffer.writeAll(['"back":', back?.toJSON(), ","], "");
     }
     if (bottom != null) {
-      buffer.writeAll(['"bottom": ', bottom?.toJSON(), ","], "");
+      buffer.writeAll(['"bottom":', bottom?.toJSON(), ","], "");
     }
     if (front != null) {
-      buffer.writeAll(['"front": ', front?.toJSON(), ","], "");
+      buffer.writeAll(['"front":', front?.toJSON(), ","], "");
     }
     if (left != null) {
-      buffer.writeAll(['"left": ', left?.toJSON(), ","], "");
+      buffer.writeAll(['"left":', left?.toJSON(), ","], "");
     }
     if (right != null) {
-      buffer.writeAll(['"right": ', right?.toJSON(), ","], "");
+      buffer.writeAll(['"right":', right?.toJSON(), ","], "");
     }
     if (side != null) {
-      buffer.writeAll(['"side": ', side?.toJSON(), ","], "");
+      buffer.writeAll(['"side":', side?.toJSON(), ","], "");
     }
     if (size != null) {
-      buffer.writeAll(['"size": ', size, ','], "");
+      buffer.writeAll(['"size":', size, ','], "");
     }
     if (top != null) {
-      buffer.writeAll(['"top": ', top?.toJSON(), ","], "");
+      buffer.writeAll(['"top":', top?.toJSON(), ","], "");
     }
     if (visible != null) {
-      buffer.writeAll(['"visible": ', jsonEncode(visible), ','], "");
+      buffer.writeAll(['"visible":', jsonEncode(visible), ','], "");
     }
   }
 

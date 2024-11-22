@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -46,7 +46,6 @@ import 'highcharts_options_base.dart';
 
 class HighchartsXRangeSeriesDataGroupingOptions extends HighchartsOptionsBase {
 
-  double? groupPixelWidth;
   String? anchor;
   String? approximation;
   dynamic dateTimeLabelFormats;
@@ -54,13 +53,13 @@ class HighchartsXRangeSeriesDataGroupingOptions extends HighchartsOptionsBase {
   String? firstAnchor;
   bool? forced;
   bool? groupAll;
+  double? groupPixelWidth;
   String? lastAnchor;
   bool? smoothed;
   List<List<dynamic>>? units;
 
 
   HighchartsXRangeSeriesDataGroupingOptions({
-    this.groupPixelWidth,
     this.anchor,
     this.approximation,
     this.dateTimeLabelFormats,
@@ -68,6 +67,7 @@ class HighchartsXRangeSeriesDataGroupingOptions extends HighchartsOptionsBase {
     this.firstAnchor,
     this.forced,
     this.groupAll,
+    this.groupPixelWidth,
     this.lastAnchor,
     this.smoothed,
     this.units
@@ -78,38 +78,38 @@ class HighchartsXRangeSeriesDataGroupingOptions extends HighchartsOptionsBase {
     super.toOptionsJSON(buffer);
 
 
-    if (groupPixelWidth != null) {
-      buffer.writeAll(['"groupPixelWidth": ', groupPixelWidth, ','], "");
-    }
     if (anchor != null) {
-      buffer.writeAll(['"anchor": ', jsonEncode(anchor), ','], "");
+      buffer.writeAll(['"anchor":', jsonEncode(anchor), ','], "");
     }
     if (approximation != null) {
-      buffer.writeAll(['"approximation": ', jsonEncode(approximation), ','], "");
+      buffer.writeAll(['"approximation":', jsonEncode(approximation), ','], "");
     }
     if (dateTimeLabelFormats != null) {
-      buffer.writeAll(['"dateTimeLabelFormats": ', jsonEncode(dateTimeLabelFormats), ','], "");
+      buffer.writeAll(['"dateTimeLabelFormats":', jsonEncode(dateTimeLabelFormats), ','], "");
     }
     if (enabled != null) {
-      buffer.writeAll(['"enabled": ', enabled, ','], "");
+      buffer.writeAll(['"enabled":', enabled, ','], "");
     }
     if (firstAnchor != null) {
-      buffer.writeAll(['"firstAnchor": ', jsonEncode(firstAnchor), ','], "");
+      buffer.writeAll(['"firstAnchor":', jsonEncode(firstAnchor), ','], "");
     }
     if (forced != null) {
-      buffer.writeAll(['"forced": ', forced, ','], "");
+      buffer.writeAll(['"forced":', forced, ','], "");
     }
     if (groupAll != null) {
-      buffer.writeAll(['"groupAll": ', groupAll, ','], "");
+      buffer.writeAll(['"groupAll":', groupAll, ','], "");
+    }
+    if (groupPixelWidth != null) {
+      buffer.writeAll(['"groupPixelWidth":', groupPixelWidth, ','], "");
     }
     if (lastAnchor != null) {
-      buffer.writeAll(['"lastAnchor": ', jsonEncode(lastAnchor), ','], "");
+      buffer.writeAll(['"lastAnchor":', jsonEncode(lastAnchor), ','], "");
     }
     if (smoothed != null) {
-      buffer.writeAll(['"smoothed": ', smoothed, ','], "");
+      buffer.writeAll(['"smoothed":', smoothed, ','], "");
     }
     if (units != null) {
-      buffer.write('"units": [');
+      buffer.write('"units":[');
       for (var item in units!) {
         buffer.writeAll([item, ","], "");
       }

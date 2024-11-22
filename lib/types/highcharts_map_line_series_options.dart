@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -26,8 +26,8 @@
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-import 'highcharts_map_line_series_states_options.dart';
 import 'highcharts_map_line_series_data_labels_options.dart';
+import 'highcharts_map_line_series_states_options.dart';
 import 'highcharts_map_line_series_tooltip_options.dart';
 
 
@@ -38,8 +38,8 @@ import 'highcharts_map_line_series_tooltip_options.dart';
  * */
 
 
-export 'highcharts_map_line_series_states_options.dart';
 export 'highcharts_map_line_series_data_labels_options.dart';
+export 'highcharts_map_line_series_states_options.dart';
 export 'highcharts_map_line_series_tooltip_options.dart';
 
 
@@ -95,44 +95,44 @@ export 'highcharts_map_line_series_tooltip_options.dart';
  */
 class HighchartsMapLineSeriesOptions extends HighchartsOptionsBase {
 
-  String? id;
-  double? index;
-  double? legendIndex;
-  List<dynamic>? mapData;
-  String? fillColor;
-  String? legendSymbol;
-  double? lineWidth;
-  HighchartsMapLineSeriesStatesOptions? states;
   bool? affectsMapView;
   bool? animation;
   bool? colorByPoint;
   String? colorKey;
   List<dynamic>? colors;
   HighchartsMapLineSeriesDataLabelsOptions? dataLabels;
+  String? fillColor;
+  String? id;
+  double? index;
+  double? legendIndex;
+  String? legendSymbol;
+  double? lineWidth;
   String? linecap;
+  List<dynamic>? mapData;
   String? nullColor;
   bool? nullInteraction;
+  HighchartsMapLineSeriesStatesOptions? states;
   HighchartsMapLineSeriesTooltipOptions? tooltip;
 
 
   HighchartsMapLineSeriesOptions({
-    this.id,
-    this.index,
-    this.legendIndex,
-    this.mapData,
-    this.fillColor,
-    this.legendSymbol,
-    this.lineWidth,
-    this.states,
     this.affectsMapView,
     this.animation,
     this.colorByPoint,
     this.colorKey,
     this.colors,
     this.dataLabels,
+    this.fillColor,
+    this.id,
+    this.index,
+    this.legendIndex,
+    this.legendSymbol,
+    this.lineWidth,
     this.linecap,
+    this.mapData,
     this.nullColor,
     this.nullInteraction,
+    this.states,
     this.tooltip
   });
 
@@ -141,67 +141,67 @@ class HighchartsMapLineSeriesOptions extends HighchartsOptionsBase {
     super.toOptionsJSON(buffer);
 
 
-    if (id != null) {
-      buffer.writeAll(['"id": ', jsonEncode(id), ','], "");
-    }
-    if (index != null) {
-      buffer.writeAll(['"index": ', index, ','], "");
-    }
-    if (legendIndex != null) {
-      buffer.writeAll(['"legendIndex": ', legendIndex, ','], "");
-    }
-    if (mapData != null) {
-      buffer.write('"mapData": [');
-      for (var item in mapData!) {
-        buffer.writeAll([item, ","], "");
-      }
-      buffer.write("],");
-    }
-    if (fillColor != null) {
-      buffer.writeAll(['"fillColor": ', jsonEncode(fillColor), ','], "");
-    }
-    if (legendSymbol != null) {
-      buffer.writeAll(['"legendSymbol": ', jsonEncode(legendSymbol), ','], "");
-    }
-    if (lineWidth != null) {
-      buffer.writeAll(['"lineWidth": ', lineWidth, ','], "");
-    }
-    if (states != null) {
-      buffer.writeAll(['"states": ', states?.toJSON(), ","], "");
-    }
     if (affectsMapView != null) {
-      buffer.writeAll(['"affectsMapView": ', affectsMapView, ','], "");
+      buffer.writeAll(['"affectsMapView":', affectsMapView, ','], "");
     }
     if (animation != null) {
-      buffer.writeAll(['"animation": ', animation, ','], "");
+      buffer.writeAll(['"animation":', animation, ','], "");
     }
     if (colorByPoint != null) {
-      buffer.writeAll(['"colorByPoint": ', colorByPoint, ','], "");
+      buffer.writeAll(['"colorByPoint":', colorByPoint, ','], "");
     }
     if (colorKey != null) {
-      buffer.writeAll(['"colorKey": ', jsonEncode(colorKey), ','], "");
+      buffer.writeAll(['"colorKey":', jsonEncode(colorKey), ','], "");
     }
     if (colors != null) {
-      buffer.write('"colors": [');
+      buffer.write('"colors":[');
       for (var item in colors!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (dataLabels != null) {
-      buffer.writeAll(['"dataLabels": ', dataLabels?.toJSON(), ","], "");
+      buffer.writeAll(['"dataLabels":', dataLabels?.toJSON(), ","], "");
+    }
+    if (fillColor != null) {
+      buffer.writeAll(['"fillColor":', jsonEncode(fillColor), ','], "");
+    }
+    if (id != null) {
+      buffer.writeAll(['"id":', jsonEncode(id), ','], "");
+    }
+    if (index != null) {
+      buffer.writeAll(['"index":', index, ','], "");
+    }
+    if (legendIndex != null) {
+      buffer.writeAll(['"legendIndex":', legendIndex, ','], "");
+    }
+    if (legendSymbol != null) {
+      buffer.writeAll(['"legendSymbol":', jsonEncode(legendSymbol), ','], "");
+    }
+    if (lineWidth != null) {
+      buffer.writeAll(['"lineWidth":', lineWidth, ','], "");
     }
     if (linecap != null) {
-      buffer.writeAll(['"linecap": ', jsonEncode(linecap), ','], "");
+      buffer.writeAll(['"linecap":', jsonEncode(linecap), ','], "");
+    }
+    if (mapData != null) {
+      buffer.write('"mapData":[');
+      for (var item in mapData!) {
+        buffer.writeAll([item, ","], "");
+      }
+      buffer.write("],");
     }
     if (nullColor != null) {
-      buffer.writeAll(['"nullColor": ', jsonEncode(nullColor), ','], "");
+      buffer.writeAll(['"nullColor":', jsonEncode(nullColor), ','], "");
     }
     if (nullInteraction != null) {
-      buffer.writeAll(['"nullInteraction": ', nullInteraction, ','], "");
+      buffer.writeAll(['"nullInteraction":', nullInteraction, ','], "");
+    }
+    if (states != null) {
+      buffer.writeAll(['"states":', states?.toJSON(), ","], "");
     }
     if (tooltip != null) {
-      buffer.writeAll(['"tooltip": ', tooltip?.toJSON(), ","], "");
+      buffer.writeAll(['"tooltip":', tooltip?.toJSON(), ","], "");
     }
   }
 

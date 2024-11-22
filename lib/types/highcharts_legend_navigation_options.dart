@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -76,24 +76,24 @@ class HighchartsLegendNavigationOptions extends HighchartsOptionsBase {
 
 
     if (activeColor != null) {
-      buffer.writeAll(['"activeColor": ', jsonEncode(activeColor), ','], "");
+      buffer.writeAll(['"activeColor":', jsonEncode(activeColor), ','], "");
     }
     if (animation != null) {
-      buffer.writeAll(['"animation": ', jsonEncode(animation), ','], "");
+      buffer.writeAll(['"animation":', jsonEncode(animation), ','], "");
     }
     if (arrowSize != null) {
-      buffer.writeAll(['"arrowSize": ', arrowSize, ','], "");
+      buffer.writeAll(['"arrowSize":', arrowSize, ','], "");
     }
     if (enabled != null) {
-      buffer.writeAll(['"enabled": ', enabled, ','], "");
+      buffer.writeAll(['"enabled":', enabled, ','], "");
     }
     if (inactiveColor != null) {
-      buffer.writeAll(['"inactiveColor": ', jsonEncode(inactiveColor), ','], "");
+      buffer.writeAll(['"inactiveColor":', jsonEncode(inactiveColor), ','], "");
     }
     if (style != null) {
       buffer.write("{");
       for (var item in style!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }

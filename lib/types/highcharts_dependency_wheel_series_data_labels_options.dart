@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -26,9 +26,9 @@
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-import 'highcharts_dependency_wheel_series_data_labels_text_path_options.dart';
 import 'highcharts_series_data_labels_animation_options.dart';
 import 'highcharts_series_data_labels_filter_options.dart';
+import 'highcharts_dependency_wheel_series_data_labels_text_path_options.dart';
 
 
 /* *
@@ -38,9 +38,9 @@ import 'highcharts_series_data_labels_filter_options.dart';
  * */
 
 
-export 'highcharts_dependency_wheel_series_data_labels_text_path_options.dart';
 export 'highcharts_series_data_labels_animation_options.dart';
 export 'highcharts_series_data_labels_filter_options.dart';
+export 'highcharts_dependency_wheel_series_data_labels_text_path_options.dart';
 
 
 /* *
@@ -52,29 +52,26 @@ export 'highcharts_series_data_labels_filter_options.dart';
 
 class HighchartsDependencyWheelSeriesDataLabelsOptions extends HighchartsOptionsBase {
 
-  double? distance;
-  dynamic format;
-  dynamic formatter;
-  dynamic nodeFormat;
-  dynamic nodeFormatter;
-  HighchartsDependencyWheelSeriesDataLabelsTextPathOptions? textPath;
-  String? backgroundColor;
-  bool? crop;
-  bool? enabled;
-  bool? inside;
   String? align;
-  String? verticalAlign;
-  double? y;
   String? alignTo;
   bool? allowOverlap;
   HighchartsSeriesDataLabelsAnimationOptions? animation;
+  String? backgroundColor;
   String? borderColor;
   double? borderRadius;
   double? borderWidth;
   String? className;
   String? color;
+  bool? crop;
   bool? defer;
+  double? distance;
+  bool? enabled;
   HighchartsSeriesDataLabelsFilterOptions? filter;
+  dynamic format;
+  dynamic formatter;
+  bool? inside;
+  dynamic nodeFormat;
+  dynamic nodeFormatter;
   String? nullFormat;
   dynamic nullFormatter;
   String? overflow;
@@ -84,35 +81,35 @@ class HighchartsDependencyWheelSeriesDataLabelsOptions extends HighchartsOptions
   Map<String, dynamic>? shadow;
   String? shape;
   Map<String, String>? style;
+  HighchartsDependencyWheelSeriesDataLabelsTextPathOptions? textPath;
   bool? useHTML;
+  String? verticalAlign;
   double? x;
+  double? y;
   double? zIndex;
 
 
   HighchartsDependencyWheelSeriesDataLabelsOptions({
-    this.distance,
-    this.format,
-    this.formatter,
-    this.nodeFormat,
-    this.nodeFormatter,
-    this.textPath,
-    this.backgroundColor,
-    this.crop,
-    this.enabled,
-    this.inside,
     this.align,
-    this.verticalAlign,
-    this.y,
     this.alignTo,
     this.allowOverlap,
     this.animation,
+    this.backgroundColor,
     this.borderColor,
     this.borderRadius,
     this.borderWidth,
     this.className,
     this.color,
+    this.crop,
     this.defer,
+    this.distance,
+    this.enabled,
     this.filter,
+    this.format,
+    this.formatter,
+    this.inside,
+    this.nodeFormat,
+    this.nodeFormatter,
     this.nullFormat,
     this.nullFormatter,
     this.overflow,
@@ -122,8 +119,11 @@ class HighchartsDependencyWheelSeriesDataLabelsOptions extends HighchartsOptions
     this.shadow,
     this.shape,
     this.style,
+    this.textPath,
     this.useHTML,
+    this.verticalAlign,
     this.x,
+    this.y,
     this.zIndex
   });
 
@@ -132,118 +132,118 @@ class HighchartsDependencyWheelSeriesDataLabelsOptions extends HighchartsOptions
     super.toOptionsJSON(buffer);
 
 
-    if (distance != null) {
-      buffer.writeAll(['"distance": ', distance, ','], "");
-    }
-    if (format != null) {
-      buffer.writeAll(['"format": ', jsonEncode(format), ','], "");
-    }
-    if (formatter != null) {
-      buffer.writeAll(['"formatter": ', jsonEncode(formatter), ','], "");
-    }
-    if (nodeFormat != null) {
-      buffer.writeAll(['"nodeFormat": ', jsonEncode(nodeFormat), ','], "");
-    }
-    if (nodeFormatter != null) {
-      buffer.writeAll(['"nodeFormatter": ', jsonEncode(nodeFormatter), ','], "");
-    }
-    if (textPath != null) {
-      buffer.writeAll(['"textPath": ', textPath?.toJSON(), ","], "");
-    }
-    if (backgroundColor != null) {
-      buffer.writeAll(['"backgroundColor": ', jsonEncode(backgroundColor), ','], "");
-    }
-    if (crop != null) {
-      buffer.writeAll(['"crop": ', crop, ','], "");
-    }
-    if (enabled != null) {
-      buffer.writeAll(['"enabled": ', enabled, ','], "");
-    }
-    if (inside != null) {
-      buffer.writeAll(['"inside": ', inside, ','], "");
-    }
     if (align != null) {
-      buffer.writeAll(['"align": ', jsonEncode(align), ','], "");
-    }
-    if (verticalAlign != null) {
-      buffer.writeAll(['"verticalAlign": ', jsonEncode(verticalAlign), ','], "");
-    }
-    if (y != null) {
-      buffer.writeAll(['"y": ', y, ','], "");
+      buffer.writeAll(['"align":', jsonEncode(align), ','], "");
     }
     if (alignTo != null) {
-      buffer.writeAll(['"alignTo": ', jsonEncode(alignTo), ','], "");
+      buffer.writeAll(['"alignTo":', jsonEncode(alignTo), ','], "");
     }
     if (allowOverlap != null) {
-      buffer.writeAll(['"allowOverlap": ', allowOverlap, ','], "");
+      buffer.writeAll(['"allowOverlap":', allowOverlap, ','], "");
     }
     if (animation != null) {
-      buffer.writeAll(['"animation": ', animation?.toJSON(), ","], "");
+      buffer.writeAll(['"animation":', animation?.toJSON(), ","], "");
+    }
+    if (backgroundColor != null) {
+      buffer.writeAll(['"backgroundColor":', jsonEncode(backgroundColor), ','], "");
     }
     if (borderColor != null) {
-      buffer.writeAll(['"borderColor": ', jsonEncode(borderColor), ','], "");
+      buffer.writeAll(['"borderColor":', jsonEncode(borderColor), ','], "");
     }
     if (borderRadius != null) {
-      buffer.writeAll(['"borderRadius": ', borderRadius, ','], "");
+      buffer.writeAll(['"borderRadius":', borderRadius, ','], "");
     }
     if (borderWidth != null) {
-      buffer.writeAll(['"borderWidth": ', borderWidth, ','], "");
+      buffer.writeAll(['"borderWidth":', borderWidth, ','], "");
     }
     if (className != null) {
-      buffer.writeAll(['"className": ', jsonEncode(className), ','], "");
+      buffer.writeAll(['"className":', jsonEncode(className), ','], "");
     }
     if (color != null) {
-      buffer.writeAll(['"color": ', jsonEncode(color), ','], "");
+      buffer.writeAll(['"color":', jsonEncode(color), ','], "");
+    }
+    if (crop != null) {
+      buffer.writeAll(['"crop":', crop, ','], "");
     }
     if (defer != null) {
-      buffer.writeAll(['"defer": ', defer, ','], "");
+      buffer.writeAll(['"defer":', defer, ','], "");
+    }
+    if (distance != null) {
+      buffer.writeAll(['"distance":', distance, ','], "");
+    }
+    if (enabled != null) {
+      buffer.writeAll(['"enabled":', enabled, ','], "");
     }
     if (filter != null) {
-      buffer.writeAll(['"filter": ', filter?.toJSON(), ","], "");
+      buffer.writeAll(['"filter":', filter?.toJSON(), ","], "");
+    }
+    if (format != null) {
+      buffer.writeAll(['"format":', jsonEncode(format), ','], "");
+    }
+    if (formatter != null) {
+      buffer.writeAll(['"formatter":', jsonEncode(formatter), ','], "");
+    }
+    if (inside != null) {
+      buffer.writeAll(['"inside":', inside, ','], "");
+    }
+    if (nodeFormat != null) {
+      buffer.writeAll(['"nodeFormat":', jsonEncode(nodeFormat), ','], "");
+    }
+    if (nodeFormatter != null) {
+      buffer.writeAll(['"nodeFormatter":', jsonEncode(nodeFormatter), ','], "");
     }
     if (nullFormat != null) {
-      buffer.writeAll(['"nullFormat": ', jsonEncode(nullFormat), ','], "");
+      buffer.writeAll(['"nullFormat":', jsonEncode(nullFormat), ','], "");
     }
     if (nullFormatter != null) {
-      buffer.writeAll(['"nullFormatter": ', jsonEncode(nullFormatter), ','], "");
+      buffer.writeAll(['"nullFormatter":', jsonEncode(nullFormatter), ','], "");
     }
     if (overflow != null) {
-      buffer.writeAll(['"overflow": ', jsonEncode(overflow), ','], "");
+      buffer.writeAll(['"overflow":', jsonEncode(overflow), ','], "");
     }
     if (padding != null) {
-      buffer.writeAll(['"padding": ', padding, ','], "");
+      buffer.writeAll(['"padding":', padding, ','], "");
     }
     if (position != null) {
-      buffer.writeAll(['"position": ', jsonEncode(position), ','], "");
+      buffer.writeAll(['"position":', jsonEncode(position), ','], "");
     }
     if (rotation != null) {
-      buffer.writeAll(['"rotation": ', rotation, ','], "");
+      buffer.writeAll(['"rotation":', rotation, ','], "");
     }
     if (shadow != null) {
       buffer.write("{");
       for (var item in shadow!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (shape != null) {
-      buffer.writeAll(['"shape": ', jsonEncode(shape), ','], "");
+      buffer.writeAll(['"shape":', jsonEncode(shape), ','], "");
     }
     if (style != null) {
       buffer.write("{");
       for (var item in style!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
+    if (textPath != null) {
+      buffer.writeAll(['"textPath":', textPath?.toJSON(), ","], "");
+    }
     if (useHTML != null) {
-      buffer.writeAll(['"useHTML": ', useHTML, ','], "");
+      buffer.writeAll(['"useHTML":', useHTML, ','], "");
+    }
+    if (verticalAlign != null) {
+      buffer.writeAll(['"verticalAlign":', jsonEncode(verticalAlign), ','], "");
     }
     if (x != null) {
-      buffer.writeAll(['"x": ', x, ','], "");
+      buffer.writeAll(['"x":', x, ','], "");
+    }
+    if (y != null) {
+      buffer.writeAll(['"y":', y, ','], "");
     }
     if (zIndex != null) {
-      buffer.writeAll(['"zIndex": ', zIndex, ','], "");
+      buffer.writeAll(['"zIndex":', zIndex, ','], "");
     }
   }
 

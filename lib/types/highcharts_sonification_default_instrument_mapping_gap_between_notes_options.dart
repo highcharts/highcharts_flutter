@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -76,22 +76,22 @@ class HighchartsSonificationDefaultInstrumentMappingGapBetweenNotesOptions exten
 
 
     if (mapFunction != null) {
-      buffer.writeAll(['"mapFunction": ', jsonEncode(mapFunction), ','], "");
+      buffer.writeAll(['"mapFunction":', jsonEncode(mapFunction), ','], "");
     }
     if (mapTo != null) {
-      buffer.writeAll(['"mapTo": ', jsonEncode(mapTo), ','], "");
+      buffer.writeAll(['"mapTo":', jsonEncode(mapTo), ','], "");
     }
     if (max != null) {
-      buffer.writeAll(['"max": ', max, ','], "");
+      buffer.writeAll(['"max":', max, ','], "");
     }
     if (min != null) {
-      buffer.writeAll(['"min": ', min, ','], "");
+      buffer.writeAll(['"min":', min, ','], "");
     }
     if (value != null) {
-      buffer.writeAll(['"value": ', value, ','], "");
+      buffer.writeAll(['"value":', value, ','], "");
     }
     if (within != null) {
-      buffer.writeAll(['"within": ', jsonEncode(within), ','], "");
+      buffer.writeAll(['"within":', jsonEncode(within), ','], "");
     }
   }
 
