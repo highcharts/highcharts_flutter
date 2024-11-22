@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -47,16 +47,16 @@ import 'highcharts_options_base.dart';
 class HighchartsPriceEnvelopesSeriesParamsOptions extends HighchartsOptionsBase {
 
   double? bottomBand;
+  double? index;
   double? period;
   double? topBand;
-  double? index;
 
 
   HighchartsPriceEnvelopesSeriesParamsOptions({
     this.bottomBand,
+    this.index,
     this.period,
-    this.topBand,
-    this.index
+    this.topBand
   });
 
   @override
@@ -65,16 +65,16 @@ class HighchartsPriceEnvelopesSeriesParamsOptions extends HighchartsOptionsBase 
 
 
     if (bottomBand != null) {
-      buffer.writeAll(['"bottomBand": ', bottomBand, ','], "");
-    }
-    if (period != null) {
-      buffer.writeAll(['"period": ', period, ','], "");
-    }
-    if (topBand != null) {
-      buffer.writeAll(['"topBand": ', topBand, ','], "");
+      buffer.writeAll(['"bottomBand":', bottomBand, ','], "");
     }
     if (index != null) {
-      buffer.writeAll(['"index": ', index, ','], "");
+      buffer.writeAll(['"index":', index, ','], "");
+    }
+    if (period != null) {
+      buffer.writeAll(['"period":', period, ','], "");
+    }
+    if (topBand != null) {
+      buffer.writeAll(['"topBand":', topBand, ','], "");
     }
   }
 

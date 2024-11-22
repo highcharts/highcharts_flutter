@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -66,13 +66,13 @@ class HighchartsLangExportDataOptions extends HighchartsOptionsBase {
 
 
     if (annotationHeader != null) {
-      buffer.writeAll(['"annotationHeader": ', jsonEncode(annotationHeader), ','], "");
+      buffer.writeAll(['"annotationHeader":', jsonEncode(annotationHeader), ','], "");
     }
     if (categoryDatetimeHeader != null) {
-      buffer.writeAll(['"categoryDatetimeHeader": ', jsonEncode(categoryDatetimeHeader), ','], "");
+      buffer.writeAll(['"categoryDatetimeHeader":', jsonEncode(categoryDatetimeHeader), ','], "");
     }
     if (categoryHeader != null) {
-      buffer.writeAll(['"categoryHeader": ', jsonEncode(categoryHeader), ','], "");
+      buffer.writeAll(['"categoryHeader":', jsonEncode(categoryHeader), ','], "");
     }
   }
 

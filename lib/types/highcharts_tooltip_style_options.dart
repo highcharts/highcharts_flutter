@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -71,13 +71,13 @@ class HighchartsTooltipStyleOptions extends HighchartsOptionsBase {
 
 
     if (color != null) {
-      buffer.writeAll(['"color": ', jsonEncode(color), ','], "");
+      buffer.writeAll(['"color":', jsonEncode(color), ','], "");
     }
     if (cursor != null) {
-      buffer.writeAll(['"cursor": ', jsonEncode(cursor), ','], "");
+      buffer.writeAll(['"cursor":', jsonEncode(cursor), ','], "");
     }
     if (fontSize != null) {
-      buffer.writeAll(['"fontSize": ', jsonEncode(fontSize), ','], "");
+      buffer.writeAll(['"fontSize":', jsonEncode(fontSize), ','], "");
     }
   }
 

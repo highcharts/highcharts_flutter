@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -59,7 +59,10 @@ class HighchartsYAxisPlotBandsOptions extends HighchartsOptionsBase {
   HighchartsXAxisPlotBandsEventsOptions? events;
   double? from;
   String? id;
+  String? innerRadius;
   HighchartsXAxisPlotBandsLabelOptions? label;
+  String? outerRadius;
+  String? thickness;
   double? to;
   double? zIndex;
 
@@ -74,7 +77,10 @@ class HighchartsYAxisPlotBandsOptions extends HighchartsOptionsBase {
     this.events,
     this.from,
     this.id,
+    this.innerRadius,
     this.label,
+    this.outerRadius,
+    this.thickness,
     this.to,
     this.zIndex
   });
@@ -85,40 +91,49 @@ class HighchartsYAxisPlotBandsOptions extends HighchartsOptionsBase {
 
 
     if (acrossPanes != null) {
-      buffer.writeAll(['"acrossPanes": ', acrossPanes, ','], "");
+      buffer.writeAll(['"acrossPanes":', acrossPanes, ','], "");
     }
     if (borderColor != null) {
-      buffer.writeAll(['"borderColor": ', jsonEncode(borderColor), ','], "");
+      buffer.writeAll(['"borderColor":', jsonEncode(borderColor), ','], "");
     }
     if (borderRadius != null) {
-      buffer.writeAll(['"borderRadius": ', jsonEncode(borderRadius), ','], "");
+      buffer.writeAll(['"borderRadius":', jsonEncode(borderRadius), ','], "");
     }
     if (borderWidth != null) {
-      buffer.writeAll(['"borderWidth": ', borderWidth, ','], "");
+      buffer.writeAll(['"borderWidth":', borderWidth, ','], "");
     }
     if (className != null) {
-      buffer.writeAll(['"className": ', jsonEncode(className), ','], "");
+      buffer.writeAll(['"className":', jsonEncode(className), ','], "");
     }
     if (color != null) {
-      buffer.writeAll(['"color": ', jsonEncode(color), ','], "");
+      buffer.writeAll(['"color":', jsonEncode(color), ','], "");
     }
     if (events != null) {
-      buffer.writeAll(['"events": ', events?.toJSON(), ","], "");
+      buffer.writeAll(['"events":', events?.toJSON(), ","], "");
     }
     if (from != null) {
-      buffer.writeAll(['"from": ', from, ','], "");
+      buffer.writeAll(['"from":', from, ','], "");
     }
     if (id != null) {
-      buffer.writeAll(['"id": ', jsonEncode(id), ','], "");
+      buffer.writeAll(['"id":', jsonEncode(id), ','], "");
+    }
+    if (innerRadius != null) {
+      buffer.writeAll(['"innerRadius":', jsonEncode(innerRadius), ','], "");
     }
     if (label != null) {
-      buffer.writeAll(['"label": ', label?.toJSON(), ","], "");
+      buffer.writeAll(['"label":', label?.toJSON(), ","], "");
+    }
+    if (outerRadius != null) {
+      buffer.writeAll(['"outerRadius":', jsonEncode(outerRadius), ','], "");
+    }
+    if (thickness != null) {
+      buffer.writeAll(['"thickness":', jsonEncode(thickness), ','], "");
     }
     if (to != null) {
-      buffer.writeAll(['"to": ', to, ','], "");
+      buffer.writeAll(['"to":', to, ','], "");
     }
     if (zIndex != null) {
-      buffer.writeAll(['"zIndex": ', zIndex, ','], "");
+      buffer.writeAll(['"zIndex":', zIndex, ','], "");
     }
   }
 

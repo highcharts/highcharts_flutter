@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -57,7 +57,6 @@ export 'highcharts_xaxis_plot_bands_label_options.dart';
  */
 class HighchartsXAxisPlotBandsOptions extends HighchartsOptionsBase {
 
-  bool? acrossPanes;
   String? borderColor;
   String? borderRadius;
   double? borderWidth;
@@ -72,7 +71,6 @@ class HighchartsXAxisPlotBandsOptions extends HighchartsOptionsBase {
 
 
   HighchartsXAxisPlotBandsOptions({
-    this.acrossPanes,
     this.borderColor,
     this.borderRadius,
     this.borderWidth,
@@ -91,41 +89,38 @@ class HighchartsXAxisPlotBandsOptions extends HighchartsOptionsBase {
     super.toOptionsJSON(buffer);
 
 
-    if (acrossPanes != null) {
-      buffer.writeAll(['"acrossPanes": ', acrossPanes, ','], "");
-    }
     if (borderColor != null) {
-      buffer.writeAll(['"borderColor": ', jsonEncode(borderColor), ','], "");
+      buffer.writeAll(['"borderColor":', jsonEncode(borderColor), ','], "");
     }
     if (borderRadius != null) {
-      buffer.writeAll(['"borderRadius": ', jsonEncode(borderRadius), ','], "");
+      buffer.writeAll(['"borderRadius":', jsonEncode(borderRadius), ','], "");
     }
     if (borderWidth != null) {
-      buffer.writeAll(['"borderWidth": ', borderWidth, ','], "");
+      buffer.writeAll(['"borderWidth":', borderWidth, ','], "");
     }
     if (className != null) {
-      buffer.writeAll(['"className": ', jsonEncode(className), ','], "");
+      buffer.writeAll(['"className":', jsonEncode(className), ','], "");
     }
     if (color != null) {
-      buffer.writeAll(['"color": ', jsonEncode(color), ','], "");
+      buffer.writeAll(['"color":', jsonEncode(color), ','], "");
     }
     if (events != null) {
-      buffer.writeAll(['"events": ', events?.toJSON(), ","], "");
+      buffer.writeAll(['"events":', events?.toJSON(), ","], "");
     }
     if (from != null) {
-      buffer.writeAll(['"from": ', from, ','], "");
+      buffer.writeAll(['"from":', from, ','], "");
     }
     if (id != null) {
-      buffer.writeAll(['"id": ', jsonEncode(id), ','], "");
+      buffer.writeAll(['"id":', jsonEncode(id), ','], "");
     }
     if (label != null) {
-      buffer.writeAll(['"label": ', label?.toJSON(), ","], "");
+      buffer.writeAll(['"label":', label?.toJSON(), ","], "");
     }
     if (to != null) {
-      buffer.writeAll(['"to": ', to, ','], "");
+      buffer.writeAll(['"to":', to, ','], "");
     }
     if (zIndex != null) {
-      buffer.writeAll(['"zIndex": ', zIndex, ','], "");
+      buffer.writeAll(['"zIndex":', zIndex, ','], "");
     }
   }
 

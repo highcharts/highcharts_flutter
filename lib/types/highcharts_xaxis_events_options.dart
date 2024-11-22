@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -49,21 +49,21 @@ import 'highcharts_options_base.dart';
  */
 class HighchartsXAxisEventsOptions extends HighchartsOptionsBase {
 
+  dynamic afterBreaks;
   dynamic afterSetExtremes;
+  dynamic pointBreak;
   dynamic pointBreakOut;
   dynamic pointInBreak;
   dynamic setExtremes;
-  dynamic afterBreaks;
-  dynamic pointBreak;
 
 
   HighchartsXAxisEventsOptions({
+    this.afterBreaks,
     this.afterSetExtremes,
+    this.pointBreak,
     this.pointBreakOut,
     this.pointInBreak,
-    this.setExtremes,
-    this.afterBreaks,
-    this.pointBreak
+    this.setExtremes
   });
 
   @override
@@ -71,23 +71,23 @@ class HighchartsXAxisEventsOptions extends HighchartsOptionsBase {
     super.toOptionsJSON(buffer);
 
 
-    if (afterSetExtremes != null) {
-      buffer.writeAll(['"afterSetExtremes": ', jsonEncode(afterSetExtremes), ','], "");
-    }
-    if (pointBreakOut != null) {
-      buffer.writeAll(['"pointBreakOut": ', jsonEncode(pointBreakOut), ','], "");
-    }
-    if (pointInBreak != null) {
-      buffer.writeAll(['"pointInBreak": ', jsonEncode(pointInBreak), ','], "");
-    }
-    if (setExtremes != null) {
-      buffer.writeAll(['"setExtremes": ', jsonEncode(setExtremes), ','], "");
-    }
     if (afterBreaks != null) {
-      buffer.writeAll(['"afterBreaks": ', jsonEncode(afterBreaks), ','], "");
+      buffer.writeAll(['"afterBreaks":', jsonEncode(afterBreaks), ','], "");
+    }
+    if (afterSetExtremes != null) {
+      buffer.writeAll(['"afterSetExtremes":', jsonEncode(afterSetExtremes), ','], "");
     }
     if (pointBreak != null) {
-      buffer.writeAll(['"pointBreak": ', jsonEncode(pointBreak), ','], "");
+      buffer.writeAll(['"pointBreak":', jsonEncode(pointBreak), ','], "");
+    }
+    if (pointBreakOut != null) {
+      buffer.writeAll(['"pointBreakOut":', jsonEncode(pointBreakOut), ','], "");
+    }
+    if (pointInBreak != null) {
+      buffer.writeAll(['"pointInBreak":', jsonEncode(pointInBreak), ','], "");
+    }
+    if (setExtremes != null) {
+      buffer.writeAll(['"setExtremes":', jsonEncode(setExtremes), ','], "");
     }
   }
 

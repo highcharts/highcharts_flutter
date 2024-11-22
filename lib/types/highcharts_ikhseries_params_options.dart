@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -63,13 +63,13 @@ class HighchartsIKHSeriesParamsOptions extends HighchartsOptionsBase {
 
 
     if (period != null) {
-      buffer.writeAll(['"period": ', period, ','], "");
+      buffer.writeAll(['"period":', period, ','], "");
     }
     if (periodSenkouSpanB != null) {
-      buffer.writeAll(['"periodSenkouSpanB": ', periodSenkouSpanB, ','], "");
+      buffer.writeAll(['"periodSenkouSpanB":', periodSenkouSpanB, ','], "");
     }
     if (periodTenkan != null) {
-      buffer.writeAll(['"periodTenkan": ', periodTenkan, ','], "");
+      buffer.writeAll(['"periodTenkan":', periodTenkan, ','], "");
     }
   }
 

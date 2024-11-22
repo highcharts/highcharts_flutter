@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -69,16 +69,16 @@ class HighchartsLegendBubbleLegendRangesOptions extends HighchartsOptionsBase {
 
 
     if (borderColor != null) {
-      buffer.writeAll(['"borderColor": ', jsonEncode(borderColor), ','], "");
+      buffer.writeAll(['"borderColor":', jsonEncode(borderColor), ','], "");
     }
     if (color != null) {
-      buffer.writeAll(['"color": ', jsonEncode(color), ','], "");
+      buffer.writeAll(['"color":', jsonEncode(color), ','], "");
     }
     if (connectorColor != null) {
-      buffer.writeAll(['"connectorColor": ', jsonEncode(connectorColor), ','], "");
+      buffer.writeAll(['"connectorColor":', jsonEncode(connectorColor), ','], "");
     }
     if (value != null) {
-      buffer.writeAll(['"value": ', value, ','], "");
+      buffer.writeAll(['"value":', value, ','], "");
     }
   }
 

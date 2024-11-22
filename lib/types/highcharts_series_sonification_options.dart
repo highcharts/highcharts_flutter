@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -82,26 +82,26 @@ class HighchartsSeriesSonificationOptions extends HighchartsOptionsBase {
 
 
     if (contextTracks != null) {
-      buffer.write('"contextTracks": [');
+      buffer.write('"contextTracks":[');
       for (var item in contextTracks!) {
         buffer.writeAll([item.toJSON(), ","], "");
       }
       buffer.write("],");
     }
     if (defaultInstrumentOptions != null) {
-      buffer.writeAll(['"defaultInstrumentOptions": ', defaultInstrumentOptions?.toJSON(), ","], "");
+      buffer.writeAll(['"defaultInstrumentOptions":', defaultInstrumentOptions?.toJSON(), ","], "");
     }
     if (defaultSpeechOptions != null) {
-      buffer.writeAll(['"defaultSpeechOptions": ', defaultSpeechOptions?.toJSON(), ","], "");
+      buffer.writeAll(['"defaultSpeechOptions":', defaultSpeechOptions?.toJSON(), ","], "");
     }
     if (enabled != null) {
-      buffer.writeAll(['"enabled": ', enabled, ','], "");
+      buffer.writeAll(['"enabled":', enabled, ','], "");
     }
     if (pointGrouping != null) {
-      buffer.writeAll(['"pointGrouping": ', pointGrouping?.toJSON(), ","], "");
+      buffer.writeAll(['"pointGrouping":', pointGrouping?.toJSON(), ","], "");
     }
     if (tracks != null) {
-      buffer.write('"tracks": [');
+      buffer.write('"tracks":[');
       for (var item in tracks!) {
         buffer.writeAll([item.toJSON(), ","], "");
       }

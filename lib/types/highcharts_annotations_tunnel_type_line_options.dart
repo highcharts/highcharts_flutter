@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -61,10 +61,10 @@ class HighchartsAnnotationsTunnelTypeLineOptions extends HighchartsOptionsBase {
 
 
     if (strokeWidth != null) {
-      buffer.writeAll(['"strokeWidth": ', strokeWidth, ','], "");
+      buffer.writeAll(['"strokeWidth":', strokeWidth, ','], "");
     }
     if (fill != null) {
-      buffer.writeAll(['"fill": ', jsonEncode(fill), ','], "");
+      buffer.writeAll(['"fill":', jsonEncode(fill), ','], "");
     }
   }
 

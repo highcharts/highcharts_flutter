@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -52,18 +52,18 @@ export 'highcharts_series_states_hover_animation_options.dart';
  */
 class HighchartsHistogramSeriesStatesHoverOptions extends HighchartsOptionsBase {
 
+  HighchartsSeriesStatesHoverAnimationOptions? animation;
   String? borderColor;
   double? brightness;
   String? color;
-  HighchartsSeriesStatesHoverAnimationOptions? animation;
   bool? enabled;
 
 
   HighchartsHistogramSeriesStatesHoverOptions({
+    this.animation,
     this.borderColor,
     this.brightness,
     this.color,
-    this.animation,
     this.enabled
   });
 
@@ -72,20 +72,20 @@ class HighchartsHistogramSeriesStatesHoverOptions extends HighchartsOptionsBase 
     super.toOptionsJSON(buffer);
 
 
+    if (animation != null) {
+      buffer.writeAll(['"animation":', animation?.toJSON(), ","], "");
+    }
     if (borderColor != null) {
-      buffer.writeAll(['"borderColor": ', jsonEncode(borderColor), ','], "");
+      buffer.writeAll(['"borderColor":', jsonEncode(borderColor), ','], "");
     }
     if (brightness != null) {
-      buffer.writeAll(['"brightness": ', brightness, ','], "");
+      buffer.writeAll(['"brightness":', brightness, ','], "");
     }
     if (color != null) {
-      buffer.writeAll(['"color": ', jsonEncode(color), ','], "");
-    }
-    if (animation != null) {
-      buffer.writeAll(['"animation": ', animation?.toJSON(), ","], "");
+      buffer.writeAll(['"color":', jsonEncode(color), ','], "");
     }
     if (enabled != null) {
-      buffer.writeAll(['"enabled": ', enabled, ','], "");
+      buffer.writeAll(['"enabled":', enabled, ','], "");
     }
   }
 

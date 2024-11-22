@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -63,10 +63,10 @@ class HighchartsDefsReverseArrowOptions extends HighchartsOptionsBase {
 
 
     if (attributes != null) {
-      buffer.writeAll(['"attributes": ', attributes?.toJSON(), ","], "");
+      buffer.writeAll(['"attributes":', attributes?.toJSON(), ","], "");
     }
     if (tagName != null) {
-      buffer.writeAll(['"tagName": ', jsonEncode(tagName), ','], "");
+      buffer.writeAll(['"tagName":', jsonEncode(tagName), ','], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -69,19 +69,19 @@ class HighchartsArcDiagramSeriesMarkerOptions extends HighchartsOptionsBase {
 
 
     if (fillColor != null) {
-      buffer.writeAll(['"fillColor": ', jsonEncode(fillColor), ','], "");
+      buffer.writeAll(['"fillColor":', jsonEncode(fillColor), ','], "");
     }
     if (lineColor != null) {
-      buffer.writeAll(['"lineColor": ', jsonEncode(lineColor), ','], "");
+      buffer.writeAll(['"lineColor":', jsonEncode(lineColor), ','], "");
     }
     if (lineWidth != null) {
-      buffer.writeAll(['"lineWidth": ', lineWidth, ','], "");
+      buffer.writeAll(['"lineWidth":', lineWidth, ','], "");
     }
     if (states != null) {
-      buffer.writeAll(['"states": ', states?.toJSON(), ","], "");
+      buffer.writeAll(['"states":', states?.toJSON(), ","], "");
     }
     if (symbol != null) {
-      buffer.writeAll(['"symbol": ', jsonEncode(symbol), ','], "");
+      buffer.writeAll(['"symbol":', jsonEncode(symbol), ','], "");
     }
   }
 

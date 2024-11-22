@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -154,329 +154,329 @@ class HighchartsLangNavigationPopupIndicatorAliasesOptions extends HighchartsOpt
 
 
     if (abands != null) {
-      buffer.write('"abands": [');
+      buffer.write('"abands":[');
       for (var item in abands!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (ad != null) {
-      buffer.write('"ad": [');
+      buffer.write('"ad":[');
       for (var item in ad!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (ao != null) {
-      buffer.write('"ao": [');
+      buffer.write('"ao":[');
       for (var item in ao!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (apo != null) {
-      buffer.write('"apo": [');
+      buffer.write('"apo":[');
       for (var item in apo!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (aroon != null) {
-      buffer.write('"aroon": [');
+      buffer.write('"aroon":[');
       for (var item in aroon!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (aroonoscillator != null) {
-      buffer.write('"aroonoscillator": [');
+      buffer.write('"aroonoscillator":[');
       for (var item in aroonoscillator!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (atr != null) {
-      buffer.write('"atr": [');
+      buffer.write('"atr":[');
       for (var item in atr!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (bb != null) {
-      buffer.write('"bb": [');
+      buffer.write('"bb":[');
       for (var item in bb!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (cci != null) {
-      buffer.write('"cci": [');
+      buffer.write('"cci":[');
       for (var item in cci!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (chaikin != null) {
-      buffer.write('"chaikin": [');
+      buffer.write('"chaikin":[');
       for (var item in chaikin!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (cmf != null) {
-      buffer.write('"cmf": [');
+      buffer.write('"cmf":[');
       for (var item in cmf!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (cmo != null) {
-      buffer.write('"cmo": [');
+      buffer.write('"cmo":[');
       for (var item in cmo!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (dema != null) {
-      buffer.write('"dema": [');
+      buffer.write('"dema":[');
       for (var item in dema!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (disparityindex != null) {
-      buffer.write('"disparityindex": [');
+      buffer.write('"disparityindex":[');
       for (var item in disparityindex!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (dmi != null) {
-      buffer.write('"dmi": [');
+      buffer.write('"dmi":[');
       for (var item in dmi!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (dpo != null) {
-      buffer.write('"dpo": [');
+      buffer.write('"dpo":[');
       for (var item in dpo!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (ema != null) {
-      buffer.write('"ema": [');
+      buffer.write('"ema":[');
       for (var item in ema!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (ikh != null) {
-      buffer.write('"ikh": [');
+      buffer.write('"ikh":[');
       for (var item in ikh!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (keltnerchannels != null) {
-      buffer.write('"keltnerchannels": [');
+      buffer.write('"keltnerchannels":[');
       for (var item in keltnerchannels!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (klinger != null) {
-      buffer.write('"klinger": [');
+      buffer.write('"klinger":[');
       for (var item in klinger!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (linearRegression != null) {
-      buffer.write('"linearRegression": [');
+      buffer.write('"linearRegression":[');
       for (var item in linearRegression!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (linearRegressionAngle != null) {
-      buffer.write('"linearRegressionAngle": [');
+      buffer.write('"linearRegressionAngle":[');
       for (var item in linearRegressionAngle!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (linearRegressionIntercept != null) {
-      buffer.write('"linearRegressionIntercept": [');
+      buffer.write('"linearRegressionIntercept":[');
       for (var item in linearRegressionIntercept!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (linearRegressionSlope != null) {
-      buffer.write('"linearRegressionSlope": [');
+      buffer.write('"linearRegressionSlope":[');
       for (var item in linearRegressionSlope!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (macd != null) {
-      buffer.write('"macd": [');
+      buffer.write('"macd":[');
       for (var item in macd!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (mfi != null) {
-      buffer.write('"mfi": [');
+      buffer.write('"mfi":[');
       for (var item in mfi!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (momentum != null) {
-      buffer.write('"momentum": [');
+      buffer.write('"momentum":[');
       for (var item in momentum!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (natr != null) {
-      buffer.write('"natr": [');
+      buffer.write('"natr":[');
       for (var item in natr!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (obv != null) {
-      buffer.write('"obv": [');
+      buffer.write('"obv":[');
       for (var item in obv!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (pc != null) {
-      buffer.write('"pc": [');
+      buffer.write('"pc":[');
       for (var item in pc!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (pivotpoints != null) {
-      buffer.write('"pivotpoints": [');
+      buffer.write('"pivotpoints":[');
       for (var item in pivotpoints!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (ppo != null) {
-      buffer.write('"ppo": [');
+      buffer.write('"ppo":[');
       for (var item in ppo!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (priceenvelopes != null) {
-      buffer.write('"priceenvelopes": [');
+      buffer.write('"priceenvelopes":[');
       for (var item in priceenvelopes!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (psar != null) {
-      buffer.write('"psar": [');
+      buffer.write('"psar":[');
       for (var item in psar!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (roc != null) {
-      buffer.write('"roc": [');
+      buffer.write('"roc":[');
       for (var item in roc!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (rsi != null) {
-      buffer.write('"rsi": [');
+      buffer.write('"rsi":[');
       for (var item in rsi!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (slowstochastic != null) {
-      buffer.write('"slowstochastic": [');
+      buffer.write('"slowstochastic":[');
       for (var item in slowstochastic!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (sma != null) {
-      buffer.write('"sma": [');
+      buffer.write('"sma":[');
       for (var item in sma!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (stochastic != null) {
-      buffer.write('"stochastic": [');
+      buffer.write('"stochastic":[');
       for (var item in stochastic!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (supertrend != null) {
-      buffer.write('"supertrend": [');
+      buffer.write('"supertrend":[');
       for (var item in supertrend!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (tema != null) {
-      buffer.write('"tema": [');
+      buffer.write('"tema":[');
       for (var item in tema!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (trix != null) {
-      buffer.write('"trix": [');
+      buffer.write('"trix":[');
       for (var item in trix!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (vbp != null) {
-      buffer.write('"vbp": [');
+      buffer.write('"vbp":[');
       for (var item in vbp!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (vwap != null) {
-      buffer.write('"vwap": [');
+      buffer.write('"vwap":[');
       for (var item in vwap!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (williamsr != null) {
-      buffer.write('"williamsr": [');
+      buffer.write('"williamsr":[');
       for (var item in williamsr!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (wma != null) {
-      buffer.write('"wma": [');
+      buffer.write('"wma":[');
       for (var item in wma!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (zigzag != null) {
-      buffer.write('"zigzag": [');
+      buffer.write('"zigzag":[');
       for (var item in zigzag!) {
         buffer.writeAll([item, ","], "");
       }

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -76,22 +76,22 @@ class HighchartsChartZoomingOptions extends HighchartsOptionsBase {
 
 
     if (key != null) {
-      buffer.writeAll(['"key": ', jsonEncode(key), ','], "");
+      buffer.writeAll(['"key":', jsonEncode(key), ','], "");
     }
     if (mouseWheel != null) {
-      buffer.writeAll(['"mouseWheel": ', mouseWheel?.toJSON(), ","], "");
+      buffer.writeAll(['"mouseWheel":', mouseWheel?.toJSON(), ","], "");
     }
     if (pinchType != null) {
-      buffer.writeAll(['"pinchType": ', jsonEncode(pinchType), ','], "");
+      buffer.writeAll(['"pinchType":', jsonEncode(pinchType), ','], "");
     }
     if (resetButton != null) {
-      buffer.writeAll(['"resetButton": ', resetButton?.toJSON(), ","], "");
+      buffer.writeAll(['"resetButton":', resetButton?.toJSON(), ","], "");
     }
     if (singleTouch != null) {
-      buffer.writeAll(['"singleTouch": ', singleTouch, ','], "");
+      buffer.writeAll(['"singleTouch":', singleTouch, ','], "");
     }
     if (type != null) {
-      buffer.writeAll(['"type": ', jsonEncode(type), ','], "");
+      buffer.writeAll(['"type":', jsonEncode(type), ','], "");
     }
   }
 

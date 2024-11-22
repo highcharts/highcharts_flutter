@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -88,46 +88,46 @@ class HighchartsChartEventsOptions extends HighchartsOptionsBase {
 
 
     if (addSeries != null) {
-      buffer.writeAll(['"addSeries": ', jsonEncode(addSeries), ','], "");
+      buffer.writeAll(['"addSeries":', jsonEncode(addSeries), ','], "");
     }
     if (afterPrint != null) {
-      buffer.writeAll(['"afterPrint": ', jsonEncode(afterPrint), ','], "");
+      buffer.writeAll(['"afterPrint":', jsonEncode(afterPrint), ','], "");
     }
     if (beforePrint != null) {
-      buffer.writeAll(['"beforePrint": ', jsonEncode(beforePrint), ','], "");
+      buffer.writeAll(['"beforePrint":', jsonEncode(beforePrint), ','], "");
     }
     if (click != null) {
-      buffer.writeAll(['"click": ', jsonEncode(click), ','], "");
+      buffer.writeAll(['"click":', jsonEncode(click), ','], "");
     }
     if (drilldown != null) {
-      buffer.writeAll(['"drilldown": ', jsonEncode(drilldown), ','], "");
+      buffer.writeAll(['"drilldown":', jsonEncode(drilldown), ','], "");
     }
     if (drillup != null) {
-      buffer.writeAll(['"drillup": ', jsonEncode(drillup), ','], "");
+      buffer.writeAll(['"drillup":', jsonEncode(drillup), ','], "");
     }
     if (drillupall != null) {
-      buffer.writeAll(['"drillupall": ', jsonEncode(drillupall), ','], "");
+      buffer.writeAll(['"drillupall":', jsonEncode(drillupall), ','], "");
     }
     if (exportData != null) {
-      buffer.writeAll(['"exportData": ', jsonEncode(exportData), ','], "");
+      buffer.writeAll(['"exportData":', jsonEncode(exportData), ','], "");
     }
     if (fullscreenClose != null) {
-      buffer.writeAll(['"fullscreenClose": ', jsonEncode(fullscreenClose), ','], "");
+      buffer.writeAll(['"fullscreenClose":', jsonEncode(fullscreenClose), ','], "");
     }
     if (fullscreenOpen != null) {
-      buffer.writeAll(['"fullscreenOpen": ', jsonEncode(fullscreenOpen), ','], "");
+      buffer.writeAll(['"fullscreenOpen":', jsonEncode(fullscreenOpen), ','], "");
     }
     if (load != null) {
-      buffer.writeAll(['"load": ', jsonEncode(load), ','], "");
+      buffer.writeAll(['"load":', jsonEncode(load), ','], "");
     }
     if (redraw != null) {
-      buffer.writeAll(['"redraw": ', jsonEncode(redraw), ','], "");
+      buffer.writeAll(['"redraw":', jsonEncode(redraw), ','], "");
     }
     if (render != null) {
-      buffer.writeAll(['"render": ', jsonEncode(render), ','], "");
+      buffer.writeAll(['"render":', jsonEncode(render), ','], "");
     }
     if (selection != null) {
-      buffer.writeAll(['"selection": ', jsonEncode(selection), ','], "");
+      buffer.writeAll(['"selection":', jsonEncode(selection), ','], "");
     }
   }
 

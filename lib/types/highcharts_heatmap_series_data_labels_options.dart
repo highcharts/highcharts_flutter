@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -52,10 +52,6 @@ export 'highcharts_series_data_labels_text_path_options.dart';
 
 class HighchartsHeatmapSeriesDataLabelsOptions extends HighchartsOptionsBase {
 
-  bool? crop;
-  bool? inside;
-  double? padding;
-  String? verticalAlign;
   String? align;
   String? alignTo;
   bool? allowOverlap;
@@ -66,14 +62,17 @@ class HighchartsHeatmapSeriesDataLabelsOptions extends HighchartsOptionsBase {
   double? borderWidth;
   String? className;
   String? color;
+  bool? crop;
   bool? defer;
   bool? enabled;
   HighchartsSeriesDataLabelsFilterOptions? filter;
   String? format;
   dynamic formatter;
+  bool? inside;
   String? nullFormat;
   dynamic nullFormatter;
   String? overflow;
+  double? padding;
   String? position;
   double? rotation;
   Map<String, dynamic>? shadow;
@@ -81,16 +80,13 @@ class HighchartsHeatmapSeriesDataLabelsOptions extends HighchartsOptionsBase {
   Map<String, String>? style;
   HighchartsSeriesDataLabelsTextPathOptions? textPath;
   bool? useHTML;
+  String? verticalAlign;
   double? x;
   double? y;
   double? zIndex;
 
 
   HighchartsHeatmapSeriesDataLabelsOptions({
-    this.crop,
-    this.inside,
-    this.padding,
-    this.verticalAlign,
     this.align,
     this.alignTo,
     this.allowOverlap,
@@ -101,14 +97,17 @@ class HighchartsHeatmapSeriesDataLabelsOptions extends HighchartsOptionsBase {
     this.borderWidth,
     this.className,
     this.color,
+    this.crop,
     this.defer,
     this.enabled,
     this.filter,
     this.format,
     this.formatter,
+    this.inside,
     this.nullFormat,
     this.nullFormatter,
     this.overflow,
+    this.padding,
     this.position,
     this.rotation,
     this.shadow,
@@ -116,6 +115,7 @@ class HighchartsHeatmapSeriesDataLabelsOptions extends HighchartsOptionsBase {
     this.style,
     this.textPath,
     this.useHTML,
+    this.verticalAlign,
     this.x,
     this.y,
     this.zIndex
@@ -126,109 +126,109 @@ class HighchartsHeatmapSeriesDataLabelsOptions extends HighchartsOptionsBase {
     super.toOptionsJSON(buffer);
 
 
-    if (crop != null) {
-      buffer.writeAll(['"crop": ', crop, ','], "");
-    }
-    if (inside != null) {
-      buffer.writeAll(['"inside": ', inside, ','], "");
-    }
-    if (padding != null) {
-      buffer.writeAll(['"padding": ', padding, ','], "");
-    }
-    if (verticalAlign != null) {
-      buffer.writeAll(['"verticalAlign": ', jsonEncode(verticalAlign), ','], "");
-    }
     if (align != null) {
-      buffer.writeAll(['"align": ', jsonEncode(align), ','], "");
+      buffer.writeAll(['"align":', jsonEncode(align), ','], "");
     }
     if (alignTo != null) {
-      buffer.writeAll(['"alignTo": ', jsonEncode(alignTo), ','], "");
+      buffer.writeAll(['"alignTo":', jsonEncode(alignTo), ','], "");
     }
     if (allowOverlap != null) {
-      buffer.writeAll(['"allowOverlap": ', allowOverlap, ','], "");
+      buffer.writeAll(['"allowOverlap":', allowOverlap, ','], "");
     }
     if (animation != null) {
-      buffer.writeAll(['"animation": ', animation?.toJSON(), ","], "");
+      buffer.writeAll(['"animation":', animation?.toJSON(), ","], "");
     }
     if (backgroundColor != null) {
-      buffer.writeAll(['"backgroundColor": ', jsonEncode(backgroundColor), ','], "");
+      buffer.writeAll(['"backgroundColor":', jsonEncode(backgroundColor), ','], "");
     }
     if (borderColor != null) {
-      buffer.writeAll(['"borderColor": ', jsonEncode(borderColor), ','], "");
+      buffer.writeAll(['"borderColor":', jsonEncode(borderColor), ','], "");
     }
     if (borderRadius != null) {
-      buffer.writeAll(['"borderRadius": ', borderRadius, ','], "");
+      buffer.writeAll(['"borderRadius":', borderRadius, ','], "");
     }
     if (borderWidth != null) {
-      buffer.writeAll(['"borderWidth": ', borderWidth, ','], "");
+      buffer.writeAll(['"borderWidth":', borderWidth, ','], "");
     }
     if (className != null) {
-      buffer.writeAll(['"className": ', jsonEncode(className), ','], "");
+      buffer.writeAll(['"className":', jsonEncode(className), ','], "");
     }
     if (color != null) {
-      buffer.writeAll(['"color": ', jsonEncode(color), ','], "");
+      buffer.writeAll(['"color":', jsonEncode(color), ','], "");
+    }
+    if (crop != null) {
+      buffer.writeAll(['"crop":', crop, ','], "");
     }
     if (defer != null) {
-      buffer.writeAll(['"defer": ', defer, ','], "");
+      buffer.writeAll(['"defer":', defer, ','], "");
     }
     if (enabled != null) {
-      buffer.writeAll(['"enabled": ', enabled, ','], "");
+      buffer.writeAll(['"enabled":', enabled, ','], "");
     }
     if (filter != null) {
-      buffer.writeAll(['"filter": ', filter?.toJSON(), ","], "");
+      buffer.writeAll(['"filter":', filter?.toJSON(), ","], "");
     }
     if (format != null) {
-      buffer.writeAll(['"format": ', jsonEncode(format), ','], "");
+      buffer.writeAll(['"format":', jsonEncode(format), ','], "");
     }
     if (formatter != null) {
-      buffer.writeAll(['"formatter": ', jsonEncode(formatter), ','], "");
+      buffer.writeAll(['"formatter":', jsonEncode(formatter), ','], "");
+    }
+    if (inside != null) {
+      buffer.writeAll(['"inside":', inside, ','], "");
     }
     if (nullFormat != null) {
-      buffer.writeAll(['"nullFormat": ', jsonEncode(nullFormat), ','], "");
+      buffer.writeAll(['"nullFormat":', jsonEncode(nullFormat), ','], "");
     }
     if (nullFormatter != null) {
-      buffer.writeAll(['"nullFormatter": ', jsonEncode(nullFormatter), ','], "");
+      buffer.writeAll(['"nullFormatter":', jsonEncode(nullFormatter), ','], "");
     }
     if (overflow != null) {
-      buffer.writeAll(['"overflow": ', jsonEncode(overflow), ','], "");
+      buffer.writeAll(['"overflow":', jsonEncode(overflow), ','], "");
+    }
+    if (padding != null) {
+      buffer.writeAll(['"padding":', padding, ','], "");
     }
     if (position != null) {
-      buffer.writeAll(['"position": ', jsonEncode(position), ','], "");
+      buffer.writeAll(['"position":', jsonEncode(position), ','], "");
     }
     if (rotation != null) {
-      buffer.writeAll(['"rotation": ', rotation, ','], "");
+      buffer.writeAll(['"rotation":', rotation, ','], "");
     }
     if (shadow != null) {
       buffer.write("{");
       for (var item in shadow!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (shape != null) {
-      buffer.writeAll(['"shape": ', jsonEncode(shape), ','], "");
+      buffer.writeAll(['"shape":', jsonEncode(shape), ','], "");
     }
     if (style != null) {
       buffer.write("{");
       for (var item in style!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (textPath != null) {
-      buffer.writeAll(['"textPath": ', textPath?.toJSON(), ","], "");
+      buffer.writeAll(['"textPath":', textPath?.toJSON(), ","], "");
     }
     if (useHTML != null) {
-      buffer.writeAll(['"useHTML": ', useHTML, ','], "");
+      buffer.writeAll(['"useHTML":', useHTML, ','], "");
+    }
+    if (verticalAlign != null) {
+      buffer.writeAll(['"verticalAlign":', jsonEncode(verticalAlign), ','], "");
     }
     if (x != null) {
-      buffer.writeAll(['"x": ', x, ','], "");
+      buffer.writeAll(['"x":', x, ','], "");
     }
     if (y != null) {
-      buffer.writeAll(['"y": ', y, ','], "");
+      buffer.writeAll(['"y":', y, ','], "");
     }
     if (zIndex != null) {
-      buffer.writeAll(['"zIndex": ', zIndex, ','], "");
+      buffer.writeAll(['"zIndex":', zIndex, ','], "");
     }
   }
 

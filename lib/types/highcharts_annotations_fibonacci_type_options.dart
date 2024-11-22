@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -55,11 +55,11 @@ class HighchartsAnnotationsFibonacciTypeOptions extends HighchartsOptionsBase {
   dynamic backgroundColors;
   double? height;
   List<HighchartsAnnotationsFibonacciTypeLabelsOptions>? labels;
+  HighchartsAnnotationsCrookedLineTypeLineOptions? line;
   String? lineColor;
   dynamic lineColors;
-  bool? reversed;
-  HighchartsAnnotationsCrookedLineTypeLineOptions? line;
   List<HighchartsAnnotationsCrookedLineTypePointsOptions>? points;
+  bool? reversed;
   double? xAxis;
   double? yAxis;
 
@@ -68,11 +68,11 @@ class HighchartsAnnotationsFibonacciTypeOptions extends HighchartsOptionsBase {
     this.backgroundColors,
     this.height,
     this.labels,
+    this.line,
     this.lineColor,
     this.lineColors,
-    this.reversed,
-    this.line,
     this.points,
+    this.reversed,
     this.xAxis,
     this.yAxis
   });
@@ -83,42 +83,42 @@ class HighchartsAnnotationsFibonacciTypeOptions extends HighchartsOptionsBase {
 
 
     if (backgroundColors != null) {
-      buffer.writeAll(['"backgroundColors": ', jsonEncode(backgroundColors), ','], "");
+      buffer.writeAll(['"backgroundColors":', jsonEncode(backgroundColors), ','], "");
     }
     if (height != null) {
-      buffer.writeAll(['"height": ', height, ','], "");
+      buffer.writeAll(['"height":', height, ','], "");
     }
     if (labels != null) {
-      buffer.write('"labels": [');
+      buffer.write('"labels":[');
       for (var item in labels!) {
         buffer.writeAll([item.toJSON(), ","], "");
       }
       buffer.write("],");
     }
+    if (line != null) {
+      buffer.writeAll(['"line":', line?.toJSON(), ","], "");
+    }
     if (lineColor != null) {
-      buffer.writeAll(['"lineColor": ', jsonEncode(lineColor), ','], "");
+      buffer.writeAll(['"lineColor":', jsonEncode(lineColor), ','], "");
     }
     if (lineColors != null) {
-      buffer.writeAll(['"lineColors": ', jsonEncode(lineColors), ','], "");
-    }
-    if (reversed != null) {
-      buffer.writeAll(['"reversed": ', reversed, ','], "");
-    }
-    if (line != null) {
-      buffer.writeAll(['"line": ', line?.toJSON(), ","], "");
+      buffer.writeAll(['"lineColors":', jsonEncode(lineColors), ','], "");
     }
     if (points != null) {
-      buffer.write('"points": [');
+      buffer.write('"points":[');
       for (var item in points!) {
         buffer.writeAll([item.toJSON(), ","], "");
       }
       buffer.write("],");
     }
+    if (reversed != null) {
+      buffer.writeAll(['"reversed":', reversed, ','], "");
+    }
     if (xAxis != null) {
-      buffer.writeAll(['"xAxis": ', xAxis, ','], "");
+      buffer.writeAll(['"xAxis":', xAxis, ','], "");
     }
     if (yAxis != null) {
-      buffer.writeAll(['"yAxis": ', yAxis, ','], "");
+      buffer.writeAll(['"yAxis":', yAxis, ','], "");
     }
   }
 

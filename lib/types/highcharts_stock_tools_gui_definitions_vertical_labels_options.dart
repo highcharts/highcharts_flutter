@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -71,16 +71,16 @@ class HighchartsStockToolsGuiDefinitionsVerticalLabelsOptions extends Highcharts
 
 
     if (items != null) {
-      buffer.writeAll(['"items": ', jsonEncode(items), ','], "");
+      buffer.writeAll(['"items":', jsonEncode(items), ','], "");
     }
     if (verticalArrow != null) {
-      buffer.writeAll(['"verticalArrow": ', verticalArrow?.toJSON(), ","], "");
+      buffer.writeAll(['"verticalArrow":', verticalArrow?.toJSON(), ","], "");
     }
     if (verticalCounter != null) {
-      buffer.writeAll(['"verticalCounter": ', verticalCounter?.toJSON(), ","], "");
+      buffer.writeAll(['"verticalCounter":', verticalCounter?.toJSON(), ","], "");
     }
     if (verticalLabel != null) {
-      buffer.writeAll(['"verticalLabel": ', verticalLabel?.toJSON(), ","], "");
+      buffer.writeAll(['"verticalLabel":', verticalLabel?.toJSON(), ","], "");
     }
   }
 

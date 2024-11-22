@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -76,22 +76,22 @@ class HighchartsLangAccessibilitySeriesOptions extends HighchartsOptionsBase {
 
 
     if (description != null) {
-      buffer.writeAll(['"description": ', jsonEncode(description), ','], "");
+      buffer.writeAll(['"description":', jsonEncode(description), ','], "");
     }
     if (nullPointValue != null) {
-      buffer.writeAll(['"nullPointValue": ', jsonEncode(nullPointValue), ','], "");
+      buffer.writeAll(['"nullPointValue":', jsonEncode(nullPointValue), ','], "");
     }
     if (pointAnnotationsDescription != null) {
-      buffer.writeAll(['"pointAnnotationsDescription": ', jsonEncode(pointAnnotationsDescription), ','], "");
+      buffer.writeAll(['"pointAnnotationsDescription":', jsonEncode(pointAnnotationsDescription), ','], "");
     }
     if (summary != null) {
-      buffer.writeAll(['"summary": ', summary?.toJSON(), ","], "");
+      buffer.writeAll(['"summary":', summary?.toJSON(), ","], "");
     }
     if (xAxisDescription != null) {
-      buffer.writeAll(['"xAxisDescription": ', jsonEncode(xAxisDescription), ','], "");
+      buffer.writeAll(['"xAxisDescription":', jsonEncode(xAxisDescription), ','], "");
     }
     if (yAxisDescription != null) {
-      buffer.writeAll(['"yAxisDescription": ', jsonEncode(yAxisDescription), ','], "");
+      buffer.writeAll(['"yAxisDescription":', jsonEncode(yAxisDescription), ','], "");
     }
   }
 

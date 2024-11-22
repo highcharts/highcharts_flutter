@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -48,21 +48,21 @@ export 'highcharts_bubble_series_marker_states_options.dart';
 
 class HighchartsBubbleSeriesMarkerOptions extends HighchartsOptionsBase {
 
+  String? fillColor;
   double? fillOpacity;
   String? lineColor;
   double? lineWidth;
   HighchartsBubbleSeriesMarkerStatesOptions? states;
   String? symbol;
-  String? fillColor;
 
 
   HighchartsBubbleSeriesMarkerOptions({
+    this.fillColor,
     this.fillOpacity,
     this.lineColor,
     this.lineWidth,
     this.states,
-    this.symbol,
-    this.fillColor
+    this.symbol
   });
 
   @override
@@ -70,23 +70,23 @@ class HighchartsBubbleSeriesMarkerOptions extends HighchartsOptionsBase {
     super.toOptionsJSON(buffer);
 
 
+    if (fillColor != null) {
+      buffer.writeAll(['"fillColor":', jsonEncode(fillColor), ','], "");
+    }
     if (fillOpacity != null) {
-      buffer.writeAll(['"fillOpacity": ', fillOpacity, ','], "");
+      buffer.writeAll(['"fillOpacity":', fillOpacity, ','], "");
     }
     if (lineColor != null) {
-      buffer.writeAll(['"lineColor": ', jsonEncode(lineColor), ','], "");
+      buffer.writeAll(['"lineColor":', jsonEncode(lineColor), ','], "");
     }
     if (lineWidth != null) {
-      buffer.writeAll(['"lineWidth": ', lineWidth, ','], "");
+      buffer.writeAll(['"lineWidth":', lineWidth, ','], "");
     }
     if (states != null) {
-      buffer.writeAll(['"states": ', states?.toJSON(), ","], "");
+      buffer.writeAll(['"states":', states?.toJSON(), ","], "");
     }
     if (symbol != null) {
-      buffer.writeAll(['"symbol": ', jsonEncode(symbol), ','], "");
-    }
-    if (fillColor != null) {
-      buffer.writeAll(['"fillColor": ', jsonEncode(fillColor), ','], "");
+      buffer.writeAll(['"symbol":', jsonEncode(symbol), ','], "");
     }
   }
 

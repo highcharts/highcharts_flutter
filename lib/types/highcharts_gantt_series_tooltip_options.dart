@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -61,10 +61,10 @@ class HighchartsGanttSeriesTooltipOptions extends HighchartsOptionsBase {
 
 
     if (headerFormat != null) {
-      buffer.writeAll(['"headerFormat": ', jsonEncode(headerFormat), ','], "");
+      buffer.writeAll(['"headerFormat":', jsonEncode(headerFormat), ','], "");
     }
     if (pointFormat != null) {
-      buffer.writeAll(['"pointFormat": ', jsonEncode(pointFormat), ','], "");
+      buffer.writeAll(['"pointFormat":', jsonEncode(pointFormat), ','], "");
     }
   }
 

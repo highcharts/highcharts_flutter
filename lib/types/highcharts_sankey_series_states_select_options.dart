@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -52,16 +52,16 @@ export 'highcharts_series_states_select_animation_options.dart';
  */
 class HighchartsSankeySeriesStatesSelectOptions extends HighchartsOptionsBase {
 
+  HighchartsSeriesStatesSelectAnimationOptions? animation;
   String? borderColor;
   String? color;
-  HighchartsSeriesStatesSelectAnimationOptions? animation;
   bool? enabled;
 
 
   HighchartsSankeySeriesStatesSelectOptions({
+    this.animation,
     this.borderColor,
     this.color,
-    this.animation,
     this.enabled
   });
 
@@ -70,17 +70,17 @@ class HighchartsSankeySeriesStatesSelectOptions extends HighchartsOptionsBase {
     super.toOptionsJSON(buffer);
 
 
+    if (animation != null) {
+      buffer.writeAll(['"animation":', animation?.toJSON(), ","], "");
+    }
     if (borderColor != null) {
-      buffer.writeAll(['"borderColor": ', jsonEncode(borderColor), ','], "");
+      buffer.writeAll(['"borderColor":', jsonEncode(borderColor), ','], "");
     }
     if (color != null) {
-      buffer.writeAll(['"color": ', jsonEncode(color), ','], "");
-    }
-    if (animation != null) {
-      buffer.writeAll(['"animation": ', animation?.toJSON(), ","], "");
+      buffer.writeAll(['"color":', jsonEncode(color), ','], "");
     }
     if (enabled != null) {
-      buffer.writeAll(['"enabled": ', enabled, ','], "");
+      buffer.writeAll(['"enabled":', enabled, ','], "");
     }
   }
 

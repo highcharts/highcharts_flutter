@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -104,62 +104,62 @@ class HighchartsLegendBubbleLegendOptions extends HighchartsOptionsBase {
 
 
     if (borderColor != null) {
-      buffer.writeAll(['"borderColor": ', jsonEncode(borderColor), ','], "");
+      buffer.writeAll(['"borderColor":', jsonEncode(borderColor), ','], "");
     }
     if (borderWidth != null) {
-      buffer.writeAll(['"borderWidth": ', borderWidth, ','], "");
+      buffer.writeAll(['"borderWidth":', borderWidth, ','], "");
     }
     if (className != null) {
-      buffer.writeAll(['"className": ', jsonEncode(className), ','], "");
+      buffer.writeAll(['"className":', jsonEncode(className), ','], "");
     }
     if (color != null) {
-      buffer.writeAll(['"color": ', jsonEncode(color), ','], "");
+      buffer.writeAll(['"color":', jsonEncode(color), ','], "");
     }
     if (connectorClassName != null) {
-      buffer.writeAll(['"connectorClassName": ', jsonEncode(connectorClassName), ','], "");
+      buffer.writeAll(['"connectorClassName":', jsonEncode(connectorClassName), ','], "");
     }
     if (connectorColor != null) {
-      buffer.writeAll(['"connectorColor": ', jsonEncode(connectorColor), ','], "");
+      buffer.writeAll(['"connectorColor":', jsonEncode(connectorColor), ','], "");
     }
     if (connectorDistance != null) {
-      buffer.writeAll(['"connectorDistance": ', connectorDistance, ','], "");
+      buffer.writeAll(['"connectorDistance":', connectorDistance, ','], "");
     }
     if (connectorWidth != null) {
-      buffer.writeAll(['"connectorWidth": ', connectorWidth, ','], "");
+      buffer.writeAll(['"connectorWidth":', connectorWidth, ','], "");
     }
     if (enabled != null) {
-      buffer.writeAll(['"enabled": ', enabled, ','], "");
+      buffer.writeAll(['"enabled":', enabled, ','], "");
     }
     if (labels != null) {
-      buffer.writeAll(['"labels": ', labels?.toJSON(), ","], "");
+      buffer.writeAll(['"labels":', labels?.toJSON(), ","], "");
     }
     if (legendIndex != null) {
-      buffer.writeAll(['"legendIndex": ', legendIndex, ','], "");
+      buffer.writeAll(['"legendIndex":', legendIndex, ','], "");
     }
     if (maxSize != null) {
-      buffer.writeAll(['"maxSize": ', maxSize, ','], "");
+      buffer.writeAll(['"maxSize":', maxSize, ','], "");
     }
     if (minSize != null) {
-      buffer.writeAll(['"minSize": ', minSize, ','], "");
+      buffer.writeAll(['"minSize":', minSize, ','], "");
     }
     if (ranges != null) {
-      buffer.write('"ranges": [');
+      buffer.write('"ranges":[');
       for (var item in ranges!) {
         buffer.writeAll([item.toJSON(), ","], "");
       }
       buffer.write("],");
     }
     if (sizeBy != null) {
-      buffer.writeAll(['"sizeBy": ', jsonEncode(sizeBy), ','], "");
+      buffer.writeAll(['"sizeBy":', jsonEncode(sizeBy), ','], "");
     }
     if (sizeByAbsoluteValue != null) {
-      buffer.writeAll(['"sizeByAbsoluteValue": ', sizeByAbsoluteValue, ','], "");
+      buffer.writeAll(['"sizeByAbsoluteValue":', sizeByAbsoluteValue, ','], "");
     }
     if (zIndex != null) {
-      buffer.writeAll(['"zIndex": ', zIndex, ','], "");
+      buffer.writeAll(['"zIndex":', zIndex, ','], "");
     }
     if (zThreshold != null) {
-      buffer.writeAll(['"zThreshold": ', zThreshold, ','], "");
+      buffer.writeAll(['"zThreshold":', zThreshold, ','], "");
     }
   }
 

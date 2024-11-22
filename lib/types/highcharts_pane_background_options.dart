@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -76,28 +76,28 @@ class HighchartsPaneBackgroundOptions extends HighchartsOptionsBase {
 
 
     if (backgroundColor != null) {
-      buffer.writeAll(['"backgroundColor": ', jsonEncode(backgroundColor), ','], "");
+      buffer.writeAll(['"backgroundColor":', jsonEncode(backgroundColor), ','], "");
     }
     if (borderColor != null) {
-      buffer.writeAll(['"borderColor": ', jsonEncode(borderColor), ','], "");
+      buffer.writeAll(['"borderColor":', jsonEncode(borderColor), ','], "");
     }
     if (borderRadius != null) {
-      buffer.writeAll(['"borderRadius": ', jsonEncode(borderRadius), ','], "");
+      buffer.writeAll(['"borderRadius":', jsonEncode(borderRadius), ','], "");
     }
     if (borderWidth != null) {
-      buffer.writeAll(['"borderWidth": ', borderWidth, ','], "");
+      buffer.writeAll(['"borderWidth":', borderWidth, ','], "");
     }
     if (className != null) {
-      buffer.writeAll(['"className": ', jsonEncode(className), ','], "");
+      buffer.writeAll(['"className":', jsonEncode(className), ','], "");
     }
     if (innerRadius != null) {
-      buffer.writeAll(['"innerRadius": ', jsonEncode(innerRadius), ','], "");
+      buffer.writeAll(['"innerRadius":', jsonEncode(innerRadius), ','], "");
     }
     if (outerRadius != null) {
-      buffer.writeAll(['"outerRadius": ', jsonEncode(outerRadius), ','], "");
+      buffer.writeAll(['"outerRadius":', jsonEncode(outerRadius), ','], "");
     }
     if (shape != null) {
-      buffer.writeAll(['"shape": ', jsonEncode(shape), ','], "");
+      buffer.writeAll(['"shape":', jsonEncode(shape), ','], "");
     }
   }
 

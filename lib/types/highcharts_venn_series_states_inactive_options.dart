@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -48,15 +48,15 @@ export 'highcharts_series_states_inactive_animation_options.dart';
 
 class HighchartsVennSeriesStatesInactiveOptions extends HighchartsOptionsBase {
 
-  double? opacity;
   HighchartsSeriesStatesInactiveAnimationOptions? animation;
   bool? enabled;
+  double? opacity;
 
 
   HighchartsVennSeriesStatesInactiveOptions({
-    this.opacity,
     this.animation,
-    this.enabled
+    this.enabled,
+    this.opacity
   });
 
   @override
@@ -64,14 +64,14 @@ class HighchartsVennSeriesStatesInactiveOptions extends HighchartsOptionsBase {
     super.toOptionsJSON(buffer);
 
 
-    if (opacity != null) {
-      buffer.writeAll(['"opacity": ', opacity, ','], "");
-    }
     if (animation != null) {
-      buffer.writeAll(['"animation": ', animation?.toJSON(), ","], "");
+      buffer.writeAll(['"animation":', animation?.toJSON(), ","], "");
     }
     if (enabled != null) {
-      buffer.writeAll(['"enabled": ', enabled, ','], "");
+      buffer.writeAll(['"enabled":', enabled, ','], "");
+    }
+    if (opacity != null) {
+      buffer.writeAll(['"opacity":', opacity, ','], "");
     }
   }
 

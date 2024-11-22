@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -75,19 +75,19 @@ class HighchartsStockToolsGuiDefinitionsCrookedLinesOptions extends HighchartsOp
 
 
     if (crooked3 != null) {
-      buffer.writeAll(['"crooked3": ', crooked3?.toJSON(), ","], "");
+      buffer.writeAll(['"crooked3":', crooked3?.toJSON(), ","], "");
     }
     if (crooked5 != null) {
-      buffer.writeAll(['"crooked5": ', crooked5?.toJSON(), ","], "");
+      buffer.writeAll(['"crooked5":', crooked5?.toJSON(), ","], "");
     }
     if (elliott3 != null) {
-      buffer.writeAll(['"elliott3": ', elliott3?.toJSON(), ","], "");
+      buffer.writeAll(['"elliott3":', elliott3?.toJSON(), ","], "");
     }
     if (elliott5 != null) {
-      buffer.writeAll(['"elliott5": ', elliott5?.toJSON(), ","], "");
+      buffer.writeAll(['"elliott5":', elliott5?.toJSON(), ","], "");
     }
     if (items != null) {
-      buffer.writeAll(['"items": ', jsonEncode(items), ','], "");
+      buffer.writeAll(['"items":', jsonEncode(items), ','], "");
     }
   }
 

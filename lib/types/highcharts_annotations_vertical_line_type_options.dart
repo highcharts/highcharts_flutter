@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -77,26 +77,26 @@ class HighchartsAnnotationsVerticalLineTypeOptions extends HighchartsOptionsBase
 
 
     if (connector != null) {
-      buffer.writeAll(['"connector": ', connector?.toJSON(), ","], "");
+      buffer.writeAll(['"connector":', connector?.toJSON(), ","], "");
     }
     if (label != null) {
-      buffer.writeAll(['"label": ', label?.toJSON(), ","], "");
+      buffer.writeAll(['"label":', label?.toJSON(), ","], "");
     }
     if (line != null) {
-      buffer.writeAll(['"line": ', line?.toJSON(), ","], "");
+      buffer.writeAll(['"line":', line?.toJSON(), ","], "");
     }
     if (points != null) {
-      buffer.write('"points": [');
+      buffer.write('"points":[');
       for (var item in points!) {
         buffer.writeAll([item.toJSON(), ","], "");
       }
       buffer.write("],");
     }
     if (xAxis != null) {
-      buffer.writeAll(['"xAxis": ', xAxis, ','], "");
+      buffer.writeAll(['"xAxis":', xAxis, ','], "");
     }
     if (yAxis != null) {
-      buffer.writeAll(['"yAxis": ', yAxis, ','], "");
+      buffer.writeAll(['"yAxis":', yAxis, ','], "");
     }
   }
 

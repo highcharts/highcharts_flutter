@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -75,19 +75,19 @@ class HighchartsStockToolsGuiDefinitionsFlagsOptions extends HighchartsOptionsBa
 
 
     if (flagCirclepin != null) {
-      buffer.writeAll(['"flagCirclepin": ', flagCirclepin?.toJSON(), ","], "");
+      buffer.writeAll(['"flagCirclepin":', flagCirclepin?.toJSON(), ","], "");
     }
     if (flagDiamondpin != null) {
-      buffer.writeAll(['"flagDiamondpin": ', flagDiamondpin?.toJSON(), ","], "");
+      buffer.writeAll(['"flagDiamondpin":', flagDiamondpin?.toJSON(), ","], "");
     }
     if (flagSimplepin != null) {
-      buffer.writeAll(['"flagSimplepin": ', flagSimplepin?.toJSON(), ","], "");
+      buffer.writeAll(['"flagSimplepin":', flagSimplepin?.toJSON(), ","], "");
     }
     if (flagSquarepin != null) {
-      buffer.writeAll(['"flagSquarepin": ', flagSquarepin?.toJSON(), ","], "");
+      buffer.writeAll(['"flagSquarepin":', flagSquarepin?.toJSON(), ","], "");
     }
     if (items != null) {
-      buffer.writeAll(['"items": ', jsonEncode(items), ','], "");
+      buffer.writeAll(['"items":', jsonEncode(items), ','], "");
     }
   }
 

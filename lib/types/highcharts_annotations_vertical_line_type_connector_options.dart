@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -80,38 +80,38 @@ class HighchartsAnnotationsVerticalLineTypeConnectorOptions extends HighchartsOp
 
 
     if (markerEnd != null) {
-      buffer.writeAll(['"markerEnd": ', jsonEncode(markerEnd), ','], "");
+      buffer.writeAll(['"markerEnd":', jsonEncode(markerEnd), ','], "");
     }
     if (strokeWidth != null) {
-      buffer.writeAll(['"strokeWidth": ', strokeWidth, ','], "");
+      buffer.writeAll(['"strokeWidth":', strokeWidth, ','], "");
     }
     if (dashStyle != null) {
-      buffer.writeAll(['"dashStyle": ', jsonEncode(dashStyle), ','], "");
+      buffer.writeAll(['"dashStyle":', jsonEncode(dashStyle), ','], "");
     }
     if (fill != null) {
       buffer.write("{");
       for (var item in fill!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (ry != null) {
-      buffer.writeAll(['"ry": ', ry, ','], "");
+      buffer.writeAll(['"ry":', ry, ','], "");
     }
     if (snap != null) {
-      buffer.writeAll(['"snap": ', snap, ','], "");
+      buffer.writeAll(['"snap":', snap, ','], "");
     }
     if (src != null) {
-      buffer.writeAll(['"src": ', jsonEncode(src), ','], "");
+      buffer.writeAll(['"src":', jsonEncode(src), ','], "");
     }
     if (stroke != null) {
-      buffer.writeAll(['"stroke": ', jsonEncode(stroke), ','], "");
+      buffer.writeAll(['"stroke":', jsonEncode(stroke), ','], "");
     }
     if (xAxis != null) {
-      buffer.writeAll(['"xAxis": ', xAxis, ','], "");
+      buffer.writeAll(['"xAxis":', xAxis, ','], "");
     }
     if (yAxis != null) {
-      buffer.writeAll(['"yAxis": ', yAxis, ','], "");
+      buffer.writeAll(['"yAxis":', yAxis, ','], "");
     }
   }
 

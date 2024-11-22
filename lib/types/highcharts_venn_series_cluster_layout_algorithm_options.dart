@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -72,19 +72,19 @@ class HighchartsVennSeriesClusterLayoutAlgorithmOptions extends HighchartsOption
 
 
     if (distance != null) {
-      buffer.writeAll(['"distance": ', jsonEncode(distance), ','], "");
+      buffer.writeAll(['"distance":', jsonEncode(distance), ','], "");
     }
     if (gridSize != null) {
-      buffer.writeAll(['"gridSize": ', jsonEncode(gridSize), ','], "");
+      buffer.writeAll(['"gridSize":', jsonEncode(gridSize), ','], "");
     }
     if (iterations != null) {
-      buffer.writeAll(['"iterations": ', iterations, ','], "");
+      buffer.writeAll(['"iterations":', iterations, ','], "");
     }
     if (kmeansThreshold != null) {
-      buffer.writeAll(['"kmeansThreshold": ', kmeansThreshold, ','], "");
+      buffer.writeAll(['"kmeansThreshold":', kmeansThreshold, ','], "");
     }
     if (type != null) {
-      buffer.writeAll(['"type": ', jsonEncode(type), ','], "");
+      buffer.writeAll(['"type":', jsonEncode(type), ','], "");
     }
   }
 

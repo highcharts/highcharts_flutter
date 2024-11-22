@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -90,41 +90,41 @@ class HighchartsSeriesLabelOptions extends HighchartsOptionsBase {
 
 
     if (boxesToAvoid != null) {
-      buffer.write('"boxesToAvoid": [');
+      buffer.write('"boxesToAvoid":[');
       for (var item in boxesToAvoid!) {
         buffer.writeAll([jsonEncode(item), ","], "");
       }
       buffer.write("],");
     }
     if (connectorAllowed != null) {
-      buffer.writeAll(['"connectorAllowed": ', connectorAllowed, ','], "");
+      buffer.writeAll(['"connectorAllowed":', connectorAllowed, ','], "");
     }
     if (connectorNeighbourDistance != null) {
-      buffer.writeAll(['"connectorNeighbourDistance": ', connectorNeighbourDistance, ','], "");
+      buffer.writeAll(['"connectorNeighbourDistance":', connectorNeighbourDistance, ','], "");
     }
     if (enabled != null) {
-      buffer.writeAll(['"enabled": ', enabled, ','], "");
+      buffer.writeAll(['"enabled":', enabled, ','], "");
     }
     if (format != null) {
-      buffer.writeAll(['"format": ', jsonEncode(format), ','], "");
+      buffer.writeAll(['"format":', jsonEncode(format), ','], "");
     }
     if (formatter != null) {
-      buffer.writeAll(['"formatter": ', jsonEncode(formatter), ','], "");
+      buffer.writeAll(['"formatter":', jsonEncode(formatter), ','], "");
     }
     if (maxFontSize != null) {
-      buffer.writeAll(['"maxFontSize": ', maxFontSize, ','], "");
+      buffer.writeAll(['"maxFontSize":', maxFontSize, ','], "");
     }
     if (minFontSize != null) {
-      buffer.writeAll(['"minFontSize": ', minFontSize, ','], "");
+      buffer.writeAll(['"minFontSize":', minFontSize, ','], "");
     }
     if (onArea != null) {
-      buffer.writeAll(['"onArea": ', onArea, ','], "");
+      buffer.writeAll(['"onArea":', onArea, ','], "");
     }
     if (style != null) {
-      buffer.writeAll(['"style": ', style?.toJSON(), ","], "");
+      buffer.writeAll(['"style":', style?.toJSON(), ","], "");
     }
     if (useHTML != null) {
-      buffer.writeAll(['"useHTML": ', useHTML, ','], "");
+      buffer.writeAll(['"useHTML":', useHTML, ','], "");
     }
   }
 

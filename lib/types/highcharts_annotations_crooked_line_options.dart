@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -74,16 +74,16 @@ class HighchartsAnnotationsCrookedLineOptions extends HighchartsOptionsBase {
 
 
     if (controlPointOptions != null) {
-      buffer.writeAll(['"controlPointOptions": ', jsonEncode(controlPointOptions), ','], "");
+      buffer.writeAll(['"controlPointOptions":', jsonEncode(controlPointOptions), ','], "");
     }
     if (labelOptions != null) {
-      buffer.writeAll(['"labelOptions": ', labelOptions?.toJSON(), ","], "");
+      buffer.writeAll(['"labelOptions":', labelOptions?.toJSON(), ","], "");
     }
     if (shapeOptions != null) {
-      buffer.writeAll(['"shapeOptions": ', shapeOptions?.toJSON(), ","], "");
+      buffer.writeAll(['"shapeOptions":', shapeOptions?.toJSON(), ","], "");
     }
     if (typeOptions != null) {
-      buffer.writeAll(['"typeOptions": ', typeOptions?.toJSON(), ","], "");
+      buffer.writeAll(['"typeOptions":', typeOptions?.toJSON(), ","], "");
     }
   }
 

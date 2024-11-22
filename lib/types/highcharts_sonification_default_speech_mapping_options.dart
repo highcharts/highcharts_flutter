@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -96,22 +96,22 @@ class HighchartsSonificationDefaultSpeechMappingOptions extends HighchartsOption
 
 
     if (pitch != null) {
-      buffer.writeAll(['"pitch": ', pitch?.toJSON(), ","], "");
+      buffer.writeAll(['"pitch":', pitch?.toJSON(), ","], "");
     }
     if (playDelay != null) {
-      buffer.writeAll(['"playDelay": ', playDelay?.toJSON(), ","], "");
+      buffer.writeAll(['"playDelay":', playDelay?.toJSON(), ","], "");
     }
     if (rate != null) {
-      buffer.writeAll(['"rate": ', rate?.toJSON(), ","], "");
+      buffer.writeAll(['"rate":', rate?.toJSON(), ","], "");
     }
     if (text != null) {
-      buffer.writeAll(['"text": ', jsonEncode(text), ','], "");
+      buffer.writeAll(['"text":', jsonEncode(text), ','], "");
     }
     if (time != null) {
-      buffer.writeAll(['"time": ', time?.toJSON(), ","], "");
+      buffer.writeAll(['"time":', time?.toJSON(), ","], "");
     }
     if (volume != null) {
-      buffer.writeAll(['"volume": ', volume?.toJSON(), ","], "");
+      buffer.writeAll(['"volume":', volume?.toJSON(), ","], "");
     }
   }
 

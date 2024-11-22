@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -82,7 +82,6 @@ export 'highcharts_wordcloud_series_data_events_options.dart';
  */
 class HighchartsWordcloudSeriesDataOptions extends HighchartsOptionsBase {
 
-  double? weight;
   HighchartsWordcloudSeriesDataAccessibilityOptions? accessibility;
   String? className;
   String? color;
@@ -95,10 +94,10 @@ class HighchartsWordcloudSeriesDataOptions extends HighchartsOptionsBase {
   String? id;
   double? labelrank;
   bool? selected;
+  double? weight;
 
 
   HighchartsWordcloudSeriesDataOptions({
-    this.weight,
     this.accessibility,
     this.className,
     this.color,
@@ -110,7 +109,8 @@ class HighchartsWordcloudSeriesDataOptions extends HighchartsOptionsBase {
     this.events,
     this.id,
     this.labelrank,
-    this.selected
+    this.selected,
+    this.weight
   });
 
   @override
@@ -118,52 +118,52 @@ class HighchartsWordcloudSeriesDataOptions extends HighchartsOptionsBase {
     super.toOptionsJSON(buffer);
 
 
-    if (weight != null) {
-      buffer.writeAll(['"weight": ', weight, ','], "");
-    }
     if (accessibility != null) {
-      buffer.writeAll(['"accessibility": ', accessibility?.toJSON(), ","], "");
+      buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ","], "");
     }
     if (className != null) {
-      buffer.writeAll(['"className": ', jsonEncode(className), ','], "");
+      buffer.writeAll(['"className":', jsonEncode(className), ','], "");
     }
     if (color != null) {
-      buffer.writeAll(['"color": ', jsonEncode(color), ','], "");
+      buffer.writeAll(['"color":', jsonEncode(color), ','], "");
     }
     if (colorIndex != null) {
-      buffer.writeAll(['"colorIndex": ', colorIndex, ','], "");
+      buffer.writeAll(['"colorIndex":', colorIndex, ','], "");
     }
     if (custom != null) {
       buffer.write("{");
       for (var item in custom!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (dataLabels != null) {
-      buffer.write('"dataLabels": [');
+      buffer.write('"dataLabels":[');
       for (var item in dataLabels!) {
         buffer.writeAll([item.toJSON(), ","], "");
       }
       buffer.write("],");
     }
     if (description != null) {
-      buffer.writeAll(['"description": ', jsonEncode(description), ','], "");
+      buffer.writeAll(['"description":', jsonEncode(description), ','], "");
     }
     if (dragDrop != null) {
-      buffer.writeAll(['"dragDrop": ', dragDrop?.toJSON(), ","], "");
+      buffer.writeAll(['"dragDrop":', dragDrop?.toJSON(), ","], "");
     }
     if (events != null) {
-      buffer.writeAll(['"events": ', events?.toJSON(), ","], "");
+      buffer.writeAll(['"events":', events?.toJSON(), ","], "");
     }
     if (id != null) {
-      buffer.writeAll(['"id": ', jsonEncode(id), ','], "");
+      buffer.writeAll(['"id":', jsonEncode(id), ','], "");
     }
     if (labelrank != null) {
-      buffer.writeAll(['"labelrank": ', labelrank, ','], "");
+      buffer.writeAll(['"labelrank":', labelrank, ','], "");
     }
     if (selected != null) {
-      buffer.writeAll(['"selected": ', selected, ','], "");
+      buffer.writeAll(['"selected":', selected, ','], "");
+    }
+    if (weight != null) {
+      buffer.writeAll(['"weight":', weight, ','], "");
     }
   }
 

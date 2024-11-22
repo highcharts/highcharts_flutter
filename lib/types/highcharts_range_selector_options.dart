@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -117,88 +117,88 @@ class HighchartsRangeSelectorOptions extends HighchartsOptionsBase {
 
 
     if (allButtonsEnabled != null) {
-      buffer.writeAll(['"allButtonsEnabled": ', allButtonsEnabled, ','], "");
+      buffer.writeAll(['"allButtonsEnabled":', allButtonsEnabled, ','], "");
     }
     if (buttonPosition != null) {
-      buffer.writeAll(['"buttonPosition": ', buttonPosition?.toJSON(), ","], "");
+      buffer.writeAll(['"buttonPosition":', buttonPosition?.toJSON(), ","], "");
     }
     if (buttonSpacing != null) {
-      buffer.writeAll(['"buttonSpacing": ', buttonSpacing, ','], "");
+      buffer.writeAll(['"buttonSpacing":', buttonSpacing, ','], "");
     }
     if (buttonTheme != null) {
-      buffer.writeAll(['"buttonTheme": ', jsonEncode(buttonTheme), ','], "");
+      buffer.writeAll(['"buttonTheme":', jsonEncode(buttonTheme), ','], "");
     }
     if (buttons != null) {
-      buffer.write('"buttons": [');
+      buffer.write('"buttons":[');
       for (var item in buttons!) {
         buffer.writeAll([item.toJSON(), ","], "");
       }
       buffer.write("],");
     }
     if (dropdown != null) {
-      buffer.writeAll(['"dropdown": ', jsonEncode(dropdown), ','], "");
+      buffer.writeAll(['"dropdown":', jsonEncode(dropdown), ','], "");
     }
     if (enabled != null) {
-      buffer.writeAll(['"enabled": ', enabled, ','], "");
+      buffer.writeAll(['"enabled":', enabled, ','], "");
     }
     if (floating != null) {
-      buffer.writeAll(['"floating": ', floating, ','], "");
+      buffer.writeAll(['"floating":', floating, ','], "");
     }
     if (height != null) {
-      buffer.writeAll(['"height": ', height, ','], "");
+      buffer.writeAll(['"height":', height, ','], "");
     }
     if (inputBoxBorderColor != null) {
-      buffer.writeAll(['"inputBoxBorderColor": ', jsonEncode(inputBoxBorderColor), ','], "");
+      buffer.writeAll(['"inputBoxBorderColor":', jsonEncode(inputBoxBorderColor), ','], "");
     }
     if (inputBoxHeight != null) {
-      buffer.writeAll(['"inputBoxHeight": ', inputBoxHeight, ','], "");
+      buffer.writeAll(['"inputBoxHeight":', inputBoxHeight, ','], "");
     }
     if (inputBoxWidth != null) {
-      buffer.writeAll(['"inputBoxWidth": ', inputBoxWidth, ','], "");
+      buffer.writeAll(['"inputBoxWidth":', inputBoxWidth, ','], "");
     }
     if (inputDateFormat != null) {
-      buffer.writeAll(['"inputDateFormat": ', jsonEncode(inputDateFormat), ','], "");
+      buffer.writeAll(['"inputDateFormat":', jsonEncode(inputDateFormat), ','], "");
     }
     if (inputDateParser != null) {
-      buffer.writeAll(['"inputDateParser": ', jsonEncode(inputDateParser), ','], "");
+      buffer.writeAll(['"inputDateParser":', jsonEncode(inputDateParser), ','], "");
     }
     if (inputEditDateFormat != null) {
-      buffer.writeAll(['"inputEditDateFormat": ', jsonEncode(inputEditDateFormat), ','], "");
+      buffer.writeAll(['"inputEditDateFormat":', jsonEncode(inputEditDateFormat), ','], "");
     }
     if (inputEnabled != null) {
-      buffer.writeAll(['"inputEnabled": ', inputEnabled, ','], "");
+      buffer.writeAll(['"inputEnabled":', inputEnabled, ','], "");
     }
     if (inputPosition != null) {
-      buffer.writeAll(['"inputPosition": ', inputPosition?.toJSON(), ","], "");
+      buffer.writeAll(['"inputPosition":', inputPosition?.toJSON(), ","], "");
     }
     if (inputSpacing != null) {
-      buffer.writeAll(['"inputSpacing": ', inputSpacing, ','], "");
+      buffer.writeAll(['"inputSpacing":', inputSpacing, ','], "");
     }
     if (inputStyle != null) {
       buffer.write("{");
       for (var item in inputStyle!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (labelStyle != null) {
       buffer.write("{");
       for (var item in labelStyle!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (selected != null) {
-      buffer.writeAll(['"selected": ', selected, ','], "");
+      buffer.writeAll(['"selected":', selected, ','], "");
     }
     if (verticalAlign != null) {
-      buffer.writeAll(['"verticalAlign": ', jsonEncode(verticalAlign), ','], "");
+      buffer.writeAll(['"verticalAlign":', jsonEncode(verticalAlign), ','], "");
     }
     if (x != null) {
-      buffer.writeAll(['"x": ', x, ','], "");
+      buffer.writeAll(['"x":', x, ','], "");
     }
     if (y != null) {
-      buffer.writeAll(['"y": ', y, ','], "");
+      buffer.writeAll(['"y":', y, ','], "");
     }
   }
 

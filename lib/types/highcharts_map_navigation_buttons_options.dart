@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -73,10 +73,10 @@ class HighchartsMapNavigationButtonsOptions extends HighchartsOptionsBase {
 
 
     if (zoomIn != null) {
-      buffer.writeAll(['"zoomIn": ', zoomIn?.toJSON(), ","], "");
+      buffer.writeAll(['"zoomIn":', zoomIn?.toJSON(), ","], "");
     }
     if (zoomOut != null) {
-      buffer.writeAll(['"zoomOut": ', zoomOut?.toJSON(), ","], "");
+      buffer.writeAll(['"zoomOut":', zoomOut?.toJSON(), ","], "");
     }
   }
 

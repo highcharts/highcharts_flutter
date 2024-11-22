@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -66,12 +66,12 @@ class HighchartsXRangeSeriesDataPartialFillOptions extends HighchartsOptionsBase
 
 
     if (amount != null) {
-      buffer.writeAll(['"amount": ', amount, ','], "");
+      buffer.writeAll(['"amount":', amount, ','], "");
     }
     if (fill != null) {
       buffer.write("{");
       for (var item in fill!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }

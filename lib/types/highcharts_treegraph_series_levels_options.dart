@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -26,9 +26,9 @@
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-import 'highcharts_treegraph_series_levels_marker_options.dart';
 import 'highcharts_treegraph_series_levels_color_variation_options.dart';
 import 'highcharts_treegraph_series_levels_data_labels_options.dart';
+import 'highcharts_treegraph_series_levels_marker_options.dart';
 
 
 /* *
@@ -38,9 +38,9 @@ import 'highcharts_treegraph_series_levels_data_labels_options.dart';
  * */
 
 
-export 'highcharts_treegraph_series_levels_marker_options.dart';
 export 'highcharts_treegraph_series_levels_color_variation_options.dart';
 export 'highcharts_treegraph_series_levels_data_labels_options.dart';
+export 'highcharts_treegraph_series_levels_marker_options.dart';
 
 
 /* *
@@ -52,27 +52,27 @@ export 'highcharts_treegraph_series_levels_data_labels_options.dart';
 
 class HighchartsTreegraphSeriesLevelsOptions extends HighchartsOptionsBase {
 
-  bool? collapsed;
-  HighchartsTreegraphSeriesLevelsMarkerOptions? marker;
   String? borderColor;
   String? borderDashStyle;
   double? borderWidth;
+  bool? collapsed;
   String? color;
   HighchartsTreegraphSeriesLevelsColorVariationOptions? colorVariation;
   HighchartsTreegraphSeriesLevelsDataLabelsOptions? dataLabels;
   double? level;
+  HighchartsTreegraphSeriesLevelsMarkerOptions? marker;
 
 
   HighchartsTreegraphSeriesLevelsOptions({
-    this.collapsed,
-    this.marker,
     this.borderColor,
     this.borderDashStyle,
     this.borderWidth,
+    this.collapsed,
     this.color,
     this.colorVariation,
     this.dataLabels,
-    this.level
+    this.level,
+    this.marker
   });
 
   @override
@@ -80,32 +80,32 @@ class HighchartsTreegraphSeriesLevelsOptions extends HighchartsOptionsBase {
     super.toOptionsJSON(buffer);
 
 
-    if (collapsed != null) {
-      buffer.writeAll(['"collapsed": ', collapsed, ','], "");
-    }
-    if (marker != null) {
-      buffer.writeAll(['"marker": ', marker?.toJSON(), ","], "");
-    }
     if (borderColor != null) {
-      buffer.writeAll(['"borderColor": ', jsonEncode(borderColor), ','], "");
+      buffer.writeAll(['"borderColor":', jsonEncode(borderColor), ','], "");
     }
     if (borderDashStyle != null) {
-      buffer.writeAll(['"borderDashStyle": ', jsonEncode(borderDashStyle), ','], "");
+      buffer.writeAll(['"borderDashStyle":', jsonEncode(borderDashStyle), ','], "");
     }
     if (borderWidth != null) {
-      buffer.writeAll(['"borderWidth": ', borderWidth, ','], "");
+      buffer.writeAll(['"borderWidth":', borderWidth, ','], "");
+    }
+    if (collapsed != null) {
+      buffer.writeAll(['"collapsed":', collapsed, ','], "");
     }
     if (color != null) {
-      buffer.writeAll(['"color": ', jsonEncode(color), ','], "");
+      buffer.writeAll(['"color":', jsonEncode(color), ','], "");
     }
     if (colorVariation != null) {
-      buffer.writeAll(['"colorVariation": ', colorVariation?.toJSON(), ","], "");
+      buffer.writeAll(['"colorVariation":', colorVariation?.toJSON(), ","], "");
     }
     if (dataLabels != null) {
-      buffer.writeAll(['"dataLabels": ', dataLabels?.toJSON(), ","], "");
+      buffer.writeAll(['"dataLabels":', dataLabels?.toJSON(), ","], "");
     }
     if (level != null) {
-      buffer.writeAll(['"level": ', level, ','], "");
+      buffer.writeAll(['"level":', level, ','], "");
+    }
+    if (marker != null) {
+      buffer.writeAll(['"marker":', marker?.toJSON(), ","], "");
     }
   }
 

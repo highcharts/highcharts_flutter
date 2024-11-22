@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -65,16 +65,16 @@ class HighchartsAnnotationsControlPointStyleOptions extends HighchartsOptionsBas
 
 
     if (cursor != null) {
-      buffer.writeAll(['"cursor": ', jsonEncode(cursor), ','], "");
+      buffer.writeAll(['"cursor":', jsonEncode(cursor), ','], "");
     }
     if (fill != null) {
-      buffer.writeAll(['"fill": ', jsonEncode(fill), ','], "");
+      buffer.writeAll(['"fill":', jsonEncode(fill), ','], "");
     }
     if (stroke != null) {
-      buffer.writeAll(['"stroke": ', jsonEncode(stroke), ','], "");
+      buffer.writeAll(['"stroke":', jsonEncode(stroke), ','], "");
     }
     if (strokeWidth != null) {
-      buffer.writeAll(['"stroke-width": ', strokeWidth, ','], "");
+      buffer.writeAll(['"stroke-width":', strokeWidth, ','], "");
     }
   }
 

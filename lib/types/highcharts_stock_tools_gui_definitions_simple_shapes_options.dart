@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -75,19 +75,19 @@ class HighchartsStockToolsGuiDefinitionsSimpleShapesOptions extends HighchartsOp
 
 
     if (circle != null) {
-      buffer.writeAll(['"circle": ', circle?.toJSON(), ","], "");
+      buffer.writeAll(['"circle":', circle?.toJSON(), ","], "");
     }
     if (ellipse != null) {
-      buffer.writeAll(['"ellipse": ', ellipse?.toJSON(), ","], "");
+      buffer.writeAll(['"ellipse":', ellipse?.toJSON(), ","], "");
     }
     if (items != null) {
-      buffer.writeAll(['"items": ', jsonEncode(items), ','], "");
+      buffer.writeAll(['"items":', jsonEncode(items), ','], "");
     }
     if (label != null) {
-      buffer.writeAll(['"label": ', label?.toJSON(), ","], "");
+      buffer.writeAll(['"label":', label?.toJSON(), ","], "");
     }
     if (rectangle != null) {
-      buffer.writeAll(['"rectangle": ', rectangle?.toJSON(), ","], "");
+      buffer.writeAll(['"rectangle":', rectangle?.toJSON(), ","], "");
     }
   }
 

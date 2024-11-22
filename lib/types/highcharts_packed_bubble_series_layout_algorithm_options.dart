@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -62,14 +62,14 @@ class HighchartsPackedBubbleSeriesLayoutAlgorithmOptions extends HighchartsOptio
   double? gravitationalConstant;
   HighchartsPackedBubbleSeriesLayoutAlgorithmInitialPositionRadiusOptions? initialPositionRadius;
   String? initialPositions;
+  String? integration;
+  double? linkLength;
   double? maxIterations;
   double? maxSpeed;
   bool? parentNodeLimit;
   HighchartsPackedBubbleSeriesLayoutAlgorithmParentNodeOptions? parentNodeOptions;
   bool? seriesInteraction;
   bool? splitSeries;
-  String? integration;
-  double? linkLength;
   String? type;
 
 
@@ -81,14 +81,14 @@ class HighchartsPackedBubbleSeriesLayoutAlgorithmOptions extends HighchartsOptio
     this.gravitationalConstant,
     this.initialPositionRadius,
     this.initialPositions,
+    this.integration,
+    this.linkLength,
     this.maxIterations,
     this.maxSpeed,
     this.parentNodeLimit,
     this.parentNodeOptions,
     this.seriesInteraction,
     this.splitSeries,
-    this.integration,
-    this.linkLength,
     this.type
   });
 
@@ -98,52 +98,52 @@ class HighchartsPackedBubbleSeriesLayoutAlgorithmOptions extends HighchartsOptio
 
 
     if (bubblePadding != null) {
-      buffer.writeAll(['"bubblePadding": ', bubblePadding, ','], "");
+      buffer.writeAll(['"bubblePadding":', bubblePadding, ','], "");
     }
     if (dragBetweenSeries != null) {
-      buffer.writeAll(['"dragBetweenSeries": ', dragBetweenSeries, ','], "");
+      buffer.writeAll(['"dragBetweenSeries":', dragBetweenSeries, ','], "");
     }
     if (enableSimulation != null) {
-      buffer.writeAll(['"enableSimulation": ', enableSimulation, ','], "");
+      buffer.writeAll(['"enableSimulation":', enableSimulation, ','], "");
     }
     if (friction != null) {
-      buffer.writeAll(['"friction": ', friction, ','], "");
+      buffer.writeAll(['"friction":', friction, ','], "");
     }
     if (gravitationalConstant != null) {
-      buffer.writeAll(['"gravitationalConstant": ', gravitationalConstant, ','], "");
+      buffer.writeAll(['"gravitationalConstant":', gravitationalConstant, ','], "");
     }
     if (initialPositionRadius != null) {
-      buffer.writeAll(['"initialPositionRadius": ', initialPositionRadius?.toJSON(), ","], "");
+      buffer.writeAll(['"initialPositionRadius":', initialPositionRadius?.toJSON(), ","], "");
     }
     if (initialPositions != null) {
-      buffer.writeAll(['"initialPositions": ', jsonEncode(initialPositions), ','], "");
-    }
-    if (maxIterations != null) {
-      buffer.writeAll(['"maxIterations": ', maxIterations, ','], "");
-    }
-    if (maxSpeed != null) {
-      buffer.writeAll(['"maxSpeed": ', maxSpeed, ','], "");
-    }
-    if (parentNodeLimit != null) {
-      buffer.writeAll(['"parentNodeLimit": ', parentNodeLimit, ','], "");
-    }
-    if (parentNodeOptions != null) {
-      buffer.writeAll(['"parentNodeOptions": ', parentNodeOptions?.toJSON(), ","], "");
-    }
-    if (seriesInteraction != null) {
-      buffer.writeAll(['"seriesInteraction": ', seriesInteraction, ','], "");
-    }
-    if (splitSeries != null) {
-      buffer.writeAll(['"splitSeries": ', splitSeries, ','], "");
+      buffer.writeAll(['"initialPositions":', jsonEncode(initialPositions), ','], "");
     }
     if (integration != null) {
-      buffer.writeAll(['"integration": ', jsonEncode(integration), ','], "");
+      buffer.writeAll(['"integration":', jsonEncode(integration), ','], "");
     }
     if (linkLength != null) {
-      buffer.writeAll(['"linkLength": ', linkLength, ','], "");
+      buffer.writeAll(['"linkLength":', linkLength, ','], "");
+    }
+    if (maxIterations != null) {
+      buffer.writeAll(['"maxIterations":', maxIterations, ','], "");
+    }
+    if (maxSpeed != null) {
+      buffer.writeAll(['"maxSpeed":', maxSpeed, ','], "");
+    }
+    if (parentNodeLimit != null) {
+      buffer.writeAll(['"parentNodeLimit":', parentNodeLimit, ','], "");
+    }
+    if (parentNodeOptions != null) {
+      buffer.writeAll(['"parentNodeOptions":', parentNodeOptions?.toJSON(), ","], "");
+    }
+    if (seriesInteraction != null) {
+      buffer.writeAll(['"seriesInteraction":', seriesInteraction, ','], "");
+    }
+    if (splitSeries != null) {
+      buffer.writeAll(['"splitSeries":', splitSeries, ','], "");
     }
     if (type != null) {
-      buffer.writeAll(['"type": ', jsonEncode(type), ','], "");
+      buffer.writeAll(['"type":', jsonEncode(type), ','], "");
     }
   }
 

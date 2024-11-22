@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -67,17 +67,17 @@ class HighchartsChaikinSeriesParamsOptions extends HighchartsOptionsBase {
 
 
     if (period != null) {
-      buffer.writeAll(['"period": ', period, ','], "");
+      buffer.writeAll(['"period":', period, ','], "");
     }
     if (periods != null) {
-      buffer.write('"periods": [');
+      buffer.write('"periods":[');
       for (var item in periods!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (volumeSeriesID != null) {
-      buffer.writeAll(['"volumeSeriesID": ', jsonEncode(volumeSeriesID), ','], "");
+      buffer.writeAll(['"volumeSeriesID":', jsonEncode(volumeSeriesID), ','], "");
     }
   }
 

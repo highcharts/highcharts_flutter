@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -69,13 +69,13 @@ class HighchartsSeriesOnPointConnectorOptions extends HighchartsOptionsBase {
 
 
     if (dashstyle != null) {
-      buffer.writeAll(['"dashstyle": ', jsonEncode(dashstyle), ','], "");
+      buffer.writeAll(['"dashstyle":', jsonEncode(dashstyle), ','], "");
     }
     if (stroke != null) {
-      buffer.writeAll(['"stroke": ', jsonEncode(stroke), ','], "");
+      buffer.writeAll(['"stroke":', jsonEncode(stroke), ','], "");
     }
     if (width != null) {
-      buffer.writeAll(['"width": ', width, ','], "");
+      buffer.writeAll(['"width":', width, ','], "");
     }
   }
 

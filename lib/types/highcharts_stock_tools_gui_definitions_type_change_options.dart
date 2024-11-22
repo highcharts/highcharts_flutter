@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -83,25 +83,25 @@ class HighchartsStockToolsGuiDefinitionsTypeChangeOptions extends HighchartsOpti
 
 
     if (items != null) {
-      buffer.writeAll(['"items": ', jsonEncode(items), ','], "");
+      buffer.writeAll(['"items":', jsonEncode(items), ','], "");
     }
     if (typeCandlestick != null) {
-      buffer.writeAll(['"typeCandlestick": ', typeCandlestick?.toJSON(), ","], "");
+      buffer.writeAll(['"typeCandlestick":', typeCandlestick?.toJSON(), ","], "");
     }
     if (typeHLC != null) {
-      buffer.writeAll(['"typeHLC": ', typeHLC?.toJSON(), ","], "");
+      buffer.writeAll(['"typeHLC":', typeHLC?.toJSON(), ","], "");
     }
     if (typeHeikinAshi != null) {
-      buffer.writeAll(['"typeHeikinAshi": ', typeHeikinAshi?.toJSON(), ","], "");
+      buffer.writeAll(['"typeHeikinAshi":', typeHeikinAshi?.toJSON(), ","], "");
     }
     if (typeHollowCandlestick != null) {
-      buffer.writeAll(['"typeHollowCandlestick": ', typeHollowCandlestick?.toJSON(), ","], "");
+      buffer.writeAll(['"typeHollowCandlestick":', typeHollowCandlestick?.toJSON(), ","], "");
     }
     if (typeLine != null) {
-      buffer.writeAll(['"typeLine": ', typeLine?.toJSON(), ","], "");
+      buffer.writeAll(['"typeLine":', typeLine?.toJSON(), ","], "");
     }
     if (typeOHLC != null) {
-      buffer.writeAll(['"typeOHLC": ', typeOHLC?.toJSON(), ","], "");
+      buffer.writeAll(['"typeOHLC":', typeOHLC?.toJSON(), ","], "");
     }
   }
 

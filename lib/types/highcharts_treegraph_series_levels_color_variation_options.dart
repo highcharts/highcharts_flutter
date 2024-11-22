@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -71,10 +71,10 @@ class HighchartsTreegraphSeriesLevelsColorVariationOptions extends HighchartsOpt
 
 
     if (key != null) {
-      buffer.writeAll(['"key": ', jsonEncode(key), ','], "");
+      buffer.writeAll(['"key":', jsonEncode(key), ','], "");
     }
     if (to != null) {
-      buffer.writeAll(['"to": ', to, ','], "");
+      buffer.writeAll(['"to":', to, ','], "");
     }
   }
 

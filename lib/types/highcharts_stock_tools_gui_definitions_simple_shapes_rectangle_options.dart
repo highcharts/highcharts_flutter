@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -59,7 +59,7 @@ class HighchartsStockToolsGuiDefinitionsSimpleShapesRectangleOptions extends Hig
 
 
     if (symbol != null) {
-      buffer.writeAll(['"symbol": ', jsonEncode(symbol), ','], "");
+      buffer.writeAll(['"symbol":', jsonEncode(symbol), ','], "");
     }
   }
 

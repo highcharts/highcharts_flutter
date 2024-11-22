@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -48,29 +48,29 @@ export 'highcharts_series_marker_states_hover_animation_options.dart';
 
 class HighchartsTreemapSeriesDataMarkerStatesHoverOptions extends HighchartsOptionsBase {
 
-  double? height;
-  double? heightPlus;
-  double? lineWidthPlus;
-  double? width;
-  double? widthPlus;
   HighchartsSeriesMarkerStatesHoverAnimationOptions? animation;
   bool? enabled;
   String? fillColor;
+  double? height;
+  double? heightPlus;
   String? lineColor;
   double? lineWidth;
+  double? lineWidthPlus;
+  double? width;
+  double? widthPlus;
 
 
   HighchartsTreemapSeriesDataMarkerStatesHoverOptions({
-    this.height,
-    this.heightPlus,
-    this.lineWidthPlus,
-    this.width,
-    this.widthPlus,
     this.animation,
     this.enabled,
     this.fillColor,
+    this.height,
+    this.heightPlus,
     this.lineColor,
-    this.lineWidth
+    this.lineWidth,
+    this.lineWidthPlus,
+    this.width,
+    this.widthPlus
   });
 
   @override
@@ -78,35 +78,35 @@ class HighchartsTreemapSeriesDataMarkerStatesHoverOptions extends HighchartsOpti
     super.toOptionsJSON(buffer);
 
 
-    if (height != null) {
-      buffer.writeAll(['"height": ', height, ','], "");
-    }
-    if (heightPlus != null) {
-      buffer.writeAll(['"heightPlus": ', heightPlus, ','], "");
-    }
-    if (lineWidthPlus != null) {
-      buffer.writeAll(['"lineWidthPlus": ', lineWidthPlus, ','], "");
-    }
-    if (width != null) {
-      buffer.writeAll(['"width": ', width, ','], "");
-    }
-    if (widthPlus != null) {
-      buffer.writeAll(['"widthPlus": ', widthPlus, ','], "");
-    }
     if (animation != null) {
-      buffer.writeAll(['"animation": ', animation?.toJSON(), ","], "");
+      buffer.writeAll(['"animation":', animation?.toJSON(), ","], "");
     }
     if (enabled != null) {
-      buffer.writeAll(['"enabled": ', enabled, ','], "");
+      buffer.writeAll(['"enabled":', enabled, ','], "");
     }
     if (fillColor != null) {
-      buffer.writeAll(['"fillColor": ', jsonEncode(fillColor), ','], "");
+      buffer.writeAll(['"fillColor":', jsonEncode(fillColor), ','], "");
+    }
+    if (height != null) {
+      buffer.writeAll(['"height":', height, ','], "");
+    }
+    if (heightPlus != null) {
+      buffer.writeAll(['"heightPlus":', heightPlus, ','], "");
     }
     if (lineColor != null) {
-      buffer.writeAll(['"lineColor": ', jsonEncode(lineColor), ','], "");
+      buffer.writeAll(['"lineColor":', jsonEncode(lineColor), ','], "");
     }
     if (lineWidth != null) {
-      buffer.writeAll(['"lineWidth": ', lineWidth, ','], "");
+      buffer.writeAll(['"lineWidth":', lineWidth, ','], "");
+    }
+    if (lineWidthPlus != null) {
+      buffer.writeAll(['"lineWidthPlus":', lineWidthPlus, ','], "");
+    }
+    if (width != null) {
+      buffer.writeAll(['"width":', width, ','], "");
+    }
+    if (widthPlus != null) {
+      buffer.writeAll(['"widthPlus":', widthPlus, ','], "");
     }
   }
 

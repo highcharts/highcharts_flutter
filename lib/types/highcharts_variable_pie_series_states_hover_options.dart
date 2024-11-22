@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -69,16 +69,16 @@ class HighchartsVariablePieSeriesStatesHoverOptions extends HighchartsOptionsBas
 
 
     if (brightness != null) {
-      buffer.writeAll(['"brightness": ', brightness, ','], "");
+      buffer.writeAll(['"brightness":', brightness, ','], "");
     }
     if (animation != null) {
-      buffer.writeAll(['"animation": ', animation?.toJSON(), ","], "");
+      buffer.writeAll(['"animation":', animation?.toJSON(), ","], "");
     }
     if (enabled != null) {
-      buffer.writeAll(['"enabled": ', enabled, ','], "");
+      buffer.writeAll(['"enabled":', enabled, ','], "");
     }
     if (halo != null) {
-      buffer.writeAll(['"halo": ', halo?.toJSON(), ","], "");
+      buffer.writeAll(['"halo":', halo?.toJSON(), ","], "");
     }
   }
 

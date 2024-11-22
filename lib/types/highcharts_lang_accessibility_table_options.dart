@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -64,10 +64,10 @@ class HighchartsLangAccessibilityTableOptions extends HighchartsOptionsBase {
 
 
     if (tableSummary != null) {
-      buffer.writeAll(['"tableSummary": ', jsonEncode(tableSummary), ','], "");
+      buffer.writeAll(['"tableSummary":', jsonEncode(tableSummary), ','], "");
     }
     if (viewAsDataTableButtonText != null) {
-      buffer.writeAll(['"viewAsDataTableButtonText": ', jsonEncode(viewAsDataTableButtonText), ','], "");
+      buffer.writeAll(['"viewAsDataTableButtonText":', jsonEncode(viewAsDataTableButtonText), ','], "");
     }
   }
 

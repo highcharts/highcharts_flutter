@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -78,19 +78,19 @@ class HighchartsChartScrollablePlotAreaOptions extends HighchartsOptionsBase {
 
 
     if (minHeight != null) {
-      buffer.writeAll(['"minHeight": ', minHeight, ','], "");
+      buffer.writeAll(['"minHeight":', minHeight, ','], "");
     }
     if (minWidth != null) {
-      buffer.writeAll(['"minWidth": ', minWidth, ','], "");
+      buffer.writeAll(['"minWidth":', minWidth, ','], "");
     }
     if (opacity != null) {
-      buffer.writeAll(['"opacity": ', opacity, ','], "");
+      buffer.writeAll(['"opacity":', opacity, ','], "");
     }
     if (scrollPositionX != null) {
-      buffer.writeAll(['"scrollPositionX": ', scrollPositionX, ','], "");
+      buffer.writeAll(['"scrollPositionX":', scrollPositionX, ','], "");
     }
     if (scrollPositionY != null) {
-      buffer.writeAll(['"scrollPositionY": ', scrollPositionY, ','], "");
+      buffer.writeAll(['"scrollPositionY":', scrollPositionY, ','], "");
     }
   }
 

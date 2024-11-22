@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -75,25 +75,25 @@ class HighchartsAccessibilityScreenReaderSectionOptions extends HighchartsOption
 
 
     if (afterChartFormat != null) {
-      buffer.writeAll(['"afterChartFormat": ', jsonEncode(afterChartFormat), ','], "");
+      buffer.writeAll(['"afterChartFormat":', jsonEncode(afterChartFormat), ','], "");
     }
     if (afterChartFormatter != null) {
-      buffer.writeAll(['"afterChartFormatter": ', jsonEncode(afterChartFormatter), ','], "");
+      buffer.writeAll(['"afterChartFormatter":', jsonEncode(afterChartFormatter), ','], "");
     }
     if (axisRangeDateFormat != null) {
-      buffer.writeAll(['"axisRangeDateFormat": ', jsonEncode(axisRangeDateFormat), ','], "");
+      buffer.writeAll(['"axisRangeDateFormat":', jsonEncode(axisRangeDateFormat), ','], "");
     }
     if (beforeChartFormat != null) {
-      buffer.writeAll(['"beforeChartFormat": ', jsonEncode(beforeChartFormat), ','], "");
+      buffer.writeAll(['"beforeChartFormat":', jsonEncode(beforeChartFormat), ','], "");
     }
     if (beforeChartFormatter != null) {
-      buffer.writeAll(['"beforeChartFormatter": ', jsonEncode(beforeChartFormatter), ','], "");
+      buffer.writeAll(['"beforeChartFormatter":', jsonEncode(beforeChartFormatter), ','], "");
     }
     if (onPlayAsSoundClick != null) {
-      buffer.writeAll(['"onPlayAsSoundClick": ', jsonEncode(onPlayAsSoundClick), ','], "");
+      buffer.writeAll(['"onPlayAsSoundClick":', jsonEncode(onPlayAsSoundClick), ','], "");
     }
     if (onViewDataTableClick != null) {
-      buffer.writeAll(['"onViewDataTableClick": ', jsonEncode(onViewDataTableClick), ','], "");
+      buffer.writeAll(['"onViewDataTableClick":', jsonEncode(onViewDataTableClick), ','], "");
     }
   }
 

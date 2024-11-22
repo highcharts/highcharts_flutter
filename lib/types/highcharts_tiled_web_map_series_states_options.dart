@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -65,10 +65,10 @@ class HighchartsTiledWebMapSeriesStatesOptions extends HighchartsOptionsBase {
 
 
     if (inactive != null) {
-      buffer.writeAll(['"inactive": ', inactive?.toJSON(), ","], "");
+      buffer.writeAll(['"inactive":', inactive?.toJSON(), ","], "");
     }
     if (normal != null) {
-      buffer.writeAll(['"normal": ', normal?.toJSON(), ","], "");
+      buffer.writeAll(['"normal":', normal?.toJSON(), ","], "");
     }
   }
 

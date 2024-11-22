@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -83,8 +83,6 @@ export 'highcharts_solid_gauge_series_data_events_options.dart';
  */
 class HighchartsSolidGaugeSeriesDataOptions extends HighchartsOptionsBase {
 
-  String? innerRadius;
-  String? radius;
   HighchartsSolidGaugeSeriesDataAccessibilityOptions? accessibility;
   String? className;
   String? color;
@@ -95,14 +93,14 @@ class HighchartsSolidGaugeSeriesDataOptions extends HighchartsOptionsBase {
   HighchartsSolidGaugeSeriesDataDragDropOptions? dragDrop;
   HighchartsSolidGaugeSeriesDataEventsOptions? events;
   String? id;
+  String? innerRadius;
   double? labelrank;
+  String? radius;
   bool? selected;
   double? y;
 
 
   HighchartsSolidGaugeSeriesDataOptions({
-    this.innerRadius,
-    this.radius,
     this.accessibility,
     this.className,
     this.color,
@@ -113,7 +111,9 @@ class HighchartsSolidGaugeSeriesDataOptions extends HighchartsOptionsBase {
     this.dragDrop,
     this.events,
     this.id,
+    this.innerRadius,
     this.labelrank,
+    this.radius,
     this.selected,
     this.y
   });
@@ -123,58 +123,58 @@ class HighchartsSolidGaugeSeriesDataOptions extends HighchartsOptionsBase {
     super.toOptionsJSON(buffer);
 
 
-    if (innerRadius != null) {
-      buffer.writeAll(['"innerRadius": ', jsonEncode(innerRadius), ','], "");
-    }
-    if (radius != null) {
-      buffer.writeAll(['"radius": ', jsonEncode(radius), ','], "");
-    }
     if (accessibility != null) {
-      buffer.writeAll(['"accessibility": ', accessibility?.toJSON(), ","], "");
+      buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ","], "");
     }
     if (className != null) {
-      buffer.writeAll(['"className": ', jsonEncode(className), ','], "");
+      buffer.writeAll(['"className":', jsonEncode(className), ','], "");
     }
     if (color != null) {
-      buffer.writeAll(['"color": ', jsonEncode(color), ','], "");
+      buffer.writeAll(['"color":', jsonEncode(color), ','], "");
     }
     if (colorIndex != null) {
-      buffer.writeAll(['"colorIndex": ', colorIndex, ','], "");
+      buffer.writeAll(['"colorIndex":', colorIndex, ','], "");
     }
     if (custom != null) {
       buffer.write("{");
       for (var item in custom!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (dataLabels != null) {
-      buffer.write('"dataLabels": [');
+      buffer.write('"dataLabels":[');
       for (var item in dataLabels!) {
         buffer.writeAll([item.toJSON(), ","], "");
       }
       buffer.write("],");
     }
     if (description != null) {
-      buffer.writeAll(['"description": ', jsonEncode(description), ','], "");
+      buffer.writeAll(['"description":', jsonEncode(description), ','], "");
     }
     if (dragDrop != null) {
-      buffer.writeAll(['"dragDrop": ', dragDrop?.toJSON(), ","], "");
+      buffer.writeAll(['"dragDrop":', dragDrop?.toJSON(), ","], "");
     }
     if (events != null) {
-      buffer.writeAll(['"events": ', events?.toJSON(), ","], "");
+      buffer.writeAll(['"events":', events?.toJSON(), ","], "");
     }
     if (id != null) {
-      buffer.writeAll(['"id": ', jsonEncode(id), ','], "");
+      buffer.writeAll(['"id":', jsonEncode(id), ','], "");
+    }
+    if (innerRadius != null) {
+      buffer.writeAll(['"innerRadius":', jsonEncode(innerRadius), ','], "");
     }
     if (labelrank != null) {
-      buffer.writeAll(['"labelrank": ', labelrank, ','], "");
+      buffer.writeAll(['"labelrank":', labelrank, ','], "");
+    }
+    if (radius != null) {
+      buffer.writeAll(['"radius":', jsonEncode(radius), ','], "");
     }
     if (selected != null) {
-      buffer.writeAll(['"selected": ', selected, ','], "");
+      buffer.writeAll(['"selected":', selected, ','], "");
     }
     if (y != null) {
-      buffer.writeAll(['"y": ', y, ','], "");
+      buffer.writeAll(['"y":', y, ','], "");
     }
   }
 

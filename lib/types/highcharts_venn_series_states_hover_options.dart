@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -50,23 +50,23 @@ export 'highcharts_series_states_hover_marker_options.dart';
 
 class HighchartsVennSeriesStatesHoverOptions extends HighchartsOptionsBase {
 
-  String? borderColor;
-  double? opacity;
   HighchartsSeriesStatesHoverAnimationOptions? animation;
+  String? borderColor;
   bool? enabled;
   double? lineWidth;
   double? lineWidthPlus;
   HighchartsSeriesStatesHoverMarkerOptions? marker;
+  double? opacity;
 
 
   HighchartsVennSeriesStatesHoverOptions({
-    this.borderColor,
-    this.opacity,
     this.animation,
+    this.borderColor,
     this.enabled,
     this.lineWidth,
     this.lineWidthPlus,
-    this.marker
+    this.marker,
+    this.opacity
   });
 
   @override
@@ -74,26 +74,26 @@ class HighchartsVennSeriesStatesHoverOptions extends HighchartsOptionsBase {
     super.toOptionsJSON(buffer);
 
 
-    if (borderColor != null) {
-      buffer.writeAll(['"borderColor": ', jsonEncode(borderColor), ','], "");
-    }
-    if (opacity != null) {
-      buffer.writeAll(['"opacity": ', opacity, ','], "");
-    }
     if (animation != null) {
-      buffer.writeAll(['"animation": ', animation?.toJSON(), ","], "");
+      buffer.writeAll(['"animation":', animation?.toJSON(), ","], "");
+    }
+    if (borderColor != null) {
+      buffer.writeAll(['"borderColor":', jsonEncode(borderColor), ','], "");
     }
     if (enabled != null) {
-      buffer.writeAll(['"enabled": ', enabled, ','], "");
+      buffer.writeAll(['"enabled":', enabled, ','], "");
     }
     if (lineWidth != null) {
-      buffer.writeAll(['"lineWidth": ', lineWidth, ','], "");
+      buffer.writeAll(['"lineWidth":', lineWidth, ','], "");
     }
     if (lineWidthPlus != null) {
-      buffer.writeAll(['"lineWidthPlus": ', lineWidthPlus, ','], "");
+      buffer.writeAll(['"lineWidthPlus":', lineWidthPlus, ','], "");
     }
     if (marker != null) {
-      buffer.writeAll(['"marker": ', marker?.toJSON(), ","], "");
+      buffer.writeAll(['"marker":', marker?.toJSON(), ","], "");
+    }
+    if (opacity != null) {
+      buffer.writeAll(['"opacity":', opacity, ','], "");
     }
   }
 

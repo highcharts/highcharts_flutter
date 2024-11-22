@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -72,22 +72,22 @@ class HighchartsBulletSeriesTargetOptions extends HighchartsOptionsBase {
 
 
     if (borderColor != null) {
-      buffer.writeAll(['"borderColor": ', jsonEncode(borderColor), ','], "");
+      buffer.writeAll(['"borderColor":', jsonEncode(borderColor), ','], "");
     }
     if (borderRadius != null) {
-      buffer.writeAll(['"borderRadius": ', borderRadius, ','], "");
+      buffer.writeAll(['"borderRadius":', borderRadius, ','], "");
     }
     if (borderWidth != null) {
-      buffer.writeAll(['"borderWidth": ', borderWidth, ','], "");
+      buffer.writeAll(['"borderWidth":', borderWidth, ','], "");
     }
     if (color != null) {
-      buffer.writeAll(['"color": ', jsonEncode(color), ','], "");
+      buffer.writeAll(['"color":', jsonEncode(color), ','], "");
     }
     if (height != null) {
-      buffer.writeAll(['"height": ', height, ','], "");
+      buffer.writeAll(['"height":', height, ','], "");
     }
     if (width != null) {
-      buffer.writeAll(['"width": ', jsonEncode(width), ','], "");
+      buffer.writeAll(['"width":', jsonEncode(width), ','], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -46,15 +46,15 @@ import 'highcharts_options_base.dart';
 
 class HighchartsSlowStochasticSeriesParamsOptions extends HighchartsOptionsBase {
 
-  List<dynamic>? periods;
   String? index;
   String? period;
+  List<dynamic>? periods;
 
 
   HighchartsSlowStochasticSeriesParamsOptions({
-    this.periods,
     this.index,
-    this.period
+    this.period,
+    this.periods
   });
 
   @override
@@ -62,18 +62,18 @@ class HighchartsSlowStochasticSeriesParamsOptions extends HighchartsOptionsBase 
     super.toOptionsJSON(buffer);
 
 
+    if (index != null) {
+      buffer.writeAll(['"index":', jsonEncode(index), ','], "");
+    }
+    if (period != null) {
+      buffer.writeAll(['"period":', jsonEncode(period), ','], "");
+    }
     if (periods != null) {
-      buffer.write('"periods": [');
+      buffer.write('"periods":[');
       for (var item in periods!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
-    }
-    if (index != null) {
-      buffer.writeAll(['"index": ', jsonEncode(index), ','], "");
-    }
-    if (period != null) {
-      buffer.writeAll(['"period": ', jsonEncode(period), ','], "");
     }
   }
 

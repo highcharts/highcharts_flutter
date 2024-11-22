@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -65,10 +65,10 @@ class HighchartsFlowMapSeriesStatesOptions extends HighchartsOptionsBase {
 
 
     if (hover != null) {
-      buffer.writeAll(['"hover": ', hover?.toJSON(), ","], "");
+      buffer.writeAll(['"hover":', hover?.toJSON(), ","], "");
     }
     if (normal != null) {
-      buffer.writeAll(['"normal": ', normal?.toJSON(), ","], "");
+      buffer.writeAll(['"normal":', normal?.toJSON(), ","], "");
     }
   }
 

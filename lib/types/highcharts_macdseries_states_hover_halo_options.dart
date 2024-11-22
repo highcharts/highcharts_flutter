@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -63,13 +63,13 @@ class HighchartsMACDSeriesStatesHoverHaloOptions extends HighchartsOptionsBase {
 
 
     if (size != null) {
-      buffer.writeAll(['"size": ', size, ','], "");
+      buffer.writeAll(['"size":', size, ','], "");
     }
     if (attributes != null) {
-      buffer.writeAll(['"attributes": ', jsonEncode(attributes), ','], "");
+      buffer.writeAll(['"attributes":', jsonEncode(attributes), ','], "");
     }
     if (opacity != null) {
-      buffer.writeAll(['"opacity": ', opacity, ','], "");
+      buffer.writeAll(['"opacity":', opacity, ','], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -71,16 +71,16 @@ class HighchartsStockToolsGuiDefinitionsZoomChangeOptions extends HighchartsOpti
 
 
     if (items != null) {
-      buffer.writeAll(['"items": ', jsonEncode(items), ','], "");
+      buffer.writeAll(['"items":', jsonEncode(items), ','], "");
     }
     if (zoomX != null) {
-      buffer.writeAll(['"zoomX": ', zoomX?.toJSON(), ","], "");
+      buffer.writeAll(['"zoomX":', zoomX?.toJSON(), ","], "");
     }
     if (zoomXY != null) {
-      buffer.writeAll(['"zoomXY": ', zoomXY?.toJSON(), ","], "");
+      buffer.writeAll(['"zoomXY":', zoomXY?.toJSON(), ","], "");
     }
     if (zoomY != null) {
-      buffer.writeAll(['"zoomY": ', zoomY?.toJSON(), ","], "");
+      buffer.writeAll(['"zoomY":', zoomY?.toJSON(), ","], "");
     }
   }
 

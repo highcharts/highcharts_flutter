@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -106,61 +106,61 @@ class HighchartsYAxisStackLabelsOptions extends HighchartsOptionsBase {
 
 
     if (align != null) {
-      buffer.writeAll(['"align": ', jsonEncode(align), ','], "");
+      buffer.writeAll(['"align":', jsonEncode(align), ','], "");
     }
     if (allowOverlap != null) {
-      buffer.writeAll(['"allowOverlap": ', allowOverlap, ','], "");
+      buffer.writeAll(['"allowOverlap":', allowOverlap, ','], "");
     }
     if (animation != null) {
-      buffer.writeAll(['"animation": ', animation?.toJSON(), ","], "");
+      buffer.writeAll(['"animation":', animation?.toJSON(), ","], "");
     }
     if (backgroundColor != null) {
-      buffer.writeAll(['"backgroundColor": ', jsonEncode(backgroundColor), ','], "");
+      buffer.writeAll(['"backgroundColor":', jsonEncode(backgroundColor), ','], "");
     }
     if (borderColor != null) {
-      buffer.writeAll(['"borderColor": ', jsonEncode(borderColor), ','], "");
+      buffer.writeAll(['"borderColor":', jsonEncode(borderColor), ','], "");
     }
     if (borderRadius != null) {
-      buffer.writeAll(['"borderRadius": ', borderRadius, ','], "");
+      buffer.writeAll(['"borderRadius":', borderRadius, ','], "");
     }
     if (borderWidth != null) {
-      buffer.writeAll(['"borderWidth": ', borderWidth, ','], "");
+      buffer.writeAll(['"borderWidth":', borderWidth, ','], "");
     }
     if (crop != null) {
-      buffer.writeAll(['"crop": ', crop, ','], "");
+      buffer.writeAll(['"crop":', crop, ','], "");
     }
     if (enabled != null) {
-      buffer.writeAll(['"enabled": ', enabled, ','], "");
+      buffer.writeAll(['"enabled":', enabled, ','], "");
     }
     if (format != null) {
-      buffer.writeAll(['"format": ', jsonEncode(format), ','], "");
+      buffer.writeAll(['"format":', jsonEncode(format), ','], "");
     }
     if (formatter != null) {
-      buffer.writeAll(['"formatter": ', jsonEncode(formatter), ','], "");
+      buffer.writeAll(['"formatter":', jsonEncode(formatter), ','], "");
     }
     if (overflow != null) {
-      buffer.writeAll(['"overflow": ', jsonEncode(overflow), ','], "");
+      buffer.writeAll(['"overflow":', jsonEncode(overflow), ','], "");
     }
     if (rotation != null) {
-      buffer.writeAll(['"rotation": ', rotation, ','], "");
+      buffer.writeAll(['"rotation":', rotation, ','], "");
     }
     if (style != null) {
-      buffer.writeAll(['"style": ', style?.toJSON(), ","], "");
+      buffer.writeAll(['"style":', style?.toJSON(), ","], "");
     }
     if (textAlign != null) {
-      buffer.writeAll(['"textAlign": ', jsonEncode(textAlign), ','], "");
+      buffer.writeAll(['"textAlign":', jsonEncode(textAlign), ','], "");
     }
     if (useHTML != null) {
-      buffer.writeAll(['"useHTML": ', useHTML, ','], "");
+      buffer.writeAll(['"useHTML":', useHTML, ','], "");
     }
     if (verticalAlign != null) {
-      buffer.writeAll(['"verticalAlign": ', jsonEncode(verticalAlign), ','], "");
+      buffer.writeAll(['"verticalAlign":', jsonEncode(verticalAlign), ','], "");
     }
     if (x != null) {
-      buffer.writeAll(['"x": ', x, ','], "");
+      buffer.writeAll(['"x":', x, ','], "");
     }
     if (y != null) {
-      buffer.writeAll(['"y": ', y, ','], "");
+      buffer.writeAll(['"y":', y, ','], "");
     }
   }
 

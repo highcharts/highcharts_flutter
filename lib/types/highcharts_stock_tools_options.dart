@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -66,7 +66,7 @@ class HighchartsStockToolsOptions extends HighchartsOptionsBase {
 
 
     if (gui != null) {
-      buffer.writeAll(['"gui": ', gui?.toJSON(), ","], "");
+      buffer.writeAll(['"gui":', gui?.toJSON(), ","], "");
     }
   }
 

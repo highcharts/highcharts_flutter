@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -113,70 +113,70 @@ class HighchartsScrollbarOptions extends HighchartsOptionsBase {
 
 
     if (barBackgroundColor != null) {
-      buffer.writeAll(['"barBackgroundColor": ', jsonEncode(barBackgroundColor), ','], "");
+      buffer.writeAll(['"barBackgroundColor":', jsonEncode(barBackgroundColor), ','], "");
     }
     if (barBorderColor != null) {
-      buffer.writeAll(['"barBorderColor": ', jsonEncode(barBorderColor), ','], "");
+      buffer.writeAll(['"barBorderColor":', jsonEncode(barBorderColor), ','], "");
     }
     if (barBorderRadius != null) {
-      buffer.writeAll(['"barBorderRadius": ', barBorderRadius, ','], "");
+      buffer.writeAll(['"barBorderRadius":', barBorderRadius, ','], "");
     }
     if (barBorderWidth != null) {
-      buffer.writeAll(['"barBorderWidth": ', barBorderWidth, ','], "");
+      buffer.writeAll(['"barBorderWidth":', barBorderWidth, ','], "");
     }
     if (buttonArrowColor != null) {
-      buffer.writeAll(['"buttonArrowColor": ', jsonEncode(buttonArrowColor), ','], "");
+      buffer.writeAll(['"buttonArrowColor":', jsonEncode(buttonArrowColor), ','], "");
     }
     if (buttonBackgroundColor != null) {
-      buffer.writeAll(['"buttonBackgroundColor": ', jsonEncode(buttonBackgroundColor), ','], "");
+      buffer.writeAll(['"buttonBackgroundColor":', jsonEncode(buttonBackgroundColor), ','], "");
     }
     if (buttonBorderColor != null) {
-      buffer.writeAll(['"buttonBorderColor": ', jsonEncode(buttonBorderColor), ','], "");
+      buffer.writeAll(['"buttonBorderColor":', jsonEncode(buttonBorderColor), ','], "");
     }
     if (buttonBorderRadius != null) {
-      buffer.writeAll(['"buttonBorderRadius": ', buttonBorderRadius, ','], "");
+      buffer.writeAll(['"buttonBorderRadius":', buttonBorderRadius, ','], "");
     }
     if (buttonBorderWidth != null) {
-      buffer.writeAll(['"buttonBorderWidth": ', buttonBorderWidth, ','], "");
+      buffer.writeAll(['"buttonBorderWidth":', buttonBorderWidth, ','], "");
     }
     if (buttonsEnabled != null) {
-      buffer.writeAll(['"buttonsEnabled": ', buttonsEnabled, ','], "");
+      buffer.writeAll(['"buttonsEnabled":', buttonsEnabled, ','], "");
     }
     if (enabled != null) {
-      buffer.writeAll(['"enabled": ', enabled, ','], "");
+      buffer.writeAll(['"enabled":', enabled, ','], "");
     }
     if (height != null) {
-      buffer.writeAll(['"height": ', height, ','], "");
+      buffer.writeAll(['"height":', height, ','], "");
     }
     if (liveRedraw != null) {
-      buffer.writeAll(['"liveRedraw": ', liveRedraw, ','], "");
+      buffer.writeAll(['"liveRedraw":', liveRedraw, ','], "");
     }
     if (margin != null) {
-      buffer.writeAll(['"margin": ', margin, ','], "");
+      buffer.writeAll(['"margin":', margin, ','], "");
     }
     if (minWidth != null) {
-      buffer.writeAll(['"minWidth": ', minWidth, ','], "");
+      buffer.writeAll(['"minWidth":', minWidth, ','], "");
     }
     if (rifleColor != null) {
-      buffer.writeAll(['"rifleColor": ', jsonEncode(rifleColor), ','], "");
+      buffer.writeAll(['"rifleColor":', jsonEncode(rifleColor), ','], "");
     }
     if (showFull != null) {
-      buffer.writeAll(['"showFull": ', showFull, ','], "");
+      buffer.writeAll(['"showFull":', showFull, ','], "");
     }
     if (trackBackgroundColor != null) {
-      buffer.writeAll(['"trackBackgroundColor": ', jsonEncode(trackBackgroundColor), ','], "");
+      buffer.writeAll(['"trackBackgroundColor":', jsonEncode(trackBackgroundColor), ','], "");
     }
     if (trackBorderColor != null) {
-      buffer.writeAll(['"trackBorderColor": ', jsonEncode(trackBorderColor), ','], "");
+      buffer.writeAll(['"trackBorderColor":', jsonEncode(trackBorderColor), ','], "");
     }
     if (trackBorderRadius != null) {
-      buffer.writeAll(['"trackBorderRadius": ', trackBorderRadius, ','], "");
+      buffer.writeAll(['"trackBorderRadius":', trackBorderRadius, ','], "");
     }
     if (trackBorderWidth != null) {
-      buffer.writeAll(['"trackBorderWidth": ', trackBorderWidth, ','], "");
+      buffer.writeAll(['"trackBorderWidth":', trackBorderWidth, ','], "");
     }
     if (zIndex != null) {
-      buffer.writeAll(['"zIndex": ', zIndex, ','], "");
+      buffer.writeAll(['"zIndex":', zIndex, ','], "");
     }
   }
 

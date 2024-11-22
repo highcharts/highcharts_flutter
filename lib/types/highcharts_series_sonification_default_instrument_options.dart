@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -82,32 +82,32 @@ class HighchartsSeriesSonificationDefaultInstrumentOptions extends HighchartsOpt
 
 
     if (activeWhen != null) {
-      buffer.writeAll(['"activeWhen": ', activeWhen?.toJSON(), ","], "");
+      buffer.writeAll(['"activeWhen":', activeWhen?.toJSON(), ","], "");
     }
     if (instrument != null) {
       buffer.write("{");
       for (var item in instrument!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (mapping != null) {
-      buffer.writeAll(['"mapping": ', mapping?.toJSON(), ","], "");
+      buffer.writeAll(['"mapping":', mapping?.toJSON(), ","], "");
     }
     if (midiName != null) {
-      buffer.writeAll(['"midiName": ', jsonEncode(midiName), ','], "");
+      buffer.writeAll(['"midiName":', jsonEncode(midiName), ','], "");
     }
     if (pointGrouping != null) {
-      buffer.writeAll(['"pointGrouping": ', pointGrouping?.toJSON(), ","], "");
+      buffer.writeAll(['"pointGrouping":', pointGrouping?.toJSON(), ","], "");
     }
     if (roundToMusicalNotes != null) {
-      buffer.writeAll(['"roundToMusicalNotes": ', roundToMusicalNotes, ','], "");
+      buffer.writeAll(['"roundToMusicalNotes":', roundToMusicalNotes, ','], "");
     }
     if (showPlayMarker != null) {
-      buffer.writeAll(['"showPlayMarker": ', showPlayMarker, ','], "");
+      buffer.writeAll(['"showPlayMarker":', showPlayMarker, ','], "");
     }
     if (type != null) {
-      buffer.writeAll(['"type": ', jsonEncode(type), ','], "");
+      buffer.writeAll(['"type":', jsonEncode(type), ','], "");
     }
   }
 

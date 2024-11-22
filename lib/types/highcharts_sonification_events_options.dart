@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -78,31 +78,31 @@ class HighchartsSonificationEventsOptions extends HighchartsOptionsBase {
 
 
     if (afterUpdate != null) {
-      buffer.writeAll(['"afterUpdate": ', jsonEncode(afterUpdate), ','], "");
+      buffer.writeAll(['"afterUpdate":', jsonEncode(afterUpdate), ','], "");
     }
     if (beforePlay != null) {
-      buffer.writeAll(['"beforePlay": ', jsonEncode(beforePlay), ','], "");
+      buffer.writeAll(['"beforePlay":', jsonEncode(beforePlay), ','], "");
     }
     if (beforeUpdate != null) {
-      buffer.writeAll(['"beforeUpdate": ', jsonEncode(beforeUpdate), ','], "");
+      buffer.writeAll(['"beforeUpdate":', jsonEncode(beforeUpdate), ','], "");
     }
     if (onBoundaryHit != null) {
-      buffer.writeAll(['"onBoundaryHit": ', jsonEncode(onBoundaryHit), ','], "");
+      buffer.writeAll(['"onBoundaryHit":', jsonEncode(onBoundaryHit), ','], "");
     }
     if (onEnd != null) {
-      buffer.writeAll(['"onEnd": ', jsonEncode(onEnd), ','], "");
+      buffer.writeAll(['"onEnd":', jsonEncode(onEnd), ','], "");
     }
     if (onPlay != null) {
-      buffer.writeAll(['"onPlay": ', jsonEncode(onPlay), ','], "");
+      buffer.writeAll(['"onPlay":', jsonEncode(onPlay), ','], "");
     }
     if (onSeriesEnd != null) {
-      buffer.writeAll(['"onSeriesEnd": ', jsonEncode(onSeriesEnd), ','], "");
+      buffer.writeAll(['"onSeriesEnd":', jsonEncode(onSeriesEnd), ','], "");
     }
     if (onSeriesStart != null) {
-      buffer.writeAll(['"onSeriesStart": ', jsonEncode(onSeriesStart), ','], "");
+      buffer.writeAll(['"onSeriesStart":', jsonEncode(onSeriesStart), ','], "");
     }
     if (onStop != null) {
-      buffer.writeAll(['"onStop": ', jsonEncode(onStop), ','], "");
+      buffer.writeAll(['"onStop":', jsonEncode(onStop), ','], "");
     }
   }
 

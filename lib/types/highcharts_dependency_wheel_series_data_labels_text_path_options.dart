@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -63,10 +63,10 @@ class HighchartsDependencyWheelSeriesDataLabelsTextPathOptions extends Highchart
 
 
     if (attributes != null) {
-      buffer.writeAll(['"attributes": ', attributes?.toJSON(), ","], "");
+      buffer.writeAll(['"attributes":', attributes?.toJSON(), ","], "");
     }
     if (enabled != null) {
-      buffer.writeAll(['"enabled": ', enabled, ','], "");
+      buffer.writeAll(['"enabled":', enabled, ','], "");
     }
   }
 

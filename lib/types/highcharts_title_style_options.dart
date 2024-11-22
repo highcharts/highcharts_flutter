@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -68,10 +68,10 @@ class HighchartsTitleStyleOptions extends HighchartsOptionsBase {
 
 
     if (color != null) {
-      buffer.writeAll(['"color": ', jsonEncode(color), ','], "");
+      buffer.writeAll(['"color":', jsonEncode(color), ','], "");
     }
     if (fontWeight != null) {
-      buffer.writeAll(['"fontWeight": ', jsonEncode(fontWeight), ','], "");
+      buffer.writeAll(['"fontWeight":', jsonEncode(fontWeight), ','], "");
     }
   }
 

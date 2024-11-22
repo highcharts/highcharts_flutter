@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -46,15 +46,15 @@ import 'highcharts_options_base.dart';
 
 class HighchartsColorAxisEventsOptions extends HighchartsOptionsBase {
 
-  dynamic legendItemClick;
   dynamic afterSetExtremes;
+  dynamic legendItemClick;
   dynamic pointBreakOut;
   dynamic setExtremes;
 
 
   HighchartsColorAxisEventsOptions({
-    this.legendItemClick,
     this.afterSetExtremes,
+    this.legendItemClick,
     this.pointBreakOut,
     this.setExtremes
   });
@@ -64,17 +64,17 @@ class HighchartsColorAxisEventsOptions extends HighchartsOptionsBase {
     super.toOptionsJSON(buffer);
 
 
-    if (legendItemClick != null) {
-      buffer.writeAll(['"legendItemClick": ', jsonEncode(legendItemClick), ','], "");
-    }
     if (afterSetExtremes != null) {
-      buffer.writeAll(['"afterSetExtremes": ', jsonEncode(afterSetExtremes), ','], "");
+      buffer.writeAll(['"afterSetExtremes":', jsonEncode(afterSetExtremes), ','], "");
+    }
+    if (legendItemClick != null) {
+      buffer.writeAll(['"legendItemClick":', jsonEncode(legendItemClick), ','], "");
     }
     if (pointBreakOut != null) {
-      buffer.writeAll(['"pointBreakOut": ', jsonEncode(pointBreakOut), ','], "");
+      buffer.writeAll(['"pointBreakOut":', jsonEncode(pointBreakOut), ','], "");
     }
     if (setExtremes != null) {
-      buffer.writeAll(['"setExtremes": ', jsonEncode(setExtremes), ','], "");
+      buffer.writeAll(['"setExtremes":', jsonEncode(setExtremes), ','], "");
     }
   }
 

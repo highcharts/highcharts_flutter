@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -79,39 +79,39 @@ class HighchartsSeriesLastPriceLabelOptions extends HighchartsOptionsBase {
 
 
     if (align != null) {
-      buffer.writeAll(['"align": ', jsonEncode(align), ','], "");
+      buffer.writeAll(['"align":', jsonEncode(align), ','], "");
     }
     if (backgroundColor != null) {
-      buffer.writeAll(['"backgroundColor": ', jsonEncode(backgroundColor), ','], "");
+      buffer.writeAll(['"backgroundColor":', jsonEncode(backgroundColor), ','], "");
     }
     if (borderColor != null) {
-      buffer.writeAll(['"borderColor": ', jsonEncode(borderColor), ','], "");
+      buffer.writeAll(['"borderColor":', jsonEncode(borderColor), ','], "");
     }
     if (borderRadius != null) {
-      buffer.writeAll(['"borderRadius": ', jsonEncode(borderRadius), ','], "");
+      buffer.writeAll(['"borderRadius":', jsonEncode(borderRadius), ','], "");
     }
     if (borderWidth != null) {
-      buffer.writeAll(['"borderWidth": ', borderWidth, ','], "");
+      buffer.writeAll(['"borderWidth":', borderWidth, ','], "");
     }
     if (enabled != null) {
-      buffer.writeAll(['"enabled": ', jsonEncode(enabled), ','], "");
+      buffer.writeAll(['"enabled":', jsonEncode(enabled), ','], "");
     }
     if (format != null) {
-      buffer.writeAll(['"format": ', jsonEncode(format), ','], "");
+      buffer.writeAll(['"format":', jsonEncode(format), ','], "");
     }
     if (formatter != null) {
-      buffer.writeAll(['"formatter": ', jsonEncode(formatter), ','], "");
+      buffer.writeAll(['"formatter":', jsonEncode(formatter), ','], "");
     }
     if (padding != null) {
-      buffer.writeAll(['"padding": ', padding, ','], "");
+      buffer.writeAll(['"padding":', padding, ','], "");
     }
     if (shape != null) {
-      buffer.writeAll(['"shape": ', jsonEncode(shape), ','], "");
+      buffer.writeAll(['"shape":', jsonEncode(shape), ','], "");
     }
     if (style != null) {
       buffer.write("{");
       for (var item in style!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }

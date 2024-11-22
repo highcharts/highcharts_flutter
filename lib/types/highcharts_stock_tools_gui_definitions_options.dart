@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -121,49 +121,49 @@ class HighchartsStockToolsGuiDefinitionsOptions extends HighchartsOptionsBase {
 
 
     if (advanced != null) {
-      buffer.writeAll(['"advanced": ', advanced?.toJSON(), ","], "");
+      buffer.writeAll(['"advanced":', advanced?.toJSON(), ","], "");
     }
     if (crookedLines != null) {
-      buffer.writeAll(['"crookedLines": ', crookedLines?.toJSON(), ","], "");
+      buffer.writeAll(['"crookedLines":', crookedLines?.toJSON(), ","], "");
     }
     if (currentPriceIndicator != null) {
-      buffer.writeAll(['"currentPriceIndicator": ', currentPriceIndicator?.toJSON(), ","], "");
+      buffer.writeAll(['"currentPriceIndicator":', currentPriceIndicator?.toJSON(), ","], "");
     }
     if (flags != null) {
-      buffer.writeAll(['"flags": ', flags?.toJSON(), ","], "");
+      buffer.writeAll(['"flags":', flags?.toJSON(), ","], "");
     }
     if (fullScreen != null) {
-      buffer.writeAll(['"fullScreen": ', fullScreen?.toJSON(), ","], "");
+      buffer.writeAll(['"fullScreen":', fullScreen?.toJSON(), ","], "");
     }
     if (indicators != null) {
-      buffer.writeAll(['"indicators": ', indicators?.toJSON(), ","], "");
+      buffer.writeAll(['"indicators":', indicators?.toJSON(), ","], "");
     }
     if (lines != null) {
-      buffer.writeAll(['"lines": ', lines?.toJSON(), ","], "");
+      buffer.writeAll(['"lines":', lines?.toJSON(), ","], "");
     }
     if (measure != null) {
-      buffer.writeAll(['"measure": ', measure?.toJSON(), ","], "");
+      buffer.writeAll(['"measure":', measure?.toJSON(), ","], "");
     }
     if (saveChart != null) {
-      buffer.writeAll(['"saveChart": ', saveChart?.toJSON(), ","], "");
+      buffer.writeAll(['"saveChart":', saveChart?.toJSON(), ","], "");
     }
     if (separator != null) {
-      buffer.writeAll(['"separator": ', separator?.toJSON(), ","], "");
+      buffer.writeAll(['"separator":', separator?.toJSON(), ","], "");
     }
     if (simpleShapes != null) {
-      buffer.writeAll(['"simpleShapes": ', simpleShapes?.toJSON(), ","], "");
+      buffer.writeAll(['"simpleShapes":', simpleShapes?.toJSON(), ","], "");
     }
     if (toggleAnnotations != null) {
-      buffer.writeAll(['"toggleAnnotations": ', toggleAnnotations?.toJSON(), ","], "");
+      buffer.writeAll(['"toggleAnnotations":', toggleAnnotations?.toJSON(), ","], "");
     }
     if (typeChange != null) {
-      buffer.writeAll(['"typeChange": ', typeChange?.toJSON(), ","], "");
+      buffer.writeAll(['"typeChange":', typeChange?.toJSON(), ","], "");
     }
     if (verticalLabels != null) {
-      buffer.writeAll(['"verticalLabels": ', verticalLabels?.toJSON(), ","], "");
+      buffer.writeAll(['"verticalLabels":', verticalLabels?.toJSON(), ","], "");
     }
     if (zoomChange != null) {
-      buffer.writeAll(['"zoomChange": ', zoomChange?.toJSON(), ","], "");
+      buffer.writeAll(['"zoomChange":', zoomChange?.toJSON(), ","], "");
     }
   }
 

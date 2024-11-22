@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -97,8 +97,6 @@ export 'highcharts_waterfall_series_data_events_options.dart';
  */
 class HighchartsWaterfallSeriesDataOptions extends HighchartsOptionsBase {
 
-  bool? isIntermediateSum;
-  bool? isSum;
   HighchartsWaterfallSeriesDataAccessibilityOptions? accessibility;
   String? className;
   String? color;
@@ -110,6 +108,8 @@ class HighchartsWaterfallSeriesDataOptions extends HighchartsOptionsBase {
   String? drilldown;
   HighchartsWaterfallSeriesDataEventsOptions? events;
   String? id;
+  bool? isIntermediateSum;
+  bool? isSum;
   double? labelrank;
   bool? selected;
   double? x;
@@ -117,8 +117,6 @@ class HighchartsWaterfallSeriesDataOptions extends HighchartsOptionsBase {
 
 
   HighchartsWaterfallSeriesDataOptions({
-    this.isIntermediateSum,
-    this.isSum,
     this.accessibility,
     this.className,
     this.color,
@@ -130,6 +128,8 @@ class HighchartsWaterfallSeriesDataOptions extends HighchartsOptionsBase {
     this.drilldown,
     this.events,
     this.id,
+    this.isIntermediateSum,
+    this.isSum,
     this.labelrank,
     this.selected,
     this.x,
@@ -141,64 +141,64 @@ class HighchartsWaterfallSeriesDataOptions extends HighchartsOptionsBase {
     super.toOptionsJSON(buffer);
 
 
-    if (isIntermediateSum != null) {
-      buffer.writeAll(['"isIntermediateSum": ', isIntermediateSum, ','], "");
-    }
-    if (isSum != null) {
-      buffer.writeAll(['"isSum": ', isSum, ','], "");
-    }
     if (accessibility != null) {
-      buffer.writeAll(['"accessibility": ', accessibility?.toJSON(), ","], "");
+      buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ","], "");
     }
     if (className != null) {
-      buffer.writeAll(['"className": ', jsonEncode(className), ','], "");
+      buffer.writeAll(['"className":', jsonEncode(className), ','], "");
     }
     if (color != null) {
-      buffer.writeAll(['"color": ', jsonEncode(color), ','], "");
+      buffer.writeAll(['"color":', jsonEncode(color), ','], "");
     }
     if (colorIndex != null) {
-      buffer.writeAll(['"colorIndex": ', colorIndex, ','], "");
+      buffer.writeAll(['"colorIndex":', colorIndex, ','], "");
     }
     if (custom != null) {
       buffer.write("{");
       for (var item in custom!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (dataLabels != null) {
-      buffer.write('"dataLabels": [');
+      buffer.write('"dataLabels":[');
       for (var item in dataLabels!) {
         buffer.writeAll([item.toJSON(), ","], "");
       }
       buffer.write("],");
     }
     if (description != null) {
-      buffer.writeAll(['"description": ', jsonEncode(description), ','], "");
+      buffer.writeAll(['"description":', jsonEncode(description), ','], "");
     }
     if (dragDrop != null) {
-      buffer.writeAll(['"dragDrop": ', dragDrop?.toJSON(), ","], "");
+      buffer.writeAll(['"dragDrop":', dragDrop?.toJSON(), ","], "");
     }
     if (drilldown != null) {
-      buffer.writeAll(['"drilldown": ', jsonEncode(drilldown), ','], "");
+      buffer.writeAll(['"drilldown":', jsonEncode(drilldown), ','], "");
     }
     if (events != null) {
-      buffer.writeAll(['"events": ', events?.toJSON(), ","], "");
+      buffer.writeAll(['"events":', events?.toJSON(), ","], "");
     }
     if (id != null) {
-      buffer.writeAll(['"id": ', jsonEncode(id), ','], "");
+      buffer.writeAll(['"id":', jsonEncode(id), ','], "");
+    }
+    if (isIntermediateSum != null) {
+      buffer.writeAll(['"isIntermediateSum":', isIntermediateSum, ','], "");
+    }
+    if (isSum != null) {
+      buffer.writeAll(['"isSum":', isSum, ','], "");
     }
     if (labelrank != null) {
-      buffer.writeAll(['"labelrank": ', labelrank, ','], "");
+      buffer.writeAll(['"labelrank":', labelrank, ','], "");
     }
     if (selected != null) {
-      buffer.writeAll(['"selected": ', selected, ','], "");
+      buffer.writeAll(['"selected":', selected, ','], "");
     }
     if (x != null) {
-      buffer.writeAll(['"x": ', x, ','], "");
+      buffer.writeAll(['"x":', x, ','], "");
     }
     if (y != null) {
-      buffer.writeAll(['"y": ', y, ','], "");
+      buffer.writeAll(['"y":', y, ','], "");
     }
   }
 

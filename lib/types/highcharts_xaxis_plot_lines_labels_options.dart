@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -59,7 +59,7 @@ class HighchartsXAxisPlotLinesLabelsOptions extends HighchartsOptionsBase {
 
 
     if (clip != null) {
-      buffer.writeAll(['"clip": ', clip, ','], "");
+      buffer.writeAll(['"clip":', clip, ','], "");
     }
   }
 

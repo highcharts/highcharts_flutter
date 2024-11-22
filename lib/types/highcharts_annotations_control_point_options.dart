@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -81,27 +81,27 @@ class HighchartsAnnotationsControlPointOptions extends HighchartsOptionsBase {
     if (events != null) {
       buffer.write("{");
       for (var item in events!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (height != null) {
-      buffer.writeAll(['"height": ', height, ','], "");
+      buffer.writeAll(['"height":', height, ','], "");
     }
     if (positioner != null) {
-      buffer.writeAll(['"positioner": ', jsonEncode(positioner), ','], "");
+      buffer.writeAll(['"positioner":', jsonEncode(positioner), ','], "");
     }
     if (style != null) {
-      buffer.writeAll(['"style": ', style?.toJSON(), ","], "");
+      buffer.writeAll(['"style":', style?.toJSON(), ","], "");
     }
     if (symbol != null) {
-      buffer.writeAll(['"symbol": ', jsonEncode(symbol), ','], "");
+      buffer.writeAll(['"symbol":', jsonEncode(symbol), ','], "");
     }
     if (visible != null) {
-      buffer.writeAll(['"visible": ', visible, ','], "");
+      buffer.writeAll(['"visible":', visible, ','], "");
     }
     if (width != null) {
-      buffer.writeAll(['"width": ', width, ','], "");
+      buffer.writeAll(['"width":', width, ','], "");
     }
   }
 

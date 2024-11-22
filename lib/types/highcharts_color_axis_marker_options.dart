@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -70,13 +70,13 @@ class HighchartsColorAxisMarkerOptions extends HighchartsOptionsBase {
 
 
     if (animation != null) {
-      buffer.writeAll(['"animation": ', animation?.toJSON(), ","], "");
+      buffer.writeAll(['"animation":', animation?.toJSON(), ","], "");
     }
     if (color != null) {
-      buffer.writeAll(['"color": ', jsonEncode(color), ','], "");
+      buffer.writeAll(['"color":', jsonEncode(color), ','], "");
     }
     if (width != null) {
-      buffer.writeAll(['"width": ', width, ','], "");
+      buffer.writeAll(['"width":', width, ','], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -51,17 +51,17 @@ export 'highcharts_series_states_inactive_animation_options.dart';
  */
 class HighchartsSankeySeriesStatesInactiveOptions extends HighchartsOptionsBase {
 
-  double? linkOpacity;
-  double? opacity;
   HighchartsSeriesStatesInactiveAnimationOptions? animation;
   bool? enabled;
+  double? linkOpacity;
+  double? opacity;
 
 
   HighchartsSankeySeriesStatesInactiveOptions({
-    this.linkOpacity,
-    this.opacity,
     this.animation,
-    this.enabled
+    this.enabled,
+    this.linkOpacity,
+    this.opacity
   });
 
   @override
@@ -69,17 +69,17 @@ class HighchartsSankeySeriesStatesInactiveOptions extends HighchartsOptionsBase 
     super.toOptionsJSON(buffer);
 
 
-    if (linkOpacity != null) {
-      buffer.writeAll(['"linkOpacity": ', linkOpacity, ','], "");
-    }
-    if (opacity != null) {
-      buffer.writeAll(['"opacity": ', opacity, ','], "");
-    }
     if (animation != null) {
-      buffer.writeAll(['"animation": ', animation?.toJSON(), ","], "");
+      buffer.writeAll(['"animation":', animation?.toJSON(), ","], "");
     }
     if (enabled != null) {
-      buffer.writeAll(['"enabled": ', enabled, ','], "");
+      buffer.writeAll(['"enabled":', enabled, ','], "");
+    }
+    if (linkOpacity != null) {
+      buffer.writeAll(['"linkOpacity":', linkOpacity, ','], "");
+    }
+    if (opacity != null) {
+      buffer.writeAll(['"opacity":', opacity, ','], "");
     }
   }
 

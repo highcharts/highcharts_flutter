@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -119,42 +119,42 @@ class HighchartsFlowMapSeriesDataOptions extends HighchartsOptionsBase {
 
 
     if (curveFactor != null) {
-      buffer.writeAll(['"curveFactor": ', curveFactor, ','], "");
+      buffer.writeAll(['"curveFactor":', curveFactor, ','], "");
     }
     if (fillColor != null) {
-      buffer.writeAll(['"fillColor": ', jsonEncode(fillColor), ','], "");
+      buffer.writeAll(['"fillColor":', jsonEncode(fillColor), ','], "");
     }
     if (fillOpacity != null) {
-      buffer.writeAll(['"fillOpacity": ', fillOpacity, ','], "");
+      buffer.writeAll(['"fillOpacity":', fillOpacity, ','], "");
     }
     if (from != null) {
       buffer.write("{");
       for (var item in from!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (growTowards != null) {
-      buffer.writeAll(['"growTowards": ', growTowards, ','], "");
+      buffer.writeAll(['"growTowards":', growTowards, ','], "");
     }
     if (lineWidth != null) {
-      buffer.writeAll(['"lineWidth": ', lineWidth, ','], "");
+      buffer.writeAll(['"lineWidth":', lineWidth, ','], "");
     }
     if (markerEnd != null) {
-      buffer.writeAll(['"markerEnd": ', markerEnd?.toJSON(), ","], "");
+      buffer.writeAll(['"markerEnd":', markerEnd?.toJSON(), ","], "");
     }
     if (opacity != null) {
-      buffer.writeAll(['"opacity": ', opacity, ','], "");
+      buffer.writeAll(['"opacity":', opacity, ','], "");
     }
     if (to != null) {
       buffer.write("{");
       for (var item in to!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (weight != null) {
-      buffer.writeAll(['"weight": ', weight, ','], "");
+      buffer.writeAll(['"weight":', weight, ','], "");
     }
   }
 

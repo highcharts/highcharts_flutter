@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -23,7 +23,7 @@
  *
  * */
 
-
+import 'dart:convert';
 import 'highcharts_series.dart';
 import 'highcharts_pposeries_options.dart';
 
@@ -90,27 +90,24 @@ export 'highcharts_pposeries_options.dart';
  */
 class HighchartsPPOSeries extends HighchartsSeries {
 
+  List<List<dynamic>>? data;
   String? name;
   HighchartsPPOSeriesOptions? options;
   List<dynamic>? points;
-  List<List<dynamic>>? data;
+  static const _type = "ppo";
 
   HighchartsPPOSeries({
+    this.data,
     this.name,
     this.options,
     this.points,
-    this.data
   });
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-    if (name != null) {
-      buffer.writeAll(['"name": "', name!, '",'], '');
-    }
-
-    buffer.write('"type": "ppo",');
+    buffer.writeAll(['"type": "', _type, '",'], '');
 
     if (data != null && points == null) {
       // Serialize as a 2d array
@@ -135,7 +132,7 @@ class HighchartsPPOSeries extends HighchartsSeries {
         }
       }
 
-      buffer.writeAll(['"data": [', seriesData, '],'], '');
+      buffer.writeAll(['"data":[', seriesData, '],'], '');
 
     } else if (points != null) {
       // Go through the points and write them
@@ -143,13 +140,20 @@ class HighchartsPPOSeries extends HighchartsSeries {
 
       for (var point in points!) {
         seriesData.writeAll(['{'], '');
-        point.toJSONInner(seriesData); 
+        point.toOptionsJSON(seriesData); 
         seriesData.writeAll(['},'], '');
       }
 
       buffer.writeAll(['"data": [', seriesData, '],'], '');
     }
 
+    if (options != null) {
+      options!.toOptionsJSON(buffer);
+    }
+
+    if (name != null) {
+      buffer.writeAll(['"name":', jsonEncode(name), ','], "");
+    }
   }
 
 }

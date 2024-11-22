@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -71,16 +71,16 @@ class HighchartsStockToolsGuiDefinitionsMeasureOptions extends HighchartsOptions
 
 
     if (items != null) {
-      buffer.writeAll(['"items": ', jsonEncode(items), ','], "");
+      buffer.writeAll(['"items":', jsonEncode(items), ','], "");
     }
     if (measureX != null) {
-      buffer.writeAll(['"measureX": ', measureX?.toJSON(), ","], "");
+      buffer.writeAll(['"measureX":', measureX?.toJSON(), ","], "");
     }
     if (measureXY != null) {
-      buffer.writeAll(['"measureXY": ', measureXY?.toJSON(), ","], "");
+      buffer.writeAll(['"measureXY":', measureXY?.toJSON(), ","], "");
     }
     if (measureY != null) {
-      buffer.writeAll(['"measureY": ', measureY?.toJSON(), ","], "");
+      buffer.writeAll(['"measureY":', measureY?.toJSON(), ","], "");
     }
   }
 

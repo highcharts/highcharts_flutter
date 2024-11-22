@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -68,16 +68,16 @@ class HighchartsLangAccessibilityRangeSelectorOptions extends HighchartsOptionsB
 
 
     if (clickButtonAnnouncement != null) {
-      buffer.writeAll(['"clickButtonAnnouncement": ', jsonEncode(clickButtonAnnouncement), ','], "");
+      buffer.writeAll(['"clickButtonAnnouncement":', jsonEncode(clickButtonAnnouncement), ','], "");
     }
     if (dropdownLabel != null) {
-      buffer.writeAll(['"dropdownLabel": ', jsonEncode(dropdownLabel), ','], "");
+      buffer.writeAll(['"dropdownLabel":', jsonEncode(dropdownLabel), ','], "");
     }
     if (maxInputLabel != null) {
-      buffer.writeAll(['"maxInputLabel": ', jsonEncode(maxInputLabel), ','], "");
+      buffer.writeAll(['"maxInputLabel":', jsonEncode(maxInputLabel), ','], "");
     }
     if (minInputLabel != null) {
-      buffer.writeAll(['"minInputLabel": ', jsonEncode(minInputLabel), ','], "");
+      buffer.writeAll(['"minInputLabel":', jsonEncode(minInputLabel), ','], "");
     }
   }
 

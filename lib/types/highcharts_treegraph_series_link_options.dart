@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -46,18 +46,18 @@ import 'highcharts_options_base.dart';
 
 class HighchartsTreegraphSeriesLinkOptions extends HighchartsOptionsBase {
 
-  double? curveFactor;
   String? color;
   String? cursor;
+  double? curveFactor;
   double? lineWidth;
   double? radius;
   String? type;
 
 
   HighchartsTreegraphSeriesLinkOptions({
-    this.curveFactor,
     this.color,
     this.cursor,
+    this.curveFactor,
     this.lineWidth,
     this.radius,
     this.type
@@ -68,23 +68,23 @@ class HighchartsTreegraphSeriesLinkOptions extends HighchartsOptionsBase {
     super.toOptionsJSON(buffer);
 
 
-    if (curveFactor != null) {
-      buffer.writeAll(['"curveFactor": ', curveFactor, ','], "");
-    }
     if (color != null) {
-      buffer.writeAll(['"color": ', jsonEncode(color), ','], "");
+      buffer.writeAll(['"color":', jsonEncode(color), ','], "");
     }
     if (cursor != null) {
-      buffer.writeAll(['"cursor": ', jsonEncode(cursor), ','], "");
+      buffer.writeAll(['"cursor":', jsonEncode(cursor), ','], "");
+    }
+    if (curveFactor != null) {
+      buffer.writeAll(['"curveFactor":', curveFactor, ','], "");
     }
     if (lineWidth != null) {
-      buffer.writeAll(['"lineWidth": ', lineWidth, ','], "");
+      buffer.writeAll(['"lineWidth":', lineWidth, ','], "");
     }
     if (radius != null) {
-      buffer.writeAll(['"radius": ', radius, ','], "");
+      buffer.writeAll(['"radius":', radius, ','], "");
     }
     if (type != null) {
-      buffer.writeAll(['"type": ', jsonEncode(type), ','], "");
+      buffer.writeAll(['"type":', jsonEncode(type), ','], "");
     }
   }
 

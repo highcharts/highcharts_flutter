@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -78,31 +78,31 @@ class HighchartsAccessibilityPointOptions extends HighchartsOptionsBase {
 
 
     if (dateFormat != null) {
-      buffer.writeAll(['"dateFormat": ', jsonEncode(dateFormat), ','], "");
+      buffer.writeAll(['"dateFormat":', jsonEncode(dateFormat), ','], "");
     }
     if (dateFormatter != null) {
-      buffer.writeAll(['"dateFormatter": ', jsonEncode(dateFormatter), ','], "");
+      buffer.writeAll(['"dateFormatter":', jsonEncode(dateFormatter), ','], "");
     }
     if (describeNull != null) {
-      buffer.writeAll(['"describeNull": ', describeNull, ','], "");
+      buffer.writeAll(['"describeNull":', describeNull, ','], "");
     }
     if (descriptionFormat != null) {
-      buffer.writeAll(['"descriptionFormat": ', jsonEncode(descriptionFormat), ','], "");
+      buffer.writeAll(['"descriptionFormat":', jsonEncode(descriptionFormat), ','], "");
     }
     if (descriptionFormatter != null) {
-      buffer.writeAll(['"descriptionFormatter": ', jsonEncode(descriptionFormatter), ','], "");
+      buffer.writeAll(['"descriptionFormatter":', jsonEncode(descriptionFormatter), ','], "");
     }
     if (valueDecimals != null) {
-      buffer.writeAll(['"valueDecimals": ', valueDecimals, ','], "");
+      buffer.writeAll(['"valueDecimals":', valueDecimals, ','], "");
     }
     if (valueDescriptionFormat != null) {
-      buffer.writeAll(['"valueDescriptionFormat": ', jsonEncode(valueDescriptionFormat), ','], "");
+      buffer.writeAll(['"valueDescriptionFormat":', jsonEncode(valueDescriptionFormat), ','], "");
     }
     if (valuePrefix != null) {
-      buffer.writeAll(['"valuePrefix": ', jsonEncode(valuePrefix), ','], "");
+      buffer.writeAll(['"valuePrefix":', jsonEncode(valuePrefix), ','], "");
     }
     if (valueSuffix != null) {
-      buffer.writeAll(['"valueSuffix": ', jsonEncode(valueSuffix), ','], "");
+      buffer.writeAll(['"valueSuffix":', jsonEncode(valueSuffix), ','], "");
     }
   }
 

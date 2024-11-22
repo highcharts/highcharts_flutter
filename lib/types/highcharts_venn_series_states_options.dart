@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -27,9 +27,9 @@
 
 import 'highcharts_options_base.dart';
 import 'highcharts_venn_series_states_hover_options.dart';
-import 'highcharts_venn_series_states_select_options.dart';
 import 'highcharts_venn_series_states_inactive_options.dart';
 import 'highcharts_series_states_normal_options.dart';
+import 'highcharts_venn_series_states_select_options.dart';
 
 
 /* *
@@ -40,9 +40,9 @@ import 'highcharts_series_states_normal_options.dart';
 
 
 export 'highcharts_venn_series_states_hover_options.dart';
-export 'highcharts_venn_series_states_select_options.dart';
 export 'highcharts_venn_series_states_inactive_options.dart';
 export 'highcharts_series_states_normal_options.dart';
+export 'highcharts_venn_series_states_select_options.dart';
 
 
 /* *
@@ -55,16 +55,16 @@ export 'highcharts_series_states_normal_options.dart';
 class HighchartsVennSeriesStatesOptions extends HighchartsOptionsBase {
 
   HighchartsVennSeriesStatesHoverOptions? hover;
-  HighchartsVennSeriesStatesSelectOptions? select;
   HighchartsVennSeriesStatesInactiveOptions? inactive;
   HighchartsSeriesStatesNormalOptions? normal;
+  HighchartsVennSeriesStatesSelectOptions? select;
 
 
   HighchartsVennSeriesStatesOptions({
     this.hover,
-    this.select,
     this.inactive,
-    this.normal
+    this.normal,
+    this.select
   });
 
   @override
@@ -73,16 +73,16 @@ class HighchartsVennSeriesStatesOptions extends HighchartsOptionsBase {
 
 
     if (hover != null) {
-      buffer.writeAll(['"hover": ', hover?.toJSON(), ","], "");
-    }
-    if (select != null) {
-      buffer.writeAll(['"select": ', select?.toJSON(), ","], "");
+      buffer.writeAll(['"hover":', hover?.toJSON(), ","], "");
     }
     if (inactive != null) {
-      buffer.writeAll(['"inactive": ', inactive?.toJSON(), ","], "");
+      buffer.writeAll(['"inactive":', inactive?.toJSON(), ","], "");
     }
     if (normal != null) {
-      buffer.writeAll(['"normal": ', normal?.toJSON(), ","], "");
+      buffer.writeAll(['"normal":', normal?.toJSON(), ","], "");
+    }
+    if (select != null) {
+      buffer.writeAll(['"select":', select?.toJSON(), ","], "");
     }
   }
 

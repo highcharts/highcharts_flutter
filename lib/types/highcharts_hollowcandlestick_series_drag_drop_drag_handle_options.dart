@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -49,22 +49,22 @@ import 'highcharts_options_base.dart';
  */
 class HighchartsHollowcandlestickSeriesDragDropDragHandleOptions extends HighchartsOptionsBase {
 
-  String? cursor;
-  dynamic pathFormatter;
   String? className;
   String? color;
+  String? cursor;
   String? lineColor;
   double? lineWidth;
+  dynamic pathFormatter;
   double? zIndex;
 
 
   HighchartsHollowcandlestickSeriesDragDropDragHandleOptions({
-    this.cursor,
-    this.pathFormatter,
     this.className,
     this.color,
+    this.cursor,
     this.lineColor,
     this.lineWidth,
+    this.pathFormatter,
     this.zIndex
   });
 
@@ -73,26 +73,26 @@ class HighchartsHollowcandlestickSeriesDragDropDragHandleOptions extends Highcha
     super.toOptionsJSON(buffer);
 
 
-    if (cursor != null) {
-      buffer.writeAll(['"cursor": ', jsonEncode(cursor), ','], "");
-    }
-    if (pathFormatter != null) {
-      buffer.writeAll(['"pathFormatter": ', jsonEncode(pathFormatter), ','], "");
-    }
     if (className != null) {
-      buffer.writeAll(['"className": ', jsonEncode(className), ','], "");
+      buffer.writeAll(['"className":', jsonEncode(className), ','], "");
     }
     if (color != null) {
-      buffer.writeAll(['"color": ', jsonEncode(color), ','], "");
+      buffer.writeAll(['"color":', jsonEncode(color), ','], "");
+    }
+    if (cursor != null) {
+      buffer.writeAll(['"cursor":', jsonEncode(cursor), ','], "");
     }
     if (lineColor != null) {
-      buffer.writeAll(['"lineColor": ', jsonEncode(lineColor), ','], "");
+      buffer.writeAll(['"lineColor":', jsonEncode(lineColor), ','], "");
     }
     if (lineWidth != null) {
-      buffer.writeAll(['"lineWidth": ', lineWidth, ','], "");
+      buffer.writeAll(['"lineWidth":', lineWidth, ','], "");
+    }
+    if (pathFormatter != null) {
+      buffer.writeAll(['"pathFormatter":', jsonEncode(pathFormatter), ','], "");
     }
     if (zIndex != null) {
-      buffer.writeAll(['"zIndex": ', zIndex, ','], "");
+      buffer.writeAll(['"zIndex":', zIndex, ','], "");
     }
   }
 

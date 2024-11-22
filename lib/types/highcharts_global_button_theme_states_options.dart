@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -72,13 +72,13 @@ class HighchartsGlobalButtonThemeStatesOptions extends HighchartsOptionsBase {
 
 
     if (disabled != null) {
-      buffer.writeAll(['"disabled": ', disabled?.toJSON(), ","], "");
+      buffer.writeAll(['"disabled":', disabled?.toJSON(), ","], "");
     }
     if (hover != null) {
-      buffer.writeAll(['"hover": ', hover?.toJSON(), ","], "");
+      buffer.writeAll(['"hover":', hover?.toJSON(), ","], "");
     }
     if (select != null) {
-      buffer.writeAll(['"select": ', select?.toJSON(), ","], "");
+      buffer.writeAll(['"select":', select?.toJSON(), ","], "");
     }
   }
 

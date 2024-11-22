@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -258,298 +258,298 @@ class HighchartsLangNavigationPopupOptions extends HighchartsOptionsBase {
 
 
     if (addButton != null) {
-      buffer.writeAll(['"addButton": ', jsonEncode(addButton), ','], "");
+      buffer.writeAll(['"addButton":', jsonEncode(addButton), ','], "");
     }
     if (algorithm != null) {
-      buffer.writeAll(['"algorithm": ', jsonEncode(algorithm), ','], "");
+      buffer.writeAll(['"algorithm":', jsonEncode(algorithm), ','], "");
     }
     if (arrowInfinityLine != null) {
-      buffer.writeAll(['"arrowInfinityLine": ', jsonEncode(arrowInfinityLine), ','], "");
+      buffer.writeAll(['"arrowInfinityLine":', jsonEncode(arrowInfinityLine), ','], "");
     }
     if (arrowRay != null) {
-      buffer.writeAll(['"arrowRay": ', jsonEncode(arrowRay), ','], "");
+      buffer.writeAll(['"arrowRay":', jsonEncode(arrowRay), ','], "");
     }
     if (arrowSegment != null) {
-      buffer.writeAll(['"arrowSegment": ', jsonEncode(arrowSegment), ','], "");
+      buffer.writeAll(['"arrowSegment":', jsonEncode(arrowSegment), ','], "");
     }
     if (average != null) {
-      buffer.writeAll(['"average": ', jsonEncode(average), ','], "");
+      buffer.writeAll(['"average":', jsonEncode(average), ','], "");
     }
     if (background != null) {
-      buffer.writeAll(['"background": ', jsonEncode(background), ','], "");
+      buffer.writeAll(['"background":', jsonEncode(background), ','], "");
     }
     if (backgroundColor != null) {
-      buffer.writeAll(['"backgroundColor": ', jsonEncode(backgroundColor), ','], "");
+      buffer.writeAll(['"backgroundColor":', jsonEncode(backgroundColor), ','], "");
     }
     if (backgroundColors != null) {
-      buffer.writeAll(['"backgroundColors": ', jsonEncode(backgroundColors), ','], "");
+      buffer.writeAll(['"backgroundColors":', jsonEncode(backgroundColors), ','], "");
     }
     if (borderColor != null) {
-      buffer.writeAll(['"borderColor": ', jsonEncode(borderColor), ','], "");
+      buffer.writeAll(['"borderColor":', jsonEncode(borderColor), ','], "");
     }
     if (borderRadius != null) {
-      buffer.writeAll(['"borderRadius": ', jsonEncode(borderRadius), ','], "");
+      buffer.writeAll(['"borderRadius":', jsonEncode(borderRadius), ','], "");
     }
     if (borderWidth != null) {
-      buffer.writeAll(['"borderWidth": ', jsonEncode(borderWidth), ','], "");
+      buffer.writeAll(['"borderWidth":', jsonEncode(borderWidth), ','], "");
     }
     if (bottomBand != null) {
-      buffer.writeAll(['"bottomBand": ', jsonEncode(bottomBand), ','], "");
+      buffer.writeAll(['"bottomBand":', jsonEncode(bottomBand), ','], "");
     }
     if (circle != null) {
-      buffer.writeAll(['"circle": ', jsonEncode(circle), ','], "");
+      buffer.writeAll(['"circle":', jsonEncode(circle), ','], "");
     }
     if (clearFilter != null) {
-      buffer.writeAll(['"clearFilter": ', jsonEncode(clearFilter), ','], "");
+      buffer.writeAll(['"clearFilter":', jsonEncode(clearFilter), ','], "");
     }
     if (color != null) {
-      buffer.writeAll(['"color": ', jsonEncode(color), ','], "");
+      buffer.writeAll(['"color":', jsonEncode(color), ','], "");
     }
     if (connector != null) {
-      buffer.writeAll(['"connector": ', jsonEncode(connector), ','], "");
+      buffer.writeAll(['"connector":', jsonEncode(connector), ','], "");
     }
     if (crooked3 != null) {
-      buffer.writeAll(['"crooked3": ', jsonEncode(crooked3), ','], "");
+      buffer.writeAll(['"crooked3":', jsonEncode(crooked3), ','], "");
     }
     if (crooked5 != null) {
-      buffer.writeAll(['"crooked5": ', jsonEncode(crooked5), ','], "");
+      buffer.writeAll(['"crooked5":', jsonEncode(crooked5), ','], "");
     }
     if (crosshairX != null) {
-      buffer.writeAll(['"crosshairX": ', jsonEncode(crosshairX), ','], "");
+      buffer.writeAll(['"crosshairX":', jsonEncode(crosshairX), ','], "");
     }
     if (crosshairY != null) {
-      buffer.writeAll(['"crosshairY": ', jsonEncode(crosshairY), ','], "");
+      buffer.writeAll(['"crosshairY":', jsonEncode(crosshairY), ','], "");
     }
     if (decimals != null) {
-      buffer.writeAll(['"decimals": ', jsonEncode(decimals), ','], "");
+      buffer.writeAll(['"decimals":', jsonEncode(decimals), ','], "");
     }
     if (deviation != null) {
-      buffer.writeAll(['"deviation": ', jsonEncode(deviation), ','], "");
+      buffer.writeAll(['"deviation":', jsonEncode(deviation), ','], "");
     }
     if (editButton != null) {
-      buffer.writeAll(['"editButton": ', jsonEncode(editButton), ','], "");
+      buffer.writeAll(['"editButton":', jsonEncode(editButton), ','], "");
     }
     if (elliott3 != null) {
-      buffer.writeAll(['"elliott3": ', jsonEncode(elliott3), ','], "");
+      buffer.writeAll(['"elliott3":', jsonEncode(elliott3), ','], "");
     }
     if (elliott5 != null) {
-      buffer.writeAll(['"elliott5": ', jsonEncode(elliott5), ','], "");
+      buffer.writeAll(['"elliott5":', jsonEncode(elliott5), ','], "");
     }
     if (ellipse != null) {
-      buffer.writeAll(['"ellipse": ', jsonEncode(ellipse), ','], "");
+      buffer.writeAll(['"ellipse":', jsonEncode(ellipse), ','], "");
     }
     if (factor != null) {
-      buffer.writeAll(['"factor": ', jsonEncode(factor), ','], "");
+      buffer.writeAll(['"factor":', jsonEncode(factor), ','], "");
     }
     if (fastAvgPeriod != null) {
-      buffer.writeAll(['"fastAvgPeriod": ', jsonEncode(fastAvgPeriod), ','], "");
+      buffer.writeAll(['"fastAvgPeriod":', jsonEncode(fastAvgPeriod), ','], "");
     }
     if (fibonacci != null) {
-      buffer.writeAll(['"fibonacci": ', jsonEncode(fibonacci), ','], "");
+      buffer.writeAll(['"fibonacci":', jsonEncode(fibonacci), ','], "");
     }
     if (fibonacciTimeZones != null) {
-      buffer.writeAll(['"fibonacciTimeZones": ', jsonEncode(fibonacciTimeZones), ','], "");
+      buffer.writeAll(['"fibonacciTimeZones":', jsonEncode(fibonacciTimeZones), ','], "");
     }
     if (fill != null) {
-      buffer.writeAll(['"fill": ', jsonEncode(fill), ','], "");
+      buffer.writeAll(['"fill":', jsonEncode(fill), ','], "");
     }
     if (flags != null) {
-      buffer.writeAll(['"flags": ', jsonEncode(flags), ','], "");
+      buffer.writeAll(['"flags":', jsonEncode(flags), ','], "");
     }
     if (fontSize != null) {
-      buffer.writeAll(['"fontSize": ', jsonEncode(fontSize), ','], "");
+      buffer.writeAll(['"fontSize":', jsonEncode(fontSize), ','], "");
     }
     if (format != null) {
-      buffer.writeAll(['"format": ', jsonEncode(format), ','], "");
+      buffer.writeAll(['"format":', jsonEncode(format), ','], "");
     }
     if (height != null) {
-      buffer.writeAll(['"height": ', jsonEncode(height), ','], "");
+      buffer.writeAll(['"height":', jsonEncode(height), ','], "");
     }
     if (highIndex != null) {
-      buffer.writeAll(['"highIndex": ', jsonEncode(highIndex), ','], "");
+      buffer.writeAll(['"highIndex":', jsonEncode(highIndex), ','], "");
     }
     if (horizontalLine != null) {
-      buffer.writeAll(['"horizontalLine": ', jsonEncode(horizontalLine), ','], "");
+      buffer.writeAll(['"horizontalLine":', jsonEncode(horizontalLine), ','], "");
     }
     if (increment != null) {
-      buffer.writeAll(['"increment": ', jsonEncode(increment), ','], "");
+      buffer.writeAll(['"increment":', jsonEncode(increment), ','], "");
     }
     if (index != null) {
-      buffer.writeAll(['"index": ', jsonEncode(index), ','], "");
+      buffer.writeAll(['"index":', jsonEncode(index), ','], "");
     }
     if (infinityLine != null) {
-      buffer.writeAll(['"infinityLine": ', jsonEncode(infinityLine), ','], "");
+      buffer.writeAll(['"infinityLine":', jsonEncode(infinityLine), ','], "");
     }
     if (initialAccelerationFactor != null) {
-      buffer.writeAll(['"initialAccelerationFactor": ', jsonEncode(initialAccelerationFactor), ','], "");
+      buffer.writeAll(['"initialAccelerationFactor":', jsonEncode(initialAccelerationFactor), ','], "");
     }
     if (innerBackground != null) {
-      buffer.writeAll(['"innerBackground": ', jsonEncode(innerBackground), ','], "");
+      buffer.writeAll(['"innerBackground":', jsonEncode(innerBackground), ','], "");
     }
     if (label != null) {
-      buffer.writeAll(['"label": ', jsonEncode(label), ','], "");
+      buffer.writeAll(['"label":', jsonEncode(label), ','], "");
     }
     if (labelOptions != null) {
-      buffer.writeAll(['"labelOptions": ', jsonEncode(labelOptions), ','], "");
+      buffer.writeAll(['"labelOptions":', jsonEncode(labelOptions), ','], "");
     }
     if (labels != null) {
-      buffer.writeAll(['"labels": ', jsonEncode(labels), ','], "");
+      buffer.writeAll(['"labels":', jsonEncode(labels), ','], "");
     }
     if (line != null) {
-      buffer.writeAll(['"line": ', jsonEncode(line), ','], "");
+      buffer.writeAll(['"line":', jsonEncode(line), ','], "");
     }
     if (lines != null) {
-      buffer.writeAll(['"lines": ', jsonEncode(lines), ','], "");
+      buffer.writeAll(['"lines":', jsonEncode(lines), ','], "");
     }
     if (longPeriod != null) {
-      buffer.writeAll(['"longPeriod": ', jsonEncode(longPeriod), ','], "");
+      buffer.writeAll(['"longPeriod":', jsonEncode(longPeriod), ','], "");
     }
     if (lowIndex != null) {
-      buffer.writeAll(['"lowIndex": ', jsonEncode(lowIndex), ','], "");
+      buffer.writeAll(['"lowIndex":', jsonEncode(lowIndex), ','], "");
     }
     if (maxAccelerationFactor != null) {
-      buffer.writeAll(['"maxAccelerationFactor": ', jsonEncode(maxAccelerationFactor), ','], "");
+      buffer.writeAll(['"maxAccelerationFactor":', jsonEncode(maxAccelerationFactor), ','], "");
     }
     if (measure != null) {
-      buffer.writeAll(['"measure": ', jsonEncode(measure), ','], "");
+      buffer.writeAll(['"measure":', jsonEncode(measure), ','], "");
     }
     if (measureX != null) {
-      buffer.writeAll(['"measureX": ', jsonEncode(measureX), ','], "");
+      buffer.writeAll(['"measureX":', jsonEncode(measureX), ','], "");
     }
     if (measureXY != null) {
-      buffer.writeAll(['"measureXY": ', jsonEncode(measureXY), ','], "");
+      buffer.writeAll(['"measureXY":', jsonEncode(measureXY), ','], "");
     }
     if (measureY != null) {
-      buffer.writeAll(['"measureY": ', jsonEncode(measureY), ','], "");
+      buffer.writeAll(['"measureY":', jsonEncode(measureY), ','], "");
     }
     if (multiplier != null) {
-      buffer.writeAll(['"multiplier": ', jsonEncode(multiplier), ','], "");
+      buffer.writeAll(['"multiplier":', jsonEncode(multiplier), ','], "");
     }
     if (multiplierATR != null) {
-      buffer.writeAll(['"multiplierATR": ', jsonEncode(multiplierATR), ','], "");
+      buffer.writeAll(['"multiplierATR":', jsonEncode(multiplierATR), ','], "");
     }
     if (name != null) {
-      buffer.writeAll(['"name": ', jsonEncode(name), ','], "");
+      buffer.writeAll(['"name":', jsonEncode(name), ','], "");
     }
     if (noFilterMatch != null) {
-      buffer.writeAll(['"noFilterMatch": ', jsonEncode(noFilterMatch), ','], "");
+      buffer.writeAll(['"noFilterMatch":', jsonEncode(noFilterMatch), ','], "");
     }
     if (outerBackground != null) {
-      buffer.writeAll(['"outerBackground": ', jsonEncode(outerBackground), ','], "");
+      buffer.writeAll(['"outerBackground":', jsonEncode(outerBackground), ','], "");
     }
     if (padding != null) {
-      buffer.writeAll(['"padding": ', jsonEncode(padding), ','], "");
+      buffer.writeAll(['"padding":', jsonEncode(padding), ','], "");
     }
     if (parallelChannel != null) {
-      buffer.writeAll(['"parallelChannel": ', jsonEncode(parallelChannel), ','], "");
+      buffer.writeAll(['"parallelChannel":', jsonEncode(parallelChannel), ','], "");
     }
     if (period != null) {
-      buffer.writeAll(['"period": ', jsonEncode(period), ','], "");
+      buffer.writeAll(['"period":', jsonEncode(period), ','], "");
     }
     if (periodATR != null) {
-      buffer.writeAll(['"periodATR": ', jsonEncode(periodATR), ','], "");
+      buffer.writeAll(['"periodATR":', jsonEncode(periodATR), ','], "");
     }
     if (periodSenkouSpanB != null) {
-      buffer.writeAll(['"periodSenkouSpanB": ', jsonEncode(periodSenkouSpanB), ','], "");
+      buffer.writeAll(['"periodSenkouSpanB":', jsonEncode(periodSenkouSpanB), ','], "");
     }
     if (periodTenkan != null) {
-      buffer.writeAll(['"periodTenkan": ', jsonEncode(periodTenkan), ','], "");
+      buffer.writeAll(['"periodTenkan":', jsonEncode(periodTenkan), ','], "");
     }
     if (periods != null) {
-      buffer.writeAll(['"periods": ', jsonEncode(periods), ','], "");
+      buffer.writeAll(['"periods":', jsonEncode(periods), ','], "");
     }
     if (pitchfork != null) {
-      buffer.writeAll(['"pitchfork": ', jsonEncode(pitchfork), ','], "");
+      buffer.writeAll(['"pitchfork":', jsonEncode(pitchfork), ','], "");
     }
     if (ranges != null) {
-      buffer.writeAll(['"ranges": ', jsonEncode(ranges), ','], "");
+      buffer.writeAll(['"ranges":', jsonEncode(ranges), ','], "");
     }
     if (ray != null) {
-      buffer.writeAll(['"ray": ', jsonEncode(ray), ','], "");
+      buffer.writeAll(['"ray":', jsonEncode(ray), ','], "");
     }
     if (rectangle != null) {
-      buffer.writeAll(['"rectangle": ', jsonEncode(rectangle), ','], "");
+      buffer.writeAll(['"rectangle":', jsonEncode(rectangle), ','], "");
     }
     if (removeButton != null) {
-      buffer.writeAll(['"removeButton": ', jsonEncode(removeButton), ','], "");
+      buffer.writeAll(['"removeButton":', jsonEncode(removeButton), ','], "");
     }
     if (saveButton != null) {
-      buffer.writeAll(['"saveButton": ', jsonEncode(saveButton), ','], "");
+      buffer.writeAll(['"saveButton":', jsonEncode(saveButton), ','], "");
     }
     if (searchIndicators != null) {
-      buffer.writeAll(['"searchIndicators": ', jsonEncode(searchIndicators), ','], "");
+      buffer.writeAll(['"searchIndicators":', jsonEncode(searchIndicators), ','], "");
     }
     if (segment != null) {
-      buffer.writeAll(['"segment": ', jsonEncode(segment), ','], "");
+      buffer.writeAll(['"segment":', jsonEncode(segment), ','], "");
     }
     if (series != null) {
-      buffer.writeAll(['"series": ', jsonEncode(series), ','], "");
+      buffer.writeAll(['"series":', jsonEncode(series), ','], "");
     }
     if (shapeOptions != null) {
-      buffer.writeAll(['"shapeOptions": ', jsonEncode(shapeOptions), ','], "");
+      buffer.writeAll(['"shapeOptions":', jsonEncode(shapeOptions), ','], "");
     }
     if (shapes != null) {
-      buffer.writeAll(['"shapes": ', jsonEncode(shapes), ','], "");
+      buffer.writeAll(['"shapes":', jsonEncode(shapes), ','], "");
     }
     if (shortPeriod != null) {
-      buffer.writeAll(['"shortPeriod": ', jsonEncode(shortPeriod), ','], "");
+      buffer.writeAll(['"shortPeriod":', jsonEncode(shortPeriod), ','], "");
     }
     if (signalPeriod != null) {
-      buffer.writeAll(['"signalPeriod": ', jsonEncode(signalPeriod), ','], "");
+      buffer.writeAll(['"signalPeriod":', jsonEncode(signalPeriod), ','], "");
     }
     if (simpleShapes != null) {
-      buffer.writeAll(['"simpleShapes": ', jsonEncode(simpleShapes), ','], "");
+      buffer.writeAll(['"simpleShapes":', jsonEncode(simpleShapes), ','], "");
     }
     if (slowAvgPeriod != null) {
-      buffer.writeAll(['"slowAvgPeriod": ', jsonEncode(slowAvgPeriod), ','], "");
+      buffer.writeAll(['"slowAvgPeriod":', jsonEncode(slowAvgPeriod), ','], "");
     }
     if (standardDeviation != null) {
-      buffer.writeAll(['"standardDeviation": ', jsonEncode(standardDeviation), ','], "");
+      buffer.writeAll(['"standardDeviation":', jsonEncode(standardDeviation), ','], "");
     }
     if (stroke != null) {
-      buffer.writeAll(['"stroke": ', jsonEncode(stroke), ','], "");
+      buffer.writeAll(['"stroke":', jsonEncode(stroke), ','], "");
     }
     if (strokeWidth != null) {
-      buffer.writeAll(['"strokeWidth": ', jsonEncode(strokeWidth), ','], "");
+      buffer.writeAll(['"strokeWidth":', jsonEncode(strokeWidth), ','], "");
     }
     if (style != null) {
-      buffer.writeAll(['"style": ', jsonEncode(style), ','], "");
+      buffer.writeAll(['"style":', jsonEncode(style), ','], "");
     }
     if (timeCycles != null) {
-      buffer.writeAll(['"timeCycles": ', jsonEncode(timeCycles), ','], "");
+      buffer.writeAll(['"timeCycles":', jsonEncode(timeCycles), ','], "");
     }
     if (title != null) {
-      buffer.writeAll(['"title": ', jsonEncode(title), ','], "");
+      buffer.writeAll(['"title":', jsonEncode(title), ','], "");
     }
     if (topBand != null) {
-      buffer.writeAll(['"topBand": ', jsonEncode(topBand), ','], "");
+      buffer.writeAll(['"topBand":', jsonEncode(topBand), ','], "");
     }
     if (tunnel != null) {
-      buffer.writeAll(['"tunnel": ', jsonEncode(tunnel), ','], "");
+      buffer.writeAll(['"tunnel":', jsonEncode(tunnel), ','], "");
     }
     if (typeOptions != null) {
-      buffer.writeAll(['"typeOptions": ', jsonEncode(typeOptions), ','], "");
+      buffer.writeAll(['"typeOptions":', jsonEncode(typeOptions), ','], "");
     }
     if (verticalArrow != null) {
-      buffer.writeAll(['"verticalArrow": ', jsonEncode(verticalArrow), ','], "");
+      buffer.writeAll(['"verticalArrow":', jsonEncode(verticalArrow), ','], "");
     }
     if (verticalCounter != null) {
-      buffer.writeAll(['"verticalCounter": ', jsonEncode(verticalCounter), ','], "");
+      buffer.writeAll(['"verticalCounter":', jsonEncode(verticalCounter), ','], "");
     }
     if (verticalLabel != null) {
-      buffer.writeAll(['"verticalLabel": ', jsonEncode(verticalLabel), ','], "");
+      buffer.writeAll(['"verticalLabel":', jsonEncode(verticalLabel), ','], "");
     }
     if (verticalLine != null) {
-      buffer.writeAll(['"verticalLine": ', jsonEncode(verticalLine), ','], "");
+      buffer.writeAll(['"verticalLine":', jsonEncode(verticalLine), ','], "");
     }
     if (volume != null) {
-      buffer.writeAll(['"volume": ', jsonEncode(volume), ','], "");
+      buffer.writeAll(['"volume":', jsonEncode(volume), ','], "");
     }
     if (xAxisUnit != null) {
-      buffer.writeAll(['"xAxisUnit": ', jsonEncode(xAxisUnit), ','], "");
+      buffer.writeAll(['"xAxisUnit":', jsonEncode(xAxisUnit), ','], "");
     }
     if (indicatorAliases != null) {
-      buffer.writeAll(['"indicatorAliases": ', indicatorAliases?.toJSON(), ","], "");
+      buffer.writeAll(['"indicatorAliases":', indicatorAliases?.toJSON(), ","], "");
     }
   }
 

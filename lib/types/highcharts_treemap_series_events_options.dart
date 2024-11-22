@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -46,7 +46,6 @@ import 'highcharts_options_base.dart';
 
 class HighchartsTreemapSeriesEventsOptions extends HighchartsOptionsBase {
 
-  dynamic setRootNode;
   dynamic afterAnimate;
   dynamic checkboxClick;
   dynamic click;
@@ -54,11 +53,11 @@ class HighchartsTreemapSeriesEventsOptions extends HighchartsOptionsBase {
   dynamic legendItemClick;
   dynamic mouseOut;
   dynamic mouseOver;
+  dynamic setRootNode;
   dynamic show;
 
 
   HighchartsTreemapSeriesEventsOptions({
-    this.setRootNode,
     this.afterAnimate,
     this.checkboxClick,
     this.click,
@@ -66,6 +65,7 @@ class HighchartsTreemapSeriesEventsOptions extends HighchartsOptionsBase {
     this.legendItemClick,
     this.mouseOut,
     this.mouseOver,
+    this.setRootNode,
     this.show
   });
 
@@ -74,32 +74,32 @@ class HighchartsTreemapSeriesEventsOptions extends HighchartsOptionsBase {
     super.toOptionsJSON(buffer);
 
 
-    if (setRootNode != null) {
-      buffer.writeAll(['"setRootNode": ', jsonEncode(setRootNode), ','], "");
-    }
     if (afterAnimate != null) {
-      buffer.writeAll(['"afterAnimate": ', jsonEncode(afterAnimate), ','], "");
+      buffer.writeAll(['"afterAnimate":', jsonEncode(afterAnimate), ','], "");
     }
     if (checkboxClick != null) {
-      buffer.writeAll(['"checkboxClick": ', jsonEncode(checkboxClick), ','], "");
+      buffer.writeAll(['"checkboxClick":', jsonEncode(checkboxClick), ','], "");
     }
     if (click != null) {
-      buffer.writeAll(['"click": ', jsonEncode(click), ','], "");
+      buffer.writeAll(['"click":', jsonEncode(click), ','], "");
     }
     if (hide != null) {
-      buffer.writeAll(['"hide": ', jsonEncode(hide), ','], "");
+      buffer.writeAll(['"hide":', jsonEncode(hide), ','], "");
     }
     if (legendItemClick != null) {
-      buffer.writeAll(['"legendItemClick": ', jsonEncode(legendItemClick), ','], "");
+      buffer.writeAll(['"legendItemClick":', jsonEncode(legendItemClick), ','], "");
     }
     if (mouseOut != null) {
-      buffer.writeAll(['"mouseOut": ', jsonEncode(mouseOut), ','], "");
+      buffer.writeAll(['"mouseOut":', jsonEncode(mouseOut), ','], "");
     }
     if (mouseOver != null) {
-      buffer.writeAll(['"mouseOver": ', jsonEncode(mouseOver), ','], "");
+      buffer.writeAll(['"mouseOver":', jsonEncode(mouseOver), ','], "");
+    }
+    if (setRootNode != null) {
+      buffer.writeAll(['"setRootNode":', jsonEncode(setRootNode), ','], "");
     }
     if (show != null) {
-      buffer.writeAll(['"show": ', jsonEncode(show), ','], "");
+      buffer.writeAll(['"show":', jsonEncode(show), ','], "");
     }
   }
 

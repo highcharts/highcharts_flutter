@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -61,10 +61,10 @@ class HighchartsVWAPSeriesParamsOptions extends HighchartsOptionsBase {
 
 
     if (period != null) {
-      buffer.writeAll(['"period": ', period, ','], "");
+      buffer.writeAll(['"period":', period, ','], "");
     }
     if (volumeSeriesID != null) {
-      buffer.writeAll(['"volumeSeriesID": ', jsonEncode(volumeSeriesID), ','], "");
+      buffer.writeAll(['"volumeSeriesID":', jsonEncode(volumeSeriesID), ','], "");
     }
   }
 

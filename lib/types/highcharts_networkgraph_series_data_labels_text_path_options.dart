@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -46,13 +46,13 @@ import 'highcharts_options_base.dart';
 
 class HighchartsNetworkgraphSeriesDataLabelsTextPathOptions extends HighchartsOptionsBase {
 
-  bool? enabled;
   dynamic attributes;
+  bool? enabled;
 
 
   HighchartsNetworkgraphSeriesDataLabelsTextPathOptions({
-    this.enabled,
-    this.attributes
+    this.attributes,
+    this.enabled
   });
 
   @override
@@ -60,11 +60,11 @@ class HighchartsNetworkgraphSeriesDataLabelsTextPathOptions extends HighchartsOp
     super.toOptionsJSON(buffer);
 
 
-    if (enabled != null) {
-      buffer.writeAll(['"enabled": ', enabled, ','], "");
-    }
     if (attributes != null) {
-      buffer.writeAll(['"attributes": ', jsonEncode(attributes), ','], "");
+      buffer.writeAll(['"attributes":', jsonEncode(attributes), ','], "");
+    }
+    if (enabled != null) {
+      buffer.writeAll(['"enabled":', enabled, ','], "");
     }
   }
 

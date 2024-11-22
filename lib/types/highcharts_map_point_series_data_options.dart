@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -26,8 +26,8 @@
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-import 'highcharts_map_point_series_data_geometry_options.dart';
 import 'highcharts_map_point_series_data_events_options.dart';
+import 'highcharts_map_point_series_data_geometry_options.dart';
 
 
 /* *
@@ -37,8 +37,8 @@ import 'highcharts_map_point_series_data_events_options.dart';
  * */
 
 
-export 'highcharts_map_point_series_data_geometry_options.dart';
 export 'highcharts_map_point_series_data_events_options.dart';
+export 'highcharts_map_point_series_data_geometry_options.dart';
 
 
 /* *
@@ -94,29 +94,29 @@ export 'highcharts_map_point_series_data_events_options.dart';
  */
 class HighchartsMapPointSeriesDataOptions extends HighchartsOptionsBase {
 
-  HighchartsMapPointSeriesDataGeometryOptions? geometry;
-  double? lat;
-  double? lon;
-  double? x;
-  double? y;
   String? color;
   dynamic dataLabels;
   String? drilldown;
   HighchartsMapPointSeriesDataEventsOptions? events;
+  HighchartsMapPointSeriesDataGeometryOptions? geometry;
   String? id;
+  double? lat;
+  double? lon;
+  double? x;
+  double? y;
 
 
   HighchartsMapPointSeriesDataOptions({
-    this.geometry,
-    this.lat,
-    this.lon,
-    this.x,
-    this.y,
     this.color,
     this.dataLabels,
     this.drilldown,
     this.events,
-    this.id
+    this.geometry,
+    this.id,
+    this.lat,
+    this.lon,
+    this.x,
+    this.y
   });
 
   @override
@@ -124,35 +124,35 @@ class HighchartsMapPointSeriesDataOptions extends HighchartsOptionsBase {
     super.toOptionsJSON(buffer);
 
 
-    if (geometry != null) {
-      buffer.writeAll(['"geometry": ', geometry?.toJSON(), ","], "");
-    }
-    if (lat != null) {
-      buffer.writeAll(['"lat": ', lat, ','], "");
-    }
-    if (lon != null) {
-      buffer.writeAll(['"lon": ', lon, ','], "");
-    }
-    if (x != null) {
-      buffer.writeAll(['"x": ', x, ','], "");
-    }
-    if (y != null) {
-      buffer.writeAll(['"y": ', y, ','], "");
-    }
     if (color != null) {
-      buffer.writeAll(['"color": ', jsonEncode(color), ','], "");
+      buffer.writeAll(['"color":', jsonEncode(color), ','], "");
     }
     if (dataLabels != null) {
-      buffer.writeAll(['"dataLabels": ', jsonEncode(dataLabels), ','], "");
+      buffer.writeAll(['"dataLabels":', jsonEncode(dataLabels), ','], "");
     }
     if (drilldown != null) {
-      buffer.writeAll(['"drilldown": ', jsonEncode(drilldown), ','], "");
+      buffer.writeAll(['"drilldown":', jsonEncode(drilldown), ','], "");
     }
     if (events != null) {
-      buffer.writeAll(['"events": ', events?.toJSON(), ","], "");
+      buffer.writeAll(['"events":', events?.toJSON(), ","], "");
+    }
+    if (geometry != null) {
+      buffer.writeAll(['"geometry":', geometry?.toJSON(), ","], "");
     }
     if (id != null) {
-      buffer.writeAll(['"id": ', jsonEncode(id), ','], "");
+      buffer.writeAll(['"id":', jsonEncode(id), ','], "");
+    }
+    if (lat != null) {
+      buffer.writeAll(['"lat":', lat, ','], "");
+    }
+    if (lon != null) {
+      buffer.writeAll(['"lon":', lon, ','], "");
+    }
+    if (x != null) {
+      buffer.writeAll(['"x":', x, ','], "");
+    }
+    if (y != null) {
+      buffer.writeAll(['"y":', y, ','], "");
     }
   }
 

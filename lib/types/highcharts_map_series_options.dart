@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -95,18 +95,18 @@ export 'highcharts_map_series_tooltip_options.dart';
  */
 class HighchartsMapSeriesOptions extends HighchartsOptionsBase {
 
-  String? id;
-  double? index;
-  double? legendIndex;
-  List<dynamic>? mapData;
   bool? affectsMapView;
   bool? animation;
   bool? colorByPoint;
   String? colorKey;
   List<dynamic>? colors;
   HighchartsMapSeriesDataLabelsOptions? dataLabels;
+  String? id;
+  double? index;
+  double? legendIndex;
   String? legendSymbol;
   String? linecap;
+  List<dynamic>? mapData;
   String? nullColor;
   bool? nullInteraction;
   HighchartsMapSeriesStatesOptions? states;
@@ -114,18 +114,18 @@ class HighchartsMapSeriesOptions extends HighchartsOptionsBase {
 
 
   HighchartsMapSeriesOptions({
-    this.id,
-    this.index,
-    this.legendIndex,
-    this.mapData,
     this.affectsMapView,
     this.animation,
     this.colorByPoint,
     this.colorKey,
     this.colors,
     this.dataLabels,
+    this.id,
+    this.index,
+    this.legendIndex,
     this.legendSymbol,
     this.linecap,
+    this.mapData,
     this.nullColor,
     this.nullInteraction,
     this.states,
@@ -137,61 +137,61 @@ class HighchartsMapSeriesOptions extends HighchartsOptionsBase {
     super.toOptionsJSON(buffer);
 
 
-    if (id != null) {
-      buffer.writeAll(['"id": ', jsonEncode(id), ','], "");
-    }
-    if (index != null) {
-      buffer.writeAll(['"index": ', index, ','], "");
-    }
-    if (legendIndex != null) {
-      buffer.writeAll(['"legendIndex": ', legendIndex, ','], "");
-    }
-    if (mapData != null) {
-      buffer.write('"mapData": [');
-      for (var item in mapData!) {
-        buffer.writeAll([item, ","], "");
-      }
-      buffer.write("],");
-    }
     if (affectsMapView != null) {
-      buffer.writeAll(['"affectsMapView": ', affectsMapView, ','], "");
+      buffer.writeAll(['"affectsMapView":', affectsMapView, ','], "");
     }
     if (animation != null) {
-      buffer.writeAll(['"animation": ', animation, ','], "");
+      buffer.writeAll(['"animation":', animation, ','], "");
     }
     if (colorByPoint != null) {
-      buffer.writeAll(['"colorByPoint": ', colorByPoint, ','], "");
+      buffer.writeAll(['"colorByPoint":', colorByPoint, ','], "");
     }
     if (colorKey != null) {
-      buffer.writeAll(['"colorKey": ', jsonEncode(colorKey), ','], "");
+      buffer.writeAll(['"colorKey":', jsonEncode(colorKey), ','], "");
     }
     if (colors != null) {
-      buffer.write('"colors": [');
+      buffer.write('"colors":[');
       for (var item in colors!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (dataLabels != null) {
-      buffer.writeAll(['"dataLabels": ', dataLabels?.toJSON(), ","], "");
+      buffer.writeAll(['"dataLabels":', dataLabels?.toJSON(), ","], "");
+    }
+    if (id != null) {
+      buffer.writeAll(['"id":', jsonEncode(id), ','], "");
+    }
+    if (index != null) {
+      buffer.writeAll(['"index":', index, ','], "");
+    }
+    if (legendIndex != null) {
+      buffer.writeAll(['"legendIndex":', legendIndex, ','], "");
     }
     if (legendSymbol != null) {
-      buffer.writeAll(['"legendSymbol": ', jsonEncode(legendSymbol), ','], "");
+      buffer.writeAll(['"legendSymbol":', jsonEncode(legendSymbol), ','], "");
     }
     if (linecap != null) {
-      buffer.writeAll(['"linecap": ', jsonEncode(linecap), ','], "");
+      buffer.writeAll(['"linecap":', jsonEncode(linecap), ','], "");
+    }
+    if (mapData != null) {
+      buffer.write('"mapData":[');
+      for (var item in mapData!) {
+        buffer.writeAll([item, ","], "");
+      }
+      buffer.write("],");
     }
     if (nullColor != null) {
-      buffer.writeAll(['"nullColor": ', jsonEncode(nullColor), ','], "");
+      buffer.writeAll(['"nullColor":', jsonEncode(nullColor), ','], "");
     }
     if (nullInteraction != null) {
-      buffer.writeAll(['"nullInteraction": ', nullInteraction, ','], "");
+      buffer.writeAll(['"nullInteraction":', nullInteraction, ','], "");
     }
     if (states != null) {
-      buffer.writeAll(['"states": ', states?.toJSON(), ","], "");
+      buffer.writeAll(['"states":', states?.toJSON(), ","], "");
     }
     if (tooltip != null) {
-      buffer.writeAll(['"tooltip": ', tooltip?.toJSON(), ","], "");
+      buffer.writeAll(['"tooltip":', tooltip?.toJSON(), ","], "");
     }
   }
 

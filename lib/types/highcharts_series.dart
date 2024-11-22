@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -30,9 +30,9 @@ class HighchartsSeries {
   String toJSON() {
     StringBuffer buffer = StringBuffer();
 
-    buffer.writeln("{");
+    buffer.write('{');
     toOptionsJSON(buffer);
-    buffer.writeln("}");
+    buffer.write('}');
 
     return buffer.toString();
   }

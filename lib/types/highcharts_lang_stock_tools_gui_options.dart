@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -167,169 +167,169 @@ class HighchartsLangStockToolsGuiOptions extends HighchartsOptionsBase {
 
 
     if (advanced != null) {
-      buffer.writeAll(['"advanced": ', jsonEncode(advanced), ','], "");
+      buffer.writeAll(['"advanced":', jsonEncode(advanced), ','], "");
     }
     if (arrowInfinityLine != null) {
-      buffer.writeAll(['"arrowInfinityLine": ', jsonEncode(arrowInfinityLine), ','], "");
+      buffer.writeAll(['"arrowInfinityLine":', jsonEncode(arrowInfinityLine), ','], "");
     }
     if (arrowRay != null) {
-      buffer.writeAll(['"arrowRay": ', jsonEncode(arrowRay), ','], "");
+      buffer.writeAll(['"arrowRay":', jsonEncode(arrowRay), ','], "");
     }
     if (arrowSegment != null) {
-      buffer.writeAll(['"arrowSegment": ', jsonEncode(arrowSegment), ','], "");
+      buffer.writeAll(['"arrowSegment":', jsonEncode(arrowSegment), ','], "");
     }
     if (circle != null) {
-      buffer.writeAll(['"circle": ', jsonEncode(circle), ','], "");
+      buffer.writeAll(['"circle":', jsonEncode(circle), ','], "");
     }
     if (crooked3 != null) {
-      buffer.writeAll(['"crooked3": ', jsonEncode(crooked3), ','], "");
+      buffer.writeAll(['"crooked3":', jsonEncode(crooked3), ','], "");
     }
     if (crooked5 != null) {
-      buffer.writeAll(['"crooked5": ', jsonEncode(crooked5), ','], "");
+      buffer.writeAll(['"crooked5":', jsonEncode(crooked5), ','], "");
     }
     if (crookedLines != null) {
-      buffer.writeAll(['"crookedLines": ', jsonEncode(crookedLines), ','], "");
+      buffer.writeAll(['"crookedLines":', jsonEncode(crookedLines), ','], "");
     }
     if (currentPriceIndicator != null) {
-      buffer.writeAll(['"currentPriceIndicator": ', jsonEncode(currentPriceIndicator), ','], "");
+      buffer.writeAll(['"currentPriceIndicator":', jsonEncode(currentPriceIndicator), ','], "");
     }
     if (elliott3 != null) {
-      buffer.writeAll(['"elliott3": ', jsonEncode(elliott3), ','], "");
+      buffer.writeAll(['"elliott3":', jsonEncode(elliott3), ','], "");
     }
     if (elliott5 != null) {
-      buffer.writeAll(['"elliott5": ', jsonEncode(elliott5), ','], "");
+      buffer.writeAll(['"elliott5":', jsonEncode(elliott5), ','], "");
     }
     if (ellipse != null) {
-      buffer.writeAll(['"ellipse": ', jsonEncode(ellipse), ','], "");
+      buffer.writeAll(['"ellipse":', jsonEncode(ellipse), ','], "");
     }
     if (fibonacci != null) {
-      buffer.writeAll(['"fibonacci": ', jsonEncode(fibonacci), ','], "");
+      buffer.writeAll(['"fibonacci":', jsonEncode(fibonacci), ','], "");
     }
     if (fibonacciTimeZones != null) {
-      buffer.writeAll(['"fibonacciTimeZones": ', jsonEncode(fibonacciTimeZones), ','], "");
+      buffer.writeAll(['"fibonacciTimeZones":', jsonEncode(fibonacciTimeZones), ','], "");
     }
     if (flagCirclepin != null) {
-      buffer.writeAll(['"flagCirclepin": ', jsonEncode(flagCirclepin), ','], "");
+      buffer.writeAll(['"flagCirclepin":', jsonEncode(flagCirclepin), ','], "");
     }
     if (flagDiamondpin != null) {
-      buffer.writeAll(['"flagDiamondpin": ', jsonEncode(flagDiamondpin), ','], "");
+      buffer.writeAll(['"flagDiamondpin":', jsonEncode(flagDiamondpin), ','], "");
     }
     if (flagSimplepin != null) {
-      buffer.writeAll(['"flagSimplepin": ', jsonEncode(flagSimplepin), ','], "");
+      buffer.writeAll(['"flagSimplepin":', jsonEncode(flagSimplepin), ','], "");
     }
     if (flagSquarepin != null) {
-      buffer.writeAll(['"flagSquarepin": ', jsonEncode(flagSquarepin), ','], "");
+      buffer.writeAll(['"flagSquarepin":', jsonEncode(flagSquarepin), ','], "");
     }
     if (flags != null) {
-      buffer.writeAll(['"flags": ', jsonEncode(flags), ','], "");
+      buffer.writeAll(['"flags":', jsonEncode(flags), ','], "");
     }
     if (fullScreen != null) {
-      buffer.writeAll(['"fullScreen": ', jsonEncode(fullScreen), ','], "");
+      buffer.writeAll(['"fullScreen":', jsonEncode(fullScreen), ','], "");
     }
     if (horizontalLine != null) {
-      buffer.writeAll(['"horizontalLine": ', jsonEncode(horizontalLine), ','], "");
+      buffer.writeAll(['"horizontalLine":', jsonEncode(horizontalLine), ','], "");
     }
     if (indicators != null) {
-      buffer.writeAll(['"indicators": ', jsonEncode(indicators), ','], "");
+      buffer.writeAll(['"indicators":', jsonEncode(indicators), ','], "");
     }
     if (infinityLine != null) {
-      buffer.writeAll(['"infinityLine": ', jsonEncode(infinityLine), ','], "");
+      buffer.writeAll(['"infinityLine":', jsonEncode(infinityLine), ','], "");
     }
     if (label != null) {
-      buffer.writeAll(['"label": ', jsonEncode(label), ','], "");
+      buffer.writeAll(['"label":', jsonEncode(label), ','], "");
     }
     if (line != null) {
-      buffer.writeAll(['"line": ', jsonEncode(line), ','], "");
+      buffer.writeAll(['"line":', jsonEncode(line), ','], "");
     }
     if (lines != null) {
-      buffer.writeAll(['"lines": ', jsonEncode(lines), ','], "");
+      buffer.writeAll(['"lines":', jsonEncode(lines), ','], "");
     }
     if (measure != null) {
-      buffer.writeAll(['"measure": ', jsonEncode(measure), ','], "");
+      buffer.writeAll(['"measure":', jsonEncode(measure), ','], "");
     }
     if (measureX != null) {
-      buffer.writeAll(['"measureX": ', jsonEncode(measureX), ','], "");
+      buffer.writeAll(['"measureX":', jsonEncode(measureX), ','], "");
     }
     if (measureXY != null) {
-      buffer.writeAll(['"measureXY": ', jsonEncode(measureXY), ','], "");
+      buffer.writeAll(['"measureXY":', jsonEncode(measureXY), ','], "");
     }
     if (measureY != null) {
-      buffer.writeAll(['"measureY": ', jsonEncode(measureY), ','], "");
+      buffer.writeAll(['"measureY":', jsonEncode(measureY), ','], "");
     }
     if (parallelChannel != null) {
-      buffer.writeAll(['"parallelChannel": ', jsonEncode(parallelChannel), ','], "");
+      buffer.writeAll(['"parallelChannel":', jsonEncode(parallelChannel), ','], "");
     }
     if (pitchfork != null) {
-      buffer.writeAll(['"pitchfork": ', jsonEncode(pitchfork), ','], "");
+      buffer.writeAll(['"pitchfork":', jsonEncode(pitchfork), ','], "");
     }
     if (ray != null) {
-      buffer.writeAll(['"ray": ', jsonEncode(ray), ','], "");
+      buffer.writeAll(['"ray":', jsonEncode(ray), ','], "");
     }
     if (rectangle != null) {
-      buffer.writeAll(['"rectangle": ', jsonEncode(rectangle), ','], "");
+      buffer.writeAll(['"rectangle":', jsonEncode(rectangle), ','], "");
     }
     if (saveChart != null) {
-      buffer.writeAll(['"saveChart": ', jsonEncode(saveChart), ','], "");
+      buffer.writeAll(['"saveChart":', jsonEncode(saveChart), ','], "");
     }
     if (segment != null) {
-      buffer.writeAll(['"segment": ', jsonEncode(segment), ','], "");
+      buffer.writeAll(['"segment":', jsonEncode(segment), ','], "");
     }
     if (simpleShapes != null) {
-      buffer.writeAll(['"simpleShapes": ', jsonEncode(simpleShapes), ','], "");
+      buffer.writeAll(['"simpleShapes":', jsonEncode(simpleShapes), ','], "");
     }
     if (timeCycles != null) {
-      buffer.writeAll(['"timeCycles": ', jsonEncode(timeCycles), ','], "");
+      buffer.writeAll(['"timeCycles":', jsonEncode(timeCycles), ','], "");
     }
     if (toggleAnnotations != null) {
-      buffer.writeAll(['"toggleAnnotations": ', jsonEncode(toggleAnnotations), ','], "");
+      buffer.writeAll(['"toggleAnnotations":', jsonEncode(toggleAnnotations), ','], "");
     }
     if (typeCandlestick != null) {
-      buffer.writeAll(['"typeCandlestick": ', jsonEncode(typeCandlestick), ','], "");
+      buffer.writeAll(['"typeCandlestick":', jsonEncode(typeCandlestick), ','], "");
     }
     if (typeChange != null) {
-      buffer.writeAll(['"typeChange": ', jsonEncode(typeChange), ','], "");
+      buffer.writeAll(['"typeChange":', jsonEncode(typeChange), ','], "");
     }
     if (typeHLC != null) {
-      buffer.writeAll(['"typeHLC": ', jsonEncode(typeHLC), ','], "");
+      buffer.writeAll(['"typeHLC":', jsonEncode(typeHLC), ','], "");
     }
     if (typeHeikinAshi != null) {
-      buffer.writeAll(['"typeHeikinAshi": ', jsonEncode(typeHeikinAshi), ','], "");
+      buffer.writeAll(['"typeHeikinAshi":', jsonEncode(typeHeikinAshi), ','], "");
     }
     if (typeHollowCandlestick != null) {
-      buffer.writeAll(['"typeHollowCandlestick": ', jsonEncode(typeHollowCandlestick), ','], "");
+      buffer.writeAll(['"typeHollowCandlestick":', jsonEncode(typeHollowCandlestick), ','], "");
     }
     if (typeLine != null) {
-      buffer.writeAll(['"typeLine": ', jsonEncode(typeLine), ','], "");
+      buffer.writeAll(['"typeLine":', jsonEncode(typeLine), ','], "");
     }
     if (typeOHLC != null) {
-      buffer.writeAll(['"typeOHLC": ', jsonEncode(typeOHLC), ','], "");
+      buffer.writeAll(['"typeOHLC":', jsonEncode(typeOHLC), ','], "");
     }
     if (verticalArrow != null) {
-      buffer.writeAll(['"verticalArrow": ', jsonEncode(verticalArrow), ','], "");
+      buffer.writeAll(['"verticalArrow":', jsonEncode(verticalArrow), ','], "");
     }
     if (verticalCounter != null) {
-      buffer.writeAll(['"verticalCounter": ', jsonEncode(verticalCounter), ','], "");
+      buffer.writeAll(['"verticalCounter":', jsonEncode(verticalCounter), ','], "");
     }
     if (verticalLabel != null) {
-      buffer.writeAll(['"verticalLabel": ', jsonEncode(verticalLabel), ','], "");
+      buffer.writeAll(['"verticalLabel":', jsonEncode(verticalLabel), ','], "");
     }
     if (verticalLabels != null) {
-      buffer.writeAll(['"verticalLabels": ', jsonEncode(verticalLabels), ','], "");
+      buffer.writeAll(['"verticalLabels":', jsonEncode(verticalLabels), ','], "");
     }
     if (verticalLine != null) {
-      buffer.writeAll(['"verticalLine": ', jsonEncode(verticalLine), ','], "");
+      buffer.writeAll(['"verticalLine":', jsonEncode(verticalLine), ','], "");
     }
     if (zoomChange != null) {
-      buffer.writeAll(['"zoomChange": ', jsonEncode(zoomChange), ','], "");
+      buffer.writeAll(['"zoomChange":', jsonEncode(zoomChange), ','], "");
     }
     if (zoomX != null) {
-      buffer.writeAll(['"zoomX": ', jsonEncode(zoomX), ','], "");
+      buffer.writeAll(['"zoomX":', jsonEncode(zoomX), ','], "");
     }
     if (zoomXY != null) {
-      buffer.writeAll(['"zoomXY": ', jsonEncode(zoomXY), ','], "");
+      buffer.writeAll(['"zoomXY":', jsonEncode(zoomXY), ','], "");
     }
     if (zoomY != null) {
-      buffer.writeAll(['"zoomY": ', jsonEncode(zoomY), ','], "");
+      buffer.writeAll(['"zoomY":', jsonEncode(zoomY), ','], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -70,19 +70,19 @@ class HighchartsAnnotationsEventsOptions extends HighchartsOptionsBase {
 
 
     if (add != null) {
-      buffer.writeAll(['"add": ', jsonEncode(add), ','], "");
+      buffer.writeAll(['"add":', jsonEncode(add), ','], "");
     }
     if (afterUpdate != null) {
-      buffer.writeAll(['"afterUpdate": ', jsonEncode(afterUpdate), ','], "");
+      buffer.writeAll(['"afterUpdate":', jsonEncode(afterUpdate), ','], "");
     }
     if (click != null) {
-      buffer.writeAll(['"click": ', jsonEncode(click), ','], "");
+      buffer.writeAll(['"click":', jsonEncode(click), ','], "");
     }
     if (drag != null) {
-      buffer.writeAll(['"drag": ', jsonEncode(drag), ','], "");
+      buffer.writeAll(['"drag":', jsonEncode(drag), ','], "");
     }
     if (remove != null) {
-      buffer.writeAll(['"remove": ', jsonEncode(remove), ','], "");
+      buffer.writeAll(['"remove":', jsonEncode(remove), ','], "");
     }
   }
 

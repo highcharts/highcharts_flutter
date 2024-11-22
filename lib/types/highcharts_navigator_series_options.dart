@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -114,47 +114,47 @@ class HighchartsNavigatorSeriesOptions extends HighchartsOptionsBase {
 
 
     if (className != null) {
-      buffer.writeAll(['"className": ', jsonEncode(className), ','], "");
+      buffer.writeAll(['"className":', jsonEncode(className), ','], "");
     }
     if (color != null) {
-      buffer.writeAll(['"color": ', jsonEncode(color), ','], "");
+      buffer.writeAll(['"color":', jsonEncode(color), ','], "");
     }
     if (data != null) {
-      buffer.write('"data": [');
+      buffer.write('"data":[');
       for (var item in data!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (dataGrouping != null) {
-      buffer.writeAll(['"dataGrouping": ', dataGrouping?.toJSON(), ","], "");
+      buffer.writeAll(['"dataGrouping":', dataGrouping?.toJSON(), ","], "");
     }
     if (dataLabels != null) {
-      buffer.writeAll(['"dataLabels": ', dataLabels?.toJSON(), ","], "");
+      buffer.writeAll(['"dataLabels":', dataLabels?.toJSON(), ","], "");
     }
     if (fillOpacity != null) {
-      buffer.writeAll(['"fillOpacity": ', fillOpacity, ','], "");
+      buffer.writeAll(['"fillOpacity":', fillOpacity, ','], "");
     }
     if (id != null) {
-      buffer.writeAll(['"id": ', jsonEncode(id), ','], "");
+      buffer.writeAll(['"id":', jsonEncode(id), ','], "");
     }
     if (lineColor != null) {
-      buffer.writeAll(['"lineColor": ', jsonEncode(lineColor), ','], "");
+      buffer.writeAll(['"lineColor":', jsonEncode(lineColor), ','], "");
     }
     if (lineWidth != null) {
-      buffer.writeAll(['"lineWidth": ', lineWidth, ','], "");
+      buffer.writeAll(['"lineWidth":', lineWidth, ','], "");
     }
     if (marker != null) {
-      buffer.writeAll(['"marker": ', marker?.toJSON(), ","], "");
+      buffer.writeAll(['"marker":', marker?.toJSON(), ","], "");
     }
     if (pointRange != null) {
-      buffer.writeAll(['"pointRange": ', pointRange?.toJSON(), ","], "");
+      buffer.writeAll(['"pointRange":', pointRange?.toJSON(), ","], "");
     }
     if (threshold != null) {
-      buffer.writeAll(['"threshold": ', threshold, ','], "");
+      buffer.writeAll(['"threshold":', threshold, ','], "");
     }
     if (type != null) {
-      buffer.writeAll(['"type": ', jsonEncode(type), ','], "");
+      buffer.writeAll(['"type":', jsonEncode(type), ','], "");
     }
   }
 

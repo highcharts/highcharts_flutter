@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -64,10 +64,10 @@ class HighchartsSunburstSeriesLevelSizeOptions extends HighchartsOptionsBase {
 
 
     if (unit != null) {
-      buffer.writeAll(['"unit": ', jsonEncode(unit), ','], "");
+      buffer.writeAll(['"unit":', jsonEncode(unit), ','], "");
     }
     if (value != null) {
-      buffer.writeAll(['"value": ', value, ','], "");
+      buffer.writeAll(['"value":', value, ','], "");
     }
   }
 

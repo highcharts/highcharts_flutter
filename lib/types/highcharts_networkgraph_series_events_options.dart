@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -46,8 +46,8 @@ import 'highcharts_options_base.dart';
 
 class HighchartsNetworkgraphSeriesEventsOptions extends HighchartsOptionsBase {
 
-  dynamic afterSimulation;
   dynamic afterAnimate;
+  dynamic afterSimulation;
   dynamic checkboxClick;
   dynamic click;
   dynamic hide;
@@ -58,8 +58,8 @@ class HighchartsNetworkgraphSeriesEventsOptions extends HighchartsOptionsBase {
 
 
   HighchartsNetworkgraphSeriesEventsOptions({
-    this.afterSimulation,
     this.afterAnimate,
+    this.afterSimulation,
     this.checkboxClick,
     this.click,
     this.hide,
@@ -74,32 +74,32 @@ class HighchartsNetworkgraphSeriesEventsOptions extends HighchartsOptionsBase {
     super.toOptionsJSON(buffer);
 
 
-    if (afterSimulation != null) {
-      buffer.writeAll(['"afterSimulation": ', jsonEncode(afterSimulation), ','], "");
-    }
     if (afterAnimate != null) {
-      buffer.writeAll(['"afterAnimate": ', jsonEncode(afterAnimate), ','], "");
+      buffer.writeAll(['"afterAnimate":', jsonEncode(afterAnimate), ','], "");
+    }
+    if (afterSimulation != null) {
+      buffer.writeAll(['"afterSimulation":', jsonEncode(afterSimulation), ','], "");
     }
     if (checkboxClick != null) {
-      buffer.writeAll(['"checkboxClick": ', jsonEncode(checkboxClick), ','], "");
+      buffer.writeAll(['"checkboxClick":', jsonEncode(checkboxClick), ','], "");
     }
     if (click != null) {
-      buffer.writeAll(['"click": ', jsonEncode(click), ','], "");
+      buffer.writeAll(['"click":', jsonEncode(click), ','], "");
     }
     if (hide != null) {
-      buffer.writeAll(['"hide": ', jsonEncode(hide), ','], "");
+      buffer.writeAll(['"hide":', jsonEncode(hide), ','], "");
     }
     if (legendItemClick != null) {
-      buffer.writeAll(['"legendItemClick": ', jsonEncode(legendItemClick), ','], "");
+      buffer.writeAll(['"legendItemClick":', jsonEncode(legendItemClick), ','], "");
     }
     if (mouseOut != null) {
-      buffer.writeAll(['"mouseOut": ', jsonEncode(mouseOut), ','], "");
+      buffer.writeAll(['"mouseOut":', jsonEncode(mouseOut), ','], "");
     }
     if (mouseOver != null) {
-      buffer.writeAll(['"mouseOver": ', jsonEncode(mouseOver), ','], "");
+      buffer.writeAll(['"mouseOver":', jsonEncode(mouseOver), ','], "");
     }
     if (show != null) {
-      buffer.writeAll(['"show": ', jsonEncode(show), ','], "");
+      buffer.writeAll(['"show":', jsonEncode(show), ','], "");
     }
   }
 

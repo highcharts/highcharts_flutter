@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -67,16 +67,16 @@ class HighchartsAnnotationsElliottWaveTypePointsOptions extends HighchartsOption
 
 
     if (label != null) {
-      buffer.writeAll(['"label": ', label?.toJSON(), ","], "");
+      buffer.writeAll(['"label":', label?.toJSON(), ","], "");
     }
     if (controlPoint != null) {
-      buffer.writeAll(['"controlPoint": ', controlPoint, ','], "");
+      buffer.writeAll(['"controlPoint":', controlPoint, ','], "");
     }
     if (x != null) {
-      buffer.writeAll(['"x": ', x, ','], "");
+      buffer.writeAll(['"x":', x, ','], "");
     }
     if (y != null) {
-      buffer.writeAll(['"y": ', y, ','], "");
+      buffer.writeAll(['"y":', y, ','], "");
     }
   }
 

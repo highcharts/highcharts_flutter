@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -26,8 +26,8 @@
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-import 'highcharts_hlcseries_data_data_labels_options.dart';
 import 'highcharts_hlcseries_data_accessibility_options.dart';
+import 'highcharts_hlcseries_data_data_labels_options.dart';
 import 'highcharts_hlcseries_data_drag_drop_options.dart';
 import 'highcharts_hlcseries_data_events_options.dart';
 
@@ -39,8 +39,8 @@ import 'highcharts_hlcseries_data_events_options.dart';
  * */
 
 
-export 'highcharts_hlcseries_data_data_labels_options.dart';
 export 'highcharts_hlcseries_data_accessibility_options.dart';
+export 'highcharts_hlcseries_data_data_labels_options.dart';
 export 'highcharts_hlcseries_data_drag_drop_options.dart';
 export 'highcharts_hlcseries_data_events_options.dart';
 
@@ -96,35 +96,35 @@ export 'highcharts_hlcseries_data_events_options.dart';
  */
 class HighchartsHLCSeriesDataOptions extends HighchartsOptionsBase {
 
-  double? close;
-  HighchartsHLCSeriesDataDataLabelsOptions? dataLabels;
-  double? high;
-  double? low;
   HighchartsHLCSeriesDataAccessibilityOptions? accessibility;
+  double? close;
   String? color;
   Map<String, dynamic>? custom;
+  HighchartsHLCSeriesDataDataLabelsOptions? dataLabels;
   String? description;
   HighchartsHLCSeriesDataDragDropOptions? dragDrop;
   HighchartsHLCSeriesDataEventsOptions? events;
+  double? high;
   String? id;
   double? labelrank;
+  double? low;
   bool? selected;
   double? x;
 
 
   HighchartsHLCSeriesDataOptions({
-    this.close,
-    this.dataLabels,
-    this.high,
-    this.low,
     this.accessibility,
+    this.close,
     this.color,
     this.custom,
+    this.dataLabels,
     this.description,
     this.dragDrop,
     this.events,
+    this.high,
     this.id,
     this.labelrank,
+    this.low,
     this.selected,
     this.x
   });
@@ -134,51 +134,51 @@ class HighchartsHLCSeriesDataOptions extends HighchartsOptionsBase {
     super.toOptionsJSON(buffer);
 
 
-    if (close != null) {
-      buffer.writeAll(['"close": ', close, ','], "");
-    }
-    if (dataLabels != null) {
-      buffer.writeAll(['"dataLabels": ', dataLabels?.toJSON(), ","], "");
-    }
-    if (high != null) {
-      buffer.writeAll(['"high": ', high, ','], "");
-    }
-    if (low != null) {
-      buffer.writeAll(['"low": ', low, ','], "");
-    }
     if (accessibility != null) {
-      buffer.writeAll(['"accessibility": ', accessibility?.toJSON(), ","], "");
+      buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ","], "");
+    }
+    if (close != null) {
+      buffer.writeAll(['"close":', close, ','], "");
     }
     if (color != null) {
-      buffer.writeAll(['"color": ', jsonEncode(color), ','], "");
+      buffer.writeAll(['"color":', jsonEncode(color), ','], "");
     }
     if (custom != null) {
       buffer.write("{");
       for (var item in custom!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
+    if (dataLabels != null) {
+      buffer.writeAll(['"dataLabels":', dataLabels?.toJSON(), ","], "");
+    }
     if (description != null) {
-      buffer.writeAll(['"description": ', jsonEncode(description), ','], "");
+      buffer.writeAll(['"description":', jsonEncode(description), ','], "");
     }
     if (dragDrop != null) {
-      buffer.writeAll(['"dragDrop": ', dragDrop?.toJSON(), ","], "");
+      buffer.writeAll(['"dragDrop":', dragDrop?.toJSON(), ","], "");
     }
     if (events != null) {
-      buffer.writeAll(['"events": ', events?.toJSON(), ","], "");
+      buffer.writeAll(['"events":', events?.toJSON(), ","], "");
+    }
+    if (high != null) {
+      buffer.writeAll(['"high":', high, ','], "");
     }
     if (id != null) {
-      buffer.writeAll(['"id": ', jsonEncode(id), ','], "");
+      buffer.writeAll(['"id":', jsonEncode(id), ','], "");
     }
     if (labelrank != null) {
-      buffer.writeAll(['"labelrank": ', labelrank, ','], "");
+      buffer.writeAll(['"labelrank":', labelrank, ','], "");
+    }
+    if (low != null) {
+      buffer.writeAll(['"low":', low, ','], "");
     }
     if (selected != null) {
-      buffer.writeAll(['"selected": ', selected, ','], "");
+      buffer.writeAll(['"selected":', selected, ','], "");
     }
     if (x != null) {
-      buffer.writeAll(['"x": ', x, ','], "");
+      buffer.writeAll(['"x":', x, ','], "");
     }
   }
 

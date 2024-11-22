@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -84,22 +84,22 @@ class HighchartsExportingCsvOptions extends HighchartsOptionsBase {
 
 
     if (annotations != null) {
-      buffer.writeAll(['"annotations": ', annotations?.toJSON(), ","], "");
+      buffer.writeAll(['"annotations":', annotations?.toJSON(), ","], "");
     }
     if (columnHeaderFormatter != null) {
-      buffer.writeAll(['"columnHeaderFormatter": ', jsonEncode(columnHeaderFormatter), ','], "");
+      buffer.writeAll(['"columnHeaderFormatter":', jsonEncode(columnHeaderFormatter), ','], "");
     }
     if (dateFormat != null) {
-      buffer.writeAll(['"dateFormat": ', jsonEncode(dateFormat), ','], "");
+      buffer.writeAll(['"dateFormat":', jsonEncode(dateFormat), ','], "");
     }
     if (decimalPoint != null) {
-      buffer.writeAll(['"decimalPoint": ', jsonEncode(decimalPoint), ','], "");
+      buffer.writeAll(['"decimalPoint":', jsonEncode(decimalPoint), ','], "");
     }
     if (itemDelimiter != null) {
-      buffer.writeAll(['"itemDelimiter": ', jsonEncode(itemDelimiter), ','], "");
+      buffer.writeAll(['"itemDelimiter":', jsonEncode(itemDelimiter), ','], "");
     }
     if (lineDelimiter != null) {
-      buffer.writeAll(['"lineDelimiter": ', jsonEncode(lineDelimiter), ','], "");
+      buffer.writeAll(['"lineDelimiter":', jsonEncode(lineDelimiter), ','], "");
     }
   }
 

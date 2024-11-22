@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -47,14 +47,14 @@ import 'highcharts_options_base.dart';
 class HighchartsMFISeriesParamsOptions extends HighchartsOptionsBase {
 
   double? decimals;
-  String? volumeSeriesID;
   double? period;
+  String? volumeSeriesID;
 
 
   HighchartsMFISeriesParamsOptions({
     this.decimals,
-    this.volumeSeriesID,
-    this.period
+    this.period,
+    this.volumeSeriesID
   });
 
   @override
@@ -63,13 +63,13 @@ class HighchartsMFISeriesParamsOptions extends HighchartsOptionsBase {
 
 
     if (decimals != null) {
-      buffer.writeAll(['"decimals": ', decimals, ','], "");
-    }
-    if (volumeSeriesID != null) {
-      buffer.writeAll(['"volumeSeriesID": ', jsonEncode(volumeSeriesID), ','], "");
+      buffer.writeAll(['"decimals":', decimals, ','], "");
     }
     if (period != null) {
-      buffer.writeAll(['"period": ', period, ','], "");
+      buffer.writeAll(['"period":', period, ','], "");
+    }
+    if (volumeSeriesID != null) {
+      buffer.writeAll(['"volumeSeriesID":', jsonEncode(volumeSeriesID), ','], "");
     }
   }
 

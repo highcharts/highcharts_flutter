@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -66,13 +66,13 @@ class HighchartsLangAccessibilityZoomOptions extends HighchartsOptionsBase {
 
 
     if (mapZoomIn != null) {
-      buffer.writeAll(['"mapZoomIn": ', jsonEncode(mapZoomIn), ','], "");
+      buffer.writeAll(['"mapZoomIn":', jsonEncode(mapZoomIn), ','], "");
     }
     if (mapZoomOut != null) {
-      buffer.writeAll(['"mapZoomOut": ', jsonEncode(mapZoomOut), ','], "");
+      buffer.writeAll(['"mapZoomOut":', jsonEncode(mapZoomOut), ','], "");
     }
     if (resetZoomButton != null) {
-      buffer.writeAll(['"resetZoomButton": ', jsonEncode(resetZoomButton), ','], "");
+      buffer.writeAll(['"resetZoomButton":', jsonEncode(resetZoomButton), ','], "");
     }
   }
 

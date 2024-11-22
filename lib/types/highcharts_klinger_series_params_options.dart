@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -68,16 +68,16 @@ class HighchartsKlingerSeriesParamsOptions extends HighchartsOptionsBase {
 
 
     if (fastAvgPeriod != null) {
-      buffer.writeAll(['"fastAvgPeriod": ', fastAvgPeriod, ','], "");
+      buffer.writeAll(['"fastAvgPeriod":', fastAvgPeriod, ','], "");
     }
     if (signalPeriod != null) {
-      buffer.writeAll(['"signalPeriod": ', signalPeriod, ','], "");
+      buffer.writeAll(['"signalPeriod":', signalPeriod, ','], "");
     }
     if (slowAvgPeriod != null) {
-      buffer.writeAll(['"slowAvgPeriod": ', slowAvgPeriod, ','], "");
+      buffer.writeAll(['"slowAvgPeriod":', slowAvgPeriod, ','], "");
     }
     if (volumeSeriesID != null) {
-      buffer.writeAll(['"volumeSeriesID": ', jsonEncode(volumeSeriesID), ','], "");
+      buffer.writeAll(['"volumeSeriesID":', jsonEncode(volumeSeriesID), ','], "");
     }
   }
 

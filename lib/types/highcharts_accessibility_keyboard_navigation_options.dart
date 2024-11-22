@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -74,23 +74,23 @@ class HighchartsAccessibilityKeyboardNavigationOptions extends HighchartsOptions
 
 
     if (enabled != null) {
-      buffer.writeAll(['"enabled": ', enabled, ','], "");
+      buffer.writeAll(['"enabled":', enabled, ','], "");
     }
     if (focusBorder != null) {
-      buffer.writeAll(['"focusBorder": ', focusBorder?.toJSON(), ","], "");
+      buffer.writeAll(['"focusBorder":', focusBorder?.toJSON(), ","], "");
     }
     if (order != null) {
-      buffer.write('"order": [');
+      buffer.write('"order":[');
       for (var item in order!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (seriesNavigation != null) {
-      buffer.writeAll(['"seriesNavigation": ', seriesNavigation?.toJSON(), ","], "");
+      buffer.writeAll(['"seriesNavigation":', seriesNavigation?.toJSON(), ","], "");
     }
     if (wrapAround != null) {
-      buffer.writeAll(['"wrapAround": ', wrapAround, ','], "");
+      buffer.writeAll(['"wrapAround":', wrapAround, ','], "");
     }
   }
 

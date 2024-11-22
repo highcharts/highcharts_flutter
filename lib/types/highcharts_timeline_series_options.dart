@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -26,17 +26,17 @@
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-import 'highcharts_timeline_series_data_labels_options.dart';
-import 'highcharts_timeline_series_marker_options.dart';
-import 'highcharts_timeline_series_states_options.dart';
-import 'highcharts_timeline_series_tooltip_options.dart';
 import 'highcharts_series_accessibility_options.dart';
+import 'highcharts_timeline_series_data_labels_options.dart';
 import 'highcharts_series_drag_drop_options.dart';
 import 'highcharts_series_events_options.dart';
 import 'highcharts_series_label_options.dart';
+import 'highcharts_timeline_series_marker_options.dart';
 import 'highcharts_series_on_point_options.dart';
 import 'highcharts_series_point_options.dart';
 import 'highcharts_series_sonification_options.dart';
+import 'highcharts_timeline_series_states_options.dart';
+import 'highcharts_timeline_series_tooltip_options.dart';
 
 
 /* *
@@ -46,17 +46,17 @@ import 'highcharts_series_sonification_options.dart';
  * */
 
 
-export 'highcharts_timeline_series_data_labels_options.dart';
-export 'highcharts_timeline_series_marker_options.dart';
-export 'highcharts_timeline_series_states_options.dart';
-export 'highcharts_timeline_series_tooltip_options.dart';
 export 'highcharts_series_accessibility_options.dart';
+export 'highcharts_timeline_series_data_labels_options.dart';
 export 'highcharts_series_drag_drop_options.dart';
 export 'highcharts_series_events_options.dart';
 export 'highcharts_series_label_options.dart';
+export 'highcharts_timeline_series_marker_options.dart';
 export 'highcharts_series_on_point_options.dart';
 export 'highcharts_series_point_options.dart';
 export 'highcharts_series_sonification_options.dart';
+export 'highcharts_timeline_series_states_options.dart';
+export 'highcharts_timeline_series_tooltip_options.dart';
 
 
 /* *
@@ -111,24 +111,6 @@ export 'highcharts_series_sonification_options.dart';
  */
 class HighchartsTimelineSeriesOptions extends HighchartsOptionsBase {
 
-  String? id;
-  double? index;
-  double? legendIndex;
-  String? xAxis;
-  String? yAxis;
-  double? zIndex;
-  bool? colorByPoint;
-  String? colorKey;
-  HighchartsTimelineSeriesDataLabelsOptions? dataLabels;
-  bool? ignoreHiddenPoint;
-  String? legendSymbol;
-  double? lineWidth;
-  HighchartsTimelineSeriesMarkerOptions? marker;
-  bool? showInLegend;
-  HighchartsTimelineSeriesStatesOptions? states;
-  bool? stickyTracking;
-  HighchartsTimelineSeriesTooltipOptions? tooltip;
-  String? linecap;
   HighchartsSeriesAccessibilityOptions? accessibility;
   bool? allowPointSelect;
   dynamic animation;
@@ -136,19 +118,30 @@ class HighchartsTimelineSeriesOptions extends HighchartsOptionsBase {
   bool? clip;
   String? color;
   String? colorAxis;
+  bool? colorByPoint;
   double? colorIndex;
+  String? colorKey;
   bool? crisp;
   String? cursor;
   Map<String, dynamic>? custom;
+  HighchartsTimelineSeriesDataLabelsOptions? dataLabels;
   String? description;
   HighchartsSeriesDragDropOptions? dragDrop;
   bool? enableMouseTracking;
   HighchartsSeriesEventsOptions? events;
+  String? id;
+  bool? ignoreHiddenPoint;
   bool? inactiveOtherPoints;
   bool? includeInDataExport;
+  double? index;
   List<String>? keys;
   HighchartsSeriesLabelOptions? label;
+  double? legendIndex;
+  String? legendSymbol;
+  double? lineWidth;
+  String? linecap;
   String? linkedTo;
+  HighchartsTimelineSeriesMarkerOptions? marker;
   HighchartsSeriesOnPointOptions? onPoint;
   double? opacity;
   HighchartsSeriesPointOptions? point;
@@ -158,30 +151,19 @@ class HighchartsTimelineSeriesOptions extends HighchartsOptionsBase {
   bool? selected;
   Map<String, dynamic>? shadow;
   bool? showCheckbox;
+  bool? showInLegend;
   bool? skipKeyboardNavigation;
   HighchartsSeriesSonificationOptions? sonification;
+  HighchartsTimelineSeriesStatesOptions? states;
+  bool? stickyTracking;
+  HighchartsTimelineSeriesTooltipOptions? tooltip;
   bool? visible;
+  String? xAxis;
+  String? yAxis;
+  double? zIndex;
 
 
   HighchartsTimelineSeriesOptions({
-    this.id,
-    this.index,
-    this.legendIndex,
-    this.xAxis,
-    this.yAxis,
-    this.zIndex,
-    this.colorByPoint,
-    this.colorKey,
-    this.dataLabels,
-    this.ignoreHiddenPoint,
-    this.legendSymbol,
-    this.lineWidth,
-    this.marker,
-    this.showInLegend,
-    this.states,
-    this.stickyTracking,
-    this.tooltip,
-    this.linecap,
     this.accessibility,
     this.allowPointSelect,
     this.animation,
@@ -189,19 +171,30 @@ class HighchartsTimelineSeriesOptions extends HighchartsOptionsBase {
     this.clip,
     this.color,
     this.colorAxis,
+    this.colorByPoint,
     this.colorIndex,
+    this.colorKey,
     this.crisp,
     this.cursor,
     this.custom,
+    this.dataLabels,
     this.description,
     this.dragDrop,
     this.enableMouseTracking,
     this.events,
+    this.id,
+    this.ignoreHiddenPoint,
     this.inactiveOtherPoints,
     this.includeInDataExport,
+    this.index,
     this.keys,
     this.label,
+    this.legendIndex,
+    this.legendSymbol,
+    this.lineWidth,
+    this.linecap,
     this.linkedTo,
+    this.marker,
     this.onPoint,
     this.opacity,
     this.point,
@@ -211,9 +204,16 @@ class HighchartsTimelineSeriesOptions extends HighchartsOptionsBase {
     this.selected,
     this.shadow,
     this.showCheckbox,
+    this.showInLegend,
     this.skipKeyboardNavigation,
     this.sonification,
-    this.visible
+    this.states,
+    this.stickyTracking,
+    this.tooltip,
+    this.visible,
+    this.xAxis,
+    this.yAxis,
+    this.zIndex
   });
 
   @override
@@ -221,167 +221,167 @@ class HighchartsTimelineSeriesOptions extends HighchartsOptionsBase {
     super.toOptionsJSON(buffer);
 
 
-    if (id != null) {
-      buffer.writeAll(['"id": ', jsonEncode(id), ','], "");
-    }
-    if (index != null) {
-      buffer.writeAll(['"index": ', index, ','], "");
-    }
-    if (legendIndex != null) {
-      buffer.writeAll(['"legendIndex": ', legendIndex, ','], "");
-    }
-    if (xAxis != null) {
-      buffer.writeAll(['"xAxis": ', jsonEncode(xAxis), ','], "");
-    }
-    if (yAxis != null) {
-      buffer.writeAll(['"yAxis": ', jsonEncode(yAxis), ','], "");
-    }
-    if (zIndex != null) {
-      buffer.writeAll(['"zIndex": ', zIndex, ','], "");
-    }
-    if (colorByPoint != null) {
-      buffer.writeAll(['"colorByPoint": ', colorByPoint, ','], "");
-    }
-    if (colorKey != null) {
-      buffer.writeAll(['"colorKey": ', jsonEncode(colorKey), ','], "");
-    }
-    if (dataLabels != null) {
-      buffer.writeAll(['"dataLabels": ', dataLabels?.toJSON(), ","], "");
-    }
-    if (ignoreHiddenPoint != null) {
-      buffer.writeAll(['"ignoreHiddenPoint": ', ignoreHiddenPoint, ','], "");
-    }
-    if (legendSymbol != null) {
-      buffer.writeAll(['"legendSymbol": ', jsonEncode(legendSymbol), ','], "");
-    }
-    if (lineWidth != null) {
-      buffer.writeAll(['"lineWidth": ', lineWidth, ','], "");
-    }
-    if (marker != null) {
-      buffer.writeAll(['"marker": ', marker?.toJSON(), ","], "");
-    }
-    if (showInLegend != null) {
-      buffer.writeAll(['"showInLegend": ', showInLegend, ','], "");
-    }
-    if (states != null) {
-      buffer.writeAll(['"states": ', states?.toJSON(), ","], "");
-    }
-    if (stickyTracking != null) {
-      buffer.writeAll(['"stickyTracking": ', stickyTracking, ','], "");
-    }
-    if (tooltip != null) {
-      buffer.writeAll(['"tooltip": ', tooltip?.toJSON(), ","], "");
-    }
-    if (linecap != null) {
-      buffer.writeAll(['"linecap": ', jsonEncode(linecap), ','], "");
-    }
     if (accessibility != null) {
-      buffer.writeAll(['"accessibility": ', accessibility?.toJSON(), ","], "");
+      buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ","], "");
     }
     if (allowPointSelect != null) {
-      buffer.writeAll(['"allowPointSelect": ', allowPointSelect, ','], "");
+      buffer.writeAll(['"allowPointSelect":', allowPointSelect, ','], "");
     }
     if (animation != null) {
-      buffer.writeAll(['"animation": ', jsonEncode(animation), ','], "");
+      buffer.writeAll(['"animation":', jsonEncode(animation), ','], "");
     }
     if (className != null) {
-      buffer.writeAll(['"className": ', jsonEncode(className), ','], "");
+      buffer.writeAll(['"className":', jsonEncode(className), ','], "");
     }
     if (clip != null) {
-      buffer.writeAll(['"clip": ', clip, ','], "");
+      buffer.writeAll(['"clip":', clip, ','], "");
     }
     if (color != null) {
-      buffer.writeAll(['"color": ', jsonEncode(color), ','], "");
+      buffer.writeAll(['"color":', jsonEncode(color), ','], "");
     }
     if (colorAxis != null) {
-      buffer.writeAll(['"colorAxis": ', jsonEncode(colorAxis), ','], "");
+      buffer.writeAll(['"colorAxis":', jsonEncode(colorAxis), ','], "");
+    }
+    if (colorByPoint != null) {
+      buffer.writeAll(['"colorByPoint":', colorByPoint, ','], "");
     }
     if (colorIndex != null) {
-      buffer.writeAll(['"colorIndex": ', colorIndex, ','], "");
+      buffer.writeAll(['"colorIndex":', colorIndex, ','], "");
+    }
+    if (colorKey != null) {
+      buffer.writeAll(['"colorKey":', jsonEncode(colorKey), ','], "");
     }
     if (crisp != null) {
-      buffer.writeAll(['"crisp": ', crisp, ','], "");
+      buffer.writeAll(['"crisp":', crisp, ','], "");
     }
     if (cursor != null) {
-      buffer.writeAll(['"cursor": ', jsonEncode(cursor), ','], "");
+      buffer.writeAll(['"cursor":', jsonEncode(cursor), ','], "");
     }
     if (custom != null) {
       buffer.write("{");
       for (var item in custom!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
+    if (dataLabels != null) {
+      buffer.writeAll(['"dataLabels":', dataLabels?.toJSON(), ","], "");
+    }
     if (description != null) {
-      buffer.writeAll(['"description": ', jsonEncode(description), ','], "");
+      buffer.writeAll(['"description":', jsonEncode(description), ','], "");
     }
     if (dragDrop != null) {
-      buffer.writeAll(['"dragDrop": ', dragDrop?.toJSON(), ","], "");
+      buffer.writeAll(['"dragDrop":', dragDrop?.toJSON(), ","], "");
     }
     if (enableMouseTracking != null) {
-      buffer.writeAll(['"enableMouseTracking": ', enableMouseTracking, ','], "");
+      buffer.writeAll(['"enableMouseTracking":', enableMouseTracking, ','], "");
     }
     if (events != null) {
-      buffer.writeAll(['"events": ', events?.toJSON(), ","], "");
+      buffer.writeAll(['"events":', events?.toJSON(), ","], "");
+    }
+    if (id != null) {
+      buffer.writeAll(['"id":', jsonEncode(id), ','], "");
+    }
+    if (ignoreHiddenPoint != null) {
+      buffer.writeAll(['"ignoreHiddenPoint":', ignoreHiddenPoint, ','], "");
     }
     if (inactiveOtherPoints != null) {
-      buffer.writeAll(['"inactiveOtherPoints": ', inactiveOtherPoints, ','], "");
+      buffer.writeAll(['"inactiveOtherPoints":', inactiveOtherPoints, ','], "");
     }
     if (includeInDataExport != null) {
-      buffer.writeAll(['"includeInDataExport": ', includeInDataExport, ','], "");
+      buffer.writeAll(['"includeInDataExport":', includeInDataExport, ','], "");
+    }
+    if (index != null) {
+      buffer.writeAll(['"index":', index, ','], "");
     }
     if (keys != null) {
-      buffer.write('"keys": [');
+      buffer.write('"keys":[');
       for (var item in keys!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (label != null) {
-      buffer.writeAll(['"label": ', label?.toJSON(), ","], "");
+      buffer.writeAll(['"label":', label?.toJSON(), ","], "");
+    }
+    if (legendIndex != null) {
+      buffer.writeAll(['"legendIndex":', legendIndex, ','], "");
+    }
+    if (legendSymbol != null) {
+      buffer.writeAll(['"legendSymbol":', jsonEncode(legendSymbol), ','], "");
+    }
+    if (lineWidth != null) {
+      buffer.writeAll(['"lineWidth":', lineWidth, ','], "");
+    }
+    if (linecap != null) {
+      buffer.writeAll(['"linecap":', jsonEncode(linecap), ','], "");
     }
     if (linkedTo != null) {
-      buffer.writeAll(['"linkedTo": ', jsonEncode(linkedTo), ','], "");
+      buffer.writeAll(['"linkedTo":', jsonEncode(linkedTo), ','], "");
+    }
+    if (marker != null) {
+      buffer.writeAll(['"marker":', marker?.toJSON(), ","], "");
     }
     if (onPoint != null) {
-      buffer.writeAll(['"onPoint": ', onPoint?.toJSON(), ","], "");
+      buffer.writeAll(['"onPoint":', onPoint?.toJSON(), ","], "");
     }
     if (opacity != null) {
-      buffer.writeAll(['"opacity": ', opacity, ','], "");
+      buffer.writeAll(['"opacity":', opacity, ','], "");
     }
     if (point != null) {
-      buffer.writeAll(['"point": ', point?.toJSON(), ","], "");
+      buffer.writeAll(['"point":', point?.toJSON(), ","], "");
     }
     if (pointDescriptionFormat != null) {
-      buffer.writeAll(['"pointDescriptionFormat": ', jsonEncode(pointDescriptionFormat), ','], "");
+      buffer.writeAll(['"pointDescriptionFormat":', jsonEncode(pointDescriptionFormat), ','], "");
     }
     if (pointDescriptionFormatter != null) {
-      buffer.writeAll(['"pointDescriptionFormatter": ', jsonEncode(pointDescriptionFormatter), ','], "");
+      buffer.writeAll(['"pointDescriptionFormatter":', jsonEncode(pointDescriptionFormatter), ','], "");
     }
     if (relativeXValue != null) {
-      buffer.writeAll(['"relativeXValue": ', relativeXValue, ','], "");
+      buffer.writeAll(['"relativeXValue":', relativeXValue, ','], "");
     }
     if (selected != null) {
-      buffer.writeAll(['"selected": ', selected, ','], "");
+      buffer.writeAll(['"selected":', selected, ','], "");
     }
     if (shadow != null) {
       buffer.write("{");
       for (var item in shadow!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (showCheckbox != null) {
-      buffer.writeAll(['"showCheckbox": ', showCheckbox, ','], "");
+      buffer.writeAll(['"showCheckbox":', showCheckbox, ','], "");
+    }
+    if (showInLegend != null) {
+      buffer.writeAll(['"showInLegend":', showInLegend, ','], "");
     }
     if (skipKeyboardNavigation != null) {
-      buffer.writeAll(['"skipKeyboardNavigation": ', skipKeyboardNavigation, ','], "");
+      buffer.writeAll(['"skipKeyboardNavigation":', skipKeyboardNavigation, ','], "");
     }
     if (sonification != null) {
-      buffer.writeAll(['"sonification": ', sonification?.toJSON(), ","], "");
+      buffer.writeAll(['"sonification":', sonification?.toJSON(), ","], "");
+    }
+    if (states != null) {
+      buffer.writeAll(['"states":', states?.toJSON(), ","], "");
+    }
+    if (stickyTracking != null) {
+      buffer.writeAll(['"stickyTracking":', stickyTracking, ','], "");
+    }
+    if (tooltip != null) {
+      buffer.writeAll(['"tooltip":', tooltip?.toJSON(), ","], "");
     }
     if (visible != null) {
-      buffer.writeAll(['"visible": ', visible, ','], "");
+      buffer.writeAll(['"visible":', visible, ','], "");
+    }
+    if (xAxis != null) {
+      buffer.writeAll(['"xAxis":', jsonEncode(xAxis), ','], "");
+    }
+    if (yAxis != null) {
+      buffer.writeAll(['"yAxis":', jsonEncode(yAxis), ','], "");
+    }
+    if (zIndex != null) {
+      buffer.writeAll(['"zIndex":', zIndex, ','], "");
     }
   }
 

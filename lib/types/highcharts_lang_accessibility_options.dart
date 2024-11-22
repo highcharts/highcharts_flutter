@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -144,70 +144,70 @@ class HighchartsLangAccessibilityOptions extends HighchartsOptionsBase {
 
 
     if (announceNewData != null) {
-      buffer.writeAll(['"announceNewData": ', announceNewData?.toJSON(), ","], "");
+      buffer.writeAll(['"announceNewData":', announceNewData?.toJSON(), ","], "");
     }
     if (axis != null) {
-      buffer.writeAll(['"axis": ', axis?.toJSON(), ","], "");
+      buffer.writeAll(['"axis":', axis?.toJSON(), ","], "");
     }
     if (chartContainerLabel != null) {
-      buffer.writeAll(['"chartContainerLabel": ', jsonEncode(chartContainerLabel), ','], "");
+      buffer.writeAll(['"chartContainerLabel":', jsonEncode(chartContainerLabel), ','], "");
     }
     if (chartTypes != null) {
-      buffer.writeAll(['"chartTypes": ', chartTypes?.toJSON(), ","], "");
+      buffer.writeAll(['"chartTypes":', chartTypes?.toJSON(), ","], "");
     }
     if (credits != null) {
-      buffer.writeAll(['"credits": ', jsonEncode(credits), ','], "");
+      buffer.writeAll(['"credits":', jsonEncode(credits), ','], "");
     }
     if (defaultChartTitle != null) {
-      buffer.writeAll(['"defaultChartTitle": ', jsonEncode(defaultChartTitle), ','], "");
+      buffer.writeAll(['"defaultChartTitle":', jsonEncode(defaultChartTitle), ','], "");
     }
     if (drillUpButton != null) {
-      buffer.writeAll(['"drillUpButton": ', jsonEncode(drillUpButton), ','], "");
+      buffer.writeAll(['"drillUpButton":', jsonEncode(drillUpButton), ','], "");
     }
     if (exporting != null) {
-      buffer.writeAll(['"exporting": ', exporting?.toJSON(), ","], "");
+      buffer.writeAll(['"exporting":', exporting?.toJSON(), ","], "");
     }
     if (graphicContainerLabel != null) {
-      buffer.writeAll(['"graphicContainerLabel": ', jsonEncode(graphicContainerLabel), ','], "");
+      buffer.writeAll(['"graphicContainerLabel":', jsonEncode(graphicContainerLabel), ','], "");
     }
     if (legend != null) {
-      buffer.writeAll(['"legend": ', legend?.toJSON(), ","], "");
+      buffer.writeAll(['"legend":', legend?.toJSON(), ","], "");
     }
     if (navigator != null) {
-      buffer.writeAll(['"navigator": ', navigator?.toJSON(), ","], "");
+      buffer.writeAll(['"navigator":', navigator?.toJSON(), ","], "");
     }
     if (rangeSelector != null) {
-      buffer.writeAll(['"rangeSelector": ', rangeSelector?.toJSON(), ","], "");
+      buffer.writeAll(['"rangeSelector":', rangeSelector?.toJSON(), ","], "");
     }
     if (resetZoomButton != null) {
-      buffer.writeAll(['"resetZoomButton": ', jsonEncode(resetZoomButton), ','], "");
+      buffer.writeAll(['"resetZoomButton":', jsonEncode(resetZoomButton), ','], "");
     }
     if (screenReaderSection != null) {
-      buffer.writeAll(['"screenReaderSection": ', screenReaderSection?.toJSON(), ","], "");
+      buffer.writeAll(['"screenReaderSection":', screenReaderSection?.toJSON(), ","], "");
     }
     if (series != null) {
-      buffer.writeAll(['"series": ', series?.toJSON(), ","], "");
+      buffer.writeAll(['"series":', series?.toJSON(), ","], "");
     }
     if (seriesTypeDescriptions != null) {
-      buffer.writeAll(['"seriesTypeDescriptions": ', seriesTypeDescriptions?.toJSON(), ","], "");
+      buffer.writeAll(['"seriesTypeDescriptions":', seriesTypeDescriptions?.toJSON(), ","], "");
     }
     if (sonification != null) {
-      buffer.writeAll(['"sonification": ', sonification?.toJSON(), ","], "");
+      buffer.writeAll(['"sonification":', sonification?.toJSON(), ","], "");
     }
     if (svgContainerLabel != null) {
-      buffer.writeAll(['"svgContainerLabel": ', jsonEncode(svgContainerLabel), ','], "");
+      buffer.writeAll(['"svgContainerLabel":', jsonEncode(svgContainerLabel), ','], "");
     }
     if (svgContainerTitle != null) {
-      buffer.writeAll(['"svgContainerTitle": ', jsonEncode(svgContainerTitle), ','], "");
+      buffer.writeAll(['"svgContainerTitle":', jsonEncode(svgContainerTitle), ','], "");
     }
     if (table != null) {
-      buffer.writeAll(['"table": ', table?.toJSON(), ","], "");
+      buffer.writeAll(['"table":', table?.toJSON(), ","], "");
     }
     if (thousandsSep != null) {
-      buffer.writeAll(['"thousandsSep": ', jsonEncode(thousandsSep), ','], "");
+      buffer.writeAll(['"thousandsSep":', jsonEncode(thousandsSep), ','], "");
     }
     if (zoom != null) {
-      buffer.writeAll(['"zoom": ', zoom?.toJSON(), ","], "");
+      buffer.writeAll(['"zoom":', zoom?.toJSON(), ","], "");
     }
   }
 

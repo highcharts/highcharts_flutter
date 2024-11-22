@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -102,54 +102,54 @@ class HighchartsSonificationOptions extends HighchartsOptionsBase {
 
 
     if (afterSeriesWait != null) {
-      buffer.writeAll(['"afterSeriesWait": ', afterSeriesWait, ','], "");
+      buffer.writeAll(['"afterSeriesWait":', afterSeriesWait, ','], "");
     }
     if (defaultInstrumentOptions != null) {
-      buffer.writeAll(['"defaultInstrumentOptions": ', defaultInstrumentOptions?.toJSON(), ","], "");
+      buffer.writeAll(['"defaultInstrumentOptions":', defaultInstrumentOptions?.toJSON(), ","], "");
     }
     if (defaultSpeechOptions != null) {
-      buffer.writeAll(['"defaultSpeechOptions": ', defaultSpeechOptions?.toJSON(), ","], "");
+      buffer.writeAll(['"defaultSpeechOptions":', defaultSpeechOptions?.toJSON(), ","], "");
     }
     if (duration != null) {
-      buffer.writeAll(['"duration": ', duration, ','], "");
+      buffer.writeAll(['"duration":', duration, ','], "");
     }
     if (enabled != null) {
-      buffer.writeAll(['"enabled": ', enabled, ','], "");
+      buffer.writeAll(['"enabled":', enabled, ','], "");
     }
     if (events != null) {
-      buffer.writeAll(['"events": ', events?.toJSON(), ","], "");
+      buffer.writeAll(['"events":', events?.toJSON(), ","], "");
     }
     if (globalContextTracks != null) {
-      buffer.write('"globalContextTracks": [');
+      buffer.write('"globalContextTracks":[');
       for (var item in globalContextTracks!) {
         buffer.writeAll([item.toJSON(), ","], "");
       }
       buffer.write("],");
     }
     if (globalTracks != null) {
-      buffer.write('"globalTracks": [');
+      buffer.write('"globalTracks":[');
       for (var item in globalTracks!) {
         buffer.writeAll([item.toJSON(), ","], "");
       }
       buffer.write("],");
     }
     if (masterVolume != null) {
-      buffer.writeAll(['"masterVolume": ', masterVolume, ','], "");
+      buffer.writeAll(['"masterVolume":', masterVolume, ','], "");
     }
     if (order != null) {
-      buffer.writeAll(['"order": ', jsonEncode(order), ','], "");
+      buffer.writeAll(['"order":', jsonEncode(order), ','], "");
     }
     if (pointGrouping != null) {
-      buffer.writeAll(['"pointGrouping": ', pointGrouping?.toJSON(), ","], "");
+      buffer.writeAll(['"pointGrouping":', pointGrouping?.toJSON(), ","], "");
     }
     if (showCrosshair != null) {
-      buffer.writeAll(['"showCrosshair": ', showCrosshair, ','], "");
+      buffer.writeAll(['"showCrosshair":', showCrosshair, ','], "");
     }
     if (showTooltip != null) {
-      buffer.writeAll(['"showTooltip": ', showTooltip, ','], "");
+      buffer.writeAll(['"showTooltip":', showTooltip, ','], "");
     }
     if (updateInterval != null) {
-      buffer.writeAll(['"updateInterval": ', updateInterval, ','], "");
+      buffer.writeAll(['"updateInterval":', updateInterval, ','], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -76,19 +76,19 @@ class HighchartsLangAccessibilityAnnounceNewDataOptions extends HighchartsOption
 
 
     if (newDataAnnounce != null) {
-      buffer.writeAll(['"newDataAnnounce": ', jsonEncode(newDataAnnounce), ','], "");
+      buffer.writeAll(['"newDataAnnounce":', jsonEncode(newDataAnnounce), ','], "");
     }
     if (newPointAnnounceMultiple != null) {
-      buffer.writeAll(['"newPointAnnounceMultiple": ', jsonEncode(newPointAnnounceMultiple), ','], "");
+      buffer.writeAll(['"newPointAnnounceMultiple":', jsonEncode(newPointAnnounceMultiple), ','], "");
     }
     if (newPointAnnounceSingle != null) {
-      buffer.writeAll(['"newPointAnnounceSingle": ', jsonEncode(newPointAnnounceSingle), ','], "");
+      buffer.writeAll(['"newPointAnnounceSingle":', jsonEncode(newPointAnnounceSingle), ','], "");
     }
     if (newSeriesAnnounceMultiple != null) {
-      buffer.writeAll(['"newSeriesAnnounceMultiple": ', jsonEncode(newSeriesAnnounceMultiple), ','], "");
+      buffer.writeAll(['"newSeriesAnnounceMultiple":', jsonEncode(newSeriesAnnounceMultiple), ','], "");
     }
     if (newSeriesAnnounceSingle != null) {
-      buffer.writeAll(['"newSeriesAnnounceSingle": ', jsonEncode(newSeriesAnnounceSingle), ','], "");
+      buffer.writeAll(['"newSeriesAnnounceSingle":', jsonEncode(newSeriesAnnounceSingle), ','], "");
     }
   }
 

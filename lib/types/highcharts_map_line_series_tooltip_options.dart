@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -61,10 +61,10 @@ class HighchartsMapLineSeriesTooltipOptions extends HighchartsOptionsBase {
 
 
     if (followPointer != null) {
-      buffer.writeAll(['"followPointer": ', followPointer, ','], "");
+      buffer.writeAll(['"followPointer":', followPointer, ','], "");
     }
     if (pointFormat != null) {
-      buffer.writeAll(['"pointFormat": ', jsonEncode(pointFormat), ','], "");
+      buffer.writeAll(['"pointFormat":', jsonEncode(pointFormat), ','], "");
     }
   }
 

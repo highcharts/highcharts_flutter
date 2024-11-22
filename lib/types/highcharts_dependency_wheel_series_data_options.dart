@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -71,35 +71,35 @@ export 'highcharts_dependency_wheel_series_data_events_options.dart';
  */
 class HighchartsDependencyWheelSeriesDataOptions extends HighchartsOptionsBase {
 
-  String? color;
-  String? from;
-  String? to;
-  double? weight;
   HighchartsDependencyWheelSeriesDataAccessibilityOptions? accessibility;
   String? className;
+  String? color;
   double? colorIndex;
   Map<String, dynamic>? custom;
   String? description;
   HighchartsDependencyWheelSeriesDataEventsOptions? events;
+  String? from;
   String? id;
   double? labelrank;
   bool? selected;
+  String? to;
+  double? weight;
 
 
   HighchartsDependencyWheelSeriesDataOptions({
-    this.color,
-    this.from,
-    this.to,
-    this.weight,
     this.accessibility,
     this.className,
+    this.color,
     this.colorIndex,
     this.custom,
     this.description,
     this.events,
+    this.from,
     this.id,
     this.labelrank,
-    this.selected
+    this.selected,
+    this.to,
+    this.weight
   });
 
   @override
@@ -107,48 +107,48 @@ class HighchartsDependencyWheelSeriesDataOptions extends HighchartsOptionsBase {
     super.toOptionsJSON(buffer);
 
 
-    if (color != null) {
-      buffer.writeAll(['"color": ', jsonEncode(color), ','], "");
-    }
-    if (from != null) {
-      buffer.writeAll(['"from": ', jsonEncode(from), ','], "");
-    }
-    if (to != null) {
-      buffer.writeAll(['"to": ', jsonEncode(to), ','], "");
-    }
-    if (weight != null) {
-      buffer.writeAll(['"weight": ', weight, ','], "");
-    }
     if (accessibility != null) {
-      buffer.writeAll(['"accessibility": ', accessibility?.toJSON(), ","], "");
+      buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ","], "");
     }
     if (className != null) {
-      buffer.writeAll(['"className": ', jsonEncode(className), ','], "");
+      buffer.writeAll(['"className":', jsonEncode(className), ','], "");
+    }
+    if (color != null) {
+      buffer.writeAll(['"color":', jsonEncode(color), ','], "");
     }
     if (colorIndex != null) {
-      buffer.writeAll(['"colorIndex": ', colorIndex, ','], "");
+      buffer.writeAll(['"colorIndex":', colorIndex, ','], "");
     }
     if (custom != null) {
       buffer.write("{");
       for (var item in custom!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (description != null) {
-      buffer.writeAll(['"description": ', jsonEncode(description), ','], "");
+      buffer.writeAll(['"description":', jsonEncode(description), ','], "");
     }
     if (events != null) {
-      buffer.writeAll(['"events": ', events?.toJSON(), ","], "");
+      buffer.writeAll(['"events":', events?.toJSON(), ","], "");
+    }
+    if (from != null) {
+      buffer.writeAll(['"from":', jsonEncode(from), ','], "");
     }
     if (id != null) {
-      buffer.writeAll(['"id": ', jsonEncode(id), ','], "");
+      buffer.writeAll(['"id":', jsonEncode(id), ','], "");
     }
     if (labelrank != null) {
-      buffer.writeAll(['"labelrank": ', labelrank, ','], "");
+      buffer.writeAll(['"labelrank":', labelrank, ','], "");
     }
     if (selected != null) {
-      buffer.writeAll(['"selected": ', selected, ','], "");
+      buffer.writeAll(['"selected":', selected, ','], "");
+    }
+    if (to != null) {
+      buffer.writeAll(['"to":', jsonEncode(to), ','], "");
+    }
+    if (weight != null) {
+      buffer.writeAll(['"weight":', weight, ','], "");
     }
   }
 

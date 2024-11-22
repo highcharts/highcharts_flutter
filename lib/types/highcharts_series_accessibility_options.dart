@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -76,22 +76,22 @@ class HighchartsSeriesAccessibilityOptions extends HighchartsOptionsBase {
 
 
     if (description != null) {
-      buffer.writeAll(['"description": ', jsonEncode(description), ','], "");
+      buffer.writeAll(['"description":', jsonEncode(description), ','], "");
     }
     if (descriptionFormat != null) {
-      buffer.writeAll(['"descriptionFormat": ', jsonEncode(descriptionFormat), ','], "");
+      buffer.writeAll(['"descriptionFormat":', jsonEncode(descriptionFormat), ','], "");
     }
     if (enabled != null) {
-      buffer.writeAll(['"enabled": ', enabled, ','], "");
+      buffer.writeAll(['"enabled":', enabled, ','], "");
     }
     if (exposeAsGroupOnly != null) {
-      buffer.writeAll(['"exposeAsGroupOnly": ', exposeAsGroupOnly, ','], "");
+      buffer.writeAll(['"exposeAsGroupOnly":', exposeAsGroupOnly, ','], "");
     }
     if (keyboardNavigation != null) {
-      buffer.writeAll(['"keyboardNavigation": ', keyboardNavigation?.toJSON(), ","], "");
+      buffer.writeAll(['"keyboardNavigation":', keyboardNavigation?.toJSON(), ","], "");
     }
     if (point != null) {
-      buffer.writeAll(['"point": ', point?.toJSON(), ","], "");
+      buffer.writeAll(['"point":', point?.toJSON(), ","], "");
     }
   }
 

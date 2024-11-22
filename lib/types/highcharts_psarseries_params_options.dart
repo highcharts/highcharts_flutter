@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -67,19 +67,19 @@ class HighchartsPSARSeriesParamsOptions extends HighchartsOptionsBase {
 
 
     if (decimals != null) {
-      buffer.writeAll(['"decimals": ', decimals, ','], "");
+      buffer.writeAll(['"decimals":', decimals, ','], "");
     }
     if (increment != null) {
-      buffer.writeAll(['"increment": ', increment, ','], "");
+      buffer.writeAll(['"increment":', increment, ','], "");
     }
     if (index != null) {
-      buffer.writeAll(['"index": ', index, ','], "");
+      buffer.writeAll(['"index":', index, ','], "");
     }
     if (initialAccelerationFactor != null) {
-      buffer.writeAll(['"initialAccelerationFactor": ', initialAccelerationFactor, ','], "");
+      buffer.writeAll(['"initialAccelerationFactor":', initialAccelerationFactor, ','], "");
     }
     if (maxAccelerationFactor != null) {
-      buffer.writeAll(['"maxAccelerationFactor": ', maxAccelerationFactor, ','], "");
+      buffer.writeAll(['"maxAccelerationFactor":', maxAccelerationFactor, ','], "");
     }
   }
 

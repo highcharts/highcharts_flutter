@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -73,18 +73,18 @@ class HighchartsNavigationButtonThemeOptions extends HighchartsOptionsBase {
     if (fill != null) {
       buffer.write("{");
       for (var item in fill!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (padding != null) {
-      buffer.writeAll(['"padding": ', padding, ','], "");
+      buffer.writeAll(['"padding":', padding, ','], "");
     }
     if (stroke != null) {
-      buffer.writeAll(['"stroke": ', jsonEncode(stroke), ','], "");
+      buffer.writeAll(['"stroke":', jsonEncode(stroke), ','], "");
     }
     if (strokeLinecap != null) {
-      buffer.writeAll(['"stroke-linecap": ', jsonEncode(strokeLinecap), ','], "");
+      buffer.writeAll(['"stroke-linecap":', jsonEncode(strokeLinecap), ','], "");
     }
   }
 

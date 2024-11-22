@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -48,16 +48,16 @@ export 'highcharts_xaxis_title_style_options.dart';
 
 class HighchartsYAxisTitleOptions extends HighchartsOptionsBase {
 
-  double? margin;
-  String? text;
   String? align;
   bool? enabled;
+  double? margin;
   double? offset;
   String? position3d;
   bool? reserveSpace;
   double? rotation;
   bool? skew3d;
   HighchartsXAxisTitleStyleOptions? style;
+  String? text;
   String? textAlign;
   bool? useHTML;
   double? x;
@@ -65,16 +65,16 @@ class HighchartsYAxisTitleOptions extends HighchartsOptionsBase {
 
 
   HighchartsYAxisTitleOptions({
-    this.margin,
-    this.text,
     this.align,
     this.enabled,
+    this.margin,
     this.offset,
     this.position3d,
     this.reserveSpace,
     this.rotation,
     this.skew3d,
     this.style,
+    this.text,
     this.textAlign,
     this.useHTML,
     this.x,
@@ -86,47 +86,47 @@ class HighchartsYAxisTitleOptions extends HighchartsOptionsBase {
     super.toOptionsJSON(buffer);
 
 
-    if (margin != null) {
-      buffer.writeAll(['"margin": ', margin, ','], "");
-    }
-    if (text != null) {
-      buffer.writeAll(['"text": ', jsonEncode(text), ','], "");
-    }
     if (align != null) {
-      buffer.writeAll(['"align": ', jsonEncode(align), ','], "");
+      buffer.writeAll(['"align":', jsonEncode(align), ','], "");
     }
     if (enabled != null) {
-      buffer.writeAll(['"enabled": ', enabled, ','], "");
+      buffer.writeAll(['"enabled":', enabled, ','], "");
+    }
+    if (margin != null) {
+      buffer.writeAll(['"margin":', margin, ','], "");
     }
     if (offset != null) {
-      buffer.writeAll(['"offset": ', offset, ','], "");
+      buffer.writeAll(['"offset":', offset, ','], "");
     }
     if (position3d != null) {
-      buffer.writeAll(['"position3d": ', jsonEncode(position3d), ','], "");
+      buffer.writeAll(['"position3d":', jsonEncode(position3d), ','], "");
     }
     if (reserveSpace != null) {
-      buffer.writeAll(['"reserveSpace": ', reserveSpace, ','], "");
+      buffer.writeAll(['"reserveSpace":', reserveSpace, ','], "");
     }
     if (rotation != null) {
-      buffer.writeAll(['"rotation": ', rotation, ','], "");
+      buffer.writeAll(['"rotation":', rotation, ','], "");
     }
     if (skew3d != null) {
-      buffer.writeAll(['"skew3d": ', skew3d, ','], "");
+      buffer.writeAll(['"skew3d":', skew3d, ','], "");
     }
     if (style != null) {
-      buffer.writeAll(['"style": ', style?.toJSON(), ","], "");
+      buffer.writeAll(['"style":', style?.toJSON(), ","], "");
+    }
+    if (text != null) {
+      buffer.writeAll(['"text":', jsonEncode(text), ','], "");
     }
     if (textAlign != null) {
-      buffer.writeAll(['"textAlign": ', jsonEncode(textAlign), ','], "");
+      buffer.writeAll(['"textAlign":', jsonEncode(textAlign), ','], "");
     }
     if (useHTML != null) {
-      buffer.writeAll(['"useHTML": ', useHTML, ','], "");
+      buffer.writeAll(['"useHTML":', useHTML, ','], "");
     }
     if (x != null) {
-      buffer.writeAll(['"x": ', x, ','], "");
+      buffer.writeAll(['"x":', x, ','], "");
     }
     if (y != null) {
-      buffer.writeAll(['"y": ', y, ','], "");
+      buffer.writeAll(['"y":', y, ','], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -69,16 +69,16 @@ class HighchartsSeriesOnPointPositionOptions extends HighchartsOptionsBase {
 
 
     if (offsetX != null) {
-      buffer.writeAll(['"offsetX": ', offsetX, ','], "");
+      buffer.writeAll(['"offsetX":', offsetX, ','], "");
     }
     if (offsetY != null) {
-      buffer.writeAll(['"offsetY": ', offsetY, ','], "");
+      buffer.writeAll(['"offsetY":', offsetY, ','], "");
     }
     if (x != null) {
-      buffer.writeAll(['"x": ', x, ','], "");
+      buffer.writeAll(['"x":', x, ','], "");
     }
     if (y != null) {
-      buffer.writeAll(['"y": ', y, ','], "");
+      buffer.writeAll(['"y":', y, ','], "");
     }
   }
 

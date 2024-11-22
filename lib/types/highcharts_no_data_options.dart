@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -72,20 +72,20 @@ class HighchartsNoDataOptions extends HighchartsOptionsBase {
 
 
     if (attr != null) {
-      buffer.writeAll(['"attr": ', jsonEncode(attr), ','], "");
+      buffer.writeAll(['"attr":', jsonEncode(attr), ','], "");
     }
     if (position != null) {
-      buffer.writeAll(['"position": ', position?.toJSON(), ","], "");
+      buffer.writeAll(['"position":', position?.toJSON(), ","], "");
     }
     if (style != null) {
       buffer.write("{");
       for (var item in style!.entries) {
-        buffer.writeAll(['"', item.key, '": ', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
       buffer.write("}");
     }
     if (useHTML != null) {
-      buffer.writeAll(['"useHTML": ', useHTML, ','], "");
+      buffer.writeAll(['"useHTML":', useHTML, ','], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -46,17 +46,17 @@ import 'highcharts_options_base.dart';
 
 class HighchartsOrganizationSeriesLinkOptions extends HighchartsOptionsBase {
 
-  double? offset;
   String? color;
   double? lineWidth;
+  double? offset;
   double? radius;
   String? type;
 
 
   HighchartsOrganizationSeriesLinkOptions({
-    this.offset,
     this.color,
     this.lineWidth,
+    this.offset,
     this.radius,
     this.type
   });
@@ -66,20 +66,20 @@ class HighchartsOrganizationSeriesLinkOptions extends HighchartsOptionsBase {
     super.toOptionsJSON(buffer);
 
 
-    if (offset != null) {
-      buffer.writeAll(['"offset": ', offset, ','], "");
-    }
     if (color != null) {
-      buffer.writeAll(['"color": ', jsonEncode(color), ','], "");
+      buffer.writeAll(['"color":', jsonEncode(color), ','], "");
     }
     if (lineWidth != null) {
-      buffer.writeAll(['"lineWidth": ', lineWidth, ','], "");
+      buffer.writeAll(['"lineWidth":', lineWidth, ','], "");
+    }
+    if (offset != null) {
+      buffer.writeAll(['"offset":', offset, ','], "");
     }
     if (radius != null) {
-      buffer.writeAll(['"radius": ', radius, ','], "");
+      buffer.writeAll(['"radius":', radius, ','], "");
     }
     if (type != null) {
-      buffer.writeAll(['"type": ', jsonEncode(type), ','], "");
+      buffer.writeAll(['"type":', jsonEncode(type), ','], "");
     }
   }
 

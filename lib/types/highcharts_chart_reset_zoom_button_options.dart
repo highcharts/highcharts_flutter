@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -72,13 +72,13 @@ class HighchartsChartResetZoomButtonOptions extends HighchartsOptionsBase {
 
 
     if (position != null) {
-      buffer.writeAll(['"position": ', position?.toJSON(), ","], "");
+      buffer.writeAll(['"position":', position?.toJSON(), ","], "");
     }
     if (relativeTo != null) {
-      buffer.writeAll(['"relativeTo": ', jsonEncode(relativeTo), ','], "");
+      buffer.writeAll(['"relativeTo":', jsonEncode(relativeTo), ','], "");
     }
     if (theme != null) {
-      buffer.writeAll(['"theme": ', theme?.toJSON(), ","], "");
+      buffer.writeAll(['"theme":', theme?.toJSON(), ","], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -91,38 +91,38 @@ class HighchartsMapViewInsetsOptions extends HighchartsOptionsBase {
 
 
     if (borderPath != null) {
-      buffer.writeAll(['"borderPath": ', jsonEncode(borderPath), ','], "");
+      buffer.writeAll(['"borderPath":', jsonEncode(borderPath), ','], "");
     }
     if (field != null) {
-      buffer.writeAll(['"field": ', jsonEncode(field), ','], "");
+      buffer.writeAll(['"field":', jsonEncode(field), ','], "");
     }
     if (geoBounds != null) {
-      buffer.writeAll(['"geoBounds": ', jsonEncode(geoBounds), ','], "");
+      buffer.writeAll(['"geoBounds":', jsonEncode(geoBounds), ','], "");
     }
     if (id != null) {
-      buffer.writeAll(['"id": ', jsonEncode(id), ','], "");
+      buffer.writeAll(['"id":', jsonEncode(id), ','], "");
     }
     if (projection != null) {
-      buffer.writeAll(['"projection": ', projection?.toJSON(), ","], "");
+      buffer.writeAll(['"projection":', projection?.toJSON(), ","], "");
     }
     if (borderColor != null) {
-      buffer.writeAll(['"borderColor": ', jsonEncode(borderColor), ','], "");
+      buffer.writeAll(['"borderColor":', jsonEncode(borderColor), ','], "");
     }
     if (borderWidth != null) {
-      buffer.writeAll(['"borderWidth": ', borderWidth, ','], "");
+      buffer.writeAll(['"borderWidth":', borderWidth, ','], "");
     }
     if (padding != null) {
-      buffer.write('"padding": [');
+      buffer.write('"padding":[');
       for (var item in padding!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (relativeTo != null) {
-      buffer.writeAll(['"relativeTo": ', jsonEncode(relativeTo), ','], "");
+      buffer.writeAll(['"relativeTo":', jsonEncode(relativeTo), ','], "");
     }
     if (units != null) {
-      buffer.writeAll(['"units": ', jsonEncode(units), ','], "");
+      buffer.writeAll(['"units":', jsonEncode(units), ','], "");
     }
   }
 

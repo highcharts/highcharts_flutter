@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -73,22 +73,22 @@ class HighchartsBoostDebugOptions extends HighchartsOptionsBase {
 
 
     if (showSkipSummary != null) {
-      buffer.writeAll(['"showSkipSummary": ', showSkipSummary, ','], "");
+      buffer.writeAll(['"showSkipSummary":', showSkipSummary, ','], "");
     }
     if (timeBufferCopy != null) {
-      buffer.writeAll(['"timeBufferCopy": ', timeBufferCopy, ','], "");
+      buffer.writeAll(['"timeBufferCopy":', timeBufferCopy, ','], "");
     }
     if (timeKDTree != null) {
-      buffer.writeAll(['"timeKDTree": ', timeKDTree, ','], "");
+      buffer.writeAll(['"timeKDTree":', timeKDTree, ','], "");
     }
     if (timeRendering != null) {
-      buffer.writeAll(['"timeRendering": ', timeRendering, ','], "");
+      buffer.writeAll(['"timeRendering":', timeRendering, ','], "");
     }
     if (timeSeriesProcessing != null) {
-      buffer.writeAll(['"timeSeriesProcessing": ', timeSeriesProcessing, ','], "");
+      buffer.writeAll(['"timeSeriesProcessing":', timeSeriesProcessing, ','], "");
     }
     if (timeSetup != null) {
-      buffer.writeAll(['"timeSetup": ', timeSetup, ','], "");
+      buffer.writeAll(['"timeSetup":', timeSetup, ','], "");
     }
   }
 

@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -69,16 +69,16 @@ class HighchartsAnnotationsTimeCyclesTypeOptions extends HighchartsOptionsBase {
 
 
     if (points != null) {
-      buffer.writeAll(['"points": ', points?.toJSON(), ","], "");
+      buffer.writeAll(['"points":', points?.toJSON(), ","], "");
     }
     if (line != null) {
-      buffer.writeAll(['"line": ', line?.toJSON(), ","], "");
+      buffer.writeAll(['"line":', line?.toJSON(), ","], "");
     }
     if (xAxis != null) {
-      buffer.writeAll(['"xAxis": ', xAxis, ','], "");
+      buffer.writeAll(['"xAxis":', xAxis, ','], "");
     }
     if (yAxis != null) {
-      buffer.writeAll(['"yAxis": ', yAxis, ','], "");
+      buffer.writeAll(['"yAxis":', yAxis, ','], "");
     }
   }
 

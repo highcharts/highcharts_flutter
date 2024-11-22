@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -48,21 +48,21 @@ export 'highcharts_series_states_hover_animation_options.dart';
 
 class HighchartsWindbarbSeriesStatesHoverOptions extends HighchartsOptionsBase {
 
-  double? lineWidthPlus;
+  HighchartsSeriesStatesHoverAnimationOptions? animation;
   String? borderColor;
   double? brightness;
   String? color;
-  HighchartsSeriesStatesHoverAnimationOptions? animation;
   bool? enabled;
+  double? lineWidthPlus;
 
 
   HighchartsWindbarbSeriesStatesHoverOptions({
-    this.lineWidthPlus,
+    this.animation,
     this.borderColor,
     this.brightness,
     this.color,
-    this.animation,
-    this.enabled
+    this.enabled,
+    this.lineWidthPlus
   });
 
   @override
@@ -70,23 +70,23 @@ class HighchartsWindbarbSeriesStatesHoverOptions extends HighchartsOptionsBase {
     super.toOptionsJSON(buffer);
 
 
-    if (lineWidthPlus != null) {
-      buffer.writeAll(['"lineWidthPlus": ', lineWidthPlus, ','], "");
+    if (animation != null) {
+      buffer.writeAll(['"animation":', animation?.toJSON(), ","], "");
     }
     if (borderColor != null) {
-      buffer.writeAll(['"borderColor": ', jsonEncode(borderColor), ','], "");
+      buffer.writeAll(['"borderColor":', jsonEncode(borderColor), ','], "");
     }
     if (brightness != null) {
-      buffer.writeAll(['"brightness": ', brightness, ','], "");
+      buffer.writeAll(['"brightness":', brightness, ','], "");
     }
     if (color != null) {
-      buffer.writeAll(['"color": ', jsonEncode(color), ','], "");
-    }
-    if (animation != null) {
-      buffer.writeAll(['"animation": ', animation?.toJSON(), ","], "");
+      buffer.writeAll(['"color":', jsonEncode(color), ','], "");
     }
     if (enabled != null) {
-      buffer.writeAll(['"enabled": ', enabled, ','], "");
+      buffer.writeAll(['"enabled":', enabled, ','], "");
+    }
+    if (lineWidthPlus != null) {
+      buffer.writeAll(['"lineWidthPlus":', lineWidthPlus, ','], "");
     }
   }
 

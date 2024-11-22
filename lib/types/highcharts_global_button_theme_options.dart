@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -81,25 +81,25 @@ class HighchartsGlobalButtonThemeOptions extends HighchartsOptionsBase {
 
 
     if (fill != null) {
-      buffer.writeAll(['"fill": ', jsonEncode(fill), ','], "");
+      buffer.writeAll(['"fill":', jsonEncode(fill), ','], "");
     }
     if (padding != null) {
-      buffer.writeAll(['"padding": ', padding, ','], "");
+      buffer.writeAll(['"padding":', padding, ','], "");
     }
     if (r != null) {
-      buffer.writeAll(['"r": ', r, ','], "");
+      buffer.writeAll(['"r":', r, ','], "");
     }
     if (states != null) {
-      buffer.writeAll(['"states": ', states?.toJSON(), ","], "");
+      buffer.writeAll(['"states":', states?.toJSON(), ","], "");
     }
     if (stroke != null) {
-      buffer.writeAll(['"stroke": ', jsonEncode(stroke), ','], "");
+      buffer.writeAll(['"stroke":', jsonEncode(stroke), ','], "");
     }
     if (strokeWidth != null) {
-      buffer.writeAll(['"stroke-width": ', strokeWidth, ','], "");
+      buffer.writeAll(['"stroke-width":', strokeWidth, ','], "");
     }
     if (style != null) {
-      buffer.writeAll(['"style": ', style?.toJSON(), ","], "");
+      buffer.writeAll(['"style":', style?.toJSON(), ","], "");
     }
   }
 

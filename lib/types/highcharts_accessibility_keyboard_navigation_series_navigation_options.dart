@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -68,16 +68,16 @@ class HighchartsAccessibilityKeyboardNavigationSeriesNavigationOptions extends H
 
 
     if (mode != null) {
-      buffer.writeAll(['"mode": ', jsonEncode(mode), ','], "");
+      buffer.writeAll(['"mode":', jsonEncode(mode), ','], "");
     }
     if (pointNavigationEnabledThreshold != null) {
-      buffer.writeAll(['"pointNavigationEnabledThreshold": ', pointNavigationEnabledThreshold, ','], "");
+      buffer.writeAll(['"pointNavigationEnabledThreshold":', pointNavigationEnabledThreshold, ','], "");
     }
     if (rememberPointFocus != null) {
-      buffer.writeAll(['"rememberPointFocus": ', rememberPointFocus, ','], "");
+      buffer.writeAll(['"rememberPointFocus":', rememberPointFocus, ','], "");
     }
     if (skipNullPoints != null) {
-      buffer.writeAll(['"skipNullPoints": ', skipNullPoints, ','], "");
+      buffer.writeAll(['"skipNullPoints":', skipNullPoints, ','], "");
     }
   }
 

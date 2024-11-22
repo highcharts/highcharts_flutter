@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -75,30 +75,30 @@ class HighchartsPaneOptions extends HighchartsOptionsBase {
 
 
     if (background != null) {
-      buffer.write('"background": [');
+      buffer.write('"background":[');
       for (var item in background!) {
         buffer.writeAll([item.toJSON(), ","], "");
       }
       buffer.write("],");
     }
     if (center != null) {
-      buffer.write('"center": [');
+      buffer.write('"center":[');
       for (var item in center!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (endAngle != null) {
-      buffer.writeAll(['"endAngle": ', endAngle, ','], "");
+      buffer.writeAll(['"endAngle":', endAngle, ','], "");
     }
     if (innerSize != null) {
-      buffer.writeAll(['"innerSize": ', jsonEncode(innerSize), ','], "");
+      buffer.writeAll(['"innerSize":', jsonEncode(innerSize), ','], "");
     }
     if (size != null) {
-      buffer.writeAll(['"size": ', jsonEncode(size), ','], "");
+      buffer.writeAll(['"size":', jsonEncode(size), ','], "");
     }
     if (startAngle != null) {
-      buffer.writeAll(['"startAngle": ', startAngle, ','], "");
+      buffer.writeAll(['"startAngle":', startAngle, ','], "");
     }
   }
 

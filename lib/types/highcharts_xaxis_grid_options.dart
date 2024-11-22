@@ -12,7 +12,7 @@
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-10-31
+ * Build stamp: 2024-11-21
  *
  */
 
@@ -70,23 +70,23 @@ class HighchartsXAxisGridOptions extends HighchartsOptionsBase {
 
 
     if (borderColor != null) {
-      buffer.writeAll(['"borderColor": ', jsonEncode(borderColor), ','], "");
+      buffer.writeAll(['"borderColor":', jsonEncode(borderColor), ','], "");
     }
     if (borderWidth != null) {
-      buffer.writeAll(['"borderWidth": ', borderWidth, ','], "");
+      buffer.writeAll(['"borderWidth":', borderWidth, ','], "");
     }
     if (cellHeight != null) {
-      buffer.writeAll(['"cellHeight": ', cellHeight, ','], "");
+      buffer.writeAll(['"cellHeight":', cellHeight, ','], "");
     }
     if (columns != null) {
-      buffer.write('"columns": [');
+      buffer.write('"columns":[');
       for (var item in columns!) {
         buffer.writeAll([item, ","], "");
       }
       buffer.write("],");
     }
     if (enabled != null) {
-      buffer.writeAll(['"enabled": ', enabled, ','], "");
+      buffer.writeAll(['"enabled":', enabled, ','], "");
     }
   }
 
