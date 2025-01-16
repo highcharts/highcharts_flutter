@@ -54,11 +54,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 title: HighchartsTitleOptions(
                     text: "Corn vs wheat estimated production for 2020",
-                    align: "left",
                 ),
                 subtitle: HighchartsSubtitleOptions(
                     text: "Source: <a target=\"_blank\" href=\"https://www.indexmundi.com/agriculture/?commodity=corn\">indexmundi</a>",
-                    align: "left",
                 ),
                 xAxis: [
                   HighchartsXAxisOptions(

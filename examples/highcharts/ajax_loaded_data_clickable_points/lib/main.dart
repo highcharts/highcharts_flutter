@@ -59,11 +59,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 title: HighchartsTitleOptions(
                   text: "Daily sessions at www.highcharts.com",
-                  align: "left",
                 ),
                 subtitle: HighchartsSubtitleOptions(
                   text: "Source: Google Analytics",
-                  align: "left",
                 ),
                 legend: HighchartsLegendOptions(
                   align: "left",

@@ -1,18 +1,34 @@
 /**
- * Highcharts Flutter Integration
+ * Highcharts Flutter
  * 
- * Copyright (c), Highsoft AS 2023-2024
+ * Copyright (c) 2023-2025, Highsoft AS
  * 
- * sales@highcharts.com
- * support@highcharts.com
+ * The software in the Highcharts Flutter repository is free and open source,
+ * but as Highcharts Flutter relies on Highcharts.js, it requires a valid
+ * Highcharts license for commercial use.
  * 
- * The use of this software requires a valid license.
+ * Permission is hereby granted, free of charge, to any person obtaining
+ * a copy of this software and associated documentation files (the
+ * "Software"), to deal in the Software without restriction, including
+ * without limitation the rights to use, copy, modify, merge, publish,
+ * distribute, sublicense, and/or sell copies of the Software, and to
+ * permit persons to whom the Software is furnished to do so, subject to
+ * the following conditions:
  * 
- * See https://highcharts.com/license
+ * The above copyright notice and this permission notice shall be
+ * included in all copies or substantial portions of the Software.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+ * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+ * CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+ * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+ * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-11-21
+ * Build stamp: 2025-01-16
  *
  */
 
@@ -32,7 +48,11 @@ import 'highcharts_xaxis_crosshair_options.dart';
 import 'highcharts_xaxis_date_time_label_formats_options.dart';
 import 'highcharts_xaxis_events_options.dart';
 import 'highcharts_xaxis_grid_options.dart';
+import 'highcharts_union_type.dart';
 import 'highcharts_yaxis_labels_options.dart';
+import 'highcharts_union_type.dart';
+import 'highcharts_union_type.dart';
+import 'highcharts_union_type.dart';
 import 'highcharts_yaxis_plot_bands_options.dart';
 import 'highcharts_yaxis_plot_lines_options.dart';
 import 'highcharts_yaxis_resize_options.dart';
@@ -40,6 +60,8 @@ import 'highcharts_yaxis_scrollbar_options.dart';
 import 'highcharts_yaxis_stack_labels_options.dart';
 import 'highcharts_yaxis_stack_shadow_options.dart';
 import 'highcharts_yaxis_title_options.dart';
+import 'highcharts_union_type.dart';
+import 'highcharts_union_type.dart';
 
 
 /* *
@@ -55,7 +77,11 @@ export 'highcharts_xaxis_crosshair_options.dart';
 export 'highcharts_xaxis_date_time_label_formats_options.dart';
 export 'highcharts_xaxis_events_options.dart';
 export 'highcharts_xaxis_grid_options.dart';
+export 'highcharts_union_type.dart';
 export 'highcharts_yaxis_labels_options.dart';
+export 'highcharts_union_type.dart';
+export 'highcharts_union_type.dart';
+export 'highcharts_union_type.dart';
 export 'highcharts_yaxis_plot_bands_options.dart';
 export 'highcharts_yaxis_plot_lines_options.dart';
 export 'highcharts_yaxis_resize_options.dart';
@@ -63,6 +89,8 @@ export 'highcharts_yaxis_scrollbar_options.dart';
 export 'highcharts_yaxis_stack_labels_options.dart';
 export 'highcharts_yaxis_stack_shadow_options.dart';
 export 'highcharts_yaxis_title_options.dart';
+export 'highcharts_union_type.dart';
+export 'highcharts_union_type.dart';
 
 
 /* *
@@ -104,23 +132,23 @@ class HighchartsYAxisOptions extends HighchartsOptionsBase {
   String? gridLineInterpolation;
   double? gridLineWidth;
   double? gridZIndex;
-  String? height;
+  HighchartsUnionType? height;
   String? id;
   HighchartsYAxisLabelsOptions? labels;
-  String? left;
+  HighchartsUnionType? left;
   String? lineColor;
   double? lineWidth;
   double? linkedTo;
   double? margin;
   dynamic max;
   String? maxColor;
-  String? maxLength;
+  HighchartsUnionType? maxLength;
   double? maxPadding;
   double? maxRange;
   double? maxZoom;
   dynamic min;
   String? minColor;
-  String? minLength;
+  HighchartsUnionType? minLength;
   double? minPadding;
   double? minRange;
   double? minTickInterval;
@@ -168,11 +196,12 @@ class HighchartsYAxisOptions extends HighchartsOptionsBase {
   String? tickmarkPlacement;
   HighchartsYAxisTitleOptions? title;
   String? tooltipValueFormat;
-  String? top;
+  HighchartsUnionType? top;
   String? type;
+  bool? uniqueNames;
   List<List<dynamic>>? units;
   bool? visible;
-  String? width;
+  HighchartsUnionType? width;
   double? zIndex;
   bool? zoomEnabled;
 
@@ -265,6 +294,7 @@ class HighchartsYAxisOptions extends HighchartsOptionsBase {
     this.tooltipValueFormat,
     this.top,
     this.type,
+    this.uniqueNames,
     this.units,
     this.visible,
     this.width,
@@ -302,7 +332,7 @@ class HighchartsYAxisOptions extends HighchartsOptionsBase {
     if (categories != null) {
       buffer.write('"categories":[');
       for (var item in categories!) {
-        buffer.writeAll([item, ","], "");
+        buffer.writeAll([jsonEncode(item), ","], "");
       }
       buffer.write("],");
     }
@@ -349,7 +379,7 @@ class HighchartsYAxisOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"gridZIndex":', gridZIndex, ','], "");
     }
     if (height != null) {
-      buffer.writeAll(['"height":', jsonEncode(height), ','], "");
+      buffer.writeAll(['"height":', height?.toJSON(), ","], "");
     }
     if (id != null) {
       buffer.writeAll(['"id":', jsonEncode(id), ','], "");
@@ -358,7 +388,7 @@ class HighchartsYAxisOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"labels":', labels?.toJSON(), ","], "");
     }
     if (left != null) {
-      buffer.writeAll(['"left":', jsonEncode(left), ','], "");
+      buffer.writeAll(['"left":', left?.toJSON(), ","], "");
     }
     if (lineColor != null) {
       buffer.writeAll(['"lineColor":', jsonEncode(lineColor), ','], "");
@@ -379,7 +409,7 @@ class HighchartsYAxisOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"maxColor":', jsonEncode(maxColor), ','], "");
     }
     if (maxLength != null) {
-      buffer.writeAll(['"maxLength":', jsonEncode(maxLength), ','], "");
+      buffer.writeAll(['"maxLength":', maxLength?.toJSON(), ","], "");
     }
     if (maxPadding != null) {
       buffer.writeAll(['"maxPadding":', maxPadding, ','], "");
@@ -397,7 +427,7 @@ class HighchartsYAxisOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"minColor":', jsonEncode(minColor), ','], "");
     }
     if (minLength != null) {
-      buffer.writeAll(['"minLength":', jsonEncode(minLength), ','], "");
+      buffer.writeAll(['"minLength":', minLength?.toJSON(), ","], "");
     }
     if (minPadding != null) {
       buffer.writeAll(['"minPadding":', minPadding, ','], "");
@@ -557,10 +587,13 @@ class HighchartsYAxisOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"tooltipValueFormat":', jsonEncode(tooltipValueFormat), ','], "");
     }
     if (top != null) {
-      buffer.writeAll(['"top":', jsonEncode(top), ','], "");
+      buffer.writeAll(['"top":', top?.toJSON(), ","], "");
     }
     if (type != null) {
       buffer.writeAll(['"type":', jsonEncode(type), ','], "");
+    }
+    if (uniqueNames != null) {
+      buffer.writeAll(['"uniqueNames":', uniqueNames, ','], "");
     }
     if (units != null) {
       buffer.write('"units":[');
@@ -573,7 +606,7 @@ class HighchartsYAxisOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"visible":', visible, ','], "");
     }
     if (width != null) {
-      buffer.writeAll(['"width":', jsonEncode(width), ','], "");
+      buffer.writeAll(['"width":', width?.toJSON(), ","], "");
     }
     if (zIndex != null) {
       buffer.writeAll(['"zIndex":', zIndex, ','], "");

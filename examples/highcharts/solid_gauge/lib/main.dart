@@ -47,19 +47,65 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             HighchartsChart(HighchartsOptions(
+              chart: HighchartsChartOptions(
+                type: 'solidgauge'
+              ),
+
               credits: HighchartsCreditsOptions(
                 enabled: false,
               ),
+
+              title: HighchartsTitleOptions(
+                text: '',
+              ),
+
+              pane: [
+                HighchartsPaneOptions(
+                  //center: ["50%", "85%"],
+                  startAngle: -90,
+                  endAngle: 90,
+                  background: [HighchartsPaneBackgroundOptions(
+                    backgroundColor: "#fafafa",
+                    borderRadius: '5',
+                    innerRadius: "60%",
+                    outerRadius: "100%",
+                    shape: "arc",
+                  )],
+                ),
+              ],
+
+              tooltip: HighchartsTooltipOptions(
+                enabled: false,
+              ),
+
+              yAxis: [
+                HighchartsYAxisOptions(
+                  lineWidth: 0,
+                  tickWidth: 0,
+                  minorTickInterval: null,
+                  tickAmount: 2,
+                  labels: HighchartsYAxisLabelsOptions(
+                    y: 16,
+                  ),
+                  min: 0,
+                  max: 200,
+                  title: HighchartsYAxisTitleOptions(
+                    text: "Speed",
+                  ),
+                ),
+              ],
+
               series: [
-                HighchartsLineSeries(
+                HighchartsSolidGaugeSeries(
                   name: "Speed",
-                  options: HighchartsLineSeriesOptions(
-                    dataLabels: [
-                      HighchartsSeriesDataLabelsOptions(
-                        format:
-                            "<div style=\"text-align:center\"><span style=\"font-size:25px\">{y}</span><br/><span style=\"font-size:12px;opacity:0.4\">km/h</span></div>",
-                      ),
-                    ],
+                  options: HighchartsSolidGaugeSeriesOptions(
+                    dataLabels: HighchartsSolidGaugeSeriesDataLabelsOptions(
+                      y: 5,
+                      borderWidth: 0,
+                      useHTML: true,
+                      format:
+                        "<div style=\"text-align:center\"><span style=\"font-size:25px\">{y}</span><br/><span style=\"font-size:12px;opacity:0.4\">km/h</span></div>",
+                    ),
                   ),
                   data: [
                     [80],

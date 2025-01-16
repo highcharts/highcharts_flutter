@@ -49,22 +49,30 @@ class _MyHomePageState extends State<MyHomePage> {
             HighchartsChart(HighchartsOptions(
               chart: HighchartsChartOptions(
                 renderTo: "container",
-                margin: [
-                  100,
-                ],
+                margin: [50],
                 type: "scatter3d",
                 animation: false,
+                options3d: HighchartsChart3DOptions(
+                    alpha: 10,
+                    beta: 30,
+                    depth: 250,
+                    enabled: true,
+                    fitToPlot: false,
+                    frame: HighchartsChart3DFrameOptions(
+                      back: HighchartsChart3DFrameBackOptions(color: "rgba(0,0,0,0.04)", size: 1),
+                      bottom: HighchartsChart3DFrameBottomOptions(color: "rgba(0,0,0,0.02)", size: 1),
+                      side: HighchartsChart3DFrameSideOptions(color: "rgba(0,0,0,0.06)", size: 1),
+                    ),
+                    viewDistance: 5,
+                  ),
               ),
               title: HighchartsTitleOptions(
-                text: "Draggable box",
-              ),
-              subtitle: HighchartsSubtitleOptions(
-                text: "Click and drag the plot area to rotate in space",
+                text: "3D Scatter chart",
               ),
               zAxis: [
                 HighchartsZAxisOptions(
-                  min: 0,
-                  max: 10,
+                  min: HighchartsUnionType.number(0),
+                  max: HighchartsUnionType.number(10),
                   showFirstLabel: false,
                 ),
               ],

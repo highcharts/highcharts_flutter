@@ -1,18 +1,34 @@
 /**
- * Highcharts Flutter Integration
+ * Highcharts Flutter
  * 
- * Copyright (c), Highsoft AS 2023-2024
+ * Copyright (c) 2023-2025, Highsoft AS
  * 
- * sales@highcharts.com
- * support@highcharts.com
+ * The software in the Highcharts Flutter repository is free and open source,
+ * but as Highcharts Flutter relies on Highcharts.js, it requires a valid
+ * Highcharts license for commercial use.
  * 
- * The use of this software requires a valid license.
+ * Permission is hereby granted, free of charge, to any person obtaining
+ * a copy of this software and associated documentation files (the
+ * "Software"), to deal in the Software without restriction, including
+ * without limitation the rights to use, copy, modify, merge, publish,
+ * distribute, sublicense, and/or sell copies of the Software, and to
+ * permit persons to whom the Software is furnished to do so, subject to
+ * the following conditions:
  * 
- * See https://highcharts.com/license
+ * The above copyright notice and this permission notice shall be
+ * included in all copies or substantial portions of the Software.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+ * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+ * CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+ * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+ * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-11-21
+ * Build stamp: 2025-01-16
  *
  */
 
@@ -28,6 +44,7 @@ import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_tooltip_animation_options.dart';
 import 'highcharts_tooltip_date_time_label_formats_options.dart';
+import 'highcharts_union_type.dart';
 import 'highcharts_tooltip_style_options.dart';
 
 
@@ -40,6 +57,7 @@ import 'highcharts_tooltip_style_options.dart';
 
 export 'highcharts_tooltip_animation_options.dart';
 export 'highcharts_tooltip_date_time_label_formats_options.dart';
+export 'highcharts_union_type.dart';
 export 'highcharts_tooltip_style_options.dart';
 
 
@@ -86,7 +104,7 @@ class HighchartsTooltipOptions extends HighchartsOptionsBase {
   Map<String, dynamic>? shadow;
   String? shape;
   bool? shared;
-  String? snap;
+  HighchartsUnionType? snap;
   bool? split;
   bool? stickOnContact;
   HighchartsTooltipStyleOptions? style;
@@ -226,11 +244,11 @@ class HighchartsTooltipOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"positioner":', jsonEncode(positioner), ','], "");
     }
     if (shadow != null) {
-      buffer.write("{");
+      buffer.write('"shadow":{');
       for (var item in shadow!.entries) {
         buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
-      buffer.write("}");
+      buffer.write("},");
     }
     if (shape != null) {
       buffer.writeAll(['"shape":', jsonEncode(shape), ','], "");
@@ -239,7 +257,7 @@ class HighchartsTooltipOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"shared":', shared, ','], "");
     }
     if (snap != null) {
-      buffer.writeAll(['"snap":', jsonEncode(snap), ','], "");
+      buffer.writeAll(['"snap":', snap?.toJSON(), ","], "");
     }
     if (split != null) {
       buffer.writeAll(['"split":', split, ','], "");

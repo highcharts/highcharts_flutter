@@ -1,16 +1,17 @@
 name: highcharts_flutter
 description: "Highcharts Flutter integration"
-version: 0.0.4
+version: 0.0.5
 homepage:
 
 environment:
-  sdk: ">=2.18.1"
+  sdk: ">=3.3.0"
   flutter: ">=1.17.0"
 
 dependencies:
   flutter:
     sdk: flutter
   provider: ^6.1.2
+  web: ^1.1.0
   webview_flutter: ^4.10.0
   webview_flutter_android: ^4.0.2
   webview_flutter_web: ^0.2.3
