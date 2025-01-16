@@ -1,18 +1,34 @@
 /**
- * Highcharts Flutter Integration
+ * Highcharts Flutter
  * 
- * Copyright (c), Highsoft AS 2023-2024
+ * Copyright (c) 2023-2025, Highsoft AS
  * 
- * sales@highcharts.com
- * support@highcharts.com
+ * The software in the Highcharts Flutter repository is free and open source,
+ * but as Highcharts Flutter relies on Highcharts.js, it requires a valid
+ * Highcharts license for commercial use.
  * 
- * The use of this software requires a valid license.
+ * Permission is hereby granted, free of charge, to any person obtaining
+ * a copy of this software and associated documentation files (the
+ * "Software"), to deal in the Software without restriction, including
+ * without limitation the rights to use, copy, modify, merge, publish,
+ * distribute, sublicense, and/or sell copies of the Software, and to
+ * permit persons to whom the Software is furnished to do so, subject to
+ * the following conditions:
  * 
- * See https://highcharts.com/license
+ * The above copyright notice and this permission notice shall be
+ * included in all copies or substantial portions of the Software.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+ * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+ * CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+ * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+ * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-11-21
+ * Build stamp: 2025-01-16
  *
  */
 
@@ -27,6 +43,7 @@
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_series_accessibility_options.dart';
+import 'highcharts_union_type.dart';
 import 'highcharts_flags_series_data_labels_options.dart';
 import 'highcharts_series_data_sorting_options.dart';
 import 'highcharts_flags_series_drag_drop_options.dart';
@@ -36,9 +53,14 @@ import 'highcharts_series_last_price_options.dart';
 import 'highcharts_series_last_visible_price_options.dart';
 import 'highcharts_series_on_point_options.dart';
 import 'highcharts_series_point_options.dart';
+import 'highcharts_union_type.dart';
+import 'highcharts_union_type.dart';
 import 'highcharts_series_sonification_options.dart';
+import 'highcharts_union_type.dart';
 import 'highcharts_flags_series_states_options.dart';
 import 'highcharts_flags_series_tooltip_options.dart';
+import 'highcharts_union_type.dart';
+import 'highcharts_union_type.dart';
 import 'highcharts_series_zones_options.dart';
 
 
@@ -50,6 +72,7 @@ import 'highcharts_series_zones_options.dart';
 
 
 export 'highcharts_series_accessibility_options.dart';
+export 'highcharts_union_type.dart';
 export 'highcharts_flags_series_data_labels_options.dart';
 export 'highcharts_series_data_sorting_options.dart';
 export 'highcharts_flags_series_drag_drop_options.dart';
@@ -59,9 +82,14 @@ export 'highcharts_series_last_price_options.dart';
 export 'highcharts_series_last_visible_price_options.dart';
 export 'highcharts_series_on_point_options.dart';
 export 'highcharts_series_point_options.dart';
+export 'highcharts_union_type.dart';
+export 'highcharts_union_type.dart';
 export 'highcharts_series_sonification_options.dart';
+export 'highcharts_union_type.dart';
 export 'highcharts_flags_series_states_options.dart';
 export 'highcharts_flags_series_tooltip_options.dart';
+export 'highcharts_union_type.dart';
+export 'highcharts_union_type.dart';
 export 'highcharts_series_zones_options.dart';
 
 
@@ -127,7 +155,7 @@ class HighchartsFlagsSeriesOptions extends HighchartsOptionsBase {
   String? className;
   bool? clip;
   String? color;
-  String? colorAxis;
+  HighchartsUnionType? colorAxis;
   double? colorIndex;
   String? colorKey;
   List<dynamic>? colors;
@@ -161,6 +189,7 @@ class HighchartsFlagsSeriesOptions extends HighchartsOptionsBase {
   HighchartsSeriesLastVisiblePriceOptions? lastVisiblePrice;
   double? legendIndex;
   String? legendSymbol;
+  String? legendSymbolColor;
   String? lineColor;
   String? linkedTo;
   double? maxPointWidth;
@@ -176,9 +205,9 @@ class HighchartsFlagsSeriesOptions extends HighchartsOptionsBase {
   dynamic pointDescriptionFormatter;
   double? pointInterval;
   String? pointIntervalUnit;
-  String? pointPlacement;
+  HighchartsUnionType? pointPlacement;
   double? pointRange;
-  double? pointStart;
+  HighchartsUnionType? pointStart;
   bool? relativeXValue;
   bool? selected;
   Map<String, dynamic>? shadow;
@@ -189,7 +218,7 @@ class HighchartsFlagsSeriesOptions extends HighchartsOptionsBase {
   bool? skipKeyboardNavigation;
   bool? softThreshold;
   HighchartsSeriesSonificationOptions? sonification;
-  String? stack;
+  HighchartsUnionType? stack;
   double? stackDistance;
   String? stacking;
   HighchartsFlagsSeriesStatesOptions? states;
@@ -202,9 +231,9 @@ class HighchartsFlagsSeriesOptions extends HighchartsOptionsBase {
   bool? useHTML;
   bool? visible;
   double? width;
-  String? xAxis;
+  HighchartsUnionType? xAxis;
   double? y;
-  String? yAxis;
+  HighchartsUnionType? yAxis;
   double? zIndex;
   String? zoneAxis;
   List<HighchartsSeriesZonesOptions>? zones;
@@ -255,6 +284,7 @@ class HighchartsFlagsSeriesOptions extends HighchartsOptionsBase {
     this.lastVisiblePrice,
     this.legendIndex,
     this.legendSymbol,
+    this.legendSymbolColor,
     this.lineColor,
     this.linkedTo,
     this.maxPointWidth,
@@ -340,7 +370,7 @@ class HighchartsFlagsSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"color":', jsonEncode(color), ','], "");
     }
     if (colorAxis != null) {
-      buffer.writeAll(['"colorAxis":', jsonEncode(colorAxis), ','], "");
+      buffer.writeAll(['"colorAxis":', colorAxis?.toJSON(), ","], "");
     }
     if (colorIndex != null) {
       buffer.writeAll(['"colorIndex":', colorIndex, ','], "");
@@ -351,7 +381,7 @@ class HighchartsFlagsSeriesOptions extends HighchartsOptionsBase {
     if (colors != null) {
       buffer.write('"colors":[');
       for (var item in colors!) {
-        buffer.writeAll([item, ","], "");
+        buffer.writeAll([jsonEncode(item), ","], "");
       }
       buffer.write("],");
     }
@@ -377,11 +407,11 @@ class HighchartsFlagsSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"cursor":', jsonEncode(cursor), ','], "");
     }
     if (custom != null) {
-      buffer.write("{");
+      buffer.write('"custom":{');
       for (var item in custom!.entries) {
         buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
-      buffer.write("}");
+      buffer.write("},");
     }
     if (dataLabels != null) {
       buffer.writeAll(['"dataLabels":', dataLabels?.toJSON(), ","], "");
@@ -434,7 +464,7 @@ class HighchartsFlagsSeriesOptions extends HighchartsOptionsBase {
     if (keys != null) {
       buffer.write('"keys":[');
       for (var item in keys!) {
-        buffer.writeAll([item, ","], "");
+        buffer.writeAll([jsonEncode(item), ","], "");
       }
       buffer.write("],");
     }
@@ -452,6 +482,9 @@ class HighchartsFlagsSeriesOptions extends HighchartsOptionsBase {
     }
     if (legendSymbol != null) {
       buffer.writeAll(['"legendSymbol":', jsonEncode(legendSymbol), ','], "");
+    }
+    if (legendSymbolColor != null) {
+      buffer.writeAll(['"legendSymbolColor":', jsonEncode(legendSymbolColor), ','], "");
     }
     if (lineColor != null) {
       buffer.writeAll(['"lineColor":', jsonEncode(lineColor), ','], "");
@@ -499,13 +532,13 @@ class HighchartsFlagsSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"pointIntervalUnit":', jsonEncode(pointIntervalUnit), ','], "");
     }
     if (pointPlacement != null) {
-      buffer.writeAll(['"pointPlacement":', jsonEncode(pointPlacement), ','], "");
+      buffer.writeAll(['"pointPlacement":', pointPlacement?.toJSON(), ","], "");
     }
     if (pointRange != null) {
       buffer.writeAll(['"pointRange":', pointRange, ','], "");
     }
     if (pointStart != null) {
-      buffer.writeAll(['"pointStart":', pointStart, ','], "");
+      buffer.writeAll(['"pointStart":', pointStart?.toJSON(), ","], "");
     }
     if (relativeXValue != null) {
       buffer.writeAll(['"relativeXValue":', relativeXValue, ','], "");
@@ -514,11 +547,11 @@ class HighchartsFlagsSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"selected":', selected, ','], "");
     }
     if (shadow != null) {
-      buffer.write("{");
+      buffer.write('"shadow":{');
       for (var item in shadow!.entries) {
         buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
-      buffer.write("}");
+      buffer.write("},");
     }
     if (shape != null) {
       buffer.writeAll(['"shape":', jsonEncode(shape), ','], "");
@@ -542,7 +575,7 @@ class HighchartsFlagsSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"sonification":', sonification?.toJSON(), ","], "");
     }
     if (stack != null) {
-      buffer.writeAll(['"stack":', jsonEncode(stack), ','], "");
+      buffer.writeAll(['"stack":', stack?.toJSON(), ","], "");
     }
     if (stackDistance != null) {
       buffer.writeAll(['"stackDistance":', stackDistance, ','], "");
@@ -557,11 +590,11 @@ class HighchartsFlagsSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"stickyTracking":', stickyTracking, ','], "");
     }
     if (style != null) {
-      buffer.write("{");
+      buffer.write('"style":{');
       for (var item in style!.entries) {
         buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
-      buffer.write("}");
+      buffer.write("},");
     }
     if (textAlign != null) {
       buffer.writeAll(['"textAlign":', jsonEncode(textAlign), ','], "");
@@ -585,13 +618,13 @@ class HighchartsFlagsSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"width":', width, ','], "");
     }
     if (xAxis != null) {
-      buffer.writeAll(['"xAxis":', jsonEncode(xAxis), ','], "");
+      buffer.writeAll(['"xAxis":', xAxis?.toJSON(), ","], "");
     }
     if (y != null) {
       buffer.writeAll(['"y":', y, ','], "");
     }
     if (yAxis != null) {
-      buffer.writeAll(['"yAxis":', jsonEncode(yAxis), ','], "");
+      buffer.writeAll(['"yAxis":', yAxis?.toJSON(), ","], "");
     }
     if (zIndex != null) {
       buffer.writeAll(['"zIndex":', zIndex, ','], "");

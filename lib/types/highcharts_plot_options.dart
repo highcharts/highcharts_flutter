@@ -1,18 +1,34 @@
 /**
- * Highcharts Flutter Integration
+ * Highcharts Flutter
  * 
- * Copyright (c), Highsoft AS 2023-2024
+ * Copyright (c) 2023-2025, Highsoft AS
  * 
- * sales@highcharts.com
- * support@highcharts.com
+ * The software in the Highcharts Flutter repository is free and open source,
+ * but as Highcharts Flutter relies on Highcharts.js, it requires a valid
+ * Highcharts license for commercial use.
  * 
- * The use of this software requires a valid license.
+ * Permission is hereby granted, free of charge, to any person obtaining
+ * a copy of this software and associated documentation files (the
+ * "Software"), to deal in the Software without restriction, including
+ * without limitation the rights to use, copy, modify, merge, publish,
+ * distribute, sublicense, and/or sell copies of the Software, and to
+ * permit persons to whom the Software is furnished to do so, subject to
+ * the following conditions:
  * 
- * See https://highcharts.com/license
+ * The above copyright notice and this permission notice shall be
+ * included in all copies or substantial portions of the Software.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+ * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+ * CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+ * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+ * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-11-21
+ * Build stamp: 2025-01-16
  *
  */
 
@@ -101,12 +117,14 @@ import 'highcharts_pcseries_options.dart';
 import 'highcharts_pictorial_series_options.dart';
 import 'highcharts_pie_series_options.dart';
 import 'highcharts_pivot_points_series_options.dart';
+import 'highcharts_pointandfigure_series_options.dart';
 import 'highcharts_polygon_series_options.dart';
 import 'highcharts_pposeries_options.dart';
 import 'highcharts_price_envelopes_series_options.dart';
 import 'highcharts_psarseries_options.dart';
 import 'highcharts_pyramid_series_options.dart';
 import 'highcharts_pyramid3dseries_options.dart';
+import 'highcharts_renko_series_options.dart';
 import 'highcharts_rocseries_options.dart';
 import 'highcharts_rsiseries_options.dart';
 import 'highcharts_sankey_series_options.dart';
@@ -226,12 +244,14 @@ export 'highcharts_pcseries_options.dart';
 export 'highcharts_pictorial_series_options.dart';
 export 'highcharts_pie_series_options.dart';
 export 'highcharts_pivot_points_series_options.dart';
+export 'highcharts_pointandfigure_series_options.dart';
 export 'highcharts_polygon_series_options.dart';
 export 'highcharts_pposeries_options.dart';
 export 'highcharts_price_envelopes_series_options.dart';
 export 'highcharts_psarseries_options.dart';
 export 'highcharts_pyramid_series_options.dart';
 export 'highcharts_pyramid3dseries_options.dart';
+export 'highcharts_renko_series_options.dart';
 export 'highcharts_rocseries_options.dart';
 export 'highcharts_rsiseries_options.dart';
 export 'highcharts_sankey_series_options.dart';
@@ -364,12 +384,14 @@ class HighchartsPlotOptions extends HighchartsOptionsBase {
   HighchartsPictorialSeriesOptions? pictorial;
   HighchartsPieSeriesOptions? pie;
   HighchartsPivotPointsSeriesOptions? pivotpoints;
+  HighchartsPointandfigureSeriesOptions? pointandfigure;
   HighchartsPolygonSeriesOptions? polygon;
   HighchartsPPOSeriesOptions? ppo;
   HighchartsPriceEnvelopesSeriesOptions? priceenvelopes;
   HighchartsPSARSeriesOptions? psar;
   HighchartsPyramidSeriesOptions? pyramid;
   HighchartsPyramid3DSeriesOptions? pyramid3d;
+  HighchartsRenkoSeriesOptions? renko;
   HighchartsROCSeriesOptions? roc;
   HighchartsRSISeriesOptions? rsi;
   HighchartsSankeySeriesOptions? sankey;
@@ -483,12 +505,14 @@ class HighchartsPlotOptions extends HighchartsOptionsBase {
     this.pictorial,
     this.pie,
     this.pivotpoints,
+    this.pointandfigure,
     this.polygon,
     this.ppo,
     this.priceenvelopes,
     this.psar,
     this.pyramid,
     this.pyramid3d,
+    this.renko,
     this.roc,
     this.rsi,
     this.sankey,
@@ -756,6 +780,9 @@ class HighchartsPlotOptions extends HighchartsOptionsBase {
     if (pivotpoints != null) {
       buffer.writeAll(['"pivotpoints":', pivotpoints?.toJSON(), ","], "");
     }
+    if (pointandfigure != null) {
+      buffer.writeAll(['"pointandfigure":', pointandfigure?.toJSON(), ","], "");
+    }
     if (polygon != null) {
       buffer.writeAll(['"polygon":', polygon?.toJSON(), ","], "");
     }
@@ -773,6 +800,9 @@ class HighchartsPlotOptions extends HighchartsOptionsBase {
     }
     if (pyramid3d != null) {
       buffer.writeAll(['"pyramid3d":', pyramid3d?.toJSON(), ","], "");
+    }
+    if (renko != null) {
+      buffer.writeAll(['"renko":', renko?.toJSON(), ","], "");
     }
     if (roc != null) {
       buffer.writeAll(['"roc":', roc?.toJSON(), ","], "");

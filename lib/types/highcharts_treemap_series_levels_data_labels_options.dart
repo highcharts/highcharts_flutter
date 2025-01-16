@@ -1,18 +1,34 @@
 /**
- * Highcharts Flutter Integration
+ * Highcharts Flutter
  * 
- * Copyright (c), Highsoft AS 2023-2024
+ * Copyright (c) 2023-2025, Highsoft AS
  * 
- * sales@highcharts.com
- * support@highcharts.com
+ * The software in the Highcharts Flutter repository is free and open source,
+ * but as Highcharts Flutter relies on Highcharts.js, it requires a valid
+ * Highcharts license for commercial use.
  * 
- * The use of this software requires a valid license.
+ * Permission is hereby granted, free of charge, to any person obtaining
+ * a copy of this software and associated documentation files (the
+ * "Software"), to deal in the Software without restriction, including
+ * without limitation the rights to use, copy, modify, merge, publish,
+ * distribute, sublicense, and/or sell copies of the Software, and to
+ * permit persons to whom the Software is furnished to do so, subject to
+ * the following conditions:
  * 
- * See https://highcharts.com/license
+ * The above copyright notice and this permission notice shall be
+ * included in all copies or substantial portions of the Software.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+ * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+ * CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+ * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+ * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-11-21
+ * Build stamp: 2025-01-16
  *
  */
 
@@ -26,6 +42,7 @@
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
+import 'highcharts_treemap_series_levels_data_labels_style_options.dart';
 import 'highcharts_series_data_labels_animation_options.dart';
 import 'highcharts_series_data_labels_filter_options.dart';
 import 'highcharts_series_data_labels_text_path_options.dart';
@@ -38,6 +55,7 @@ import 'highcharts_series_data_labels_text_path_options.dart';
  * */
 
 
+export 'highcharts_treemap_series_levels_data_labels_style_options.dart';
 export 'highcharts_series_data_labels_animation_options.dart';
 export 'highcharts_series_data_labels_filter_options.dart';
 export 'highcharts_series_data_labels_text_path_options.dart';
@@ -61,6 +79,8 @@ class HighchartsTreemapSeriesLevelsDataLabelsOptions extends HighchartsOptionsBa
   bool? defer;
   bool? enabled;
   bool? inside;
+  double? padding;
+  HighchartsTreemapSeriesLevelsDataLabelsStyleOptions? style;
   String? verticalAlign;
   String? align;
   String? alignTo;
@@ -79,12 +99,10 @@ class HighchartsTreemapSeriesLevelsDataLabelsOptions extends HighchartsOptionsBa
   String? nullFormat;
   dynamic nullFormatter;
   String? overflow;
-  double? padding;
   String? position;
   double? rotation;
   Map<String, dynamic>? shadow;
   String? shape;
-  Map<String, String>? style;
   HighchartsSeriesDataLabelsTextPathOptions? textPath;
   bool? useHTML;
   double? x;
@@ -96,6 +114,8 @@ class HighchartsTreemapSeriesLevelsDataLabelsOptions extends HighchartsOptionsBa
     this.defer,
     this.enabled,
     this.inside,
+    this.padding,
+    this.style,
     this.verticalAlign,
     this.align,
     this.alignTo,
@@ -114,12 +134,10 @@ class HighchartsTreemapSeriesLevelsDataLabelsOptions extends HighchartsOptionsBa
     this.nullFormat,
     this.nullFormatter,
     this.overflow,
-    this.padding,
     this.position,
     this.rotation,
     this.shadow,
     this.shape,
-    this.style,
     this.textPath,
     this.useHTML,
     this.x,
@@ -140,6 +158,12 @@ class HighchartsTreemapSeriesLevelsDataLabelsOptions extends HighchartsOptionsBa
     }
     if (inside != null) {
       buffer.writeAll(['"inside":', inside, ','], "");
+    }
+    if (padding != null) {
+      buffer.writeAll(['"padding":', padding, ','], "");
+    }
+    if (style != null) {
+      buffer.writeAll(['"style":', style?.toJSON(), ","], "");
     }
     if (verticalAlign != null) {
       buffer.writeAll(['"verticalAlign":', jsonEncode(verticalAlign), ','], "");
@@ -195,9 +219,6 @@ class HighchartsTreemapSeriesLevelsDataLabelsOptions extends HighchartsOptionsBa
     if (overflow != null) {
       buffer.writeAll(['"overflow":', jsonEncode(overflow), ','], "");
     }
-    if (padding != null) {
-      buffer.writeAll(['"padding":', padding, ','], "");
-    }
     if (position != null) {
       buffer.writeAll(['"position":', jsonEncode(position), ','], "");
     }
@@ -205,21 +226,14 @@ class HighchartsTreemapSeriesLevelsDataLabelsOptions extends HighchartsOptionsBa
       buffer.writeAll(['"rotation":', rotation, ','], "");
     }
     if (shadow != null) {
-      buffer.write("{");
+      buffer.write('"shadow":{');
       for (var item in shadow!.entries) {
         buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
-      buffer.write("}");
+      buffer.write("},");
     }
     if (shape != null) {
       buffer.writeAll(['"shape":', jsonEncode(shape), ','], "");
-    }
-    if (style != null) {
-      buffer.write("{");
-      for (var item in style!.entries) {
-        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
-      }
-      buffer.write("}");
     }
     if (textPath != null) {
       buffer.writeAll(['"textPath":', textPath?.toJSON(), ","], "");

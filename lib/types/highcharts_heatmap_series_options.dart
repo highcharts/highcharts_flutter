@@ -1,18 +1,34 @@
 /**
- * Highcharts Flutter Integration
+ * Highcharts Flutter
  * 
- * Copyright (c), Highsoft AS 2023-2024
+ * Copyright (c) 2023-2025, Highsoft AS
  * 
- * sales@highcharts.com
- * support@highcharts.com
+ * The software in the Highcharts Flutter repository is free and open source,
+ * but as Highcharts Flutter relies on Highcharts.js, it requires a valid
+ * Highcharts license for commercial use.
  * 
- * The use of this software requires a valid license.
+ * Permission is hereby granted, free of charge, to any person obtaining
+ * a copy of this software and associated documentation files (the
+ * "Software"), to deal in the Software without restriction, including
+ * without limitation the rights to use, copy, modify, merge, publish,
+ * distribute, sublicense, and/or sell copies of the Software, and to
+ * permit persons to whom the Software is furnished to do so, subject to
+ * the following conditions:
  * 
- * See https://highcharts.com/license
+ * The above copyright notice and this permission notice shall be
+ * included in all copies or substantial portions of the Software.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+ * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+ * CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+ * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+ * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-11-21
+ * Build stamp: 2025-01-16
  *
  */
 
@@ -27,6 +43,7 @@
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_series_accessibility_options.dart';
+import 'highcharts_union_type.dart';
 import 'highcharts_heatmap_series_data_labels_options.dart';
 import 'highcharts_series_data_sorting_options.dart';
 import 'highcharts_series_events_options.dart';
@@ -37,6 +54,8 @@ import 'highcharts_series_point_options.dart';
 import 'highcharts_series_sonification_options.dart';
 import 'highcharts_heatmap_series_states_options.dart';
 import 'highcharts_heatmap_series_tooltip_options.dart';
+import 'highcharts_union_type.dart';
+import 'highcharts_union_type.dart';
 import 'highcharts_series_zones_options.dart';
 
 
@@ -48,6 +67,7 @@ import 'highcharts_series_zones_options.dart';
 
 
 export 'highcharts_series_accessibility_options.dart';
+export 'highcharts_union_type.dart';
 export 'highcharts_heatmap_series_data_labels_options.dart';
 export 'highcharts_series_data_sorting_options.dart';
 export 'highcharts_series_events_options.dart';
@@ -58,6 +78,8 @@ export 'highcharts_series_point_options.dart';
 export 'highcharts_series_sonification_options.dart';
 export 'highcharts_heatmap_series_states_options.dart';
 export 'highcharts_heatmap_series_tooltip_options.dart';
+export 'highcharts_union_type.dart';
+export 'highcharts_union_type.dart';
 export 'highcharts_series_zones_options.dart';
 
 
@@ -123,7 +145,7 @@ class HighchartsHeatmapSeriesOptions extends HighchartsOptionsBase {
   String? className;
   bool? clip;
   String? color;
-  String? colorAxis;
+  HighchartsUnionType? colorAxis;
   double? colorIndex;
   String? colorKey;
   double? colsize;
@@ -167,8 +189,8 @@ class HighchartsHeatmapSeriesOptions extends HighchartsOptionsBase {
   HighchartsHeatmapSeriesTooltipOptions? tooltip;
   double? turboThreshold;
   bool? visible;
-  String? xAxis;
-  String? yAxis;
+  HighchartsUnionType? xAxis;
+  HighchartsUnionType? yAxis;
   double? zIndex;
   String? zoneAxis;
   List<HighchartsSeriesZonesOptions>? zones;
@@ -272,7 +294,7 @@ class HighchartsHeatmapSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"color":', jsonEncode(color), ','], "");
     }
     if (colorAxis != null) {
-      buffer.writeAll(['"colorAxis":', jsonEncode(colorAxis), ','], "");
+      buffer.writeAll(['"colorAxis":', colorAxis?.toJSON(), ","], "");
     }
     if (colorIndex != null) {
       buffer.writeAll(['"colorIndex":', colorIndex, ','], "");
@@ -290,11 +312,11 @@ class HighchartsHeatmapSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"cursor":', jsonEncode(cursor), ','], "");
     }
     if (custom != null) {
-      buffer.write("{");
+      buffer.write('"custom":{');
       for (var item in custom!.entries) {
         buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
-      buffer.write("}");
+      buffer.write("},");
     }
     if (dataLabels != null) {
       buffer.writeAll(['"dataLabels":', dataLabels?.toJSON(), ","], "");
@@ -329,7 +351,7 @@ class HighchartsHeatmapSeriesOptions extends HighchartsOptionsBase {
     if (keys != null) {
       buffer.write('"keys":[');
       for (var item in keys!) {
-        buffer.writeAll([item, ","], "");
+        buffer.writeAll([jsonEncode(item), ","], "");
       }
       buffer.write("],");
     }
@@ -348,7 +370,7 @@ class HighchartsHeatmapSeriesOptions extends HighchartsOptionsBase {
     if (mapData != null) {
       buffer.write('"mapData":[');
       for (var item in mapData!) {
-        buffer.writeAll([item, ","], "");
+        buffer.writeAll([jsonEncode(item), ","], "");
       }
       buffer.write("],");
     }
@@ -416,10 +438,10 @@ class HighchartsHeatmapSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"visible":', visible, ','], "");
     }
     if (xAxis != null) {
-      buffer.writeAll(['"xAxis":', jsonEncode(xAxis), ','], "");
+      buffer.writeAll(['"xAxis":', xAxis?.toJSON(), ","], "");
     }
     if (yAxis != null) {
-      buffer.writeAll(['"yAxis":', jsonEncode(yAxis), ','], "");
+      buffer.writeAll(['"yAxis":', yAxis?.toJSON(), ","], "");
     }
     if (zIndex != null) {
       buffer.writeAll(['"zIndex":', zIndex, ','], "");

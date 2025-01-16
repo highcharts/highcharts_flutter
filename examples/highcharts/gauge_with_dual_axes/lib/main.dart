@@ -65,7 +65,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   options: HighchartsGaugeSeriesOptions(),
                   name: "Speed",
                   data: [
-                    [80],
+                    [80.08],
                   ],
                 ),
               ],

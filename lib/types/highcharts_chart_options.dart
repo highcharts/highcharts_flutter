@@ -1,18 +1,34 @@
 /**
- * Highcharts Flutter Integration
+ * Highcharts Flutter
  * 
- * Copyright (c), Highsoft AS 2023-2024
+ * Copyright (c) 2023-2025, Highsoft AS
  * 
- * sales@highcharts.com
- * support@highcharts.com
+ * The software in the Highcharts Flutter repository is free and open source,
+ * but as Highcharts Flutter relies on Highcharts.js, it requires a valid
+ * Highcharts license for commercial use.
  * 
- * The use of this software requires a valid license.
+ * Permission is hereby granted, free of charge, to any person obtaining
+ * a copy of this software and associated documentation files (the
+ * "Software"), to deal in the Software without restriction, including
+ * without limitation the rights to use, copy, modify, merge, publish,
+ * distribute, sublicense, and/or sell copies of the Software, and to
+ * permit persons to whom the Software is furnished to do so, subject to
+ * the following conditions:
  * 
- * See https://highcharts.com/license
+ * The above copyright notice and this permission notice shall be
+ * included in all copies or substantial portions of the Software.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+ * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+ * CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+ * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+ * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-11-21
+ * Build stamp: 2025-01-16
  *
  */
 
@@ -27,11 +43,13 @@
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_chart_events_options.dart';
+import 'highcharts_union_type.dart';
 import 'highcharts_chart3doptions.dart';
 import 'highcharts_chart_panning_options.dart';
 import 'highcharts_chart_parallel_axes_options.dart';
 import 'highcharts_chart_reset_zoom_button_options.dart';
 import 'highcharts_chart_scrollable_plot_area_options.dart';
+import 'highcharts_union_type.dart';
 import 'highcharts_chart_zooming_options.dart';
 
 
@@ -43,11 +61,13 @@ import 'highcharts_chart_zooming_options.dart';
 
 
 export 'highcharts_chart_events_options.dart';
+export 'highcharts_union_type.dart';
 export 'highcharts_chart3doptions.dart';
 export 'highcharts_chart_panning_options.dart';
 export 'highcharts_chart_parallel_axes_options.dart';
 export 'highcharts_chart_reset_zoom_button_options.dart';
 export 'highcharts_chart_scrollable_plot_area_options.dart';
+export 'highcharts_union_type.dart';
 export 'highcharts_chart_zooming_options.dart';
 
 
@@ -76,7 +96,7 @@ class HighchartsChartOptions extends HighchartsOptionsBase {
   double? colorCount;
   bool? displayErrors;
   HighchartsChartEventsOptions? events;
-  String? height;
+  HighchartsUnionType? height;
   bool? ignoreHiddenSeries;
   bool? inverted;
   List<dynamic>? map;
@@ -115,7 +135,7 @@ class HighchartsChartOptions extends HighchartsOptionsBase {
   Map<String, String>? style;
   bool? styledMode;
   String? type;
-  String? width;
+  HighchartsUnionType? width;
   String? zoomKey;
   String? zoomType;
   HighchartsChartZoomingOptions? zooming;
@@ -225,7 +245,7 @@ class HighchartsChartOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"events":', events?.toJSON(), ","], "");
     }
     if (height != null) {
-      buffer.writeAll(['"height":', jsonEncode(height), ','], "");
+      buffer.writeAll(['"height":', height?.toJSON(), ","], "");
     }
     if (ignoreHiddenSeries != null) {
       buffer.writeAll(['"ignoreHiddenSeries":', ignoreHiddenSeries, ','], "");
@@ -236,7 +256,7 @@ class HighchartsChartOptions extends HighchartsOptionsBase {
     if (map != null) {
       buffer.write('"map":[');
       for (var item in map!) {
-        buffer.writeAll([item, ","], "");
+        buffer.writeAll([jsonEncode(item), ","], "");
       }
       buffer.write("],");
     }
@@ -296,11 +316,11 @@ class HighchartsChartOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"plotBorderWidth":', plotBorderWidth, ','], "");
     }
     if (plotShadow != null) {
-      buffer.write("{");
+      buffer.write('"plotShadow":{');
       for (var item in plotShadow!.entries) {
         buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
-      buffer.write("}");
+      buffer.write("},");
     }
     if (polar != null) {
       buffer.writeAll(['"polar":', polar, ','], "");
@@ -321,18 +341,18 @@ class HighchartsChartOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"scrollablePlotArea":', scrollablePlotArea?.toJSON(), ","], "");
     }
     if (selectionMarkerFill != null) {
-      buffer.write("{");
+      buffer.write('"selectionMarkerFill":{');
       for (var item in selectionMarkerFill!.entries) {
         buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
-      buffer.write("}");
+      buffer.write("},");
     }
     if (shadow != null) {
-      buffer.write("{");
+      buffer.write('"shadow":{');
       for (var item in shadow!.entries) {
         buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
-      buffer.write("}");
+      buffer.write("},");
     }
     if (showAxes != null) {
       buffer.writeAll(['"showAxes":', showAxes, ','], "");
@@ -357,11 +377,11 @@ class HighchartsChartOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"spacingTop":', spacingTop, ','], "");
     }
     if (style != null) {
-      buffer.write("{");
+      buffer.write('"style":{');
       for (var item in style!.entries) {
         buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
-      buffer.write("}");
+      buffer.write("},");
     }
     if (styledMode != null) {
       buffer.writeAll(['"styledMode":', styledMode, ','], "");
@@ -370,7 +390,7 @@ class HighchartsChartOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"type":', jsonEncode(type), ','], "");
     }
     if (width != null) {
-      buffer.writeAll(['"width":', jsonEncode(width), ','], "");
+      buffer.writeAll(['"width":', width?.toJSON(), ","], "");
     }
     if (zoomKey != null) {
       buffer.writeAll(['"zoomKey":', jsonEncode(zoomKey), ','], "");

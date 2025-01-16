@@ -54,11 +54,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 title: HighchartsTitleOptions(
                     text: "Production, consumption and trade surplus of electrical power",
-                    align: "left",
                 ),
                 subtitle: HighchartsSubtitleOptions(
                     text: "Source: <a href=\"https://www.ssb.no/energi-og-industri/energi/statistikk/elektrisitet/artikler/lavere-kraftproduksjon\" target=\"_blank\">SSB</a>",
-                    align: "left",
                 ),
                 xAxis: [
                   HighchartsXAxisOptions(

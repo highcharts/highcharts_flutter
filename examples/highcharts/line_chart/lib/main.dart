@@ -47,318 +47,124 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            HighchartsChart(
-              HighchartsOptions(
-                title: HighchartsTitleOptions(
-                    text: "U.S Solar Employment Growth",
-                    align: "left",
+            HighchartsChart(HighchartsOptions(
+              title: HighchartsTitleOptions(
+                text: "U.S Solar Employment Growth",
+                align: "left",
+              ),
+              subtitle: HighchartsSubtitleOptions(
+                text: "By Job Category. Source: <a href=\"https://irecusa.org/programs/solar-jobs-census/\" target=\"_blank\">IREC</a>.",
+              ),
+              yAxis: [
+                HighchartsYAxisOptions(
+                  title: HighchartsYAxisTitleOptions(
+                    text: "Number of Employees",
+                  )),
+              ],
+              xAxis: [
+                HighchartsXAxisOptions(
+                  accessibility: HighchartsXAxisAccessibilityOptions(
+                    rangeDescription: "Range: 2010 to 2022",
+                  )
                 ),
-                subtitle: HighchartsSubtitleOptions(
-                    text: "By Job Category. Source: <a href=\"https://irecusa.org/programs/solar-jobs-census/\" target=\"_blank\">IREC</a>.",
-                    align: "left",
+              ],
+              legend: HighchartsLegendOptions(
+                layout: 'horizontal',
+                align: 'center',
+                verticalAlign: 'bottom'
+              ),
+              series: [
+                HighchartsLineSeries(
+                  name: "Installation & Developers",
+                  data: [
+                    [2010, 43934],
+                    [2011, 48656],
+                    [2012, 65165],
+                    [2013, 81827],
+                    [2014, 112143],
+                    [2015, 142383],
+                    [2016, 171533],
+                    [2017, 165174],
+                    [2018, 155157],
+                    [2019, 161454],
+                    [2020, 154610],
+                    [2021, 168960],
+                    [2022, 171558]
+                  ]
                 ),
-                yAxis: [
-                  HighchartsYAxisOptions(
-                  ),
-                ],
-                xAxis: [
-                  HighchartsXAxisOptions(
-                  ),
-                ],
-                legend: HighchartsLegendOptions(
-                    layout: "vertical",
-                    align: "right",
-                    verticalAlign: "middle",
+                HighchartsLineSeries(
+                  name: "Manufacturing", 
+                  data: [
+                    [2010, 24916],
+                    [2011, 37941],
+                    [2012, 29742],
+                    [2013, 29851],
+                    [2014, 32490],
+                    [2015, 30282],
+                    [2016, 38121],
+                    [2017, 36885],
+                    [2018, 33726],
+                    [2019, 34243],
+                    [2020, 31050],
+                    [2021, 33099],
+                    [2022, 33473]
+                  ]
                 ),
-                plotOptions: HighchartsPlotOptions(
-                  series: HighchartsSeriesOptions(
-                    label: HighchartsSeriesLabelOptions(
-                        connectorAllowed: false,
-                    ),
-                      pointStart: 2010,
-                  ),
+                HighchartsLineSeries(
+                  name: "Sales & Distribution",
+                  data: [
+                    [2010, 11744],
+                    [2011, 30000],
+                    [2012, 16005],
+                    [2013, 19771],
+                    [2014, 20185],
+                    [2015, 24377],
+                    [2016, 32147],
+                    [2017, 30912],
+                    [2018, 29243],
+                    [2019, 29213],
+                    [2020, 25663],
+                    [2021, 28978],
+                    [2022, 30618]
+                  ]
                 ),
-                series: [
-                  HighchartsLineSeries(
-                    options: HighchartsLineSeriesOptions(),
-                      name: "Installation & Developers",
-                    data: [
-                      [43934],
-                      [48656],
-                      [65165],
-                      [81827],
-                      [112143],
-                      [142383],
-                      [171533],
-                      [165174],
-                      [155157],
-                      [161454],
-                      [154610],
-                    ],
-                  ),
-                  HighchartsLineSeries(
-                    options: HighchartsLineSeriesOptions(),
-                      name: "Manufacturing",
-                    data: [
-                      [24916],
-                      [37941],
-                      [29742],
-                      [29851],
-                      [32490],
-                      [30282],
-                      [38121],
-                      [36885],
-                      [33726],
-                      [34243],
-                      [31050],
-                    ],
-                  ),
-                  HighchartsLineSeries(
-                    options: HighchartsLineSeriesOptions(),
-                      name: "Sales & Distribution",
-                    data: [
-                      [11744],
-                      [30000],
-                      [16005],
-                      [19771],
-                      [20185],
-                      [24377],
-                      [32147],
-                      [30912],
-                      [29243],
-                      [29213],
-                      [25663],
-                    ],
-                  ),
-                  HighchartsLineSeries(
-                    options: HighchartsLineSeriesOptions(),
-                      name: "Operations & Maintenance",
-                    data: [
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                      11164,
-                    ],
-                    [
-                      11218,
-                    ],
-                    [
-                      10077,
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                      11164,
-                    ],
-                    [
-                      11218,
-                    ],
-                    [
-                      10077,
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                      11164,
-                    ],
-                    [
-                      11218,
-                    ],
-                    [
-                      10077,
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                      11164,
-                    ],
-                    [
-                      11218,
-                    ],
-                    [
-                      10077,
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                      11164,
-                    ],
-                    [
-                      11218,
-                    ],
-                    [
-                      10077,
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                      11164,
-                    ],
-                    [
-                      11218,
-                    ],
-                    [
-                      10077,
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                      11164,
-                    ],
-                    [
-                      11218,
-                    ],
-                    [
-                      10077,
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                    ],
-                    [
-                      11164,
-                    ],
-                    [
-                      11218,
-                    ],
-                    [
-                      10077,
-                    ],
-                      [11164],
-                      [11218],
-                      [10077],
-                    ],
-                  ),
-                  HighchartsLineSeries(
-                    options: HighchartsLineSeriesOptions(),
-                      name: "Other",
-                    data: [
-                      [21908],
-                      [5548],
-                      [8105],
-                      [11248],
-                      [8989],
-                      [11816],
-                      [18274],
-                      [17300],
-                      [13053],
-                      [11906],
-                      [10073],
-                    ],
-                  ),
-                ],
-              )
-            )
+                HighchartsLineSeries(
+                  name: "Operations & Maintenance",
+                  data: [
+                    [2010, null],
+                    [2011, null],
+                    [2012, null],
+                    [2013, null],
+                    [2014, null],
+                    [2015, null],
+                    [2016, null],
+                    [2017, null],
+                    [2018, 11164],
+                    [2019, 11218],
+                    [2020, 10077],
+                    [2021, 12530],
+                    [2022, 16585]
+                  ]
+              ),
+              HighchartsLineSeries(
+                name: "Other",
+                data: [
+                  [2010, 21908],
+                  [2011, 5548],
+                  [2012, 8105],
+                  [2013, 11248],
+                  [2014, 8989],
+                  [2015, 11816],
+                  [2016, 18274],
+                  [2017, 17300],
+                  [2018, 13053],
+                  [2019, 11906],
+                  [2020, 10073],
+                  [2021, 11471],
+                  [2022, 11648]
+                ]
+              ),
+            ]))
           ],
         ),
       ),

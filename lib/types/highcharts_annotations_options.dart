@@ -1,18 +1,34 @@
 /**
- * Highcharts Flutter Integration
+ * Highcharts Flutter
  * 
- * Copyright (c), Highsoft AS 2023-2024
+ * Copyright (c) 2023-2025, Highsoft AS
  * 
- * sales@highcharts.com
- * support@highcharts.com
+ * The software in the Highcharts Flutter repository is free and open source,
+ * but as Highcharts Flutter relies on Highcharts.js, it requires a valid
+ * Highcharts license for commercial use.
  * 
- * The use of this software requires a valid license.
+ * Permission is hereby granted, free of charge, to any person obtaining
+ * a copy of this software and associated documentation files (the
+ * "Software"), to deal in the Software without restriction, including
+ * without limitation the rights to use, copy, modify, merge, publish,
+ * distribute, sublicense, and/or sell copies of the Software, and to
+ * permit persons to whom the Software is furnished to do so, subject to
+ * the following conditions:
  * 
- * See https://highcharts.com/license
+ * The above copyright notice and this permission notice shall be
+ * included in all copies or substantial portions of the Software.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+ * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+ * CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+ * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+ * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-11-21
+ * Build stamp: 2025-01-16
  *
  */
 
@@ -33,6 +49,7 @@ import 'highcharts_annotations_elliott_wave_options.dart';
 import 'highcharts_annotations_events_options.dart';
 import 'highcharts_annotations_fibonacci_options.dart';
 import 'highcharts_annotations_fibonacci_time_zones_options.dart';
+import 'highcharts_union_type.dart';
 import 'highcharts_annotations_infinity_line_options.dart';
 import 'highcharts_annotations_label_options.dart';
 import 'highcharts_annotations_labels_options.dart';
@@ -59,6 +76,7 @@ export 'highcharts_annotations_elliott_wave_options.dart';
 export 'highcharts_annotations_events_options.dart';
 export 'highcharts_annotations_fibonacci_options.dart';
 export 'highcharts_annotations_fibonacci_time_zones_options.dart';
+export 'highcharts_union_type.dart';
 export 'highcharts_annotations_infinity_line_options.dart';
 export 'highcharts_annotations_label_options.dart';
 export 'highcharts_annotations_labels_options.dart';
@@ -94,7 +112,7 @@ class HighchartsAnnotationsOptions extends HighchartsOptionsBase {
   HighchartsAnnotationsEventsOptions? events;
   HighchartsAnnotationsFibonacciOptions? fibonacci;
   HighchartsAnnotationsFibonacciTimeZonesOptions? fibonacciTimeZones;
-  String? id;
+  HighchartsUnionType? id;
   HighchartsAnnotationsInfinityLineOptions? infinityLine;
   HighchartsAnnotationsLabelOptions? labelOptions;
   List<HighchartsAnnotationsLabelsOptions>? labels;
@@ -167,7 +185,7 @@ class HighchartsAnnotationsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"fibonacciTimeZones":', fibonacciTimeZones?.toJSON(), ","], "");
     }
     if (id != null) {
-      buffer.writeAll(['"id":', jsonEncode(id), ','], "");
+      buffer.writeAll(['"id":', id?.toJSON(), ","], "");
     }
     if (infinityLine != null) {
       buffer.writeAll(['"infinityLine":', infinityLine?.toJSON(), ","], "");

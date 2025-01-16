@@ -45,10 +45,31 @@ class _MyHomePageState extends State<MyHomePage> {
         series: [
           HighchartsLineSeries(
             name: 'My First Series',
-            data: [[0, 5], [1, 10]],
+            data: [[0, 5], [0.5, 55.5], [1, 10]],
             options: HighchartsLineSeriesOptions(
               color: '#C60'
             )
+          )
+        ],
+        annotations: [
+          HighchartsAnnotationsOptions(
+            draggable: '',
+            labelOptions: HighchartsAnnotationsLabelOptions(
+              align: 'left',
+              x: 16,
+              y: -24
+            ),
+            labels: [
+              HighchartsAnnotationsLabelsOptions(
+                point: {
+                  'xAxis': 0,
+                  'yAxis': 0,
+                  'x': 0.5,
+                  'y': 55.5
+                },
+                text: 'Hello!'
+              )
+            ]
           )
         ]
       )

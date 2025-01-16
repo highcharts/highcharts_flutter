@@ -1,18 +1,34 @@
 /**
- * Highcharts Flutter Integration
+ * Highcharts Flutter
  * 
- * Copyright (c), Highsoft AS 2023-2024
+ * Copyright (c) 2023-2025, Highsoft AS
  * 
- * sales@highcharts.com
- * support@highcharts.com
+ * The software in the Highcharts Flutter repository is free and open source,
+ * but as Highcharts Flutter relies on Highcharts.js, it requires a valid
+ * Highcharts license for commercial use.
  * 
- * The use of this software requires a valid license.
+ * Permission is hereby granted, free of charge, to any person obtaining
+ * a copy of this software and associated documentation files (the
+ * "Software"), to deal in the Software without restriction, including
+ * without limitation the rights to use, copy, modify, merge, publish,
+ * distribute, sublicense, and/or sell copies of the Software, and to
+ * permit persons to whom the Software is furnished to do so, subject to
+ * the following conditions:
  * 
- * See https://highcharts.com/license
+ * The above copyright notice and this permission notice shall be
+ * included in all copies or substantial portions of the Software.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+ * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+ * CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+ * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+ * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  * 
  *
  * Built for Highcharts v.xx.
- * Build stamp: 2024-11-21
+ * Build stamp: 2025-01-16
  *
  */
 
@@ -31,6 +47,7 @@ import 'highcharts_legend_bubble_legend_options.dart';
 import 'highcharts_legend_events_options.dart';
 import 'highcharts_legend_navigation_options.dart';
 import 'highcharts_legend_title_options.dart';
+import 'highcharts_union_type.dart';
 
 
 /* *
@@ -45,6 +62,7 @@ export 'highcharts_legend_bubble_legend_options.dart';
 export 'highcharts_legend_events_options.dart';
 export 'highcharts_legend_navigation_options.dart';
 export 'highcharts_legend_title_options.dart';
+export 'highcharts_union_type.dart';
 
 
 /* *
@@ -106,7 +124,7 @@ class HighchartsLegendOptions extends HighchartsOptionsBase {
   double? valueDecimals;
   String? valueSuffix;
   String? verticalAlign;
-  String? width;
+  HighchartsUnionType? width;
   double? x;
   double? y;
 
@@ -201,28 +219,28 @@ class HighchartsLegendOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"floating":', floating, ','], "");
     }
     if (itemCheckboxStyle != null) {
-      buffer.write("{");
+      buffer.write('"itemCheckboxStyle":{');
       for (var item in itemCheckboxStyle!.entries) {
         buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
-      buffer.write("}");
+      buffer.write("},");
     }
     if (itemDistance != null) {
       buffer.writeAll(['"itemDistance":', itemDistance, ','], "");
     }
     if (itemHiddenStyle != null) {
-      buffer.write("{");
+      buffer.write('"itemHiddenStyle":{');
       for (var item in itemHiddenStyle!.entries) {
         buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
-      buffer.write("}");
+      buffer.write("},");
     }
     if (itemHoverStyle != null) {
-      buffer.write("{");
+      buffer.write('"itemHoverStyle":{');
       for (var item in itemHoverStyle!.entries) {
         buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
-      buffer.write("}");
+      buffer.write("},");
     }
     if (itemMarginBottom != null) {
       buffer.writeAll(['"itemMarginBottom":', itemMarginBottom, ','], "");
@@ -231,11 +249,11 @@ class HighchartsLegendOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"itemMarginTop":', itemMarginTop, ','], "");
     }
     if (itemStyle != null) {
-      buffer.write("{");
+      buffer.write('"itemStyle":{');
       for (var item in itemStyle!.entries) {
         buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
-      buffer.write("}");
+      buffer.write("},");
     }
     if (itemWidth != null) {
       buffer.writeAll(['"itemWidth":', itemWidth, ','], "");
@@ -271,21 +289,21 @@ class HighchartsLegendOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"rtl":', rtl, ','], "");
     }
     if (shadow != null) {
-      buffer.write("{");
+      buffer.write('"shadow":{');
       for (var item in shadow!.entries) {
         buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
-      buffer.write("}");
+      buffer.write("},");
     }
     if (squareSymbol != null) {
       buffer.writeAll(['"squareSymbol":', squareSymbol, ','], "");
     }
     if (style != null) {
-      buffer.write("{");
+      buffer.write('"style":{');
       for (var item in style!.entries) {
         buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
       }
-      buffer.write("}");
+      buffer.write("},");
     }
     if (symbolHeight != null) {
       buffer.writeAll(['"symbolHeight":', symbolHeight, ','], "");
@@ -315,7 +333,7 @@ class HighchartsLegendOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"verticalAlign":', jsonEncode(verticalAlign), ','], "");
     }
     if (width != null) {
-      buffer.writeAll(['"width":', jsonEncode(width), ','], "");
+      buffer.writeAll(['"width":', width?.toJSON(), ","], "");
     }
     if (x != null) {
       buffer.writeAll(['"x":', x, ','], "");
