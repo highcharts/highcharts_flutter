@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Highcharts Documentation
+    url: https://highcharts.com/docs
+    about: Get started with Highcharts
+  - name: Highcharts API
+    url: https://api.highcharts.com/
+    about: Highcharts options in detail
