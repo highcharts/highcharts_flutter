@@ -55,7 +55,7 @@ body:
       render: shell
 
   - type: textarea
-    id: logs
+    id: code-snippet
     attributes:
       label: 'Relevant code snippet'
       description: 'Please copy and paste any relevant code snippet. This will be automatically formatted into code, so no need for backticks.'
