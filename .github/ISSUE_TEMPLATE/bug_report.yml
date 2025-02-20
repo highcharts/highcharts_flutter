@@ -45,7 +45,7 @@ body:
         - Web with Chrome
         - Web with Firefox
         - Web with Safari
-        - Web eith Edge
+        - Web with Edge
         - Other
 
   - type: textarea
