@@ -42,9 +42,10 @@ body:
       options:
         - Android
         - iOS
-        - Web w/Chrome
-        - Web w/Firefox
-        - Web w/Safari
+        - Web with Chrome
+        - Web with Firefox
+        - Web with Safari
+        - Web eith Edge
         - Other
 
   - type: textarea

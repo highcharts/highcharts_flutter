@@ -1,6 +1,7 @@
 name: 'Feature Request'
 description: 'Suggest a new feature or enhancement'
 labels: ['enhancement']
+projects: ['highcharts/36']
 body:
   - type: markdown
     attributes:
