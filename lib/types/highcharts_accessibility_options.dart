@@ -1,36 +1,12 @@
-/**
- * Highcharts Flutter
- * 
- * Copyright (c) 2023-2025, Highsoft AS
- * 
- * The software in the Highcharts Flutter repository is free and open source,
- * but as Highcharts Flutter relies on Highcharts.js, it requires a valid
- * Highcharts license for commercial use.
- * 
- * Permission is hereby granted, free of charge, to any person obtaining
- * a copy of this software and associated documentation files (the
- * "Software"), to deal in the Software without restriction, including
- * without limitation the rights to use, copy, modify, merge, publish,
- * distribute, sublicense, and/or sell copies of the Software, and to
- * permit persons to whom the Software is furnished to do so, subject to
- * the following conditions:
- * 
- * The above copyright notice and this permission notice shall be
- * included in all copies or substantial portions of the Software.
- * 
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
- * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
- * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
- * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
- * CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
- * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
- * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- * 
+/* *
  *
- * Built for Highcharts v.xx.
- * Build stamp: 2025-01-16
+ *  Highcharts Flutter
  *
- */
+ *  Copyright (c) 2023-2025, Highsoft AS
+ *
+ *  License: www.highcharts.com/license
+ *
+ * */
 
 
 /* *
@@ -116,43 +92,43 @@ class HighchartsAccessibilityOptions extends HighchartsOptionsBase {
 
 
     if (announceNewData != null) {
-      buffer.writeAll(['"announceNewData":', announceNewData?.toJSON(), ","], "");
+      buffer.writeAll(['"announceNewData":', announceNewData?.toJSON(), ','], '');
     }
     if (customComponents != null) {
-      buffer.writeAll(['"customComponents":', jsonEncode(customComponents), ','], "");
+      buffer.writeAll(['"customComponents":', jsonEncode(customComponents), ','], '');
     }
     if (description != null) {
-      buffer.writeAll(['"description":', jsonEncode(description), ','], "");
+      buffer.writeAll(['"description":', jsonEncode(description), ','], '');
     }
     if (enabled != null) {
-      buffer.writeAll(['"enabled":', enabled, ','], "");
+      buffer.writeAll(['"enabled":', enabled, ','], '');
     }
     if (highContrastMode != null) {
-      buffer.writeAll(['"highContrastMode":', jsonEncode(highContrastMode), ','], "");
+      buffer.writeAll(['"highContrastMode":', jsonEncode(highContrastMode), ','], '');
     }
     if (highContrastTheme != null) {
-      buffer.writeAll(['"highContrastTheme":', jsonEncode(highContrastTheme), ','], "");
+      buffer.writeAll(['"highContrastTheme":', jsonEncode(highContrastTheme), ','], '');
     }
     if (keyboardNavigation != null) {
-      buffer.writeAll(['"keyboardNavigation":', keyboardNavigation?.toJSON(), ","], "");
+      buffer.writeAll(['"keyboardNavigation":', keyboardNavigation?.toJSON(), ','], '');
     }
     if (landmarkVerbosity != null) {
-      buffer.writeAll(['"landmarkVerbosity":', jsonEncode(landmarkVerbosity), ','], "");
+      buffer.writeAll(['"landmarkVerbosity":', jsonEncode(landmarkVerbosity), ','], '');
     }
     if (linkedDescription != null) {
-      buffer.writeAll(['"linkedDescription":', jsonEncode(linkedDescription), ','], "");
+      buffer.writeAll(['"linkedDescription":', jsonEncode(linkedDescription), ','], '');
     }
     if (point != null) {
-      buffer.writeAll(['"point":', point?.toJSON(), ","], "");
+      buffer.writeAll(['"point":', point?.toJSON(), ','], '');
     }
     if (screenReaderSection != null) {
-      buffer.writeAll(['"screenReaderSection":', screenReaderSection?.toJSON(), ","], "");
+      buffer.writeAll(['"screenReaderSection":', screenReaderSection?.toJSON(), ','], '');
     }
     if (series != null) {
-      buffer.writeAll(['"series":', series?.toJSON(), ","], "");
+      buffer.writeAll(['"series":', series?.toJSON(), ','], '');
     }
     if (typeDescription != null) {
-      buffer.writeAll(['"typeDescription":', jsonEncode(typeDescription), ','], "");
+      buffer.writeAll(['"typeDescription":', jsonEncode(typeDescription), ','], '');
     }
   }
 

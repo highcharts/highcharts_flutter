@@ -1,36 +1,12 @@
-/**
- * Highcharts Flutter
- * 
- * Copyright (c) 2023-2025, Highsoft AS
- * 
- * The software in the Highcharts Flutter repository is free and open source,
- * but as Highcharts Flutter relies on Highcharts.js, it requires a valid
- * Highcharts license for commercial use.
- * 
- * Permission is hereby granted, free of charge, to any person obtaining
- * a copy of this software and associated documentation files (the
- * "Software"), to deal in the Software without restriction, including
- * without limitation the rights to use, copy, modify, merge, publish,
- * distribute, sublicense, and/or sell copies of the Software, and to
- * permit persons to whom the Software is furnished to do so, subject to
- * the following conditions:
- * 
- * The above copyright notice and this permission notice shall be
- * included in all copies or substantial portions of the Software.
- * 
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
- * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
- * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
- * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
- * CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
- * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
- * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- * 
+/* *
  *
- * Built for Highcharts v.xx.
- * Build stamp: 2025-01-16
+ *  Highcharts Flutter
  *
- */
+ *  Copyright (c) 2023-2025, Highsoft AS
+ *
+ *  License: www.highcharts.com/license
+ *
+ * */
 
 
 /* *
@@ -91,31 +67,31 @@ class HighchartsTreemapSeriesEventsOptions extends HighchartsOptionsBase {
 
 
     if (afterAnimate != null) {
-      buffer.writeAll(['"afterAnimate":', jsonEncode(afterAnimate), ','], "");
+      buffer.writeAll(['"afterAnimate":', jsonEncode(afterAnimate), ','], '');
     }
     if (checkboxClick != null) {
-      buffer.writeAll(['"checkboxClick":', jsonEncode(checkboxClick), ','], "");
+      buffer.writeAll(['"checkboxClick":', jsonEncode(checkboxClick), ','], '');
     }
     if (click != null) {
-      buffer.writeAll(['"click":', jsonEncode(click), ','], "");
+      buffer.writeAll(['"click":', jsonEncode(click), ','], '');
     }
     if (hide != null) {
-      buffer.writeAll(['"hide":', jsonEncode(hide), ','], "");
+      buffer.writeAll(['"hide":', jsonEncode(hide), ','], '');
     }
     if (legendItemClick != null) {
-      buffer.writeAll(['"legendItemClick":', jsonEncode(legendItemClick), ','], "");
+      buffer.writeAll(['"legendItemClick":', jsonEncode(legendItemClick), ','], '');
     }
     if (mouseOut != null) {
-      buffer.writeAll(['"mouseOut":', jsonEncode(mouseOut), ','], "");
+      buffer.writeAll(['"mouseOut":', jsonEncode(mouseOut), ','], '');
     }
     if (mouseOver != null) {
-      buffer.writeAll(['"mouseOver":', jsonEncode(mouseOver), ','], "");
+      buffer.writeAll(['"mouseOver":', jsonEncode(mouseOver), ','], '');
     }
     if (setRootNode != null) {
-      buffer.writeAll(['"setRootNode":', jsonEncode(setRootNode), ','], "");
+      buffer.writeAll(['"setRootNode":', jsonEncode(setRootNode), ','], '');
     }
     if (show != null) {
-      buffer.writeAll(['"show":', jsonEncode(show), ','], "");
+      buffer.writeAll(['"show":', jsonEncode(show), ','], '');
     }
   }
 

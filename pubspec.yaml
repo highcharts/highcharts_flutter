@@ -1,7 +1,14 @@
 name: highcharts_flutter
-description: "Highcharts Flutter integration"
-version: 0.0.5
-homepage:
+version: 0.1.0
+description: Official Flutter integration for Highcharts.
+homepage: https://www.highcharts.com/integrations/
+repository: https://github.com/highcharts/highcharts_flutter
+
+topics:
+ - charts
+ - diagrams
+ - graphs
+ - webview
 
 environment:
   sdk: ">=3.3.0"

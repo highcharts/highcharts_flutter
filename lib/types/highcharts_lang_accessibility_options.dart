@@ -1,36 +1,12 @@
-/**
- * Highcharts Flutter
- * 
- * Copyright (c) 2023-2025, Highsoft AS
- * 
- * The software in the Highcharts Flutter repository is free and open source,
- * but as Highcharts Flutter relies on Highcharts.js, it requires a valid
- * Highcharts license for commercial use.
- * 
- * Permission is hereby granted, free of charge, to any person obtaining
- * a copy of this software and associated documentation files (the
- * "Software"), to deal in the Software without restriction, including
- * without limitation the rights to use, copy, modify, merge, publish,
- * distribute, sublicense, and/or sell copies of the Software, and to
- * permit persons to whom the Software is furnished to do so, subject to
- * the following conditions:
- * 
- * The above copyright notice and this permission notice shall be
- * included in all copies or substantial portions of the Software.
- * 
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
- * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
- * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
- * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
- * CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
- * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
- * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- * 
+/* *
  *
- * Built for Highcharts v.xx.
- * Build stamp: 2025-01-16
+ *  Highcharts Flutter
  *
- */
+ *  Copyright (c) 2023-2025, Highsoft AS
+ *
+ *  License: www.highcharts.com/license
+ *
+ * */
 
 
 /* *
@@ -160,70 +136,70 @@ class HighchartsLangAccessibilityOptions extends HighchartsOptionsBase {
 
 
     if (announceNewData != null) {
-      buffer.writeAll(['"announceNewData":', announceNewData?.toJSON(), ","], "");
+      buffer.writeAll(['"announceNewData":', announceNewData?.toJSON(), ','], '');
     }
     if (axis != null) {
-      buffer.writeAll(['"axis":', axis?.toJSON(), ","], "");
+      buffer.writeAll(['"axis":', axis?.toJSON(), ','], '');
     }
     if (chartContainerLabel != null) {
-      buffer.writeAll(['"chartContainerLabel":', jsonEncode(chartContainerLabel), ','], "");
+      buffer.writeAll(['"chartContainerLabel":', jsonEncode(chartContainerLabel), ','], '');
     }
     if (chartTypes != null) {
-      buffer.writeAll(['"chartTypes":', chartTypes?.toJSON(), ","], "");
+      buffer.writeAll(['"chartTypes":', chartTypes?.toJSON(), ','], '');
     }
     if (credits != null) {
-      buffer.writeAll(['"credits":', jsonEncode(credits), ','], "");
+      buffer.writeAll(['"credits":', jsonEncode(credits), ','], '');
     }
     if (defaultChartTitle != null) {
-      buffer.writeAll(['"defaultChartTitle":', jsonEncode(defaultChartTitle), ','], "");
+      buffer.writeAll(['"defaultChartTitle":', jsonEncode(defaultChartTitle), ','], '');
     }
     if (drillUpButton != null) {
-      buffer.writeAll(['"drillUpButton":', jsonEncode(drillUpButton), ','], "");
+      buffer.writeAll(['"drillUpButton":', jsonEncode(drillUpButton), ','], '');
     }
     if (exporting != null) {
-      buffer.writeAll(['"exporting":', exporting?.toJSON(), ","], "");
+      buffer.writeAll(['"exporting":', exporting?.toJSON(), ','], '');
     }
     if (graphicContainerLabel != null) {
-      buffer.writeAll(['"graphicContainerLabel":', jsonEncode(graphicContainerLabel), ','], "");
+      buffer.writeAll(['"graphicContainerLabel":', jsonEncode(graphicContainerLabel), ','], '');
     }
     if (legend != null) {
-      buffer.writeAll(['"legend":', legend?.toJSON(), ","], "");
+      buffer.writeAll(['"legend":', legend?.toJSON(), ','], '');
     }
     if (navigator != null) {
-      buffer.writeAll(['"navigator":', navigator?.toJSON(), ","], "");
+      buffer.writeAll(['"navigator":', navigator?.toJSON(), ','], '');
     }
     if (rangeSelector != null) {
-      buffer.writeAll(['"rangeSelector":', rangeSelector?.toJSON(), ","], "");
+      buffer.writeAll(['"rangeSelector":', rangeSelector?.toJSON(), ','], '');
     }
     if (resetZoomButton != null) {
-      buffer.writeAll(['"resetZoomButton":', jsonEncode(resetZoomButton), ','], "");
+      buffer.writeAll(['"resetZoomButton":', jsonEncode(resetZoomButton), ','], '');
     }
     if (screenReaderSection != null) {
-      buffer.writeAll(['"screenReaderSection":', screenReaderSection?.toJSON(), ","], "");
+      buffer.writeAll(['"screenReaderSection":', screenReaderSection?.toJSON(), ','], '');
     }
     if (series != null) {
-      buffer.writeAll(['"series":', series?.toJSON(), ","], "");
+      buffer.writeAll(['"series":', series?.toJSON(), ','], '');
     }
     if (seriesTypeDescriptions != null) {
-      buffer.writeAll(['"seriesTypeDescriptions":', seriesTypeDescriptions?.toJSON(), ","], "");
+      buffer.writeAll(['"seriesTypeDescriptions":', seriesTypeDescriptions?.toJSON(), ','], '');
     }
     if (sonification != null) {
-      buffer.writeAll(['"sonification":', sonification?.toJSON(), ","], "");
+      buffer.writeAll(['"sonification":', sonification?.toJSON(), ','], '');
     }
     if (svgContainerLabel != null) {
-      buffer.writeAll(['"svgContainerLabel":', jsonEncode(svgContainerLabel), ','], "");
+      buffer.writeAll(['"svgContainerLabel":', jsonEncode(svgContainerLabel), ','], '');
     }
     if (svgContainerTitle != null) {
-      buffer.writeAll(['"svgContainerTitle":', jsonEncode(svgContainerTitle), ','], "");
+      buffer.writeAll(['"svgContainerTitle":', jsonEncode(svgContainerTitle), ','], '');
     }
     if (table != null) {
-      buffer.writeAll(['"table":', table?.toJSON(), ","], "");
+      buffer.writeAll(['"table":', table?.toJSON(), ','], '');
     }
     if (thousandsSep != null) {
-      buffer.writeAll(['"thousandsSep":', jsonEncode(thousandsSep), ','], "");
+      buffer.writeAll(['"thousandsSep":', jsonEncode(thousandsSep), ','], '');
     }
     if (zoom != null) {
-      buffer.writeAll(['"zoom":', zoom?.toJSON(), ","], "");
+      buffer.writeAll(['"zoom":', zoom?.toJSON(), ','], '');
     }
   }
 

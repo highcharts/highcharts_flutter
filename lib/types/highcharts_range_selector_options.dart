@@ -1,36 +1,12 @@
-/**
- * Highcharts Flutter
- * 
- * Copyright (c) 2023-2025, Highsoft AS
- * 
- * The software in the Highcharts Flutter repository is free and open source,
- * but as Highcharts Flutter relies on Highcharts.js, it requires a valid
- * Highcharts license for commercial use.
- * 
- * Permission is hereby granted, free of charge, to any person obtaining
- * a copy of this software and associated documentation files (the
- * "Software"), to deal in the Software without restriction, including
- * without limitation the rights to use, copy, modify, merge, publish,
- * distribute, sublicense, and/or sell copies of the Software, and to
- * permit persons to whom the Software is furnished to do so, subject to
- * the following conditions:
- * 
- * The above copyright notice and this permission notice shall be
- * included in all copies or substantial portions of the Software.
- * 
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
- * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
- * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
- * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
- * CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
- * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
- * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- * 
+/* *
  *
- * Built for Highcharts v.xx.
- * Build stamp: 2025-01-16
+ *  Highcharts Flutter
  *
- */
+ *  Copyright (c) 2023-2025, Highsoft AS
+ *
+ *  License: www.highcharts.com/license
+ *
+ * */
 
 
 /* *
@@ -133,88 +109,88 @@ class HighchartsRangeSelectorOptions extends HighchartsOptionsBase {
 
 
     if (allButtonsEnabled != null) {
-      buffer.writeAll(['"allButtonsEnabled":', allButtonsEnabled, ','], "");
+      buffer.writeAll(['"allButtonsEnabled":', allButtonsEnabled, ','], '');
     }
     if (buttonPosition != null) {
-      buffer.writeAll(['"buttonPosition":', buttonPosition?.toJSON(), ","], "");
+      buffer.writeAll(['"buttonPosition":', buttonPosition?.toJSON(), ','], '');
     }
     if (buttonSpacing != null) {
-      buffer.writeAll(['"buttonSpacing":', buttonSpacing, ','], "");
+      buffer.writeAll(['"buttonSpacing":', buttonSpacing, ','], '');
     }
     if (buttonTheme != null) {
-      buffer.writeAll(['"buttonTheme":', jsonEncode(buttonTheme), ','], "");
+      buffer.writeAll(['"buttonTheme":', jsonEncode(buttonTheme), ','], '');
     }
     if (buttons != null) {
       buffer.write('"buttons":[');
       for (var item in buttons!) {
-        buffer.writeAll([item.toJSON(), ","], "");
+        buffer.writeAll([item.toJSON(), ','], '');
       }
-      buffer.write("],");
+      buffer.write('],');
     }
     if (dropdown != null) {
-      buffer.writeAll(['"dropdown":', jsonEncode(dropdown), ','], "");
+      buffer.writeAll(['"dropdown":', jsonEncode(dropdown), ','], '');
     }
     if (enabled != null) {
-      buffer.writeAll(['"enabled":', enabled, ','], "");
+      buffer.writeAll(['"enabled":', enabled, ','], '');
     }
     if (floating != null) {
-      buffer.writeAll(['"floating":', floating, ','], "");
+      buffer.writeAll(['"floating":', floating, ','], '');
     }
     if (height != null) {
-      buffer.writeAll(['"height":', height, ','], "");
+      buffer.writeAll(['"height":', height, ','], '');
     }
     if (inputBoxBorderColor != null) {
-      buffer.writeAll(['"inputBoxBorderColor":', jsonEncode(inputBoxBorderColor), ','], "");
+      buffer.writeAll(['"inputBoxBorderColor":', jsonEncode(inputBoxBorderColor), ','], '');
     }
     if (inputBoxHeight != null) {
-      buffer.writeAll(['"inputBoxHeight":', inputBoxHeight, ','], "");
+      buffer.writeAll(['"inputBoxHeight":', inputBoxHeight, ','], '');
     }
     if (inputBoxWidth != null) {
-      buffer.writeAll(['"inputBoxWidth":', inputBoxWidth, ','], "");
+      buffer.writeAll(['"inputBoxWidth":', inputBoxWidth, ','], '');
     }
     if (inputDateFormat != null) {
-      buffer.writeAll(['"inputDateFormat":', jsonEncode(inputDateFormat), ','], "");
+      buffer.writeAll(['"inputDateFormat":', jsonEncode(inputDateFormat), ','], '');
     }
     if (inputDateParser != null) {
-      buffer.writeAll(['"inputDateParser":', jsonEncode(inputDateParser), ','], "");
+      buffer.writeAll(['"inputDateParser":', jsonEncode(inputDateParser), ','], '');
     }
     if (inputEditDateFormat != null) {
-      buffer.writeAll(['"inputEditDateFormat":', jsonEncode(inputEditDateFormat), ','], "");
+      buffer.writeAll(['"inputEditDateFormat":', jsonEncode(inputEditDateFormat), ','], '');
     }
     if (inputEnabled != null) {
-      buffer.writeAll(['"inputEnabled":', inputEnabled, ','], "");
+      buffer.writeAll(['"inputEnabled":', inputEnabled, ','], '');
     }
     if (inputPosition != null) {
-      buffer.writeAll(['"inputPosition":', inputPosition?.toJSON(), ","], "");
+      buffer.writeAll(['"inputPosition":', inputPosition?.toJSON(), ','], '');
     }
     if (inputSpacing != null) {
-      buffer.writeAll(['"inputSpacing":', inputSpacing, ','], "");
+      buffer.writeAll(['"inputSpacing":', inputSpacing, ','], '');
     }
     if (inputStyle != null) {
       buffer.write('"inputStyle":{');
       for (var item in inputStyle!.entries) {
-        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ','], '');
       }
-      buffer.write("},");
+      buffer.write('},');
     }
     if (labelStyle != null) {
       buffer.write('"labelStyle":{');
       for (var item in labelStyle!.entries) {
-        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ','], '');
       }
-      buffer.write("},");
+      buffer.write('},');
     }
     if (selected != null) {
-      buffer.writeAll(['"selected":', selected, ','], "");
+      buffer.writeAll(['"selected":', selected, ','], '');
     }
     if (verticalAlign != null) {
-      buffer.writeAll(['"verticalAlign":', jsonEncode(verticalAlign), ','], "");
+      buffer.writeAll(['"verticalAlign":', jsonEncode(verticalAlign), ','], '');
     }
     if (x != null) {
-      buffer.writeAll(['"x":', x, ','], "");
+      buffer.writeAll(['"x":', x, ','], '');
     }
     if (y != null) {
-      buffer.writeAll(['"y":', y, ','], "");
+      buffer.writeAll(['"y":', y, ','], '');
     }
   }
 

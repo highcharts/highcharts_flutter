@@ -1,36 +1,12 @@
-/**
- * Highcharts Flutter
- * 
- * Copyright (c) 2023-2025, Highsoft AS
- * 
- * The software in the Highcharts Flutter repository is free and open source,
- * but as Highcharts Flutter relies on Highcharts.js, it requires a valid
- * Highcharts license for commercial use.
- * 
- * Permission is hereby granted, free of charge, to any person obtaining
- * a copy of this software and associated documentation files (the
- * "Software"), to deal in the Software without restriction, including
- * without limitation the rights to use, copy, modify, merge, publish,
- * distribute, sublicense, and/or sell copies of the Software, and to
- * permit persons to whom the Software is furnished to do so, subject to
- * the following conditions:
- * 
- * The above copyright notice and this permission notice shall be
- * included in all copies or substantial portions of the Software.
- * 
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
- * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
- * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
- * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
- * CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
- * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
- * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- * 
+/* *
  *
- * Built for Highcharts v.xx.
- * Build stamp: 2025-01-16
+ *  Highcharts Flutter
  *
- */
+ *  Copyright (c) 2023-2025, Highsoft AS
+ *
+ *  License: www.highcharts.com/license
+ *
+ * */
 
 
 /* *
@@ -128,73 +104,73 @@ class HighchartsXAxisScrollbarOptions extends HighchartsOptionsBase {
 
 
     if (barBackgroundColor != null) {
-      buffer.writeAll(['"barBackgroundColor":', jsonEncode(barBackgroundColor), ','], "");
+      buffer.writeAll(['"barBackgroundColor":', jsonEncode(barBackgroundColor), ','], '');
     }
     if (barBorderColor != null) {
-      buffer.writeAll(['"barBorderColor":', jsonEncode(barBorderColor), ','], "");
+      buffer.writeAll(['"barBorderColor":', jsonEncode(barBorderColor), ','], '');
     }
     if (barBorderRadius != null) {
-      buffer.writeAll(['"barBorderRadius":', barBorderRadius, ','], "");
+      buffer.writeAll(['"barBorderRadius":', barBorderRadius, ','], '');
     }
     if (barBorderWidth != null) {
-      buffer.writeAll(['"barBorderWidth":', barBorderWidth, ','], "");
+      buffer.writeAll(['"barBorderWidth":', barBorderWidth, ','], '');
     }
     if (buttonArrowColor != null) {
-      buffer.writeAll(['"buttonArrowColor":', jsonEncode(buttonArrowColor), ','], "");
+      buffer.writeAll(['"buttonArrowColor":', jsonEncode(buttonArrowColor), ','], '');
     }
     if (buttonBackgroundColor != null) {
-      buffer.writeAll(['"buttonBackgroundColor":', jsonEncode(buttonBackgroundColor), ','], "");
+      buffer.writeAll(['"buttonBackgroundColor":', jsonEncode(buttonBackgroundColor), ','], '');
     }
     if (buttonBorderColor != null) {
-      buffer.writeAll(['"buttonBorderColor":', jsonEncode(buttonBorderColor), ','], "");
+      buffer.writeAll(['"buttonBorderColor":', jsonEncode(buttonBorderColor), ','], '');
     }
     if (buttonBorderRadius != null) {
-      buffer.writeAll(['"buttonBorderRadius":', buttonBorderRadius, ','], "");
+      buffer.writeAll(['"buttonBorderRadius":', buttonBorderRadius, ','], '');
     }
     if (buttonBorderWidth != null) {
-      buffer.writeAll(['"buttonBorderWidth":', buttonBorderWidth, ','], "");
+      buffer.writeAll(['"buttonBorderWidth":', buttonBorderWidth, ','], '');
     }
     if (buttonsEnabled != null) {
-      buffer.writeAll(['"buttonsEnabled":', buttonsEnabled, ','], "");
+      buffer.writeAll(['"buttonsEnabled":', buttonsEnabled, ','], '');
     }
     if (enabled != null) {
-      buffer.writeAll(['"enabled":', enabled, ','], "");
+      buffer.writeAll(['"enabled":', enabled, ','], '');
     }
     if (height != null) {
-      buffer.writeAll(['"height":', height, ','], "");
+      buffer.writeAll(['"height":', height, ','], '');
     }
     if (liveRedraw != null) {
-      buffer.writeAll(['"liveRedraw":', liveRedraw, ','], "");
+      buffer.writeAll(['"liveRedraw":', liveRedraw, ','], '');
     }
     if (margin != null) {
-      buffer.writeAll(['"margin":', margin, ','], "");
+      buffer.writeAll(['"margin":', margin, ','], '');
     }
     if (minWidth != null) {
-      buffer.writeAll(['"minWidth":', minWidth, ','], "");
+      buffer.writeAll(['"minWidth":', minWidth, ','], '');
     }
     if (opposite != null) {
-      buffer.writeAll(['"opposite":', opposite, ','], "");
+      buffer.writeAll(['"opposite":', opposite, ','], '');
     }
     if (rifleColor != null) {
-      buffer.writeAll(['"rifleColor":', jsonEncode(rifleColor), ','], "");
+      buffer.writeAll(['"rifleColor":', jsonEncode(rifleColor), ','], '');
     }
     if (showFull != null) {
-      buffer.writeAll(['"showFull":', showFull, ','], "");
+      buffer.writeAll(['"showFull":', showFull, ','], '');
     }
     if (trackBackgroundColor != null) {
-      buffer.writeAll(['"trackBackgroundColor":', jsonEncode(trackBackgroundColor), ','], "");
+      buffer.writeAll(['"trackBackgroundColor":', jsonEncode(trackBackgroundColor), ','], '');
     }
     if (trackBorderColor != null) {
-      buffer.writeAll(['"trackBorderColor":', jsonEncode(trackBorderColor), ','], "");
+      buffer.writeAll(['"trackBorderColor":', jsonEncode(trackBorderColor), ','], '');
     }
     if (trackBorderRadius != null) {
-      buffer.writeAll(['"trackBorderRadius":', trackBorderRadius, ','], "");
+      buffer.writeAll(['"trackBorderRadius":', trackBorderRadius, ','], '');
     }
     if (trackBorderWidth != null) {
-      buffer.writeAll(['"trackBorderWidth":', trackBorderWidth, ','], "");
+      buffer.writeAll(['"trackBorderWidth":', trackBorderWidth, ','], '');
     }
     if (zIndex != null) {
-      buffer.writeAll(['"zIndex":', zIndex, ','], "");
+      buffer.writeAll(['"zIndex":', zIndex, ','], '');
     }
   }
 

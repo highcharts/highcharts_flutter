@@ -1,36 +1,12 @@
-/**
- * Highcharts Flutter
- * 
- * Copyright (c) 2023-2025, Highsoft AS
- * 
- * The software in the Highcharts Flutter repository is free and open source,
- * but as Highcharts Flutter relies on Highcharts.js, it requires a valid
- * Highcharts license for commercial use.
- * 
- * Permission is hereby granted, free of charge, to any person obtaining
- * a copy of this software and associated documentation files (the
- * "Software"), to deal in the Software without restriction, including
- * without limitation the rights to use, copy, modify, merge, publish,
- * distribute, sublicense, and/or sell copies of the Software, and to
- * permit persons to whom the Software is furnished to do so, subject to
- * the following conditions:
- * 
- * The above copyright notice and this permission notice shall be
- * included in all copies or substantial portions of the Software.
- * 
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
- * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
- * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
- * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
- * CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
- * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
- * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- * 
+/* *
  *
- * Built for Highcharts v.xx.
- * Build stamp: 2025-01-16
+ *  Highcharts Flutter
  *
- */
+ *  Copyright (c) 2023-2025, Highsoft AS
+ *
+ *  License: www.highcharts.com/license
+ *
+ * */
 
 
 /* *
@@ -242,171 +218,171 @@ class HighchartsNetworkgraphSeriesOptions extends HighchartsOptionsBase {
 
 
     if (accessibility != null) {
-      buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ","], "");
+      buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ','], '');
     }
     if (allowPointSelect != null) {
-      buffer.writeAll(['"allowPointSelect":', allowPointSelect, ','], "");
+      buffer.writeAll(['"allowPointSelect":', allowPointSelect, ','], '');
     }
     if (className != null) {
-      buffer.writeAll(['"className":', jsonEncode(className), ','], "");
+      buffer.writeAll(['"className":', jsonEncode(className), ','], '');
     }
     if (clip != null) {
-      buffer.writeAll(['"clip":', clip, ','], "");
+      buffer.writeAll(['"clip":', clip, ','], '');
     }
     if (color != null) {
-      buffer.writeAll(['"color":', jsonEncode(color), ','], "");
+      buffer.writeAll(['"color":', jsonEncode(color), ','], '');
     }
     if (colorIndex != null) {
-      buffer.writeAll(['"colorIndex":', colorIndex, ','], "");
+      buffer.writeAll(['"colorIndex":', colorIndex, ','], '');
     }
     if (crisp != null) {
-      buffer.writeAll(['"crisp":', crisp, ','], "");
+      buffer.writeAll(['"crisp":', crisp, ','], '');
     }
     if (cursor != null) {
-      buffer.writeAll(['"cursor":', jsonEncode(cursor), ','], "");
+      buffer.writeAll(['"cursor":', jsonEncode(cursor), ','], '');
     }
     if (custom != null) {
       buffer.write('"custom":{');
       for (var item in custom!.entries) {
-        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ','], '');
       }
-      buffer.write("},");
+      buffer.write('},');
     }
     if (dashStyle != null) {
-      buffer.writeAll(['"dashStyle":', jsonEncode(dashStyle), ','], "");
+      buffer.writeAll(['"dashStyle":', jsonEncode(dashStyle), ','], '');
     }
     if (dataLabels != null) {
-      buffer.writeAll(['"dataLabels":', dataLabels?.toJSON(), ","], "");
+      buffer.writeAll(['"dataLabels":', dataLabels?.toJSON(), ','], '');
     }
     if (description != null) {
-      buffer.writeAll(['"description":', jsonEncode(description), ','], "");
+      buffer.writeAll(['"description":', jsonEncode(description), ','], '');
     }
     if (draggable != null) {
-      buffer.writeAll(['"draggable":', draggable, ','], "");
+      buffer.writeAll(['"draggable":', draggable, ','], '');
     }
     if (enableMouseTracking != null) {
-      buffer.writeAll(['"enableMouseTracking":', enableMouseTracking, ','], "");
+      buffer.writeAll(['"enableMouseTracking":', enableMouseTracking, ','], '');
     }
     if (events != null) {
-      buffer.writeAll(['"events":', events?.toJSON(), ","], "");
+      buffer.writeAll(['"events":', events?.toJSON(), ','], '');
     }
     if (findNearestPointBy != null) {
-      buffer.writeAll(['"findNearestPointBy":', jsonEncode(findNearestPointBy), ','], "");
+      buffer.writeAll(['"findNearestPointBy":', jsonEncode(findNearestPointBy), ','], '');
     }
     if (id != null) {
-      buffer.writeAll(['"id":', jsonEncode(id), ','], "");
+      buffer.writeAll(['"id":', jsonEncode(id), ','], '');
     }
     if (inactiveOtherPoints != null) {
-      buffer.writeAll(['"inactiveOtherPoints":', inactiveOtherPoints?.toJSON(), ","], "");
+      buffer.writeAll(['"inactiveOtherPoints":', inactiveOtherPoints?.toJSON(), ','], '');
     }
     if (includeInDataExport != null) {
-      buffer.writeAll(['"includeInDataExport":', includeInDataExport, ','], "");
+      buffer.writeAll(['"includeInDataExport":', includeInDataExport, ','], '');
     }
     if (index != null) {
-      buffer.writeAll(['"index":', index, ','], "");
+      buffer.writeAll(['"index":', index, ','], '');
     }
     if (keys != null) {
       buffer.write('"keys":[');
       for (var item in keys!) {
-        buffer.writeAll([jsonEncode(item), ","], "");
+        buffer.writeAll([jsonEncode(item), ','], '');
       }
-      buffer.write("],");
+      buffer.write('],');
     }
     if (layoutAlgorithm != null) {
-      buffer.writeAll(['"layoutAlgorithm":', layoutAlgorithm?.toJSON(), ","], "");
+      buffer.writeAll(['"layoutAlgorithm":', layoutAlgorithm?.toJSON(), ','], '');
     }
     if (legendIndex != null) {
-      buffer.writeAll(['"legendIndex":', legendIndex, ','], "");
+      buffer.writeAll(['"legendIndex":', legendIndex, ','], '');
     }
     if (legendSymbol != null) {
-      buffer.writeAll(['"legendSymbol":', jsonEncode(legendSymbol), ','], "");
+      buffer.writeAll(['"legendSymbol":', jsonEncode(legendSymbol), ','], '');
     }
     if (legendSymbolColor != null) {
-      buffer.writeAll(['"legendSymbolColor":', jsonEncode(legendSymbolColor), ','], "");
+      buffer.writeAll(['"legendSymbolColor":', jsonEncode(legendSymbolColor), ','], '');
     }
     if (lineWidth != null) {
-      buffer.writeAll(['"lineWidth":', lineWidth, ','], "");
+      buffer.writeAll(['"lineWidth":', lineWidth, ','], '');
     }
     if (link != null) {
-      buffer.writeAll(['"link":', link?.toJSON(), ","], "");
+      buffer.writeAll(['"link":', link?.toJSON(), ','], '');
     }
     if (linkedTo != null) {
-      buffer.writeAll(['"linkedTo":', jsonEncode(linkedTo), ','], "");
+      buffer.writeAll(['"linkedTo":', jsonEncode(linkedTo), ','], '');
     }
     if (marker != null) {
-      buffer.writeAll(['"marker":', marker?.toJSON(), ","], "");
+      buffer.writeAll(['"marker":', marker?.toJSON(), ','], '');
     }
     if (nodes != null) {
       buffer.write('"nodes":[');
       for (var item in nodes!) {
-        buffer.writeAll([item.toJSON(), ","], "");
+        buffer.writeAll([item.toJSON(), ','], '');
       }
-      buffer.write("],");
+      buffer.write('],');
     }
     if (onPoint != null) {
-      buffer.writeAll(['"onPoint":', onPoint?.toJSON(), ","], "");
+      buffer.writeAll(['"onPoint":', onPoint?.toJSON(), ','], '');
     }
     if (opacity != null) {
-      buffer.writeAll(['"opacity":', opacity, ','], "");
+      buffer.writeAll(['"opacity":', opacity, ','], '');
     }
     if (point != null) {
-      buffer.writeAll(['"point":', point?.toJSON(), ","], "");
+      buffer.writeAll(['"point":', point?.toJSON(), ','], '');
     }
     if (pointDescriptionFormat != null) {
-      buffer.writeAll(['"pointDescriptionFormat":', jsonEncode(pointDescriptionFormat), ','], "");
+      buffer.writeAll(['"pointDescriptionFormat":', jsonEncode(pointDescriptionFormat), ','], '');
     }
     if (pointDescriptionFormatter != null) {
-      buffer.writeAll(['"pointDescriptionFormatter":', jsonEncode(pointDescriptionFormatter), ','], "");
+      buffer.writeAll(['"pointDescriptionFormatter":', jsonEncode(pointDescriptionFormatter), ','], '');
     }
     if (relativeXValue != null) {
-      buffer.writeAll(['"relativeXValue":', relativeXValue, ','], "");
+      buffer.writeAll(['"relativeXValue":', relativeXValue, ','], '');
     }
     if (selected != null) {
-      buffer.writeAll(['"selected":', selected, ','], "");
+      buffer.writeAll(['"selected":', selected, ','], '');
     }
     if (shadow != null) {
       buffer.write('"shadow":{');
       for (var item in shadow!.entries) {
-        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ','], '');
       }
-      buffer.write("},");
+      buffer.write('},');
     }
     if (showCheckbox != null) {
-      buffer.writeAll(['"showCheckbox":', showCheckbox, ','], "");
+      buffer.writeAll(['"showCheckbox":', showCheckbox, ','], '');
     }
     if (showInLegend != null) {
-      buffer.writeAll(['"showInLegend":', showInLegend, ','], "");
+      buffer.writeAll(['"showInLegend":', showInLegend, ','], '');
     }
     if (skipKeyboardNavigation != null) {
-      buffer.writeAll(['"skipKeyboardNavigation":', skipKeyboardNavigation, ','], "");
+      buffer.writeAll(['"skipKeyboardNavigation":', skipKeyboardNavigation, ','], '');
     }
     if (sonification != null) {
-      buffer.writeAll(['"sonification":', sonification?.toJSON(), ","], "");
+      buffer.writeAll(['"sonification":', sonification?.toJSON(), ','], '');
     }
     if (states != null) {
-      buffer.writeAll(['"states":', states?.toJSON(), ","], "");
+      buffer.writeAll(['"states":', states?.toJSON(), ','], '');
     }
     if (stickyTracking != null) {
-      buffer.writeAll(['"stickyTracking":', stickyTracking, ','], "");
+      buffer.writeAll(['"stickyTracking":', stickyTracking, ','], '');
     }
     if (tooltip != null) {
-      buffer.writeAll(['"tooltip":', tooltip?.toJSON(), ","], "");
+      buffer.writeAll(['"tooltip":', tooltip?.toJSON(), ','], '');
     }
     if (turboThreshold != null) {
-      buffer.writeAll(['"turboThreshold":', turboThreshold, ','], "");
+      buffer.writeAll(['"turboThreshold":', turboThreshold, ','], '');
     }
     if (visible != null) {
-      buffer.writeAll(['"visible":', visible, ','], "");
+      buffer.writeAll(['"visible":', visible, ','], '');
     }
     if (zIndex != null) {
-      buffer.writeAll(['"zIndex":', zIndex, ','], "");
+      buffer.writeAll(['"zIndex":', zIndex, ','], '');
     }
     if (zones != null) {
       buffer.write('"zones":[');
       for (var item in zones!) {
-        buffer.writeAll([item.toJSON(), ","], "");
+        buffer.writeAll([item.toJSON(), ','], '');
       }
-      buffer.write("],");
+      buffer.write('],');
     }
   }
 

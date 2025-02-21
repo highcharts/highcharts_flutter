@@ -1,36 +1,12 @@
-/**
- * Highcharts Flutter
- * 
- * Copyright (c) 2023-2025, Highsoft AS
- * 
- * The software in the Highcharts Flutter repository is free and open source,
- * but as Highcharts Flutter relies on Highcharts.js, it requires a valid
- * Highcharts license for commercial use.
- * 
- * Permission is hereby granted, free of charge, to any person obtaining
- * a copy of this software and associated documentation files (the
- * "Software"), to deal in the Software without restriction, including
- * without limitation the rights to use, copy, modify, merge, publish,
- * distribute, sublicense, and/or sell copies of the Software, and to
- * permit persons to whom the Software is furnished to do so, subject to
- * the following conditions:
- * 
- * The above copyright notice and this permission notice shall be
- * included in all copies or substantial portions of the Software.
- * 
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
- * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
- * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
- * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
- * CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
- * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
- * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- * 
+/* *
  *
- * Built for Highcharts v.xx.
- * Build stamp: 2025-01-16
+ *  Highcharts Flutter
  *
- */
+ *  Copyright (c) 2023-2025, Highsoft AS
+ *
+ *  License: www.highcharts.com/license
+ *
+ * */
 
 
 /* *
@@ -121,81 +97,81 @@ class HighchartsAnnotationsCrookedLineLabelOptions extends HighchartsOptionsBase
 
 
     if (accessibility != null) {
-      buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ","], "");
+      buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ','], '');
     }
     if (align != null) {
-      buffer.writeAll(['"align":', jsonEncode(align), ','], "");
+      buffer.writeAll(['"align":', jsonEncode(align), ','], '');
     }
     if (allowOverlap != null) {
-      buffer.writeAll(['"allowOverlap":', allowOverlap, ','], "");
+      buffer.writeAll(['"allowOverlap":', allowOverlap, ','], '');
     }
     if (backgroundColor != null) {
-      buffer.writeAll(['"backgroundColor":', jsonEncode(backgroundColor), ','], "");
+      buffer.writeAll(['"backgroundColor":', jsonEncode(backgroundColor), ','], '');
     }
     if (borderColor != null) {
-      buffer.writeAll(['"borderColor":', jsonEncode(borderColor), ','], "");
+      buffer.writeAll(['"borderColor":', jsonEncode(borderColor), ','], '');
     }
     if (borderRadius != null) {
-      buffer.writeAll(['"borderRadius":', borderRadius, ','], "");
+      buffer.writeAll(['"borderRadius":', borderRadius, ','], '');
     }
     if (borderWidth != null) {
-      buffer.writeAll(['"borderWidth":', borderWidth, ','], "");
+      buffer.writeAll(['"borderWidth":', borderWidth, ','], '');
     }
     if (className != null) {
-      buffer.writeAll(['"className":', jsonEncode(className), ','], "");
+      buffer.writeAll(['"className":', jsonEncode(className), ','], '');
     }
     if (crop != null) {
-      buffer.writeAll(['"crop":', crop, ','], "");
+      buffer.writeAll(['"crop":', crop, ','], '');
     }
     if (distance != null) {
-      buffer.writeAll(['"distance":', distance, ','], "");
+      buffer.writeAll(['"distance":', distance, ','], '');
     }
     if (format != null) {
-      buffer.writeAll(['"format":', jsonEncode(format), ','], "");
+      buffer.writeAll(['"format":', jsonEncode(format), ','], '');
     }
     if (formatter != null) {
-      buffer.writeAll(['"formatter":', jsonEncode(formatter), ','], "");
+      buffer.writeAll(['"formatter":', jsonEncode(formatter), ','], '');
     }
     if (includeInDataExport != null) {
-      buffer.writeAll(['"includeInDataExport":', includeInDataExport, ','], "");
+      buffer.writeAll(['"includeInDataExport":', includeInDataExport, ','], '');
     }
     if (overflow != null) {
-      buffer.writeAll(['"overflow":', jsonEncode(overflow), ','], "");
+      buffer.writeAll(['"overflow":', jsonEncode(overflow), ','], '');
     }
     if (padding != null) {
-      buffer.writeAll(['"padding":', padding, ','], "");
+      buffer.writeAll(['"padding":', padding, ','], '');
     }
     if (shadow != null) {
       buffer.write('"shadow":{');
       for (var item in shadow!.entries) {
-        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ','], '');
       }
-      buffer.write("},");
+      buffer.write('},');
     }
     if (shape != null) {
-      buffer.writeAll(['"shape":', jsonEncode(shape), ','], "");
+      buffer.writeAll(['"shape":', jsonEncode(shape), ','], '');
     }
     if (style != null) {
       buffer.write('"style":{');
       for (var item in style!.entries) {
-        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ','], '');
       }
-      buffer.write("},");
+      buffer.write('},');
     }
     if (text != null) {
-      buffer.writeAll(['"text":', jsonEncode(text), ','], "");
+      buffer.writeAll(['"text":', jsonEncode(text), ','], '');
     }
     if (useHTML != null) {
-      buffer.writeAll(['"useHTML":', useHTML, ','], "");
+      buffer.writeAll(['"useHTML":', useHTML, ','], '');
     }
     if (verticalAlign != null) {
-      buffer.writeAll(['"verticalAlign":', jsonEncode(verticalAlign), ','], "");
+      buffer.writeAll(['"verticalAlign":', jsonEncode(verticalAlign), ','], '');
     }
     if (x != null) {
-      buffer.writeAll(['"x":', x, ','], "");
+      buffer.writeAll(['"x":', x, ','], '');
     }
     if (y != null) {
-      buffer.writeAll(['"y":', y, ','], "");
+      buffer.writeAll(['"y":', y, ','], '');
     }
   }
 

@@ -1,36 +1,12 @@
-/**
- * Highcharts Flutter
- * 
- * Copyright (c) 2023-2025, Highsoft AS
- * 
- * The software in the Highcharts Flutter repository is free and open source,
- * but as Highcharts Flutter relies on Highcharts.js, it requires a valid
- * Highcharts license for commercial use.
- * 
- * Permission is hereby granted, free of charge, to any person obtaining
- * a copy of this software and associated documentation files (the
- * "Software"), to deal in the Software without restriction, including
- * without limitation the rights to use, copy, modify, merge, publish,
- * distribute, sublicense, and/or sell copies of the Software, and to
- * permit persons to whom the Software is furnished to do so, subject to
- * the following conditions:
- * 
- * The above copyright notice and this permission notice shall be
- * included in all copies or substantial portions of the Software.
- * 
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
- * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
- * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
- * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
- * CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
- * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
- * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- * 
+/* *
  *
- * Built for Highcharts v.xx.
- * Build stamp: 2025-01-16
+ *  Highcharts Flutter
  *
- */
+ *  Copyright (c) 2023-2025, Highsoft AS
+ *
+ *  License: www.highcharts.com/license
+ *
+ * */
 
 
 /* *
@@ -158,72 +134,72 @@ class HighchartsMapBubbleSeriesOptions extends HighchartsOptionsBase {
 
 
     if (animationLimit != null) {
-      buffer.writeAll(['"animationLimit":', animationLimit, ','], "");
+      buffer.writeAll(['"animationLimit":', animationLimit, ','], '');
     }
     if (color != null) {
-      buffer.writeAll(['"color":', jsonEncode(color), ','], "");
+      buffer.writeAll(['"color":', jsonEncode(color), ','], '');
     }
     if (displayNegative != null) {
-      buffer.writeAll(['"displayNegative":', displayNegative, ','], "");
+      buffer.writeAll(['"displayNegative":', displayNegative, ','], '');
     }
     if (id != null) {
-      buffer.writeAll(['"id":', jsonEncode(id), ','], "");
+      buffer.writeAll(['"id":', jsonEncode(id), ','], '');
     }
     if (index != null) {
-      buffer.writeAll(['"index":', index, ','], "");
+      buffer.writeAll(['"index":', index, ','], '');
     }
     if (joinBy != null) {
       buffer.write('"joinBy":[');
       for (var item in joinBy!) {
-        buffer.writeAll([jsonEncode(item), ","], "");
+        buffer.writeAll([jsonEncode(item), ','], '');
       }
-      buffer.write("],");
+      buffer.write('],');
     }
     if (legendIndex != null) {
-      buffer.writeAll(['"legendIndex":', legendIndex, ','], "");
+      buffer.writeAll(['"legendIndex":', legendIndex, ','], '');
     }
     if (lineColor != null) {
-      buffer.writeAll(['"lineColor":', jsonEncode(lineColor), ','], "");
+      buffer.writeAll(['"lineColor":', jsonEncode(lineColor), ','], '');
     }
     if (lineWidth != null) {
-      buffer.writeAll(['"lineWidth":', lineWidth, ','], "");
+      buffer.writeAll(['"lineWidth":', lineWidth, ','], '');
     }
     if (mapData != null) {
       buffer.write('"mapData":[');
       for (var item in mapData!) {
-        buffer.writeAll([jsonEncode(item), ","], "");
+        buffer.writeAll([jsonEncode(item), ','], '');
       }
-      buffer.write("],");
+      buffer.write('],');
     }
     if (marker != null) {
-      buffer.writeAll(['"marker":', jsonEncode(marker), ','], "");
+      buffer.writeAll(['"marker":', jsonEncode(marker), ','], '');
     }
     if (maxSize != null) {
-      buffer.writeAll(['"maxSize":', jsonEncode(maxSize), ','], "");
+      buffer.writeAll(['"maxSize":', jsonEncode(maxSize), ','], '');
     }
     if (minSize != null) {
-      buffer.writeAll(['"minSize":', jsonEncode(minSize), ','], "");
+      buffer.writeAll(['"minSize":', jsonEncode(minSize), ','], '');
     }
     if (negativeColor != null) {
-      buffer.writeAll(['"negativeColor":', jsonEncode(negativeColor), ','], "");
+      buffer.writeAll(['"negativeColor":', jsonEncode(negativeColor), ','], '');
     }
     if (sizeBy != null) {
-      buffer.writeAll(['"sizeBy":', jsonEncode(sizeBy), ','], "");
+      buffer.writeAll(['"sizeBy":', jsonEncode(sizeBy), ','], '');
     }
     if (sizeByAbsoluteValue != null) {
-      buffer.writeAll(['"sizeByAbsoluteValue":', sizeByAbsoluteValue, ','], "");
+      buffer.writeAll(['"sizeByAbsoluteValue":', sizeByAbsoluteValue, ','], '');
     }
     if (tooltip != null) {
-      buffer.writeAll(['"tooltip":', tooltip?.toJSON(), ","], "");
+      buffer.writeAll(['"tooltip":', tooltip?.toJSON(), ','], '');
     }
     if (zMax != null) {
-      buffer.writeAll(['"zMax":', zMax, ','], "");
+      buffer.writeAll(['"zMax":', zMax, ','], '');
     }
     if (zMin != null) {
-      buffer.writeAll(['"zMin":', zMin, ','], "");
+      buffer.writeAll(['"zMin":', zMin, ','], '');
     }
     if (zThreshold != null) {
-      buffer.writeAll(['"zThreshold":', zThreshold, ','], "");
+      buffer.writeAll(['"zThreshold":', zThreshold, ','], '');
     }
   }
 

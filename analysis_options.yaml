@@ -9,3 +9,6 @@ linter:
     no_logic_in_create_state: false
     prefer_const_constructors_in_immutables: false
     slash_for_doc_comments: false
+    prefer_single_quotes: true
+    # require_trailing_commas: true
+

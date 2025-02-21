@@ -1,3 +1,19 @@
+## 0.1.0
+
+* Added support for custom JavaScript injection
+* Added new examples and improved existing examples
+* Fixed expanding and sizing of Highcharts widget (#36)
+* Fixed JSON of categories data in series (#34)
+
+## 0.0.5
+
+* Added basic refresh support for web target (#24)
+* Added experimental union types (#20)
+* Improved annotations (#9)
+* Improved examples (#19, #20)
+* Fixed Highcharts Stock constructor (#27)
+* Fixed options JSON (#26) 
+
 ## 0.0.4
 
 * Added web integration (refresh not supported)

@@ -1,36 +1,12 @@
-/**
- * Highcharts Flutter
- * 
- * Copyright (c) 2023-2025, Highsoft AS
- * 
- * The software in the Highcharts Flutter repository is free and open source,
- * but as Highcharts Flutter relies on Highcharts.js, it requires a valid
- * Highcharts license for commercial use.
- * 
- * Permission is hereby granted, free of charge, to any person obtaining
- * a copy of this software and associated documentation files (the
- * "Software"), to deal in the Software without restriction, including
- * without limitation the rights to use, copy, modify, merge, publish,
- * distribute, sublicense, and/or sell copies of the Software, and to
- * permit persons to whom the Software is furnished to do so, subject to
- * the following conditions:
- * 
- * The above copyright notice and this permission notice shall be
- * included in all copies or substantial portions of the Software.
- * 
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
- * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
- * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
- * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
- * CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
- * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
- * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- * 
+/* *
  *
- * Built for Highcharts v.xx.
- * Build stamp: 2025-01-16
+ *  Highcharts Flutter
  *
- */
+ *  Copyright (c) 2023-2025, Highsoft AS
+ *
+ *  License: www.highcharts.com/license
+ *
+ * */
 
 
 /* *
@@ -97,31 +73,31 @@ class HighchartsGaugeSeriesDialOptions extends HighchartsOptionsBase {
 
 
     if (backgroundColor != null) {
-      buffer.writeAll(['"backgroundColor":', jsonEncode(backgroundColor), ','], "");
+      buffer.writeAll(['"backgroundColor":', jsonEncode(backgroundColor), ','], '');
     }
     if (baseLength != null) {
-      buffer.writeAll(['"baseLength":', jsonEncode(baseLength), ','], "");
+      buffer.writeAll(['"baseLength":', jsonEncode(baseLength), ','], '');
     }
     if (baseWidth != null) {
-      buffer.writeAll(['"baseWidth":', baseWidth, ','], "");
+      buffer.writeAll(['"baseWidth":', baseWidth, ','], '');
     }
     if (borderColor != null) {
-      buffer.writeAll(['"borderColor":', jsonEncode(borderColor), ','], "");
+      buffer.writeAll(['"borderColor":', jsonEncode(borderColor), ','], '');
     }
     if (borderWidth != null) {
-      buffer.writeAll(['"borderWidth":', borderWidth, ','], "");
+      buffer.writeAll(['"borderWidth":', borderWidth, ','], '');
     }
     if (path != null) {
-      buffer.writeAll(['"path":', jsonEncode(path), ','], "");
+      buffer.writeAll(['"path":', jsonEncode(path), ','], '');
     }
     if (radius != null) {
-      buffer.writeAll(['"radius":', jsonEncode(radius), ','], "");
+      buffer.writeAll(['"radius":', jsonEncode(radius), ','], '');
     }
     if (rearLength != null) {
-      buffer.writeAll(['"rearLength":', jsonEncode(rearLength), ','], "");
+      buffer.writeAll(['"rearLength":', jsonEncode(rearLength), ','], '');
     }
     if (topWidth != null) {
-      buffer.writeAll(['"topWidth":', topWidth, ','], "");
+      buffer.writeAll(['"topWidth":', topWidth, ','], '');
     }
   }
 

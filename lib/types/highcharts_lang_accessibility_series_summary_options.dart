@@ -1,36 +1,12 @@
-/**
- * Highcharts Flutter
- * 
- * Copyright (c) 2023-2025, Highsoft AS
- * 
- * The software in the Highcharts Flutter repository is free and open source,
- * but as Highcharts Flutter relies on Highcharts.js, it requires a valid
- * Highcharts license for commercial use.
- * 
- * Permission is hereby granted, free of charge, to any person obtaining
- * a copy of this software and associated documentation files (the
- * "Software"), to deal in the Software without restriction, including
- * without limitation the rights to use, copy, modify, merge, publish,
- * distribute, sublicense, and/or sell copies of the Software, and to
- * permit persons to whom the Software is furnished to do so, subject to
- * the following conditions:
- * 
- * The above copyright notice and this permission notice shall be
- * included in all copies or substantial portions of the Software.
- * 
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
- * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
- * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
- * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
- * CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
- * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
- * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- * 
+/* *
  *
- * Built for Highcharts v.xx.
- * Build stamp: 2025-01-16
+ *  Highcharts Flutter
  *
- */
+ *  Copyright (c) 2023-2025, Highsoft AS
+ *
+ *  License: www.highcharts.com/license
+ *
+ * */
 
 
 /* *
@@ -138,76 +114,76 @@ class HighchartsLangAccessibilitySeriesSummaryOptions extends HighchartsOptionsB
 
 
     if (bar != null) {
-      buffer.writeAll(['"bar":', jsonEncode(bar), ','], "");
+      buffer.writeAll(['"bar":', jsonEncode(bar), ','], '');
     }
     if (barCombination != null) {
-      buffer.writeAll(['"barCombination":', jsonEncode(barCombination), ','], "");
+      buffer.writeAll(['"barCombination":', jsonEncode(barCombination), ','], '');
     }
     if (boxplot != null) {
-      buffer.writeAll(['"boxplot":', jsonEncode(boxplot), ','], "");
+      buffer.writeAll(['"boxplot":', jsonEncode(boxplot), ','], '');
     }
     if (boxplotCombination != null) {
-      buffer.writeAll(['"boxplotCombination":', jsonEncode(boxplotCombination), ','], "");
+      buffer.writeAll(['"boxplotCombination":', jsonEncode(boxplotCombination), ','], '');
     }
     if (bubble != null) {
-      buffer.writeAll(['"bubble":', jsonEncode(bubble), ','], "");
+      buffer.writeAll(['"bubble":', jsonEncode(bubble), ','], '');
     }
     if (bubbleCombination != null) {
-      buffer.writeAll(['"bubbleCombination":', jsonEncode(bubbleCombination), ','], "");
+      buffer.writeAll(['"bubbleCombination":', jsonEncode(bubbleCombination), ','], '');
     }
     if (column != null) {
-      buffer.writeAll(['"column":', jsonEncode(column), ','], "");
+      buffer.writeAll(['"column":', jsonEncode(column), ','], '');
     }
     if (columnCombination != null) {
-      buffer.writeAll(['"columnCombination":', jsonEncode(columnCombination), ','], "");
+      buffer.writeAll(['"columnCombination":', jsonEncode(columnCombination), ','], '');
     }
     if (defaultTo != null) {
-      buffer.writeAll(['"default":', jsonEncode(defaultTo), ','], "");
+      buffer.writeAll(['"default":', jsonEncode(defaultTo), ','], '');
     }
     if (defaultCombination != null) {
-      buffer.writeAll(['"defaultCombination":', jsonEncode(defaultCombination), ','], "");
+      buffer.writeAll(['"defaultCombination":', jsonEncode(defaultCombination), ','], '');
     }
     if (line != null) {
-      buffer.writeAll(['"line":', jsonEncode(line), ','], "");
+      buffer.writeAll(['"line":', jsonEncode(line), ','], '');
     }
     if (lineCombination != null) {
-      buffer.writeAll(['"lineCombination":', jsonEncode(lineCombination), ','], "");
+      buffer.writeAll(['"lineCombination":', jsonEncode(lineCombination), ','], '');
     }
     if (map != null) {
-      buffer.writeAll(['"map":', jsonEncode(map), ','], "");
+      buffer.writeAll(['"map":', jsonEncode(map), ','], '');
     }
     if (mapCombination != null) {
-      buffer.writeAll(['"mapCombination":', jsonEncode(mapCombination), ','], "");
+      buffer.writeAll(['"mapCombination":', jsonEncode(mapCombination), ','], '');
     }
     if (mapbubble != null) {
-      buffer.writeAll(['"mapbubble":', jsonEncode(mapbubble), ','], "");
+      buffer.writeAll(['"mapbubble":', jsonEncode(mapbubble), ','], '');
     }
     if (mapbubbleCombination != null) {
-      buffer.writeAll(['"mapbubbleCombination":', jsonEncode(mapbubbleCombination), ','], "");
+      buffer.writeAll(['"mapbubbleCombination":', jsonEncode(mapbubbleCombination), ','], '');
     }
     if (mapline != null) {
-      buffer.writeAll(['"mapline":', jsonEncode(mapline), ','], "");
+      buffer.writeAll(['"mapline":', jsonEncode(mapline), ','], '');
     }
     if (maplineCombination != null) {
-      buffer.writeAll(['"maplineCombination":', jsonEncode(maplineCombination), ','], "");
+      buffer.writeAll(['"maplineCombination":', jsonEncode(maplineCombination), ','], '');
     }
     if (pie != null) {
-      buffer.writeAll(['"pie":', jsonEncode(pie), ','], "");
+      buffer.writeAll(['"pie":', jsonEncode(pie), ','], '');
     }
     if (pieCombination != null) {
-      buffer.writeAll(['"pieCombination":', jsonEncode(pieCombination), ','], "");
+      buffer.writeAll(['"pieCombination":', jsonEncode(pieCombination), ','], '');
     }
     if (scatter != null) {
-      buffer.writeAll(['"scatter":', jsonEncode(scatter), ','], "");
+      buffer.writeAll(['"scatter":', jsonEncode(scatter), ','], '');
     }
     if (scatterCombination != null) {
-      buffer.writeAll(['"scatterCombination":', jsonEncode(scatterCombination), ','], "");
+      buffer.writeAll(['"scatterCombination":', jsonEncode(scatterCombination), ','], '');
     }
     if (spline != null) {
-      buffer.writeAll(['"spline":', jsonEncode(spline), ','], "");
+      buffer.writeAll(['"spline":', jsonEncode(spline), ','], '');
     }
     if (splineCombination != null) {
-      buffer.writeAll(['"splineCombination":', jsonEncode(splineCombination), ','], "");
+      buffer.writeAll(['"splineCombination":', jsonEncode(splineCombination), ','], '');
     }
   }
 

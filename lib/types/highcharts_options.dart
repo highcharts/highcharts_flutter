@@ -1,36 +1,12 @@
-/**
- * Highcharts Flutter
- * 
- * Copyright (c) 2023-2025, Highsoft AS
- * 
- * The software in the Highcharts Flutter repository is free and open source,
- * but as Highcharts Flutter relies on Highcharts.js, it requires a valid
- * Highcharts license for commercial use.
- * 
- * Permission is hereby granted, free of charge, to any person obtaining
- * a copy of this software and associated documentation files (the
- * "Software"), to deal in the Software without restriction, including
- * without limitation the rights to use, copy, modify, merge, publish,
- * distribute, sublicense, and/or sell copies of the Software, and to
- * permit persons to whom the Software is furnished to do so, subject to
- * the following conditions:
- * 
- * The above copyright notice and this permission notice shall be
- * included in all copies or substantial portions of the Software.
- * 
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
- * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
- * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
- * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
- * CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
- * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
- * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- * 
+/* *
  *
- * Built for Highcharts v.xx.
- * Build stamp: 2025-01-16
+ *  Highcharts Flutter
  *
- */
+ *  Copyright (c) 2023-2025, Highsoft AS
+ *
+ *  License: www.highcharts.com/license
+ *
+ * */
 
 
 /* *
@@ -219,147 +195,147 @@ class HighchartsOptions extends HighchartsOptionsBase {
 
 
     if (accessibility != null) {
-      buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ","], "");
+      buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ','], '');
     }
     if (annotations != null) {
       buffer.write('"annotations":[');
       for (var item in annotations!) {
-        buffer.writeAll([item.toJSON(), ","], "");
+        buffer.writeAll([item.toJSON(), ','], '');
       }
-      buffer.write("],");
+      buffer.write('],');
     }
     if (boost != null) {
-      buffer.writeAll(['"boost":', boost?.toJSON(), ","], "");
+      buffer.writeAll(['"boost":', boost?.toJSON(), ','], '');
     }
     if (caption != null) {
-      buffer.writeAll(['"caption":', caption?.toJSON(), ","], "");
+      buffer.writeAll(['"caption":', caption?.toJSON(), ','], '');
     }
     if (chart != null) {
-      buffer.writeAll(['"chart":', chart?.toJSON(), ","], "");
+      buffer.writeAll(['"chart":', chart?.toJSON(), ','], '');
     }
     if (colorAxis != null) {
       buffer.write('"colorAxis":[');
       for (var item in colorAxis!) {
-        buffer.writeAll([item.toJSON(), ","], "");
+        buffer.writeAll([item.toJSON(), ','], '');
       }
-      buffer.write("],");
+      buffer.write('],');
     }
     if (colors != null) {
       buffer.write('"colors":[');
       for (var item in colors!) {
-        buffer.writeAll([jsonEncode(item), ","], "");
+        buffer.writeAll([jsonEncode(item), ','], '');
       }
-      buffer.write("],");
+      buffer.write('],');
     }
     if (connectors != null) {
-      buffer.writeAll(['"connectors":', connectors?.toJSON(), ","], "");
+      buffer.writeAll(['"connectors":', connectors?.toJSON(), ','], '');
     }
     if (credits != null) {
-      buffer.writeAll(['"credits":', credits?.toJSON(), ","], "");
+      buffer.writeAll(['"credits":', credits?.toJSON(), ','], '');
     }
     if (data != null) {
-      buffer.writeAll(['"data":', data?.toJSON(), ","], "");
+      buffer.writeAll(['"data":', data?.toJSON(), ','], '');
     }
     if (defs != null) {
-      buffer.writeAll(['"defs":', defs?.toJSON(), ","], "");
+      buffer.writeAll(['"defs":', defs?.toJSON(), ','], '');
     }
     if (drilldown != null) {
-      buffer.writeAll(['"drilldown":', drilldown?.toJSON(), ","], "");
+      buffer.writeAll(['"drilldown":', drilldown?.toJSON(), ','], '');
     }
     if (exporting != null) {
-      buffer.writeAll(['"exporting":', exporting?.toJSON(), ","], "");
+      buffer.writeAll(['"exporting":', exporting?.toJSON(), ','], '');
     }
     if (global != null) {
-      buffer.writeAll(['"global":', global?.toJSON(), ","], "");
+      buffer.writeAll(['"global":', global?.toJSON(), ','], '');
     }
     if (lang != null) {
-      buffer.writeAll(['"lang":', lang?.toJSON(), ","], "");
+      buffer.writeAll(['"lang":', lang?.toJSON(), ','], '');
     }
     if (legend != null) {
-      buffer.writeAll(['"legend":', legend?.toJSON(), ","], "");
+      buffer.writeAll(['"legend":', legend?.toJSON(), ','], '');
     }
     if (loading != null) {
-      buffer.writeAll(['"loading":', loading?.toJSON(), ","], "");
+      buffer.writeAll(['"loading":', loading?.toJSON(), ','], '');
     }
     if (mapNavigation != null) {
-      buffer.writeAll(['"mapNavigation":', mapNavigation?.toJSON(), ","], "");
+      buffer.writeAll(['"mapNavigation":', mapNavigation?.toJSON(), ','], '');
     }
     if (mapView != null) {
-      buffer.writeAll(['"mapView":', mapView?.toJSON(), ","], "");
+      buffer.writeAll(['"mapView":', mapView?.toJSON(), ','], '');
     }
     if (navigation != null) {
-      buffer.writeAll(['"navigation":', navigation?.toJSON(), ","], "");
+      buffer.writeAll(['"navigation":', navigation?.toJSON(), ','], '');
     }
     if (navigator != null) {
-      buffer.writeAll(['"navigator":', navigator?.toJSON(), ","], "");
+      buffer.writeAll(['"navigator":', navigator?.toJSON(), ','], '');
     }
     if (noData != null) {
-      buffer.writeAll(['"noData":', noData?.toJSON(), ","], "");
+      buffer.writeAll(['"noData":', noData?.toJSON(), ','], '');
     }
     if (pane != null) {
       buffer.write('"pane":[');
       for (var item in pane!) {
-        buffer.writeAll([item.toJSON(), ","], "");
+        buffer.writeAll([item.toJSON(), ','], '');
       }
-      buffer.write("],");
+      buffer.write('],');
     }
     if (plotOptions != null) {
-      buffer.writeAll(['"plotOptions":', plotOptions?.toJSON(), ","], "");
+      buffer.writeAll(['"plotOptions":', plotOptions?.toJSON(), ','], '');
     }
     if (rangeSelector != null) {
-      buffer.writeAll(['"rangeSelector":', rangeSelector?.toJSON(), ","], "");
+      buffer.writeAll(['"rangeSelector":', rangeSelector?.toJSON(), ','], '');
     }
     if (responsive != null) {
-      buffer.writeAll(['"responsive":', responsive?.toJSON(), ","], "");
+      buffer.writeAll(['"responsive":', responsive?.toJSON(), ','], '');
     }
     if (scrollbar != null) {
-      buffer.writeAll(['"scrollbar":', scrollbar?.toJSON(), ","], "");
+      buffer.writeAll(['"scrollbar":', scrollbar?.toJSON(), ','], '');
     }
     if (series != null) {
       buffer.write('"series":[');
       for (var item in series!) {
-        buffer.writeAll([item.toJSON(), ","], "");
+        buffer.writeAll([item.toJSON(), ','], '');
       }
-      buffer.write("],");
+      buffer.write('],');
     }
     if (sonification != null) {
-      buffer.writeAll(['"sonification":', sonification?.toJSON(), ","], "");
+      buffer.writeAll(['"sonification":', sonification?.toJSON(), ','], '');
     }
     if (stockTools != null) {
-      buffer.writeAll(['"stockTools":', stockTools?.toJSON(), ","], "");
+      buffer.writeAll(['"stockTools":', stockTools?.toJSON(), ','], '');
     }
     if (subtitle != null) {
-      buffer.writeAll(['"subtitle":', subtitle?.toJSON(), ","], "");
+      buffer.writeAll(['"subtitle":', subtitle?.toJSON(), ','], '');
     }
     if (time != null) {
-      buffer.writeAll(['"time":', time?.toJSON(), ","], "");
+      buffer.writeAll(['"time":', time?.toJSON(), ','], '');
     }
     if (title != null) {
-      buffer.writeAll(['"title":', title?.toJSON(), ","], "");
+      buffer.writeAll(['"title":', title?.toJSON(), ','], '');
     }
     if (tooltip != null) {
-      buffer.writeAll(['"tooltip":', tooltip?.toJSON(), ","], "");
+      buffer.writeAll(['"tooltip":', tooltip?.toJSON(), ','], '');
     }
     if (xAxis != null) {
       buffer.write('"xAxis":[');
       for (var item in xAxis!) {
-        buffer.writeAll([item.toJSON(), ","], "");
+        buffer.writeAll([item.toJSON(), ','], '');
       }
-      buffer.write("],");
+      buffer.write('],');
     }
     if (yAxis != null) {
       buffer.write('"yAxis":[');
       for (var item in yAxis!) {
-        buffer.writeAll([item.toJSON(), ","], "");
+        buffer.writeAll([item.toJSON(), ','], '');
       }
-      buffer.write("],");
+      buffer.write('],');
     }
     if (zAxis != null) {
       buffer.write('"zAxis":[');
       for (var item in zAxis!) {
-        buffer.writeAll([item.toJSON(), ","], "");
+        buffer.writeAll([item.toJSON(), ','], '');
       }
-      buffer.write("],");
+      buffer.write('],');
     }
   }
 

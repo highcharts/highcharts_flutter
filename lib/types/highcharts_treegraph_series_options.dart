@@ -1,36 +1,12 @@
-/**
- * Highcharts Flutter
- * 
- * Copyright (c) 2023-2025, Highsoft AS
- * 
- * The software in the Highcharts Flutter repository is free and open source,
- * but as Highcharts Flutter relies on Highcharts.js, it requires a valid
- * Highcharts license for commercial use.
- * 
- * Permission is hereby granted, free of charge, to any person obtaining
- * a copy of this software and associated documentation files (the
- * "Software"), to deal in the Software without restriction, including
- * without limitation the rights to use, copy, modify, merge, publish,
- * distribute, sublicense, and/or sell copies of the Software, and to
- * permit persons to whom the Software is furnished to do so, subject to
- * the following conditions:
- * 
- * The above copyright notice and this permission notice shall be
- * included in all copies or substantial portions of the Software.
- * 
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
- * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
- * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
- * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
- * CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
- * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
- * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- * 
+/* *
  *
- * Built for Highcharts v.xx.
- * Build stamp: 2025-01-16
+ *  Highcharts Flutter
  *
- */
+ *  Copyright (c) 2023-2025, Highsoft AS
+ *
+ *  License: www.highcharts.com/license
+ *
+ * */
 
 
 /* *
@@ -50,8 +26,6 @@ import 'highcharts_series_label_options.dart';
 import 'highcharts_treegraph_series_levels_options.dart';
 import 'highcharts_treegraph_series_link_options.dart';
 import 'highcharts_treegraph_series_marker_options.dart';
-import 'highcharts_union_type.dart';
-import 'highcharts_union_type.dart';
 import 'highcharts_series_on_point_options.dart';
 import 'highcharts_series_point_options.dart';
 import 'highcharts_series_sonification_options.dart';
@@ -74,8 +48,6 @@ export 'highcharts_series_label_options.dart';
 export 'highcharts_treegraph_series_levels_options.dart';
 export 'highcharts_treegraph_series_link_options.dart';
 export 'highcharts_treegraph_series_marker_options.dart';
-export 'highcharts_union_type.dart';
-export 'highcharts_union_type.dart';
 export 'highcharts_series_on_point_options.dart';
 export 'highcharts_series_point_options.dart';
 export 'highcharts_series_sonification_options.dart';
@@ -169,8 +141,8 @@ class HighchartsTreegraphSeriesOptions extends HighchartsOptionsBase {
   HighchartsTreegraphSeriesLinkOptions? link;
   String? linkedTo;
   HighchartsTreegraphSeriesMarkerOptions? marker;
-  HighchartsUnionType? nodeDistance;
-  HighchartsUnionType? nodeWidth;
+  dynamic nodeDistance;
+  dynamic nodeWidth;
   HighchartsSeriesOnPointOptions? onPoint;
   double? opacity;
   HighchartsSeriesPointOptions? point;
@@ -254,182 +226,182 @@ class HighchartsTreegraphSeriesOptions extends HighchartsOptionsBase {
 
 
     if (accessibility != null) {
-      buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ","], "");
+      buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ','], '');
     }
     if (allowPointSelect != null) {
-      buffer.writeAll(['"allowPointSelect":', allowPointSelect, ','], "");
+      buffer.writeAll(['"allowPointSelect":', allowPointSelect, ','], '');
     }
     if (animation != null) {
-      buffer.writeAll(['"animation":', jsonEncode(animation), ','], "");
+      buffer.writeAll(['"animation":', jsonEncode(animation), ','], '');
     }
     if (animationLimit != null) {
-      buffer.writeAll(['"animationLimit":', animationLimit, ','], "");
+      buffer.writeAll(['"animationLimit":', animationLimit, ','], '');
     }
     if (borderColor != null) {
-      buffer.writeAll(['"borderColor":', jsonEncode(borderColor), ','], "");
+      buffer.writeAll(['"borderColor":', jsonEncode(borderColor), ','], '');
     }
     if (borderWidth != null) {
-      buffer.writeAll(['"borderWidth":', borderWidth, ','], "");
+      buffer.writeAll(['"borderWidth":', borderWidth, ','], '');
     }
     if (className != null) {
-      buffer.writeAll(['"className":', jsonEncode(className), ','], "");
+      buffer.writeAll(['"className":', jsonEncode(className), ','], '');
     }
     if (clip != null) {
-      buffer.writeAll(['"clip":', clip, ','], "");
+      buffer.writeAll(['"clip":', clip, ','], '');
     }
     if (collapseButton != null) {
-      buffer.writeAll(['"collapseButton":', collapseButton?.toJSON(), ","], "");
+      buffer.writeAll(['"collapseButton":', collapseButton?.toJSON(), ','], '');
     }
     if (color != null) {
-      buffer.writeAll(['"color":', jsonEncode(color), ','], "");
+      buffer.writeAll(['"color":', jsonEncode(color), ','], '');
     }
     if (colorByPoint != null) {
-      buffer.writeAll(['"colorByPoint":', colorByPoint, ','], "");
+      buffer.writeAll(['"colorByPoint":', colorByPoint, ','], '');
     }
     if (colorIndex != null) {
-      buffer.writeAll(['"colorIndex":', colorIndex, ','], "");
+      buffer.writeAll(['"colorIndex":', colorIndex, ','], '');
     }
     if (colors != null) {
       buffer.write('"colors":[');
       for (var item in colors!) {
-        buffer.writeAll([jsonEncode(item), ","], "");
+        buffer.writeAll([jsonEncode(item), ','], '');
       }
-      buffer.write("],");
+      buffer.write('],');
     }
     if (crisp != null) {
-      buffer.writeAll(['"crisp":', crisp, ','], "");
+      buffer.writeAll(['"crisp":', crisp, ','], '');
     }
     if (cropThreshold != null) {
-      buffer.writeAll(['"cropThreshold":', cropThreshold, ','], "");
+      buffer.writeAll(['"cropThreshold":', cropThreshold, ','], '');
     }
     if (cursor != null) {
-      buffer.writeAll(['"cursor":', jsonEncode(cursor), ','], "");
+      buffer.writeAll(['"cursor":', jsonEncode(cursor), ','], '');
     }
     if (custom != null) {
       buffer.write('"custom":{');
       for (var item in custom!.entries) {
-        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ','], '');
       }
-      buffer.write("},");
+      buffer.write('},');
     }
     if (dataLabels != null) {
-      buffer.writeAll(['"dataLabels":', dataLabels?.toJSON(), ","], "");
+      buffer.writeAll(['"dataLabels":', dataLabels?.toJSON(), ','], '');
     }
     if (description != null) {
-      buffer.writeAll(['"description":', jsonEncode(description), ','], "");
+      buffer.writeAll(['"description":', jsonEncode(description), ','], '');
     }
     if (enableMouseTracking != null) {
-      buffer.writeAll(['"enableMouseTracking":', enableMouseTracking, ','], "");
+      buffer.writeAll(['"enableMouseTracking":', enableMouseTracking, ','], '');
     }
     if (events != null) {
-      buffer.writeAll(['"events":', events?.toJSON(), ","], "");
+      buffer.writeAll(['"events":', events?.toJSON(), ','], '');
     }
     if (fillSpace != null) {
-      buffer.writeAll(['"fillSpace":', fillSpace, ','], "");
+      buffer.writeAll(['"fillSpace":', fillSpace, ','], '');
     }
     if (id != null) {
-      buffer.writeAll(['"id":', jsonEncode(id), ','], "");
+      buffer.writeAll(['"id":', jsonEncode(id), ','], '');
     }
     if (inactiveOtherPoints != null) {
-      buffer.writeAll(['"inactiveOtherPoints":', inactiveOtherPoints, ','], "");
+      buffer.writeAll(['"inactiveOtherPoints":', inactiveOtherPoints, ','], '');
     }
     if (includeInDataExport != null) {
-      buffer.writeAll(['"includeInDataExport":', includeInDataExport, ','], "");
+      buffer.writeAll(['"includeInDataExport":', includeInDataExport, ','], '');
     }
     if (index != null) {
-      buffer.writeAll(['"index":', index, ','], "");
+      buffer.writeAll(['"index":', index, ','], '');
     }
     if (keys != null) {
       buffer.write('"keys":[');
       for (var item in keys!) {
-        buffer.writeAll([jsonEncode(item), ","], "");
+        buffer.writeAll([jsonEncode(item), ','], '');
       }
-      buffer.write("],");
+      buffer.write('],');
     }
     if (label != null) {
-      buffer.writeAll(['"label":', label?.toJSON(), ","], "");
+      buffer.writeAll(['"label":', label?.toJSON(), ','], '');
     }
     if (legendIndex != null) {
-      buffer.writeAll(['"legendIndex":', legendIndex, ','], "");
+      buffer.writeAll(['"legendIndex":', legendIndex, ','], '');
     }
     if (legendSymbol != null) {
-      buffer.writeAll(['"legendSymbol":', jsonEncode(legendSymbol), ','], "");
+      buffer.writeAll(['"legendSymbol":', jsonEncode(legendSymbol), ','], '');
     }
     if (levels != null) {
       buffer.write('"levels":[');
       for (var item in levels!) {
-        buffer.writeAll([item.toJSON(), ","], "");
+        buffer.writeAll([item.toJSON(), ','], '');
       }
-      buffer.write("],");
+      buffer.write('],');
     }
     if (link != null) {
-      buffer.writeAll(['"link":', link?.toJSON(), ","], "");
+      buffer.writeAll(['"link":', link?.toJSON(), ','], '');
     }
     if (linkedTo != null) {
-      buffer.writeAll(['"linkedTo":', jsonEncode(linkedTo), ','], "");
+      buffer.writeAll(['"linkedTo":', jsonEncode(linkedTo), ','], '');
     }
     if (marker != null) {
-      buffer.writeAll(['"marker":', marker?.toJSON(), ","], "");
+      buffer.writeAll(['"marker":', marker?.toJSON(), ','], '');
     }
     if (nodeDistance != null) {
-      buffer.writeAll(['"nodeDistance":', nodeDistance?.toJSON(), ","], "");
+      buffer.writeAll(['"nodeDistance":', jsonEncode(nodeDistance), ','], '');
     }
     if (nodeWidth != null) {
-      buffer.writeAll(['"nodeWidth":', nodeWidth?.toJSON(), ","], "");
+      buffer.writeAll(['"nodeWidth":', jsonEncode(nodeWidth), ','], '');
     }
     if (onPoint != null) {
-      buffer.writeAll(['"onPoint":', onPoint?.toJSON(), ","], "");
+      buffer.writeAll(['"onPoint":', onPoint?.toJSON(), ','], '');
     }
     if (opacity != null) {
-      buffer.writeAll(['"opacity":', opacity, ','], "");
+      buffer.writeAll(['"opacity":', opacity, ','], '');
     }
     if (point != null) {
-      buffer.writeAll(['"point":', point?.toJSON(), ","], "");
+      buffer.writeAll(['"point":', point?.toJSON(), ','], '');
     }
     if (pointDescriptionFormat != null) {
-      buffer.writeAll(['"pointDescriptionFormat":', jsonEncode(pointDescriptionFormat), ','], "");
+      buffer.writeAll(['"pointDescriptionFormat":', jsonEncode(pointDescriptionFormat), ','], '');
     }
     if (pointDescriptionFormatter != null) {
-      buffer.writeAll(['"pointDescriptionFormatter":', jsonEncode(pointDescriptionFormatter), ','], "");
+      buffer.writeAll(['"pointDescriptionFormatter":', jsonEncode(pointDescriptionFormatter), ','], '');
     }
     if (reversed != null) {
-      buffer.writeAll(['"reversed":', reversed, ','], "");
+      buffer.writeAll(['"reversed":', reversed, ','], '');
     }
     if (selected != null) {
-      buffer.writeAll(['"selected":', selected, ','], "");
+      buffer.writeAll(['"selected":', selected, ','], '');
     }
     if (showCheckbox != null) {
-      buffer.writeAll(['"showCheckbox":', showCheckbox, ','], "");
+      buffer.writeAll(['"showCheckbox":', showCheckbox, ','], '');
     }
     if (showInLegend != null) {
-      buffer.writeAll(['"showInLegend":', showInLegend, ','], "");
+      buffer.writeAll(['"showInLegend":', showInLegend, ','], '');
     }
     if (skipKeyboardNavigation != null) {
-      buffer.writeAll(['"skipKeyboardNavigation":', skipKeyboardNavigation, ','], "");
+      buffer.writeAll(['"skipKeyboardNavigation":', skipKeyboardNavigation, ','], '');
     }
     if (sonification != null) {
-      buffer.writeAll(['"sonification":', sonification?.toJSON(), ","], "");
+      buffer.writeAll(['"sonification":', sonification?.toJSON(), ','], '');
     }
     if (states != null) {
-      buffer.writeAll(['"states":', states?.toJSON(), ","], "");
+      buffer.writeAll(['"states":', states?.toJSON(), ','], '');
     }
     if (stickyTracking != null) {
-      buffer.writeAll(['"stickyTracking":', stickyTracking, ','], "");
+      buffer.writeAll(['"stickyTracking":', stickyTracking, ','], '');
     }
     if (tooltip != null) {
-      buffer.writeAll(['"tooltip":', tooltip?.toJSON(), ","], "");
+      buffer.writeAll(['"tooltip":', tooltip?.toJSON(), ','], '');
     }
     if (traverseToLeaf != null) {
-      buffer.writeAll(['"traverseToLeaf":', traverseToLeaf, ','], "");
+      buffer.writeAll(['"traverseToLeaf":', traverseToLeaf, ','], '');
     }
     if (turboThreshold != null) {
-      buffer.writeAll(['"turboThreshold":', turboThreshold, ','], "");
+      buffer.writeAll(['"turboThreshold":', turboThreshold, ','], '');
     }
     if (visible != null) {
-      buffer.writeAll(['"visible":', visible, ','], "");
+      buffer.writeAll(['"visible":', visible, ','], '');
     }
     if (zIndex != null) {
-      buffer.writeAll(['"zIndex":', zIndex, ','], "");
+      buffer.writeAll(['"zIndex":', zIndex, ','], '');
     }
   }
 

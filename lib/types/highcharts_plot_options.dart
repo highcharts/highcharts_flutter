@@ -1,36 +1,12 @@
-/**
- * Highcharts Flutter
- * 
- * Copyright (c) 2023-2025, Highsoft AS
- * 
- * The software in the Highcharts Flutter repository is free and open source,
- * but as Highcharts Flutter relies on Highcharts.js, it requires a valid
- * Highcharts license for commercial use.
- * 
- * Permission is hereby granted, free of charge, to any person obtaining
- * a copy of this software and associated documentation files (the
- * "Software"), to deal in the Software without restriction, including
- * without limitation the rights to use, copy, modify, merge, publish,
- * distribute, sublicense, and/or sell copies of the Software, and to
- * permit persons to whom the Software is furnished to do so, subject to
- * the following conditions:
- * 
- * The above copyright notice and this permission notice shall be
- * included in all copies or substantial portions of the Software.
- * 
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
- * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
- * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
- * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
- * CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
- * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
- * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- * 
+/* *
  *
- * Built for Highcharts v.xx.
- * Build stamp: 2025-01-16
+ *  Highcharts Flutter
  *
- */
+ *  Copyright (c) 2023-2025, Highsoft AS
+ *
+ *  License: www.highcharts.com/license
+ *
+ * */
 
 
 /* *
@@ -556,358 +532,358 @@ class HighchartsPlotOptions extends HighchartsOptionsBase {
 
 
     if (abands != null) {
-      buffer.writeAll(['"abands":', abands?.toJSON(), ","], "");
+      buffer.writeAll(['"abands":', abands?.toJSON(), ','], '');
     }
     if (ad != null) {
-      buffer.writeAll(['"ad":', ad?.toJSON(), ","], "");
+      buffer.writeAll(['"ad":', ad?.toJSON(), ','], '');
     }
     if (ao != null) {
-      buffer.writeAll(['"ao":', ao?.toJSON(), ","], "");
+      buffer.writeAll(['"ao":', ao?.toJSON(), ','], '');
     }
     if (apo != null) {
-      buffer.writeAll(['"apo":', apo?.toJSON(), ","], "");
+      buffer.writeAll(['"apo":', apo?.toJSON(), ','], '');
     }
     if (arcdiagram != null) {
-      buffer.writeAll(['"arcdiagram":', arcdiagram?.toJSON(), ","], "");
+      buffer.writeAll(['"arcdiagram":', arcdiagram?.toJSON(), ','], '');
     }
     if (area != null) {
-      buffer.writeAll(['"area":', area?.toJSON(), ","], "");
+      buffer.writeAll(['"area":', area?.toJSON(), ','], '');
     }
     if (arearange != null) {
-      buffer.writeAll(['"arearange":', arearange?.toJSON(), ","], "");
+      buffer.writeAll(['"arearange":', arearange?.toJSON(), ','], '');
     }
     if (areaspline != null) {
-      buffer.writeAll(['"areaspline":', areaspline?.toJSON(), ","], "");
+      buffer.writeAll(['"areaspline":', areaspline?.toJSON(), ','], '');
     }
     if (areasplinerange != null) {
-      buffer.writeAll(['"areasplinerange":', areasplinerange?.toJSON(), ","], "");
+      buffer.writeAll(['"areasplinerange":', areasplinerange?.toJSON(), ','], '');
     }
     if (aroon != null) {
-      buffer.writeAll(['"aroon":', aroon?.toJSON(), ","], "");
+      buffer.writeAll(['"aroon":', aroon?.toJSON(), ','], '');
     }
     if (aroonoscillator != null) {
-      buffer.writeAll(['"aroonoscillator":', aroonoscillator?.toJSON(), ","], "");
+      buffer.writeAll(['"aroonoscillator":', aroonoscillator?.toJSON(), ','], '');
     }
     if (atr != null) {
-      buffer.writeAll(['"atr":', atr?.toJSON(), ","], "");
+      buffer.writeAll(['"atr":', atr?.toJSON(), ','], '');
     }
     if (bar != null) {
-      buffer.writeAll(['"bar":', bar?.toJSON(), ","], "");
+      buffer.writeAll(['"bar":', bar?.toJSON(), ','], '');
     }
     if (bb != null) {
-      buffer.writeAll(['"bb":', bb?.toJSON(), ","], "");
+      buffer.writeAll(['"bb":', bb?.toJSON(), ','], '');
     }
     if (bellcurve != null) {
-      buffer.writeAll(['"bellcurve":', bellcurve?.toJSON(), ","], "");
+      buffer.writeAll(['"bellcurve":', bellcurve?.toJSON(), ','], '');
     }
     if (boxplot != null) {
-      buffer.writeAll(['"boxplot":', boxplot?.toJSON(), ","], "");
+      buffer.writeAll(['"boxplot":', boxplot?.toJSON(), ','], '');
     }
     if (bubble != null) {
-      buffer.writeAll(['"bubble":', bubble?.toJSON(), ","], "");
+      buffer.writeAll(['"bubble":', bubble?.toJSON(), ','], '');
     }
     if (bullet != null) {
-      buffer.writeAll(['"bullet":', bullet?.toJSON(), ","], "");
+      buffer.writeAll(['"bullet":', bullet?.toJSON(), ','], '');
     }
     if (candlestick != null) {
-      buffer.writeAll(['"candlestick":', candlestick?.toJSON(), ","], "");
+      buffer.writeAll(['"candlestick":', candlestick?.toJSON(), ','], '');
     }
     if (cci != null) {
-      buffer.writeAll(['"cci":', cci?.toJSON(), ","], "");
+      buffer.writeAll(['"cci":', cci?.toJSON(), ','], '');
     }
     if (chaikin != null) {
-      buffer.writeAll(['"chaikin":', chaikin?.toJSON(), ","], "");
+      buffer.writeAll(['"chaikin":', chaikin?.toJSON(), ','], '');
     }
     if (cmf != null) {
-      buffer.writeAll(['"cmf":', cmf?.toJSON(), ","], "");
+      buffer.writeAll(['"cmf":', cmf?.toJSON(), ','], '');
     }
     if (cmo != null) {
-      buffer.writeAll(['"cmo":', cmo?.toJSON(), ","], "");
+      buffer.writeAll(['"cmo":', cmo?.toJSON(), ','], '');
     }
     if (column != null) {
-      buffer.writeAll(['"column":', column?.toJSON(), ","], "");
+      buffer.writeAll(['"column":', column?.toJSON(), ','], '');
     }
     if (columnpyramid != null) {
-      buffer.writeAll(['"columnpyramid":', columnpyramid?.toJSON(), ","], "");
+      buffer.writeAll(['"columnpyramid":', columnpyramid?.toJSON(), ','], '');
     }
     if (columnrange != null) {
-      buffer.writeAll(['"columnrange":', columnrange?.toJSON(), ","], "");
+      buffer.writeAll(['"columnrange":', columnrange?.toJSON(), ','], '');
     }
     if (cylinder != null) {
-      buffer.writeAll(['"cylinder":', cylinder?.toJSON(), ","], "");
+      buffer.writeAll(['"cylinder":', cylinder?.toJSON(), ','], '');
     }
     if (dema != null) {
-      buffer.writeAll(['"dema":', dema?.toJSON(), ","], "");
+      buffer.writeAll(['"dema":', dema?.toJSON(), ','], '');
     }
     if (dependencywheel != null) {
-      buffer.writeAll(['"dependencywheel":', dependencywheel?.toJSON(), ","], "");
+      buffer.writeAll(['"dependencywheel":', dependencywheel?.toJSON(), ','], '');
     }
     if (disparityindex != null) {
-      buffer.writeAll(['"disparityindex":', disparityindex?.toJSON(), ","], "");
+      buffer.writeAll(['"disparityindex":', disparityindex?.toJSON(), ','], '');
     }
     if (dmi != null) {
-      buffer.writeAll(['"dmi":', dmi?.toJSON(), ","], "");
+      buffer.writeAll(['"dmi":', dmi?.toJSON(), ','], '');
     }
     if (dpo != null) {
-      buffer.writeAll(['"dpo":', dpo?.toJSON(), ","], "");
+      buffer.writeAll(['"dpo":', dpo?.toJSON(), ','], '');
     }
     if (dumbbell != null) {
-      buffer.writeAll(['"dumbbell":', dumbbell?.toJSON(), ","], "");
+      buffer.writeAll(['"dumbbell":', dumbbell?.toJSON(), ','], '');
     }
     if (ema != null) {
-      buffer.writeAll(['"ema":', ema?.toJSON(), ","], "");
+      buffer.writeAll(['"ema":', ema?.toJSON(), ','], '');
     }
     if (errorbar != null) {
-      buffer.writeAll(['"errorbar":', errorbar?.toJSON(), ","], "");
+      buffer.writeAll(['"errorbar":', errorbar?.toJSON(), ','], '');
     }
     if (flags != null) {
-      buffer.writeAll(['"flags":', flags?.toJSON(), ","], "");
+      buffer.writeAll(['"flags":', flags?.toJSON(), ','], '');
     }
     if (flowmap != null) {
-      buffer.writeAll(['"flowmap":', flowmap?.toJSON(), ","], "");
+      buffer.writeAll(['"flowmap":', flowmap?.toJSON(), ','], '');
     }
     if (funnel != null) {
-      buffer.writeAll(['"funnel":', funnel?.toJSON(), ","], "");
+      buffer.writeAll(['"funnel":', funnel?.toJSON(), ','], '');
     }
     if (funnel3d != null) {
-      buffer.writeAll(['"funnel3d":', funnel3d?.toJSON(), ","], "");
+      buffer.writeAll(['"funnel3d":', funnel3d?.toJSON(), ','], '');
     }
     if (gantt != null) {
-      buffer.writeAll(['"gantt":', gantt?.toJSON(), ","], "");
+      buffer.writeAll(['"gantt":', gantt?.toJSON(), ','], '');
     }
     if (gauge != null) {
-      buffer.writeAll(['"gauge":', gauge?.toJSON(), ","], "");
+      buffer.writeAll(['"gauge":', gauge?.toJSON(), ','], '');
     }
     if (geoheatmap != null) {
-      buffer.writeAll(['"geoheatmap":', geoheatmap?.toJSON(), ","], "");
+      buffer.writeAll(['"geoheatmap":', geoheatmap?.toJSON(), ','], '');
     }
     if (heatmap != null) {
-      buffer.writeAll(['"heatmap":', heatmap?.toJSON(), ","], "");
+      buffer.writeAll(['"heatmap":', heatmap?.toJSON(), ','], '');
     }
     if (heikinashi != null) {
-      buffer.writeAll(['"heikinashi":', heikinashi?.toJSON(), ","], "");
+      buffer.writeAll(['"heikinashi":', heikinashi?.toJSON(), ','], '');
     }
     if (histogram != null) {
-      buffer.writeAll(['"histogram":', histogram?.toJSON(), ","], "");
+      buffer.writeAll(['"histogram":', histogram?.toJSON(), ','], '');
     }
     if (hlc != null) {
-      buffer.writeAll(['"hlc":', hlc?.toJSON(), ","], "");
+      buffer.writeAll(['"hlc":', hlc?.toJSON(), ','], '');
     }
     if (hollowcandlestick != null) {
-      buffer.writeAll(['"hollowcandlestick":', hollowcandlestick?.toJSON(), ","], "");
+      buffer.writeAll(['"hollowcandlestick":', hollowcandlestick?.toJSON(), ','], '');
     }
     if (ikh != null) {
-      buffer.writeAll(['"ikh":', ikh?.toJSON(), ","], "");
+      buffer.writeAll(['"ikh":', ikh?.toJSON(), ','], '');
     }
     if (item != null) {
-      buffer.writeAll(['"item":', item?.toJSON(), ","], "");
+      buffer.writeAll(['"item":', item?.toJSON(), ','], '');
     }
     if (keltnerchannels != null) {
-      buffer.writeAll(['"keltnerchannels":', keltnerchannels?.toJSON(), ","], "");
+      buffer.writeAll(['"keltnerchannels":', keltnerchannels?.toJSON(), ','], '');
     }
     if (klinger != null) {
-      buffer.writeAll(['"klinger":', klinger?.toJSON(), ","], "");
+      buffer.writeAll(['"klinger":', klinger?.toJSON(), ','], '');
     }
     if (line != null) {
-      buffer.writeAll(['"line":', line?.toJSON(), ","], "");
+      buffer.writeAll(['"line":', line?.toJSON(), ','], '');
     }
     if (linearregression != null) {
-      buffer.writeAll(['"linearregression":', linearregression?.toJSON(), ","], "");
+      buffer.writeAll(['"linearregression":', linearregression?.toJSON(), ','], '');
     }
     if (linearregressionangle != null) {
-      buffer.writeAll(['"linearregressionangle":', linearregressionangle?.toJSON(), ","], "");
+      buffer.writeAll(['"linearregressionangle":', linearregressionangle?.toJSON(), ','], '');
     }
     if (linearregressionintercept != null) {
-      buffer.writeAll(['"linearregressionintercept":', linearregressionintercept?.toJSON(), ","], "");
+      buffer.writeAll(['"linearregressionintercept":', linearregressionintercept?.toJSON(), ','], '');
     }
     if (linearregressionslope != null) {
-      buffer.writeAll(['"linearregressionslope":', linearregressionslope?.toJSON(), ","], "");
+      buffer.writeAll(['"linearregressionslope":', linearregressionslope?.toJSON(), ','], '');
     }
     if (lollipop != null) {
-      buffer.writeAll(['"lollipop":', lollipop?.toJSON(), ","], "");
+      buffer.writeAll(['"lollipop":', lollipop?.toJSON(), ','], '');
     }
     if (macd != null) {
-      buffer.writeAll(['"macd":', macd?.toJSON(), ","], "");
+      buffer.writeAll(['"macd":', macd?.toJSON(), ','], '');
     }
     if (map != null) {
-      buffer.writeAll(['"map":', map?.toJSON(), ","], "");
+      buffer.writeAll(['"map":', map?.toJSON(), ','], '');
     }
     if (mapbubble != null) {
-      buffer.writeAll(['"mapbubble":', mapbubble?.toJSON(), ","], "");
+      buffer.writeAll(['"mapbubble":', mapbubble?.toJSON(), ','], '');
     }
     if (mapline != null) {
-      buffer.writeAll(['"mapline":', mapline?.toJSON(), ","], "");
+      buffer.writeAll(['"mapline":', mapline?.toJSON(), ','], '');
     }
     if (mappoint != null) {
-      buffer.writeAll(['"mappoint":', mappoint?.toJSON(), ","], "");
+      buffer.writeAll(['"mappoint":', mappoint?.toJSON(), ','], '');
     }
     if (mfi != null) {
-      buffer.writeAll(['"mfi":', mfi?.toJSON(), ","], "");
+      buffer.writeAll(['"mfi":', mfi?.toJSON(), ','], '');
     }
     if (momentum != null) {
-      buffer.writeAll(['"momentum":', momentum?.toJSON(), ","], "");
+      buffer.writeAll(['"momentum":', momentum?.toJSON(), ','], '');
     }
     if (natr != null) {
-      buffer.writeAll(['"natr":', natr?.toJSON(), ","], "");
+      buffer.writeAll(['"natr":', natr?.toJSON(), ','], '');
     }
     if (networkgraph != null) {
-      buffer.writeAll(['"networkgraph":', networkgraph?.toJSON(), ","], "");
+      buffer.writeAll(['"networkgraph":', networkgraph?.toJSON(), ','], '');
     }
     if (obv != null) {
-      buffer.writeAll(['"obv":', obv?.toJSON(), ","], "");
+      buffer.writeAll(['"obv":', obv?.toJSON(), ','], '');
     }
     if (ohlc != null) {
-      buffer.writeAll(['"ohlc":', ohlc?.toJSON(), ","], "");
+      buffer.writeAll(['"ohlc":', ohlc?.toJSON(), ','], '');
     }
     if (organization != null) {
-      buffer.writeAll(['"organization":', organization?.toJSON(), ","], "");
+      buffer.writeAll(['"organization":', organization?.toJSON(), ','], '');
     }
     if (packedbubble != null) {
-      buffer.writeAll(['"packedbubble":', packedbubble?.toJSON(), ","], "");
+      buffer.writeAll(['"packedbubble":', packedbubble?.toJSON(), ','], '');
     }
     if (pareto != null) {
-      buffer.writeAll(['"pareto":', pareto?.toJSON(), ","], "");
+      buffer.writeAll(['"pareto":', pareto?.toJSON(), ','], '');
     }
     if (pc != null) {
-      buffer.writeAll(['"pc":', pc?.toJSON(), ","], "");
+      buffer.writeAll(['"pc":', pc?.toJSON(), ','], '');
     }
     if (pictorial != null) {
-      buffer.writeAll(['"pictorial":', pictorial?.toJSON(), ","], "");
+      buffer.writeAll(['"pictorial":', pictorial?.toJSON(), ','], '');
     }
     if (pie != null) {
-      buffer.writeAll(['"pie":', pie?.toJSON(), ","], "");
+      buffer.writeAll(['"pie":', pie?.toJSON(), ','], '');
     }
     if (pivotpoints != null) {
-      buffer.writeAll(['"pivotpoints":', pivotpoints?.toJSON(), ","], "");
+      buffer.writeAll(['"pivotpoints":', pivotpoints?.toJSON(), ','], '');
     }
     if (pointandfigure != null) {
-      buffer.writeAll(['"pointandfigure":', pointandfigure?.toJSON(), ","], "");
+      buffer.writeAll(['"pointandfigure":', pointandfigure?.toJSON(), ','], '');
     }
     if (polygon != null) {
-      buffer.writeAll(['"polygon":', polygon?.toJSON(), ","], "");
+      buffer.writeAll(['"polygon":', polygon?.toJSON(), ','], '');
     }
     if (ppo != null) {
-      buffer.writeAll(['"ppo":', ppo?.toJSON(), ","], "");
+      buffer.writeAll(['"ppo":', ppo?.toJSON(), ','], '');
     }
     if (priceenvelopes != null) {
-      buffer.writeAll(['"priceenvelopes":', priceenvelopes?.toJSON(), ","], "");
+      buffer.writeAll(['"priceenvelopes":', priceenvelopes?.toJSON(), ','], '');
     }
     if (psar != null) {
-      buffer.writeAll(['"psar":', psar?.toJSON(), ","], "");
+      buffer.writeAll(['"psar":', psar?.toJSON(), ','], '');
     }
     if (pyramid != null) {
-      buffer.writeAll(['"pyramid":', pyramid?.toJSON(), ","], "");
+      buffer.writeAll(['"pyramid":', pyramid?.toJSON(), ','], '');
     }
     if (pyramid3d != null) {
-      buffer.writeAll(['"pyramid3d":', pyramid3d?.toJSON(), ","], "");
+      buffer.writeAll(['"pyramid3d":', pyramid3d?.toJSON(), ','], '');
     }
     if (renko != null) {
-      buffer.writeAll(['"renko":', renko?.toJSON(), ","], "");
+      buffer.writeAll(['"renko":', renko?.toJSON(), ','], '');
     }
     if (roc != null) {
-      buffer.writeAll(['"roc":', roc?.toJSON(), ","], "");
+      buffer.writeAll(['"roc":', roc?.toJSON(), ','], '');
     }
     if (rsi != null) {
-      buffer.writeAll(['"rsi":', rsi?.toJSON(), ","], "");
+      buffer.writeAll(['"rsi":', rsi?.toJSON(), ','], '');
     }
     if (sankey != null) {
-      buffer.writeAll(['"sankey":', sankey?.toJSON(), ","], "");
+      buffer.writeAll(['"sankey":', sankey?.toJSON(), ','], '');
     }
     if (scatter != null) {
-      buffer.writeAll(['"scatter":', scatter?.toJSON(), ","], "");
+      buffer.writeAll(['"scatter":', scatter?.toJSON(), ','], '');
     }
     if (scatter3d != null) {
-      buffer.writeAll(['"scatter3d":', scatter3d?.toJSON(), ","], "");
+      buffer.writeAll(['"scatter3d":', scatter3d?.toJSON(), ','], '');
     }
     if (series != null) {
-      buffer.writeAll(['"series":', series?.toJSON(), ","], "");
+      buffer.writeAll(['"series":', series?.toJSON(), ','], '');
     }
     if (slowstochastic != null) {
-      buffer.writeAll(['"slowstochastic":', slowstochastic?.toJSON(), ","], "");
+      buffer.writeAll(['"slowstochastic":', slowstochastic?.toJSON(), ','], '');
     }
     if (sma != null) {
-      buffer.writeAll(['"sma":', sma?.toJSON(), ","], "");
+      buffer.writeAll(['"sma":', sma?.toJSON(), ','], '');
     }
     if (solidgauge != null) {
-      buffer.writeAll(['"solidgauge":', solidgauge?.toJSON(), ","], "");
+      buffer.writeAll(['"solidgauge":', solidgauge?.toJSON(), ','], '');
     }
     if (spline != null) {
-      buffer.writeAll(['"spline":', spline?.toJSON(), ","], "");
+      buffer.writeAll(['"spline":', spline?.toJSON(), ','], '');
     }
     if (stochastic != null) {
-      buffer.writeAll(['"stochastic":', stochastic?.toJSON(), ","], "");
+      buffer.writeAll(['"stochastic":', stochastic?.toJSON(), ','], '');
     }
     if (streamgraph != null) {
-      buffer.writeAll(['"streamgraph":', streamgraph?.toJSON(), ","], "");
+      buffer.writeAll(['"streamgraph":', streamgraph?.toJSON(), ','], '');
     }
     if (sunburst != null) {
-      buffer.writeAll(['"sunburst":', sunburst?.toJSON(), ","], "");
+      buffer.writeAll(['"sunburst":', sunburst?.toJSON(), ','], '');
     }
     if (supertrend != null) {
-      buffer.writeAll(['"supertrend":', supertrend?.toJSON(), ","], "");
+      buffer.writeAll(['"supertrend":', supertrend?.toJSON(), ','], '');
     }
     if (tema != null) {
-      buffer.writeAll(['"tema":', tema?.toJSON(), ","], "");
+      buffer.writeAll(['"tema":', tema?.toJSON(), ','], '');
     }
     if (tiledwebmap != null) {
-      buffer.writeAll(['"tiledwebmap":', tiledwebmap?.toJSON(), ","], "");
+      buffer.writeAll(['"tiledwebmap":', tiledwebmap?.toJSON(), ','], '');
     }
     if (tilemap != null) {
-      buffer.writeAll(['"tilemap":', tilemap?.toJSON(), ","], "");
+      buffer.writeAll(['"tilemap":', tilemap?.toJSON(), ','], '');
     }
     if (timeline != null) {
-      buffer.writeAll(['"timeline":', timeline?.toJSON(), ","], "");
+      buffer.writeAll(['"timeline":', timeline?.toJSON(), ','], '');
     }
     if (treegraph != null) {
-      buffer.writeAll(['"treegraph":', treegraph?.toJSON(), ","], "");
+      buffer.writeAll(['"treegraph":', treegraph?.toJSON(), ','], '');
     }
     if (treemap != null) {
-      buffer.writeAll(['"treemap":', treemap?.toJSON(), ","], "");
+      buffer.writeAll(['"treemap":', treemap?.toJSON(), ','], '');
     }
     if (trendline != null) {
-      buffer.writeAll(['"trendline":', trendline?.toJSON(), ","], "");
+      buffer.writeAll(['"trendline":', trendline?.toJSON(), ','], '');
     }
     if (trix != null) {
-      buffer.writeAll(['"trix":', trix?.toJSON(), ","], "");
+      buffer.writeAll(['"trix":', trix?.toJSON(), ','], '');
     }
     if (variablepie != null) {
-      buffer.writeAll(['"variablepie":', variablepie?.toJSON(), ","], "");
+      buffer.writeAll(['"variablepie":', variablepie?.toJSON(), ','], '');
     }
     if (variwide != null) {
-      buffer.writeAll(['"variwide":', variwide?.toJSON(), ","], "");
+      buffer.writeAll(['"variwide":', variwide?.toJSON(), ','], '');
     }
     if (vbp != null) {
-      buffer.writeAll(['"vbp":', vbp?.toJSON(), ","], "");
+      buffer.writeAll(['"vbp":', vbp?.toJSON(), ','], '');
     }
     if (vector != null) {
-      buffer.writeAll(['"vector":', vector?.toJSON(), ","], "");
+      buffer.writeAll(['"vector":', vector?.toJSON(), ','], '');
     }
     if (venn != null) {
-      buffer.writeAll(['"venn":', venn?.toJSON(), ","], "");
+      buffer.writeAll(['"venn":', venn?.toJSON(), ','], '');
     }
     if (vwap != null) {
-      buffer.writeAll(['"vwap":', vwap?.toJSON(), ","], "");
+      buffer.writeAll(['"vwap":', vwap?.toJSON(), ','], '');
     }
     if (waterfall != null) {
-      buffer.writeAll(['"waterfall":', waterfall?.toJSON(), ","], "");
+      buffer.writeAll(['"waterfall":', waterfall?.toJSON(), ','], '');
     }
     if (williamsr != null) {
-      buffer.writeAll(['"williamsr":', williamsr?.toJSON(), ","], "");
+      buffer.writeAll(['"williamsr":', williamsr?.toJSON(), ','], '');
     }
     if (windbarb != null) {
-      buffer.writeAll(['"windbarb":', windbarb?.toJSON(), ","], "");
+      buffer.writeAll(['"windbarb":', windbarb?.toJSON(), ','], '');
     }
     if (wma != null) {
-      buffer.writeAll(['"wma":', wma?.toJSON(), ","], "");
+      buffer.writeAll(['"wma":', wma?.toJSON(), ','], '');
     }
     if (wordcloud != null) {
-      buffer.writeAll(['"wordcloud":', wordcloud?.toJSON(), ","], "");
+      buffer.writeAll(['"wordcloud":', wordcloud?.toJSON(), ','], '');
     }
     if (xrange != null) {
-      buffer.writeAll(['"xrange":', xrange?.toJSON(), ","], "");
+      buffer.writeAll(['"xrange":', xrange?.toJSON(), ','], '');
     }
     if (zigzag != null) {
-      buffer.writeAll(['"zigzag":', zigzag?.toJSON(), ","], "");
+      buffer.writeAll(['"zigzag":', zigzag?.toJSON(), ','], '');
     }
   }
 

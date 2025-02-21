@@ -1,36 +1,12 @@
-/**
- * Highcharts Flutter
- * 
- * Copyright (c) 2023-2025, Highsoft AS
- * 
- * The software in the Highcharts Flutter repository is free and open source,
- * but as Highcharts Flutter relies on Highcharts.js, it requires a valid
- * Highcharts license for commercial use.
- * 
- * Permission is hereby granted, free of charge, to any person obtaining
- * a copy of this software and associated documentation files (the
- * "Software"), to deal in the Software without restriction, including
- * without limitation the rights to use, copy, modify, merge, publish,
- * distribute, sublicense, and/or sell copies of the Software, and to
- * permit persons to whom the Software is furnished to do so, subject to
- * the following conditions:
- * 
- * The above copyright notice and this permission notice shall be
- * included in all copies or substantial portions of the Software.
- * 
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
- * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
- * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
- * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
- * CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
- * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
- * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- * 
+/* *
  *
- * Built for Highcharts v.xx.
- * Build stamp: 2025-01-16
+ *  Highcharts Flutter
  *
- */
+ *  Copyright (c) 2023-2025, Highsoft AS
+ *
+ *  License: www.highcharts.com/license
+ *
+ * */
 
 
 /* *
@@ -49,7 +25,6 @@ import 'highcharts_annotations_elliott_wave_options.dart';
 import 'highcharts_annotations_events_options.dart';
 import 'highcharts_annotations_fibonacci_options.dart';
 import 'highcharts_annotations_fibonacci_time_zones_options.dart';
-import 'highcharts_union_type.dart';
 import 'highcharts_annotations_infinity_line_options.dart';
 import 'highcharts_annotations_label_options.dart';
 import 'highcharts_annotations_labels_options.dart';
@@ -76,7 +51,6 @@ export 'highcharts_annotations_elliott_wave_options.dart';
 export 'highcharts_annotations_events_options.dart';
 export 'highcharts_annotations_fibonacci_options.dart';
 export 'highcharts_annotations_fibonacci_time_zones_options.dart';
-export 'highcharts_union_type.dart';
 export 'highcharts_annotations_infinity_line_options.dart';
 export 'highcharts_annotations_label_options.dart';
 export 'highcharts_annotations_labels_options.dart';
@@ -112,7 +86,7 @@ class HighchartsAnnotationsOptions extends HighchartsOptionsBase {
   HighchartsAnnotationsEventsOptions? events;
   HighchartsAnnotationsFibonacciOptions? fibonacci;
   HighchartsAnnotationsFibonacciTimeZonesOptions? fibonacciTimeZones;
-  HighchartsUnionType? id;
+  dynamic id;
   HighchartsAnnotationsInfinityLineOptions? infinityLine;
   HighchartsAnnotationsLabelOptions? labelOptions;
   List<HighchartsAnnotationsLabelsOptions>? labels;
@@ -158,78 +132,78 @@ class HighchartsAnnotationsOptions extends HighchartsOptionsBase {
 
 
     if (animation != null) {
-      buffer.writeAll(['"animation":', animation?.toJSON(), ","], "");
+      buffer.writeAll(['"animation":', animation?.toJSON(), ','], '');
     }
     if (controlPointOptions != null) {
-      buffer.writeAll(['"controlPointOptions":', controlPointOptions?.toJSON(), ","], "");
+      buffer.writeAll(['"controlPointOptions":', controlPointOptions?.toJSON(), ','], '');
     }
     if (crookedLine != null) {
-      buffer.writeAll(['"crookedLine":', crookedLine?.toJSON(), ","], "");
+      buffer.writeAll(['"crookedLine":', crookedLine?.toJSON(), ','], '');
     }
     if (crop != null) {
-      buffer.writeAll(['"crop":', crop, ','], "");
+      buffer.writeAll(['"crop":', crop, ','], '');
     }
     if (draggable != null) {
-      buffer.writeAll(['"draggable":', jsonEncode(draggable), ','], "");
+      buffer.writeAll(['"draggable":', jsonEncode(draggable), ','], '');
     }
     if (elliottWave != null) {
-      buffer.writeAll(['"elliottWave":', elliottWave?.toJSON(), ","], "");
+      buffer.writeAll(['"elliottWave":', elliottWave?.toJSON(), ','], '');
     }
     if (events != null) {
-      buffer.writeAll(['"events":', events?.toJSON(), ","], "");
+      buffer.writeAll(['"events":', events?.toJSON(), ','], '');
     }
     if (fibonacci != null) {
-      buffer.writeAll(['"fibonacci":', fibonacci?.toJSON(), ","], "");
+      buffer.writeAll(['"fibonacci":', fibonacci?.toJSON(), ','], '');
     }
     if (fibonacciTimeZones != null) {
-      buffer.writeAll(['"fibonacciTimeZones":', fibonacciTimeZones?.toJSON(), ","], "");
+      buffer.writeAll(['"fibonacciTimeZones":', fibonacciTimeZones?.toJSON(), ','], '');
     }
     if (id != null) {
-      buffer.writeAll(['"id":', id?.toJSON(), ","], "");
+      buffer.writeAll(['"id":', jsonEncode(id), ','], '');
     }
     if (infinityLine != null) {
-      buffer.writeAll(['"infinityLine":', infinityLine?.toJSON(), ","], "");
+      buffer.writeAll(['"infinityLine":', infinityLine?.toJSON(), ','], '');
     }
     if (labelOptions != null) {
-      buffer.writeAll(['"labelOptions":', labelOptions?.toJSON(), ","], "");
+      buffer.writeAll(['"labelOptions":', labelOptions?.toJSON(), ','], '');
     }
     if (labels != null) {
       buffer.write('"labels":[');
       for (var item in labels!) {
-        buffer.writeAll([item.toJSON(), ","], "");
+        buffer.writeAll([item.toJSON(), ','], '');
       }
-      buffer.write("],");
+      buffer.write('],');
     }
     if (measure != null) {
-      buffer.writeAll(['"measure":', measure?.toJSON(), ","], "");
+      buffer.writeAll(['"measure":', measure?.toJSON(), ','], '');
     }
     if (pitchfork != null) {
-      buffer.writeAll(['"pitchfork":', pitchfork?.toJSON(), ","], "");
+      buffer.writeAll(['"pitchfork":', pitchfork?.toJSON(), ','], '');
     }
     if (shapeOptions != null) {
-      buffer.writeAll(['"shapeOptions":', shapeOptions?.toJSON(), ","], "");
+      buffer.writeAll(['"shapeOptions":', shapeOptions?.toJSON(), ','], '');
     }
     if (shapes != null) {
       buffer.write('"shapes":[');
       for (var item in shapes!) {
-        buffer.writeAll([item.toJSON(), ","], "");
+        buffer.writeAll([item.toJSON(), ','], '');
       }
-      buffer.write("],");
+      buffer.write('],');
     }
     if (timeCycles != null) {
-      buffer.writeAll(['"timeCycles":', timeCycles?.toJSON(), ","], "");
+      buffer.writeAll(['"timeCycles":', timeCycles?.toJSON(), ','], '');
     }
     if (tunnel != null) {
-      buffer.writeAll(['"tunnel":', tunnel?.toJSON(), ","], "");
+      buffer.writeAll(['"tunnel":', tunnel?.toJSON(), ','], '');
     }
     if (verticalLine != null) {
-      buffer.writeAll(['"verticalLine":', verticalLine?.toJSON(), ","], "");
+      buffer.writeAll(['"verticalLine":', verticalLine?.toJSON(), ','], '');
     }
     if (visible != null) {
-      buffer.writeAll(['"visible":', visible, ','], "");
+      buffer.writeAll(['"visible":', visible, ','], '');
     }
     if (zIndex != null) {
-      buffer.writeAll(['"zIndex":', zIndex, ','], "");
+      buffer.writeAll(['"zIndex":', zIndex, ','], '');
     }
   }
 

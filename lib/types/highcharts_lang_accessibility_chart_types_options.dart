@@ -1,36 +1,12 @@
-/**
- * Highcharts Flutter
- * 
- * Copyright (c) 2023-2025, Highsoft AS
- * 
- * The software in the Highcharts Flutter repository is free and open source,
- * but as Highcharts Flutter relies on Highcharts.js, it requires a valid
- * Highcharts license for commercial use.
- * 
- * Permission is hereby granted, free of charge, to any person obtaining
- * a copy of this software and associated documentation files (the
- * "Software"), to deal in the Software without restriction, including
- * without limitation the rights to use, copy, modify, merge, publish,
- * distribute, sublicense, and/or sell copies of the Software, and to
- * permit persons to whom the Software is furnished to do so, subject to
- * the following conditions:
- * 
- * The above copyright notice and this permission notice shall be
- * included in all copies or substantial portions of the Software.
- * 
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
- * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
- * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
- * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
- * CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
- * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
- * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- * 
+/* *
  *
- * Built for Highcharts v.xx.
- * Build stamp: 2025-01-16
+ *  Highcharts Flutter
  *
- */
+ *  Copyright (c) 2023-2025, Highsoft AS
+ *
+ *  License: www.highcharts.com/license
+ *
+ * */
 
 
 /* *
@@ -127,70 +103,70 @@ class HighchartsLangAccessibilityChartTypesOptions extends HighchartsOptionsBase
 
 
     if (barMultiple != null) {
-      buffer.writeAll(['"barMultiple":', jsonEncode(barMultiple), ','], "");
+      buffer.writeAll(['"barMultiple":', jsonEncode(barMultiple), ','], '');
     }
     if (barSingle != null) {
-      buffer.writeAll(['"barSingle":', jsonEncode(barSingle), ','], "");
+      buffer.writeAll(['"barSingle":', jsonEncode(barSingle), ','], '');
     }
     if (boxplotMultiple != null) {
-      buffer.writeAll(['"boxplotMultiple":', jsonEncode(boxplotMultiple), ','], "");
+      buffer.writeAll(['"boxplotMultiple":', jsonEncode(boxplotMultiple), ','], '');
     }
     if (boxplotSingle != null) {
-      buffer.writeAll(['"boxplotSingle":', jsonEncode(boxplotSingle), ','], "");
+      buffer.writeAll(['"boxplotSingle":', jsonEncode(boxplotSingle), ','], '');
     }
     if (bubbleMultiple != null) {
-      buffer.writeAll(['"bubbleMultiple":', jsonEncode(bubbleMultiple), ','], "");
+      buffer.writeAll(['"bubbleMultiple":', jsonEncode(bubbleMultiple), ','], '');
     }
     if (bubbleSingle != null) {
-      buffer.writeAll(['"bubbleSingle":', jsonEncode(bubbleSingle), ','], "");
+      buffer.writeAll(['"bubbleSingle":', jsonEncode(bubbleSingle), ','], '');
     }
     if (columnMultiple != null) {
-      buffer.writeAll(['"columnMultiple":', jsonEncode(columnMultiple), ','], "");
+      buffer.writeAll(['"columnMultiple":', jsonEncode(columnMultiple), ','], '');
     }
     if (columnSingle != null) {
-      buffer.writeAll(['"columnSingle":', jsonEncode(columnSingle), ','], "");
+      buffer.writeAll(['"columnSingle":', jsonEncode(columnSingle), ','], '');
     }
     if (combinationChart != null) {
-      buffer.writeAll(['"combinationChart":', jsonEncode(combinationChart), ','], "");
+      buffer.writeAll(['"combinationChart":', jsonEncode(combinationChart), ','], '');
     }
     if (defaultMultiple != null) {
-      buffer.writeAll(['"defaultMultiple":', jsonEncode(defaultMultiple), ','], "");
+      buffer.writeAll(['"defaultMultiple":', jsonEncode(defaultMultiple), ','], '');
     }
     if (defaultSingle != null) {
-      buffer.writeAll(['"defaultSingle":', jsonEncode(defaultSingle), ','], "");
+      buffer.writeAll(['"defaultSingle":', jsonEncode(defaultSingle), ','], '');
     }
     if (emptyChart != null) {
-      buffer.writeAll(['"emptyChart":', jsonEncode(emptyChart), ','], "");
+      buffer.writeAll(['"emptyChart":', jsonEncode(emptyChart), ','], '');
     }
     if (lineMultiple != null) {
-      buffer.writeAll(['"lineMultiple":', jsonEncode(lineMultiple), ','], "");
+      buffer.writeAll(['"lineMultiple":', jsonEncode(lineMultiple), ','], '');
     }
     if (lineSingle != null) {
-      buffer.writeAll(['"lineSingle":', jsonEncode(lineSingle), ','], "");
+      buffer.writeAll(['"lineSingle":', jsonEncode(lineSingle), ','], '');
     }
     if (mapTypeDescription != null) {
-      buffer.writeAll(['"mapTypeDescription":', jsonEncode(mapTypeDescription), ','], "");
+      buffer.writeAll(['"mapTypeDescription":', jsonEncode(mapTypeDescription), ','], '');
     }
     if (pieMultiple != null) {
-      buffer.writeAll(['"pieMultiple":', jsonEncode(pieMultiple), ','], "");
+      buffer.writeAll(['"pieMultiple":', jsonEncode(pieMultiple), ','], '');
     }
     if (pieSingle != null) {
-      buffer.writeAll(['"pieSingle":', jsonEncode(pieSingle), ','], "");
+      buffer.writeAll(['"pieSingle":', jsonEncode(pieSingle), ','], '');
     }
     if (scatterMultiple != null) {
-      buffer.writeAll(['"scatterMultiple":', jsonEncode(scatterMultiple), ','], "");
+      buffer.writeAll(['"scatterMultiple":', jsonEncode(scatterMultiple), ','], '');
     }
     if (scatterSingle != null) {
-      buffer.writeAll(['"scatterSingle":', jsonEncode(scatterSingle), ','], "");
+      buffer.writeAll(['"scatterSingle":', jsonEncode(scatterSingle), ','], '');
     }
     if (splineMultiple != null) {
-      buffer.writeAll(['"splineMultiple":', jsonEncode(splineMultiple), ','], "");
+      buffer.writeAll(['"splineMultiple":', jsonEncode(splineMultiple), ','], '');
     }
     if (splineSingle != null) {
-      buffer.writeAll(['"splineSingle":', jsonEncode(splineSingle), ','], "");
+      buffer.writeAll(['"splineSingle":', jsonEncode(splineSingle), ','], '');
     }
     if (unknownMap != null) {
-      buffer.writeAll(['"unknownMap":', jsonEncode(unknownMap), ','], "");
+      buffer.writeAll(['"unknownMap":', jsonEncode(unknownMap), ','], '');
     }
   }
 

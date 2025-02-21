@@ -1,36 +1,12 @@
-/**
- * Highcharts Flutter
- * 
- * Copyright (c) 2023-2025, Highsoft AS
- * 
- * The software in the Highcharts Flutter repository is free and open source,
- * but as Highcharts Flutter relies on Highcharts.js, it requires a valid
- * Highcharts license for commercial use.
- * 
- * Permission is hereby granted, free of charge, to any person obtaining
- * a copy of this software and associated documentation files (the
- * "Software"), to deal in the Software without restriction, including
- * without limitation the rights to use, copy, modify, merge, publish,
- * distribute, sublicense, and/or sell copies of the Software, and to
- * permit persons to whom the Software is furnished to do so, subject to
- * the following conditions:
- * 
- * The above copyright notice and this permission notice shall be
- * included in all copies or substantial portions of the Software.
- * 
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
- * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
- * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
- * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
- * CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
- * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
- * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- * 
+/* *
  *
- * Built for Highcharts v.xx.
- * Build stamp: 2025-01-16
+ *  Highcharts Flutter
  *
- */
+ *  Copyright (c) 2023-2025, Highsoft AS
+ *
+ *  License: www.highcharts.com/license
+ *
+ * */
 
 
 /* *
@@ -109,31 +85,31 @@ class HighchartsChart3DFrameOptions extends HighchartsOptionsBase {
 
 
     if (back != null) {
-      buffer.writeAll(['"back":', back?.toJSON(), ","], "");
+      buffer.writeAll(['"back":', back?.toJSON(), ','], '');
     }
     if (bottom != null) {
-      buffer.writeAll(['"bottom":', bottom?.toJSON(), ","], "");
+      buffer.writeAll(['"bottom":', bottom?.toJSON(), ','], '');
     }
     if (front != null) {
-      buffer.writeAll(['"front":', front?.toJSON(), ","], "");
+      buffer.writeAll(['"front":', front?.toJSON(), ','], '');
     }
     if (left != null) {
-      buffer.writeAll(['"left":', left?.toJSON(), ","], "");
+      buffer.writeAll(['"left":', left?.toJSON(), ','], '');
     }
     if (right != null) {
-      buffer.writeAll(['"right":', right?.toJSON(), ","], "");
+      buffer.writeAll(['"right":', right?.toJSON(), ','], '');
     }
     if (side != null) {
-      buffer.writeAll(['"side":', side?.toJSON(), ","], "");
+      buffer.writeAll(['"side":', side?.toJSON(), ','], '');
     }
     if (size != null) {
-      buffer.writeAll(['"size":', size, ','], "");
+      buffer.writeAll(['"size":', size, ','], '');
     }
     if (top != null) {
-      buffer.writeAll(['"top":', top?.toJSON(), ","], "");
+      buffer.writeAll(['"top":', top?.toJSON(), ','], '');
     }
     if (visible != null) {
-      buffer.writeAll(['"visible":', jsonEncode(visible), ','], "");
+      buffer.writeAll(['"visible":', jsonEncode(visible), ','], '');
     }
   }
 

@@ -1,36 +1,12 @@
-/**
- * Highcharts Flutter
- * 
- * Copyright (c) 2023-2025, Highsoft AS
- * 
- * The software in the Highcharts Flutter repository is free and open source,
- * but as Highcharts Flutter relies on Highcharts.js, it requires a valid
- * Highcharts license for commercial use.
- * 
- * Permission is hereby granted, free of charge, to any person obtaining
- * a copy of this software and associated documentation files (the
- * "Software"), to deal in the Software without restriction, including
- * without limitation the rights to use, copy, modify, merge, publish,
- * distribute, sublicense, and/or sell copies of the Software, and to
- * permit persons to whom the Software is furnished to do so, subject to
- * the following conditions:
- * 
- * The above copyright notice and this permission notice shall be
- * included in all copies or substantial portions of the Software.
- * 
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
- * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
- * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
- * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
- * CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
- * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
- * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- * 
+/* *
  *
- * Built for Highcharts v.xx.
- * Build stamp: 2025-01-16
+ *  Highcharts Flutter
  *
- */
+ *  Copyright (c) 2023-2025, Highsoft AS
+ *
+ *  License: www.highcharts.com/license
+ *
+ * */
 
 
 /* *
@@ -137,49 +113,49 @@ class HighchartsStockToolsGuiDefinitionsOptions extends HighchartsOptionsBase {
 
 
     if (advanced != null) {
-      buffer.writeAll(['"advanced":', advanced?.toJSON(), ","], "");
+      buffer.writeAll(['"advanced":', advanced?.toJSON(), ','], '');
     }
     if (crookedLines != null) {
-      buffer.writeAll(['"crookedLines":', crookedLines?.toJSON(), ","], "");
+      buffer.writeAll(['"crookedLines":', crookedLines?.toJSON(), ','], '');
     }
     if (currentPriceIndicator != null) {
-      buffer.writeAll(['"currentPriceIndicator":', currentPriceIndicator?.toJSON(), ","], "");
+      buffer.writeAll(['"currentPriceIndicator":', currentPriceIndicator?.toJSON(), ','], '');
     }
     if (flags != null) {
-      buffer.writeAll(['"flags":', flags?.toJSON(), ","], "");
+      buffer.writeAll(['"flags":', flags?.toJSON(), ','], '');
     }
     if (fullScreen != null) {
-      buffer.writeAll(['"fullScreen":', fullScreen?.toJSON(), ","], "");
+      buffer.writeAll(['"fullScreen":', fullScreen?.toJSON(), ','], '');
     }
     if (indicators != null) {
-      buffer.writeAll(['"indicators":', indicators?.toJSON(), ","], "");
+      buffer.writeAll(['"indicators":', indicators?.toJSON(), ','], '');
     }
     if (lines != null) {
-      buffer.writeAll(['"lines":', lines?.toJSON(), ","], "");
+      buffer.writeAll(['"lines":', lines?.toJSON(), ','], '');
     }
     if (measure != null) {
-      buffer.writeAll(['"measure":', measure?.toJSON(), ","], "");
+      buffer.writeAll(['"measure":', measure?.toJSON(), ','], '');
     }
     if (saveChart != null) {
-      buffer.writeAll(['"saveChart":', saveChart?.toJSON(), ","], "");
+      buffer.writeAll(['"saveChart":', saveChart?.toJSON(), ','], '');
     }
     if (separator != null) {
-      buffer.writeAll(['"separator":', separator?.toJSON(), ","], "");
+      buffer.writeAll(['"separator":', separator?.toJSON(), ','], '');
     }
     if (simpleShapes != null) {
-      buffer.writeAll(['"simpleShapes":', simpleShapes?.toJSON(), ","], "");
+      buffer.writeAll(['"simpleShapes":', simpleShapes?.toJSON(), ','], '');
     }
     if (toggleAnnotations != null) {
-      buffer.writeAll(['"toggleAnnotations":', toggleAnnotations?.toJSON(), ","], "");
+      buffer.writeAll(['"toggleAnnotations":', toggleAnnotations?.toJSON(), ','], '');
     }
     if (typeChange != null) {
-      buffer.writeAll(['"typeChange":', typeChange?.toJSON(), ","], "");
+      buffer.writeAll(['"typeChange":', typeChange?.toJSON(), ','], '');
     }
     if (verticalLabels != null) {
-      buffer.writeAll(['"verticalLabels":', verticalLabels?.toJSON(), ","], "");
+      buffer.writeAll(['"verticalLabels":', verticalLabels?.toJSON(), ','], '');
     }
     if (zoomChange != null) {
-      buffer.writeAll(['"zoomChange":', zoomChange?.toJSON(), ","], "");
+      buffer.writeAll(['"zoomChange":', zoomChange?.toJSON(), ','], '');
     }
   }
 

@@ -1,36 +1,12 @@
-/**
- * Highcharts Flutter
- * 
- * Copyright (c) 2023-2025, Highsoft AS
- * 
- * The software in the Highcharts Flutter repository is free and open source,
- * but as Highcharts Flutter relies on Highcharts.js, it requires a valid
- * Highcharts license for commercial use.
- * 
- * Permission is hereby granted, free of charge, to any person obtaining
- * a copy of this software and associated documentation files (the
- * "Software"), to deal in the Software without restriction, including
- * without limitation the rights to use, copy, modify, merge, publish,
- * distribute, sublicense, and/or sell copies of the Software, and to
- * permit persons to whom the Software is furnished to do so, subject to
- * the following conditions:
- * 
- * The above copyright notice and this permission notice shall be
- * included in all copies or substantial portions of the Software.
- * 
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
- * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
- * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
- * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
- * CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
- * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
- * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- * 
+/* *
  *
- * Built for Highcharts v.xx.
- * Build stamp: 2025-01-16
+ *  Highcharts Flutter
  *
- */
+ *  Copyright (c) 2023-2025, Highsoft AS
+ *
+ *  License: www.highcharts.com/license
+ *
+ * */
 
 
 /* *
@@ -160,10 +136,13 @@ const String kHighchartsChartHTML = '''
     scope.HighchartsFlutter = {
       chart: Highcharts.chart('container', {
         chart: {
-          backgroundColor: 'rgba(255,255,255,0)'
+          backgroundColor: '#FFF0'
         },
         exporting: {
           enabled: false
+        },
+        title: {
+          text: void 0
         }
       }),
       update: function (options, redraw = true, animation = true) {
@@ -190,12 +169,33 @@ const String kHighchartsChartHTML = '''
 
 /* *
  *
+ *  Functions
+ *
+ * */
+
+
+String _scriptTag(String? script) {
+
+  if (script == null) {
+    return '';
+  }
+
+  return '<script type="text/javascript">$script</script>';
+}
+
+
+/* *
+ *
  *  Classes
  *
  * */
 
 
 class HighchartsChart extends StatefulWidget {
+
+  /// Custom JavaScript to inject into the webView. This will be executed before
+  /// the initial chart update with the defined options.
+  late final String? javaScript;
 
   final HighchartsOptions options;
 
@@ -205,7 +205,7 @@ class HighchartsChart extends StatefulWidget {
 
   late final WebViewController webViewController;
 
-  HighchartsChart(this.options, { super.key });
+  HighchartsChart(this.options, { super.key, this.javaScript });
 
   void refresh ([bool? redraw]) {
     String json = options.toJSON();
@@ -214,9 +214,8 @@ class HighchartsChart extends StatefulWidget {
     if (kIsWeb) {
       webViewController.loadHtmlString('''
         $kHighchartsChartHTML
-        <script>
-        HighchartsFlutter.update($json, $redraw);
-        </script>
+        ${_scriptTag(javaScript)}
+        ${_scriptTag('HighchartsFlutter.update($json, $redraw);')}
         ''');
     } else {
       webViewController.runJavaScript('HighchartsFlutter.update($json, $redraw)');
@@ -239,10 +238,33 @@ class _HighchartsChartState extends State<HighchartsChart> {
 
   @override
   Widget build(BuildContext context) {
+    var height = widget.options.chart?.height;
+    var width = widget.options.chart?.width;
+
     widget.webView = webView;
     widget.webViewController = webViewController;
-    return Expanded(
+
+    if (height is double && width is double) {
+      return SizedBox(
+          height: height,
+          width: width,
+          child: webView,
+      );
+    } else if (height is double) {
+      return SizedBox.fromSize(
+        size: Size.fromHeight(height),
         child: webView,
+      );
+    } else if (width is double) {
+      return SizedBox.fromSize(
+        size: Size.fromWidth(width),
+        child: webView,
+      );
+    }
+
+    return SizedBox.fromSize(
+      size: const Size.fromHeight(400),
+      child: webView,
     );
   }
 
@@ -274,7 +296,7 @@ class _HighchartsChartState extends State<HighchartsChart> {
         ..setJavaScriptMode(JavaScriptMode.unrestricted)
         ..setBackgroundColor(const Color(0x00000000))
         ..setNavigationDelegate(
-            NavigationDelegate(
+          NavigationDelegate(
             onNavigationRequest: (NavigationRequest request) {
                 String url = request.url;
 
@@ -292,7 +314,7 @@ class _HighchartsChartState extends State<HighchartsChart> {
             onPageFinished: (String url) {
                 widget.refresh();
             }
-            )
+          )
         );
     }
 
@@ -304,9 +326,8 @@ class _HighchartsChartState extends State<HighchartsChart> {
 
     webViewController.loadHtmlString('''
       $kHighchartsChartHTML
-      <script>
-      HighchartsFlutter.update($json);
-      </script>
+      ${_scriptTag(widget.javaScript)}
+      ${_scriptTag('HighchartsFlutter.update($json);')}
     ''');
 
   }

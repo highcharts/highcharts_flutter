@@ -1,36 +1,12 @@
-/**
- * Highcharts Flutter
- * 
- * Copyright (c) 2023-2025, Highsoft AS
- * 
- * The software in the Highcharts Flutter repository is free and open source,
- * but as Highcharts Flutter relies on Highcharts.js, it requires a valid
- * Highcharts license for commercial use.
- * 
- * Permission is hereby granted, free of charge, to any person obtaining
- * a copy of this software and associated documentation files (the
- * "Software"), to deal in the Software without restriction, including
- * without limitation the rights to use, copy, modify, merge, publish,
- * distribute, sublicense, and/or sell copies of the Software, and to
- * permit persons to whom the Software is furnished to do so, subject to
- * the following conditions:
- * 
- * The above copyright notice and this permission notice shall be
- * included in all copies or substantial portions of the Software.
- * 
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
- * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
- * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
- * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
- * CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
- * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
- * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- * 
+/* *
  *
- * Built for Highcharts v.xx.
- * Build stamp: 2025-01-16
+ *  Highcharts Flutter
  *
- */
+ *  Copyright (c) 2023-2025, Highsoft AS
+ *
+ *  License: www.highcharts.com/license
+ *
+ * */
 
 
 /* *
@@ -158,66 +134,66 @@ class HighchartsMapLineSeriesOptions extends HighchartsOptionsBase {
 
 
     if (affectsMapView != null) {
-      buffer.writeAll(['"affectsMapView":', affectsMapView, ','], "");
+      buffer.writeAll(['"affectsMapView":', affectsMapView, ','], '');
     }
     if (animation != null) {
-      buffer.writeAll(['"animation":', animation, ','], "");
+      buffer.writeAll(['"animation":', animation, ','], '');
     }
     if (colorByPoint != null) {
-      buffer.writeAll(['"colorByPoint":', colorByPoint, ','], "");
+      buffer.writeAll(['"colorByPoint":', colorByPoint, ','], '');
     }
     if (colorKey != null) {
-      buffer.writeAll(['"colorKey":', jsonEncode(colorKey), ','], "");
+      buffer.writeAll(['"colorKey":', jsonEncode(colorKey), ','], '');
     }
     if (colors != null) {
       buffer.write('"colors":[');
       for (var item in colors!) {
-        buffer.writeAll([jsonEncode(item), ","], "");
+        buffer.writeAll([jsonEncode(item), ','], '');
       }
-      buffer.write("],");
+      buffer.write('],');
     }
     if (dataLabels != null) {
-      buffer.writeAll(['"dataLabels":', dataLabels?.toJSON(), ","], "");
+      buffer.writeAll(['"dataLabels":', dataLabels?.toJSON(), ','], '');
     }
     if (fillColor != null) {
-      buffer.writeAll(['"fillColor":', jsonEncode(fillColor), ','], "");
+      buffer.writeAll(['"fillColor":', jsonEncode(fillColor), ','], '');
     }
     if (id != null) {
-      buffer.writeAll(['"id":', jsonEncode(id), ','], "");
+      buffer.writeAll(['"id":', jsonEncode(id), ','], '');
     }
     if (index != null) {
-      buffer.writeAll(['"index":', index, ','], "");
+      buffer.writeAll(['"index":', index, ','], '');
     }
     if (legendIndex != null) {
-      buffer.writeAll(['"legendIndex":', legendIndex, ','], "");
+      buffer.writeAll(['"legendIndex":', legendIndex, ','], '');
     }
     if (legendSymbol != null) {
-      buffer.writeAll(['"legendSymbol":', jsonEncode(legendSymbol), ','], "");
+      buffer.writeAll(['"legendSymbol":', jsonEncode(legendSymbol), ','], '');
     }
     if (lineWidth != null) {
-      buffer.writeAll(['"lineWidth":', lineWidth, ','], "");
+      buffer.writeAll(['"lineWidth":', lineWidth, ','], '');
     }
     if (linecap != null) {
-      buffer.writeAll(['"linecap":', jsonEncode(linecap), ','], "");
+      buffer.writeAll(['"linecap":', jsonEncode(linecap), ','], '');
     }
     if (mapData != null) {
       buffer.write('"mapData":[');
       for (var item in mapData!) {
-        buffer.writeAll([jsonEncode(item), ","], "");
+        buffer.writeAll([jsonEncode(item), ','], '');
       }
-      buffer.write("],");
+      buffer.write('],');
     }
     if (nullColor != null) {
-      buffer.writeAll(['"nullColor":', jsonEncode(nullColor), ','], "");
+      buffer.writeAll(['"nullColor":', jsonEncode(nullColor), ','], '');
     }
     if (nullInteraction != null) {
-      buffer.writeAll(['"nullInteraction":', nullInteraction, ','], "");
+      buffer.writeAll(['"nullInteraction":', nullInteraction, ','], '');
     }
     if (states != null) {
-      buffer.writeAll(['"states":', states?.toJSON(), ","], "");
+      buffer.writeAll(['"states":', states?.toJSON(), ','], '');
     }
     if (tooltip != null) {
-      buffer.writeAll(['"tooltip":', tooltip?.toJSON(), ","], "");
+      buffer.writeAll(['"tooltip":', tooltip?.toJSON(), ','], '');
     }
   }
 

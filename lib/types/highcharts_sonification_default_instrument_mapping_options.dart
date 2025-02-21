@@ -1,36 +1,12 @@
-/**
- * Highcharts Flutter
- * 
- * Copyright (c) 2023-2025, Highsoft AS
- * 
- * The software in the Highcharts Flutter repository is free and open source,
- * but as Highcharts Flutter relies on Highcharts.js, it requires a valid
- * Highcharts license for commercial use.
- * 
- * Permission is hereby granted, free of charge, to any person obtaining
- * a copy of this software and associated documentation files (the
- * "Software"), to deal in the Software without restriction, including
- * without limitation the rights to use, copy, modify, merge, publish,
- * distribute, sublicense, and/or sell copies of the Software, and to
- * permit persons to whom the Software is furnished to do so, subject to
- * the following conditions:
- * 
- * The above copyright notice and this permission notice shall be
- * included in all copies or substantial portions of the Software.
- * 
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
- * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
- * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
- * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
- * CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
- * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
- * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- * 
+/* *
  *
- * Built for Highcharts v.xx.
- * Build stamp: 2025-01-16
+ *  Highcharts Flutter
  *
- */
+ *  Copyright (c) 2023-2025, Highsoft AS
+ *
+ *  License: www.highcharts.com/license
+ *
+ * */
 
 
 /* *
@@ -134,37 +110,37 @@ class HighchartsSonificationDefaultInstrumentMappingOptions extends HighchartsOp
 
 
     if (frequency != null) {
-      buffer.writeAll(['"frequency":', frequency?.toJSON(), ","], "");
+      buffer.writeAll(['"frequency":', frequency?.toJSON(), ','], '');
     }
     if (gapBetweenNotes != null) {
-      buffer.writeAll(['"gapBetweenNotes":', gapBetweenNotes?.toJSON(), ","], "");
+      buffer.writeAll(['"gapBetweenNotes":', gapBetweenNotes?.toJSON(), ','], '');
     }
     if (highpass != null) {
-      buffer.writeAll(['"highpass":', highpass?.toJSON(), ","], "");
+      buffer.writeAll(['"highpass":', highpass?.toJSON(), ','], '');
     }
     if (lowpass != null) {
-      buffer.writeAll(['"lowpass":', lowpass?.toJSON(), ","], "");
+      buffer.writeAll(['"lowpass":', lowpass?.toJSON(), ','], '');
     }
     if (noteDuration != null) {
-      buffer.writeAll(['"noteDuration":', noteDuration?.toJSON(), ","], "");
+      buffer.writeAll(['"noteDuration":', noteDuration?.toJSON(), ','], '');
     }
     if (pan != null) {
-      buffer.writeAll(['"pan":', pan?.toJSON(), ","], "");
+      buffer.writeAll(['"pan":', pan?.toJSON(), ','], '');
     }
     if (pitch != null) {
-      buffer.writeAll(['"pitch":', pitch?.toJSON(), ","], "");
+      buffer.writeAll(['"pitch":', pitch?.toJSON(), ','], '');
     }
     if (playDelay != null) {
-      buffer.writeAll(['"playDelay":', playDelay?.toJSON(), ","], "");
+      buffer.writeAll(['"playDelay":', playDelay?.toJSON(), ','], '');
     }
     if (time != null) {
-      buffer.writeAll(['"time":', time?.toJSON(), ","], "");
+      buffer.writeAll(['"time":', time?.toJSON(), ','], '');
     }
     if (tremolo != null) {
-      buffer.writeAll(['"tremolo":', tremolo?.toJSON(), ","], "");
+      buffer.writeAll(['"tremolo":', tremolo?.toJSON(), ','], '');
     }
     if (volume != null) {
-      buffer.writeAll(['"volume":', volume?.toJSON(), ","], "");
+      buffer.writeAll(['"volume":', volume?.toJSON(), ','], '');
     }
   }
 

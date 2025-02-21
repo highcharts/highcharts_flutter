@@ -1,36 +1,12 @@
-/**
- * Highcharts Flutter
- * 
- * Copyright (c) 2023-2025, Highsoft AS
- * 
- * The software in the Highcharts Flutter repository is free and open source,
- * but as Highcharts Flutter relies on Highcharts.js, it requires a valid
- * Highcharts license for commercial use.
- * 
- * Permission is hereby granted, free of charge, to any person obtaining
- * a copy of this software and associated documentation files (the
- * "Software"), to deal in the Software without restriction, including
- * without limitation the rights to use, copy, modify, merge, publish,
- * distribute, sublicense, and/or sell copies of the Software, and to
- * permit persons to whom the Software is furnished to do so, subject to
- * the following conditions:
- * 
- * The above copyright notice and this permission notice shall be
- * included in all copies or substantial portions of the Software.
- * 
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
- * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
- * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
- * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
- * CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
- * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
- * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- * 
+/* *
  *
- * Built for Highcharts v.xx.
- * Build stamp: 2025-01-16
+ *  Highcharts Flutter
  *
- */
+ *  Copyright (c) 2023-2025, Highsoft AS
+ *
+ *  License: www.highcharts.com/license
+ *
+ * */
 
 
 /* *
@@ -108,39 +84,39 @@ class HighchartsSeriesLabelOptions extends HighchartsOptionsBase {
     if (boxesToAvoid != null) {
       buffer.write('"boxesToAvoid":[');
       for (var item in boxesToAvoid!) {
-        buffer.writeAll([jsonEncode(item), ","], "");
+        buffer.writeAll([jsonEncode(item), ','], '');
       }
-      buffer.write("],");
+      buffer.write('],');
     }
     if (connectorAllowed != null) {
-      buffer.writeAll(['"connectorAllowed":', connectorAllowed, ','], "");
+      buffer.writeAll(['"connectorAllowed":', connectorAllowed, ','], '');
     }
     if (connectorNeighbourDistance != null) {
-      buffer.writeAll(['"connectorNeighbourDistance":', connectorNeighbourDistance, ','], "");
+      buffer.writeAll(['"connectorNeighbourDistance":', connectorNeighbourDistance, ','], '');
     }
     if (enabled != null) {
-      buffer.writeAll(['"enabled":', enabled, ','], "");
+      buffer.writeAll(['"enabled":', enabled, ','], '');
     }
     if (format != null) {
-      buffer.writeAll(['"format":', jsonEncode(format), ','], "");
+      buffer.writeAll(['"format":', jsonEncode(format), ','], '');
     }
     if (formatter != null) {
-      buffer.writeAll(['"formatter":', jsonEncode(formatter), ','], "");
+      buffer.writeAll(['"formatter":', jsonEncode(formatter), ','], '');
     }
     if (maxFontSize != null) {
-      buffer.writeAll(['"maxFontSize":', maxFontSize, ','], "");
+      buffer.writeAll(['"maxFontSize":', maxFontSize, ','], '');
     }
     if (minFontSize != null) {
-      buffer.writeAll(['"minFontSize":', minFontSize, ','], "");
+      buffer.writeAll(['"minFontSize":', minFontSize, ','], '');
     }
     if (onArea != null) {
-      buffer.writeAll(['"onArea":', onArea, ','], "");
+      buffer.writeAll(['"onArea":', onArea, ','], '');
     }
     if (style != null) {
-      buffer.writeAll(['"style":', style?.toJSON(), ","], "");
+      buffer.writeAll(['"style":', style?.toJSON(), ','], '');
     }
     if (useHTML != null) {
-      buffer.writeAll(['"useHTML":', useHTML, ','], "");
+      buffer.writeAll(['"useHTML":', useHTML, ','], '');
     }
   }
 

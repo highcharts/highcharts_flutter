@@ -1,36 +1,12 @@
-/**
- * Highcharts Flutter
- * 
- * Copyright (c) 2023-2025, Highsoft AS
- * 
- * The software in the Highcharts Flutter repository is free and open source,
- * but as Highcharts Flutter relies on Highcharts.js, it requires a valid
- * Highcharts license for commercial use.
- * 
- * Permission is hereby granted, free of charge, to any person obtaining
- * a copy of this software and associated documentation files (the
- * "Software"), to deal in the Software without restriction, including
- * without limitation the rights to use, copy, modify, merge, publish,
- * distribute, sublicense, and/or sell copies of the Software, and to
- * permit persons to whom the Software is furnished to do so, subject to
- * the following conditions:
- * 
- * The above copyright notice and this permission notice shall be
- * included in all copies or substantial portions of the Software.
- * 
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
- * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
- * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
- * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
- * CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
- * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
- * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- * 
+/* *
  *
- * Built for Highcharts v.xx.
- * Build stamp: 2025-01-16
+ *  Highcharts Flutter
  *
- */
+ *  Copyright (c) 2023-2025, Highsoft AS
+ *
+ *  License: www.highcharts.com/license
+ *
+ * */
 
 
 /* *
@@ -151,43 +127,43 @@ class HighchartsGanttSeriesOptions extends HighchartsOptionsBase {
 
 
     if (borderRadius != null) {
-      buffer.writeAll(['"borderRadius":', borderRadius, ','], "");
+      buffer.writeAll(['"borderRadius":', borderRadius, ','], '');
     }
     if (colorByPoint != null) {
-      buffer.writeAll(['"colorByPoint":', colorByPoint, ','], "");
+      buffer.writeAll(['"colorByPoint":', colorByPoint, ','], '');
     }
     if (connectors != null) {
-      buffer.writeAll(['"connectors":', connectors?.toJSON(), ","], "");
+      buffer.writeAll(['"connectors":', connectors?.toJSON(), ','], '');
     }
     if (dataLabels != null) {
-      buffer.writeAll(['"dataLabels":', dataLabels?.toJSON(), ","], "");
+      buffer.writeAll(['"dataLabels":', dataLabels?.toJSON(), ','], '');
     }
     if (dragDrop != null) {
-      buffer.writeAll(['"dragDrop":', dragDrop?.toJSON(), ","], "");
+      buffer.writeAll(['"dragDrop":', dragDrop?.toJSON(), ','], '');
     }
     if (events != null) {
-      buffer.writeAll(['"events":', jsonEncode(events), ','], "");
+      buffer.writeAll(['"events":', jsonEncode(events), ','], '');
     }
     if (grouping != null) {
-      buffer.writeAll(['"grouping":', grouping, ','], "");
+      buffer.writeAll(['"grouping":', grouping, ','], '');
     }
     if (id != null) {
-      buffer.writeAll(['"id":', jsonEncode(id), ','], "");
+      buffer.writeAll(['"id":', jsonEncode(id), ','], '');
     }
     if (index != null) {
-      buffer.writeAll(['"index":', index, ','], "");
+      buffer.writeAll(['"index":', index, ','], '');
     }
     if (legendIndex != null) {
-      buffer.writeAll(['"legendIndex":', legendIndex, ','], "");
+      buffer.writeAll(['"legendIndex":', legendIndex, ','], '');
     }
     if (partialFill != null) {
-      buffer.writeAll(['"partialFill":', partialFill?.toJSON(), ","], "");
+      buffer.writeAll(['"partialFill":', partialFill?.toJSON(), ','], '');
     }
     if (pointRange != null) {
-      buffer.writeAll(['"pointRange":', pointRange, ','], "");
+      buffer.writeAll(['"pointRange":', pointRange, ','], '');
     }
     if (tooltip != null) {
-      buffer.writeAll(['"tooltip":', tooltip?.toJSON(), ","], "");
+      buffer.writeAll(['"tooltip":', tooltip?.toJSON(), ','], '');
     }
   }
 

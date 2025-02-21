@@ -1,36 +1,12 @@
-/**
- * Highcharts Flutter
- * 
- * Copyright (c) 2023-2025, Highsoft AS
- * 
- * The software in the Highcharts Flutter repository is free and open source,
- * but as Highcharts Flutter relies on Highcharts.js, it requires a valid
- * Highcharts license for commercial use.
- * 
- * Permission is hereby granted, free of charge, to any person obtaining
- * a copy of this software and associated documentation files (the
- * "Software"), to deal in the Software without restriction, including
- * without limitation the rights to use, copy, modify, merge, publish,
- * distribute, sublicense, and/or sell copies of the Software, and to
- * permit persons to whom the Software is furnished to do so, subject to
- * the following conditions:
- * 
- * The above copyright notice and this permission notice shall be
- * included in all copies or substantial portions of the Software.
- * 
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
- * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
- * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
- * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
- * CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
- * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
- * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- * 
+/* *
  *
- * Built for Highcharts v.xx.
- * Build stamp: 2025-01-16
+ *  Highcharts Flutter
  *
- */
+ *  Copyright (c) 2023-2025, Highsoft AS
+ *
+ *  License: www.highcharts.com/license
+ *
+ * */
 
 
 /* *
@@ -135,42 +111,42 @@ class HighchartsFlowMapSeriesDataOptions extends HighchartsOptionsBase {
 
 
     if (curveFactor != null) {
-      buffer.writeAll(['"curveFactor":', curveFactor, ','], "");
+      buffer.writeAll(['"curveFactor":', curveFactor, ','], '');
     }
     if (fillColor != null) {
-      buffer.writeAll(['"fillColor":', jsonEncode(fillColor), ','], "");
+      buffer.writeAll(['"fillColor":', jsonEncode(fillColor), ','], '');
     }
     if (fillOpacity != null) {
-      buffer.writeAll(['"fillOpacity":', fillOpacity, ','], "");
+      buffer.writeAll(['"fillOpacity":', fillOpacity, ','], '');
     }
     if (from != null) {
       buffer.write('"from":{');
       for (var item in from!.entries) {
-        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ','], '');
       }
-      buffer.write("},");
+      buffer.write('},');
     }
     if (growTowards != null) {
-      buffer.writeAll(['"growTowards":', growTowards, ','], "");
+      buffer.writeAll(['"growTowards":', growTowards, ','], '');
     }
     if (lineWidth != null) {
-      buffer.writeAll(['"lineWidth":', lineWidth, ','], "");
+      buffer.writeAll(['"lineWidth":', lineWidth, ','], '');
     }
     if (markerEnd != null) {
-      buffer.writeAll(['"markerEnd":', markerEnd?.toJSON(), ","], "");
+      buffer.writeAll(['"markerEnd":', markerEnd?.toJSON(), ','], '');
     }
     if (opacity != null) {
-      buffer.writeAll(['"opacity":', opacity, ','], "");
+      buffer.writeAll(['"opacity":', opacity, ','], '');
     }
     if (to != null) {
       buffer.write('"to":{');
       for (var item in to!.entries) {
-        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ","], "");
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ','], '');
       }
-      buffer.write("},");
+      buffer.write('},');
     }
     if (weight != null) {
-      buffer.writeAll(['"weight":', weight, ','], "");
+      buffer.writeAll(['"weight":', weight, ','], '');
     }
   }
 
