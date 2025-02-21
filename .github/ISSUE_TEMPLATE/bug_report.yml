@@ -1,0 +1,64 @@
+name: 'Bug Report'
+description: 'Report a bug in highcharts_flutter'
+title: '[name of widget containing the bug]: [description]'
+labels: ['bug']
+projects: ['highcharts/36']
+body:
+  - type: markdown
+    attributes:
+      value: '### Please fill out the following information to help us fix the issue'
+
+  - type: textarea
+    id: expected-behaviour
+    attributes:
+      label: 'Expected behaviour'
+      description: 'What should happen?'
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual-behaviour
+    attributes:
+      label: 'Actual behaviour'
+      description: "What is actually happening?"
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: "Version"
+      description: "What version of highcharts_flutter are you using?"
+      placeholder: "e.g., 1.0.0"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: affected-devices
+    attributes:
+      label: 'Affected devices/platforms'
+      description: 'Which platforms are affected?'
+      multiple: true
+      options:
+        - Android
+        - iOS
+        - Web with Chrome
+        - Web with Firefox
+        - Web with Safari
+        - Web with Edge
+        - Other
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: 'Relevant log output'
+      description: 'Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.'
+      render: shell
+
+  - type: textarea
+    id: code-snippet
+    attributes:
+      label: 'Relevant code snippet'
+      description: 'Please copy and paste any relevant code snippet. This will be automatically formatted into code, so no need for backticks.'
+      render: dart
+
