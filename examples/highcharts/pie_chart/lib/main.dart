@@ -1,6 +1,4 @@
-/**
- * Highcharts Demo
- */
+/// Highcharts Demo
 
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/highcharts.dart';
@@ -47,63 +45,46 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             HighchartsChart(HighchartsOptions(
-              chart: HighchartsChartOptions(
-                type: "pie",
-              ),
               title: HighchartsTitleOptions(
-                text: "Egg Yolk Composition",
-              ),
-              tooltip: HighchartsTooltipOptions(
-                valueSuffix: "%",
+                text: 'Egg Yolk Composition',
               ),
               subtitle: HighchartsSubtitleOptions(
-                text:
-                    "Source:<a href=\"https://www.mdpi.com/2072-6643/11/3/684/htm\" target=\"_default\">MDPI</a>",
+                text: 'Source:<a href="https://www.mdpi.com/2072-6643/11/3/684/htm" target="_default">MDPI</a>',
+              ),
+              accessibility: HighchartsAccessibilityOptions(
+                point: HighchartsAccessibilityPointOptions(
+                  valueSuffix: '%',
+                ),
+              ),
+              chart: HighchartsChartOptions(
+                plotBorderWidth: 0,
+              ),
+              colors: ['#9CF', '#FC0', '#999', '#666', '#CCC'],
+              tooltip: HighchartsTooltipOptions(
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>',
+                valueSuffix: '%',
               ),
               plotOptions: HighchartsPlotOptions(
-                series: HighchartsSeriesOptions(
+                pie: HighchartsPieSeriesOptions(
                   allowPointSelect: true,
-                  cursor: "pointer",
+                  cursor: 'pointer',
+                  dataLabels: HighchartsPieSeriesDataLabelsOptions(
+                    enabled: false,
+                  ),
+                  showInLegend: true,
                 ),
               ),
               series: [
                 HighchartsPieSeries(
-                  options: HighchartsPieSeriesOptions(),
-                  name: "Percentage",
+                  name: 'Percentage',
                   data: [
-                    [],
-                    [],
-                    [],
-                    [],
-                    [],
-                    [],
-                    [],
-                    [],
-                    [],
-                    [],
-                    [],
-                    [],
-                    [],
-                    [],
-                    [],
-                    [],
-                    [],
-                    [],
-                    [],
-                    [],
-                    [],
-                    [],
-                    [],
-                    [],
-                    [],
+                    ['Water', 55.02],
+                    ['Fat', 26.71],
+                    ['Protein, crude', 15.5],
+                    ['Ash', 1.68],
+                    ['Carbohydrates', 1.09],
                   ],
                 ),
-              ],
-              xAxis: [
-                HighchartsXAxisOptions(),
-              ],
-              yAxis: [
-                HighchartsYAxisOptions(),
               ],
             ))
           ],

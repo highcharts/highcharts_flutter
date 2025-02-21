@@ -55,7 +55,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     enabled: false,
                 ),
                 time: HighchartsTimeOptions(
-                    useUTC: false,
+                    /* useUTC: false, */
                 ),
                 rangeSelector: HighchartsRangeSelectorOptions(
                   buttons: [
@@ -66,14 +66,14 @@ class _MyHomePageState extends State<MyHomePage> {
                     selected: 0,
                 ),
                 title: HighchartsTitleOptions(
-                    text: "Live random data",
+                    text: 'Live random data',
                 ),
                 exporting: HighchartsExportingOptions(
                     enabled: false,
                 ),
                 series: [
                   HighchartsLineSeries(
-                    name: "Random data",
+                    name: 'Random data',
                     data: [
                       [1713524254953,0],
                       [1713524255953,39],
@@ -1076,14 +1076,6 @@ class _MyHomePageState extends State<MyHomePage> {
                       [1713525252953,39],
                       [1713525253953,90],
                     ],
-                  ),
-                ],
-                xAxis: [
-                  HighchartsXAxisOptions(
-                  ),
-                ],
-                yAxis: [
-                  HighchartsYAxisOptions(
                   ),
                 ],
               )

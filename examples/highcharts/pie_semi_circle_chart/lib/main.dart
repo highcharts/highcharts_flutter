@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Column pyramid chart',
+      title: 'Semi circle donut chart',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
@@ -47,46 +47,48 @@ class _MyHomePageState extends State<MyHomePage> {
             HighchartsChart(
               HighchartsOptions(
                 chart: HighchartsChartOptions(
-                  type: 'columnpyramid',
+                  plotBackgroundColor: null,
+                  plotBorderWidth: 0,
                 ),
                 title: HighchartsTitleOptions(
-                  text: 'The 5 highest pyramids in the World',
+                  text: 'Browser<br>shares<br>January<br>2022',
+                  align: 'center',
+                  verticalAlign: 'middle',
+                  y: 60,
                 ),
-                colors: ['#C79D6D', '#B5927B', '#CE9B84', '#B7A58C', '#C7A58C'],
-                xAxis: [
-                  HighchartsXAxisOptions(
-                    crosshair:
-                        HighchartsXAxisCrosshairOptions(dashStyle: 'Solid'),
-                    labels: HighchartsXAxisLabelsOptions(
-                      style: HighchartsXAxisLabelsStyleOptions(
-                        fontSize: '14px',
-                      ),
-                    ),
-                    type: 'category',
-                  ),
-                ],
-                yAxis: [
-                  HighchartsYAxisOptions(
-                    min: 0,
-                    title: HighchartsYAxisTitleOptions(text: 'Height (m)'),
-                  ),
-                ],
                 tooltip: HighchartsTooltipOptions(
-                  valueSuffix: ' m',
+                  pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>',
+                ),
+                accessibility: HighchartsAccessibilityOptions(
+                  point: HighchartsAccessibilityPointOptions(
+                    valueSuffix: '%',
+                  ),
+                ),
+                plotOptions: HighchartsPlotOptions(
+                  pie: HighchartsPieSeriesOptions(
+                    dataLabels: HighchartsPieSeriesDataLabelsOptions(
+                      enabled: true,
+                      distance: -50,
+                    ),
+                    center: ['50%', '75%'],
+                    startAngle: -90,
+                    endAngle: 90,
+                    size: '110%',
+                  ),
                 ),
                 series: [
-                  HighchartsColumnPyramidSeries(
-                    name: 'Height',
-                    options: HighchartsColumnPyramidSeriesOptions(
-                      showInLegend: false,
-                      colorByPoint: true,
+                  HighchartsPieSeries(
+                    name: 'Browser share',
+                    options: HighchartsPieSeriesOptions(
+                      innerSize: '50%',
                     ),
                     data: [
-                      ['Pyramid of Khufu', 138.8],
-                      ['Pyramid of Khafre', 136.4],
-                      ['Red Pyramid', 104],
-                      ['Bent Pyramid', 101.1],
-                      ['Pyramid of the Sun', 75],
+                      ['Chrome', 73.86],
+                      ['Edge', 11.97],
+                      ['Firefox', 5.52],
+                      ['Safari', 2.98],
+                      ['Internet Explorer', 1.9],
+                      ['Other', 3.77],
                     ],
                   ),
                 ],

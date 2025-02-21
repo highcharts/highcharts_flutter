@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Column pyramid chart',
+      title: 'Column chart',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
@@ -47,46 +47,70 @@ class _MyHomePageState extends State<MyHomePage> {
             HighchartsChart(
               HighchartsOptions(
                 chart: HighchartsChartOptions(
-                  type: 'columnpyramid',
+                  type: 'column',
                 ),
                 title: HighchartsTitleOptions(
-                  text: 'The 5 highest pyramids in the World',
+                  text: 'Corn vs wheat estimated production for 2020',
                 ),
-                colors: ['#C79D6D', '#B5927B', '#CE9B84', '#B7A58C', '#C7A58C'],
+                subtitle: HighchartsSubtitleOptions(
+                  text:
+                      'Source: <a target="_blank" href="https://www.indexmundi.com/agriculture/?commodity=corn">indexmundi</a>',
+                ),
                 xAxis: [
                   HighchartsXAxisOptions(
+                    categories: [
+                      'USA',
+                      'China',
+                      'Brazil',
+                      'EU',
+                      'Argentina',
+                      'India'
+                    ],
                     crosshair:
                         HighchartsXAxisCrosshairOptions(dashStyle: 'Solid'),
-                    labels: HighchartsXAxisLabelsOptions(
-                      style: HighchartsXAxisLabelsStyleOptions(
-                        fontSize: '14px',
-                      ),
-                    ),
-                    type: 'category',
+                    accessibility: HighchartsXAxisAccessibilityOptions(
+                        description: 'Countries'),
                   ),
                 ],
                 yAxis: [
                   HighchartsYAxisOptions(
                     min: 0,
-                    title: HighchartsYAxisTitleOptions(text: 'Height (m)'),
+                    title: HighchartsYAxisTitleOptions(
+                        text: '1000 metric tons (MT)'),
                   ),
                 ],
                 tooltip: HighchartsTooltipOptions(
-                  valueSuffix: ' m',
+                  valueSuffix: ' (1000 MT)',
+                ),
+                plotOptions: HighchartsPlotOptions(
+                  column: HighchartsColumnSeriesOptions(
+                    pointPadding: 0.2,
+                    borderWidth: 0,
+                  ),
                 ),
                 series: [
-                  HighchartsColumnPyramidSeries(
-                    name: 'Height',
-                    options: HighchartsColumnPyramidSeriesOptions(
-                      showInLegend: false,
-                      colorByPoint: true,
-                    ),
+                  HighchartsColumnSeries(
+                    options: HighchartsColumnSeriesOptions(),
+                    name: 'Corn',
                     data: [
-                      ['Pyramid of Khufu', 138.8],
-                      ['Pyramid of Khafre', 136.4],
-                      ['Red Pyramid', 104],
-                      ['Bent Pyramid', 101.1],
-                      ['Pyramid of the Sun', 75],
+                      [0, 406292],
+                      [1, 260000],
+                      [2, 107000],
+                      [3, 68300],
+                      [4, 27500],
+                      [5, 14500],
+                    ],
+                  ),
+                  HighchartsColumnSeries(
+                    options: HighchartsColumnSeriesOptions(),
+                    name: 'Wheat',
+                    data: [
+                      [0, 51086],
+                      [1, 136000],
+                      [2, 5500],
+                      [3, 141000],
+                      [4, 107180],
+                      [5, 77000],
                     ],
                   ),
                 ],

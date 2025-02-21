@@ -1,3 +1,8 @@
+/// Highcharts Demo
+
+import 'dart:async';
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/highcharts.dart';
 
@@ -12,7 +17,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Hello Highcharts',
+      title: 'Line with refresh chart',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
@@ -31,18 +36,51 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  HighchartsChart? _chart;
+  final List<List<dynamic>> _data = [[0, 5], [1, 55.5], [2, 10]];
+  Random _random = Random();
+  Timer? _timer;
+
+  void initAsyncDemo() {
+    _random = Random();
+    _timer = Timer.periodic(
+      const Duration(seconds: 3),
+      (final Timer t) => setState(() {
+        if (_chart != null) {
+          _data.add([_data.length, _random.nextInt(40) + 20]);
+          _chart!.refresh();
+        }
+      }),
+    );
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    initAsyncDemo();
+  }
+
+  @override
+  void dispose() {
+    _timer?.cancel();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
 
-    final HighchartsChart chart = HighchartsChart(
+    _chart = HighchartsChart(
       HighchartsOptions(
+        chart: HighchartsChartOptions(
+          backgroundColor: '#FFF0'
+        ),
         title: HighchartsTitleOptions(
           text: 'Hello, World!'
         ),
         series: [
           HighchartsLineSeries(
             name: 'My First Series',
-            data: [[0, 5], [0.5, 55.5], [1, 10]],
+            data: _data,
             options: HighchartsLineSeriesOptions(
               color: '#C60'
             )
@@ -61,7 +99,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 point: {
                   'xAxis': 0,
                   'yAxis': 0,
-                  'x': 0.5,
+                  'x': 1,
                   'y': 55.5
                 },
                 text: 'Hello!'
@@ -69,7 +107,21 @@ class _MyHomePageState extends State<MyHomePage> {
             ]
           )
         ]
-      )
+      ),
+      javaScript: '''
+        HighchartsFlutter.update({
+          plotOptions: {
+            series: {
+              tooltip: {
+                headerFormat: '',
+                pointFormatter: function () {
+                  return `Value: \${this.y}<br />Created by custom JS`;
+                }
+              }
+            }
+          }
+        });
+      '''
     );
 
     return Scaffold(
@@ -77,10 +129,13 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body: ListView(
-        children: [
-          chart
-        ],
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(child: _chart)
+          ],
+        ),
       ),
     );
   }

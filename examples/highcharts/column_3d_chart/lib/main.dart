@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Column pyramid chart',
+      title: 'Column 3D chart',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
@@ -47,46 +47,60 @@ class _MyHomePageState extends State<MyHomePage> {
             HighchartsChart(
               HighchartsOptions(
                 chart: HighchartsChartOptions(
-                  type: 'columnpyramid',
+                  type: 'column',
+                  backgroundColor: 'rgba(255, 255, 255, 0)',
+                  options3d: HighchartsChart3DOptions(
+                    enabled: true,
+                    alpha: 15,
+                    beta: 15,
+                    depth: 50,
+                    viewDistance: 25,
+                  ),
                 ),
-                title: HighchartsTitleOptions(
-                  text: 'The 5 highest pyramids in the World',
-                ),
-                colors: ['#C79D6D', '#B5927B', '#CE9B84', '#B7A58C', '#C7A58C'],
                 xAxis: [
                   HighchartsXAxisOptions(
-                    crosshair:
-                        HighchartsXAxisCrosshairOptions(dashStyle: 'Solid'),
-                    labels: HighchartsXAxisLabelsOptions(
-                      style: HighchartsXAxisLabelsStyleOptions(
-                        fontSize: '14px',
-                      ),
-                    ),
                     type: 'category',
                   ),
                 ],
                 yAxis: [
                   HighchartsYAxisOptions(
-                    min: 0,
-                    title: HighchartsYAxisTitleOptions(text: 'Height (m)'),
+                    title: HighchartsYAxisTitleOptions(enabled: false),
                   ),
                 ],
                 tooltip: HighchartsTooltipOptions(
-                  valueSuffix: ' m',
+                  headerFormat: '<b>{point.key}</b><br>',
+                  pointFormat: 'Cars sold: {point.y}',
+                ),
+                title: HighchartsTitleOptions(
+                  text: 'Sold passenger cars in Norway by brand, January 2021',
+                  align: 'left',
+                ),
+                subtitle: HighchartsSubtitleOptions(
+                  text:
+                      'Source: <a href="https://ofv.no/registreringsstatistikk"target="_blank">OFV</a>',
+                ),
+                legend: HighchartsLegendOptions(
+                  enabled: false,
+                ),
+                plotOptions: HighchartsPlotOptions(
+                  column: HighchartsColumnSeriesOptions(
+                    depth: 25,
+                  ),
                 ),
                 series: [
-                  HighchartsColumnPyramidSeries(
-                    name: 'Height',
-                    options: HighchartsColumnPyramidSeriesOptions(
-                      showInLegend: false,
-                      colorByPoint: true,
-                    ),
+                  HighchartsColumnSeries(
+                    options: HighchartsColumnSeriesOptions(colorByPoint: true),
                     data: [
-                      ['Pyramid of Khufu', 138.8],
-                      ['Pyramid of Khafre', 136.4],
-                      ['Red Pyramid', 104],
-                      ['Bent Pyramid', 101.1],
-                      ['Pyramid of the Sun', 75],
+                      ['Toyota', 1795],
+                      ['Volkswagen', 1242],
+                      ['Volvo', 1074],
+                      ['Tesla', 832],
+                      ['Hyundai', 593],
+                      ['MG', 509],
+                      ['Skoda', 471],
+                      ['BMW', 442],
+                      ['Ford', 385],
+                      ['Nissan', 371],
                     ],
                   ),
                 ],

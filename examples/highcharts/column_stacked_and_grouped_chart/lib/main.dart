@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Column pyramid chart',
+      title: 'Column stacked and grouped chart',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
@@ -47,46 +47,62 @@ class _MyHomePageState extends State<MyHomePage> {
             HighchartsChart(
               HighchartsOptions(
                 chart: HighchartsChartOptions(
-                  type: 'columnpyramid',
+                  type: 'column',
                 ),
                 title: HighchartsTitleOptions(
-                  text: 'The 5 highest pyramids in the World',
+                  text: 'Olympic Games all-time medal table, grouped by continent',
+                  align: 'left',
                 ),
-                colors: ['#C79D6D', '#B5927B', '#CE9B84', '#B7A58C', '#C7A58C'],
                 xAxis: [
                   HighchartsXAxisOptions(
-                    crosshair:
-                        HighchartsXAxisCrosshairOptions(dashStyle: 'Solid'),
-                    labels: HighchartsXAxisLabelsOptions(
-                      style: HighchartsXAxisLabelsStyleOptions(
-                        fontSize: '14px',
-                      ),
-                    ),
-                    type: 'category',
-                  ),
+                  categories: ['Gold', 'Silver', 'Bronze'],),
                 ],
                 yAxis: [
                   HighchartsYAxisOptions(
-                    min: 0,
-                    title: HighchartsYAxisTitleOptions(text: 'Height (m)'),
-                  ),
+                      allowDecimals: false,
+                      min: 0,
+                      title: HighchartsYAxisTitleOptions(text: 'Count medals'),),
                 ],
                 tooltip: HighchartsTooltipOptions(
-                  valueSuffix: ' m',
+                  format:
+                      '<b>{key}</b><br/>{series.name}: {y}<br/>Total: {point.stackTotal}',
+                ),
+                plotOptions: HighchartsPlotOptions(
+                  column: HighchartsColumnSeriesOptions(
+                    stacking: 'normal',
+                  ),
                 ),
                 series: [
-                  HighchartsColumnPyramidSeries(
-                    name: 'Height',
-                    options: HighchartsColumnPyramidSeriesOptions(
-                      showInLegend: false,
-                      colorByPoint: true,
-                    ),
+                  HighchartsColumnSeries(
+                    name: 'Norway',
                     data: [
-                      ['Pyramid of Khufu', 138.8],
-                      ['Pyramid of Khafre', 136.4],
-                      ['Red Pyramid', 104],
-                      ['Bent Pyramid', 101.1],
-                      ['Pyramid of the Sun', 75],
+                      [0, 148],
+                      [1, 133],
+                      [2, 124],
+                    ],
+                  ),
+                  HighchartsColumnSeries(
+                    name: 'Germany',
+                    data: [
+                      [0, 102],
+                      [1, 98],
+                      [2, 65],
+                    ],
+                  ),
+                  HighchartsColumnSeries(
+                    name: 'United States',
+                    data: [
+                      [0, 113],
+                      [1, 122],
+                      [2, 95],
+                    ],
+                  ),
+                  HighchartsColumnSeries(
+                    name: 'Canada',
+                    data: [
+                      [0, 77],
+                      [1, 72],
+                      [2, 80],
                     ],
                   ),
                 ],
@@ -98,3 +114,4 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+

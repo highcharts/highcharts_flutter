@@ -1,7 +1,4 @@
-
-/**
- * Highcharts Demo
- */
+/// Highcharts Demo
 
 import 'package:flutter/material.dart';
 import 'package:highcharts_flutter/highcharts.dart';
@@ -49,22 +46,22 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             HighchartsChart(HighchartsOptions(
               title: HighchartsTitleOptions(
-                text: "U.S Solar Employment Growth",
-                align: "left",
+                text: 'U.S Solar Employment Growth',
+                align: 'left',
               ),
               subtitle: HighchartsSubtitleOptions(
-                text: "By Job Category. Source: <a href=\"https://irecusa.org/programs/solar-jobs-census/\" target=\"_blank\">IREC</a>.",
+                text: 'By Job Category. Source: <a href="https://irecusa.org/programs/solar-jobs-census/" target="_blank">IREC</a>.',
               ),
               yAxis: [
                 HighchartsYAxisOptions(
                   title: HighchartsYAxisTitleOptions(
-                    text: "Number of Employees",
+                    text: 'Number of Employees',
                   )),
               ],
               xAxis: [
                 HighchartsXAxisOptions(
                   accessibility: HighchartsXAxisAccessibilityOptions(
-                    rangeDescription: "Range: 2010 to 2022",
+                    rangeDescription: 'Range: 2010 to 2022',
                   )
                 ),
               ],
@@ -75,7 +72,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               series: [
                 HighchartsLineSeries(
-                  name: "Installation & Developers",
+                  name: 'Installation & Developers',
                   data: [
                     [2010, 43934],
                     [2011, 48656],
@@ -93,7 +90,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ]
                 ),
                 HighchartsLineSeries(
-                  name: "Manufacturing", 
+                  name: 'Manufacturing',
                   data: [
                     [2010, 24916],
                     [2011, 37941],
@@ -111,7 +108,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ]
                 ),
                 HighchartsLineSeries(
-                  name: "Sales & Distribution",
+                  name: 'Sales & Distribution',
                   data: [
                     [2010, 11744],
                     [2011, 30000],
@@ -129,7 +126,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ]
                 ),
                 HighchartsLineSeries(
-                  name: "Operations & Maintenance",
+                  name: 'Operations & Maintenance',
                   data: [
                     [2010, null],
                     [2011, null],
@@ -147,7 +144,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ]
               ),
               HighchartsLineSeries(
-                name: "Other",
+                name: 'Other',
                 data: [
                   [2010, 21908],
                   [2011, 5548],

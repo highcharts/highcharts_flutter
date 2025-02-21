@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Column pyramid chart',
+      title: 'Waterfall chart',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
@@ -47,46 +47,45 @@ class _MyHomePageState extends State<MyHomePage> {
             HighchartsChart(
               HighchartsOptions(
                 chart: HighchartsChartOptions(
-                  type: 'columnpyramid',
+                  type: 'waterfall',
                 ),
                 title: HighchartsTitleOptions(
-                  text: 'The 5 highest pyramids in the World',
+                  text: 'Highcharts Waterfall',
                 ),
-                colors: ['#C79D6D', '#B5927B', '#CE9B84', '#B7A58C', '#C7A58C'],
                 xAxis: [
                   HighchartsXAxisOptions(
-                    crosshair:
-                        HighchartsXAxisCrosshairOptions(dashStyle: 'Solid'),
-                    labels: HighchartsXAxisLabelsOptions(
-                      style: HighchartsXAxisLabelsStyleOptions(
-                        fontSize: '14px',
-                      ),
-                    ),
                     type: 'category',
                   ),
                 ],
                 yAxis: [
                   HighchartsYAxisOptions(
-                    min: 0,
-                    title: HighchartsYAxisTitleOptions(text: 'Height (m)'),
+                    title: HighchartsYAxisTitleOptions(
+                      text: 'USD',
+                    ),
                   ),
                 ],
+                legend: HighchartsLegendOptions(
+                  enabled: false,
+                ),
                 tooltip: HighchartsTooltipOptions(
-                  valueSuffix: ' m',
+                  pointFormat: '<b>\${point.y:,.2f}</b> USD',
                 ),
                 series: [
-                  HighchartsColumnPyramidSeries(
-                    name: 'Height',
-                    options: HighchartsColumnPyramidSeriesOptions(
-                      showInLegend: false,
-                      colorByPoint: true,
+                  HighchartsWaterfallSeries(
+                    options: HighchartsWaterfallSeriesOptions(
+                      keys: ['name', 'y'],
+                      dataLabels: HighchartsWaterfallSeriesDataLabelsOptions(
+                        enabled: true,
+                        format: '{divide y 1000}k',
+                      ),
+                      pointPadding: 0,
                     ),
                     data: [
-                      ['Pyramid of Khufu', 138.8],
-                      ['Pyramid of Khafre', 136.4],
-                      ['Red Pyramid', 104],
-                      ['Bent Pyramid', 101.1],
-                      ['Pyramid of the Sun', 75],
+                      ['Start', 120000],
+                      ['Product Revenue', 569000],
+                      ['Service Revenue', 231000],
+                      ['Fixed Costs', -342000],
+                      ['Variable Costs', -233000],
                     ],
                   ),
                 ],

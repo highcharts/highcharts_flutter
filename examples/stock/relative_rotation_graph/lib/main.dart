@@ -50,15 +50,15 @@ class _MyHomePageState extends State<MyHomePage> {
             HighchartsStock(
               HighchartsOptions(
                 chart: HighchartsChartOptions(
-                  type: "scatter",
-                  height: "90%",
+                  type: 'scatter',
+                  height: '90%',
                   plotBorderWidth: 10,
-                  plotBorderColor: "#ffffff",
-                  backgroundColor: "#f7f7f8",
+                  plotBorderColor: '#FFF',
+                  backgroundColor: '#F7F7F8',
                   spacing: [
                     10,85,15,20,
                   ],
-                  className: "rounded-plot-border",
+                  className: 'rounded-plot-border',
                 ),
                 legend: HighchartsLegendOptions(
                     enabled: false,
@@ -68,7 +68,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ],
                 title: HighchartsTitleOptions(
-                    text: "Relative Rotation Graph®️",
+                    text: 'Relative Rotation Graph®️',
                 ),
                 plotOptions: HighchartsPlotOptions(
                   series: HighchartsSeriesOptions(
@@ -76,12 +76,12 @@ class _MyHomePageState extends State<MyHomePage> {
                     marker: HighchartsSeriesMarkerOptions(
                         enabled: true,
                         radius: 3,
-                        symbol: "circle",
+                        symbol: 'circle',
                     ),
                   ),
                 ),
                 tooltip: HighchartsTooltipOptions(
-                    pointFormat: "RS-Ratio®️: <b>{point.x}</b></br>RS-Momentum®️: <b>{point.y}</b>",
+                    pointFormat: 'RS-Ratio®️: <b>{point.x}</b></br>RS-Momentum®️: <b>{point.y}</b>',
                 ),
                 xAxis: [
                   HighchartsXAxisOptions(
@@ -93,7 +93,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ],
                 series: [
                   HighchartsScatterSeries(
-                    name: "Stock 1",
+                    name: 'Stock 1',
                     data: [
                       [102,102],
                       [102.25,101.5],
@@ -105,11 +105,11 @@ class _MyHomePageState extends State<MyHomePage> {
                       [101.375,98],
                     ],
                     options: HighchartsScatterSeriesOptions(
-                      color: "#9a5c00",
+                      color: '#9A5C00',
                     ),
                   ),
                   HighchartsScatterSeries(
-                    name: "Stock 2",
+                    name: 'Stock 2',
                     data: [
                       [101.8,98.3],
                       [101.4,97.5],
@@ -122,11 +122,11 @@ class _MyHomePageState extends State<MyHomePage> {
                       [100,102.5],
                     ],
                     options: HighchartsScatterSeriesOptions(
-                      color: "#004bb3",
+                      color: '#004BB3',
                     ),
                   ),
                   HighchartsScatterSeries(
-                    name: "Stock 3",
+                    name: 'Stock 3',
                     data: [
                       [98,96.5],
                       [97.2,97],
@@ -147,11 +147,11 @@ class _MyHomePageState extends State<MyHomePage> {
                       [100.4,103.5],
                     ],
                     options: HighchartsScatterSeriesOptions(
-                      color: "#008224",
+                      color: '#008224',
                     ),
                   ),
                   HighchartsScatterSeries(
-                    name: "Stock 4",
+                    name: 'Stock 4',
                     data: [
                       [98.5,98.5],
                       [98.7,99],
@@ -163,7 +163,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       [101.3,103],
                     ],
                     options: HighchartsScatterSeriesOptions(
-                      color: "#008224",
+                      color: '#008224',
                     ),
                   ),
                 ],
