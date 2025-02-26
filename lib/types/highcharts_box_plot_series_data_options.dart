@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -23,26 +21,22 @@ import 'highcharts_box_plot_series_data_data_labels_options.dart';
 import 'highcharts_box_plot_series_data_drag_drop_options.dart';
 import 'highcharts_box_plot_series_data_events_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_box_plot_series_data_accessibility_options.dart';
 export 'highcharts_box_plot_series_data_data_labels_options.dart';
 export 'highcharts_box_plot_series_data_drag_drop_options.dart';
 export 'highcharts_box_plot_series_data_events_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * An array of data points for the series. For the `boxplot` series
@@ -91,7 +85,6 @@ export 'highcharts_box_plot_series_data_events_options.dart';
  *    ```
  */
 class HighchartsBoxPlotSeriesDataOptions extends HighchartsOptionsBase {
-
   HighchartsBoxPlotSeriesDataAccessibilityOptions? accessibility;
   String? boxDashStyle;
   String? className;
@@ -117,38 +110,35 @@ class HighchartsBoxPlotSeriesDataOptions extends HighchartsOptionsBase {
   dynamic x;
   double? y;
 
-
-  HighchartsBoxPlotSeriesDataOptions({
-    this.accessibility,
-    this.boxDashStyle,
-    this.className,
-    this.color,
-    this.colorIndex,
-    this.custom,
-    this.dataLabels,
-    this.description,
-    this.dragDrop,
-    this.drilldown,
-    this.events,
-    this.high,
-    this.id,
-    this.labelrank,
-    this.low,
-    this.median,
-    this.medianDashStyle,
-    this.q1,
-    this.q3,
-    this.selected,
-    this.stemDashStyle,
-    this.whiskerDashStyle,
-    this.x,
-    this.y
-  });
+  HighchartsBoxPlotSeriesDataOptions(
+      {this.accessibility,
+      this.boxDashStyle,
+      this.className,
+      this.color,
+      this.colorIndex,
+      this.custom,
+      this.dataLabels,
+      this.description,
+      this.dragDrop,
+      this.drilldown,
+      this.events,
+      this.high,
+      this.id,
+      this.labelrank,
+      this.low,
+      this.median,
+      this.medianDashStyle,
+      this.q1,
+      this.q3,
+      this.selected,
+      this.stemDashStyle,
+      this.whiskerDashStyle,
+      this.x,
+      this.y});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (accessibility != null) {
       buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ','], '');
@@ -207,7 +197,8 @@ class HighchartsBoxPlotSeriesDataOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"median":', median, ','], '');
     }
     if (medianDashStyle != null) {
-      buffer.writeAll(['"medianDashStyle":', jsonEncode(medianDashStyle), ','], '');
+      buffer.writeAll(
+          ['"medianDashStyle":', jsonEncode(medianDashStyle), ','], '');
     }
     if (q1 != null) {
       buffer.writeAll(['"q1":', q1, ','], '');
@@ -222,7 +213,8 @@ class HighchartsBoxPlotSeriesDataOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"stemDashStyle":', jsonEncode(stemDashStyle), ','], '');
     }
     if (whiskerDashStyle != null) {
-      buffer.writeAll(['"whiskerDashStyle":', jsonEncode(whiskerDashStyle), ','], '');
+      buffer.writeAll(
+          ['"whiskerDashStyle":', jsonEncode(whiskerDashStyle), ','], '');
     }
     if (x != null) {
       buffer.writeAll(['"x":', jsonEncode(x), ','], '');
@@ -231,5 +223,4 @@ class HighchartsBoxPlotSeriesDataOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"y":', y, ','], '');
     }
   }
-
 }

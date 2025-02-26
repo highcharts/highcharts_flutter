@@ -8,18 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
 import 'highcharts_ikhseries_kijun_line_styles_options.dart';
-
 
 /* *
  *
@@ -27,9 +23,7 @@ import 'highcharts_ikhseries_kijun_line_styles_options.dart';
  *
  * */
 
-
 export 'highcharts_ikhseries_kijun_line_styles_options.dart';
-
 
 /* *
  *
@@ -37,27 +31,20 @@ export 'highcharts_ikhseries_kijun_line_styles_options.dart';
  *
  * */
 
-
 /**
  * The styles for Kijun line
  */
 class HighchartsIKHSeriesKijunLineOptions extends HighchartsOptionsBase {
-
   HighchartsIKHSeriesKijunLineStylesOptions? styles;
 
-
-  HighchartsIKHSeriesKijunLineOptions({
-    this.styles
-  });
+  HighchartsIKHSeriesKijunLineOptions({this.styles});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (styles != null) {
       buffer.writeAll(['"styles":', styles?.toJSON(), ','], '');
     }
   }
-
 }

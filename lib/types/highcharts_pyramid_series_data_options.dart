@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -23,26 +21,22 @@ import 'highcharts_pyramid_series_data_data_labels_options.dart';
 import 'highcharts_pyramid_series_data_drag_drop_options.dart';
 import 'highcharts_pyramid_series_data_events_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_pyramid_series_data_accessibility_options.dart';
 export 'highcharts_pyramid_series_data_data_labels_options.dart';
 export 'highcharts_pyramid_series_data_drag_drop_options.dart';
 export 'highcharts_pyramid_series_data_events_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * An array of data points for the series. For the `pyramid` series
@@ -72,7 +66,6 @@ export 'highcharts_pyramid_series_data_events_options.dart';
  *    ```
  */
 class HighchartsPyramidSeriesDataOptions extends HighchartsOptionsBase {
-
   HighchartsPyramidSeriesDataAccessibilityOptions? accessibility;
   String? className;
   String? color;
@@ -89,29 +82,26 @@ class HighchartsPyramidSeriesDataOptions extends HighchartsOptionsBase {
   bool? selected;
   double? y;
 
-
-  HighchartsPyramidSeriesDataOptions({
-    this.accessibility,
-    this.className,
-    this.color,
-    this.colorIndex,
-    this.custom,
-    this.dataLabels,
-    this.description,
-    this.dragDrop,
-    this.drilldown,
-    this.events,
-    this.id,
-    this.labelrank,
-    this.legendIndex,
-    this.selected,
-    this.y
-  });
+  HighchartsPyramidSeriesDataOptions(
+      {this.accessibility,
+      this.className,
+      this.color,
+      this.colorIndex,
+      this.custom,
+      this.dataLabels,
+      this.description,
+      this.dragDrop,
+      this.drilldown,
+      this.events,
+      this.id,
+      this.labelrank,
+      this.legendIndex,
+      this.selected,
+      this.y});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (accessibility != null) {
       buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ','], '');
@@ -163,5 +153,4 @@ class HighchartsPyramidSeriesDataOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"y":', y, ','], '');
     }
   }
-
 }

@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,36 +23,26 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Options for the series data sorting.
  */
 class HighchartsSeriesDataSortingOptions extends HighchartsOptionsBase {
-
   bool? enabled;
   bool? matchByName;
   String? sortKey;
 
-
-  HighchartsSeriesDataSortingOptions({
-    this.enabled,
-    this.matchByName,
-    this.sortKey
-  });
+  HighchartsSeriesDataSortingOptions(
+      {this.enabled, this.matchByName, this.sortKey});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (enabled != null) {
       buffer.writeAll(['"enabled":', enabled, ','], '');
@@ -67,5 +54,4 @@ class HighchartsSeriesDataSortingOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"sortKey":', jsonEncode(sortKey), ','], '');
     }
   }
-
 }

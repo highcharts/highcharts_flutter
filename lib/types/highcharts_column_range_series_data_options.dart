@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -23,26 +21,22 @@ import 'highcharts_column_range_series_data_data_labels_options.dart';
 import 'highcharts_column_range_series_data_drag_drop_options.dart';
 import 'highcharts_column_range_series_data_events_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_column_range_series_data_accessibility_options.dart';
 export 'highcharts_column_range_series_data_data_labels_options.dart';
 export 'highcharts_column_range_series_data_drag_drop_options.dart';
 export 'highcharts_column_range_series_data_events_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * An array of data points for the series. For the `columnrange` series
@@ -85,7 +79,6 @@ export 'highcharts_column_range_series_data_events_options.dart';
  *    ```
  */
 class HighchartsColumnRangeSeriesDataOptions extends HighchartsOptionsBase {
-
   HighchartsColumnRangeSeriesDataAccessibilityOptions? accessibility;
   String? className;
   String? color;
@@ -103,30 +96,27 @@ class HighchartsColumnRangeSeriesDataOptions extends HighchartsOptionsBase {
   bool? selected;
   dynamic x;
 
-
-  HighchartsColumnRangeSeriesDataOptions({
-    this.accessibility,
-    this.className,
-    this.color,
-    this.colorIndex,
-    this.custom,
-    this.dataLabels,
-    this.description,
-    this.dragDrop,
-    this.drilldown,
-    this.events,
-    this.high,
-    this.id,
-    this.labelrank,
-    this.low,
-    this.selected,
-    this.x
-  });
+  HighchartsColumnRangeSeriesDataOptions(
+      {this.accessibility,
+      this.className,
+      this.color,
+      this.colorIndex,
+      this.custom,
+      this.dataLabels,
+      this.description,
+      this.dragDrop,
+      this.drilldown,
+      this.events,
+      this.high,
+      this.id,
+      this.labelrank,
+      this.low,
+      this.selected,
+      this.x});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (accessibility != null) {
       buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ','], '');
@@ -181,5 +171,4 @@ class HighchartsColumnRangeSeriesDataOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"x":', jsonEncode(x), ','], '');
     }
   }
-
 }

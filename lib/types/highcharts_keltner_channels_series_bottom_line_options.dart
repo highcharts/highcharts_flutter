@@ -8,18 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
 import 'highcharts_keltner_channels_series_bottom_line_styles_options.dart';
-
 
 /* *
  *
@@ -27,9 +23,7 @@ import 'highcharts_keltner_channels_series_bottom_line_styles_options.dart';
  *
  * */
 
-
 export 'highcharts_keltner_channels_series_bottom_line_styles_options.dart';
-
 
 /* *
  *
@@ -37,27 +31,21 @@ export 'highcharts_keltner_channels_series_bottom_line_styles_options.dart';
  *
  * */
 
-
 /**
  * Bottom line options.
  */
-class HighchartsKeltnerChannelsSeriesBottomLineOptions extends HighchartsOptionsBase {
-
+class HighchartsKeltnerChannelsSeriesBottomLineOptions
+    extends HighchartsOptionsBase {
   HighchartsKeltnerChannelsSeriesBottomLineStylesOptions? styles;
 
-
-  HighchartsKeltnerChannelsSeriesBottomLineOptions({
-    this.styles
-  });
+  HighchartsKeltnerChannelsSeriesBottomLineOptions({this.styles});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (styles != null) {
       buffer.writeAll(['"styles":', styles?.toJSON(), ','], '');
     }
   }
-
 }

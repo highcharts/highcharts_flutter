@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,37 +23,25 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 class HighchartsOrganizationSeriesLinkOptions extends HighchartsOptionsBase {
-
   String? color;
   double? lineWidth;
   double? offset;
   double? radius;
   String? type;
 
-
-  HighchartsOrganizationSeriesLinkOptions({
-    this.color,
-    this.lineWidth,
-    this.offset,
-    this.radius,
-    this.type
-  });
+  HighchartsOrganizationSeriesLinkOptions(
+      {this.color, this.lineWidth, this.offset, this.radius, this.type});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (color != null) {
       buffer.writeAll(['"color":', jsonEncode(color), ','], '');
@@ -74,5 +59,4 @@ class HighchartsOrganizationSeriesLinkOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"type":', jsonEncode(type), ','], '');
     }
   }
-
 }

@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -23,26 +21,22 @@ import 'highcharts_variable_pie_series_data_data_labels_options.dart';
 import 'highcharts_variable_pie_series_data_drag_drop_options.dart';
 import 'highcharts_variable_pie_series_data_events_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_variable_pie_series_data_accessibility_options.dart';
 export 'highcharts_variable_pie_series_data_data_labels_options.dart';
 export 'highcharts_variable_pie_series_data_drag_drop_options.dart';
 export 'highcharts_variable_pie_series_data_events_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * An array of data points for the series. For the `variablepie` series type,
@@ -78,7 +72,6 @@ export 'highcharts_variable_pie_series_data_events_options.dart';
  *    ```
  */
 class HighchartsVariablePieSeriesDataOptions extends HighchartsOptionsBase {
-
   HighchartsVariablePieSeriesDataAccessibilityOptions? accessibility;
   String? className;
   String? color;
@@ -96,30 +89,27 @@ class HighchartsVariablePieSeriesDataOptions extends HighchartsOptionsBase {
   bool? sliced;
   double? y;
 
-
-  HighchartsVariablePieSeriesDataOptions({
-    this.accessibility,
-    this.className,
-    this.color,
-    this.colorIndex,
-    this.custom,
-    this.dataLabels,
-    this.description,
-    this.dragDrop,
-    this.drilldown,
-    this.events,
-    this.id,
-    this.labelrank,
-    this.legendIndex,
-    this.selected,
-    this.sliced,
-    this.y
-  });
+  HighchartsVariablePieSeriesDataOptions(
+      {this.accessibility,
+      this.className,
+      this.color,
+      this.colorIndex,
+      this.custom,
+      this.dataLabels,
+      this.description,
+      this.dragDrop,
+      this.drilldown,
+      this.events,
+      this.id,
+      this.labelrank,
+      this.legendIndex,
+      this.selected,
+      this.sliced,
+      this.y});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (accessibility != null) {
       buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ','], '');
@@ -174,5 +164,4 @@ class HighchartsVariablePieSeriesDataOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"y":', y, ','], '');
     }
   }
-
 }

@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_flow_map_series_data_marker_end_options.dart';
-
 
 /* *
  *
@@ -27,16 +24,13 @@ import 'highcharts_flow_map_series_data_marker_end_options.dart';
  *
  * */
 
-
 export 'highcharts_flow_map_series_data_marker_end_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * An array of data points for the series. For the `flowmap` series
@@ -79,7 +73,6 @@ export 'highcharts_flow_map_series_data_marker_end_options.dart';
  *      ```
  */
 class HighchartsFlowMapSeriesDataOptions extends HighchartsOptionsBase {
-
   double? curveFactor;
   String? fillColor;
   double? fillOpacity;
@@ -91,24 +84,21 @@ class HighchartsFlowMapSeriesDataOptions extends HighchartsOptionsBase {
   Map<String, dynamic>? to;
   double? weight;
 
-
-  HighchartsFlowMapSeriesDataOptions({
-    this.curveFactor,
-    this.fillColor,
-    this.fillOpacity,
-    this.from,
-    this.growTowards,
-    this.lineWidth,
-    this.markerEnd,
-    this.opacity,
-    this.to,
-    this.weight
-  });
+  HighchartsFlowMapSeriesDataOptions(
+      {this.curveFactor,
+      this.fillColor,
+      this.fillOpacity,
+      this.from,
+      this.growTowards,
+      this.lineWidth,
+      this.markerEnd,
+      this.opacity,
+      this.to,
+      this.weight});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (curveFactor != null) {
       buffer.writeAll(['"curveFactor":', curveFactor, ','], '');
@@ -149,5 +139,4 @@ class HighchartsFlowMapSeriesDataOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"weight":', weight, ','], '');
     }
   }
-
 }

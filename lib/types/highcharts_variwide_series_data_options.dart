@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -23,26 +21,22 @@ import 'highcharts_variwide_series_data_data_labels_options.dart';
 import 'highcharts_variwide_series_data_drag_drop_options.dart';
 import 'highcharts_variwide_series_data_events_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_variwide_series_data_accessibility_options.dart';
 export 'highcharts_variwide_series_data_data_labels_options.dart';
 export 'highcharts_variwide_series_data_drag_drop_options.dart';
 export 'highcharts_variwide_series_data_events_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * An array of data points for the series. For the `variwide` series type,
@@ -85,7 +79,6 @@ export 'highcharts_variwide_series_data_events_options.dart';
  *    ```
  */
 class HighchartsVariwideSeriesDataOptions extends HighchartsOptionsBase {
-
   HighchartsVariwideSeriesDataAccessibilityOptions? accessibility;
   String? className;
   String? color;
@@ -103,30 +96,27 @@ class HighchartsVariwideSeriesDataOptions extends HighchartsOptionsBase {
   double? y;
   double? z;
 
-
-  HighchartsVariwideSeriesDataOptions({
-    this.accessibility,
-    this.className,
-    this.color,
-    this.colorIndex,
-    this.custom,
-    this.dataLabels,
-    this.description,
-    this.dragDrop,
-    this.drilldown,
-    this.events,
-    this.id,
-    this.labelrank,
-    this.selected,
-    this.x,
-    this.y,
-    this.z
-  });
+  HighchartsVariwideSeriesDataOptions(
+      {this.accessibility,
+      this.className,
+      this.color,
+      this.colorIndex,
+      this.custom,
+      this.dataLabels,
+      this.description,
+      this.dragDrop,
+      this.drilldown,
+      this.events,
+      this.id,
+      this.labelrank,
+      this.selected,
+      this.x,
+      this.y,
+      this.z});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (accessibility != null) {
       buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ','], '');
@@ -185,5 +175,4 @@ class HighchartsVariwideSeriesDataOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"z":', z, ','], '');
     }
   }
-
 }

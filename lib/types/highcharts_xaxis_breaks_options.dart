@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,39 +23,28 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * An array defining breaks in the axis, the sections defined will be
  * left out and all the points shifted closer to each other.
  */
 class HighchartsXAxisBreaksOptions extends HighchartsOptionsBase {
-
   double? breakSize;
   dynamic from;
   double? repeat;
   dynamic to;
 
-
-  HighchartsXAxisBreaksOptions({
-    this.breakSize,
-    this.from,
-    this.repeat,
-    this.to
-  });
+  HighchartsXAxisBreaksOptions(
+      {this.breakSize, this.from, this.repeat, this.to});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (breakSize != null) {
       buffer.writeAll(['"breakSize":', breakSize, ','], '');
@@ -73,5 +59,4 @@ class HighchartsXAxisBreaksOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"to":', jsonEncode(to), ','], '');
     }
   }
-
 }

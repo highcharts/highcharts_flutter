@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,33 +23,24 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
-class HighchartsNavigationBreadcrumbsEventsOptions extends HighchartsOptionsBase {
-
+class HighchartsNavigationBreadcrumbsEventsOptions
+    extends HighchartsOptionsBase {
   dynamic click;
 
-
-  HighchartsNavigationBreadcrumbsEventsOptions({
-    this.click
-  });
+  HighchartsNavigationBreadcrumbsEventsOptions({this.click});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (click != null) {
       buffer.writeAll(['"click":', jsonEncode(click), ','], '');
     }
   }
-
 }

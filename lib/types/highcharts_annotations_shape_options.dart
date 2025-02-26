@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +23,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * Options for annotation's shapes. Each shape inherits options
@@ -42,7 +35,6 @@ import 'highcharts_options_base.dart';
  * can be overwritten by config for a specific shape.
  */
 class HighchartsAnnotationsShapeOptions extends HighchartsOptionsBase {
-
   String? dashStyle;
   Map<String, dynamic>? fill;
   double? height;
@@ -57,27 +49,24 @@ class HighchartsAnnotationsShapeOptions extends HighchartsOptionsBase {
   double? xAxis;
   double? yAxis;
 
-
-  HighchartsAnnotationsShapeOptions({
-    this.dashStyle,
-    this.fill,
-    this.height,
-    this.r,
-    this.ry,
-    this.snap,
-    this.src,
-    this.stroke,
-    this.strokeWidth,
-    this.type,
-    this.width,
-    this.xAxis,
-    this.yAxis
-  });
+  HighchartsAnnotationsShapeOptions(
+      {this.dashStyle,
+      this.fill,
+      this.height,
+      this.r,
+      this.ry,
+      this.snap,
+      this.src,
+      this.stroke,
+      this.strokeWidth,
+      this.type,
+      this.width,
+      this.xAxis,
+      this.yAxis});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (dashStyle != null) {
       buffer.writeAll(['"dashStyle":', jsonEncode(dashStyle), ','], '');
@@ -123,5 +112,4 @@ class HighchartsAnnotationsShapeOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"yAxis":', yAxis, ','], '');
     }
   }
-
 }

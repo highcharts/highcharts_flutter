@@ -8,17 +8,13 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,36 +22,26 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Enable or disable animation of the tooltip.
  */
 class HighchartsTooltipAnimationOptions extends HighchartsOptionsBase {
-
   double? duration;
 
-
-  HighchartsTooltipAnimationOptions({
-    this.duration
-  });
+  HighchartsTooltipAnimationOptions({this.duration});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (duration != null) {
       buffer.writeAll(['"duration":', duration, ','], '');
     }
   }
-
 }

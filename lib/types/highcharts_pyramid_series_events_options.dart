@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,18 +23,13 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 class HighchartsPyramidSeriesEventsOptions extends HighchartsOptionsBase {
-
   dynamic afterAnimate;
   dynamic checkboxClick;
   dynamic click;
@@ -46,21 +38,18 @@ class HighchartsPyramidSeriesEventsOptions extends HighchartsOptionsBase {
   dynamic mouseOver;
   dynamic show;
 
-
-  HighchartsPyramidSeriesEventsOptions({
-    this.afterAnimate,
-    this.checkboxClick,
-    this.click,
-    this.hide,
-    this.mouseOut,
-    this.mouseOver,
-    this.show
-  });
+  HighchartsPyramidSeriesEventsOptions(
+      {this.afterAnimate,
+      this.checkboxClick,
+      this.click,
+      this.hide,
+      this.mouseOut,
+      this.mouseOver,
+      this.show});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (afterAnimate != null) {
       buffer.writeAll(['"afterAnimate":', jsonEncode(afterAnimate), ','], '');
@@ -84,5 +73,4 @@ class HighchartsPyramidSeriesEventsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"show":', jsonEncode(show), ','], '');
     }
   }
-
 }

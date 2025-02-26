@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +23,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * Options for a _link_ label text which should follow link
@@ -44,21 +37,17 @@ import 'highcharts_options_base.dart';
  * **Note:** Only SVG-based renderer supports this option. Setting
  * `useHTML` to true will disable this option.
  */
-class HighchartsNetworkgraphSeriesDataLabelsLinkTextPathOptions extends HighchartsOptionsBase {
-
+class HighchartsNetworkgraphSeriesDataLabelsLinkTextPathOptions
+    extends HighchartsOptionsBase {
   dynamic attributes;
   bool? enabled;
 
-
-  HighchartsNetworkgraphSeriesDataLabelsLinkTextPathOptions({
-    this.attributes,
-    this.enabled
-  });
+  HighchartsNetworkgraphSeriesDataLabelsLinkTextPathOptions(
+      {this.attributes, this.enabled});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (attributes != null) {
       buffer.writeAll(['"attributes":', jsonEncode(attributes), ','], '');
@@ -67,5 +56,4 @@ class HighchartsNetworkgraphSeriesDataLabelsLinkTextPathOptions extends Highchar
       buffer.writeAll(['"enabled":', enabled, ','], '');
     }
   }
-
 }

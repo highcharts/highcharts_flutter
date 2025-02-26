@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +23,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * Lang configuration for the series main summary. Each series
@@ -53,8 +46,8 @@ import 'highcharts_options_base.dart';
  * 
  * The series index (starting from 1) can be accessed with the `{seriesNumber}` variable.
  */
-class HighchartsLangAccessibilitySeriesSummaryOptions extends HighchartsOptionsBase {
-
+class HighchartsLangAccessibilitySeriesSummaryOptions
+    extends HighchartsOptionsBase {
   String? bar;
   String? barCombination;
   String? boxplot;
@@ -80,111 +73,120 @@ class HighchartsLangAccessibilitySeriesSummaryOptions extends HighchartsOptionsB
   String? spline;
   String? splineCombination;
 
-
-  HighchartsLangAccessibilitySeriesSummaryOptions({
-    this.bar,
-    this.barCombination,
-    this.boxplot,
-    this.boxplotCombination,
-    this.bubble,
-    this.bubbleCombination,
-    this.column,
-    this.columnCombination,
-    this.defaultTo,
-    this.defaultCombination,
-    this.line,
-    this.lineCombination,
-    this.map,
-    this.mapCombination,
-    this.mapbubble,
-    this.mapbubbleCombination,
-    this.mapline,
-    this.maplineCombination,
-    this.pie,
-    this.pieCombination,
-    this.scatter,
-    this.scatterCombination,
-    this.spline,
-    this.splineCombination
-  });
+  HighchartsLangAccessibilitySeriesSummaryOptions(
+      {this.bar,
+      this.barCombination,
+      this.boxplot,
+      this.boxplotCombination,
+      this.bubble,
+      this.bubbleCombination,
+      this.column,
+      this.columnCombination,
+      this.defaultTo,
+      this.defaultCombination,
+      this.line,
+      this.lineCombination,
+      this.map,
+      this.mapCombination,
+      this.mapbubble,
+      this.mapbubbleCombination,
+      this.mapline,
+      this.maplineCombination,
+      this.pie,
+      this.pieCombination,
+      this.scatter,
+      this.scatterCombination,
+      this.spline,
+      this.splineCombination});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (bar != null) {
       buffer.writeAll(['"bar":', jsonEncode(bar), ','], '');
     }
     if (barCombination != null) {
-      buffer.writeAll(['"barCombination":', jsonEncode(barCombination), ','], '');
+      buffer
+          .writeAll(['"barCombination":', jsonEncode(barCombination), ','], '');
     }
     if (boxplot != null) {
       buffer.writeAll(['"boxplot":', jsonEncode(boxplot), ','], '');
     }
     if (boxplotCombination != null) {
-      buffer.writeAll(['"boxplotCombination":', jsonEncode(boxplotCombination), ','], '');
+      buffer.writeAll(
+          ['"boxplotCombination":', jsonEncode(boxplotCombination), ','], '');
     }
     if (bubble != null) {
       buffer.writeAll(['"bubble":', jsonEncode(bubble), ','], '');
     }
     if (bubbleCombination != null) {
-      buffer.writeAll(['"bubbleCombination":', jsonEncode(bubbleCombination), ','], '');
+      buffer.writeAll(
+          ['"bubbleCombination":', jsonEncode(bubbleCombination), ','], '');
     }
     if (column != null) {
       buffer.writeAll(['"column":', jsonEncode(column), ','], '');
     }
     if (columnCombination != null) {
-      buffer.writeAll(['"columnCombination":', jsonEncode(columnCombination), ','], '');
+      buffer.writeAll(
+          ['"columnCombination":', jsonEncode(columnCombination), ','], '');
     }
     if (defaultTo != null) {
       buffer.writeAll(['"default":', jsonEncode(defaultTo), ','], '');
     }
     if (defaultCombination != null) {
-      buffer.writeAll(['"defaultCombination":', jsonEncode(defaultCombination), ','], '');
+      buffer.writeAll(
+          ['"defaultCombination":', jsonEncode(defaultCombination), ','], '');
     }
     if (line != null) {
       buffer.writeAll(['"line":', jsonEncode(line), ','], '');
     }
     if (lineCombination != null) {
-      buffer.writeAll(['"lineCombination":', jsonEncode(lineCombination), ','], '');
+      buffer.writeAll(
+          ['"lineCombination":', jsonEncode(lineCombination), ','], '');
     }
     if (map != null) {
       buffer.writeAll(['"map":', jsonEncode(map), ','], '');
     }
     if (mapCombination != null) {
-      buffer.writeAll(['"mapCombination":', jsonEncode(mapCombination), ','], '');
+      buffer
+          .writeAll(['"mapCombination":', jsonEncode(mapCombination), ','], '');
     }
     if (mapbubble != null) {
       buffer.writeAll(['"mapbubble":', jsonEncode(mapbubble), ','], '');
     }
     if (mapbubbleCombination != null) {
-      buffer.writeAll(['"mapbubbleCombination":', jsonEncode(mapbubbleCombination), ','], '');
+      buffer.writeAll(
+          ['"mapbubbleCombination":', jsonEncode(mapbubbleCombination), ','],
+          '');
     }
     if (mapline != null) {
       buffer.writeAll(['"mapline":', jsonEncode(mapline), ','], '');
     }
     if (maplineCombination != null) {
-      buffer.writeAll(['"maplineCombination":', jsonEncode(maplineCombination), ','], '');
+      buffer.writeAll(
+          ['"maplineCombination":', jsonEncode(maplineCombination), ','], '');
     }
     if (pie != null) {
       buffer.writeAll(['"pie":', jsonEncode(pie), ','], '');
     }
     if (pieCombination != null) {
-      buffer.writeAll(['"pieCombination":', jsonEncode(pieCombination), ','], '');
+      buffer
+          .writeAll(['"pieCombination":', jsonEncode(pieCombination), ','], '');
     }
     if (scatter != null) {
       buffer.writeAll(['"scatter":', jsonEncode(scatter), ','], '');
     }
     if (scatterCombination != null) {
-      buffer.writeAll(['"scatterCombination":', jsonEncode(scatterCombination), ','], '');
+      buffer.writeAll(
+          ['"scatterCombination":', jsonEncode(scatterCombination), ','], '');
     }
     if (spline != null) {
       buffer.writeAll(['"spline":', jsonEncode(spline), ','], '');
     }
     if (splineCombination != null) {
-      buffer.writeAll(['"splineCombination":', jsonEncode(splineCombination), ','], '');
+      buffer.writeAll(
+          ['"splineCombination":', jsonEncode(splineCombination), ','], '');
     }
   }
-
 }

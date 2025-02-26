@@ -8,17 +8,13 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,34 +22,25 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Parameters used in calculation of regression series' points.
  */
-class HighchartsKeltnerChannelsSeriesParamsOptions extends HighchartsOptionsBase {
-
+class HighchartsKeltnerChannelsSeriesParamsOptions
+    extends HighchartsOptionsBase {
   double? index;
   double? period;
 
-
-  HighchartsKeltnerChannelsSeriesParamsOptions({
-    this.index,
-    this.period
-  });
+  HighchartsKeltnerChannelsSeriesParamsOptions({this.index, this.period});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (index != null) {
       buffer.writeAll(['"index":', index, ','], '');
@@ -62,5 +49,4 @@ class HighchartsKeltnerChannelsSeriesParamsOptions extends HighchartsOptionsBase
       buffer.writeAll(['"period":', period, ','], '');
     }
   }
-
 }

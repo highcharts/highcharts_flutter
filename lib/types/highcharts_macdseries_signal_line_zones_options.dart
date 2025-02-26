@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,37 +23,25 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 class HighchartsMACDSeriesSignalLineZonesOptions extends HighchartsOptionsBase {
-
   String? className;
   String? color;
   String? dashStyle;
   String? fillColor;
   double? value;
 
-
-  HighchartsMACDSeriesSignalLineZonesOptions({
-    this.className,
-    this.color,
-    this.dashStyle,
-    this.fillColor,
-    this.value
-  });
+  HighchartsMACDSeriesSignalLineZonesOptions(
+      {this.className, this.color, this.dashStyle, this.fillColor, this.value});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (className != null) {
       buffer.writeAll(['"className":', jsonEncode(className), ','], '');
@@ -74,5 +59,4 @@ class HighchartsMACDSeriesSignalLineZonesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"value":', value, ','], '');
     }
   }
-
 }

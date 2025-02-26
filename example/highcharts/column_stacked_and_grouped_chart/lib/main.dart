@@ -50,18 +50,21 @@ class _MyHomePageState extends State<MyHomePage> {
                   type: 'column',
                 ),
                 title: HighchartsTitleOptions(
-                  text: 'Olympic Games all-time medal table, grouped by continent',
+                  text:
+                      'Olympic Games all-time medal table, grouped by continent',
                   align: 'left',
                 ),
                 xAxis: [
                   HighchartsXAxisOptions(
-                  categories: ['Gold', 'Silver', 'Bronze'],),
+                    categories: ['Gold', 'Silver', 'Bronze'],
+                  ),
                 ],
                 yAxis: [
                   HighchartsYAxisOptions(
-                      allowDecimals: false,
-                      min: 0,
-                      title: HighchartsYAxisTitleOptions(text: 'Count medals'),),
+                    allowDecimals: false,
+                    min: 0,
+                    title: HighchartsYAxisTitleOptions(text: 'Count medals'),
+                  ),
                 ],
                 tooltip: HighchartsTooltipOptions(
                   format:
@@ -114,4 +117,3 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
-

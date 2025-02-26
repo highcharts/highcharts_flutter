@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,31 +23,22 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
-class HighchartsIKHSeriesSenkouSpanBStylesOptions extends HighchartsOptionsBase {
-
+class HighchartsIKHSeriesSenkouSpanBStylesOptions
+    extends HighchartsOptionsBase {
   String? lineColor;
   double? lineWidth;
 
-
-  HighchartsIKHSeriesSenkouSpanBStylesOptions({
-    this.lineColor,
-    this.lineWidth
-  });
+  HighchartsIKHSeriesSenkouSpanBStylesOptions({this.lineColor, this.lineWidth});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (lineColor != null) {
       buffer.writeAll(['"lineColor":', jsonEncode(lineColor), ','], '');
@@ -59,5 +47,4 @@ class HighchartsIKHSeriesSenkouSpanBStylesOptions extends HighchartsOptionsBase 
       buffer.writeAll(['"lineWidth":', lineWidth, ','], '');
     }
   }
-
 }

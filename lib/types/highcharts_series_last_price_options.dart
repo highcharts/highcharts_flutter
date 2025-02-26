@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_series_last_price_label_options.dart';
-
 
 /* *
  *
@@ -27,9 +24,7 @@ import 'highcharts_series_last_price_label_options.dart';
  *
  * */
 
-
 export 'highcharts_series_last_price_label_options.dart';
-
 
 /* *
  *
@@ -37,27 +32,19 @@ export 'highcharts_series_last_price_label_options.dart';
  *
  * */
 
-
 /**
  * The line marks the last price from all points.
  */
 class HighchartsSeriesLastPriceOptions extends HighchartsOptionsBase {
-
   String? color;
   bool? enabled;
   HighchartsSeriesLastPriceLabelOptions? label;
 
-
-  HighchartsSeriesLastPriceOptions({
-    this.color,
-    this.enabled,
-    this.label
-  });
+  HighchartsSeriesLastPriceOptions({this.color, this.enabled, this.label});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (color != null) {
       buffer.writeAll(['"color":', jsonEncode(color), ','], '');
@@ -69,5 +56,4 @@ class HighchartsSeriesLastPriceOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"label":', label?.toJSON(), ','], '');
     }
   }
-
 }

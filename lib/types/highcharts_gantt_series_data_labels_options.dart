@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_gantt_series_data_labels_style_options.dart';
-
 
 /* *
  *
@@ -27,9 +24,7 @@ import 'highcharts_gantt_series_data_labels_style_options.dart';
  *
  * */
 
-
 export 'highcharts_gantt_series_data_labels_style_options.dart';
-
 
 /* *
  *
@@ -37,26 +32,18 @@ export 'highcharts_gantt_series_data_labels_style_options.dart';
  *
  * */
 
-
 class HighchartsGanttSeriesDataLabelsOptions extends HighchartsOptionsBase {
-
   bool? enabled;
   bool? inside;
   HighchartsGanttSeriesDataLabelsStyleOptions? style;
   String? verticalAlign;
 
-
-  HighchartsGanttSeriesDataLabelsOptions({
-    this.enabled,
-    this.inside,
-    this.style,
-    this.verticalAlign
-  });
+  HighchartsGanttSeriesDataLabelsOptions(
+      {this.enabled, this.inside, this.style, this.verticalAlign});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (enabled != null) {
       buffer.writeAll(['"enabled":', enabled, ','], '');
@@ -71,5 +58,4 @@ class HighchartsGanttSeriesDataLabelsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"verticalAlign":', jsonEncode(verticalAlign), ','], '');
     }
   }
-
 }

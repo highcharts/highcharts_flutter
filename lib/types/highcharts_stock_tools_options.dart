@@ -8,18 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
 import 'highcharts_stock_tools_gui_options.dart';
-
 
 /* *
  *
@@ -27,9 +23,7 @@ import 'highcharts_stock_tools_gui_options.dart';
  *
  * */
 
-
 export 'highcharts_stock_tools_gui_options.dart';
-
 
 /* *
  *
@@ -37,29 +31,22 @@ export 'highcharts_stock_tools_gui_options.dart';
  *
  * */
 
-
 /**
  * Configure the stockTools gui strings in the chart. Requires the
  * [stockTools module]() to be loaded. For a description of the module
  * and information on its features, see [Highcharts StockTools]().
  */
 class HighchartsStockToolsOptions extends HighchartsOptionsBase {
-
   HighchartsStockToolsGuiOptions? gui;
 
-
-  HighchartsStockToolsOptions({
-    this.gui
-  });
+  HighchartsStockToolsOptions({this.gui});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (gui != null) {
       buffer.writeAll(['"gui":', gui?.toJSON(), ','], '');
     }
   }
-
 }

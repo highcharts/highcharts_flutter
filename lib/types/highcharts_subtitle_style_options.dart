@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +23,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * CSS styles for the title.
@@ -43,20 +36,14 @@ import 'highcharts_options_base.dart';
  * `.highcharts-subtitle` class.
  */
 class HighchartsSubtitleStyleOptions extends HighchartsOptionsBase {
-
   String? color;
   dynamic fontSize;
 
-
-  HighchartsSubtitleStyleOptions({
-    this.color,
-    this.fontSize
-  });
+  HighchartsSubtitleStyleOptions({this.color, this.fontSize});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (color != null) {
       buffer.writeAll(['"color":', jsonEncode(color), ','], '');
@@ -65,5 +52,4 @@ class HighchartsSubtitleStyleOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"fontSize":', jsonEncode(fontSize), ','], '');
     }
   }
-
 }

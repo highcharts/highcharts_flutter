@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -23,19 +21,16 @@ import 'highcharts_stock_tools_gui_definitions_simple_shapes_ellipse_options.dar
 import 'highcharts_stock_tools_gui_definitions_simple_shapes_label_options.dart';
 import 'highcharts_stock_tools_gui_definitions_simple_shapes_rectangle_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_stock_tools_gui_definitions_simple_shapes_circle_options.dart';
 export 'highcharts_stock_tools_gui_definitions_simple_shapes_ellipse_options.dart';
 export 'highcharts_stock_tools_gui_definitions_simple_shapes_label_options.dart';
 export 'highcharts_stock_tools_gui_definitions_simple_shapes_rectangle_options.dart';
-
 
 /* *
  *
@@ -43,28 +38,20 @@ export 'highcharts_stock_tools_gui_definitions_simple_shapes_rectangle_options.d
  *
  * */
 
-
-class HighchartsStockToolsGuiDefinitionsSimpleShapesOptions extends HighchartsOptionsBase {
-
+class HighchartsStockToolsGuiDefinitionsSimpleShapesOptions
+    extends HighchartsOptionsBase {
   HighchartsStockToolsGuiDefinitionsSimpleShapesCircleOptions? circle;
   HighchartsStockToolsGuiDefinitionsSimpleShapesEllipseOptions? ellipse;
   String? items;
   HighchartsStockToolsGuiDefinitionsSimpleShapesLabelOptions? label;
   HighchartsStockToolsGuiDefinitionsSimpleShapesRectangleOptions? rectangle;
 
-
-  HighchartsStockToolsGuiDefinitionsSimpleShapesOptions({
-    this.circle,
-    this.ellipse,
-    this.items,
-    this.label,
-    this.rectangle
-  });
+  HighchartsStockToolsGuiDefinitionsSimpleShapesOptions(
+      {this.circle, this.ellipse, this.items, this.label, this.rectangle});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (circle != null) {
       buffer.writeAll(['"circle":', circle?.toJSON(), ','], '');
@@ -82,5 +69,4 @@ class HighchartsStockToolsGuiDefinitionsSimpleShapesOptions extends HighchartsOp
       buffer.writeAll(['"rectangle":', rectangle?.toJSON(), ','], '');
     }
   }
-
 }

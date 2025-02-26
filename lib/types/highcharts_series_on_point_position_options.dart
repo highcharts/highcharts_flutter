@@ -8,17 +8,13 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,39 +22,28 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Options allowing to set a position and an offset of the series in the
  * _Series on point_ feature.
  */
 class HighchartsSeriesOnPointPositionOptions extends HighchartsOptionsBase {
-
   double? offsetX;
   double? offsetY;
   double? x;
   double? y;
 
-
-  HighchartsSeriesOnPointPositionOptions({
-    this.offsetX,
-    this.offsetY,
-    this.x,
-    this.y
-  });
+  HighchartsSeriesOnPointPositionOptions(
+      {this.offsetX, this.offsetY, this.x, this.y});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (offsetX != null) {
       buffer.writeAll(['"offsetX":', offsetX, ','], '');
@@ -73,5 +58,4 @@ class HighchartsSeriesOnPointPositionOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"y":', y, ','], '');
     }
   }
-
 }

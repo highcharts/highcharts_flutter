@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -23,26 +21,22 @@ import 'highcharts_navigator_series_data_labels_options.dart';
 import 'highcharts_navigator_series_marker_options.dart';
 import 'highcharts_navigator_series_point_range_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_navigator_series_data_grouping_options.dart';
 export 'highcharts_navigator_series_data_labels_options.dart';
 export 'highcharts_navigator_series_marker_options.dart';
 export 'highcharts_navigator_series_point_range_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * Options for the navigator series. Available options are the same
@@ -68,7 +62,6 @@ export 'highcharts_navigator_series_point_range_options.dart';
  * ```
  */
 class HighchartsNavigatorSeriesOptions extends HighchartsOptionsBase {
-
   String? className;
   String? color;
   List<dynamic>? data;
@@ -83,27 +76,24 @@ class HighchartsNavigatorSeriesOptions extends HighchartsOptionsBase {
   double? threshold;
   String? type;
 
-
-  HighchartsNavigatorSeriesOptions({
-    this.className,
-    this.color,
-    this.data,
-    this.dataGrouping,
-    this.dataLabels,
-    this.fillOpacity,
-    this.id,
-    this.lineColor,
-    this.lineWidth,
-    this.marker,
-    this.pointRange,
-    this.threshold,
-    this.type
-  });
+  HighchartsNavigatorSeriesOptions(
+      {this.className,
+      this.color,
+      this.data,
+      this.dataGrouping,
+      this.dataLabels,
+      this.fillOpacity,
+      this.id,
+      this.lineColor,
+      this.lineWidth,
+      this.marker,
+      this.pointRange,
+      this.threshold,
+      this.type});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (className != null) {
       buffer.writeAll(['"className":', jsonEncode(className), ','], '');
@@ -149,5 +139,4 @@ class HighchartsNavigatorSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"type":', jsonEncode(type), ','], '');
     }
   }
-
 }

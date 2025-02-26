@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,33 +23,24 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
-class HighchartsAnnotationsFibonacciTimeZonesTypeLineOptions extends HighchartsOptionsBase {
-
+class HighchartsAnnotationsFibonacciTimeZonesTypeLineOptions
+    extends HighchartsOptionsBase {
   String? fill;
   String? stroke;
   double? strokeWidth;
 
-
-  HighchartsAnnotationsFibonacciTimeZonesTypeLineOptions({
-    this.fill,
-    this.stroke,
-    this.strokeWidth
-  });
+  HighchartsAnnotationsFibonacciTimeZonesTypeLineOptions(
+      {this.fill, this.stroke, this.strokeWidth});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (fill != null) {
       buffer.writeAll(['"fill":', jsonEncode(fill), ','], '');
@@ -64,5 +52,4 @@ class HighchartsAnnotationsFibonacciTimeZonesTypeLineOptions extends HighchartsO
       buffer.writeAll(['"strokeWidth":', strokeWidth, ','], '');
     }
   }
-
 }

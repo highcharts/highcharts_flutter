@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -23,19 +21,16 @@ import 'highcharts_exporting_buttons_options.dart';
 import 'highcharts_exporting_csv_options.dart';
 import 'highcharts_exporting_pdf_font_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_exporting_accessibility_options.dart';
 export 'highcharts_exporting_buttons_options.dart';
 export 'highcharts_exporting_csv_options.dart';
 export 'highcharts_exporting_pdf_font_options.dart';
-
 
 /* *
  *
@@ -43,14 +38,12 @@ export 'highcharts_exporting_pdf_font_options.dart';
  *
  * */
 
-
 /**
  * Options for the exporting module. For an overview on the matter, see
  * [the docs](https://www.highcharts.com/docs/export-module/export-module-overview) and
  * read our [Fair Usage Policy](https://www.highcharts.com/docs/export-module/privacy-disclaimer-export).
  */
 class HighchartsExportingOptions extends HighchartsOptionsBase {
-
   HighchartsExportingAccessibilityOptions? accessibility;
   bool? allowHTML;
   bool? allowTableSorting;
@@ -80,42 +73,39 @@ class HighchartsExportingOptions extends HighchartsOptionsBase {
   bool? useRowspanHeaders;
   double? width;
 
-
-  HighchartsExportingOptions({
-    this.accessibility,
-    this.allowHTML,
-    this.allowTableSorting,
-    this.applyStyleSheets,
-    this.buttons,
-    this.chartOptions,
-    this.csv,
-    this.enabled,
-    this.error,
-    this.fallbackToExportServer,
-    this.fetchOptions,
-    this.filename,
-    this.formAttributes,
-    this.libURL,
-    this.menuItemDefinitions,
-    this.pdfFont,
-    this.printMaxWidth,
-    this.scale,
-    this.showExportInProgress,
-    this.showTable,
-    this.sourceHeight,
-    this.sourceWidth,
-    this.tableCaption,
-    this.type,
-    this.url,
-    this.useMultiLevelHeaders,
-    this.useRowspanHeaders,
-    this.width
-  });
+  HighchartsExportingOptions(
+      {this.accessibility,
+      this.allowHTML,
+      this.allowTableSorting,
+      this.applyStyleSheets,
+      this.buttons,
+      this.chartOptions,
+      this.csv,
+      this.enabled,
+      this.error,
+      this.fallbackToExportServer,
+      this.fetchOptions,
+      this.filename,
+      this.formAttributes,
+      this.libURL,
+      this.menuItemDefinitions,
+      this.pdfFont,
+      this.printMaxWidth,
+      this.scale,
+      this.showExportInProgress,
+      this.showTable,
+      this.sourceHeight,
+      this.sourceWidth,
+      this.tableCaption,
+      this.type,
+      this.url,
+      this.useMultiLevelHeaders,
+      this.useRowspanHeaders,
+      this.width});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (accessibility != null) {
       buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ','], '');
@@ -149,7 +139,8 @@ class HighchartsExportingOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"error":', jsonEncode(error), ','], '');
     }
     if (fallbackToExportServer != null) {
-      buffer.writeAll(['"fallbackToExportServer":', fallbackToExportServer, ','], '');
+      buffer.writeAll(
+          ['"fallbackToExportServer":', fallbackToExportServer, ','], '');
     }
     if (fetchOptions != null) {
       buffer.writeAll(['"fetchOptions":', jsonEncode(fetchOptions), ','], '');
@@ -158,7 +149,8 @@ class HighchartsExportingOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"filename":', jsonEncode(filename), ','], '');
     }
     if (formAttributes != null) {
-      buffer.writeAll(['"formAttributes":', jsonEncode(formAttributes), ','], '');
+      buffer
+          .writeAll(['"formAttributes":', jsonEncode(formAttributes), ','], '');
     }
     if (libURL != null) {
       buffer.writeAll(['"libURL":', jsonEncode(libURL), ','], '');
@@ -180,7 +172,8 @@ class HighchartsExportingOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"scale":', scale, ','], '');
     }
     if (showExportInProgress != null) {
-      buffer.writeAll(['"showExportInProgress":', showExportInProgress, ','], '');
+      buffer
+          .writeAll(['"showExportInProgress":', showExportInProgress, ','], '');
     }
     if (showTable != null) {
       buffer.writeAll(['"showTable":', showTable, ','], '');
@@ -201,7 +194,8 @@ class HighchartsExportingOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"url":', jsonEncode(url), ','], '');
     }
     if (useMultiLevelHeaders != null) {
-      buffer.writeAll(['"useMultiLevelHeaders":', useMultiLevelHeaders, ','], '');
+      buffer
+          .writeAll(['"useMultiLevelHeaders":', useMultiLevelHeaders, ','], '');
     }
     if (useRowspanHeaders != null) {
       buffer.writeAll(['"useRowspanHeaders":', useRowspanHeaders, ','], '');
@@ -210,5 +204,4 @@ class HighchartsExportingOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"width":', width, ','], '');
     }
   }
-
 }

@@ -8,12 +8,10 @@
  *
  * */
 
-
 /**
  * Base class for series to serialize settings to a JSON string.
  */
 class HighchartsSeries {
-
   String type = '';
 
   void toOptionsJSON(StringBuffer buffer) {}
@@ -30,5 +28,4 @@ class HighchartsSeries {
 
     return buffer.toString();
   }
-
 }

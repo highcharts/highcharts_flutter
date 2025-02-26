@@ -8,17 +8,13 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,33 +22,24 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
-class HighchartsSeriesStatesSelectAnimationOptions extends HighchartsOptionsBase {
-
+class HighchartsSeriesStatesSelectAnimationOptions
+    extends HighchartsOptionsBase {
   double? duration;
 
-
-  HighchartsSeriesStatesSelectAnimationOptions({
-    this.duration
-  });
+  HighchartsSeriesStatesSelectAnimationOptions({this.duration});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (duration != null) {
       buffer.writeAll(['"duration":', duration, ','], '');
     }
   }
-
 }

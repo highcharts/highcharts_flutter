@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,21 +23,17 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Inner background options.
  */
-class HighchartsAnnotationsPitchforkTypeInnerBackgroundOptions extends HighchartsOptionsBase {
-
+class HighchartsAnnotationsPitchforkTypeInnerBackgroundOptions
+    extends HighchartsOptionsBase {
   String? dashStyle;
   String? fill;
   double? ry;
@@ -51,23 +44,20 @@ class HighchartsAnnotationsPitchforkTypeInnerBackgroundOptions extends Highchart
   double? xAxis;
   double? yAxis;
 
-
-  HighchartsAnnotationsPitchforkTypeInnerBackgroundOptions({
-    this.dashStyle,
-    this.fill,
-    this.ry,
-    this.snap,
-    this.src,
-    this.stroke,
-    this.strokeWidth,
-    this.xAxis,
-    this.yAxis
-  });
+  HighchartsAnnotationsPitchforkTypeInnerBackgroundOptions(
+      {this.dashStyle,
+      this.fill,
+      this.ry,
+      this.snap,
+      this.src,
+      this.stroke,
+      this.strokeWidth,
+      this.xAxis,
+      this.yAxis});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (dashStyle != null) {
       buffer.writeAll(['"dashStyle":', jsonEncode(dashStyle), ','], '');
@@ -97,5 +87,4 @@ class HighchartsAnnotationsPitchforkTypeInnerBackgroundOptions extends Highchart
       buffer.writeAll(['"yAxis":', yAxis, ','], '');
     }
   }
-
 }

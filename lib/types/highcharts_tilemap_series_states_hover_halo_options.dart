@@ -8,18 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
 import 'highcharts_tilemap_series_states_hover_halo_attributes_options.dart';
-
 
 /* *
  *
@@ -27,9 +23,7 @@ import 'highcharts_tilemap_series_states_hover_halo_attributes_options.dart';
  *
  * */
 
-
 export 'highcharts_tilemap_series_states_hover_halo_attributes_options.dart';
-
 
 /* *
  *
@@ -37,26 +31,19 @@ export 'highcharts_tilemap_series_states_hover_halo_attributes_options.dart';
  *
  * */
 
-
-class HighchartsTilemapSeriesStatesHoverHaloOptions extends HighchartsOptionsBase {
-
+class HighchartsTilemapSeriesStatesHoverHaloOptions
+    extends HighchartsOptionsBase {
   HighchartsTilemapSeriesStatesHoverHaloAttributesOptions? attributes;
   bool? enabled;
   double? opacity;
   double? size;
 
-
-  HighchartsTilemapSeriesStatesHoverHaloOptions({
-    this.attributes,
-    this.enabled,
-    this.opacity,
-    this.size
-  });
+  HighchartsTilemapSeriesStatesHoverHaloOptions(
+      {this.attributes, this.enabled, this.opacity, this.size});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (attributes != null) {
       buffer.writeAll(['"attributes":', attributes?.toJSON(), ','], '');
@@ -71,5 +58,4 @@ class HighchartsTilemapSeriesStatesHoverHaloOptions extends HighchartsOptionsBas
       buffer.writeAll(['"size":', size, ','], '');
     }
   }
-
 }

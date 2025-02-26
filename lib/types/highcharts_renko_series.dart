@@ -8,7 +8,6 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
@@ -19,23 +18,19 @@ import 'dart:convert';
 import 'highcharts_series.dart';
 import 'highcharts_renko_series_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_renko_series_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * A `renko` series. If the [type](#series.renko.type)
@@ -81,7 +76,6 @@ export 'highcharts_renko_series_options.dart';
  *             
  */
 class HighchartsRenkoSeries extends HighchartsSeries {
-
   List<List<dynamic>>? data;
   String? name;
   HighchartsRenkoSeriesOptions? options;
@@ -125,14 +119,13 @@ class HighchartsRenkoSeries extends HighchartsSeries {
       }
 
       buffer.writeAll(['"data":[', seriesData, '],'], '');
-
     } else if (points != null) {
       // Go through the points and write them
       StringBuffer seriesData = StringBuffer();
 
       for (var point in points!) {
         seriesData.writeAll(['{'], '');
-        point.toOptionsJSON(seriesData); 
+        point.toOptionsJSON(seriesData);
         seriesData.writeAll(['},'], '');
       }
 
@@ -147,5 +140,4 @@ class HighchartsRenkoSeries extends HighchartsSeries {
       buffer.writeAll(['"name":', jsonEncode(name), ','], '');
     }
   }
-
 }

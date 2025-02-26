@@ -8,17 +8,13 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +22,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * Since Highcharts Stock v8, default value is the same as default
@@ -44,10 +36,5 @@ import 'highcharts_options_base.dart';
  * In Highcharts Stock version < 8, defaults to 0.
  */
 class HighchartsNavigatorSeriesPointRangeOptions extends HighchartsOptionsBase {
-
-
-
   HighchartsNavigatorSeriesPointRangeOptions();
-
-
 }

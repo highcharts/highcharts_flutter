@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,39 +23,29 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Positioning options for the button within the `relativeTo` box.
  * Available properties are `x`, `y`, `align` and `verticalAlign`.
  */
-class HighchartsDrilldownDrillUpButtonPositionOptions extends HighchartsOptionsBase {
-
+class HighchartsDrilldownDrillUpButtonPositionOptions
+    extends HighchartsOptionsBase {
   String? align;
   String? verticalAlign;
   double? x;
   double? y;
 
-
-  HighchartsDrilldownDrillUpButtonPositionOptions({
-    this.align,
-    this.verticalAlign,
-    this.x,
-    this.y
-  });
+  HighchartsDrilldownDrillUpButtonPositionOptions(
+      {this.align, this.verticalAlign, this.x, this.y});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (align != null) {
       buffer.writeAll(['"align":', jsonEncode(align), ','], '');
@@ -73,5 +60,4 @@ class HighchartsDrilldownDrillUpButtonPositionOptions extends HighchartsOptionsB
       buffer.writeAll(['"y":', y, ','], '');
     }
   }
-
 }

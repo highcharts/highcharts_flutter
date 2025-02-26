@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -22,25 +20,21 @@ import 'highcharts_connectors_end_marker_options.dart';
 import 'highcharts_connectors_marker_options.dart';
 import 'highcharts_connectors_start_marker_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_connectors_end_marker_options.dart';
 export 'highcharts_connectors_marker_options.dart';
 export 'highcharts_connectors_start_marker_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * The ID of the point (task) that this point depends on in Gantt charts.
@@ -49,7 +43,6 @@ export 'highcharts_connectors_start_marker_options.dart';
  * points. Multiple connections can be specified by providing an array.
  */
 class HighchartsGanttSeriesDataDependencyOptions extends HighchartsOptionsBase {
-
   String? to;
   String? dashStyle;
   HighchartsConnectorsEndMarkerOptions? endMarker;
@@ -60,23 +53,20 @@ class HighchartsGanttSeriesDataDependencyOptions extends HighchartsOptionsBase {
   HighchartsConnectorsStartMarkerOptions? startMarker;
   String? type;
 
-
-  HighchartsGanttSeriesDataDependencyOptions({
-    this.to,
-    this.dashStyle,
-    this.endMarker,
-    this.lineColor,
-    this.lineWidth,
-    this.marker,
-    this.radius,
-    this.startMarker,
-    this.type
-  });
+  HighchartsGanttSeriesDataDependencyOptions(
+      {this.to,
+      this.dashStyle,
+      this.endMarker,
+      this.lineColor,
+      this.lineWidth,
+      this.marker,
+      this.radius,
+      this.startMarker,
+      this.type});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (to != null) {
       buffer.writeAll(['"to":', jsonEncode(to), ','], '');
@@ -106,5 +96,4 @@ class HighchartsGanttSeriesDataDependencyOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"type":', jsonEncode(type), ','], '');
     }
   }
-
 }

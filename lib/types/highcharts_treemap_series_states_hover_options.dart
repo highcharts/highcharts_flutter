@@ -8,19 +8,16 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_series_states_hover_animation_options.dart';
 import 'highcharts_series_states_hover_marker_options.dart';
-
 
 /* *
  *
@@ -28,10 +25,8 @@ import 'highcharts_series_states_hover_marker_options.dart';
  *
  * */
 
-
 export 'highcharts_series_states_hover_animation_options.dart';
 export 'highcharts_series_states_hover_marker_options.dart';
-
 
 /* *
  *
@@ -39,12 +34,10 @@ export 'highcharts_series_states_hover_marker_options.dart';
  *
  * */
 
-
 /**
  * Options for the hovered series
  */
 class HighchartsTreemapSeriesStatesHoverOptions extends HighchartsOptionsBase {
-
   String? borderColor;
   double? brightness;
   double? opacity;
@@ -55,23 +48,20 @@ class HighchartsTreemapSeriesStatesHoverOptions extends HighchartsOptionsBase {
   double? lineWidthPlus;
   HighchartsSeriesStatesHoverMarkerOptions? marker;
 
-
-  HighchartsTreemapSeriesStatesHoverOptions({
-    this.borderColor,
-    this.brightness,
-    this.opacity,
-    this.shadow,
-    this.animation,
-    this.enabled,
-    this.lineWidth,
-    this.lineWidthPlus,
-    this.marker
-  });
+  HighchartsTreemapSeriesStatesHoverOptions(
+      {this.borderColor,
+      this.brightness,
+      this.opacity,
+      this.shadow,
+      this.animation,
+      this.enabled,
+      this.lineWidth,
+      this.lineWidthPlus,
+      this.marker});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (borderColor != null) {
       buffer.writeAll(['"borderColor":', jsonEncode(borderColor), ','], '');
@@ -101,5 +91,4 @@ class HighchartsTreemapSeriesStatesHoverOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"marker":', marker?.toJSON(), ','], '');
     }
   }
-
 }

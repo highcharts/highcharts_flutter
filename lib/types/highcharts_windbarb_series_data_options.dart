@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -24,13 +22,11 @@ import 'highcharts_windbarb_series_data_drag_drop_options.dart';
 import 'highcharts_windbarb_series_data_events_options.dart';
 import 'highcharts_windbarb_series_data_marker_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
-
 
 export 'highcharts_windbarb_series_data_accessibility_options.dart';
 export 'highcharts_windbarb_series_data_data_labels_options.dart';
@@ -38,13 +34,11 @@ export 'highcharts_windbarb_series_data_drag_drop_options.dart';
 export 'highcharts_windbarb_series_data_events_options.dart';
 export 'highcharts_windbarb_series_data_marker_options.dart';
 
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * An array of data points for the series. For the `windbarb` series type,
@@ -79,7 +73,6 @@ export 'highcharts_windbarb_series_data_marker_options.dart';
  *    ```
  */
 class HighchartsWindbarbSeriesDataOptions extends HighchartsOptionsBase {
-
   HighchartsWindbarbSeriesDataAccessibilityOptions? accessibility;
   String? className;
   String? color;
@@ -99,32 +92,29 @@ class HighchartsWindbarbSeriesDataOptions extends HighchartsOptionsBase {
   dynamic x;
   double? y;
 
-
-  HighchartsWindbarbSeriesDataOptions({
-    this.accessibility,
-    this.className,
-    this.color,
-    this.colorIndex,
-    this.custom,
-    this.dataLabels,
-    this.description,
-    this.direction,
-    this.dragDrop,
-    this.drilldown,
-    this.events,
-    this.id,
-    this.labelrank,
-    this.marker,
-    this.selected,
-    this.value,
-    this.x,
-    this.y
-  });
+  HighchartsWindbarbSeriesDataOptions(
+      {this.accessibility,
+      this.className,
+      this.color,
+      this.colorIndex,
+      this.custom,
+      this.dataLabels,
+      this.description,
+      this.direction,
+      this.dragDrop,
+      this.drilldown,
+      this.events,
+      this.id,
+      this.labelrank,
+      this.marker,
+      this.selected,
+      this.value,
+      this.x,
+      this.y});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (accessibility != null) {
       buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ','], '');
@@ -189,5 +179,4 @@ class HighchartsWindbarbSeriesDataOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"y":', y, ','], '');
     }
   }
-
 }

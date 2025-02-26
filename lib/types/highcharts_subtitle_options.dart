@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_subtitle_style_options.dart';
-
 
 /* *
  *
@@ -27,16 +24,13 @@ import 'highcharts_subtitle_style_options.dart';
  *
  * */
 
-
 export 'highcharts_subtitle_style_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * The chart's subtitle. This can be used both to display a subtitle below
@@ -45,7 +39,6 @@ export 'highcharts_subtitle_style_options.dart';
  * `Chart.setTitle` method.
  */
 class HighchartsSubtitleOptions extends HighchartsOptionsBase {
-
   bool? floating;
   HighchartsSubtitleStyleOptions? style;
   String? text;
@@ -54,21 +47,18 @@ class HighchartsSubtitleOptions extends HighchartsOptionsBase {
   double? x;
   double? y;
 
-
-  HighchartsSubtitleOptions({
-    this.floating,
-    this.style,
-    this.text,
-    this.useHTML,
-    this.verticalAlign,
-    this.x,
-    this.y
-  });
+  HighchartsSubtitleOptions(
+      {this.floating,
+      this.style,
+      this.text,
+      this.useHTML,
+      this.verticalAlign,
+      this.x,
+      this.y});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (floating != null) {
       buffer.writeAll(['"floating":', floating, ','], '');
@@ -92,5 +82,4 @@ class HighchartsSubtitleOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"y":', y, ','], '');
     }
   }
-
 }

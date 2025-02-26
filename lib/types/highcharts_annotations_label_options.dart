@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_annotations_label_accessibility_options.dart';
-
 
 /* *
  *
@@ -27,9 +24,7 @@ import 'highcharts_annotations_label_accessibility_options.dart';
  *
  * */
 
-
 export 'highcharts_annotations_label_accessibility_options.dart';
-
 
 /* *
  *
@@ -37,14 +32,12 @@ export 'highcharts_annotations_label_accessibility_options.dart';
  *
  * */
 
-
 /**
  * Options for annotation's labels. Each label inherits options
  * from the labelOptions object. An option from the labelOptions
  * can be overwritten by config for a specific label.
  */
 class HighchartsAnnotationsLabelOptions extends HighchartsOptionsBase {
-
   HighchartsAnnotationsLabelAccessibilityOptions? accessibility;
   String? align;
   bool? allowOverlap;
@@ -69,37 +62,34 @@ class HighchartsAnnotationsLabelOptions extends HighchartsOptionsBase {
   double? x;
   double? y;
 
-
-  HighchartsAnnotationsLabelOptions({
-    this.accessibility,
-    this.align,
-    this.allowOverlap,
-    this.backgroundColor,
-    this.borderColor,
-    this.borderRadius,
-    this.borderWidth,
-    this.className,
-    this.crop,
-    this.distance,
-    this.format,
-    this.formatter,
-    this.includeInDataExport,
-    this.overflow,
-    this.padding,
-    this.shadow,
-    this.shape,
-    this.style,
-    this.text,
-    this.useHTML,
-    this.verticalAlign,
-    this.x,
-    this.y
-  });
+  HighchartsAnnotationsLabelOptions(
+      {this.accessibility,
+      this.align,
+      this.allowOverlap,
+      this.backgroundColor,
+      this.borderColor,
+      this.borderRadius,
+      this.borderWidth,
+      this.className,
+      this.crop,
+      this.distance,
+      this.format,
+      this.formatter,
+      this.includeInDataExport,
+      this.overflow,
+      this.padding,
+      this.shadow,
+      this.shape,
+      this.style,
+      this.text,
+      this.useHTML,
+      this.verticalAlign,
+      this.x,
+      this.y});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (accessibility != null) {
       buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ','], '');
@@ -111,7 +101,8 @@ class HighchartsAnnotationsLabelOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"allowOverlap":', allowOverlap, ','], '');
     }
     if (backgroundColor != null) {
-      buffer.writeAll(['"backgroundColor":', jsonEncode(backgroundColor), ','], '');
+      buffer.writeAll(
+          ['"backgroundColor":', jsonEncode(backgroundColor), ','], '');
     }
     if (borderColor != null) {
       buffer.writeAll(['"borderColor":', jsonEncode(borderColor), ','], '');
@@ -179,5 +170,4 @@ class HighchartsAnnotationsLabelOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"y":', y, ','], '');
     }
   }
-
 }

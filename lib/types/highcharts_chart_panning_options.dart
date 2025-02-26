@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +23,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * Allow panning in a chart. Best used with [panKey](#chart.panKey)
@@ -45,20 +38,14 @@ import 'highcharts_options_base.dart';
  * `followTouchMove` to `false`.
  */
 class HighchartsChartPanningOptions extends HighchartsOptionsBase {
-
   bool? enabled;
   String? type;
 
-
-  HighchartsChartPanningOptions({
-    this.enabled,
-    this.type
-  });
+  HighchartsChartPanningOptions({this.enabled, this.type});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (enabled != null) {
       buffer.writeAll(['"enabled":', enabled, ','], '');
@@ -67,5 +54,4 @@ class HighchartsChartPanningOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"type":', jsonEncode(type), ','], '');
     }
   }
-
 }

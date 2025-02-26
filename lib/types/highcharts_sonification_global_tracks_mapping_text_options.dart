@@ -8,17 +8,13 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,24 +22,16 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Text mapping for speech tracks.
  */
-class HighchartsSonificationGlobalTracksMappingTextOptions extends HighchartsOptionsBase {
-
-
-
+class HighchartsSonificationGlobalTracksMappingTextOptions
+    extends HighchartsOptionsBase {
   HighchartsSonificationGlobalTracksMappingTextOptions();
-
-
 }

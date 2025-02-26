@@ -8,17 +8,13 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,37 +22,29 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 class HighchartsMACDSeriesParamsOptions extends HighchartsOptionsBase {
-
   double? index;
   double? longPeriod;
   double? period;
   double? shortPeriod;
   double? signalPeriod;
 
-
-  HighchartsMACDSeriesParamsOptions({
-    this.index,
-    this.longPeriod,
-    this.period,
-    this.shortPeriod,
-    this.signalPeriod
-  });
+  HighchartsMACDSeriesParamsOptions(
+      {this.index,
+      this.longPeriod,
+      this.period,
+      this.shortPeriod,
+      this.signalPeriod});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (index != null) {
       buffer.writeAll(['"index":', index, ','], '');
@@ -74,5 +62,4 @@ class HighchartsMACDSeriesParamsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"signalPeriod":', signalPeriod, ','], '');
     }
   }
-
 }

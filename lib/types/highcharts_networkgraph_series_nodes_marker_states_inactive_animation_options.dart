@@ -8,17 +8,13 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,36 +22,28 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Animation when not hovering over the node.
  */
-class HighchartsNetworkgraphSeriesNodesMarkerStatesInactiveAnimationOptions extends HighchartsOptionsBase {
-
+class HighchartsNetworkgraphSeriesNodesMarkerStatesInactiveAnimationOptions
+    extends HighchartsOptionsBase {
   double? duration;
 
-
-  HighchartsNetworkgraphSeriesNodesMarkerStatesInactiveAnimationOptions({
-    this.duration
-  });
+  HighchartsNetworkgraphSeriesNodesMarkerStatesInactiveAnimationOptions(
+      {this.duration});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (duration != null) {
       buffer.writeAll(['"duration":', duration, ','], '');
     }
   }
-
 }

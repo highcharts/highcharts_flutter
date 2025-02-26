@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,33 +23,23 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 class HighchartsRenkoSeriesBorderRadiusOptions extends HighchartsOptionsBase {
-
   String? where;
 
-
-  HighchartsRenkoSeriesBorderRadiusOptions({
-    this.where
-  });
+  HighchartsRenkoSeriesBorderRadiusOptions({this.where});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (where != null) {
       buffer.writeAll(['"where":', jsonEncode(where), ','], '');
     }
   }
-
 }

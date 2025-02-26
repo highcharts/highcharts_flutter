@@ -8,17 +8,13 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,33 +22,23 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 class HighchartsWordcloudSeriesAnimationOptions extends HighchartsOptionsBase {
-
   double? duration;
 
-
-  HighchartsWordcloudSeriesAnimationOptions({
-    this.duration
-  });
+  HighchartsWordcloudSeriesAnimationOptions({this.duration});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (duration != null) {
       buffer.writeAll(['"duration":', duration, ','], '');
     }
   }
-
 }

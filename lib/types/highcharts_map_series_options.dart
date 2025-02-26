@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -22,25 +20,21 @@ import 'highcharts_map_series_data_labels_options.dart';
 import 'highcharts_map_series_states_options.dart';
 import 'highcharts_map_series_tooltip_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_map_series_data_labels_options.dart';
 export 'highcharts_map_series_states_options.dart';
 export 'highcharts_map_series_tooltip_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * A `map` series. If the [type](#series.map.type) option is not specified, it
@@ -86,7 +80,6 @@ export 'highcharts_map_series_tooltip_options.dart';
  *             
  */
 class HighchartsMapSeriesOptions extends HighchartsOptionsBase {
-
   bool? affectsMapView;
   bool? animation;
   bool? colorByPoint;
@@ -104,30 +97,27 @@ class HighchartsMapSeriesOptions extends HighchartsOptionsBase {
   HighchartsMapSeriesStatesOptions? states;
   HighchartsMapSeriesTooltipOptions? tooltip;
 
-
-  HighchartsMapSeriesOptions({
-    this.affectsMapView,
-    this.animation,
-    this.colorByPoint,
-    this.colorKey,
-    this.colors,
-    this.dataLabels,
-    this.id,
-    this.index,
-    this.legendIndex,
-    this.legendSymbol,
-    this.linecap,
-    this.mapData,
-    this.nullColor,
-    this.nullInteraction,
-    this.states,
-    this.tooltip
-  });
+  HighchartsMapSeriesOptions(
+      {this.affectsMapView,
+      this.animation,
+      this.colorByPoint,
+      this.colorKey,
+      this.colors,
+      this.dataLabels,
+      this.id,
+      this.index,
+      this.legendIndex,
+      this.legendSymbol,
+      this.linecap,
+      this.mapData,
+      this.nullColor,
+      this.nullInteraction,
+      this.states,
+      this.tooltip});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (affectsMapView != null) {
       buffer.writeAll(['"affectsMapView":', affectsMapView, ','], '');
@@ -186,5 +176,4 @@ class HighchartsMapSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"tooltip":', tooltip?.toJSON(), ','], '');
     }
   }
-
 }

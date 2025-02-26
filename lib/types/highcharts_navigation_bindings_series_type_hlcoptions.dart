@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,36 +23,27 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Change main series to `'hlc'` type.
  */
-class HighchartsNavigationBindingsSeriesTypeHLCOptions extends HighchartsOptionsBase {
-
+class HighchartsNavigationBindingsSeriesTypeHLCOptions
+    extends HighchartsOptionsBase {
   String? className;
 
-
-  HighchartsNavigationBindingsSeriesTypeHLCOptions({
-    this.className
-  });
+  HighchartsNavigationBindingsSeriesTypeHLCOptions({this.className});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (className != null) {
       buffer.writeAll(['"className":', jsonEncode(className), ','], '');
     }
   }
-
 }

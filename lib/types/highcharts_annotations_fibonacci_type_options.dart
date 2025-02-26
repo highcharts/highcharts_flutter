@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -22,18 +20,15 @@ import 'highcharts_annotations_fibonacci_type_labels_options.dart';
 import 'highcharts_annotations_crooked_line_type_line_options.dart';
 import 'highcharts_annotations_crooked_line_type_points_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_annotations_fibonacci_type_labels_options.dart';
 export 'highcharts_annotations_crooked_line_type_line_options.dart';
 export 'highcharts_annotations_crooked_line_type_points_options.dart';
-
 
 /* *
  *
@@ -41,9 +36,7 @@ export 'highcharts_annotations_crooked_line_type_points_options.dart';
  *
  * */
 
-
 class HighchartsAnnotationsFibonacciTypeOptions extends HighchartsOptionsBase {
-
   dynamic backgroundColors;
   double? height;
   List<HighchartsAnnotationsFibonacciTypeLabelsOptions>? labels;
@@ -55,27 +48,25 @@ class HighchartsAnnotationsFibonacciTypeOptions extends HighchartsOptionsBase {
   double? xAxis;
   double? yAxis;
 
-
-  HighchartsAnnotationsFibonacciTypeOptions({
-    this.backgroundColors,
-    this.height,
-    this.labels,
-    this.line,
-    this.lineColor,
-    this.lineColors,
-    this.points,
-    this.reversed,
-    this.xAxis,
-    this.yAxis
-  });
+  HighchartsAnnotationsFibonacciTypeOptions(
+      {this.backgroundColors,
+      this.height,
+      this.labels,
+      this.line,
+      this.lineColor,
+      this.lineColors,
+      this.points,
+      this.reversed,
+      this.xAxis,
+      this.yAxis});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (backgroundColors != null) {
-      buffer.writeAll(['"backgroundColors":', jsonEncode(backgroundColors), ','], '');
+      buffer.writeAll(
+          ['"backgroundColors":', jsonEncode(backgroundColors), ','], '');
     }
     if (height != null) {
       buffer.writeAll(['"height":', height, ','], '');
@@ -113,5 +104,4 @@ class HighchartsAnnotationsFibonacciTypeOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"yAxis":', yAxis, ','], '');
     }
   }
-
 }

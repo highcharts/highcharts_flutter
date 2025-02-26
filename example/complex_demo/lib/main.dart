@@ -11,11 +11,9 @@
  *
  */
 
-
 import 'package:flutter/material.dart';
 
 import 'charts/charts.dart';
-
 
 /* *
  *
@@ -23,11 +21,9 @@ import 'charts/charts.dart';
  *
  * */
 
-
 void main() {
   runApp(const MyApp());
 }
-
 
 /* *
  *
@@ -35,34 +31,29 @@ void main() {
  *
  * */
 
-
 class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
   @override
   State<MyApp> createState() => _MyAppState();
-
 }
 
-
 class _MyAppState extends State<MyApp> {
-
   late String _title;
 
   late Widget _widget;
 
   Widget _buildOverview() {
     return ListView(
-      children: kCharts
-        .entries
-        .map((entry) => ElevatedButton(
-          onPressed: () => setState(() {
-            _title = entry.key;
-            _widget = entry.value;
-          }),
-          child: Text(entry.key),
-        ))
-        .toList(),
+      children: kCharts.entries
+          .map((entry) => ElevatedButton(
+                onPressed: () => setState(() {
+                  _title = entry.key;
+                  _widget = entry.value;
+                }),
+                child: Text(entry.key),
+              ))
+          .toList(),
     );
   }
 
@@ -75,19 +66,18 @@ class _MyAppState extends State<MyApp> {
         useMaterial3: true,
       ),
       home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-          title: Text(_title),
-          leading: IconButton(
-            icon: const Icon(Icons.list),
-            onPressed: () => setState(() {
-              _title = 'Highcharts Flutter';
-              _widget = _buildOverview();
-            }),
+          appBar: AppBar(
+            backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+            title: Text(_title),
+            leading: IconButton(
+              icon: const Icon(Icons.list),
+              onPressed: () => setState(() {
+                _title = 'Highcharts Flutter';
+                _widget = _buildOverview();
+              }),
+            ),
           ),
-        ),
-        body: _widget
-      ),
+          body: _widget),
     );
   }
 
@@ -97,7 +87,5 @@ class _MyAppState extends State<MyApp> {
 
     _title = 'Highcharts Flutter';
     _widget = _buildOverview();
-
   }
-
 }

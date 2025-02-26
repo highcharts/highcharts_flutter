@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,33 +23,24 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
-class HighchartsXRangeSeriesDataLabelsStyleOptions extends HighchartsOptionsBase {
-
+class HighchartsXRangeSeriesDataLabelsStyleOptions
+    extends HighchartsOptionsBase {
   String? whiteSpace;
 
-
-  HighchartsXRangeSeriesDataLabelsStyleOptions({
-    this.whiteSpace
-  });
+  HighchartsXRangeSeriesDataLabelsStyleOptions({this.whiteSpace});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (whiteSpace != null) {
       buffer.writeAll(['"whiteSpace":', jsonEncode(whiteSpace), ','], '');
     }
   }
-
 }

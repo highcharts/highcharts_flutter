@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,33 +23,24 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
-class HighchartsStockToolsGuiDefinitionsFlagsFlagCirclepinOptions extends HighchartsOptionsBase {
-
+class HighchartsStockToolsGuiDefinitionsFlagsFlagCirclepinOptions
+    extends HighchartsOptionsBase {
   String? symbol;
 
-
-  HighchartsStockToolsGuiDefinitionsFlagsFlagCirclepinOptions({
-    this.symbol
-  });
+  HighchartsStockToolsGuiDefinitionsFlagsFlagCirclepinOptions({this.symbol});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (symbol != null) {
       buffer.writeAll(['"symbol":', jsonEncode(symbol), ','], '');
     }
   }
-
 }

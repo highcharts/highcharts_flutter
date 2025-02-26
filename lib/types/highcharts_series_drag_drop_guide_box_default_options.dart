@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,21 +23,17 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Style options for the guide box default state.
  */
-class HighchartsSeriesDragDropGuideBoxDefaultOptions extends HighchartsOptionsBase {
-
+class HighchartsSeriesDragDropGuideBoxDefaultOptions
+    extends HighchartsOptionsBase {
   String? className;
   String? color;
   String? cursor;
@@ -48,20 +41,17 @@ class HighchartsSeriesDragDropGuideBoxDefaultOptions extends HighchartsOptionsBa
   double? lineWidth;
   double? zIndex;
 
-
-  HighchartsSeriesDragDropGuideBoxDefaultOptions({
-    this.className,
-    this.color,
-    this.cursor,
-    this.lineColor,
-    this.lineWidth,
-    this.zIndex
-  });
+  HighchartsSeriesDragDropGuideBoxDefaultOptions(
+      {this.className,
+      this.color,
+      this.cursor,
+      this.lineColor,
+      this.lineWidth,
+      this.zIndex});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (className != null) {
       buffer.writeAll(['"className":', jsonEncode(className), ','], '');
@@ -82,5 +72,4 @@ class HighchartsSeriesDragDropGuideBoxDefaultOptions extends HighchartsOptionsBa
       buffer.writeAll(['"zIndex":', zIndex, ','], '');
     }
   }
-
 }

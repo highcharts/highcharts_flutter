@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -25,13 +23,11 @@ import 'highcharts_annotations_measure_type_label_options.dart';
 import 'highcharts_annotations_crooked_line_type_line_options.dart';
 import 'highcharts_annotations_crooked_line_type_points_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
-
 
 export 'highcharts_annotations_measure_type_background_options.dart';
 export 'highcharts_annotations_measure_type_crosshair_xoptions.dart';
@@ -40,16 +36,13 @@ export 'highcharts_annotations_measure_type_label_options.dart';
 export 'highcharts_annotations_crooked_line_type_line_options.dart';
 export 'highcharts_annotations_crooked_line_type_points_options.dart';
 
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 class HighchartsAnnotationsMeasureTypeOptions extends HighchartsOptionsBase {
-
   HighchartsAnnotationsMeasureTypeBackgroundOptions? background;
   HighchartsAnnotationsMeasureTypeCrosshairXOptions? crosshairX;
   HighchartsAnnotationsMeasureTypeCrosshairYOptions? crosshairY;
@@ -60,23 +53,20 @@ class HighchartsAnnotationsMeasureTypeOptions extends HighchartsOptionsBase {
   HighchartsAnnotationsCrookedLineTypeLineOptions? line;
   List<HighchartsAnnotationsCrookedLineTypePointsOptions>? points;
 
-
-  HighchartsAnnotationsMeasureTypeOptions({
-    this.background,
-    this.crosshairX,
-    this.crosshairY,
-    this.label,
-    this.selectType,
-    this.xAxis,
-    this.yAxis,
-    this.line,
-    this.points
-  });
+  HighchartsAnnotationsMeasureTypeOptions(
+      {this.background,
+      this.crosshairX,
+      this.crosshairY,
+      this.label,
+      this.selectType,
+      this.xAxis,
+      this.yAxis,
+      this.line,
+      this.points});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (background != null) {
       buffer.writeAll(['"background":', background?.toJSON(), ','], '');
@@ -110,5 +100,4 @@ class HighchartsAnnotationsMeasureTypeOptions extends HighchartsOptionsBase {
       buffer.write('],');
     }
   }
-
 }

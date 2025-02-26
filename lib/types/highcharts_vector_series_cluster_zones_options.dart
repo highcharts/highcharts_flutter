@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_vector_series_cluster_zones_marker_options.dart';
-
 
 /* *
  *
@@ -27,16 +24,13 @@ import 'highcharts_vector_series_cluster_zones_marker_options.dart';
  *
  * */
 
-
 export 'highcharts_vector_series_cluster_zones_marker_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * An array defining zones within marker clusters.
@@ -47,24 +41,17 @@ export 'highcharts_vector_series_cluster_zones_marker_options.dart';
  * option.
  */
 class HighchartsVectorSeriesClusterZonesOptions extends HighchartsOptionsBase {
-
   String? className;
   double? from;
   HighchartsVectorSeriesClusterZonesMarkerOptions? marker;
   double? to;
 
-
-  HighchartsVectorSeriesClusterZonesOptions({
-    this.className,
-    this.from,
-    this.marker,
-    this.to
-  });
+  HighchartsVectorSeriesClusterZonesOptions(
+      {this.className, this.from, this.marker, this.to});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (className != null) {
       buffer.writeAll(['"className":', jsonEncode(className), ','], '');
@@ -79,5 +66,4 @@ class HighchartsVectorSeriesClusterZonesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"to":', to, ','], '');
     }
   }
-
 }

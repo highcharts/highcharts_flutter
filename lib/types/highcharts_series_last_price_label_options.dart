@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,18 +23,13 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 class HighchartsSeriesLastPriceLabelOptions extends HighchartsOptionsBase {
-
   dynamic align;
   String? backgroundColor;
   String? borderColor;
@@ -50,31 +42,29 @@ class HighchartsSeriesLastPriceLabelOptions extends HighchartsOptionsBase {
   dynamic shape;
   Map<String, String>? style;
 
-
-  HighchartsSeriesLastPriceLabelOptions({
-    this.align,
-    this.backgroundColor,
-    this.borderColor,
-    this.borderRadius,
-    this.borderWidth,
-    this.enabled,
-    this.format,
-    this.formatter,
-    this.padding,
-    this.shape,
-    this.style
-  });
+  HighchartsSeriesLastPriceLabelOptions(
+      {this.align,
+      this.backgroundColor,
+      this.borderColor,
+      this.borderRadius,
+      this.borderWidth,
+      this.enabled,
+      this.format,
+      this.formatter,
+      this.padding,
+      this.shape,
+      this.style});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (align != null) {
       buffer.writeAll(['"align":', jsonEncode(align), ','], '');
     }
     if (backgroundColor != null) {
-      buffer.writeAll(['"backgroundColor":', jsonEncode(backgroundColor), ','], '');
+      buffer.writeAll(
+          ['"backgroundColor":', jsonEncode(backgroundColor), ','], '');
     }
     if (borderColor != null) {
       buffer.writeAll(['"borderColor":', jsonEncode(borderColor), ','], '');
@@ -108,5 +98,4 @@ class HighchartsSeriesLastPriceLabelOptions extends HighchartsOptionsBase {
       buffer.write('},');
     }
   }
-
 }

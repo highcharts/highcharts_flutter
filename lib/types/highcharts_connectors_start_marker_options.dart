@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,22 +23,17 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Marker options specific to the start markers for this chart's
  * Pathfinder connectors. Overrides the generic marker options.
  */
 class HighchartsConnectorsStartMarkerOptions extends HighchartsOptionsBase {
-
   String? align;
   String? color;
   bool? enabled;
@@ -54,25 +46,22 @@ class HighchartsConnectorsStartMarkerOptions extends HighchartsOptionsBase {
   String? verticalAlign;
   double? width;
 
-
-  HighchartsConnectorsStartMarkerOptions({
-    this.align,
-    this.color,
-    this.enabled,
-    this.height,
-    this.inside,
-    this.lineColor,
-    this.lineWidth,
-    this.radius,
-    this.symbol,
-    this.verticalAlign,
-    this.width
-  });
+  HighchartsConnectorsStartMarkerOptions(
+      {this.align,
+      this.color,
+      this.enabled,
+      this.height,
+      this.inside,
+      this.lineColor,
+      this.lineWidth,
+      this.radius,
+      this.symbol,
+      this.verticalAlign,
+      this.width});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (align != null) {
       buffer.writeAll(['"align":', jsonEncode(align), ','], '');
@@ -108,5 +97,4 @@ class HighchartsConnectorsStartMarkerOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"width":', width, ','], '');
     }
   }
-
 }

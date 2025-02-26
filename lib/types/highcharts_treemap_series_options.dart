@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -33,13 +31,11 @@ import 'highcharts_treemap_series_tooltip_options.dart';
 import 'highcharts_treemap_series_traverse_up_button_options.dart';
 import 'highcharts_series_zones_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
-
 
 export 'highcharts_series_accessibility_options.dart';
 export 'highcharts_treemap_series_breadcrumbs_options.dart';
@@ -56,13 +52,11 @@ export 'highcharts_treemap_series_tooltip_options.dart';
 export 'highcharts_treemap_series_traverse_up_button_options.dart';
 export 'highcharts_series_zones_options.dart';
 
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * A `treemap` series. If the [type](#series.treemap.type) option is
@@ -108,7 +102,6 @@ export 'highcharts_series_zones_options.dart';
  *             
  */
 class HighchartsTreemapSeriesOptions extends HighchartsOptionsBase {
-
   HighchartsSeriesAccessibilityOptions? accessibility;
   bool? allowDrillToNode;
   bool? allowPointSelect;
@@ -192,96 +185,93 @@ class HighchartsTreemapSeriesOptions extends HighchartsOptionsBase {
   String? zoneAxis;
   List<HighchartsSeriesZonesOptions>? zones;
 
-
-  HighchartsTreemapSeriesOptions({
-    this.accessibility,
-    this.allowDrillToNode,
-    this.allowPointSelect,
-    this.allowTraversingTree,
-    this.alternateStartingDirection,
-    this.animation,
-    this.animationLimit,
-    this.boostBlending,
-    this.boostThreshold,
-    this.borderColor,
-    this.borderRadius,
-    this.borderWidth,
-    this.breadcrumbs,
-    this.className,
-    this.clip,
-    this.cluster,
-    this.color,
-    this.colorAxis,
-    this.colorByPoint,
-    this.colorIndex,
-    this.colorKey,
-    this.colors,
-    this.crisp,
-    this.cropThreshold,
-    this.cursor,
-    this.custom,
-    this.dashStyle,
-    this.dataLabels,
-    this.description,
-    this.enableMouseTracking,
-    this.events,
-    this.findNearestPointBy,
-    this.getExtremesFromAll,
-    this.id,
-    this.ignoreHiddenPoint,
-    this.inactiveOtherPoints,
-    this.includeInDataExport,
-    this.index,
-    this.interactByLeaf,
-    this.keys,
-    this.label,
-    this.layoutAlgorithm,
-    this.layoutStartingDirection,
-    this.legendIndex,
-    this.legendSymbol,
-    this.levelIsConstant,
-    this.levels,
-    this.lineWidth,
-    this.linecap,
-    this.linkedTo,
-    this.negativeColor,
-    this.onPoint,
-    this.opacity,
-    this.point,
-    this.pointDescriptionFormat,
-    this.pointDescriptionFormatter,
-    this.pointInterval,
-    this.pointIntervalUnit,
-    this.pointStart,
-    this.relativeXValue,
-    this.selected,
-    this.showCheckbox,
-    this.showInLegend,
-    this.skipKeyboardNavigation,
-    this.softThreshold,
-    this.sonification,
-    this.sortIndex,
-    this.stacking,
-    this.states,
-    this.step,
-    this.stickyTracking,
-    this.threshold,
-    this.tooltip,
-    this.traverseToLeaf,
-    this.traverseUpButton,
-    this.turboThreshold,
-    this.visible,
-    this.xAxis,
-    this.yAxis,
-    this.zIndex,
-    this.zoneAxis,
-    this.zones
-  });
+  HighchartsTreemapSeriesOptions(
+      {this.accessibility,
+      this.allowDrillToNode,
+      this.allowPointSelect,
+      this.allowTraversingTree,
+      this.alternateStartingDirection,
+      this.animation,
+      this.animationLimit,
+      this.boostBlending,
+      this.boostThreshold,
+      this.borderColor,
+      this.borderRadius,
+      this.borderWidth,
+      this.breadcrumbs,
+      this.className,
+      this.clip,
+      this.cluster,
+      this.color,
+      this.colorAxis,
+      this.colorByPoint,
+      this.colorIndex,
+      this.colorKey,
+      this.colors,
+      this.crisp,
+      this.cropThreshold,
+      this.cursor,
+      this.custom,
+      this.dashStyle,
+      this.dataLabels,
+      this.description,
+      this.enableMouseTracking,
+      this.events,
+      this.findNearestPointBy,
+      this.getExtremesFromAll,
+      this.id,
+      this.ignoreHiddenPoint,
+      this.inactiveOtherPoints,
+      this.includeInDataExport,
+      this.index,
+      this.interactByLeaf,
+      this.keys,
+      this.label,
+      this.layoutAlgorithm,
+      this.layoutStartingDirection,
+      this.legendIndex,
+      this.legendSymbol,
+      this.levelIsConstant,
+      this.levels,
+      this.lineWidth,
+      this.linecap,
+      this.linkedTo,
+      this.negativeColor,
+      this.onPoint,
+      this.opacity,
+      this.point,
+      this.pointDescriptionFormat,
+      this.pointDescriptionFormatter,
+      this.pointInterval,
+      this.pointIntervalUnit,
+      this.pointStart,
+      this.relativeXValue,
+      this.selected,
+      this.showCheckbox,
+      this.showInLegend,
+      this.skipKeyboardNavigation,
+      this.softThreshold,
+      this.sonification,
+      this.sortIndex,
+      this.stacking,
+      this.states,
+      this.step,
+      this.stickyTracking,
+      this.threshold,
+      this.tooltip,
+      this.traverseToLeaf,
+      this.traverseUpButton,
+      this.turboThreshold,
+      this.visible,
+      this.xAxis,
+      this.yAxis,
+      this.zIndex,
+      this.zoneAxis,
+      this.zones});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (accessibility != null) {
       buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ','], '');
@@ -296,7 +286,9 @@ class HighchartsTreemapSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"allowTraversingTree":', allowTraversingTree, ','], '');
     }
     if (alternateStartingDirection != null) {
-      buffer.writeAll(['"alternateStartingDirection":', alternateStartingDirection, ','], '');
+      buffer.writeAll(
+          ['"alternateStartingDirection":', alternateStartingDirection, ','],
+          '');
     }
     if (animation != null) {
       buffer.writeAll(['"animation":', jsonEncode(animation), ','], '');
@@ -385,7 +377,8 @@ class HighchartsTreemapSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"events":', events?.toJSON(), ','], '');
     }
     if (findNearestPointBy != null) {
-      buffer.writeAll(['"findNearestPointBy":', jsonEncode(findNearestPointBy), ','], '');
+      buffer.writeAll(
+          ['"findNearestPointBy":', jsonEncode(findNearestPointBy), ','], '');
     }
     if (getExtremesFromAll != null) {
       buffer.writeAll(['"getExtremesFromAll":', getExtremesFromAll, ','], '');
@@ -419,10 +412,15 @@ class HighchartsTreemapSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"label":', label?.toJSON(), ','], '');
     }
     if (layoutAlgorithm != null) {
-      buffer.writeAll(['"layoutAlgorithm":', jsonEncode(layoutAlgorithm), ','], '');
+      buffer.writeAll(
+          ['"layoutAlgorithm":', jsonEncode(layoutAlgorithm), ','], '');
     }
     if (layoutStartingDirection != null) {
-      buffer.writeAll(['"layoutStartingDirection":', jsonEncode(layoutStartingDirection), ','], '');
+      buffer.writeAll([
+        '"layoutStartingDirection":',
+        jsonEncode(layoutStartingDirection),
+        ','
+      ], '');
     }
     if (legendIndex != null) {
       buffer.writeAll(['"legendIndex":', legendIndex, ','], '');
@@ -462,16 +460,25 @@ class HighchartsTreemapSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"point":', point?.toJSON(), ','], '');
     }
     if (pointDescriptionFormat != null) {
-      buffer.writeAll(['"pointDescriptionFormat":', jsonEncode(pointDescriptionFormat), ','], '');
+      buffer.writeAll([
+        '"pointDescriptionFormat":',
+        jsonEncode(pointDescriptionFormat),
+        ','
+      ], '');
     }
     if (pointDescriptionFormatter != null) {
-      buffer.writeAll(['"pointDescriptionFormatter":', jsonEncode(pointDescriptionFormatter), ','], '');
+      buffer.writeAll([
+        '"pointDescriptionFormatter":',
+        jsonEncode(pointDescriptionFormatter),
+        ','
+      ], '');
     }
     if (pointInterval != null) {
       buffer.writeAll(['"pointInterval":', pointInterval, ','], '');
     }
     if (pointIntervalUnit != null) {
-      buffer.writeAll(['"pointIntervalUnit":', jsonEncode(pointIntervalUnit), ','], '');
+      buffer.writeAll(
+          ['"pointIntervalUnit":', jsonEncode(pointIntervalUnit), ','], '');
     }
     if (pointStart != null) {
       buffer.writeAll(['"pointStart":', jsonEncode(pointStart), ','], '');
@@ -489,7 +496,8 @@ class HighchartsTreemapSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"showInLegend":', showInLegend, ','], '');
     }
     if (skipKeyboardNavigation != null) {
-      buffer.writeAll(['"skipKeyboardNavigation":', skipKeyboardNavigation, ','], '');
+      buffer.writeAll(
+          ['"skipKeyboardNavigation":', skipKeyboardNavigation, ','], '');
     }
     if (softThreshold != null) {
       buffer.writeAll(['"softThreshold":', softThreshold, ','], '');
@@ -522,7 +530,8 @@ class HighchartsTreemapSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"traverseToLeaf":', traverseToLeaf, ','], '');
     }
     if (traverseUpButton != null) {
-      buffer.writeAll(['"traverseUpButton":', traverseUpButton?.toJSON(), ','], '');
+      buffer.writeAll(
+          ['"traverseUpButton":', traverseUpButton?.toJSON(), ','], '');
     }
     if (turboThreshold != null) {
       buffer.writeAll(['"turboThreshold":', turboThreshold, ','], '');
@@ -550,5 +559,4 @@ class HighchartsTreemapSeriesOptions extends HighchartsOptionsBase {
       buffer.write('],');
     }
   }
-
 }

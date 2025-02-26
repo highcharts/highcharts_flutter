@@ -8,18 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
 import 'highcharts_variable_pie_series_point_events_options.dart';
-
 
 /* *
  *
@@ -27,9 +23,7 @@ import 'highcharts_variable_pie_series_point_events_options.dart';
  *
  * */
 
-
 export 'highcharts_variable_pie_series_point_events_options.dart';
-
 
 /* *
  *
@@ -37,24 +31,17 @@ export 'highcharts_variable_pie_series_point_events_options.dart';
  *
  * */
 
-
 class HighchartsVariablePieSeriesPointOptions extends HighchartsOptionsBase {
-
   HighchartsVariablePieSeriesPointEventsOptions? events;
 
-
-  HighchartsVariablePieSeriesPointOptions({
-    this.events
-  });
+  HighchartsVariablePieSeriesPointOptions({this.events});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (events != null) {
       buffer.writeAll(['"events":', events?.toJSON(), ','], '');
     }
   }
-
 }

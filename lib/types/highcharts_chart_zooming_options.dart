@@ -8,19 +8,16 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_chart_zooming_mouse_wheel_options.dart';
 import 'highcharts_chart_zooming_reset_button_options.dart';
-
 
 /* *
  *
@@ -28,10 +25,8 @@ import 'highcharts_chart_zooming_reset_button_options.dart';
  *
  * */
 
-
 export 'highcharts_chart_zooming_mouse_wheel_options.dart';
 export 'highcharts_chart_zooming_reset_button_options.dart';
-
 
 /* *
  *
@@ -39,12 +34,10 @@ export 'highcharts_chart_zooming_reset_button_options.dart';
  *
  * */
 
-
 /**
  * Chart zooming options.
  */
 class HighchartsChartZoomingOptions extends HighchartsOptionsBase {
-
   String? key;
   HighchartsChartZoomingMouseWheelOptions? mouseWheel;
   String? pinchType;
@@ -52,20 +45,17 @@ class HighchartsChartZoomingOptions extends HighchartsOptionsBase {
   bool? singleTouch;
   String? type;
 
-
-  HighchartsChartZoomingOptions({
-    this.key,
-    this.mouseWheel,
-    this.pinchType,
-    this.resetButton,
-    this.singleTouch,
-    this.type
-  });
+  HighchartsChartZoomingOptions(
+      {this.key,
+      this.mouseWheel,
+      this.pinchType,
+      this.resetButton,
+      this.singleTouch,
+      this.type});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (key != null) {
       buffer.writeAll(['"key":', jsonEncode(key), ','], '');
@@ -86,5 +76,4 @@ class HighchartsChartZoomingOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"type":', jsonEncode(type), ','], '');
     }
   }
-
 }

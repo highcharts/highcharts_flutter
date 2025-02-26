@@ -8,17 +8,13 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +22,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * An array of points for the shape
@@ -45,10 +37,5 @@ import 'highcharts_options_base.dart';
  * point can be either a point object or a point's id.
  */
 class HighchartsAnnotationsShapesPointsOptions extends HighchartsOptionsBase {
-
-
-
   HighchartsAnnotationsShapesPointsOptions();
-
-
 }

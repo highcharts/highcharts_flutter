@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,37 +23,28 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Hover state overrides for the buttons are applied in addition
  * to the normal state options
  */
-class HighchartsGlobalButtonThemeStatesHoverOptions extends HighchartsOptionsBase {
-
+class HighchartsGlobalButtonThemeStatesHoverOptions
+    extends HighchartsOptionsBase {
   String? fill;
 
-
-  HighchartsGlobalButtonThemeStatesHoverOptions({
-    this.fill
-  });
+  HighchartsGlobalButtonThemeStatesHoverOptions({this.fill});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (fill != null) {
       buffer.writeAll(['"fill":', jsonEncode(fill), ','], '');
     }
   }
-
 }

@@ -8,18 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
 import 'highcharts_navigation_breadcrumbs_button_theme_style_options.dart';
-
 
 /* *
  *
@@ -27,16 +23,13 @@ import 'highcharts_navigation_breadcrumbs_button_theme_style_options.dart';
  *
  * */
 
-
 export 'highcharts_navigation_breadcrumbs_button_theme_style_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * A collection of attributes for the buttons. The object takes SVG
@@ -47,23 +40,18 @@ export 'highcharts_navigation_breadcrumbs_button_theme_style_options.dart';
  * presentational options for `hover`, `select` or `disabled` button
  * states.
  */
-class HighchartsNavigationBreadcrumbsButtonThemeOptions extends HighchartsOptionsBase {
-
+class HighchartsNavigationBreadcrumbsButtonThemeOptions
+    extends HighchartsOptionsBase {
   HighchartsNavigationBreadcrumbsButtonThemeStyleOptions? style;
 
-
-  HighchartsNavigationBreadcrumbsButtonThemeOptions({
-    this.style
-  });
+  HighchartsNavigationBreadcrumbsButtonThemeOptions({this.style});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (style != null) {
       buffer.writeAll(['"style":', style?.toJSON(), ','], '');
     }
   }
-
 }

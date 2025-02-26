@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -33,13 +31,11 @@ import 'highcharts_series_sonification_options.dart';
 import 'highcharts_arc_diagram_series_states_options.dart';
 import 'highcharts_arc_diagram_series_tooltip_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
-
 
 export 'highcharts_series_accessibility_options.dart';
 export 'highcharts_arc_diagram_series_data_grouping_options.dart';
@@ -56,13 +52,11 @@ export 'highcharts_series_sonification_options.dart';
 export 'highcharts_arc_diagram_series_states_options.dart';
 export 'highcharts_arc_diagram_series_tooltip_options.dart';
 
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * An `arcdiagram` series. If the [type](#series.arcdiagram.type)
@@ -108,7 +102,6 @@ export 'highcharts_arc_diagram_series_tooltip_options.dart';
  *             
  */
 class HighchartsArcDiagramSeriesOptions extends HighchartsOptionsBase {
-
   HighchartsSeriesAccessibilityOptions? accessibility;
   bool? allowPointSelect;
   dynamic animation;
@@ -168,72 +161,69 @@ class HighchartsArcDiagramSeriesOptions extends HighchartsOptionsBase {
   bool? visible;
   double? zIndex;
 
-
-  HighchartsArcDiagramSeriesOptions({
-    this.accessibility,
-    this.allowPointSelect,
-    this.animation,
-    this.borderColor,
-    this.borderWidth,
-    this.centeredLinks,
-    this.className,
-    this.clip,
-    this.color,
-    this.colorByPoint,
-    this.colorIndex,
-    this.colors,
-    this.cursor,
-    this.custom,
-    this.dashStyle,
-    this.dataGrouping,
-    this.dataLabels,
-    this.description,
-    this.enableMouseTracking,
-    this.equalNodes,
-    this.events,
-    this.id,
-    this.inactiveOtherPoints,
-    this.includeInDataExport,
-    this.index,
-    this.keys,
-    this.label,
-    this.legendIndex,
-    this.legendSymbol,
-    this.levels,
-    this.linkColorMode,
-    this.linkOpacity,
-    this.linkRadius,
-    this.linkWeight,
-    this.linkedTo,
-    this.marker,
-    this.minLinkWidth,
-    this.nodeDistance,
-    this.nodeWidth,
-    this.nodes,
-    this.offset,
-    this.onPoint,
-    this.opacity,
-    this.point,
-    this.pointDescriptionFormat,
-    this.pointDescriptionFormatter,
-    this.reversed,
-    this.selected,
-    this.showCheckbox,
-    this.showInLegend,
-    this.skipKeyboardNavigation,
-    this.sonification,
-    this.states,
-    this.stickyTracking,
-    this.tooltip,
-    this.turboThreshold,
-    this.visible,
-    this.zIndex
-  });
+  HighchartsArcDiagramSeriesOptions(
+      {this.accessibility,
+      this.allowPointSelect,
+      this.animation,
+      this.borderColor,
+      this.borderWidth,
+      this.centeredLinks,
+      this.className,
+      this.clip,
+      this.color,
+      this.colorByPoint,
+      this.colorIndex,
+      this.colors,
+      this.cursor,
+      this.custom,
+      this.dashStyle,
+      this.dataGrouping,
+      this.dataLabels,
+      this.description,
+      this.enableMouseTracking,
+      this.equalNodes,
+      this.events,
+      this.id,
+      this.inactiveOtherPoints,
+      this.includeInDataExport,
+      this.index,
+      this.keys,
+      this.label,
+      this.legendIndex,
+      this.legendSymbol,
+      this.levels,
+      this.linkColorMode,
+      this.linkOpacity,
+      this.linkRadius,
+      this.linkWeight,
+      this.linkedTo,
+      this.marker,
+      this.minLinkWidth,
+      this.nodeDistance,
+      this.nodeWidth,
+      this.nodes,
+      this.offset,
+      this.onPoint,
+      this.opacity,
+      this.point,
+      this.pointDescriptionFormat,
+      this.pointDescriptionFormatter,
+      this.reversed,
+      this.selected,
+      this.showCheckbox,
+      this.showInLegend,
+      this.skipKeyboardNavigation,
+      this.sonification,
+      this.states,
+      this.stickyTracking,
+      this.tooltip,
+      this.turboThreshold,
+      this.visible,
+      this.zIndex});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (accessibility != null) {
       buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ','], '');
@@ -310,7 +300,8 @@ class HighchartsArcDiagramSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"id":', jsonEncode(id), ','], '');
     }
     if (inactiveOtherPoints != null) {
-      buffer.writeAll(['"inactiveOtherPoints":', inactiveOtherPoints?.toJSON(), ','], '');
+      buffer.writeAll(
+          ['"inactiveOtherPoints":', inactiveOtherPoints?.toJSON(), ','], '');
     }
     if (includeInDataExport != null) {
       buffer.writeAll(['"includeInDataExport":', includeInDataExport, ','], '');
@@ -388,10 +379,18 @@ class HighchartsArcDiagramSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"point":', point?.toJSON(), ','], '');
     }
     if (pointDescriptionFormat != null) {
-      buffer.writeAll(['"pointDescriptionFormat":', jsonEncode(pointDescriptionFormat), ','], '');
+      buffer.writeAll([
+        '"pointDescriptionFormat":',
+        jsonEncode(pointDescriptionFormat),
+        ','
+      ], '');
     }
     if (pointDescriptionFormatter != null) {
-      buffer.writeAll(['"pointDescriptionFormatter":', jsonEncode(pointDescriptionFormatter), ','], '');
+      buffer.writeAll([
+        '"pointDescriptionFormatter":',
+        jsonEncode(pointDescriptionFormatter),
+        ','
+      ], '');
     }
     if (reversed != null) {
       buffer.writeAll(['"reversed":', reversed, ','], '');
@@ -406,7 +405,8 @@ class HighchartsArcDiagramSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"showInLegend":', showInLegend, ','], '');
     }
     if (skipKeyboardNavigation != null) {
-      buffer.writeAll(['"skipKeyboardNavigation":', skipKeyboardNavigation, ','], '');
+      buffer.writeAll(
+          ['"skipKeyboardNavigation":', skipKeyboardNavigation, ','], '');
     }
     if (sonification != null) {
       buffer.writeAll(['"sonification":', sonification?.toJSON(), ','], '');
@@ -430,5 +430,4 @@ class HighchartsArcDiagramSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"zIndex":', zIndex, ','], '');
     }
   }
-
 }

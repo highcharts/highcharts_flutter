@@ -8,18 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
 import 'highcharts_stochastic_series_smoothed_line_styles_options.dart';
-
 
 /* *
  *
@@ -27,9 +23,7 @@ import 'highcharts_stochastic_series_smoothed_line_styles_options.dart';
  *
  * */
 
-
 export 'highcharts_stochastic_series_smoothed_line_styles_options.dart';
-
 
 /* *
  *
@@ -37,27 +31,21 @@ export 'highcharts_stochastic_series_smoothed_line_styles_options.dart';
  *
  * */
 
-
 /**
  * Smoothed line options.
  */
-class HighchartsStochasticSeriesSmoothedLineOptions extends HighchartsOptionsBase {
-
+class HighchartsStochasticSeriesSmoothedLineOptions
+    extends HighchartsOptionsBase {
   HighchartsStochasticSeriesSmoothedLineStylesOptions? styles;
 
-
-  HighchartsStochasticSeriesSmoothedLineOptions({
-    this.styles
-  });
+  HighchartsStochasticSeriesSmoothedLineOptions({this.styles});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (styles != null) {
       buffer.writeAll(['"styles":', styles?.toJSON(), ','], '');
     }
   }
-
 }

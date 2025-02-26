@@ -8,20 +8,16 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
 import 'highcharts_annotations_crooked_line_label_options.dart';
 import 'highcharts_annotations_crooked_line_shape_options.dart';
 import 'highcharts_annotations_vertical_line_type_options.dart';
-
 
 /* *
  *
@@ -29,11 +25,9 @@ import 'highcharts_annotations_vertical_line_type_options.dart';
  *
  * */
 
-
 export 'highcharts_annotations_crooked_line_label_options.dart';
 export 'highcharts_annotations_crooked_line_shape_options.dart';
 export 'highcharts_annotations_vertical_line_type_options.dart';
-
 
 /* *
  *
@@ -41,27 +35,20 @@ export 'highcharts_annotations_vertical_line_type_options.dart';
  *
  * */
 
-
 /**
  * A vertical line annotation.
  */
 class HighchartsAnnotationsVerticalLineOptions extends HighchartsOptionsBase {
-
   HighchartsAnnotationsCrookedLineLabelOptions? labelOptions;
   HighchartsAnnotationsCrookedLineShapeOptions? shapeOptions;
   HighchartsAnnotationsVerticalLineTypeOptions? typeOptions;
 
-
-  HighchartsAnnotationsVerticalLineOptions({
-    this.labelOptions,
-    this.shapeOptions,
-    this.typeOptions
-  });
+  HighchartsAnnotationsVerticalLineOptions(
+      {this.labelOptions, this.shapeOptions, this.typeOptions});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (labelOptions != null) {
       buffer.writeAll(['"labelOptions":', labelOptions?.toJSON(), ','], '');
@@ -73,5 +60,4 @@ class HighchartsAnnotationsVerticalLineOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"typeOptions":', typeOptions?.toJSON(), ','], '');
     }
   }
-
 }

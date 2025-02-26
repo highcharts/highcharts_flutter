@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,33 +23,24 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
-class HighchartsStockToolsGuiDefinitionsMeasureMeasureXYOptions extends HighchartsOptionsBase {
-
+class HighchartsStockToolsGuiDefinitionsMeasureMeasureXYOptions
+    extends HighchartsOptionsBase {
   String? symbol;
 
-
-  HighchartsStockToolsGuiDefinitionsMeasureMeasureXYOptions({
-    this.symbol
-  });
+  HighchartsStockToolsGuiDefinitionsMeasureMeasureXYOptions({this.symbol});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (symbol != null) {
       buffer.writeAll(['"symbol":', jsonEncode(symbol), ','], '');
     }
   }
-
 }

@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,33 +23,24 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
-class HighchartsDisparityIndexSeriesParamsOptions extends HighchartsOptionsBase {
-
+class HighchartsDisparityIndexSeriesParamsOptions
+    extends HighchartsOptionsBase {
   String? average;
   double? index;
   double? period;
 
-
-  HighchartsDisparityIndexSeriesParamsOptions({
-    this.average,
-    this.index,
-    this.period
-  });
+  HighchartsDisparityIndexSeriesParamsOptions(
+      {this.average, this.index, this.period});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (average != null) {
       buffer.writeAll(['"average":', jsonEncode(average), ','], '');
@@ -64,5 +52,4 @@ class HighchartsDisparityIndexSeriesParamsOptions extends HighchartsOptionsBase 
       buffer.writeAll(['"period":', period, ','], '');
     }
   }
-
 }

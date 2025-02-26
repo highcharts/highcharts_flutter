@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_series_marker_states_options.dart';
-
 
 /* *
  *
@@ -27,9 +24,7 @@ import 'highcharts_series_marker_states_options.dart';
  *
  * */
 
-
 export 'highcharts_series_marker_states_options.dart';
-
 
 /* *
  *
@@ -37,13 +32,12 @@ export 'highcharts_series_marker_states_options.dart';
  *
  * */
 
-
 /**
  * Marker options for the up direction column, inherited from `series.marker`
  * options.
  */
-class HighchartsPointandfigureSeriesMarkerUpOptions extends HighchartsOptionsBase {
-
+class HighchartsPointandfigureSeriesMarkerUpOptions
+    extends HighchartsOptionsBase {
   bool? enabled;
   double? enabledThreshold;
   String? fillColor;
@@ -55,24 +49,21 @@ class HighchartsPointandfigureSeriesMarkerUpOptions extends HighchartsOptionsBas
   String? symbol;
   double? width;
 
-
-  HighchartsPointandfigureSeriesMarkerUpOptions({
-    this.enabled,
-    this.enabledThreshold,
-    this.fillColor,
-    this.height,
-    this.lineColor,
-    this.lineWidth,
-    this.radius,
-    this.states,
-    this.symbol,
-    this.width
-  });
+  HighchartsPointandfigureSeriesMarkerUpOptions(
+      {this.enabled,
+      this.enabledThreshold,
+      this.fillColor,
+      this.height,
+      this.lineColor,
+      this.lineWidth,
+      this.radius,
+      this.states,
+      this.symbol,
+      this.width});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (enabled != null) {
       buffer.writeAll(['"enabled":', enabled, ','], '');
@@ -105,5 +96,4 @@ class HighchartsPointandfigureSeriesMarkerUpOptions extends HighchartsOptionsBas
       buffer.writeAll(['"width":', width, ','], '');
     }
   }
-
 }

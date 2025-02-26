@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +23,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * In Highcharts 1.0, the appearance of all markers belonging
@@ -43,7 +36,6 @@ import 'highcharts_options_base.dart';
  * [marker.states.hover](#plotOptions.series.marker.states.hover).
  */
 class HighchartsSeriesStatesHoverMarkerOptions extends HighchartsOptionsBase {
-
   bool? enabled;
   double? enabledThreshold;
   String? fillColor;
@@ -53,22 +45,19 @@ class HighchartsSeriesStatesHoverMarkerOptions extends HighchartsOptionsBase {
   double? radius;
   double? width;
 
-
-  HighchartsSeriesStatesHoverMarkerOptions({
-    this.enabled,
-    this.enabledThreshold,
-    this.fillColor,
-    this.height,
-    this.lineColor,
-    this.lineWidth,
-    this.radius,
-    this.width
-  });
+  HighchartsSeriesStatesHoverMarkerOptions(
+      {this.enabled,
+      this.enabledThreshold,
+      this.fillColor,
+      this.height,
+      this.lineColor,
+      this.lineWidth,
+      this.radius,
+      this.width});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (enabled != null) {
       buffer.writeAll(['"enabled":', enabled, ','], '');
@@ -95,5 +84,4 @@ class HighchartsSeriesStatesHoverMarkerOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"width":', width, ','], '');
     }
   }
-
 }

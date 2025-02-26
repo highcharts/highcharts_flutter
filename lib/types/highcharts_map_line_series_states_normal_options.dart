@@ -8,17 +8,13 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,33 +22,23 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 class HighchartsMapLineSeriesStatesNormalOptions extends HighchartsOptionsBase {
-
   bool? animation;
 
-
-  HighchartsMapLineSeriesStatesNormalOptions({
-    this.animation
-  });
+  HighchartsMapLineSeriesStatesNormalOptions({this.animation});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (animation != null) {
       buffer.writeAll(['"animation":', animation, ','], '');
     }
   }
-
 }

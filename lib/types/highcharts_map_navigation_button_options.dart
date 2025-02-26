@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +23,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * General options for the map navigation buttons. Individual options
@@ -42,7 +35,6 @@ import 'highcharts_options_base.dart';
  * option set.
  */
 class HighchartsMapNavigationButtonOptions extends HighchartsOptionsBase {
-
   String? align;
   String? alignTo;
   double? height;
@@ -53,23 +45,20 @@ class HighchartsMapNavigationButtonOptions extends HighchartsOptionsBase {
   double? width;
   double? x;
 
-
-  HighchartsMapNavigationButtonOptions({
-    this.align,
-    this.alignTo,
-    this.height,
-    this.padding,
-    this.style,
-    this.theme,
-    this.verticalAlign,
-    this.width,
-    this.x
-  });
+  HighchartsMapNavigationButtonOptions(
+      {this.align,
+      this.alignTo,
+      this.height,
+      this.padding,
+      this.style,
+      this.theme,
+      this.verticalAlign,
+      this.width,
+      this.x});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (align != null) {
       buffer.writeAll(['"align":', jsonEncode(align), ','], '');
@@ -103,5 +92,4 @@ class HighchartsMapNavigationButtonOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"x":', x, ','], '');
     }
   }
-
 }

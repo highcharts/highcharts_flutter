@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_series_states_hover_animation_options.dart';
-
 
 /* *
  *
@@ -27,9 +24,7 @@ import 'highcharts_series_states_hover_animation_options.dart';
  *
  * */
 
-
 export 'highcharts_series_states_hover_animation_options.dart';
-
 
 /* *
  *
@@ -37,32 +32,28 @@ export 'highcharts_series_states_hover_animation_options.dart';
  *
  * */
 
-
 /**
  * Options for the hovered point. These settings override the normal
  * state options when a point is moused over or touched.
  */
-class HighchartsPyramid3DSeriesStatesHoverOptions extends HighchartsOptionsBase {
-
+class HighchartsPyramid3DSeriesStatesHoverOptions
+    extends HighchartsOptionsBase {
   HighchartsSeriesStatesHoverAnimationOptions? animation;
   String? borderColor;
   double? brightness;
   String? color;
   bool? enabled;
 
-
-  HighchartsPyramid3DSeriesStatesHoverOptions({
-    this.animation,
-    this.borderColor,
-    this.brightness,
-    this.color,
-    this.enabled
-  });
+  HighchartsPyramid3DSeriesStatesHoverOptions(
+      {this.animation,
+      this.borderColor,
+      this.brightness,
+      this.color,
+      this.enabled});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (animation != null) {
       buffer.writeAll(['"animation":', animation?.toJSON(), ','], '');
@@ -80,5 +71,4 @@ class HighchartsPyramid3DSeriesStatesHoverOptions extends HighchartsOptionsBase 
       buffer.writeAll(['"enabled":', enabled, ','], '');
     }
   }
-
 }

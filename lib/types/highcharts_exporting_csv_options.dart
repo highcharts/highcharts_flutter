@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_exporting_csv_annotations_options.dart';
-
 
 /* *
  *
@@ -27,16 +24,13 @@ import 'highcharts_exporting_csv_annotations_options.dart';
  *
  * */
 
-
 export 'highcharts_exporting_csv_annotations_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * Options for exporting data to CSV or ExCel, or displaying the data
@@ -52,7 +46,6 @@ export 'highcharts_exporting_csv_annotations_options.dart';
  * converter, as demonstrated in the sample below.
  */
 class HighchartsExportingCsvOptions extends HighchartsOptionsBase {
-
   HighchartsExportingCsvAnnotationsOptions? annotations;
   dynamic columnHeaderFormatter;
   String? dateFormat;
@@ -60,26 +53,25 @@ class HighchartsExportingCsvOptions extends HighchartsOptionsBase {
   String? itemDelimiter;
   String? lineDelimiter;
 
-
-  HighchartsExportingCsvOptions({
-    this.annotations,
-    this.columnHeaderFormatter,
-    this.dateFormat,
-    this.decimalPoint,
-    this.itemDelimiter,
-    this.lineDelimiter
-  });
+  HighchartsExportingCsvOptions(
+      {this.annotations,
+      this.columnHeaderFormatter,
+      this.dateFormat,
+      this.decimalPoint,
+      this.itemDelimiter,
+      this.lineDelimiter});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (annotations != null) {
       buffer.writeAll(['"annotations":', annotations?.toJSON(), ','], '');
     }
     if (columnHeaderFormatter != null) {
-      buffer.writeAll(['"columnHeaderFormatter":', jsonEncode(columnHeaderFormatter), ','], '');
+      buffer.writeAll(
+          ['"columnHeaderFormatter":', jsonEncode(columnHeaderFormatter), ','],
+          '');
     }
     if (dateFormat != null) {
       buffer.writeAll(['"dateFormat":', jsonEncode(dateFormat), ','], '');
@@ -94,5 +86,4 @@ class HighchartsExportingCsvOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"lineDelimiter":', jsonEncode(lineDelimiter), ','], '');
     }
   }
-
 }

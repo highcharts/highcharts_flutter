@@ -8,18 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
 import 'highcharts_scatter_series_cluster_states_hover_options.dart';
-
 
 /* *
  *
@@ -27,9 +23,7 @@ import 'highcharts_scatter_series_cluster_states_hover_options.dart';
  *
  * */
 
-
 export 'highcharts_scatter_series_cluster_states_hover_options.dart';
-
 
 /* *
  *
@@ -37,24 +31,18 @@ export 'highcharts_scatter_series_cluster_states_hover_options.dart';
  *
  * */
 
-
-class HighchartsScatterSeriesClusterStatesOptions extends HighchartsOptionsBase {
-
+class HighchartsScatterSeriesClusterStatesOptions
+    extends HighchartsOptionsBase {
   HighchartsScatterSeriesClusterStatesHoverOptions? hover;
 
-
-  HighchartsScatterSeriesClusterStatesOptions({
-    this.hover
-  });
+  HighchartsScatterSeriesClusterStatesOptions({this.hover});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (hover != null) {
       buffer.writeAll(['"hover":', hover?.toJSON(), ','], '');
     }
   }
-
 }

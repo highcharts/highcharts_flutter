@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,33 +23,24 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
-class HighchartsMapPointSeriesDataLabelsStyleOptions extends HighchartsOptionsBase {
-
+class HighchartsMapPointSeriesDataLabelsStyleOptions
+    extends HighchartsOptionsBase {
   String? color;
 
-
-  HighchartsMapPointSeriesDataLabelsStyleOptions({
-    this.color
-  });
+  HighchartsMapPointSeriesDataLabelsStyleOptions({this.color});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (color != null) {
       buffer.writeAll(['"color":', jsonEncode(color), ','], '');
     }
   }
-
 }

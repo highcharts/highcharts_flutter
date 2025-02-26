@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,21 +23,16 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Options for the handles for dragging the zoomed area.
  */
 class HighchartsNavigatorHandlesOptions extends HighchartsOptionsBase {
-
   String? backgroundColor;
   String? borderColor;
   double? borderRadius;
@@ -50,25 +42,23 @@ class HighchartsNavigatorHandlesOptions extends HighchartsOptionsBase {
   List<String>? symbols;
   double? width;
 
-
-  HighchartsNavigatorHandlesOptions({
-    this.backgroundColor,
-    this.borderColor,
-    this.borderRadius,
-    this.enabled,
-    this.height,
-    this.lineWidth,
-    this.symbols,
-    this.width
-  });
+  HighchartsNavigatorHandlesOptions(
+      {this.backgroundColor,
+      this.borderColor,
+      this.borderRadius,
+      this.enabled,
+      this.height,
+      this.lineWidth,
+      this.symbols,
+      this.width});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (backgroundColor != null) {
-      buffer.writeAll(['"backgroundColor":', jsonEncode(backgroundColor), ','], '');
+      buffer.writeAll(
+          ['"backgroundColor":', jsonEncode(backgroundColor), ','], '');
     }
     if (borderColor != null) {
       buffer.writeAll(['"borderColor":', jsonEncode(borderColor), ','], '');
@@ -96,5 +86,4 @@ class HighchartsNavigatorHandlesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"width":', width, ','], '');
     }
   }
-
 }

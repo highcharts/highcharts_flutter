@@ -8,18 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
 import 'highcharts_series_states_inactive_animation_options.dart';
-
 
 /* *
  *
@@ -27,9 +23,7 @@ import 'highcharts_series_states_inactive_animation_options.dart';
  *
  * */
 
-
 export 'highcharts_series_states_inactive_animation_options.dart';
-
 
 /* *
  *
@@ -37,29 +31,22 @@ export 'highcharts_series_states_inactive_animation_options.dart';
  *
  * */
 
-
 /**
  * The opposite state of a hover for a single point node/link.
  */
-class HighchartsArcDiagramSeriesLevelsStatesInactiveOptions extends HighchartsOptionsBase {
-
+class HighchartsArcDiagramSeriesLevelsStatesInactiveOptions
+    extends HighchartsOptionsBase {
   double? linkOpacity;
   double? opacity;
   HighchartsSeriesStatesInactiveAnimationOptions? animation;
   bool? enabled;
 
-
-  HighchartsArcDiagramSeriesLevelsStatesInactiveOptions({
-    this.linkOpacity,
-    this.opacity,
-    this.animation,
-    this.enabled
-  });
+  HighchartsArcDiagramSeriesLevelsStatesInactiveOptions(
+      {this.linkOpacity, this.opacity, this.animation, this.enabled});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (linkOpacity != null) {
       buffer.writeAll(['"linkOpacity":', linkOpacity, ','], '');
@@ -74,5 +61,4 @@ class HighchartsArcDiagramSeriesLevelsStatesInactiveOptions extends HighchartsOp
       buffer.writeAll(['"enabled":', enabled, ','], '');
     }
   }
-
 }

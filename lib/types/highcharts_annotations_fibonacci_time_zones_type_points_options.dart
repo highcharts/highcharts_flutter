@@ -8,17 +8,13 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,31 +22,23 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
-class HighchartsAnnotationsFibonacciTimeZonesTypePointsOptions extends HighchartsOptionsBase {
-
+class HighchartsAnnotationsFibonacciTimeZonesTypePointsOptions
+    extends HighchartsOptionsBase {
   double? controlPoint;
   double? x;
 
-
-  HighchartsAnnotationsFibonacciTimeZonesTypePointsOptions({
-    this.controlPoint,
-    this.x
-  });
+  HighchartsAnnotationsFibonacciTimeZonesTypePointsOptions(
+      {this.controlPoint, this.x});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (controlPoint != null) {
       buffer.writeAll(['"controlPoint":', controlPoint, ','], '');
@@ -59,5 +47,4 @@ class HighchartsAnnotationsFibonacciTimeZonesTypePointsOptions extends Highchart
       buffer.writeAll(['"x":', x, ','], '');
     }
   }
-
 }

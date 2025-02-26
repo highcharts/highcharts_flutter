@@ -8,18 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
 import 'highcharts_boost_debug_options.dart';
-
 
 /* *
  *
@@ -27,16 +23,13 @@ import 'highcharts_boost_debug_options.dart';
  *
  * */
 
-
 export 'highcharts_boost_debug_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * Options for the Boost module. The Boost module allows certain series types
@@ -54,7 +47,6 @@ export 'highcharts_boost_debug_options.dart';
  * Requires the `modules/boost.js` module.
  */
 class HighchartsBoostOptions extends HighchartsOptionsBase {
-
   bool? allowForce;
   HighchartsBoostDebugOptions? debug;
   bool? enabled;
@@ -63,21 +55,18 @@ class HighchartsBoostOptions extends HighchartsOptionsBase {
   bool? useGPUTranslations;
   bool? usePreallocated;
 
-
-  HighchartsBoostOptions({
-    this.allowForce,
-    this.debug,
-    this.enabled,
-    this.pixelRatio,
-    this.seriesThreshold,
-    this.useGPUTranslations,
-    this.usePreallocated
-  });
+  HighchartsBoostOptions(
+      {this.allowForce,
+      this.debug,
+      this.enabled,
+      this.pixelRatio,
+      this.seriesThreshold,
+      this.useGPUTranslations,
+      this.usePreallocated});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (allowForce != null) {
       buffer.writeAll(['"allowForce":', allowForce, ','], '');
@@ -101,5 +90,4 @@ class HighchartsBoostOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"usePreallocated":', usePreallocated, ','], '');
     }
   }
-
 }

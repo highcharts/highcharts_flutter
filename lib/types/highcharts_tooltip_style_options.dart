@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +23,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * CSS styles for the tooltip. The tooltip can also be styled through
@@ -45,22 +38,15 @@ import 'highcharts_options_base.dart';
  * be set to `auto`.
  */
 class HighchartsTooltipStyleOptions extends HighchartsOptionsBase {
-
   String? color;
   String? cursor;
   dynamic fontSize;
 
-
-  HighchartsTooltipStyleOptions({
-    this.color,
-    this.cursor,
-    this.fontSize
-  });
+  HighchartsTooltipStyleOptions({this.color, this.cursor, this.fontSize});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (color != null) {
       buffer.writeAll(['"color":', jsonEncode(color), ','], '');
@@ -72,5 +58,4 @@ class HighchartsTooltipStyleOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"fontSize":', jsonEncode(fontSize), ','], '');
     }
   }
-
 }

@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -23,26 +21,22 @@ import 'highcharts_bar_series_data_data_labels_options.dart';
 import 'highcharts_bar_series_data_drag_drop_options.dart';
 import 'highcharts_bar_series_data_events_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_bar_series_data_accessibility_options.dart';
 export 'highcharts_bar_series_data_data_labels_options.dart';
 export 'highcharts_bar_series_data_drag_drop_options.dart';
 export 'highcharts_bar_series_data_events_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * An array of data points for the series. For the `bar` series type,
@@ -88,7 +82,6 @@ export 'highcharts_bar_series_data_events_options.dart';
  *    ```
  */
 class HighchartsBarSeriesDataOptions extends HighchartsOptionsBase {
-
   HighchartsBarSeriesDataAccessibilityOptions? accessibility;
   String? borderColor;
   double? borderWidth;
@@ -109,33 +102,30 @@ class HighchartsBarSeriesDataOptions extends HighchartsOptionsBase {
   dynamic x;
   double? y;
 
-
-  HighchartsBarSeriesDataOptions({
-    this.accessibility,
-    this.borderColor,
-    this.borderWidth,
-    this.className,
-    this.color,
-    this.colorIndex,
-    this.custom,
-    this.dashStyle,
-    this.dataLabels,
-    this.description,
-    this.dragDrop,
-    this.drilldown,
-    this.events,
-    this.id,
-    this.labelrank,
-    this.pointWidth,
-    this.selected,
-    this.x,
-    this.y
-  });
+  HighchartsBarSeriesDataOptions(
+      {this.accessibility,
+      this.borderColor,
+      this.borderWidth,
+      this.className,
+      this.color,
+      this.colorIndex,
+      this.custom,
+      this.dashStyle,
+      this.dataLabels,
+      this.description,
+      this.dragDrop,
+      this.drilldown,
+      this.events,
+      this.id,
+      this.labelrank,
+      this.pointWidth,
+      this.selected,
+      this.x,
+      this.y});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (accessibility != null) {
       buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ','], '');
@@ -203,5 +193,4 @@ class HighchartsBarSeriesDataOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"y":', y, ','], '');
     }
   }
-
 }

@@ -8,19 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
 import 'highcharts_flow_map_series_states_hover_options.dart';
 import 'highcharts_flow_map_series_states_normal_options.dart';
-
 
 /* *
  *
@@ -28,10 +24,8 @@ import 'highcharts_flow_map_series_states_normal_options.dart';
  *
  * */
 
-
 export 'highcharts_flow_map_series_states_hover_options.dart';
 export 'highcharts_flow_map_series_states_normal_options.dart';
-
 
 /* *
  *
@@ -39,22 +33,15 @@ export 'highcharts_flow_map_series_states_normal_options.dart';
  *
  * */
 
-
 class HighchartsFlowMapSeriesStatesOptions extends HighchartsOptionsBase {
-
   HighchartsFlowMapSeriesStatesHoverOptions? hover;
   HighchartsFlowMapSeriesStatesNormalOptions? normal;
 
-
-  HighchartsFlowMapSeriesStatesOptions({
-    this.hover,
-    this.normal
-  });
+  HighchartsFlowMapSeriesStatesOptions({this.hover, this.normal});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (hover != null) {
       buffer.writeAll(['"hover":', hover?.toJSON(), ','], '');
@@ -63,5 +50,4 @@ class HighchartsFlowMapSeriesStatesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"normal":', normal?.toJSON(), ','], '');
     }
   }
-
 }

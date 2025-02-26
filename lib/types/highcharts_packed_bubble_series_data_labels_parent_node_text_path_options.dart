@@ -8,17 +8,13 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,33 +22,25 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
-class HighchartsPackedBubbleSeriesDataLabelsParentNodeTextPathOptions extends HighchartsOptionsBase {
-
+class HighchartsPackedBubbleSeriesDataLabelsParentNodeTextPathOptions
+    extends HighchartsOptionsBase {
   bool? enabled;
 
-
-  HighchartsPackedBubbleSeriesDataLabelsParentNodeTextPathOptions({
-    this.enabled
-  });
+  HighchartsPackedBubbleSeriesDataLabelsParentNodeTextPathOptions(
+      {this.enabled});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (enabled != null) {
       buffer.writeAll(['"enabled":', enabled, ','], '');
     }
   }
-
 }

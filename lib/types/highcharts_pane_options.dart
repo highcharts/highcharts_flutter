@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_pane_background_options.dart';
-
 
 /* *
  *
@@ -27,9 +24,7 @@ import 'highcharts_pane_background_options.dart';
  *
  * */
 
-
 export 'highcharts_pane_background_options.dart';
-
 
 /* *
  *
@@ -37,13 +32,11 @@ export 'highcharts_pane_background_options.dart';
  *
  * */
 
-
 /**
  * The pane serves as a container for axes and backgrounds for circular
  * gauges and polar charts.
  */
 class HighchartsPaneOptions extends HighchartsOptionsBase {
-
   List<HighchartsPaneBackgroundOptions>? background;
   List<dynamic>? center;
   double? endAngle;
@@ -51,20 +44,17 @@ class HighchartsPaneOptions extends HighchartsOptionsBase {
   dynamic size;
   double? startAngle;
 
-
-  HighchartsPaneOptions({
-    this.background,
-    this.center,
-    this.endAngle,
-    this.innerSize,
-    this.size,
-    this.startAngle
-  });
+  HighchartsPaneOptions(
+      {this.background,
+      this.center,
+      this.endAngle,
+      this.innerSize,
+      this.size,
+      this.startAngle});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (background != null) {
       buffer.write('"background":[');
@@ -93,5 +83,4 @@ class HighchartsPaneOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"startAngle":', startAngle, ','], '');
     }
   }
-
 }

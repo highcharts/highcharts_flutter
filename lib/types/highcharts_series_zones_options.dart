@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +23,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * An array defining zones within a series. Zones can be applied to the
@@ -48,26 +41,18 @@ import 'highcharts_options_base.dart';
  * ([view live demo](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/color-zones/)).
  */
 class HighchartsSeriesZonesOptions extends HighchartsOptionsBase {
-
   String? className;
   String? color;
   String? dashStyle;
   String? fillColor;
   double? value;
 
-
-  HighchartsSeriesZonesOptions({
-    this.className,
-    this.color,
-    this.dashStyle,
-    this.fillColor,
-    this.value
-  });
+  HighchartsSeriesZonesOptions(
+      {this.className, this.color, this.dashStyle, this.fillColor, this.value});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (className != null) {
       buffer.writeAll(['"className":', jsonEncode(className), ','], '');
@@ -85,5 +70,4 @@ class HighchartsSeriesZonesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"value":', value, ','], '');
     }
   }
-
 }

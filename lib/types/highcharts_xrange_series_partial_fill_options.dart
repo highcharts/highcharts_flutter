@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +23,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * A partial fill for each point, typically used to visualize how much
@@ -42,18 +35,13 @@ import 'highcharts_options_base.dart';
  * series or point level.
  */
 class HighchartsXRangeSeriesPartialFillOptions extends HighchartsOptionsBase {
-
   Map<String, dynamic>? fill;
 
-
-  HighchartsXRangeSeriesPartialFillOptions({
-    this.fill
-  });
+  HighchartsXRangeSeriesPartialFillOptions({this.fill});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (fill != null) {
       buffer.write('"fill":{');
@@ -63,5 +51,4 @@ class HighchartsXRangeSeriesPartialFillOptions extends HighchartsOptionsBase {
       buffer.write('},');
     }
   }
-
 }

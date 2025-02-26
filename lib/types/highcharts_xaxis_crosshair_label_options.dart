@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +23,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * A label on the axis next to the crosshair.
@@ -43,7 +36,6 @@ import 'highcharts_options_base.dart';
  * `.highcharts-crosshair-label` class.
  */
 class HighchartsXAxisCrosshairLabelOptions extends HighchartsOptionsBase {
-
   String? align;
   String? backgroundColor;
   String? borderColor;
@@ -56,31 +48,29 @@ class HighchartsXAxisCrosshairLabelOptions extends HighchartsOptionsBase {
   String? shape;
   Map<String, String>? style;
 
-
-  HighchartsXAxisCrosshairLabelOptions({
-    this.align,
-    this.backgroundColor,
-    this.borderColor,
-    this.borderRadius,
-    this.borderWidth,
-    this.enabled,
-    this.format,
-    this.formatter,
-    this.padding,
-    this.shape,
-    this.style
-  });
+  HighchartsXAxisCrosshairLabelOptions(
+      {this.align,
+      this.backgroundColor,
+      this.borderColor,
+      this.borderRadius,
+      this.borderWidth,
+      this.enabled,
+      this.format,
+      this.formatter,
+      this.padding,
+      this.shape,
+      this.style});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (align != null) {
       buffer.writeAll(['"align":', jsonEncode(align), ','], '');
     }
     if (backgroundColor != null) {
-      buffer.writeAll(['"backgroundColor":', jsonEncode(backgroundColor), ','], '');
+      buffer.writeAll(
+          ['"backgroundColor":', jsonEncode(backgroundColor), ','], '');
     }
     if (borderColor != null) {
       buffer.writeAll(['"borderColor":', jsonEncode(borderColor), ','], '');
@@ -114,5 +104,4 @@ class HighchartsXAxisCrosshairLabelOptions extends HighchartsOptionsBase {
       buffer.write('},');
     }
   }
-
 }

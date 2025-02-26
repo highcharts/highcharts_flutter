@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,34 +23,25 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Styles for an aroonDown line.
  */
-class HighchartsAroonSeriesAroonDownStylesOptions extends HighchartsOptionsBase {
-
+class HighchartsAroonSeriesAroonDownStylesOptions
+    extends HighchartsOptionsBase {
   String? lineColor;
   double? lineWidth;
 
-
-  HighchartsAroonSeriesAroonDownStylesOptions({
-    this.lineColor,
-    this.lineWidth
-  });
+  HighchartsAroonSeriesAroonDownStylesOptions({this.lineColor, this.lineWidth});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (lineColor != null) {
       buffer.writeAll(['"lineColor":', jsonEncode(lineColor), ','], '');
@@ -62,5 +50,4 @@ class HighchartsAroonSeriesAroonDownStylesOptions extends HighchartsOptionsBase 
       buffer.writeAll(['"lineWidth":', lineWidth, ','], '');
     }
   }
-
 }

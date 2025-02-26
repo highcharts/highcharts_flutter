@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_dependency_wheel_series_nodes_data_labels_options.dart';
-
 
 /* *
  *
@@ -27,9 +24,7 @@ import 'highcharts_dependency_wheel_series_nodes_data_labels_options.dart';
  *
  * */
 
-
 export 'highcharts_dependency_wheel_series_nodes_data_labels_options.dart';
-
 
 /* *
  *
@@ -37,14 +32,13 @@ export 'highcharts_dependency_wheel_series_nodes_data_labels_options.dart';
  *
  * */
 
-
 /**
  * A collection of options for the individual nodes. The nodes in a dependency
  * diagram are auto-generated instances of `Highcharts.Point`, but options can
  * be applied here and linked by the `id`.
  */
-class HighchartsDependencyWheelSeriesNodesOptions extends HighchartsOptionsBase {
-
+class HighchartsDependencyWheelSeriesNodesOptions
+    extends HighchartsOptionsBase {
   String? color;
   double? colorIndex;
   double? column;
@@ -55,23 +49,20 @@ class HighchartsDependencyWheelSeriesNodesOptions extends HighchartsOptionsBase 
   dynamic offsetHorizontal;
   dynamic offsetVertical;
 
-
-  HighchartsDependencyWheelSeriesNodesOptions({
-    this.color,
-    this.colorIndex,
-    this.column,
-    this.dataLabels,
-    this.height,
-    this.id,
-    this.level,
-    this.offsetHorizontal,
-    this.offsetVertical
-  });
+  HighchartsDependencyWheelSeriesNodesOptions(
+      {this.color,
+      this.colorIndex,
+      this.column,
+      this.dataLabels,
+      this.height,
+      this.id,
+      this.level,
+      this.offsetHorizontal,
+      this.offsetVertical});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (color != null) {
       buffer.writeAll(['"color":', jsonEncode(color), ','], '');
@@ -95,11 +86,12 @@ class HighchartsDependencyWheelSeriesNodesOptions extends HighchartsOptionsBase 
       buffer.writeAll(['"level":', level, ','], '');
     }
     if (offsetHorizontal != null) {
-      buffer.writeAll(['"offsetHorizontal":', jsonEncode(offsetHorizontal), ','], '');
+      buffer.writeAll(
+          ['"offsetHorizontal":', jsonEncode(offsetHorizontal), ','], '');
     }
     if (offsetVertical != null) {
-      buffer.writeAll(['"offsetVertical":', jsonEncode(offsetVertical), ','], '');
+      buffer
+          .writeAll(['"offsetVertical":', jsonEncode(offsetVertical), ','], '');
     }
   }
-
 }

@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -23,19 +21,16 @@ import 'highcharts_navigation_breadcrumbs_events_options.dart';
 import 'highcharts_navigation_breadcrumbs_position_options.dart';
 import 'highcharts_navigation_breadcrumbs_separator_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_navigation_breadcrumbs_button_theme_options.dart';
 export 'highcharts_navigation_breadcrumbs_events_options.dart';
 export 'highcharts_navigation_breadcrumbs_position_options.dart';
 export 'highcharts_navigation_breadcrumbs_separator_options.dart';
-
 
 /* *
  *
@@ -43,13 +38,11 @@ export 'highcharts_navigation_breadcrumbs_separator_options.dart';
  *
  * */
 
-
 /**
  * Options for the breadcrumbs, the navigation at the top leading the
  * way up through the traversed levels.
  */
 class HighchartsTreemapSeriesBreadcrumbsOptions extends HighchartsOptionsBase {
-
   double? buttonSpacing;
   HighchartsNavigationBreadcrumbsButtonThemeOptions? buttonTheme;
   HighchartsNavigationBreadcrumbsEventsOptions? events;
@@ -65,28 +58,25 @@ class HighchartsTreemapSeriesBreadcrumbsOptions extends HighchartsOptionsBase {
   bool? useHTML;
   double? zIndex;
 
-
-  HighchartsTreemapSeriesBreadcrumbsOptions({
-    this.buttonSpacing,
-    this.buttonTheme,
-    this.events,
-    this.floating,
-    this.format,
-    this.formatter,
-    this.position,
-    this.relativeTo,
-    this.rtl,
-    this.separator,
-    this.showFullPath,
-    this.style,
-    this.useHTML,
-    this.zIndex
-  });
+  HighchartsTreemapSeriesBreadcrumbsOptions(
+      {this.buttonSpacing,
+      this.buttonTheme,
+      this.events,
+      this.floating,
+      this.format,
+      this.formatter,
+      this.position,
+      this.relativeTo,
+      this.rtl,
+      this.separator,
+      this.showFullPath,
+      this.style,
+      this.useHTML,
+      this.zIndex});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (buttonSpacing != null) {
       buffer.writeAll(['"buttonSpacing":', buttonSpacing, ','], '');
@@ -131,5 +121,4 @@ class HighchartsTreemapSeriesBreadcrumbsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"zIndex":', zIndex, ','], '');
     }
   }
-
 }

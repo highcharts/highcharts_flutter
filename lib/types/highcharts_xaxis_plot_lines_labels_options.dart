@@ -8,17 +8,13 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,33 +22,23 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 class HighchartsXAxisPlotLinesLabelsOptions extends HighchartsOptionsBase {
-
   bool? clip;
 
-
-  HighchartsXAxisPlotLinesLabelsOptions({
-    this.clip
-  });
+  HighchartsXAxisPlotLinesLabelsOptions({this.clip});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (clip != null) {
       buffer.writeAll(['"clip":', clip, ','], '');
     }
   }
-
 }

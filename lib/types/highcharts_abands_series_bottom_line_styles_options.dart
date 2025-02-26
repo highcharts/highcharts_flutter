@@ -8,17 +8,13 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,33 +22,24 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
-class HighchartsABandsSeriesBottomLineStylesOptions extends HighchartsOptionsBase {
-
+class HighchartsABandsSeriesBottomLineStylesOptions
+    extends HighchartsOptionsBase {
   double? lineWidth;
 
-
-  HighchartsABandsSeriesBottomLineStylesOptions({
-    this.lineWidth
-  });
+  HighchartsABandsSeriesBottomLineStylesOptions({this.lineWidth});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (lineWidth != null) {
       buffer.writeAll(['"lineWidth":', lineWidth, ','], '');
     }
   }
-
 }

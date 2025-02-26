@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -25,13 +23,11 @@ import 'highcharts_navigation_bindings_save_chart_options.dart';
 import 'highcharts_navigation_bindings_series_type_hlcoptions.dart';
 import 'highcharts_navigation_bindings_time_cycles_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
-
 
 export 'highcharts_navigation_bindings_ellipse_annotation_options.dart';
 export 'highcharts_navigation_bindings_fibonacci_options.dart';
@@ -40,13 +36,11 @@ export 'highcharts_navigation_bindings_save_chart_options.dart';
 export 'highcharts_navigation_bindings_series_type_hlcoptions.dart';
 export 'highcharts_navigation_bindings_time_cycles_options.dart';
 
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * Bindings definitions for custom HTML buttons. Each binding implements
@@ -64,7 +58,6 @@ export 'highcharts_navigation_bindings_time_cycles_options.dart';
  * - `end`: last event to be called after last step event
  */
 class HighchartsNavigationBindingsOptions extends HighchartsOptionsBase {
-
   Map<String, dynamic>? circleAnnotation;
   HighchartsNavigationBindingsEllipseAnnotationOptions? ellipseAnnotation;
   Map<String, dynamic>? labelAnnotation;
@@ -110,58 +103,55 @@ class HighchartsNavigationBindingsOptions extends HighchartsOptionsBase {
   Map<String, dynamic>? zoomXY;
   Map<String, dynamic>? zoomY;
 
-
-  HighchartsNavigationBindingsOptions({
-    this.circleAnnotation,
-    this.ellipseAnnotation,
-    this.labelAnnotation,
-    this.rectangleAnnotation,
-    this.arrowInfinityLine,
-    this.arrowRay,
-    this.arrowSegment,
-    this.crooked3,
-    this.crooked5,
-    this.currentPriceIndicator,
-    this.elliott3,
-    this.elliott5,
-    this.fibonacci,
-    this.fibonacciTimeZones,
-    this.flagCirclepin,
-    this.flagDiamondpin,
-    this.flagSimplepin,
-    this.flagSquarepin,
-    this.fullScreen,
-    this.horizontalLine,
-    this.indicators,
-    this.infinityLine,
-    this.measureX,
-    this.measureXY,
-    this.measureY,
-    this.parallelChannel,
-    this.pitchfork,
-    this.ray,
-    this.saveChart,
-    this.segment,
-    this.seriesTypeCandlestick,
-    this.seriesTypeHLC,
-    this.seriesTypeHeikinAshi,
-    this.seriesTypeHollowCandlestick,
-    this.seriesTypeLine,
-    this.seriesTypeOhlc,
-    this.timeCycles,
-    this.toggleAnnotations,
-    this.verticalArrow,
-    this.verticalCounter,
-    this.verticalLine,
-    this.zoomX,
-    this.zoomXY,
-    this.zoomY
-  });
+  HighchartsNavigationBindingsOptions(
+      {this.circleAnnotation,
+      this.ellipseAnnotation,
+      this.labelAnnotation,
+      this.rectangleAnnotation,
+      this.arrowInfinityLine,
+      this.arrowRay,
+      this.arrowSegment,
+      this.crooked3,
+      this.crooked5,
+      this.currentPriceIndicator,
+      this.elliott3,
+      this.elliott5,
+      this.fibonacci,
+      this.fibonacciTimeZones,
+      this.flagCirclepin,
+      this.flagDiamondpin,
+      this.flagSimplepin,
+      this.flagSquarepin,
+      this.fullScreen,
+      this.horizontalLine,
+      this.indicators,
+      this.infinityLine,
+      this.measureX,
+      this.measureXY,
+      this.measureY,
+      this.parallelChannel,
+      this.pitchfork,
+      this.ray,
+      this.saveChart,
+      this.segment,
+      this.seriesTypeCandlestick,
+      this.seriesTypeHLC,
+      this.seriesTypeHeikinAshi,
+      this.seriesTypeHollowCandlestick,
+      this.seriesTypeLine,
+      this.seriesTypeOhlc,
+      this.timeCycles,
+      this.toggleAnnotations,
+      this.verticalArrow,
+      this.verticalCounter,
+      this.verticalLine,
+      this.zoomX,
+      this.zoomXY,
+      this.zoomY});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (circleAnnotation != null) {
       buffer.write('"circleAnnotation":{');
@@ -171,7 +161,8 @@ class HighchartsNavigationBindingsOptions extends HighchartsOptionsBase {
       buffer.write('},');
     }
     if (ellipseAnnotation != null) {
-      buffer.writeAll(['"ellipseAnnotation":', ellipseAnnotation?.toJSON(), ','], '');
+      buffer.writeAll(
+          ['"ellipseAnnotation":', ellipseAnnotation?.toJSON(), ','], '');
     }
     if (labelAnnotation != null) {
       buffer.write('"labelAnnotation":{');
@@ -448,5 +439,4 @@ class HighchartsNavigationBindingsOptions extends HighchartsOptionsBase {
       buffer.write('},');
     }
   }
-
 }

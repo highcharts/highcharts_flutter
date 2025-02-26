@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_map_view_insets_projection_options.dart';
-
 
 /* *
  *
@@ -27,16 +24,13 @@ import 'highcharts_map_view_insets_projection_options.dart';
  *
  * */
 
-
 export 'highcharts_map_view_insets_projection_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * The individual MapView insets, typically used for non-contiguous
@@ -51,7 +45,6 @@ export 'highcharts_map_view_insets_projection_options.dart';
  * settings.
  */
 class HighchartsMapViewInsetsOptions extends HighchartsOptionsBase {
-
   dynamic borderPath;
   dynamic field;
   dynamic geoBounds;
@@ -63,24 +56,21 @@ class HighchartsMapViewInsetsOptions extends HighchartsOptionsBase {
   String? relativeTo;
   String? units;
 
-
-  HighchartsMapViewInsetsOptions({
-    this.borderPath,
-    this.field,
-    this.geoBounds,
-    this.id,
-    this.projection,
-    this.borderColor,
-    this.borderWidth,
-    this.padding,
-    this.relativeTo,
-    this.units
-  });
+  HighchartsMapViewInsetsOptions(
+      {this.borderPath,
+      this.field,
+      this.geoBounds,
+      this.id,
+      this.projection,
+      this.borderColor,
+      this.borderWidth,
+      this.padding,
+      this.relativeTo,
+      this.units});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (borderPath != null) {
       buffer.writeAll(['"borderPath":', jsonEncode(borderPath), ','], '');
@@ -117,5 +107,4 @@ class HighchartsMapViewInsetsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"units":', jsonEncode(units), ','], '');
     }
   }
-
 }

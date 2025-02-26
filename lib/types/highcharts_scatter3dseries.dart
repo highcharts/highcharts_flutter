@@ -8,7 +8,6 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
@@ -19,23 +18,19 @@ import 'dart:convert';
 import 'highcharts_series.dart';
 import 'highcharts_scatter3dseries_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_scatter3dseries_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * A `scatter3d` series. If the [type](#series.scatter3d.type) option is
@@ -83,7 +78,6 @@ export 'highcharts_scatter3dseries_options.dart';
  *             
  */
 class HighchartsScatter3DSeries extends HighchartsSeries {
-
   List<List<dynamic>>? data;
   String? name;
   HighchartsScatter3DSeriesOptions? options;
@@ -127,14 +121,13 @@ class HighchartsScatter3DSeries extends HighchartsSeries {
       }
 
       buffer.writeAll(['"data":[', seriesData, '],'], '');
-
     } else if (points != null) {
       // Go through the points and write them
       StringBuffer seriesData = StringBuffer();
 
       for (var point in points!) {
         seriesData.writeAll(['{'], '');
-        point.toOptionsJSON(seriesData); 
+        point.toOptionsJSON(seriesData);
         seriesData.writeAll(['},'], '');
       }
 
@@ -149,5 +142,4 @@ class HighchartsScatter3DSeries extends HighchartsSeries {
       buffer.writeAll(['"name":', jsonEncode(name), ','], '');
     }
   }
-
 }

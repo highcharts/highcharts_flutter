@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +23,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * The loading options control the appearance of the loading screen
@@ -46,24 +39,17 @@ import 'highcharts_options_base.dart';
  * object, but part of the `lang` object.
  */
 class HighchartsLoadingOptions extends HighchartsOptionsBase {
-
   double? hideDuration;
   Map<String, String>? labelStyle;
   double? showDuration;
   Map<String, String>? style;
 
-
-  HighchartsLoadingOptions({
-    this.hideDuration,
-    this.labelStyle,
-    this.showDuration,
-    this.style
-  });
+  HighchartsLoadingOptions(
+      {this.hideDuration, this.labelStyle, this.showDuration, this.style});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (hideDuration != null) {
       buffer.writeAll(['"hideDuration":', hideDuration, ','], '');
@@ -86,5 +72,4 @@ class HighchartsLoadingOptions extends HighchartsOptionsBase {
       buffer.write('},');
     }
   }
-
 }

@@ -8,14 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
-
 
 import 'highcharts_options_base.dart';
 import 'highcharts_annotations_tunnel_type_background_options.dart';
@@ -23,19 +20,16 @@ import 'highcharts_annotations_tunnel_type_height_control_point_options.dart';
 import 'highcharts_annotations_tunnel_type_line_options.dart';
 import 'highcharts_annotations_crooked_line_type_points_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_annotations_tunnel_type_background_options.dart';
 export 'highcharts_annotations_tunnel_type_height_control_point_options.dart';
 export 'highcharts_annotations_tunnel_type_line_options.dart';
 export 'highcharts_annotations_crooked_line_type_points_options.dart';
-
 
 /* *
  *
@@ -43,9 +37,7 @@ export 'highcharts_annotations_crooked_line_type_points_options.dart';
  *
  * */
 
-
 class HighchartsAnnotationsTunnelTypeOptions extends HighchartsOptionsBase {
-
   HighchartsAnnotationsTunnelTypeBackgroundOptions? background;
   double? height;
   HighchartsAnnotationsTunnelTypeHeightControlPointOptions? heightControlPoint;
@@ -54,21 +46,18 @@ class HighchartsAnnotationsTunnelTypeOptions extends HighchartsOptionsBase {
   double? xAxis;
   double? yAxis;
 
-
-  HighchartsAnnotationsTunnelTypeOptions({
-    this.background,
-    this.height,
-    this.heightControlPoint,
-    this.line,
-    this.points,
-    this.xAxis,
-    this.yAxis
-  });
+  HighchartsAnnotationsTunnelTypeOptions(
+      {this.background,
+      this.height,
+      this.heightControlPoint,
+      this.line,
+      this.points,
+      this.xAxis,
+      this.yAxis});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (background != null) {
       buffer.writeAll(['"background":', background?.toJSON(), ','], '');
@@ -77,7 +66,8 @@ class HighchartsAnnotationsTunnelTypeOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"height":', height, ','], '');
     }
     if (heightControlPoint != null) {
-      buffer.writeAll(['"heightControlPoint":', heightControlPoint?.toJSON(), ','], '');
+      buffer.writeAll(
+          ['"heightControlPoint":', heightControlPoint?.toJSON(), ','], '');
     }
     if (line != null) {
       buffer.writeAll(['"line":', line?.toJSON(), ','], '');
@@ -96,5 +86,4 @@ class HighchartsAnnotationsTunnelTypeOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"yAxis":', yAxis, ','], '');
     }
   }
-
 }

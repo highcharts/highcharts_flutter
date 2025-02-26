@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,21 +23,17 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Options for the drag handles available in column series.
  */
-class HighchartsWaterfallSeriesDragDropDragHandleOptions extends HighchartsOptionsBase {
-
+class HighchartsWaterfallSeriesDragDropDragHandleOptions
+    extends HighchartsOptionsBase {
   String? cursor;
   dynamic pathFormatter;
   String? className;
@@ -49,21 +42,18 @@ class HighchartsWaterfallSeriesDragDropDragHandleOptions extends HighchartsOptio
   double? lineWidth;
   double? zIndex;
 
-
-  HighchartsWaterfallSeriesDragDropDragHandleOptions({
-    this.cursor,
-    this.pathFormatter,
-    this.className,
-    this.color,
-    this.lineColor,
-    this.lineWidth,
-    this.zIndex
-  });
+  HighchartsWaterfallSeriesDragDropDragHandleOptions(
+      {this.cursor,
+      this.pathFormatter,
+      this.className,
+      this.color,
+      this.lineColor,
+      this.lineWidth,
+      this.zIndex});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (cursor != null) {
       buffer.writeAll(['"cursor":', jsonEncode(cursor), ','], '');
@@ -87,5 +77,4 @@ class HighchartsWaterfallSeriesDragDropDragHandleOptions extends HighchartsOptio
       buffer.writeAll(['"zIndex":', zIndex, ','], '');
     }
   }
-
 }

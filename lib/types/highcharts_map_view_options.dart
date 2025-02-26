@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -22,25 +20,21 @@ import 'highcharts_map_view_inset_options.dart';
 import 'highcharts_map_view_insets_options.dart';
 import 'highcharts_map_view_projection_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_map_view_inset_options.dart';
 export 'highcharts_map_view_insets_options.dart';
 export 'highcharts_map_view_projection_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * The `mapView` options control the initial view of the chart, and how
@@ -50,7 +44,6 @@ export 'highcharts_map_view_projection_options.dart';
  * [mapView.setView](/class-reference/Highcharts.MapView#setView).
  */
 class HighchartsMapViewOptions extends HighchartsOptionsBase {
-
   String? center;
   dynamic fitToGeometry;
   HighchartsMapViewInsetOptions? insetOptions;
@@ -60,22 +53,19 @@ class HighchartsMapViewOptions extends HighchartsOptionsBase {
   HighchartsMapViewProjectionOptions? projection;
   double? zoom;
 
-
-  HighchartsMapViewOptions({
-    this.center,
-    this.fitToGeometry,
-    this.insetOptions,
-    this.insets,
-    this.maxZoom,
-    this.padding,
-    this.projection,
-    this.zoom
-  });
+  HighchartsMapViewOptions(
+      {this.center,
+      this.fitToGeometry,
+      this.insetOptions,
+      this.insets,
+      this.maxZoom,
+      this.padding,
+      this.projection,
+      this.zoom});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (center != null) {
       buffer.writeAll(['"center":', jsonEncode(center), ','], '');
@@ -106,5 +96,4 @@ class HighchartsMapViewOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"zoom":', zoom, ','], '');
     }
   }
-
 }

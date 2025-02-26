@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,33 +23,25 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
-class HighchartsAnnotationsFibonacciTimeZonesTypeControlPointOptionsOptions extends HighchartsOptionsBase {
-
+class HighchartsAnnotationsFibonacciTimeZonesTypeControlPointOptionsOptions
+    extends HighchartsOptionsBase {
   dynamic events;
 
-
-  HighchartsAnnotationsFibonacciTimeZonesTypeControlPointOptionsOptions({
-    this.events
-  });
+  HighchartsAnnotationsFibonacciTimeZonesTypeControlPointOptionsOptions(
+      {this.events});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (events != null) {
       buffer.writeAll(['"events":', jsonEncode(events), ','], '');
     }
   }
-
 }

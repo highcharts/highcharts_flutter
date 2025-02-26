@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +23,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * General event handlers for the legend. These event hooks can
@@ -42,22 +35,16 @@ import 'highcharts_options_base.dart';
  * `Highcharts.addEvent` function.
  */
 class HighchartsLegendEventsOptions extends HighchartsOptionsBase {
-
   dynamic itemClick;
 
-
-  HighchartsLegendEventsOptions({
-    this.itemClick
-  });
+  HighchartsLegendEventsOptions({this.itemClick});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (itemClick != null) {
       buffer.writeAll(['"itemClick":', jsonEncode(itemClick), ','], '');
     }
   }
-
 }

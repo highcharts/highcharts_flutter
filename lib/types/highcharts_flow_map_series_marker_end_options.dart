@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +23,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * A `markerEnd` creates an arrow symbol indicating the direction of
@@ -42,24 +35,17 @@ import 'highcharts_options_base.dart';
  * one for each link.
  */
 class HighchartsFlowMapSeriesMarkerEndOptions extends HighchartsOptionsBase {
-
   bool? enabled;
   dynamic height;
   String? markerType;
   dynamic width;
 
-
-  HighchartsFlowMapSeriesMarkerEndOptions({
-    this.enabled,
-    this.height,
-    this.markerType,
-    this.width
-  });
+  HighchartsFlowMapSeriesMarkerEndOptions(
+      {this.enabled, this.height, this.markerType, this.width});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (enabled != null) {
       buffer.writeAll(['"enabled":', enabled, ','], '');
@@ -74,5 +60,4 @@ class HighchartsFlowMapSeriesMarkerEndOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"width":', jsonEncode(width), ','], '');
     }
   }
-
 }

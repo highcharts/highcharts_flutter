@@ -8,14 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
-
 
 import 'highcharts_options_base.dart';
 import 'highcharts_treemap_series_states_hover_options.dart';
@@ -23,19 +20,16 @@ import 'highcharts_series_states_inactive_options.dart';
 import 'highcharts_series_states_normal_options.dart';
 import 'highcharts_series_states_select_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_treemap_series_states_hover_options.dart';
 export 'highcharts_series_states_inactive_options.dart';
 export 'highcharts_series_states_normal_options.dart';
 export 'highcharts_series_states_select_options.dart';
-
 
 /* *
  *
@@ -43,29 +37,21 @@ export 'highcharts_series_states_select_options.dart';
  *
  * */
 
-
 /**
  * A wrapper object for all the series options in specific states.
  */
 class HighchartsTreemapSeriesStatesOptions extends HighchartsOptionsBase {
-
   HighchartsTreemapSeriesStatesHoverOptions? hover;
   HighchartsSeriesStatesInactiveOptions? inactive;
   HighchartsSeriesStatesNormalOptions? normal;
   HighchartsSeriesStatesSelectOptions? select;
 
-
-  HighchartsTreemapSeriesStatesOptions({
-    this.hover,
-    this.inactive,
-    this.normal,
-    this.select
-  });
+  HighchartsTreemapSeriesStatesOptions(
+      {this.hover, this.inactive, this.normal, this.select});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (hover != null) {
       buffer.writeAll(['"hover":', hover?.toJSON(), ','], '');
@@ -80,5 +66,4 @@ class HighchartsTreemapSeriesStatesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"select":', select?.toJSON(), ','], '');
     }
   }
-
 }

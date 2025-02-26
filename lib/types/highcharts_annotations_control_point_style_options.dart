@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,35 +23,25 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
-class HighchartsAnnotationsControlPointStyleOptions extends HighchartsOptionsBase {
-
+class HighchartsAnnotationsControlPointStyleOptions
+    extends HighchartsOptionsBase {
   String? cursor;
   String? fill;
   String? stroke;
   double? strokeWidth;
 
-
-  HighchartsAnnotationsControlPointStyleOptions({
-    this.cursor,
-    this.fill,
-    this.stroke,
-    this.strokeWidth
-  });
+  HighchartsAnnotationsControlPointStyleOptions(
+      {this.cursor, this.fill, this.stroke, this.strokeWidth});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (cursor != null) {
       buffer.writeAll(['"cursor":', jsonEncode(cursor), ','], '');
@@ -69,5 +56,4 @@ class HighchartsAnnotationsControlPointStyleOptions extends HighchartsOptionsBas
       buffer.writeAll(['"stroke-width":', strokeWidth, ','], '');
     }
   }
-
 }

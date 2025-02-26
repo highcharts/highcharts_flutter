@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,21 +23,16 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Event handlers for the axis.
  */
 class HighchartsXAxisEventsOptions extends HighchartsOptionsBase {
-
   dynamic afterBreaks;
   dynamic afterSetExtremes;
   dynamic pointBreak;
@@ -48,26 +40,24 @@ class HighchartsXAxisEventsOptions extends HighchartsOptionsBase {
   dynamic pointInBreak;
   dynamic setExtremes;
 
-
-  HighchartsXAxisEventsOptions({
-    this.afterBreaks,
-    this.afterSetExtremes,
-    this.pointBreak,
-    this.pointBreakOut,
-    this.pointInBreak,
-    this.setExtremes
-  });
+  HighchartsXAxisEventsOptions(
+      {this.afterBreaks,
+      this.afterSetExtremes,
+      this.pointBreak,
+      this.pointBreakOut,
+      this.pointInBreak,
+      this.setExtremes});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (afterBreaks != null) {
       buffer.writeAll(['"afterBreaks":', jsonEncode(afterBreaks), ','], '');
     }
     if (afterSetExtremes != null) {
-      buffer.writeAll(['"afterSetExtremes":', jsonEncode(afterSetExtremes), ','], '');
+      buffer.writeAll(
+          ['"afterSetExtremes":', jsonEncode(afterSetExtremes), ','], '');
     }
     if (pointBreak != null) {
       buffer.writeAll(['"pointBreak":', jsonEncode(pointBreak), ','], '');
@@ -82,5 +72,4 @@ class HighchartsXAxisEventsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"setExtremes":', jsonEncode(setExtremes), ','], '');
     }
   }
-
 }

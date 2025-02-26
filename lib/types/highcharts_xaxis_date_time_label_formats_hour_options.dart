@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,33 +23,24 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
-class HighchartsXAxisDateTimeLabelFormatsHourOptions extends HighchartsOptionsBase {
-
+class HighchartsXAxisDateTimeLabelFormatsHourOptions
+    extends HighchartsOptionsBase {
   List<dynamic>? list;
   String? main;
   bool? range;
 
-
-  HighchartsXAxisDateTimeLabelFormatsHourOptions({
-    this.list,
-    this.main,
-    this.range
-  });
+  HighchartsXAxisDateTimeLabelFormatsHourOptions(
+      {this.list, this.main, this.range});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (list != null) {
       buffer.write('"list":[');
@@ -68,5 +56,4 @@ class HighchartsXAxisDateTimeLabelFormatsHourOptions extends HighchartsOptionsBa
       buffer.writeAll(['"range":', range, ','], '');
     }
   }
-
 }

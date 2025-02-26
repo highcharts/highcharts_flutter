@@ -8,17 +8,13 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,25 +22,17 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Options for the control point which controls
  * the annotation's height.
  */
-class HighchartsAnnotationsTunnelTypeHeightControlPointOptions extends HighchartsOptionsBase {
-
-
-
+class HighchartsAnnotationsTunnelTypeHeightControlPointOptions
+    extends HighchartsOptionsBase {
   HighchartsAnnotationsTunnelTypeHeightControlPointOptions();
-
-
 }

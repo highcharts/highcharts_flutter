@@ -8,19 +8,16 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_packed_bubble_series_layout_algorithm_initial_position_radius_options.dart';
 import 'highcharts_packed_bubble_series_layout_algorithm_parent_node_options.dart';
-
 
 /* *
  *
@@ -28,10 +25,8 @@ import 'highcharts_packed_bubble_series_layout_algorithm_parent_node_options.dar
  *
  * */
 
-
 export 'highcharts_packed_bubble_series_layout_algorithm_initial_position_radius_options.dart';
 export 'highcharts_packed_bubble_series_layout_algorithm_parent_node_options.dart';
-
 
 /* *
  *
@@ -39,55 +34,53 @@ export 'highcharts_packed_bubble_series_layout_algorithm_parent_node_options.dar
  *
  * */
 
-
 /**
  * Options for layout algorithm when simulation is enabled. Inside there
  * are options to change the speed, padding, initial bubbles positions
  * and more.
  */
-class HighchartsPackedBubbleSeriesLayoutAlgorithmOptions extends HighchartsOptionsBase {
-
+class HighchartsPackedBubbleSeriesLayoutAlgorithmOptions
+    extends HighchartsOptionsBase {
   double? bubblePadding;
   bool? dragBetweenSeries;
   bool? enableSimulation;
   double? friction;
   double? gravitationalConstant;
-  HighchartsPackedBubbleSeriesLayoutAlgorithmInitialPositionRadiusOptions? initialPositionRadius;
+  HighchartsPackedBubbleSeriesLayoutAlgorithmInitialPositionRadiusOptions?
+      initialPositionRadius;
   String? initialPositions;
   String? integration;
   double? linkLength;
   double? maxIterations;
   double? maxSpeed;
   bool? parentNodeLimit;
-  HighchartsPackedBubbleSeriesLayoutAlgorithmParentNodeOptions? parentNodeOptions;
+  HighchartsPackedBubbleSeriesLayoutAlgorithmParentNodeOptions?
+      parentNodeOptions;
   bool? seriesInteraction;
   bool? splitSeries;
   String? type;
 
-
-  HighchartsPackedBubbleSeriesLayoutAlgorithmOptions({
-    this.bubblePadding,
-    this.dragBetweenSeries,
-    this.enableSimulation,
-    this.friction,
-    this.gravitationalConstant,
-    this.initialPositionRadius,
-    this.initialPositions,
-    this.integration,
-    this.linkLength,
-    this.maxIterations,
-    this.maxSpeed,
-    this.parentNodeLimit,
-    this.parentNodeOptions,
-    this.seriesInteraction,
-    this.splitSeries,
-    this.type
-  });
+  HighchartsPackedBubbleSeriesLayoutAlgorithmOptions(
+      {this.bubblePadding,
+      this.dragBetweenSeries,
+      this.enableSimulation,
+      this.friction,
+      this.gravitationalConstant,
+      this.initialPositionRadius,
+      this.initialPositions,
+      this.integration,
+      this.linkLength,
+      this.maxIterations,
+      this.maxSpeed,
+      this.parentNodeLimit,
+      this.parentNodeOptions,
+      this.seriesInteraction,
+      this.splitSeries,
+      this.type});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (bubblePadding != null) {
       buffer.writeAll(['"bubblePadding":', bubblePadding, ','], '');
@@ -102,13 +95,17 @@ class HighchartsPackedBubbleSeriesLayoutAlgorithmOptions extends HighchartsOptio
       buffer.writeAll(['"friction":', friction, ','], '');
     }
     if (gravitationalConstant != null) {
-      buffer.writeAll(['"gravitationalConstant":', gravitationalConstant, ','], '');
+      buffer.writeAll(
+          ['"gravitationalConstant":', gravitationalConstant, ','], '');
     }
     if (initialPositionRadius != null) {
-      buffer.writeAll(['"initialPositionRadius":', initialPositionRadius?.toJSON(), ','], '');
+      buffer.writeAll(
+          ['"initialPositionRadius":', initialPositionRadius?.toJSON(), ','],
+          '');
     }
     if (initialPositions != null) {
-      buffer.writeAll(['"initialPositions":', jsonEncode(initialPositions), ','], '');
+      buffer.writeAll(
+          ['"initialPositions":', jsonEncode(initialPositions), ','], '');
     }
     if (integration != null) {
       buffer.writeAll(['"integration":', jsonEncode(integration), ','], '');
@@ -126,7 +123,8 @@ class HighchartsPackedBubbleSeriesLayoutAlgorithmOptions extends HighchartsOptio
       buffer.writeAll(['"parentNodeLimit":', parentNodeLimit, ','], '');
     }
     if (parentNodeOptions != null) {
-      buffer.writeAll(['"parentNodeOptions":', parentNodeOptions?.toJSON(), ','], '');
+      buffer.writeAll(
+          ['"parentNodeOptions":', parentNodeOptions?.toJSON(), ','], '');
     }
     if (seriesInteraction != null) {
       buffer.writeAll(['"seriesInteraction":', seriesInteraction, ','], '');
@@ -138,5 +136,4 @@ class HighchartsPackedBubbleSeriesLayoutAlgorithmOptions extends HighchartsOptio
       buffer.writeAll(['"type":', jsonEncode(type), ','], '');
     }
   }
-
 }

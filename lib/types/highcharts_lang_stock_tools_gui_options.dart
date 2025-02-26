@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,18 +23,13 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 class HighchartsLangStockToolsGuiOptions extends HighchartsOptionsBase {
-
   String? advanced;
   String? arrowInfinityLine;
   String? arrowRay;
@@ -94,75 +86,73 @@ class HighchartsLangStockToolsGuiOptions extends HighchartsOptionsBase {
   String? zoomXY;
   String? zoomY;
 
-
-  HighchartsLangStockToolsGuiOptions({
-    this.advanced,
-    this.arrowInfinityLine,
-    this.arrowRay,
-    this.arrowSegment,
-    this.circle,
-    this.crooked3,
-    this.crooked5,
-    this.crookedLines,
-    this.currentPriceIndicator,
-    this.elliott3,
-    this.elliott5,
-    this.ellipse,
-    this.fibonacci,
-    this.fibonacciTimeZones,
-    this.flagCirclepin,
-    this.flagDiamondpin,
-    this.flagSimplepin,
-    this.flagSquarepin,
-    this.flags,
-    this.fullScreen,
-    this.horizontalLine,
-    this.indicators,
-    this.infinityLine,
-    this.label,
-    this.line,
-    this.lines,
-    this.measure,
-    this.measureX,
-    this.measureXY,
-    this.measureY,
-    this.parallelChannel,
-    this.pitchfork,
-    this.ray,
-    this.rectangle,
-    this.saveChart,
-    this.segment,
-    this.simpleShapes,
-    this.timeCycles,
-    this.toggleAnnotations,
-    this.typeCandlestick,
-    this.typeChange,
-    this.typeHLC,
-    this.typeHeikinAshi,
-    this.typeHollowCandlestick,
-    this.typeLine,
-    this.typeOHLC,
-    this.verticalArrow,
-    this.verticalCounter,
-    this.verticalLabel,
-    this.verticalLabels,
-    this.verticalLine,
-    this.zoomChange,
-    this.zoomX,
-    this.zoomXY,
-    this.zoomY
-  });
+  HighchartsLangStockToolsGuiOptions(
+      {this.advanced,
+      this.arrowInfinityLine,
+      this.arrowRay,
+      this.arrowSegment,
+      this.circle,
+      this.crooked3,
+      this.crooked5,
+      this.crookedLines,
+      this.currentPriceIndicator,
+      this.elliott3,
+      this.elliott5,
+      this.ellipse,
+      this.fibonacci,
+      this.fibonacciTimeZones,
+      this.flagCirclepin,
+      this.flagDiamondpin,
+      this.flagSimplepin,
+      this.flagSquarepin,
+      this.flags,
+      this.fullScreen,
+      this.horizontalLine,
+      this.indicators,
+      this.infinityLine,
+      this.label,
+      this.line,
+      this.lines,
+      this.measure,
+      this.measureX,
+      this.measureXY,
+      this.measureY,
+      this.parallelChannel,
+      this.pitchfork,
+      this.ray,
+      this.rectangle,
+      this.saveChart,
+      this.segment,
+      this.simpleShapes,
+      this.timeCycles,
+      this.toggleAnnotations,
+      this.typeCandlestick,
+      this.typeChange,
+      this.typeHLC,
+      this.typeHeikinAshi,
+      this.typeHollowCandlestick,
+      this.typeLine,
+      this.typeOHLC,
+      this.verticalArrow,
+      this.verticalCounter,
+      this.verticalLabel,
+      this.verticalLabels,
+      this.verticalLine,
+      this.zoomChange,
+      this.zoomX,
+      this.zoomXY,
+      this.zoomY});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (advanced != null) {
       buffer.writeAll(['"advanced":', jsonEncode(advanced), ','], '');
     }
     if (arrowInfinityLine != null) {
-      buffer.writeAll(['"arrowInfinityLine":', jsonEncode(arrowInfinityLine), ','], '');
+      buffer.writeAll(
+          ['"arrowInfinityLine":', jsonEncode(arrowInfinityLine), ','], '');
     }
     if (arrowRay != null) {
       buffer.writeAll(['"arrowRay":', jsonEncode(arrowRay), ','], '');
@@ -183,7 +173,9 @@ class HighchartsLangStockToolsGuiOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"crookedLines":', jsonEncode(crookedLines), ','], '');
     }
     if (currentPriceIndicator != null) {
-      buffer.writeAll(['"currentPriceIndicator":', jsonEncode(currentPriceIndicator), ','], '');
+      buffer.writeAll(
+          ['"currentPriceIndicator":', jsonEncode(currentPriceIndicator), ','],
+          '');
     }
     if (elliott3 != null) {
       buffer.writeAll(['"elliott3":', jsonEncode(elliott3), ','], '');
@@ -198,13 +190,15 @@ class HighchartsLangStockToolsGuiOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"fibonacci":', jsonEncode(fibonacci), ','], '');
     }
     if (fibonacciTimeZones != null) {
-      buffer.writeAll(['"fibonacciTimeZones":', jsonEncode(fibonacciTimeZones), ','], '');
+      buffer.writeAll(
+          ['"fibonacciTimeZones":', jsonEncode(fibonacciTimeZones), ','], '');
     }
     if (flagCirclepin != null) {
       buffer.writeAll(['"flagCirclepin":', jsonEncode(flagCirclepin), ','], '');
     }
     if (flagDiamondpin != null) {
-      buffer.writeAll(['"flagDiamondpin":', jsonEncode(flagDiamondpin), ','], '');
+      buffer
+          .writeAll(['"flagDiamondpin":', jsonEncode(flagDiamondpin), ','], '');
     }
     if (flagSimplepin != null) {
       buffer.writeAll(['"flagSimplepin":', jsonEncode(flagSimplepin), ','], '');
@@ -219,7 +213,8 @@ class HighchartsLangStockToolsGuiOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"fullScreen":', jsonEncode(fullScreen), ','], '');
     }
     if (horizontalLine != null) {
-      buffer.writeAll(['"horizontalLine":', jsonEncode(horizontalLine), ','], '');
+      buffer
+          .writeAll(['"horizontalLine":', jsonEncode(horizontalLine), ','], '');
     }
     if (indicators != null) {
       buffer.writeAll(['"indicators":', jsonEncode(indicators), ','], '');
@@ -249,7 +244,8 @@ class HighchartsLangStockToolsGuiOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"measureY":', jsonEncode(measureY), ','], '');
     }
     if (parallelChannel != null) {
-      buffer.writeAll(['"parallelChannel":', jsonEncode(parallelChannel), ','], '');
+      buffer.writeAll(
+          ['"parallelChannel":', jsonEncode(parallelChannel), ','], '');
     }
     if (pitchfork != null) {
       buffer.writeAll(['"pitchfork":', jsonEncode(pitchfork), ','], '');
@@ -273,10 +269,12 @@ class HighchartsLangStockToolsGuiOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"timeCycles":', jsonEncode(timeCycles), ','], '');
     }
     if (toggleAnnotations != null) {
-      buffer.writeAll(['"toggleAnnotations":', jsonEncode(toggleAnnotations), ','], '');
+      buffer.writeAll(
+          ['"toggleAnnotations":', jsonEncode(toggleAnnotations), ','], '');
     }
     if (typeCandlestick != null) {
-      buffer.writeAll(['"typeCandlestick":', jsonEncode(typeCandlestick), ','], '');
+      buffer.writeAll(
+          ['"typeCandlestick":', jsonEncode(typeCandlestick), ','], '');
     }
     if (typeChange != null) {
       buffer.writeAll(['"typeChange":', jsonEncode(typeChange), ','], '');
@@ -285,10 +283,13 @@ class HighchartsLangStockToolsGuiOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"typeHLC":', jsonEncode(typeHLC), ','], '');
     }
     if (typeHeikinAshi != null) {
-      buffer.writeAll(['"typeHeikinAshi":', jsonEncode(typeHeikinAshi), ','], '');
+      buffer
+          .writeAll(['"typeHeikinAshi":', jsonEncode(typeHeikinAshi), ','], '');
     }
     if (typeHollowCandlestick != null) {
-      buffer.writeAll(['"typeHollowCandlestick":', jsonEncode(typeHollowCandlestick), ','], '');
+      buffer.writeAll(
+          ['"typeHollowCandlestick":', jsonEncode(typeHollowCandlestick), ','],
+          '');
     }
     if (typeLine != null) {
       buffer.writeAll(['"typeLine":', jsonEncode(typeLine), ','], '');
@@ -300,13 +301,15 @@ class HighchartsLangStockToolsGuiOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"verticalArrow":', jsonEncode(verticalArrow), ','], '');
     }
     if (verticalCounter != null) {
-      buffer.writeAll(['"verticalCounter":', jsonEncode(verticalCounter), ','], '');
+      buffer.writeAll(
+          ['"verticalCounter":', jsonEncode(verticalCounter), ','], '');
     }
     if (verticalLabel != null) {
       buffer.writeAll(['"verticalLabel":', jsonEncode(verticalLabel), ','], '');
     }
     if (verticalLabels != null) {
-      buffer.writeAll(['"verticalLabels":', jsonEncode(verticalLabels), ','], '');
+      buffer
+          .writeAll(['"verticalLabels":', jsonEncode(verticalLabels), ','], '');
     }
     if (verticalLine != null) {
       buffer.writeAll(['"verticalLine":', jsonEncode(verticalLine), ','], '');
@@ -324,5 +327,4 @@ class HighchartsLangStockToolsGuiOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"zoomY":', jsonEncode(zoomY), ','], '');
     }
   }
-
 }

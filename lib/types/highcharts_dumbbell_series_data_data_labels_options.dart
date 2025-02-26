@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -22,18 +20,15 @@ import 'highcharts_series_data_labels_animation_options.dart';
 import 'highcharts_series_data_labels_filter_options.dart';
 import 'highcharts_series_data_labels_text_path_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_series_data_labels_animation_options.dart';
 export 'highcharts_series_data_labels_filter_options.dart';
 export 'highcharts_series_data_labels_text_path_options.dart';
-
 
 /* *
  *
@@ -41,9 +36,8 @@ export 'highcharts_series_data_labels_text_path_options.dart';
  *
  * */
 
-
-class HighchartsDumbbellSeriesDataDataLabelsOptions extends HighchartsOptionsBase {
-
+class HighchartsDumbbellSeriesDataDataLabelsOptions
+    extends HighchartsOptionsBase {
   String? align;
   String? alignTo;
   bool? allowOverlap;
@@ -79,48 +73,45 @@ class HighchartsDumbbellSeriesDataDataLabelsOptions extends HighchartsOptionsBas
   double? yLow;
   double? zIndex;
 
-
-  HighchartsDumbbellSeriesDataDataLabelsOptions({
-    this.align,
-    this.alignTo,
-    this.allowOverlap,
-    this.animation,
-    this.backgroundColor,
-    this.borderColor,
-    this.borderRadius,
-    this.borderWidth,
-    this.className,
-    this.color,
-    this.crop,
-    this.defer,
-    this.enabled,
-    this.filter,
-    this.format,
-    this.formatter,
-    this.inside,
-    this.nullFormat,
-    this.nullFormatter,
-    this.overflow,
-    this.padding,
-    this.position,
-    this.rotation,
-    this.shadow,
-    this.shape,
-    this.style,
-    this.textPath,
-    this.useHTML,
-    this.verticalAlign,
-    this.xHigh,
-    this.xLow,
-    this.yHigh,
-    this.yLow,
-    this.zIndex
-  });
+  HighchartsDumbbellSeriesDataDataLabelsOptions(
+      {this.align,
+      this.alignTo,
+      this.allowOverlap,
+      this.animation,
+      this.backgroundColor,
+      this.borderColor,
+      this.borderRadius,
+      this.borderWidth,
+      this.className,
+      this.color,
+      this.crop,
+      this.defer,
+      this.enabled,
+      this.filter,
+      this.format,
+      this.formatter,
+      this.inside,
+      this.nullFormat,
+      this.nullFormatter,
+      this.overflow,
+      this.padding,
+      this.position,
+      this.rotation,
+      this.shadow,
+      this.shape,
+      this.style,
+      this.textPath,
+      this.useHTML,
+      this.verticalAlign,
+      this.xHigh,
+      this.xLow,
+      this.yHigh,
+      this.yLow,
+      this.zIndex});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (align != null) {
       buffer.writeAll(['"align":', jsonEncode(align), ','], '');
@@ -135,7 +126,8 @@ class HighchartsDumbbellSeriesDataDataLabelsOptions extends HighchartsOptionsBas
       buffer.writeAll(['"animation":', animation?.toJSON(), ','], '');
     }
     if (backgroundColor != null) {
-      buffer.writeAll(['"backgroundColor":', jsonEncode(backgroundColor), ','], '');
+      buffer.writeAll(
+          ['"backgroundColor":', jsonEncode(backgroundColor), ','], '');
     }
     if (borderColor != null) {
       buffer.writeAll(['"borderColor":', jsonEncode(borderColor), ','], '');
@@ -233,5 +225,4 @@ class HighchartsDumbbellSeriesDataDataLabelsOptions extends HighchartsOptionsBas
       buffer.writeAll(['"zIndex":', zIndex, ','], '');
     }
   }
-
 }

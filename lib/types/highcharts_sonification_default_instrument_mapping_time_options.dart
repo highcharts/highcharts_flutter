@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +23,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * Time mapping determines what time each point plays. It is
@@ -48,8 +41,8 @@ import 'highcharts_options_base.dart';
  * Can be set to a fixed value, a prop to map to, a function,
  * or a mapping object.
  */
-class HighchartsSonificationDefaultInstrumentMappingTimeOptions extends HighchartsOptionsBase {
-
+class HighchartsSonificationDefaultInstrumentMappingTimeOptions
+    extends HighchartsOptionsBase {
   String? mapFunction;
   String? mapTo;
   double? max;
@@ -57,20 +50,17 @@ class HighchartsSonificationDefaultInstrumentMappingTimeOptions extends Highchar
   double? value;
   String? within;
 
-
-  HighchartsSonificationDefaultInstrumentMappingTimeOptions({
-    this.mapFunction,
-    this.mapTo,
-    this.max,
-    this.min,
-    this.value,
-    this.within
-  });
+  HighchartsSonificationDefaultInstrumentMappingTimeOptions(
+      {this.mapFunction,
+      this.mapTo,
+      this.max,
+      this.min,
+      this.value,
+      this.within});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (mapFunction != null) {
       buffer.writeAll(['"mapFunction":', jsonEncode(mapFunction), ','], '');
@@ -91,5 +81,4 @@ class HighchartsSonificationDefaultInstrumentMappingTimeOptions extends Highchar
       buffer.writeAll(['"within":', jsonEncode(within), ','], '');
     }
   }
-
 }

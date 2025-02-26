@@ -8,18 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
 import 'highcharts_lang_navigation_popup_options.dart';
-
 
 /* *
  *
@@ -27,9 +23,7 @@ import 'highcharts_lang_navigation_popup_options.dart';
  *
  * */
 
-
 export 'highcharts_lang_navigation_popup_options.dart';
-
 
 /* *
  *
@@ -37,29 +31,22 @@ export 'highcharts_lang_navigation_popup_options.dart';
  *
  * */
 
-
 /**
  * Configure the Popup strings in the chart. Requires the
  * `annotations.js` or `annotations-advanced.src.js` module to be
  * loaded.
  */
 class HighchartsLangNavigationOptions extends HighchartsOptionsBase {
-
   HighchartsLangNavigationPopupOptions? popup;
 
-
-  HighchartsLangNavigationOptions({
-    this.popup
-  });
+  HighchartsLangNavigationOptions({this.popup});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (popup != null) {
       buffer.writeAll(['"popup":', popup?.toJSON(), ','], '');
     }
   }
-
 }

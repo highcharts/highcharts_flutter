@@ -8,17 +8,13 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,33 +22,23 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 class HighchartsNavigatorSeriesMarkerOptions extends HighchartsOptionsBase {
-
   bool? enabled;
 
-
-  HighchartsNavigatorSeriesMarkerOptions({
-    this.enabled
-  });
+  HighchartsNavigatorSeriesMarkerOptions({this.enabled});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (enabled != null) {
       buffer.writeAll(['"enabled":', enabled, ','], '');
     }
   }
-
 }

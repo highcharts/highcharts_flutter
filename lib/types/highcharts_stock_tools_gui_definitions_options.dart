@@ -8,14 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
-
 
 import 'highcharts_options_base.dart';
 import 'highcharts_stock_tools_gui_definitions_advanced_options.dart';
@@ -34,13 +31,11 @@ import 'highcharts_stock_tools_gui_definitions_type_change_options.dart';
 import 'highcharts_stock_tools_gui_definitions_vertical_labels_options.dart';
 import 'highcharts_stock_tools_gui_definitions_zoom_change_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
-
 
 export 'highcharts_stock_tools_gui_definitions_advanced_options.dart';
 export 'highcharts_stock_tools_gui_definitions_crooked_lines_options.dart';
@@ -58,23 +53,21 @@ export 'highcharts_stock_tools_gui_definitions_type_change_options.dart';
 export 'highcharts_stock_tools_gui_definitions_vertical_labels_options.dart';
 export 'highcharts_stock_tools_gui_definitions_zoom_change_options.dart';
 
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * An options object of the buttons definitions. Each name refers to
  * unique key from buttons array.
  */
 class HighchartsStockToolsGuiDefinitionsOptions extends HighchartsOptionsBase {
-
   HighchartsStockToolsGuiDefinitionsAdvancedOptions? advanced;
   HighchartsStockToolsGuiDefinitionsCrookedLinesOptions? crookedLines;
-  HighchartsStockToolsGuiDefinitionsCurrentPriceIndicatorOptions? currentPriceIndicator;
+  HighchartsStockToolsGuiDefinitionsCurrentPriceIndicatorOptions?
+      currentPriceIndicator;
   HighchartsStockToolsGuiDefinitionsFlagsOptions? flags;
   HighchartsStockToolsGuiDefinitionsFullScreenOptions? fullScreen;
   HighchartsStockToolsGuiDefinitionsIndicatorsOptions? indicators;
@@ -88,29 +81,26 @@ class HighchartsStockToolsGuiDefinitionsOptions extends HighchartsOptionsBase {
   HighchartsStockToolsGuiDefinitionsVerticalLabelsOptions? verticalLabels;
   HighchartsStockToolsGuiDefinitionsZoomChangeOptions? zoomChange;
 
-
-  HighchartsStockToolsGuiDefinitionsOptions({
-    this.advanced,
-    this.crookedLines,
-    this.currentPriceIndicator,
-    this.flags,
-    this.fullScreen,
-    this.indicators,
-    this.lines,
-    this.measure,
-    this.saveChart,
-    this.separator,
-    this.simpleShapes,
-    this.toggleAnnotations,
-    this.typeChange,
-    this.verticalLabels,
-    this.zoomChange
-  });
+  HighchartsStockToolsGuiDefinitionsOptions(
+      {this.advanced,
+      this.crookedLines,
+      this.currentPriceIndicator,
+      this.flags,
+      this.fullScreen,
+      this.indicators,
+      this.lines,
+      this.measure,
+      this.saveChart,
+      this.separator,
+      this.simpleShapes,
+      this.toggleAnnotations,
+      this.typeChange,
+      this.verticalLabels,
+      this.zoomChange});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (advanced != null) {
       buffer.writeAll(['"advanced":', advanced?.toJSON(), ','], '');
@@ -119,7 +109,9 @@ class HighchartsStockToolsGuiDefinitionsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"crookedLines":', crookedLines?.toJSON(), ','], '');
     }
     if (currentPriceIndicator != null) {
-      buffer.writeAll(['"currentPriceIndicator":', currentPriceIndicator?.toJSON(), ','], '');
+      buffer.writeAll(
+          ['"currentPriceIndicator":', currentPriceIndicator?.toJSON(), ','],
+          '');
     }
     if (flags != null) {
       buffer.writeAll(['"flags":', flags?.toJSON(), ','], '');
@@ -146,7 +138,8 @@ class HighchartsStockToolsGuiDefinitionsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"simpleShapes":', simpleShapes?.toJSON(), ','], '');
     }
     if (toggleAnnotations != null) {
-      buffer.writeAll(['"toggleAnnotations":', toggleAnnotations?.toJSON(), ','], '');
+      buffer.writeAll(
+          ['"toggleAnnotations":', toggleAnnotations?.toJSON(), ','], '');
     }
     if (typeChange != null) {
       buffer.writeAll(['"typeChange":', typeChange?.toJSON(), ','], '');
@@ -158,5 +151,4 @@ class HighchartsStockToolsGuiDefinitionsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"zoomChange":', zoomChange?.toJSON(), ','], '');
     }
   }
-
 }

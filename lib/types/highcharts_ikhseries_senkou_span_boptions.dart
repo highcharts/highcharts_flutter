@@ -8,18 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
 import 'highcharts_ikhseries_senkou_span_bstyles_options.dart';
-
 
 /* *
  *
@@ -27,9 +23,7 @@ import 'highcharts_ikhseries_senkou_span_bstyles_options.dart';
  *
  * */
 
-
 export 'highcharts_ikhseries_senkou_span_bstyles_options.dart';
-
 
 /* *
  *
@@ -37,27 +31,20 @@ export 'highcharts_ikhseries_senkou_span_bstyles_options.dart';
  *
  * */
 
-
 /**
  * The styles for Senkou Span B line
  */
 class HighchartsIKHSeriesSenkouSpanBOptions extends HighchartsOptionsBase {
-
   HighchartsIKHSeriesSenkouSpanBStylesOptions? styles;
 
-
-  HighchartsIKHSeriesSenkouSpanBOptions({
-    this.styles
-  });
+  HighchartsIKHSeriesSenkouSpanBOptions({this.styles});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (styles != null) {
       buffer.writeAll(['"styles":', styles?.toJSON(), ','], '');
     }
   }
-
 }

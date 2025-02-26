@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,46 +23,43 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * The text for exported table.
  */
 class HighchartsLangExportDataOptions extends HighchartsOptionsBase {
-
   String? annotationHeader;
   String? categoryDatetimeHeader;
   String? categoryHeader;
 
-
-  HighchartsLangExportDataOptions({
-    this.annotationHeader,
-    this.categoryDatetimeHeader,
-    this.categoryHeader
-  });
+  HighchartsLangExportDataOptions(
+      {this.annotationHeader,
+      this.categoryDatetimeHeader,
+      this.categoryHeader});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (annotationHeader != null) {
-      buffer.writeAll(['"annotationHeader":', jsonEncode(annotationHeader), ','], '');
+      buffer.writeAll(
+          ['"annotationHeader":', jsonEncode(annotationHeader), ','], '');
     }
     if (categoryDatetimeHeader != null) {
-      buffer.writeAll(['"categoryDatetimeHeader":', jsonEncode(categoryDatetimeHeader), ','], '');
+      buffer.writeAll([
+        '"categoryDatetimeHeader":',
+        jsonEncode(categoryDatetimeHeader),
+        ','
+      ], '');
     }
     if (categoryHeader != null) {
-      buffer.writeAll(['"categoryHeader":', jsonEncode(categoryHeader), ','], '');
+      buffer
+          .writeAll(['"categoryHeader":', jsonEncode(categoryHeader), ','], '');
     }
   }
-
 }

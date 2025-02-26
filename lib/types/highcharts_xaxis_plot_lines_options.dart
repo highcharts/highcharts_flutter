@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -22,25 +20,21 @@ import 'highcharts_xaxis_plot_lines_events_options.dart';
 import 'highcharts_xaxis_plot_lines_label_options.dart';
 import 'highcharts_xaxis_plot_lines_labels_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_xaxis_plot_lines_events_options.dart';
 export 'highcharts_xaxis_plot_lines_label_options.dart';
 export 'highcharts_xaxis_plot_lines_labels_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * An array of lines stretching across the plot area, marking a specific
@@ -50,7 +44,6 @@ export 'highcharts_xaxis_plot_lines_labels_options.dart';
  * `.highcharts-plot-line` class in addition to the `className` option.
  */
 class HighchartsXAxisPlotLinesOptions extends HighchartsOptionsBase {
-
   String? className;
   String? color;
   String? dashStyle;
@@ -62,24 +55,21 @@ class HighchartsXAxisPlotLinesOptions extends HighchartsOptionsBase {
   double? width;
   double? zIndex;
 
-
-  HighchartsXAxisPlotLinesOptions({
-    this.className,
-    this.color,
-    this.dashStyle,
-    this.events,
-    this.id,
-    this.label,
-    this.labels,
-    this.value,
-    this.width,
-    this.zIndex
-  });
+  HighchartsXAxisPlotLinesOptions(
+      {this.className,
+      this.color,
+      this.dashStyle,
+      this.events,
+      this.id,
+      this.label,
+      this.labels,
+      this.value,
+      this.width,
+      this.zIndex});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (className != null) {
       buffer.writeAll(['"className":', jsonEncode(className), ','], '');
@@ -112,5 +102,4 @@ class HighchartsXAxisPlotLinesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"zIndex":', zIndex, ','], '');
     }
   }
-
 }

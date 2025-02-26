@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,35 +23,25 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Progress indicator, how much of the task completed. If it is a number, the
  * `fill` will be applied automatically.
  */
 class HighchartsGanttSeriesDataCompletedOptions extends HighchartsOptionsBase {
-
   double? amount;
   Map<String, dynamic>? fill;
 
-
-  HighchartsGanttSeriesDataCompletedOptions({
-    this.amount,
-    this.fill
-  });
+  HighchartsGanttSeriesDataCompletedOptions({this.amount, this.fill});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (amount != null) {
       buffer.writeAll(['"amount":', amount, ','], '');
@@ -67,5 +54,4 @@ class HighchartsGanttSeriesDataCompletedOptions extends HighchartsOptionsBase {
       buffer.write('},');
     }
   }
-
 }

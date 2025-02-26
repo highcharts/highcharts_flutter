@@ -8,20 +8,16 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
 import 'highcharts_series_states_hover_animation_options.dart';
 import 'highcharts_series_states_hover_halo_options.dart';
 import 'highcharts_series_states_hover_marker_options.dart';
-
 
 /* *
  *
@@ -29,11 +25,9 @@ import 'highcharts_series_states_hover_marker_options.dart';
  *
  * */
 
-
 export 'highcharts_series_states_hover_animation_options.dart';
 export 'highcharts_series_states_hover_halo_options.dart';
 export 'highcharts_series_states_hover_marker_options.dart';
-
 
 /* *
  *
@@ -41,13 +35,11 @@ export 'highcharts_series_states_hover_marker_options.dart';
  *
  * */
 
-
 /**
  * Options for the hovered series. These settings override the
  * normal state options when a series is moused over or touched.
  */
 class HighchartsSeriesStatesHoverOptions extends HighchartsOptionsBase {
-
   HighchartsSeriesStatesHoverAnimationOptions? animation;
   bool? enabled;
   HighchartsSeriesStatesHoverHaloOptions? halo;
@@ -55,20 +47,17 @@ class HighchartsSeriesStatesHoverOptions extends HighchartsOptionsBase {
   double? lineWidthPlus;
   HighchartsSeriesStatesHoverMarkerOptions? marker;
 
-
-  HighchartsSeriesStatesHoverOptions({
-    this.animation,
-    this.enabled,
-    this.halo,
-    this.lineWidth,
-    this.lineWidthPlus,
-    this.marker
-  });
+  HighchartsSeriesStatesHoverOptions(
+      {this.animation,
+      this.enabled,
+      this.halo,
+      this.lineWidth,
+      this.lineWidthPlus,
+      this.marker});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (animation != null) {
       buffer.writeAll(['"animation":', animation?.toJSON(), ','], '');
@@ -89,5 +78,4 @@ class HighchartsSeriesStatesHoverOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"marker":', marker?.toJSON(), ','], '');
     }
   }
-
 }

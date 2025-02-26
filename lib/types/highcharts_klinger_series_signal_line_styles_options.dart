@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,34 +23,26 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Styles for a signal line.
  */
-class HighchartsKlingerSeriesSignalLineStylesOptions extends HighchartsOptionsBase {
-
+class HighchartsKlingerSeriesSignalLineStylesOptions
+    extends HighchartsOptionsBase {
   String? lineColor;
   double? lineWidth;
 
-
-  HighchartsKlingerSeriesSignalLineStylesOptions({
-    this.lineColor,
-    this.lineWidth
-  });
+  HighchartsKlingerSeriesSignalLineStylesOptions(
+      {this.lineColor, this.lineWidth});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (lineColor != null) {
       buffer.writeAll(['"lineColor":', jsonEncode(lineColor), ','], '');
@@ -62,5 +51,4 @@ class HighchartsKlingerSeriesSignalLineStylesOptions extends HighchartsOptionsBa
       buffer.writeAll(['"lineWidth":', lineWidth, ','], '');
     }
   }
-
 }

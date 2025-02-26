@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -23,26 +21,22 @@ import 'highcharts_geo_heatmap_series_interpolation_options.dart';
 import 'highcharts_geo_heatmap_series_states_options.dart';
 import 'highcharts_geo_heatmap_series_tooltip_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_geo_heatmap_series_data_labels_options.dart';
 export 'highcharts_geo_heatmap_series_interpolation_options.dart';
 export 'highcharts_geo_heatmap_series_states_options.dart';
 export 'highcharts_geo_heatmap_series_tooltip_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * A `geoheatmap` series. If the [type](#series.map.type) option is not
@@ -88,7 +82,6 @@ export 'highcharts_geo_heatmap_series_tooltip_options.dart';
  *             
  */
 class HighchartsGeoHeatmapSeriesOptions extends HighchartsOptionsBase {
-
   bool? affectsMapView;
   bool? animation;
   double? borderWidth;
@@ -110,34 +103,31 @@ class HighchartsGeoHeatmapSeriesOptions extends HighchartsOptionsBase {
   HighchartsGeoHeatmapSeriesStatesOptions? states;
   HighchartsGeoHeatmapSeriesTooltipOptions? tooltip;
 
-
-  HighchartsGeoHeatmapSeriesOptions({
-    this.affectsMapView,
-    this.animation,
-    this.borderWidth,
-    this.color,
-    this.colorByPoint,
-    this.colorKey,
-    this.colors,
-    this.colsize,
-    this.dataLabels,
-    this.id,
-    this.index,
-    this.interpolation,
-    this.legendIndex,
-    this.legendSymbol,
-    this.linecap,
-    this.nullColor,
-    this.nullInteraction,
-    this.rowsize,
-    this.states,
-    this.tooltip
-  });
+  HighchartsGeoHeatmapSeriesOptions(
+      {this.affectsMapView,
+      this.animation,
+      this.borderWidth,
+      this.color,
+      this.colorByPoint,
+      this.colorKey,
+      this.colors,
+      this.colsize,
+      this.dataLabels,
+      this.id,
+      this.index,
+      this.interpolation,
+      this.legendIndex,
+      this.legendSymbol,
+      this.linecap,
+      this.nullColor,
+      this.nullInteraction,
+      this.rowsize,
+      this.states,
+      this.tooltip});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (affectsMapView != null) {
       buffer.writeAll(['"affectsMapView":', affectsMapView, ','], '');
@@ -204,5 +194,4 @@ class HighchartsGeoHeatmapSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"tooltip":', tooltip?.toJSON(), ','], '');
     }
   }
-
 }

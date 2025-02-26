@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -24,13 +22,11 @@ import 'highcharts_legend_events_options.dart';
 import 'highcharts_legend_navigation_options.dart';
 import 'highcharts_legend_title_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
-
 
 export 'highcharts_legend_accessibility_options.dart';
 export 'highcharts_legend_bubble_legend_options.dart';
@@ -38,13 +34,11 @@ export 'highcharts_legend_events_options.dart';
 export 'highcharts_legend_navigation_options.dart';
 export 'highcharts_legend_title_options.dart';
 
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * The legend is a box containing a symbol and name for each series
@@ -55,7 +49,6 @@ export 'highcharts_legend_title_options.dart';
  * [custom legend symbols](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/studies/legend-custom-symbol/).
  */
 class HighchartsLegendOptions extends HighchartsOptionsBase {
-
   HighchartsLegendAccessibilityOptions? accessibility;
   String? align;
   bool? alignColumns;
@@ -102,59 +95,56 @@ class HighchartsLegendOptions extends HighchartsOptionsBase {
   double? x;
   double? y;
 
-
-  HighchartsLegendOptions({
-    this.accessibility,
-    this.align,
-    this.alignColumns,
-    this.backgroundColor,
-    this.borderColor,
-    this.borderRadius,
-    this.borderWidth,
-    this.bubbleLegend,
-    this.className,
-    this.enabled,
-    this.events,
-    this.floating,
-    this.itemCheckboxStyle,
-    this.itemDistance,
-    this.itemHiddenStyle,
-    this.itemHoverStyle,
-    this.itemMarginBottom,
-    this.itemMarginTop,
-    this.itemStyle,
-    this.itemWidth,
-    this.labelFormat,
-    this.labelFormatter,
-    this.layout,
-    this.lineHeight,
-    this.margin,
-    this.maxHeight,
-    this.navigation,
-    this.padding,
-    this.reversed,
-    this.rtl,
-    this.shadow,
-    this.squareSymbol,
-    this.style,
-    this.symbolHeight,
-    this.symbolPadding,
-    this.symbolRadius,
-    this.symbolWidth,
-    this.title,
-    this.useHTML,
-    this.valueDecimals,
-    this.valueSuffix,
-    this.verticalAlign,
-    this.width,
-    this.x,
-    this.y
-  });
+  HighchartsLegendOptions(
+      {this.accessibility,
+      this.align,
+      this.alignColumns,
+      this.backgroundColor,
+      this.borderColor,
+      this.borderRadius,
+      this.borderWidth,
+      this.bubbleLegend,
+      this.className,
+      this.enabled,
+      this.events,
+      this.floating,
+      this.itemCheckboxStyle,
+      this.itemDistance,
+      this.itemHiddenStyle,
+      this.itemHoverStyle,
+      this.itemMarginBottom,
+      this.itemMarginTop,
+      this.itemStyle,
+      this.itemWidth,
+      this.labelFormat,
+      this.labelFormatter,
+      this.layout,
+      this.lineHeight,
+      this.margin,
+      this.maxHeight,
+      this.navigation,
+      this.padding,
+      this.reversed,
+      this.rtl,
+      this.shadow,
+      this.squareSymbol,
+      this.style,
+      this.symbolHeight,
+      this.symbolPadding,
+      this.symbolRadius,
+      this.symbolWidth,
+      this.title,
+      this.useHTML,
+      this.valueDecimals,
+      this.valueSuffix,
+      this.verticalAlign,
+      this.width,
+      this.x,
+      this.y});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (accessibility != null) {
       buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ','], '');
@@ -166,7 +156,8 @@ class HighchartsLegendOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"alignColumns":', alignColumns, ','], '');
     }
     if (backgroundColor != null) {
-      buffer.writeAll(['"backgroundColor":', jsonEncode(backgroundColor), ','], '');
+      buffer.writeAll(
+          ['"backgroundColor":', jsonEncode(backgroundColor), ','], '');
     }
     if (borderColor != null) {
       buffer.writeAll(['"borderColor":', jsonEncode(borderColor), ','], '');
@@ -236,7 +227,8 @@ class HighchartsLegendOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"labelFormat":', jsonEncode(labelFormat), ','], '');
     }
     if (labelFormatter != null) {
-      buffer.writeAll(['"labelFormatter":', jsonEncode(labelFormatter), ','], '');
+      buffer
+          .writeAll(['"labelFormatter":', jsonEncode(labelFormatter), ','], '');
     }
     if (layout != null) {
       buffer.writeAll(['"layout":', jsonEncode(layout), ','], '');
@@ -316,5 +308,4 @@ class HighchartsLegendOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"y":', y, ','], '');
     }
   }
-
 }

@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,18 +23,13 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 class HighchartsColumnSeriesDataGroupingOptions extends HighchartsOptionsBase {
-
   String? anchor;
   String? approximation;
   dynamic dateTimeLabelFormats;
@@ -50,25 +42,22 @@ class HighchartsColumnSeriesDataGroupingOptions extends HighchartsOptionsBase {
   bool? smoothed;
   List<List<dynamic>>? units;
 
-
-  HighchartsColumnSeriesDataGroupingOptions({
-    this.anchor,
-    this.approximation,
-    this.dateTimeLabelFormats,
-    this.enabled,
-    this.firstAnchor,
-    this.forced,
-    this.groupAll,
-    this.groupPixelWidth,
-    this.lastAnchor,
-    this.smoothed,
-    this.units
-  });
+  HighchartsColumnSeriesDataGroupingOptions(
+      {this.anchor,
+      this.approximation,
+      this.dateTimeLabelFormats,
+      this.enabled,
+      this.firstAnchor,
+      this.forced,
+      this.groupAll,
+      this.groupPixelWidth,
+      this.lastAnchor,
+      this.smoothed,
+      this.units});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (anchor != null) {
       buffer.writeAll(['"anchor":', jsonEncode(anchor), ','], '');
@@ -77,7 +66,9 @@ class HighchartsColumnSeriesDataGroupingOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"approximation":', jsonEncode(approximation), ','], '');
     }
     if (dateTimeLabelFormats != null) {
-      buffer.writeAll(['"dateTimeLabelFormats":', jsonEncode(dateTimeLabelFormats), ','], '');
+      buffer.writeAll(
+          ['"dateTimeLabelFormats":', jsonEncode(dateTimeLabelFormats), ','],
+          '');
     }
     if (enabled != null) {
       buffer.writeAll(['"enabled":', enabled, ','], '');
@@ -108,5 +99,4 @@ class HighchartsColumnSeriesDataGroupingOptions extends HighchartsOptionsBase {
       buffer.write('],');
     }
   }
-
 }

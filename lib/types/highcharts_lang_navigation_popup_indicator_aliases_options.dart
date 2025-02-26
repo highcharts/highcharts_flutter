@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,21 +23,17 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Configure the aliases for indicator names.
  */
-class HighchartsLangNavigationPopupIndicatorAliasesOptions extends HighchartsOptionsBase {
-
+class HighchartsLangNavigationPopupIndicatorAliasesOptions
+    extends HighchartsOptionsBase {
   List<String>? abands;
   List<String>? ad;
   List<String>? ao;
@@ -89,61 +82,58 @@ class HighchartsLangNavigationPopupIndicatorAliasesOptions extends HighchartsOpt
   List<String>? wma;
   List<String>? zigzag;
 
-
-  HighchartsLangNavigationPopupIndicatorAliasesOptions({
-    this.abands,
-    this.ad,
-    this.ao,
-    this.apo,
-    this.aroon,
-    this.aroonoscillator,
-    this.atr,
-    this.bb,
-    this.cci,
-    this.chaikin,
-    this.cmf,
-    this.cmo,
-    this.dema,
-    this.disparityindex,
-    this.dmi,
-    this.dpo,
-    this.ema,
-    this.ikh,
-    this.keltnerchannels,
-    this.klinger,
-    this.linearRegression,
-    this.linearRegressionAngle,
-    this.linearRegressionIntercept,
-    this.linearRegressionSlope,
-    this.macd,
-    this.mfi,
-    this.momentum,
-    this.natr,
-    this.obv,
-    this.pc,
-    this.pivotpoints,
-    this.ppo,
-    this.priceenvelopes,
-    this.psar,
-    this.roc,
-    this.rsi,
-    this.slowstochastic,
-    this.sma,
-    this.stochastic,
-    this.supertrend,
-    this.tema,
-    this.trix,
-    this.vbp,
-    this.vwap,
-    this.williamsr,
-    this.wma,
-    this.zigzag
-  });
+  HighchartsLangNavigationPopupIndicatorAliasesOptions(
+      {this.abands,
+      this.ad,
+      this.ao,
+      this.apo,
+      this.aroon,
+      this.aroonoscillator,
+      this.atr,
+      this.bb,
+      this.cci,
+      this.chaikin,
+      this.cmf,
+      this.cmo,
+      this.dema,
+      this.disparityindex,
+      this.dmi,
+      this.dpo,
+      this.ema,
+      this.ikh,
+      this.keltnerchannels,
+      this.klinger,
+      this.linearRegression,
+      this.linearRegressionAngle,
+      this.linearRegressionIntercept,
+      this.linearRegressionSlope,
+      this.macd,
+      this.mfi,
+      this.momentum,
+      this.natr,
+      this.obv,
+      this.pc,
+      this.pivotpoints,
+      this.ppo,
+      this.priceenvelopes,
+      this.psar,
+      this.roc,
+      this.rsi,
+      this.slowstochastic,
+      this.sma,
+      this.stochastic,
+      this.supertrend,
+      this.tema,
+      this.trix,
+      this.vbp,
+      this.vwap,
+      this.williamsr,
+      this.wma,
+      this.zigzag});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (abands != null) {
       buffer.write('"abands":[');
@@ -475,5 +465,4 @@ class HighchartsLangNavigationPopupIndicatorAliasesOptions extends HighchartsOpt
       buffer.write('],');
     }
   }
-
 }

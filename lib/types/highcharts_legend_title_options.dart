@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,34 +23,24 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * A title to be added on top of the legend.
  */
 class HighchartsLegendTitleOptions extends HighchartsOptionsBase {
-
   Map<String, String>? style;
   String? text;
 
-
-  HighchartsLegendTitleOptions({
-    this.style,
-    this.text
-  });
+  HighchartsLegendTitleOptions({this.style, this.text});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (style != null) {
       buffer.write('"style":{');
@@ -66,5 +53,4 @@ class HighchartsLegendTitleOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"text":', jsonEncode(text), ','], '');
     }
   }
-
 }

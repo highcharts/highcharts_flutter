@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -22,18 +20,15 @@ import 'highcharts_sonification_default_instrument_active_when_options.dart';
 import 'highcharts_sonification_default_instrument_mapping_options.dart';
 import 'highcharts_sonification_default_instrument_point_grouping_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_sonification_default_instrument_active_when_options.dart';
 export 'highcharts_sonification_default_instrument_mapping_options.dart';
 export 'highcharts_sonification_default_instrument_point_grouping_options.dart';
-
 
 /* *
  *
@@ -41,15 +36,14 @@ export 'highcharts_sonification_default_instrument_point_grouping_options.dart';
  *
  * */
 
-
 /**
  * Default sonification options for all instrument tracks.
  * 
  * If specific options are also set on individual tracks or per
  * series, those will override these options.
  */
-class HighchartsSonificationDefaultInstrumentOptions extends HighchartsOptionsBase {
-
+class HighchartsSonificationDefaultInstrumentOptions
+    extends HighchartsOptionsBase {
   HighchartsSonificationDefaultInstrumentActiveWhenOptions? activeWhen;
   Map<String, dynamic>? instrument;
   HighchartsSonificationDefaultInstrumentMappingOptions? mapping;
@@ -59,22 +53,19 @@ class HighchartsSonificationDefaultInstrumentOptions extends HighchartsOptionsBa
   bool? showPlayMarker;
   String? type;
 
-
-  HighchartsSonificationDefaultInstrumentOptions({
-    this.activeWhen,
-    this.instrument,
-    this.mapping,
-    this.midiName,
-    this.pointGrouping,
-    this.roundToMusicalNotes,
-    this.showPlayMarker,
-    this.type
-  });
+  HighchartsSonificationDefaultInstrumentOptions(
+      {this.activeWhen,
+      this.instrument,
+      this.mapping,
+      this.midiName,
+      this.pointGrouping,
+      this.roundToMusicalNotes,
+      this.showPlayMarker,
+      this.type});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (activeWhen != null) {
       buffer.writeAll(['"activeWhen":', activeWhen?.toJSON(), ','], '');
@@ -105,5 +96,4 @@ class HighchartsSonificationDefaultInstrumentOptions extends HighchartsOptionsBa
       buffer.writeAll(['"type":', jsonEncode(type), ','], '');
     }
   }
-
 }

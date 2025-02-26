@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,18 +23,13 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 class HighchartsSunburstSeriesPointEventsOptions extends HighchartsOptionsBase {
-
   dynamic legendItemClick;
   dynamic click;
   dynamic drag;
@@ -50,28 +42,26 @@ class HighchartsSunburstSeriesPointEventsOptions extends HighchartsOptionsBase {
   dynamic unselect;
   dynamic update;
 
-
-  HighchartsSunburstSeriesPointEventsOptions({
-    this.legendItemClick,
-    this.click,
-    this.drag,
-    this.dragStart,
-    this.drop,
-    this.mouseOut,
-    this.mouseOver,
-    this.remove,
-    this.select,
-    this.unselect,
-    this.update
-  });
+  HighchartsSunburstSeriesPointEventsOptions(
+      {this.legendItemClick,
+      this.click,
+      this.drag,
+      this.dragStart,
+      this.drop,
+      this.mouseOut,
+      this.mouseOver,
+      this.remove,
+      this.select,
+      this.unselect,
+      this.update});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (legendItemClick != null) {
-      buffer.writeAll(['"legendItemClick":', jsonEncode(legendItemClick), ','], '');
+      buffer.writeAll(
+          ['"legendItemClick":', jsonEncode(legendItemClick), ','], '');
     }
     if (click != null) {
       buffer.writeAll(['"click":', jsonEncode(click), ','], '');
@@ -104,5 +94,4 @@ class HighchartsSunburstSeriesPointEventsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"update":', jsonEncode(update), ','], '');
     }
   }
-
 }

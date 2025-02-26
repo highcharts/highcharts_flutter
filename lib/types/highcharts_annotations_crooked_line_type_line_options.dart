@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,36 +23,27 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Line options.
  */
-class HighchartsAnnotationsCrookedLineTypeLineOptions extends HighchartsOptionsBase {
-
+class HighchartsAnnotationsCrookedLineTypeLineOptions
+    extends HighchartsOptionsBase {
   String? fill;
 
-
-  HighchartsAnnotationsCrookedLineTypeLineOptions({
-    this.fill
-  });
+  HighchartsAnnotationsCrookedLineTypeLineOptions({this.fill});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (fill != null) {
       buffer.writeAll(['"fill":', jsonEncode(fill), ','], '');
     }
   }
-
 }

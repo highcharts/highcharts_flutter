@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +23,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * Options for the dial or arrow pointer of the gauge.
@@ -43,7 +36,6 @@ import 'highcharts_options_base.dart';
  * `.highcharts-gauge-series .highcharts-dial` rule.
  */
 class HighchartsGaugeSeriesDialOptions extends HighchartsOptionsBase {
-
   String? backgroundColor;
   String? baseLength;
   double? baseWidth;
@@ -54,26 +46,24 @@ class HighchartsGaugeSeriesDialOptions extends HighchartsOptionsBase {
   String? rearLength;
   double? topWidth;
 
-
-  HighchartsGaugeSeriesDialOptions({
-    this.backgroundColor,
-    this.baseLength,
-    this.baseWidth,
-    this.borderColor,
-    this.borderWidth,
-    this.path,
-    this.radius,
-    this.rearLength,
-    this.topWidth
-  });
+  HighchartsGaugeSeriesDialOptions(
+      {this.backgroundColor,
+      this.baseLength,
+      this.baseWidth,
+      this.borderColor,
+      this.borderWidth,
+      this.path,
+      this.radius,
+      this.rearLength,
+      this.topWidth});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (backgroundColor != null) {
-      buffer.writeAll(['"backgroundColor":', jsonEncode(backgroundColor), ','], '');
+      buffer.writeAll(
+          ['"backgroundColor":', jsonEncode(backgroundColor), ','], '');
     }
     if (baseLength != null) {
       buffer.writeAll(['"baseLength":', jsonEncode(baseLength), ','], '');
@@ -100,5 +90,4 @@ class HighchartsGaugeSeriesDialOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"topWidth":', topWidth, ','], '');
     }
   }
-
 }

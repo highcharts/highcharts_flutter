@@ -8,18 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
 import 'highcharts_venn_series_cluster_states_hover_options.dart';
-
 
 /* *
  *
@@ -27,9 +23,7 @@ import 'highcharts_venn_series_cluster_states_hover_options.dart';
  *
  * */
 
-
 export 'highcharts_venn_series_cluster_states_hover_options.dart';
-
 
 /* *
  *
@@ -37,24 +31,17 @@ export 'highcharts_venn_series_cluster_states_hover_options.dart';
  *
  * */
 
-
 class HighchartsVennSeriesClusterStatesOptions extends HighchartsOptionsBase {
-
   HighchartsVennSeriesClusterStatesHoverOptions? hover;
 
-
-  HighchartsVennSeriesClusterStatesOptions({
-    this.hover
-  });
+  HighchartsVennSeriesClusterStatesOptions({this.hover});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (hover != null) {
       buffer.writeAll(['"hover":', hover?.toJSON(), ','], '');
     }
   }
-
 }

@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -24,13 +22,11 @@ import 'highcharts_color_axis_events_options.dart';
 import 'highcharts_color_axis_labels_options.dart';
 import 'highcharts_color_axis_marker_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
-
 
 export 'highcharts_xaxis_accessibility_options.dart';
 export 'highcharts_color_axis_data_classes_options.dart';
@@ -38,13 +34,11 @@ export 'highcharts_color_axis_events_options.dart';
 export 'highcharts_color_axis_labels_options.dart';
 export 'highcharts_color_axis_marker_options.dart';
 
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * A color axis for series. Visually, the color
@@ -81,7 +75,6 @@ export 'highcharts_color_axis_marker_options.dart';
  * programmatic access to the axis.
  */
 class HighchartsColorAxisOptions extends HighchartsOptionsBase {
-
   HighchartsXAxisAccessibilityOptions? accessibility;
   bool? allowDecimals;
   double? angle;
@@ -152,83 +145,80 @@ class HighchartsColorAxisOptions extends HighchartsOptionsBase {
   dynamic width;
   double? zIndex;
 
-
-  HighchartsColorAxisOptions({
-    this.accessibility,
-    this.allowDecimals,
-    this.angle,
-    this.ceiling,
-    this.className,
-    this.crossing,
-    this.dataClassColor,
-    this.dataClasses,
-    this.endOnTick,
-    this.events,
-    this.floor,
-    this.gridLineColor,
-    this.gridLineDashStyle,
-    this.gridLineInterpolation,
-    this.gridLineWidth,
-    this.gridZIndex,
-    this.height,
-    this.id,
-    this.labels,
-    this.layout,
-    this.lineColor,
-    this.margin,
-    this.marker,
-    this.max,
-    this.maxColor,
-    this.maxPadding,
-    this.maxRange,
-    this.min,
-    this.minColor,
-    this.minPadding,
-    this.minorGridLineColor,
-    this.minorGridLineDashStyle,
-    this.minorGridLineWidth,
-    this.minorTickColor,
-    this.minorTickInterval,
-    this.minorTickLength,
-    this.minorTickPosition,
-    this.minorTickWidth,
-    this.minorTicks,
-    this.minorTicksPerMajor,
-    this.ordinal,
-    this.overscroll,
-    this.panningEnabled,
-    this.range,
-    this.reversed,
-    this.showFirstLabel,
-    this.showInLegend,
-    this.showLastLabel,
-    this.softMax,
-    this.softMin,
-    this.startOfWeek,
-    this.startOnTick,
-    this.stops,
-    this.tickAmount,
-    this.tickColor,
-    this.tickInterval,
-    this.tickLength,
-    this.tickPixelInterval,
-    this.tickPosition,
-    this.tickPositioner,
-    this.tickPositions,
-    this.tickWidth,
-    this.tickmarkPlacement,
-    this.type,
-    this.uniqueNames,
-    this.units,
-    this.visible,
-    this.width,
-    this.zIndex
-  });
+  HighchartsColorAxisOptions(
+      {this.accessibility,
+      this.allowDecimals,
+      this.angle,
+      this.ceiling,
+      this.className,
+      this.crossing,
+      this.dataClassColor,
+      this.dataClasses,
+      this.endOnTick,
+      this.events,
+      this.floor,
+      this.gridLineColor,
+      this.gridLineDashStyle,
+      this.gridLineInterpolation,
+      this.gridLineWidth,
+      this.gridZIndex,
+      this.height,
+      this.id,
+      this.labels,
+      this.layout,
+      this.lineColor,
+      this.margin,
+      this.marker,
+      this.max,
+      this.maxColor,
+      this.maxPadding,
+      this.maxRange,
+      this.min,
+      this.minColor,
+      this.minPadding,
+      this.minorGridLineColor,
+      this.minorGridLineDashStyle,
+      this.minorGridLineWidth,
+      this.minorTickColor,
+      this.minorTickInterval,
+      this.minorTickLength,
+      this.minorTickPosition,
+      this.minorTickWidth,
+      this.minorTicks,
+      this.minorTicksPerMajor,
+      this.ordinal,
+      this.overscroll,
+      this.panningEnabled,
+      this.range,
+      this.reversed,
+      this.showFirstLabel,
+      this.showInLegend,
+      this.showLastLabel,
+      this.softMax,
+      this.softMin,
+      this.startOfWeek,
+      this.startOnTick,
+      this.stops,
+      this.tickAmount,
+      this.tickColor,
+      this.tickInterval,
+      this.tickLength,
+      this.tickPixelInterval,
+      this.tickPosition,
+      this.tickPositioner,
+      this.tickPositions,
+      this.tickWidth,
+      this.tickmarkPlacement,
+      this.type,
+      this.uniqueNames,
+      this.units,
+      this.visible,
+      this.width,
+      this.zIndex});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (accessibility != null) {
       buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ','], '');
@@ -249,7 +239,8 @@ class HighchartsColorAxisOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"crossing":', crossing, ','], '');
     }
     if (dataClassColor != null) {
-      buffer.writeAll(['"dataClassColor":', jsonEncode(dataClassColor), ','], '');
+      buffer
+          .writeAll(['"dataClassColor":', jsonEncode(dataClassColor), ','], '');
     }
     if (dataClasses != null) {
       buffer.write('"dataClasses":[');
@@ -271,10 +262,13 @@ class HighchartsColorAxisOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"gridLineColor":', jsonEncode(gridLineColor), ','], '');
     }
     if (gridLineDashStyle != null) {
-      buffer.writeAll(['"gridLineDashStyle":', jsonEncode(gridLineDashStyle), ','], '');
+      buffer.writeAll(
+          ['"gridLineDashStyle":', jsonEncode(gridLineDashStyle), ','], '');
     }
     if (gridLineInterpolation != null) {
-      buffer.writeAll(['"gridLineInterpolation":', jsonEncode(gridLineInterpolation), ','], '');
+      buffer.writeAll(
+          ['"gridLineInterpolation":', jsonEncode(gridLineInterpolation), ','],
+          '');
     }
     if (gridLineWidth != null) {
       buffer.writeAll(['"gridLineWidth":', gridLineWidth, ','], '');
@@ -325,25 +319,33 @@ class HighchartsColorAxisOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"minPadding":', minPadding, ','], '');
     }
     if (minorGridLineColor != null) {
-      buffer.writeAll(['"minorGridLineColor":', jsonEncode(minorGridLineColor), ','], '');
+      buffer.writeAll(
+          ['"minorGridLineColor":', jsonEncode(minorGridLineColor), ','], '');
     }
     if (minorGridLineDashStyle != null) {
-      buffer.writeAll(['"minorGridLineDashStyle":', jsonEncode(minorGridLineDashStyle), ','], '');
+      buffer.writeAll([
+        '"minorGridLineDashStyle":',
+        jsonEncode(minorGridLineDashStyle),
+        ','
+      ], '');
     }
     if (minorGridLineWidth != null) {
       buffer.writeAll(['"minorGridLineWidth":', minorGridLineWidth, ','], '');
     }
     if (minorTickColor != null) {
-      buffer.writeAll(['"minorTickColor":', jsonEncode(minorTickColor), ','], '');
+      buffer
+          .writeAll(['"minorTickColor":', jsonEncode(minorTickColor), ','], '');
     }
     if (minorTickInterval != null) {
-      buffer.writeAll(['"minorTickInterval":', jsonEncode(minorTickInterval), ','], '');
+      buffer.writeAll(
+          ['"minorTickInterval":', jsonEncode(minorTickInterval), ','], '');
     }
     if (minorTickLength != null) {
       buffer.writeAll(['"minorTickLength":', minorTickLength, ','], '');
     }
     if (minorTickPosition != null) {
-      buffer.writeAll(['"minorTickPosition":', jsonEncode(minorTickPosition), ','], '');
+      buffer.writeAll(
+          ['"minorTickPosition":', jsonEncode(minorTickPosition), ','], '');
     }
     if (minorTickWidth != null) {
       buffer.writeAll(['"minorTickWidth":', minorTickWidth, ','], '');
@@ -416,7 +418,8 @@ class HighchartsColorAxisOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"tickPosition":', jsonEncode(tickPosition), ','], '');
     }
     if (tickPositioner != null) {
-      buffer.writeAll(['"tickPositioner":', jsonEncode(tickPositioner), ','], '');
+      buffer
+          .writeAll(['"tickPositioner":', jsonEncode(tickPositioner), ','], '');
     }
     if (tickPositions != null) {
       buffer.write('"tickPositions":[');
@@ -429,7 +432,8 @@ class HighchartsColorAxisOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"tickWidth":', tickWidth, ','], '');
     }
     if (tickmarkPlacement != null) {
-      buffer.writeAll(['"tickmarkPlacement":', jsonEncode(tickmarkPlacement), ','], '');
+      buffer.writeAll(
+          ['"tickmarkPlacement":', jsonEncode(tickmarkPlacement), ','], '');
     }
     if (type != null) {
       buffer.writeAll(['"type":', jsonEncode(type), ','], '');
@@ -454,5 +458,4 @@ class HighchartsColorAxisOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"zIndex":', zIndex, ','], '');
     }
   }
-
 }

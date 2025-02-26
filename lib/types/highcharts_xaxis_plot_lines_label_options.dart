@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,21 +23,16 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Text labels for the plot bands
  */
 class HighchartsXAxisPlotLinesLabelOptions extends HighchartsOptionsBase {
-
   String? align;
   dynamic formatter;
   double? rotation;
@@ -52,24 +44,21 @@ class HighchartsXAxisPlotLinesLabelOptions extends HighchartsOptionsBase {
   double? x;
   double? y;
 
-
-  HighchartsXAxisPlotLinesLabelOptions({
-    this.align,
-    this.formatter,
-    this.rotation,
-    this.style,
-    this.text,
-    this.textAlign,
-    this.useHTML,
-    this.verticalAlign,
-    this.x,
-    this.y
-  });
+  HighchartsXAxisPlotLinesLabelOptions(
+      {this.align,
+      this.formatter,
+      this.rotation,
+      this.style,
+      this.text,
+      this.textAlign,
+      this.useHTML,
+      this.verticalAlign,
+      this.x,
+      this.y});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (align != null) {
       buffer.writeAll(['"align":', jsonEncode(align), ','], '');
@@ -106,5 +95,4 @@ class HighchartsXAxisPlotLinesLabelOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"y":', y, ','], '');
     }
   }
-
 }

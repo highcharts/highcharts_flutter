@@ -8,14 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
-
 
 import 'highcharts_options_base.dart';
 import 'highcharts_abands_series_options.dart';
@@ -137,13 +134,11 @@ import 'highcharts_wordcloud_series_options.dart';
 import 'highcharts_xrange_series_options.dart';
 import 'highcharts_zigzag_series_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
-
 
 export 'highcharts_abands_series_options.dart';
 export 'highcharts_adseries_options.dart';
@@ -264,13 +259,11 @@ export 'highcharts_wordcloud_series_options.dart';
 export 'highcharts_xrange_series_options.dart';
 export 'highcharts_zigzag_series_options.dart';
 
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * The plotOptions is a wrapper object for config objects for each series
@@ -284,7 +277,6 @@ export 'highcharts_zigzag_series_options.dart';
  * [the series array](#series).
  */
 class HighchartsPlotOptions extends HighchartsOptionsBase {
-
   HighchartsABandsSeriesOptions? abands;
   HighchartsADSeriesOptions? ad;
   HighchartsAOSeriesOptions? ao;
@@ -404,132 +396,129 @@ class HighchartsPlotOptions extends HighchartsOptionsBase {
   HighchartsXRangeSeriesOptions? xrange;
   HighchartsZigzagSeriesOptions? zigzag;
 
-
-  HighchartsPlotOptions({
-    this.abands,
-    this.ad,
-    this.ao,
-    this.apo,
-    this.arcdiagram,
-    this.area,
-    this.arearange,
-    this.areaspline,
-    this.areasplinerange,
-    this.aroon,
-    this.aroonoscillator,
-    this.atr,
-    this.bar,
-    this.bb,
-    this.bellcurve,
-    this.boxplot,
-    this.bubble,
-    this.bullet,
-    this.candlestick,
-    this.cci,
-    this.chaikin,
-    this.cmf,
-    this.cmo,
-    this.column,
-    this.columnpyramid,
-    this.columnrange,
-    this.cylinder,
-    this.dema,
-    this.dependencywheel,
-    this.disparityindex,
-    this.dmi,
-    this.dpo,
-    this.dumbbell,
-    this.ema,
-    this.errorbar,
-    this.flags,
-    this.flowmap,
-    this.funnel,
-    this.funnel3d,
-    this.gantt,
-    this.gauge,
-    this.geoheatmap,
-    this.heatmap,
-    this.heikinashi,
-    this.histogram,
-    this.hlc,
-    this.hollowcandlestick,
-    this.ikh,
-    this.item,
-    this.keltnerchannels,
-    this.klinger,
-    this.line,
-    this.linearregression,
-    this.linearregressionangle,
-    this.linearregressionintercept,
-    this.linearregressionslope,
-    this.lollipop,
-    this.macd,
-    this.map,
-    this.mapbubble,
-    this.mapline,
-    this.mappoint,
-    this.mfi,
-    this.momentum,
-    this.natr,
-    this.networkgraph,
-    this.obv,
-    this.ohlc,
-    this.organization,
-    this.packedbubble,
-    this.pareto,
-    this.pc,
-    this.pictorial,
-    this.pie,
-    this.pivotpoints,
-    this.pointandfigure,
-    this.polygon,
-    this.ppo,
-    this.priceenvelopes,
-    this.psar,
-    this.pyramid,
-    this.pyramid3d,
-    this.renko,
-    this.roc,
-    this.rsi,
-    this.sankey,
-    this.scatter,
-    this.scatter3d,
-    this.series,
-    this.slowstochastic,
-    this.sma,
-    this.solidgauge,
-    this.spline,
-    this.stochastic,
-    this.streamgraph,
-    this.sunburst,
-    this.supertrend,
-    this.tema,
-    this.tiledwebmap,
-    this.tilemap,
-    this.timeline,
-    this.treegraph,
-    this.treemap,
-    this.trendline,
-    this.trix,
-    this.variablepie,
-    this.variwide,
-    this.vbp,
-    this.vector,
-    this.venn,
-    this.vwap,
-    this.waterfall,
-    this.williamsr,
-    this.windbarb,
-    this.wma,
-    this.wordcloud,
-    this.xrange,
-    this.zigzag
-  });
+  HighchartsPlotOptions(
+      {this.abands,
+      this.ad,
+      this.ao,
+      this.apo,
+      this.arcdiagram,
+      this.area,
+      this.arearange,
+      this.areaspline,
+      this.areasplinerange,
+      this.aroon,
+      this.aroonoscillator,
+      this.atr,
+      this.bar,
+      this.bb,
+      this.bellcurve,
+      this.boxplot,
+      this.bubble,
+      this.bullet,
+      this.candlestick,
+      this.cci,
+      this.chaikin,
+      this.cmf,
+      this.cmo,
+      this.column,
+      this.columnpyramid,
+      this.columnrange,
+      this.cylinder,
+      this.dema,
+      this.dependencywheel,
+      this.disparityindex,
+      this.dmi,
+      this.dpo,
+      this.dumbbell,
+      this.ema,
+      this.errorbar,
+      this.flags,
+      this.flowmap,
+      this.funnel,
+      this.funnel3d,
+      this.gantt,
+      this.gauge,
+      this.geoheatmap,
+      this.heatmap,
+      this.heikinashi,
+      this.histogram,
+      this.hlc,
+      this.hollowcandlestick,
+      this.ikh,
+      this.item,
+      this.keltnerchannels,
+      this.klinger,
+      this.line,
+      this.linearregression,
+      this.linearregressionangle,
+      this.linearregressionintercept,
+      this.linearregressionslope,
+      this.lollipop,
+      this.macd,
+      this.map,
+      this.mapbubble,
+      this.mapline,
+      this.mappoint,
+      this.mfi,
+      this.momentum,
+      this.natr,
+      this.networkgraph,
+      this.obv,
+      this.ohlc,
+      this.organization,
+      this.packedbubble,
+      this.pareto,
+      this.pc,
+      this.pictorial,
+      this.pie,
+      this.pivotpoints,
+      this.pointandfigure,
+      this.polygon,
+      this.ppo,
+      this.priceenvelopes,
+      this.psar,
+      this.pyramid,
+      this.pyramid3d,
+      this.renko,
+      this.roc,
+      this.rsi,
+      this.sankey,
+      this.scatter,
+      this.scatter3d,
+      this.series,
+      this.slowstochastic,
+      this.sma,
+      this.solidgauge,
+      this.spline,
+      this.stochastic,
+      this.streamgraph,
+      this.sunburst,
+      this.supertrend,
+      this.tema,
+      this.tiledwebmap,
+      this.tilemap,
+      this.timeline,
+      this.treegraph,
+      this.treemap,
+      this.trendline,
+      this.trix,
+      this.variablepie,
+      this.variwide,
+      this.vbp,
+      this.vector,
+      this.venn,
+      this.vwap,
+      this.waterfall,
+      this.williamsr,
+      this.windbarb,
+      this.wma,
+      this.wordcloud,
+      this.xrange,
+      this.zigzag});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (abands != null) {
       buffer.writeAll(['"abands":', abands?.toJSON(), ','], '');
@@ -556,13 +545,15 @@ class HighchartsPlotOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"areaspline":', areaspline?.toJSON(), ','], '');
     }
     if (areasplinerange != null) {
-      buffer.writeAll(['"areasplinerange":', areasplinerange?.toJSON(), ','], '');
+      buffer
+          .writeAll(['"areasplinerange":', areasplinerange?.toJSON(), ','], '');
     }
     if (aroon != null) {
       buffer.writeAll(['"aroon":', aroon?.toJSON(), ','], '');
     }
     if (aroonoscillator != null) {
-      buffer.writeAll(['"aroonoscillator":', aroonoscillator?.toJSON(), ','], '');
+      buffer
+          .writeAll(['"aroonoscillator":', aroonoscillator?.toJSON(), ','], '');
     }
     if (atr != null) {
       buffer.writeAll(['"atr":', atr?.toJSON(), ','], '');
@@ -616,7 +607,8 @@ class HighchartsPlotOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"dema":', dema?.toJSON(), ','], '');
     }
     if (dependencywheel != null) {
-      buffer.writeAll(['"dependencywheel":', dependencywheel?.toJSON(), ','], '');
+      buffer
+          .writeAll(['"dependencywheel":', dependencywheel?.toJSON(), ','], '');
     }
     if (disparityindex != null) {
       buffer.writeAll(['"disparityindex":', disparityindex?.toJSON(), ','], '');
@@ -670,7 +662,8 @@ class HighchartsPlotOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"hlc":', hlc?.toJSON(), ','], '');
     }
     if (hollowcandlestick != null) {
-      buffer.writeAll(['"hollowcandlestick":', hollowcandlestick?.toJSON(), ','], '');
+      buffer.writeAll(
+          ['"hollowcandlestick":', hollowcandlestick?.toJSON(), ','], '');
     }
     if (ikh != null) {
       buffer.writeAll(['"ikh":', ikh?.toJSON(), ','], '');
@@ -679,7 +672,8 @@ class HighchartsPlotOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"item":', item?.toJSON(), ','], '');
     }
     if (keltnerchannels != null) {
-      buffer.writeAll(['"keltnerchannels":', keltnerchannels?.toJSON(), ','], '');
+      buffer
+          .writeAll(['"keltnerchannels":', keltnerchannels?.toJSON(), ','], '');
     }
     if (klinger != null) {
       buffer.writeAll(['"klinger":', klinger?.toJSON(), ','], '');
@@ -688,16 +682,25 @@ class HighchartsPlotOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"line":', line?.toJSON(), ','], '');
     }
     if (linearregression != null) {
-      buffer.writeAll(['"linearregression":', linearregression?.toJSON(), ','], '');
+      buffer.writeAll(
+          ['"linearregression":', linearregression?.toJSON(), ','], '');
     }
     if (linearregressionangle != null) {
-      buffer.writeAll(['"linearregressionangle":', linearregressionangle?.toJSON(), ','], '');
+      buffer.writeAll(
+          ['"linearregressionangle":', linearregressionangle?.toJSON(), ','],
+          '');
     }
     if (linearregressionintercept != null) {
-      buffer.writeAll(['"linearregressionintercept":', linearregressionintercept?.toJSON(), ','], '');
+      buffer.writeAll([
+        '"linearregressionintercept":',
+        linearregressionintercept?.toJSON(),
+        ','
+      ], '');
     }
     if (linearregressionslope != null) {
-      buffer.writeAll(['"linearregressionslope":', linearregressionslope?.toJSON(), ','], '');
+      buffer.writeAll(
+          ['"linearregressionslope":', linearregressionslope?.toJSON(), ','],
+          '');
     }
     if (lollipop != null) {
       buffer.writeAll(['"lollipop":', lollipop?.toJSON(), ','], '');
@@ -886,5 +889,4 @@ class HighchartsPlotOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"zigzag":', zigzag?.toJSON(), ','], '');
     }
   }
-
 }

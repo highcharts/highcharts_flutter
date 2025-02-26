@@ -8,17 +8,13 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +22,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * Apply a jitter effect for the rendered markers. When plotting
@@ -54,21 +46,16 @@ import 'highcharts_options_base.dart';
  * 
  * **Note:** With boost mode enabled, the jitter effect is not supported.
  */
-class HighchartsPointandfigureSeriesJitterOptions extends HighchartsOptionsBase {
-
+class HighchartsPointandfigureSeriesJitterOptions
+    extends HighchartsOptionsBase {
   double? x;
   double? y;
 
-
-  HighchartsPointandfigureSeriesJitterOptions({
-    this.x,
-    this.y
-  });
+  HighchartsPointandfigureSeriesJitterOptions({this.x, this.y});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (x != null) {
       buffer.writeAll(['"x":', x, ','], '');
@@ -77,5 +64,4 @@ class HighchartsPointandfigureSeriesJitterOptions extends HighchartsOptionsBase 
       buffer.writeAll(['"y":', y, ','], '');
     }
   }
-
 }

@@ -8,20 +8,16 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
 import 'highcharts_series_marker_states_hover_options.dart';
 import 'highcharts_series_marker_states_normal_options.dart';
 import 'highcharts_series_marker_states_select_options.dart';
-
 
 /* *
  *
@@ -29,11 +25,9 @@ import 'highcharts_series_marker_states_select_options.dart';
  *
  * */
 
-
 export 'highcharts_series_marker_states_hover_options.dart';
 export 'highcharts_series_marker_states_normal_options.dart';
 export 'highcharts_series_marker_states_select_options.dart';
-
 
 /* *
  *
@@ -41,27 +35,19 @@ export 'highcharts_series_marker_states_select_options.dart';
  *
  * */
 
-
 /**
  * States for a single point marker.
  */
 class HighchartsSeriesMarkerStatesOptions extends HighchartsOptionsBase {
-
   HighchartsSeriesMarkerStatesHoverOptions? hover;
   HighchartsSeriesMarkerStatesNormalOptions? normal;
   HighchartsSeriesMarkerStatesSelectOptions? select;
 
-
-  HighchartsSeriesMarkerStatesOptions({
-    this.hover,
-    this.normal,
-    this.select
-  });
+  HighchartsSeriesMarkerStatesOptions({this.hover, this.normal, this.select});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (hover != null) {
       buffer.writeAll(['"hover":', hover?.toJSON(), ','], '');
@@ -73,5 +59,4 @@ class HighchartsSeriesMarkerStatesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"select":', select?.toJSON(), ','], '');
     }
   }
-
 }

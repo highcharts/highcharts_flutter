@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,36 +23,26 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Chart and map zoom accessibility language options.
  */
 class HighchartsLangAccessibilityZoomOptions extends HighchartsOptionsBase {
-
   String? mapZoomIn;
   String? mapZoomOut;
   String? resetZoomButton;
 
-
-  HighchartsLangAccessibilityZoomOptions({
-    this.mapZoomIn,
-    this.mapZoomOut,
-    this.resetZoomButton
-  });
+  HighchartsLangAccessibilityZoomOptions(
+      {this.mapZoomIn, this.mapZoomOut, this.resetZoomButton});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (mapZoomIn != null) {
       buffer.writeAll(['"mapZoomIn":', jsonEncode(mapZoomIn), ','], '');
@@ -64,8 +51,8 @@ class HighchartsLangAccessibilityZoomOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"mapZoomOut":', jsonEncode(mapZoomOut), ','], '');
     }
     if (resetZoomButton != null) {
-      buffer.writeAll(['"resetZoomButton":', jsonEncode(resetZoomButton), ','], '');
+      buffer.writeAll(
+          ['"resetZoomButton":', jsonEncode(resetZoomButton), ','], '');
     }
   }
-
 }

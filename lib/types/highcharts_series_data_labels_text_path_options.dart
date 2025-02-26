@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +23,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * Options for a label text which should follow marker's shape.
@@ -45,20 +38,14 @@ import 'highcharts_options_base.dart';
  * `useHTML` to true will disable this option.
  */
 class HighchartsSeriesDataLabelsTextPathOptions extends HighchartsOptionsBase {
-
   dynamic attributes;
   bool? enabled;
 
-
-  HighchartsSeriesDataLabelsTextPathOptions({
-    this.attributes,
-    this.enabled
-  });
+  HighchartsSeriesDataLabelsTextPathOptions({this.attributes, this.enabled});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (attributes != null) {
       buffer.writeAll(['"attributes":', jsonEncode(attributes), ','], '');
@@ -67,5 +54,4 @@ class HighchartsSeriesDataLabelsTextPathOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"enabled":', enabled, ','], '');
     }
   }
-
 }

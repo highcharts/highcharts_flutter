@@ -1,9 +1,17 @@
+## 0.1.1
+
+* Improved formatting of dart code.
+* Improved license details.
+* Improved package description.
+
+
 ## 0.1.0
 
 * Added support for custom JavaScript injection
 * Added new examples and improved existing examples
 * Fixed expanding and sizing of Highcharts widget (#36)
 * Fixed JSON of categories data in series (#34)
+
 
 ## 0.0.5
 
@@ -13,6 +21,7 @@
 * Improved examples (#19, #20)
 * Fixed Highcharts Stock constructor (#27)
 * Fixed options JSON (#26) 
+
 
 ## 0.0.4
 
@@ -32,6 +41,7 @@
 * Upgraded dependencies and integrations
 * Fixed missing option to add / remove hamburger menu
 
+
 ## 0.0.3
 
 * Added implicit options exports.
@@ -42,6 +52,7 @@
 * Fixed menu issue.
 * Fixed series update.
 
+
 ## 0.0.2
 
 * Improved hello-world example.
@@ -51,6 +62,7 @@
 * Fixed refresh issue.
 * Fixed transparence issue.
 * Removed some internal types.
+
 
 ## 0.0.1
 

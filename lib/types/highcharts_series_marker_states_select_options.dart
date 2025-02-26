@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +23,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * The appearance of the point marker when selected. In order to
@@ -42,26 +35,22 @@ import 'highcharts_options_base.dart';
  * `series.allowPointSelect` option to true.
  */
 class HighchartsSeriesMarkerStatesSelectOptions extends HighchartsOptionsBase {
-
   bool? enabled;
   String? fillColor;
   String? lineColor;
   double? lineWidth;
   double? radius;
 
-
-  HighchartsSeriesMarkerStatesSelectOptions({
-    this.enabled,
-    this.fillColor,
-    this.lineColor,
-    this.lineWidth,
-    this.radius
-  });
+  HighchartsSeriesMarkerStatesSelectOptions(
+      {this.enabled,
+      this.fillColor,
+      this.lineColor,
+      this.lineWidth,
+      this.radius});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (enabled != null) {
       buffer.writeAll(['"enabled":', enabled, ','], '');
@@ -79,5 +68,4 @@ class HighchartsSeriesMarkerStatesSelectOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"radius":', radius, ','], '');
     }
   }
-
 }

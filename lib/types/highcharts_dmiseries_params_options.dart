@@ -8,17 +8,13 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,33 +22,23 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 class HighchartsDMISeriesParamsOptions extends HighchartsOptionsBase {
-
   double? period;
 
-
-  HighchartsDMISeriesParamsOptions({
-    this.period
-  });
+  HighchartsDMISeriesParamsOptions({this.period});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (period != null) {
       buffer.writeAll(['"period":', period, ','], '');
     }
   }
-
 }

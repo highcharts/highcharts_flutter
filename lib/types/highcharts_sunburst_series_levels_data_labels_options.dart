@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -23,19 +21,16 @@ import 'highcharts_series_data_labels_animation_options.dart';
 import 'highcharts_series_data_labels_filter_options.dart';
 import 'highcharts_series_data_labels_text_path_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_sunburst_series_levels_data_labels_style_options.dart';
 export 'highcharts_series_data_labels_animation_options.dart';
 export 'highcharts_series_data_labels_filter_options.dart';
 export 'highcharts_series_data_labels_text_path_options.dart';
-
 
 /* *
  *
@@ -43,12 +38,11 @@ export 'highcharts_series_data_labels_text_path_options.dart';
  *
  * */
 
-
 /**
  * Can set `dataLabels` on all points which lies on the same level.
  */
-class HighchartsSunburstSeriesLevelsDataLabelsOptions extends HighchartsOptionsBase {
-
+class HighchartsSunburstSeriesLevelsDataLabelsOptions
+    extends HighchartsOptionsBase {
   bool? allowOverlap;
   bool? defer;
   String? rotationMode;
@@ -88,52 +82,49 @@ class HighchartsSunburstSeriesLevelsDataLabelsOptions extends HighchartsOptionsB
   double? y;
   double? zIndex;
 
-
-  HighchartsSunburstSeriesLevelsDataLabelsOptions({
-    this.allowOverlap,
-    this.defer,
-    this.rotationMode,
-    this.style,
-    this.alignTo,
-    this.connectorColor,
-    this.connectorPadding,
-    this.connectorShape,
-    this.connectorWidth,
-    this.crookDistance,
-    this.distance,
-    this.enabled,
-    this.format,
-    this.formatter,
-    this.softConnector,
-    this.animation,
-    this.backgroundColor,
-    this.borderColor,
-    this.borderRadius,
-    this.borderWidth,
-    this.className,
-    this.color,
-    this.crop,
-    this.filter,
-    this.nullFormat,
-    this.nullFormatter,
-    this.overflow,
-    this.padding,
-    this.position,
-    this.rotation,
-    this.shadow,
-    this.shape,
-    this.textPath,
-    this.useHTML,
-    this.verticalAlign,
-    this.x,
-    this.y,
-    this.zIndex
-  });
+  HighchartsSunburstSeriesLevelsDataLabelsOptions(
+      {this.allowOverlap,
+      this.defer,
+      this.rotationMode,
+      this.style,
+      this.alignTo,
+      this.connectorColor,
+      this.connectorPadding,
+      this.connectorShape,
+      this.connectorWidth,
+      this.crookDistance,
+      this.distance,
+      this.enabled,
+      this.format,
+      this.formatter,
+      this.softConnector,
+      this.animation,
+      this.backgroundColor,
+      this.borderColor,
+      this.borderRadius,
+      this.borderWidth,
+      this.className,
+      this.color,
+      this.crop,
+      this.filter,
+      this.nullFormat,
+      this.nullFormatter,
+      this.overflow,
+      this.padding,
+      this.position,
+      this.rotation,
+      this.shadow,
+      this.shape,
+      this.textPath,
+      this.useHTML,
+      this.verticalAlign,
+      this.x,
+      this.y,
+      this.zIndex});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (allowOverlap != null) {
       buffer.writeAll(['"allowOverlap":', allowOverlap, ','], '');
@@ -151,13 +142,15 @@ class HighchartsSunburstSeriesLevelsDataLabelsOptions extends HighchartsOptionsB
       buffer.writeAll(['"alignTo":', jsonEncode(alignTo), ','], '');
     }
     if (connectorColor != null) {
-      buffer.writeAll(['"connectorColor":', jsonEncode(connectorColor), ','], '');
+      buffer
+          .writeAll(['"connectorColor":', jsonEncode(connectorColor), ','], '');
     }
     if (connectorPadding != null) {
       buffer.writeAll(['"connectorPadding":', connectorPadding, ','], '');
     }
     if (connectorShape != null) {
-      buffer.writeAll(['"connectorShape":', jsonEncode(connectorShape), ','], '');
+      buffer
+          .writeAll(['"connectorShape":', jsonEncode(connectorShape), ','], '');
     }
     if (connectorWidth != null) {
       buffer.writeAll(['"connectorWidth":', connectorWidth, ','], '');
@@ -184,7 +177,8 @@ class HighchartsSunburstSeriesLevelsDataLabelsOptions extends HighchartsOptionsB
       buffer.writeAll(['"animation":', animation?.toJSON(), ','], '');
     }
     if (backgroundColor != null) {
-      buffer.writeAll(['"backgroundColor":', jsonEncode(backgroundColor), ','], '');
+      buffer.writeAll(
+          ['"backgroundColor":', jsonEncode(backgroundColor), ','], '');
     }
     if (borderColor != null) {
       buffer.writeAll(['"borderColor":', jsonEncode(borderColor), ','], '');
@@ -254,5 +248,4 @@ class HighchartsSunburstSeriesLevelsDataLabelsOptions extends HighchartsOptionsB
       buffer.writeAll(['"zIndex":', zIndex, ','], '');
     }
   }
-
 }

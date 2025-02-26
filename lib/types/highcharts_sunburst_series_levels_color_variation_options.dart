@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,35 +23,26 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Can set a `colorVariation` on all points which lies on the same
  * level.
  */
-class HighchartsSunburstSeriesLevelsColorVariationOptions extends HighchartsOptionsBase {
-
+class HighchartsSunburstSeriesLevelsColorVariationOptions
+    extends HighchartsOptionsBase {
   String? key;
   double? to;
 
-
-  HighchartsSunburstSeriesLevelsColorVariationOptions({
-    this.key,
-    this.to
-  });
+  HighchartsSunburstSeriesLevelsColorVariationOptions({this.key, this.to});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (key != null) {
       buffer.writeAll(['"key":', jsonEncode(key), ','], '');
@@ -63,5 +51,4 @@ class HighchartsSunburstSeriesLevelsColorVariationOptions extends HighchartsOpti
       buffer.writeAll(['"to":', to, ','], '');
     }
   }
-
 }

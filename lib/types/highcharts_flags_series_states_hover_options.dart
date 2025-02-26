@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_series_states_hover_animation_options.dart';
-
 
 /* *
  *
@@ -27,9 +24,7 @@ import 'highcharts_series_states_hover_animation_options.dart';
  *
  * */
 
-
 export 'highcharts_series_states_hover_animation_options.dart';
-
 
 /* *
  *
@@ -37,28 +32,23 @@ export 'highcharts_series_states_hover_animation_options.dart';
  *
  * */
 
-
 class HighchartsFlagsSeriesStatesHoverOptions extends HighchartsOptionsBase {
-
   HighchartsSeriesStatesHoverAnimationOptions? animation;
   double? brightness;
   bool? enabled;
   String? fillColor;
   String? lineColor;
 
-
-  HighchartsFlagsSeriesStatesHoverOptions({
-    this.animation,
-    this.brightness,
-    this.enabled,
-    this.fillColor,
-    this.lineColor
-  });
+  HighchartsFlagsSeriesStatesHoverOptions(
+      {this.animation,
+      this.brightness,
+      this.enabled,
+      this.fillColor,
+      this.lineColor});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (animation != null) {
       buffer.writeAll(['"animation":', animation?.toJSON(), ','], '');
@@ -76,5 +66,4 @@ class HighchartsFlagsSeriesStatesHoverOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"lineColor":', jsonEncode(lineColor), ','], '');
     }
   }
-
 }

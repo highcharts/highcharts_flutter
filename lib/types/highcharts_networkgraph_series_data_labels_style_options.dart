@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,33 +23,24 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
-class HighchartsNetworkgraphSeriesDataLabelsStyleOptions extends HighchartsOptionsBase {
-
+class HighchartsNetworkgraphSeriesDataLabelsStyleOptions
+    extends HighchartsOptionsBase {
   String? transition;
 
-
-  HighchartsNetworkgraphSeriesDataLabelsStyleOptions({
-    this.transition
-  });
+  HighchartsNetworkgraphSeriesDataLabelsStyleOptions({this.transition});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (transition != null) {
       buffer.writeAll(['"transition":', jsonEncode(transition), ','], '');
     }
   }
-
 }

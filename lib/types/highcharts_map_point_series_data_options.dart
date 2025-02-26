@@ -8,19 +8,16 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_map_point_series_data_events_options.dart';
 import 'highcharts_map_point_series_data_geometry_options.dart';
-
 
 /* *
  *
@@ -28,17 +25,14 @@ import 'highcharts_map_point_series_data_geometry_options.dart';
  *
  * */
 
-
 export 'highcharts_map_point_series_data_events_options.dart';
 export 'highcharts_map_point_series_data_geometry_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * An array of data points for the series. For the `mappoint` series
@@ -85,7 +79,6 @@ export 'highcharts_map_point_series_data_geometry_options.dart';
  *    ```
  */
 class HighchartsMapPointSeriesDataOptions extends HighchartsOptionsBase {
-
   String? color;
   dynamic dataLabels;
   String? drilldown;
@@ -97,24 +90,21 @@ class HighchartsMapPointSeriesDataOptions extends HighchartsOptionsBase {
   double? x;
   double? y;
 
-
-  HighchartsMapPointSeriesDataOptions({
-    this.color,
-    this.dataLabels,
-    this.drilldown,
-    this.events,
-    this.geometry,
-    this.id,
-    this.lat,
-    this.lon,
-    this.x,
-    this.y
-  });
+  HighchartsMapPointSeriesDataOptions(
+      {this.color,
+      this.dataLabels,
+      this.drilldown,
+      this.events,
+      this.geometry,
+      this.id,
+      this.lat,
+      this.lon,
+      this.x,
+      this.y});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (color != null) {
       buffer.writeAll(['"color":', jsonEncode(color), ','], '');
@@ -147,5 +137,4 @@ class HighchartsMapPointSeriesDataOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"y":', y, ','], '');
     }
   }
-
 }

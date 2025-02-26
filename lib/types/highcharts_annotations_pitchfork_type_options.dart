@@ -8,14 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
-
 
 import 'highcharts_options_base.dart';
 import 'highcharts_annotations_pitchfork_type_inner_background_options.dart';
@@ -23,19 +20,16 @@ import 'highcharts_annotations_crooked_line_type_line_options.dart';
 import 'highcharts_annotations_pitchfork_type_outer_background_options.dart';
 import 'highcharts_annotations_crooked_line_type_points_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_annotations_pitchfork_type_inner_background_options.dart';
 export 'highcharts_annotations_crooked_line_type_line_options.dart';
 export 'highcharts_annotations_pitchfork_type_outer_background_options.dart';
 export 'highcharts_annotations_crooked_line_type_points_options.dart';
-
 
 /* *
  *
@@ -43,9 +37,7 @@ export 'highcharts_annotations_crooked_line_type_points_options.dart';
  *
  * */
 
-
 class HighchartsAnnotationsPitchforkTypeOptions extends HighchartsOptionsBase {
-
   HighchartsAnnotationsPitchforkTypeInnerBackgroundOptions? innerBackground;
   HighchartsAnnotationsCrookedLineTypeLineOptions? line;
   HighchartsAnnotationsPitchforkTypeOuterBackgroundOptions? outerBackground;
@@ -53,29 +45,28 @@ class HighchartsAnnotationsPitchforkTypeOptions extends HighchartsOptionsBase {
   double? xAxis;
   double? yAxis;
 
-
-  HighchartsAnnotationsPitchforkTypeOptions({
-    this.innerBackground,
-    this.line,
-    this.outerBackground,
-    this.points,
-    this.xAxis,
-    this.yAxis
-  });
+  HighchartsAnnotationsPitchforkTypeOptions(
+      {this.innerBackground,
+      this.line,
+      this.outerBackground,
+      this.points,
+      this.xAxis,
+      this.yAxis});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (innerBackground != null) {
-      buffer.writeAll(['"innerBackground":', innerBackground?.toJSON(), ','], '');
+      buffer
+          .writeAll(['"innerBackground":', innerBackground?.toJSON(), ','], '');
     }
     if (line != null) {
       buffer.writeAll(['"line":', line?.toJSON(), ','], '');
     }
     if (outerBackground != null) {
-      buffer.writeAll(['"outerBackground":', outerBackground?.toJSON(), ','], '');
+      buffer
+          .writeAll(['"outerBackground":', outerBackground?.toJSON(), ','], '');
     }
     if (points != null) {
       buffer.write('"points":[');
@@ -91,5 +82,4 @@ class HighchartsAnnotationsPitchforkTypeOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"yAxis":', yAxis, ','], '');
     }
   }
-
 }

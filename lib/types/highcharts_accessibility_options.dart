@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -24,13 +22,11 @@ import 'highcharts_accessibility_point_options.dart';
 import 'highcharts_accessibility_screen_reader_section_options.dart';
 import 'highcharts_accessibility_series_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
-
 
 export 'highcharts_accessibility_announce_new_data_options.dart';
 export 'highcharts_accessibility_keyboard_navigation_options.dart';
@@ -38,13 +34,11 @@ export 'highcharts_accessibility_point_options.dart';
 export 'highcharts_accessibility_screen_reader_section_options.dart';
 export 'highcharts_accessibility_series_options.dart';
 
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * Options for configuring accessibility for the chart. Requires the
@@ -54,7 +48,6 @@ export 'highcharts_accessibility_series_options.dart';
  * [Highcharts Accessibility](https://www.highcharts.com/docs/accessibility/accessibility-module).
  */
 class HighchartsAccessibilityOptions extends HighchartsOptionsBase {
-
   HighchartsAccessibilityAnnounceNewDataOptions? announceNewData;
   dynamic customComponents;
   String? description;
@@ -69,33 +62,32 @@ class HighchartsAccessibilityOptions extends HighchartsOptionsBase {
   HighchartsAccessibilitySeriesOptions? series;
   String? typeDescription;
 
-
-  HighchartsAccessibilityOptions({
-    this.announceNewData,
-    this.customComponents,
-    this.description,
-    this.enabled,
-    this.highContrastMode,
-    this.highContrastTheme,
-    this.keyboardNavigation,
-    this.landmarkVerbosity,
-    this.linkedDescription,
-    this.point,
-    this.screenReaderSection,
-    this.series,
-    this.typeDescription
-  });
+  HighchartsAccessibilityOptions(
+      {this.announceNewData,
+      this.customComponents,
+      this.description,
+      this.enabled,
+      this.highContrastMode,
+      this.highContrastTheme,
+      this.keyboardNavigation,
+      this.landmarkVerbosity,
+      this.linkedDescription,
+      this.point,
+      this.screenReaderSection,
+      this.series,
+      this.typeDescription});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (announceNewData != null) {
-      buffer.writeAll(['"announceNewData":', announceNewData?.toJSON(), ','], '');
+      buffer
+          .writeAll(['"announceNewData":', announceNewData?.toJSON(), ','], '');
     }
     if (customComponents != null) {
-      buffer.writeAll(['"customComponents":', jsonEncode(customComponents), ','], '');
+      buffer.writeAll(
+          ['"customComponents":', jsonEncode(customComponents), ','], '');
     }
     if (description != null) {
       buffer.writeAll(['"description":', jsonEncode(description), ','], '');
@@ -104,32 +96,38 @@ class HighchartsAccessibilityOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"enabled":', enabled, ','], '');
     }
     if (highContrastMode != null) {
-      buffer.writeAll(['"highContrastMode":', jsonEncode(highContrastMode), ','], '');
+      buffer.writeAll(
+          ['"highContrastMode":', jsonEncode(highContrastMode), ','], '');
     }
     if (highContrastTheme != null) {
-      buffer.writeAll(['"highContrastTheme":', jsonEncode(highContrastTheme), ','], '');
+      buffer.writeAll(
+          ['"highContrastTheme":', jsonEncode(highContrastTheme), ','], '');
     }
     if (keyboardNavigation != null) {
-      buffer.writeAll(['"keyboardNavigation":', keyboardNavigation?.toJSON(), ','], '');
+      buffer.writeAll(
+          ['"keyboardNavigation":', keyboardNavigation?.toJSON(), ','], '');
     }
     if (landmarkVerbosity != null) {
-      buffer.writeAll(['"landmarkVerbosity":', jsonEncode(landmarkVerbosity), ','], '');
+      buffer.writeAll(
+          ['"landmarkVerbosity":', jsonEncode(landmarkVerbosity), ','], '');
     }
     if (linkedDescription != null) {
-      buffer.writeAll(['"linkedDescription":', jsonEncode(linkedDescription), ','], '');
+      buffer.writeAll(
+          ['"linkedDescription":', jsonEncode(linkedDescription), ','], '');
     }
     if (point != null) {
       buffer.writeAll(['"point":', point?.toJSON(), ','], '');
     }
     if (screenReaderSection != null) {
-      buffer.writeAll(['"screenReaderSection":', screenReaderSection?.toJSON(), ','], '');
+      buffer.writeAll(
+          ['"screenReaderSection":', screenReaderSection?.toJSON(), ','], '');
     }
     if (series != null) {
       buffer.writeAll(['"series":', series?.toJSON(), ','], '');
     }
     if (typeDescription != null) {
-      buffer.writeAll(['"typeDescription":', jsonEncode(typeDescription), ','], '');
+      buffer.writeAll(
+          ['"typeDescription":', jsonEncode(typeDescription), ','], '');
     }
   }
-
 }

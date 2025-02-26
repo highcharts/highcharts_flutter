@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -22,25 +20,21 @@ import 'highcharts_flags_series_data_accessibility_options.dart';
 import 'highcharts_flags_series_data_drag_drop_options.dart';
 import 'highcharts_flags_series_data_events_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_flags_series_data_accessibility_options.dart';
 export 'highcharts_flags_series_data_drag_drop_options.dart';
 export 'highcharts_flags_series_data_events_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * An array of data points for the series. For the `flags` series type,
@@ -64,7 +58,6 @@ export 'highcharts_flags_series_data_events_options.dart';
  *    ```
  */
 class HighchartsFlagsSeriesDataOptions extends HighchartsOptionsBase {
-
   HighchartsFlagsSeriesDataAccessibilityOptions? accessibility;
   String? color;
   Map<String, dynamic>? custom;
@@ -79,27 +72,24 @@ class HighchartsFlagsSeriesDataOptions extends HighchartsOptionsBase {
   String? title;
   dynamic x;
 
-
-  HighchartsFlagsSeriesDataOptions({
-    this.accessibility,
-    this.color,
-    this.custom,
-    this.description,
-    this.dragDrop,
-    this.events,
-    this.fillColor,
-    this.id,
-    this.labelrank,
-    this.selected,
-    this.text,
-    this.title,
-    this.x
-  });
+  HighchartsFlagsSeriesDataOptions(
+      {this.accessibility,
+      this.color,
+      this.custom,
+      this.description,
+      this.dragDrop,
+      this.events,
+      this.fillColor,
+      this.id,
+      this.labelrank,
+      this.selected,
+      this.text,
+      this.title,
+      this.x});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (accessibility != null) {
       buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ','], '');
@@ -145,5 +135,4 @@ class HighchartsFlagsSeriesDataOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"x":', jsonEncode(x), ','], '');
     }
   }
-
 }

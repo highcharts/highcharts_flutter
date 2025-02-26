@@ -1,16 +1,12 @@
-
-
 import 'package:flutter/material.dart';
 
 import '../chart_scaffold.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 class IslandsChart extends StatelessWidget {
   const IslandsChart({super.key});
@@ -19,8 +15,7 @@ class IslandsChart extends StatelessWidget {
   Widget build(context) {
     return const ChartScaffold(
       title: 'Largest islands',
-      subtitle:
-          'in thousands of sq km',
+      subtitle: 'in thousands of sq km',
       data: [
         ['Greenland', 2166.086],
         ['New Guinea', 821.4],

@@ -8,19 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
 import 'highcharts_macdseries_macd_line_styles_options.dart';
 import 'highcharts_macdseries_macd_line_zones_options.dart';
-
 
 /* *
  *
@@ -28,10 +24,8 @@ import 'highcharts_macdseries_macd_line_zones_options.dart';
  *
  * */
 
-
 export 'highcharts_macdseries_macd_line_styles_options.dart';
 export 'highcharts_macdseries_macd_line_zones_options.dart';
-
 
 /* *
  *
@@ -39,25 +33,18 @@ export 'highcharts_macdseries_macd_line_zones_options.dart';
  *
  * */
 
-
 /**
  * The styles for macd line
  */
 class HighchartsMACDSeriesMacdLineOptions extends HighchartsOptionsBase {
-
   HighchartsMACDSeriesMacdLineStylesOptions? styles;
   HighchartsMACDSeriesMacdLineZonesOptions? zones;
 
-
-  HighchartsMACDSeriesMacdLineOptions({
-    this.styles,
-    this.zones
-  });
+  HighchartsMACDSeriesMacdLineOptions({this.styles, this.zones});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (styles != null) {
       buffer.writeAll(['"styles":', styles?.toJSON(), ','], '');
@@ -66,5 +53,4 @@ class HighchartsMACDSeriesMacdLineOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"zones":', zones?.toJSON(), ','], '');
     }
   }
-
 }

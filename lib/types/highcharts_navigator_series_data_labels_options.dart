@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -22,18 +20,15 @@ import 'highcharts_series_data_labels_animation_options.dart';
 import 'highcharts_series_data_labels_filter_options.dart';
 import 'highcharts_series_data_labels_text_path_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_series_data_labels_animation_options.dart';
 export 'highcharts_series_data_labels_filter_options.dart';
 export 'highcharts_series_data_labels_text_path_options.dart';
-
 
 /* *
  *
@@ -41,13 +36,11 @@ export 'highcharts_series_data_labels_text_path_options.dart';
  *
  * */
 
-
 /**
  * Data label options for the navigator series. Data labels are
  * disabled by default on the navigator series.
  */
 class HighchartsNavigatorSeriesDataLabelsOptions extends HighchartsOptionsBase {
-
   bool? enabled;
   double? zIndex;
   String? align;
@@ -81,46 +74,43 @@ class HighchartsNavigatorSeriesDataLabelsOptions extends HighchartsOptionsBase {
   double? x;
   double? y;
 
-
-  HighchartsNavigatorSeriesDataLabelsOptions({
-    this.enabled,
-    this.zIndex,
-    this.align,
-    this.alignTo,
-    this.allowOverlap,
-    this.animation,
-    this.backgroundColor,
-    this.borderColor,
-    this.borderRadius,
-    this.borderWidth,
-    this.className,
-    this.color,
-    this.crop,
-    this.defer,
-    this.filter,
-    this.format,
-    this.formatter,
-    this.inside,
-    this.nullFormat,
-    this.nullFormatter,
-    this.overflow,
-    this.padding,
-    this.position,
-    this.rotation,
-    this.shadow,
-    this.shape,
-    this.style,
-    this.textPath,
-    this.useHTML,
-    this.verticalAlign,
-    this.x,
-    this.y
-  });
+  HighchartsNavigatorSeriesDataLabelsOptions(
+      {this.enabled,
+      this.zIndex,
+      this.align,
+      this.alignTo,
+      this.allowOverlap,
+      this.animation,
+      this.backgroundColor,
+      this.borderColor,
+      this.borderRadius,
+      this.borderWidth,
+      this.className,
+      this.color,
+      this.crop,
+      this.defer,
+      this.filter,
+      this.format,
+      this.formatter,
+      this.inside,
+      this.nullFormat,
+      this.nullFormatter,
+      this.overflow,
+      this.padding,
+      this.position,
+      this.rotation,
+      this.shadow,
+      this.shape,
+      this.style,
+      this.textPath,
+      this.useHTML,
+      this.verticalAlign,
+      this.x,
+      this.y});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (enabled != null) {
       buffer.writeAll(['"enabled":', enabled, ','], '');
@@ -141,7 +131,8 @@ class HighchartsNavigatorSeriesDataLabelsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"animation":', animation?.toJSON(), ','], '');
     }
     if (backgroundColor != null) {
-      buffer.writeAll(['"backgroundColor":', jsonEncode(backgroundColor), ','], '');
+      buffer.writeAll(
+          ['"backgroundColor":', jsonEncode(backgroundColor), ','], '');
     }
     if (borderColor != null) {
       buffer.writeAll(['"borderColor":', jsonEncode(borderColor), ','], '');
@@ -227,5 +218,4 @@ class HighchartsNavigatorSeriesDataLabelsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"y":', y, ','], '');
     }
   }
-
 }

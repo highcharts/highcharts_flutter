@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,21 +23,17 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Frequency in Hertz of notes. Overrides pitch mapping if set.
  */
-class HighchartsSonificationDefaultInstrumentMappingFrequencyOptions extends HighchartsOptionsBase {
-
+class HighchartsSonificationDefaultInstrumentMappingFrequencyOptions
+    extends HighchartsOptionsBase {
   String? mapFunction;
   String? mapTo;
   double? max;
@@ -48,20 +41,17 @@ class HighchartsSonificationDefaultInstrumentMappingFrequencyOptions extends Hig
   double? value;
   String? within;
 
-
-  HighchartsSonificationDefaultInstrumentMappingFrequencyOptions({
-    this.mapFunction,
-    this.mapTo,
-    this.max,
-    this.min,
-    this.value,
-    this.within
-  });
+  HighchartsSonificationDefaultInstrumentMappingFrequencyOptions(
+      {this.mapFunction,
+      this.mapTo,
+      this.max,
+      this.min,
+      this.value,
+      this.within});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (mapFunction != null) {
       buffer.writeAll(['"mapFunction":', jsonEncode(mapFunction), ','], '');
@@ -82,5 +72,4 @@ class HighchartsSonificationDefaultInstrumentMappingFrequencyOptions extends Hig
       buffer.writeAll(['"within":', jsonEncode(within), ','], '');
     }
   }
-
 }

@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -24,13 +22,11 @@ import 'highcharts_gantt_series_drag_drop_options.dart';
 import 'highcharts_gantt_series_partial_fill_options.dart';
 import 'highcharts_gantt_series_tooltip_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
-
 
 export 'highcharts_gantt_series_connectors_options.dart';
 export 'highcharts_gantt_series_data_labels_options.dart';
@@ -38,13 +34,11 @@ export 'highcharts_gantt_series_drag_drop_options.dart';
 export 'highcharts_gantt_series_partial_fill_options.dart';
 export 'highcharts_gantt_series_tooltip_options.dart';
 
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * A `gantt` series.
@@ -89,7 +83,6 @@ export 'highcharts_gantt_series_tooltip_options.dart';
  *             
  */
 class HighchartsGanttSeriesOptions extends HighchartsOptionsBase {
-
   double? borderRadius;
   bool? colorByPoint;
   HighchartsGanttSeriesConnectorsOptions? connectors;
@@ -104,27 +97,24 @@ class HighchartsGanttSeriesOptions extends HighchartsOptionsBase {
   double? pointRange;
   HighchartsGanttSeriesTooltipOptions? tooltip;
 
-
-  HighchartsGanttSeriesOptions({
-    this.borderRadius,
-    this.colorByPoint,
-    this.connectors,
-    this.dataLabels,
-    this.dragDrop,
-    this.events,
-    this.grouping,
-    this.id,
-    this.index,
-    this.legendIndex,
-    this.partialFill,
-    this.pointRange,
-    this.tooltip
-  });
+  HighchartsGanttSeriesOptions(
+      {this.borderRadius,
+      this.colorByPoint,
+      this.connectors,
+      this.dataLabels,
+      this.dragDrop,
+      this.events,
+      this.grouping,
+      this.id,
+      this.index,
+      this.legendIndex,
+      this.partialFill,
+      this.pointRange,
+      this.tooltip});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (borderRadius != null) {
       buffer.writeAll(['"borderRadius":', borderRadius, ','], '');
@@ -166,5 +156,4 @@ class HighchartsGanttSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"tooltip":', tooltip?.toJSON(), ','], '');
     }
   }
-
 }

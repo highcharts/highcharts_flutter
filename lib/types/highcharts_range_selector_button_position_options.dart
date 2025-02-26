@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,36 +23,26 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Positioning for the button row.
  */
-class HighchartsRangeSelectorButtonPositionOptions extends HighchartsOptionsBase {
-
+class HighchartsRangeSelectorButtonPositionOptions
+    extends HighchartsOptionsBase {
   String? align;
   double? x;
   double? y;
 
-
-  HighchartsRangeSelectorButtonPositionOptions({
-    this.align,
-    this.x,
-    this.y
-  });
+  HighchartsRangeSelectorButtonPositionOptions({this.align, this.x, this.y});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (align != null) {
       buffer.writeAll(['"align":', jsonEncode(align), ','], '');
@@ -67,5 +54,4 @@ class HighchartsRangeSelectorButtonPositionOptions extends HighchartsOptionsBase
       buffer.writeAll(['"y":', y, ','], '');
     }
   }
-
 }

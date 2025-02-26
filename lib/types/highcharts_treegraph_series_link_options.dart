@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,18 +23,13 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 class HighchartsTreegraphSeriesLinkOptions extends HighchartsOptionsBase {
-
   String? color;
   String? cursor;
   double? curveFactor;
@@ -45,20 +37,17 @@ class HighchartsTreegraphSeriesLinkOptions extends HighchartsOptionsBase {
   double? radius;
   String? type;
 
-
-  HighchartsTreegraphSeriesLinkOptions({
-    this.color,
-    this.cursor,
-    this.curveFactor,
-    this.lineWidth,
-    this.radius,
-    this.type
-  });
+  HighchartsTreegraphSeriesLinkOptions(
+      {this.color,
+      this.cursor,
+      this.curveFactor,
+      this.lineWidth,
+      this.radius,
+      this.type});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (color != null) {
       buffer.writeAll(['"color":', jsonEncode(color), ','], '');
@@ -79,5 +68,4 @@ class HighchartsTreegraphSeriesLinkOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"type":', jsonEncode(type), ','], '');
     }
   }
-
 }

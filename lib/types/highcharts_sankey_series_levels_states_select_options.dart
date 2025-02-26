@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_series_states_select_animation_options.dart';
-
 
 /* *
  *
@@ -27,9 +24,7 @@ import 'highcharts_series_states_select_animation_options.dart';
  *
  * */
 
-
 export 'highcharts_series_states_select_animation_options.dart';
-
 
 /* *
  *
@@ -37,30 +32,23 @@ export 'highcharts_series_states_select_animation_options.dart';
  *
  * */
 
-
 /**
  * Options for the selected point. These settings override the
  * normal state options when a point is selected.
  */
-class HighchartsSankeySeriesLevelsStatesSelectOptions extends HighchartsOptionsBase {
-
+class HighchartsSankeySeriesLevelsStatesSelectOptions
+    extends HighchartsOptionsBase {
   String? borderColor;
   String? color;
   HighchartsSeriesStatesSelectAnimationOptions? animation;
   bool? enabled;
 
-
-  HighchartsSankeySeriesLevelsStatesSelectOptions({
-    this.borderColor,
-    this.color,
-    this.animation,
-    this.enabled
-  });
+  HighchartsSankeySeriesLevelsStatesSelectOptions(
+      {this.borderColor, this.color, this.animation, this.enabled});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (borderColor != null) {
       buffer.writeAll(['"borderColor":', jsonEncode(borderColor), ','], '');
@@ -75,5 +63,4 @@ class HighchartsSankeySeriesLevelsStatesSelectOptions extends HighchartsOptionsB
       buffer.writeAll(['"enabled":', enabled, ','], '');
     }
   }
-
 }

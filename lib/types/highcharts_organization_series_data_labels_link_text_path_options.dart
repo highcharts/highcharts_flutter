@@ -8,18 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
 import 'highcharts_organization_series_data_labels_link_text_path_attributes_options.dart';
-
 
 /* *
  *
@@ -27,9 +23,7 @@ import 'highcharts_organization_series_data_labels_link_text_path_attributes_opt
  *
  * */
 
-
 export 'highcharts_organization_series_data_labels_link_text_path_attributes_options.dart';
-
 
 /* *
  *
@@ -37,28 +31,23 @@ export 'highcharts_organization_series_data_labels_link_text_path_attributes_opt
  *
  * */
 
-
 /**
  * Options for a _link_ label text which should follow link
  * connection.
  */
-class HighchartsOrganizationSeriesDataLabelsLinkTextPathOptions extends HighchartsOptionsBase {
+class HighchartsOrganizationSeriesDataLabelsLinkTextPathOptions
+    extends HighchartsOptionsBase {
+  HighchartsOrganizationSeriesDataLabelsLinkTextPathAttributesOptions?
+      attributes;
 
-  HighchartsOrganizationSeriesDataLabelsLinkTextPathAttributesOptions? attributes;
-
-
-  HighchartsOrganizationSeriesDataLabelsLinkTextPathOptions({
-    this.attributes
-  });
+  HighchartsOrganizationSeriesDataLabelsLinkTextPathOptions({this.attributes});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (attributes != null) {
       buffer.writeAll(['"attributes":', attributes?.toJSON(), ','], '');
     }
   }
-
 }

@@ -49,7 +49,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 text: 'Egg Yolk Composition',
               ),
               subtitle: HighchartsSubtitleOptions(
-                text: 'Source:<a href="https://www.mdpi.com/2072-6643/11/3/684/htm" target="_default">MDPI</a>',
+                text:
+                    'Source:<a href="https://www.mdpi.com/2072-6643/11/3/684/htm" target="_default">MDPI</a>',
               ),
               accessibility: HighchartsAccessibilityOptions(
                 point: HighchartsAccessibilityPointOptions(

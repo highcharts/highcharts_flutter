@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,34 +23,24 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * The styles for area between Senkou Span A and B.
  */
 class HighchartsIKHSeriesSenkouSpanOptions extends HighchartsOptionsBase {
-
   String? color;
   String? negativeColor;
 
-
-  HighchartsIKHSeriesSenkouSpanOptions({
-    this.color,
-    this.negativeColor
-  });
+  HighchartsIKHSeriesSenkouSpanOptions({this.color, this.negativeColor});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (color != null) {
       buffer.writeAll(['"color":', jsonEncode(color), ','], '');
@@ -62,5 +49,4 @@ class HighchartsIKHSeriesSenkouSpanOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"negativeColor":', jsonEncode(negativeColor), ','], '');
     }
   }
-
 }

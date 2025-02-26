@@ -8,19 +8,16 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_global_button_theme_states_options.dart';
 import 'highcharts_global_button_theme_style_options.dart';
-
 
 /* *
  *
@@ -28,17 +25,14 @@ import 'highcharts_global_button_theme_style_options.dart';
  *
  * */
 
-
 export 'highcharts_global_button_theme_states_options.dart';
 export 'highcharts_global_button_theme_style_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * General theme for buttons. This applies to the zoom button, exporting
@@ -47,7 +41,6 @@ export 'highcharts_global_button_theme_style_options.dart';
  * each of these may be overridden with more specific options.
  */
 class HighchartsGlobalButtonThemeOptions extends HighchartsOptionsBase {
-
   String? fill;
   double? padding;
   double? r;
@@ -56,21 +49,18 @@ class HighchartsGlobalButtonThemeOptions extends HighchartsOptionsBase {
   double? strokeWidth;
   HighchartsGlobalButtonThemeStyleOptions? style;
 
-
-  HighchartsGlobalButtonThemeOptions({
-    this.fill,
-    this.padding,
-    this.r,
-    this.states,
-    this.stroke,
-    this.strokeWidth,
-    this.style
-  });
+  HighchartsGlobalButtonThemeOptions(
+      {this.fill,
+      this.padding,
+      this.r,
+      this.states,
+      this.stroke,
+      this.strokeWidth,
+      this.style});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (fill != null) {
       buffer.writeAll(['"fill":', jsonEncode(fill), ','], '');
@@ -94,5 +84,4 @@ class HighchartsGlobalButtonThemeOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"style":', style?.toJSON(), ','], '');
     }
   }
-
 }

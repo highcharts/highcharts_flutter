@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,33 +23,24 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
-class HighchartsVennSeriesClusterStatesHoverOptions extends HighchartsOptionsBase {
-
+class HighchartsVennSeriesClusterStatesHoverOptions
+    extends HighchartsOptionsBase {
   String? fillColor;
 
-
-  HighchartsVennSeriesClusterStatesHoverOptions({
-    this.fillColor
-  });
+  HighchartsVennSeriesClusterStatesHoverOptions({this.fillColor});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (fillColor != null) {
       buffer.writeAll(['"fillColor":', jsonEncode(fillColor), ','], '');
     }
   }
-
 }

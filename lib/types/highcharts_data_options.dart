@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +23,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * The Data module provides a simplified interface for adding data to
@@ -48,7 +41,6 @@ import 'highcharts_options_base.dart';
  * option.
  */
 class HighchartsDataOptions extends HighchartsOptionsBase {
-
   dynamic beforeParse;
   List<dynamic>? columnTypes;
   List<List<dynamic>>? columns;
@@ -79,43 +71,40 @@ class HighchartsDataOptions extends HighchartsOptionsBase {
   bool? switchRowsAndColumns;
   String? table;
 
-
-  HighchartsDataOptions({
-    this.beforeParse,
-    this.columnTypes,
-    this.columns,
-    this.columnsURL,
-    this.complete,
-    this.csv,
-    this.csvURL,
-    this.dataRefreshRate,
-    this.dateFormat,
-    this.decimalPoint,
-    this.enablePolling,
-    this.endColumn,
-    this.endRow,
-    this.firstRowAsNames,
-    this.googleAPIKey,
-    this.googleSpreadsheetKey,
-    this.googleSpreadsheetRange,
-    this.googleSpreadsheetWorksheet,
-    this.itemDelimiter,
-    this.lineDelimiter,
-    this.parseDate,
-    this.parsed,
-    this.rows,
-    this.rowsURL,
-    this.seriesMapping,
-    this.startColumn,
-    this.startRow,
-    this.switchRowsAndColumns,
-    this.table
-  });
+  HighchartsDataOptions(
+      {this.beforeParse,
+      this.columnTypes,
+      this.columns,
+      this.columnsURL,
+      this.complete,
+      this.csv,
+      this.csvURL,
+      this.dataRefreshRate,
+      this.dateFormat,
+      this.decimalPoint,
+      this.enablePolling,
+      this.endColumn,
+      this.endRow,
+      this.firstRowAsNames,
+      this.googleAPIKey,
+      this.googleSpreadsheetKey,
+      this.googleSpreadsheetRange,
+      this.googleSpreadsheetWorksheet,
+      this.itemDelimiter,
+      this.lineDelimiter,
+      this.parseDate,
+      this.parsed,
+      this.rows,
+      this.rowsURL,
+      this.seriesMapping,
+      this.startColumn,
+      this.startRow,
+      this.switchRowsAndColumns,
+      this.table});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (beforeParse != null) {
       buffer.writeAll(['"beforeParse":', jsonEncode(beforeParse), ','], '');
@@ -171,13 +160,23 @@ class HighchartsDataOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"googleAPIKey":', jsonEncode(googleAPIKey), ','], '');
     }
     if (googleSpreadsheetKey != null) {
-      buffer.writeAll(['"googleSpreadsheetKey":', jsonEncode(googleSpreadsheetKey), ','], '');
+      buffer.writeAll(
+          ['"googleSpreadsheetKey":', jsonEncode(googleSpreadsheetKey), ','],
+          '');
     }
     if (googleSpreadsheetRange != null) {
-      buffer.writeAll(['"googleSpreadsheetRange":', jsonEncode(googleSpreadsheetRange), ','], '');
+      buffer.writeAll([
+        '"googleSpreadsheetRange":',
+        jsonEncode(googleSpreadsheetRange),
+        ','
+      ], '');
     }
     if (googleSpreadsheetWorksheet != null) {
-      buffer.writeAll(['"googleSpreadsheetWorksheet":', jsonEncode(googleSpreadsheetWorksheet), ','], '');
+      buffer.writeAll([
+        '"googleSpreadsheetWorksheet":',
+        jsonEncode(googleSpreadsheetWorksheet),
+        ','
+      ], '');
     }
     if (itemDelimiter != null) {
       buffer.writeAll(['"itemDelimiter":', jsonEncode(itemDelimiter), ','], '');
@@ -215,11 +214,11 @@ class HighchartsDataOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"startRow":', startRow, ','], '');
     }
     if (switchRowsAndColumns != null) {
-      buffer.writeAll(['"switchRowsAndColumns":', switchRowsAndColumns, ','], '');
+      buffer
+          .writeAll(['"switchRowsAndColumns":', switchRowsAndColumns, ','], '');
     }
     if (table != null) {
       buffer.writeAll(['"table":', jsonEncode(table), ','], '');
     }
   }
-
 }

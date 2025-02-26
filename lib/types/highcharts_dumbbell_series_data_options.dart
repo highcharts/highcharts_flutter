@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -23,26 +21,22 @@ import 'highcharts_dumbbell_series_data_data_labels_options.dart';
 import 'highcharts_dumbbell_series_data_drag_drop_options.dart';
 import 'highcharts_dumbbell_series_data_events_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_dumbbell_series_data_accessibility_options.dart';
 export 'highcharts_dumbbell_series_data_data_labels_options.dart';
 export 'highcharts_dumbbell_series_data_drag_drop_options.dart';
 export 'highcharts_dumbbell_series_data_events_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * An array of data points for the series. For the `dumbbell` series
@@ -88,7 +82,6 @@ export 'highcharts_dumbbell_series_data_events_options.dart';
  *    ```
  */
 class HighchartsDumbbellSeriesDataOptions extends HighchartsOptionsBase {
-
   HighchartsDumbbellSeriesDataAccessibilityOptions? accessibility;
   String? className;
   String? color;
@@ -109,33 +102,30 @@ class HighchartsDumbbellSeriesDataOptions extends HighchartsOptionsBase {
   bool? selected;
   dynamic x;
 
-
-  HighchartsDumbbellSeriesDataOptions({
-    this.accessibility,
-    this.className,
-    this.color,
-    this.colorIndex,
-    this.connectorColor,
-    this.connectorWidth,
-    this.custom,
-    this.dataLabels,
-    this.description,
-    this.dragDrop,
-    this.drilldown,
-    this.events,
-    this.high,
-    this.id,
-    this.labelrank,
-    this.low,
-    this.lowColor,
-    this.selected,
-    this.x
-  });
+  HighchartsDumbbellSeriesDataOptions(
+      {this.accessibility,
+      this.className,
+      this.color,
+      this.colorIndex,
+      this.connectorColor,
+      this.connectorWidth,
+      this.custom,
+      this.dataLabels,
+      this.description,
+      this.dragDrop,
+      this.drilldown,
+      this.events,
+      this.high,
+      this.id,
+      this.labelrank,
+      this.low,
+      this.lowColor,
+      this.selected,
+      this.x});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (accessibility != null) {
       buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ','], '');
@@ -150,7 +140,8 @@ class HighchartsDumbbellSeriesDataOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"colorIndex":', colorIndex, ','], '');
     }
     if (connectorColor != null) {
-      buffer.writeAll(['"connectorColor":', jsonEncode(connectorColor), ','], '');
+      buffer
+          .writeAll(['"connectorColor":', jsonEncode(connectorColor), ','], '');
     }
     if (connectorWidth != null) {
       buffer.writeAll(['"connectorWidth":', connectorWidth, ','], '');
@@ -199,5 +190,4 @@ class HighchartsDumbbellSeriesDataOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"x":', jsonEncode(x), ','], '');
     }
   }
-
 }

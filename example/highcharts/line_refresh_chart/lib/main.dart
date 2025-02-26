@@ -37,7 +37,11 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   HighchartsChart? _chart;
-  final List<List<dynamic>> _data = [[0, 5], [1, 55.5], [2, 10]];
+  final List<List<dynamic>> _data = [
+    [0, 5],
+    [1, 55.5],
+    [2, 10]
+  ];
   Random _random = Random();
   Timer? _timer;
 
@@ -68,47 +72,28 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-
     _chart = HighchartsChart(
-      HighchartsOptions(
-        chart: HighchartsChartOptions(
-          backgroundColor: '#FFF0'
-        ),
-        title: HighchartsTitleOptions(
-          text: 'Hello, World!'
-        ),
-        series: [
-          HighchartsLineSeries(
-            name: 'My First Series',
-            data: _data,
-            options: HighchartsLineSeriesOptions(
-              color: '#C60'
-            )
-          )
-        ],
-        annotations: [
-          HighchartsAnnotationsOptions(
-            draggable: '',
-            labelOptions: HighchartsAnnotationsLabelOptions(
-              align: 'left',
-              x: 16,
-              y: -24
-            ),
-            labels: [
-              HighchartsAnnotationsLabelsOptions(
-                point: {
-                  'xAxis': 0,
-                  'yAxis': 0,
-                  'x': 1,
-                  'y': 55.5
-                },
-                text: 'Hello!'
-              )
-            ]
-          )
-        ]
-      ),
-      javaScript: '''
+        HighchartsOptions(
+            chart: HighchartsChartOptions(backgroundColor: '#FFF0'),
+            title: HighchartsTitleOptions(text: 'Hello, World!'),
+            series: [
+              HighchartsLineSeries(
+                  name: 'My First Series',
+                  data: _data,
+                  options: HighchartsLineSeriesOptions(color: '#C60'))
+            ],
+            annotations: [
+              HighchartsAnnotationsOptions(
+                  draggable: '',
+                  labelOptions: HighchartsAnnotationsLabelOptions(
+                      align: 'left', x: 16, y: -24),
+                  labels: [
+                    HighchartsAnnotationsLabelsOptions(
+                        point: {'xAxis': 0, 'yAxis': 0, 'x': 1, 'y': 55.5},
+                        text: 'Hello!')
+                  ])
+            ]),
+        javaScript: '''
         HighchartsFlutter.update({
           plotOptions: {
             series: {
@@ -121,8 +106,7 @@ class _MyHomePageState extends State<MyHomePage> {
             }
           }
         });
-      '''
-    );
+      ''');
 
     return Scaffold(
       appBar: AppBar(
@@ -132,9 +116,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Container(child: _chart)
-          ],
+          children: [Container(child: _chart)],
         ),
       ),
     );

@@ -8,18 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
 import 'highcharts_annotations_elliott_wave_type_points_label_options.dart';
-
 
 /* *
  *
@@ -27,9 +23,7 @@ import 'highcharts_annotations_elliott_wave_type_points_label_options.dart';
  *
  * */
 
-
 export 'highcharts_annotations_elliott_wave_type_points_label_options.dart';
-
 
 /* *
  *
@@ -37,26 +31,19 @@ export 'highcharts_annotations_elliott_wave_type_points_label_options.dart';
  *
  * */
 
-
-class HighchartsAnnotationsElliottWaveTypePointsOptions extends HighchartsOptionsBase {
-
+class HighchartsAnnotationsElliottWaveTypePointsOptions
+    extends HighchartsOptionsBase {
   HighchartsAnnotationsElliottWaveTypePointsLabelOptions? label;
   double? controlPoint;
   double? x;
   double? y;
 
-
-  HighchartsAnnotationsElliottWaveTypePointsOptions({
-    this.label,
-    this.controlPoint,
-    this.x,
-    this.y
-  });
+  HighchartsAnnotationsElliottWaveTypePointsOptions(
+      {this.label, this.controlPoint, this.x, this.y});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (label != null) {
       buffer.writeAll(['"label":', label?.toJSON(), ','], '');
@@ -71,5 +58,4 @@ class HighchartsAnnotationsElliottWaveTypePointsOptions extends HighchartsOption
       buffer.writeAll(['"y":', y, ','], '');
     }
   }
-
 }

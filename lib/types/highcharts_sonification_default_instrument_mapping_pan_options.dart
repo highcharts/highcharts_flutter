@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +23,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * Pan refers to the stereo panning position of the sound.
@@ -46,8 +39,8 @@ import 'highcharts_options_base.dart';
  * Can be set to a fixed value, a prop to map to, a function,
  * or a mapping object.
  */
-class HighchartsSonificationDefaultInstrumentMappingPanOptions extends HighchartsOptionsBase {
-
+class HighchartsSonificationDefaultInstrumentMappingPanOptions
+    extends HighchartsOptionsBase {
   String? mapFunction;
   String? mapTo;
   double? max;
@@ -55,20 +48,17 @@ class HighchartsSonificationDefaultInstrumentMappingPanOptions extends Highchart
   double? value;
   String? within;
 
-
-  HighchartsSonificationDefaultInstrumentMappingPanOptions({
-    this.mapFunction,
-    this.mapTo,
-    this.max,
-    this.min,
-    this.value,
-    this.within
-  });
+  HighchartsSonificationDefaultInstrumentMappingPanOptions(
+      {this.mapFunction,
+      this.mapTo,
+      this.max,
+      this.min,
+      this.value,
+      this.within});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (mapFunction != null) {
       buffer.writeAll(['"mapFunction":', jsonEncode(mapFunction), ','], '');
@@ -89,5 +79,4 @@ class HighchartsSonificationDefaultInstrumentMappingPanOptions extends Highchart
       buffer.writeAll(['"within":', jsonEncode(within), ','], '');
     }
   }
-
 }

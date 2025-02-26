@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,22 +23,18 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Styling options for parentNodes markers. Similar to
  * line.marker options.
  */
-class HighchartsPackedBubbleSeriesLayoutAlgorithmParentNodeMarkerOptions extends HighchartsOptionsBase {
-
+class HighchartsPackedBubbleSeriesLayoutAlgorithmParentNodeMarkerOptions
+    extends HighchartsOptionsBase {
   bool? enabled;
   double? enabledThreshold;
   String? fillColor;
@@ -53,24 +46,21 @@ class HighchartsPackedBubbleSeriesLayoutAlgorithmParentNodeMarkerOptions extends
   String? symbol;
   double? width;
 
-
-  HighchartsPackedBubbleSeriesLayoutAlgorithmParentNodeMarkerOptions({
-    this.enabled,
-    this.enabledThreshold,
-    this.fillColor,
-    this.fillOpacity,
-    this.height,
-    this.lineColor,
-    this.lineWidth,
-    this.radius,
-    this.symbol,
-    this.width
-  });
+  HighchartsPackedBubbleSeriesLayoutAlgorithmParentNodeMarkerOptions(
+      {this.enabled,
+      this.enabledThreshold,
+      this.fillColor,
+      this.fillOpacity,
+      this.height,
+      this.lineColor,
+      this.lineWidth,
+      this.radius,
+      this.symbol,
+      this.width});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (enabled != null) {
       buffer.writeAll(['"enabled":', enabled, ','], '');
@@ -103,5 +93,4 @@ class HighchartsPackedBubbleSeriesLayoutAlgorithmParentNodeMarkerOptions extends
       buffer.writeAll(['"width":', width, ','], '');
     }
   }
-
 }

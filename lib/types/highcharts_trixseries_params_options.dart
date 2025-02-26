@@ -8,17 +8,13 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,31 +22,21 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 class HighchartsTRIXSeriesParamsOptions extends HighchartsOptionsBase {
-
   double? index;
   double? period;
 
-
-  HighchartsTRIXSeriesParamsOptions({
-    this.index,
-    this.period
-  });
+  HighchartsTRIXSeriesParamsOptions({this.index, this.period});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (index != null) {
       buffer.writeAll(['"index":', index, ','], '');
@@ -59,5 +45,4 @@ class HighchartsTRIXSeriesParamsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"period":', period, ','], '');
     }
   }
-
 }

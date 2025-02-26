@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +23,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * CSS styles for the breadcrumbs separator.
@@ -42,21 +35,17 @@ import 'highcharts_options_base.dart';
  * In styled mode, the breadcrumbs separators are styled by the
  * `.highcharts-separator` rule with its different states.
  */
-class HighchartsNavigationBreadcrumbsSeparatorStyleOptions extends HighchartsOptionsBase {
-
+class HighchartsNavigationBreadcrumbsSeparatorStyleOptions
+    extends HighchartsOptionsBase {
   String? color;
   dynamic fontSize;
 
-
-  HighchartsNavigationBreadcrumbsSeparatorStyleOptions({
-    this.color,
-    this.fontSize
-  });
+  HighchartsNavigationBreadcrumbsSeparatorStyleOptions(
+      {this.color, this.fontSize});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (color != null) {
       buffer.writeAll(['"color":', jsonEncode(color), ','], '');
@@ -65,5 +54,4 @@ class HighchartsNavigationBreadcrumbsSeparatorStyleOptions extends HighchartsOpt
       buffer.writeAll(['"fontSize":', jsonEncode(fontSize), ','], '');
     }
   }
-
 }

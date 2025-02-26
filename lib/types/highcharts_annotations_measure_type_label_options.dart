@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_annotations_measure_type_label_style_options.dart';
-
 
 /* *
  *
@@ -27,9 +24,7 @@ import 'highcharts_annotations_measure_type_label_style_options.dart';
  *
  * */
 
-
 export 'highcharts_annotations_measure_type_label_style_options.dart';
-
 
 /* *
  *
@@ -37,24 +32,18 @@ export 'highcharts_annotations_measure_type_label_style_options.dart';
  *
  * */
 
-
-class HighchartsAnnotationsMeasureTypeLabelOptions extends HighchartsOptionsBase {
-
+class HighchartsAnnotationsMeasureTypeLabelOptions
+    extends HighchartsOptionsBase {
   bool? enabled;
   dynamic formatter;
   HighchartsAnnotationsMeasureTypeLabelStyleOptions? style;
 
-
-  HighchartsAnnotationsMeasureTypeLabelOptions({
-    this.enabled,
-    this.formatter,
-    this.style
-  });
+  HighchartsAnnotationsMeasureTypeLabelOptions(
+      {this.enabled, this.formatter, this.style});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (enabled != null) {
       buffer.writeAll(['"enabled":', enabled, ','], '');
@@ -66,5 +55,4 @@ class HighchartsAnnotationsMeasureTypeLabelOptions extends HighchartsOptionsBase
       buffer.writeAll(['"style":', style?.toJSON(), ','], '');
     }
   }
-
 }

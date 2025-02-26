@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,18 +23,14 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
-class HighchartsNetworkgraphSeriesLayoutAlgorithmOptions extends HighchartsOptionsBase {
-
+class HighchartsNetworkgraphSeriesLayoutAlgorithmOptions
+    extends HighchartsOptionsBase {
   String? approximation;
   String? attractiveForce;
   bool? enableSimulation;
@@ -53,34 +46,32 @@ class HighchartsNetworkgraphSeriesLayoutAlgorithmOptions extends HighchartsOptio
   double? theta;
   String? type;
 
-
-  HighchartsNetworkgraphSeriesLayoutAlgorithmOptions({
-    this.approximation,
-    this.attractiveForce,
-    this.enableSimulation,
-    this.friction,
-    this.gravitationalConstant,
-    this.initialPositionRadius,
-    this.initialPositions,
-    this.integration,
-    this.linkLength,
-    this.maxIterations,
-    this.maxSpeed,
-    this.repulsiveForce,
-    this.theta,
-    this.type
-  });
+  HighchartsNetworkgraphSeriesLayoutAlgorithmOptions(
+      {this.approximation,
+      this.attractiveForce,
+      this.enableSimulation,
+      this.friction,
+      this.gravitationalConstant,
+      this.initialPositionRadius,
+      this.initialPositions,
+      this.integration,
+      this.linkLength,
+      this.maxIterations,
+      this.maxSpeed,
+      this.repulsiveForce,
+      this.theta,
+      this.type});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (approximation != null) {
       buffer.writeAll(['"approximation":', jsonEncode(approximation), ','], '');
     }
     if (attractiveForce != null) {
-      buffer.writeAll(['"attractiveForce":', jsonEncode(attractiveForce), ','], '');
+      buffer.writeAll(
+          ['"attractiveForce":', jsonEncode(attractiveForce), ','], '');
     }
     if (enableSimulation != null) {
       buffer.writeAll(['"enableSimulation":', enableSimulation, ','], '');
@@ -89,13 +80,16 @@ class HighchartsNetworkgraphSeriesLayoutAlgorithmOptions extends HighchartsOptio
       buffer.writeAll(['"friction":', friction, ','], '');
     }
     if (gravitationalConstant != null) {
-      buffer.writeAll(['"gravitationalConstant":', gravitationalConstant, ','], '');
+      buffer.writeAll(
+          ['"gravitationalConstant":', gravitationalConstant, ','], '');
     }
     if (initialPositionRadius != null) {
-      buffer.writeAll(['"initialPositionRadius":', initialPositionRadius, ','], '');
+      buffer.writeAll(
+          ['"initialPositionRadius":', initialPositionRadius, ','], '');
     }
     if (initialPositions != null) {
-      buffer.writeAll(['"initialPositions":', jsonEncode(initialPositions), ','], '');
+      buffer.writeAll(
+          ['"initialPositions":', jsonEncode(initialPositions), ','], '');
     }
     if (integration != null) {
       buffer.writeAll(['"integration":', jsonEncode(integration), ','], '');
@@ -110,7 +104,8 @@ class HighchartsNetworkgraphSeriesLayoutAlgorithmOptions extends HighchartsOptio
       buffer.writeAll(['"maxSpeed":', maxSpeed, ','], '');
     }
     if (repulsiveForce != null) {
-      buffer.writeAll(['"repulsiveForce":', jsonEncode(repulsiveForce), ','], '');
+      buffer
+          .writeAll(['"repulsiveForce":', jsonEncode(repulsiveForce), ','], '');
     }
     if (theta != null) {
       buffer.writeAll(['"theta":', theta, ','], '');
@@ -119,5 +114,4 @@ class HighchartsNetworkgraphSeriesLayoutAlgorithmOptions extends HighchartsOptio
       buffer.writeAll(['"type":', jsonEncode(type), ','], '');
     }
   }
-
 }

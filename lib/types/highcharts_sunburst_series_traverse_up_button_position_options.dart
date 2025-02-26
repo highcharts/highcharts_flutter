@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,38 +23,28 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * The position of the button.
  */
-class HighchartsSunburstSeriesTraverseUpButtonPositionOptions extends HighchartsOptionsBase {
-
+class HighchartsSunburstSeriesTraverseUpButtonPositionOptions
+    extends HighchartsOptionsBase {
   String? align;
   String? verticalAlign;
   double? x;
   double? y;
 
-
-  HighchartsSunburstSeriesTraverseUpButtonPositionOptions({
-    this.align,
-    this.verticalAlign,
-    this.x,
-    this.y
-  });
+  HighchartsSunburstSeriesTraverseUpButtonPositionOptions(
+      {this.align, this.verticalAlign, this.x, this.y});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (align != null) {
       buffer.writeAll(['"align":', jsonEncode(align), ','], '');
@@ -72,5 +59,4 @@ class HighchartsSunburstSeriesTraverseUpButtonPositionOptions extends Highcharts
       buffer.writeAll(['"y":', y, ','], '');
     }
   }
-
 }

@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +23,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * Define a condition for when a track should be active and not.
@@ -49,27 +42,20 @@ import 'highcharts_options_base.dart';
  * data point. `value` is available if the track is used as a
  * context track, and `valueInterval` is used.
  */
-class HighchartsSonificationDefaultInstrumentActiveWhenOptions extends HighchartsOptionsBase {
-
+class HighchartsSonificationDefaultInstrumentActiveWhenOptions
+    extends HighchartsOptionsBase {
   double? crossingDown;
   double? crossingUp;
   double? max;
   double? min;
   String? prop;
 
-
-  HighchartsSonificationDefaultInstrumentActiveWhenOptions({
-    this.crossingDown,
-    this.crossingUp,
-    this.max,
-    this.min,
-    this.prop
-  });
+  HighchartsSonificationDefaultInstrumentActiveWhenOptions(
+      {this.crossingDown, this.crossingUp, this.max, this.min, this.prop});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (crossingDown != null) {
       buffer.writeAll(['"crossingDown":', crossingDown, ','], '');
@@ -87,5 +73,4 @@ class HighchartsSonificationDefaultInstrumentActiveWhenOptions extends Highchart
       buffer.writeAll(['"prop":', jsonEncode(prop), ','], '');
     }
   }
-
 }

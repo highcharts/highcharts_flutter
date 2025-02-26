@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,34 +23,24 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Determines the width of the ring per level.
  */
 class HighchartsSunburstSeriesLevelSizeOptions extends HighchartsOptionsBase {
-
   String? unit;
   double? value;
 
-
-  HighchartsSunburstSeriesLevelSizeOptions({
-    this.unit,
-    this.value
-  });
+  HighchartsSunburstSeriesLevelSizeOptions({this.unit, this.value});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (unit != null) {
       buffer.writeAll(['"unit":', jsonEncode(unit), ','], '');
@@ -62,5 +49,4 @@ class HighchartsSunburstSeriesLevelSizeOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"value":', value, ','], '');
     }
   }
-
 }

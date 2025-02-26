@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -32,13 +30,11 @@ import 'highcharts_sunburst_series_states_options.dart';
 import 'highcharts_sunburst_series_tooltip_options.dart';
 import 'highcharts_sunburst_series_traverse_up_button_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
-
 
 export 'highcharts_series_accessibility_options.dart';
 export 'highcharts_sunburst_series_breadcrumbs_options.dart';
@@ -54,13 +50,11 @@ export 'highcharts_sunburst_series_states_options.dart';
 export 'highcharts_sunburst_series_tooltip_options.dart';
 export 'highcharts_sunburst_series_traverse_up_button_options.dart';
 
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * A `sunburst` series. If the [type](#series.sunburst.type) option is
@@ -106,7 +100,6 @@ export 'highcharts_sunburst_series_traverse_up_button_options.dart';
  *             
  */
 class HighchartsSunburstSeriesOptions extends HighchartsOptionsBase {
-
   HighchartsSeriesAccessibilityOptions? accessibility;
   bool? allowDrillToNode;
   bool? allowPointSelect;
@@ -168,74 +161,71 @@ class HighchartsSunburstSeriesOptions extends HighchartsOptionsBase {
   dynamic yAxis;
   double? zIndex;
 
-
-  HighchartsSunburstSeriesOptions({
-    this.accessibility,
-    this.allowDrillToNode,
-    this.allowPointSelect,
-    this.allowTraversingTree,
-    this.animation,
-    this.borderColor,
-    this.borderRadius,
-    this.borderWidth,
-    this.breadcrumbs,
-    this.center,
-    this.className,
-    this.clip,
-    this.color,
-    this.colorByPoint,
-    this.colorIndex,
-    this.colors,
-    this.crisp,
-    this.cursor,
-    this.custom,
-    this.dataLabels,
-    this.description,
-    this.enableMouseTracking,
-    this.events,
-    this.fillColor,
-    this.id,
-    this.inactiveOtherPoints,
-    this.includeInDataExport,
-    this.index,
-    this.keys,
-    this.legendIndex,
-    this.legendSymbol,
-    this.legendSymbolColor,
-    this.levelIsConstant,
-    this.levelSize,
-    this.levels,
-    this.onPoint,
-    this.opacity,
-    this.point,
-    this.pointDescriptionFormat,
-    this.pointDescriptionFormatter,
-    this.relativeXValue,
-    this.rootId,
-    this.selected,
-    this.shadow,
-    this.showCheckbox,
-    this.showInLegend,
-    this.size,
-    this.skipKeyboardNavigation,
-    this.slicedOffset,
-    this.sonification,
-    this.startAngle,
-    this.states,
-    this.stickyTracking,
-    this.thickness,
-    this.tooltip,
-    this.traverseUpButton,
-    this.visible,
-    this.xAxis,
-    this.yAxis,
-    this.zIndex
-  });
+  HighchartsSunburstSeriesOptions(
+      {this.accessibility,
+      this.allowDrillToNode,
+      this.allowPointSelect,
+      this.allowTraversingTree,
+      this.animation,
+      this.borderColor,
+      this.borderRadius,
+      this.borderWidth,
+      this.breadcrumbs,
+      this.center,
+      this.className,
+      this.clip,
+      this.color,
+      this.colorByPoint,
+      this.colorIndex,
+      this.colors,
+      this.crisp,
+      this.cursor,
+      this.custom,
+      this.dataLabels,
+      this.description,
+      this.enableMouseTracking,
+      this.events,
+      this.fillColor,
+      this.id,
+      this.inactiveOtherPoints,
+      this.includeInDataExport,
+      this.index,
+      this.keys,
+      this.legendIndex,
+      this.legendSymbol,
+      this.legendSymbolColor,
+      this.levelIsConstant,
+      this.levelSize,
+      this.levels,
+      this.onPoint,
+      this.opacity,
+      this.point,
+      this.pointDescriptionFormat,
+      this.pointDescriptionFormatter,
+      this.relativeXValue,
+      this.rootId,
+      this.selected,
+      this.shadow,
+      this.showCheckbox,
+      this.showInLegend,
+      this.size,
+      this.skipKeyboardNavigation,
+      this.slicedOffset,
+      this.sonification,
+      this.startAngle,
+      this.states,
+      this.stickyTracking,
+      this.thickness,
+      this.tooltip,
+      this.traverseUpButton,
+      this.visible,
+      this.xAxis,
+      this.yAxis,
+      this.zIndex});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (accessibility != null) {
       buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ','], '');
@@ -329,7 +319,8 @@ class HighchartsSunburstSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"id":', jsonEncode(id), ','], '');
     }
     if (inactiveOtherPoints != null) {
-      buffer.writeAll(['"inactiveOtherPoints":', inactiveOtherPoints?.toJSON(), ','], '');
+      buffer.writeAll(
+          ['"inactiveOtherPoints":', inactiveOtherPoints?.toJSON(), ','], '');
     }
     if (includeInDataExport != null) {
       buffer.writeAll(['"includeInDataExport":', includeInDataExport, ','], '');
@@ -351,7 +342,8 @@ class HighchartsSunburstSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"legendSymbol":', jsonEncode(legendSymbol), ','], '');
     }
     if (legendSymbolColor != null) {
-      buffer.writeAll(['"legendSymbolColor":', jsonEncode(legendSymbolColor), ','], '');
+      buffer.writeAll(
+          ['"legendSymbolColor":', jsonEncode(legendSymbolColor), ','], '');
     }
     if (levelIsConstant != null) {
       buffer.writeAll(['"levelIsConstant":', levelIsConstant, ','], '');
@@ -376,10 +368,18 @@ class HighchartsSunburstSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"point":', point?.toJSON(), ','], '');
     }
     if (pointDescriptionFormat != null) {
-      buffer.writeAll(['"pointDescriptionFormat":', jsonEncode(pointDescriptionFormat), ','], '');
+      buffer.writeAll([
+        '"pointDescriptionFormat":',
+        jsonEncode(pointDescriptionFormat),
+        ','
+      ], '');
     }
     if (pointDescriptionFormatter != null) {
-      buffer.writeAll(['"pointDescriptionFormatter":', jsonEncode(pointDescriptionFormatter), ','], '');
+      buffer.writeAll([
+        '"pointDescriptionFormatter":',
+        jsonEncode(pointDescriptionFormatter),
+        ','
+      ], '');
     }
     if (relativeXValue != null) {
       buffer.writeAll(['"relativeXValue":', relativeXValue, ','], '');
@@ -407,7 +407,8 @@ class HighchartsSunburstSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"size":', jsonEncode(size), ','], '');
     }
     if (skipKeyboardNavigation != null) {
-      buffer.writeAll(['"skipKeyboardNavigation":', skipKeyboardNavigation, ','], '');
+      buffer.writeAll(
+          ['"skipKeyboardNavigation":', skipKeyboardNavigation, ','], '');
     }
     if (slicedOffset != null) {
       buffer.writeAll(['"slicedOffset":', slicedOffset, ','], '');
@@ -431,7 +432,8 @@ class HighchartsSunburstSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"tooltip":', tooltip?.toJSON(), ','], '');
     }
     if (traverseUpButton != null) {
-      buffer.writeAll(['"traverseUpButton":', traverseUpButton?.toJSON(), ','], '');
+      buffer.writeAll(
+          ['"traverseUpButton":', traverseUpButton?.toJSON(), ','], '');
     }
     if (visible != null) {
       buffer.writeAll(['"visible":', visible, ','], '');
@@ -446,5 +448,4 @@ class HighchartsSunburstSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"zIndex":', zIndex, ','], '');
     }
   }
-
 }

@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_series_states_hover_animation_options.dart';
-
 
 /* *
  *
@@ -27,9 +24,7 @@ import 'highcharts_series_states_hover_animation_options.dart';
  *
  * */
 
-
 export 'highcharts_series_states_hover_animation_options.dart';
-
 
 /* *
  *
@@ -37,9 +32,7 @@ export 'highcharts_series_states_hover_animation_options.dart';
  *
  * */
 
-
 class HighchartsWindbarbSeriesStatesHoverOptions extends HighchartsOptionsBase {
-
   HighchartsSeriesStatesHoverAnimationOptions? animation;
   String? borderColor;
   double? brightness;
@@ -47,20 +40,17 @@ class HighchartsWindbarbSeriesStatesHoverOptions extends HighchartsOptionsBase {
   bool? enabled;
   double? lineWidthPlus;
 
-
-  HighchartsWindbarbSeriesStatesHoverOptions({
-    this.animation,
-    this.borderColor,
-    this.brightness,
-    this.color,
-    this.enabled,
-    this.lineWidthPlus
-  });
+  HighchartsWindbarbSeriesStatesHoverOptions(
+      {this.animation,
+      this.borderColor,
+      this.brightness,
+      this.color,
+      this.enabled,
+      this.lineWidthPlus});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (animation != null) {
       buffer.writeAll(['"animation":', animation?.toJSON(), ','], '');
@@ -81,5 +71,4 @@ class HighchartsWindbarbSeriesStatesHoverOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"lineWidthPlus":', lineWidthPlus, ','], '');
     }
   }
-
 }

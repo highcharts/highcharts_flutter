@@ -8,17 +8,13 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,33 +22,24 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
-class HighchartsPyramid3DSeriesDataGroupingOptions extends HighchartsOptionsBase {
-
+class HighchartsPyramid3DSeriesDataGroupingOptions
+    extends HighchartsOptionsBase {
   double? groupPixelWidth;
 
-
-  HighchartsPyramid3DSeriesDataGroupingOptions({
-    this.groupPixelWidth
-  });
+  HighchartsPyramid3DSeriesDataGroupingOptions({this.groupPixelWidth});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (groupPixelWidth != null) {
       buffer.writeAll(['"groupPixelWidth":', groupPixelWidth, ','], '');
     }
   }
-
 }

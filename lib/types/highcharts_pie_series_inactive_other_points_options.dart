@@ -8,17 +8,13 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,21 +22,13 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
-class HighchartsPieSeriesInactiveOtherPointsOptions extends HighchartsOptionsBase {
-
-
-
+class HighchartsPieSeriesInactiveOtherPointsOptions
+    extends HighchartsOptionsBase {
   HighchartsPieSeriesInactiveOtherPointsOptions();
-
-
 }

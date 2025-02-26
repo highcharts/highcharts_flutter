@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -28,13 +26,11 @@ import 'highcharts_series_sonification_options.dart';
 import 'highcharts_pyramid_series_states_options.dart';
 import 'highcharts_pyramid_series_tooltip_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
-
 
 export 'highcharts_series_accessibility_options.dart';
 export 'highcharts_pyramid_series_data_labels_options.dart';
@@ -46,13 +42,11 @@ export 'highcharts_series_sonification_options.dart';
 export 'highcharts_pyramid_series_states_options.dart';
 export 'highcharts_pyramid_series_tooltip_options.dart';
 
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * A `pyramid` series. If the [type](#series.pyramid.type) option is
@@ -98,7 +92,6 @@ export 'highcharts_pyramid_series_tooltip_options.dart';
  *             
  */
 class HighchartsPyramidSeriesOptions extends HighchartsOptionsBase {
-
   HighchartsSeriesAccessibilityOptions? accessibility;
   bool? allowPointSelect;
   bool? animation;
@@ -160,74 +153,71 @@ class HighchartsPyramidSeriesOptions extends HighchartsOptionsBase {
   dynamic width;
   double? zIndex;
 
-
-  HighchartsPyramidSeriesOptions({
-    this.accessibility,
-    this.allowPointSelect,
-    this.animation,
-    this.borderColor,
-    this.borderRadius,
-    this.borderWidth,
-    this.center,
-    this.className,
-    this.clip,
-    this.color,
-    this.colorAxis,
-    this.colorIndex,
-    this.colorKey,
-    this.colors,
-    this.crisp,
-    this.cursor,
-    this.custom,
-    this.dataLabels,
-    this.depth,
-    this.description,
-    this.enableMouseTracking,
-    this.endAngle,
-    this.events,
-    this.fillColor,
-    this.height,
-    this.id,
-    this.ignoreHiddenPoint,
-    this.inactiveOtherPoints,
-    this.includeInDataExport,
-    this.index,
-    this.keys,
-    this.legendIndex,
-    this.legendSymbol,
-    this.legendSymbolColor,
-    this.linecap,
-    this.minSize,
-    this.neckHeight,
-    this.neckWidth,
-    this.onPoint,
-    this.opacity,
-    this.point,
-    this.pointDescriptionFormat,
-    this.pointDescriptionFormatter,
-    this.relativeXValue,
-    this.reversed,
-    this.selected,
-    this.shadow,
-    this.showCheckbox,
-    this.showInLegend,
-    this.skipKeyboardNavigation,
-    this.slicedOffset,
-    this.sonification,
-    this.startAngle,
-    this.states,
-    this.stickyTracking,
-    this.thickness,
-    this.tooltip,
-    this.visible,
-    this.width,
-    this.zIndex
-  });
+  HighchartsPyramidSeriesOptions(
+      {this.accessibility,
+      this.allowPointSelect,
+      this.animation,
+      this.borderColor,
+      this.borderRadius,
+      this.borderWidth,
+      this.center,
+      this.className,
+      this.clip,
+      this.color,
+      this.colorAxis,
+      this.colorIndex,
+      this.colorKey,
+      this.colors,
+      this.crisp,
+      this.cursor,
+      this.custom,
+      this.dataLabels,
+      this.depth,
+      this.description,
+      this.enableMouseTracking,
+      this.endAngle,
+      this.events,
+      this.fillColor,
+      this.height,
+      this.id,
+      this.ignoreHiddenPoint,
+      this.inactiveOtherPoints,
+      this.includeInDataExport,
+      this.index,
+      this.keys,
+      this.legendIndex,
+      this.legendSymbol,
+      this.legendSymbolColor,
+      this.linecap,
+      this.minSize,
+      this.neckHeight,
+      this.neckWidth,
+      this.onPoint,
+      this.opacity,
+      this.point,
+      this.pointDescriptionFormat,
+      this.pointDescriptionFormatter,
+      this.relativeXValue,
+      this.reversed,
+      this.selected,
+      this.shadow,
+      this.showCheckbox,
+      this.showInLegend,
+      this.skipKeyboardNavigation,
+      this.slicedOffset,
+      this.sonification,
+      this.startAngle,
+      this.states,
+      this.stickyTracking,
+      this.thickness,
+      this.tooltip,
+      this.visible,
+      this.width,
+      this.zIndex});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (accessibility != null) {
       buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ','], '');
@@ -323,7 +313,8 @@ class HighchartsPyramidSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"ignoreHiddenPoint":', ignoreHiddenPoint, ','], '');
     }
     if (inactiveOtherPoints != null) {
-      buffer.writeAll(['"inactiveOtherPoints":', inactiveOtherPoints?.toJSON(), ','], '');
+      buffer.writeAll(
+          ['"inactiveOtherPoints":', inactiveOtherPoints?.toJSON(), ','], '');
     }
     if (includeInDataExport != null) {
       buffer.writeAll(['"includeInDataExport":', includeInDataExport, ','], '');
@@ -345,7 +336,8 @@ class HighchartsPyramidSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"legendSymbol":', jsonEncode(legendSymbol), ','], '');
     }
     if (legendSymbolColor != null) {
-      buffer.writeAll(['"legendSymbolColor":', jsonEncode(legendSymbolColor), ','], '');
+      buffer.writeAll(
+          ['"legendSymbolColor":', jsonEncode(legendSymbolColor), ','], '');
     }
     if (linecap != null) {
       buffer.writeAll(['"linecap":', jsonEncode(linecap), ','], '');
@@ -369,10 +361,18 @@ class HighchartsPyramidSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"point":', point?.toJSON(), ','], '');
     }
     if (pointDescriptionFormat != null) {
-      buffer.writeAll(['"pointDescriptionFormat":', jsonEncode(pointDescriptionFormat), ','], '');
+      buffer.writeAll([
+        '"pointDescriptionFormat":',
+        jsonEncode(pointDescriptionFormat),
+        ','
+      ], '');
     }
     if (pointDescriptionFormatter != null) {
-      buffer.writeAll(['"pointDescriptionFormatter":', jsonEncode(pointDescriptionFormatter), ','], '');
+      buffer.writeAll([
+        '"pointDescriptionFormatter":',
+        jsonEncode(pointDescriptionFormatter),
+        ','
+      ], '');
     }
     if (relativeXValue != null) {
       buffer.writeAll(['"relativeXValue":', relativeXValue, ','], '');
@@ -397,7 +397,8 @@ class HighchartsPyramidSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"showInLegend":', showInLegend, ','], '');
     }
     if (skipKeyboardNavigation != null) {
-      buffer.writeAll(['"skipKeyboardNavigation":', skipKeyboardNavigation, ','], '');
+      buffer.writeAll(
+          ['"skipKeyboardNavigation":', skipKeyboardNavigation, ','], '');
     }
     if (slicedOffset != null) {
       buffer.writeAll(['"slicedOffset":', slicedOffset, ','], '');
@@ -430,5 +431,4 @@ class HighchartsPyramidSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"zIndex":', zIndex, ','], '');
     }
   }
-
 }

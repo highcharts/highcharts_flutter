@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,33 +23,24 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
-class HighchartsOrganizationSeriesDataLabelsStyleOptions extends HighchartsOptionsBase {
-
+class HighchartsOrganizationSeriesDataLabelsStyleOptions
+    extends HighchartsOptionsBase {
   dynamic fontSize;
   String? fontWeight;
   String? textAlign;
 
-
-  HighchartsOrganizationSeriesDataLabelsStyleOptions({
-    this.fontSize,
-    this.fontWeight,
-    this.textAlign
-  });
+  HighchartsOrganizationSeriesDataLabelsStyleOptions(
+      {this.fontSize, this.fontWeight, this.textAlign});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (fontSize != null) {
       buffer.writeAll(['"fontSize":', jsonEncode(fontSize), ','], '');
@@ -64,5 +52,4 @@ class HighchartsOrganizationSeriesDataLabelsStyleOptions extends HighchartsOptio
       buffer.writeAll(['"textAlign":', jsonEncode(textAlign), ','], '');
     }
   }
-
 }

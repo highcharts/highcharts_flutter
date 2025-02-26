@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_color_axis_marker_animation_options.dart';
-
 
 /* *
  *
@@ -27,9 +24,7 @@ import 'highcharts_color_axis_marker_animation_options.dart';
  *
  * */
 
-
 export 'highcharts_color_axis_marker_animation_options.dart';
-
 
 /* *
  *
@@ -37,29 +32,21 @@ export 'highcharts_color_axis_marker_animation_options.dart';
  *
  * */
 
-
 /**
  * The triangular marker on a scalar color axis that points to the
  * value of the hovered area. To disable the marker, set
  * `marker: null`.
  */
 class HighchartsColorAxisMarkerOptions extends HighchartsOptionsBase {
-
   HighchartsColorAxisMarkerAnimationOptions? animation;
   String? color;
   double? width;
 
-
-  HighchartsColorAxisMarkerOptions({
-    this.animation,
-    this.color,
-    this.width
-  });
+  HighchartsColorAxisMarkerOptions({this.animation, this.color, this.width});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (animation != null) {
       buffer.writeAll(['"animation":', animation?.toJSON(), ','], '');
@@ -71,5 +58,4 @@ class HighchartsColorAxisMarkerOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"width":', width, ','], '');
     }
   }
-
 }

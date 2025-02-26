@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -22,18 +20,15 @@ import 'highcharts_stock_tools_gui_definitions_zoom_change_zoom_xoptions.dart';
 import 'highcharts_stock_tools_gui_definitions_zoom_change_zoom_xyoptions.dart';
 import 'highcharts_stock_tools_gui_definitions_zoom_change_zoom_yoptions.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_stock_tools_gui_definitions_zoom_change_zoom_xoptions.dart';
 export 'highcharts_stock_tools_gui_definitions_zoom_change_zoom_xyoptions.dart';
 export 'highcharts_stock_tools_gui_definitions_zoom_change_zoom_yoptions.dart';
-
 
 /* *
  *
@@ -41,26 +36,19 @@ export 'highcharts_stock_tools_gui_definitions_zoom_change_zoom_yoptions.dart';
  *
  * */
 
-
-class HighchartsStockToolsGuiDefinitionsZoomChangeOptions extends HighchartsOptionsBase {
-
+class HighchartsStockToolsGuiDefinitionsZoomChangeOptions
+    extends HighchartsOptionsBase {
   String? items;
   HighchartsStockToolsGuiDefinitionsZoomChangeZoomXOptions? zoomX;
   HighchartsStockToolsGuiDefinitionsZoomChangeZoomXYOptions? zoomXY;
   HighchartsStockToolsGuiDefinitionsZoomChangeZoomYOptions? zoomY;
 
-
-  HighchartsStockToolsGuiDefinitionsZoomChangeOptions({
-    this.items,
-    this.zoomX,
-    this.zoomXY,
-    this.zoomY
-  });
+  HighchartsStockToolsGuiDefinitionsZoomChangeOptions(
+      {this.items, this.zoomX, this.zoomXY, this.zoomY});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (items != null) {
       buffer.writeAll(['"items":', jsonEncode(items), ','], '');
@@ -75,5 +63,4 @@ class HighchartsStockToolsGuiDefinitionsZoomChangeOptions extends HighchartsOpti
       buffer.writeAll(['"zoomY":', zoomY?.toJSON(), ','], '');
     }
   }
-
 }

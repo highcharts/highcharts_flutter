@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_series_marker_states_options.dart';
-
 
 /* *
  *
@@ -27,9 +24,7 @@ import 'highcharts_series_marker_states_options.dart';
  *
  * */
 
-
 export 'highcharts_series_marker_states_options.dart';
-
 
 /* *
  *
@@ -37,12 +32,11 @@ export 'highcharts_series_marker_states_options.dart';
  *
  * */
 
-
 /**
  * Options for the point markers of line-like series.
  */
-class HighchartsStreamgraphSeriesDataMarkerOptions extends HighchartsOptionsBase {
-
+class HighchartsStreamgraphSeriesDataMarkerOptions
+    extends HighchartsOptionsBase {
   bool? enabled;
   double? enabledThreshold;
   String? fillColor;
@@ -54,24 +48,21 @@ class HighchartsStreamgraphSeriesDataMarkerOptions extends HighchartsOptionsBase
   String? symbol;
   double? width;
 
-
-  HighchartsStreamgraphSeriesDataMarkerOptions({
-    this.enabled,
-    this.enabledThreshold,
-    this.fillColor,
-    this.height,
-    this.lineColor,
-    this.lineWidth,
-    this.radius,
-    this.states,
-    this.symbol,
-    this.width
-  });
+  HighchartsStreamgraphSeriesDataMarkerOptions(
+      {this.enabled,
+      this.enabledThreshold,
+      this.fillColor,
+      this.height,
+      this.lineColor,
+      this.lineWidth,
+      this.radius,
+      this.states,
+      this.symbol,
+      this.width});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (enabled != null) {
       buffer.writeAll(['"enabled":', enabled, ','], '');
@@ -104,5 +95,4 @@ class HighchartsStreamgraphSeriesDataMarkerOptions extends HighchartsOptionsBase
       buffer.writeAll(['"width":', width, ','], '');
     }
   }
-
 }

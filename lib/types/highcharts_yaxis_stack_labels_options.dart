@@ -8,19 +8,16 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_yaxis_stack_labels_animation_options.dart';
 import 'highcharts_yaxis_stack_labels_style_options.dart';
-
 
 /* *
  *
@@ -28,17 +25,14 @@ import 'highcharts_yaxis_stack_labels_style_options.dart';
  *
  * */
 
-
 export 'highcharts_yaxis_stack_labels_animation_options.dart';
 export 'highcharts_yaxis_stack_labels_style_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * The stack labels show the total value for each bar in a stacked
@@ -48,7 +42,6 @@ export 'highcharts_yaxis_stack_labels_style_options.dart';
  * bars and to the left of negative bars.
  */
 class HighchartsYAxisStackLabelsOptions extends HighchartsOptionsBase {
-
   String? align;
   bool? allowOverlap;
   HighchartsYAxisStackLabelsAnimationOptions? animation;
@@ -69,33 +62,30 @@ class HighchartsYAxisStackLabelsOptions extends HighchartsOptionsBase {
   double? x;
   double? y;
 
-
-  HighchartsYAxisStackLabelsOptions({
-    this.align,
-    this.allowOverlap,
-    this.animation,
-    this.backgroundColor,
-    this.borderColor,
-    this.borderRadius,
-    this.borderWidth,
-    this.crop,
-    this.enabled,
-    this.format,
-    this.formatter,
-    this.overflow,
-    this.rotation,
-    this.style,
-    this.textAlign,
-    this.useHTML,
-    this.verticalAlign,
-    this.x,
-    this.y
-  });
+  HighchartsYAxisStackLabelsOptions(
+      {this.align,
+      this.allowOverlap,
+      this.animation,
+      this.backgroundColor,
+      this.borderColor,
+      this.borderRadius,
+      this.borderWidth,
+      this.crop,
+      this.enabled,
+      this.format,
+      this.formatter,
+      this.overflow,
+      this.rotation,
+      this.style,
+      this.textAlign,
+      this.useHTML,
+      this.verticalAlign,
+      this.x,
+      this.y});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (align != null) {
       buffer.writeAll(['"align":', jsonEncode(align), ','], '');
@@ -107,7 +97,8 @@ class HighchartsYAxisStackLabelsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"animation":', animation?.toJSON(), ','], '');
     }
     if (backgroundColor != null) {
-      buffer.writeAll(['"backgroundColor":', jsonEncode(backgroundColor), ','], '');
+      buffer.writeAll(
+          ['"backgroundColor":', jsonEncode(backgroundColor), ','], '');
     }
     if (borderColor != null) {
       buffer.writeAll(['"borderColor":', jsonEncode(borderColor), ','], '');
@@ -155,5 +146,4 @@ class HighchartsYAxisStackLabelsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"y":', y, ','], '');
     }
   }
-
 }

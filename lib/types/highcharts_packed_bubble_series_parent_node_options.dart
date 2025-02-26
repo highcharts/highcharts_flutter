@@ -8,17 +8,13 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,36 +22,27 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Series options for parent nodes.
  */
-class HighchartsPackedBubbleSeriesParentNodeOptions extends HighchartsOptionsBase {
-
+class HighchartsPackedBubbleSeriesParentNodeOptions
+    extends HighchartsOptionsBase {
   bool? allowPointSelect;
 
-
-  HighchartsPackedBubbleSeriesParentNodeOptions({
-    this.allowPointSelect
-  });
+  HighchartsPackedBubbleSeriesParentNodeOptions({this.allowPointSelect});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (allowPointSelect != null) {
       buffer.writeAll(['"allowPointSelect":', allowPointSelect, ','], '');
     }
   }
-
 }

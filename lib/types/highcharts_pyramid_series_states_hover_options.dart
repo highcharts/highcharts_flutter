@@ -8,18 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
 import 'highcharts_series_states_hover_animation_options.dart';
-
 
 /* *
  *
@@ -27,9 +23,7 @@ import 'highcharts_series_states_hover_animation_options.dart';
  *
  * */
 
-
 export 'highcharts_series_states_hover_animation_options.dart';
-
 
 /* *
  *
@@ -37,24 +31,17 @@ export 'highcharts_series_states_hover_animation_options.dart';
  *
  * */
 
-
 class HighchartsPyramidSeriesStatesHoverOptions extends HighchartsOptionsBase {
-
   HighchartsSeriesStatesHoverAnimationOptions? animation;
   double? brightness;
   bool? enabled;
 
-
-  HighchartsPyramidSeriesStatesHoverOptions({
-    this.animation,
-    this.brightness,
-    this.enabled
-  });
+  HighchartsPyramidSeriesStatesHoverOptions(
+      {this.animation, this.brightness, this.enabled});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (animation != null) {
       buffer.writeAll(['"animation":', animation?.toJSON(), ','], '');
@@ -66,5 +53,4 @@ class HighchartsPyramidSeriesStatesHoverOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"enabled":', enabled, ','], '');
     }
   }
-
 }

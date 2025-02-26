@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_packed_bubble_series_marker_states_options.dart';
-
 
 /* *
  *
@@ -27,9 +24,7 @@ import 'highcharts_packed_bubble_series_marker_states_options.dart';
  *
  * */
 
-
 export 'highcharts_packed_bubble_series_marker_states_options.dart';
-
 
 /* *
  *
@@ -37,9 +32,7 @@ export 'highcharts_packed_bubble_series_marker_states_options.dart';
  *
  * */
 
-
 class HighchartsPackedBubbleSeriesMarkerOptions extends HighchartsOptionsBase {
-
   String? fillColor;
   double? fillOpacity;
   String? lineColor;
@@ -47,20 +40,17 @@ class HighchartsPackedBubbleSeriesMarkerOptions extends HighchartsOptionsBase {
   HighchartsPackedBubbleSeriesMarkerStatesOptions? states;
   String? symbol;
 
-
-  HighchartsPackedBubbleSeriesMarkerOptions({
-    this.fillColor,
-    this.fillOpacity,
-    this.lineColor,
-    this.lineWidth,
-    this.states,
-    this.symbol
-  });
+  HighchartsPackedBubbleSeriesMarkerOptions(
+      {this.fillColor,
+      this.fillOpacity,
+      this.lineColor,
+      this.lineWidth,
+      this.states,
+      this.symbol});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (fillColor != null) {
       buffer.writeAll(['"fillColor":', jsonEncode(fillColor), ','], '');
@@ -81,5 +71,4 @@ class HighchartsPackedBubbleSeriesMarkerOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"symbol":', jsonEncode(symbol), ','], '');
     }
   }
-
 }

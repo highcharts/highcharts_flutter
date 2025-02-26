@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_navigation_button_theme_options.dart';
-
 
 /* *
  *
@@ -27,9 +24,7 @@ import 'highcharts_navigation_button_theme_options.dart';
  *
  * */
 
-
 export 'highcharts_navigation_button_theme_options.dart';
-
 
 /* *
  *
@@ -37,15 +32,14 @@ export 'highcharts_navigation_button_theme_options.dart';
  *
  * */
 
-
 /**
  * Options for the export button.
  * 
  * In styled mode, export button styles can be applied with the
  * `.highcharts-contextbutton` class.
  */
-class HighchartsExportingButtonsContextButtonOptions extends HighchartsOptionsBase {
-
+class HighchartsExportingButtonsContextButtonOptions
+    extends HighchartsOptionsBase {
   String? className;
   String? menuClassName;
   List<String>? menuItems;
@@ -70,37 +64,34 @@ class HighchartsExportingButtonsContextButtonOptions extends HighchartsOptionsBa
   String? verticalAlign;
   double? width;
 
-
-  HighchartsExportingButtonsContextButtonOptions({
-    this.className,
-    this.menuClassName,
-    this.menuItems,
-    this.onclick,
-    this.symbol,
-    this.symbolFill,
-    this.titleKey,
-    this.x,
-    this.y,
-    this.align,
-    this.buttonSpacing,
-    this.enabled,
-    this.height,
-    this.symbolSize,
-    this.symbolStroke,
-    this.symbolStrokeWidth,
-    this.symbolX,
-    this.symbolY,
-    this.text,
-    this.theme,
-    this.useHTML,
-    this.verticalAlign,
-    this.width
-  });
+  HighchartsExportingButtonsContextButtonOptions(
+      {this.className,
+      this.menuClassName,
+      this.menuItems,
+      this.onclick,
+      this.symbol,
+      this.symbolFill,
+      this.titleKey,
+      this.x,
+      this.y,
+      this.align,
+      this.buttonSpacing,
+      this.enabled,
+      this.height,
+      this.symbolSize,
+      this.symbolStroke,
+      this.symbolStrokeWidth,
+      this.symbolX,
+      this.symbolY,
+      this.text,
+      this.theme,
+      this.useHTML,
+      this.verticalAlign,
+      this.width});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (className != null) {
       buffer.writeAll(['"className":', jsonEncode(className), ','], '');
@@ -176,5 +167,4 @@ class HighchartsExportingButtonsContextButtonOptions extends HighchartsOptionsBa
       buffer.writeAll(['"width":', width, ','], '');
     }
   }
-
 }

@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +23,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * Titles for yAxes are taken from
@@ -43,22 +36,16 @@ import 'highcharts_options_base.dart';
  * categories, use [xAxis.labels.style](#xAxis.labels.style).
  */
 class HighchartsChartParallelAxesTitleOptions extends HighchartsOptionsBase {
-
   bool? reserveSpace;
   String? text;
   String? textAlign;
 
-
-  HighchartsChartParallelAxesTitleOptions({
-    this.reserveSpace,
-    this.text,
-    this.textAlign
-  });
+  HighchartsChartParallelAxesTitleOptions(
+      {this.reserveSpace, this.text, this.textAlign});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (reserveSpace != null) {
       buffer.writeAll(['"reserveSpace":', reserveSpace, ','], '');
@@ -70,5 +57,4 @@ class HighchartsChartParallelAxesTitleOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"textAlign":', jsonEncode(textAlign), ','], '');
     }
   }
-
 }

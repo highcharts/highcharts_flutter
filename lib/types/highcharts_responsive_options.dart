@@ -8,18 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
 import 'highcharts_responsive_rules_options.dart';
-
 
 /* *
  *
@@ -27,9 +23,7 @@ import 'highcharts_responsive_rules_options.dart';
  *
  * */
 
-
 export 'highcharts_responsive_rules_options.dart';
-
 
 /* *
  *
@@ -37,24 +31,18 @@ export 'highcharts_responsive_rules_options.dart';
  *
  * */
 
-
 /**
  * Allows setting a set of rules to apply for different screen or chart
  * sizes. Each rule specifies additional chart options.
  */
 class HighchartsResponsiveOptions extends HighchartsOptionsBase {
-
   List<HighchartsResponsiveRulesOptions>? rules;
 
-
-  HighchartsResponsiveOptions({
-    this.rules
-  });
+  HighchartsResponsiveOptions({this.rules});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (rules != null) {
       buffer.write('"rules":[');
@@ -64,5 +52,4 @@ class HighchartsResponsiveOptions extends HighchartsOptionsBase {
       buffer.write('],');
     }
   }
-
 }

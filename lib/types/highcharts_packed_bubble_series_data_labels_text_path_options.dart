@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +23,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * Options for a _node_ label text which should follow marker's
@@ -42,21 +35,17 @@ import 'highcharts_options_base.dart';
  * 
  * **Note:** Only SVG-based renderer supports this option.
  */
-class HighchartsPackedBubbleSeriesDataLabelsTextPathOptions extends HighchartsOptionsBase {
-
+class HighchartsPackedBubbleSeriesDataLabelsTextPathOptions
+    extends HighchartsOptionsBase {
   dynamic attributes;
   bool? enabled;
 
-
-  HighchartsPackedBubbleSeriesDataLabelsTextPathOptions({
-    this.attributes,
-    this.enabled
-  });
+  HighchartsPackedBubbleSeriesDataLabelsTextPathOptions(
+      {this.attributes, this.enabled});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (attributes != null) {
       buffer.writeAll(['"attributes":', jsonEncode(attributes), ','], '');
@@ -65,5 +54,4 @@ class HighchartsPackedBubbleSeriesDataLabelsTextPathOptions extends HighchartsOp
       buffer.writeAll(['"enabled":', enabled, ','], '');
     }
   }
-
 }

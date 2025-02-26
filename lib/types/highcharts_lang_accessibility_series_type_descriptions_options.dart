@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,23 +23,19 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Descriptions of lesser known series types. The relevant
  * description is added to the screen reader information region
  * when these series types are used.
  */
-class HighchartsLangAccessibilitySeriesTypeDescriptionsOptions extends HighchartsOptionsBase {
-
+class HighchartsLangAccessibilitySeriesTypeDescriptionsOptions
+    extends HighchartsOptionsBase {
   String? arearange;
   String? areasplinerange;
   String? boxplot;
@@ -53,29 +46,27 @@ class HighchartsLangAccessibilitySeriesTypeDescriptionsOptions extends Highchart
   String? pyramid;
   String? waterfall;
 
-
-  HighchartsLangAccessibilitySeriesTypeDescriptionsOptions({
-    this.arearange,
-    this.areasplinerange,
-    this.boxplot,
-    this.bubble,
-    this.columnrange,
-    this.errorbar,
-    this.funnel,
-    this.pyramid,
-    this.waterfall
-  });
+  HighchartsLangAccessibilitySeriesTypeDescriptionsOptions(
+      {this.arearange,
+      this.areasplinerange,
+      this.boxplot,
+      this.bubble,
+      this.columnrange,
+      this.errorbar,
+      this.funnel,
+      this.pyramid,
+      this.waterfall});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (arearange != null) {
       buffer.writeAll(['"arearange":', jsonEncode(arearange), ','], '');
     }
     if (areasplinerange != null) {
-      buffer.writeAll(['"areasplinerange":', jsonEncode(areasplinerange), ','], '');
+      buffer.writeAll(
+          ['"areasplinerange":', jsonEncode(areasplinerange), ','], '');
     }
     if (boxplot != null) {
       buffer.writeAll(['"boxplot":', jsonEncode(boxplot), ','], '');
@@ -99,5 +90,4 @@ class HighchartsLangAccessibilitySeriesTypeDescriptionsOptions extends Highchart
       buffer.writeAll(['"waterfall":', jsonEncode(waterfall), ','], '');
     }
   }
-
 }

@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -25,13 +23,11 @@ import 'highcharts_vector_series_cluster_marker_options.dart';
 import 'highcharts_vector_series_cluster_states_options.dart';
 import 'highcharts_vector_series_cluster_zones_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
-
 
 export 'highcharts_vector_series_cluster_data_labels_options.dart';
 export 'highcharts_vector_series_cluster_events_options.dart';
@@ -40,13 +36,11 @@ export 'highcharts_vector_series_cluster_marker_options.dart';
 export 'highcharts_vector_series_cluster_states_options.dart';
 export 'highcharts_vector_series_cluster_zones_options.dart';
 
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * Options for marker clusters, the concept of sampling the data
@@ -61,7 +55,6 @@ export 'highcharts_vector_series_cluster_zones_options.dart';
  * package, or online at [code.highcharts.com/modules/marker-clusters.js](code.highcharts.com/modules/marker-clusters.js).
  */
 class HighchartsVectorSeriesClusterOptions extends HighchartsOptionsBase {
-
   bool? allowOverlap;
   dynamic animation;
   HighchartsVectorSeriesClusterDataLabelsOptions? dataLabels;
@@ -74,25 +67,22 @@ class HighchartsVectorSeriesClusterOptions extends HighchartsOptionsBase {
   HighchartsVectorSeriesClusterStatesOptions? states;
   List<HighchartsVectorSeriesClusterZonesOptions>? zones;
 
-
-  HighchartsVectorSeriesClusterOptions({
-    this.allowOverlap,
-    this.animation,
-    this.dataLabels,
-    this.drillToCluster,
-    this.enabled,
-    this.events,
-    this.layoutAlgorithm,
-    this.marker,
-    this.minimumClusterSize,
-    this.states,
-    this.zones
-  });
+  HighchartsVectorSeriesClusterOptions(
+      {this.allowOverlap,
+      this.animation,
+      this.dataLabels,
+      this.drillToCluster,
+      this.enabled,
+      this.events,
+      this.layoutAlgorithm,
+      this.marker,
+      this.minimumClusterSize,
+      this.states,
+      this.zones});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (allowOverlap != null) {
       buffer.writeAll(['"allowOverlap":', allowOverlap, ','], '');
@@ -113,7 +103,8 @@ class HighchartsVectorSeriesClusterOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"events":', events?.toJSON(), ','], '');
     }
     if (layoutAlgorithm != null) {
-      buffer.writeAll(['"layoutAlgorithm":', layoutAlgorithm?.toJSON(), ','], '');
+      buffer
+          .writeAll(['"layoutAlgorithm":', layoutAlgorithm?.toJSON(), ','], '');
     }
     if (marker != null) {
       buffer.writeAll(['"marker":', marker?.toJSON(), ','], '');
@@ -132,5 +123,4 @@ class HighchartsVectorSeriesClusterOptions extends HighchartsOptionsBase {
       buffer.write('],');
     }
   }
-
 }

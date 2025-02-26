@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -22,18 +20,15 @@ import 'highcharts_series_data_labels_animation_options.dart';
 import 'highcharts_series_data_labels_filter_options.dart';
 import 'highcharts_series_data_labels_text_path_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_series_data_labels_animation_options.dart';
 export 'highcharts_series_data_labels_filter_options.dart';
 export 'highcharts_series_data_labels_text_path_options.dart';
-
 
 /* *
  *
@@ -41,9 +36,7 @@ export 'highcharts_series_data_labels_text_path_options.dart';
  *
  * */
 
-
 class HighchartsPyramidSeriesDataLabelsOptions extends HighchartsOptionsBase {
-
   String? alignTo;
   HighchartsSeriesDataLabelsAnimationOptions? animation;
   String? backgroundColor;
@@ -81,50 +74,47 @@ class HighchartsPyramidSeriesDataLabelsOptions extends HighchartsOptionsBase {
   double? y;
   double? zIndex;
 
-
-  HighchartsPyramidSeriesDataLabelsOptions({
-    this.alignTo,
-    this.animation,
-    this.backgroundColor,
-    this.borderColor,
-    this.borderRadius,
-    this.borderWidth,
-    this.className,
-    this.color,
-    this.connectorColor,
-    this.connectorPadding,
-    this.connectorShape,
-    this.connectorWidth,
-    this.crookDistance,
-    this.crop,
-    this.defer,
-    this.distance,
-    this.enabled,
-    this.filter,
-    this.format,
-    this.formatter,
-    this.nullFormat,
-    this.nullFormatter,
-    this.overflow,
-    this.padding,
-    this.position,
-    this.rotation,
-    this.shadow,
-    this.shape,
-    this.softConnector,
-    this.style,
-    this.textPath,
-    this.useHTML,
-    this.verticalAlign,
-    this.x,
-    this.y,
-    this.zIndex
-  });
+  HighchartsPyramidSeriesDataLabelsOptions(
+      {this.alignTo,
+      this.animation,
+      this.backgroundColor,
+      this.borderColor,
+      this.borderRadius,
+      this.borderWidth,
+      this.className,
+      this.color,
+      this.connectorColor,
+      this.connectorPadding,
+      this.connectorShape,
+      this.connectorWidth,
+      this.crookDistance,
+      this.crop,
+      this.defer,
+      this.distance,
+      this.enabled,
+      this.filter,
+      this.format,
+      this.formatter,
+      this.nullFormat,
+      this.nullFormatter,
+      this.overflow,
+      this.padding,
+      this.position,
+      this.rotation,
+      this.shadow,
+      this.shape,
+      this.softConnector,
+      this.style,
+      this.textPath,
+      this.useHTML,
+      this.verticalAlign,
+      this.x,
+      this.y,
+      this.zIndex});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (alignTo != null) {
       buffer.writeAll(['"alignTo":', jsonEncode(alignTo), ','], '');
@@ -133,7 +123,8 @@ class HighchartsPyramidSeriesDataLabelsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"animation":', animation?.toJSON(), ','], '');
     }
     if (backgroundColor != null) {
-      buffer.writeAll(['"backgroundColor":', jsonEncode(backgroundColor), ','], '');
+      buffer.writeAll(
+          ['"backgroundColor":', jsonEncode(backgroundColor), ','], '');
     }
     if (borderColor != null) {
       buffer.writeAll(['"borderColor":', jsonEncode(borderColor), ','], '');
@@ -151,13 +142,15 @@ class HighchartsPyramidSeriesDataLabelsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"color":', jsonEncode(color), ','], '');
     }
     if (connectorColor != null) {
-      buffer.writeAll(['"connectorColor":', jsonEncode(connectorColor), ','], '');
+      buffer
+          .writeAll(['"connectorColor":', jsonEncode(connectorColor), ','], '');
     }
     if (connectorPadding != null) {
       buffer.writeAll(['"connectorPadding":', connectorPadding, ','], '');
     }
     if (connectorShape != null) {
-      buffer.writeAll(['"connectorShape":', jsonEncode(connectorShape), ','], '');
+      buffer
+          .writeAll(['"connectorShape":', jsonEncode(connectorShape), ','], '');
     }
     if (connectorWidth != null) {
       buffer.writeAll(['"connectorWidth":', connectorWidth, ','], '');
@@ -243,5 +236,4 @@ class HighchartsPyramidSeriesDataLabelsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"zIndex":', zIndex, ','], '');
     }
   }
-
 }

@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_xaxis_title_style_options.dart';
-
 
 /* *
  *
@@ -27,9 +24,7 @@ import 'highcharts_xaxis_title_style_options.dart';
  *
  * */
 
-
 export 'highcharts_xaxis_title_style_options.dart';
-
 
 /* *
  *
@@ -37,12 +32,10 @@ export 'highcharts_xaxis_title_style_options.dart';
  *
  * */
 
-
 /**
  * The axis title, showing next to the axis line.
  */
 class HighchartsXAxisTitleOptions extends HighchartsOptionsBase {
-
   String? align;
   bool? enabled;
   double? margin;
@@ -58,28 +51,25 @@ class HighchartsXAxisTitleOptions extends HighchartsOptionsBase {
   double? x;
   double? y;
 
-
-  HighchartsXAxisTitleOptions({
-    this.align,
-    this.enabled,
-    this.margin,
-    this.offset,
-    this.position3d,
-    this.reserveSpace,
-    this.rotation,
-    this.skew3d,
-    this.style,
-    this.text,
-    this.textAlign,
-    this.useHTML,
-    this.x,
-    this.y
-  });
+  HighchartsXAxisTitleOptions(
+      {this.align,
+      this.enabled,
+      this.margin,
+      this.offset,
+      this.position3d,
+      this.reserveSpace,
+      this.rotation,
+      this.skew3d,
+      this.style,
+      this.text,
+      this.textAlign,
+      this.useHTML,
+      this.x,
+      this.y});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (align != null) {
       buffer.writeAll(['"align":', jsonEncode(align), ','], '');
@@ -124,5 +114,4 @@ class HighchartsXAxisTitleOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"y":', y, ','], '');
     }
   }
-
 }

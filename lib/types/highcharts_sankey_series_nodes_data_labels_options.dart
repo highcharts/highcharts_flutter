@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -22,18 +20,15 @@ import 'highcharts_series_data_labels_animation_options.dart';
 import 'highcharts_series_data_labels_filter_options.dart';
 import 'highcharts_series_data_labels_text_path_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_series_data_labels_animation_options.dart';
 export 'highcharts_series_data_labels_filter_options.dart';
 export 'highcharts_series_data_labels_text_path_options.dart';
-
 
 /* *
  *
@@ -41,13 +36,12 @@ export 'highcharts_series_data_labels_text_path_options.dart';
  *
  * */
 
-
 /**
  * Individual data label for each node. The options are the same as
  * the ones for [series.sankey.dataLabels](#series.sankey.dataLabels).
  */
-class HighchartsSankeySeriesNodesDataLabelsOptions extends HighchartsOptionsBase {
-
+class HighchartsSankeySeriesNodesDataLabelsOptions
+    extends HighchartsOptionsBase {
   String? backgroundColor;
   bool? crop;
   bool? enabled;
@@ -83,51 +77,49 @@ class HighchartsSankeySeriesNodesDataLabelsOptions extends HighchartsOptionsBase
   double? x;
   double? zIndex;
 
-
-  HighchartsSankeySeriesNodesDataLabelsOptions({
-    this.backgroundColor,
-    this.crop,
-    this.enabled,
-    this.format,
-    this.formatter,
-    this.inside,
-    this.nodeFormat,
-    this.nodeFormatter,
-    this.align,
-    this.verticalAlign,
-    this.y,
-    this.alignTo,
-    this.allowOverlap,
-    this.animation,
-    this.borderColor,
-    this.borderRadius,
-    this.borderWidth,
-    this.className,
-    this.color,
-    this.defer,
-    this.filter,
-    this.nullFormat,
-    this.nullFormatter,
-    this.overflow,
-    this.padding,
-    this.position,
-    this.rotation,
-    this.shadow,
-    this.shape,
-    this.style,
-    this.textPath,
-    this.useHTML,
-    this.x,
-    this.zIndex
-  });
+  HighchartsSankeySeriesNodesDataLabelsOptions(
+      {this.backgroundColor,
+      this.crop,
+      this.enabled,
+      this.format,
+      this.formatter,
+      this.inside,
+      this.nodeFormat,
+      this.nodeFormatter,
+      this.align,
+      this.verticalAlign,
+      this.y,
+      this.alignTo,
+      this.allowOverlap,
+      this.animation,
+      this.borderColor,
+      this.borderRadius,
+      this.borderWidth,
+      this.className,
+      this.color,
+      this.defer,
+      this.filter,
+      this.nullFormat,
+      this.nullFormatter,
+      this.overflow,
+      this.padding,
+      this.position,
+      this.rotation,
+      this.shadow,
+      this.shape,
+      this.style,
+      this.textPath,
+      this.useHTML,
+      this.x,
+      this.zIndex});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (backgroundColor != null) {
-      buffer.writeAll(['"backgroundColor":', jsonEncode(backgroundColor), ','], '');
+      buffer.writeAll(
+          ['"backgroundColor":', jsonEncode(backgroundColor), ','], '');
     }
     if (crop != null) {
       buffer.writeAll(['"crop":', crop, ','], '');
@@ -237,5 +229,4 @@ class HighchartsSankeySeriesNodesDataLabelsOptions extends HighchartsOptionsBase
       buffer.writeAll(['"zIndex":', zIndex, ','], '');
     }
   }
-
 }

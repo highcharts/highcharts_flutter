@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,36 +23,27 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Disabled state CSS style overrides for the buttons' text
  */
-class HighchartsGlobalButtonThemeStatesDisabledStyleOptions extends HighchartsOptionsBase {
-
+class HighchartsGlobalButtonThemeStatesDisabledStyleOptions
+    extends HighchartsOptionsBase {
   String? color;
 
-
-  HighchartsGlobalButtonThemeStatesDisabledStyleOptions({
-    this.color
-  });
+  HighchartsGlobalButtonThemeStatesDisabledStyleOptions({this.color});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (color != null) {
       buffer.writeAll(['"color":', jsonEncode(color), ','], '');
     }
   }
-
 }

@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,21 +23,17 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Speech pitch (how high/low the voice is) multiplier.
  */
-class HighchartsSonificationDefaultSpeechMappingPitchOptions extends HighchartsOptionsBase {
-
+class HighchartsSonificationDefaultSpeechMappingPitchOptions
+    extends HighchartsOptionsBase {
   String? mapTo;
   String? max;
   String? min;
@@ -48,20 +41,17 @@ class HighchartsSonificationDefaultSpeechMappingPitchOptions extends HighchartsO
   String? mapFunction;
   double? value;
 
-
-  HighchartsSonificationDefaultSpeechMappingPitchOptions({
-    this.mapTo,
-    this.max,
-    this.min,
-    this.within,
-    this.mapFunction,
-    this.value
-  });
+  HighchartsSonificationDefaultSpeechMappingPitchOptions(
+      {this.mapTo,
+      this.max,
+      this.min,
+      this.within,
+      this.mapFunction,
+      this.value});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (mapTo != null) {
       buffer.writeAll(['"mapTo":', jsonEncode(mapTo), ','], '');
@@ -82,5 +72,4 @@ class HighchartsSonificationDefaultSpeechMappingPitchOptions extends HighchartsO
       buffer.writeAll(['"value":', value, ','], '');
     }
   }
-
 }

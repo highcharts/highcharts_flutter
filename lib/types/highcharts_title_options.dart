@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_title_style_options.dart';
-
 
 /* *
  *
@@ -27,9 +24,7 @@ import 'highcharts_title_style_options.dart';
  *
  * */
 
-
 export 'highcharts_title_style_options.dart';
-
 
 /* *
  *
@@ -37,12 +32,10 @@ export 'highcharts_title_style_options.dart';
  *
  * */
 
-
 /**
  * The chart's main title.
  */
 class HighchartsTitleOptions extends HighchartsOptionsBase {
-
   String? align;
   bool? floating;
   double? margin;
@@ -54,24 +47,21 @@ class HighchartsTitleOptions extends HighchartsOptionsBase {
   double? x;
   double? y;
 
-
-  HighchartsTitleOptions({
-    this.align,
-    this.floating,
-    this.margin,
-    this.minScale,
-    this.style,
-    this.text,
-    this.useHTML,
-    this.verticalAlign,
-    this.x,
-    this.y
-  });
+  HighchartsTitleOptions(
+      {this.align,
+      this.floating,
+      this.margin,
+      this.minScale,
+      this.style,
+      this.text,
+      this.useHTML,
+      this.verticalAlign,
+      this.x,
+      this.y});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (align != null) {
       buffer.writeAll(['"align":', jsonEncode(align), ','], '');
@@ -104,5 +94,4 @@ class HighchartsTitleOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"y":', y, ','], '');
     }
   }
-
 }

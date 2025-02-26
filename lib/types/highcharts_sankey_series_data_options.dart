@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -22,25 +20,21 @@ import 'highcharts_sankey_series_data_accessibility_options.dart';
 import 'highcharts_sankey_series_data_data_labels_options.dart';
 import 'highcharts_sankey_series_data_events_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_sankey_series_data_accessibility_options.dart';
 export 'highcharts_sankey_series_data_data_labels_options.dart';
 export 'highcharts_sankey_series_data_events_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * An array of data points for the series. For the `sankey` series type,
@@ -74,7 +68,6 @@ export 'highcharts_sankey_series_data_events_options.dart';
  *  ```
  */
 class HighchartsSankeySeriesDataOptions extends HighchartsOptionsBase {
-
   HighchartsSankeySeriesDataAccessibilityOptions? accessibility;
   String? className;
   String? color;
@@ -91,29 +84,26 @@ class HighchartsSankeySeriesDataOptions extends HighchartsOptionsBase {
   String? to;
   double? weight;
 
-
-  HighchartsSankeySeriesDataOptions({
-    this.accessibility,
-    this.className,
-    this.color,
-    this.colorIndex,
-    this.custom,
-    this.dataLabels,
-    this.description,
-    this.events,
-    this.from,
-    this.id,
-    this.labelrank,
-    this.outgoing,
-    this.selected,
-    this.to,
-    this.weight
-  });
+  HighchartsSankeySeriesDataOptions(
+      {this.accessibility,
+      this.className,
+      this.color,
+      this.colorIndex,
+      this.custom,
+      this.dataLabels,
+      this.description,
+      this.events,
+      this.from,
+      this.id,
+      this.labelrank,
+      this.outgoing,
+      this.selected,
+      this.to,
+      this.weight});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (accessibility != null) {
       buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ','], '');
@@ -165,5 +155,4 @@ class HighchartsSankeySeriesDataOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"weight":', weight, ','], '');
     }
   }
-
 }

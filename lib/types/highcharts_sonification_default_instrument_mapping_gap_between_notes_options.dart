@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +23,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * Gap in milliseconds between notes if pitch is mapped to an
@@ -43,8 +36,8 @@ import 'highcharts_options_base.dart';
  * Can be set to a fixed value, a prop to map to, a function,
  * or a mapping object.
  */
-class HighchartsSonificationDefaultInstrumentMappingGapBetweenNotesOptions extends HighchartsOptionsBase {
-
+class HighchartsSonificationDefaultInstrumentMappingGapBetweenNotesOptions
+    extends HighchartsOptionsBase {
   String? mapFunction;
   String? mapTo;
   double? max;
@@ -52,20 +45,17 @@ class HighchartsSonificationDefaultInstrumentMappingGapBetweenNotesOptions exten
   double? value;
   String? within;
 
-
-  HighchartsSonificationDefaultInstrumentMappingGapBetweenNotesOptions({
-    this.mapFunction,
-    this.mapTo,
-    this.max,
-    this.min,
-    this.value,
-    this.within
-  });
+  HighchartsSonificationDefaultInstrumentMappingGapBetweenNotesOptions(
+      {this.mapFunction,
+      this.mapTo,
+      this.max,
+      this.min,
+      this.value,
+      this.within});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (mapFunction != null) {
       buffer.writeAll(['"mapFunction":', jsonEncode(mapFunction), ','], '');
@@ -86,5 +76,4 @@ class HighchartsSonificationDefaultInstrumentMappingGapBetweenNotesOptions exten
       buffer.writeAll(['"within":', jsonEncode(within), ','], '');
     }
   }
-
 }

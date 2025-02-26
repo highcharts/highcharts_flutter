@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -22,25 +20,21 @@ import 'highcharts_error_bar_series_data_accessibility_options.dart';
 import 'highcharts_error_bar_series_data_drag_drop_options.dart';
 import 'highcharts_error_bar_series_data_events_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_error_bar_series_data_accessibility_options.dart';
 export 'highcharts_error_bar_series_data_drag_drop_options.dart';
 export 'highcharts_error_bar_series_data_events_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * An array of data points for the series. For the `errorbar` series
@@ -83,7 +77,6 @@ export 'highcharts_error_bar_series_data_events_options.dart';
  *    ```
  */
 class HighchartsErrorBarSeriesDataOptions extends HighchartsOptionsBase {
-
   HighchartsErrorBarSeriesDataAccessibilityOptions? accessibility;
   String? className;
   String? color;
@@ -99,28 +92,25 @@ class HighchartsErrorBarSeriesDataOptions extends HighchartsOptionsBase {
   bool? selected;
   dynamic x;
 
-
-  HighchartsErrorBarSeriesDataOptions({
-    this.accessibility,
-    this.className,
-    this.color,
-    this.colorIndex,
-    this.custom,
-    this.description,
-    this.dragDrop,
-    this.events,
-    this.high,
-    this.id,
-    this.labelrank,
-    this.low,
-    this.selected,
-    this.x
-  });
+  HighchartsErrorBarSeriesDataOptions(
+      {this.accessibility,
+      this.className,
+      this.color,
+      this.colorIndex,
+      this.custom,
+      this.description,
+      this.dragDrop,
+      this.events,
+      this.high,
+      this.id,
+      this.labelrank,
+      this.low,
+      this.selected,
+      this.x});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (accessibility != null) {
       buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ','], '');
@@ -169,5 +159,4 @@ class HighchartsErrorBarSeriesDataOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"x":', jsonEncode(x), ','], '');
     }
   }
-
 }

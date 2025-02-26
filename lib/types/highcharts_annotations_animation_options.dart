@@ -8,17 +8,13 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +22,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * Enable or disable the initial animation when a series is
@@ -48,22 +40,16 @@ import 'highcharts_options_base.dart';
  * - `defer`: The animation delay time in milliseconds.
  */
 class HighchartsAnnotationsAnimationOptions extends HighchartsOptionsBase {
-
   double? defer;
 
-
-  HighchartsAnnotationsAnimationOptions({
-    this.defer
-  });
+  HighchartsAnnotationsAnimationOptions({this.defer});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (defer != null) {
       buffer.writeAll(['"defer":', defer, ','], '');
     }
   }
-
 }

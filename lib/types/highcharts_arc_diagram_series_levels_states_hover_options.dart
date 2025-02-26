@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_series_states_hover_animation_options.dart';
-
 
 /* *
  *
@@ -27,9 +24,7 @@ import 'highcharts_series_states_hover_animation_options.dart';
  *
  * */
 
-
 export 'highcharts_series_states_hover_animation_options.dart';
-
 
 /* *
  *
@@ -37,9 +32,8 @@ export 'highcharts_series_states_hover_animation_options.dart';
  *
  * */
 
-
-class HighchartsArcDiagramSeriesLevelsStatesHoverOptions extends HighchartsOptionsBase {
-
+class HighchartsArcDiagramSeriesLevelsStatesHoverOptions
+    extends HighchartsOptionsBase {
   double? linkOpacity;
   double? opacity;
   String? borderColor;
@@ -48,21 +42,18 @@ class HighchartsArcDiagramSeriesLevelsStatesHoverOptions extends HighchartsOptio
   HighchartsSeriesStatesHoverAnimationOptions? animation;
   bool? enabled;
 
-
-  HighchartsArcDiagramSeriesLevelsStatesHoverOptions({
-    this.linkOpacity,
-    this.opacity,
-    this.borderColor,
-    this.brightness,
-    this.color,
-    this.animation,
-    this.enabled
-  });
+  HighchartsArcDiagramSeriesLevelsStatesHoverOptions(
+      {this.linkOpacity,
+      this.opacity,
+      this.borderColor,
+      this.brightness,
+      this.color,
+      this.animation,
+      this.enabled});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (linkOpacity != null) {
       buffer.writeAll(['"linkOpacity":', linkOpacity, ','], '');
@@ -86,5 +77,4 @@ class HighchartsArcDiagramSeriesLevelsStatesHoverOptions extends HighchartsOptio
       buffer.writeAll(['"enabled":', enabled, ','], '');
     }
   }
-
 }

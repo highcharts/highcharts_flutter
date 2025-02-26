@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_series_states_hover_animation_options.dart';
-
 
 /* *
  *
@@ -27,9 +24,7 @@ import 'highcharts_series_states_hover_animation_options.dart';
  *
  * */
 
-
 export 'highcharts_series_states_hover_animation_options.dart';
-
 
 /* *
  *
@@ -37,9 +32,8 @@ export 'highcharts_series_states_hover_animation_options.dart';
  *
  * */
 
-
-class HighchartsDependencyWheelSeriesStatesHoverOptions extends HighchartsOptionsBase {
-
+class HighchartsDependencyWheelSeriesStatesHoverOptions
+    extends HighchartsOptionsBase {
   HighchartsSeriesStatesHoverAnimationOptions? animation;
   String? borderColor;
   double? brightness;
@@ -48,21 +42,18 @@ class HighchartsDependencyWheelSeriesStatesHoverOptions extends HighchartsOption
   double? linkOpacity;
   double? opacity;
 
-
-  HighchartsDependencyWheelSeriesStatesHoverOptions({
-    this.animation,
-    this.borderColor,
-    this.brightness,
-    this.color,
-    this.enabled,
-    this.linkOpacity,
-    this.opacity
-  });
+  HighchartsDependencyWheelSeriesStatesHoverOptions(
+      {this.animation,
+      this.borderColor,
+      this.brightness,
+      this.color,
+      this.enabled,
+      this.linkOpacity,
+      this.opacity});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (animation != null) {
       buffer.writeAll(['"animation":', animation?.toJSON(), ','], '');
@@ -86,5 +77,4 @@ class HighchartsDependencyWheelSeriesStatesHoverOptions extends HighchartsOption
       buffer.writeAll(['"opacity":', opacity, ','], '');
     }
   }
-
 }

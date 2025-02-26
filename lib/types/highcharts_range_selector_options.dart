@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -22,25 +20,21 @@ import 'highcharts_range_selector_button_position_options.dart';
 import 'highcharts_range_selector_buttons_options.dart';
 import 'highcharts_range_selector_input_position_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_range_selector_button_position_options.dart';
 export 'highcharts_range_selector_buttons_options.dart';
 export 'highcharts_range_selector_input_position_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * The range selector is a tool for selecting ranges to display within
@@ -49,7 +43,6 @@ export 'highcharts_range_selector_input_position_options.dart';
  * boxes where min and max dates can be manually input.
  */
 class HighchartsRangeSelectorOptions extends HighchartsOptionsBase {
-
   bool? allButtonsEnabled;
   HighchartsRangeSelectorButtonPositionOptions? buttonPosition;
   double? buttonSpacing;
@@ -75,38 +68,35 @@ class HighchartsRangeSelectorOptions extends HighchartsOptionsBase {
   double? x;
   double? y;
 
-
-  HighchartsRangeSelectorOptions({
-    this.allButtonsEnabled,
-    this.buttonPosition,
-    this.buttonSpacing,
-    this.buttonTheme,
-    this.buttons,
-    this.dropdown,
-    this.enabled,
-    this.floating,
-    this.height,
-    this.inputBoxBorderColor,
-    this.inputBoxHeight,
-    this.inputBoxWidth,
-    this.inputDateFormat,
-    this.inputDateParser,
-    this.inputEditDateFormat,
-    this.inputEnabled,
-    this.inputPosition,
-    this.inputSpacing,
-    this.inputStyle,
-    this.labelStyle,
-    this.selected,
-    this.verticalAlign,
-    this.x,
-    this.y
-  });
+  HighchartsRangeSelectorOptions(
+      {this.allButtonsEnabled,
+      this.buttonPosition,
+      this.buttonSpacing,
+      this.buttonTheme,
+      this.buttons,
+      this.dropdown,
+      this.enabled,
+      this.floating,
+      this.height,
+      this.inputBoxBorderColor,
+      this.inputBoxHeight,
+      this.inputBoxWidth,
+      this.inputDateFormat,
+      this.inputDateParser,
+      this.inputEditDateFormat,
+      this.inputEnabled,
+      this.inputPosition,
+      this.inputSpacing,
+      this.inputStyle,
+      this.labelStyle,
+      this.selected,
+      this.verticalAlign,
+      this.x,
+      this.y});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (allButtonsEnabled != null) {
       buffer.writeAll(['"allButtonsEnabled":', allButtonsEnabled, ','], '');
@@ -140,7 +130,8 @@ class HighchartsRangeSelectorOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"height":', height, ','], '');
     }
     if (inputBoxBorderColor != null) {
-      buffer.writeAll(['"inputBoxBorderColor":', jsonEncode(inputBoxBorderColor), ','], '');
+      buffer.writeAll(
+          ['"inputBoxBorderColor":', jsonEncode(inputBoxBorderColor), ','], '');
     }
     if (inputBoxHeight != null) {
       buffer.writeAll(['"inputBoxHeight":', inputBoxHeight, ','], '');
@@ -149,13 +140,16 @@ class HighchartsRangeSelectorOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"inputBoxWidth":', inputBoxWidth, ','], '');
     }
     if (inputDateFormat != null) {
-      buffer.writeAll(['"inputDateFormat":', jsonEncode(inputDateFormat), ','], '');
+      buffer.writeAll(
+          ['"inputDateFormat":', jsonEncode(inputDateFormat), ','], '');
     }
     if (inputDateParser != null) {
-      buffer.writeAll(['"inputDateParser":', jsonEncode(inputDateParser), ','], '');
+      buffer.writeAll(
+          ['"inputDateParser":', jsonEncode(inputDateParser), ','], '');
     }
     if (inputEditDateFormat != null) {
-      buffer.writeAll(['"inputEditDateFormat":', jsonEncode(inputEditDateFormat), ','], '');
+      buffer.writeAll(
+          ['"inputEditDateFormat":', jsonEncode(inputEditDateFormat), ','], '');
     }
     if (inputEnabled != null) {
       buffer.writeAll(['"inputEnabled":', inputEnabled, ','], '');
@@ -193,5 +187,4 @@ class HighchartsRangeSelectorOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"y":', y, ','], '');
     }
   }
-
 }

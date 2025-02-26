@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,33 +23,24 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
-class HighchartsAnnotationsMeasureControlPointOptions extends HighchartsOptionsBase {
-
+class HighchartsAnnotationsMeasureControlPointOptions
+    extends HighchartsOptionsBase {
   dynamic events;
 
-
-  HighchartsAnnotationsMeasureControlPointOptions({
-    this.events
-  });
+  HighchartsAnnotationsMeasureControlPointOptions({this.events});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (events != null) {
       buffer.writeAll(['"events":', jsonEncode(events), ','], '');
     }
   }
-
 }

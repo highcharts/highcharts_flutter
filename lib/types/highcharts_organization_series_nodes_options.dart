@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_organization_series_nodes_data_labels_options.dart';
-
 
 /* *
  *
@@ -27,9 +24,7 @@ import 'highcharts_organization_series_nodes_data_labels_options.dart';
  *
  * */
 
-
 export 'highcharts_organization_series_nodes_data_labels_options.dart';
-
 
 /* *
  *
@@ -37,14 +32,12 @@ export 'highcharts_organization_series_nodes_data_labels_options.dart';
  *
  * */
 
-
 /**
  * A collection of options for the individual nodes. The nodes in an org chart
  * are auto-generated instances of `Highcharts.Point`, but options can be
  * applied here and linked by the `id`.
  */
 class HighchartsOrganizationSeriesNodesOptions extends HighchartsOptionsBase {
-
   String? color;
   double? colorIndex;
   double? column;
@@ -60,28 +53,25 @@ class HighchartsOrganizationSeriesNodesOptions extends HighchartsOptionsBase {
   dynamic offsetVertical;
   String? title;
 
-
-  HighchartsOrganizationSeriesNodesOptions({
-    this.color,
-    this.colorIndex,
-    this.column,
-    this.dataLabels,
-    this.description,
-    this.height,
-    this.id,
-    this.image,
-    this.layout,
-    this.level,
-    this.offset,
-    this.offsetHorizontal,
-    this.offsetVertical,
-    this.title
-  });
+  HighchartsOrganizationSeriesNodesOptions(
+      {this.color,
+      this.colorIndex,
+      this.column,
+      this.dataLabels,
+      this.description,
+      this.height,
+      this.id,
+      this.image,
+      this.layout,
+      this.level,
+      this.offset,
+      this.offsetHorizontal,
+      this.offsetVertical,
+      this.title});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (color != null) {
       buffer.writeAll(['"color":', jsonEncode(color), ','], '');
@@ -117,14 +107,15 @@ class HighchartsOrganizationSeriesNodesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"offset":', jsonEncode(offset), ','], '');
     }
     if (offsetHorizontal != null) {
-      buffer.writeAll(['"offsetHorizontal":', jsonEncode(offsetHorizontal), ','], '');
+      buffer.writeAll(
+          ['"offsetHorizontal":', jsonEncode(offsetHorizontal), ','], '');
     }
     if (offsetVertical != null) {
-      buffer.writeAll(['"offsetVertical":', jsonEncode(offsetVertical), ','], '');
+      buffer
+          .writeAll(['"offsetVertical":', jsonEncode(offsetVertical), ','], '');
     }
     if (title != null) {
       buffer.writeAll(['"title":', jsonEncode(title), ','], '');
     }
   }
-
 }

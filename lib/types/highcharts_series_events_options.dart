@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +23,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * General event handlers for the series items. These event hooks can
@@ -42,7 +35,6 @@ import 'highcharts_options_base.dart';
  * `Highcharts.addEvent` function.
  */
 class HighchartsSeriesEventsOptions extends HighchartsOptionsBase {
-
   dynamic afterAnimate;
   dynamic checkboxClick;
   dynamic click;
@@ -52,22 +44,19 @@ class HighchartsSeriesEventsOptions extends HighchartsOptionsBase {
   dynamic mouseOver;
   dynamic show;
 
-
-  HighchartsSeriesEventsOptions({
-    this.afterAnimate,
-    this.checkboxClick,
-    this.click,
-    this.hide,
-    this.legendItemClick,
-    this.mouseOut,
-    this.mouseOver,
-    this.show
-  });
+  HighchartsSeriesEventsOptions(
+      {this.afterAnimate,
+      this.checkboxClick,
+      this.click,
+      this.hide,
+      this.legendItemClick,
+      this.mouseOut,
+      this.mouseOver,
+      this.show});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (afterAnimate != null) {
       buffer.writeAll(['"afterAnimate":', jsonEncode(afterAnimate), ','], '');
@@ -82,7 +71,8 @@ class HighchartsSeriesEventsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"hide":', jsonEncode(hide), ','], '');
     }
     if (legendItemClick != null) {
-      buffer.writeAll(['"legendItemClick":', jsonEncode(legendItemClick), ','], '');
+      buffer.writeAll(
+          ['"legendItemClick":', jsonEncode(legendItemClick), ','], '');
     }
     if (mouseOut != null) {
       buffer.writeAll(['"mouseOut":', jsonEncode(mouseOut), ','], '');
@@ -94,5 +84,4 @@ class HighchartsSeriesEventsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"show":', jsonEncode(show), ','], '');
     }
   }
-
 }

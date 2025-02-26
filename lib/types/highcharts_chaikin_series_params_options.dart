@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,37 +23,27 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Parameters used in calculation of Chaikin Oscillator
  * series points.
  */
 class HighchartsChaikinSeriesParamsOptions extends HighchartsOptionsBase {
-
   double? period;
   List<double>? periods;
   String? volumeSeriesID;
 
-
-  HighchartsChaikinSeriesParamsOptions({
-    this.period,
-    this.periods,
-    this.volumeSeriesID
-  });
+  HighchartsChaikinSeriesParamsOptions(
+      {this.period, this.periods, this.volumeSeriesID});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (period != null) {
       buffer.writeAll(['"period":', period, ','], '');
@@ -69,8 +56,8 @@ class HighchartsChaikinSeriesParamsOptions extends HighchartsOptionsBase {
       buffer.write('],');
     }
     if (volumeSeriesID != null) {
-      buffer.writeAll(['"volumeSeriesID":', jsonEncode(volumeSeriesID), ','], '');
+      buffer
+          .writeAll(['"volumeSeriesID":', jsonEncode(volumeSeriesID), ','], '');
     }
   }
-
 }

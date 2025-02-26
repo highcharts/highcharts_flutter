@@ -8,19 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
 import 'highcharts_map_navigation_button_options.dart';
 import 'highcharts_map_navigation_buttons_options.dart';
-
 
 /* *
  *
@@ -28,10 +24,8 @@ import 'highcharts_map_navigation_buttons_options.dart';
  *
  * */
 
-
 export 'highcharts_map_navigation_button_options.dart';
 export 'highcharts_map_navigation_buttons_options.dart';
-
 
 /* *
  *
@@ -39,13 +33,11 @@ export 'highcharts_map_navigation_buttons_options.dart';
  *
  * */
 
-
 /**
  * The `mapNavigation` option handles buttons for navigation in addition to
  * `mousewheel` and `doubleclick` handlers for map zooming.
  */
 class HighchartsMapNavigationOptions extends HighchartsOptionsBase {
-
   HighchartsMapNavigationButtonOptions? buttonOptions;
   HighchartsMapNavigationButtonsOptions? buttons;
   bool? enableButtons;
@@ -56,23 +48,20 @@ class HighchartsMapNavigationOptions extends HighchartsOptionsBase {
   bool? enabled;
   double? mouseWheelSensitivity;
 
-
-  HighchartsMapNavigationOptions({
-    this.buttonOptions,
-    this.buttons,
-    this.enableButtons,
-    this.enableDoubleClickZoom,
-    this.enableDoubleClickZoomTo,
-    this.enableMouseWheelZoom,
-    this.enableTouchZoom,
-    this.enabled,
-    this.mouseWheelSensitivity
-  });
+  HighchartsMapNavigationOptions(
+      {this.buttonOptions,
+      this.buttons,
+      this.enableButtons,
+      this.enableDoubleClickZoom,
+      this.enableDoubleClickZoomTo,
+      this.enableMouseWheelZoom,
+      this.enableTouchZoom,
+      this.enabled,
+      this.mouseWheelSensitivity});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (buttonOptions != null) {
       buffer.writeAll(['"buttonOptions":', buttonOptions?.toJSON(), ','], '');
@@ -84,13 +73,16 @@ class HighchartsMapNavigationOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"enableButtons":', enableButtons, ','], '');
     }
     if (enableDoubleClickZoom != null) {
-      buffer.writeAll(['"enableDoubleClickZoom":', enableDoubleClickZoom, ','], '');
+      buffer.writeAll(
+          ['"enableDoubleClickZoom":', enableDoubleClickZoom, ','], '');
     }
     if (enableDoubleClickZoomTo != null) {
-      buffer.writeAll(['"enableDoubleClickZoomTo":', enableDoubleClickZoomTo, ','], '');
+      buffer.writeAll(
+          ['"enableDoubleClickZoomTo":', enableDoubleClickZoomTo, ','], '');
     }
     if (enableMouseWheelZoom != null) {
-      buffer.writeAll(['"enableMouseWheelZoom":', enableMouseWheelZoom, ','], '');
+      buffer
+          .writeAll(['"enableMouseWheelZoom":', enableMouseWheelZoom, ','], '');
     }
     if (enableTouchZoom != null) {
       buffer.writeAll(['"enableTouchZoom":', enableTouchZoom, ','], '');
@@ -99,8 +91,8 @@ class HighchartsMapNavigationOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"enabled":', enabled, ','], '');
     }
     if (mouseWheelSensitivity != null) {
-      buffer.writeAll(['"mouseWheelSensitivity":', mouseWheelSensitivity, ','], '');
+      buffer.writeAll(
+          ['"mouseWheelSensitivity":', mouseWheelSensitivity, ','], '');
     }
   }
-
 }

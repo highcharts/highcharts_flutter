@@ -8,19 +8,16 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_series_drag_drop_drag_handle_options.dart';
 import 'highcharts_series_drag_drop_guide_box_options.dart';
-
 
 /* *
  *
@@ -28,10 +25,8 @@ import 'highcharts_series_drag_drop_guide_box_options.dart';
  *
  * */
 
-
 export 'highcharts_series_drag_drop_drag_handle_options.dart';
 export 'highcharts_series_drag_drop_guide_box_options.dart';
-
 
 /* *
  *
@@ -39,13 +34,12 @@ export 'highcharts_series_drag_drop_guide_box_options.dart';
  *
  * */
 
-
 /**
  * Point specific options for the draggable-points module. Overrides options
  * on `series.dragDrop`.
  */
-class HighchartsColumnRangeSeriesDataDragDropOptions extends HighchartsOptionsBase {
-
+class HighchartsColumnRangeSeriesDataDragDropOptions
+    extends HighchartsOptionsBase {
   HighchartsSeriesDragDropDragHandleOptions? dragHandle;
   dynamic dragMaxX;
   double? dragMaxY;
@@ -60,27 +54,24 @@ class HighchartsColumnRangeSeriesDataDragDropOptions extends HighchartsOptionsBa
   HighchartsSeriesDragDropGuideBoxOptions? guideBox;
   bool? liveRedraw;
 
-
-  HighchartsColumnRangeSeriesDataDragDropOptions({
-    this.dragHandle,
-    this.dragMaxX,
-    this.dragMaxY,
-    this.dragMinX,
-    this.dragMinY,
-    this.dragPrecisionX,
-    this.dragPrecisionY,
-    this.dragSensitivity,
-    this.draggableX,
-    this.draggableY,
-    this.groupBy,
-    this.guideBox,
-    this.liveRedraw
-  });
+  HighchartsColumnRangeSeriesDataDragDropOptions(
+      {this.dragHandle,
+      this.dragMaxX,
+      this.dragMaxY,
+      this.dragMinX,
+      this.dragMinY,
+      this.dragPrecisionX,
+      this.dragPrecisionY,
+      this.dragSensitivity,
+      this.draggableX,
+      this.draggableY,
+      this.groupBy,
+      this.guideBox,
+      this.liveRedraw});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (dragHandle != null) {
       buffer.writeAll(['"dragHandle":', dragHandle?.toJSON(), ','], '');
@@ -122,5 +113,4 @@ class HighchartsColumnRangeSeriesDataDragDropOptions extends HighchartsOptionsBa
       buffer.writeAll(['"liveRedraw":', liveRedraw, ','], '');
     }
   }
-
 }

@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,38 +23,28 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * The position of the button.
  */
-class HighchartsTreemapSeriesTraverseUpButtonPositionOptions extends HighchartsOptionsBase {
-
+class HighchartsTreemapSeriesTraverseUpButtonPositionOptions
+    extends HighchartsOptionsBase {
   String? align;
   String? verticalAlign;
   double? x;
   double? y;
 
-
-  HighchartsTreemapSeriesTraverseUpButtonPositionOptions({
-    this.align,
-    this.verticalAlign,
-    this.x,
-    this.y
-  });
+  HighchartsTreemapSeriesTraverseUpButtonPositionOptions(
+      {this.align, this.verticalAlign, this.x, this.y});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (align != null) {
       buffer.writeAll(['"align":', jsonEncode(align), ','], '');
@@ -72,5 +59,4 @@ class HighchartsTreemapSeriesTraverseUpButtonPositionOptions extends HighchartsO
       buffer.writeAll(['"y":', y, ','], '');
     }
   }
-
 }

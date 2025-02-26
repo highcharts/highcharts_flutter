@@ -8,18 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
 import 'highcharts_global_button_theme_options.dart';
-
 
 /* *
  *
@@ -27,16 +23,13 @@ import 'highcharts_global_button_theme_options.dart';
  *
  * */
 
-
 export 'highcharts_global_button_theme_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * Global options that don't apply to each chart. These options, like
@@ -54,22 +47,16 @@ export 'highcharts_global_button_theme_options.dart';
  * ```
  */
 class HighchartsGlobalOptions extends HighchartsOptionsBase {
-
   HighchartsGlobalButtonThemeOptions? buttonTheme;
 
-
-  HighchartsGlobalOptions({
-    this.buttonTheme
-  });
+  HighchartsGlobalOptions({this.buttonTheme});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (buttonTheme != null) {
       buffer.writeAll(['"buttonTheme":', buttonTheme?.toJSON(), ','], '');
     }
   }
-
 }

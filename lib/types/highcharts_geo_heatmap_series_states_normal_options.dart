@@ -8,17 +8,13 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,33 +22,24 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
-class HighchartsGeoHeatmapSeriesStatesNormalOptions extends HighchartsOptionsBase {
-
+class HighchartsGeoHeatmapSeriesStatesNormalOptions
+    extends HighchartsOptionsBase {
   bool? animation;
 
-
-  HighchartsGeoHeatmapSeriesStatesNormalOptions({
-    this.animation
-  });
+  HighchartsGeoHeatmapSeriesStatesNormalOptions({this.animation});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (animation != null) {
       buffer.writeAll(['"animation":', animation, ','], '');
     }
   }
-
 }

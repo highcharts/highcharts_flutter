@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +23,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * CSS styles for the caption.
@@ -43,20 +36,14 @@ import 'highcharts_options_base.dart';
  * `.highcharts-caption` class.
  */
 class HighchartsCaptionStyleOptions extends HighchartsOptionsBase {
-
   String? color;
   dynamic fontSize;
 
-
-  HighchartsCaptionStyleOptions({
-    this.color,
-    this.fontSize
-  });
+  HighchartsCaptionStyleOptions({this.color, this.fontSize});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (color != null) {
       buffer.writeAll(['"color":', jsonEncode(color), ','], '');
@@ -65,5 +52,4 @@ class HighchartsCaptionStyleOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"fontSize":', jsonEncode(fontSize), ','], '');
     }
   }
-
 }

@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,33 +23,23 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 class HighchartsRenkoSeriesNavigatorOptions extends HighchartsOptionsBase {
-
   String? type;
 
-
-  HighchartsRenkoSeriesNavigatorOptions({
-    this.type
-  });
+  HighchartsRenkoSeriesNavigatorOptions({this.type});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (type != null) {
       buffer.writeAll(['"type":', jsonEncode(type), ','], '');
     }
   }
-
 }

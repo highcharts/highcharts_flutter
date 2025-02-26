@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,22 +23,18 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Accessibility options for the screen reader information sections
  * added before and after the chart.
  */
-class HighchartsAccessibilityScreenReaderSectionOptions extends HighchartsOptionsBase {
-
+class HighchartsAccessibilityScreenReaderSectionOptions
+    extends HighchartsOptionsBase {
   String? afterChartFormat;
   dynamic afterChartFormatter;
   String? axisRangeDateFormat;
@@ -50,43 +43,48 @@ class HighchartsAccessibilityScreenReaderSectionOptions extends HighchartsOption
   dynamic onPlayAsSoundClick;
   dynamic onViewDataTableClick;
 
-
-  HighchartsAccessibilityScreenReaderSectionOptions({
-    this.afterChartFormat,
-    this.afterChartFormatter,
-    this.axisRangeDateFormat,
-    this.beforeChartFormat,
-    this.beforeChartFormatter,
-    this.onPlayAsSoundClick,
-    this.onViewDataTableClick
-  });
+  HighchartsAccessibilityScreenReaderSectionOptions(
+      {this.afterChartFormat,
+      this.afterChartFormatter,
+      this.axisRangeDateFormat,
+      this.beforeChartFormat,
+      this.beforeChartFormatter,
+      this.onPlayAsSoundClick,
+      this.onViewDataTableClick});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (afterChartFormat != null) {
-      buffer.writeAll(['"afterChartFormat":', jsonEncode(afterChartFormat), ','], '');
+      buffer.writeAll(
+          ['"afterChartFormat":', jsonEncode(afterChartFormat), ','], '');
     }
     if (afterChartFormatter != null) {
-      buffer.writeAll(['"afterChartFormatter":', jsonEncode(afterChartFormatter), ','], '');
+      buffer.writeAll(
+          ['"afterChartFormatter":', jsonEncode(afterChartFormatter), ','], '');
     }
     if (axisRangeDateFormat != null) {
-      buffer.writeAll(['"axisRangeDateFormat":', jsonEncode(axisRangeDateFormat), ','], '');
+      buffer.writeAll(
+          ['"axisRangeDateFormat":', jsonEncode(axisRangeDateFormat), ','], '');
     }
     if (beforeChartFormat != null) {
-      buffer.writeAll(['"beforeChartFormat":', jsonEncode(beforeChartFormat), ','], '');
+      buffer.writeAll(
+          ['"beforeChartFormat":', jsonEncode(beforeChartFormat), ','], '');
     }
     if (beforeChartFormatter != null) {
-      buffer.writeAll(['"beforeChartFormatter":', jsonEncode(beforeChartFormatter), ','], '');
+      buffer.writeAll(
+          ['"beforeChartFormatter":', jsonEncode(beforeChartFormatter), ','],
+          '');
     }
     if (onPlayAsSoundClick != null) {
-      buffer.writeAll(['"onPlayAsSoundClick":', jsonEncode(onPlayAsSoundClick), ','], '');
+      buffer.writeAll(
+          ['"onPlayAsSoundClick":', jsonEncode(onPlayAsSoundClick), ','], '');
     }
     if (onViewDataTableClick != null) {
-      buffer.writeAll(['"onViewDataTableClick":', jsonEncode(onViewDataTableClick), ','], '');
+      buffer.writeAll(
+          ['"onViewDataTableClick":', jsonEncode(onViewDataTableClick), ','],
+          '');
     }
   }
-
 }

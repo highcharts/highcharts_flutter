@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,36 +23,26 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Accessibility options for an axis. Requires the accessibility module.
  */
 class HighchartsXAxisAccessibilityOptions extends HighchartsOptionsBase {
-
   String? description;
   bool? enabled;
   String? rangeDescription;
 
-
-  HighchartsXAxisAccessibilityOptions({
-    this.description,
-    this.enabled,
-    this.rangeDescription
-  });
+  HighchartsXAxisAccessibilityOptions(
+      {this.description, this.enabled, this.rangeDescription});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (description != null) {
       buffer.writeAll(['"description":', jsonEncode(description), ','], '');
@@ -64,8 +51,8 @@ class HighchartsXAxisAccessibilityOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"enabled":', enabled, ','], '');
     }
     if (rangeDescription != null) {
-      buffer.writeAll(['"rangeDescription":', jsonEncode(rangeDescription), ','], '');
+      buffer.writeAll(
+          ['"rangeDescription":', jsonEncode(rangeDescription), ','], '');
     }
   }
-
 }

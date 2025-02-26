@@ -8,19 +8,16 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_xaxis_plot_bands_events_options.dart';
 import 'highcharts_xaxis_plot_bands_label_options.dart';
-
 
 /* *
  *
@@ -28,10 +25,8 @@ import 'highcharts_xaxis_plot_bands_label_options.dart';
  *
  * */
 
-
 export 'highcharts_xaxis_plot_bands_events_options.dart';
 export 'highcharts_xaxis_plot_bands_label_options.dart';
-
 
 /* *
  *
@@ -39,9 +34,7 @@ export 'highcharts_xaxis_plot_bands_label_options.dart';
  *
  * */
 
-
 class HighchartsYAxisPlotBandsOptions extends HighchartsOptionsBase {
-
   bool? acrossPanes;
   String? borderColor;
   dynamic borderRadius;
@@ -58,29 +51,26 @@ class HighchartsYAxisPlotBandsOptions extends HighchartsOptionsBase {
   dynamic to;
   double? zIndex;
 
-
-  HighchartsYAxisPlotBandsOptions({
-    this.acrossPanes,
-    this.borderColor,
-    this.borderRadius,
-    this.borderWidth,
-    this.className,
-    this.color,
-    this.events,
-    this.from,
-    this.id,
-    this.innerRadius,
-    this.label,
-    this.outerRadius,
-    this.thickness,
-    this.to,
-    this.zIndex
-  });
+  HighchartsYAxisPlotBandsOptions(
+      {this.acrossPanes,
+      this.borderColor,
+      this.borderRadius,
+      this.borderWidth,
+      this.className,
+      this.color,
+      this.events,
+      this.from,
+      this.id,
+      this.innerRadius,
+      this.label,
+      this.outerRadius,
+      this.thickness,
+      this.to,
+      this.zIndex});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (acrossPanes != null) {
       buffer.writeAll(['"acrossPanes":', acrossPanes, ','], '');
@@ -128,5 +118,4 @@ class HighchartsYAxisPlotBandsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"zIndex":', zIndex, ','], '');
     }
   }
-
 }

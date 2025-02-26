@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_annotations_label_accessibility_options.dart';
-
 
 /* *
  *
@@ -27,9 +24,7 @@ import 'highcharts_annotations_label_accessibility_options.dart';
  *
  * */
 
-
 export 'highcharts_annotations_label_accessibility_options.dart';
-
 
 /* *
  *
@@ -37,14 +32,12 @@ export 'highcharts_annotations_label_accessibility_options.dart';
  *
  * */
 
-
 /**
  * An array of labels for the annotation. For options that apply
  * to multiple labels, they can be added to the
  * [labelOptions](annotations.labelOptions.html).
  */
 class HighchartsAnnotationsLabelsOptions extends HighchartsOptionsBase {
-
   Map<String, dynamic>? point;
   HighchartsAnnotationsLabelAccessibilityOptions? accessibility;
   String? align;
@@ -70,38 +63,35 @@ class HighchartsAnnotationsLabelsOptions extends HighchartsOptionsBase {
   double? x;
   double? y;
 
-
-  HighchartsAnnotationsLabelsOptions({
-    this.point,
-    this.accessibility,
-    this.align,
-    this.allowOverlap,
-    this.backgroundColor,
-    this.borderColor,
-    this.borderRadius,
-    this.borderWidth,
-    this.className,
-    this.crop,
-    this.distance,
-    this.format,
-    this.formatter,
-    this.includeInDataExport,
-    this.overflow,
-    this.padding,
-    this.shadow,
-    this.shape,
-    this.style,
-    this.text,
-    this.useHTML,
-    this.verticalAlign,
-    this.x,
-    this.y
-  });
+  HighchartsAnnotationsLabelsOptions(
+      {this.point,
+      this.accessibility,
+      this.align,
+      this.allowOverlap,
+      this.backgroundColor,
+      this.borderColor,
+      this.borderRadius,
+      this.borderWidth,
+      this.className,
+      this.crop,
+      this.distance,
+      this.format,
+      this.formatter,
+      this.includeInDataExport,
+      this.overflow,
+      this.padding,
+      this.shadow,
+      this.shape,
+      this.style,
+      this.text,
+      this.useHTML,
+      this.verticalAlign,
+      this.x,
+      this.y});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (point != null) {
       buffer.write('"point":{');
@@ -120,7 +110,8 @@ class HighchartsAnnotationsLabelsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"allowOverlap":', allowOverlap, ','], '');
     }
     if (backgroundColor != null) {
-      buffer.writeAll(['"backgroundColor":', jsonEncode(backgroundColor), ','], '');
+      buffer.writeAll(
+          ['"backgroundColor":', jsonEncode(backgroundColor), ','], '');
     }
     if (borderColor != null) {
       buffer.writeAll(['"borderColor":', jsonEncode(borderColor), ','], '');
@@ -188,5 +179,4 @@ class HighchartsAnnotationsLabelsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"y":', y, ','], '');
     }
   }
-
 }

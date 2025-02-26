@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +23,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * Positioning for the button row. The breadcrumbs buttons will be
@@ -42,25 +35,19 @@ import 'highcharts_options_base.dart';
  * legend, range selector) for the custom chart layout set the position
  * properties.
  */
-class HighchartsNavigationBreadcrumbsPositionOptions extends HighchartsOptionsBase {
-
+class HighchartsNavigationBreadcrumbsPositionOptions
+    extends HighchartsOptionsBase {
   String? align;
   String? verticalAlign;
   double? x;
   double? y;
 
-
-  HighchartsNavigationBreadcrumbsPositionOptions({
-    this.align,
-    this.verticalAlign,
-    this.x,
-    this.y
-  });
+  HighchartsNavigationBreadcrumbsPositionOptions(
+      {this.align, this.verticalAlign, this.x, this.y});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (align != null) {
       buffer.writeAll(['"align":', jsonEncode(align), ','], '');
@@ -75,5 +62,4 @@ class HighchartsNavigationBreadcrumbsPositionOptions extends HighchartsOptionsBa
       buffer.writeAll(['"y":', y, ','], '');
     }
   }
-
 }

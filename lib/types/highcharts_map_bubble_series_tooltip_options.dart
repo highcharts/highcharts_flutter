@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,33 +23,23 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 class HighchartsMapBubbleSeriesTooltipOptions extends HighchartsOptionsBase {
-
   String? pointFormat;
 
-
-  HighchartsMapBubbleSeriesTooltipOptions({
-    this.pointFormat
-  });
+  HighchartsMapBubbleSeriesTooltipOptions({this.pointFormat});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (pointFormat != null) {
       buffer.writeAll(['"pointFormat":', jsonEncode(pointFormat), ','], '');
     }
   }
-
 }

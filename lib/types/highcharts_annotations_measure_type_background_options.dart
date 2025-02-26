@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,33 +23,24 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
-class HighchartsAnnotationsMeasureTypeBackgroundOptions extends HighchartsOptionsBase {
-
+class HighchartsAnnotationsMeasureTypeBackgroundOptions
+    extends HighchartsOptionsBase {
   String? fill;
   String? stroke;
   double? strokeWidth;
 
-
-  HighchartsAnnotationsMeasureTypeBackgroundOptions({
-    this.fill,
-    this.stroke,
-    this.strokeWidth
-  });
+  HighchartsAnnotationsMeasureTypeBackgroundOptions(
+      {this.fill, this.stroke, this.strokeWidth});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (fill != null) {
       buffer.writeAll(['"fill":', jsonEncode(fill), ','], '');
@@ -64,5 +52,4 @@ class HighchartsAnnotationsMeasureTypeBackgroundOptions extends HighchartsOption
       buffer.writeAll(['"strokeWidth":', strokeWidth, ','], '');
     }
   }
-
 }

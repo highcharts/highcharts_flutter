@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -29,13 +27,11 @@ import 'highcharts_series_sonification_options.dart';
 import 'highcharts_item_series_states_options.dart';
 import 'highcharts_item_series_tooltip_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
-
 
 export 'highcharts_series_accessibility_options.dart';
 export 'highcharts_item_series_data_labels_options.dart';
@@ -48,13 +44,11 @@ export 'highcharts_series_sonification_options.dart';
 export 'highcharts_item_series_states_options.dart';
 export 'highcharts_item_series_tooltip_options.dart';
 
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * An `item` series. If the [type](#series.item.type) option is not specified,
@@ -100,7 +94,6 @@ export 'highcharts_item_series_tooltip_options.dart';
  *             
  */
 class HighchartsItemSeriesOptions extends HighchartsOptionsBase {
-
   HighchartsSeriesAccessibilityOptions? accessibility;
   bool? allowPointSelect;
   dynamic animation;
@@ -157,69 +150,66 @@ class HighchartsItemSeriesOptions extends HighchartsOptionsBase {
   bool? visible;
   double? zIndex;
 
-
-  HighchartsItemSeriesOptions({
-    this.accessibility,
-    this.allowPointSelect,
-    this.animation,
-    this.borderRadius,
-    this.center,
-    this.className,
-    this.clip,
-    this.color,
-    this.colorAxis,
-    this.colorIndex,
-    this.colorKey,
-    this.colors,
-    this.crisp,
-    this.cursor,
-    this.custom,
-    this.dataLabels,
-    this.description,
-    this.enableMouseTracking,
-    this.endAngle,
-    this.events,
-    this.fillColor,
-    this.id,
-    this.ignoreHiddenPoint,
-    this.inactiveOtherPoints,
-    this.includeInDataExport,
-    this.index,
-    this.innerSize,
-    this.itemPadding,
-    this.keys,
-    this.layout,
-    this.legendIndex,
-    this.legendSymbol,
-    this.legendSymbolColor,
-    this.marker,
-    this.minSize,
-    this.onPoint,
-    this.opacity,
-    this.point,
-    this.pointDescriptionFormat,
-    this.pointDescriptionFormatter,
-    this.relativeXValue,
-    this.rows,
-    this.selected,
-    this.showCheckbox,
-    this.showInLegend,
-    this.size,
-    this.skipKeyboardNavigation,
-    this.sonification,
-    this.startAngle,
-    this.states,
-    this.stickyTracking,
-    this.thickness,
-    this.tooltip,
-    this.visible,
-    this.zIndex
-  });
+  HighchartsItemSeriesOptions(
+      {this.accessibility,
+      this.allowPointSelect,
+      this.animation,
+      this.borderRadius,
+      this.center,
+      this.className,
+      this.clip,
+      this.color,
+      this.colorAxis,
+      this.colorIndex,
+      this.colorKey,
+      this.colors,
+      this.crisp,
+      this.cursor,
+      this.custom,
+      this.dataLabels,
+      this.description,
+      this.enableMouseTracking,
+      this.endAngle,
+      this.events,
+      this.fillColor,
+      this.id,
+      this.ignoreHiddenPoint,
+      this.inactiveOtherPoints,
+      this.includeInDataExport,
+      this.index,
+      this.innerSize,
+      this.itemPadding,
+      this.keys,
+      this.layout,
+      this.legendIndex,
+      this.legendSymbol,
+      this.legendSymbolColor,
+      this.marker,
+      this.minSize,
+      this.onPoint,
+      this.opacity,
+      this.point,
+      this.pointDescriptionFormat,
+      this.pointDescriptionFormatter,
+      this.relativeXValue,
+      this.rows,
+      this.selected,
+      this.showCheckbox,
+      this.showInLegend,
+      this.size,
+      this.skipKeyboardNavigation,
+      this.sonification,
+      this.startAngle,
+      this.states,
+      this.stickyTracking,
+      this.thickness,
+      this.tooltip,
+      this.visible,
+      this.zIndex});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (accessibility != null) {
       buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ','], '');
@@ -307,7 +297,8 @@ class HighchartsItemSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"ignoreHiddenPoint":', ignoreHiddenPoint, ','], '');
     }
     if (inactiveOtherPoints != null) {
-      buffer.writeAll(['"inactiveOtherPoints":', inactiveOtherPoints?.toJSON(), ','], '');
+      buffer.writeAll(
+          ['"inactiveOtherPoints":', inactiveOtherPoints?.toJSON(), ','], '');
     }
     if (includeInDataExport != null) {
       buffer.writeAll(['"includeInDataExport":', includeInDataExport, ','], '');
@@ -338,7 +329,8 @@ class HighchartsItemSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"legendSymbol":', jsonEncode(legendSymbol), ','], '');
     }
     if (legendSymbolColor != null) {
-      buffer.writeAll(['"legendSymbolColor":', jsonEncode(legendSymbolColor), ','], '');
+      buffer.writeAll(
+          ['"legendSymbolColor":', jsonEncode(legendSymbolColor), ','], '');
     }
     if (marker != null) {
       buffer.writeAll(['"marker":', marker?.toJSON(), ','], '');
@@ -356,10 +348,18 @@ class HighchartsItemSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"point":', point?.toJSON(), ','], '');
     }
     if (pointDescriptionFormat != null) {
-      buffer.writeAll(['"pointDescriptionFormat":', jsonEncode(pointDescriptionFormat), ','], '');
+      buffer.writeAll([
+        '"pointDescriptionFormat":',
+        jsonEncode(pointDescriptionFormat),
+        ','
+      ], '');
     }
     if (pointDescriptionFormatter != null) {
-      buffer.writeAll(['"pointDescriptionFormatter":', jsonEncode(pointDescriptionFormatter), ','], '');
+      buffer.writeAll([
+        '"pointDescriptionFormatter":',
+        jsonEncode(pointDescriptionFormatter),
+        ','
+      ], '');
     }
     if (relativeXValue != null) {
       buffer.writeAll(['"relativeXValue":', relativeXValue, ','], '');
@@ -380,7 +380,8 @@ class HighchartsItemSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"size":', jsonEncode(size), ','], '');
     }
     if (skipKeyboardNavigation != null) {
-      buffer.writeAll(['"skipKeyboardNavigation":', skipKeyboardNavigation, ','], '');
+      buffer.writeAll(
+          ['"skipKeyboardNavigation":', skipKeyboardNavigation, ','], '');
     }
     if (sonification != null) {
       buffer.writeAll(['"sonification":', sonification?.toJSON(), ','], '');
@@ -407,5 +408,4 @@ class HighchartsItemSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"zIndex":', zIndex, ','], '');
     }
   }
-
 }

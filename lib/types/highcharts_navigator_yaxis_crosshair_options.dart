@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_xaxis_crosshair_label_options.dart';
-
 
 /* *
  *
@@ -27,9 +24,7 @@ import 'highcharts_xaxis_crosshair_label_options.dart';
  *
  * */
 
-
 export 'highcharts_xaxis_crosshair_label_options.dart';
-
 
 /* *
  *
@@ -37,9 +32,7 @@ export 'highcharts_xaxis_crosshair_label_options.dart';
  *
  * */
 
-
 class HighchartsNavigatorYAxisCrosshairOptions extends HighchartsOptionsBase {
-
   String? className;
   String? color;
   String? dashStyle;
@@ -48,21 +41,18 @@ class HighchartsNavigatorYAxisCrosshairOptions extends HighchartsOptionsBase {
   double? width;
   double? zIndex;
 
-
-  HighchartsNavigatorYAxisCrosshairOptions({
-    this.className,
-    this.color,
-    this.dashStyle,
-    this.label,
-    this.snap,
-    this.width,
-    this.zIndex
-  });
+  HighchartsNavigatorYAxisCrosshairOptions(
+      {this.className,
+      this.color,
+      this.dashStyle,
+      this.label,
+      this.snap,
+      this.width,
+      this.zIndex});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (className != null) {
       buffer.writeAll(['"className":', jsonEncode(className), ','], '');
@@ -86,5 +76,4 @@ class HighchartsNavigatorYAxisCrosshairOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"zIndex":', zIndex, ','], '');
     }
   }
-
 }

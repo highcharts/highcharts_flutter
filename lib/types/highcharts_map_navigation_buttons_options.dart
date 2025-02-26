@@ -8,19 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
 import 'highcharts_map_navigation_buttons_zoom_in_options.dart';
 import 'highcharts_map_navigation_buttons_zoom_out_options.dart';
-
 
 /* *
  *
@@ -28,17 +24,14 @@ import 'highcharts_map_navigation_buttons_zoom_out_options.dart';
  *
  * */
 
-
 export 'highcharts_map_navigation_buttons_zoom_in_options.dart';
 export 'highcharts_map_navigation_buttons_zoom_out_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * The individual buttons for the map navigation. This usually includes
@@ -49,20 +42,14 @@ export 'highcharts_map_navigation_buttons_zoom_out_options.dart';
  * and `y` options are individual.
  */
 class HighchartsMapNavigationButtonsOptions extends HighchartsOptionsBase {
-
   HighchartsMapNavigationButtonsZoomInOptions? zoomIn;
   HighchartsMapNavigationButtonsZoomOutOptions? zoomOut;
 
-
-  HighchartsMapNavigationButtonsOptions({
-    this.zoomIn,
-    this.zoomOut
-  });
+  HighchartsMapNavigationButtonsOptions({this.zoomIn, this.zoomOut});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (zoomIn != null) {
       buffer.writeAll(['"zoomIn":', zoomIn?.toJSON(), ','], '');
@@ -71,5 +58,4 @@ class HighchartsMapNavigationButtonsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"zoomOut":', zoomOut?.toJSON(), ','], '');
     }
   }
-
 }

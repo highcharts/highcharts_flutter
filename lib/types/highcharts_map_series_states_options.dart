@@ -8,18 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
 import 'highcharts_map_series_states_normal_options.dart';
-
 
 /* *
  *
@@ -27,9 +23,7 @@ import 'highcharts_map_series_states_normal_options.dart';
  *
  * */
 
-
 export 'highcharts_map_series_states_normal_options.dart';
-
 
 /* *
  *
@@ -37,24 +31,17 @@ export 'highcharts_map_series_states_normal_options.dart';
  *
  * */
 
-
 class HighchartsMapSeriesStatesOptions extends HighchartsOptionsBase {
-
   HighchartsMapSeriesStatesNormalOptions? normal;
 
-
-  HighchartsMapSeriesStatesOptions({
-    this.normal
-  });
+  HighchartsMapSeriesStatesOptions({this.normal});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (normal != null) {
       buffer.writeAll(['"normal":', normal?.toJSON(), ','], '');
     }
   }
-
 }

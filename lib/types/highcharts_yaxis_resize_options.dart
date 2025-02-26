@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_yaxis_resize_controlled_axis_options.dart';
-
 
 /* *
  *
@@ -27,9 +24,7 @@ import 'highcharts_yaxis_resize_controlled_axis_options.dart';
  *
  * */
 
-
 export 'highcharts_yaxis_resize_controlled_axis_options.dart';
-
 
 /* *
  *
@@ -37,13 +32,11 @@ export 'highcharts_yaxis_resize_controlled_axis_options.dart';
  *
  * */
 
-
 /**
  * Options for axis resizing. It adds a thick line between panes which
  * the user can drag in order to resize the panes.
  */
 class HighchartsYAxisResizeOptions extends HighchartsOptionsBase {
-
   HighchartsYAxisResizeControlledAxisOptions? controlledAxis;
   String? cursor;
   bool? enabled;
@@ -53,22 +46,19 @@ class HighchartsYAxisResizeOptions extends HighchartsOptionsBase {
   double? x;
   double? y;
 
-
-  HighchartsYAxisResizeOptions({
-    this.controlledAxis,
-    this.cursor,
-    this.enabled,
-    this.lineColor,
-    this.lineDashStyle,
-    this.lineWidth,
-    this.x,
-    this.y
-  });
+  HighchartsYAxisResizeOptions(
+      {this.controlledAxis,
+      this.cursor,
+      this.enabled,
+      this.lineColor,
+      this.lineDashStyle,
+      this.lineWidth,
+      this.x,
+      this.y});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (controlledAxis != null) {
       buffer.writeAll(['"controlledAxis":', controlledAxis?.toJSON(), ','], '');
@@ -95,5 +85,4 @@ class HighchartsYAxisResizeOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"y":', y, ','], '');
     }
   }
-
 }

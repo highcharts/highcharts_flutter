@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,33 +23,24 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 class HighchartsOBVSeriesParamsOptions extends HighchartsOptionsBase {
-
   String? volumeSeriesID;
 
-
-  HighchartsOBVSeriesParamsOptions({
-    this.volumeSeriesID
-  });
+  HighchartsOBVSeriesParamsOptions({this.volumeSeriesID});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (volumeSeriesID != null) {
-      buffer.writeAll(['"volumeSeriesID":', jsonEncode(volumeSeriesID), ','], '');
+      buffer
+          .writeAll(['"volumeSeriesID":', jsonEncode(volumeSeriesID), ','], '');
     }
   }
-
 }

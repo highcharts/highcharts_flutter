@@ -8,18 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
 import 'highcharts_price_envelopes_series_bottom_line_styles_options.dart';
-
 
 /* *
  *
@@ -27,9 +23,7 @@ import 'highcharts_price_envelopes_series_bottom_line_styles_options.dart';
  *
  * */
 
-
 export 'highcharts_price_envelopes_series_bottom_line_styles_options.dart';
-
 
 /* *
  *
@@ -37,27 +31,21 @@ export 'highcharts_price_envelopes_series_bottom_line_styles_options.dart';
  *
  * */
 
-
 /**
  * Bottom line options.
  */
-class HighchartsPriceEnvelopesSeriesBottomLineOptions extends HighchartsOptionsBase {
-
+class HighchartsPriceEnvelopesSeriesBottomLineOptions
+    extends HighchartsOptionsBase {
   HighchartsPriceEnvelopesSeriesBottomLineStylesOptions? styles;
 
-
-  HighchartsPriceEnvelopesSeriesBottomLineOptions({
-    this.styles
-  });
+  HighchartsPriceEnvelopesSeriesBottomLineOptions({this.styles});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (styles != null) {
       buffer.writeAll(['"styles":', styles?.toJSON(), ','], '');
     }
   }
-
 }

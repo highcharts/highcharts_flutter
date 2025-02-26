@@ -8,12 +8,10 @@
  *
  * */
 
-
 /**
  * Base class for options to serialize settings to a JSON string.
  */
 class HighchartsOptionsBase {
-
   /**
    * Serializes the settings to a JSON string.
    */
@@ -28,5 +26,4 @@ class HighchartsOptionsBase {
   }
 
   void toOptionsJSON(StringBuffer buffer) {}
-
 }

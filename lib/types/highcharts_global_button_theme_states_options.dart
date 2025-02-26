@@ -8,20 +8,16 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
 import 'highcharts_global_button_theme_states_disabled_options.dart';
 import 'highcharts_global_button_theme_states_hover_options.dart';
 import 'highcharts_global_button_theme_states_select_options.dart';
-
 
 /* *
  *
@@ -29,11 +25,9 @@ import 'highcharts_global_button_theme_states_select_options.dart';
  *
  * */
 
-
 export 'highcharts_global_button_theme_states_disabled_options.dart';
 export 'highcharts_global_button_theme_states_hover_options.dart';
 export 'highcharts_global_button_theme_states_select_options.dart';
-
 
 /* *
  *
@@ -41,27 +35,20 @@ export 'highcharts_global_button_theme_states_select_options.dart';
  *
  * */
 
-
 /**
  * State overrides for the buttons
  */
 class HighchartsGlobalButtonThemeStatesOptions extends HighchartsOptionsBase {
-
   HighchartsGlobalButtonThemeStatesDisabledOptions? disabled;
   HighchartsGlobalButtonThemeStatesHoverOptions? hover;
   HighchartsGlobalButtonThemeStatesSelectOptions? select;
 
-
-  HighchartsGlobalButtonThemeStatesOptions({
-    this.disabled,
-    this.hover,
-    this.select
-  });
+  HighchartsGlobalButtonThemeStatesOptions(
+      {this.disabled, this.hover, this.select});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (disabled != null) {
       buffer.writeAll(['"disabled":', disabled?.toJSON(), ','], '');
@@ -73,5 +60,4 @@ class HighchartsGlobalButtonThemeStatesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"select":', select?.toJSON(), ','], '');
     }
   }
-
 }

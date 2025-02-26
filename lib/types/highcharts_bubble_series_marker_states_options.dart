@@ -8,20 +8,16 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
 import 'highcharts_bubble_series_marker_states_hover_options.dart';
 import 'highcharts_series_marker_states_normal_options.dart';
 import 'highcharts_series_marker_states_select_options.dart';
-
 
 /* *
  *
@@ -29,11 +25,9 @@ import 'highcharts_series_marker_states_select_options.dart';
  *
  * */
 
-
 export 'highcharts_bubble_series_marker_states_hover_options.dart';
 export 'highcharts_series_marker_states_normal_options.dart';
 export 'highcharts_series_marker_states_select_options.dart';
-
 
 /* *
  *
@@ -41,24 +35,17 @@ export 'highcharts_series_marker_states_select_options.dart';
  *
  * */
 
-
 class HighchartsBubbleSeriesMarkerStatesOptions extends HighchartsOptionsBase {
-
   HighchartsBubbleSeriesMarkerStatesHoverOptions? hover;
   HighchartsSeriesMarkerStatesNormalOptions? normal;
   HighchartsSeriesMarkerStatesSelectOptions? select;
 
-
-  HighchartsBubbleSeriesMarkerStatesOptions({
-    this.hover,
-    this.normal,
-    this.select
-  });
+  HighchartsBubbleSeriesMarkerStatesOptions(
+      {this.hover, this.normal, this.select});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (hover != null) {
       buffer.writeAll(['"hover":', hover?.toJSON(), ','], '');
@@ -70,5 +57,4 @@ class HighchartsBubbleSeriesMarkerStatesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"select":', select?.toJSON(), ','], '');
     }
   }
-
 }

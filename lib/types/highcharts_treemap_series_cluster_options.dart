@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +23,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * An option to optimize treemap series rendering by grouping smaller leaf
@@ -44,7 +37,6 @@ import 'highcharts_options_base.dart';
  * into one group point per series.
  */
 class HighchartsTreemapSeriesClusterOptions extends HighchartsOptionsBase {
-
   String? className;
   String? color;
   bool? enabled;
@@ -53,21 +45,18 @@ class HighchartsTreemapSeriesClusterOptions extends HighchartsOptionsBase {
   double? pixelWidth;
   double? reductionFactor;
 
-
-  HighchartsTreemapSeriesClusterOptions({
-    this.className,
-    this.color,
-    this.enabled,
-    this.minimumClusterSize,
-    this.pixelHeight,
-    this.pixelWidth,
-    this.reductionFactor
-  });
+  HighchartsTreemapSeriesClusterOptions(
+      {this.className,
+      this.color,
+      this.enabled,
+      this.minimumClusterSize,
+      this.pixelHeight,
+      this.pixelWidth,
+      this.reductionFactor});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (className != null) {
       buffer.writeAll(['"className":', jsonEncode(className), ','], '');
@@ -91,5 +80,4 @@ class HighchartsTreemapSeriesClusterOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"reductionFactor":', reductionFactor, ','], '');
     }
   }
-
 }

@@ -8,18 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
 import 'highcharts_networkgraph_series_nodes_marker_states_inactive_animation_options.dart';
-
 
 /* *
  *
@@ -27,9 +23,7 @@ import 'highcharts_networkgraph_series_nodes_marker_states_inactive_animation_op
  *
  * */
 
-
 export 'highcharts_networkgraph_series_nodes_marker_states_inactive_animation_options.dart';
-
 
 /* *
  *
@@ -37,26 +31,22 @@ export 'highcharts_networkgraph_series_nodes_marker_states_inactive_animation_op
  *
  * */
 
-
 /**
  * The opposite state of a hover for a single point node.
  * Applied to all not connected nodes to the hovered one.
  */
-class HighchartsNetworkgraphSeriesNodesMarkerStatesInactiveOptions extends HighchartsOptionsBase {
-
-  HighchartsNetworkgraphSeriesNodesMarkerStatesInactiveAnimationOptions? animation;
+class HighchartsNetworkgraphSeriesNodesMarkerStatesInactiveOptions
+    extends HighchartsOptionsBase {
+  HighchartsNetworkgraphSeriesNodesMarkerStatesInactiveAnimationOptions?
+      animation;
   double? opacity;
 
-
-  HighchartsNetworkgraphSeriesNodesMarkerStatesInactiveOptions({
-    this.animation,
-    this.opacity
-  });
+  HighchartsNetworkgraphSeriesNodesMarkerStatesInactiveOptions(
+      {this.animation, this.opacity});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (animation != null) {
       buffer.writeAll(['"animation":', animation?.toJSON(), ','], '');
@@ -65,5 +55,4 @@ class HighchartsNetworkgraphSeriesNodesMarkerStatesInactiveOptions extends Highc
       buffer.writeAll(['"opacity":', opacity, ','], '');
     }
   }
-
 }

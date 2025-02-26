@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_caption_style_options.dart';
-
 
 /* *
  *
@@ -27,9 +24,7 @@ import 'highcharts_caption_style_options.dart';
  *
  * */
 
-
 export 'highcharts_caption_style_options.dart';
-
 
 /* *
  *
@@ -37,14 +32,12 @@ export 'highcharts_caption_style_options.dart';
  *
  * */
 
-
 /**
  * The chart's caption, which will render below the chart and will be part
  * of exported charts. The caption can be updated after chart initialization
  * through the `Chart.update` or `Chart.caption.update` methods.
  */
 class HighchartsCaptionOptions extends HighchartsOptionsBase {
-
   String? align;
   bool? floating;
   double? margin;
@@ -55,23 +48,20 @@ class HighchartsCaptionOptions extends HighchartsOptionsBase {
   double? x;
   double? y;
 
-
-  HighchartsCaptionOptions({
-    this.align,
-    this.floating,
-    this.margin,
-    this.style,
-    this.text,
-    this.useHTML,
-    this.verticalAlign,
-    this.x,
-    this.y
-  });
+  HighchartsCaptionOptions(
+      {this.align,
+      this.floating,
+      this.margin,
+      this.style,
+      this.text,
+      this.useHTML,
+      this.verticalAlign,
+      this.x,
+      this.y});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (align != null) {
       buffer.writeAll(['"align":', jsonEncode(align), ','], '');
@@ -101,5 +91,4 @@ class HighchartsCaptionOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"y":', y, ','], '');
     }
   }
-
 }

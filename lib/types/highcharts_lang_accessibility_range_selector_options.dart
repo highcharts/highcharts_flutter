@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,41 +23,38 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Range selector language options for accessibility.
  */
-class HighchartsLangAccessibilityRangeSelectorOptions extends HighchartsOptionsBase {
-
+class HighchartsLangAccessibilityRangeSelectorOptions
+    extends HighchartsOptionsBase {
   String? clickButtonAnnouncement;
   String? dropdownLabel;
   String? maxInputLabel;
   String? minInputLabel;
 
-
-  HighchartsLangAccessibilityRangeSelectorOptions({
-    this.clickButtonAnnouncement,
-    this.dropdownLabel,
-    this.maxInputLabel,
-    this.minInputLabel
-  });
+  HighchartsLangAccessibilityRangeSelectorOptions(
+      {this.clickButtonAnnouncement,
+      this.dropdownLabel,
+      this.maxInputLabel,
+      this.minInputLabel});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (clickButtonAnnouncement != null) {
-      buffer.writeAll(['"clickButtonAnnouncement":', jsonEncode(clickButtonAnnouncement), ','], '');
+      buffer.writeAll([
+        '"clickButtonAnnouncement":',
+        jsonEncode(clickButtonAnnouncement),
+        ','
+      ], '');
     }
     if (dropdownLabel != null) {
       buffer.writeAll(['"dropdownLabel":', jsonEncode(dropdownLabel), ','], '');
@@ -72,5 +66,4 @@ class HighchartsLangAccessibilityRangeSelectorOptions extends HighchartsOptionsB
       buffer.writeAll(['"minInputLabel":', jsonEncode(minInputLabel), ','], '');
     }
   }
-
 }

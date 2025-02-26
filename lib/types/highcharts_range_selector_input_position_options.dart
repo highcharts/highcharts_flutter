@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,37 +23,27 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Positioning for the input boxes. Allowed properties are `align`,
  *  `x` and `y`.
  */
-class HighchartsRangeSelectorInputPositionOptions extends HighchartsOptionsBase {
-
+class HighchartsRangeSelectorInputPositionOptions
+    extends HighchartsOptionsBase {
   String? align;
   double? x;
   double? y;
 
-
-  HighchartsRangeSelectorInputPositionOptions({
-    this.align,
-    this.x,
-    this.y
-  });
+  HighchartsRangeSelectorInputPositionOptions({this.align, this.x, this.y});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (align != null) {
       buffer.writeAll(['"align":', jsonEncode(align), ','], '');
@@ -68,5 +55,4 @@ class HighchartsRangeSelectorInputPositionOptions extends HighchartsOptionsBase 
       buffer.writeAll(['"y":', y, ','], '');
     }
   }
-
 }

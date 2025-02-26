@@ -50,10 +50,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   type: 'bar',
                 ),
                 title: HighchartsTitleOptions(
-                    text: 'Historic World Population by Region',
+                  text: 'Historic World Population by Region',
                 ),
                 subtitle: HighchartsSubtitleOptions(
-                text: 'Source: <a href="https://en.wikipedia.org/wiki/List_of_continents_and_continental_subregions_by_population"target="_blank">Wikipedia.org</a>',
+                  text:
+                      'Source: <a href="https://en.wikipedia.org/wiki/List_of_continents_and_continental_subregions_by_population"target="_blank">Wikipedia.org</a>',
                 ),
                 xAxis: [
                   HighchartsXAxisOptions(
@@ -66,17 +67,19 @@ class _MyHomePageState extends State<MyHomePage> {
                 yAxis: [
                   HighchartsYAxisOptions(
                     min: 0,
-                    title: HighchartsYAxisTitleOptions(text: 'Population (millions)', align: 'high'),
+                    title: HighchartsYAxisTitleOptions(
+                        text: 'Population (millions)', align: 'high'),
                     labels: HighchartsYAxisLabelsOptions(overflow: 'justify'),
                     gridLineWidth: 0,
                   ),
                 ],
                 tooltip: HighchartsTooltipOptions(
-                        valueSuffix: ' millions',
+                  valueSuffix: ' millions',
                 ),
                 plotOptions: HighchartsPlotOptions(
                   bar: HighchartsBarSeriesOptions(
-                    dataLabels: HighchartsBarSeriesDataLabelsOptions(enabled: true),
+                    dataLabels:
+                        HighchartsBarSeriesDataLabelsOptions(enabled: true),
                     groupPadding: 0.1,
                   ),
                 ),
@@ -91,18 +94,24 @@ class _MyHomePageState extends State<MyHomePage> {
                   backgroundColor: '#FFFFFF',
                 ),
                 series: [
-                    HighchartsBarSeries(name: 'Year 1990',
-    data: [
-        [0, 632], [1, 727], [2, 3202], [3, 721]
-    ]),
-                    HighchartsBarSeries(name: 'Year 2000',
-    data: [
-        [0, 814], [1, 841], [2, 3714], [3, 726]
-    ]),
-                    HighchartsBarSeries(name: 'Year 2021',
-    data: [
-        [0, 1393], [1, 1031], [2, 4695], [3, 745]
-    ]),
+                  HighchartsBarSeries(name: 'Year 1990', data: [
+                    [0, 632],
+                    [1, 727],
+                    [2, 3202],
+                    [3, 721]
+                  ]),
+                  HighchartsBarSeries(name: 'Year 2000', data: [
+                    [0, 814],
+                    [1, 841],
+                    [2, 3714],
+                    [3, 726]
+                  ]),
+                  HighchartsBarSeries(name: 'Year 2021', data: [
+                    [0, 1393],
+                    [1, 1031],
+                    [2, 4695],
+                    [3, 745]
+                  ]),
                 ],
               ),
             ),

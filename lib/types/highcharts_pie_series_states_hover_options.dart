@@ -8,19 +8,16 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_series_states_hover_animation_options.dart';
 import 'highcharts_series_states_hover_halo_options.dart';
-
 
 /* *
  *
@@ -28,10 +25,8 @@ import 'highcharts_series_states_hover_halo_options.dart';
  *
  * */
 
-
 export 'highcharts_series_states_hover_animation_options.dart';
 export 'highcharts_series_states_hover_halo_options.dart';
-
 
 /* *
  *
@@ -39,9 +34,7 @@ export 'highcharts_series_states_hover_halo_options.dart';
  *
  * */
 
-
 class HighchartsPieSeriesStatesHoverOptions extends HighchartsOptionsBase {
-
   double? brightness;
   HighchartsSeriesStatesHoverAnimationOptions? animation;
   bool? enabled;
@@ -50,21 +43,18 @@ class HighchartsPieSeriesStatesHoverOptions extends HighchartsOptionsBase {
   double? borderWidth;
   String? color;
 
-
-  HighchartsPieSeriesStatesHoverOptions({
-    this.brightness,
-    this.animation,
-    this.enabled,
-    this.halo,
-    this.borderColor,
-    this.borderWidth,
-    this.color
-  });
+  HighchartsPieSeriesStatesHoverOptions(
+      {this.brightness,
+      this.animation,
+      this.enabled,
+      this.halo,
+      this.borderColor,
+      this.borderWidth,
+      this.color});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (brightness != null) {
       buffer.writeAll(['"brightness":', brightness, ','], '');
@@ -88,5 +78,4 @@ class HighchartsPieSeriesStatesHoverOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"color":', jsonEncode(color), ','], '');
     }
   }
-
 }

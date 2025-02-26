@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,31 +23,23 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
-class HighchartsPriceEnvelopesSeriesTopLineStylesOptions extends HighchartsOptionsBase {
-
+class HighchartsPriceEnvelopesSeriesTopLineStylesOptions
+    extends HighchartsOptionsBase {
   double? lineWidth;
   String? lineColor;
 
-
-  HighchartsPriceEnvelopesSeriesTopLineStylesOptions({
-    this.lineWidth,
-    this.lineColor
-  });
+  HighchartsPriceEnvelopesSeriesTopLineStylesOptions(
+      {this.lineWidth, this.lineColor});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (lineWidth != null) {
       buffer.writeAll(['"lineWidth":', lineWidth, ','], '');
@@ -59,5 +48,4 @@ class HighchartsPriceEnvelopesSeriesTopLineStylesOptions extends HighchartsOptio
       buffer.writeAll(['"lineColor":', jsonEncode(lineColor), ','], '');
     }
   }
-
 }

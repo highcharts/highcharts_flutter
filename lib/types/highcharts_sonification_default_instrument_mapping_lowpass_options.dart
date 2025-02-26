@@ -8,19 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
 import 'highcharts_sonification_default_instrument_mapping_lowpass_frequency_options.dart';
 import 'highcharts_sonification_default_instrument_mapping_lowpass_resonance_options.dart';
-
 
 /* *
  *
@@ -28,10 +24,8 @@ import 'highcharts_sonification_default_instrument_mapping_lowpass_resonance_opt
  *
  * */
 
-
 export 'highcharts_sonification_default_instrument_mapping_lowpass_frequency_options.dart';
 export 'highcharts_sonification_default_instrument_mapping_lowpass_resonance_options.dart';
-
 
 /* *
  *
@@ -39,28 +33,25 @@ export 'highcharts_sonification_default_instrument_mapping_lowpass_resonance_opt
  *
  * */
 
-
 /**
  * Mapping options for the lowpass filter.
  * 
  * A lowpass filter lets low frequencies through, but stops high
  * frequencies, making the sound more dull.
  */
-class HighchartsSonificationDefaultInstrumentMappingLowpassOptions extends HighchartsOptionsBase {
+class HighchartsSonificationDefaultInstrumentMappingLowpassOptions
+    extends HighchartsOptionsBase {
+  HighchartsSonificationDefaultInstrumentMappingLowpassFrequencyOptions?
+      frequency;
+  HighchartsSonificationDefaultInstrumentMappingLowpassResonanceOptions?
+      resonance;
 
-  HighchartsSonificationDefaultInstrumentMappingLowpassFrequencyOptions? frequency;
-  HighchartsSonificationDefaultInstrumentMappingLowpassResonanceOptions? resonance;
-
-
-  HighchartsSonificationDefaultInstrumentMappingLowpassOptions({
-    this.frequency,
-    this.resonance
-  });
+  HighchartsSonificationDefaultInstrumentMappingLowpassOptions(
+      {this.frequency, this.resonance});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (frequency != null) {
       buffer.writeAll(['"frequency":', frequency?.toJSON(), ','], '');
@@ -69,5 +60,4 @@ class HighchartsSonificationDefaultInstrumentMappingLowpassOptions extends Highc
       buffer.writeAll(['"resonance":', resonance?.toJSON(), ','], '');
     }
   }
-
 }

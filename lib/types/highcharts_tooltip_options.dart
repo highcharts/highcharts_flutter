@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -22,18 +20,15 @@ import 'highcharts_tooltip_animation_options.dart';
 import 'highcharts_tooltip_date_time_label_formats_options.dart';
 import 'highcharts_tooltip_style_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_tooltip_animation_options.dart';
 export 'highcharts_tooltip_date_time_label_formats_options.dart';
 export 'highcharts_tooltip_style_options.dart';
-
 
 /* *
  *
@@ -41,13 +36,11 @@ export 'highcharts_tooltip_style_options.dart';
  *
  * */
 
-
 /**
  * Options for the tooltip that appears when the user hovers over a
  * series or point.
  */
 class HighchartsTooltipOptions extends HighchartsOptionsBase {
-
   HighchartsTooltipAnimationOptions? animation;
   String? backgroundColor;
   String? borderColor;
@@ -88,59 +81,57 @@ class HighchartsTooltipOptions extends HighchartsOptionsBase {
   String? valueSuffix;
   String? xDateFormat;
 
-
-  HighchartsTooltipOptions({
-    this.animation,
-    this.backgroundColor,
-    this.borderColor,
-    this.borderRadius,
-    this.borderWidth,
-    this.changeDecimals,
-    this.className,
-    this.clusterFormat,
-    this.crosshairs,
-    this.dateTimeLabelFormats,
-    this.distance,
-    this.enabled,
-    this.followPointer,
-    this.followTouchMove,
-    this.footerFormat,
-    this.format,
-    this.formatter,
-    this.headerFormat,
-    this.headerShape,
-    this.hideDelay,
-    this.nullFormat,
-    this.nullFormatter,
-    this.outside,
-    this.padding,
-    this.pointFormat,
-    this.pointFormatter,
-    this.positioner,
-    this.shadow,
-    this.shape,
-    this.shared,
-    this.snap,
-    this.split,
-    this.stickOnContact,
-    this.style,
-    this.useHTML,
-    this.valueDecimals,
-    this.valuePrefix,
-    this.valueSuffix,
-    this.xDateFormat
-  });
+  HighchartsTooltipOptions(
+      {this.animation,
+      this.backgroundColor,
+      this.borderColor,
+      this.borderRadius,
+      this.borderWidth,
+      this.changeDecimals,
+      this.className,
+      this.clusterFormat,
+      this.crosshairs,
+      this.dateTimeLabelFormats,
+      this.distance,
+      this.enabled,
+      this.followPointer,
+      this.followTouchMove,
+      this.footerFormat,
+      this.format,
+      this.formatter,
+      this.headerFormat,
+      this.headerShape,
+      this.hideDelay,
+      this.nullFormat,
+      this.nullFormatter,
+      this.outside,
+      this.padding,
+      this.pointFormat,
+      this.pointFormatter,
+      this.positioner,
+      this.shadow,
+      this.shape,
+      this.shared,
+      this.snap,
+      this.split,
+      this.stickOnContact,
+      this.style,
+      this.useHTML,
+      this.valueDecimals,
+      this.valuePrefix,
+      this.valueSuffix,
+      this.xDateFormat});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (animation != null) {
       buffer.writeAll(['"animation":', animation?.toJSON(), ','], '');
     }
     if (backgroundColor != null) {
-      buffer.writeAll(['"backgroundColor":', jsonEncode(backgroundColor), ','], '');
+      buffer.writeAll(
+          ['"backgroundColor":', jsonEncode(backgroundColor), ','], '');
     }
     if (borderColor != null) {
       buffer.writeAll(['"borderColor":', jsonEncode(borderColor), ','], '');
@@ -164,7 +155,8 @@ class HighchartsTooltipOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"crosshairs":', crosshairs, ','], '');
     }
     if (dateTimeLabelFormats != null) {
-      buffer.writeAll(['"dateTimeLabelFormats":', dateTimeLabelFormats?.toJSON(), ','], '');
+      buffer.writeAll(
+          ['"dateTimeLabelFormats":', dateTimeLabelFormats?.toJSON(), ','], '');
     }
     if (distance != null) {
       buffer.writeAll(['"distance":', distance, ','], '');
@@ -212,7 +204,8 @@ class HighchartsTooltipOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"pointFormat":', jsonEncode(pointFormat), ','], '');
     }
     if (pointFormatter != null) {
-      buffer.writeAll(['"pointFormatter":', jsonEncode(pointFormatter), ','], '');
+      buffer
+          .writeAll(['"pointFormatter":', jsonEncode(pointFormatter), ','], '');
     }
     if (positioner != null) {
       buffer.writeAll(['"positioner":', jsonEncode(positioner), ','], '');
@@ -258,5 +251,4 @@ class HighchartsTooltipOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"xDateFormat":', jsonEncode(xDateFormat), ','], '');
     }
   }
-
 }

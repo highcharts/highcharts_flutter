@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,18 +23,13 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 class HighchartsNetworkgraphSeriesEventsOptions extends HighchartsOptionsBase {
-
   dynamic afterAnimate;
   dynamic afterSimulation;
   dynamic checkboxClick;
@@ -48,29 +40,27 @@ class HighchartsNetworkgraphSeriesEventsOptions extends HighchartsOptionsBase {
   dynamic mouseOver;
   dynamic show;
 
-
-  HighchartsNetworkgraphSeriesEventsOptions({
-    this.afterAnimate,
-    this.afterSimulation,
-    this.checkboxClick,
-    this.click,
-    this.hide,
-    this.legendItemClick,
-    this.mouseOut,
-    this.mouseOver,
-    this.show
-  });
+  HighchartsNetworkgraphSeriesEventsOptions(
+      {this.afterAnimate,
+      this.afterSimulation,
+      this.checkboxClick,
+      this.click,
+      this.hide,
+      this.legendItemClick,
+      this.mouseOut,
+      this.mouseOver,
+      this.show});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (afterAnimate != null) {
       buffer.writeAll(['"afterAnimate":', jsonEncode(afterAnimate), ','], '');
     }
     if (afterSimulation != null) {
-      buffer.writeAll(['"afterSimulation":', jsonEncode(afterSimulation), ','], '');
+      buffer.writeAll(
+          ['"afterSimulation":', jsonEncode(afterSimulation), ','], '');
     }
     if (checkboxClick != null) {
       buffer.writeAll(['"checkboxClick":', jsonEncode(checkboxClick), ','], '');
@@ -82,7 +72,8 @@ class HighchartsNetworkgraphSeriesEventsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"hide":', jsonEncode(hide), ','], '');
     }
     if (legendItemClick != null) {
-      buffer.writeAll(['"legendItemClick":', jsonEncode(legendItemClick), ','], '');
+      buffer.writeAll(
+          ['"legendItemClick":', jsonEncode(legendItemClick), ','], '');
     }
     if (mouseOut != null) {
       buffer.writeAll(['"mouseOut":', jsonEncode(mouseOut), ','], '');
@@ -94,5 +85,4 @@ class HighchartsNetworkgraphSeriesEventsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"show":', jsonEncode(show), ','], '');
     }
   }
-
 }

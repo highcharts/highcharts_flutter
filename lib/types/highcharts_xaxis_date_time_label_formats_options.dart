@@ -8,14 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
-
 
 import 'highcharts_options_base.dart';
 import 'highcharts_xaxis_date_time_label_formats_day_options.dart';
@@ -27,13 +24,11 @@ import 'highcharts_xaxis_date_time_label_formats_second_options.dart';
 import 'highcharts_xaxis_date_time_label_formats_week_options.dart';
 import 'highcharts_xaxis_date_time_label_formats_year_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
-
 
 export 'highcharts_xaxis_date_time_label_formats_day_options.dart';
 export 'highcharts_xaxis_date_time_label_formats_hour_options.dart';
@@ -44,13 +39,11 @@ export 'highcharts_xaxis_date_time_label_formats_second_options.dart';
 export 'highcharts_xaxis_date_time_label_formats_week_options.dart';
 export 'highcharts_xaxis_date_time_label_formats_year_options.dart';
 
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * For a datetime axis, the scale will automatically adjust to the
@@ -78,7 +71,6 @@ export 'highcharts_xaxis_date_time_label_formats_year_options.dart';
  * ```
  */
 class HighchartsXAxisDateTimeLabelFormatsOptions extends HighchartsOptionsBase {
-
   HighchartsXAxisDateTimeLabelFormatsDayOptions? day;
   HighchartsXAxisDateTimeLabelFormatsHourOptions? hour;
   HighchartsXAxisDateTimeLabelFormatsMillisecondOptions? millisecond;
@@ -88,22 +80,19 @@ class HighchartsXAxisDateTimeLabelFormatsOptions extends HighchartsOptionsBase {
   HighchartsXAxisDateTimeLabelFormatsWeekOptions? week;
   HighchartsXAxisDateTimeLabelFormatsYearOptions? year;
 
-
-  HighchartsXAxisDateTimeLabelFormatsOptions({
-    this.day,
-    this.hour,
-    this.millisecond,
-    this.minute,
-    this.month,
-    this.second,
-    this.week,
-    this.year
-  });
+  HighchartsXAxisDateTimeLabelFormatsOptions(
+      {this.day,
+      this.hour,
+      this.millisecond,
+      this.minute,
+      this.month,
+      this.second,
+      this.week,
+      this.year});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (day != null) {
       buffer.writeAll(['"day":', day?.toJSON(), ','], '');
@@ -130,5 +119,4 @@ class HighchartsXAxisDateTimeLabelFormatsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"year":', year?.toJSON(), ','], '');
     }
   }
-
 }

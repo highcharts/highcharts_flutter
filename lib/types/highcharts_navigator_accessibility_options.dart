@@ -8,17 +8,13 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,37 +22,27 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Accessibility options for the navigator. Requires the
  * Accessibility module.
  */
 class HighchartsNavigatorAccessibilityOptions extends HighchartsOptionsBase {
-
   bool? enabled;
 
-
-  HighchartsNavigatorAccessibilityOptions({
-    this.enabled
-  });
+  HighchartsNavigatorAccessibilityOptions({this.enabled});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (enabled != null) {
       buffer.writeAll(['"enabled":', enabled, ','], '');
     }
   }
-
 }

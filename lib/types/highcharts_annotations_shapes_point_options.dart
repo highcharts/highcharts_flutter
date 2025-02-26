@@ -8,17 +8,13 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +22,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * This option defines the point to which the shape will be
@@ -43,10 +35,5 @@ import 'highcharts_options_base.dart';
  * with defined x, y properties and optionally axes.
  */
 class HighchartsAnnotationsShapesPointOptions extends HighchartsOptionsBase {
-
-
-
   HighchartsAnnotationsShapesPointOptions();
-
-
 }

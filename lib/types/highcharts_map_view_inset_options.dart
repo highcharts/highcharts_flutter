@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,41 +23,33 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Generic options for the placement and appearance of map insets like
  * non-contiguous territories.
  */
 class HighchartsMapViewInsetOptions extends HighchartsOptionsBase {
-
   String? borderColor;
   double? borderWidth;
   List<dynamic>? padding;
   String? relativeTo;
   String? units;
 
-
-  HighchartsMapViewInsetOptions({
-    this.borderColor,
-    this.borderWidth,
-    this.padding,
-    this.relativeTo,
-    this.units
-  });
+  HighchartsMapViewInsetOptions(
+      {this.borderColor,
+      this.borderWidth,
+      this.padding,
+      this.relativeTo,
+      this.units});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (borderColor != null) {
       buffer.writeAll(['"borderColor":', jsonEncode(borderColor), ','], '');
@@ -82,5 +71,4 @@ class HighchartsMapViewInsetOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"units":', jsonEncode(units), ','], '');
     }
   }
-
 }

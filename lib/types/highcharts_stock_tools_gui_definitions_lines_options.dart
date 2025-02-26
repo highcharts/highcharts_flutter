@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -27,13 +25,11 @@ import 'highcharts_stock_tools_gui_definitions_lines_ray_options.dart';
 import 'highcharts_stock_tools_gui_definitions_lines_segment_options.dart';
 import 'highcharts_stock_tools_gui_definitions_lines_vertical_line_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
-
 
 export 'highcharts_stock_tools_gui_definitions_lines_arrow_infinity_line_options.dart';
 export 'highcharts_stock_tools_gui_definitions_lines_arrow_ray_options.dart';
@@ -44,17 +40,16 @@ export 'highcharts_stock_tools_gui_definitions_lines_ray_options.dart';
 export 'highcharts_stock_tools_gui_definitions_lines_segment_options.dart';
 export 'highcharts_stock_tools_gui_definitions_lines_vertical_line_options.dart';
 
-
 /* *
  *
  *  Classes
  *
  * */
 
-
-class HighchartsStockToolsGuiDefinitionsLinesOptions extends HighchartsOptionsBase {
-
-  HighchartsStockToolsGuiDefinitionsLinesArrowInfinityLineOptions? arrowInfinityLine;
+class HighchartsStockToolsGuiDefinitionsLinesOptions
+    extends HighchartsOptionsBase {
+  HighchartsStockToolsGuiDefinitionsLinesArrowInfinityLineOptions?
+      arrowInfinityLine;
   HighchartsStockToolsGuiDefinitionsLinesArrowRayOptions? arrowRay;
   HighchartsStockToolsGuiDefinitionsLinesArrowSegmentOptions? arrowSegment;
   HighchartsStockToolsGuiDefinitionsLinesHorizontalLineOptions? horizontalLine;
@@ -64,26 +59,24 @@ class HighchartsStockToolsGuiDefinitionsLinesOptions extends HighchartsOptionsBa
   HighchartsStockToolsGuiDefinitionsLinesSegmentOptions? segment;
   HighchartsStockToolsGuiDefinitionsLinesVerticalLineOptions? verticalLine;
 
-
-  HighchartsStockToolsGuiDefinitionsLinesOptions({
-    this.arrowInfinityLine,
-    this.arrowRay,
-    this.arrowSegment,
-    this.horizontalLine,
-    this.items,
-    this.line,
-    this.ray,
-    this.segment,
-    this.verticalLine
-  });
+  HighchartsStockToolsGuiDefinitionsLinesOptions(
+      {this.arrowInfinityLine,
+      this.arrowRay,
+      this.arrowSegment,
+      this.horizontalLine,
+      this.items,
+      this.line,
+      this.ray,
+      this.segment,
+      this.verticalLine});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (arrowInfinityLine != null) {
-      buffer.writeAll(['"arrowInfinityLine":', arrowInfinityLine?.toJSON(), ','], '');
+      buffer.writeAll(
+          ['"arrowInfinityLine":', arrowInfinityLine?.toJSON(), ','], '');
     }
     if (arrowRay != null) {
       buffer.writeAll(['"arrowRay":', arrowRay?.toJSON(), ','], '');
@@ -110,5 +103,4 @@ class HighchartsStockToolsGuiDefinitionsLinesOptions extends HighchartsOptionsBa
       buffer.writeAll(['"verticalLine":', verticalLine?.toJSON(), ','], '');
     }
   }
-
 }

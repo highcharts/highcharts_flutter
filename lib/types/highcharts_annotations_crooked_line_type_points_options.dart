@@ -8,17 +8,13 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,33 +22,24 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
-class HighchartsAnnotationsCrookedLineTypePointsOptions extends HighchartsOptionsBase {
-
+class HighchartsAnnotationsCrookedLineTypePointsOptions
+    extends HighchartsOptionsBase {
   double? controlPoint;
   double? x;
   double? y;
 
-
-  HighchartsAnnotationsCrookedLineTypePointsOptions({
-    this.controlPoint,
-    this.x,
-    this.y
-  });
+  HighchartsAnnotationsCrookedLineTypePointsOptions(
+      {this.controlPoint, this.x, this.y});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (controlPoint != null) {
       buffer.writeAll(['"controlPoint":', controlPoint, ','], '');
@@ -64,5 +51,4 @@ class HighchartsAnnotationsCrookedLineTypePointsOptions extends HighchartsOption
       buffer.writeAll(['"y":', y, ','], '');
     }
   }
-
 }

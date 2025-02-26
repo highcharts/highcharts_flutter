@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_defs_arrow_attributes_options.dart';
-
 
 /* *
  *
@@ -27,9 +24,7 @@ import 'highcharts_defs_arrow_attributes_options.dart';
  *
  * */
 
-
 export 'highcharts_defs_arrow_attributes_options.dart';
-
 
 /* *
  *
@@ -37,24 +32,16 @@ export 'highcharts_defs_arrow_attributes_options.dart';
  *
  * */
 
-
 class HighchartsDefsArrowOptions extends HighchartsOptionsBase {
-
   HighchartsDefsArrowAttributesOptions? attributes;
   List<dynamic>? children;
   String? tagName;
 
-
-  HighchartsDefsArrowOptions({
-    this.attributes,
-    this.children,
-    this.tagName
-  });
+  HighchartsDefsArrowOptions({this.attributes, this.children, this.tagName});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (attributes != null) {
       buffer.writeAll(['"attributes":', attributes?.toJSON(), ','], '');
@@ -70,5 +57,4 @@ class HighchartsDefsArrowOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"tagName":', jsonEncode(tagName), ','], '');
     }
   }
-
 }

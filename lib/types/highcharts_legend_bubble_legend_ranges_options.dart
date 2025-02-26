@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,39 +23,28 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Options for specific range. One range consists of bubble,
  * label and connector.
  */
 class HighchartsLegendBubbleLegendRangesOptions extends HighchartsOptionsBase {
-
   String? borderColor;
   String? color;
   String? connectorColor;
   double? value;
 
-
-  HighchartsLegendBubbleLegendRangesOptions({
-    this.borderColor,
-    this.color,
-    this.connectorColor,
-    this.value
-  });
+  HighchartsLegendBubbleLegendRangesOptions(
+      {this.borderColor, this.color, this.connectorColor, this.value});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (borderColor != null) {
       buffer.writeAll(['"borderColor":', jsonEncode(borderColor), ','], '');
@@ -67,11 +53,11 @@ class HighchartsLegendBubbleLegendRangesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"color":', jsonEncode(color), ','], '');
     }
     if (connectorColor != null) {
-      buffer.writeAll(['"connectorColor":', jsonEncode(connectorColor), ','], '');
+      buffer
+          .writeAll(['"connectorColor":', jsonEncode(connectorColor), ','], '');
     }
     if (value != null) {
       buffer.writeAll(['"value":', value, ','], '');
     }
   }
-
 }

@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -22,18 +20,15 @@ import 'highcharts_xaxis_labels_style_options.dart';
 import 'highcharts_yaxis_labels_levels_options.dart';
 import 'highcharts_yaxis_labels_symbol_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_xaxis_labels_style_options.dart';
 export 'highcharts_yaxis_labels_levels_options.dart';
 export 'highcharts_yaxis_labels_symbol_options.dart';
-
 
 /* *
  *
@@ -41,9 +36,7 @@ export 'highcharts_yaxis_labels_symbol_options.dart';
  *
  * */
 
-
 class HighchartsNavigatorYAxisLabelsOptions extends HighchartsOptionsBase {
-
   bool? enabled;
   String? align;
   double? x;
@@ -68,37 +61,34 @@ class HighchartsNavigatorYAxisLabelsOptions extends HighchartsOptionsBase {
   double? indentation;
   double? padding;
 
-
-  HighchartsNavigatorYAxisLabelsOptions({
-    this.enabled,
-    this.align,
-    this.x,
-    this.y,
-    this.allowOverlap,
-    this.autoRotation,
-    this.format,
-    this.formatter,
-    this.maxStaggerLines,
-    this.overflow,
-    this.reserveSpace,
-    this.rotation,
-    this.staggerLines,
-    this.step,
-    this.style,
-    this.useHTML,
-    this.zIndex,
-    this.levels,
-    this.symbol,
-    this.autoRotationLimit,
-    this.distance,
-    this.indentation,
-    this.padding
-  });
+  HighchartsNavigatorYAxisLabelsOptions(
+      {this.enabled,
+      this.align,
+      this.x,
+      this.y,
+      this.allowOverlap,
+      this.autoRotation,
+      this.format,
+      this.formatter,
+      this.maxStaggerLines,
+      this.overflow,
+      this.reserveSpace,
+      this.rotation,
+      this.staggerLines,
+      this.step,
+      this.style,
+      this.useHTML,
+      this.zIndex,
+      this.levels,
+      this.symbol,
+      this.autoRotationLimit,
+      this.distance,
+      this.indentation,
+      this.padding});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (enabled != null) {
       buffer.writeAll(['"enabled":', enabled, ','], '');
@@ -178,5 +168,4 @@ class HighchartsNavigatorYAxisLabelsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"padding":', padding, ','], '');
     }
   }
-
 }

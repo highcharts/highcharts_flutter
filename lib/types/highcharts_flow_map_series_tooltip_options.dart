@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,31 +23,21 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 class HighchartsFlowMapSeriesTooltipOptions extends HighchartsOptionsBase {
-
   bool? followPointer;
   String? pointFormat;
 
-
-  HighchartsFlowMapSeriesTooltipOptions({
-    this.followPointer,
-    this.pointFormat
-  });
+  HighchartsFlowMapSeriesTooltipOptions({this.followPointer, this.pointFormat});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (followPointer != null) {
       buffer.writeAll(['"followPointer":', followPointer, ','], '');
@@ -59,5 +46,4 @@ class HighchartsFlowMapSeriesTooltipOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"pointFormat":', jsonEncode(pointFormat), ','], '');
     }
   }
-
 }

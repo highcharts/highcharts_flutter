@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,29 +23,20 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 class HighchartsStochasticSeriesParamsOptions extends HighchartsOptionsBase {
-
   List<dynamic>? periods;
 
-
-  HighchartsStochasticSeriesParamsOptions({
-    this.periods
-  });
+  HighchartsStochasticSeriesParamsOptions({this.periods});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (periods != null) {
       buffer.write('"periods":[');
@@ -58,5 +46,4 @@ class HighchartsStochasticSeriesParamsOptions extends HighchartsOptionsBase {
       buffer.write('],');
     }
   }
-
 }

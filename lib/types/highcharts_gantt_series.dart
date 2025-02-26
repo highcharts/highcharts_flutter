@@ -8,7 +8,6 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
@@ -19,23 +18,19 @@ import 'dart:convert';
 import 'highcharts_series.dart';
 import 'highcharts_gantt_series_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_gantt_series_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * A `gantt` series.
@@ -80,7 +75,6 @@ export 'highcharts_gantt_series_options.dart';
  *             
  */
 class HighchartsGanttSeries extends HighchartsSeries {
-
   List<List<dynamic>>? data;
   String? name;
   HighchartsGanttSeriesOptions? options;
@@ -124,14 +118,13 @@ class HighchartsGanttSeries extends HighchartsSeries {
       }
 
       buffer.writeAll(['"data":[', seriesData, '],'], '');
-
     } else if (points != null) {
       // Go through the points and write them
       StringBuffer seriesData = StringBuffer();
 
       for (var point in points!) {
         seriesData.writeAll(['{'], '');
-        point.toOptionsJSON(seriesData); 
+        point.toOptionsJSON(seriesData);
         seriesData.writeAll(['},'], '');
       }
 
@@ -146,5 +139,4 @@ class HighchartsGanttSeries extends HighchartsSeries {
       buffer.writeAll(['"name":', jsonEncode(name), ','], '');
     }
   }
-
 }

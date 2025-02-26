@@ -8,18 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
 import 'highcharts_series_states_hover_animation_options.dart';
-
 
 /* *
  *
@@ -27,9 +23,7 @@ import 'highcharts_series_states_hover_animation_options.dart';
  *
  * */
 
-
 export 'highcharts_series_states_hover_animation_options.dart';
-
 
 /* *
  *
@@ -37,26 +31,19 @@ export 'highcharts_series_states_hover_animation_options.dart';
  *
  * */
 
-
-class HighchartsHollowcandlestickSeriesStatesHoverOptions extends HighchartsOptionsBase {
-
+class HighchartsHollowcandlestickSeriesStatesHoverOptions
+    extends HighchartsOptionsBase {
   HighchartsSeriesStatesHoverAnimationOptions? animation;
   double? brightness;
   bool? enabled;
   double? lineWidth;
 
-
-  HighchartsHollowcandlestickSeriesStatesHoverOptions({
-    this.animation,
-    this.brightness,
-    this.enabled,
-    this.lineWidth
-  });
+  HighchartsHollowcandlestickSeriesStatesHoverOptions(
+      {this.animation, this.brightness, this.enabled, this.lineWidth});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (animation != null) {
       buffer.writeAll(['"animation":', animation?.toJSON(), ','], '');
@@ -71,5 +58,4 @@ class HighchartsHollowcandlestickSeriesStatesHoverOptions extends HighchartsOpti
       buffer.writeAll(['"lineWidth":', lineWidth, ','], '');
     }
   }
-
 }

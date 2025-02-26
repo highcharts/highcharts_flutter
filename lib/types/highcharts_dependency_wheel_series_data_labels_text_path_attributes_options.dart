@@ -8,17 +8,13 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,33 +22,24 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
-class HighchartsDependencyWheelSeriesDataLabelsTextPathAttributesOptions extends HighchartsOptionsBase {
-
+class HighchartsDependencyWheelSeriesDataLabelsTextPathAttributesOptions
+    extends HighchartsOptionsBase {
   double? dy;
 
-
-  HighchartsDependencyWheelSeriesDataLabelsTextPathAttributesOptions({
-    this.dy
-  });
+  HighchartsDependencyWheelSeriesDataLabelsTextPathAttributesOptions({this.dy});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (dy != null) {
       buffer.writeAll(['"dy":', dy, ','], '');
     }
   }
-
 }

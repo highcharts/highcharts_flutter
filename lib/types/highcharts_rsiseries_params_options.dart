@@ -8,17 +8,13 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,33 +22,22 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 class HighchartsRSISeriesParamsOptions extends HighchartsOptionsBase {
-
   double? decimals;
   double? index;
   double? period;
 
-
-  HighchartsRSISeriesParamsOptions({
-    this.decimals,
-    this.index,
-    this.period
-  });
+  HighchartsRSISeriesParamsOptions({this.decimals, this.index, this.period});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (decimals != null) {
       buffer.writeAll(['"decimals":', decimals, ','], '');
@@ -64,5 +49,4 @@ class HighchartsRSISeriesParamsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"period":', period, ','], '');
     }
   }
-
 }

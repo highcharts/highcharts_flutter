@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +23,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * Style options for the focus border drawn around elements
@@ -45,23 +38,18 @@ import 'highcharts_options_base.dart';
  * In styled mode, the border is given the
  * `.highcharts-focus-border` class.
  */
-class HighchartsAccessibilityKeyboardNavigationFocusBorderStyleOptions extends HighchartsOptionsBase {
-
+class HighchartsAccessibilityKeyboardNavigationFocusBorderStyleOptions
+    extends HighchartsOptionsBase {
   double? borderRadius;
   String? color;
   double? lineWidth;
 
-
-  HighchartsAccessibilityKeyboardNavigationFocusBorderStyleOptions({
-    this.borderRadius,
-    this.color,
-    this.lineWidth
-  });
+  HighchartsAccessibilityKeyboardNavigationFocusBorderStyleOptions(
+      {this.borderRadius, this.color, this.lineWidth});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (borderRadius != null) {
       buffer.writeAll(['"borderRadius":', borderRadius, ','], '');
@@ -73,5 +61,4 @@ class HighchartsAccessibilityKeyboardNavigationFocusBorderStyleOptions extends H
       buffer.writeAll(['"lineWidth":', lineWidth, ','], '');
     }
   }
-
 }

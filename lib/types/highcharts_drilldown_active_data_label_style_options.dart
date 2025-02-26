@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +23,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * Additional styles to apply to the data label of a point that has
@@ -44,25 +37,19 @@ import 'highcharts_options_base.dart';
  * In styled mode, active data label styles can be applied with the
  * `.highcharts-drilldown-data-label` class.
  */
-class HighchartsDrilldownActiveDataLabelStyleOptions extends HighchartsOptionsBase {
-
+class HighchartsDrilldownActiveDataLabelStyleOptions
+    extends HighchartsOptionsBase {
   String? color;
   String? cursor;
   String? fontWeight;
   String? textDecoration;
 
-
-  HighchartsDrilldownActiveDataLabelStyleOptions({
-    this.color,
-    this.cursor,
-    this.fontWeight,
-    this.textDecoration
-  });
+  HighchartsDrilldownActiveDataLabelStyleOptions(
+      {this.color, this.cursor, this.fontWeight, this.textDecoration});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (color != null) {
       buffer.writeAll(['"color":', jsonEncode(color), ','], '');
@@ -74,8 +61,8 @@ class HighchartsDrilldownActiveDataLabelStyleOptions extends HighchartsOptionsBa
       buffer.writeAll(['"fontWeight":', jsonEncode(fontWeight), ','], '');
     }
     if (textDecoration != null) {
-      buffer.writeAll(['"textDecoration":', jsonEncode(textDecoration), ','], '');
+      buffer
+          .writeAll(['"textDecoration":', jsonEncode(textDecoration), ','], '');
     }
   }
-
 }

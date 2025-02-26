@@ -8,17 +8,13 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,36 +22,27 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Animation setting for hovering the graph in line-type series.
  */
-class HighchartsSeriesStatesHoverAnimationOptions extends HighchartsOptionsBase {
-
+class HighchartsSeriesStatesHoverAnimationOptions
+    extends HighchartsOptionsBase {
   double? duration;
 
-
-  HighchartsSeriesStatesHoverAnimationOptions({
-    this.duration
-  });
+  HighchartsSeriesStatesHoverAnimationOptions({this.duration});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (duration != null) {
       buffer.writeAll(['"duration":', duration, ','], '');
     }
   }
-
 }

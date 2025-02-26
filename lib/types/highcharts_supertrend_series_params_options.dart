@@ -8,17 +8,13 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,34 +22,24 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Parameters used in calculation of Supertrend indicator series points.
  */
 class HighchartsSupertrendSeriesParamsOptions extends HighchartsOptionsBase {
-
   double? multiplier;
   double? period;
 
-
-  HighchartsSupertrendSeriesParamsOptions({
-    this.multiplier,
-    this.period
-  });
+  HighchartsSupertrendSeriesParamsOptions({this.multiplier, this.period});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (multiplier != null) {
       buffer.writeAll(['"multiplier":', multiplier, ','], '');
@@ -62,5 +48,4 @@ class HighchartsSupertrendSeriesParamsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"period":', period, ','], '');
     }
   }
-
 }

@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -23,26 +21,22 @@ import 'highcharts_solid_gauge_series_data_data_labels_options.dart';
 import 'highcharts_solid_gauge_series_data_drag_drop_options.dart';
 import 'highcharts_solid_gauge_series_data_events_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_solid_gauge_series_data_accessibility_options.dart';
 export 'highcharts_solid_gauge_series_data_data_labels_options.dart';
 export 'highcharts_solid_gauge_series_data_drag_drop_options.dart';
 export 'highcharts_solid_gauge_series_data_events_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * An array of data points for the series. For the `solidgauge` series
@@ -74,7 +68,6 @@ export 'highcharts_solid_gauge_series_data_events_options.dart';
  * The typical gauge only contains a single data value.
  */
 class HighchartsSolidGaugeSeriesDataOptions extends HighchartsOptionsBase {
-
   HighchartsSolidGaugeSeriesDataAccessibilityOptions? accessibility;
   String? className;
   String? color;
@@ -91,29 +84,26 @@ class HighchartsSolidGaugeSeriesDataOptions extends HighchartsOptionsBase {
   bool? selected;
   double? y;
 
-
-  HighchartsSolidGaugeSeriesDataOptions({
-    this.accessibility,
-    this.className,
-    this.color,
-    this.colorIndex,
-    this.custom,
-    this.dataLabels,
-    this.description,
-    this.dragDrop,
-    this.events,
-    this.id,
-    this.innerRadius,
-    this.labelrank,
-    this.radius,
-    this.selected,
-    this.y
-  });
+  HighchartsSolidGaugeSeriesDataOptions(
+      {this.accessibility,
+      this.className,
+      this.color,
+      this.colorIndex,
+      this.custom,
+      this.dataLabels,
+      this.description,
+      this.dragDrop,
+      this.events,
+      this.id,
+      this.innerRadius,
+      this.labelrank,
+      this.radius,
+      this.selected,
+      this.y});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (accessibility != null) {
       buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ','], '');
@@ -169,5 +159,4 @@ class HighchartsSolidGaugeSeriesDataOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"y":', y, ','], '');
     }
   }
-
 }

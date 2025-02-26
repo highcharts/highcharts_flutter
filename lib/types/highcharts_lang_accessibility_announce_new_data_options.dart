@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +23,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * Default announcement for new data in charts. If addPoint or
@@ -45,43 +38,56 @@ import 'highcharts_options_base.dart';
  * are multiple charts on the page. For all other new data events,
  * the `newDataAnnounce` string will be used.
  */
-class HighchartsLangAccessibilityAnnounceNewDataOptions extends HighchartsOptionsBase {
-
+class HighchartsLangAccessibilityAnnounceNewDataOptions
+    extends HighchartsOptionsBase {
   String? newDataAnnounce;
   String? newPointAnnounceMultiple;
   String? newPointAnnounceSingle;
   String? newSeriesAnnounceMultiple;
   String? newSeriesAnnounceSingle;
 
-
-  HighchartsLangAccessibilityAnnounceNewDataOptions({
-    this.newDataAnnounce,
-    this.newPointAnnounceMultiple,
-    this.newPointAnnounceSingle,
-    this.newSeriesAnnounceMultiple,
-    this.newSeriesAnnounceSingle
-  });
+  HighchartsLangAccessibilityAnnounceNewDataOptions(
+      {this.newDataAnnounce,
+      this.newPointAnnounceMultiple,
+      this.newPointAnnounceSingle,
+      this.newSeriesAnnounceMultiple,
+      this.newSeriesAnnounceSingle});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (newDataAnnounce != null) {
-      buffer.writeAll(['"newDataAnnounce":', jsonEncode(newDataAnnounce), ','], '');
+      buffer.writeAll(
+          ['"newDataAnnounce":', jsonEncode(newDataAnnounce), ','], '');
     }
     if (newPointAnnounceMultiple != null) {
-      buffer.writeAll(['"newPointAnnounceMultiple":', jsonEncode(newPointAnnounceMultiple), ','], '');
+      buffer.writeAll([
+        '"newPointAnnounceMultiple":',
+        jsonEncode(newPointAnnounceMultiple),
+        ','
+      ], '');
     }
     if (newPointAnnounceSingle != null) {
-      buffer.writeAll(['"newPointAnnounceSingle":', jsonEncode(newPointAnnounceSingle), ','], '');
+      buffer.writeAll([
+        '"newPointAnnounceSingle":',
+        jsonEncode(newPointAnnounceSingle),
+        ','
+      ], '');
     }
     if (newSeriesAnnounceMultiple != null) {
-      buffer.writeAll(['"newSeriesAnnounceMultiple":', jsonEncode(newSeriesAnnounceMultiple), ','], '');
+      buffer.writeAll([
+        '"newSeriesAnnounceMultiple":',
+        jsonEncode(newSeriesAnnounceMultiple),
+        ','
+      ], '');
     }
     if (newSeriesAnnounceSingle != null) {
-      buffer.writeAll(['"newSeriesAnnounceSingle":', jsonEncode(newSeriesAnnounceSingle), ','], '');
+      buffer.writeAll([
+        '"newSeriesAnnounceSingle":',
+        jsonEncode(newSeriesAnnounceSingle),
+        ','
+      ], '');
     }
   }
-
 }

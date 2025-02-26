@@ -8,19 +8,16 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_series_drag_drop_drag_handle_options.dart';
 import 'highcharts_series_drag_drop_guide_box_options.dart';
-
 
 /* *
  *
@@ -28,17 +25,14 @@ import 'highcharts_series_drag_drop_guide_box_options.dart';
  *
  * */
 
-
 export 'highcharts_series_drag_drop_drag_handle_options.dart';
 export 'highcharts_series_drag_drop_guide_box_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * The draggable-points module allows points to be moved around or modified in
@@ -49,7 +43,6 @@ export 'highcharts_series_drag_drop_guide_box_options.dart';
  * [point.drop](plotOptions.series.point.events.drop).
  */
 class HighchartsSeriesDragDropOptions extends HighchartsOptionsBase {
-
   HighchartsSeriesDragDropDragHandleOptions? dragHandle;
   dynamic dragMaxX;
   double? dragMaxY;
@@ -64,27 +57,24 @@ class HighchartsSeriesDragDropOptions extends HighchartsOptionsBase {
   HighchartsSeriesDragDropGuideBoxOptions? guideBox;
   bool? liveRedraw;
 
-
-  HighchartsSeriesDragDropOptions({
-    this.dragHandle,
-    this.dragMaxX,
-    this.dragMaxY,
-    this.dragMinX,
-    this.dragMinY,
-    this.dragPrecisionX,
-    this.dragPrecisionY,
-    this.dragSensitivity,
-    this.draggableX,
-    this.draggableY,
-    this.groupBy,
-    this.guideBox,
-    this.liveRedraw
-  });
+  HighchartsSeriesDragDropOptions(
+      {this.dragHandle,
+      this.dragMaxX,
+      this.dragMaxY,
+      this.dragMinX,
+      this.dragMinY,
+      this.dragPrecisionX,
+      this.dragPrecisionY,
+      this.dragSensitivity,
+      this.draggableX,
+      this.draggableY,
+      this.groupBy,
+      this.guideBox,
+      this.liveRedraw});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (dragHandle != null) {
       buffer.writeAll(['"dragHandle":', dragHandle?.toJSON(), ','], '');
@@ -126,5 +116,4 @@ class HighchartsSeriesDragDropOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"liveRedraw":', liveRedraw, ','], '');
     }
   }
-
 }

@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,38 +23,28 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Sonification point grouping options for this series.
  */
-class HighchartsSeriesSonificationPointGroupingOptions extends HighchartsOptionsBase {
-
+class HighchartsSeriesSonificationPointGroupingOptions
+    extends HighchartsOptionsBase {
   String? algorithm;
   bool? enabled;
   double? groupTimespan;
   String? prop;
 
-
-  HighchartsSeriesSonificationPointGroupingOptions({
-    this.algorithm,
-    this.enabled,
-    this.groupTimespan,
-    this.prop
-  });
+  HighchartsSeriesSonificationPointGroupingOptions(
+      {this.algorithm, this.enabled, this.groupTimespan, this.prop});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (algorithm != null) {
       buffer.writeAll(['"algorithm":', jsonEncode(algorithm), ','], '');
@@ -72,5 +59,4 @@ class HighchartsSeriesSonificationPointGroupingOptions extends HighchartsOptions
       buffer.writeAll(['"prop":', jsonEncode(prop), ','], '');
     }
   }
-
 }

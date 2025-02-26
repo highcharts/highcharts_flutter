@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_tooltip_date_time_label_formats_options.dart';
-
 
 /* *
  *
@@ -27,9 +24,7 @@ import 'highcharts_tooltip_date_time_label_formats_options.dart';
  *
  * */
 
-
 export 'highcharts_tooltip_date_time_label_formats_options.dart';
-
 
 /* *
  *
@@ -37,14 +32,12 @@ export 'highcharts_tooltip_date_time_label_formats_options.dart';
  *
  * */
 
-
 /**
  * A configuration object for the tooltip rendering of each single
  * series. Properties are inherited from [tooltip](#tooltip), but only
  * the following properties can be defined on a series level.
  */
 class HighchartsSeriesTooltipOptions extends HighchartsOptionsBase {
-
   double? changeDecimals;
   String? clusterFormat;
   HighchartsTooltipDateTimeLabelFormatsOptions? dateTimeLabelFormats;
@@ -63,31 +56,28 @@ class HighchartsSeriesTooltipOptions extends HighchartsOptionsBase {
   String? valueSuffix;
   String? xDateFormat;
 
-
-  HighchartsSeriesTooltipOptions({
-    this.changeDecimals,
-    this.clusterFormat,
-    this.dateTimeLabelFormats,
-    this.distance,
-    this.followPointer,
-    this.followTouchMove,
-    this.footerFormat,
-    this.format,
-    this.headerFormat,
-    this.nullFormat,
-    this.nullFormatter,
-    this.pointFormat,
-    this.pointFormatter,
-    this.valueDecimals,
-    this.valuePrefix,
-    this.valueSuffix,
-    this.xDateFormat
-  });
+  HighchartsSeriesTooltipOptions(
+      {this.changeDecimals,
+      this.clusterFormat,
+      this.dateTimeLabelFormats,
+      this.distance,
+      this.followPointer,
+      this.followTouchMove,
+      this.footerFormat,
+      this.format,
+      this.headerFormat,
+      this.nullFormat,
+      this.nullFormatter,
+      this.pointFormat,
+      this.pointFormatter,
+      this.valueDecimals,
+      this.valuePrefix,
+      this.valueSuffix,
+      this.xDateFormat});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (changeDecimals != null) {
       buffer.writeAll(['"changeDecimals":', changeDecimals, ','], '');
@@ -96,7 +86,8 @@ class HighchartsSeriesTooltipOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"clusterFormat":', jsonEncode(clusterFormat), ','], '');
     }
     if (dateTimeLabelFormats != null) {
-      buffer.writeAll(['"dateTimeLabelFormats":', dateTimeLabelFormats?.toJSON(), ','], '');
+      buffer.writeAll(
+          ['"dateTimeLabelFormats":', dateTimeLabelFormats?.toJSON(), ','], '');
     }
     if (distance != null) {
       buffer.writeAll(['"distance":', distance, ','], '');
@@ -126,7 +117,8 @@ class HighchartsSeriesTooltipOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"pointFormat":', jsonEncode(pointFormat), ','], '');
     }
     if (pointFormatter != null) {
-      buffer.writeAll(['"pointFormatter":', jsonEncode(pointFormatter), ','], '');
+      buffer
+          .writeAll(['"pointFormatter":', jsonEncode(pointFormatter), ','], '');
     }
     if (valueDecimals != null) {
       buffer.writeAll(['"valueDecimals":', valueDecimals, ','], '');
@@ -141,5 +133,4 @@ class HighchartsSeriesTooltipOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"xDateFormat":', jsonEncode(xDateFormat), ','], '');
     }
   }
-
 }

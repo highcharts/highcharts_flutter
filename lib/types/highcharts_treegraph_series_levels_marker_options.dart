@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_series_marker_states_options.dart';
-
 
 /* *
  *
@@ -27,9 +24,7 @@ import 'highcharts_series_marker_states_options.dart';
  *
  * */
 
-
 export 'highcharts_series_marker_states_options.dart';
-
 
 /* *
  *
@@ -37,12 +32,11 @@ export 'highcharts_series_marker_states_options.dart';
  *
  * */
 
-
 /**
  * Set marker options for nodes at the level.
  */
-class HighchartsTreegraphSeriesLevelsMarkerOptions extends HighchartsOptionsBase {
-
+class HighchartsTreegraphSeriesLevelsMarkerOptions
+    extends HighchartsOptionsBase {
   String? fillColor;
   double? height;
   String? lineColor;
@@ -52,22 +46,19 @@ class HighchartsTreegraphSeriesLevelsMarkerOptions extends HighchartsOptionsBase
   String? symbol;
   double? width;
 
-
-  HighchartsTreegraphSeriesLevelsMarkerOptions({
-    this.fillColor,
-    this.height,
-    this.lineColor,
-    this.lineWidth,
-    this.radius,
-    this.states,
-    this.symbol,
-    this.width
-  });
+  HighchartsTreegraphSeriesLevelsMarkerOptions(
+      {this.fillColor,
+      this.height,
+      this.lineColor,
+      this.lineWidth,
+      this.radius,
+      this.states,
+      this.symbol,
+      this.width});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (fillColor != null) {
       buffer.writeAll(['"fillColor":', jsonEncode(fillColor), ','], '');
@@ -94,5 +85,4 @@ class HighchartsTreegraphSeriesLevelsMarkerOptions extends HighchartsOptionsBase
       buffer.writeAll(['"width":', width, ','], '');
     }
   }
-
 }

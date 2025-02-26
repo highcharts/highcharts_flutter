@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_stock_tools_gui_definitions_options.dart';
-
 
 /* *
  *
@@ -27,9 +24,7 @@ import 'highcharts_stock_tools_gui_definitions_options.dart';
  *
  * */
 
-
 export 'highcharts_stock_tools_gui_definitions_options.dart';
-
 
 /* *
  *
@@ -37,12 +32,10 @@ export 'highcharts_stock_tools_gui_definitions_options.dart';
  *
  * */
 
-
 /**
  * Definitions of buttons in Stock Tools GUI.
  */
 class HighchartsStockToolsGuiOptions extends HighchartsOptionsBase {
-
   List<String>? buttons;
   String? className;
   HighchartsStockToolsGuiDefinitionsOptions? definitions;
@@ -51,21 +44,18 @@ class HighchartsStockToolsGuiOptions extends HighchartsOptionsBase {
   String? toolbarClassName;
   bool? visible;
 
-
-  HighchartsStockToolsGuiOptions({
-    this.buttons,
-    this.className,
-    this.definitions,
-    this.enabled,
-    this.iconsURL,
-    this.toolbarClassName,
-    this.visible
-  });
+  HighchartsStockToolsGuiOptions(
+      {this.buttons,
+      this.className,
+      this.definitions,
+      this.enabled,
+      this.iconsURL,
+      this.toolbarClassName,
+      this.visible});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (buttons != null) {
       buffer.write('"buttons":[');
@@ -87,11 +77,11 @@ class HighchartsStockToolsGuiOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"iconsURL":', jsonEncode(iconsURL), ','], '');
     }
     if (toolbarClassName != null) {
-      buffer.writeAll(['"toolbarClassName":', jsonEncode(toolbarClassName), ','], '');
+      buffer.writeAll(
+          ['"toolbarClassName":', jsonEncode(toolbarClassName), ','], '');
     }
     if (visible != null) {
       buffer.writeAll(['"visible":', visible, ','], '');
     }
   }
-
 }

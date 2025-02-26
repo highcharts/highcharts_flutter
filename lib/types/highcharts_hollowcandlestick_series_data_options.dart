@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -23,26 +21,22 @@ import 'highcharts_hollowcandlestick_series_data_data_labels_options.dart';
 import 'highcharts_hollowcandlestick_series_data_drag_drop_options.dart';
 import 'highcharts_hollowcandlestick_series_data_events_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_hollowcandlestick_series_data_accessibility_options.dart';
 export 'highcharts_hollowcandlestick_series_data_data_labels_options.dart';
 export 'highcharts_hollowcandlestick_series_data_drag_drop_options.dart';
 export 'highcharts_hollowcandlestick_series_data_events_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * An array of data points for the series. For the `hollowcandlestick` series
@@ -88,8 +82,8 @@ export 'highcharts_hollowcandlestick_series_data_events_options.dart';
  *    }]
  *    ```
  */
-class HighchartsHollowcandlestickSeriesDataOptions extends HighchartsOptionsBase {
-
+class HighchartsHollowcandlestickSeriesDataOptions
+    extends HighchartsOptionsBase {
   HighchartsHollowcandlestickSeriesDataAccessibilityOptions? accessibility;
   double? close;
   String? color;
@@ -106,29 +100,26 @@ class HighchartsHollowcandlestickSeriesDataOptions extends HighchartsOptionsBase
   bool? selected;
   dynamic x;
 
-
-  HighchartsHollowcandlestickSeriesDataOptions({
-    this.accessibility,
-    this.close,
-    this.color,
-    this.custom,
-    this.dataLabels,
-    this.description,
-    this.dragDrop,
-    this.events,
-    this.high,
-    this.id,
-    this.labelrank,
-    this.low,
-    this.open,
-    this.selected,
-    this.x
-  });
+  HighchartsHollowcandlestickSeriesDataOptions(
+      {this.accessibility,
+      this.close,
+      this.color,
+      this.custom,
+      this.dataLabels,
+      this.description,
+      this.dragDrop,
+      this.events,
+      this.high,
+      this.id,
+      this.labelrank,
+      this.low,
+      this.open,
+      this.selected,
+      this.x});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (accessibility != null) {
       buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ','], '');
@@ -180,5 +171,4 @@ class HighchartsHollowcandlestickSeriesDataOptions extends HighchartsOptionsBase
       buffer.writeAll(['"x":', jsonEncode(x), ','], '');
     }
   }
-
 }

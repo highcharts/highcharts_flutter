@@ -8,17 +8,13 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,33 +22,23 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 class HighchartsMapLineSeriesStatesHoverOptions extends HighchartsOptionsBase {
-
   double? lineWidth;
 
-
-  HighchartsMapLineSeriesStatesHoverOptions({
-    this.lineWidth
-  });
+  HighchartsMapLineSeriesStatesHoverOptions({this.lineWidth});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (lineWidth != null) {
       buffer.writeAll(['"lineWidth":', lineWidth, ','], '');
     }
   }
-
 }

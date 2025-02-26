@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,21 +23,16 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Set up event handlers for the sonification
  */
 class HighchartsSonificationEventsOptions extends HighchartsOptionsBase {
-
   dynamic afterUpdate;
   dynamic beforePlay;
   dynamic beforeUpdate;
@@ -51,23 +43,20 @@ class HighchartsSonificationEventsOptions extends HighchartsOptionsBase {
   dynamic onSeriesStart;
   dynamic onStop;
 
-
-  HighchartsSonificationEventsOptions({
-    this.afterUpdate,
-    this.beforePlay,
-    this.beforeUpdate,
-    this.onBoundaryHit,
-    this.onEnd,
-    this.onPlay,
-    this.onSeriesEnd,
-    this.onSeriesStart,
-    this.onStop
-  });
+  HighchartsSonificationEventsOptions(
+      {this.afterUpdate,
+      this.beforePlay,
+      this.beforeUpdate,
+      this.onBoundaryHit,
+      this.onEnd,
+      this.onPlay,
+      this.onSeriesEnd,
+      this.onSeriesStart,
+      this.onStop});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (afterUpdate != null) {
       buffer.writeAll(['"afterUpdate":', jsonEncode(afterUpdate), ','], '');
@@ -97,5 +86,4 @@ class HighchartsSonificationEventsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"onStop":', jsonEncode(onStop), ','], '');
     }
   }
-
 }

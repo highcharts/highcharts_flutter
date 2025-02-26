@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +23,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * CSS styles for the label.
@@ -43,24 +36,17 @@ import 'highcharts_options_base.dart';
  * `.highcharts-stack-label` class.
  */
 class HighchartsYAxisStackLabelsStyleOptions extends HighchartsOptionsBase {
-
   String? color;
   dynamic fontSize;
   String? fontWeight;
   dynamic textOutline;
 
-
-  HighchartsYAxisStackLabelsStyleOptions({
-    this.color,
-    this.fontSize,
-    this.fontWeight,
-    this.textOutline
-  });
+  HighchartsYAxisStackLabelsStyleOptions(
+      {this.color, this.fontSize, this.fontWeight, this.textOutline});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (color != null) {
       buffer.writeAll(['"color":', jsonEncode(color), ','], '');
@@ -75,5 +61,4 @@ class HighchartsYAxisStackLabelsStyleOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"textOutline":', jsonEncode(textOutline), ','], '');
     }
   }
-
 }

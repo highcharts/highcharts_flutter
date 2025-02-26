@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -23,26 +21,22 @@ import 'highcharts_gauge_series_data_data_labels_options.dart';
 import 'highcharts_gauge_series_data_drag_drop_options.dart';
 import 'highcharts_gauge_series_data_events_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_gauge_series_data_accessibility_options.dart';
 export 'highcharts_gauge_series_data_data_labels_options.dart';
 export 'highcharts_gauge_series_data_drag_drop_options.dart';
 export 'highcharts_gauge_series_data_events_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * An array of data points for the series. For the `gauge` series type,
@@ -74,7 +68,6 @@ export 'highcharts_gauge_series_data_events_options.dart';
  * The typical gauge only contains a single data value.
  */
 class HighchartsGaugeSeriesDataOptions extends HighchartsOptionsBase {
-
   HighchartsGaugeSeriesDataAccessibilityOptions? accessibility;
   String? className;
   String? color;
@@ -89,27 +82,24 @@ class HighchartsGaugeSeriesDataOptions extends HighchartsOptionsBase {
   bool? selected;
   double? y;
 
-
-  HighchartsGaugeSeriesDataOptions({
-    this.accessibility,
-    this.className,
-    this.color,
-    this.colorIndex,
-    this.custom,
-    this.dataLabels,
-    this.description,
-    this.dragDrop,
-    this.events,
-    this.id,
-    this.labelrank,
-    this.selected,
-    this.y
-  });
+  HighchartsGaugeSeriesDataOptions(
+      {this.accessibility,
+      this.className,
+      this.color,
+      this.colorIndex,
+      this.custom,
+      this.dataLabels,
+      this.description,
+      this.dragDrop,
+      this.events,
+      this.id,
+      this.labelrank,
+      this.selected,
+      this.y});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (accessibility != null) {
       buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ','], '');
@@ -159,5 +149,4 @@ class HighchartsGaugeSeriesDataOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"y":', y, ','], '');
     }
   }
-
 }

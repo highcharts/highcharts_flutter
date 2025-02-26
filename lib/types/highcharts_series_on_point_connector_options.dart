@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +23,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * Options for the connector in the _Series on point_ feature.
@@ -43,22 +36,16 @@ import 'highcharts_options_base.dart';
  * `.highcharts-connector-seriesonpoint` class name.
  */
 class HighchartsSeriesOnPointConnectorOptions extends HighchartsOptionsBase {
-
   String? dashstyle;
   String? stroke;
   double? width;
 
-
-  HighchartsSeriesOnPointConnectorOptions({
-    this.dashstyle,
-    this.stroke,
-    this.width
-  });
+  HighchartsSeriesOnPointConnectorOptions(
+      {this.dashstyle, this.stroke, this.width});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (dashstyle != null) {
       buffer.writeAll(['"dashstyle":', jsonEncode(dashstyle), ','], '');
@@ -70,5 +57,4 @@ class HighchartsSeriesOnPointConnectorOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"width":', width, ','], '');
     }
   }
-
 }

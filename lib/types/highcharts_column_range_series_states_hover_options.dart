@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_series_states_hover_animation_options.dart';
-
 
 /* *
  *
@@ -27,9 +24,7 @@ import 'highcharts_series_states_hover_animation_options.dart';
  *
  * */
 
-
 export 'highcharts_series_states_hover_animation_options.dart';
-
 
 /* *
  *
@@ -37,28 +32,24 @@ export 'highcharts_series_states_hover_animation_options.dart';
  *
  * */
 
-
-class HighchartsColumnRangeSeriesStatesHoverOptions extends HighchartsOptionsBase {
-
+class HighchartsColumnRangeSeriesStatesHoverOptions
+    extends HighchartsOptionsBase {
   HighchartsSeriesStatesHoverAnimationOptions? animation;
   String? borderColor;
   double? brightness;
   String? color;
   bool? enabled;
 
-
-  HighchartsColumnRangeSeriesStatesHoverOptions({
-    this.animation,
-    this.borderColor,
-    this.brightness,
-    this.color,
-    this.enabled
-  });
+  HighchartsColumnRangeSeriesStatesHoverOptions(
+      {this.animation,
+      this.borderColor,
+      this.brightness,
+      this.color,
+      this.enabled});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (animation != null) {
       buffer.writeAll(['"animation":', animation?.toJSON(), ','], '');
@@ -76,5 +67,4 @@ class HighchartsColumnRangeSeriesStatesHoverOptions extends HighchartsOptionsBas
       buffer.writeAll(['"enabled":', enabled, ','], '');
     }
   }
-
 }

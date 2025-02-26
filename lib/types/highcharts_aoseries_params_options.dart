@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,31 +23,21 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 class HighchartsAOSeriesParamsOptions extends HighchartsOptionsBase {
-
   String? index;
   String? period;
 
-
-  HighchartsAOSeriesParamsOptions({
-    this.index,
-    this.period
-  });
+  HighchartsAOSeriesParamsOptions({this.index, this.period});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (index != null) {
       buffer.writeAll(['"index":', jsonEncode(index), ','], '');
@@ -59,5 +46,4 @@ class HighchartsAOSeriesParamsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"period":', jsonEncode(period), ','], '');
     }
   }
-
 }

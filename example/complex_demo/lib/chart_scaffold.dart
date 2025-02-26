@@ -11,18 +11,15 @@
  *
  */
 
-
 import 'package:flutter/material.dart';
 
 import 'package:highcharts_flutter/highcharts.dart';
-
 
 /* *
  *
  *  Constants
  *
  * */
-
 
 const Map<String, Function> kSeriesTypeMap = {
   'Area': area,
@@ -35,23 +32,29 @@ const Map<String, Function> kSeriesTypeMap = {
   'Spline': spline,
 };
 
-
 /* *
  *
  *  Functions
  *
  * */
 
-
-HighchartsAreaSeries area({List<List<dynamic>>? data, String? name}) => HighchartsAreaSeries(data: data, name: name);
-HighchartsAreaSplineSeries areaspline({List<List<dynamic>>? data, String? name}) => HighchartsAreaSplineSeries(data: data, name: name);
-HighchartsBarSeries bar({List<List<dynamic>>? data, String? name}) => HighchartsBarSeries(data: data, name: name);
-HighchartsColumnSeries column({List<List<dynamic>>? data, String? name}) => HighchartsColumnSeries(data: data, name: name);
-HighchartsLineSeries line({List<List<dynamic>>? data, String? name}) => HighchartsLineSeries(data: data, name: name);
-HighchartsPieSeries pie({List<List<dynamic>>? data, String? name}) => HighchartsPieSeries(data: data, name: name);
-HighchartsScatterSeries scatter({List<List<dynamic>>? data, String? name}) => HighchartsScatterSeries(data: data, name: name);
-HighchartsSplineSeries spline({List<List<dynamic>>? data, String? name}) => HighchartsSplineSeries(data: data, name: name);
-
+HighchartsAreaSeries area({List<List<dynamic>>? data, String? name}) =>
+    HighchartsAreaSeries(data: data, name: name);
+HighchartsAreaSplineSeries areaspline(
+        {List<List<dynamic>>? data, String? name}) =>
+    HighchartsAreaSplineSeries(data: data, name: name);
+HighchartsBarSeries bar({List<List<dynamic>>? data, String? name}) =>
+    HighchartsBarSeries(data: data, name: name);
+HighchartsColumnSeries column({List<List<dynamic>>? data, String? name}) =>
+    HighchartsColumnSeries(data: data, name: name);
+HighchartsLineSeries line({List<List<dynamic>>? data, String? name}) =>
+    HighchartsLineSeries(data: data, name: name);
+HighchartsPieSeries pie({List<List<dynamic>>? data, String? name}) =>
+    HighchartsPieSeries(data: data, name: name);
+HighchartsScatterSeries scatter({List<List<dynamic>>? data, String? name}) =>
+    HighchartsScatterSeries(data: data, name: name);
+HighchartsSplineSeries spline({List<List<dynamic>>? data, String? name}) =>
+    HighchartsSplineSeries(data: data, name: name);
 
 /* *
  *
@@ -59,9 +62,7 @@ HighchartsSplineSeries spline({List<List<dynamic>>? data, String? name}) => High
  *
  * */
 
-
 class ChartScaffold extends StatefulWidget {
-
   const ChartScaffold({
     super.key,
     required this.data,
@@ -80,12 +81,9 @@ class ChartScaffold extends StatefulWidget {
 
   @override
   State<ChartScaffold> createState() => _ChartScaffoldState();
-
 }
 
-
 class _ChartScaffoldState extends State<ChartScaffold> {
-
   late final HighchartsChart _chart;
 
   String? _seriesType;
@@ -99,16 +97,11 @@ class _ChartScaffoldState extends State<ChartScaffold> {
       return;
     }
 
-    _chart.options.series = [
-      series(
-        data: widget.data
-      )
-    ];
+    _chart.options.series = [series(data: widget.data)];
 
     if (init != true) {
       _chart.refresh();
     }
-
   }
 
   void _setTitleAlign(String? align) {
@@ -118,12 +111,10 @@ class _ChartScaffoldState extends State<ChartScaffold> {
     options.title?.align = align ?? options.title?.align;
 
     _chart.refresh();
-
   }
 
   @override
   void initState() {
-
     super.initState();
 
     var options = widget.options ?? HighchartsOptions();
@@ -139,15 +130,12 @@ class _ChartScaffoldState extends State<ChartScaffold> {
     options.subtitle?.text = options.subtitle?.text ?? widget.subtitle;
 
     options.xAxis = options.xAxis ?? [HighchartsXAxisOptions()];
-    options.xAxis?[0].type = (
-      options.xAxis?[0].type ??
-      (widget.data[0][0] is String ? 'category' : 'linear')
-    );
+    options.xAxis?[0].type = (options.xAxis?[0].type ??
+        (widget.data[0][0] is String ? 'category' : 'linear'));
 
     _chart = HighchartsChart(options);
 
     _setSeriesType('Bar', true);
-
   }
 
   @override
@@ -157,39 +145,36 @@ class _ChartScaffoldState extends State<ChartScaffold> {
         padding: const EdgeInsets.all(21),
         children: <Widget>[
           _chart,
-          const SizedBox(
-            height: 21
-          ),
+          const SizedBox(height: 21),
           Wrap(
             runSpacing: 10.5,
             spacing: 21,
             children: ['Left', 'Center', 'Right']
-              .map((align) => ChoiceChip(
-                onSelected: (_) => setState(() => _setTitleAlign(align.toLowerCase())),
-                selected: _chart.options.title?.align == align.toLowerCase(),
-                label: Text(align),
-              ))
-              .toList(),
+                .map((align) => ChoiceChip(
+                      onSelected: (_) =>
+                          setState(() => _setTitleAlign(align.toLowerCase())),
+                      selected:
+                          _chart.options.title?.align == align.toLowerCase(),
+                      label: Text(align),
+                    ))
+                .toList(),
           ),
-          const SizedBox(
-            height: 21
-          ),
+          const SizedBox(height: 21),
           DropdownMenu<String>(
             initialSelection: _seriesType,
             key: UniqueKey(),
             width: double.infinity,
-            onSelected: (seriesType) => setState(() => _setSeriesType(seriesType)),
-            dropdownMenuEntries: kSeriesTypeMap
-              .keys
-              .map((seriesType) => DropdownMenuEntry(
-                label: seriesType,
-                value: seriesType,
-              ))
-              .toList(),
+            onSelected: (seriesType) =>
+                setState(() => _setSeriesType(seriesType)),
+            dropdownMenuEntries: kSeriesTypeMap.keys
+                .map((seriesType) => DropdownMenuEntry(
+                      label: seriesType,
+                      value: seriesType,
+                    ))
+                .toList(),
           ),
         ],
       ),
     );
   }
-
 }

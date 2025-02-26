@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,21 +23,17 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Connector options.
  */
-class HighchartsAnnotationsVerticalLineTypeConnectorOptions extends HighchartsOptionsBase {
-
+class HighchartsAnnotationsVerticalLineTypeConnectorOptions
+    extends HighchartsOptionsBase {
   String? markerEnd;
   double? strokeWidth;
   String? dashStyle;
@@ -52,24 +45,21 @@ class HighchartsAnnotationsVerticalLineTypeConnectorOptions extends HighchartsOp
   double? xAxis;
   double? yAxis;
 
-
-  HighchartsAnnotationsVerticalLineTypeConnectorOptions({
-    this.markerEnd,
-    this.strokeWidth,
-    this.dashStyle,
-    this.fill,
-    this.ry,
-    this.snap,
-    this.src,
-    this.stroke,
-    this.xAxis,
-    this.yAxis
-  });
+  HighchartsAnnotationsVerticalLineTypeConnectorOptions(
+      {this.markerEnd,
+      this.strokeWidth,
+      this.dashStyle,
+      this.fill,
+      this.ry,
+      this.snap,
+      this.src,
+      this.stroke,
+      this.xAxis,
+      this.yAxis});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (markerEnd != null) {
       buffer.writeAll(['"markerEnd":', jsonEncode(markerEnd), ','], '');
@@ -106,5 +96,4 @@ class HighchartsAnnotationsVerticalLineTypeConnectorOptions extends HighchartsOp
       buffer.writeAll(['"yAxis":', yAxis, ','], '');
     }
   }
-
 }

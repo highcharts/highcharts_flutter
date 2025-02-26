@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_navigation_button_theme_options.dart';
-
 
 /* *
  *
@@ -27,16 +24,13 @@ import 'highcharts_navigation_button_theme_options.dart';
  *
  * */
 
-
 export 'highcharts_navigation_button_theme_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * A collection of options for buttons appearing in the exporting
@@ -46,7 +40,6 @@ export 'highcharts_navigation_button_theme_options.dart';
  * `.highcharts-contextbutton` and `.highcharts-button-symbol` classes.
  */
 class HighchartsNavigationButtonOptions extends HighchartsOptionsBase {
-
   String? align;
   double? buttonSpacing;
   bool? enabled;
@@ -64,30 +57,27 @@ class HighchartsNavigationButtonOptions extends HighchartsOptionsBase {
   double? width;
   double? y;
 
-
-  HighchartsNavigationButtonOptions({
-    this.align,
-    this.buttonSpacing,
-    this.enabled,
-    this.height,
-    this.symbolFill,
-    this.symbolSize,
-    this.symbolStroke,
-    this.symbolStrokeWidth,
-    this.symbolX,
-    this.symbolY,
-    this.text,
-    this.theme,
-    this.useHTML,
-    this.verticalAlign,
-    this.width,
-    this.y
-  });
+  HighchartsNavigationButtonOptions(
+      {this.align,
+      this.buttonSpacing,
+      this.enabled,
+      this.height,
+      this.symbolFill,
+      this.symbolSize,
+      this.symbolStroke,
+      this.symbolStrokeWidth,
+      this.symbolX,
+      this.symbolY,
+      this.text,
+      this.theme,
+      this.useHTML,
+      this.verticalAlign,
+      this.width,
+      this.y});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (align != null) {
       buffer.writeAll(['"align":', jsonEncode(align), ','], '');
@@ -142,5 +132,4 @@ class HighchartsNavigationButtonOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"y":', y, ','], '');
     }
   }
-
 }

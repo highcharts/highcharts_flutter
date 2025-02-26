@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,36 +23,25 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * The top of the frame around a 3D chart.
  */
 class HighchartsChart3DFrameTopOptions extends HighchartsOptionsBase {
-
   String? color;
   double? size;
   String? visible;
 
-
-  HighchartsChart3DFrameTopOptions({
-    this.color,
-    this.size,
-    this.visible
-  });
+  HighchartsChart3DFrameTopOptions({this.color, this.size, this.visible});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (color != null) {
       buffer.writeAll(['"color":', jsonEncode(color), ','], '');
@@ -67,5 +53,4 @@ class HighchartsChart3DFrameTopOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"visible":', jsonEncode(visible), ','], '');
     }
   }
-
 }

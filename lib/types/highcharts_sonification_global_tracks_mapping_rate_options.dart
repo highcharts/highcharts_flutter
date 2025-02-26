@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,21 +23,17 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Rate mapping for speech tracks.
  */
-class HighchartsSonificationGlobalTracksMappingRateOptions extends HighchartsOptionsBase {
-
+class HighchartsSonificationGlobalTracksMappingRateOptions
+    extends HighchartsOptionsBase {
   String? mapFunction;
   String? mapTo;
   double? max;
@@ -48,20 +41,17 @@ class HighchartsSonificationGlobalTracksMappingRateOptions extends HighchartsOpt
   double? value;
   String? within;
 
-
-  HighchartsSonificationGlobalTracksMappingRateOptions({
-    this.mapFunction,
-    this.mapTo,
-    this.max,
-    this.min,
-    this.value,
-    this.within
-  });
+  HighchartsSonificationGlobalTracksMappingRateOptions(
+      {this.mapFunction,
+      this.mapTo,
+      this.max,
+      this.min,
+      this.value,
+      this.within});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (mapFunction != null) {
       buffer.writeAll(['"mapFunction":', jsonEncode(mapFunction), ','], '');
@@ -82,5 +72,4 @@ class HighchartsSonificationGlobalTracksMappingRateOptions extends HighchartsOpt
       buffer.writeAll(['"within":', jsonEncode(within), ','], '');
     }
   }
-
 }

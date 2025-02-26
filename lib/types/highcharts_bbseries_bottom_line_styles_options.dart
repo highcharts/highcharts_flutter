@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,34 +23,24 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Styles for the bottom line.
  */
 class HighchartsBBSeriesBottomLineStylesOptions extends HighchartsOptionsBase {
-
   String? lineColor;
   double? lineWidth;
 
-
-  HighchartsBBSeriesBottomLineStylesOptions({
-    this.lineColor,
-    this.lineWidth
-  });
+  HighchartsBBSeriesBottomLineStylesOptions({this.lineColor, this.lineWidth});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (lineColor != null) {
       buffer.writeAll(['"lineColor":', jsonEncode(lineColor), ','], '');
@@ -62,5 +49,4 @@ class HighchartsBBSeriesBottomLineStylesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"lineWidth":', lineWidth, ','], '');
     }
   }
-
 }

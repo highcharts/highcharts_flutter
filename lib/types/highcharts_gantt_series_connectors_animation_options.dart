@@ -8,17 +8,13 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,33 +22,24 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
-class HighchartsGanttSeriesConnectorsAnimationOptions extends HighchartsOptionsBase {
-
+class HighchartsGanttSeriesConnectorsAnimationOptions
+    extends HighchartsOptionsBase {
   bool? reversed;
 
-
-  HighchartsGanttSeriesConnectorsAnimationOptions({
-    this.reversed
-  });
+  HighchartsGanttSeriesConnectorsAnimationOptions({this.reversed});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (reversed != null) {
       buffer.writeAll(['"reversed":', reversed, ','], '');
     }
   }
-
 }

@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,33 +23,24 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
-class HighchartsBubbleSeriesStatesHoverHaloOptions extends HighchartsOptionsBase {
-
+class HighchartsBubbleSeriesStatesHoverHaloOptions
+    extends HighchartsOptionsBase {
   double? size;
   dynamic attributes;
   double? opacity;
 
-
-  HighchartsBubbleSeriesStatesHoverHaloOptions({
-    this.size,
-    this.attributes,
-    this.opacity
-  });
+  HighchartsBubbleSeriesStatesHoverHaloOptions(
+      {this.size, this.attributes, this.opacity});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (size != null) {
       buffer.writeAll(['"size":', size, ','], '');
@@ -64,5 +52,4 @@ class HighchartsBubbleSeriesStatesHoverHaloOptions extends HighchartsOptionsBase
       buffer.writeAll(['"opacity":', opacity, ','], '');
     }
   }
-
 }

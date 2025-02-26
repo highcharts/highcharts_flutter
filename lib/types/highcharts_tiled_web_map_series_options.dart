@@ -8,19 +8,16 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_tiled_web_map_series_provider_options.dart';
 import 'highcharts_tiled_web_map_series_states_options.dart';
-
 
 /* *
  *
@@ -28,17 +25,14 @@ import 'highcharts_tiled_web_map_series_states_options.dart';
  *
  * */
 
-
 export 'highcharts_tiled_web_map_series_provider_options.dart';
 export 'highcharts_tiled_web_map_series_states_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * A `tiledwebmap` series. The [type](#series.tiledwebmap.type) option is
@@ -84,7 +78,6 @@ export 'highcharts_tiled_web_map_series_states_options.dart';
  *             
  */
 class HighchartsTiledWebMapSeriesOptions extends HighchartsOptionsBase {
-
   String? id;
   double? index;
   double? legendIndex;
@@ -94,22 +87,19 @@ class HighchartsTiledWebMapSeriesOptions extends HighchartsOptionsBase {
   HighchartsTiledWebMapSeriesProviderOptions? provider;
   HighchartsTiledWebMapSeriesStatesOptions? states;
 
-
-  HighchartsTiledWebMapSeriesOptions({
-    this.id,
-    this.index,
-    this.legendIndex,
-    this.legendSymbol,
-    this.linecap,
-    this.mapData,
-    this.provider,
-    this.states
-  });
+  HighchartsTiledWebMapSeriesOptions(
+      {this.id,
+      this.index,
+      this.legendIndex,
+      this.legendSymbol,
+      this.linecap,
+      this.mapData,
+      this.provider,
+      this.states});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (id != null) {
       buffer.writeAll(['"id":', jsonEncode(id), ','], '');
@@ -140,5 +130,4 @@ class HighchartsTiledWebMapSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"states":', states?.toJSON(), ','], '');
     }
   }
-
 }

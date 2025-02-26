@@ -8,17 +8,13 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,33 +22,23 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 class HighchartsZigzagSeriesParamsOptions extends HighchartsOptionsBase {
-
   double? deviation;
   double? highIndex;
   double? lowIndex;
 
-
-  HighchartsZigzagSeriesParamsOptions({
-    this.deviation,
-    this.highIndex,
-    this.lowIndex
-  });
+  HighchartsZigzagSeriesParamsOptions(
+      {this.deviation, this.highIndex, this.lowIndex});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (deviation != null) {
       buffer.writeAll(['"deviation":', deviation, ','], '');
@@ -64,5 +50,4 @@ class HighchartsZigzagSeriesParamsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"lowIndex":', lowIndex, ','], '');
     }
   }
-
 }

@@ -8,19 +8,16 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_hollowcandlestick_series_drag_drop_drag_handle_options.dart';
 import 'highcharts_series_drag_drop_guide_box_options.dart';
-
 
 /* *
  *
@@ -28,10 +25,8 @@ import 'highcharts_series_drag_drop_guide_box_options.dart';
  *
  * */
 
-
 export 'highcharts_hollowcandlestick_series_drag_drop_drag_handle_options.dart';
 export 'highcharts_series_drag_drop_guide_box_options.dart';
-
 
 /* *
  *
@@ -39,9 +34,8 @@ export 'highcharts_series_drag_drop_guide_box_options.dart';
  *
  * */
 
-
-class HighchartsHollowcandlestickSeriesDragDropOptions extends HighchartsOptionsBase {
-
+class HighchartsHollowcandlestickSeriesDragDropOptions
+    extends HighchartsOptionsBase {
   HighchartsHollowcandlestickSeriesDragDropDragHandleOptions? dragHandle;
   dynamic dragMaxX;
   double? dragMaxY;
@@ -60,31 +54,28 @@ class HighchartsHollowcandlestickSeriesDragDropOptions extends HighchartsOptions
   HighchartsSeriesDragDropGuideBoxOptions? guideBox;
   bool? liveRedraw;
 
-
-  HighchartsHollowcandlestickSeriesDragDropOptions({
-    this.dragHandle,
-    this.dragMaxX,
-    this.dragMaxY,
-    this.dragMinX,
-    this.dragMinY,
-    this.dragPrecisionX,
-    this.dragPrecisionY,
-    this.dragSensitivity,
-    this.draggableClose,
-    this.draggableHigh,
-    this.draggableLow,
-    this.draggableOpen,
-    this.draggableX,
-    this.draggableY,
-    this.groupBy,
-    this.guideBox,
-    this.liveRedraw
-  });
+  HighchartsHollowcandlestickSeriesDragDropOptions(
+      {this.dragHandle,
+      this.dragMaxX,
+      this.dragMaxY,
+      this.dragMinX,
+      this.dragMinY,
+      this.dragPrecisionX,
+      this.dragPrecisionY,
+      this.dragSensitivity,
+      this.draggableClose,
+      this.draggableHigh,
+      this.draggableLow,
+      this.draggableOpen,
+      this.draggableX,
+      this.draggableY,
+      this.groupBy,
+      this.guideBox,
+      this.liveRedraw});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (dragHandle != null) {
       buffer.writeAll(['"dragHandle":', dragHandle?.toJSON(), ','], '');
@@ -138,5 +129,4 @@ class HighchartsHollowcandlestickSeriesDragDropOptions extends HighchartsOptions
       buffer.writeAll(['"liveRedraw":', liveRedraw, ','], '');
     }
   }
-
 }

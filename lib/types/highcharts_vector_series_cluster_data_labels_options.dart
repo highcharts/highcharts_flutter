@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_vector_series_cluster_data_labels_style_options.dart';
-
 
 /* *
  *
@@ -27,9 +24,7 @@ import 'highcharts_vector_series_cluster_data_labels_style_options.dart';
  *
  * */
 
-
 export 'highcharts_vector_series_cluster_data_labels_style_options.dart';
-
 
 /* *
  *
@@ -37,12 +32,11 @@ export 'highcharts_vector_series_cluster_data_labels_style_options.dart';
  *
  * */
 
-
 /**
  * Options for the cluster data labels.
  */
-class HighchartsVectorSeriesClusterDataLabelsOptions extends HighchartsOptionsBase {
-
+class HighchartsVectorSeriesClusterDataLabelsOptions
+    extends HighchartsOptionsBase {
   String? align;
   bool? enabled;
   String? format;
@@ -50,20 +44,17 @@ class HighchartsVectorSeriesClusterDataLabelsOptions extends HighchartsOptionsBa
   HighchartsVectorSeriesClusterDataLabelsStyleOptions? style;
   String? verticalAlign;
 
-
-  HighchartsVectorSeriesClusterDataLabelsOptions({
-    this.align,
-    this.enabled,
-    this.format,
-    this.inside,
-    this.style,
-    this.verticalAlign
-  });
+  HighchartsVectorSeriesClusterDataLabelsOptions(
+      {this.align,
+      this.enabled,
+      this.format,
+      this.inside,
+      this.style,
+      this.verticalAlign});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (align != null) {
       buffer.writeAll(['"align":', jsonEncode(align), ','], '');
@@ -84,5 +75,4 @@ class HighchartsVectorSeriesClusterDataLabelsOptions extends HighchartsOptionsBa
       buffer.writeAll(['"verticalAlign":', jsonEncode(verticalAlign), ','], '');
     }
   }
-
 }

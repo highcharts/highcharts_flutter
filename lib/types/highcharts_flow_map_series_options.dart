@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -22,25 +20,21 @@ import 'highcharts_flow_map_series_marker_end_options.dart';
 import 'highcharts_flow_map_series_states_options.dart';
 import 'highcharts_flow_map_series_tooltip_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_flow_map_series_marker_end_options.dart';
 export 'highcharts_flow_map_series_states_options.dart';
 export 'highcharts_flow_map_series_tooltip_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * A `flowmap` series. If the [type](#series.flowmap.type) option
@@ -86,7 +80,6 @@ export 'highcharts_flow_map_series_tooltip_options.dart';
  *             
  */
 class HighchartsFlowMapSeriesOptions extends HighchartsOptionsBase {
-
   bool? animation;
   bool? colorByPoint;
   String? colorKey;
@@ -112,38 +105,35 @@ class HighchartsFlowMapSeriesOptions extends HighchartsOptionsBase {
   double? weight;
   double? width;
 
-
-  HighchartsFlowMapSeriesOptions({
-    this.animation,
-    this.colorByPoint,
-    this.colorKey,
-    this.colors,
-    this.curveFactor,
-    this.fillColor,
-    this.fillOpacity,
-    this.id,
-    this.index,
-    this.legendIndex,
-    this.legendSymbol,
-    this.lineWidth,
-    this.linecap,
-    this.linkedTo,
-    this.markerEnd,
-    this.maxWidth,
-    this.minWidth,
-    this.nullColor,
-    this.nullInteraction,
-    this.opacity,
-    this.states,
-    this.tooltip,
-    this.weight,
-    this.width
-  });
+  HighchartsFlowMapSeriesOptions(
+      {this.animation,
+      this.colorByPoint,
+      this.colorKey,
+      this.colors,
+      this.curveFactor,
+      this.fillColor,
+      this.fillOpacity,
+      this.id,
+      this.index,
+      this.legendIndex,
+      this.legendSymbol,
+      this.lineWidth,
+      this.linecap,
+      this.linkedTo,
+      this.markerEnd,
+      this.maxWidth,
+      this.minWidth,
+      this.nullColor,
+      this.nullInteraction,
+      this.opacity,
+      this.states,
+      this.tooltip,
+      this.weight,
+      this.width});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (animation != null) {
       buffer.writeAll(['"animation":', animation, ','], '');
@@ -222,5 +212,4 @@ class HighchartsFlowMapSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"width":', width, ','], '');
     }
   }
-
 }

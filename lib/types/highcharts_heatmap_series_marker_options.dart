@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_heatmap_series_marker_states_options.dart';
-
 
 /* *
  *
@@ -27,9 +24,7 @@ import 'highcharts_heatmap_series_marker_states_options.dart';
  *
  * */
 
-
 export 'highcharts_heatmap_series_marker_states_options.dart';
-
 
 /* *
  *
@@ -37,9 +32,7 @@ export 'highcharts_heatmap_series_marker_states_options.dart';
  *
  * */
 
-
 class HighchartsHeatmapSeriesMarkerOptions extends HighchartsOptionsBase {
-
   bool? enabled;
   String? fillColor;
   double? height;
@@ -49,22 +42,19 @@ class HighchartsHeatmapSeriesMarkerOptions extends HighchartsOptionsBase {
   String? symbol;
   double? width;
 
-
-  HighchartsHeatmapSeriesMarkerOptions({
-    this.enabled,
-    this.fillColor,
-    this.height,
-    this.lineColor,
-    this.lineWidth,
-    this.states,
-    this.symbol,
-    this.width
-  });
+  HighchartsHeatmapSeriesMarkerOptions(
+      {this.enabled,
+      this.fillColor,
+      this.height,
+      this.lineColor,
+      this.lineWidth,
+      this.states,
+      this.symbol,
+      this.width});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (enabled != null) {
       buffer.writeAll(['"enabled":', enabled, ','], '');
@@ -91,5 +81,4 @@ class HighchartsHeatmapSeriesMarkerOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"width":', width, ','], '');
     }
   }
-
 }

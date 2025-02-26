@@ -8,18 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
 import 'highcharts_dependency_wheel_series_data_labels_text_path_attributes_options.dart';
-
 
 /* *
  *
@@ -27,9 +23,7 @@ import 'highcharts_dependency_wheel_series_data_labels_text_path_attributes_opti
  *
  * */
 
-
 export 'highcharts_dependency_wheel_series_data_labels_text_path_attributes_options.dart';
-
 
 /* *
  *
@@ -37,22 +31,18 @@ export 'highcharts_dependency_wheel_series_data_labels_text_path_attributes_opti
  *
  * */
 
-
-class HighchartsDependencyWheelSeriesDataLabelsTextPathOptions extends HighchartsOptionsBase {
-
-  HighchartsDependencyWheelSeriesDataLabelsTextPathAttributesOptions? attributes;
+class HighchartsDependencyWheelSeriesDataLabelsTextPathOptions
+    extends HighchartsOptionsBase {
+  HighchartsDependencyWheelSeriesDataLabelsTextPathAttributesOptions?
+      attributes;
   bool? enabled;
 
-
-  HighchartsDependencyWheelSeriesDataLabelsTextPathOptions({
-    this.attributes,
-    this.enabled
-  });
+  HighchartsDependencyWheelSeriesDataLabelsTextPathOptions(
+      {this.attributes, this.enabled});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (attributes != null) {
       buffer.writeAll(['"attributes":', attributes?.toJSON(), ','], '');
@@ -61,5 +51,4 @@ class HighchartsDependencyWheelSeriesDataLabelsTextPathOptions extends Highchart
       buffer.writeAll(['"enabled":', enabled, ','], '');
     }
   }
-
 }

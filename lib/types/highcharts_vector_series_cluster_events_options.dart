@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,33 +23,24 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 class HighchartsVectorSeriesClusterEventsOptions extends HighchartsOptionsBase {
-
   dynamic drillToCluster;
 
-
-  HighchartsVectorSeriesClusterEventsOptions({
-    this.drillToCluster
-  });
+  HighchartsVectorSeriesClusterEventsOptions({this.drillToCluster});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (drillToCluster != null) {
-      buffer.writeAll(['"drillToCluster":', jsonEncode(drillToCluster), ','], '');
+      buffer
+          .writeAll(['"drillToCluster":', jsonEncode(drillToCluster), ','], '');
     }
   }
-
 }

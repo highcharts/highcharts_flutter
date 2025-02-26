@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_global_button_theme_states_select_style_options.dart';
-
 
 /* *
  *
@@ -27,9 +24,7 @@ import 'highcharts_global_button_theme_states_select_style_options.dart';
  *
  * */
 
-
 export 'highcharts_global_button_theme_states_select_style_options.dart';
-
 
 /* *
  *
@@ -37,26 +32,20 @@ export 'highcharts_global_button_theme_states_select_style_options.dart';
  *
  * */
 
-
 /**
  * Select state overrides for the buttons are applied in
  * addition to the normal state options
  */
-class HighchartsGlobalButtonThemeStatesSelectOptions extends HighchartsOptionsBase {
-
+class HighchartsGlobalButtonThemeStatesSelectOptions
+    extends HighchartsOptionsBase {
   String? fill;
   HighchartsGlobalButtonThemeStatesSelectStyleOptions? style;
 
-
-  HighchartsGlobalButtonThemeStatesSelectOptions({
-    this.fill,
-    this.style
-  });
+  HighchartsGlobalButtonThemeStatesSelectOptions({this.fill, this.style});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (fill != null) {
       buffer.writeAll(['"fill":', jsonEncode(fill), ','], '');
@@ -65,5 +54,4 @@ class HighchartsGlobalButtonThemeStatesSelectOptions extends HighchartsOptionsBa
       buffer.writeAll(['"style":', style?.toJSON(), ','], '');
     }
   }
-
 }

@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_tooltip_date_time_label_formats_options.dart';
-
 
 /* *
  *
@@ -27,16 +24,13 @@ import 'highcharts_tooltip_date_time_label_formats_options.dart';
  *
  * */
 
-
 export 'highcharts_tooltip_date_time_label_formats_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * Specific tooltip options for flag series. Flag series tooltips are
@@ -45,7 +39,6 @@ export 'highcharts_tooltip_date_time_label_formats_options.dart';
  * point.
  */
 class HighchartsFlagsSeriesTooltipOptions extends HighchartsOptionsBase {
-
   String? clusterFormat;
   HighchartsTooltipDateTimeLabelFormatsOptions? dateTimeLabelFormats;
   double? distance;
@@ -60,33 +53,31 @@ class HighchartsFlagsSeriesTooltipOptions extends HighchartsOptionsBase {
   dynamic pointFormatter;
   String? xDateFormat;
 
-
-  HighchartsFlagsSeriesTooltipOptions({
-    this.clusterFormat,
-    this.dateTimeLabelFormats,
-    this.distance,
-    this.followPointer,
-    this.followTouchMove,
-    this.footerFormat,
-    this.format,
-    this.headerFormat,
-    this.nullFormat,
-    this.nullFormatter,
-    this.pointFormat,
-    this.pointFormatter,
-    this.xDateFormat
-  });
+  HighchartsFlagsSeriesTooltipOptions(
+      {this.clusterFormat,
+      this.dateTimeLabelFormats,
+      this.distance,
+      this.followPointer,
+      this.followTouchMove,
+      this.footerFormat,
+      this.format,
+      this.headerFormat,
+      this.nullFormat,
+      this.nullFormatter,
+      this.pointFormat,
+      this.pointFormatter,
+      this.xDateFormat});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (clusterFormat != null) {
       buffer.writeAll(['"clusterFormat":', jsonEncode(clusterFormat), ','], '');
     }
     if (dateTimeLabelFormats != null) {
-      buffer.writeAll(['"dateTimeLabelFormats":', dateTimeLabelFormats?.toJSON(), ','], '');
+      buffer.writeAll(
+          ['"dateTimeLabelFormats":', dateTimeLabelFormats?.toJSON(), ','], '');
     }
     if (distance != null) {
       buffer.writeAll(['"distance":', distance, ','], '');
@@ -116,11 +107,11 @@ class HighchartsFlagsSeriesTooltipOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"pointFormat":', jsonEncode(pointFormat), ','], '');
     }
     if (pointFormatter != null) {
-      buffer.writeAll(['"pointFormatter":', jsonEncode(pointFormatter), ','], '');
+      buffer
+          .writeAll(['"pointFormatter":', jsonEncode(pointFormatter), ','], '');
     }
     if (xDateFormat != null) {
       buffer.writeAll(['"xDateFormat":', jsonEncode(xDateFormat), ','], '');
     }
   }
-
 }

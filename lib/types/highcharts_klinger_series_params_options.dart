@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,38 +23,30 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Parameters used in calculation of Klinger Oscillator.
  */
 class HighchartsKlingerSeriesParamsOptions extends HighchartsOptionsBase {
-
   double? fastAvgPeriod;
   double? signalPeriod;
   double? slowAvgPeriod;
   String? volumeSeriesID;
 
-
-  HighchartsKlingerSeriesParamsOptions({
-    this.fastAvgPeriod,
-    this.signalPeriod,
-    this.slowAvgPeriod,
-    this.volumeSeriesID
-  });
+  HighchartsKlingerSeriesParamsOptions(
+      {this.fastAvgPeriod,
+      this.signalPeriod,
+      this.slowAvgPeriod,
+      this.volumeSeriesID});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (fastAvgPeriod != null) {
       buffer.writeAll(['"fastAvgPeriod":', fastAvgPeriod, ','], '');
@@ -69,8 +58,8 @@ class HighchartsKlingerSeriesParamsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"slowAvgPeriod":', slowAvgPeriod, ','], '');
     }
     if (volumeSeriesID != null) {
-      buffer.writeAll(['"volumeSeriesID":', jsonEncode(volumeSeriesID), ','], '');
+      buffer
+          .writeAll(['"volumeSeriesID":', jsonEncode(volumeSeriesID), ','], '');
     }
   }
-
 }

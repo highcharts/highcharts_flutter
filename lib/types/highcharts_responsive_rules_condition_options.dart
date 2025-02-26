@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,40 +23,32 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Under which conditions the rule applies.
  */
 class HighchartsResponsiveRulesConditionOptions extends HighchartsOptionsBase {
-
   dynamic callback;
   double? maxHeight;
   double? maxWidth;
   double? minHeight;
   double? minWidth;
 
-
-  HighchartsResponsiveRulesConditionOptions({
-    this.callback,
-    this.maxHeight,
-    this.maxWidth,
-    this.minHeight,
-    this.minWidth
-  });
+  HighchartsResponsiveRulesConditionOptions(
+      {this.callback,
+      this.maxHeight,
+      this.maxWidth,
+      this.minHeight,
+      this.minWidth});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (callback != null) {
       buffer.writeAll(['"callback":', jsonEncode(callback), ','], '');
@@ -77,5 +66,4 @@ class HighchartsResponsiveRulesConditionOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"minWidth":', minWidth, ','], '');
     }
   }
-
 }

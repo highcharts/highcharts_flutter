@@ -8,17 +8,13 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,35 +22,25 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Parameters used in calculation of Absolute Price Oscillator
  * series points.
  */
 class HighchartsAPOSeriesParamsOptions extends HighchartsOptionsBase {
-
   double? index;
   List<double>? periods;
 
-
-  HighchartsAPOSeriesParamsOptions({
-    this.index,
-    this.periods
-  });
+  HighchartsAPOSeriesParamsOptions({this.index, this.periods});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (index != null) {
       buffer.writeAll(['"index":', index, ','], '');
@@ -67,5 +53,4 @@ class HighchartsAPOSeriesParamsOptions extends HighchartsOptionsBase {
       buffer.write('],');
     }
   }
-
 }

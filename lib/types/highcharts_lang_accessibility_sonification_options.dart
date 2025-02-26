@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,41 +23,38 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Language options for sonification.
  */
-class HighchartsLangAccessibilitySonificationOptions extends HighchartsOptionsBase {
-
+class HighchartsLangAccessibilitySonificationOptions
+    extends HighchartsOptionsBase {
   String? playAsSoundButtonText;
   String? playAsSoundClickAnnouncement;
 
-
-  HighchartsLangAccessibilitySonificationOptions({
-    this.playAsSoundButtonText,
-    this.playAsSoundClickAnnouncement
-  });
+  HighchartsLangAccessibilitySonificationOptions(
+      {this.playAsSoundButtonText, this.playAsSoundClickAnnouncement});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (playAsSoundButtonText != null) {
-      buffer.writeAll(['"playAsSoundButtonText":', jsonEncode(playAsSoundButtonText), ','], '');
+      buffer.writeAll(
+          ['"playAsSoundButtonText":', jsonEncode(playAsSoundButtonText), ','],
+          '');
     }
     if (playAsSoundClickAnnouncement != null) {
-      buffer.writeAll(['"playAsSoundClickAnnouncement":', jsonEncode(playAsSoundClickAnnouncement), ','], '');
+      buffer.writeAll([
+        '"playAsSoundClickAnnouncement":',
+        jsonEncode(playAsSoundClickAnnouncement),
+        ','
+      ], '');
     }
   }
-
 }

@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,33 +23,24 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
-class HighchartsSlowStochasticSeriesParamsOptions extends HighchartsOptionsBase {
-
+class HighchartsSlowStochasticSeriesParamsOptions
+    extends HighchartsOptionsBase {
   String? index;
   String? period;
   List<dynamic>? periods;
 
-
-  HighchartsSlowStochasticSeriesParamsOptions({
-    this.index,
-    this.period,
-    this.periods
-  });
+  HighchartsSlowStochasticSeriesParamsOptions(
+      {this.index, this.period, this.periods});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (index != null) {
       buffer.writeAll(['"index":', jsonEncode(index), ','], '');
@@ -68,5 +56,4 @@ class HighchartsSlowStochasticSeriesParamsOptions extends HighchartsOptionsBase 
       buffer.write('],');
     }
   }
-
 }

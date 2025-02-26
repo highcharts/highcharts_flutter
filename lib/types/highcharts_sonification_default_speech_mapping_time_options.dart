@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,18 +23,14 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
-class HighchartsSonificationDefaultSpeechMappingTimeOptions extends HighchartsOptionsBase {
-
+class HighchartsSonificationDefaultSpeechMappingTimeOptions
+    extends HighchartsOptionsBase {
   String? mapFunction;
   String? mapTo;
   double? max;
@@ -45,20 +38,17 @@ class HighchartsSonificationDefaultSpeechMappingTimeOptions extends HighchartsOp
   double? value;
   String? within;
 
-
-  HighchartsSonificationDefaultSpeechMappingTimeOptions({
-    this.mapFunction,
-    this.mapTo,
-    this.max,
-    this.min,
-    this.value,
-    this.within
-  });
+  HighchartsSonificationDefaultSpeechMappingTimeOptions(
+      {this.mapFunction,
+      this.mapTo,
+      this.max,
+      this.min,
+      this.value,
+      this.within});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (mapFunction != null) {
       buffer.writeAll(['"mapFunction":', jsonEncode(mapFunction), ','], '');
@@ -79,5 +69,4 @@ class HighchartsSonificationDefaultSpeechMappingTimeOptions extends HighchartsOp
       buffer.writeAll(['"within":', jsonEncode(within), ','], '');
     }
   }
-
 }

@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,35 +23,25 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Contains two arrays of axes that are controlled by control line
  * of the axis.
  */
 class HighchartsYAxisResizeControlledAxisOptions extends HighchartsOptionsBase {
-
   List<dynamic>? next;
   List<dynamic>? prev;
 
-
-  HighchartsYAxisResizeControlledAxisOptions({
-    this.next,
-    this.prev
-  });
+  HighchartsYAxisResizeControlledAxisOptions({this.next, this.prev});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (next != null) {
       buffer.write('"next":[');
@@ -71,5 +58,4 @@ class HighchartsYAxisResizeControlledAxisOptions extends HighchartsOptionsBase {
       buffer.write('],');
     }
   }
-
 }

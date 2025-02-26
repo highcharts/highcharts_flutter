@@ -8,7 +8,6 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
@@ -19,23 +18,19 @@ import 'dart:convert';
 import 'highcharts_series.dart';
 import 'highcharts_dependency_wheel_series_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_dependency_wheel_series_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * A `dependencywheel` series. If the [type](#series.dependencywheel.type)
@@ -81,7 +76,6 @@ export 'highcharts_dependency_wheel_series_options.dart';
  *             
  */
 class HighchartsDependencyWheelSeries extends HighchartsSeries {
-
   List<List<dynamic>>? data;
   String? name;
   HighchartsDependencyWheelSeriesOptions? options;
@@ -125,14 +119,13 @@ class HighchartsDependencyWheelSeries extends HighchartsSeries {
       }
 
       buffer.writeAll(['"data":[', seriesData, '],'], '');
-
     } else if (points != null) {
       // Go through the points and write them
       StringBuffer seriesData = StringBuffer();
 
       for (var point in points!) {
         seriesData.writeAll(['{'], '');
-        point.toOptionsJSON(seriesData); 
+        point.toOptionsJSON(seriesData);
         seriesData.writeAll(['},'], '');
       }
 
@@ -147,5 +140,4 @@ class HighchartsDependencyWheelSeries extends HighchartsSeries {
       buffer.writeAll(['"name":', jsonEncode(name), ','], '');
     }
   }
-
 }

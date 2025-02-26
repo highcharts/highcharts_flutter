@@ -8,18 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
 import 'highcharts_abands_series_top_line_styles_options.dart';
-
 
 /* *
  *
@@ -27,9 +23,7 @@ import 'highcharts_abands_series_top_line_styles_options.dart';
  *
  * */
 
-
 export 'highcharts_abands_series_top_line_styles_options.dart';
-
 
 /* *
  *
@@ -37,24 +31,17 @@ export 'highcharts_abands_series_top_line_styles_options.dart';
  *
  * */
 
-
 class HighchartsABandsSeriesTopLineOptions extends HighchartsOptionsBase {
-
   HighchartsABandsSeriesTopLineStylesOptions? styles;
 
-
-  HighchartsABandsSeriesTopLineOptions({
-    this.styles
-  });
+  HighchartsABandsSeriesTopLineOptions({this.styles});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (styles != null) {
       buffer.writeAll(['"styles":', styles?.toJSON(), ','], '');
     }
   }
-
 }

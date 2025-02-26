@@ -8,18 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
 import 'highcharts_aroon_series_aroon_down_styles_options.dart';
-
 
 /* *
  *
@@ -27,9 +23,7 @@ import 'highcharts_aroon_series_aroon_down_styles_options.dart';
  *
  * */
 
-
 export 'highcharts_aroon_series_aroon_down_styles_options.dart';
-
 
 /* *
  *
@@ -37,27 +31,20 @@ export 'highcharts_aroon_series_aroon_down_styles_options.dart';
  *
  * */
 
-
 /**
  * AroonDown line options.
  */
 class HighchartsAroonSeriesAroonDownOptions extends HighchartsOptionsBase {
-
   HighchartsAroonSeriesAroonDownStylesOptions? styles;
 
-
-  HighchartsAroonSeriesAroonDownOptions({
-    this.styles
-  });
+  HighchartsAroonSeriesAroonDownOptions({this.styles});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (styles != null) {
       buffer.writeAll(['"styles":', styles?.toJSON(), ','], '');
     }
   }
-
 }

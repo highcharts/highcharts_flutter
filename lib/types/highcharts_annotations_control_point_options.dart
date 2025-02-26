@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_annotations_control_point_style_options.dart';
-
 
 /* *
  *
@@ -27,16 +24,13 @@ import 'highcharts_annotations_control_point_style_options.dart';
  *
  * */
 
-
 export 'highcharts_annotations_control_point_style_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * Options for annotation's control points. Each control point
@@ -45,7 +39,6 @@ export 'highcharts_annotations_control_point_style_options.dart';
  * by options in a specific control point.
  */
 class HighchartsAnnotationsControlPointOptions extends HighchartsOptionsBase {
-
   Map<String, dynamic>? events;
   double? height;
   dynamic positioner;
@@ -54,21 +47,18 @@ class HighchartsAnnotationsControlPointOptions extends HighchartsOptionsBase {
   bool? visible;
   double? width;
 
-
-  HighchartsAnnotationsControlPointOptions({
-    this.events,
-    this.height,
-    this.positioner,
-    this.style,
-    this.symbol,
-    this.visible,
-    this.width
-  });
+  HighchartsAnnotationsControlPointOptions(
+      {this.events,
+      this.height,
+      this.positioner,
+      this.style,
+      this.symbol,
+      this.visible,
+      this.width});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (events != null) {
       buffer.write('"events":{');
@@ -96,5 +86,4 @@ class HighchartsAnnotationsControlPointOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"width":', width, ','], '');
     }
   }
-
 }

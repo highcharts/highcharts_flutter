@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -23,26 +21,22 @@ import 'highcharts_ohlcseries_data_data_labels_options.dart';
 import 'highcharts_ohlcseries_data_drag_drop_options.dart';
 import 'highcharts_ohlcseries_data_events_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_ohlcseries_data_accessibility_options.dart';
 export 'highcharts_ohlcseries_data_data_labels_options.dart';
 export 'highcharts_ohlcseries_data_drag_drop_options.dart';
 export 'highcharts_ohlcseries_data_events_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * An array of data points for the series. For the `ohlc` series type,
@@ -89,7 +83,6 @@ export 'highcharts_ohlcseries_data_events_options.dart';
  *    ```
  */
 class HighchartsOHLCSeriesDataOptions extends HighchartsOptionsBase {
-
   HighchartsOHLCSeriesDataAccessibilityOptions? accessibility;
   double? close;
   String? color;
@@ -106,29 +99,26 @@ class HighchartsOHLCSeriesDataOptions extends HighchartsOptionsBase {
   bool? selected;
   dynamic x;
 
-
-  HighchartsOHLCSeriesDataOptions({
-    this.accessibility,
-    this.close,
-    this.color,
-    this.custom,
-    this.dataLabels,
-    this.description,
-    this.dragDrop,
-    this.events,
-    this.high,
-    this.id,
-    this.labelrank,
-    this.low,
-    this.open,
-    this.selected,
-    this.x
-  });
+  HighchartsOHLCSeriesDataOptions(
+      {this.accessibility,
+      this.close,
+      this.color,
+      this.custom,
+      this.dataLabels,
+      this.description,
+      this.dragDrop,
+      this.events,
+      this.high,
+      this.id,
+      this.labelrank,
+      this.low,
+      this.open,
+      this.selected,
+      this.x});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (accessibility != null) {
       buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ','], '');
@@ -180,5 +170,4 @@ class HighchartsOHLCSeriesDataOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"x":', jsonEncode(x), ','], '');
     }
   }
-
 }

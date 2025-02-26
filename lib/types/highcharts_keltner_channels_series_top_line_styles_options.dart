@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,31 +23,23 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
-class HighchartsKeltnerChannelsSeriesTopLineStylesOptions extends HighchartsOptionsBase {
-
+class HighchartsKeltnerChannelsSeriesTopLineStylesOptions
+    extends HighchartsOptionsBase {
   String? lineColor;
   double? lineWidth;
 
-
-  HighchartsKeltnerChannelsSeriesTopLineStylesOptions({
-    this.lineColor,
-    this.lineWidth
-  });
+  HighchartsKeltnerChannelsSeriesTopLineStylesOptions(
+      {this.lineColor, this.lineWidth});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (lineColor != null) {
       buffer.writeAll(['"lineColor":', jsonEncode(lineColor), ','], '');
@@ -59,5 +48,4 @@ class HighchartsKeltnerChannelsSeriesTopLineStylesOptions extends HighchartsOpti
       buffer.writeAll(['"lineWidth":', lineWidth, ','], '');
     }
   }
-
 }

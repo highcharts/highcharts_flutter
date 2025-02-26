@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -23,26 +21,22 @@ import 'highcharts_lang_export_data_options.dart';
 import 'highcharts_lang_navigation_options.dart';
 import 'highcharts_lang_stock_tools_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_lang_accessibility_options.dart';
 export 'highcharts_lang_export_data_options.dart';
 export 'highcharts_lang_navigation_options.dart';
 export 'highcharts_lang_stock_tools_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * An object containing language-related strings and settings. A typical setup
@@ -58,7 +52,6 @@ export 'highcharts_lang_stock_tools_options.dart';
  * ```
  */
 class HighchartsLangOptions extends HighchartsOptionsBase {
-
   HighchartsLangAccessibilityOptions? accessibility;
   String? contextButtonTitle;
   String? decimalPoint;
@@ -100,60 +93,58 @@ class HighchartsLangOptions extends HighchartsOptionsBase {
   String? zoomIn;
   String? zoomOut;
 
-
-  HighchartsLangOptions({
-    this.accessibility,
-    this.contextButtonTitle,
-    this.decimalPoint,
-    this.downloadCSV,
-    this.downloadJPEG,
-    this.downloadMIDI,
-    this.downloadPDF,
-    this.downloadPNG,
-    this.downloadSVG,
-    this.downloadXLS,
-    this.drillUpText,
-    this.exitFullscreen,
-    this.exportData,
-    this.exportInProgress,
-    this.hideData,
-    this.invalidDate,
-    this.loading,
-    this.locale,
-    this.mainBreadcrumb,
-    this.months,
-    this.navigation,
-    this.noData,
-    this.numericSymbolMagnitude,
-    this.numericSymbols,
-    this.playAsSound,
-    this.printChart,
-    this.rangeSelectorFrom,
-    this.rangeSelectorTo,
-    this.rangeSelectorZoom,
-    this.resetZoom,
-    this.resetZoomTitle,
-    this.shortMonths,
-    this.shortWeekdays,
-    this.stockTools,
-    this.thousandsSep,
-    this.viewData,
-    this.viewFullscreen,
-    this.weekdays,
-    this.zoomIn,
-    this.zoomOut
-  });
+  HighchartsLangOptions(
+      {this.accessibility,
+      this.contextButtonTitle,
+      this.decimalPoint,
+      this.downloadCSV,
+      this.downloadJPEG,
+      this.downloadMIDI,
+      this.downloadPDF,
+      this.downloadPNG,
+      this.downloadSVG,
+      this.downloadXLS,
+      this.drillUpText,
+      this.exitFullscreen,
+      this.exportData,
+      this.exportInProgress,
+      this.hideData,
+      this.invalidDate,
+      this.loading,
+      this.locale,
+      this.mainBreadcrumb,
+      this.months,
+      this.navigation,
+      this.noData,
+      this.numericSymbolMagnitude,
+      this.numericSymbols,
+      this.playAsSound,
+      this.printChart,
+      this.rangeSelectorFrom,
+      this.rangeSelectorTo,
+      this.rangeSelectorZoom,
+      this.resetZoom,
+      this.resetZoomTitle,
+      this.shortMonths,
+      this.shortWeekdays,
+      this.stockTools,
+      this.thousandsSep,
+      this.viewData,
+      this.viewFullscreen,
+      this.weekdays,
+      this.zoomIn,
+      this.zoomOut});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (accessibility != null) {
       buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ','], '');
     }
     if (contextButtonTitle != null) {
-      buffer.writeAll(['"contextButtonTitle":', jsonEncode(contextButtonTitle), ','], '');
+      buffer.writeAll(
+          ['"contextButtonTitle":', jsonEncode(contextButtonTitle), ','], '');
     }
     if (decimalPoint != null) {
       buffer.writeAll(['"decimalPoint":', jsonEncode(decimalPoint), ','], '');
@@ -183,13 +174,15 @@ class HighchartsLangOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"drillUpText":', jsonEncode(drillUpText), ','], '');
     }
     if (exitFullscreen != null) {
-      buffer.writeAll(['"exitFullscreen":', jsonEncode(exitFullscreen), ','], '');
+      buffer
+          .writeAll(['"exitFullscreen":', jsonEncode(exitFullscreen), ','], '');
     }
     if (exportData != null) {
       buffer.writeAll(['"exportData":', exportData?.toJSON(), ','], '');
     }
     if (exportInProgress != null) {
-      buffer.writeAll(['"exportInProgress":', jsonEncode(exportInProgress), ','], '');
+      buffer.writeAll(
+          ['"exportInProgress":', jsonEncode(exportInProgress), ','], '');
     }
     if (hideData != null) {
       buffer.writeAll(['"hideData":', jsonEncode(hideData), ','], '');
@@ -208,7 +201,8 @@ class HighchartsLangOptions extends HighchartsOptionsBase {
       buffer.write('],');
     }
     if (mainBreadcrumb != null) {
-      buffer.writeAll(['"mainBreadcrumb":', jsonEncode(mainBreadcrumb), ','], '');
+      buffer
+          .writeAll(['"mainBreadcrumb":', jsonEncode(mainBreadcrumb), ','], '');
     }
     if (months != null) {
       buffer.write('"months":[');
@@ -224,7 +218,8 @@ class HighchartsLangOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"noData":', jsonEncode(noData), ','], '');
     }
     if (numericSymbolMagnitude != null) {
-      buffer.writeAll(['"numericSymbolMagnitude":', numericSymbolMagnitude, ','], '');
+      buffer.writeAll(
+          ['"numericSymbolMagnitude":', numericSymbolMagnitude, ','], '');
     }
     if (numericSymbols != null) {
       buffer.write('"numericSymbols":[');
@@ -240,19 +235,23 @@ class HighchartsLangOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"printChart":', jsonEncode(printChart), ','], '');
     }
     if (rangeSelectorFrom != null) {
-      buffer.writeAll(['"rangeSelectorFrom":', jsonEncode(rangeSelectorFrom), ','], '');
+      buffer.writeAll(
+          ['"rangeSelectorFrom":', jsonEncode(rangeSelectorFrom), ','], '');
     }
     if (rangeSelectorTo != null) {
-      buffer.writeAll(['"rangeSelectorTo":', jsonEncode(rangeSelectorTo), ','], '');
+      buffer.writeAll(
+          ['"rangeSelectorTo":', jsonEncode(rangeSelectorTo), ','], '');
     }
     if (rangeSelectorZoom != null) {
-      buffer.writeAll(['"rangeSelectorZoom":', jsonEncode(rangeSelectorZoom), ','], '');
+      buffer.writeAll(
+          ['"rangeSelectorZoom":', jsonEncode(rangeSelectorZoom), ','], '');
     }
     if (resetZoom != null) {
       buffer.writeAll(['"resetZoom":', jsonEncode(resetZoom), ','], '');
     }
     if (resetZoomTitle != null) {
-      buffer.writeAll(['"resetZoomTitle":', jsonEncode(resetZoomTitle), ','], '');
+      buffer
+          .writeAll(['"resetZoomTitle":', jsonEncode(resetZoomTitle), ','], '');
     }
     if (shortMonths != null) {
       buffer.write('"shortMonths":[');
@@ -278,7 +277,8 @@ class HighchartsLangOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"viewData":', jsonEncode(viewData), ','], '');
     }
     if (viewFullscreen != null) {
-      buffer.writeAll(['"viewFullscreen":', jsonEncode(viewFullscreen), ','], '');
+      buffer
+          .writeAll(['"viewFullscreen":', jsonEncode(viewFullscreen), ','], '');
     }
     if (weekdays != null) {
       buffer.write('"weekdays":[');
@@ -294,5 +294,4 @@ class HighchartsLangOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"zoomOut":', jsonEncode(zoomOut), ','], '');
     }
   }
-
 }

@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +23,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * Options for the paging or navigation appearing when the legend is
@@ -44,7 +37,6 @@ import 'highcharts_options_base.dart';
  * export](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation-enabled-false/).
  */
 class HighchartsLegendNavigationOptions extends HighchartsOptionsBase {
-
   String? activeColor;
   dynamic animation;
   double? arrowSize;
@@ -52,20 +44,17 @@ class HighchartsLegendNavigationOptions extends HighchartsOptionsBase {
   String? inactiveColor;
   Map<String, String>? style;
 
-
-  HighchartsLegendNavigationOptions({
-    this.activeColor,
-    this.animation,
-    this.arrowSize,
-    this.enabled,
-    this.inactiveColor,
-    this.style
-  });
+  HighchartsLegendNavigationOptions(
+      {this.activeColor,
+      this.animation,
+      this.arrowSize,
+      this.enabled,
+      this.inactiveColor,
+      this.style});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (activeColor != null) {
       buffer.writeAll(['"activeColor":', jsonEncode(activeColor), ','], '');
@@ -90,5 +79,4 @@ class HighchartsLegendNavigationOptions extends HighchartsOptionsBase {
       buffer.write('},');
     }
   }
-
 }

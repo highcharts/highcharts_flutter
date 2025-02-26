@@ -8,19 +8,16 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_xaxis_plot_bands_events_options.dart';
 import 'highcharts_xaxis_plot_bands_label_options.dart';
-
 
 /* *
  *
@@ -28,17 +25,14 @@ import 'highcharts_xaxis_plot_bands_label_options.dart';
  *
  * */
 
-
 export 'highcharts_xaxis_plot_bands_events_options.dart';
 export 'highcharts_xaxis_plot_bands_label_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * An array of colored bands stretching across the plot area marking an
@@ -48,7 +42,6 @@ export 'highcharts_xaxis_plot_bands_label_options.dart';
  * class in addition to the `className` option.
  */
 class HighchartsXAxisPlotBandsOptions extends HighchartsOptionsBase {
-
   String? borderColor;
   dynamic borderRadius;
   double? borderWidth;
@@ -61,25 +54,22 @@ class HighchartsXAxisPlotBandsOptions extends HighchartsOptionsBase {
   dynamic to;
   double? zIndex;
 
-
-  HighchartsXAxisPlotBandsOptions({
-    this.borderColor,
-    this.borderRadius,
-    this.borderWidth,
-    this.className,
-    this.color,
-    this.events,
-    this.from,
-    this.id,
-    this.label,
-    this.to,
-    this.zIndex
-  });
+  HighchartsXAxisPlotBandsOptions(
+      {this.borderColor,
+      this.borderRadius,
+      this.borderWidth,
+      this.className,
+      this.color,
+      this.events,
+      this.from,
+      this.id,
+      this.label,
+      this.to,
+      this.zIndex});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (borderColor != null) {
       buffer.writeAll(['"borderColor":', jsonEncode(borderColor), ','], '');
@@ -115,5 +105,4 @@ class HighchartsXAxisPlotBandsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"zIndex":', zIndex, ','], '');
     }
   }
-
 }

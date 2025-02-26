@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +23,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * Options for the zoom out button. Properties for the zoom in and
@@ -43,8 +36,8 @@ import 'highcharts_options_base.dart';
  * individual options can be overridden. By default, the `onclick`,
  * `text` and `y` options are individual.
  */
-class HighchartsMapNavigationButtonsZoomOutOptions extends HighchartsOptionsBase {
-
+class HighchartsMapNavigationButtonsZoomOutOptions
+    extends HighchartsOptionsBase {
   String? onclick;
   dynamic text;
   double? y;
@@ -58,26 +51,23 @@ class HighchartsMapNavigationButtonsZoomOutOptions extends HighchartsOptionsBase
   double? width;
   double? x;
 
-
-  HighchartsMapNavigationButtonsZoomOutOptions({
-    this.onclick,
-    this.text,
-    this.y,
-    this.align,
-    this.alignTo,
-    this.height,
-    this.padding,
-    this.style,
-    this.theme,
-    this.verticalAlign,
-    this.width,
-    this.x
-  });
+  HighchartsMapNavigationButtonsZoomOutOptions(
+      {this.onclick,
+      this.text,
+      this.y,
+      this.align,
+      this.alignTo,
+      this.height,
+      this.padding,
+      this.style,
+      this.theme,
+      this.verticalAlign,
+      this.width,
+      this.x});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (onclick != null) {
       buffer.writeAll(['"onclick":', jsonEncode(onclick), ','], '');
@@ -120,5 +110,4 @@ class HighchartsMapNavigationButtonsZoomOutOptions extends HighchartsOptionsBase
       buffer.writeAll(['"x":', x, ','], '');
     }
   }
-
 }

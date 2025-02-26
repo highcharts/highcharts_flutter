@@ -8,19 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
 import 'highcharts_series_states_hover_animation_options.dart';
 import 'highcharts_series_states_hover_halo_options.dart';
-
 
 /* *
  *
@@ -28,10 +24,8 @@ import 'highcharts_series_states_hover_halo_options.dart';
  *
  * */
 
-
 export 'highcharts_series_states_hover_animation_options.dart';
 export 'highcharts_series_states_hover_halo_options.dart';
-
 
 /* *
  *
@@ -39,26 +33,18 @@ export 'highcharts_series_states_hover_halo_options.dart';
  *
  * */
 
-
 class HighchartsItemSeriesStatesHoverOptions extends HighchartsOptionsBase {
-
   double? brightness;
   HighchartsSeriesStatesHoverAnimationOptions? animation;
   bool? enabled;
   HighchartsSeriesStatesHoverHaloOptions? halo;
 
-
-  HighchartsItemSeriesStatesHoverOptions({
-    this.brightness,
-    this.animation,
-    this.enabled,
-    this.halo
-  });
+  HighchartsItemSeriesStatesHoverOptions(
+      {this.brightness, this.animation, this.enabled, this.halo});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (brightness != null) {
       buffer.writeAll(['"brightness":', brightness, ','], '');
@@ -73,5 +59,4 @@ class HighchartsItemSeriesStatesHoverOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"halo":', halo?.toJSON(), ','], '');
     }
   }
-
 }

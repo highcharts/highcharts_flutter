@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -23,26 +21,22 @@ import 'highcharts_timeline_series_data_data_labels_options.dart';
 import 'highcharts_timeline_series_data_drag_drop_options.dart';
 import 'highcharts_timeline_series_data_events_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_timeline_series_data_accessibility_options.dart';
 export 'highcharts_timeline_series_data_data_labels_options.dart';
 export 'highcharts_timeline_series_data_drag_drop_options.dart';
 export 'highcharts_timeline_series_data_events_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * An array of data points for the series. For the `timeline` series type,
@@ -66,7 +60,6 @@ export 'highcharts_timeline_series_data_events_options.dart';
  * placement reflects the actual time between them.
  */
 class HighchartsTimelineSeriesDataOptions extends HighchartsOptionsBase {
-
   HighchartsTimelineSeriesDataAccessibilityOptions? accessibility;
   String? className;
   String? color;
@@ -83,29 +76,26 @@ class HighchartsTimelineSeriesDataOptions extends HighchartsOptionsBase {
   bool? selected;
   dynamic x;
 
-
-  HighchartsTimelineSeriesDataOptions({
-    this.accessibility,
-    this.className,
-    this.color,
-    this.colorIndex,
-    this.custom,
-    this.dataLabels,
-    this.description,
-    this.dragDrop,
-    this.drilldown,
-    this.events,
-    this.id,
-    this.label,
-    this.labelrank,
-    this.selected,
-    this.x
-  });
+  HighchartsTimelineSeriesDataOptions(
+      {this.accessibility,
+      this.className,
+      this.color,
+      this.colorIndex,
+      this.custom,
+      this.dataLabels,
+      this.description,
+      this.dragDrop,
+      this.drilldown,
+      this.events,
+      this.id,
+      this.label,
+      this.labelrank,
+      this.selected,
+      this.x});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (accessibility != null) {
       buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ','], '');
@@ -161,5 +151,4 @@ class HighchartsTimelineSeriesDataOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"x":', jsonEncode(x), ','], '');
     }
   }
-
 }

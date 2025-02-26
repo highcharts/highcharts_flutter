@@ -8,7 +8,6 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
@@ -19,23 +18,19 @@ import 'dart:convert';
 import 'highcharts_series.dart';
 import 'highcharts_dmiseries_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_dmiseries_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * The Directional Movement Index (DMI) indicator series.
@@ -82,7 +77,6 @@ export 'highcharts_dmiseries_options.dart';
  *             
  */
 class HighchartsDMISeries extends HighchartsSeries {
-
   List<List<dynamic>>? data;
   String? name;
   HighchartsDMISeriesOptions? options;
@@ -126,14 +120,13 @@ class HighchartsDMISeries extends HighchartsSeries {
       }
 
       buffer.writeAll(['"data":[', seriesData, '],'], '');
-
     } else if (points != null) {
       // Go through the points and write them
       StringBuffer seriesData = StringBuffer();
 
       for (var point in points!) {
         seriesData.writeAll(['{'], '');
-        point.toOptionsJSON(seriesData); 
+        point.toOptionsJSON(seriesData);
         seriesData.writeAll(['},'], '');
       }
 
@@ -148,5 +141,4 @@ class HighchartsDMISeries extends HighchartsSeries {
       buffer.writeAll(['"name":', jsonEncode(name), ','], '');
     }
   }
-
 }

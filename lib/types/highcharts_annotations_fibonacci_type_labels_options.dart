@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_annotations_label_accessibility_options.dart';
-
 
 /* *
  *
@@ -27,9 +24,7 @@ import 'highcharts_annotations_label_accessibility_options.dart';
  *
  * */
 
-
 export 'highcharts_annotations_label_accessibility_options.dart';
-
 
 /* *
  *
@@ -37,12 +32,11 @@ export 'highcharts_annotations_label_accessibility_options.dart';
  *
  * */
 
-
 /**
  * An array with options for the labels.
  */
-class HighchartsAnnotationsFibonacciTypeLabelsOptions extends HighchartsOptionsBase {
-
+class HighchartsAnnotationsFibonacciTypeLabelsOptions
+    extends HighchartsOptionsBase {
   HighchartsAnnotationsLabelAccessibilityOptions? accessibility;
   String? align;
   bool? allowOverlap;
@@ -67,37 +61,34 @@ class HighchartsAnnotationsFibonacciTypeLabelsOptions extends HighchartsOptionsB
   double? x;
   double? y;
 
-
-  HighchartsAnnotationsFibonacciTypeLabelsOptions({
-    this.accessibility,
-    this.align,
-    this.allowOverlap,
-    this.backgroundColor,
-    this.borderColor,
-    this.borderRadius,
-    this.borderWidth,
-    this.className,
-    this.crop,
-    this.distance,
-    this.format,
-    this.formatter,
-    this.includeInDataExport,
-    this.overflow,
-    this.padding,
-    this.shadow,
-    this.shape,
-    this.style,
-    this.text,
-    this.useHTML,
-    this.verticalAlign,
-    this.x,
-    this.y
-  });
+  HighchartsAnnotationsFibonacciTypeLabelsOptions(
+      {this.accessibility,
+      this.align,
+      this.allowOverlap,
+      this.backgroundColor,
+      this.borderColor,
+      this.borderRadius,
+      this.borderWidth,
+      this.className,
+      this.crop,
+      this.distance,
+      this.format,
+      this.formatter,
+      this.includeInDataExport,
+      this.overflow,
+      this.padding,
+      this.shadow,
+      this.shape,
+      this.style,
+      this.text,
+      this.useHTML,
+      this.verticalAlign,
+      this.x,
+      this.y});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (accessibility != null) {
       buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ','], '');
@@ -109,7 +100,8 @@ class HighchartsAnnotationsFibonacciTypeLabelsOptions extends HighchartsOptionsB
       buffer.writeAll(['"allowOverlap":', allowOverlap, ','], '');
     }
     if (backgroundColor != null) {
-      buffer.writeAll(['"backgroundColor":', jsonEncode(backgroundColor), ','], '');
+      buffer.writeAll(
+          ['"backgroundColor":', jsonEncode(backgroundColor), ','], '');
     }
     if (borderColor != null) {
       buffer.writeAll(['"borderColor":', jsonEncode(borderColor), ','], '');
@@ -177,5 +169,4 @@ class HighchartsAnnotationsFibonacciTypeLabelsOptions extends HighchartsOptionsB
       buffer.writeAll(['"y":', y, ','], '');
     }
   }
-
 }

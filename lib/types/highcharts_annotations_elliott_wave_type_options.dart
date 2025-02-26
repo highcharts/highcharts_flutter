@@ -8,19 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
 import 'highcharts_annotations_elliott_wave_type_line_options.dart';
 import 'highcharts_annotations_elliott_wave_type_points_options.dart';
-
 
 /* *
  *
@@ -28,10 +24,8 @@ import 'highcharts_annotations_elliott_wave_type_points_options.dart';
  *
  * */
 
-
 export 'highcharts_annotations_elliott_wave_type_line_options.dart';
 export 'highcharts_annotations_elliott_wave_type_points_options.dart';
-
 
 /* *
  *
@@ -39,26 +33,19 @@ export 'highcharts_annotations_elliott_wave_type_points_options.dart';
  *
  * */
 
-
-class HighchartsAnnotationsElliottWaveTypeOptions extends HighchartsOptionsBase {
-
+class HighchartsAnnotationsElliottWaveTypeOptions
+    extends HighchartsOptionsBase {
   HighchartsAnnotationsElliottWaveTypeLineOptions? line;
   HighchartsAnnotationsElliottWaveTypePointsOptions? points;
   double? xAxis;
   double? yAxis;
 
-
-  HighchartsAnnotationsElliottWaveTypeOptions({
-    this.line,
-    this.points,
-    this.xAxis,
-    this.yAxis
-  });
+  HighchartsAnnotationsElliottWaveTypeOptions(
+      {this.line, this.points, this.xAxis, this.yAxis});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (line != null) {
       buffer.writeAll(['"line":', line?.toJSON(), ','], '');
@@ -73,5 +60,4 @@ class HighchartsAnnotationsElliottWaveTypeOptions extends HighchartsOptionsBase 
       buffer.writeAll(['"yAxis":', yAxis, ','], '');
     }
   }
-
 }

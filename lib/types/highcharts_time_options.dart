@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +23,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * Time options that can apply globally or to individual charts. These
@@ -75,24 +68,17 @@ import 'highcharts_options_base.dart';
  * `time` object, and time options can be set on each individual chart.
  */
 class HighchartsTimeOptions extends HighchartsOptionsBase {
-
   dynamic date;
   String? timezone;
   double? timezoneOffset;
   String? useUTC;
 
-
-  HighchartsTimeOptions({
-    this.date,
-    this.timezone,
-    this.timezoneOffset,
-    this.useUTC
-  });
+  HighchartsTimeOptions(
+      {this.date, this.timezone, this.timezoneOffset, this.useUTC});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (date != null) {
       buffer.writeAll(['"Date":', jsonEncode(date), ','], '');
@@ -107,5 +93,4 @@ class HighchartsTimeOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"useUTC":', jsonEncode(useUTC), ','], '');
     }
   }
-
 }

@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_series_marker_states_options.dart';
-
 
 /* *
  *
@@ -27,9 +24,7 @@ import 'highcharts_series_marker_states_options.dart';
  *
  * */
 
-
 export 'highcharts_series_marker_states_options.dart';
-
 
 /* *
  *
@@ -37,28 +32,23 @@ export 'highcharts_series_marker_states_options.dart';
  *
  * */
 
-
 class HighchartsArcDiagramSeriesMarkerOptions extends HighchartsOptionsBase {
-
   String? fillColor;
   String? lineColor;
   double? lineWidth;
   HighchartsSeriesMarkerStatesOptions? states;
   String? symbol;
 
-
-  HighchartsArcDiagramSeriesMarkerOptions({
-    this.fillColor,
-    this.lineColor,
-    this.lineWidth,
-    this.states,
-    this.symbol
-  });
+  HighchartsArcDiagramSeriesMarkerOptions(
+      {this.fillColor,
+      this.lineColor,
+      this.lineWidth,
+      this.states,
+      this.symbol});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (fillColor != null) {
       buffer.writeAll(['"fillColor":', jsonEncode(fillColor), ','], '');
@@ -76,5 +66,4 @@ class HighchartsArcDiagramSeriesMarkerOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"symbol":', jsonEncode(symbol), ','], '');
     }
   }
-
 }

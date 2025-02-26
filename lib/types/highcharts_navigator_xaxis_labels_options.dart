@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_navigator_xaxis_labels_style_options.dart';
-
 
 /* *
  *
@@ -27,9 +24,7 @@ import 'highcharts_navigator_xaxis_labels_style_options.dart';
  *
  * */
 
-
 export 'highcharts_navigator_xaxis_labels_style_options.dart';
-
 
 /* *
  *
@@ -37,9 +32,7 @@ export 'highcharts_navigator_xaxis_labels_style_options.dart';
  *
  * */
 
-
 class HighchartsNavigatorXAxisLabelsOptions extends HighchartsOptionsBase {
-
   String? align;
   HighchartsNavigatorXAxisLabelsStyleOptions? style;
   double? x;
@@ -62,35 +55,32 @@ class HighchartsNavigatorXAxisLabelsOptions extends HighchartsOptionsBase {
   double? indentation;
   double? padding;
 
-
-  HighchartsNavigatorXAxisLabelsOptions({
-    this.align,
-    this.style,
-    this.x,
-    this.y,
-    this.allowOverlap,
-    this.autoRotation,
-    this.enabled,
-    this.format,
-    this.formatter,
-    this.maxStaggerLines,
-    this.overflow,
-    this.reserveSpace,
-    this.rotation,
-    this.staggerLines,
-    this.step,
-    this.useHTML,
-    this.zIndex,
-    this.autoRotationLimit,
-    this.distance,
-    this.indentation,
-    this.padding
-  });
+  HighchartsNavigatorXAxisLabelsOptions(
+      {this.align,
+      this.style,
+      this.x,
+      this.y,
+      this.allowOverlap,
+      this.autoRotation,
+      this.enabled,
+      this.format,
+      this.formatter,
+      this.maxStaggerLines,
+      this.overflow,
+      this.reserveSpace,
+      this.rotation,
+      this.staggerLines,
+      this.step,
+      this.useHTML,
+      this.zIndex,
+      this.autoRotationLimit,
+      this.distance,
+      this.indentation,
+      this.padding});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (align != null) {
       buffer.writeAll(['"align":', jsonEncode(align), ','], '');
@@ -160,5 +150,4 @@ class HighchartsNavigatorXAxisLabelsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"padding":', padding, ','], '');
     }
   }
-
 }

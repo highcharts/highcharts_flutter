@@ -8,17 +8,13 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,36 +22,26 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Parameters used in calculation of the regression points.
  */
 class HighchartsBBSeriesParamsOptions extends HighchartsOptionsBase {
-
   double? index;
   double? period;
   double? standardDeviation;
 
-
-  HighchartsBBSeriesParamsOptions({
-    this.index,
-    this.period,
-    this.standardDeviation
-  });
+  HighchartsBBSeriesParamsOptions(
+      {this.index, this.period, this.standardDeviation});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (index != null) {
       buffer.writeAll(['"index":', index, ','], '');
@@ -67,5 +53,4 @@ class HighchartsBBSeriesParamsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"standardDeviation":', standardDeviation, ','], '');
     }
   }
-
 }

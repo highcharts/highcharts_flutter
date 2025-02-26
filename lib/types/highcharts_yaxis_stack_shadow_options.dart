@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,39 +23,28 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Relevant only for pictorial series. The `stackShadow` forms the background of
  * stacked points. Requires `series.stacking` to be defined.
  */
 class HighchartsYAxisStackShadowOptions extends HighchartsOptionsBase {
-
   String? borderColor;
   double? borderWidth;
   String? color;
   bool? enabled;
 
-
-  HighchartsYAxisStackShadowOptions({
-    this.borderColor,
-    this.borderWidth,
-    this.color,
-    this.enabled
-  });
+  HighchartsYAxisStackShadowOptions(
+      {this.borderColor, this.borderWidth, this.color, this.enabled});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (borderColor != null) {
       buffer.writeAll(['"borderColor":', jsonEncode(borderColor), ','], '');
@@ -73,5 +59,4 @@ class HighchartsYAxisStackShadowOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"enabled":', enabled, ','], '');
     }
   }
-
 }

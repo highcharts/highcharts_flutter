@@ -8,18 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
 import 'highcharts_vbpseries_volume_division_styles_options.dart';
-
 
 /* *
  *
@@ -27,9 +23,7 @@ import 'highcharts_vbpseries_volume_division_styles_options.dart';
  *
  * */
 
-
 export 'highcharts_vbpseries_volume_division_styles_options.dart';
-
 
 /* *
  *
@@ -37,25 +31,18 @@ export 'highcharts_vbpseries_volume_division_styles_options.dart';
  *
  * */
 
-
 /**
  * The styles for bars when volume is divided into positive/negative.
  */
 class HighchartsVBPSeriesVolumeDivisionOptions extends HighchartsOptionsBase {
-
   bool? enabled;
   HighchartsVBPSeriesVolumeDivisionStylesOptions? styles;
 
-
-  HighchartsVBPSeriesVolumeDivisionOptions({
-    this.enabled,
-    this.styles
-  });
+  HighchartsVBPSeriesVolumeDivisionOptions({this.enabled, this.styles});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (enabled != null) {
       buffer.writeAll(['"enabled":', enabled, ','], '');
@@ -64,5 +51,4 @@ class HighchartsVBPSeriesVolumeDivisionOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"styles":', styles?.toJSON(), ','], '');
     }
   }
-
 }

@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,39 +23,29 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Configure a crosshair that is vertically placed in middle of
  * rectangle.
  */
-class HighchartsAnnotationsMeasureTypeCrosshairYOptions extends HighchartsOptionsBase {
-
+class HighchartsAnnotationsMeasureTypeCrosshairYOptions
+    extends HighchartsOptionsBase {
   String? dashStyle;
   bool? enabled;
   String? markerEnd;
   double? zIndex;
 
-
-  HighchartsAnnotationsMeasureTypeCrosshairYOptions({
-    this.dashStyle,
-    this.enabled,
-    this.markerEnd,
-    this.zIndex
-  });
+  HighchartsAnnotationsMeasureTypeCrosshairYOptions(
+      {this.dashStyle, this.enabled, this.markerEnd, this.zIndex});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (dashStyle != null) {
       buffer.writeAll(['"dashStyle":', jsonEncode(dashStyle), ','], '');
@@ -73,5 +60,4 @@ class HighchartsAnnotationsMeasureTypeCrosshairYOptions extends HighchartsOption
       buffer.writeAll(['"zIndex":', zIndex, ','], '');
     }
   }
-
 }

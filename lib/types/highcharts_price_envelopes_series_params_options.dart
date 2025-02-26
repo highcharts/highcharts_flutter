@@ -8,17 +8,13 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,35 +22,25 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
-class HighchartsPriceEnvelopesSeriesParamsOptions extends HighchartsOptionsBase {
-
+class HighchartsPriceEnvelopesSeriesParamsOptions
+    extends HighchartsOptionsBase {
   double? bottomBand;
   double? index;
   double? period;
   double? topBand;
 
-
-  HighchartsPriceEnvelopesSeriesParamsOptions({
-    this.bottomBand,
-    this.index,
-    this.period,
-    this.topBand
-  });
+  HighchartsPriceEnvelopesSeriesParamsOptions(
+      {this.bottomBand, this.index, this.period, this.topBand});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (bottomBand != null) {
       buffer.writeAll(['"bottomBand":', bottomBand, ','], '');
@@ -69,5 +55,4 @@ class HighchartsPriceEnvelopesSeriesParamsOptions extends HighchartsOptionsBase 
       buffer.writeAll(['"topBand":', topBand, ','], '');
     }
   }
-
 }

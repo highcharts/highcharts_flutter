@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,18 +23,14 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
-class HighchartsTreemapSeriesDataMarkerStatesSelectOptions extends HighchartsOptionsBase {
-
+class HighchartsTreemapSeriesDataMarkerStatesSelectOptions
+    extends HighchartsOptionsBase {
   bool? enabled;
   String? fillColor;
   double? height;
@@ -47,22 +40,19 @@ class HighchartsTreemapSeriesDataMarkerStatesSelectOptions extends HighchartsOpt
   double? width;
   double? widthPlus;
 
-
-  HighchartsTreemapSeriesDataMarkerStatesSelectOptions({
-    this.enabled,
-    this.fillColor,
-    this.height,
-    this.heightPlus,
-    this.lineColor,
-    this.lineWidth,
-    this.width,
-    this.widthPlus
-  });
+  HighchartsTreemapSeriesDataMarkerStatesSelectOptions(
+      {this.enabled,
+      this.fillColor,
+      this.height,
+      this.heightPlus,
+      this.lineColor,
+      this.lineWidth,
+      this.width,
+      this.widthPlus});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (enabled != null) {
       buffer.writeAll(['"enabled":', enabled, ','], '');
@@ -89,5 +79,4 @@ class HighchartsTreemapSeriesDataMarkerStatesSelectOptions extends HighchartsOpt
       buffer.writeAll(['"widthPlus":', widthPlus, ','], '');
     }
   }
-
 }

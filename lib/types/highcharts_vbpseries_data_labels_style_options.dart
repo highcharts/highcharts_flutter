@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,33 +23,23 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 class HighchartsVBPSeriesDataLabelsStyleOptions extends HighchartsOptionsBase {
-
   dynamic fontSize;
 
-
-  HighchartsVBPSeriesDataLabelsStyleOptions({
-    this.fontSize
-  });
+  HighchartsVBPSeriesDataLabelsStyleOptions({this.fontSize});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (fontSize != null) {
       buffer.writeAll(['"fontSize":', jsonEncode(fontSize), ','], '');
     }
   }
-
 }

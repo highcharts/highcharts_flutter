@@ -8,19 +8,16 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_series_marker_states_options.dart';
 import 'highcharts_area_spline_range_series_low_marker_symbol_options.dart';
-
 
 /* *
  *
@@ -28,10 +25,8 @@ import 'highcharts_area_spline_range_series_low_marker_symbol_options.dart';
  *
  * */
 
-
 export 'highcharts_series_marker_states_options.dart';
 export 'highcharts_area_spline_range_series_low_marker_symbol_options.dart';
-
 
 /* *
  *
@@ -39,13 +34,12 @@ export 'highcharts_area_spline_range_series_low_marker_symbol_options.dart';
  *
  * */
 
-
 /**
  * Options for the lower markers of the arearange-like series. When `lowMarker`
  * is not defined, options inherit form the marker.
  */
-class HighchartsAreaSplineRangeSeriesLowMarkerOptions extends HighchartsOptionsBase {
-
+class HighchartsAreaSplineRangeSeriesLowMarkerOptions
+    extends HighchartsOptionsBase {
   bool? enabled;
   double? enabledThreshold;
   String? fillColor;
@@ -57,24 +51,21 @@ class HighchartsAreaSplineRangeSeriesLowMarkerOptions extends HighchartsOptionsB
   HighchartsAreaSplineRangeSeriesLowMarkerSymbolOptions? symbol;
   double? width;
 
-
-  HighchartsAreaSplineRangeSeriesLowMarkerOptions({
-    this.enabled,
-    this.enabledThreshold,
-    this.fillColor,
-    this.height,
-    this.lineColor,
-    this.lineWidth,
-    this.radius,
-    this.states,
-    this.symbol,
-    this.width
-  });
+  HighchartsAreaSplineRangeSeriesLowMarkerOptions(
+      {this.enabled,
+      this.enabledThreshold,
+      this.fillColor,
+      this.height,
+      this.lineColor,
+      this.lineWidth,
+      this.radius,
+      this.states,
+      this.symbol,
+      this.width});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (enabled != null) {
       buffer.writeAll(['"enabled":', enabled, ','], '');
@@ -107,5 +98,4 @@ class HighchartsAreaSplineRangeSeriesLowMarkerOptions extends HighchartsOptionsB
       buffer.writeAll(['"width":', width, ','], '');
     }
   }
-
 }

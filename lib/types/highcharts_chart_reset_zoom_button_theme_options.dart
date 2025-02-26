@@ -8,17 +8,13 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +22,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * A collection of attributes for the button. The object takes SVG
@@ -44,22 +36,16 @@ import 'highcharts_options_base.dart';
  * state are given in `theme.states.hover`.
  */
 class HighchartsChartResetZoomButtonThemeOptions extends HighchartsOptionsBase {
-
   double? zIndex;
 
-
-  HighchartsChartResetZoomButtonThemeOptions({
-    this.zIndex
-  });
+  HighchartsChartResetZoomButtonThemeOptions({this.zIndex});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (zIndex != null) {
       buffer.writeAll(['"zIndex":', zIndex, ','], '');
     }
   }
-
 }

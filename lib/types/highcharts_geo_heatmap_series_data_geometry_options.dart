@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +23,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * For map and mapline series types, the geometry of a point.
@@ -52,21 +45,16 @@ import 'highcharts_options_base.dart';
  * coordinates in `projectedUnits` for geometry type other than `Point`,
  * instead of `[longitude, latitude]`.
  */
-class HighchartsGeoHeatmapSeriesDataGeometryOptions extends HighchartsOptionsBase {
-
+class HighchartsGeoHeatmapSeriesDataGeometryOptions
+    extends HighchartsOptionsBase {
   List<List<dynamic>>? coordinates;
   String? type;
 
-
-  HighchartsGeoHeatmapSeriesDataGeometryOptions({
-    this.coordinates,
-    this.type
-  });
+  HighchartsGeoHeatmapSeriesDataGeometryOptions({this.coordinates, this.type});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (coordinates != null) {
       buffer.write('"coordinates":[');
@@ -79,5 +67,4 @@ class HighchartsGeoHeatmapSeriesDataGeometryOptions extends HighchartsOptionsBas
       buffer.writeAll(['"type":', jsonEncode(type), ','], '');
     }
   }
-
 }

@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -22,25 +20,21 @@ import 'highcharts_pictorial_series_data_accessibility_options.dart';
 import 'highcharts_pictorial_series_data_data_labels_options.dart';
 import 'highcharts_pictorial_series_data_events_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_pictorial_series_data_accessibility_options.dart';
 export 'highcharts_pictorial_series_data_data_labels_options.dart';
 export 'highcharts_pictorial_series_data_events_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * An array of data points for the series. For the `pictorial` series type,
@@ -81,7 +75,6 @@ export 'highcharts_pictorial_series_data_events_options.dart';
  *    ```
  */
 class HighchartsPictorialSeriesDataOptions extends HighchartsOptionsBase {
-
   HighchartsPictorialSeriesDataAccessibilityOptions? accessibility;
   String? className;
   String? color;
@@ -98,29 +91,26 @@ class HighchartsPictorialSeriesDataOptions extends HighchartsOptionsBase {
   dynamic x;
   double? y;
 
-
-  HighchartsPictorialSeriesDataOptions({
-    this.accessibility,
-    this.className,
-    this.color,
-    this.colorIndex,
-    this.custom,
-    this.dataLabels,
-    this.description,
-    this.drilldown,
-    this.events,
-    this.id,
-    this.labelrank,
-    this.pointWidth,
-    this.selected,
-    this.x,
-    this.y
-  });
+  HighchartsPictorialSeriesDataOptions(
+      {this.accessibility,
+      this.className,
+      this.color,
+      this.colorIndex,
+      this.custom,
+      this.dataLabels,
+      this.description,
+      this.drilldown,
+      this.events,
+      this.id,
+      this.labelrank,
+      this.pointWidth,
+      this.selected,
+      this.x,
+      this.y});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (accessibility != null) {
       buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ','], '');
@@ -176,5 +166,4 @@ class HighchartsPictorialSeriesDataOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"y":', y, ','], '');
     }
   }
-
 }

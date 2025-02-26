@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +23,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * Options for the halo appearing around the hovered point in
@@ -48,22 +41,16 @@ import 'highcharts_options_base.dart';
  * `.highcharts-color-{n}`.
  */
 class HighchartsSeriesStatesHoverHaloOptions extends HighchartsOptionsBase {
-
   dynamic attributes;
   double? opacity;
   double? size;
 
-
-  HighchartsSeriesStatesHoverHaloOptions({
-    this.attributes,
-    this.opacity,
-    this.size
-  });
+  HighchartsSeriesStatesHoverHaloOptions(
+      {this.attributes, this.opacity, this.size});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (attributes != null) {
       buffer.writeAll(['"attributes":', jsonEncode(attributes), ','], '');
@@ -75,5 +62,4 @@ class HighchartsSeriesStatesHoverHaloOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"size":', size, ','], '');
     }
   }
-
 }

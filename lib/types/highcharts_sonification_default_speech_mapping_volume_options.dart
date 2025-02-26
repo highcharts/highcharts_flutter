@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,21 +23,17 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Volume of the speech announcement.
  */
-class HighchartsSonificationDefaultSpeechMappingVolumeOptions extends HighchartsOptionsBase {
-
+class HighchartsSonificationDefaultSpeechMappingVolumeOptions
+    extends HighchartsOptionsBase {
   String? mapFunction;
   String? mapTo;
   double? max;
@@ -48,20 +41,17 @@ class HighchartsSonificationDefaultSpeechMappingVolumeOptions extends Highcharts
   double? value;
   String? within;
 
-
-  HighchartsSonificationDefaultSpeechMappingVolumeOptions({
-    this.mapFunction,
-    this.mapTo,
-    this.max,
-    this.min,
-    this.value,
-    this.within
-  });
+  HighchartsSonificationDefaultSpeechMappingVolumeOptions(
+      {this.mapFunction,
+      this.mapTo,
+      this.max,
+      this.min,
+      this.value,
+      this.within});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (mapFunction != null) {
       buffer.writeAll(['"mapFunction":', jsonEncode(mapFunction), ','], '');
@@ -82,5 +72,4 @@ class HighchartsSonificationDefaultSpeechMappingVolumeOptions extends Highcharts
       buffer.writeAll(['"within":', jsonEncode(within), ','], '');
     }
   }
-
 }

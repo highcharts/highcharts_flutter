@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -24,13 +22,11 @@ import 'highcharts_navigator_series_options.dart';
 import 'highcharts_navigator_xaxis_options.dart';
 import 'highcharts_navigator_yaxis_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
-
 
 export 'highcharts_navigator_accessibility_options.dart';
 export 'highcharts_navigator_handles_options.dart';
@@ -38,13 +34,11 @@ export 'highcharts_navigator_series_options.dart';
 export 'highcharts_navigator_xaxis_options.dart';
 export 'highcharts_navigator_yaxis_options.dart';
 
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * The navigator is a small series below the main series, displaying
@@ -52,7 +46,6 @@ export 'highcharts_navigator_yaxis_options.dart';
  * out on parts of the data as well as panning across the dataset.
  */
 class HighchartsNavigatorOptions extends HighchartsOptionsBase {
-
   HighchartsNavigatorAccessibilityOptions? accessibility;
   bool? adaptToUpdatedData;
   dynamic baseSeries;
@@ -70,30 +63,27 @@ class HighchartsNavigatorOptions extends HighchartsOptionsBase {
   HighchartsNavigatorXAxisOptions? xAxis;
   HighchartsNavigatorYAxisOptions? yAxis;
 
-
-  HighchartsNavigatorOptions({
-    this.accessibility,
-    this.adaptToUpdatedData,
-    this.baseSeries,
-    this.enabled,
-    this.handles,
-    this.height,
-    this.margin,
-    this.maskFill,
-    this.maskInside,
-    this.opposite,
-    this.outlineColor,
-    this.outlineWidth,
-    this.series,
-    this.stickToMax,
-    this.xAxis,
-    this.yAxis
-  });
+  HighchartsNavigatorOptions(
+      {this.accessibility,
+      this.adaptToUpdatedData,
+      this.baseSeries,
+      this.enabled,
+      this.handles,
+      this.height,
+      this.margin,
+      this.maskFill,
+      this.maskInside,
+      this.opposite,
+      this.outlineColor,
+      this.outlineWidth,
+      this.series,
+      this.stickToMax,
+      this.xAxis,
+      this.yAxis});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (accessibility != null) {
       buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ','], '');
@@ -152,5 +142,4 @@ class HighchartsNavigatorOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"yAxis":', yAxis?.toJSON(), ','], '');
     }
   }
-
 }

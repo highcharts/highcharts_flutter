@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,31 +23,23 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
-class HighchartsOrganizationSeriesDataLabelsLinkTextPathAttributesOptions extends HighchartsOptionsBase {
-
+class HighchartsOrganizationSeriesDataLabelsLinkTextPathAttributesOptions
+    extends HighchartsOptionsBase {
   dynamic startOffset;
   String? textAnchor;
 
-
-  HighchartsOrganizationSeriesDataLabelsLinkTextPathAttributesOptions({
-    this.startOffset,
-    this.textAnchor
-  });
+  HighchartsOrganizationSeriesDataLabelsLinkTextPathAttributesOptions(
+      {this.startOffset, this.textAnchor});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (startOffset != null) {
       buffer.writeAll(['"startOffset":', jsonEncode(startOffset), ','], '');
@@ -59,5 +48,4 @@ class HighchartsOrganizationSeriesDataLabelsLinkTextPathAttributesOptions extend
       buffer.writeAll(['"textAnchor":', jsonEncode(textAnchor), ','], '');
     }
   }
-
 }

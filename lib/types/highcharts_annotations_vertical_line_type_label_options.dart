@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_annotations_label_accessibility_options.dart';
-
 
 /* *
  *
@@ -27,9 +24,7 @@ import 'highcharts_annotations_label_accessibility_options.dart';
  *
  * */
 
-
 export 'highcharts_annotations_label_accessibility_options.dart';
-
 
 /* *
  *
@@ -37,12 +32,11 @@ export 'highcharts_annotations_label_accessibility_options.dart';
  *
  * */
 
-
 /**
  * Label options.
  */
-class HighchartsAnnotationsVerticalLineTypeLabelOptions extends HighchartsOptionsBase {
-
+class HighchartsAnnotationsVerticalLineTypeLabelOptions
+    extends HighchartsOptionsBase {
   bool? allowOverlap;
   String? backgroundColor;
   double? borderWidth;
@@ -68,44 +62,42 @@ class HighchartsAnnotationsVerticalLineTypeLabelOptions extends HighchartsOption
   double? x;
   double? y;
 
-
-  HighchartsAnnotationsVerticalLineTypeLabelOptions({
-    this.allowOverlap,
-    this.backgroundColor,
-    this.borderWidth,
-    this.crop,
-    this.offset,
-    this.overflow,
-    this.shape,
-    this.text,
-    this.accessibility,
-    this.align,
-    this.borderColor,
-    this.borderRadius,
-    this.className,
-    this.distance,
-    this.format,
-    this.formatter,
-    this.includeInDataExport,
-    this.padding,
-    this.shadow,
-    this.style,
-    this.useHTML,
-    this.verticalAlign,
-    this.x,
-    this.y
-  });
+  HighchartsAnnotationsVerticalLineTypeLabelOptions(
+      {this.allowOverlap,
+      this.backgroundColor,
+      this.borderWidth,
+      this.crop,
+      this.offset,
+      this.overflow,
+      this.shape,
+      this.text,
+      this.accessibility,
+      this.align,
+      this.borderColor,
+      this.borderRadius,
+      this.className,
+      this.distance,
+      this.format,
+      this.formatter,
+      this.includeInDataExport,
+      this.padding,
+      this.shadow,
+      this.style,
+      this.useHTML,
+      this.verticalAlign,
+      this.x,
+      this.y});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (allowOverlap != null) {
       buffer.writeAll(['"allowOverlap":', allowOverlap, ','], '');
     }
     if (backgroundColor != null) {
-      buffer.writeAll(['"backgroundColor":', jsonEncode(backgroundColor), ','], '');
+      buffer.writeAll(
+          ['"backgroundColor":', jsonEncode(backgroundColor), ','], '');
     }
     if (borderWidth != null) {
       buffer.writeAll(['"borderWidth":', borderWidth, ','], '');
@@ -182,5 +174,4 @@ class HighchartsAnnotationsVerticalLineTypeLabelOptions extends HighchartsOption
       buffer.writeAll(['"y":', y, ','], '');
     }
   }
-
 }

@@ -8,19 +8,16 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_geo_heatmap_series_data_events_options.dart';
 import 'highcharts_geo_heatmap_series_data_geometry_options.dart';
-
 
 /* *
  *
@@ -28,17 +25,14 @@ import 'highcharts_geo_heatmap_series_data_geometry_options.dart';
  *
  * */
 
-
 export 'highcharts_geo_heatmap_series_data_events_options.dart';
 export 'highcharts_geo_heatmap_series_data_geometry_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * An array of data points for the series. For the `geoheatmap` series
@@ -75,7 +69,6 @@ export 'highcharts_geo_heatmap_series_data_geometry_options.dart';
  *  ```
  */
 class HighchartsGeoHeatmapSeriesDataOptions extends HighchartsOptionsBase {
-
   String? color;
   dynamic dataLabels;
   String? drilldown;
@@ -88,25 +81,22 @@ class HighchartsGeoHeatmapSeriesDataOptions extends HighchartsOptionsBase {
   String? path;
   double? value;
 
-
-  HighchartsGeoHeatmapSeriesDataOptions({
-    this.color,
-    this.dataLabels,
-    this.drilldown,
-    this.events,
-    this.geometry,
-    this.id,
-    this.labelrank,
-    this.middleX,
-    this.middleY,
-    this.path,
-    this.value
-  });
+  HighchartsGeoHeatmapSeriesDataOptions(
+      {this.color,
+      this.dataLabels,
+      this.drilldown,
+      this.events,
+      this.geometry,
+      this.id,
+      this.labelrank,
+      this.middleX,
+      this.middleY,
+      this.path,
+      this.value});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (color != null) {
       buffer.writeAll(['"color":', jsonEncode(color), ','], '');
@@ -142,5 +132,4 @@ class HighchartsGeoHeatmapSeriesDataOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"value":', value, ','], '');
     }
   }
-
 }

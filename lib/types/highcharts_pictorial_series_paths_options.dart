@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +23,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * The paths include options describing the series image. For further details on
@@ -42,20 +35,14 @@ import 'highcharts_options_base.dart';
  * documentation](https://www.highcharts.com/docs/chart-and-series-types/pictorial).
  */
 class HighchartsPictorialSeriesPathsOptions extends HighchartsOptionsBase {
-
   String? definition;
   dynamic max;
 
-
-  HighchartsPictorialSeriesPathsOptions({
-    this.definition,
-    this.max
-  });
+  HighchartsPictorialSeriesPathsOptions({this.definition, this.max});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (definition != null) {
       buffer.writeAll(['"definition":', jsonEncode(definition), ','], '');
@@ -64,5 +51,4 @@ class HighchartsPictorialSeriesPathsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"max":', jsonEncode(max), ','], '');
     }
   }
-
 }

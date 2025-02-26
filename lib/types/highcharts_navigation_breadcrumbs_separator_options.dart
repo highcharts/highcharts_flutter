@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_navigation_breadcrumbs_separator_style_options.dart';
-
 
 /* *
  *
@@ -27,9 +24,7 @@ import 'highcharts_navigation_breadcrumbs_separator_style_options.dart';
  *
  * */
 
-
 export 'highcharts_navigation_breadcrumbs_separator_style_options.dart';
-
 
 /* *
  *
@@ -37,25 +32,19 @@ export 'highcharts_navigation_breadcrumbs_separator_style_options.dart';
  *
  * */
 
-
 /**
  * Options object for Breadcrumbs separator.
  */
-class HighchartsNavigationBreadcrumbsSeparatorOptions extends HighchartsOptionsBase {
-
+class HighchartsNavigationBreadcrumbsSeparatorOptions
+    extends HighchartsOptionsBase {
   HighchartsNavigationBreadcrumbsSeparatorStyleOptions? style;
   String? text;
 
-
-  HighchartsNavigationBreadcrumbsSeparatorOptions({
-    this.style,
-    this.text
-  });
+  HighchartsNavigationBreadcrumbsSeparatorOptions({this.style, this.text});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (style != null) {
       buffer.writeAll(['"style":', style?.toJSON(), ','], '');
@@ -64,5 +53,4 @@ class HighchartsNavigationBreadcrumbsSeparatorOptions extends HighchartsOptionsB
       buffer.writeAll(['"text":', jsonEncode(text), ','], '');
     }
   }
-
 }

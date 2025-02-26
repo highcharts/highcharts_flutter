@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +23,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * The normal state of a single point marker. Currently only
@@ -42,22 +35,16 @@ import 'highcharts_options_base.dart';
  * from hover.
  */
 class HighchartsSeriesMarkerStatesNormalOptions extends HighchartsOptionsBase {
-
   dynamic animation;
 
-
-  HighchartsSeriesMarkerStatesNormalOptions({
-    this.animation
-  });
+  HighchartsSeriesMarkerStatesNormalOptions({this.animation});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (animation != null) {
       buffer.writeAll(['"animation":', jsonEncode(animation), ','], '');
     }
   }
-
 }

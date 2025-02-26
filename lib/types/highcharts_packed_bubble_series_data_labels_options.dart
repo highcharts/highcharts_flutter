@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -24,13 +22,11 @@ import 'highcharts_packed_bubble_series_data_labels_parent_node_text_path_option
 import 'highcharts_packed_bubble_series_data_labels_style_options.dart';
 import 'highcharts_packed_bubble_series_data_labels_text_path_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
-
 
 export 'highcharts_series_data_labels_animation_options.dart';
 export 'highcharts_series_data_labels_filter_options.dart';
@@ -38,16 +34,14 @@ export 'highcharts_packed_bubble_series_data_labels_parent_node_text_path_option
 export 'highcharts_packed_bubble_series_data_labels_style_options.dart';
 export 'highcharts_packed_bubble_series_data_labels_text_path_options.dart';
 
-
 /* *
  *
  *  Classes
  *
  * */
 
-
-class HighchartsPackedBubbleSeriesDataLabelsOptions extends HighchartsOptionsBase {
-
+class HighchartsPackedBubbleSeriesDataLabelsOptions
+    extends HighchartsOptionsBase {
   String? align;
   String? alignTo;
   bool? allowOverlap;
@@ -72,7 +66,8 @@ class HighchartsPackedBubbleSeriesDataLabelsOptions extends HighchartsOptionsBas
   double? padding;
   String? parentNodeFormat;
   dynamic parentNodeFormatter;
-  HighchartsPackedBubbleSeriesDataLabelsParentNodeTextPathOptions? parentNodeTextPath;
+  HighchartsPackedBubbleSeriesDataLabelsParentNodeTextPathOptions?
+      parentNodeTextPath;
   String? position;
   double? rotation;
   Map<String, dynamic>? shadow;
@@ -85,50 +80,47 @@ class HighchartsPackedBubbleSeriesDataLabelsOptions extends HighchartsOptionsBas
   double? y;
   double? zIndex;
 
-
-  HighchartsPackedBubbleSeriesDataLabelsOptions({
-    this.align,
-    this.alignTo,
-    this.allowOverlap,
-    this.animation,
-    this.attributes,
-    this.backgroundColor,
-    this.borderColor,
-    this.borderRadius,
-    this.borderWidth,
-    this.className,
-    this.color,
-    this.crop,
-    this.defer,
-    this.enabled,
-    this.filter,
-    this.format,
-    this.formatter,
-    this.inside,
-    this.nullFormat,
-    this.nullFormatter,
-    this.overflow,
-    this.padding,
-    this.parentNodeFormat,
-    this.parentNodeFormatter,
-    this.parentNodeTextPath,
-    this.position,
-    this.rotation,
-    this.shadow,
-    this.shape,
-    this.style,
-    this.textPath,
-    this.useHTML,
-    this.verticalAlign,
-    this.x,
-    this.y,
-    this.zIndex
-  });
+  HighchartsPackedBubbleSeriesDataLabelsOptions(
+      {this.align,
+      this.alignTo,
+      this.allowOverlap,
+      this.animation,
+      this.attributes,
+      this.backgroundColor,
+      this.borderColor,
+      this.borderRadius,
+      this.borderWidth,
+      this.className,
+      this.color,
+      this.crop,
+      this.defer,
+      this.enabled,
+      this.filter,
+      this.format,
+      this.formatter,
+      this.inside,
+      this.nullFormat,
+      this.nullFormatter,
+      this.overflow,
+      this.padding,
+      this.parentNodeFormat,
+      this.parentNodeFormatter,
+      this.parentNodeTextPath,
+      this.position,
+      this.rotation,
+      this.shadow,
+      this.shape,
+      this.style,
+      this.textPath,
+      this.useHTML,
+      this.verticalAlign,
+      this.x,
+      this.y,
+      this.zIndex});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (align != null) {
       buffer.writeAll(['"align":', jsonEncode(align), ','], '');
@@ -146,7 +138,8 @@ class HighchartsPackedBubbleSeriesDataLabelsOptions extends HighchartsOptionsBas
       buffer.writeAll(['"attributes":', jsonEncode(attributes), ','], '');
     }
     if (backgroundColor != null) {
-      buffer.writeAll(['"backgroundColor":', jsonEncode(backgroundColor), ','], '');
+      buffer.writeAll(
+          ['"backgroundColor":', jsonEncode(backgroundColor), ','], '');
     }
     if (borderColor != null) {
       buffer.writeAll(['"borderColor":', jsonEncode(borderColor), ','], '');
@@ -197,13 +190,16 @@ class HighchartsPackedBubbleSeriesDataLabelsOptions extends HighchartsOptionsBas
       buffer.writeAll(['"padding":', padding, ','], '');
     }
     if (parentNodeFormat != null) {
-      buffer.writeAll(['"parentNodeFormat":', jsonEncode(parentNodeFormat), ','], '');
+      buffer.writeAll(
+          ['"parentNodeFormat":', jsonEncode(parentNodeFormat), ','], '');
     }
     if (parentNodeFormatter != null) {
-      buffer.writeAll(['"parentNodeFormatter":', jsonEncode(parentNodeFormatter), ','], '');
+      buffer.writeAll(
+          ['"parentNodeFormatter":', jsonEncode(parentNodeFormatter), ','], '');
     }
     if (parentNodeTextPath != null) {
-      buffer.writeAll(['"parentNodeTextPath":', parentNodeTextPath?.toJSON(), ','], '');
+      buffer.writeAll(
+          ['"parentNodeTextPath":', parentNodeTextPath?.toJSON(), ','], '');
     }
     if (position != null) {
       buffer.writeAll(['"position":', jsonEncode(position), ','], '');
@@ -243,5 +239,4 @@ class HighchartsPackedBubbleSeriesDataLabelsOptions extends HighchartsOptionsBas
       buffer.writeAll(['"zIndex":', zIndex, ','], '');
     }
   }
-
 }

@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_series_label_style_options.dart';
-
 
 /* *
  *
@@ -27,16 +24,13 @@ import 'highcharts_series_label_style_options.dart';
  *
  * */
 
-
 export 'highcharts_series_label_style_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * Series labels are placed as close to the series as possible in a
@@ -48,7 +42,6 @@ export 'highcharts_series_label_style_options.dart';
  * `graph` or an `area`.
  */
 class HighchartsSeriesLabelOptions extends HighchartsOptionsBase {
-
   List<Map<String, dynamic>>? boxesToAvoid;
   bool? connectorAllowed;
   double? connectorNeighbourDistance;
@@ -61,25 +54,22 @@ class HighchartsSeriesLabelOptions extends HighchartsOptionsBase {
   HighchartsSeriesLabelStyleOptions? style;
   bool? useHTML;
 
-
-  HighchartsSeriesLabelOptions({
-    this.boxesToAvoid,
-    this.connectorAllowed,
-    this.connectorNeighbourDistance,
-    this.enabled,
-    this.format,
-    this.formatter,
-    this.maxFontSize,
-    this.minFontSize,
-    this.onArea,
-    this.style,
-    this.useHTML
-  });
+  HighchartsSeriesLabelOptions(
+      {this.boxesToAvoid,
+      this.connectorAllowed,
+      this.connectorNeighbourDistance,
+      this.enabled,
+      this.format,
+      this.formatter,
+      this.maxFontSize,
+      this.minFontSize,
+      this.onArea,
+      this.style,
+      this.useHTML});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (boxesToAvoid != null) {
       buffer.write('"boxesToAvoid":[');
@@ -92,7 +82,9 @@ class HighchartsSeriesLabelOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"connectorAllowed":', connectorAllowed, ','], '');
     }
     if (connectorNeighbourDistance != null) {
-      buffer.writeAll(['"connectorNeighbourDistance":', connectorNeighbourDistance, ','], '');
+      buffer.writeAll(
+          ['"connectorNeighbourDistance":', connectorNeighbourDistance, ','],
+          '');
     }
     if (enabled != null) {
       buffer.writeAll(['"enabled":', enabled, ','], '');
@@ -119,5 +111,4 @@ class HighchartsSeriesLabelOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"useHTML":', useHTML, ','], '');
     }
   }
-
 }

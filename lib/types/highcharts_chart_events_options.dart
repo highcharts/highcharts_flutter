@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,21 +23,16 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Event listeners for the chart.
  */
 class HighchartsChartEventsOptions extends HighchartsOptionsBase {
-
   dynamic addSeries;
   dynamic afterPrint;
   dynamic beforePrint;
@@ -56,28 +48,25 @@ class HighchartsChartEventsOptions extends HighchartsOptionsBase {
   dynamic render;
   dynamic selection;
 
-
-  HighchartsChartEventsOptions({
-    this.addSeries,
-    this.afterPrint,
-    this.beforePrint,
-    this.click,
-    this.drilldown,
-    this.drillup,
-    this.drillupall,
-    this.exportData,
-    this.fullscreenClose,
-    this.fullscreenOpen,
-    this.load,
-    this.redraw,
-    this.render,
-    this.selection
-  });
+  HighchartsChartEventsOptions(
+      {this.addSeries,
+      this.afterPrint,
+      this.beforePrint,
+      this.click,
+      this.drilldown,
+      this.drillup,
+      this.drillupall,
+      this.exportData,
+      this.fullscreenClose,
+      this.fullscreenOpen,
+      this.load,
+      this.redraw,
+      this.render,
+      this.selection});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (addSeries != null) {
       buffer.writeAll(['"addSeries":', jsonEncode(addSeries), ','], '');
@@ -104,10 +93,12 @@ class HighchartsChartEventsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"exportData":', jsonEncode(exportData), ','], '');
     }
     if (fullscreenClose != null) {
-      buffer.writeAll(['"fullscreenClose":', jsonEncode(fullscreenClose), ','], '');
+      buffer.writeAll(
+          ['"fullscreenClose":', jsonEncode(fullscreenClose), ','], '');
     }
     if (fullscreenOpen != null) {
-      buffer.writeAll(['"fullscreenOpen":', jsonEncode(fullscreenOpen), ','], '');
+      buffer
+          .writeAll(['"fullscreenOpen":', jsonEncode(fullscreenOpen), ','], '');
     }
     if (load != null) {
       buffer.writeAll(['"load":', jsonEncode(load), ','], '');
@@ -122,5 +113,4 @@ class HighchartsChartEventsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"selection":', jsonEncode(selection), ','], '');
     }
   }
-
 }

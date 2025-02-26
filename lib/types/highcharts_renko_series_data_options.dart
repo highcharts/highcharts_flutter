@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -23,26 +21,22 @@ import 'highcharts_renko_series_data_data_labels_options.dart';
 import 'highcharts_renko_series_data_drag_drop_options.dart';
 import 'highcharts_renko_series_data_events_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_renko_series_data_accessibility_options.dart';
 export 'highcharts_renko_series_data_data_labels_options.dart';
 export 'highcharts_renko_series_data_drag_drop_options.dart';
 export 'highcharts_renko_series_data_events_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * An array of data points for the series. For the `renko` series
@@ -78,7 +72,6 @@ export 'highcharts_renko_series_data_events_options.dart';
  *    ```
  */
 class HighchartsRenkoSeriesDataOptions extends HighchartsOptionsBase {
-
   HighchartsRenkoSeriesDataAccessibilityOptions? accessibility;
   String? borderColor;
   double? borderWidth;
@@ -96,30 +89,27 @@ class HighchartsRenkoSeriesDataOptions extends HighchartsOptionsBase {
   dynamic x;
   double? y;
 
-
-  HighchartsRenkoSeriesDataOptions({
-    this.accessibility,
-    this.borderColor,
-    this.borderWidth,
-    this.color,
-    this.custom,
-    this.dashStyle,
-    this.dataLabels,
-    this.description,
-    this.dragDrop,
-    this.events,
-    this.id,
-    this.labelrank,
-    this.pointWidth,
-    this.selected,
-    this.x,
-    this.y
-  });
+  HighchartsRenkoSeriesDataOptions(
+      {this.accessibility,
+      this.borderColor,
+      this.borderWidth,
+      this.color,
+      this.custom,
+      this.dashStyle,
+      this.dataLabels,
+      this.description,
+      this.dragDrop,
+      this.events,
+      this.id,
+      this.labelrank,
+      this.pointWidth,
+      this.selected,
+      this.x,
+      this.y});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (accessibility != null) {
       buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ','], '');
@@ -178,5 +168,4 @@ class HighchartsRenkoSeriesDataOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"y":', y, ','], '');
     }
   }
-
 }

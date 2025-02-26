@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -23,19 +21,16 @@ import 'highcharts_stock_tools_gui_definitions_crooked_lines_crooked5options.dar
 import 'highcharts_stock_tools_gui_definitions_crooked_lines_elliott3options.dart';
 import 'highcharts_stock_tools_gui_definitions_crooked_lines_elliott5options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_stock_tools_gui_definitions_crooked_lines_crooked3options.dart';
 export 'highcharts_stock_tools_gui_definitions_crooked_lines_crooked5options.dart';
 export 'highcharts_stock_tools_gui_definitions_crooked_lines_elliott3options.dart';
 export 'highcharts_stock_tools_gui_definitions_crooked_lines_elliott5options.dart';
-
 
 /* *
  *
@@ -43,28 +38,20 @@ export 'highcharts_stock_tools_gui_definitions_crooked_lines_elliott5options.dar
  *
  * */
 
-
-class HighchartsStockToolsGuiDefinitionsCrookedLinesOptions extends HighchartsOptionsBase {
-
+class HighchartsStockToolsGuiDefinitionsCrookedLinesOptions
+    extends HighchartsOptionsBase {
   HighchartsStockToolsGuiDefinitionsCrookedLinesCrooked3Options? crooked3;
   HighchartsStockToolsGuiDefinitionsCrookedLinesCrooked5Options? crooked5;
   HighchartsStockToolsGuiDefinitionsCrookedLinesElliott3Options? elliott3;
   HighchartsStockToolsGuiDefinitionsCrookedLinesElliott5Options? elliott5;
   String? items;
 
-
-  HighchartsStockToolsGuiDefinitionsCrookedLinesOptions({
-    this.crooked3,
-    this.crooked5,
-    this.elliott3,
-    this.elliott5,
-    this.items
-  });
+  HighchartsStockToolsGuiDefinitionsCrookedLinesOptions(
+      {this.crooked3, this.crooked5, this.elliott3, this.elliott5, this.items});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (crooked3 != null) {
       buffer.writeAll(['"crooked3":', crooked3?.toJSON(), ','], '');
@@ -82,5 +69,4 @@ class HighchartsStockToolsGuiDefinitionsCrookedLinesOptions extends HighchartsOp
       buffer.writeAll(['"items":', jsonEncode(items), ','], '');
     }
   }
-
 }

@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,21 +23,17 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * A custom data grouping object for each button.
  */
-class HighchartsRangeSelectorButtonsDataGroupingOptions extends HighchartsOptionsBase {
-
+class HighchartsRangeSelectorButtonsDataGroupingOptions
+    extends HighchartsOptionsBase {
   String? anchor;
   String? approximation;
   dynamic dateTimeLabelFormats;
@@ -53,25 +46,22 @@ class HighchartsRangeSelectorButtonsDataGroupingOptions extends HighchartsOption
   bool? smoothed;
   List<List<dynamic>>? units;
 
-
-  HighchartsRangeSelectorButtonsDataGroupingOptions({
-    this.anchor,
-    this.approximation,
-    this.dateTimeLabelFormats,
-    this.enabled,
-    this.firstAnchor,
-    this.forced,
-    this.groupAll,
-    this.groupPixelWidth,
-    this.lastAnchor,
-    this.smoothed,
-    this.units
-  });
+  HighchartsRangeSelectorButtonsDataGroupingOptions(
+      {this.anchor,
+      this.approximation,
+      this.dateTimeLabelFormats,
+      this.enabled,
+      this.firstAnchor,
+      this.forced,
+      this.groupAll,
+      this.groupPixelWidth,
+      this.lastAnchor,
+      this.smoothed,
+      this.units});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (anchor != null) {
       buffer.writeAll(['"anchor":', jsonEncode(anchor), ','], '');
@@ -80,7 +70,9 @@ class HighchartsRangeSelectorButtonsDataGroupingOptions extends HighchartsOption
       buffer.writeAll(['"approximation":', jsonEncode(approximation), ','], '');
     }
     if (dateTimeLabelFormats != null) {
-      buffer.writeAll(['"dateTimeLabelFormats":', jsonEncode(dateTimeLabelFormats), ','], '');
+      buffer.writeAll(
+          ['"dateTimeLabelFormats":', jsonEncode(dateTimeLabelFormats), ','],
+          '');
     }
     if (enabled != null) {
       buffer.writeAll(['"enabled":', enabled, ','], '');
@@ -111,5 +103,4 @@ class HighchartsRangeSelectorButtonsDataGroupingOptions extends HighchartsOption
       buffer.write('],');
     }
   }
-
 }

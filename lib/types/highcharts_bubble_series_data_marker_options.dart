@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_series_marker_states_options.dart';
-
 
 /* *
  *
@@ -27,9 +24,7 @@ import 'highcharts_series_marker_states_options.dart';
  *
  * */
 
-
 export 'highcharts_series_marker_states_options.dart';
-
 
 /* *
  *
@@ -37,9 +32,7 @@ export 'highcharts_series_marker_states_options.dart';
  *
  * */
 
-
 class HighchartsBubbleSeriesDataMarkerOptions extends HighchartsOptionsBase {
-
   bool? enabled;
   String? fillColor;
   String? lineColor;
@@ -47,20 +40,17 @@ class HighchartsBubbleSeriesDataMarkerOptions extends HighchartsOptionsBase {
   HighchartsSeriesMarkerStatesOptions? states;
   String? symbol;
 
-
-  HighchartsBubbleSeriesDataMarkerOptions({
-    this.enabled,
-    this.fillColor,
-    this.lineColor,
-    this.lineWidth,
-    this.states,
-    this.symbol
-  });
+  HighchartsBubbleSeriesDataMarkerOptions(
+      {this.enabled,
+      this.fillColor,
+      this.lineColor,
+      this.lineWidth,
+      this.states,
+      this.symbol});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (enabled != null) {
       buffer.writeAll(['"enabled":', enabled, ','], '');
@@ -81,5 +71,4 @@ class HighchartsBubbleSeriesDataMarkerOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"symbol":', jsonEncode(symbol), ','], '');
     }
   }
-
 }

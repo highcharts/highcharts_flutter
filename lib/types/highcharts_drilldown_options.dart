@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -22,25 +20,21 @@ import 'highcharts_drilldown_active_data_label_style_options.dart';
 import 'highcharts_drilldown_breadcrumbs_options.dart';
 import 'highcharts_drilldown_drill_up_button_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_drilldown_active_data_label_style_options.dart';
 export 'highcharts_drilldown_breadcrumbs_options.dart';
 export 'highcharts_drilldown_drill_up_button_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * Options for drill down, the concept of inspecting increasingly high
@@ -51,7 +45,6 @@ export 'highcharts_drilldown_drill_up_button_options.dart';
  * [code.highcharts.com/modules/drilldown.js](https://code.highcharts.com/modules/drilldown.js).
  */
 class HighchartsDrilldownOptions extends HighchartsOptionsBase {
-
   Map<String, String>? activeAxisLabelStyle;
   HighchartsDrilldownActiveDataLabelStyleOptions? activeDataLabelStyle;
   bool? allowPointDrilldown;
@@ -61,22 +54,19 @@ class HighchartsDrilldownOptions extends HighchartsOptionsBase {
   bool? mapZooming;
   List<dynamic>? series;
 
-
-  HighchartsDrilldownOptions({
-    this.activeAxisLabelStyle,
-    this.activeDataLabelStyle,
-    this.allowPointDrilldown,
-    this.animation,
-    this.breadcrumbs,
-    this.drillUpButton,
-    this.mapZooming,
-    this.series
-  });
+  HighchartsDrilldownOptions(
+      {this.activeAxisLabelStyle,
+      this.activeDataLabelStyle,
+      this.allowPointDrilldown,
+      this.animation,
+      this.breadcrumbs,
+      this.drillUpButton,
+      this.mapZooming,
+      this.series});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (activeAxisLabelStyle != null) {
       buffer.write('"activeAxisLabelStyle":{');
@@ -86,7 +76,8 @@ class HighchartsDrilldownOptions extends HighchartsOptionsBase {
       buffer.write('},');
     }
     if (activeDataLabelStyle != null) {
-      buffer.writeAll(['"activeDataLabelStyle":', activeDataLabelStyle?.toJSON(), ','], '');
+      buffer.writeAll(
+          ['"activeDataLabelStyle":', activeDataLabelStyle?.toJSON(), ','], '');
     }
     if (allowPointDrilldown != null) {
       buffer.writeAll(['"allowPointDrilldown":', allowPointDrilldown, ','], '');
@@ -111,5 +102,4 @@ class HighchartsDrilldownOptions extends HighchartsOptionsBase {
       buffer.write('],');
     }
   }
-
 }

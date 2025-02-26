@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,34 +23,24 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Options for annotations in the export-data table.
  */
 class HighchartsExportingCsvAnnotationsOptions extends HighchartsOptionsBase {
-
   String? itemDelimiter;
   bool? join;
 
-
-  HighchartsExportingCsvAnnotationsOptions({
-    this.itemDelimiter,
-    this.join
-  });
+  HighchartsExportingCsvAnnotationsOptions({this.itemDelimiter, this.join});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (itemDelimiter != null) {
       buffer.writeAll(['"itemDelimiter":', jsonEncode(itemDelimiter), ','], '');
@@ -62,5 +49,4 @@ class HighchartsExportingCsvAnnotationsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"join":', join, ','], '');
     }
   }
-
 }

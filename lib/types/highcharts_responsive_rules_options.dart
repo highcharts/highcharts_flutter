@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_responsive_rules_condition_options.dart';
-
 
 /* *
  *
@@ -27,9 +24,7 @@ import 'highcharts_responsive_rules_condition_options.dart';
  *
  * */
 
-
 export 'highcharts_responsive_rules_condition_options.dart';
-
 
 /* *
  *
@@ -37,26 +32,19 @@ export 'highcharts_responsive_rules_condition_options.dart';
  *
  * */
 
-
 /**
  * A set of rules for responsive settings. The rules are executed from
  * the top down.
  */
 class HighchartsResponsiveRulesOptions extends HighchartsOptionsBase {
-
   dynamic chartOptions;
   HighchartsResponsiveRulesConditionOptions? condition;
 
-
-  HighchartsResponsiveRulesOptions({
-    this.chartOptions,
-    this.condition
-  });
+  HighchartsResponsiveRulesOptions({this.chartOptions, this.condition});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (chartOptions != null) {
       buffer.writeAll(['"chartOptions":', jsonEncode(chartOptions), ','], '');
@@ -65,5 +53,4 @@ class HighchartsResponsiveRulesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"condition":', condition?.toJSON(), ','], '');
     }
   }
-
 }

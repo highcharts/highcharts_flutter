@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_networkgraph_series_nodes_marker_states_options.dart';
-
 
 /* *
  *
@@ -27,9 +24,7 @@ import 'highcharts_networkgraph_series_nodes_marker_states_options.dart';
  *
  * */
 
-
 export 'highcharts_networkgraph_series_nodes_marker_states_options.dart';
-
 
 /* *
  *
@@ -37,12 +32,11 @@ export 'highcharts_networkgraph_series_nodes_marker_states_options.dart';
  *
  * */
 
-
 /**
  * Options for the node markers.
  */
-class HighchartsNetworkgraphSeriesNodesMarkerOptions extends HighchartsOptionsBase {
-
+class HighchartsNetworkgraphSeriesNodesMarkerOptions
+    extends HighchartsOptionsBase {
   bool? enabled;
   HighchartsNetworkgraphSeriesNodesMarkerStatesOptions? states;
   double? enabledThreshold;
@@ -54,24 +48,21 @@ class HighchartsNetworkgraphSeriesNodesMarkerOptions extends HighchartsOptionsBa
   String? symbol;
   double? width;
 
-
-  HighchartsNetworkgraphSeriesNodesMarkerOptions({
-    this.enabled,
-    this.states,
-    this.enabledThreshold,
-    this.fillColor,
-    this.height,
-    this.lineColor,
-    this.lineWidth,
-    this.radius,
-    this.symbol,
-    this.width
-  });
+  HighchartsNetworkgraphSeriesNodesMarkerOptions(
+      {this.enabled,
+      this.states,
+      this.enabledThreshold,
+      this.fillColor,
+      this.height,
+      this.lineColor,
+      this.lineWidth,
+      this.radius,
+      this.symbol,
+      this.width});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (enabled != null) {
       buffer.writeAll(['"enabled":', enabled, ','], '');
@@ -104,5 +95,4 @@ class HighchartsNetworkgraphSeriesNodesMarkerOptions extends HighchartsOptionsBa
       buffer.writeAll(['"width":', width, ','], '');
     }
   }
-
 }

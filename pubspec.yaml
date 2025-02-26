@@ -1,14 +1,17 @@
 name: highcharts_flutter
-version: 0.1.0
-description: Official Flutter integration for Highcharts.
+version: 0.1.1
+description: >-
+  Official Flutter integration for Highcharts. Use Highcharts widgets for
+  interactive charts right in your Flutter app. All options are available as
+  widgets and can be adjusted and dynamically applied.
 homepage: https://www.highcharts.com/integrations/
 repository: https://github.com/highcharts/highcharts_flutter
 
 topics:
- - charts
- - diagrams
- - graphs
- - webview
+  - charts
+  - diagrams
+  - graphs
+  - webview
 
 environment:
   sdk: ">=3.3.0 <4.0.0"

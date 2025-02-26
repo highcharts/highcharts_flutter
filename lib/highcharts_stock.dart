@@ -8,30 +8,27 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import 'package:webview_flutter_android/webview_flutter_android.dart';
 import 'package:webview_flutter_wkwebview/webview_flutter_wkwebview.dart';
-import '' if (dart.library.js_interop) 'package:webview_flutter_web/webview_flutter_web.dart';
+import ''
+    if (dart.library.js_interop) 'package:webview_flutter_web/webview_flutter_web.dart';
 
 import 'types/highcharts_options.dart';
-
 
 /* *
  *
  *  Exports
  *
  * */
-
 
 export 'types/highcharts_options.dart';
 export 'types/highcharts_abands_series.dart';
@@ -109,13 +106,11 @@ export 'types/highcharts_wmaseries.dart';
 export 'types/highcharts_xrange_series.dart';
 export 'types/highcharts_zigzag_series.dart';
 
-
 /* *
  *
  *  Constants
  *
  * */
-
 
 const String kHighchartsStockHTML = '''
 <!DOCTYPE html><html lang="en">
@@ -187,16 +182,13 @@ const String kHighchartsStockHTML = '''
 </html>
 ''';
 
-
 /* *
  *
  *  Functions
  *
  * */
 
-
 String _scriptTag(String? script) {
-
   if (script == null) {
     return '';
   }
@@ -204,16 +196,13 @@ String _scriptTag(String? script) {
   return '<script type="text/javascript">$script</script>';
 }
 
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 class HighchartsStock extends StatefulWidget {
-
   /// Custom JavaScript to inject into the webView. This will be executed before
   /// the initial chart update with the defined options.
   late final String? javaScript;
@@ -226,9 +215,9 @@ class HighchartsStock extends StatefulWidget {
 
   late final WebViewController webViewController;
 
-  HighchartsStock(this.options, { super.key, this.javaScript });
+  HighchartsStock(this.options, {super.key, this.javaScript});
 
-  void refresh ([bool? redraw]) {
+  void refresh([bool? redraw]) {
     String json = options.toJSON();
     debugPrint(json);
     redraw = redraw ?? true;
@@ -239,7 +228,8 @@ class HighchartsStock extends StatefulWidget {
         ${_scriptTag('HighchartsFlutter.update($json, $redraw);')}
         ''');
     } else {
-      webViewController.runJavaScript('HighchartsFlutter.update($json, $redraw)');
+      webViewController
+          .runJavaScript('HighchartsFlutter.update($json, $redraw)');
     }
   }
 
@@ -247,12 +237,9 @@ class HighchartsStock extends StatefulWidget {
   State<HighchartsStock> createState() {
     return _HighchartsStockState();
   }
-
 }
 
-
 class _HighchartsStockState extends State<HighchartsStock> {
-
   late final WebViewWidget webView;
 
   late final WebViewController webViewController;
@@ -267,9 +254,9 @@ class _HighchartsStockState extends State<HighchartsStock> {
 
     if (height is double && width is double) {
       return SizedBox(
-          height: height,
-          width: width,
-          child: webView,
+        height: height,
+        width: width,
+        child: webView,
       );
     } else if (height is double) {
       return SizedBox.fromSize(
@@ -306,37 +293,29 @@ class _HighchartsStockState extends State<HighchartsStock> {
     webViewController = WebViewController.fromPlatformCreationParams(params);
 
     if (webViewController.platform is WebKitWebViewController) {
-      (webViewController.platform as WebKitWebViewController).setInspectable(true);
+      (webViewController.platform as WebKitWebViewController)
+          .setInspectable(true);
     }
 
-    if (
-      webViewController.platform is AndroidWebViewController ||
-      webViewController.platform is WebKitWebViewController
-    ) {
+    if (webViewController.platform is AndroidWebViewController ||
+        webViewController.platform is WebKitWebViewController) {
       webViewController
         ..setJavaScriptMode(JavaScriptMode.unrestricted)
         ..setBackgroundColor(const Color(0x00000000))
-        ..setNavigationDelegate(
-          NavigationDelegate(
+        ..setNavigationDelegate(NavigationDelegate(
             onNavigationRequest: (NavigationRequest request) {
-                String url = request.url;
+          String url = request.url;
 
-                debugPrint(url);
+          debugPrint(url);
 
-                if (
-                    url == 'about:blank' ||
-                    url.startsWith('http://127.0.0.1')
-                ) {
-                    return NavigationDecision.navigate;
-                }
+          if (url == 'about:blank' || url.startsWith('http://127.0.0.1')) {
+            return NavigationDecision.navigate;
+          }
 
-                return NavigationDecision.prevent;
-            },
-            onPageFinished: (String url) {
-                widget.refresh();
-            }
-          )
-        );
+          return NavigationDecision.prevent;
+        }, onPageFinished: (String url) {
+          widget.refresh();
+        }));
     }
 
     webView = WebViewWidget(controller: webViewController);
@@ -350,7 +329,5 @@ class _HighchartsStockState extends State<HighchartsStock> {
       ${_scriptTag(widget.javaScript)}
       ${_scriptTag('HighchartsFlutter.update($json);')}
     ''');
-
   }
-
 }

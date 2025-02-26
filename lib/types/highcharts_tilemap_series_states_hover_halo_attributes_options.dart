@@ -8,17 +8,13 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,33 +22,24 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
-class HighchartsTilemapSeriesStatesHoverHaloAttributesOptions extends HighchartsOptionsBase {
-
+class HighchartsTilemapSeriesStatesHoverHaloAttributesOptions
+    extends HighchartsOptionsBase {
   double? zIndex;
 
-
-  HighchartsTilemapSeriesStatesHoverHaloAttributesOptions({
-    this.zIndex
-  });
+  HighchartsTilemapSeriesStatesHoverHaloAttributesOptions({this.zIndex});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (zIndex != null) {
       buffer.writeAll(['"zIndex":', zIndex, ','], '');
     }
   }
-
 }

@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +23,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * CSS styles for the title. If the title text is longer than the
@@ -46,20 +39,14 @@ import 'highcharts_options_base.dart';
  * `.highcharts-axis-title` class.
  */
 class HighchartsXAxisTitleStyleOptions extends HighchartsOptionsBase {
-
   String? color;
   dynamic fontSize;
 
-
-  HighchartsXAxisTitleStyleOptions({
-    this.color,
-    this.fontSize
-  });
+  HighchartsXAxisTitleStyleOptions({this.color, this.fontSize});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (color != null) {
       buffer.writeAll(['"color":', jsonEncode(color), ','], '');
@@ -68,5 +55,4 @@ class HighchartsXAxisTitleStyleOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"fontSize":', jsonEncode(fontSize), ','], '');
     }
   }
-
 }

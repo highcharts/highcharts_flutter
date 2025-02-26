@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -29,13 +27,11 @@ import 'highcharts_tilemap_series_states_options.dart';
 import 'highcharts_tilemap_series_tooltip_options.dart';
 import 'highcharts_series_zones_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
-
 
 export 'highcharts_series_accessibility_options.dart';
 export 'highcharts_tilemap_series_data_labels_options.dart';
@@ -48,13 +44,11 @@ export 'highcharts_tilemap_series_states_options.dart';
 export 'highcharts_tilemap_series_tooltip_options.dart';
 export 'highcharts_series_zones_options.dart';
 
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * A `tilemap` series. If the [type](#series.tilemap.type) option is
@@ -100,7 +94,6 @@ export 'highcharts_series_zones_options.dart';
  *             
  */
 class HighchartsTilemapSeriesOptions extends HighchartsOptionsBase {
-
   HighchartsSeriesAccessibilityOptions? accessibility;
   bool? allowPointSelect;
   bool? animation;
@@ -157,69 +150,66 @@ class HighchartsTilemapSeriesOptions extends HighchartsOptionsBase {
   String? zoneAxis;
   List<HighchartsSeriesZonesOptions>? zones;
 
-
-  HighchartsTilemapSeriesOptions({
-    this.accessibility,
-    this.allowPointSelect,
-    this.animation,
-    this.borderRadius,
-    this.borderWidth,
-    this.className,
-    this.clip,
-    this.color,
-    this.colorAxis,
-    this.colorIndex,
-    this.colorKey,
-    this.colsize,
-    this.crisp,
-    this.cursor,
-    this.custom,
-    this.dataLabels,
-    this.description,
-    this.enableMouseTracking,
-    this.events,
-    this.id,
-    this.inactiveOtherPoints,
-    this.includeInDataExport,
-    this.index,
-    this.interpolation,
-    this.keys,
-    this.label,
-    this.legendIndex,
-    this.legendSymbol,
-    this.linkedTo,
-    this.negativeColor,
-    this.nullColor,
-    this.onPoint,
-    this.opacity,
-    this.point,
-    this.pointDescriptionFormat,
-    this.pointDescriptionFormatter,
-    this.pointPadding,
-    this.relativeXValue,
-    this.rowsize,
-    this.selected,
-    this.showCheckbox,
-    this.showInLegend,
-    this.skipKeyboardNavigation,
-    this.sonification,
-    this.states,
-    this.stickyTracking,
-    this.tileShape,
-    this.tooltip,
-    this.turboThreshold,
-    this.visible,
-    this.xAxis,
-    this.yAxis,
-    this.zIndex,
-    this.zoneAxis,
-    this.zones
-  });
+  HighchartsTilemapSeriesOptions(
+      {this.accessibility,
+      this.allowPointSelect,
+      this.animation,
+      this.borderRadius,
+      this.borderWidth,
+      this.className,
+      this.clip,
+      this.color,
+      this.colorAxis,
+      this.colorIndex,
+      this.colorKey,
+      this.colsize,
+      this.crisp,
+      this.cursor,
+      this.custom,
+      this.dataLabels,
+      this.description,
+      this.enableMouseTracking,
+      this.events,
+      this.id,
+      this.inactiveOtherPoints,
+      this.includeInDataExport,
+      this.index,
+      this.interpolation,
+      this.keys,
+      this.label,
+      this.legendIndex,
+      this.legendSymbol,
+      this.linkedTo,
+      this.negativeColor,
+      this.nullColor,
+      this.onPoint,
+      this.opacity,
+      this.point,
+      this.pointDescriptionFormat,
+      this.pointDescriptionFormatter,
+      this.pointPadding,
+      this.relativeXValue,
+      this.rowsize,
+      this.selected,
+      this.showCheckbox,
+      this.showInLegend,
+      this.skipKeyboardNavigation,
+      this.sonification,
+      this.states,
+      this.stickyTracking,
+      this.tileShape,
+      this.tooltip,
+      this.turboThreshold,
+      this.visible,
+      this.xAxis,
+      this.yAxis,
+      this.zIndex,
+      this.zoneAxis,
+      this.zones});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (accessibility != null) {
       buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ','], '');
@@ -332,10 +322,18 @@ class HighchartsTilemapSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"point":', point?.toJSON(), ','], '');
     }
     if (pointDescriptionFormat != null) {
-      buffer.writeAll(['"pointDescriptionFormat":', jsonEncode(pointDescriptionFormat), ','], '');
+      buffer.writeAll([
+        '"pointDescriptionFormat":',
+        jsonEncode(pointDescriptionFormat),
+        ','
+      ], '');
     }
     if (pointDescriptionFormatter != null) {
-      buffer.writeAll(['"pointDescriptionFormatter":', jsonEncode(pointDescriptionFormatter), ','], '');
+      buffer.writeAll([
+        '"pointDescriptionFormatter":',
+        jsonEncode(pointDescriptionFormatter),
+        ','
+      ], '');
     }
     if (pointPadding != null) {
       buffer.writeAll(['"pointPadding":', pointPadding, ','], '');
@@ -356,7 +354,8 @@ class HighchartsTilemapSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"showInLegend":', showInLegend, ','], '');
     }
     if (skipKeyboardNavigation != null) {
-      buffer.writeAll(['"skipKeyboardNavigation":', skipKeyboardNavigation, ','], '');
+      buffer.writeAll(
+          ['"skipKeyboardNavigation":', skipKeyboardNavigation, ','], '');
     }
     if (sonification != null) {
       buffer.writeAll(['"sonification":', sonification?.toJSON(), ','], '');
@@ -399,5 +398,4 @@ class HighchartsTilemapSeriesOptions extends HighchartsOptionsBase {
       buffer.write('],');
     }
   }
-
 }

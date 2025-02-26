@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +23,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * CSS styles for the collapse button.
@@ -42,23 +35,18 @@ import 'highcharts_options_base.dart';
  * In styled mode, the collapse button style is given in the
  * `.highcharts-collapse-button` class.
  */
-class HighchartsTreegraphSeriesCollapseButtonStyleOptions extends HighchartsOptionsBase {
-
+class HighchartsTreegraphSeriesCollapseButtonStyleOptions
+    extends HighchartsOptionsBase {
   String? cursor;
   dynamic fontSize;
   String? fontWeight;
 
-
-  HighchartsTreegraphSeriesCollapseButtonStyleOptions({
-    this.cursor,
-    this.fontSize,
-    this.fontWeight
-  });
+  HighchartsTreegraphSeriesCollapseButtonStyleOptions(
+      {this.cursor, this.fontSize, this.fontWeight});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (cursor != null) {
       buffer.writeAll(['"cursor":', jsonEncode(cursor), ','], '');
@@ -70,5 +58,4 @@ class HighchartsTreegraphSeriesCollapseButtonStyleOptions extends HighchartsOpti
       buffer.writeAll(['"fontWeight":', jsonEncode(fontWeight), ','], '');
     }
   }
-
 }

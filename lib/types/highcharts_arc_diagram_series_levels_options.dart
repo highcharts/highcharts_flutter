@@ -8,19 +8,16 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_arc_diagram_series_levels_data_labels_options.dart';
 import 'highcharts_arc_diagram_series_levels_states_options.dart';
-
 
 /* *
  *
@@ -28,10 +25,8 @@ import 'highcharts_arc_diagram_series_levels_states_options.dart';
  *
  * */
 
-
 export 'highcharts_arc_diagram_series_levels_data_labels_options.dart';
 export 'highcharts_arc_diagram_series_levels_states_options.dart';
-
 
 /* *
  *
@@ -39,13 +34,11 @@ export 'highcharts_arc_diagram_series_levels_states_options.dart';
  *
  * */
 
-
 /**
  * Set options on specific levels. Takes precedence over series options,
  * but not node and link options.
  */
 class HighchartsArcDiagramSeriesLevelsOptions extends HighchartsOptionsBase {
-
   String? borderColor;
   double? borderWidth;
   String? color;
@@ -55,22 +48,19 @@ class HighchartsArcDiagramSeriesLevelsOptions extends HighchartsOptionsBase {
   double? linkOpacity;
   HighchartsArcDiagramSeriesLevelsStatesOptions? states;
 
-
-  HighchartsArcDiagramSeriesLevelsOptions({
-    this.borderColor,
-    this.borderWidth,
-    this.color,
-    this.colorByPoint,
-    this.dataLabels,
-    this.level,
-    this.linkOpacity,
-    this.states
-  });
+  HighchartsArcDiagramSeriesLevelsOptions(
+      {this.borderColor,
+      this.borderWidth,
+      this.color,
+      this.colorByPoint,
+      this.dataLabels,
+      this.level,
+      this.linkOpacity,
+      this.states});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (borderColor != null) {
       buffer.writeAll(['"borderColor":', jsonEncode(borderColor), ','], '');
@@ -97,5 +87,4 @@ class HighchartsArcDiagramSeriesLevelsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"states":', states?.toJSON(), ','], '');
     }
   }
-
 }

@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,21 +23,17 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * The volume of notes, from 0 to 1.
  */
-class HighchartsSonificationDefaultInstrumentMappingVolumeOptions extends HighchartsOptionsBase {
-
+class HighchartsSonificationDefaultInstrumentMappingVolumeOptions
+    extends HighchartsOptionsBase {
   String? mapFunction;
   String? mapTo;
   double? max;
@@ -48,20 +41,17 @@ class HighchartsSonificationDefaultInstrumentMappingVolumeOptions extends Highch
   double? value;
   String? within;
 
-
-  HighchartsSonificationDefaultInstrumentMappingVolumeOptions({
-    this.mapFunction,
-    this.mapTo,
-    this.max,
-    this.min,
-    this.value,
-    this.within
-  });
+  HighchartsSonificationDefaultInstrumentMappingVolumeOptions(
+      {this.mapFunction,
+      this.mapTo,
+      this.max,
+      this.min,
+      this.value,
+      this.within});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (mapFunction != null) {
       buffer.writeAll(['"mapFunction":', jsonEncode(mapFunction), ','], '');
@@ -82,5 +72,4 @@ class HighchartsSonificationDefaultInstrumentMappingVolumeOptions extends Highch
       buffer.writeAll(['"within":', jsonEncode(within), ','], '');
     }
   }
-
 }

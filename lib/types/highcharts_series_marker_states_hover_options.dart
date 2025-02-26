@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_series_marker_states_hover_animation_options.dart';
-
 
 /* *
  *
@@ -27,9 +24,7 @@ import 'highcharts_series_marker_states_hover_animation_options.dart';
  *
  * */
 
-
 export 'highcharts_series_marker_states_hover_animation_options.dart';
-
 
 /* *
  *
@@ -37,12 +32,10 @@ export 'highcharts_series_marker_states_hover_animation_options.dart';
  *
  * */
 
-
 /**
  * The hover state for a single point marker.
  */
 class HighchartsSeriesMarkerStatesHoverOptions extends HighchartsOptionsBase {
-
   HighchartsSeriesMarkerStatesHoverAnimationOptions? animation;
   bool? enabled;
   String? fillColor;
@@ -52,22 +45,19 @@ class HighchartsSeriesMarkerStatesHoverOptions extends HighchartsOptionsBase {
   double? radius;
   double? radiusPlus;
 
-
-  HighchartsSeriesMarkerStatesHoverOptions({
-    this.animation,
-    this.enabled,
-    this.fillColor,
-    this.lineColor,
-    this.lineWidth,
-    this.lineWidthPlus,
-    this.radius,
-    this.radiusPlus
-  });
+  HighchartsSeriesMarkerStatesHoverOptions(
+      {this.animation,
+      this.enabled,
+      this.fillColor,
+      this.lineColor,
+      this.lineWidth,
+      this.lineWidthPlus,
+      this.radius,
+      this.radiusPlus});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (animation != null) {
       buffer.writeAll(['"animation":', animation?.toJSON(), ','], '');
@@ -94,5 +84,4 @@ class HighchartsSeriesMarkerStatesHoverOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"radiusPlus":', radiusPlus, ','], '');
     }
   }
-
 }

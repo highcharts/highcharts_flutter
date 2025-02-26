@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,38 +23,28 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Options for point grouping, specifically for instrument tracks.
  */
-class HighchartsSonificationDefaultInstrumentPointGroupingOptions extends HighchartsOptionsBase {
-
+class HighchartsSonificationDefaultInstrumentPointGroupingOptions
+    extends HighchartsOptionsBase {
   String? algorithm;
   bool? enabled;
   double? groupTimespan;
   String? prop;
 
-
-  HighchartsSonificationDefaultInstrumentPointGroupingOptions({
-    this.algorithm,
-    this.enabled,
-    this.groupTimespan,
-    this.prop
-  });
+  HighchartsSonificationDefaultInstrumentPointGroupingOptions(
+      {this.algorithm, this.enabled, this.groupTimespan, this.prop});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (algorithm != null) {
       buffer.writeAll(['"algorithm":', jsonEncode(algorithm), ','], '');
@@ -72,5 +59,4 @@ class HighchartsSonificationDefaultInstrumentPointGroupingOptions extends Highch
       buffer.writeAll(['"prop":', jsonEncode(prop), ','], '');
     }
   }
-
 }

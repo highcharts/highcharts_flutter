@@ -8,17 +8,13 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +22,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * Options for a scrollable plot area. This feature provides a minimum size for
@@ -48,26 +40,22 @@ import 'highcharts_options_base.dart';
  * option is set.
  */
 class HighchartsChartScrollablePlotAreaOptions extends HighchartsOptionsBase {
-
   double? minHeight;
   double? minWidth;
   double? opacity;
   double? scrollPositionX;
   double? scrollPositionY;
 
-
-  HighchartsChartScrollablePlotAreaOptions({
-    this.minHeight,
-    this.minWidth,
-    this.opacity,
-    this.scrollPositionX,
-    this.scrollPositionY
-  });
+  HighchartsChartScrollablePlotAreaOptions(
+      {this.minHeight,
+      this.minWidth,
+      this.opacity,
+      this.scrollPositionX,
+      this.scrollPositionY});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (minHeight != null) {
       buffer.writeAll(['"minHeight":', minHeight, ','], '');
@@ -85,5 +73,4 @@ class HighchartsChartScrollablePlotAreaOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"scrollPositionY":', scrollPositionY, ','], '');
     }
   }
-
 }

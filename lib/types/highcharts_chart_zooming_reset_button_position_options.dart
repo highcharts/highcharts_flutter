@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +23,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * The position of the button.
@@ -43,25 +36,19 @@ import 'highcharts_options_base.dart';
  * elements. Ensure coordinates do not obstruct other components or
  * data visibility.
  */
-class HighchartsChartZoomingResetButtonPositionOptions extends HighchartsOptionsBase {
-
+class HighchartsChartZoomingResetButtonPositionOptions
+    extends HighchartsOptionsBase {
   String? align;
   String? verticalAlign;
   double? x;
   double? y;
 
-
-  HighchartsChartZoomingResetButtonPositionOptions({
-    this.align,
-    this.verticalAlign,
-    this.x,
-    this.y
-  });
+  HighchartsChartZoomingResetButtonPositionOptions(
+      {this.align, this.verticalAlign, this.x, this.y});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (align != null) {
       buffer.writeAll(['"align":', jsonEncode(align), ','], '');
@@ -76,5 +63,4 @@ class HighchartsChartZoomingResetButtonPositionOptions extends HighchartsOptions
       buffer.writeAll(['"y":', y, ','], '');
     }
   }
-
 }

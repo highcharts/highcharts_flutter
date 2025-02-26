@@ -8,19 +8,16 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_dependency_wheel_series_data_accessibility_options.dart';
 import 'highcharts_dependency_wheel_series_data_events_options.dart';
-
 
 /* *
  *
@@ -28,17 +25,14 @@ import 'highcharts_dependency_wheel_series_data_events_options.dart';
  *
  * */
 
-
 export 'highcharts_dependency_wheel_series_data_accessibility_options.dart';
 export 'highcharts_dependency_wheel_series_data_events_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * An array of data points for the series. For the `dependencywheel` series
@@ -62,7 +56,6 @@ export 'highcharts_dependency_wheel_series_data_events_options.dart';
  *  ```
  */
 class HighchartsDependencyWheelSeriesDataOptions extends HighchartsOptionsBase {
-
   HighchartsDependencyWheelSeriesDataAccessibilityOptions? accessibility;
   String? className;
   String? color;
@@ -77,27 +70,24 @@ class HighchartsDependencyWheelSeriesDataOptions extends HighchartsOptionsBase {
   String? to;
   double? weight;
 
-
-  HighchartsDependencyWheelSeriesDataOptions({
-    this.accessibility,
-    this.className,
-    this.color,
-    this.colorIndex,
-    this.custom,
-    this.description,
-    this.events,
-    this.from,
-    this.id,
-    this.labelrank,
-    this.selected,
-    this.to,
-    this.weight
-  });
+  HighchartsDependencyWheelSeriesDataOptions(
+      {this.accessibility,
+      this.className,
+      this.color,
+      this.colorIndex,
+      this.custom,
+      this.description,
+      this.events,
+      this.from,
+      this.id,
+      this.labelrank,
+      this.selected,
+      this.to,
+      this.weight});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (accessibility != null) {
       buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ','], '');
@@ -143,5 +133,4 @@ class HighchartsDependencyWheelSeriesDataOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"weight":', weight, ','], '');
     }
   }
-
 }

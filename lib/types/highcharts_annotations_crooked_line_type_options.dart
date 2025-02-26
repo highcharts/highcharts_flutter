@@ -8,19 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
 import 'highcharts_annotations_crooked_line_type_line_options.dart';
 import 'highcharts_annotations_crooked_line_type_points_options.dart';
-
 
 /* *
  *
@@ -28,10 +24,8 @@ import 'highcharts_annotations_crooked_line_type_points_options.dart';
  *
  * */
 
-
 export 'highcharts_annotations_crooked_line_type_line_options.dart';
 export 'highcharts_annotations_crooked_line_type_points_options.dart';
-
 
 /* *
  *
@@ -39,29 +33,22 @@ export 'highcharts_annotations_crooked_line_type_points_options.dart';
  *
  * */
 
-
 /**
  * Additional options for an annotation with the type.
  */
-class HighchartsAnnotationsCrookedLineTypeOptions extends HighchartsOptionsBase {
-
+class HighchartsAnnotationsCrookedLineTypeOptions
+    extends HighchartsOptionsBase {
   HighchartsAnnotationsCrookedLineTypeLineOptions? line;
   List<HighchartsAnnotationsCrookedLineTypePointsOptions>? points;
   double? xAxis;
   double? yAxis;
 
-
-  HighchartsAnnotationsCrookedLineTypeOptions({
-    this.line,
-    this.points,
-    this.xAxis,
-    this.yAxis
-  });
+  HighchartsAnnotationsCrookedLineTypeOptions(
+      {this.line, this.points, this.xAxis, this.yAxis});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (line != null) {
       buffer.writeAll(['"line":', line?.toJSON(), ','], '');
@@ -80,5 +67,4 @@ class HighchartsAnnotationsCrookedLineTypeOptions extends HighchartsOptionsBase 
       buffer.writeAll(['"yAxis":', yAxis, ','], '');
     }
   }
-
 }

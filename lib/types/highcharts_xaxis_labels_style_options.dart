@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +23,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * CSS styles for the label. Use `lineClamp` to control wrapping of
@@ -45,24 +38,17 @@ import 'highcharts_options_base.dart';
  * `.highcharts-axis-labels` class.
  */
 class HighchartsXAxisLabelsStyleOptions extends HighchartsOptionsBase {
-
   String? color;
   String? cursor;
   dynamic fontSize;
   String? textOverflow;
 
-
-  HighchartsXAxisLabelsStyleOptions({
-    this.color,
-    this.cursor,
-    this.fontSize,
-    this.textOverflow
-  });
+  HighchartsXAxisLabelsStyleOptions(
+      {this.color, this.cursor, this.fontSize, this.textOverflow});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (color != null) {
       buffer.writeAll(['"color":', jsonEncode(color), ','], '');
@@ -77,5 +63,4 @@ class HighchartsXAxisLabelsStyleOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"textOverflow":', jsonEncode(textOverflow), ','], '');
     }
   }
-
 }

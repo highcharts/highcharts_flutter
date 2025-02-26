@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -55,13 +53,11 @@ import 'highcharts_xaxis_options.dart';
 import 'highcharts_yaxis_options.dart';
 import 'highcharts_zaxis_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
-
 
 export 'highcharts_accessibility_options.dart';
 export 'highcharts_annotations_options.dart';
@@ -100,16 +96,13 @@ export 'highcharts_xaxis_options.dart';
 export 'highcharts_yaxis_options.dart';
 export 'highcharts_zaxis_options.dart';
 
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 class HighchartsOptions extends HighchartsOptionsBase {
-
   HighchartsAccessibilityOptions? accessibility;
   List<HighchartsAnnotationsOptions>? annotations;
   HighchartsBoostOptions? boost;
@@ -148,51 +141,48 @@ class HighchartsOptions extends HighchartsOptionsBase {
   List<HighchartsYAxisOptions>? yAxis;
   List<HighchartsZAxisOptions>? zAxis;
 
-
-  HighchartsOptions({
-    this.accessibility,
-    this.annotations,
-    this.boost,
-    this.caption,
-    this.chart,
-    this.colorAxis,
-    this.colors,
-    this.connectors,
-    this.credits,
-    this.data,
-    this.defs,
-    this.drilldown,
-    this.exporting,
-    this.global,
-    this.lang,
-    this.legend,
-    this.loading,
-    this.mapNavigation,
-    this.mapView,
-    this.navigation,
-    this.navigator,
-    this.noData,
-    this.pane,
-    this.plotOptions,
-    this.rangeSelector,
-    this.responsive,
-    this.scrollbar,
-    this.series,
-    this.sonification,
-    this.stockTools,
-    this.subtitle,
-    this.time,
-    this.title,
-    this.tooltip,
-    this.xAxis,
-    this.yAxis,
-    this.zAxis
-  });
+  HighchartsOptions(
+      {this.accessibility,
+      this.annotations,
+      this.boost,
+      this.caption,
+      this.chart,
+      this.colorAxis,
+      this.colors,
+      this.connectors,
+      this.credits,
+      this.data,
+      this.defs,
+      this.drilldown,
+      this.exporting,
+      this.global,
+      this.lang,
+      this.legend,
+      this.loading,
+      this.mapNavigation,
+      this.mapView,
+      this.navigation,
+      this.navigator,
+      this.noData,
+      this.pane,
+      this.plotOptions,
+      this.rangeSelector,
+      this.responsive,
+      this.scrollbar,
+      this.series,
+      this.sonification,
+      this.stockTools,
+      this.subtitle,
+      this.time,
+      this.title,
+      this.tooltip,
+      this.xAxis,
+      this.yAxis,
+      this.zAxis});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (accessibility != null) {
       buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ','], '');
@@ -338,5 +328,4 @@ class HighchartsOptions extends HighchartsOptionsBase {
       buffer.write('],');
     }
   }
-
 }

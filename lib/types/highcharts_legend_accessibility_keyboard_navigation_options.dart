@@ -8,17 +8,13 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,36 +22,27 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Options for keyboard navigation for the legend.
  */
-class HighchartsLegendAccessibilityKeyboardNavigationOptions extends HighchartsOptionsBase {
-
+class HighchartsLegendAccessibilityKeyboardNavigationOptions
+    extends HighchartsOptionsBase {
   bool? enabled;
 
-
-  HighchartsLegendAccessibilityKeyboardNavigationOptions({
-    this.enabled
-  });
+  HighchartsLegendAccessibilityKeyboardNavigationOptions({this.enabled});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (enabled != null) {
       buffer.writeAll(['"enabled":', enabled, ','], '');
     }
   }
-
 }

@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,21 +23,17 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * The individual point events.
  */
-class HighchartsArcDiagramSeriesDataEventsOptions extends HighchartsOptionsBase {
-
+class HighchartsArcDiagramSeriesDataEventsOptions
+    extends HighchartsOptionsBase {
   dynamic click;
   dynamic drag;
   dynamic dragStart;
@@ -52,24 +45,21 @@ class HighchartsArcDiagramSeriesDataEventsOptions extends HighchartsOptionsBase 
   dynamic unselect;
   dynamic update;
 
-
-  HighchartsArcDiagramSeriesDataEventsOptions({
-    this.click,
-    this.drag,
-    this.dragStart,
-    this.drop,
-    this.mouseOut,
-    this.mouseOver,
-    this.remove,
-    this.select,
-    this.unselect,
-    this.update
-  });
+  HighchartsArcDiagramSeriesDataEventsOptions(
+      {this.click,
+      this.drag,
+      this.dragStart,
+      this.drop,
+      this.mouseOut,
+      this.mouseOver,
+      this.remove,
+      this.select,
+      this.unselect,
+      this.update});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (click != null) {
       buffer.writeAll(['"click":', jsonEncode(click), ','], '');
@@ -102,5 +92,4 @@ class HighchartsArcDiagramSeriesDataEventsOptions extends HighchartsOptionsBase 
       buffer.writeAll(['"update":', jsonEncode(update), ','], '');
     }
   }
-
 }

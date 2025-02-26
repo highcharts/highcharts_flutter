@@ -8,17 +8,13 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,35 +22,25 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Parameters used in calculation of Detrended Price Oscillator series
  * points.
  */
 class HighchartsDPOSeriesParamsOptions extends HighchartsOptionsBase {
-
   double? index;
   double? period;
 
-
-  HighchartsDPOSeriesParamsOptions({
-    this.index,
-    this.period
-  });
+  HighchartsDPOSeriesParamsOptions({this.index, this.period});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (index != null) {
       buffer.writeAll(['"index":', index, ','], '');
@@ -63,5 +49,4 @@ class HighchartsDPOSeriesParamsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"period":', period, ','], '');
     }
   }
-
 }

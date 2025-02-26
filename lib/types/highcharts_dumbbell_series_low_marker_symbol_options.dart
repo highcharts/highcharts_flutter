@@ -8,17 +8,13 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,21 +22,13 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
-class HighchartsDumbbellSeriesLowMarkerSymbolOptions extends HighchartsOptionsBase {
-
-
-
+class HighchartsDumbbellSeriesLowMarkerSymbolOptions
+    extends HighchartsOptionsBase {
   HighchartsDumbbellSeriesLowMarkerSymbolOptions();
-
-
 }

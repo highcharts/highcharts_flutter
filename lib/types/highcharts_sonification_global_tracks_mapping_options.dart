@@ -8,14 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
-
 
 import 'highcharts_options_base.dart';
 import 'highcharts_sonification_global_tracks_mapping_rate_options.dart';
@@ -32,13 +29,11 @@ import 'highcharts_sonification_default_instrument_mapping_time_options.dart';
 import 'highcharts_sonification_default_instrument_mapping_tremolo_options.dart';
 import 'highcharts_sonification_default_instrument_mapping_volume_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
-
 
 export 'highcharts_sonification_global_tracks_mapping_rate_options.dart';
 export 'highcharts_sonification_global_tracks_mapping_text_options.dart';
@@ -54,23 +49,23 @@ export 'highcharts_sonification_default_instrument_mapping_time_options.dart';
 export 'highcharts_sonification_default_instrument_mapping_tremolo_options.dart';
 export 'highcharts_sonification_default_instrument_mapping_volume_options.dart';
 
-
 /* *
  *
  *  Classes
  *
  * */
 
-
-class HighchartsSonificationGlobalTracksMappingOptions extends HighchartsOptionsBase {
-
+class HighchartsSonificationGlobalTracksMappingOptions
+    extends HighchartsOptionsBase {
   HighchartsSonificationGlobalTracksMappingRateOptions? rate;
   HighchartsSonificationGlobalTracksMappingTextOptions? text;
   HighchartsSonificationDefaultInstrumentMappingFrequencyOptions? frequency;
-  HighchartsSonificationDefaultInstrumentMappingGapBetweenNotesOptions? gapBetweenNotes;
+  HighchartsSonificationDefaultInstrumentMappingGapBetweenNotesOptions?
+      gapBetweenNotes;
   HighchartsSonificationDefaultInstrumentMappingHighpassOptions? highpass;
   HighchartsSonificationDefaultInstrumentMappingLowpassOptions? lowpass;
-  HighchartsSonificationDefaultInstrumentMappingNoteDurationOptions? noteDuration;
+  HighchartsSonificationDefaultInstrumentMappingNoteDurationOptions?
+      noteDuration;
   HighchartsSonificationDefaultInstrumentMappingPanOptions? pan;
   HighchartsSonificationDefaultInstrumentMappingPitchOptions? pitch;
   HighchartsSonificationDefaultInstrumentMappingPlayDelayOptions? playDelay;
@@ -78,27 +73,24 @@ class HighchartsSonificationGlobalTracksMappingOptions extends HighchartsOptions
   HighchartsSonificationDefaultInstrumentMappingTremoloOptions? tremolo;
   HighchartsSonificationDefaultInstrumentMappingVolumeOptions? volume;
 
-
-  HighchartsSonificationGlobalTracksMappingOptions({
-    this.rate,
-    this.text,
-    this.frequency,
-    this.gapBetweenNotes,
-    this.highpass,
-    this.lowpass,
-    this.noteDuration,
-    this.pan,
-    this.pitch,
-    this.playDelay,
-    this.time,
-    this.tremolo,
-    this.volume
-  });
+  HighchartsSonificationGlobalTracksMappingOptions(
+      {this.rate,
+      this.text,
+      this.frequency,
+      this.gapBetweenNotes,
+      this.highpass,
+      this.lowpass,
+      this.noteDuration,
+      this.pan,
+      this.pitch,
+      this.playDelay,
+      this.time,
+      this.tremolo,
+      this.volume});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (rate != null) {
       buffer.writeAll(['"rate":', rate?.toJSON(), ','], '');
@@ -110,7 +102,8 @@ class HighchartsSonificationGlobalTracksMappingOptions extends HighchartsOptions
       buffer.writeAll(['"frequency":', frequency?.toJSON(), ','], '');
     }
     if (gapBetweenNotes != null) {
-      buffer.writeAll(['"gapBetweenNotes":', gapBetweenNotes?.toJSON(), ','], '');
+      buffer
+          .writeAll(['"gapBetweenNotes":', gapBetweenNotes?.toJSON(), ','], '');
     }
     if (highpass != null) {
       buffer.writeAll(['"highpass":', highpass?.toJSON(), ','], '');
@@ -140,5 +133,4 @@ class HighchartsSonificationGlobalTracksMappingOptions extends HighchartsOptions
       buffer.writeAll(['"volume":', volume?.toJSON(), ','], '');
     }
   }
-
 }

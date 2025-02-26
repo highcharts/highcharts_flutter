@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +23,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * Settings for a custom font for the exported PDF, when using the
@@ -51,24 +44,17 @@ import 'highcharts_options_base.dart';
  * docs](https://www.highcharts.com/docs/export-module/client-side-export).
  */
 class HighchartsExportingPdfFontOptions extends HighchartsOptionsBase {
-
   String? bold;
   String? bolditalic;
   String? italic;
   String? normal;
 
-
-  HighchartsExportingPdfFontOptions({
-    this.bold,
-    this.bolditalic,
-    this.italic,
-    this.normal
-  });
+  HighchartsExportingPdfFontOptions(
+      {this.bold, this.bolditalic, this.italic, this.normal});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (bold != null) {
       buffer.writeAll(['"bold":', jsonEncode(bold), ','], '');
@@ -83,5 +69,4 @@ class HighchartsExportingPdfFontOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"normal":', jsonEncode(normal), ','], '');
     }
   }
-
 }

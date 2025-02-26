@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,31 +23,22 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
-class HighchartsXAxisDateTimeLabelFormatsYearOptions extends HighchartsOptionsBase {
-
+class HighchartsXAxisDateTimeLabelFormatsYearOptions
+    extends HighchartsOptionsBase {
   List<dynamic>? list;
   String? main;
 
-
-  HighchartsXAxisDateTimeLabelFormatsYearOptions({
-    this.list,
-    this.main
-  });
+  HighchartsXAxisDateTimeLabelFormatsYearOptions({this.list, this.main});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (list != null) {
       buffer.write('"list":[');
@@ -63,5 +51,4 @@ class HighchartsXAxisDateTimeLabelFormatsYearOptions extends HighchartsOptionsBa
       buffer.writeAll(['"main":', jsonEncode(main), ','], '');
     }
   }
-
 }

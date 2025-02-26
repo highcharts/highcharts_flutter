@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,31 +23,21 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 class HighchartsGanttSeriesTooltipOptions extends HighchartsOptionsBase {
-
   String? headerFormat;
   dynamic pointFormat;
 
-
-  HighchartsGanttSeriesTooltipOptions({
-    this.headerFormat,
-    this.pointFormat
-  });
+  HighchartsGanttSeriesTooltipOptions({this.headerFormat, this.pointFormat});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (headerFormat != null) {
       buffer.writeAll(['"headerFormat":', jsonEncode(headerFormat), ','], '');
@@ -59,5 +46,4 @@ class HighchartsGanttSeriesTooltipOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"pointFormat":', jsonEncode(pointFormat), ','], '');
     }
   }
-
 }

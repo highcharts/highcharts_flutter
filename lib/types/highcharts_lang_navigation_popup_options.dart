@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_lang_navigation_popup_indicator_aliases_options.dart';
-
 
 /* *
  *
@@ -27,9 +24,7 @@ import 'highcharts_lang_navigation_popup_indicator_aliases_options.dart';
  *
  * */
 
-
 export 'highcharts_lang_navigation_popup_indicator_aliases_options.dart';
-
 
 /* *
  *
@@ -37,12 +32,10 @@ export 'highcharts_lang_navigation_popup_indicator_aliases_options.dart';
  *
  * */
 
-
 /**
  * Translations for all field names used in popup.
  */
 class HighchartsLangNavigationPopupOptions extends HighchartsOptionsBase {
-
   String? addButton;
   String? algorithm;
   String? arrowInfinityLine;
@@ -142,112 +135,109 @@ class HighchartsLangNavigationPopupOptions extends HighchartsOptionsBase {
   String? xAxisUnit;
   HighchartsLangNavigationPopupIndicatorAliasesOptions? indicatorAliases;
 
-
-  HighchartsLangNavigationPopupOptions({
-    this.addButton,
-    this.algorithm,
-    this.arrowInfinityLine,
-    this.arrowRay,
-    this.arrowSegment,
-    this.average,
-    this.background,
-    this.backgroundColor,
-    this.backgroundColors,
-    this.borderColor,
-    this.borderRadius,
-    this.borderWidth,
-    this.bottomBand,
-    this.circle,
-    this.clearFilter,
-    this.color,
-    this.connector,
-    this.crooked3,
-    this.crooked5,
-    this.crosshairX,
-    this.crosshairY,
-    this.decimals,
-    this.deviation,
-    this.editButton,
-    this.elliott3,
-    this.elliott5,
-    this.ellipse,
-    this.factor,
-    this.fastAvgPeriod,
-    this.fibonacci,
-    this.fibonacciTimeZones,
-    this.fill,
-    this.flags,
-    this.fontSize,
-    this.format,
-    this.height,
-    this.highIndex,
-    this.horizontalLine,
-    this.increment,
-    this.index,
-    this.infinityLine,
-    this.initialAccelerationFactor,
-    this.innerBackground,
-    this.label,
-    this.labelOptions,
-    this.labels,
-    this.line,
-    this.lines,
-    this.longPeriod,
-    this.lowIndex,
-    this.maxAccelerationFactor,
-    this.measure,
-    this.measureX,
-    this.measureXY,
-    this.measureY,
-    this.multiplier,
-    this.multiplierATR,
-    this.name,
-    this.noFilterMatch,
-    this.outerBackground,
-    this.padding,
-    this.parallelChannel,
-    this.period,
-    this.periodATR,
-    this.periodSenkouSpanB,
-    this.periodTenkan,
-    this.periods,
-    this.pitchfork,
-    this.ranges,
-    this.ray,
-    this.rectangle,
-    this.removeButton,
-    this.saveButton,
-    this.searchIndicators,
-    this.segment,
-    this.series,
-    this.shapeOptions,
-    this.shapes,
-    this.shortPeriod,
-    this.signalPeriod,
-    this.simpleShapes,
-    this.slowAvgPeriod,
-    this.standardDeviation,
-    this.stroke,
-    this.strokeWidth,
-    this.style,
-    this.timeCycles,
-    this.title,
-    this.topBand,
-    this.tunnel,
-    this.typeOptions,
-    this.verticalArrow,
-    this.verticalCounter,
-    this.verticalLabel,
-    this.verticalLine,
-    this.volume,
-    this.xAxisUnit,
-    this.indicatorAliases
-  });
+  HighchartsLangNavigationPopupOptions(
+      {this.addButton,
+      this.algorithm,
+      this.arrowInfinityLine,
+      this.arrowRay,
+      this.arrowSegment,
+      this.average,
+      this.background,
+      this.backgroundColor,
+      this.backgroundColors,
+      this.borderColor,
+      this.borderRadius,
+      this.borderWidth,
+      this.bottomBand,
+      this.circle,
+      this.clearFilter,
+      this.color,
+      this.connector,
+      this.crooked3,
+      this.crooked5,
+      this.crosshairX,
+      this.crosshairY,
+      this.decimals,
+      this.deviation,
+      this.editButton,
+      this.elliott3,
+      this.elliott5,
+      this.ellipse,
+      this.factor,
+      this.fastAvgPeriod,
+      this.fibonacci,
+      this.fibonacciTimeZones,
+      this.fill,
+      this.flags,
+      this.fontSize,
+      this.format,
+      this.height,
+      this.highIndex,
+      this.horizontalLine,
+      this.increment,
+      this.index,
+      this.infinityLine,
+      this.initialAccelerationFactor,
+      this.innerBackground,
+      this.label,
+      this.labelOptions,
+      this.labels,
+      this.line,
+      this.lines,
+      this.longPeriod,
+      this.lowIndex,
+      this.maxAccelerationFactor,
+      this.measure,
+      this.measureX,
+      this.measureXY,
+      this.measureY,
+      this.multiplier,
+      this.multiplierATR,
+      this.name,
+      this.noFilterMatch,
+      this.outerBackground,
+      this.padding,
+      this.parallelChannel,
+      this.period,
+      this.periodATR,
+      this.periodSenkouSpanB,
+      this.periodTenkan,
+      this.periods,
+      this.pitchfork,
+      this.ranges,
+      this.ray,
+      this.rectangle,
+      this.removeButton,
+      this.saveButton,
+      this.searchIndicators,
+      this.segment,
+      this.series,
+      this.shapeOptions,
+      this.shapes,
+      this.shortPeriod,
+      this.signalPeriod,
+      this.simpleShapes,
+      this.slowAvgPeriod,
+      this.standardDeviation,
+      this.stroke,
+      this.strokeWidth,
+      this.style,
+      this.timeCycles,
+      this.title,
+      this.topBand,
+      this.tunnel,
+      this.typeOptions,
+      this.verticalArrow,
+      this.verticalCounter,
+      this.verticalLabel,
+      this.verticalLine,
+      this.volume,
+      this.xAxisUnit,
+      this.indicatorAliases});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (addButton != null) {
       buffer.writeAll(['"addButton":', jsonEncode(addButton), ','], '');
@@ -256,7 +246,8 @@ class HighchartsLangNavigationPopupOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"algorithm":', jsonEncode(algorithm), ','], '');
     }
     if (arrowInfinityLine != null) {
-      buffer.writeAll(['"arrowInfinityLine":', jsonEncode(arrowInfinityLine), ','], '');
+      buffer.writeAll(
+          ['"arrowInfinityLine":', jsonEncode(arrowInfinityLine), ','], '');
     }
     if (arrowRay != null) {
       buffer.writeAll(['"arrowRay":', jsonEncode(arrowRay), ','], '');
@@ -271,10 +262,12 @@ class HighchartsLangNavigationPopupOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"background":', jsonEncode(background), ','], '');
     }
     if (backgroundColor != null) {
-      buffer.writeAll(['"backgroundColor":', jsonEncode(backgroundColor), ','], '');
+      buffer.writeAll(
+          ['"backgroundColor":', jsonEncode(backgroundColor), ','], '');
     }
     if (backgroundColors != null) {
-      buffer.writeAll(['"backgroundColors":', jsonEncode(backgroundColors), ','], '');
+      buffer.writeAll(
+          ['"backgroundColors":', jsonEncode(backgroundColors), ','], '');
     }
     if (borderColor != null) {
       buffer.writeAll(['"borderColor":', jsonEncode(borderColor), ','], '');
@@ -340,7 +333,8 @@ class HighchartsLangNavigationPopupOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"fibonacci":', jsonEncode(fibonacci), ','], '');
     }
     if (fibonacciTimeZones != null) {
-      buffer.writeAll(['"fibonacciTimeZones":', jsonEncode(fibonacciTimeZones), ','], '');
+      buffer.writeAll(
+          ['"fibonacciTimeZones":', jsonEncode(fibonacciTimeZones), ','], '');
     }
     if (fill != null) {
       buffer.writeAll(['"fill":', jsonEncode(fill), ','], '');
@@ -361,7 +355,8 @@ class HighchartsLangNavigationPopupOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"highIndex":', jsonEncode(highIndex), ','], '');
     }
     if (horizontalLine != null) {
-      buffer.writeAll(['"horizontalLine":', jsonEncode(horizontalLine), ','], '');
+      buffer
+          .writeAll(['"horizontalLine":', jsonEncode(horizontalLine), ','], '');
     }
     if (increment != null) {
       buffer.writeAll(['"increment":', jsonEncode(increment), ','], '');
@@ -373,10 +368,15 @@ class HighchartsLangNavigationPopupOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"infinityLine":', jsonEncode(infinityLine), ','], '');
     }
     if (initialAccelerationFactor != null) {
-      buffer.writeAll(['"initialAccelerationFactor":', jsonEncode(initialAccelerationFactor), ','], '');
+      buffer.writeAll([
+        '"initialAccelerationFactor":',
+        jsonEncode(initialAccelerationFactor),
+        ','
+      ], '');
     }
     if (innerBackground != null) {
-      buffer.writeAll(['"innerBackground":', jsonEncode(innerBackground), ','], '');
+      buffer.writeAll(
+          ['"innerBackground":', jsonEncode(innerBackground), ','], '');
     }
     if (label != null) {
       buffer.writeAll(['"label":', jsonEncode(label), ','], '');
@@ -400,7 +400,9 @@ class HighchartsLangNavigationPopupOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"lowIndex":', jsonEncode(lowIndex), ','], '');
     }
     if (maxAccelerationFactor != null) {
-      buffer.writeAll(['"maxAccelerationFactor":', jsonEncode(maxAccelerationFactor), ','], '');
+      buffer.writeAll(
+          ['"maxAccelerationFactor":', jsonEncode(maxAccelerationFactor), ','],
+          '');
     }
     if (measure != null) {
       buffer.writeAll(['"measure":', jsonEncode(measure), ','], '');
@@ -427,13 +429,15 @@ class HighchartsLangNavigationPopupOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"noFilterMatch":', jsonEncode(noFilterMatch), ','], '');
     }
     if (outerBackground != null) {
-      buffer.writeAll(['"outerBackground":', jsonEncode(outerBackground), ','], '');
+      buffer.writeAll(
+          ['"outerBackground":', jsonEncode(outerBackground), ','], '');
     }
     if (padding != null) {
       buffer.writeAll(['"padding":', jsonEncode(padding), ','], '');
     }
     if (parallelChannel != null) {
-      buffer.writeAll(['"parallelChannel":', jsonEncode(parallelChannel), ','], '');
+      buffer.writeAll(
+          ['"parallelChannel":', jsonEncode(parallelChannel), ','], '');
     }
     if (period != null) {
       buffer.writeAll(['"period":', jsonEncode(period), ','], '');
@@ -442,7 +446,8 @@ class HighchartsLangNavigationPopupOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"periodATR":', jsonEncode(periodATR), ','], '');
     }
     if (periodSenkouSpanB != null) {
-      buffer.writeAll(['"periodSenkouSpanB":', jsonEncode(periodSenkouSpanB), ','], '');
+      buffer.writeAll(
+          ['"periodSenkouSpanB":', jsonEncode(periodSenkouSpanB), ','], '');
     }
     if (periodTenkan != null) {
       buffer.writeAll(['"periodTenkan":', jsonEncode(periodTenkan), ','], '');
@@ -469,7 +474,8 @@ class HighchartsLangNavigationPopupOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"saveButton":', jsonEncode(saveButton), ','], '');
     }
     if (searchIndicators != null) {
-      buffer.writeAll(['"searchIndicators":', jsonEncode(searchIndicators), ','], '');
+      buffer.writeAll(
+          ['"searchIndicators":', jsonEncode(searchIndicators), ','], '');
     }
     if (segment != null) {
       buffer.writeAll(['"segment":', jsonEncode(segment), ','], '');
@@ -496,7 +502,8 @@ class HighchartsLangNavigationPopupOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"slowAvgPeriod":', jsonEncode(slowAvgPeriod), ','], '');
     }
     if (standardDeviation != null) {
-      buffer.writeAll(['"standardDeviation":', jsonEncode(standardDeviation), ','], '');
+      buffer.writeAll(
+          ['"standardDeviation":', jsonEncode(standardDeviation), ','], '');
     }
     if (stroke != null) {
       buffer.writeAll(['"stroke":', jsonEncode(stroke), ','], '');
@@ -526,7 +533,8 @@ class HighchartsLangNavigationPopupOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"verticalArrow":', jsonEncode(verticalArrow), ','], '');
     }
     if (verticalCounter != null) {
-      buffer.writeAll(['"verticalCounter":', jsonEncode(verticalCounter), ','], '');
+      buffer.writeAll(
+          ['"verticalCounter":', jsonEncode(verticalCounter), ','], '');
     }
     if (verticalLabel != null) {
       buffer.writeAll(['"verticalLabel":', jsonEncode(verticalLabel), ','], '');
@@ -541,8 +549,8 @@ class HighchartsLangNavigationPopupOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"xAxisUnit":', jsonEncode(xAxisUnit), ','], '');
     }
     if (indicatorAliases != null) {
-      buffer.writeAll(['"indicatorAliases":', indicatorAliases?.toJSON(), ','], '');
+      buffer.writeAll(
+          ['"indicatorAliases":', indicatorAliases?.toJSON(), ','], '');
     }
   }
-
 }

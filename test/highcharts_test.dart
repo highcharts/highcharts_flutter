@@ -4,9 +4,7 @@ import 'package:highcharts_flutter/highcharts.dart';
 
 void main() {
   test('Test constructor', () {
-    final chart = HighchartsChart(HighchartsOptions(
-      series: List.empty()
-    ));
+    final chart = HighchartsChart(HighchartsOptions(series: List.empty()));
     expect(chart.options, isNotEmpty);
   });
 }

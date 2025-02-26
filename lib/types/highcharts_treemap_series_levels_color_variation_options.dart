@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +23,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * A configuration object to define how the color of a child varies from
@@ -46,21 +39,16 @@ import 'highcharts_options_base.dart';
  * while highlighting the grouping on treemaps and sectors on sunburst
  * charts.
  */
-class HighchartsTreemapSeriesLevelsColorVariationOptions extends HighchartsOptionsBase {
-
+class HighchartsTreemapSeriesLevelsColorVariationOptions
+    extends HighchartsOptionsBase {
   String? key;
   double? to;
 
-
-  HighchartsTreemapSeriesLevelsColorVariationOptions({
-    this.key,
-    this.to
-  });
+  HighchartsTreemapSeriesLevelsColorVariationOptions({this.key, this.to});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (key != null) {
       buffer.writeAll(['"key":', jsonEncode(key), ','], '');
@@ -69,5 +57,4 @@ class HighchartsTreemapSeriesLevelsColorVariationOptions extends HighchartsOptio
       buffer.writeAll(['"to":', to, ','], '');
     }
   }
-
 }

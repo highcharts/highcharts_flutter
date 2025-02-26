@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -22,18 +20,15 @@ import 'highcharts_sonification_global_tracks_mapping_options.dart';
 import 'highcharts_sonification_default_instrument_active_when_options.dart';
 import 'highcharts_sonification_default_instrument_point_grouping_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_sonification_global_tracks_mapping_options.dart';
 export 'highcharts_sonification_default_instrument_active_when_options.dart';
 export 'highcharts_sonification_default_instrument_point_grouping_options.dart';
-
 
 /* *
  *
@@ -41,14 +36,12 @@ export 'highcharts_sonification_default_instrument_point_grouping_options.dart';
  *
  * */
 
-
 /**
  * Tracks for this series.
  * 
  * Given as an array of instrument tracks, speech tracks, or a mix of both.
  */
 class HighchartsSeriesSonificationTracksOptions extends HighchartsOptionsBase {
-
   HighchartsSonificationGlobalTracksMappingOptions? mapping;
   HighchartsSonificationDefaultInstrumentActiveWhenOptions? activeWhen;
   Map<String, dynamic>? instrument;
@@ -58,22 +51,19 @@ class HighchartsSeriesSonificationTracksOptions extends HighchartsOptionsBase {
   bool? showPlayMarker;
   String? type;
 
-
-  HighchartsSeriesSonificationTracksOptions({
-    this.mapping,
-    this.activeWhen,
-    this.instrument,
-    this.midiName,
-    this.pointGrouping,
-    this.roundToMusicalNotes,
-    this.showPlayMarker,
-    this.type
-  });
+  HighchartsSeriesSonificationTracksOptions(
+      {this.mapping,
+      this.activeWhen,
+      this.instrument,
+      this.midiName,
+      this.pointGrouping,
+      this.roundToMusicalNotes,
+      this.showPlayMarker,
+      this.type});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (mapping != null) {
       buffer.writeAll(['"mapping":', mapping?.toJSON(), ','], '');
@@ -104,5 +94,4 @@ class HighchartsSeriesSonificationTracksOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"type":', jsonEncode(type), ','], '');
     }
   }
-
 }

@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,18 +23,14 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
-class HighchartsKeltnerChannelsSeriesDataGroupingOptions extends HighchartsOptionsBase {
-
+class HighchartsKeltnerChannelsSeriesDataGroupingOptions
+    extends HighchartsOptionsBase {
   String? anchor;
   String? approximation;
   dynamic dateTimeLabelFormats;
@@ -50,25 +43,22 @@ class HighchartsKeltnerChannelsSeriesDataGroupingOptions extends HighchartsOptio
   bool? smoothed;
   List<List<dynamic>>? units;
 
-
-  HighchartsKeltnerChannelsSeriesDataGroupingOptions({
-    this.anchor,
-    this.approximation,
-    this.dateTimeLabelFormats,
-    this.enabled,
-    this.firstAnchor,
-    this.forced,
-    this.groupAll,
-    this.groupPixelWidth,
-    this.lastAnchor,
-    this.smoothed,
-    this.units
-  });
+  HighchartsKeltnerChannelsSeriesDataGroupingOptions(
+      {this.anchor,
+      this.approximation,
+      this.dateTimeLabelFormats,
+      this.enabled,
+      this.firstAnchor,
+      this.forced,
+      this.groupAll,
+      this.groupPixelWidth,
+      this.lastAnchor,
+      this.smoothed,
+      this.units});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (anchor != null) {
       buffer.writeAll(['"anchor":', jsonEncode(anchor), ','], '');
@@ -77,7 +67,9 @@ class HighchartsKeltnerChannelsSeriesDataGroupingOptions extends HighchartsOptio
       buffer.writeAll(['"approximation":', jsonEncode(approximation), ','], '');
     }
     if (dateTimeLabelFormats != null) {
-      buffer.writeAll(['"dateTimeLabelFormats":', jsonEncode(dateTimeLabelFormats), ','], '');
+      buffer.writeAll(
+          ['"dateTimeLabelFormats":', jsonEncode(dateTimeLabelFormats), ','],
+          '');
     }
     if (enabled != null) {
       buffer.writeAll(['"enabled":', enabled, ','], '');
@@ -108,5 +100,4 @@ class HighchartsKeltnerChannelsSeriesDataGroupingOptions extends HighchartsOptio
       buffer.write('],');
     }
   }
-
 }

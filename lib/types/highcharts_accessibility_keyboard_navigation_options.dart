@@ -8,19 +8,16 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_accessibility_keyboard_navigation_focus_border_options.dart';
 import 'highcharts_accessibility_keyboard_navigation_series_navigation_options.dart';
-
 
 /* *
  *
@@ -28,10 +25,8 @@ import 'highcharts_accessibility_keyboard_navigation_series_navigation_options.d
  *
  * */
 
-
 export 'highcharts_accessibility_keyboard_navigation_focus_border_options.dart';
 export 'highcharts_accessibility_keyboard_navigation_series_navigation_options.dart';
-
 
 /* *
  *
@@ -39,31 +34,28 @@ export 'highcharts_accessibility_keyboard_navigation_series_navigation_options.d
  *
  * */
 
-
 /**
  * Options for keyboard navigation.
  */
-class HighchartsAccessibilityKeyboardNavigationOptions extends HighchartsOptionsBase {
-
+class HighchartsAccessibilityKeyboardNavigationOptions
+    extends HighchartsOptionsBase {
   bool? enabled;
   HighchartsAccessibilityKeyboardNavigationFocusBorderOptions? focusBorder;
   List<String>? order;
-  HighchartsAccessibilityKeyboardNavigationSeriesNavigationOptions? seriesNavigation;
+  HighchartsAccessibilityKeyboardNavigationSeriesNavigationOptions?
+      seriesNavigation;
   bool? wrapAround;
 
-
-  HighchartsAccessibilityKeyboardNavigationOptions({
-    this.enabled,
-    this.focusBorder,
-    this.order,
-    this.seriesNavigation,
-    this.wrapAround
-  });
+  HighchartsAccessibilityKeyboardNavigationOptions(
+      {this.enabled,
+      this.focusBorder,
+      this.order,
+      this.seriesNavigation,
+      this.wrapAround});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (enabled != null) {
       buffer.writeAll(['"enabled":', enabled, ','], '');
@@ -79,11 +71,11 @@ class HighchartsAccessibilityKeyboardNavigationOptions extends HighchartsOptions
       buffer.write('],');
     }
     if (seriesNavigation != null) {
-      buffer.writeAll(['"seriesNavigation":', seriesNavigation?.toJSON(), ','], '');
+      buffer.writeAll(
+          ['"seriesNavigation":', seriesNavigation?.toJSON(), ','], '');
     }
     if (wrapAround != null) {
       buffer.writeAll(['"wrapAround":', wrapAround, ','], '');
     }
   }
-
 }

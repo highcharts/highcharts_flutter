@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -24,13 +22,11 @@ import 'highcharts_treegraph_series_data_drag_drop_options.dart';
 import 'highcharts_treegraph_series_data_events_options.dart';
 import 'highcharts_treegraph_series_data_marker_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
-
 
 export 'highcharts_treegraph_series_data_accessibility_options.dart';
 export 'highcharts_treegraph_series_data_data_labels_options.dart';
@@ -38,13 +34,11 @@ export 'highcharts_treegraph_series_data_drag_drop_options.dart';
 export 'highcharts_treegraph_series_data_events_options.dart';
 export 'highcharts_treegraph_series_data_marker_options.dart';
 
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * An array of data points for the series. For the `treegraph` series type,
@@ -77,7 +71,6 @@ export 'highcharts_treegraph_series_data_marker_options.dart';
  *  ```
  */
 class HighchartsTreegraphSeriesDataOptions extends HighchartsOptionsBase {
-
   HighchartsTreegraphSeriesDataAccessibilityOptions? accessibility;
   String? className;
   dynamic collapseButton;
@@ -97,32 +90,29 @@ class HighchartsTreegraphSeriesDataOptions extends HighchartsOptionsBase {
   String? parent;
   bool? selected;
 
-
-  HighchartsTreegraphSeriesDataOptions({
-    this.accessibility,
-    this.className,
-    this.collapseButton,
-    this.collapsed,
-    this.color,
-    this.colorIndex,
-    this.colorValue,
-    this.custom,
-    this.dataLabels,
-    this.description,
-    this.dragDrop,
-    this.drilldown,
-    this.events,
-    this.id,
-    this.labelrank,
-    this.marker,
-    this.parent,
-    this.selected
-  });
+  HighchartsTreegraphSeriesDataOptions(
+      {this.accessibility,
+      this.className,
+      this.collapseButton,
+      this.collapsed,
+      this.color,
+      this.colorIndex,
+      this.colorValue,
+      this.custom,
+      this.dataLabels,
+      this.description,
+      this.dragDrop,
+      this.drilldown,
+      this.events,
+      this.id,
+      this.labelrank,
+      this.marker,
+      this.parent,
+      this.selected});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (accessibility != null) {
       buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ','], '');
@@ -131,7 +121,8 @@ class HighchartsTreegraphSeriesDataOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"className":', jsonEncode(className), ','], '');
     }
     if (collapseButton != null) {
-      buffer.writeAll(['"collapseButton":', jsonEncode(collapseButton), ','], '');
+      buffer
+          .writeAll(['"collapseButton":', jsonEncode(collapseButton), ','], '');
     }
     if (collapsed != null) {
       buffer.writeAll(['"collapsed":', collapsed, ','], '');
@@ -183,5 +174,4 @@ class HighchartsTreegraphSeriesDataOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"selected":', selected, ','], '');
     }
   }
-
 }

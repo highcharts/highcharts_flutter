@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,37 +23,27 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * The projection options allow applying client side projection to a map
  * given in geographic coordinates, typically from TopoJSON or GeoJSON.
  */
 class HighchartsMapViewProjectionOptions extends HighchartsOptionsBase {
-
   String? name;
   List<double>? parallels;
   String? rotation;
 
-
-  HighchartsMapViewProjectionOptions({
-    this.name,
-    this.parallels,
-    this.rotation
-  });
+  HighchartsMapViewProjectionOptions(
+      {this.name, this.parallels, this.rotation});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (name != null) {
       buffer.writeAll(['"name":', jsonEncode(name), ','], '');
@@ -72,5 +59,4 @@ class HighchartsMapViewProjectionOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"rotation":', jsonEncode(rotation), ','], '');
     }
   }
-
 }

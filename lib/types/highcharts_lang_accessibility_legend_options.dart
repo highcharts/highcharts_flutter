@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,36 +23,26 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Language options for accessibility of the legend.
  */
 class HighchartsLangAccessibilityLegendOptions extends HighchartsOptionsBase {
-
   String? legendItem;
   String? legendLabel;
   String? legendLabelNoTitle;
 
-
-  HighchartsLangAccessibilityLegendOptions({
-    this.legendItem,
-    this.legendLabel,
-    this.legendLabelNoTitle
-  });
+  HighchartsLangAccessibilityLegendOptions(
+      {this.legendItem, this.legendLabel, this.legendLabelNoTitle});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (legendItem != null) {
       buffer.writeAll(['"legendItem":', jsonEncode(legendItem), ','], '');
@@ -64,8 +51,8 @@ class HighchartsLangAccessibilityLegendOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"legendLabel":', jsonEncode(legendLabel), ','], '');
     }
     if (legendLabelNoTitle != null) {
-      buffer.writeAll(['"legendLabelNoTitle":', jsonEncode(legendLabelNoTitle), ','], '');
+      buffer.writeAll(
+          ['"legendLabelNoTitle":', jsonEncode(legendLabelNoTitle), ','], '');
     }
   }
-
 }

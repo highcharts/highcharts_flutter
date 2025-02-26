@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,40 +23,32 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Set grid options for the axis labels. Requires Highcharts Gantt.
  */
 class HighchartsXAxisGridOptions extends HighchartsOptionsBase {
-
   String? borderColor;
   double? borderWidth;
   double? cellHeight;
   List<dynamic>? columns;
   bool? enabled;
 
-
-  HighchartsXAxisGridOptions({
-    this.borderColor,
-    this.borderWidth,
-    this.cellHeight,
-    this.columns,
-    this.enabled
-  });
+  HighchartsXAxisGridOptions(
+      {this.borderColor,
+      this.borderWidth,
+      this.cellHeight,
+      this.columns,
+      this.enabled});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (borderColor != null) {
       buffer.writeAll(['"borderColor":', jsonEncode(borderColor), ','], '');
@@ -81,5 +70,4 @@ class HighchartsXAxisGridOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"enabled":', enabled, ','], '');
     }
   }
-
 }

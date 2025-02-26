@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -22,18 +20,15 @@ import 'highcharts_xaxis_plot_lines_events_options.dart';
 import 'highcharts_xaxis_current_date_indicator_label_options.dart';
 import 'highcharts_xaxis_plot_lines_labels_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_xaxis_plot_lines_events_options.dart';
 export 'highcharts_xaxis_current_date_indicator_label_options.dart';
 export 'highcharts_xaxis_plot_lines_labels_options.dart';
-
 
 /* *
  *
@@ -41,14 +36,12 @@ export 'highcharts_xaxis_plot_lines_labels_options.dart';
  *
  * */
 
-
 /**
  * Show an indicator on the axis for the current date and time. Can be a
  * boolean or a configuration object similar to
  * [xAxis.plotLines](#xAxis.plotLines).
  */
 class HighchartsXAxisCurrentDateIndicatorOptions extends HighchartsOptionsBase {
-
   String? className;
   String? color;
   String? dashStyle;
@@ -59,23 +52,20 @@ class HighchartsXAxisCurrentDateIndicatorOptions extends HighchartsOptionsBase {
   double? width;
   double? zIndex;
 
-
-  HighchartsXAxisCurrentDateIndicatorOptions({
-    this.className,
-    this.color,
-    this.dashStyle,
-    this.events,
-    this.id,
-    this.label,
-    this.labels,
-    this.width,
-    this.zIndex
-  });
+  HighchartsXAxisCurrentDateIndicatorOptions(
+      {this.className,
+      this.color,
+      this.dashStyle,
+      this.events,
+      this.id,
+      this.label,
+      this.labels,
+      this.width,
+      this.zIndex});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (className != null) {
       buffer.writeAll(['"className":', jsonEncode(className), ','], '');
@@ -105,5 +95,4 @@ class HighchartsXAxisCurrentDateIndicatorOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"zIndex":', zIndex, ','], '');
     }
   }
-
 }

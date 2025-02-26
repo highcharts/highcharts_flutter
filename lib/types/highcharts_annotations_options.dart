@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -36,13 +34,11 @@ import 'highcharts_annotations_time_cycles_options.dart';
 import 'highcharts_annotations_tunnel_options.dart';
 import 'highcharts_annotations_vertical_line_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
-
 
 export 'highcharts_annotations_animation_options.dart';
 export 'highcharts_annotations_control_point_options.dart';
@@ -62,13 +58,11 @@ export 'highcharts_annotations_time_cycles_options.dart';
 export 'highcharts_annotations_tunnel_options.dart';
 export 'highcharts_annotations_vertical_line_options.dart';
 
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * A basic type of an annotation. It allows to add custom labels
@@ -76,7 +70,6 @@ export 'highcharts_annotations_vertical_line_options.dart';
  * or chart pixel coordinates.
  */
 class HighchartsAnnotationsOptions extends HighchartsOptionsBase {
-
   HighchartsAnnotationsAnimationOptions? animation;
   HighchartsAnnotationsControlPointOptions? controlPointOptions;
   HighchartsAnnotationsCrookedLineOptions? crookedLine;
@@ -100,42 +93,40 @@ class HighchartsAnnotationsOptions extends HighchartsOptionsBase {
   bool? visible;
   double? zIndex;
 
-
-  HighchartsAnnotationsOptions({
-    this.animation,
-    this.controlPointOptions,
-    this.crookedLine,
-    this.crop,
-    this.draggable,
-    this.elliottWave,
-    this.events,
-    this.fibonacci,
-    this.fibonacciTimeZones,
-    this.id,
-    this.infinityLine,
-    this.labelOptions,
-    this.labels,
-    this.measure,
-    this.pitchfork,
-    this.shapeOptions,
-    this.shapes,
-    this.timeCycles,
-    this.tunnel,
-    this.verticalLine,
-    this.visible,
-    this.zIndex
-  });
+  HighchartsAnnotationsOptions(
+      {this.animation,
+      this.controlPointOptions,
+      this.crookedLine,
+      this.crop,
+      this.draggable,
+      this.elliottWave,
+      this.events,
+      this.fibonacci,
+      this.fibonacciTimeZones,
+      this.id,
+      this.infinityLine,
+      this.labelOptions,
+      this.labels,
+      this.measure,
+      this.pitchfork,
+      this.shapeOptions,
+      this.shapes,
+      this.timeCycles,
+      this.tunnel,
+      this.verticalLine,
+      this.visible,
+      this.zIndex});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (animation != null) {
       buffer.writeAll(['"animation":', animation?.toJSON(), ','], '');
     }
     if (controlPointOptions != null) {
-      buffer.writeAll(['"controlPointOptions":', controlPointOptions?.toJSON(), ','], '');
+      buffer.writeAll(
+          ['"controlPointOptions":', controlPointOptions?.toJSON(), ','], '');
     }
     if (crookedLine != null) {
       buffer.writeAll(['"crookedLine":', crookedLine?.toJSON(), ','], '');
@@ -156,7 +147,8 @@ class HighchartsAnnotationsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"fibonacci":', fibonacci?.toJSON(), ','], '');
     }
     if (fibonacciTimeZones != null) {
-      buffer.writeAll(['"fibonacciTimeZones":', fibonacciTimeZones?.toJSON(), ','], '');
+      buffer.writeAll(
+          ['"fibonacciTimeZones":', fibonacciTimeZones?.toJSON(), ','], '');
     }
     if (id != null) {
       buffer.writeAll(['"id":', jsonEncode(id), ','], '');
@@ -206,5 +198,4 @@ class HighchartsAnnotationsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"zIndex":', zIndex, ','], '');
     }
   }
-
 }

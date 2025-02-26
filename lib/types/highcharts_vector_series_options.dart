@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -33,13 +31,11 @@ import 'highcharts_vector_series_states_options.dart';
 import 'highcharts_vector_series_tooltip_options.dart';
 import 'highcharts_series_zones_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
-
 
 export 'highcharts_series_accessibility_options.dart';
 export 'highcharts_vector_series_cluster_options.dart';
@@ -56,13 +52,11 @@ export 'highcharts_vector_series_states_options.dart';
 export 'highcharts_vector_series_tooltip_options.dart';
 export 'highcharts_series_zones_options.dart';
 
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * A `vector` series. If the [type](#series.vector.type) option is not
@@ -108,7 +102,6 @@ export 'highcharts_series_zones_options.dart';
  *             
  */
 class HighchartsVectorSeriesOptions extends HighchartsOptionsBase {
-
   HighchartsSeriesAccessibilityOptions? accessibility;
   bool? allowPointSelect;
   dynamic animation;
@@ -182,86 +175,83 @@ class HighchartsVectorSeriesOptions extends HighchartsOptionsBase {
   String? zoneAxis;
   List<HighchartsSeriesZonesOptions>? zones;
 
-
-  HighchartsVectorSeriesOptions({
-    this.accessibility,
-    this.allowPointSelect,
-    this.animation,
-    this.animationLimit,
-    this.className,
-    this.clip,
-    this.cluster,
-    this.color,
-    this.colorAxis,
-    this.colorIndex,
-    this.colorKey,
-    this.compare,
-    this.compareBase,
-    this.compareStart,
-    this.crisp,
-    this.cumulative,
-    this.cumulativeStart,
-    this.cursor,
-    this.custom,
-    this.dataLabels,
-    this.dataSorting,
-    this.description,
-    this.enableMouseTracking,
-    this.events,
-    this.findNearestPointBy,
-    this.getExtremesFromAll,
-    this.id,
-    this.inactiveOtherPoints,
-    this.includeInDataExport,
-    this.index,
-    this.keys,
-    this.label,
-    this.lastPrice,
-    this.lastVisiblePrice,
-    this.legendIndex,
-    this.legendSymbol,
-    this.lineWidth,
-    this.linkedTo,
-    this.marker,
-    this.navigatorOptions,
-    this.negativeColor,
-    this.onPoint,
-    this.opacity,
-    this.point,
-    this.pointDescriptionFormat,
-    this.pointDescriptionFormatter,
-    this.pointInterval,
-    this.pointIntervalUnit,
-    this.pointRange,
-    this.pointStart,
-    this.relativeXValue,
-    this.rotationOrigin,
-    this.selected,
-    this.showCheckbox,
-    this.showInLegend,
-    this.showInNavigator,
-    this.skipKeyboardNavigation,
-    this.softThreshold,
-    this.sonification,
-    this.stack,
-    this.states,
-    this.stickyTracking,
-    this.threshold,
-    this.tooltip,
-    this.turboThreshold,
-    this.vectorLength,
-    this.visible,
-    this.xAxis,
-    this.yAxis,
-    this.zIndex,
-    this.zoneAxis,
-    this.zones
-  });
+  HighchartsVectorSeriesOptions(
+      {this.accessibility,
+      this.allowPointSelect,
+      this.animation,
+      this.animationLimit,
+      this.className,
+      this.clip,
+      this.cluster,
+      this.color,
+      this.colorAxis,
+      this.colorIndex,
+      this.colorKey,
+      this.compare,
+      this.compareBase,
+      this.compareStart,
+      this.crisp,
+      this.cumulative,
+      this.cumulativeStart,
+      this.cursor,
+      this.custom,
+      this.dataLabels,
+      this.dataSorting,
+      this.description,
+      this.enableMouseTracking,
+      this.events,
+      this.findNearestPointBy,
+      this.getExtremesFromAll,
+      this.id,
+      this.inactiveOtherPoints,
+      this.includeInDataExport,
+      this.index,
+      this.keys,
+      this.label,
+      this.lastPrice,
+      this.lastVisiblePrice,
+      this.legendIndex,
+      this.legendSymbol,
+      this.lineWidth,
+      this.linkedTo,
+      this.marker,
+      this.navigatorOptions,
+      this.negativeColor,
+      this.onPoint,
+      this.opacity,
+      this.point,
+      this.pointDescriptionFormat,
+      this.pointDescriptionFormatter,
+      this.pointInterval,
+      this.pointIntervalUnit,
+      this.pointRange,
+      this.pointStart,
+      this.relativeXValue,
+      this.rotationOrigin,
+      this.selected,
+      this.showCheckbox,
+      this.showInLegend,
+      this.showInNavigator,
+      this.skipKeyboardNavigation,
+      this.softThreshold,
+      this.sonification,
+      this.stack,
+      this.states,
+      this.stickyTracking,
+      this.threshold,
+      this.tooltip,
+      this.turboThreshold,
+      this.vectorLength,
+      this.visible,
+      this.xAxis,
+      this.yAxis,
+      this.zIndex,
+      this.zoneAxis,
+      this.zones});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (accessibility != null) {
       buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ','], '');
@@ -344,7 +334,8 @@ class HighchartsVectorSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"events":', events?.toJSON(), ','], '');
     }
     if (findNearestPointBy != null) {
-      buffer.writeAll(['"findNearestPointBy":', jsonEncode(findNearestPointBy), ','], '');
+      buffer.writeAll(
+          ['"findNearestPointBy":', jsonEncode(findNearestPointBy), ','], '');
     }
     if (getExtremesFromAll != null) {
       buffer.writeAll(['"getExtremesFromAll":', getExtremesFromAll, ','], '');
@@ -375,7 +366,8 @@ class HighchartsVectorSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"lastPrice":', lastPrice?.toJSON(), ','], '');
     }
     if (lastVisiblePrice != null) {
-      buffer.writeAll(['"lastVisiblePrice":', lastVisiblePrice?.toJSON(), ','], '');
+      buffer.writeAll(
+          ['"lastVisiblePrice":', lastVisiblePrice?.toJSON(), ','], '');
     }
     if (legendIndex != null) {
       buffer.writeAll(['"legendIndex":', legendIndex, ','], '');
@@ -393,7 +385,8 @@ class HighchartsVectorSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"marker":', jsonEncode(marker), ','], '');
     }
     if (navigatorOptions != null) {
-      buffer.writeAll(['"navigatorOptions":', jsonEncode(navigatorOptions), ','], '');
+      buffer.writeAll(
+          ['"navigatorOptions":', jsonEncode(navigatorOptions), ','], '');
     }
     if (negativeColor != null) {
       buffer.writeAll(['"negativeColor":', jsonEncode(negativeColor), ','], '');
@@ -408,16 +401,25 @@ class HighchartsVectorSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"point":', point?.toJSON(), ','], '');
     }
     if (pointDescriptionFormat != null) {
-      buffer.writeAll(['"pointDescriptionFormat":', jsonEncode(pointDescriptionFormat), ','], '');
+      buffer.writeAll([
+        '"pointDescriptionFormat":',
+        jsonEncode(pointDescriptionFormat),
+        ','
+      ], '');
     }
     if (pointDescriptionFormatter != null) {
-      buffer.writeAll(['"pointDescriptionFormatter":', jsonEncode(pointDescriptionFormatter), ','], '');
+      buffer.writeAll([
+        '"pointDescriptionFormatter":',
+        jsonEncode(pointDescriptionFormatter),
+        ','
+      ], '');
     }
     if (pointInterval != null) {
       buffer.writeAll(['"pointInterval":', pointInterval, ','], '');
     }
     if (pointIntervalUnit != null) {
-      buffer.writeAll(['"pointIntervalUnit":', jsonEncode(pointIntervalUnit), ','], '');
+      buffer.writeAll(
+          ['"pointIntervalUnit":', jsonEncode(pointIntervalUnit), ','], '');
     }
     if (pointRange != null) {
       buffer.writeAll(['"pointRange":', pointRange, ','], '');
@@ -429,7 +431,8 @@ class HighchartsVectorSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"relativeXValue":', relativeXValue, ','], '');
     }
     if (rotationOrigin != null) {
-      buffer.writeAll(['"rotationOrigin":', jsonEncode(rotationOrigin), ','], '');
+      buffer
+          .writeAll(['"rotationOrigin":', jsonEncode(rotationOrigin), ','], '');
     }
     if (selected != null) {
       buffer.writeAll(['"selected":', selected, ','], '');
@@ -444,7 +447,8 @@ class HighchartsVectorSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"showInNavigator":', showInNavigator, ','], '');
     }
     if (skipKeyboardNavigation != null) {
-      buffer.writeAll(['"skipKeyboardNavigation":', skipKeyboardNavigation, ','], '');
+      buffer.writeAll(
+          ['"skipKeyboardNavigation":', skipKeyboardNavigation, ','], '');
     }
     if (softThreshold != null) {
       buffer.writeAll(['"softThreshold":', softThreshold, ','], '');
@@ -496,5 +500,4 @@ class HighchartsVectorSeriesOptions extends HighchartsOptionsBase {
       buffer.write('],');
     }
   }
-
 }

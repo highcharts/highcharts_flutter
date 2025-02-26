@@ -8,18 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
 import 'highcharts_accessibility_keyboard_navigation_focus_border_style_options.dart';
-
 
 /* *
  *
@@ -27,9 +23,7 @@ import 'highcharts_accessibility_keyboard_navigation_focus_border_style_options.
  *
  * */
 
-
 export 'highcharts_accessibility_keyboard_navigation_focus_border_style_options.dart';
-
 
 /* *
  *
@@ -37,36 +31,30 @@ export 'highcharts_accessibility_keyboard_navigation_focus_border_style_options.
  *
  * */
 
-
 /**
  * Options for the focus border drawn around elements while
  * navigating through them.
  */
-class HighchartsAccessibilityKeyboardNavigationFocusBorderOptions extends HighchartsOptionsBase {
-
+class HighchartsAccessibilityKeyboardNavigationFocusBorderOptions
+    extends HighchartsOptionsBase {
   bool? enabled;
   bool? hideBrowserFocusOutline;
   double? margin;
   HighchartsAccessibilityKeyboardNavigationFocusBorderStyleOptions? style;
 
-
-  HighchartsAccessibilityKeyboardNavigationFocusBorderOptions({
-    this.enabled,
-    this.hideBrowserFocusOutline,
-    this.margin,
-    this.style
-  });
+  HighchartsAccessibilityKeyboardNavigationFocusBorderOptions(
+      {this.enabled, this.hideBrowserFocusOutline, this.margin, this.style});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (enabled != null) {
       buffer.writeAll(['"enabled":', enabled, ','], '');
     }
     if (hideBrowserFocusOutline != null) {
-      buffer.writeAll(['"hideBrowserFocusOutline":', hideBrowserFocusOutline, ','], '');
+      buffer.writeAll(
+          ['"hideBrowserFocusOutline":', hideBrowserFocusOutline, ','], '');
     }
     if (margin != null) {
       buffer.writeAll(['"margin":', margin, ','], '');
@@ -75,5 +63,4 @@ class HighchartsAccessibilityKeyboardNavigationFocusBorderOptions extends Highch
       buffer.writeAll(['"style":', style?.toJSON(), ','], '');
     }
   }
-
 }

@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +23,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * The geometry of a point.
@@ -47,21 +40,16 @@ import 'highcharts_options_base.dart';
  * features of geoJSON can be passed directly into the `data`, optionally
  * after first filtering and processing it.
  */
-class HighchartsMapBubbleSeriesDataGeometryOptions extends HighchartsOptionsBase {
-
+class HighchartsMapBubbleSeriesDataGeometryOptions
+    extends HighchartsOptionsBase {
   dynamic coordinates;
   String? type;
 
-
-  HighchartsMapBubbleSeriesDataGeometryOptions({
-    this.coordinates,
-    this.type
-  });
+  HighchartsMapBubbleSeriesDataGeometryOptions({this.coordinates, this.type});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (coordinates != null) {
       buffer.writeAll(['"coordinates":', jsonEncode(coordinates), ','], '');
@@ -70,5 +58,4 @@ class HighchartsMapBubbleSeriesDataGeometryOptions extends HighchartsOptionsBase
       buffer.writeAll(['"type":', jsonEncode(type), ','], '');
     }
   }
-
 }

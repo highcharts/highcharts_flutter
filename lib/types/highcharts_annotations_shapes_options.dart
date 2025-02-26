@@ -8,19 +8,16 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_annotations_shapes_point_options.dart';
 import 'highcharts_annotations_shapes_points_options.dart';
-
 
 /* *
  *
@@ -28,10 +25,8 @@ import 'highcharts_annotations_shapes_points_options.dart';
  *
  * */
 
-
 export 'highcharts_annotations_shapes_point_options.dart';
 export 'highcharts_annotations_shapes_points_options.dart';
-
 
 /* *
  *
@@ -39,14 +34,12 @@ export 'highcharts_annotations_shapes_points_options.dart';
  *
  * */
 
-
 /**
  * An array of shapes for the annotation. For options that apply
  * to multiple shapes, then can be added to the
  * [shapeOptions](annotations.shapeOptions.html).
  */
 class HighchartsAnnotationsShapesOptions extends HighchartsOptionsBase {
-
   String? markerEnd;
   String? markerStart;
   HighchartsAnnotationsShapesPointOptions? point;
@@ -65,31 +58,28 @@ class HighchartsAnnotationsShapesOptions extends HighchartsOptionsBase {
   double? xAxis;
   double? yAxis;
 
-
-  HighchartsAnnotationsShapesOptions({
-    this.markerEnd,
-    this.markerStart,
-    this.point,
-    this.points,
-    this.src,
-    this.dashStyle,
-    this.fill,
-    this.height,
-    this.r,
-    this.ry,
-    this.snap,
-    this.stroke,
-    this.strokeWidth,
-    this.type,
-    this.width,
-    this.xAxis,
-    this.yAxis
-  });
+  HighchartsAnnotationsShapesOptions(
+      {this.markerEnd,
+      this.markerStart,
+      this.point,
+      this.points,
+      this.src,
+      this.dashStyle,
+      this.fill,
+      this.height,
+      this.r,
+      this.ry,
+      this.snap,
+      this.stroke,
+      this.strokeWidth,
+      this.type,
+      this.width,
+      this.xAxis,
+      this.yAxis});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (markerEnd != null) {
       buffer.writeAll(['"markerEnd":', jsonEncode(markerEnd), ','], '');
@@ -147,5 +137,4 @@ class HighchartsAnnotationsShapesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"yAxis":', yAxis, ','], '');
     }
   }
-
 }

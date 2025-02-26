@@ -8,17 +8,13 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,22 +22,17 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Debugging options for boost.
  * Useful for benchmarking, and general timing.
  */
 class HighchartsBoostDebugOptions extends HighchartsOptionsBase {
-
   bool? showSkipSummary;
   bool? timeBufferCopy;
   bool? timeKDTree;
@@ -49,20 +40,17 @@ class HighchartsBoostDebugOptions extends HighchartsOptionsBase {
   bool? timeSeriesProcessing;
   bool? timeSetup;
 
-
-  HighchartsBoostDebugOptions({
-    this.showSkipSummary,
-    this.timeBufferCopy,
-    this.timeKDTree,
-    this.timeRendering,
-    this.timeSeriesProcessing,
-    this.timeSetup
-  });
+  HighchartsBoostDebugOptions(
+      {this.showSkipSummary,
+      this.timeBufferCopy,
+      this.timeKDTree,
+      this.timeRendering,
+      this.timeSeriesProcessing,
+      this.timeSetup});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (showSkipSummary != null) {
       buffer.writeAll(['"showSkipSummary":', showSkipSummary, ','], '');
@@ -77,11 +65,11 @@ class HighchartsBoostDebugOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"timeRendering":', timeRendering, ','], '');
     }
     if (timeSeriesProcessing != null) {
-      buffer.writeAll(['"timeSeriesProcessing":', timeSeriesProcessing, ','], '');
+      buffer
+          .writeAll(['"timeSeriesProcessing":', timeSeriesProcessing, ','], '');
     }
     if (timeSetup != null) {
       buffer.writeAll(['"timeSetup":', timeSetup, ','], '');
     }
   }
-
 }

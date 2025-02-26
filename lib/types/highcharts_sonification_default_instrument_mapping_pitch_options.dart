@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +23,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * Musical pitch refers to how high or low notes are played.
@@ -60,8 +53,8 @@ import 'highcharts_options_base.dart';
  * Can be set to a fixed value, an array, a prop to map to, a
  * function, or a mapping object.
  */
-class HighchartsSonificationDefaultInstrumentMappingPitchOptions extends HighchartsOptionsBase {
-
+class HighchartsSonificationDefaultInstrumentMappingPitchOptions
+    extends HighchartsOptionsBase {
   String? mapTo;
   String? max;
   String? min;
@@ -70,21 +63,18 @@ class HighchartsSonificationDefaultInstrumentMappingPitchOptions extends Highcha
   String? mapFunction;
   double? value;
 
-
-  HighchartsSonificationDefaultInstrumentMappingPitchOptions({
-    this.mapTo,
-    this.max,
-    this.min,
-    this.scale,
-    this.within,
-    this.mapFunction,
-    this.value
-  });
+  HighchartsSonificationDefaultInstrumentMappingPitchOptions(
+      {this.mapTo,
+      this.max,
+      this.min,
+      this.scale,
+      this.within,
+      this.mapFunction,
+      this.value});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (mapTo != null) {
       buffer.writeAll(['"mapTo":', jsonEncode(mapTo), ','], '');
@@ -112,5 +102,4 @@ class HighchartsSonificationDefaultInstrumentMappingPitchOptions extends Highcha
       buffer.writeAll(['"value":', value, ','], '');
     }
   }
-
 }

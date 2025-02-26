@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_series_states_select_animation_options.dart';
-
 
 /* *
  *
@@ -27,9 +24,7 @@ import 'highcharts_series_states_select_animation_options.dart';
  *
  * */
 
-
 export 'highcharts_series_states_select_animation_options.dart';
-
 
 /* *
  *
@@ -37,29 +32,21 @@ export 'highcharts_series_states_select_animation_options.dart';
  *
  * */
 
-
 /**
  * Options for a selected funnel item.
  */
 class HighchartsFunnelSeriesStatesSelectOptions extends HighchartsOptionsBase {
-
   HighchartsSeriesStatesSelectAnimationOptions? animation;
   String? borderColor;
   String? color;
   bool? enabled;
 
-
-  HighchartsFunnelSeriesStatesSelectOptions({
-    this.animation,
-    this.borderColor,
-    this.color,
-    this.enabled
-  });
+  HighchartsFunnelSeriesStatesSelectOptions(
+      {this.animation, this.borderColor, this.color, this.enabled});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (animation != null) {
       buffer.writeAll(['"animation":', animation?.toJSON(), ','], '');
@@ -74,5 +61,4 @@ class HighchartsFunnelSeriesStatesSelectOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"enabled":', enabled, ','], '');
     }
   }
-
 }

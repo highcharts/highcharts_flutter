@@ -8,19 +8,16 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_arc_diagram_series_data_accessibility_options.dart';
 import 'highcharts_arc_diagram_series_data_events_options.dart';
-
 
 /* *
  *
@@ -28,17 +25,14 @@ import 'highcharts_arc_diagram_series_data_events_options.dart';
  *
  * */
 
-
 export 'highcharts_arc_diagram_series_data_accessibility_options.dart';
 export 'highcharts_arc_diagram_series_data_events_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * An array of data points for the series. For the `arcdiagram` series type,
@@ -62,7 +56,6 @@ export 'highcharts_arc_diagram_series_data_events_options.dart';
  *  ```
  */
 class HighchartsArcDiagramSeriesDataOptions extends HighchartsOptionsBase {
-
   HighchartsArcDiagramSeriesDataAccessibilityOptions? accessibility;
   String? className;
   String? color;
@@ -77,27 +70,24 @@ class HighchartsArcDiagramSeriesDataOptions extends HighchartsOptionsBase {
   String? to;
   double? weight;
 
-
-  HighchartsArcDiagramSeriesDataOptions({
-    this.accessibility,
-    this.className,
-    this.color,
-    this.colorIndex,
-    this.custom,
-    this.description,
-    this.events,
-    this.from,
-    this.id,
-    this.labelrank,
-    this.selected,
-    this.to,
-    this.weight
-  });
+  HighchartsArcDiagramSeriesDataOptions(
+      {this.accessibility,
+      this.className,
+      this.color,
+      this.colorIndex,
+      this.custom,
+      this.description,
+      this.events,
+      this.from,
+      this.id,
+      this.labelrank,
+      this.selected,
+      this.to,
+      this.weight});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (accessibility != null) {
       buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ','], '');
@@ -143,5 +133,4 @@ class HighchartsArcDiagramSeriesDataOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"weight":', weight, ','], '');
     }
   }
-
 }

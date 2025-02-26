@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -22,18 +20,15 @@ import 'highcharts_sonification_default_instrument_active_when_options.dart';
 import 'highcharts_sonification_default_instrument_mapping_options.dart';
 import 'highcharts_sonification_default_instrument_point_grouping_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_sonification_default_instrument_active_when_options.dart';
 export 'highcharts_sonification_default_instrument_mapping_options.dart';
 export 'highcharts_sonification_default_instrument_point_grouping_options.dart';
-
 
 /* *
  *
@@ -41,12 +36,11 @@ export 'highcharts_sonification_default_instrument_point_grouping_options.dart';
  *
  * */
 
-
 /**
  * Default options for all this series' instrument tracks.
  */
-class HighchartsSeriesSonificationDefaultInstrumentOptions extends HighchartsOptionsBase {
-
+class HighchartsSeriesSonificationDefaultInstrumentOptions
+    extends HighchartsOptionsBase {
   HighchartsSonificationDefaultInstrumentActiveWhenOptions? activeWhen;
   Map<String, dynamic>? instrument;
   HighchartsSonificationDefaultInstrumentMappingOptions? mapping;
@@ -56,22 +50,19 @@ class HighchartsSeriesSonificationDefaultInstrumentOptions extends HighchartsOpt
   bool? showPlayMarker;
   String? type;
 
-
-  HighchartsSeriesSonificationDefaultInstrumentOptions({
-    this.activeWhen,
-    this.instrument,
-    this.mapping,
-    this.midiName,
-    this.pointGrouping,
-    this.roundToMusicalNotes,
-    this.showPlayMarker,
-    this.type
-  });
+  HighchartsSeriesSonificationDefaultInstrumentOptions(
+      {this.activeWhen,
+      this.instrument,
+      this.mapping,
+      this.midiName,
+      this.pointGrouping,
+      this.roundToMusicalNotes,
+      this.showPlayMarker,
+      this.type});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (activeWhen != null) {
       buffer.writeAll(['"activeWhen":', activeWhen?.toJSON(), ','], '');
@@ -102,5 +93,4 @@ class HighchartsSeriesSonificationDefaultInstrumentOptions extends HighchartsOpt
       buffer.writeAll(['"type":', jsonEncode(type), ','], '');
     }
   }
-
 }

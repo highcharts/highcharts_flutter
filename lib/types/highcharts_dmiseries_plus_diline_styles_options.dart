@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,34 +23,24 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Styles for the +DI line.
  */
 class HighchartsDMISeriesPlusDILineStylesOptions extends HighchartsOptionsBase {
-
   String? lineColor;
   double? lineWidth;
 
-
-  HighchartsDMISeriesPlusDILineStylesOptions({
-    this.lineColor,
-    this.lineWidth
-  });
+  HighchartsDMISeriesPlusDILineStylesOptions({this.lineColor, this.lineWidth});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (lineColor != null) {
       buffer.writeAll(['"lineColor":', jsonEncode(lineColor), ','], '');
@@ -62,5 +49,4 @@ class HighchartsDMISeriesPlusDILineStylesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"lineWidth":', lineWidth, ','], '');
     }
   }
-
 }

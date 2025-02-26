@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -22,25 +20,21 @@ import 'highcharts_connectors_end_marker_options.dart';
 import 'highcharts_connectors_marker_options.dart';
 import 'highcharts_connectors_start_marker_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_connectors_end_marker_options.dart';
 export 'highcharts_connectors_marker_options.dart';
 export 'highcharts_connectors_start_marker_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * The Pathfinder module allows you to define connections between any two
@@ -52,7 +46,6 @@ export 'highcharts_connectors_start_marker_options.dart';
  * charts, the connectors are used to draw dependencies between tasks.
  */
 class HighchartsConnectorsOptions extends HighchartsOptionsBase {
-
   double? algorithmMargin;
   String? dashStyle;
   bool? enabled;
@@ -64,24 +57,21 @@ class HighchartsConnectorsOptions extends HighchartsOptionsBase {
   HighchartsConnectorsStartMarkerOptions? startMarker;
   String? type;
 
-
-  HighchartsConnectorsOptions({
-    this.algorithmMargin,
-    this.dashStyle,
-    this.enabled,
-    this.endMarker,
-    this.lineColor,
-    this.lineWidth,
-    this.marker,
-    this.radius,
-    this.startMarker,
-    this.type
-  });
+  HighchartsConnectorsOptions(
+      {this.algorithmMargin,
+      this.dashStyle,
+      this.enabled,
+      this.endMarker,
+      this.lineColor,
+      this.lineWidth,
+      this.marker,
+      this.radius,
+      this.startMarker,
+      this.type});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (algorithmMargin != null) {
       buffer.writeAll(['"algorithmMargin":', algorithmMargin, ','], '');
@@ -114,5 +104,4 @@ class HighchartsConnectorsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"type":', jsonEncode(type), ','], '');
     }
   }
-
 }

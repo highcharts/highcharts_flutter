@@ -8,18 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
 import 'highcharts_bbseries_bottom_line_styles_options.dart';
-
 
 /* *
  *
@@ -27,9 +23,7 @@ import 'highcharts_bbseries_bottom_line_styles_options.dart';
  *
  * */
 
-
 export 'highcharts_bbseries_bottom_line_styles_options.dart';
-
 
 /* *
  *
@@ -37,27 +31,20 @@ export 'highcharts_bbseries_bottom_line_styles_options.dart';
  *
  * */
 
-
 /**
  * Bottom line options.
  */
 class HighchartsBBSeriesBottomLineOptions extends HighchartsOptionsBase {
-
   HighchartsBBSeriesBottomLineStylesOptions? styles;
 
-
-  HighchartsBBSeriesBottomLineOptions({
-    this.styles
-  });
+  HighchartsBBSeriesBottomLineOptions({this.styles});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (styles != null) {
       buffer.writeAll(['"styles":', styles?.toJSON(), ','], '');
     }
   }
-
 }

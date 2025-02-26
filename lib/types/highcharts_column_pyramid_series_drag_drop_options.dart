@@ -8,19 +8,16 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_column_pyramid_series_drag_drop_drag_handle_options.dart';
 import 'highcharts_series_drag_drop_guide_box_options.dart';
-
 
 /* *
  *
@@ -28,10 +25,8 @@ import 'highcharts_series_drag_drop_guide_box_options.dart';
  *
  * */
 
-
 export 'highcharts_column_pyramid_series_drag_drop_drag_handle_options.dart';
 export 'highcharts_series_drag_drop_guide_box_options.dart';
-
 
 /* *
  *
@@ -39,9 +34,8 @@ export 'highcharts_series_drag_drop_guide_box_options.dart';
  *
  * */
 
-
-class HighchartsColumnPyramidSeriesDragDropOptions extends HighchartsOptionsBase {
-
+class HighchartsColumnPyramidSeriesDragDropOptions
+    extends HighchartsOptionsBase {
   HighchartsColumnPyramidSeriesDragDropDragHandleOptions? dragHandle;
   dynamic dragMaxX;
   double? dragMaxY;
@@ -56,27 +50,24 @@ class HighchartsColumnPyramidSeriesDragDropOptions extends HighchartsOptionsBase
   HighchartsSeriesDragDropGuideBoxOptions? guideBox;
   bool? liveRedraw;
 
-
-  HighchartsColumnPyramidSeriesDragDropOptions({
-    this.dragHandle,
-    this.dragMaxX,
-    this.dragMaxY,
-    this.dragMinX,
-    this.dragMinY,
-    this.dragPrecisionX,
-    this.dragPrecisionY,
-    this.dragSensitivity,
-    this.draggableX,
-    this.draggableY,
-    this.groupBy,
-    this.guideBox,
-    this.liveRedraw
-  });
+  HighchartsColumnPyramidSeriesDragDropOptions(
+      {this.dragHandle,
+      this.dragMaxX,
+      this.dragMaxY,
+      this.dragMinX,
+      this.dragMinY,
+      this.dragPrecisionX,
+      this.dragPrecisionY,
+      this.dragSensitivity,
+      this.draggableX,
+      this.draggableY,
+      this.groupBy,
+      this.guideBox,
+      this.liveRedraw});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (dragHandle != null) {
       buffer.writeAll(['"dragHandle":', dragHandle?.toJSON(), ','], '');
@@ -118,5 +109,4 @@ class HighchartsColumnPyramidSeriesDragDropOptions extends HighchartsOptionsBase
       buffer.writeAll(['"liveRedraw":', liveRedraw, ','], '');
     }
   }
-
 }

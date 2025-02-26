@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -22,25 +20,21 @@ import 'highcharts_map_line_series_data_labels_options.dart';
 import 'highcharts_map_line_series_states_options.dart';
 import 'highcharts_map_line_series_tooltip_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_map_line_series_data_labels_options.dart';
 export 'highcharts_map_line_series_states_options.dart';
 export 'highcharts_map_line_series_tooltip_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * A `mapline` series. If the [type](#series.mapline.type) option is
@@ -86,7 +80,6 @@ export 'highcharts_map_line_series_tooltip_options.dart';
  *             
  */
 class HighchartsMapLineSeriesOptions extends HighchartsOptionsBase {
-
   bool? affectsMapView;
   bool? animation;
   bool? colorByPoint;
@@ -106,32 +99,29 @@ class HighchartsMapLineSeriesOptions extends HighchartsOptionsBase {
   HighchartsMapLineSeriesStatesOptions? states;
   HighchartsMapLineSeriesTooltipOptions? tooltip;
 
-
-  HighchartsMapLineSeriesOptions({
-    this.affectsMapView,
-    this.animation,
-    this.colorByPoint,
-    this.colorKey,
-    this.colors,
-    this.dataLabels,
-    this.fillColor,
-    this.id,
-    this.index,
-    this.legendIndex,
-    this.legendSymbol,
-    this.lineWidth,
-    this.linecap,
-    this.mapData,
-    this.nullColor,
-    this.nullInteraction,
-    this.states,
-    this.tooltip
-  });
+  HighchartsMapLineSeriesOptions(
+      {this.affectsMapView,
+      this.animation,
+      this.colorByPoint,
+      this.colorKey,
+      this.colors,
+      this.dataLabels,
+      this.fillColor,
+      this.id,
+      this.index,
+      this.legendIndex,
+      this.legendSymbol,
+      this.lineWidth,
+      this.linecap,
+      this.mapData,
+      this.nullColor,
+      this.nullInteraction,
+      this.states,
+      this.tooltip});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (affectsMapView != null) {
       buffer.writeAll(['"affectsMapView":', affectsMapView, ','], '');
@@ -196,5 +186,4 @@ class HighchartsMapLineSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"tooltip":', tooltip?.toJSON(), ','], '');
     }
   }
-
 }

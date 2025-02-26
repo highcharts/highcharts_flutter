@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,33 +23,24 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
-class HighchartsAnnotationsFibonacciLabelStyleOptions extends HighchartsOptionsBase {
-
+class HighchartsAnnotationsFibonacciLabelStyleOptions
+    extends HighchartsOptionsBase {
   String? color;
 
-
-  HighchartsAnnotationsFibonacciLabelStyleOptions({
-    this.color
-  });
+  HighchartsAnnotationsFibonacciLabelStyleOptions({this.color});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (color != null) {
       buffer.writeAll(['"color":', jsonEncode(color), ','], '');
     }
   }
-
 }

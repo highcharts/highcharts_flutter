@@ -8,20 +8,16 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
 import 'highcharts_series_states_hover_animation_options.dart';
 import 'highcharts_series_states_hover_halo_options.dart';
 import 'highcharts_series_states_hover_marker_options.dart';
-
 
 /* *
  *
@@ -29,11 +25,9 @@ import 'highcharts_series_states_hover_marker_options.dart';
  *
  * */
 
-
 export 'highcharts_series_states_hover_animation_options.dart';
 export 'highcharts_series_states_hover_halo_options.dart';
 export 'highcharts_series_states_hover_marker_options.dart';
-
 
 /* *
  *
@@ -41,9 +35,7 @@ export 'highcharts_series_states_hover_marker_options.dart';
  *
  * */
 
-
 class HighchartsPSARSeriesStatesHoverOptions extends HighchartsOptionsBase {
-
   double? lineWidthPlus;
   HighchartsSeriesStatesHoverAnimationOptions? animation;
   bool? enabled;
@@ -51,20 +43,17 @@ class HighchartsPSARSeriesStatesHoverOptions extends HighchartsOptionsBase {
   double? lineWidth;
   HighchartsSeriesStatesHoverMarkerOptions? marker;
 
-
-  HighchartsPSARSeriesStatesHoverOptions({
-    this.lineWidthPlus,
-    this.animation,
-    this.enabled,
-    this.halo,
-    this.lineWidth,
-    this.marker
-  });
+  HighchartsPSARSeriesStatesHoverOptions(
+      {this.lineWidthPlus,
+      this.animation,
+      this.enabled,
+      this.halo,
+      this.lineWidth,
+      this.marker});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (lineWidthPlus != null) {
       buffer.writeAll(['"lineWidthPlus":', lineWidthPlus, ','], '');
@@ -85,5 +74,4 @@ class HighchartsPSARSeriesStatesHoverOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"marker":', marker?.toJSON(), ','], '');
     }
   }
-
 }

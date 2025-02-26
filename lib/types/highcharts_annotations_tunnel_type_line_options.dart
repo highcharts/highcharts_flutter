@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,31 +23,21 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 class HighchartsAnnotationsTunnelTypeLineOptions extends HighchartsOptionsBase {
-
   double? strokeWidth;
   String? fill;
 
-
-  HighchartsAnnotationsTunnelTypeLineOptions({
-    this.strokeWidth,
-    this.fill
-  });
+  HighchartsAnnotationsTunnelTypeLineOptions({this.strokeWidth, this.fill});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (strokeWidth != null) {
       buffer.writeAll(['"strokeWidth":', strokeWidth, ','], '');
@@ -59,5 +46,4 @@ class HighchartsAnnotationsTunnelTypeLineOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"fill":', jsonEncode(fill), ','], '');
     }
   }
-
 }

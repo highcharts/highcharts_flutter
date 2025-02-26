@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_xaxis_title_style_options.dart';
-
 
 /* *
  *
@@ -27,9 +24,7 @@ import 'highcharts_xaxis_title_style_options.dart';
  *
  * */
 
-
 export 'highcharts_xaxis_title_style_options.dart';
-
 
 /* *
  *
@@ -37,9 +32,7 @@ export 'highcharts_xaxis_title_style_options.dart';
  *
  * */
 
-
 class HighchartsNavigatorYAxisTitleOptions extends HighchartsOptionsBase {
-
   dynamic text;
   double? margin;
   String? align;
@@ -52,25 +45,22 @@ class HighchartsNavigatorYAxisTitleOptions extends HighchartsOptionsBase {
   double? x;
   double? y;
 
-
-  HighchartsNavigatorYAxisTitleOptions({
-    this.text,
-    this.margin,
-    this.align,
-    this.offset,
-    this.reserveSpace,
-    this.rotation,
-    this.style,
-    this.textAlign,
-    this.useHTML,
-    this.x,
-    this.y
-  });
+  HighchartsNavigatorYAxisTitleOptions(
+      {this.text,
+      this.margin,
+      this.align,
+      this.offset,
+      this.reserveSpace,
+      this.rotation,
+      this.style,
+      this.textAlign,
+      this.useHTML,
+      this.x,
+      this.y});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (text != null) {
       buffer.writeAll(['"text":', jsonEncode(text), ','], '');
@@ -106,5 +96,4 @@ class HighchartsNavigatorYAxisTitleOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"y":', y, ','], '');
     }
   }
-
 }

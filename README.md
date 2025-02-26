@@ -49,3 +49,15 @@ Known Major Issues
 
 * All issues can be monitored in our public repository at
   https://github.com/highcharts/highcharts_flutter/issues
+
+
+
+License
+-------
+
+Copyright (c) 2023-2025, Highsoft AS.
+
+See [LICENSE](./LICENSE) file for details.
+
+Read more on licensing alternatives here:
+- https://shop.highcharts.com/

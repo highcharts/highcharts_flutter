@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +23,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * For series on datetime axes, the date format in the tooltip's
@@ -43,8 +36,8 @@ import 'highcharts_options_base.dart';
  * each unit. For an overview of the string or object configuration, see
  * [dateFormat](/class-reference/Highcharts.Time#dateFormat).
  */
-class HighchartsTooltipDateTimeLabelFormatsOptions extends HighchartsOptionsBase {
-
+class HighchartsTooltipDateTimeLabelFormatsOptions
+    extends HighchartsOptionsBase {
   String? day;
   String? hour;
   String? millisecond;
@@ -54,22 +47,19 @@ class HighchartsTooltipDateTimeLabelFormatsOptions extends HighchartsOptionsBase
   String? week;
   String? year;
 
-
-  HighchartsTooltipDateTimeLabelFormatsOptions({
-    this.day,
-    this.hour,
-    this.millisecond,
-    this.minute,
-    this.month,
-    this.second,
-    this.week,
-    this.year
-  });
+  HighchartsTooltipDateTimeLabelFormatsOptions(
+      {this.day,
+      this.hour,
+      this.millisecond,
+      this.minute,
+      this.month,
+      this.second,
+      this.week,
+      this.year});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (day != null) {
       buffer.writeAll(['"day":', jsonEncode(day), ','], '');
@@ -96,5 +86,4 @@ class HighchartsTooltipDateTimeLabelFormatsOptions extends HighchartsOptionsBase
       buffer.writeAll(['"year":', jsonEncode(year), ','], '');
     }
   }
-
 }

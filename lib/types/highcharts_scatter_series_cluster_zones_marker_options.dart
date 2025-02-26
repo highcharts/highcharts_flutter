@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,21 +23,17 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Settings for the cluster marker belonging to the zone.
  */
-class HighchartsScatterSeriesClusterZonesMarkerOptions extends HighchartsOptionsBase {
-
+class HighchartsScatterSeriesClusterZonesMarkerOptions
+    extends HighchartsOptionsBase {
   String? lineColor;
   double? lineWidth;
   double? radius;
@@ -50,22 +43,19 @@ class HighchartsScatterSeriesClusterZonesMarkerOptions extends HighchartsOptions
   double? height;
   double? width;
 
-
-  HighchartsScatterSeriesClusterZonesMarkerOptions({
-    this.lineColor,
-    this.lineWidth,
-    this.radius,
-    this.symbol,
-    this.enabled,
-    this.fillColor,
-    this.height,
-    this.width
-  });
+  HighchartsScatterSeriesClusterZonesMarkerOptions(
+      {this.lineColor,
+      this.lineWidth,
+      this.radius,
+      this.symbol,
+      this.enabled,
+      this.fillColor,
+      this.height,
+      this.width});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (lineColor != null) {
       buffer.writeAll(['"lineColor":', jsonEncode(lineColor), ','], '');
@@ -92,5 +82,4 @@ class HighchartsScatterSeriesClusterZonesMarkerOptions extends HighchartsOptions
       buffer.writeAll(['"width":', width, ','], '');
     }
   }
-
 }

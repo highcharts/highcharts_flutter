@@ -8,20 +8,16 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
 import 'highcharts_bubble_series_states_hover_halo_options.dart';
 import 'highcharts_series_states_hover_animation_options.dart';
 import 'highcharts_series_states_hover_marker_options.dart';
-
 
 /* *
  *
@@ -29,11 +25,9 @@ import 'highcharts_series_states_hover_marker_options.dart';
  *
  * */
 
-
 export 'highcharts_bubble_series_states_hover_halo_options.dart';
 export 'highcharts_series_states_hover_animation_options.dart';
 export 'highcharts_series_states_hover_marker_options.dart';
-
 
 /* *
  *
@@ -41,9 +35,7 @@ export 'highcharts_series_states_hover_marker_options.dart';
  *
  * */
 
-
 class HighchartsBubbleSeriesStatesHoverOptions extends HighchartsOptionsBase {
-
   HighchartsBubbleSeriesStatesHoverHaloOptions? halo;
   HighchartsSeriesStatesHoverAnimationOptions? animation;
   bool? enabled;
@@ -51,20 +43,17 @@ class HighchartsBubbleSeriesStatesHoverOptions extends HighchartsOptionsBase {
   double? lineWidthPlus;
   HighchartsSeriesStatesHoverMarkerOptions? marker;
 
-
-  HighchartsBubbleSeriesStatesHoverOptions({
-    this.halo,
-    this.animation,
-    this.enabled,
-    this.lineWidth,
-    this.lineWidthPlus,
-    this.marker
-  });
+  HighchartsBubbleSeriesStatesHoverOptions(
+      {this.halo,
+      this.animation,
+      this.enabled,
+      this.lineWidth,
+      this.lineWidthPlus,
+      this.marker});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (halo != null) {
       buffer.writeAll(['"halo":', halo?.toJSON(), ','], '');
@@ -85,5 +74,4 @@ class HighchartsBubbleSeriesStatesHoverOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"marker":', marker?.toJSON(), ','], '');
     }
   }
-
 }

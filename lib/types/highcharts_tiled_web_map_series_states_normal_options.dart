@@ -8,17 +8,13 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,33 +22,24 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
-class HighchartsTiledWebMapSeriesStatesNormalOptions extends HighchartsOptionsBase {
-
+class HighchartsTiledWebMapSeriesStatesNormalOptions
+    extends HighchartsOptionsBase {
   bool? animation;
 
-
-  HighchartsTiledWebMapSeriesStatesNormalOptions({
-    this.animation
-  });
+  HighchartsTiledWebMapSeriesStatesNormalOptions({this.animation});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (animation != null) {
       buffer.writeAll(['"animation":', animation, ','], '');
     }
   }
-
 }

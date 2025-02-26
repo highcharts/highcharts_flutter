@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +23,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * CSS styles for the title. Use this for font styling, but use `align`,
@@ -48,20 +41,14 @@ import 'highcharts_options_base.dart';
  * class.
  */
 class HighchartsTitleStyleOptions extends HighchartsOptionsBase {
-
   String? color;
   String? fontWeight;
 
-
-  HighchartsTitleStyleOptions({
-    this.color,
-    this.fontWeight
-  });
+  HighchartsTitleStyleOptions({this.color, this.fontWeight});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (color != null) {
       buffer.writeAll(['"color":', jsonEncode(color), ','], '');
@@ -70,5 +57,4 @@ class HighchartsTitleStyleOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"fontWeight":', jsonEncode(fontWeight), ','], '');
     }
   }
-
 }

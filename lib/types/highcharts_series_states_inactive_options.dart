@@ -8,18 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
 import 'highcharts_series_states_inactive_animation_options.dart';
-
 
 /* *
  *
@@ -27,9 +23,7 @@ import 'highcharts_series_states_inactive_animation_options.dart';
  *
  * */
 
-
 export 'highcharts_series_states_inactive_animation_options.dart';
-
 
 /* *
  *
@@ -37,27 +31,20 @@ export 'highcharts_series_states_inactive_animation_options.dart';
  *
  * */
 
-
 /**
  * The opposite state of a hover for series.
  */
 class HighchartsSeriesStatesInactiveOptions extends HighchartsOptionsBase {
-
   HighchartsSeriesStatesInactiveAnimationOptions? animation;
   bool? enabled;
   double? opacity;
 
-
-  HighchartsSeriesStatesInactiveOptions({
-    this.animation,
-    this.enabled,
-    this.opacity
-  });
+  HighchartsSeriesStatesInactiveOptions(
+      {this.animation, this.enabled, this.opacity});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (animation != null) {
       buffer.writeAll(['"animation":', animation?.toJSON(), ','], '');
@@ -69,5 +56,4 @@ class HighchartsSeriesStatesInactiveOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"opacity":', opacity, ','], '');
     }
   }
-
 }

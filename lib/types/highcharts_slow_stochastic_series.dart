@@ -8,7 +8,6 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
@@ -19,23 +18,19 @@ import 'dart:convert';
 import 'highcharts_series.dart';
 import 'highcharts_slow_stochastic_series_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_slow_stochastic_series_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * A Slow Stochastic indicator. If the [type](#series.slowstochastic.type)
@@ -81,7 +76,6 @@ export 'highcharts_slow_stochastic_series_options.dart';
  *             
  */
 class HighchartsSlowStochasticSeries extends HighchartsSeries {
-
   List<List<dynamic>>? data;
   String? name;
   HighchartsSlowStochasticSeriesOptions? options;
@@ -125,14 +119,13 @@ class HighchartsSlowStochasticSeries extends HighchartsSeries {
       }
 
       buffer.writeAll(['"data":[', seriesData, '],'], '');
-
     } else if (points != null) {
       // Go through the points and write them
       StringBuffer seriesData = StringBuffer();
 
       for (var point in points!) {
         seriesData.writeAll(['{'], '');
-        point.toOptionsJSON(seriesData); 
+        point.toOptionsJSON(seriesData);
         seriesData.writeAll(['},'], '');
       }
 
@@ -147,5 +140,4 @@ class HighchartsSlowStochasticSeries extends HighchartsSeries {
       buffer.writeAll(['"name":', jsonEncode(name), ','], '');
     }
   }
-
 }

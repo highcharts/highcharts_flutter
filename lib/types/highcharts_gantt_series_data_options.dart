@@ -8,19 +8,16 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_gantt_series_data_completed_options.dart';
 import 'highcharts_gantt_series_data_dependency_options.dart';
-
 
 /* *
  *
@@ -28,10 +25,8 @@ import 'highcharts_gantt_series_data_dependency_options.dart';
  *
  * */
 
-
 export 'highcharts_gantt_series_data_completed_options.dart';
 export 'highcharts_gantt_series_data_dependency_options.dart';
-
 
 /* *
  *
@@ -39,12 +34,10 @@ export 'highcharts_gantt_series_data_dependency_options.dart';
  *
  * */
 
-
 /**
  * Data for a Gantt series.
  */
 class HighchartsGanttSeriesDataOptions extends HighchartsOptionsBase {
-
   bool? collapsed;
   HighchartsGanttSeriesDataCompletedOptions? completed;
   List<HighchartsGanttSeriesDataDependencyOptions>? dependency;
@@ -54,22 +47,19 @@ class HighchartsGanttSeriesDataOptions extends HighchartsOptionsBase {
   dynamic start;
   double? y;
 
-
-  HighchartsGanttSeriesDataOptions({
-    this.collapsed,
-    this.completed,
-    this.dependency,
-    this.end,
-    this.milestone,
-    this.parent,
-    this.start,
-    this.y
-  });
+  HighchartsGanttSeriesDataOptions(
+      {this.collapsed,
+      this.completed,
+      this.dependency,
+      this.end,
+      this.milestone,
+      this.parent,
+      this.start,
+      this.y});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (collapsed != null) {
       buffer.writeAll(['"collapsed":', collapsed, ','], '');
@@ -100,5 +90,4 @@ class HighchartsGanttSeriesDataOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"y":', y, ','], '');
     }
   }
-
 }

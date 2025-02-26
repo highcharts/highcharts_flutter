@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_xaxis_labels_style_options.dart';
-
 
 /* *
  *
@@ -27,16 +24,13 @@ import 'highcharts_xaxis_labels_style_options.dart';
  *
  * */
 
-
 export 'highcharts_xaxis_labels_style_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * The axis labels show the number or category for each tick.
@@ -45,7 +39,6 @@ export 'highcharts_xaxis_labels_style_options.dart';
  * updating data if `tickInterval` and `step` is set to 1.
  */
 class HighchartsXAxisLabelsOptions extends HighchartsOptionsBase {
-
   String? align;
   bool? allowOverlap;
   List<double>? autoRotation;
@@ -69,36 +62,33 @@ class HighchartsXAxisLabelsOptions extends HighchartsOptionsBase {
   double? y;
   double? zIndex;
 
-
-  HighchartsXAxisLabelsOptions({
-    this.align,
-    this.allowOverlap,
-    this.autoRotation,
-    this.autoRotationLimit,
-    this.distance,
-    this.enabled,
-    this.format,
-    this.formatter,
-    this.maxStaggerLines,
-    this.overflow,
-    this.padding,
-    this.position3d,
-    this.reserveSpace,
-    this.rotation,
-    this.skew3d,
-    this.staggerLines,
-    this.step,
-    this.style,
-    this.useHTML,
-    this.x,
-    this.y,
-    this.zIndex
-  });
+  HighchartsXAxisLabelsOptions(
+      {this.align,
+      this.allowOverlap,
+      this.autoRotation,
+      this.autoRotationLimit,
+      this.distance,
+      this.enabled,
+      this.format,
+      this.formatter,
+      this.maxStaggerLines,
+      this.overflow,
+      this.padding,
+      this.position3d,
+      this.reserveSpace,
+      this.rotation,
+      this.skew3d,
+      this.staggerLines,
+      this.step,
+      this.style,
+      this.useHTML,
+      this.x,
+      this.y,
+      this.zIndex});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (align != null) {
       buffer.writeAll(['"align":', jsonEncode(align), ','], '');
@@ -171,5 +161,4 @@ class HighchartsXAxisLabelsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"zIndex":', zIndex, ','], '');
     }
   }
-
 }

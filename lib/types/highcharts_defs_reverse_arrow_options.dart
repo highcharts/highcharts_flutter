@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_defs_reverse_arrow_attributes_options.dart';
-
 
 /* *
  *
@@ -27,9 +24,7 @@ import 'highcharts_defs_reverse_arrow_attributes_options.dart';
  *
  * */
 
-
 export 'highcharts_defs_reverse_arrow_attributes_options.dart';
-
 
 /* *
  *
@@ -37,22 +32,15 @@ export 'highcharts_defs_reverse_arrow_attributes_options.dart';
  *
  * */
 
-
 class HighchartsDefsReverseArrowOptions extends HighchartsOptionsBase {
-
   HighchartsDefsReverseArrowAttributesOptions? attributes;
   String? tagName;
 
-
-  HighchartsDefsReverseArrowOptions({
-    this.attributes,
-    this.tagName
-  });
+  HighchartsDefsReverseArrowOptions({this.attributes, this.tagName});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (attributes != null) {
       buffer.writeAll(['"attributes":', attributes?.toJSON(), ','], '');
@@ -61,5 +49,4 @@ class HighchartsDefsReverseArrowOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"tagName":', jsonEncode(tagName), ','], '');
     }
   }
-
 }

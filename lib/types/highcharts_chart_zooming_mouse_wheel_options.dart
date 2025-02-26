@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +23,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * The mouse wheel zoom is a feature included in Highcharts Stock, but is also
@@ -44,22 +37,16 @@ import 'highcharts_options_base.dart';
  * setting this option to `false`.
  */
 class HighchartsChartZoomingMouseWheelOptions extends HighchartsOptionsBase {
-
   bool? enabled;
   double? sensitivity;
   String? type;
 
-
-  HighchartsChartZoomingMouseWheelOptions({
-    this.enabled,
-    this.sensitivity,
-    this.type
-  });
+  HighchartsChartZoomingMouseWheelOptions(
+      {this.enabled, this.sensitivity, this.type});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (enabled != null) {
       buffer.writeAll(['"enabled":', enabled, ','], '');
@@ -71,5 +58,4 @@ class HighchartsChartZoomingMouseWheelOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"type":', jsonEncode(type), ','], '');
     }
   }
-
 }

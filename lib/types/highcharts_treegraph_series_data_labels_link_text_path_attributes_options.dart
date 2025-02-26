@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,33 +23,25 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
-class HighchartsTreegraphSeriesDataLabelsLinkTextPathAttributesOptions extends HighchartsOptionsBase {
-
+class HighchartsTreegraphSeriesDataLabelsLinkTextPathAttributesOptions
+    extends HighchartsOptionsBase {
   dynamic startOffset;
 
-
-  HighchartsTreegraphSeriesDataLabelsLinkTextPathAttributesOptions({
-    this.startOffset
-  });
+  HighchartsTreegraphSeriesDataLabelsLinkTextPathAttributesOptions(
+      {this.startOffset});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (startOffset != null) {
       buffer.writeAll(['"startOffset":', jsonEncode(startOffset), ','], '');
     }
   }
-
 }

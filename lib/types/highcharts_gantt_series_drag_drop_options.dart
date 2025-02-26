@@ -8,17 +8,13 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,35 +22,27 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 class HighchartsGanttSeriesDragDropOptions extends HighchartsOptionsBase {
-
   bool? draggableEnd;
   bool? draggableStart;
   bool? draggableX1;
   bool? draggableX2;
 
-
-  HighchartsGanttSeriesDragDropOptions({
-    this.draggableEnd,
-    this.draggableStart,
-    this.draggableX1,
-    this.draggableX2
-  });
+  HighchartsGanttSeriesDragDropOptions(
+      {this.draggableEnd,
+      this.draggableStart,
+      this.draggableX1,
+      this.draggableX2});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (draggableEnd != null) {
       buffer.writeAll(['"draggableEnd":', draggableEnd, ','], '');
@@ -69,5 +57,4 @@ class HighchartsGanttSeriesDragDropOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"draggableX2":', draggableX2, ','], '');
     }
   }
-
 }

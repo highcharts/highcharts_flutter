@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -31,13 +29,11 @@ import 'highcharts_series_states_options.dart';
 import 'highcharts_series_tooltip_options.dart';
 import 'highcharts_series_zones_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
-
 
 export 'highcharts_series_accessibility_options.dart';
 export 'highcharts_series_data_labels_options.dart';
@@ -52,13 +48,11 @@ export 'highcharts_series_states_options.dart';
 export 'highcharts_series_tooltip_options.dart';
 export 'highcharts_series_zones_options.dart';
 
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * A `bellcurve` series. If the [type](#series.bellcurve.type) option is not
@@ -109,7 +103,6 @@ export 'highcharts_series_zones_options.dart';
  *             
  */
 class HighchartsBellcurveSeriesOptions extends HighchartsOptionsBase {
-
   HighchartsSeriesAccessibilityOptions? accessibility;
   bool? allowPointSelect;
   dynamic animation;
@@ -183,86 +176,83 @@ class HighchartsBellcurveSeriesOptions extends HighchartsOptionsBase {
   String? zoneAxis;
   List<HighchartsSeriesZonesOptions>? zones;
 
-
-  HighchartsBellcurveSeriesOptions({
-    this.accessibility,
-    this.allowPointSelect,
-    this.animation,
-    this.animationLimit,
-    this.baseSeries,
-    this.className,
-    this.clip,
-    this.color,
-    this.colorAxis,
-    this.colorIndex,
-    this.colorKey,
-    this.connectEnds,
-    this.crisp,
-    this.cropThreshold,
-    this.cursor,
-    this.custom,
-    this.dashStyle,
-    this.dataLabels,
-    this.dataSorting,
-    this.description,
-    this.enableMouseTracking,
-    this.events,
-    this.fillColor,
-    this.fillOpacity,
-    this.findNearestPointBy,
-    this.getExtremesFromAll,
-    this.id,
-    this.inactiveOtherPoints,
-    this.includeInDataExport,
-    this.index,
-    this.intervals,
-    this.keys,
-    this.label,
-    this.legendIndex,
-    this.legendSymbol,
-    this.legendSymbolColor,
-    this.lineColor,
-    this.lineWidth,
-    this.linecap,
-    this.linkedTo,
-    this.marker,
-    this.negativeColor,
-    this.negativeFillColor,
-    this.onPoint,
-    this.opacity,
-    this.point,
-    this.pointDescriptionFormat,
-    this.pointDescriptionFormatter,
-    this.pointPlacement,
-    this.pointStart,
-    this.pointsInInterval,
-    this.relativeXValue,
-    this.selected,
-    this.shadow,
-    this.showCheckbox,
-    this.showInLegend,
-    this.skipKeyboardNavigation,
-    this.softThreshold,
-    this.sonification,
-    this.stack,
-    this.states,
-    this.stickyTracking,
-    this.threshold,
-    this.tooltip,
-    this.trackByArea,
-    this.turboThreshold,
-    this.visible,
-    this.xAxis,
-    this.yAxis,
-    this.zIndex,
-    this.zoneAxis,
-    this.zones
-  });
+  HighchartsBellcurveSeriesOptions(
+      {this.accessibility,
+      this.allowPointSelect,
+      this.animation,
+      this.animationLimit,
+      this.baseSeries,
+      this.className,
+      this.clip,
+      this.color,
+      this.colorAxis,
+      this.colorIndex,
+      this.colorKey,
+      this.connectEnds,
+      this.crisp,
+      this.cropThreshold,
+      this.cursor,
+      this.custom,
+      this.dashStyle,
+      this.dataLabels,
+      this.dataSorting,
+      this.description,
+      this.enableMouseTracking,
+      this.events,
+      this.fillColor,
+      this.fillOpacity,
+      this.findNearestPointBy,
+      this.getExtremesFromAll,
+      this.id,
+      this.inactiveOtherPoints,
+      this.includeInDataExport,
+      this.index,
+      this.intervals,
+      this.keys,
+      this.label,
+      this.legendIndex,
+      this.legendSymbol,
+      this.legendSymbolColor,
+      this.lineColor,
+      this.lineWidth,
+      this.linecap,
+      this.linkedTo,
+      this.marker,
+      this.negativeColor,
+      this.negativeFillColor,
+      this.onPoint,
+      this.opacity,
+      this.point,
+      this.pointDescriptionFormat,
+      this.pointDescriptionFormatter,
+      this.pointPlacement,
+      this.pointStart,
+      this.pointsInInterval,
+      this.relativeXValue,
+      this.selected,
+      this.shadow,
+      this.showCheckbox,
+      this.showInLegend,
+      this.skipKeyboardNavigation,
+      this.softThreshold,
+      this.sonification,
+      this.stack,
+      this.states,
+      this.stickyTracking,
+      this.threshold,
+      this.tooltip,
+      this.trackByArea,
+      this.turboThreshold,
+      this.visible,
+      this.xAxis,
+      this.yAxis,
+      this.zIndex,
+      this.zoneAxis,
+      this.zones});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (accessibility != null) {
       buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ','], '');
@@ -345,7 +335,8 @@ class HighchartsBellcurveSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"fillOpacity":', jsonEncode(fillOpacity), ','], '');
     }
     if (findNearestPointBy != null) {
-      buffer.writeAll(['"findNearestPointBy":', jsonEncode(findNearestPointBy), ','], '');
+      buffer.writeAll(
+          ['"findNearestPointBy":', jsonEncode(findNearestPointBy), ','], '');
     }
     if (getExtremesFromAll != null) {
       buffer.writeAll(['"getExtremesFromAll":', getExtremesFromAll, ','], '');
@@ -382,7 +373,8 @@ class HighchartsBellcurveSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"legendSymbol":', jsonEncode(legendSymbol), ','], '');
     }
     if (legendSymbolColor != null) {
-      buffer.writeAll(['"legendSymbolColor":', jsonEncode(legendSymbolColor), ','], '');
+      buffer.writeAll(
+          ['"legendSymbolColor":', jsonEncode(legendSymbolColor), ','], '');
     }
     if (lineColor != null) {
       buffer.writeAll(['"lineColor":', jsonEncode(lineColor), ','], '');
@@ -403,7 +395,8 @@ class HighchartsBellcurveSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"negativeColor":', jsonEncode(negativeColor), ','], '');
     }
     if (negativeFillColor != null) {
-      buffer.writeAll(['"negativeFillColor":', jsonEncode(negativeFillColor), ','], '');
+      buffer.writeAll(
+          ['"negativeFillColor":', jsonEncode(negativeFillColor), ','], '');
     }
     if (onPoint != null) {
       buffer.writeAll(['"onPoint":', onPoint?.toJSON(), ','], '');
@@ -415,13 +408,22 @@ class HighchartsBellcurveSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"point":', point?.toJSON(), ','], '');
     }
     if (pointDescriptionFormat != null) {
-      buffer.writeAll(['"pointDescriptionFormat":', jsonEncode(pointDescriptionFormat), ','], '');
+      buffer.writeAll([
+        '"pointDescriptionFormat":',
+        jsonEncode(pointDescriptionFormat),
+        ','
+      ], '');
     }
     if (pointDescriptionFormatter != null) {
-      buffer.writeAll(['"pointDescriptionFormatter":', jsonEncode(pointDescriptionFormatter), ','], '');
+      buffer.writeAll([
+        '"pointDescriptionFormatter":',
+        jsonEncode(pointDescriptionFormatter),
+        ','
+      ], '');
     }
     if (pointPlacement != null) {
-      buffer.writeAll(['"pointPlacement":', jsonEncode(pointPlacement), ','], '');
+      buffer
+          .writeAll(['"pointPlacement":', jsonEncode(pointPlacement), ','], '');
     }
     if (pointStart != null) {
       buffer.writeAll(['"pointStart":', jsonEncode(pointStart), ','], '');
@@ -449,7 +451,8 @@ class HighchartsBellcurveSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"showInLegend":', showInLegend, ','], '');
     }
     if (skipKeyboardNavigation != null) {
-      buffer.writeAll(['"skipKeyboardNavigation":', skipKeyboardNavigation, ','], '');
+      buffer.writeAll(
+          ['"skipKeyboardNavigation":', skipKeyboardNavigation, ','], '');
     }
     if (softThreshold != null) {
       buffer.writeAll(['"softThreshold":', softThreshold, ','], '');
@@ -501,5 +504,4 @@ class HighchartsBellcurveSeriesOptions extends HighchartsOptionsBase {
       buffer.write('],');
     }
   }
-
 }

@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,21 +23,16 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * An array of background items for the pane.
  */
 class HighchartsPaneBackgroundOptions extends HighchartsOptionsBase {
-
   String? backgroundColor;
   String? borderColor;
   dynamic borderRadius;
@@ -50,25 +42,23 @@ class HighchartsPaneBackgroundOptions extends HighchartsOptionsBase {
   dynamic outerRadius;
   String? shape;
 
-
-  HighchartsPaneBackgroundOptions({
-    this.backgroundColor,
-    this.borderColor,
-    this.borderRadius,
-    this.borderWidth,
-    this.className,
-    this.innerRadius,
-    this.outerRadius,
-    this.shape
-  });
+  HighchartsPaneBackgroundOptions(
+      {this.backgroundColor,
+      this.borderColor,
+      this.borderRadius,
+      this.borderWidth,
+      this.className,
+      this.innerRadius,
+      this.outerRadius,
+      this.shape});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (backgroundColor != null) {
-      buffer.writeAll(['"backgroundColor":', jsonEncode(backgroundColor), ','], '');
+      buffer.writeAll(
+          ['"backgroundColor":', jsonEncode(backgroundColor), ','], '');
     }
     if (borderColor != null) {
       buffer.writeAll(['"borderColor":', jsonEncode(borderColor), ','], '');
@@ -92,5 +82,4 @@ class HighchartsPaneBackgroundOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"shape":', jsonEncode(shape), ','], '');
     }
   }
-
 }

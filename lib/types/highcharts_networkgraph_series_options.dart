@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -33,13 +31,11 @@ import 'highcharts_networkgraph_series_states_options.dart';
 import 'highcharts_series_tooltip_options.dart';
 import 'highcharts_series_zones_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
-
 
 export 'highcharts_series_accessibility_options.dart';
 export 'highcharts_networkgraph_series_data_labels_options.dart';
@@ -56,13 +52,11 @@ export 'highcharts_networkgraph_series_states_options.dart';
 export 'highcharts_series_tooltip_options.dart';
 export 'highcharts_series_zones_options.dart';
 
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * A `networkgraph` series. If the [type](#series.networkgraph.type) option is
@@ -108,7 +102,6 @@ export 'highcharts_series_zones_options.dart';
  *             
  */
 class HighchartsNetworkgraphSeriesOptions extends HighchartsOptionsBase {
-
   HighchartsSeriesAccessibilityOptions? accessibility;
   bool? allowPointSelect;
   String? className;
@@ -159,63 +152,60 @@ class HighchartsNetworkgraphSeriesOptions extends HighchartsOptionsBase {
   double? zIndex;
   List<HighchartsSeriesZonesOptions>? zones;
 
-
-  HighchartsNetworkgraphSeriesOptions({
-    this.accessibility,
-    this.allowPointSelect,
-    this.className,
-    this.clip,
-    this.color,
-    this.colorIndex,
-    this.crisp,
-    this.cursor,
-    this.custom,
-    this.dashStyle,
-    this.dataLabels,
-    this.description,
-    this.draggable,
-    this.enableMouseTracking,
-    this.events,
-    this.findNearestPointBy,
-    this.id,
-    this.inactiveOtherPoints,
-    this.includeInDataExport,
-    this.index,
-    this.keys,
-    this.layoutAlgorithm,
-    this.legendIndex,
-    this.legendSymbol,
-    this.legendSymbolColor,
-    this.lineWidth,
-    this.link,
-    this.linkedTo,
-    this.marker,
-    this.nodes,
-    this.onPoint,
-    this.opacity,
-    this.point,
-    this.pointDescriptionFormat,
-    this.pointDescriptionFormatter,
-    this.relativeXValue,
-    this.selected,
-    this.shadow,
-    this.showCheckbox,
-    this.showInLegend,
-    this.skipKeyboardNavigation,
-    this.sonification,
-    this.states,
-    this.stickyTracking,
-    this.tooltip,
-    this.turboThreshold,
-    this.visible,
-    this.zIndex,
-    this.zones
-  });
+  HighchartsNetworkgraphSeriesOptions(
+      {this.accessibility,
+      this.allowPointSelect,
+      this.className,
+      this.clip,
+      this.color,
+      this.colorIndex,
+      this.crisp,
+      this.cursor,
+      this.custom,
+      this.dashStyle,
+      this.dataLabels,
+      this.description,
+      this.draggable,
+      this.enableMouseTracking,
+      this.events,
+      this.findNearestPointBy,
+      this.id,
+      this.inactiveOtherPoints,
+      this.includeInDataExport,
+      this.index,
+      this.keys,
+      this.layoutAlgorithm,
+      this.legendIndex,
+      this.legendSymbol,
+      this.legendSymbolColor,
+      this.lineWidth,
+      this.link,
+      this.linkedTo,
+      this.marker,
+      this.nodes,
+      this.onPoint,
+      this.opacity,
+      this.point,
+      this.pointDescriptionFormat,
+      this.pointDescriptionFormatter,
+      this.relativeXValue,
+      this.selected,
+      this.shadow,
+      this.showCheckbox,
+      this.showInLegend,
+      this.skipKeyboardNavigation,
+      this.sonification,
+      this.states,
+      this.stickyTracking,
+      this.tooltip,
+      this.turboThreshold,
+      this.visible,
+      this.zIndex,
+      this.zones});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (accessibility != null) {
       buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ','], '');
@@ -267,13 +257,15 @@ class HighchartsNetworkgraphSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"events":', events?.toJSON(), ','], '');
     }
     if (findNearestPointBy != null) {
-      buffer.writeAll(['"findNearestPointBy":', jsonEncode(findNearestPointBy), ','], '');
+      buffer.writeAll(
+          ['"findNearestPointBy":', jsonEncode(findNearestPointBy), ','], '');
     }
     if (id != null) {
       buffer.writeAll(['"id":', jsonEncode(id), ','], '');
     }
     if (inactiveOtherPoints != null) {
-      buffer.writeAll(['"inactiveOtherPoints":', inactiveOtherPoints?.toJSON(), ','], '');
+      buffer.writeAll(
+          ['"inactiveOtherPoints":', inactiveOtherPoints?.toJSON(), ','], '');
     }
     if (includeInDataExport != null) {
       buffer.writeAll(['"includeInDataExport":', includeInDataExport, ','], '');
@@ -289,7 +281,8 @@ class HighchartsNetworkgraphSeriesOptions extends HighchartsOptionsBase {
       buffer.write('],');
     }
     if (layoutAlgorithm != null) {
-      buffer.writeAll(['"layoutAlgorithm":', layoutAlgorithm?.toJSON(), ','], '');
+      buffer
+          .writeAll(['"layoutAlgorithm":', layoutAlgorithm?.toJSON(), ','], '');
     }
     if (legendIndex != null) {
       buffer.writeAll(['"legendIndex":', legendIndex, ','], '');
@@ -298,7 +291,8 @@ class HighchartsNetworkgraphSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"legendSymbol":', jsonEncode(legendSymbol), ','], '');
     }
     if (legendSymbolColor != null) {
-      buffer.writeAll(['"legendSymbolColor":', jsonEncode(legendSymbolColor), ','], '');
+      buffer.writeAll(
+          ['"legendSymbolColor":', jsonEncode(legendSymbolColor), ','], '');
     }
     if (lineWidth != null) {
       buffer.writeAll(['"lineWidth":', lineWidth, ','], '');
@@ -329,10 +323,18 @@ class HighchartsNetworkgraphSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"point":', point?.toJSON(), ','], '');
     }
     if (pointDescriptionFormat != null) {
-      buffer.writeAll(['"pointDescriptionFormat":', jsonEncode(pointDescriptionFormat), ','], '');
+      buffer.writeAll([
+        '"pointDescriptionFormat":',
+        jsonEncode(pointDescriptionFormat),
+        ','
+      ], '');
     }
     if (pointDescriptionFormatter != null) {
-      buffer.writeAll(['"pointDescriptionFormatter":', jsonEncode(pointDescriptionFormatter), ','], '');
+      buffer.writeAll([
+        '"pointDescriptionFormatter":',
+        jsonEncode(pointDescriptionFormatter),
+        ','
+      ], '');
     }
     if (relativeXValue != null) {
       buffer.writeAll(['"relativeXValue":', relativeXValue, ','], '');
@@ -354,7 +356,8 @@ class HighchartsNetworkgraphSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"showInLegend":', showInLegend, ','], '');
     }
     if (skipKeyboardNavigation != null) {
-      buffer.writeAll(['"skipKeyboardNavigation":', skipKeyboardNavigation, ','], '');
+      buffer.writeAll(
+          ['"skipKeyboardNavigation":', skipKeyboardNavigation, ','], '');
     }
     if (sonification != null) {
       buffer.writeAll(['"sonification":', sonification?.toJSON(), ','], '');
@@ -385,5 +388,4 @@ class HighchartsNetworkgraphSeriesOptions extends HighchartsOptionsBase {
       buffer.write('],');
     }
   }
-
 }

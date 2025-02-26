@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,31 +23,23 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
-class HighchartsGlobalButtonThemeStatesSelectStyleOptions extends HighchartsOptionsBase {
-
+class HighchartsGlobalButtonThemeStatesSelectStyleOptions
+    extends HighchartsOptionsBase {
   String? color;
   String? fontWeight;
 
-
-  HighchartsGlobalButtonThemeStatesSelectStyleOptions({
-    this.color,
-    this.fontWeight
-  });
+  HighchartsGlobalButtonThemeStatesSelectStyleOptions(
+      {this.color, this.fontWeight});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (color != null) {
       buffer.writeAll(['"color":', jsonEncode(color), ','], '');
@@ -59,5 +48,4 @@ class HighchartsGlobalButtonThemeStatesSelectStyleOptions extends HighchartsOpti
       buffer.writeAll(['"fontWeight":', jsonEncode(fontWeight), ','], '');
     }
   }
-
 }

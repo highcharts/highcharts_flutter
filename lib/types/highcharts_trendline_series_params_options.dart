@@ -8,17 +8,13 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,33 +22,23 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 class HighchartsTrendlineSeriesParamsOptions extends HighchartsOptionsBase {
-
   double? index;
 
-
-  HighchartsTrendlineSeriesParamsOptions({
-    this.index
-  });
+  HighchartsTrendlineSeriesParamsOptions({this.index});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (index != null) {
       buffer.writeAll(['"index":', index, ','], '');
     }
   }
-
 }

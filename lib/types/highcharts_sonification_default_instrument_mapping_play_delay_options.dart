@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +23,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * Milliseconds to wait before playing, comes in addition to
@@ -42,8 +35,8 @@ import 'highcharts_options_base.dart';
  * 
  * Can also be negative to play before the mapped time.
  */
-class HighchartsSonificationDefaultInstrumentMappingPlayDelayOptions extends HighchartsOptionsBase {
-
+class HighchartsSonificationDefaultInstrumentMappingPlayDelayOptions
+    extends HighchartsOptionsBase {
   String? mapFunction;
   String? mapTo;
   double? max;
@@ -51,20 +44,17 @@ class HighchartsSonificationDefaultInstrumentMappingPlayDelayOptions extends Hig
   double? value;
   String? within;
 
-
-  HighchartsSonificationDefaultInstrumentMappingPlayDelayOptions({
-    this.mapFunction,
-    this.mapTo,
-    this.max,
-    this.min,
-    this.value,
-    this.within
-  });
+  HighchartsSonificationDefaultInstrumentMappingPlayDelayOptions(
+      {this.mapFunction,
+      this.mapTo,
+      this.max,
+      this.min,
+      this.value,
+      this.within});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (mapFunction != null) {
       buffer.writeAll(['"mapFunction":', jsonEncode(mapFunction), ','], '');
@@ -85,5 +75,4 @@ class HighchartsSonificationDefaultInstrumentMappingPlayDelayOptions extends Hig
       buffer.writeAll(['"within":', jsonEncode(within), ','], '');
     }
   }
-
 }

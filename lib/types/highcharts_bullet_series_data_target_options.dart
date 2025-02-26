@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,21 +23,16 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Individual target options for each point.
  */
 class HighchartsBulletSeriesDataTargetOptions extends HighchartsOptionsBase {
-
   String? borderColor;
   double? borderRadius;
   double? borderWidth;
@@ -48,20 +40,17 @@ class HighchartsBulletSeriesDataTargetOptions extends HighchartsOptionsBase {
   double? height;
   dynamic width;
 
-
-  HighchartsBulletSeriesDataTargetOptions({
-    this.borderColor,
-    this.borderRadius,
-    this.borderWidth,
-    this.color,
-    this.height,
-    this.width
-  });
+  HighchartsBulletSeriesDataTargetOptions(
+      {this.borderColor,
+      this.borderRadius,
+      this.borderWidth,
+      this.color,
+      this.height,
+      this.width});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (borderColor != null) {
       buffer.writeAll(['"borderColor":', jsonEncode(borderColor), ','], '');
@@ -82,5 +71,4 @@ class HighchartsBulletSeriesDataTargetOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"width":', jsonEncode(width), ','], '');
     }
   }
-
 }

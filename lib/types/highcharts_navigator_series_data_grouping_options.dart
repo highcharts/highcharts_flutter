@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,21 +23,17 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Data grouping options for the navigator series.
  */
-class HighchartsNavigatorSeriesDataGroupingOptions extends HighchartsOptionsBase {
-
+class HighchartsNavigatorSeriesDataGroupingOptions
+    extends HighchartsOptionsBase {
   String? anchor;
   String? approximation;
   bool? enabled;
@@ -53,25 +46,22 @@ class HighchartsNavigatorSeriesDataGroupingOptions extends HighchartsOptionsBase
   bool? smoothed;
   List<List<dynamic>>? units;
 
-
-  HighchartsNavigatorSeriesDataGroupingOptions({
-    this.anchor,
-    this.approximation,
-    this.enabled,
-    this.firstAnchor,
-    this.groupPixelWidth,
-    this.lastAnchor,
-    this.dateTimeLabelFormats,
-    this.forced,
-    this.groupAll,
-    this.smoothed,
-    this.units
-  });
+  HighchartsNavigatorSeriesDataGroupingOptions(
+      {this.anchor,
+      this.approximation,
+      this.enabled,
+      this.firstAnchor,
+      this.groupPixelWidth,
+      this.lastAnchor,
+      this.dateTimeLabelFormats,
+      this.forced,
+      this.groupAll,
+      this.smoothed,
+      this.units});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (anchor != null) {
       buffer.writeAll(['"anchor":', jsonEncode(anchor), ','], '');
@@ -92,7 +82,9 @@ class HighchartsNavigatorSeriesDataGroupingOptions extends HighchartsOptionsBase
       buffer.writeAll(['"lastAnchor":', jsonEncode(lastAnchor), ','], '');
     }
     if (dateTimeLabelFormats != null) {
-      buffer.writeAll(['"dateTimeLabelFormats":', jsonEncode(dateTimeLabelFormats), ','], '');
+      buffer.writeAll(
+          ['"dateTimeLabelFormats":', jsonEncode(dateTimeLabelFormats), ','],
+          '');
     }
     if (forced != null) {
       buffer.writeAll(['"forced":', forced, ','], '');
@@ -111,5 +103,4 @@ class HighchartsNavigatorSeriesDataGroupingOptions extends HighchartsOptionsBase
       buffer.write('],');
     }
   }
-
 }

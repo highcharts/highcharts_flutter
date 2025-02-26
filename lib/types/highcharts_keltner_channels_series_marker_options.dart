@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_series_marker_states_options.dart';
-
 
 /* *
  *
@@ -27,9 +24,7 @@ import 'highcharts_series_marker_states_options.dart';
  *
  * */
 
-
 export 'highcharts_series_marker_states_options.dart';
-
 
 /* *
  *
@@ -37,9 +32,8 @@ export 'highcharts_series_marker_states_options.dart';
  *
  * */
 
-
-class HighchartsKeltnerChannelsSeriesMarkerOptions extends HighchartsOptionsBase {
-
+class HighchartsKeltnerChannelsSeriesMarkerOptions
+    extends HighchartsOptionsBase {
   bool? enabled;
   double? enabledThreshold;
   String? fillColor;
@@ -51,24 +45,21 @@ class HighchartsKeltnerChannelsSeriesMarkerOptions extends HighchartsOptionsBase
   String? symbol;
   double? width;
 
-
-  HighchartsKeltnerChannelsSeriesMarkerOptions({
-    this.enabled,
-    this.enabledThreshold,
-    this.fillColor,
-    this.height,
-    this.lineColor,
-    this.lineWidth,
-    this.radius,
-    this.states,
-    this.symbol,
-    this.width
-  });
+  HighchartsKeltnerChannelsSeriesMarkerOptions(
+      {this.enabled,
+      this.enabledThreshold,
+      this.fillColor,
+      this.height,
+      this.lineColor,
+      this.lineWidth,
+      this.radius,
+      this.states,
+      this.symbol,
+      this.width});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (enabled != null) {
       buffer.writeAll(['"enabled":', enabled, ','], '');
@@ -101,5 +92,4 @@ class HighchartsKeltnerChannelsSeriesMarkerOptions extends HighchartsOptionsBase
       buffer.writeAll(['"width":', width, ','], '');
     }
   }
-
 }

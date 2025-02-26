@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -33,13 +31,11 @@ import 'highcharts_flags_series_states_options.dart';
 import 'highcharts_flags_series_tooltip_options.dart';
 import 'highcharts_series_zones_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
-
 
 export 'highcharts_series_accessibility_options.dart';
 export 'highcharts_flags_series_data_labels_options.dart';
@@ -56,13 +52,11 @@ export 'highcharts_flags_series_states_options.dart';
 export 'highcharts_flags_series_tooltip_options.dart';
 export 'highcharts_series_zones_options.dart';
 
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * A `flags` series. If the [type](#series.flags.type) option is not
@@ -108,7 +102,6 @@ export 'highcharts_series_zones_options.dart';
  *             
  */
 class HighchartsFlagsSeriesOptions extends HighchartsOptionsBase {
-
   HighchartsSeriesAccessibilityOptions? accessibility;
   bool? allowOverlapX;
   bool? allowPointSelect;
@@ -202,106 +195,103 @@ class HighchartsFlagsSeriesOptions extends HighchartsOptionsBase {
   String? zoneAxis;
   List<HighchartsSeriesZonesOptions>? zones;
 
-
-  HighchartsFlagsSeriesOptions({
-    this.accessibility,
-    this.allowOverlapX,
-    this.allowPointSelect,
-    this.animationLimit,
-    this.boostBlending,
-    this.boostThreshold,
-    this.centerInCategory,
-    this.className,
-    this.clip,
-    this.color,
-    this.colorAxis,
-    this.colorIndex,
-    this.colorKey,
-    this.colors,
-    this.compare,
-    this.compareBase,
-    this.compareStart,
-    this.crisp,
-    this.cumulative,
-    this.cumulativeStart,
-    this.cursor,
-    this.custom,
-    this.dataLabels,
-    this.dataSorting,
-    this.description,
-    this.dragDrop,
-    this.enableMouseTracking,
-    this.events,
-    this.fillColor,
-    this.findNearestPointBy,
-    this.getExtremesFromAll,
-    this.groupPadding,
-    this.grouping,
-    this.height,
-    this.id,
-    this.inactiveOtherPoints,
-    this.includeInDataExport,
-    this.index,
-    this.keys,
-    this.label,
-    this.lastPrice,
-    this.lastVisiblePrice,
-    this.legendIndex,
-    this.legendSymbol,
-    this.legendSymbolColor,
-    this.lineColor,
-    this.linkedTo,
-    this.maxPointWidth,
-    this.minPointLength,
-    this.navigatorOptions,
-    this.negativeColor,
-    this.onKey,
-    this.onPoint,
-    this.onSeries,
-    this.opacity,
-    this.point,
-    this.pointDescriptionFormat,
-    this.pointDescriptionFormatter,
-    this.pointInterval,
-    this.pointIntervalUnit,
-    this.pointPlacement,
-    this.pointRange,
-    this.pointStart,
-    this.relativeXValue,
-    this.selected,
-    this.shadow,
-    this.shape,
-    this.showCheckbox,
-    this.showInLegend,
-    this.showInNavigator,
-    this.skipKeyboardNavigation,
-    this.softThreshold,
-    this.sonification,
-    this.stack,
-    this.stackDistance,
-    this.stacking,
-    this.states,
-    this.stickyTracking,
-    this.style,
-    this.textAlign,
-    this.threshold,
-    this.title,
-    this.tooltip,
-    this.useHTML,
-    this.visible,
-    this.width,
-    this.xAxis,
-    this.y,
-    this.yAxis,
-    this.zIndex,
-    this.zoneAxis,
-    this.zones
-  });
+  HighchartsFlagsSeriesOptions(
+      {this.accessibility,
+      this.allowOverlapX,
+      this.allowPointSelect,
+      this.animationLimit,
+      this.boostBlending,
+      this.boostThreshold,
+      this.centerInCategory,
+      this.className,
+      this.clip,
+      this.color,
+      this.colorAxis,
+      this.colorIndex,
+      this.colorKey,
+      this.colors,
+      this.compare,
+      this.compareBase,
+      this.compareStart,
+      this.crisp,
+      this.cumulative,
+      this.cumulativeStart,
+      this.cursor,
+      this.custom,
+      this.dataLabels,
+      this.dataSorting,
+      this.description,
+      this.dragDrop,
+      this.enableMouseTracking,
+      this.events,
+      this.fillColor,
+      this.findNearestPointBy,
+      this.getExtremesFromAll,
+      this.groupPadding,
+      this.grouping,
+      this.height,
+      this.id,
+      this.inactiveOtherPoints,
+      this.includeInDataExport,
+      this.index,
+      this.keys,
+      this.label,
+      this.lastPrice,
+      this.lastVisiblePrice,
+      this.legendIndex,
+      this.legendSymbol,
+      this.legendSymbolColor,
+      this.lineColor,
+      this.linkedTo,
+      this.maxPointWidth,
+      this.minPointLength,
+      this.navigatorOptions,
+      this.negativeColor,
+      this.onKey,
+      this.onPoint,
+      this.onSeries,
+      this.opacity,
+      this.point,
+      this.pointDescriptionFormat,
+      this.pointDescriptionFormatter,
+      this.pointInterval,
+      this.pointIntervalUnit,
+      this.pointPlacement,
+      this.pointRange,
+      this.pointStart,
+      this.relativeXValue,
+      this.selected,
+      this.shadow,
+      this.shape,
+      this.showCheckbox,
+      this.showInLegend,
+      this.showInNavigator,
+      this.skipKeyboardNavigation,
+      this.softThreshold,
+      this.sonification,
+      this.stack,
+      this.stackDistance,
+      this.stacking,
+      this.states,
+      this.stickyTracking,
+      this.style,
+      this.textAlign,
+      this.threshold,
+      this.title,
+      this.tooltip,
+      this.useHTML,
+      this.visible,
+      this.width,
+      this.xAxis,
+      this.y,
+      this.yAxis,
+      this.zIndex,
+      this.zoneAxis,
+      this.zones});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (accessibility != null) {
       buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ','], '');
@@ -399,7 +389,8 @@ class HighchartsFlagsSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"fillColor":', jsonEncode(fillColor), ','], '');
     }
     if (findNearestPointBy != null) {
-      buffer.writeAll(['"findNearestPointBy":', jsonEncode(findNearestPointBy), ','], '');
+      buffer.writeAll(
+          ['"findNearestPointBy":', jsonEncode(findNearestPointBy), ','], '');
     }
     if (getExtremesFromAll != null) {
       buffer.writeAll(['"getExtremesFromAll":', getExtremesFromAll, ','], '');
@@ -439,7 +430,8 @@ class HighchartsFlagsSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"lastPrice":', lastPrice?.toJSON(), ','], '');
     }
     if (lastVisiblePrice != null) {
-      buffer.writeAll(['"lastVisiblePrice":', lastVisiblePrice?.toJSON(), ','], '');
+      buffer.writeAll(
+          ['"lastVisiblePrice":', lastVisiblePrice?.toJSON(), ','], '');
     }
     if (legendIndex != null) {
       buffer.writeAll(['"legendIndex":', legendIndex, ','], '');
@@ -448,7 +440,8 @@ class HighchartsFlagsSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"legendSymbol":', jsonEncode(legendSymbol), ','], '');
     }
     if (legendSymbolColor != null) {
-      buffer.writeAll(['"legendSymbolColor":', jsonEncode(legendSymbolColor), ','], '');
+      buffer.writeAll(
+          ['"legendSymbolColor":', jsonEncode(legendSymbolColor), ','], '');
     }
     if (lineColor != null) {
       buffer.writeAll(['"lineColor":', jsonEncode(lineColor), ','], '');
@@ -463,7 +456,8 @@ class HighchartsFlagsSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"minPointLength":', minPointLength, ','], '');
     }
     if (navigatorOptions != null) {
-      buffer.writeAll(['"navigatorOptions":', jsonEncode(navigatorOptions), ','], '');
+      buffer.writeAll(
+          ['"navigatorOptions":', jsonEncode(navigatorOptions), ','], '');
     }
     if (negativeColor != null) {
       buffer.writeAll(['"negativeColor":', jsonEncode(negativeColor), ','], '');
@@ -484,19 +478,29 @@ class HighchartsFlagsSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"point":', point?.toJSON(), ','], '');
     }
     if (pointDescriptionFormat != null) {
-      buffer.writeAll(['"pointDescriptionFormat":', jsonEncode(pointDescriptionFormat), ','], '');
+      buffer.writeAll([
+        '"pointDescriptionFormat":',
+        jsonEncode(pointDescriptionFormat),
+        ','
+      ], '');
     }
     if (pointDescriptionFormatter != null) {
-      buffer.writeAll(['"pointDescriptionFormatter":', jsonEncode(pointDescriptionFormatter), ','], '');
+      buffer.writeAll([
+        '"pointDescriptionFormatter":',
+        jsonEncode(pointDescriptionFormatter),
+        ','
+      ], '');
     }
     if (pointInterval != null) {
       buffer.writeAll(['"pointInterval":', pointInterval, ','], '');
     }
     if (pointIntervalUnit != null) {
-      buffer.writeAll(['"pointIntervalUnit":', jsonEncode(pointIntervalUnit), ','], '');
+      buffer.writeAll(
+          ['"pointIntervalUnit":', jsonEncode(pointIntervalUnit), ','], '');
     }
     if (pointPlacement != null) {
-      buffer.writeAll(['"pointPlacement":', jsonEncode(pointPlacement), ','], '');
+      buffer
+          .writeAll(['"pointPlacement":', jsonEncode(pointPlacement), ','], '');
     }
     if (pointRange != null) {
       buffer.writeAll(['"pointRange":', pointRange, ','], '');
@@ -530,7 +534,8 @@ class HighchartsFlagsSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"showInNavigator":', showInNavigator, ','], '');
     }
     if (skipKeyboardNavigation != null) {
-      buffer.writeAll(['"skipKeyboardNavigation":', skipKeyboardNavigation, ','], '');
+      buffer.writeAll(
+          ['"skipKeyboardNavigation":', skipKeyboardNavigation, ','], '');
     }
     if (softThreshold != null) {
       buffer.writeAll(['"softThreshold":', softThreshold, ','], '');
@@ -604,5 +609,4 @@ class HighchartsFlagsSeriesOptions extends HighchartsOptionsBase {
       buffer.write('],');
     }
   }
-
 }

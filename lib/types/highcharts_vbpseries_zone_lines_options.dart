@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,34 +23,24 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * The styles for lines which determine price zones.
  */
 class HighchartsVBPSeriesZoneLinesOptions extends HighchartsOptionsBase {
-
   bool? enabled;
   Map<String, String>? styles;
 
-
-  HighchartsVBPSeriesZoneLinesOptions({
-    this.enabled,
-    this.styles
-  });
+  HighchartsVBPSeriesZoneLinesOptions({this.enabled, this.styles});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (enabled != null) {
       buffer.writeAll(['"enabled":', enabled, ','], '');
@@ -66,5 +53,4 @@ class HighchartsVBPSeriesZoneLinesOptions extends HighchartsOptionsBase {
       buffer.write('},');
     }
   }
-
 }

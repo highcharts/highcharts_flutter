@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +23,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * Options for announcing new data to screen reader users. Useful
@@ -45,28 +38,27 @@ import 'highcharts_options_base.dart';
  * applications, consider making snapshots of the data accessible, and
  * do the announcements in batches.
  */
-class HighchartsAccessibilityAnnounceNewDataOptions extends HighchartsOptionsBase {
-
+class HighchartsAccessibilityAnnounceNewDataOptions
+    extends HighchartsOptionsBase {
   dynamic announcementFormatter;
   bool? enabled;
   bool? interruptUser;
   double? minAnnounceInterval;
 
-
-  HighchartsAccessibilityAnnounceNewDataOptions({
-    this.announcementFormatter,
-    this.enabled,
-    this.interruptUser,
-    this.minAnnounceInterval
-  });
+  HighchartsAccessibilityAnnounceNewDataOptions(
+      {this.announcementFormatter,
+      this.enabled,
+      this.interruptUser,
+      this.minAnnounceInterval});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (announcementFormatter != null) {
-      buffer.writeAll(['"announcementFormatter":', jsonEncode(announcementFormatter), ','], '');
+      buffer.writeAll(
+          ['"announcementFormatter":', jsonEncode(announcementFormatter), ','],
+          '');
     }
     if (enabled != null) {
       buffer.writeAll(['"enabled":', enabled, ','], '');
@@ -78,5 +70,4 @@ class HighchartsAccessibilityAnnounceNewDataOptions extends HighchartsOptionsBas
       buffer.writeAll(['"minAnnounceInterval":', minAnnounceInterval, ','], '');
     }
   }
-
 }

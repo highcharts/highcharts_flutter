@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_chart3dframe_options.dart';
-
 
 /* *
  *
@@ -27,9 +24,7 @@ import 'highcharts_chart3dframe_options.dart';
  *
  * */
 
-
 export 'highcharts_chart3dframe_options.dart';
-
 
 /* *
  *
@@ -37,14 +32,12 @@ export 'highcharts_chart3dframe_options.dart';
  *
  * */
 
-
 /**
  * Options to render charts in 3 dimensions. This feature requires
  * `highcharts-3d.js`, found in the download package or online at
  * [code.highcharts.com/highcharts-3d.js](https://code.highcharts.com/highcharts-3d.js).
  */
 class HighchartsChart3DOptions extends HighchartsOptionsBase {
-
   double? alpha;
   String? axisLabelPosition;
   double? beta;
@@ -54,28 +47,26 @@ class HighchartsChart3DOptions extends HighchartsOptionsBase {
   HighchartsChart3DFrameOptions? frame;
   double? viewDistance;
 
-
-  HighchartsChart3DOptions({
-    this.alpha,
-    this.axisLabelPosition,
-    this.beta,
-    this.depth,
-    this.enabled,
-    this.fitToPlot,
-    this.frame,
-    this.viewDistance
-  });
+  HighchartsChart3DOptions(
+      {this.alpha,
+      this.axisLabelPosition,
+      this.beta,
+      this.depth,
+      this.enabled,
+      this.fitToPlot,
+      this.frame,
+      this.viewDistance});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (alpha != null) {
       buffer.writeAll(['"alpha":', alpha, ','], '');
     }
     if (axisLabelPosition != null) {
-      buffer.writeAll(['"axisLabelPosition":', jsonEncode(axisLabelPosition), ','], '');
+      buffer.writeAll(
+          ['"axisLabelPosition":', jsonEncode(axisLabelPosition), ','], '');
     }
     if (beta != null) {
       buffer.writeAll(['"beta":', beta, ','], '');
@@ -96,5 +87,4 @@ class HighchartsChart3DOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"viewDistance":', viewDistance, ','], '');
     }
   }
-
 }

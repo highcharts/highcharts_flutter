@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -26,13 +24,11 @@ import 'highcharts_chart_reset_zoom_button_options.dart';
 import 'highcharts_chart_scrollable_plot_area_options.dart';
 import 'highcharts_chart_zooming_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
-
 
 export 'highcharts_chart_events_options.dart';
 export 'highcharts_chart3doptions.dart';
@@ -42,19 +38,16 @@ export 'highcharts_chart_reset_zoom_button_options.dart';
 export 'highcharts_chart_scrollable_plot_area_options.dart';
 export 'highcharts_chart_zooming_options.dart';
 
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * General options for the chart.
  */
 class HighchartsChartOptions extends HighchartsOptionsBase {
-
   bool? alignThresholds;
   bool? alignTicks;
   bool? allowMutatingData;
@@ -112,70 +105,67 @@ class HighchartsChartOptions extends HighchartsOptionsBase {
   String? zoomType;
   HighchartsChartZoomingOptions? zooming;
 
-
-  HighchartsChartOptions({
-    this.alignThresholds,
-    this.alignTicks,
-    this.allowMutatingData,
-    this.animation,
-    this.axisLayoutRuns,
-    this.backgroundColor,
-    this.borderColor,
-    this.borderRadius,
-    this.borderWidth,
-    this.className,
-    this.colorCount,
-    this.displayErrors,
-    this.events,
-    this.height,
-    this.ignoreHiddenSeries,
-    this.inverted,
-    this.map,
-    this.mapTransforms,
-    this.margin,
-    this.marginBottom,
-    this.marginLeft,
-    this.marginRight,
-    this.marginTop,
-    this.numberFormatter,
-    this.options3d,
-    this.panKey,
-    this.panning,
-    this.parallelAxes,
-    this.parallelCoordinates,
-    this.pinchType,
-    this.plotBackgroundColor,
-    this.plotBackgroundImage,
-    this.plotBorderColor,
-    this.plotBorderWidth,
-    this.plotShadow,
-    this.polar,
-    this.proj4,
-    this.reflow,
-    this.renderTo,
-    this.resetZoomButton,
-    this.scrollablePlotArea,
-    this.selectionMarkerFill,
-    this.shadow,
-    this.showAxes,
-    this.spacing,
-    this.spacingBottom,
-    this.spacingLeft,
-    this.spacingRight,
-    this.spacingTop,
-    this.style,
-    this.styledMode,
-    this.type,
-    this.width,
-    this.zoomKey,
-    this.zoomType,
-    this.zooming
-  });
+  HighchartsChartOptions(
+      {this.alignThresholds,
+      this.alignTicks,
+      this.allowMutatingData,
+      this.animation,
+      this.axisLayoutRuns,
+      this.backgroundColor,
+      this.borderColor,
+      this.borderRadius,
+      this.borderWidth,
+      this.className,
+      this.colorCount,
+      this.displayErrors,
+      this.events,
+      this.height,
+      this.ignoreHiddenSeries,
+      this.inverted,
+      this.map,
+      this.mapTransforms,
+      this.margin,
+      this.marginBottom,
+      this.marginLeft,
+      this.marginRight,
+      this.marginTop,
+      this.numberFormatter,
+      this.options3d,
+      this.panKey,
+      this.panning,
+      this.parallelAxes,
+      this.parallelCoordinates,
+      this.pinchType,
+      this.plotBackgroundColor,
+      this.plotBackgroundImage,
+      this.plotBorderColor,
+      this.plotBorderWidth,
+      this.plotShadow,
+      this.polar,
+      this.proj4,
+      this.reflow,
+      this.renderTo,
+      this.resetZoomButton,
+      this.scrollablePlotArea,
+      this.selectionMarkerFill,
+      this.shadow,
+      this.showAxes,
+      this.spacing,
+      this.spacingBottom,
+      this.spacingLeft,
+      this.spacingRight,
+      this.spacingTop,
+      this.style,
+      this.styledMode,
+      this.type,
+      this.width,
+      this.zoomKey,
+      this.zoomType,
+      this.zooming});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (alignThresholds != null) {
       buffer.writeAll(['"alignThresholds":', alignThresholds, ','], '');
@@ -193,7 +183,8 @@ class HighchartsChartOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"axisLayoutRuns":', axisLayoutRuns, ','], '');
     }
     if (backgroundColor != null) {
-      buffer.writeAll(['"backgroundColor":', jsonEncode(backgroundColor), ','], '');
+      buffer.writeAll(
+          ['"backgroundColor":', jsonEncode(backgroundColor), ','], '');
     }
     if (borderColor != null) {
       buffer.writeAll(['"borderColor":', jsonEncode(borderColor), ','], '');
@@ -255,7 +246,8 @@ class HighchartsChartOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"marginTop":', marginTop, ','], '');
     }
     if (numberFormatter != null) {
-      buffer.writeAll(['"numberFormatter":', jsonEncode(numberFormatter), ','], '');
+      buffer.writeAll(
+          ['"numberFormatter":', jsonEncode(numberFormatter), ','], '');
     }
     if (options3d != null) {
       buffer.writeAll(['"options3d":', options3d?.toJSON(), ','], '');
@@ -276,13 +268,16 @@ class HighchartsChartOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"pinchType":', jsonEncode(pinchType), ','], '');
     }
     if (plotBackgroundColor != null) {
-      buffer.writeAll(['"plotBackgroundColor":', jsonEncode(plotBackgroundColor), ','], '');
+      buffer.writeAll(
+          ['"plotBackgroundColor":', jsonEncode(plotBackgroundColor), ','], '');
     }
     if (plotBackgroundImage != null) {
-      buffer.writeAll(['"plotBackgroundImage":', jsonEncode(plotBackgroundImage), ','], '');
+      buffer.writeAll(
+          ['"plotBackgroundImage":', jsonEncode(plotBackgroundImage), ','], '');
     }
     if (plotBorderColor != null) {
-      buffer.writeAll(['"plotBorderColor":', jsonEncode(plotBorderColor), ','], '');
+      buffer.writeAll(
+          ['"plotBorderColor":', jsonEncode(plotBorderColor), ','], '');
     }
     if (plotBorderWidth != null) {
       buffer.writeAll(['"plotBorderWidth":', plotBorderWidth, ','], '');
@@ -307,10 +302,12 @@ class HighchartsChartOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"renderTo":', jsonEncode(renderTo), ','], '');
     }
     if (resetZoomButton != null) {
-      buffer.writeAll(['"resetZoomButton":', resetZoomButton?.toJSON(), ','], '');
+      buffer
+          .writeAll(['"resetZoomButton":', resetZoomButton?.toJSON(), ','], '');
     }
     if (scrollablePlotArea != null) {
-      buffer.writeAll(['"scrollablePlotArea":', scrollablePlotArea?.toJSON(), ','], '');
+      buffer.writeAll(
+          ['"scrollablePlotArea":', scrollablePlotArea?.toJSON(), ','], '');
     }
     if (selectionMarkerFill != null) {
       buffer.write('"selectionMarkerFill":{');
@@ -374,5 +371,4 @@ class HighchartsChartOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"zooming":', zooming?.toJSON(), ','], '');
     }
   }
-
 }

@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_treegraph_series_collapse_button_style_options.dart';
-
 
 /* *
  *
@@ -27,9 +24,7 @@ import 'highcharts_treegraph_series_collapse_button_style_options.dart';
  *
  * */
 
-
 export 'highcharts_treegraph_series_collapse_button_style_options.dart';
-
 
 /* *
  *
@@ -37,13 +32,12 @@ export 'highcharts_treegraph_series_collapse_button_style_options.dart';
  *
  * */
 
-
 /**
  * Options applied to collapse Button. The collape button is the
  * small button which indicates, that the node is collapsable.
  */
-class HighchartsTreegraphSeriesCollapseButtonOptions extends HighchartsOptionsBase {
-
+class HighchartsTreegraphSeriesCollapseButtonOptions
+    extends HighchartsOptionsBase {
   bool? enabled;
   double? height;
   double? lineWidth;
@@ -54,23 +48,20 @@ class HighchartsTreegraphSeriesCollapseButtonOptions extends HighchartsOptionsBa
   double? x;
   double? y;
 
-
-  HighchartsTreegraphSeriesCollapseButtonOptions({
-    this.enabled,
-    this.height,
-    this.lineWidth,
-    this.onlyOnHover,
-    this.shape,
-    this.style,
-    this.width,
-    this.x,
-    this.y
-  });
+  HighchartsTreegraphSeriesCollapseButtonOptions(
+      {this.enabled,
+      this.height,
+      this.lineWidth,
+      this.onlyOnHover,
+      this.shape,
+      this.style,
+      this.width,
+      this.x,
+      this.y});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (enabled != null) {
       buffer.writeAll(['"enabled":', enabled, ','], '');
@@ -100,5 +91,4 @@ class HighchartsTreegraphSeriesCollapseButtonOptions extends HighchartsOptionsBa
       buffer.writeAll(['"y":', y, ','], '');
     }
   }
-
 }

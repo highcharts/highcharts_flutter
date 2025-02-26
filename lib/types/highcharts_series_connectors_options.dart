@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -22,18 +20,15 @@ import 'highcharts_connectors_end_marker_options.dart';
 import 'highcharts_connectors_marker_options.dart';
 import 'highcharts_connectors_start_marker_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_connectors_end_marker_options.dart';
 export 'highcharts_connectors_marker_options.dart';
 export 'highcharts_connectors_start_marker_options.dart';
-
 
 /* *
  *
@@ -41,13 +36,11 @@ export 'highcharts_connectors_start_marker_options.dart';
  *
  * */
 
-
 /**
  * Override Pathfinder connector options for a series. Requires Highcharts Gantt
  * to be loaded.
  */
 class HighchartsSeriesConnectorsOptions extends HighchartsOptionsBase {
-
   String? dashStyle;
   HighchartsConnectorsEndMarkerOptions? endMarker;
   String? lineColor;
@@ -57,22 +50,19 @@ class HighchartsSeriesConnectorsOptions extends HighchartsOptionsBase {
   HighchartsConnectorsStartMarkerOptions? startMarker;
   String? type;
 
-
-  HighchartsSeriesConnectorsOptions({
-    this.dashStyle,
-    this.endMarker,
-    this.lineColor,
-    this.lineWidth,
-    this.marker,
-    this.radius,
-    this.startMarker,
-    this.type
-  });
+  HighchartsSeriesConnectorsOptions(
+      {this.dashStyle,
+      this.endMarker,
+      this.lineColor,
+      this.lineWidth,
+      this.marker,
+      this.radius,
+      this.startMarker,
+      this.type});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (dashStyle != null) {
       buffer.writeAll(['"dashStyle":', jsonEncode(dashStyle), ','], '');
@@ -99,5 +89,4 @@ class HighchartsSeriesConnectorsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"type":', jsonEncode(type), ','], '');
     }
   }
-
 }

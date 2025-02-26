@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -24,13 +22,11 @@ import 'highcharts_sonification_default_speech_mapping_rate_options.dart';
 import 'highcharts_sonification_default_speech_mapping_time_options.dart';
 import 'highcharts_sonification_default_speech_mapping_volume_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
-
 
 export 'highcharts_sonification_default_speech_mapping_pitch_options.dart';
 export 'highcharts_sonification_default_speech_mapping_play_delay_options.dart';
@@ -38,13 +34,11 @@ export 'highcharts_sonification_default_speech_mapping_rate_options.dart';
 export 'highcharts_sonification_default_speech_mapping_time_options.dart';
 export 'highcharts_sonification_default_speech_mapping_volume_options.dart';
 
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * Mapping configuration for the speech/audio parameters.
@@ -63,8 +57,8 @@ export 'highcharts_sonification_default_speech_mapping_volume_options.dart';
  * data point, and `value` is available if the track is used for a
  * context track using `valueInterval`.
  */
-class HighchartsSonificationDefaultSpeechMappingOptions extends HighchartsOptionsBase {
-
+class HighchartsSonificationDefaultSpeechMappingOptions
+    extends HighchartsOptionsBase {
   HighchartsSonificationDefaultSpeechMappingPitchOptions? pitch;
   HighchartsSonificationDefaultSpeechMappingPlayDelayOptions? playDelay;
   HighchartsSonificationDefaultSpeechMappingRateOptions? rate;
@@ -72,20 +66,17 @@ class HighchartsSonificationDefaultSpeechMappingOptions extends HighchartsOption
   HighchartsSonificationDefaultSpeechMappingTimeOptions? time;
   HighchartsSonificationDefaultSpeechMappingVolumeOptions? volume;
 
-
-  HighchartsSonificationDefaultSpeechMappingOptions({
-    this.pitch,
-    this.playDelay,
-    this.rate,
-    this.text,
-    this.time,
-    this.volume
-  });
+  HighchartsSonificationDefaultSpeechMappingOptions(
+      {this.pitch,
+      this.playDelay,
+      this.rate,
+      this.text,
+      this.time,
+      this.volume});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (pitch != null) {
       buffer.writeAll(['"pitch":', pitch?.toJSON(), ','], '');
@@ -106,5 +97,4 @@ class HighchartsSonificationDefaultSpeechMappingOptions extends HighchartsOption
       buffer.writeAll(['"volume":', volume?.toJSON(), ','], '');
     }
   }
-
 }

@@ -8,14 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
-
 
 import 'highcharts_options_base.dart';
 import 'highcharts_annotations_vertical_line_type_connector_options.dart';
@@ -23,19 +20,16 @@ import 'highcharts_annotations_vertical_line_type_label_options.dart';
 import 'highcharts_annotations_crooked_line_type_line_options.dart';
 import 'highcharts_annotations_crooked_line_type_points_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_annotations_vertical_line_type_connector_options.dart';
 export 'highcharts_annotations_vertical_line_type_label_options.dart';
 export 'highcharts_annotations_crooked_line_type_line_options.dart';
 export 'highcharts_annotations_crooked_line_type_points_options.dart';
-
 
 /* *
  *
@@ -43,9 +37,8 @@ export 'highcharts_annotations_crooked_line_type_points_options.dart';
  *
  * */
 
-
-class HighchartsAnnotationsVerticalLineTypeOptions extends HighchartsOptionsBase {
-
+class HighchartsAnnotationsVerticalLineTypeOptions
+    extends HighchartsOptionsBase {
   HighchartsAnnotationsVerticalLineTypeConnectorOptions? connector;
   HighchartsAnnotationsVerticalLineTypeLabelOptions? label;
   HighchartsAnnotationsCrookedLineTypeLineOptions? line;
@@ -53,20 +46,17 @@ class HighchartsAnnotationsVerticalLineTypeOptions extends HighchartsOptionsBase
   double? xAxis;
   double? yAxis;
 
-
-  HighchartsAnnotationsVerticalLineTypeOptions({
-    this.connector,
-    this.label,
-    this.line,
-    this.points,
-    this.xAxis,
-    this.yAxis
-  });
+  HighchartsAnnotationsVerticalLineTypeOptions(
+      {this.connector,
+      this.label,
+      this.line,
+      this.points,
+      this.xAxis,
+      this.yAxis});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (connector != null) {
       buffer.writeAll(['"connector":', connector?.toJSON(), ','], '');
@@ -91,5 +81,4 @@ class HighchartsAnnotationsVerticalLineTypeOptions extends HighchartsOptionsBase
       buffer.writeAll(['"yAxis":', yAxis, ','], '');
     }
   }
-
 }

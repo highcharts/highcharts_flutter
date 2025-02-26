@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -24,13 +22,11 @@ import 'highcharts_sunburst_series_data_drag_drop_options.dart';
 import 'highcharts_sunburst_series_data_events_options.dart';
 import 'highcharts_sunburst_series_data_marker_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
-
 
 export 'highcharts_sunburst_series_data_accessibility_options.dart';
 export 'highcharts_sunburst_series_data_data_labels_options.dart';
@@ -38,16 +34,13 @@ export 'highcharts_sunburst_series_data_drag_drop_options.dart';
 export 'highcharts_sunburst_series_data_events_options.dart';
 export 'highcharts_sunburst_series_data_marker_options.dart';
 
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 class HighchartsSunburstSeriesDataOptions extends HighchartsOptionsBase {
-
   HighchartsSunburstSeriesDataAccessibilityOptions? accessibility;
   String? className;
   String? color;
@@ -67,32 +60,29 @@ class HighchartsSunburstSeriesDataOptions extends HighchartsOptionsBase {
   bool? sliced;
   double? value;
 
-
-  HighchartsSunburstSeriesDataOptions({
-    this.accessibility,
-    this.className,
-    this.color,
-    this.colorIndex,
-    this.colorValue,
-    this.custom,
-    this.dataLabels,
-    this.description,
-    this.dragDrop,
-    this.drilldown,
-    this.events,
-    this.id,
-    this.labelrank,
-    this.marker,
-    this.parent,
-    this.selected,
-    this.sliced,
-    this.value
-  });
+  HighchartsSunburstSeriesDataOptions(
+      {this.accessibility,
+      this.className,
+      this.color,
+      this.colorIndex,
+      this.colorValue,
+      this.custom,
+      this.dataLabels,
+      this.description,
+      this.dragDrop,
+      this.drilldown,
+      this.events,
+      this.id,
+      this.labelrank,
+      this.marker,
+      this.parent,
+      this.selected,
+      this.sliced,
+      this.value});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (accessibility != null) {
       buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ','], '');
@@ -153,5 +143,4 @@ class HighchartsSunburstSeriesDataOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"value":', value, ','], '');
     }
   }
-
 }

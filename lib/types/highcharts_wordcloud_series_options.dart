@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -29,13 +27,11 @@ import 'highcharts_series_sonification_options.dart';
 import 'highcharts_wordcloud_series_states_options.dart';
 import 'highcharts_wordcloud_series_tooltip_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
-
 
 export 'highcharts_series_accessibility_options.dart';
 export 'highcharts_wordcloud_series_animation_options.dart';
@@ -48,13 +44,11 @@ export 'highcharts_series_sonification_options.dart';
 export 'highcharts_wordcloud_series_states_options.dart';
 export 'highcharts_wordcloud_series_tooltip_options.dart';
 
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * A `wordcloud` series. If the [type](#series.wordcloud.type) option is not
@@ -100,7 +94,6 @@ export 'highcharts_wordcloud_series_tooltip_options.dart';
  *             
  */
 class HighchartsWordcloudSeriesOptions extends HighchartsOptionsBase {
-
   HighchartsSeriesAccessibilityOptions? accessibility;
   bool? allowPointSelect;
   HighchartsWordcloudSeriesAnimationOptions? animation;
@@ -158,70 +151,67 @@ class HighchartsWordcloudSeriesOptions extends HighchartsOptionsBase {
   dynamic yAxis;
   double? zIndex;
 
-
-  HighchartsWordcloudSeriesOptions({
-    this.accessibility,
-    this.allowPointSelect,
-    this.animation,
-    this.animationLimit,
-    this.borderColor,
-    this.borderRadius,
-    this.borderWidth,
-    this.centerInCategory,
-    this.className,
-    this.color,
-    this.colorByPoint,
-    this.colorIndex,
-    this.colorKey,
-    this.colors,
-    this.cursor,
-    this.custom,
-    this.dashStyle,
-    this.description,
-    this.edgeWidth,
-    this.enableMouseTracking,
-    this.events,
-    this.id,
-    this.inactiveOtherPoints,
-    this.includeInDataExport,
-    this.index,
-    this.keys,
-    this.label,
-    this.legendIndex,
-    this.legendSymbol,
-    this.legendSymbolColor,
-    this.linkedTo,
-    this.maxFontSize,
-    this.minFontSize,
-    this.onPoint,
-    this.opacity,
-    this.placementStrategy,
-    this.point,
-    this.pointDescriptionFormat,
-    this.pointDescriptionFormatter,
-    this.relativeXValue,
-    this.rotation,
-    this.selected,
-    this.showInLegend,
-    this.skipKeyboardNavigation,
-    this.sonification,
-    this.spiral,
-    this.stack,
-    this.states,
-    this.stickyTracking,
-    this.style,
-    this.tooltip,
-    this.turboThreshold,
-    this.visible,
-    this.xAxis,
-    this.yAxis,
-    this.zIndex
-  });
+  HighchartsWordcloudSeriesOptions(
+      {this.accessibility,
+      this.allowPointSelect,
+      this.animation,
+      this.animationLimit,
+      this.borderColor,
+      this.borderRadius,
+      this.borderWidth,
+      this.centerInCategory,
+      this.className,
+      this.color,
+      this.colorByPoint,
+      this.colorIndex,
+      this.colorKey,
+      this.colors,
+      this.cursor,
+      this.custom,
+      this.dashStyle,
+      this.description,
+      this.edgeWidth,
+      this.enableMouseTracking,
+      this.events,
+      this.id,
+      this.inactiveOtherPoints,
+      this.includeInDataExport,
+      this.index,
+      this.keys,
+      this.label,
+      this.legendIndex,
+      this.legendSymbol,
+      this.legendSymbolColor,
+      this.linkedTo,
+      this.maxFontSize,
+      this.minFontSize,
+      this.onPoint,
+      this.opacity,
+      this.placementStrategy,
+      this.point,
+      this.pointDescriptionFormat,
+      this.pointDescriptionFormatter,
+      this.relativeXValue,
+      this.rotation,
+      this.selected,
+      this.showInLegend,
+      this.skipKeyboardNavigation,
+      this.sonification,
+      this.spiral,
+      this.stack,
+      this.states,
+      this.stickyTracking,
+      this.style,
+      this.tooltip,
+      this.turboThreshold,
+      this.visible,
+      this.xAxis,
+      this.yAxis,
+      this.zIndex});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (accessibility != null) {
       buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ','], '');
@@ -327,7 +317,8 @@ class HighchartsWordcloudSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"legendSymbol":', jsonEncode(legendSymbol), ','], '');
     }
     if (legendSymbolColor != null) {
-      buffer.writeAll(['"legendSymbolColor":', jsonEncode(legendSymbolColor), ','], '');
+      buffer.writeAll(
+          ['"legendSymbolColor":', jsonEncode(legendSymbolColor), ','], '');
     }
     if (linkedTo != null) {
       buffer.writeAll(['"linkedTo":', jsonEncode(linkedTo), ','], '');
@@ -345,16 +336,25 @@ class HighchartsWordcloudSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"opacity":', opacity, ','], '');
     }
     if (placementStrategy != null) {
-      buffer.writeAll(['"placementStrategy":', jsonEncode(placementStrategy), ','], '');
+      buffer.writeAll(
+          ['"placementStrategy":', jsonEncode(placementStrategy), ','], '');
     }
     if (point != null) {
       buffer.writeAll(['"point":', point?.toJSON(), ','], '');
     }
     if (pointDescriptionFormat != null) {
-      buffer.writeAll(['"pointDescriptionFormat":', jsonEncode(pointDescriptionFormat), ','], '');
+      buffer.writeAll([
+        '"pointDescriptionFormat":',
+        jsonEncode(pointDescriptionFormat),
+        ','
+      ], '');
     }
     if (pointDescriptionFormatter != null) {
-      buffer.writeAll(['"pointDescriptionFormatter":', jsonEncode(pointDescriptionFormatter), ','], '');
+      buffer.writeAll([
+        '"pointDescriptionFormatter":',
+        jsonEncode(pointDescriptionFormatter),
+        ','
+      ], '');
     }
     if (relativeXValue != null) {
       buffer.writeAll(['"relativeXValue":', relativeXValue, ','], '');
@@ -369,7 +369,8 @@ class HighchartsWordcloudSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"showInLegend":', showInLegend, ','], '');
     }
     if (skipKeyboardNavigation != null) {
-      buffer.writeAll(['"skipKeyboardNavigation":', skipKeyboardNavigation, ','], '');
+      buffer.writeAll(
+          ['"skipKeyboardNavigation":', skipKeyboardNavigation, ','], '');
     }
     if (sonification != null) {
       buffer.writeAll(['"sonification":', sonification?.toJSON(), ','], '');
@@ -412,5 +413,4 @@ class HighchartsWordcloudSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"zIndex":', zIndex, ','], '');
     }
   }
-
 }

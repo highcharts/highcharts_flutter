@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -32,13 +30,11 @@ import 'highcharts_lang_accessibility_sonification_options.dart';
 import 'highcharts_lang_accessibility_table_options.dart';
 import 'highcharts_lang_accessibility_zoom_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
-
 
 export 'highcharts_lang_accessibility_announce_new_data_options.dart';
 export 'highcharts_lang_accessibility_axis_options.dart';
@@ -54,13 +50,11 @@ export 'highcharts_lang_accessibility_sonification_options.dart';
 export 'highcharts_lang_accessibility_table_options.dart';
 export 'highcharts_lang_accessibility_zoom_options.dart';
 
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * Configure the accessibility strings in the chart. Requires the
@@ -80,7 +74,6 @@ export 'highcharts_lang_accessibility_zoom_options.dart';
  * [accessibility.screenReaderSection.beforeChartFormatter](#accessibility.screenReaderSection.beforeChartFormatter).
  */
 class HighchartsLangAccessibilityOptions extends HighchartsOptionsBase {
-
   HighchartsLangAccessibilityAnnounceNewDataOptions? announceNewData;
   HighchartsLangAccessibilityAxisOptions? axis;
   String? chartContainerLabel;
@@ -96,7 +89,8 @@ class HighchartsLangAccessibilityOptions extends HighchartsOptionsBase {
   String? resetZoomButton;
   HighchartsLangAccessibilityScreenReaderSectionOptions? screenReaderSection;
   HighchartsLangAccessibilitySeriesOptions? series;
-  HighchartsLangAccessibilitySeriesTypeDescriptionsOptions? seriesTypeDescriptions;
+  HighchartsLangAccessibilitySeriesTypeDescriptionsOptions?
+      seriesTypeDescriptions;
   HighchartsLangAccessibilitySonificationOptions? sonification;
   String? svgContainerLabel;
   String? svgContainerTitle;
@@ -104,45 +98,44 @@ class HighchartsLangAccessibilityOptions extends HighchartsOptionsBase {
   String? thousandsSep;
   HighchartsLangAccessibilityZoomOptions? zoom;
 
-
-  HighchartsLangAccessibilityOptions({
-    this.announceNewData,
-    this.axis,
-    this.chartContainerLabel,
-    this.chartTypes,
-    this.credits,
-    this.defaultChartTitle,
-    this.drillUpButton,
-    this.exporting,
-    this.graphicContainerLabel,
-    this.legend,
-    this.navigator,
-    this.rangeSelector,
-    this.resetZoomButton,
-    this.screenReaderSection,
-    this.series,
-    this.seriesTypeDescriptions,
-    this.sonification,
-    this.svgContainerLabel,
-    this.svgContainerTitle,
-    this.table,
-    this.thousandsSep,
-    this.zoom
-  });
+  HighchartsLangAccessibilityOptions(
+      {this.announceNewData,
+      this.axis,
+      this.chartContainerLabel,
+      this.chartTypes,
+      this.credits,
+      this.defaultChartTitle,
+      this.drillUpButton,
+      this.exporting,
+      this.graphicContainerLabel,
+      this.legend,
+      this.navigator,
+      this.rangeSelector,
+      this.resetZoomButton,
+      this.screenReaderSection,
+      this.series,
+      this.seriesTypeDescriptions,
+      this.sonification,
+      this.svgContainerLabel,
+      this.svgContainerTitle,
+      this.table,
+      this.thousandsSep,
+      this.zoom});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (announceNewData != null) {
-      buffer.writeAll(['"announceNewData":', announceNewData?.toJSON(), ','], '');
+      buffer
+          .writeAll(['"announceNewData":', announceNewData?.toJSON(), ','], '');
     }
     if (axis != null) {
       buffer.writeAll(['"axis":', axis?.toJSON(), ','], '');
     }
     if (chartContainerLabel != null) {
-      buffer.writeAll(['"chartContainerLabel":', jsonEncode(chartContainerLabel), ','], '');
+      buffer.writeAll(
+          ['"chartContainerLabel":', jsonEncode(chartContainerLabel), ','], '');
     }
     if (chartTypes != null) {
       buffer.writeAll(['"chartTypes":', chartTypes?.toJSON(), ','], '');
@@ -151,7 +144,8 @@ class HighchartsLangAccessibilityOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"credits":', jsonEncode(credits), ','], '');
     }
     if (defaultChartTitle != null) {
-      buffer.writeAll(['"defaultChartTitle":', jsonEncode(defaultChartTitle), ','], '');
+      buffer.writeAll(
+          ['"defaultChartTitle":', jsonEncode(defaultChartTitle), ','], '');
     }
     if (drillUpButton != null) {
       buffer.writeAll(['"drillUpButton":', jsonEncode(drillUpButton), ','], '');
@@ -160,7 +154,9 @@ class HighchartsLangAccessibilityOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"exporting":', exporting?.toJSON(), ','], '');
     }
     if (graphicContainerLabel != null) {
-      buffer.writeAll(['"graphicContainerLabel":', jsonEncode(graphicContainerLabel), ','], '');
+      buffer.writeAll(
+          ['"graphicContainerLabel":', jsonEncode(graphicContainerLabel), ','],
+          '');
     }
     if (legend != null) {
       buffer.writeAll(['"legend":', legend?.toJSON(), ','], '');
@@ -172,25 +168,31 @@ class HighchartsLangAccessibilityOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"rangeSelector":', rangeSelector?.toJSON(), ','], '');
     }
     if (resetZoomButton != null) {
-      buffer.writeAll(['"resetZoomButton":', jsonEncode(resetZoomButton), ','], '');
+      buffer.writeAll(
+          ['"resetZoomButton":', jsonEncode(resetZoomButton), ','], '');
     }
     if (screenReaderSection != null) {
-      buffer.writeAll(['"screenReaderSection":', screenReaderSection?.toJSON(), ','], '');
+      buffer.writeAll(
+          ['"screenReaderSection":', screenReaderSection?.toJSON(), ','], '');
     }
     if (series != null) {
       buffer.writeAll(['"series":', series?.toJSON(), ','], '');
     }
     if (seriesTypeDescriptions != null) {
-      buffer.writeAll(['"seriesTypeDescriptions":', seriesTypeDescriptions?.toJSON(), ','], '');
+      buffer.writeAll(
+          ['"seriesTypeDescriptions":', seriesTypeDescriptions?.toJSON(), ','],
+          '');
     }
     if (sonification != null) {
       buffer.writeAll(['"sonification":', sonification?.toJSON(), ','], '');
     }
     if (svgContainerLabel != null) {
-      buffer.writeAll(['"svgContainerLabel":', jsonEncode(svgContainerLabel), ','], '');
+      buffer.writeAll(
+          ['"svgContainerLabel":', jsonEncode(svgContainerLabel), ','], '');
     }
     if (svgContainerTitle != null) {
-      buffer.writeAll(['"svgContainerTitle":', jsonEncode(svgContainerTitle), ','], '');
+      buffer.writeAll(
+          ['"svgContainerTitle":', jsonEncode(svgContainerTitle), ','], '');
     }
     if (table != null) {
       buffer.writeAll(['"table":', table?.toJSON(), ','], '');
@@ -202,5 +204,4 @@ class HighchartsLangAccessibilityOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"zoom":', zoom?.toJSON(), ','], '');
     }
   }
-
 }

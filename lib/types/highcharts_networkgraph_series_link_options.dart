@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,38 +23,27 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Link style options
  */
 class HighchartsNetworkgraphSeriesLinkOptions extends HighchartsOptionsBase {
-
   String? color;
   String? dashStyle;
   double? opacity;
   double? width;
 
-
-  HighchartsNetworkgraphSeriesLinkOptions({
-    this.color,
-    this.dashStyle,
-    this.opacity,
-    this.width
-  });
+  HighchartsNetworkgraphSeriesLinkOptions(
+      {this.color, this.dashStyle, this.opacity, this.width});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (color != null) {
       buffer.writeAll(['"color":', jsonEncode(color), ','], '');
@@ -72,5 +58,4 @@ class HighchartsNetworkgraphSeriesLinkOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"width":', width, ','], '');
     }
   }
-
 }

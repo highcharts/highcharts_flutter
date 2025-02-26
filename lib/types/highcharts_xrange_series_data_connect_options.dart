@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -22,18 +20,15 @@ import 'highcharts_connectors_end_marker_options.dart';
 import 'highcharts_connectors_marker_options.dart';
 import 'highcharts_connectors_start_marker_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_connectors_end_marker_options.dart';
 export 'highcharts_connectors_marker_options.dart';
 export 'highcharts_connectors_start_marker_options.dart';
-
 
 /* *
  *
@@ -41,14 +36,12 @@ export 'highcharts_connectors_start_marker_options.dart';
  *
  * */
 
-
 /**
  * Connect to a point. This option can be either a string, referring to the ID
  * of another point, or an object, or an array of either. If the option is an
  * array, each element defines a connection.
  */
 class HighchartsXRangeSeriesDataConnectOptions extends HighchartsOptionsBase {
-
   String? dashStyle;
   HighchartsConnectorsEndMarkerOptions? endMarker;
   String? lineColor;
@@ -59,23 +52,20 @@ class HighchartsXRangeSeriesDataConnectOptions extends HighchartsOptionsBase {
   String? to;
   String? type;
 
-
-  HighchartsXRangeSeriesDataConnectOptions({
-    this.dashStyle,
-    this.endMarker,
-    this.lineColor,
-    this.lineWidth,
-    this.marker,
-    this.radius,
-    this.startMarker,
-    this.to,
-    this.type
-  });
+  HighchartsXRangeSeriesDataConnectOptions(
+      {this.dashStyle,
+      this.endMarker,
+      this.lineColor,
+      this.lineWidth,
+      this.marker,
+      this.radius,
+      this.startMarker,
+      this.to,
+      this.type});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (dashStyle != null) {
       buffer.writeAll(['"dashStyle":', jsonEncode(dashStyle), ','], '');
@@ -105,5 +95,4 @@ class HighchartsXRangeSeriesDataConnectOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"type":', jsonEncode(type), ','], '');
     }
   }
-
 }

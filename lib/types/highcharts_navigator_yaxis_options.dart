@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -29,13 +27,11 @@ import 'highcharts_xaxis_date_time_label_formats_options.dart';
 import 'highcharts_xaxis_events_options.dart';
 import 'highcharts_xaxis_grid_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
-
 
 export 'highcharts_navigator_yaxis_crosshair_options.dart';
 export 'highcharts_navigator_yaxis_labels_options.dart';
@@ -48,13 +44,11 @@ export 'highcharts_xaxis_date_time_label_formats_options.dart';
 export 'highcharts_xaxis_events_options.dart';
 export 'highcharts_xaxis_grid_options.dart';
 
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * Options for the navigator Y axis. Default series options for the
@@ -77,7 +71,6 @@ export 'highcharts_xaxis_grid_options.dart';
  * ```
  */
 class HighchartsNavigatorYAxisOptions extends HighchartsOptionsBase {
-
   String? className;
   HighchartsNavigatorYAxisCrosshairOptions? crosshair;
   bool? endOnTick;
@@ -150,85 +143,82 @@ class HighchartsNavigatorYAxisOptions extends HighchartsOptionsBase {
   String? tickmarkPlacement;
   bool? uniqueNames;
 
-
-  HighchartsNavigatorYAxisOptions({
-    this.className,
-    this.crosshair,
-    this.endOnTick,
-    this.gridLineWidth,
-    this.id,
-    this.labels,
-    this.maxPadding,
-    this.minPadding,
-    this.startOnTick,
-    this.tickLength,
-    this.tickWidth,
-    this.title,
-    this.lineWidth,
-    this.max,
-    this.min,
-    this.opposite,
-    this.plotBands,
-    this.plotLines,
-    this.reversed,
-    this.reversedStacks,
-    this.showLastLabel,
-    this.softMax,
-    this.softMin,
-    this.tickPixelInterval,
-    this.accessibility,
-    this.alignTicks,
-    this.allowDecimals,
-    this.alternateGridColor,
-    this.breaks,
-    this.ceiling,
-    this.crossing,
-    this.dateTimeLabelFormats,
-    this.events,
-    this.floor,
-    this.gridLineColor,
-    this.gridLineDashStyle,
-    this.gridZIndex,
-    this.left,
-    this.lineColor,
-    this.margin,
-    this.minTickInterval,
-    this.minorGridLineColor,
-    this.minorGridLineDashStyle,
-    this.minorGridLineWidth,
-    this.minorTickColor,
-    this.minorTickInterval,
-    this.minorTickLength,
-    this.minorTickPosition,
-    this.minorTickWidth,
-    this.minorTicks,
-    this.minorTicksPerMajor,
-    this.offset,
-    this.panningEnabled,
-    this.showFirstLabel,
-    this.startOfWeek,
-    this.tickAmount,
-    this.tickColor,
-    this.tickInterval,
-    this.tickPosition,
-    this.tickPositioner,
-    this.tickPositions,
-    this.visible,
-    this.width,
-    this.zIndex,
-    this.zoomEnabled,
-    this.staticScale,
-    this.type,
-    this.categories,
-    this.grid,
-    this.tickmarkPlacement,
-    this.uniqueNames
-  });
+  HighchartsNavigatorYAxisOptions(
+      {this.className,
+      this.crosshair,
+      this.endOnTick,
+      this.gridLineWidth,
+      this.id,
+      this.labels,
+      this.maxPadding,
+      this.minPadding,
+      this.startOnTick,
+      this.tickLength,
+      this.tickWidth,
+      this.title,
+      this.lineWidth,
+      this.max,
+      this.min,
+      this.opposite,
+      this.plotBands,
+      this.plotLines,
+      this.reversed,
+      this.reversedStacks,
+      this.showLastLabel,
+      this.softMax,
+      this.softMin,
+      this.tickPixelInterval,
+      this.accessibility,
+      this.alignTicks,
+      this.allowDecimals,
+      this.alternateGridColor,
+      this.breaks,
+      this.ceiling,
+      this.crossing,
+      this.dateTimeLabelFormats,
+      this.events,
+      this.floor,
+      this.gridLineColor,
+      this.gridLineDashStyle,
+      this.gridZIndex,
+      this.left,
+      this.lineColor,
+      this.margin,
+      this.minTickInterval,
+      this.minorGridLineColor,
+      this.minorGridLineDashStyle,
+      this.minorGridLineWidth,
+      this.minorTickColor,
+      this.minorTickInterval,
+      this.minorTickLength,
+      this.minorTickPosition,
+      this.minorTickWidth,
+      this.minorTicks,
+      this.minorTicksPerMajor,
+      this.offset,
+      this.panningEnabled,
+      this.showFirstLabel,
+      this.startOfWeek,
+      this.tickAmount,
+      this.tickColor,
+      this.tickInterval,
+      this.tickPosition,
+      this.tickPositioner,
+      this.tickPositions,
+      this.visible,
+      this.width,
+      this.zIndex,
+      this.zoomEnabled,
+      this.staticScale,
+      this.type,
+      this.categories,
+      this.grid,
+      this.tickmarkPlacement,
+      this.uniqueNames});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (className != null) {
       buffer.writeAll(['"className":', jsonEncode(className), ','], '');
@@ -320,7 +310,8 @@ class HighchartsNavigatorYAxisOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"allowDecimals":', allowDecimals, ','], '');
     }
     if (alternateGridColor != null) {
-      buffer.writeAll(['"alternateGridColor":', jsonEncode(alternateGridColor), ','], '');
+      buffer.writeAll(
+          ['"alternateGridColor":', jsonEncode(alternateGridColor), ','], '');
     }
     if (breaks != null) {
       buffer.write('"breaks":[');
@@ -336,7 +327,8 @@ class HighchartsNavigatorYAxisOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"crossing":', crossing, ','], '');
     }
     if (dateTimeLabelFormats != null) {
-      buffer.writeAll(['"dateTimeLabelFormats":', dateTimeLabelFormats?.toJSON(), ','], '');
+      buffer.writeAll(
+          ['"dateTimeLabelFormats":', dateTimeLabelFormats?.toJSON(), ','], '');
     }
     if (events != null) {
       buffer.writeAll(['"events":', events?.toJSON(), ','], '');
@@ -348,7 +340,8 @@ class HighchartsNavigatorYAxisOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"gridLineColor":', jsonEncode(gridLineColor), ','], '');
     }
     if (gridLineDashStyle != null) {
-      buffer.writeAll(['"gridLineDashStyle":', jsonEncode(gridLineDashStyle), ','], '');
+      buffer.writeAll(
+          ['"gridLineDashStyle":', jsonEncode(gridLineDashStyle), ','], '');
     }
     if (gridZIndex != null) {
       buffer.writeAll(['"gridZIndex":', gridZIndex, ','], '');
@@ -366,25 +359,33 @@ class HighchartsNavigatorYAxisOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"minTickInterval":', minTickInterval, ','], '');
     }
     if (minorGridLineColor != null) {
-      buffer.writeAll(['"minorGridLineColor":', jsonEncode(minorGridLineColor), ','], '');
+      buffer.writeAll(
+          ['"minorGridLineColor":', jsonEncode(minorGridLineColor), ','], '');
     }
     if (minorGridLineDashStyle != null) {
-      buffer.writeAll(['"minorGridLineDashStyle":', jsonEncode(minorGridLineDashStyle), ','], '');
+      buffer.writeAll([
+        '"minorGridLineDashStyle":',
+        jsonEncode(minorGridLineDashStyle),
+        ','
+      ], '');
     }
     if (minorGridLineWidth != null) {
       buffer.writeAll(['"minorGridLineWidth":', minorGridLineWidth, ','], '');
     }
     if (minorTickColor != null) {
-      buffer.writeAll(['"minorTickColor":', jsonEncode(minorTickColor), ','], '');
+      buffer
+          .writeAll(['"minorTickColor":', jsonEncode(minorTickColor), ','], '');
     }
     if (minorTickInterval != null) {
-      buffer.writeAll(['"minorTickInterval":', jsonEncode(minorTickInterval), ','], '');
+      buffer.writeAll(
+          ['"minorTickInterval":', jsonEncode(minorTickInterval), ','], '');
     }
     if (minorTickLength != null) {
       buffer.writeAll(['"minorTickLength":', minorTickLength, ','], '');
     }
     if (minorTickPosition != null) {
-      buffer.writeAll(['"minorTickPosition":', jsonEncode(minorTickPosition), ','], '');
+      buffer.writeAll(
+          ['"minorTickPosition":', jsonEncode(minorTickPosition), ','], '');
     }
     if (minorTickWidth != null) {
       buffer.writeAll(['"minorTickWidth":', minorTickWidth, ','], '');
@@ -420,7 +421,8 @@ class HighchartsNavigatorYAxisOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"tickPosition":', jsonEncode(tickPosition), ','], '');
     }
     if (tickPositioner != null) {
-      buffer.writeAll(['"tickPositioner":', jsonEncode(tickPositioner), ','], '');
+      buffer
+          .writeAll(['"tickPositioner":', jsonEncode(tickPositioner), ','], '');
     }
     if (tickPositions != null) {
       buffer.write('"tickPositions":[');
@@ -458,11 +460,11 @@ class HighchartsNavigatorYAxisOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"grid":', grid?.toJSON(), ','], '');
     }
     if (tickmarkPlacement != null) {
-      buffer.writeAll(['"tickmarkPlacement":', jsonEncode(tickmarkPlacement), ','], '');
+      buffer.writeAll(
+          ['"tickmarkPlacement":', jsonEncode(tickmarkPlacement), ','], '');
     }
     if (uniqueNames != null) {
       buffer.writeAll(['"uniqueNames":', uniqueNames, ','], '');
     }
   }
-
 }

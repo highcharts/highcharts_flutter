@@ -8,17 +8,13 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,31 +22,22 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
-class HighchartsAnnotationsTimeCyclesTypePointsOptions extends HighchartsOptionsBase {
-
+class HighchartsAnnotationsTimeCyclesTypePointsOptions
+    extends HighchartsOptionsBase {
   double? controlPoint;
   double? x;
 
-
-  HighchartsAnnotationsTimeCyclesTypePointsOptions({
-    this.controlPoint,
-    this.x
-  });
+  HighchartsAnnotationsTimeCyclesTypePointsOptions({this.controlPoint, this.x});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (controlPoint != null) {
       buffer.writeAll(['"controlPoint":', controlPoint, ','], '');
@@ -59,5 +46,4 @@ class HighchartsAnnotationsTimeCyclesTypePointsOptions extends HighchartsOptions
       buffer.writeAll(['"x":', x, ','], '');
     }
   }
-
 }

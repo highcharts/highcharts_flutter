@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,21 +23,16 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Individual point events
  */
 class HighchartsMapSeriesDataEventsOptions extends HighchartsOptionsBase {
-
   dynamic click;
   dynamic drag;
   dynamic dragStart;
@@ -52,24 +44,21 @@ class HighchartsMapSeriesDataEventsOptions extends HighchartsOptionsBase {
   dynamic unselect;
   dynamic update;
 
-
-  HighchartsMapSeriesDataEventsOptions({
-    this.click,
-    this.drag,
-    this.dragStart,
-    this.drop,
-    this.mouseOut,
-    this.mouseOver,
-    this.remove,
-    this.select,
-    this.unselect,
-    this.update
-  });
+  HighchartsMapSeriesDataEventsOptions(
+      {this.click,
+      this.drag,
+      this.dragStart,
+      this.drop,
+      this.mouseOut,
+      this.mouseOver,
+      this.remove,
+      this.select,
+      this.unselect,
+      this.update});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (click != null) {
       buffer.writeAll(['"click":', jsonEncode(click), ','], '');
@@ -102,5 +91,4 @@ class HighchartsMapSeriesDataEventsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"update":', jsonEncode(update), ','], '');
     }
   }
-
 }

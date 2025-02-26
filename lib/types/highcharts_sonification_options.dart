@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -25,13 +23,11 @@ import 'highcharts_sonification_global_context_tracks_options.dart';
 import 'highcharts_sonification_global_tracks_options.dart';
 import 'highcharts_sonification_point_grouping_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
-
 
 export 'highcharts_sonification_default_instrument_options.dart';
 export 'highcharts_sonification_default_speech_options.dart';
@@ -40,13 +36,11 @@ export 'highcharts_sonification_global_context_tracks_options.dart';
 export 'highcharts_sonification_global_tracks_options.dart';
 export 'highcharts_sonification_point_grouping_options.dart';
 
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * Options for configuring sonification and audio charts. Requires the
@@ -54,7 +48,6 @@ export 'highcharts_sonification_point_grouping_options.dart';
  * to be loaded.
  */
 class HighchartsSonificationOptions extends HighchartsOptionsBase {
-
   double? afterSeriesWait;
   HighchartsSonificationDefaultInstrumentOptions? defaultInstrumentOptions;
   HighchartsSonificationDefaultSpeechOptions? defaultSpeechOptions;
@@ -70,37 +63,39 @@ class HighchartsSonificationOptions extends HighchartsOptionsBase {
   bool? showTooltip;
   double? updateInterval;
 
-
-  HighchartsSonificationOptions({
-    this.afterSeriesWait,
-    this.defaultInstrumentOptions,
-    this.defaultSpeechOptions,
-    this.duration,
-    this.enabled,
-    this.events,
-    this.globalContextTracks,
-    this.globalTracks,
-    this.masterVolume,
-    this.order,
-    this.pointGrouping,
-    this.showCrosshair,
-    this.showTooltip,
-    this.updateInterval
-  });
+  HighchartsSonificationOptions(
+      {this.afterSeriesWait,
+      this.defaultInstrumentOptions,
+      this.defaultSpeechOptions,
+      this.duration,
+      this.enabled,
+      this.events,
+      this.globalContextTracks,
+      this.globalTracks,
+      this.masterVolume,
+      this.order,
+      this.pointGrouping,
+      this.showCrosshair,
+      this.showTooltip,
+      this.updateInterval});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (afterSeriesWait != null) {
       buffer.writeAll(['"afterSeriesWait":', afterSeriesWait, ','], '');
     }
     if (defaultInstrumentOptions != null) {
-      buffer.writeAll(['"defaultInstrumentOptions":', defaultInstrumentOptions?.toJSON(), ','], '');
+      buffer.writeAll([
+        '"defaultInstrumentOptions":',
+        defaultInstrumentOptions?.toJSON(),
+        ','
+      ], '');
     }
     if (defaultSpeechOptions != null) {
-      buffer.writeAll(['"defaultSpeechOptions":', defaultSpeechOptions?.toJSON(), ','], '');
+      buffer.writeAll(
+          ['"defaultSpeechOptions":', defaultSpeechOptions?.toJSON(), ','], '');
     }
     if (duration != null) {
       buffer.writeAll(['"duration":', duration, ','], '');
@@ -144,5 +139,4 @@ class HighchartsSonificationOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"updateInterval":', updateInterval, ','], '');
     }
   }
-
 }

@@ -8,19 +8,16 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_venn_series_states_select_animation_options.dart';
 import 'highcharts_series_states_hover_marker_options.dart';
-
 
 /* *
  *
@@ -28,10 +25,8 @@ import 'highcharts_series_states_hover_marker_options.dart';
  *
  * */
 
-
 export 'highcharts_venn_series_states_select_animation_options.dart';
 export 'highcharts_series_states_hover_marker_options.dart';
-
 
 /* *
  *
@@ -39,9 +34,7 @@ export 'highcharts_series_states_hover_marker_options.dart';
  *
  * */
 
-
 class HighchartsVennSeriesStatesSelectOptions extends HighchartsOptionsBase {
-
   HighchartsVennSeriesStatesSelectAnimationOptions? animation;
   String? borderColor;
   String? color;
@@ -50,21 +43,18 @@ class HighchartsVennSeriesStatesSelectOptions extends HighchartsOptionsBase {
   double? lineWidthPlus;
   HighchartsSeriesStatesHoverMarkerOptions? marker;
 
-
-  HighchartsVennSeriesStatesSelectOptions({
-    this.animation,
-    this.borderColor,
-    this.color,
-    this.enabled,
-    this.lineWidth,
-    this.lineWidthPlus,
-    this.marker
-  });
+  HighchartsVennSeriesStatesSelectOptions(
+      {this.animation,
+      this.borderColor,
+      this.color,
+      this.enabled,
+      this.lineWidth,
+      this.lineWidthPlus,
+      this.marker});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (animation != null) {
       buffer.writeAll(['"animation":', animation?.toJSON(), ','], '');
@@ -88,5 +78,4 @@ class HighchartsVennSeriesStatesSelectOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"marker":', marker?.toJSON(), ','], '');
     }
   }
-
 }

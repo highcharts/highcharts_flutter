@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,21 +23,16 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Point accessibility options for a series.
  */
 class HighchartsSeriesAccessibilityPointOptions extends HighchartsOptionsBase {
-
   dynamic descriptionFormatter;
   String? dateFormat;
   dynamic dateFormatter;
@@ -51,26 +43,25 @@ class HighchartsSeriesAccessibilityPointOptions extends HighchartsOptionsBase {
   String? valuePrefix;
   String? valueSuffix;
 
-
-  HighchartsSeriesAccessibilityPointOptions({
-    this.descriptionFormatter,
-    this.dateFormat,
-    this.dateFormatter,
-    this.describeNull,
-    this.descriptionFormat,
-    this.valueDecimals,
-    this.valueDescriptionFormat,
-    this.valuePrefix,
-    this.valueSuffix
-  });
+  HighchartsSeriesAccessibilityPointOptions(
+      {this.descriptionFormatter,
+      this.dateFormat,
+      this.dateFormatter,
+      this.describeNull,
+      this.descriptionFormat,
+      this.valueDecimals,
+      this.valueDescriptionFormat,
+      this.valuePrefix,
+      this.valueSuffix});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (descriptionFormatter != null) {
-      buffer.writeAll(['"descriptionFormatter":', jsonEncode(descriptionFormatter), ','], '');
+      buffer.writeAll(
+          ['"descriptionFormatter":', jsonEncode(descriptionFormatter), ','],
+          '');
     }
     if (dateFormat != null) {
       buffer.writeAll(['"dateFormat":', jsonEncode(dateFormat), ','], '');
@@ -82,13 +73,18 @@ class HighchartsSeriesAccessibilityPointOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"describeNull":', describeNull, ','], '');
     }
     if (descriptionFormat != null) {
-      buffer.writeAll(['"descriptionFormat":', jsonEncode(descriptionFormat), ','], '');
+      buffer.writeAll(
+          ['"descriptionFormat":', jsonEncode(descriptionFormat), ','], '');
     }
     if (valueDecimals != null) {
       buffer.writeAll(['"valueDecimals":', valueDecimals, ','], '');
     }
     if (valueDescriptionFormat != null) {
-      buffer.writeAll(['"valueDescriptionFormat":', jsonEncode(valueDescriptionFormat), ','], '');
+      buffer.writeAll([
+        '"valueDescriptionFormat":',
+        jsonEncode(valueDescriptionFormat),
+        ','
+      ], '');
     }
     if (valuePrefix != null) {
       buffer.writeAll(['"valuePrefix":', jsonEncode(valuePrefix), ','], '');
@@ -97,5 +93,4 @@ class HighchartsSeriesAccessibilityPointOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"valueSuffix":', jsonEncode(valueSuffix), ','], '');
     }
   }
-
 }

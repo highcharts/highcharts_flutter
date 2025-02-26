@@ -8,17 +8,13 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,33 +22,23 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 class HighchartsIKHSeriesParamsOptions extends HighchartsOptionsBase {
-
   double? period;
   double? periodSenkouSpanB;
   double? periodTenkan;
 
-
-  HighchartsIKHSeriesParamsOptions({
-    this.period,
-    this.periodSenkouSpanB,
-    this.periodTenkan
-  });
+  HighchartsIKHSeriesParamsOptions(
+      {this.period, this.periodSenkouSpanB, this.periodTenkan});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (period != null) {
       buffer.writeAll(['"period":', period, ','], '');
@@ -64,5 +50,4 @@ class HighchartsIKHSeriesParamsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"periodTenkan":', periodTenkan, ','], '');
     }
   }
-
 }

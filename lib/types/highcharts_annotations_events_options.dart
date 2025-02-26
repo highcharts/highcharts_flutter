@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,40 +23,28 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Events available in annotations.
  */
 class HighchartsAnnotationsEventsOptions extends HighchartsOptionsBase {
-
   dynamic add;
   dynamic afterUpdate;
   dynamic click;
   dynamic drag;
   dynamic remove;
 
-
-  HighchartsAnnotationsEventsOptions({
-    this.add,
-    this.afterUpdate,
-    this.click,
-    this.drag,
-    this.remove
-  });
+  HighchartsAnnotationsEventsOptions(
+      {this.add, this.afterUpdate, this.click, this.drag, this.remove});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (add != null) {
       buffer.writeAll(['"add":', jsonEncode(add), ','], '');
@@ -77,5 +62,4 @@ class HighchartsAnnotationsEventsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"remove":', jsonEncode(remove), ','], '');
     }
   }
-
 }

@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_treegraph_series_data_marker_states_options.dart';
-
 
 /* *
  *
@@ -27,9 +24,7 @@ import 'highcharts_treegraph_series_data_marker_states_options.dart';
  *
  * */
 
-
 export 'highcharts_treegraph_series_data_marker_states_options.dart';
-
 
 /* *
  *
@@ -37,9 +32,7 @@ export 'highcharts_treegraph_series_data_marker_states_options.dart';
  *
  * */
 
-
 class HighchartsTreegraphSeriesDataMarkerOptions extends HighchartsOptionsBase {
-
   bool? enabled;
   String? fillColor;
   double? height;
@@ -49,22 +42,19 @@ class HighchartsTreegraphSeriesDataMarkerOptions extends HighchartsOptionsBase {
   String? symbol;
   double? width;
 
-
-  HighchartsTreegraphSeriesDataMarkerOptions({
-    this.enabled,
-    this.fillColor,
-    this.height,
-    this.lineColor,
-    this.lineWidth,
-    this.states,
-    this.symbol,
-    this.width
-  });
+  HighchartsTreegraphSeriesDataMarkerOptions(
+      {this.enabled,
+      this.fillColor,
+      this.height,
+      this.lineColor,
+      this.lineWidth,
+      this.states,
+      this.symbol,
+      this.width});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (enabled != null) {
       buffer.writeAll(['"enabled":', enabled, ','], '');
@@ -91,5 +81,4 @@ class HighchartsTreegraphSeriesDataMarkerOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"width":', width, ','], '');
     }
   }
-
 }

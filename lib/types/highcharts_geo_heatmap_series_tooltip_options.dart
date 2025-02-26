@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,31 +23,22 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 class HighchartsGeoHeatmapSeriesTooltipOptions extends HighchartsOptionsBase {
-
   bool? followPointer;
   String? pointFormat;
 
-
-  HighchartsGeoHeatmapSeriesTooltipOptions({
-    this.followPointer,
-    this.pointFormat
-  });
+  HighchartsGeoHeatmapSeriesTooltipOptions(
+      {this.followPointer, this.pointFormat});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (followPointer != null) {
       buffer.writeAll(['"followPointer":', followPointer, ','], '');
@@ -59,5 +47,4 @@ class HighchartsGeoHeatmapSeriesTooltipOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"pointFormat":', jsonEncode(pointFormat), ','], '');
     }
   }
-
 }

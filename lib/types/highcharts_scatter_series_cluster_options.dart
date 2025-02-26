@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -25,13 +23,11 @@ import 'highcharts_scatter_series_cluster_marker_options.dart';
 import 'highcharts_scatter_series_cluster_states_options.dart';
 import 'highcharts_scatter_series_cluster_zones_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
-
 
 export 'highcharts_scatter_series_cluster_data_labels_options.dart';
 export 'highcharts_scatter_series_cluster_events_options.dart';
@@ -40,13 +36,11 @@ export 'highcharts_scatter_series_cluster_marker_options.dart';
 export 'highcharts_scatter_series_cluster_states_options.dart';
 export 'highcharts_scatter_series_cluster_zones_options.dart';
 
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * Options for marker clusters, the concept of sampling the data
@@ -61,7 +55,6 @@ export 'highcharts_scatter_series_cluster_zones_options.dart';
  * package, or online at [code.highcharts.com/modules/marker-clusters.js](code.highcharts.com/modules/marker-clusters.js).
  */
 class HighchartsScatterSeriesClusterOptions extends HighchartsOptionsBase {
-
   bool? allowOverlap;
   dynamic animation;
   HighchartsScatterSeriesClusterDataLabelsOptions? dataLabels;
@@ -74,25 +67,22 @@ class HighchartsScatterSeriesClusterOptions extends HighchartsOptionsBase {
   HighchartsScatterSeriesClusterStatesOptions? states;
   List<HighchartsScatterSeriesClusterZonesOptions>? zones;
 
-
-  HighchartsScatterSeriesClusterOptions({
-    this.allowOverlap,
-    this.animation,
-    this.dataLabels,
-    this.drillToCluster,
-    this.enabled,
-    this.events,
-    this.layoutAlgorithm,
-    this.marker,
-    this.minimumClusterSize,
-    this.states,
-    this.zones
-  });
+  HighchartsScatterSeriesClusterOptions(
+      {this.allowOverlap,
+      this.animation,
+      this.dataLabels,
+      this.drillToCluster,
+      this.enabled,
+      this.events,
+      this.layoutAlgorithm,
+      this.marker,
+      this.minimumClusterSize,
+      this.states,
+      this.zones});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (allowOverlap != null) {
       buffer.writeAll(['"allowOverlap":', allowOverlap, ','], '');
@@ -113,7 +103,8 @@ class HighchartsScatterSeriesClusterOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"events":', events?.toJSON(), ','], '');
     }
     if (layoutAlgorithm != null) {
-      buffer.writeAll(['"layoutAlgorithm":', layoutAlgorithm?.toJSON(), ','], '');
+      buffer
+          .writeAll(['"layoutAlgorithm":', layoutAlgorithm?.toJSON(), ','], '');
     }
     if (marker != null) {
       buffer.writeAll(['"marker":', marker?.toJSON(), ','], '');
@@ -132,5 +123,4 @@ class HighchartsScatterSeriesClusterOptions extends HighchartsOptionsBase {
       buffer.write('],');
     }
   }
-
 }

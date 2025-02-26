@@ -8,19 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
 import 'highcharts_defs_arrow_options.dart';
 import 'highcharts_defs_reverse_arrow_options.dart';
-
 
 /* *
  *
@@ -28,17 +24,14 @@ import 'highcharts_defs_reverse_arrow_options.dart';
  *
  * */
 
-
 export 'highcharts_defs_arrow_options.dart';
 export 'highcharts_defs_reverse_arrow_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * Options for configuring markers for annotations.
@@ -65,20 +58,14 @@ export 'highcharts_defs_reverse_arrow_options.dart';
  * </pre>
  */
 class HighchartsDefsOptions extends HighchartsOptionsBase {
-
   HighchartsDefsArrowOptions? arrow;
   HighchartsDefsReverseArrowOptions? reverseArrow;
 
-
-  HighchartsDefsOptions({
-    this.arrow,
-    this.reverseArrow
-  });
+  HighchartsDefsOptions({this.arrow, this.reverseArrow});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (arrow != null) {
       buffer.writeAll(['"arrow":', arrow?.toJSON(), ','], '');
@@ -87,5 +74,4 @@ class HighchartsDefsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"reverse-arrow":', reverseArrow?.toJSON(), ','], '');
     }
   }
-
 }

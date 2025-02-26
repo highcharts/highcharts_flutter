@@ -8,19 +8,16 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_treemap_series_levels_color_variation_options.dart';
 import 'highcharts_treemap_series_levels_data_labels_options.dart';
-
 
 /* *
  *
@@ -28,10 +25,8 @@ import 'highcharts_treemap_series_levels_data_labels_options.dart';
  *
  * */
 
-
 export 'highcharts_treemap_series_levels_color_variation_options.dart';
 export 'highcharts_treemap_series_levels_data_labels_options.dart';
-
 
 /* *
  *
@@ -39,13 +34,11 @@ export 'highcharts_treemap_series_levels_data_labels_options.dart';
  *
  * */
 
-
 /**
  * Set options on specific levels. Takes precedence over series options,
  * but not point options.
  */
 class HighchartsTreemapSeriesLevelsOptions extends HighchartsOptionsBase {
-
   String? borderColor;
   String? borderDashStyle;
   double? borderWidth;
@@ -56,29 +49,27 @@ class HighchartsTreemapSeriesLevelsOptions extends HighchartsOptionsBase {
   String? layoutStartingDirection;
   double? level;
 
-
-  HighchartsTreemapSeriesLevelsOptions({
-    this.borderColor,
-    this.borderDashStyle,
-    this.borderWidth,
-    this.color,
-    this.colorVariation,
-    this.dataLabels,
-    this.layoutAlgorithm,
-    this.layoutStartingDirection,
-    this.level
-  });
+  HighchartsTreemapSeriesLevelsOptions(
+      {this.borderColor,
+      this.borderDashStyle,
+      this.borderWidth,
+      this.color,
+      this.colorVariation,
+      this.dataLabels,
+      this.layoutAlgorithm,
+      this.layoutStartingDirection,
+      this.level});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (borderColor != null) {
       buffer.writeAll(['"borderColor":', jsonEncode(borderColor), ','], '');
     }
     if (borderDashStyle != null) {
-      buffer.writeAll(['"borderDashStyle":', jsonEncode(borderDashStyle), ','], '');
+      buffer.writeAll(
+          ['"borderDashStyle":', jsonEncode(borderDashStyle), ','], '');
     }
     if (borderWidth != null) {
       buffer.writeAll(['"borderWidth":', borderWidth, ','], '');
@@ -93,14 +84,18 @@ class HighchartsTreemapSeriesLevelsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"dataLabels":', dataLabels?.toJSON(), ','], '');
     }
     if (layoutAlgorithm != null) {
-      buffer.writeAll(['"layoutAlgorithm":', jsonEncode(layoutAlgorithm), ','], '');
+      buffer.writeAll(
+          ['"layoutAlgorithm":', jsonEncode(layoutAlgorithm), ','], '');
     }
     if (layoutStartingDirection != null) {
-      buffer.writeAll(['"layoutStartingDirection":', jsonEncode(layoutStartingDirection), ','], '');
+      buffer.writeAll([
+        '"layoutStartingDirection":',
+        jsonEncode(layoutStartingDirection),
+        ','
+      ], '');
     }
     if (level != null) {
       buffer.writeAll(['"level":', level, ','], '');
     }
   }
-
 }

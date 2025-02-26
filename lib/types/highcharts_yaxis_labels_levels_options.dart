@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,35 +23,25 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Set options on specific levels in a tree grid axis. Takes
  * precedence over labels options.
  */
 class HighchartsYAxisLabelsLevelsOptions extends HighchartsOptionsBase {
-
   double? level;
   Map<String, String>? style;
 
-
-  HighchartsYAxisLabelsLevelsOptions({
-    this.level,
-    this.style
-  });
+  HighchartsYAxisLabelsLevelsOptions({this.level, this.style});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (level != null) {
       buffer.writeAll(['"level":', level, ','], '');
@@ -67,5 +54,4 @@ class HighchartsYAxisLabelsLevelsOptions extends HighchartsOptionsBase {
       buffer.write('},');
     }
   }
-
 }

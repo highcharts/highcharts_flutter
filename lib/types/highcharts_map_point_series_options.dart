@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_map_point_series_data_labels_options.dart';
-
 
 /* *
  *
@@ -27,16 +24,13 @@ import 'highcharts_map_point_series_data_labels_options.dart';
  *
  * */
 
-
 export 'highcharts_map_point_series_data_labels_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * A `mappoint` series. If the [type](#series.mappoint.type) option
@@ -82,7 +76,6 @@ export 'highcharts_map_point_series_data_labels_options.dart';
  *             
  */
 class HighchartsMapPointSeriesOptions extends HighchartsOptionsBase {
-
   HighchartsMapPointSeriesDataLabelsOptions? dataLabels;
   String? id;
   double? index;
@@ -90,20 +83,17 @@ class HighchartsMapPointSeriesOptions extends HighchartsOptionsBase {
   String? legendSymbol;
   List<dynamic>? mapData;
 
-
-  HighchartsMapPointSeriesOptions({
-    this.dataLabels,
-    this.id,
-    this.index,
-    this.legendIndex,
-    this.legendSymbol,
-    this.mapData
-  });
+  HighchartsMapPointSeriesOptions(
+      {this.dataLabels,
+      this.id,
+      this.index,
+      this.legendIndex,
+      this.legendSymbol,
+      this.mapData});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (dataLabels != null) {
       buffer.writeAll(['"dataLabels":', dataLabels?.toJSON(), ','], '');
@@ -128,5 +118,4 @@ class HighchartsMapPointSeriesOptions extends HighchartsOptionsBase {
       buffer.write('],');
     }
   }
-
 }

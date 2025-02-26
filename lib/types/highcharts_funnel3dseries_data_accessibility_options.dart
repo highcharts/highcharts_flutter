@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,34 +23,26 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Accessibility options for a data point.
  */
-class HighchartsFunnel3DSeriesDataAccessibilityOptions extends HighchartsOptionsBase {
-
+class HighchartsFunnel3DSeriesDataAccessibilityOptions
+    extends HighchartsOptionsBase {
   String? description;
   bool? enabled;
 
-
-  HighchartsFunnel3DSeriesDataAccessibilityOptions({
-    this.description,
-    this.enabled
-  });
+  HighchartsFunnel3DSeriesDataAccessibilityOptions(
+      {this.description, this.enabled});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (description != null) {
       buffer.writeAll(['"description":', jsonEncode(description), ','], '');
@@ -62,5 +51,4 @@ class HighchartsFunnel3DSeriesDataAccessibilityOptions extends HighchartsOptions
       buffer.writeAll(['"enabled":', enabled, ','], '');
     }
   }
-
 }

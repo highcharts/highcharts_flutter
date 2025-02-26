@@ -8,18 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
 import 'highcharts_series_states_hover_animation_options.dart';
-
 
 /* *
  *
@@ -27,9 +23,7 @@ import 'highcharts_series_states_hover_animation_options.dart';
  *
  * */
 
-
 export 'highcharts_series_states_hover_animation_options.dart';
-
 
 /* *
  *
@@ -37,28 +31,21 @@ export 'highcharts_series_states_hover_animation_options.dart';
  *
  * */
 
-
 /**
  * Options for the hovered point. These settings override the normal
  * state options when a point is moused over or touched.
  */
 class HighchartsRenkoSeriesStatesHoverOptions extends HighchartsOptionsBase {
-
   HighchartsSeriesStatesHoverAnimationOptions? animation;
   double? brightness;
   bool? enabled;
 
-
-  HighchartsRenkoSeriesStatesHoverOptions({
-    this.animation,
-    this.brightness,
-    this.enabled
-  });
+  HighchartsRenkoSeriesStatesHoverOptions(
+      {this.animation, this.brightness, this.enabled});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (animation != null) {
       buffer.writeAll(['"animation":', animation?.toJSON(), ','], '');
@@ -70,5 +57,4 @@ class HighchartsRenkoSeriesStatesHoverOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"enabled":', enabled, ','], '');
     }
   }
-
 }

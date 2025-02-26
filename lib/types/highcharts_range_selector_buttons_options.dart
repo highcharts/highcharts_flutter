@@ -8,19 +8,16 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_range_selector_buttons_data_grouping_options.dart';
 import 'highcharts_range_selector_buttons_events_options.dart';
-
 
 /* *
  *
@@ -28,17 +25,14 @@ import 'highcharts_range_selector_buttons_events_options.dart';
  *
  * */
 
-
 export 'highcharts_range_selector_buttons_data_grouping_options.dart';
 export 'highcharts_range_selector_buttons_events_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * An array of configuration objects for the buttons.
@@ -77,7 +71,6 @@ export 'highcharts_range_selector_buttons_events_options.dart';
  * ```
  */
 class HighchartsRangeSelectorButtonsOptions extends HighchartsOptionsBase {
-
   double? count;
   HighchartsRangeSelectorButtonsDataGroupingOptions? dataGrouping;
   HighchartsRangeSelectorButtonsEventsOptions? events;
@@ -88,23 +81,20 @@ class HighchartsRangeSelectorButtonsOptions extends HighchartsOptionsBase {
   String? title;
   String? type;
 
-
-  HighchartsRangeSelectorButtonsOptions({
-    this.count,
-    this.dataGrouping,
-    this.events,
-    this.offsetMax,
-    this.offsetMin,
-    this.preserveDataGrouping,
-    this.text,
-    this.title,
-    this.type
-  });
+  HighchartsRangeSelectorButtonsOptions(
+      {this.count,
+      this.dataGrouping,
+      this.events,
+      this.offsetMax,
+      this.offsetMin,
+      this.preserveDataGrouping,
+      this.text,
+      this.title,
+      this.type});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (count != null) {
       buffer.writeAll(['"count":', count, ','], '');
@@ -122,7 +112,8 @@ class HighchartsRangeSelectorButtonsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"offsetMin":', offsetMin, ','], '');
     }
     if (preserveDataGrouping != null) {
-      buffer.writeAll(['"preserveDataGrouping":', preserveDataGrouping, ','], '');
+      buffer
+          .writeAll(['"preserveDataGrouping":', preserveDataGrouping, ','], '');
     }
     if (text != null) {
       buffer.writeAll(['"text":', jsonEncode(text), ','], '');
@@ -134,5 +125,4 @@ class HighchartsRangeSelectorButtonsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"type":', jsonEncode(type), ','], '');
     }
   }
-
 }

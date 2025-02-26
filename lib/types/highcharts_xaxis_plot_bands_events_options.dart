@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,39 +23,28 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * An object defining mouse events for the plot band. Supported properties
  * are `click`, `mouseover`, `mouseout`, `mousemove`.
  */
 class HighchartsXAxisPlotBandsEventsOptions extends HighchartsOptionsBase {
-
   dynamic click;
   dynamic mousemove;
   dynamic mouseout;
   dynamic mouseover;
 
-
-  HighchartsXAxisPlotBandsEventsOptions({
-    this.click,
-    this.mousemove,
-    this.mouseout,
-    this.mouseover
-  });
+  HighchartsXAxisPlotBandsEventsOptions(
+      {this.click, this.mousemove, this.mouseout, this.mouseover});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (click != null) {
       buffer.writeAll(['"click":', jsonEncode(click), ','], '');
@@ -73,5 +59,4 @@ class HighchartsXAxisPlotBandsEventsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"mouseover":', jsonEncode(mouseover), ','], '');
     }
   }
-
 }

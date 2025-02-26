@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,21 +23,17 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Map to filter frequency in Hertz from 1 to 20,000Hz.
  */
-class HighchartsSonificationDefaultInstrumentMappingLowpassFrequencyOptions extends HighchartsOptionsBase {
-
+class HighchartsSonificationDefaultInstrumentMappingLowpassFrequencyOptions
+    extends HighchartsOptionsBase {
   String? mapFunction;
   String? mapTo;
   double? max;
@@ -48,20 +41,17 @@ class HighchartsSonificationDefaultInstrumentMappingLowpassFrequencyOptions exte
   double? value;
   String? within;
 
-
-  HighchartsSonificationDefaultInstrumentMappingLowpassFrequencyOptions({
-    this.mapFunction,
-    this.mapTo,
-    this.max,
-    this.min,
-    this.value,
-    this.within
-  });
+  HighchartsSonificationDefaultInstrumentMappingLowpassFrequencyOptions(
+      {this.mapFunction,
+      this.mapTo,
+      this.max,
+      this.min,
+      this.value,
+      this.within});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (mapFunction != null) {
       buffer.writeAll(['"mapFunction":', jsonEncode(mapFunction), ','], '');
@@ -82,5 +72,4 @@ class HighchartsSonificationDefaultInstrumentMappingLowpassFrequencyOptions exte
       buffer.writeAll(['"within":', jsonEncode(within), ','], '');
     }
   }
-
 }

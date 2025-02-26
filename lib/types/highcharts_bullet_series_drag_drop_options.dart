@@ -8,19 +8,16 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_bullet_series_drag_drop_drag_handle_options.dart';
 import 'highcharts_series_drag_drop_guide_box_options.dart';
-
 
 /* *
  *
@@ -28,10 +25,8 @@ import 'highcharts_series_drag_drop_guide_box_options.dart';
  *
  * */
 
-
 export 'highcharts_bullet_series_drag_drop_drag_handle_options.dart';
 export 'highcharts_series_drag_drop_guide_box_options.dart';
-
 
 /* *
  *
@@ -39,9 +34,7 @@ export 'highcharts_series_drag_drop_guide_box_options.dart';
  *
  * */
 
-
 class HighchartsBulletSeriesDragDropOptions extends HighchartsOptionsBase {
-
   HighchartsBulletSeriesDragDropDragHandleOptions? dragHandle;
   dynamic dragMaxX;
   double? dragMaxY;
@@ -57,28 +50,25 @@ class HighchartsBulletSeriesDragDropOptions extends HighchartsOptionsBase {
   HighchartsSeriesDragDropGuideBoxOptions? guideBox;
   bool? liveRedraw;
 
-
-  HighchartsBulletSeriesDragDropOptions({
-    this.dragHandle,
-    this.dragMaxX,
-    this.dragMaxY,
-    this.dragMinX,
-    this.dragMinY,
-    this.dragPrecisionX,
-    this.dragPrecisionY,
-    this.dragSensitivity,
-    this.draggableTarget,
-    this.draggableX,
-    this.draggableY,
-    this.groupBy,
-    this.guideBox,
-    this.liveRedraw
-  });
+  HighchartsBulletSeriesDragDropOptions(
+      {this.dragHandle,
+      this.dragMaxX,
+      this.dragMaxY,
+      this.dragMinX,
+      this.dragMinY,
+      this.dragPrecisionX,
+      this.dragPrecisionY,
+      this.dragSensitivity,
+      this.draggableTarget,
+      this.draggableX,
+      this.draggableY,
+      this.groupBy,
+      this.guideBox,
+      this.liveRedraw});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (dragHandle != null) {
       buffer.writeAll(['"dragHandle":', dragHandle?.toJSON(), ','], '');
@@ -123,5 +113,4 @@ class HighchartsBulletSeriesDragDropOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"liveRedraw":', liveRedraw, ','], '');
     }
   }
-
 }

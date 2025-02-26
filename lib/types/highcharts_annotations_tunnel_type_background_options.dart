@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,34 +23,26 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Background options.
  */
-class HighchartsAnnotationsTunnelTypeBackgroundOptions extends HighchartsOptionsBase {
-
+class HighchartsAnnotationsTunnelTypeBackgroundOptions
+    extends HighchartsOptionsBase {
   String? fill;
   double? strokeWidth;
 
-
-  HighchartsAnnotationsTunnelTypeBackgroundOptions({
-    this.fill,
-    this.strokeWidth
-  });
+  HighchartsAnnotationsTunnelTypeBackgroundOptions(
+      {this.fill, this.strokeWidth});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (fill != null) {
       buffer.writeAll(['"fill":', jsonEncode(fill), ','], '');
@@ -62,5 +51,4 @@ class HighchartsAnnotationsTunnelTypeBackgroundOptions extends HighchartsOptions
       buffer.writeAll(['"strokeWidth":', strokeWidth, ','], '');
     }
   }
-
 }

@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_drilldown_drill_up_button_position_options.dart';
-
 
 /* *
  *
@@ -27,16 +24,13 @@ import 'highcharts_drilldown_drill_up_button_position_options.dart';
  *
  * */
 
-
 export 'highcharts_drilldown_drill_up_button_position_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * Options for the drill up button that appears when drilling down on a
@@ -47,22 +41,16 @@ export 'highcharts_drilldown_drill_up_button_position_options.dart';
  * instead.
  */
 class HighchartsDrilldownDrillUpButtonOptions extends HighchartsOptionsBase {
-
   HighchartsDrilldownDrillUpButtonPositionOptions? position;
   String? relativeTo;
   dynamic theme;
 
-
-  HighchartsDrilldownDrillUpButtonOptions({
-    this.position,
-    this.relativeTo,
-    this.theme
-  });
+  HighchartsDrilldownDrillUpButtonOptions(
+      {this.position, this.relativeTo, this.theme});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (position != null) {
       buffer.writeAll(['"position":', position?.toJSON(), ','], '');
@@ -74,5 +62,4 @@ class HighchartsDrilldownDrillUpButtonOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"theme":', jsonEncode(theme), ','], '');
     }
   }
-
 }

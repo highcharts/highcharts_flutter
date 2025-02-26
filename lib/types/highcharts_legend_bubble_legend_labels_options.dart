@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,21 +23,16 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Options for the bubble legend labels.
  */
 class HighchartsLegendBubbleLegendLabelsOptions extends HighchartsOptionsBase {
-
   String? align;
   bool? allowOverlap;
   String? className;
@@ -50,22 +42,19 @@ class HighchartsLegendBubbleLegendLabelsOptions extends HighchartsOptionsBase {
   double? x;
   double? y;
 
-
-  HighchartsLegendBubbleLegendLabelsOptions({
-    this.align,
-    this.allowOverlap,
-    this.className,
-    this.format,
-    this.formatter,
-    this.style,
-    this.x,
-    this.y
-  });
+  HighchartsLegendBubbleLegendLabelsOptions(
+      {this.align,
+      this.allowOverlap,
+      this.className,
+      this.format,
+      this.formatter,
+      this.style,
+      this.x,
+      this.y});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (align != null) {
       buffer.writeAll(['"align":', jsonEncode(align), ','], '');
@@ -96,5 +85,4 @@ class HighchartsLegendBubbleLegendLabelsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"y":', y, ','], '');
     }
   }
-
 }

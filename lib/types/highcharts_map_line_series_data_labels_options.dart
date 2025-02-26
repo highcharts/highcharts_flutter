@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,37 +23,29 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 class HighchartsMapLineSeriesDataLabelsOptions extends HighchartsOptionsBase {
-
   bool? crop;
   bool? inside;
   bool? overflow;
   double? padding;
   String? verticalAlign;
 
-
-  HighchartsMapLineSeriesDataLabelsOptions({
-    this.crop,
-    this.inside,
-    this.overflow,
-    this.padding,
-    this.verticalAlign
-  });
+  HighchartsMapLineSeriesDataLabelsOptions(
+      {this.crop,
+      this.inside,
+      this.overflow,
+      this.padding,
+      this.verticalAlign});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (crop != null) {
       buffer.writeAll(['"crop":', crop, ','], '');
@@ -74,5 +63,4 @@ class HighchartsMapLineSeriesDataLabelsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"verticalAlign":', jsonEncode(verticalAlign), ','], '');
     }
   }
-
 }

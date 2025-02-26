@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -22,25 +20,21 @@ import 'highcharts_sonification_global_tracks_mapping_options.dart';
 import 'highcharts_sonification_default_instrument_active_when_options.dart';
 import 'highcharts_sonification_default_instrument_point_grouping_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_sonification_global_tracks_mapping_options.dart';
 export 'highcharts_sonification_default_instrument_active_when_options.dart';
 export 'highcharts_sonification_default_instrument_point_grouping_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * Context tracks to add globally, an array of either instrument
@@ -49,8 +43,8 @@ export 'highcharts_sonification_default_instrument_point_grouping_options.dart';
  * Context tracks are not tied to data points, but play at a set
  * interval - either based on time or on prop values.
  */
-class HighchartsSonificationGlobalContextTracksOptions extends HighchartsOptionsBase {
-
+class HighchartsSonificationGlobalContextTracksOptions
+    extends HighchartsOptionsBase {
   double? timeInterval;
   double? valueInterval;
   String? valueMapFunction;
@@ -64,26 +58,23 @@ class HighchartsSonificationGlobalContextTracksOptions extends HighchartsOptions
   bool? showPlayMarker;
   String? type;
 
-
-  HighchartsSonificationGlobalContextTracksOptions({
-    this.timeInterval,
-    this.valueInterval,
-    this.valueMapFunction,
-    this.valueProp,
-    this.mapping,
-    this.activeWhen,
-    this.instrument,
-    this.midiName,
-    this.pointGrouping,
-    this.roundToMusicalNotes,
-    this.showPlayMarker,
-    this.type
-  });
+  HighchartsSonificationGlobalContextTracksOptions(
+      {this.timeInterval,
+      this.valueInterval,
+      this.valueMapFunction,
+      this.valueProp,
+      this.mapping,
+      this.activeWhen,
+      this.instrument,
+      this.midiName,
+      this.pointGrouping,
+      this.roundToMusicalNotes,
+      this.showPlayMarker,
+      this.type});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (timeInterval != null) {
       buffer.writeAll(['"timeInterval":', timeInterval, ','], '');
@@ -92,7 +83,8 @@ class HighchartsSonificationGlobalContextTracksOptions extends HighchartsOptions
       buffer.writeAll(['"valueInterval":', valueInterval, ','], '');
     }
     if (valueMapFunction != null) {
-      buffer.writeAll(['"valueMapFunction":', jsonEncode(valueMapFunction), ','], '');
+      buffer.writeAll(
+          ['"valueMapFunction":', jsonEncode(valueMapFunction), ','], '');
     }
     if (valueProp != null) {
       buffer.writeAll(['"valueProp":', jsonEncode(valueProp), ','], '');
@@ -126,5 +118,4 @@ class HighchartsSonificationGlobalContextTracksOptions extends HighchartsOptions
       buffer.writeAll(['"type":', jsonEncode(type), ','], '');
     }
   }
-
 }

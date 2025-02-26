@@ -1,9 +1,6 @@
-
-
 import 'package:flutter/material.dart';
 
 import '../chart_scaffold.dart';
-
 
 /* *
  *
@@ -11,9 +8,7 @@ import '../chart_scaffold.dart';
  *
  * */
 
-
 class OceanDepthChart extends StatelessWidget {
-
   const OceanDepthChart({super.key});
 
   @override
@@ -30,5 +25,4 @@ class OceanDepthChart extends StatelessWidget {
       ],
     );
   }
-
 }

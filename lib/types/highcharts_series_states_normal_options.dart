@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +23,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * The normal state of a series, or for point items in column, pie
@@ -42,22 +35,16 @@ import 'highcharts_options_base.dart';
  * when returning to normal state from hover.
  */
 class HighchartsSeriesStatesNormalOptions extends HighchartsOptionsBase {
-
   dynamic animation;
 
-
-  HighchartsSeriesStatesNormalOptions({
-    this.animation
-  });
+  HighchartsSeriesStatesNormalOptions({this.animation});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (animation != null) {
       buffer.writeAll(['"animation":', jsonEncode(animation), ','], '');
     }
   }
-
 }

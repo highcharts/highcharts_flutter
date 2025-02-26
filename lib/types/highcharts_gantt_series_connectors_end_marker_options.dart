@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,31 +23,22 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
-class HighchartsGanttSeriesConnectorsEndMarkerOptions extends HighchartsOptionsBase {
-
+class HighchartsGanttSeriesConnectorsEndMarkerOptions
+    extends HighchartsOptionsBase {
   String? align;
   bool? enabled;
 
-
-  HighchartsGanttSeriesConnectorsEndMarkerOptions({
-    this.align,
-    this.enabled
-  });
+  HighchartsGanttSeriesConnectorsEndMarkerOptions({this.align, this.enabled});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (align != null) {
       buffer.writeAll(['"align":', jsonEncode(align), ','], '');
@@ -59,5 +47,4 @@ class HighchartsGanttSeriesConnectorsEndMarkerOptions extends HighchartsOptionsB
       buffer.writeAll(['"enabled":', enabled, ','], '');
     }
   }
-
 }

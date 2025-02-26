@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +23,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * A configuration object for the button theme. The object accepts
@@ -43,24 +36,17 @@ import 'highcharts_options_base.dart';
  * `states.select` objects.
  */
 class HighchartsNavigationButtonThemeOptions extends HighchartsOptionsBase {
-
   Map<String, dynamic>? fill;
   double? padding;
   String? stroke;
   String? strokeLinecap;
 
-
-  HighchartsNavigationButtonThemeOptions({
-    this.fill,
-    this.padding,
-    this.stroke,
-    this.strokeLinecap
-  });
+  HighchartsNavigationButtonThemeOptions(
+      {this.fill, this.padding, this.stroke, this.strokeLinecap});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (fill != null) {
       buffer.write('"fill":{');
@@ -76,8 +62,8 @@ class HighchartsNavigationButtonThemeOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"stroke":', jsonEncode(stroke), ','], '');
     }
     if (strokeLinecap != null) {
-      buffer.writeAll(['"stroke-linecap":', jsonEncode(strokeLinecap), ','], '');
+      buffer
+          .writeAll(['"stroke-linecap":', jsonEncode(strokeLinecap), ','], '');
     }
   }
-
 }

@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,33 +23,24 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
-class HighchartsScatterSeriesClusterStatesHoverOptions extends HighchartsOptionsBase {
-
+class HighchartsScatterSeriesClusterStatesHoverOptions
+    extends HighchartsOptionsBase {
   String? fillColor;
 
-
-  HighchartsScatterSeriesClusterStatesHoverOptions({
-    this.fillColor
-  });
+  HighchartsScatterSeriesClusterStatesHoverOptions({this.fillColor});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (fillColor != null) {
       buffer.writeAll(['"fillColor":', jsonEncode(fillColor), ','], '');
     }
   }
-
 }

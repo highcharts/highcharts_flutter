@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -24,13 +22,11 @@ import 'highcharts_bullet_series_data_drag_drop_options.dart';
 import 'highcharts_bullet_series_data_events_options.dart';
 import 'highcharts_bullet_series_data_target_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
-
 
 export 'highcharts_bullet_series_data_accessibility_options.dart';
 export 'highcharts_bullet_series_data_data_labels_options.dart';
@@ -38,13 +34,11 @@ export 'highcharts_bullet_series_data_drag_drop_options.dart';
 export 'highcharts_bullet_series_data_events_options.dart';
 export 'highcharts_bullet_series_data_target_options.dart';
 
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * An array of data points for the series. For the `bullet` series type,
@@ -87,7 +81,6 @@ export 'highcharts_bullet_series_data_target_options.dart';
  *    ```
  */
 class HighchartsBulletSeriesDataOptions extends HighchartsOptionsBase {
-
   HighchartsBulletSeriesDataAccessibilityOptions? accessibility;
   String? borderColor;
   double? borderWidth;
@@ -110,35 +103,32 @@ class HighchartsBulletSeriesDataOptions extends HighchartsOptionsBase {
   dynamic x;
   double? y;
 
-
-  HighchartsBulletSeriesDataOptions({
-    this.accessibility,
-    this.borderColor,
-    this.borderWidth,
-    this.className,
-    this.color,
-    this.colorIndex,
-    this.custom,
-    this.dashStyle,
-    this.dataLabels,
-    this.description,
-    this.dragDrop,
-    this.drilldown,
-    this.events,
-    this.id,
-    this.labelrank,
-    this.pointWidth,
-    this.selected,
-    this.target,
-    this.targetOptions,
-    this.x,
-    this.y
-  });
+  HighchartsBulletSeriesDataOptions(
+      {this.accessibility,
+      this.borderColor,
+      this.borderWidth,
+      this.className,
+      this.color,
+      this.colorIndex,
+      this.custom,
+      this.dashStyle,
+      this.dataLabels,
+      this.description,
+      this.dragDrop,
+      this.drilldown,
+      this.events,
+      this.id,
+      this.labelrank,
+      this.pointWidth,
+      this.selected,
+      this.target,
+      this.targetOptions,
+      this.x,
+      this.y});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (accessibility != null) {
       buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ','], '');
@@ -212,5 +202,4 @@ class HighchartsBulletSeriesDataOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"y":', y, ','], '');
     }
   }
-
 }

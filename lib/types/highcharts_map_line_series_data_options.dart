@@ -8,19 +8,16 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_map_line_series_data_events_options.dart';
 import 'highcharts_map_line_series_data_geometry_options.dart';
-
 
 /* *
  *
@@ -28,17 +25,14 @@ import 'highcharts_map_line_series_data_geometry_options.dart';
  *
  * */
 
-
 export 'highcharts_map_line_series_data_events_options.dart';
 export 'highcharts_map_line_series_data_geometry_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * An array of data points for the series. For the `mapline` series type,
@@ -81,7 +75,6 @@ export 'highcharts_map_line_series_data_geometry_options.dart';
  *  ```
  */
 class HighchartsMapLineSeriesDataOptions extends HighchartsOptionsBase {
-
   String? color;
   dynamic dataLabels;
   HighchartsMapLineSeriesDataEventsOptions? events;
@@ -94,25 +87,22 @@ class HighchartsMapLineSeriesDataOptions extends HighchartsOptionsBase {
   String? path;
   double? value;
 
-
-  HighchartsMapLineSeriesDataOptions({
-    this.color,
-    this.dataLabels,
-    this.events,
-    this.geometry,
-    this.id,
-    this.labelrank,
-    this.lineWidth,
-    this.middleX,
-    this.middleY,
-    this.path,
-    this.value
-  });
+  HighchartsMapLineSeriesDataOptions(
+      {this.color,
+      this.dataLabels,
+      this.events,
+      this.geometry,
+      this.id,
+      this.labelrank,
+      this.lineWidth,
+      this.middleX,
+      this.middleY,
+      this.path,
+      this.value});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (color != null) {
       buffer.writeAll(['"color":', jsonEncode(color), ','], '');
@@ -148,5 +138,4 @@ class HighchartsMapLineSeriesDataOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"value":', value, ','], '');
     }
   }
-
 }

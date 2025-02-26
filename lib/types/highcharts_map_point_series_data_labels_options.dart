@@ -8,18 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
 import 'highcharts_map_point_series_data_labels_style_options.dart';
-
 
 /* *
  *
@@ -27,9 +23,7 @@ import 'highcharts_map_point_series_data_labels_style_options.dart';
  *
  * */
 
-
 export 'highcharts_map_point_series_data_labels_style_options.dart';
-
 
 /* *
  *
@@ -37,28 +31,19 @@ export 'highcharts_map_point_series_data_labels_style_options.dart';
  *
  * */
 
-
 class HighchartsMapPointSeriesDataLabelsOptions extends HighchartsOptionsBase {
-
   bool? crop;
   bool? defer;
   bool? enabled;
   bool? overflow;
   HighchartsMapPointSeriesDataLabelsStyleOptions? style;
 
-
-  HighchartsMapPointSeriesDataLabelsOptions({
-    this.crop,
-    this.defer,
-    this.enabled,
-    this.overflow,
-    this.style
-  });
+  HighchartsMapPointSeriesDataLabelsOptions(
+      {this.crop, this.defer, this.enabled, this.overflow, this.style});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (crop != null) {
       buffer.writeAll(['"crop":', crop, ','], '');
@@ -76,5 +61,4 @@ class HighchartsMapPointSeriesDataLabelsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"style":', style?.toJSON(), ','], '');
     }
   }
-
 }

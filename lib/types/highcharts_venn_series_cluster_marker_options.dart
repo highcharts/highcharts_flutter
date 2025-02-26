@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,21 +23,16 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Options for the cluster marker.
  */
 class HighchartsVennSeriesClusterMarkerOptions extends HighchartsOptionsBase {
-
   String? lineColor;
   double? lineWidth;
   double? radius;
@@ -50,22 +42,19 @@ class HighchartsVennSeriesClusterMarkerOptions extends HighchartsOptionsBase {
   double? height;
   double? width;
 
-
-  HighchartsVennSeriesClusterMarkerOptions({
-    this.lineColor,
-    this.lineWidth,
-    this.radius,
-    this.symbol,
-    this.enabled,
-    this.fillColor,
-    this.height,
-    this.width
-  });
+  HighchartsVennSeriesClusterMarkerOptions(
+      {this.lineColor,
+      this.lineWidth,
+      this.radius,
+      this.symbol,
+      this.enabled,
+      this.fillColor,
+      this.height,
+      this.width});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (lineColor != null) {
       buffer.writeAll(['"lineColor":', jsonEncode(lineColor), ','], '');
@@ -92,5 +81,4 @@ class HighchartsVennSeriesClusterMarkerOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"width":', width, ','], '');
     }
   }
-
 }

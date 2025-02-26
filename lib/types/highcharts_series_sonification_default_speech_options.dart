@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -22,18 +20,15 @@ import 'highcharts_sonification_default_speech_mapping_options.dart';
 import 'highcharts_sonification_default_speech_point_grouping_options.dart';
 import 'highcharts_sonification_default_instrument_active_when_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_sonification_default_speech_mapping_options.dart';
 export 'highcharts_sonification_default_speech_point_grouping_options.dart';
 export 'highcharts_sonification_default_instrument_active_when_options.dart';
-
 
 /* *
  *
@@ -41,12 +36,11 @@ export 'highcharts_sonification_default_instrument_active_when_options.dart';
  *
  * */
 
-
 /**
  * Default options for all this series' speech tracks.
  */
-class HighchartsSeriesSonificationDefaultSpeechOptions extends HighchartsOptionsBase {
-
+class HighchartsSeriesSonificationDefaultSpeechOptions
+    extends HighchartsOptionsBase {
   String? language;
   HighchartsSonificationDefaultSpeechMappingOptions? mapping;
   HighchartsSonificationDefaultSpeechPointGroupingOptions? pointGrouping;
@@ -55,21 +49,18 @@ class HighchartsSeriesSonificationDefaultSpeechOptions extends HighchartsOptions
   HighchartsSonificationDefaultInstrumentActiveWhenOptions? activeWhen;
   bool? showPlayMarker;
 
-
-  HighchartsSeriesSonificationDefaultSpeechOptions({
-    this.language,
-    this.mapping,
-    this.pointGrouping,
-    this.preferredVoice,
-    this.type,
-    this.activeWhen,
-    this.showPlayMarker
-  });
+  HighchartsSeriesSonificationDefaultSpeechOptions(
+      {this.language,
+      this.mapping,
+      this.pointGrouping,
+      this.preferredVoice,
+      this.type,
+      this.activeWhen,
+      this.showPlayMarker});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (language != null) {
       buffer.writeAll(['"language":', jsonEncode(language), ','], '');
@@ -81,7 +72,8 @@ class HighchartsSeriesSonificationDefaultSpeechOptions extends HighchartsOptions
       buffer.writeAll(['"pointGrouping":', pointGrouping?.toJSON(), ','], '');
     }
     if (preferredVoice != null) {
-      buffer.writeAll(['"preferredVoice":', jsonEncode(preferredVoice), ','], '');
+      buffer
+          .writeAll(['"preferredVoice":', jsonEncode(preferredVoice), ','], '');
     }
     if (type != null) {
       buffer.writeAll(['"type":', jsonEncode(type), ','], '');
@@ -93,5 +85,4 @@ class HighchartsSeriesSonificationDefaultSpeechOptions extends HighchartsOptions
       buffer.writeAll(['"showPlayMarker":', showPlayMarker, ','], '');
     }
   }
-
 }

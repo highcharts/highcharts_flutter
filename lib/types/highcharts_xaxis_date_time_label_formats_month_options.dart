@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,31 +23,22 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
-class HighchartsXAxisDateTimeLabelFormatsMonthOptions extends HighchartsOptionsBase {
-
+class HighchartsXAxisDateTimeLabelFormatsMonthOptions
+    extends HighchartsOptionsBase {
   List<dynamic>? list;
   String? main;
 
-
-  HighchartsXAxisDateTimeLabelFormatsMonthOptions({
-    this.list,
-    this.main
-  });
+  HighchartsXAxisDateTimeLabelFormatsMonthOptions({this.list, this.main});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (list != null) {
       buffer.write('"list":[');
@@ -63,5 +51,4 @@ class HighchartsXAxisDateTimeLabelFormatsMonthOptions extends HighchartsOptionsB
       buffer.writeAll(['"main":', jsonEncode(main), ','], '');
     }
   }
-
 }

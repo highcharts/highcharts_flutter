@@ -8,19 +8,16 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_credits_position_options.dart';
 import 'highcharts_credits_style_options.dart';
-
 
 /* *
  *
@@ -28,10 +25,8 @@ import 'highcharts_credits_style_options.dart';
  *
  * */
 
-
 export 'highcharts_credits_position_options.dart';
 export 'highcharts_credits_style_options.dart';
-
 
 /* *
  *
@@ -39,13 +34,11 @@ export 'highcharts_credits_style_options.dart';
  *
  * */
 
-
 /**
  * Highchart by default puts a credits label in the lower right corner
  * of the chart. This can be changed using these options.
  */
 class HighchartsCreditsOptions extends HighchartsOptionsBase {
-
   bool? enabled;
   String? href;
   String? mapText;
@@ -54,21 +47,18 @@ class HighchartsCreditsOptions extends HighchartsOptionsBase {
   HighchartsCreditsStyleOptions? style;
   String? text;
 
-
-  HighchartsCreditsOptions({
-    this.enabled,
-    this.href,
-    this.mapText,
-    this.mapTextFull,
-    this.position,
-    this.style,
-    this.text
-  });
+  HighchartsCreditsOptions(
+      {this.enabled,
+      this.href,
+      this.mapText,
+      this.mapTextFull,
+      this.position,
+      this.style,
+      this.text});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (enabled != null) {
       buffer.writeAll(['"enabled":', enabled, ','], '');
@@ -92,5 +82,4 @@ class HighchartsCreditsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"text":', jsonEncode(text), ','], '');
     }
   }
-
 }

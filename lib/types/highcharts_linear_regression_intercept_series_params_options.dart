@@ -8,17 +8,13 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,33 +22,24 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
-class HighchartsLinearRegressionInterceptSeriesParamsOptions extends HighchartsOptionsBase {
-
+class HighchartsLinearRegressionInterceptSeriesParamsOptions
+    extends HighchartsOptionsBase {
   double? index;
   double? period;
   double? xAxisUnit;
 
-
-  HighchartsLinearRegressionInterceptSeriesParamsOptions({
-    this.index,
-    this.period,
-    this.xAxisUnit
-  });
+  HighchartsLinearRegressionInterceptSeriesParamsOptions(
+      {this.index, this.period, this.xAxisUnit});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (index != null) {
       buffer.writeAll(['"index":', index, ','], '');
@@ -64,5 +51,4 @@ class HighchartsLinearRegressionInterceptSeriesParamsOptions extends HighchartsO
       buffer.writeAll(['"xAxisUnit":', xAxisUnit, ','], '');
     }
   }
-
 }

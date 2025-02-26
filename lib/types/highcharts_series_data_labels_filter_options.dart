@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +23,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * A declarative filter to control of which data labels to display.
@@ -45,22 +38,16 @@ import 'highcharts_options_base.dart';
  * `undefined` to disable a single data label.
  */
 class HighchartsSeriesDataLabelsFilterOptions extends HighchartsOptionsBase {
-
   String? operator;
   String? property;
   double? value;
 
-
-  HighchartsSeriesDataLabelsFilterOptions({
-    this.operator,
-    this.property,
-    this.value
-  });
+  HighchartsSeriesDataLabelsFilterOptions(
+      {this.operator, this.property, this.value});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (operator != null) {
       buffer.writeAll(['"operator":', jsonEncode(operator), ','], '');
@@ -72,5 +59,4 @@ class HighchartsSeriesDataLabelsFilterOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"value":', value, ','], '');
     }
   }
-
 }

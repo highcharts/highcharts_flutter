@@ -8,19 +8,16 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_sunburst_series_levels_color_variation_options.dart';
 import 'highcharts_sunburst_series_levels_data_labels_options.dart';
-
 
 /* *
  *
@@ -28,10 +25,8 @@ import 'highcharts_sunburst_series_levels_data_labels_options.dart';
  *
  * */
 
-
 export 'highcharts_sunburst_series_levels_color_variation_options.dart';
 export 'highcharts_sunburst_series_levels_data_labels_options.dart';
-
 
 /* *
  *
@@ -39,13 +34,11 @@ export 'highcharts_sunburst_series_levels_data_labels_options.dart';
  *
  * */
 
-
 /**
  * Set options on specific levels. Takes precedence over series options,
  * but not point options.
  */
 class HighchartsSunburstSeriesLevelsOptions extends HighchartsOptionsBase {
-
   String? borderColor;
   String? borderDashStyle;
   double? borderWidth;
@@ -56,29 +49,27 @@ class HighchartsSunburstSeriesLevelsOptions extends HighchartsOptionsBase {
   double? level;
   dynamic levelSize;
 
-
-  HighchartsSunburstSeriesLevelsOptions({
-    this.borderColor,
-    this.borderDashStyle,
-    this.borderWidth,
-    this.color,
-    this.colorByPoint,
-    this.colorVariation,
-    this.dataLabels,
-    this.level,
-    this.levelSize
-  });
+  HighchartsSunburstSeriesLevelsOptions(
+      {this.borderColor,
+      this.borderDashStyle,
+      this.borderWidth,
+      this.color,
+      this.colorByPoint,
+      this.colorVariation,
+      this.dataLabels,
+      this.level,
+      this.levelSize});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (borderColor != null) {
       buffer.writeAll(['"borderColor":', jsonEncode(borderColor), ','], '');
     }
     if (borderDashStyle != null) {
-      buffer.writeAll(['"borderDashStyle":', jsonEncode(borderDashStyle), ','], '');
+      buffer.writeAll(
+          ['"borderDashStyle":', jsonEncode(borderDashStyle), ','], '');
     }
     if (borderWidth != null) {
       buffer.writeAll(['"borderWidth":', borderWidth, ','], '');
@@ -102,5 +93,4 @@ class HighchartsSunburstSeriesLevelsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"levelSize":', jsonEncode(levelSize), ','], '');
     }
   }
-
 }

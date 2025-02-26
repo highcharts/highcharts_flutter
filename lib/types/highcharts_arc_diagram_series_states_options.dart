@@ -8,14 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
-
 
 import 'highcharts_options_base.dart';
 import 'highcharts_arc_diagram_series_states_hover_options.dart';
@@ -23,19 +20,16 @@ import 'highcharts_arc_diagram_series_states_inactive_options.dart';
 import 'highcharts_series_states_normal_options.dart';
 import 'highcharts_arc_diagram_series_states_select_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_arc_diagram_series_states_hover_options.dart';
 export 'highcharts_arc_diagram_series_states_inactive_options.dart';
 export 'highcharts_series_states_normal_options.dart';
 export 'highcharts_arc_diagram_series_states_select_options.dart';
-
 
 /* *
  *
@@ -43,26 +37,18 @@ export 'highcharts_arc_diagram_series_states_select_options.dart';
  *
  * */
 
-
 class HighchartsArcDiagramSeriesStatesOptions extends HighchartsOptionsBase {
-
   HighchartsArcDiagramSeriesStatesHoverOptions? hover;
   HighchartsArcDiagramSeriesStatesInactiveOptions? inactive;
   HighchartsSeriesStatesNormalOptions? normal;
   HighchartsArcDiagramSeriesStatesSelectOptions? select;
 
-
-  HighchartsArcDiagramSeriesStatesOptions({
-    this.hover,
-    this.inactive,
-    this.normal,
-    this.select
-  });
+  HighchartsArcDiagramSeriesStatesOptions(
+      {this.hover, this.inactive, this.normal, this.select});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (hover != null) {
       buffer.writeAll(['"hover":', hover?.toJSON(), ','], '');
@@ -77,5 +63,4 @@ class HighchartsArcDiagramSeriesStatesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"select":', select?.toJSON(), ','], '');
     }
   }
-
 }

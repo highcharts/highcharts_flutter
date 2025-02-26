@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -22,18 +20,15 @@ import 'highcharts_xaxis_plot_lines_events_options.dart';
 import 'highcharts_xaxis_plot_lines_label_options.dart';
 import 'highcharts_xaxis_plot_lines_labels_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_xaxis_plot_lines_events_options.dart';
 export 'highcharts_xaxis_plot_lines_label_options.dart';
 export 'highcharts_xaxis_plot_lines_labels_options.dart';
-
 
 /* *
  *
@@ -41,9 +36,7 @@ export 'highcharts_xaxis_plot_lines_labels_options.dart';
  *
  * */
 
-
 class HighchartsYAxisPlotLinesOptions extends HighchartsOptionsBase {
-
   bool? acrossPanes;
   String? className;
   String? color;
@@ -56,25 +49,22 @@ class HighchartsYAxisPlotLinesOptions extends HighchartsOptionsBase {
   double? width;
   double? zIndex;
 
-
-  HighchartsYAxisPlotLinesOptions({
-    this.acrossPanes,
-    this.className,
-    this.color,
-    this.dashStyle,
-    this.events,
-    this.id,
-    this.label,
-    this.labels,
-    this.value,
-    this.width,
-    this.zIndex
-  });
+  HighchartsYAxisPlotLinesOptions(
+      {this.acrossPanes,
+      this.className,
+      this.color,
+      this.dashStyle,
+      this.events,
+      this.id,
+      this.label,
+      this.labels,
+      this.value,
+      this.width,
+      this.zIndex});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (acrossPanes != null) {
       buffer.writeAll(['"acrossPanes":', acrossPanes, ','], '');
@@ -110,5 +100,4 @@ class HighchartsYAxisPlotLinesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"zIndex":', zIndex, ','], '');
     }
   }
-
 }

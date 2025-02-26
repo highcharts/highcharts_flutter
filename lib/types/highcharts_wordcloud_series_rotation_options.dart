@@ -8,17 +8,13 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,36 +22,26 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Rotation options for the words in the wordcloud.
  */
 class HighchartsWordcloudSeriesRotationOptions extends HighchartsOptionsBase {
-
   double? from;
   double? orientations;
   double? to;
 
-
-  HighchartsWordcloudSeriesRotationOptions({
-    this.from,
-    this.orientations,
-    this.to
-  });
+  HighchartsWordcloudSeriesRotationOptions(
+      {this.from, this.orientations, this.to});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (from != null) {
       buffer.writeAll(['"from":', from, ','], '');
@@ -67,5 +53,4 @@ class HighchartsWordcloudSeriesRotationOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"to":', to, ','], '');
     }
   }
-
 }

@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_map_bubble_series_tooltip_options.dart';
-
 
 /* *
  *
@@ -27,16 +24,13 @@ import 'highcharts_map_bubble_series_tooltip_options.dart';
  *
  * */
 
-
 export 'highcharts_map_bubble_series_tooltip_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * A `mapbubble` series. If the [type](#series.mapbubble.type) option
@@ -82,7 +76,6 @@ export 'highcharts_map_bubble_series_tooltip_options.dart';
  *             
  */
 class HighchartsMapBubbleSeriesOptions extends HighchartsOptionsBase {
-
   double? animationLimit;
   String? color;
   bool? displayNegative;
@@ -104,34 +97,31 @@ class HighchartsMapBubbleSeriesOptions extends HighchartsOptionsBase {
   double? zMin;
   double? zThreshold;
 
-
-  HighchartsMapBubbleSeriesOptions({
-    this.animationLimit,
-    this.color,
-    this.displayNegative,
-    this.id,
-    this.index,
-    this.joinBy,
-    this.legendIndex,
-    this.lineColor,
-    this.lineWidth,
-    this.mapData,
-    this.marker,
-    this.maxSize,
-    this.minSize,
-    this.negativeColor,
-    this.sizeBy,
-    this.sizeByAbsoluteValue,
-    this.tooltip,
-    this.zMax,
-    this.zMin,
-    this.zThreshold
-  });
+  HighchartsMapBubbleSeriesOptions(
+      {this.animationLimit,
+      this.color,
+      this.displayNegative,
+      this.id,
+      this.index,
+      this.joinBy,
+      this.legendIndex,
+      this.lineColor,
+      this.lineWidth,
+      this.mapData,
+      this.marker,
+      this.maxSize,
+      this.minSize,
+      this.negativeColor,
+      this.sizeBy,
+      this.sizeByAbsoluteValue,
+      this.tooltip,
+      this.zMax,
+      this.zMin,
+      this.zThreshold});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (animationLimit != null) {
       buffer.writeAll(['"animationLimit":', animationLimit, ','], '');
@@ -202,5 +192,4 @@ class HighchartsMapBubbleSeriesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"zThreshold":', zThreshold, ','], '');
     }
   }
-
 }

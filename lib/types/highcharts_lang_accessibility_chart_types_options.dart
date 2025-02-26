@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,15 +23,11 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * Chart type description strings. This is added to the chart
@@ -46,8 +39,8 @@ import 'highcharts_options_base.dart';
  * series in the chart, and one for multiple series of the same
  * type.
  */
-class HighchartsLangAccessibilityChartTypesOptions extends HighchartsOptionsBase {
-
+class HighchartsLangAccessibilityChartTypesOptions
+    extends HighchartsOptionsBase {
   String? barMultiple;
   String? barSingle;
   String? boxplotMultiple;
@@ -71,36 +64,33 @@ class HighchartsLangAccessibilityChartTypesOptions extends HighchartsOptionsBase
   String? splineSingle;
   String? unknownMap;
 
-
-  HighchartsLangAccessibilityChartTypesOptions({
-    this.barMultiple,
-    this.barSingle,
-    this.boxplotMultiple,
-    this.boxplotSingle,
-    this.bubbleMultiple,
-    this.bubbleSingle,
-    this.columnMultiple,
-    this.columnSingle,
-    this.combinationChart,
-    this.defaultMultiple,
-    this.defaultSingle,
-    this.emptyChart,
-    this.lineMultiple,
-    this.lineSingle,
-    this.mapTypeDescription,
-    this.pieMultiple,
-    this.pieSingle,
-    this.scatterMultiple,
-    this.scatterSingle,
-    this.splineMultiple,
-    this.splineSingle,
-    this.unknownMap
-  });
+  HighchartsLangAccessibilityChartTypesOptions(
+      {this.barMultiple,
+      this.barSingle,
+      this.boxplotMultiple,
+      this.boxplotSingle,
+      this.bubbleMultiple,
+      this.bubbleSingle,
+      this.columnMultiple,
+      this.columnSingle,
+      this.combinationChart,
+      this.defaultMultiple,
+      this.defaultSingle,
+      this.emptyChart,
+      this.lineMultiple,
+      this.lineSingle,
+      this.mapTypeDescription,
+      this.pieMultiple,
+      this.pieSingle,
+      this.scatterMultiple,
+      this.scatterSingle,
+      this.splineMultiple,
+      this.splineSingle,
+      this.unknownMap});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (barMultiple != null) {
       buffer.writeAll(['"barMultiple":', jsonEncode(barMultiple), ','], '');
@@ -109,28 +99,33 @@ class HighchartsLangAccessibilityChartTypesOptions extends HighchartsOptionsBase
       buffer.writeAll(['"barSingle":', jsonEncode(barSingle), ','], '');
     }
     if (boxplotMultiple != null) {
-      buffer.writeAll(['"boxplotMultiple":', jsonEncode(boxplotMultiple), ','], '');
+      buffer.writeAll(
+          ['"boxplotMultiple":', jsonEncode(boxplotMultiple), ','], '');
     }
     if (boxplotSingle != null) {
       buffer.writeAll(['"boxplotSingle":', jsonEncode(boxplotSingle), ','], '');
     }
     if (bubbleMultiple != null) {
-      buffer.writeAll(['"bubbleMultiple":', jsonEncode(bubbleMultiple), ','], '');
+      buffer
+          .writeAll(['"bubbleMultiple":', jsonEncode(bubbleMultiple), ','], '');
     }
     if (bubbleSingle != null) {
       buffer.writeAll(['"bubbleSingle":', jsonEncode(bubbleSingle), ','], '');
     }
     if (columnMultiple != null) {
-      buffer.writeAll(['"columnMultiple":', jsonEncode(columnMultiple), ','], '');
+      buffer
+          .writeAll(['"columnMultiple":', jsonEncode(columnMultiple), ','], '');
     }
     if (columnSingle != null) {
       buffer.writeAll(['"columnSingle":', jsonEncode(columnSingle), ','], '');
     }
     if (combinationChart != null) {
-      buffer.writeAll(['"combinationChart":', jsonEncode(combinationChart), ','], '');
+      buffer.writeAll(
+          ['"combinationChart":', jsonEncode(combinationChart), ','], '');
     }
     if (defaultMultiple != null) {
-      buffer.writeAll(['"defaultMultiple":', jsonEncode(defaultMultiple), ','], '');
+      buffer.writeAll(
+          ['"defaultMultiple":', jsonEncode(defaultMultiple), ','], '');
     }
     if (defaultSingle != null) {
       buffer.writeAll(['"defaultSingle":', jsonEncode(defaultSingle), ','], '');
@@ -145,7 +140,8 @@ class HighchartsLangAccessibilityChartTypesOptions extends HighchartsOptionsBase
       buffer.writeAll(['"lineSingle":', jsonEncode(lineSingle), ','], '');
     }
     if (mapTypeDescription != null) {
-      buffer.writeAll(['"mapTypeDescription":', jsonEncode(mapTypeDescription), ','], '');
+      buffer.writeAll(
+          ['"mapTypeDescription":', jsonEncode(mapTypeDescription), ','], '');
     }
     if (pieMultiple != null) {
       buffer.writeAll(['"pieMultiple":', jsonEncode(pieMultiple), ','], '');
@@ -154,13 +150,15 @@ class HighchartsLangAccessibilityChartTypesOptions extends HighchartsOptionsBase
       buffer.writeAll(['"pieSingle":', jsonEncode(pieSingle), ','], '');
     }
     if (scatterMultiple != null) {
-      buffer.writeAll(['"scatterMultiple":', jsonEncode(scatterMultiple), ','], '');
+      buffer.writeAll(
+          ['"scatterMultiple":', jsonEncode(scatterMultiple), ','], '');
     }
     if (scatterSingle != null) {
       buffer.writeAll(['"scatterSingle":', jsonEncode(scatterSingle), ','], '');
     }
     if (splineMultiple != null) {
-      buffer.writeAll(['"splineMultiple":', jsonEncode(splineMultiple), ','], '');
+      buffer
+          .writeAll(['"splineMultiple":', jsonEncode(splineMultiple), ','], '');
     }
     if (splineSingle != null) {
       buffer.writeAll(['"splineSingle":', jsonEncode(splineSingle), ','], '');
@@ -169,5 +167,4 @@ class HighchartsLangAccessibilityChartTypesOptions extends HighchartsOptionsBase
       buffer.writeAll(['"unknownMap":', jsonEncode(unknownMap), ','], '');
     }
   }
-
 }

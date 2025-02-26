@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,33 +23,24 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
-class HighchartsVennSeriesClusterDataLabelsStyleOptions extends HighchartsOptionsBase {
-
+class HighchartsVennSeriesClusterDataLabelsStyleOptions
+    extends HighchartsOptionsBase {
   String? color;
 
-
-  HighchartsVennSeriesClusterDataLabelsStyleOptions({
-    this.color
-  });
+  HighchartsVennSeriesClusterDataLabelsStyleOptions({this.color});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (color != null) {
       buffer.writeAll(['"color":', jsonEncode(color), ','], '');
     }
   }
-
 }

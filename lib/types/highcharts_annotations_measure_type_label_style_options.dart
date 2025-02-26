@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,34 +23,26 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * CSS styles for the measure label.
  */
-class HighchartsAnnotationsMeasureTypeLabelStyleOptions extends HighchartsOptionsBase {
-
+class HighchartsAnnotationsMeasureTypeLabelStyleOptions
+    extends HighchartsOptionsBase {
   String? color;
   dynamic fontSize;
 
-
-  HighchartsAnnotationsMeasureTypeLabelStyleOptions({
-    this.color,
-    this.fontSize
-  });
+  HighchartsAnnotationsMeasureTypeLabelStyleOptions(
+      {this.color, this.fontSize});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (color != null) {
       buffer.writeAll(['"color":', jsonEncode(color), ','], '');
@@ -62,5 +51,4 @@ class HighchartsAnnotationsMeasureTypeLabelStyleOptions extends HighchartsOption
       buffer.writeAll(['"fontSize":', jsonEncode(fontSize), ','], '');
     }
   }
-
 }

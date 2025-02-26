@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,33 +23,24 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
-class HighchartsSunburstSeriesLevelsDataLabelsStyleOptions extends HighchartsOptionsBase {
-
+class HighchartsSunburstSeriesLevelsDataLabelsStyleOptions
+    extends HighchartsOptionsBase {
   String? textOverflow;
 
-
-  HighchartsSunburstSeriesLevelsDataLabelsStyleOptions({
-    this.textOverflow
-  });
+  HighchartsSunburstSeriesLevelsDataLabelsStyleOptions({this.textOverflow});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (textOverflow != null) {
       buffer.writeAll(['"textOverflow":', jsonEncode(textOverflow), ','], '');
     }
   }
-
 }

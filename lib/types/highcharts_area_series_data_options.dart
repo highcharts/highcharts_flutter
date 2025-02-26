@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -24,13 +22,11 @@ import 'highcharts_area_series_data_drag_drop_options.dart';
 import 'highcharts_area_series_data_events_options.dart';
 import 'highcharts_area_series_data_marker_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
-
 
 export 'highcharts_area_series_data_accessibility_options.dart';
 export 'highcharts_area_series_data_data_labels_options.dart';
@@ -38,13 +34,11 @@ export 'highcharts_area_series_data_drag_drop_options.dart';
 export 'highcharts_area_series_data_events_options.dart';
 export 'highcharts_area_series_data_marker_options.dart';
 
-
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * An array of data points for the series. For the `area` series type,
@@ -90,7 +84,6 @@ export 'highcharts_area_series_data_marker_options.dart';
  *    ```
  */
 class HighchartsAreaSeriesDataOptions extends HighchartsOptionsBase {
-
   HighchartsAreaSeriesDataAccessibilityOptions? accessibility;
   String? className;
   String? color;
@@ -108,30 +101,27 @@ class HighchartsAreaSeriesDataOptions extends HighchartsOptionsBase {
   dynamic x;
   double? y;
 
-
-  HighchartsAreaSeriesDataOptions({
-    this.accessibility,
-    this.className,
-    this.color,
-    this.colorIndex,
-    this.custom,
-    this.dataLabels,
-    this.description,
-    this.dragDrop,
-    this.drilldown,
-    this.events,
-    this.id,
-    this.labelrank,
-    this.marker,
-    this.selected,
-    this.x,
-    this.y
-  });
+  HighchartsAreaSeriesDataOptions(
+      {this.accessibility,
+      this.className,
+      this.color,
+      this.colorIndex,
+      this.custom,
+      this.dataLabels,
+      this.description,
+      this.dragDrop,
+      this.drilldown,
+      this.events,
+      this.id,
+      this.labelrank,
+      this.marker,
+      this.selected,
+      this.x,
+      this.y});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (accessibility != null) {
       buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ','], '');
@@ -190,5 +180,4 @@ class HighchartsAreaSeriesDataOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"y":', y, ','], '');
     }
   }
-
 }

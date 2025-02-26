@@ -8,18 +8,15 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_xaxis_crosshair_label_options.dart';
-
 
 /* *
  *
@@ -27,16 +24,13 @@ import 'highcharts_xaxis_crosshair_label_options.dart';
  *
  * */
 
-
 export 'highcharts_xaxis_crosshair_label_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * Configure a crosshair that follows either the mouse pointer or the
@@ -47,7 +41,6 @@ export 'highcharts_xaxis_crosshair_label_options.dart';
  * `.highcharts-xaxis-category` classes.
  */
 class HighchartsXAxisCrosshairOptions extends HighchartsOptionsBase {
-
   String? className;
   String? color;
   String? dashStyle;
@@ -56,21 +49,18 @@ class HighchartsXAxisCrosshairOptions extends HighchartsOptionsBase {
   double? width;
   double? zIndex;
 
-
-  HighchartsXAxisCrosshairOptions({
-    this.className,
-    this.color,
-    this.dashStyle,
-    this.label,
-    this.snap,
-    this.width,
-    this.zIndex
-  });
+  HighchartsXAxisCrosshairOptions(
+      {this.className,
+      this.color,
+      this.dashStyle,
+      this.label,
+      this.snap,
+      this.width,
+      this.zIndex});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (className != null) {
       buffer.writeAll(['"className":', jsonEncode(className), ','], '');
@@ -94,5 +84,4 @@ class HighchartsXAxisCrosshairOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"zIndex":', zIndex, ','], '');
     }
   }
-
 }

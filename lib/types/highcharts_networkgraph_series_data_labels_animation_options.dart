@@ -8,17 +8,13 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,33 +22,24 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
-class HighchartsNetworkgraphSeriesDataLabelsAnimationOptions extends HighchartsOptionsBase {
-
+class HighchartsNetworkgraphSeriesDataLabelsAnimationOptions
+    extends HighchartsOptionsBase {
   double? defer;
 
-
-  HighchartsNetworkgraphSeriesDataLabelsAnimationOptions({
-    this.defer
-  });
+  HighchartsNetworkgraphSeriesDataLabelsAnimationOptions({this.defer});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (defer != null) {
       buffer.writeAll(['"defer":', defer, ','], '');
     }
   }
-
 }

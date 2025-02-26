@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,31 +23,21 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 class HighchartsPivotPointsSeriesParamsOptions extends HighchartsOptionsBase {
-
   String? algorithm;
   double? period;
 
-
-  HighchartsPivotPointsSeriesParamsOptions({
-    this.algorithm,
-    this.period
-  });
+  HighchartsPivotPointsSeriesParamsOptions({this.algorithm, this.period});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (algorithm != null) {
       buffer.writeAll(['"algorithm":', jsonEncode(algorithm), ','], '');
@@ -59,5 +46,4 @@ class HighchartsPivotPointsSeriesParamsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"period":', period, ','], '');
     }
   }
-
 }

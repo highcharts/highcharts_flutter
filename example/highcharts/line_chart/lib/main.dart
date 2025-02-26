@@ -45,53 +45,49 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             HighchartsChart(HighchartsOptions(
-              title: HighchartsTitleOptions(
-                text: 'U.S Solar Employment Growth',
-                align: 'left',
-              ),
-              subtitle: HighchartsSubtitleOptions(
-                text: 'By Job Category. Source: <a href="https://irecusa.org/programs/solar-jobs-census/" target="_blank">IREC</a>.',
-              ),
-              yAxis: [
-                HighchartsYAxisOptions(
-                  title: HighchartsYAxisTitleOptions(
+                title: HighchartsTitleOptions(
+                  text: 'U.S Solar Employment Growth',
+                  align: 'left',
+                ),
+                subtitle: HighchartsSubtitleOptions(
+                  text:
+                      'By Job Category. Source: <a href="https://irecusa.org/programs/solar-jobs-census/" target="_blank">IREC</a>.',
+                ),
+                yAxis: [
+                  HighchartsYAxisOptions(
+                      title: HighchartsYAxisTitleOptions(
                     text: 'Number of Employees',
                   )),
-              ],
-              xAxis: [
-                HighchartsXAxisOptions(
-                  accessibility: HighchartsXAxisAccessibilityOptions(
+                ],
+                xAxis: [
+                  HighchartsXAxisOptions(
+                      accessibility: HighchartsXAxisAccessibilityOptions(
                     rangeDescription: 'Range: 2010 to 2022',
-                  )
-                ),
-              ],
-              legend: HighchartsLegendOptions(
-                layout: 'horizontal',
-                align: 'center',
-                verticalAlign: 'bottom'
-              ),
-              series: [
-                HighchartsLineSeries(
-                  name: 'Installation & Developers',
-                  data: [
-                    [2010, 43934],
-                    [2011, 48656],
-                    [2012, 65165],
-                    [2013, 81827],
-                    [2014, 112143],
-                    [2015, 142383],
-                    [2016, 171533],
-                    [2017, 165174],
-                    [2018, 155157],
-                    [2019, 161454],
-                    [2020, 154610],
-                    [2021, 168960],
-                    [2022, 171558]
-                  ]
-                ),
-                HighchartsLineSeries(
-                  name: 'Manufacturing',
-                  data: [
+                  )),
+                ],
+                legend: HighchartsLegendOptions(
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom'),
+                series: [
+                  HighchartsLineSeries(
+                      name: 'Installation & Developers',
+                      data: [
+                        [2010, 43934],
+                        [2011, 48656],
+                        [2012, 65165],
+                        [2013, 81827],
+                        [2014, 112143],
+                        [2015, 142383],
+                        [2016, 171533],
+                        [2017, 165174],
+                        [2018, 155157],
+                        [2019, 161454],
+                        [2020, 154610],
+                        [2021, 168960],
+                        [2022, 171558]
+                      ]),
+                  HighchartsLineSeries(name: 'Manufacturing', data: [
                     [2010, 24916],
                     [2011, 37941],
                     [2012, 29742],
@@ -105,11 +101,8 @@ class _MyHomePageState extends State<MyHomePage> {
                     [2020, 31050],
                     [2021, 33099],
                     [2022, 33473]
-                  ]
-                ),
-                HighchartsLineSeries(
-                  name: 'Sales & Distribution',
-                  data: [
+                  ]),
+                  HighchartsLineSeries(name: 'Sales & Distribution', data: [
                     [2010, 11744],
                     [2011, 30000],
                     [2012, 16005],
@@ -123,11 +116,8 @@ class _MyHomePageState extends State<MyHomePage> {
                     [2020, 25663],
                     [2021, 28978],
                     [2022, 30618]
-                  ]
-                ),
-                HighchartsLineSeries(
-                  name: 'Operations & Maintenance',
-                  data: [
+                  ]),
+                  HighchartsLineSeries(name: 'Operations & Maintenance', data: [
                     [2010, null],
                     [2011, null],
                     [2012, null],
@@ -141,32 +131,26 @@ class _MyHomePageState extends State<MyHomePage> {
                     [2020, 10077],
                     [2021, 12530],
                     [2022, 16585]
-                  ]
-              ),
-              HighchartsLineSeries(
-                name: 'Other',
-                data: [
-                  [2010, 21908],
-                  [2011, 5548],
-                  [2012, 8105],
-                  [2013, 11248],
-                  [2014, 8989],
-                  [2015, 11816],
-                  [2016, 18274],
-                  [2017, 17300],
-                  [2018, 13053],
-                  [2019, 11906],
-                  [2020, 10073],
-                  [2021, 11471],
-                  [2022, 11648]
-                ]
-              ),
-            ]))
+                  ]),
+                  HighchartsLineSeries(name: 'Other', data: [
+                    [2010, 21908],
+                    [2011, 5548],
+                    [2012, 8105],
+                    [2013, 11248],
+                    [2014, 8989],
+                    [2015, 11816],
+                    [2016, 18274],
+                    [2017, 17300],
+                    [2018, 13053],
+                    [2019, 11906],
+                    [2020, 10073],
+                    [2021, 11471],
+                    [2022, 11648]
+                  ]),
+                ]))
           ],
         ),
       ),
     );
   }
 }
-
-

@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,31 +23,23 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
-class HighchartsVBPSeriesVolumeDivisionStylesOptions extends HighchartsOptionsBase {
-
+class HighchartsVBPSeriesVolumeDivisionStylesOptions
+    extends HighchartsOptionsBase {
   String? negativeColor;
   String? positiveColor;
 
-
-  HighchartsVBPSeriesVolumeDivisionStylesOptions({
-    this.negativeColor,
-    this.positiveColor
-  });
+  HighchartsVBPSeriesVolumeDivisionStylesOptions(
+      {this.negativeColor, this.positiveColor});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (negativeColor != null) {
       buffer.writeAll(['"negativeColor":', jsonEncode(negativeColor), ','], '');
@@ -59,5 +48,4 @@ class HighchartsVBPSeriesVolumeDivisionStylesOptions extends HighchartsOptionsBa
       buffer.writeAll(['"positiveColor":', jsonEncode(positiveColor), ','], '');
     }
   }
-
 }

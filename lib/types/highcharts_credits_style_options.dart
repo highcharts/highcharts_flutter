@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,36 +23,25 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * CSS styles for the credits label.
  */
 class HighchartsCreditsStyleOptions extends HighchartsOptionsBase {
-
   String? color;
   String? cursor;
   dynamic fontSize;
 
-
-  HighchartsCreditsStyleOptions({
-    this.color,
-    this.cursor,
-    this.fontSize
-  });
+  HighchartsCreditsStyleOptions({this.color, this.cursor, this.fontSize});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (color != null) {
       buffer.writeAll(['"color":', jsonEncode(color), ','], '');
@@ -67,5 +53,4 @@ class HighchartsCreditsStyleOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"fontSize":', jsonEncode(fontSize), ','], '');
     }
   }
-
 }

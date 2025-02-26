@@ -8,18 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
 import 'highcharts_treegraph_series_data_labels_link_text_path_attributes_options.dart';
-
 
 /* *
  *
@@ -27,16 +23,13 @@ import 'highcharts_treegraph_series_data_labels_link_text_path_attributes_option
  *
  * */
 
-
 export 'highcharts_treegraph_series_data_labels_link_text_path_attributes_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * Options for a _link_ label text which should follow link
@@ -46,21 +39,17 @@ export 'highcharts_treegraph_series_data_labels_link_text_path_attributes_option
  * **Note:** Only SVG-based renderer supports this option.
  * Setting `useHTML` to true will disable this option.
  */
-class HighchartsTreegraphSeriesDataLabelsLinkTextPathOptions extends HighchartsOptionsBase {
-
+class HighchartsTreegraphSeriesDataLabelsLinkTextPathOptions
+    extends HighchartsOptionsBase {
   HighchartsTreegraphSeriesDataLabelsLinkTextPathAttributesOptions? attributes;
   bool? enabled;
 
-
-  HighchartsTreegraphSeriesDataLabelsLinkTextPathOptions({
-    this.attributes,
-    this.enabled
-  });
+  HighchartsTreegraphSeriesDataLabelsLinkTextPathOptions(
+      {this.attributes, this.enabled});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (attributes != null) {
       buffer.writeAll(['"attributes":', attributes?.toJSON(), ','], '');
@@ -69,5 +58,4 @@ class HighchartsTreegraphSeriesDataLabelsLinkTextPathOptions extends HighchartsO
       buffer.writeAll(['"enabled":', enabled, ','], '');
     }
   }
-
 }

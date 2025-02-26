@@ -8,18 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
 import 'highcharts_exporting_buttons_context_button_options.dart';
-
 
 /* *
  *
@@ -27,16 +23,13 @@ import 'highcharts_exporting_buttons_context_button_options.dart';
  *
  * */
 
-
 export 'highcharts_exporting_buttons_context_button_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * Options for the export related buttons, print and export. In addition
@@ -45,22 +38,16 @@ export 'highcharts_exporting_buttons_context_button_options.dart';
  * options.
  */
 class HighchartsExportingButtonsOptions extends HighchartsOptionsBase {
-
   HighchartsExportingButtonsContextButtonOptions? contextButton;
 
-
-  HighchartsExportingButtonsOptions({
-    this.contextButton
-  });
+  HighchartsExportingButtonsOptions({this.contextButton});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (contextButton != null) {
       buffer.writeAll(['"contextButton":', contextButton?.toJSON(), ','], '');
     }
   }
-
 }

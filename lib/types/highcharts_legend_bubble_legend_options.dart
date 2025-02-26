@@ -8,19 +8,16 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_legend_bubble_legend_labels_options.dart';
 import 'highcharts_legend_bubble_legend_ranges_options.dart';
-
 
 /* *
  *
@@ -28,17 +25,14 @@ import 'highcharts_legend_bubble_legend_ranges_options.dart';
  *
  * */
 
-
 export 'highcharts_legend_bubble_legend_labels_options.dart';
 export 'highcharts_legend_bubble_legend_ranges_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * The bubble legend is an additional element in legend which
@@ -48,7 +42,6 @@ export 'highcharts_legend_bubble_legend_ranges_options.dart';
  * permitted.
  */
 class HighchartsLegendBubbleLegendOptions extends HighchartsOptionsBase {
-
   String? borderColor;
   double? borderWidth;
   String? className;
@@ -68,32 +61,29 @@ class HighchartsLegendBubbleLegendOptions extends HighchartsOptionsBase {
   double? zIndex;
   double? zThreshold;
 
-
-  HighchartsLegendBubbleLegendOptions({
-    this.borderColor,
-    this.borderWidth,
-    this.className,
-    this.color,
-    this.connectorClassName,
-    this.connectorColor,
-    this.connectorDistance,
-    this.connectorWidth,
-    this.enabled,
-    this.labels,
-    this.legendIndex,
-    this.maxSize,
-    this.minSize,
-    this.ranges,
-    this.sizeBy,
-    this.sizeByAbsoluteValue,
-    this.zIndex,
-    this.zThreshold
-  });
+  HighchartsLegendBubbleLegendOptions(
+      {this.borderColor,
+      this.borderWidth,
+      this.className,
+      this.color,
+      this.connectorClassName,
+      this.connectorColor,
+      this.connectorDistance,
+      this.connectorWidth,
+      this.enabled,
+      this.labels,
+      this.legendIndex,
+      this.maxSize,
+      this.minSize,
+      this.ranges,
+      this.sizeBy,
+      this.sizeByAbsoluteValue,
+      this.zIndex,
+      this.zThreshold});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (borderColor != null) {
       buffer.writeAll(['"borderColor":', jsonEncode(borderColor), ','], '');
@@ -108,10 +98,12 @@ class HighchartsLegendBubbleLegendOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"color":', jsonEncode(color), ','], '');
     }
     if (connectorClassName != null) {
-      buffer.writeAll(['"connectorClassName":', jsonEncode(connectorClassName), ','], '');
+      buffer.writeAll(
+          ['"connectorClassName":', jsonEncode(connectorClassName), ','], '');
     }
     if (connectorColor != null) {
-      buffer.writeAll(['"connectorColor":', jsonEncode(connectorColor), ','], '');
+      buffer
+          .writeAll(['"connectorColor":', jsonEncode(connectorColor), ','], '');
     }
     if (connectorDistance != null) {
       buffer.writeAll(['"connectorDistance":', connectorDistance, ','], '');
@@ -154,5 +146,4 @@ class HighchartsLegendBubbleLegendOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"zThreshold":', zThreshold, ','], '');
     }
   }
-
 }

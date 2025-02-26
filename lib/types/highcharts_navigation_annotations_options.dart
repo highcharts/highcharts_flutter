@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -28,13 +26,11 @@ import 'highcharts_annotations_shapes_options.dart';
 import 'highcharts_annotations_fibonacci_time_zones_options.dart';
 import 'highcharts_annotations_time_cycles_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
-
 
 export 'highcharts_annotations_animation_options.dart';
 export 'highcharts_annotations_control_point_options.dart';
@@ -46,19 +42,16 @@ export 'highcharts_annotations_shapes_options.dart';
 export 'highcharts_annotations_fibonacci_time_zones_options.dart';
 export 'highcharts_annotations_time_cycles_options.dart';
 
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Additional options to be merged into all annotations.
  */
 class HighchartsNavigationAnnotationsOptions extends HighchartsOptionsBase {
-
   HighchartsAnnotationsAnimationOptions? animation;
   HighchartsAnnotationsControlPointOptions? controlPointOptions;
   bool? crop;
@@ -74,34 +67,32 @@ class HighchartsNavigationAnnotationsOptions extends HighchartsOptionsBase {
   HighchartsAnnotationsFibonacciTimeZonesOptions? fibonacciTimeZones;
   HighchartsAnnotationsTimeCyclesOptions? timeCycles;
 
-
-  HighchartsNavigationAnnotationsOptions({
-    this.animation,
-    this.controlPointOptions,
-    this.crop,
-    this.draggable,
-    this.events,
-    this.id,
-    this.labelOptions,
-    this.labels,
-    this.shapeOptions,
-    this.shapes,
-    this.visible,
-    this.zIndex,
-    this.fibonacciTimeZones,
-    this.timeCycles
-  });
+  HighchartsNavigationAnnotationsOptions(
+      {this.animation,
+      this.controlPointOptions,
+      this.crop,
+      this.draggable,
+      this.events,
+      this.id,
+      this.labelOptions,
+      this.labels,
+      this.shapeOptions,
+      this.shapes,
+      this.visible,
+      this.zIndex,
+      this.fibonacciTimeZones,
+      this.timeCycles});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (animation != null) {
       buffer.writeAll(['"animation":', animation?.toJSON(), ','], '');
     }
     if (controlPointOptions != null) {
-      buffer.writeAll(['"controlPointOptions":', controlPointOptions?.toJSON(), ','], '');
+      buffer.writeAll(
+          ['"controlPointOptions":', controlPointOptions?.toJSON(), ','], '');
     }
     if (crop != null) {
       buffer.writeAll(['"crop":', crop, ','], '');
@@ -142,11 +133,11 @@ class HighchartsNavigationAnnotationsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"zIndex":', zIndex, ','], '');
     }
     if (fibonacciTimeZones != null) {
-      buffer.writeAll(['"fibonacciTimeZones":', fibonacciTimeZones?.toJSON(), ','], '');
+      buffer.writeAll(
+          ['"fibonacciTimeZones":', fibonacciTimeZones?.toJSON(), ','], '');
     }
     if (timeCycles != null) {
       buffer.writeAll(['"timeCycles":', timeCycles?.toJSON(), ','], '');
     }
   }
-
 }

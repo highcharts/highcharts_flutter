@@ -8,17 +8,13 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,36 +22,26 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Parameters used in calculation of aroon series points.
  */
 class HighchartsAroonSeriesParamsOptions extends HighchartsOptionsBase {
-
   double? period;
 
-
-  HighchartsAroonSeriesParamsOptions({
-    this.period
-  });
+  HighchartsAroonSeriesParamsOptions({this.period});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (period != null) {
       buffer.writeAll(['"period":', period, ','], '');
     }
   }
-
 }

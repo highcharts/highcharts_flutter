@@ -8,17 +8,13 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
-
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,35 +22,25 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Parameters used in calculation of Percentage Price Oscillator series
  * points.
  */
 class HighchartsPPOSeriesParamsOptions extends HighchartsOptionsBase {
-
   double? index;
   List<double>? periods;
 
-
-  HighchartsPPOSeriesParamsOptions({
-    this.index,
-    this.periods
-  });
+  HighchartsPPOSeriesParamsOptions({this.index, this.periods});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (index != null) {
       buffer.writeAll(['"index":', index, ','], '');
@@ -67,5 +53,4 @@ class HighchartsPPOSeriesParamsOptions extends HighchartsOptionsBase {
       buffer.write('],');
     }
   }
-
 }

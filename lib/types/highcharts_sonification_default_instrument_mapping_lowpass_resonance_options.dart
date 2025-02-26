@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,22 +23,18 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Map to filter resonance in dB. Can be negative to cause a
  * dip, or positive to cause a bump.
  */
-class HighchartsSonificationDefaultInstrumentMappingLowpassResonanceOptions extends HighchartsOptionsBase {
-
+class HighchartsSonificationDefaultInstrumentMappingLowpassResonanceOptions
+    extends HighchartsOptionsBase {
   String? mapFunction;
   String? mapTo;
   double? max;
@@ -49,20 +42,17 @@ class HighchartsSonificationDefaultInstrumentMappingLowpassResonanceOptions exte
   double? value;
   String? within;
 
-
-  HighchartsSonificationDefaultInstrumentMappingLowpassResonanceOptions({
-    this.mapFunction,
-    this.mapTo,
-    this.max,
-    this.min,
-    this.value,
-    this.within
-  });
+  HighchartsSonificationDefaultInstrumentMappingLowpassResonanceOptions(
+      {this.mapFunction,
+      this.mapTo,
+      this.max,
+      this.min,
+      this.value,
+      this.within});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (mapFunction != null) {
       buffer.writeAll(['"mapFunction":', jsonEncode(mapFunction), ','], '');
@@ -83,5 +73,4 @@ class HighchartsSonificationDefaultInstrumentMappingLowpassResonanceOptions exte
       buffer.writeAll(['"within":', jsonEncode(within), ','], '');
     }
   }
-
 }

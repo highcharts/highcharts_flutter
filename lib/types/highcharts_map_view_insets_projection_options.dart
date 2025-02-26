@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,36 +23,26 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * The projection options for the inset.
  */
 class HighchartsMapViewInsetsProjectionOptions extends HighchartsOptionsBase {
-
   String? name;
   List<double>? parallels;
   String? rotation;
 
-
-  HighchartsMapViewInsetsProjectionOptions({
-    this.name,
-    this.parallels,
-    this.rotation
-  });
+  HighchartsMapViewInsetsProjectionOptions(
+      {this.name, this.parallels, this.rotation});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (name != null) {
       buffer.writeAll(['"name":', jsonEncode(name), ','], '');
@@ -71,5 +58,4 @@ class HighchartsMapViewInsetsProjectionOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"rotation":', jsonEncode(rotation), ','], '');
     }
   }
-
 }

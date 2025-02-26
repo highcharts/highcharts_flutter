@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,31 +23,21 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 class HighchartsIKHSeriesChikouLineStylesOptions extends HighchartsOptionsBase {
-
   String? lineColor;
   double? lineWidth;
 
-
-  HighchartsIKHSeriesChikouLineStylesOptions({
-    this.lineColor,
-    this.lineWidth
-  });
+  HighchartsIKHSeriesChikouLineStylesOptions({this.lineColor, this.lineWidth});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (lineColor != null) {
       buffer.writeAll(['"lineColor":', jsonEncode(lineColor), ','], '');
@@ -59,5 +46,4 @@ class HighchartsIKHSeriesChikouLineStylesOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"lineWidth":', lineWidth, ','], '');
     }
   }
-
 }

@@ -8,13 +8,11 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
-
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
@@ -23,26 +21,22 @@ import 'highcharts_lollipop_series_data_data_labels_options.dart';
 import 'highcharts_lollipop_series_data_drag_drop_options.dart';
 import 'highcharts_lollipop_series_data_events_options.dart';
 
-
 /* *
  *
  *  Exports
  *
  * */
 
-
 export 'highcharts_lollipop_series_data_accessibility_options.dart';
 export 'highcharts_lollipop_series_data_data_labels_options.dart';
 export 'highcharts_lollipop_series_data_drag_drop_options.dart';
 export 'highcharts_lollipop_series_data_events_options.dart';
-
 
 /* *
  *
  *  Classes
  *
  * */
-
 
 /**
  * An array of data points for the series. For the `lollipop` series type,
@@ -90,7 +84,6 @@ export 'highcharts_lollipop_series_data_events_options.dart';
  *    ```
  */
 class HighchartsLollipopSeriesDataOptions extends HighchartsOptionsBase {
-
   HighchartsLollipopSeriesDataAccessibilityOptions? accessibility;
   String? className;
   String? color;
@@ -108,30 +101,27 @@ class HighchartsLollipopSeriesDataOptions extends HighchartsOptionsBase {
   bool? selected;
   dynamic x;
 
-
-  HighchartsLollipopSeriesDataOptions({
-    this.accessibility,
-    this.className,
-    this.color,
-    this.colorIndex,
-    this.connectorColor,
-    this.connectorWidth,
-    this.custom,
-    this.dataLabels,
-    this.description,
-    this.dragDrop,
-    this.drilldown,
-    this.events,
-    this.id,
-    this.labelrank,
-    this.selected,
-    this.x
-  });
+  HighchartsLollipopSeriesDataOptions(
+      {this.accessibility,
+      this.className,
+      this.color,
+      this.colorIndex,
+      this.connectorColor,
+      this.connectorWidth,
+      this.custom,
+      this.dataLabels,
+      this.description,
+      this.dragDrop,
+      this.drilldown,
+      this.events,
+      this.id,
+      this.labelrank,
+      this.selected,
+      this.x});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
-
 
     if (accessibility != null) {
       buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ','], '');
@@ -146,7 +136,8 @@ class HighchartsLollipopSeriesDataOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"colorIndex":', colorIndex, ','], '');
     }
     if (connectorColor != null) {
-      buffer.writeAll(['"connectorColor":', jsonEncode(connectorColor), ','], '');
+      buffer
+          .writeAll(['"connectorColor":', jsonEncode(connectorColor), ','], '');
     }
     if (connectorWidth != null) {
       buffer.writeAll(['"connectorWidth":', connectorWidth, ','], '');
@@ -186,5 +177,4 @@ class HighchartsLollipopSeriesDataOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"x":', jsonEncode(x), ','], '');
     }
   }
-
 }

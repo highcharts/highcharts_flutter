@@ -8,17 +8,14 @@
  *
  * */
 
-
 /* *
  *
  *  Imports
  *
  * */
 
-
 import 'dart:convert';
 import 'highcharts_options_base.dart';
-
 
 /* *
  *
@@ -26,39 +23,31 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-
-
-
 /* *
  *
  *  Classes
  *
  * */
 
-
 /**
  * Navigator language options for accessibility.
  */
-class HighchartsLangAccessibilityNavigatorOptions extends HighchartsOptionsBase {
-
+class HighchartsLangAccessibilityNavigatorOptions
+    extends HighchartsOptionsBase {
   String? changeAnnouncement;
   String? groupLabel;
   String? handleLabel;
 
-
-  HighchartsLangAccessibilityNavigatorOptions({
-    this.changeAnnouncement,
-    this.groupLabel,
-    this.handleLabel
-  });
+  HighchartsLangAccessibilityNavigatorOptions(
+      {this.changeAnnouncement, this.groupLabel, this.handleLabel});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-
     if (changeAnnouncement != null) {
-      buffer.writeAll(['"changeAnnouncement":', jsonEncode(changeAnnouncement), ','], '');
+      buffer.writeAll(
+          ['"changeAnnouncement":', jsonEncode(changeAnnouncement), ','], '');
     }
     if (groupLabel != null) {
       buffer.writeAll(['"groupLabel":', jsonEncode(groupLabel), ','], '');
@@ -67,5 +56,4 @@ class HighchartsLangAccessibilityNavigatorOptions extends HighchartsOptionsBase 
       buffer.writeAll(['"handleLabel":', jsonEncode(handleLabel), ','], '');
     }
   }
-
 }
