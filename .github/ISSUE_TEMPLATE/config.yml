@@ -1,5 +1,8 @@
 blank_issues_enabled: true
 contact_links:
+  - name: Highcharts Flutter on pub.dev
+    url: https://pub.dev/packages/highcharts_flutter
+    about: Official package for your project
   - name: Highcharts Documentation
     url: https://highcharts.com/docs
     about: Get started with Highcharts
