@@ -68,7 +68,7 @@ class HighchartsExportingOptions extends HighchartsOptionsBase {
   double? sourceWidth;
   String? tableCaption;
   String? type;
-  String? url;
+  dynamic url;
   bool? useMultiLevelHeaders;
   bool? useRowspanHeaders;
   double? width;

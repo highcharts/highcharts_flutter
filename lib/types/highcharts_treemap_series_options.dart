@@ -135,6 +135,7 @@ class HighchartsTreemapSeriesOptions extends HighchartsOptionsBase {
   HighchartsTreemapSeriesEventsOptions? events;
   String? findNearestPointBy;
   bool? getExtremesFromAll;
+  double? groupPadding;
   String? id;
   bool? ignoreHiddenPoint;
   bool? inactiveOtherPoints;
@@ -153,6 +154,7 @@ class HighchartsTreemapSeriesOptions extends HighchartsOptionsBase {
   String? linecap;
   String? linkedTo;
   String? negativeColor;
+  String? nodeSizeBy;
   HighchartsSeriesOnPointOptions? onPoint;
   double? opacity;
   HighchartsSeriesPointOptions? point;
@@ -219,6 +221,7 @@ class HighchartsTreemapSeriesOptions extends HighchartsOptionsBase {
       this.events,
       this.findNearestPointBy,
       this.getExtremesFromAll,
+      this.groupPadding,
       this.id,
       this.ignoreHiddenPoint,
       this.inactiveOtherPoints,
@@ -237,6 +240,7 @@ class HighchartsTreemapSeriesOptions extends HighchartsOptionsBase {
       this.linecap,
       this.linkedTo,
       this.negativeColor,
+      this.nodeSizeBy,
       this.onPoint,
       this.opacity,
       this.point,
@@ -383,6 +387,9 @@ class HighchartsTreemapSeriesOptions extends HighchartsOptionsBase {
     if (getExtremesFromAll != null) {
       buffer.writeAll(['"getExtremesFromAll":', getExtremesFromAll, ','], '');
     }
+    if (groupPadding != null) {
+      buffer.writeAll(['"groupPadding":', groupPadding, ','], '');
+    }
     if (id != null) {
       buffer.writeAll(['"id":', jsonEncode(id), ','], '');
     }
@@ -449,6 +456,9 @@ class HighchartsTreemapSeriesOptions extends HighchartsOptionsBase {
     }
     if (negativeColor != null) {
       buffer.writeAll(['"negativeColor":', jsonEncode(negativeColor), ','], '');
+    }
+    if (nodeSizeBy != null) {
+      buffer.writeAll(['"nodeSizeBy":', jsonEncode(nodeSizeBy), ','], '');
     }
     if (onPoint != null) {
       buffer.writeAll(['"onPoint":', onPoint?.toJSON(), ','], '');

@@ -1,6 +1,6 @@
 
-name: line_refresh_chart
-description: Line with refresh chart
+name: pictorial_chart
+description: Pictorial chart
 publish_to: 'none'
 
 version: 1.0.0+1
@@ -21,6 +21,4 @@ dev_dependencies:
   flutter_lints: ^2.0.0
 
 flutter:
-  assets:
-    - assets/
   uses-material-design: true

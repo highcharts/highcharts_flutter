@@ -48,7 +48,6 @@ class HighchartsExportingButtonsContextButtonOptions
   String? symbolFill;
   String? titleKey;
   double? x;
-  double? y;
   String? align;
   double? buttonSpacing;
   bool? enabled;
@@ -63,6 +62,7 @@ class HighchartsExportingButtonsContextButtonOptions
   bool? useHTML;
   String? verticalAlign;
   double? width;
+  double? y;
 
   HighchartsExportingButtonsContextButtonOptions(
       {this.className,
@@ -73,7 +73,6 @@ class HighchartsExportingButtonsContextButtonOptions
       this.symbolFill,
       this.titleKey,
       this.x,
-      this.y,
       this.align,
       this.buttonSpacing,
       this.enabled,
@@ -87,7 +86,8 @@ class HighchartsExportingButtonsContextButtonOptions
       this.theme,
       this.useHTML,
       this.verticalAlign,
-      this.width});
+      this.width,
+      this.y});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
@@ -120,9 +120,6 @@ class HighchartsExportingButtonsContextButtonOptions
     }
     if (x != null) {
       buffer.writeAll(['"x":', x, ','], '');
-    }
-    if (y != null) {
-      buffer.writeAll(['"y":', y, ','], '');
     }
     if (align != null) {
       buffer.writeAll(['"align":', jsonEncode(align), ','], '');
@@ -165,6 +162,9 @@ class HighchartsExportingButtonsContextButtonOptions
     }
     if (width != null) {
       buffer.writeAll(['"width":', width, ','], '');
+    }
+    if (y != null) {
+      buffer.writeAll(['"y":', y, ','], '');
     }
   }
 }

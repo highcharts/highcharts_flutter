@@ -33,12 +33,12 @@ export 'highcharts_drilldown_drill_up_button_position_options.dart';
  * */
 
 /**
+ * Drill up button is deprecated since Highcharts v9.3.2. Use
+ * [drilldown.breadcrumbs](#drilldown.breadcrumbs) instead.
+ * 
  * Options for the drill up button that appears when drilling down on a
  * series. The text for the button is defined in
  * [lang.drillUpText](#lang.drillUpText).
- * 
- * This option is deprecated since 9.3.2, use `drilldown.breadcrumbs`
- * instead.
  */
 class HighchartsDrilldownDrillUpButtonOptions extends HighchartsOptionsBase {
   HighchartsDrilldownDrillUpButtonPositionOptions? position;

@@ -62,6 +62,7 @@ class HighchartsTreegraphSeriesLevelsDataLabelsOptions
   HighchartsSeriesDataLabelsFilterOptions? filter;
   String? format;
   dynamic formatter;
+  bool? headers;
   bool? inside;
   String? nullFormat;
   dynamic nullFormatter;
@@ -96,6 +97,7 @@ class HighchartsTreegraphSeriesLevelsDataLabelsOptions
       this.filter,
       this.format,
       this.formatter,
+      this.headers,
       this.inside,
       this.nullFormat,
       this.nullFormatter,
@@ -165,6 +167,9 @@ class HighchartsTreegraphSeriesLevelsDataLabelsOptions
     }
     if (formatter != null) {
       buffer.writeAll(['"formatter":', jsonEncode(formatter), ','], '');
+    }
+    if (headers != null) {
+      buffer.writeAll(['"headers":', headers, ','], '');
     }
     if (inside != null) {
       buffer.writeAll(['"inside":', inside, ','], '');

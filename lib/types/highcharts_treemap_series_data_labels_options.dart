@@ -55,6 +55,7 @@ class HighchartsTreemapSeriesDataLabelsOptions extends HighchartsOptionsBase {
   HighchartsSeriesDataLabelsFilterOptions? filter;
   String? format;
   dynamic formatter;
+  bool? headers;
   bool? inside;
   String? nullFormat;
   dynamic nullFormatter;
@@ -89,6 +90,7 @@ class HighchartsTreemapSeriesDataLabelsOptions extends HighchartsOptionsBase {
       this.filter,
       this.format,
       this.formatter,
+      this.headers,
       this.inside,
       this.nullFormat,
       this.nullFormatter,
@@ -158,6 +160,9 @@ class HighchartsTreemapSeriesDataLabelsOptions extends HighchartsOptionsBase {
     }
     if (formatter != null) {
       buffer.writeAll(['"formatter":', jsonEncode(formatter), ','], '');
+    }
+    if (headers != null) {
+      buffer.writeAll(['"headers":', headers, ','], '');
     }
     if (inside != null) {
       buffer.writeAll(['"inside":', inside, ','], '');

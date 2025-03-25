@@ -97,6 +97,12 @@ class _ChartScaffoldState extends State<ChartScaffold> {
       return;
     }
 
+    if (seriesType == 'Bar') {
+      _chart.options.chart = HighchartsChartOptions(inverted: true);
+    } else {
+      _chart.options.chart = HighchartsChartOptions(inverted: false);
+    }
+
     _chart.options.series = [series(data: widget.data)];
 
     if (init != true) {

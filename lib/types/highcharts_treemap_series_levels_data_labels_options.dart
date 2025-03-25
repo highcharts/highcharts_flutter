@@ -46,8 +46,8 @@ export 'highcharts_series_data_labels_text_path_options.dart';
  */
 class HighchartsTreemapSeriesLevelsDataLabelsOptions
     extends HighchartsOptionsBase {
-  bool? defer;
   bool? enabled;
+  bool? headers;
   bool? inside;
   double? padding;
   HighchartsTreemapSeriesLevelsDataLabelsStyleOptions? style;
@@ -63,6 +63,7 @@ class HighchartsTreemapSeriesLevelsDataLabelsOptions
   String? className;
   String? color;
   bool? crop;
+  bool? defer;
   HighchartsSeriesDataLabelsFilterOptions? filter;
   String? format;
   dynamic formatter;
@@ -80,8 +81,8 @@ class HighchartsTreemapSeriesLevelsDataLabelsOptions
   double? zIndex;
 
   HighchartsTreemapSeriesLevelsDataLabelsOptions(
-      {this.defer,
-      this.enabled,
+      {this.enabled,
+      this.headers,
       this.inside,
       this.padding,
       this.style,
@@ -97,6 +98,7 @@ class HighchartsTreemapSeriesLevelsDataLabelsOptions
       this.className,
       this.color,
       this.crop,
+      this.defer,
       this.filter,
       this.format,
       this.formatter,
@@ -117,11 +119,11 @@ class HighchartsTreemapSeriesLevelsDataLabelsOptions
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
-    if (defer != null) {
-      buffer.writeAll(['"defer":', defer, ','], '');
-    }
     if (enabled != null) {
       buffer.writeAll(['"enabled":', enabled, ','], '');
+    }
+    if (headers != null) {
+      buffer.writeAll(['"headers":', headers, ','], '');
     }
     if (inside != null) {
       buffer.writeAll(['"inside":', inside, ','], '');
@@ -168,6 +170,9 @@ class HighchartsTreemapSeriesLevelsDataLabelsOptions
     }
     if (crop != null) {
       buffer.writeAll(['"crop":', crop, ','], '');
+    }
+    if (defer != null) {
+      buffer.writeAll(['"defer":', defer, ','], '');
     }
     if (filter != null) {
       buffer.writeAll(['"filter":', filter?.toJSON(), ','], '');

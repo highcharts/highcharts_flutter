@@ -20,7 +20,7 @@ import 'package:webview_flutter/webview_flutter.dart';
 import 'package:webview_flutter_android/webview_flutter_android.dart';
 import 'package:webview_flutter_wkwebview/webview_flutter_wkwebview.dart';
 import ''
-    if (dart.library.js_interop) 'package:webview_flutter_web/webview_flutter_web.dart';
+    if (dart.library.js_interop) 'package:highcharts_flutter_webwebview/webview_flutter_web.dart';
 
 import 'types/highcharts_options.dart';
 
@@ -92,12 +92,12 @@ export 'types/highcharts_xrange_series.dart';
  * */
 
 const String kHighchartsChartHTML = '''
-<!DOCTYPE html><html lang="en">
-<head>
+<!DOCTYPE html><html lang="en"><head>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
   <title>Load file or HTML string example</title>
+
   <style>
     html, body, #container {
       background: transparent;
@@ -108,25 +108,14 @@ const String kHighchartsChartHTML = '''
     }
   </style>
 
-</head>
-<body>
-
-  <script src="https://code.highcharts.com/highcharts.js" type="text/javascript"></script>
-  <script src="https://code.highcharts.com/highcharts-more.js" type="text/javascript"></script>
-  <script src="https://code.highcharts.com/highcharts-3d.js" type="text/javascript"></script>
-  <script src="https://code.highcharts.com/modules/solid-gauge.js" type="text/javascript"></script>
-  <script src="https://code.highcharts.com/modules/annotations.js" type="text/javascript"></script>
-  <script src="https://code.highcharts.com/modules/broken-axis.js" type="text/javascript"></script>
-  <script src="https://code.highcharts.com/modules/data.js" type="text/javascript"></script>
-  <script src="https://code.highcharts.com/modules/exporting.js" type="text/javascript"></script>
-  <script src="https://code.highcharts.com/modules/offline-exporting.js" type="text/javascript"></script>
-  <script src="https://code.highcharts.com/modules/accessibility.js" type="text/javascript"></script>
+</head><body>
 
   <div id="container"></div>
 
-</body>
+</body></html>
+''';
 
-  <script type="text/javascript">
+const String kHighchartsChartJS = '''
   (function (scope) {
     scope.HighchartsFlutter = {
       chart: Highcharts.chart('container', {
@@ -156,9 +145,6 @@ const String kHighchartsChartHTML = '''
       }
     };
   })(window);
-  </script>
-
-</html>
 ''';
 
 /* *
@@ -171,7 +157,12 @@ String _scriptTag(String? script) {
   if (script == null) {
     return '';
   }
-
+  if (script.startsWith('//') ||
+      script.startsWith('http://') ||
+      script.startsWith('https://')) {
+    script = script.replaceAll('"', '&quot;');
+    return '<script src="$script" type="text/javascript"></script>';
+  }
   return '<script type="text/javascript">$script</script>';
 }
 
@@ -182,9 +173,15 @@ String _scriptTag(String? script) {
  * */
 
 class HighchartsChart extends StatefulWidget {
-  /// Custom JavaScript to inject into the webView. This will be executed before
-  /// the initial chart update with the defined options.
+  /// Custom JavaScript to inject into the webView. This will be executed after
+  /// Highcharts Flutter code, but before the initial chart update with the
+  /// defined options.
   late final String? javaScript;
+
+  /// JavaScript modules to load; either code or URLs. Defaults to the basic set
+  /// from code.highcharts.com for each product widget. This will be executed
+  /// before Highcharts Flutter code.
+  final List<String> javaScriptModules;
 
   final HighchartsOptions options;
 
@@ -194,22 +191,35 @@ class HighchartsChart extends StatefulWidget {
 
   late final WebViewController webViewController;
 
-  HighchartsChart(this.options, {super.key, this.javaScript});
+  HighchartsChart(this.options,
+      {super.key,
+      this.javaScript,
+      this.javaScriptModules = const [
+        'https://code.highcharts.com/highcharts.js',
+        'https://code.highcharts.com/highcharts-more.js',
+        'https://code.highcharts.com/highcharts-3d.js',
+        'https://code.highcharts.com/modules/solid-gauge.js',
+        'https://code.highcharts.com/modules/annotations.js',
+        'https://code.highcharts.com/modules/broken-axis.js',
+        'https://code.highcharts.com/modules/data.js',
+        'https://code.highcharts.com/modules/exporting.js',
+        'https://code.highcharts.com/modules/offline-exporting.js',
+        'https://code.highcharts.com/modules/accessibility.js',
+      ]});
 
-  void refresh([bool? redraw]) {
+  String _getJS(String json, [bool redraw = true]) {
+    return [
+      ...javaScriptModules,
+      kHighchartsChartJS,
+      javaScript,
+      'HighchartsFlutter.update($json, $redraw);',
+    ].map(_scriptTag).join('\n');
+  }
+
+  void refresh([bool redraw = true]) {
     String json = options.toJSON();
     debugPrint(json);
-    redraw = redraw ?? true;
-    if (kIsWeb) {
-      webViewController.loadHtmlString('''
-        $kHighchartsChartHTML
-        ${_scriptTag(javaScript)}
-        ${_scriptTag('HighchartsFlutter.update($json, $redraw);')}
-        ''');
-    } else {
-      webViewController
-          .runJavaScript('HighchartsFlutter.update($json, $redraw)');
-    }
+    webViewController.runJavaScript('HighchartsFlutter.update($json, $redraw)');
   }
 
   @override
@@ -305,8 +315,7 @@ class _HighchartsChartState extends State<HighchartsChart> {
 
     webViewController.loadHtmlString('''
       $kHighchartsChartHTML
-      ${_scriptTag(widget.javaScript)}
-      ${_scriptTag('HighchartsFlutter.update($json);')}
+      ${widget._getJS(json)}
     ''');
   }
 }

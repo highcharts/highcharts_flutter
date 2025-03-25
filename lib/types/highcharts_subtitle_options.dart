@@ -39,6 +39,7 @@ export 'highcharts_subtitle_style_options.dart';
  * `Chart.setTitle` method.
  */
 class HighchartsSubtitleOptions extends HighchartsOptionsBase {
+  String? align;
   bool? floating;
   HighchartsSubtitleStyleOptions? style;
   String? text;
@@ -48,7 +49,8 @@ class HighchartsSubtitleOptions extends HighchartsOptionsBase {
   double? y;
 
   HighchartsSubtitleOptions(
-      {this.floating,
+      {this.align,
+      this.floating,
       this.style,
       this.text,
       this.useHTML,
@@ -60,6 +62,9 @@ class HighchartsSubtitleOptions extends HighchartsOptionsBase {
   void toOptionsJSON(StringBuffer buffer) {
     super.toOptionsJSON(buffer);
 
+    if (align != null) {
+      buffer.writeAll(['"align":', jsonEncode(align), ','], '');
+    }
     if (floating != null) {
       buffer.writeAll(['"floating":', floating, ','], '');
     }

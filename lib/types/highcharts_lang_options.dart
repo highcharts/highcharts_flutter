@@ -19,6 +19,7 @@ import 'highcharts_options_base.dart';
 import 'highcharts_lang_accessibility_options.dart';
 import 'highcharts_lang_export_data_options.dart';
 import 'highcharts_lang_navigation_options.dart';
+import 'highcharts_lang_range_selector_options.dart';
 import 'highcharts_lang_stock_tools_options.dart';
 
 /* *
@@ -30,6 +31,7 @@ import 'highcharts_lang_stock_tools_options.dart';
 export 'highcharts_lang_accessibility_options.dart';
 export 'highcharts_lang_export_data_options.dart';
 export 'highcharts_lang_navigation_options.dart';
+export 'highcharts_lang_range_selector_options.dart';
 export 'highcharts_lang_stock_tools_options.dart';
 
 /* *
@@ -53,6 +55,7 @@ export 'highcharts_lang_stock_tools_options.dart';
  */
 class HighchartsLangOptions extends HighchartsOptionsBase {
   HighchartsLangAccessibilityOptions? accessibility;
+  String? chartTitle;
   String? contextButtonTitle;
   String? decimalPoint;
   String? downloadCSV;
@@ -76,25 +79,31 @@ class HighchartsLangOptions extends HighchartsOptionsBase {
   String? noData;
   double? numericSymbolMagnitude;
   List<String>? numericSymbols;
+  String? pieSliceName;
   String? playAsSound;
   String? printChart;
+  HighchartsLangRangeSelectorOptions? rangeSelector;
   String? rangeSelectorFrom;
   String? rangeSelectorTo;
   String? rangeSelectorZoom;
   String? resetZoom;
   String? resetZoomTitle;
+  String? seriesName;
   List<String>? shortMonths;
   List<String>? shortWeekdays;
   HighchartsLangStockToolsOptions? stockTools;
   String? thousandsSep;
   String? viewData;
   String? viewFullscreen;
+  String? weekFrom;
   List<String>? weekdays;
+  String? yAxisTitle;
   String? zoomIn;
   String? zoomOut;
 
   HighchartsLangOptions(
       {this.accessibility,
+      this.chartTitle,
       this.contextButtonTitle,
       this.decimalPoint,
       this.downloadCSV,
@@ -118,20 +127,25 @@ class HighchartsLangOptions extends HighchartsOptionsBase {
       this.noData,
       this.numericSymbolMagnitude,
       this.numericSymbols,
+      this.pieSliceName,
       this.playAsSound,
       this.printChart,
+      this.rangeSelector,
       this.rangeSelectorFrom,
       this.rangeSelectorTo,
       this.rangeSelectorZoom,
       this.resetZoom,
       this.resetZoomTitle,
+      this.seriesName,
       this.shortMonths,
       this.shortWeekdays,
       this.stockTools,
       this.thousandsSep,
       this.viewData,
       this.viewFullscreen,
+      this.weekFrom,
       this.weekdays,
+      this.yAxisTitle,
       this.zoomIn,
       this.zoomOut});
 
@@ -141,6 +155,9 @@ class HighchartsLangOptions extends HighchartsOptionsBase {
 
     if (accessibility != null) {
       buffer.writeAll(['"accessibility":', accessibility?.toJSON(), ','], '');
+    }
+    if (chartTitle != null) {
+      buffer.writeAll(['"chartTitle":', jsonEncode(chartTitle), ','], '');
     }
     if (contextButtonTitle != null) {
       buffer.writeAll(
@@ -228,11 +245,17 @@ class HighchartsLangOptions extends HighchartsOptionsBase {
       }
       buffer.write('],');
     }
+    if (pieSliceName != null) {
+      buffer.writeAll(['"pieSliceName":', jsonEncode(pieSliceName), ','], '');
+    }
     if (playAsSound != null) {
       buffer.writeAll(['"playAsSound":', jsonEncode(playAsSound), ','], '');
     }
     if (printChart != null) {
       buffer.writeAll(['"printChart":', jsonEncode(printChart), ','], '');
+    }
+    if (rangeSelector != null) {
+      buffer.writeAll(['"rangeSelector":', rangeSelector?.toJSON(), ','], '');
     }
     if (rangeSelectorFrom != null) {
       buffer.writeAll(
@@ -252,6 +275,9 @@ class HighchartsLangOptions extends HighchartsOptionsBase {
     if (resetZoomTitle != null) {
       buffer
           .writeAll(['"resetZoomTitle":', jsonEncode(resetZoomTitle), ','], '');
+    }
+    if (seriesName != null) {
+      buffer.writeAll(['"seriesName":', jsonEncode(seriesName), ','], '');
     }
     if (shortMonths != null) {
       buffer.write('"shortMonths":[');
@@ -280,12 +306,18 @@ class HighchartsLangOptions extends HighchartsOptionsBase {
       buffer
           .writeAll(['"viewFullscreen":', jsonEncode(viewFullscreen), ','], '');
     }
+    if (weekFrom != null) {
+      buffer.writeAll(['"weekFrom":', jsonEncode(weekFrom), ','], '');
+    }
     if (weekdays != null) {
       buffer.write('"weekdays":[');
       for (var item in weekdays!) {
         buffer.writeAll([jsonEncode(item), ','], '');
       }
       buffer.write('],');
+    }
+    if (yAxisTitle != null) {
+      buffer.writeAll(['"yAxisTitle":', jsonEncode(yAxisTitle), ','], '');
     }
     if (zoomIn != null) {
       buffer.writeAll(['"zoomIn":', jsonEncode(zoomIn), ','], '');

@@ -1,3 +1,11 @@
+## 0.2.0
+
+* Added support for local JavaScript assets.
+* Added pictorial example.
+* Improved chart refresh on web target.
+* Updated example line_refresh_chart example with local JavaScript asset.
+
+
 ## 0.1.1
 
 * Improved formatting of dart code.

@@ -72,53 +72,75 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    _chart = HighchartsChart(
-        HighchartsOptions(
-            chart: HighchartsChartOptions(backgroundColor: '#FFF0'),
-            title: HighchartsTitleOptions(text: 'Hello, World!'),
-            series: [
-              HighchartsLineSeries(
-                  name: 'My First Series',
-                  data: _data,
-                  options: HighchartsLineSeriesOptions(color: '#C60'))
-            ],
-            annotations: [
-              HighchartsAnnotationsOptions(
-                  draggable: '',
-                  labelOptions: HighchartsAnnotationsLabelOptions(
-                      align: 'left', x: 16, y: -24),
-                  labels: [
-                    HighchartsAnnotationsLabelsOptions(
-                        point: {'xAxis': 0, 'yAxis': 0, 'x': 1, 'y': 55.5},
-                        text: 'Hello!')
-                  ])
-            ]),
-        javaScript: '''
-        HighchartsFlutter.update({
-          plotOptions: {
-            series: {
-              tooltip: {
-                headerFormat: '',
-                pointFormatter: function () {
-                  return `Value: \${this.y}<br />Created by custom JS`;
+    var javaScriptModules = (() async => ([
+          await DefaultAssetBundle.of(context)
+              .loadString('assets/highcharts.js')
+        ]))();
+
+    return FutureBuilder<List<String>>(
+        future: javaScriptModules,
+        builder: (context, snapshot) {
+          if (!snapshot.hasData) {
+            return const Text('Loading...');
+          }
+
+          _chart = HighchartsChart(
+              HighchartsOptions(
+                  chart: HighchartsChartOptions(backgroundColor: '#FFF0'),
+                  title: HighchartsTitleOptions(text: 'Hello, World!'),
+                  plotOptions: HighchartsPlotOptions(
+                    series: HighchartsSeriesOptions(
+                      animation: false,
+                    ),
+                  ),
+                  series: [
+                    HighchartsLineSeries(
+                        name: 'My First Series',
+                        data: _data,
+                        options: HighchartsLineSeriesOptions(color: '#C60'))
+                  ],
+                  annotations: [
+                    HighchartsAnnotationsOptions(
+                        draggable: '',
+                        labelOptions: HighchartsAnnotationsLabelOptions(
+                            align: 'left', x: 16, y: -24),
+                        labels: [
+                          HighchartsAnnotationsLabelsOptions(point: {
+                            'xAxis': 0,
+                            'yAxis': 0,
+                            'x': 1,
+                            'y': 55.5
+                          }, text: 'Hello!')
+                        ])
+                  ]),
+              javaScriptModules: snapshot.data!,
+              javaScript: '''
+            HighchartsFlutter.update({
+              plotOptions: {
+                series: {
+                  tooltip: {
+                    headerFormat: '',
+                    pointFormatter: function () {
+                      return `Value: \${this.y}<br />Created by custom JS`;
+                    }
+                  }
                 }
               }
-            }
-          }
-        });
-      ''');
+            });
+          ''');
 
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [Container(child: _chart)],
-        ),
-      ),
-    );
+          return Scaffold(
+            appBar: AppBar(
+              backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+              title: Text(widget.title),
+            ),
+            body: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [Container(child: _chart)],
+              ),
+            ),
+          );
+        });
   }
 }

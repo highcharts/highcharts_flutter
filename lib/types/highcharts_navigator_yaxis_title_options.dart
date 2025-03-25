@@ -33,7 +33,7 @@ export 'highcharts_xaxis_title_style_options.dart';
  * */
 
 class HighchartsNavigatorYAxisTitleOptions extends HighchartsOptionsBase {
-  dynamic text;
+  String? text;
   double? margin;
   String? align;
   double? offset;
