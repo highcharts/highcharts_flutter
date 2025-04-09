@@ -34,23 +34,109 @@ export 'highcharts_series_drag_drop_guide_box_options.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsXRangeSeriesDragDropOptions extends HighchartsOptionsBase {
+  /// Options for the drag handles available in column series.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.xrange.dragDrop.dragHandle
+
   HighchartsXRangeSeriesDragDropDragHandleOptions? dragHandle;
+
+  /// Set the maximum X value the points can be moved to.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.xrange.dragDrop.dragMaxX
+
   dynamic dragMaxX;
+
+  /// Set the maximum Y value the points can be moved to.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.xrange.dragDrop.dragMaxY
+
   double? dragMaxY;
+
+  /// Set the minimum X value the points can be moved to.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.xrange.dragDrop.dragMinX
+
   dynamic dragMinX;
+
+  /// Set the minimum Y value the points can be moved to.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.xrange.dragDrop.dragMinY
+
   double? dragMinY;
+
+  /// The X precision value to drag to for this series. Set to 0 to disable. By
+  /// default this is disabled, except for category axes, where the default is
+  /// `1`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.xrange.dragDrop.dragPrecisionX
+
   double? dragPrecisionX;
+
+  /// The Y precision value to drag to for this series. Set to 0 to disable. By
+  /// default this is disabled, except for category axes, where the default is
+  /// `1`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.xrange.dragDrop.dragPrecisionY
+
   double? dragPrecisionY;
+
+  /// The amount of pixels to drag the pointer before it counts as a drag
+  /// operation. This prevents drag/drop to fire when just clicking or
+  /// selecting points.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.xrange.dragDrop.dragSensitivity
+
   double? dragSensitivity;
+
+  /// Enable dragging in the X dimension.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.xrange.dragDrop.draggableX
+
   bool? draggableX;
+
+  /// Allow x value to be dragged individually.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.xrange.dragDrop.draggableX1
+
   bool? draggableX1;
+
+  /// Allow x2 value to be dragged individually.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.xrange.dragDrop.draggableX2
+
   bool? draggableX2;
+
+  /// Enable dragging in the Y dimension. Note that this is not supported for
+  /// TreeGrid axes (the default axis type in Gantt charts).
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.xrange.dragDrop.draggableY
+
   bool? draggableY;
+
+  /// Group the points by a property. Points with the same property value will
+  /// be grouped together when moving.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.xrange.dragDrop.groupBy
+
   String? groupBy;
+
+  /// Style options for the guide box. The guide box has one state by default,
+  /// the `default` state.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.xrange.dragDrop.guideBox
+
   HighchartsSeriesDragDropGuideBoxOptions? guideBox;
+
+  /// Update points as they are dragged. If false, a guide box is drawn to
+  /// illustrate the new point size.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.xrange.dragDrop.liveRedraw
+
   bool? liveRedraw;
 
+  /// Highcharts Options Widget.
   HighchartsXRangeSeriesDragDropOptions(
       {this.dragHandle,
       this.dragMaxX,

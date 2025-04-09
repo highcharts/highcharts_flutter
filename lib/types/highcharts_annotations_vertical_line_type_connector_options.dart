@@ -29,22 +29,75 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Connector options.
- */
+/// Connector options.
+///
+/// API Docs: https://api.highcharts.com/highcharts/annotations.verticalLine.typeOptions.connector
 class HighchartsAnnotationsVerticalLineTypeConnectorOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   String? markerEnd;
+
+  /// Highcharts Options Widget.
+
   double? strokeWidth;
+
+  /// Name of the dash style to use for the shape's stroke.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.verticalLine.typeOptions.connector.dashStyle
+
   String? dashStyle;
+
+  /// The color of the shape's fill.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.verticalLine.typeOptions.connector.fill
+
   Map<String, dynamic>? fill;
+
+  /// The radius of the shape in y direction.
+  /// Used for the ellipse.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.verticalLine.typeOptions.connector.ry
+
   double? ry;
+
+  /// Defines additional snapping area around an annotation
+  /// making this annotation to focus. Defined in pixels.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.verticalLine.typeOptions.connector.snap
+
   double? snap;
+
+  /// The URL for an image to use as the annotation shape.
+  /// Note, type has to be set to `'image'`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.verticalLine.typeOptions.connector.src
+
   String? src;
+
+  /// The color of the shape's stroke.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.verticalLine.typeOptions.connector.stroke
+
   String? stroke;
+
+  /// The xAxis index to which the points should be attached.
+  /// Used for the ellipse.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.verticalLine.typeOptions.connector.xAxis
+
   double? xAxis;
+
+  /// The yAxis index to which the points should be attached.
+  /// Used for the ellipse.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.verticalLine.typeOptions.connector.yAxis
+
   double? yAxis;
 
+  /// Connector options.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.verticalLine.typeOptions.connector
   HighchartsAnnotationsVerticalLineTypeConnectorOptions(
       {this.markerEnd,
       this.strokeWidth,

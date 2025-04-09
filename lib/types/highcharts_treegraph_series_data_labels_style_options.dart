@@ -29,10 +29,14 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsTreegraphSeriesDataLabelsStyleOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   String? textOverflow;
 
+  /// Highcharts Options Widget.
   HighchartsTreegraphSeriesDataLabelsStyleOptions({this.textOverflow});
 
   @override

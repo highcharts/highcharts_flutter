@@ -28,10 +28,21 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsMomentumSeriesParamsOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   double? index;
+
+  /// The base period for indicator calculations. This is the number of
+  /// data points which are taken into account for the indicator
+  /// calculations.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.momentum.params.period
+
   double? period;
 
+  /// Highcharts Options Widget.
   HighchartsMomentumSeriesParamsOptions({this.index, this.period});
 
   @override

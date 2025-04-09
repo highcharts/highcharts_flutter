@@ -14,7 +14,8 @@
  *
  * */
 
-import 'package:flutter/foundation.dart' show kIsWeb;
+import 'dart:convert' show utf8;
+
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import 'package:webview_flutter_android/webview_flutter_android.dart';
@@ -96,7 +97,7 @@ const String kHighchartsChartHTML = '''
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-  <title>Load file or HTML string example</title>
+  <title>Chart</title>
 
   <style>
     html, body, #container {
@@ -142,6 +143,10 @@ const String kHighchartsChartJS = '''
         } else {
           chart.update(options, redraw, true, animation);
         }
+
+        if (document.title !== chart.title) {
+            document.title = chart.title.textStr;
+        }
       }
     };
   })(window);
@@ -157,13 +162,24 @@ String _scriptTag(String? script) {
   if (script == null) {
     return '';
   }
-  if (script.startsWith('//') ||
-      script.startsWith('http://') ||
-      script.startsWith('https://')) {
-    script = script.replaceAll('"', '&quot;');
-    return '<script src="$script" type="text/javascript"></script>';
+
+  if (!script.startsWith('//') &&
+      !script.startsWith('http://') &&
+      !script.startsWith('https://')) {
+    script = Uri.dataFromString(
+      script,
+      mimeType: 'text/javascript',
+      encoding: utf8,
+    ).toString();
   }
-  return '<script type="text/javascript">$script</script>';
+
+  script = script
+      .replaceAll('&', '&amp;')
+      .replaceAll('"', '&quot;')
+      .replaceAll('<', '&lt;')
+      .replaceAll('>', '&gt;');
+
+  return '<script src="$script" type="text/javascript"></script>';
 }
 
 /* *
@@ -241,7 +257,17 @@ class _HighchartsChartState extends State<HighchartsChart> {
     widget.webView = webView;
     widget.webViewController = webViewController;
 
+    if (height is int) {
+      height = height.toDouble();
+    }
+    if (width is int) {
+      width = width.toDouble();
+    }
+
     if (height is double && width is double) {
+      if (height == 0.0 && width == 0.0) {
+        return SizedBox(child: webView);
+      }
       return SizedBox(
         height: height,
         width: width,

@@ -32,57 +32,58 @@ export 'highcharts_waterfall_series_options.dart';
  *
  * */
 
-/**
- * A `waterfall` series. If the [type](#series.waterfall.type) option
- * is not specified, it is inherited from [chart.type](#chart.type).
- * 
- * Configuration options for the series are given in three levels:
- * 1. Options for all series in a chart are defined in the
- *    [plotOptions.series](plotOptions.series) object.
- * 2. Options for all `waterfall` series are defined in
- *    [plotOptions.waterfall](plotOptions.waterfall).
- * 3. Options for one single series are given in
- *    [the series instance array](series.waterfall).
- * 
- * ```
- * Highcharts.chart('container', {
- *     plotOptions: {
- *         series: {
- *             // general options for all series
- *         },
- *         waterfall: {
- *             // shared options for all waterfall series
- *         }
- *     },
- *     series: [{
- *         // specific options for this series instance
- *         type: 'waterfall'
- *     }]
- * });
- * ```
- * 
- * **TypeScript:**
- * - the [type](series.waterfall.type) option must always be set.
- * - when accessing an array of series, the combined set of all series types is
- *   represented by [Highcharts.SeriesOptionsType
- *   ](/class-reference/Highcharts#.SeriesOptionsType). Narrowing down to the
- *   specific type can be done by checking the `type` property.
- * 
- * ```
- * if (chart.options.series?.[0]?.type === waterfall) {
- *     // code specific to the waterfall series
- * }
- * ```
- *             
- */
+/// A `waterfall` series. If the type option
+/// is not specified, it is inherited from chart.type.
+///
+/// Configuration options for the series are given in three levels:
+/// 1. Options for all series in a chart are defined in the
+///    plotOptions.series object.
+/// 2. Options for all `waterfall` series are defined in
+///    plotOptions.waterfall.
+/// 3. Options for one single series are given in
+///    the series instance array.
+///
+///
+///
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.waterfall
 class HighchartsWaterfallSeries extends HighchartsSeries {
+  /// An array of data points for the series. For the `waterfall` series
+  /// type, points can be given in the following ways:
+  ///
+  /// 1. An array of numerical values. In this case, the numerical values will be
+  ///    interpreted as `y` options. The `x` values will be automatically
+  ///    calculated, either starting at 0 and incremented by 1, or from
+  ///    `pointStart` and `pointInterval` given in the series options. If the axis
+  ///    has categories, these will be used. Example:
+  ///
+  /// 2. An array of arrays with 2 values. In this case, the values correspond to
+  ///    `x,y`. If the first value is a string, it is applied as the name of the
+  ///    point, and the `x` value is inferred.
+  ///
+  /// 3. An array of objects with named values. The following snippet shows only a
+  ///    few settings, see the complete options set below. If the total number of
+  ///    data points exceeds the series'
+  ///    turboThreshold, this option is not
+  ///    available.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.waterfall.data
   List<List<dynamic>>? data;
+
+  /// The name of the series as shown in the legend, tooltip etc.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.waterfall.name
   String? name;
+
+  /// Configuration options for the HighchartsWaterfallSeries.
   HighchartsWaterfallSeriesOptions? options;
   List<dynamic>? points;
   @override
   get type => 'waterfall';
 
+  /// A `waterfall` series. If the type option is not specified, it is inherited from chart.type.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.waterfall
   HighchartsWaterfallSeries({
     this.data,
     this.name,

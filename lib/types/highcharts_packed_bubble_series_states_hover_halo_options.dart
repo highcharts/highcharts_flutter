@@ -29,12 +29,31 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsPackedBubbleSeriesStatesHoverHaloOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   double? size;
+
+  /// A collection of SVG attributes to override the appearance
+  /// of the halo, for example `fill`, `stroke` and
+  /// `stroke-width`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.packedbubble.states.hover.halo.attributes
+
   dynamic attributes;
+
+  /// Opacity for the halo unless a specific fill is overridden
+  /// using the `attributes` setting. Note that Highcharts is
+  /// only able to apply opacity to colors of hex or rgb(a)
+  /// formats.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.packedbubble.states.hover.halo.opacity
+
   double? opacity;
 
+  /// Highcharts Options Widget.
   HighchartsPackedBubbleSeriesStatesHoverHaloOptions(
       {this.size, this.attributes, this.opacity});
 

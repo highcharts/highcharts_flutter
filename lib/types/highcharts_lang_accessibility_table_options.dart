@@ -29,13 +29,21 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Accessibility language options for the data table.
- */
+/// Accessibility language options for the data table.
+///
+/// API Docs: https://api.highcharts.com/highcharts/lang.accessibility.table
 class HighchartsLangAccessibilityTableOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   String? tableSummary;
+
+  /// Highcharts Options Widget.
+
   String? viewAsDataTableButtonText;
 
+  /// Accessibility language options for the data table.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.accessibility.table
   HighchartsLangAccessibilityTableOptions(
       {this.tableSummary, this.viewAsDataTableButtonText});
 

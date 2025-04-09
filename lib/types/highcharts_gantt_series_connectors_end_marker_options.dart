@@ -29,11 +29,18 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsGanttSeriesConnectorsEndMarkerOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   String? align;
+
+  /// Highcharts Options Widget.
+
   bool? enabled;
 
+  /// Highcharts Options Widget.
   HighchartsGanttSeriesConnectorsEndMarkerOptions({this.align, this.enabled});
 
   @override

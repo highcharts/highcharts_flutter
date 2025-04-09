@@ -44,49 +44,157 @@ export 'highcharts_xrange_series_data_partial_fill_options.dart';
  *
  * */
 
-/**
- * An array of data points for the series. For the `xrange` series type,
- * points can be given in the following ways:
- * 
- * 1. An array of objects with named values. The objects are point configuration
- *    objects as seen below.
- *    ```js
- *    data: [{
- *        x: Date.UTC(2017, 0, 1),
- *        x2: Date.UTC(2017, 0, 3),
- *        name: "Test",
- *        y: 0,
- *        color: "#00FF00"
- *    }, {
- *        x: Date.UTC(2017, 0, 4),
- *        x2: Date.UTC(2017, 0, 5),
- *        name: "Deploy",
- *        y: 1,
- *        color: "#FF0000"
- *    }]
- *    ```
- */
+/// An array of data points for the series. For the `xrange` series type,
+/// points can be given in the following ways:
+///
+/// 1. An array of objects with named values. The objects are point configuration
+///    objects as seen below.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.xrange.data
 class HighchartsXRangeSeriesDataOptions extends HighchartsOptionsBase {
+  /// Accessibility options for a data point.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.xrange.data.accessibility
+
   HighchartsXRangeSeriesDataAccessibilityOptions? accessibility;
+
+  /// An additional, individual class name for the data point's graphic
+  /// representation. Changes to a point's color will also be reflected in a
+  /// chart's legend and tooltip.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.xrange.data.className
+
   String? className;
+
+  /// Individual color for the point. By default the color is pulled from
+  /// the global `colors` array.
+  ///
+  /// In styled mode, the `color` option doesn't take effect. Instead, use
+  /// `colorIndex`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.xrange.data.color
+
   String? color;
+
+  /// A specific color index to use for the point, so its graphic representations
+  /// are given the class name `highcharts-color-{n}`. In styled mode this will
+  /// change the color of the graphic. In non-styled mode, the color is set by the
+  /// `fill` attribute, so the change in class name won't have a visual effect by
+  /// default.
+  ///
+  /// Since v11, CSS variables on the form `--highcharts-color-{n}` make changing
+  /// the color scheme very convenient.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.xrange.data.colorIndex
+
   double? colorIndex;
+
+  /// Connect to a point. This option can be either a string, referring to the ID
+  /// of another point, or an object, or an array of either. If the option is an
+  /// array, each element defines a connection.
+  ///
+  /// API Docs: https://api.highcharts.com/gantt/series.xrange.data.connect
+
   List<HighchartsXRangeSeriesDataConnectOptions>? connect;
+
+  /// A reserved subspace to store options and values for customized functionality.
+  /// Here you can add additional data for your own event callbacks and formatter
+  /// callbacks.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.xrange.data.custom
+
   Map<String, dynamic>? custom;
+
+  /// Individual data label for each point. The options are the same as
+  /// the ones for plotOptions.series.dataLabels.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.xrange.data.dataLabels
+
   List<HighchartsXRangeSeriesDataDataLabelsOptions>? dataLabels;
+
+  /// A description of the point to add to the screen reader information
+  /// about the point.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.xrange.data.description
+
   String? description;
+
+  /// Point specific options for the draggable-points module. Overrides options
+  /// on `series.dragDrop`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.xrange.data.dragDrop
+
   HighchartsXRangeSeriesDataDragDropOptions? dragDrop;
+
+  /// The `id` of a series in the drilldown.series array to
+  /// use for a drilldown for this point.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.xrange.data.drilldown
+
   String? drilldown;
+
+  /// The individual point events.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.xrange.data.events
+
   HighchartsXRangeSeriesDataEventsOptions? events;
+
+  /// An id for the point. This can be used after render time to get a
+  /// pointer to the point object through `chart.get()`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.xrange.data.id
+
   String? id;
+
+  /// The rank for this point's data label in case of collision. If two
+  /// data labels are about to overlap, only the one with the highest `labelrank`
+  /// will be drawn.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.xrange.data.labelrank
+
   double? labelrank;
+
+  /// Options for the point markers of line-like series.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.xrange.data.marker
+
   HighchartsXRangeSeriesDataMarkerOptions? marker;
+
+  /// A partial fill for each point, typically used to visualize how much of
+  /// a task is performed. The partial fill object can be set either on series
+  /// or point level.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.xrange.data.partialFill
+
   HighchartsXRangeSeriesDataPartialFillOptions? partialFill;
+
+  /// Whether the data point is selected initially.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.xrange.data.selected
+
   bool? selected;
+
+  /// The starting X value of the range point.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.xrange.data.x
+
   double? x;
+
+  /// The ending X value of the range point.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.xrange.data.x2
+
   double? x2;
+
+  /// The Y value of the range point.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.xrange.data.y
+
   double? y;
 
+  /// An array of data points for the series. For the `xrange` series type, points can be given in the following ways:
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.xrange.data
   HighchartsXRangeSeriesDataOptions(
       {this.accessibility,
       this.className,

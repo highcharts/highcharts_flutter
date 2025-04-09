@@ -36,20 +36,96 @@ export 'highcharts_sonification_default_instrument_point_grouping_options.dart';
  *
  * */
 
-/**
- * Default options for all this series' instrument tracks.
- */
+/// Default options for all this series' instrument tracks.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.zigzag.sonification.defaultInstrumentOptions
 class HighchartsSeriesSonificationDefaultInstrumentOptions
     extends HighchartsOptionsBase {
+  /// Define a condition for when a track should be active and not.
+  ///
+  /// Can either be a function callback or a configuration object.
+  ///
+  /// If a function is used, it should return a `boolean` for whether
+  /// or not the track should be active. The function is called for
+  /// each audio event, and receives a parameter object with `time`,
+  /// and potentially `point` and `value` properties depending on the
+  /// track. `point` is available if the audio event is related to a
+  /// data point. `value` is available if the track is used as a
+  /// context track, and `valueInterval` is used.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.sonification.defaultInstrumentOptions.activeWhen
+
   HighchartsSonificationDefaultInstrumentActiveWhenOptions? activeWhen;
+
+  /// Instrument to use for playing.
+  ///
+  /// Can either be a string referencing a synth preset, or it can be
+  /// a synth configuration object.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.sonification.defaultInstrumentOptions.instrument
+
   Map<String, dynamic>? instrument;
+
+  /// Mapping options for the audio parameters.
+  ///
+  /// All parameters can be either:
+  ///  - A string, referencing a point property to map to.
+  ///  - A number, setting the value of the audio parameter directly.
+  ///  - A callback function, returning the value programmatically.
+  ///  - An object defining detailed configuration of the mapping.
+  ///
+  /// If a function is used, it should return the desired value for
+  /// the audio parameter. The function is called for each audio event
+  /// to be played, and receives a context object parameter with
+  /// `time`, and potentially `point` and `value` depending on the
+  /// track. `point` is available if the audio event is related to a
+  /// data point, and `value` is available if the track is used for a
+  /// context track using `valueInterval`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.sonification.defaultInstrumentOptions.mapping
+
   HighchartsSonificationDefaultInstrumentMappingOptions? mapping;
+
+  /// Name to use for a track when exporting to MIDI.
+  /// By default it uses the series name if the track is related to
+  /// a series.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.sonification.defaultInstrumentOptions.midiName
+
   String? midiName;
+
+  /// Options for point grouping, specifically for instrument tracks.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.sonification.defaultInstrumentOptions.pointGrouping
+
   HighchartsSonificationDefaultInstrumentPointGroupingOptions? pointGrouping;
+
+  /// Round pitch mapping to musical notes.
+  ///
+  /// If `false`, will play the exact mapped note, even if it is out
+  /// of tune compared to the musical notes as defined by 440Hz
+  /// standard tuning.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.sonification.defaultInstrumentOptions.roundToMusicalNotes
+
   bool? roundToMusicalNotes;
+
+  /// Show play marker (tooltip and/or crosshair) for a track.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.sonification.defaultInstrumentOptions.showPlayMarker
+
   bool? showPlayMarker;
+
+  /// Type of track. Always `"instrument"` for instrument tracks, and
+  /// `"speech"` for speech tracks.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.sonification.defaultInstrumentOptions.type
+
   String? type;
 
+  /// Default options for all this series' instrument tracks.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.sonification.defaultInstrumentOptions
   HighchartsSeriesSonificationDefaultInstrumentOptions(
       {this.activeWhen,
       this.instrument,

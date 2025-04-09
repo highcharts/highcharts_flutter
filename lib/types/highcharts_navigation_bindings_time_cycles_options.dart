@@ -29,15 +29,20 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * A time cycles annotation bindings. Includes `start` event and 1 `step`
- * event. first click marks the beginning of the circle, and the second one
- * sets its diameter.
- */
+/// A time cycles annotation bindings. Includes `start` event and 1 `step`
+/// event. first click marks the beginning of the circle, and the second one
+/// sets its diameter.
+///
+/// API Docs: https://api.highcharts.com/highstock/navigation.bindings.timeCycles
 class HighchartsNavigationBindingsTimeCyclesOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   String? className;
 
+  /// A time cycles annotation bindings. Includes `start` event and 1 `step` event. first click marks the beginning of the circle, and the second one sets its diameter.
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/navigation.bindings.timeCycles
   HighchartsNavigationBindingsTimeCyclesOptions({this.className});
 
   @override

@@ -29,10 +29,14 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsSunburstSeriesLevelsDataLabelsStyleOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   String? textOverflow;
 
+  /// Highcharts Options Widget.
   HighchartsSunburstSeriesLevelsDataLabelsStyleOptions({this.textOverflow});
 
   @override

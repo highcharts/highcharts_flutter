@@ -29,10 +29,17 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsGanttSeriesTooltipOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   String? headerFormat;
+
+  /// Highcharts Options Widget.
+
   dynamic pointFormat;
 
+  /// Highcharts Options Widget.
   HighchartsGanttSeriesTooltipOptions({this.headerFormat, this.pointFormat});
 
   @override

@@ -28,9 +28,15 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsMapLineSeriesStatesHoverOptions extends HighchartsOptionsBase {
+  /// Pixel width of the mapline line.
+  ///
+  /// API Docs: https://api.highcharts.com/highmaps/series.mapline.states.hover.lineWidth
+
   double? lineWidth;
 
+  /// Highcharts Options Widget.
   HighchartsMapLineSeriesStatesHoverOptions({this.lineWidth});
 
   @override

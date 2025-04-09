@@ -33,13 +33,21 @@ export 'highcharts_macdseries_macd_line_zones_options.dart';
  *
  * */
 
-/**
- * The styles for macd line
- */
+/// The styles for macd line
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.macd.macdLine
 class HighchartsMACDSeriesMacdLineOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   HighchartsMACDSeriesMacdLineStylesOptions? styles;
+
+  /// Highcharts Options Widget.
+
   HighchartsMACDSeriesMacdLineZonesOptions? zones;
 
+  /// The styles for macd line
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.macd.macdLine
   HighchartsMACDSeriesMacdLineOptions({this.styles, this.zones});
 
   @override

@@ -28,13 +28,20 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Accessibility options for the navigator. Requires the
- * Accessibility module.
- */
+/// Accessibility options for the navigator. Requires the
+/// Accessibility module.
+///
+/// API Docs: https://api.highcharts.com/highcharts/navigator.accessibility
 class HighchartsNavigatorAccessibilityOptions extends HighchartsOptionsBase {
+  /// Enable accessibility support for the navigator.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/navigator.accessibility.enabled
+
   bool? enabled;
 
+  /// Accessibility options for the navigator. Requires the Accessibility module.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/navigator.accessibility
   HighchartsNavigatorAccessibilityOptions({this.enabled});
 
   @override

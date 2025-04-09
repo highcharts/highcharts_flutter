@@ -29,10 +29,25 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsADSeriesParamsOptions extends HighchartsOptionsBase {
+  /// The base period for indicator calculations. This is the number of
+  /// data points which are taken into account for the indicator
+  /// calculations.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.ad.params.period
+
   double? period;
+
+  /// The id of volume series which is mandatory.
+  /// For example using OHLC data, volumeSeriesID='volume' means
+  /// the indicator will be calculated using OHLC and volume values.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.ad.params.volumeSeriesID
+
   String? volumeSeriesID;
 
+  /// Highcharts Options Widget.
   HighchartsADSeriesParamsOptions({this.period, this.volumeSeriesID});
 
   @override

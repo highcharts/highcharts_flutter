@@ -29,13 +29,25 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Styles for the +DI line.
- */
+/// Styles for the +DI line.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.dmi.plusDILine.styles
 class HighchartsDMISeriesPlusDILineStylesOptions extends HighchartsOptionsBase {
+  /// Color of the line.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.dmi.plusDILine.styles.lineColor
+
   String? lineColor;
+
+  /// Pixel width of the line.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.dmi.plusDILine.styles.lineWidth
+
   double? lineWidth;
 
+  /// Styles for the +DI line.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.dmi.plusDILine.styles
   HighchartsDMISeriesPlusDILineStylesOptions({this.lineColor, this.lineWidth});
 
   @override

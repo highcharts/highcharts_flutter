@@ -31,14 +31,21 @@ export 'highcharts_sunburst_series_traverse_up_button_position_options.dart';
  *
  * */
 
-/**
- * Options for the button appearing when traversing down in a sunburst.
- * Since v9.3.3 the `traverseUpButton` is replaced by `breadcrumbs`.
- */
+/// Options for the button appearing when traversing down in a sunburst.
+/// Since v9.3.3 the `traverseUpButton` is replaced by `breadcrumbs`.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.sunburst.traverseUpButton
 class HighchartsSunburstSeriesTraverseUpButtonOptions
     extends HighchartsOptionsBase {
+  /// The position of the button.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.sunburst.traverseUpButton.position
+
   HighchartsSunburstSeriesTraverseUpButtonPositionOptions? position;
 
+  /// Options for the button appearing when traversing down in a sunburst. Since v9.3.3 the `traverseUpButton` is replaced by `breadcrumbs`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.sunburst.traverseUpButton
   HighchartsSunburstSeriesTraverseUpButtonOptions({this.position});
 
   @override

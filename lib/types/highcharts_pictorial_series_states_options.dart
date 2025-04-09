@@ -37,12 +37,37 @@ export 'highcharts_pictorial_series_states_select_options.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsPictorialSeriesStatesOptions extends HighchartsOptionsBase {
+  /// Options for the hovered point. These settings override the normal
+  /// state options when a point is moused over or touched.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.pictorial.states.hover
+
   HighchartsPictorialSeriesStatesHoverOptions? hover;
+
+  /// The opposite state of a hover for series.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.pictorial.states.inactive
+
   HighchartsSeriesStatesInactiveOptions? inactive;
+
+  /// The normal state of a series, or for point items in column, pie
+  /// and similar series. Currently only used for setting animation
+  /// when returning to normal state from hover.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.pictorial.states.normal
+
   HighchartsSeriesStatesNormalOptions? normal;
+
+  /// Options for the selected point. These settings override the
+  /// normal state options when a point is selected.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.pictorial.states.select
+
   HighchartsPictorialSeriesStatesSelectOptions? select;
 
+  /// Highcharts Options Widget.
   HighchartsPictorialSeriesStatesOptions(
       {this.hover, this.inactive, this.normal, this.select});
 

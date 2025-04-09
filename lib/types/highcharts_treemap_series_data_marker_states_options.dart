@@ -35,12 +35,26 @@ export 'highcharts_treemap_series_data_marker_states_select_options.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsTreemapSeriesDataMarkerStatesOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   HighchartsTreemapSeriesDataMarkerStatesHoverOptions? hover;
+
+  /// The normal state of a single point marker. Currently only
+  /// used for setting animation when returning to normal state
+  /// from hover.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.treemap.data.marker.states.normal
+
   HighchartsSeriesMarkerStatesNormalOptions? normal;
+
+  /// Highcharts Options Widget.
+
   HighchartsTreemapSeriesDataMarkerStatesSelectOptions? select;
 
+  /// Highcharts Options Widget.
   HighchartsTreemapSeriesDataMarkerStatesOptions(
       {this.hover, this.normal, this.select});
 

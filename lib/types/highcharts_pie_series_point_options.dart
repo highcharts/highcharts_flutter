@@ -31,9 +31,13 @@ export 'highcharts_pie_series_point_events_options.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsPieSeriesPointOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   HighchartsPieSeriesPointEventsOptions? events;
 
+  /// Highcharts Options Widget.
   HighchartsPieSeriesPointOptions({this.events});
 
   @override

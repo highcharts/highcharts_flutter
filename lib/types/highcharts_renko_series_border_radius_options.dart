@@ -29,9 +29,13 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsRenkoSeriesBorderRadiusOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   String? where;
 
+  /// Highcharts Options Widget.
   HighchartsRenkoSeriesBorderRadiusOptions({this.where});
 
   @override

@@ -38,71 +38,156 @@ export 'highcharts_geo_heatmap_series_tooltip_options.dart';
  *
  * */
 
-/**
- * A `geoheatmap` series. If the [type](#series.map.type) option is not
- * specified, it is inherited from [chart.type](#chart.type).
- * 
- * Configuration options for the series are given in three levels:
- * 1. Options for all series in a chart are defined in the
- *    [plotOptions.series](plotOptions.series) object.
- * 2. Options for all `geoheatmap` series are defined in
- *    [plotOptions.geoheatmap](plotOptions.geoheatmap).
- * 3. Options for one single series are given in
- *    [the series instance array](series.geoheatmap).
- * 
- * ```
- * Highcharts.chart('container', {
- *     plotOptions: {
- *         series: {
- *             // general options for all series
- *         },
- *         geoheatmap: {
- *             // shared options for all geoheatmap series
- *         }
- *     },
- *     series: [{
- *         // specific options for this series instance
- *         type: 'geoheatmap'
- *     }]
- * });
- * ```
- * 
- * **TypeScript:**
- * - the [type](series.geoheatmap.type) option must always be set.
- * - when accessing an array of series, the combined set of all series types is
- *   represented by [Highcharts.SeriesOptionsType
- *   ](/class-reference/Highcharts#.SeriesOptionsType). Narrowing down to the
- *   specific type can be done by checking the `type` property.
- * 
- * ```
- * if (chart.options.series?.[0]?.type === geoheatmap) {
- *     // code specific to the geoheatmap series
- * }
- * ```
- *             
- */
+/// A `geoheatmap` series. If the type option is not
+/// specified, it is inherited from chart.type.
+///
+/// Configuration options for the series are given in three levels:
+/// 1. Options for all series in a chart are defined in the
+///    plotOptions.series object.
+/// 2. Options for all `geoheatmap` series are defined in
+///    plotOptions.geoheatmap.
+/// 3. Options for one single series are given in
+///    the series instance array.
+///
+///
+///
+///
+/// API Docs: https://api.highcharts.com/highmaps/series.geoheatmap
 class HighchartsGeoHeatmapSeriesOptions extends HighchartsOptionsBase {
+  /// Whether the MapView takes this series into account when computing the
+  /// default zoom and center of the map.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.geoheatmap.affectsMapView
+
   bool? affectsMapView;
+
+  /// Highcharts Options Widget.
+
   bool? animation;
+
+  /// The border width of each geoheatmap tile.
+  ///
+  /// In styled mode, the border stroke width is given in the
+  /// `.highcharts-point` class.
+  ///
+  /// API Docs: https://api.highcharts.com/highmaps/series.geoheatmap.borderWidth
+
   double? borderWidth;
+
+  /// The main color of the series. In heat maps this color is rarely
+  /// used, as we mostly use the color to denote the value of each
+  /// point. Unless options are set in the colorAxis, the
+  /// default value is pulled from the options.colors array.
+  ///
+  /// API Docs: https://api.highcharts.com/highmaps/series.geoheatmap.color
+
   String? color;
+
+  /// When using automatic point colors pulled from the global
+  /// colors or series-specific
+  /// plotOptions.map.colors collections, this option
+  /// determines whether the chart should receive one color per series or
+  /// one color per point.
+  ///
+  /// In styled mode, the `colors` or `series.colors` arrays are not
+  /// supported, and instead this option gives the points individual color
+  /// class names on the form `highcharts-color-{n}`.
+  ///
+  /// API Docs: https://api.highcharts.com/highmaps/series.geoheatmap.colorByPoint
+
   bool? colorByPoint;
+
+  /// Highcharts Options Widget.
+
   String? colorKey;
+
+  /// A series specific or series type specific color set to apply instead
+  /// of the global colors when colorByPoint is true.
+  ///
+  /// API Docs: https://api.highcharts.com/highmaps/series.geoheatmap.colors
+
   List<dynamic>? colors;
+
+  /// The column size - how many longitude units each column in the
+  /// geoheatmap should span.
+  ///
+  /// API Docs: https://api.highcharts.com/highmaps/series.geoheatmap.colsize
+
   double? colsize;
+
+  /// Highcharts Options Widget.
+
   HighchartsGeoHeatmapSeriesDataLabelsOptions? dataLabels;
+
+  /// An id for the series. This can be used after render time to get a pointer
+  /// to the series object through `chart.get()`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.geoheatmap.id
+
   String? id;
+
+  /// The index of the series in the chart, affecting the internal index in the
+  /// `chart.series` array, the visible Z index as well as the order in the
+  /// legend.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.geoheatmap.index
+
   double? index;
+
+  /// Make the geoheatmap render its data points as an interpolated
+  /// image. It can be used to show a Temperature Map-like charts.
+  ///
+  /// API Docs: https://api.highcharts.com/highmaps/series.geoheatmap.interpolation
+
   HighchartsGeoHeatmapSeriesInterpolationOptions? interpolation;
+
+  /// The sequential index of the series in the legend.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.geoheatmap.legendIndex
+
   double? legendIndex;
+
+  /// Highcharts Options Widget.
+
   String? legendSymbol;
+
+  /// The SVG value used for the `stroke-linecap` and `stroke-linejoin` of
+  /// the map borders. Round means that borders are rounded in the ends and
+  /// bends.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.geoheatmap.linecap
+
   String? linecap;
+
+  /// Highcharts Options Widget.
+
   String? nullColor;
+
+  /// Whether to allow pointer interaction like tooltips and mouse events
+  /// on null points.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.geoheatmap.nullInteraction
+
   bool? nullInteraction;
+
+  /// The rowsize size - how many latitude units each row in the
+  /// geoheatmap should span.
+  ///
+  /// API Docs: https://api.highcharts.com/highmaps/series.geoheatmap.rowsize
+
   double? rowsize;
+
+  /// Highcharts Options Widget.
+
   HighchartsGeoHeatmapSeriesStatesOptions? states;
+
+  /// Highcharts Options Widget.
+
   HighchartsGeoHeatmapSeriesTooltipOptions? tooltip;
 
+  /// A `geoheatmap` series. If the type option is not specified, it is inherited from chart.type.
+  ///
+  /// API Docs: https://api.highcharts.com/highmaps/series.geoheatmap
   HighchartsGeoHeatmapSeriesOptions(
       {this.affectsMapView,
       this.animation,

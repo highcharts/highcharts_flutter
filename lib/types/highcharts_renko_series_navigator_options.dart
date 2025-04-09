@@ -29,9 +29,13 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsRenkoSeriesNavigatorOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   String? type;
 
+  /// Highcharts Options Widget.
   HighchartsRenkoSeriesNavigatorOptions({this.type});
 
   @override

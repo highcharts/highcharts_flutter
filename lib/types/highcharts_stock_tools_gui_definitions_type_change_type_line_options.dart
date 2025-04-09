@@ -29,10 +29,16 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsStockToolsGuiDefinitionsTypeChangeTypeLineOptions
     extends HighchartsOptionsBase {
+  /// A predefined background symbol for the button.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/stockTools.gui.definitions.typeChange.typeLine.symbol
+
   String? symbol;
 
+  /// Highcharts Options Widget.
   HighchartsStockToolsGuiDefinitionsTypeChangeTypeLineOptions({this.symbol});
 
   @override

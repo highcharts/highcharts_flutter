@@ -31,12 +31,17 @@ export 'highcharts_ikhseries_chikou_line_styles_options.dart';
  *
  * */
 
-/**
- * The styles for Chikou line
- */
+/// The styles for Chikou line
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.ikh.chikouLine
 class HighchartsIKHSeriesChikouLineOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   HighchartsIKHSeriesChikouLineStylesOptions? styles;
 
+  /// The styles for Chikou line
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.ikh.chikouLine
   HighchartsIKHSeriesChikouLineOptions({this.styles});
 
   @override

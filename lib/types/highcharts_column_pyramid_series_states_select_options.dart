@@ -32,13 +32,33 @@ export 'highcharts_series_states_select_animation_options.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsColumnPyramidSeriesStatesSelectOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   HighchartsSeriesStatesSelectAnimationOptions? animation;
+
+  /// A specific border color for the selected point.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.columnpyramid.states.select.borderColor
+
   String? borderColor;
+
+  /// A specific color for the selected point.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.columnpyramid.states.select.color
+
   String? color;
+
+  /// Enable separate styles for the hovered series to visualize
+  /// that the user hovers either the series itself or the legend.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.columnpyramid.states.select.enabled
+
   bool? enabled;
 
+  /// Highcharts Options Widget.
   HighchartsColumnPyramidSeriesStatesSelectOptions(
       {this.animation, this.borderColor, this.color, this.enabled});
 

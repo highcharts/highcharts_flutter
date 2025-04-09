@@ -29,11 +29,18 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsOrganizationSeriesDataLabelsLinkTextPathAttributesOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   dynamic startOffset;
+
+  /// Highcharts Options Widget.
+
   String? textAnchor;
 
+  /// Highcharts Options Widget.
   HighchartsOrganizationSeriesDataLabelsLinkTextPathAttributesOptions(
       {this.startOffset, this.textAnchor});
 

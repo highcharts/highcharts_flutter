@@ -32,17 +32,38 @@ export 'highcharts_series_states_select_animation_options.dart';
  *
  * */
 
-/**
- * Options for the selected point. These settings override the
- * normal state options when a point is selected.
- */
+/// Options for the selected point. These settings override the
+/// normal state options when a point is selected.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.arcdiagram.levels.states.select
 class HighchartsArcDiagramSeriesLevelsStatesSelectOptions
     extends HighchartsOptionsBase {
+  /// A specific border color for the selected point.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.arcdiagram.levels.states.select.borderColor
+
   String? borderColor;
+
+  /// A specific color for the selected point.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.arcdiagram.levels.states.select.color
+
   String? color;
+
+  /// Highcharts Options Widget.
+
   HighchartsSeriesStatesSelectAnimationOptions? animation;
+
+  /// Enable separate styles for the hovered series to visualize
+  /// that the user hovers either the series itself or the legend.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.arcdiagram.levels.states.select.enabled
+
   bool? enabled;
 
+  /// Options for the selected point. These settings override the normal state options when a point is selected.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.arcdiagram.levels.states.select
   HighchartsArcDiagramSeriesLevelsStatesSelectOptions(
       {this.borderColor, this.color, this.animation, this.enabled});
 

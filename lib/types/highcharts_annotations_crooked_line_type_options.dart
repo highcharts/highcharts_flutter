@@ -33,16 +33,40 @@ export 'highcharts_annotations_crooked_line_type_points_options.dart';
  *
  * */
 
-/**
- * Additional options for an annotation with the type.
- */
+/// Additional options for an annotation with the type.
+///
+/// API Docs: https://api.highcharts.com/highcharts/annotations.infinityLine.typeOptions
 class HighchartsAnnotationsCrookedLineTypeOptions
     extends HighchartsOptionsBase {
+  /// Line options.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.infinityLine.typeOptions.line
+
   HighchartsAnnotationsCrookedLineTypeLineOptions? line;
+
+  /// Highcharts Options Widget.
+
   List<HighchartsAnnotationsCrookedLineTypePointsOptions>? points;
+
+  /// This number defines which xAxis the point is connected to.
+  /// It refers to either the axis id or the index of the axis
+  /// in the xAxis array.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.infinityLine.typeOptions.xAxis
+
   double? xAxis;
+
+  /// This number defines which yAxis the point is connected to.
+  /// It refers to either the axis id or the index of the axis
+  /// in the xAxis array.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.infinityLine.typeOptions.yAxis
+
   double? yAxis;
 
+  /// Additional options for an annotation with the type.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.infinityLine.typeOptions
   HighchartsAnnotationsCrookedLineTypeOptions(
       {this.line, this.points, this.xAxis, this.yAxis});
 

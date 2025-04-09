@@ -40,67 +40,344 @@ export 'highcharts_lang_stock_tools_options.dart';
  *
  * */
 
-/**
- * An object containing language-related strings and settings. A typical setup
- * uses `Highcharts.setOptions` to make the options apply to all charts in the
- * same page.
- * 
- * ```js
- * Highcharts.setOptions({
- *     lang: {
- *         locale: 'fr'
- *     }
- * });
- * ```
- */
+/// An object containing language-related strings and settings. A typical setup
+/// uses `Highcharts.setOptions` to make the options apply to all charts in the
+/// same page.
+///
+///
+/// API Docs: https://api.highcharts.com/highcharts/lang
 class HighchartsLangOptions extends HighchartsOptionsBase {
+  /// Configure the accessibility strings in the chart. Requires the
+  /// accessibility module
+  /// to be loaded. For a description of the module and information on its
+  /// features, see
+  /// Highcharts Accessibility.
+  ///
+  /// The lang options use Format Strings
+  /// with variables that are replaced at run time. These variables should be
+  /// used when available, to avoid duplicating text that is defined elsewhere.
+  ///
+  /// For more dynamic control over the accessibility functionality, see
+  /// accessibility.point.descriptionFormatter,
+  /// accessibility.series.descriptionFormatter,
+  /// and
+  /// accessibility.screenReaderSection.beforeChartFormatter.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.accessibility
+
   HighchartsLangAccessibilityOptions? accessibility;
+
+  /// The default chart title.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.chartTitle
+
   String? chartTitle;
+
+  /// Exporting module menu. The tooltip title for the context menu holding
+  /// print and export menu items.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.contextButtonTitle
+
   String? contextButtonTitle;
+
+  /// The default decimal point used in the `Highcharts.numberFormat`
+  /// method unless otherwise specified in the function arguments. Defaults
+  /// to the locale decimal point as determined by `lang.locale`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.decimalPoint
+
   String? decimalPoint;
+
+  /// The text for the menu item.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.downloadCSV
+
   String? downloadCSV;
+
+  /// Exporting module only. The text for the JPEG download menu item.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.downloadJPEG
+
   String? downloadJPEG;
+
+  /// The text for the MIDI download menu item in the export menu.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.downloadMIDI
+
   String? downloadMIDI;
+
+  /// Exporting module only. The text for the PDF download menu item.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.downloadPDF
+
   String? downloadPDF;
+
+  /// Exporting module only. The text for the PNG download menu item.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.downloadPNG
+
   String? downloadPNG;
+
+  /// Exporting module only. The text for the SVG download menu item.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.downloadSVG
+
   String? downloadSVG;
+
+  /// The text for the menu item.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.downloadXLS
+
   String? downloadXLS;
+
+  /// Drill up button is deprecated since Highcharts v9.3.2. Use
+  /// drilldown.breadcrumbs instead.
+  ///
+  /// The text for the button that appears when drilling down, linking back
+  /// to the parent series. The parent series' name is inserted for
+  /// `{series.name}`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.drillUpText
+
   dynamic drillUpText;
+
+  /// Exporting module only. The text for the menu item to exit the chart
+  /// from full screen.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.exitFullscreen
+
   String? exitFullscreen;
+
+  /// The text for exported table.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.exportData
+
   HighchartsLangExportDataOptions? exportData;
+
+  /// Text to show when export is in progress.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.exportInProgress
+
   String? exportInProgress;
+
+  /// The text for the menu item.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.hideData
+
   String? hideData;
+
+  /// What to show in a date field for invalid dates. Defaults to an empty
+  /// string.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.invalidDate
+
   String? invalidDate;
+
+  /// The loading text that appears when the chart is set into the loading
+  /// state following a call to `chart.showLoading`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.loading
+
   String? loading;
+
+  /// The browser locale to use for date and number formatting. The actual
+  /// locale used for each chart is determined in three steps:
+  /// 1. If this `lang.locale` option is specified, it is used.
+  /// 2. Else, look for the closest ancestor HTML element with a `lang`
+  ///    attribute, typically the `<html>` element.
+  /// 3. If no 'lang' attribute is found, use the default browser locale.
+  ///
+  /// Use `en-GB`, British English, for approximate consistency with
+  /// Highcharts v < 12.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.locale
+
   List<String>? locale;
+
+  /// Highcharts Options Widget.
+
   String? mainBreadcrumb;
+
+  /// An array containing the months names. Corresponds to the `%B` format
+  /// in `Highcharts.dateFormat()`. Defaults to 'undefined',
+  /// meaning the default month names are used according to the
+  /// `lang.locale` setting.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.months
+
   List<String>? months;
+
+  /// Configure the Popup strings in the chart. Requires the
+  /// `annotations.js` or `annotations-advanced.src.js` module to be
+  /// loaded.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.navigation
+
   HighchartsLangNavigationOptions? navigation;
+
+  /// The text to display when the chart contains no data.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.noData
+
   String? noData;
+
+  /// The magnitude of numericSymbols replacements.
+  /// Use 10000 for Japanese, Korean and various Chinese locales, which
+  /// use symbols for 10^4, 10^8 and 10^12.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.numericSymbolMagnitude
+
   double? numericSymbolMagnitude;
+
+  /// Metric prefixes used
+  /// to shorten high numbers in axis labels. Replacing any of the
+  /// positions with `null` causes the full number to be written. Setting
+  /// `numericSymbols` to `undefined` disables shortening altogether.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.numericSymbols
+
   List<String>? numericSymbols;
+
+  /// The default name for a pie slice (point).
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.pieSliceName
+
   String? pieSliceName;
+
+  /// The text for the Play as sound menu item in the export menu.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.playAsSound
+
   String? playAsSound;
+
+  /// Exporting module only. The text for the menu item to print the chart.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.printChart
+
   String? printChart;
+
+  /// The default text for the rangeselector buttons.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.rangeSelector
+
   HighchartsLangRangeSelectorOptions? rangeSelector;
+
+  /// The text for the label for the "from" input box in the range
+  /// selector. Since v9.0, this string is empty as the label is not
+  /// rendered by default.
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/lang.rangeSelectorFrom
+
   String? rangeSelectorFrom;
+
+  /// The text for the label for the "to" input box in the range selector.
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/lang.rangeSelectorTo
+
   String? rangeSelectorTo;
+
+  /// The text for the label for the range selector buttons.
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/lang.rangeSelectorZoom
+
   String? rangeSelectorZoom;
+
+  /// The text for the label appearing when a chart is zoomed.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.resetZoom
+
   String? resetZoom;
+
+  /// Highcharts Options Widget.
+
   String? resetZoomTitle;
+
+  /// Format string for the default series name.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.seriesName
+
   String? seriesName;
+
+  /// An array containing the months names in abbreviated form. Corresponds
+  /// to the `%b` format in `Highcharts.dateFormat()`. Defaults to
+  /// 'undefined', meaning the default short month names are used according
+  /// to the `lang.locale` setting.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.shortMonths
+
   List<String>? shortMonths;
+
+  /// Short week days, starting Sunday. Defaults to 'undefined', meaning
+  /// the default short weekday names are used according to the
+  /// `lang.locale` setting.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.shortWeekdays
+
   List<String>? shortWeekdays;
+
+  /// Configure the stockTools GUI titles(hints) in the chart. Requires
+  /// the `stock-tools.js` module to be loaded.
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/lang.stockTools
+
   HighchartsLangStockToolsOptions? stockTools;
+
+  /// The default thousands separator used in the `Highcharts.numberFormat`
+  /// method unless otherwise specified in the function arguments. Defaults
+  /// to the locale thousands separator as determined by `lang.locale`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.thousandsSep
+
   String? thousandsSep;
+
+  /// The text for the menu item.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.viewData
+
   String? viewData;
+
+  /// Exporting module only. The text for the menu item to view the chart
+  /// in full screen.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.viewFullscreen
+
   String? viewFullscreen;
+
+  /// Highcharts Options Widget.
+
   String? weekFrom;
+
+  /// An array containing the weekday names. Defaults to 'undefined',
+  /// meaning the default weekday names are used according to the
+  /// `lang.locale` setting.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.weekdays
+
   List<String>? weekdays;
+
+  /// The default title of the Y axis
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.yAxisTitle
+
   String? yAxisTitle;
+
+  /// The title appearing on hovering the zoom in button. The text itself
+  /// defaults to "+" and can be changed in the button options.
+  ///
+  /// API Docs: https://api.highcharts.com/highmaps/lang.zoomIn
+
   String? zoomIn;
+
+  /// The title appearing on hovering the zoom out button. The text itself
+  /// defaults to "-" and can be changed in the button options.
+  ///
+  /// API Docs: https://api.highcharts.com/highmaps/lang.zoomOut
+
   String? zoomOut;
 
+  /// An object containing language-related strings and settings. A typical setup uses `Highcharts.setOptions` to make the options apply to all charts in the same page.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang
   HighchartsLangOptions(
       {this.accessibility,
       this.chartTitle,

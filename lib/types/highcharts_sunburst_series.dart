@@ -32,57 +32,39 @@ export 'highcharts_sunburst_series_options.dart';
  *
  * */
 
-/**
- * A `sunburst` series. If the [type](#series.sunburst.type) option is
- * not specified, it is inherited from [chart.type](#chart.type).
- * 
- * Configuration options for the series are given in three levels:
- * 1. Options for all series in a chart are defined in the
- *    [plotOptions.series](plotOptions.series) object.
- * 2. Options for all `sunburst` series are defined in
- *    [plotOptions.sunburst](plotOptions.sunburst).
- * 3. Options for one single series are given in
- *    [the series instance array](series.sunburst).
- * 
- * ```
- * Highcharts.chart('container', {
- *     plotOptions: {
- *         series: {
- *             // general options for all series
- *         },
- *         sunburst: {
- *             // shared options for all sunburst series
- *         }
- *     },
- *     series: [{
- *         // specific options for this series instance
- *         type: 'sunburst'
- *     }]
- * });
- * ```
- * 
- * **TypeScript:**
- * - the [type](series.sunburst.type) option must always be set.
- * - when accessing an array of series, the combined set of all series types is
- *   represented by [Highcharts.SeriesOptionsType
- *   ](/class-reference/Highcharts#.SeriesOptionsType). Narrowing down to the
- *   specific type can be done by checking the `type` property.
- * 
- * ```
- * if (chart.options.series?.[0]?.type === sunburst) {
- *     // code specific to the sunburst series
- * }
- * ```
- *             
- */
+/// A `sunburst` series. If the type option is
+/// not specified, it is inherited from chart.type.
+///
+/// Configuration options for the series are given in three levels:
+/// 1. Options for all series in a chart are defined in the
+///    plotOptions.series object.
+/// 2. Options for all `sunburst` series are defined in
+///    plotOptions.sunburst.
+/// 3. Options for one single series are given in
+///    the series instance array.
+///
+///
+///
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.sunburst
 class HighchartsSunburstSeries extends HighchartsSeries {
+  /// Highcharts Options Widget.
   List<List<dynamic>>? data;
+
+  /// The name of the series as shown in the legend, tooltip etc.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.sunburst.name
   String? name;
+
+  /// Configuration options for the HighchartsSunburstSeries.
   HighchartsSunburstSeriesOptions? options;
   List<dynamic>? points;
   @override
   get type => 'sunburst';
 
+  /// A `sunburst` series. If the type option is not specified, it is inherited from chart.type.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.sunburst
   HighchartsSunburstSeries({
     this.data,
     this.name,

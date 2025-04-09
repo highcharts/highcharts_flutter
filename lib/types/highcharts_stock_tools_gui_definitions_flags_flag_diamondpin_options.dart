@@ -29,10 +29,16 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsStockToolsGuiDefinitionsFlagsFlagDiamondpinOptions
     extends HighchartsOptionsBase {
+  /// A predefined background symbol for the button.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/stockTools.gui.definitions.flags.flagDiamondpin.symbol
+
   String? symbol;
 
+  /// Highcharts Options Widget.
   HighchartsStockToolsGuiDefinitionsFlagsFlagDiamondpinOptions({this.symbol});
 
   @override

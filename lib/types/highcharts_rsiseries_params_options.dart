@@ -28,11 +28,25 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsRSISeriesParamsOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   double? decimals;
+
+  /// Highcharts Options Widget.
+
   double? index;
+
+  /// The base period for indicator calculations. This is the number of
+  /// data points which are taken into account for the indicator
+  /// calculations.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.rsi.params.period
+
   double? period;
 
+  /// Highcharts Options Widget.
   HighchartsRSISeriesParamsOptions({this.decimals, this.index, this.period});
 
   @override

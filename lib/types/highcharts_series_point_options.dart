@@ -31,12 +31,19 @@ export 'highcharts_series_point_events_options.dart';
  *
  * */
 
-/**
- * Properties for each single point.
- */
+/// Properties for each single point.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.zigzag.point
 class HighchartsSeriesPointOptions extends HighchartsOptionsBase {
+  /// Events for each single point.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.point.events
+
   HighchartsSeriesPointEventsOptions? events;
 
+  /// Properties for each single point.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.point
   HighchartsSeriesPointOptions({this.events});
 
   @override

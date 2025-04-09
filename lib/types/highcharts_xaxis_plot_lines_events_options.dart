@@ -29,16 +29,38 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * An object defining mouse events for the plot line. Supported
- * properties are `click`, `mouseover`, `mouseout`, `mousemove`.
- */
+/// An object defining mouse events for the plot line. Supported
+/// properties are `click`, `mouseover`, `mouseout`, `mousemove`.
+///
+/// API Docs: https://api.highcharts.com/highcharts/xAxis.plotLines.events
 class HighchartsXAxisPlotLinesEventsOptions extends HighchartsOptionsBase {
+  /// Click event on a plot band.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/xAxis.plotLines.events.click
+
   dynamic click;
+
+  /// Mouse move event on a plot band.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/xAxis.plotLines.events.mousemove
+
   dynamic mousemove;
+
+  /// Mouse out event on the corner of a plot band.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/xAxis.plotLines.events.mouseout
+
   dynamic mouseout;
+
+  /// Mouse over event on a plot band.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/xAxis.plotLines.events.mouseover
+
   dynamic mouseover;
 
+  /// An object defining mouse events for the plot line. Supported properties are `click`, `mouseover`, `mouseout`, `mousemove`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/xAxis.plotLines.events
   HighchartsXAxisPlotLinesEventsOptions(
       {this.click, this.mousemove, this.mouseout, this.mouseover});
 

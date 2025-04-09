@@ -29,11 +29,20 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsNetworkgraphSeriesDataLabelsTextPathOptions
     extends HighchartsOptionsBase {
+  /// Presentation attributes for the text path.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.networkgraph.dataLabels.textPath.attributes
+
   dynamic attributes;
+
+  /// Highcharts Options Widget.
+
   bool? enabled;
 
+  /// Highcharts Options Widget.
   HighchartsNetworkgraphSeriesDataLabelsTextPathOptions(
       {this.attributes, this.enabled});
 

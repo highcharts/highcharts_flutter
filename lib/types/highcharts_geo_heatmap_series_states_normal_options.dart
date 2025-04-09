@@ -28,10 +28,14 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsGeoHeatmapSeriesStatesNormalOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   bool? animation;
 
+  /// Highcharts Options Widget.
   HighchartsGeoHeatmapSeriesStatesNormalOptions({this.animation});
 
   @override

@@ -29,13 +29,26 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Styles for the bottom line.
- */
+/// Styles for the bottom line.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.bb.bottomLine.styles
 class HighchartsBBSeriesBottomLineStylesOptions extends HighchartsOptionsBase {
+  /// Color of the line. If not set, it's inherited from
+  /// plotOptions.bb.color.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.bb.bottomLine.styles.lineColor
+
   String? lineColor;
+
+  /// Pixel width of the line.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.bb.bottomLine.styles.lineWidth
+
   double? lineWidth;
 
+  /// Styles for the bottom line.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.bb.bottomLine.styles
   HighchartsBBSeriesBottomLineStylesOptions({this.lineColor, this.lineWidth});
 
   @override

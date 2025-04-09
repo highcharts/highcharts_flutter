@@ -29,10 +29,17 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsAnnotationsTunnelTypeLineOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   double? strokeWidth;
+
+  /// Highcharts Options Widget.
+
   String? fill;
 
+  /// Highcharts Options Widget.
   HighchartsAnnotationsTunnelTypeLineOptions({this.strokeWidth, this.fill});
 
   @override

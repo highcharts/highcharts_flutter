@@ -29,14 +29,29 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Contains two arrays of axes that are controlled by control line
- * of the axis.
- */
+/// Contains two arrays of axes that are controlled by control line
+/// of the axis.
+///
+/// API Docs: https://api.highcharts.com/highcharts/yAxis.resize.controlledAxis
 class HighchartsYAxisResizeControlledAxisOptions extends HighchartsOptionsBase {
+  /// Array of axes that should move out of the way of resizing
+  /// being done for the current axis. If not set, the next axis
+  /// will be used.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/yAxis.resize.controlledAxis.next
+
   List<dynamic>? next;
+
+  /// Array of axes that should move with the current axis
+  /// while resizing.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/yAxis.resize.controlledAxis.prev
+
   List<dynamic>? prev;
 
+  /// Contains two arrays of axes that are controlled by control line of the axis.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/yAxis.resize.controlledAxis
   HighchartsYAxisResizeControlledAxisOptions({this.next, this.prev});
 
   @override

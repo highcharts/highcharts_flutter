@@ -31,9 +31,13 @@ export 'highcharts_pcseries_bottom_line_styles_options.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsPCSeriesBottomLineOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   HighchartsPCSeriesBottomLineStylesOptions? styles;
 
+  /// Highcharts Options Widget.
   HighchartsPCSeriesBottomLineOptions({this.styles});
 
   @override

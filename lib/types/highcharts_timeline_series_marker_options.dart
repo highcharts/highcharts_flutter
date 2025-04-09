@@ -32,18 +32,64 @@ export 'highcharts_series_marker_states_options.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsTimelineSeriesMarkerOptions extends HighchartsOptionsBase {
+  /// Enable or disable the point marker. If `undefined`, the markers
+  /// are hidden when the data is dense, and shown for more widespread
+  /// data points.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.timeline.marker.enabled
+
   bool? enabled;
+
+  /// Highcharts Options Widget.
+
   double? enabledThreshold;
+
+  /// The fill color of the point marker. When `undefined`, the series'
+  /// or point's color is used.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.timeline.marker.fillColor
+
   String? fillColor;
+
+  /// Highcharts Options Widget.
+
   double? height;
+
+  /// The color of the point marker's outline. When `undefined`, the
+  /// series' or point's color is used.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.timeline.marker.lineColor
+
   String? lineColor;
+
+  /// Highcharts Options Widget.
+
   double? lineWidth;
+
+  /// Highcharts Options Widget.
+
   double? radius;
+
+  /// States for a single point marker.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.timeline.marker.states
+
   HighchartsSeriesMarkerStatesOptions? states;
+
+  /// Highcharts Options Widget.
+
   String? symbol;
+
+  /// Image markers only. Set the image width explicitly. When using
+  /// this option, a `height` must also be set.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.timeline.marker.width
+
   double? width;
 
+  /// Highcharts Options Widget.
   HighchartsTimelineSeriesMarkerOptions(
       {this.enabled,
       this.enabledThreshold,

@@ -29,13 +29,25 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * The styles for lines which determine price zones.
- */
+/// The styles for lines which determine price zones.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.vbp.zoneLines
 class HighchartsVBPSeriesZoneLinesOptions extends HighchartsOptionsBase {
+  /// Enable/disable zone lines.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.vbp.zoneLines.enabled
+
   bool? enabled;
+
+  /// Specify the style of zone lines.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.vbp.zoneLines.styles
+
   Map<String, String>? styles;
 
+  /// The styles for lines which determine price zones.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.vbp.zoneLines
   HighchartsVBPSeriesZoneLinesOptions({this.enabled, this.styles});
 
   @override

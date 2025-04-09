@@ -31,9 +31,13 @@ export 'highcharts_abands_series_bottom_line_styles_options.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsABandsSeriesBottomLineOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   HighchartsABandsSeriesBottomLineStylesOptions? styles;
 
+  /// Highcharts Options Widget.
   HighchartsABandsSeriesBottomLineOptions({this.styles});
 
   @override

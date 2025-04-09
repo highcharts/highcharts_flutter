@@ -32,17 +32,65 @@ export 'highcharts_series_marker_states_hover_animation_options.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsBubbleSeriesMarkerStatesHoverOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   double? radiusPlus;
+
+  /// Animation when hovering over the marker.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.bubble.marker.states.hover.animation
+
   HighchartsSeriesMarkerStatesHoverAnimationOptions? animation;
+
+  /// Enable or disable the point marker.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.bubble.marker.states.hover.enabled
+
   bool? enabled;
+
+  /// The fill color of the marker in hover state. When
+  /// `undefined`, the series' or point's fillColor for normal
+  /// state is used.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.bubble.marker.states.hover.fillColor
+
   String? fillColor;
+
+  /// The color of the point marker's outline. When
+  /// `undefined`, the series' or point's lineColor for normal
+  /// state is used.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.bubble.marker.states.hover.lineColor
+
   String? lineColor;
+
+  /// The width of the point marker's outline. When
+  /// `undefined`, the series' or point's lineWidth for normal
+  /// state is used.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.bubble.marker.states.hover.lineWidth
+
   double? lineWidth;
+
+  /// The additional line width for a hovered point.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.bubble.marker.states.hover.lineWidthPlus
+
   double? lineWidthPlus;
+
+  /// The radius of the point marker. In hover state, it
+  /// defaults to the normal state's radius + 2 as per the
+  /// radiusPlus
+  /// option.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.bubble.marker.states.hover.radius
+
   double? radius;
 
+  /// Highcharts Options Widget.
   HighchartsBubbleSeriesMarkerStatesHoverOptions(
       {this.radiusPlus,
       this.animation,

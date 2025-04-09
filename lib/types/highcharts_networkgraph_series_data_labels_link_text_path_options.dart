@@ -29,19 +29,29 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Options for a _link_ label text which should follow link
- * connection. Border and background are disabled for a label that
- * follows a path.
- * 
- * **Note:** Only SVG-based renderer supports this option. Setting
- * `useHTML` to true will disable this option.
- */
+/// Options for a _link_ label text which should follow link
+/// connection. Border and background are disabled for a label that
+/// follows a path.
+///
+/// **Note:** Only SVG-based renderer supports this option. Setting
+/// `useHTML` to true will disable this option.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.networkgraph.dataLabels.linkTextPath
 class HighchartsNetworkgraphSeriesDataLabelsLinkTextPathOptions
     extends HighchartsOptionsBase {
+  /// Presentation attributes for the text path.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.networkgraph.dataLabels.linkTextPath.attributes
+
   dynamic attributes;
+
+  /// Highcharts Options Widget.
+
   bool? enabled;
 
+  /// Options for a _link_ label text which should follow link connection. Border and background are disabled for a label that follows a path.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.networkgraph.dataLabels.linkTextPath
   HighchartsNetworkgraphSeriesDataLabelsLinkTextPathOptions(
       {this.attributes, this.enabled});
 

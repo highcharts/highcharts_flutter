@@ -31,15 +31,25 @@ export 'highcharts_exporting_buttons_context_button_options.dart';
  *
  * */
 
-/**
- * Options for the export related buttons, print and export. In addition
- * to the default buttons listed here, custom buttons can be added.
- * See [navigation.buttonOptions](#navigation.buttonOptions) for general
- * options.
- */
+/// Options for the export related buttons, print and export. In addition
+/// to the default buttons listed here, custom buttons can be added.
+/// See navigation.buttonOptions for general
+/// options.
+///
+/// API Docs: https://api.highcharts.com/highcharts/exporting.buttons
 class HighchartsExportingButtonsOptions extends HighchartsOptionsBase {
+  /// Options for the export button.
+  ///
+  /// In styled mode, export button styles can be applied with the
+  /// `.highcharts-contextbutton` class.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/exporting.buttons.contextButton
+
   HighchartsExportingButtonsContextButtonOptions? contextButton;
 
+  /// Options for the export related buttons, print and export. In addition to the default buttons listed here, custom buttons can be added. See navigation.buttonOptions for general options.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/exporting.buttons
   HighchartsExportingButtonsOptions({this.contextButton});
 
   @override

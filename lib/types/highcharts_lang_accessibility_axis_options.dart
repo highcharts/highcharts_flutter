@@ -29,21 +29,53 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Axis description format strings.
- */
+/// Axis description format strings.
+///
+/// API Docs: https://api.highcharts.com/highcharts/lang.accessibility.axis
 class HighchartsLangAccessibilityAxisOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   String? rangeCategories;
+
+  /// Highcharts Options Widget.
+
   String? rangeFromTo;
+
+  /// Highcharts Options Widget.
+
   String? timeRangeDays;
+
+  /// Highcharts Options Widget.
+
   String? timeRangeHours;
+
+  /// Highcharts Options Widget.
+
   String? timeRangeMinutes;
+
+  /// Highcharts Options Widget.
+
   String? timeRangeSeconds;
+
+  /// Highcharts Options Widget.
+
   String? xAxisDescriptionPlural;
+
+  /// Highcharts Options Widget.
+
   String? xAxisDescriptionSingular;
+
+  /// Highcharts Options Widget.
+
   String? yAxisDescriptionPlural;
+
+  /// Highcharts Options Widget.
+
   String? yAxisDescriptionSingular;
 
+  /// Axis description format strings.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.accessibility.axis
   HighchartsLangAccessibilityAxisOptions(
       {this.rangeCategories,
       this.rangeFromTo,

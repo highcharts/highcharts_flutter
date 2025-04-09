@@ -33,10 +33,17 @@ export 'highcharts_tiled_web_map_series_states_normal_options.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsTiledWebMapSeriesStatesOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   HighchartsTiledWebMapSeriesStatesInactiveOptions? inactive;
+
+  /// Highcharts Options Widget.
+
   HighchartsTiledWebMapSeriesStatesNormalOptions? normal;
 
+  /// Highcharts Options Widget.
   HighchartsTiledWebMapSeriesStatesOptions({this.inactive, this.normal});
 
   @override

@@ -32,57 +32,39 @@ export 'highcharts_supertrend_series_options.dart';
  *
  * */
 
-/**
- * A `Supertrend indicator` series. If the [type](#series.supertrend.type)
- * option is not specified, it is inherited from [chart.type](#chart.type).
- * 
- * Configuration options for the series are given in three levels:
- * 1. Options for all series in a chart are defined in the
- *    [plotOptions.series](plotOptions.series) object.
- * 2. Options for all `supertrend` series are defined in
- *    [plotOptions.supertrend](plotOptions.supertrend).
- * 3. Options for one single series are given in
- *    [the series instance array](series.supertrend).
- * 
- * ```
- * Highcharts.chart('container', {
- *     plotOptions: {
- *         series: {
- *             // general options for all series
- *         },
- *         supertrend: {
- *             // shared options for all supertrend series
- *         }
- *     },
- *     series: [{
- *         // specific options for this series instance
- *         type: 'supertrend'
- *     }]
- * });
- * ```
- * 
- * **TypeScript:**
- * - the [type](series.supertrend.type) option must always be set.
- * - when accessing an array of series, the combined set of all series types is
- *   represented by [Highcharts.SeriesOptionsType
- *   ](/class-reference/Highcharts#.SeriesOptionsType). Narrowing down to the
- *   specific type can be done by checking the `type` property.
- * 
- * ```
- * if (chart.options.series?.[0]?.type === supertrend) {
- *     // code specific to the supertrend series
- * }
- * ```
- *             
- */
+/// A `Supertrend indicator` series. If the type
+/// option is not specified, it is inherited from chart.type.
+///
+/// Configuration options for the series are given in three levels:
+/// 1. Options for all series in a chart are defined in the
+///    plotOptions.series object.
+/// 2. Options for all `supertrend` series are defined in
+///    plotOptions.supertrend.
+/// 3. Options for one single series are given in
+///    the series instance array.
+///
+///
+///
+///
+/// API Docs: https://api.highcharts.com/highstock/series.supertrend
 class HighchartsSupertrendSeries extends HighchartsSeries {
+  /// Highcharts Options Widget.
   List<List<dynamic>>? data;
+
+  /// The name of the series as shown in the legend, tooltip etc.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.supertrend.name
   String? name;
+
+  /// Configuration options for the HighchartsSupertrendSeries.
   HighchartsSupertrendSeriesOptions? options;
   List<dynamic>? points;
   @override
   get type => 'supertrend';
 
+  /// A `Supertrend indicator` series. If the type option is not specified, it is inherited from chart.type.
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/series.supertrend
   HighchartsSupertrendSeries({
     this.data,
     this.name,

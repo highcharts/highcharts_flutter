@@ -29,19 +29,45 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * The default text for the rangeselector buttons.
- */
+/// The default text for the rangeselector buttons.
+///
+/// API Docs: https://api.highcharts.com/highcharts/lang.rangeSelector
 class HighchartsLangRangeSelectorOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   String? allText;
+
+  /// Highcharts Options Widget.
+
   String? allTitle;
+
+  /// Highcharts Options Widget.
+
   String? monthText;
+
+  /// Highcharts Options Widget.
+
   String? monthTitle;
+
+  /// Highcharts Options Widget.
+
   String? yearText;
+
+  /// Highcharts Options Widget.
+
   String? yearTitle;
+
+  /// Highcharts Options Widget.
+
   String? ytdText;
+
+  /// Highcharts Options Widget.
+
   String? ytdTitle;
 
+  /// The default text for the rangeselector buttons.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.rangeSelector
   HighchartsLangRangeSelectorOptions(
       {this.allText,
       this.allTitle,

@@ -36,13 +36,29 @@ export 'highcharts_stock_tools_gui_definitions_zoom_change_zoom_yoptions.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsStockToolsGuiDefinitionsZoomChangeOptions
     extends HighchartsOptionsBase {
+  /// A collection of strings pointing to config options for
+  /// the items.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/stockTools.gui.definitions.zoomChange.items
+
   String? items;
+
+  /// Highcharts Options Widget.
+
   HighchartsStockToolsGuiDefinitionsZoomChangeZoomXOptions? zoomX;
+
+  /// Highcharts Options Widget.
+
   HighchartsStockToolsGuiDefinitionsZoomChangeZoomXYOptions? zoomXY;
+
+  /// Highcharts Options Widget.
+
   HighchartsStockToolsGuiDefinitionsZoomChangeZoomYOptions? zoomY;
 
+  /// Highcharts Options Widget.
   HighchartsStockToolsGuiDefinitionsZoomChangeOptions(
       {this.items, this.zoomX, this.zoomXY, this.zoomY});
 

@@ -35,12 +35,26 @@ export 'highcharts_sunburst_series_data_marker_states_select_options.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsSunburstSeriesDataMarkerStatesOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   HighchartsSunburstSeriesDataMarkerStatesHoverOptions? hover;
+
+  /// The normal state of a single point marker. Currently only
+  /// used for setting animation when returning to normal state
+  /// from hover.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.sunburst.data.marker.states.normal
+
   HighchartsSeriesMarkerStatesNormalOptions? normal;
+
+  /// Highcharts Options Widget.
+
   HighchartsSunburstSeriesDataMarkerStatesSelectOptions? select;
 
+  /// Highcharts Options Widget.
   HighchartsSunburstSeriesDataMarkerStatesOptions(
       {this.hover, this.normal, this.select});
 

@@ -29,14 +29,28 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Accessibility options for a data point.
- */
+/// Accessibility options for a data point.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.treemap.data.accessibility
 class HighchartsTreemapSeriesDataAccessibilityOptions
     extends HighchartsOptionsBase {
+  /// Provide a description of the data point, announced to screen readers.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.treemap.data.accessibility.description
+
   String? description;
+
+  /// Set to false to disable accessibility functionality for a specific point.
+  /// The point will not be included in keyboard navigation, and will not be
+  /// exposed to assistive technology.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.treemap.data.accessibility.enabled
+
   bool? enabled;
 
+  /// Accessibility options for a data point.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.treemap.data.accessibility
   HighchartsTreemapSeriesDataAccessibilityOptions(
       {this.description, this.enabled});
 

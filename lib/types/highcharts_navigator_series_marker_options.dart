@@ -28,9 +28,13 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsNavigatorSeriesMarkerOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   bool? enabled;
 
+  /// Highcharts Options Widget.
   HighchartsNavigatorSeriesMarkerOptions({this.enabled});
 
   @override

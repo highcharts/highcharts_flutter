@@ -32,57 +32,39 @@ export 'highcharts_abands_series_options.dart';
  *
  * */
 
-/**
- * An Acceleration bands indicator. If the [type](#series.abands.type) option is not
- * specified, it is inherited from [chart.type](#chart.type).
- * 
- * Configuration options for the series are given in three levels:
- * 1. Options for all series in a chart are defined in the
- *    [plotOptions.series](plotOptions.series) object.
- * 2. Options for all `abands` series are defined in
- *    [plotOptions.abands](plotOptions.abands).
- * 3. Options for one single series are given in
- *    [the series instance array](series.abands).
- * 
- * ```
- * Highcharts.chart('container', {
- *     plotOptions: {
- *         series: {
- *             // general options for all series
- *         },
- *         abands: {
- *             // shared options for all abands series
- *         }
- *     },
- *     series: [{
- *         // specific options for this series instance
- *         type: 'abands'
- *     }]
- * });
- * ```
- * 
- * **TypeScript:**
- * - the [type](series.abands.type) option must always be set.
- * - when accessing an array of series, the combined set of all series types is
- *   represented by [Highcharts.SeriesOptionsType
- *   ](/class-reference/Highcharts#.SeriesOptionsType). Narrowing down to the
- *   specific type can be done by checking the `type` property.
- * 
- * ```
- * if (chart.options.series?.[0]?.type === abands) {
- *     // code specific to the abands series
- * }
- * ```
- *             
- */
+/// An Acceleration bands indicator. If the type option is not
+/// specified, it is inherited from chart.type.
+///
+/// Configuration options for the series are given in three levels:
+/// 1. Options for all series in a chart are defined in the
+///    plotOptions.series object.
+/// 2. Options for all `abands` series are defined in
+///    plotOptions.abands.
+/// 3. Options for one single series are given in
+///    the series instance array.
+///
+///
+///
+///
+/// API Docs: https://api.highcharts.com/highstock/series.abands
 class HighchartsABandsSeries extends HighchartsSeries {
+  /// Highcharts Options Widget.
   List<List<dynamic>>? data;
+
+  /// The name of the series as shown in the legend, tooltip etc.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.abands.name
   String? name;
+
+  /// Configuration options for the HighchartsABandsSeries.
   HighchartsABandsSeriesOptions? options;
   List<dynamic>? points;
   @override
   get type => 'abands';
 
+  /// An Acceleration bands indicator. If the type option is not specified, it is inherited from chart.type.
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/series.abands
   HighchartsABandsSeries({
     this.data,
     this.name,

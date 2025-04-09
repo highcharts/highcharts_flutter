@@ -32,20 +32,42 @@ export 'highcharts_vector_series_cluster_zones_marker_options.dart';
  *
  * */
 
-/**
- * An array defining zones within marker clusters.
- * 
- * In styled mode, the color zones are styled with the
- * `.highcharts-cluster-zone-{n}` class, or custom
- * classed from the `className`
- * option.
- */
+/// An array defining zones within marker clusters.
+///
+/// In styled mode, the color zones are styled with the
+/// `.highcharts-cluster-zone-{n}` class, or custom
+/// classed from the `className`
+/// option.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.vector.cluster.zones
 class HighchartsVectorSeriesClusterZonesOptions extends HighchartsOptionsBase {
+  /// Styled mode only. A custom class name for the zone.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.vector.cluster.zones.className
+
   String? className;
+
+  /// The value where the zone starts.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.vector.cluster.zones.from
+
   double? from;
+
+  /// Settings for the cluster marker belonging to the zone.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.vector.cluster.zones.marker
+
   HighchartsVectorSeriesClusterZonesMarkerOptions? marker;
+
+  /// The value where the zone ends.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.vector.cluster.zones.to
+
   double? to;
 
+  /// An array defining zones within marker clusters.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.vector.cluster.zones
   HighchartsVectorSeriesClusterZonesOptions(
       {this.className, this.from, this.marker, this.to});
 

@@ -29,10 +29,16 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsStockToolsGuiDefinitionsLinesRayOptions
     extends HighchartsOptionsBase {
+  /// A predefined background symbol for the button.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/stockTools.gui.definitions.lines.ray.symbol
+
   String? symbol;
 
+  /// Highcharts Options Widget.
   HighchartsStockToolsGuiDefinitionsLinesRayOptions({this.symbol});
 
   @override

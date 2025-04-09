@@ -34,20 +34,63 @@ export 'highcharts_arc_diagram_series_levels_states_options.dart';
  *
  * */
 
-/**
- * Set options on specific levels. Takes precedence over series options,
- * but not node and link options.
- */
+/// Set options on specific levels. Takes precedence over series options,
+/// but not node and link options.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.arcdiagram.levels
 class HighchartsArcDiagramSeriesLevelsOptions extends HighchartsOptionsBase {
+  /// Can set `borderColor` on all nodes which lay on the same level.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.arcdiagram.levels.borderColor
+
   String? borderColor;
+
+  /// Can set `borderWidth` on all nodes which lay on the same level.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.arcdiagram.levels.borderWidth
+
   double? borderWidth;
+
+  /// Can set `color` on all nodes which lay on the same level.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.arcdiagram.levels.color
+
   String? color;
+
+  /// Can set `colorByPoint` on all nodes which lay on the same level.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.arcdiagram.levels.colorByPoint
+
   bool? colorByPoint;
+
+  /// Can set `dataLabels` on all points which lay on the same level.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.arcdiagram.levels.dataLabels
+
   HighchartsArcDiagramSeriesLevelsDataLabelsOptions? dataLabels;
+
+  /// Decides which level takes effect from the options set in the levels
+  /// object.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.arcdiagram.levels.level
+
   double? level;
+
+  /// Can set `linkOpacity` on all points which lay on the same level.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.arcdiagram.levels.linkOpacity
+
   double? linkOpacity;
+
+  /// Can set `states` on all nodes and points which lay on the same level.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.arcdiagram.levels.states
+
   HighchartsArcDiagramSeriesLevelsStatesOptions? states;
 
+  /// Set options on specific levels. Takes precedence over series options, but not node and link options.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.arcdiagram.levels
   HighchartsArcDiagramSeriesLevelsOptions(
       {this.borderColor,
       this.borderWidth,

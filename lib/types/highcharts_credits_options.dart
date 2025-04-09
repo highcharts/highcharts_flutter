@@ -34,19 +34,60 @@ export 'highcharts_credits_style_options.dart';
  *
  * */
 
-/**
- * Highchart by default puts a credits label in the lower right corner
- * of the chart. This can be changed using these options.
- */
+/// Highchart by default puts a credits label in the lower right corner
+/// of the chart. This can be changed using these options.
+///
+/// API Docs: https://api.highcharts.com/highcharts/credits
 class HighchartsCreditsOptions extends HighchartsOptionsBase {
+  /// Whether to show the credits text.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/credits.enabled
+
   bool? enabled;
+
+  /// The URL for the credits label.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/credits.href
+
   String? href;
+
+  /// Credits for map source to be concatenated with conventional credit
+  /// text. By default this is a format string that collects copyright
+  /// information from the map if available.
+  ///
+  /// API Docs: https://api.highcharts.com/highmaps/credits.mapText
+
   String? mapText;
+
+  /// Detailed credits for map source to be displayed on hover of credits
+  /// text. By default this is a format string that collects copyright
+  /// information from the map if available.
+  ///
+  /// API Docs: https://api.highcharts.com/highmaps/credits.mapTextFull
+
   String? mapTextFull;
+
+  /// Position configuration for the credits label.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/credits.position
+
   HighchartsCreditsPositionOptions? position;
+
+  /// CSS styles for the credits label.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/credits.style
+
   HighchartsCreditsStyleOptions? style;
+
+  /// The text for the credits label.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/credits.text
+
   String? text;
 
+  /// Highchart by default puts a credits label in the lower right corner of the chart. This can be changed using these options.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/credits
   HighchartsCreditsOptions(
       {this.enabled,
       this.href,

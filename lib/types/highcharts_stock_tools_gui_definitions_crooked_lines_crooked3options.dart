@@ -29,10 +29,16 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsStockToolsGuiDefinitionsCrookedLinesCrooked3Options
     extends HighchartsOptionsBase {
+  /// A predefined background symbol for the button.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/stockTools.gui.definitions.crookedLines.crooked3.symbol
+
   String? symbol;
 
+  /// Highcharts Options Widget.
   HighchartsStockToolsGuiDefinitionsCrookedLinesCrooked3Options({this.symbol});
 
   @override

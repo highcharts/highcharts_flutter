@@ -39,18 +39,55 @@ export 'highcharts_series_sonification_tracks_options.dart';
  *
  * */
 
-/**
- * Sonification/audio chart options for a series.
- */
+/// Sonification/audio chart options for a series.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.zigzag.sonification
 class HighchartsSeriesSonificationOptions extends HighchartsOptionsBase {
+  /// Context tracks for this series. Context tracks are tracks that are not
+  /// tied to data points.
+  ///
+  /// Given as an array of instrument tracks, speech tracks, or a mix of both.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.sonification.contextTracks
+
   List<HighchartsSeriesSonificationContextTracksOptions>? contextTracks;
+
+  /// Default options for all this series' instrument tracks.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.sonification.defaultInstrumentOptions
+
   HighchartsSeriesSonificationDefaultInstrumentOptions?
       defaultInstrumentOptions;
+
+  /// Default options for all this series' speech tracks.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.sonification.defaultSpeechOptions
+
   HighchartsSeriesSonificationDefaultSpeechOptions? defaultSpeechOptions;
+
+  /// Whether or not sonification is enabled for this series.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.sonification.enabled
+
   bool? enabled;
+
+  /// Sonification point grouping options for this series.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.sonification.pointGrouping
+
   HighchartsSeriesSonificationPointGroupingOptions? pointGrouping;
+
+  /// Tracks for this series.
+  ///
+  /// Given as an array of instrument tracks, speech tracks, or a mix of both.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.sonification.tracks
+
   List<HighchartsSeriesSonificationTracksOptions>? tracks;
 
+  /// Sonification/audio chart options for a series.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.sonification
   HighchartsSeriesSonificationOptions(
       {this.contextTracks,
       this.defaultInstrumentOptions,

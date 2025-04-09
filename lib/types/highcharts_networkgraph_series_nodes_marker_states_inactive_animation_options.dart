@@ -28,13 +28,18 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Animation when not hovering over the node.
- */
+/// Animation when not hovering over the node.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.networkgraph.nodes.marker.states.inactive.animation
 class HighchartsNetworkgraphSeriesNodesMarkerStatesInactiveAnimationOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   double? duration;
 
+  /// Animation when not hovering over the node.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.networkgraph.nodes.marker.states.inactive.animation
   HighchartsNetworkgraphSeriesNodesMarkerStatesInactiveAnimationOptions(
       {this.duration});
 

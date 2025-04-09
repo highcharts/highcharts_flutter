@@ -29,13 +29,25 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * A title to be added on top of the legend.
- */
+/// A title to be added on top of the legend.
+///
+/// API Docs: https://api.highcharts.com/highcharts/legend.title
 class HighchartsLegendTitleOptions extends HighchartsOptionsBase {
+  /// Generic CSS styles for the legend title.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/legend.title.style
+
   Map<String, String>? style;
+
+  /// A text or HTML string for the title.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/legend.title.text
+
   String? text;
 
+  /// A title to be added on top of the legend.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/legend.title
   HighchartsLegendTitleOptions({this.style, this.text});
 
   @override

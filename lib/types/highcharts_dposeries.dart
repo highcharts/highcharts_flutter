@@ -32,57 +32,39 @@ export 'highcharts_dposeries_options.dart';
  *
  * */
 
-/**
- * A Detrended Price Oscillator. If the [type](#series.dpo.type) option is not
- * specified, it is inherited from [chart.type](#chart.type).
- * 
- * Configuration options for the series are given in three levels:
- * 1. Options for all series in a chart are defined in the
- *    [plotOptions.series](plotOptions.series) object.
- * 2. Options for all `dpo` series are defined in
- *    [plotOptions.dpo](plotOptions.dpo).
- * 3. Options for one single series are given in
- *    [the series instance array](series.dpo).
- * 
- * ```
- * Highcharts.chart('container', {
- *     plotOptions: {
- *         series: {
- *             // general options for all series
- *         },
- *         dpo: {
- *             // shared options for all dpo series
- *         }
- *     },
- *     series: [{
- *         // specific options for this series instance
- *         type: 'dpo'
- *     }]
- * });
- * ```
- * 
- * **TypeScript:**
- * - the [type](series.dpo.type) option must always be set.
- * - when accessing an array of series, the combined set of all series types is
- *   represented by [Highcharts.SeriesOptionsType
- *   ](/class-reference/Highcharts#.SeriesOptionsType). Narrowing down to the
- *   specific type can be done by checking the `type` property.
- * 
- * ```
- * if (chart.options.series?.[0]?.type === dpo) {
- *     // code specific to the dpo series
- * }
- * ```
- *             
- */
+/// A Detrended Price Oscillator. If the type option is not
+/// specified, it is inherited from chart.type.
+///
+/// Configuration options for the series are given in three levels:
+/// 1. Options for all series in a chart are defined in the
+///    plotOptions.series object.
+/// 2. Options for all `dpo` series are defined in
+///    plotOptions.dpo.
+/// 3. Options for one single series are given in
+///    the series instance array.
+///
+///
+///
+///
+/// API Docs: https://api.highcharts.com/highstock/series.dpo
 class HighchartsDPOSeries extends HighchartsSeries {
+  /// Highcharts Options Widget.
   List<List<dynamic>>? data;
+
+  /// The name of the series as shown in the legend, tooltip etc.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.dpo.name
   String? name;
+
+  /// Configuration options for the HighchartsDPOSeries.
   HighchartsDPOSeriesOptions? options;
   List<dynamic>? points;
   @override
   get type => 'dpo';
 
+  /// A Detrended Price Oscillator. If the type option is not specified, it is inherited from chart.type.
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/series.dpo
   HighchartsDPOSeries({
     this.data,
     this.name,

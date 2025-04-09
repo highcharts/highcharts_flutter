@@ -48,25 +48,119 @@ export 'highcharts_annotations_time_cycles_options.dart';
  *
  * */
 
-/**
- * Additional options to be merged into all annotations.
- */
+/// Additional options to be merged into all annotations.
+///
+/// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions
 class HighchartsNavigationAnnotationsOptions extends HighchartsOptionsBase {
+  /// Enable or disable the initial animation when a series is
+  /// displayed for the `annotation`. The animation can also be set
+  /// as a configuration object. Please note that this option only
+  /// applies to the initial animation.
+  /// For other animations, see chart.animation
+  /// and the animation parameter under the API methods.
+  /// The following properties are supported:
+  ///
+  /// - `defer`: The animation delay time in milliseconds.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.animation
+
   HighchartsAnnotationsAnimationOptions? animation;
+
+  /// Options for annotation's control points. Each control point
+  /// inherits options from controlPointOptions object.
+  /// Options from the controlPointOptions can be overwritten
+  /// by options in a specific control point.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.controlPointOptions
+
   HighchartsAnnotationsControlPointOptions? controlPointOptions;
+
+  /// Whether to hide the part of the annotation
+  /// that is outside the plot area.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.crop
+
   bool? crop;
+
+  /// Allow an annotation to be draggable by a user. Possible
+  /// values are `'x'`, `'xy'`, `'y'` and `''` (disabled).
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.draggable
+
   String? draggable;
+
+  /// Events available in annotations.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.events
+
   HighchartsAnnotationsEventsOptions? events;
+
+  /// Sets an ID for an annotation. Can be user later when
+  /// removing an annotation in Chart#removeAnnotation(id) method.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.id
+
   dynamic id;
+
+  /// Options for annotation's labels. Each label inherits options
+  /// from the labelOptions object. An option from the labelOptions
+  /// can be overwritten by config for a specific label.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.labelOptions
+
   HighchartsAnnotationsLabelOptions? labelOptions;
+
+  /// An array of labels for the annotation. For options that apply
+  /// to multiple labels, they can be added to the
+  /// labelOptions.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.labels
+
   List<HighchartsAnnotationsLabelsOptions>? labels;
+
+  /// Options for annotation's shapes. Each shape inherits options
+  /// from the shapeOptions object. An option from the shapeOptions
+  /// can be overwritten by config for a specific shape.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.shapeOptions
+
   HighchartsAnnotationsShapeOptions? shapeOptions;
+
+  /// An array of shapes for the annotation. For options that apply
+  /// to multiple shapes, then can be added to the
+  /// shapeOptions.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.shapes
+
   List<HighchartsAnnotationsShapesOptions>? shapes;
+
+  /// Whether the annotation is visible.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.visible
+
   bool? visible;
+
+  /// The Z index of the annotation.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.zIndex
+
   double? zIndex;
+
+  /// The Fibonacci Time Zones annotation.
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/navigation.annotationsOptions.fibonacciTimeZones
+
   HighchartsAnnotationsFibonacciTimeZonesOptions? fibonacciTimeZones;
+
+  /// The TimeCycles Annotation
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/navigation.annotationsOptions.timeCycles
+
   HighchartsAnnotationsTimeCyclesOptions? timeCycles;
 
+  /// Additional options to be merged into all annotations.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions
   HighchartsNavigationAnnotationsOptions(
       {this.animation,
       this.controlPointOptions,

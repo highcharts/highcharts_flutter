@@ -37,12 +37,34 @@ export 'highcharts_heikin_ashi_series_states_select_options.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsHeikinAshiSeriesStatesOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   HighchartsHeikinAshiSeriesStatesHoverOptions? hover;
+
+  /// The opposite state of a hover for series.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.heikinashi.states.inactive
+
   HighchartsSeriesStatesInactiveOptions? inactive;
+
+  /// The normal state of a series, or for point items in column, pie
+  /// and similar series. Currently only used for setting animation
+  /// when returning to normal state from hover.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.heikinashi.states.normal
+
   HighchartsSeriesStatesNormalOptions? normal;
+
+  /// Options for the selected point. These settings override the
+  /// normal state options when a point is selected.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.heikinashi.states.select
+
   HighchartsHeikinAshiSeriesStatesSelectOptions? select;
 
+  /// Highcharts Options Widget.
   HighchartsHeikinAshiSeriesStatesOptions(
       {this.hover, this.inactive, this.normal, this.select});
 

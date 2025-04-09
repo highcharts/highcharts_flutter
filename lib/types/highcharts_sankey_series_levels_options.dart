@@ -34,20 +34,63 @@ export 'highcharts_sankey_series_levels_states_options.dart';
  *
  * */
 
-/**
- * Set options on specific levels. Takes precedence over series options,
- * but not node and link options.
- */
+/// Set options on specific levels. Takes precedence over series options,
+/// but not node and link options.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.sankey.levels
 class HighchartsSankeySeriesLevelsOptions extends HighchartsOptionsBase {
+  /// Can set `borderColor` on all nodes which lay on the same level.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.sankey.levels.borderColor
+
   String? borderColor;
+
+  /// Can set `borderWidth` on all nodes which lay on the same level.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.sankey.levels.borderWidth
+
   double? borderWidth;
+
+  /// Can set `color` on all nodes which lay on the same level.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.sankey.levels.color
+
   String? color;
+
+  /// Can set `colorByPoint` on all nodes which lay on the same level.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.sankey.levels.colorByPoint
+
   bool? colorByPoint;
+
+  /// Can set `dataLabels` on all points which lay on the same level.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.sankey.levels.dataLabels
+
   HighchartsSankeySeriesLevelsDataLabelsOptions? dataLabels;
+
+  /// Decides which level takes effect from the options set in the levels
+  /// object.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.sankey.levels.level
+
   double? level;
+
+  /// Can set `linkOpacity` on all points which lay on the same level.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.sankey.levels.linkOpacity
+
   double? linkOpacity;
+
+  /// Can set `states` on all nodes and points which lay on the same level.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.sankey.levels.states
+
   HighchartsSankeySeriesLevelsStatesOptions? states;
 
+  /// Set options on specific levels. Takes precedence over series options, but not node and link options.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.sankey.levels
   HighchartsSankeySeriesLevelsOptions(
       {this.borderColor,
       this.borderWidth,

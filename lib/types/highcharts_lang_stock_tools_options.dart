@@ -31,13 +31,18 @@ export 'highcharts_lang_stock_tools_gui_options.dart';
  *
  * */
 
-/**
- * Configure the stockTools GUI titles(hints) in the chart. Requires
- * the `stock-tools.js` module to be loaded.
- */
+/// Configure the stockTools GUI titles(hints) in the chart. Requires
+/// the `stock-tools.js` module to be loaded.
+///
+/// API Docs: https://api.highcharts.com/highstock/lang.stockTools
 class HighchartsLangStockToolsOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   HighchartsLangStockToolsGuiOptions? gui;
 
+  /// Configure the stockTools GUI titles(hints) in the chart. Requires the `stock-tools.js` module to be loaded.
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/lang.stockTools
   HighchartsLangStockToolsOptions({this.gui});
 
   @override

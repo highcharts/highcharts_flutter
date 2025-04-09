@@ -29,14 +29,22 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Background options.
- */
+/// Background options.
+///
+/// API Docs: https://api.highcharts.com/highcharts/annotations.tunnel.typeOptions.background
 class HighchartsAnnotationsTunnelTypeBackgroundOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   String? fill;
+
+  /// Highcharts Options Widget.
+
   double? strokeWidth;
 
+  /// Background options.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.tunnel.typeOptions.background
   HighchartsAnnotationsTunnelTypeBackgroundOptions(
       {this.fill, this.strokeWidth});
 

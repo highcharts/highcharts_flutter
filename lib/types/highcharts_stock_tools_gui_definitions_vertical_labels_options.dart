@@ -36,16 +36,32 @@ export 'highcharts_stock_tools_gui_definitions_vertical_labels_vertical_label_op
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsStockToolsGuiDefinitionsVerticalLabelsOptions
     extends HighchartsOptionsBase {
+  /// A collection of strings pointing to config options for
+  /// the items.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/stockTools.gui.definitions.verticalLabels.items
+
   String? items;
+
+  /// Highcharts Options Widget.
+
   HighchartsStockToolsGuiDefinitionsVerticalLabelsVerticalArrowOptions?
       verticalArrow;
+
+  /// Highcharts Options Widget.
+
   HighchartsStockToolsGuiDefinitionsVerticalLabelsVerticalCounterOptions?
       verticalCounter;
+
+  /// Highcharts Options Widget.
+
   HighchartsStockToolsGuiDefinitionsVerticalLabelsVerticalLabelOptions?
       verticalLabel;
 
+  /// Highcharts Options Widget.
   HighchartsStockToolsGuiDefinitionsVerticalLabelsOptions(
       {this.items,
       this.verticalArrow,

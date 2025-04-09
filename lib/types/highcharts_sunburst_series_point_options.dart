@@ -31,9 +31,13 @@ export 'highcharts_sunburst_series_point_events_options.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsSunburstSeriesPointOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   HighchartsSunburstSeriesPointEventsOptions? events;
 
+  /// Highcharts Options Widget.
   HighchartsSunburstSeriesPointOptions({this.events});
 
   @override

@@ -29,16 +29,44 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Events available in annotations.
- */
+/// Events available in annotations.
+///
+/// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.events
 class HighchartsAnnotationsEventsOptions extends HighchartsOptionsBase {
+  /// Event callback when annotation is added to the chart.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.events.add
+
   dynamic add;
+
+  /// Event callback when annotation is updated (e.g. drag and
+  /// dropped or resized by control points).
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.events.afterUpdate
+
   dynamic afterUpdate;
+
+  /// Fires when the annotation is clicked.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.events.click
+
   dynamic click;
+
+  /// Fires when the annotation is dragged.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.events.drag
+
   dynamic drag;
+
+  /// Event callback when annotation is removed from the chart.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.events.remove
+
   dynamic remove;
 
+  /// Events available in annotations.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.events
   HighchartsAnnotationsEventsOptions(
       {this.add, this.afterUpdate, this.click, this.drag, this.remove});
 

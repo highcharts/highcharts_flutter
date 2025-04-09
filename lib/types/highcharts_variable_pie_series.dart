@@ -32,57 +32,51 @@ export 'highcharts_variable_pie_series_options.dart';
  *
  * */
 
-/**
- * A `variablepie` series. If the [type](#series.variablepie.type) option is not
- * specified, it is inherited from [chart.type](#chart.type).
- * 
- * Configuration options for the series are given in three levels:
- * 1. Options for all series in a chart are defined in the
- *    [plotOptions.series](plotOptions.series) object.
- * 2. Options for all `variablepie` series are defined in
- *    [plotOptions.variablepie](plotOptions.variablepie).
- * 3. Options for one single series are given in
- *    [the series instance array](series.variablepie).
- * 
- * ```
- * Highcharts.chart('container', {
- *     plotOptions: {
- *         series: {
- *             // general options for all series
- *         },
- *         variablepie: {
- *             // shared options for all variablepie series
- *         }
- *     },
- *     series: [{
- *         // specific options for this series instance
- *         type: 'variablepie'
- *     }]
- * });
- * ```
- * 
- * **TypeScript:**
- * - the [type](series.variablepie.type) option must always be set.
- * - when accessing an array of series, the combined set of all series types is
- *   represented by [Highcharts.SeriesOptionsType
- *   ](/class-reference/Highcharts#.SeriesOptionsType). Narrowing down to the
- *   specific type can be done by checking the `type` property.
- * 
- * ```
- * if (chart.options.series?.[0]?.type === variablepie) {
- *     // code specific to the variablepie series
- * }
- * ```
- *             
- */
+/// A `variablepie` series. If the type option is not
+/// specified, it is inherited from chart.type.
+///
+/// Configuration options for the series are given in three levels:
+/// 1. Options for all series in a chart are defined in the
+///    plotOptions.series object.
+/// 2. Options for all `variablepie` series are defined in
+///    plotOptions.variablepie.
+/// 3. Options for one single series are given in
+///    the series instance array.
+///
+///
+///
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.variablepie
 class HighchartsVariablePieSeries extends HighchartsSeries {
+  /// An array of data points for the series. For the `variablepie` series type,
+  /// points can be given in the following ways:
+  ///
+  /// 1. An array of arrays with 2 values. In this case, the numerical values will
+  ///    be interpreted as `y, z` options. Example:
+  ///
+  /// 2. An array of objects with named values. The following snippet shows only a
+  ///    few settings, see the complete options set below. If the total number of
+  ///    data points exceeds the series'
+  ///    turboThreshold, this option is not
+  ///    available.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.variablepie.data
   List<List<dynamic>>? data;
+
+  /// The name of the series as shown in the legend, tooltip etc.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.variablepie.name
   String? name;
+
+  /// Configuration options for the HighchartsVariablePieSeries.
   HighchartsVariablePieSeriesOptions? options;
   List<dynamic>? points;
   @override
   get type => 'variablepie';
 
+  /// A `variablepie` series. If the type option is not specified, it is inherited from chart.type.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.variablepie
   HighchartsVariablePieSeries({
     this.data,
     this.name,

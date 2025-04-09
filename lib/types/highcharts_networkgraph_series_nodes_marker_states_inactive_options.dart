@@ -31,16 +31,28 @@ export 'highcharts_networkgraph_series_nodes_marker_states_inactive_animation_op
  *
  * */
 
-/**
- * The opposite state of a hover for a single point node.
- * Applied to all not connected nodes to the hovered one.
- */
+/// The opposite state of a hover for a single point node.
+/// Applied to all not connected nodes to the hovered one.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.networkgraph.nodes.marker.states.inactive
 class HighchartsNetworkgraphSeriesNodesMarkerStatesInactiveOptions
     extends HighchartsOptionsBase {
+  /// Animation when not hovering over the node.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.networkgraph.nodes.marker.states.inactive.animation
+
   HighchartsNetworkgraphSeriesNodesMarkerStatesInactiveAnimationOptions?
       animation;
+
+  /// Opacity of inactive markers.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.networkgraph.nodes.marker.states.inactive.opacity
+
   double? opacity;
 
+  /// The opposite state of a hover for a single point node. Applied to all not connected nodes to the hovered one.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.networkgraph.nodes.marker.states.inactive
   HighchartsNetworkgraphSeriesNodesMarkerStatesInactiveOptions(
       {this.animation, this.opacity});
 

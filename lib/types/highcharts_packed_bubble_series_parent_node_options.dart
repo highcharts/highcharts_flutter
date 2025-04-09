@@ -28,13 +28,21 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Series options for parent nodes.
- */
+/// Series options for parent nodes.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.packedbubble.parentNode
 class HighchartsPackedBubbleSeriesParentNodeOptions
     extends HighchartsOptionsBase {
+  /// Allow this series' parent nodes to be selected
+  /// by clicking on the graph.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.packedbubble.parentNode.allowPointSelect
+
   bool? allowPointSelect;
 
+  /// Series options for parent nodes.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.packedbubble.parentNode
   HighchartsPackedBubbleSeriesParentNodeOptions({this.allowPointSelect});
 
   @override

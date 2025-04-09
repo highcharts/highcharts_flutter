@@ -29,14 +29,22 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Exporting menu format strings for accessibility module.
- */
+/// Exporting menu format strings for accessibility module.
+///
+/// API Docs: https://api.highcharts.com/highcharts/lang.accessibility.exporting
 class HighchartsLangAccessibilityExportingOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   String? chartMenuLabel;
+
+  /// Highcharts Options Widget.
+
   String? menuButtonLabel;
 
+  /// Exporting menu format strings for accessibility module.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.accessibility.exporting
   HighchartsLangAccessibilityExportingOptions(
       {this.chartMenuLabel, this.menuButtonLabel});
 

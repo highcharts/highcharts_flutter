@@ -29,15 +29,29 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * CSS styling for the buttons' text
- */
+/// CSS styling for the buttons' text
+///
+/// API Docs: https://api.highcharts.com/highcharts/global.buttonTheme.style
 class HighchartsGlobalButtonThemeStyleOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   String? color;
+
+  /// Highcharts Options Widget.
+
   String? cursor;
+
+  /// Highcharts Options Widget.
+
   dynamic fontSize;
+
+  /// Highcharts Options Widget.
+
   String? fontWeight;
 
+  /// CSS styling for the buttons' text
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/global.buttonTheme.style
   HighchartsGlobalButtonThemeStyleOptions(
       {this.color, this.cursor, this.fontSize, this.fontWeight});
 

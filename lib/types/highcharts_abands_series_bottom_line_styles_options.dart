@@ -28,10 +28,16 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsABandsSeriesBottomLineStylesOptions
     extends HighchartsOptionsBase {
+  /// Pixel width of the line.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.abands.bottomLine.styles.lineWidth
+
   double? lineWidth;
 
+  /// Highcharts Options Widget.
   HighchartsABandsSeriesBottomLineStylesOptions({this.lineWidth});
 
   @override

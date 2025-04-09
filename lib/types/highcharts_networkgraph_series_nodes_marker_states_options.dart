@@ -37,13 +37,39 @@ export 'highcharts_series_marker_states_select_options.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsNetworkgraphSeriesNodesMarkerStatesOptions
     extends HighchartsOptionsBase {
+  /// The opposite state of a hover for a single point node.
+  /// Applied to all not connected nodes to the hovered one.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.networkgraph.nodes.marker.states.inactive
+
   HighchartsNetworkgraphSeriesNodesMarkerStatesInactiveOptions? inactive;
+
+  /// The hover state for a single point marker.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.networkgraph.nodes.marker.states.hover
+
   HighchartsSeriesMarkerStatesHoverOptions? hover;
+
+  /// The normal state of a single point marker. Currently only
+  /// used for setting animation when returning to normal state
+  /// from hover.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.networkgraph.nodes.marker.states.normal
+
   HighchartsSeriesMarkerStatesNormalOptions? normal;
+
+  /// The appearance of the point marker when selected. In order to
+  /// allow a point to be selected, set the
+  /// `series.allowPointSelect` option to true.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.networkgraph.nodes.marker.states.select
+
   HighchartsSeriesMarkerStatesSelectOptions? select;
 
+  /// Highcharts Options Widget.
   HighchartsNetworkgraphSeriesNodesMarkerStatesOptions(
       {this.inactive, this.hover, this.normal, this.select});
 

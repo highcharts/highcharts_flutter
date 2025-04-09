@@ -29,17 +29,48 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Titles for yAxes are taken from
- * [xAxis.categories](#xAxis.categories). All options for `xAxis.labels`
- * applies to parallel coordinates titles. For example, to style
- * categories, use [xAxis.labels.style](#xAxis.labels.style).
- */
+/// Titles for yAxes are taken from
+/// xAxis.categories. All options for `xAxis.labels`
+/// applies to parallel coordinates titles. For example, to style
+/// categories, use xAxis.labels.style.
+///
+/// API Docs: https://api.highcharts.com/highcharts/chart.parallelAxes.title
 class HighchartsChartParallelAxesTitleOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   bool? reserveSpace;
+
+  /// Highcharts Options Widget.
+
   String? text;
+
+  /// Alignment of the text, can be `"left"`, `"right"` or `"center"`.
+  /// Default alignment depends on the
+  /// title.align:
+  ///
+  /// Horizontal axes:
+  /// - for `align` = `"low"`, `textAlign` is set to `left`
+  /// - for `align` = `"middle"`, `textAlign` is set to `center`
+  /// - for `align` = `"high"`, `textAlign` is set to `right`
+  ///
+  /// Vertical axes:
+  /// - for `align` = `"low"` and `opposite` = `true`, `textAlign` is
+  ///   set to `right`
+  /// - for `align` = `"low"` and `opposite` = `false`, `textAlign` is
+  ///   set to `left`
+  /// - for `align` = `"middle"`, `textAlign` is set to `center`
+  /// - for `align` = `"high"` and `opposite` = `true` `textAlign` is
+  ///   set to `left`
+  /// - for `align` = `"high"` and `opposite` = `false` `textAlign` is
+  ///   set to `right`
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/chart.parallelAxes.title.textAlign
+
   String? textAlign;
 
+  /// Titles for yAxes are taken from xAxis.categories. All options for `xAxis.labels` applies to parallel coordinates titles. For example, to style categories, use xAxis.labels.style.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/chart.parallelAxes.title
   HighchartsChartParallelAxesTitleOptions(
       {this.reserveSpace, this.text, this.textAlign});
 

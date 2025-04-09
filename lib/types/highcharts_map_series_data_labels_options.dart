@@ -29,13 +29,29 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsMapSeriesDataLabelsOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   bool? crop;
+
+  /// Highcharts Options Widget.
+
   bool? inside;
+
+  /// Highcharts Options Widget.
+
   bool? overflow;
+
+  /// Highcharts Options Widget.
+
   double? padding;
+
+  /// Highcharts Options Widget.
+
   String? verticalAlign;
 
+  /// Highcharts Options Widget.
   HighchartsMapSeriesDataLabelsOptions(
       {this.crop,
       this.inside,

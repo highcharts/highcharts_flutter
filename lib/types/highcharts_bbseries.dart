@@ -32,57 +32,39 @@ export 'highcharts_bbseries_options.dart';
  *
  * */
 
-/**
- * A bollinger bands indicator. If the [type](#series.bb.type) option is not
- * specified, it is inherited from [chart.type](#chart.type).
- * 
- * Configuration options for the series are given in three levels:
- * 1. Options for all series in a chart are defined in the
- *    [plotOptions.series](plotOptions.series) object.
- * 2. Options for all `bb` series are defined in
- *    [plotOptions.bb](plotOptions.bb).
- * 3. Options for one single series are given in
- *    [the series instance array](series.bb).
- * 
- * ```
- * Highcharts.chart('container', {
- *     plotOptions: {
- *         series: {
- *             // general options for all series
- *         },
- *         bb: {
- *             // shared options for all bb series
- *         }
- *     },
- *     series: [{
- *         // specific options for this series instance
- *         type: 'bb'
- *     }]
- * });
- * ```
- * 
- * **TypeScript:**
- * - the [type](series.bb.type) option must always be set.
- * - when accessing an array of series, the combined set of all series types is
- *   represented by [Highcharts.SeriesOptionsType
- *   ](/class-reference/Highcharts#.SeriesOptionsType). Narrowing down to the
- *   specific type can be done by checking the `type` property.
- * 
- * ```
- * if (chart.options.series?.[0]?.type === bb) {
- *     // code specific to the bb series
- * }
- * ```
- *             
- */
+/// A bollinger bands indicator. If the type option is not
+/// specified, it is inherited from chart.type.
+///
+/// Configuration options for the series are given in three levels:
+/// 1. Options for all series in a chart are defined in the
+///    plotOptions.series object.
+/// 2. Options for all `bb` series are defined in
+///    plotOptions.bb.
+/// 3. Options for one single series are given in
+///    the series instance array.
+///
+///
+///
+///
+/// API Docs: https://api.highcharts.com/highstock/series.bb
 class HighchartsBBSeries extends HighchartsSeries {
+  /// Highcharts Options Widget.
   List<List<dynamic>>? data;
+
+  /// The name of the series as shown in the legend, tooltip etc.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.bb.name
   String? name;
+
+  /// Configuration options for the HighchartsBBSeries.
   HighchartsBBSeriesOptions? options;
   List<dynamic>? points;
   @override
   get type => 'bb';
 
+  /// A bollinger bands indicator. If the type option is not specified, it is inherited from chart.type.
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/series.bb
   HighchartsBBSeries({
     this.data,
     this.name,

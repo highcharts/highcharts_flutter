@@ -29,59 +29,296 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Configure the aliases for indicator names.
- */
+/// Configure the aliases for indicator names.
+///
+/// API Docs: https://api.highcharts.com/highstock/lang.navigation.popup.indicatorAliases
 class HighchartsLangNavigationPopupIndicatorAliasesOptions
     extends HighchartsOptionsBase {
+  /// Acceleration Bands alias.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.navigation.popup.indicatorAliases.abands
+
   List<String>? abands;
+
+  /// Accumulation/Distribution alias.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.navigation.popup.indicatorAliases.ad
+
   List<String>? ad;
+
+  /// Awesome oscillator alias.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.navigation.popup.indicatorAliases.ao
+
   List<String>? ao;
+
+  /// Absolute price indicator alias.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.navigation.popup.indicatorAliases.apo
+
   List<String>? apo;
+
+  /// Aroon alias.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.navigation.popup.indicatorAliases.aroon
+
   List<String>? aroon;
+
+  /// Aroon oscillator alias.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.navigation.popup.indicatorAliases.aroonoscillator
+
   List<String>? aroonoscillator;
+
+  /// Average True Range alias.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.navigation.popup.indicatorAliases.atr
+
   List<String>? atr;
+
+  /// Bollinger Bands alias.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.navigation.popup.indicatorAliases.bb
+
   List<String>? bb;
+
+  /// Commodity Channel Index alias.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.navigation.popup.indicatorAliases.cci
+
   List<String>? cci;
+
+  /// Chaikin alias.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.navigation.popup.indicatorAliases.chaikin
+
   List<String>? chaikin;
+
+  /// Chaikin Money Flow alias.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.navigation.popup.indicatorAliases.cmf
+
   List<String>? cmf;
+
+  /// Chande Momentum Oscillator alias.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.navigation.popup.indicatorAliases.cmo
+
   List<String>? cmo;
+
+  /// Double Exponential Moving Average alias.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.navigation.popup.indicatorAliases.dema
+
   List<String>? dema;
+
+  /// Disparity Index alias.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.navigation.popup.indicatorAliases.disparityindex
+
   List<String>? disparityindex;
+
+  /// Directional Movement Index alias.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.navigation.popup.indicatorAliases.dmi
+
   List<String>? dmi;
+
+  /// Detrended price oscillator alias.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.navigation.popup.indicatorAliases.dpo
+
   List<String>? dpo;
+
+  /// Exponential Moving Average alias.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.navigation.popup.indicatorAliases.ema
+
   List<String>? ema;
+
+  /// Ichimoku Kinko Hyo alias.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.navigation.popup.indicatorAliases.ikh
+
   List<String>? ikh;
+
+  /// Keltner Channels alias.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.navigation.popup.indicatorAliases.keltnerchannels
+
   List<String>? keltnerchannels;
+
+  /// Klinger Oscillator alias.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.navigation.popup.indicatorAliases.klinger
+
   List<String>? klinger;
+
+  /// Linear Regression alias.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.navigation.popup.indicatorAliases.linearRegression
+
   List<String>? linearRegression;
+
+  /// Linear Regression Angle alias.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.navigation.popup.indicatorAliases.linearRegressionAngle
+
   List<String>? linearRegressionAngle;
+
+  /// Linear Regression Intercept alias.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.navigation.popup.indicatorAliases.linearRegressionIntercept
+
   List<String>? linearRegressionIntercept;
+
+  /// Linear Regression Slope alias.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.navigation.popup.indicatorAliases.linearRegressionSlope
+
   List<String>? linearRegressionSlope;
+
+  /// Moving Average Convergence Divergence alias.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.navigation.popup.indicatorAliases.macd
+
   List<String>? macd;
+
+  /// Money Flow Index alias.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.navigation.popup.indicatorAliases.mfi
+
   List<String>? mfi;
+
+  /// Momentum alias.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.navigation.popup.indicatorAliases.momentum
+
   List<String>? momentum;
+
+  /// Normalized Average True Range alias.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.navigation.popup.indicatorAliases.natr
+
   List<String>? natr;
+
+  /// On-Balance Volume alias.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.navigation.popup.indicatorAliases.obv
+
   List<String>? obv;
+
+  /// Price Channel alias.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.navigation.popup.indicatorAliases.pc
+
   List<String>? pc;
+
+  /// Pivot Points alias.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.navigation.popup.indicatorAliases.pivotpoints
+
   List<String>? pivotpoints;
+
+  /// Percentage Price oscillator alias.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.navigation.popup.indicatorAliases.ppo
+
   List<String>? ppo;
+
+  /// Price Envelopes alias.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.navigation.popup.indicatorAliases.priceenvelopes
+
   List<String>? priceenvelopes;
+
+  /// Parabolic SAR alias.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.navigation.popup.indicatorAliases.psar
+
   List<String>? psar;
+
+  /// Rate of Change alias.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.navigation.popup.indicatorAliases.roc
+
   List<String>? roc;
+
+  /// Relative Strength Index alias.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.navigation.popup.indicatorAliases.rsi
+
   List<String>? rsi;
+
+  /// Slow Stochastic alias.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.navigation.popup.indicatorAliases.slowstochastic
+
   List<String>? slowstochastic;
+
+  /// Simple Moving Average alias.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.navigation.popup.indicatorAliases.sma
+
   List<String>? sma;
+
+  /// Stochastic alias.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.navigation.popup.indicatorAliases.stochastic
+
   List<String>? stochastic;
+
+  /// Super Trend alias.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.navigation.popup.indicatorAliases.supertrend
+
   List<String>? supertrend;
+
+  /// Triple Exponential Moving Average alias.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.navigation.popup.indicatorAliases.tema
+
   List<String>? tema;
+
+  /// TRIX alias.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.navigation.popup.indicatorAliases.trix
+
   List<String>? trix;
+
+  /// Volume by Price alias.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.navigation.popup.indicatorAliases.vbp
+
   List<String>? vbp;
+
+  /// Volume Weighted Moving Average alias.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.navigation.popup.indicatorAliases.vwap
+
   List<String>? vwap;
+
+  /// Williams %R alias.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.navigation.popup.indicatorAliases.williamsr
+
   List<String>? williamsr;
+
+  /// Weighted Moving Average alias.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.navigation.popup.indicatorAliases.wma
+
   List<String>? wma;
+
+  /// Zig Zagalias.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.navigation.popup.indicatorAliases.zigzag
+
   List<String>? zigzag;
 
+  /// Configure the aliases for indicator names.
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/lang.navigation.popup.indicatorAliases
   HighchartsLangNavigationPopupIndicatorAliasesOptions(
       {this.abands,
       this.ad,

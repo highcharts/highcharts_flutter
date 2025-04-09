@@ -31,16 +31,39 @@ export 'highcharts_series_states_inactive_animation_options.dart';
  *
  * */
 
-/**
- * The opposite state of a hover for a single point node/link.
- */
+/// The opposite state of a hover for a single point node/link.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.dependencywheel.states.inactive
 class HighchartsDependencyWheelSeriesStatesInactiveOptions
     extends HighchartsOptionsBase {
+  /// Animation when not hovering over the marker.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.dependencywheel.states.inactive.animation
+
   HighchartsSeriesStatesInactiveAnimationOptions? animation;
+
+  /// Enable or disable the inactive state for a series
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.dependencywheel.states.inactive.enabled
+
   bool? enabled;
+
+  /// Opacity for the links between nodes in the sankey diagram in
+  /// inactive mode.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.dependencywheel.states.inactive.linkOpacity
+
   double? linkOpacity;
+
+  /// Opacity of the nodes in the sankey diagram in inactive mode.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.dependencywheel.states.inactive.opacity
+
   double? opacity;
 
+  /// The opposite state of a hover for a single point node/link.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.dependencywheel.states.inactive
   HighchartsDependencyWheelSeriesStatesInactiveOptions(
       {this.animation, this.enabled, this.linkOpacity, this.opacity});
 

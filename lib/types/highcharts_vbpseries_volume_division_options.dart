@@ -31,13 +31,23 @@ export 'highcharts_vbpseries_volume_division_styles_options.dart';
  *
  * */
 
-/**
- * The styles for bars when volume is divided into positive/negative.
- */
+/// The styles for bars when volume is divided into positive/negative.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.vbp.volumeDivision
 class HighchartsVBPSeriesVolumeDivisionOptions extends HighchartsOptionsBase {
+  /// Option to control if volume is divided.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.vbp.volumeDivision.enabled
+
   bool? enabled;
+
+  /// Highcharts Options Widget.
+
   HighchartsVBPSeriesVolumeDivisionStylesOptions? styles;
 
+  /// The styles for bars when volume is divided into positive/negative.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.vbp.volumeDivision
   HighchartsVBPSeriesVolumeDivisionOptions({this.enabled, this.styles});
 
   @override

@@ -32,27 +32,131 @@ export 'highcharts_organization_series_nodes_data_labels_options.dart';
  *
  * */
 
-/**
- * A collection of options for the individual nodes. The nodes in an org chart
- * are auto-generated instances of `Highcharts.Point`, but options can be
- * applied here and linked by the `id`.
- */
+/// A collection of options for the individual nodes. The nodes in an org chart
+/// are auto-generated instances of `Highcharts.Point`, but options can be
+/// applied here and linked by the `id`.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.organization.nodes
 class HighchartsOrganizationSeriesNodesOptions extends HighchartsOptionsBase {
+  /// The color of the auto generated node.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.organization.nodes.color
+
   String? color;
+
+  /// The color index of the auto generated node, especially for use in styled
+  /// mode.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.organization.nodes.colorIndex
+
   double? colorIndex;
+
+  /// An optional column index of where to place the node. The default behaviour is
+  /// to place it next to the preceding node. Note that this option name is
+  /// counter intuitive in inverted charts, like for example an organization chart
+  /// rendered top down. In this case the "columns" are horizontal.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.organization.nodes.column
+
   double? column;
+
+  /// Individual data label for each node. The options are the same as
+  /// the ones for series.organization.dataLabels.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.organization.nodes.dataLabels
+
   HighchartsOrganizationSeriesNodesDataLabelsOptions? dataLabels;
+
+  /// The job description for the node card, will be inserted by the default
+  /// `dataLabel.nodeFormatter`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.organization.nodes.description
+
   String? description;
+
+  /// The height of the node.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.organization.nodes.height
+
   double? height;
+
+  /// The id of the auto-generated node, referring to the `from` or `to` setting of
+  /// the link.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.organization.nodes.id
+
   String? id;
+
+  /// An image for the node card, will be inserted by the default
+  /// `dataLabel.nodeFormatter`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.organization.nodes.image
+
   String? image;
+
+  /// Layout for the node's children. If `hanging`, this node's children will hang
+  /// below their parent, allowing a tighter packing of nodes in the diagram.
+  ///
+  /// Note: Since version 10.0.0, the `hanging` layout is set by default for
+  /// children of a parent using `hanging` layout.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.organization.nodes.layout
+
   String? layout;
+
+  /// An optional level index of where to place the node. The default behaviour is
+  /// to place it next to the preceding node. Alias of `nodes.column`, but in
+  /// inverted sankeys and org charts, the levels are laid out as rows.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.organization.nodes.level
+
   double? level;
+
+  /// This option is deprecated, use
+  /// offsetHorizontal and
+  /// offsetVertical instead.
+  ///
+  /// In a horizontal layout, the vertical offset of a node in terms of weight.
+  /// Positive values shift the node downwards, negative shift it upwards. In a
+  /// vertical layout, like organization chart, the offset is horizontal.
+  ///
+  /// If a percentage string is given, the node is offset by the percentage of the
+  /// node size plus `nodePadding`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.organization.nodes.offset
+
   dynamic offset;
+
+  /// The horizontal offset of a node. Positive values shift the node right,
+  /// negative shift it left.
+  ///
+  /// If a percentage string is given, the node is offset by the percentage of the
+  /// node size.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.organization.nodes.offsetHorizontal
+
   dynamic offsetHorizontal;
+
+  /// The vertical offset of a node. Positive values shift the node down,
+  /// negative shift it up.
+  ///
+  /// If a percentage string is given, the node is offset by the percentage of the
+  /// node size.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.organization.nodes.offsetVertical
+
   dynamic offsetVertical;
+
+  /// The job title for the node card, will be inserted by the default
+  /// `dataLabel.nodeFormatter`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.organization.nodes.title
+
   String? title;
 
+  /// A collection of options for the individual nodes. The nodes in an org chart are auto-generated instances of `Highcharts.Point`, but options can be applied here and linked by the `id`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.organization.nodes
   HighchartsOrganizationSeriesNodesOptions(
       {this.color,
       this.colorIndex,

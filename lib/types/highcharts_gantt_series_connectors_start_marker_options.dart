@@ -29,14 +29,30 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsGanttSeriesConnectorsStartMarkerOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   String? align;
+
+  /// Highcharts Options Widget.
+
   bool? enabled;
+
+  /// Highcharts Options Widget.
+
   String? fill;
+
+  /// Highcharts Options Widget.
+
   double? radius;
+
+  /// Highcharts Options Widget.
+
   String? symbol;
 
+  /// Highcharts Options Widget.
   HighchartsGanttSeriesConnectorsStartMarkerOptions(
       {this.align, this.enabled, this.fill, this.radius, this.symbol});
 

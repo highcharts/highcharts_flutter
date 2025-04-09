@@ -32,22 +32,74 @@ export 'highcharts_treegraph_series_collapse_button_style_options.dart';
  *
  * */
 
-/**
- * Options applied to collapse Button. The collape button is the
- * small button which indicates, that the node is collapsable.
- */
+/// Options applied to collapse Button. The collape button is the
+/// small button which indicates, that the node is collapsable.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.treegraph.collapseButton
 class HighchartsTreegraphSeriesCollapseButtonOptions
     extends HighchartsOptionsBase {
+  /// Whether the button should be visible.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.treegraph.collapseButton.enabled
+
   bool? enabled;
+
+  /// Height of the button.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.treegraph.collapseButton.height
+
   double? height;
+
+  /// The line width of the button in pixels
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.treegraph.collapseButton.lineWidth
+
   double? lineWidth;
+
+  /// Whether the button should be visible only when the node is
+  /// hovered. When set to true, the button is hidden for nodes,
+  /// which are not collapsed, and shown for the collapsed ones.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.treegraph.collapseButton.onlyOnHover
+
   bool? onlyOnHover;
+
+  /// The symbol of the collapse button.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.treegraph.collapseButton.shape
+
   String? shape;
+
+  /// CSS styles for the collapse button.
+  ///
+  /// In styled mode, the collapse button style is given in the
+  /// `.highcharts-collapse-button` class.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.treegraph.collapseButton.style
+
   HighchartsTreegraphSeriesCollapseButtonStyleOptions? style;
+
+  /// Width of the button.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.treegraph.collapseButton.width
+
   double? width;
+
+  /// Offset of the button in the x direction.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.treegraph.collapseButton.x
+
   double? x;
+
+  /// Offset of the button in the y direction.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.treegraph.collapseButton.y
+
   double? y;
 
+  /// Options applied to collapse Button. The collape button is the small button which indicates, that the node is collapsable.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.treegraph.collapseButton
   HighchartsTreegraphSeriesCollapseButtonOptions(
       {this.enabled,
       this.height,

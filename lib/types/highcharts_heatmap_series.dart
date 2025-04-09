@@ -32,57 +32,57 @@ export 'highcharts_heatmap_series_options.dart';
  *
  * */
 
-/**
- * A `heatmap` series. If the [type](#series.heatmap.type) option is
- * not specified, it is inherited from [chart.type](#chart.type).
- * 
- * Configuration options for the series are given in three levels:
- * 1. Options for all series in a chart are defined in the
- *    [plotOptions.series](plotOptions.series) object.
- * 2. Options for all `heatmap` series are defined in
- *    [plotOptions.heatmap](plotOptions.heatmap).
- * 3. Options for one single series are given in
- *    [the series instance array](series.heatmap).
- * 
- * ```
- * Highcharts.chart('container', {
- *     plotOptions: {
- *         series: {
- *             // general options for all series
- *         },
- *         heatmap: {
- *             // shared options for all heatmap series
- *         }
- *     },
- *     series: [{
- *         // specific options for this series instance
- *         type: 'heatmap'
- *     }]
- * });
- * ```
- * 
- * **TypeScript:**
- * - the [type](series.heatmap.type) option must always be set.
- * - when accessing an array of series, the combined set of all series types is
- *   represented by [Highcharts.SeriesOptionsType
- *   ](/class-reference/Highcharts#.SeriesOptionsType). Narrowing down to the
- *   specific type can be done by checking the `type` property.
- * 
- * ```
- * if (chart.options.series?.[0]?.type === heatmap) {
- *     // code specific to the heatmap series
- * }
- * ```
- *             
- */
+/// A `heatmap` series. If the type option is
+/// not specified, it is inherited from chart.type.
+///
+/// Configuration options for the series are given in three levels:
+/// 1. Options for all series in a chart are defined in the
+///    plotOptions.series object.
+/// 2. Options for all `heatmap` series are defined in
+///    plotOptions.heatmap.
+/// 3. Options for one single series are given in
+///    the series instance array.
+///
+///
+///
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.heatmap
 class HighchartsHeatmapSeries extends HighchartsSeries {
+  /// An array of data points for the series. For the `heatmap` series
+  /// type, points can be given in the following ways:
+  ///
+  /// 1.  An array of arrays with 3 or 2 values. In this case, the values
+  /// correspond to `x,y,value`. If the first value is a string, it is
+  /// applied as the name of the point, and the `x` value is inferred.
+  /// The `x` value can also be omitted, in which case the inner arrays
+  /// should be of length 2\. Then the `x` value is automatically calculated,
+  /// either starting at 0 and incremented by 1, or from `pointStart`
+  /// and `pointInterval` given in the series options.
+  ///
+  ///
+  /// 2.  An array of objects with named values. The following snippet shows only a
+  /// few settings, see the complete options set below. If the total number of data
+  /// points exceeds the series' turboThreshold,
+  /// this option is not available.
+  ///
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.heatmap.data
   List<List<dynamic>>? data;
+
+  /// The name of the series as shown in the legend, tooltip etc.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.heatmap.name
   String? name;
+
+  /// Configuration options for the HighchartsHeatmapSeries.
   HighchartsHeatmapSeriesOptions? options;
   List<dynamic>? points;
   @override
   get type => 'heatmap';
 
+  /// A `heatmap` series. If the type option is not specified, it is inherited from chart.type.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.heatmap
   HighchartsHeatmapSeries({
     this.data,
     this.name,

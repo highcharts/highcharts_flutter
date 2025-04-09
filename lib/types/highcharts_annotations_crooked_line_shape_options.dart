@@ -29,22 +29,94 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsAnnotationsCrookedLineShapeOptions
     extends HighchartsOptionsBase {
+  /// Name of the dash style to use for the shape's stroke.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.timeCycles.shapeOptions.dashStyle
+
   String? dashStyle;
+
+  /// The color of the shape's fill.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.timeCycles.shapeOptions.fill
+
   Map<String, dynamic>? fill;
+
+  /// The height of the shape.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.timeCycles.shapeOptions.height
+
   double? height;
+
+  /// The radius of the shape.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.timeCycles.shapeOptions.r
+
   double? r;
+
+  /// The radius of the shape in y direction.
+  /// Used for the ellipse.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.timeCycles.shapeOptions.ry
+
   double? ry;
+
+  /// Defines additional snapping area around an annotation
+  /// making this annotation to focus. Defined in pixels.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.timeCycles.shapeOptions.snap
+
   double? snap;
+
+  /// The URL for an image to use as the annotation shape.
+  /// Note, type has to be set to `'image'`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.timeCycles.shapeOptions.src
+
   String? src;
+
+  /// The color of the shape's stroke.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.timeCycles.shapeOptions.stroke
+
   String? stroke;
+
+  /// The pixel stroke width of the shape.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.timeCycles.shapeOptions.strokeWidth
+
   double? strokeWidth;
+
+  /// The type of the shape.
+  /// Available options are circle, rect and ellipse.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.timeCycles.shapeOptions.type
+
   String? type;
+
+  /// The width of the shape.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.timeCycles.shapeOptions.width
+
   double? width;
+
+  /// The xAxis index to which the points should be attached.
+  /// Used for the ellipse.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.timeCycles.shapeOptions.xAxis
+
   double? xAxis;
+
+  /// The yAxis index to which the points should be attached.
+  /// Used for the ellipse.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.timeCycles.shapeOptions.yAxis
+
   double? yAxis;
 
+  /// Highcharts Options Widget.
   HighchartsAnnotationsCrookedLineShapeOptions(
       {this.dashStyle,
       this.fill,

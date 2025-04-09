@@ -28,11 +28,20 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsNavigationAnnotationsFibonacciTimeZonesTypeOptionsPointsOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   double? controlPoint;
+
+  /// The x position of the point.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.fibonacciTimeZones.typeOptions.points.x
+
   double? x;
 
+  /// Highcharts Options Widget.
   HighchartsNavigationAnnotationsFibonacciTimeZonesTypeOptionsPointsOptions(
       {this.controlPoint, this.x});
 

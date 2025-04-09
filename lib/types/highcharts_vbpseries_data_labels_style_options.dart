@@ -29,9 +29,13 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsVBPSeriesDataLabelsStyleOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   dynamic fontSize;
 
+  /// Highcharts Options Widget.
   HighchartsVBPSeriesDataLabelsStyleOptions({this.fontSize});
 
   @override

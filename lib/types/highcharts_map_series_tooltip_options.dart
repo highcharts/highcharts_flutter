@@ -29,10 +29,17 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsMapSeriesTooltipOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   bool? followPointer;
+
+  /// Highcharts Options Widget.
+
   String? pointFormat;
 
+  /// Highcharts Options Widget.
   HighchartsMapSeriesTooltipOptions({this.followPointer, this.pointFormat});
 
   @override

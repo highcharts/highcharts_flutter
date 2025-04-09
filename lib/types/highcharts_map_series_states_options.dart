@@ -31,9 +31,13 @@ export 'highcharts_map_series_states_normal_options.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsMapSeriesStatesOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   HighchartsMapSeriesStatesNormalOptions? normal;
 
+  /// Highcharts Options Widget.
   HighchartsMapSeriesStatesOptions({this.normal});
 
   @override

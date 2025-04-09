@@ -32,19 +32,67 @@ export 'highcharts_series_marker_states_options.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsPointandfigureSeriesMarkerOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   bool? enabled;
+
+  /// The threshold for how dense the point markers should be before
+  /// they are hidden, given that `enabled` is not defined. The number
+  /// indicates the horizontal distance between the two closest points
+  /// in the series, as multiples of the `marker.radius`. In other
+  /// words, the default value of 2 means points are hidden if
+  /// overlapping horizontally.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.pointandfigure.marker.enabledThreshold
+
   double? enabledThreshold;
+
+  /// Highcharts Options Widget.
+
   String? fillColor;
+
+  /// Image markers only. Set the image width explicitly. When using
+  /// this option, a `width` must also be set.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.pointandfigure.marker.height
+
   double? height;
+
+  /// Highcharts Options Widget.
+
   String? lineColor;
+
+  /// Highcharts Options Widget.
+
   double? lineWidth;
+
+  /// The radius of the point marker.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.pointandfigure.marker.radius
+
   double? radius;
+
+  /// States for a single point marker.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.pointandfigure.marker.states
+
   HighchartsSeriesMarkerStatesOptions? states;
+
+  /// Highcharts Options Widget.
+
   String? symbol;
+
+  /// Image markers only. Set the image width explicitly. When using
+  /// this option, a `height` must also be set.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.pointandfigure.marker.width
+
   double? width;
 
+  /// Highcharts Options Widget.
   HighchartsPointandfigureSeriesMarkerOptions(
       {this.enabled,
       this.enabledThreshold,

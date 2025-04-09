@@ -32,57 +32,39 @@ export 'highcharts_pareto_series_options.dart';
  *
  * */
 
-/**
- * A `pareto` series. If the [type](#series.pareto.type) option is not
- * specified, it is inherited from [chart.type](#chart.type).
- * 
- * Configuration options for the series are given in three levels:
- * 1. Options for all series in a chart are defined in the
- *    [plotOptions.series](plotOptions.series) object.
- * 2. Options for all `pareto` series are defined in
- *    [plotOptions.pareto](plotOptions.pareto).
- * 3. Options for one single series are given in
- *    [the series instance array](series.pareto).
- * 
- * ```
- * Highcharts.chart('container', {
- *     plotOptions: {
- *         series: {
- *             // general options for all series
- *         },
- *         pareto: {
- *             // shared options for all pareto series
- *         }
- *     },
- *     series: [{
- *         // specific options for this series instance
- *         type: 'pareto'
- *     }]
- * });
- * ```
- * 
- * **TypeScript:**
- * - the [type](series.pareto.type) option must always be set.
- * - when accessing an array of series, the combined set of all series types is
- *   represented by [Highcharts.SeriesOptionsType
- *   ](/class-reference/Highcharts#.SeriesOptionsType). Narrowing down to the
- *   specific type can be done by checking the `type` property.
- * 
- * ```
- * if (chart.options.series?.[0]?.type === pareto) {
- *     // code specific to the pareto series
- * }
- * ```
- *             
- */
+/// A `pareto` series. If the type option is not
+/// specified, it is inherited from chart.type.
+///
+/// Configuration options for the series are given in three levels:
+/// 1. Options for all series in a chart are defined in the
+///    plotOptions.series object.
+/// 2. Options for all `pareto` series are defined in
+///    plotOptions.pareto.
+/// 3. Options for one single series are given in
+///    the series instance array.
+///
+///
+///
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.pareto
 class HighchartsParetoSeries extends HighchartsSeries {
+  /// Highcharts Options Widget.
   List<List<dynamic>>? data;
+
+  /// The name of the series as shown in the legend, tooltip etc.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.pareto.name
   String? name;
+
+  /// Configuration options for the HighchartsParetoSeries.
   HighchartsParetoSeriesOptions? options;
   List<dynamic>? points;
   @override
   get type => 'pareto';
 
+  /// A `pareto` series. If the type option is not specified, it is inherited from chart.type.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.pareto
   HighchartsParetoSeries({
     this.data,
     this.name,

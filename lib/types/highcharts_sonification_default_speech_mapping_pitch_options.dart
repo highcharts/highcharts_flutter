@@ -29,18 +29,45 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Speech pitch (how high/low the voice is) multiplier.
- */
+/// Speech pitch (how high/low the voice is) multiplier.
+///
+/// API Docs: https://api.highcharts.com/highcharts/sonification.defaultSpeechOptions.mapping.pitch
 class HighchartsSonificationDefaultSpeechMappingPitchOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   String? mapTo;
+
+  /// Highcharts Options Widget.
+
   String? max;
+
+  /// Highcharts Options Widget.
+
   String? min;
+
+  /// Highcharts Options Widget.
+
   String? within;
+
+  /// How to perform the mapping.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/sonification.defaultSpeechOptions.mapping.pitch.mapFunction
+
   String? mapFunction;
+
+  /// A fixed value to use for the prop when mapping.
+  ///
+  /// For example, if mapping to `y`, setting value to `4` will
+  /// map as if all points had a y value of 4.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/sonification.defaultSpeechOptions.mapping.pitch.value
+
   double? value;
 
+  /// Speech pitch (how high/low the voice is) multiplier.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/sonification.defaultSpeechOptions.mapping.pitch
   HighchartsSonificationDefaultSpeechMappingPitchOptions(
       {this.mapTo,
       this.max,

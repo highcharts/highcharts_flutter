@@ -36,44 +36,126 @@ export 'highcharts_organization_series_data_events_options.dart';
  *
  * */
 
-/**
- * An array of data points for the series. For the `organization` series
- * type, points can be given in the following way:
- * 
- * An array of objects with named values. The following snippet shows only a
- * few settings, see the complete options set below. If the total number of data
- * points exceeds the series' [turboThreshold](#series.area.turboThreshold),
- * this option is not available.
- * 
- *  ```js
- *     data: [{
- *         from: 'Category1',
- *         to: 'Category2',
- *         weight: 2
- *     }, {
- *         from: 'Category1',
- *         to: 'Category3',
- *         weight: 5
- *     }]
- *  ```
- */
+/// An array of data points for the series. For the `organization` series
+/// type, points can be given in the following way:
+///
+/// An array of objects with named values. The following snippet shows only a
+/// few settings, see the complete options set below. If the total number of data
+/// points exceeds the series' turboThreshold,
+/// this option is not available.
+///
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.organization.data
 class HighchartsOrganizationSeriesDataOptions extends HighchartsOptionsBase {
+  /// Accessibility options for a data point.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.organization.data.accessibility
+
   HighchartsOrganizationSeriesDataAccessibilityOptions? accessibility;
+
+  /// An additional, individual class name for the data point's graphic
+  /// representation. Changes to a point's color will also be reflected in a
+  /// chart's legend and tooltip.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.organization.data.className
+
   String? className;
+
+  /// The color for the individual _link_. By default, the link color is the same
+  /// as the node it extends from. The `series.fillOpacity` option also applies to
+  /// the points, so when setting a specific link color, consider setting the
+  /// `fillOpacity` to 1.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.organization.data.color
+
   String? color;
+
+  /// A specific color index to use for the point, so its graphic representations
+  /// are given the class name `highcharts-color-{n}`. In styled mode this will
+  /// change the color of the graphic. In non-styled mode, the color is set by the
+  /// `fill` attribute, so the change in class name won't have a visual effect by
+  /// default.
+  ///
+  /// Since v11, CSS variables on the form `--highcharts-color-{n}` make changing
+  /// the color scheme very convenient.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.organization.data.colorIndex
+
   double? colorIndex;
+
+  /// A reserved subspace to store options and values for customized functionality.
+  /// Here you can add additional data for your own event callbacks and formatter
+  /// callbacks.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.organization.data.custom
+
   Map<String, dynamic>? custom;
+
+  /// Highcharts Options Widget.
+
   HighchartsOrganizationSeriesDataDataLabelsOptions? dataLabels;
+
+  /// A description of the point to add to the screen reader information
+  /// about the point.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.organization.data.description
+
   String? description;
+
+  /// The individual point events.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.organization.data.events
+
   HighchartsOrganizationSeriesDataEventsOptions? events;
+
+  /// The node that the link runs from.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.organization.data.from
+
   String? from;
+
+  /// An id for the point. This can be used after render time to get a
+  /// pointer to the point object through `chart.get()`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.organization.data.id
+
   String? id;
+
+  /// The rank for this point's data label in case of collision. If two
+  /// data labels are about to overlap, only the one with the highest `labelrank`
+  /// will be drawn.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.organization.data.labelrank
+
   double? labelrank;
+
+  /// Whether the link goes out of the system.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.organization.data.outgoing
+
   bool? outgoing;
+
+  /// Whether the data point is selected initially.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.organization.data.selected
+
   bool? selected;
+
+  /// The node that the link runs to.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.organization.data.to
+
   String? to;
+
+  /// The weight of the link.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.organization.data.weight
+
   double? weight;
 
+  /// An array of data points for the series. For the `organization` series type, points can be given in the following way:
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.organization.data
   HighchartsOrganizationSeriesDataOptions(
       {this.accessibility,
       this.className,

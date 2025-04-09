@@ -29,63 +29,229 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsLangStockToolsGuiOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   String? advanced;
+
+  /// Highcharts Options Widget.
+
   String? arrowInfinityLine;
+
+  /// Highcharts Options Widget.
+
   String? arrowRay;
+
+  /// Highcharts Options Widget.
+
   String? arrowSegment;
+
+  /// Highcharts Options Widget.
+
   String? circle;
+
+  /// Highcharts Options Widget.
+
   String? crooked3;
+
+  /// Highcharts Options Widget.
+
   String? crooked5;
+
+  /// Highcharts Options Widget.
+
   String? crookedLines;
+
+  /// Highcharts Options Widget.
+
   String? currentPriceIndicator;
+
+  /// Highcharts Options Widget.
+
   String? elliott3;
+
+  /// Highcharts Options Widget.
+
   String? elliott5;
+
+  /// Highcharts Options Widget.
+
   String? ellipse;
+
+  /// Highcharts Options Widget.
+
   String? fibonacci;
+
+  /// Highcharts Options Widget.
+
   String? fibonacciTimeZones;
+
+  /// Highcharts Options Widget.
+
   String? flagCirclepin;
+
+  /// Highcharts Options Widget.
+
   String? flagDiamondpin;
+
+  /// Highcharts Options Widget.
+
   String? flagSimplepin;
+
+  /// Highcharts Options Widget.
+
   String? flagSquarepin;
+
+  /// Highcharts Options Widget.
+
   String? flags;
+
+  /// Highcharts Options Widget.
+
   String? fullScreen;
+
+  /// Highcharts Options Widget.
+
   String? horizontalLine;
+
+  /// Highcharts Options Widget.
+
   String? indicators;
+
+  /// Highcharts Options Widget.
+
   String? infinityLine;
+
+  /// Highcharts Options Widget.
+
   String? label;
+
+  /// Highcharts Options Widget.
+
   String? line;
+
+  /// Highcharts Options Widget.
+
   String? lines;
+
+  /// Highcharts Options Widget.
+
   String? measure;
+
+  /// Highcharts Options Widget.
+
   String? measureX;
+
+  /// Highcharts Options Widget.
+
   String? measureXY;
+
+  /// Highcharts Options Widget.
+
   String? measureY;
+
+  /// Highcharts Options Widget.
+
   String? parallelChannel;
+
+  /// Highcharts Options Widget.
+
   String? pitchfork;
+
+  /// Highcharts Options Widget.
+
   String? ray;
+
+  /// Highcharts Options Widget.
+
   String? rectangle;
+
+  /// Highcharts Options Widget.
+
   String? saveChart;
+
+  /// Highcharts Options Widget.
+
   String? segment;
+
+  /// Highcharts Options Widget.
+
   String? simpleShapes;
+
+  /// Highcharts Options Widget.
+
   String? timeCycles;
+
+  /// Highcharts Options Widget.
+
   String? toggleAnnotations;
+
+  /// Highcharts Options Widget.
+
   String? typeCandlestick;
+
+  /// Highcharts Options Widget.
+
   String? typeChange;
+
+  /// Highcharts Options Widget.
+
   String? typeHLC;
+
+  /// Highcharts Options Widget.
+
   String? typeHeikinAshi;
+
+  /// Highcharts Options Widget.
+
   String? typeHollowCandlestick;
+
+  /// Highcharts Options Widget.
+
   String? typeLine;
+
+  /// Highcharts Options Widget.
+
   String? typeOHLC;
+
+  /// Highcharts Options Widget.
+
   String? verticalArrow;
+
+  /// Highcharts Options Widget.
+
   String? verticalCounter;
+
+  /// Highcharts Options Widget.
+
   String? verticalLabel;
+
+  /// Highcharts Options Widget.
+
   String? verticalLabels;
+
+  /// Highcharts Options Widget.
+
   String? verticalLine;
+
+  /// Highcharts Options Widget.
+
   String? zoomChange;
+
+  /// Highcharts Options Widget.
+
   String? zoomX;
+
+  /// Highcharts Options Widget.
+
   String? zoomXY;
+
+  /// Highcharts Options Widget.
+
   String? zoomY;
 
+  /// Highcharts Options Widget.
   HighchartsLangStockToolsGuiOptions(
       {this.advanced,
       this.arrowInfinityLine,

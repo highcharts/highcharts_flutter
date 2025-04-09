@@ -36,15 +36,29 @@ export 'highcharts_annotations_elliott_wave_type_options.dart';
  *
  * */
 
-/**
- * An elliott wave annotation.
- */
+/// An elliott wave annotation.
+///
+/// API Docs: https://api.highcharts.com/highstock/annotations.elliottWave
 class HighchartsAnnotationsElliottWaveOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   dynamic controlPointOptions;
+
+  /// Highcharts Options Widget.
+
   HighchartsAnnotationsElliottWaveLabelOptions? labelOptions;
+
+  /// Highcharts Options Widget.
+
   HighchartsAnnotationsCrookedLineShapeOptions? shapeOptions;
+
+  /// Highcharts Options Widget.
+
   HighchartsAnnotationsElliottWaveTypeOptions? typeOptions;
 
+  /// An elliott wave annotation.
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/annotations.elliottWave
   HighchartsAnnotationsElliottWaveOptions(
       {this.controlPointOptions,
       this.labelOptions,

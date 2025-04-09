@@ -28,7 +28,9 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsSunburstSeriesInactiveOtherPointsOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
   HighchartsSunburstSeriesInactiveOtherPointsOptions();
 }

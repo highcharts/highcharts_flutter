@@ -37,12 +37,36 @@ export 'highcharts_series_states_select_options.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsTilemapSeriesStatesOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   HighchartsTilemapSeriesStatesHoverOptions? hover;
+
+  /// The opposite state of a hover for series.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.tilemap.states.inactive
+
   HighchartsSeriesStatesInactiveOptions? inactive;
+
+  /// The normal state of a series, or for point items in column, pie
+  /// and similar series. Currently only used for setting animation
+  /// when returning to normal state from hover.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.tilemap.states.normal
+
   HighchartsSeriesStatesNormalOptions? normal;
+
+  /// Specific options for point in selected states, after being
+  /// selected by
+  /// allowPointSelect
+  /// or programmatically.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.tilemap.states.select
+
   HighchartsSeriesStatesSelectOptions? select;
 
+  /// Highcharts Options Widget.
   HighchartsTilemapSeriesStatesOptions(
       {this.hover, this.inactive, this.normal, this.select});
 

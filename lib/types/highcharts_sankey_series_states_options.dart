@@ -37,12 +37,34 @@ export 'highcharts_sankey_series_states_select_options.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsSankeySeriesStatesOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   HighchartsSankeySeriesStatesHoverOptions? hover;
+
+  /// The opposite state of a hover for a single point node/link.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.sankey.states.inactive
+
   HighchartsSankeySeriesStatesInactiveOptions? inactive;
+
+  /// The normal state of a series, or for point items in column, pie
+  /// and similar series. Currently only used for setting animation
+  /// when returning to normal state from hover.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.sankey.states.normal
+
   HighchartsSeriesStatesNormalOptions? normal;
+
+  /// Options for the selected point. These settings override the
+  /// normal state options when a point is selected.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.sankey.states.select
+
   HighchartsSankeySeriesStatesSelectOptions? select;
 
+  /// Highcharts Options Widget.
   HighchartsSankeySeriesStatesOptions(
       {this.hover, this.inactive, this.normal, this.select});
 

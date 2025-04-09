@@ -28,11 +28,20 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsNavigationAnnotationsTimeCyclesTypeOptionsPointsOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   double? controlPoint;
+
+  /// The x position of the point.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.timeCycles.typeOptions.points.x
+
   double? x;
 
+  /// Highcharts Options Widget.
   HighchartsNavigationAnnotationsTimeCyclesTypeOptionsPointsOptions(
       {this.controlPoint, this.x});
 

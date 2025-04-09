@@ -29,23 +29,52 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Descriptions of lesser known series types. The relevant
- * description is added to the screen reader information region
- * when these series types are used.
- */
+/// Descriptions of lesser known series types. The relevant
+/// description is added to the screen reader information region
+/// when these series types are used.
+///
+/// API Docs: https://api.highcharts.com/highcharts/lang.accessibility.seriesTypeDescriptions
 class HighchartsLangAccessibilitySeriesTypeDescriptionsOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   String? arearange;
+
+  /// Highcharts Options Widget.
+
   String? areasplinerange;
+
+  /// Highcharts Options Widget.
+
   String? boxplot;
+
+  /// Highcharts Options Widget.
+
   String? bubble;
+
+  /// Highcharts Options Widget.
+
   String? columnrange;
+
+  /// Highcharts Options Widget.
+
   String? errorbar;
+
+  /// Highcharts Options Widget.
+
   String? funnel;
+
+  /// Highcharts Options Widget.
+
   String? pyramid;
+
+  /// Highcharts Options Widget.
+
   String? waterfall;
 
+  /// Descriptions of lesser known series types. The relevant description is added to the screen reader information region when these series types are used.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.accessibility.seriesTypeDescriptions
   HighchartsLangAccessibilitySeriesTypeDescriptionsOptions(
       {this.arearange,
       this.areasplinerange,

@@ -37,15 +37,29 @@ export 'highcharts_annotations_tunnel_type_options.dart';
  *
  * */
 
-/**
- * A tunnel annotation.
- */
+/// A tunnel annotation.
+///
+/// API Docs: https://api.highcharts.com/highstock/annotations.tunnel
 class HighchartsAnnotationsTunnelOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   HighchartsAnnotationsTunnelControlPointOptions? controlPointOptions;
+
+  /// Highcharts Options Widget.
+
   HighchartsAnnotationsCrookedLineLabelOptions? labelOptions;
+
+  /// Highcharts Options Widget.
+
   HighchartsAnnotationsCrookedLineShapeOptions? shapeOptions;
+
+  /// Highcharts Options Widget.
+
   HighchartsAnnotationsTunnelTypeOptions? typeOptions;
 
+  /// A tunnel annotation.
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/annotations.tunnel
   HighchartsAnnotationsTunnelOptions(
       {this.controlPointOptions,
       this.labelOptions,

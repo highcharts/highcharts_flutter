@@ -29,16 +29,24 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * CSS styles for the title.
- * 
- * In styled mode, the subtitle style is given in the
- * `.highcharts-subtitle` class.
- */
+/// CSS styles for the title.
+///
+/// In styled mode, the subtitle style is given in the
+/// `.highcharts-subtitle` class.
+///
+/// API Docs: https://api.highcharts.com/highcharts/subtitle.style
 class HighchartsSubtitleStyleOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   String? color;
+
+  /// Highcharts Options Widget.
+
   dynamic fontSize;
 
+  /// CSS styles for the title.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/subtitle.style
   HighchartsSubtitleStyleOptions({this.color, this.fontSize});
 
   @override

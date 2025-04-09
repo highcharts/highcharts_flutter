@@ -45,41 +45,55 @@ export 'highcharts_xaxis_date_time_label_formats_year_options.dart';
  *
  * */
 
-/**
- * For a datetime axis, the scale will automatically adjust to the
- * appropriate unit. This member gives the default string
- * representations used for each unit. For intermediate values,
- * different units may be used, for example the `day` unit can be used
- * on midnight and `hour` unit be used for intermediate values on the
- * same axis.
- * 
- * For an overview of the string or object configuration, see
- * [dateFormat](/class-reference/Highcharts.Time#dateFormat).
- * 
- * Defaults to:
- * ```js
- * {
- *     millisecond: '%[HMSL]',
- *     second: '%[HMS]',
- *     minute: '%[HM]',
- *     hour: '%[HM]',
- *     day: '%[eb]',
- *     week: '%[eb]',
- *     month: '%[bY]',
- *     year: '%Y'
- * }
- * ```
- */
+/// For a datetime axis, the scale will automatically adjust to the
+/// appropriate unit. This member gives the default string
+/// representations used for each unit. For intermediate values,
+/// different units may be used, for example the `day` unit can be used
+/// on midnight and `hour` unit be used for intermediate values on the
+/// same axis.
+///
+/// For an overview of the string or object configuration, see
+/// dateFormat.
+///
+/// Defaults to:
+///
+/// API Docs: https://api.highcharts.com/highcharts/zAxis.dateTimeLabelFormats
 class HighchartsXAxisDateTimeLabelFormatsOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   HighchartsXAxisDateTimeLabelFormatsDayOptions? day;
+
+  /// Highcharts Options Widget.
+
   HighchartsXAxisDateTimeLabelFormatsHourOptions? hour;
+
+  /// Highcharts Options Widget.
+
   HighchartsXAxisDateTimeLabelFormatsMillisecondOptions? millisecond;
+
+  /// Highcharts Options Widget.
+
   HighchartsXAxisDateTimeLabelFormatsMinuteOptions? minute;
+
+  /// Highcharts Options Widget.
+
   HighchartsXAxisDateTimeLabelFormatsMonthOptions? month;
+
+  /// Highcharts Options Widget.
+
   HighchartsXAxisDateTimeLabelFormatsSecondOptions? second;
+
+  /// Highcharts Options Widget.
+
   HighchartsXAxisDateTimeLabelFormatsWeekOptions? week;
+
+  /// Highcharts Options Widget.
+
   HighchartsXAxisDateTimeLabelFormatsYearOptions? year;
 
+  /// For a datetime axis, the scale will automatically adjust to the appropriate unit. This member gives the default string representations used for each unit. For intermediate values, different units may be used, for example the `day` unit can be used on midnight and `hour` unit be used for intermediate values on the same axis.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/zAxis.dateTimeLabelFormats
   HighchartsXAxisDateTimeLabelFormatsOptions(
       {this.day,
       this.hour,

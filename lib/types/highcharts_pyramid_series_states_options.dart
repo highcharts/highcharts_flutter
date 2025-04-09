@@ -37,15 +37,37 @@ export 'highcharts_pyramid_series_states_select_options.dart';
  *
  * */
 
-/**
- * Options for the series states.
- */
+/// Options for the series states.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.pyramid.states
 class HighchartsPyramidSeriesStatesOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   HighchartsPyramidSeriesStatesHoverOptions? hover;
+
+  /// The opposite state of a hover for series.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.pyramid.states.inactive
+
   HighchartsSeriesStatesInactiveOptions? inactive;
+
+  /// The normal state of a series, or for point items in column, pie
+  /// and similar series. Currently only used for setting animation
+  /// when returning to normal state from hover.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.pyramid.states.normal
+
   HighchartsSeriesStatesNormalOptions? normal;
+
+  /// Options for a selected funnel item.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.pyramid.states.select
+
   HighchartsPyramidSeriesStatesSelectOptions? select;
 
+  /// Options for the series states.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.pyramid.states
   HighchartsPyramidSeriesStatesOptions(
       {this.hover, this.inactive, this.normal, this.select});
 

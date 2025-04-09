@@ -28,9 +28,13 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsWordcloudSeriesAnimationOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   double? duration;
 
+  /// Highcharts Options Widget.
   HighchartsWordcloudSeriesAnimationOptions({this.duration});
 
   @override

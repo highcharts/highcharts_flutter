@@ -29,24 +29,50 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * For series on datetime axes, the date format in the tooltip's
- * header will by default be guessed based on the closest data points.
- * This member gives the default string representations used for
- * each unit. For an overview of the string or object configuration, see
- * [dateFormat](/class-reference/Highcharts.Time#dateFormat).
- */
+/// For series on datetime axes, the date format in the tooltip's
+/// header will by default be guessed based on the closest data points.
+/// This member gives the default string representations used for
+/// each unit. For an overview of the string or object configuration, see
+/// dateFormat.
+///
+/// API Docs: https://api.highcharts.com/highcharts/tooltip.dateTimeLabelFormats
 class HighchartsTooltipDateTimeLabelFormatsOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   String? day;
+
+  /// Highcharts Options Widget.
+
   String? hour;
+
+  /// Highcharts Options Widget.
+
   String? millisecond;
+
+  /// Highcharts Options Widget.
+
   String? minute;
+
+  /// Highcharts Options Widget.
+
   String? month;
+
+  /// Highcharts Options Widget.
+
   String? second;
+
+  /// Highcharts Options Widget.
+
   String? week;
+
+  /// Highcharts Options Widget.
+
   String? year;
 
+  /// For series on datetime axes, the date format in the tooltip's header will by default be guessed based on the closest data points. This member gives the default string representations used for each unit. For an overview of the string or object configuration, see dateFormat.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/tooltip.dateTimeLabelFormats
   HighchartsTooltipDateTimeLabelFormatsOptions(
       {this.day,
       this.hour,

@@ -37,12 +37,34 @@ export 'highcharts_arc_diagram_series_states_select_options.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsArcDiagramSeriesStatesOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   HighchartsArcDiagramSeriesStatesHoverOptions? hover;
+
+  /// The opposite state of a hover for a single point node/link.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.arcdiagram.states.inactive
+
   HighchartsArcDiagramSeriesStatesInactiveOptions? inactive;
+
+  /// The normal state of a series, or for point items in column, pie
+  /// and similar series. Currently only used for setting animation
+  /// when returning to normal state from hover.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.arcdiagram.states.normal
+
   HighchartsSeriesStatesNormalOptions? normal;
+
+  /// Options for the selected point. These settings override the
+  /// normal state options when a point is selected.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.arcdiagram.states.select
+
   HighchartsArcDiagramSeriesStatesSelectOptions? select;
 
+  /// Highcharts Options Widget.
   HighchartsArcDiagramSeriesStatesOptions(
       {this.hover, this.inactive, this.normal, this.select});
 

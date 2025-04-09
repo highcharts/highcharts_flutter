@@ -29,16 +29,38 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * The position of the button.
- */
+/// The position of the button.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.sunburst.traverseUpButton.position
 class HighchartsSunburstSeriesTraverseUpButtonPositionOptions
     extends HighchartsOptionsBase {
+  /// Horizontal alignment of the button.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.sunburst.traverseUpButton.position.align
+
   String? align;
+
+  /// Vertical alignment of the button.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.sunburst.traverseUpButton.position.verticalAlign
+
   String? verticalAlign;
+
+  /// Horizontal offset of the button.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.sunburst.traverseUpButton.position.x
+
   double? x;
+
+  /// Vertical offset of the button.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.sunburst.traverseUpButton.position.y
+
   double? y;
 
+  /// The position of the button.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.sunburst.traverseUpButton.position
   HighchartsSunburstSeriesTraverseUpButtonPositionOptions(
       {this.align, this.verticalAlign, this.x, this.y});
 

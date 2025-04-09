@@ -29,10 +29,21 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsIKHSeriesTenkanLineStylesOptions extends HighchartsOptionsBase {
+  /// Color of the line.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.ikh.tenkanLine.styles.lineColor
+
   String? lineColor;
+
+  /// Pixel width of the line.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.ikh.tenkanLine.styles.lineWidth
+
   double? lineWidth;
 
+  /// Highcharts Options Widget.
   HighchartsIKHSeriesTenkanLineStylesOptions({this.lineColor, this.lineWidth});
 
   @override

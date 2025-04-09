@@ -29,19 +29,58 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Options for the cluster marker.
- */
+/// Options for the cluster marker.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.vector.cluster.marker
 class HighchartsVectorSeriesClusterMarkerOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   String? lineColor;
+
+  /// Highcharts Options Widget.
+
   double? lineWidth;
+
+  /// Highcharts Options Widget.
+
   double? radius;
+
+  /// Highcharts Options Widget.
+
   String? symbol;
+
+  /// Enable or disable the point marker. If `undefined`, the markers
+  /// are hidden when the data is dense, and shown for more widespread
+  /// data points.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.vector.cluster.marker.enabled
+
   bool? enabled;
+
+  /// The fill color of the point marker. When `undefined`, the series'
+  /// or point's color is used.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.vector.cluster.marker.fillColor
+
   String? fillColor;
+
+  /// Image markers only. Set the image width explicitly. When using
+  /// this option, a `width` must also be set.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.vector.cluster.marker.height
+
   double? height;
+
+  /// Image markers only. Set the image width explicitly. When using
+  /// this option, a `height` must also be set.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.vector.cluster.marker.width
+
   double? width;
 
+  /// Options for the cluster marker.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.vector.cluster.marker
   HighchartsVectorSeriesClusterMarkerOptions(
       {this.lineColor,
       this.lineWidth,

@@ -29,13 +29,26 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsAnnotationsControlPointStyleOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   String? cursor;
+
+  /// Highcharts Options Widget.
+
   String? fill;
+
+  /// Highcharts Options Widget.
+
   String? stroke;
+
+  /// Highcharts Options Widget.
+
   double? strokeWidth;
 
+  /// Highcharts Options Widget.
   HighchartsAnnotationsControlPointStyleOptions(
       {this.cursor, this.fill, this.stroke, this.strokeWidth});
 

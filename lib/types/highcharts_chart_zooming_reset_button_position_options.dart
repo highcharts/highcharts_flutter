@@ -29,20 +29,42 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * The position of the button.
- * 
- * Note: Adjusting position values might cause overlap with chart
- * elements. Ensure coordinates do not obstruct other components or
- * data visibility.
- */
+/// The position of the button.
+///
+/// Note: Adjusting position values might cause overlap with chart
+/// elements. Ensure coordinates do not obstruct other components or
+/// data visibility.
+///
+/// API Docs: https://api.highcharts.com/highcharts/chart.zooming.resetButton.position
 class HighchartsChartZoomingResetButtonPositionOptions
     extends HighchartsOptionsBase {
+  /// The horizontal alignment of the button.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/chart.zooming.resetButton.position.align
+
   String? align;
+
+  /// The vertical alignment of the button.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/chart.zooming.resetButton.position.verticalAlign
+
   String? verticalAlign;
+
+  /// The horizontal offset of the button.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/chart.zooming.resetButton.position.x
+
   double? x;
+
+  /// The vertical offset of the button.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/chart.zooming.resetButton.position.y
+
   double? y;
 
+  /// The position of the button.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/chart.zooming.resetButton.position
   HighchartsChartZoomingResetButtonPositionOptions(
       {this.align, this.verticalAlign, this.x, this.y});
 

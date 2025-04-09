@@ -40,17 +40,39 @@ export 'highcharts_stock_tools_gui_definitions_advanced_time_cycles_options.dart
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsStockToolsGuiDefinitionsAdvancedOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   HighchartsStockToolsGuiDefinitionsAdvancedFibonacciOptions? fibonacci;
+
+  /// Highcharts Options Widget.
+
   HighchartsStockToolsGuiDefinitionsAdvancedFibonacciTimeZonesOptions?
       fibonacciTimeZones;
+
+  /// A collection of strings pointing to config options for
+  /// the items.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/stockTools.gui.definitions.advanced.items
+
   String? items;
+
+  /// Highcharts Options Widget.
+
   HighchartsStockToolsGuiDefinitionsAdvancedParallelChannelOptions?
       parallelChannel;
+
+  /// Highcharts Options Widget.
+
   HighchartsStockToolsGuiDefinitionsAdvancedPitchforkOptions? pitchfork;
+
+  /// Highcharts Options Widget.
+
   HighchartsStockToolsGuiDefinitionsAdvancedTimeCyclesOptions? timeCycles;
 
+  /// Highcharts Options Widget.
   HighchartsStockToolsGuiDefinitionsAdvancedOptions(
       {this.fibonacci,
       this.fibonacciTimeZones,

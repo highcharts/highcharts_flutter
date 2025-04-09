@@ -28,12 +28,33 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsGanttSeriesDragDropOptions extends HighchartsOptionsBase {
+  /// Allow end value to be dragged individually.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.gantt.dragDrop.draggableEnd
+
   bool? draggableEnd;
+
+  /// Allow start value to be dragged individually.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.gantt.dragDrop.draggableStart
+
   bool? draggableStart;
+
+  /// Allow x value to be dragged individually.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.gantt.dragDrop.draggableX1
+
   bool? draggableX1;
+
+  /// Allow x2 value to be dragged individually.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.gantt.dragDrop.draggableX2
+
   bool? draggableX2;
 
+  /// Highcharts Options Widget.
   HighchartsGanttSeriesDragDropOptions(
       {this.draggableEnd,
       this.draggableStart,

@@ -36,19 +36,78 @@ export 'highcharts_xaxis_plot_lines_labels_options.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsYAxisPlotLinesOptions extends HighchartsOptionsBase {
+  /// Flag to decide if plotLine should be rendered across all panes.
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/yAxis.plotLines.acrossPanes
+
   bool? acrossPanes;
+
+  /// A custom class name, in addition to the default `highcharts-plot-line`,
+  /// to apply to each individual line.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/yAxis.plotLines.className
+
   String? className;
+
+  /// The color of the line.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/yAxis.plotLines.color
+
   String? color;
+
+  /// The dashing or dot style for the plot line. For possible values see
+  /// this overview.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/yAxis.plotLines.dashStyle
+
   String? dashStyle;
+
+  /// An object defining mouse events for the plot line. Supported
+  /// properties are `click`, `mouseover`, `mouseout`, `mousemove`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/yAxis.plotLines.events
+
   HighchartsXAxisPlotLinesEventsOptions? events;
+
+  /// An id used for identifying the plot line in Axis.removePlotLine.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/yAxis.plotLines.id
+
   String? id;
+
+  /// Text labels for the plot bands
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/yAxis.plotLines.label
+
   HighchartsXAxisPlotLinesLabelOptions? label;
+
+  /// Highcharts Options Widget.
+
   HighchartsXAxisPlotLinesLabelsOptions? labels;
+
+  /// The position of the line in axis units.
+  ///
+  /// On datetime axes, the value can be given as a timestamp or a date string.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/yAxis.plotLines.value
+
   dynamic value;
+
+  /// The width or thickness of the plot line.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/yAxis.plotLines.width
+
   double? width;
+
+  /// The z index of the plot line within the chart.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/yAxis.plotLines.zIndex
+
   double? zIndex;
 
+  /// Highcharts Options Widget.
   HighchartsYAxisPlotLinesOptions(
       {this.acrossPanes,
       this.className,

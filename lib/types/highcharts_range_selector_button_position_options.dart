@@ -29,15 +29,33 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Positioning for the button row.
- */
+/// Positioning for the button row.
+///
+/// API Docs: https://api.highcharts.com/highcharts/rangeSelector.buttonPosition
 class HighchartsRangeSelectorButtonPositionOptions
     extends HighchartsOptionsBase {
+  /// The alignment of the input box. Allowed properties are `left`,
+  /// `center`, `right`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/rangeSelector.buttonPosition.align
+
   String? align;
+
+  /// X offset of the button row.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/rangeSelector.buttonPosition.x
+
   double? x;
+
+  /// Y offset of the button row.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/rangeSelector.buttonPosition.y
+
   double? y;
 
+  /// Positioning for the button row.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/rangeSelector.buttonPosition
   HighchartsRangeSelectorButtonPositionOptions({this.align, this.x, this.y});
 
   @override

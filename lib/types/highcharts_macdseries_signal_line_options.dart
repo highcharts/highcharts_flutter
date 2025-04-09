@@ -33,13 +33,21 @@ export 'highcharts_macdseries_signal_line_zones_options.dart';
  *
  * */
 
-/**
- * The styles for signal line
- */
+/// The styles for signal line
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.macd.signalLine
 class HighchartsMACDSeriesSignalLineOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   HighchartsMACDSeriesSignalLineStylesOptions? styles;
+
+  /// Highcharts Options Widget.
+
   HighchartsMACDSeriesSignalLineZonesOptions? zones;
 
+  /// The styles for signal line
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.macd.signalLine
   HighchartsMACDSeriesSignalLineOptions({this.styles, this.zones});
 
   @override

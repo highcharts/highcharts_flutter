@@ -36,15 +36,31 @@ export 'highcharts_annotations_crooked_line_type_options.dart';
  *
  * */
 
-/**
- * A crooked line annotation.
- */
+/// A crooked line annotation.
+///
+/// API Docs: https://api.highcharts.com/highstock/annotations.crookedLine
 class HighchartsAnnotationsCrookedLineOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   dynamic controlPointOptions;
+
+  /// Highcharts Options Widget.
+
   HighchartsAnnotationsCrookedLineLabelOptions? labelOptions;
+
+  /// Highcharts Options Widget.
+
   HighchartsAnnotationsCrookedLineShapeOptions? shapeOptions;
+
+  /// Additional options for an annotation with the type.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.crookedLine.typeOptions
+
   HighchartsAnnotationsCrookedLineTypeOptions? typeOptions;
 
+  /// A crooked line annotation.
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/annotations.crookedLine
   HighchartsAnnotationsCrookedLineOptions(
       {this.controlPointOptions,
       this.labelOptions,

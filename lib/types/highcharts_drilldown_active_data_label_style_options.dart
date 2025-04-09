@@ -29,21 +29,35 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Additional styles to apply to the data label of a point that has
- * drilldown data. By default it is underlined and blue to invite to
- * interaction.
- * 
- * In styled mode, active data label styles can be applied with the
- * `.highcharts-drilldown-data-label` class.
- */
+/// Additional styles to apply to the data label of a point that has
+/// drilldown data. By default it is underlined and blue to invite to
+/// interaction.
+///
+/// In styled mode, active data label styles can be applied with the
+/// `.highcharts-drilldown-data-label` class.
+///
+/// API Docs: https://api.highcharts.com/highcharts/drilldown.activeDataLabelStyle
 class HighchartsDrilldownActiveDataLabelStyleOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   String? color;
+
+  /// Highcharts Options Widget.
+
   String? cursor;
+
+  /// Highcharts Options Widget.
+
   String? fontWeight;
+
+  /// Highcharts Options Widget.
+
   String? textDecoration;
 
+  /// Additional styles to apply to the data label of a point that has drilldown data. By default it is underlined and blue to invite to interaction.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/drilldown.activeDataLabelStyle
   HighchartsDrilldownActiveDataLabelStyleOptions(
       {this.color, this.cursor, this.fontWeight, this.textDecoration});
 

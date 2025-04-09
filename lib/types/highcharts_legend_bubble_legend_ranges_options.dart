@@ -29,16 +29,38 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Options for specific range. One range consists of bubble,
- * label and connector.
- */
+/// Options for specific range. One range consists of bubble,
+/// label and connector.
+///
+/// API Docs: https://api.highcharts.com/highcharts/legend.bubbleLegend.ranges
 class HighchartsLegendBubbleLegendRangesOptions extends HighchartsOptionsBase {
+  /// The color of the border for individual range.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/legend.bubbleLegend.ranges.borderColor
+
   String? borderColor;
+
+  /// The color of the bubble for individual range.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/legend.bubbleLegend.ranges.color
+
   String? color;
+
+  /// The color of the connector for individual range.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/legend.bubbleLegend.ranges.connectorColor
+
   String? connectorColor;
+
+  /// Range size value, similar to bubble Z data.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/legend.bubbleLegend.ranges.value
+
   double? value;
 
+  /// Options for specific range. One range consists of bubble, label and connector.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/legend.bubbleLegend.ranges
   HighchartsLegendBubbleLegendRangesOptions(
       {this.borderColor, this.color, this.connectorColor, this.value});
 

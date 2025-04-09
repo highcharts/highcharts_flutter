@@ -36,67 +36,131 @@ export 'highcharts_map_series_tooltip_options.dart';
  *
  * */
 
-/**
- * A `map` series. If the [type](#series.map.type) option is not specified, it
- * is inherited from [chart.type](#chart.type).
- * 
- * Configuration options for the series are given in three levels:
- * 1. Options for all series in a chart are defined in the
- *    [plotOptions.series](plotOptions.series) object.
- * 2. Options for all `map` series are defined in
- *    [plotOptions.map](plotOptions.map).
- * 3. Options for one single series are given in
- *    [the series instance array](series.map).
- * 
- * ```
- * Highcharts.chart('container', {
- *     plotOptions: {
- *         series: {
- *             // general options for all series
- *         },
- *         map: {
- *             // shared options for all map series
- *         }
- *     },
- *     series: [{
- *         // specific options for this series instance
- *         type: 'map'
- *     }]
- * });
- * ```
- * 
- * **TypeScript:**
- * - the [type](series.map.type) option must always be set.
- * - when accessing an array of series, the combined set of all series types is
- *   represented by [Highcharts.SeriesOptionsType
- *   ](/class-reference/Highcharts#.SeriesOptionsType). Narrowing down to the
- *   specific type can be done by checking the `type` property.
- * 
- * ```
- * if (chart.options.series?.[0]?.type === map) {
- *     // code specific to the map series
- * }
- * ```
- *             
- */
+/// A `map` series. If the type option is not specified, it
+/// is inherited from chart.type.
+///
+/// Configuration options for the series are given in three levels:
+/// 1. Options for all series in a chart are defined in the
+///    plotOptions.series object.
+/// 2. Options for all `map` series are defined in
+///    plotOptions.map.
+/// 3. Options for one single series are given in
+///    the series instance array.
+///
+///
+///
+///
+/// API Docs: https://api.highcharts.com/highmaps/series.map
 class HighchartsMapSeriesOptions extends HighchartsOptionsBase {
+  /// Whether the MapView takes this series into account when computing the
+  /// default zoom and center of the map.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.map.affectsMapView
+
   bool? affectsMapView;
+
+  /// Highcharts Options Widget.
+
   bool? animation;
+
+  /// When using automatic point colors pulled from the global
+  /// colors or series-specific
+  /// plotOptions.map.colors collections, this option
+  /// determines whether the chart should receive one color per series or
+  /// one color per point.
+  ///
+  /// In styled mode, the `colors` or `series.colors` arrays are not
+  /// supported, and instead this option gives the points individual color
+  /// class names on the form `highcharts-color-{n}`.
+  ///
+  /// API Docs: https://api.highcharts.com/highmaps/series.map.colorByPoint
+
   bool? colorByPoint;
+
+  /// Highcharts Options Widget.
+
   String? colorKey;
+
+  /// A series specific or series type specific color set to apply instead
+  /// of the global colors when colorByPoint is true.
+  ///
+  /// API Docs: https://api.highcharts.com/highmaps/series.map.colors
+
   List<dynamic>? colors;
+
+  /// Highcharts Options Widget.
+
   HighchartsMapSeriesDataLabelsOptions? dataLabels;
+
+  /// An id for the series. This can be used after render time to get a pointer
+  /// to the series object through `chart.get()`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.map.id
+
   String? id;
+
+  /// The index of the series in the chart, affecting the internal index in the
+  /// `chart.series` array, the visible Z index as well as the order in the
+  /// legend.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.map.index
+
   double? index;
+
+  /// The sequential index of the series in the legend.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.map.legendIndex
+
   double? legendIndex;
+
+  /// Highcharts Options Widget.
+
   String? legendSymbol;
+
+  /// The SVG value used for the `stroke-linecap` and `stroke-linejoin` of
+  /// the map borders. Round means that borders are rounded in the ends and
+  /// bends.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.map.linecap
+
   String? linecap;
+
+  /// An array of objects containing a `geometry` or `path` definition and
+  /// optionally additional properties to join in the `data` as per the `joinBy`
+  /// option. GeoJSON and TopoJSON structures can also be passed directly into
+  /// `mapData`.
+  ///
+  /// API Docs: https://api.highcharts.com/highmaps/series.map.mapData
+
   List<dynamic>? mapData;
+
+  /// The color to apply to null points.
+  ///
+  /// In styled mode, the null point fill is set in the
+  /// `.highcharts-null-point` class.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.map.nullColor
+
   String? nullColor;
+
+  /// Whether to allow pointer interaction like tooltips and mouse events
+  /// on null points.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.map.nullInteraction
+
   bool? nullInteraction;
+
+  /// Highcharts Options Widget.
+
   HighchartsMapSeriesStatesOptions? states;
+
+  /// Highcharts Options Widget.
+
   HighchartsMapSeriesTooltipOptions? tooltip;
 
+  /// A `map` series. If the type option is not specified, it is inherited from chart.type.
+  ///
+  /// API Docs: https://api.highcharts.com/highmaps/series.map
   HighchartsMapSeriesOptions(
       {this.affectsMapView,
       this.animation,

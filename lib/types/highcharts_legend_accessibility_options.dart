@@ -31,14 +31,26 @@ export 'highcharts_legend_accessibility_keyboard_navigation_options.dart';
  *
  * */
 
-/**
- * Accessibility options for the legend. Requires the Accessibility
- * module.
- */
+/// Accessibility options for the legend. Requires the Accessibility
+/// module.
+///
+/// API Docs: https://api.highcharts.com/highcharts/legend.accessibility
 class HighchartsLegendAccessibilityOptions extends HighchartsOptionsBase {
+  /// Enable accessibility support for the legend.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/legend.accessibility.enabled
+
   bool? enabled;
+
+  /// Options for keyboard navigation for the legend.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/legend.accessibility.keyboardNavigation
+
   HighchartsLegendAccessibilityKeyboardNavigationOptions? keyboardNavigation;
 
+  /// Accessibility options for the legend. Requires the Accessibility module.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/legend.accessibility
   HighchartsLegendAccessibilityOptions({this.enabled, this.keyboardNavigation});
 
   @override

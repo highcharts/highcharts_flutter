@@ -29,13 +29,27 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Options for annotations in the export-data table.
- */
+/// Options for annotations in the export-data table.
+///
+/// API Docs: https://api.highcharts.com/highcharts/exporting.csv.annotations
 class HighchartsExportingCsvAnnotationsOptions extends HighchartsOptionsBase {
+  /// The way to mark the separator for annotations
+  /// combined in one export-data table cell.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/exporting.csv.annotations.itemDelimiter
+
   String? itemDelimiter;
+
+  /// When several labels are assigned to a specific point,
+  /// they will be displayed in one field in the table.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/exporting.csv.annotations.join
+
   bool? join;
 
+  /// Options for annotations in the export-data table.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/exporting.csv.annotations
   HighchartsExportingCsvAnnotationsOptions({this.itemDelimiter, this.join});
 
   @override

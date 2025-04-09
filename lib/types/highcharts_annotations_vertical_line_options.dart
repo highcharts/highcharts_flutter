@@ -35,14 +35,25 @@ export 'highcharts_annotations_vertical_line_type_options.dart';
  *
  * */
 
-/**
- * A vertical line annotation.
- */
+/// A vertical line annotation.
+///
+/// API Docs: https://api.highcharts.com/highstock/annotations.verticalLine
 class HighchartsAnnotationsVerticalLineOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   HighchartsAnnotationsCrookedLineLabelOptions? labelOptions;
+
+  /// Highcharts Options Widget.
+
   HighchartsAnnotationsCrookedLineShapeOptions? shapeOptions;
+
+  /// Highcharts Options Widget.
+
   HighchartsAnnotationsVerticalLineTypeOptions? typeOptions;
 
+  /// A vertical line annotation.
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/annotations.verticalLine
   HighchartsAnnotationsVerticalLineOptions(
       {this.labelOptions, this.shapeOptions, this.typeOptions});
 

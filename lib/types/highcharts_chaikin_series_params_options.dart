@@ -29,15 +29,36 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Parameters used in calculation of Chaikin Oscillator
- * series points.
- */
+/// Parameters used in calculation of Chaikin Oscillator
+/// series points.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.chaikin.params
 class HighchartsChaikinSeriesParamsOptions extends HighchartsOptionsBase {
+  /// Parameter used indirectly for calculating the `AD` indicator.
+  /// Decides about the number of data points that are taken
+  /// into account for the indicator calculations.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.chaikin.params.period
+
   double? period;
+
+  /// Periods for Chaikin Oscillator calculations.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.chaikin.params.periods
+
   List<double>? periods;
+
+  /// The id of volume series which is mandatory.
+  /// For example using OHLC data, volumeSeriesID='volume' means
+  /// the indicator will be calculated using OHLC and volume values.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.chaikin.params.volumeSeriesID
+
   String? volumeSeriesID;
 
+  /// Parameters used in calculation of Chaikin Oscillator series points.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.chaikin.params
   HighchartsChaikinSeriesParamsOptions(
       {this.period, this.periods, this.volumeSeriesID});
 

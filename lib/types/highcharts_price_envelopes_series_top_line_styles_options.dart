@@ -29,11 +29,21 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsPriceEnvelopesSeriesTopLineStylesOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   double? lineWidth;
+
+  /// Color of the line. If not set, it's inherited from
+  /// plotOptions.priceenvelopes.color.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.priceenvelopes.topLine.styles.lineColor
+
   String? lineColor;
 
+  /// Highcharts Options Widget.
   HighchartsPriceEnvelopesSeriesTopLineStylesOptions(
       {this.lineWidth, this.lineColor});
 

@@ -31,12 +31,19 @@ export 'highcharts_bbseries_bottom_line_styles_options.dart';
  *
  * */
 
-/**
- * Bottom line options.
- */
+/// Bottom line options.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.bb.bottomLine
 class HighchartsBBSeriesBottomLineOptions extends HighchartsOptionsBase {
+  /// Styles for the bottom line.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.bb.bottomLine.styles
+
   HighchartsBBSeriesBottomLineStylesOptions? styles;
 
+  /// Bottom line options.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.bb.bottomLine
   HighchartsBBSeriesBottomLineOptions({this.styles});
 
   @override

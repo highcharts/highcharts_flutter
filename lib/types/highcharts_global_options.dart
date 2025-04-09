@@ -31,23 +31,24 @@ export 'highcharts_global_button_theme_options.dart';
  *
  * */
 
-/**
- * Global options that don't apply to each chart. These options must be set
- * using the `Highcharts.setOptions` method.
- * 
- * ```js
- * Highcharts.setOptions({
- *     global: {
- *         buttonTheme: {
- *             fill: '#d0d0d0'
- *         }
- *     }
- * });
- * ```
- */
+/// Global options that don't apply to each chart. These options must be set
+/// using the `Highcharts.setOptions` method.
+///
+///
+/// API Docs: https://api.highcharts.com/highcharts/global
 class HighchartsGlobalOptions extends HighchartsOptionsBase {
+  /// General theme for buttons. This applies to the zoom button, exporting
+  /// context menu, map navigation, range selector buttons and custom
+  /// buttons generated using the `SVGRenderer.button` function. However,
+  /// each of these may be overridden with more specific options.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/global.buttonTheme
+
   HighchartsGlobalButtonThemeOptions? buttonTheme;
 
+  /// Global options that don't apply to each chart. These options must be set using the `Highcharts.setOptions` method.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/global
   HighchartsGlobalOptions({this.buttonTheme});
 
   @override

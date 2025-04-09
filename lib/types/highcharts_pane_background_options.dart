@@ -29,19 +29,66 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * An array of background items for the pane.
- */
+/// An array of background items for the pane.
+///
+/// API Docs: https://api.highcharts.com/highcharts/pane.background
 class HighchartsPaneBackgroundOptions extends HighchartsOptionsBase {
+  /// The background color or gradient for the pane.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/pane.background.backgroundColor
+
   String? backgroundColor;
+
+  /// The pane background border color.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/pane.background.borderColor
+
   String? borderColor;
+
+  /// The border radius of the pane background when the shape is `arc`. Can be
+  /// a number (pixels) or a percentage string.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/pane.background.borderRadius
+
   dynamic borderRadius;
+
+  /// The pixel border width of the pane background.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/pane.background.borderWidth
+
   double? borderWidth;
+
+  /// The class name for this background.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/pane.background.className
+
   String? className;
+
+  /// The inner radius of the pane background. Can be either numeric
+  /// (pixels) or a percentage string.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/pane.background.innerRadius
+
   dynamic innerRadius;
+
+  /// The outer radius of the circular pane background. Can be either
+  /// numeric (pixels) or a percentage string.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/pane.background.outerRadius
+
   dynamic outerRadius;
+
+  /// The shape of the pane background. When `solid`, the background
+  /// is circular. When `arc`, the background extends only from the min
+  /// to the max of the value axis.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/pane.background.shape
+
   String? shape;
 
+  /// An array of background items for the pane.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/pane.background
   HighchartsPaneBackgroundOptions(
       {this.backgroundColor,
       this.borderColor,

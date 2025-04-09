@@ -32,18 +32,58 @@ export 'highcharts_pane_background_options.dart';
  *
  * */
 
-/**
- * The pane serves as a container for axes and backgrounds for circular
- * gauges and polar charts.
- */
+/// The pane serves as a container for axes and backgrounds for circular
+/// gauges and polar charts.
+///
+/// API Docs: https://api.highcharts.com/highcharts/pane
 class HighchartsPaneOptions extends HighchartsOptionsBase {
+  /// An array of background items for the pane.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/pane.background
+
   List<HighchartsPaneBackgroundOptions>? background;
+
+  /// The center of a polar chart or angular gauge, given as an array
+  /// of [x, y] positions. Positions can be given as integers that
+  /// transform to pixels, or as percentages of the plot area size.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/pane.center
+
   List<dynamic>? center;
+
+  /// The end angle of the polar X axis or gauge value axis, given in
+  /// degrees where 0 is north. Defaults to startAngle
+  /// + 360.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/pane.endAngle
+
   double? endAngle;
+
+  /// The inner size of the pane, either as a number defining pixels, or a
+  /// percentage defining a percentage of the pane's size.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/pane.innerSize
+
   dynamic innerSize;
+
+  /// The size of the pane, either as a number defining pixels, or a
+  /// percentage defining a percentage of the available plot area (the
+  /// smallest of the plot height or plot width).
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/pane.size
+
   dynamic size;
+
+  /// The start angle of the polar X axis or gauge axis, given in degrees
+  /// where 0 is north. Defaults to 0.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/pane.startAngle
+
   double? startAngle;
 
+  /// The pane serves as a container for axes and backgrounds for circular gauges and polar charts.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/pane
   HighchartsPaneOptions(
       {this.background,
       this.center,

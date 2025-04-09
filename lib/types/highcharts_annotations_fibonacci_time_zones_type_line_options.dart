@@ -29,12 +29,26 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsAnnotationsFibonacciTimeZonesTypeLineOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   String? fill;
+
+  /// The color of the lines.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.fibonacciTimeZones.typeOptions.line.stroke
+
   String? stroke;
+
+  /// The width of the lines.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.fibonacciTimeZones.typeOptions.line.strokeWidth
+
   double? strokeWidth;
 
+  /// Highcharts Options Widget.
   HighchartsAnnotationsFibonacciTimeZonesTypeLineOptions(
       {this.fill, this.stroke, this.strokeWidth});
 

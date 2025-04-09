@@ -32,17 +32,51 @@ export 'highcharts_series_states_hover_animation_options.dart';
  *
  * */
 
-/**
- * Options for the hovered point. These settings override the normal
- * state options when a point is moused over or touched.
- */
+/// Options for the hovered point. These settings override the normal
+/// state options when a point is moused over or touched.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.variwide.states.hover
 class HighchartsVariwideSeriesStatesHoverOptions extends HighchartsOptionsBase {
+  /// Animation setting for hovering the graph in line-type series.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.variwide.states.hover.animation
+
   HighchartsSeriesStatesHoverAnimationOptions? animation;
+
+  /// A specific border color for the hovered point. Defaults to
+  /// inherit the normal state border color.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.variwide.states.hover.borderColor
+
   String? borderColor;
+
+  /// How much to brighten the point on interaction. Requires the
+  /// main color to be defined in hex or rgb(a) format.
+  ///
+  /// In styled mode, the hover brightening is by default replaced
+  /// with a fill-opacity set in the `.highcharts-point:hover`
+  /// rule.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.variwide.states.hover.brightness
+
   double? brightness;
+
+  /// A specific color for the hovered point.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.variwide.states.hover.color
+
   String? color;
+
+  /// Enable separate styles for the hovered series to visualize
+  /// that the user hovers either the series itself or the legend.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.variwide.states.hover.enabled
+
   bool? enabled;
 
+  /// Options for the hovered point. These settings override the normal state options when a point is moused over or touched.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.variwide.states.hover
   HighchartsVariwideSeriesStatesHoverOptions(
       {this.animation,
       this.borderColor,

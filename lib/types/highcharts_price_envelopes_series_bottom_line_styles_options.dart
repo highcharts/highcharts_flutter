@@ -29,11 +29,23 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsPriceEnvelopesSeriesBottomLineStylesOptions
     extends HighchartsOptionsBase {
+  /// Color of the line. If not set, it's inherited from
+  /// plotOptions.priceenvelopes.color.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.priceenvelopes.bottomLine.styles.lineColor
+
   String? lineColor;
+
+  /// Pixel width of the line.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.priceenvelopes.bottomLine.styles.lineWidth
+
   double? lineWidth;
 
+  /// Highcharts Options Widget.
   HighchartsPriceEnvelopesSeriesBottomLineStylesOptions(
       {this.lineColor, this.lineWidth});
 

@@ -29,13 +29,18 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Change main series to `'hlc'` type.
- */
+/// Change main series to `'hlc'` type.
+///
+/// API Docs: https://api.highcharts.com/highstock/navigation.bindings.seriesTypeHLC
 class HighchartsNavigationBindingsSeriesTypeHLCOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   String? className;
 
+  /// Change main series to `'hlc'` type.
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/navigation.bindings.seriesTypeHLC
   HighchartsNavigationBindingsSeriesTypeHLCOptions({this.className});
 
   @override

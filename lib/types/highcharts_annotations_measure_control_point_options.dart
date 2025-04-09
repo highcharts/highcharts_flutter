@@ -29,10 +29,14 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsAnnotationsMeasureControlPointOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   dynamic events;
 
+  /// Highcharts Options Widget.
   HighchartsAnnotationsMeasureControlPointOptions({this.events});
 
   @override

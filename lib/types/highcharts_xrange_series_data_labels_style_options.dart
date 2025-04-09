@@ -29,10 +29,14 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsXRangeSeriesDataLabelsStyleOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   String? whiteSpace;
 
+  /// Highcharts Options Widget.
   HighchartsXRangeSeriesDataLabelsStyleOptions({this.whiteSpace});
 
   @override

@@ -28,10 +28,14 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsVennSeriesStatesSelectAnimationOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   double? duration;
 
+  /// Highcharts Options Widget.
   HighchartsVennSeriesStatesSelectAnimationOptions({this.duration});
 
   @override

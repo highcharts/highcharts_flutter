@@ -32,57 +32,53 @@ export 'highcharts_flow_map_series_options.dart';
  *
  * */
 
-/**
- * A `flowmap` series. If the [type](#series.flowmap.type) option
- * is not specified, it is inherited from [chart.type](#chart.type).
- * 
- * Configuration options for the series are given in three levels:
- * 1. Options for all series in a chart are defined in the
- *    [plotOptions.series](plotOptions.series) object.
- * 2. Options for all `flowmap` series are defined in
- *    [plotOptions.flowmap](plotOptions.flowmap).
- * 3. Options for one single series are given in
- *    [the series instance array](series.flowmap).
- * 
- * ```
- * Highcharts.chart('container', {
- *     plotOptions: {
- *         series: {
- *             // general options for all series
- *         },
- *         flowmap: {
- *             // shared options for all flowmap series
- *         }
- *     },
- *     series: [{
- *         // specific options for this series instance
- *         type: 'flowmap'
- *     }]
- * });
- * ```
- * 
- * **TypeScript:**
- * - the [type](series.flowmap.type) option must always be set.
- * - when accessing an array of series, the combined set of all series types is
- *   represented by [Highcharts.SeriesOptionsType
- *   ](/class-reference/Highcharts#.SeriesOptionsType). Narrowing down to the
- *   specific type can be done by checking the `type` property.
- * 
- * ```
- * if (chart.options.series?.[0]?.type === flowmap) {
- *     // code specific to the flowmap series
- * }
- * ```
- *             
- */
+/// A `flowmap` series. If the type option
+/// is not specified, it is inherited from chart.type.
+///
+/// Configuration options for the series are given in three levels:
+/// 1. Options for all series in a chart are defined in the
+///    plotOptions.series object.
+/// 2. Options for all `flowmap` series are defined in
+///    plotOptions.flowmap.
+/// 3. Options for one single series are given in
+///    the series instance array.
+///
+///
+///
+///
+/// API Docs: https://api.highcharts.com/highmaps/series.flowmap
 class HighchartsFlowMapSeries extends HighchartsSeries {
+  /// An array of data points for the series. For the `flowmap` series
+  /// type, points can be given in the following ways:
+  ///
+  /// 1.  An array of arrays with options as values. In this case,
+  ///     the values correspond to `from, to, weight`. Example:
+  ///
+  /// 2.  An array of objects with named values. The following snippet shows only a
+  ///     few settings, see the complete options set below.
+  ///
+  ///
+  /// 3.   For objects with named values, instead of using the `mappoint` `id`,
+  ///      you can use `[longitude, latitude]` arrays.
+  ///
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.flowmap.data
   List<List<dynamic>>? data;
+
+  /// The name of the series as shown in the legend, tooltip etc.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.flowmap.name
   String? name;
+
+  /// Configuration options for the HighchartsFlowMapSeries.
   HighchartsFlowMapSeriesOptions? options;
   List<dynamic>? points;
   @override
   get type => 'flowmap';
 
+  /// A `flowmap` series. If the type option is not specified, it is inherited from chart.type.
+  ///
+  /// API Docs: https://api.highcharts.com/highmaps/series.flowmap
   HighchartsFlowMapSeries({
     this.data,
     this.name,

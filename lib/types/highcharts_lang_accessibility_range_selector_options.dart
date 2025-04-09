@@ -29,16 +29,30 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Range selector language options for accessibility.
- */
+/// Range selector language options for accessibility.
+///
+/// API Docs: https://api.highcharts.com/highcharts/lang.accessibility.rangeSelector
 class HighchartsLangAccessibilityRangeSelectorOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   String? clickButtonAnnouncement;
+
+  /// Highcharts Options Widget.
+
   String? dropdownLabel;
+
+  /// Highcharts Options Widget.
+
   String? maxInputLabel;
+
+  /// Highcharts Options Widget.
+
   String? minInputLabel;
 
+  /// Range selector language options for accessibility.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.accessibility.rangeSelector
   HighchartsLangAccessibilityRangeSelectorOptions(
       {this.clickButtonAnnouncement,
       this.dropdownLabel,

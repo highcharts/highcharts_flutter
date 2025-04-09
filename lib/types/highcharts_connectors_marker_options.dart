@@ -29,23 +29,83 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Marker options for this chart's Pathfinder connectors. Note that
- * this option is overridden by the `startMarker` and `endMarker`
- * options.
- */
+/// Marker options for this chart's Pathfinder connectors. Note that
+/// this option is overridden by the `startMarker` and `endMarker`
+/// options.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.xrange.data.connect.marker
 class HighchartsConnectorsMarkerOptions extends HighchartsOptionsBase {
+  /// Horizontal alignment of the markers relative to the points.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.xrange.data.connect.marker.align
+
   String? align;
+
+  /// Set the color of the connector markers. By default this is the
+  /// same as the connector color.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.xrange.data.connect.marker.color
+
   String? color;
+
+  /// Enable markers for the connectors.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.xrange.data.connect.marker.enabled
+
   bool? enabled;
+
+  /// Set the height of the connector markers. If not supplied, this
+  /// is inferred from the marker radius.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.xrange.data.connect.marker.height
+
   double? height;
+
+  /// Whether or not to draw the markers inside the points.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.xrange.data.connect.marker.inside
+
   bool? inside;
+
+  /// Set the line/border color of the connector markers. By default
+  /// this is the same as the marker color.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.xrange.data.connect.marker.lineColor
+
   String? lineColor;
+
+  /// Set the line/border width of the pathfinder markers.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.xrange.data.connect.marker.lineWidth
+
   double? lineWidth;
+
+  /// Set the radius of the connector markers. The default is
+  /// automatically computed based on the algorithmMargin setting.
+  ///
+  /// Setting marker.width and marker.height will override this
+  /// setting.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.xrange.data.connect.marker.radius
+
   double? radius;
+
+  /// Vertical alignment of the markers relative to the points.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.xrange.data.connect.marker.verticalAlign
+
   String? verticalAlign;
+
+  /// Set the width of the connector markers. If not supplied, this
+  /// is inferred from the marker radius.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.xrange.data.connect.marker.width
+
   double? width;
 
+  /// Marker options for this chart's Pathfinder connectors. Note that this option is overridden by the `startMarker` and `endMarker` options.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.xrange.data.connect.marker
   HighchartsConnectorsMarkerOptions(
       {this.align,
       this.color,

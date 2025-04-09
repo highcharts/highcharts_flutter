@@ -28,12 +28,19 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Parameters used in calculation of Williams %R series points.
- */
+/// Parameters used in calculation of Williams %R series points.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.williamsr.params
 class HighchartsWilliamsRSeriesParamsOptions extends HighchartsOptionsBase {
+  /// Period for Williams %R oscillator
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.williamsr.params.period
+
   double? period;
 
+  /// Parameters used in calculation of Williams %R series points.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.williamsr.params
   HighchartsWilliamsRSeriesParamsOptions({this.period});
 
   @override

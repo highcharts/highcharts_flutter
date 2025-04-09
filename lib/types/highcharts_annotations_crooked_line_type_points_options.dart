@@ -28,12 +28,26 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsAnnotationsCrookedLineTypePointsOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   double? controlPoint;
+
+  /// The x position of the point.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.verticalLine.typeOptions.points.x
+
   double? x;
+
+  /// The y position of the point.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.verticalLine.typeOptions.points.y
+
   double? y;
 
+  /// Highcharts Options Widget.
   HighchartsAnnotationsCrookedLineTypePointsOptions(
       {this.controlPoint, this.x, this.y});
 

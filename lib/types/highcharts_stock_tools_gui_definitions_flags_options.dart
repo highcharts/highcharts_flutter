@@ -38,14 +38,33 @@ export 'highcharts_stock_tools_gui_definitions_flags_flag_squarepin_options.dart
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsStockToolsGuiDefinitionsFlagsOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   HighchartsStockToolsGuiDefinitionsFlagsFlagCirclepinOptions? flagCirclepin;
+
+  /// Highcharts Options Widget.
+
   HighchartsStockToolsGuiDefinitionsFlagsFlagDiamondpinOptions? flagDiamondpin;
+
+  /// Highcharts Options Widget.
+
   HighchartsStockToolsGuiDefinitionsFlagsFlagSimplepinOptions? flagSimplepin;
+
+  /// Highcharts Options Widget.
+
   HighchartsStockToolsGuiDefinitionsFlagsFlagSquarepinOptions? flagSquarepin;
+
+  /// A collection of strings pointing to config options for
+  /// the items.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/stockTools.gui.definitions.flags.items
+
   String? items;
 
+  /// Highcharts Options Widget.
   HighchartsStockToolsGuiDefinitionsFlagsOptions(
       {this.flagCirclepin,
       this.flagDiamondpin,

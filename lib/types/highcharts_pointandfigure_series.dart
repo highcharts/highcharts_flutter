@@ -32,57 +32,47 @@ export 'highcharts_pointandfigure_series_options.dart';
  *
  * */
 
-/**
- * A `pointandfigure` series. If the [type](#series.pointandfigure.type)
- * option is not specified, it is inherited from [chart.type](#chart.type).
- * 
- * Configuration options for the series are given in three levels:
- * 1. Options for all series in a chart are defined in the
- *    [plotOptions.series](plotOptions.series) object.
- * 2. Options for all `pointandfigure` series are defined in
- *    [plotOptions.pointandfigure](plotOptions.pointandfigure).
- * 3. Options for one single series are given in
- *    [the series instance array](series.pointandfigure).
- * 
- * ```
- * Highcharts.chart('container', {
- *     plotOptions: {
- *         series: {
- *             // general options for all series
- *         },
- *         pointandfigure: {
- *             // shared options for all pointandfigure series
- *         }
- *     },
- *     series: [{
- *         // specific options for this series instance
- *         type: 'pointandfigure'
- *     }]
- * });
- * ```
- * 
- * **TypeScript:**
- * - the [type](series.pointandfigure.type) option must always be set.
- * - when accessing an array of series, the combined set of all series types is
- *   represented by [Highcharts.SeriesOptionsType
- *   ](/class-reference/Highcharts#.SeriesOptionsType). Narrowing down to the
- *   specific type can be done by checking the `type` property.
- * 
- * ```
- * if (chart.options.series?.[0]?.type === pointandfigure) {
- *     // code specific to the pointandfigure series
- * }
- * ```
- *             
- */
+/// A `pointandfigure` series. If the type
+/// option is not specified, it is inherited from chart.type.
+///
+/// Configuration options for the series are given in three levels:
+/// 1. Options for all series in a chart are defined in the
+///    plotOptions.series object.
+/// 2. Options for all `pointandfigure` series are defined in
+///    plotOptions.pointandfigure.
+/// 3. Options for one single series are given in
+///    the series instance array.
+///
+///
+///
+///
+/// API Docs: https://api.highcharts.com/highstock/series.pointandfigure
 class HighchartsPointandfigureSeries extends HighchartsSeries {
+  /// An array of data points for the series. For the `pointandfigure` series
+  /// type, points can be given in the following way:
+  ///
+  /// 1. An array of arrays with 2 values. In this case, the values correspond
+  ///    to `x, y`. Y values are parsed under the hood to create
+  ///    point and figure format data points.
+  /// 2. An array of objects with named values `{x, y}`.
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/series.pointandfigure.data
   List<List<dynamic>>? data;
+
+  /// The name of the series as shown in the legend, tooltip etc.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.pointandfigure.name
   String? name;
+
+  /// Configuration options for the HighchartsPointandfigureSeries.
   HighchartsPointandfigureSeriesOptions? options;
   List<dynamic>? points;
   @override
   get type => 'pointandfigure';
 
+  /// A `pointandfigure` series. If the type option is not specified, it is inherited from chart.type.
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/series.pointandfigure
   HighchartsPointandfigureSeries({
     this.data,
     this.name,

@@ -32,21 +32,69 @@ export 'highcharts_chart3dframe_options.dart';
  *
  * */
 
-/**
- * Options to render charts in 3 dimensions. This feature requires
- * `highcharts-3d.js`, found in the download package or online at
- * [code.highcharts.com/highcharts-3d.js](https://code.highcharts.com/highcharts-3d.js).
- */
+/// Options to render charts in 3 dimensions. This feature requires
+/// `highcharts-3d.js`, found in the download package or online at
+/// code.highcharts.com/highcharts-3d.js.
+///
+/// API Docs: https://api.highcharts.com/highcharts/chart.options3d
 class HighchartsChart3DOptions extends HighchartsOptionsBase {
+  /// One of the two rotation angles for the chart.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/chart.options3d.alpha
+
   double? alpha;
+
+  /// Set it to `"auto"` to automatically move the labels to the
+  /// best edge.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/chart.options3d.axisLabelPosition
+
   String? axisLabelPosition;
+
+  /// One of the two rotation angles for the chart.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/chart.options3d.beta
+
   double? beta;
+
+  /// The total depth of the chart.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/chart.options3d.depth
+
   double? depth;
+
+  /// Whether to render the chart using the 3D functionality.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/chart.options3d.enabled
+
   bool? enabled;
+
+  /// Whether the 3d box should automatically adjust to the chart
+  /// plot area.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/chart.options3d.fitToPlot
+
   bool? fitToPlot;
+
+  /// Provides the option to draw a frame around the charts by
+  /// defining a bottom, front and back panel.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/chart.options3d.frame
+
   HighchartsChart3DFrameOptions? frame;
+
+  /// Defines the distance the viewer is standing in front of the
+  /// chart, this setting is important to calculate the perspective
+  /// effect in column and scatter charts. It is not used for 3D
+  /// pie charts.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/chart.options3d.viewDistance
+
   double? viewDistance;
 
+  /// Options to render charts in 3 dimensions. This feature requires `highcharts-3d.js`, found in the download package or online at code.highcharts.com/highcharts-3d.js.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/chart.options3d
   HighchartsChart3DOptions(
       {this.alpha,
       this.axisLabelPosition,

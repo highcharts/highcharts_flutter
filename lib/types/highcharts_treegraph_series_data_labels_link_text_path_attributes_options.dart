@@ -29,10 +29,14 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsTreegraphSeriesDataLabelsLinkTextPathAttributesOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   dynamic startOffset;
 
+  /// Highcharts Options Widget.
   HighchartsTreegraphSeriesDataLabelsLinkTextPathAttributesOptions(
       {this.startOffset});
 

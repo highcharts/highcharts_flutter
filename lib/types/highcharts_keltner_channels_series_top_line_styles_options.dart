@@ -29,11 +29,18 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsKeltnerChannelsSeriesTopLineStylesOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   String? lineColor;
+
+  /// Highcharts Options Widget.
+
   double? lineWidth;
 
+  /// Highcharts Options Widget.
   HighchartsKeltnerChannelsSeriesTopLineStylesOptions(
       {this.lineColor, this.lineWidth});
 

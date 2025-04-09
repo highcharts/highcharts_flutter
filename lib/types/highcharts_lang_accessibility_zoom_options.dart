@@ -29,14 +29,25 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Chart and map zoom accessibility language options.
- */
+/// Chart and map zoom accessibility language options.
+///
+/// API Docs: https://api.highcharts.com/highcharts/lang.accessibility.zoom
 class HighchartsLangAccessibilityZoomOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   String? mapZoomIn;
+
+  /// Highcharts Options Widget.
+
   String? mapZoomOut;
+
+  /// Highcharts Options Widget.
+
   String? resetZoomButton;
 
+  /// Chart and map zoom accessibility language options.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.accessibility.zoom
   HighchartsLangAccessibilityZoomOptions(
       {this.mapZoomIn, this.mapZoomOut, this.resetZoomButton});
 

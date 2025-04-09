@@ -28,10 +28,14 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsTilemapSeriesStatesHoverHaloAttributesOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   double? zIndex;
 
+  /// Highcharts Options Widget.
   HighchartsTilemapSeriesStatesHoverHaloAttributesOptions({this.zIndex});
 
   @override

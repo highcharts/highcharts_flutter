@@ -32,19 +32,61 @@ export 'highcharts_networkgraph_series_nodes_marker_options.dart';
  *
  * */
 
-/**
- * A collection of options for the individual nodes. The nodes in a
- * networkgraph diagram are auto-generated instances of `Highcharts.Point`,
- * but options can be applied here and linked by the `id`.
- */
+/// A collection of options for the individual nodes. The nodes in a
+/// networkgraph diagram are auto-generated instances of `Highcharts.Point`,
+/// but options can be applied here and linked by the `id`.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.networkgraph.nodes
 class HighchartsNetworkgraphSeriesNodesOptions extends HighchartsOptionsBase {
+  /// The color of the auto generated node.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.networkgraph.nodes.color
+
   String? color;
+
+  /// The color index of the auto generated node, especially for use in styled
+  /// mode.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.networkgraph.nodes.colorIndex
+
   double? colorIndex;
+
+  /// Individual data label for each node. The options are the same as
+  /// the ones for series.networkgraph.dataLabels.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.networkgraph.nodes.dataLabels
+
   List<Map<String, dynamic>>? dataLabels;
+
+  /// The id of the auto-generated node, referring to the `from` or `to` setting of
+  /// the link.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.networkgraph.nodes.id
+
   String? id;
+
+  /// Options for the node markers.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.networkgraph.nodes.marker
+
   HighchartsNetworkgraphSeriesNodesMarkerOptions? marker;
+
+  /// Mass of the node. By default, each node has mass equal to it's marker radius
+  /// . Mass is used to determine how two connected nodes should affect
+  /// each other:
+  ///
+  /// Attractive force is multiplied by the ratio of two connected
+  /// nodes; if a big node has weights twice as the small one, then the small one
+  /// will move towards the big one twice faster than the big one to the small one
+  /// .
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.networkgraph.nodes.mass
+
   double? mass;
 
+  /// A collection of options for the individual nodes. The nodes in a networkgraph diagram are auto-generated instances of `Highcharts.Point`, but options can be applied here and linked by the `id`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.networkgraph.nodes
   HighchartsNetworkgraphSeriesNodesOptions(
       {this.color,
       this.colorIndex,

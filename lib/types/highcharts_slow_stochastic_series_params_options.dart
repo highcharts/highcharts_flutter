@@ -29,12 +29,24 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsSlowStochasticSeriesParamsOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   String? index;
+
+  /// Highcharts Options Widget.
+
   String? period;
+
+  /// Periods for Slow Stochastic oscillator: [%K, %D, SMA(%D)].
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.slowstochastic.params.periods
+
   List<dynamic>? periods;
 
+  /// Highcharts Options Widget.
   HighchartsSlowStochasticSeriesParamsOptions(
       {this.index, this.period, this.periods});
 

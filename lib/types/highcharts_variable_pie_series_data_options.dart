@@ -38,57 +38,138 @@ export 'highcharts_variable_pie_series_data_events_options.dart';
  *
  * */
 
-/**
- * An array of data points for the series. For the `variablepie` series type,
- * points can be given in the following ways:
- * 
- * 1. An array of arrays with 2 values. In this case, the numerical values will
- *    be interpreted as `y, z` options. Example:
- *    ```js
- *    data: [
- *        [40, 75],
- *        [50, 50],
- *        [60, 40]
- *    ]
- *    ```
- * 
- * 2. An array of objects with named values. The following snippet shows only a
- *    few settings, see the complete options set below. If the total number of
- *    data points exceeds the series'
- *    [turboThreshold](#series.variablepie.turboThreshold), this option is not
- *    available.
- *    ```js
- *    data: [{
- *        y: 1,
- *        z: 4,
- *        name: "Point2",
- *        color: "#00FF00"
- *    }, {
- *        y: 7,
- *        z: 10,
- *        name: "Point1",
- *        color: "#FF00FF"
- *    }]
- *    ```
- */
+/// An array of data points for the series. For the `variablepie` series type,
+/// points can be given in the following ways:
+///
+/// 1. An array of arrays with 2 values. In this case, the numerical values will
+///    be interpreted as `y, z` options. Example:
+///
+/// 2. An array of objects with named values. The following snippet shows only a
+///    few settings, see the complete options set below. If the total number of
+///    data points exceeds the series'
+///    turboThreshold, this option is not
+///    available.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.variablepie.data
 class HighchartsVariablePieSeriesDataOptions extends HighchartsOptionsBase {
+  /// Accessibility options for a data point.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.variablepie.data.accessibility
+
   HighchartsVariablePieSeriesDataAccessibilityOptions? accessibility;
+
+  /// An additional, individual class name for the data point's graphic
+  /// representation. Changes to a point's color will also be reflected in a
+  /// chart's legend and tooltip.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.variablepie.data.className
+
   String? className;
+
+  /// Individual color for the point. By default the color is pulled from
+  /// the global `colors` array.
+  ///
+  /// In styled mode, the `color` option doesn't take effect. Instead, use
+  /// `colorIndex`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.variablepie.data.color
+
   String? color;
+
+  /// A specific color index to use for the point, so its graphic representations
+  /// are given the class name `highcharts-color-{n}`. In styled mode this will
+  /// change the color of the graphic. In non-styled mode, the color is set by the
+  /// `fill` attribute, so the change in class name won't have a visual effect by
+  /// default.
+  ///
+  /// Since v11, CSS variables on the form `--highcharts-color-{n}` make changing
+  /// the color scheme very convenient.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.variablepie.data.colorIndex
+
   double? colorIndex;
+
+  /// A reserved subspace to store options and values for customized functionality.
+  /// Here you can add additional data for your own event callbacks and formatter
+  /// callbacks.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.variablepie.data.custom
+
   Map<String, dynamic>? custom;
+
+  /// Highcharts Options Widget.
+
   HighchartsVariablePieSeriesDataDataLabelsOptions? dataLabels;
+
+  /// A description of the point to add to the screen reader information
+  /// about the point.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.variablepie.data.description
+
   String? description;
+
+  /// Point specific options for the draggable-points module. Overrides options
+  /// on `series.dragDrop`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.variablepie.data.dragDrop
+
   HighchartsVariablePieSeriesDataDragDropOptions? dragDrop;
+
+  /// The `id` of a series in the drilldown.series array to
+  /// use for a drilldown for this point.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.variablepie.data.drilldown
+
   String? drilldown;
+
+  /// The individual point events.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.variablepie.data.events
+
   HighchartsVariablePieSeriesDataEventsOptions? events;
+
+  /// An id for the point. This can be used after render time to get a
+  /// pointer to the point object through `chart.get()`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.variablepie.data.id
+
   String? id;
+
+  /// The rank for this point's data label in case of collision. If two
+  /// data labels are about to overlap, only the one with the highest `labelrank`
+  /// will be drawn.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.variablepie.data.labelrank
+
   double? labelrank;
+
+  /// The sequential index of the data point in the legend.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.variablepie.data.legendIndex
+
   double? legendIndex;
+
+  /// Whether the data point is selected initially.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.variablepie.data.selected
+
   bool? selected;
+
+  /// Whether to display a slice offset from the center.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.variablepie.data.sliced
+
   bool? sliced;
+
+  /// The y value of the point.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.variablepie.data.y
+
   double? y;
 
+  /// An array of data points for the series. For the `variablepie` series type, points can be given in the following ways:
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.variablepie.data
   HighchartsVariablePieSeriesDataOptions(
       {this.accessibility,
       this.className,

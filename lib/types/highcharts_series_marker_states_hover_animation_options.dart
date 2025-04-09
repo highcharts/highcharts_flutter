@@ -28,13 +28,18 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Animation when hovering over the marker.
- */
+/// Animation when hovering over the marker.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.zigzag.marker.states.hover.animation
 class HighchartsSeriesMarkerStatesHoverAnimationOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   double? duration;
 
+  /// Animation when hovering over the marker.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.marker.states.hover.animation
   HighchartsSeriesMarkerStatesHoverAnimationOptions({this.duration});
 
   @override

@@ -29,21 +29,34 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * A configuration object to define how the color of a child varies from
- * the parent's color. The variation is distributed among the children
- * of node. For example when setting brightness, the brightness change
- * will range from the parent's original brightness on the first child,
- * to the amount set in the `to` setting on the last node. This allows a
- * gradient-like color scheme that sets children out from each other
- * while highlighting the grouping on treemaps and sectors on sunburst
- * charts.
- */
+/// A configuration object to define how the color of a child varies from
+/// the parent's color. The variation is distributed among the children
+/// of node. For example when setting brightness, the brightness change
+/// will range from the parent's original brightness on the first child,
+/// to the amount set in the `to` setting on the last node. This allows a
+/// gradient-like color scheme that sets children out from each other
+/// while highlighting the grouping on treemaps and sectors on sunburst
+/// charts.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.treegraph.levels.colorVariation
 class HighchartsTreegraphSeriesLevelsColorVariationOptions
     extends HighchartsOptionsBase {
+  /// The key of a color variation. Currently supports `brightness` only.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.treegraph.levels.colorVariation.key
+
   String? key;
+
+  /// The ending value of a color variation. The last sibling will receive
+  /// this value.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.treegraph.levels.colorVariation.to
+
   double? to;
 
+  /// A configuration object to define how the color of a child varies from the parent's color. The variation is distributed among the children of node. For example when setting brightness, the brightness change will range from the parent's original brightness on the first child, to the amount set in the `to` setting on the last node. This allows a gradient-like color scheme that sets children out from each other while highlighting the grouping on treemaps and sectors on sunburst charts.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.treegraph.levels.colorVariation
   HighchartsTreegraphSeriesLevelsColorVariationOptions({this.key, this.to});
 
   @override

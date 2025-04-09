@@ -29,10 +29,18 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsVennSeriesClusterStatesHoverOptions
     extends HighchartsOptionsBase {
+  /// The fill color of the cluster marker in hover state. When
+  /// `undefined`, the series' or point's fillColor for normal
+  /// state is used.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.venn.cluster.states.hover.fillColor
+
   String? fillColor;
 
+  /// Highcharts Options Widget.
   HighchartsVennSeriesClusterStatesHoverOptions({this.fillColor});
 
   @override

@@ -36,27 +36,117 @@ export 'highcharts_sonification_default_instrument_point_grouping_options.dart';
  *
  * */
 
-/**
- * Context tracks for this series. Context tracks are tracks that are not
- * tied to data points.
- * 
- * Given as an array of instrument tracks, speech tracks, or a mix of both.
- */
+/// Context tracks for this series. Context tracks are tracks that are not
+/// tied to data points.
+///
+/// Given as an array of instrument tracks, speech tracks, or a mix of both.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.zigzag.sonification.contextTracks
 class HighchartsSeriesSonificationContextTracksOptions
     extends HighchartsOptionsBase {
+  /// Set a context track to play periodically every `timeInterval`
+  /// milliseconds while the sonification is playing.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.sonification.contextTracks.timeInterval
+
   double? timeInterval;
+
+  /// Set a context track to play periodically every `valueInterval`
+  /// units of a data property `valueProp` while the sonification is
+  /// playing.
+  ///
+  /// For example, setting `valueProp` to `x` and `valueInterval` to 5
+  /// will play the context track for every 5th X value.
+  ///
+  /// The context audio events will be mapped to time according to the
+  /// prop value relative to the min/max values for that prop.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.sonification.contextTracks.valueInterval
+
   double? valueInterval;
+
+  /// How to map context events to time when using the `valueInterval`
+  /// option.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.sonification.contextTracks.valueMapFunction
+
   String? valueMapFunction;
+
+  /// The point property to play context for when using `valueInterval`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.sonification.contextTracks.valueProp
+
   String? valueProp;
+
+  /// Highcharts Options Widget.
+
   HighchartsSonificationGlobalTracksMappingOptions? mapping;
+
+  /// Define a condition for when a track should be active and not.
+  ///
+  /// Can either be a function callback or a configuration object.
+  ///
+  /// If a function is used, it should return a `boolean` for whether
+  /// or not the track should be active. The function is called for
+  /// each audio event, and receives a parameter object with `time`,
+  /// and potentially `point` and `value` properties depending on the
+  /// track. `point` is available if the audio event is related to a
+  /// data point. `value` is available if the track is used as a
+  /// context track, and `valueInterval` is used.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.sonification.contextTracks.activeWhen
+
   HighchartsSonificationDefaultInstrumentActiveWhenOptions? activeWhen;
+
+  /// Instrument to use for playing.
+  ///
+  /// Can either be a string referencing a synth preset, or it can be
+  /// a synth configuration object.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.sonification.contextTracks.instrument
+
   Map<String, dynamic>? instrument;
+
+  /// Name to use for a track when exporting to MIDI.
+  /// By default it uses the series name if the track is related to
+  /// a series.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.sonification.contextTracks.midiName
+
   String? midiName;
+
+  /// Options for point grouping, specifically for instrument tracks.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.sonification.contextTracks.pointGrouping
+
   HighchartsSonificationDefaultInstrumentPointGroupingOptions? pointGrouping;
+
+  /// Round pitch mapping to musical notes.
+  ///
+  /// If `false`, will play the exact mapped note, even if it is out
+  /// of tune compared to the musical notes as defined by 440Hz
+  /// standard tuning.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.sonification.contextTracks.roundToMusicalNotes
+
   bool? roundToMusicalNotes;
+
+  /// Show play marker (tooltip and/or crosshair) for a track.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.sonification.contextTracks.showPlayMarker
+
   bool? showPlayMarker;
+
+  /// Type of track. Always `"instrument"` for instrument tracks, and
+  /// `"speech"` for speech tracks.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.sonification.contextTracks.type
+
   String? type;
 
+  /// Context tracks for this series. Context tracks are tracks that are not tied to data points.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.sonification.contextTracks
   HighchartsSeriesSonificationContextTracksOptions(
       {this.timeInterval,
       this.valueInterval,

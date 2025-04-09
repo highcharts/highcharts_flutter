@@ -29,9 +29,15 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsStochasticSeriesParamsOptions extends HighchartsOptionsBase {
+  /// Periods for Stochastic oscillator: [%K, %D].
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.stochastic.params.periods
+
   List<dynamic>? periods;
 
+  /// Highcharts Options Widget.
   HighchartsStochasticSeriesParamsOptions({this.periods});
 
   @override

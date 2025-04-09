@@ -29,16 +29,38 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * The position of the button.
- */
+/// The position of the button.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.treemap.traverseUpButton.position
 class HighchartsTreemapSeriesTraverseUpButtonPositionOptions
     extends HighchartsOptionsBase {
+  /// Horizontal alignment of the button.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.treemap.traverseUpButton.position.align
+
   String? align;
+
+  /// Vertical alignment of the button.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.treemap.traverseUpButton.position.verticalAlign
+
   String? verticalAlign;
+
+  /// Horizontal offset of the button.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.treemap.traverseUpButton.position.x
+
   double? x;
+
+  /// Vertical offset of the button.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.treemap.traverseUpButton.position.y
+
   double? y;
 
+  /// The position of the button.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.treemap.traverseUpButton.position
   HighchartsTreemapSeriesTraverseUpButtonPositionOptions(
       {this.align, this.verticalAlign, this.x, this.y});
 

@@ -29,18 +29,31 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Options for a label text which should follow marker's shape.
- * Border and background are disabled for a label that follows a
- * path.
- * 
- * **Note:** Only SVG-based renderer supports this option. Setting
- * `useHTML` to true will disable this option.
- */
+/// Options for a label text which should follow marker's shape.
+/// Border and background are disabled for a label that follows a
+/// path.
+///
+/// **Note:** Only SVG-based renderer supports this option. Setting
+/// `useHTML` to true will disable this option.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.zigzag.dataLabels.textPath
 class HighchartsSeriesDataLabelsTextPathOptions extends HighchartsOptionsBase {
+  /// Presentation attributes for the text path.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.dataLabels.textPath.attributes
+
   dynamic attributes;
+
+  /// Enable or disable `textPath` option for link's or marker's data
+  /// labels.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.dataLabels.textPath.enabled
+
   bool? enabled;
 
+  /// Options for a label text which should follow marker's shape. Border and background are disabled for a label that follows a path.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.dataLabels.textPath
   HighchartsSeriesDataLabelsTextPathOptions({this.attributes, this.enabled});
 
   @override

@@ -28,7 +28,9 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsFunnelSeriesInactiveOtherPointsOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
   HighchartsFunnelSeriesInactiveOtherPointsOptions();
 }

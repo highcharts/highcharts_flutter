@@ -29,14 +29,19 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * A fibonacci annotation bindings. Includes `start` and two events in
- * `steps` array (updates second point, then height).
- */
+/// A fibonacci annotation bindings. Includes `start` and two events in
+/// `steps` array (updates second point, then height).
+///
+/// API Docs: https://api.highcharts.com/highstock/navigation.bindings.fibonacci
 class HighchartsNavigationBindingsFibonacciOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   String? className;
 
+  /// A fibonacci annotation bindings. Includes `start` and two events in `steps` array (updates second point, then height).
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/navigation.bindings.fibonacci
   HighchartsNavigationBindingsFibonacciOptions({this.className});
 
   @override

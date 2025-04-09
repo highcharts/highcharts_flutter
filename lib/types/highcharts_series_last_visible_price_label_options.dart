@@ -29,20 +29,69 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsSeriesLastVisiblePriceLabelOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   dynamic align;
+
+  /// Highcharts Options Widget.
+
   String? backgroundColor;
+
+  /// The border color for the `lastVisiblePrice` label.
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/series.zigzag.lastVisiblePrice.label.borderColor
+
   String? borderColor;
+
+  /// The border corner radius of the `lastVisiblePrice` label.
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/series.zigzag.lastVisiblePrice.label.borderRadius
+
   double? borderRadius;
+
+  /// The border width for the `lastVisiblePrice` label.
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/series.zigzag.lastVisiblePrice.label.borderWidth
+
   double? borderWidth;
+
+  /// Flag to enable `lastVisiblePrice` label.
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/series.zigzag.lastVisiblePrice.label.enabled
+
   bool? enabled;
+
+  /// A format string for the `lastVisiblePrice` label. Defaults to `{value}` for
+  /// numeric axes and `{value:%b %d, %Y}` for datetime axes.
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/series.zigzag.lastVisiblePrice.label.format
+
   String? format;
+
+  /// Highcharts Options Widget.
+
   dynamic formatter;
+
+  /// Padding inside the `lastVisiblePrice` label.
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/series.zigzag.lastVisiblePrice.label.padding
+
   double? padding;
+
+  /// Highcharts Options Widget.
+
   dynamic shape;
+
+  /// Text styles for the `lastVisiblePrice` label.
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/series.zigzag.lastVisiblePrice.label.style
+
   Map<String, String>? style;
 
+  /// Highcharts Options Widget.
   HighchartsSeriesLastVisiblePriceLabelOptions(
       {this.align,
       this.backgroundColor,

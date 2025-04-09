@@ -29,17 +29,37 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * The symbol for the collapse and expand icon in a
- * treegrid.
- */
+/// The symbol for the collapse and expand icon in a
+/// treegrid.
+///
+/// API Docs: https://api.highcharts.com/gantt/yAxis.labels.symbol
 class HighchartsYAxisLabelsSymbolOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   double? height;
+
+  /// The symbol type. Points to a definition function in
+  /// the `Highcharts.Renderer.symbols` collection.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/yAxis.labels.symbol.type
+
   String? type;
+
+  /// Highcharts Options Widget.
+
   double? width;
+
+  /// Highcharts Options Widget.
+
   double? x;
+
+  /// Highcharts Options Widget.
+
   double? y;
 
+  /// The symbol for the collapse and expand icon in a treegrid.
+  ///
+  /// API Docs: https://api.highcharts.com/gantt/yAxis.labels.symbol
   HighchartsYAxisLabelsSymbolOptions(
       {this.height, this.type, this.width, this.x, this.y});
 

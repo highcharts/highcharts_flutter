@@ -32,57 +32,55 @@ export 'highcharts_renko_series_options.dart';
  *
  * */
 
-/**
- * A `renko` series. If the [type](#series.renko.type)
- * option is not specified, it is inherited from [chart.type](#chart.type).
- * 
- * Configuration options for the series are given in three levels:
- * 1. Options for all series in a chart are defined in the
- *    [plotOptions.series](plotOptions.series) object.
- * 2. Options for all `renko` series are defined in
- *    [plotOptions.renko](plotOptions.renko).
- * 3. Options for one single series are given in
- *    [the series instance array](series.renko).
- * 
- * ```
- * Highcharts.chart('container', {
- *     plotOptions: {
- *         series: {
- *             // general options for all series
- *         },
- *         renko: {
- *             // shared options for all renko series
- *         }
- *     },
- *     series: [{
- *         // specific options for this series instance
- *         type: 'renko'
- *     }]
- * });
- * ```
- * 
- * **TypeScript:**
- * - the [type](series.renko.type) option must always be set.
- * - when accessing an array of series, the combined set of all series types is
- *   represented by [Highcharts.SeriesOptionsType
- *   ](/class-reference/Highcharts#.SeriesOptionsType). Narrowing down to the
- *   specific type can be done by checking the `type` property.
- * 
- * ```
- * if (chart.options.series?.[0]?.type === renko) {
- *     // code specific to the renko series
- * }
- * ```
- *             
- */
+/// A `renko` series. If the type
+/// option is not specified, it is inherited from chart.type.
+///
+/// Configuration options for the series are given in three levels:
+/// 1. Options for all series in a chart are defined in the
+///    plotOptions.series object.
+/// 2. Options for all `renko` series are defined in
+///    plotOptions.renko.
+/// 3. Options for one single series are given in
+///    the series instance array.
+///
+///
+///
+///
+/// API Docs: https://api.highcharts.com/highstock/series.renko
 class HighchartsRenkoSeries extends HighchartsSeries {
+  /// An array of data points for the series. For the `renko` series
+  /// type, points can be given in the following ways:
+  ///
+  /// 1. An array of arrays with 1 or 2 values correspond to `x,close`. If the
+  /// first value is a string, it is applied as the name of the point, and the
+  /// `x` value is inferred. The `x` value can also be omitted, in which case
+  /// the inner arrays should be of length 4. Then the `x` value is
+  /// automatically calculated, either starting at 0 and incremented by 1, or
+  /// from `pointStart` and `pointInterval` given in the series options.
+  ///
+  /// 2. An array of objects with named values. With renko series, the data
+  /// does not directly correspond to the points in the series. the reason
+  /// is that the points are calculated based on the trends and boxSize.
+  /// Setting options for individual point is impossible.
+  ///
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/series.renko.data
   List<List<dynamic>>? data;
+
+  /// The name of the series as shown in the legend, tooltip etc.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.renko.name
   String? name;
+
+  /// Configuration options for the HighchartsRenkoSeries.
   HighchartsRenkoSeriesOptions? options;
   List<dynamic>? points;
   @override
   get type => 'renko';
 
+  /// A `renko` series. If the type option is not specified, it is inherited from chart.type.
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/series.renko
   HighchartsRenkoSeries({
     this.data,
     this.name,

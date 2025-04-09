@@ -29,18 +29,69 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Map to filter frequency in Hertz from 1 to 20,000Hz.
- */
+/// Map to filter frequency in Hertz from 1 to 20,000Hz.
+///
+/// API Docs: https://api.highcharts.com/highcharts/sonification.defaultInstrumentOptions.mapping.lowpass.frequency
 class HighchartsSonificationDefaultInstrumentMappingLowpassFrequencyOptions
     extends HighchartsOptionsBase {
+  /// How to perform the mapping.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/sonification.defaultInstrumentOptions.mapping.lowpass.frequency.mapFunction
+
   String? mapFunction;
+
+  /// A point property to map the mapping parameter to.
+  ///
+  /// A negative sign `-` can be placed before the property name
+  /// to make mapping inverted.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/sonification.defaultInstrumentOptions.mapping.lowpass.frequency.mapTo
+
   String? mapTo;
+
+  /// The maximum value for the audio parameter. This is the
+  /// highest value the audio parameter will be mapped to.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/sonification.defaultInstrumentOptions.mapping.lowpass.frequency.max
+
   double? max;
+
+  /// The minimum value for the audio parameter. This is the
+  /// lowest value the audio parameter will be mapped to.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/sonification.defaultInstrumentOptions.mapping.lowpass.frequency.min
+
   double? min;
+
+  /// A fixed value to use for the prop when mapping.
+  ///
+  /// For example, if mapping to `y`, setting value to `4` will
+  /// map as if all points had a y value of 4.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/sonification.defaultInstrumentOptions.mapping.lowpass.frequency.value
+
   double? value;
+
+  /// What data values to map the parameter within.
+  ///
+  /// Mapping within `"series"` will make the lowest value point
+  /// in the series map to the min audio parameter value, and the
+  /// highest value will map to the max audio parameter.
+  ///
+  /// Mapping within `"chart"` will make the lowest value point in
+  /// the whole chart map to the min audio parameter value, and
+  /// the highest value in the whole chart will map to the max
+  /// audio parameter.
+  ///
+  /// You can also map within the X or Y axis of each series.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/sonification.defaultInstrumentOptions.mapping.lowpass.frequency.within
+
   String? within;
 
+  /// Map to filter frequency in Hertz from 1 to 20,000Hz.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/sonification.defaultInstrumentOptions.mapping.lowpass.frequency
   HighchartsSonificationDefaultInstrumentMappingLowpassFrequencyOptions(
       {this.mapFunction,
       this.mapTo,

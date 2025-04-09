@@ -29,16 +29,38 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Relevant only for pictorial series. The `stackShadow` forms the background of
- * stacked points. Requires `series.stacking` to be defined.
- */
+/// Relevant only for pictorial series. The `stackShadow` forms the background of
+/// stacked points. Requires `series.stacking` to be defined.
+///
+/// API Docs: https://api.highcharts.com/highcharts/yAxis.stackShadow
 class HighchartsYAxisStackShadowOptions extends HighchartsOptionsBase {
+  /// The color of the `stackShadow` border.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/yAxis.stackShadow.borderColor
+
   String? borderColor;
+
+  /// The width of the `stackShadow` border.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/yAxis.stackShadow.borderWidth
+
   double? borderWidth;
+
+  /// The color of the `stackShadow`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/yAxis.stackShadow.color
+
   String? color;
+
+  /// Enable or disable `stackShadow`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/yAxis.stackShadow.enabled
+
   bool? enabled;
 
+  /// Relevant only for pictorial series. The `stackShadow` forms the background of stacked points. Requires `series.stacking` to be defined.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/yAxis.stackShadow
   HighchartsYAxisStackShadowOptions(
       {this.borderColor, this.borderWidth, this.color, this.enabled});
 

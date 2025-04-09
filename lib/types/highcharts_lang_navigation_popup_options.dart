@@ -32,109 +32,407 @@ export 'highcharts_lang_navigation_popup_indicator_aliases_options.dart';
  *
  * */
 
-/**
- * Translations for all field names used in popup.
- */
+/// Translations for all field names used in popup.
+///
+/// API Docs: https://api.highcharts.com/highcharts/lang.navigation.popup
 class HighchartsLangNavigationPopupOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   String? addButton;
+
+  /// Highcharts Options Widget.
+
   String? algorithm;
+
+  /// Highcharts Options Widget.
+
   String? arrowInfinityLine;
+
+  /// Highcharts Options Widget.
+
   String? arrowRay;
+
+  /// Highcharts Options Widget.
+
   String? arrowSegment;
+
+  /// Highcharts Options Widget.
+
   String? average;
+
+  /// Highcharts Options Widget.
+
   String? background;
+
+  /// Highcharts Options Widget.
+
   String? backgroundColor;
+
+  /// Highcharts Options Widget.
+
   String? backgroundColors;
+
+  /// Highcharts Options Widget.
+
   String? borderColor;
+
+  /// Highcharts Options Widget.
+
   String? borderRadius;
+
+  /// Highcharts Options Widget.
+
   String? borderWidth;
+
+  /// Highcharts Options Widget.
+
   String? bottomBand;
+
+  /// Highcharts Options Widget.
+
   String? circle;
+
+  /// Highcharts Options Widget.
+
   String? clearFilter;
+
+  /// Highcharts Options Widget.
+
   String? color;
+
+  /// Highcharts Options Widget.
+
   String? connector;
+
+  /// Highcharts Options Widget.
+
   String? crooked3;
+
+  /// Highcharts Options Widget.
+
   String? crooked5;
+
+  /// Highcharts Options Widget.
+
   String? crosshairX;
+
+  /// Highcharts Options Widget.
+
   String? crosshairY;
+
+  /// Highcharts Options Widget.
+
   String? decimals;
+
+  /// Highcharts Options Widget.
+
   String? deviation;
+
+  /// Highcharts Options Widget.
+
   String? editButton;
+
+  /// Highcharts Options Widget.
+
   String? elliott3;
+
+  /// Highcharts Options Widget.
+
   String? elliott5;
+
+  /// Highcharts Options Widget.
+
   String? ellipse;
+
+  /// Highcharts Options Widget.
+
   String? factor;
+
+  /// Highcharts Options Widget.
+
   String? fastAvgPeriod;
+
+  /// Highcharts Options Widget.
+
   String? fibonacci;
+
+  /// Highcharts Options Widget.
+
   String? fibonacciTimeZones;
+
+  /// Highcharts Options Widget.
+
   String? fill;
+
+  /// Highcharts Options Widget.
+
   String? flags;
+
+  /// Highcharts Options Widget.
+
   String? fontSize;
+
+  /// Highcharts Options Widget.
+
   String? format;
+
+  /// Highcharts Options Widget.
+
   String? height;
+
+  /// Highcharts Options Widget.
+
   String? highIndex;
+
+  /// Highcharts Options Widget.
+
   String? horizontalLine;
+
+  /// Highcharts Options Widget.
+
   String? increment;
+
+  /// Highcharts Options Widget.
+
   String? index;
+
+  /// Highcharts Options Widget.
+
   String? infinityLine;
+
+  /// Highcharts Options Widget.
+
   String? initialAccelerationFactor;
+
+  /// Highcharts Options Widget.
+
   String? innerBackground;
+
+  /// Highcharts Options Widget.
+
   String? label;
+
+  /// Highcharts Options Widget.
+
   String? labelOptions;
+
+  /// Highcharts Options Widget.
+
   String? labels;
+
+  /// Highcharts Options Widget.
+
   String? line;
+
+  /// Highcharts Options Widget.
+
   String? lines;
+
+  /// Highcharts Options Widget.
+
   String? longPeriod;
+
+  /// Highcharts Options Widget.
+
   String? lowIndex;
+
+  /// Highcharts Options Widget.
+
   String? maxAccelerationFactor;
+
+  /// Highcharts Options Widget.
+
   String? measure;
+
+  /// Highcharts Options Widget.
+
   String? measureX;
+
+  /// Highcharts Options Widget.
+
   String? measureXY;
+
+  /// Highcharts Options Widget.
+
   String? measureY;
+
+  /// Highcharts Options Widget.
+
   String? multiplier;
+
+  /// Highcharts Options Widget.
+
   String? multiplierATR;
+
+  /// Highcharts Options Widget.
+
   String? name;
+
+  /// Highcharts Options Widget.
+
   String? noFilterMatch;
+
+  /// Highcharts Options Widget.
+
   String? outerBackground;
+
+  /// Highcharts Options Widget.
+
   String? padding;
+
+  /// Highcharts Options Widget.
+
   String? parallelChannel;
+
+  /// Highcharts Options Widget.
+
   String? period;
+
+  /// Highcharts Options Widget.
+
   String? periodATR;
+
+  /// Highcharts Options Widget.
+
   String? periodSenkouSpanB;
+
+  /// Highcharts Options Widget.
+
   String? periodTenkan;
+
+  /// Highcharts Options Widget.
+
   String? periods;
+
+  /// Highcharts Options Widget.
+
   String? pitchfork;
+
+  /// Highcharts Options Widget.
+
   String? ranges;
+
+  /// Highcharts Options Widget.
+
   String? ray;
+
+  /// Highcharts Options Widget.
+
   String? rectangle;
+
+  /// Highcharts Options Widget.
+
   String? removeButton;
+
+  /// Highcharts Options Widget.
+
   String? saveButton;
+
+  /// Highcharts Options Widget.
+
   String? searchIndicators;
+
+  /// Highcharts Options Widget.
+
   String? segment;
+
+  /// Highcharts Options Widget.
+
   String? series;
+
+  /// Highcharts Options Widget.
+
   String? shapeOptions;
+
+  /// Highcharts Options Widget.
+
   String? shapes;
+
+  /// Highcharts Options Widget.
+
   String? shortPeriod;
+
+  /// Highcharts Options Widget.
+
   String? signalPeriod;
+
+  /// Highcharts Options Widget.
+
   String? simpleShapes;
+
+  /// Highcharts Options Widget.
+
   String? slowAvgPeriod;
+
+  /// Highcharts Options Widget.
+
   String? standardDeviation;
+
+  /// Highcharts Options Widget.
+
   String? stroke;
+
+  /// Highcharts Options Widget.
+
   String? strokeWidth;
+
+  /// Highcharts Options Widget.
+
   String? style;
+
+  /// Highcharts Options Widget.
+
   String? timeCycles;
+
+  /// Highcharts Options Widget.
+
   String? title;
+
+  /// Highcharts Options Widget.
+
   String? topBand;
+
+  /// Highcharts Options Widget.
+
   String? tunnel;
+
+  /// Highcharts Options Widget.
+
   String? typeOptions;
+
+  /// Highcharts Options Widget.
+
   String? verticalArrow;
+
+  /// Highcharts Options Widget.
+
   String? verticalCounter;
+
+  /// Highcharts Options Widget.
+
   String? verticalLabel;
+
+  /// Highcharts Options Widget.
+
   String? verticalLine;
+
+  /// Highcharts Options Widget.
+
   String? volume;
+
+  /// Highcharts Options Widget.
+
   String? xAxisUnit;
+
+  /// Configure the aliases for indicator names.
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/lang.navigation.popup.indicatorAliases
+
   HighchartsLangNavigationPopupIndicatorAliasesOptions? indicatorAliases;
 
+  /// Translations for all field names used in popup.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.navigation.popup
   HighchartsLangNavigationPopupOptions(
       {this.addButton,
       this.algorithm,

@@ -29,21 +29,72 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Map to tremolo depth, from 0 to 1.
- * 
- * This determines the intensity of the tremolo effect, how
- * much the volume changes.
- */
+/// Map to tremolo depth, from 0 to 1.
+///
+/// This determines the intensity of the tremolo effect, how
+/// much the volume changes.
+///
+/// API Docs: https://api.highcharts.com/highcharts/sonification.defaultInstrumentOptions.mapping.tremolo.depth
 class HighchartsSonificationDefaultInstrumentMappingTremoloDepthOptions
     extends HighchartsOptionsBase {
+  /// How to perform the mapping.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/sonification.defaultInstrumentOptions.mapping.tremolo.depth.mapFunction
+
   String? mapFunction;
+
+  /// A point property to map the mapping parameter to.
+  ///
+  /// A negative sign `-` can be placed before the property name
+  /// to make mapping inverted.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/sonification.defaultInstrumentOptions.mapping.tremolo.depth.mapTo
+
   String? mapTo;
+
+  /// The maximum value for the audio parameter. This is the
+  /// highest value the audio parameter will be mapped to.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/sonification.defaultInstrumentOptions.mapping.tremolo.depth.max
+
   double? max;
+
+  /// The minimum value for the audio parameter. This is the
+  /// lowest value the audio parameter will be mapped to.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/sonification.defaultInstrumentOptions.mapping.tremolo.depth.min
+
   double? min;
+
+  /// A fixed value to use for the prop when mapping.
+  ///
+  /// For example, if mapping to `y`, setting value to `4` will
+  /// map as if all points had a y value of 4.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/sonification.defaultInstrumentOptions.mapping.tremolo.depth.value
+
   double? value;
+
+  /// What data values to map the parameter within.
+  ///
+  /// Mapping within `"series"` will make the lowest value point
+  /// in the series map to the min audio parameter value, and the
+  /// highest value will map to the max audio parameter.
+  ///
+  /// Mapping within `"chart"` will make the lowest value point in
+  /// the whole chart map to the min audio parameter value, and
+  /// the highest value in the whole chart will map to the max
+  /// audio parameter.
+  ///
+  /// You can also map within the X or Y axis of each series.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/sonification.defaultInstrumentOptions.mapping.tremolo.depth.within
+
   String? within;
 
+  /// Map to tremolo depth, from 0 to 1.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/sonification.defaultInstrumentOptions.mapping.tremolo.depth
   HighchartsSonificationDefaultInstrumentMappingTremoloDepthOptions(
       {this.mapFunction,
       this.mapTo,

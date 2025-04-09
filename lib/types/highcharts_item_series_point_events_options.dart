@@ -29,19 +29,116 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsItemSeriesPointEventsOptions extends HighchartsOptionsBase {
+  /// Fires when the legend item belonging to the pie point (slice) is
+  /// clicked. The `this` keyword refers to the point itself. One
+  /// parameter, `event`, is passed to the function, containing common
+  /// event information. The default action is to toggle the visibility of
+  /// the point. This can be prevented by calling `event.preventDefault()`.
+  ///
+  ///  **Note:** This option is deprecated in favor of
+  /// legend.events.itemClick.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.item.point.events.legendItemClick
+
   dynamic legendItemClick;
+
+  /// Fires when a point is clicked. One parameter, `event`, is passed
+  /// to the function, containing common event information.
+  ///
+  /// If the `series.allowPointSelect` option is true, the default
+  /// action for the point's click event is to toggle the point's
+  /// select state. Returning `false` cancels this action.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.item.point.events.click
+
   dynamic click;
+
+  /// Callback that fires while dragging a point. The mouse event is passed in
+  /// as parameter. The original data can be accessed from `e.origin`, and the
+  /// new point values can be accessed from `e.newPoints`. If there is only a
+  /// single point being updated, it can be accessed from `e.newPoint` for
+  /// simplicity, and its ID can be accessed from `e.newPointId`. The `this`
+  /// context is the point being dragged. To stop the default drag action,
+  /// return false. See drag and drop options.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.item.point.events.drag
+
   dynamic drag;
+
+  /// Callback that fires when starting to drag a point. The mouse event object
+  /// is passed in as an argument. If a drag handle is used, `e.updateProp` is
+  /// set to the data property being dragged. The `this` context is the point.
+  /// See drag and drop options.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.item.point.events.dragStart
+
   dynamic dragStart;
+
+  /// Callback that fires when the point is dropped. The parameters passed are
+  /// the same as for drag. To stop
+  /// the default drop action, return false. See
+  /// drag and drop options.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.item.point.events.drop
+
   dynamic drop;
+
+  /// Fires when the mouse leaves the area close to the point. One
+  /// parameter, `event`, is passed to the function, containing common
+  /// event information.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.item.point.events.mouseOut
+
   dynamic mouseOut;
+
+  /// Fires when the mouse enters the area close to the point. One
+  /// parameter, `event`, is passed to the function, containing common
+  /// event information.
+  ///
+  /// Returning `false` cancels the default behavior, which is to show a
+  /// tooltip for the point.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.item.point.events.mouseOver
+
   dynamic mouseOver;
+
+  /// Fires when the point is removed using the `.remove()` method. One
+  /// parameter, `event`, is passed to the function. Returning `false`
+  /// cancels the operation.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.item.point.events.remove
+
   dynamic remove;
+
+  /// Fires when the point is selected either programmatically or
+  /// following a click on the point. One parameter, `event`, is passed
+  /// to the function. Returning `false` cancels the operation.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.item.point.events.select
+
   dynamic select;
+
+  /// Fires when the point is unselected either programmatically or
+  /// following a click on the point. One parameter, `event`, is passed
+  /// to the function.
+  ///  Returning `false` cancels the operation.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.item.point.events.unselect
+
   dynamic unselect;
+
+  /// Fires when the point is updated programmatically through the
+  /// `.update()` method. One parameter, `event`, is passed to the
+  /// function. The new point options can be accessed through
+  /// `event.options`. Returning `false` cancels the operation.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.item.point.events.update
+
   dynamic update;
 
+  /// Highcharts Options Widget.
   HighchartsItemSeriesPointEventsOptions(
       {this.legendItemClick,
       this.click,

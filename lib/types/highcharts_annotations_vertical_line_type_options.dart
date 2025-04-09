@@ -37,15 +37,48 @@ export 'highcharts_annotations_crooked_line_type_points_options.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsAnnotationsVerticalLineTypeOptions
     extends HighchartsOptionsBase {
+  /// Connector options.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.verticalLine.typeOptions.connector
+
   HighchartsAnnotationsVerticalLineTypeConnectorOptions? connector;
+
+  /// Label options.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.verticalLine.typeOptions.label
+
   HighchartsAnnotationsVerticalLineTypeLabelOptions? label;
+
+  /// Line options.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.verticalLine.typeOptions.line
+
   HighchartsAnnotationsCrookedLineTypeLineOptions? line;
+
+  /// Highcharts Options Widget.
+
   List<HighchartsAnnotationsCrookedLineTypePointsOptions>? points;
+
+  /// This number defines which xAxis the point is connected to.
+  /// It refers to either the axis id or the index of the axis
+  /// in the xAxis array.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.verticalLine.typeOptions.xAxis
+
   double? xAxis;
+
+  /// This number defines which yAxis the point is connected to.
+  /// It refers to either the axis id or the index of the axis
+  /// in the xAxis array.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.verticalLine.typeOptions.yAxis
+
   double? yAxis;
 
+  /// Highcharts Options Widget.
   HighchartsAnnotationsVerticalLineTypeOptions(
       {this.connector,
       this.label,

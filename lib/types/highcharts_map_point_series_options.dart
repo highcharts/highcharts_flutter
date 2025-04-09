@@ -32,57 +32,63 @@ export 'highcharts_map_point_series_data_labels_options.dart';
  *
  * */
 
-/**
- * A `mappoint` series. If the [type](#series.mappoint.type) option
- * is not specified, it is inherited from [chart.type](#chart.type).
- * 
- * Configuration options for the series are given in three levels:
- * 1. Options for all series in a chart are defined in the
- *    [plotOptions.series](plotOptions.series) object.
- * 2. Options for all `mappoint` series are defined in
- *    [plotOptions.mappoint](plotOptions.mappoint).
- * 3. Options for one single series are given in
- *    [the series instance array](series.mappoint).
- * 
- * ```
- * Highcharts.chart('container', {
- *     plotOptions: {
- *         series: {
- *             // general options for all series
- *         },
- *         mappoint: {
- *             // shared options for all mappoint series
- *         }
- *     },
- *     series: [{
- *         // specific options for this series instance
- *         type: 'mappoint'
- *     }]
- * });
- * ```
- * 
- * **TypeScript:**
- * - the [type](series.mappoint.type) option must always be set.
- * - when accessing an array of series, the combined set of all series types is
- *   represented by [Highcharts.SeriesOptionsType
- *   ](/class-reference/Highcharts#.SeriesOptionsType). Narrowing down to the
- *   specific type can be done by checking the `type` property.
- * 
- * ```
- * if (chart.options.series?.[0]?.type === mappoint) {
- *     // code specific to the mappoint series
- * }
- * ```
- *             
- */
+/// A `mappoint` series. If the type option
+/// is not specified, it is inherited from chart.type.
+///
+/// Configuration options for the series are given in three levels:
+/// 1. Options for all series in a chart are defined in the
+///    plotOptions.series object.
+/// 2. Options for all `mappoint` series are defined in
+///    plotOptions.mappoint.
+/// 3. Options for one single series are given in
+///    the series instance array.
+///
+///
+///
+///
+/// API Docs: https://api.highcharts.com/highmaps/series.mappoint
 class HighchartsMapPointSeriesOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   HighchartsMapPointSeriesDataLabelsOptions? dataLabels;
+
+  /// An id for the series. This can be used after render time to get a pointer
+  /// to the series object through `chart.get()`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.mappoint.id
+
   String? id;
+
+  /// The index of the series in the chart, affecting the internal index in the
+  /// `chart.series` array, the visible Z index as well as the order in the
+  /// legend.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.mappoint.index
+
   double? index;
+
+  /// The sequential index of the series in the legend.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.mappoint.legendIndex
+
   double? legendIndex;
+
+  /// Highcharts Options Widget.
+
   String? legendSymbol;
+
+  /// An array of objects containing a `geometry` or `path` definition and
+  /// optionally additional properties to join in the `data` as per the `joinBy`
+  /// option. GeoJSON and TopoJSON structures can also be passed directly into
+  /// `mapData`.
+  ///
+  /// API Docs: https://api.highcharts.com/highmaps/series.mappoint.mapData
+
   List<dynamic>? mapData;
 
+  /// A `mappoint` series. If the type option is not specified, it is inherited from chart.type.
+  ///
+  /// API Docs: https://api.highcharts.com/highmaps/series.mappoint
   HighchartsMapPointSeriesOptions(
       {this.dataLabels,
       this.id,

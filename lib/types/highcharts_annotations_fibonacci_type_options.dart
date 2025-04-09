@@ -36,18 +36,73 @@ export 'highcharts_annotations_crooked_line_type_points_options.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsAnnotationsFibonacciTypeOptions extends HighchartsOptionsBase {
+  /// An array of background colors:
+  /// Default to:
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.fibonacci.typeOptions.backgroundColors
+
   dynamic backgroundColors;
+
+  /// The height of the fibonacci in terms of yAxis.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.fibonacci.typeOptions.height
+
   double? height;
+
+  /// An array with options for the labels.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.fibonacci.typeOptions.labels
+
   List<HighchartsAnnotationsFibonacciTypeLabelsOptions>? labels;
+
+  /// Line options.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.fibonacci.typeOptions.line
+
   HighchartsAnnotationsCrookedLineTypeLineOptions? line;
+
+  /// The color of line.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.fibonacci.typeOptions.lineColor
+
   String? lineColor;
+
+  /// An array of colors for the lines.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.fibonacci.typeOptions.lineColors
+
   dynamic lineColors;
+
+  /// Highcharts Options Widget.
+
   List<HighchartsAnnotationsCrookedLineTypePointsOptions>? points;
+
+  /// Whether the annotation levels should be reversed. By default they
+  /// start from 0 and go to 1.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.fibonacci.typeOptions.reversed
+
   bool? reversed;
+
+  /// This number defines which xAxis the point is connected to.
+  /// It refers to either the axis id or the index of the axis
+  /// in the xAxis array.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.fibonacci.typeOptions.xAxis
+
   double? xAxis;
+
+  /// This number defines which yAxis the point is connected to.
+  /// It refers to either the axis id or the index of the axis
+  /// in the xAxis array.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.fibonacci.typeOptions.yAxis
+
   double? yAxis;
 
+  /// Highcharts Options Widget.
   HighchartsAnnotationsFibonacciTypeOptions(
       {this.backgroundColors,
       this.height,

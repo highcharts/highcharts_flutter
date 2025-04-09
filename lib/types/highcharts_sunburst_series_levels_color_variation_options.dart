@@ -29,15 +29,28 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Can set a `colorVariation` on all points which lies on the same
- * level.
- */
+/// Can set a `colorVariation` on all points which lies on the same
+/// level.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.sunburst.levels.colorVariation
 class HighchartsSunburstSeriesLevelsColorVariationOptions
     extends HighchartsOptionsBase {
+  /// The key of a color variation. Currently supports `brightness` only.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.sunburst.levels.colorVariation.key
+
   String? key;
+
+  /// The ending value of a color variation. The last sibling will receive
+  /// this value.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.sunburst.levels.colorVariation.to
+
   double? to;
 
+  /// Can set a `colorVariation` on all points which lies on the same level.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.sunburst.levels.colorVariation
   HighchartsSunburstSeriesLevelsColorVariationOptions({this.key, this.to});
 
   @override

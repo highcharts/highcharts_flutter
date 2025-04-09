@@ -29,12 +29,25 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsNavigatorXAxisLabelsStyleOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   String? color;
+
+  /// Highcharts Options Widget.
+
   String? cursor;
+
+  /// Highcharts Options Widget.
+
   dynamic fontSize;
+
+  /// Highcharts Options Widget.
+
   String? textOverflow;
 
+  /// Highcharts Options Widget.
   HighchartsNavigatorXAxisLabelsStyleOptions(
       {this.color, this.cursor, this.fontSize, this.textOverflow});
 

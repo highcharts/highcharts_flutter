@@ -38,14 +38,33 @@ export 'highcharts_stock_tools_gui_definitions_simple_shapes_rectangle_options.d
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsStockToolsGuiDefinitionsSimpleShapesOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   HighchartsStockToolsGuiDefinitionsSimpleShapesCircleOptions? circle;
+
+  /// Highcharts Options Widget.
+
   HighchartsStockToolsGuiDefinitionsSimpleShapesEllipseOptions? ellipse;
+
+  /// A collection of strings pointing to config options for
+  /// the items.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/stockTools.gui.definitions.simpleShapes.items
+
   String? items;
+
+  /// Highcharts Options Widget.
+
   HighchartsStockToolsGuiDefinitionsSimpleShapesLabelOptions? label;
+
+  /// Highcharts Options Widget.
+
   HighchartsStockToolsGuiDefinitionsSimpleShapesRectangleOptions? rectangle;
 
+  /// Highcharts Options Widget.
   HighchartsStockToolsGuiDefinitionsSimpleShapesOptions(
       {this.circle, this.ellipse, this.items, this.label, this.rectangle});
 

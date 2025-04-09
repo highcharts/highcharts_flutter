@@ -29,16 +29,34 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Positioning for the input boxes. Allowed properties are `align`,
- *  `x` and `y`.
- */
+/// Positioning for the input boxes. Allowed properties are `align`,
+///  `x` and `y`.
+///
+/// API Docs: https://api.highcharts.com/highcharts/rangeSelector.inputPosition
 class HighchartsRangeSelectorInputPositionOptions
     extends HighchartsOptionsBase {
+  /// The alignment of the input box. Allowed properties are `left`,
+  /// `center`, `right`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/rangeSelector.inputPosition.align
+
   String? align;
+
+  /// X offset of the input row.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/rangeSelector.inputPosition.x
+
   double? x;
+
+  /// Y offset of the input row.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/rangeSelector.inputPosition.y
+
   double? y;
 
+  /// Positioning for the input boxes. Allowed properties are `align`,  `x` and `y`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/rangeSelector.inputPosition
   HighchartsRangeSelectorInputPositionOptions({this.align, this.x, this.y});
 
   @override

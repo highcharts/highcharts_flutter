@@ -31,14 +31,21 @@ export 'highcharts_stock_tools_gui_options.dart';
  *
  * */
 
-/**
- * Configure the stockTools gui strings in the chart. Requires the
- * [stockTools module]() to be loaded. For a description of the module
- * and information on its features, see [Highcharts StockTools]().
- */
+/// Configure the stockTools gui strings in the chart. Requires the
+/// [stockTools module]() to be loaded. For a description of the module
+/// and information on its features, see [Highcharts StockTools]().
+///
+/// API Docs: https://api.highcharts.com/highstock/stockTools
 class HighchartsStockToolsOptions extends HighchartsOptionsBase {
+  /// Definitions of buttons in Stock Tools GUI.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/stockTools.gui
+
   HighchartsStockToolsGuiOptions? gui;
 
+  /// Configure the stockTools gui strings in the chart. Requires the [stockTools module]() to be loaded. For a description of the module and information on its features, see [Highcharts StockTools]().
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/stockTools
   HighchartsStockToolsOptions({this.gui});
 
   @override

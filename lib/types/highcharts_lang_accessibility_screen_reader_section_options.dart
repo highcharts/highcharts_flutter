@@ -32,17 +32,35 @@ export 'highcharts_lang_accessibility_screen_reader_section_annotations_options.
  *
  * */
 
-/**
- * Language options for the screen reader information sections added
- * before and after the charts.
- */
+/// Language options for the screen reader information sections added
+/// before and after the charts.
+///
+/// API Docs: https://api.highcharts.com/highcharts/lang.accessibility.screenReaderSection
 class HighchartsLangAccessibilityScreenReaderSectionOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   String? afterRegionLabel;
+
+  /// Language options for annotation descriptions.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.accessibility.screenReaderSection.annotations
+
   HighchartsLangAccessibilityScreenReaderSectionAnnotationsOptions? annotations;
+
+  /// Highcharts Options Widget.
+
   String? beforeRegionLabel;
+
+  /// Label for the end of the chart. Announced by screen readers.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.accessibility.screenReaderSection.endOfChartMarker
+
   String? endOfChartMarker;
 
+  /// Language options for the screen reader information sections added before and after the charts.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.accessibility.screenReaderSection
   HighchartsLangAccessibilityScreenReaderSectionOptions(
       {this.afterRegionLabel,
       this.annotations,

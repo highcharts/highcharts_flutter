@@ -37,14 +37,47 @@ export 'highcharts_annotations_crooked_line_type_points_options.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsAnnotationsPitchforkTypeOptions extends HighchartsOptionsBase {
+  /// Inner background options.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.pitchfork.typeOptions.innerBackground
+
   HighchartsAnnotationsPitchforkTypeInnerBackgroundOptions? innerBackground;
+
+  /// Line options.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.pitchfork.typeOptions.line
+
   HighchartsAnnotationsCrookedLineTypeLineOptions? line;
+
+  /// Outer background options.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.pitchfork.typeOptions.outerBackground
+
   HighchartsAnnotationsPitchforkTypeOuterBackgroundOptions? outerBackground;
+
+  /// Highcharts Options Widget.
+
   List<HighchartsAnnotationsCrookedLineTypePointsOptions>? points;
+
+  /// This number defines which xAxis the point is connected to.
+  /// It refers to either the axis id or the index of the axis
+  /// in the xAxis array.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.pitchfork.typeOptions.xAxis
+
   double? xAxis;
+
+  /// This number defines which yAxis the point is connected to.
+  /// It refers to either the axis id or the index of the axis
+  /// in the xAxis array.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.pitchfork.typeOptions.yAxis
+
   double? yAxis;
 
+  /// Highcharts Options Widget.
   HighchartsAnnotationsPitchforkTypeOptions(
       {this.innerBackground,
       this.line,

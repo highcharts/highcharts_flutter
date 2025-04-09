@@ -29,17 +29,62 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Individual target options for each point.
- */
+/// Individual target options for each point.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.bullet.data.targetOptions
 class HighchartsBulletSeriesDataTargetOptions extends HighchartsOptionsBase {
+  /// The border color of the rectangle representing the target. When
+  /// not set, the point's border color is used.
+  ///
+  /// In styled mode, use class `highcharts-bullet-target` instead.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.bullet.data.targetOptions.borderColor
+
   String? borderColor;
+
+  /// The border radius of the rectangle representing the target.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.bullet.data.targetOptions.borderRadius
+
   double? borderRadius;
+
+  /// The border width of the rectangle representing the target.
+  ///
+  /// In styled mode, use class `highcharts-bullet-target` instead.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.bullet.data.targetOptions.borderWidth
+
   double? borderWidth;
+
+  /// The color of the rectangle representing the target. When not set,
+  /// point's color (if set in point's options -
+  /// `color`) or zone of the target value
+  /// (if `zones` or
+  /// `negativeColor` are set)
+  /// or the same color as the point has is used.
+  ///
+  /// In styled mode, use class `highcharts-bullet-target` instead.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.bullet.data.targetOptions.color
+
   String? color;
+
+  /// The height of the rectangle representing the target.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.bullet.data.targetOptions.height
+
   double? height;
+
+  /// The width of the rectangle representing the target. Could be set
+  /// as a pixel value or as a percentage of a column width.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.bullet.data.targetOptions.width
+
   dynamic width;
 
+  /// Individual target options for each point.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.bullet.data.targetOptions
   HighchartsBulletSeriesDataTargetOptions(
       {this.borderColor,
       this.borderRadius,

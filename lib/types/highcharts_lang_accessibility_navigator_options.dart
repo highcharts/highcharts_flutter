@@ -29,15 +29,42 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Navigator language options for accessibility.
- */
+/// Navigator language options for accessibility.
+///
+/// API Docs: https://api.highcharts.com/highcharts/lang.accessibility.navigator
 class HighchartsLangAccessibilityNavigatorOptions
     extends HighchartsOptionsBase {
+  /// Announcement for assistive technology when navigator values
+  /// are changed.
+  ///
+  /// Receives `axisRangeDescription` and `chart` as context.
+  /// `axisRangeDescription` corresponds to the range description
+  /// defined in lang.accessibility.axis
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.accessibility.navigator.changeAnnouncement
+
   String? changeAnnouncement;
+
+  /// Label for the navigator region.
+  ///
+  /// Receives `chart` as context.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.accessibility.navigator.groupLabel
+
   String? groupLabel;
+
+  /// Label for the navigator handles.
+  ///
+  /// Receives `handleIx` and `chart` as context.
+  /// `handleIx` refers to the index of the navigator handle.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.accessibility.navigator.handleLabel
+
   String? handleLabel;
 
+  /// Navigator language options for accessibility.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.accessibility.navigator
   HighchartsLangAccessibilityNavigatorOptions(
       {this.changeAnnouncement, this.groupLabel, this.handleLabel});
 

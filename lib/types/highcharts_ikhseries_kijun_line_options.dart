@@ -31,12 +31,17 @@ export 'highcharts_ikhseries_kijun_line_styles_options.dart';
  *
  * */
 
-/**
- * The styles for Kijun line
- */
+/// The styles for Kijun line
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.ikh.kijunLine
 class HighchartsIKHSeriesKijunLineOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   HighchartsIKHSeriesKijunLineStylesOptions? styles;
 
+  /// The styles for Kijun line
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.ikh.kijunLine
   HighchartsIKHSeriesKijunLineOptions({this.styles});
 
   @override

@@ -28,10 +28,16 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsDependencyWheelSeriesDataLabelsTextPathAttributesOptions
     extends HighchartsOptionsBase {
+  /// Text path shift along its y-axis.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.dependencywheel.dataLabels.textPath.attributes.dy
+
   double? dy;
 
+  /// Highcharts Options Widget.
   HighchartsDependencyWheelSeriesDataLabelsTextPathAttributesOptions({this.dy});
 
   @override

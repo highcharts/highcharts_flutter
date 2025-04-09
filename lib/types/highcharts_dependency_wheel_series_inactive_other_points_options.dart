@@ -28,7 +28,9 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsDependencyWheelSeriesInactiveOtherPointsOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
   HighchartsDependencyWheelSeriesInactiveOtherPointsOptions();
 }

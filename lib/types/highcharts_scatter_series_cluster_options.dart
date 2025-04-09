@@ -42,31 +42,93 @@ export 'highcharts_scatter_series_cluster_zones_options.dart';
  *
  * */
 
-/**
- * Options for marker clusters, the concept of sampling the data
- * values into larger blocks in order to ease readability and
- * increase performance of the JavaScript charts.
- * 
- * Note: marker clusters module is not working with `boost`
- * and `draggable-points` modules.
- * 
- * The marker clusters feature requires the marker-clusters.js
- * file to be loaded, found in the modules directory of the download
- * package, or online at [code.highcharts.com/modules/marker-clusters.js](code.highcharts.com/modules/marker-clusters.js).
- */
+/// Options for marker clusters, the concept of sampling the data
+/// values into larger blocks in order to ease readability and
+/// increase performance of the JavaScript charts.
+///
+/// Note: marker clusters module is not working with `boost`
+/// and `draggable-points` modules.
+///
+/// The marker clusters feature requires the marker-clusters.js
+/// file to be loaded, found in the modules directory of the download
+/// package, or online at code.highcharts.com/modules/marker-clusters.js.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.scatter.cluster
 class HighchartsScatterSeriesClusterOptions extends HighchartsOptionsBase {
+  /// When set to `false` prevent cluster overlapping - this option
+  /// works only when `layoutAlgorithm.type = "grid"`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.scatter.cluster.allowOverlap
+
   bool? allowOverlap;
+
+  /// Options for the cluster marker animation.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.scatter.cluster.animation
+
   dynamic animation;
+
+  /// Options for the cluster data labels.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.scatter.cluster.dataLabels
+
   HighchartsScatterSeriesClusterDataLabelsOptions? dataLabels;
+
+  /// Zoom the plot area to the cluster points range when a cluster is clicked.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.scatter.cluster.drillToCluster
+
   bool? drillToCluster;
+
+  /// Whether to enable the marker-clusters module.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.scatter.cluster.enabled
+
   bool? enabled;
+
+  /// Highcharts Options Widget.
+
   HighchartsScatterSeriesClusterEventsOptions? events;
+
+  /// Options for layout algorithm. Inside there
+  /// are options to change the type of the algorithm, gridSize,
+  /// distance or iterations.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.scatter.cluster.layoutAlgorithm
+
   HighchartsScatterSeriesClusterLayoutAlgorithmOptions? layoutAlgorithm;
+
+  /// Options for the cluster marker.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.scatter.cluster.marker
+
   HighchartsScatterSeriesClusterMarkerOptions? marker;
+
+  /// The minimum amount of points to be combined into a cluster.
+  /// This value has to be greater or equal to 2.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.scatter.cluster.minimumClusterSize
+
   double? minimumClusterSize;
+
+  /// Highcharts Options Widget.
+
   HighchartsScatterSeriesClusterStatesOptions? states;
+
+  /// An array defining zones within marker clusters.
+  ///
+  /// In styled mode, the color zones are styled with the
+  /// `.highcharts-cluster-zone-{n}` class, or custom
+  /// classed from the `className`
+  /// option.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.scatter.cluster.zones
+
   List<HighchartsScatterSeriesClusterZonesOptions>? zones;
 
+  /// Options for marker clusters, the concept of sampling the data values into larger blocks in order to ease readability and increase performance of the JavaScript charts.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.scatter.cluster
   HighchartsScatterSeriesClusterOptions(
       {this.allowOverlap,
       this.animation,

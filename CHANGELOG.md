@@ -1,9 +1,18 @@
+## 0.3.0
+
+* Added API documentation to all options.
+* Added flexible chart; set width and height to 0.
+* Improved CSP for JavaScript.
+* Improved accessibility of webview.
+* Improved complex_demo.
+
+
 ## 0.2.0
 
 * Added support for local JavaScript assets.
-* Added pictorial example.
+* Added pictorial_chart example.
 * Improved chart refresh on web target.
-* Updated example line_refresh_chart example with local JavaScript asset.
+* Updated line_refresh_chart example with local JavaScript asset.
 
 
 ## 0.1.1

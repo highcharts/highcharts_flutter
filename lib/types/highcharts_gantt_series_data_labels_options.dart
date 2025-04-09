@@ -32,12 +32,25 @@ export 'highcharts_gantt_series_data_labels_style_options.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsGanttSeriesDataLabelsOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   bool? enabled;
+
+  /// Highcharts Options Widget.
+
   bool? inside;
+
+  /// Highcharts Options Widget.
+
   HighchartsGanttSeriesDataLabelsStyleOptions? style;
+
+  /// Highcharts Options Widget.
+
   String? verticalAlign;
 
+  /// Highcharts Options Widget.
   HighchartsGanttSeriesDataLabelsOptions(
       {this.enabled, this.inside, this.style, this.verticalAlign});
 

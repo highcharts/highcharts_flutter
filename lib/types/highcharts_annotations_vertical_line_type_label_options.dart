@@ -32,36 +32,157 @@ export 'highcharts_annotations_label_accessibility_options.dart';
  *
  * */
 
-/**
- * Label options.
- */
+/// Label options.
+///
+/// API Docs: https://api.highcharts.com/highcharts/annotations.verticalLine.typeOptions.label
 class HighchartsAnnotationsVerticalLineTypeLabelOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   bool? allowOverlap;
+
+  /// Highcharts Options Widget.
+
   String? backgroundColor;
+
+  /// Highcharts Options Widget.
+
   double? borderWidth;
+
+  /// Highcharts Options Widget.
+
   bool? crop;
+
+  /// Highcharts Options Widget.
+
   double? offset;
+
+  /// Highcharts Options Widget.
+
   String? overflow;
+
+  /// Highcharts Options Widget.
+
   String? shape;
+
+  /// Highcharts Options Widget.
+
   String? text;
+
+  /// Accessibility options for an annotation label.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.verticalLine.typeOptions.label.accessibility
+
   HighchartsAnnotationsLabelAccessibilityOptions? accessibility;
+
+  /// The alignment of the annotation's label. If right,
+  /// the right side of the label should be touching the point.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.verticalLine.typeOptions.label.align
+
   String? align;
+
+  /// The border color for the annotation's label.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.verticalLine.typeOptions.label.borderColor
+
   String? borderColor;
+
+  /// The border radius in pixels for the annotation's label.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.verticalLine.typeOptions.label.borderRadius
+
   double? borderRadius;
+
+  /// A class name for styling by CSS.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.verticalLine.typeOptions.label.className
+
   String? className;
+
+  /// The label's pixel distance from the point.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.verticalLine.typeOptions.label.distance
+
   double? distance;
+
+  /// A
+  /// format
+  /// string for the data label.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.verticalLine.typeOptions.label.format
+
   String? format;
+
+  /// Callback JavaScript function to format the annotation's
+  /// label. Note that if a `format` or `text` are defined,
+  /// the format or text take precedence and the formatter is
+  /// ignored. `This` refers to a point object.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.verticalLine.typeOptions.label.formatter
+
   String? formatter;
+
+  /// Whether the annotation is visible in the exported data
+  /// table.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.verticalLine.typeOptions.label.includeInDataExport
+
   bool? includeInDataExport;
+
+  /// When either the borderWidth or the backgroundColor is
+  /// set, this is the padding within the box.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.verticalLine.typeOptions.label.padding
+
   double? padding;
+
+  /// The shadow of the box. The shadow can be an object
+  /// configuration containing `color`, `offsetX`, `offsetY`,
+  /// `opacity` and `width`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.verticalLine.typeOptions.label.shadow
+
   Map<String, dynamic>? shadow;
+
+  /// Styles for the annotation's label.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.verticalLine.typeOptions.label.style
+
   Map<String, String>? style;
+
+  /// Whether to use HTML
+  /// to render the annotation's label.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.verticalLine.typeOptions.label.useHTML
+
   bool? useHTML;
+
+  /// The vertical alignment of the annotation's label.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.verticalLine.typeOptions.label.verticalAlign
+
   String? verticalAlign;
+
+  /// The x position offset of the label relative to the point.
+  /// Note that if a `distance` is defined, the distance takes
+  /// precedence over `x` and `y` options.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.verticalLine.typeOptions.label.x
+
   double? x;
+
+  /// The y position offset of the label relative to the point.
+  /// Note that if a `distance` is defined, the distance takes
+  /// precedence over `x` and `y` options.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.verticalLine.typeOptions.label.y
+
   double? y;
 
+  /// Label options.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.verticalLine.typeOptions.label
   HighchartsAnnotationsVerticalLineTypeLabelOptions(
       {this.allowOverlap,
       this.backgroundColor,

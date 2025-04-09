@@ -40,44 +40,114 @@ export 'highcharts_pointandfigure_series_data_marker_options.dart';
  *
  * */
 
-/**
- * An array of data points for the series. For the `pointandfigure` series
- * type, points can be given in the following way:
- * 
- * 1. An array of arrays with 2 values. In this case, the values correspond
- *    to `x, y`. Y values are parsed under the hood to create
- *    point and figure format data points.
- *    ```js
- *    data: [
- *        [1665408600000, 140.42],
- *        [1665495000000, 138.98],
- *        [1665581400000, 138.34]
- *    ]
- *    ```
- * 2. An array of objects with named values `{x, y}`.
- *    ```js
- *    data: [
- *        {x: 1665408600000, y: 140.42},
- *        {x: 1665495000000, y: 138.98},
- *        {x: 1665581400000, y: 138.34}
- *    ]
- *    ```
- */
+/// An array of data points for the series. For the `pointandfigure` series
+/// type, points can be given in the following way:
+///
+/// 1. An array of arrays with 2 values. In this case, the values correspond
+///    to `x, y`. Y values are parsed under the hood to create
+///    point and figure format data points.
+/// 2. An array of objects with named values `{x, y}`.
+///
+/// API Docs: https://api.highcharts.com/highstock/series.pointandfigure.data
 class HighchartsPointandfigureSeriesDataOptions extends HighchartsOptionsBase {
+  /// Accessibility options for a data point.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.pointandfigure.data.accessibility
+
   HighchartsPointandfigureSeriesDataAccessibilityOptions? accessibility;
+
+  /// Individual color for the point. By default the color is pulled from
+  /// the global `colors` array.
+  ///
+  /// In styled mode, the `color` option doesn't take effect. Instead, use
+  /// `colorIndex`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.pointandfigure.data.color
+
   String? color;
+
+  /// A reserved subspace to store options and values for customized functionality.
+  /// Here you can add additional data for your own event callbacks and formatter
+  /// callbacks.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.pointandfigure.data.custom
+
   Map<String, dynamic>? custom;
+
+  /// Individual data label for each point. The options are the same as
+  /// the ones for plotOptions.series.dataLabels.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.pointandfigure.data.dataLabels
+
   List<HighchartsPointandfigureSeriesDataDataLabelsOptions>? dataLabels;
+
+  /// A description of the point to add to the screen reader information
+  /// about the point.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.pointandfigure.data.description
+
   String? description;
+
+  /// Point specific options for the draggable-points module. Overrides options
+  /// on `series.dragDrop`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.pointandfigure.data.dragDrop
+
   HighchartsPointandfigureSeriesDataDragDropOptions? dragDrop;
+
+  /// The individual point events.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.pointandfigure.data.events
+
   HighchartsPointandfigureSeriesDataEventsOptions? events;
+
+  /// An id for the point. This can be used after render time to get a
+  /// pointer to the point object through `chart.get()`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.pointandfigure.data.id
+
   String? id;
+
+  /// The rank for this point's data label in case of collision. If two
+  /// data labels are about to overlap, only the one with the highest `labelrank`
+  /// will be drawn.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.pointandfigure.data.labelrank
+
   double? labelrank;
+
+  /// Options for the point markers of line-like series.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.pointandfigure.data.marker
+
   HighchartsPointandfigureSeriesDataMarkerOptions? marker;
+
+  /// Whether the data point is selected initially.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.pointandfigure.data.selected
+
   bool? selected;
+
+  /// The x value of the point.
+  ///
+  /// For datetime axes, a number value is the timestamp in milliseconds since
+  /// 1970, while a date string is parsed according to the [current time zone]
+  /// (https://api.highcharts.com/highcharts/time.timezone) of the
+  /// chart. Date strings are supported since v12.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.pointandfigure.data.x
+
   dynamic x;
+
+  /// The y value of the point.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.pointandfigure.data.y
+
   double? y;
 
+  /// An array of data points for the series. For the `pointandfigure` series type, points can be given in the following way:
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/series.pointandfigure.data
   HighchartsPointandfigureSeriesDataOptions(
       {this.accessibility,
       this.color,

@@ -29,13 +29,26 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Styles for the top line.
- */
+/// Styles for the top line.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.bb.topLine.styles
 class HighchartsBBSeriesTopLineStylesOptions extends HighchartsOptionsBase {
+  /// Color of the line. If not set, it's inherited from
+  /// plotOptions.bb.color.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.bb.topLine.styles.lineColor
+
   String? lineColor;
+
+  /// Pixel width of the line.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.bb.topLine.styles.lineWidth
+
   double? lineWidth;
 
+  /// Styles for the top line.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.bb.topLine.styles
   HighchartsBBSeriesTopLineStylesOptions({this.lineColor, this.lineWidth});
 
   @override

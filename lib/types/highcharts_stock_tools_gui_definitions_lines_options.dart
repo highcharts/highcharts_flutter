@@ -46,19 +46,50 @@ export 'highcharts_stock_tools_gui_definitions_lines_vertical_line_options.dart'
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsStockToolsGuiDefinitionsLinesOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   HighchartsStockToolsGuiDefinitionsLinesArrowInfinityLineOptions?
       arrowInfinityLine;
+
+  /// Highcharts Options Widget.
+
   HighchartsStockToolsGuiDefinitionsLinesArrowRayOptions? arrowRay;
+
+  /// Highcharts Options Widget.
+
   HighchartsStockToolsGuiDefinitionsLinesArrowSegmentOptions? arrowSegment;
+
+  /// Highcharts Options Widget.
+
   HighchartsStockToolsGuiDefinitionsLinesHorizontalLineOptions? horizontalLine;
+
+  /// A collection of strings pointing to config options for
+  /// the items.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/stockTools.gui.definitions.lines.items
+
   String? items;
+
+  /// Highcharts Options Widget.
+
   HighchartsStockToolsGuiDefinitionsLinesLineOptions? line;
+
+  /// Highcharts Options Widget.
+
   HighchartsStockToolsGuiDefinitionsLinesRayOptions? ray;
+
+  /// Highcharts Options Widget.
+
   HighchartsStockToolsGuiDefinitionsLinesSegmentOptions? segment;
+
+  /// Highcharts Options Widget.
+
   HighchartsStockToolsGuiDefinitionsLinesVerticalLineOptions? verticalLine;
 
+  /// Highcharts Options Widget.
   HighchartsStockToolsGuiDefinitionsLinesOptions(
       {this.arrowInfinityLine,
       this.arrowRay,

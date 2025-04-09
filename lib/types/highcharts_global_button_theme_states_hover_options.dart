@@ -29,14 +29,19 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Hover state overrides for the buttons are applied in addition
- * to the normal state options
- */
+/// Hover state overrides for the buttons are applied in addition
+/// to the normal state options
+///
+/// API Docs: https://api.highcharts.com/highcharts/global.buttonTheme.states.hover
 class HighchartsGlobalButtonThemeStatesHoverOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   String? fill;
 
+  /// Hover state overrides for the buttons are applied in addition to the normal state options
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/global.buttonTheme.states.hover
   HighchartsGlobalButtonThemeStatesHoverOptions({this.fill});
 
   @override

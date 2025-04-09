@@ -29,10 +29,14 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsAnnotationsFibonacciLabelStyleOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   String? color;
 
+  /// Highcharts Options Widget.
   HighchartsAnnotationsFibonacciLabelStyleOptions({this.color});
 
   @override

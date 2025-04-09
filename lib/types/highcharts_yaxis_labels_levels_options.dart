@@ -29,14 +29,25 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Set options on specific levels in a tree grid axis. Takes
- * precedence over labels options.
- */
+/// Set options on specific levels in a tree grid axis. Takes
+/// precedence over labels options.
+///
+/// API Docs: https://api.highcharts.com/gantt/yAxis.labels.levels
 class HighchartsYAxisLabelsLevelsOptions extends HighchartsOptionsBase {
+  /// Specify the level which the options within this object
+  /// applies to.
+  ///
+  /// API Docs: https://api.highcharts.com/gantt/yAxis.labels.levels.level
+
   double? level;
+
+  /// Highcharts Options Widget.
+
   Map<String, String>? style;
 
+  /// Set options on specific levels in a tree grid axis. Takes precedence over labels options.
+  ///
+  /// API Docs: https://api.highcharts.com/gantt/yAxis.labels.levels
   HighchartsYAxisLabelsLevelsOptions({this.level, this.style});
 
   @override

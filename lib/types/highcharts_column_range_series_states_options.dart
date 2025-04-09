@@ -37,12 +37,31 @@ export 'highcharts_column_range_series_states_select_options.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsColumnRangeSeriesStatesOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   HighchartsColumnRangeSeriesStatesHoverOptions? hover;
+
+  /// The opposite state of a hover for series.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.columnrange.states.inactive
+
   HighchartsSeriesStatesInactiveOptions? inactive;
+
+  /// The normal state of a series, or for point items in column, pie
+  /// and similar series. Currently only used for setting animation
+  /// when returning to normal state from hover.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.columnrange.states.normal
+
   HighchartsSeriesStatesNormalOptions? normal;
+
+  /// Highcharts Options Widget.
+
   HighchartsColumnRangeSeriesStatesSelectOptions? select;
 
+  /// Highcharts Options Widget.
   HighchartsColumnRangeSeriesStatesOptions(
       {this.hover, this.inactive, this.normal, this.select});
 

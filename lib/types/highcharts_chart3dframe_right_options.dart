@@ -29,14 +29,34 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * The right of the frame around a 3D chart.
- */
+/// The right of the frame around a 3D chart.
+///
+/// API Docs: https://api.highcharts.com/highcharts/chart.options3d.frame.right
 class HighchartsChart3DFrameRightOptions extends HighchartsOptionsBase {
+  /// The color of the panel.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/chart.options3d.frame.right.color
+
   String? color;
+
+  /// The thickness of the panel.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/chart.options3d.frame.right.size
+
   double? size;
+
+  /// Whether to display the frame. Possible values are `true`,
+  /// `false`, `"auto"` to display only the frames behind the
+  /// data, and `"default"` to display faces behind the data
+  /// based on the axis layout, ignoring the point of view.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/chart.options3d.frame.right.visible
+
   String? visible;
 
+  /// The right of the frame around a 3D chart.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/chart.options3d.frame.right
   HighchartsChart3DFrameRightOptions({this.color, this.size, this.visible});
 
   @override

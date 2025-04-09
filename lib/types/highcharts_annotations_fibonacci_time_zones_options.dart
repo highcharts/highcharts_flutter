@@ -36,16 +36,30 @@ export 'highcharts_annotations_crooked_line_shape_options.dart';
  *
  * */
 
-/**
- * The Fibonacci Time Zones annotation.
- */
+/// The Fibonacci Time Zones annotation.
+///
+/// API Docs: https://api.highcharts.com/highstock/navigation.annotationsOptions.fibonacciTimeZones
 class HighchartsAnnotationsFibonacciTimeZonesOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   HighchartsAnnotationsFibonacciTimeZonesTypeOptions? typeOptions;
+
+  /// Highcharts Options Widget.
+
   dynamic controlPointOptions;
+
+  /// Highcharts Options Widget.
+
   HighchartsAnnotationsCrookedLineLabelOptions? labelOptions;
+
+  /// Highcharts Options Widget.
+
   HighchartsAnnotationsCrookedLineShapeOptions? shapeOptions;
 
+  /// The Fibonacci Time Zones annotation.
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/navigation.annotationsOptions.fibonacciTimeZones
   HighchartsAnnotationsFibonacciTimeZonesOptions(
       {this.typeOptions,
       this.controlPointOptions,

@@ -29,23 +29,74 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Styling options for parentNodes markers. Similar to
- * line.marker options.
- */
+/// Styling options for parentNodes markers. Similar to
+/// line.marker options.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.packedbubble.layoutAlgorithm.parentNodeOptions.marker
 class HighchartsPackedBubbleSeriesLayoutAlgorithmParentNodeMarkerOptions
     extends HighchartsOptionsBase {
+  /// Enable or disable the point marker. If `undefined`, the markers
+  /// are hidden when the data is dense, and shown for more widespread
+  /// data points.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.packedbubble.layoutAlgorithm.parentNodeOptions.marker.enabled
+
   bool? enabled;
+
+  /// The threshold for how dense the point markers should be before
+  /// they are hidden, given that `enabled` is not defined. The number
+  /// indicates the horizontal distance between the two closest points
+  /// in the series, as multiples of the `marker.radius`. In other
+  /// words, the default value of 2 means points are hidden if
+  /// overlapping horizontally.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.packedbubble.layoutAlgorithm.parentNodeOptions.marker.enabledThreshold
+
   double? enabledThreshold;
+
+  /// Highcharts Options Widget.
+
   String? fillColor;
+
+  /// Highcharts Options Widget.
+
   double? fillOpacity;
+
+  /// Image markers only. Set the image width explicitly. When using
+  /// this option, a `width` must also be set.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.packedbubble.layoutAlgorithm.parentNodeOptions.marker.height
+
   double? height;
+
+  /// Highcharts Options Widget.
+
   String? lineColor;
+
+  /// Highcharts Options Widget.
+
   dynamic lineWidth;
+
+  /// The radius of the point marker.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.packedbubble.layoutAlgorithm.parentNodeOptions.marker.radius
+
   double? radius;
+
+  /// Highcharts Options Widget.
+
   String? symbol;
+
+  /// Image markers only. Set the image width explicitly. When using
+  /// this option, a `height` must also be set.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.packedbubble.layoutAlgorithm.parentNodeOptions.marker.width
+
   double? width;
 
+  /// Styling options for parentNodes markers. Similar to line.marker options.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.packedbubble.layoutAlgorithm.parentNodeOptions.marker
   HighchartsPackedBubbleSeriesLayoutAlgorithmParentNodeMarkerOptions(
       {this.enabled,
       this.enabledThreshold,

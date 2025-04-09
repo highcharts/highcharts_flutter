@@ -29,12 +29,30 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsSupertrendSeriesChangeTrendLineStylesOptions
     extends HighchartsOptionsBase {
+  /// The dash or dot style of the grid lines. For possible
+  /// values, see
+  /// this demonstration.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.supertrend.changeTrendLine.styles.dashStyle
+
   String? dashStyle;
+
+  /// Color of the line.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.supertrend.changeTrendLine.styles.lineColor
+
   String? lineColor;
+
+  /// Pixel width of the line.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.supertrend.changeTrendLine.styles.lineWidth
+
   double? lineWidth;
 
+  /// Highcharts Options Widget.
   HighchartsSupertrendSeriesChangeTrendLineStylesOptions(
       {this.dashStyle, this.lineColor, this.lineWidth});
 

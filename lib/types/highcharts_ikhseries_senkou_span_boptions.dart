@@ -31,12 +31,17 @@ export 'highcharts_ikhseries_senkou_span_bstyles_options.dart';
  *
  * */
 
-/**
- * The styles for Senkou Span B line
- */
+/// The styles for Senkou Span B line
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.ikh.senkouSpanB
 class HighchartsIKHSeriesSenkouSpanBOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   HighchartsIKHSeriesSenkouSpanBStylesOptions? styles;
 
+  /// The styles for Senkou Span B line
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.ikh.senkouSpanB
   HighchartsIKHSeriesSenkouSpanBOptions({this.styles});
 
   @override

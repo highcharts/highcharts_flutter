@@ -32,15 +32,23 @@ export 'highcharts_global_button_theme_states_select_style_options.dart';
  *
  * */
 
-/**
- * Select state overrides for the buttons are applied in
- * addition to the normal state options
- */
+/// Select state overrides for the buttons are applied in
+/// addition to the normal state options
+///
+/// API Docs: https://api.highcharts.com/highcharts/global.buttonTheme.states.select
 class HighchartsGlobalButtonThemeStatesSelectOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   String? fill;
+
+  /// Highcharts Options Widget.
+
   HighchartsGlobalButtonThemeStatesSelectStyleOptions? style;
 
+  /// Select state overrides for the buttons are applied in addition to the normal state options
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/global.buttonTheme.states.select
   HighchartsGlobalButtonThemeStatesSelectOptions({this.fill, this.style});
 
   @override

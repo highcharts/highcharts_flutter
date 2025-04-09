@@ -36,15 +36,29 @@ export 'highcharts_annotations_fibonacci_type_options.dart';
  *
  * */
 
-/**
- * A fibonacci annotation.
- */
+/// A fibonacci annotation.
+///
+/// API Docs: https://api.highcharts.com/highstock/annotations.fibonacci
 class HighchartsAnnotationsFibonacciOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   dynamic controlPointOptions;
+
+  /// Highcharts Options Widget.
+
   HighchartsAnnotationsFibonacciLabelOptions? labelOptions;
+
+  /// Highcharts Options Widget.
+
   HighchartsAnnotationsCrookedLineShapeOptions? shapeOptions;
+
+  /// Highcharts Options Widget.
+
   HighchartsAnnotationsFibonacciTypeOptions? typeOptions;
 
+  /// A fibonacci annotation.
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/annotations.fibonacci
   HighchartsAnnotationsFibonacciOptions(
       {this.controlPointOptions,
       this.labelOptions,

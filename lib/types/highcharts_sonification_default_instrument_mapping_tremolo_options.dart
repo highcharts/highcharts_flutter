@@ -33,16 +33,34 @@ export 'highcharts_sonification_default_instrument_mapping_tremolo_speed_options
  *
  * */
 
-/**
- * Mapping options for tremolo effects.
- * 
- * Tremolo is repeated changes of volume over time.
- */
+/// Mapping options for tremolo effects.
+///
+/// Tremolo is repeated changes of volume over time.
+///
+/// API Docs: https://api.highcharts.com/highcharts/sonification.globalTracks.mapping.tremolo
 class HighchartsSonificationDefaultInstrumentMappingTremoloOptions
     extends HighchartsOptionsBase {
+  /// Map to tremolo depth, from 0 to 1.
+  ///
+  /// This determines the intensity of the tremolo effect, how
+  /// much the volume changes.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/sonification.defaultInstrumentOptions.mapping.tremolo.depth
+
   HighchartsSonificationDefaultInstrumentMappingTremoloDepthOptions? depth;
+
+  /// Map to tremolo speed, from 0 to 1.
+  ///
+  /// This determines the speed of the tremolo effect, how fast
+  /// the volume changes.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/sonification.defaultInstrumentOptions.mapping.tremolo.speed
+
   HighchartsSonificationDefaultInstrumentMappingTremoloSpeedOptions? speed;
 
+  /// Mapping options for tremolo effects.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/sonification.globalTracks.mapping.tremolo
   HighchartsSonificationDefaultInstrumentMappingTremoloOptions(
       {this.depth, this.speed});
 

@@ -29,14 +29,35 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Accessibility options for an axis. Requires the accessibility module.
- */
+/// Accessibility options for an axis. Requires the accessibility module.
+///
+/// API Docs: https://api.highcharts.com/highcharts/zAxis.accessibility
 class HighchartsXAxisAccessibilityOptions extends HighchartsOptionsBase {
+  /// Description for an axis to expose to screen reader users.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/xAxis.accessibility.description
+
   String? description;
+
+  /// Enable axis accessibility features, including axis information in the
+  /// screen reader information region. If this is disabled on the xAxis, the
+  /// x values are not exposed to screen readers for the individual data points
+  /// by default.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/xAxis.accessibility.enabled
+
   bool? enabled;
+
+  /// Range description for an axis. Overrides the default range description.
+  /// Set to empty to disable range description for this axis.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/xAxis.accessibility.rangeDescription
+
   String? rangeDescription;
 
+  /// Accessibility options for an axis. Requires the accessibility module.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/zAxis.accessibility
   HighchartsXAxisAccessibilityOptions(
       {this.description, this.enabled, this.rangeDescription});
 

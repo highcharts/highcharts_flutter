@@ -38,50 +38,124 @@ export 'highcharts_gauge_series_data_events_options.dart';
  *
  * */
 
-/**
- * An array of data points for the series. For the `gauge` series type,
- * points can be given in the following ways:
- * 
- * 1. An array of numerical values. In this case, the numerical values will be
- *    interpreted as `y` options. Example:
- *    ```js
- *    data: [0, 5, 3, 5]
- *    ```
- * 
- * 2. An array of objects with named values. The following snippet shows only a
- *    few settings, see the complete options set below. If the total number of
- *    data points exceeds the series'
- *    [turboThreshold](#series.gauge.turboThreshold), this option is not
- *    available.
- *    ```js
- *    data: [{
- *        y: 6,
- *        name: "Point2",
- *        color: "#00FF00"
- *    }, {
- *        y: 8,
- *        name: "Point1",
- *       color: "#FF00FF"
- *    }]
- *    ```
- * 
- * The typical gauge only contains a single data value.
- */
+/// An array of data points for the series. For the `gauge` series type,
+/// points can be given in the following ways:
+///
+/// 1. An array of numerical values. In this case, the numerical values will be
+///    interpreted as `y` options. Example:
+///
+/// 2. An array of objects with named values. The following snippet shows only a
+///    few settings, see the complete options set below. If the total number of
+///    data points exceeds the series'
+///    turboThreshold, this option is not
+///    available.
+///
+/// The typical gauge only contains a single data value.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.gauge.data
 class HighchartsGaugeSeriesDataOptions extends HighchartsOptionsBase {
+  /// Accessibility options for a data point.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.gauge.data.accessibility
+
   HighchartsGaugeSeriesDataAccessibilityOptions? accessibility;
+
+  /// An additional, individual class name for the data point's graphic
+  /// representation. Changes to a point's color will also be reflected in a
+  /// chart's legend and tooltip.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.gauge.data.className
+
   String? className;
+
+  /// Individual color for the point. By default the color is pulled from
+  /// the global `colors` array.
+  ///
+  /// In styled mode, the `color` option doesn't take effect. Instead, use
+  /// `colorIndex`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.gauge.data.color
+
   String? color;
+
+  /// A specific color index to use for the point, so its graphic representations
+  /// are given the class name `highcharts-color-{n}`. In styled mode this will
+  /// change the color of the graphic. In non-styled mode, the color is set by the
+  /// `fill` attribute, so the change in class name won't have a visual effect by
+  /// default.
+  ///
+  /// Since v11, CSS variables on the form `--highcharts-color-{n}` make changing
+  /// the color scheme very convenient.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.gauge.data.colorIndex
+
   double? colorIndex;
+
+  /// A reserved subspace to store options and values for customized functionality.
+  /// Here you can add additional data for your own event callbacks and formatter
+  /// callbacks.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.gauge.data.custom
+
   Map<String, dynamic>? custom;
+
+  /// Individual data label for each point. The options are the same as
+  /// the ones for plotOptions.series.dataLabels.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.gauge.data.dataLabels
+
   List<HighchartsGaugeSeriesDataDataLabelsOptions>? dataLabels;
+
+  /// A description of the point to add to the screen reader information
+  /// about the point.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.gauge.data.description
+
   String? description;
+
+  /// Point specific options for the draggable-points module. Overrides options
+  /// on `series.dragDrop`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.gauge.data.dragDrop
+
   HighchartsGaugeSeriesDataDragDropOptions? dragDrop;
+
+  /// The individual point events.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.gauge.data.events
+
   HighchartsGaugeSeriesDataEventsOptions? events;
+
+  /// An id for the point. This can be used after render time to get a
+  /// pointer to the point object through `chart.get()`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.gauge.data.id
+
   String? id;
+
+  /// The rank for this point's data label in case of collision. If two
+  /// data labels are about to overlap, only the one with the highest `labelrank`
+  /// will be drawn.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.gauge.data.labelrank
+
   double? labelrank;
+
+  /// Whether the data point is selected initially.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.gauge.data.selected
+
   bool? selected;
+
+  /// The y value of the point.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.gauge.data.y
+
   double? y;
 
+  /// An array of data points for the series. For the `gauge` series type, points can be given in the following ways:
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.gauge.data
   HighchartsGaugeSeriesDataOptions(
       {this.accessibility,
       this.className,

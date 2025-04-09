@@ -29,13 +29,29 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsDefsArrowAttributesOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   String? id;
+
+  /// Highcharts Options Widget.
+
   double? markerHeight;
+
+  /// Highcharts Options Widget.
+
   double? markerWidth;
+
+  /// Highcharts Options Widget.
+
   double? refX;
+
+  /// Highcharts Options Widget.
+
   double? refY;
 
+  /// Highcharts Options Widget.
   HighchartsDefsArrowAttributesOptions(
       {this.id, this.markerHeight, this.markerWidth, this.refX, this.refY});
 

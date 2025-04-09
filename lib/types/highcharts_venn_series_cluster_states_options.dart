@@ -31,9 +31,13 @@ export 'highcharts_venn_series_cluster_states_hover_options.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsVennSeriesClusterStatesOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   HighchartsVennSeriesClusterStatesHoverOptions? hover;
 
+  /// Highcharts Options Widget.
   HighchartsVennSeriesClusterStatesOptions({this.hover});
 
   @override

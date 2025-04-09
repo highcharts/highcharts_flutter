@@ -32,57 +32,39 @@ export 'highcharts_aoseries_options.dart';
  *
  * */
 
-/**
- * An `AO` series. If the [type](#series.ao.type)
- * option is not specified, it is inherited from [chart.type](#chart.type).
- * 
- * Configuration options for the series are given in three levels:
- * 1. Options for all series in a chart are defined in the
- *    [plotOptions.series](plotOptions.series) object.
- * 2. Options for all `ao` series are defined in
- *    [plotOptions.ao](plotOptions.ao).
- * 3. Options for one single series are given in
- *    [the series instance array](series.ao).
- * 
- * ```
- * Highcharts.chart('container', {
- *     plotOptions: {
- *         series: {
- *             // general options for all series
- *         },
- *         ao: {
- *             // shared options for all ao series
- *         }
- *     },
- *     series: [{
- *         // specific options for this series instance
- *         type: 'ao'
- *     }]
- * });
- * ```
- * 
- * **TypeScript:**
- * - the [type](series.ao.type) option must always be set.
- * - when accessing an array of series, the combined set of all series types is
- *   represented by [Highcharts.SeriesOptionsType
- *   ](/class-reference/Highcharts#.SeriesOptionsType). Narrowing down to the
- *   specific type can be done by checking the `type` property.
- * 
- * ```
- * if (chart.options.series?.[0]?.type === ao) {
- *     // code specific to the ao series
- * }
- * ```
- *             
- */
+/// An `AO` series. If the type
+/// option is not specified, it is inherited from chart.type.
+///
+/// Configuration options for the series are given in three levels:
+/// 1. Options for all series in a chart are defined in the
+///    plotOptions.series object.
+/// 2. Options for all `ao` series are defined in
+///    plotOptions.ao.
+/// 3. Options for one single series are given in
+///    the series instance array.
+///
+///
+///
+///
+/// API Docs: https://api.highcharts.com/highstock/series.ao
 class HighchartsAOSeries extends HighchartsSeries {
+  /// Highcharts Options Widget.
   List<List<dynamic>>? data;
+
+  /// The name of the series as shown in the legend, tooltip etc.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.ao.name
   String? name;
+
+  /// Configuration options for the HighchartsAOSeries.
   HighchartsAOSeriesOptions? options;
   List<dynamic>? points;
   @override
   get type => 'ao';
 
+  /// An `AO` series. If the type option is not specified, it is inherited from chart.type.
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/series.ao
   HighchartsAOSeries({
     this.data,
     this.name,

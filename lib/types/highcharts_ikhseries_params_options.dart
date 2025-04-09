@@ -28,11 +28,25 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsIKHSeriesParamsOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   double? period;
+
+  /// The base period for Senkou Span B calculations
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.ikh.params.periodSenkouSpanB
+
   double? periodSenkouSpanB;
+
+  /// The base period for Tenkan calculations.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.ikh.params.periodTenkan
+
   double? periodTenkan;
 
+  /// Highcharts Options Widget.
   HighchartsIKHSeriesParamsOptions(
       {this.period, this.periodSenkouSpanB, this.periodTenkan});
 

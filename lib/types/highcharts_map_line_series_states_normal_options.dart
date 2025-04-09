@@ -28,9 +28,13 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsMapLineSeriesStatesNormalOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   bool? animation;
 
+  /// Highcharts Options Widget.
   HighchartsMapLineSeriesStatesNormalOptions({this.animation});
 
   @override

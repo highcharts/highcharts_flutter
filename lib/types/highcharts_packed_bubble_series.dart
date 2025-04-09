@@ -32,57 +32,51 @@ export 'highcharts_packed_bubble_series_options.dart';
  *
  * */
 
-/**
- * A `packedbubble` series. If the [type](#series.packedbubble.type) option is
- * not specified, it is inherited from [chart.type](#chart.type).
- * 
- * Configuration options for the series are given in three levels:
- * 1. Options for all series in a chart are defined in the
- *    [plotOptions.series](plotOptions.series) object.
- * 2. Options for all `packedbubble` series are defined in
- *    [plotOptions.packedbubble](plotOptions.packedbubble).
- * 3. Options for one single series are given in
- *    [the series instance array](series.packedbubble).
- * 
- * ```
- * Highcharts.chart('container', {
- *     plotOptions: {
- *         series: {
- *             // general options for all series
- *         },
- *         packedbubble: {
- *             // shared options for all packedbubble series
- *         }
- *     },
- *     series: [{
- *         // specific options for this series instance
- *         type: 'packedbubble'
- *     }]
- * });
- * ```
- * 
- * **TypeScript:**
- * - the [type](series.packedbubble.type) option must always be set.
- * - when accessing an array of series, the combined set of all series types is
- *   represented by [Highcharts.SeriesOptionsType
- *   ](/class-reference/Highcharts#.SeriesOptionsType). Narrowing down to the
- *   specific type can be done by checking the `type` property.
- * 
- * ```
- * if (chart.options.series?.[0]?.type === packedbubble) {
- *     // code specific to the packedbubble series
- * }
- * ```
- *             
- */
+/// A `packedbubble` series. If the type option is
+/// not specified, it is inherited from chart.type.
+///
+/// Configuration options for the series are given in three levels:
+/// 1. Options for all series in a chart are defined in the
+///    plotOptions.series object.
+/// 2. Options for all `packedbubble` series are defined in
+///    plotOptions.packedbubble.
+/// 3. Options for one single series are given in
+///    the series instance array.
+///
+///
+///
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.packedbubble
 class HighchartsPackedBubbleSeries extends HighchartsSeries {
+  /// An array of data points for the series. For the `packedbubble` series type,
+  /// points can be given in the following ways:
+  ///
+  /// 1.  An array of `values`.
+  ///
+  ///
+  /// 2.  An array of objects with named values. The objects are point
+  /// configuration objects as seen below. If the total number of data points
+  /// exceeds the series' turboThreshold,
+  /// this option is not available.
+  ///
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.packedbubble.data
   List<List<dynamic>>? data;
+
+  /// The name of the series as shown in the legend, tooltip etc.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.packedbubble.name
   String? name;
+
+  /// Configuration options for the HighchartsPackedBubbleSeries.
   HighchartsPackedBubbleSeriesOptions? options;
   List<dynamic>? points;
   @override
   get type => 'packedbubble';
 
+  /// A `packedbubble` series. If the type option is not specified, it is inherited from chart.type.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.packedbubble
   HighchartsPackedBubbleSeries({
     this.data,
     this.name,

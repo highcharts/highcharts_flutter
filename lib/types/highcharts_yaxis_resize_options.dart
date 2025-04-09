@@ -32,20 +32,71 @@ export 'highcharts_yaxis_resize_controlled_axis_options.dart';
  *
  * */
 
-/**
- * Options for axis resizing. It adds a thick line between panes which
- * the user can drag in order to resize the panes.
- */
+/// Options for axis resizing. It adds a thick line between panes which
+/// the user can drag in order to resize the panes.
+///
+/// API Docs: https://api.highcharts.com/highstock/yAxis.resize
 class HighchartsYAxisResizeOptions extends HighchartsOptionsBase {
+  /// Contains two arrays of axes that are controlled by control line
+  /// of the axis.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/yAxis.resize.controlledAxis
+
   HighchartsYAxisResizeControlledAxisOptions? controlledAxis;
+
+  /// Cursor style for the control line.
+  ///
+  /// In styled mode use class `highcharts-axis-resizer` instead.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/yAxis.resize.cursor
+
   String? cursor;
+
+  /// Enable or disable resize by drag for the axis.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/yAxis.resize.enabled
+
   bool? enabled;
+
+  /// Color of the control line.
+  ///
+  /// In styled mode use class `highcharts-axis-resizer` instead.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/yAxis.resize.lineColor
+
   String? lineColor;
+
+  /// Dash style of the control line.
+  ///
+  /// In styled mode use class `highcharts-axis-resizer` instead.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/yAxis.resize.lineDashStyle
+
   String? lineDashStyle;
+
+  /// Width of the control line.
+  ///
+  /// In styled mode use class `highcharts-axis-resizer` instead.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/yAxis.resize.lineWidth
+
   double? lineWidth;
+
+  /// Horizontal offset of the control line.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/yAxis.resize.x
+
   double? x;
+
+  /// Vertical offset of the control line.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/yAxis.resize.y
+
   double? y;
 
+  /// Options for axis resizing. It adds a thick line between panes which the user can drag in order to resize the panes.
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/yAxis.resize
   HighchartsYAxisResizeOptions(
       {this.controlledAxis,
       this.cursor,

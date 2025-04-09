@@ -29,10 +29,23 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsVBPSeriesParamsOptions extends HighchartsOptionsBase {
+  /// The number of price zones.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.vbp.params.ranges
+
   double? ranges;
+
+  /// The id of volume series which is mandatory. For example using
+  /// OHLC data, volumeSeriesID='volume' means the indicator will be
+  /// calculated using OHLC and volume values.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.vbp.params.volumeSeriesID
+
   String? volumeSeriesID;
 
+  /// Highcharts Options Widget.
   HighchartsVBPSeriesParamsOptions({this.ranges, this.volumeSeriesID});
 
   @override

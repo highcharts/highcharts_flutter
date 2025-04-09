@@ -37,15 +37,52 @@ export 'highcharts_annotations_crooked_line_type_points_options.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsAnnotationsTunnelTypeOptions extends HighchartsOptionsBase {
+  /// Background options.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.tunnel.typeOptions.background
+
   HighchartsAnnotationsTunnelTypeBackgroundOptions? background;
+
+  /// The height of the annotation in terms of yAxis.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.tunnel.typeOptions.height
+
   double? height;
+
+  /// Options for the control point which controls
+  /// the annotation's height.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.tunnel.typeOptions.heightControlPoint
+
   HighchartsAnnotationsTunnelTypeHeightControlPointOptions? heightControlPoint;
+
+  /// Highcharts Options Widget.
+
   HighchartsAnnotationsTunnelTypeLineOptions? line;
+
+  /// Highcharts Options Widget.
+
   List<HighchartsAnnotationsCrookedLineTypePointsOptions>? points;
+
+  /// This number defines which xAxis the point is connected to.
+  /// It refers to either the axis id or the index of the axis
+  /// in the xAxis array.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.tunnel.typeOptions.xAxis
+
   double? xAxis;
+
+  /// This number defines which yAxis the point is connected to.
+  /// It refers to either the axis id or the index of the axis
+  /// in the xAxis array.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.tunnel.typeOptions.yAxis
+
   double? yAxis;
 
+  /// Highcharts Options Widget.
   HighchartsAnnotationsTunnelTypeOptions(
       {this.background,
       this.height,

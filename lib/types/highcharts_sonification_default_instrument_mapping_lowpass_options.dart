@@ -33,19 +33,32 @@ export 'highcharts_sonification_default_instrument_mapping_lowpass_resonance_opt
  *
  * */
 
-/**
- * Mapping options for the lowpass filter.
- * 
- * A lowpass filter lets low frequencies through, but stops high
- * frequencies, making the sound more dull.
- */
+/// Mapping options for the lowpass filter.
+///
+/// A lowpass filter lets low frequencies through, but stops high
+/// frequencies, making the sound more dull.
+///
+/// API Docs: https://api.highcharts.com/highcharts/sonification.globalTracks.mapping.lowpass
 class HighchartsSonificationDefaultInstrumentMappingLowpassOptions
     extends HighchartsOptionsBase {
+  /// Map to filter frequency in Hertz from 1 to 20,000Hz.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/sonification.defaultInstrumentOptions.mapping.lowpass.frequency
+
   HighchartsSonificationDefaultInstrumentMappingLowpassFrequencyOptions?
       frequency;
+
+  /// Map to filter resonance in dB. Can be negative to cause a
+  /// dip, or positive to cause a bump.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/sonification.defaultInstrumentOptions.mapping.lowpass.resonance
+
   HighchartsSonificationDefaultInstrumentMappingLowpassResonanceOptions?
       resonance;
 
+  /// Mapping options for the lowpass filter.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/sonification.globalTracks.mapping.lowpass
   HighchartsSonificationDefaultInstrumentMappingLowpassOptions(
       {this.frequency, this.resonance});
 

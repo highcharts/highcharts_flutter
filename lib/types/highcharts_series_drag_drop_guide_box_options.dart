@@ -31,13 +31,20 @@ export 'highcharts_series_drag_drop_guide_box_default_options.dart';
  *
  * */
 
-/**
- * Style options for the guide box. The guide box has one state by default,
- * the `default` state.
- */
+/// Style options for the guide box. The guide box has one state by default,
+/// the `default` state.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.xrange.dragDrop.guideBox
 class HighchartsSeriesDragDropGuideBoxOptions extends HighchartsOptionsBase {
+  /// Style options for the guide box default state.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.xrange.dragDrop.guideBox.default
+
   HighchartsSeriesDragDropGuideBoxDefaultOptions? defaultTo;
 
+  /// Style options for the guide box. The guide box has one state by default, the `default` state.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.xrange.dragDrop.guideBox
   HighchartsSeriesDragDropGuideBoxOptions({this.defaultTo});
 
   @override

@@ -32,57 +32,52 @@ export 'highcharts_funnel_series_options.dart';
  *
  * */
 
-/**
- * A `funnel` series. If the [type](#series.funnel.type) option is
- * not specified, it is inherited from [chart.type](#chart.type).
- * 
- * Configuration options for the series are given in three levels:
- * 1. Options for all series in a chart are defined in the
- *    [plotOptions.series](plotOptions.series) object.
- * 2. Options for all `funnel` series are defined in
- *    [plotOptions.funnel](plotOptions.funnel).
- * 3. Options for one single series are given in
- *    [the series instance array](series.funnel).
- * 
- * ```
- * Highcharts.chart('container', {
- *     plotOptions: {
- *         series: {
- *             // general options for all series
- *         },
- *         funnel: {
- *             // shared options for all funnel series
- *         }
- *     },
- *     series: [{
- *         // specific options for this series instance
- *         type: 'funnel'
- *     }]
- * });
- * ```
- * 
- * **TypeScript:**
- * - the [type](series.funnel.type) option must always be set.
- * - when accessing an array of series, the combined set of all series types is
- *   represented by [Highcharts.SeriesOptionsType
- *   ](/class-reference/Highcharts#.SeriesOptionsType). Narrowing down to the
- *   specific type can be done by checking the `type` property.
- * 
- * ```
- * if (chart.options.series?.[0]?.type === funnel) {
- *     // code specific to the funnel series
- * }
- * ```
- *             
- */
+/// A `funnel` series. If the type option is
+/// not specified, it is inherited from chart.type.
+///
+/// Configuration options for the series are given in three levels:
+/// 1. Options for all series in a chart are defined in the
+///    plotOptions.series object.
+/// 2. Options for all `funnel` series are defined in
+///    plotOptions.funnel.
+/// 3. Options for one single series are given in
+///    the series instance array.
+///
+///
+///
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.funnel
 class HighchartsFunnelSeries extends HighchartsSeries {
+  /// An array of data points for the series. For the `funnel` series type,
+  /// points can be given in the following ways:
+  ///
+  /// 1.  An array of numerical values. In this case, the numerical values
+  /// will be interpreted as `y` options. Example:
+  ///
+  ///
+  /// 2.  An array of objects with named values. The following snippet shows only a
+  /// few settings, see the complete options set below. If the total number of data
+  /// points exceeds the series' turboThreshold,
+  /// this option is not available.
+  ///
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.funnel.data
   List<List<dynamic>>? data;
+
+  /// The name of the series as shown in the legend, tooltip etc.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.funnel.name
   String? name;
+
+  /// Configuration options for the HighchartsFunnelSeries.
   HighchartsFunnelSeriesOptions? options;
   List<dynamic>? points;
   @override
   get type => 'funnel';
 
+  /// A `funnel` series. If the type option is not specified, it is inherited from chart.type.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.funnel
   HighchartsFunnelSeries({
     this.data,
     this.name,

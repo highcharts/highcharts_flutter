@@ -29,15 +29,29 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Position configuration for the credits label.
- */
+/// Position configuration for the credits label.
+///
+/// API Docs: https://api.highcharts.com/highcharts/credits.position
 class HighchartsCreditsPositionOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   String? align;
+
+  /// Highcharts Options Widget.
+
   String? verticalAlign;
+
+  /// Highcharts Options Widget.
+
   double? x;
+
+  /// Highcharts Options Widget.
+
   double? y;
 
+  /// Position configuration for the credits label.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/credits.position
   HighchartsCreditsPositionOptions(
       {this.align, this.verticalAlign, this.x, this.y});
 

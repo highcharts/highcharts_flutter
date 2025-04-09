@@ -28,14 +28,33 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Parameters used in calculation of Absolute Price Oscillator
- * series points.
- */
+/// Parameters used in calculation of Absolute Price Oscillator
+/// series points.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.apo.params
 class HighchartsAPOSeriesParamsOptions extends HighchartsOptionsBase {
+  /// The point index which indicator calculations will base. For
+  /// example using OHLC data, index=2 means the indicator will be
+  /// calculated using Low values.
+  ///
+  /// By default index value used to be set to 0. Since
+  /// Highcharts Stock 7 by default index is set to 3
+  /// which means that the ema indicator will be
+  /// calculated using Close values.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.apo.params.index
+
   double? index;
+
+  /// Periods for Absolute Price Oscillator calculations.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.apo.params.periods
+
   List<double>? periods;
 
+  /// Parameters used in calculation of Absolute Price Oscillator series points.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.apo.params
   HighchartsAPOSeriesParamsOptions({this.index, this.periods});
 
   @override

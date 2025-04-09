@@ -32,57 +32,39 @@ export 'highcharts_pivot_points_series_options.dart';
  *
  * */
 
-/**
- * A pivot points indicator. If the [type](#series.pivotpoints.type) option is
- * not specified, it is inherited from [chart.type](#chart.type).
- * 
- * Configuration options for the series are given in three levels:
- * 1. Options for all series in a chart are defined in the
- *    [plotOptions.series](plotOptions.series) object.
- * 2. Options for all `pivotpoints` series are defined in
- *    [plotOptions.pivotpoints](plotOptions.pivotpoints).
- * 3. Options for one single series are given in
- *    [the series instance array](series.pivotpoints).
- * 
- * ```
- * Highcharts.chart('container', {
- *     plotOptions: {
- *         series: {
- *             // general options for all series
- *         },
- *         pivotpoints: {
- *             // shared options for all pivotpoints series
- *         }
- *     },
- *     series: [{
- *         // specific options for this series instance
- *         type: 'pivotpoints'
- *     }]
- * });
- * ```
- * 
- * **TypeScript:**
- * - the [type](series.pivotpoints.type) option must always be set.
- * - when accessing an array of series, the combined set of all series types is
- *   represented by [Highcharts.SeriesOptionsType
- *   ](/class-reference/Highcharts#.SeriesOptionsType). Narrowing down to the
- *   specific type can be done by checking the `type` property.
- * 
- * ```
- * if (chart.options.series?.[0]?.type === pivotpoints) {
- *     // code specific to the pivotpoints series
- * }
- * ```
- *             
- */
+/// A pivot points indicator. If the type option is
+/// not specified, it is inherited from chart.type.
+///
+/// Configuration options for the series are given in three levels:
+/// 1. Options for all series in a chart are defined in the
+///    plotOptions.series object.
+/// 2. Options for all `pivotpoints` series are defined in
+///    plotOptions.pivotpoints.
+/// 3. Options for one single series are given in
+///    the series instance array.
+///
+///
+///
+///
+/// API Docs: https://api.highcharts.com/highstock/series.pivotpoints
 class HighchartsPivotPointsSeries extends HighchartsSeries {
+  /// Highcharts Options Widget.
   List<List<dynamic>>? data;
+
+  /// The name of the series as shown in the legend, tooltip etc.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.pivotpoints.name
   String? name;
+
+  /// Configuration options for the HighchartsPivotPointsSeries.
   HighchartsPivotPointsSeriesOptions? options;
   List<dynamic>? points;
   @override
   get type => 'pivotpoints';
 
+  /// A pivot points indicator. If the type option is not specified, it is inherited from chart.type.
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/series.pivotpoints
   HighchartsPivotPointsSeries({
     this.data,
     this.name,

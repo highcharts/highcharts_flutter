@@ -29,17 +29,42 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Configure a crosshair that is horizontally placed in middle of
- * rectangle.
- */
+/// Configure a crosshair that is horizontally placed in middle of
+/// rectangle.
+///
+/// API Docs: https://api.highcharts.com/highcharts/annotations.measure.typeOptions.crosshairX
 class HighchartsAnnotationsMeasureTypeCrosshairXOptions
     extends HighchartsOptionsBase {
+  /// The dash or dot style of the crosshair's line. For possible
+  /// values, see
+  /// this demonstration.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.measure.typeOptions.crosshairX.dashStyle
+
   String? dashStyle;
+
+  /// Enable or disable the horizontal crosshair.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.measure.typeOptions.crosshairX.enabled
+
   bool? enabled;
+
+  /// The marker-end defines the arrowhead that will be drawn
+  /// at the final vertex of the given crosshair's path.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.measure.typeOptions.crosshairX.markerEnd
+
   String? markerEnd;
+
+  /// The Z index of the crosshair in annotation.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.measure.typeOptions.crosshairX.zIndex
+
   double? zIndex;
 
+  /// Configure a crosshair that is horizontally placed in middle of rectangle.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.measure.typeOptions.crosshairX
   HighchartsAnnotationsMeasureTypeCrosshairXOptions(
       {this.dashStyle, this.enabled, this.markerEnd, this.zIndex});
 

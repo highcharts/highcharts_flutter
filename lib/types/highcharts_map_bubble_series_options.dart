@@ -32,71 +32,176 @@ export 'highcharts_map_bubble_series_tooltip_options.dart';
  *
  * */
 
-/**
- * A `mapbubble` series. If the [type](#series.mapbubble.type) option
- * is not specified, it is inherited from [chart.type](#chart.type).
- * 
- * Configuration options for the series are given in three levels:
- * 1. Options for all series in a chart are defined in the
- *    [plotOptions.series](plotOptions.series) object.
- * 2. Options for all `mapbubble` series are defined in
- *    [plotOptions.mapbubble](plotOptions.mapbubble).
- * 3. Options for one single series are given in
- *    [the series instance array](series.mapbubble).
- * 
- * ```
- * Highcharts.chart('container', {
- *     plotOptions: {
- *         series: {
- *             // general options for all series
- *         },
- *         mapbubble: {
- *             // shared options for all mapbubble series
- *         }
- *     },
- *     series: [{
- *         // specific options for this series instance
- *         type: 'mapbubble'
- *     }]
- * });
- * ```
- * 
- * **TypeScript:**
- * - the [type](series.mapbubble.type) option must always be set.
- * - when accessing an array of series, the combined set of all series types is
- *   represented by [Highcharts.SeriesOptionsType
- *   ](/class-reference/Highcharts#.SeriesOptionsType). Narrowing down to the
- *   specific type can be done by checking the `type` property.
- * 
- * ```
- * if (chart.options.series?.[0]?.type === mapbubble) {
- *     // code specific to the mapbubble series
- * }
- * ```
- *             
- */
+/// A `mapbubble` series. If the type option
+/// is not specified, it is inherited from chart.type.
+///
+/// Configuration options for the series are given in three levels:
+/// 1. Options for all series in a chart are defined in the
+///    plotOptions.series object.
+/// 2. Options for all `mapbubble` series are defined in
+///    plotOptions.mapbubble.
+/// 3. Options for one single series are given in
+///    the series instance array.
+///
+///
+///
+///
+/// API Docs: https://api.highcharts.com/highmaps/series.mapbubble
 class HighchartsMapBubbleSeriesOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   double? animationLimit;
+
+  /// The main color of the series. This color affects both the fill
+  /// and the stroke of the bubble. For enhanced control, use `marker`
+  /// options.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.mapbubble.color
+
   String? color;
+
+  /// Whether to display negative sized bubbles. The threshold is
+  /// given by the zThreshold
+  /// option, and negative bubbles can be visualized by setting
+  /// negativeColor.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.mapbubble.displayNegative
+
   bool? displayNegative;
+
+  /// An id for the series. This can be used after render time to get a pointer
+  /// to the series object through `chart.get()`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.mapbubble.id
+
   String? id;
+
+  /// The index of the series in the chart, affecting the internal index in the
+  /// `chart.series` array, the visible Z index as well as the order in the
+  /// legend.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.mapbubble.index
+
   double? index;
+
+  /// Highcharts Options Widget.
+
   List<String>? joinBy;
+
+  /// The sequential index of the series in the legend.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.mapbubble.legendIndex
+
   double? legendIndex;
+
+  /// Color of the line connecting bubbles. The default value is the same
+  /// as series' color.
+  ///
+  /// In styled mode, the color can be defined by the
+  /// colorIndex option. Also, the series
+  /// color can be set with the `.highcharts-series`,
+  /// `.highcharts-color-{n}`, `.highcharts-{type}-series` or
+  /// `.highcharts-series-{n}` class, or individual classes given by the
+  /// `className` option.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.mapbubble.lineColor
+
   String? lineColor;
+
+  /// Pixel width of the line connecting bubbles.
+  ///
+  /// API Docs: https://api.highcharts.com/highmaps/series.mapbubble.lineWidth
+
   double? lineWidth;
+
+  /// An array of objects containing a `geometry` or `path` definition and
+  /// optionally additional properties to join in the `data` as per the `joinBy`
+  /// option. GeoJSON and TopoJSON structures can also be passed directly into
+  /// `mapData`.
+  ///
+  /// API Docs: https://api.highcharts.com/highmaps/series.mapbubble.mapData
+
   List<dynamic>? mapData;
+
+  /// Highcharts Options Widget.
+
   dynamic marker;
+
+  /// Maximum bubble size. Bubbles will automatically size between the
+  /// `minSize` and `maxSize` to reflect the `z` value of each bubble.
+  /// Can be either pixels (when no unit is given), or a percentage of
+  /// the smallest one of the plot width and height.
+  ///
+  /// API Docs: https://api.highcharts.com/highmaps/series.mapbubble.maxSize
+
   dynamic maxSize;
+
+  /// Minimum bubble size. Bubbles will automatically size between the
+  /// `minSize` and `maxSize` to reflect the `z` value of each bubble.
+  /// Can be either pixels (when no unit is given), or a percentage of
+  /// the smallest one of the plot width and height.
+  ///
+  /// API Docs: https://api.highcharts.com/highmaps/series.mapbubble.minSize
+
   dynamic minSize;
+
+  /// When a point's Z value is below the
+  /// zThreshold setting, this
+  /// color is used.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.mapbubble.negativeColor
+
   String? negativeColor;
+
+  /// Whether the bubble's value should be represented by the area or
+  /// the width of the bubble. The default, `area`, corresponds best to
+  /// the human perception of the size of each bubble.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.mapbubble.sizeBy
+
   String? sizeBy;
+
+  /// When this is true, the absolute value of z determines the size
+  /// of the bubble. This means that with the default `zThreshold` of
+  /// 0, a bubble of value -1 will have the same size as a bubble of
+  /// value 1, while a bubble of value 0 will have a smaller size
+  /// according to `minSize`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.mapbubble.sizeByAbsoluteValue
+
   bool? sizeByAbsoluteValue;
+
+  /// Highcharts Options Widget.
+
   HighchartsMapBubbleSeriesTooltipOptions? tooltip;
+
+  /// The maximum for the Z value range. Defaults to the highest Z value in
+  /// the data.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.mapbubble.zMax
+
   double? zMax;
+
+  /// The minimum for the Z value range. Defaults to the lowest Z value
+  /// in the data.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.mapbubble.zMin
+
   double? zMin;
+
+  /// When displayNegative
+  /// is `false`, bubbles with lower Z values are skipped. When
+  /// `displayNegative` is `true` and a
+  /// negativeColor is given,
+  /// points with lower Z is colored.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.mapbubble.zThreshold
+
   double? zThreshold;
 
+  /// A `mapbubble` series. If the type option is not specified, it is inherited from chart.type.
+  ///
+  /// API Docs: https://api.highcharts.com/highmaps/series.mapbubble
   HighchartsMapBubbleSeriesOptions(
       {this.animationLimit,
       this.color,

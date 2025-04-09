@@ -29,10 +29,14 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsScatterSeriesClusterDataLabelsStyleOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   String? color;
 
+  /// Highcharts Options Widget.
   HighchartsScatterSeriesClusterDataLabelsStyleOptions({this.color});
 
   @override

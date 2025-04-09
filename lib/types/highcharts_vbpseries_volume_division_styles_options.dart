@@ -29,11 +29,22 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsVBPSeriesVolumeDivisionStylesOptions
     extends HighchartsOptionsBase {
+  /// Color of negative volume bars.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.vbp.volumeDivision.styles.negativeColor
+
   String? negativeColor;
+
+  /// Color of positive volume bars.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.vbp.volumeDivision.styles.positiveColor
+
   String? positiveColor;
 
+  /// Highcharts Options Widget.
   HighchartsVBPSeriesVolumeDivisionStylesOptions(
       {this.negativeColor, this.positiveColor});
 

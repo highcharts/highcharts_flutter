@@ -29,9 +29,16 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsOBVSeriesParamsOptions extends HighchartsOptionsBase {
+  /// The id of another series to use its data as volume data for the
+  /// indicator calculation.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.obv.params.volumeSeriesID
+
   String? volumeSeriesID;
 
+  /// Highcharts Options Widget.
   HighchartsOBVSeriesParamsOptions({this.volumeSeriesID});
 
   @override

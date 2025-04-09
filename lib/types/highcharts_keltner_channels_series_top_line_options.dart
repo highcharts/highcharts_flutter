@@ -31,13 +31,18 @@ export 'highcharts_keltner_channels_series_top_line_styles_options.dart';
  *
  * */
 
-/**
- * Top line options.
- */
+/// Top line options.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.keltnerchannels.topLine
 class HighchartsKeltnerChannelsSeriesTopLineOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   HighchartsKeltnerChannelsSeriesTopLineStylesOptions? styles;
 
+  /// Top line options.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.keltnerchannels.topLine
   HighchartsKeltnerChannelsSeriesTopLineOptions({this.styles});
 
   @override

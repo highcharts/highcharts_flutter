@@ -28,10 +28,26 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsTEMASeriesParamsOptions extends HighchartsOptionsBase {
+  /// The point index which indicator calculations will base. For
+  /// example using OHLC data, index=2 means the indicator will be
+  /// calculated using Low values.
+  ///
+  /// By default index value used to be set to 0. Since
+  /// Highcharts Stock 7 by default index is set to 3
+  /// which means that the ema indicator will be
+  /// calculated using Close values.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.tema.params.index
+
   double? index;
+
+  /// Highcharts Options Widget.
+
   double? period;
 
+  /// Highcharts Options Widget.
   HighchartsTEMASeriesParamsOptions({this.index, this.period});
 
   @override

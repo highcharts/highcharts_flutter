@@ -32,57 +32,51 @@ export 'highcharts_treegraph_series_options.dart';
  *
  * */
 
-/**
- * A `treegraph` series. If the [type](#series.treegraph.type)
- * option is not specified, it is inherited from [chart.type](#chart.type).
- * 
- * Configuration options for the series are given in three levels:
- * 1. Options for all series in a chart are defined in the
- *    [plotOptions.series](plotOptions.series) object.
- * 2. Options for all `treegraph` series are defined in
- *    [plotOptions.treegraph](plotOptions.treegraph).
- * 3. Options for one single series are given in
- *    [the series instance array](series.treegraph).
- * 
- * ```
- * Highcharts.chart('container', {
- *     plotOptions: {
- *         series: {
- *             // general options for all series
- *         },
- *         treegraph: {
- *             // shared options for all treegraph series
- *         }
- *     },
- *     series: [{
- *         // specific options for this series instance
- *         type: 'treegraph'
- *     }]
- * });
- * ```
- * 
- * **TypeScript:**
- * - the [type](series.treegraph.type) option must always be set.
- * - when accessing an array of series, the combined set of all series types is
- *   represented by [Highcharts.SeriesOptionsType
- *   ](/class-reference/Highcharts#.SeriesOptionsType). Narrowing down to the
- *   specific type can be done by checking the `type` property.
- * 
- * ```
- * if (chart.options.series?.[0]?.type === treegraph) {
- *     // code specific to the treegraph series
- * }
- * ```
- *             
- */
+/// A `treegraph` series. If the type
+/// option is not specified, it is inherited from chart.type.
+///
+/// Configuration options for the series are given in three levels:
+/// 1. Options for all series in a chart are defined in the
+///    plotOptions.series object.
+/// 2. Options for all `treegraph` series are defined in
+///    plotOptions.treegraph.
+/// 3. Options for one single series are given in
+///    the series instance array.
+///
+///
+///
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.treegraph
 class HighchartsTreegraphSeries extends HighchartsSeries {
+  /// An array of data points for the series. For the `treegraph` series type,
+  /// points can be given in the following ways:
+  ///
+  /// 1. The array of arrays, with `keys` property, which defines how the fields in
+  ///     array should be interpreted
+  ///     data: [{
+  ///         id: 'Category1'
+  ///     }, {
+  ///         id: 'Category1',
+  ///         parent: 'Category2',
+  ///     }]
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.treegraph.data
   List<List<dynamic>>? data;
+
+  /// The name of the series as shown in the legend, tooltip etc.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.treegraph.name
   String? name;
+
+  /// Configuration options for the HighchartsTreegraphSeries.
   HighchartsTreegraphSeriesOptions? options;
   List<dynamic>? points;
   @override
   get type => 'treegraph';
 
+  /// A `treegraph` series. If the type option is not specified, it is inherited from chart.type.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.treegraph
   HighchartsTreegraphSeries({
     this.data,
     this.name,

@@ -29,11 +29,18 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsGlobalButtonThemeStatesSelectStyleOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   String? color;
+
+  /// Highcharts Options Widget.
+
   String? fontWeight;
 
+  /// Highcharts Options Widget.
   HighchartsGlobalButtonThemeStatesSelectStyleOptions(
       {this.color, this.fontWeight});
 

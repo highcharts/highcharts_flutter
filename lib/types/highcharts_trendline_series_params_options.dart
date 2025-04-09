@@ -28,9 +28,17 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsTrendlineSeriesParamsOptions extends HighchartsOptionsBase {
+  /// The point index which indicator calculations will base. For
+  /// example using OHLC data, index=2 means the indicator will be
+  /// calculated using Low values.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.trendline.params.index
+
   double? index;
 
+  /// Highcharts Options Widget.
   HighchartsTrendlineSeriesParamsOptions({this.index});
 
   @override

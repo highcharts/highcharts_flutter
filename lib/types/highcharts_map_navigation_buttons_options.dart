@@ -33,18 +33,38 @@ export 'highcharts_map_navigation_buttons_zoom_out_options.dart';
  *
  * */
 
-/**
- * The individual buttons for the map navigation. This usually includes
- * the zoom in and zoom out buttons. Properties for each button is
- * inherited from
- * [mapNavigation.buttonOptions](#mapNavigation.buttonOptions), while
- * individual options can be overridden. But default, the `onclick`, `text`
- * and `y` options are individual.
- */
+/// The individual buttons for the map navigation. This usually includes
+/// the zoom in and zoom out buttons. Properties for each button is
+/// inherited from
+/// mapNavigation.buttonOptions, while
+/// individual options can be overridden. But default, the `onclick`, `text`
+/// and `y` options are individual.
+///
+/// API Docs: https://api.highcharts.com/highcharts/mapNavigation.buttons
 class HighchartsMapNavigationButtonsOptions extends HighchartsOptionsBase {
+  /// Options for the zoom in button. Properties for the zoom in and zoom
+  /// out buttons are inherited from
+  /// mapNavigation.buttonOptions, while
+  /// individual options can be overridden. By default, the `onclick`,
+  /// `text` and `y` options are individual.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/mapNavigation.buttons.zoomIn
+
   HighchartsMapNavigationButtonsZoomInOptions? zoomIn;
+
+  /// Options for the zoom out button. Properties for the zoom in and
+  /// zoom out buttons are inherited from
+  /// mapNavigation.buttonOptions, while
+  /// individual options can be overridden. By default, the `onclick`,
+  /// `text` and `y` options are individual.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/mapNavigation.buttons.zoomOut
+
   HighchartsMapNavigationButtonsZoomOutOptions? zoomOut;
 
+  /// The individual buttons for the map navigation. This usually includes the zoom in and zoom out buttons. Properties for each button is inherited from mapNavigation.buttonOptions, while individual options can be overridden. But default, the `onclick`, `text` and `y` options are individual.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/mapNavigation.buttons
   HighchartsMapNavigationButtonsOptions({this.zoomIn, this.zoomOut});
 
   @override

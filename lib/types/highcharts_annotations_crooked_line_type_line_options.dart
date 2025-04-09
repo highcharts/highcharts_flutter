@@ -29,13 +29,18 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Line options.
- */
+/// Line options.
+///
+/// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.timeCycles.typeOptions.line
 class HighchartsAnnotationsCrookedLineTypeLineOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   String? fill;
 
+  /// Line options.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.timeCycles.typeOptions.line
   HighchartsAnnotationsCrookedLineTypeLineOptions({this.fill});
 
   @override

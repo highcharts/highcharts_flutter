@@ -32,14 +32,27 @@ export 'highcharts_navigation_breadcrumbs_separator_style_options.dart';
  *
  * */
 
-/**
- * Options object for Breadcrumbs separator.
- */
+/// Options object for Breadcrumbs separator.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.treemap.breadcrumbs.separator
 class HighchartsNavigationBreadcrumbsSeparatorOptions
     extends HighchartsOptionsBase {
+  /// CSS styles for the breadcrumbs separator.
+  ///
+  /// In styled mode, the breadcrumbs separators are styled by the
+  /// `.highcharts-separator` rule with its different states.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.treemap.breadcrumbs.separator.style
+
   HighchartsNavigationBreadcrumbsSeparatorStyleOptions? style;
+
+  /// Highcharts Options Widget.
+
   String? text;
 
+  /// Options object for Breadcrumbs separator.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.treemap.breadcrumbs.separator
   HighchartsNavigationBreadcrumbsSeparatorOptions({this.style, this.text});
 
   @override

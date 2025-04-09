@@ -29,13 +29,40 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsMACDSeriesSignalLineZonesOptions extends HighchartsOptionsBase {
+  /// Styled mode only. A custom class name for the zone.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.macd.signalLine.zones.className
+
   String? className;
+
+  /// Defines the color of the series.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.macd.signalLine.zones.color
+
   String? color;
+
+  /// A name for the dash style to use for the graph.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.macd.signalLine.zones.dashStyle
+
   String? dashStyle;
+
+  /// Defines the fill color for the series (in area type series)
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.macd.signalLine.zones.fillColor
+
   String? fillColor;
+
+  /// The value up to where the zone extends, if undefined the zones
+  /// stretches to the last value in the series.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.macd.signalLine.zones.value
+
   double? value;
 
+  /// Highcharts Options Widget.
   HighchartsMACDSeriesSignalLineZonesOptions(
       {this.className, this.color, this.dashStyle, this.fillColor, this.value});
 

@@ -29,12 +29,22 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsXAxisDateTimeLabelFormatsSecondOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   List<dynamic>? list;
+
+  /// Highcharts Options Widget.
+
   String? main;
+
+  /// Highcharts Options Widget.
+
   bool? range;
 
+  /// Highcharts Options Widget.
   HighchartsXAxisDateTimeLabelFormatsSecondOptions(
       {this.list, this.main, this.range});
 

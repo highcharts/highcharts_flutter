@@ -29,11 +29,22 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsMACDSeriesSignalLineStylesOptions
     extends HighchartsOptionsBase {
+  /// Color of the line.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.macd.signalLine.styles.lineColor
+
   String? lineColor;
+
+  /// Pixel width of the line.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.macd.signalLine.styles.lineWidth
+
   double? lineWidth;
 
+  /// Highcharts Options Widget.
   HighchartsMACDSeriesSignalLineStylesOptions({this.lineColor, this.lineWidth});
 
   @override

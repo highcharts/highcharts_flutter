@@ -31,12 +31,19 @@ export 'highcharts_bbseries_top_line_styles_options.dart';
  *
  * */
 
-/**
- * Top line options.
- */
+/// Top line options.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.bb.topLine
 class HighchartsBBSeriesTopLineOptions extends HighchartsOptionsBase {
+  /// Styles for the top line.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.bb.topLine.styles
+
   HighchartsBBSeriesTopLineStylesOptions? styles;
 
+  /// Top line options.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.bb.topLine
   HighchartsBBSeriesTopLineOptions({this.styles});
 
   @override

@@ -28,13 +28,29 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Parameters used in calculation of regression series' points.
- */
+/// Parameters used in calculation of regression series' points.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.abands.params
 class HighchartsABandsSeriesParamsOptions extends HighchartsOptionsBase {
+  /// The point index which indicator calculations will base. For
+  /// example using OHLC data, index=2 means the indicator will be
+  /// calculated using Low values.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.abands.params.index
+
   double? index;
+
+  /// The base period for indicator calculations. This is the number of
+  /// data points which are taken into account for the indicator
+  /// calculations.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.abands.params.period
+
   double? period;
 
+  /// Parameters used in calculation of regression series' points.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.abands.params
   HighchartsABandsSeriesParamsOptions({this.index, this.period});
 
   @override

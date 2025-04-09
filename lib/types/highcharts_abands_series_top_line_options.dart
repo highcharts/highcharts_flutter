@@ -31,9 +31,13 @@ export 'highcharts_abands_series_top_line_styles_options.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsABandsSeriesTopLineOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   HighchartsABandsSeriesTopLineStylesOptions? styles;
 
+  /// Highcharts Options Widget.
   HighchartsABandsSeriesTopLineOptions({this.styles});
 
   @override

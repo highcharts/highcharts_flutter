@@ -28,14 +28,27 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Parameters used in calculation of the regression points.
- */
+/// Parameters used in calculation of the regression points.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.bb.params
 class HighchartsBBSeriesParamsOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   double? index;
+
+  /// Highcharts Options Widget.
+
   double? period;
+
+  /// Standard deviation for top and bottom bands.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.bb.params.standardDeviation
+
   double? standardDeviation;
 
+  /// Parameters used in calculation of the regression points.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.bb.params
   HighchartsBBSeriesParamsOptions(
       {this.index, this.period, this.standardDeviation});
 

@@ -29,25 +29,86 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * A label on the axis next to the crosshair.
- * 
- * In styled mode, the label is styled with the
- * `.highcharts-crosshair-label` class.
- */
+/// A label on the axis next to the crosshair.
+///
+/// In styled mode, the label is styled with the
+/// `.highcharts-crosshair-label` class.
+///
+/// API Docs: https://api.highcharts.com/highstock/yAxis.crosshair.label
 class HighchartsXAxisCrosshairLabelOptions extends HighchartsOptionsBase {
+  /// Alignment of the label compared to the axis. Defaults to `"left"` for
+  /// right-side axes, `"right"` for left-side axes and `"center"` for
+  /// horizontal axes.
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/yAxis.crosshair.label.align
+
   String? align;
+
+  /// The background color for the label. Defaults to the related series
+  /// color, or `#666666` if that is not available.
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/yAxis.crosshair.label.backgroundColor
+
   String? backgroundColor;
+
+  /// The border color for the crosshair label
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/yAxis.crosshair.label.borderColor
+
   String? borderColor;
+
+  /// The border corner radius of the crosshair label.
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/yAxis.crosshair.label.borderRadius
+
   double? borderRadius;
+
+  /// The border width for the crosshair label.
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/yAxis.crosshair.label.borderWidth
+
   double? borderWidth;
+
+  /// Flag to enable crosshair's label.
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/yAxis.crosshair.label.enabled
+
   bool? enabled;
+
+  /// A format string for the crosshair label. Defaults to `{value}` for
+  /// numeric axes and `{value:%b %d, %Y}` for datetime axes.
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/yAxis.crosshair.label.format
+
   String? format;
+
+  /// Formatter function for the label text.
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/yAxis.crosshair.label.formatter
+
   dynamic formatter;
+
+  /// Padding inside the crosshair label.
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/yAxis.crosshair.label.padding
+
   double? padding;
+
+  /// The shape to use for the label box.
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/yAxis.crosshair.label.shape
+
   String? shape;
+
+  /// Text styles for the crosshair label.
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/yAxis.crosshair.label.style
+
   Map<String, String>? style;
 
+  /// A label on the axis next to the crosshair.
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/yAxis.crosshair.label
   HighchartsXAxisCrosshairLabelOptions(
       {this.align,
       this.backgroundColor,

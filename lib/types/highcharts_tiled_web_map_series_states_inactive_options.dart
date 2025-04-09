@@ -28,10 +28,14 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsTiledWebMapSeriesStatesInactiveOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   bool? enabled;
 
+  /// Highcharts Options Widget.
   HighchartsTiledWebMapSeriesStatesInactiveOptions({this.enabled});
 
   @override

@@ -28,13 +28,18 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Animation for the marker as it moves between values. Set to
- * `false` to disable animation. Defaults to `{ duration: 50 }`.
- */
+/// Animation for the marker as it moves between values. Set to
+/// `false` to disable animation. Defaults to `{ duration: 50 }`.
+///
+/// API Docs: https://api.highcharts.com/highcharts/colorAxis.marker.animation
 class HighchartsColorAxisMarkerAnimationOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   double? duration;
 
+  /// Animation for the marker as it moves between values. Set to `false` to disable animation. Defaults to `{ duration: 50 }`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/colorAxis.marker.animation
   HighchartsColorAxisMarkerAnimationOptions({this.duration});
 
   @override

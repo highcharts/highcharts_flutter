@@ -29,11 +29,20 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsStockToolsGuiDefinitionsSeparatorOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   String? elementType;
+
+  /// A predefined background symbol for the button.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/stockTools.gui.definitions.separator.symbol
+
   String? symbol;
 
+  /// Highcharts Options Widget.
   HighchartsStockToolsGuiDefinitionsSeparatorOptions(
       {this.elementType, this.symbol});
 

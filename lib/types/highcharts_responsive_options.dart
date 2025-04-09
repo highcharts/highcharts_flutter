@@ -31,13 +31,21 @@ export 'highcharts_responsive_rules_options.dart';
  *
  * */
 
-/**
- * Allows setting a set of rules to apply for different screen or chart
- * sizes. Each rule specifies additional chart options.
- */
+/// Allows setting a set of rules to apply for different screen or chart
+/// sizes. Each rule specifies additional chart options.
+///
+/// API Docs: https://api.highcharts.com/highcharts/responsive
 class HighchartsResponsiveOptions extends HighchartsOptionsBase {
+  /// A set of rules for responsive settings. The rules are executed from
+  /// the top down.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/responsive.rules
+
   List<HighchartsResponsiveRulesOptions>? rules;
 
+  /// Allows setting a set of rules to apply for different screen or chart sizes. Each rule specifies additional chart options.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/responsive
   HighchartsResponsiveOptions({this.rules});
 
   @override

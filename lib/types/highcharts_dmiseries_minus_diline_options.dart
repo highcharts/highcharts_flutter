@@ -31,12 +31,19 @@ export 'highcharts_dmiseries_minus_diline_styles_options.dart';
  *
  * */
 
-/**
- * -DI line options.
- */
+/// -DI line options.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.dmi.minusDILine
 class HighchartsDMISeriesMinusDILineOptions extends HighchartsOptionsBase {
+  /// Styles for the -DI line.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.dmi.minusDILine.styles
+
   HighchartsDMISeriesMinusDILineStylesOptions? styles;
 
+  /// -DI line options.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.dmi.minusDILine
   HighchartsDMISeriesMinusDILineOptions({this.styles});
 
   @override

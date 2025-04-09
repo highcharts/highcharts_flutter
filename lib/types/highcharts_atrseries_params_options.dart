@@ -28,9 +28,17 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsATRSeriesParamsOptions extends HighchartsOptionsBase {
+  /// The base period for indicator calculations. This is the number of
+  /// data points which are taken into account for the indicator
+  /// calculations.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.atr.params.period
+
   double? period;
 
+  /// Highcharts Options Widget.
   HighchartsATRSeriesParamsOptions({this.period});
 
   @override

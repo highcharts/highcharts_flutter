@@ -29,9 +29,13 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsMapBubbleSeriesTooltipOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   String? pointFormat;
 
+  /// Highcharts Options Widget.
   HighchartsMapBubbleSeriesTooltipOptions({this.pointFormat});
 
   @override

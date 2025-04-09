@@ -29,10 +29,14 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsColumnRangeSeriesBorderRadiusOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   String? where;
 
+  /// Highcharts Options Widget.
   HighchartsColumnRangeSeriesBorderRadiusOptions({this.where});
 
   @override

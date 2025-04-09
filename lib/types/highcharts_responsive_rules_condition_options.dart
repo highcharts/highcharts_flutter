@@ -29,16 +29,46 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Under which conditions the rule applies.
- */
+/// Under which conditions the rule applies.
+///
+/// API Docs: https://api.highcharts.com/highcharts/responsive.rules.condition
 class HighchartsResponsiveRulesConditionOptions extends HighchartsOptionsBase {
+  /// A callback function to gain complete control on when the responsive
+  /// rule applies. Return `true` if it applies. This opens for checking
+  /// against other metrics than the chart size, for example the document
+  /// size or other elements.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/responsive.rules.condition.callback
+
   dynamic callback;
+
+  /// The responsive rule applies if the chart height is less than this.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/responsive.rules.condition.maxHeight
+
   double? maxHeight;
+
+  /// The responsive rule applies if the chart width is less than this.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/responsive.rules.condition.maxWidth
+
   double? maxWidth;
+
+  /// The responsive rule applies if the chart height is greater than this.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/responsive.rules.condition.minHeight
+
   double? minHeight;
+
+  /// The responsive rule applies if the chart width is greater than this.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/responsive.rules.condition.minWidth
+
   double? minWidth;
 
+  /// Under which conditions the rule applies.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/responsive.rules.condition
   HighchartsResponsiveRulesConditionOptions(
       {this.callback,
       this.maxHeight,

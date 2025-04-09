@@ -34,14 +34,25 @@ export 'highcharts_annotations_crooked_line_shape_options.dart';
  *
  * */
 
-/**
- * The TimeCycles Annotation
- */
+/// The TimeCycles Annotation
+///
+/// API Docs: https://api.highcharts.com/highstock/navigation.annotationsOptions.timeCycles
 class HighchartsAnnotationsTimeCyclesOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   HighchartsAnnotationsTimeCyclesTypeOptions? typeOptions;
+
+  /// Highcharts Options Widget.
+
   dynamic controlPointOptions;
+
+  /// Highcharts Options Widget.
+
   HighchartsAnnotationsCrookedLineShapeOptions? shapeOptions;
 
+  /// The TimeCycles Annotation
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/navigation.annotationsOptions.timeCycles
   HighchartsAnnotationsTimeCyclesOptions(
       {this.typeOptions, this.controlPointOptions, this.shapeOptions});
 

@@ -29,21 +29,32 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Style options for the focus border drawn around elements
- * while navigating through them. Note that some browsers in
- * addition draw their own borders for focused elements. These
- * automatic borders cannot be styled by Highcharts.
- * 
- * In styled mode, the border is given the
- * `.highcharts-focus-border` class.
- */
+/// Style options for the focus border drawn around elements
+/// while navigating through them. Note that some browsers in
+/// addition draw their own borders for focused elements. These
+/// automatic borders cannot be styled by Highcharts.
+///
+/// In styled mode, the border is given the
+/// `.highcharts-focus-border` class.
+///
+/// API Docs: https://api.highcharts.com/highcharts/accessibility.keyboardNavigation.focusBorder.style
 class HighchartsAccessibilityKeyboardNavigationFocusBorderStyleOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   double? borderRadius;
+
+  /// Highcharts Options Widget.
+
   String? color;
+
+  /// Highcharts Options Widget.
+
   double? lineWidth;
 
+  /// Style options for the focus border drawn around elements while navigating through them. Note that some browsers in addition draw their own borders for focused elements. These automatic borders cannot be styled by Highcharts.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/accessibility.keyboardNavigation.focusBorder.style
   HighchartsAccessibilityKeyboardNavigationFocusBorderStyleOptions(
       {this.borderRadius, this.color, this.lineWidth});
 

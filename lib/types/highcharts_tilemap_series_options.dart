@@ -50,106 +50,482 @@ export 'highcharts_series_zones_options.dart';
  *
  * */
 
-/**
- * A `tilemap` series. If the [type](#series.tilemap.type) option is
- * not specified, it is inherited from [chart.type](#chart.type).
- * 
- * Configuration options for the series are given in three levels:
- * 1. Options for all series in a chart are defined in the
- *    [plotOptions.series](plotOptions.series) object.
- * 2. Options for all `tilemap` series are defined in
- *    [plotOptions.tilemap](plotOptions.tilemap).
- * 3. Options for one single series are given in
- *    [the series instance array](series.tilemap).
- * 
- * ```
- * Highcharts.chart('container', {
- *     plotOptions: {
- *         series: {
- *             // general options for all series
- *         },
- *         tilemap: {
- *             // shared options for all tilemap series
- *         }
- *     },
- *     series: [{
- *         // specific options for this series instance
- *         type: 'tilemap'
- *     }]
- * });
- * ```
- * 
- * **TypeScript:**
- * - the [type](series.tilemap.type) option must always be set.
- * - when accessing an array of series, the combined set of all series types is
- *   represented by [Highcharts.SeriesOptionsType
- *   ](/class-reference/Highcharts#.SeriesOptionsType). Narrowing down to the
- *   specific type can be done by checking the `type` property.
- * 
- * ```
- * if (chart.options.series?.[0]?.type === tilemap) {
- *     // code specific to the tilemap series
- * }
- * ```
- *             
- */
+/// A `tilemap` series. If the type option is
+/// not specified, it is inherited from chart.type.
+///
+/// Configuration options for the series are given in three levels:
+/// 1. Options for all series in a chart are defined in the
+///    plotOptions.series object.
+/// 2. Options for all `tilemap` series are defined in
+///    plotOptions.tilemap.
+/// 3. Options for one single series are given in
+///    the series instance array.
+///
+///
+///
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.tilemap
 class HighchartsTilemapSeriesOptions extends HighchartsOptionsBase {
+  /// Accessibility options for a series.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.tilemap.accessibility
+
   HighchartsSeriesAccessibilityOptions? accessibility;
+
+  /// Allow this series' points to be selected by clicking on the graphic
+  /// (columns, point markers, pie slices, map areas etc).
+  ///
+  /// The selected points can be handled by point select and unselect
+  /// events, or collectively by the getSelectedPoints function.
+  ///
+  /// And alternative way of selecting points is through dragging.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.tilemap.allowPointSelect
+
   bool? allowPointSelect;
+
+  /// Animation is disabled by default on the heatmap series.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.tilemap.animation
+
   bool? animation;
+
+  /// The border radius for each heatmap item. The border's color and
+  /// width can be set in marker options.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.tilemap.borderRadius
+
   double? borderRadius;
+
+  /// The border width for each heatmap item.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.tilemap.borderWidth
+
   double? borderWidth;
+
+  /// An additional class name to apply to the series' graphical elements.
+  /// This option does not replace default class names of the graphical
+  /// element. Changes to the series' color will also be reflected in a
+  /// chart's legend and tooltip.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.tilemap.className
+
   String? className;
+
+  /// Highcharts Options Widget.
+
   bool? clip;
+
+  /// The main color of the series. In heat maps this color is rarely used,
+  /// as we mostly use the color to denote the value of each point. Unless
+  /// options are set in the colorAxis, the default value
+  /// is pulled from the options.colors array.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.tilemap.color
+
   String? color;
+
+  /// When using dual or multiple color axes, this number defines which
+  /// colorAxis the particular series is connected to. It refers to
+  /// either the
+  /// axis id
+  /// or the index of the axis in the colorAxis array, with 0 being the
+  /// first. Set this option to false to prevent a series from connecting
+  /// to the default color axis.
+  ///
+  /// Since v7.2.0 the option can also be an axis id or an axis index
+  /// instead of a boolean flag.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.tilemap.colorAxis
+
   dynamic colorAxis;
+
+  /// Styled mode only. A specific color index to use for the series, so its
+  /// graphic representations are given the class name `highcharts-color-{n}`.
+  ///
+  /// Since v11, CSS variables on the form `--highcharts-color-{n}` make
+  /// changing the color scheme very convenient.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.tilemap.colorIndex
+
   double? colorIndex;
+
+  /// Highcharts Options Widget.
+
   String? colorKey;
+
+  /// The column size - how many X axis units each column in the tilemap
+  /// should span. Works as in Heatmaps.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.tilemap.colsize
+
   double? colsize;
+
+  /// When true, each point or column edge is rounded to its nearest pixel
+  /// in order to render sharp on screen. In some cases, when there are a
+  /// lot of densely packed columns, this leads to visible difference
+  /// in column widths or distance between columns. In these cases,
+  /// setting `crisp` to `false` may look better, even though each column
+  /// is rendered blurry.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.tilemap.crisp
+
   bool? crisp;
+
+  /// You can set the cursor to "pointer" if you have click events attached
+  /// to the series, to signal to the user that the points and lines can
+  /// be clicked.
+  ///
+  /// In styled mode, the series cursor can be set with the same classes
+  /// as listed under series.color.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.tilemap.cursor
+
   String? cursor;
+
+  /// A reserved subspace to store options and values for customized
+  /// functionality. Here you can add additional data for your own event
+  /// callbacks and formatter callbacks.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.tilemap.custom
+
   Map<String, dynamic>? custom;
+
+  /// Highcharts Options Widget.
+
   HighchartsTilemapSeriesDataLabelsOptions? dataLabels;
+
+  /// A description of the series to add to the screen reader information
+  /// about the series.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.tilemap.description
+
   String? description;
+
+  /// Enable or disable the mouse tracking for a specific series. This
+  /// includes point tooltips and click events on graphs and points. For
+  /// large datasets it improves performance.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.tilemap.enableMouseTracking
+
   bool? enableMouseTracking;
+
+  /// General event handlers for the series items. These event hooks can
+  /// also be attached to the series at run time using the
+  /// `Highcharts.addEvent` function.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.tilemap.events
+
   HighchartsSeriesEventsOptions? events;
+
+  /// An id for the series. This can be used after render time to get a pointer
+  /// to the series object through `chart.get()`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.tilemap.id
+
   String? id;
+
+  /// Highlight only the hovered point and fade the remaining points.
+  ///
+  /// Scatter-type series require enabling the 'inactive' marker state and
+  /// adjusting opacity. Note that this approach could affect performance
+  /// with large datasets.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.tilemap.inactiveOtherPoints
+
   bool? inactiveOtherPoints;
+
+  /// When set to `false` will prevent the series data from being included in
+  /// any form of data export.
+  ///
+  /// Since version 6.0.0 until 7.1.0 the option was existing undocumented
+  /// as `includeInCSVExport`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.tilemap.includeInDataExport
+
   bool? includeInDataExport;
+
+  /// The index of the series in the chart, affecting the internal index in the
+  /// `chart.series` array, the visible Z index as well as the order in the
+  /// legend.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.tilemap.index
+
   double? index;
+
+  /// Make the heatmap render its data points as an interpolated image.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.tilemap.interpolation
+
   bool? interpolation;
+
+  /// An array specifying which option maps to which key in the data point
+  /// array. This makes it convenient to work with unstructured data arrays
+  /// from different sources.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.tilemap.keys
+
   List<String>? keys;
+
+  /// Series labels are placed as close to the series as possible in a
+  /// natural way, seeking to avoid other series. The goal of this
+  /// feature is to make the chart more easily readable, like if a
+  /// human designer placed the labels in the optimal position.
+  ///
+  /// The series labels currently work with series types having a
+  /// `graph` or an `area`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.tilemap.label
+
   HighchartsSeriesLabelOptions? label;
+
+  /// The sequential index of the series in the legend.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.tilemap.legendIndex
+
   double? legendIndex;
+
+  /// Highcharts Options Widget.
+
   String? legendSymbol;
+
+  /// The id of another series to link to. Additionally,
+  /// the value can be ":previous" to link to the previous series. When
+  /// two series are linked, only the first one appears in the legend.
+  /// Toggling the visibility of this also toggles the linked series.
+  ///
+  /// If master series uses data sorting and linked series does not have
+  /// its own sorting definition, the linked series will be sorted in the
+  /// same order as the master one.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.tilemap.linkedTo
+
   String? linkedTo;
+
+  /// The color for the parts of the graph or points that are below the
+  /// threshold. Note that `zones` takes
+  /// precedence over the negative color. Using `negativeColor` is
+  /// equivalent to applying a zone with value of 0.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.tilemap.negativeColor
+
   String? negativeColor;
+
+  /// The color applied to null points. In styled mode, a general CSS class
+  /// is applied instead.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.tilemap.nullColor
+
   String? nullColor;
+
+  /// Whether or not data-points with the value of `null` should be interactive.
+  /// When this is set to `true`, tooltips may highlight these points, and this
+  /// option also enables keyboard navigation for such points. Format options
+  /// for such points include `nullFormat` and `nullFormater`.
+  /// Works for these series: `line`, `spline`, `area`, `area-spline`,
+  /// `column`, `bar`, and* `timeline`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.tilemap.nullInteraction
+
+  bool? nullInteraction;
+
+  /// Options for the _Series on point_ feature. Only `pie` and `sunburst` series
+  /// are supported at this moment.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.tilemap.onPoint
+
   HighchartsSeriesOnPointOptions? onPoint;
+
+  /// Opacity of a series parts: line, fill (e.g. area) and dataLabels.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.tilemap.opacity
+
   double? opacity;
+
+  /// Properties for each single point.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.tilemap.point
+
   HighchartsSeriesPointOptions? point;
+
+  /// Same as
+  /// accessibility.point.descriptionFormat,
+  /// but for an individual series. Overrides the chart wide configuration.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.tilemap.pointDescriptionFormat
+
   dynamic pointDescriptionFormat;
+
+  /// Same as
+  /// accessibility.series.descriptionFormatter,
+  /// but for an individual series. Overrides the chart wide configuration.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.tilemap.pointDescriptionFormatter
+
   dynamic pointDescriptionFormatter;
+
+  /// The padding between points in the tilemap.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.tilemap.pointPadding
+
   double? pointPadding;
+
+  /// When true, X values in the data set are relative to the current
+  /// `pointStart`, `pointInterval` and `pointIntervalUnit` settings. This
+  /// allows compression of the data for datasets with irregular X values.
+  ///
+  /// The real X values are computed on the formula `f(x) = ax + b`, where
+  /// `a` is the `pointInterval` (optionally with a time unit given by
+  /// `pointIntervalUnit`), and `b` is the `pointStart`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.tilemap.relativeXValue
+
   bool? relativeXValue;
+
+  /// The row size - how many Y axis units each tilemap row should span.
+  /// Analogous to colsize.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.tilemap.rowsize
+
   double? rowsize;
+
+  /// Whether to select the series initially. If `showCheckbox` is true,
+  /// the checkbox next to the series name in the legend will be checked
+  /// for a selected series.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.tilemap.selected
+
   bool? selected;
+
+  /// If true, a checkbox is displayed next to the legend item to allow
+  /// selecting the series. The state of the checkbox is determined by
+  /// the `selected` option.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.tilemap.showCheckbox
+
   bool? showCheckbox;
+
+  /// Whether to display this particular series or series type in the
+  /// legend. Standalone series are shown in legend by default, and linked
+  /// series are not. Since v7.2.0 it is possible to show series that use
+  /// colorAxis by setting this option to `true`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.tilemap.showInLegend
+
   bool? showInLegend;
+
+  /// If set to `true`, the accessibility module will skip past the points
+  /// in this series for keyboard navigation.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.tilemap.skipKeyboardNavigation
+
   bool? skipKeyboardNavigation;
+
+  /// Sonification/audio chart options for a series.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.tilemap.sonification
+
   HighchartsSeriesSonificationOptions? sonification;
+
+  /// Highcharts Options Widget.
+
   HighchartsTilemapSeriesStatesOptions? states;
+
+  /// Sticky tracking of mouse events. When true, the `mouseOut` event
+  /// on a series isn't triggered until the mouse moves over another
+  /// series, or out of the plot area. When false, the `mouseOut` event on
+  /// a series is triggered when the mouse leaves the area around the
+  /// series' graph or markers. This also implies the tooltip. When
+  /// `stickyTracking` is false and `tooltip.shared` is false, the tooltip
+  /// will be hidden when moving the mouse between series.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.tilemap.stickyTracking
+
   bool? stickyTracking;
+
+  /// The shape of the tiles in the tilemap. Possible values are `hexagon`,
+  /// `circle`, `diamond`, and `square`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.tilemap.tileShape
+
   String? tileShape;
+
+  /// Highcharts Options Widget.
+
   HighchartsTilemapSeriesTooltipOptions? tooltip;
+
+  /// When a series contains a `data` array that is longer than this, the
+  /// Series class looks for data configurations of plain numbers or arrays of
+  /// numbers. The first and last valid points are checked. If found, the rest
+  /// of the data is assumed to be the same. This saves expensive data checking
+  /// and indexing in long series, and makes data-heavy charts render faster.
+  ///
+  /// Set it to `0` disable.
+  ///
+  /// Note:
+  /// - In boost mode turbo threshold is forced. Only array of numbers or two
+  ///   dimensional arrays are allowed.
+  /// - In version 11.4.3 and earlier, if object configurations were passed
+  ///   beyond the turbo threshold, a warning was logged in the console and the
+  ///   data series didn't render.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.tilemap.turboThreshold
+
   double? turboThreshold;
+
+  /// Set the initial visibility of the series.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.tilemap.visible
+
   bool? visible;
+
+  /// When using dual or multiple x axes, this number defines which xAxis the
+  /// particular series is connected to. It refers to either the
+  /// axis id
+  /// or the index of the axis in the xAxis array, with 0 being the first.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.tilemap.xAxis
+
   dynamic xAxis;
+
+  /// When using dual or multiple y axes, this number defines which yAxis the
+  /// particular series is connected to. It refers to either the
+  /// axis id
+  /// or the index of the axis in the yAxis array, with 0 being the first.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.tilemap.yAxis
+
   dynamic yAxis;
+
+  /// Define the visual z index of the series.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.tilemap.zIndex
+
   double? zIndex;
+
+  /// Defines the Axis on which the zones are applied.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.tilemap.zoneAxis
+
   String? zoneAxis;
+
+  /// An array defining zones within a series. Zones can be applied to the
+  /// X axis, Y axis or Z axis for bubbles, according to the `zoneAxis`
+  /// option. The zone definitions have to be in ascending order regarding
+  /// to the value.
+  ///
+  /// In styled mode, the color zones are styled with the
+  /// `.highcharts-zone-{n}` class, or custom classed from the `className`
+  /// option
+  /// (view live demo).
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.tilemap.zones
+
   List<HighchartsSeriesZonesOptions>? zones;
 
+  /// A `tilemap` series. If the type option is not specified, it is inherited from chart.type.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.tilemap
   HighchartsTilemapSeriesOptions(
       {this.accessibility,
       this.allowPointSelect,
@@ -182,6 +558,7 @@ class HighchartsTilemapSeriesOptions extends HighchartsOptionsBase {
       this.linkedTo,
       this.negativeColor,
       this.nullColor,
+      this.nullInteraction,
       this.onPoint,
       this.opacity,
       this.point,
@@ -311,6 +688,9 @@ class HighchartsTilemapSeriesOptions extends HighchartsOptionsBase {
     }
     if (nullColor != null) {
       buffer.writeAll(['"nullColor":', jsonEncode(nullColor), ','], '');
+    }
+    if (nullInteraction != null) {
+      buffer.writeAll(['"nullInteraction":', nullInteraction, ','], '');
     }
     if (onPoint != null) {
       buffer.writeAll(['"onPoint":', onPoint?.toJSON(), ','], '');

@@ -33,34 +33,42 @@ export 'highcharts_defs_reverse_arrow_options.dart';
  *
  * */
 
-/**
- * Options for configuring markers for annotations.
- * 
- * An example of the arrow marker:
- * <pre>
- * {
- *   arrow: {
- *     id: 'arrow',
- *     tagName: 'marker',
- *     refY: 5,
- *     refX: 5,
- *     markerWidth: 10,
- *     markerHeight: 10,
- *     children: [{
- *       tagName: 'path',
- *       attrs: {
- *         d: 'M 0 0 L 10 5 L 0 10 Z',
- *         'stroke-width': 0
- *       }
- *     }]
- *   }
- * }
- * </pre>
- */
+/// Options for configuring markers for annotations.
+///
+/// An example of the arrow marker:
+/// <pre>
+/// {
+///   arrow: {
+///     id: 'arrow',
+///     tagName: 'marker',
+///     refY: 5,
+///     refX: 5,
+///     markerWidth: 10,
+///     markerHeight: 10,
+///     children: [{
+///       tagName: 'path',
+///       attrs: {
+///         d: 'M 0 0 L 10 5 L 0 10 Z',
+///         'stroke-width': 0
+///       }
+///     }]
+///   }
+/// }
+/// </pre>
+///
+/// API Docs: https://api.highcharts.com/highcharts/defs
 class HighchartsDefsOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   HighchartsDefsArrowOptions? arrow;
+
+  /// Highcharts Options Widget.
+
   HighchartsDefsReverseArrowOptions? reverseArrow;
 
+  /// Options for configuring markers for annotations.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/defs
   HighchartsDefsOptions({this.arrow, this.reverseArrow});
 
   @override

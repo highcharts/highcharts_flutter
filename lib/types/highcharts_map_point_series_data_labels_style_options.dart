@@ -29,10 +29,14 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsMapPointSeriesDataLabelsStyleOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   String? color;
 
+  /// Highcharts Options Widget.
   HighchartsMapPointSeriesDataLabelsStyleOptions({this.color});
 
   @override

@@ -37,12 +37,31 @@ export 'highcharts_bar_series_states_select_options.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsBarSeriesStatesOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   HighchartsBarSeriesStatesHoverOptions? hover;
+
+  /// The opposite state of a hover for series.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.bar.states.inactive
+
   HighchartsSeriesStatesInactiveOptions? inactive;
+
+  /// The normal state of a series, or for point items in column, pie
+  /// and similar series. Currently only used for setting animation
+  /// when returning to normal state from hover.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.bar.states.normal
+
   HighchartsSeriesStatesNormalOptions? normal;
+
+  /// Highcharts Options Widget.
+
   HighchartsBarSeriesStatesSelectOptions? select;
 
+  /// Highcharts Options Widget.
   HighchartsBarSeriesStatesOptions(
       {this.hover, this.inactive, this.normal, this.select});
 

@@ -32,57 +32,39 @@ export 'highcharts_mfiseries_options.dart';
  *
  * */
 
-/**
- * A `MFI` series. If the [type](#series.mfi.type) option is not specified, it
- * is inherited from [chart.type](#chart.type).
- * 
- * Configuration options for the series are given in three levels:
- * 1. Options for all series in a chart are defined in the
- *    [plotOptions.series](plotOptions.series) object.
- * 2. Options for all `mfi` series are defined in
- *    [plotOptions.mfi](plotOptions.mfi).
- * 3. Options for one single series are given in
- *    [the series instance array](series.mfi).
- * 
- * ```
- * Highcharts.chart('container', {
- *     plotOptions: {
- *         series: {
- *             // general options for all series
- *         },
- *         mfi: {
- *             // shared options for all mfi series
- *         }
- *     },
- *     series: [{
- *         // specific options for this series instance
- *         type: 'mfi'
- *     }]
- * });
- * ```
- * 
- * **TypeScript:**
- * - the [type](series.mfi.type) option must always be set.
- * - when accessing an array of series, the combined set of all series types is
- *   represented by [Highcharts.SeriesOptionsType
- *   ](/class-reference/Highcharts#.SeriesOptionsType). Narrowing down to the
- *   specific type can be done by checking the `type` property.
- * 
- * ```
- * if (chart.options.series?.[0]?.type === mfi) {
- *     // code specific to the mfi series
- * }
- * ```
- *             
- */
+/// A `MFI` series. If the type option is not specified, it
+/// is inherited from chart.type.
+///
+/// Configuration options for the series are given in three levels:
+/// 1. Options for all series in a chart are defined in the
+///    plotOptions.series object.
+/// 2. Options for all `mfi` series are defined in
+///    plotOptions.mfi.
+/// 3. Options for one single series are given in
+///    the series instance array.
+///
+///
+///
+///
+/// API Docs: https://api.highcharts.com/highstock/series.mfi
 class HighchartsMFISeries extends HighchartsSeries {
+  /// Highcharts Options Widget.
   List<List<dynamic>>? data;
+
+  /// The name of the series as shown in the legend, tooltip etc.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.mfi.name
   String? name;
+
+  /// Configuration options for the HighchartsMFISeries.
   HighchartsMFISeriesOptions? options;
   List<dynamic>? points;
   @override
   get type => 'mfi';
 
+  /// A `MFI` series. If the type option is not specified, it is inherited from chart.type.
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/series.mfi
   HighchartsMFISeries({
     this.data,
     this.name,

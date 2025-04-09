@@ -36,13 +36,29 @@ export 'highcharts_gantt_series_connectors_start_marker_options.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsGanttSeriesConnectorsOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   HighchartsGanttSeriesConnectorsAnimationOptions? animation;
+
+  /// Highcharts Options Widget.
+
   HighchartsGanttSeriesConnectorsEndMarkerOptions? endMarker;
+
+  /// Highcharts Options Widget.
+
   double? radius;
+
+  /// Highcharts Options Widget.
+
   HighchartsGanttSeriesConnectorsStartMarkerOptions? startMarker;
+
+  /// Highcharts Options Widget.
+
   String? type;
 
+  /// Highcharts Options Widget.
   HighchartsGanttSeriesConnectorsOptions(
       {this.animation,
       this.endMarker,

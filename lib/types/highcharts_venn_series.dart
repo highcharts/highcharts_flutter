@@ -32,57 +32,39 @@ export 'highcharts_venn_series_options.dart';
  *
  * */
 
-/**
- * A `venn` series. If the [type](#series.venn.type) option is
- * not specified, it is inherited from [chart.type](#chart.type).
- * 
- * Configuration options for the series are given in three levels:
- * 1. Options for all series in a chart are defined in the
- *    [plotOptions.series](plotOptions.series) object.
- * 2. Options for all `venn` series are defined in
- *    [plotOptions.venn](plotOptions.venn).
- * 3. Options for one single series are given in
- *    [the series instance array](series.venn).
- * 
- * ```
- * Highcharts.chart('container', {
- *     plotOptions: {
- *         series: {
- *             // general options for all series
- *         },
- *         venn: {
- *             // shared options for all venn series
- *         }
- *     },
- *     series: [{
- *         // specific options for this series instance
- *         type: 'venn'
- *     }]
- * });
- * ```
- * 
- * **TypeScript:**
- * - the [type](series.venn.type) option must always be set.
- * - when accessing an array of series, the combined set of all series types is
- *   represented by [Highcharts.SeriesOptionsType
- *   ](/class-reference/Highcharts#.SeriesOptionsType). Narrowing down to the
- *   specific type can be done by checking the `type` property.
- * 
- * ```
- * if (chart.options.series?.[0]?.type === venn) {
- *     // code specific to the venn series
- * }
- * ```
- *             
- */
+/// A `venn` series. If the type option is
+/// not specified, it is inherited from chart.type.
+///
+/// Configuration options for the series are given in three levels:
+/// 1. Options for all series in a chart are defined in the
+///    plotOptions.series object.
+/// 2. Options for all `venn` series are defined in
+///    plotOptions.venn.
+/// 3. Options for one single series are given in
+///    the series instance array.
+///
+///
+///
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.venn
 class HighchartsVennSeries extends HighchartsSeries {
+  /// Highcharts Options Widget.
   List<List<dynamic>>? data;
+
+  /// The name of the series as shown in the legend, tooltip etc.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.venn.name
   String? name;
+
+  /// Configuration options for the HighchartsVennSeries.
   HighchartsVennSeriesOptions? options;
   List<dynamic>? points;
   @override
   get type => 'venn';
 
+  /// A `venn` series. If the type option is not specified, it is inherited from chart.type.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.venn
   HighchartsVennSeries({
     this.data,
     this.name,

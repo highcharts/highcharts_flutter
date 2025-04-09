@@ -29,11 +29,18 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsAnnotationsElliottWaveTypeLineOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   double? strokeWidth;
+
+  /// Highcharts Options Widget.
+
   String? fill;
 
+  /// Highcharts Options Widget.
   HighchartsAnnotationsElliottWaveTypeLineOptions(
       {this.strokeWidth, this.fill});
 

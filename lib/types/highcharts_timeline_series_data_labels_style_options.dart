@@ -29,13 +29,26 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsTimelineSeriesDataLabelsStyleOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   dynamic fontSize;
+
+  /// Highcharts Options Widget.
+
   String? fontWeight;
+
+  /// Highcharts Options Widget.
+
   String? textAlign;
+
+  /// Highcharts Options Widget.
+
   String? textOutline;
 
+  /// Highcharts Options Widget.
   HighchartsTimelineSeriesDataLabelsStyleOptions(
       {this.fontSize, this.fontWeight, this.textAlign, this.textOutline});
 

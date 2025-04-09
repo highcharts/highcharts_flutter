@@ -32,57 +32,61 @@ export 'highcharts_line_series_options.dart';
  *
  * */
 
-/**
- * A `line` series. If the [type](#series.line.type) option is not
- * specified, it is inherited from [chart.type](#chart.type).
- * 
- * Configuration options for the series are given in three levels:
- * 1. Options for all series in a chart are defined in the
- *    [plotOptions.series](plotOptions.series) object.
- * 2. Options for all `line` series are defined in
- *    [plotOptions.line](plotOptions.line).
- * 3. Options for one single series are given in
- *    [the series instance array](series.line).
- * 
- * ```
- * Highcharts.chart('container', {
- *     plotOptions: {
- *         series: {
- *             // general options for all series
- *         },
- *         line: {
- *             // shared options for all line series
- *         }
- *     },
- *     series: [{
- *         // specific options for this series instance
- *         type: 'line'
- *     }]
- * });
- * ```
- * 
- * **TypeScript:**
- * - the [type](series.line.type) option must always be set.
- * - when accessing an array of series, the combined set of all series types is
- *   represented by [Highcharts.SeriesOptionsType
- *   ](/class-reference/Highcharts#.SeriesOptionsType). Narrowing down to the
- *   specific type can be done by checking the `type` property.
- * 
- * ```
- * if (chart.options.series?.[0]?.type === line) {
- *     // code specific to the line series
- * }
- * ```
- *             
- */
+/// A `line` series. If the type option is not
+/// specified, it is inherited from chart.type.
+///
+/// Configuration options for the series are given in three levels:
+/// 1. Options for all series in a chart are defined in the
+///    plotOptions.series object.
+/// 2. Options for all `line` series are defined in
+///    plotOptions.line.
+/// 3. Options for one single series are given in
+///    the series instance array.
+///
+///
+///
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.line
 class HighchartsLineSeries extends HighchartsSeries {
+  /// An array of data points for the series. For the `line` series type,
+  /// points can be given in the following ways:
+  ///
+  /// 1. An array of numerical values. In this case, the numerical values will be
+  ///    interpreted as `y` options. The `x` values will be automatically
+  ///    calculated, either starting at 0 and incremented by 1, or from
+  ///    `pointStart` and `pointInterval` given in the series options. If the axis
+  ///    has categories, these will be used. Example:
+  ///
+  /// 2. An array of arrays with 2 values. In this case, the values correspond to
+  ///    `x,y`. If the first value is a string, it is applied as the name of the
+  ///    point, and the `x` value is inferred.
+  ///
+  /// 3. An array of objects with named values. The following snippet shows only a
+  ///    few settings, see the complete options set below. If the total number of
+  ///    data points exceeds the series'
+  ///    turboThreshold,
+  ///    this option is not available.
+  ///
+  /// **Note:** In TypeScript you have to extend `PointOptionsObject` with an
+  /// additional declaration to allow custom data types:
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.line.data
   List<List<dynamic>>? data;
+
+  /// The name of the series as shown in the legend, tooltip etc.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.line.name
   String? name;
+
+  /// Configuration options for the HighchartsLineSeries.
   HighchartsLineSeriesOptions? options;
   List<dynamic>? points;
   @override
   get type => 'line';
 
+  /// A `line` series. If the type option is not specified, it is inherited from chart.type.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.line
   HighchartsLineSeries({
     this.data,
     this.name,

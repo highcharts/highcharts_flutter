@@ -32,16 +32,32 @@ export 'highcharts_color_axis_marker_animation_options.dart';
  *
  * */
 
-/**
- * The triangular marker on a scalar color axis that points to the
- * value of the hovered area. To disable the marker, set
- * `marker: null`.
- */
+/// The triangular marker on a scalar color axis that points to the
+/// value of the hovered area. To disable the marker, set
+/// `marker: null`.
+///
+/// API Docs: https://api.highcharts.com/highcharts/colorAxis.marker
 class HighchartsColorAxisMarkerOptions extends HighchartsOptionsBase {
+  /// Animation for the marker as it moves between values. Set to
+  /// `false` to disable animation. Defaults to `{ duration: 50 }`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/colorAxis.marker.animation
+
   HighchartsColorAxisMarkerAnimationOptions? animation;
+
+  /// The color of the marker.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/colorAxis.marker.color
+
   String? color;
+
+  /// Highcharts Options Widget.
+
   double? width;
 
+  /// The triangular marker on a scalar color axis that points to the value of the hovered area. To disable the marker, set `marker: null`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/colorAxis.marker
   HighchartsColorAxisMarkerOptions({this.animation, this.color, this.width});
 
   @override

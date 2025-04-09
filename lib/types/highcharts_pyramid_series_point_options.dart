@@ -31,9 +31,13 @@ export 'highcharts_pyramid_series_point_events_options.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsPyramidSeriesPointOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   HighchartsPyramidSeriesPointEventsOptions? events;
 
+  /// Highcharts Options Widget.
   HighchartsPyramidSeriesPointOptions({this.events});
 
   @override

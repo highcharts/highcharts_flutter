@@ -29,17 +29,22 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Save a chart in localStorage under `highcharts-chart` key.
- * Stored items:
- * - annotations
- * - indicators (with yAxes)
- * - flags
- */
+/// Save a chart in localStorage under `highcharts-chart` key.
+/// Stored items:
+/// - annotations
+/// - indicators (with yAxes)
+/// - flags
+///
+/// API Docs: https://api.highcharts.com/highstock/navigation.bindings.saveChart
 class HighchartsNavigationBindingsSaveChartOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   String? noDataState;
 
+  /// Save a chart in localStorage under `highcharts-chart` key. Stored items: - annotations - indicators (with yAxes) - flags
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/navigation.bindings.saveChart
   HighchartsNavigationBindingsSaveChartOptions({this.noDataState});
 
   @override

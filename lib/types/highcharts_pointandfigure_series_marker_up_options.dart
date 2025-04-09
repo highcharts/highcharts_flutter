@@ -32,23 +32,79 @@ export 'highcharts_series_marker_states_options.dart';
  *
  * */
 
-/**
- * Marker options for the up direction column, inherited from `series.marker`
- * options.
- */
+/// Marker options for the up direction column, inherited from `series.marker`
+/// options.
+///
+/// API Docs: https://api.highcharts.com/highstock/series.pointandfigure.markerUp
 class HighchartsPointandfigureSeriesMarkerUpOptions
     extends HighchartsOptionsBase {
+  /// Enable or disable the point marker. If `undefined`, the markers
+  /// are hidden when the data is dense, and shown for more widespread
+  /// data points.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.pointandfigure.markerUp.enabled
+
   bool? enabled;
+
+  /// The threshold for how dense the point markers should be before
+  /// they are hidden, given that `enabled` is not defined. The number
+  /// indicates the horizontal distance between the two closest points
+  /// in the series, as multiples of the `marker.radius`. In other
+  /// words, the default value of 2 means points are hidden if
+  /// overlapping horizontally.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.pointandfigure.markerUp.enabledThreshold
+
   double? enabledThreshold;
+
+  /// The fill color of the point marker. When `undefined`, the series'
+  /// or point's color is used.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.pointandfigure.markerUp.fillColor
+
   String? fillColor;
+
+  /// Image markers only. Set the image width explicitly. When using
+  /// this option, a `width` must also be set.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.pointandfigure.markerUp.height
+
   double? height;
+
+  /// Highcharts Options Widget.
+
   String? lineColor;
+
+  /// Highcharts Options Widget.
+
   double? lineWidth;
+
+  /// The radius of the point marker.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.pointandfigure.markerUp.radius
+
   double? radius;
+
+  /// States for a single point marker.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.pointandfigure.markerUp.states
+
   HighchartsSeriesMarkerStatesOptions? states;
+
+  /// Highcharts Options Widget.
+
   String? symbol;
+
+  /// Image markers only. Set the image width explicitly. When using
+  /// this option, a `height` must also be set.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.pointandfigure.markerUp.width
+
   double? width;
 
+  /// Marker options for the up direction column, inherited from `series.marker` options.
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/series.pointandfigure.markerUp
   HighchartsPointandfigureSeriesMarkerUpOptions(
       {this.enabled,
       this.enabledThreshold,

@@ -29,21 +29,72 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Milliseconds to wait before playing, comes in addition to
- * the time determined by the `time` mapping.
- * 
- * Can also be negative to play before the mapped time.
- */
+/// Milliseconds to wait before playing, comes in addition to
+/// the time determined by the `time` mapping.
+///
+/// Can also be negative to play before the mapped time.
+///
+/// API Docs: https://api.highcharts.com/highcharts/sonification.globalTracks.mapping.playDelay
 class HighchartsSonificationDefaultInstrumentMappingPlayDelayOptions
     extends HighchartsOptionsBase {
+  /// How to perform the mapping.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/sonification.defaultInstrumentOptions.mapping.playDelay.mapFunction
+
   String? mapFunction;
+
+  /// A point property to map the mapping parameter to.
+  ///
+  /// A negative sign `-` can be placed before the property name
+  /// to make mapping inverted.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/sonification.defaultInstrumentOptions.mapping.playDelay.mapTo
+
   String? mapTo;
+
+  /// The maximum value for the audio parameter. This is the
+  /// highest value the audio parameter will be mapped to.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/sonification.defaultInstrumentOptions.mapping.playDelay.max
+
   double? max;
+
+  /// The minimum value for the audio parameter. This is the
+  /// lowest value the audio parameter will be mapped to.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/sonification.defaultInstrumentOptions.mapping.playDelay.min
+
   double? min;
+
+  /// A fixed value to use for the prop when mapping.
+  ///
+  /// For example, if mapping to `y`, setting value to `4` will
+  /// map as if all points had a y value of 4.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/sonification.defaultInstrumentOptions.mapping.playDelay.value
+
   double? value;
+
+  /// What data values to map the parameter within.
+  ///
+  /// Mapping within `"series"` will make the lowest value point
+  /// in the series map to the min audio parameter value, and the
+  /// highest value will map to the max audio parameter.
+  ///
+  /// Mapping within `"chart"` will make the lowest value point in
+  /// the whole chart map to the min audio parameter value, and
+  /// the highest value in the whole chart will map to the max
+  /// audio parameter.
+  ///
+  /// You can also map within the X or Y axis of each series.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/sonification.defaultInstrumentOptions.mapping.playDelay.within
+
   String? within;
 
+  /// Milliseconds to wait before playing, comes in addition to the time determined by the `time` mapping.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/sonification.globalTracks.mapping.playDelay
   HighchartsSonificationDefaultInstrumentMappingPlayDelayOptions(
       {this.mapFunction,
       this.mapTo,

@@ -29,11 +29,22 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsIKHSeriesSenkouSpanBStylesOptions
     extends HighchartsOptionsBase {
+  /// Color of the line.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.ikh.senkouSpanB.styles.lineColor
+
   String? lineColor;
+
+  /// Pixel width of the line.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.ikh.senkouSpanB.styles.lineWidth
+
   double? lineWidth;
 
+  /// Highcharts Options Widget.
   HighchartsIKHSeriesSenkouSpanBStylesOptions({this.lineColor, this.lineWidth});
 
   @override

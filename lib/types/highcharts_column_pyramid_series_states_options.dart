@@ -37,12 +37,31 @@ export 'highcharts_column_pyramid_series_states_select_options.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsColumnPyramidSeriesStatesOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   HighchartsColumnPyramidSeriesStatesHoverOptions? hover;
+
+  /// The opposite state of a hover for series.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.columnpyramid.states.inactive
+
   HighchartsSeriesStatesInactiveOptions? inactive;
+
+  /// The normal state of a series, or for point items in column, pie
+  /// and similar series. Currently only used for setting animation
+  /// when returning to normal state from hover.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.columnpyramid.states.normal
+
   HighchartsSeriesStatesNormalOptions? normal;
+
+  /// Highcharts Options Widget.
+
   HighchartsColumnPyramidSeriesStatesSelectOptions? select;
 
+  /// Highcharts Options Widget.
   HighchartsColumnPyramidSeriesStatesOptions(
       {this.hover, this.inactive, this.normal, this.select});
 

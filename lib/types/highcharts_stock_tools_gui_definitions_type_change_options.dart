@@ -42,19 +42,44 @@ export 'highcharts_stock_tools_gui_definitions_type_change_type_ohlcoptions.dart
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsStockToolsGuiDefinitionsTypeChangeOptions
     extends HighchartsOptionsBase {
+  /// A collection of strings pointing to config options for
+  /// the items.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/stockTools.gui.definitions.typeChange.items
+
   String? items;
+
+  /// Highcharts Options Widget.
+
   HighchartsStockToolsGuiDefinitionsTypeChangeTypeCandlestickOptions?
       typeCandlestick;
+
+  /// Highcharts Options Widget.
+
   HighchartsStockToolsGuiDefinitionsTypeChangeTypeHLCOptions? typeHLC;
+
+  /// Highcharts Options Widget.
+
   HighchartsStockToolsGuiDefinitionsTypeChangeTypeHeikinAshiOptions?
       typeHeikinAshi;
+
+  /// Highcharts Options Widget.
+
   HighchartsStockToolsGuiDefinitionsTypeChangeTypeHollowCandlestickOptions?
       typeHollowCandlestick;
+
+  /// Highcharts Options Widget.
+
   HighchartsStockToolsGuiDefinitionsTypeChangeTypeLineOptions? typeLine;
+
+  /// Highcharts Options Widget.
+
   HighchartsStockToolsGuiDefinitionsTypeChangeTypeOHLCOptions? typeOHLC;
 
+  /// Highcharts Options Widget.
   HighchartsStockToolsGuiDefinitionsTypeChangeOptions(
       {this.items,
       this.typeCandlestick,

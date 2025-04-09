@@ -31,9 +31,13 @@ export 'highcharts_funnel_series_point_events_options.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsFunnelSeriesPointOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   HighchartsFunnelSeriesPointEventsOptions? events;
 
+  /// Highcharts Options Widget.
   HighchartsFunnelSeriesPointOptions({this.events});
 
   @override

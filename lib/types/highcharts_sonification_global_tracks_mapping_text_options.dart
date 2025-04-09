@@ -28,10 +28,13 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Text mapping for speech tracks.
- */
+/// Text mapping for speech tracks.
+///
+/// API Docs: https://api.highcharts.com/highcharts/sonification.globalTracks.mapping.text
 class HighchartsSonificationGlobalTracksMappingTextOptions
     extends HighchartsOptionsBase {
+  /// Text mapping for speech tracks.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/sonification.globalTracks.mapping.text
   HighchartsSonificationGlobalTracksMappingTextOptions();
 }

@@ -38,67 +38,132 @@ export 'highcharts_ohlcseries_data_events_options.dart';
  *
  * */
 
-/**
- * An array of data points for the series. For the `ohlc` series type,
- * points can be given in the following ways:
- * 
- * 1. An array of arrays with 5 or 4 values. In this case, the values correspond
- *    to `x,open,high,low,close`. If the first value is a string, it is applied
- *    as the name of the point, and the `x` value is inferred. The `x` value can
- *    also be omitted, in which case the inner arrays should be of length 4\.
- *    Then the `x` value is automatically calculated, either starting at 0 and
- *    incremented by 1, or from `pointStart` and `pointInterval` given in the
- *    series options.
- *    ```js
- *    data: [
- *        [0, 6, 5, 6, 7],
- *        [1, 9, 4, 8, 2],
- *        [2, 6, 3, 4, 10]
- *    ]
- *    ```
- * 
- * 2. An array of objects with named values. The following snippet shows only a
- *    few settings, see the complete options set below. If the total number of
- *    data points exceeds the series'
- *    [turboThreshold](#series.ohlc.turboThreshold), this option is not
- *    available.
- *    ```js
- *    data: [{
- *        x: 1,
- *        open: 3,
- *        high: 4,
- *        low: 5,
- *        close: 2,
- *        name: "Point2",
- *        color: "#00FF00"
- *    }, {
- *        x: 1,
- *        open: 4,
- *        high: 3,
- *        low: 6,
- *        close: 7,
- *        name: "Point1",
- *        color: "#FF00FF"
- *    }]
- *    ```
- */
+/// An array of data points for the series. For the `ohlc` series type,
+/// points can be given in the following ways:
+///
+/// 1. An array of arrays with 5 or 4 values. In this case, the values correspond
+///    to `x,open,high,low,close`. If the first value is a string, it is applied
+///    as the name of the point, and the `x` value is inferred. The `x` value can
+///    also be omitted, in which case the inner arrays should be of length 4\.
+///    Then the `x` value is automatically calculated, either starting at 0 and
+///    incremented by 1, or from `pointStart` and `pointInterval` given in the
+///    series options.
+///
+/// 2. An array of objects with named values. The following snippet shows only a
+///    few settings, see the complete options set below. If the total number of
+///    data points exceeds the series'
+///    turboThreshold, this option is not
+///    available.
+///
+/// API Docs: https://api.highcharts.com/highstock/series.ohlc.data
 class HighchartsOHLCSeriesDataOptions extends HighchartsOptionsBase {
+  /// Accessibility options for a data point.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.ohlc.data.accessibility
+
   HighchartsOHLCSeriesDataAccessibilityOptions? accessibility;
+
+  /// The closing value of each data point.
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/series.ohlc.data.close
+
   double? close;
+
+  /// Individual color for the point. By default the color is pulled from
+  /// the global `colors` array.
+  ///
+  /// In styled mode, the `color` option doesn't take effect. Instead, use
+  /// `colorIndex`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.ohlc.data.color
+
   String? color;
+
+  /// A reserved subspace to store options and values for customized functionality.
+  /// Here you can add additional data for your own event callbacks and formatter
+  /// callbacks.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.ohlc.data.custom
+
   Map<String, dynamic>? custom;
+
+  /// Highcharts Options Widget.
+
   HighchartsOHLCSeriesDataDataLabelsOptions? dataLabels;
+
+  /// A description of the point to add to the screen reader information
+  /// about the point.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.ohlc.data.description
+
   String? description;
+
+  /// Point specific options for the draggable-points module. Overrides options
+  /// on `series.dragDrop`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.ohlc.data.dragDrop
+
   HighchartsOHLCSeriesDataDragDropOptions? dragDrop;
+
+  /// The individual point events.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.ohlc.data.events
+
   HighchartsOHLCSeriesDataEventsOptions? events;
+
+  /// The high or maximum value for each data point.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.ohlc.data.high
+
   double? high;
+
+  /// An id for the point. This can be used after render time to get a
+  /// pointer to the point object through `chart.get()`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.ohlc.data.id
+
   String? id;
+
+  /// The rank for this point's data label in case of collision. If two
+  /// data labels are about to overlap, only the one with the highest `labelrank`
+  /// will be drawn.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.ohlc.data.labelrank
+
   double? labelrank;
+
+  /// The low or minimum value for each data point.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.ohlc.data.low
+
   double? low;
+
+  /// The opening value of each data point.
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/series.ohlc.data.open
+
   double? open;
+
+  /// Whether the data point is selected initially.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.ohlc.data.selected
+
   bool? selected;
+
+  /// The x value of the point.
+  ///
+  /// For datetime axes, a number value is the timestamp in milliseconds since
+  /// 1970, while a date string is parsed according to the [current time zone]
+  /// (https://api.highcharts.com/highcharts/time.timezone) of the
+  /// chart. Date strings are supported since v12.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.ohlc.data.x
+
   dynamic x;
 
+  /// An array of data points for the series. For the `ohlc` series type, points can be given in the following ways:
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/series.ohlc.data
   HighchartsOHLCSeriesDataOptions(
       {this.accessibility,
       this.close,

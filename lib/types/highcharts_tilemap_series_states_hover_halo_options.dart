@@ -31,13 +31,26 @@ export 'highcharts_tilemap_series_states_hover_halo_attributes_options.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsTilemapSeriesStatesHoverHaloOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   HighchartsTilemapSeriesStatesHoverHaloAttributesOptions? attributes;
+
+  /// Highcharts Options Widget.
+
   bool? enabled;
+
+  /// Highcharts Options Widget.
+
   double? opacity;
+
+  /// Highcharts Options Widget.
+
   double? size;
 
+  /// Highcharts Options Widget.
   HighchartsTilemapSeriesStatesHoverHaloOptions(
       {this.attributes, this.enabled, this.opacity, this.size});
 

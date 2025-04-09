@@ -32,23 +32,70 @@ export 'highcharts_xaxis_crosshair_label_options.dart';
  *
  * */
 
-/**
- * Configure a crosshair that follows either the mouse pointer or the
- * hovered point.
- * 
- * In styled mode, the crosshairs are styled in the
- * `.highcharts-crosshair`, `.highcharts-crosshair-thin` or
- * `.highcharts-xaxis-category` classes.
- */
+/// Configure a crosshair that follows either the mouse pointer or the
+/// hovered point.
+///
+/// In styled mode, the crosshairs are styled in the
+/// `.highcharts-crosshair`, `.highcharts-crosshair-thin` or
+/// `.highcharts-xaxis-category` classes.
+///
+/// API Docs: https://api.highcharts.com/highcharts/yAxis.crosshair
 class HighchartsXAxisCrosshairOptions extends HighchartsOptionsBase {
+  /// A class name for the crosshair, especially as a hook for styling.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/xAxis.crosshair.className
+
   String? className;
+
+  /// The color of the crosshair. Defaults to `#cccccc` for numeric and
+  /// datetime axes, and `rgba(204,214,235,0.25)` for category axes, where
+  /// the crosshair by default highlights the whole category.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/xAxis.crosshair.color
+
   String? color;
+
+  /// The dash style for the crosshair. See
+  /// plotOptions.series.dashStyle
+  /// for possible values.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/xAxis.crosshair.dashStyle
+
   String? dashStyle;
+
+  /// A label on the axis next to the crosshair.
+  ///
+  /// In styled mode, the label is styled with the
+  /// `.highcharts-crosshair-label` class.
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/yAxis.crosshair.label
+
   HighchartsXAxisCrosshairLabelOptions? label;
+
+  /// Whether the crosshair should snap to the point or follow the pointer
+  /// independent of points.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/xAxis.crosshair.snap
+
   bool? snap;
+
+  /// The pixel width of the crosshair. Defaults to 1 for numeric or
+  /// datetime axes, and for one category width for category axes.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/xAxis.crosshair.width
+
   double? width;
+
+  /// The Z index of the crosshair. Higher Z indices allow drawing the
+  /// crosshair on top of the series or behind the grid lines.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/xAxis.crosshair.zIndex
+
   double? zIndex;
 
+  /// Configure a crosshair that follows either the mouse pointer or the hovered point.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/yAxis.crosshair
   HighchartsXAxisCrosshairOptions(
       {this.className,
       this.color,

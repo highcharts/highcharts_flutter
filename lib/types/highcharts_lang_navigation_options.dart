@@ -31,14 +31,21 @@ export 'highcharts_lang_navigation_popup_options.dart';
  *
  * */
 
-/**
- * Configure the Popup strings in the chart. Requires the
- * `annotations.js` or `annotations-advanced.src.js` module to be
- * loaded.
- */
+/// Configure the Popup strings in the chart. Requires the
+/// `annotations.js` or `annotations-advanced.src.js` module to be
+/// loaded.
+///
+/// API Docs: https://api.highcharts.com/highcharts/lang.navigation
 class HighchartsLangNavigationOptions extends HighchartsOptionsBase {
+  /// Translations for all field names used in popup.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.navigation.popup
+
   HighchartsLangNavigationPopupOptions? popup;
 
+  /// Configure the Popup strings in the chart. Requires the `annotations.js` or `annotations-advanced.src.js` module to be loaded.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.navigation
   HighchartsLangNavigationOptions({this.popup});
 
   @override

@@ -29,10 +29,14 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsPackedBubbleSeriesDataLabelsStyleOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   String? transition;
 
+  /// Highcharts Options Widget.
   HighchartsPackedBubbleSeriesDataLabelsStyleOptions({this.transition});
 
   @override

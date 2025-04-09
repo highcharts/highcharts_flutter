@@ -28,13 +28,20 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Accessibility options for the exporting menu. Requires the
- * Accessibility module.
- */
+/// Accessibility options for the exporting menu. Requires the
+/// Accessibility module.
+///
+/// API Docs: https://api.highcharts.com/highcharts/exporting.accessibility
 class HighchartsExportingAccessibilityOptions extends HighchartsOptionsBase {
+  /// Enable accessibility support for the export menu.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/exporting.accessibility.enabled
+
   bool? enabled;
 
+  /// Accessibility options for the exporting menu. Requires the Accessibility module.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/exporting.accessibility
   HighchartsExportingAccessibilityOptions({this.enabled});
 
   @override

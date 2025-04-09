@@ -34,53 +34,75 @@ export 'highcharts_range_selector_buttons_events_options.dart';
  *
  * */
 
-/**
- * An array of configuration objects for the buttons.
- * 
- * Defaults to:
- * ```js
- * buttons: [{
- *     type: 'month',
- *     count: 1,
- *     text: '1m',
- *     title: 'View 1 month'
- * }, {
- *     type: 'month',
- *     count: 3,
- *     text: '3m',
- *     title: 'View 3 months'
- * }, {
- *     type: 'month',
- *     count: 6,
- *     text: '6m',
- *     title: 'View 6 months'
- * }, {
- *     type: 'ytd',
- *     text: 'YTD',
- *     title: 'View year to date'
- * }, {
- *     type: 'year',
- *     count: 1,
- *     text: '1y',
- *     title: 'View 1 year'
- * }, {
- *     type: 'all',
- *     text: 'All',
- *     title: 'View all'
- * }]
- * ```
- */
+/// An array of configuration objects for the buttons.
+///
+/// Defaults to:
+///
+/// API Docs: https://api.highcharts.com/highcharts/rangeSelector.buttons
 class HighchartsRangeSelectorButtonsOptions extends HighchartsOptionsBase {
+  /// How many units of the defined type the button should span. If `type`
+  /// is "month" and `count` is 3, the button spans three months.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/rangeSelector.buttons.count
+
   double? count;
+
+  /// A custom data grouping object for each button.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/rangeSelector.buttons.dataGrouping
+
   HighchartsRangeSelectorButtonsDataGroupingOptions? dataGrouping;
+
+  /// Highcharts Options Widget.
+
   HighchartsRangeSelectorButtonsEventsOptions? events;
+
+  /// Additional range (in milliseconds) added to the end of the calculated
+  /// time span.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/rangeSelector.buttons.offsetMax
+
   double? offsetMax;
+
+  /// Additional range (in milliseconds) added to the start of the
+  /// calculated time span.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/rangeSelector.buttons.offsetMin
+
   double? offsetMin;
+
+  /// When buttons apply dataGrouping on a series, by default zooming
+  /// in/out will deselect buttons and unset dataGrouping. Enable this
+  /// option to keep buttons selected when extremes change.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/rangeSelector.buttons.preserveDataGrouping
+
   bool? preserveDataGrouping;
+
+  /// The text for the button itself.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/rangeSelector.buttons.text
+
   String? text;
+
+  /// Explanation for the button, shown as a tooltip on hover, and used by
+  /// assistive technology.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/rangeSelector.buttons.title
+
   String? title;
+
+  /// Defined the time span for the button. Can be one of `millisecond`,
+  /// `second`, `minute`, `hour`, `day`, `week`, `month`, `year`, `ytd`,
+  /// and `all`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/rangeSelector.buttons.type
+
   String? type;
 
+  /// An array of configuration objects for the buttons.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/rangeSelector.buttons
   HighchartsRangeSelectorButtonsOptions(
       {this.count,
       this.dataGrouping,

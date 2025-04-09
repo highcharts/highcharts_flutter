@@ -31,13 +31,20 @@ export 'highcharts_slow_stochastic_series_smoothed_line_styles_options.dart';
  *
  * */
 
-/**
- * Smoothed line options.
- */
+/// Smoothed line options.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.slowstochastic.smoothedLine
 class HighchartsSlowStochasticSeriesSmoothedLineOptions
     extends HighchartsOptionsBase {
+  /// Styles for a smoothed line.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.slowstochastic.smoothedLine.styles
+
   HighchartsSlowStochasticSeriesSmoothedLineStylesOptions? styles;
 
+  /// Smoothed line options.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.slowstochastic.smoothedLine
   HighchartsSlowStochasticSeriesSmoothedLineOptions({this.styles});
 
   @override

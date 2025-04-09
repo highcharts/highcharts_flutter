@@ -31,9 +31,13 @@ export 'highcharts_geo_heatmap_series_states_normal_options.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsGeoHeatmapSeriesStatesOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   HighchartsGeoHeatmapSeriesStatesNormalOptions? normal;
 
+  /// Highcharts Options Widget.
   HighchartsGeoHeatmapSeriesStatesOptions({this.normal});
 
   @override

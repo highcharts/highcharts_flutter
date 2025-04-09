@@ -29,19 +29,71 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Options for the handles for dragging the zoomed area.
- */
+/// Options for the handles for dragging the zoomed area.
+///
+/// API Docs: https://api.highcharts.com/highcharts/navigator.handles
 class HighchartsNavigatorHandlesOptions extends HighchartsOptionsBase {
+  /// The fill for the handle.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/navigator.handles.backgroundColor
+
   String? backgroundColor;
+
+  /// The stroke for the handle border and the stripes inside.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/navigator.handles.borderColor
+
   String? borderColor;
+
+  /// Border radius of the handles.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/navigator.handles.borderRadius
+
   double? borderRadius;
+
+  /// Allows to enable/disable handles.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/navigator.handles.enabled
+
   bool? enabled;
+
+  /// Height for handles.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/navigator.handles.height
+
   double? height;
+
+  /// The width for the handle border and the stripes inside.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/navigator.handles.lineWidth
+
   double? lineWidth;
+
+  /// Array to define shapes of handles. 0-index for left, 1-index for
+  /// right.
+  ///
+  /// Additionally, the URL to a graphic can be given on this form:
+  /// `url(graphic.png)`. Note that for the image to be applied to
+  /// exported charts, its URL needs to be accessible by the export
+  /// server.
+  ///
+  /// Custom callbacks for symbol path generation can also be added to
+  /// `Highcharts.SVGRenderer.prototype.symbols`. The callback is then
+  /// used by its method name, as shown in the demo.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/navigator.handles.symbols
+
   List<String>? symbols;
+
+  /// Width for handles.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/navigator.handles.width
+
   double? width;
 
+  /// Options for the handles for dragging the zoomed area.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/navigator.handles
   HighchartsNavigatorHandlesOptions(
       {this.backgroundColor,
       this.borderColor,

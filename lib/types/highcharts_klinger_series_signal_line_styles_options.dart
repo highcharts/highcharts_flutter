@@ -29,14 +29,27 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Styles for a signal line.
- */
+/// Styles for a signal line.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.klinger.signalLine.styles
 class HighchartsKlingerSeriesSignalLineStylesOptions
     extends HighchartsOptionsBase {
+  /// Color of the line. If not set, it's inherited from
+  /// plotOptions.klinger.color.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.klinger.signalLine.styles.lineColor
+
   String? lineColor;
+
+  /// Pixel width of the line.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.klinger.signalLine.styles.lineWidth
+
   double? lineWidth;
 
+  /// Styles for a signal line.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.klinger.signalLine.styles
   HighchartsKlingerSeriesSignalLineStylesOptions(
       {this.lineColor, this.lineWidth});
 

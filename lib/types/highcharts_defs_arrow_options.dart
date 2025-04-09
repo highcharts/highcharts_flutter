@@ -32,11 +32,21 @@ export 'highcharts_defs_arrow_attributes_options.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsDefsArrowOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   HighchartsDefsArrowAttributesOptions? attributes;
+
+  /// Highcharts Options Widget.
+
   List<dynamic>? children;
+
+  /// Highcharts Options Widget.
+
   String? tagName;
 
+  /// Highcharts Options Widget.
   HighchartsDefsArrowOptions({this.attributes, this.children, this.tagName});
 
   @override

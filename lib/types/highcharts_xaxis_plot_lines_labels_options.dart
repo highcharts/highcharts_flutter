@@ -28,9 +28,15 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsXAxisPlotLinesLabelsOptions extends HighchartsOptionsBase {
+  /// Whether to hide labels that are outside the plot area.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/xAxis.plotLines.labels.clip
+
   bool? clip;
 
+  /// Highcharts Options Widget.
   HighchartsXAxisPlotLinesLabelsOptions({this.clip});
 
   @override

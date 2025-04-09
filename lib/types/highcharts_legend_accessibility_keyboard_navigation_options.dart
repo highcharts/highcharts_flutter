@@ -28,13 +28,20 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Options for keyboard navigation for the legend.
- */
+/// Options for keyboard navigation for the legend.
+///
+/// API Docs: https://api.highcharts.com/highcharts/legend.accessibility.keyboardNavigation
 class HighchartsLegendAccessibilityKeyboardNavigationOptions
     extends HighchartsOptionsBase {
+  /// Enable keyboard navigation for the legend.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/legend.accessibility.keyboardNavigation.enabled
+
   bool? enabled;
 
+  /// Options for keyboard navigation for the legend.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/legend.accessibility.keyboardNavigation
   HighchartsLegendAccessibilityKeyboardNavigationOptions({this.enabled});
 
   @override

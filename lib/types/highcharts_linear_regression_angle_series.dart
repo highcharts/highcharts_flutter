@@ -32,58 +32,40 @@ export 'highcharts_linear_regression_angle_series_options.dart';
  *
  * */
 
-/**
- * A linear regression intercept series. If the
- * [type](#series.linearregressionangle.type) option is not specified, it is
- * inherited from [chart.type](#chart.type).
- * 
- * Configuration options for the series are given in three levels:
- * 1. Options for all series in a chart are defined in the
- *    [plotOptions.series](plotOptions.series) object.
- * 2. Options for all `linearregressionangle` series are defined in
- *    [plotOptions.linearregressionangle](plotOptions.linearregressionangle).
- * 3. Options for one single series are given in
- *    [the series instance array](series.linearregressionangle).
- * 
- * ```
- * Highcharts.chart('container', {
- *     plotOptions: {
- *         series: {
- *             // general options for all series
- *         },
- *         linearregressionangle: {
- *             // shared options for all linearregressionangle series
- *         }
- *     },
- *     series: [{
- *         // specific options for this series instance
- *         type: 'linearregressionangle'
- *     }]
- * });
- * ```
- * 
- * **TypeScript:**
- * - the [type](series.linearregressionangle.type) option must always be set.
- * - when accessing an array of series, the combined set of all series types is
- *   represented by [Highcharts.SeriesOptionsType
- *   ](/class-reference/Highcharts#.SeriesOptionsType). Narrowing down to the
- *   specific type can be done by checking the `type` property.
- * 
- * ```
- * if (chart.options.series?.[0]?.type === linearregressionangle) {
- *     // code specific to the linearregressionangle series
- * }
- * ```
- *             
- */
+/// A linear regression intercept series. If the
+/// type option is not specified, it is
+/// inherited from chart.type.
+///
+/// Configuration options for the series are given in three levels:
+/// 1. Options for all series in a chart are defined in the
+///    plotOptions.series object.
+/// 2. Options for all `linearregressionangle` series are defined in
+///    plotOptions.linearregressionangle.
+/// 3. Options for one single series are given in
+///    the series instance array.
+///
+///
+///
+///
+/// API Docs: https://api.highcharts.com/highstock/series.linearregressionangle
 class HighchartsLinearRegressionAngleSeries extends HighchartsSeries {
+  /// Highcharts Options Widget.
   List<List<dynamic>>? data;
+
+  /// The name of the series as shown in the legend, tooltip etc.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.linearregressionangle.name
   String? name;
+
+  /// Configuration options for the HighchartsLinearRegressionAngleSeries.
   HighchartsLinearRegressionAngleSeriesOptions? options;
   List<dynamic>? points;
   @override
   get type => 'linearregressionangle';
 
+  /// A linear regression intercept series. If the type option is not specified, it is inherited from chart.type.
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/series.linearregressionangle
   HighchartsLinearRegressionAngleSeries({
     this.data,
     this.name,

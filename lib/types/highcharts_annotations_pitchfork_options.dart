@@ -36,15 +36,29 @@ export 'highcharts_annotations_pitchfork_type_options.dart';
  *
  * */
 
-/**
- * A pitchfork annotation.
- */
+/// A pitchfork annotation.
+///
+/// API Docs: https://api.highcharts.com/highstock/annotations.pitchfork
 class HighchartsAnnotationsPitchforkOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   dynamic controlPointOptions;
+
+  /// Highcharts Options Widget.
+
   HighchartsAnnotationsCrookedLineLabelOptions? labelOptions;
+
+  /// Highcharts Options Widget.
+
   HighchartsAnnotationsCrookedLineShapeOptions? shapeOptions;
+
+  /// Highcharts Options Widget.
+
   HighchartsAnnotationsPitchforkTypeOptions? typeOptions;
 
+  /// A pitchfork annotation.
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/annotations.pitchfork
   HighchartsAnnotationsPitchforkOptions(
       {this.controlPointOptions,
       this.labelOptions,

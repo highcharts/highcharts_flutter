@@ -17,6 +17,7 @@
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_tooltip_date_time_label_formats_options.dart';
+import 'highcharts_tooltip_position_options.dart';
 
 /* *
  *
@@ -25,6 +26,7 @@ import 'highcharts_tooltip_date_time_label_formats_options.dart';
  * */
 
 export 'highcharts_tooltip_date_time_label_formats_options.dart';
+export 'highcharts_tooltip_position_options.dart';
 
 /* *
  *
@@ -32,26 +34,154 @@ export 'highcharts_tooltip_date_time_label_formats_options.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsOrganizationSeriesTooltipOptions extends HighchartsOptionsBase {
+  /// The HTML of the grouped point's nodes in the tooltip. Works only for
+  /// Treemap series grouping and analogously to
+  /// pointFormat.
+  ///
+  /// The grouped nodes point tooltip can be also formatted using
+  /// `tooltip.formatter` callback function and `point.isGroupNode` flag.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.organization.tooltip.clusterFormat
+
   String? clusterFormat;
+
+  /// For series on datetime axes, the date format in the tooltip's
+  /// header will by default be guessed based on the closest data points.
+  /// This member gives the default string representations used for
+  /// each unit. For an overview of the string or object configuration, see
+  /// dateFormat.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.organization.tooltip.dateTimeLabelFormats
+
   HighchartsTooltipDateTimeLabelFormatsOptions? dateTimeLabelFormats;
+
+  /// Highcharts Options Widget.
+
   double? distance;
+
+  /// Whether the tooltip should follow the pointer or stay fixed on
+  /// the item.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.organization.tooltip.followPointer
+
   bool? followPointer;
+
+  /// Whether the tooltip should update as the finger moves on a touch
+  /// device. If this is `true` and chart.panning is
+  /// set,`followTouchMove` will take over one-finger touches, so the user
+  /// needs to use two fingers for zooming and panning.
+  ///
+  /// Note the difference to followPointer that
+  /// only defines the _position_ of the tooltip. If `followPointer` is
+  /// false in for example a column series, the tooltip will show above or
+  /// below the column, but as `followTouchMove` is true, the tooltip will
+  /// jump from column to column as the user swipes across the plot area.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.organization.tooltip.followTouchMove
+
   bool? followTouchMove;
+
+  /// A string to append to the tooltip format.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.organization.tooltip.footerFormat
+
   String? footerFormat;
+
+  /// A format string
+  /// for the whole shared tooltip. When format strings are a requirement,
+  /// it is usually more convenient to use `headerFormat`, `pointFormat`
+  /// and `footerFormat`, but the `format` option allows combining them
+  /// into one setting.
+  ///
+  /// The context of the format string is the same as that of the
+  /// `tooltip.formatter` callback.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.organization.tooltip.format
+
   String? format;
+
+  /// Highcharts Options Widget.
+
   String? headerFormat;
+
+  /// Highcharts Options Widget.
+
   String? nodeFormat;
+
+  /// A callback for defining the format for _nodes_ in the chart's
+  /// tooltip, as opposed to links.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.organization.tooltip.nodeFormatter
+
   dynamic nodeFormatter;
+
+  /// The HTML of the null point's line in the tooltip. Works analogously
+  /// to pointFormat.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.organization.tooltip.nullFormat
+
   String? nullFormat;
+
+  /// Callback function to format the text of the tooltip for
+  /// visible null points.
+  /// Works analogously to formatter.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.organization.tooltip.nullFormatter
+
   dynamic nullFormatter;
+
+  /// Highcharts Options Widget.
+
   String? pointFormat;
+
+  /// A callback function for formatting the HTML output for a single point
+  /// in the tooltip. Like the `pointFormat` string, but with more
+  /// flexibility.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.organization.tooltip.pointFormatter
+
   dynamic pointFormatter;
+
+  /// Positioning options for fixed tooltip, taking effect only when
+  /// tooltip.fixed is `true`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.organization.tooltip.position
+
+  HighchartsTooltipPositionOptions? position;
+
+  /// How many decimals to show in each series' y value. This is
+  /// overridable in each series' tooltip options object. The default is to
+  /// preserve all decimals.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.organization.tooltip.valueDecimals
+
   double? valueDecimals;
+
+  /// A string to prepend to each series' y value. Overridable in each
+  /// series' tooltip options object.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.organization.tooltip.valuePrefix
+
   String? valuePrefix;
+
+  /// A string to append to each series' y value. Overridable in each
+  /// series' tooltip options object.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.organization.tooltip.valueSuffix
+
   String? valueSuffix;
+
+  /// The format for the date in the tooltip header if the X axis is a
+  /// datetime axis. The default is a best guess based on the smallest
+  /// distance between points in the chart.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.organization.tooltip.xDateFormat
+
   String? xDateFormat;
 
+  /// Highcharts Options Widget.
   HighchartsOrganizationSeriesTooltipOptions(
       {this.clusterFormat,
       this.dateTimeLabelFormats,
@@ -67,6 +197,7 @@ class HighchartsOrganizationSeriesTooltipOptions extends HighchartsOptionsBase {
       this.nullFormatter,
       this.pointFormat,
       this.pointFormatter,
+      this.position,
       this.valueDecimals,
       this.valuePrefix,
       this.valueSuffix,
@@ -119,6 +250,9 @@ class HighchartsOrganizationSeriesTooltipOptions extends HighchartsOptionsBase {
     if (pointFormatter != null) {
       buffer
           .writeAll(['"pointFormatter":', jsonEncode(pointFormatter), ','], '');
+    }
+    if (position != null) {
+      buffer.writeAll(['"position":', position?.toJSON(), ','], '');
     }
     if (valueDecimals != null) {
       buffer.writeAll(['"valueDecimals":', valueDecimals, ','], '');

@@ -44,21 +44,70 @@ export 'highcharts_chart3dframe_top_options.dart';
  *
  * */
 
-/**
- * Provides the option to draw a frame around the charts by
- * defining a bottom, front and back panel.
- */
+/// Provides the option to draw a frame around the charts by
+/// defining a bottom, front and back panel.
+///
+/// API Docs: https://api.highcharts.com/highcharts/chart.options3d.frame
 class HighchartsChart3DFrameOptions extends HighchartsOptionsBase {
+  /// The back side of the frame around a 3D chart.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/chart.options3d.frame.back
+
   HighchartsChart3DFrameBackOptions? back;
+
+  /// The bottom of the frame around a 3D chart.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/chart.options3d.frame.bottom
+
   HighchartsChart3DFrameBottomOptions? bottom;
+
+  /// The front of the frame around a 3D chart.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/chart.options3d.frame.front
+
   HighchartsChart3DFrameFrontOptions? front;
+
+  /// The left side of the frame around a 3D chart.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/chart.options3d.frame.left
+
   HighchartsChart3DFrameLeftOptions? left;
+
+  /// The right of the frame around a 3D chart.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/chart.options3d.frame.right
+
   HighchartsChart3DFrameRightOptions? right;
+
+  /// Note: As of v5.0.12, `frame.left` or `frame.right` should be used instead.
+  ///
+  /// The side for the frame around a 3D chart.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/chart.options3d.frame.side
+
   HighchartsChart3DFrameSideOptions? side;
+
+  /// General pixel thickness for the frame faces.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/chart.options3d.frame.size
+
   double? size;
+
+  /// The top of the frame around a 3D chart.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/chart.options3d.frame.top
+
   HighchartsChart3DFrameTopOptions? top;
+
+  /// Whether the frames are visible.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/chart.options3d.frame.visible
+
   String? visible;
 
+  /// Provides the option to draw a frame around the charts by defining a bottom, front and back panel.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/chart.options3d.frame
   HighchartsChart3DFrameOptions(
       {this.back,
       this.bottom,

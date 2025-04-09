@@ -29,16 +29,30 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Language options for annotation descriptions.
- */
+/// Language options for annotation descriptions.
+///
+/// API Docs: https://api.highcharts.com/highcharts/lang.accessibility.screenReaderSection.annotations
 class HighchartsLangAccessibilityScreenReaderSectionAnnotationsOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   String? descriptionMultiplePoints;
+
+  /// Highcharts Options Widget.
+
   String? descriptionNoPoints;
+
+  /// Highcharts Options Widget.
+
   String? descriptionSinglePoint;
+
+  /// Highcharts Options Widget.
+
   String? heading;
 
+  /// Language options for annotation descriptions.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.accessibility.screenReaderSection.annotations
   HighchartsLangAccessibilityScreenReaderSectionAnnotationsOptions(
       {this.descriptionMultiplePoints,
       this.descriptionNoPoints,

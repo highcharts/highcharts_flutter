@@ -32,33 +32,152 @@ export 'highcharts_annotations_label_accessibility_options.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsAnnotationsElliottWaveLabelOptions
     extends HighchartsOptionsBase {
+  /// Accessibility options for an annotation label.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.elliottWave.labelOptions.accessibility
+
   HighchartsAnnotationsLabelAccessibilityOptions? accessibility;
+
+  /// Highcharts Options Widget.
+
   String? align;
+
+  /// Highcharts Options Widget.
+
   bool? allowOverlap;
+
+  /// Highcharts Options Widget.
+
   String? backgroundColor;
+
+  /// The border color for the annotation's label.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.elliottWave.labelOptions.borderColor
+
   String? borderColor;
+
+  /// The border radius in pixels for the annotation's label.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.elliottWave.labelOptions.borderRadius
+
   double? borderRadius;
+
+  /// Highcharts Options Widget.
+
   double? borderWidth;
+
+  /// A class name for styling by CSS.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.elliottWave.labelOptions.className
+
   String? className;
+
+  /// Highcharts Options Widget.
+
   bool? crop;
+
+  /// The label's pixel distance from the point.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.elliottWave.labelOptions.distance
+
   double? distance;
+
+  /// A
+  /// format
+  /// string for the data label.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.elliottWave.labelOptions.format
+
   String? format;
+
+  /// Callback JavaScript function to format the annotation's
+  /// label. Note that if a `format` or `text` are defined,
+  /// the format or text take precedence and the formatter is
+  /// ignored. `This` refers to a point object.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.elliottWave.labelOptions.formatter
+
   String? formatter;
+
+  /// Whether the annotation is visible in the exported data
+  /// table.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.elliottWave.labelOptions.includeInDataExport
+
   bool? includeInDataExport;
+
+  /// Highcharts Options Widget.
+
   String? overflow;
+
+  /// When either the borderWidth or the backgroundColor is
+  /// set, this is the padding within the box.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.elliottWave.labelOptions.padding
+
   double? padding;
+
+  /// The shadow of the box. The shadow can be an object
+  /// configuration containing `color`, `offsetX`, `offsetY`,
+  /// `opacity` and `width`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.elliottWave.labelOptions.shadow
+
   Map<String, dynamic>? shadow;
+
+  /// The name of a symbol to use for the border around the
+  /// label. Symbols are predefined functions on the Renderer
+  /// object.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.elliottWave.labelOptions.shape
+
   String? shape;
+
+  /// Styles for the annotation's label.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.elliottWave.labelOptions.style
+
   Map<String, String>? style;
+
+  /// Alias for the format option.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.elliottWave.labelOptions.text
+
   String? text;
+
+  /// Highcharts Options Widget.
+
   String? type;
+
+  /// Whether to use HTML
+  /// to render the annotation's label.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.elliottWave.labelOptions.useHTML
+
   bool? useHTML;
+
+  /// The vertical alignment of the annotation's label.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.elliottWave.labelOptions.verticalAlign
+
   String? verticalAlign;
+
+  /// The x position offset of the label relative to the point.
+  /// Note that if a `distance` is defined, the distance takes
+  /// precedence over `x` and `y` options.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.elliottWave.labelOptions.x
+
   double? x;
+
+  /// Highcharts Options Widget.
+
   double? y;
 
+  /// Highcharts Options Widget.
   HighchartsAnnotationsElliottWaveLabelOptions(
       {this.accessibility,
       this.align,

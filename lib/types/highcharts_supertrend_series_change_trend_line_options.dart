@@ -31,13 +31,18 @@ export 'highcharts_supertrend_series_change_trend_line_styles_options.dart';
  *
  * */
 
-/**
- * The styles for the Supertrend line that intersect main series.
- */
+/// The styles for the Supertrend line that intersect main series.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.supertrend.changeTrendLine
 class HighchartsSupertrendSeriesChangeTrendLineOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   HighchartsSupertrendSeriesChangeTrendLineStylesOptions? styles;
 
+  /// The styles for the Supertrend line that intersect main series.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.supertrend.changeTrendLine
   HighchartsSupertrendSeriesChangeTrendLineOptions({this.styles});
 
   @override

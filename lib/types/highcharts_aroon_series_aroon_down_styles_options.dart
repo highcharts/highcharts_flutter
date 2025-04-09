@@ -29,14 +29,27 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Styles for an aroonDown line.
- */
+/// Styles for an aroonDown line.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.aroon.aroonDown.styles
 class HighchartsAroonSeriesAroonDownStylesOptions
     extends HighchartsOptionsBase {
+  /// Color of the line. If not set, it's inherited from
+  /// plotOptions.aroon.color.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.aroon.aroonDown.styles.lineColor
+
   String? lineColor;
+
+  /// Pixel width of the line.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.aroon.aroonDown.styles.lineWidth
+
   double? lineWidth;
 
+  /// Styles for an aroonDown line.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.aroon.aroonDown.styles
   HighchartsAroonSeriesAroonDownStylesOptions({this.lineColor, this.lineWidth});
 
   @override

@@ -29,16 +29,24 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * CSS styles for the caption.
- * 
- * In styled mode, the caption style is given in the
- * `.highcharts-caption` class.
- */
+/// CSS styles for the caption.
+///
+/// In styled mode, the caption style is given in the
+/// `.highcharts-caption` class.
+///
+/// API Docs: https://api.highcharts.com/highcharts/caption.style
 class HighchartsCaptionStyleOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   String? color;
+
+  /// Highcharts Options Widget.
+
   dynamic fontSize;
 
+  /// CSS styles for the caption.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/caption.style
   HighchartsCaptionStyleOptions({this.color, this.fontSize});
 
   @override

@@ -28,10 +28,14 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsGanttSeriesConnectorsAnimationOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   bool? reversed;
 
+  /// Highcharts Options Widget.
   HighchartsGanttSeriesConnectorsAnimationOptions({this.reversed});
 
   @override

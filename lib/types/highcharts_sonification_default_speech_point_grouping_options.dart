@@ -29,13 +29,38 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsSonificationDefaultSpeechPointGroupingOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   String? algorithm;
+
+  /// Whether or not to group points
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/sonification.defaultSpeechOptions.pointGrouping.enabled
+
   bool? enabled;
+
+  /// The size of each group in milliseconds. Audio events closer than
+  /// this are grouped together.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/sonification.defaultSpeechOptions.pointGrouping.groupTimespan
+
   double? groupTimespan;
+
+  /// The data property for each point to compare when deciding which
+  /// points to keep in the group.
+  ///
+  /// By default it is "y", which means that if the `"minmax"`
+  /// algorithm is used, the two points the group with the lowest and
+  /// highest `y` value will be kept, and the others not played.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/sonification.defaultSpeechOptions.pointGrouping.prop
+
   String? prop;
 
+  /// Highcharts Options Widget.
   HighchartsSonificationDefaultSpeechPointGroupingOptions(
       {this.algorithm, this.enabled, this.groupTimespan, this.prop});
 

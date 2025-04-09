@@ -31,9 +31,13 @@ export 'highcharts_pcseries_top_line_styles_options.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsPCSeriesTopLineOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   HighchartsPCSeriesTopLineStylesOptions? styles;
 
+  /// Highcharts Options Widget.
   HighchartsPCSeriesTopLineOptions({this.styles});
 
   @override

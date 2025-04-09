@@ -32,58 +32,40 @@ export 'highcharts_linear_regression_series_options.dart';
  *
  * */
 
-/**
- * A linear regression series. If the
- * [type](#series.linearregression.type) option is not specified, it is
- * inherited from [chart.type](#chart.type).
- * 
- * Configuration options for the series are given in three levels:
- * 1. Options for all series in a chart are defined in the
- *    [plotOptions.series](plotOptions.series) object.
- * 2. Options for all `linearregression` series are defined in
- *    [plotOptions.linearregression](plotOptions.linearregression).
- * 3. Options for one single series are given in
- *    [the series instance array](series.linearregression).
- * 
- * ```
- * Highcharts.chart('container', {
- *     plotOptions: {
- *         series: {
- *             // general options for all series
- *         },
- *         linearregression: {
- *             // shared options for all linearregression series
- *         }
- *     },
- *     series: [{
- *         // specific options for this series instance
- *         type: 'linearregression'
- *     }]
- * });
- * ```
- * 
- * **TypeScript:**
- * - the [type](series.linearregression.type) option must always be set.
- * - when accessing an array of series, the combined set of all series types is
- *   represented by [Highcharts.SeriesOptionsType
- *   ](/class-reference/Highcharts#.SeriesOptionsType). Narrowing down to the
- *   specific type can be done by checking the `type` property.
- * 
- * ```
- * if (chart.options.series?.[0]?.type === linearregression) {
- *     // code specific to the linearregression series
- * }
- * ```
- *             
- */
+/// A linear regression series. If the
+/// type option is not specified, it is
+/// inherited from chart.type.
+///
+/// Configuration options for the series are given in three levels:
+/// 1. Options for all series in a chart are defined in the
+///    plotOptions.series object.
+/// 2. Options for all `linearregression` series are defined in
+///    plotOptions.linearregression.
+/// 3. Options for one single series are given in
+///    the series instance array.
+///
+///
+///
+///
+/// API Docs: https://api.highcharts.com/highstock/series.linearregression
 class HighchartsLinearRegressionSeries extends HighchartsSeries {
+  /// Highcharts Options Widget.
   List<List<dynamic>>? data;
+
+  /// The name of the series as shown in the legend, tooltip etc.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.linearregression.name
   String? name;
+
+  /// Configuration options for the HighchartsLinearRegressionSeries.
   HighchartsLinearRegressionSeriesOptions? options;
   List<dynamic>? points;
   @override
   get type => 'linearregression';
 
+  /// A linear regression series. If the type option is not specified, it is inherited from chart.type.
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/series.linearregression
   HighchartsLinearRegressionSeries({
     this.data,
     this.name,

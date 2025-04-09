@@ -28,17 +28,22 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * A collection of attributes for the button. The object takes SVG
- * attributes like `fill`, `stroke`, `stroke-width` or `r`, the
- * border radius. The theme also supports `style`, a collection of
- * CSS properties for the text. Equivalent attributes for the hover
- * state are given in `theme.states.hover`.
- */
+/// A collection of attributes for the button. The object takes SVG
+/// attributes like `fill`, `stroke`, `stroke-width` or `r`, the
+/// border radius. The theme also supports `style`, a collection of
+/// CSS properties for the text. Equivalent attributes for the hover
+/// state are given in `theme.states.hover`.
+///
+/// API Docs: https://api.highcharts.com/highcharts/chart.zooming.resetButton.theme
 class HighchartsChartZoomingResetButtonThemeOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   double? zIndex;
 
+  /// A collection of attributes for the button. The object takes SVG attributes like `fill`, `stroke`, `stroke-width` or `r`, the border radius. The theme also supports `style`, a collection of CSS properties for the text. Equivalent attributes for the hover state are given in `theme.states.hover`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/chart.zooming.resetButton.theme
   HighchartsChartZoomingResetButtonThemeOptions({this.zIndex});
 
   @override

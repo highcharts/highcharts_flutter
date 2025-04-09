@@ -36,13 +36,29 @@ export 'highcharts_stock_tools_gui_definitions_measure_measure_yoptions.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsStockToolsGuiDefinitionsMeasureOptions
     extends HighchartsOptionsBase {
+  /// A collection of strings pointing to config options for
+  /// the items.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/stockTools.gui.definitions.measure.items
+
   String? items;
+
+  /// Highcharts Options Widget.
+
   HighchartsStockToolsGuiDefinitionsMeasureMeasureXOptions? measureX;
+
+  /// Highcharts Options Widget.
+
   HighchartsStockToolsGuiDefinitionsMeasureMeasureXYOptions? measureXY;
+
+  /// Highcharts Options Widget.
+
   HighchartsStockToolsGuiDefinitionsMeasureMeasureYOptions? measureY;
 
+  /// Highcharts Options Widget.
   HighchartsStockToolsGuiDefinitionsMeasureOptions(
       {this.items, this.measureX, this.measureXY, this.measureY});
 

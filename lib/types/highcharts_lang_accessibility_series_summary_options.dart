@@ -29,50 +29,124 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Lang configuration for the series main summary. Each series
- * type has two modes:
- * 
- * 1. This series type is the only series type used in the
- *    chart
- * 
- * 2. This is a combination chart with multiple series types
- * 
- * If a definition does not exist for the specific series type
- * and mode, the 'default' lang definitions are used.
- * 
- * Chart and its subproperties can be accessed with the `{chart}` variable.
- * The series and its subproperties can be accessed with the `{series}` variable.
- * 
- * The series index (starting from 1) can be accessed with the `{seriesNumber}` variable.
- */
+/// Lang configuration for the series main summary. Each series
+/// type has two modes:
+///
+/// 1. This series type is the only series type used in the
+///    chart
+///
+/// 2. This is a combination chart with multiple series types
+///
+/// If a definition does not exist for the specific series type
+/// and mode, the 'default' lang definitions are used.
+///
+/// Chart and its subproperties can be accessed with the `{chart}` variable.
+/// The series and its subproperties can be accessed with the `{series}` variable.
+///
+/// The series index (starting from 1) can be accessed with the `{seriesNumber}` variable.
+///
+/// API Docs: https://api.highcharts.com/highcharts/lang.accessibility.series.summary
 class HighchartsLangAccessibilitySeriesSummaryOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   String? bar;
+
+  /// Highcharts Options Widget.
+
   String? barCombination;
+
+  /// Highcharts Options Widget.
+
   String? boxplot;
+
+  /// Highcharts Options Widget.
+
   String? boxplotCombination;
+
+  /// Highcharts Options Widget.
+
   String? bubble;
+
+  /// Highcharts Options Widget.
+
   String? bubbleCombination;
+
+  /// Highcharts Options Widget.
+
   String? column;
+
+  /// Highcharts Options Widget.
+
   String? columnCombination;
+
+  /// Highcharts Options Widget.
+
   String? defaultTo;
+
+  /// Highcharts Options Widget.
+
   String? defaultCombination;
+
+  /// Highcharts Options Widget.
+
   String? line;
+
+  /// Highcharts Options Widget.
+
   String? lineCombination;
+
+  /// Highcharts Options Widget.
+
   String? map;
+
+  /// Highcharts Options Widget.
+
   String? mapCombination;
+
+  /// Highcharts Options Widget.
+
   String? mapbubble;
+
+  /// Highcharts Options Widget.
+
   String? mapbubbleCombination;
+
+  /// Highcharts Options Widget.
+
   String? mapline;
+
+  /// Highcharts Options Widget.
+
   String? maplineCombination;
+
+  /// Highcharts Options Widget.
+
   String? pie;
+
+  /// Highcharts Options Widget.
+
   String? pieCombination;
+
+  /// Highcharts Options Widget.
+
   String? scatter;
+
+  /// Highcharts Options Widget.
+
   String? scatterCombination;
+
+  /// Highcharts Options Widget.
+
   String? spline;
+
+  /// Highcharts Options Widget.
+
   String? splineCombination;
 
+  /// Lang configuration for the series main summary. Each series type has two modes:
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.accessibility.series.summary
   HighchartsLangAccessibilitySeriesSummaryOptions(
       {this.bar,
       this.barCombination,

@@ -32,10 +32,17 @@ export 'highcharts_defs_reverse_arrow_attributes_options.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsDefsReverseArrowOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   HighchartsDefsReverseArrowAttributesOptions? attributes;
+
+  /// Highcharts Options Widget.
+
   String? tagName;
 
+  /// Highcharts Options Widget.
   HighchartsDefsReverseArrowOptions({this.attributes, this.tagName});
 
   @override

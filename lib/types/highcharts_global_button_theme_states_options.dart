@@ -35,14 +35,34 @@ export 'highcharts_global_button_theme_states_select_options.dart';
  *
  * */
 
-/**
- * State overrides for the buttons
- */
+/// State overrides for the buttons
+///
+/// API Docs: https://api.highcharts.com/highcharts/global.buttonTheme.states
 class HighchartsGlobalButtonThemeStatesOptions extends HighchartsOptionsBase {
+  /// Disabled state overrides for the buttons are applied in
+  /// addition to the normal state options
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/global.buttonTheme.states.disabled
+
   HighchartsGlobalButtonThemeStatesDisabledOptions? disabled;
+
+  /// Hover state overrides for the buttons are applied in addition
+  /// to the normal state options
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/global.buttonTheme.states.hover
+
   HighchartsGlobalButtonThemeStatesHoverOptions? hover;
+
+  /// Select state overrides for the buttons are applied in
+  /// addition to the normal state options
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/global.buttonTheme.states.select
+
   HighchartsGlobalButtonThemeStatesSelectOptions? select;
 
+  /// State overrides for the buttons
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/global.buttonTheme.states
   HighchartsGlobalButtonThemeStatesOptions(
       {this.disabled, this.hover, this.select});
 

@@ -35,16 +35,40 @@ export 'highcharts_navigation_annotations_fibonacci_time_zones_type_options_poin
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsAnnotationsFibonacciTimeZonesTypeOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   HighchartsAnnotationsFibonacciTimeZonesTypeControlPointOptionsOptions?
       controlPointOptions;
+
+  /// Highcharts Options Widget.
+
   HighchartsAnnotationsFibonacciTimeZonesTypeLineOptions? line;
+
+  /// Highcharts Options Widget.
+
   HighchartsNavigationAnnotationsFibonacciTimeZonesTypeOptionsPointsOptions?
       points;
+
+  /// This number defines which xAxis the point is connected to.
+  /// It refers to either the axis id or the index of the axis
+  /// in the xAxis array.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.fibonacciTimeZones.typeOptions.xAxis
+
   double? xAxis;
+
+  /// This number defines which yAxis the point is connected to.
+  /// It refers to either the axis id or the index of the axis
+  /// in the xAxis array.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.fibonacciTimeZones.typeOptions.yAxis
+
   double? yAxis;
 
+  /// Highcharts Options Widget.
   HighchartsAnnotationsFibonacciTimeZonesTypeOptions(
       {this.controlPointOptions,
       this.line,

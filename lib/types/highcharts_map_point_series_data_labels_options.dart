@@ -31,13 +31,29 @@ export 'highcharts_map_point_series_data_labels_style_options.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsMapPointSeriesDataLabelsOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   bool? crop;
+
+  /// Highcharts Options Widget.
+
   bool? defer;
+
+  /// Highcharts Options Widget.
+
   bool? enabled;
+
+  /// Highcharts Options Widget.
+
   bool? overflow;
+
+  /// Highcharts Options Widget.
+
   HighchartsMapPointSeriesDataLabelsStyleOptions? style;
 
+  /// Highcharts Options Widget.
   HighchartsMapPointSeriesDataLabelsOptions(
       {this.crop, this.defer, this.enabled, this.overflow, this.style});
 

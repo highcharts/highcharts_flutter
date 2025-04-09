@@ -31,13 +31,20 @@ export 'highcharts_keltner_channels_series_bottom_line_styles_options.dart';
  *
  * */
 
-/**
- * Bottom line options.
- */
+/// Bottom line options.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.keltnerchannels.bottomLine
 class HighchartsKeltnerChannelsSeriesBottomLineOptions
     extends HighchartsOptionsBase {
+  /// Styles for a bottom line.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.keltnerchannels.bottomLine.styles
+
   HighchartsKeltnerChannelsSeriesBottomLineStylesOptions? styles;
 
+  /// Bottom line options.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.keltnerchannels.bottomLine
   HighchartsKeltnerChannelsSeriesBottomLineOptions({this.styles});
 
   @override

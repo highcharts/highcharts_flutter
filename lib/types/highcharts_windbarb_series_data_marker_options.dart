@@ -32,21 +32,96 @@ export 'highcharts_series_marker_states_options.dart';
  *
  * */
 
-/**
- * Options for the point markers of line-like series.
- */
+/// Options for the point markers of line-like series.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.windbarb.data.marker
 class HighchartsWindbarbSeriesDataMarkerOptions extends HighchartsOptionsBase {
+  /// Enable or disable the point marker. If `undefined`, the markers
+  /// are hidden when the data is dense, and shown for more widespread
+  /// data points.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.windbarb.data.marker.enabled
+
   bool? enabled;
+
+  /// The threshold for how dense the point markers should be before
+  /// they are hidden, given that `enabled` is not defined. The number
+  /// indicates the horizontal distance between the two closest points
+  /// in the series, as multiples of the `marker.radius`. In other
+  /// words, the default value of 2 means points are hidden if
+  /// overlapping horizontally.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.windbarb.data.marker.enabledThreshold
+
   double? enabledThreshold;
+
+  /// The fill color of the point marker. When `undefined`, the series'
+  /// or point's color is used.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.windbarb.data.marker.fillColor
+
   String? fillColor;
+
+  /// Image markers only. Set the image width explicitly. When using
+  /// this option, a `width` must also be set.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.windbarb.data.marker.height
+
   double? height;
+
+  /// The color of the point marker's outline. When `undefined`, the
+  /// series' or point's color is used.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.windbarb.data.marker.lineColor
+
   String? lineColor;
+
+  /// The width of the point marker's outline.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.windbarb.data.marker.lineWidth
+
   double? lineWidth;
+
+  /// The radius of the point marker.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.windbarb.data.marker.radius
+
   double? radius;
+
+  /// States for a single point marker.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.windbarb.data.marker.states
+
   HighchartsSeriesMarkerStatesOptions? states;
+
+  /// A predefined shape or symbol for the marker. When undefined, the
+  /// symbol is pulled from options.symbols. Other possible values are
+  /// `'circle'`, `'square'`,`'diamond'`, `'triangle'` and
+  /// `'triangle-down'`.
+  ///
+  /// Additionally, the URL to a graphic can be given on this form:
+  /// `'url(graphic.png)'`. Note that for the image to be applied to
+  /// exported charts, its URL needs to be accessible by the export
+  /// server.
+  ///
+  /// Custom callbacks for symbol path generation can also be added to
+  /// `Highcharts.SVGRenderer.prototype.symbols`. The callback is then
+  /// used by its method name, as shown in the demo.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.windbarb.data.marker.symbol
+
   String? symbol;
+
+  /// Image markers only. Set the image width explicitly. When using
+  /// this option, a `height` must also be set.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.windbarb.data.marker.width
+
   double? width;
 
+  /// Options for the point markers of line-like series.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.windbarb.data.marker
   HighchartsWindbarbSeriesDataMarkerOptions(
       {this.enabled,
       this.enabledThreshold,

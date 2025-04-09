@@ -59,28 +59,75 @@ export 'highcharts_stock_tools_gui_definitions_zoom_change_options.dart';
  *
  * */
 
-/**
- * An options object of the buttons definitions. Each name refers to
- * unique key from buttons array.
- */
+/// An options object of the buttons definitions. Each name refers to
+/// unique key from buttons array.
+///
+/// API Docs: https://api.highcharts.com/highcharts/stockTools.gui.definitions
 class HighchartsStockToolsGuiDefinitionsOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   HighchartsStockToolsGuiDefinitionsAdvancedOptions? advanced;
+
+  /// Highcharts Options Widget.
+
   HighchartsStockToolsGuiDefinitionsCrookedLinesOptions? crookedLines;
+
+  /// Highcharts Options Widget.
+
   HighchartsStockToolsGuiDefinitionsCurrentPriceIndicatorOptions?
       currentPriceIndicator;
+
+  /// Highcharts Options Widget.
+
   HighchartsStockToolsGuiDefinitionsFlagsOptions? flags;
+
+  /// Highcharts Options Widget.
+
   HighchartsStockToolsGuiDefinitionsFullScreenOptions? fullScreen;
+
+  /// Highcharts Options Widget.
+
   HighchartsStockToolsGuiDefinitionsIndicatorsOptions? indicators;
+
+  /// Highcharts Options Widget.
+
   HighchartsStockToolsGuiDefinitionsLinesOptions? lines;
+
+  /// Highcharts Options Widget.
+
   HighchartsStockToolsGuiDefinitionsMeasureOptions? measure;
+
+  /// Highcharts Options Widget.
+
   HighchartsStockToolsGuiDefinitionsSaveChartOptions? saveChart;
+
+  /// Highcharts Options Widget.
+
   HighchartsStockToolsGuiDefinitionsSeparatorOptions? separator;
+
+  /// Highcharts Options Widget.
+
   HighchartsStockToolsGuiDefinitionsSimpleShapesOptions? simpleShapes;
+
+  /// Highcharts Options Widget.
+
   HighchartsStockToolsGuiDefinitionsToggleAnnotationsOptions? toggleAnnotations;
+
+  /// Highcharts Options Widget.
+
   HighchartsStockToolsGuiDefinitionsTypeChangeOptions? typeChange;
+
+  /// Highcharts Options Widget.
+
   HighchartsStockToolsGuiDefinitionsVerticalLabelsOptions? verticalLabels;
+
+  /// Highcharts Options Widget.
+
   HighchartsStockToolsGuiDefinitionsZoomChangeOptions? zoomChange;
 
+  /// An options object of the buttons definitions. Each name refers to unique key from buttons array.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/stockTools.gui.definitions
   HighchartsStockToolsGuiDefinitionsOptions(
       {this.advanced,
       this.crookedLines,

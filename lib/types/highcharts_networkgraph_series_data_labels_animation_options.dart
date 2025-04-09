@@ -28,10 +28,14 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsNetworkgraphSeriesDataLabelsAnimationOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   double? defer;
 
+  /// Highcharts Options Widget.
   HighchartsNetworkgraphSeriesDataLabelsAnimationOptions({this.defer});
 
   @override

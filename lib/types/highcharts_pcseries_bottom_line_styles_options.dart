@@ -29,10 +29,22 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsPCSeriesBottomLineStylesOptions extends HighchartsOptionsBase {
+  /// Color of the bottom line. If not set, it's inherited from
+  /// plotOptions.pc.color.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.pc.bottomLine.styles.lineColor
+
   String? lineColor;
+
+  /// Pixel width of the line.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.pc.bottomLine.styles.lineWidth
+
   double? lineWidth;
 
+  /// Highcharts Options Widget.
   HighchartsPCSeriesBottomLineStylesOptions({this.lineColor, this.lineWidth});
 
   @override

@@ -28,10 +28,17 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsROCSeriesParamsOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   double? index;
+
+  /// Highcharts Options Widget.
+
   double? period;
 
+  /// Highcharts Options Widget.
   HighchartsROCSeriesParamsOptions({this.index, this.period});
 
   @override

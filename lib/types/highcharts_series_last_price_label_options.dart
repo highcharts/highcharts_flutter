@@ -29,19 +29,68 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsSeriesLastPriceLabelOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   dynamic align;
+
+  /// Highcharts Options Widget.
+
   String? backgroundColor;
+
+  /// The border color of `lastPrice` label.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.lastPrice.label.borderColor
+
   String? borderColor;
+
+  /// The border radius of `lastPrice` label.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.lastPrice.label.borderRadius
+
   dynamic borderRadius;
+
+  /// The border width for the `lastPrice` label.
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/series.zigzag.lastPrice.label.borderWidth
+
   double? borderWidth;
+
+  /// Flag to enable `lastPrice` label.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.lastPrice.label.enabled
+
   dynamic enabled;
+
+  /// A format string for the `lastPrice` label. Defaults to `{value}` for
+  /// numeric axes and `{value:%b %d, %Y}` for datetime axes.
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/series.zigzag.lastPrice.label.format
+
   String? format;
+
+  /// Highcharts Options Widget.
+
   dynamic formatter;
+
+  /// Padding inside the `lastPrice` label.
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/series.zigzag.lastPrice.label.padding
+
   double? padding;
+
+  /// Highcharts Options Widget.
+
   dynamic shape;
+
+  /// Text styles for the `lastPrice` label.
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/series.zigzag.lastPrice.label.style
+
   Map<String, String>? style;
 
+  /// Highcharts Options Widget.
   HighchartsSeriesLastPriceLabelOptions(
       {this.align,
       this.backgroundColor,

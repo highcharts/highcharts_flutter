@@ -32,57 +32,39 @@ export 'highcharts_demaseries_options.dart';
  *
  * */
 
-/**
- * A `DEMA` series. If the [type](#series.dema.type) option is not
- * specified, it is inherited from [chart.type](#chart.type).
- * 
- * Configuration options for the series are given in three levels:
- * 1. Options for all series in a chart are defined in the
- *    [plotOptions.series](plotOptions.series) object.
- * 2. Options for all `dema` series are defined in
- *    [plotOptions.dema](plotOptions.dema).
- * 3. Options for one single series are given in
- *    [the series instance array](series.dema).
- * 
- * ```
- * Highcharts.chart('container', {
- *     plotOptions: {
- *         series: {
- *             // general options for all series
- *         },
- *         dema: {
- *             // shared options for all dema series
- *         }
- *     },
- *     series: [{
- *         // specific options for this series instance
- *         type: 'dema'
- *     }]
- * });
- * ```
- * 
- * **TypeScript:**
- * - the [type](series.dema.type) option must always be set.
- * - when accessing an array of series, the combined set of all series types is
- *   represented by [Highcharts.SeriesOptionsType
- *   ](/class-reference/Highcharts#.SeriesOptionsType). Narrowing down to the
- *   specific type can be done by checking the `type` property.
- * 
- * ```
- * if (chart.options.series?.[0]?.type === dema) {
- *     // code specific to the dema series
- * }
- * ```
- *             
- */
+/// A `DEMA` series. If the type option is not
+/// specified, it is inherited from chart.type.
+///
+/// Configuration options for the series are given in three levels:
+/// 1. Options for all series in a chart are defined in the
+///    plotOptions.series object.
+/// 2. Options for all `dema` series are defined in
+///    plotOptions.dema.
+/// 3. Options for one single series are given in
+///    the series instance array.
+///
+///
+///
+///
+/// API Docs: https://api.highcharts.com/highstock/series.dema
 class HighchartsDEMASeries extends HighchartsSeries {
+  /// Highcharts Options Widget.
   List<List<dynamic>>? data;
+
+  /// The name of the series as shown in the legend, tooltip etc.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.dema.name
   String? name;
+
+  /// Configuration options for the HighchartsDEMASeries.
   HighchartsDEMASeriesOptions? options;
   List<dynamic>? points;
   @override
   get type => 'dema';
 
+  /// A `DEMA` series. If the type option is not specified, it is inherited from chart.type.
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/series.dema
   HighchartsDEMASeries({
     this.data,
     this.name,

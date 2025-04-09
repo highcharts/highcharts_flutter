@@ -33,13 +33,21 @@ export 'highcharts_annotations_measure_type_options.dart';
  *
  * */
 
-/**
- * A measure annotation.
- */
+/// A measure annotation.
+///
+/// API Docs: https://api.highcharts.com/highstock/annotations.measure
 class HighchartsAnnotationsMeasureOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   HighchartsAnnotationsMeasureControlPointOptions? controlPointOptions;
+
+  /// Highcharts Options Widget.
+
   HighchartsAnnotationsMeasureTypeOptions? typeOptions;
 
+  /// A measure annotation.
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/annotations.measure
   HighchartsAnnotationsMeasureOptions(
       {this.controlPointOptions, this.typeOptions});
 

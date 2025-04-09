@@ -34,21 +34,58 @@ export 'highcharts_global_button_theme_style_options.dart';
  *
  * */
 
-/**
- * General theme for buttons. This applies to the zoom button, exporting
- * context menu, map navigation, range selector buttons and custom
- * buttons generated using the `SVGRenderer.button` function. However,
- * each of these may be overridden with more specific options.
- */
+/// General theme for buttons. This applies to the zoom button, exporting
+/// context menu, map navigation, range selector buttons and custom
+/// buttons generated using the `SVGRenderer.button` function. However,
+/// each of these may be overridden with more specific options.
+///
+/// API Docs: https://api.highcharts.com/highcharts/global.buttonTheme
 class HighchartsGlobalButtonThemeOptions extends HighchartsOptionsBase {
+  /// The fill color for buttons
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/global.buttonTheme.fill
+
   String? fill;
+
+  /// The padding of buttons
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/global.buttonTheme.padding
+
   double? padding;
+
+  /// The border radius for buttons
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/global.buttonTheme.r
+
   double? r;
+
+  /// State overrides for the buttons
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/global.buttonTheme.states
+
   HighchartsGlobalButtonThemeStatesOptions? states;
+
+  /// The stroke color for buttons
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/global.buttonTheme.stroke
+
   String? stroke;
+
+  /// The stroke width for buttons
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/global.buttonTheme.stroke-width
+
   double? strokeWidth;
+
+  /// CSS styling for the buttons' text
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/global.buttonTheme.style
+
   HighchartsGlobalButtonThemeStyleOptions? style;
 
+  /// General theme for buttons. This applies to the zoom button, exporting context menu, map navigation, range selector buttons and custom buttons generated using the `SVGRenderer.button` function. However, each of these may be overridden with more specific options.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/global.buttonTheme
   HighchartsGlobalButtonThemeOptions(
       {this.fill,
       this.padding,

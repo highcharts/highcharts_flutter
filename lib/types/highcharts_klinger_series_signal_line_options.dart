@@ -31,9 +31,15 @@ export 'highcharts_klinger_series_signal_line_styles_options.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsKlingerSeriesSignalLineOptions extends HighchartsOptionsBase {
+  /// Styles for a signal line.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.klinger.signalLine.styles
+
   HighchartsKlingerSeriesSignalLineStylesOptions? styles;
 
+  /// Highcharts Options Widget.
   HighchartsKlingerSeriesSignalLineOptions({this.styles});
 
   @override

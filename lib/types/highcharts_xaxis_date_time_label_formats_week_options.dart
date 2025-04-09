@@ -29,11 +29,18 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsXAxisDateTimeLabelFormatsWeekOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   List<dynamic>? list;
+
+  /// Highcharts Options Widget.
+
   String? main;
 
+  /// Highcharts Options Widget.
   HighchartsXAxisDateTimeLabelFormatsWeekOptions({this.list, this.main});
 
   @override

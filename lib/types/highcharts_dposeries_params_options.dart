@@ -28,14 +28,24 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Parameters used in calculation of Detrended Price Oscillator series
- * points.
- */
+/// Parameters used in calculation of Detrended Price Oscillator series
+/// points.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.dpo.params
 class HighchartsDPOSeriesParamsOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   double? index;
+
+  /// Period for Detrended Price Oscillator
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.dpo.params.period
+
   double? period;
 
+  /// Parameters used in calculation of Detrended Price Oscillator series points.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.dpo.params
   HighchartsDPOSeriesParamsOptions({this.index, this.period});
 
   @override

@@ -29,13 +29,18 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Disabled state CSS style overrides for the buttons' text
- */
+/// Disabled state CSS style overrides for the buttons' text
+///
+/// API Docs: https://api.highcharts.com/highcharts/global.buttonTheme.states.disabled.style
 class HighchartsGlobalButtonThemeStatesDisabledStyleOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   String? color;
 
+  /// Disabled state CSS style overrides for the buttons' text
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/global.buttonTheme.states.disabled.style
   HighchartsGlobalButtonThemeStatesDisabledStyleOptions({this.color});
 
   @override

@@ -37,12 +37,31 @@ export 'highcharts_bullet_series_states_select_options.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsBulletSeriesStatesOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   HighchartsBulletSeriesStatesHoverOptions? hover;
+
+  /// The opposite state of a hover for series.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.bullet.states.inactive
+
   HighchartsSeriesStatesInactiveOptions? inactive;
+
+  /// The normal state of a series, or for point items in column, pie
+  /// and similar series. Currently only used for setting animation
+  /// when returning to normal state from hover.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.bullet.states.normal
+
   HighchartsSeriesStatesNormalOptions? normal;
+
+  /// Highcharts Options Widget.
+
   HighchartsBulletSeriesStatesSelectOptions? select;
 
+  /// Highcharts Options Widget.
   HighchartsBulletSeriesStatesOptions(
       {this.hover, this.inactive, this.normal, this.select});
 

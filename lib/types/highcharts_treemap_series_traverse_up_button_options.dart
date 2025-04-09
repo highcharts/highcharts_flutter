@@ -31,15 +31,22 @@ export 'highcharts_treemap_series_traverse_up_button_position_options.dart';
  *
  * */
 
-/**
- * Options for the button appearing when traversing down in a treemap.
- * 
- * Since v9.3.3 the `traverseUpButton` is replaced by `breadcrumbs`.
- */
+/// Options for the button appearing when traversing down in a treemap.
+///
+/// Since v9.3.3 the `traverseUpButton` is replaced by `breadcrumbs`.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.treemap.traverseUpButton
 class HighchartsTreemapSeriesTraverseUpButtonOptions
     extends HighchartsOptionsBase {
+  /// The position of the button.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.treemap.traverseUpButton.position
+
   HighchartsTreemapSeriesTraverseUpButtonPositionOptions? position;
 
+  /// Options for the button appearing when traversing down in a treemap.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.treemap.traverseUpButton
   HighchartsTreemapSeriesTraverseUpButtonOptions({this.position});
 
   @override

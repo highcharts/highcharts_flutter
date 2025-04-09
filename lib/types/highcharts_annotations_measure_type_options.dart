@@ -42,17 +42,64 @@ export 'highcharts_annotations_crooked_line_type_points_options.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsAnnotationsMeasureTypeOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   HighchartsAnnotationsMeasureTypeBackgroundOptions? background;
+
+  /// Configure a crosshair that is horizontally placed in middle of
+  /// rectangle.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.measure.typeOptions.crosshairX
+
   HighchartsAnnotationsMeasureTypeCrosshairXOptions? crosshairX;
+
+  /// Configure a crosshair that is vertically placed in middle of
+  /// rectangle.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.measure.typeOptions.crosshairY
+
   HighchartsAnnotationsMeasureTypeCrosshairYOptions? crosshairY;
+
+  /// Highcharts Options Widget.
+
   HighchartsAnnotationsMeasureTypeLabelOptions? label;
+
+  /// Decides in what dimensions the user can resize by dragging the
+  /// mouse. Can be one of x, y or xy.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.measure.typeOptions.selectType
+
   String? selectType;
+
+  /// This number defines which xAxis the point is connected to.
+  /// It refers to either the axis id or the index of the axis
+  /// in the xAxis array.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.measure.typeOptions.xAxis
+
   double? xAxis;
+
+  /// This number defines which yAxis the point is connected to.
+  /// It refers to either the axis id or the index of the axis
+  /// in the yAxis array.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.measure.typeOptions.yAxis
+
   double? yAxis;
+
+  /// Line options.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.measure.typeOptions.line
+
   HighchartsAnnotationsCrookedLineTypeLineOptions? line;
+
+  /// Highcharts Options Widget.
+
   List<HighchartsAnnotationsCrookedLineTypePointsOptions>? points;
 
+  /// Highcharts Options Widget.
   HighchartsAnnotationsMeasureTypeOptions(
       {this.background,
       this.crosshairX,

@@ -13,7 +13,8 @@ class OceanDepthChart extends StatelessWidget {
 
   @override
   Widget build(context) {
-    return const ChartScaffold(
+    return ChartScaffold(
+      pageTitle: 'Ocean Depth',
       title: 'Deepest ocean points',
       subtitle: 'in meters',
       data: [

@@ -34,29 +34,106 @@ export 'highcharts_series_drag_drop_guide_box_options.dart';
  *
  * */
 
-/**
- * The draggable-points module allows points to be moved around or modified in
- * the chart. In addition to the options mentioned under the `dragDrop` API
- * structure, the module fires three events,
- * [point.dragStart](plotOptions.series.point.events.dragStart),
- * [point.drag](plotOptions.series.point.events.drag) and
- * [point.drop](plotOptions.series.point.events.drop).
- */
+/// The draggable-points module allows points to be moved around or modified in
+/// the chart. In addition to the options mentioned under the `dragDrop` API
+/// structure, the module fires three events,
+/// point.dragStart,
+/// point.drag and
+/// point.drop.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.timeline.dragDrop
 class HighchartsSeriesDragDropOptions extends HighchartsOptionsBase {
+  /// Options for the drag handles available in column series.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.timeline.dragDrop.dragHandle
+
   HighchartsSeriesDragDropDragHandleOptions? dragHandle;
+
+  /// Set the maximum X value the points can be moved to.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.timeline.dragDrop.dragMaxX
+
   dynamic dragMaxX;
+
+  /// Set the maximum Y value the points can be moved to.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.timeline.dragDrop.dragMaxY
+
   double? dragMaxY;
+
+  /// Set the minimum X value the points can be moved to.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.timeline.dragDrop.dragMinX
+
   dynamic dragMinX;
+
+  /// Set the minimum Y value the points can be moved to.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.timeline.dragDrop.dragMinY
+
   double? dragMinY;
+
+  /// The X precision value to drag to for this series. Set to 0 to disable. By
+  /// default this is disabled, except for category axes, where the default is
+  /// `1`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.timeline.dragDrop.dragPrecisionX
+
   double? dragPrecisionX;
+
+  /// The Y precision value to drag to for this series. Set to 0 to disable. By
+  /// default this is disabled, except for category axes, where the default is
+  /// `1`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.timeline.dragDrop.dragPrecisionY
+
   double? dragPrecisionY;
+
+  /// The amount of pixels to drag the pointer before it counts as a drag
+  /// operation. This prevents drag/drop to fire when just clicking or
+  /// selecting points.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.timeline.dragDrop.dragSensitivity
+
   double? dragSensitivity;
+
+  /// Enable dragging in the X dimension.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.timeline.dragDrop.draggableX
+
   bool? draggableX;
+
+  /// Enable dragging in the Y dimension. Note that this is not supported for
+  /// TreeGrid axes (the default axis type in Gantt charts).
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.timeline.dragDrop.draggableY
+
   bool? draggableY;
+
+  /// Group the points by a property. Points with the same property value will
+  /// be grouped together when moving.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.timeline.dragDrop.groupBy
+
   String? groupBy;
+
+  /// Style options for the guide box. The guide box has one state by default,
+  /// the `default` state.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.timeline.dragDrop.guideBox
+
   HighchartsSeriesDragDropGuideBoxOptions? guideBox;
+
+  /// Update points as they are dragged. If false, a guide box is drawn to
+  /// illustrate the new point size.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.timeline.dragDrop.liveRedraw
+
   bool? liveRedraw;
 
+  /// The draggable-points module allows points to be moved around or modified in the chart. In addition to the options mentioned under the `dragDrop` API structure, the module fires three events, point.dragStart, point.drag and point.drop.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.timeline.dragDrop
   HighchartsSeriesDragDropOptions(
       {this.dragHandle,
       this.dragMaxX,

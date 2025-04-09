@@ -34,17 +34,50 @@ export 'highcharts_series_accessibility_point_options.dart';
  *
  * */
 
-/**
- * Accessibility options for a series.
- */
+/// Accessibility options for a series.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.zigzag.accessibility
 class HighchartsSeriesAccessibilityOptions extends HighchartsOptionsBase {
+  /// Provide a description of the series, announced to screen readers.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.accessibility.description
+
   String? description;
+
+  /// Format to use for describing the data series group to assistive
+  /// technology - including screen readers.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.accessibility.descriptionFormat
+
   String? descriptionFormat;
+
+  /// Enable/disable accessibility functionality for a specific series.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.accessibility.enabled
+
   bool? enabled;
+
+  /// Expose only the series element to screen readers, not its points.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.accessibility.exposeAsGroupOnly
+
   bool? exposeAsGroupOnly;
+
+  /// Keyboard navigation for a series
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.accessibility.keyboardNavigation
+
   HighchartsSeriesAccessibilityKeyboardNavigationOptions? keyboardNavigation;
+
+  /// Point accessibility options for a series.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.accessibility.point
+
   HighchartsSeriesAccessibilityPointOptions? point;
 
+  /// Accessibility options for a series.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.accessibility
   HighchartsSeriesAccessibilityOptions(
       {this.description,
       this.descriptionFormat,

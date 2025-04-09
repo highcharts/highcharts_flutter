@@ -32,12 +32,74 @@ export 'highcharts_annotations_measure_type_label_style_options.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsAnnotationsMeasureTypeLabelOptions
     extends HighchartsOptionsBase {
+  /// Enable or disable the label text (min, max, average,
+  /// bins values).
+  ///
+  /// Defaults to true.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.measure.typeOptions.label.enabled
+
   bool? enabled;
+
+  /// Formatter function for the label text.
+  ///
+  /// Available data are:
+  ///
+  /// <table>
+  ///
+  /// <tbody>
+  ///
+  /// <tr>
+  ///
+  /// <td>`this.min`</td>
+  ///
+  /// <td>The minimum value of the points in the selected
+  /// range.</td>
+  ///
+  /// </tr>
+  ///
+  /// <tr>
+  ///
+  /// <td>`this.max`</td>
+  ///
+  /// <td>The maximum value of the points in the selected
+  /// range.</td>
+  ///
+  /// </tr>
+  ///
+  /// <tr>
+  ///
+  /// <td>`this.average`</td>
+  ///
+  /// <td>The average value of the points in the selected
+  /// range.</td>
+  ///
+  /// </tr>
+  ///
+  /// <tr>
+  ///
+  /// <td>`this.bins`</td>
+  ///
+  /// <td>The amount of the points in the selected range.</td>
+  ///
+  /// </tr>
+  ///
+  /// </table>
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.measure.typeOptions.label.formatter
+
   dynamic formatter;
+
+  /// CSS styles for the measure label.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/annotations.measure.typeOptions.label.style
+
   HighchartsAnnotationsMeasureTypeLabelStyleOptions? style;
 
+  /// Highcharts Options Widget.
   HighchartsAnnotationsMeasureTypeLabelOptions(
       {this.enabled, this.formatter, this.style});
 

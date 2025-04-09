@@ -28,13 +28,18 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Animation when not hovering over the marker.
- */
+/// Animation when not hovering over the marker.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.zigzag.states.inactive.animation
 class HighchartsSeriesStatesInactiveAnimationOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   double? duration;
 
+  /// Animation when not hovering over the marker.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.states.inactive.animation
   HighchartsSeriesStatesInactiveAnimationOptions({this.duration});
 
   @override

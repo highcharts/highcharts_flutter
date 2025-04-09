@@ -38,14 +38,33 @@ export 'highcharts_stock_tools_gui_definitions_crooked_lines_elliott5options.dar
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsStockToolsGuiDefinitionsCrookedLinesOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   HighchartsStockToolsGuiDefinitionsCrookedLinesCrooked3Options? crooked3;
+
+  /// Highcharts Options Widget.
+
   HighchartsStockToolsGuiDefinitionsCrookedLinesCrooked5Options? crooked5;
+
+  /// Highcharts Options Widget.
+
   HighchartsStockToolsGuiDefinitionsCrookedLinesElliott3Options? elliott3;
+
+  /// Highcharts Options Widget.
+
   HighchartsStockToolsGuiDefinitionsCrookedLinesElliott5Options? elliott5;
+
+  /// A collection of strings pointing to config options for
+  /// the items.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/stockTools.gui.definitions.crookedLines.items
+
   String? items;
 
+  /// Highcharts Options Widget.
   HighchartsStockToolsGuiDefinitionsCrookedLinesOptions(
       {this.crooked3, this.crooked5, this.elliott3, this.elliott5, this.items});
 

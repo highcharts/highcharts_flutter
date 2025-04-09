@@ -31,12 +31,17 @@ export 'highcharts_ikhseries_tenkan_line_styles_options.dart';
  *
  * */
 
-/**
- * The styles for Tenkan line
- */
+/// The styles for Tenkan line
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.ikh.tenkanLine
 class HighchartsIKHSeriesTenkanLineOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   HighchartsIKHSeriesTenkanLineStylesOptions? styles;
 
+  /// The styles for Tenkan line
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.ikh.tenkanLine
   HighchartsIKHSeriesTenkanLineOptions({this.styles});
 
   @override

@@ -29,14 +29,22 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Styles for the series label. The color defaults to the series
- * color, or a contrast color if `onArea`.
- */
+/// Styles for the series label. The color defaults to the series
+/// color, or a contrast color if `onArea`.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.zigzag.label.style
 class HighchartsSeriesLabelStyleOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   dynamic fontSize;
+
+  /// Highcharts Options Widget.
+
   String? fontWeight;
 
+  /// Styles for the series label. The color defaults to the series color, or a contrast color if `onArea`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.label.style
   HighchartsSeriesLabelStyleOptions({this.fontSize, this.fontWeight});
 
   @override

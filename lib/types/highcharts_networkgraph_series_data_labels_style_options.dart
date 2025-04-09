@@ -29,10 +29,14 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsNetworkgraphSeriesDataLabelsStyleOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   String? transition;
 
+  /// Highcharts Options Widget.
   HighchartsNetworkgraphSeriesDataLabelsStyleOptions({this.transition});
 
   @override

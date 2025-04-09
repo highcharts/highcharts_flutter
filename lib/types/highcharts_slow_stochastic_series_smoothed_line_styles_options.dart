@@ -29,14 +29,27 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Styles for a smoothed line.
- */
+/// Styles for a smoothed line.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.slowstochastic.smoothedLine.styles
 class HighchartsSlowStochasticSeriesSmoothedLineStylesOptions
     extends HighchartsOptionsBase {
+  /// Color of the line. If not set, it's inherited from
+  /// plotOptions.stochastic.color.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.slowstochastic.smoothedLine.styles.lineColor
+
   String? lineColor;
+
+  /// Pixel width of the line.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.slowstochastic.smoothedLine.styles.lineWidth
+
   double? lineWidth;
 
+  /// Styles for a smoothed line.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.slowstochastic.smoothedLine.styles
   HighchartsSlowStochasticSeriesSmoothedLineStylesOptions(
       {this.lineColor, this.lineWidth});
 

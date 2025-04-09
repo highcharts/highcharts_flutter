@@ -32,57 +32,39 @@ export 'highcharts_chaikin_series_options.dart';
  *
  * */
 
-/**
- * A `Chaikin Oscillator` series. If the [type](#series.chaikin.type)
- * option is not specified, it is inherited from [chart.type](#chart.type).
- * 
- * Configuration options for the series are given in three levels:
- * 1. Options for all series in a chart are defined in the
- *    [plotOptions.series](plotOptions.series) object.
- * 2. Options for all `chaikin` series are defined in
- *    [plotOptions.chaikin](plotOptions.chaikin).
- * 3. Options for one single series are given in
- *    [the series instance array](series.chaikin).
- * 
- * ```
- * Highcharts.chart('container', {
- *     plotOptions: {
- *         series: {
- *             // general options for all series
- *         },
- *         chaikin: {
- *             // shared options for all chaikin series
- *         }
- *     },
- *     series: [{
- *         // specific options for this series instance
- *         type: 'chaikin'
- *     }]
- * });
- * ```
- * 
- * **TypeScript:**
- * - the [type](series.chaikin.type) option must always be set.
- * - when accessing an array of series, the combined set of all series types is
- *   represented by [Highcharts.SeriesOptionsType
- *   ](/class-reference/Highcharts#.SeriesOptionsType). Narrowing down to the
- *   specific type can be done by checking the `type` property.
- * 
- * ```
- * if (chart.options.series?.[0]?.type === chaikin) {
- *     // code specific to the chaikin series
- * }
- * ```
- *             
- */
+/// A `Chaikin Oscillator` series. If the type
+/// option is not specified, it is inherited from chart.type.
+///
+/// Configuration options for the series are given in three levels:
+/// 1. Options for all series in a chart are defined in the
+///    plotOptions.series object.
+/// 2. Options for all `chaikin` series are defined in
+///    plotOptions.chaikin.
+/// 3. Options for one single series are given in
+///    the series instance array.
+///
+///
+///
+///
+/// API Docs: https://api.highcharts.com/highstock/series.chaikin
 class HighchartsChaikinSeries extends HighchartsSeries {
+  /// Highcharts Options Widget.
   List<List<dynamic>>? data;
+
+  /// The name of the series as shown in the legend, tooltip etc.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.chaikin.name
   String? name;
+
+  /// Configuration options for the HighchartsChaikinSeries.
   HighchartsChaikinSeriesOptions? options;
   List<dynamic>? points;
   @override
   get type => 'chaikin';
 
+  /// A `Chaikin Oscillator` series. If the type option is not specified, it is inherited from chart.type.
+  ///
+  /// API Docs: https://api.highcharts.com/highstock/series.chaikin
   HighchartsChaikinSeries({
     this.data,
     this.name,

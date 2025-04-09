@@ -28,9 +28,13 @@ import 'highcharts_options_base.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsPCSeriesParamsOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   double? period;
 
+  /// Highcharts Options Widget.
   HighchartsPCSeriesParamsOptions({this.period});
 
   @override

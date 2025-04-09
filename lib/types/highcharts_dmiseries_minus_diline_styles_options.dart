@@ -29,14 +29,26 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Styles for the -DI line.
- */
+/// Styles for the -DI line.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.dmi.minusDILine.styles
 class HighchartsDMISeriesMinusDILineStylesOptions
     extends HighchartsOptionsBase {
+  /// Color of the line.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.dmi.minusDILine.styles.lineColor
+
   String? lineColor;
+
+  /// Pixel width of the line.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.dmi.minusDILine.styles.lineWidth
+
   double? lineWidth;
 
+  /// Styles for the -DI line.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.dmi.minusDILine.styles
   HighchartsDMISeriesMinusDILineStylesOptions({this.lineColor, this.lineWidth});
 
   @override

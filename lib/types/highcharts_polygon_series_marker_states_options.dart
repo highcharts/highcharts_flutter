@@ -35,11 +35,29 @@ export 'highcharts_series_marker_states_select_options.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsPolygonSeriesMarkerStatesOptions extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   HighchartsPolygonSeriesMarkerStatesHoverOptions? hover;
+
+  /// The normal state of a single point marker. Currently only
+  /// used for setting animation when returning to normal state
+  /// from hover.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.polygon.marker.states.normal
+
   HighchartsSeriesMarkerStatesNormalOptions? normal;
+
+  /// The appearance of the point marker when selected. In order to
+  /// allow a point to be selected, set the
+  /// `series.allowPointSelect` option to true.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.polygon.marker.states.select
+
   HighchartsSeriesMarkerStatesSelectOptions? select;
 
+  /// Highcharts Options Widget.
   HighchartsPolygonSeriesMarkerStatesOptions(
       {this.hover, this.normal, this.select});
 

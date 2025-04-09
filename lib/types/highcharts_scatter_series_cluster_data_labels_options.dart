@@ -32,18 +32,38 @@ export 'highcharts_scatter_series_cluster_data_labels_style_options.dart';
  *
  * */
 
-/**
- * Options for the cluster data labels.
- */
+/// Options for the cluster data labels.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.scatter.cluster.dataLabels
 class HighchartsScatterSeriesClusterDataLabelsOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   String? align;
+
+  /// Highcharts Options Widget.
+
   bool? enabled;
+
+  /// Highcharts Options Widget.
+
   String? format;
+
+  /// Highcharts Options Widget.
+
   bool? inside;
+
+  /// Highcharts Options Widget.
+
   HighchartsScatterSeriesClusterDataLabelsStyleOptions? style;
+
+  /// Highcharts Options Widget.
+
   String? verticalAlign;
 
+  /// Options for the cluster data labels.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.scatter.cluster.dataLabels
   HighchartsScatterSeriesClusterDataLabelsOptions(
       {this.align,
       this.enabled,

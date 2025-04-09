@@ -35,12 +35,26 @@ export 'highcharts_heatmap_series_data_marker_states_select_options.dart';
  *
  * */
 
+/// Highcharts Options Widget.
 class HighchartsHeatmapSeriesDataMarkerStatesOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   HighchartsHeatmapSeriesDataMarkerStatesHoverOptions? hover;
+
+  /// The normal state of a single point marker. Currently only
+  /// used for setting animation when returning to normal state
+  /// from hover.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.heatmap.data.marker.states.normal
+
   HighchartsSeriesMarkerStatesNormalOptions? normal;
+
+  /// Highcharts Options Widget.
+
   HighchartsHeatmapSeriesDataMarkerStatesSelectOptions? select;
 
+  /// Highcharts Options Widget.
   HighchartsHeatmapSeriesDataMarkerStatesOptions(
       {this.hover, this.normal, this.select});
 

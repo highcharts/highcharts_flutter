@@ -29,19 +29,43 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Specifying a `markerEnd` here will create an arrow symbol
- * indicating the direction of flow at the destination of one individual link.
- * If one has been previously specified at the higher level option it will be
- * overridden for the current link.
- */
+/// Specifying a `markerEnd` here will create an arrow symbol
+/// indicating the direction of flow at the destination of one individual link.
+/// If one has been previously specified at the higher level option it will be
+/// overridden for the current link.
+///
+/// API Docs: https://api.highcharts.com/highcharts/series.flowmap.data.markerEnd
 class HighchartsFlowMapSeriesDataMarkerEndOptions
     extends HighchartsOptionsBase {
+  /// Enable or disable the `markerEnd`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.flowmap.data.markerEnd.enabled
+
   bool? enabled;
+
+  /// Height of the `markerEnd`. Can be a number in pixels
+  /// or a percentage based on the weight of the link.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.flowmap.data.markerEnd.height
+
   dynamic height;
+
+  /// Change the shape of the `markerEnd`. Can be `arrow` or `mushroom`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.flowmap.data.markerEnd.markerType
+
   String? markerType;
+
+  /// Width of the `markerEnd`. Can be a number in pixels
+  /// or a percentage based on the weight of the link.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.flowmap.data.markerEnd.width
+
   dynamic width;
 
+  /// Specifying a `markerEnd` here will create an arrow symbol indicating the direction of flow at the destination of one individual link. If one has been previously specified at the higher level option it will be overridden for the current link.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.flowmap.data.markerEnd
   HighchartsFlowMapSeriesDataMarkerEndOptions(
       {this.enabled, this.height, this.markerType, this.width});
 

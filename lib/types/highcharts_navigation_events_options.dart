@@ -29,15 +29,39 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Events to communicate between Stock Tools and custom GUI.
- */
+/// Events to communicate between Stock Tools and custom GUI.
+///
+/// API Docs: https://api.highcharts.com/highcharts/navigation.events
 class HighchartsNavigationEventsOptions extends HighchartsOptionsBase {
+  /// A `closePopup` event. Fired when Popup should be hidden, for example
+  /// when clicking on an annotation again.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.events.closePopup
+
   dynamic closePopup;
+
+  /// Event fired when button state should change, for example after
+  /// adding an annotation.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.events.deselectButton
+
   dynamic deselectButton;
+
+  /// Event fired on a button click.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.events.selectButton
+
   dynamic selectButton;
+
+  /// A `showPopup` event. Fired when selecting for example an annotation.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.events.showPopup
+
   dynamic showPopup;
 
+  /// Events to communicate between Stock Tools and custom GUI.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.events
   HighchartsNavigationEventsOptions(
       {this.closePopup,
       this.deselectButton,

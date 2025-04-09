@@ -11,50 +11,13 @@
  *
  */
 
-import 'package:flutter/material.dart';
+import 'dart:async';
 
+import 'package:flutter/cupertino.dart';
 import 'package:highcharts_flutter/highcharts.dart';
 
-/* *
- *
- *  Constants
- *
- * */
-
-const Map<String, Function> kSeriesTypeMap = {
-  'Area': area,
-  'AreaSpline': areaspline,
-  'Bar': bar,
-  'Column': column,
-  'Line': line,
-  'Pie': pie,
-  'Scatter': scatter,
-  'Spline': spline,
-};
-
-/* *
- *
- *  Functions
- *
- * */
-
-HighchartsAreaSeries area({List<List<dynamic>>? data, String? name}) =>
-    HighchartsAreaSeries(data: data, name: name);
-HighchartsAreaSplineSeries areaspline(
-        {List<List<dynamic>>? data, String? name}) =>
-    HighchartsAreaSplineSeries(data: data, name: name);
-HighchartsBarSeries bar({List<List<dynamic>>? data, String? name}) =>
-    HighchartsBarSeries(data: data, name: name);
-HighchartsColumnSeries column({List<List<dynamic>>? data, String? name}) =>
-    HighchartsColumnSeries(data: data, name: name);
-HighchartsLineSeries line({List<List<dynamic>>? data, String? name}) =>
-    HighchartsLineSeries(data: data, name: name);
-HighchartsPieSeries pie({List<List<dynamic>>? data, String? name}) =>
-    HighchartsPieSeries(data: data, name: name);
-HighchartsScatterSeries scatter({List<List<dynamic>>? data, String? name}) =>
-    HighchartsScatterSeries(data: data, name: name);
-HighchartsSplineSeries spline({List<List<dynamic>>? data, String? name}) =>
-    HighchartsSplineSeries(data: data, name: name);
+import 'series_type_map.dart';
+import 'state.dart';
 
 /* *
  *
@@ -62,125 +25,116 @@ HighchartsSplineSeries spline({List<List<dynamic>>? data, String? name}) =>
  *
  * */
 
-class ChartScaffold extends StatefulWidget {
-  const ChartScaffold({
-    super.key,
-    required this.data,
-    this.options,
-    this.subtitle,
-    this.title,
-  });
+class ChartScaffold extends StatelessWidget {
+  const ChartScaffold(
+      {super.key,
+      required this.data,
+      this.pageTitle,
+      this.subtitle,
+      this.title});
 
   final List<List<dynamic>> data;
 
-  final HighchartsOptions? options;
+  final String? pageTitle;
 
   final String? subtitle;
 
   final String? title;
 
-  @override
-  State<ChartScaffold> createState() => _ChartScaffoldState();
-}
-
-class _ChartScaffoldState extends State<ChartScaffold> {
-  late final HighchartsChart _chart;
-
-  String? _seriesType;
-
-  void _setSeriesType(String? seriesType, [bool? init]) {
-    _seriesType = seriesType;
-
-    dynamic series = kSeriesTypeMap[seriesType];
-
-    if (series == null) {
-      return;
-    }
-
-    if (seriesType == 'Bar') {
-      _chart.options.chart = HighchartsChartOptions(inverted: true);
-    } else {
-      _chart.options.chart = HighchartsChartOptions(inverted: false);
-    }
-
-    _chart.options.series = [series(data: widget.data)];
-
-    if (init != true) {
-      _chart.refresh();
-    }
+  void _updateChartTitleAlign(String align) {
+    state.chartTitleAlign.value = align;
   }
 
-  void _setTitleAlign(String? align) {
-    var options = _chart.options;
-
-    options.title = options.title ?? HighchartsTitleOptions();
-    options.title?.align = align ?? options.title?.align;
-
-    _chart.refresh();
-  }
-
-  @override
-  void initState() {
-    super.initState();
-
-    var options = widget.options ?? HighchartsOptions();
+  void _updateChart(HighchartsChart chart) {
+    var options = chart.options;
+    var series = kSeriesTypeMap[state.chartSeriesType.value];
 
     options.chart = options.chart ?? HighchartsChartOptions();
-    options.chart?.height = options.chart?.height ?? 600;
+    options.chart?.inverted = state.chartSeriesType.value == 'Bar';
 
     options.title = options.title ?? HighchartsTitleOptions();
-    options.title?.align = options.title?.align ?? 'center';
-    options.title?.text = options.title?.text ?? widget.title;
+    options.title?.align = state.chartTitleAlign.value.toLowerCase();
+    options.title?.text = options.title?.text ?? title;
+
+    if (series != null) {
+      options.series = [series(data: data)];
+    }
 
     options.subtitle = options.subtitle ?? HighchartsSubtitleOptions();
-    options.subtitle?.text = options.subtitle?.text ?? widget.subtitle;
+    options.subtitle?.text = options.subtitle?.text ?? subtitle;
 
     options.xAxis = options.xAxis ?? [HighchartsXAxisOptions()];
     options.xAxis?[0].type = (options.xAxis?[0].type ??
-        (widget.data[0][0] is String ? 'category' : 'linear'));
+        (data[0][0] is String ? 'category' : 'linear'));
 
-    _chart = HighchartsChart(options);
-
-    _setSeriesType('Bar', true);
+    chart.refresh();
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scrollbar(
-      child: ListView(
-        padding: const EdgeInsets.all(21),
-        children: <Widget>[
-          _chart,
-          const SizedBox(height: 21),
-          Wrap(
-            runSpacing: 10.5,
-            spacing: 21,
-            children: ['Left', 'Center', 'Right']
-                .map((align) => ChoiceChip(
-                      onSelected: (_) =>
-                          setState(() => _setTitleAlign(align.toLowerCase())),
-                      selected:
-                          _chart.options.title?.align == align.toLowerCase(),
-                      label: Text(align),
-                    ))
-                .toList(),
+    final chart = HighchartsChart(HighchartsOptions());
+    final textTheme = CupertinoTheme.of(context).textTheme;
+
+    // Initial chart update
+    Timer(const Duration(seconds: 1), () => _updateChart(chart));
+
+    // Dynamic chart update depending on state changes
+    state.addListener(() => _updateChart(chart));
+
+    return CupertinoPageScaffold(
+      navigationBar: CupertinoNavigationBar(middle: Text(pageTitle ?? 'Chart')),
+      child: SafeArea(
+          child: CupertinoScrollbar(
+        child: ListView(children: <Widget>[
+          CupertinoListSection(
+            header: Text('Chart Title'),
+            children: <Widget>[
+              CupertinoListTile(
+                title: const Text('Alignment'),
+                trailing: ValueListenableBuilder(
+                    valueListenable: state.chartTitleAlign,
+                    builder: (context, activeAlign, __) => Wrap(
+                          spacing: 7,
+                          children: <String, IconData>{
+                            'Left': CupertinoIcons.text_alignleft,
+                            'Center': CupertinoIcons.text_aligncenter,
+                            'Right': CupertinoIcons.text_alignright,
+                          }
+                              .entries
+                              .map((entry) => (entry.key == activeAlign
+                                  ? CupertinoButton.tinted(
+                                      onPressed: () =>
+                                          _updateChartTitleAlign(entry.key),
+                                      child: Icon(entry.value),
+                                    )
+                                  : CupertinoButton(
+                                      onPressed: () =>
+                                          _updateChartTitleAlign(entry.key),
+                                      child: Icon(entry.value),
+                                    )))
+                              .toList(),
+                        )),
+              ),
+            ],
           ),
-          const SizedBox(height: 21),
-          DropdownMenu<String>(
-            initialSelection: _seriesType,
-            key: UniqueKey(),
-            width: double.infinity,
-            onSelected: (seriesType) =>
-                setState(() => _setSeriesType(seriesType)),
-            dropdownMenuEntries: kSeriesTypeMap.keys
-                .map((seriesType) => DropdownMenuEntry(
-                      label: seriesType,
-                      value: seriesType,
-                    ))
-                .toList(),
+          CupertinoListSection(
+            header: Text('Series Type'),
+            children: <Widget>[
+              CupertinoListTile(
+                title: ValueListenableBuilder(
+                  valueListenable: state.chartSeriesType,
+                  builder: (_, type, __) => Text(type),
+                ),
+                trailing: Icon(CupertinoIcons.forward,
+                    color: textTheme.navActionTextStyle.color),
+                onTap: () =>
+                    Navigator.of(context).pushNamed('/chart/series-type'),
+              ),
+            ],
           ),
-        ],
-      ),
+          chart,
+        ]),
+      )),
     );
   }
 }

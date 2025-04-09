@@ -29,14 +29,22 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/**
- * Language options for sonification.
- */
+/// Language options for sonification.
+///
+/// API Docs: https://api.highcharts.com/highcharts/lang.accessibility.sonification
 class HighchartsLangAccessibilitySonificationOptions
     extends HighchartsOptionsBase {
+  /// Highcharts Options Widget.
+
   String? playAsSoundButtonText;
+
+  /// Highcharts Options Widget.
+
   String? playAsSoundClickAnnouncement;
 
+  /// Language options for sonification.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/lang.accessibility.sonification
   HighchartsLangAccessibilitySonificationOptions(
       {this.playAsSoundButtonText, this.playAsSoundClickAnnouncement});
 
