@@ -4,11 +4,11 @@ Highcharts Flutter
 This is the official Highcharts Flutter integration. It's currently in a beta
 state.
 
+For more information about this integration, visit our dedicated [Flutter integration page](https://www.highcharts.com/integrations/flutter/). You'll discover the key features including cross-platform compatibility, extensive chart type support, and details about additional Highcharts products like Maps, Stock, Gantt.
+
 Use Highcharts widgets for interactive charts right in your Flutter app. All
 options are available as widgets and can be adjusted and with
 `HighchartsChart.refresh()` dynamically applied.
-
-
 
 Examples
 --------
