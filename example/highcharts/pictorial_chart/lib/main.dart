@@ -122,42 +122,42 @@ class _MyHomePageState extends State<MyHomePage> {
                     series: [
                       HighchartsPictorialSeries(
                         options: HighchartsPictorialSeriesOptions(),
-                        name: "Daylight",
+                        name: 'Daylight',
                         data: [
                           [0, 6500]
                         ],
                       ),
                       HighchartsPictorialSeries(
                         options: HighchartsPictorialSeriesOptions(),
-                        name: "Moonlight",
+                        name: 'Moonlight',
                         data: [
                           [0, 4000],
                         ],
                       ),
                       HighchartsPictorialSeries(
                         options: HighchartsPictorialSeriesOptions(),
-                        name: "Morning/Evening Sun",
+                        name: 'Morning/Evening Sun',
                         data: [
                           [0, 3500],
                         ],
                       ),
                       HighchartsPictorialSeries(
                         options: HighchartsPictorialSeriesOptions(),
-                        name: "Lightbulb",
+                        name: 'Lightbulb',
                         data: [
                           [0, 3000],
                         ],
                       ),
                       HighchartsPictorialSeries(
                         options: HighchartsPictorialSeriesOptions(),
-                        name: "Sunrise/sunset",
+                        name: 'Sunrise/sunset',
                         data: [
                           [0, 2500],
                         ],
                       ),
                       HighchartsPictorialSeries(
                         options: HighchartsPictorialSeriesOptions(),
-                        name: "Candle flame",
+                        name: 'Candle flame',
                         data: [
                           [0, 1800],
                         ],

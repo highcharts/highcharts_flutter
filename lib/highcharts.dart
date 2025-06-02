@@ -16,6 +16,7 @@
 
 import 'dart:convert' show utf8;
 
+import 'package:flutter/foundation.dart' show kDebugMode;
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import 'package:webview_flutter_android/webview_flutter_android.dart';
@@ -23,7 +24,7 @@ import 'package:webview_flutter_wkwebview/webview_flutter_wkwebview.dart';
 import ''
     if (dart.library.js_interop) 'package:highcharts_flutter_webwebview/webview_flutter_web.dart';
 
-import 'types/highcharts_options.dart';
+import 'options/highcharts_options.dart';
 
 /* *
  *
@@ -31,60 +32,61 @@ import 'types/highcharts_options.dart';
  *
  * */
 
-export 'types/highcharts_options.dart';
-export 'types/highcharts_arc_diagram_series.dart';
-export 'types/highcharts_area_series.dart';
-export 'types/highcharts_area_range_series.dart';
-export 'types/highcharts_area_spline_series.dart';
-export 'types/highcharts_area_spline_range_series.dart';
-export 'types/highcharts_bar_series.dart';
-export 'types/highcharts_bellcurve_series.dart';
-export 'types/highcharts_box_plot_series.dart';
-export 'types/highcharts_bubble_series.dart';
-export 'types/highcharts_bullet_series.dart';
-export 'types/highcharts_column_series.dart';
-export 'types/highcharts_column_pyramid_series.dart';
-export 'types/highcharts_column_range_series.dart';
-export 'types/highcharts_cylinder_series.dart';
-export 'types/highcharts_dependency_wheel_series.dart';
-export 'types/highcharts_dumbbell_series.dart';
-export 'types/highcharts_error_bar_series.dart';
-export 'types/highcharts_funnel_series.dart';
-export 'types/highcharts_funnel3dseries.dart';
-export 'types/highcharts_gauge_series.dart';
-export 'types/highcharts_heatmap_series.dart';
-export 'types/highcharts_histogram_series.dart';
-export 'types/highcharts_item_series.dart';
-export 'types/highcharts_line_series.dart';
-export 'types/highcharts_lollipop_series.dart';
-export 'types/highcharts_networkgraph_series.dart';
-export 'types/highcharts_organization_series.dart';
-export 'types/highcharts_packed_bubble_series.dart';
-export 'types/highcharts_pareto_series.dart';
-export 'types/highcharts_pictorial_series.dart';
-export 'types/highcharts_pie_series.dart';
-export 'types/highcharts_polygon_series.dart';
-export 'types/highcharts_pyramid_series.dart';
-export 'types/highcharts_pyramid3dseries.dart';
-export 'types/highcharts_sankey_series.dart';
-export 'types/highcharts_scatter_series.dart';
-export 'types/highcharts_scatter3dseries.dart';
-export 'types/highcharts_solid_gauge_series.dart';
-export 'types/highcharts_spline_series.dart';
-export 'types/highcharts_streamgraph_series.dart';
-export 'types/highcharts_sunburst_series.dart';
-export 'types/highcharts_tilemap_series.dart';
-export 'types/highcharts_timeline_series.dart';
-export 'types/highcharts_treegraph_series.dart';
-export 'types/highcharts_treemap_series.dart';
-export 'types/highcharts_variable_pie_series.dart';
-export 'types/highcharts_variwide_series.dart';
-export 'types/highcharts_vector_series.dart';
-export 'types/highcharts_venn_series.dart';
-export 'types/highcharts_waterfall_series.dart';
-export 'types/highcharts_windbarb_series.dart';
-export 'types/highcharts_wordcloud_series.dart';
-export 'types/highcharts_xrange_series.dart';
+export 'options/highcharts_options.dart';
+export 'utilities/highcharts_helpers.dart';
+export 'options/highcharts_arc_diagram_series.dart';
+export 'options/highcharts_area_series.dart';
+export 'options/highcharts_area_range_series.dart';
+export 'options/highcharts_area_spline_series.dart';
+export 'options/highcharts_area_spline_range_series.dart';
+export 'options/highcharts_bar_series.dart';
+export 'options/highcharts_bellcurve_series.dart';
+export 'options/highcharts_box_plot_series.dart';
+export 'options/highcharts_bubble_series.dart';
+export 'options/highcharts_bullet_series.dart';
+export 'options/highcharts_column_series.dart';
+export 'options/highcharts_column_pyramid_series.dart';
+export 'options/highcharts_column_range_series.dart';
+export 'options/highcharts_cylinder_series.dart';
+export 'options/highcharts_dependency_wheel_series.dart';
+export 'options/highcharts_dumbbell_series.dart';
+export 'options/highcharts_error_bar_series.dart';
+export 'options/highcharts_funnel_series.dart';
+export 'options/highcharts_funnel3dseries.dart';
+export 'options/highcharts_gauge_series.dart';
+export 'options/highcharts_heatmap_series.dart';
+export 'options/highcharts_histogram_series.dart';
+export 'options/highcharts_item_series.dart';
+export 'options/highcharts_line_series.dart';
+export 'options/highcharts_lollipop_series.dart';
+export 'options/highcharts_networkgraph_series.dart';
+export 'options/highcharts_organization_series.dart';
+export 'options/highcharts_packed_bubble_series.dart';
+export 'options/highcharts_pareto_series.dart';
+export 'options/highcharts_pictorial_series.dart';
+export 'options/highcharts_pie_series.dart';
+export 'options/highcharts_polygon_series.dart';
+export 'options/highcharts_pyramid_series.dart';
+export 'options/highcharts_pyramid3dseries.dart';
+export 'options/highcharts_sankey_series.dart';
+export 'options/highcharts_scatter_series.dart';
+export 'options/highcharts_scatter3dseries.dart';
+export 'options/highcharts_solid_gauge_series.dart';
+export 'options/highcharts_spline_series.dart';
+export 'options/highcharts_streamgraph_series.dart';
+export 'options/highcharts_sunburst_series.dart';
+export 'options/highcharts_tilemap_series.dart';
+export 'options/highcharts_timeline_series.dart';
+export 'options/highcharts_treegraph_series.dart';
+export 'options/highcharts_treemap_series.dart';
+export 'options/highcharts_variable_pie_series.dart';
+export 'options/highcharts_variwide_series.dart';
+export 'options/highcharts_vector_series.dart';
+export 'options/highcharts_venn_series.dart';
+export 'options/highcharts_waterfall_series.dart';
+export 'options/highcharts_windbarb_series.dart';
+export 'options/highcharts_wordcloud_series.dart';
+export 'options/highcharts_xrange_series.dart';
 
 /* *
  *
@@ -118,34 +120,63 @@ const String kHighchartsChartHTML = '''
 
 const String kHighchartsChartJS = '''
   (function (scope) {
-    scope.HighchartsFlutter = {
-      chart: Highcharts.chart('container', {
-        chart: {
-          backgroundColor: '#FFF0'
-        },
-        exporting: {
-          enabled: false
-        },
-        title: {
-          text: void 0
+    const HighchartsFlutter = scope.HighchartsFlutter = {
+      chart: void 0,
+      factory: Highcharts.chart,
+      init: function (options) {
+        if (scope.self === scope.top && scope.document.readyState === 'loading') {
+          addEventListener('load', function () { HighchartsFlutter.update(options, true); });
+        } else {
+          HighchartsFlutter.update(options, true);
         }
-      }),
+      },
       update: function (options, redraw = true, animation = true) {
-        var chart = HighchartsFlutter.chart;
-        // There is no update for options3d, so we have to destroy and
-        // create chart
-        if (
-            !chart.options.options3d?.enabled &&
-            options.chart?.options3d?.enabled
+        let chart = HighchartsFlutter.chart;
+
+        // Make sure to use flexible sizing inside the webview (#54)
+        if (typeof options?.chart?.height !== 'undefined') {
+            options.chart.height = options.chart.height === 0 ? null : options.chart.height;
+        }
+        if (typeof options?.chart?.width !== 'undefined') {
+            options.chart.width = options.chart.width === 0 ? null : options?.chart?.width;
+        }
+
+        // Create chart on initial update.
+        if (!chart) {
+          chart = HighchartsFlutter.chart = HighchartsFlutter.factory(
+            'container',
+            Highcharts.merge(
+              {
+                chart: {
+                  backgroundColor: '#FFF0'
+                },
+                exporting: {
+                  enabled: false
+                },
+                title: {
+                  text: void 0
+                },
+              },
+              options
+            )
+          );
+
+        // Recreate chart if no update for options3d.
+        } else if (
+          !chart.options.options3d?.enabled &&
+          options.chart?.options3d?.enabled
         ) {
           chart.destroy();
-          HighchartsFlutter.chart = Highcharts.chart('container', options);
+          HighchartsFlutter.chart = HighchartsFlutter.factory('container', options);
+
+        // Regular chart update.
         } else {
           chart.update(options, redraw, true, animation);
         }
 
-        if (document.title !== chart.title) {
-            document.title = chart.title.textStr;
+        // Sync the document title with the chart title for accessibility.
+        if (scope.document.title !== chart.title) {
+          scope.document.title = chart.title.textStr || 'Chart';
         }
       }
     };
@@ -163,9 +194,10 @@ String _scriptTag(String? script) {
     return '';
   }
 
-  if (!script.startsWith('//') &&
+  if (!script.startsWith('data:') &&
       !script.startsWith('http://') &&
-      !script.startsWith('https://')) {
+      !script.startsWith('https://') &&
+      (script.startsWith('/*') || !script.startsWith('/'))) {
     script = Uri.dataFromString(
       script,
       mimeType: 'text/javascript',
@@ -189,6 +221,9 @@ String _scriptTag(String? script) {
  * */
 
 class HighchartsChart extends StatefulWidget {
+  /// Activate debug mode.
+  final bool debug;
+
   /// Custom JavaScript to inject into the webView. This will be executed after
   /// Highcharts Flutter code, but before the initial chart update with the
   /// defined options.
@@ -209,6 +244,7 @@ class HighchartsChart extends StatefulWidget {
 
   HighchartsChart(this.options,
       {super.key,
+      this.debug = kDebugMode,
       this.javaScript,
       this.javaScriptModules = const [
         'https://code.highcharts.com/highcharts.js',
@@ -223,24 +259,15 @@ class HighchartsChart extends StatefulWidget {
         'https://code.highcharts.com/modules/accessibility.js',
       ]});
 
-  String _getJS(String json, [bool redraw = true]) {
-    return [
-      ...javaScriptModules,
-      kHighchartsChartJS,
-      javaScript,
-      'HighchartsFlutter.update($json, $redraw);',
-    ].map(_scriptTag).join('\n');
+  @override
+  State<HighchartsChart> createState() {
+    return _HighchartsChartState();
   }
 
   void refresh([bool redraw = true]) {
     String json = options.toJSON();
-    debugPrint(json);
+    if (debug) debugPrint(json);
     webViewController.runJavaScript('HighchartsFlutter.update($json, $redraw)');
-  }
-
-  @override
-  State<HighchartsChart> createState() {
-    return _HighchartsChartState();
   }
 }
 
@@ -315,33 +342,42 @@ class _HighchartsChartState extends State<HighchartsChart> {
     if (webViewController.platform is AndroidWebViewController ||
         webViewController.platform is WebKitWebViewController) {
       webViewController
-        ..setJavaScriptMode(JavaScriptMode.unrestricted)
         ..setBackgroundColor(const Color(0x00000000))
+        ..setJavaScriptMode(JavaScriptMode.unrestricted)
         ..setNavigationDelegate(NavigationDelegate(
-            onNavigationRequest: (NavigationRequest request) {
-          String url = request.url;
+          onNavigationRequest: (NavigationRequest request) {
+            String url = request.url;
 
-          debugPrint(url);
+            if (widget.debug) debugPrint(url);
 
-          if (url == 'about:blank' || url.startsWith('http://127.0.0.1')) {
-            return NavigationDecision.navigate;
-          }
+            if (url == 'about://' ||
+                url == 'about:blank' ||
+                url.startsWith('http://127.0.0.1')) {
+              return NavigationDecision.navigate;
+            }
 
-          return NavigationDecision.prevent;
-        }, onPageFinished: (String url) {
-          widget.refresh();
-        }));
+            return NavigationDecision.prevent;
+          },
+        ));
     }
 
     webView = WebViewWidget(controller: webViewController);
 
-    String json = widget.options.toJSON();
+    final String json = widget.options.toJSON();
 
-    debugPrint(json);
+    if (widget.debug) debugPrint(json);
+
+    final String scripts = <String?>[
+      ...widget.javaScriptModules,
+      kHighchartsChartJS,
+      (widget.debug ? 'HighchartsFlutter.debug=true;' : null),
+      widget.javaScript,
+      'HighchartsFlutter.init($json);',
+    ].map(_scriptTag).join('\n');
 
     webViewController.loadHtmlString('''
       $kHighchartsChartHTML
-      ${widget._getJS(json)}
+      $scripts
     ''');
   }
 }

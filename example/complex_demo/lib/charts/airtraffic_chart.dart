@@ -13,7 +13,7 @@ class AirtrafficChart extends StatelessWidget {
 
   @override
   Widget build(context) {
-    return ChartScaffold(
+    return const ChartScaffold(
       pageTitle: 'Airtraffic',
       title: 'Air transport in Norway 2024-11',
       subtitle: 'in # of passengers',

@@ -28,14 +28,14 @@ class RouteOverview extends StatelessWidget {
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
         navigationBar:
-            CupertinoNavigationBar(middle: Text('Highcharts Flutter')),
+            const CupertinoNavigationBar(middle: Text('Highcharts Flutter')),
         child: SafeArea(
             child: CupertinoScrollbar(
                 child: Column(
           children: <Widget>[
             Expanded(
                 child: CupertinoListSection(
-              header: Text('Select Chart'),
+              header: const Text('Select Chart'),
               children: kCharts.entries
                   .map((entry) => Padding(
                       padding: const EdgeInsets.symmetric(
@@ -43,9 +43,9 @@ class RouteOverview extends StatelessWidget {
                         vertical: 10,
                       ),
                       child: CupertinoListTile(
-                          leading: Icon(CupertinoIcons.chart_pie_fill),
+                          leading: const Icon(CupertinoIcons.chart_pie_fill),
                           title: Text(entry.key),
-                          trailing: Icon(CupertinoIcons.forward,
+                          trailing: const Icon(CupertinoIcons.forward,
                               color: CupertinoColors.secondaryLabel),
                           onTap: () => Navigator.of(context)
                               .pushNamed('/charts/${entry.key}'))))

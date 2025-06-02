@@ -45,109 +45,128 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             HighchartsChart(HighchartsOptions(
-                title: HighchartsTitleOptions(
-                  text: 'U.S Solar Employment Growth',
-                  align: 'left',
+              title: HighchartsTitleOptions(
+                text: 'U.S Solar Employment Growth',
+                align: 'left',
+              ),
+              subtitle: HighchartsSubtitleOptions(
+                text:
+                    'By Job Category. Source: <a href="https://irecusa.org/programs/solar-jobs-census/" target="_blank">IREC</a>.',
+              ),
+              yAxis: [
+                HighchartsYAxisOptions(
+                    title: HighchartsYAxisTitleOptions(
+                  text: 'Number of Employees',
+                )),
+              ],
+              xAxis: [
+                HighchartsXAxisOptions(
+                    accessibility: HighchartsXAxisAccessibilityOptions(
+                  rangeDescription: 'Range: 2010 to 2022',
+                )),
+              ],
+              legend: HighchartsLegendOptions(
+                  layout: 'horizontal',
+                  align: 'center',
+                  verticalAlign: 'bottom'),
+              plotOptions: HighchartsPlotOptions(
+                series: HighchartsSeriesOptions(
+                  pointStart: 2010,
                 ),
-                subtitle: HighchartsSubtitleOptions(
-                  text:
-                      'By Job Category. Source: <a href="https://irecusa.org/programs/solar-jobs-census/" target="_blank">IREC</a>.',
+              ),
+              series: [
+                HighchartsLineSeries(
+                  name: 'Installation & Developers',
+                  dataPoints: [
+                    HighchartsLineSeriesDataOptions(y: 43934),
+                    HighchartsLineSeriesDataOptions(y: 48656),
+                    HighchartsLineSeriesDataOptions(y: 65165),
+                    HighchartsLineSeriesDataOptions(y: 81827),
+                    HighchartsLineSeriesDataOptions(y: 112143),
+                    HighchartsLineSeriesDataOptions(y: 142383),
+                    HighchartsLineSeriesDataOptions(y: 171533),
+                    HighchartsLineSeriesDataOptions(y: 165174),
+                    HighchartsLineSeriesDataOptions(y: 155157),
+                    HighchartsLineSeriesDataOptions(y: 161454),
+                    HighchartsLineSeriesDataOptions(y: 154610),
+                    HighchartsLineSeriesDataOptions(y: 168960),
+                    HighchartsLineSeriesDataOptions(y: 171558),
+                  ],
                 ),
-                yAxis: [
-                  HighchartsYAxisOptions(
-                      title: HighchartsYAxisTitleOptions(
-                    text: 'Number of Employees',
-                  )),
-                ],
-                xAxis: [
-                  HighchartsXAxisOptions(
-                      accessibility: HighchartsXAxisAccessibilityOptions(
-                    rangeDescription: 'Range: 2010 to 2022',
-                  )),
-                ],
-                legend: HighchartsLegendOptions(
-                    layout: 'horizontal',
-                    align: 'center',
-                    verticalAlign: 'bottom'),
-                series: [
-                  HighchartsLineSeries(
-                      name: 'Installation & Developers',
-                      data: [
-                        [2010, 43934],
-                        [2011, 48656],
-                        [2012, 65165],
-                        [2013, 81827],
-                        [2014, 112143],
-                        [2015, 142383],
-                        [2016, 171533],
-                        [2017, 165174],
-                        [2018, 155157],
-                        [2019, 161454],
-                        [2020, 154610],
-                        [2021, 168960],
-                        [2022, 171558]
-                      ]),
-                  HighchartsLineSeries(name: 'Manufacturing', data: [
-                    [2010, 24916],
-                    [2011, 37941],
-                    [2012, 29742],
-                    [2013, 29851],
-                    [2014, 32490],
-                    [2015, 30282],
-                    [2016, 38121],
-                    [2017, 36885],
-                    [2018, 33726],
-                    [2019, 34243],
-                    [2020, 31050],
-                    [2021, 33099],
-                    [2022, 33473]
-                  ]),
-                  HighchartsLineSeries(name: 'Sales & Distribution', data: [
-                    [2010, 11744],
-                    [2011, 30000],
-                    [2012, 16005],
-                    [2013, 19771],
-                    [2014, 20185],
-                    [2015, 24377],
-                    [2016, 32147],
-                    [2017, 30912],
-                    [2018, 29243],
-                    [2019, 29213],
-                    [2020, 25663],
-                    [2021, 28978],
-                    [2022, 30618]
-                  ]),
-                  HighchartsLineSeries(name: 'Operations & Maintenance', data: [
-                    [2010, null],
-                    [2011, null],
-                    [2012, null],
-                    [2013, null],
-                    [2014, null],
-                    [2015, null],
-                    [2016, null],
-                    [2017, null],
-                    [2018, 11164],
-                    [2019, 11218],
-                    [2020, 10077],
-                    [2021, 12530],
-                    [2022, 16585]
-                  ]),
-                  HighchartsLineSeries(name: 'Other', data: [
-                    [2010, 21908],
-                    [2011, 5548],
-                    [2012, 8105],
-                    [2013, 11248],
-                    [2014, 8989],
-                    [2015, 11816],
-                    [2016, 18274],
-                    [2017, 17300],
-                    [2018, 13053],
-                    [2019, 11906],
-                    [2020, 10073],
-                    [2021, 11471],
-                    [2022, 11648]
-                  ]),
-                ]))
+                HighchartsLineSeries(
+                  name: 'Manufacturing',
+                  dataPoints: [
+                    HighchartsLineSeriesDataOptions(y: 24916),
+                    HighchartsLineSeriesDataOptions(y: 37941),
+                    HighchartsLineSeriesDataOptions(y: 29742),
+                    HighchartsLineSeriesDataOptions(y: 29851),
+                    HighchartsLineSeriesDataOptions(y: 32490),
+                    HighchartsLineSeriesDataOptions(y: 30282),
+                    HighchartsLineSeriesDataOptions(y: 38121),
+                    HighchartsLineSeriesDataOptions(y: 36885),
+                    HighchartsLineSeriesDataOptions(y: 33726),
+                    HighchartsLineSeriesDataOptions(y: 34243),
+                    HighchartsLineSeriesDataOptions(y: 31050),
+                    HighchartsLineSeriesDataOptions(y: 33099),
+                    HighchartsLineSeriesDataOptions(y: 33473),
+                  ],
+                ),
+                HighchartsLineSeries(
+                  name: 'Sales & Distribution',
+                  dataPoints: [
+                    HighchartsLineSeriesDataOptions(y: 11744),
+                    HighchartsLineSeriesDataOptions(y: 30000),
+                    HighchartsLineSeriesDataOptions(y: 16005),
+                    HighchartsLineSeriesDataOptions(y: 19771),
+                    HighchartsLineSeriesDataOptions(y: 20185),
+                    HighchartsLineSeriesDataOptions(y: 24377),
+                    HighchartsLineSeriesDataOptions(y: 32147),
+                    HighchartsLineSeriesDataOptions(y: 30912),
+                    HighchartsLineSeriesDataOptions(y: 29243),
+                    HighchartsLineSeriesDataOptions(y: 29213),
+                    HighchartsLineSeriesDataOptions(y: 25663),
+                    HighchartsLineSeriesDataOptions(y: 28978),
+                    HighchartsLineSeriesDataOptions(y: 30618),
+                  ],
+                ),
+                HighchartsLineSeries(
+                  name: 'Operations & Maintenance',
+                  dataPoints: [
+                    HighchartsLineSeriesDataOptions(y: null),
+                    HighchartsLineSeriesDataOptions(y: null),
+                    HighchartsLineSeriesDataOptions(y: null),
+                    HighchartsLineSeriesDataOptions(y: null),
+                    HighchartsLineSeriesDataOptions(y: null),
+                    HighchartsLineSeriesDataOptions(y: null),
+                    HighchartsLineSeriesDataOptions(y: null),
+                    HighchartsLineSeriesDataOptions(y: null),
+                    HighchartsLineSeriesDataOptions(y: 11164),
+                    HighchartsLineSeriesDataOptions(y: 11218),
+                    HighchartsLineSeriesDataOptions(y: 10077),
+                    HighchartsLineSeriesDataOptions(y: 12530),
+                    HighchartsLineSeriesDataOptions(y: 16585),
+                  ],
+                ),
+                HighchartsLineSeries(
+                  name: 'Other',
+                  dataPoints: [
+                    HighchartsLineSeriesDataOptions(y: 21908),
+                    HighchartsLineSeriesDataOptions(y: 5548),
+                    HighchartsLineSeriesDataOptions(y: 8105),
+                    HighchartsLineSeriesDataOptions(y: 11248),
+                    HighchartsLineSeriesDataOptions(y: 8989),
+                    HighchartsLineSeriesDataOptions(y: 11816),
+                    HighchartsLineSeriesDataOptions(y: 18274),
+                    HighchartsLineSeriesDataOptions(y: 17300),
+                    HighchartsLineSeriesDataOptions(y: 13053),
+                    HighchartsLineSeriesDataOptions(y: 11906),
+                    HighchartsLineSeriesDataOptions(y: 10073),
+                    HighchartsLineSeriesDataOptions(y: 11471),
+                    HighchartsLineSeriesDataOptions(y: 11648),
+                  ],
+                ),
+              ],
+            ))
           ],
         ),
       ),

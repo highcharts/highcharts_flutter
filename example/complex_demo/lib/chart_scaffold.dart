@@ -87,9 +87,11 @@ class ChartScaffold extends StatelessWidget {
           child: CupertinoScrollbar(
         child: ListView(children: <Widget>[
           CupertinoListSection(
-            header: Text('Chart Title'),
+            header: const Text('Chart Title'),
             children: <Widget>[
               CupertinoListTile(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 21, vertical: 3),
                 title: const Text('Alignment'),
                 trailing: ValueListenableBuilder(
                     valueListenable: state.chartTitleAlign,
@@ -102,7 +104,7 @@ class ChartScaffold extends StatelessWidget {
                           }
                               .entries
                               .map((entry) => (entry.key == activeAlign
-                                  ? CupertinoButton.tinted(
+                                  ? CupertinoButton.filled(
                                       onPressed: () =>
                                           _updateChartTitleAlign(entry.key),
                                       child: Icon(entry.value),
@@ -118,7 +120,7 @@ class ChartScaffold extends StatelessWidget {
             ],
           ),
           CupertinoListSection(
-            header: Text('Series Type'),
+            header: const Text('Series Type'),
             children: <Widget>[
               CupertinoListTile(
                 title: ValueListenableBuilder(

@@ -16,6 +16,7 @@
 
 import 'dart:convert' show utf8;
 
+import 'package:flutter/foundation.dart' show kDebugMode;
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import 'package:webview_flutter_android/webview_flutter_android.dart';
@@ -23,7 +24,7 @@ import 'package:webview_flutter_wkwebview/webview_flutter_wkwebview.dart';
 import ''
     if (dart.library.js_interop) 'package:highcharts_flutter_webwebview/webview_flutter_web.dart';
 
-import 'types/highcharts_options.dart';
+import 'options/highcharts_options.dart';
 
 /* *
  *
@@ -31,9 +32,10 @@ import 'types/highcharts_options.dart';
  *
  * */
 
-export 'types/highcharts_options.dart';
-export 'types/highcharts_gantt_series.dart';
-export 'types/highcharts_xrange_series.dart';
+export 'options/highcharts_options.dart';
+export 'utilities/highcharts_helpers.dart';
+export 'options/highcharts_gantt_series.dart';
+export 'options/highcharts_xrange_series.dart';
 
 /* *
  *
@@ -67,34 +69,63 @@ const String kHighchartsGanttHTML = '''
 
 const String kHighchartsGanttJS = '''
   (function (scope) {
-    scope.HighchartsFlutter = {
-      chart: Highcharts.ganttChart('container', {
-        chart: {
-          backgroundColor: '#FFF0'
-        },
-        exporting: {
-          enabled: false
-        },
-        title: {
-          text: void 0
+    const HighchartsFlutter = scope.HighchartsFlutter = {
+      chart: void 0,
+      factory: Highcharts.ganttChart,
+      init: function (options) {
+        if (scope.self === scope.top && scope.document.readyState === 'loading') {
+          addEventListener('load', function () { HighchartsFlutter.update(options, true); });
+        } else {
+          HighchartsFlutter.update(options, true);
         }
-      }),
+      },
       update: function (options, redraw = true, animation = true) {
-        var chart = HighchartsFlutter.chart;
-        // There is no update for options3d, so we have to destroy and
-        // create chart
-        if (
-            !chart.options.options3d?.enabled &&
-            options.chart?.options3d?.enabled
+        let chart = HighchartsFlutter.chart;
+
+        // Make sure to use flexible sizing inside the webview (#54)
+        if (typeof options?.chart?.height !== 'undefined') {
+            options.chart.height = options.chart.height === 0 ? null : options.chart.height;
+        }
+        if (typeof options?.chart?.width !== 'undefined') {
+            options.chart.width = options.chart.width === 0 ? null : options?.chart?.width;
+        }
+
+        // Create chart on initial update.
+        if (!chart) {
+          chart = HighchartsFlutter.chart = HighchartsFlutter.factory(
+            'container',
+            Highcharts.merge(
+              {
+                chart: {
+                  backgroundColor: '#FFF0'
+                },
+                exporting: {
+                  enabled: false
+                },
+                title: {
+                  text: void 0
+                },
+              },
+              options
+            )
+          );
+
+        // Recreate chart if no update for options3d.
+        } else if (
+          !chart.options.options3d?.enabled &&
+          options.chart?.options3d?.enabled
         ) {
           chart.destroy();
-          HighchartsFlutter.chart = Highcharts.ganttChart('container', options);
+          HighchartsFlutter.chart = HighchartsFlutter.factory('container', options);
+
+        // Regular chart update.
         } else {
           chart.update(options, redraw, true, animation);
         }
 
-        if (document.title !== chart.title) {
-            document.title = chart.title.textStr;
+        // Sync the document title with the chart title for accessibility.
+        if (scope.document.title !== chart.title) {
+          scope.document.title = chart.title.textStr || 'Chart';
         }
       }
     };
@@ -112,9 +143,10 @@ String _scriptTag(String? script) {
     return '';
   }
 
-  if (!script.startsWith('//') &&
+  if (!script.startsWith('data:') &&
       !script.startsWith('http://') &&
-      !script.startsWith('https://')) {
+      !script.startsWith('https://') &&
+      (script.startsWith('/*') || !script.startsWith('/'))) {
     script = Uri.dataFromString(
       script,
       mimeType: 'text/javascript',
@@ -138,6 +170,9 @@ String _scriptTag(String? script) {
  * */
 
 class HighchartsGantt extends StatefulWidget {
+  /// Activate debug mode.
+  final bool debug;
+
   /// Custom JavaScript to inject into the webView. This will be executed after
   /// Highcharts Flutter code, but before the initial chart update with the
   /// defined options.
@@ -158,6 +193,7 @@ class HighchartsGantt extends StatefulWidget {
 
   HighchartsGantt(this.options,
       {super.key,
+      this.debug = kDebugMode,
       this.javaScript,
       this.javaScriptModules = const [
         'https://code.highcharts.com/gantt/highcharts-gantt.js',
@@ -172,24 +208,15 @@ class HighchartsGantt extends StatefulWidget {
         'https://code.highcharts.com/gantt/modules/accessibility.js',
       ]});
 
-  String _getJS(String json, [bool redraw = true]) {
-    return [
-      ...javaScriptModules,
-      kHighchartsGanttJS,
-      javaScript,
-      'HighchartsFlutter.update($json, $redraw);',
-    ].map(_scriptTag).join('\n');
+  @override
+  State<HighchartsGantt> createState() {
+    return _HighchartsGanttState();
   }
 
   void refresh([bool redraw = true]) {
     String json = options.toJSON();
-    debugPrint(json);
+    if (debug) debugPrint(json);
     webViewController.runJavaScript('HighchartsFlutter.update($json, $redraw)');
-  }
-
-  @override
-  State<HighchartsGantt> createState() {
-    return _HighchartsGanttState();
   }
 }
 
@@ -264,33 +291,42 @@ class _HighchartsGanttState extends State<HighchartsGantt> {
     if (webViewController.platform is AndroidWebViewController ||
         webViewController.platform is WebKitWebViewController) {
       webViewController
-        ..setJavaScriptMode(JavaScriptMode.unrestricted)
         ..setBackgroundColor(const Color(0x00000000))
+        ..setJavaScriptMode(JavaScriptMode.unrestricted)
         ..setNavigationDelegate(NavigationDelegate(
-            onNavigationRequest: (NavigationRequest request) {
-          String url = request.url;
+          onNavigationRequest: (NavigationRequest request) {
+            String url = request.url;
 
-          debugPrint(url);
+            if (widget.debug) debugPrint(url);
 
-          if (url == 'about:blank' || url.startsWith('http://127.0.0.1')) {
-            return NavigationDecision.navigate;
-          }
+            if (url == 'about://' ||
+                url == 'about:blank' ||
+                url.startsWith('http://127.0.0.1')) {
+              return NavigationDecision.navigate;
+            }
 
-          return NavigationDecision.prevent;
-        }, onPageFinished: (String url) {
-          widget.refresh();
-        }));
+            return NavigationDecision.prevent;
+          },
+        ));
     }
 
     webView = WebViewWidget(controller: webViewController);
 
-    String json = widget.options.toJSON();
+    final String json = widget.options.toJSON();
 
-    debugPrint(json);
+    if (widget.debug) debugPrint(json);
+
+    final String scripts = <String?>[
+      ...widget.javaScriptModules,
+      kHighchartsGanttJS,
+      (widget.debug ? 'HighchartsFlutter.debug=true;' : null),
+      widget.javaScript,
+      'HighchartsFlutter.init($json);',
+    ].map(_scriptTag).join('\n');
 
     webViewController.loadHtmlString('''
       $kHighchartsGanttHTML
-      ${widget._getJS(json)}
+      $scripts
     ''');
   }
 }

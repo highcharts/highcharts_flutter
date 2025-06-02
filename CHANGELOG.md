@@ -1,3 +1,12 @@
+## 0.4.0
+
+* Added new demos for Accessibility and OHLC. (#43)
+* Added new demos for Highcharts Stock, Maps, Gantt.
+* Added support for data point objects.
+* Improved compatibility of hello_world demo.
+* Fixed generic series options.
+* Fixed series data with single value.
+
 ## 0.3.0
 
 * Added API documentation to all options.

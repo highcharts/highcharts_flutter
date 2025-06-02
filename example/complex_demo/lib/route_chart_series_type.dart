@@ -48,7 +48,7 @@ class RouteChartSeriesType extends StatelessWidget {
             leading: CupertinoNavigationBarBackButton(
               onPressed: () => _back(context),
             ),
-            middle: Text('Series Type')),
+            middle: const Text('Series Type')),
         child: SafeArea(
             child: CupertinoScrollbar(
                 child: Column(children: <Widget>[
@@ -56,13 +56,13 @@ class RouteChartSeriesType extends StatelessWidget {
               child: ValueListenableBuilder(
                   valueListenable: state.chartSeriesType,
                   builder: (_, type, __) => CupertinoListSection(
-                      header: Text('Selected Series Type'),
+                      header: const Text('Selected Series Type'),
                       key: Key(state.chartSeriesType.value),
                       children: kSeriesTypeMap.keys
                           .map((seriesType) => CupertinoListTile(
                                 title: Text(seriesType),
                                 trailing: (seriesType == type
-                                    ? Icon(CupertinoIcons.check_mark)
+                                    ? const Icon(CupertinoIcons.check_mark)
                                     : null),
                                 onTap: () =>
                                     _setSeriesType(context, seriesType),

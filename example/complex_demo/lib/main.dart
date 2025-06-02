@@ -41,9 +41,9 @@ class MyApp extends StatelessWidget {
     return CupertinoApp(
         title: 'Complex Highcharts Flutter demo',
         routes: <String, WidgetBuilder>{
-          '/': (BuildContext context) => RouteOverview(),
+          '/': (BuildContext context) => const RouteOverview(),
           '/chart/series-type': (BuildContext context) =>
-              RouteChartSeriesType(),
+              const RouteChartSeriesType(),
           ...Map.fromEntries(kCharts.entries.map((entry) => MapEntry(
               '/charts/${entry.key}', (BuildContext context) => entry.value)))
         });

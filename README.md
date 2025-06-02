@@ -8,6 +8,8 @@ Use Highcharts widgets for interactive charts right in your Flutter app. All
 options are available as widgets and can be adjusted and with
 `HighchartsChart.refresh()` dynamically applied.
 
+For more information about this integration, visit our dedicated [Flutter integration page](https://www.highcharts.com/integrations/flutter/).
+You'll discover key features including cross-platform compatibility, extensive chart type support, and details about additional Highcharts products like Stock, Maps, Gantt.
 
 
 Examples

@@ -13,7 +13,7 @@ class IslandsChart extends StatelessWidget {
 
   @override
   Widget build(context) {
-    return ChartScaffold(
+    return const ChartScaffold(
       pageTitle: 'Islands',
       title: 'Largest islands',
       subtitle: 'in thousands of sq km',
