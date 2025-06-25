@@ -224,6 +224,16 @@ class HighchartsFlowMapSeriesOptions extends HighchartsOptionsBase {
 
   double? width;
 
+  /// Whether to zoom non-cartesian series. If `chart.zooming` is set, the option
+  /// allows to disable zooming on an individual non-cartesian series. By default
+  /// zooming is enabled for all series.
+  ///
+  /// Note: This option works only for non-cartesian series.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.flowmap.zoomEnabled
+
+  bool? zoomEnabled;
+
   /// A `flowmap` series. If the type option is not specified, it is inherited from chart.type.
   ///
   /// API Docs: https://api.highcharts.com/highmaps/series.flowmap
@@ -251,7 +261,8 @@ class HighchartsFlowMapSeriesOptions extends HighchartsOptionsBase {
       this.states,
       this.tooltip,
       this.weight,
-      this.width});
+      this.width,
+      this.zoomEnabled});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
@@ -332,6 +343,9 @@ class HighchartsFlowMapSeriesOptions extends HighchartsOptionsBase {
     }
     if (width != null) {
       buffer.writeAll(['"width":', width, ','], '');
+    }
+    if (zoomEnabled != null) {
+      buffer.writeAll(['"zoomEnabled":', zoomEnabled, ','], '');
     }
   }
 }

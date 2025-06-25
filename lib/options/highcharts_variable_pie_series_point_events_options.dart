@@ -14,8 +14,8 @@
  *
  * */
 
-import 'dart:convert';
 import 'highcharts_options_base.dart';
+import '../../utilities/highcharts_callback.dart';
 
 /* *
  *
@@ -43,7 +43,7 @@ class HighchartsVariablePieSeriesPointEventsOptions
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.variablepie.point.events.legendItemClick
 
-  dynamic legendItemClick;
+  HighchartsCallback? legendItemClick;
 
   /// Fires when a point is clicked. One parameter, `event`, is passed
   /// to the function, containing common event information.
@@ -54,7 +54,7 @@ class HighchartsVariablePieSeriesPointEventsOptions
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.variablepie.point.events.click
 
-  dynamic click;
+  HighchartsCallback? click;
 
   /// Callback that fires while dragging a point. The mouse event is passed in
   /// as parameter. The original data can be accessed from `e.origin`, and the
@@ -66,7 +66,7 @@ class HighchartsVariablePieSeriesPointEventsOptions
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.variablepie.point.events.drag
 
-  dynamic drag;
+  HighchartsCallback? drag;
 
   /// Callback that fires when starting to drag a point. The mouse event object
   /// is passed in as an argument. If a drag handle is used, `e.updateProp` is
@@ -75,7 +75,7 @@ class HighchartsVariablePieSeriesPointEventsOptions
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.variablepie.point.events.dragStart
 
-  dynamic dragStart;
+  HighchartsCallback? dragStart;
 
   /// Callback that fires when the point is dropped. The parameters passed are
   /// the same as for drag. To stop
@@ -84,7 +84,7 @@ class HighchartsVariablePieSeriesPointEventsOptions
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.variablepie.point.events.drop
 
-  dynamic drop;
+  HighchartsCallback? drop;
 
   /// Fires when the mouse leaves the area close to the point. One
   /// parameter, `event`, is passed to the function, containing common
@@ -92,7 +92,7 @@ class HighchartsVariablePieSeriesPointEventsOptions
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.variablepie.point.events.mouseOut
 
-  dynamic mouseOut;
+  HighchartsCallback? mouseOut;
 
   /// Fires when the mouse enters the area close to the point. One
   /// parameter, `event`, is passed to the function, containing common
@@ -103,7 +103,7 @@ class HighchartsVariablePieSeriesPointEventsOptions
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.variablepie.point.events.mouseOver
 
-  dynamic mouseOver;
+  HighchartsCallback? mouseOver;
 
   /// Fires when the point is removed using the `.remove()` method. One
   /// parameter, `event`, is passed to the function. Returning `false`
@@ -111,7 +111,7 @@ class HighchartsVariablePieSeriesPointEventsOptions
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.variablepie.point.events.remove
 
-  dynamic remove;
+  HighchartsCallback? remove;
 
   /// Fires when the point is selected either programmatically or
   /// following a click on the point. One parameter, `event`, is passed
@@ -119,7 +119,7 @@ class HighchartsVariablePieSeriesPointEventsOptions
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.variablepie.point.events.select
 
-  dynamic select;
+  HighchartsCallback? select;
 
   /// Fires when the point is unselected either programmatically or
   /// following a click on the point. One parameter, `event`, is passed
@@ -128,7 +128,7 @@ class HighchartsVariablePieSeriesPointEventsOptions
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.variablepie.point.events.unselect
 
-  dynamic unselect;
+  HighchartsCallback? unselect;
 
   /// Fires when the point is updated programmatically through the
   /// `.update()` method. One parameter, `event`, is passed to the
@@ -137,7 +137,7 @@ class HighchartsVariablePieSeriesPointEventsOptions
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.variablepie.point.events.update
 
-  dynamic update;
+  HighchartsCallback? update;
 
   /// Highcharts Options Widget.
   HighchartsVariablePieSeriesPointEventsOptions(
@@ -158,38 +158,38 @@ class HighchartsVariablePieSeriesPointEventsOptions
     super.toOptionsJSON(buffer);
 
     if (legendItemClick != null) {
-      buffer.writeAll(
-          ['"legendItemClick":', jsonEncode(legendItemClick), ','], '');
+      buffer
+          .writeAll(['"legendItemClick":', legendItemClick?.toJSON(), ','], '');
     }
     if (click != null) {
-      buffer.writeAll(['"click":', jsonEncode(click), ','], '');
+      buffer.writeAll(['"click":', click?.toJSON(), ','], '');
     }
     if (drag != null) {
-      buffer.writeAll(['"drag":', jsonEncode(drag), ','], '');
+      buffer.writeAll(['"drag":', drag?.toJSON(), ','], '');
     }
     if (dragStart != null) {
-      buffer.writeAll(['"dragStart":', jsonEncode(dragStart), ','], '');
+      buffer.writeAll(['"dragStart":', dragStart?.toJSON(), ','], '');
     }
     if (drop != null) {
-      buffer.writeAll(['"drop":', jsonEncode(drop), ','], '');
+      buffer.writeAll(['"drop":', drop?.toJSON(), ','], '');
     }
     if (mouseOut != null) {
-      buffer.writeAll(['"mouseOut":', jsonEncode(mouseOut), ','], '');
+      buffer.writeAll(['"mouseOut":', mouseOut?.toJSON(), ','], '');
     }
     if (mouseOver != null) {
-      buffer.writeAll(['"mouseOver":', jsonEncode(mouseOver), ','], '');
+      buffer.writeAll(['"mouseOver":', mouseOver?.toJSON(), ','], '');
     }
     if (remove != null) {
-      buffer.writeAll(['"remove":', jsonEncode(remove), ','], '');
+      buffer.writeAll(['"remove":', remove?.toJSON(), ','], '');
     }
     if (select != null) {
-      buffer.writeAll(['"select":', jsonEncode(select), ','], '');
+      buffer.writeAll(['"select":', select?.toJSON(), ','], '');
     }
     if (unselect != null) {
-      buffer.writeAll(['"unselect":', jsonEncode(unselect), ','], '');
+      buffer.writeAll(['"unselect":', unselect?.toJSON(), ','], '');
     }
     if (update != null) {
-      buffer.writeAll(['"update":', jsonEncode(update), ','], '');
+      buffer.writeAll(['"update":', update?.toJSON(), ','], '');
     }
   }
 }

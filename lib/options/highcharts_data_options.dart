@@ -16,6 +16,7 @@
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
+import '../../utilities/highcharts_callback.dart';
 
 /* *
  *
@@ -46,7 +47,7 @@ class HighchartsDataOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/data.beforeParse
 
-  dynamic beforeParse;
+  HighchartsCallback? beforeParse;
 
   /// An array option that specifies the data type for each column in the series
   /// loaded within the data module.
@@ -82,7 +83,7 @@ class HighchartsDataOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/data.complete
 
-  dynamic complete;
+  HighchartsCallback? complete;
 
   /// A comma delimited string to be parsed. Related options are startRow, endRow, startColumn
   /// and endColumn to delimit what part of the table
@@ -232,7 +233,7 @@ class HighchartsDataOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/data.parseDate
 
-  dynamic parseDate;
+  HighchartsCallback? parseDate;
 
   /// A callback function to access the parsed columns, the two-dimensional
   /// input data array directly, before they are interpreted into series
@@ -241,7 +242,7 @@ class HighchartsDataOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/data.parsed
 
-  dynamic parsed;
+  HighchartsCallback? parsed;
 
   /// The same as the columns input option, but defining rows instead of
   /// columns.
@@ -331,7 +332,7 @@ class HighchartsDataOptions extends HighchartsOptionsBase {
     super.toOptionsJSON(buffer);
 
     if (beforeParse != null) {
-      buffer.writeAll(['"beforeParse":', jsonEncode(beforeParse), ','], '');
+      buffer.writeAll(['"beforeParse":', beforeParse?.toJSON(), ','], '');
     }
     if (columnTypes != null) {
       buffer.write('"columnTypes":[');
@@ -351,7 +352,7 @@ class HighchartsDataOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"columnsURL":', jsonEncode(columnsURL), ','], '');
     }
     if (complete != null) {
-      buffer.writeAll(['"complete":', jsonEncode(complete), ','], '');
+      buffer.writeAll(['"complete":', complete?.toJSON(), ','], '');
     }
     if (csv != null) {
       buffer.writeAll(['"csv":', jsonEncode(csv), ','], '');
@@ -409,10 +410,10 @@ class HighchartsDataOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"lineDelimiter":', jsonEncode(lineDelimiter), ','], '');
     }
     if (parseDate != null) {
-      buffer.writeAll(['"parseDate":', jsonEncode(parseDate), ','], '');
+      buffer.writeAll(['"parseDate":', parseDate?.toJSON(), ','], '');
     }
     if (parsed != null) {
-      buffer.writeAll(['"parsed":', jsonEncode(parsed), ','], '');
+      buffer.writeAll(['"parsed":', parsed?.toJSON(), ','], '');
     }
     if (rows != null) {
       buffer.write('"rows":[');

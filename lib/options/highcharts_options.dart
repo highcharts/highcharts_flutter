@@ -114,9 +114,16 @@ class HighchartsOptions extends HighchartsOptionsBase {
 
   HighchartsAccessibilityOptions? accessibility;
 
-  /// A basic type of an annotation. It allows to add custom labels
-  /// or shapes. The items can be tied to points, axis coordinates
-  /// or chart pixel coordinates.
+  /// A collection of annotations to add to the chart. The basic annotation allows
+  /// adding custom labels or shapes. The items can be tied to points, axis
+  /// coordinates or chart pixel coordinates.
+  ///
+  /// General options for all annotations can be set using the
+  /// `Highcharts.setOptions` function. In this case only single objects are
+  /// supported, because it alters the defaults for all items. For initialization
+  /// in the chart constructors however, arrays of annotations are supported.
+  ///
+  /// See more in the general docs.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/annotations
 
@@ -367,6 +374,9 @@ class HighchartsOptions extends HighchartsOptionsBase {
 
   /// The pane serves as a container for axes and backgrounds for circular
   /// gauges and polar charts.
+  ///
+  /// When used in `Highcharts.setOptions` for theming, the pane must be a single
+  /// object, otherwise arrays are supported.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/pane
 

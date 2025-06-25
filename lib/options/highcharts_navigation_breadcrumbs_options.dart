@@ -18,6 +18,7 @@ import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_navigation_breadcrumbs_button_theme_options.dart';
 import 'highcharts_navigation_breadcrumbs_events_options.dart';
+import '../../utilities/highcharts_callback.dart';
 import 'highcharts_navigation_breadcrumbs_position_options.dart';
 import 'highcharts_navigation_breadcrumbs_separator_options.dart';
 
@@ -87,7 +88,7 @@ class HighchartsNavigationBreadcrumbsOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/navigation.breadcrumbs.formatter
 
-  dynamic formatter;
+  HighchartsCallback? formatter;
 
   /// Positioning for the button row. The breadcrumbs buttons will be
   /// aligned properly for the default chart layout (title,  subtitle,
@@ -185,7 +186,7 @@ class HighchartsNavigationBreadcrumbsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"format":', jsonEncode(format), ','], '');
     }
     if (formatter != null) {
-      buffer.writeAll(['"formatter":', jsonEncode(formatter), ','], '');
+      buffer.writeAll(['"formatter":', formatter?.toJSON(), ','], '');
     }
     if (position != null) {
       buffer.writeAll(['"position":', position?.toJSON(), ','], '');

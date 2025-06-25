@@ -14,8 +14,8 @@
  *
  * */
 
-import 'dart:convert';
 import 'highcharts_options_base.dart';
+import '../../utilities/highcharts_callback.dart';
 
 /* *
  *
@@ -40,7 +40,7 @@ class HighchartsResponsiveRulesConditionOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/responsive.rules.condition.callback
 
-  dynamic callback;
+  HighchartsCallback? callback;
 
   /// The responsive rule applies if the chart height is less than this.
   ///
@@ -81,7 +81,7 @@ class HighchartsResponsiveRulesConditionOptions extends HighchartsOptionsBase {
     super.toOptionsJSON(buffer);
 
     if (callback != null) {
-      buffer.writeAll(['"callback":', jsonEncode(callback), ','], '');
+      buffer.writeAll(['"callback":', callback?.toJSON(), ','], '');
     }
     if (maxHeight != null) {
       buffer.writeAll(['"maxHeight":', maxHeight, ','], '');

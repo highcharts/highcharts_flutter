@@ -9,35 +9,26 @@
  * */
 
 import 'dart:convert';
+
 import 'package:flutter/services.dart' show AssetBundle, rootBundle;
 import 'package:http/http.dart' as http;
 
 /// Flutter-specific helpers to be used with Highcharts Flutter.
 abstract class HighchartsHelpers {
-  /// Loads a list of asset paths and returns the bundles assets as raw strings.
+  /// Replaces special HTML characters with escape sequences.
   ///
-  /// * `assetPaths`: List of paths to the bundled assets to load.
-  /// * `{assetBundle}`: Optional context to use. Defaults to rootBundle.
-  ///
-  /// {@tool snippet}
-  /// ```dart
-  /// FutureBuilder<List<String>>(
-  ///   future: HighchartsHelpers.loadAssets(['assets/highcharts.js']),
-  ///   builder: (context, snapshot) {
-  ///     if (!snapshot.hasData) return const CircularProgressIndicator();
-  ///     return HighchartsChart(
-  ///       HighchartsOptions(),
-  ///       javaScriptModules: snapshot.data!
-  ///     );
-  ///   }
-  /// )
-  /// ```
-  /// {@end-tool}
-  static Future<List<String>> loadAssets(List<String> assetPaths,
-      {AssetBundle? assetBundle}) async {
-    final bundle = assetBundle ?? rootBundle;
-    return Future.wait(
-        assetPaths.map((path) async => (await bundle.loadString(path))));
+  /// * `text`: Text with potential HTML characters to escape.
+  static String escapeHTML(String? text) {
+    if (text == null) {
+      return '';
+    }
+
+    return text
+        .replaceAll('&', '&amp;')
+        .replaceAll('"', '&quot;')
+        .replaceAll('<', '&lt;')
+        .replaceAll('>', '&gt;')
+        .replaceAll('\'', '&apos;');
   }
 
   /// Fetches a JSON list from a URI. Returns null if the request fails or decoding fails.
@@ -78,5 +69,52 @@ abstract class HighchartsHelpers {
       // Silent fail - return null
     }
     return null;
+  }
+
+  /// Loads a list of asset paths and returns the bundles assets as raw strings.
+  ///
+  /// * `assetPaths`: List of paths to the bundled assets to load.
+  /// * `{assetBundle}`: Optional context to use. Defaults to rootBundle.
+  ///
+  /// ```dart
+  /// FutureBuilder<List<String>>(
+  ///   future: HighchartsHelpers.loadAssets(['assets/highcharts.js']),
+  ///   builder: (context, snapshot) {
+  ///     if (!snapshot.hasData) return const CircularProgressIndicator();
+  ///     return HighchartsChart(
+  ///       HighchartsOptions(),
+  ///       javaScriptModules: snapshot.data!
+  ///     );
+  ///   }
+  /// )
+  /// ```
+  static Future<List<String>> loadAssets(List<String> assetPaths,
+      {AssetBundle? assetBundle}) {
+    final bundle = assetBundle ?? rootBundle;
+    return Future.wait(assetPaths.map((path) => bundle.loadString(path)));
+  }
+
+  /// Creates a script tag with the script code as a data URI.
+  ///
+  /// * `script`: JavaScript code to add as dataURI.
+  static String scriptTag(String? script) {
+    if (script == null) {
+      return '';
+    }
+
+    if (!script.startsWith('data:') &&
+        !script.startsWith('http://') &&
+        !script.startsWith('https://') &&
+        (script.startsWith('/*') || !script.startsWith('/'))) {
+      script = Uri.dataFromString(
+        script.trim(),
+        mimeType: 'text/javascript',
+        encoding: utf8,
+      ).toString();
+    }
+
+    script = escapeHTML(script);
+
+    return '<script src="$script" type="text/javascript"></script>';
   }
 }

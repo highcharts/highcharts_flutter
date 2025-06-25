@@ -35,9 +35,13 @@ export 'highcharts_pane_background_options.dart';
 /// The pane serves as a container for axes and backgrounds for circular
 /// gauges and polar charts.
 ///
+/// When used in `Highcharts.setOptions` for theming, the pane must be a single
+/// object, otherwise arrays are supported.
+///
 /// API Docs: https://api.highcharts.com/highcharts/pane
 class HighchartsPaneOptions extends HighchartsOptionsBase {
-  /// An array of background items for the pane.
+  /// A background item or an array of such for the pane. When used in
+  /// `Highcharts.setOptions` for theming, the background must be a single item.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/pane.background
 

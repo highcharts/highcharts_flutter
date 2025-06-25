@@ -89,6 +89,10 @@ class HighchartsChartZoomingOptions extends HighchartsOptionsBase {
   /// Decides in what dimensions the user can zoom by dragging the mouse.
   /// Can be one of `x`, `y` or `xy`.
   ///
+  /// **Note:** For non-cartesian series, the only supported zooming type
+  /// is `xy`, as zooming in a single direction is not applicable due to
+  /// the radial nature of the coordinate system.
+  ///
   /// API Docs: https://api.highcharts.com/highcharts/chart.zooming.type
 
   String? type;

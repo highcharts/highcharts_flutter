@@ -17,6 +17,7 @@
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_tooltip_date_time_label_formats_options.dart';
+import '../../utilities/highcharts_callback.dart';
 import 'highcharts_tooltip_position_options.dart';
 
 /* *
@@ -144,7 +145,7 @@ class HighchartsWindbarbSeriesTooltipOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.windbarb.tooltip.nullFormatter
 
-  dynamic nullFormatter;
+  HighchartsCallback? nullFormatter;
 
   /// The default point format for the wind barb tooltip. Note the
   /// `point.beaufort` property that refers to the Beaufort wind scale.
@@ -257,7 +258,7 @@ class HighchartsWindbarbSeriesTooltipOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"nullFormat":', jsonEncode(nullFormat), ','], '');
     }
     if (nullFormatter != null) {
-      buffer.writeAll(['"nullFormatter":', jsonEncode(nullFormatter), ','], '');
+      buffer.writeAll(['"nullFormatter":', nullFormatter?.toJSON(), ','], '');
     }
     if (pointFormat != null) {
       buffer.writeAll(['"pointFormat":', jsonEncode(pointFormat), ','], '');

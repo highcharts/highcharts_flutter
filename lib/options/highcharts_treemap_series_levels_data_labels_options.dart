@@ -19,6 +19,7 @@ import 'highcharts_options_base.dart';
 import 'highcharts_treemap_series_levels_data_labels_style_options.dart';
 import 'highcharts_series_data_labels_animation_options.dart';
 import 'highcharts_series_data_labels_filter_options.dart';
+import '../../utilities/highcharts_callback.dart';
 import 'highcharts_series_data_labels_text_path_options.dart';
 
 /* *
@@ -216,7 +217,7 @@ class HighchartsTreemapSeriesLevelsDataLabelsOptions
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.treemap.levels.dataLabels.formatter
 
-  dynamic formatter;
+  HighchartsCallback? formatter;
 
   /// Format for points with the value of null. Works analogously to
   /// format. `nullFormat` can
@@ -242,7 +243,7 @@ class HighchartsTreemapSeriesLevelsDataLabelsOptions
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.treemap.levels.dataLabels.nullFormatter
 
-  dynamic nullFormatter;
+  HighchartsCallback? nullFormatter;
 
   /// How to handle data labels that flow outside the plot area. The
   /// default is `"justify"`, which aligns them inside the plot area.
@@ -429,13 +430,13 @@ class HighchartsTreemapSeriesLevelsDataLabelsOptions
       buffer.writeAll(['"format":', jsonEncode(format), ','], '');
     }
     if (formatter != null) {
-      buffer.writeAll(['"formatter":', jsonEncode(formatter), ','], '');
+      buffer.writeAll(['"formatter":', formatter?.toJSON(), ','], '');
     }
     if (nullFormat != null) {
       buffer.writeAll(['"nullFormat":', jsonEncode(nullFormat), ','], '');
     }
     if (nullFormatter != null) {
-      buffer.writeAll(['"nullFormatter":', jsonEncode(nullFormatter), ','], '');
+      buffer.writeAll(['"nullFormatter":', nullFormatter?.toJSON(), ','], '');
     }
     if (overflow != null) {
       buffer.writeAll(['"overflow":', jsonEncode(overflow), ','], '');

@@ -36,8 +36,8 @@ export 'highcharts_exporting_csv_annotations_options.dart';
 /// in a HTML table or a JavaScript structure.
 ///
 /// This module adds data export options to the export menu and provides
-/// functions like `Chart.getCSV`, `Chart.getTable`, `Chart.getDataRows`
-/// and `Chart.viewData`.
+/// functions like `Exporting.getCSV`, `Exporting.getTable`,
+/// `Exporting.getDataRows` and `Exporting.viewData`.
 ///
 /// The XLS converter is limited and only creates a HTML string that is
 /// passed for download, which works but creates a warning before

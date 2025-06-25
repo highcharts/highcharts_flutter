@@ -14,8 +14,8 @@
  *
  * */
 
-import 'dart:convert';
 import 'highcharts_options_base.dart';
+import '../../utilities/highcharts_callback.dart';
 
 /* *
  *
@@ -42,21 +42,21 @@ class HighchartsChartEventsOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/chart.events.addSeries
 
-  dynamic addSeries;
+  HighchartsCallback? addSeries;
 
   /// Fires after a chart is printed through the context menu item or the
   /// `Chart.print` method.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/chart.events.afterPrint
 
-  dynamic afterPrint;
+  HighchartsCallback? afterPrint;
 
   /// Fires before a chart is printed through the context menu item or
   /// the `Chart.print` method.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/chart.events.beforePrint
 
-  dynamic beforePrint;
+  HighchartsCallback? beforePrint;
 
   /// Fires when clicking on the plot background. One parameter, `event`,
   /// is passed to the function, containing common event information.
@@ -70,7 +70,7 @@ class HighchartsChartEventsOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/chart.events.click
 
-  dynamic click;
+  HighchartsCallback? click;
 
   /// Fires when a drilldown point is clicked, before the new series is added. This
   /// event is also utilized for async drilldown, where the seriesOptions are not
@@ -94,27 +94,27 @@ class HighchartsChartEventsOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/chart.events.drilldown
 
-  dynamic drilldown;
+  HighchartsCallback? drilldown;
 
   /// Fires when drilling up from a drilldown series.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/chart.events.drillup
 
-  dynamic drillup;
+  HighchartsCallback? drillup;
 
   /// In a chart with multiple drilldown series, this event fires after all the
   /// series have been drilled up.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/chart.events.drillupall
 
-  dynamic drillupall;
+  HighchartsCallback? drillupall;
 
   /// Callback that fires while exporting data. This allows the modification of
   /// data rows before processed into the final format.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/chart.events.exportData
 
-  dynamic exportData;
+  HighchartsCallback? exportData;
 
   /// Fires when a fullscreen is closed through the context menu item,
   /// or a fullscreen is closed on the `Escape` button click,
@@ -122,14 +122,14 @@ class HighchartsChartEventsOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/chart.events.fullscreenClose
 
-  dynamic fullscreenClose;
+  HighchartsCallback? fullscreenClose;
 
   /// Fires when a fullscreen is opened through the context menu item,
   /// or the `Chart.fullscreen.open` method.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/chart.events.fullscreenOpen
 
-  dynamic fullscreenOpen;
+  HighchartsCallback? fullscreenOpen;
 
   /// Fires when the chart is finished loading. Since v4.2.2, it also waits
   /// for images to be loaded, for example from point markers. One
@@ -141,7 +141,7 @@ class HighchartsChartEventsOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/chart.events.load
 
-  dynamic load;
+  HighchartsCallback? load;
 
   /// Fires when the chart is redrawn, either after a call to
   /// `chart.redraw()` or after an axis, series or point is modified with
@@ -150,14 +150,14 @@ class HighchartsChartEventsOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/chart.events.redraw
 
-  dynamic redraw;
+  HighchartsCallback? redraw;
 
   /// Fires after initial load of the chart (directly after the `load`
   /// event), and after each redraw (directly after the `redraw` event).
   ///
   /// API Docs: https://api.highcharts.com/highcharts/chart.events.render
 
-  dynamic render;
+  HighchartsCallback? render;
 
   /// Fires when an area of the chart has been selected. Selection is
   /// enabled by setting the chart's zoomType. One parameter, `event`, is
@@ -175,7 +175,7 @@ class HighchartsChartEventsOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/chart.events.selection
 
-  dynamic selection;
+  HighchartsCallback? selection;
 
   /// Event listeners for the chart.
   ///
@@ -201,48 +201,47 @@ class HighchartsChartEventsOptions extends HighchartsOptionsBase {
     super.toOptionsJSON(buffer);
 
     if (addSeries != null) {
-      buffer.writeAll(['"addSeries":', jsonEncode(addSeries), ','], '');
+      buffer.writeAll(['"addSeries":', addSeries?.toJSON(), ','], '');
     }
     if (afterPrint != null) {
-      buffer.writeAll(['"afterPrint":', jsonEncode(afterPrint), ','], '');
+      buffer.writeAll(['"afterPrint":', afterPrint?.toJSON(), ','], '');
     }
     if (beforePrint != null) {
-      buffer.writeAll(['"beforePrint":', jsonEncode(beforePrint), ','], '');
+      buffer.writeAll(['"beforePrint":', beforePrint?.toJSON(), ','], '');
     }
     if (click != null) {
-      buffer.writeAll(['"click":', jsonEncode(click), ','], '');
+      buffer.writeAll(['"click":', click?.toJSON(), ','], '');
     }
     if (drilldown != null) {
-      buffer.writeAll(['"drilldown":', jsonEncode(drilldown), ','], '');
+      buffer.writeAll(['"drilldown":', drilldown?.toJSON(), ','], '');
     }
     if (drillup != null) {
-      buffer.writeAll(['"drillup":', jsonEncode(drillup), ','], '');
+      buffer.writeAll(['"drillup":', drillup?.toJSON(), ','], '');
     }
     if (drillupall != null) {
-      buffer.writeAll(['"drillupall":', jsonEncode(drillupall), ','], '');
+      buffer.writeAll(['"drillupall":', drillupall?.toJSON(), ','], '');
     }
     if (exportData != null) {
-      buffer.writeAll(['"exportData":', jsonEncode(exportData), ','], '');
+      buffer.writeAll(['"exportData":', exportData?.toJSON(), ','], '');
     }
     if (fullscreenClose != null) {
-      buffer.writeAll(
-          ['"fullscreenClose":', jsonEncode(fullscreenClose), ','], '');
+      buffer
+          .writeAll(['"fullscreenClose":', fullscreenClose?.toJSON(), ','], '');
     }
     if (fullscreenOpen != null) {
-      buffer
-          .writeAll(['"fullscreenOpen":', jsonEncode(fullscreenOpen), ','], '');
+      buffer.writeAll(['"fullscreenOpen":', fullscreenOpen?.toJSON(), ','], '');
     }
     if (load != null) {
-      buffer.writeAll(['"load":', jsonEncode(load), ','], '');
+      buffer.writeAll(['"load":', load?.toJSON(), ','], '');
     }
     if (redraw != null) {
-      buffer.writeAll(['"redraw":', jsonEncode(redraw), ','], '');
+      buffer.writeAll(['"redraw":', redraw?.toJSON(), ','], '');
     }
     if (render != null) {
-      buffer.writeAll(['"render":', jsonEncode(render), ','], '');
+      buffer.writeAll(['"render":', render?.toJSON(), ','], '');
     }
     if (selection != null) {
-      buffer.writeAll(['"selection":', jsonEncode(selection), ','], '');
+      buffer.writeAll(['"selection":', selection?.toJSON(), ','], '');
     }
   }
 }

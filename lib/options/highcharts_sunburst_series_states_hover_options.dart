@@ -35,8 +35,7 @@ export 'highcharts_series_states_hover_halo_options.dart';
 
 /// Highcharts Options Widget.
 class HighchartsSunburstSeriesStatesHoverOptions extends HighchartsOptionsBase {
-  /// How much to brighten the point on interaction. Requires the
-  /// main color to be defined in hex or rgb(a) format.
+  /// How much to brighten the point on interaction.
   ///
   /// In styled mode, the hover brightness is by default replaced
   /// by a fill-opacity given in the `.highcharts-point-hover`

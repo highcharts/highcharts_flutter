@@ -14,8 +14,8 @@
  *
  * */
 
-import 'dart:convert';
 import 'highcharts_options_base.dart';
+import '../../utilities/highcharts_callback.dart';
 
 /* *
  *
@@ -43,7 +43,7 @@ class HighchartsLegendEventsOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/legend.events.itemClick
 
-  dynamic itemClick;
+  HighchartsCallback? itemClick;
 
   /// General event handlers for the legend. These event hooks can also be attached to the legend at run time using the `Highcharts.addEvent` function.
   ///
@@ -55,7 +55,7 @@ class HighchartsLegendEventsOptions extends HighchartsOptionsBase {
     super.toOptionsJSON(buffer);
 
     if (itemClick != null) {
-      buffer.writeAll(['"itemClick":', jsonEncode(itemClick), ','], '');
+      buffer.writeAll(['"itemClick":', itemClick?.toJSON(), ','], '');
     }
   }
 }

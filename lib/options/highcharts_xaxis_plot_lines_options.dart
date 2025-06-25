@@ -77,7 +77,7 @@ class HighchartsXAxisPlotLinesOptions extends HighchartsOptionsBase {
 
   String? id;
 
-  /// Text labels for the plot bands
+  /// Text labels for the plot lines
   ///
   /// API Docs: https://api.highcharts.com/highcharts/xAxis.plotLines.label
 

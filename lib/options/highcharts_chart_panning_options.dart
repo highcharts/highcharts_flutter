@@ -53,6 +53,10 @@ class HighchartsChartPanningOptions extends HighchartsOptionsBase {
   /// panning action is finished, the axes will adjust to their actual
   /// settings.
   ///
+  /// **Note:** For non-cartesian series, the only supported panning type
+  /// is `xy`, as zooming in a single direction is not applicable due to
+  /// the radial nature of the coordinate system.
+  ///
   /// API Docs: https://api.highcharts.com/highcharts/chart.panning.type
 
   String? type;

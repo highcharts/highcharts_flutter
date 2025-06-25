@@ -14,8 +14,8 @@
  *
  * */
 
-import 'dart:convert';
 import 'highcharts_options_base.dart';
+import '../../utilities/highcharts_callback.dart';
 
 /* *
  *
@@ -40,7 +40,7 @@ class HighchartsSeriesEventsOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.events.afterAnimate
 
-  dynamic afterAnimate;
+  HighchartsCallback? afterAnimate;
 
   /// Fires when the checkbox next to the series' name in the legend is
   /// clicked. One parameter, `event`, is passed to the function. The state
@@ -50,7 +50,7 @@ class HighchartsSeriesEventsOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.events.checkboxClick
 
-  dynamic checkboxClick;
+  HighchartsCallback? checkboxClick;
 
   /// Fires when the series is clicked. One parameter, `event`, is passed
   /// to the function, containing common event information. Additionally,
@@ -58,14 +58,14 @@ class HighchartsSeriesEventsOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.events.click
 
-  dynamic click;
+  HighchartsCallback? click;
 
   /// Fires when the series is hidden after chart generation time, either
   /// by clicking the legend item or by calling `.hide()`.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.events.hide
 
-  dynamic hide;
+  HighchartsCallback? hide;
 
   /// Fires when the legend item belonging to the series is clicked. One
   /// parameter, `event`, is passed to the function. The default action
@@ -77,7 +77,7 @@ class HighchartsSeriesEventsOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.events.legendItemClick
 
-  dynamic legendItemClick;
+  HighchartsCallback? legendItemClick;
 
   /// Fires when the mouse leaves the graph. One parameter, `event`, is
   /// passed to the function, containing common event information. If the
@@ -87,21 +87,21 @@ class HighchartsSeriesEventsOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.events.mouseOut
 
-  dynamic mouseOut;
+  HighchartsCallback? mouseOut;
 
   /// Fires when the mouse enters the graph. One parameter, `event`, is
   /// passed to the function, containing common event information.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.events.mouseOver
 
-  dynamic mouseOver;
+  HighchartsCallback? mouseOver;
 
   /// Fires when the series is shown after chart generation time, either
   /// by clicking the legend item or by calling `.show()`.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.events.show
 
-  dynamic show;
+  HighchartsCallback? show;
 
   /// General event handlers for the series items. These event hooks can also be attached to the series at run time using the `Highcharts.addEvent` function.
   ///
@@ -121,29 +121,29 @@ class HighchartsSeriesEventsOptions extends HighchartsOptionsBase {
     super.toOptionsJSON(buffer);
 
     if (afterAnimate != null) {
-      buffer.writeAll(['"afterAnimate":', jsonEncode(afterAnimate), ','], '');
+      buffer.writeAll(['"afterAnimate":', afterAnimate?.toJSON(), ','], '');
     }
     if (checkboxClick != null) {
-      buffer.writeAll(['"checkboxClick":', jsonEncode(checkboxClick), ','], '');
+      buffer.writeAll(['"checkboxClick":', checkboxClick?.toJSON(), ','], '');
     }
     if (click != null) {
-      buffer.writeAll(['"click":', jsonEncode(click), ','], '');
+      buffer.writeAll(['"click":', click?.toJSON(), ','], '');
     }
     if (hide != null) {
-      buffer.writeAll(['"hide":', jsonEncode(hide), ','], '');
+      buffer.writeAll(['"hide":', hide?.toJSON(), ','], '');
     }
     if (legendItemClick != null) {
-      buffer.writeAll(
-          ['"legendItemClick":', jsonEncode(legendItemClick), ','], '');
+      buffer
+          .writeAll(['"legendItemClick":', legendItemClick?.toJSON(), ','], '');
     }
     if (mouseOut != null) {
-      buffer.writeAll(['"mouseOut":', jsonEncode(mouseOut), ','], '');
+      buffer.writeAll(['"mouseOut":', mouseOut?.toJSON(), ','], '');
     }
     if (mouseOver != null) {
-      buffer.writeAll(['"mouseOver":', jsonEncode(mouseOver), ','], '');
+      buffer.writeAll(['"mouseOver":', mouseOver?.toJSON(), ','], '');
     }
     if (show != null) {
-      buffer.writeAll(['"show":', jsonEncode(show), ','], '');
+      buffer.writeAll(['"show":', show?.toJSON(), ','], '');
     }
   }
 }

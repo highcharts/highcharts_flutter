@@ -535,6 +535,16 @@ class HighchartsWordcloudSeriesOptions extends HighchartsOptionsBase {
 
   double? zIndex;
 
+  /// Whether to zoom non-cartesian series. If `chart.zooming` is set, the option
+  /// allows to disable zooming on an individual non-cartesian series. By default
+  /// zooming is enabled for all series.
+  ///
+  /// Note: This option works only for non-cartesian series.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.wordcloud.zoomEnabled
+
+  bool? zoomEnabled;
+
   /// A `wordcloud` series. If the type option is not specified, it is inherited from chart.type.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.wordcloud
@@ -595,7 +605,8 @@ class HighchartsWordcloudSeriesOptions extends HighchartsOptionsBase {
       this.visible,
       this.xAxis,
       this.yAxis,
-      this.zIndex});
+      this.zIndex,
+      this.zoomEnabled});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
@@ -802,6 +813,9 @@ class HighchartsWordcloudSeriesOptions extends HighchartsOptionsBase {
     }
     if (zIndex != null) {
       buffer.writeAll(['"zIndex":', zIndex, ','], '');
+    }
+    if (zoomEnabled != null) {
+      buffer.writeAll(['"zoomEnabled":', zoomEnabled, ','], '');
     }
   }
 }

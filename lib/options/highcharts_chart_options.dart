@@ -17,7 +17,8 @@
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_chart_events_options.dart';
-import 'highcharts_chart3doptions.dart';
+import '../../utilities/highcharts_callback.dart';
+import 'highcharts_chart3d_options.dart';
 import 'highcharts_chart_panning_options.dart';
 import 'highcharts_chart_parallel_axes_options.dart';
 import 'highcharts_chart_reset_zoom_button_options.dart';
@@ -31,7 +32,7 @@ import 'highcharts_chart_zooming_options.dart';
  * */
 
 export 'highcharts_chart_events_options.dart';
-export 'highcharts_chart3doptions.dart';
+export 'highcharts_chart3d_options.dart';
 export 'highcharts_chart_panning_options.dart';
 export 'highcharts_chart_parallel_axes_options.dart';
 export 'highcharts_chart_reset_zoom_button_options.dart';
@@ -294,7 +295,7 @@ class HighchartsChartOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/chart.numberFormatter
 
-  dynamic numberFormatter;
+  HighchartsCallback? numberFormatter;
 
   /// Options to render charts in 3 dimensions. This feature requires
   /// `highcharts-3d.js`, found in the download package or online at
@@ -717,8 +718,8 @@ class HighchartsChartOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"marginTop":', marginTop, ','], '');
     }
     if (numberFormatter != null) {
-      buffer.writeAll(
-          ['"numberFormatter":', jsonEncode(numberFormatter), ','], '');
+      buffer
+          .writeAll(['"numberFormatter":', numberFormatter?.toJSON(), ','], '');
     }
     if (options3d != null) {
       buffer.writeAll(['"options3d":', options3d?.toJSON(), ','], '');

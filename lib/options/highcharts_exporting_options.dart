@@ -19,6 +19,7 @@ import 'highcharts_options_base.dart';
 import 'highcharts_exporting_accessibility_options.dart';
 import 'highcharts_exporting_buttons_options.dart';
 import 'highcharts_exporting_csv_options.dart';
+import '../../utilities/highcharts_callback.dart';
 import 'highcharts_exporting_pdf_font_options.dart';
 
 /* *
@@ -105,8 +106,8 @@ class HighchartsExportingOptions extends HighchartsOptionsBase {
   /// in a HTML table or a JavaScript structure.
   ///
   /// This module adds data export options to the export menu and provides
-  /// functions like `Chart.getCSV`, `Chart.getTable`, `Chart.getDataRows`
-  /// and `Chart.viewData`.
+  /// functions like `Exporting.getCSV`, `Exporting.getTable`,
+  /// `Exporting.getDataRows` and `Exporting.viewData`.
   ///
   /// The XLS converter is limited and only creates a HTML string that is
   /// passed for download, which works but creates a warning before
@@ -131,7 +132,7 @@ class HighchartsExportingOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/exporting.error
 
-  dynamic error;
+  HighchartsCallback? error;
 
   /// Whether or not to fall back to the export server if the offline-exporting
   /// module is unable to export the chart on the client side. This happens for
@@ -187,6 +188,20 @@ class HighchartsExportingOptions extends HighchartsOptionsBase {
   /// API Docs: https://api.highcharts.com/highcharts/exporting.libURL
 
   String? libURL;
+
+  /// Whether the chart should be exported using the browser's built-in
+  /// capabilities, allowing offline exports without requiring access to the
+  /// Highcharts export server, or sent directly to the export server for
+  /// processing and downloading.
+  ///
+  /// This option is different from `exporting.fallbackToExportServer`, which
+  /// controls whether the export server should be used as a fallback only if
+  /// the local export fails. In contrast, `exporting.local` explicitly defines
+  /// which export method to use.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/exporting.local
+
+  bool? local;
 
   /// An object consisting of definitions for the menu items in the context
   /// menu. Each key value pair has a `key` that is referenced in the
@@ -335,6 +350,7 @@ class HighchartsExportingOptions extends HighchartsOptionsBase {
       this.filename,
       this.formAttributes,
       this.libURL,
+      this.local,
       this.menuItemDefinitions,
       this.pdfFont,
       this.printMaxWidth,
@@ -383,7 +399,7 @@ class HighchartsExportingOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"enabled":', enabled, ','], '');
     }
     if (error != null) {
-      buffer.writeAll(['"error":', jsonEncode(error), ','], '');
+      buffer.writeAll(['"error":', error?.toJSON(), ','], '');
     }
     if (fallbackToExportServer != null) {
       buffer.writeAll(
@@ -401,6 +417,9 @@ class HighchartsExportingOptions extends HighchartsOptionsBase {
     }
     if (libURL != null) {
       buffer.writeAll(['"libURL":', jsonEncode(libURL), ','], '');
+    }
+    if (local != null) {
+      buffer.writeAll(['"local":', local, ','], '');
     }
     if (menuItemDefinitions != null) {
       buffer.write('"menuItemDefinitions":{');

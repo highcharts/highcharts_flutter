@@ -14,8 +14,8 @@
  *
  * */
 
-import 'dart:convert';
 import 'highcharts_options_base.dart';
+import '../../utilities/highcharts_callback.dart';
 
 /* *
  *
@@ -41,7 +41,7 @@ class HighchartsRangeSelectorButtonsEventsOptions
   ///
   /// API Docs: https://api.highcharts.com/highcharts/rangeSelector.buttons.events.click
 
-  dynamic click;
+  HighchartsCallback? click;
 
   /// Highcharts Options Widget.
   HighchartsRangeSelectorButtonsEventsOptions({this.click});
@@ -51,7 +51,7 @@ class HighchartsRangeSelectorButtonsEventsOptions
     super.toOptionsJSON(buffer);
 
     if (click != null) {
-      buffer.writeAll(['"click":', jsonEncode(click), ','], '');
+      buffer.writeAll(['"click":', click?.toJSON(), ','], '');
     }
   }
 }

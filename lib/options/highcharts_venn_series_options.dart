@@ -479,6 +479,16 @@ class HighchartsVennSeriesOptions extends HighchartsOptionsBase {
 
   double? zIndex;
 
+  /// Whether to zoom non-cartesian series. If `chart.zooming` is set, the option
+  /// allows to disable zooming on an individual non-cartesian series. By default
+  /// zooming is enabled for all series.
+  ///
+  /// Note: This option works only for non-cartesian series.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.venn.zoomEnabled
+
+  bool? zoomEnabled;
+
   /// A `venn` series. If the type option is not specified, it is inherited from chart.type.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.venn
@@ -532,7 +542,8 @@ class HighchartsVennSeriesOptions extends HighchartsOptionsBase {
       this.tooltip,
       this.turboThreshold,
       this.visible,
-      this.zIndex});
+      this.zIndex,
+      this.zoomEnabled});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
@@ -706,6 +717,9 @@ class HighchartsVennSeriesOptions extends HighchartsOptionsBase {
     }
     if (zIndex != null) {
       buffer.writeAll(['"zIndex":', zIndex, ','], '');
+    }
+    if (zoomEnabled != null) {
+      buffer.writeAll(['"zoomEnabled":', zoomEnabled, ','], '');
     }
   }
 }

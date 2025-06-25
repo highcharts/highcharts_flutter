@@ -18,6 +18,7 @@ import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_range_selector_button_position_options.dart';
 import 'highcharts_range_selector_buttons_options.dart';
+import '../../utilities/highcharts_callback.dart';
 import 'highcharts_range_selector_input_position_options.dart';
 
 /* *
@@ -166,7 +167,7 @@ class HighchartsRangeSelectorOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/rangeSelector.inputDateParser
 
-  dynamic inputDateParser;
+  HighchartsCallback? inputDateParser;
 
   /// The date format in the input boxes when they are selected for
   /// editing. This must be a format that is recognized by JavaScript
@@ -327,8 +328,8 @@ class HighchartsRangeSelectorOptions extends HighchartsOptionsBase {
           ['"inputDateFormat":', jsonEncode(inputDateFormat), ','], '');
     }
     if (inputDateParser != null) {
-      buffer.writeAll(
-          ['"inputDateParser":', jsonEncode(inputDateParser), ','], '');
+      buffer
+          .writeAll(['"inputDateParser":', inputDateParser?.toJSON(), ','], '');
     }
     if (inputEditDateFormat != null) {
       buffer.writeAll(

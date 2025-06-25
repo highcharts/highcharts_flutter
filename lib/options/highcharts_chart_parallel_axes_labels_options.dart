@@ -16,6 +16,7 @@
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
+import '../../utilities/highcharts_callback.dart';
 import 'highcharts_xaxis_labels_style_options.dart';
 
 /* *
@@ -116,7 +117,7 @@ class HighchartsChartParallelAxesLabelsOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/chart.parallelAxes.labels.formatter
 
-  dynamic formatter;
+  HighchartsCallback? formatter;
 
   /// Horizontal axis only. When `staggerLines` is not set,
   /// `maxStaggerLines` defines how many lines the axis is allowed to
@@ -300,7 +301,7 @@ class HighchartsChartParallelAxesLabelsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"format":', jsonEncode(format), ','], '');
     }
     if (formatter != null) {
-      buffer.writeAll(['"formatter":', jsonEncode(formatter), ','], '');
+      buffer.writeAll(['"formatter":', formatter?.toJSON(), ','], '');
     }
     if (maxStaggerLines != null) {
       buffer.writeAll(['"maxStaggerLines":', maxStaggerLines, ','], '');

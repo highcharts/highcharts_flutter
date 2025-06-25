@@ -21,6 +21,7 @@ import 'highcharts_color_axis_data_classes_options.dart';
 import 'highcharts_color_axis_events_options.dart';
 import 'highcharts_color_axis_labels_options.dart';
 import 'highcharts_color_axis_marker_options.dart';
+import '../../utilities/highcharts_callback.dart';
 
 /* *
  *
@@ -578,10 +579,14 @@ class HighchartsColorAxisOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/colorAxis.tickPositioner
 
-  dynamic tickPositioner;
+  HighchartsCallback? tickPositioner;
 
   /// An array defining where the ticks are laid out on the axis. This
   /// overrides the default behaviour of tickPixelInterval and tickInterval.
+  ///
+  /// Note: When working with date-time axes, be aware of time zone
+  /// handling. See the documentation on time options
+  /// for best practices.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/colorAxis.tickPositions
 
@@ -937,8 +942,7 @@ class HighchartsColorAxisOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"tickPosition":', jsonEncode(tickPosition), ','], '');
     }
     if (tickPositioner != null) {
-      buffer
-          .writeAll(['"tickPositioner":', jsonEncode(tickPositioner), ','], '');
+      buffer.writeAll(['"tickPositioner":', tickPositioner?.toJSON(), ','], '');
     }
     if (tickPositions != null) {
       buffer.write('"tickPositions":[');

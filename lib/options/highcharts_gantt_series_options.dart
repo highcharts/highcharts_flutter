@@ -122,6 +122,16 @@ class HighchartsGanttSeriesOptions extends HighchartsOptionsBase {
 
   HighchartsGanttSeriesTooltipOptions? tooltip;
 
+  /// Whether to zoom non-cartesian series. If `chart.zooming` is set, the option
+  /// allows to disable zooming on an individual non-cartesian series. By default
+  /// zooming is enabled for all series.
+  ///
+  /// Note: This option works only for non-cartesian series.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.gantt.zoomEnabled
+
+  bool? zoomEnabled;
+
   /// A `gantt` series.
   ///
   /// API Docs: https://api.highcharts.com/gantt/series.gantt
@@ -138,7 +148,8 @@ class HighchartsGanttSeriesOptions extends HighchartsOptionsBase {
       this.legendIndex,
       this.partialFill,
       this.pointRange,
-      this.tooltip});
+      this.tooltip,
+      this.zoomEnabled});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
@@ -182,6 +193,9 @@ class HighchartsGanttSeriesOptions extends HighchartsOptionsBase {
     }
     if (tooltip != null) {
       buffer.writeAll(['"tooltip":', tooltip?.toJSON(), ','], '');
+    }
+    if (zoomEnabled != null) {
+      buffer.writeAll(['"zoomEnabled":', zoomEnabled, ','], '');
     }
   }
 }

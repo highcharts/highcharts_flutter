@@ -936,6 +936,16 @@ class HighchartsScatterSeriesOptions extends HighchartsOptionsBase {
 
   List<HighchartsSeriesZonesOptions>? zones;
 
+  /// Whether to zoom non-cartesian series. If `chart.zooming` is set, the option
+  /// allows to disable zooming on an individual non-cartesian series. By default
+  /// zooming is enabled for all series.
+  ///
+  /// Note: This option works only for non-cartesian series.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.scatter.zoomEnabled
+
+  bool? zoomEnabled;
+
   /// A `scatter` series. If the type option is not specified, it is inherited from chart.type.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.scatter
@@ -1023,7 +1033,8 @@ class HighchartsScatterSeriesOptions extends HighchartsOptionsBase {
       this.yAxis,
       this.zIndex,
       this.zoneAxis,
-      this.zones});
+      this.zones,
+      this.zoomEnabled});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
@@ -1309,6 +1320,9 @@ class HighchartsScatterSeriesOptions extends HighchartsOptionsBase {
         buffer.writeAll([item.toJSON(), ','], '');
       }
       buffer.write('],');
+    }
+    if (zoomEnabled != null) {
+      buffer.writeAll(['"zoomEnabled":', zoomEnabled, ','], '');
     }
   }
 }

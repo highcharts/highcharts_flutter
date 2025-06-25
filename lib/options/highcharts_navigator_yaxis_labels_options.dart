@@ -16,6 +16,7 @@
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
+import '../../utilities/highcharts_callback.dart';
 import 'highcharts_xaxis_labels_style_options.dart';
 import 'highcharts_yaxis_labels_levels_options.dart';
 import 'highcharts_yaxis_labels_symbol_options.dart';
@@ -120,7 +121,7 @@ class HighchartsNavigatorYAxisLabelsOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/navigator.yAxis.labels.formatter
 
-  dynamic formatter;
+  HighchartsCallback? formatter;
 
   /// Horizontal axis only. When `staggerLines` is not set,
   /// `maxStaggerLines` defines how many lines the axis is allowed to
@@ -311,7 +312,7 @@ class HighchartsNavigatorYAxisLabelsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"format":', jsonEncode(format), ','], '');
     }
     if (formatter != null) {
-      buffer.writeAll(['"formatter":', jsonEncode(formatter), ','], '');
+      buffer.writeAll(['"formatter":', formatter?.toJSON(), ','], '');
     }
     if (maxStaggerLines != null) {
       buffer.writeAll(['"maxStaggerLines":', maxStaggerLines, ','], '');

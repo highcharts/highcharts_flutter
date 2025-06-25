@@ -14,8 +14,8 @@
  *
  * */
 
-import 'dart:convert';
 import 'highcharts_options_base.dart';
+import '../../utilities/highcharts_callback.dart';
 
 /* *
  *
@@ -39,7 +39,7 @@ class HighchartsScatterSeriesClusterEventsOptions
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.scatter.cluster.events.drillToCluster
 
-  dynamic drillToCluster;
+  HighchartsCallback? drillToCluster;
 
   /// Highcharts Options Widget.
   HighchartsScatterSeriesClusterEventsOptions({this.drillToCluster});
@@ -49,8 +49,7 @@ class HighchartsScatterSeriesClusterEventsOptions
     super.toOptionsJSON(buffer);
 
     if (drillToCluster != null) {
-      buffer
-          .writeAll(['"drillToCluster":', jsonEncode(drillToCluster), ','], '');
+      buffer.writeAll(['"drillToCluster":', drillToCluster?.toJSON(), ','], '');
     }
   }
 }

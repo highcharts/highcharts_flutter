@@ -16,6 +16,7 @@
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
+import '../../utilities/highcharts_callback.dart';
 
 /* *
  *
@@ -95,7 +96,7 @@ class HighchartsAccessibilityScreenReaderSectionOptions
   ///
   /// API Docs: https://api.highcharts.com/highcharts/accessibility.screenReaderSection.onPlayAsSoundClick
 
-  dynamic onPlayAsSoundClick;
+  HighchartsCallback? onPlayAsSoundClick;
 
   /// Function to run upon clicking the "View as Data Table" link in
   /// the screen reader region.
@@ -105,7 +106,7 @@ class HighchartsAccessibilityScreenReaderSectionOptions
   ///
   /// API Docs: https://api.highcharts.com/highcharts/accessibility.screenReaderSection.onViewDataTableClick
 
-  dynamic onViewDataTableClick;
+  HighchartsCallback? onViewDataTableClick;
 
   /// Accessibility options for the screen reader information sections added before and after the chart.
   ///
@@ -146,12 +147,11 @@ class HighchartsAccessibilityScreenReaderSectionOptions
     }
     if (onPlayAsSoundClick != null) {
       buffer.writeAll(
-          ['"onPlayAsSoundClick":', jsonEncode(onPlayAsSoundClick), ','], '');
+          ['"onPlayAsSoundClick":', onPlayAsSoundClick?.toJSON(), ','], '');
     }
     if (onViewDataTableClick != null) {
       buffer.writeAll(
-          ['"onViewDataTableClick":', jsonEncode(onViewDataTableClick), ','],
-          '');
+          ['"onViewDataTableClick":', onViewDataTableClick?.toJSON(), ','], '');
     }
   }
 }

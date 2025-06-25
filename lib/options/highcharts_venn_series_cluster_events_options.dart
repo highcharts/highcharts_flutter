@@ -14,8 +14,8 @@
  *
  * */
 
-import 'dart:convert';
 import 'highcharts_options_base.dart';
+import '../../utilities/highcharts_callback.dart';
 
 /* *
  *
@@ -38,7 +38,7 @@ class HighchartsVennSeriesClusterEventsOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.venn.cluster.events.drillToCluster
 
-  dynamic drillToCluster;
+  HighchartsCallback? drillToCluster;
 
   /// Highcharts Options Widget.
   HighchartsVennSeriesClusterEventsOptions({this.drillToCluster});
@@ -48,8 +48,7 @@ class HighchartsVennSeriesClusterEventsOptions extends HighchartsOptionsBase {
     super.toOptionsJSON(buffer);
 
     if (drillToCluster != null) {
-      buffer
-          .writeAll(['"drillToCluster":', jsonEncode(drillToCluster), ','], '');
+      buffer.writeAll(['"drillToCluster":', drillToCluster?.toJSON(), ','], '');
     }
   }
 }

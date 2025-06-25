@@ -16,6 +16,7 @@
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
+import '../../utilities/highcharts_callback.dart';
 
 /* *
  *
@@ -36,7 +37,7 @@ class HighchartsSunburstSeriesEventsOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.sunburst.events.afterAnimate
 
-  dynamic afterAnimate;
+  HighchartsCallback? afterAnimate;
 
   /// Fires when the checkbox next to the point name in the legend is
   /// clicked. One parameter, event, is passed to the function. The state
@@ -54,14 +55,14 @@ class HighchartsSunburstSeriesEventsOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.sunburst.events.click
 
-  dynamic click;
+  HighchartsCallback? click;
 
   /// Fires when the series is hidden after chart generation time, either
   /// by clicking the legend item or by calling `.hide()`.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.sunburst.events.hide
 
-  dynamic hide;
+  HighchartsCallback? hide;
 
   /// Fires when the mouse leaves the graph. One parameter, `event`, is
   /// passed to the function, containing common event information. If the
@@ -71,21 +72,21 @@ class HighchartsSunburstSeriesEventsOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.sunburst.events.mouseOut
 
-  dynamic mouseOut;
+  HighchartsCallback? mouseOut;
 
   /// Fires when the mouse enters the graph. One parameter, `event`, is
   /// passed to the function, containing common event information.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.sunburst.events.mouseOver
 
-  dynamic mouseOver;
+  HighchartsCallback? mouseOver;
 
   /// Fires when the series is shown after chart generation time, either
   /// by clicking the legend item or by calling `.show()`.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.sunburst.events.show
 
-  dynamic show;
+  HighchartsCallback? show;
 
   /// Highcharts Options Widget.
   HighchartsSunburstSeriesEventsOptions(
@@ -102,25 +103,25 @@ class HighchartsSunburstSeriesEventsOptions extends HighchartsOptionsBase {
     super.toOptionsJSON(buffer);
 
     if (afterAnimate != null) {
-      buffer.writeAll(['"afterAnimate":', jsonEncode(afterAnimate), ','], '');
+      buffer.writeAll(['"afterAnimate":', afterAnimate?.toJSON(), ','], '');
     }
     if (checkboxClick != null) {
       buffer.writeAll(['"checkboxClick":', jsonEncode(checkboxClick), ','], '');
     }
     if (click != null) {
-      buffer.writeAll(['"click":', jsonEncode(click), ','], '');
+      buffer.writeAll(['"click":', click?.toJSON(), ','], '');
     }
     if (hide != null) {
-      buffer.writeAll(['"hide":', jsonEncode(hide), ','], '');
+      buffer.writeAll(['"hide":', hide?.toJSON(), ','], '');
     }
     if (mouseOut != null) {
-      buffer.writeAll(['"mouseOut":', jsonEncode(mouseOut), ','], '');
+      buffer.writeAll(['"mouseOut":', mouseOut?.toJSON(), ','], '');
     }
     if (mouseOver != null) {
-      buffer.writeAll(['"mouseOver":', jsonEncode(mouseOver), ','], '');
+      buffer.writeAll(['"mouseOver":', mouseOver?.toJSON(), ','], '');
     }
     if (show != null) {
-      buffer.writeAll(['"show":', jsonEncode(show), ','], '');
+      buffer.writeAll(['"show":', show?.toJSON(), ','], '');
     }
   }
 }

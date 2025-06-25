@@ -17,6 +17,7 @@
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_tooltip_date_time_label_formats_options.dart';
+import '../../utilities/highcharts_callback.dart';
 import 'highcharts_tooltip_position_options.dart';
 
 /* *
@@ -147,7 +148,7 @@ class HighchartsPriceEnvelopesSeriesTooltipOptions
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.priceenvelopes.tooltip.nullFormatter
 
-  dynamic nullFormatter;
+  HighchartsCallback? nullFormatter;
 
   /// Highcharts Options Widget.
 
@@ -253,7 +254,7 @@ class HighchartsPriceEnvelopesSeriesTooltipOptions
       buffer.writeAll(['"nullFormat":', jsonEncode(nullFormat), ','], '');
     }
     if (nullFormatter != null) {
-      buffer.writeAll(['"nullFormatter":', jsonEncode(nullFormatter), ','], '');
+      buffer.writeAll(['"nullFormatter":', nullFormatter?.toJSON(), ','], '');
     }
     if (pointFormat != null) {
       buffer.writeAll(['"pointFormat":', jsonEncode(pointFormat), ','], '');

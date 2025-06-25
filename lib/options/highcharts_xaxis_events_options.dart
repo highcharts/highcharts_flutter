@@ -14,8 +14,8 @@
  *
  * */
 
-import 'dart:convert';
 import 'highcharts_options_base.dart';
+import '../../utilities/highcharts_callback.dart';
 
 /* *
  *
@@ -37,7 +37,7 @@ class HighchartsXAxisEventsOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/xAxis.events.afterBreaks
 
-  dynamic afterBreaks;
+  HighchartsCallback? afterBreaks;
 
   /// As opposed to the `setExtremes` event, this event fires after the
   /// final min and max values are computed and corrected for `minRange`.
@@ -54,25 +54,25 @@ class HighchartsXAxisEventsOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/xAxis.events.afterSetExtremes
 
-  dynamic afterSetExtremes;
+  HighchartsCallback? afterSetExtremes;
 
   /// An event fired when a break from this axis occurs on a point.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/xAxis.events.pointBreak
 
-  dynamic pointBreak;
+  HighchartsCallback? pointBreak;
 
   /// An event fired when a point is outside a break after zoom.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/xAxis.events.pointBreakOut
 
-  dynamic pointBreakOut;
+  HighchartsCallback? pointBreakOut;
 
   /// An event fired when a point falls inside a break from this axis.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/xAxis.events.pointInBreak
 
-  dynamic pointInBreak;
+  HighchartsCallback? pointInBreak;
 
   /// Fires when the minimum and maximum is set for the axis, either by
   /// calling the `.setExtremes()` method or by selecting an area in the
@@ -87,7 +87,7 @@ class HighchartsXAxisEventsOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/xAxis.events.setExtremes
 
-  dynamic setExtremes;
+  HighchartsCallback? setExtremes;
 
   /// Event handlers for the axis.
   ///
@@ -105,23 +105,23 @@ class HighchartsXAxisEventsOptions extends HighchartsOptionsBase {
     super.toOptionsJSON(buffer);
 
     if (afterBreaks != null) {
-      buffer.writeAll(['"afterBreaks":', jsonEncode(afterBreaks), ','], '');
+      buffer.writeAll(['"afterBreaks":', afterBreaks?.toJSON(), ','], '');
     }
     if (afterSetExtremes != null) {
       buffer.writeAll(
-          ['"afterSetExtremes":', jsonEncode(afterSetExtremes), ','], '');
+          ['"afterSetExtremes":', afterSetExtremes?.toJSON(), ','], '');
     }
     if (pointBreak != null) {
-      buffer.writeAll(['"pointBreak":', jsonEncode(pointBreak), ','], '');
+      buffer.writeAll(['"pointBreak":', pointBreak?.toJSON(), ','], '');
     }
     if (pointBreakOut != null) {
-      buffer.writeAll(['"pointBreakOut":', jsonEncode(pointBreakOut), ','], '');
+      buffer.writeAll(['"pointBreakOut":', pointBreakOut?.toJSON(), ','], '');
     }
     if (pointInBreak != null) {
-      buffer.writeAll(['"pointInBreak":', jsonEncode(pointInBreak), ','], '');
+      buffer.writeAll(['"pointInBreak":', pointInBreak?.toJSON(), ','], '');
     }
     if (setExtremes != null) {
-      buffer.writeAll(['"setExtremes":', jsonEncode(setExtremes), ','], '');
+      buffer.writeAll(['"setExtremes":', setExtremes?.toJSON(), ','], '');
     }
   }
 }

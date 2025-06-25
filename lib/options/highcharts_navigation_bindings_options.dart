@@ -20,7 +20,7 @@ import 'highcharts_navigation_bindings_ellipse_annotation_options.dart';
 import 'highcharts_navigation_bindings_fibonacci_options.dart';
 import 'highcharts_navigation_bindings_full_screen_options.dart';
 import 'highcharts_navigation_bindings_save_chart_options.dart';
-import 'highcharts_navigation_bindings_series_type_hlcoptions.dart';
+import 'highcharts_navigation_bindings_series_type_hlc_options.dart';
 import 'highcharts_navigation_bindings_time_cycles_options.dart';
 
 /* *
@@ -33,7 +33,7 @@ export 'highcharts_navigation_bindings_ellipse_annotation_options.dart';
 export 'highcharts_navigation_bindings_fibonacci_options.dart';
 export 'highcharts_navigation_bindings_full_screen_options.dart';
 export 'highcharts_navigation_bindings_save_chart_options.dart';
-export 'highcharts_navigation_bindings_series_type_hlcoptions.dart';
+export 'highcharts_navigation_bindings_series_type_hlc_options.dart';
 export 'highcharts_navigation_bindings_time_cycles_options.dart';
 
 /* *

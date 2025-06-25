@@ -16,6 +16,7 @@
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
+import '../../utilities/highcharts_callback.dart';
 
 /* *
  *
@@ -46,7 +47,7 @@ class HighchartsColorAxisEventsOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/colorAxis.events.afterSetExtremes
 
-  dynamic afterSetExtremes;
+  HighchartsCallback? afterSetExtremes;
 
   /// Fires when the legend item belonging to the colorAxis is clicked.
   /// One parameter, `event`, is passed to the function.
@@ -62,7 +63,7 @@ class HighchartsColorAxisEventsOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/colorAxis.events.pointBreakOut
 
-  dynamic pointBreakOut;
+  HighchartsCallback? pointBreakOut;
 
   /// Fires when the minimum and maximum is set for the axis, either by
   /// calling the `.setExtremes()` method or by selecting an area in the
@@ -77,7 +78,7 @@ class HighchartsColorAxisEventsOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/colorAxis.events.setExtremes
 
-  dynamic setExtremes;
+  HighchartsCallback? setExtremes;
 
   /// Highcharts Options Widget.
   HighchartsColorAxisEventsOptions(
@@ -92,17 +93,17 @@ class HighchartsColorAxisEventsOptions extends HighchartsOptionsBase {
 
     if (afterSetExtremes != null) {
       buffer.writeAll(
-          ['"afterSetExtremes":', jsonEncode(afterSetExtremes), ','], '');
+          ['"afterSetExtremes":', afterSetExtremes?.toJSON(), ','], '');
     }
     if (legendItemClick != null) {
       buffer.writeAll(
           ['"legendItemClick":', jsonEncode(legendItemClick), ','], '');
     }
     if (pointBreakOut != null) {
-      buffer.writeAll(['"pointBreakOut":', jsonEncode(pointBreakOut), ','], '');
+      buffer.writeAll(['"pointBreakOut":', pointBreakOut?.toJSON(), ','], '');
     }
     if (setExtremes != null) {
-      buffer.writeAll(['"setExtremes":', jsonEncode(setExtremes), ','], '');
+      buffer.writeAll(['"setExtremes":', setExtremes?.toJSON(), ','], '');
     }
   }
 }

@@ -29,7 +29,8 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/// An array of background items for the pane.
+/// A background item or an array of such for the pane. When used in
+/// `Highcharts.setOptions` for theming, the background must be a single item.
 ///
 /// API Docs: https://api.highcharts.com/highcharts/pane.background
 class HighchartsPaneBackgroundOptions extends HighchartsOptionsBase {
@@ -86,7 +87,7 @@ class HighchartsPaneBackgroundOptions extends HighchartsOptionsBase {
 
   String? shape;
 
-  /// An array of background items for the pane.
+  /// A background item or an array of such for the pane. When used in `Highcharts.setOptions` for theming, the background must be a single item.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/pane.background
   HighchartsPaneBackgroundOptions(

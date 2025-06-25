@@ -1,11 +1,19 @@
 name: highcharts_flutter
-version: 0.4.0
+version: 1.0.0-rc.1
 description: >-
   Official Flutter integration for Highcharts with many options widgets for
   interactive charts, that can be adjusted and dynamically applied.
 homepage: https://www.highcharts.com/integrations/
 issue_tracker: https://github.com/highcharts/highcharts_flutter/issues
 repository: https://github.com/highcharts/highcharts_flutter
+
+platforms:
+  android:
+  ios:
+  web:
+  #linux:
+  #macos:
+  #windows:
 
 topics:
   - charts
@@ -20,7 +28,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  highcharts_flutter_webwebview: ^0.3.2
+  highcharts_flutter_webwebview: ^0.3.4
   provider: ^6.1.2
   web: ^1.1.0
   webview_flutter: ^4.10.0
@@ -31,8 +39,6 @@ dependencies:
 dev_dependencies:
   flutter_lints: ^3.0.2
   flutter_test:
-    sdk: flutter
-  integration_test:
     sdk: flutter
 
 # For information on the generic Dart part of this file, see the
@@ -51,6 +57,10 @@ flutter:
   #
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
+
+  assets:
+    - assets/highcharts_flutter.js
+    - assets/highcharts_view.html
 
   # To add custom fonts to your package, add a fonts section here,
   # in this "flutter" section. Each entry in this list should have a

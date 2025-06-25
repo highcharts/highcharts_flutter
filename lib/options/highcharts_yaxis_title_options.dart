@@ -128,6 +128,12 @@ class HighchartsYAxisTitleOptions extends HighchartsOptionsBase {
 
   HighchartsXAxisTitleStyleOptions? style;
 
+  /// The actual text of the axis title. Horizontal texts can contain
+  /// HTML, but rotated texts are painted using vector techniques and
+  /// must be clean text. The Y axis title is disabled by setting the
+  /// `text` option to `undefined`. The default value is overriden by
+  /// the `lang.yAxisTitle` language option.
+  ///
   /// The actual text of the axis title. It can contain basic HTML tags
   /// like `b`, `i` and `span` with style.
   ///

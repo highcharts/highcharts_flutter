@@ -31,19 +31,19 @@ import 'highcharts_options_base.dart';
 
 /// Accessibility options for an annotation label.
 ///
-/// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.fibonacciTimeZones.labelOptions.accessibility
+/// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.verticalLine.typeOptions.label.accessibility
 class HighchartsAnnotationsLabelAccessibilityOptions
     extends HighchartsOptionsBase {
   /// Description of an annotation label for screen readers and other assistive
   /// technology.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.fibonacciTimeZones.labelOptions.accessibility.description
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.verticalLine.typeOptions.label.accessibility.description
 
   String? description;
 
   /// Accessibility options for an annotation label.
   ///
-  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.fibonacciTimeZones.labelOptions.accessibility
+  /// API Docs: https://api.highcharts.com/highcharts/navigation.annotationsOptions.types.verticalLine.typeOptions.label.accessibility
   HighchartsAnnotationsLabelAccessibilityOptions({this.description});
 
   @override

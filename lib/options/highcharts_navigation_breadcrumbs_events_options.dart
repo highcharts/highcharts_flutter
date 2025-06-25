@@ -14,8 +14,8 @@
  *
  * */
 
-import 'dart:convert';
 import 'highcharts_options_base.dart';
+import '../../utilities/highcharts_callback.dart';
 
 /* *
  *
@@ -42,7 +42,7 @@ class HighchartsNavigationBreadcrumbsEventsOptions
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.treemap.breadcrumbs.events.click
 
-  dynamic click;
+  HighchartsCallback? click;
 
   /// Highcharts Options Widget.
   HighchartsNavigationBreadcrumbsEventsOptions({this.click});
@@ -52,7 +52,7 @@ class HighchartsNavigationBreadcrumbsEventsOptions
     super.toOptionsJSON(buffer);
 
     if (click != null) {
-      buffer.writeAll(['"click":', jsonEncode(click), ','], '');
+      buffer.writeAll(['"click":', click?.toJSON(), ','], '');
     }
   }
 }

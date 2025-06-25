@@ -16,6 +16,7 @@
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
+import '../../utilities/highcharts_callback.dart';
 
 /* *
  *
@@ -86,7 +87,7 @@ class HighchartsXAxisCrosshairLabelOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highstock/yAxis.crosshair.label.formatter
 
-  dynamic formatter;
+  HighchartsCallback? formatter;
 
   /// Padding inside the crosshair label.
   ///
@@ -149,7 +150,7 @@ class HighchartsXAxisCrosshairLabelOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"format":', jsonEncode(format), ','], '');
     }
     if (formatter != null) {
-      buffer.writeAll(['"formatter":', jsonEncode(formatter), ','], '');
+      buffer.writeAll(['"formatter":', formatter?.toJSON(), ','], '');
     }
     if (padding != null) {
       buffer.writeAll(['"padding":', padding, ','], '');

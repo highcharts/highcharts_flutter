@@ -29,6 +29,7 @@ import 'highcharts_yaxis_resize_options.dart';
 import 'highcharts_yaxis_scrollbar_options.dart';
 import 'highcharts_yaxis_stack_labels_options.dart';
 import 'highcharts_yaxis_stack_shadow_options.dart';
+import '../../utilities/highcharts_callback.dart';
 import 'highcharts_yaxis_title_options.dart';
 
 /* *
@@ -766,10 +767,14 @@ class HighchartsYAxisOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/yAxis.tickPositioner
 
-  dynamic tickPositioner;
+  HighchartsCallback? tickPositioner;
 
   /// An array defining where the ticks are laid out on the axis. This
   /// overrides the default behaviour of tickPixelInterval and tickInterval.
+  ///
+  /// Note: When working with date-time axes, be aware of time zone
+  /// handling. See the documentation on time options
+  /// for best practices.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/yAxis.tickPositions
 
@@ -1272,8 +1277,7 @@ class HighchartsYAxisOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"tickPosition":', jsonEncode(tickPosition), ','], '');
     }
     if (tickPositioner != null) {
-      buffer
-          .writeAll(['"tickPositioner":', jsonEncode(tickPositioner), ','], '');
+      buffer.writeAll(['"tickPositioner":', tickPositioner?.toJSON(), ','], '');
     }
     if (tickPositions != null) {
       buffer.write('"tickPositions":[');

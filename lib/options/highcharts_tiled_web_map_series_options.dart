@@ -102,6 +102,16 @@ class HighchartsTiledWebMapSeriesOptions extends HighchartsOptionsBase {
 
   HighchartsTiledWebMapSeriesStatesOptions? states;
 
+  /// Whether to zoom non-cartesian series. If `chart.zooming` is set, the option
+  /// allows to disable zooming on an individual non-cartesian series. By default
+  /// zooming is enabled for all series.
+  ///
+  /// Note: This option works only for non-cartesian series.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.tiledwebmap.zoomEnabled
+
+  bool? zoomEnabled;
+
   /// A `tiledwebmap` series. The type option is not specified, it is inherited from chart.type.
   ///
   /// API Docs: https://api.highcharts.com/highmaps/series.tiledwebmap
@@ -113,7 +123,8 @@ class HighchartsTiledWebMapSeriesOptions extends HighchartsOptionsBase {
       this.linecap,
       this.mapData,
       this.provider,
-      this.states});
+      this.states,
+      this.zoomEnabled});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
@@ -142,6 +153,9 @@ class HighchartsTiledWebMapSeriesOptions extends HighchartsOptionsBase {
     }
     if (states != null) {
       buffer.writeAll(['"states":', states?.toJSON(), ','], '');
+    }
+    if (zoomEnabled != null) {
+      buffer.writeAll(['"zoomEnabled":', zoomEnabled, ','], '');
     }
   }
 }

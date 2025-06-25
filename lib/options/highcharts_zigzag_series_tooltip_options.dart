@@ -17,6 +17,7 @@
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_tooltip_date_time_label_formats_options.dart';
+import '../../utilities/highcharts_callback.dart';
 import 'highcharts_tooltip_position_options.dart';
 
 /* *
@@ -146,7 +147,7 @@ class HighchartsZigzagSeriesTooltipOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.tooltip.nullFormatter
 
-  dynamic nullFormatter;
+  HighchartsCallback? nullFormatter;
 
   /// The HTML of the point's line in the tooltip. The context is the
   /// Point class.
@@ -264,7 +265,7 @@ class HighchartsZigzagSeriesTooltipOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"nullFormat":', jsonEncode(nullFormat), ','], '');
     }
     if (nullFormatter != null) {
-      buffer.writeAll(['"nullFormatter":', jsonEncode(nullFormatter), ','], '');
+      buffer.writeAll(['"nullFormatter":', nullFormatter?.toJSON(), ','], '');
     }
     if (pointFormat != null) {
       buffer.writeAll(['"pointFormat":', jsonEncode(pointFormat), ','], '');

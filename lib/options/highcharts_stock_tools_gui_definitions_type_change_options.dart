@@ -17,11 +17,11 @@
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_stock_tools_gui_definitions_type_change_type_candlestick_options.dart';
-import 'highcharts_stock_tools_gui_definitions_type_change_type_hlcoptions.dart';
+import 'highcharts_stock_tools_gui_definitions_type_change_type_hlc_options.dart';
 import 'highcharts_stock_tools_gui_definitions_type_change_type_heikin_ashi_options.dart';
 import 'highcharts_stock_tools_gui_definitions_type_change_type_hollow_candlestick_options.dart';
 import 'highcharts_stock_tools_gui_definitions_type_change_type_line_options.dart';
-import 'highcharts_stock_tools_gui_definitions_type_change_type_ohlcoptions.dart';
+import 'highcharts_stock_tools_gui_definitions_type_change_type_ohlc_options.dart';
 
 /* *
  *
@@ -30,11 +30,11 @@ import 'highcharts_stock_tools_gui_definitions_type_change_type_ohlcoptions.dart
  * */
 
 export 'highcharts_stock_tools_gui_definitions_type_change_type_candlestick_options.dart';
-export 'highcharts_stock_tools_gui_definitions_type_change_type_hlcoptions.dart';
+export 'highcharts_stock_tools_gui_definitions_type_change_type_hlc_options.dart';
 export 'highcharts_stock_tools_gui_definitions_type_change_type_heikin_ashi_options.dart';
 export 'highcharts_stock_tools_gui_definitions_type_change_type_hollow_candlestick_options.dart';
 export 'highcharts_stock_tools_gui_definitions_type_change_type_line_options.dart';
-export 'highcharts_stock_tools_gui_definitions_type_change_type_ohlcoptions.dart';
+export 'highcharts_stock_tools_gui_definitions_type_change_type_ohlc_options.dart';
 
 /* *
  *

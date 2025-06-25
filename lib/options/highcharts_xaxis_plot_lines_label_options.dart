@@ -29,7 +29,7 @@ import 'highcharts_options_base.dart';
  *
  * */
 
-/// Text labels for the plot bands
+/// Text labels for the plot lines
 ///
 /// API Docs: https://api.highcharts.com/highcharts/xAxis.plotLines.label
 class HighchartsXAxisPlotLinesLabelOptions extends HighchartsOptionsBase {
@@ -107,7 +107,7 @@ class HighchartsXAxisPlotLinesLabelOptions extends HighchartsOptionsBase {
 
   double? y;
 
-  /// Text labels for the plot bands
+  /// Text labels for the plot lines
   ///
   /// API Docs: https://api.highcharts.com/highcharts/xAxis.plotLines.label
   HighchartsXAxisPlotLinesLabelOptions(

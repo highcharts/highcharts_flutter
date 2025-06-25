@@ -23,8 +23,7 @@ import 'highcharts_annotations_label_options.dart';
 import 'highcharts_annotations_labels_options.dart';
 import 'highcharts_annotations_shape_options.dart';
 import 'highcharts_annotations_shapes_options.dart';
-import 'highcharts_annotations_fibonacci_time_zones_options.dart';
-import 'highcharts_annotations_time_cycles_options.dart';
+import 'highcharts_annotations_types_options.dart';
 
 /* *
  *
@@ -39,8 +38,7 @@ export 'highcharts_annotations_label_options.dart';
 export 'highcharts_annotations_labels_options.dart';
 export 'highcharts_annotations_shape_options.dart';
 export 'highcharts_annotations_shapes_options.dart';
-export 'highcharts_annotations_fibonacci_time_zones_options.dart';
-export 'highcharts_annotations_time_cycles_options.dart';
+export 'highcharts_annotations_types_options.dart';
 
 /* *
  *
@@ -146,17 +144,19 @@ class HighchartsNavigationAnnotationsOptions extends HighchartsOptionsBase {
 
   double? zIndex;
 
-  /// The Fibonacci Time Zones annotation.
+  /// For advanced annotations, this option defines the type of annotation. Can
+  /// be one of the keys listed under the types option.
   ///
-  /// API Docs: https://api.highcharts.com/highstock/navigation.annotationsOptions.fibonacciTimeZones
+  /// API Docs: https://api.highcharts.com/highstock/navigation.annotationsOptions.type
 
-  HighchartsAnnotationsFibonacciTimeZonesOptions? fibonacciTimeZones;
+  String? type;
 
-  /// The TimeCycles Annotation
+  /// Option override for specific advanced annotation types. This collection
+  /// is intended for general theming using `Highcharts.setOptions()`.
   ///
-  /// API Docs: https://api.highcharts.com/highstock/navigation.annotationsOptions.timeCycles
+  /// API Docs: https://api.highcharts.com/highstock/navigation.annotationsOptions.types
 
-  HighchartsAnnotationsTimeCyclesOptions? timeCycles;
+  HighchartsAnnotationsTypesOptions? types;
 
   /// Additional options to be merged into all annotations.
   ///
@@ -174,8 +174,8 @@ class HighchartsNavigationAnnotationsOptions extends HighchartsOptionsBase {
       this.shapes,
       this.visible,
       this.zIndex,
-      this.fibonacciTimeZones,
-      this.timeCycles});
+      this.type,
+      this.types});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
@@ -226,12 +226,11 @@ class HighchartsNavigationAnnotationsOptions extends HighchartsOptionsBase {
     if (zIndex != null) {
       buffer.writeAll(['"zIndex":', zIndex, ','], '');
     }
-    if (fibonacciTimeZones != null) {
-      buffer.writeAll(
-          ['"fibonacciTimeZones":', fibonacciTimeZones?.toJSON(), ','], '');
+    if (type != null) {
+      buffer.writeAll(['"type":', jsonEncode(type), ','], '');
     }
-    if (timeCycles != null) {
-      buffer.writeAll(['"timeCycles":', timeCycles?.toJSON(), ','], '');
+    if (types != null) {
+      buffer.writeAll(['"types":', types?.toJSON(), ','], '');
     }
   }
 }

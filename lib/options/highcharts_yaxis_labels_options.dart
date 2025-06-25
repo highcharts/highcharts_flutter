@@ -16,6 +16,7 @@
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
+import '../../utilities/highcharts_callback.dart';
 import 'highcharts_yaxis_labels_levels_options.dart';
 import 'highcharts_xaxis_labels_style_options.dart';
 import 'highcharts_yaxis_labels_symbol_options.dart';
@@ -128,7 +129,7 @@ class HighchartsYAxisLabelsOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/yAxis.labels.formatter
 
-  dynamic formatter;
+  HighchartsCallback? formatter;
 
   /// The number of pixels to indent the labels per level in a treegrid
   /// axis.
@@ -355,7 +356,7 @@ class HighchartsYAxisLabelsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"format":', jsonEncode(format), ','], '');
     }
     if (formatter != null) {
-      buffer.writeAll(['"formatter":', jsonEncode(formatter), ','], '');
+      buffer.writeAll(['"formatter":', formatter?.toJSON(), ','], '');
     }
     if (indentation != null) {
       buffer.writeAll(['"indentation":', indentation, ','], '');

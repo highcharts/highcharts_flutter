@@ -14,8 +14,8 @@
  *
  * */
 
-import 'dart:convert';
 import 'highcharts_options_base.dart';
+import '../../utilities/highcharts_callback.dart';
 
 /* *
  *
@@ -36,13 +36,13 @@ class HighchartsNetworkgraphSeriesEventsOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.networkgraph.events.afterAnimate
 
-  dynamic afterAnimate;
+  HighchartsCallback? afterAnimate;
 
   /// Fires after the simulation is ended and the layout is stable.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.networkgraph.events.afterSimulation
 
-  dynamic afterSimulation;
+  HighchartsCallback? afterSimulation;
 
   /// Fires when the checkbox next to the series' name in the legend is
   /// clicked. One parameter, `event`, is passed to the function. The state
@@ -52,7 +52,7 @@ class HighchartsNetworkgraphSeriesEventsOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.networkgraph.events.checkboxClick
 
-  dynamic checkboxClick;
+  HighchartsCallback? checkboxClick;
 
   /// Fires when the series is clicked. One parameter, `event`, is passed
   /// to the function, containing common event information. Additionally,
@@ -60,14 +60,14 @@ class HighchartsNetworkgraphSeriesEventsOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.networkgraph.events.click
 
-  dynamic click;
+  HighchartsCallback? click;
 
   /// Fires when the series is hidden after chart generation time, either
   /// by clicking the legend item or by calling `.hide()`.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.networkgraph.events.hide
 
-  dynamic hide;
+  HighchartsCallback? hide;
 
   /// Fires when the legend item belonging to the series is clicked. One
   /// parameter, `event`, is passed to the function. The default action
@@ -79,7 +79,7 @@ class HighchartsNetworkgraphSeriesEventsOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.networkgraph.events.legendItemClick
 
-  dynamic legendItemClick;
+  HighchartsCallback? legendItemClick;
 
   /// Fires when the mouse leaves the graph. One parameter, `event`, is
   /// passed to the function, containing common event information. If the
@@ -89,21 +89,21 @@ class HighchartsNetworkgraphSeriesEventsOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.networkgraph.events.mouseOut
 
-  dynamic mouseOut;
+  HighchartsCallback? mouseOut;
 
   /// Fires when the mouse enters the graph. One parameter, `event`, is
   /// passed to the function, containing common event information.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.networkgraph.events.mouseOver
 
-  dynamic mouseOver;
+  HighchartsCallback? mouseOver;
 
   /// Fires when the series is shown after chart generation time, either
   /// by clicking the legend item or by calling `.show()`.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.networkgraph.events.show
 
-  dynamic show;
+  HighchartsCallback? show;
 
   /// Highcharts Options Widget.
   HighchartsNetworkgraphSeriesEventsOptions(
@@ -122,33 +122,33 @@ class HighchartsNetworkgraphSeriesEventsOptions extends HighchartsOptionsBase {
     super.toOptionsJSON(buffer);
 
     if (afterAnimate != null) {
-      buffer.writeAll(['"afterAnimate":', jsonEncode(afterAnimate), ','], '');
+      buffer.writeAll(['"afterAnimate":', afterAnimate?.toJSON(), ','], '');
     }
     if (afterSimulation != null) {
-      buffer.writeAll(
-          ['"afterSimulation":', jsonEncode(afterSimulation), ','], '');
+      buffer
+          .writeAll(['"afterSimulation":', afterSimulation?.toJSON(), ','], '');
     }
     if (checkboxClick != null) {
-      buffer.writeAll(['"checkboxClick":', jsonEncode(checkboxClick), ','], '');
+      buffer.writeAll(['"checkboxClick":', checkboxClick?.toJSON(), ','], '');
     }
     if (click != null) {
-      buffer.writeAll(['"click":', jsonEncode(click), ','], '');
+      buffer.writeAll(['"click":', click?.toJSON(), ','], '');
     }
     if (hide != null) {
-      buffer.writeAll(['"hide":', jsonEncode(hide), ','], '');
+      buffer.writeAll(['"hide":', hide?.toJSON(), ','], '');
     }
     if (legendItemClick != null) {
-      buffer.writeAll(
-          ['"legendItemClick":', jsonEncode(legendItemClick), ','], '');
+      buffer
+          .writeAll(['"legendItemClick":', legendItemClick?.toJSON(), ','], '');
     }
     if (mouseOut != null) {
-      buffer.writeAll(['"mouseOut":', jsonEncode(mouseOut), ','], '');
+      buffer.writeAll(['"mouseOut":', mouseOut?.toJSON(), ','], '');
     }
     if (mouseOver != null) {
-      buffer.writeAll(['"mouseOver":', jsonEncode(mouseOver), ','], '');
+      buffer.writeAll(['"mouseOver":', mouseOver?.toJSON(), ','], '');
     }
     if (show != null) {
-      buffer.writeAll(['"show":', jsonEncode(show), ','], '');
+      buffer.writeAll(['"show":', show?.toJSON(), ','], '');
     }
   }
 }

@@ -18,6 +18,7 @@ import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_tooltip_animation_options.dart';
 import 'highcharts_tooltip_date_time_label_formats_options.dart';
+import '../../utilities/highcharts_callback.dart';
 import 'highcharts_tooltip_position_options.dart';
 import 'highcharts_tooltip_style_options.dart';
 
@@ -243,7 +244,7 @@ class HighchartsTooltipOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/tooltip.formatter
 
-  dynamic formatter;
+  HighchartsCallback? formatter;
 
   /// The HTML of the tooltip header line. The context is the
   /// Point class.
@@ -290,7 +291,7 @@ class HighchartsTooltipOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/tooltip.nullFormatter
 
-  dynamic nullFormatter;
+  HighchartsCallback? nullFormatter;
 
   /// Whether to allow the tooltip to render outside the chart's SVG
   /// element box. By default (`false`), the tooltip is rendered within the
@@ -371,7 +372,7 @@ class HighchartsTooltipOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/tooltip.positioner
 
-  dynamic positioner;
+  HighchartsCallback? positioner;
 
   /// Whether to apply a drop shadow to the tooltip. Defaults to true,
   /// unless the tooltip is fixed.
@@ -599,7 +600,7 @@ class HighchartsTooltipOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"format":', jsonEncode(format), ','], '');
     }
     if (formatter != null) {
-      buffer.writeAll(['"formatter":', jsonEncode(formatter), ','], '');
+      buffer.writeAll(['"formatter":', formatter?.toJSON(), ','], '');
     }
     if (headerFormat != null) {
       buffer.writeAll(['"headerFormat":', jsonEncode(headerFormat), ','], '');
@@ -614,7 +615,7 @@ class HighchartsTooltipOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"nullFormat":', jsonEncode(nullFormat), ','], '');
     }
     if (nullFormatter != null) {
-      buffer.writeAll(['"nullFormatter":', jsonEncode(nullFormatter), ','], '');
+      buffer.writeAll(['"nullFormatter":', nullFormatter?.toJSON(), ','], '');
     }
     if (outside != null) {
       buffer.writeAll(['"outside":', outside, ','], '');
@@ -633,7 +634,7 @@ class HighchartsTooltipOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"position":', position?.toJSON(), ','], '');
     }
     if (positioner != null) {
-      buffer.writeAll(['"positioner":', jsonEncode(positioner), ','], '');
+      buffer.writeAll(['"positioner":', positioner?.toJSON(), ','], '');
     }
     if (shadow != null) {
       buffer.write('"shadow":{');

@@ -16,6 +16,7 @@
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
+import '../../utilities/highcharts_callback.dart';
 import 'highcharts_annotations_control_point_style_options.dart';
 
 /* *
@@ -49,7 +50,7 @@ class HighchartsAnnotationsControlPointOptions extends HighchartsOptionsBase {
 
   /// Highcharts Options Widget.
 
-  dynamic positioner;
+  HighchartsCallback? positioner;
 
   /// Highcharts Options Widget.
 
@@ -94,7 +95,7 @@ class HighchartsAnnotationsControlPointOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"height":', height, ','], '');
     }
     if (positioner != null) {
-      buffer.writeAll(['"positioner":', jsonEncode(positioner), ','], '');
+      buffer.writeAll(['"positioner":', positioner?.toJSON(), ','], '');
     }
     if (style != null) {
       buffer.writeAll(['"style":', style?.toJSON(), ','], '');

@@ -199,6 +199,16 @@ class HighchartsMapBubbleSeriesOptions extends HighchartsOptionsBase {
 
   double? zThreshold;
 
+  /// Whether to zoom non-cartesian series. If `chart.zooming` is set, the option
+  /// allows to disable zooming on an individual non-cartesian series. By default
+  /// zooming is enabled for all series.
+  ///
+  /// Note: This option works only for non-cartesian series.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.mapbubble.zoomEnabled
+
+  bool? zoomEnabled;
+
   /// A `mapbubble` series. If the type option is not specified, it is inherited from chart.type.
   ///
   /// API Docs: https://api.highcharts.com/highmaps/series.mapbubble
@@ -222,7 +232,8 @@ class HighchartsMapBubbleSeriesOptions extends HighchartsOptionsBase {
       this.tooltip,
       this.zMax,
       this.zMin,
-      this.zThreshold});
+      this.zThreshold,
+      this.zoomEnabled});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
@@ -291,6 +302,9 @@ class HighchartsMapBubbleSeriesOptions extends HighchartsOptionsBase {
     }
     if (zThreshold != null) {
       buffer.writeAll(['"zThreshold":', zThreshold, ','], '');
+    }
+    if (zoomEnabled != null) {
+      buffer.writeAll(['"zoomEnabled":', zoomEnabled, ','], '');
     }
   }
 }

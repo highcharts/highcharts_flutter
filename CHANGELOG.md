@@ -1,3 +1,11 @@
+## 1.0.0-rc.1
+
+* Added HighchartsCallback.
+* Added callback to flutter_refresh_chart example.
+* Added support for onError, onLoading, onLoaded. (#52)
+* Added support for Flutter callbacks in otpions. (#23)
+* Added support for JavaScript callbacks in options. (#23)
+
 ## 0.4.0
 
 * Added new demos for Accessibility and OHLC. (#43)

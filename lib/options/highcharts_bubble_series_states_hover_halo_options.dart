@@ -45,9 +45,7 @@ class HighchartsBubbleSeriesStatesHoverHaloOptions
   dynamic attributes;
 
   /// Opacity for the halo unless a specific fill is overridden
-  /// using the `attributes` setting. Note that Highcharts is
-  /// only able to apply opacity to colors of hex or rgb(a)
-  /// formats.
+  /// using the `attributes` setting.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.bubble.states.hover.halo.opacity
 

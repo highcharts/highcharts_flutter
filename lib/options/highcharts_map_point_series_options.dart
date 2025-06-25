@@ -86,6 +86,16 @@ class HighchartsMapPointSeriesOptions extends HighchartsOptionsBase {
 
   dynamic mapData;
 
+  /// Whether to zoom non-cartesian series. If `chart.zooming` is set, the option
+  /// allows to disable zooming on an individual non-cartesian series. By default
+  /// zooming is enabled for all series.
+  ///
+  /// Note: This option works only for non-cartesian series.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.mappoint.zoomEnabled
+
+  bool? zoomEnabled;
+
   /// A `mappoint` series. If the type option is not specified, it is inherited from chart.type.
   ///
   /// API Docs: https://api.highcharts.com/highmaps/series.mappoint
@@ -95,7 +105,8 @@ class HighchartsMapPointSeriesOptions extends HighchartsOptionsBase {
       this.index,
       this.legendIndex,
       this.legendSymbol,
-      this.mapData});
+      this.mapData,
+      this.zoomEnabled});
 
   @override
   void toOptionsJSON(StringBuffer buffer) {
@@ -118,6 +129,9 @@ class HighchartsMapPointSeriesOptions extends HighchartsOptionsBase {
     }
     if (mapData != null) {
       buffer.writeAll(['"mapData":', jsonEncode(mapData), ','], '');
+    }
+    if (zoomEnabled != null) {
+      buffer.writeAll(['"zoomEnabled":', zoomEnabled, ','], '');
     }
   }
 }

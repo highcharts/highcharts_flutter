@@ -18,21 +18,12 @@ import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_annotations_animation_options.dart';
 import 'highcharts_annotations_control_point_options.dart';
-import 'highcharts_annotations_crooked_line_options.dart';
-import 'highcharts_annotations_elliott_wave_options.dart';
 import 'highcharts_annotations_events_options.dart';
-import 'highcharts_annotations_fibonacci_options.dart';
-import 'highcharts_annotations_fibonacci_time_zones_options.dart';
-import 'highcharts_annotations_infinity_line_options.dart';
 import 'highcharts_annotations_label_options.dart';
 import 'highcharts_annotations_labels_options.dart';
-import 'highcharts_annotations_measure_options.dart';
-import 'highcharts_annotations_pitchfork_options.dart';
 import 'highcharts_annotations_shape_options.dart';
 import 'highcharts_annotations_shapes_options.dart';
-import 'highcharts_annotations_time_cycles_options.dart';
-import 'highcharts_annotations_tunnel_options.dart';
-import 'highcharts_annotations_vertical_line_options.dart';
+import 'highcharts_annotations_types_options.dart';
 
 /* *
  *
@@ -42,21 +33,12 @@ import 'highcharts_annotations_vertical_line_options.dart';
 
 export 'highcharts_annotations_animation_options.dart';
 export 'highcharts_annotations_control_point_options.dart';
-export 'highcharts_annotations_crooked_line_options.dart';
-export 'highcharts_annotations_elliott_wave_options.dart';
 export 'highcharts_annotations_events_options.dart';
-export 'highcharts_annotations_fibonacci_options.dart';
-export 'highcharts_annotations_fibonacci_time_zones_options.dart';
-export 'highcharts_annotations_infinity_line_options.dart';
 export 'highcharts_annotations_label_options.dart';
 export 'highcharts_annotations_labels_options.dart';
-export 'highcharts_annotations_measure_options.dart';
-export 'highcharts_annotations_pitchfork_options.dart';
 export 'highcharts_annotations_shape_options.dart';
 export 'highcharts_annotations_shapes_options.dart';
-export 'highcharts_annotations_time_cycles_options.dart';
-export 'highcharts_annotations_tunnel_options.dart';
-export 'highcharts_annotations_vertical_line_options.dart';
+export 'highcharts_annotations_types_options.dart';
 
 /* *
  *
@@ -64,9 +46,16 @@ export 'highcharts_annotations_vertical_line_options.dart';
  *
  * */
 
-/// A basic type of an annotation. It allows to add custom labels
-/// or shapes. The items can be tied to points, axis coordinates
-/// or chart pixel coordinates.
+/// A collection of annotations to add to the chart. The basic annotation allows
+/// adding custom labels or shapes. The items can be tied to points, axis
+/// coordinates or chart pixel coordinates.
+///
+/// General options for all annotations can be set using the
+/// `Highcharts.setOptions` function. In this case only single objects are
+/// supported, because it alters the defaults for all items. For initialization
+/// in the chart constructors however, arrays of annotations are supported.
+///
+/// See more in the general docs.
 ///
 /// API Docs: https://api.highcharts.com/highcharts/annotations
 class HighchartsAnnotationsOptions extends HighchartsOptionsBase {
@@ -93,12 +82,6 @@ class HighchartsAnnotationsOptions extends HighchartsOptionsBase {
 
   HighchartsAnnotationsControlPointOptions? controlPointOptions;
 
-  /// A crooked line annotation.
-  ///
-  /// API Docs: https://api.highcharts.com/highstock/annotations.crookedLine
-
-  HighchartsAnnotationsCrookedLineOptions? crookedLine;
-
   /// Whether to hide the part of the annotation
   /// that is outside the plot area.
   ///
@@ -113,29 +96,11 @@ class HighchartsAnnotationsOptions extends HighchartsOptionsBase {
 
   String? draggable;
 
-  /// An elliott wave annotation.
-  ///
-  /// API Docs: https://api.highcharts.com/highstock/annotations.elliottWave
-
-  HighchartsAnnotationsElliottWaveOptions? elliottWave;
-
   /// Events available in annotations.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/annotations.events
 
   HighchartsAnnotationsEventsOptions? events;
-
-  /// A fibonacci annotation.
-  ///
-  /// API Docs: https://api.highcharts.com/highstock/annotations.fibonacci
-
-  HighchartsAnnotationsFibonacciOptions? fibonacci;
-
-  /// The Fibonacci Time Zones annotation.
-  ///
-  /// API Docs: https://api.highcharts.com/highstock/annotations.fibonacciTimeZones
-
-  HighchartsAnnotationsFibonacciTimeZonesOptions? fibonacciTimeZones;
 
   /// Sets an ID for an annotation. Can be user later when
   /// removing an annotation in Chart#removeAnnotation(id) method.
@@ -143,12 +108,6 @@ class HighchartsAnnotationsOptions extends HighchartsOptionsBase {
   /// API Docs: https://api.highcharts.com/highcharts/annotations.id
 
   dynamic id;
-
-  /// An infinity line annotation.
-  ///
-  /// API Docs: https://api.highcharts.com/highstock/annotations.infinityLine
-
-  HighchartsAnnotationsInfinityLineOptions? infinityLine;
 
   /// Options for annotation's labels. Each label inherits options
   /// from the labelOptions object. An option from the labelOptions
@@ -166,18 +125,6 @@ class HighchartsAnnotationsOptions extends HighchartsOptionsBase {
 
   List<HighchartsAnnotationsLabelsOptions>? labels;
 
-  /// A measure annotation.
-  ///
-  /// API Docs: https://api.highcharts.com/highstock/annotations.measure
-
-  HighchartsAnnotationsMeasureOptions? measure;
-
-  /// A pitchfork annotation.
-  ///
-  /// API Docs: https://api.highcharts.com/highstock/annotations.pitchfork
-
-  HighchartsAnnotationsPitchforkOptions? pitchfork;
-
   /// Options for annotation's shapes. Each shape inherits options
   /// from the shapeOptions object. An option from the shapeOptions
   /// can be overwritten by config for a specific shape.
@@ -194,23 +141,19 @@ class HighchartsAnnotationsOptions extends HighchartsOptionsBase {
 
   List<HighchartsAnnotationsShapesOptions>? shapes;
 
-  /// The TimeCycles Annotation
+  /// For advanced annotations, this option defines the type of annotation. Can
+  /// be one of the keys listed under the types option.
   ///
-  /// API Docs: https://api.highcharts.com/highstock/annotations.timeCycles
+  /// API Docs: https://api.highcharts.com/highstock/annotations.type
 
-  HighchartsAnnotationsTimeCyclesOptions? timeCycles;
+  String? type;
 
-  /// A tunnel annotation.
+  /// Option override for specific advanced annotation types. This collection
+  /// is intended for general theming using `Highcharts.setOptions()`.
   ///
-  /// API Docs: https://api.highcharts.com/highstock/annotations.tunnel
+  /// API Docs: https://api.highcharts.com/highstock/annotations.types
 
-  HighchartsAnnotationsTunnelOptions? tunnel;
-
-  /// A vertical line annotation.
-  ///
-  /// API Docs: https://api.highcharts.com/highstock/annotations.verticalLine
-
-  HighchartsAnnotationsVerticalLineOptions? verticalLine;
+  HighchartsAnnotationsTypesOptions? types;
 
   /// Whether the annotation is visible.
   ///
@@ -224,30 +167,22 @@ class HighchartsAnnotationsOptions extends HighchartsOptionsBase {
 
   double? zIndex;
 
-  /// A basic type of an annotation. It allows to add custom labels or shapes. The items can be tied to points, axis coordinates or chart pixel coordinates.
+  /// A collection of annotations to add to the chart. The basic annotation allows adding custom labels or shapes. The items can be tied to points, axis coordinates or chart pixel coordinates.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/annotations
   HighchartsAnnotationsOptions(
       {this.animation,
       this.controlPointOptions,
-      this.crookedLine,
       this.crop,
       this.draggable,
-      this.elliottWave,
       this.events,
-      this.fibonacci,
-      this.fibonacciTimeZones,
       this.id,
-      this.infinityLine,
       this.labelOptions,
       this.labels,
-      this.measure,
-      this.pitchfork,
       this.shapeOptions,
       this.shapes,
-      this.timeCycles,
-      this.tunnel,
-      this.verticalLine,
+      this.type,
+      this.types,
       this.visible,
       this.zIndex});
 
@@ -262,33 +197,17 @@ class HighchartsAnnotationsOptions extends HighchartsOptionsBase {
       buffer.writeAll(
           ['"controlPointOptions":', controlPointOptions?.toJSON(), ','], '');
     }
-    if (crookedLine != null) {
-      buffer.writeAll(['"crookedLine":', crookedLine?.toJSON(), ','], '');
-    }
     if (crop != null) {
       buffer.writeAll(['"crop":', crop, ','], '');
     }
     if (draggable != null) {
       buffer.writeAll(['"draggable":', jsonEncode(draggable), ','], '');
     }
-    if (elliottWave != null) {
-      buffer.writeAll(['"elliottWave":', elliottWave?.toJSON(), ','], '');
-    }
     if (events != null) {
       buffer.writeAll(['"events":', events?.toJSON(), ','], '');
     }
-    if (fibonacci != null) {
-      buffer.writeAll(['"fibonacci":', fibonacci?.toJSON(), ','], '');
-    }
-    if (fibonacciTimeZones != null) {
-      buffer.writeAll(
-          ['"fibonacciTimeZones":', fibonacciTimeZones?.toJSON(), ','], '');
-    }
     if (id != null) {
       buffer.writeAll(['"id":', jsonEncode(id), ','], '');
-    }
-    if (infinityLine != null) {
-      buffer.writeAll(['"infinityLine":', infinityLine?.toJSON(), ','], '');
     }
     if (labelOptions != null) {
       buffer.writeAll(['"labelOptions":', labelOptions?.toJSON(), ','], '');
@@ -300,12 +219,6 @@ class HighchartsAnnotationsOptions extends HighchartsOptionsBase {
       }
       buffer.write('],');
     }
-    if (measure != null) {
-      buffer.writeAll(['"measure":', measure?.toJSON(), ','], '');
-    }
-    if (pitchfork != null) {
-      buffer.writeAll(['"pitchfork":', pitchfork?.toJSON(), ','], '');
-    }
     if (shapeOptions != null) {
       buffer.writeAll(['"shapeOptions":', shapeOptions?.toJSON(), ','], '');
     }
@@ -316,14 +229,11 @@ class HighchartsAnnotationsOptions extends HighchartsOptionsBase {
       }
       buffer.write('],');
     }
-    if (timeCycles != null) {
-      buffer.writeAll(['"timeCycles":', timeCycles?.toJSON(), ','], '');
+    if (type != null) {
+      buffer.writeAll(['"type":', jsonEncode(type), ','], '');
     }
-    if (tunnel != null) {
-      buffer.writeAll(['"tunnel":', tunnel?.toJSON(), ','], '');
-    }
-    if (verticalLine != null) {
-      buffer.writeAll(['"verticalLine":', verticalLine?.toJSON(), ','], '');
+    if (types != null) {
+      buffer.writeAll(['"types":', types?.toJSON(), ','], '');
     }
     if (visible != null) {
       buffer.writeAll(['"visible":', visible, ','], '');
