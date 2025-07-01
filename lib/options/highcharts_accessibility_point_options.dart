@@ -16,6 +16,7 @@
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
+import '../../utilities/highcharts_callback.dart';
 
 /* *
  *
@@ -53,7 +54,7 @@ class HighchartsAccessibilityPointOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/accessibility.point.dateFormatter
 
-  dynamic dateFormatter;
+  HighchartsCallback? dateFormatter;
 
   /// Whether or not to describe points with the value `null` to
   /// assistive technology, such as screen readers.
@@ -88,7 +89,7 @@ class HighchartsAccessibilityPointOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/accessibility.point.descriptionFormatter
 
-  dynamic descriptionFormatter;
+  HighchartsCallback? descriptionFormatter;
 
   /// Decimals to use for the values in the point descriptions. Uses
   /// tooltip.valueDecimals if not defined.
@@ -149,7 +150,7 @@ class HighchartsAccessibilityPointOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"dateFormat":', jsonEncode(dateFormat), ','], '');
     }
     if (dateFormatter != null) {
-      buffer.writeAll(['"dateFormatter":', jsonEncode(dateFormatter), ','], '');
+      buffer.writeAll(['"dateFormatter":', dateFormatter?.toJSON(), ','], '');
     }
     if (describeNull != null) {
       buffer.writeAll(['"describeNull":', describeNull, ','], '');
@@ -160,8 +161,7 @@ class HighchartsAccessibilityPointOptions extends HighchartsOptionsBase {
     }
     if (descriptionFormatter != null) {
       buffer.writeAll(
-          ['"descriptionFormatter":', jsonEncode(descriptionFormatter), ','],
-          '');
+          ['"descriptionFormatter":', descriptionFormatter?.toJSON(), ','], '');
     }
     if (valueDecimals != null) {
       buffer.writeAll(['"valueDecimals":', valueDecimals, ','], '');

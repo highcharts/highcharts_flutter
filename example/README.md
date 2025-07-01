@@ -42,15 +42,27 @@ class MyApp extends StatelessWidget {
                     name: 'My First Series',
                     data: [[0, 5], [0.5, 55.5], [1, 10]],
                     options: HighchartsLineSeriesOptions(
-                      color: '#C60'
-                    )
-                  )
-                ]
-              )
-            )
+                      color: '#C60',
+                    ),
+                  ),
+                ],
+                plotOptions: HighchartsPlotOptions(
+                  series: HighchartsSeriesOptions(
+                    point: HighchartsSeriesPointOptions(
+                      events: HighchartsSeriesPointEventsOptions(
+                        click: HighchartsCallback((args) => {
+                          final point = args[0];
+                          debugPrint('Point value: ${point['x']}, ${point['y']}');
+                        }),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
-      )
+      ),
     );
   }
 }

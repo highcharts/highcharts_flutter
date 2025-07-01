@@ -84,17 +84,22 @@ class _MyHomePageState extends State<MyHomePage> {
           title: HighchartsTitleOptions(text: 'Hello, World!'),
           plotOptions: HighchartsPlotOptions(
             series: HighchartsSeriesOptions(
-              animation: false,
-              point: HighchartsSeriesPointOptions(
-                events: HighchartsSeriesPointEventsOptions(
-                    click: HighchartsCallback((args) {
-                  final point = args[0];
-                  setState(() {
-                    _series = 'Point value: ${point['x']}, ${point['y']}';
-                  });
-                })),
-              ),
-            ),
+                animation: false,
+                point: HighchartsSeriesPointOptions(
+                  events: HighchartsSeriesPointEventsOptions(
+                      click: HighchartsCallback((args) {
+                    final point = args[0];
+                    setState(() {
+                      _series = 'Point value: ${point['x']}, ${point['y']}';
+                    });
+                  })),
+                ),
+                tooltip: HighchartsSeriesTooltipOptions(
+                  headerFormat: '',
+                  pointFormatter: HighchartsCallback(null, '''
+                  return `Value: \${this.y}<br />Created by custom callback.`;
+                '''),
+                )),
           ),
           series: [
             HighchartsLineSeries(
@@ -114,20 +119,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 ])
           ]),
       javaScriptModules: _assets,
-      javaScript: '''
-        Highcharts.setOptions({
-          plotOptions: {
-            series: {
-              tooltip: {
-                headerFormat: '',
-                pointFormatter: function () {
-                  return `Value: \${this.y}<br />Created by custom JS`;
-                }
-              }
-            }
-          }
-        });
-      ''',
     );
 
     return Scaffold(

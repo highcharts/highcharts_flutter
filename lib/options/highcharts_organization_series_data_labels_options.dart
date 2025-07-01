@@ -186,7 +186,7 @@ class HighchartsOrganizationSeriesDataLabelsOptions
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.organization.dataLabels.linkFormatter
 
-  dynamic linkFormatter;
+  HighchartsCallback? linkFormatter;
 
   /// Options for a _link_ label text which should follow link
   /// connection.
@@ -436,7 +436,7 @@ class HighchartsOrganizationSeriesDataLabelsOptions
       buffer.writeAll(['"linkFormat":', jsonEncode(linkFormat), ','], '');
     }
     if (linkFormatter != null) {
-      buffer.writeAll(['"linkFormatter":', jsonEncode(linkFormatter), ','], '');
+      buffer.writeAll(['"linkFormatter":', linkFormatter?.toJSON(), ','], '');
     }
     if (linkTextPath != null) {
       buffer.writeAll(['"linkTextPath":', linkTextPath?.toJSON(), ','], '');

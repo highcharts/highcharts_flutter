@@ -16,6 +16,7 @@
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
+import '../../utilities/highcharts_callback.dart';
 
 /* *
  *
@@ -76,7 +77,7 @@ class HighchartsAccessibilitySeriesOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/accessibility.series.descriptionFormatter
 
-  dynamic descriptionFormatter;
+  HighchartsCallback? descriptionFormatter;
 
   /// When a series contains more points than this, we no longer expose
   /// information about individual points to screen readers.
@@ -112,8 +113,7 @@ class HighchartsAccessibilitySeriesOptions extends HighchartsOptionsBase {
     }
     if (descriptionFormatter != null) {
       buffer.writeAll(
-          ['"descriptionFormatter":', jsonEncode(descriptionFormatter), ','],
-          '');
+          ['"descriptionFormatter":', descriptionFormatter?.toJSON(), ','], '');
     }
     if (pointDescriptionEnabledThreshold != null) {
       buffer.writeAll([

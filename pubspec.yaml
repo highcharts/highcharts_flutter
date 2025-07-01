@@ -1,5 +1,5 @@
 name: highcharts_flutter
-version: 1.0.0-rc.1
+version: 1.0.0
 description: >-
   Official Flutter integration for Highcharts with many options widgets for
   interactive charts, that can be adjusted and dynamically applied.

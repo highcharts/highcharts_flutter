@@ -14,8 +14,8 @@
  *
  * */
 
-import 'dart:convert';
 import 'highcharts_options_base.dart';
+import '../../utilities/highcharts_callback.dart';
 
 /* *
  *
@@ -37,32 +37,32 @@ class HighchartsAnnotationsEventsOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/annotations.events.add
 
-  dynamic add;
+  HighchartsCallback? add;
 
   /// Event callback when annotation is updated (e.g. drag and
   /// dropped or resized by control points).
   ///
   /// API Docs: https://api.highcharts.com/highcharts/annotations.events.afterUpdate
 
-  dynamic afterUpdate;
+  HighchartsCallback? afterUpdate;
 
   /// Fires when the annotation is clicked.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/annotations.events.click
 
-  dynamic click;
+  HighchartsCallback? click;
 
   /// Fires when the annotation is dragged.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/annotations.events.drag
 
-  dynamic drag;
+  HighchartsCallback? drag;
 
   /// Event callback when annotation is removed from the chart.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/annotations.events.remove
 
-  dynamic remove;
+  HighchartsCallback? remove;
 
   /// Events available in annotations.
   ///
@@ -75,19 +75,19 @@ class HighchartsAnnotationsEventsOptions extends HighchartsOptionsBase {
     super.toOptionsJSON(buffer);
 
     if (add != null) {
-      buffer.writeAll(['"add":', jsonEncode(add), ','], '');
+      buffer.writeAll(['"add":', add?.toJSON(), ','], '');
     }
     if (afterUpdate != null) {
-      buffer.writeAll(['"afterUpdate":', jsonEncode(afterUpdate), ','], '');
+      buffer.writeAll(['"afterUpdate":', afterUpdate?.toJSON(), ','], '');
     }
     if (click != null) {
-      buffer.writeAll(['"click":', jsonEncode(click), ','], '');
+      buffer.writeAll(['"click":', click?.toJSON(), ','], '');
     }
     if (drag != null) {
-      buffer.writeAll(['"drag":', jsonEncode(drag), ','], '');
+      buffer.writeAll(['"drag":', drag?.toJSON(), ','], '');
     }
     if (remove != null) {
-      buffer.writeAll(['"remove":', jsonEncode(remove), ','], '');
+      buffer.writeAll(['"remove":', remove?.toJSON(), ','], '');
     }
   }
 }

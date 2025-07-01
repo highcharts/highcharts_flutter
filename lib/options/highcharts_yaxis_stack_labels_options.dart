@@ -17,6 +17,7 @@
 import 'dart:convert';
 import 'highcharts_options_base.dart';
 import 'highcharts_yaxis_stack_labels_animation_options.dart';
+import '../../utilities/highcharts_callback.dart';
 import 'highcharts_yaxis_stack_labels_style_options.dart';
 
 /* *
@@ -123,7 +124,7 @@ class HighchartsYAxisStackLabelsOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/yAxis.stackLabels.formatter
 
-  dynamic formatter;
+  HighchartsCallback? formatter;
 
   /// How to handle stack total labels that flow outside the plot area.
   /// The default is set to `"justify"`,
@@ -254,7 +255,7 @@ class HighchartsYAxisStackLabelsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"format":', jsonEncode(format), ','], '');
     }
     if (formatter != null) {
-      buffer.writeAll(['"formatter":', jsonEncode(formatter), ','], '');
+      buffer.writeAll(['"formatter":', formatter?.toJSON(), ','], '');
     }
     if (overflow != null) {
       buffer.writeAll(['"overflow":', jsonEncode(overflow), ','], '');

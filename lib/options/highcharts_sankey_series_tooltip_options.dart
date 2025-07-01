@@ -121,7 +121,7 @@ class HighchartsSankeySeriesTooltipOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.sankey.tooltip.nodeFormatter
 
-  dynamic nodeFormatter;
+  HighchartsCallback? nodeFormatter;
 
   /// The HTML of the null point's line in the tooltip. Works analogously
   /// to pointFormat.
@@ -148,7 +148,7 @@ class HighchartsSankeySeriesTooltipOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.sankey.tooltip.pointFormatter
 
-  dynamic pointFormatter;
+  HighchartsCallback? pointFormatter;
 
   /// Positioning options for fixed tooltip, taking effect only when
   /// tooltip.fixed is `true`.
@@ -242,7 +242,7 @@ class HighchartsSankeySeriesTooltipOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"nodeFormat":', jsonEncode(nodeFormat), ','], '');
     }
     if (nodeFormatter != null) {
-      buffer.writeAll(['"nodeFormatter":', jsonEncode(nodeFormatter), ','], '');
+      buffer.writeAll(['"nodeFormatter":', nodeFormatter?.toJSON(), ','], '');
     }
     if (nullFormat != null) {
       buffer.writeAll(['"nullFormat":', jsonEncode(nullFormat), ','], '');
@@ -254,8 +254,7 @@ class HighchartsSankeySeriesTooltipOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"pointFormat":', jsonEncode(pointFormat), ','], '');
     }
     if (pointFormatter != null) {
-      buffer
-          .writeAll(['"pointFormatter":', jsonEncode(pointFormatter), ','], '');
+      buffer.writeAll(['"pointFormatter":', pointFormatter?.toJSON(), ','], '');
     }
     if (position != null) {
       buffer.writeAll(['"position":', position?.toJSON(), ','], '');

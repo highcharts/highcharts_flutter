@@ -53,7 +53,7 @@ class HighchartsCallback {
           '}');
     }
 
-    return 'function () { ${javaScript ?? ''} }';
+    return 'function(){${javaScript ?? ''}}';
   }
 
   /// Unregisters a Dart-based callback from been called via

@@ -49,7 +49,7 @@ class HighchartsAccessibilityScreenReaderSectionOptions
   ///
   /// API Docs: https://api.highcharts.com/highcharts/accessibility.screenReaderSection.afterChartFormatter
 
-  dynamic afterChartFormatter;
+  HighchartsCallback? afterChartFormatter;
 
   /// Date format to use to describe range of datetime axes.
   ///
@@ -87,7 +87,7 @@ class HighchartsAccessibilityScreenReaderSectionOptions
   ///
   /// API Docs: https://api.highcharts.com/highcharts/accessibility.screenReaderSection.beforeChartFormatter
 
-  dynamic beforeChartFormatter;
+  HighchartsCallback? beforeChartFormatter;
 
   /// Function to run upon clicking the "Play as sound" button in
   /// the screen reader region.
@@ -130,7 +130,7 @@ class HighchartsAccessibilityScreenReaderSectionOptions
     }
     if (afterChartFormatter != null) {
       buffer.writeAll(
-          ['"afterChartFormatter":', jsonEncode(afterChartFormatter), ','], '');
+          ['"afterChartFormatter":', afterChartFormatter?.toJSON(), ','], '');
     }
     if (axisRangeDateFormat != null) {
       buffer.writeAll(
@@ -142,8 +142,7 @@ class HighchartsAccessibilityScreenReaderSectionOptions
     }
     if (beforeChartFormatter != null) {
       buffer.writeAll(
-          ['"beforeChartFormatter":', jsonEncode(beforeChartFormatter), ','],
-          '');
+          ['"beforeChartFormatter":', beforeChartFormatter?.toJSON(), ','], '');
     }
     if (onPlayAsSoundClick != null) {
       buffer.writeAll(

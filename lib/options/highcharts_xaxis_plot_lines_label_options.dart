@@ -16,6 +16,7 @@
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
+import '../../utilities/highcharts_callback.dart';
 
 /* *
  *
@@ -46,7 +47,7 @@ class HighchartsXAxisPlotLinesLabelOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/xAxis.plotLines.label.formatter
 
-  dynamic formatter;
+  HighchartsCallback? formatter;
 
   /// Rotation of the text label in degrees. Defaults to 0 for horizontal plot
   /// lines and 90 for vertical lines.
@@ -130,7 +131,7 @@ class HighchartsXAxisPlotLinesLabelOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"align":', jsonEncode(align), ','], '');
     }
     if (formatter != null) {
-      buffer.writeAll(['"formatter":', jsonEncode(formatter), ','], '');
+      buffer.writeAll(['"formatter":', formatter?.toJSON(), ','], '');
     }
     if (rotation != null) {
       buffer.writeAll(['"rotation":', rotation, ','], '');

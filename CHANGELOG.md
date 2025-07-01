@@ -1,3 +1,8 @@
+## 1.0.0
+
+* Improved line-refresh-chart example.
+* Fixed type mapping for JavaScript-based formatter callbacks.
+
 ## 1.0.0-rc.1
 
 * Added HighchartsCallback.

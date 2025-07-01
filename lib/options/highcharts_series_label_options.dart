@@ -16,6 +16,7 @@
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
+import '../../utilities/highcharts_callback.dart';
 import 'highcharts_series_label_style_options.dart';
 
 /* *
@@ -89,7 +90,7 @@ class HighchartsSeriesLabelOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.label.formatter
 
-  dynamic formatter;
+  HighchartsCallback? formatter;
 
   /// For area-like series, allow the font size to vary so that
   /// small areas get a smaller font size. The default applies this
@@ -170,7 +171,7 @@ class HighchartsSeriesLabelOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"format":', jsonEncode(format), ','], '');
     }
     if (formatter != null) {
-      buffer.writeAll(['"formatter":', jsonEncode(formatter), ','], '');
+      buffer.writeAll(['"formatter":', formatter?.toJSON(), ','], '');
     }
     if (maxFontSize != null) {
       buffer.writeAll(['"maxFontSize":', maxFontSize, ','], '');

@@ -19,6 +19,7 @@ import 'highcharts_options_base.dart';
 import 'highcharts_legend_accessibility_options.dart';
 import 'highcharts_legend_bubble_legend_options.dart';
 import 'highcharts_legend_events_options.dart';
+import '../../utilities/highcharts_callback.dart';
 import 'highcharts_legend_navigation_options.dart';
 import 'highcharts_legend_title_options.dart';
 
@@ -217,7 +218,7 @@ class HighchartsLegendOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/legend.labelFormatter
 
-  dynamic labelFormatter;
+  HighchartsCallback? labelFormatter;
 
   /// The layout of the legend items. Can be one of `horizontal` or
   /// `vertical` or `proximate`. When `proximate`, the legend items will be
@@ -554,8 +555,7 @@ class HighchartsLegendOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"labelFormat":', jsonEncode(labelFormat), ','], '');
     }
     if (labelFormatter != null) {
-      buffer
-          .writeAll(['"labelFormatter":', jsonEncode(labelFormatter), ','], '');
+      buffer.writeAll(['"labelFormatter":', labelFormatter?.toJSON(), ','], '');
     }
     if (layout != null) {
       buffer.writeAll(['"layout":', jsonEncode(layout), ','], '');

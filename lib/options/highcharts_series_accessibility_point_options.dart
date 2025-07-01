@@ -16,6 +16,7 @@
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
+import '../../utilities/highcharts_callback.dart';
 
 /* *
  *
@@ -43,7 +44,7 @@ class HighchartsSeriesAccessibilityPointOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.accessibility.point.descriptionFormatter
 
-  dynamic descriptionFormatter;
+  HighchartsCallback? descriptionFormatter;
 
   /// Date format to use for points on datetime axes when describing
   /// them to screen reader users.
@@ -65,7 +66,7 @@ class HighchartsSeriesAccessibilityPointOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.zigzag.accessibility.point.dateFormatter
 
-  dynamic dateFormatter;
+  HighchartsCallback? dateFormatter;
 
   /// Whether or not to describe points with the value `null` to
   /// assistive technology, such as screen readers.
@@ -143,14 +144,13 @@ class HighchartsSeriesAccessibilityPointOptions extends HighchartsOptionsBase {
 
     if (descriptionFormatter != null) {
       buffer.writeAll(
-          ['"descriptionFormatter":', jsonEncode(descriptionFormatter), ','],
-          '');
+          ['"descriptionFormatter":', descriptionFormatter?.toJSON(), ','], '');
     }
     if (dateFormat != null) {
       buffer.writeAll(['"dateFormat":', jsonEncode(dateFormat), ','], '');
     }
     if (dateFormatter != null) {
-      buffer.writeAll(['"dateFormatter":', jsonEncode(dateFormatter), ','], '');
+      buffer.writeAll(['"dateFormatter":', dateFormatter?.toJSON(), ','], '');
     }
     if (describeNull != null) {
       buffer.writeAll(['"describeNull":', describeNull, ','], '');

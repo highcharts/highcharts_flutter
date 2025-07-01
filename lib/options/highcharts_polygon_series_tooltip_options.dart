@@ -140,7 +140,7 @@ class HighchartsPolygonSeriesTooltipOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/series.polygon.tooltip.pointFormatter
 
-  dynamic pointFormatter;
+  HighchartsCallback? pointFormatter;
 
   /// Positioning options for fixed tooltip, taking effect only when
   /// tooltip.fixed is `true`.
@@ -242,8 +242,7 @@ class HighchartsPolygonSeriesTooltipOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"pointFormat":', jsonEncode(pointFormat), ','], '');
     }
     if (pointFormatter != null) {
-      buffer
-          .writeAll(['"pointFormatter":', jsonEncode(pointFormatter), ','], '');
+      buffer.writeAll(['"pointFormatter":', pointFormatter?.toJSON(), ','], '');
     }
     if (position != null) {
       buffer.writeAll(['"position":', position?.toJSON(), ','], '');

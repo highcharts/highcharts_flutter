@@ -16,6 +16,7 @@
 
 import 'dart:convert';
 import 'highcharts_options_base.dart';
+import '../../utilities/highcharts_callback.dart';
 
 /* *
  *
@@ -71,7 +72,7 @@ class HighchartsLegendBubbleLegendLabelsOptions extends HighchartsOptionsBase {
   ///
   /// API Docs: https://api.highcharts.com/highcharts/legend.bubbleLegend.labels.formatter
 
-  dynamic formatter;
+  HighchartsCallback? formatter;
 
   /// CSS styles for the labels.
   ///
@@ -123,7 +124,7 @@ class HighchartsLegendBubbleLegendLabelsOptions extends HighchartsOptionsBase {
       buffer.writeAll(['"format":', jsonEncode(format), ','], '');
     }
     if (formatter != null) {
-      buffer.writeAll(['"formatter":', jsonEncode(formatter), ','], '');
+      buffer.writeAll(['"formatter":', formatter?.toJSON(), ','], '');
     }
     if (style != null) {
       buffer.write('"style":{');
