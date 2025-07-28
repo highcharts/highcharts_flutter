@@ -1,3 +1,12 @@
+## 1.1.0-rc.1
+
+* Added css option to product widgets. (#7)
+* Added keepAlive option as default to product widgets. (#56)
+* Removed link from credits until open in browser is implemented.
+* Removed state from product widgets. (#59)
+* Fixed reference errors with multiple charts in scroll lists. (#59)
+* Fixed unintended selects after long-tab in iOS. (#42)
+
 ## 1.0.0
 
 * Improved line-refresh-chart example.
@@ -8,7 +17,7 @@
 * Added HighchartsCallback.
 * Added callback to flutter_refresh_chart example.
 * Added support for onError, onLoading, onLoaded. (#52)
-* Added support for Flutter callbacks in otpions. (#23)
+* Added support for Flutter callbacks in options. (#23)
 * Added support for JavaScript callbacks in options. (#23)
 
 ## 0.4.0

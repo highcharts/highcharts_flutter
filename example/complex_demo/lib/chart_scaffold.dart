@@ -73,6 +73,7 @@ class ChartScaffold extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final chart = HighchartsChart(HighchartsOptions());
+    final scrollController = ScrollController();
     final textTheme = CupertinoTheme.of(context).textTheme;
 
     // Initial chart update
@@ -85,57 +86,61 @@ class ChartScaffold extends StatelessWidget {
       navigationBar: CupertinoNavigationBar(middle: Text(pageTitle ?? 'Chart')),
       child: SafeArea(
           child: CupertinoScrollbar(
-        child: ListView(children: <Widget>[
-          CupertinoListSection(
-            header: const Text('Chart Title'),
-            children: <Widget>[
-              CupertinoListTile(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 21, vertical: 3),
-                title: const Text('Alignment'),
-                trailing: ValueListenableBuilder(
-                    valueListenable: state.chartTitleAlign,
-                    builder: (context, activeAlign, __) => Wrap(
-                          spacing: 7,
-                          children: <String, IconData>{
-                            'Left': CupertinoIcons.text_alignleft,
-                            'Center': CupertinoIcons.text_aligncenter,
-                            'Right': CupertinoIcons.text_alignright,
-                          }
-                              .entries
-                              .map((entry) => (entry.key == activeAlign
-                                  ? CupertinoButton.filled(
-                                      onPressed: () =>
-                                          _updateChartTitleAlign(entry.key),
-                                      child: Icon(entry.value),
-                                    )
-                                  : CupertinoButton(
-                                      onPressed: () =>
-                                          _updateChartTitleAlign(entry.key),
-                                      child: Icon(entry.value),
-                                    )))
-                              .toList(),
-                        )),
-              ),
-            ],
-          ),
-          CupertinoListSection(
-            header: const Text('Series Type'),
-            children: <Widget>[
-              CupertinoListTile(
-                title: ValueListenableBuilder(
-                  valueListenable: state.chartSeriesType,
-                  builder: (_, type, __) => Text(type),
+        controller: scrollController,
+        child: ListView(
+          controller: scrollController,
+          children: <Widget>[
+            CupertinoListSection(
+              header: const Text('Chart Title'),
+              children: <Widget>[
+                CupertinoListTile(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 21, vertical: 3),
+                  title: const Text('Alignment'),
+                  trailing: ValueListenableBuilder(
+                      valueListenable: state.chartTitleAlign,
+                      builder: (context, activeAlign, __) => Wrap(
+                            spacing: 7,
+                            children: <String, IconData>{
+                              'Left': CupertinoIcons.text_alignleft,
+                              'Center': CupertinoIcons.text_aligncenter,
+                              'Right': CupertinoIcons.text_alignright,
+                            }
+                                .entries
+                                .map((entry) => (entry.key == activeAlign
+                                    ? CupertinoButton.filled(
+                                        onPressed: () =>
+                                            _updateChartTitleAlign(entry.key),
+                                        child: Icon(entry.value),
+                                      )
+                                    : CupertinoButton(
+                                        onPressed: () =>
+                                            _updateChartTitleAlign(entry.key),
+                                        child: Icon(entry.value),
+                                      )))
+                                .toList(),
+                          )),
                 ),
-                trailing: Icon(CupertinoIcons.forward,
-                    color: textTheme.navActionTextStyle.color),
-                onTap: () =>
-                    Navigator.of(context).pushNamed('/chart/series-type'),
-              ),
-            ],
-          ),
-          chart,
-        ]),
+              ],
+            ),
+            CupertinoListSection(
+              header: const Text('Series Type'),
+              children: <Widget>[
+                CupertinoListTile(
+                  title: ValueListenableBuilder(
+                    valueListenable: state.chartSeriesType,
+                    builder: (_, type, __) => Text(type),
+                  ),
+                  trailing: Icon(CupertinoIcons.forward,
+                      color: textTheme.navActionTextStyle.color),
+                  onTap: () =>
+                      Navigator.of(context).pushNamed('/chart/series-type'),
+                ),
+              ],
+            ),
+            chart,
+          ],
+        ),
       )),
     );
   }

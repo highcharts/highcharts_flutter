@@ -117,4 +117,18 @@ abstract class HighchartsHelpers {
 
     return '<script src="$script" type="text/javascript"></script>';
   }
+
+  /// Creates a style tag with the CSS code.
+  static String styleTag(
+
+      /// CSS code to add.
+      String? css) {
+    if (css == null) {
+      return '';
+    }
+
+    css = escapeHTML(css);
+
+    return '<style type="text/stylesheet">$css</style>';
+  }
 }

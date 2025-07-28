@@ -10,6 +10,7 @@ For more information about this integration, visit our dedicated [Flutter integr
 You'll discover key features including cross-platform compatibility, extensive chart type support, and details about additional Highcharts products like Stock, Maps, Gantt.
 
 
+
 Examples
 --------
 
@@ -19,6 +20,8 @@ A good place to get started is `examples/hello_world`.
 Other examples must be initialized by creating a Flutter project before running samples.
 This is done with `flutter create .` inside the specific demo folder.
 Afterwards the demo can be ran with `flutter run`.
+
+We also have a [video tutorial](https://www.youtube.com/watch?v=_6wvHENjpwk) to show you how to create your first chart.
 
 
 

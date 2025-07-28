@@ -103,6 +103,9 @@ var highcharts_flutter = {
         if (typeof options?.chart?.width !== 'undefined') {
             options.chart.width = options.chart.width === 0 ? null : options.chart.width;
         }
+        if (typeof options?.credits?.href !== 'undefined') {
+            options.credits.href = null; // @TODO Open in new browser
+        }
 
         let chart = highcharts_flutter.chart;
 

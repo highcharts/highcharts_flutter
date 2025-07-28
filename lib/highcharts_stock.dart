@@ -114,10 +114,11 @@ export 'options/highcharts_zigzag_series.dart';
  *
  * */
 
-class HighchartsStock extends StatefulWidget {
+class HighchartsStock extends StatelessWidget {
   HighchartsStock(
     this.options, {
     super.key,
+    this.css,
     this.debug = kDebugMode,
     this.javaScript,
     this.javaScriptModules = const [
@@ -126,6 +127,7 @@ class HighchartsStock extends StatefulWidget {
       'https://code.highcharts.com/stock/highcharts-3d.js',
       'https://code.highcharts.com/stock/modules/solid-gauge.js',
       'https://code.highcharts.com/stock/modules/annotations.js',
+      'https://code.highcharts.com/stock/modules/boost.js',
       'https://code.highcharts.com/stock/modules/broken-axis.js',
       'https://code.highcharts.com/stock/modules/data.js',
       'https://code.highcharts.com/stock/modules/exporting.js',
@@ -133,10 +135,49 @@ class HighchartsStock extends StatefulWidget {
       'https://code.highcharts.com/stock/modules/accessibility.js',
     ],
     this.events = const {},
+    this.keepAlive = true,
     this.onError,
     this.onLoaded,
     this.onLoading,
-  });
+  }) {
+    final String json = options.toJSON();
+
+    if (debug) {
+      debugPrint(json);
+    }
+
+    view = HighchartsView(
+      debug: debug,
+      keepAlive: keepAlive,
+      head: css == null ? null : HighchartsHelpers.styleTag(css),
+      body: javaScriptModules.map(HighchartsHelpers.scriptTag).join('\n'),
+      foot: [
+        '''
+          highcharts_flutter.debug=${debug};
+          highcharts_flutter.factory=Highcharts.stockChart;
+        ''',
+        javaScript,
+        'highcharts_flutter.init($json);',
+      ].map(HighchartsHelpers.scriptTag).join('\n'),
+      onError: (onError != null
+          ? (_, error) {
+              return onError!(this, error);
+            }
+          : null),
+      onLoaded: (onLoaded != null
+          ? (_) {
+              return onLoaded!(this);
+            }
+          : null),
+      onLoading: (onLoading != null
+          ? (_) {
+              return onLoading!(this);
+            }
+          : null),
+    );
+  }
+
+  final String? css;
 
   /// Activate debug mode.
   final bool debug;
@@ -158,6 +199,8 @@ class HighchartsStock extends StatefulWidget {
   /// represents a listener on `Highcharts.Chart` for the `load` event.
   final Map<String, void Function(Object?)> events;
 
+  final bool keepAlive;
+
   final Widget Function(HighchartsStock, Object?)? onError;
 
   final FutureOr<void> Function(HighchartsStock)? onLoaded;
@@ -166,46 +209,12 @@ class HighchartsStock extends StatefulWidget {
 
   final HighchartsOptions options;
 
-  late final _HighchartsStockState _state;
-
-  HighchartsView get view {
-    return _state.view;
-  }
-
-  @override
-  State<HighchartsStock> createState() {
-    _state = _HighchartsStockState();
-    return _state;
-  }
-
-  Future<void> off<T>(String eventPath, HighchartsCallbackDart<T>? callback) {
-    return _state.view.off(eventPath, callback);
-  }
-
-  Future<void> on<T>(String eventPath, HighchartsCallbackDart<T> callback) {
-    return _state.view.on(eventPath, callback);
-  }
-
-  /// Refresh the chart with the latest options
-  void refresh([bool redraw = true]) {
-    String json = options.toJSON();
-
-    if (debug) {
-      debugPrint(json);
-    }
-
-    view.webViewController
-        .runJavaScript('highcharts_flutter.update($json, $redraw);');
-  }
-}
-
-class _HighchartsStockState extends State<HighchartsStock> {
   late final HighchartsView view;
 
   @override
   Widget build(BuildContext context) {
-    var height = widget.options.chart?.height;
-    var width = widget.options.chart?.width;
+    var height = options.chart?.height;
+    var width = options.chart?.width;
 
     if (height is int) {
       height = height.toDouble();
@@ -234,43 +243,23 @@ class _HighchartsStockState extends State<HighchartsStock> {
     );
   }
 
-  @override
-  void initState() {
-    super.initState();
+  Future<void> off<T>(String eventPath, HighchartsCallbackDart<T>? callback) {
+    return view.off(eventPath, callback);
+  }
 
-    final String json = widget.options.toJSON();
+  Future<void> on<T>(String eventPath, HighchartsCallbackDart<T> callback) {
+    return view.on(eventPath, callback);
+  }
 
-    if (widget.debug) {
+  /// Refresh the chart with the latest options
+  void refresh([bool redraw = true]) {
+    String json = options.toJSON();
+
+    if (debug) {
       debugPrint(json);
     }
 
-    view = HighchartsView(
-      debug: widget.debug,
-      body:
-          widget.javaScriptModules.map(HighchartsHelpers.scriptTag).join('\n'),
-      foot: [
-        '''
-          highcharts_flutter.debug=${widget.debug};
-          highcharts_flutter.factory=Highcharts.stockChart;
-        ''',
-        widget.javaScript,
-        'highcharts_flutter.init($json);',
-      ].map(HighchartsHelpers.scriptTag).join('\n'),
-      onError: (widget.onError != null
-          ? (_, error) {
-              return widget.onError!(widget, error);
-            }
-          : null),
-      onLoaded: (widget.onLoaded != null
-          ? (_) {
-              return widget.onLoaded!(widget);
-            }
-          : null),
-      onLoading: (widget.onLoading != null
-          ? (_) {
-              return widget.onLoading!(widget);
-            }
-          : null),
-    );
+    view.webViewController
+        .runJavaScript('highcharts_flutter.update($json, $redraw);');
   }
 }

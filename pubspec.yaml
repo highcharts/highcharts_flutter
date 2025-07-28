@@ -1,8 +1,8 @@
 name: highcharts_flutter
-version: 1.0.0
+version: 1.1.0-rc.1
 description: >-
-  Official Flutter integration for Highcharts with many options widgets for
-  interactive charts, that can be adjusted and dynamically applied.
+  Official Flutter integration for Highcharts with many options for interactive
+  charts, that can be adjusted and dynamically loaded.
 homepage: https://www.highcharts.com/integrations/
 issue_tracker: https://github.com/highcharts/highcharts_flutter/issues
 repository: https://github.com/highcharts/highcharts_flutter
@@ -28,7 +28,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  highcharts_flutter_webwebview: ^0.3.4
+  highcharts_flutter_webwebview: ^0.3.5
   provider: ^6.1.2
   web: ^1.1.0
   webview_flutter: ^4.10.0
@@ -40,6 +40,7 @@ dev_dependencies:
   flutter_lints: ^3.0.2
   flutter_test:
     sdk: flutter
+  webview_flutter_platform_interface: ^2.13.1
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
