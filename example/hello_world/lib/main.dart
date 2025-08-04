@@ -41,7 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
               data: [
                 [0, 5],
                 [0.5, 55.5],
-                [1, 10]
+                [1, 15]
               ],
               options: HighchartsLineSeriesOptions(color: '#C60'))
         ],
@@ -49,7 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
           HighchartsAnnotationsOptions(
               draggable: '',
               labelOptions: HighchartsAnnotationsLabelOptions(
-                  align: 'left', x: 16, y: -24),
+                  align: 'left', x: 10, y: 40),
               labels: [
                 HighchartsAnnotationsLabelsOptions(
                     point: {'xAxis': 0, 'yAxis': 0, 'x': 0.5, 'y': 55.5},

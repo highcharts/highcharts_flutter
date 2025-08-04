@@ -1,6 +1,12 @@
+## 1.1.0
+
+* Fixed changelog.
+
 ## 1.1.0-rc.1
 
+* Added boost as a default loaded module.
 * Added css option to product widgets. (#7)
+* Added example for Highcharts Stock with Navigator.
 * Added keepAlive option as default to product widgets. (#56)
 * Removed link from credits until open in browser is implemented.
 * Removed state from product widgets. (#59)
