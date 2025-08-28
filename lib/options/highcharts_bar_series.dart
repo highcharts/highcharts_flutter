@@ -49,6 +49,7 @@ export 'highcharts_bar_series_data_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highcharts/series.bar
+/// {@category series}
 class HighchartsBarSeries extends HighchartsSeries {
   /// An array of data points for the series. For the `bar` series type,
   /// points can be given in the following ways:

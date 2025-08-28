@@ -49,6 +49,7 @@ export 'highcharts_pyramid3d_series_data_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highcharts/series.pyramid3d
+/// {@category series}
 class HighchartsPyramid3DSeries extends HighchartsSeries {
   /// An array of data points for the series. For the `pyramid3d` series
   /// type, points can be given in the following ways:

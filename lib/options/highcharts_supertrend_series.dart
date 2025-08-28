@@ -47,6 +47,7 @@ export 'highcharts_supertrend_series_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highstock/series.supertrend
+/// {@category series}
 class HighchartsSupertrendSeries extends HighchartsSeries {
   /// Highcharts Options Widget.
   List<List<dynamic>>? data;

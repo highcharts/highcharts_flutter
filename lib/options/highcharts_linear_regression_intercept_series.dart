@@ -48,6 +48,7 @@ export 'highcharts_linear_regression_intercept_series_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highstock/series.linearregressionintercept
+/// {@category series}
 class HighchartsLinearRegressionInterceptSeries extends HighchartsSeries {
   /// Highcharts Options Widget.
   List<List<dynamic>>? data;

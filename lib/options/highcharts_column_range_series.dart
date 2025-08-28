@@ -50,6 +50,7 @@ export 'highcharts_column_range_series_data_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highcharts/series.columnrange
+/// {@category series}
 class HighchartsColumnRangeSeries extends HighchartsSeries {
   /// An array of data points for the series. For the `columnrange` series
   /// type, points can be given in the following ways:

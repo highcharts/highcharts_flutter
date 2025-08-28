@@ -47,6 +47,7 @@ export 'highcharts_obv_series_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highstock/series.obv
+/// {@category series}
 class HighchartsOBVSeries extends HighchartsSeries {
   /// Highcharts Options Widget.
   List<List<dynamic>>? data;

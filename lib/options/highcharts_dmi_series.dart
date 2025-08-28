@@ -48,6 +48,7 @@ export 'highcharts_dmi_series_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highstock/series.dmi
+/// {@category series}
 class HighchartsDMISeries extends HighchartsSeries {
   /// Highcharts Options Widget.
   List<List<dynamic>>? data;

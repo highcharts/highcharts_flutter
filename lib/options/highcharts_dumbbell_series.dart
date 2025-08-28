@@ -49,6 +49,7 @@ export 'highcharts_dumbbell_series_data_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highcharts/series.dumbbell
+/// {@category series}
 class HighchartsDumbbellSeries extends HighchartsSeries {
   /// An array of data points for the series. For the `dumbbell` series
   /// type, points can be given in the following ways:

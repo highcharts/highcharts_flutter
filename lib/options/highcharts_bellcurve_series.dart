@@ -52,6 +52,7 @@ export 'highcharts_bellcurve_series_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highcharts/series.bellcurve
+/// {@category series}
 class HighchartsBellcurveSeries extends HighchartsSeries {
   /// Highcharts Options Widget.
   List<List<dynamic>>? data;

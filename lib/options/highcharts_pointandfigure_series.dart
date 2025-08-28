@@ -49,6 +49,7 @@ export 'highcharts_pointandfigure_series_data_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highstock/series.pointandfigure
+/// {@category series}
 class HighchartsPointandfigureSeries extends HighchartsSeries {
   /// An array of data points for the series. For the `pointandfigure` series
   /// type, points can be given in the following way:

@@ -49,6 +49,7 @@ export 'highcharts_solid_gauge_series_data_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highcharts/series.solidgauge
+/// {@category series}
 class HighchartsSolidGaugeSeries extends HighchartsSeries {
   /// An array of data points for the series. For the `solidgauge` series
   /// type, points can be given in the following ways:

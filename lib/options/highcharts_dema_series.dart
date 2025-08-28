@@ -47,6 +47,7 @@ export 'highcharts_dema_series_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highstock/series.dema
+/// {@category series}
 class HighchartsDEMASeries extends HighchartsSeries {
   /// Highcharts Options Widget.
   List<List<dynamic>>? data;

@@ -49,6 +49,7 @@ export 'highcharts_organization_series_data_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highcharts/series.organization
+/// {@category series}
 class HighchartsOrganizationSeries extends HighchartsSeries {
   /// An array of data points for the series. For the `organization` series
   /// type, points can be given in the following way:

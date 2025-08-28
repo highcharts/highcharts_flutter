@@ -47,6 +47,7 @@ export 'highcharts_ppo_series_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highstock/series.ppo
+/// {@category series}
 class HighchartsPPOSeries extends HighchartsSeries {
   /// Highcharts Options Widget.
   List<List<dynamic>>? data;

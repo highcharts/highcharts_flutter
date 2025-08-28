@@ -58,6 +58,7 @@ export 'highcharts_roc_series_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highstock/series.roc
+/// {@category series}
 class HighchartsROCSeries extends HighchartsSeries {
   /// Highcharts Options Widget.
   List<List<dynamic>>? data;

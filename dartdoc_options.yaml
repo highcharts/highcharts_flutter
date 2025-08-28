@@ -1,0 +1,12 @@
+dartdoc:
+  categories:
+    series:
+      displayName: Series
+      markdown: doc/Series.md
+    utilities:
+      displayName: Utilities
+      markdown: doc/Utilities.md
+    widgets:
+      displayName: Widgets
+      markdown: doc/Widgets.md
+  categoryOrder: [widgets, utilities, series]

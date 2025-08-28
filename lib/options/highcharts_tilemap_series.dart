@@ -49,6 +49,7 @@ export 'highcharts_tilemap_series_data_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highcharts/series.tilemap
+/// {@category series}
 class HighchartsTilemapSeries extends HighchartsSeries {
   /// An array of data points for the series. For the `tilemap` series
   /// type, points can be given in the following ways:

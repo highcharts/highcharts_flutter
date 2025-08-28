@@ -114,6 +114,7 @@ export 'options/highcharts_zigzag_series.dart';
  *
  * */
 
+/// {@category widgets}
 class HighchartsStock extends StatelessWidget {
   HighchartsStock(
     this.options, {

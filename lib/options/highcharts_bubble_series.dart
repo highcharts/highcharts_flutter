@@ -49,6 +49,7 @@ export 'highcharts_bubble_series_data_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highcharts/series.bubble
+/// {@category series}
 class HighchartsBubbleSeries extends HighchartsSeries {
   /// An array of data points for the series. For the `bubble` series type,
   /// points can be given in the following ways:

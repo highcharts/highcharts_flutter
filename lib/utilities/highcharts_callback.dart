@@ -12,6 +12,8 @@ import 'dart:async';
 
 typedef HighchartsCallbackDart<T> = FutureOr<T> Function(List<dynamic>);
 
+/// Callback wrap of Dart and JavaScript callbacks for Highcharts widgets.
+/// {@category utilities}
 class HighchartsCallback {
   static int _counter = 0;
 

@@ -47,6 +47,7 @@ export 'highcharts_momentum_series_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highstock/series.momentum
+/// {@category series}
 class HighchartsMomentumSeries extends HighchartsSeries {
   /// Highcharts Options Widget.
   List<List<dynamic>>? data;

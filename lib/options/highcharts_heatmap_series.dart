@@ -49,6 +49,7 @@ export 'highcharts_heatmap_series_data_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highcharts/series.heatmap
+/// {@category series}
 class HighchartsHeatmapSeries extends HighchartsSeries {
   /// An array of data points for the series. For the `heatmap` series
   /// type, points can be given in the following ways:

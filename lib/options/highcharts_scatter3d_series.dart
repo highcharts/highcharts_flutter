@@ -51,6 +51,7 @@ export 'highcharts_scatter3d_series_data_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highcharts/series.scatter3d
+/// {@category series}
 class HighchartsScatter3DSeries extends HighchartsSeries {
   /// An array of data points for the series. For the `scatter3d` series
   /// type, points can be given in the following ways:

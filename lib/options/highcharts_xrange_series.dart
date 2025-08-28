@@ -49,6 +49,7 @@ export 'highcharts_xrange_series_data_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highcharts/series.xrange
+/// {@category series}
 class HighchartsXRangeSeries extends HighchartsSeries {
   /// An array of data points for the series. For the `xrange` series type,
   /// points can be given in the following ways:

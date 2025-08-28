@@ -14,6 +14,7 @@ import 'package:flutter/services.dart' show AssetBundle, rootBundle;
 import 'package:http/http.dart' as http;
 
 /// Flutter-specific helpers to be used with Highcharts Flutter.
+/// {@category utilities}
 abstract class HighchartsHelpers {
   /// Replaces special HTML characters with escape sequences.
   ///

@@ -49,6 +49,7 @@ export 'highcharts_streamgraph_series_data_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highcharts/series.streamgraph
+/// {@category series}
 class HighchartsStreamgraphSeries extends HighchartsSeries {
   /// An array of data points for the series. For the `streamgraph` series type,
   /// points can be given in the following ways:

@@ -49,6 +49,7 @@ export 'highcharts_networkgraph_series_data_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highcharts/series.networkgraph
+/// {@category series}
 class HighchartsNetworkgraphSeries extends HighchartsSeries {
   /// An array of data points for the series. For the `networkgraph` series type,
   /// points can be given in the following way:

@@ -47,6 +47,7 @@ export 'highcharts_mfi_series_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highstock/series.mfi
+/// {@category series}
 class HighchartsMFISeries extends HighchartsSeries {
   /// Highcharts Options Widget.
   List<List<dynamic>>? data;

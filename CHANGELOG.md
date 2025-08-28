@@ -1,3 +1,8 @@
+## 1.1.1
+
+* Fixed blue box appearing after tab. (#63)
+* Improved generated documentation.
+
 ## 1.1.0
 
 * Fixed changelog.

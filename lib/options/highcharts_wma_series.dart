@@ -47,6 +47,7 @@ export 'highcharts_wma_series_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highstock/series.wma
+/// {@category series}
 class HighchartsWMASeries extends HighchartsSeries {
   /// Highcharts Options Widget.
   List<List<dynamic>>? data;

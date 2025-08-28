@@ -42,6 +42,7 @@ export 'options/highcharts_xrange_series.dart';
  *
  * */
 
+/// {@category widgets}
 class HighchartsGantt extends StatelessWidget {
   HighchartsGantt(
     this.options, {

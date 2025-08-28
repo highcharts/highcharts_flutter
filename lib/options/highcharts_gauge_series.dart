@@ -49,6 +49,7 @@ export 'highcharts_gauge_series_data_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highcharts/series.gauge
+/// {@category series}
 class HighchartsGaugeSeries extends HighchartsSeries {
   /// An array of data points for the series. For the `gauge` series type,
   /// points can be given in the following ways:

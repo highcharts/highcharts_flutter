@@ -48,6 +48,7 @@ export 'highcharts_gantt_series_data_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/gantt/series.gantt
+/// {@category series}
 class HighchartsGanttSeries extends HighchartsSeries {
   /// Data for a Gantt series.
   ///

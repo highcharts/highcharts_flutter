@@ -49,6 +49,7 @@ export 'highcharts_map_line_series_data_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highmaps/series.mapline
+/// {@category series}
 class HighchartsMapLineSeries extends HighchartsSeries {
   /// An array of data points for the series. For the `mapline` series type,
   /// points can be given in the following ways:

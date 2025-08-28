@@ -47,6 +47,7 @@ export 'highcharts_pareto_series_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highcharts/series.pareto
+/// {@category series}
 class HighchartsParetoSeries extends HighchartsSeries {
   /// Highcharts Options Widget.
   List<List<dynamic>>? data;

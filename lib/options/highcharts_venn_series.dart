@@ -49,6 +49,7 @@ export 'highcharts_venn_series_data_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highcharts/series.venn
+/// {@category series}
 class HighchartsVennSeries extends HighchartsSeries {
   /// Highcharts Options Widget.
   List<List<dynamic>>? data;

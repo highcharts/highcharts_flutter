@@ -47,6 +47,7 @@ export 'highcharts_slow_stochastic_series_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highstock/series.slowstochastic
+/// {@category series}
 class HighchartsSlowStochasticSeries extends HighchartsSeries {
   /// Highcharts Options Widget.
   List<List<dynamic>>? data;

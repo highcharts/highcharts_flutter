@@ -47,6 +47,7 @@ export 'highcharts_rsi_series_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highstock/series.rsi
+/// {@category series}
 class HighchartsRSISeries extends HighchartsSeries {
   /// Highcharts Options Widget.
   List<List<dynamic>>? data;

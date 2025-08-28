@@ -49,6 +49,7 @@ export 'highcharts_bullet_series_data_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highcharts/series.bullet
+/// {@category series}
 class HighchartsBulletSeries extends HighchartsSeries {
   /// An array of data points for the series. For the `bullet` series type,
   /// points can be given in the following ways:

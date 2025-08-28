@@ -47,6 +47,7 @@ export 'highcharts_trendline_series_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highstock/series.trendline
+/// {@category series}
 class HighchartsTrendlineSeries extends HighchartsSeries {
   /// Highcharts Options Widget.
   List<List<dynamic>>? data;

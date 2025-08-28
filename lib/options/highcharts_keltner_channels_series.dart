@@ -47,6 +47,7 @@ export 'highcharts_keltner_channels_series_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highstock/series.keltnerchannels
+/// {@category series}
 class HighchartsKeltnerChannelsSeries extends HighchartsSeries {
   /// Highcharts Options Widget.
   List<List<dynamic>>? data;

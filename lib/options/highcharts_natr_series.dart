@@ -47,6 +47,7 @@ export 'highcharts_natr_series_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highstock/series.natr
+/// {@category series}
 class HighchartsNATRSeries extends HighchartsSeries {
   /// Highcharts Options Widget.
   List<List<dynamic>>? data;

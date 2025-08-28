@@ -49,6 +49,7 @@ export 'highcharts_flags_series_data_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highstock/series.flags
+/// {@category series}
 class HighchartsFlagsSeries extends HighchartsSeries {
   /// An array of data points for the series. For the `flags` series type,
   /// points can be given in the following ways:

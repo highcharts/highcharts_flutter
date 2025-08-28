@@ -47,6 +47,7 @@ export 'highcharts_williams_rseries_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highstock/series.williamsr
+/// {@category series}
 class HighchartsWilliamsRSeries extends HighchartsSeries {
   /// Highcharts Options Widget.
   List<List<dynamic>>? data;

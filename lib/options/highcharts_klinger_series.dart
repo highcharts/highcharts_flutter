@@ -47,6 +47,7 @@ export 'highcharts_klinger_series_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highstock/series.klinger
+/// {@category series}
 class HighchartsKlingerSeries extends HighchartsSeries {
   /// Highcharts Options Widget.
   List<List<dynamic>>? data;

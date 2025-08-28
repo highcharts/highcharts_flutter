@@ -49,6 +49,7 @@ export 'highcharts_column_series_data_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highcharts/series.column
+/// {@category series}
 class HighchartsColumnSeries extends HighchartsSeries {
   /// An array of data points for the series. For the `column` series type,
   /// points can be given in the following ways:

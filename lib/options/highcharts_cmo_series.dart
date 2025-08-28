@@ -47,6 +47,7 @@ export 'highcharts_cmo_series_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highstock/series.cmo
+/// {@category series}
 class HighchartsCMOSeries extends HighchartsSeries {
   /// Highcharts Options Widget.
   List<List<dynamic>>? data;

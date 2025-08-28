@@ -47,6 +47,7 @@ export 'highcharts_tiled_web_map_series_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highmaps/series.tiledwebmap
+/// {@category series}
 class HighchartsTiledWebMapSeries extends HighchartsSeries {
   /// Highcharts Options Widget.
   List<List<dynamic>>? data;

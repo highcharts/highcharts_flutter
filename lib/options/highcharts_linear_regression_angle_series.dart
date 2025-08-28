@@ -48,6 +48,7 @@ export 'highcharts_linear_regression_angle_series_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highstock/series.linearregressionangle
+/// {@category series}
 class HighchartsLinearRegressionAngleSeries extends HighchartsSeries {
   /// Highcharts Options Widget.
   List<List<dynamic>>? data;

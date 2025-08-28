@@ -49,6 +49,7 @@ export 'highcharts_map_series_data_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highmaps/series.map
+/// {@category series}
 class HighchartsMapSeries extends HighchartsSeries {
   /// An array of data points for the series. For the `map` series type, points can
   /// be given in the following ways:

@@ -8,17 +8,13 @@
  *
  * */
 
-/**
- * Base class for series to serialize settings to a JSON string.
- */
+/// Base class for series to serialize settings to a JSON string.
 class HighchartsSeries {
   String type = '';
 
   void toOptionsJSON(StringBuffer buffer) {}
 
-  /**
-   * Serializes the settings to a JSON string.
-   */
+  /// Serializes the settings to a JSON string.
   String toJSON() {
     StringBuffer buffer = StringBuffer();
 

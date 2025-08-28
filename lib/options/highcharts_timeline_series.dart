@@ -49,6 +49,7 @@ export 'highcharts_timeline_series_data_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highcharts/series.timeline
+/// {@category series}
 class HighchartsTimelineSeries extends HighchartsSeries {
   /// An array of data points for the series. For the `timeline` series type,
   /// points can be given with three general parameters, `name`, `label`,

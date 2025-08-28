@@ -47,6 +47,7 @@ export 'highcharts_price_envelopes_series_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highstock/series.priceenvelopes
+/// {@category series}
 class HighchartsPriceEnvelopesSeries extends HighchartsSeries {
   /// Highcharts Options Widget.
   List<List<dynamic>>? data;

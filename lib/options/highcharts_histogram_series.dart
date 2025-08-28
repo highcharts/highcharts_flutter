@@ -47,6 +47,7 @@ export 'highcharts_histogram_series_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highcharts/series.histogram
+/// {@category series}
 class HighchartsHistogramSeries extends HighchartsSeries {
   /// Highcharts Options Widget.
   List<List<dynamic>>? data;

@@ -49,6 +49,7 @@ export 'highcharts_dependency_wheel_series_data_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highcharts/series.dependencywheel
+/// {@category series}
 class HighchartsDependencyWheelSeries extends HighchartsSeries {
   /// An array of data points for the series. For the `dependencywheel` series
   /// type, points can be given in the following way:

@@ -47,6 +47,7 @@ export 'highcharts_ad_series_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highstock/series.ad
+/// {@category series}
 class HighchartsADSeries extends HighchartsSeries {
   /// Highcharts Options Widget.
   List<List<dynamic>>? data;

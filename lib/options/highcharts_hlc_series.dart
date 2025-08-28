@@ -49,6 +49,7 @@ export 'highcharts_hlc_series_data_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highstock/series.hlc
+/// {@category series}
 class HighchartsHLCSeries extends HighchartsSeries {
   /// An array of data points for the series. For the `hlc` series type,
   /// points can be given in the following ways:

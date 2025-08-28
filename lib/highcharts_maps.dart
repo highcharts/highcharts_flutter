@@ -50,6 +50,7 @@ export 'options/highcharts_tilemap_series.dart';
  *
  * */
 
+/// {@category widgets}
 class HighchartsMaps extends StatelessWidget {
   HighchartsMaps(
     this.options, {

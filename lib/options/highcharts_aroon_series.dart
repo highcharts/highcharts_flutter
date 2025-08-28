@@ -47,6 +47,7 @@ export 'highcharts_aroon_series_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highstock/series.aroon
+/// {@category series}
 class HighchartsAroonSeries extends HighchartsSeries {
   /// Highcharts Options Widget.
   List<List<dynamic>>? data;

@@ -49,6 +49,7 @@ export 'highcharts_area_range_series_data_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highcharts/series.arearange
+/// {@category series}
 class HighchartsAreaRangeSeries extends HighchartsSeries {
   /// An array of data points for the series. For the `arearange` series type,
   /// points can be given in the following ways:

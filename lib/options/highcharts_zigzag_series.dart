@@ -47,6 +47,7 @@ export 'highcharts_zigzag_series_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highstock/series.zigzag
+/// {@category series}
 class HighchartsZigzagSeries extends HighchartsSeries {
   /// Highcharts Options Widget.
   List<List<dynamic>>? data;

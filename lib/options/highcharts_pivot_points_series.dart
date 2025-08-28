@@ -47,6 +47,7 @@ export 'highcharts_pivot_points_series_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highstock/series.pivotpoints
+/// {@category series}
 class HighchartsPivotPointsSeries extends HighchartsSeries {
   /// Highcharts Options Widget.
   List<List<dynamic>>? data;

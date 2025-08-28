@@ -49,6 +49,7 @@ export 'highcharts_map_bubble_series_data_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highmaps/series.mapbubble
+/// {@category series}
 class HighchartsMapBubbleSeries extends HighchartsSeries {
   /// An array of data points for the series. For the `mapbubble` series
   /// type, points can be given in the following ways:

@@ -49,6 +49,7 @@ export 'highcharts_packed_bubble_series_data_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highcharts/series.packedbubble
+/// {@category series}
 class HighchartsPackedBubbleSeries extends HighchartsSeries {
   /// An array of data points for the series. For the `packedbubble` series type,
   /// points can be given in the following ways:

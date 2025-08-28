@@ -48,6 +48,7 @@ export 'highcharts_linearregressionslope_series_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highstock/series.linearregressionslope
+/// {@category series}
 class HighchartsLinearregressionslopeSeries extends HighchartsSeries {
   /// Highcharts Options Widget.
   List<List<dynamic>>? data;

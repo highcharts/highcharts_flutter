@@ -47,6 +47,7 @@ export 'highcharts_abands_series_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highstock/series.abands
+/// {@category series}
 class HighchartsABandsSeries extends HighchartsSeries {
   /// Highcharts Options Widget.
   List<List<dynamic>>? data;

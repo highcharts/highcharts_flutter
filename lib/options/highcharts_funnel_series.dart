@@ -49,6 +49,7 @@ export 'highcharts_funnel_series_data_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highcharts/series.funnel
+/// {@category series}
 class HighchartsFunnelSeries extends HighchartsSeries {
   /// An array of data points for the series. For the `funnel` series type,
   /// points can be given in the following ways:

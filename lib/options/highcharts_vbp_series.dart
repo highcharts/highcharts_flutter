@@ -47,6 +47,7 @@ export 'highcharts_vbp_series_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highstock/series.vbp
+/// {@category series}
 class HighchartsVBPSeries extends HighchartsSeries {
   /// Highcharts Options Widget.
   List<List<dynamic>>? data;

@@ -49,6 +49,7 @@ export 'highcharts_line_series_data_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highcharts/series.line
+/// {@category series}
 class HighchartsLineSeries extends HighchartsSeries {
   /// An array of data points for the series. For the `line` series type,
   /// points can be given in the following ways:

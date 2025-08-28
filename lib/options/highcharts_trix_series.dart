@@ -47,6 +47,7 @@ export 'highcharts_trix_series_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highstock/series.trix
+/// {@category series}
 class HighchartsTRIXSeries extends HighchartsSeries {
   /// Highcharts Options Widget.
   List<List<dynamic>>? data;

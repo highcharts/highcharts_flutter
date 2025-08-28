@@ -49,6 +49,7 @@ export 'highcharts_polygon_series_data_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highcharts/series.polygon
+/// {@category series}
 class HighchartsPolygonSeries extends HighchartsSeries {
   /// An array of data points for the series. For the `polygon` series
   /// type, points can be given in the following ways:

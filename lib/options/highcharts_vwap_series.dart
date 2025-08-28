@@ -48,6 +48,7 @@ export 'highcharts_vwap_series_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highstock/series.vwap
+/// {@category series}
 class HighchartsVWAPSeries extends HighchartsSeries {
   /// Highcharts Options Widget.
   List<List<dynamic>>? data;

@@ -49,6 +49,7 @@ export 'highcharts_area_spline_series_data_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highcharts/series.areaspline
+/// {@category series}
 class HighchartsAreaSplineSeries extends HighchartsSeries {
   /// An array of data points for the series. For the `areaspline` series
   /// type, points can be given in the following ways:

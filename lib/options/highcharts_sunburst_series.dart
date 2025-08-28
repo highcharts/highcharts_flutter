@@ -49,6 +49,7 @@ export 'highcharts_sunburst_series_data_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highcharts/series.sunburst
+/// {@category series}
 class HighchartsSunburstSeries extends HighchartsSeries {
   /// Highcharts Options Widget.
   List<List<dynamic>>? data;

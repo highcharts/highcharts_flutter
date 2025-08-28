@@ -49,6 +49,7 @@ export 'highcharts_arc_diagram_series_data_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highcharts/series.arcdiagram
+/// {@category series}
 class HighchartsArcDiagramSeries extends HighchartsSeries {
   /// An array of data points for the series. For the `arcdiagram` series type,
   /// points can be given in the following way:

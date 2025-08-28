@@ -48,6 +48,7 @@ export 'highcharts_disparity_index_series_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highstock/series.disparityindex
+/// {@category series}
 class HighchartsDisparityIndexSeries extends HighchartsSeries {
   /// Highcharts Options Widget.
   List<List<dynamic>>? data;

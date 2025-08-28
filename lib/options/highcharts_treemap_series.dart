@@ -49,6 +49,7 @@ export 'highcharts_treemap_series_data_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highcharts/series.treemap
+/// {@category series}
 class HighchartsTreemapSeries extends HighchartsSeries {
   /// An array of data points for the series. For the `treemap` series
   /// type, points can be given in the following ways:

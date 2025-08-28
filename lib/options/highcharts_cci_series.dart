@@ -47,6 +47,7 @@ export 'highcharts_cci_series_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highstock/series.cci
+/// {@category series}
 class HighchartsCCISeries extends HighchartsSeries {
   /// Highcharts Options Widget.
   List<List<dynamic>>? data;

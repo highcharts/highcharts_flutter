@@ -49,6 +49,7 @@ export 'highcharts_candlestick_series_data_options.dart';
 ///
 ///
 /// API Docs: https://api.highcharts.com/highstock/series.candlestick
+/// {@category series}
 class HighchartsCandlestickSeries extends HighchartsSeries {
   /// An array of data points for the series. For the `candlestick` series
   /// type, points can be given in the following ways:
