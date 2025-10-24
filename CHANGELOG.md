@@ -1,6 +1,10 @@
+## 1.1.2
+
+* Fixed chart disappearance on rebuild. (#65)
+
 ## 1.1.1
 
-* Fixed blue box appearing after tab. (#63)
+* Fixed blue box appearing after tap. (#63)
 * Improved generated documentation.
 
 ## 1.1.0

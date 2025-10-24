@@ -1,10 +1,10 @@
 /* *
  *
- *  Highcharts Flutter
+ * Highcharts Flutter
  *
- *  Copyright (c) 2023-2025, Highsoft AS
+ * Copyright (c) 2023-2025, Highsoft AS
  *
- *  License: www.highcharts.com/license
+ * License: www.highcharts.com/license
  *
  * */
 
@@ -34,82 +34,7 @@ class HighchartsView extends StatefulWidget {
     this.onLoading,
     this.onMounted,
   }) {
-    PlatformWebViewControllerCreationParams params;
-
-    if (WebViewPlatform.instance is AndroidWebViewPlatform) {
-      params = AndroidWebViewControllerCreationParams();
-    } else if (WebViewPlatform.instance is WebKitWebViewPlatform) {
-      params = WebKitWebViewControllerCreationParams();
-    } else {
-      params = const PlatformWebViewControllerCreationParams();
-    }
-
-    webViewController = WebViewController.fromPlatformCreationParams(params);
-
-    if (webViewController.platform is WebKitWebViewController) {
-      (webViewController.platform as WebKitWebViewController)
-          .setInspectable(true);
-    }
-
-    if (webViewController.platform is AndroidWebViewController ||
-        webViewController.platform is WebKitWebViewController) {
-      webViewController
-        ..setBackgroundColor(const Color(0x00000000))
-        ..setJavaScriptMode(JavaScriptMode.unrestricted);
-    }
-
-    webViewController
-      ..setNavigationDelegate(NavigationDelegate(onPageFinished: (_) {
-        if (onMounted != null) {
-          onMounted!(this);
-        }
-      }))
-      ..addJavaScriptChannel(
-        'highcharts_flutter_channel',
-        onMessageReceived: (e) async {
-          final dataIndex = e.message.indexOf('\n');
-
-          final callbackKey =
-              (dataIndex < 0 ? e.message : e.message.substring(0, dataIndex));
-          final data = (dataIndex < 0
-              ? []
-              : (jsonDecode(e.message.substring(dataIndex + 1)) ?? []));
-
-          if (callbackKey == 'highcharts_flutter.chart') {
-            if (onLoaded != null) {
-              onLoaded!(this);
-            }
-            return;
-          }
-
-          if (HighchartsCallback.registry.containsKey(callbackKey)) {
-            HighchartsCallback.registry[callbackKey]!(data);
-            return;
-          }
-
-          if (_events.containsKey(callbackKey)) {
-            for (final callback in _events[callbackKey]!) {
-              await callback(data);
-            }
-            return;
-          }
-
-          if (debug) {
-            debugPrint('Unhandled callback: ${e.message}');
-          }
-        },
-      );
-
-    if (WebViewPlatform.instance is AndroidWebViewPlatform) {
-      webView = WebViewWidget.fromPlatformCreationParams(
-        params: AndroidWebViewWidgetCreationParams(
-          controller: webViewController.platform,
-          displayWithHybridComposition: true, // Fix scrolling interference
-        ),
-      );
-    } else {
-      webView = WebViewWidget(controller: webViewController);
-    }
+    _stateBridge = _HighchartsViewStateBridge(this);
   }
 
   final String? body;
@@ -132,9 +57,15 @@ class HighchartsView extends StatefulWidget {
 
   final void Function(HighchartsView)? onMounted;
 
-  late final WebViewWidget webView;
+  late final _HighchartsViewStateBridge _stateBridge;
 
-  late final WebViewController webViewController;
+  WebViewController get webViewController {
+    return _stateBridge.webViewController;
+  }
+
+  WebViewWidget get webView {
+    return _stateBridge.webView;
+  }
 
   @override
   State<HighchartsView> createState() {
@@ -175,11 +106,17 @@ class HighchartsView extends StatefulWidget {
 class _HighchartsViewState extends State<HighchartsView>
     with AutomaticKeepAliveClientMixin {
   List<String> _assets = [];
+
   bool _disposed = false;
+
   bool _prepared = false;
 
+  late _HighchartsViewStateBridge _stateBridge;
+
   @override
-  bool get wantKeepAlive => widget.keepAlive;
+  bool get wantKeepAlive {
+    return widget.keepAlive;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -191,14 +128,19 @@ class _HighchartsViewState extends State<HighchartsView>
           'packages/highcharts_flutter/assets/highcharts_flutter.js',
           'packages/highcharts_flutter/assets/highcharts_view.html',
         ], assetBundle: DefaultAssetBundle.of(context))
-            .then((loadedAssets) => {
-                  if (!_disposed)
-                    {
-                      setState(() {
-                        _assets = loadedAssets;
-                      })
-                    }
-                });
+            .then((loadedAssets) {
+          if (!_disposed) {
+            setState(() {
+              _assets = loadedAssets;
+            });
+          }
+        });
+
+        if (widget.onLoading != null) {
+          return widget.onLoading!(widget);
+        }
+
+        return Container();
       } catch (error) {
         if (widget.onError != null) {
           return widget.onError!(widget, error);
@@ -206,9 +148,7 @@ class _HighchartsViewState extends State<HighchartsView>
 
         throw error;
       }
-    }
-
-    if (_assets.isNotEmpty && !_prepared) {
+    } else if (!_prepared) {
       try {
         (() async {
           final String bridge = _assets[0];
@@ -218,7 +158,7 @@ class _HighchartsViewState extends State<HighchartsView>
                   (widget.body ?? '') + HighchartsHelpers.scriptTag(bridge))
               .replaceAll('{HIGHCHARTS_VIEW_FOOT}', widget.foot ?? '');
 
-          await widget.webViewController.loadHtmlString(html);
+          await _stateBridge.webViewController.loadHtmlString(html);
 
           if (!_disposed) {
             setState(() {
@@ -226,6 +166,8 @@ class _HighchartsViewState extends State<HighchartsView>
             });
           }
         })();
+
+        return Container();
       } catch (error) {
         if (widget.onError != null) {
           return widget.onError!(widget, error);
@@ -235,26 +177,147 @@ class _HighchartsViewState extends State<HighchartsView>
       }
     }
 
-    if (_assets.isEmpty || !_prepared) {
-      if (widget.onLoading != null) {
-        return widget.onLoading!(widget);
-      }
-
-      return Container();
-    }
-
-    return widget.webView;
+    return _stateBridge.webView;
   }
 
   @override
   void dispose() {
-    super.dispose();
     _disposed = true;
+    widget._stateBridge.dispose();
+    super.dispose();
+  }
+
+  @override
+  void didUpdateWidget(HighchartsView oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    widget._stateBridge.transfer(_stateBridge);
   }
 
   @override
   void initState() {
     super.initState();
     _disposed = false;
+    _stateBridge = widget._stateBridge;
+  }
+}
+
+/// Manages the exchange between state and widget for optimized rendering tasks.
+/// The widget can be assigned to new states, while the state can be
+/// assigned to new widgets.
+class _HighchartsViewStateBridge {
+  _HighchartsViewStateBridge(
+    this.widget,
+  );
+
+  WebViewWidget? _webView;
+
+  WebViewWidget get webView {
+    if (_webView == null) {
+      init();
+    }
+    return _webView!;
+  }
+
+  WebViewController? _webViewController;
+
+  WebViewController get webViewController {
+    if (_webViewController == null) {
+      init();
+    }
+    return _webViewController!;
+  }
+
+  HighchartsView widget;
+
+  void dispose() {
+    this._webView = null;
+    this._webViewController = null;
+  }
+
+  void init() {
+    HighchartsView widget = this.widget;
+    PlatformWebViewControllerCreationParams params;
+
+    if (WebViewPlatform.instance is AndroidWebViewPlatform) {
+      params = AndroidWebViewControllerCreationParams();
+    } else if (WebViewPlatform.instance is WebKitWebViewPlatform) {
+      params = WebKitWebViewControllerCreationParams();
+    } else {
+      params = const PlatformWebViewControllerCreationParams();
+    }
+
+    _webViewController = WebViewController.fromPlatformCreationParams(params);
+
+    if (webViewController.platform is WebKitWebViewController) {
+      (webViewController.platform as WebKitWebViewController)
+          .setInspectable(true);
+    }
+
+    if (webViewController.platform is AndroidWebViewController ||
+        webViewController.platform is WebKitWebViewController) {
+      webViewController
+        ..setBackgroundColor(const Color(0x00000000))
+        ..setJavaScriptMode(JavaScriptMode.unrestricted);
+    }
+
+    webViewController
+      ..setNavigationDelegate(NavigationDelegate(onPageFinished: (_) {
+        if (widget.onMounted != null) {
+          // Use `widget` to access properties of the *current* widget
+          widget.onMounted!(widget);
+        }
+      }))
+      ..addJavaScriptChannel(
+        'highcharts_flutter_channel',
+        onMessageReceived: (e) async {
+          final dataIndex = e.message.indexOf('\n');
+
+          final callbackKey =
+              (dataIndex < 0 ? e.message : e.message.substring(0, dataIndex));
+          final data = (dataIndex < 0
+              ? []
+              : (jsonDecode(e.message.substring(dataIndex + 1)) ?? []));
+
+          if (callbackKey == 'highcharts_flutter.chart') {
+            if (widget.onLoaded != null) {
+              widget.onLoaded!(widget);
+            }
+            return;
+          }
+
+          if (HighchartsCallback.registry.containsKey(callbackKey)) {
+            HighchartsCallback.registry[callbackKey]!(data);
+            return;
+          }
+
+          // Use `widget._events` to access the map on the current widget
+          if (widget._events.containsKey(callbackKey)) {
+            for (final callback in widget._events[callbackKey]!) {
+              await callback(data);
+            }
+            return;
+          }
+
+          if (widget.debug) {
+            debugPrint('Unhandled callback: ${e.message}');
+          }
+        },
+      );
+
+    if (WebViewPlatform.instance is AndroidWebViewPlatform) {
+      _webView = WebViewWidget.fromPlatformCreationParams(
+        params: AndroidWebViewWidgetCreationParams(
+          controller: webViewController.platform,
+          displayWithHybridComposition: true, // Fix scrolling interference
+        ),
+      );
+    } else {
+      _webView = WebViewWidget(controller: webViewController);
+    }
+  }
+
+  void transfer(_HighchartsViewStateBridge oldStateBridge) {
+    _webView = oldStateBridge._webView;
+    _webViewController = oldStateBridge._webViewController;
   }
 }
