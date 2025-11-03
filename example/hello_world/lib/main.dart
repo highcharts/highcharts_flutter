@@ -33,7 +33,8 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    final HighchartsChart chart = HighchartsChart(HighchartsOptions(
+    final HighchartsChart chart = HighchartsChart(
+      HighchartsOptions(
         title: HighchartsTitleOptions(text: 'Hello, World!'),
         series: [
           HighchartsLineSeries(
@@ -47,15 +48,24 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
         annotations: [
           HighchartsAnnotationsOptions(
-              draggable: '',
-              labelOptions: HighchartsAnnotationsLabelOptions(
-                  align: 'left', x: 10, y: 40),
-              labels: [
-                HighchartsAnnotationsLabelsOptions(
-                    point: {'xAxis': 0, 'yAxis': 0, 'x': 0.5, 'y': 55.5},
-                    text: 'Hello!')
-              ])
-        ]));
+            draggable: '',
+            labelOptions:
+                HighchartsAnnotationsLabelOptions(align: 'left', x: 10, y: 40),
+            labels: [
+              HighchartsAnnotationsLabelsOptions(
+                  point: {'xAxis': 0, 'yAxis': 0, 'x': 0.5, 'y': 55.5},
+                  text: 'Hello!'),
+            ],
+          ),
+        ],
+      ),
+      javaScriptModules: const [
+        'assets/highcharts/highcharts.js',
+        'assets/highcharts/modules/annotations.js',
+        'assets/highcharts/modules/boost.js',
+        'assets/highcharts/modules/accessibility.js',
+      ],
+    );
 
     return Scaffold(
       appBar: AppBar(

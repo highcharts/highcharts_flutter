@@ -1,3 +1,11 @@
+## 1.2.0-rc.1
+
+* Added exporting functions to Highcharts widgets. (#11)
+* Added support for JSON options in Highcharts widgets. (#64)
+* Improved asset loading from unstable sources.
+* Improved internal handling of base classes.
+* Replaced Highcharts CDN with bundled JavaScript as default.
+
 ## 1.1.2
 
 * Fixed chart disappearance on rebuild. (#65)

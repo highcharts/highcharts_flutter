@@ -36,8 +36,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  late List<String> _assets;
-
   HighchartsChart? _chart;
 
   final List<List<dynamic>> _data = [
@@ -54,72 +52,68 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    if (_assets.isEmpty) {
-      HighchartsHelpers.loadAssets(['assets/highcharts.js'])
-          .then((assets) => setState(() {
-                _assets = assets;
-              }));
-
-      return const CircularProgressIndicator();
-    }
-
-    _chart ??= HighchartsChart(
-      HighchartsOptions(
-          chart: HighchartsChartOptions(
-            backgroundColor: '#FFF0',
-            events: HighchartsChartEventsOptions(
-              load: HighchartsCallback((_) {
-                _timer = Timer.periodic(
-                  const Duration(seconds: 3),
-                  (final Timer t) => setState(() {
-                    if (_chart != null) {
-                      _data.add([_data.length, _random.nextInt(40) + 20]);
-                      _chart!.refresh();
-                    }
-                  }),
-                );
+    _chart ??= HighchartsChart(HighchartsOptions(
+      chart: HighchartsChartOptions(
+        backgroundColor: '#FFF0',
+        events: HighchartsChartEventsOptions(
+          load: HighchartsCallback((_) {
+            _timer = Timer.periodic(
+              const Duration(seconds: 3),
+              (final Timer t) => setState(() {
+                if (_chart != null) {
+                  _data.add([_data.length, _random.nextInt(40) + 20]);
+                  _chart!.refresh();
+                }
               }),
+            );
+          }),
+        ),
+      ),
+      title: HighchartsTitleOptions(text: 'Hello, World!'),
+      plotOptions: HighchartsPlotOptions(
+        series: HighchartsSeriesOptions(
+          animation: false,
+          point: HighchartsSeriesPointOptions(
+            events: HighchartsSeriesPointEventsOptions(
+                click: HighchartsCallback((args) {
+              final point = args[0];
+              setState(() {
+                _series = 'Point value: ${point['x']}, ${point['y']}';
+              });
+            })),
+          ),
+          tooltip: HighchartsSeriesTooltipOptions(
+            headerFormat: '',
+            pointFormatter: HighchartsCallback(null, '''
+            return `Value: \${this.y}<br />Created by custom callback.`;
+            '''),
+          ),
+        ),
+      ),
+      series: [
+        HighchartsLineSeries(
+          name: 'My First Series',
+          data: _data,
+          options: HighchartsLineSeriesOptions(color: '#C60'),
+        ),
+      ],
+      annotations: [
+        HighchartsAnnotationsOptions(
+          draggable: '',
+          labelOptions: HighchartsAnnotationsLabelOptions(
+            align: 'left',
+            x: 16,
+            y: -14,
+          ),
+          labels: [
+            HighchartsAnnotationsLabelsOptions(
+              point: {'xAxis': 0, 'yAxis': 0, 'x': 1, 'y': 55.5},
+              text: 'Hello!',
             ),
-          ),
-          title: HighchartsTitleOptions(text: 'Hello, World!'),
-          plotOptions: HighchartsPlotOptions(
-            series: HighchartsSeriesOptions(
-                animation: false,
-                point: HighchartsSeriesPointOptions(
-                  events: HighchartsSeriesPointEventsOptions(
-                      click: HighchartsCallback((args) {
-                    final point = args[0];
-                    setState(() {
-                      _series = 'Point value: ${point['x']}, ${point['y']}';
-                    });
-                  })),
-                ),
-                tooltip: HighchartsSeriesTooltipOptions(
-                  headerFormat: '',
-                  pointFormatter: HighchartsCallback(null, '''
-                  return `Value: \${this.y}<br />Created by custom callback.`;
-                '''),
-                )),
-          ),
-          series: [
-            HighchartsLineSeries(
-                name: 'My First Series',
-                data: _data,
-                options: HighchartsLineSeriesOptions(color: '#C60'))
           ],
-          annotations: [
-            HighchartsAnnotationsOptions(
-                draggable: '',
-                labelOptions: HighchartsAnnotationsLabelOptions(
-                    align: 'left', x: 16, y: -24),
-                labels: [
-                  HighchartsAnnotationsLabelsOptions(
-                      point: {'xAxis': 0, 'yAxis': 0, 'x': 1, 'y': 55.5},
-                      text: 'Hello!')
-                ])
-          ]),
-      javaScriptModules: _assets,
-    );
+        ),
+      ],
+    ));
 
     return Scaffold(
       appBar: AppBar(
@@ -145,7 +139,6 @@ class _MyHomePageState extends State<MyHomePage> {
   void initState() {
     super.initState();
 
-    _assets = [];
     _random = Random();
     _series = '';
   }

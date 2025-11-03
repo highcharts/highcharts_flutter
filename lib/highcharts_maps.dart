@@ -21,6 +21,7 @@ import 'package:flutter/material.dart';
 
 import 'options/highcharts_options.dart';
 import 'utilities/highcharts_callback.dart';
+import 'utilities/highcharts_exporting.dart';
 import 'utilities/highcharts_helpers.dart';
 import 'utilities/highcharts_view.dart';
 
@@ -59,17 +60,18 @@ class HighchartsMaps extends StatelessWidget {
     this.debug = kDebugMode,
     this.javaScript,
     this.javaScriptModules = const [
-      'https://code.highcharts.com/maps/highmaps.js',
-      'https://code.highcharts.com/maps/highcharts-more.js',
-      'https://code.highcharts.com/maps/highcharts-3d.js',
-      'https://code.highcharts.com/maps/modules/solid-gauge.js',
-      'https://code.highcharts.com/maps/modules/annotations.js',
-      'https://code.highcharts.com/maps/modules/boost.js',
-      'https://code.highcharts.com/maps/modules/broken-axis.js',
-      'https://code.highcharts.com/maps/modules/data.js',
-      'https://code.highcharts.com/maps/modules/exporting.js',
-      'https://code.highcharts.com/maps/modules/offline-exporting.js',
-      'https://code.highcharts.com/maps/modules/accessibility.js',
+      'packages/highcharts_flutter/assets/highcharts/highmaps.js',
+      'packages/highcharts_flutter/assets/highcharts/highcharts-more.js',
+      'packages/highcharts_flutter/assets/highcharts/highcharts-3d.js',
+      'packages/highcharts_flutter/assets/highcharts/modules/solid-gauge.js',
+      'packages/highcharts_flutter/assets/highcharts/modules/annotations.js',
+      'packages/highcharts_flutter/assets/highcharts/modules/boost.js',
+      'packages/highcharts_flutter/assets/highcharts/modules/broken-axis.js',
+      'packages/highcharts_flutter/assets/highcharts/modules/data.js',
+      'packages/highcharts_flutter/assets/highcharts/modules/exporting.js',
+      'packages/highcharts_flutter/assets/highcharts/modules/offline-exporting.js',
+      'packages/highcharts_flutter/assets/highcharts/modules/export-data.js',
+      'packages/highcharts_flutter/assets/highcharts/modules/accessibility.js',
     ],
     this.events = const {},
     this.keepAlive = true,
@@ -87,7 +89,6 @@ class HighchartsMaps extends StatelessWidget {
       debug: debug,
       keepAlive: keepAlive,
       head: css == null ? null : HighchartsHelpers.styleTag(css),
-      body: javaScriptModules.map(HighchartsHelpers.scriptTag).join('\n'),
       foot: [
         '''
           highcharts_flutter.debug=${debug};
@@ -111,6 +112,11 @@ class HighchartsMaps extends StatelessWidget {
               return onLoading!(this);
             }
           : null),
+      javaScriptModules: javaScriptModules,
+    );
+
+    exporting = HighchartsExporting(
+      view: view,
     );
   }
 
@@ -135,6 +141,8 @@ class HighchartsMaps extends StatelessWidget {
   /// part to be the actual event name. For example `Highcharts.Chart.load`
   /// represents a listener on `Highcharts.Chart` for the `load` event.
   final Map<String, void Function(Object?)> events;
+
+  late final HighchartsExporting exporting;
 
   final bool keepAlive;
 

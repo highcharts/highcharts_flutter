@@ -12,9 +12,12 @@
  */
 
 import 'dart:async';
+import 'dart:convert';
 
+import 'package:cross_file/cross_file.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:highcharts_flutter/highcharts.dart';
+import 'package:share_plus/share_plus.dart';
 
 import 'series_type_map.dart';
 import 'state.dart';
@@ -139,6 +142,59 @@ class ChartScaffold extends StatelessWidget {
               ],
             ),
             chart,
+            CupertinoListSection(
+              header: const Text('Chart Export'),
+              children: <Widget>[
+                Wrap(children: <Widget>[
+                  CupertinoButton(
+                    onPressed: () async {
+                      final csv = await chart.exporting.getCSV();
+                      SharePlus.instance.share(ShareParams(files: [
+                        XFile.fromData(utf8.encode(csv), mimeType: 'text/csv')
+                      ], fileNameOverrides: [
+                        'chart.csv'
+                      ]));
+                    },
+                    child: const Text('CSV'),
+                  ),
+                  CupertinoButton(
+                    onPressed: () async {
+                      final html = await chart.exporting.getHTML();
+                      SharePlus.instance.share(ShareParams(files: [
+                        XFile.fromData(utf8.encode(html), mimeType: 'text/html')
+                      ], fileNameOverrides: [
+                        'chart.html'
+                      ]));
+                    },
+                    child: const Text('HTML'),
+                  ),
+                  CupertinoButton(
+                    onPressed: () async {
+                      final svg = await chart.exporting.getSVG();
+                      SharePlus.instance.share(ShareParams(files: [
+                        XFile.fromData(utf8.encode(svg),
+                            mimeType: 'image/svg+xml')
+                      ], fileNameOverrides: [
+                        'chart.svg'
+                      ]));
+                    },
+                    child: const Text('SVG'),
+                  ),
+                  CupertinoButton(
+                    onPressed: () async {
+                      final xls = await chart.exporting.getXLS();
+                      SharePlus.instance.share(ShareParams(files: [
+                        XFile.fromData(utf8.encode(xls),
+                            mimeType: 'application/vnd.ms-excel')
+                      ], fileNameOverrides: [
+                        'chart.xls'
+                      ]));
+                    },
+                    child: const Text('XLS'),
+                  ),
+                ]),
+              ],
+            ),
           ],
         ),
       )),

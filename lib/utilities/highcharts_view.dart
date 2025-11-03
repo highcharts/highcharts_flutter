@@ -28,6 +28,7 @@ class HighchartsView extends StatefulWidget {
     this.debug = false,
     this.foot,
     this.head,
+    this.javaScriptModules = const [],
     this.keepAlive = true,
     this.onError,
     this.onLoaded,
@@ -46,6 +47,8 @@ class HighchartsView extends StatefulWidget {
   final String? foot;
 
   final String? head;
+
+  final List<String> javaScriptModules;
 
   final bool keepAlive;
 
@@ -74,6 +77,7 @@ class HighchartsView extends StatefulWidget {
 
   Future<void> off<T>(
       String javaScriptEvent, HighchartsCallbackDart<T>? callback) async {
+    javaScriptEvent = javaScriptEvent.replaceAll('"', '');
     if (_events[javaScriptEvent] != null) {
       final callbacks = _events[javaScriptEvent]!;
 
@@ -83,7 +87,7 @@ class HighchartsView extends StatefulWidget {
 
       if (callback == null || callbacks.isEmpty) {
         await webViewController
-            .runJavaScript('highcharts_flutter.off($javaScriptEvent);');
+            .runJavaScript('highcharts_flutter.off("$javaScriptEvent");');
         callbacks.clear();
         _events.remove(javaScriptEvent);
       }
@@ -92,6 +96,7 @@ class HighchartsView extends StatefulWidget {
 
   Future<void> on<T>(
       String javaScriptEvent, HighchartsCallbackDart<T> callback) async {
+    javaScriptEvent = javaScriptEvent.replaceAll('"', '');
     if (_events[javaScriptEvent] == null) {
       _events[javaScriptEvent] = [];
     }
@@ -99,7 +104,7 @@ class HighchartsView extends StatefulWidget {
     _events[javaScriptEvent]!.add(callback);
 
     await webViewController
-        .runJavaScript('highcharts_flutter.on($javaScriptEvent);');
+        .runJavaScript('highcharts_flutter.on("$javaScriptEvent");');
   }
 }
 
@@ -108,6 +113,8 @@ class _HighchartsViewState extends State<HighchartsView>
   List<String> _assets = [];
 
   bool _disposed = false;
+
+  List<String> _javaScriptModules = [];
 
   bool _prepared = false;
 
@@ -121,6 +128,39 @@ class _HighchartsViewState extends State<HighchartsView>
   @override
   Widget build(BuildContext context) {
     super.build(context);
+
+    if (_javaScriptModules.isEmpty) {
+      try {
+        HighchartsHelpers.loadAssets(
+                List.from(widget.javaScriptModules.takeWhile((module) =>
+                    module.startsWith(HighchartsHelpers.pathPattern))),
+                assetBundle: DefaultAssetBundle.of(context))
+            .then((loadedAssets) {
+          if (!_disposed) {
+            loadedAssets.addAll(widget.javaScriptModules.skipWhile(
+                (module) => module.startsWith(HighchartsHelpers.pathPattern)));
+            setState(() {
+              _javaScriptModules = (loadedAssets.isEmpty
+                      ? [''] // avoid endless rebuild on total fail
+                      : loadedAssets // proceed with loaded assets
+                  );
+            });
+          }
+        });
+
+        if (widget.onLoading != null) {
+          return widget.onLoading!(widget);
+        }
+
+        return Container();
+      } catch (error) {
+        if (widget.onError != null) {
+          return widget.onError!(widget, error);
+        }
+
+        throw error;
+      }
+    }
 
     if (_assets.isEmpty) {
       try {
@@ -154,8 +194,15 @@ class _HighchartsViewState extends State<HighchartsView>
           final String bridge = _assets[0];
           final String html = _assets[1]
               .replaceAll('{HIGHCHARTS_VIEW_HEAD}', widget.head ?? '')
-              .replaceAll('{HIGHCHARTS_VIEW_BODY}',
-                  (widget.body ?? '') + HighchartsHelpers.scriptTag(bridge))
+              .replaceAll(
+                  '{HIGHCHARTS_VIEW_BODY}',
+                  [
+                    _javaScriptModules
+                        .map(HighchartsHelpers.scriptTag)
+                        .join('\n'),
+                    widget.body ?? '',
+                    HighchartsHelpers.scriptTag(bridge),
+                  ].join('\n'))
               .replaceAll('{HIGHCHARTS_VIEW_FOOT}', widget.foot ?? '');
 
           await _stateBridge.webViewController.loadHtmlString(html);
@@ -166,6 +213,10 @@ class _HighchartsViewState extends State<HighchartsView>
             });
           }
         })();
+
+        if (widget.onLoading != null) {
+          return widget.onLoading!(widget);
+        }
 
         return Container();
       } catch (error) {
@@ -292,7 +343,7 @@ class _HighchartsViewStateBridge {
 
           // Use `widget._events` to access the map on the current widget
           if (widget._events.containsKey(callbackKey)) {
-            for (final callback in widget._events[callbackKey]!) {
+            for (final callback in List.from(widget._events[callbackKey]!)) {
               await callback(data);
             }
             return;

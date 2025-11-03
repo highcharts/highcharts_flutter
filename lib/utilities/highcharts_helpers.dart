@@ -10,12 +10,23 @@
 
 import 'dart:convert';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart' show AssetBundle, rootBundle;
 import 'package:http/http.dart' as http;
 
 /// Flutter-specific helpers to be used with Highcharts Flutter.
 /// {@category utilities}
 abstract class HighchartsHelpers {
+  /// Used to distinguish asset paths from URLs.
+  /// Expected input: relative or absolute file paths (e.g. 'assets/custom.js').
+  static final RegExp pathPattern =
+      RegExp('^[\\w ./=-]+\$', dotAll: true, unicode: true);
+
+  /// Used to identify URLs as opposed to local asset paths.
+  /// Expected input: URI strings (e.g. 'https://example.com/custom.js').
+  static final RegExp protocolPattern =
+      RegExp('^\\w+:', dotAll: true, unicode: true);
+
   /// Replaces special HTML characters with escape sequences.
   ///
   /// * `text`: Text with potential HTML characters to escape.
@@ -90,33 +101,46 @@ abstract class HighchartsHelpers {
   /// )
   /// ```
   static Future<List<String>> loadAssets(List<String> assetPaths,
-      {AssetBundle? assetBundle}) {
+      {AssetBundle? assetBundle}) async {
     final bundle = assetBundle ?? rootBundle;
-    return Future.wait(assetPaths.map((path) => bundle.loadString(path)));
+    final loaded = <String>[];
+
+    for (var path in assetPaths) {
+      try {
+        loaded.add(await bundle.loadString(path));
+      } catch (error) {
+        if (error is FlutterError &&
+            error.message.contains('Unable to load asset')) {
+          debugPrint('Asset not found: $path');
+        } else {
+          debugPrint('Error loading asset "$path": $error');
+        }
+      }
+    }
+
+    return loaded;
   }
 
   /// Creates a script tag with the script code as a data URI.
   ///
   /// * `script`: JavaScript code to add as dataURI.
-  static String scriptTag(String? script) {
-    if (script == null) {
+  static String scriptTag(String? scriptOrURL) {
+    if (scriptOrURL == null || scriptOrURL.isEmpty) {
       return '';
     }
 
-    if (!script.startsWith('data:') &&
-        !script.startsWith('http://') &&
-        !script.startsWith('https://') &&
-        (script.startsWith('/*') || !script.startsWith('/'))) {
-      script = Uri.dataFromString(
-        script.trim(),
+    if (!scriptOrURL.startsWith(protocolPattern) &&
+        !scriptOrURL.startsWith(pathPattern)) {
+      scriptOrURL = Uri.dataFromString(
+        scriptOrURL.trim(),
         mimeType: 'text/javascript',
         encoding: utf8,
       ).toString();
     }
 
-    script = escapeHTML(script);
+    scriptOrURL = escapeHTML(scriptOrURL);
 
-    return '<script src="$script" type="text/javascript"></script>';
+    return '<script src="$scriptOrURL" type="text/javascript"></script>';
   }
 
   /// Creates a style tag with the CSS code.
