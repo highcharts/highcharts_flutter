@@ -452,6 +452,16 @@ class HighchartsChartOptions extends HighchartsOptionsBase {
 
   Map<String, dynamic>? selectionMarkerFill;
 
+  /// Whether to apply a drop shadow to the global series group. This causes
+  /// all the series to have the same shadow. Contrary to the `series.shadow`
+  /// option, this prevents items from casting shadows on each other, like for
+  /// others series in a stack. The shadow can be an object configuration
+  /// containing `color`, `offsetX`, `offsetY`, `opacity` and `width`.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/chart.seriesGroupShadow
+
+  Map<String, dynamic>? seriesGroupShadow;
+
   /// Whether to apply a drop shadow to the outer chart area. Requires
   /// that backgroundColor be set. The shadow can be an object
   /// configuration containing `color`, `offsetX`, `offsetY`, `opacity` and
@@ -624,6 +634,7 @@ class HighchartsChartOptions extends HighchartsOptionsBase {
       this.resetZoomButton,
       this.scrollablePlotArea,
       this.selectionMarkerFill,
+      this.seriesGroupShadow,
       this.shadow,
       this.showAxes,
       this.spacing,
@@ -784,6 +795,13 @@ class HighchartsChartOptions extends HighchartsOptionsBase {
     if (selectionMarkerFill != null) {
       buffer.write('"selectionMarkerFill":{');
       for (var item in selectionMarkerFill!.entries) {
+        buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ','], '');
+      }
+      buffer.write('},');
+    }
+    if (seriesGroupShadow != null) {
+      buffer.write('"seriesGroupShadow":{');
+      for (var item in seriesGroupShadow!.entries) {
         buffer.writeAll(['"', item.key, '":', jsonEncode(item.value), ','], '');
       }
       buffer.write('},');

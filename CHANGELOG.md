@@ -1,3 +1,8 @@
+## 1.2.0
+
+* Fixed wrong scroll position after hard reload when using ScrollablePlotArea (#69)
+* Added a new demo for performance testing.
+
 ## 1.2.0-rc.1
 
 * Added exporting functions to Highcharts widgets. (#11)

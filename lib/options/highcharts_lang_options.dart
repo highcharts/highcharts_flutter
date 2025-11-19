@@ -201,6 +201,11 @@ class HighchartsLangOptions extends HighchartsOptionsBase {
   /// An array containing the months names. Corresponds to the `%B` format
   /// in `Highcharts.dateFormat()`. Defaults to 'undefined',
   /// meaning the default month names are used according to the
+  /// `lang.locale` or browser settings.
+  ///
+  /// An array containing the months names. Corresponds to the `%B` format
+  /// in `Highcharts.dateFormat()`. Defaults to 'undefined',
+  /// meaning the default month names are used according to the
   /// `lang.locale` setting.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/lang.months
@@ -301,12 +306,22 @@ class HighchartsLangOptions extends HighchartsOptionsBase {
   /// An array containing the months names in abbreviated form. Corresponds
   /// to the `%b` format in `Highcharts.dateFormat()`. Defaults to
   /// 'undefined', meaning the default short month names are used according
+  /// to the `lang.locale` or browser settings.
+  ///
+  /// An array containing the months names in abbreviated form. Corresponds
+  /// to the `%b` format in `Highcharts.dateFormat()`. Defaults to
+  /// 'undefined', meaning the default short month names are used according
   /// to the `lang.locale` setting.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/lang.shortMonths
 
   List<String>? shortMonths;
 
+  /// Short week days, starting Sunday. Corresponds to the `%a` format in
+  /// `Highcharts.dateFormat()`. Defaults to 'undefined', meaning
+  /// the default short weekday names are used according to the
+  /// `lang.locale` or browser settings.
+  ///
   /// Short week days, starting Sunday. Defaults to 'undefined', meaning
   /// the default short weekday names are used according to the
   /// `lang.locale` setting.
@@ -347,6 +362,11 @@ class HighchartsLangOptions extends HighchartsOptionsBase {
 
   String? weekFrom;
 
+  /// An array containing the weekday names. Corresponds
+  /// to the `%A` format in `Highcharts.dateFormat()`. Defaults to
+  /// 'undefined', meaning the default weekday names are used according to
+  /// the `lang.locale` or browser settings.
+  ///
   /// An array containing the weekday names. Defaults to 'undefined',
   /// meaning the default weekday names are used according to the
   /// `lang.locale` setting.

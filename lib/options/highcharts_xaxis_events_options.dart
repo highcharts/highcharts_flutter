@@ -62,12 +62,6 @@ class HighchartsXAxisEventsOptions extends HighchartsOptionsBase {
 
   HighchartsCallback? pointBreak;
 
-  /// An event fired when a point is outside a break after zoom.
-  ///
-  /// API Docs: https://api.highcharts.com/highcharts/xAxis.events.pointBreakOut
-
-  HighchartsCallback? pointBreakOut;
-
   /// An event fired when a point falls inside a break from this axis.
   ///
   /// API Docs: https://api.highcharts.com/highcharts/xAxis.events.pointInBreak
@@ -96,7 +90,6 @@ class HighchartsXAxisEventsOptions extends HighchartsOptionsBase {
       {this.afterBreaks,
       this.afterSetExtremes,
       this.pointBreak,
-      this.pointBreakOut,
       this.pointInBreak,
       this.setExtremes});
 
@@ -113,9 +106,6 @@ class HighchartsXAxisEventsOptions extends HighchartsOptionsBase {
     }
     if (pointBreak != null) {
       buffer.writeAll(['"pointBreak":', pointBreak?.toJSON(), ','], '');
-    }
-    if (pointBreakOut != null) {
-      buffer.writeAll(['"pointBreakOut":', pointBreakOut?.toJSON(), ','], '');
     }
     if (pointInBreak != null) {
       buffer.writeAll(['"pointInBreak":', pointInBreak?.toJSON(), ','], '');

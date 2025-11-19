@@ -102,6 +102,14 @@ class HighchartsSolidGaugeSeriesOptions extends HighchartsOptionsBase {
 
   dynamic animation;
 
+  /// The corner radius of the border surrounding solid gauge. A number
+  /// signifies pixels and percentage string, like for example `50%`,
+  /// signifies a relative size.
+  ///
+  /// API Docs: https://api.highcharts.com/highcharts/series.solidgauge.borderRadius
+
+  dynamic borderRadius;
+
   /// An additional class name to apply to the series' graphical elements.
   /// This option does not replace default class names of the graphical
   /// element. Changes to the series' color will also be reflected in a
@@ -555,6 +563,7 @@ class HighchartsSolidGaugeSeriesOptions extends HighchartsOptionsBase {
       {this.accessibility,
       this.allowPointSelect,
       this.animation,
+      this.borderRadius,
       this.className,
       this.clip,
       this.color,
@@ -618,6 +627,9 @@ class HighchartsSolidGaugeSeriesOptions extends HighchartsOptionsBase {
     }
     if (animation != null) {
       buffer.writeAll(['"animation":', jsonEncode(animation), ','], '');
+    }
+    if (borderRadius != null) {
+      buffer.writeAll(['"borderRadius":', jsonEncode(borderRadius), ','], '');
     }
     if (className != null) {
       buffer.writeAll(['"className":', jsonEncode(className), ','], '');
